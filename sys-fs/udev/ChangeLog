@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.364 2007/10/21 20:35:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.365 2007/11/10 10:23:17 zzam Exp $
+
+  10 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> udev-104-r12.ebuild,
+  udev-104-r13.ebuild, udev-111.ebuild, udev-111-r1.ebuild,
+  udev-111-r3.ebuild, udev-112.ebuild, udev-112-r1.ebuild, udev-113.ebuild,
+  udev-113-r1.ebuild, udev-113-r2.ebuild, udev-114.ebuild,
+  udev-114-r1.ebuild, udev-114-r2.ebuild, udev-115.ebuild,
+  udev-115-r5.ebuild, udev-116.ebuild, udev-116-r1.ebuild:
+  Remove try to apply non-existant patch. Fixed quoting.
 
 *udev-116-r1 (21 Oct 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115-r5.ebuild,v 1.1 2007/09/20 20:28:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115-r5.ebuild,v 1.2 2007/11/10 10:23:17 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -195,8 +195,8 @@ src_install() {
 	newinitd "${FILESDIR}"/udev-postmount-initd-111-r2 udev-postmount
 
 	insinto /etc/modprobe.d
-	newins ${FILESDIR}/blacklist-110 blacklist
-	doins ${FILESDIR}/pnp-aliases
+	newins "${FILESDIR}"/blacklist-110 blacklist
+	doins "${FILESDIR}"/pnp-aliases
 
 	# convert /lib/udev to real used dir
 	sed_helper_dir \

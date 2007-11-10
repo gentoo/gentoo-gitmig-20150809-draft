@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-116.ebuild,v 1.1 2007/10/14 17:15:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-116.ebuild,v 1.2 2007/11/10 10:23:17 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -75,7 +75,7 @@ src_unpack() {
 	cd "${S}"
 
 	# patches go here...
-	epatch "${WORKDIR}/${PATCH}"
+	#epatch "${WORKDIR}/${PATCH}"
 	EPATCH_OPTS="-p1" epatch "${FILESDIR}/${PN}-114-root-link-2.diff"
 
 	# Bug 195317

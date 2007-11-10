@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-113-r2.ebuild,v 1.2 2007/07/13 05:15:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-113-r2.ebuild,v 1.3 2007/11/10 10:23:17 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -49,9 +49,9 @@ src_unpack() {
 	cd "${S}"
 
 	# patches go here...
-	epatch ${FILESDIR}/${PN}-104-peristent-net-disable-xen.patch
-	EPATCH_OPTS="-p1" epatch ${FILESDIR}/${PN}-110-root-link-1.diff
-	epatch ${FILESDIR}/${PN}-113-r2-rules.diff
+	epatch "${FILESDIR}"/${PN}-104-peristent-net-disable-xen.patch
+	EPATCH_OPTS="-p1" epatch "${FILESDIR}"/${PN}-110-root-link-1.diff
+	epatch "${FILESDIR}"/${PN}-113-r2-rules.diff
 
 	# this is now installed by sys-fs/device-mapper
 	rm etc/udev/gentoo/64-device-mapper.rules
@@ -140,7 +140,7 @@ src_install() {
 
 	# Our udev config file
 	insinto /etc/udev
-	newins ${FILESDIR}/udev.conf.post_113 udev.conf
+	newins "${FILESDIR}"/udev.conf.post_113 udev.conf
 
 	# Our rules files
 	insinto /etc/udev/rules.d/
@@ -157,8 +157,8 @@ src_install() {
 	newinitd "${FILESDIR}"/udev-postmount-initd-111-r2 udev-postmount
 
 	insinto /etc/modprobe.d
-	newins ${FILESDIR}/blacklist-110 blacklist
-	doins ${FILESDIR}/pnp-aliases
+	newins "${FILESDIR}"/blacklist-110 blacklist
+	doins "${FILESDIR}"/pnp-aliases
 
 	# convert /lib/udev to real used dir
 	sed_helper_dir \
@@ -170,7 +170,7 @@ src_install() {
 		# s390 does not has persistent mac addresses
 		# and we only have persistence rules for mac.
 		# For now just remove the rules file.
-		rm ${D}/etc/udev/rules.d/75-persistent-net-generator.rules
+		rm "${D}"/etc/udev/rules.d/75-persistent-net-generator.rules
 	fi
 
 	# documentation

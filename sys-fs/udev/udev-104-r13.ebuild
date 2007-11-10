@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-104-r13.ebuild,v 1.8 2007/08/25 14:43:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-104-r13.ebuild,v 1.9 2007/11/10 10:23:17 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -26,12 +26,12 @@ src_unpack() {
 	cd "${S}"
 
 	# patches go here...
-	epatch ${FILESDIR}/${P}-netif-rename-busywait.patch
-	epatch ${FILESDIR}/${PN}-104-peristent-net-disable-xen.patch
-	epatch ${FILESDIR}/${PN}-104-persistent-net-fix-name-dups.patch
-	epatch ${FILESDIR}/${PN}-105-vol_id-fix.patch
-	epatch ${FILESDIR}/${PN}-105-unlink-db-files.patch
-	EPATCH_OPTS="-p1" epatch ${FILESDIR}/${PN}-110-root-link-1.diff
+	epatch "${FILESDIR}"/${P}-netif-rename-busywait.patch
+	epatch "${FILESDIR}"/${PN}-104-peristent-net-disable-xen.patch
+	epatch "${FILESDIR}"/${PN}-104-persistent-net-fix-name-dups.patch
+	epatch "${FILESDIR}"/${PN}-105-vol_id-fix.patch
+	epatch "${FILESDIR}"/${PN}-105-unlink-db-files.patch
+	EPATCH_OPTS="-p1" epatch "${FILESDIR}"/${PN}-110-root-link-1.diff
 
 	# No need to clutter the logs ...
 	sed -ie '/^DEBUG/ c\DEBUG = false' Makefile
@@ -134,20 +134,20 @@ src_install() {
 	#doexe extras/raid-devfs.sh
 	doexe extras/floppy/create_floppy_devices	|| die "Required binary not installed properly"
 	doexe extras/firmware/firmware.sh			|| die "Required binary not installed properly"
-	newexe ${FILESDIR}/net-104-r10.sh net.sh	|| die "Required binary not installed properly"
-	newexe ${FILESDIR}/modprobe-104-r12.sh modprobe.sh	|| die "Required binary not installed properly"
-	doexe ${FILESDIR}/seq_node.sh				|| die "Required binary not installed properly"
+	newexe "${FILESDIR}"/net-104-r10.sh net.sh	|| die "Required binary not installed properly"
+	newexe "${FILESDIR}"/modprobe-104-r12.sh modprobe.sh	|| die "Required binary not installed properly"
+	doexe "${FILESDIR}"/seq_node.sh				|| die "Required binary not installed properly"
 
 	# Our udev config file
 	insinto /etc/udev
-	newins ${FILESDIR}/udev.conf.post_081 udev.conf
+	newins "${FILESDIR}"/udev.conf.post_081 udev.conf
 
 	# Our rules files
 	insinto /etc/udev/rules.d/
 	newins etc/udev/gentoo/udev.rules 50-udev.rules
-	newins ${FILESDIR}/udev.rules-104-r10 50-udev.rules
-	newins ${FILESDIR}/05-udev-early.rules-104-r5 05-udev-early.rules
-	doins ${FILESDIR}/95-net.rules
+	newins "${FILESDIR}"/udev.rules-104-r10 50-udev.rules
+	newins "${FILESDIR}"/05-udev-early.rules-104-r5 05-udev-early.rules
+	doins "${FILESDIR}"/95-net.rules
 	# Use upstream's persistent rules for devices
 	doins etc/udev/rules.d/60-*.rules
 	doins extras/rule_generator/75-*.rules || die "rules not installed properly"
@@ -202,25 +202,25 @@ pkg_preinst() {
 	if [ -f "${ROOT}/etc/udev/udev.config" -a \
 	     ! -f "${ROOT}/etc/udev/udev.rules" ]
 	then
-		mv -f ${ROOT}/etc/udev/udev.config ${ROOT}/etc/udev/udev.rules
+		mv -f "${ROOT}"/etc/udev/udev.config "${ROOT}"/etc/udev/udev.rules
 	fi
 
 	# delete the old udev.hotplug symlink if it is present
 	if [ -h "${ROOT}/etc/hotplug.d/default/udev.hotplug" ]
 	then
-		rm -f ${ROOT}/etc/hotplug.d/default/udev.hotplug
+		rm -f "${ROOT}"/etc/hotplug.d/default/udev.hotplug
 	fi
 
 	# delete the old wait_for_sysfs.hotplug symlink if it is present
 	if [ -h "${ROOT}/etc/hotplug.d/default/05-wait_for_sysfs.hotplug" ]
 	then
-		rm -f ${ROOT}/etc/hotplug.d/default/05-wait_for_sysfs.hotplug
+		rm -f "${ROOT}"/etc/hotplug.d/default/05-wait_for_sysfs.hotplug
 	fi
 
 	# delete the old wait_for_sysfs.hotplug symlink if it is present
 	if [ -h "${ROOT}/etc/hotplug.d/default/10-udev.hotplug" ]
 	then
-		rm -f ${ROOT}/etc/hotplug.d/default/10-udev.hotplug
+		rm -f "${ROOT}"/etc/hotplug.d/default/10-udev.hotplug
 	fi
 
 	# is there a stale coldplug initscript? (CONFIG_PROTECT leaves it behind)
@@ -263,7 +263,7 @@ pkg_postinst() {
 		then
 			ewarn "Deleting stray 40-scsi-hotplug.rules"
 			ewarn "installed by sys-fs/udev-103-r3"
-			rm -f ${ROOT}/etc/udev/rules.d/40-scsi-hotplug.rules
+			rm -f "${ROOT}"/etc/udev/rules.d/40-scsi-hotplug.rules
 		fi
 	fi
 
