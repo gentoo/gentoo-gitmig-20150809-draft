@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-5.02.ebuild,v 1.1 2007/09/28 17:49:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-5.02.ebuild,v 1.2 2007/11/10 15:12:43 nixnut Exp $
 
 inherit php-lib-r1 versionator
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
 DESCRIPTION="Active Data Objects Data Base library for PHP."
 HOMEPAGE="http://adodb.sourceforge.net/"
 
