@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIColor/Term-ANSIColor-1.12.ebuild,v 1.4 2007/08/09 15:14:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIColor/Term-ANSIColor-1.12.ebuild,v 1.5 2007/11/10 14:38:16 drac Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://search.cpan.org/~rra/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc sparc x86"
 IUSE="test"
 SRC_TEST="do"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Ediff/String-Ediff-0.09.ebuild,v 1.4 2007/07/23 18:38:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Ediff/String-Ediff-0.09.ebuild,v 1.5 2007/11/10 14:35:50 drac Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_TEST="do"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha ~amd64 ia64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
