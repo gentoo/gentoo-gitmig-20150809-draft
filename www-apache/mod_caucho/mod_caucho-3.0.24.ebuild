@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.0.24.ebuild,v 1.7 2007/11/10 11:21:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.0.24.ebuild,v 1.8 2007/11/10 12:47:38 nelchael Exp $
 
 inherit eutils apache-module autotools
 
@@ -8,7 +8,8 @@ KEYWORDS="~amd64 ppc ~ppc64 x86"
 
 DESCRIPTION="mod_caucho connects Resin and Apache2."
 HOMEPAGE="http://www.caucho.com/"
-SRC_URI="http://www.caucho.com/download/resin-${PV}-src.zip"
+SRC_URI="http://www.caucho.com/download/resin-${PV}-src.zip
+	mirror://gentoo/resin-gentoo-patches-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
@@ -28,10 +29,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-gentoo.patch"
-	epatch "${FILESDIR}/${P}-ssl.patch"
-	epatch "${FILESDIR}/${P}-java.patch"
-	epatch "${FILESDIR}/${P}-disable-sticky-sessions.patch"
+	for i in "${WORKDIR}"/${PV}/mod_caucho-*; do
+		epatch "${i}"
+	done
 	eautoreconf
 	chmod 755 ./configure
 }
