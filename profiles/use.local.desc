@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3129 2007/11/10 14:22:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3130 2007/11/10 17:11:48 alonbl Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1990,6 +1990,9 @@ sys-freebsd/freebsd-usbin:suid - Enable setuid root programs
 sys-fs/clvm:nocman - Allow users to build clvm without cman support and with gulm support
 sys-fs/cryptsetup-luks:dynamic - Build cryptsetup-luks dynamically
 sys-fs/cryptsetup:dynamic - Build cryptsetup dynamically
+sys-fs/ecryptfs-utils:openssl - Enable OpenSSL key module.
+sys-fs/ecryptfs-utils:pkcs11 - Enable PKCS#11 (Smartcards) key module.
+sys-fs/ecryptfs-utils:gpg - Enable gnupg key module.
 sys-fs/evms:hb - Enable support for heartbeat-1
 sys-fs/evms:hb2 - Enable support for heartbeat-2
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources

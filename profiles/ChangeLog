@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.810 2007/11/10 16:57:32 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.811 2007/11/10 17:11:48 alonbl Exp $
+
+  10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> use.local.desc:
+  Add ecryptfs-utils flags
 
   10 Nov 2007; Christian Birchinger <joker@gentoo.org> package.mask:
   Added >=x11-plugins/wmauda-0.7 until Audacious 1.4 gets unmasked
