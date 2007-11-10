@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r3.ebuild,v 1.9 2007/09/07 17:39:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r3.ebuild,v 1.10 2007/11/10 08:49:05 phreak Exp $
 
 # *** Please remember to update qt3.eclass when revbumping this ***
 
@@ -147,6 +147,12 @@ src_unpack() {
 	# set c/xxflags and ldflags
 	strip-flags
 	append-flags -fno-strict-aliasing
+
+	if [[ $( gcc-fullversion ) == "3.4.6" && gcc-specs-ssp ]] ; then
+		ewarn "Appending -fno-stack-protector to CFLAGS/CXXFLAGS"
+		append-flags -fno-stack-protector
+	fi
+
 	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
 	       -e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
 	       -e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \

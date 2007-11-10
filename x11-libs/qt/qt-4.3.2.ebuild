@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.2.ebuild,v 1.7 2007/11/09 23:11:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.2.ebuild,v 1.8 2007/11/10 08:49:05 phreak Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -126,6 +126,11 @@ src_unpack() {
 	# out the line below and give 'er a whirl.
 	strip-flags
 	replace-flags -O3 -O2
+
+	if [[ $( gcc-fullversion ) == "3.4.6" && gcc-specs-ssp ]] ; then
+		ewarn "Appending -fno-stack-protector to CFLAGS/CXXFLAGS"
+		append-flags -fno-stack-protector
+	fi
 
 	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
 		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
