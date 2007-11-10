@@ -1,0 +1,7 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/m68k/package.use.mask,v 1.1 2007/11/10 21:59:17 flameeyes Exp $
+
+# Diego Pettenò <flameeyes@gentoo.org> (10 Nov 2007)
+# Tests for Linux-PAM 0.99 require >=sys-libs/glibc-2.4
+=sys-libs/pam-0.99* test

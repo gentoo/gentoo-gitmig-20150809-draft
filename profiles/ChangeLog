@@ -1,6 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.811 2007/11/10 17:11:48 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.812 2007/11/10 21:59:14 flameeyes Exp $
+
+  10 Nov 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +default-linux/alpha/2006.1/package.use.mask,
+  +default-linux/alpha/no-nptl/package.use.mask,
+  default-linux/hppa/2006.1/package.mask,
+  +default-linux/hppa/2006.1/package.use.mask,
+  +default-linux/ia64/2006.0/package.use.mask,
+  +default-linux/m68k/package.use.mask,
+  +default-linux/ppc/ppc64/2006.1/64bit-userland/package.use.mask,
+  hardened/ppc/package.use.mask, hardened/ppc64/package.use.mask:
+  Mask the test USE flag for sys-libs/pam-0.99 wherever glibc-2.4 is masked,
+  unmask pam-0.99 in hppa profile now.
 
   10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> use.local.desc:
   Add ecryptfs-utils flags
