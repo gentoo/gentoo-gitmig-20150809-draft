@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.26 2007/10/15 21:23:47 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.27 2007/11/10 15:07:04 nixnut Exp $
+
+  10 Nov 2007; nixnut <nixnut@gentoo.org> botan-1.6.1-r1.ebuild:
+  Stable on ppc wrt bug 19864
 
   15 Oct 2007; Alon Bar-Lev <alonbl@gentoo.org>
   -files/botan-1.4.4-gcc34.patch, -files/botan-1.4.9-gcc-4.patch,
