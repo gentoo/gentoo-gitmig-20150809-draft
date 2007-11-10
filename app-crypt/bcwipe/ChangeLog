@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/bcwipe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.18 2007/02/21 20:22:43 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.19 2007/11/10 09:18:30 alonbl Exp $
+
+*bcwipe-1.6_p8 (10 Nov 2007)
+
+  10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/bcwipe-1.6_p8-qa.patch, +bcwipe-1.6_p8.ebuild:
+  Version bump
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

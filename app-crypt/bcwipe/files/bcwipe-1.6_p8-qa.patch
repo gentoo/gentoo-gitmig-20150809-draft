@@ -1,0 +1,12 @@
+diff -urNp bcwipe.org/options.c bcwipe/options.c
+--- bcwipe.org/options.c	2007-09-11 06:41:19.000000000 +0300
++++ bcwipe/options.c	2007-11-10 11:05:38.000000000 +0200
+@@ -20,6 +20,8 @@ char wipe_c[]="$Id: options.c,v 1.3 2007
+ #include "options.h"
+ #include "schemes.h"
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ 
+ int o_verbose      = FALSE; /* -v,  */
