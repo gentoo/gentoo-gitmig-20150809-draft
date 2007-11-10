@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.805 2007/11/10 11:26:07 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.806 2007/11/10 14:16:58 nelchael Exp $
+
+  10 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
+  Remove mask of x11-misc/xcut
 
   10 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
   Mask www-servers/resin-2.1.17

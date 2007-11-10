@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7889 2007/11/10 11:26:07 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7890 2007/11/10 14:16:58 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -232,10 +232,6 @@ dev-php4/pecl-http
 # Ulrich Mueller <ulm@gentoo.org> (15 Oct 2007)
 # Live CVS ebuild
 ~app-emacs/ngnus-9999
-
-# Krzysiek Pawlik <nelchael@gentoo.org> (15 Oct 2007)
-# Copying does't work, use xclip instead, see bug #191553
-x11-misc/xcut
 
 # Stefan Schweizer <genstef@gentoo.org> (14 Oct 2007)
 # Development release
