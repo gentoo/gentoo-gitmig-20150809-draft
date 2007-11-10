@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.3-r2.ebuild,v 1.14 2007/07/10 23:33:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.3-r2.ebuild,v 1.15 2007/11/10 19:19:36 drac Exp $
 
 inherit perl-module eutils
 
@@ -34,11 +34,11 @@ S=${WORKDIR}/SDL_Perl-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	if has_version '>=dev-perl/module-build-0.28' ; then
-		epatch ${FILESDIR}/sdl-2.1.3.build.patch
+		epatch "${FILESDIR}"/sdl-2.1.3.build.patch
 	fi
-	epatch ${FILESDIR}/sdl-perl-2.1.3-gfxPie.patch
+	epatch "${FILESDIR}"/sdl-perl-2.1.3-gfxPie.patch
 }
 
 src_install() {
