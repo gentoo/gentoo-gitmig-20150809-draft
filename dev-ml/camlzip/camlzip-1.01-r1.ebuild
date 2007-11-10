@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/camlzip-1.01-r1.ebuild,v 1.2 2004/08/26 12:36:52 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/camlzip-1.01-r1.ebuild,v 1.3 2007/11/10 14:22:03 aballier Exp $
 
 inherit findlib eutils
 
@@ -19,9 +19,9 @@ DEPEND=">=dev-lang/ocaml-3.04 \
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-Makefile-findlib.patch
-	sed -e "s/VERSION/${PV}/" ${FILESDIR}/META >> META
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-Makefile-findlib.patch"
+	sed -e "s/VERSION/${PV}/" "${FILESDIR}/META" >> META
 }
 
 src_compile() {
