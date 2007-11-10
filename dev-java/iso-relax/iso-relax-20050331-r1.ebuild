@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/iso-relax-20050331-r1.ebuild,v 1.9 2007/05/26 15:09:54 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/iso-relax-20050331-r1.ebuild,v 1.10 2007/11/10 19:04:16 nelchael Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -25,8 +25,6 @@ IUSE=""
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.4"
-
-PATCHES="${FILESDIR}/${P}-build.patch"
 
 EANT_BUILD_TARGET="release"
 
