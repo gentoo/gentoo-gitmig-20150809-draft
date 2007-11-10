@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.18.0-r3.ebuild,v 1.1 2007/09/29 08:16:38 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.18.0-r3.ebuild,v 1.2 2007/11/10 14:45:26 eva Exp $
 
 inherit eutils gnome2 autotools
 
@@ -84,7 +84,7 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
-	epatch ${FILESDIR}/${P}-acpi-procfs.patch
+	epatch "${FILESDIR}/${P}-acpi-procfs.patch"
 	epatch "${FILESDIR}/${P}-gtk+-2.12-compat.patch"
 	AT_M4DIR="m4" eautoreconf
 }
