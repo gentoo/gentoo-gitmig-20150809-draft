@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/Test-Deep-0.097.ebuild,v 1.1 2007/08/19 16:07:09 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/Test-Deep-0.097.ebuild,v 1.2 2007/11/10 18:03:06 armin76 Exp $
 
 inherit perl-module
 IUSE=""
@@ -11,7 +11,7 @@ HOMEPAGE="http://search.cpan.org/~fdaly/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc sparc ~x86"
 
 SRC_TEST="do"
 DEPEND="dev-perl/Test-NoWarnings
