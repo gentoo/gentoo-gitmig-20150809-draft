@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/WWW-Bugzilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.27 2007/10/19 20:09:05 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.28 2007/11/10 16:18:51 fmccor Exp $
+
+  10 Nov 2007; Ferris McCormick <fmccor@gentoo.org> WWW-Bugzilla-0.9.ebuild,
+  WWW-Bugzilla-1.0.ebuild:
+  Also ~sparc as part of Bug #198698.
+
+  10 Nov 2007; Ferris McCormick <fmccor@gentoo.org> WWW-Bugzilla-1.0.ebuild:
+  Reverting to ~sparc at developer request, Bug #198698.
 
 *WWW-Bugzilla-1.3 (19 Oct 2007)
 
