@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/ifd-gempc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.10 2007/02/15 19:35:52 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.11 2007/11/10 17:20:18 alonbl Exp $
+
+*ifd-gempc-1.0.3 (10 Nov 2007)
+
+  10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/ifd-gempc-0.9.1.gcc-3.4.patch, -files/ifd-gempc-0.9.1.gentoo.diff,
+  -files/ifd-gempc-1.0.0-pcsc-lite-include.patch,
+  -files/ifd-gempc-1.0.1-strip.patch, -ifd-gempc-0.9.1.ebuild,
+  -ifd-gempc-0.9.3.ebuild, -ifd-gempc-1.0.0.ebuild, -ifd-gempc-1.0.1.ebuild,
+  +ifd-gempc-1.0.3.ebuild:
+  Version bump, cleanup
 
   15 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> ifd-gempc-1.0.1.ebuild:
   Fix postrm for multi libraries

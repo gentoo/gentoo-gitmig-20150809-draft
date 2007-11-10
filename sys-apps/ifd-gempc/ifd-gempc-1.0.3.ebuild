@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ifd-gempc-1.0.1.ebuild,v 1.3 2007/07/12 05:10:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ifd-gempc-1.0.3.ebuild,v 1.1 2007/11/10 17:20:18 alonbl Exp $
 
 inherit eutils
 
@@ -15,12 +15,6 @@ RDEPEND=">=sys-apps/pcsc-lite-1.2.9_beta5
 	>=dev-libs/libusb-0.1.10a"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-strip.patch"
-}
 
 src_install () {
 	local pcscdir="$(pkg-config --variable=usbdropdir libpcsclite)"
