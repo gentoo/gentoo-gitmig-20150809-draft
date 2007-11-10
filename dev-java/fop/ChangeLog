@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.54 2007/09/18 22:18:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.55 2007/11/10 00:39:01 caster Exp $
+
+*fop-0.94 (10 Nov 2007)
+
+  10 Nov 2007; Vlastimil Babka <caster@gentoo.org>
+  -files/0.20.5-buildxml.patch, -files/0.20.5-startscript.patch,
+  -files/0.20.5-no-autodetection.patch, -fop-0.20.5-r7.ebuild,
+  +fop-0.94.ebuild:
+  Version bump, bug #194687. No more ecj forcing, javac seems fine even on
+  amd64. Javadoc generation still masked on amd64 though. Also dropped od
+  0.20.5 version.
 
   18 Sep 2007; Petteri Räty <betelgeuse@gentoo.org> fop-0.93-r1.ebuild:
   Add a built_with_use check for dev-java/xmlgraphics-commons and the jpeg use
