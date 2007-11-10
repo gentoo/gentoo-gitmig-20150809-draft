@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.139 2007/10/19 23:22:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.140 2007/11/10 16:47:41 philantrop Exp $
+
+*kpdf-3.5.8-r1 (10 Nov 2007)
+*kpdf-3.5.7-r3 (10 Nov 2007)
+
+  10 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/post-3.5.8-kdegraphics-kpdf.diff, +kpdf-3.5.7-r3.ebuild,
+  +kpdf-3.5.8-r1.ebuild:
+  Added an upstream patch to fix security bug 198409.
 
 *kpdf-3.5.8 (19 Oct 2007)
 
