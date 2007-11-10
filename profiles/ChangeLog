@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.807 2007/11/10 14:22:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.808 2007/11/10 14:37:27 eva Exp $
+
+  10 Nov 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  default-bsd/package.use.mask:
+  use.mask apm for gnome-base/gnome-applets
 
   10 Nov 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
   add latex USE flag for sci-visualization/gnuplot
