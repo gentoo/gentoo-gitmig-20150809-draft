@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/mcrypt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.20 2007/05/11 19:52:12 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.21 2007/11/10 12:34:16 alonbl Exp $
+
+*mcrypt-2.6.7 (10 Nov 2007)
+
+  10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/mcrypt-2.6.7-qa.patch, +mcrypt-2.6.7.ebuild:
+  Version bump
 
   11 May 2007; Alon Bar-Lev <alonbl@gentoo.org>
   +files/mcrypt-2.6.5-build.patch, mcrypt-2.6.5.ebuild:
