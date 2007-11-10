@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/ecryptfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.8 2007/10/25 16:17:22 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.9 2007/11/10 15:31:27 masterdriverz Exp $
+
+*ecryptfs-utils-30 (10 Nov 2007)
+
+  10 Nov 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  -ecryptfs-utils-7.ebuild, -ecryptfs-utils-18.ebuild,
+  +ecryptfs-utils-30.ebuild:
+  Remove old ebuilds and bump to version 30, thanks to alonbl for the ebuild
+  (bug 198608).
 
 *ecryptfs-utils-18 (25 Oct 2007)
 
