@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclgpgme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.24 2007/11/10 16:54:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.25 2007/11/10 17:02:23 alonbl Exp $
+
+  10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> -tclgpgme-1.0-r1.ebuild:
+  Cleanup
 
   10 Nov 2007; nixnut <nixnut@gentoo.org> tclgpgme-1.0-r2.ebuild:
   Stable on ppc wrt bug 198707
