@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p2.ebuild,v 1.4 2007/10/13 14:11:06 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p2.ebuild,v 1.5 2007/11/10 22:52:51 nixphoeni Exp $
 
 inherit eutils
 
 DESCRIPTION="EAGLE Layout Editor"
 HOMEPAGE="http://www.cadsoft.de"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 x86"
 IUSE="linguas_de doc"
 LICENSE="cadsoft"
 RESTRICT="strip"
@@ -44,7 +44,7 @@ case "${LINGUAS}" in
 esac
 MANFILE=${MANDOC}-${MY_LANG}-${MANVER}.pdf
 MY_P=${PN}-lin-${MY_LANG}-${MY_PV}
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 
@@ -62,7 +62,7 @@ src_install() {
 
 	# Install the documentation
 	dodoc README doc/*
-	use doc && cp ${MANFILE} ${D}/usr/share/doc/${PF}
+	use doc && cp ${MANFILE} "${D}"/usr/share/doc/${PF}
 	doman man/eagle.1
 	# Remove docs left in INSTALLDIR
 	rm -rf "${D}"/${INSTALLDIR}/{README,install,${MANFILE}} "${D}"/${INSTALLDIR}/doc "${D}"/${INSTALLDIR}/man
@@ -78,7 +78,8 @@ src_install() {
 
 pkg_postinst() {
 
-	elog "Run \`env-update && source /etc/profile\` now to set up the correct paths."
+	elog "Run \`env-update && source /etc/profile\` from within \${ROOT}"
+	elog "now to set up the correct paths."
 	elog "You must first run eagle as root to invoke product registration."
 
 }
