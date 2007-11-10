@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcsc-slb-rf72-drv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/ChangeLog,v 1.6 2007/02/15 19:38:06 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/ChangeLog,v 1.7 2007/11/10 17:31:20 alonbl Exp $
+
+  10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  pcsc-slb-rf72-drv-1.1.0-r1.ebuild:
+  Cleanups
 
   15 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org>
   pcsc-slb-rf72-drv-1.1.0-r1.ebuild:

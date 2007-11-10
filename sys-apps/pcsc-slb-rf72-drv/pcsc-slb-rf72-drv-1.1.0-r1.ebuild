@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/pcsc-slb-rf72-drv-1.1.0-r1.ebuild,v 1.3 2007/07/12 05:10:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/pcsc-slb-rf72-drv-1.1.0-r1.ebuild,v 1.4 2007/11/10 17:31:20 alonbl Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_install () {
 	local pcscdir="$(pkg-config --variable=usbdropdir libpcsclite)"
 	local conf="/etc/reader.conf.d/${PN}.conf"
 
-	dodoc ERRATA LICENSE README
+	dodoc ERRATA README
 
 	dodir "${pcscdir}/serial"
 	insinto "${pcscdir}/serial"
