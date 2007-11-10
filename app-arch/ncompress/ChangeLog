@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/ncompress
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.34 2007/11/10 19:43:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.35 2007/11/10 20:33:47 fmccor Exp $
+
+  10 Nov 2007; Ferris McCormick <fmccor@gentoo.org>
+  ncompress-4.2.4.2.ebuild:
+  Sparc stable --- Bug #198597 --- works so far as I can tell.
 
   10 Nov 2007; Samuli Suominen <drac@gentoo.org> ncompress-4.2.4.2.ebuild:
   amd64 stable wrt #198597
