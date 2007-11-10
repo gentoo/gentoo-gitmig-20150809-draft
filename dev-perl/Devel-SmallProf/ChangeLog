@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-SmallProf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-SmallProf/ChangeLog,v 1.10 2007/07/16 14:06:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-SmallProf/ChangeLog,v 1.11 2007/11/10 12:36:35 drac Exp $
+
+  10 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  Devel-SmallProf-2.02.ebuild:
+  amd64 stable
 
   16 Jul 2007; Michael Cummings <mcummings@gentoo.org>
   Devel-SmallProf-2.02.ebuild:

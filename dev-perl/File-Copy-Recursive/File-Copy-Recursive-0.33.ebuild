@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Copy-Recursive/File-Copy-Recursive-0.33.ebuild,v 1.4 2007/08/09 14:44:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Copy-Recursive/File-Copy-Recursive-0.33.ebuild,v 1.5 2007/11/10 13:04:09 drac Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/D/DM/DMUEY/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ppc sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc sparc x86"
 IUSE=""
 SRC_TEST="do"
 

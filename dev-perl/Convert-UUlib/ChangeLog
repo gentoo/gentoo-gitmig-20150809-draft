@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-UUlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.36 2007/08/09 14:28:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.37 2007/11/10 12:22:35 drac Exp $
+
+  10 Nov 2007; Samuli Suominen <drac@gentoo.org> Convert-UUlib-1.09.ebuild:
+  amd64 stable
 
   09 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   Convert-UUlib-1.09.ebuild:

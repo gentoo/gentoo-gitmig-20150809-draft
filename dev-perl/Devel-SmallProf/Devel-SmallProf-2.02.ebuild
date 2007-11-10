@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-SmallProf/Devel-SmallProf-2.02.ebuild,v 1.3 2007/07/16 14:06:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-SmallProf/Devel-SmallProf-2.02.ebuild,v 1.4 2007/11/10 12:36:35 drac Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/S/SA/SALVA/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 sparc ~x86"
+KEYWORDS="amd64 sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
