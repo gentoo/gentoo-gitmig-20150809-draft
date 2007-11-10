@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/suspend
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.4 2007/11/09 21:26:46 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.5 2007/11/10 06:03:00 drac Exp $
+
+  10 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  suspend-0.9_pre20071109.ebuild:
+  Keyword ~amd64 wrt #197687.
 
 *suspend-0.9_pre20071109 (09 Nov 2007)
 
