@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty-docs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.41 2007/03/18 15:46:37 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.42 2007/11/10 16:24:32 nixnut Exp $
+
+  10 Nov 2007; nixnut <nixnut@gentoo.org> smarty-docs-2.6.14.ebuild:
+  Stable on ppc wrt bug 198570
 
   18 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
   -smarty-docs-2.6.9.ebuild, smarty-docs-2.6.11.ebuild,
