@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.14 2007/01/24 17:14:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.15 2007/11/10 12:59:17 alonbl Exp $
+
+*trousers-0.3.1 (10 Nov 2007)
+
+  10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/trousers-0.2.1-nouseradd.patch, -files/trousers-0.2.3-ldadd.patch,
+  -files/trousers-0.2.6-as-needed.patch, -trousers-0.2.1.ebuild,
+  -trousers-0.2.3.ebuild, -trousers-0.2.5.ebuild, -trousers-0.2.6.ebuild,
+  -trousers-0.2.8.ebuild, +trousers-0.3.1.ebuild:
+  Version bump, cleanup
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> trousers-0.2.1.ebuild,
   trousers-0.2.3.ebuild, trousers-0.2.5.ebuild, trousers-0.2.6.ebuild,

@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.2.1.ebuild,v 1.3 2007/01/24 17:14:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.1.ebuild,v 1.1 2007/11/10 12:59:17 alonbl Exp $
 
-inherit eutils linux-info
+inherit eutils linux-info autotools
 
 DESCRIPTION="An open-source TCG Software Stack (TSS) v1.1 implementation"
 HOMEPAGE="http://trousers.sf.net"
@@ -12,10 +12,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc"
 
-RDEPEND="virtual/libc
-	>=dev-libs/glib-2
-	dev-libs/atk
-	x11-libs/pango
+RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
 	>=dev-libs/openssl-0.9.7"
 
@@ -63,18 +60,16 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/dist
-	epatch ${FILESDIR}/${P}-nouseradd.patch
+	cd "${S}/dist"
+	epatch "${FILESDIR}/${PN}-0.2.3-nouseradd.patch"
+	cd "${S}"
 }
 
 src_install() {
 	keepdir /var/lib/tpm
-	make "DESTDIR=${D}" install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NICETOHAVES README TODO
-	if use doc ; then
-		insinto /usr/share/doc/${PF}
-		doins doc/*
-	fi
+	use doc && dodoc doc/*
 	newinitd "${FILESDIR}/tcsd.initd" tcsd
 	newconfd "${FILESDIR}/tcsd.confd" tcsd
 }

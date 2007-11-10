@@ -1,9 +1,0 @@
---- trousers-0.2.6.orig/src/tcsd/Makefile.am	2006-02-24 09:29:59.000000000 +1100
-+++ trousers-0.2.6/src/tcsd/Makefile.am	2006-05-07 09:03:05.000000000 +1000
-@@ -2,5 +2,4 @@
- 
- tcsd_SOURCES=svrside.c tcsd_wrap.c tcsd_conf.c tcsd_threads.c platform.c
- tcsd_CFLAGS=-DAPPID=\"TCSD\" -DVAR_PREFIX=\"@localstatedir@\" -DETC_PREFIX=\"@sysconfdir@\"
--tcsd_LDADD=../tcs/libtcs.a ../tddl/libtddl.a
--tcsd_LDFLAGS=-lpthread -lcrypto
-+tcsd_LDADD=../tcs/libtcs.a ../tddl/libtddl.a -lpthread -lcrypto
