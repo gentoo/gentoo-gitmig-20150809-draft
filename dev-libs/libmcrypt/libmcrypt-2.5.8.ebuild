@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.8.ebuild,v 1.5 2007/11/10 20:56:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.8.ebuild,v 1.6 2007/11/10 22:13:42 corsair Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mcrypt/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""

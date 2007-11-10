@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcrypt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.38 2007/11/10 20:56:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.39 2007/11/10 22:13:42 corsair Exp $
+
+  10 Nov 2007; Markus Rothe <corsair@gentoo.org> libmcrypt-2.5.8.ebuild:
+  Stable on ppc64; bug #198664
 
   10 Nov 2007; Samuli Suominen <drac@gentoo.org> libmcrypt-2.5.8.ebuild:
   amd64 stable wrt #198664
