@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcrypt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.36 2007/11/10 13:23:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.37 2007/11/10 18:38:41 fmccor Exp $
+
+  10 Nov 2007; Ferris McCormick <fmccor@gentoo.org> libmcrypt-2.5.8.ebuild:
+  Sparc stable --- Bug #198664 --- all tests good.
 
   10 Nov 2007; nixnut <nixnut@gentoo.org> libmcrypt-2.5.8.ebuild:
   Stable on ppc wrt bug 198664
