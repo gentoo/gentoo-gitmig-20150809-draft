@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/quintuple-agent
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/ChangeLog,v 1.9 2006/09/23 01:50:32 dragonheart Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/ChangeLog,v 1.10 2007/11/10 13:19:20 alonbl Exp $
+
+  10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  quintuple-agent-1.0.3.ebuild:
+  Cleanups
 
   23 Sep 2006; Daniel Black <dragonheart@gentoo.org>
   +files/quintuple-agent-1.0.3-socklen_t.patch,

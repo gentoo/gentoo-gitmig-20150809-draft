@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.15 2006/09/24 00:57:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.16 2007/11/10 13:19:20 alonbl Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ DEPEND="${COMMON_DEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-socklen_t.patch"
 }
 
@@ -34,8 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
-
+	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 	docinto doc
 	dodoc doc/*.sgml
