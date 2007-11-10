@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2007-r2.ebuild,v 1.2 2007/11/10 13:55:02 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2007-r2.ebuild,v 1.3 2007/11/10 18:23:13 armin76 Exp $
 
 DESCRIPTION="A complete TeX distribution"
 HOMEPAGE="http://tug.org/texlive/"
@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 IUSE="cjk context cyrillic doc extra games graphics humanities music omega
 	png pstricks publishers science xetex xml X"
 
