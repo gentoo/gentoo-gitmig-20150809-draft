@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.5.ebuild,v 1.1 2007/10/08 16:37:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.5.ebuild,v 1.2 2007/11/10 21:50:18 vapier Exp $
 
 inherit eutils autotools
 
@@ -25,10 +25,7 @@ RDEPEND="dev-libs/zziplib
 	cegui? ( >=dev-games/cegui-0.5 )
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	devil? ( media-libs/devil )
-	gtk? (
-		>=dev-cpp/gtkmm-2.4
-		>=dev-cpp/libglademm-2.4
-	)
+	gtk? ( >=x11-libs/gtk+-2 )
 	openexr? ( >=media-libs/openexr-1.2 )
 	threads? ( dev-libs/boost )"
 DEPEND="${RDEPEND}
