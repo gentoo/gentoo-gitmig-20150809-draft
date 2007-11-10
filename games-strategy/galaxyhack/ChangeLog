@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/galaxyhack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/ChangeLog,v 1.4 2007/06/13 23:30:54 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/ChangeLog,v 1.5 2007/11/10 00:47:17 tupone Exp $
+
+*galaxyhack-1.74 (10 Nov 2007)
+
+  10 Nov 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/galaxyhack-1.74-boost.patch, +files/galaxyhack-1.74-destdirs.patch,
+  +galaxyhack-1.74.ebuild:
+  Version bump
 
   13 Jun 2007; Tristan Heaven <nyhm@gentoo.org>
   +files/galaxyhack-1.69-boost.patch, galaxyhack-1.69.ebuild:
