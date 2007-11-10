@@ -1,9 +1,4 @@
-DIST xmms-crossfade-0.3.11.tar.gz 494334 RMD160 a42b319fc8cdfb8cce4d011c5d3818efd8b34bd7 SHA1 e9f2f92a30910afe08570e6af69ed14ed24b1ac5 SHA256 2229fc32e96293e213d8a5d60a7f95225dfc25cec4be8a4a9702cac5defcb33b
 DIST xmms-crossfade-0.3.12.tar.gz 500259 RMD160 25051f797be271563d6f27afe08162bc782f4640 SHA1 1123f27a4659fd5124bb08e6e54d9fa4bc27ef5f SHA256 3c2ac03393283f9d71225a87b7330d393172c456643be222dbf4b2def29feb3f
-EBUILD audacious-crossfade-0.3.11.ebuild 949 RMD160 801c06391ac457f282531dca85da2cb9d34831ef SHA1 310ee2821757bf08f8a78b60dec227cd724fd029 SHA256 60178ed4e717cde72cd4171e312d89a369ba04529e7da5a1e8eebc9c66618ccb
-MD5 e7b7c4e1609b8a9763587d34f85aa98d audacious-crossfade-0.3.11.ebuild 949
-RMD160 801c06391ac457f282531dca85da2cb9d34831ef audacious-crossfade-0.3.11.ebuild 949
-SHA256 60178ed4e717cde72cd4171e312d89a369ba04529e7da5a1e8eebc9c66618ccb audacious-crossfade-0.3.11.ebuild 949
 EBUILD audacious-crossfade-0.3.12.ebuild 997 RMD160 1553657328bc14538b5abe058158de4f52b3a3a7 SHA1 c5853560d8851a5bdbad92b62fdcc53f36c5c79d SHA256 9f6243deb24ef071cb0f68704a26f98c57d4bca0af5cc6926298a5b6d7c1024e
 MD5 69ee0a88038e349dbbca03b0d069d926 audacious-crossfade-0.3.12.ebuild 997
 RMD160 1553657328bc14538b5abe058158de4f52b3a3a7 audacious-crossfade-0.3.12.ebuild 997
@@ -16,9 +11,6 @@ MISC metadata.xml 239 RMD160 0bfe0f92adc48cbafaac1845601f90d608fb470f SHA1 5d37b
 MD5 c6f1e0d2142ce11913db392a3184eff8 metadata.xml 239
 RMD160 0bfe0f92adc48cbafaac1845601f90d608fb470f metadata.xml 239
 SHA256 8147cc3d5cdeaaf4181ee830c48732cdc24cec5151d4e5e437c9a2ccd191fbf6 metadata.xml 239
-MD5 be7334fd3df404d83f249de8a48d12b5 files/digest-audacious-crossfade-0.3.11 265
-RMD160 f291ae7f91ac47321ebe109846d9d50c5d395431 files/digest-audacious-crossfade-0.3.11 265
-SHA256 819ad223d1173885295830a53740aff63d88a59b31ca413bb068eb3d1aba1483 files/digest-audacious-crossfade-0.3.11 265
 MD5 5a188232db6e2747bed2f309cc03ebb9 files/digest-audacious-crossfade-0.3.12 265
 RMD160 9d687aad258cc57d204069c166ef67728fcb2083 files/digest-audacious-crossfade-0.3.12 265
 SHA256 e3434af6c69742ee7c143435ca7b58860a8fdc4b82fec8ecea8b49c5bc543c16 files/digest-audacious-crossfade-0.3.12 265
