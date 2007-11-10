@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta12.ebuild,v 1.2 2007/11/06 23:21:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta12.ebuild,v 1.3 2007/11/10 18:10:54 aballier Exp $
 
 inherit eutils autotools libtool
 
@@ -21,7 +21,8 @@ RDEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
 	X? ( x11-libs/libX11 x11-libs/libXt )
 	opengl? ( virtual/opengl virtual/glut )"
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen
+		virtual/latex-base )"
 
 S="${WORKDIR}/${MY_P}"
 
