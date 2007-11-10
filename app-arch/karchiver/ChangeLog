@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/karchiver
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/ChangeLog,v 1.31 2007/11/09 20:25:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/ChangeLog,v 1.32 2007/11/10 16:42:05 nixnut Exp $
+
+  10 Nov 2007; nixnut <nixnut@gentoo.org> karchiver-3.4.2-r4.ebuild:
+  Stable on ppc wrt bug 198692
 
   09 Nov 2007; Raúl Porcel <armin76@gentoo.org> karchiver-3.4.2-r4.ebuild:
   sparc/x86 stable
