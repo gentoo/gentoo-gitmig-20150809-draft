@@ -1,6 +1,11 @@
 # ChangeLog for games-util/qjoypad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/ChangeLog,v 1.7 2007/09/30 21:43:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/ChangeLog,v 1.8 2007/11/10 01:16:04 tupone Exp $
+
+*qjoypad-3.4.1 (10 Nov 2007)
+
+  10 Nov 2007; Tupone Alfredo <tupone@gentoo.org> +qjoypad-3.4.1.ebuild:
+  Version bump
 
   30 Sep 2007; Michael Sterrett <mr_bones_@gentoo.org> qjoypad-3.4.ebuild:
   use eqmake3 from qt3 eclass for bug #194215
