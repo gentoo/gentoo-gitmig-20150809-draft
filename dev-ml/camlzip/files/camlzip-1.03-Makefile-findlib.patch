@@ -9,7 +9,7 @@
  OBJS=zlib.cmo zip.cmo gzip.cmo
  C_OBJS=zlibstubs.o
  
-+LIBINSTALL_FILES = $(wildcard *.mli *.cmi *.cma *.cmxa *.a *.so *.cmx)
++LIBINSTALL_FILES = $(wildcard *.mli *.cmi *.cma *.cmxa *.a *.so)
 +
  all: libcamlzip.a zip.cma
  
