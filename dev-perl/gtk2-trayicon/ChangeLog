@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-trayicon
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-trayicon/ChangeLog,v 1.16 2007/07/11 15:19:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-trayicon/ChangeLog,v 1.17 2007/11/10 18:58:08 drac Exp $
+
+  10 Nov 2007; Samuli Suominen <drac@gentoo.org> gtk2-trayicon-0.06.ebuild:
+  amd64 stable
 
   11 Jul 2007; Raúl Porcel <armin76@gentoo.org> gtk2-trayicon-0.06.ebuild:
   ia64/x86 stable
