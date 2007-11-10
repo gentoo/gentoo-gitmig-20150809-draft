@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/mockmaker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockmaker/ChangeLog,v 1.7 2007/11/02 03:47:45 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockmaker/ChangeLog,v 1.8 2007/11/10 12:21:05 nixnut Exp $
+
+  10 Nov 2007; nixnut <nixnut@gentoo.org>
+  mockmaker-1.12.0_p20050104-r1.ebuild:
+  Stable on ppc wrt bug 197709
 
   02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   mockmaker-1.12.0_p20050104-r1.ebuild:
