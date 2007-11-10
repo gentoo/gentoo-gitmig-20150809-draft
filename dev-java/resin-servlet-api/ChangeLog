@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/resin-servlet-api
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/ChangeLog,v 1.8 2007/11/09 14:04:47 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/ChangeLog,v 1.9 2007/11/10 12:41:21 nelchael Exp $
+
+  10 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/resin-3.0.24-gentoo.patch, -files/resin-3.1.3-gentoo.patch,
+  resin-servlet-api-3.0.24.ebuild, resin-servlet-api-3.1.3.ebuild:
+  Use tarball of patches.
 
 *resin-servlet-api-3.1.3 (09 Nov 2007)
 
