@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.6.ebuild,v 1.1 2007/10/21 11:45:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.6.ebuild,v 1.2 2007/11/10 08:58:17 drac Exp $
 
 inherit kde eutils qt3
 
@@ -16,7 +16,6 @@ IUSE="ffmpeg flac kdeenablefinal mp3 musepack vorbis"
 DEPEND=">=media-libs/taglib-1.4
 	>=media-sound/cdparanoia-3.9.8-r5
 	$(qt_min_version 3)"
-
 RDEPEND="mp3? ( >=media-sound/lame-3.96 )
 	vorbis? ( >=media-sound/vorbis-tools-1 )
 	flac? ( >=media-libs/flac-1.1.1 )
@@ -46,5 +45,6 @@ src_install() {
 pkg_postinst() {
 	elog "The audio USE flags are for your convience, but are not required."
 	elog "For AmaroK users there is a script included with this package."
-	elog "You can enable it with the Script Manager tool in Amarok."
+	elog "You can enable it with the Script Manager tool in Amarok, after"
+	elog "installing kde-base/qtruby."
 }
