@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-xosd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-xosd/ChangeLog,v 1.8 2007/03/25 01:38:52 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-xosd/ChangeLog,v 1.9 2007/11/10 16:45:58 joker Exp $
+
+*audacious-xosd-0.9 (10 Nov 2007)
+
+  10 Nov 2007; Christian Birchinger <joker@gentoo.org>
+  audacious-xosd-0.5.ebuild, +audacious-xosd-0.9.ebuild:
+  Added new version for Audacious 1.4 and limited the dependencies for the
+  older version to 1.3.
 
   25 Mar 2007; Christian Birchinger <joker@gentoo.org>
   -audacious-xosd-0.3.ebuild, -audacious-xosd-0.4.ebuild:
