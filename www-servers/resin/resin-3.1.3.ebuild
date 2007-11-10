@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.3.ebuild,v 1.1 2007/11/09 14:07:01 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.3.ebuild,v 1.2 2007/11/10 12:42:43 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -8,7 +8,8 @@ inherit java-pkg-2 java-ant-2 eutils flag-o-matic
 
 DESCRIPTION="A fast Servlet 2.5 and JSP 2.0 engine."
 HOMEPAGE="http://www.caucho.com"
-SRC_URI="http://www.caucho.com/download/${P}-src.zip"
+SRC_URI="http://www.caucho.com/download/${P}-src.zip
+	mirror://gentoo/resin-gentoo-patches-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="admin"
@@ -37,7 +38,9 @@ JAVA_PKG_BSFIX="off"
 src_unpack() {
 
 	unpack ${A}
-	epatch "${FILESDIR}/${PV}/${P}-gentoo.patch"
+	for i in "${WORKDIR}"/${PV}/resin-${PV}-*; do
+		epatch "${i}"
+	done;
 
 	java-ant_bsfix_one "${S}/build.xml"
 
