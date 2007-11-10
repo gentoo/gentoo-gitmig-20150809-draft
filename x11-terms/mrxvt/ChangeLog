@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mrxvt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.52 2007/08/27 19:00:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.53 2007/11/10 19:14:41 nelchael Exp $
+
+  10 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org> mrxvt-0.5.3-r1.ebuild:
+  Fix variable quoting.
 
 *mrxvt-0.5.3-r1 (27 Aug 2007)
 
