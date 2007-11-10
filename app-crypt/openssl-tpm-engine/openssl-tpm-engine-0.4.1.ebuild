@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-tpm-engine/openssl-tpm-engine-0.4.ebuild,v 1.2 2007/01/07 17:33:05 alonbl Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-tpm-engine/openssl-tpm-engine-0.4.1.ebuild,v 1.1 2007/11/10 13:04:43 alonbl Exp $
 
 MY_P="${P/-tpm-/_tpm_}"
 
@@ -20,11 +18,11 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	econf --with-openssl=/usr
-	emake
+	econf --with-openssl=/usr || die
+	emake || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die 'install failed'
+	emake DESTDIR="${D}" install || die
 	dodoc openssl.cnf.sample README
 }

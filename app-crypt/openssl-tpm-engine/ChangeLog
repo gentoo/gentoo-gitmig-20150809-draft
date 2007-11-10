@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/openssl-tpm-engine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-tpm-engine/ChangeLog,v 1.4 2007/01/12 20:40:41 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-tpm-engine/ChangeLog,v 1.5 2007/11/10 13:04:43 alonbl Exp $
+
+*openssl-tpm-engine-0.4.1 (10 Nov 2007)
+
+  10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/openssl-tpm-engine-0.3-openssl.patch,
+  -openssl-tpm-engine-0.3.ebuild, -openssl-tpm-engine-0.4.ebuild,
+  +openssl-tpm-engine-0.4.1.ebuild:
+  Version bump, cleanup
 
   12 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org>
   openssl-tpm-engine-0.3.ebuild:
