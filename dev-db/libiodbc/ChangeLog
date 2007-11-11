@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libiodbc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.29 2007/11/10 22:05:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.30 2007/11/11 02:11:43 cla Exp $
+
+  11 Nov 2007; Dawid Węgliński <cla@gentoo.org> libiodbc-3.52.5.ebuild:
+  Stable on x86 (bug #198578)
 
   10 Nov 2007; Markus Rothe <corsair@gentoo.org> libiodbc-3.52.5.ebuild:
   Stable on ppc64; bug #198578
