@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdynamite/jdynamite-1.2.ebuild,v 1.5 2007/10/27 12:54:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdynamite/jdynamite-1.2.ebuild,v 1.6 2007/11/11 00:54:38 nelchael Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}${MY_PV}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="doc source"
+IUSE=""
 
 DEPEND=">=virtual/jdk-1.2
 	>=dev-java/gnu-regexp-1.0.8"
