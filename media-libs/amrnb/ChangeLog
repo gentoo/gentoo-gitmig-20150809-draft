@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/amrnb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amrnb/ChangeLog,v 1.16 2007/10/15 05:38:32 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amrnb/ChangeLog,v 1.17 2007/11/11 11:41:15 drac Exp $
+
+  11 Nov 2007; Samuli Suominen <drac@gentoo.org> amrnb-7.0.0.0.ebuild:
+  amd64 stable wrt #198788
 
   15 Oct 2007; Tom Gall <tgall@gentoo.org> amrnb-6.1.0.4.ebuild:
   stable on ppc64
