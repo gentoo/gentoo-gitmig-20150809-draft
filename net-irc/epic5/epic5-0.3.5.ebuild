@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.3.5.ebuild,v 1.1 2007/09/20 19:15:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.3.5.ebuild,v 1.2 2007/11/11 23:37:26 cla Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC5-ALPHA/${P}.tar.bz2"
 HOMEPAGE="http://epicsol.org/"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE="ipv6 perl ssl tcl socks5"
 
 DEPEND=">=sys-libs/ncurses-5.2
