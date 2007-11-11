@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha36.ebuild,v 1.1 2007/11/11 11:55:17 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha36.ebuild,v 1.2 2007/11/11 12:18:14 pylon Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-2.01.01a03-warnings.patch
+	epatch "${FILESDIR}"/${PN}-2.01.01_alpha34-asneeded.patch
 
 	# ppc-macos support
 	cd "${S}"/DEFAULTS
