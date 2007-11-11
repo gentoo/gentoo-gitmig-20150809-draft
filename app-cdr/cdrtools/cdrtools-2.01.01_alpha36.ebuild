@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha32.ebuild,v 1.1 2007/07/30 20:18:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha36.ebuild,v 1.1 2007/11/11 11:55:17 pylon Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -25,8 +25,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# CAN-2004-0806 - Bug 63187
-	epatch "${FILESDIR}"/${PN}-2.01-scsi-remote.patch
 	epatch "${FILESDIR}"/${PN}-2.01.01a03-warnings.patch
 
 	# ppc-macos support
@@ -35,6 +33,8 @@ src_unpack() {
 
 	sed -i "s:/opt/schily:/usr:g" Defaults.${MYARCH}
 	sed -i "s:/usr/src/linux/include::g" Defaults.${MYARCH}
+	# For dynamic linking:
+	sed -i "s:static:dynamic:" Defaults.${MYARCH}
 
 	cd "${S}"/librscg
 	sed -i "s:/opt/schily:/usr:g" scsi-remote.c
@@ -80,6 +80,9 @@ src_install() {
 
 	cd "${S}"/libs/*-*-cc
 	dolib.a *.a || die "dolib failed"
+
+	cd "${S}"/libs/*-*-cc/pic
+	dolib.so * || die "dolib.so failed"
 
 	cd "${S}"
 	insinto /usr/include/scsilib
