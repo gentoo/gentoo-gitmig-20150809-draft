@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.6.3.ebuild,v 1.8 2007/07/26 17:09:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.6.3.ebuild,v 1.9 2007/11/11 19:52:38 philantrop Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -41,6 +41,9 @@ need-kde 3.5
 
 src_compile() {
 	local myconf="$(use_enable mysql) $(use_enable postgres pgsql) --enable-kexi-reports"
+
+	# Fix the desktop file. cf. bug 190006
+	sed -i -e "s:-msaccess:-msaccess;:g" "${S}"/kexi/kexi.desktop
 
 	kde-meta_src_compile
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.85 2007/07/26 17:09:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.86 2007/11/11 19:52:38 philantrop Exp $
+
+  11 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org> kexi-1.6.3.ebuild:
+  Added a minor fix for the desktop file as per bug 190006. Thanks to
+  gentoofan23 for providing the patch!
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> kexi-1.6.3.ebuild:
   Stable on ppc64; bug #178697
