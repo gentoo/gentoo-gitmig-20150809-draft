@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.2.0.ebuild,v 1.1 2007/11/10 23:59:08 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.2.0.ebuild,v 1.2 2007/11/11 06:29:56 mr_bones_ Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ IUSE="talkfilters debug gtk ncurses"
 DEPEND="net-im/pidgin
 	talkfilters? ( app-text/talkfilters )"
 RDEPEND="${DEPEND}"
-
 
 pkg_setup() {
 	if use gtk && ! built_with_use net-im/pidgin gtk; then
@@ -68,8 +67,6 @@ src_compile() {
 			use ncurses && plugins="${plugins},${i}"
 		fi
 	done
-
-
 
 	econf --with-plugins="${plugins:1}" $(use_enable debug) || die "econf failed"
 	emake -j1 || die "emake failed"
