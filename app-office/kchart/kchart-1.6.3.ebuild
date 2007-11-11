@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/kchart-1.6.3.ebuild,v 1.8 2007/07/26 17:07:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/kchart-1.6.3.ebuild,v 1.9 2007/11/11 20:40:18 philantrop Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -42,7 +42,10 @@ src_unpack() {
 	kde-meta_src_unpack unpack
 
 	# We need to compile liboofilter first
-	echo "SUBDIRS = libdialogfilter kchart" > $S/filters/Makefile.am
+	echo "SUBDIRS = libdialogfilter kchart" > "$S"/filters/Makefile.am
+
+	# Fixing desktop files, cf. bug 190006
+	sed -i -e "/^MimeType/{ /[^;]$/{ s/$/;/ } }" "${S}"/kchart/kchart.desktop
 
 	kde-meta_src_unpack makefiles
 }
