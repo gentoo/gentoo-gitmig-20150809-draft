@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7894 2007/11/11 09:02:53 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7895 2007/11/11 11:58:13 robbat2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Robin H. Johnson <robbat2@gentoo.org> (02 Nov 2007)
+# Brokeness in these, but hanging on to them while getting 1.04 ready
+=mail-mta/nullmailer-1.03*
+# Block 1.04 until it's ready
+>=mail-mta/nullmailer-1.04
 
 # Rajiv Aaron Manglani <rajiv@gentoo.org> (11 Nov 2007)
 # no longer supported upstream.
