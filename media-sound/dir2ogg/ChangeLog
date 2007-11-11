@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/dir2ogg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.20 2007/11/11 16:59:43 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.21 2007/11/11 17:25:09 drac Exp $
+
+*dir2ogg-0.10.3 (11 Nov 2007)
+
+  11 Nov 2007; Samuli Suominen <drac@gentoo.org> +dir2ogg-0.10.3.ebuild:
+  Version bump.
 
   11 Nov 2007; Dawid Węgliński <cla@gentoo.org> dir2ogg-0.10.2.ebuild:
   Stable on x86 (bug #198825)
