@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_unpack.eblit,v 1.3 2007/11/10 04:07:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_unpack.eblit,v 1.4 2007/11/11 20:12:38 vapier Exp $
 
 check_kheader_version() {
 	local version=$(
@@ -106,34 +106,6 @@ toolchain-glibc_src_unpack() {
 		# tag, glibc is it
 		[[ -e csu/Banner ]] && die "need new banner location"
 		echo "Gentoo patchset ${PATCH_VER}" > csu/Banner
-	fi
-
-	if use hardened ; then
-		cd "${S}"
-		einfo "Patching to get working PIE binaries on PIE (hardened) platforms"
-		gcc-specs-pie && epatch "${FILESDIR}"/2.5/glibc-2.5-hardened-pie.patch
-		epatch "${FILESDIR}"/2.5/glibc-2.5-hardened-configure-picdefault.patch
-		epatch "${FILESDIR}"/2.6/glibc-2.6-hardened-inittls-nosysenter.patch
-
-		einfo "Installing Hardened Gentoo SSP handler"
-		cp -f "${FILESDIR}"/2.6/glibc-2.6-gentoo-stack_chk_fail.c \
-			debug/stack_chk_fail.c || die
-
-		if use debug ; then
-			# When using Hardened Gentoo stack handler, have smashes dump core for
-			# analysis - debug only, as core could be an information leak
-			# (paranoia).
-			sed -i \
-				-e '/^CFLAGS-backtrace.c/ iCFLAGS-stack_chk_fail.c = -DSSP_SMASH_DUMPS_CORE' \
-				debug/Makefile \
-				|| die "Failed to modify debug/Makefile for debug stack handler"
-		fi
-
-		# Build nscd with ssp-all
-		sed -i \
-			-e 's:-fstack-protector$:-fstack-protector-all:' \
-			nscd/Makefile \
-			|| die "Failed to ensure nscd builds with ssp-all"
 	fi
 
 	gnuconfig_update

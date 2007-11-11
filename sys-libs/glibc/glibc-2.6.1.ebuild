@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.1.ebuild,v 1.15 2007/11/10 14:40:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.1.ebuild,v 1.16 2007/11/11 20:12:37 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -135,18 +135,56 @@ eblit-include() {
 	die "Could not locate requested eblit '${func}' in ${FILESDIR}/eblits/"
 }
 
+# eblit-run-maybe <function>
+# run the specified function if it is defined
+eblit-run-maybe() {
+	[[ $(type -t "$@") == "function" ]] && "$@"
+}
+
 # eblit-run <function> [version]
 # aka: src_unpack() { eblit-run src_unpack ; }
 eblit-run() {
 	eblit-include --skip common "${*:2}"
 	eblit-include "$@"
+	eblit-run-maybe eblit-$1-pre
 	eblit-${PN}-$1 || die
+	eblit-run-maybe eblit-$1-post
 }
 
 src_unpack()  { eblit-run src_unpack  ; }
 src_compile() { eblit-run src_compile ; }
 src_test()    { eblit-run src_test    ; }
 src_install() { eblit-run src_install ; }
+
+eblit-src_unpack-post() {
+	if use hardened ; then
+		cd "${S}"
+		einfo "Patching to get working PIE binaries on PIE (hardened) platforms"
+		gcc-specs-pie && epatch "${FILESDIR}"/2.5/glibc-2.5-hardened-pie.patch
+		epatch "${FILESDIR}"/2.5/glibc-2.5-hardened-configure-picdefault.patch
+		epatch "${FILESDIR}"/2.6/glibc-2.6-hardened-inittls-nosysenter.patch
+
+		einfo "Installing Hardened Gentoo SSP handler"
+		cp -f "${FILESDIR}"/2.6/glibc-2.6-gentoo-stack_chk_fail.c \
+			debug/stack_chk_fail.c || die
+
+		if use debug ; then
+			# When using Hardened Gentoo stack handler, have smashes dump core for
+			# analysis - debug only, as core could be an information leak
+			# (paranoia).
+			sed -i \
+				-e '/^CFLAGS-backtrace.c/ iCFLAGS-stack_chk_fail.c = -DSSP_SMASH_DUMPS_CORE' \
+				debug/Makefile \
+				|| die "Failed to modify debug/Makefile for debug stack handler"
+		fi
+
+		# Build nscd with ssp-all
+		sed -i \
+			-e 's:-fstack-protector$:-fstack-protector-all:' \
+			nscd/Makefile \
+			|| die "Failed to ensure nscd builds with ssp-all"
+	fi
+}
 
 pkg_setup() {
 	# prevent native builds from downgrading ... maybe update to allow people
