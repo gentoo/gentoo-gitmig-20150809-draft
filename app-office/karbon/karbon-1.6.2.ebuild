@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/karbon-1.6.2.ebuild,v 1.9 2007/07/26 17:25:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/karbon-1.6.2.ebuild,v 1.10 2007/11/11 20:22:26 philantrop Exp $
 
 MAXKOFFICEVER=1.6.3
 KMNAME=koffice
@@ -46,7 +46,10 @@ src_unpack() {
 	kde-meta_src_unpack unpack
 
 	# We need to compile liboofilter first
-	echo "SUBDIRS = liboofilter karbon" > $S/filters/Makefile.am
+	echo "SUBDIRS = liboofilter karbon" > "$S"/filters/Makefile.am
+
+	# Fixing the desktop file, cf. bug 190006
+	sed -i -e "s:postscript$:postscript;:g" "${S}"/karbon/data/karbon.desktop
 
 	kde-meta_src_unpack makefiles
 }
