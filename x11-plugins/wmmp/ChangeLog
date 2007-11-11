@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/ChangeLog,v 1.18 2007/07/28 13:08:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/ChangeLog,v 1.19 2007/11/11 08:57:21 drac Exp $
+
+  11 Nov 2007; Samuli Suominen <drac@gentoo.org> wmmp-0.10.0-r1.ebuild:
+  amd64 stable wrt #198740
 
 *wmmp-0.10.0-r1 (28 Jul 2007)
 
