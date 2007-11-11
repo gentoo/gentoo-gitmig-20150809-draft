@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.317 2007/11/10 21:36:53 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.318 2007/11/11 20:54:20 philantrop Exp $
+
+  11 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kdegraphics-3.5.7-r3.ebuild:
+  Marked stable on amd64 as per security bug 198409.
 
 *kdegraphics-3.5.8-r1 (10 Nov 2007)
 *kdegraphics-3.5.7-r3 (10 Nov 2007)
