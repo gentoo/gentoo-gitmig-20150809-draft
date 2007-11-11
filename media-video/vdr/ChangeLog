@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.95 2007/10/19 11:17:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.96 2007/11/11 15:46:35 zzam Exp $
+
+*vdr-1.4.7-r7 (11 Nov 2007)
+
+  11 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> +vdr-1.4.7-r7.ebuild:
+  Updated extensions-patch to 37.1. This adds iptv support. Now correctly
+  uncomment iptv sources.conf entry.
 
   19 Oct 2007; Matthias Schwarzott <zzam@gentoo.org> vdr-1.4.7-r6.ebuild:
   Do not try to install non-existant doc-file.
