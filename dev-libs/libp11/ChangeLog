@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.17 2007/11/10 21:06:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.18 2007/11/11 04:27:44 cla Exp $
+
+  11 Nov 2007; Dawid Węgliński <cla@gentoo.org> libp11-0.2.3.ebuild:
+  Stable on x86 (bug #198688)
 
   10 Nov 2007; Samuli Suominen <drac@gentoo.org> libp11-0.2.3.ebuild:
   amd64 stable wrt #198688
