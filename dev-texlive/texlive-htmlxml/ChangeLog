@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-htmlxml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/ChangeLog,v 1.12 2007/11/06 17:22:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/ChangeLog,v 1.13 2007/11/11 18:16:30 aballier Exp $
+
+  11 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  -texlive-htmlxml-2007-r1.ebuild:
+  remove old
 
   06 Nov 2007; Markus Rothe <corsair@gentoo.org>
   texlive-htmlxml-2007-r2.ebuild:
