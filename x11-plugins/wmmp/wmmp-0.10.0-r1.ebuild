@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/wmmp-0.10.0-r1.ebuild,v 1.2 2007/11/11 08:57:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/wmmp-0.10.0-r1.ebuild,v 1.3 2007/11/11 10:48:21 cla Exp $
 
 MY_P=${P/wm/WM}
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/musicpd/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~sparc x86"
 IUSE=""
 
 DEPEND="x11-libs/libXext
