@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.65 2007/09/24 06:44:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.66 2007/11/11 12:21:42 armin76 Exp $
+
+  11 Nov 2007; Raúl Porcel <armin76@gentoo.org> bitchx-1.1-r4.ebuild:
+  Add ~ia64 wrt #198460
 
   24 Sep 2007; Luca Barbato <lu_zero@gentoo.org>
   +files/1.1/bitchx-1.1-inline.patch, bitchx-1.1-r4.ebuild:
