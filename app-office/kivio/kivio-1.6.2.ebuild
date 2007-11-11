@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/kivio-1.6.2.ebuild,v 1.9 2007/07/26 17:23:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/kivio-1.6.2.ebuild,v 1.10 2007/11/11 21:34:05 philantrop Exp $
 
 MAXKOFFICEVER=1.6.3
 KMNAME=koffice
@@ -36,3 +36,10 @@ KMEXTRACTONLY="lib/"
 KMEXTRA="filters/kivio"
 
 need-kde 3.4
+
+src_unpack() {
+	kde-meta_src_unpack
+
+	# Fixing desktop files, cf. bug 190006
+	sed -i -e "/^MimeType/{ /[^;]$/{ s/$/;/ } }" "${S}"/kivio/kiviopart/kivio.desktop
+}
