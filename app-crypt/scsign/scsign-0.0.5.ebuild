@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/scsign/scsign-0.0.5.ebuild,v 1.5 2007/11/10 13:27:28 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/scsign/scsign-0.0.5.ebuild,v 1.6 2007/11/11 03:26:08 cla Exp $
 
 inherit toolchain-funcs eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://opensignature.sourceforge.net/"
 SRC_URI="mirror://sourceforge/opensignature/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 S="${WORKDIR}"
 
