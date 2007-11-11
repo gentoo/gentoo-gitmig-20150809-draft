@@ -1,6 +1,14 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.234 2007/08/12 14:40:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.235 2007/11/11 16:42:36 philantrop Exp $
+
+*koffice-1.6.3-r2 (11 Nov 2007)
+
+  11 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/koffice-1.6.3-xpdf2-CVE-2007-4352-5392-5393.diff, metadata.xml,
+  +koffice-1.6.3-r2.ebuild:
+  Added an upstream patch to fix security bug 198409. Fixed the desktop files
+  as per bug 190006. Thanks to gentoofan23 for providing patches!
 
   12 Aug 2007; Steve Dibb <beandog@gentoo.org> koffice-1.6.3-r1.ebuild:
   amd64 stable, security bug 187139
