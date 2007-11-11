@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/kiwi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.8 2007/09/07 10:30:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.9 2007/11/11 12:56:43 lucass Exp $
+
+*kiwi-1.9.19 (11 Nov 2007)
+
+  11 Nov 2007; Lukasz Strzygowski <lucass@gentoo.org> -kiwi-1.9.15.ebuild,
+  +kiwi-1.9.19.ebuild:
+  Version bump (bug #198782): dropped doc use-flag because the pre-generated
+  docs are missing. Dropped old version.
 
   07 Sep 2007; Luca Barbato <lu_zero@gentoo.org> kiwi-1.9.15.ebuild:
   Marked ~ppc

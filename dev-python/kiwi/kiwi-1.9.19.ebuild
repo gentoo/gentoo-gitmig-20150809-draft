@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.15.ebuild,v 1.3 2007/09/07 10:30:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.19.ebuild,v 1.1 2007/11/11 12:56:43 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -13,10 +13,9 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="doc examples"
+IUSE="examples"
 
-DEPEND=">=dev-python/pygtk-2.8"
-RDEPEND="${DEPEND}"
+DEPEND="dev-python/pygtk"
 
 src_unpack() {
 	unpack ${A}
@@ -24,17 +23,11 @@ src_unpack() {
 	sed -i \
 		-e "s:share/doc/kiwi:share/doc/${PF}:g" \
 		setup.py || die "sed failed"
-
-	if ! use doc ; then
-		sed -i \
-			-e '/api/d' \
-			-e '/howto/d' \
-			setup.py || die "sed failed"
-	fi
 }
 
 src_install() {
 	distutils_src_install
+
 	if use examples ; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples
