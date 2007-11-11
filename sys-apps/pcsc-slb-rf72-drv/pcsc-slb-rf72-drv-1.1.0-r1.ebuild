@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/pcsc-slb-rf72-drv-1.1.0-r1.ebuild,v 1.5 2007/11/11 05:59:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/pcsc-slb-rf72-drv-1.1.0-r1.ebuild,v 1.6 2007/11/11 06:16:57 alonbl Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_P="slb_rf72"
 S=${WORKDIR}/${MY_P}
@@ -21,6 +21,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}/${P}-build.patch"
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" LD="$(tc-getLD)" || die
 }
 
 src_install () {
