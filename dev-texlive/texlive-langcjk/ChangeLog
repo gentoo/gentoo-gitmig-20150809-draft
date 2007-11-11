@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-langcjk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/ChangeLog,v 1.7 2007/10/30 12:34:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/ChangeLog,v 1.8 2007/11/11 10:48:00 aballier Exp $
+
+*texlive-langcjk-2007-r1 (11 Nov 2007)
+
+  11 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  -texlive-langcjk-2007.ebuild, +texlive-langcjk-2007-r1.ebuild:
+  remove CJK and bin-cjkutils from here, dev-tex/cjk-latex takes care of these
 
   30 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   texlive-langcjk-2007.ebuild:
