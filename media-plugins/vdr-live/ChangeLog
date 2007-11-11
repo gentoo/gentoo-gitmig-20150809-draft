@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-live
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.8 2007/11/11 16:15:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.9 2007/11/11 17:36:52 hd_brummy Exp $
+
+  11 Nov 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -files/0.1.0/linking.diff, -files/0.1.0/series,
+  -files/0.1.0/vdr-live-0.1.0_vdr-1.5.3-compile.diff,
+  -files/0.1.0/new-tntnet.diff, -files/0.1.0/timerdelete.diff,
+  -vdr-live-0.1.0.ebuild, -vdr-live-0.1.0-r1.ebuild,
+  -vdr-live-0.1.0.20070704.ebuild, -vdr-live-0.1.0.20070919.ebuild:
+  cleanup old versions
 
 *vdr-live-0.1.0.20071111 (11 Nov 2007)
 
