@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblrdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.27 2007/11/11 12:49:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.28 2007/11/11 14:31:31 maekke Exp $
+
+  11 Nov 2007; Markus Meier <maekke@gentoo.org> liblrdf-0.4.0.ebuild:
+  x86 stable, bug #198416
 
   11 Nov 2007; nixnut <nixnut@gentoo.org> liblrdf-0.4.0.ebuild:
   Stable on ppc wrt bug 198416
