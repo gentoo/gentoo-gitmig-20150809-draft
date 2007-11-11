@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.492 2007/11/03 16:11:18 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.493 2007/11/11 17:52:52 philantrop Exp $
+
+  11 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kdelibs-3.5.7-r3.ebuild, kdelibs-3.5.8-r1.ebuild:
+  Added patches kindly provided by KingTaco to solve licence incompatibility
+  issues as per bug 198762.
 
 *kdelibs-3.5.8-r1 (03 Nov 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.7-r3.ebuild,v 1.7 2007/09/26 10:31:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.7-r3.ebuild,v 1.8 2007/11/11 17:52:52 philantrop Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -14,8 +14,8 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="acl alsa arts branding cups doc jpeg2k kerberos legacyssl utempter openexr spell tiff
-avahi kernel_linux fam lua kdehiddenvisibility"
+IUSE="acl alsa arts bindist branding cups doc jpeg2k kerberos legacyssl utempter openexr spell tiff
+	avahi kernel_linux fam lua kdehiddenvisibility"
 
 # Added aspell-en as dependency to work around bug 131512.
 # Made openssl and zeroconf mandatory dependencies, see bug #172972 and #175984
@@ -37,7 +37,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 	kerberos? ( virtual/krb5 )
 	jpeg2k? ( media-libs/jasper )
 	openexr? ( >=media-libs/openexr-1.2.2-r2 )
-	!avahi? ( net-misc/mDNSResponder !kde-misc/kdnssd-avahi )
+	!avahi? ( !bindist? ( net-misc/mDNSResponder !kde-misc/kdnssd-avahi ) )
 	fam? ( virtual/fam )
 	virtual/ghostscript
 	utempter? ( sys-libs/libutempter )
@@ -55,7 +55,8 @@ RDEPEND="${RDEPEND}
 	x11-apps/rgb
 	x11-apps/iceauth"
 
-PDEPEND="avahi? ( kde-misc/kdnssd-avahi )"
+PDEPEND="avahi? ( kde-misc/kdnssd-avahi )
+		bindist? ( kde-misc/kdnssd-avahi )"
 
 # Testing code is rather broken and merely for developer purposes, so disable it.
 RESTRICT="test"
@@ -128,10 +129,10 @@ src_compile() {
 			$(use_enable kernel_linux sendfile) --enable-mitshm
 			$(use_with spell aspell)"
 
-	if ! use avahi; then
-		myconf="${myconf} --enable-dnssd"
-	else
+	if use avahi || use bindist ; then
 		myconf="${myconf} --disable-dnssd"
+	else
+		myconf="${myconf} --enable-dnssd"
 	fi
 
 	if has_version x11-apps/rgb; then
@@ -170,7 +171,7 @@ src_install() {
 	fi
 
 	# Get rid of the disabled version of the kdnsd libraries
-	if use avahi; then
+	if use avahi || use bindist ; then
 		rm -rf "${D}/${PREFIX}"/$(get_libdir)/libkdnssd.*
 	fi
 
