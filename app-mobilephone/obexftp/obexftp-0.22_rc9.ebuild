@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22_rc9.ebuild,v 1.1 2007/10/01 18:09:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22_rc9.ebuild,v 1.2 2007/11/11 17:37:49 mrness Exp $
 
-inherit eutils perl-module flag-o-matic
+inherit eutils perl-module flag-o-matic python
 
 DESCRIPTION="File transfer over OBEX for mobile phones"
 HOMEPAGE="http://dev.zuckschwerdt.org/openobex/wiki/ObexFtp"
@@ -26,6 +26,13 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"/${P%_*}
 
 src_compile() {
+	# do not byte-compile python module
+	if use python; then
+		sed -i \
+			-e 's/\(setup.py install\)/\1 --no-compile/' \
+			swig/python/Makefile.in || die "sed failed"
+	fi
+
 	if use debug ; then
 		strip-flags
 		append-flags "-g -DOBEXFTP_DEBUG=5"
@@ -59,4 +66,17 @@ src_install() {
 	use tcl && doins examples/*.tcl
 
 	use perl && fixlocalpod
+}
+
+pkg_postrm() {
+	use perl && perl-module_pkg_postrm
+	use python && python_mod_cleanup
+}
+
+pkg_postinst() {
+	use perl && perl-module_pkg_postinst
+	use python && {
+		python_version
+		python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	}
 }

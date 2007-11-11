@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.32 2007/10/01 18:09:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.33 2007/11/11 17:37:49 mrness Exp $
+
+  11 Nov 2007; Alin Năstac <mrness@gentoo.org> -obexftp-0.22_rc7.ebuild,
+  obexftp-0.22_rc9.ebuild:
+  Install python stuff properly, thanks to Tiziano Müller <dev-zero@gentoo.org>.
 
 *obexftp-0.22_rc9 (01 Oct 2007)
 
