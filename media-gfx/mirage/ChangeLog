@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mirage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.13 2007/10/19 01:06:17 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.14 2007/11/11 07:56:17 drac Exp $
+
+  11 Nov 2007; Samuli Suominen <drac@gentoo.org> mirage-0.9.ebuild:
+  amd64 stable wrt #198773
 
 *mirage-0.9 (19 Oct 2007)
 
