@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.5.ebuild,v 1.1 2007/11/09 22:44:30 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.5.ebuild,v 1.2 2007/11/11 06:28:06 mr_bones_ Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -168,7 +168,6 @@ src_unpack() {
 	sed -e 's:/no/such/:.\0:' -i ext/standard/tests/file/005_error.phpt \
 		ext/standard/tests/file/006_error.phpt \
 		ext/standard/tests/file/touch.phpt
-
 
 	# REMOVING BROKEN TESTS:
 	# removing this test as it has been broken for ages and is not easily
