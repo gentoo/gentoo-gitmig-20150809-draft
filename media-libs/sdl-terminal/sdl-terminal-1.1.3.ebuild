@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-terminal/sdl-terminal-1.1.3.ebuild,v 1.1 2006/02/24 04:56:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-terminal/sdl-terminal-1.1.3.ebuild,v 1.2 2007/11/11 22:09:20 tupone Exp $
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="library that provides a pseudo-ansi color terminal that can be used with any SDL application"
-HOMEPAGE="http://www.loria.fr/~rougier/software/terminal/"
-SRC_URI="http://www.loria.fr/~rougier/software/terminal/${MY_P}.tar.gz"
+HOMEPAGE="http://www.loria.fr/~rougier/index.php?n=Software.Terminal"
+SRC_URI="http://www.loria.fr/~rougier/pub/Software/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
