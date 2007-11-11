@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.23 2007/11/11 15:26:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.24 2007/11/11 18:19:39 aballier Exp $
+
+  11 Nov 2007; Alexis Ballier <aballier@gentoo.org> -texlive-2007-r2.ebuild:
+  remove old
 
   11 Nov 2007; Raúl Porcel <armin76@gentoo.org> texlive-2007-r3.ebuild:
   Add ~alpha/~ia64 wrt #198149
