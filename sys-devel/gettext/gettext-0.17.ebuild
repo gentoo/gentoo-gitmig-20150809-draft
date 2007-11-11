@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.17.ebuild,v 1.1 2007/11/10 07:24:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.17.ebuild,v 1.2 2007/11/11 19:21:16 vapier Exp $
 
 inherit flag-o-matic eutils multilib toolchain-funcs mono libtool
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNU locale utilities"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="emacs nls doc nocxx"
