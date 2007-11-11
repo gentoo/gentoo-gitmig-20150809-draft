@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.9.0.ebuild,v 1.3 2007/11/10 22:02:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.9.0.ebuild,v 1.4 2007/11/11 13:31:11 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -101,6 +101,7 @@ src_unpack() {
 	done
 
 	epatch "${FILESDIR}/${MY_PN}-0.99.7.0-disable-regenerate-man.patch"
+	epatch "${FILESDIR}/${MY_PN}-0.99.8.1-xtests.patch"
 
 	AT_M4DIR="m4" eautoreconf
 
