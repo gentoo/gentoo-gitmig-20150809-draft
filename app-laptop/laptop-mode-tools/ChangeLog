@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.36 2007/06/01 09:08:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.37 2007/11/11 08:49:59 drac Exp $
+
+  11 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  laptop-mode-tools-1.31.ebuild:
+  amd64 stable, requested by user at IRC and all open bugs are against 1.34.
+  tested, working.
 
 *laptop-mode-tools-1.34 (01 Jun 2007)
 
