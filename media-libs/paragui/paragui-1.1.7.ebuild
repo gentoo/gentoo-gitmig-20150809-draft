@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.7.ebuild,v 1.8 2006/03/27 03:38:58 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.7.ebuild,v 1.9 2007/11/11 21:54:42 tupone Exp $
 
 inherit eutils
 
 DESCRIPTION="A cross-platform high-level application framework and GUI library"
 HOMEPAGE="http://www.paragui.org/"
-SRC_URI="http://freesoftware.fsf.org/download/paragui/${P}.tar.gz"
+SRC_URI="http://download.savannah.gnu.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
