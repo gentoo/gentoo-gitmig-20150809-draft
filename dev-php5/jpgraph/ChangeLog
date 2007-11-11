@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/jpgraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.23 2007/11/11 02:06:30 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.24 2007/11/11 14:14:26 drac Exp $
+
+  11 Nov 2007; Samuli Suominen <drac@gentoo.org> jpgraph-2.2.ebuild:
+  amd64 stable wrt #198564
 
   11 Nov 2007; Dawid Węgliński <cla@gentoo.org> jpgraph-2.2.ebuild:
   Stable on x86 (bug #198564)
