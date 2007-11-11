@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r3.ebuild,v 1.6 2007/05/02 00:15:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r3.ebuild,v 1.7 2007/11/11 14:30:23 genstef Exp $
 
 inherit eutils multilib linux-info
 
@@ -77,6 +77,9 @@ src_unpack() {
 	use fax || sed -i -e "s:^\(CONFIG_CAPIFAX=.*\)$:# \1:g" .config
 	# build pppdcapiplugin
 	use pppd || sed -i -e "s:^\(CONFIG_PPPDCAPIPLUGIN=.*\)$:# \1:g" .config
+
+	# compile fix
+	epatch "${FILESDIR}/capi-compile.patch"
 }
 
 src_compile() {
