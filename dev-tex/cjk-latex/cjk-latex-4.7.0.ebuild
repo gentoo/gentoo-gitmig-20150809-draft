@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.7.0.ebuild,v 1.1 2007/11/11 09:22:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.7.0.ebuild,v 1.2 2007/11/11 10:42:12 aballier Exp $
 
 inherit latex-package elisp-common toolchain-funcs multilib
 
@@ -107,14 +107,13 @@ src_install() {
 	if use emacs ; then
 		cd utils/lisp
 		elisp-install ${PN} *.el{,c} emacs/*.el{,c} mule-2.3/*.el{,c}
-		cd -
 	fi
+
+	cd "${S}"
 
 	# uwpatch stuff
 	insinto ${TEXMF}/scripts/uwpatch
 	doins uwpatch/uwpatchold.sh
-	docinto uwpatch
-	dodoc uwpatch/README
 	insinto ${TEXMF}/fonts/afm/uwpatch
 	doins uwpatch/*.afm
 
@@ -143,11 +142,12 @@ src_install() {
 	rm -f doc/COPYING doc/INSTALL
 	dodoc ChangeLog README
 	if use doc ; then
-		dodoc doc/*
-		insinto ${TEXMF}
-		doins -r texmf/doc
-		docinto chinese; dodoc doc/chinese/*
-		docinto japanese; dodoc doc/japanese/*
-		docinto examples; dodoc examples/*
+		insinto /usr/share/doc/${PF}
+		doins -r doc/*
+		doins -r examples
 	fi
+	docinto uwpatch
+	dodoc uwpatch/README
+
+	prepalldocs
 }
