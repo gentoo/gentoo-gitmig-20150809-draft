@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.1.ebuild,v 1.3 2007/11/03 17:01:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.1.ebuild,v 1.4 2007/11/11 20:38:43 solar Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability versionator
 
@@ -36,7 +36,7 @@ IUSE_VIDEO_CARDS="
 IUSE="${IUSE_VIDEO_CARDS}
 	debug
 	doc
-	hardened
+	pic
 	motif
 	nptl
 	xcb
@@ -159,8 +159,8 @@ src_unpack() {
 	# Set drivers to everything on which we ran driver_enable()
 	echo "DRI_DIRS = ${DRI_DRIVERS}" >> "${HOSTCONF}"
 
-	if use hardened; then
-		einfo "Deactivating assembly code for hardened build"
+	if use pic; then
+		einfo "Deactivating assembly code for pic build"
 		echo "ASM_FLAGS =" >> "${HOSTCONF}"
 		echo "ASM_SOURCES =" >> "${HOSTCONF}"
 		echo "ASM_API =" >> "${HOSTCONF}"

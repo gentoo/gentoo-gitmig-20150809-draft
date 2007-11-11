@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.161 2007/11/10 23:17:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.162 2007/11/11 20:38:43 solar Exp $
+
+  11 Nov 2007; <solar@gentoo.org> mesa-6.5.2-r1.ebuild, mesa-7.0.1.ebuild,
+  mesa-7.0.2.ebuild:
+  - The use of the hardened flag to control the building of position
+  independent code was incorrect. mesa ebuilds now use pic USE flag
 
 *mesa-7.0.2 (10 Nov 2007)
 
