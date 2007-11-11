@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-30.ebuild,v 1.1 2007/11/10 15:31:27 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-30.ebuild,v 1.2 2007/11/11 06:29:34 mr_bones_ Exp $
 
 inherit autotools
 
@@ -50,5 +50,5 @@ src_compile() {
 
 src_install(){
 	emake DESTDIR="${D}" install || die
-	fperms u+s /sbin/mount.ecryptfs 
+	fperms u+s /sbin/mount.ecryptfs
 }
