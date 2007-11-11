@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/cjk-latex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.14 2007/03/13 00:11:50 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.15 2007/11/11 09:22:50 aballier Exp $
+
+*cjk-latex-4.7.0 (11 Nov 2007)
+
+  11 Nov 2007; Alexis Ballier <aballier@gentoo.org> +cjk-latex-4.7.0.ebuild:
+  version bump, bug #103309, fixing bug #40354
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
