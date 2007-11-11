@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/mrxvt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.54 2007/11/10 21:17:24 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.55 2007/11/11 11:01:06 grobian Exp $
+
+  11 Nov 2007; Fabian Groffen <grobian@gentoo.org> mrxvt-0.5.1.ebuild,
+  mrxvt-0.5.2-r1.ebuild, mrxvt-0.5.3-r1.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   10 Nov 2007; Dawid Węgliński <cla@gentoo.org> mrxvt-0.5.3-r1.ebuild:
   Stable on x86 (bug #198727)

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.2-r1.ebuild,v 1.3 2007/07/22 05:50:25 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.2-r1.ebuild,v 1.4 2007/11/11 11:01:06 grobian Exp $
 
 inherit eutils
 
@@ -10,14 +10,13 @@ SRC_URI="mirror://sourceforge/materm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc-macos ~x86"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~x86"
 
 LINGUAS_IUSE="linguas_el linguas_ja linguas_ko linguas_th linguas_zh_CN linguas_zh_TW"
 IUSE="debug png jpeg session truetype menubar utempter xpm ${LINGUAS_IUSE}"
 
-RDEPEND="!ppc-macos? (
-		png? ( media-libs/libpng )
-		utempter? ( sys-libs/libutempter ) )
+RDEPEND="png? ( media-libs/libpng )
+	utempter? ( sys-libs/libutempter )
 	jpeg? ( media-libs/jpeg )
 	truetype? ( virtual/xft
 		media-libs/fontconfig
