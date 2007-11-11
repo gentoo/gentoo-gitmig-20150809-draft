@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mirage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.15 2007/11/11 11:37:44 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.16 2007/11/11 13:16:42 nixnut Exp $
+
+  11 Nov 2007; nixnut <nixnut@gentoo.org> mirage-0.9.ebuild:
+  Stable on ppc wrt bug 198773
 
   11 Nov 2007; Dawid Węgliński <cla@gentoo.org> mirage-0.9.ebuild:
   Stable on x86 (bug #198773)
