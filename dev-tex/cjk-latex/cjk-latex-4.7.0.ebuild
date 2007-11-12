@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.7.0.ebuild,v 1.3 2007/11/11 15:25:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.7.0.ebuild,v 1.4 2007/11/12 00:24:08 mr_bones_ Exp $
 
 inherit latex-package elisp-common toolchain-funcs multilib
 
@@ -124,7 +124,6 @@ src_install() {
 	# kanji48 stuff
 	insinto ${TEXMF}
 	doins -r kanji48/texmf/*
-
 
 	use doc || rm -rf texmf/doc
 	insinto ${TEXMF}
