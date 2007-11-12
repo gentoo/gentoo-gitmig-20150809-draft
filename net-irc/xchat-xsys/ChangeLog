@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.59 2007/10/16 10:17:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.60 2007/11/12 20:53:44 chainsaw Exp $
+
+*xchat-xsys-2.2.0 (12 Nov 2007)
+
+  12 Nov 2007; Tony Vroon <chainsaw@gentoo.org> +xchat-xsys-2.2.0.ebuild:
+  Version bump. This version uses D-Bus to talk to Audacious 1.4
 
 *xchat-xsys-2.1.0-r2 (16 Oct 2007)
 
