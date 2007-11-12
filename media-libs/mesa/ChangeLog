@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.163 2007/11/12 17:33:01 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.164 2007/11/12 19:08:44 dberkholz Exp $
+
+  12 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>; mesa-7.0.1.ebuild,
+  mesa-7.0.2.ebuild:
+  Add a note about needing to rebuild xorg-server with USE='-nptl'.
 
   12 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>; mesa-7.0.2.ebuild:
   Re-keyword, I masked USE=nptl for mesa-7 to work around the problem. This
