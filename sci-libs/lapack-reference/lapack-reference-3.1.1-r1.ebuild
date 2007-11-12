@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.10 2007/10/29 15:29:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.11 2007/11/12 17:08:55 bicatali Exp $
 
 inherit eutils autotools flag-o-matic fortran multilib
 
@@ -56,6 +56,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--libdir="/usr/$(get_libdir)/lapack/reference" \
+		--with-blas="$(pkg-config --libs blas)" \
 		|| die "econf failed"
 	emake || die "emake failed"
 }

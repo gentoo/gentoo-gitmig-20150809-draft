@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.10 2007/10/22 19:01:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.11 2007/11/12 17:04:38 bicatali Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -33,6 +33,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--libdir=/usr/$(get_libdir)/blas/reference \
+		--with-blas="$(pkg-config --libs blas)" \
 		|| die "econf failed"
 	emake || die "emake failed"
 }

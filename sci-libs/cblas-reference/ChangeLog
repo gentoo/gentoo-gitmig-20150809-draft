@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/cblas-reference
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.29 2007/10/26 13:35:37 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.30 2007/11/12 17:04:38 bicatali Exp $
+
+  12 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  files/cblas-reference-20030223-autotool.patch,
+  cblas-reference-20030223-r4.ebuild:
+  Changed autotools version to 2.59 on patch, and added acx_blas.m4. Use
+  pkg-config system for blas dependencies.
 
   22 Oct 2007; Jeroen Roovers <jer@gentoo.org>
   cblas-reference-20030223-r4.ebuild:
