@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/files/drbd-8.0.rc,v 1.4 2007/11/03 18:45:13 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/files/drbd-8.0.rc,v 1.5 2007/11/12 00:18:35 xmerlin Exp $
 
 opts="${opts} reload"
 
@@ -30,8 +30,7 @@ fi
 # redirection.
 $DRBDADM sh-nop
 
-function assure_module_is_loaded
-{
+function assure_module_is_loaded() {
 	[ -e "$PROC_DRBD" ] && return
 	ebegin "Loading drbd module"
 	ret=0
@@ -41,8 +40,7 @@ function assure_module_is_loaded
 	return $ret
 }
 
-function adjust_with_progress
-{
+function adjust_with_progress() {
 	IFS_O=$IFS
 	NEWLINE='
 '
