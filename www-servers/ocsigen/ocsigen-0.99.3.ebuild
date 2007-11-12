@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.99.3.ebuild,v 1.2 2007/11/12 12:46:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.99.3.ebuild,v 1.3 2007/11/12 12:55:52 aballier Exp $
 
 inherit eutils findlib multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ocsigen.org/download/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug ocamlduce doc logrotate dbm sqlite zlib"
+IUSE="debug ocamlduce doc dbm sqlite zlib"
 RESTRICT="strip"
 
 DEPEND="dev-ml/findlib
@@ -87,9 +87,7 @@ src_install() {
 		emake -j1 installnodoc || die "Error : make install failed!"
 	fi
 
-	if use logrotate ; then
-		emake -j1 logrotate || die "Error : make logrotate failed!"
-	fi
+	emake -j1 logrotate || die "Error : make logrotate failed!"
 
 	newinitd "${FILESDIR}"/ocsigen.initd ocsigen || die
 	newconfd "${FILESDIR}"/ocsigen.confd ocsigen || die
