@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsch
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.52 2007/11/12 01:17:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.53 2007/11/12 13:12:32 opfer Exp $
+
+  12 Nov 2007; Christian Faulhammer <opfer@gentoo.org> jsch-0.1.34.ebuild:
+  stable x86, bug 198880
 
 *jsch-0.1.36 (12 Nov 2007)
 
