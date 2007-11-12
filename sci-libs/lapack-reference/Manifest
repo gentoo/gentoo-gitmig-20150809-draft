@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX eselect-reference 173 RMD160 dfe30a5ed9f77317b96aa5a248be6f38eb4d221a SHA1 3b891318df87726074d6d284f2a43b34045db71a SHA256 b6c53c6bf7850ce834b7adc6a244a193ea4c900f5f0cd4484e3bbdb2db295eda
 MD5 539b46a7afa03866fecea8e5a57119ea files/eselect-reference 173
 RMD160 dfe30a5ed9f77317b96aa5a248be6f38eb4d221a files/eselect-reference 173
@@ -14,10 +17,10 @@ AUX lapack-reference-3.1.1-autotool.patch 19000 RMD160 291e2887f94f65fc83594f2ff
 MD5 7a19330d69e140d33ffbace1f45e05c9 files/lapack-reference-3.1.1-autotool.patch 19000
 RMD160 291e2887f94f65fc83594f2ff33732983941e8a2 files/lapack-reference-3.1.1-autotool.patch 19000
 SHA256 1b73ead9aebf98de9cc0b35d9ec6024c20e6163e87c26da65825d2d8e06ab04c files/lapack-reference-3.1.1-autotool.patch 19000
-AUX lapack-reference-3.1.1-autotools.patch 16975 RMD160 6079931019165f92da5f5168dce45e0297fac8a0 SHA1 f2ac7b9a46ae739e545249f480f8d7db25a3901a SHA256 2989944e9ac4a95ac6731bdde9551a8dca44618cac92aec8cac9caac8d1f1dc9
-MD5 f6145b76d7bda11e4b2071626a2a293d files/lapack-reference-3.1.1-autotools.patch 16975
-RMD160 6079931019165f92da5f5168dce45e0297fac8a0 files/lapack-reference-3.1.1-autotools.patch 16975
-SHA256 2989944e9ac4a95ac6731bdde9551a8dca44618cac92aec8cac9caac8d1f1dc9 files/lapack-reference-3.1.1-autotools.patch 16975
+AUX lapack-reference-3.1.1-autotools.patch 23393 RMD160 a0479517966dc839f0a893b85dd9d408ff3919a1 SHA1 3e87ee0482ee4a13aa685fdba932a4add3214706 SHA256 993c99c4eae5f727ed93b4b8a52253e39b9fc6b3d85fb97eb43c94d432c0d70f
+MD5 cd02c0011baa72434a3580854923b648 files/lapack-reference-3.1.1-autotools.patch 23393
+RMD160 a0479517966dc839f0a893b85dd9d408ff3919a1 files/lapack-reference-3.1.1-autotools.patch 23393
+SHA256 993c99c4eae5f727ed93b4b8a52253e39b9fc6b3d85fb97eb43c94d432c0d70f files/lapack-reference-3.1.1-autotools.patch 23393
 AUX lapack-reference-3.1.1-test-fix.patch 2120 RMD160 9c37d349af207f0bbb6deb1ae88addb9676c73fc SHA1 bf73066396b08def6bcd81d0ce09aab682224cb1 SHA256 40c514db2bf9a08ce9630e53058ef3d863fd981c774987b233f6bdce3601a6f8
 MD5 d9f7c5dbfc41c255eab86b32702f5650 files/lapack-reference-3.1.1-test-fix.patch 2120
 RMD160 9c37d349af207f0bbb6deb1ae88addb9676c73fc files/lapack-reference-3.1.1-test-fix.patch 2120
@@ -28,10 +31,10 @@ EBUILD lapack-reference-3.1.0.ebuild 1886 RMD160 7bdced742f90085ce364e02d9066b93
 MD5 0ef51900ce2ffbeed98afc0e42c98d85 lapack-reference-3.1.0.ebuild 1886
 RMD160 7bdced742f90085ce364e02d9066b93add508277 lapack-reference-3.1.0.ebuild 1886
 SHA256 3b60fdb2e429a4129cf15874b2a4c9c8313bea903c7f33135ebea7d53f23b630 lapack-reference-3.1.0.ebuild 1886
-EBUILD lapack-reference-3.1.1-r1.ebuild 2623 RMD160 2b67e701759ff42c657d90bc598e3d9b65037f20 SHA1 e883cc1581f53b928f6f9cb9549f2ad4821326bd SHA256 77e4f6a503a789d4ae19c8601b39c86c8f02763e7b50e0a3ff3e55fca40285ec
-MD5 61dffe3db4963e6f29d4cc2a26d7b4d1 lapack-reference-3.1.1-r1.ebuild 2623
-RMD160 2b67e701759ff42c657d90bc598e3d9b65037f20 lapack-reference-3.1.1-r1.ebuild 2623
-SHA256 77e4f6a503a789d4ae19c8601b39c86c8f02763e7b50e0a3ff3e55fca40285ec lapack-reference-3.1.1-r1.ebuild 2623
+EBUILD lapack-reference-3.1.1-r1.ebuild 2668 RMD160 eb0966e36a69c10be2c71ca0cd0174d550fcd618 SHA1 eced92b8c97fbf789ab90fb75dc4ef41a69f531d SHA256 89923b6504fba6a23e5d8bf5c4c750f24a2dcc0683686bf4927f9a2625293b48
+MD5 eedf9bd86c4cb15167719f95449f9b7f lapack-reference-3.1.1-r1.ebuild 2668
+RMD160 eb0966e36a69c10be2c71ca0cd0174d550fcd618 lapack-reference-3.1.1-r1.ebuild 2668
+SHA256 89923b6504fba6a23e5d8bf5c4c750f24a2dcc0683686bf4927f9a2625293b48 lapack-reference-3.1.1-r1.ebuild 2668
 EBUILD lapack-reference-3.1.1.ebuild 1945 RMD160 ece71a9205a1b98f0b10b200662cb2fe9c6297e7 SHA1 393e26ebc21d53c4c252117b22b8adf0c04179b0 SHA256 9d63953b217b1bbbbc6c8b1587d3a2870e0369ec680e26c4df2e09d63dd070df
 MD5 df5e6b6414f18109dc8773d2da7a404d lapack-reference-3.1.1.ebuild 1945
 RMD160 ece71a9205a1b98f0b10b200662cb2fe9c6297e7 lapack-reference-3.1.1.ebuild 1945
@@ -53,3 +56,10 @@ SHA256 34e0e977049b900a8d9c1a0f8a1a9065a6147dc38b4c0850d13f0b75a9be101a files/di
 MD5 e47577ce12b87f148b170b2226a7cc32 files/digest-lapack-reference-3.1.1-r1 247
 RMD160 f06434c9558a0df45cddbf187e624850b6a4d073 files/digest-lapack-reference-3.1.1-r1 247
 SHA256 34e0e977049b900a8d9c1a0f8a1a9065a6147dc38b4c0850d13f0b75a9be101a files/digest-lapack-reference-3.1.1-r1 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (GNU/Linux)
+
+iD8DBQFHOIiu1ycZbhPLE2ARAj3xAKCLnFB5M06RjXI/bg3IYAetz0mzBwCgs6k8
+rOR5E8Ws1QGNF7ahbfykjTk=
+=8g/a
+-----END PGP SIGNATURE-----
