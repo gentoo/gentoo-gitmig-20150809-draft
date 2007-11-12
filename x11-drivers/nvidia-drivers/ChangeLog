@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.71 2007/11/01 05:49:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.72 2007/11/12 16:25:58 welp Exp $
+
+  12 Nov 2007; Peter Weller <welp@gentoo.org>
+  nvidia-drivers-100.14.19.ebuild:
+  Stable on amd64 wrt bug 186490
 
 *nvidia-drivers-100.14.23 (01 Nov 2007)
 
@@ -8,7 +12,7 @@
   +nvidia-drivers-100.14.23.ebuild:
   adding beta NVIDIA driver for user demand. bug #196679
 
-  31 Oct 2007; Raúl Porcel <armin76@gentoo.org>
+  31 Oct 2007; RaÃºl Porcel <armin76@gentoo.org>
   nvidia-drivers-96.43.01.ebuild:
   x86 stable
 
@@ -83,7 +87,7 @@
   remove i2c-hwmon, libnvidia-cfg, nvidia-xconfig, and README.txt from 7185
   since they don't exist
 
-  19 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  19 Jul 2007; RaÃºl Porcel <armin76@gentoo.org>
   nvidia-drivers-1.0.7185.ebuild, nvidia-drivers-1.0.9639.ebuild,
   nvidia-drivers-100.14.09.ebuild
   x86 stable wrt security #183567
@@ -140,11 +144,11 @@
   +nvidia-drivers-100.14.11.ebuild:
   version bump to 100.14.11
 
-  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  02 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org>
   nvidia-drivers-1.0.8776-r1.ebuild, nvidia-drivers-1.0.9631-r1.ebuild:
   (QA) RESTRICT clean up.
 
-  01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  01 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org>
   nvidia-drivers-1.0.8776-r1.ebuild, nvidia-drivers-1.0.9631-r1.ebuild,
   nvidia-drivers-1.0.9746-r1.ebuild, nvidia-drivers-1.0.9755-r1.ebuild,
   nvidia-drivers-100.14.09.ebuild:
@@ -283,7 +287,7 @@
   nvidia-drivers-1.0.9626.ebuild:
   Changed pkg1 and pkg2 to pkg0 for bug #146182.
 
-  17 Oct 2006; Olivier Crête <tester@gentoo.org>
+  17 Oct 2006; Olivier CrÃªte <tester@gentoo.org>
   nvidia-drivers-1.0.9626.ebuild:
   Patch version is 1.0.9625
 
