@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.0.0.13.ebuild,v 1.1 2007/11/07 18:26:38 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.0.0.13-r1.ebuild,v 1.1 2007/11/12 12:52:03 humpback Exp $
 
 inherit eutils qt4 pax-utils
 
@@ -25,6 +25,7 @@ DEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.2
 	x86? ( >=sys-libs/glibc-2.4
 		>=dev-libs/libsigc++-2
 		>=media-libs/alsa-lib-1.0.11
+		x11-libs/libXScrnSaver
 		qt-static? ( media-libs/fontconfig
 				media-libs/freetype
 				x11-libs/libICE
@@ -72,7 +73,7 @@ src_install() {
 
 	if ! use qt-static ; then
 		insinto /etc/dbus-1/system.d
-		newins ${FILESDIR}/skype.debus.config skype.conf
+		newins "${FILESDIR}"/skype.debus.config skype.conf
 	fi
 
 	insinto /opt/${PN}/lang
@@ -89,7 +90,7 @@ src_install() {
 	for X in 16 32 48
 	do
 		insinto /usr/share/icons/hicolor/${X}x${X}/apps
-		newins ${S}/icons/SkypeBlue_${X}x${X}.png ${PN}.png
+		newins "${S}"/icons/SkypeBlue_${X}x${X}.png ${PN}.png
 	done
 
 	dodoc README
