@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.97-r1.ebuild,v 1.1 2007/11/03 15:08:58 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.97-r1.ebuild,v 1.2 2007/11/12 10:44:17 alonbl Exp $
 
 inherit eutils
 
@@ -15,11 +15,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="logrotate vim-syntax"
+IUSE="vim-syntax"
 
-DEPEND="sys-apps/sed"
-RDEPEND="logrotate? ( app-admin/logrotate )
-	!<media-gfx/splashutils-1.5.2"
+DEPEND=""
+RDEPEND="!<media-gfx/splashutils-1.5.2"
 
 src_unpack() {
 	unpack ${A}
@@ -51,10 +50,8 @@ src_install() {
 
 	dodoc CHANGELOG README SCRIPTLET-API hibernate.vim
 
-	if use logrotate; then
-		insinto /etc/logrotate.d
-		newins "${S}"/logrotate.d-hibernate-script hibernate-script
-	fi
+	insinto /etc/logrotate.d
+	newins "${S}"/logrotate.d-hibernate-script hibernate-script
 }
 
 pkg_postinst() {
