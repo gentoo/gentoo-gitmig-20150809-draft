@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.6-r5.ebuild,v 1.10 2007/08/25 14:37:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.6-r5.ebuild,v 1.11 2007/11/12 22:24:30 carlo Exp $
 
 inherit eutils base toolchain-funcs flag-o-matic java-pkg-opt-2
 
 DESCRIPTION="The mDNSResponder project is a component of Bonjour, Apple's initiative for zero-configuration networking."
 HOMEPAGE="http://developer.apple.com/networking/bonjour/index.html"
 SRC_URI="http://www.opensource.apple.com/darwinsource/tarballs/other/${P}.tar.gz"
-LICENSE="APSL-2 BSD"
+LICENSE="Apache-2.0 BSD"
 
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
