@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.6.3.ebuild,v 1.8 2007/07/26 17:34:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.6.3.ebuild,v 1.9 2007/11/12 01:49:12 philantrop Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -58,14 +58,18 @@ pkg_setup() {
 src_unpack() {
 	kde-meta_src_unpack
 	# FIXME - disable broken tests for now
-	sed -i -e "s:TESTSDIR =.*:TESTSDIR=:" ${S}/krita/core/Makefile.am \
-		`ls ${S}/krita/colorspaces/*/Makefile.am`
+	sed -i -e "s:TESTSDIR =.*:TESTSDIR=:" "${S}"/krita/core/Makefile.am \
+		$(ls "${S}"/krita/colorspaces/*/Makefile.am)
+
+	# Fixing the desktop file, cf. bug 190006.
+	sed -i -e "/^R/{ /[^Y]$/{ s/$/Y/g; } }" "${S}"/krita/krita.desktop
+	sed -i -e "/^MimeType/{ /[^;]$/{ s/$/;/ } }" "${S}"/krita/krita.desktop
 }
 
 src_compile() {
 #	local myconf="$(use_with opengl gl)"
 
-	for i in $(find ${S}/lib -iname "*\.ui"); do
+	for i in $(find "${S}"/lib -iname "*\.ui"); do
 		${QTDIR}/bin/uic ${i} > ${i%.ui}.h
 	done
 
