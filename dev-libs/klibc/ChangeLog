@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.49 2007/11/12 10:17:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.50 2007/11/12 10:36:29 robbat2 Exp $
+
+*klibc-1.5.7-r1 (12 Nov 2007)
+
+  12 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/klibc-1.5-klibcasmarch.patch, +klibc-1.5.7-r1.ebuild:
+  Bug #196521, some arches have a shared asm-ARCH directory in the kernel
+  sources, and klibc is not aware of this.
 
 *klibc-1.5.7 (12 Nov 2007)
 
