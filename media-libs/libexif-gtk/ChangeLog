@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libexif-gtk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.28 2007/10/04 14:54:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.29 2007/11/12 16:38:04 drac Exp $
+
+  12 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  libexif-gtk-0.3.5-r2.ebuild:
+  amd64 stable
 
 *libexif-gtk-0.3.5-r2 (04 Oct 2007)
 
