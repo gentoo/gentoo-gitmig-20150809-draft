@@ -1,9 +1,0 @@
---- ui/Makefile.am.old	2005-12-27 19:37:52.000000000 +0100
-+++ ui/Makefile.am	2006-05-09 23:58:30.000000000 +0200
-@@ -1,5 +1,5 @@
- 
--pixmapsdir = $(datadir)/pixmaps
-+pixmapsdir = $(datadir)/$(PACKAGE)
- pixmaps_DATA = cellphone.png
- 
- uidir = $(datadir)/$(PACKAGE)
