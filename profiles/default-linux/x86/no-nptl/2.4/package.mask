@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.151 2007/11/12 01:48:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.152 2007/11/12 02:29:24 mr_bones_ Exp $
 
 # Michael Sterrett <mr_bones_@gentoo.org (21 Oct 2007)
 # Needs masked gtk+
@@ -70,6 +70,7 @@ media-sound/exaile
 media-sound/acast
 app-crypt/seahorse
 gnome-extra/avant-window-navigator
+gnome-extra/avant-window-navigator-extras
 
 # Robert Buchholz <rbu@gentoo.org> (23 Aug 2007)
 # knm and networkmanager vpn plugins need HAL
