@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2-r2.ebuild,v 1.8 2007/11/12 19:08:21 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2-r2.ebuild,v 1.9 2007/11/12 20:15:23 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -68,7 +68,7 @@ IUSE_LIRC_DEVICES="${IUSE_LIRC_DEVICES_DIRECT} ${IUSE_LIRC_DEVICES_SPECIAL}"
 
 #device-driver which use libusb
 LIBUSB_USED_BY_DEV="
-	all atiusb sasem igorplugusb imon imon_pad imon_pad2keys
+	all atilibusb sasem igorplugusb imon imon_pad imon_pad2keys
 	imon_rsc streamzap mceusb mceusb2 xboxusb"
 
 for dev in ${LIBUSB_USED_BY_DEV}; do
