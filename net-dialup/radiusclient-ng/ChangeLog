@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/radiusclient-ng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient-ng/ChangeLog,v 1.14 2007/09/04 14:08:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient-ng/ChangeLog,v 1.15 2007/11/12 15:28:21 mrness Exp $
+
+  12 Nov 2007; Alin Năstac <mrness@gentoo.org>
+  -files/radiusclient-ng-0.5.2-destdir.patch,
+  -files/radiusclient-ng-0.5.2-implicit-decl.patch,
+  -radiusclient-ng-0.5.2.ebuild, radiusclient-ng-0.5.6.ebuild:
+  Remove obsolete version.
 
   04 Sep 2007; Christoph Mende <angelos@gentoo.org>
   radiusclient-ng-0.5.5.1.ebuild:
