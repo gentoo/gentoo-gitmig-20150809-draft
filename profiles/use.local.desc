@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3136 2007/11/12 01:27:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3137 2007/11/12 10:12:47 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -866,7 +866,6 @@ mail-filter/dovecot-antispam:mailtrain - Build mailtrain backend
 mail-filter/dovecot-antispam:signature-log - Build signature-log backend
 mail-filter/dspam:daemon - Enable support for DSPAM to run in --daemon mode
 mail-filter/dspam:large-domain - Builds for large domain rather than for domain scale
-mail-filter/dspam:logrotate - Install support files for logrotate
 mail-filter/dspam:user-homedirs - Build with user homedir support
 mail-filter/dspam:virtual-users - Build with virtual-users support
 mail-filter/libmilter:poll - Use poll instead of select
