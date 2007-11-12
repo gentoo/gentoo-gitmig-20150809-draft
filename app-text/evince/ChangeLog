@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.126 2007/11/11 11:06:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.127 2007/11/12 12:40:48 jer Exp $
+
+  12 Nov 2007; Jeroen Roovers <jer@gentoo.org> evince-2.20.1.ebuild:
+  Stable for HPPA (bug #196735).
 
   11 Nov 2007; Raúl Porcel <armin76@gentoo.org> evince-2.20.1.ebuild:
   alpha/ia64 stable wrt security #196735
