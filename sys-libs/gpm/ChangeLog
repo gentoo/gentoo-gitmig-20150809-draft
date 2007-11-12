@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.57 2007/11/01 19:09:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.58 2007/11/12 06:57:47 vapier Exp $
+
+  12 Nov 2007; Mike Frysinger <vapier@gentoo.org> -files/gpm-OPEN_MAX.patch,
+  -files/gpm-daemon.patch, gpm-1.20.1-r6.ebuild:
+  Relocate patches to patchset like they should have been in the first place.
 
   01 Nov 2007; Christian Heim <phreak@gentoo.org> +files/gpm-OPEN_MAX.patch,
   gpm-1.20.1-r6.ebuild:
