@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vim-spell-pl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-pl/ChangeLog,v 1.9 2007/10/26 16:57:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-pl/ChangeLog,v 1.10 2007/11/12 23:00:23 welp Exp $
+
+  12 Nov 2007; Peter Weller <welp@gentoo.org> vim-spell-pl-20060218.ebuild:
+  Stable on amd64 wrt bug 180064
 
   26 Oct 2007; nixnut <nixnut@gentoo.org> vim-spell-pl-20060218.ebuild:
   Stable on ppc wrt bug 180064
