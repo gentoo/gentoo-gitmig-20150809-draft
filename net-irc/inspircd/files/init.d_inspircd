@@ -1,31 +1,37 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/files/init.d_inspircd,v 1.3 2007/07/11 08:10:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/files/init.d_inspircd,v 1.4 2007/11/12 21:47:33 hansmi Exp $
 
-opts="${opts} rehash"
+opts="${opts} rehash version"
 
 depend() {
 	need net
-    provide ircd
+	provide ircd
 }
 
 start() {
 	ebegin "Starting InspIRCd"
 	start-stop-daemon --start --quiet --chuid inspircd \
-        --exec /usr/bin/inspircd -- \
-        --logfile /var/log/inspircd/ircd.log &>/dev/null
+		--exec /usr/bin/inspircd -- \
+		--logfile /var/log/inspircd/ircd.log &> /dev/null
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping InspIRCd"
-	start-stop-daemon --stop --quiet --pidfile /var/run/inspircd/ircd.pid
+	start-stop-daemon --stop --quiet --exec /usr/bin/inspircd
 	eend $?
 }
 
 rehash() {
 	ebegin "Rehashing InspIRCd"
-	kill -s SIGHUP $(</var/run/inspircd/ircd.pid)
+	/usr/lib/inspircd/inspircd.launcher/inspircd rehash &> /dev/null
+	eend $?
+}
+
+version() {
+	ebegin "Retrieve InspIRCd version"
+	/usr/lib/inspircd/inspircd.launcher/inspircd version
 	eend $?
 }

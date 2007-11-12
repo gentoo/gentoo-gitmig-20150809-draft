@@ -1,6 +1,23 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.18 2007/10/05 20:29:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.19 2007/11/12 21:47:32 hansmi Exp $
+
+*inspircd-1.1.14 (12 Nov 2007)
+
+  12 Nov 2007; Michael Hanselmann <hansmi@gentoo.org> files/init.d_inspircd,
+  +inspircd-1.1.14.ebuild:
+  Update init.d script from bug 194654. Bump version according to bug 198317
+  with a patch from Eugene Janusov:
+  - toolchain-funcs has been removed from inherit, because not used. Not sure
+    about multilib, leaving it
+  - IUSE moved behind KEYWORDS as in docs and skel.ebuild
+  - svn isn't actually used, so all svn stuff removed
+  - trailing slash added to HOMEPAGE
+  - SRC_URI now points to the official site, because there is no new version on
+    SourceForge
+  - --disable-interactive option added for ./configure
+  - src_compile() partly rewritten and gracefully reformatted
+  - all references to the name of the package replaced with ${PN}
 
 *inspircd-1.1.13-r1 (05 Oct 2007)
 
