@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/dvd+rw-tools
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.53 2007/10/26 09:32:13 uberlord Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.54 2007/11/12 06:52:07 vapier Exp $
+
+  12 Nov 2007; Mike Frysinger <vapier@gentoo.org>
+  -files/dvd+rw-tools-7.0-limits.patch, dvd+rw-tools-7.0.ebuild:
+  Do not patch sources to use limits.h, fix linux-headers instead.
 
   26 Oct 2007; Roy Marples <uberlord@gentoo.org>
   +files/dvd+rw-tools-7.0-limits.patch, dvd+rw-tools-7.0.ebuild:
