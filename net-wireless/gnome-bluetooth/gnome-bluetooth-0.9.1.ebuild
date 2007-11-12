@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.9.1.ebuild,v 1.5 2007/10/28 11:02:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.9.1.ebuild,v 1.6 2007/11/12 21:45:43 drac Exp $
 
 inherit distutils gnome2 eutils multilib autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnomeui-2
@@ -46,6 +46,11 @@ src_unpack() {
 	sed -i -e 's:${libdir:/${platlibdir:' acinclude.m4 || die "sed failed"
 	intltoolize --force
 	eautoreconf
+
+	# Python <=2.4 and Automake fails to support multilib wrt #187826
+	sed -e "s:$PYTHON -c \"from:true \"from:g" \
+		-e "s:lib/python:$(get_libdir)/python:g" \
+		-i configure
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.40 2007/10/28 11:02:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.41 2007/11/12 21:45:43 drac Exp $
+
+  12 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  gnome-bluetooth-0.9.1.ebuild:
+  amd64 stable wrt #198845 and work around broken python wrt #187826
 
   28 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-bluetooth-0.9.1.ebuild:
