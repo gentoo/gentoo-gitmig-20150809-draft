@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.99.3.ebuild,v 1.1 2007/11/10 16:19:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.99.3.ebuild,v 1.2 2007/11/12 12:46:24 aballier Exp $
 
 inherit eutils findlib multilib
 
@@ -67,7 +67,6 @@ src_compile() {
 		--bindir /usr/bin \
 		--docdir /usr/share/doc \
 		--mandir /usr/share/man/man1 \
-		--libdir /usr/$(get_libdir) \
 		--examplesdir /usr/$(get_libdir) \
 		$(use_enable debug) \
 		$(use_enable ocamlduce) \
