@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/jpgraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.24 2007/11/11 14:14:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.25 2007/11/12 11:21:10 armin76 Exp $
+
+  12 Nov 2007; Raúl Porcel <armin76@gentoo.org> jpgraph-2.2.ebuild:
+  alpha/sparc stable wrt #198564
 
   11 Nov 2007; Samuli Suominen <drac@gentoo.org> jpgraph-2.2.ebuild:
   amd64 stable wrt #198564
