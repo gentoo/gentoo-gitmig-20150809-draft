@@ -1,6 +1,9 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.81 2007/11/07 18:26:38 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.82 2007/11/12 12:47:52 jurek Exp $
+
+  12 Nov 2007; Jurek Bartuszek <jurek@gentoo.org> skype-1.4.0.118.ebuild:
+  x86 stable (bug #198920)
 
 *skype-2.0.0.13 (07 Nov 2007)
 

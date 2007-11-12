@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.118.ebuild,v 1.2 2007/10/06 22:48:54 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.118.ebuild,v 1.3 2007/11/12 12:47:52 jurek Exp $
 
 inherit eutils qt4 pax-utils
 
@@ -17,7 +17,7 @@ SRC_URI="!qt-static? ( http://download.skype.com/linux/${DFILENAME} )
 
 LICENSE="skype-eula"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="qt-static"
 RESTRICT="mirror strip"
 
