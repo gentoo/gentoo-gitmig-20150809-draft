@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.48 2007/11/04 10:09:19 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.49 2007/11/12 10:17:27 robbat2 Exp $
+
+*klibc-1.5.7 (12 Nov 2007)
+
+  12 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/klibc-1.5-nostrip.patch, +files/klibc-1.5-sigaction.patch,
+  +klibc-1.5.7.ebuild:
+  Bug #190113, add biarch support for ppc64-32ul et al. Redo of a lot of the
+  handling.
 
   04 Nov 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing myself as the maintainer.
