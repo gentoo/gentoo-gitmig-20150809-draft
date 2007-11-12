@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7896 2007/11/11 16:40:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7897 2007/11/12 01:52:13 rajiv Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -37,6 +37,7 @@ app-text/cstetex
 # Rajiv Aaron Manglani <rajiv@gentoo.org> (11 Nov 2007)
 # no longer supported upstream.
 <net-misc/zaptel-1.2
+<net-misc/asterisk-sounds-1.2
 
 # Krzysiek Pawlik <nelchael@gentoo.org> (10 Nov 2007)
 # Masking for removal: last Resin 2.x release ws almost two years ago,
