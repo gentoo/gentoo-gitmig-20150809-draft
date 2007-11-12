@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/galculator-1.3.1.ebuild,v 1.1 2007/10/26 19:41:38 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/galculator-1.3.1.ebuild,v 1.2 2007/11/12 18:39:33 leio Exp $
 
 DESCRIPTION="GTK+ based algebraic and RPN calculator."
 HOMEPAGE="http://galculator.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="gnome"
 
 RDEPEND=">=x11-libs/gtk+-2.6
@@ -20,6 +20,18 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	use gnome || sed -i -e 's:gnome-calc2.png:calc:' "${S}"/galculator.desktop.in
+	# Fix tests
+	echo "about.glade" >> "${S}/po/POTFILES.skip"
+	echo "basic_buttons.glade" >> "${S}/po/POTFILES.skip"
+	echo "classic_view.glade" >> "${S}/po/POTFILES.skip"
+	echo "dispctrl_bottom.glade" >> "${S}/po/POTFILES.skip"
+	echo "dispctrl_right.glade" >> "${S}/po/POTFILES.skip"
+	echo "dispctrl_right_vertical.glade" >> "${S}/po/POTFILES.skip"
+	echo "main_frame.glade" >> "${S}/po/POTFILES.skip"
+	echo "paper_view.glade" >> "${S}/po/POTFILES.skip"
+	echo "prefs.glade" >> "${S}/po/POTFILES.skip"
+	echo "scientific_buttons.glade" >> "${S}/po/POTFILES.skip"
+	echo "ui/dispctrl_right_vertical.glade" >> "${S}/po/POTFILES.skip"
 }
 
 src_install() {
