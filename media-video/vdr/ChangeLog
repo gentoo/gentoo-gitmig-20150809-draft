@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.97 2007/11/11 16:05:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.98 2007/11/12 15:52:12 zzam Exp $
+
+*vdr-1.4.7-r8 (12 Nov 2007)
+
+  12 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> +vdr-1.4.7-r8.ebuild:
+  Remove useless make fonts that required libX11. abort if make install fails.
 
   11 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/digest-vdr-1.4.7-r7, Manifest:
