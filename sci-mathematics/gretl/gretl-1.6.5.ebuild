@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.6.5.ebuild,v 1.1 2007/11/07 09:13:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.6.5.ebuild,v 1.2 2007/11/12 18:28:28 bicatali Exp $
 
 inherit eutils gnome2
 
@@ -33,6 +33,15 @@ RDEPEND="dev-libs/libxml2
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# fix when nls not selected (bug #198720)
+	epatch "${FILESDIR}"/${P}-nls.patch
+	# makefile in cli not propagating flags
+	epatch "${FILESDIR}"/${P}-cli.patch
+}
 
 src_compile() {
 
