@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3137 2007/11/12 10:12:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3138 2007/11/12 12:56:54 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2132,7 +2132,6 @@ www-servers/nginx:flv - Enables special processing module for flv files
 www-servers/nginx:status - Enables stub_status module
 www-servers/nginx:sub - Enables sub_filter module
 www-servers/nginx:webdav - Enables webdav support
-www-servers/ocsigen:logrotate - Install support files for logrotate
 www-servers/ocsigen:ocamlduce - Enables ocamlduce XML typechecking for generated web pages
 www-servers/pound:dynscaler - enable dynamic rescaling of back-end priorities
 www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
