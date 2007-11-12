@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/radiant
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/ChangeLog,v 1.5 2007/11/12 09:39:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/ChangeLog,v 1.6 2007/11/12 09:40:49 graaff Exp $
+
+  12 Nov 2007; Hans de Graaff <graaff@gentoo.org> -radiant-0.5.2.ebuild,
+  -radiant-0.6.2.ebuild:
+  Remove old versions
 
 *radiant-0.6.4 (12 Nov 2007)
 
