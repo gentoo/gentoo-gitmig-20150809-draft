@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2-r2.ebuild,v 1.7 2007/11/02 21:12:52 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2-r2.ebuild,v 1.8 2007/11/12 19:08:21 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -266,7 +266,7 @@ src_install() {
 
 	newinitd "${FILESDIR}"/lircd lircd
 	newinitd "${FILESDIR}"/lircmd lircmd
-	newconfd "${FILESDIR}"/lircd.conf lircd
+	newconfd "${FILESDIR}"/lircd.conf.2 lircd
 
 	insinto /etc/modules.d/
 	newins "${FILESDIR}"/modulesd.lirc lirc
