@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.7.ebuild,v 1.3 2007/11/03 12:27:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.7.ebuild,v 1.4 2007/11/12 21:28:05 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
-PATCH="${P}-patches-0.1"
+PATCH="${P}-patches-0.2"
 LANGS="ca cs da de es-AR es-ES eu fr ga-IE hu it ka lt mk nb-NO nl pa-IN pl pt-BR pt-PT ru sk sl sv-SE tr zh-CN"
 NOSHORTLANGS="es-AR pt-BR zh-TW"
 
@@ -15,7 +15,7 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="The Mozilla Sunbird Calendar"
 HOMEPAGE="http://www.mozilla.org/projects/calendar/sunbird.html"
 IUSE="bindist"
-SRC_URI="mirror://gentoo/${MY_P}-source.tar.bz2
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/${MY_PN}/releases/${PV}/source/lightning-${MY_P}-source.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2"
 
 # These are in
