@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/clive/clive-0.3.1.ebuild,v 1.1 2007/11/11 12:11:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/clive/clive-0.3.1.ebuild,v 1.2 2007/11/12 00:24:30 mr_bones_ Exp $
 
 inherit distutils versionator
 
@@ -23,7 +23,6 @@ src_unpack() {
 	# dont install man, we'll use doman
 	sed -i -e "s/data_files = \[.*\]/data_files = []/" setup.py
 }
-
 
 src_install() {
 	distutils_src_install
