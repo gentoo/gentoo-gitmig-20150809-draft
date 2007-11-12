@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/djview4-4.2.ebuild,v 1.1 2007/11/11 18:12:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/djview4-4.2.ebuild,v 1.2 2007/11/12 00:23:44 mr_bones_ Exp $
 
 inherit eutils versionator qt4 toolchain-funcs autotools
 
@@ -21,7 +21,6 @@ src_unpack(){
 	# Needed, their configure seems poorly generated...
 	eautoreconf
 }
-
 
 src_compile() {
 	QTDIR=/usr econf $(use_enable debug) \
