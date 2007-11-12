@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.1-r2.ebuild,v 1.9 2007/04/07 04:28:54 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.1-r2.ebuild,v 1.10 2007/11/12 23:06:46 opfer Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -30,10 +30,10 @@ S="${WORKDIR}/${P}-src/"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 	# patch to make the build.xml respect no servletapi
 	# TODO file upstream -nichoj
-	epatch ${FILESDIR}/${P}-servletapi.patch
+	epatch "${FILESDIR}/${P}-servletapi.patch"
 
 	use log4j && echo "log4j12.jar=$(java-pkg_getjars log4j)" > build.properties
 	# ATTENTION: Add this when log4j-1.3 is out (check the SLOT)
@@ -41,6 +41,7 @@ src_unpack() {
 	use avalon-logkit && echo "logkit.jar=$(java-pkg_getjars avalon-logkit-1.2)" >> build.properties
 	use servletapi && echo "servletapi.jar=$(java-pkg_getjars servletapi-2.3)" >> build.properties
 	use avalon-framework && echo "avalon-framework.jar=$(java-pkg_getjars avalon-framework-4.2)" >> build.properties
+	java-pkg_filter-compiler jikes ecj-3.2
 }
 
 EANT_BUILD_TARGET="compile"

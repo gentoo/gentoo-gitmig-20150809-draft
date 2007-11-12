@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.51 2007/04/07 04:28:54 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.52 2007/11/12 23:06:46 opfer Exp $
+
+  12 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  commons-logging-1.1-r2.ebuild:
+  filter jikes and ecj-3.2, add some quotes around variables
 
   07 Apr 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -commons-logging-1.0.4-r1.ebuild, -commons-logging-1.0.4-r2.ebuild,
