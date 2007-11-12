@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.815 2007/11/12 10:12:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.816 2007/11/12 20:59:08 genstef Exp $
+
+  12 Nov 2007; Stefan Schweizer <genstef@gentoo.org> package.mask:
+  cleanup
 
   12 Nov 2007; Alin Năstac <mrness@gentoo.org> use.local.desc:
   Remove mail-filter/dspam:logrotate (#198901).

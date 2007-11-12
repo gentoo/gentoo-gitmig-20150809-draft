@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7898 2007/11/12 20:40:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7899 2007/11/12 20:59:08 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -270,12 +270,6 @@ java-virtuals/javamail
 # The ck patchest is gone, will be removed shortly.
 sys-kernel/ck-sources
 
-# Stefan Schweizer <genstef@gentoo.org> (10 Oct 2007)
-# removal because of starting problems in Bug 189775, gtk+-1.2 usage
-# last release was in 2001, possible replacements: media-gfx/opcion
-# and media-gfx/fontforge
-app-misc/gfontview
-
 # Doug Goldstein <cardoe@gentoo.org> (10 Oct 2007)
 # the Asterisk is coming! the Asterisk is coming!
 >=net-misc/zaptel-1.4.0
@@ -387,11 +381,6 @@ sys-auth/bioapi
 # Masking new Neverwinter Nights ebuilds until they're confirmed to work
 =games-rpg/nwn-data-1.29-r2
 =games-rpg/nwn-1.68-r2
-
-# Stefan Schweizer <genstef@gentoo.org> (02 Sep 2007)
-# last-rite bpalogin for mark_alec, as the package is useless now (ISP
-# no longer needs it) and the initscript is broken with baselayout2
-net-dialup/bpalogin
 
 # Michael Sterrett <mr_bones_@gentoo.org> (30 Aug 2007)
 # Security bug #190835
@@ -622,23 +611,8 @@ net-wireless/mcs7780
 =net-fs/sfs-0.8.0_pre20070512
 
 # Stefan Schweizer <genstef@gentoo.org> (9 may 2007)
-# waiting for better upstream versions
-# 170997 doesn't open the configuration dialog
-=sys-power/kpowersave-0.7.2
 # 175933 cannot suspend because of missing org.freedesktop.PolicyKit
 >=sys-power/powersave-0.15.0
-
-# Stefan Schweizer <genstef@gentoo.org> (7 may 2007)
-# mask new alsa release. Until it is fully added and tested
-~media-libs/alsa-lib-1.0.14_rc4
-~media-plugins/alsa-plugins-1.0.14_rc4
-~media-libs/alsa-oss-1.0.14_rc4
-~media-sound/alsa-headers-1.0.14_rc4
-#need to figure out which drivers/firmwares got added
-~media-sound/alsa-driver-1.0.14_rc4
-~media-sound/alsa-firmware-1.0.14_rc4
-#seq patch needs to be ported
-~media-sound/alsa-utils-1.0.14_rc4
 
 # Rajiv Aaron Manglani <rajiv@gentoo.org> (6 May 2007)
 # open security issues, no longer supported upstream.
