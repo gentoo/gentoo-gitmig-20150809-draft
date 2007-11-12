@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.6.ebuild,v 1.1 2007/10/13 18:03:16 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.7.ebuild,v 1.1 2007/11/12 13:06:33 pva Exp $
 
 inherit autotools ssl-cert eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="debug ldap mysql pam pam_nuauth plaintext postgres prelude \
-unicode nfqueue nfconntrack static syslog"
+unicode nfqueue nfconntrack static syslog test"
 
 DEPEND=">=dev-libs/glib-2
 	dev-libs/libgcrypt
@@ -33,10 +33,17 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i \
-		-e "s/nuauth-key.pem/nuauth.key/" \
-		-e "s/nuauth-cert.pem/nuauth.pem/" \
+		-e 's:^#\(nuauth_tls_key="/etc/nufw/\)nuauth-key.pem:\1nuauth.key:' \
+		-e 's:^#\(nuauth_tls_cert="/etc/nufw/\)nuauth-cert.pem:\1nuauth.pem:' \
 		conf/nuauth.conf || die "sed failed"
-	epatch "$FILESDIR"/${P}-auth_mysql.patch
+	epatch "$FILESDIR"/${PN}-2.2.6-auth_mysql.patch
+	sed -i 's:^gcc.*dummy_client.*:libtool --mode=link gcc -o dummy_client dummy_client.c -I../ ../libnuclient.la || exit;:' \
+		src/clients/lib/tests/build_dummy_client.sh || die "sed failed"
+
+	# This tests requre inl_tests to be installed. We don't have it now in our
+	# tree so we disable them for now... for more information see tests/README
+	use test && sed -i "s:\(^TESTS=test_all.py\):#\1:" tests/Makefile.am
+
 	eautoreconf
 }
 
@@ -64,6 +71,13 @@ src_compile() {
 	emake || die "emake failed"
 }
 
+src_test() {
+	ewarn "Some tests are skiped! If you wish to run them read tests/README and"
+	ewarn "do that manually."
+	ebeep 5
+	make check
+}
+
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
@@ -75,8 +89,7 @@ src_install() {
 
 	insinto /etc/nufw
 	doins conf/nuauth.conf
-	docert nufw
-	docert nuauth
+	docert nufw nuauth
 	keepdir /var/run/nuauth
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
