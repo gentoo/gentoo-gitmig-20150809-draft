@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3-r1.ebuild,v 1.8 2007/10/15 14:28:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3-r1.ebuild,v 1.9 2007/11/12 21:10:28 vapier Exp $
 
 inherit flag-o-matic eutils games
 
@@ -52,10 +52,10 @@ src_unpack() {
 		$(find . -name 'Makefile.in*') \
 		|| die "sed failed"
 	epatch \
-		"${FILESDIR}/${P}"-gcc4.patch \
-		"${FILESDIR}/${P}"-64bits.patch \
-		"${FILESDIR}/${P}"-blas.patch \
-		"${FILESDIR}/${P}"-as-needed.patch
+		"${FILESDIR}"/${P}-gcc4.patch \
+		"${FILESDIR}"/${P}-64bits.patch \
+		"${FILESDIR}"/${P}-blas.patch \
+		"${FILESDIR}"/${P}-as-needed.patch
 }
 
 src_compile() {
