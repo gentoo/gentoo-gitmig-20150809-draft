@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3134 2007/11/12 01:21:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3135 2007/11/12 01:22:36 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -905,7 +905,6 @@ mail-mta/netqmail:qmail-spp - Add support for the qmail SMTP plugin patch
 mail-mta/postfix:dovecot-sasl - Enable Dovecot protocol version 1 (server only) SASL implementation
 mail-mta/postfix:vda - Adds support for virtual delivery agent quota enforcing
 mail-mta/qmail-ldap:cluster - Enable this if you want to have cluster support in qmail-ldap
-mail-mta/qmail-ldap:controldb - Add support for the QmailLDAP/Control patch (stores control files in ldap)
 mail-mta/qmail-ldap:gencertdaily - Generate SSL certificates daily instead of hourly
 mail-mta/qmail-ldap:highvolume - Prepare qmail for high volume servers
 mail-mta/qmail-ldap:qmail-spp - Add support for the qmail SMTP plugin patch
