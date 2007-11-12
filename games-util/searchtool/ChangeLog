@@ -1,6 +1,10 @@
 # ChangeLog for games-util/searchtool
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/searchtool/ChangeLog,v 1.10 2007/08/03 17:04:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/searchtool/ChangeLog,v 1.11 2007/11/12 23:11:31 opfer Exp $
+
+  12 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  searchtool-0.4.4.ebuild:
+  filter jikes
 
   03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
   searchtool-0.4.4.ebuild:

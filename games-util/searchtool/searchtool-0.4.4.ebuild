@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/searchtool/searchtool-0.4.4.ebuild,v 1.9 2007/08/03 17:04:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/searchtool/searchtool-0.4.4.ebuild,v 1.10 2007/11/12 23:11:31 opfer Exp $
 
 inherit java-pkg-2 java-ant-2 games
 
@@ -17,6 +17,7 @@ DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${PN}
+JAVA_PKG_FILTER_COMPILER="jikes"
 
 pkg_setup() {
 	games_pkg_setup
