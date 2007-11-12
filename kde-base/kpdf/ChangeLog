@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.141 2007/11/11 21:46:26 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.142 2007/11/12 14:03:35 opfer Exp $
+
+  12 Nov 2007; Christian Faulhammer <opfer@gentoo.org> kpdf-3.5.7-r3.ebuild:
+  stable x86, security bug 198409
 
   11 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org> kpdf-3.5.7-r3.ebuild:
   Marked stable on amd64 as per security bug 198409.
