@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.251 2007/11/12 07:36:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.252 2007/11/12 16:34:03 chainsaw Exp $
+
+  12 Nov 2007; Tony Vroon <chainsaw@gentoo.org> openssl-0.9.8g.ebuild:
+  Parallel make is unreliable, enforce -j1. Closes bug #196554 by Duncan
+  <1i5t5.duncan@cox.net>. Problem reproduced on a dual dual-core Opteron 2218
+  system (4 cores, -j4) running AMD64 hardened.
 
   12 Nov 2007; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8g.ebuild:
   Filter out $APPS from the environment #197996.
