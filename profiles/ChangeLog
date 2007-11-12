@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.813 2007/11/11 16:40:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.814 2007/11/12 09:16:25 dberkholz Exp $
+
+  12 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  base/package.use.mask:
+  Mask =media-libs/mesa-7.0*:nptl. freedesktop.org bug #7459 committed fix
+  breaks 3D apps but "fix" is only relevant on USE=nptl.
 
   11 Nov 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask cstetex, bug #196673
