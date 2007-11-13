@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.16.5.ebuild,v 1.8 2007/09/21 01:42:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.16.5.ebuild,v 1.9 2007/11/13 02:59:02 leio Exp $
 
 inherit eutils gnome2 multilib
 
@@ -40,7 +40,7 @@ src_unpack() {
 	# wont fight with each other on a multilib system.  Fix building for
 	# emul-linux-x86-gtklibs
 	if multilib_enabled ; then
-		epatch ${FILESDIR}/${PN}-1.2.5-lib64.patch
+		epatch "${FILESDIR}/${PN}-1.2.5-lib64.patch"
 	fi
 
 	epunt_cxx
@@ -48,7 +48,7 @@ src_unpack() {
 
 src_install() {
 	gnome2_src_install
-	rm ${D}/etc/pango/pango.modules
+	rm "${D}/etc/pango/pango.modules"
 }
 
 pkg_postinst() {

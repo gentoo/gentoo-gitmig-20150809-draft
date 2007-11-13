@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.10.4.ebuild,v 1.3 2007/07/22 03:01:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.10.4.ebuild,v 1.4 2007/11/13 02:59:02 leio Exp $
 
 inherit eutils gnome2
 
@@ -43,16 +43,16 @@ src_unpack() {
 	cd "${S}"
 
 	# Some enhancements from Redhat
-	epatch ${FILESDIR}/pango-1.0.99.020606-xfonts.patch
-	epatch ${FILESDIR}/${PN}-1.10.2-slighthint.patch
+	epatch "${FILESDIR}/pango-1.0.99.020606-xfonts.patch"
+	epatch "${FILESDIR}/${PN}-1.10.2-slighthint.patch"
 
 	# make config file location host specific so that a 32bit and 64bit pango
 	# wont fight with each other on a multilib system
-	use amd64 && epatch ${FILESDIR}/pango-1.2.5-lib64.patch
+	use amd64 && epatch "${FILESDIR}/pango-1.2.5-lib64.patch"
 
 	# and this line is just here to make building emul-linux-x86-gtklibs a bit
 	# easier, so even this should be amd64 specific.
-	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && epatch ${FILESDIR}/pango-1.2.5-lib64.patch
+	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && epatch "${FILESDIR}/pango-1.2.5-lib64.patch"
 
 	epunt_cxx
 }
@@ -61,7 +61,7 @@ src_install() {
 
 	gnome2_src_install
 
-	rm ${D}/etc/pango/pango.modules
+	rm "${D}/etc/pango/pango.modules"
 }
 
 pkg_postinst() {
