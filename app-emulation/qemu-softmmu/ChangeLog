@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.42 2007/09/09 12:54:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.43 2007/11/13 00:04:24 lu_zero Exp $
+
+*qemu-softmmu-0.9.0-r1 (12 Nov 2007)
+
+  12 Nov 2007; Luca Barbato <lu_zero@gentoo.org>
+  +files/qemu-softmmu-0.9.0-block-qcow2.patch,
+  +qemu-softmmu-0.9.0-r1.ebuild:
+  address qcow2 corruption, thanks to Chris Williams <gentoo@psychogeeks.com>
+  for the patch, see bug #187075
 
   09 Sep 2007; Luca Barbato <lu_zero@gentoo.org>
   +files/qemu-softmmu-0.9.0-ide-cd.patch, qemu-softmmu-0.9.0.ebuild:
