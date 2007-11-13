@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/galculator
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/ChangeLog,v 1.19 2007/11/12 18:39:33 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/ChangeLog,v 1.20 2007/11/13 07:54:12 opfer Exp $
+
+  13 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  galculator-1.3.1.ebuild:
+  stable x86, bug 198845
 
   12 Nov 2007; Mart Raudsepp <leio@gentoo.org> galculator-1.3.1.ebuild:
   Fix tests. Stable on amd64, tested and authorized by drac
