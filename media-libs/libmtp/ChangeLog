@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.29 2007/10/26 11:34:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.30 2007/11/13 08:10:58 jer Exp $
+
+  13 Nov 2007; Jeroen Roovers <jer@gentoo.org> libmtp-0.2.3.ebuild:
+  Marked ~hppa for audacious-plugins (mr_bones).
 
 *libmtp-0.2.3 (26 Oct 2007)
 
