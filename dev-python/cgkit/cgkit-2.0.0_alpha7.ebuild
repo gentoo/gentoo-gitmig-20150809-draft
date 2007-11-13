@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha7.ebuild,v 1.2 2007/11/06 06:50:59 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha7.ebuild,v 1.3 2007/11/13 06:55:42 opfer Exp $
 
 inherit distutils flag-o-matic
 
@@ -21,7 +21,7 @@ DEPEND="dev-lang/python
 	ogre? ( =dev-games/ogre-0.15.1 )"
 SLOT="0"
 LICENSE="LGPL-2.1 MPL-1.1 GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc x86"
 IUSE="3ds ogre"
 S=${WORKDIR}/${MY_P}
 
