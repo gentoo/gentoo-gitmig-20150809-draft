@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.365 2007/11/10 10:23:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.366 2007/11/13 22:40:48 zzam Exp $
+
+*udev-117 (13 Nov 2007)
+
+  13 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/write_root_link_rule, +udev-117.ebuild:
+  Version bumped. Now all helper-apps are merged into binary udevadm. This
+  needs to be included when building initramfs'. Using udevadm for providing
+  /dev/root link. Added special warning for Bug #190994. No longer install
+  udevstart, it is not needed for 2.6.15 and newer and just confuses people.
 
   10 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> udev-104-r12.ebuild,
   udev-104-r13.ebuild, udev-111.ebuild, udev-111-r1.ebuild,
