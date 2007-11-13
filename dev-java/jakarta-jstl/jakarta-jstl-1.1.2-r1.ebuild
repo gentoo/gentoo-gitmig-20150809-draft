@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2-r1.ebuild,v 1.10 2007/09/09 18:47:51 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2-r1.ebuild,v 1.11 2007/11/13 11:21:01 opfer Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -29,12 +29,12 @@ S="${WORKDIR}/${MY_P}-src/standard"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# Remove unnecessary bootclasspath from javac calls.
 	# This allows compilation with  non-Sun JDKs
 	# See bug #134206
 	# TODO file upstream
-	epatch ${FILESDIR}/build-xml.patch
+	epatch "${FILESDIR}/build-xml.patch"
 
 	echo -e "base.dir=..\n" \
 		"build.dir = \${base.dir}/build\n" \
@@ -44,6 +44,7 @@ src_unpack() {
 		"jsp20.jar=$(java-pkg_getjar servletapi-2.4 jsp-api.jar)\n" \
 		"xalan.jar=$(java-pkg_getjar xalan xalan.jar)" \
 		> build.properties
+	java-pkg_filter-compiler jikes
 }
 
 src_compile() {
@@ -51,12 +52,12 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar ${S}/../build/standard/standard/lib/*.jar
+	java-pkg_dojar "${S}"/../build/standard/standard/lib/*.jar
 
-	use doc && java-pkg_dohtml -r ${S}/doc/web/* ${S}/../dist/standard/javadoc/
+	use doc && java-pkg_dohtml -r "${S}"/doc/web/* "${S}"/../dist/standard/javadoc/
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples
-		cp -r ${S}/examples/* ${D}/usr/share/doc/${PF}/examples
+		cp -r "${S}"/examples/* "${D}"/usr/share/doc/${PF}/examples
 	fi
-	use source && java-pkg_dosrc ${S}/src/*
+	use source && java-pkg_dosrc "${S}"/src/*
 }
