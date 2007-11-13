@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/spin-1.5.ebuild,v 1.7 2007/08/24 19:00:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/spin-1.5.ebuild,v 1.8 2007/11/13 12:38:55 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -27,6 +27,7 @@ src_unpack() {
 	cp "${FILESDIR}/${PV}-build.xml" build.xml || die
 	cp "${FILESDIR}/${PV}-maven-build.properties" maven-build.properties || die
 	rm -v lib/*.jar || die
+	java-pkg_filter-compiler jikes
 }
 
 EANT_GENTOO_CLASSPATH="cglib-2.1"
