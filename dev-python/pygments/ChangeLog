@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.6 2007/10/14 23:14:47 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.7 2007/11/13 00:31:57 fmccor Exp $
+
+  13 Nov 2007; Ferris McCormick <fmccor@gentoo.org> pygments-0.9.ebuild:
+  Add ~sparc, Bug #198989, but see comments in bugzilla.
 
 *pygments-0.9 (14 Oct 2007)
 
