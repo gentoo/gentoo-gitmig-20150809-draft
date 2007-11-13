@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre9.ebuild,v 1.4 2007/11/04 01:43:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre9.ebuild,v 1.5 2007/11/13 06:50:26 opfer Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -53,6 +53,7 @@ src_unpack() {
 	# remove bundled sources
 	rm -r gnu/* # gnu-regexp
 	# still need to do: bsh, com.microstar.xml.*, org.gjt.*
+	java-pkg_filter-compiler jikes
 }
 src_compile() {
 	# TODO could build more docs, ie userdocs target instead of generate-javadoc

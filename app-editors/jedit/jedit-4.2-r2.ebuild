@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r2.ebuild,v 1.10 2007/08/23 08:36:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r2.ebuild,v 1.11 2007/11/13 06:50:26 opfer Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -31,7 +31,7 @@ S="${WORKDIR}/jEdit"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if use doc; then
 		local xsl=$(echo /usr/share/sgml/docbook/xsl-stylesheets-*)
@@ -44,6 +44,7 @@ src_unpack() {
 		echo "docbook.dtd.catalog=${xml}/docbook.cat" >> build.properties
 		echo "docbook.xsl=${xsl}" >> build.properties
 	fi
+	java-pkg_filter-compiler jikes
 }
 
 # Fails to build if asm gets pulled in via ant classpath
@@ -64,7 +65,7 @@ src_install() {
 	dobin ${PN}
 
 	insinto /usr/share/icons/hicolor/128x128/apps
-	newins ${S}/doc/jedit.png jedit.pngs
+	newins "${S}/doc/jedit.png" jedit.pngs
 
 	make_desktop_entry jedit "jEdit" jedit
 }
