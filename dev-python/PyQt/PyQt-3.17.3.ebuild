@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.17.3.ebuild,v 1.3 2007/10/08 08:54:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.17.3.ebuild,v 1.4 2007/11/13 07:05:19 jer Exp $
 
 inherit distutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.riverbankcomputing.com/Downloads/PyQt3/GPL/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples"
 
 RDEPEND="=x11-libs/qt-3*
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e "s:  check_license():# check_license():" ${S}/configure.py
+	sed -i -e "s:  check_license():# check_license():" "${S}"/configure.py
 }
 
 src_compile() {
@@ -46,11 +46,11 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
-	dodoc ChangeLog LICENSE NEWS README README.Linux THANKS
+	make DESTDIR="${D}" install || die "install failed"
+	dodoc ChangeLog NEWS README README.Linux THANKS
 	use doc && dohtml doc/PyQt.html
 	if use examples ; then
 		dodir /usr/share/doc/${PF}/examples
-		cp -r examples3/* ${D}/usr/share/doc/${PF}/examples
+		cp -r examples3/* "${D}"/usr/share/doc/${PF}/examples
 	fi
 }
