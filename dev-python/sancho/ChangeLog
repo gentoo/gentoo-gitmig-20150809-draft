@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sancho
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.29 2007/10/15 14:22:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.30 2007/11/13 18:31:44 armin76 Exp $
+
+  13 Nov 2007; Raúl Porcel <armin76@gentoo.org> sancho-2.1-r1.ebuild:
+  Add ~alpha
 
   15 Oct 2007; Markus Rothe <corsair@gentoo.org> sancho-0.11.ebuild:
   Stable on ppc64
