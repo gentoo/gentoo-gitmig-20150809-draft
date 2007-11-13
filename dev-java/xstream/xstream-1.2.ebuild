@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2.ebuild,v 1.10 2007/11/04 11:11:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2.ebuild,v 1.11 2007/11/13 13:23:14 opfer Exp $
 
 JAVA_PKG_IUSE="doc examples java5 source"
 
@@ -60,6 +60,7 @@ src_unpack() {
 	java-pkg_jar-from joda-time
 	java-pkg_jar-from xom
 	java-pkg_jar-from xpp3
+	java-pkg_filter-compiler jikes
 }
 
 # Restricted until we get keywords for deps. See:

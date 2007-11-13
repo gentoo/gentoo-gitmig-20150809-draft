@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xstream
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.9 2007/11/04 11:11:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.10 2007/11/13 13:23:14 opfer Exp $
+
+  13 Nov 2007; Christian Faulhammer <opfer@gentoo.org> xstream-1.2.ebuild:
+  filtered jikes
 
   04 Nov 2007; Christian Faulhammer <opfer@gentoo.org> xstream-1.2.ebuild:
   stable x86, bug 197861
