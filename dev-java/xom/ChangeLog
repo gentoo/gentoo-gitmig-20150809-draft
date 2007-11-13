@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/xom
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.30 2007/05/09 14:46:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.31 2007/11/13 23:29:00 betelgeuse Exp $
+
+*xom-1.0-r3 (13 Nov 2007)
+
+  13 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> +xom-1.0-r3.ebuild:
+  dev-java/servletapi is only needed to build the examples to add examples use
+  flag. Also now it does not get picked automatically from ant classpath.
+  Reported in bug #142538.
 
   09 May 2007; Raúl Porcel <armin76@gentoo.org> xom-1.0-r2.ebuild:
   Add ~ia64 wrt #160813
