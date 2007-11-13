@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2-r2.ebuild,v 1.13 2007/11/13 17:36:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2-r2.ebuild,v 1.14 2007/11/13 20:13:26 alonbl Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pax-utils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${WORKDIR}"/${MY_PNBASE}-1.7.2-all-7.diff
 
-	for p in sha1-memset stackdef.S stackdef-2.S mkdir-sandbox funroll-loops; do
+	for p in sha1-memset stackdef.S stackdef-2.S mkdir-sandbox; do
 		epatch "${FILESDIR}/${P}-${p}.patch"
 	done
 }
@@ -41,11 +41,13 @@ src_compile() {
 	strip-flags
 
 	cd "${S}"/src
-	# Note this program uses AS and LD incorrectly
+
+	# Remove default OPT_NORMAL -funroll-loops bug#198659 for unknown archs
 	OPTIONS="CPP=$(tc-getCXX) CC=$(tc-getCC) AS=$(tc-getCC) LD=$(tc-getCC) \
 		CFLAGS=\"-c -Wall ${CFLAGS} -DJOHN_SYSTEMWIDE \
 		-DJOHN_SYSTEMWIDE_HOME=\\\"\\\\\\\"/etc/john\\\\\\\"\\\"\" \
-		LDFLAGS=\"${LDFLAGS}\""
+		LDFLAGS=\"${LDFLAGS}\"
+		OPT_NORMAL=\"\""
 
 	if use x86 ; then
 		if use sse2 ; then
