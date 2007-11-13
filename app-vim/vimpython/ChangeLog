@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vimpython
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpython/ChangeLog,v 1.12 2007/05/08 16:13:42 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpython/ChangeLog,v 1.13 2007/11/13 18:15:07 armin76 Exp $
+
+  13 Nov 2007; Raúl Porcel <armin76@gentoo.org> vimpython-1.11.ebuild:
+  Re-add ~alpha/~ia64/~sparc
 
 *vimpython-1.11 (08 May 2007)
 
