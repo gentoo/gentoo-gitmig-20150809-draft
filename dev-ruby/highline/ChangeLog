@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/highline
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.11 2007/11/13 18:38:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.12 2007/11/13 18:48:22 corsair Exp $
+
+  13 Nov 2007; Markus Rothe <corsair@gentoo.org> highline-1.4.0.ebuild:
+  Stable on ppc64; bug #198966
 
   13 Nov 2007; Raúl Porcel <armin76@gentoo.org> highline-1.4.0.ebuild:
   Add ~ia64 wrt #198966
