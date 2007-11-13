@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-fritzbox/vdr-fritzbox-0.0.8.ebuild,v 1.1 2007/11/12 15:18:09 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-fritzbox/vdr-fritzbox-0.0.8.ebuild,v 1.2 2007/11/13 04:00:54 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -24,4 +24,3 @@ pkg_postinst() {
 	elog "work for you, read the documentation for further instructions."
 	echo
 }
-
