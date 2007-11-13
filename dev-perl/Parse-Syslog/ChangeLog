@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Parse-Syslog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/ChangeLog,v 1.5 2007/07/27 17:15:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/ChangeLog,v 1.6 2007/11/13 18:54:58 corsair Exp $
+
+  13 Nov 2007; Markus Rothe <corsair@gentoo.org> Parse-Syslog-1.09.ebuild:
+  Stable on ppc64; bug #199035
 
   27 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   Parse-Syslog-1.09.ebuild:
