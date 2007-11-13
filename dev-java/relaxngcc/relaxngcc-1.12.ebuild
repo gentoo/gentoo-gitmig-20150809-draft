@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/relaxngcc-1.12.ebuild,v 1.6 2007/08/19 18:16:25 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/relaxngcc-1.12.ebuild,v 1.7 2007/11/13 12:32:21 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -46,7 +46,7 @@ src_unpack() {
 
 	cd "${S}/src/relaxngcc/"
 	rm -rf maven
-
+	java-pkg_filter-compiler jikes
 }
 
 EANT_DOC_TARGET=""
