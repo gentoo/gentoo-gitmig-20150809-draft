@@ -1,8 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.1-r2.ebuild,v 1.6 2007/04/26 23:21:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.1-r2.ebuild,v 1.7 2007/11/13 21:51:55 betelgeuse Exp $
 
 JAVA_PKG_OPT_USE="examples"
+JAVA_PKG_IUSE="doc source examples"
 
 inherit java-pkg-opt-2 java-ant-2
 
@@ -17,7 +18,7 @@ SLOT="3.0"
 
 KEYWORDS="amd64 x86"
 
-IUSE="doc examples source"
+IUSE=""
 
 COMMON_DEP="
 	examples? (
