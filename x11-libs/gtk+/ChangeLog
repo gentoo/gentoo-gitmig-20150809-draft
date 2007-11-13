@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.345 2007/11/13 02:45:01 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.346 2007/11/13 08:13:14 opfer Exp $
+
+  13 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  gtk+-2.12.1-r1.ebuild:
+  stable x86, bug 198845
 
   13 Nov 2007; Mart Raudsepp <leio@gentoo.org> gtk+-2.6.10-r1.ebuild,
   gtk+-2.8.19.ebuild, gtk+-2.8.20-r1.ebuild, gtk+-2.10.13.ebuild,
