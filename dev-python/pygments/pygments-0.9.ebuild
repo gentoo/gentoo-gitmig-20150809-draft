@@ -1,27 +1,32 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-0.9.ebuild,v 1.4 2007/11/13 17:11:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-0.9.ebuild,v 1.5 2007/11/13 23:25:33 lucass Exp $
+
+NEED_PYTHON=2.3
 
 inherit eutils distutils
 
 MY_PN="Pygments"
 MY_P="${MY_PN}-${PV}"
-NEED_PYTHON=2.3
 
 DESCRIPTION="Pygments is a syntax highlighting package written in Python."
 HOMEPAGE="http://pygments.org/"
 SRC_URI="http://cheeseshop.python.org/packages/source/P/${MY_PN}/${MY_P}.tar.gz"
+
 LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE="doc"
-S=${WORKDIR}/${MY_P}
+
+DEPEND="dev-python/setuptools"
+
+S="${WORKDIR}/${MY_P}"
 DOCS="CHANGES"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	#Gentoo patches to make lexer recognize ebuilds as bash input
+	distutils_src_unpack
+
+	# Gentoo patches to make lexer recognize ebuilds as bash input
 	epatch "${FILESDIR}/${PN}-0.8-other.py-ebuild.patch" || die "Patch failed"
 	epatch "${FILESDIR}/${PN}-0.8-_mapping.py-ebuild.patch" || die "Patch failed"
 }
