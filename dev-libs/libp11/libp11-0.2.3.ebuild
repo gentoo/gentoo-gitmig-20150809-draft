@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.3.ebuild,v 1.6 2007/11/13 17:46:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.3.ebuild,v 1.7 2007/11/13 18:22:34 corsair Exp $
 
 DESCRIPTION="Libp11 is a library implementing a small layer on top of PKCS#11 API
 to make using PKCS#11 implementations easier."
@@ -9,7 +9,7 @@ SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-util/pkgconfig"

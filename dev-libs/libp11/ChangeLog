@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.19 2007/11/13 17:46:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.20 2007/11/13 18:22:34 corsair Exp $
+
+  13 Nov 2007; Markus Rothe <corsair@gentoo.org> libp11-0.2.3.ebuild:
+  Stable on ppc64; bug #198688
 
   13 Nov 2007; Raúl Porcel <armin76@gentoo.org> libp11-0.2.3.ebuild:
   ia64/sparc stable wrt #198688
