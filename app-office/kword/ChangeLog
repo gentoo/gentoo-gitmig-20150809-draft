@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.114 2007/11/12 19:29:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.115 2007/11/13 12:41:47 armin76 Exp $
+
+  13 Nov 2007; Raúl Porcel <armin76@gentoo.org> kword-1.6.3-r2.ebuild:
+  alpha/ia64/sparc stable wrt security #198409
 
   12 Nov 2007; Markus Rothe <corsair@gentoo.org> kword-1.6.3-r2.ebuild:
   Stable on ppc64; bug #198409

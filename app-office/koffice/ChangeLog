@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.238 2007/11/12 19:31:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.239 2007/11/13 12:44:10 armin76 Exp $
+
+  13 Nov 2007; Raúl Porcel <armin76@gentoo.org> koffice-1.6.3-r2.ebuild:
+  alpha/ia64/sparc stable wrt security #198409
 
   12 Nov 2007; Markus Rothe <corsair@gentoo.org> koffice-1.6.3-r2.ebuild:
   Stable on ppc64; bug #198409
