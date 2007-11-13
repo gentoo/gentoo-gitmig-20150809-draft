@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.8 2007/11/13 08:15:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.9 2007/11/13 17:11:19 armin76 Exp $
+
+  13 Nov 2007; Raúl Porcel <armin76@gentoo.org> pygments-0.9.ebuild:
+  Add ~alpha/~ia64 wrt #198989
 
   13 Nov 2007; Jeroen Roovers <jer@gentoo.org> pygments-0.9.ebuild:
   Marked ~hppa (bug #198989).
