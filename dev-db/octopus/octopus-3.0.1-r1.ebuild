@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r1.ebuild,v 1.7 2007/08/20 16:19:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r1.ebuild,v 1.8 2007/11/13 12:27:27 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -41,14 +41,15 @@ src_unpack() {
 	mv xmls "${S}"/modules/Octopus
 
 	cd "${S}"/modules
-	cp ${FILESDIR}/${P}-gentoo-build.xml build.xml
+	cp "${FILESDIR}/${P}-gentoo-build.xml" build.xml
 	java-ant_rewrite-classpath build.xml
+	java-pkg_filter-compiler jikes
 }
 
 EANT_GENTOO_CLASSPATH="xerces-2,rhino-1.6,ant-core,junit,log4j"
 
 src_compile() {
-	cd ${S}/modules
+	cd "${S}/modules"
 
 	use source && antflags="${antflags} sourcezip-all"
 
@@ -65,12 +66,12 @@ RESTRICT="test"
 src_install() {
 	dodoc ChangeLog.txt ReleaseNotes.txt
 
-	cd ${S}/modules
+	cd "${S}/modules"
 	java-pkg_dojar dist/*.jar
 
 	if use source; then
 		dodir /usr/share/doc/${PF}/source
-		cp dist/*-src.zip ${D}usr/share/doc/${PF}/source
+		cp dist/*-src.zip "${D}usr/share/doc/${PF}/source"
 	fi
 	if use doc; then
 		docinto html/api
