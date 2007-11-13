@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-0.9.ebuild,v 1.2 2007/11/13 00:31:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-0.9.ebuild,v 1.3 2007/11/13 08:15:30 jer Exp $
 
 inherit eutils distutils
 
@@ -12,7 +12,7 @@ DESCRIPTION="Pygments is a syntax highlighting package written in Python."
 HOMEPAGE="http://pygments.org/"
 SRC_URI="http://cheeseshop.python.org/packages/source/P/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE="doc"
 S=${WORKDIR}/${MY_P}
