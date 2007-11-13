@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-RBLClient
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RBLClient/ChangeLog,v 1.5 2007/11/13 18:56:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RBLClient/ChangeLog,v 1.6 2007/11/13 21:32:04 cla Exp $
+
+  13 Nov 2007; Dawid Węgliński <cla@gentoo.org> Net-RBLClient-0.5.ebuild:
+  Stable on x86 (bug #199035)
 
   13 Nov 2007; Markus Rothe <corsair@gentoo.org> Net-RBLClient-0.5.ebuild:
   Stable on ppc64; bug #199035
