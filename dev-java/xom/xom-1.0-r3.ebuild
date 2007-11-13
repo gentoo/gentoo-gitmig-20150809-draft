@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r3.ebuild,v 1.1 2007/11/13 23:29:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r3.ebuild,v 1.2 2007/11/13 23:31:48 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 java-ant-2
 
 XOMVER="xom-${PV/_beta/b}"
-DESCRIPTION="XOM is a new XML object model. It is a tree-based API for processing XML with Java that strives for correctness and simplicity."
+DESCRIPTION="A new XML object model."
 HOMEPAGE="http://cafeconleche.org/XOM/index.html"
 SRC_URI="http://cafeconleche.org/XOM/${XOMVER}.tar.gz"
 

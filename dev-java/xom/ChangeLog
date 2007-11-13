@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xom
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.31 2007/11/13 23:29:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.32 2007/11/13 23:31:48 betelgeuse Exp $
+
+  13 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  xom-1.0-r2.ebuild, xom-1.0-r3.ebuild:
+  Shorten the DESCRIPTION by moving it to metadata.xml.
 
 *xom-1.0-r3 (13 Nov 2007)
 
