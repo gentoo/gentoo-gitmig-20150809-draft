@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/pam_p11-0.1.3.ebuild,v 1.7 2007/11/11 12:51:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/pam_p11-0.1.3.ebuild,v 1.8 2007/11/13 17:45:10 armin76 Exp $
 
 inherit pam eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ia64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/pam
