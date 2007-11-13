@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.39 2007/11/04 08:00:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.40 2007/11/13 06:23:22 mr_bones_ Exp $
 
 # Michael Sterrett <mr_bones_@gentoo.org (15 Oct 2007)
 # Needs sys-fs/udev
@@ -199,6 +199,7 @@ dev-python/pygtksourceview
 >=gnome-base/libgnomecanvas-2.20.0
 >=gnome-base/libgnomeui-2.20.1.1
 >=x11-themes/gnome-themes-extras-2.20
+app-accessibility/gnopernicus
 
 # Chris Gianelloni <wolf31o2@gentoo.org>
 # Since this is a 2.4-only profile, we cannot have any 2.6-based headers/kernels
