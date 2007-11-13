@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/host/host-20070128.ebuild,v 1.2 2007/10/03 22:53:08 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/host/host-20070128.ebuild,v 1.3 2007/11/13 18:47:12 armin76 Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.weird.com/pub/local/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 IUSE="debug"
 
 RESTRICT="test"
