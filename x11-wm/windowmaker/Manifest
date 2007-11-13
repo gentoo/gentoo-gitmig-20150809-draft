@@ -30,6 +30,10 @@ AUX 0.92.0/windowmaker-0.92.0-gcc41.patch 5212 RMD160 087111b64a199ad56faa7fcc0e
 MD5 b5ce486f7df03158abef49d88da24105 files/0.92.0/windowmaker-0.92.0-gcc41.patch 5212
 RMD160 087111b64a199ad56faa7fcc0e90c91540e35666 files/0.92.0/windowmaker-0.92.0-gcc41.patch 5212
 SHA256 aef2a3b6e3e74fad11e0c3cc338446b40e90af3f3a1b0d15d97c5e5d79449858 files/0.92.0/windowmaker-0.92.0-gcc41.patch 5212
+AUX 0.92.0/windowmaker-0.92.0-gif-before-ungif.patch 877 RMD160 837849d3c2701a8848972e5a7d366b2815677b71 SHA1 d984a2547fe2a7d70a72c66ffaa2b0631df7ae44 SHA256 3b0608d45484f1d47b780baa68cede5bbbff2f28da65019aff0b0386cf0125b4
+MD5 705e71f4e9e8a005d81cdddb56790729 files/0.92.0/windowmaker-0.92.0-gif-before-ungif.patch 877
+RMD160 837849d3c2701a8848972e5a7d366b2815677b71 files/0.92.0/windowmaker-0.92.0-gif-before-ungif.patch 877
+SHA256 3b0608d45484f1d47b780baa68cede5bbbff2f28da65019aff0b0386cf0125b4 files/0.92.0/windowmaker-0.92.0-gif-before-ungif.patch 877
 AUX 0.92.0/windowmaker-0.92.0-qtdialogsfix.patch 2071 RMD160 6b66f1f4c91196dae32876c5adb0eeb54733fbba SHA1 41051888180dd490cb0f65a7e02667ee7be723a2 SHA256 5f442989d9d0ba352a8c327e4ffaa39e72362eb1719d9b50e5bb90f63c9b096f
 MD5 f20ef384ecebb7c4b293c63de8721c0b files/0.92.0/windowmaker-0.92.0-qtdialogsfix.patch 2071
 RMD160 6b66f1f4c91196dae32876c5adb0eeb54733fbba files/0.92.0/windowmaker-0.92.0-qtdialogsfix.patch 2071
