@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.20-r1.ebuild,v 1.8 2007/07/22 02:46:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.20-r1.ebuild,v 1.9 2007/11/13 02:45:01 leio Exp $
 
 inherit gnome.org flag-o-matic eutils autotools virtualx
 
@@ -128,11 +128,11 @@ src_install() {
 	keepdir ${GTK2_CONFDIR}
 
 	# # see bug #133241
-	echo 'gtk-fallback-icon-theme = "gnome"' > ${D}/${GTK2_CONFDIR}/gtkrc
+	echo 'gtk-fallback-icon-theme = "gnome"' > "${D}/${GTK2_CONFDIR}/gtkrc"
 
 	# Enable xft in environment as suggested by <utx@gentoo.org>
 	dodir /etc/env.d
-	echo "GDK_USE_XFT=1" > ${D}/etc/env.d/50gtk2
+	echo "GDK_USE_XFT=1" > "${D}/etc/env.d/50gtk2"
 
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
 
@@ -143,8 +143,8 @@ pkg_postinst() {
 	set_gtk2_confdir
 
 	if [ -d "${ROOT}${GTK2_CONFDIR}" ]; then
-		gtk-query-immodules-2.0  > ${ROOT}${GTK2_CONFDIR}/gtk.immodules
-		gdk-pixbuf-query-loaders > ${ROOT}${GTK2_CONFDIR}/gdk-pixbuf.loaders
+		gtk-query-immodules-2.0  > "${ROOT}${GTK2_CONFDIR}/gtk.immodules"
+		gdk-pixbuf-query-loaders > "${ROOT}${GTK2_CONFDIR}/gdk-pixbuf.loaders"
 	else
 		ewarn "The destination path ${ROOT}${GTK2_CONFDIR} doesn't exist;"
 		ewarn "to complete the installation of GTK+, please create the"

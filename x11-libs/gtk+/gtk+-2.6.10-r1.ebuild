@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.10-r1.ebuild,v 1.6 2007/07/22 02:46:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.10-r1.ebuild,v 1.7 2007/11/13 02:45:01 leio Exp $
 
 inherit flag-o-matic eutils
 
@@ -69,7 +69,7 @@ src_unpack() {
 	use x86 && [ "$(get_libdir)" == "lib32" ] && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
 
 	# patch for ppc64 (#64359,#109089)
-	use ppc64 && ! has_version '>=dev-libs/glib-2.8' && epatch ${FILESDIR}/${PN}-2.4.9-ppc64.patch
+	use ppc64 && ! has_version '>=dev-libs/glib-2.8' && epatch "${FILESDIR}/${PN}-2.4.9-ppc64.patch"
 	use ppc64 && append-flags -mminimal-toc
 
 	autoconf || die "autoconf failed"
@@ -106,7 +106,7 @@ src_install() {
 
 	# Enable xft in environment as suggested by <utx@gentoo.org>
 	dodir /etc/env.d
-	echo "GDK_USE_XFT=1" >${D}/etc/env.d/50gtk2
+	echo "GDK_USE_XFT=1" >"${D}/etc/env.d/50gtk2"
 
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
 }
@@ -114,6 +114,6 @@ src_install() {
 pkg_postinst() {
 	set_gtk2_confdir
 
-	gtk-query-immodules-2.0  > ${ROOT}${GTK2_CONFDIR}/gtk.immodules
-	gdk-pixbuf-query-loaders > ${ROOT}${GTK2_CONFDIR}/gdk-pixbuf.loaders
+	gtk-query-immodules-2.0  > "${ROOT}${GTK2_CONFDIR}/gtk.immodules"
+	gdk-pixbuf-query-loaders > "${ROOT}${GTK2_CONFDIR}/gdk-pixbuf.loaders"
 }
