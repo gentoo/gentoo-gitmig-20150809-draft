@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.22 2007/10/30 17:10:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.23 2007/11/13 23:32:29 wolf31o2 Exp $
+
+  13 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org> cel-1.0.1.ebuild:
+  Changing ~amd64 to -amd64 due to bug #187093.
 
   30 Oct 2007; nixnut <nixnut@gentoo.org> cel-0.98.2.ebuild, cel-1.2.ebuild:
   removed ~ppc/ppc keywords from all versions
