@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-v4l2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.19 2007/08/30 19:42:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.20 2007/11/13 22:03:57 genstef Exp $
+
+  13 Nov 2007; Stefan Schweizer <genstef@gentoo.org>
+  gst-plugins-v4l2-0.10.6.ebuild:
+  remove x11-drivers/xf86-video-v4l RDEPEND because it is not needed
 
 *gst-plugins-v4l2-0.10.6 (30 Aug 2007)
 
