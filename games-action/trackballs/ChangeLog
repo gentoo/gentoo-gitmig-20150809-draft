@@ -1,6 +1,9 @@
 # ChangeLog for games-action/trackballs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.22 2007/11/12 05:30:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.23 2007/11/13 18:02:39 drac Exp $
+
+  13 Nov 2007; Samuli Suominen <drac@gentoo.org> trackballs-1.1.4.ebuild:
+  amd64 stable wrt #198889
 
   12 Nov 2007; Michael Sterrett <mr_bones_@gentoo.org>
   trackballs-1.1.4.ebuild:
