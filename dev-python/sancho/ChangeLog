@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sancho
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.30 2007/11/13 18:31:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.31 2007/11/13 19:34:31 jer Exp $
+
+  13 Nov 2007; Jeroen Roovers <jer@gentoo.org> sancho-2.1-r1.ebuild:
+  Marked ~hppa again (thanks armin76).
 
   13 Nov 2007; Raúl Porcel <armin76@gentoo.org> sancho-2.1-r1.ebuild:
   Add ~alpha

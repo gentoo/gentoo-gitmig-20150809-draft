@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-2.1-r1.ebuild,v 1.5 2007/11/13 18:31:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-2.1-r1.ebuild,v 1.6 2007/11/13 19:34:31 jer Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.mems-exchange.org/software/files/${PN}/${MY_P}.tar.gz"
 
 LICENSE="CNRI"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND=">=dev-lang/python-2.3"
 
