@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-2.1.ebuild,v 1.4 2007/11/08 15:04:10 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-2.1.ebuild,v 1.5 2007/11/13 07:06:25 jer Exp $
 
 inherit eutils toolchain-funcs python multilib
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.riverbankcomputing.com/Downloads/QScintilla2/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="qt4 python doc examples debug"
 
 RDEPEND="qt4? ( =x11-libs/qt-4* )
@@ -105,7 +105,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc ChangeLog LICENSE NEWS README*
+	dodoc ChangeLog NEWS README*
 	dodir /usr/{include,$(get_libdir),share/qscintilla/translations}
 	if use qt4; then
 		cd "${S}"/Qt4
