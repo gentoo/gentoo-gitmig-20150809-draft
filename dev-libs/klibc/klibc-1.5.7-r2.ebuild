@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.7-r2.ebuild,v 1.1 2007/11/14 15:47:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.7-r2.ebuild,v 1.2 2007/11/14 21:49:28 mr_bones_ Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -224,7 +224,7 @@ src_install() {
 	# Fix up the symlink
 	# Mainly for merged arches
 	linkname="${D}/usr/${libdir}/klibc/include/asm"
-	if [ -L "${linkname}" ] && [ ! -e "${linkname}" ] ; then 
+	if [ -L "${linkname}" ] && [ ! -e "${linkname}" ] ; then
 		ln -snf asm-${KLIBCASMARCH} "${linkname}"
 	fi
 }
