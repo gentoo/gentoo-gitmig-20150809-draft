@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.26 2007/11/04 08:20:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.27 2007/11/14 05:14:55 mrness Exp $
+
+  14 Nov 2007; Alin Năstac <mrness@gentoo.org> files/privoxy.initd:
+  Set PIDFILE and CONFFILE init script parameters to values based on service
+  name (#199031).
 
   04 Nov 2007; Alin Năstac <mrness@gentoo.org> privoxy-3.0.6.ebuild:
   Remove useless pkg_preinst function.
