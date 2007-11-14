@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/filelight-i18n
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight-i18n/ChangeLog,v 1.5 2007/10/06 18:58:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight-i18n/ChangeLog,v 1.6 2007/11/14 13:56:59 keytoaster Exp $
+
+  14 Nov 2007; Tobias Heinlein <keytoaster@gentoo.org>
+  filelight-i18n-1.0.ebuild:
+  amd64 stable, bug #194745
 
   06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   filelight-i18n-1.0.ebuild:

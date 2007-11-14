@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/filelight
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.25 2007/10/06 18:57:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.26 2007/11/14 13:54:09 keytoaster Exp $
+
+  14 Nov 2007; Tobias Heinlein <keytoaster@gentoo.org> filelight-1.0.ebuild:
+  amd64 stable, bug #194745
 
   06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   filelight-1.0.ebuild:
