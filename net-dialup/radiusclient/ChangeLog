@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/radiusclient
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.19 2007/11/11 15:57:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.20 2007/11/14 17:26:09 jer Exp $
+
+  14 Nov 2007; Jeroen Roovers <jer@gentoo.org> radiusclient-0.3.2.ebuild:
+  Stable for HPPA (bug #198489).
 
   11 Nov 2007; Raúl Porcel <armin76@gentoo.org> radiusclient-0.3.2.ebuild:
   ia64 stable
