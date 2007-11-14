@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.13.ebuild,v 1.5 2007/10/15 14:44:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.13.ebuild,v 1.6 2007/11/14 19:29:51 ticho Exp $
 
 inherit eutils webapp
 
@@ -10,12 +10,11 @@ SRC_URI="http://mailgraph.schweikert.ch//pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ppc64 x86"
-IUSE="logrotate"
+IUSE=""
 
 RDEPEND="dev-lang/perl
 	dev-perl/File-Tail
-	>=net-analyzer/rrdtool-1.2.2
-	logrotate? ( app-admin/logrotate )"
+	>=net-analyzer/rrdtool-1.2.2"
 DEPEND=">=sys-apps/sed-4"
 
 user_group_setup() {
@@ -36,7 +35,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s|\(my \$rrd = '\).*'|\1/var/lib/mailgraph/mailgraph.rrd'|" \
 		-e "s|\(my \$rrd_virus = '\).*'|\1/var/lib/mailgraph/mailgraph_virus.rrd'|" \
@@ -69,28 +68,26 @@ src_install() {
 	dodir /var/run/mailgraph
 	keepdir /var/run/mailgraph
 
-	if use logrotate ; then
-		# logrotate config for mailgraph log
-		diropts ""
-		dodir /etc/logrotate.d
-		insopts -m0644
-		insinto /etc/logrotate.d
-		newins ${FILESDIR}/mailgraph.logrotate-new mailgraph
-	fi
+	# logrotate config for mailgraph log
+	diropts ""
+	dodir /etc/logrotate.d
+	insopts -m0644
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}"/mailgraph.logrotate-new mailgraph
 
 	# mailgraph daemon
 	newbin mailgraph.pl mailgraph
 
 	# mailgraph CGI script
-	exeinto ${MY_CGIBINDIR}
+	exeinto "${MY_CGIBINDIR}"
 	doexe mailgraph.cgi
 
 	# init/conf files for mailgraph daemon
-	newinitd ${FILESDIR}/mailgraph.initd-new mailgraph
-	newconfd ${FILESDIR}/mailgraph.confd-new mailgraph
+	newinitd "${FILESDIR}"/mailgraph.initd-new mailgraph
+	newconfd "${FILESDIR}"/mailgraph.confd-new mailgraph
 
 	# docs
-	dodoc README CHANGES COPYING
+	dodoc README CHANGES
 }
 
 pkg_postinst() {
