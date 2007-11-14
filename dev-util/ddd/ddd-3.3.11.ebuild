@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.11.ebuild,v 1.13 2007/07/22 07:26:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.11.ebuild,v 1.14 2007/11/14 05:54:56 robbat2 Exp $
 
 inherit eutils
 
@@ -26,6 +26,9 @@ RESTRICT="test"
 src_compile() {
 	CXXFLAGS="${CXXFLAGS}"
 	econf || die
+	cd "${S}"/ddd
+	emake version.h build.h host.h root.h configinfo.C Ddd.ad.h || die "Failed to build headers"
+	cd "${S}"
 	emake || die
 }
 
@@ -35,16 +38,16 @@ src_install() {
 	# $tooldir to 'make install', else we get
 	# sandbox errors ... bug #4614.
 	# <azarah@gentoo.org> 05 Dec 2002
-	einstall tooldir=${D}/usr || die
+	einstall tooldir="${D}/usr" || die
 
 	# This one is from binutils
-	[ -f ${D}/usr/lib/libiberty.a ] && rm -f ${D}/usr/lib/libiberty.a
+	[ -f "${D}"/usr/lib/libiberty.a ] && rm -f "${D}"/usr/lib/libiberty.a
 	# Remove empty dir ...
-	rmdir ${D}/usr/lib || :
+	rmdir "${D}"/usr/lib || :
 
-	mv ${S}/doc/README ${S}/doc/README-DOC
+	mv "${S}"/doc/README "${S}"/doc/README-DOC
 	dodoc ANNOUNCE AUTHORS BUGS COPYING* CREDITS INSTALL NEWS* NICKNAMES \
 		OPENBUGS PROBLEMS README* TIPS TODO
 
-	mv ${S}/doc/* ${D}/usr/share/doc/${PF}
+	mv "${S}"/doc/* "${D}"/usr/share/doc/${PF}
 }
