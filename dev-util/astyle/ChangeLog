@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/astyle
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.17 2007/10/07 01:31:42 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.18 2007/11/14 03:37:44 robbat2 Exp $
+
+  14 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> astyle-1.21.ebuild:
+  Fix $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.18 2007/11/14 03:37:44 robbat2 Exp $ string.
 
 *astyle-1.21 (07 Oct 2007)
 
