@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/bzrtools-0.90.0.ebuild,v 1.1 2007/09/06 09:35:05 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/bzrtools-0.92.1.ebuild,v 1.1 2007/11/14 10:32:36 lucass Exp $
 
 NEED_PYTHON=2.4
 
@@ -16,9 +16,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="=dev-util/bzr-$(get_version_component_range 1-2)*"
-RDEPEND="${DEPEND}"
 
-DOCS="CREDITS NEWS NEWS.Shelf README README.Shelf TODO TODO.Shelf"
+DOCS="CREDITS NEWS.Shelf TODO.Shelf"
 
 S="${WORKDIR}/${PN}"
 
