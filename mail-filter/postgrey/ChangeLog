@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.42 2007/11/13 21:32:30 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.43 2007/11/14 03:24:36 astinus Exp $
+
+  14 Nov 2007; Alex Howells <astinus@gentoo.org> postgrey-1.31.ebuild:
+  changing ~amd64 -> amd64, wrt bug #199035
 
   13 Nov 2007; Dawid Węgliński <cla@gentoo.org> postgrey-1.31.ebuild:
   Stable on x86 (bug #199035)
