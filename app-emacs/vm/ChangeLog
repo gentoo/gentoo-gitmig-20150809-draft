@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.43 2007/11/09 19:35:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.44 2007/11/14 07:31:53 ulm Exp $
+
+  14 Nov 2007; Ulrich Mueller <ulm@gentoo.org> vm-8.0.2.487-r1.ebuild:
+  Stable on amd64, bug #198033.
 
   09 Nov 2007; nixnut <nixnut@gentoo.org> vm-8.0.2.487-r1.ebuild:
   Stable on ppc wrt bug 198033
