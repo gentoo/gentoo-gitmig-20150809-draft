@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.6.ebuild,v 1.3 2007/11/13 07:55:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.6.ebuild,v 1.4 2007/11/14 16:04:19 flameeyes Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -45,6 +45,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-1.4.5-asneeded.patch"
 	epatch "${FILESDIR}/${P}-no-disable-deprecated.patch"
+	epatch "${FILESDIR}/${P}-noalsa.patch"
 	eautomake
 }
 
