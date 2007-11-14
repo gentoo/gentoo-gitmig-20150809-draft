@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.60.0-r1.ebuild,v 1.1 2007/11/13 23:27:40 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.60.0-r1.ebuild,v 1.2 2007/11/14 06:23:41 corsair Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -17,7 +17,7 @@ SRC_URI="cjk? ( ftp://ftp.gyve.org/pub/gs-cjk/adobe-cmaps-200406.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="X cups cjk gtk jpeg2k"
 
 DEP="virtual/libc
