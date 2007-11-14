@@ -1,5 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/aranym-0.9.4_beta2.ebuild,v 1.2 2007/11/14 03:36:56 robbat2 Exp $
 
 inherit flag-o-matic eutils
 
