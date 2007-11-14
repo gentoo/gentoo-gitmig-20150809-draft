@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.821 2007/11/14 10:12:21 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.822 2007/11/14 21:59:01 flameeyes Exp $
+
+  14 Nov 2007; Diego Pettenò <flameeyes@gentoo.org>
+  default-linux/amd64/package.use.mask, default-linux/x86/package.use.mask:
+  Mask glibc-omitfp on ~glibc-2.7 until bug #196926 is fixed.
 
   14 Nov 2007; Lukasz Strzygowski <lucass@gentoo.org> use.local.desc:
   Added dev-util/bzr:sftp.

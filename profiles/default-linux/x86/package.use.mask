@@ -5,3 +5,7 @@ dev-java/sun-jre-bin -nsplugin
 dev-java/ibm-jdk-bin -nsplugin 
 dev-java/ibm-jre-bin -nsplugin
 x11-terms/eterm sse2
+
+# Diego Pettenò <flameeyes@gentoo.org> (14 Nov 2007)
+# Mask glibc-omitfp on glibc 2.7 until bug #196926 is fixed.
+~sys-libs/glibc-2.7 glibc-omitfp
