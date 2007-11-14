@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.14 2007/11/10 20:20:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.15 2007/11/14 05:50:21 pva Exp $
+
+*ipset-2.3.0.20070828-r2 (14 Nov 2007)
+
+  14 Nov 2007; <pva@gentoo.org> -ipset-2.3.0.20070828-r1.ebuild,
+  +ipset-2.3.0.20070828-r2.ebuild:
+  Fixed LIBDIR to include /; bug 199084 reported by Krzysztof Olędzki
+  <ole+gentoo AT ans.pl>.
 
   10 Nov 2007; <pva@gentoo.org> -ipset-2.1.0.20050119-r1.ebuild,
   -ipset-2.2.8.20051203.ebuild, -ipset-2.2.9.20060508.ebuild:

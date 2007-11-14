@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.3.0.20070828-r1.ebuild,v 1.1 2007/11/07 15:25:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.3.0.20070828-r2.ebuild,v 1.1 2007/11/14 05:50:21 pva Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/ipset-${MY_PV%-*}
 
 pkg_setup() {
 	myconf="${myconf} PREFIX="
-	myconf="${myconf} LIBDIR=$(get_libdir)"
+	myconf="${myconf} LIBDIR=/$(get_libdir)"
 	myconf="${myconf} BINDIR=/sbin"
 	myconf="${myconf} MANDIR=/usr/share/man"
 	myconf="${myconf} INCDIR=/usr/include"
