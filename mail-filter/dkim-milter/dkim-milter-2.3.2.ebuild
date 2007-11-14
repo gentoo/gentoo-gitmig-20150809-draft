@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.3.2.ebuild,v 1.2 2007/11/04 08:43:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.3.2.ebuild,v 1.3 2007/11/14 04:46:36 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,16 +31,14 @@ src_unpack() {
 
 	cp site.config.m4.dist devtools/Site/site.config.m4 || \
 		die "failed to generate site.config.m4"
-	#epatch "${FILESDIR}/${P}-gentoo.patch"
-	epatch "${FILESDIR}/${PN}-2.3.0-gentoo.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 
 	local ENVDEF=""
 	use ipv6 && ENVDEF="${ENVDEF} -DNETINET6"
 	sed -i -e "s:@@CFLAGS@@:${CFLAGS}:" -e "s:@@ENVDEF@@:${ENVDEF}:" \
 		devtools/Site/site.config.m4
 
-	#use diffheaders && epatch "${FILESDIR}/${P}-diffheaders.patch"
-	use diffheaders && epatch "${FILESDIR}/${PN}-2.3.1-diffheaders.patch"
+	use diffheaders && epatch "${FILESDIR}/${P}-diffheaders.patch"
 }
 
 src_compile() {
@@ -139,7 +137,7 @@ pkg_config() {
 	} < "${ROOT}"etc/mail/dkim-filter/${selector}.public
 	echo
 	einfo "After you configured your MTA, publish your key by adding this TXT record to your domain:"
-	einfo "  ${selector}._domainkey   IN   TXT  \"g=\\; k=rsa\\; t=y\\; p=${pubkey}\""
+	einfo "  ${selector}._domainkey   IN   TXT  \"v=DKIM1\\; k=rsa\\; t=y\\; p=${pubkey}\""
 	echo
 	einfo "t=y signifies you only test the DKIM on your domain. See following page for the complete list of tags:"
 	einfo "  http://www.dkim.org/specs/rfc4871-dkimbase.html#key-text"
