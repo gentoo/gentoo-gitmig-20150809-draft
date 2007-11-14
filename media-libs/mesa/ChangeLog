@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.164 2007/11/12 19:08:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.165 2007/11/14 06:18:41 zmedico Exp $
+
+  14 Nov 2007; Zac Medico <zmedico@gentoo.org> mesa-6.5.2-r1.ebuild,
+  mesa-7.0.1.ebuild, mesa-7.0.2.ebuild:
+  Add eselect-opengl to RDEPEND since having it in DEPEND alone will not
+  pull it in for binary packages. If the postinst `eselect opengl` call fails
+  then it can lead to build errors later, as reported by release engineering.
 
   12 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>; mesa-7.0.1.ebuild,
   mesa-7.0.2.ebuild:

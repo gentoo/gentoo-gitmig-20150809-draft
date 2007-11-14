@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.2-r1.ebuild,v 1.17 2007/11/11 20:38:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.2-r1.ebuild,v 1.18 2007/11/14 06:18:41 zmedico Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -38,7 +38,8 @@ IUSE="${IUSE_VIDEO_CARDS}
 	xcb
 	kernel_FreeBSD"
 
-RDEPEND="dev-libs/expat
+RDEPEND="app-admin/eselect-opengl
+	dev-libs/expat
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXxf86vm
@@ -55,7 +56,6 @@ DEPEND="${RDEPEND}
 	x11-misc/makedepend
 	x11-proto/inputproto
 	x11-proto/xextproto
-	app-admin/eselect-opengl
 	!hppa? ( x11-proto/xf86driproto )
 	x11-proto/xf86vidmodeproto
 	>=x11-proto/glproto-1.4.8
