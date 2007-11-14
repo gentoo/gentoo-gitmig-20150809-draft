@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.97-r1.ebuild,v 1.3 2007/11/14 04:09:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.97-r1.ebuild,v 1.4 2007/11/14 15:26:27 maekke Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.tuxonice.net/downloads/all/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE="vim-syntax"
 
