@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7904 2007/11/14 13:51:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7905 2007/11/14 20:59:56 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -85,6 +85,7 @@ x11-wm/heliodor
 x11-wm/aquamarine
 <=x11-wm/emerald-0.2.1
 <=x11-plugins/emerald-plugins-0.2.1
+<=x11-themes/emerald-themes-0.2.1
 
 # William L Thomson Jr <wltjr@gentoo.org> (06 Nov 2007)
 # Old release notes, and pdf docs provided by main package
