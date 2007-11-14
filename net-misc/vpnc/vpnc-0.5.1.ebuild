@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1.ebuild,v 1.6 2007/11/06 00:47:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1.ebuild,v 1.7 2007/11/14 05:53:42 opfer Exp $
 
 inherit linux-info
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-libs/libgcrypt-1.1.91
 	!bindist? ( hybrid-auth? ( dev-libs/openssl ) )"
 
 RDEPEND="${DEPEND}
-	net-dns/resolvconf-gentoo"
+	resolvconf? ( net-dns/resolvconf-gentoo )"
 
 pkg_setup()	 {
 	if use hybrid-auth && use bindist; then
@@ -31,7 +31,7 @@ pkg_setup()	 {
 }
 
 src_compile() {
-	# is reported upstream
+	# is reported upstream and fixed in next version
 	sed -e "s:/usr/local:/usr:" -i vpnc-script
 	# only allowed if not distributed in binary form!
 	if use hybrid-auth && ! use bindist; then
