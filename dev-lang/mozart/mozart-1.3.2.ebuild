@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.3.2.ebuild,v 1.7 2007/10/04 06:22:39 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.3.2.ebuild,v 1.8 2007/11/14 16:41:05 keri Exp $
 
 inherit elisp-common eutils
 
@@ -45,7 +45,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd "${S}"
 	local myconf="\
 			--without-global-oz \
 			--enable-opt=none"
@@ -80,6 +79,12 @@ src_compile() {
 		|| die "econf failed"
 
 	emake -j1 bootstrap || die "emake bootstrap failed"
+}
+
+src_test() {
+	cd "${S}"/share/test
+	emake -j1 boot-oztest || die "emake boot-oztest failed"
+	emake -j1 boot-check || die "emake boot-check failed"
 }
 
 src_install() {
