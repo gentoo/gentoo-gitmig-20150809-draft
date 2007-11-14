@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.7.2.ebuild,v 1.1 2007/02/12 23:19:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.7.2.ebuild,v 1.2 2007/11/14 16:49:56 mr_bones_ Exp $
 
 inherit autotools games
 
 DESCRIPTION="An advanced NES, GB/GBC/GBA, TurboGrafx 16/CD, NGPC and Lynx emulator"
-HOMEPAGE="http://mednafen.com/"
+HOMEPAGE="http://mednafen.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
