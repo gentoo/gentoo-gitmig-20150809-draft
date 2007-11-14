@@ -1,5 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/xcursor-neutral-1.20.ebuild,v 1.3 2007/11/14 03:11:55 robbat2 Exp $
 
 MY_P="48837-Neutral_Plus_1.2.tar.bz2"
 MY_PN="Neutral_Plus"
