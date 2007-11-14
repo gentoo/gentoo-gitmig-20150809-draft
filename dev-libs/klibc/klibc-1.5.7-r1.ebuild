@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.7-r1.ebuild,v 1.1 2007/11/12 10:36:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.7-r1.ebuild,v 1.2 2007/11/14 06:00:02 robbat2 Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -102,6 +102,7 @@ src_compile() {
 	# NOT your kernel. PPC64-32ul would choose 'ppc' for example.
 	defconfig=$(kernel_defconfig ${ARCH})
 	unset ABI ARCH # Unset these, because they interfere
+	unset KBUILD_OUTPUT # we are using a private copy
 
 	cd "${KS}"
 	emake ${defconfig} || die "No defconfig"
@@ -150,6 +151,7 @@ src_install() {
 	fi
 
 	unset ABI ARCH # Unset these, because they interfere
+	unset KBUILD_OUTPUT # we are using a private copy
 
 	emake \
 		EXTRA_KLIBCAFLAGS="-Wa,--noexecstack" \
