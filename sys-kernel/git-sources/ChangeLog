@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.119 2007/11/13 15:02:14 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.120 2007/11/14 03:10:54 robbat2 Exp $
+
+  14 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
+  git-sources-2.6.24_rc1-r10.ebuild, git-sources-2.6.24_rc1-r15.ebuild,
+  git-sources-2.6.24_rc2-r1.ebuild, git-sources-2.6.24_rc2-r3.ebuild:
+  Fix $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.120 2007/11/14 03:10:54 robbat2 Exp $ string.
 
 *git-sources-2.6.24_rc2-r3 (13 Nov 2007)
 
