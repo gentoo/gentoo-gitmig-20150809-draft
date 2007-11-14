@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3140 2007/11/13 06:24:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3141 2007/11/14 05:46:37 opfer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1652,6 +1652,7 @@ net-misc/tsclient:vnc - Adds vncviewer support.
 net-misc/vino:keyring - Enable gnome-keyring support for storing passwords
 net-misc/vnc:server - Build VNC server
 net-misc/vpnc:hybrid-auth - Enable hybrid authentication (certificates), only if not redistributed as compiled binary
+net-misc/vpnc:resolvconf - Enable support for DNS managing framework net-dns/resolv-conf
 net-misc/vtun:lzo - Enables support for lzo compression
 net-misc/wanpipe:adsl - Build with adsl support
 net-misc/xf4vnc:vncviewer - Install the vncviewer binary

@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.819 2007/11/13 22:35:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.820 2007/11/14 05:46:37 opfer Exp $
+
+  14 Nov 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
+  adding USE=resolvconf for net-misc/vpnc
 
   13 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
   Added a mask on my new testing livecd-tools and updating the genkernel mask
