@@ -1,5 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-sn/orinoco-sn-0.13e_pre15.ebuild,v 1.4 2007/11/14 03:38:07 robbat2 Exp $
 
 inherit linux-mod eutils
 
