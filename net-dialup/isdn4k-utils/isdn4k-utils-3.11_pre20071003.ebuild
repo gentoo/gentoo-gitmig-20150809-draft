@@ -1,20 +1,22 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.9_pre20060124.ebuild,v 1.10 2007/11/14 15:30:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.11_pre20071003.ebuild,v 1.1 2007/11/14 15:30:57 mrness Exp $
 
-inherit eutils multilib gnuconfig linux-info
+WANT_AUTOCONF="2.1"
+WANT_AUTOMAKE="none"
+
+inherit eutils multilib linux-info autotools
 
 MY_PV="${PV/*_pre/}"
 MY_P="${PN}-CVS-${MY_PV:0:4}-${MY_PV:4:2}-${MY_PV:6:2}"
 
 FW_DIR="/lib/firmware"
-#FW_DIR="/lib/firmware/isdn"
 
 DESCRIPTION="ISDN4Linux Utils"
 SRC_URI="ftp://ftp.isdn4linux.de/pub/isdn4linux/CVS-Snapshots/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.isdn4linux.de/"
 
-KEYWORDS="alpha ~amd64 ~ppc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 LICENSE="GPL-2"
 IUSE="X activefilter mschap ipppd isdnlog eurofile usb pcmcia"
 # TODO: mysql postgres oracle radius
@@ -67,16 +69,6 @@ pkg_setup() {
 	use eurofile && CONFIG_CHECK="${CONFIG_CHECK} ~X25 ~ISDN_X25"
 	get_version || die "check kernel config failed"  # config checked later in pkg_postinst
 
-	# check for new baselayout
-	#einfo "Checking baselayout"
-	#if [ -f /lib/rcscripts/net.modules.d/ipppd ]; then
-	#	einfo "    new baselayout with ipppd net-module found"
-	#	HAS_NETMODULE=1
-	#else
-	#	einfo "    old baselayout with no ipppd net-module found"
-	#	HAS_NETMODULE=0
-	#fi
-
 	# Get country code from I4L_CC variable
 	# default country: DE (Germany)
 	I4L_CC=$(echo -n "${I4L_CC}" | tr "[:lower:]" "[:upper:]")
@@ -103,9 +95,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}/${P}-qa-fixes.patch"
+
 	# apply pcap patch (bug #99190)
 	use ipppd && use activefilter && \
-	epatch "${FILESDIR}/ipppd-pcap-0.9.3.patch"
+		epatch "${FILESDIR}/ipppd-pcap-0.9.3.patch"
 
 	# apply gcc4 patch (bug #117573)
 	epatch "${FILESDIR}/eiconctrl-gcc4.patch"
@@ -206,14 +200,13 @@ src_unpack() {
 	#fi
 
 	# run autoconf
-	gnuconfig_update
 	einfo "Running autoconf"
 	for i in act2000 divertctrl doc eicon eurofile FAQ hisax icn imon ipppd \
 		ipppstats iprofd isdnctrl isdnlog loop pcbit isdnlog isdnlog/client \
 		isdnlog/tools/cdb isdnlog/tools/dest isdnlog/tools/zone; do
 		einfo "  Updating ${i}"
 		pushd "${i}" >/dev/null
-		WANT_AUTOCONF="2.1" autoconf 2>/dev/null || die "autoconf failed in dir ${i}"
+		eautoconf || die "eautoconf failed in dir ${i}"
 		popd >/dev/null
 	done
 }

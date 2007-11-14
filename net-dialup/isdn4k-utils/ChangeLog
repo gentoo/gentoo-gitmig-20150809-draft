@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.60 2007/05/02 08:17:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.61 2007/11/14 15:30:57 mrness Exp $
+
+*isdn4k-utils-3.11_pre20071003 (14 Nov 2007)
+
+  14 Nov 2007; Alin Năstac <mrness@gentoo.org>
+  +files/config-3.11_pre20071003,
+  +files/isdn4k-utils-3.11_pre20071003-qa-fixes.patch,
+  +isdn4k-utils-3.11_pre20071003.ebuild:
+  Version bump. Drop gnuconfig.eclass inheritance (#160186). Quote FILESDIR.
 
   02 May 2007; Marius Mauch <genone@gentoo.org>
   isdn4k-utils-3.8_pre20050821.ebuild, isdn4k-utils-3.9_pre20060124.ebuild:

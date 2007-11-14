@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.8_pre20050821.ebuild,v 1.10 2007/05/02 08:17:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.8_pre20050821.ebuild,v 1.11 2007/11/14 15:30:57 mrness Exp $
 
 inherit eutils multilib gnuconfig linux-info
 
@@ -115,13 +115,13 @@ src_unpack() {
 			sed -e "s:^CONFIG_ISDN_LOG_XX=:CONFIG_ISDN_LOG_${I4L_CC}=:g" \
 				-e "s:^\(CONFIG_ISDN_LOG_CC_\)..=:\1${I4L_LANG}=:g" \
 				-e "s:^CONFIG_ISDN_LOG_CC=.*$:#:g" \
-				< ${FILESDIR}/config-${PV} > .config || die "failed to modify .config"
+				< "${FILESDIR}"/config-${PV} > .config || die "failed to modify .config"
 			;;
 		*)
 			# Others get a generic isdnlog.
 			sed -e "s:^\(CONFIG_ISDN_LOG_CC=\).*$:\1'${I4L_CC_LOW}':g" \
 				-e "s:^\(CONFIG_ISDN_LOG_CC_\)..=:\1${I4L_LANG}=:g" \
-				< ${FILESDIR}/config-${PV} > .config || die "failed to modify .config"
+				< "${FILESDIR}"/config-${PV} > .config || die "failed to modify .config"
 			;;
 	esac
 

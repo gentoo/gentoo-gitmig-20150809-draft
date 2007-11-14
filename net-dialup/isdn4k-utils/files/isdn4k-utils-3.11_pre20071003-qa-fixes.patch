@@ -1,0 +1,36 @@
+diff -Nru isdn4k-utils-CVS-2007-10-03.orig/imontty/Makefile isdn4k-utils-CVS-2007-10-03/imontty/Makefile
+--- isdn4k-utils-CVS-2007-10-03.orig/imontty/Makefile	2007-11-14 17:17:36.000000000 +0200
++++ isdn4k-utils-CVS-2007-10-03/imontty/Makefile	2007-11-14 17:11:40.000000000 +0200
+@@ -53,7 +53,7 @@
+ 	$(INSTALL_MAN) $< $(DESTDIR)$(MAN8DIR)/$(MANPAGE)
+ 
+ install: $(PROGS) rootperm install-man
+-	install -s -o 0 -g 0 -m 0755 $(PROGS) $(DESTDIR)$(CONFIG_SBINDIR)
++	install -o 0 -g 0 -m 0755 $(PROGS) $(DESTDIR)$(CONFIG_SBINDIR)
+ 
+ uninstall: rootperm
+ 	for i in $(PROGS) ; do rm -f $(DESTDIR)$(CONFIG_SBINDIR)/$$i; done
+diff -Nru isdn4k-utils-CVS-2007-10-03.orig/isdnlog/isdnlog/asn1_comp.c isdn4k-utils-CVS-2007-10-03/isdnlog/isdnlog/asn1_comp.c
+--- isdn4k-utils-CVS-2007-10-03.orig/isdnlog/isdnlog/asn1_comp.c	2007-11-14 17:17:36.000000000 +0200
++++ isdn4k-utils-CVS-2007-10-03/isdnlog/isdnlog/asn1_comp.c	2007-11-14 17:11:40.000000000 +0200
+@@ -61,6 +61,8 @@
+ #include "asn1_aoc.h"
+ #include "asn1_comp.h"
+ 
++extern void  showmsg(const char *fmt, ...);
++
+ // ======================================================================
+ // Component EN 300 196-1 D.1
+ 
+diff -Nru isdn4k-utils-CVS-2007-10-03.orig/xmonisdn/Imakefile isdn4k-utils-CVS-2007-10-03/xmonisdn/Imakefile
+--- isdn4k-utils-CVS-2007-10-03.orig/xmonisdn/Imakefile	2002-01-30 02:51:52.000000000 +0200
++++ isdn4k-utils-CVS-2007-10-03/xmonisdn/Imakefile	2007-11-14 17:17:48.000000000 +0200
+@@ -7,7 +7,7 @@
+            OBJS = xmonisdn.o Net.o
+         HEADERS = NetP.h Net.h
+ 
+-   INSTPGMFLAGS = -m 0755 -s
++   INSTPGMFLAGS = -m 0755
+ 
+ ComplexProgramTarget(xmonisdn)
+ 
