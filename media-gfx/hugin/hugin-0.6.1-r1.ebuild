@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.6.1-r1.ebuild,v 1.3 2007/10/26 16:58:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.6.1-r1.ebuild,v 1.4 2007/11/14 07:03:20 welp Exp $
 
 inherit wxwidgets eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://hugin.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2 SIFT"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="unicode debug enblend sift"
 
 DEPEND=">=media-libs/libpano12-2.8.4
