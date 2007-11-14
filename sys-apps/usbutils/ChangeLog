@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.61 2007/10/29 22:47:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.62 2007/11/14 16:46:21 lavajoe Exp $
+
+  14 Nov 2007; Joe Peterson <lavajoe@gentoo.org>
+  +files/usbutils-0.73-byteorder.patch, usbutils-0.73.ebuild:
+  Patched to compile on FreeBSD (bug #197678)
 
 *usbutils-0.73 (29 Oct 2007)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.73.ebuild,v 1.1 2007/10/29 22:47:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.73.ebuild,v 1.2 2007/11/14 16:46:21 lavajoe Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="USB enumeration utilities"
 HOMEPAGE="http://linux-usb.sourceforge.net/"
@@ -21,6 +21,7 @@ src_unpack() {
 	cd "${S}"
 	cp update-usbids.sh update-usbids.sh.orig
 	epatch "${FILESDIR}"/${PN}-0.72-update-usbids.patch
+	epatch "${FILESDIR}"/${P}-byteorder.patch
 
 	# put usb.ids in same place as pci.ids (/usr/share/misc)
 	sed -i \
@@ -28,6 +29,8 @@ src_unpack() {
 		lsusb.8 || die "sed lsusb.8"
 	sed -e '/^DEST=/s:=usb.ids:=/usr/share/misc/usb.ids:' \
 		update-usbids.sh > update-usbids
+
+	eautoreconf
 }
 
 src_compile() {
