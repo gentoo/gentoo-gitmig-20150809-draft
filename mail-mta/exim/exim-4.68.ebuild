@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.68.ebuild,v 1.5 2007/11/11 15:58:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.68.ebuild,v 1.6 2007/11/14 17:26:42 jer Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ppc64 sparc x86"
 
 PROVIDE="virtual/mta"
 DEPEND=">=sys-apps/sed-4.0.5
@@ -48,19 +48,19 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	local myconf
 
-	epatch ${FILESDIR}/exim-4.14-tail.patch
-	epatch ${FILESDIR}/exim-4.43-r2-localscan_dlopen.patch
+	epatch "${FILESDIR}"/exim-4.14-tail.patch
+	epatch "${FILESDIR}"/exim-4.43-r2-localscan_dlopen.patch
 
 	if ! use mbox; then
 		einfo "Patching maildir support into exim.conf"
-		epatch ${FILESDIR}/exim-4.20-maildir.patch
+		epatch "${FILESDIR}"/exim-4.20-maildir.patch
 	fi
-	sed -i "/SYSTEM_ALIASES_FILE/ s'SYSTEM_ALIASES_FILE'/etc/mail/aliases'" ${S}/src/configure.default
-	cp ${S}/src/configure.default ${S}/src/configure.default.orig
+	sed -i "/SYSTEM_ALIASES_FILE/ s'SYSTEM_ALIASES_FILE'/etc/mail/aliases'" "${S}"/src/configure.default
+	cp "${S}"/src/configure.default "${S}"/src/configure.default.orig
 
 	# Includes Typo fix for bug 47106
 	sed -e "48i\CFLAGS=${CFLAGS}" \
@@ -152,7 +152,7 @@ src_unpack() {
 		echo "EXTRALIBS=${myconf} ${LDFLAGS}" >> Makefile
 	fi
 
-	cd ${S}
+	cd "${S}"
 	if use ssl; then
 		sed -i \
 			-e "s:# \(SUPPORT_TLS=yes\):\1:" Local/Makefile
@@ -227,7 +227,7 @@ src_unpack() {
 	fi
 
 # Use the "native" interface to the DBM library
-	echo "USE_DB=yes" >> ${S}/Local/Makefile
+	echo "USE_DB=yes" >> "${S}"/Local/Makefile
 }
 
 src_compile() {
@@ -235,7 +235,7 @@ src_compile() {
 }
 
 src_install () {
-	cd ${S}/build-exim-gentoo
+	cd "${S}"/build-exim-gentoo
 	exeinto /usr/sbin
 	doexe exim
 	if use X; then
@@ -253,7 +253,7 @@ src_install () {
 	if use mailwrapper
 	then
 		insinto /etc/mail
-		doins ${FILESDIR}/mailer.conf
+		doins "${FILESDIR}"/mailer.conf
 	else
 		dosym exim /usr/sbin/sendmail
 		dosym /usr/sbin/exim /usr/bin/mailq
@@ -271,32 +271,32 @@ src_install () {
 		doexe $i
 	done
 
-	dodoc ${S}/doc/*
-	doman ${S}/doc/exim.8
+	dodoc "${S}"/doc/*
+	doman "${S}"/doc/exim.8
 
 	# conf files
 	insinto /etc/exim
-	newins ${S}/src/configure.default.orig exim.conf.dist
+	newins "${S}"/src/configure.default.orig exim.conf.dist
 	if use exiscan-acl; then
-		newins ${S}/src/configure.default exim.conf.exiscan-acl
+		newins "${S}"/src/configure.default exim.conf.exiscan-acl
 	fi
-	doins ${FILESDIR}/system_filter.exim
-	doins ${FILESDIR}/auth_conf.sub
+	doins "${FILESDIR}"/system_filter.exim
+	doins "${FILESDIR}"/auth_conf.sub
 	if use exiscan; then
-		newins ${S}/src/configure.default exim.conf.exiscan
-		doins ${FILESDIR}/exiscan.conf
+		newins "${S}"/src/configure.default exim.conf.exiscan
+		doins "${FILESDIR}"/exiscan.conf
 	fi
 
 	if use pam
 	then
 		# INSTALL a pam.d file for SMTP AUTH that works with gentoo's pam
 		insinto /etc/pam.d
-		newins ${FILESDIR}/pam.d-exim exim
+		newins "${FILESDIR}"/pam.d-exim exim
 	fi
 
-	newinitd ${FILESDIR}/exim.rc6 exim
+	newinitd "${FILESDIR}"/exim.rc6 exim
 
-	newconfd ${FILESDIR}/exim.confd exim
+	newconfd "${FILESDIR}"/exim.confd exim
 
 	DIROPTIONS="--mode=0750 --owner=mail --group=mail"
 	dodir /var/log/${PN}
