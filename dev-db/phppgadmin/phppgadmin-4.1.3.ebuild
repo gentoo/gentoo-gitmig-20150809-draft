@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-4.1.3.ebuild,v 1.5 2007/11/06 18:04:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-4.1.3.ebuild,v 1.6 2007/11/14 03:03:23 astinus Exp $
 
 inherit webapp depend.php
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 HOMEPAGE="http://phppgadmin.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 hppa ppc sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 
 need_php
 
