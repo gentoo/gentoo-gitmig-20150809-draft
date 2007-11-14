@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/balance-3.35.ebuild,v 1.1 2007/10/15 07:18:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/balance-3.35.ebuild,v 1.2 2007/11/14 20:17:50 drac Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.inlab.de/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
 DEPEND="doc? ( virtual/ghostscript )"
