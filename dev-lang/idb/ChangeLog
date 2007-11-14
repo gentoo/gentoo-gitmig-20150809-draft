@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/idb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.4 2007/11/09 17:00:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.5 2007/11/14 15:04:36 bicatali Exp $
+
+  14 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> idb-10.0.026.ebuild:
+  amd64 stable wrt bug #197983, with kingtaco's green light.
 
   09 Nov 2007; Raúl Porcel <armin76@gentoo.org> idb-10.0.026.ebuild:
   ia64 stable wrt #197983
