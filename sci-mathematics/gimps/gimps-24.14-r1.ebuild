@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-24.14-r1.ebuild,v 1.4 2007/09/10 16:44:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-24.14-r1.ebuild,v 1.5 2007/11/14 17:55:56 spock Exp $
 
 IUSE=""
 DESCRIPTION="GIMPS - The Great Internet Mersenne Prime Search"
@@ -19,18 +19,16 @@ S="${WORKDIR}"
 I="/opt/gimps"
 
 src_install () {
-	cd ${S}
-
 	dodir ${I} /var/lib/gimps
-	cp mprime ${D}/${I}
-	chmod a-w ${D}/${I}/mprime
-	chown root:0 ${D}/${I}
-	chown root:0 ${D}/${I}/mprime
+	cp mprime "${D}/${I}"
+	chmod a-w "${D}/${I}/mprime"
+	chown root:0 "${D}/${I}"
+	chown root:0 "${D}/${I}/mprime"
 
 	dodoc license.txt readme.txt stress.txt whatsnew.txt undoc.txt
 
-	newinitd ${FILESDIR}/gimps-24.14-init.d gimps
-	newconfd ${FILESDIR}/gimps-24.14-conf.d gimps
+	newinitd "${FILESDIR}/gimps-24.14-init.d" gimps
+	newconfd "${FILESDIR}/gimps-24.14-conf.d" gimps
 }
 
 pkg_postinst () {
