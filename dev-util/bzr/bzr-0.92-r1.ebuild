@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.92.ebuild,v 1.1 2007/11/14 10:22:57 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.92-r1.ebuild,v 1.1 2007/11/14 18:54:27 hawking Exp $
 
 NEED_PYTHON=2.4
 
@@ -35,9 +35,10 @@ DOCS="doc/*.txt"
 src_unpack() {
 	distutils_src_unpack
 
+	# Don't regenerate .c files from .pyx when pyrex is found.
+	epatch "${FILESDIR}/${P}-no-pyrex.patch"
 	# Don't run lock permission tests when running as root
 	epatch "${FILESDIR}/${PN}-0.90-tests-fix_root.patch"
-
 	# Fix permission errors when run under directories with setgid set.
 	epatch "${FILESDIR}/${PN}-0.90-tests-sgid.patch"
 }
