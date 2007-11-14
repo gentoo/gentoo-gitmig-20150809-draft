@@ -1,10 +1,6 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.58 2007/11/11 14:30:23 genstef Exp $
-
-  11 Nov 2007; Stefan Schweizer <genstef@gentoo.org>
-  +files/capi-compile.patch, capi4k-utils-20050718-r3.ebuild:
-  fix compile problems
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.59 2007/11/14 19:59:23 genstef Exp $
 
   02 May 2007; Marius Mauch <genone@gentoo.org>
   capi4k-utils-20050718-r3.ebuild:
