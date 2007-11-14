@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3141 2007/11/14 05:46:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3142 2007/11/14 10:12:21 lucass Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -612,6 +612,7 @@ dev-util/astyle:libs - builds and installs both shared and static library interf
 dev-util/buildbot:irc - Add support for status delivery through an ircbot.
 dev-util/buildbot:mail - Add support for watching a maildir for commits.
 dev-util/buildbot:web - Add a web interface ("waterfall" page).
+dev-util/bzr:sftp - Enable sftp support
 dev-util/catalyst:ccache - Enables ccache support
 dev-util/codeblocks:contrib - Build additional contrib components
 dev-util/ctags:ada - Enable Ada support

@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.820 2007/11/14 05:46:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.821 2007/11/14 10:12:21 lucass Exp $
+
+  14 Nov 2007; Lukasz Strzygowski <lucass@gentoo.org> use.local.desc:
+  Added dev-util/bzr:sftp.
 
   14 Nov 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
   adding USE=resolvconf for net-misc/vpnc
