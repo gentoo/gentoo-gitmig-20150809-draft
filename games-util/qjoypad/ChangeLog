@@ -1,6 +1,11 @@
 # ChangeLog for games-util/qjoypad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/ChangeLog,v 1.8 2007/11/10 01:16:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/ChangeLog,v 1.9 2007/11/14 05:32:03 mr_bones_ Exp $
+
+  14 Nov 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/qjoypad-3.4.1-busy.patch, qjoypad-3.4.1.ebuild:
+  add device to build (bug #199116) with patch from Brandon Captain and patch to
+  address the cpu burn loop (bug #197135) from Martin Berkemeier.
 
 *qjoypad-3.4.1 (10 Nov 2007)
 

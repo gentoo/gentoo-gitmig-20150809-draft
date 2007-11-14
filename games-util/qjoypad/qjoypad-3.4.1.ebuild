@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.1.ebuild,v 1.1 2007/11/10 01:16:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.1.ebuild,v 1.2 2007/11/14 05:32:03 mr_bones_ Exp $
 
 inherit qt3 eutils
 
@@ -28,11 +28,12 @@ src_unpack() {
 		-e "/^CXXFLAGS/s:-pipe -Wall -W -O2:${CXXFLAGS}:" \
 		-e '/^Makefile:/s|:.*||' \
 		Makefile || die "sed make depends failed"
+	epatch "${FILESDIR}/${P}-busy.patch"
 }
 
 src_compile() {
 	cd src
-	eqmake3 qjoypad.pro PREFIX=/usr
+	eqmake3 qjoypad.pro PREFIX=/usr DEVDIR=/dev/input
 	emake || die "emake failed"
 }
 
