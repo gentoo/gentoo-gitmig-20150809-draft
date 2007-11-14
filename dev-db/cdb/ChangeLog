@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.39 2007/10/05 07:14:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.40 2007/11/14 15:34:24 jer Exp $
+
+  14 Nov 2007; Jeroen Roovers <jer@gentoo.org> cdb-0.75-r2.ebuild:
+  Stable for HPPA (bug #198575).
 
   05 Oct 2007; Tom Gall <tgall@gentoo.org> cdb-0.75-r2.ebuild:
   stable on ppc64
