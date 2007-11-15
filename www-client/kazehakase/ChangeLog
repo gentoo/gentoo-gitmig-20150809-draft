@@ -1,6 +1,9 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.51 2007/11/14 15:31:08 astinus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.52 2007/11/15 14:53:53 armin76 Exp $
+
+  15 Nov 2007; Raúl Porcel <armin76@gentoo.org> kazehakase-0.5.0.ebuild:
+  sparc stable wrt security #198983
 
   14 Nov 2007; Alex Howells <astinus@gentoo.org> kazehakase-0.5.0.ebuild:
   stable on amd64, security bug #198983
