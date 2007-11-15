@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.2.ebuild,v 1.2 2007/10/27 05:43:04 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.2.ebuild,v 1.3 2007/11/15 07:59:26 opfer Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.itee.uq.edu.au/~pjr/HomePages/QPFiles/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc ~sparc x86"
 IUSE="debug doc examples qt4 threads"
 
 DEPEND="qt4? ( >=x11-libs/qt-4.1.0 )"

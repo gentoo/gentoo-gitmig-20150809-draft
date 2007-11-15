@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.34 2007/10/27 05:43:04 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.35 2007/11/15 07:59:26 opfer Exp $
+
+  15 Nov 2007; Christian Faulhammer <opfer@gentoo.org> qu-prolog-8.2.ebuild:
+  stable x86, bug 199014
 
   27 Oct 2007; keri <keri@gentoo.org> qu-prolog-8.0.ebuild,
   qu-prolog-8.1.ebuild, qu-prolog-8.2.ebuild:
