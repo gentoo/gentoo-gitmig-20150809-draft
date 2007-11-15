@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-1.5.3.ebuild,v 1.2 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-1.5.3.ebuild,v 1.3 2007/11/15 21:53:27 maekke Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://asm.objectweb.org"
 SRC_URI="http://download.forge.objectweb.org/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="1.5"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc source"
 DEPEND=">=virtual/jdk-1.3
 	dev-java/ant-core
@@ -21,7 +21,7 @@ EANT_DOC_TARGET=jdoc
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	echo "objectweb.ant.tasks.path /usr/share/ant-owanttask/lib/ow_util_ant_tasks.jar" \
 		>> build.properties
 }
