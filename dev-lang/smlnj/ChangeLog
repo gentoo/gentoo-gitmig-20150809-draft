@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/smlnj
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.16 2007/11/15 17:48:39 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.17 2007/11/15 22:18:13 hkbst Exp $
+
+  15 Nov 2007; Marijn Schouten <hkBst@gentoo.org> files/digest-smlnj-110.67,
+  Manifest:
+  fix digests
 
 *smlnj-110.67 (15 Nov 2007)
 
