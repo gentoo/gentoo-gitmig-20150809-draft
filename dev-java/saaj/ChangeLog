@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/saaj
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/ChangeLog,v 1.6 2007/08/19 19:12:04 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/ChangeLog,v 1.7 2007/11/15 00:54:45 betelgeuse Exp $
+
+  15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> saaj-1.3.ebuild:
+  Fix dev-java/xerces dependency so that it doesn't match multiple slots.
 
   19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org> saaj-1.3.ebuild:
   amd64 stable, bug #187681.
