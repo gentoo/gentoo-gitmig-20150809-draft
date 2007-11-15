@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.55 2007/10/07 14:18:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.56 2007/11/15 13:08:52 betelgeuse Exp $
+
+  15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -jdbc-mysql-5.0.5.ebuild:
+  Delete old version.
 
   07 Oct 2007; Christoph Mende <angelos@gentoo.org> jdbc-mysql-5.0.6.ebuild:
   Stable on amd64 wrt bug #190664
