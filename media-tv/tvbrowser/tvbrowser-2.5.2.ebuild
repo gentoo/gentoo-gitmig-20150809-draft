@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.2.ebuild,v 1.5 2007/07/13 05:03:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.2.ebuild,v 1.6 2007/11/15 01:03:01 betelgeuse Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -36,7 +36,7 @@ RDEPEND="
 	>=dev-java/skinlf-6.7
 	dev-java/l2fprod-common
 	>=dev-java/poi-2.5.1
-	>=dev-java/xerces-2.6.2"
+	>=dev-java/xerces-2.8"
 
 DEPEND=">=virtual/jdk-1.5
 	${RDEPEND}
