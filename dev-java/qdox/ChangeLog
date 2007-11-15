@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/qdox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.17 2007/11/15 13:21:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.18 2007/11/15 13:23:54 betelgeuse Exp $
+
+  15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  qdox-1.6.3.ebuild:
+  Move the too long DESCRIPTION to metadata.xml and quote variables.
 
   15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -qdox-20050104.ebuild,
   -qdox-20050104-r1.ebuild:
