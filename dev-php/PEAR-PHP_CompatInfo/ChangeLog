@@ -1,6 +1,16 @@
 # ChangeLog for dev-php/PEAR-PHP_CompatInfo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_CompatInfo/ChangeLog,v 1.1 2007/08/30 12:33:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_CompatInfo/ChangeLog,v 1.2 2007/11/15 18:58:30 jokey Exp $
+
+*PEAR-PHP_CompatInfo-1.5.0 (15 Nov 2007)
+
+  15 Nov 2007; Markus Ullmann <jokey@gentoo.org>
+  +PEAR-PHP_CompatInfo-1.5.0.ebuild:
+  Version bump from project overlay
+
+  15 Nov 2007; Jakub Moc <jakub@gentoo.org>
+  +PEAR-PHP_CompatInfo-1.5.0.ebuild:
+  Version bump; fix DOS line breaks.
 
 *PEAR-PHP_CompatInfo-1.4.3 (30 Aug 2007)
 
