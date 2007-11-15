@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.19 2007/07/12 09:28:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.20 2007/11/15 16:59:56 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -28,7 +28,7 @@ SRC_URI="mirror://kernel/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz
 
 LICENSE="PAM"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="mips"
 IUSE="berkdb pwdb selinux pam_chroot pam_console pam_timestamp nis"
 
 RDEPEND=">=sys-libs/cracklib-2.8.3
