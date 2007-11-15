@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.822 2007/11/14 21:59:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.823 2007/11/15 13:16:42 flameeyes Exp $
+
+  15 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask pam_console as per bug #199193.
 
   14 Nov 2007; Diego Pettenò <flameeyes@gentoo.org>
   default-linux/amd64/package.use.mask, default-linux/x86/package.use.mask:
