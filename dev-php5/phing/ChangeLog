@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/phing
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phing/ChangeLog,v 1.9 2007/03/18 02:54:22 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phing/ChangeLog,v 1.10 2007/11/15 19:18:14 jokey Exp $
+
+*phing-2.3.0 (15 Nov 2007)
+
+  15 Nov 2007; Markus Ullmann <jokey@gentoo.org> +phing-2.3.0.ebuild:
+  Version bump from project overlay
+
+  14 Nov 2007; Jakub Moc <jakub@gentoo.org> +phing-2.3.0.ebuild:
+  Version bump, Bug 199140
 
   18 Mar 2007; Luca Longinotti <chtekk@gentoo.org> phing-2.2.0.ebuild:
   Fix DEPs.

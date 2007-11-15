@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/pecl-memcache-2.2.0.ebuild,v 1.1 2007/09/24 09:11:55 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/pecl-memcache-2.2.1.ebuild,v 1.1 2007/11/15 19:15:39 jokey Exp $
 
 PHP_EXT_NAME="memcache"
 PHP_EXT_INI="yes"
