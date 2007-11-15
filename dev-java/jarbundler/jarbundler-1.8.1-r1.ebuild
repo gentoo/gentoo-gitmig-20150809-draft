@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/jarbundler-1.8.1-r1.ebuild,v 1.1 2007/07/13 08:28:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/jarbundler-1.8.1-r1.ebuild,v 1.2 2007/11/15 00:43:20 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -15,12 +15,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+COMMON_DEP=">=dev-java/xerces-2.8.1"
 DEPEND=">=virtual/jdk-1.4
-		=dev-java/xerces-2*"
+		${COMMON_DEP}"
 RDEPEND="
 	>=virtual/jre-1.4
-	=dev-java/xerces-2*
-	>=dev-java/ant-core-1.7"
+	>=dev-java/ant-core-1.7
+	${COMMON_DEP}"
 
 src_unpack() {
 	unpack ${A}
