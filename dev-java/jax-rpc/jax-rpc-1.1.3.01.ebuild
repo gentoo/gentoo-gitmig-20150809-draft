@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-rpc/jax-rpc-1.1.3.01.ebuild,v 1.5 2007/08/19 19:41:46 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-rpc/jax-rpc-1.1.3.01.ebuild,v 1.6 2007/11/15 00:49:17 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -29,7 +29,7 @@ COMMON_DEP="=dev-java/servletapi-2.4*
 	dev-java/sun-jaf
 	dev-java/sun-javamail
 	dev-java/xsdlib
-	=dev-java/xerces-2*"
+	>=dev-java/xerces-2.8"
 RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.5

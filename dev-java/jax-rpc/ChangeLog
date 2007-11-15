@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jax-rpc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-rpc/ChangeLog,v 1.6 2007/08/19 19:41:46 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-rpc/ChangeLog,v 1.7 2007/11/15 00:49:17 betelgeuse Exp $
+
+  15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jax-rpc-1.1.3.01.ebuild:
+  Fix dev-java/xerces dependency so that it doesn't match multiple slots.
 
   19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   jax-rpc-1.1.3.01.ebuild:
