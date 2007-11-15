@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20071114.ebuild,v 1.3 2007/11/15 07:21:38 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20071114.ebuild,v 1.4 2007/11/15 17:53:07 mr_bones_ Exp $
 
 inherit emul-linux-x86
 
@@ -12,7 +12,6 @@ IUSE="qt3"
 DEPEND=""
 RDEPEND=">=app-emulation/emul-linux-x86-baselibs-20071114
 	>=app-emulation/emul-linux-x86-xlibs-20071114"
-
 
 src_unpack() {
 	query_tools="${S}/usr/bin/gtk-query-immodules-2.0|${S}/usr/bin/gdk-pixbuf-query-loaders|${S}/usr/bin/pango-querymodules"
