@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/thumbs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/thumbs/ChangeLog,v 1.6 2007/10/30 18:43:38 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/thumbs/ChangeLog,v 1.7 2007/11/15 20:19:03 drac Exp $
+
+  15 Nov 2007; Samuli Suominen <drac@gentoo.org> thumbs-0.1.3.ebuild:
+  amd64 stable wrt #197514
 
   30 Oct 2007; Ferris McCormick <fmccor@gentoo.org> thumbs-0.1.3.ebuild:
   Add ~sparc, application works.
