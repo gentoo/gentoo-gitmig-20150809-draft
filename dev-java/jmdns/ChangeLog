@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmdns
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/ChangeLog,v 1.11 2007/11/02 03:35:33 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/ChangeLog,v 1.12 2007/11/15 00:36:43 betelgeuse Exp $
+
+  15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -jmdns-0.2.ebuild:
+  Delete old version.
 
   02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org> jmdns-1.0.ebuild:
   amd64 stable, bug #197480.
