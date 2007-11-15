@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r2.ebuild,v 1.2 2007/07/22 03:33:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r2.ebuild,v 1.3 2007/11/15 17:15:23 drac Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.digital.com/pub/Digital/SRC/x2x/${P}.tar.gz
 	mirror://gentoo/${P}-license.patch.gz
 	mirror://gentoo/${P}-keymap.diff.gz"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Patch from Debian to add -north and -south, among other fixes
 	epatch ${DISTDIR}/x2x_1.27-8.diff.gz
@@ -42,16 +42,15 @@ src_unpack() {
 	epatch ${DISTDIR}/${P}-keymap.diff.gz
 
 	# Man-page is packaged as x2x.1 but needs to be x2x.man for building
-	mv x2x.1 x2x.man || die
+	mv x2x.1 x2x.man
 }
 
 src_compile() {
-	xmkmf || die
-	emake || die
+	xmkmf || die "xmkmf failed."
+	emake || die "emake failed."
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
-	newman x2x.man x2x.1 || die
-	dodoc LICENSE || die
+	make DESTDIR="${D}" install || die "emake install failed."
+	newman x2x.man x2x.1
 }
