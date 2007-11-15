@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1.ebuild,v 1.7 2007/11/14 05:53:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1.ebuild,v 1.8 2007/11/15 07:28:55 opfer Exp $
 
 inherit linux-info
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.unix-ag.uni-kl.de/~massar/${PN}/${P}.tar.gz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 ~sparc x86"
-IUSE="hybrid-auth bindist"
+IUSE="hybrid-auth bindist resolvconf"
 
 DEPEND=">=dev-libs/libgcrypt-1.1.91
 	>=sys-apps/iproute2-2.6.19.20061214

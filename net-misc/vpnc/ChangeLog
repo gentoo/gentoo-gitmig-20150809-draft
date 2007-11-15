@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.56 2007/11/14 05:53:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.57 2007/11/15 07:28:55 opfer Exp $
+
+  15 Nov 2007; Christian Faulhammer <opfer@gentoo.org> vpnc-0.5.1.ebuild:
+  add resolvconf to IUSE, reported in bug 199153 by Michael Laß <bevan AT
+  bi-co DOT net>
 
   14 Nov 2007; Christian Faulhammer <opfer@gentoo.org> vpnc-0.5.1.ebuild:
   make resolvconf depend on the USE flag of that name as it is optional (bug
