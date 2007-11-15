@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyqwt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/ChangeLog,v 1.5 2007/03/13 19:17:30 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/ChangeLog,v 1.6 2007/11/15 14:45:04 caleb Exp $
+
+*pyqwt-5.0.1 (15 Nov 2007)
+
+  15 Nov 2007; Caleb Tennis <caleb@gentoo.org> +pyqwt-5.0.1.ebuild:
+  version bump, thanks to bug #175657 and Gerard Vermeulen
 
 *pyqwt-4.2-r1 (13 Mar 2007)
 
