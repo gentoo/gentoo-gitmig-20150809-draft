@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.30.ebuild,v 1.4 2007/10/31 07:27:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.30.ebuild,v 1.5 2007/11/15 19:35:23 drac Exp $
 
 ROX_LIB_VER="2.0.0"
-inherit eutils rox
+inherit eutils rox multilib
 
 DESCRIPTION="Rox-Session is a really simple session manager"
 HOMEPAGE="http://rox.sourceforge.net/rox_session.html"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/rox/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-python/dbus-python-0.71"
@@ -21,7 +21,7 @@ APPNAME=${MY_PN}
 
 pkg_preinst() {
 	# need to fixup some permissions
-	cd "${D}/usr/lib/rox/${APPNAME}"
+	cd "${D}/usr/$(get_libdir)/rox/${APPNAME}"
 	chmod 0755 browser Login RunROX SetupPanel
 }
 
