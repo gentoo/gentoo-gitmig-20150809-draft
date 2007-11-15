@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/pager-1.1-r1.ebuild,v 1.5 2007/10/30 17:27:10 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/pager-1.1-r1.ebuild,v 1.6 2007/11/15 19:39:58 drac Exp $
 
 ROX_CLIB_VER=2.1.7
 inherit rox eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/rox/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/libwnck-2.4.0"
