@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/qdox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.16 2007/11/02 03:22:07 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.17 2007/11/15 13:21:37 betelgeuse Exp $
+
+  15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -qdox-20050104.ebuild,
+  -qdox-20050104-r1.ebuild:
+  Delete old ebuilds so that ~arch users get 1.6.3 version too.
 
   02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org> qdox-1.6.3.ebuild,
   qdox-20050104.ebuild:
