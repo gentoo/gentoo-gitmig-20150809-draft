@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.33 2007/04/27 22:45:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.34 2007/11/15 13:16:23 betelgeuse Exp $
+
+  15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -junit-3.8.2.ebuild:
+  Delete old ebuild.
 
 *junit-3.8.2-r1 (27 Apr 2007)
 
