@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jarbundler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.11 2007/11/15 00:43:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.12 2007/11/15 00:52:07 betelgeuse Exp $
+
+  15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -jarbundler-1.8.1.ebuild:
+  Delete unused revision.
 
   15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
   jarbundler-1.8.1-r1.ebuild:
