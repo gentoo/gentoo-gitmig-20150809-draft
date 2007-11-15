@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libggz
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.17 2007/02/22 14:03:26 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.18 2007/11/15 19:04:54 drac Exp $
+
+  15 Nov 2007; Samuli Suominen <drac@gentoo.org> libggz-0.0.14.ebuild:
+  Keyword ~amd64.
 
   22 Feb 2007; Tristan Heaven <nyhm@gentoo.org> libggz-0.0.14.ebuild:
   Use games-ggz eclass
