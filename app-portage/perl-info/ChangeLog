@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/perl-info
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.17 2007/11/12 21:06:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.18 2007/11/15 17:44:27 drac Exp $
+
+  15 Nov 2007; Samuli Suominen <drac@gentoo.org> perl-info-0.15.ebuild:
+  amd64 stable
 
   12 Nov 2007; Raúl Porcel <armin76@gentoo.org> perl-info-0.15.ebuild:
   Add ~ia64 and alpha/sparc/x86 stable
