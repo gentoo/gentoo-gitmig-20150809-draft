@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/saaj
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/ChangeLog,v 1.7 2007/11/15 00:54:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/ChangeLog,v 1.8 2007/11/15 00:56:08 betelgeuse Exp $
+
+  15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> saaj-1.3.ebuild:
+  Add app-arch/unzip to DEPEND.
 
   15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> saaj-1.3.ebuild:
   Fix dev-java/xerces dependency so that it doesn't match multiple slots.

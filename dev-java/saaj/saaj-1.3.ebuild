@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/saaj-1.3.ebuild,v 1.6 2007/11/15 00:54:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/saaj-1.3.ebuild,v 1.7 2007/11/15 00:56:08 betelgeuse Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -20,6 +20,7 @@ COMMON_DEP="dev-java/jsr67
 	>=dev-java/xerces-2.8
 	dev-java/xalan"
 DEPEND=">=virtual/jdk-1.5
+	app-arch/unzip
 	${COMMON_DEP}"
 RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEP}"
