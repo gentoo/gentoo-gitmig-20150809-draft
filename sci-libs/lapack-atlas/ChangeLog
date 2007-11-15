@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.52 2007/11/08 16:34:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.53 2007/11/15 09:54:33 bicatali Exp $
+
+  14 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/lapack-reference-3.1.1-autotools.patch,
+  -lapack-atlas-3.7.39.ebuild, lapack-atlas-3.8.0.ebuild:
+  Updated lapack-reference patch and added doc use flag now arches are ready.
 
   08 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
   lapack-atlas-3.8.0.ebuild:

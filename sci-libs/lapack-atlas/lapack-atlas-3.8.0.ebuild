@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.8.0.ebuild,v 1.3 2007/11/08 16:34:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.8.0.ebuild,v 1.4 2007/11/15 09:54:33 bicatali Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran autotools versionator
 
@@ -19,7 +19,7 @@ SRC_URI="${SRC_URI1} ${SRC_URI2}
 	mirror://gentoo/${MY_PN}-${PATCH_V}-shared-libs.patch.bz2"
 
 SLOT="0"
-IUSE=""
+IUSE="doc"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="virtual/blas
@@ -29,9 +29,8 @@ DEPEND="virtual/blas
 	>=sys-devel/libtool-1.5"
 
 RDEPEND="${DEPEND}
-	dev-util/pkgconfig"
-# this has to wait until lapack-docs available on all arches
-#	doc? ( app-doc/lapack-docs )"
+	dev-util/pkgconfig
+	doc? ( app-doc/lapack-docs )"
 
 FORTRAN="g77 gfortran ifc"
 
@@ -83,7 +82,7 @@ src_unpack() {
 		|| die "configure failed"
 
 	cd "${S_LAPACK}"
-	epatch "${FILESDIR}"/${L_PN}-reference-${L_PV}-autotool.patch
+	epatch "${FILESDIR}"/${L_PN}-reference-${L_PV}-autotools.patch
 	epatch "${FILESDIR}"/${L_PN}-reference-${L_PV}-test-fix.patch
 	eautoreconf
 
