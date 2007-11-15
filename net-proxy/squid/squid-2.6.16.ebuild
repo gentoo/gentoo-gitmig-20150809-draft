@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.16.ebuild,v 1.11 2007/11/04 08:22:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.16.ebuild,v 1.12 2007/11/15 08:37:42 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -124,12 +124,10 @@ src_compile() {
 		--enable-htcp \
 		--enable-carp \
 		--enable-follow-x-forwarded-for \
+		--with-maxfd=8192 \
 		$(use_enable snmp) \
 		$(use_enable ssl) \
 		${myconf} || die "econf failed"
-
-	sed -i -e "s:^#define SQUID_MAXFD.*:#define SQUID_MAXFD 8192:" \
-		include/autoconf.h
 
 	emake || die "emake failed"
 }
