@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.211 2007/11/14 02:57:37 astinus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.212 2007/11/15 17:25:24 hoffie Exp $
+
+  15 Nov 2007; Christian Hoffmann <hoffie@gentoo.org> -php-4.4.7.ebuild,
+  -php-5.2.4.ebuild, -php-5.2.4_p20070914-r2.ebuild:
+  removing old/vulnerable versions 4.4.7, 5.2.4 and 5.2.4_p20070914-r2
 
   14 Nov 2007; Alex Howells <astinus@gentoo.org> php-5.2.5.ebuild:
   changing ~amd64 -> amd64 with regard to #198650
