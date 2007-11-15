@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.5.1.ebuild,v 1.4 2007/09/11 12:52:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1-r1.ebuild,v 1.1 2007/11/15 12:06:24 bicatali Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -10,16 +10,17 @@ SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="blas jpeg nls png readline tk X lapack gd"
+KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
+IUSE="blas jpeg nls png readline tk X lapack"
 
 RDEPEND=">=dev-lang/perl-5.6.1-r3
+	>=dev-libs/libpcre-7.3
+	app-arch/bzip2
 	readline? ( >=sys-libs/readline-4.1-r3 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	blas? ( virtual/blas )
 	lapack? ( virtual/lapack )
-	gd? ( >=media-libs/gd-2 )
 	tk? ( dev-lang/tk
 		dev-lang/tcl )
 	X? ( x11-libs/libX11 )"
@@ -27,6 +28,8 @@ DEPEND="${RDEPEND}
 	X? ( x11-proto/xproto
 		x11-libs/libXt
 		x11-libs/libX11 )"
+
+AT_M4DIR="${S}/m4"
 
 pkg_setup() {
 	# Test for a 64 bit architecture - f2c won't work on 64 bit archs with R.
@@ -44,17 +47,6 @@ pkg_setup() {
 	fortran_pkg_setup
 
 	filter-ldflags -Wl,-Bdirect -Bdirect
-
-	# this is needed to properly compile additional R packages
-	# (see bug #152379)
-	append-flags -std=gnu99
-}
-
-src_unpack() {
-	unpack ${A}
-	sed -e "s:\$(rhome):/usr/$(get_libdir)/R:g" \
-		-i "${S}"/src/unix/Makefile.in ||
-		die "Failed to fix Rscript makefile"
 }
 
 src_compile() {
@@ -69,6 +61,9 @@ src_compile() {
 	fi
 
 	econf \
+		--with-system-zlib \
+		--with-system-bzlib \
+		--with-system-pcre \
 		$(use_enable nls) \
 		$(use_with blas) \
 		$(use_with lapack) \
@@ -77,24 +72,22 @@ src_compile() {
 		$(use_with readline) \
 		$(use_with X x) \
 		${myconf} || die "econf failed"
-	# R-2.5.0 started to have issues with parallel make
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
 	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		libdir=${D}/usr/$(get_libdir) \
-		rhome=${D}/usr/$(get_libdir)/R \
+		prefix="${D}"/usr \
+		mandir="${D}"/usr/share/man \
+		infodir="${D}"/usr/share/info \
+		rhome="${D}"/usr/$(get_libdir)/R \
 		install || die "Installation Failed"
 
 	# fix the R wrapper script to have the correct R_HOME_DIR
 	# sed regexp borrowed from included debian rules
 	sed \
 		-e "/^R_HOME_DIR=.*/s::R_HOME_DIR=/usr/$(get_libdir)/R:" \
-		-i ${D}/usr/$(get_libdir)/R/bin/R \
+		-i "${D}"/usr/$(get_libdir)/R/bin/R \
 		|| die "sed failed."
 
 	# The same kinds of seds are needed for these variables too, see bug 115140
@@ -102,23 +95,20 @@ src_install() {
 		-e "/^R_SHARE_DIR=.*/s::R_SHARE_DIR=/usr/$(get_libdir)/R/share:" \
 		-e "/^R_INCLUDE_DIR=.*/s::R_INCLUDE_DIR=/usr/$(get_libdir)/R/include:" \
 		-e "/^R_DOC_DIR=.*/s::R_DOC_DIR=/usr/$(get_libdir)/R/doc:" \
-		-i ${D}/usr/$(get_libdir)/R/bin/R \
+		-i "${D}"/usr/$(get_libdir)/R/bin/R \
 		|| die "sed failed."
-
-	# fix paths in libR.pc pkgconfig file
-	sed -e "s:${D}::" -i ${D}/usr/$(get_libdir)/pkgconfig/libR.pc \
-		|| die "Failed to fix libR.pc file"
 
 	# R installs two identical wrappers under /usr/bin and /usr/lib/R/bin/
 	# the 2nd one is corrected by above sed, the first is replaced by a symlink
-	cd ${D}/usr/bin/
+	cd "${D}"/usr/bin/
 	rm R
 	dosym ../$(get_libdir)/R/bin/R /usr/bin/R
 	dodir /etc/env.d
 	echo -n \
 		"LDPATH=\"/usr/$(get_libdir)/R/lib\"" \
-		> ${D}/etc/env.d/99R
-	cd ${S}
+		> "${D}"/etc/env.d/99R
+	cd "${S}"
 
-	dodoc ChangeLog *NEWS README VERSION
+	dodoc AUTHORS BUGS COPYING* ChangeLog FAQ *NEWS README \
+		RESOURCES THANKS VERSION Y2K
 }

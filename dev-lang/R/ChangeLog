@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.90 2007/10/06 14:21:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.91 2007/11/15 12:06:24 bicatali Exp $
+
+*R-2.6.0-r1 (15 Nov 2007)
+*R-2.2.1-r1 (15 Nov 2007)
+
+  15 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> -files/R.desktop,
+  -files/R-logo.png, metadata.xml, +R-2.2.1-r1.ebuild, -R-2.5.1.ebuild,
+  +R-2.6.0-r1.ebuild:
+  Security fix with pcre (bug #198385), now use system libs. New ebuild on
+  soon to be commited.
 
 *R-2.6.0 (06 Oct 2007)
 
