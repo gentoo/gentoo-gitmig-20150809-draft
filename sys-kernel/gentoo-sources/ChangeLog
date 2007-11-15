@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.446 2007/11/07 12:57:41 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.447 2007/11/15 19:42:26 jer Exp $
+
+  15 Nov 2007; Jeroen Roovers <jer@gentoo.org>
+  gentoo-sources-2.6.23-r1.ebuild:
+  Marked ~hppa.
 
 *gentoo-sources-2.6.22-r10 (07 Nov 2007)
 
