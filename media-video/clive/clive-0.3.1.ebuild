@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/clive/clive-0.3.1.ebuild,v 1.2 2007/11/12 00:24:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/clive/clive-0.3.1.ebuild,v 1.3 2007/11/15 09:52:36 corsair Exp $
 
 inherit distutils versionator
 
@@ -10,7 +10,7 @@ SRC_URI="http://dl.gna.org/clive/$(get_version_component_range 1-2 ${PV})/src/${
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=""
