@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.82 2007/11/14 12:26:06 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.83 2007/11/15 11:52:11 stefaan Exp $
+
+*openafs-kernel-1.5.27 (15 Nov 2007)
+*openafs-kernel-1.4.5 (15 Nov 2007)
+
+  15 Nov 2007; Stefaan De Roeck <stefaan@gentoo.org>
+  -files/tasklist_lock.patch, -files/tasklist_lock_1.5.12.patch,
+  +openafs-kernel-1.4.5.ebuild, +openafs-kernel-1.5.27.ebuild:
+  Version bumps
 
   14 Nov 2007; Stefaan De Roeck <stefaan@gentoo.org>
   -openafs-kernel-1.4.4_p20070724-r1.ebuild:
