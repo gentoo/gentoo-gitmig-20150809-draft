@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urlgrabber
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.10 2007/04/03 18:53:51 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.11 2007/11/15 09:51:35 corsair Exp $
+
+  15 Nov 2007; Markus Rothe <corsair@gentoo.org> urlgrabber-3.0.0.ebuild:
+  Added ~ppc64
 
   03 Apr 2007; Peter Weller <welp@gentoo.org> urlgrabber-2.9.6.ebuild:
   Keyworded ~x86-fbsd
