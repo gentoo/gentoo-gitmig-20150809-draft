@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.52 2007/11/11 06:38:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.53 2007/11/15 12:50:04 betelgeuse Exp $
+
+  15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -batik-1.6-r1.ebuild,
+  -batik-1.6-r2.ebuild:
+  Delete old revisions.
 
   11 Nov 2007; Samuli Suominen <drac@gentoo.org> batik-1.6-r3.ebuild:
   amd64 stable wrt #195048, thanks to Kenneth Prugh for testing.
