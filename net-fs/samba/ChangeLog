@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.307 2007/11/02 22:09:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.308 2007/11/15 14:43:59 dev-zero Exp $
+
+*samba-3.0.26a-r2 (15 Nov 2007)
+
+  15 Nov 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/3.0.26a-CVE-2007-5398.patch, +samba-3.0.26a-r2.ebuild:
+  Revision bump. Marking stable for all archs for remote vulnerability
+  security bug (CVE-2007-5398)
 
 *samba-3.0.26a-r1 (02 Nov 2007)
 
