@@ -1,0 +1,14 @@
+# ChangeLog for dev-php/PEAR-PHP_CodeSniffer
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_CodeSniffer/ChangeLog,v 1.1 2007/11/15 18:55:55 jokey Exp $
+
+*PEAR-PHP_CodeSniffer-1.0.0_rc2 (15 Nov 2007)
+
+  15 Nov 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +PEAR-PHP_CodeSniffer-1.0.0_rc2.ebuild:
+  Initial import from project overlay
+
+  15 Nov 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-PHP_CodeSniffer-1.0.0_rc2.ebuild:
+  New ebuild
+
