@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.308 2007/11/06 17:10:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.309 2007/11/15 20:41:07 corsair Exp $
+
+  15 Nov 2007; Markus Rothe <corsair@gentoo.org> gnome-2.18.3.ebuild:
+  Make gnome-power-manager not a dependency on ppc64 and mark it stable on
+  ppc64. Bug #199218
 
   06 Nov 2007; Raúl Porcel <armin76@gentoo.org> gnome-2.18.3.ebuild:
   sparc stable wrt #193339
