@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r3.ebuild,v 1.3 2007/11/14 07:50:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r3.ebuild,v 1.4 2007/11/15 18:48:02 nelchael Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -13,7 +13,7 @@ SRC_URI="http://cafeconleche.org/XOM/${XOMVER}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4
