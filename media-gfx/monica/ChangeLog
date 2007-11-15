@@ -1,0 +1,12 @@
+# ChangeLog for media-gfx/monica
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/ChangeLog,v 1.1 2007/11/15 09:11:33 robbat2 Exp $
+
+*monica-3.6 (15 Nov 2007)
+
+  15 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/monica-3.6-makefile-cleanup.patch, +metadata.xml,
+  +monica-3.6.ebuild:
+  Add a small gamma correction tool to the tree. Initial ebuild by Robin H.
+  Johnson <robbat2@gentoo.org>.
+
