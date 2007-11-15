@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.0.1.ebuild,v 1.1 2007/11/15 14:45:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.0.1.ebuild,v 1.2 2007/11/15 17:53:29 mr_bones_ Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_compile() {
         cd ${S}/sip/qwt5qt4
 	# PyQwt CVS does not need the next 2 sed statements anymore
         sed -i "s|%Import QtSvg/QtSvgmod.sip||" QwtModule.sip
-        sed -i "s|%Include qwt_plot_svgitem.sip||" QwtModule.sip 
+        sed -i "s|%Include qwt_plot_svgitem.sip||" QwtModule.sip
 	cd "${S}/configure"
 	local myconf="-I /usr/include/qwt5 -l qwt --disable-numarray --disable-numeric"
 	use debug && myconf="${myconf} --debug"
@@ -46,4 +46,3 @@ src_install() {
                 cp -r qt4examples/ "${D}/usr/share/doc/${PF}/examples"
         fi
 }
-
