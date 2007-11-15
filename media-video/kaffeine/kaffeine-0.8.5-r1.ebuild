@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.5-r1.ebuild,v 1.1 2007/11/12 19:24:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.5-r1.ebuild,v 1.2 2007/11/15 20:16:26 flameeyes Exp $
 
 inherit eutils kde flag-o-matic
 
@@ -49,6 +49,11 @@ src_unpack() {
 src_compile() {
 	# see bug #143168
 	replace-flags -O3 -O2
+
+	# Workarund bug #198973
+	local save_CXXFLAGS="${CXXFLAGS}"
+	append-flags -std=gnu89
+	export CXXFLAGS="${save_CXXFLAGS}"
 
 	local myconf="${myconf}
 		$(use_with xinerama)
