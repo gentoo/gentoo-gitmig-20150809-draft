@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.102 2007/11/02 14:48:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.103 2007/11/15 15:11:18 armin76 Exp $
+
+*enigmail-0.95.5-r1 (15 Nov 2007)
+*enigmail-0.95.3-r1 (15 Nov 2007)
+
+  15 Nov 2007; Raúl Porcel <armin76@gentoo.org> +enigmail-0.95.3-r1.ebuild,
+  -enigmail-0.95.4.ebuild, -enigmail-0.95.5.ebuild,
+  +enigmail-0.95.5-r1.ebuild:
+  Revision bumps to compile against thunderbird-2.0.0.9
 
 *enigmail-0.95.5 (02 Nov 2007)
 
