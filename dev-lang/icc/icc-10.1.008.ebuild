@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.0.026.ebuild,v 1.9 2007/11/15 20:23:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.008.ebuild,v 1.1 2007/11/15 20:23:38 bicatali Exp $
 
 inherit rpm
 
-PID=786
+PID=861
 PB=cc
 PEXEC="icc icpc"
 DESCRIPTION="Intel C/C++ optimized compiler for Linux"
@@ -14,8 +14,8 @@ HOMEPAGE="http://www.intel.com/software/products/compilers/clin/"
 # everything below common to ifc and icc
 # no eclass: very likely to change for next versions
 ###
-PACKAGEID="l_${PB}_c_${PV}"
-KEYWORDS="amd64 ia64 x86"
+PACKAGEID="l_${PB}_p_${PV}"
+KEYWORDS="~amd64 ~ia64 ~x86"
 SRC_URI="amd64? ( http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID}_intel64.tar.gz )
 	ia64? ( http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID}_ia64.tar.gz )
 	x86?  ( http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID}_ia32.tar.gz )"

@@ -1,6 +1,21 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.51 2007/11/08 20:14:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.52 2007/11/15 20:23:38 bicatali Exp $
+
+*icc-10.1.008 (15 Nov 2007)
+
+  15 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/7.1.006/05icc-ifc-ia32, -files/7.1.006/05icc-ifc-ia64,
+  -files/7.1.006/icc-ia32, -files/7.1.029/05icc-ifc-ia32,
+  -files/7.1.029/05icc-ifc-ia64, -files/7.1.029/icc-ia32,
+  -files/8.0.055/05icc-ifc, -files/8.0.055/icc, -files/8.0.055/iccifc.conf,
+  -files/8.0.055/icpc, -files/8.1.028/05icc-ifc, -files/8.1.028/icc,
+  -files/8.1.028/iccifc.conf, -files/8.1.028/icpc, -files/9.0.021/05icc-ifc,
+  -files/9.0.021/icc, -files/9.0.021/iccifc.conf, -files/9.0.021/icpc,
+  -files/9.1.042/05icc-ifc, -files/9.1.042/icc, -files/9.1.042/icpc,
+  -files/9.1.045/05icc-ifc, -files/9.1.045/icc, -files/9.1.045/icpc,
+  -icc-9.1.045.ebuild, icc-10.0.026.ebuild, +icc-10.1.008.ebuild:
+  Version bump, removed old release, removed INCLUDE env variable.
 
   08 Nov 2007; Raúl Porcel <armin76@gentoo.org> icc-10.0.026.ebuild:
   ia64 stable wrt #197980

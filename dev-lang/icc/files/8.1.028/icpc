@@ -1,4 +1,0 @@
-#!/bin/sh
-export INTEL_LICENSE_FILE="/opt/intel/compiler81/licenses"
-export LD_LIBRARY_PATH="/opt/intel/compiler81/lib"
-/opt/intel/compiler81/bin/icpcbin $*
