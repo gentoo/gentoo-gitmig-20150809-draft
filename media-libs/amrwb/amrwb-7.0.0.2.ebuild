@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amrwb/amrwb-7.0.0.2.ebuild,v 1.6 2007/11/14 17:30:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amrwb/amrwb-7.0.0.2.ebuild,v 1.7 2007/11/16 17:35:09 armin76 Exp $
 
 SPEC_VER="26204-700"
 
@@ -13,7 +13,7 @@ RESTRICT="mirror"
 
 LICENSE="LGPL-2 as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
