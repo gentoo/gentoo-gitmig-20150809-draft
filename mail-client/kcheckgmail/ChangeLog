@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/kcheckgmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/kcheckgmail/ChangeLog,v 1.22 2007/10/03 23:01:30 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/kcheckgmail/ChangeLog,v 1.23 2007/11/16 22:13:48 philantrop Exp $
+
+*kcheckgmail-0.5.7.3 (16 Nov 2007)
+
+  16 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +kcheckgmail-0.5.7.3.ebuild:
+  Version bump to 0.5.7.3 to restore functionality as per bug 199380.
 
 *kcheckgmail-0.5.7.2 (03 Oct 2007)
 
