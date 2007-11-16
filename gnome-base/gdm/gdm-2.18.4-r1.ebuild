@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.4-r1.ebuild,v 1.3 2007/11/05 17:03:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.4-r1.ebuild,v 1.4 2007/11/16 17:52:32 drac Exp $
 
 inherit eutils pam gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gdm/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="accessibility branding ipv6 pam selinux tcpd xinerama elibc_glibc"
 
 # Name of the tarball with gentoo specific files
