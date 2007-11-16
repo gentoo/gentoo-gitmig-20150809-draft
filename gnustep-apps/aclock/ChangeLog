@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/aclock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/aclock/ChangeLog,v 1.12 2007/11/08 23:30:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/aclock/ChangeLog,v 1.13 2007/11/16 15:19:26 beandog Exp $
+
+  16 Nov 2007; Steve Dibb <beandog@gentoo.org> aclock-0.2.3-r1.ebuild:
+  amd64 stable, bug 195990
 
   08 Nov 2007; Bernard Cafarelli <voyageur@gentoo.org>
   -files/config-aclock.sh, -aclock-0.2.3.ebuild:

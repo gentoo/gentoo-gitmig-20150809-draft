@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/clipbook
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/clipbook/ChangeLog,v 1.15 2007/11/08 23:33:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/clipbook/ChangeLog,v 1.16 2007/11/16 15:28:54 beandog Exp $
+
+  16 Nov 2007; Steve Dibb <beandog@gentoo.org> clipbook-0.6.0.8.3-r1.ebuild:
+  amd64 stable, bug 195990
 
   08 Nov 2007; Bernard Cafarelli <voyageur@gentoo.org>
   -clipbook-0.6.0.7.1.ebuild:

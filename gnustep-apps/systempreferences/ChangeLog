@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/systempreferences
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/systempreferences/ChangeLog,v 1.4 2007/10/27 16:38:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/systempreferences/ChangeLog,v 1.5 2007/11/16 15:33:46 beandog Exp $
+
+  16 Nov 2007; Steve Dibb <beandog@gentoo.org>
+  systempreferences-1.0.1_p24791.ebuild:
+  amd64 stable, bug 195990
 
   27 Oct 2007; nixnut <nixnut@gentoo.org>
   systempreferences-1.0.1_p24791.ebuild:
