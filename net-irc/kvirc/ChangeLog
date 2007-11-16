@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.57 2007/09/06 12:13:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.58 2007/11/16 08:23:01 jokey Exp $
+
+  16 Nov 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog
+  kvirc-9999.ebuild:
+  ipv6 patch merged upstream, fix quoting
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
   -files/kvirc-3.0.1-kdedir-fix.patch, -files/kvirc-3.2.0-gcc4.patch,
