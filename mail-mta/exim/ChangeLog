@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.109 2007/11/14 17:26:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.110 2007/11/16 15:42:28 beandog Exp $
+
+  16 Nov 2007; Steve Dibb <beandog@gentoo.org> exim-4.68.ebuild:
+  amd64 stable, bug 198489
 
   14 Nov 2007; Jeroen Roovers <jer@gentoo.org> exim-4.68.ebuild:
   Stable for HPPA (bug #198489). Fixed many quoting issues.
