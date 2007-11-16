@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.119 2007/11/06 17:15:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.120 2007/11/16 08:05:01 robbat2 Exp $
+
+*lvm2-2.02.28-r3 (16 Nov 2007)
+
+  16 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/clvmd.rc-2.02.28-r3, +files/lvm.conf-2.02.28-r3.patch,
+  +lvm2-2.02.28-r3.ebuild:
+  Convert nolvmstatic and nolvm1 USE flags to static and lvm1 USE flags via
+  the base profile package.use. Finish merging clvm support. Provide a
+  slightly better than stock default configuration that is more suited to
+  Gentoo, and ignores network-block devices by default for the livecd
+  environment.
 
   06 Nov 2007; Markus Rothe <corsair@gentoo.org> lvm2-2.02.28-r2.ebuild:
   Stable on ppc64; bug #195173
