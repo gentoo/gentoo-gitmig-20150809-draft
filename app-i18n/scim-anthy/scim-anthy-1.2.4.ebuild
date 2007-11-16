@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.2.4.ebuild,v 1.6 2007/11/03 03:39:47 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.2.4.ebuild,v 1.7 2007/11/16 17:50:10 matsuu Exp $
 
 inherit libtool
 
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dodoc AUTHORS THANKS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
