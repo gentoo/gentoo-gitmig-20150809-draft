@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.51 2007/10/28 02:51:10 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.52 2007/11/16 00:33:40 beandog Exp $
+
+  16 Nov 2007; Steve Dibb <beandog@gentoo.org> ktoblzcheck-1.14.ebuild:
+  amd64 stable, bug 192840
 
   28 Oct 2007; Ferris McCormick <fmccor@gentoo.org> ktoblzcheck-1.14.ebuild:
   Sparc stable (bookkeeping); tests pass.
