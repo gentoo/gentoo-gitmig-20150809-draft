@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.30 2007/10/22 12:18:10 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.31 2007/11/16 14:54:15 beandog Exp $
+
+  16 Nov 2007; Steve Dibb <beandog@gentoo.org> hunspell-1.1.9.ebuild:
+  amd64 stable, bug 182360
 
   22 Oct 2007; Ferris McCormick <fmccor@gentoo.org> hunspell-1.1.9.ebuild:
   Sparc stable --- Bug #182360 --- tests pass and works with en_US.
