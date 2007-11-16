@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.4-r1.ebuild,v 1.9 2007/10/05 15:06:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.4-r1.ebuild,v 1.10 2007/11/16 13:52:24 betelgeuse Exp $
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
@@ -131,6 +131,6 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 }
 
-pkg_prerm() {
+pkg_postrm() {
 	fdo-mime_desktop_database_update
 }

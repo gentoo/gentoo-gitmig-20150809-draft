@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.51 2007/10/05 15:06:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.52 2007/11/16 13:52:24 betelgeuse Exp $
+
+  16 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
+  azureus-2.5.0.4-r1.ebuild:
+  Call fdo-mime_mime_database_update in pkg_postrm instead of pkg_prerm.
 
   05 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   azureus-2.5.0.4-r1.ebuild:
