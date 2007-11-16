@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.1.ebuild,v 1.6 2007/11/14 06:18:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.1.ebuild,v 1.7 2007/11/16 18:16:30 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability versionator
 
@@ -262,7 +262,7 @@ pkg_postinst() {
 
 	# We need the outer check, because xorg-server may not be installed
 	# first, and built_with_use() dies if the package isn't installed.
-	if best_version x11-base/xorg-server; then
+	if has_version x11-base/xorg-server; then
 		if built_with_use x11-base/xorg-server nptl; then
 			ewarn "Rebuild x11-base/xorg-server without USE=nptl"
 			ewarn "or AIGLX (compiz, etc.) will not work."
