@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.52 2007/11/16 17:53:44 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.53 2007/11/16 23:15:59 jurek Exp $
+
+  16 Nov 2007; Jurek Bartuszek <jurek@gentoo.org> pnet-0.8.0.ebuild:
+  Added blocker on dev-libs/boehm-gc (bug #189806)
 
   16 Nov 2007; Jurek Bartuszek <jurek@gentoo.org> -pnet-0.6.12.ebuild,
   -pnet-0.7.4.ebuild:
