@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/renaissance
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/renaissance/ChangeLog,v 1.18 2007/11/08 23:38:49 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/renaissance/ChangeLog,v 1.19 2007/11/16 15:11:26 beandog Exp $
+
+  16 Nov 2007; Steve Dibb <beandog@gentoo.org>
+  renaissance-0.8.1_pre20070522.ebuild:
+  amd64 stable, bug 195990
 
   08 Nov 2007; Bernard Cafarelli <voyageur@gentoo.org>
   -renaissance-0.8.1_pre20060324.ebuild:
