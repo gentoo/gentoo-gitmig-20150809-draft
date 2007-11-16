@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.7.ebuild,v 1.10 2007/11/01 12:59:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.7.ebuild,v 1.11 2007/11/16 18:01:35 matsuu Exp $
 
 inherit kde-functions autotools eutils
 
@@ -20,7 +20,7 @@ done
 
 RDEPEND="x11-libs/libXt
 	|| ( >=app-i18n/scim-1.1 >=app-i18n/scim-cvs-1.1 )
-	!alpha? ( !sparc? ( kde? ( app-i18n/skim ) ) )
+	kde? ( app-i18n/skim )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -49,8 +49,8 @@ src_compile() {
 
 	for m in Makefile.in Makefile.am ; do
 		sed -e "/^SUBDIRS/s/.*/SUBDIRS = ${use_languages}/g" \
-			tables/${m} > ${T}/${m} || die "sed ${m} failed"
-		cp ${T}/${m} tables/${m} || die "mv ${m} failed"
+			tables/${m} > "${T}"/${m} || die "sed ${m} failed"
+		cp "${T}"/${m} tables/${m} || die "mv ${m} failed"
 	done
 
 	econf \
