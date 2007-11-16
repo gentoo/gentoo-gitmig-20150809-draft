@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.4.0.ebuild,v 1.4 2007/11/16 09:20:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.4.0.ebuild,v 1.5 2007/11/16 18:49:53 mr_bones_ Exp $
 
 inherit gnome2 eutils
 
@@ -33,4 +33,3 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 G2CONF="${G2CONF} --enable-symbolsvisibilitycontrol=no"
-
