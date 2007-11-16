@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/memo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.18 2007/06/22 22:03:01 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.19 2007/11/16 15:13:41 drac Exp $
+
+  16 Nov 2007; Samuli Suominen <drac@gentoo.org> memo-2.0-r1.ebuild:
+  amd64 stable wrt #197514
 
   22 Jun 2007; Jim Ramsay <lack@gentoo.org> memo-2.0-r1.ebuild:
   Adding ~amd64 keyword

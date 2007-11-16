@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/roxget-0.0.5c.ebuild,v 1.7 2007/07/12 06:31:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/roxget-0.0.5c.ebuild,v 1.8 2007/11/16 14:57:48 drac Exp $
 
 ROX_LIB_VER=1.9.16
 inherit rox
@@ -19,7 +19,7 @@ LICENSE="MIT"
 
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE=""
 

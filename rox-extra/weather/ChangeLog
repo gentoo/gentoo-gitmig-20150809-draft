@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/weather
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/weather/ChangeLog,v 1.9 2007/06/10 19:15:34 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/weather/ChangeLog,v 1.10 2007/11/16 14:53:22 drac Exp $
+
+  16 Nov 2007; Samuli Suominen <drac@gentoo.org> weather-0.2.7.ebuild:
+  amd64 stable wrt #197514
 
 *weather-0.2.7 (10 Jun 2007)
 

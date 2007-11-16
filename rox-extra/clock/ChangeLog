@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/clock
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.10 2006/11/23 21:25:48 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.11 2007/11/16 15:04:25 drac Exp $
+
+  16 Nov 2007; Samuli Suominen <drac@gentoo.org> clock-2.1.7.ebuild:
+  amd64 stable wrt #197514
 
   23 Nov 2006; <blubb@gentoo.org> clock-2.1.7.ebuild:
   added ~amd64
