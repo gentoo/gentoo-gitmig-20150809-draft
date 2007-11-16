@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.180 2007/11/06 16:58:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.181 2007/11/16 17:55:14 drac Exp $
+
+  16 Nov 2007; Samuli Suominen <drac@gentoo.org> vte-0.16.9.ebuild:
+  amd64 stable wrt #199322
 
   06 Nov 2007; Raúl Porcel <armin76@gentoo.org> vte-0.16.8.ebuild:
   sparc stable wrt #193339
