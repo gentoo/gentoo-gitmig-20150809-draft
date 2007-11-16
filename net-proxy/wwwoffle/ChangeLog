@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/wwwoffle
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.36 2007/11/06 19:14:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.37 2007/11/16 15:27:11 beandog Exp $
+
+  16 Nov 2007; Steve Dibb <beandog@gentoo.org> wwwoffle-2.9c.ebuild:
+  amd64 stable, bug 197884
 
   06 Nov 2007; Markus Rothe <corsair@gentoo.org> wwwoffle-2.9c.ebuild:
   Stable on ppc64; bug #197884

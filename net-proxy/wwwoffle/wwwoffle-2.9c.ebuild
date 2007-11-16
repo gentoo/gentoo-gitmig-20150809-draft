@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9c.ebuild,v 1.5 2007/11/06 19:14:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9c.ebuild,v 1.6 2007/11/16 15:27:11 beandog Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="wwwoffle = WWW Offline Explorer, an adv. caching proxy especially s
 SRC_URI="http://www.gedanken.demon.co.uk/download-wwwoffle/${P}.tgz"
 HOMEPAGE="http://www.gedanken.demon.co.uk/wwwoffle"
 
-KEYWORDS="~amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="gnutls ipv6 zlib"
