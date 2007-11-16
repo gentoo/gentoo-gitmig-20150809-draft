@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.12-r1.ebuild,v 1.7 2007/10/28 13:36:07 corsair Exp $
-
-WANT_AUTOMAKE=latest
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.4-r3.ebuild,v 1.1 2007/11/16 20:13:07 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -11,33 +9,41 @@ MY_P=${P/_}
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org/"
 SRC_URI="mirror://sourceforge/cups/${MY_P}-source.tar.bz2"
-#http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2"
-#ESVN_REPO_URI="http://svn.easysw.com/public/cups/trunk"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="ldap ssl slp pam php samba nls dbus tiff png ppds jpeg X"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+IUSE="acl avahi dbus java jpeg kerberos ldap nls pam perl php png ppds python samba slp ssl static tiff X zeroconf"
 
-DEP="pam? ( virtual/pam )
-	ssl? ( net-libs/gnutls )
-	slp? ( >=net-libs/openslp-1.0.4 )
-	ldap? ( net-nds/openldap )
+COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
+	avahi? ( net-dns/avahi )
 	dbus? ( sys-apps/dbus )
-	png? ( >=media-libs/libpng-1.2.1 )
-	tiff? ( >=media-libs/tiff-3.5.5 )
+	java? ( >=virtual/jre-1.4 )
 	jpeg? ( >=media-libs/jpeg-6b )
+	kerberos? ( virtual/krb5 )
+	ldap? ( net-nds/openldap )
+	pam? ( virtual/pam )
+	perl? ( dev-lang/perl )
 	php? ( dev-lang/php )
-	app-text/libpaper"
-DEPEND="${DEP}
+	png? ( >=media-libs/libpng-1.2.1 )
+	python? ( dev-lang/python )
+	slp? ( >=net-libs/openslp-1.0.4 )
+	ssl? ( net-libs/gnutls )
+	tiff? ( >=media-libs/tiff-3.5.5 )
+	zeroconf? ( !avahi? ( net-misc/mDNSResponder ) )
+	app-text/libpaper
+	dev-libs/libgcrypt"
+
+DEPEND="${COMMON_DEPEND}
 	!<net-print/foomatic-filters-ppds-20070501
 	!<net-print/hplip-1.7.4a-r1
 	nls? ( sys-devel/gettext )"
-RDEPEND="${DEP}
-	nls? ( virtual/libintl )
+
+RDEPEND="${COMMON_DEPEND}
 	!virtual/lpr
-	>=app-text/poppler-0.4.3-r1
-	X? ( x11-misc/xdg-utils )"
+	nls? ( virtual/libintl )
+	X? ( x11-misc/xdg-utils )
+	>=app-text/poppler-0.4.3-r1"
 
 PDEPEND="
 	ppds? ( || (
@@ -54,6 +60,7 @@ PDEPEND="
 	) )
 	samba? ( >=net-fs/samba-3.0.8 )
 	virtual/ghostscript"
+
 PROVIDE="virtual/lpr"
 
 # upstream includes an interactive test which is a nono for gentoo.
@@ -61,16 +68,20 @@ PROVIDE="virtual/lpr"
 # we just leave it out, even if FEATURES=test
 RESTRICT="test"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+LANGS="de en es et fr he it ja pl sv zh_TW"
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
 
 pkg_setup() {
-	if use x86 && [ -d "/usr/lib64" ]
-	then
-		eerror "You are running an x86 system, but /usr/lib64 exists, cups will install all library objects into this directory!"
-		eerror "You should remove /usr/lib64, but before you do, you should check for existing objects, and re-compile all affected packages."
-		eerror "You can use qfile (emerge portage-utils to install qfile) to get a list of the affected ebuilds:"
-		eerror "# qfile -qC /usr/lib64"
-		die "lib64 on x86 detected"
+	if use avahi && ! built_with_use net-dns/avahi mdnsresponder-compat ; then
+		echo
+		eerror "In order to have cups working with avahi zeroconf support, you need"
+		eerror "to have net-dns/avahi emerged with 'mdnsresponder-compat' in your USE"
+		eerror "flag. Please add that flag, re-emerge avahi, and then emerge cups again."
+		die "net-dns/avahi is missing the mdnsresponder-compat feature."
 	fi
 
 	enewgroup lp
@@ -84,7 +95,13 @@ src_unpack() {
 	cd "${S}"
 
 	# upstream does not acknowledge bindnow as a solution
-	epatch "${FILESDIR}"/cups-1.2.0-bindnow.patch
+	epatch "${FILESDIR}/${PN}-1.3.0-bindnow.patch"
+
+	# disable configure automagic for acl/attr
+	epatch "${FILESDIR}/${PN}-1.3.0-configure.patch"
+
+	# CVE-2007-4045 security patch, bug #199195
+	epatch "${FILESDIR}/${P}-CVE-2007-4045.patch"
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
@@ -92,34 +109,60 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# locale support
+	strip-linguas ${LANGS}
+
+	if [ -z "${LINGUAS}" ] ; then
+		export LINGUAS=all
+	fi
+
 	export DSOFLAGS="${LDFLAGS}"
+	cd "${S}"
+
+	local myconf
+
+	if use avahi || use zeroconf ; then
+		myconf="${myconf} --enable-dnssd"
+	else
+		myconf="${myconf} --disable-dnssd"
+	fi
+
 	econf \
+		--libdir=/usr/$(get_libdir) \
+		--localstatedir=/var \
+		--with-bindnow=$(bindnow-flags) \
 		--with-cups-user=lp \
 		--with-cups-group=lp \
-		--with-system-groups=lpadmin \
-		--localstatedir=/var \
 		--with-docdir=/usr/share/cups/html \
-		--with-bindnow=$(bindnow-flags) \
-		$(use_enable pam) \
-		$(use_enable ssl) \
-		--enable-gnutls \
-		$(use_enable slp) \
-		$(use_enable nls) \
+		--with-languages=${LINGUAS} \
+		--with-system-groups=lpadmin \
+		$(use_enable acl) \
 		$(use_enable dbus) \
-		$(use_enable png) \
 		$(use_enable jpeg) \
-		$(use_enable tiff) \
-		$(use_with php) \
+		$(use_enable kerberos gssapi) \
 		$(use_enable ldap) \
+		$(use_enable nls) \
+		$(use_enable pam) \
+		$(use_enable png) \
+		$(use_enable slp) \
+		$(use_enable ssl) \
+		$(use_enable static) \
+		$(use_enable tiff) \
+		$(use_with java) \
+		$(use_with perl) \
+		$(use_with php) \
+		$(use_with python) \
+		--enable-gnutls \
 		--enable-libpaper \
 		--enable-threads \
-		--enable-static \
 		--disable-pdftops \
+		${myconf} \
 		|| die "econf failed"
 
 	# Install in /usr/libexec always, instead of using /usr/lib/cups, as that
 	# makes more sense when facing multilib support.
-	sed -i -e 's:SERVERBIN.*:SERVERBIN = $(BUILDROOT)/usr/libexec/cups:' Makedefs
+	sed -i -e 's:SERVERBIN.*:SERVERBIN = "$(BUILDROOT)"/usr/libexec/cups:' Makedefs
 	sed -i -e 's:#define CUPS_SERVERBIN.*:#define CUPS_SERVERBIN "/usr/libexec/cups":' config.h
 	sed -i -e 's:cups_serverbin=.*:cups_serverbin=/usr/libexec/cups:' cups-config
 
@@ -128,12 +171,20 @@ src_compile() {
 
 src_install() {
 	emake BUILDROOT="${D}" install || die "emake install failed"
-	dodoc {CHANGES{,-1.{0,1}},CREDITS,LICENSE,README}.txt
+	dodoc {CHANGES{,-1.{0,1}},CREDITS,README}.txt || die "dodoc install failed"
 
 	# clean out cups init scripts
 	rm -rf "${D}"/etc/{init.d/cups,rc*,pam.d/cups}
-	# install our init scripts
-	newinitd "${FILESDIR}"/cupsd.init cupsd
+
+	# install our init script
+	local neededservices
+	use avahi && neededservices="$neededservices avahi-daemon"
+	use dbus && neededservices="$neededservices dbus"
+	use zeroconf && ! use avahi && neededservices="$neededservices mDNSResponderPosix"
+	[[ -n ${neededservices} ]] && neededservices="need${neededservices}"
+	sed -e "s/@neededservices@/$neededservices/" "${FILESDIR}"/cupsd.init.d > "${T}"/cupsd
+	doinitd "${T}"/cupsd
+
 	# install our pam script
 	pamd_mimic_system cups auth account
 
@@ -169,18 +220,14 @@ src_install() {
 
 pkg_preinst() {
 	# cleanups
-	[ -n "${PN}" ] && rm -fR "${ROOT}"/usr/share/doc/${PN}-*
+	[ -n "${PN}" ] && rm -fR "${ROOT}"/usr/share/doc/"${PN}"-*
 }
 
 pkg_postinst() {
-	einfo "Remote printing: change "
-	einfo "Listen localhost:631"
-	einfo "to"
-	einfo "Listen *:631"
-	einfo "in /etc/cups/cupsd.conf"
-	einfo
-	einfo "For more information about installing a printer take a look at:"
-	einfo "http://www.gentoo.org/doc/en/printing-howto.xml."
+	echo
+	elog "For information about installing a printer and general cups setup"
+	elog "take a look at: http://www.gentoo.org/doc/en/printing-howto.xml"
+	echo
 
 	local good_gs=false
 	for x in app-text/ghostscript-gpl app-text/ghostscript-gnu app-text/ghostscript-esp; do
@@ -190,26 +237,31 @@ pkg_postinst() {
 		fi
 	done;
 	if ! ${good_gs}; then
-		ewarn
+		echo
 		ewarn "You need to emerge ghostscript with the \"cups\" USE flag turned on"
+		echo
 	fi
+
 	if has_version =net-print/cups-1.1*; then
-		ewarn
-		ewarn "The configuration changed with cups-1.2, you may want to save the old"
+		echo
+		ewarn "The configuration changed with cups-1.3, you may want to save the old"
 		ewarn "one and start from scratch:"
 		ewarn "# mv /etc/cups /etc/cups.orig; emerge -va1 cups"
-		ewarn
-		ewarn "You need to rebuild kdelibs for kdeprinter to work with cups-1.2"
+		echo
+		ewarn "You need to rebuild kdelibs for kdeprinter to work with cups-1.3"
+		echo
 	fi
+
 	if [ -e "${ROOT}"/usr/lib/cups ]; then
-		ewarn
+		echo
 		ewarn "/usr/lib/cups exists - You need to remerge every ebuild that"
 		ewarn "installed into /usr/lib/cups and /etc/cups, qfile is in portage-utils:"
 		ewarn "# FEATURES=-collision-protect emerge -va1 \$(qfile -qC /usr/lib/cups /etc/cups | sed \"s:net-print/cups$::\")"
-		ewarn
+		echo
 		ewarn "FEATURES=-collision-protect is needed to overwrite the compatibility"
-		ewarn "symlinks installed by this package, it wont be needed on later merges."
+		ewarn "symlinks installed by this package, it won't be needed on later merges."
 		ewarn "You should also run revdep-rebuild"
+		echo
 
 		# place symlinks to make the update smoothless
 		for i in "${ROOT}"/usr/lib/cups/{backend,filter}/*; do
