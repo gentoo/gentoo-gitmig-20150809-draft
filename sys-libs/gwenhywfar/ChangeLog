@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.49 2007/10/28 02:38:09 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.50 2007/11/16 00:25:33 beandog Exp $
+
+  16 Nov 2007; Steve Dibb <beandog@gentoo.org> gwenhywfar-2.6.1.ebuild:
+  amd64 stable, bug 192840
 
   28 Oct 2007; Ferris McCormick <fmccor@gentoo.org> gwenhywfar-2.6.1.ebuild:
   Sparc stable, all tests pass. (Bookkeeping)
