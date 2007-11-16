@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.430 2007/11/16 13:26:23 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.431 2007/11/16 15:03:21 jer Exp $
+
+  16 Nov 2007; Jeroen Roovers <jer@gentoo.org> mysql-5.0.44-r2.ebuild:
+  Stable for HPPA (bug #198988).
 
   16 Nov 2007; Ferris McCormick <fmccor@gentoo.org> mysql-5.0.44-r2.ebuild:
   Sparc stable --- Security Bug #198988 --- looks good to me.
