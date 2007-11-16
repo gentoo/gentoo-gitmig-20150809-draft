@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.824 2007/11/15 20:16:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.825 2007/11/16 08:08:08 robbat2 Exp $
+
+  16 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> base/package.use,
+  use.local.desc:
+  Convert sys-fs/lvm2 USE=nolvmstatic and nolvm1 to static and lvm respectively.
 
   15 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> base/use.mask:
   pam_console was masked for removal for security issues.

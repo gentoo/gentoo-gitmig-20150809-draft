@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3143 2007/11/15 20:06:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3144 2007/11/16 08:08:08 robbat2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1993,6 +1993,7 @@ sys-fs/loop-aes:padlock - Use VIA padlock instructions, detected at run time, co
 sys-fs/lvm2:clvm - Allow users to build clustered lvm2
 sys-fs/lvm2:cman - Cman support for clustered lvm
 sys-fs/lvm2:gulm - Gulm support for clustered lvm
+sys-fs/lvm2:lvm1 - Allow users to build lvm2 with lvm1 support
 sys-fs/lvm2:nolvm1 - Allow users to build lvm2 without lvm1 support
 sys-fs/lvm2:nolvmstatic - Allow users to build lvm2 dynamically
 sys-fs/lvm2:nomirrors - Allow users to build lvm2 without mirror support

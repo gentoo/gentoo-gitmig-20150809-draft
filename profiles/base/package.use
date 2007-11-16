@@ -16,3 +16,13 @@ media-sound/amarok amazon
 # 2007/10/17 - Roy Marples <uberlord@gentoo.org>
 # zeroconf is a good idea, and we should support it by default.
 net-misc/dhcpcd zeroconf
+
+# 2007/11/15 - Robin H. Johnson <robbat2@gentoo.org>
+# Convert from IUSE=nolvmstatic to (IUSE=static and package.use)
+sys-fs/lvm2 static
+
+# 2007/11/15 - Robin H. Johnson <robbat2@gentoo.org>
+# Convert from IUSE=lvm1 to (IUSE=lvm1 and package.use)
+# Scheduled for removal, so the tools support only LVM2 by default as of the
+# 2008.0 release.
+sys-fs/lvm2 lvm1
