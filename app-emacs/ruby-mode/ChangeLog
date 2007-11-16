@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.34 2007/11/14 17:38:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.35 2007/11/16 00:11:51 beandog Exp $
+
+  16 Nov 2007; Steve Dibb <beandog@gentoo.org> ruby-mode-1.8.6.ebuild:
+  amd64 stable, bug 198532
 
   14 Nov 2007; Jeroen Roovers <jer@gentoo.org> ruby-mode-1.8.6.ebuild:
   Stable for HPPA (bug #198532).
