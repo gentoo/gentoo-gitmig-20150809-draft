@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2-r2.ebuild,v 1.14 2007/11/13 20:13:26 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2-r2.ebuild,v 1.15 2007/11/16 16:29:04 armin76 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pax-utils
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.openwall.com/john/f/${MY_PBASE}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE="mmx altivec sse2"
 
 RDEPEND=">=dev-libs/openssl-0.9.7"
