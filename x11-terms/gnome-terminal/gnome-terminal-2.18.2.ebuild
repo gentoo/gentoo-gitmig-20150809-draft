@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.18.2.ebuild,v 1.1 2007/09/20 19:53:47 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.18.2.ebuild,v 1.2 2007/11/16 17:59:44 drac Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="virtual/xft
@@ -35,11 +35,11 @@ src_unpack() {
 	gnome2_src_unpack
 
 	# Use login shell by default (#12900)
-	epatch ${FILESDIR}/${PN}-2-default_shell.patch
+	epatch "${FILESDIR}"/${PN}-2-default_shell.patch
 
 	# terminal enhancement, inserts a space after a DND URL
 	# patch by Zach Bagnall <yem@y3m.net> in #13801
-	epatch ${FILESDIR}/${PN}-2-dnd_url_add_space.patch
+	epatch "${FILESDIR}"/${PN}-2-dnd_url_add_space.patch
 
 	# patch gnome terminal to report as GNOME rather than xterm
 	# This needs to resolve a few bugs (#120294,)
