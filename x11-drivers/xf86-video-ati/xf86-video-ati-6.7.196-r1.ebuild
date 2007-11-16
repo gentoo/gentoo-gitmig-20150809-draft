@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.7.196-r1.ebuild,v 1.1 2007/11/16 16:28:00 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.7.196-r1.ebuild,v 1.2 2007/11/16 16:48:05 leio Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 			x11-proto/xf86driproto
 			>=x11-libs/libdrm-2 )"
 
-PATCHES="${PV}-fix_washed_color.patch"
+PATCHES="${FILESDIR}/${PV}-fix_washed_color.patch"
 
 CONFIGURE_OPTIONS="$(use_enable dri)"
 
