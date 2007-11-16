@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.66 2007/10/20 21:05:36 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.67 2007/11/16 23:48:32 philantrop Exp $
+
+*ktorrent-2.2.3 (16 Nov 2007)
+
+  16 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  -files/ktorrent-2.2.1-fix-wait-job-crash.patch, -ktorrent-2.1.4.ebuild,
+  -ktorrent-2.2.1-r1.ebuild, +ktorrent-2.2.3.ebuild:
+  Version bump as per bug 199285. Corrected dependencies to fix bug 198945.
+  Removed obsolete versions.
 
   20 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
   ktorrent-2.2.2.ebuild:
