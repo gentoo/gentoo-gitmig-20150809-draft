@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.5-r4.ebuild,v 1.5 2006/02/12 20:41:40 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.5-r4.ebuild,v 1.6 2007/11/16 15:46:32 markusle Exp $
 
 inherit eutils flag-o-matic multilib
 
 DESCRIPTION="pari (or pari-gp) : a software package for computer-aided number theory"
-HOMEPAGE="http://www.parigp-home.de/"
-SRC_URI="http://www.gn-50uma.de/ftp/pari-2.1/${P}.tar.gz"
+HOMEPAGE="http://pari.math.u-bordeaux.fr/"
+SRC_URI="http://pari.math.u-bordeaux.fr/pub/${PN}/unix/OLD/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,9 +18,9 @@ DEPEND="doc? ( virtual/tetex )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/docs.patch
-	epatch ${FILESDIR}/wrong_functype.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/docs.patch
+	epatch "${FILESDIR}"/wrong_functype.patch
 
 }
 
@@ -73,7 +73,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	if use emacs; then
 		insinto /usr/share/emacs/site-lisp
 		doins emacs/pari.el

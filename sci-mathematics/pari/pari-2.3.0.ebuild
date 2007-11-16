@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.0.ebuild,v 1.5 2007/07/22 06:59:26 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.0.ebuild,v 1.6 2007/11/16 15:46:32 markusle Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -69,14 +69,13 @@ src_compile() {
 }
 
 src_test() {
-	cd "${S}"
 	ebegin "Testing pari kernel"
 	make test-kernel > /dev/null
 	eend $?
 }
 
 src_install() {
-	make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install || \
+	make DESTDIR="${D}" LIBDIR="${D}"/usr/$(get_libdir) install || \
 		die "Install failed"
 
 	if use emacs; then
@@ -86,13 +85,13 @@ src_install() {
 
 	dodoc AUTHORS Announce.2.1 CHANGES README TODO
 	if use doc; then
-		make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install-doc \
+		make DESTDIR="${D}" LIBDIR="${D}"/usr/$(get_libdir) install-doc \
 			|| die "Failed to install docs"
 		insinto /usr/share/doc/${PF}
 		doins doc/*.pdf || die "Failed to install pdf docs"
 	fi
 
 	#remove superfluous doc directory
-	rm -fr ${D}/usr/share/${P}/doc || \
+	rm -fr "${D}"/usr/share/${P}/doc || \
 		die "Failed to clean up doc directory"
 }

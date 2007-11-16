@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.2.ebuild,v 1.9 2007/10/09 15:02:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.2.ebuild,v 1.10 2007/11/16 15:46:32 markusle Exp $
 
 inherit elisp-common eutils flag-o-matic multilib toolchain-funcs
 
@@ -76,14 +76,13 @@ src_compile() {
 }
 
 src_test() {
-	cd "${S}"
 	ebegin "Testing pari kernel"
 	make test-kernel
 	eend $?
 }
 
 src_install() {
-	emake DESTDIR="${D}" LIBDIR="${D}/usr/$(get_libdir)" install || \
+	emake DESTDIR="${D}" LIBDIR="${D}"/usr/$(get_libdir) install || \
 		die "Install failed"
 
 	if use emacs; then

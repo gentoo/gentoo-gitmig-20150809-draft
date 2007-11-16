@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.52 2007/10/09 15:02:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.53 2007/11/16 15:46:32 markusle Exp $
+
+  16 Nov 2007; Markus Dittrich <markusle@gentoo.org> pari-2.1.5-r4.ebuild,
+  pari-2.1.6.ebuild, pari-2.1.7.ebuild, pari-2.1.7-r1.ebuild,
+  pari-2.3.0.ebuild, pari-2.3.2.ebuild, pari-2.3.2-r1.ebuild:
+  Fixed SRC_URIs (see bug #198484).
 
   09 Oct 2007; Christoph Mende <angelos@gentoo.org> pari-2.3.2.ebuild:
   Stable on amd64 wrt bug #194265
