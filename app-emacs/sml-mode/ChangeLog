@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/sml-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/ChangeLog,v 1.15 2007/11/16 00:06:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/ChangeLog,v 1.16 2007/11/16 07:36:00 ulm Exp $
+
+  16 Nov 2007; Ulrich Mueller <ulm@gentoo.org> -files/50sml-mode-gentoo.el,
+  -sml-mode-3.9.5.ebuild:
+  Remove old.
 
   16 Nov 2007; Steve Dibb <beandog@gentoo.org> sml-mode-4.0.ebuild:
   amd64 stable, bug 195116
