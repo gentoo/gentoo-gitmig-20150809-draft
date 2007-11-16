@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.428 2007/11/08 13:08:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.429 2007/11/16 02:48:17 robbat2 Exp $
+
+*mysql-5.0.44-r2 (16 Nov 2007)
+
+  16 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +mysql-5.0.44-r2.ebuild:
+  Fix for bug #198988, DoS with InnoDB. Also fixes upstream TMPDIR bug 30287.
 
   08 Nov 2007; Raúl Porcel <armin76@gentoo.org> mysql-5.0.44-r1.ebuild:
   alpha/ia64/x86 stable
