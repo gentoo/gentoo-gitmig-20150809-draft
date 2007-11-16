@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.18.ebuild,v 1.3 2007/10/10 06:53:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.18.ebuild,v 1.4 2007/11/16 16:53:53 fmccor Exp $
 
 inherit eutils versionator
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.jedsoft.org/jed/"
 SRC_URI="ftp://space.mit.edu/pub/davis/jed/v0.99/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="X gpm truetype"
 
 RDEPEND="=sys-libs/slang-2*

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.39 2007/10/10 06:53:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.40 2007/11/16 16:53:53 fmccor Exp $
+
+  16 Nov 2007; Ferris McCormick <fmccor@gentoo.org> jed-0.99.18.ebuild:
+  Add ~sparc for testing; this and slang seem to work fine (even though
+  p.masked).
 
   10 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   jed-0.99.16-r2.ebuild, jed-0.99.18.ebuild:
