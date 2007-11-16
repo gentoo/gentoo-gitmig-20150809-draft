@@ -1,6 +1,14 @@
---- sprite.c.orig	2004-01-08 00:42:51.897946128 -0500
-+++ sprite.c	2004-01-08 00:43:10.986044296 -0500
-@@ -188,6 +188,12 @@
+--- sprite.c.orig	2007-11-15 18:26:30.000000000 -0500
++++ sprite.c	2007-11-15 18:26:57.000000000 -0500
+@@ -2,6 +2,7 @@
+ #include <ctype.h>
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <unistd.h>
+ 
+ #ifndef WIN32
+ #include "config.h"
+@@ -188,6 +189,12 @@
   
  	if (!(f=fopen(filename,"rb")))
  	{
