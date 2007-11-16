@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.28-r3.ebuild,v 1.1 2007/11/16 08:05:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.28-r3.ebuild,v 1.2 2007/11/16 14:21:14 cardoe Exp $
 
 inherit eutils multilib
 
@@ -102,7 +102,7 @@ src_install() {
 		cp -f "${D}"/sbin/lvm.static "${D}"/sbin/lvm \
 			|| die "Failed to copy lvm.static"
 	fi
-	
+
 	dodir /$(get_libdir)
 	# Put these in root so we can reach before /usr is up
 	for i in libdevmapper-event-lvm2mirror liblvm2{format1,snapshot} ; do

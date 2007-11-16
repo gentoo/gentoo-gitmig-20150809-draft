@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.120 2007/11/16 08:05:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.121 2007/11/16 14:21:14 cardoe Exp $
+
+  16 Nov 2007; Doug Klima <cardoe@gentoo.org>
+  -files/lvm2-2.01.14-static.patch, -files/lvm2-2.01.14.patch,
+  -lvm2-2.01.09.ebuild, -lvm2-2.01.09-r1.ebuild, -lvm2-2.02.02-r1.ebuild,
+  -lvm2-2.02.04-r1.ebuild, -lvm2-2.02.05.ebuild, -lvm2-2.02.06.ebuild,
+  -lvm2-2.02.09.ebuild, lvm2-2.02.28-r3.ebuild:
+  Clean up old versions and repoman checks
 
 *lvm2-2.02.28-r3 (16 Nov 2007)
 
