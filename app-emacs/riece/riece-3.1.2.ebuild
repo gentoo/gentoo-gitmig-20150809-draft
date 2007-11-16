@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/riece-3.1.2.ebuild,v 1.8 2007/10/12 06:32:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/riece-3.1.2.ebuild,v 1.9 2007/11/16 00:08:22 beandog Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/riece/${P}.tar.gz"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ppc ppc64 x86"
+KEYWORDS="alpha amd64 ppc ppc64 x86"
 IUSE=""
 RESTRICT="test"
 

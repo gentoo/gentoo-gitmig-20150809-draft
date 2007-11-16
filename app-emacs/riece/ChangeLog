@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/riece
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.56 2007/10/12 06:32:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.57 2007/11/16 00:08:22 beandog Exp $
+
+  16 Nov 2007; Steve Dibb <beandog@gentoo.org> riece-3.1.2.ebuild:
+  amd64 stable, bug 195167
 
   11 Oct 2007; Tom Gall <tgall@gentoo.org> riece-3.1.2.ebuild:
   stable on ppc64, bug #195167
