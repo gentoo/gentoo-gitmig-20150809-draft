@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX config-gnustep-back-xlib.sh 181 RMD160 86c68bda088d52313c3a8f5af166edb7ba84298a SHA1 263efdd48e258a5f435fa2601804d8c62a3228cd SHA256 67ff4a0404740dbc2ffc455f8c93b9f930e48ce83856e1f26e3cdcd3901fef85
 MD5 14c86d6ff5e83af36ad3d54266af5c99 files/config-gnustep-back-xlib.sh 181
 RMD160 86c68bda088d52313c3a8f5af166edb7ba84298a files/config-gnustep-back-xlib.sh 181
@@ -20,14 +17,14 @@ EBUILD gnustep-back-xlib-0.11.0.ebuild 1461 RMD160 e375049eeda690b680bf4fac3e7c2
 MD5 c8b7ba037a88bbcba4ffe42b4d1d46c4 gnustep-back-xlib-0.11.0.ebuild 1461
 RMD160 e375049eeda690b680bf4fac3e7c2e638289a91f gnustep-back-xlib-0.11.0.ebuild 1461
 SHA256 766f1348a62180fd4434deeeb9b518fe7fecc372d9b0e7d05bf5e16c143403be gnustep-back-xlib-0.11.0.ebuild 1461
-EBUILD gnustep-back-xlib-0.12.0.ebuild 1228 RMD160 b75706169166accfd032958650fc5934b3116ebe SHA1 c0b6db881236524e79681389e7929fd878c02ad2 SHA256 0e231b58a96d94636a46275baf847a00e9471bd80c4170a3fb8c44c91aff702d
-MD5 91ea65e4c6e730acc71ad9a7bd8c7a5f gnustep-back-xlib-0.12.0.ebuild 1228
-RMD160 b75706169166accfd032958650fc5934b3116ebe gnustep-back-xlib-0.12.0.ebuild 1228
-SHA256 0e231b58a96d94636a46275baf847a00e9471bd80c4170a3fb8c44c91aff702d gnustep-back-xlib-0.12.0.ebuild 1228
-MISC ChangeLog 5951 RMD160 b6f3ad8431b5b5b4965d692ccd93d72b05746f66 SHA1 633efa6e69afc84558350d27e78d4a4de57ee5cc SHA256 ce3839f8acd172ecc03e3b8374a75b7f50ee590c1cbdbbd274fbef31babc29f9
-MD5 cda63d2911f64705ae04d32698281cdc ChangeLog 5951
-RMD160 b6f3ad8431b5b5b4965d692ccd93d72b05746f66 ChangeLog 5951
-SHA256 ce3839f8acd172ecc03e3b8374a75b7f50ee590c1cbdbbd274fbef31babc29f9 ChangeLog 5951
+EBUILD gnustep-back-xlib-0.12.0.ebuild 1229 RMD160 c5739de2a11e45e2fbc232c1471c7749b683eab3 SHA1 c63a54d90518ffdeafa21deca347d11b3de26282 SHA256 479b1a49c18676db27e806a7b740bd2d906a9f818a353481a60fffdfe1e2afbd
+MD5 93714bda31c743a23bbfac6354fbc5ca gnustep-back-xlib-0.12.0.ebuild 1229
+RMD160 c5739de2a11e45e2fbc232c1471c7749b683eab3 gnustep-back-xlib-0.12.0.ebuild 1229
+SHA256 479b1a49c18676db27e806a7b740bd2d906a9f818a353481a60fffdfe1e2afbd gnustep-back-xlib-0.12.0.ebuild 1229
+MISC ChangeLog 6063 RMD160 84f9cf1ecd5de53b34726ee64a3db597381a692e SHA1 8fed93141d4f58a03ac0064411a902ca499bb5b1 SHA256 c9164360eb7f6babf9bb5e4c692801699fa89b01efe66a308f63c0ea54562bc1
+MD5 3a4339496da7245d6d0386b5de77c9b6 ChangeLog 6063
+RMD160 84f9cf1ecd5de53b34726ee64a3db597381a692e ChangeLog 6063
+SHA256 c9164360eb7f6babf9bb5e4c692801699fa89b01efe66a308f63c0ea54562bc1 ChangeLog 6063
 MISC metadata.xml 1022 RMD160 f7bd2ab3e85bf0ae375a7ffdbace1dbb4ce558f0 SHA1 c648c9d416f58b1afe6a9556f89c43e2448e28f7 SHA256 d95f5c1f026627ec21426af5301436d72b16cec631a7c35fc8b3e4399a621b82
 MD5 ef356714ab02a84c6e88fe3720749aea metadata.xml 1022
 RMD160 f7bd2ab3e85bf0ae375a7ffdbace1dbb4ce558f0 metadata.xml 1022
@@ -41,10 +38,3 @@ SHA256 e8cd0ff59ea2a6bafc5e874243b0659751458148fbfba399f5c5ad17ae9d7fe9 files/di
 MD5 cf80cac778c3848cc8dd1f617389e908 files/digest-gnustep-back-xlib-0.12.0 259
 RMD160 5a00fb2b38bc26cd0ab6207d8a6cc54131df701a files/digest-gnustep-back-xlib-0.12.0 259
 SHA256 64c8143d4971be1d442aa49dab5625fe4f97d01494debd86d539ab2c69cf76a8 files/digest-gnustep-back-xlib-0.12.0 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFHNat1NQqtfCuFneMRAlGHAKCaYvKRc9VyvqwyqhkeI+T/DJUg+gCeN/CR
-/F9yXfBoER3Pzg97UgtqwuI=
-=L3n8
------END PGP SIGNATURE-----
