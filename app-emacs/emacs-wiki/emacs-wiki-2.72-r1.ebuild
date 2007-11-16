@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/emacs-wiki-2.72-r1.ebuild,v 1.1 2007/10/16 19:00:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/emacs-wiki-2.72-r1.ebuild,v 1.2 2007/11/16 15:26:43 ulm Exp $
+
+NEED_EMACS=22
 
 inherit elisp
 
@@ -13,11 +15,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
-# No tests, for there is no app-emacs/pgg
-RESTRICT="test"
 
 DEPEND="app-emacs/htmlize
-	app-emacs/table
 	app-emacs/httpd"
 
 RDEPEND="${DEPEND}"
