@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.25 2007/11/17 13:20:35 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.26 2007/11/17 15:11:25 nixnut Exp $
+
+  17 Nov 2007; nixnut <nixnut@gentoo.org> pygobject-2.14.0.ebuild:
+  Stable on ppc wrt bug 199322
 
   17 Nov 2007; Dawid Węgliński <cla@gentoo.org> pygobject-2.14.0.ebuild:
   Stable on x86 (bug #199322)
