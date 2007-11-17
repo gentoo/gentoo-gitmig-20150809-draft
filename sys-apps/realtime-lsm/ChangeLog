@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/realtime-lsm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.17 2007/11/04 15:00:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.18 2007/11/17 18:02:50 drac Exp $
+
+  17 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  realtime-lsm-0.8.5-r2.ebuild:
+  amd64 stable wrt #197128
 
   04 Nov 2007; Markus Meier <maekke@gentoo.org>
   realtime-lsm-0.8.5-r2.ebuild:
