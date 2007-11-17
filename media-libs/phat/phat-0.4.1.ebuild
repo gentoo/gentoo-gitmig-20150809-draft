@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/phat-0.4.1.ebuild,v 1.3 2007/11/17 15:31:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/phat-0.4.1.ebuild,v 1.4 2007/11/17 19:29:21 drac Exp $
 
 DESCRIPTION="PHAT is a collection of GTK+ widgets geared toward pro-audio apps."
 HOMEPAGE="http://phat.berlios.de"
@@ -16,8 +16,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	gnome-base/libgnomecanvas"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	sys-apps/sed
-	doc? ( dev-util/gtk-doc )"
+	sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}
@@ -25,8 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable debug) \
-		$(use_enable doc gtk-doc)
+	econf $(use_enable debug)
 	emake || die "emake failed."
 }
 
