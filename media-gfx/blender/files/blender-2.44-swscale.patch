@@ -92,10 +92,10 @@ index 5b185a4..5cdb651 100644
 +					img_convert_ctx = sws_getContext(
 +						anim->pCodecCtx->width,
 +						anim->pCodecCtx->height,
-+						PIX_FMT_RGBA32,
++						anim->pCodecCtx->pix_fmt,
 +						anim->pCodecCtx->width,
 +						anim->pCodecCtx->height,
-+						anim->pCodecCtx->pix_fmt,
++						PIX_FMT_RGBA32,
 +						SWS_BICUBIC,
 +						NULL, NULL, NULL);
 +				}

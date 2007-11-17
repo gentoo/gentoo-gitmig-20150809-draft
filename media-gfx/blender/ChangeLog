@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.124 2007/11/17 15:13:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.125 2007/11/17 18:39:26 lu_zero Exp $
+
+  17 Nov 2007; Luca Barbato <lu_zero@gentoo.org>
+  files/blender-2.44-swscale.patch:
+  Fix texture import from ffmpeg, thanks again to Maciej Pawlik <yaq@world.pl>
+  for fixing the patch in bug #199448
 
   17 Nov 2007; Luca Barbato <lu_zero@gentoo.org> blender-2.45.ebuild:
   Fix deps, thanks to Maciej Pawlik <yaq@world.pl> for spotting the issue in
