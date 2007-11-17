@@ -1,6 +1,13 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.79 2007/07/22 06:19:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.80 2007/11/17 17:23:45 pva Exp $
+
+*sim-0.9.4.3-r1 (17 Nov 2007)
+
+  17 Nov 2007; <pva@gentoo.org> +files/sim-0.9.4.3-double-message-fix.patch,
+  sim-0.9.4.3.ebuild, +sim-0.9.4.3-r1.ebuild:
+  Fixed duplicate jabber messages, bug #199434, reported by Sebastian Lechte
+  <seb AT stian.lechte.net>. Some other upsteam fixes.
 
   22 Jul 2007; <pva@gentoo.org> sim-0.9.4.3.ebuild:
   Removed virtual/x11 dependency.

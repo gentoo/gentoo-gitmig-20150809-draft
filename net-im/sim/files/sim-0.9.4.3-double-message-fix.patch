@@ -1,0 +1,24 @@
+Patch fixes the issue of double message text display when receiving Jabber
+messages from some clients like Pidgin.
+
+Issue was reported as BerliOS.de bug #9681 (http://tinyurl.com/3bnss4)
+
+Patch extracted from http://tinyurl.com/yob7wm
+
+Prepared by Kir Kolyshkin <kir@openvz.org>, thanks to shaplov@
+
+--- sim-0.9.4.3/plugins/jabber/jabber_rosters.cpp.double-msg	2007-01-19 20:00:41.000000000 +0300
++++ sim-0.9.4.3/plugins/jabber/jabber_rosters.cpp	2007-10-10 01:43:44.000000000 +0400
+@@ -1413,9 +1413,10 @@
+     }
+     if (m_bEvent){
+         // Parsing <x xmlns='jabber:x:event'> tag, which contains JEP-0022 event info
+-        if (!strcmp(el, "composing"))
++        if (!strcmp(el, "composing")){
+             m_bCompose = true;
+-        return;
++            return;
++        }
+     }
+     if (!strcmp(el, "url-data")){
+         m_target = JabberClient::get_attr("target", attr);
