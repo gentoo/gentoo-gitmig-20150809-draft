@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.135 2007/11/16 18:12:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.136 2007/11/17 13:38:26 nixnut Exp $
+
+  17 Nov 2007; nixnut <nixnut@gentoo.org> gtkmm-2.12.1.ebuild:
+  Stable on ppc wrt bug 198845
 
   16 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> gtkmm-2.12.1.ebuild:
   Bump glibmm dep; bug #199366
