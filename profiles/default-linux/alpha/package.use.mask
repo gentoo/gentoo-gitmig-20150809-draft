@@ -1,1 +1,5 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.5 2007/08/11 19:47:00 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.6 2007/11/17 13:58:51 drac Exp $
+
+# Needs valgrind
+media-libs/gstreamer debug
+media-libs/gst-plugins-base debug
