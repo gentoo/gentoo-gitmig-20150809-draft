@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-5.0.9.ebuild,v 1.1 2007/05/05 19:15:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-5.0.9.ebuild,v 1.2 2007/11/17 22:10:20 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://fastutil.dsi.unimi.it"
 LICENSE="LGPL-2.1"
 SLOT="5.0"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 DEPEND=">=virtual/jdk-1.5"
 RDEPEND=">=virtual/jre-1.5"

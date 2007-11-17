@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.36 2007/11/15 00:35:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.37 2007/11/17 22:10:20 opfer Exp $
+
+  17 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  fastutil-5.0.9.ebuild:
+  stable x86, bug 199246
 
   15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -fastutil-4.3.1.ebuild:
   Delete generation 1 ebuild.
