@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.93 2007/11/15 23:26:28 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.94 2007/11/17 01:44:14 maekke Exp $
+
+  17 Nov 2007; Markus Meier <maekke@gentoo.org> R-2.2.1-r1.ebuild:
+  x86 stable, security bug #198976
 
   15 Nov 2007; Ferris McCormick <fmccor@gentoo.org> R-2.2.1-r1.ebuild:
   Sparc stable, security bug #198976.
