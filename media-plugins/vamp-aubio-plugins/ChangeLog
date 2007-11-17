@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vamp-aubio-plugins
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/ChangeLog,v 1.1 2007/11/17 16:27:05 aballier Exp $
+
+*vamp-aubio-plugins-0.3.2b (17 Nov 2007)
+
+  17 Nov 2007; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +vamp-aubio-plugins-0.3.2b.ebuild:
+  initial import
+
