@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.43 2007/11/10 21:50:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.44 2007/11/17 16:05:06 drac Exp $
+
+  17 Nov 2007; Samuli Suominen <drac@gentoo.org> ogre-1.4.5.ebuild:
+  Keyword ~amd64 wrt #138093.
 
   10 Nov 2007; Mike Frysinger <vapier@gentoo.org> ogre-1.4.5.ebuild:
   Newer ogres only need gtk+ and not the gtkmm stuff.
