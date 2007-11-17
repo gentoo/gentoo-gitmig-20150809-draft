@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/phat-0.4.1.ebuild,v 1.4 2007/11/17 19:29:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/phat-0.4.1.ebuild,v 1.5 2007/11/17 20:19:23 cla Exp $
 
 DESCRIPTION="PHAT is a collection of GTK+ widgets geared toward pro-audio apps."
 HOMEPAGE="http://phat.berlios.de"
@@ -9,7 +9,7 @@ SRC_URI="http://download2.berlios.de/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc ~x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="debug doc"
 
 RDEPEND=">=x11-libs/gtk+-2.4

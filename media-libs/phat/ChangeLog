@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.14 2007/11/17 19:29:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.15 2007/11/17 20:19:23 cla Exp $
+
+  17 Nov 2007; Dawid Węgliński <cla@gentoo.org> phat-0.4.1.ebuild:
+  Stable on x86 (bug #199447)
 
   17 Nov 2007; Samuli Suominen <drac@gentoo.org> phat-0.4.1.ebuild:
   Use prebuilt documentation instead of building it again.
