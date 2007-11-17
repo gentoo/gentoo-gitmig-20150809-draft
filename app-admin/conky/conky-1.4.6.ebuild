@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.6.ebuild,v 1.6 2007/08/13 05:54:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.6.ebuild,v 1.7 2007/11/17 22:36:03 dragonheart Exp $
 
 inherit eutils
 # used for epause
@@ -25,7 +25,7 @@ DEPEND_COMMON="
 		x11-libs/libXdamage
 		x11-libs/libXft
 		truetype? ( >=media-libs/freetype-2 )
-		audacious? ( >=media-sound/audacious-0.1 )
+		audacious? ( <media-sound/audacious-1.4.0 )
 		bmpx? ( media-sound/bmpx
 				>=sys-apps/dbus-0.35
 			)

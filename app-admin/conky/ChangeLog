@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.55 2007/10/29 09:52:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.56 2007/11/17 22:36:03 dragonheart Exp $
+
+  17 Nov 2007; Daniel Black <dragonheart@gentoo.org> conky-1.4.6.ebuild,
+  conky-1.4.8.ebuild:
+  change dependency as audacious had an API change. Thanks to Philip in bug
+  #198998
 
 *conky-1.4.8 (29 Oct 2007)
 
