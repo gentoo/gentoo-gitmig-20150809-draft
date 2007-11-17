@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/libbtctl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.40 2007/11/14 15:21:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.41 2007/11/17 13:19:28 nixnut Exp $
+
+  17 Nov 2007; nixnut <nixnut@gentoo.org> libbtctl-0.9.0.ebuild:
+  Stable on ppc wrt bug 198845
 
   14 Nov 2007; Raúl Porcel <armin76@gentoo.org> libbtctl-0.9.0.ebuild:
   sparc stable wrt #198845
