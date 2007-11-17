@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.49 2007/11/17 13:40:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.50 2007/11/17 17:15:39 fmccor Exp $
+
+  17 Nov 2007; Ferris McCormick <fmccor@gentoo.org> dillo-0.8.6.ebuild:
+  Sparc stable, Bug #155220, builds and works fine.
 
   17 Nov 2007; Samuli Suominen <drac@gentoo.org> dillo-0.8.6.ebuild:
   Fixed autotools handling, quoting, elog, depends with a patch from Jakub Moc
