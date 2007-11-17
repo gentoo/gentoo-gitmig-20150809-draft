@@ -1,16 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.1-r1.ebuild,v 1.1 2007/10/23 19:09:08 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.2.ebuild,v 1.1 2007/11/17 00:13:28 marineam Exp $
 
 inherit flag-o-matic eutils multilib
 
 DESCRIPTION="Xend daemon and tools"
 HOMEPAGE="http://www.xensource.com/xen/xen/"
-#SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/src.tgz/xen-${PV}-src.tgz"
-#S="${WORKDIR}/xen-${PV}-src"
-
-# Temporary while we wait on the upstream tarball
-SRC_URI="mirror://gentoo//xen-${PV}.tgz"
+SRC_URI="mirror://gentoo/xen-${PV}.tar.gz"
 S="${WORKDIR}/xen-${PV}"
 
 LICENSE="GPL-2"
@@ -116,9 +112,6 @@ src_unpack() {
 
 	# Fix building small dumb utility called 'xen-detect' on hardened
 	epatch "${FILESDIR}/${PN}-3.1.0-xen-detect-nopie-fix.patch"
-
-	# Fix an insecure temp file creation, bug #196824, CVE-2007-3919
-	epatch "${FILESDIR}/${PN}-3.1.1-insecure-file-creation-fix.patch"
 }
 
 src_compile() {

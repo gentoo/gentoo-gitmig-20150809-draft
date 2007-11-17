@@ -1,14 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.4_p1.ebuild,v 1.5 2007/08/27 17:19:12 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.1.2.ebuild,v 1.1 2007/11/17 00:13:55 marineam Exp $
 
 inherit mount-boot flag-o-matic
 
 DESCRIPTION="The Xen virtual machine monitor"
 HOMEPAGE="http://www.xensource.com/xen/xen/"
-MY_PV=${PV/_p/_}
-SRC_URI="http://bits.xensource.com/oss-xen/release/${MY_PV/_/-}/src.tgz/xen-${MY_PV}-src.tgz"
-S="${WORKDIR}/xen-${MY_PV}-src"
+SRC_URI="mirror://gentoo/xen-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,13 +15,13 @@ IUSE="debug custom-cflags pae"
 
 RDEPEND="|| ( sys-boot/grub
 		sys-boot/grub-static )
-		>=sys-kernel/xen-sources-2.6.16.33"
+		>=sys-kernel/xen-sources-2.6.18"
 PDEPEND="~app-emulation/xen-tools-${PV}"
 
 RESTRICT="test"
 
 # Approved by QA team in bug #144032
-QA_WX_LOAD="boot/xen-syms-${MY_PV/_/-}"
+QA_WX_LOAD="boot/xen-syms-${PV}"
 
 pkg_setup() {
 	if [[ -z ${XEN_TARGET_ARCH} ]]; then
@@ -75,12 +73,13 @@ src_install() {
 	use debug && myopt="${myopt} debug=y"
 	use pae && myopt="${myopt} pae=y"
 
-	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${D}" ${myopt} install-xen || die "install failed"
+	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${D}" -C xen ${myopt} install || die "install failed"
 }
 
 pkg_postinst() {
-	elog "Please visit the Xen and Gentoo wiki:"
-	elog "http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
+	elog "Official Xen Guide and the unoffical wiki page:"
+	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
+	elog " http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
 
 	echo
 	elog "Note: xen tools have been moved to app-emulation/xen-tools"
