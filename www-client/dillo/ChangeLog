@@ -1,6 +1,10 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.48 2007/02/22 00:22:03 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.49 2007/11/17 13:40:17 drac Exp $
+
+  17 Nov 2007; Samuli Suominen <drac@gentoo.org> dillo-0.8.6.ebuild:
+  Fixed autotools handling, quoting, elog, depends with a patch from Jakub Moc
+  at bug 155220.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

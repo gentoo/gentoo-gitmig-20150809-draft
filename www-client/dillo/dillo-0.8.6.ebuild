@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.6.ebuild,v 1.2 2006/10/01 21:24:07 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.6.ebuild,v 1.3 2007/11/17 13:40:17 drac Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils autotools
 
 S2=${WORKDIR}/dillo-gentoo-extras-patch4
 DILLO_I18N_P="${P}-i18n-misc-20060625"
@@ -19,22 +19,19 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 MISC_IUSE="nls truetype"
 IUSE="${MISC_IUSE} ipv6 ssl"
 
-RDEPEND="=x11-libs/gtk+-1.2*
+DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/jpeg-6b
 	>=sys-libs/zlib-1.1.3
 	>=media-libs/libpng-1.2.1
 	ssl? ( dev-libs/openssl )"
-DEPEND="sys-devel/autoconf
-	sys-devel/automake
-	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch ../${DILLO_I18N_P}.diff || die
 	epatch "${FILESDIR}"/${PN}-build-fix.patch
 	epatch "${FILESDIR}"/${PN}-asneeded.patch
-	sh autogen.sh || die
+	AT_M4DIR="${S}/m4" eautoreconf
 
 	if [ "${DILLO_ICONSET}" = "kde" ]
 	then
@@ -70,8 +67,8 @@ src_unpack() {
 }
 
 src_compile() {
-	replace-flags "-O2 -mcpu=k6" "-O2 -mcpu=pentium"
-	append-flags "-O"
+	replace-cpu-flags k6 pentium
+	is-flag -O? || append-flags "-O2"
 
 	local myconf
 
@@ -87,50 +84,49 @@ src_compile() {
 		$(use_enable ipv6)
 		$(use_enable ssl)"
 
-	econf ${myconf} || die
-	emake -j1 || die
+	econf ${myconf}
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	dodir /etc  /usr/share/icons/${PN}
-	make DESTDIR=${D} install || die
+	dodir /etc
+	dodir /usr/share/icons/${PN}
+	emake DESTDIR="${D}" install || die "install failed"
 
-	dosed /etc/dpidrc
-
-	dodoc AUTHORS COPYING ChangeLog* INSTALL README NEWS
+	dodoc AUTHORS ChangeLog* README NEWS
 	docinto doc
 	dodoc doc/*.txt doc/README
 
-	cp ${S2}/icons/*.png ${D}/usr/share/icons/${PN}
+	cp ${S2}/icons/*.png "${D}"/usr/share/icons/${PN}
 }
 
 pkg_postinst() {
-	einfo "This ebuild for dillo comes with different toolbar icons"
-	einfo "If you want mozilla style icons then try"
-	einfo "	DILLO_ICONSET=\"mozilla\" emerge dillo"
-	einfo
-	einfo "If you prefer konqueror style icons then try"
-	einfo "	DILLO_ICONSET=\"kde\" emerge dillo"
-	einfo
-	einfo "If you prefer ximian gnome style icons then try"
-	einfo "	DILLO_ICONSET=\"gnome\" emerge dillo"
-	einfo
-	einfo "If you prefer cobalt style icons then try"
-	einfo "	DILLO_ICONSET=\"cobalt\" emerge dillo"
-	einfo
-	einfo "If you prefer bold style icons then try"
-	einfo "	DILLO_ICONSET=\"bold\" emerge dillo"
-	einfo
-	einfo "If you prefer transparent style icons then try"
-	einfo "	DILLO_ICONSET=\"trans\" emerge dillo"
-	einfo
-	einfo "If you prefer the traditional icons then try"
-	einfo "	DILLO_ICONSET=\"trad\" emerge dillo"
-	einfo
-	einfo "If the DILLO_ICONSET variable is not set, you will get the"
-	einfo "default iconset"
-	einfo
-	einfo "To see what the icons look like, please point your browser to:"
-	einfo "http://dillo.auriga.wearlab.de/Icons/"
-	einfo
+	elog "This ebuild for dillo comes with different toolbar icons"
+	elog "If you want mozilla style icons then try"
+	elog "	DILLO_ICONSET=\"mozilla\" emerge dillo"
+	elog
+	elog "If you prefer konqueror style icons then try"
+	elog "	DILLO_ICONSET=\"kde\" emerge dillo"
+	elog
+	elog "If you prefer ximian gnome style icons then try"
+	elog "	DILLO_ICONSET=\"gnome\" emerge dillo"
+	elog
+	elog "If you prefer cobalt style icons then try"
+	elog "	DILLO_ICONSET=\"cobalt\" emerge dillo"
+	elog
+	elog "If you prefer bold style icons then try"
+	elog "	DILLO_ICONSET=\"bold\" emerge dillo"
+	elog
+	elog "If you prefer transparent style icons then try"
+	elog "	DILLO_ICONSET=\"trans\" emerge dillo"
+	elog
+	elog "If you prefer the traditional icons then try"
+	elog "	DILLO_ICONSET=\"trad\" emerge dillo"
+	elog
+	elog "If the DILLO_ICONSET variable is not set, you will get the"
+	elog "default iconset"
+	elog
+	elog "To see what the icons look like, please point your browser to:"
+	elog "http://dillo.auriga.wearlab.de/Icons/"
+	elog
 }
