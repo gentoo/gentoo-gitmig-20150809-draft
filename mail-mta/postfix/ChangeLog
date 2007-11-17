@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.134 2007/10/21 11:15:08 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.135 2007/11/17 18:49:26 nixnut Exp $
+
+  17 Nov 2007; nixnut <nixnut@gentoo.org> postfix-2.4.5.ebuild:
+  Stable on ppc wrt bug 199332
 
   21 Oct 2007; <solar@gentoo.org> postfix-2.1.5-r2.ebuild,
   postfix-2.2.10.ebuild, postfix-2.2.10-r1.ebuild, postfix-2.2.11.ebuild,
