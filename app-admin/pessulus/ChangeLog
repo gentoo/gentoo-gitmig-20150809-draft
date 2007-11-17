@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.40 2007/11/17 13:31:04 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.41 2007/11/17 16:02:24 nixnut Exp $
+
+  17 Nov 2007; nixnut <nixnut@gentoo.org> pessulus-2.16.3.ebuild:
+  Stable on ppc wrt bug 199322
 
   17 Nov 2007; Dawid Węgliński <cla@gentoo.org> pessulus-2.16.3.ebuild:
   Stable on x86 (bug #199322)
