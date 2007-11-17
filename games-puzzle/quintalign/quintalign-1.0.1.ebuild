@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quintalign/quintalign-1.0.1.ebuild,v 1.1 2006/05/21 10:47:23 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quintalign/quintalign-1.0.1.ebuild,v 1.2 2007/11/17 08:53:24 mr_bones_ Exp $
 
+ARTS_REQUIRED=yes
 inherit kde
 need-kde 3
 
