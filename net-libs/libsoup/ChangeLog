@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.131 2007/11/17 15:30:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.132 2007/11/17 17:57:05 armin76 Exp $
+
+  17 Nov 2007; Raúl Porcel <armin76@gentoo.org> libsoup-2.2.103.ebuild:
+  alpha/ia64/sparc stable wrt #199322
 
   17 Nov 2007; nixnut <nixnut@gentoo.org> libsoup-2.2.103.ebuild:
   Stable on ppc wrt bug 199322
