@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.21 2007/11/06 19:06:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.22 2007/11/17 09:33:00 drac Exp $
+
+  17 Nov 2007; Samuli Suominen <drac@gentoo.org> elfkickers-2.0a-r3.ebuild:
+  amd64 stable wrt #197752
 
   06 Nov 2007; Raúl Porcel <armin76@gentoo.org> elfkickers-2.0a-r3.ebuild:
   sparc stable wrt #197752
