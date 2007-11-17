@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.214.ebuild,v 1.2 2007/10/10 22:19:46 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.214.ebuild,v 1.3 2007/11/17 21:50:34 hollow Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -39,6 +39,12 @@ pkg_setup() {
 	einfo
 	einfo "Using \"${VDIRBASE}\" as vserver base directory"
 	einfo
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-baselayout2_path.patch
 }
 
 src_compile() {
