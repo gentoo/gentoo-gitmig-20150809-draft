@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/cpptasks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cpptasks/ChangeLog,v 1.10 2007/11/17 06:47:18 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cpptasks/ChangeLog,v 1.11 2007/11/17 21:56:33 opfer Exp $
+
+  17 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  cpptasks-1.0_beta4-r2.ebuild:
+  stable x86, bug 199244
 
   17 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   cpptasks-1.0_beta4-r2.ebuild:
