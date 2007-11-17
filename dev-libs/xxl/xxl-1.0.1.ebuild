@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xxl/xxl-1.0.1.ebuild,v 1.2 2005/05/06 11:59:23 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xxl/xxl-1.0.1.ebuild,v 1.3 2007/11/17 23:06:13 vapier Exp $
 
 DESCRIPTION="C/C++ library that provides exception handling and asset management"
 HOMEPAGE="http://www.zork.org/xxl/"
@@ -11,10 +11,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/libc"
-DEPEND="${RDEPEND}"
-
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc README
 }
