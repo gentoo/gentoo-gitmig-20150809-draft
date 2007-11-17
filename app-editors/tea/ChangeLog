@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.23 2007/10/22 14:23:21 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.24 2007/11/17 17:30:36 welp Exp $
+
+*tea-17.4.1 (17 Nov 2007)
+
+  17 Nov 2007; Peter Weller <welp@gentoo.org> +tea-17.4.1.ebuild:
+  Bump
 
   22 Oct 2007; <welp@gentoo.org> ChangeLog:
   Bump to 17.3.5, remove sounds USE in previous versions. Fixes bugs 196402
