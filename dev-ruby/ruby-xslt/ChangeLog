@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-xslt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.12 2007/11/16 20:09:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.13 2007/11/17 09:38:24 graaff Exp $
+
+*ruby-xslt-0.9.5 (17 Nov 2007)
+
+  17 Nov 2007; Hans de Graaff <graaff@gentoo.org> +ruby-xslt-0.9.5.ebuild:
+  Version bump with minor build bugfix.
+  Switch to gem version since upstream .tar.gz has not been updated yet and
+  the gem version is much easier to maintain.
 
   16 Nov 2007; Samuli Suominen <drac@gentoo.org> ruby-xslt-0.9.3.ebuild:
   amd64 stable wrt #199391
