@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.74 2007/11/17 13:26:13 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.75 2007/11/17 15:39:12 nixnut Exp $
+
+  17 Nov 2007; nixnut <nixnut@gentoo.org> enchant-1.3.0.ebuild:
+  Stable on ppc wrt bug 199322
 
   17 Nov 2007; Dawid Węgliński <cla@gentoo.org> enchant-1.3.0.ebuild:
   Stable on x86 (bug #199322)
