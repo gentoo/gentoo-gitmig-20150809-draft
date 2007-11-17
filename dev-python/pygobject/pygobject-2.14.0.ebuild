@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.14.0.ebuild,v 1.4 2007/11/16 16:40:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.14.0.ebuild,v 1.5 2007/11/17 13:20:35 cla Exp $
 
 WANT_AUTOCONF=none
 WANT_AUTOMAKE=1.8
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pygtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
 # FIXME: add libffi dependency ?
