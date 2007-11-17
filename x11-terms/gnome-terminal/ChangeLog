@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.151 2007/11/17 13:30:29 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.152 2007/11/17 16:00:07 nixnut Exp $
+
+  17 Nov 2007; nixnut <nixnut@gentoo.org> gnome-terminal-2.18.2.ebuild:
+  Stable on ppc wrt bug 199322
 
   17 Nov 2007; Dawid Węgliński <cla@gentoo.org>
   gnome-terminal-2.18.2.ebuild:
