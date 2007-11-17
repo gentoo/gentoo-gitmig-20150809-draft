@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3145 2007/11/16 14:57:45 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3146 2007/11/17 15:29:43 iluxa Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -304,6 +304,7 @@ app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) sett
 app-vim/vcscommand:cvs - Enable CVS support
 app-vim/vcscommand:subversion - Enable subversion support
 app-vim/vcscommand:svk - Enable SVK support
+dev-cpp/sptk:aspell - Enable Aspell support
 dev-cpp/sptk:excel - Enable Excel support
 dev-db/libpq:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/monetdb:boehmgc - enables Boehm Garbage Collector for XQuery
