@@ -1,2 +1,5 @@
 # Needs libmodplug
 media-libs/sdl-sound mikmod
+
+# Needs valgrind
+media-libs/gst-plugins-base debug
