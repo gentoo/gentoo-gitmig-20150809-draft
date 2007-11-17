@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/telnetd-2.0.ebuild,v 1.1 2007/07/23 13:38:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/telnetd-2.0.ebuild,v 1.2 2007/11/17 21:08:13 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/telnetd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 COMMON_DEP="dev-java/commons-logging"
