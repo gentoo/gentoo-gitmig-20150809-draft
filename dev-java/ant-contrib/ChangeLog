@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-contrib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.24 2007/11/15 21:23:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.25 2007/11/17 00:57:23 wltjr Exp $
+
+  17 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  ant-contrib-1.0_beta2-r2.ebuild:
+  amd64 stable, bug #199231.
 
   15 Nov 2007; Markus Meier <maekke@gentoo.org>
   ant-contrib-1.0_beta2-r2.ebuild:
