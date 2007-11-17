@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.123 2007/09/21 23:14:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.124 2007/11/17 15:13:53 lu_zero Exp $
+
+  17 Nov 2007; Luca Barbato <lu_zero@gentoo.org> blender-2.45.ebuild:
+  Fix deps, thanks to Maciej Pawlik <yaq@world.pl> for spotting the issue in
+  bug #199440
 
 *blender-2.45 (21 Sep 2007)
 
