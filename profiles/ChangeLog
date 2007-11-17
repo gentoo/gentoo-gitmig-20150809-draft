@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.825 2007/11/16 08:08:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.826 2007/11/17 23:13:59 calchan Exp $
+
+  17 Nov 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
+  Deleted mask on net-print/hpijs after removal, see bug #176962.
 
   16 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> base/package.use,
   use.local.desc:
