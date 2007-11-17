@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdepend
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.43 2007/05/09 20:46:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.44 2007/11/17 22:02:32 wltjr Exp $
+
+  17 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  jdepend-2.9-r4.ebuild:
+  amd64 stable, bug #199250.
 
   09 May 2007; Petteri Räty <betelgeuse@gentoo.org> -jdepend-2.6-r1.ebuild:
   Remove old version using generation 1.
