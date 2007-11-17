@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.108 2007/11/17 15:37:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.109 2007/11/17 18:02:40 armin76 Exp $
+
+  17 Nov 2007; Raúl Porcel <armin76@gentoo.org>
+  gtksourceview-1.8.5-r1.ebuild:
+  alpha/ia64/sparc stable wrt #199322
 
   17 Nov 2007; nixnut <nixnut@gentoo.org> gtksourceview-1.8.5-r1.ebuild:
   Stable on ppc wrt bug 199322
