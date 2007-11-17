@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7909 2007/11/17 12:02:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7910 2007/11/17 12:22:08 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -25,6 +25,17 @@
 # Masked for testing until entire set is committed.
 =media-libs/gstreamer-0.10.15*
 =media-libs/gst-plugins-base-0.10.15*
+=media-plugins/gst-plugins-alsa-0.10.15*
+=media-plugins/gst-plugins-cdparanoia-0.10.15*
+=media-plugins/gst-plugins-gnomevfs-0.10.15*
+=media-plugins/gst-plugins-libvisual-0.10.15*
+=media-plugins/gst-plugins-ogg-0.10.15*
+=media-plugins/gst-plugins-pango-0.10.15*
+=media-plugins/gst-plugins-theora-0.10.15*
+=media-plugins/gst-plugins-v4l-0.10.15*
+=media-plugins/gst-plugins-vorbis-0.10.15*
+=media-plugins/gst-plugins-x-0.10.15*
+=media-plugins/gst-plugins-xvideo-0.10.15*
 
 # Doug Klima <cardoe@gentoo.org> (16 Nov 2007)
 # new heimdal version that's not too tested
