@@ -1,6 +1,6 @@
 # Copyright 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.6.ebuild,v 1.1 2007/11/17 15:20:50 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.6.ebuild,v 1.2 2007/11/17 18:50:16 iluxa Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -41,6 +41,8 @@ src_unpack() {
 	check_use aspell   ASPELL
 	check_use fltk     FLTK
 	check_use excel    EXCEL
+
+	sed -r -i -e 's|SET \(LIBRARY_TYPE STATIC\)|SET \(LIBRARY_TYPE SHARED\)|' src/CMakeLists.txt
 
 	cmake -D CMAKE_INSTALL_PREFIX:PATH=/usr ${SPTK_OPTIONS} .  || die "Configuration Failed"
 }
