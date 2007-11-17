@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.31 2007/08/13 14:00:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.32 2007/11/17 18:05:09 pva Exp $
+
+  17 Nov 2007; <pva@gentoo.org>
+  -files/uae-0.8.25-fix_static_declatarions.diff:
+  Clean unused patch.
 
 *uae-0.8.26-r1 (13 Aug 2007)
 
