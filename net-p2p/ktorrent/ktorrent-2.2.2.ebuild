@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.2.ebuild,v 1.6 2007/10/20 21:05:36 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.2.ebuild,v 1.7 2007/11/17 14:02:30 philantrop Exp $
 
 inherit kde
 
@@ -20,7 +20,8 @@ IUSE="avahi geoip kdeenablefinal"
 DEPEND="dev-libs/gmp
 		avahi? ( >=net-dns/avahi-0.6.16-r1 )
 		geoip? ( >=dev-libs/geoip-1.4.0-r1 )"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+		|| ( kde-base/kdebase kde-base/kdebase-kioslaves )"
 
 need-kde 3.5
 
