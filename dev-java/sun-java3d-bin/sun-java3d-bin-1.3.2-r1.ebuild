@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.3.2.ebuild,v 1.4 2007/01/05 23:38:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.3.2-r1.ebuild,v 1.1 2007/11/17 18:33:10 wltjr Exp $
 
-inherit java-pkg
+inherit java-pkg-2
 
 DESCRIPTION="Sun Java3D API Core"
 HOMEPAGE="https://j3d-core.dev.java.net/"
@@ -25,7 +25,7 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	unzip -q j3d-132-linux-${ARCH}.zip || die
 }
 
