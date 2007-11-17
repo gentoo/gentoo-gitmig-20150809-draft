@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.6.ebuild,v 1.3 2007/11/17 13:40:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.6.ebuild,v 1.4 2007/11/17 13:46:23 drac Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -28,7 +28,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ../${DILLO_I18N_P}.diff || die
+	epatch ../${DILLO_I18N_P}.diff
 	epatch "${FILESDIR}"/${PN}-build-fix.patch
 	epatch "${FILESDIR}"/${PN}-asneeded.patch
 	AT_M4DIR="${S}/m4" eautoreconf
@@ -85,7 +85,7 @@ src_compile() {
 		$(use_enable ssl)"
 
 	econf ${myconf}
-	emake -j1 || die "emake failed"
+	emake -j1 || die "emake failed."
 }
 
 src_install() {
