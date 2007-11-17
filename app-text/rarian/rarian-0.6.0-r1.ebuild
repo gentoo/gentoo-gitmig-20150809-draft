@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/rarian-0.6.0-r1.ebuild,v 1.3 2007/10/28 15:40:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/rarian-0.6.0-r1.ebuild,v 1.4 2007/11/17 16:07:05 nixnut Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="www.freedesktop.org"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-libs/libxslt"

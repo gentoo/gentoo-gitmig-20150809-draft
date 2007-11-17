@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rarian
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.11 2007/10/29 02:57:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.12 2007/11/17 16:07:05 nixnut Exp $
+
+  17 Nov 2007; nixnut <nixnut@gentoo.org> rarian-0.6.0-r1.ebuild:
+  Added ~ppc wrt bug 196360
 
   29 Oct 2007; Mart Raudsepp <leio@gentoo.org> -rarian-0.6.0.ebuild:
   Removing old reversion that is without the memory clobbering fix
