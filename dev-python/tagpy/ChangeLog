@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/tagpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.12 2007/10/14 15:18:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.13 2007/11/17 23:50:34 sbriesen Exp $
+
+*tagpy-0.93 (17 Nov 2007)
+
+  17 Nov 2007; Stefan Briesenick <sbriesen@gentoo.org> +tagpy-0.93.ebuild:
+  version bump, solving bug #197608.
 
   14 Oct 2007; Markus Rothe <corsair@gentoo.org> tagpy-0.91.ebuild:
   Stable on ppc64; bug #193781
