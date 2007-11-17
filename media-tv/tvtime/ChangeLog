@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.41 2007/10/06 20:11:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.42 2007/11/17 13:35:26 flameeyes Exp $
+
+*tvtime-1.0.2-r2 (17 Nov 2007)
+
+  17 Nov 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/tvtime-1.0.2-libsupc++.patch, +tvtime-1.0.2-r2.ebuild:
+  Link to -lsupc++ rather than -lstdc++, this way the dependency over
+  libstdc++.so is dropped.
 
   06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   tvtime-1.0.2-r1.ebuild:
