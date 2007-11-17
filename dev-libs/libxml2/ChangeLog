@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.194 2007/11/17 13:11:39 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.195 2007/11/17 14:59:14 nixnut Exp $
+
+  17 Nov 2007; nixnut <nixnut@gentoo.org> libxml2-2.6.30.ebuild:
+  Stable on ppc wrt bug 199322
 
   17 Nov 2007; Dawid Węgliński <cla@gentoo.org> libxml2-2.6.30.ebuild:
   Stable on x86 (bug #199322)
