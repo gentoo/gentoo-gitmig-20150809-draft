@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.129 2007/11/16 17:06:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.130 2007/11/17 13:21:55 cla Exp $
+
+  17 Nov 2007; Dawid Węgliński <cla@gentoo.org> libsoup-2.2.103.ebuild:
+  Stable on x86 (bug #199322)
 
   16 Nov 2007; Samuli Suominen <drac@gentoo.org> libsoup-2.2.103.ebuild:
   amd64 stable wrt #199322
