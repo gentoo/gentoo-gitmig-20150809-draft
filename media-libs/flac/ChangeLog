@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.133 2007/11/18 19:22:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.134 2007/11/18 19:31:35 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/flac-1.2.1-gcc-4.3-includes.patch, flac-1.2.1-r2.ebuild:
+  fix building with gcc 4.3, thanks to Ryan Hill <dirtyepic@gentoo.org>, bug
+  #199579
 
 *flac-1.2.1-r2 (18 Nov 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r2.ebuild,v 1.1 2007/11/18 19:22:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r2.ebuild,v 1.2 2007/11/18 19:31:35 aballier Exp $
 
 EAPI="1"
 
@@ -32,6 +32,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 	epatch "${FILESDIR}"/${P}-cflags.patch
 	epatch "${FILESDIR}"/${P}-asm.patch
+
+	# Fix build with gcc 4.3, bug #199579
+	epatch "${FILESDIR}/${P}-gcc-4.3-includes.patch"
 
 	AT_M4DIR="m4" eautoreconf
 }
