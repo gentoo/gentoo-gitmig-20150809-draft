@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.9.ebuild,v 1.1 2007/09/17 16:19:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.9.ebuild,v 1.2 2007/11/18 17:27:12 aballier Exp $
 
 NEED_PYTHON=2.4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.jokosher.org/downloads/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/dbus-python
