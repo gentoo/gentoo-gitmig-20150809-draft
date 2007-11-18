@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.41 2007/11/17 20:46:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.42 2007/11/18 15:07:50 armin76 Exp $
+
+  18 Nov 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/mkdirs-before-install.patch, debootstrap-1.0.7.ebuild:
+  Fix 1.0.7 failure, bug #199516
 
 *debootstrap-1.0.7 (17 Nov 2007)
 
