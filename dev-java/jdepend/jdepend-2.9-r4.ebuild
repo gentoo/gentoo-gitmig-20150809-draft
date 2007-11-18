@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.9-r4.ebuild,v 1.3 2007/11/18 00:04:17 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.9-r4.ebuild,v 1.4 2007/11/18 18:17:23 corsair Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.clarkware.com/software/${P}.zip"
 
 LICENSE="jdepend"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ~ppc ppc64 x86 ~x86-fbsd"
 
 DEPEND=">=virtual/jdk-1.4
 	>=app-arch/unzip-5.50-r1"
