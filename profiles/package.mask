@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7916 2007/11/18 15:19:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7917 2007/11/18 17:19:14 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -146,7 +146,6 @@ media-radio/ktrack
 app-portage/portagemaster
 x11-themes/ximian-artwork
 mail-filter/popfile
-x11-misc/fluxter
 x11-misc/fluxspace
 app-vim/hgmenu
 app-vim/hgcommand
