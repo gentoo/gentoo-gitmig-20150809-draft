@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.18 2007/11/11 15:34:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.19 2007/11/18 15:45:47 aballier Exp $
 
 inherit eutils
 
@@ -24,15 +24,15 @@ S=${WORKDIR}/${MY_PN}/src
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-fbsd.patch
+	epatch "${FILESDIR}/${P}-fbsd.patch"
 	sed -i \
 		-e "/^CFLAGS/ s:-O3:${CFLAGS}:" \
-		${S}/makefile || die "sed makefile failed (CFLAGS)"
+		"${S}/makefile" || die "sed makefile failed (CFLAGS)"
 	sed -i \
 		-e 's:-mkdirhier:mkdir\ -p:g' \
-		${S}/makefile || die "sed makefile failed (mkdirhier)"
-	epatch ${FILESDIR}/${P}-test.patch
-	epatch ${FILESDIR}/${P}-gcc4.patch
+		"${S}/makefile" || die "sed makefile failed (mkdirhier)"
+	epatch "${FILESDIR}/${P}-test.patch"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
 src_compile() {
@@ -50,9 +50,9 @@ src_test() {
 
 src_install() {
 	make \
-		INSTALL_PLUGINS_DIR=${D}/usr/$(get_libdir)/ladspa \
-		INSTALL_INCLUDE_DIR=${D}/usr/include \
-		INSTALL_BINARY_DIR=${D}/usr/bin \
+		INSTALL_PLUGINS_DIR="${D}/usr/$(get_libdir)/ladspa" \
+		INSTALL_INCLUDE_DIR="${D}/usr/include" \
+		INSTALL_BINARY_DIR="${D}/usr/bin" \
 		install || die "make install failed"
 
 	cd ../doc && \
@@ -60,5 +60,5 @@ src_install() {
 
 	# Needed for apps like rezound
 	dodir /etc/env.d
-	echo "LADSPA_PATH=/usr/$(get_libdir)/ladspa" > ${D}/etc/env.d/60ladspa
+	echo "LADSPA_PATH=/usr/$(get_libdir)/ladspa" > "${D}/etc/env.d/60ladspa"
 }
