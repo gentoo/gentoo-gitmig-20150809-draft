@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.26 2007/11/18 16:13:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.27 2007/11/18 16:19:01 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org> -ladspa-cmt-1.14.ebuild,
+  ladspa-cmt-1.15.ebuild:
+  remove old, quote variables
 
 *ladspa-cmt-1.16 (18 Nov 2007)
 
