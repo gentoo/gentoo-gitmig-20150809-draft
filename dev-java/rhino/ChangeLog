@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.54 2007/05/09 15:18:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.55 2007/11/18 10:18:05 opfer Exp $
+
+  18 Nov 2007; Christian Faulhammer <opfer@gentoo.org> rhino-1.6.5.ebuild:
+  stable x86, bug 199258
 
   09 May 2007; Raúl Porcel <armin76@gentoo.org> rhino-1.6.5.ebuild:
   Add ~ia64 wrt #160813
