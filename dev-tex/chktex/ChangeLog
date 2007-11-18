@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.20 2007/10/26 20:13:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.21 2007/11/18 16:50:09 aballier Exp $
+
+*chktex-1.6.4 (18 Nov 2007)
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org> +chktex-1.6.4.ebuild:
+  version bump, bug #199550
 
   26 Oct 2007; Raúl Porcel <armin76@gentoo.org> chktex-1.6.3-r1.ebuild:
   Add ~alpha/~ia64 wrt #195815
