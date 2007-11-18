@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7921 2007/11/18 21:37:34 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7922 2007/11/18 22:31:30 aballier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -31,11 +31,6 @@ app-admin/eselect-wxwidgets
 # an incomplete fix for the non-remote vulnerability
 # CVE-2007-4572
 =net-fs/samba-3.0.27
-
-# Alexis Ballier <aballier@gentoo.org> (18 Nov 2007)
-# Temporary mask flac with EAPI=1 and optional FLAC++
-# until all the packages really needing it have a check.
-=media-libs/flac-1.2.1-r2
 
 # Samuli Suominen <drac@gentoo.org> (18 Nov 2007)
 # Based on Xfce 4.4.2 testing tarballs at

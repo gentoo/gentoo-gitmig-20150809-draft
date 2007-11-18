@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.831 2007/11/18 21:52:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.832 2007/11/18 22:31:30 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask flac with cxx useflag now that everything has been checked against it
 
   18 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Add wxGTK-2.6.4.0-r2 to mask.
