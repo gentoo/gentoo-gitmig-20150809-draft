@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/microba/microba-0.4.4.ebuild,v 1.1 2007/04/14 22:22:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/microba/microba-0.4.4.ebuild,v 1.2 2007/11/18 00:23:47 cla Exp $
 
 JAVA_PKG_BSFIX="off"
 JAVA_PKG_IUSE="doc source"
@@ -11,7 +11,7 @@ DESCRIPTION="Swing components for date operations and palettes"
 HOMEPAGE="http://microba.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-full.zip"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
 
 COMMON_DEPEND=">=dev-java/jgraph-5.9.2"
