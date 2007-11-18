@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7913 2007/11/18 06:13:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7914 2007/11/18 07:51:16 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -22,7 +22,9 @@
 ##
 
 # Samuli Suominen <drac@gentoo.org> (18 Nov 2007)
-# Xfce 4.4.2
+# Based on Xfce 4.4.2 testing tarballs at
+# http://mocha.xfce.org/archive/.testing/xfce-4.4.2/src
+# Content and digest might still change, be careful.
 =xfce-base/libxfce4mcs-4.4.2*
 =xfce-base/libxfce4util-4.4.2*
 =xfce-base/libxfcegui4-4.4.2*
