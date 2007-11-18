@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/util-vserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.85 2007/11/17 21:50:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.86 2007/11/18 10:23:54 hollow Exp $
+
+  18 Nov 2007; Benedikt Böhm <hollow@gentoo.org>
+  files/util-vserver-0.30.214-baselayout2_path.patch:
+  fix broken patch (LF instead of CRLF, blame trac)
 
   17 Nov 2007; Benedikt Böhm <hollow@gentoo.org>
   +files/util-vserver-0.30.214-baselayout2_path.patch,
