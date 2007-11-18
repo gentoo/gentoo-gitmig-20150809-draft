@@ -1,12 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.830 2007/11/18 21:37:34 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.831 2007/11/18 21:52:08 flameeyes Exp $
 
   18 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Add wxGTK-2.6.4.0-r2 to mask.
 
   18 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Mask eselect-wxwidgets for keywording.
+
+  18 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
+  Add cxx USE flag for libpcre.
 
   18 Nov 2007; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Blocking the upgrade to net-fs/samba-3.0.27 due to regression (bug #199450)
