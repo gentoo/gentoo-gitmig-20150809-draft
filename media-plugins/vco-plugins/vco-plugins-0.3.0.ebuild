@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vco-plugins/vco-plugins-0.3.0.ebuild,v 1.4 2004/07/26 07:42:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vco-plugins/vco-plugins-0.3.0.ebuild,v 1.5 2007/11/18 18:07:40 aballier Exp $
+
+inherit multilib toolchain-funcs
 
 IUSE=""
 #
@@ -18,12 +20,15 @@ DEPEND="media-libs/ladspa-sdk"
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
+	tc-export CXX
+	sed -i -e "s/-O3//" Makefile
+	sed -i -e "s/g++/$(tc-getCXX)/" Makefile
 	emake || die
 }
 
 src_install() {
-	dodoc AUTHORS COPYING README
-	insinto /usr/lib/ladspa
+	dodoc AUTHORS README
+	insinto /usr/$(get_libdir)/ladspa
 	insopts -m0755
 	doins *.so
 }

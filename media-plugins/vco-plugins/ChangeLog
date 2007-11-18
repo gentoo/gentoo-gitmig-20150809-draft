@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vco-plugins
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vco-plugins/ChangeLog,v 1.10 2007/11/18 17:50:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vco-plugins/ChangeLog,v 1.11 2007/11/18 18:07:40 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  vco-plugins-0.3.0.ebuild:
+  use full name for g++, make multilib aware, dont force -O3
 
   18 Nov 2007; Alexis Ballier <aballier@gentoo.org> metadata.xml,
   -vco-plugins-0.2.1.ebuild:
