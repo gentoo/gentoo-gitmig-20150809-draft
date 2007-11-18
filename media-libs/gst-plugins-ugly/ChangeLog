@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gst-plugins-ugly
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.30 2007/10/11 14:54:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.31 2007/11/18 20:19:25 drac Exp $
+
+*gst-plugins-ugly-0.10.6-r1 (18 Nov 2007)
+
+  18 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +files/gst-plugins-ugly-0.10.6-mpegaudioparse-cvs20071117.patch,
+  +gst-plugins-ugly-0.10.6-r1.ebuild:
+  Update mpegaudioparse to CVS 20071117 to work with current core.
 
   11 Oct 2007; Markus Rothe <corsair@gentoo.org>
   gst-plugins-ugly-0.10.6.ebuild:
