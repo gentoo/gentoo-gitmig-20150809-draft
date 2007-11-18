@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3147 2007/11/18 06:13:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3148 2007/11/18 09:55:56 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -277,6 +277,7 @@ app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer for 
 app-text/ghostscript-esp:djvu - Enable gsdjvu support
 app-text/ghostscript-gpl:djvu - Enable gsdjvu support
 app-text/hyperestraier:mecab - Enable mecab support for Estraier
+app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
 app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/noweb:icon - Enable icon language support for noweb
 app-text/pdftk:nodrm - Decrypt a document with the user_pw even if it has an owner_pw set
