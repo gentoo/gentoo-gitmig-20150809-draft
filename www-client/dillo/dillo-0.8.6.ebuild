@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.6.ebuild,v 1.8 2007/11/18 11:18:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.6.ebuild,v 1.9 2007/11/18 16:21:52 jer Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~mips ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~mips ppc ~ppc64 sparc x86"
 MISC_IUSE="nls truetype"
 IUSE="${MISC_IUSE} ipv6 ssl"
 
@@ -36,31 +36,31 @@ src_unpack() {
 	if [ "${DILLO_ICONSET}" = "kde" ]
 	then
 		einfo "Using Konqueror style icon set"
-		cp ${S2}/pixmaps.konq.h ${S}/src/pixmaps.h
+		cp "${S2}"/pixmaps.konq.h "${S}"/src/pixmaps.h
 	elif [ "${DILLO_ICONSET}" = "gnome" ]
 	then
 		einfo "Using Ximian style icon set"
-		cp ${S2}/pixmaps.ximian.h ${S}/src/pixmaps.h
+		cp "${S2}"/pixmaps.ximian.h "${S}"/src/pixmaps.h
 	elif [ "${DILLO_ICONSET}" = "mozilla" ]
 	then
 		einfo "Using Netscape style icon set"
-		cp ${S2}/pixmaps.netscape.h ${S}/src/pixmaps.h
+		cp "${S2}"/pixmaps.netscape.h "${S}"/src/pixmaps.h
 	elif [ "${DILLO_ICONSET}" = "cobalt" ]
 	then
 		einfo "Using Cobalt style icon set"
-		cp ${S2}/pixmaps.cobalt.h ${S}/src/pixmaps.h
+		cp "${S2}"/pixmaps.cobalt.h "${S}"/src/pixmaps.h
 	elif [ "${DILLO_ICONSET}" = "bold" ]
 	then
 		einfo "Using bold style icon set"
-		cp ${S2}/pixmaps.bold.h ${S}/src/pixmaps.h
+		cp "${S2}"/pixmaps.bold.h "${S}"/src/pixmaps.h
 	elif [ "${DILLO_ICONSET}" = "trans" ]
 	then
 		einfo "Using transparent style icon set"
-		cp ${S2}/pixmaps.trans.h ${S}/src/pixmaps.h
+		cp "${S2}"/pixmaps.trans.h "${S}"/src/pixmaps.h
 	elif [ "${DILLO_ICONSET}" = "trad" ]
 	then
 		einfo "Using the traditional icon set"
-		cp ${S2}/pixmaps.trad.h ${S}/src/pixmaps.h
+		cp "${S2}"/pixmaps.trad.h "${S}"/src/pixmaps.h
 	else
 		einfo "Using default Dillo icon set"
 	fi
