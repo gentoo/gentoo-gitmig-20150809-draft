@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/fil-plugins
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/ChangeLog,v 1.7 2007/09/17 20:39:47 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/ChangeLog,v 1.8 2007/11/18 18:21:14 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org> metadata.xml,
+  fil-plugins-0.1.0.ebuild:
+  handle to proaudio herd like others ladspa plugins, make multilib aware,
+  dont install COPYING, use full g++ name, dont force -O3, fix homepage and
+  src_uri
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing fvdpol from metadata.xml (see #51321 for reference).
