@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.95 2007/11/17 20:29:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.96 2007/11/18 13:48:39 corsair Exp $
+
+  18 Nov 2007; Markus Rothe <corsair@gentoo.org> R-2.2.1-r1.ebuild:
+  Stable on ppc64; bug #198976
 
   17 Nov 2007; Raúl Porcel <armin76@gentoo.org> R-2.2.1-r1.ebuild:
   ia64 stable wrt security #198976
