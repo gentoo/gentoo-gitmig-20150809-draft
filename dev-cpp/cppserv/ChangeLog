@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/cppserv
 # Copyright 2006-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.12 2007/11/18 16:15:07 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.13 2007/11/18 21:58:45 iluxa Exp $
+
+  18 Nov 2007; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  -cppserv-0.1.99.ebuild, -cppserv-0.1.100.ebuild:
+  Remove older versions, as they are broken now
 
 *cppserv-0.1.102 (18 Nov 2007)
 
