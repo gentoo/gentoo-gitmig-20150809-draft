@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libxtract
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxtract/ChangeLog,v 1.1 2007/11/18 12:37:19 aballier Exp $
+
+*libxtract-0.4.7 (18 Nov 2007)
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +libxtract-0.4.7.ebuild:
+  initial import
+
