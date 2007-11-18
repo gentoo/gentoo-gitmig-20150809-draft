@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/sonic-visualiser
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.1 2007/11/18 19:12:43 aballier Exp $
+
+*sonic-visualiser-1.0 (18 Nov 2007)
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/sonic-visualiser-1.0-loarg.patch, +metadata.xml,
+  +sonic-visualiser-1.0.ebuild:
+  initial import, ebuild greatly inspired from the proaudio overlay
+

@@ -1,0 +1,13 @@
+Index: sonic-visualiser-1.0/sv/osc/OSCQueue.cpp
+===================================================================
+--- sonic-visualiser-1.0.orig/sv/osc/OSCQueue.cpp
++++ sonic-visualiser-1.0/sv/osc/OSCQueue.cpp
+@@ -61,7 +61,7 @@ OSCQueue::oscMessageHandler(const char *
+ 
+         switch (type) {
+         case 'i': message.addArg(arg->i); break;
+-        case 'h': message.addArg(arg->h); break;
++        case 'h': message.addArg((int)arg->h); break;
+         case 'f': message.addArg(arg->f); break;
+         case 'd': message.addArg(arg->d); break;
+         case 'c': message.addArg(arg->c); break;
