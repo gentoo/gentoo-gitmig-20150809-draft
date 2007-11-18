@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vco-plugins
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vco-plugins/ChangeLog,v 1.9 2007/09/17 20:42:25 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vco-plugins/ChangeLog,v 1.10 2007/11/18 17:50:59 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org> metadata.xml,
+  -vco-plugins-0.2.1.ebuild:
+  remove old, handle to proaudio herd like others ladspa plugins
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing fvdpol from metadata.xml (see #51321 for reference).
