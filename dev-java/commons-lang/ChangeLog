@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.47 2007/11/17 02:01:15 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.48 2007/11/18 18:11:08 corsair Exp $
+
+  18 Nov 2007; Markus Rothe <corsair@gentoo.org> commons-lang-2.3.ebuild:
+  Stable on ppc64; bug #199241
 
   17 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   commons-lang-2.3.ebuild:
