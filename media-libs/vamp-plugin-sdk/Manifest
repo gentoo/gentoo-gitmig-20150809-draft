@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX vamp-plugin-sdk-1.1b-destdir.patch 4105 RMD160 2442cde8440d85b1547845bc6404e40457e18991 SHA1 3959a120fb52eea8975b792579f5d0c58351cf67 SHA256 93efa1c1f31a00b84fadc83fe15ad57ab55eac587d60843d5ca7bc1a9ec57fcb
 MD5 c6177cf638c8feb24be5f7b6b978dbf2 files/vamp-plugin-sdk-1.1b-destdir.patch 4105
 RMD160 2442cde8440d85b1547845bc6404e40457e18991 files/vamp-plugin-sdk-1.1b-destdir.patch 4105
@@ -10,10 +7,10 @@ MD5 6e67cfb4a8364d0ccf5cc040ba88c359 files/vamp-plugin-sdk-1.1b-dirsearch.patch 
 RMD160 d8789c9c12bc2c247416d27112f0d91cff1eafed files/vamp-plugin-sdk-1.1b-dirsearch.patch 621
 SHA256 2cd20f93586cad67ad373643cf60d42a083fe2b3d7935eed8d4735bb572b7c90 files/vamp-plugin-sdk-1.1b-dirsearch.patch 621
 DIST vamp-plugin-sdk-1.1b.tar.gz 61565 RMD160 02a61b1bebcf1ccb03cac4e69fbf255bcac0f06c SHA1 b768b043664480ee068d9f6c5e4e760452a4cd80 SHA256 6be294fc301445f3091b49c06de1f0a223e6c2fe62889c09330ee3e5a488b83c
-EBUILD vamp-plugin-sdk-1.1b-r1.ebuild 1479 RMD160 0993fca07847db33b59276e9d0e9f35ae6c364fa SHA1 bc1d8bdf50e94a2a4075d6b3d23cb15ff3e5f5a6 SHA256 533b14332804d797d31b1821c80eff90aac0120ed05155272d9cc4eed07dd054
-MD5 3d964a7d717739af8b57e99a7b2e5020 vamp-plugin-sdk-1.1b-r1.ebuild 1479
-RMD160 0993fca07847db33b59276e9d0e9f35ae6c364fa vamp-plugin-sdk-1.1b-r1.ebuild 1479
-SHA256 533b14332804d797d31b1821c80eff90aac0120ed05155272d9cc4eed07dd054 vamp-plugin-sdk-1.1b-r1.ebuild 1479
+EBUILD vamp-plugin-sdk-1.1b-r1.ebuild 1479 RMD160 4a1ae57a8c926d064a3dbfbab4245090e078e614 SHA1 1ed1d97303a30fba02661f3c8cc8b4cf687e5c37 SHA256 aa7a1b9d89cfdddef7689b359d9be0b106c2b6ae4cab2bb47ee196b721bd15fe
+MD5 1d3bc53f478c50108106a131f36ba9b6 vamp-plugin-sdk-1.1b-r1.ebuild 1479
+RMD160 4a1ae57a8c926d064a3dbfbab4245090e078e614 vamp-plugin-sdk-1.1b-r1.ebuild 1479
+SHA256 aa7a1b9d89cfdddef7689b359d9be0b106c2b6ae4cab2bb47ee196b721bd15fe vamp-plugin-sdk-1.1b-r1.ebuild 1479
 MISC ChangeLog 806 RMD160 ce87e763f950ef475aba0a2a716bc4a37bbd49fc SHA1 41a20ac97331770123fd0b40c13b20d1441a4e7e SHA256 5f41e3ca3cb1a2889e618fd63f2b16831e2173dc0971a735ebf6d3cb0ddf4fd6
 MD5 a1527553713c14b3b8f248009029c1f4 ChangeLog 806
 RMD160 ce87e763f950ef475aba0a2a716bc4a37bbd49fc ChangeLog 806
@@ -25,10 +22,3 @@ SHA256 0ba191421eefd954d1efe9f6c3384e8c8d7455d35a7e79457272e1c29211b09e metadata
 MD5 c4b534434d9529197117538f2503ab3f files/digest-vamp-plugin-sdk-1.1b-r1 259
 RMD160 16202aee2ed42697bd3c54ee122e0bdd7c17c169 files/digest-vamp-plugin-sdk-1.1b-r1 259
 SHA256 e4b6e7145fdd968ee4ff3203fcafef0e2289bdc07b53996ccfc86c99c1b1142b files/digest-vamp-plugin-sdk-1.1b-r1 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHQIqxvFcC4BYPU0oRAr+qAKCoA/i0xao+v97YhaxvuqSik5ioLwCfRxy5
-6uEOtrCLuvnE/GWAMY5tqgg=
-=zPAz
------END PGP SIGNATURE-----
