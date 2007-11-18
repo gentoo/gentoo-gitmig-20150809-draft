@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.58 2007/11/18 20:04:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.59 2007/11/18 20:17:35 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  hydrogen-0.9.3-r2.ebuild:
+  add a check for flac cxx use flag, FLAC++ is needed here
 
   18 Nov 2007; Alexis Ballier <aballier@gentoo.org>
   -files/hydrogen-0.9.0-asneeded.patch, -hydrogen-0.9.0.ebuild,
