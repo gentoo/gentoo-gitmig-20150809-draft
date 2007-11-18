@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.17.ebuild,v 1.13 2007/08/02 04:55:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.17.ebuild,v 1.14 2007/11/18 20:44:17 aballier Exp $
 
 inherit kde eutils
 
@@ -60,6 +60,12 @@ pkg_setup() {
 		eerror "You are trying to compile ${CATEGORY}/${PF} with the \"hal\" USE flag enabled,"
 		eerror "but sys-apps/dbus is not built with Qt3 support."
 		die "rebuild sys-apps/dbus with the qt3 useflag"
+	fi
+
+	if use flac && ! built_with_use --missing true media-libs/flac cxx; then
+		eerror "To build ${PN} with flac support you need the C++ bindings for flac."
+		eerror "Please enable the cxx USE flag for media-libs/flac"
+		die "Missing FLAC C++ bindings."
 	fi
 
 	kde_pkg_setup

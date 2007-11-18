@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.4.ebuild,v 1.2 2007/11/06 19:34:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.4.ebuild,v 1.3 2007/11/18 20:44:17 aballier Exp $
 
 inherit kde eutils
 
@@ -69,6 +69,12 @@ pkg_setup() {
 		eerror "with libdvdread support. Also keep in mind that enabling"
 		eerror "the dvdread USE flag will cause k3b to use libdvdread as well."
 		die "Please, rebuild media-video/transcode with the \"dvdread\" USE flag."
+	fi
+
+	if use flac && ! built_with_use --missing true media-libs/flac cxx; then
+		eerror "To build ${PN} with flac support you need the C++ bindings for flac."
+		eerror "Please enable the cxx USE flag for media-libs/flac"
+		die "Missing FLAC C++ bindings."
 	fi
 
 	kde_pkg_setup
