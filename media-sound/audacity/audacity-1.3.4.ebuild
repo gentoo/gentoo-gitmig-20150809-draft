@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.4.ebuild,v 1.2 2007/11/18 17:07:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.4.ebuild,v 1.3 2007/11/18 20:28:32 aballier Exp $
 
 inherit eutils wxwidgets
 
@@ -32,6 +32,14 @@ RDEPEND="${DEPEND}
 	mp3? ( >=media-sound/lame-3.70 )"
 
 S="${WORKDIR}/${MY_P}-beta"
+
+pkg_setup() {
+	if use flac && ! built_with_use --missing true media-libs/flac cxx; then
+		eerror "To build ${PN} with flac support you need the C++ bindings for flac."
+		eerror "Please enable the cxx USE flag for media-libs/flac"
+		die "Missing FLAC C++ bindings."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

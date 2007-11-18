@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.70 2007/11/18 14:36:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.71 2007/11/18 20:28:32 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  audacity-1.3.2-r1.ebuild, audacity-1.3.3.ebuild, audacity-1.3.4.ebuild:
+  add a check for flac cxx use flag, FLAC++ is needed here
 
 *audacity-1.3.4 (18 Nov 2007)
 

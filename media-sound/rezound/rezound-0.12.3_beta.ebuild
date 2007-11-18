@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta.ebuild,v 1.6 2007/09/28 12:05:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta.ebuild,v 1.7 2007/11/18 20:24:28 aballier Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -41,6 +41,14 @@ RDEPEND="=sci-libs/fftw-2*
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
+
+pkg_setup() {
+	if use flac && ! built_with_use --missing true media-libs/flac cxx; then
+		eerror "To build ${PN} with flac support you need the C++ bindings for flac."
+		eerror "Please enable the cxx USE flag for media-libs/flac"
+		die "Missing FLAC C++ bindings."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
