@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.11 2006/12/10 15:58:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.12 2007/11/18 22:13:36 aballier Exp $
 
 inherit eutils kde-functions
 
@@ -24,6 +24,14 @@ RDEPEND="=x11-libs/qt-3*
 DEPEND="${RDEPEND}
 	=sys-devel/automake-1.9*
 	>=sys-devel/autoconf-2.50"
+
+pkg_setup() {
+	if ! built_with_use --missing true media-libs/flac cxx; then
+		eerror "To build ${PN} you need the C++ bindings for flac."
+		eerror "Please enable the cxx USE flag for media-libs/flac"
+		die "Missing FLAC C++ bindings."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

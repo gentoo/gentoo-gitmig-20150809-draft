@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.6.ebuild,v 1.5 2007/11/01 16:35:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.6.ebuild,v 1.6 2007/11/18 22:09:13 aballier Exp $
 
 inherit qt3 eutils autotools
 
@@ -22,6 +22,11 @@ DEPEND="$(qt_min_version 3.2)
 		flac? ( media-libs/flac ) )"
 
 pkg_setup() {
+	if use flac && use musicbrainz && ! built_with_use --missing true media-libs/flac cxx; then
+		eerror "To build ${PN} with flac support you need the C++ bindings for flac."
+		eerror "Please enable the cxx USE flag for media-libs/flac"
+		die "Missing FLAC C++ bindings."
+	fi
 	if ! built_with_use =x11-libs/qt-3* mysql; then
 		eerror "You have installed Qt without MySQL support."
 		eerror "Please reemerge x11-libs/qt-3* with "mysql" in USE."

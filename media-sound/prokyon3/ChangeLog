@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/prokyon3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/ChangeLog,v 1.29 2007/11/18 22:06:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/ChangeLog,v 1.30 2007/11/18 22:09:13 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org> prokyon3-0.9.6.ebuild:
+  add a check for flac cxx use flag, FLAC++ is needed here
 
   18 Nov 2007; Alexis Ballier <aballier@gentoo.org>
   -files/prokyon3-0.9.4-gcc41.patch, -prokyon3-0.9.4-r1.ebuild:
