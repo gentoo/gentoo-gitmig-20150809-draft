@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.43.ebuild,v 1.1 2007/11/18 19:08:40 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.43.ebuild,v 1.2 2007/11/18 21:48:00 hkbst Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -33,12 +33,6 @@ RDEPEND="dev-lisp/gentoo-init
 DEPEND="${RDEPEND} X? ( new-clx? ( x11-misc/imake x11-proto/xextproto ) )"
 
 PROVIDE="virtual/commonlisp"
-
-src_unpack() {
-	unpack ${A}
-	# Fix module install path: 2.41.1 -> 2.42
-	sed -i 's:2\.41\.1:2\.42:' "${S}"/src/{configure,version.h}
-}
 
 enable_modules() {
 	[[ $# = 0 ]] && die "${FUNCNAME[0]} must receive at least one argument"
