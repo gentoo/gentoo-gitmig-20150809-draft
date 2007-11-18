@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7912 2007/11/17 23:13:59 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7913 2007/11/18 06:13:17 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,28 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (18 Nov 2007)
+# Xfce 4.4.2
+=xfce-base/libxfce4mcs-4.4.2*
+=xfce-base/libxfce4util-4.4.2*
+=xfce-base/libxfcegui4-4.4.2*
+=xfce-base/orage-4.4.2*
+=xfce-base/xfce-mcs-manager-4.4.2*
+=xfce-base/xfce-mcs-plugins-4.4.2*
+=xfce-base/xfce-utils-4.4.2*
+=xfce-base/xfce4-4.4.2*
+=xfce-base/xfce4-panel-4.4.2*
+=xfce-base/xfce4-session-4.4.2*
+=xfce-base/xfdesktop-4.4.2*
+=xfce-base/xfwm4-4.4.2*
+=xfce-base/xfprint-4.4.2*
+=x11-themes/gtk-engines-xfce-2.4.2*
+=xfce-extra/xfce4-appfinder-4.4.2*
+=xfce-extra/xfwm4-themes-4.4.2*
+=xfce-extra/xfce4-mixer-4.4.2*
+=xfce-extra/xfce4-icon-theme-4.4.2*
+=xfce-extra/mousepad-0.2.13*
 
 # Doug Klima <cardoe@gentoo.org> (16 Nov 2007)
 # new heimdal version that's not too tested
