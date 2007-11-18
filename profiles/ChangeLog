@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.828 2007/11/18 20:33:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.829 2007/11/18 21:30:09 dirtyepic Exp $
+
+  18 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Mask eselect-wxwidgets for keywording.
 
   18 Nov 2007; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Blocking the upgrade to net-fs/samba-3.0.27 due to regression (bug #199450)

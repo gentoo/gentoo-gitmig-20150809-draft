@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7919 2007/11/18 20:33:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7920 2007/11/18 21:30:09 dirtyepic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Ryan Hill <dirtyepic@gentoo.org> (18 Nov 2007)
+# Mask for keywording.
+app-admin/eselect-wxwidgets
 
 # Tiziano Müller <dev-zero@gentoo.org> (18 Nov 2007)
 # There is a serious regression (bug #199450) due to
@@ -125,7 +129,7 @@ app-text/cstetex
 # Beta version
 >=net-im/skype-2.0.0.13
 
-# Hanno Boeck <hanno@gentoo.org (11 Nov 2007)
+# Hanno Boeck <hanno@gentoo.org> (11 Nov 2007)
 # Remaining beryl-related packages, beryl has been removed
 x11-wm/heliodor
 x11-wm/aquamarine
