@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vco-plugins/vco-plugins-0.3.0.ebuild,v 1.5 2007/11/18 18:07:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vco-plugins/vco-plugins-0.3.0.ebuild,v 1.6 2007/11/18 18:11:56 aballier Exp $
 
 inherit multilib toolchain-funcs
 
@@ -9,8 +9,8 @@ IUSE=""
 MY_P=${P/vco/VCO}
 
 DESCRIPTION="SAW-VCO ladspa plugin package. Anti-aliased oscillators"
-HOMEPAGE="http://users.skynet.be/solaris/linuxaudio/"
-SRC_URI="http://users.skynet.be/solaris/linuxaudio/downloads/${MY_P}.tar.bz2"
+HOMEPAGE="http://www.kokkinizita.net/linuxaudio/"
+SRC_URI="http://www.kokkinizita.net/linuxaudio/downloads/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
