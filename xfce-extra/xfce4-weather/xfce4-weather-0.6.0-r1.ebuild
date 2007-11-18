@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/xfce4-weather-0.6.0-r1.ebuild,v 1.9 2007/10/24 01:48:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/xfce4-weather-0.6.0-r1.ebuild,v 1.10 2007/11/18 11:30:18 angelos Exp $
 
 inherit autotools eutils xfce44
 
@@ -18,3 +18,5 @@ src_unpack() {
 	sed -i -e "/^AC_INIT/s/weather_version()/weather_version/" configure.in
 	eautoconf
 }
+
+DOCS="AUTHORS ChangeLog NEWS README TODO"
