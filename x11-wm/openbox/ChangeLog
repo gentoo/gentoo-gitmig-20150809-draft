@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.143 2007/11/18 10:46:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.144 2007/11/18 11:23:45 armin76 Exp $
+
+  18 Nov 2007; Raúl Porcel <armin76@gentoo.org> openbox-3.4.4.ebuild:
+  alpha/sparc stable wrt #199136
 
   18 Nov 2007; Samuli Suominen <drac@gentoo.org> openbox-3.4.4.ebuild:
   amd64 stable wrt #199136
