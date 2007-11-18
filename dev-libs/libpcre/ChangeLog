@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.115 2007/11/18 21:22:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.116 2007/11/18 21:24:51 flameeyes Exp $
+
+  18 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Remove carlo from metadata who didn't commit to the package since March 2006.
 
 *libpcre-7.4-r1 (18 Nov 2007)
 
