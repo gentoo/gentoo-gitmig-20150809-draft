@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.02.ebuild,v 1.1 2007/11/18 11:29:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.02.ebuild,v 1.2 2007/11/18 13:40:26 cla Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}-poppler.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="nodrm linguas_ar linguas_zh_CN linguas_zh_TW linguas_ru linguas_el
 linguas_he linguas_ja linguas_ko linguas_la linguas_th linguas_tr"
 
@@ -42,9 +42,9 @@ src_unpack() {
 
 src_install() {
 	dobin xpdf
-	doman xpdf.1 ${FILESDIR}/xpdfrc.5
+	doman xpdf.1 "${FILESDIR}"/xpdfrc.5
 	insinto /etc
-	newins ${FILESDIR}/sample-xpdfrc xpdfrc
+	newins "${FILESDIR}"/sample-xpdfrc xpdfrc
 	dodoc README ANNOUNCE CHANGES
 
 	use linguas_ar && install_lang arabic
@@ -62,7 +62,7 @@ src_install() {
 
 install_lang() {
 	cd ../xpdf-$1
-	sed 's,/usr/local/share/xpdf/,/usr/share/xpdf/,g' add-to-xpdfrc >> ${D}/etc/xpdfrc
+	sed 's,/usr/local/share/xpdf/,/usr/share/xpdf/,g' add-to-xpdfrc >> "${D}"/etc/xpdfrc
 	insinto /usr/share/xpdf/$1
 	doins -r *.unicodeMap *ToUnicode CMap
 }
