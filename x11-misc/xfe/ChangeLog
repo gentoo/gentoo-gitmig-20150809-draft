@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.43 2007/10/18 13:37:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.44 2007/11/18 18:39:34 drac Exp $
+
+  18 Nov 2007; Samuli Suominen <drac@gentoo.org> xfe-1.04.ebuild:
+  Check for USE truetype and png in fox wrt #198932. amd64 stable.
 
   18 Oct 2007; Christoph Mende <angelos@gentoo.org> xfe-1.00.ebuild:
   Stable on amd64 wrt bug #194892

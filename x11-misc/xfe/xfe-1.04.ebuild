@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.04.ebuild,v 1.1 2007/10/07 05:49:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.04.ebuild,v 1.2 2007/11/18 18:39:34 drac Exp $
 
 inherit eutils
 
@@ -10,11 +10,25 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug nls"
 
 DEPEND="=x11-libs/fox-1.6*
 	nls? ( sys-devel/gettext )"
+
+pkg_setup() {
+	local use_check="Re-emerge =x11-libs/fox-1.6* with USE truetype."
+
+	if ! built_with_use "=x11-libs/fox-1.6*" truetype; then
+		eerror "${use_check}"
+		die "${use_check}"
+	fi
+
+	if ! built_with_use "=x11-libs/fox-1.6*" png; then
+		ewarn "Re-emerge =x11-libs/fox-1.6* with USE png for image support."
+		epause
+	fi
+}
 
 src_compile() {
 	econf $(use_enable nls) $(use_enable debug)
