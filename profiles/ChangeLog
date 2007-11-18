@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.826 2007/11/17 23:13:59 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.827 2007/11/18 19:20:53 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org> package.mask,
+  use.local.desc:
+  Add a cxx flag for flac, to build flac++; mask it until the packages really
+  needing it have a check
 
   17 Nov 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
   Deleted mask on net-print/hpijs after removal, see bug #176962.
