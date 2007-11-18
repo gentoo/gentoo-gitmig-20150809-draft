@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/smlnj
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.17 2007/11/15 22:18:13 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.18 2007/11/18 17:50:49 hkbst Exp $
+
+*smlnj-110.67-r1 (18 Nov 2007)
+
+  18 Nov 2007; Marijn Schouten <hkBst@gentoo.org> -smlnj-110.67.ebuild,
+  +smlnj-110.67-r1.ebuild:
+  fix several issues that prevented sml from working correctly, bug 139381
 
   15 Nov 2007; Marijn Schouten <hkBst@gentoo.org> files/digest-smlnj-110.67,
   Manifest:

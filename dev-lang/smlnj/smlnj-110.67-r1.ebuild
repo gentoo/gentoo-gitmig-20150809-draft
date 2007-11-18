@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.67.ebuild,v 1.1 2007/11/15 17:48:39 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.67-r1.ebuild,v 1.1 2007/11/18 17:50:49 hkbst Exp $
 
 inherit eutils
 
@@ -71,38 +71,15 @@ src_unpack() {
 	for file in ${A}; do
 		[[ ${file} != ${P}-config.tgz ]] && mv "${DISTDIR}/${file}" "${S}/${file#${P}-}"
 	done
-	unpack ${P}-config.tgz
-}
-
-_src_unpack() {
-	unpack ${P}-config.tgz
-
-	mkdir ${S}/srcarchive
-	echo SRCARCHIVEURL=\"file:/${S}\" > ${S}/config/srcarchiveurl
-}
-
-__src_unpack() {
-	unpack ${A}
-
-	mkdir -p "${WORKDIR}/src"
-
-	for dir in ${WORKDIR}/*; do
-#		echo ${dir}
-		[[ -d $dir && ( ! $dir =~ .*config  ) && ( ! $dir =~ .*src ) ]] && mv ${dir} ${WORKDIR}/src
-	done
-
-#	printf ${GEN_POSIX_NAMES_PATCH} | ed -s ${WORKDIR}/src/runtime/config/gen-posix-names.sh
+	unpack ${P}-config.tgz && rm config/*.bat
+	echo SRCARCHIVEURL=\"file:/${S}\" > "${S}"/config/srcarchiveurl
 }
 
 src_compile() {
-#	export SMLNJ_HOME=${WORKDIR}
-#	cd ${WORKDIR}
-
 #	echo "request ml-burg" >> $SMLNJ_TARGETS
 #	echo "request eXene" >> $SMLNJ_TARGETS
 
-#	LC_ALL=C ./config/install.sh || die
-	./config/install.sh || die "compilation failed"
+	SMLNJ_HOME="${S}" ./config/install.sh || die "compilation failed"
 }
 
 _src_install() {
@@ -113,11 +90,16 @@ _src_install() {
 src_install() {
 	mkdir -p "${D}"/usr
 	mv {bin,lib} "${D}"/usr
+
+	for file in "${D}"/usr/bin/{*,.*}; do
+		[[ -f ${file} ]] && sed "2iSMLNJ_HOME=/usr" -i ${file}
+#		[[ -f ${file} ]] && sed "s:${WORKDIR}:/usr:" -i ${file}
+	done
 }
 
 _src_install() {
 	dodir ${SMLNJ_DEST}
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 
 	sed -i -e "s/head -1/head -n 1/" bin/.run-sml
 
@@ -135,10 +117,10 @@ _src_install() {
 	  dosym .run-sml ${SMLNJ_DEST}/bin/$i
 	done
 
-	cp -Rp ${WORKDIR}/lib ${D}/${SMLNJ_DEST}
+	cp -Rp "${WORKDIR}"/lib "${D}/${SMLNJ_DEST}"
 
 	dodir /etc/env.d
-	echo -e SMLNJ_HOME=${SMLNJ_DEST} > ${D}/etc/env.d/50smlnj
+	echo -e SMLNJ_HOME=${SMLNJ_DEST} > "${D}"/etc/env.d/50smlnj
 
 	#need to provide symlinks into /usr/bin
 	dodir /usr/bin
@@ -148,11 +130,4 @@ _src_install() {
 	dosym ${SMLNJ_DEST}/bin/ml-makedepend /usr/bin
 	dosym ${SMLNJ_DEST}/bin/ml-yacc /usr/bin
 	dosym ${SMLNJ_DEST}/bin/sml /usr/bin
-}
-
-_pkg_postinst()
-{
-	elog
-	elog "You need to run env-update to get a working installation"
-	elog
 }
