@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/telnetd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.19 2007/11/17 21:08:13 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.20 2007/11/18 10:20:38 opfer Exp $
+
+  18 Nov 2007; Christian Faulhammer <opfer@gentoo.org> telnetd-2.0.ebuild:
+  stable x86, bug 199259
 
   17 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org> telnetd-2.0.ebuild:
   amd64 stable, bug #199259.
