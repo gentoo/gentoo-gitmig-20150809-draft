@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.144 2007/11/13 12:37:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.145 2007/11/18 08:55:57 dertobi123 Exp $
+
+  18 Nov 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  kpdf-3.5.7-r3.ebuild:
+  ppc stable, bug #198409
 
   13 Nov 2007; Raúl Porcel <armin76@gentoo.org> kpdf-3.5.7-r3.ebuild:
   alpha/ia64/sparc stable wrt security #198409
