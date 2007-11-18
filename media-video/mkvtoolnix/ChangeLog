@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.80 2007/11/18 13:40:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.81 2007/11/18 14:46:08 flameeyes Exp $
+
+  18 Nov 2007; Diego Pettenò <flameeyes@gentoo.org>
+  mkvtoolnix-2.1.0.ebuild:
+  Check for the cxx USE flag being enabled, when present, on libpcre.
 
   18 Nov 2007; Alexis Ballier <aballier@gentoo.org>
   -files/mkvtoolnix-2.0.2-qt4.patch, -mkvtoolnix-1.8.1.ebuild,

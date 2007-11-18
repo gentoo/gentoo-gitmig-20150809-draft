@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.1.0.ebuild,v 1.4 2007/11/16 21:17:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.1.0.ebuild,v 1.5 2007/11/18 14:46:08 flameeyes Exp $
 
 inherit eutils wxwidgets flag-o-matic qt4 autotools
 
@@ -30,6 +30,12 @@ pkg_setup() {
 	WX_GTK_VER="2.6"
 	if use wxwindows; then
 		need-wxwidgets gtk2
+	fi
+
+	if ! built_with_use --missing true dev-libs/libpcre cxx; then
+		eerror "To build ${PN} you need the C++ bindings for pcre."
+		eerror "Please enable the cxx USE flag for dev-libs/libpcre"
+		die "Missing PCRE C++ bindings."
 	fi
 }
 
