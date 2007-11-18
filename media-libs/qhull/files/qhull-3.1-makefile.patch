@@ -1,5 +1,14 @@
---- Makefile	2001-02-12 03:26:08.000000000 +0100
-+++ /root/Makefile	2005-02-22 22:00:15.077553880 +0100
+--- Makefile.old	2001-02-11 21:26:08.000000000 -0500
++++ Makefile	2007-11-18 08:03:19.000000000 -0500
+@@ -62,7 +62,7 @@
+ 
+ # OBJS in execution frequency order.  CFILES after qhull.c are alphabetical
+ OBJS = user.o global.o stat.o io.o geom2.o poly2.o \
+-       merge.o qhull.o geom.o poly.o qset.o mem.o
++       merge.o qhull.o geom.o poly.o qset.o mem.o unix.o
+ 
+ CFILES= unix.c qhull.c geom.c geom2.c global.c io.c mem.c merge.c poly.c \
+         poly2.c qset.c stat.c user.c qconvex.c qdelaun.c qhalf.c qvoronoi.c
 @@ -78,7 +78,7 @@
  		qh-poly.htm qh-qhull.htm qh-set.htm qh-stat.htm qh-user.htm \
  		qdelau_f.htm qhalf.htm qvoronoi.htm qvoron_f.htm rbox.htm 

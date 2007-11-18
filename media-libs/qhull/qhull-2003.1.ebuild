@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-2003.1.ebuild,v 1.1 2007/01/22 19:24:29 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-2003.1.ebuild,v 1.2 2007/11/18 13:15:43 markusle Exp $
 
 inherit eutils
 
@@ -16,12 +16,12 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
+	cd "${S}"/src
 	mv Makefile.txt Makefile
 	# Replaced sed/echo hacks by a clean patch. Fix build error on -fPIC archs
 	# BUG #82646
 	# Danny van Dyk <kugelfang@gentoo.org> 2005/02/22
-	epatch ${FILESDIR}/${P}-makefile.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 src_compile() {
@@ -39,7 +39,7 @@ src_install() {
 	insinto /usr/include/qhull
 	doins *.h
 
-	cd ${S}
+	cd "${S}"
 	dodoc Announce.txt COPYING.txt File_id.diz README.txt REGISTER.txt
 	cd html
 	dohtml *
