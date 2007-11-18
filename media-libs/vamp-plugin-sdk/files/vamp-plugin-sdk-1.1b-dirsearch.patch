@@ -1,0 +1,13 @@
+Index: vamp-plugin-sdk-v1.1b/vamp-sdk/hostext/PluginLoader.cpp
+===================================================================
+--- vamp-plugin-sdk-v1.1b.orig/vamp-sdk/hostext/PluginLoader.cpp
++++ vamp-plugin-sdk-v1.1b/vamp-sdk/hostext/PluginLoader.cpp
+@@ -550,7 +550,7 @@ PluginLoader::Impl::listFiles(string dir
+     struct dirent *e = 0;
+     while ((e = readdir(d))) {
+         
+-        if (!(e->d_type & DT_REG) || !e->d_name) continue;
++        if ((!(e->d_type & DT_REG) && (e->d_type != DT_UNKNOWN)) || !e->d_name) continue;
+         
+         size_t len = strlen(e->d_name);
+         if (len < extlen + 2 ||

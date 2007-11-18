@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/vamp-plugin-sdk-1.1b.ebuild,v 1.1 2007/11/17 16:07:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/vamp-plugin-sdk-1.1b-r1.ebuild,v 1.1 2007/11/18 09:47:28 aballier Exp $
 
 inherit toolchain-funcs eutils multilib
 
@@ -24,6 +24,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-destdir.patch"
+	epatch "${FILESDIR}/${P}-dirsearch.patch"
 	# multilib for default search paths
 	sed -i -e "s:/usr/lib/vamp:/usr/$(get_libdir)/vamp:" vamp-sdk/PluginHostAdapter.cpp
 }
