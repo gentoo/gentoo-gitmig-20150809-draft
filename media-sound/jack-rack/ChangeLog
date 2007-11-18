@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.30 2007/11/14 17:55:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.31 2007/11/18 19:29:21 flameeyes Exp $
+
+  18 Nov 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/jack-rack-1.4.4-gtkdep.patch, -jack-rack-1.4.4.ebuild,
+  -jack-rack-1.4.5.ebuild:
+  Remove old versions.
 
   14 Nov 2007; Raúl Porcel <armin76@gentoo.org> jack-rack-1.4.6.ebuild:
   sparc stable wrt #198845
