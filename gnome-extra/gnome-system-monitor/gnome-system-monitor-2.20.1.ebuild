@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.20.1.ebuild,v 1.1 2007/10/17 20:02:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.20.1.ebuild,v 1.2 2007/11/18 20:22:21 flameeyes Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="The Gnome System Monitor"
 HOMEPAGE="http://www.gnome.org/"
@@ -33,4 +33,10 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable pcre pcrecpp) --disable-scrollkeeper"
+
+	if ! built_with_use --missing true dev-libs/libpcre cxx; then
+		eerror "To build ${PN} you need the C++ bindings for pcre."
+		eerror "Please enable the cxx USE flag for dev-libs/libpcre"
+		die "Missing PCRE C++ bindings."
+	fi
 }
