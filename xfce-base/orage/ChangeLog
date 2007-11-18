@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/orage
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.34 2007/07/02 14:16:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.35 2007/11/18 07:09:32 drac Exp $
+
+*orage-4.4.2 (18 Nov 2007)
+
+  18 Nov 2007; Samuli Suominen <drac@gentoo.org> +orage-4.4.2.ebuild:
+  Version bump.
 
 *orage-4.5.9.6 (02 Jul 2007)
 

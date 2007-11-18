@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.109 2007/07/01 09:56:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.110 2007/11/18 07:04:49 drac Exp $
+
+*xfdesktop-4.4.2 (18 Nov 2007)
+
+  18 Nov 2007; Samuli Suominen <drac@gentoo.org> +xfdesktop-4.4.2.ebuild:
+  Version bump.
 
   01 Jul 2007; Samuli Suominen <drac@gentoo.org> xfdesktop-4.4.1-r1.ebuild:
   Clean up old dbus deps wrt bug 183696
