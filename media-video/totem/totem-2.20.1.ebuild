@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.1.ebuild,v 1.2 2007/10/30 06:20:01 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.1.ebuild,v 1.3 2007/11/18 11:42:46 drac Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -82,7 +82,8 @@ RDEPEND=">=dev-libs/glib-2.13.4
 				>=media-plugins/gst-plugins-ogg-0.10
 				>=media-plugins/gst-plugins-vorbis-0.10
 			 )
-	 xv? ( >=media-plugins/gst-plugins-xvideo-0.10 )"
+	 xv? ( >=media-plugins/gst-plugins-xvideo-0.10 )
+	>=media-plugins/gst-plugins-x-0.10"
 
 # this belongs above xv? above.
 # win32codecs? ( >=media-plugins/gst-plugins-pitfdll-0.10 )
@@ -99,13 +100,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
-	if ! built_with_use 'media-libs/gst-plugins-base' 'X' ; then
-		einfo "Build gst-plugins-base with the X useflag"
-		einfo "echo \"media-libs/gst-plugins-base X\" >> /etc/portage/package.use"
-		einfo "emerge -1 gst-plugins-base"
-		die "gst-plugins-base requires X useflag"
-	fi
-
 	# use global mozilla plugin dir
 	G2CONF="${G2CONF} MOZILLA_PLUGINDIR=/usr/$(get_libdir)/nsbrowser/plugins"
 

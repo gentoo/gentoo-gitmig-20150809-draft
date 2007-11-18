@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.188 2007/10/30 06:20:01 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.189 2007/11/18 11:42:46 drac Exp $
+
+  18 Nov 2007; Samuli Suominen <drac@gentoo.org> totem-2.18.3.ebuild,
+  totem-2.20.1.ebuild:
+  Remove redudant built_with_use checks wrt #199496.
 
   30 Oct 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   +files/totem-2.20.1-browser-plugins.patch, totem-2.20.1.ebuild:
