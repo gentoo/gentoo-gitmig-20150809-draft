@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/xmlgraphics-commons-1.2.ebuild,v 1.1 2007/09/18 22:17:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/xmlgraphics-commons-1.2.ebuild,v 1.2 2007/11/18 10:26:58 opfer Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/xmlgraphics/commons/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 x86"
 IUSE="jpeg"
 
 # fails connect to X even tho it sets java.awt.headless
