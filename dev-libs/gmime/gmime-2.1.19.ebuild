@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.19.ebuild,v 1.8 2006/09/03 07:53:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.19.ebuild,v 1.9 2007/11/18 00:58:23 compnerd Exp $
 
 inherit gnome2 eutils mono
 
@@ -24,7 +24,7 @@ DEPEND="dev-util/pkgconfig
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	#db2html should be docbook2html
 	sed -i -e 's:db2html:docbook2html -o gmime-tut:g' \
 		docs/tutorial/Makefile.am docs/tutorial/Makefile.in \
@@ -48,8 +48,8 @@ src_compile() {
 }
 
 src_install() {
-	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}" \
-		DESTDIR=${D} install || die
+	make GACUTIL_FLAGS="/root '${D}/usr/$(get_libdir)' /gacdir /usr/$(get_libdir) /package ${PN}" \
+		DESTDIR="${D}" install || die
 
 	if use doc ; then
 		docinto tutorial
@@ -58,8 +58,8 @@ src_install() {
 
 	# rename these two, so they don't conflict with app-arch/sharutils
 	# (bug #70392)	Ticho, 2004-11-10
-	mv ${D}/usr/bin/uuencode ${D}/usr/bin/gmime-uuencode
-	mv ${D}/usr/bin/uudecode ${D}/usr/bin/gmime-uudecode
+	mv "${D}/usr/bin/uuencode" "${D}/usr/bin/gmime-uuencode"
+	mv "${D}/usr/bin/uudecode" "${D}/usr/bin/gmime-uudecode"
 }
 
 DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS PORTING README TODO doc/html/"

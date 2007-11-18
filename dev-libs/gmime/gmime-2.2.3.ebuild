@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.3.ebuild,v 1.7 2007/05/30 15:36:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.3.ebuild,v 1.8 2007/11/18 00:58:23 compnerd Exp $
 
 inherit gnome2 eutils mono libtool
 
@@ -25,7 +25,7 @@ DEPEND="dev-util/pkgconfig
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if use doc ; then
 		#db2html should be docbook2html
@@ -55,8 +55,8 @@ src_compile() {
 }
 
 src_install() {
-	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}" \
-		DESTDIR=${D} install || die
+	make GACUTIL_FLAGS="/root '${D}/usr/$(get_libdir)' /gacdir /usr/$(get_libdir) /package ${PN}" \
+		DESTDIR="${D}" install || die
 
 	if use doc ; then
 		# we don't use docinto/dodoc, because we don't want html doc gzipped
@@ -66,8 +66,8 @@ src_install() {
 
 	# rename these two, so they don't conflict with app-arch/sharutils
 	# (bug #70392)	Ticho, 2004-11-10
-	mv ${D}/usr/bin/uuencode ${D}/usr/bin/gmime-uuencode
-	mv ${D}/usr/bin/uudecode ${D}/usr/bin/gmime-uudecode
+	mv "${D}/usr/bin/uuencode" "${D}/usr/bin/gmime-uuencode"
+	mv "${D}/usr/bin/uudecode" "${D}/usr/bin/gmime-uudecode"
 }
 
 DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS PORTING README TODO doc/html/"
