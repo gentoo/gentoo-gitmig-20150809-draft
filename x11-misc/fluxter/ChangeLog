@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fluxter
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxter/ChangeLog,v 1.13 2007/03/19 01:20:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxter/ChangeLog,v 1.14 2007/11/18 17:18:39 drac Exp $
+
+  18 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +files/fluxter-0.1.0-asneeded.patch, fluxter-0.1.0.ebuild:
+  Fix building with --as-needed & amd64 stable.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
