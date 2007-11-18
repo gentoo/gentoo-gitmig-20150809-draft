@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.9.ebuild,v 1.5 2007/11/18 13:35:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.9.ebuild,v 1.6 2007/11/18 15:37:13 dertobi123 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -13,7 +13,7 @@ NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 
-KEYWORDS="alpha amd64 ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="ldap crypt bindist mozdom replytolist"
