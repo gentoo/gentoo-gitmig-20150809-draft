@@ -5,9 +5,9 @@
  inclwanted=''
  
 +: determine libdir name
-+: Should be */lib64 on x86-64, sparc64, ppc64
-+case `arch` in
-+  x86_64) lib='lib64';;
++: Should be */lib32 on x86-64, sparc64, ppc64
++case ${BITS} in
++  32) lib='lib32';; 64) lib='lib64';;
 +  *) lib='lib';;
 +esac
 +  
@@ -35,8 +35,8 @@
  '')	case "$prefix" in
 -		*perl*) dflt='lib';;
 -		*) dflt='lib/perl5' ;;
-+		*perl*) dflt='lib64';;
-+		*) dflt='lib64/perl5' ;;
++		*perl*) dflt='lib32';;
++		*) dflt='lib32/perl5' ;;
  	esac
  	;;
  *)	dflt="$installstyle" ;;
@@ -46,8 +46,8 @@
  case "$installstyle" in
 -*lib/perl5*) set dflt privlib lib/$package/$version ;;
 -*)	 set dflt privlib lib/$version ;;
-+*lib64/perl5*) set dflt privlib lib64/$package/$version ;;
-+*)	 set dflt privlib lib64/$version ;;
++*${lib}/perl5*) set dflt privlib ${lib}/$package/$version ;;
++*)	 set dflt privlib ${lib}/$version ;;
  esac
  eval $prefixit
  $cat <<EOM
@@ -57,8 +57,8 @@
  '') case "$installstyle" in
 -	*lib/perl5*) dflt=$siteprefix/lib/$package/site_$prog/$version ;;
 -	*)	 dflt=$siteprefix/lib/site_$prog/$version ;;
-+	*lib64/perl5*) dflt=$siteprefix/lib64/$package/site_$prog/$version ;;
-+	*)	 dflt=$siteprefix/lib64/site_$prog/$version ;;
++	*${lib}/perl5*) dflt=$siteprefix/${lib}/$package/site_$prog/$version ;;
++	*)	 dflt=$siteprefix/${lib}/site_$prog/$version ;;
  	esac
  	;;
  *)	dflt="$sitelib"
@@ -68,8 +68,8 @@
  		case "$installstyle" in
 -		*lib/perl5*) dflt=$vendorprefix/lib/$package/vendor_$prog/$version ;;
 -		*)	     dflt=$vendorprefix/lib/vendor_$prog/$version ;;
-+		*lib64/perl5*) dflt=$vendorprefix/lib64/$package/vendor_$prog/$version ;;
-+		*)	     dflt=$vendorprefix/lib64/vendor_$prog/$version ;;
++		*${lib}/perl5*) dflt=$vendorprefix/${lib}/$package/vendor_$prog/$version ;;
++		*)	     dflt=$vendorprefix/${lib}/vendor_$prog/$version ;;
  		esac
  		;;
  	*)	dflt="$vendorlib"
