@@ -1,6 +1,14 @@
 # ChangeLog for net-print/pkpgcounter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/ChangeLog,v 1.8 2007/02/22 03:05:21 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/ChangeLog,v 1.9 2007/11/18 20:30:32 genstef Exp $
+
+*pkpgcounter-3.20 (18 Nov 2007)
+
+  18 Nov 2007; Stefan Schweizer <genstef@gentoo.org>
+  -pkpgcounter-1.72.ebuild, -pkpgcounter-1.80.ebuild,
+  -pkpgcounter-1.83.ebuild, -pkpgcounter-2.10.ebuild,
+  +pkpgcounter-3.20.ebuild:
+  version bump thanks to Daniel Heule <nerve@ipwar.ch> in bug 196892
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
