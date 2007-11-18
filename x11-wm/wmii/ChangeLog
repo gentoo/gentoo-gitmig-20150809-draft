@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/wmii
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.21 2007/10/09 02:03:52 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.22 2007/11/18 05:55:46 omp Exp $
+
+*wmii-3.6 (18 Nov 2007)
+
+  18 Nov 2007; David Shakaryan <omp@gentoo.org> +wmii-3.6.ebuild:
+  Version bump.
 
   09 Oct 2007; David Shakaryan <omp@gentoo.org> wmii-3.5.1.ebuild,
   wmii-3.6_rc2.ebuild:
