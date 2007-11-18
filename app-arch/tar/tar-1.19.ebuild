@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.19.ebuild,v 1.5 2007/11/18 02:43:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.19.ebuild,v 1.6 2007/11/18 02:46:52 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gnu-inline.patch #198817
 
 	if ! use userland_GNU ; then
 		sed -i \
