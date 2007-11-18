@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/envlab-1.2.ebuild,v 1.7 2004/12/28 20:41:22 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/envlab-1.2.ebuild,v 1.8 2007/11/18 23:14:55 aballier Exp $
 
 inherit latex-package
 
@@ -17,10 +17,12 @@ KEYWORDS="x86 amd64 ~sparc"
 IUSE=""
 
 src_compile() {
-	addwrite /var/cache/fonts/
+	export VARTEXFONTS="${T}/fonts"
 	ebegin "Compiling ${PN}"
 	latex envlab.ins || die
 	pdflatex elguide.tex || die
+	pdflatex elguide.tex || die
+	pdflatex envlab.drv || die
 	pdflatex envlab.drv || die
 	eend
 }
