@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.158 2007/11/18 13:40:26 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.159 2007/11/18 16:38:56 fmccor Exp $
+
+  18 Nov 2007; Ferris McCormick <fmccor@gentoo.org> xpdf-3.02.ebuild:
+  Sparc stable --- Security Bug #196735 --- works as always.
 
   18 Nov 2007; Dawid Węgliński <cla@gentoo.org> xpdf-3.02.ebuild:
   Stable on x86 (bug #176081)
