@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.7.ebuild,v 1.6 2007/11/04 14:10:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.7-r2.ebuild,v 1.1 2007/11/18 15:41:04 flameeyes Exp $
 
 LANGS="af ar az be bg bn br ca cs cy da de el en_GB eo es et eu fa fi
 fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds ne nl nn pa pl
@@ -34,7 +34,7 @@ HOMEPAGE="http://amarok.kde.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="mp4 kde mysql amazon opengl postgres
 visualization ipod ifp real njb mtp musicbrainz daap
 python"
@@ -63,6 +63,9 @@ RDEPEND="${RDEPEND}
 	app-arch/unzip
 	python? ( dev-python/PyQt )
 	daap? ( www-servers/mongrel )"
+
+PATCHES="${FILESDIR}/${P}+xine-lib-1.1.8-lastfm.patch
+	${FILESDIR}/${P}-svn148317.patch"
 
 need-kde 3.3
 

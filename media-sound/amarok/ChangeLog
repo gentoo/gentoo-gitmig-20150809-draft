@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.240 2007/11/17 17:54:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.241 2007/11/18 15:41:04 flameeyes Exp $
+
+*amarok-1.4.7-r2 (18 Nov 2007)
+
+  18 Nov 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/amarok-1.4.7-svn148317.patch, -amarok-1.4.6-r1.ebuild,
+  -amarok-1.4.7.ebuild, +amarok-1.4.7-r2.ebuild:
+  Version bump, add the patch of upstream SVN rev. 148317, to fix KDE bug
+  #148317.
 
   17 Nov 2007; Samuli Suominen <drac@gentoo.org> amarok-1.4.7-r1.ebuild:
   amd64 stable wrt #198711
