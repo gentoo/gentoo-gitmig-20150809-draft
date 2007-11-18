@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.72 2007/11/07 20:09:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.73 2007/11/18 07:33:50 pva Exp $
+
+*openvz-sources-2.6.18.028.049 (18 Nov 2007)
+
+  18 Nov 2007; <pva@gentoo.org> +openvz-sources-2.6.18.028.049.ebuild:
+  Version bump. Change versioning to avoid problems with new releases, bug
+  #198588. Fixed build failures: bug #199387 and bug #181982. Thank Daniel
+  Robbins <drobbins AT funtoo.org>, for help in resolving these bugs. Full
+  ChangeLog:
+  http://git.openvz.org/?p=linux-2.6.18-openvz;a=log;h=028stab049
 
 *openvz-sources-028.047 (07 Nov 2007)
 
