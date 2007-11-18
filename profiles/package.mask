@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7918 2007/11/18 19:20:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7919 2007/11/18 20:33:40 dev-zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Tiziano Müller <dev-zero@gentoo.org> (18 Nov 2007)
+# There is a serious regression (bug #199450) due to
+# an incomplete fix for the non-remote vulnerability
+# CVE-2007-4572
+=net-fs/samba-3.0.27
 
 # Alexis Ballier <aballier@gentoo.org> (18 Nov 2007)
 # Temporary mask flac with EAPI=1 and optional FLAC++
