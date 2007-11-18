@@ -1,0 +1,15 @@
+diff -ur gst-plugins-good-0.10.6.orig/ext/taglib/gstid3v2mux.cc gst-plugins-good-0.10.6/ext/taglib/gstid3v2mux.cc
+--- gst-plugins-good-0.10.6.orig/ext/taglib/gstid3v2mux.cc	2007-06-13 12:21:10.000000000 +0300
++++ gst-plugins-good-0.10.6/ext/taglib/gstid3v2mux.cc	2007-11-18 21:11:41.000000000 +0200
+@@ -544,7 +544,9 @@
+   GST_TAG_MUSICBRAINZ_ALBUMARTISTID, add_musicbrainz_tag, "\002"}, {
+   GST_TAG_MUSICBRAINZ_TRMID, add_musicbrainz_tag, "\003"}, {
+   GST_TAG_MUSICBRAINZ_TRACKID, add_unique_file_id_tag, ""}, {
+-  GST_TAG_MUSICBRAINZ_SORTNAME, add_text_tag, "TSOP"}, {
++  GST_TAG_ARTIST_SORTNAME, add_text_tag, "TSOP"}, {
++  GST_TAG_ALBUM_SORTNAME, add_text_tag, "TSOA"}, {
++  GST_TAG_TITLE_SORTNAME, add_text_tag, "TSOT"}, {
+   GST_TAG_TRACK_NUMBER, add_count_or_num_tag, "TRCK"}, {
+   GST_TAG_TRACK_COUNT, add_count_or_num_tag, "TRCK"}, {
+   GST_TAG_ALBUM_VOLUME_NUMBER, add_count_or_num_tag, "TPOS"}, {
+Only in gst-plugins-good-0.10.6/ext/taglib: gstid3v2mux.cc.orig
