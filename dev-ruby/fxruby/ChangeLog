@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.54 2007/11/18 18:59:08 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.55 2007/11/18 19:08:53 mabi Exp $
+
+  18 Nov 2007; Matti Bickel <mabi@gentoo.org> fxruby-1.6.12.ebuild:
+  ppc stable (bug #199571)
 
 *fxruby-1.6.13 (18 Nov 2007)
 *fxruby-1.4.7-r1 (18 Nov 2007)
