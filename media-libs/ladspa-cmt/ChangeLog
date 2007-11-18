@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.25 2007/11/01 20:55:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.26 2007/11/18 16:13:58 aballier Exp $
+
+*ladspa-cmt-1.16 (18 Nov 2007)
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org> +files/cmt.rdf,
+  +ladspa-cmt-1.16.ebuild:
+  version bump, add rdf file for better classification of cmt plugins, bug
+  #190426
 
   01 Nov 2007; Raúl Porcel <armin76@gentoo.org> ladspa-cmt-1.15.ebuild:
   Add ~alpha wrt #196587, thanks to Tobias Klausmann for testing
