@@ -1,0 +1,34 @@
+#!/bin/bash -
+#
+# /usr/bin/wx-config
+#
+#  a lame wx-config wrapper by dirtyepic@gentoo.org
+
+_wxerror() {
+	echo
+	echo "Cannot find the currently selected wxWidgets profile."
+	echo
+	echo "Please use \`eselect wxwidgets\` to select an available profile and try again."
+	echo
+	exit 1
+}
+
+if [[ -n ${WX_ECLASS_CONFIG} ]]; then
+	${WX_ECLASS_CONFIG} $@
+	exit 0
+else
+	if [[ -e /var/lib/wxwidgets/current ]]; then
+		source /var/lib/wxwidgets/current
+	else
+		_wxerror
+	fi
+
+	if [[ -f /usr/lib/wx/config/${WXCONFIG} \
+	   && -x /usr/lib/wx/config/${WXCONFIG} ]]; then
+	   /usr/lib/wx/config/${WXCONFIG} $@
+	else
+		_wxerror
+	fi
+	exit 0
+fi
+
