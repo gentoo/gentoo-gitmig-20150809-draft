@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kid3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.27 2007/06/23 23:57:25 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.28 2007/11/18 21:52:08 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org> kid3-0.6.ebuild,
+  kid3-0.7.ebuild, kid3-0.8.1.ebuild, kid3-0.9.ebuild:
+  add a check for flac cxx use flag, FLAC++ is needed here
 
 *kid3-0.9 (23 Jun 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.9.ebuild,v 1.3 2007/07/21 20:11:55 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.9.ebuild,v 1.4 2007/11/18 21:56:26 aballier Exp $
 
 inherit kde flag-o-matic
 
@@ -35,6 +35,12 @@ pkg_setup() {
 	if ! built_with_use kde-base/kdelibs arts ; then
 		eerror "KWave needs aRts, please rebuild kdelibs with arts use flag enabled."
 		die
+	fi
+
+	if ! built_with_use --missing true media-libs/flac cxx; then
+		eerror "To build ${PN} you need the C++ bindings for flac."
+		eerror "Please enable the cxx USE flag for media-libs/flac"
+		die "Missing FLAC C++ bindings."
 	fi
 }
 

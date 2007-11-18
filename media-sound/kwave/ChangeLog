@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kwave
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.2 2007/07/21 20:11:55 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.3 2007/11/18 21:56:26 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org> kwave-0.7.9.ebuild:
+  add a check for flac cxx use flag, FLAC++ is needed here
 
   21 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/kwave-0.7.9-debian-431199.diff,

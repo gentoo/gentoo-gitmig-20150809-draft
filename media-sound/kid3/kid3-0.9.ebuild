@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-0.9.ebuild,v 1.1 2007/06/23 23:57:25 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-0.9.ebuild,v 1.2 2007/11/18 21:52:08 aballier Exp $
 
 inherit kde
 
@@ -26,6 +26,16 @@ LANGS_DOC="de en"
 for X in ${LANGS} ${LANGS_DOC} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
+
+pkg_setup() {
+	if use flac && ! built_with_use --missing true media-libs/flac cxx; then
+		eerror "To build ${PN} with flac support you need the C++ bindings for flac."
+		eerror "Please enable the cxx USE flag for media-libs/flac"
+		die "Missing FLAC C++ bindings."
+	fi
+
+	kde_pkg_setup
+}
 
 src_unpack() {
 	kde_src_unpack
