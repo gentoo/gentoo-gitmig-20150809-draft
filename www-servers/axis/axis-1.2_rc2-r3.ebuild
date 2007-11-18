@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2-r3.ebuild,v 1.1 2007/07/22 10:20:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2-r3.ebuild,v 1.2 2007/11/18 10:28:31 opfer Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://apache/ws/${PN}/${MY_PV}/${SRCFILE}"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="debug doc"
 
 COMMON_DEPEND="

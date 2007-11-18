@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/axis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.18 2007/11/15 13:30:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.19 2007/11/18 10:28:31 opfer Exp $
+
+  18 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  axis-1.2_rc2-r3.ebuild:
+  stable x86, bug 199264
 
   15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
   -axis-1.2_rc2-r1.ebuild:
