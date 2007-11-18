@@ -1,0 +1,21 @@
+diff -ru pommed-1.11~/pommed/Makefile pommed-1.11/pommed/Makefile
+--- pommed-1.11~/pommed/Makefile	2007-11-18 22:41:53.000000000 +0100
++++ pommed-1.11/pommed/Makefile	2007-11-18 22:44:05.000000000 +0100
+@@ -16,7 +16,7 @@
+ 
+ INOTIFY_CFLAGS = $(shell test -e /usr/include/sys/inotify.h || echo -DNO_SYS_INOTIFY_H)
+ 
+-CFLAGS = -g -O2 -Wall $(DBUS_CFLAGS) $(ALSA_CFLAGS) $(AUDIOFILE_CFLAGS) $(CONFUSE_CFLAGS) $(INOTIFY_CFLAGS)
++CFLAGS += -g -Wall $(DBUS_CFLAGS) $(ALSA_CFLAGS) $(AUDIOFILE_CFLAGS) $(CONFUSE_CFLAGS) $(INOTIFY_CFLAGS)
+ 
+ ifeq ($(ARCH), ppc)
+ OFLIB ?=
+@@ -41,7 +41,7 @@
+ 
+ else
+ 
+-LDFLAGS = -lz -lsmbios $(DBUS_LIBS) $(ALSA_LIBS) $(AUDIOFILE_LIBS) $(CONFUSE_LIBS)
++LDFLAGS = -lz -lsmbios -lstdc++ $(DBUS_LIBS) $(ALSA_LIBS) $(AUDIOFILE_LIBS) $(CONFUSE_LIBS)
+ 
+ SOURCES = pommed.c cd_eject.c evdev.c conffile.c audio.c dbus.c power.c beep.c \
+ 		mactel/x1600_backlight.c mactel/gma950_backlight.c \
