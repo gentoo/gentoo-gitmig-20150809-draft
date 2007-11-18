@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.54 2007/11/18 16:21:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.55 2007/11/18 16:39:54 corsair Exp $
+
+  18 Nov 2007; Markus Rothe <corsair@gentoo.org> dillo-0.8.6.ebuild:
+  Stable on ppc64; bug #155220
 
   18 Nov 2007; Jeroen Roovers <jer@gentoo.org> dillo-0.8.6.ebuild:
   Stable for HPPA (bug #155220).
