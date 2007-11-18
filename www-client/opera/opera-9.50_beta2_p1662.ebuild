@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta3.ebuild,v 1.2 2007/11/09 17:29:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2_p1662.ebuild,v 1.1 2007/11/18 18:06:13 jer Exp $
 
 GCONF_DEBUG="no"
 
