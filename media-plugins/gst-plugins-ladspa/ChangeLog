@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ladspa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ladspa/ChangeLog,v 1.1 2007/08/30 18:59:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ladspa/ChangeLog,v 1.2 2007/11/18 17:26:13 aballier Exp $
+
+  18 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  gst-plugins-ladspa-0.10.5.ebuild:
+  add ~amd64, works like a charm here
 
 *gst-plugins-ladspa-0.10.5 (30 Aug 2007)
 
