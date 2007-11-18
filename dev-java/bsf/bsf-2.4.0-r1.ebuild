@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.4.0-r1.ebuild,v 1.4 2007/11/17 20:55:30 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.4.0-r1.ebuild,v 1.5 2007/11/18 18:03:35 corsair Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 eutils java-ant-2
@@ -10,7 +10,7 @@ HOMEPAGE="http://jakarta.apache.org/bsf/"
 SRC_URI="mirror://apache/jakarta/bsf/source/${PN}-src-${PV}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="2.3"
-KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ~ppc ppc64 x86 ~x86-fbsd"
 IUSE="javascript python tcl"
 
 COMMON_DEP="dev-java/commons-logging
