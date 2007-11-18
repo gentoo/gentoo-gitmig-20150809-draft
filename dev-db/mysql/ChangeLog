@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.435 2007/11/18 11:30:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.436 2007/11/18 13:50:41 corsair Exp $
+
+  18 Nov 2007; Markus Rothe <corsair@gentoo.org> mysql-5.0.44-r2.ebuild:
+  Stable on ppc64; bug #198988
 
   18 Nov 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   mysql-5.0.44-r2.ebuild:
