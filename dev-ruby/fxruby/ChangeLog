@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.52 2007/10/19 12:50:47 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.53 2007/11/18 18:22:51 fmccor Exp $
+
+  18 Nov 2007; Ferris McCormick <fmccor@gentoo.org> fxruby-1.6.12.ebuild:
+  Sparc stable, Bug #199571.
 
 *fxruby-1.6.12 (19 Oct 2007)
 
