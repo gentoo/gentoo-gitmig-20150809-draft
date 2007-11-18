@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libixp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.6 2007/06/24 18:54:28 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.7 2007/11/18 05:44:12 omp Exp $
+
+*libixp-0.4 (18 Nov 2007)
+
+  18 Nov 2007; David Shakaryan <omp@gentoo.org> +libixp-0.4.ebuild:
+  Version bump.
 
   24 Jun 2007; David Shakaryan <omp@gentoo.org>
   files/libixp-0.2-shared-object.patch:
