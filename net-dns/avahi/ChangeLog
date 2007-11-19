@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.130 2007/11/10 09:45:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.131 2007/11/19 22:19:58 swegener Exp $
+
+  19 Nov 2007; Sven Wegener <swegener@gentoo.org>
+  +files/avahi-vncviewer.patch, avahi-0.6.19-r2.ebuild,
+  avahi-0.6.20-r2.ebuild, avahi-0.6.21.ebuild:
+  Add a patch to use vncviewer instead of xvncviewer.
 
   10 Nov 2007; Sven Wegener <swegener@gentoo.org> avahi-0.6.19-r2.ebuild,
   avahi-0.6.20-r2.ebuild, avahi-0.6.21.ebuild:
