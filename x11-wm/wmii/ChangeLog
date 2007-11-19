@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/wmii
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.24 2007/11/19 03:26:34 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.25 2007/11/19 03:29:17 omp Exp $
+
+  19 Nov 2007; David Shakaryan <omp@gentoo.org> wmii-3.5.1.ebuild:
+  Depend on correct version of libixp for older release. (bug #199556)
 
   19 Nov 2007; David Shakaryan <omp@gentoo.org> -wmii-3.6_rc2.ebuild:
   Remove older version.
