@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.52 2007/10/15 23:50:58 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.53 2007/11/19 22:24:10 marineam Exp $
+
+*xen-sources-2.6.18-r8 (19 Nov 2007)
+
+  19 Nov 2007; Michael Marineau <marineam@gentoo.org>
+  -files/xen-sources-2.6.16.52-ipt-reject-fix.patch,
+  -files/xen-sources-2.6.16.52-sctp-skb_linearize-fix.patch,
+  -xen-sources-2.6.16.52.ebuild, +xen-sources-2.6.18-r8.ebuild:
+  Bump 2.6.18 to latest Xen patch from 3.1.2. Remove old 2.6.16 kernel.
 
 *xen-sources-2.6.20-r6 (15 Oct 2007)
 
