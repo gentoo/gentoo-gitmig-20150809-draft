@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/rev-plugins-0.3.1.ebuild,v 1.2 2007/11/18 18:43:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/rev-plugins-0.3.1.ebuild,v 1.3 2007/11/19 09:39:57 cla Exp $
 
 inherit multilib toolchain-funcs
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.kokkinizita.net/linuxaudio/"
 SRC_URI="http://www.kokkinizita.net/linuxaudio/downloads/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 
 IUSE=""
 
