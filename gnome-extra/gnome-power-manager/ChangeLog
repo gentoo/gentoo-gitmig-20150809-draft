@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.70 2007/11/19 08:12:08 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.71 2007/11/19 09:37:09 remi Exp $
+
+  19 Nov 2007; Rémi Cardona <remi@gentoo.org>
+  -gnome-power-manager-2.20.0.ebuild:
+  remove old version
 
   19 Nov 2007; Rémi Cardona <remi@gentoo.org>
   gnome-power-manager-2.20.0-r1.ebuild:
