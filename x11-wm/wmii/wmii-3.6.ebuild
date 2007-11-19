@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.6.ebuild,v 1.1 2007/11/18 05:55:46 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.6.ebuild,v 1.2 2007/11/19 03:23:17 omp Exp $
 
 inherit multilib toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
-DEPEND="sys-libs/libixp
+DEPEND=">=sys-libs/libixp-0.4
 	x11-libs/libX11"
 RDEPEND="${DEPEND}
 	x11-apps/xmessage
