@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.57 2007/11/18 12:28:41 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.58 2007/11/19 18:11:00 wltjr Exp $
+
+  19 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org> jabref-2.3.ebuild:
+  amd64 stable, bug #199502.
 
   18 Nov 2007; Dawid Węgliński <cla@gentoo.org> jabref-2.3.ebuild:
   Stable on x86 (bug #199502), so dependency graph is fixed now
