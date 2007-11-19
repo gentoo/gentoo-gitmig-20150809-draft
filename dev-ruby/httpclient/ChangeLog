@@ -1,0 +1,12 @@
+# ChangeLog for dev-ruby/httpclient
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.1 2007/11/19 19:51:32 flameeyes Exp $
+
+*httpclient-2.1.2 (19 Nov 2007)
+
+  19 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +httpclient-2.1.2.ebuild:
+  Add httpclient-2.1.2. httpclient replaces http-access2, and is developed by
+  the same upstream. I'll take care of it and of moving from the old to the
+  new one.
+
