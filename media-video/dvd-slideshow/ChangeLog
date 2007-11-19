@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvd-slideshow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/ChangeLog,v 1.15 2007/11/19 19:56:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/ChangeLog,v 1.16 2007/11/19 20:00:28 aballier Exp $
+
+  19 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  dvd-slideshow-0.7.5.ebuild, dvd-slideshow-0.8.0.ebuild:
+  add sys-devel/bc as RDEPEND since it is needed, thanks to Aaron Binns
+  <aaron@randomshiznat.com> for reporting, bug #188661
 
   19 Nov 2007; Alexis Ballier <aballier@gentoo.org>
   -dvd-slideshow-0.7.0.ebuild:

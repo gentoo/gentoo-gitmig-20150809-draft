@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/dvd-slideshow-0.8.0.ebuild,v 1.1 2007/03/05 18:16:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/dvd-slideshow-0.8.0.ebuild,v 1.2 2007/11/19 20:00:28 aballier Exp $
 
 MY_P=${P}-1
 
@@ -22,7 +22,8 @@ RDEPEND="media-sound/sox
 	>media-video/ffmpeg-0.4.8
 	app-cdr/dvd+rw-tools
 	mp3? ( media-sound/lame )
-	vorbis? ( media-libs/libvorbis )"
+	vorbis? ( media-libs/libvorbis )
+	sys-devel/bc"
 
 DEPEND=""
 
