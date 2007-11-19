@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.833 2007/11/19 09:19:08 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.834 2007/11/19 13:56:47 flameeyes Exp $
+
+  19 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
+  Add snapshot USE flag for the rbot live ebuild.
 
   19 Nov 2007; <alistair@gentoo.org> package.mask:
   Added =dev-java/soap-2.3.1-r2 to mask
