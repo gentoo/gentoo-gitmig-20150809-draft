@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.1.0.ebuild,v 1.3 2007/11/18 00:12:23 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.1.0.ebuild,v 1.4 2007/11/19 18:09:50 wltjr Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.jgoodies.com/download/libraries/${MY_PN}/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
