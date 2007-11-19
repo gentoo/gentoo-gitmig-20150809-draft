@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/http-access2-0j-r1.ebuild,v 1.5 2006/07/13 05:20:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/http-access2-0j-r1.ebuild,v 1.6 2007/11/19 19:47:35 flameeyes Exp $
 
 inherit ruby
 
@@ -15,6 +15,8 @@ KEYWORDS="ia64 ppc x86"
 IUSE=""
 USE_RUBY="any"
 S=${WORKDIR}/${MY_P}
+
+RDEPEND="!dev-ruby/httpclient"
 
 src_unpack() {
 	unpack ${A}

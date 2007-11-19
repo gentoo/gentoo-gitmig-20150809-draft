@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/http-access2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/ChangeLog,v 1.12 2007/03/13 19:09:54 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/ChangeLog,v 1.13 2007/11/19 19:47:35 flameeyes Exp $
+
+  19 Nov 2007; Diego Pettenò <flameeyes@gentoo.org>
+  http-access2-0j-r1.ebuild, http-access2-2.0.6.ebuild:
+  Block httpclient (http-access2 replacement).
 
   13 Mar 2007; Tom Gall <tgall@gentoo.org> http-access2-2.0.6.ebuild:
   added ~ppc64
