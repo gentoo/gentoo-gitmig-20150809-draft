@@ -1,5 +1,9 @@
 # This file requires >=portage-2.1.1
 
+# Piotr Jaroszyński <peper@gentoo.org> (19 Nov 2007)
+# Mask python flag until mips keyword is added to dev-python/pygments, bug #198989.
+sys-apps/paludis python
+
 =dev-java/ibm-jdk-bin-1.5* -nsplugin 
 =dev-java/ibm-jre-bin-1.5* -nsplugin
 
