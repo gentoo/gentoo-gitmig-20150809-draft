@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.62 2007/11/14 16:46:21 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.63 2007/11/19 07:16:31 kumba Exp $
+
+  19 Nov 2007; Joshua Kinard <kumba@gentoo.org> usbutils-0.72-r4.ebuild:
+  Stable on mips, per #195242.
 
   14 Nov 2007; Joe Peterson <lavajoe@gentoo.org>
   +files/usbutils-0.73-byteorder.patch, usbutils-0.73.ebuild:
