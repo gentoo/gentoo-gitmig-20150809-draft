@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.6.ebuild,v 1.2 2007/11/19 03:23:17 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.6-r1.ebuild,v 1.1 2007/11/19 05:40:17 omp Exp $
 
 inherit multilib toolchain-funcs
 
@@ -38,6 +38,9 @@ src_compile() {
 src_install() {
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 	dodoc NOTES README TODO
+
+	# Rid paths of temporary install directory. (bug #199551)
+	sed -i -e "s|${D}||g" "${D}/usr/bin/wmiistartrc"
 
 	echo -e "#!/bin/sh\n/usr/bin/wmii" > "${T}/${PN}"
 	exeinto /etc/X11/Sessions
