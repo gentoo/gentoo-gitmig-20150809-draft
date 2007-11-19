@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/XML-SAX-0.16.ebuild,v 1.8 2007/11/10 15:32:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/XML-SAX-0.16.ebuild,v 1.9 2007/11/19 02:53:11 kumba Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~grantm/"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-perl/XML-NamespaceSupport-1.04
