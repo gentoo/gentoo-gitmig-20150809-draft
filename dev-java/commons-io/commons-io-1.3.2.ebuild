@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.3.2.ebuild,v 1.5 2007/11/19 18:27:28 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.3.2.ebuild,v 1.6 2007/11/19 18:28:53 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -30,7 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-	eant jar $(use_doc javadoc) -Duser.home=${T}
+	eant jar $(use_doc javadoc) -Duser.home="${T}"
 }
 
 src_test() {
