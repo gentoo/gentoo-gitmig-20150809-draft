@@ -1,6 +1,13 @@
-net-misc/tightvnc server
+# Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
+# This pulls in dev-scheme/drscheme which needs gjc to build
+dev-lang/swig mzscheme
 
 # Samuli Suominen <drac@gentoo.org> (17 Nov 2007)
-# Needs valgrind
+# Needs dev-util/valgrind
 media-libs/gstreamer debug
 media-libs/gst-plugins-base debug
+
+# Jeroen Roovers <jer@gentoo.org> (12 Apr 2007)
+# Mask until fixed.
+net-misc/tightvnc server
+
