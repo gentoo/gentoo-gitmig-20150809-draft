@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.73 2007/11/16 14:23:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.74 2007/11/19 07:31:48 aballier Exp $
+
+  19 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/libcdio-0.78.2-gcc-4.3-includes.patch, libcdio-0.78.2-r1.ebuild:
+  add fix to build with gcc 4.3, thanks to Ryan Hill <dirtyepic@gentoo.org>,
+  bug #199613
 
 *libcdio-0.78.2-r1 (16 Nov 2007)
 
