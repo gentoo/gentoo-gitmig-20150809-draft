@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/rbot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.21 2007/11/19 13:56:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.22 2007/11/19 16:42:46 flameeyes Exp $
+
+*rbot-9999-r4 (19 Nov 2007)
+
+  19 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> -rbot-9999-r3.ebuild,
+  +rbot-9999-r4.ebuild:
+  Make the spell USE flag work, add an aspell USE flag and make tzinfo
+  optional by mean of timezone USE flag. Also allow to disable the languages.
 
   19 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Take maintainership again, and add the live SVN ebuild I had in my overlay.
