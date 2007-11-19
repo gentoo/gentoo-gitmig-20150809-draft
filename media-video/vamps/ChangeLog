@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vamps
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/ChangeLog,v 1.18 2007/01/03 03:27:02 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/ChangeLog,v 1.19 2007/11/19 19:22:28 aballier Exp $
+
+  19 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  -files/vamps-0.95-amd64.patch, -vamps-0.95.ebuild:
+  remove old
 
   03 Jan 2007; Steve Dibb <beandog@gentoo.org> vamps-0.99.2.ebuild:
   amd64 stable, bug 148925
