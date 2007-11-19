@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.86 2007/11/18 16:05:18 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.87 2007/11/19 16:39:16 calchan Exp $
+
+*hplip-2.7.10 (19 Nov 2007)
+
+  19 Nov 2007; Denis Dupeyron <calchan@gentoo.org> +files/70-hpmud.rules,
+  +hplip-2.7.10.ebuild:
+  Version bump, bug #196795. Replaced udev rules, bug #197726.
 
   18 Nov 2007; Denis Dupeyron <calchan@gentoo.org> hplip-2.7.9-r1.ebuild:
   Fixed bug #193671 again.
