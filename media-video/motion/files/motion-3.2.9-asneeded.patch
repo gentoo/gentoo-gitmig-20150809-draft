@@ -1,0 +1,13 @@
+Index: motion-3.2.9/configure
+===================================================================
+--- motion-3.2.9.orig/configure
++++ motion-3.2.9/configure
+@@ -4064,7 +4064,7 @@ fi
+ echo "${ECHO_T}$ac_cv_lib_lavjpeg_decode_jpeg_raw" >&6; }
+ if test $ac_cv_lib_lavjpeg_decode_jpeg_raw = yes; then
+ 
+-                TEMP_LDFLAGS="$TEMP_LDFLAGS -lmjpegutils -llavjpeg"
++                TEMP_LIBS="$TEMP_LIBS -lmjpegutils -llavjpeg"
+                 MJPEG_SUPPORT="yes"
+                 TEMP_CFLAGS="$TEMP_CFLAGS -DMJPEGT"
+ 

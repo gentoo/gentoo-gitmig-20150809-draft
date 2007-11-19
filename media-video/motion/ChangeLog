@@ -1,6 +1,13 @@
 # ChangeLog for media-video/motion
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.15 2007/10/19 15:37:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.16 2007/11/19 21:09:03 aballier Exp $
+
+*motion-3.2.9 (19 Nov 2007)
+
+  19 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/motion-3.2.9-asneeded.patch, +files/motion.confd,
+  +files/motion.init-r1, +motion-3.2.9.ebuild:
+  version bump, tune a bit init script to let it run as non root, bug #157913
 
   19 Oct 2007; Samuli Suominen <drac@gentoo.org> files/motion.init:
   Add after mysql statement to init script wrt #168777.
