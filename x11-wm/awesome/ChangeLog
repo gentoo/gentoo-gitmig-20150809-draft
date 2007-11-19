@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.5 2007/11/17 01:13:49 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.6 2007/11/19 18:30:33 corsair Exp $
+
+  19 Nov 2007; Markus Rothe <corsair@gentoo.org> awesome-2.0_rc1.ebuild:
+  Added ~ppc64
 
 *awesome-2.0_rc1 (17 Nov 2007)
 
