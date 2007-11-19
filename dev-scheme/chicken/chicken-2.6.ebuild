@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-2.6.ebuild,v 1.3 2007/09/06 15:08:41 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-2.6.ebuild,v 1.4 2007/11/19 20:42:31 jer Exp $
 
 inherit multilib elisp-common
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.call-with-current-continuation.org/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="emacs"
 
 DEPEND="dev-libs/libpcre
@@ -48,12 +48,12 @@ src_install() {
 
 	if use emacs; then
 		elisp-install ${PN} *.{el,elc}
-		elisp-site-file-install ${FILESDIR}/${SITEFILE}
+		elisp-site-file-install "${FILESDIR}"/${SITEFILE}
 	fi
 }
 
 pkg_postinst() {
-	chicken-setup -v -local ${S} syntax-case
+	chicken-setup -v -local "${S}" syntax-case
 	use emacs && elisp-site-regen
 }
 
