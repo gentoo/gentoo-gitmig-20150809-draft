@@ -1,6 +1,11 @@
 # ChangeLog for net-im/mcabber
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/ChangeLog,v 1.17 2007/06/26 16:18:19 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/ChangeLog,v 1.18 2007/11/19 23:07:59 wschlich Exp $
+
+*mcabber-0.9.4 (19 Nov 2007)
+
+  19 Nov 2007; Wolfram Schlich <wschlich@gentoo.org> +mcabber-0.9.4.ebuild:
+  version bump
 
   26 Jun 2007; Wolfram Schlich <wschlich@gentoo.org> mcabber-0.9.3.ebuild:
   added aspell support wrt bug #182760
