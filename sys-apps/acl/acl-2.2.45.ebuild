@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.45.ebuild,v 1.10 2007/11/02 04:09:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.45.ebuild,v 1.11 2007/11/19 06:38:32 kumba Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${MY_P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="nfs nls"
 
 RDEPEND=">=sys-apps/attr-2.4
