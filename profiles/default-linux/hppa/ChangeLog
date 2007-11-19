@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.22 2007/11/19 12:53:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.23 2007/11/19 19:44:40 jer Exp $
+
+  19 Nov 2007; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=clisp for dev-lang/swig as well.
 
   19 Nov 2007; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask mzscheme for dev-lang/swig because dev-scheme/drscheme needs gcj to

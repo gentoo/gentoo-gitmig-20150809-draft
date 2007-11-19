@@ -1,6 +1,7 @@
 # Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
 # This pulls in dev-scheme/drscheme which needs gjc to build
-dev-lang/swig mzscheme
+# or dev-lisp/clisp which has many build issues
+dev-lang/swig mzscheme clisp
 
 # Samuli Suominen <drac@gentoo.org> (17 Nov 2007)
 # Needs dev-util/valgrind
