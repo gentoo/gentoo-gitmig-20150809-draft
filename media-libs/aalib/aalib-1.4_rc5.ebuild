@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.21 2007/09/09 15:42:33 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.22 2007/11/19 05:19:37 kumba Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/aa-project/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="X slang gpm"
 
 RDEPEND="X? ( x11-libs/libX11 )
