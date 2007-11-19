@@ -1,9 +1,9 @@
 # This file requires >=portage-2.1.1
 
 # Piotr Jaroszyński <peper@gentoo.org> (19 Nov 2007)
-# Mask python flag until mips keyword is added to dev-python/pygments, bug #198989.
+# Mask python flag until s390 keyword is added to dev-python/pygments, bug #198989.
 sys-apps/paludis python
 
 # Piotr Jaroszyński <peper@gentoo.org> (19 Nov 2007)
-# Mask ruby flag until mips keyword is added to dev-ruby/syntax, bug #198864.
+# Mask ruby flag until s390 keyword is added to dev-ruby/syntax, bug #198864.
 sys-apps/paludis ruby
