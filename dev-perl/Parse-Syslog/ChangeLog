@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Parse-Syslog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/ChangeLog,v 1.8 2007/11/14 03:21:45 astinus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/ChangeLog,v 1.9 2007/11/19 12:16:22 armin76 Exp $
+
+  19 Nov 2007; Raúl Porcel <armin76@gentoo.org> Parse-Syslog-1.09.ebuild:
+  alpha stable wrt #199035
 
   14 Nov 2007; Alex Howells <ahowells@gentoo.org> ChangeLog:
   changing ~amd64 -> amd64, wrt bug #199035 (rdepend)
