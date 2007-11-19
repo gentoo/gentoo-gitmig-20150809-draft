@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.366 2007/11/13 22:40:48 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.367 2007/11/19 07:34:46 kumba Exp $
+
+  19 Nov 2007; Joshua Kinard <kumba@gentoo.org> udev-115-r1.ebuild:
+  Stable on mips, per #195289.
 
 *udev-117 (13 Nov 2007)
 
