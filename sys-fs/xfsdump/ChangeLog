@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsdump
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.60 2007/11/02 04:17:16 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.61 2007/11/19 06:42:36 kumba Exp $
+
+  19 Nov 2007; Joshua Kinard <kumba@gentoo.org> xfsdump-2.2.46.ebuild:
+  Stable on mips, per #197204.
 
   02 Nov 2007; Steve Dibb <beandog@gentoo.org> xfsdump-2.2.46.ebuild:
   amd64 stable, bug 197204
