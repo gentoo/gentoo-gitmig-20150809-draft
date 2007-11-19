@@ -1,6 +1,10 @@
 # ChangeLog for media-video/lxdvdrip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.23 2007/06/01 19:54:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.24 2007/11/19 19:12:57 aballier Exp $
+
+  19 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  -files/lxdvdrip-1.62-makefile, -lxdvdrip-1.62.ebuild:
+  remove old
 
   01 Jun 2007; Alexis Ballier <aballier@gentoo.org>
   -files/lxdvdrip-1.42-dvdread.patch, -lxdvdrip-1.42.ebuild:
