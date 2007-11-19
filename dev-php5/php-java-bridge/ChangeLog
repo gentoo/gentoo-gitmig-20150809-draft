@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/php-java-bridge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-java-bridge/ChangeLog,v 1.18 2007/11/16 17:20:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-java-bridge/ChangeLog,v 1.19 2007/11/19 14:20:17 cla Exp $
+
+  19 Nov 2007; Dawid Węgliński <cla@gentoo.org>
+  php-java-bridge-4.3.0.ebuild:
+  Stable on x86 (bug #199339)
 
   16 Nov 2007; nixnut <nixnut@gentoo.org> php-java-bridge-4.3.0.ebuild:
   Added ~ppc wrt bug 199339
