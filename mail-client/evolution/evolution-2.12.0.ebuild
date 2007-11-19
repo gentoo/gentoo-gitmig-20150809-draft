@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.0.ebuild,v 1.5 2007/11/02 15:58:10 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.0.ebuild,v 1.6 2007/11/19 13:50:55 eva Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -98,6 +98,18 @@ pkg_setup() {
 		G2CONF="${G2CONF} $(use_with krb4 krb4 /usr)"
 	fi
 
+	# dang - I've changed this to do --enable-plugins=experimental.  This will autodetect
+	# new-mail-notify and exchange, but that cannot be helped for the moment.
+	# They should be changed to depend on a --enable-<foo> like mono is.  This
+	# cleans up a ton of crap from this ebuild.
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Mail-remote doesn't build
+	epatch "${FILESDIR}"/${PN}-2.11.90-mail-remote-broken.patch
+
 	# Fix tests (again)
 	echo "evolution-addressbook.xml" >> "${S}"/po/POTFILES.in
 	echo "evolution-calendar.xml" >> "${S}"/po/POTFILES.in
@@ -116,18 +128,6 @@ pkg_setup() {
 	echo "evolution-task-editor.xml" >> "${S}"/po/POTFILES.in
 	echo "evolution-tasks.xml" >> "${S}"/po/POTFILES.in
 	echo "evolution.xml" >> "${S}"/po/POTFILES.in
-
-	# dang - I've changed this to do --enable-plugins=experimental.  This will autodetect
-	# new-mail-notify and exchange, but that cannot be helped for the moment.
-	# They should be changed to depend on a --enable-<foo> like mono is.  This
-	# cleans up a ton of crap from this ebuild.
-}
-
-src_unpack() {
-	gnome2_src_unpack
-
-	# Mail-remote doesn't build
-	epatch "${FILESDIR}"/${PN}-2.11.90-mail-remote-broken.patch
 }
 
 src_compile() {

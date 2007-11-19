@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.208 2007/11/06 17:08:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.209 2007/11/19 13:50:55 eva Exp $
+
+  19 Nov 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  evolution-2.12.0.ebuild, evolution-2.12.1.ebuild:
+  fix test fixing to actually be applied in the right place
 
   06 Nov 2007; Raúl Porcel <armin76@gentoo.org> evolution-2.10.3.ebuild:
   sparc stable wrt #193339
