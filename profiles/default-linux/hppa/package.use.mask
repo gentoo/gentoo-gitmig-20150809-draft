@@ -1,9 +1,5 @@
 net-misc/tightvnc server
 
-# Gilles Dartiguelongue <eva@gentoo.org> (29 Oct 2007)
-# app-vim/gtk-syntax not keyworded yet
-x11-libs/gtk+ vim-syntax
-
 # Samuli Suominen <drac@gentoo.org> (17 Nov 2007)
 # Needs valgrind
 media-libs/gstreamer debug

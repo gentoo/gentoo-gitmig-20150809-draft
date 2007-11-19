@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.20 2007/10/22 19:28:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.21 2007/11/19 12:30:06 jer Exp $
+
+  19 Nov 2007; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Removed useless gtk-syntax mask.
 
   22 Oct 2007; Jeroen Roovers <jer@gentoo.org> use.mask:
   Unmasking USE=lapack.
