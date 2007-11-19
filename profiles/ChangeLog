@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.834 2007/11/19 13:56:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.835 2007/11/19 16:43:54 flameeyes Exp $
+
+  19 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
+  Add aspell and timezone USE flags for rbot.
 
   19 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add snapshot USE flag for the rbot live ebuild.
