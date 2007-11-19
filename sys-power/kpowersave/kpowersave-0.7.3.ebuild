@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/kpowersave-0.7.3.ebuild,v 1.2 2007/10/18 16:14:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/kpowersave-0.7.3.ebuild,v 1.3 2007/11/19 10:08:27 genstef Exp $
 
 inherit kde
 
@@ -26,4 +26,10 @@ src_unpack() {
 	unpack ${A}
 	rm -rf "${S}/admin" "${S}/configure"
 	ln -s "${WORKDIR}/admin" "${S}/admin"
+}
+
+pkg_postinst() {
+	einfo "Making sure that config directory is readable"
+	einfo "chmod 755 ${ROOT}/usr/share/config"
+	chmod 755 "${ROOT}/usr/share/config"
 }

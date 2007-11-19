@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/kpowersave
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/ChangeLog,v 1.19 2007/11/12 20:55:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/ChangeLog,v 1.20 2007/11/19 10:08:27 genstef Exp $
+
+  19 Nov 2007; Stefan Schweizer <genstef@gentoo.org>
+  kpowersave-0.7.3.ebuild:
+  Make sure the config directory is readable for every user, bug 198969 thanks
+  to Gabriel Devenyi <ace@staticwave.ca>
 
   12 Nov 2007; Stefan Schweizer <genstef@gentoo.org>
   -kpowersave-0.7.2.ebuild:
