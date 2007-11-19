@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.180 2007/11/15 16:59:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.181 2007/11/19 23:10:31 cla Exp $
+
+  19 Nov 2007; Dawid Węgliński <cla@gentoo.org> pam-0.99.9.0.ebuild:
+  Stable on x86 (bug #199693)
 
   15 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> pam-0.78-r5.ebuild:
   Drop keywords for all arches but mips, see bug 199193.
