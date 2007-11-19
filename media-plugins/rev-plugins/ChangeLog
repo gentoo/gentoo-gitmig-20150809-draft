@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/rev-plugins
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/ChangeLog,v 1.14 2007/11/19 09:39:57 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/ChangeLog,v 1.15 2007/11/19 09:56:05 drac Exp $
+
+  19 Nov 2007; Samuli Suominen <drac@gentoo.org> rev-plugins-0.3.1.ebuild:
+  amd64 stable wrt #199575
 
   19 Nov 2007; Dawid Węgliński <cla@gentoo.org> rev-plugins-0.3.1.ebuild:
   Stable on x86 (bug #199575)
