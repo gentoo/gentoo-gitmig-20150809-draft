@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.69 2007/10/22 14:24:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.70 2007/11/19 07:24:24 kumba Exp $
+
+  19 Nov 2007; Joshua Kinard <kumba@gentoo.org> kbd-1.13-r1.ebuild:
+  Stable on mips, per #195687.
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org> kbd-1.13-r1.ebuild:
   alpha/ia64/sparc stable wrt #195687
