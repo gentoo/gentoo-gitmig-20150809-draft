@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-bdb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.21 2007/05/27 18:55:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.22 2007/11/19 20:13:09 graaff Exp $
+
+  19 Nov 2007; Hans de Graaff <graaff@gentoo.org> -ruby-bdb-0.5.3.ebuild,
+  -ruby-bdb-0.5.9.ebuild:
+  Remove old versions
 
   27 May 2007; nixnut <nixnut@gentoo.org> ruby-bdb-0.6.0.ebuild:
   Stable on ppc wrt bug 174529
