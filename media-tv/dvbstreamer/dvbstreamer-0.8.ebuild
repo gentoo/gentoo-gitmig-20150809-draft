@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-0.6.ebuild,v 1.5 2007/11/19 09:07:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-0.8.ebuild,v 1.1 2007/11/19 09:07:18 zzam Exp $
 
 inherit multilib
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="~media-libs/libdvbpsi-0.1.5
+RDEPEND=">=media-libs/libdvbpsi-0.1.5
 	>=dev-db/sqlite-3
 	sys-libs/readline"
 
