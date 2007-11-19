@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgraph
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.25 2007/11/18 00:21:04 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.26 2007/11/19 04:43:43 wltjr Exp $
+
+  19 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  jgraph-5.10.1.2.ebuild:
+  amd64 stable, bug #199255.
 
   18 Nov 2007; Dawid Węgliński <cla@gentoo.org> jgraph-5.10.1.2.ebuild:
   Stable on x86 (bug #199255)
