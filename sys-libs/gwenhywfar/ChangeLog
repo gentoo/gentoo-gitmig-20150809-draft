@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.50 2007/11/16 00:25:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.51 2007/11/19 16:58:59 hanno Exp $
+
+*gwenhywfar-2.6.2 (19 Nov 2007)
+
+  19 Nov 2007; Hanno Boeck <hanno@gentoo.org> +gwenhywfar-2.6.2.ebuild:
+  Version bump.
 
   16 Nov 2007; Steve Dibb <beandog@gentoo.org> gwenhywfar-2.6.1.ebuild:
   amd64 stable, bug 192840
