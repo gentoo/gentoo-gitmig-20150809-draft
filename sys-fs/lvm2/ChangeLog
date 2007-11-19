@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.121 2007/11/16 14:21:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.122 2007/11/19 07:29:21 kumba Exp $
+
+  19 Nov 2007; Joshua Kinard <kumba@gentoo.org> lvm2-2.02.28-r2.ebuild:
+  Stable on mips, per #195173.
 
   16 Nov 2007; Doug Klima <cardoe@gentoo.org>
   -files/lvm2-2.01.14-static.patch, -files/lvm2-2.01.14.patch,
