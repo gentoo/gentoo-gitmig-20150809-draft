@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/rbot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.20 2007/03/19 03:25:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.21 2007/11/19 13:56:54 flameeyes Exp $
+
+  19 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Take maintainership again, and add the live SVN ebuild I had in my overlay.
+  More development will follow.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove flameeyes from metadata.xml due to retirement.
