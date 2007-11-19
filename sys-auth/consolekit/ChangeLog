@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.25 2007/10/31 21:32:27 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.26 2007/11/19 05:02:22 kumba Exp $
+
+  19 Nov 2007; Joshua Kinard <kumba@gentoo.org> consolekit-0.2.1.ebuild:
+  Stable on mips.
 
   31 Oct 2007; Roy Marples <uberlord@gentoo.org>
   +files/consolekit-0.2.3-freebsd.patch, consolekit-0.2.3.ebuild:
