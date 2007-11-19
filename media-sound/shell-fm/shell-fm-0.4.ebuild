@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/shell-fm-0.4.ebuild,v 1.1 2007/11/19 22:22:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/shell-fm-0.4.ebuild,v 1.2 2007/11/19 22:25:40 drac Exp $
 
 inherit autotools
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ao"
 
-DEPEND="media-libs/libmad
+RDEPEND="media-libs/libmad
 	ao? ( media-libs/libao )"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -28,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die 'emake install failed'
+	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS NEWS TODO shell-fm.rc-example doc/*.txt
 	insinto /usr/share/doc/${PF}/scripts
 	doins scripts/{shell*,zcontrol}
