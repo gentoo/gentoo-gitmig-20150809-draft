@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/bfm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.9 2007/11/04 02:36:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.10 2007/11/19 16:56:29 wltjr Exp $
+
+  19 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org> bfm-1.2-r1.ebuild:
+  amd64 stable, bug #196840. Removed dep on blackdown-java3d since it's masked
+  for removal.
 
   04 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -bfm-1.2.ebuild:
   Delete generation 1 ebuild.

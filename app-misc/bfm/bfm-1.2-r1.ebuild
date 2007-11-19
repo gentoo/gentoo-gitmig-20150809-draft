@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/bfm-1.2-r1.ebuild,v 1.5 2007/10/24 15:35:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/bfm-1.2-r1.ebuild,v 1.6 2007/11/19 16:56:29 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,12 +12,11 @@ SRC_URI="http://bfm.webhop.net/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4
-	|| ( >=dev-java/blackdown-java3d-bin-1.3.1-r1
-		>=dev-java/sun-java3d-bin-1.3 )"
+	>=dev-java/sun-java3d-bin-1.3"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}"
 
