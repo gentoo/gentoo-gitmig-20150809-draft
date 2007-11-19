@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-io
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/ChangeLog,v 1.35 2007/11/18 17:50:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/ChangeLog,v 1.36 2007/11/19 18:27:28 wltjr Exp $
+
+  19 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  commons-io-1.3.2.ebuild:
+  amd64 stable, bug #198992.
 
   18 Nov 2007; Markus Rothe <corsair@gentoo.org> commons-io-1.3.2.ebuild:
   Stable on ppc64; bug #198992
