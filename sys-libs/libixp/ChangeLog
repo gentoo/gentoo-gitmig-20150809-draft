@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libixp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.8 2007/11/19 03:56:00 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.9 2007/11/19 03:59:15 omp Exp $
+
+  19 Nov 2007; David Shakaryan <omp@gentoo.org> libixp-0.2-r1.ebuild:
+  Fix small version mistake in blocker dependency.
 
   19 Nov 2007; David Shakaryan <omp@gentoo.org> libixp-0.2-r1.ebuild:
   Add newer version as a blocker dependency for older version. (bug #199556)

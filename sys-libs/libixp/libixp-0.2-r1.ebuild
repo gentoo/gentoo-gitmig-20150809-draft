@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/libixp-0.2-r1.ebuild,v 1.6 2007/11/19 03:56:00 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/libixp-0.2-r1.ebuild,v 1.7 2007/11/19 03:59:15 omp Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
-DEPEND="!>sys-libs/libixp-0.2"
+DEPEND="!>=sys-libs/libixp-0.4"
 RDEPEND=""
 
 src_unpack() {
