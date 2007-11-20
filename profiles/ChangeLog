@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.838 2007/11/20 13:33:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.839 2007/11/20 21:57:29 ulm Exp $
+
+  20 Nov 2007; Ulrich Mueller <ulm@gentoo.org> updates/4Q-2007,
+  package.mask:
+  Move app-emacs/wanderlust-cvs to app-emacs/wanderlust. Remove wanderlust-cvs
+  from package.mask.
 
   20 Nov 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask camlp5 and ledit, they are now fine with ocaml 3.09
