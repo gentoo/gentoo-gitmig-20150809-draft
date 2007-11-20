@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.45 2007/11/19 00:01:55 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.46 2007/11/20 19:31:10 armin76 Exp $
+
+  20 Nov 2007; Raúl Porcel <armin76@gentoo.org> xfe-1.04.ebuild:
+  sparc stable wrt #198932
 
   19 Nov 2007; Dawid Węgliński <cla@gentoo.org> xfe-1.04.ebuild:
   Stable on x86 (bug #198932)
