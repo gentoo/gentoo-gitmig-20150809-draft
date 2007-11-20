@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.144 2007/10/12 16:00:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.145 2007/11/20 07:25:56 leio Exp $
+
+  20 Nov 2007; Mart Raudsepp <leio@gentoo.org> -pwlib-1.10.5.ebuild,
+  -pwlib-1.10.7.ebuild, -pwlib-1.10.10.ebuild:
+  Remove old security vulnerable versions
 
   12 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   pwlib-1.10.10-r1.ebuild:
