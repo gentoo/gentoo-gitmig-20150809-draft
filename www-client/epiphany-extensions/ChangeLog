@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.64 2007/10/17 21:31:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.65 2007/11/20 14:47:55 drac Exp $
+
+  20 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  epiphany-extensions-2.20.1.ebuild:
+  amd64 stable wrt #199740
 
 *epiphany-extensions-2.20.1 (17 Oct 2007)
 
