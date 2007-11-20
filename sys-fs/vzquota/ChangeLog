@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/vzquota
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/ChangeLog,v 1.21 2007/10/20 16:06:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/ChangeLog,v 1.22 2007/11/20 07:52:51 pva Exp $
+
+  20 Nov 2007; <pva@gentoo.org> metadata.xml:
+  Added myself into metadata.
 
   20 Oct 2007; Benedikt Böhm <hollow@gentoo.org> vzquota-3.0.11.ebuild:
   fix #189622
