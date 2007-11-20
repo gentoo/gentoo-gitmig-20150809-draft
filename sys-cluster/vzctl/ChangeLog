@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.49 2007/08/16 11:43:29 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.50 2007/11/20 07:05:07 pva Exp $
+
+  20 Nov 2007; <pva@gentoo.org> -files/vzctl-3.0.14-ndsend.c.patch,
+  metadata.xml, -vzctl-3.0.0.8.ebuild, -vzctl-3.0.14.ebuild:
+  Added myself into metadata. Clean old.
 
 *vzctl-3.0.18-r1 (16 Aug 2007)
 
