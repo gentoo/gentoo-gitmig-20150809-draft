@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.262 2007/10/22 15:08:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.263 2007/11/20 18:12:34 armin76 Exp $
+
+*xchat-2.8.4-r3 (20 Nov 2007)
+
+  20 Nov 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/xc284-fix-scrollbfdleak.diff, -xchat-2.8.4-r2.ebuild,
+  +xchat-2.8.4-r3.ebuild:
+  Revbump to stable to add an useful fix, bug #199734
 
 *xchat-2.8.4-r2 (22 Oct 2007)
 
