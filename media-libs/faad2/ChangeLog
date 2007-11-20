@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.91 2007/05/21 21:03:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.92 2007/11/20 18:46:24 aballier Exp $
+
+*faad2-2.6.1 (20 Nov 2007)
+
+  20 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/faad2-2.6.1-abi_has_changed.patch, +faad2-2.6.1.ebuild:
+  bump it now that the license issues are resolved, force abi number to be
+  bumped because all symbols have been renamed, upstream has been informed but
+  not very responsive which kinda sucks
 
   21 May 2007; Raúl Porcel <armin76@gentoo.org> faad2-2.0-r13.ebuild:
   alpha stable wrt #161390
