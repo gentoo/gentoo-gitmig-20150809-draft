@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.48 2007/10/15 14:49:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.49 2007/11/20 14:46:56 markusle Exp $
+
+  20 Nov 2007; Markus Dittrich <markusle@gentoo.org>
+  octave-2.1.57-r1.ebuild, octave-2.1.69.ebuild, octave-2.1.71-r2.ebuild,
+  octave-2.1.72.ebuild, octave-2.1.73.ebuild, octave-2.1.73-r1.ebuild,
+  octave-2.1.73-r2.ebuild:
+  Switched tetex useflag and dependency to latex and latex-base,
+  respectively (see bug #196745).
 
   15 Oct 2007; Markus Rothe <corsair@gentoo.org> octave-2.1.73-r1.ebuild:
   Stable on ppc64

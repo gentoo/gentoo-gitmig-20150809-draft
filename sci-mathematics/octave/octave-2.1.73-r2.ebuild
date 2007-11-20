@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r2.ebuild,v 1.2 2007/07/13 05:28:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r2.ebuild,v 1.3 2007/11/20 14:46:56 markusle Exp $
 
 inherit flag-o-matic fortran autotools
 
@@ -24,7 +24,7 @@ DEPEND="virtual/libc
 	virtual/lapack
 	zlib? ( sys-libs/zlib )
 	hdf5? ( sci-libs/hdf5 )
-	doc? ( virtual/tetex )
+	doc? ( virtual/latex-base )
 	mpi? ( virtual/mpi )
 	!=app-text/texi2html-1.70"
 

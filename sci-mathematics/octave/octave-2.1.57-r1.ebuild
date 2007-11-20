@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.57-r1.ebuild,v 1.9 2007/03/16 22:38:28 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.57-r1.ebuild,v 1.10 2007/11/20 14:46:56 markusle Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc alpha ~sparc amd64"
-IUSE="emacs static readline zlib tetex hdf5 mpi ifc blas"
+IUSE="emacs static readline zlib latex hdf5 mpi ifc blas"
 
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r3
@@ -21,7 +21,7 @@ DEPEND="virtual/libc
 	>=dev-util/gperf-2.7.2
 	zlib? ( sys-libs/zlib )
 	hdf5? ( sci-libs/hdf5 )
-	tetex? ( virtual/tetex )
+	latex? ( virtual/latex-base )
 	x86? ( ifc? ( dev-lang/ifc ) )
 	blas? ( virtual/blas )"
 
@@ -76,7 +76,7 @@ src_install() {
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die "make install failed"
-	use tetex && octave-install-doc
+	use latex && octave-install-doc
 	if use emacs; then
 		cd emacs
 		exeinto /usr/bin
@@ -89,7 +89,7 @@ src_install() {
 		cd ..
 	fi
 	dodir /etc/env.d
-	echo "LDPATH=/usr/lib/octave-${PV}" > ${D}/etc/env.d/99octave
+	echo "LDPATH=/usr/lib/octave-${PV}" > "${D}"/etc/env.d/99octave
 }
 
 pkg_postinst() {

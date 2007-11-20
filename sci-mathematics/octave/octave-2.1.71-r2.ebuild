@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.71-r2.ebuild,v 1.4 2007/07/13 05:28:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.71-r2.ebuild,v 1.5 2007/11/20 14:46:56 markusle Exp $
 
 inherit flag-o-matic fortran
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2
 		ftp://ftp.math.uni-hamburg.de/pub/soft/math/octave/${P}.tar.bz2"
 
 SLOT="0"
-IUSE="emacs static readline zlib tetex hdf5 mpi blas"
+IUSE="emacs static readline zlib latex hdf5 mpi blas"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="virtual/libc
@@ -21,7 +21,7 @@ DEPEND="virtual/libc
 	>=dev-util/gperf-2.7.2
 	zlib? ( sys-libs/zlib )
 	hdf5? ( sci-libs/hdf5 )
-	tetex? ( virtual/tetex )
+	latex? ( virtual/latex-base )
 	blas? ( virtual/blas )
 	mpi? ( virtual/mpi )
 	!=app-text/texi2html-1.70"
@@ -69,7 +69,7 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
-	if use tetex; then
+	if use latex; then
 		octave-install-doc || die "Octave doc install failed"
 	fi
 	if use emacs; then
