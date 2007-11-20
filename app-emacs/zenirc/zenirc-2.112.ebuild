@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/zenirc/zenirc-2.112.ebuild,v 1.10 2007/11/17 23:07:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/zenirc/zenirc-2.112.ebuild,v 1.11 2007/11/20 13:07:11 opfer Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.zenirc.org/pub/zenirc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SITEFILE=50zenirc-gentoo.el
