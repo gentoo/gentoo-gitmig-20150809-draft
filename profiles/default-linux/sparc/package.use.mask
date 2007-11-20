@@ -4,3 +4,7 @@ media-libs/sdl-sound mikmod
 # Needs valgrind
 media-libs/gstreamer debug
 media-libs/gst-plugins-base debug
+# Needs chicken
+dev-lang/swig	chicken
+# Needs pike
+dev-lang/swig	pike
