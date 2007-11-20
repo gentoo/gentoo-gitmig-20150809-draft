@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/eselect-emacs-1.2.ebuild,v 1.1 2007/08/22 22:45:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/eselect-emacs-1.3.ebuild,v 1.1 2007/11/20 21:41:07 ulm Exp $
 
 DESCRIPTION="Manages Emacs and ctags symlinks"
 HOMEPAGE="http://www.gentoo.org/proj/en/lisp/emacs/"
