@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.6.1.ebuild,v 1.1 2007/10/28 18:59:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.6.1.ebuild,v 1.2 2007/11/20 14:33:52 drac Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.8"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="accessibility cairo gnome"
 
@@ -36,18 +36,15 @@ RDEPEND=">=dev-libs/glib-2.6
 		>=gnome-extra/at-spi-1
 		dev-libs/atk )
 	cairo? ( >=x11-libs/gtk+-2.8 )
-
 	x11-libs/libX11
 	x11-libs/libXtst
 	x11-libs/libXt"
-
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9
 	gnome? (
 		>=app-text/gnome-doc-utils-0.3.2
 		app-text/scrollkeeper )
-
 	x11-proto/xextproto
 	x11-proto/xproto"
 
