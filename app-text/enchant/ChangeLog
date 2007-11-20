@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.76 2007/11/17 18:03:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.77 2007/11/20 19:21:31 corsair Exp $
+
+  20 Nov 2007; Markus Rothe <corsair@gentoo.org> enchant-1.3.0.ebuild:
+  Stable on ppc64; bug #199322
 
   17 Nov 2007; Raúl Porcel <armin76@gentoo.org> enchant-1.3.0.ebuild:
   alpha/ia64/sparc stable wrt #199322
