@@ -1,6 +1,13 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.8 2007/10/30 21:51:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.9 2007/11/20 13:26:24 aballier Exp $
+
+*camlp5-5.03 (20 Nov 2007)
+
+  20 Nov 2007; Alexis Ballier <aballier@gentoo.org> -camlp5-5.02.ebuild,
+  +camlp5-5.03.ebuild:
+  version bump, this one can now safely be installed with ocaml 3.09 they dont
+  collide anymore
 
 *camlp5-5.02 (30 Oct 2007)
 

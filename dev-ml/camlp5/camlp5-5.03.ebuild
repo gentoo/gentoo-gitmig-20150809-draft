@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-5.02.ebuild,v 1.1 2007/10/30 21:51:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-5.03.ebuild,v 1.1 2007/11/20 13:26:24 aballier Exp $
 
 inherit multilib eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
-DEPEND=">=dev-lang/ocaml-3.10.0"
+DEPEND=">=dev-lang/ocaml-3.09"
 RDEPEND="${DEPEND}"
 
 src_compile() {
