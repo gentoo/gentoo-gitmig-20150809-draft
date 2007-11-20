@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kmix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.74 2007/10/19 23:08:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.75 2007/11/20 12:46:27 philantrop Exp $
+
+*kmix-3.5.8-r1 (20 Nov 2007)
+
+  20 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kmix-3.5.8-198015_XF86Audio.patch, +kmix-3.5.8-r1.ebuild:
+  Added a patch to fix a problem with the XF86Audio* key handlers not working
+  when there's no master channel (e. g. you have a mute key that stopped
+  working in KDE). Fixes bug 198015. Thanks to Kelvie Wong for creating and
+  submitting said patch.
 
 *kmix-3.5.8 (19 Oct 2007)
 

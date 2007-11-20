@@ -1,0 +1,84 @@
+From 5ddf8e7f68098ebb86d0023653e540edf119291d Mon Sep 17 00:00:00 2001
+From: Kelvie Wong <kelvie@ieee.org>
+Date: Sat, 3 Nov 2007 21:42:27 -0700
+Subject: [PATCH] KMilo: reintroduced support for kmix's user-set master channel
+ * uses the new masterDeviceIndex dcop call in KMix (from other patch)
+
+---
+ kmilo/generic/generic_monitor.cpp |   18 +++++++++++++-----
+ kmilo/generic/generic_monitor.h   |    1 +
+ 2 files changed, 14 insertions(+), 5 deletions(-)
+
+diff --git a/kmilo/generic/generic_monitor.cpp b/kmilo/generic/generic_monitor.cpp
+index 51b96b1..fd7a47f 100644
+--- a/kmilo/generic/generic_monitor.cpp
++++ b/kmilo/generic/generic_monitor.cpp
+@@ -50,6 +50,7 @@ GenericMonitor::GenericMonitor(QObject *parent, const char *name, const QStringL
+ 	m_minVolume = 0;
+ 	m_maxVolume = 100;
+ 	m_volume = 50;
++	m_deviceIdx = 0;
+ }
+ 
+ GenericMonitor::~GenericMonitor()
+@@ -92,7 +93,14 @@ bool GenericMonitor::retrieveVolume()
+ {
+ 	bool kmix_error = false;
+ 
+-	DCOPReply reply = kmixClient->call("absoluteVolume", 0);
++	// Set it to the master, or 0 (from GenericMonitor()) if this dcop
++	// call doesn't exist or various other errors.  It used to be
++	// hard-coded to 0 anyways.
++	DCOPReply reply = kmixClient->call("masterDeviceIndex");
++	if (reply.isValid())
++		m_deviceIdx = reply;
++
++	reply = kmixClient->call("absoluteVolume", m_deviceIdx);
+ 	if (reply.isValid())
+ 		m_volume = reply;
+ 	else
+@@ -104,7 +112,7 @@ bool GenericMonitor::retrieveVolume()
+ 		if (kapp->startServiceByDesktopName("kmix")==0) // trying to start kmix
+ 		{
+ 			// trying again
+-			reply = kmixClient->call("absoluteVolume", 0);
++			reply = kmixClient->call("absoluteVolume", m_deviceIdx);
+ 			if (reply.isValid()) 
+ 			{
+ 				m_volume = reply;
+@@ -122,9 +130,9 @@ bool GenericMonitor::retrieveVolume()
+ 		
+ 		return false;
+ 	} else {
+-		reply = kmixClient->call("absoluteVolumeMax", 0);
++		reply = kmixClient->call("absoluteVolumeMax", m_deviceIdx);
+ 		m_maxVolume = reply;
+-		reply = kmixClient->call("absoluteVolumeMin", 0);
++		reply = kmixClient->call("absoluteVolumeMin", m_deviceIdx);
+ 		m_minVolume = reply;
+ 		return true;
+ 	}
+@@ -165,7 +173,7 @@ void GenericMonitor::displayVolume()
+ 
+ 	// If we got this far, the DCOP communication with kmix works,
+ 	// so we don't have to test the result.
+-	kmixClient->send("setAbsoluteVolume", 0, m_volume);
++	kmixClient->send("setAbsoluteVolume", m_deviceIdx, m_volume);
+ 
+ 	// if mute then unmute
+ 	if (m_mute)
+diff --git a/kmilo/generic/generic_monitor.h b/kmilo/generic/generic_monitor.h
+index 7a0ba51..d04274f 100644
+--- a/kmilo/generic/generic_monitor.h
++++ b/kmilo/generic/generic_monitor.h
+@@ -74,6 +74,7 @@ private:
+ 
+ 	DCOPRef *kmixClient, *kmixWindow;
+ 
++	int m_deviceIdx;
+ 	int m_progress;
+ 	long m_volume, m_oldVolume;
+ 	bool m_mute;
+-- 
+1.5.3.4
+
