@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ecryptfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.10 2007/11/10 17:12:44 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.11 2007/11/20 18:17:32 alonbl Exp $
+
+  20 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/ecryptfs-utils-30-gpgme.patch, ecryptfs-utils-30.ebuild:
+  Fix locate gpgme issue, bug#199779
 
   10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml:
   Add crypto as maintainer
