@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.42 2007/11/16 18:46:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.43 2007/11/20 19:46:41 armin76 Exp $
+
+  20 Nov 2007; Raúl Porcel <armin76@gentoo.org> libgpod-0.6.0.ebuild:
+  Re-add ~ia64 wrt #199372
 
   16 Nov 2007; Michael Sterrett <mr_bones_@gentoo.org> libgpod-0.6.0.ebuild:
   add missing test to IUSE
