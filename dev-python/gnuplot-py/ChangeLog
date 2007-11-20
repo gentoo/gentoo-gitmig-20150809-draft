@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/gnuplot-py
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.20 2007/08/21 12:00:25 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.21 2007/11/20 21:15:31 hawking Exp $
+
+*gnuplot-py-1.7-r2 (20 Nov 2007)
+
+  20 Nov 2007; Ali Polatel <hawking@gentoo.org>
+  +files/gnuplot-py-1.7-numpy.patch, +gnuplot-py-1.7-r2.ebuild:
+  revbump. backported upstream's changes for numpy. numeric dependency changed
+  to numpy.
 
   21 Aug 2007; Ferris McCormick <fmccor@gentoo.org>
   gnuplot-py-1.7-r1.ebuild:
