@@ -1,6 +1,11 @@
 # ChangeLog for net-im/msnlib
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.17 2007/08/30 12:47:38 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.18 2007/11/20 06:34:55 hawking Exp $
+
+*msnlib-3.6 (20 Nov 2007)
+
+  20 Nov 2007; Ali Polatel <hawking@gentoo.org> +msnlib-3.6.ebuild:
+  version bump, added tk use flag. thanks to Peter Stuge, bug 198005.
 
   30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing liquidx from metadata due to his retirement (see #171155 for
