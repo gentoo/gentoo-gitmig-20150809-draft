@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-2.6.ebuild,v 1.4 2007/11/19 20:42:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-2.6.ebuild,v 1.5 2007/11/20 23:13:36 corsair Exp $
 
 inherit multilib elisp-common
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.call-with-current-continuation.org/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="emacs"
 
 DEPEND="dev-libs/libpcre
