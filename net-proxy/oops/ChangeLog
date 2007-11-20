@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/oops
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.19 2007/11/04 08:17:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.20 2007/11/20 21:08:15 mrness Exp $
+
+  20 Nov 2007; Alin Năstac <mrness@gentoo.org> +files/libpcreposix.patch,
+  oops-1.5.24_pre20050503-r2.ebuild:
+  Link with -lpcreposix instead libpcreposix.a (#199535).
 
   04 Nov 2007; Alin Năstac <mrness@gentoo.org>
   oops-1.5.24_pre20050503-r2.ebuild:

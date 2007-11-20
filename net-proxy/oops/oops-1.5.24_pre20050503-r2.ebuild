@@ -1,8 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r2.ebuild,v 1.5 2007/11/04 08:17:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r2.ebuild,v 1.6 2007/11/20 21:08:15 mrness Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+WANT_AUTOMAKE="none"
+
+inherit eutils flag-o-matic toolchain-funcs autotools
 
 MY_P="${PN}-1.5.23"
 
@@ -37,8 +39,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${P/_*}-pthread-rwlock.patch"
 	epatch "${FILESDIR}/modules-as-needed.patch"
 	epatch "${FILESDIR}/implicit-decl.patch"
-	sed -i -e 's:/usr/local/lib/libpcre:/usr/lib/libpcre:g' configure
+	epatch "${FILESDIR}/libpcreposix.patch"
 	sed -i -e 's:y\.tab\.h:y.tab.c:' src/Makefile.in
+	eautoconf
 }
 
 src_compile() {
