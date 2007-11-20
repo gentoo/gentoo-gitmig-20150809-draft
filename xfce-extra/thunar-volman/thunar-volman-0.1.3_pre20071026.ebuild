@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.1.3_pre20071026.ebuild,v 1.1 2007/10/26 15:10:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.1.3_pre20071026.ebuild,v 1.2 2007/11/20 08:37:53 drac Exp $
 
 inherit eutils xfce44
 
@@ -10,7 +10,7 @@ DESCRIPTION="Thunar volume management"
 HOMEPAGE="http://foo-projects.org/~benny/projects/thunar-volman"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 
 RDEPEND="dev-libs/dbus-glib
@@ -26,6 +26,13 @@ pkg_setup() {
 		ewarn "hal USE flag and re-emerge exo."
 		die "re-emerge exo with USE hal"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# Fix make check.
+	echo thunar-volman-settings.desktop.in.in >> po/POTFILES.skip
 }
 
 DOCS="AUTHORS ChangeLog NEWS README THANKS"

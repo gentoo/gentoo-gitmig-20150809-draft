@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-volman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.30 2007/10/26 15:10:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.31 2007/11/20 08:37:53 drac Exp $
+
+  20 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  thunar-volman-0.1.3_pre20071026.ebuild:
+  Fix test suite, amd64/arm stable wrt #199744.
 
 *thunar-volman-0.1.3_pre20071026 (26 Oct 2007)
 
