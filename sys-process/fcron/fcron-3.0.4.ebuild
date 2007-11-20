@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.4.ebuild,v 1.1 2007/11/09 08:54:59 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.4.ebuild,v 1.2 2007/11/20 00:52:07 wschlich Exp $
 
 inherit cron pam eutils
 
@@ -146,13 +146,13 @@ pkg_postinst() {
 	einfo
 	einfo "fcron has some important differences compared to vixie-cron:"
 	einfo
-	einfo "1. fcron stores the crontabs in /var/spool/fcron"
-	einfo "   instead of /var/spool/cron/crontabs"
+	einfo "1. fcron stores the crontabs in ${ROOT}var/spool/fcron"
+	einfo "   instead of ${ROOT}var/spool/cron/crontabs"
 	einfo
 	einfo "2. fcron uses a special binary file format for storing the"
-	einfo "   crontabs in /var/spool/fcron/USERNAME,"
+	einfo "   crontabs in ${ROOT}var/spool/fcron/USERNAME,"
 	einfo "   but the original plain text version is saved as"
-	einfo "   /var/spool/fcron/USERNAME.orig for your"
+	einfo "   ${ROOT}var/spool/fcron/USERNAME.orig for your"
 	einfo "   reference (and for being edited with fcrontab)."
 	einfo
 	einfo "3. fcron does not feature a system crontab in exactly the"
@@ -160,21 +160,21 @@ pkg_postinst() {
 	einfo "   features a crontab for a pseudo-user 'systab' for use"
 	einfo "   as the system crontab. Running a command like"
 	einfo
-	einfo "      fcrontab -u systab /etc/crontab"
+	einfo "      fcrontab -u systab ${ROOT}etc/crontab"
 	einfo
-	einfo "   will write /etc/crontab to the fcron crontabs directory as"
+	einfo "   will write ${ROOT}etc/crontab to the fcron crontabs directory as"
 	einfo
-	einfo "      /var/spool/fcron/systab"
+	einfo "      ${ROOT}var/spool/fcron/systab"
 	einfo
-	einfo "   Please note that changes to /etc/crontab will not become"
+	einfo "   Please note that changes to ${ROOT}etc/crontab will not become"
 	einfo "   active automatically! fcron also does not use the directory"
-	einfo "   /etc/cron.d by default like vixie-cron does."
+	einfo "   ${ROOT}etc/cron.d by default like vixie-cron does."
 	einfo "   Fortunately, it's possible to emulate vixie-cron's behavior"
-	einfo "   with regards to /etc/crontab and /etc/cron.d by using a"
+	einfo "   with regards to ${ROOT}etc/crontab and ${ROOT}etc/cron.d by using a"
 	einfo "   little helper script called 'check_system_crontabs'."
-	einfo "   The file /etc/fcrontab (not /etc/crontab!) has been set up"
+	einfo "   The file ${ROOT}etc/fcrontab (not ${ROOT}etc/crontab!) has been set up"
 	einfo "   to run the script once a while to check whether"
-	einfo "   /etc/fcrontab, /etc/crontab or files in /etc/cron.d/ have"
+	einfo "   ${ROOT}etc/fcrontab, ${ROOT}etc/crontab or files in ${ROOT}etc/cron.d/ have"
 	einfo "   changed since the last generation of the systab and"
 	einfo "   regenerate it from those three locations as necessary."
 	einfo "   You should now run 'check_system_crontabs' once to properly"
@@ -182,31 +182,31 @@ pkg_postinst() {
 	einfo
 	einfo "      check_system_crontabs -v -i -f"
 	einfo
-	einfo "   The file /etc/fcrontab should only be used to run that"
+	einfo "   The file ${ROOT}etc/fcrontab should only be used to run that"
 	einfo "   script in order to ensure independence from the standard"
-	einfo "   system crontab file /etc/crontab."
+	einfo "   system crontab file ${ROOT}etc/crontab."
 	einfo "   You may of course adjust the schedule for the script"
 	einfo "   'check_system_crontabs' or any other setting in"
-	einfo "   /etc/fcrontab as you desire."
+	einfo "   ${ROOT}etc/fcrontab as you desire."
 	einfo
 	einfo "If you do NOT want to use 'check_system_crontabs', you"
 	einfo "might still want to activate the use of the well known"
-	einfo "directories /etc/cron.{hourly|daily|weekly|monthly} by"
-	einfo "just generating a systab once from /etc/crontab:"
+	einfo "directories ${ROOT}etc/cron.{hourly|daily|weekly|monthly} by"
+	einfo "just generating a systab once from ${ROOT}etc/crontab:"
 	einfo
-	einfo "   fcrontab -u systab /etc/crontab"
+	einfo "   fcrontab -u systab ${ROOT}etc/crontab"
 	einfo
 	einfo "Happy fcron'ing!"
 	einfo
 
 	ewarn
-	ewarn "Fixing permissions and ownership of /usr/bin/fcron{tab,dyn,sighup}"
-	chown fcron:fcron /usr/bin/fcron{tab,dyn} >&/dev/null
-	chown ${rootuser:-root}:fcron /usr/bin/fcronsighup >&/dev/null
-	chmod 6755 /usr/bin/fcron{tab,dyn,sighup} >&/dev/null
-	ewarn "Fixing permissions and ownership of /etc/{fcron,fcrontab,crontab}"
-	chown -R ${rootuser:-root}:fcron /etc/{fcron,fcrontab,crontab} >&/dev/null
-	chmod -R g+rX,o= /etc/fcron /etc/{fcron,fcrontab,crontab} >&/dev/null
+	ewarn "Fixing permissions and ownership of ${ROOT}usr/bin/fcron{tab,dyn,sighup}"
+	chown fcron:fcron ${ROOT}usr/bin/fcron{tab,dyn} >&/dev/null
+	chown ${rootuser:-root}:fcron ${ROOT}usr/bin/fcronsighup >&/dev/null
+	chmod 6755 ${ROOT}usr/bin/fcron{tab,dyn,sighup} >&/dev/null
+	ewarn "Fixing permissions and ownership of ${ROOT}etc/{fcron,fcrontab,crontab}"
+	chown -R ${rootuser:-root}:fcron ${ROOT}etc/{fcron,fcrontab,crontab} >&/dev/null
+	chmod -R g+rX,o= ${ROOT}etc/fcron ${ROOT}etc/{fcron,fcrontab,crontab} >&/dev/null
 	ewarn
 
 	ewarn
@@ -217,31 +217,31 @@ pkg_postinst() {
 	ewarn "fcron usage can now only be restricted by adding users"
 	ewarn "to the following files instead of to the group 'cron':"
 	ewarn
-	ewarn "   /etc/fcron/fcron.allow"
-	ewarn "   /etc/fcron/fcron.deny"
+	ewarn "   ${ROOT}etc/fcron/fcron.allow"
+	ewarn "   ${ROOT}etc/fcron/fcron.deny"
 	ewarn
 	ebeep 10
 	epause 10
 
-	if ls -1 /var/spool/cron/fcrontabs/* >&/dev/null; then
+	if ls -1 ${ROOT}var/spool/cron/fcrontabs/* >&/dev/null; then
 		ewarn
 		ewarn "WARNING: fcron now uses a dedicated fcron-specific"
-		ewarn "spooldir /var/spool/fcron instead of the commonly"
-		ewarn "used /var/spool/cron for several reasons."
+		ewarn "spooldir ${ROOT}var/spool/fcron instead of the commonly"
+		ewarn "used ${ROOT}var/spool/cron for several reasons."
 		ewarn
-		ewarn "Copying over existing crontabs from /var/spool/cron/fcrontabs"
-		cp /var/spool/cron/fcrontabs/* /var/spool/fcron/ >&/dev/null \
+		ewarn "Copying over existing crontabs from ${ROOT}var/spool/cron/fcrontabs"
+		cp ${ROOT}var/spool/cron/fcrontabs/* ${ROOT}var/spool/fcron/ >&/dev/null \
 			|| die "failed to migrate existing crontabs"
-		ewarn "You should now remove /var/spool/cron/fcrontabs!"
+		ewarn "You should now remove ${ROOT}var/spool/cron/fcrontabs!"
 		ewarn
-		ewarn "Fixing permissions and ownership of /var/spool/fcron"
-		chown root:root /var/spool/fcron/* >&/dev/null
-		chmod 0600 /var/spool/fcron/* >&/dev/null
-		chown fcron:fcron /var/spool/fcron/*.orig >&/dev/null
-		chmod 0640 /var/spool/fcron/*.orig >&/dev/null
+		ewarn "Fixing permissions and ownership of ${ROOT}var/spool/fcron"
+		chown root:root ${ROOT}var/spool/fcron/* >&/dev/null
+		chmod 0600 ${ROOT}var/spool/fcron/* >&/dev/null
+		chown fcron:fcron ${ROOT}var/spool/fcron/*.orig >&/dev/null
+		chmod 0640 ${ROOT}var/spool/fcron/*.orig >&/dev/null
 		ewarn
 		ewarn "*** YOU SHOULD IMMEDIATELY UPDATE THE"
-		ewarn "*** fcrontabs ENTRY IN /etc/fcron/fcron.conf"
+		ewarn "*** fcrontabs ENTRY IN ${ROOT}etc/fcron/fcron.conf"
 		ewarn "*** AND RESTART YOUR FCRON DAEMON!"
 		ebeep 20
 		epause 10
