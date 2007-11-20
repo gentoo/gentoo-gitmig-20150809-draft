@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/foomatic-db-ppds-20060720.ebuild,v 1.12 2007/05/08 12:07:32 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/foomatic-db-ppds-20060720.ebuild,v 1.13 2007/11/20 03:29:15 kumba Exp $
 
 DESCRIPTION="linuxprinting.org PPD files for postscript printers"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
@@ -9,7 +9,7 @@ SRC_URI="http://gentooexperimental.org/~genstef/dist/${PN/-ppds}-3.0-${PV}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}/${P/-ppds}
