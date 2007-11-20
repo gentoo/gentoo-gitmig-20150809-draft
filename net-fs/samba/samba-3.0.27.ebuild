@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.27.ebuild,v 1.8 2007/11/18 13:43:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.27.ebuild,v 1.9 2007/11/20 03:10:29 kumba Exp $
 
 inherit eutils pam python multilib versionator confutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://samba/${MY_P}.tar.gz
 	mirror://samba/old-versions/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE_LINGUAS="linguas_ja linguas_pl"
 IUSE="${IUSE_LINGUAS} acl ads async automount caps cups doc examples ipv6 kernel_linux ldap fam
 	pam python quotas readline selinux swat syslog winbind"
