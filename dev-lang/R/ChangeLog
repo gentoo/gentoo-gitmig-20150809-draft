@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.98 2007/11/18 19:15:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.99 2007/11/20 21:56:47 wolf31o2 Exp $
+
+  20 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org> R-2.2.1-r1.ebuild:
+  Stable on amd64 wrt bug #198976.
 
   18 Nov 2007; Jeroen Roovers <jer@gentoo.org> R-2.6.0-r1.ebuild:
   Marked ~hppa (bug #199368).
