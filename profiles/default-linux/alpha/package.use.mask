@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.6 2007/11/17 13:58:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.7 2007/11/20 00:38:12 wschlich Exp $
+
+# Wolfram Schlich <wschlich@gentoo.org> (20 Nov 2007)
+# dependency can't be fulfilled at the moment
+net-im/mcabber otr
 
 # Needs valgrind
 media-libs/gstreamer debug
