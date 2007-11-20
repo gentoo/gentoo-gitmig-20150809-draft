@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.0.1.0.ebuild,v 1.1 2007/11/08 00:00:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.0.1.0.ebuild,v 1.2 2007/11/20 09:16:05 mr_bones_ Exp $
 
 inherit toolchain-funcs flag-o-matic games
 
@@ -22,6 +22,7 @@ RDEPEND="app-arch/bzip2
 	media-libs/sdl-image
 	>=media-libs/sdl-mixer-1.2
 	dev-libs/boost
+	dev-games/physfs
 	media-libs/smpeg
 	=dev-libs/libsigc++-1.2*"
 DEPEND="${RDEPEND}
