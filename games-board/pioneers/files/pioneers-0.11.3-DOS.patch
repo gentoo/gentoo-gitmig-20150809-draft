@@ -1,0 +1,56 @@
+Index: common/state.c
+===================================================================
+--- common/state.c	(revision 1355)
++++ common/state.c	(working copy)
+@@ -68,10 +68,12 @@
+ 
+ static void route_event(StateMachine * sm, gint event)
+ {
+-	StateFunc curr_state;
++	StateFunc curr_state = NULL;
+ 	gpointer user_data;
+ 
+-	curr_state = sm_current(sm);
++	if (sm->stack_ptr >= 0)
++		curr_state = sm_current(sm);
++
+ 	user_data = sm->user_data;
+ 	if (user_data == NULL)
+ 		user_data = sm;
+@@ -89,20 +91,22 @@
+ 
+ 	switch (event) {
+ 	case SM_ENTER:
+-		curr_state(user_data, event);
++		if (curr_state)
++			curr_state(user_data, event);
+ 		break;
+ 	case SM_INIT:
+-		curr_state(user_data, event);
++		if (curr_state)
++			curr_state(user_data, event);
+ 		if (!sm->is_dead && sm->global !=NULL)
+ 			sm->global (user_data, event);
+ 		break;
+ 	case SM_RECV:
+ 		sm_cancel_prefix(sm);
+-		if (curr_state(user_data, event))
++		if (curr_state && curr_state(user_data, event))
+ 			break;
+ 		sm_cancel_prefix(sm);
+ 		if (!sm->is_dead
+-		    && sm->global !=NULL && sm->global (user_data, event))
++		    && sm->global != NULL && sm->global (user_data, event))
+ 			break;
+ 
+ 		sm_cancel_prefix(sm);
+@@ -112,7 +116,8 @@
+ 	case SM_NET_CLOSE:
+ 		sm_close(sm);
+ 	default:
+-		curr_state(user_data, event);
++		if (curr_state)
++			curr_state(user_data, event);
+ 		if (!sm->is_dead && sm->global !=NULL)
+ 			sm->global (user_data, event);
+ 		break;
