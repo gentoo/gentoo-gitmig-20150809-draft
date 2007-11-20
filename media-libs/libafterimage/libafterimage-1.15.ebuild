@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.15.ebuild,v 1.1 2007/11/04 10:45:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.15.ebuild,v 1.2 2007/11/20 16:06:36 bicatali Exp $
 
 inherit eutils
 
@@ -65,7 +65,10 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake \
+		DESTDIR="${D}" \
+		AFTER_DOC_DIR="${D}/usr/share/doc/${PF}" \
+		install || die "emake install failed"
 	dodoc ChangeLog README || die
 	if use examples; then
 		cd apps

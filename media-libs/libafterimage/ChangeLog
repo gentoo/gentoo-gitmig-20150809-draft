@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libafterimage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.4 2007/11/05 15:07:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.5 2007/11/20 16:06:36 bicatali Exp $
+
+  20 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  libafterimage-1.15.ebuild:
+  Fixed html install directory (bug #199565), thanks Flameeyes.
 
   05 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
   files/libafterimage-makefile.in.patch:
