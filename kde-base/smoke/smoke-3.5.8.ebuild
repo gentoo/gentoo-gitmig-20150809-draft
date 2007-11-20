@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.5.8.ebuild,v 1.1 2007/10/19 23:59:42 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.5.8.ebuild,v 1.2 2007/11/20 05:39:53 hawking Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="kalyptus/"
@@ -15,7 +15,7 @@ HOMEPAGE="http://developer.kde.org/language-bindings/smoke/"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND="dev-lang/perl
-	dev-python/qscintilla" # QScintilla is an optional dep, there's a configure flag for it, but I don't want
+	x11-libs/qscintilla" # QScintilla is an optional dep, there's a configure flag for it, but I don't want
 				# to introduce a local noqscintilla use flag as it's a light dep.
 				# Of course it'd be nice if someone told me what the difference is between a smoke
 				# compiled with and without qscintilla support. --danarmak
