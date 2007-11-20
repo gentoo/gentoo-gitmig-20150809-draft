@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/hellanzb-0.13-r1.ebuild,v 1.1 2007/04/05 18:35:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/hellanzb-0.13-r2.ebuild,v 1.1 2007/11/20 14:43:07 aballier Exp $
 
 inherit distutils eutils
 
@@ -29,6 +29,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-datafiles.patch"
+	epatch "${FILESDIR}/${P}-Fix_conf_file_search_path.patch"
+	epatch "${FILESDIR}/${P}-Choose_interface_to_bind_on.patch"
+	epatch "${FILESDIR}/${P}-fix_multiples_hosts.diff"
 }
 
 src_install() {
