@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.8 2007/06/24 18:01:12 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.9 2007/11/20 02:14:29 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -109,7 +109,7 @@ src_unpack() {
 }
 
 src_compile() {
-	yesno() { useq $1 && echo YES || echo NO ; }
+	yesno() { use $1 && echo YES || echo NO ; }
 
 	local client="YES"
 	default_client || client="NO"

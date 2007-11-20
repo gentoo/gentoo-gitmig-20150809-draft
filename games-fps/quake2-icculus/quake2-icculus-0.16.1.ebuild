@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.19 2007/04/09 17:57:36 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.20 2007/11/20 02:17:48 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -74,7 +74,7 @@ src_unpack() {
 
 yesno() {
 	for f in "$@" ; do
-		if ! useq $f ; then
+		if ! use $f ; then
 			echo NO
 			return 1
 		fi

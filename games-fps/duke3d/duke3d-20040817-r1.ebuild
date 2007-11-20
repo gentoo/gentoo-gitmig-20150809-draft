@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r1.ebuild,v 1.5 2007/03/12 14:37:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r1.ebuild,v 1.6 2007/11/20 02:16:56 mr_bones_ Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${ECVS_MODULE}"
 
-use_tf() { useq ${1} && echo "true" || echo "false"; }
+use_tf() { use ${1} && echo "true" || echo "false"; }
 
 pkg_setup() {
 	if built_with_use dev-lang/perl ithreads ; then
