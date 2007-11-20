@@ -1,6 +1,10 @@
 # ChangeLog for app-office/magicpoint
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.35 2007/11/02 22:52:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.36 2007/11/20 12:53:02 opfer Exp $
+
+  20 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  -files/magicpoint-1.11b-mng_optional.patch, -magicpoint-1.11b.ebuild:
+  clean up
 
   02 Nov 2007; Lars Weiler <pylon@gentoo.org> magicpoint-1.12a-r1.ebuild:
   stable ppc, bug #196885
