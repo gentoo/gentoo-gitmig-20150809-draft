@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-thumbnailers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.45 2007/10/14 16:16:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.46 2007/11/20 20:01:18 drac Exp $
+
+  20 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  thunar-thumbnailers-0.2.1.ebuild, thunar-thumbnailers-0.3.0.ebuild:
+  Convert USE tetex to latex wrt #196745
 
   14 Oct 2007; Markus Rothe <corsair@gentoo.org>
   thunar-thumbnailers-0.3.0.ebuild:
