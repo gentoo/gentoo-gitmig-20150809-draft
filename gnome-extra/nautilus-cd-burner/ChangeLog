@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/nautilus-cd-burner
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.180 2007/10/13 13:09:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.181 2007/11/20 14:36:54 drac Exp $
+
+  20 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  nautilus-cd-burner-2.20.0.ebuild:
+  amd64 stable wrt #199740
 
 *nautilus-cd-burner-2.20.0 (13 Oct 2007)
 
