@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/lithium
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/lithium/ChangeLog,v 1.1 2007/11/20 14:43:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/lithium/ChangeLog,v 1.2 2007/11/20 14:53:57 lack Exp $
+
+  20 Nov 2007; Jim Ramsay <lack@gentoo.org> lithium-006.ebuild:
+  Fixed major omission in ebuild
 
 *lithium-006 (20 Nov 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/lithium/lithium-006.ebuild,v 1.1 2007/11/20 14:43:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/lithium/lithium-006.ebuild,v 1.2 2007/11/20 14:53:57 lack Exp $
 
 ROX_LIB_VER=2.0.0
 inherit rox
@@ -18,3 +18,9 @@ IUSE=""
 APPNAME=${MY_PN}
 APPCATEGORY=""
 S=${WORKDIR}
+
+src_unpack() {
+	mkdir ${MY_PN}
+	cd ${MY_PN}
+	unpack ${A}
+}
