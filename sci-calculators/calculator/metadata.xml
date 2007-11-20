@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sci</herd>
+	<maintainer>
+		<email>mabi@gentoo.org</email>
+		<name>Matti Bickel</name>
+	</maintainer>
 </pkgmetadata>
