@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.119 2007/08/28 14:49:09 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.120 2007/11/20 12:45:01 fmccor Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -141,7 +141,11 @@ ifp
 
 # Gustavo Zacarias <gustavoz@gentoo.org> - 8 November 2006
 # Same applies to mtp wrt amarok above
-mtp
+##
+# Ferris McCormick <fmccor@gentoo.org> - 20 November 2007
+# Unmask mtp for testing (verified by shimitar)
+#
+# mtp
 
 # Jason Wever <weeve@gentoo.org> - 01 May 2006
 # Mask nforce2 use flag as NVIDIA doesn't make mobos for SPARC CPUs (yet :-P)
