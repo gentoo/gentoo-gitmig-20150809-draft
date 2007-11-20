@@ -1,0 +1,39 @@
+diff -urN splix-1.1.0.orig/Makefile splix-1.1.0/Makefile
+--- splix-1.1.0.orig/Makefile	2007-11-16 03:26:11.000000000 +0100
++++ splix-1.1.0/Makefile	2007-11-20 00:49:25.000000000 +0100
+@@ -4,10 +4,10 @@
+ #  This project has been placed under the GPL Licence.
+ #
+ 
+-CXXFLAGS	:= -O2 `cups-config --cflags` 
+-LDFLAGS		:= `cups-config --ldflags`
+-CUPSFILTER	:= `cups-config --serverbin`/filter
+-CUPSPPD		:= `cups-config --datadir`/model
++CXXFLAGS	+=
++LDFLAGS		+=
++CUPSFILTER	:= $(DESTDIR)`cups-config --serverbin`/filter
++CUPSPPD		:= $(DESTDIR)`cups-config --datadir`/model
+ 
+ # === DON'T CHANGE ANYTHING AFTER THIS MESSAGE ====
+ 
+diff -urN splix-1.1.0.orig/src/Makefile splix-1.1.0/src/Makefile
+--- splix-1.1.0.orig/src/Makefile	2007-11-16 03:35:51.000000000 +0100
++++ splix-1.1.0/src/Makefile	2007-11-20 00:50:32.000000000 +0100
+@@ -4,7 +4,7 @@
+ #  This project has been placed under the GPL Licence.
+ #
+ 
+-CXXFLAGS	+= -I../include -Wall -g -O0 #-DENABLE_DEBUG
++CXXFLAGS	+= -I../include -Wall
+ LDFLAGS		+=
+ LIBS		+= -lcups -lcupsimage -ljbig
+ 
+@@ -25,7 +25,7 @@
+ 	$(CXX) $(CXXFLAGS) -c $<
+ 
+ install: rastertospl2
+-	install -m 755 -s rastertospl2 ${CUPSFILTER}
++	install -m 755 rastertospl2 ${CUPSFILTER}
+ 
+ .PHONY: clean distclean
+ clean:
