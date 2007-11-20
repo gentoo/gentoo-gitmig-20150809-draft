@@ -1,0 +1,58 @@
+From efbae8873fc7b2ffe366353a1bcd9623cf4975a3 Mon Sep 17 00:00:00 2001
+From: Kelvie Wong <kelvie@ieee.org>
+Date: Sat, 3 Nov 2007 21:39:49 -0700
+Subject: [PATCH] Added a masterDeviceIndex dcop call that returns the device index of the master channel
+
+---
+ kmix/mixer.cpp    |    5 +++++
+ kmix/mixer.h      |    1 +
+ kmix/mixerIface.h |    5 +++++
+ 3 files changed, 11 insertions(+), 0 deletions(-)
+
+diff --git a/kmix/mixer.cpp b/kmix/mixer.cpp
+index 2adb300..316625e 100644
+--- a/kmix/mixer.cpp
++++ b/kmix/mixer.cpp
+@@ -730,6 +730,11 @@ bool Mixer::masterMute()
+   return true;
+ }
+ 
++// @dcop only
++int Mixer::masterDeviceIndex()
++{
++  return masterDevice()->num();
++}
+ 
+ bool Mixer::isRecordSource( int deviceidx )
+ {
+diff --git a/kmix/mixer.h b/kmix/mixer.h
+index 14c8a65..b6d0917 100644
+--- a/kmix/mixer.h
++++ b/kmix/mixer.h
+@@ -123,6 +123,7 @@ class Mixer : public QObject, virtual public MixerIface
+       virtual long absoluteVolumeMax( int deviceidx );
+       virtual int volume( int deviceidx );
+       virtual int masterVolume();
++      virtual int masterDeviceIndex();
+ 
+       virtual void setMute( int deviceidx, bool on );
+       virtual void setMasterMute( bool on );
+diff --git a/kmix/mixerIface.h b/kmix/mixerIface.h
+index b2aafb2..6c8da9f 100644
+--- a/kmix/mixerIface.h
++++ b/kmix/mixerIface.h
+@@ -85,6 +85,11 @@ k_dcop:
+    virtual bool masterMute()=0;
+    
+    /**
++    Returns the index of the master device
++    */
++   virtual int masterDeviceIndex()=0;
++
++   /**
+     Makes the given device a record source.
+     */
+    virtual void setRecordSource( int deviceidx, bool on )=0;
+-- 
+1.5.3.4
+
