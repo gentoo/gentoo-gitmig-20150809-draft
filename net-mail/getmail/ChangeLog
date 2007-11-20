@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.155 2007/11/16 18:17:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.156 2007/11/20 14:10:34 armin76 Exp $
+
+  20 Nov 2007; Raúl Porcel <armin76@gentoo.org> getmail-4.7.6.ebuild:
+  alpha/sparc stable wrt #195991
 
   16 Nov 2007; nixnut <nixnut@gentoo.org> getmail-4.7.6.ebuild:
   Stable on ppc wrt bug 195991
