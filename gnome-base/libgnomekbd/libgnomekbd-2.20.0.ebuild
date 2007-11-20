@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/libgnomekbd-2.20.0.ebuild,v 1.1 2007/10/09 05:48:51 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/libgnomekbd-2.20.0.ebuild,v 1.2 2007/11/20 14:27:32 drac Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-libs/dbus-glib
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS ChangeLog INSTALL NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 
 # This collides with
 # /etc/gconf/schemas/desktop_gnome_peripherals_keyboard_xkb.schemas from
