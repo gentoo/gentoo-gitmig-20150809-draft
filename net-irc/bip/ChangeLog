@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/bip
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.1 2007/11/20 09:15:58 hawking Exp $
+
+*bip-0.6.1 (20 Nov 2007)
+
+  20 Nov 2007; Ali Polatel <hawking@gentoo.org> +metadata.xml,
+  +bip-0.6.1.ebuild:
+  initial ebuild, imported from sunrise
+
