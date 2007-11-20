@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.9.5.ebuild,v 1.4 2007/07/12 01:05:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.9.5.ebuild,v 1.5 2007/11/20 05:42:49 hawking Exp $
 
 NEED_PYTHON=2.3
 
@@ -20,7 +20,7 @@ IUSE="doc examples idl"
 
 DEPEND=">=dev-python/PyQt-3.13
 	>=dev-python/pyxml-0.8.4
-	>=dev-python/qscintilla-1.0"
+	>=x11-libs/qscintilla-1.0"
 RDEPEND="${DEPEND}
 	idl? ( !sparc? ( >=net-misc/omniORB-4.0.3 ) )"
 

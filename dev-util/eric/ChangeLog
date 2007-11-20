@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.49 2007/10/05 17:50:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.50 2007/11/20 05:42:49 hawking Exp $
+
+  20 Nov 2007; Ali Polatel <hawking@gentoo.org> eric-3.7.2-r1.ebuild,
+  eric-3.9.5.ebuild, eric-4.0.1.ebuild, eric-4.0.3.ebuild:
+  dev-python/qscintilla moved to x11-libs/qscintilla
 
   05 Oct 2007; Caleb Tennis <caleb@gentoo.org> eric-4.0.3.ebuild:
   Add linguas to IUSE and dodir instead of mkdir

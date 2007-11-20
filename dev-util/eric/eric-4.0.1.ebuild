@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.0.1.ebuild,v 1.1 2007/09/07 13:35:49 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.0.1.ebuild,v 1.2 2007/11/20 05:42:49 hawking Exp $
 
 NEED_PYTHON=2.4
 
@@ -22,7 +22,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=dev-python/PyQt4-4.1
-		>=dev-python/qscintilla-2.1
+		>=x11-libs/qscintilla-2.1
 		>=x11-libs/qt-4.2.0"
 
 LANGS="de fr ru"
@@ -31,7 +31,7 @@ python_version
 
 src_install() {
 	# Change qt dir to be located in ${D}
-	mkdir -p ${D}/usr/share/qt4/
+	mkdir -p "${D}"/usr/share/qt4/
 	sed -i \
 		-e "s:pyqtconfig._pkg_config\[\"qt_data_dir\"\]:\"${D}/usr/share/qt4/\":" \
 		install.py
