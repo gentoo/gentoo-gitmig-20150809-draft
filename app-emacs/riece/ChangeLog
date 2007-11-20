@@ -1,9 +1,9 @@
 # ChangeLog for app-emacs/riece
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.59 2007/11/20 13:16:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.60 2007/11/20 13:18:32 opfer Exp $
 
   20 Nov 2007; Christian Faulhammer <opfer@gentoo.org> riece-4.0.0.ebuild:
-  stable x86, bug 199770
+  stable amd64/x86, bug 199770
 
   16 Nov 2007; Ulrich Mueller <ulm@gentoo.org> -riece-1.0.7b.ebuild:
   Remove old.
