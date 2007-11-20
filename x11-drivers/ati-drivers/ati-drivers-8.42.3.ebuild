@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.42.3.ebuild,v 1.1 2007/11/19 01:15:02 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.42.3.ebuild,v 1.2 2007/11/20 22:41:09 wltjr Exp $
 
 IUSE="acpi multilib"
 
@@ -432,6 +432,15 @@ pkg_postinst() {
 	elog "to work, unless you previously had ati-drivers installed."
 	# DRM module
 	linux-mod_pkg_postinst
+	# Warning per bug #199720
+	elog "***** Warning *****"
+	elog "ATI has stated this is not a complete release version and should"
+	elog "not be distributed. Although it is the version presented on their"
+	elog "website for certain chipsets/cards. Due to this version being"
+	elog "incomplete, some users will experience \"(EE) No devices detected.\""
+	elog "errors. This is known and please mask this version locally if you"
+	elog "experience that. For further information please see the following"
+	elog "http://www2.ati.com/drivers/linux/linux_8.42.3.html"
 }
 
 pkg_postrm() {
