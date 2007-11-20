@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0-r1.ebuild,v 1.3 2007/10/08 14:21:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0-r1.ebuild,v 1.4 2007/11/20 15:03:57 markusle Exp $
 
 inherit eutils elisp-common
 
@@ -11,14 +11,14 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2 AECA"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="cmucl clisp sbcl gcl tetex emacs tk nls unicode"
+IUSE="cmucl clisp sbcl gcl latex emacs tk nls unicode"
 
 # rlwrap is recommended for cmucl and sbcl
 RDEPEND=">=sci-visualization/gnuplot-4.0
 	x11-misc/xdg-utils
-	tetex? ( virtual/tetex )
+	latex? ( virtual/latex-base )
 	emacs? ( virtual/emacs
-		 tetex? ( || ( app-emacs/auctex app-xemacs/auctex ) ) )
+		 latex? ( || ( app-emacs/auctex app-xemacs/auctex ) ) )
 	sbcl? ( dev-lisp/sbcl app-misc/rlwrap )
 	!sbcl? (
 		clisp? ( dev-lisp/clisp )
@@ -44,7 +44,7 @@ RESTRICT="clisp? ( strip )"
 
 pkg_setup() {
 	# Don't install in the main tree, as this may cause file collisions
-	if use tetex; then
+	if use latex; then
 		local TEXMFPATH="$(kpsewhich -var-value=TEXMFSITE)"
 		local TEXMFCONFIGFILE="$(kpsewhich texmf.cnf)"
 
@@ -156,7 +156,7 @@ src_install() {
 	use emacs && \
 		elisp-site-file-install "${FILESDIR}"/50maxima-gentoo.el
 
-	if use tetex; then
+	if use latex; then
 		insinto "${MAXIMA_TEXMFDIR}"/tex/latex/emaxima
 		doins interfaces/emacs/emaxima/emaxima.sty
 	fi
@@ -181,7 +181,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
-	use tetex && mktexlsr
+	use latex && mktexlsr
 }
 
 pkg_postrm() {

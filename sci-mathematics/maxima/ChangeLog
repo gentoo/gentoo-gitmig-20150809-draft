@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.40 2007/10/08 14:21:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.41 2007/11/20 15:03:57 markusle Exp $
+
+  20 Nov 2007; Markus Dittrich <markusle@gentoo.org> maxima-5.9.1.ebuild,
+  maxima-5.13.0-r1.ebuild:
+  Switched tetex useflag and dependency to latex and latex-base,
+  respectively (see bug #196745).
 
   08 Oct 2007; Ulrich Mueller <ulm@gentoo.org> maxima-5.13.0-r1.ebuild:
   Fix typo PV->PN in Emacs load path, bug #195043.

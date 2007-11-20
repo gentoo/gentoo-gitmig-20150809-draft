@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1.ebuild,v 1.5 2007/09/14 08:39:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1.ebuild,v 1.6 2007/11/20 15:03:57 markusle Exp $
 
 inherit eutils
 
@@ -11,9 +11,9 @@ SRC_URI="mirror://sourceforge/maxima/${P}.tar.gz"
 LICENSE="GPL-2 AECA"
 SLOT="0"
 KEYWORDS="ppc x86"
-IUSE="cmucl clisp gcl tetex emacs auctex"
+IUSE="cmucl clisp gcl latex emacs auctex"
 
-DEPEND="tetex? ( virtual/tetex )
+DEPEND="latex? ( virtual/latex-base )
 	emacs? ( virtual/emacs )
 	auctex? ( app-emacs/auctex )
 	>=sys-apps/texinfo-4.3
@@ -26,8 +26,8 @@ RDEPEND=">=dev-lang/tk-8.3.3
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/interfaces/emacs/emaxima
-	epatch ${FILESDIR}/maxima-emacs.patch
+	cd "${S}"/interfaces/emacs/emaxima
+	epatch "${FILESDIR}"/maxima-emacs.patch
 }
 
 src_compile() {
@@ -51,21 +51,21 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	if use emacs
 	then
-		elisp-install ${S}/interfaces/emacs/emaxima *.el *.elc
+		elisp-install "${S}"/interfaces/emacs/emaxima *.el *.elc
 		insinto /usr/share/emacs/site-lisp
-		doins ${S}/interfaces/emacs/emaxima/emaxima.lisp
+		doins "${S}"/interfaces/emacs/emaxima/emaxima.lisp
 	fi
-	if use tetex
+	if use latex
 	then
 		insinto /usr/share/texmf/tex/latex/emaxima
-		doins ${S}/interfaces/emacs/emaxima/emaxima.sty
+		doins "${S}"/interfaces/emacs/emaxima/emaxima.sty
 	fi
 	#move docs to the appropriate place
-	dodoc AUTHORS ChangeLog COPYING COPYING1 NEWS README*
-	mv ${D}/usr/share/${PN}/${PV}/doc/* ${D}/usr/share/doc/${PF}/
+	dodoc AUTHORS ChangeLog NEWS README*
+	mv "${D}"/usr/share/${PN}/${PV}/doc/* "${D}"/usr/share/doc/${PF}/
 	dosym /usr/share/doc/${PF} /usr/share/${PN}/${PV}/doc
 }
 
@@ -75,7 +75,7 @@ pkg_postinst() {
 		einfo "Running elisp-site-regen...."
 		elisp-site-regen
 	fi
-	if use tetex
+	if use latex
 	then
 		einfo "Running mktexlsr to rebuild ls-R database...."
 		mktexlsr
