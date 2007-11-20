@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21.ebuild,v 1.5 2007/01/05 04:26:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21.ebuild,v 1.6 2007/11/20 05:37:25 hawking Exp $
 
 inherit eutils kde-functions
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
 DEPEND="=x11-libs/qt-3*
 	dev-lang/perl
-	dev-python/qscintilla
+	x11-libs/qscintilla
 	kde? ( >=kde-base/kdelibs-3.1
 		   kde-base/arts )"
 

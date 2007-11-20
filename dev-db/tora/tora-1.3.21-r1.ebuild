@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21-r1.ebuild,v 1.9 2007/08/19 14:15:56 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21-r1.ebuild,v 1.10 2007/11/20 05:37:25 hawking Exp $
 
 inherit eutils kde-functions
 
@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}
 
 DEPEND="=x11-libs/qt-3*
 	dev-lang/perl
-	dev-python/qscintilla
+	x11-libs/qscintilla
 	kde? ( >=kde-base/kdelibs-3.1
 		   kde-base/arts )
 	xinerama? ( x11-proto/xineramaproto )
