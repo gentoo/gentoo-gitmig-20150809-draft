@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/excalibur-logger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/ChangeLog,v 1.3 2007/04/13 01:18:26 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/ChangeLog,v 1.4 2007/11/20 05:27:33 ali_bush Exp $
+
+*excalibur-logger-2.1-r1 (20 Nov 2007)
+
+  20 Nov 2007; <alistair@gentoo.org> +excalibur-logger-2.1-r1.ebuild:
+  Bumping to support javamail virtual.
 
   13 Apr 2007; Alistair John Bush <ali_bush@gentoo.org>
   excalibur-logger-2.1.ebuild:
