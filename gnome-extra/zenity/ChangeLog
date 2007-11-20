@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.135 2007/10/11 21:58:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.136 2007/11/20 16:15:08 drac Exp $
+
+  20 Nov 2007; Samuli Suominen <drac@gentoo.org> zenity-2.20.0.ebuild:
+  amd64 stable wrt #199740
 
   11 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org> zenity-2.16.3.ebuild,
   zenity-2.18.2.ebuild:
