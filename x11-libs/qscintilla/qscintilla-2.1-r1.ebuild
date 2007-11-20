@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.1-r1.ebuild,v 1.1 2007/11/20 05:17:20 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.1-r1.ebuild,v 1.2 2007/11/20 05:45:19 hawking Exp $
+
+EAPI=1
 
 inherit eutils toolchain-funcs multilib
 
@@ -16,7 +18,7 @@ SRC_URI="http://www.riverbankcomputing.com/Downloads/QScintilla2/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="qt4 python doc examples debug"
+IUSE="qt4 +python doc examples debug"
 
 RDEPEND="qt4? ( =x11-libs/qt-4* )
 		!qt4? ( =x11-libs/qt-3* )"
