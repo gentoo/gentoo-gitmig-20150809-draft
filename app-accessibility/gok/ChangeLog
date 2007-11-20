@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.106 2007/10/17 19:50:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.107 2007/11/20 15:41:56 drac Exp $
+
+  20 Nov 2007; Samuli Suominen <drac@gentoo.org> gok-1.3.7.ebuild:
+  amd64 stable wrt #199740
 
 *gok-1.3.7 (17 Oct 2007)
 
