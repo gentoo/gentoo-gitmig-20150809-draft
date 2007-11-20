@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/kgcc64
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.13 2007/10/11 11:25:29 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.14 2007/11/20 04:06:21 kumba Exp $
+
+  20 Nov 2007; Joshua Kinard <kumba@gentoo.org> kgcc64-4.1.2.ebuild:
+  Stable on mips, per #194953.
 
   11 Oct 2007; René Nussbaumer <killerfox@gentoo.org> kgcc64-4.1.2.ebuild:
   Stable on ppc. See bug #194953.
