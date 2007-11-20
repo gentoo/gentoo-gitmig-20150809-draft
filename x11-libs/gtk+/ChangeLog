@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.351 2007/11/20 05:49:12 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.352 2007/11/20 06:14:04 kumba Exp $
+
+  20 Nov 2007; Joshua Kinard <kumba@gentoo.org> gtk+-2.12.1-r1.ebuild:
+  Stable on mips, per #198845.
 
   20 Nov 2007; Joshua Kinard <kumba@gentoo.org> gtk+-2.10.14.ebuild:
   Stable on mips, per #190019.
