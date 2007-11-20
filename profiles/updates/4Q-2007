@@ -11,3 +11,4 @@ slotmove =app-emulation/emul-linux-x86-java-1.4* 1.4.2 1.4
 move app-emacs/circe-cvs app-emacs/circe
 move app-emacs/erc-cvs app-emacs/erc
 move app-emacs/slime-cvs app-emacs/slime
+move dev-python/qscintilla x11-libs/qscintilla
