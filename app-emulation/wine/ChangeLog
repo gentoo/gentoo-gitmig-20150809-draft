@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.194 2007/11/09 18:22:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.195 2007/11/20 20:21:39 lavajoe Exp $
+
+  20 Nov 2007; Joe Peterson <lavajoe@gentoo.org> wine-0.9.49.ebuild:
+  Added ~x86-fbsd keyword
 
 *wine-0.9.49 (09 Nov 2007)
 
