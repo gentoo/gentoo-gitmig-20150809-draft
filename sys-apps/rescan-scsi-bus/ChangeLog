@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/rescan-scsi-bus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/ChangeLog,v 1.9 2007/08/24 03:19:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/ChangeLog,v 1.10 2007/11/20 19:45:11 armin76 Exp $
+
+  20 Nov 2007; Raúl Porcel <armin76@gentoo.org>
+  rescan-scsi-bus-1.25.ebuild:
+  Add ~ia64 wrt #199372
 
   24 Aug 2007; <metalgod@gentoo.org> rescan-scsi-bus-1.24.ebuild:
   Stable on amd64. Bug #185631.
