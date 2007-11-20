@@ -1,0 +1,30 @@
+--- Makefile.orig	2005-01-23 03:57:03.000000000 +0100
++++ Makefile	2005-01-23 03:57:35.000000000 +0100
+@@ -314,7 +314,7 @@
+ QMAKE_TARGET = qscintilla
+ DESTDIR  = ${destdir}/
+ TARGET   = libqscintilla.so.5.2.0
+-TARGETA	= ${destdir}/libqscintilla.a
++TARGETA	= libqscintilla.a
+ TARGETD	= libqscintilla.so.5.2.0
+ TARGET0	= libqscintilla.so
+ TARGET1	= libqscintilla.so.5
+@@ -345,17 +345,12 @@
+ all: Makefile  ${destdir}/$(TARGET)
+ 
+ ${destdir}/$(TARGET):  $(UICDECLS) $(OBJECTS) $(OBJMOC) $(SUBLIBS) $(OBJCOMP)  
+-	test -d ${destdir}/ || mkdir -p ${destdir}/
++#	test -d ${destdir}/ || mkdir -p ${destdir}/
+ 	-$(DEL_FILE) $(TARGET) $(TARGET0) $(TARGET1) $(TARGET2)
+ 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJMOC) $(LIBS) $(OBJCOMP)
+ 	-ln -s $(TARGET) $(TARGET0)
+ 	-ln -s $(TARGET) $(TARGET1)
+ 	-ln -s $(TARGET) $(TARGET2)
+-	-$(DEL_FILE) ${destdir}/$(TARGET)
+-	-$(DEL_FILE) ${destdir}/$(TARGET0)
+-	-$(DEL_FILE) ${destdir}/$(TARGET1)
+-	-$(DEL_FILE) ${destdir}/$(TARGET2)
+-	-$(MOVE) $(TARGET) $(TARGET0) $(TARGET1) $(TARGET2) ${destdir}/
+ 
+ 
+ 
