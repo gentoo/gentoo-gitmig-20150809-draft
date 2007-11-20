@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.131 2007/11/14 03:42:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.132 2007/11/20 19:47:01 dang Exp $
+
+  20 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> liferea-1.4.6.ebuild:
+  Use slot deps for gtkhtml
 
   14 Nov 2007; Steve Dibb <beandog@gentoo.org> liferea-1.2.23-r1.ebuild:
   amd64 stable, bug 197701

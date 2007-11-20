@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.6.ebuild,v 1.1 2007/11/01 03:07:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.6.ebuild,v 1.2 2007/11/20 19:47:01 dang Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
@@ -11,6 +11,7 @@ HOMEPAGE="http://liferea.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
+EAPI="1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="dbus firefox gtkhtml gnutls libnotify lua networkmanager seamonkey xulrunner"
@@ -21,8 +22,8 @@ RDEPEND="
 	xulrunner? ( net-libs/xulrunner )
 	!xulrunner? ( firefox? ( www-client/mozilla-firefox ) )
 	!xulrunner? ( !firefox? ( seamonkey? ( www-client/seamonkey ) ) )
-	!amd64? ( !xulrunner? ( !firefox? ( !seamonkey? ( =gnome-extra/gtkhtml-2* ) ) ) )
-	!amd64? ( gtkhtml? ( =gnome-extra/gtkhtml-2* ) )
+	!amd64? ( !xulrunner? ( !firefox? ( !seamonkey? ( gnome-extra/gtkhtml:2 ) ) ) )
+	!amd64? ( gtkhtml? ( gnome-extra/gtkhtml:2 ) )
 	>=x11-libs/gtk+-2.8
 	x11-libs/pango
 	>=gnome-base/gconf-2
