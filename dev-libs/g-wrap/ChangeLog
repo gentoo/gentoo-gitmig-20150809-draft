@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.58 2007/11/19 20:41:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.59 2007/11/20 21:44:51 corsair Exp $
+
+  20 Nov 2007; Markus Rothe <corsair@gentoo.org> g-wrap-1.9.9.ebuild:
+  Added ~ppc64; bug #199368
 
   19 Nov 2007; Jeroen Roovers <jer@gentoo.org> g-wrap-1.9.9.ebuild:
   Marked ~hppa (bug #199368).
