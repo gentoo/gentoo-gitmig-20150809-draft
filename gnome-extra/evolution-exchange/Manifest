@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX evolution-exchange-2.6.2-fix-loop.patch 1030 RMD160 9f822ac3e0dcf16ac7352b5e0b48b02e00eb2e18 SHA1 d0a2c08bf3f0415463ebf96d9d6ceb76bc395bbc SHA256 8569558d23737de244b2153f6330c1270a652060c89cbd3a94cb4f2e5e92d605
 MD5 ba3d4ac6da724c5c2115b0f506f1bb55 files/evolution-exchange-2.6.2-fix-loop.patch 1030
 RMD160 9f822ac3e0dcf16ac7352b5e0b48b02e00eb2e18 files/evolution-exchange-2.6.2-fix-loop.patch 1030
@@ -10,10 +13,10 @@ EBUILD evolution-exchange-2.10.3.ebuild 1314 RMD160 7fb7d80e12570956f301fa58b66c
 MD5 ea6bbf151299537b250e02f137305089 evolution-exchange-2.10.3.ebuild 1314
 RMD160 7fb7d80e12570956f301fa58b66c067b6b6fb0e5 evolution-exchange-2.10.3.ebuild 1314
 SHA256 637e64ccc2c2d6e33401a9505eb325bf768263adcfa0d83b6ad9bdb3668272b2 evolution-exchange-2.10.3.ebuild 1314
-EBUILD evolution-exchange-2.12.0.ebuild 1304 RMD160 c3a46acdce024ce4e5b7f01efd3c484efbdd4e4f SHA1 5cf968c74fdecad2167ac8aa6b064b5710339ec0 SHA256 8ce3e06e503691fc32a3fb781072fa4826ca681c8c05c2ecc8bf3372a15a60e6
-MD5 94ffc1d24e1e49acd2c2535d247b7afa evolution-exchange-2.12.0.ebuild 1304
-RMD160 c3a46acdce024ce4e5b7f01efd3c484efbdd4e4f evolution-exchange-2.12.0.ebuild 1304
-SHA256 8ce3e06e503691fc32a3fb781072fa4826ca681c8c05c2ecc8bf3372a15a60e6 evolution-exchange-2.12.0.ebuild 1304
+EBUILD evolution-exchange-2.12.0.ebuild 1302 RMD160 3eb6705f3e4ed49b2b6064e4b948fdb385f61a8d SHA1 c74385d4c7a792a466b035275255253ef0db68a5 SHA256 ec43e6029f722a89c24a8fa1f62d08b1886aa8f66cb1bc09455cd6480c6f90bf
+MD5 92ea3571d91f8e3044b48e648adccca9 evolution-exchange-2.12.0.ebuild 1302
+RMD160 3eb6705f3e4ed49b2b6064e4b948fdb385f61a8d evolution-exchange-2.12.0.ebuild 1302
+SHA256 ec43e6029f722a89c24a8fa1f62d08b1886aa8f66cb1bc09455cd6480c6f90bf evolution-exchange-2.12.0.ebuild 1302
 EBUILD evolution-exchange-2.6.2-r1.ebuild 1421 RMD160 b7cb447a178e730508417e6fe9aba2acccfaa1ed SHA1 4ac2443b657d96ecfacd7f9d20128a4ddfe423d3 SHA256 98d0a9ac855830fb72a57a85ecd76e7ea6821a957a9e2a7ca112ce3cf6c57c45
 MD5 4170326ed05bffcd82373fe5e3477105 evolution-exchange-2.6.2-r1.ebuild 1421
 RMD160 b7cb447a178e730508417e6fe9aba2acccfaa1ed evolution-exchange-2.6.2-r1.ebuild 1421
@@ -22,10 +25,10 @@ EBUILD evolution-exchange-2.8.3.ebuild 1348 RMD160 4437bbc103b491dcd8d8a08e52ca7
 MD5 be7f7a7903ac238557e13c27487a439c evolution-exchange-2.8.3.ebuild 1348
 RMD160 4437bbc103b491dcd8d8a08e52ca75324c5e7eb5 evolution-exchange-2.8.3.ebuild 1348
 SHA256 22cbffe5089a1ff55cda2f3649e96f5456be8d3690d9dccedce3280e4a312221 evolution-exchange-2.8.3.ebuild 1348
-MISC ChangeLog 6849 RMD160 f0bd216456f570103ac120b8de166708dad5900b SHA1 1cbe70c652e26f17eb1e28629cb9479edf3e4104 SHA256 fd30c66a79defbbf3fd4a1ecf1b59465dfa15d6418219426bfe9c0c32e254987
-MD5 fe80e4bfc40f39d839d9a96eb3c68a81 ChangeLog 6849
-RMD160 f0bd216456f570103ac120b8de166708dad5900b ChangeLog 6849
-SHA256 fd30c66a79defbbf3fd4a1ecf1b59465dfa15d6418219426bfe9c0c32e254987 ChangeLog 6849
+MISC ChangeLog 6965 RMD160 7f435d5bf99a4b40c0f0c863592bd2b344db5431 SHA1 84d587a470731e9cc6f91ebfc84ec565d074fd4c SHA256 e245bb4f5c287cbc4b32bde21659fd4c9f5a30751953653ac7eed1911c39ebf3
+MD5 38e31b98cba22ec7aa6eca2812922d10 ChangeLog 6965
+RMD160 7f435d5bf99a4b40c0f0c863592bd2b344db5431 ChangeLog 6965
+SHA256 e245bb4f5c287cbc4b32bde21659fd4c9f5a30751953653ac7eed1911c39ebf3 ChangeLog 6965
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -42,3 +45,10 @@ SHA256 d931b00ead8b992440c76f3d00b44c1395ec0c4fab31d6901c73911448beb3c7 files/di
 MD5 6e200b1d51cf0228571f03eefa80cee2 files/digest-evolution-exchange-2.8.3 280
 RMD160 29feb63ddd1044e1703b7cc5030a70bdca41fb16 files/digest-evolution-exchange-2.8.3 280
 SHA256 3f38720dfd2953de1eefe90711259ef27c29bfeeeda691f29b4cacc8dab3382b files/digest-evolution-exchange-2.8.3 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (GNU/Linux)
+
+iD8DBQFHRGcZUPEOwClectkRAvUwAKC+/yiNmeiDgWszW3CZRqdzWRK6uQCgltXa
+EoRn2pPT3RfsHzsAufrmWts=
+=tTtq
+-----END PGP SIGNATURE-----
