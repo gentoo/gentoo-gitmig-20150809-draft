@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/apple-java-extensions-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-java-extensions-bin/ChangeLog,v 1.10 2007/06/04 09:40:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-java-extensions-bin/ChangeLog,v 1.11 2007/11/21 20:56:13 betelgeuse Exp $
+
+  21 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
+  apple-java-extensions-bin-1.2-r1.ebuild:
+  HOMEPAGE fix. Reported by pipping in #gentoo-java.
 
   04 Jun 2007; Vlastimil Babka <caster@gentoo.org>
   -apple-java-extensions-bin-1.2.ebuild:
