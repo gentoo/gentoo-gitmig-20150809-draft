@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.65 2007/10/02 03:38:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.66 2007/11/21 15:54:50 armin76 Exp $
+
+  21 Nov 2007; Raúl Porcel <armin76@gentoo.org> bittornado-0.3.18.ebuild:
+  Add missing DEPEND, bug #197089
 
   02 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> bittornado-0.3.18.ebuild:
   Lock wxpython to 2.6.  Fix quoting.

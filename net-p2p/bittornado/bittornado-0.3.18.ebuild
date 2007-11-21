@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18.ebuild,v 1.12 2007/10/02 03:38:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18.ebuild,v 1.13 2007/11/21 15:54:50 armin76 Exp $
 
 inherit distutils eutils
 
@@ -18,6 +18,7 @@ IUSE="gtk"
 
 RDEPEND="gtk? ( =dev-python/wxpython-2.6* )
 	>=dev-lang/python-2.1
+	dev-python/pycrypto
 	!virtual/bittorrent"
 DEPEND="${RDEPEND}
 	app-arch/unzip
