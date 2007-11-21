@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.165 2007/11/21 21:40:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.166 2007/11/21 21:43:14 genstef Exp $
+
+  21 Nov 2007; Stefan Schweizer <genstef@gentoo.org> -xpdf-3.02.ebuild,
+  xpdf-3.02-r1.ebuild:
+  remove broken version and bring keywords into new revision
 
 *xpdf-3.02-r1 (21 Nov 2007)
 
