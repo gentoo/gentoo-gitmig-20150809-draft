@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.37.ebuild,v 1.11 2007/09/22 23:08:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.37.ebuild,v 1.12 2007/11/21 05:35:54 keri Exp $
 
 inherit eutils flag-o-matic java-pkg-opt-2
 
@@ -14,7 +14,7 @@ SRC_URI="http://gollem.science.uva.nl/cgi-bin/nph-download/SWI-Prolog/pl-${PV}.t
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
-IUSE="berkdb debug doc gmp java minimal odbc readline ssl static tetex threads zlib X"
+IUSE="berkdb debug doc gmp java minimal odbc readline ssl static latex threads zlib X"
 
 DEPEND="!dev-lang/swi-prolog-lite
 	sys-libs/ncurses
@@ -109,7 +109,7 @@ src_compile() {
 			--with-http \
 			--without-jasmine \
 			$(use_with java jpl) \
-			$(use_with tetex ltx2htm) \
+			$(use_with latex ltx2htm) \
 			--with-nlp \
 			$(use_with odbc) \
 			--with-pldoc \
