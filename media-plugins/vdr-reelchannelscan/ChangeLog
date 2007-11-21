@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-reelchannelscan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-reelchannelscan/ChangeLog,v 1.14 2007/09/02 13:48:05 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-reelchannelscan/ChangeLog,v 1.15 2007/11/21 09:45:11 zzam Exp $
+
+  21 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-reelchannelscan-0.3.3.ebuild, vdr-reelchannelscan-0.4.3-r2.ebuild:
+  Fixed quoting. Dont use ROOT for checking header-files as gcc will use
+  version in /.
 
   02 Sep 2007; Matthias Schwarzott <zzam@gentoo.org> files/0.4.3/i18n.diff,
   vdr-reelchannelscan-0.4.3-r2.ebuild:
