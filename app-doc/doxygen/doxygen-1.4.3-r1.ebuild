@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3-r1.ebuild,v 1.17 2007/08/25 13:45:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3-r1.ebuild,v 1.18 2007/11/21 06:17:24 nerdboy Exp $
 
 inherit eutils toolchain-funcs qt3
 
@@ -23,27 +23,27 @@ DEPEND=">=sys-apps/sed-4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# use CFLAGS and CXXFLAGS
 	sed -i.orig -e "s:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= ${CFLAGS}:" \
 		-e "s:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= ${CXXFLAGS}:" \
 		tmake/lib/linux-g++/tmake.conf
 
-	epatch ${FILESDIR}/${P}-cp1251.patch
-	epatch ${FILESDIR}/${P}-nls.patch
+	epatch "${FILESDIR}/${P}-cp1251.patch"
+	epatch "${FILESDIR}/${P}-nls.patch"
 
 	if use userland_Darwin; then
-		epatch ${FILESDIR}/bsd-configure.patch
+		epatch "${FILESDIR}/bsd-configure.patch"
 		[[ "$MACOSX_DEPLOYMENT_TARGET" == "10.4" ]] && 	sed -i -e 's:-D__FreeBSD__:-D__FreeBSD__=5:' \
 			tmake/lib/macosx-c++/tmake.conf
 	fi
 
 	if use unicode; then
-		epatch ${WORKDIR}/${PN}-utf8-ru.patch || die "utf8-ru patch failed"
+		epatch "${WORKDIR}/${PN}-utf8-ru.patch" || die "utf8-ru patch failed"
 	fi
 
 	if [ $(gcc-major-version) -eq 4 ] ; then
-		epatch ${FILESDIR}/${PN}-gcc4.patch || die "gcc4 patch failed"
+		epatch "${FILESDIR}/${PN}-gcc4.patch" || die "gcc4 patch failed"
 	fi
 }
 
@@ -87,10 +87,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} MAN1DIR=share/man/man1 \
+	make DESTDIR="${D}" MAN1DIR=share/man/man1 \
 		install || die '"make install" failed.'
 
-	dodoc INSTALL LANGUAGE.HOWTO LICENSE README VERSION
+	dodoc LANGUAGE.HOWTO README VERSION
 
 	# pdf and html manuals
 	if use doc; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.20 2007/07/12 19:20:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.21 2007/11/21 06:17:24 nerdboy Exp $
 
 inherit eutils flag-o-matic toolchain-funcs qt3
 
@@ -25,11 +25,11 @@ EPATCH_SUFFIX="patch"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# still needs patch for Russian text in source files (see bug #112076)
 	if use unicode; then
-	    epatch ${WORKDIR}/${P}-utf8-ru.patch || die "utf8-ru patch failed"
+	    epatch "${WORKDIR}/${P}-utf8-ru.patch" || die "utf8-ru patch failed"
 	fi
 
 	# use CFLAGS, CXXFLAGS, LDFLAGS
@@ -40,7 +40,7 @@ src_unpack() {
 
 	# Consolidate patches, apply FreeBSD configure patch, codepage patch,
 	# qtools stuff, and patches for bugs 129142, 121770, and 129560.
-	epatch ${FILESDIR}/${PV}
+	epatch "${FILESDIR}/${PV}"
 
 	if is-flagq "-O3" ; then
 	    echo
@@ -96,7 +96,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} MAN1DIR=share/man/man1 \
+	make DESTDIR="${D}" MAN1DIR=share/man/man1 \
 		install || die '"make install" failed.'
 
 	dodoc INSTALL LANGUAGE.HOWTO README

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.6.ebuild,v 1.13 2007/07/12 19:20:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.6.ebuild,v 1.14 2007/11/21 06:17:24 nerdboy Exp $
 
 inherit eutils toolchain-funcs qt3
 
@@ -26,7 +26,7 @@ EPATCH_SUFFIX="patch"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# use CFLAGS, CXXFLAGS, LDFLAGS
 	sed -i.orig -e 's:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= $(ECFLAGS):' \
 		-e 's:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= $(ECXXFLAGS):' \
@@ -34,16 +34,16 @@ src_unpack() {
 		tmake/lib/{{linux,freebsd,netbsd,openbsd,solaris}-g++,macosx-c++}/tmake.conf
 
 	if use unicode; then
-		epatch ${WORKDIR}/${PN}-utf8-ru.patch || die "utf8-ru patch failed"
+		epatch "${WORKDIR}/${PN}-utf8-ru.patch" || die "utf8-ru patch failed"
 	fi
 
 	if [ $(gcc-major-version) -eq 4 ] ; then
-		epatch ${FILESDIR}/${PN}-gcc4.patch || die "gcc4 patch failed"
+		"epatch ${FILESDIR}/${PN}-gcc4.patch" || die "gcc4 patch failed"
 	fi
 
 	# Consolidate patches, apply FreeBSD configure patch, codepage patch,
 	# qtools stuff, and patches for bugs 129142, 121770, and 129560.
-	epatch ${FILESDIR}/${PV}
+	epatch "${FILESDIR}/${PV}"
 }
 
 src_compile() {
@@ -88,10 +88,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} MAN1DIR=share/man/man1 \
+	make DESTDIR="${D}" MAN1DIR=share/man/man1 \
 		install || die '"make install" failed.'
 
-	dodoc INSTALL LANGUAGE.HOWTO LICENSE README VERSION
+	dodoc LANGUAGE.HOWTO README VERSION
 
 	# pdf and html manuals
 	if use doc; then
