@@ -1,0 +1,169 @@
+diff -ur Yap-5.1.2.orig/CLPBN/Makefile.in Yap-5.1.2/CLPBN/Makefile.in
+--- Yap-5.1.2.orig/CLPBN/Makefile.in	2006-02-12 13:41:23.000000000 +1300
++++ Yap-5.1.2/CLPBN/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -9,7 +9,7 @@
+ #
+ # where YAP should look for libraries
+ #
+-LIBDIR=$(ROOTDIR)/lib/Yap
++LIBDIR=@libdir@/Yap
+ #
+ # where YAP should look for architecture-independent Prolog libraries
+ #
+diff -ur Yap-5.1.2.orig/LGPL/JPL/Makefile.in Yap-5.1.2/LGPL/JPL/Makefile.in
+--- Yap-5.1.2.orig/LGPL/JPL/Makefile.in	2005-03-12 17:04:58.000000000 +1300
++++ Yap-5.1.2/LGPL/JPL/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -9,7 +9,7 @@
+ #
+ # where YAP should look for binary libraries
+ #
+-LIBDIR=$(ROOTDIR)/lib/Yap
++LIBDIR=@libdir@/Yap
+ #
+ # where YAP should look for architecture-independent Prolog libraries
+ #
+diff -ur Yap-5.1.2.orig/LGPL/JPL/java/Makefile.in Yap-5.1.2/LGPL/JPL/java/Makefile.in
+--- Yap-5.1.2.orig/LGPL/JPL/java/Makefile.in	2006-03-22 10:28:08.000000000 +1200
++++ Yap-5.1.2/LGPL/JPL/java/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -15,7 +15,7 @@
+ #
+ # where YAP should look for binary libraries
+ #
+-LIBDIR=$(ROOTDIR)/lib/Yap
++LIBDIR=@libdir@/Yap
+ #
+ # where YAP should look for architecture-independent Prolog libraries
+ #
+diff -ur Yap-5.1.2.orig/LGPL/JPL/src/Makefile.in Yap-5.1.2/LGPL/JPL/src/Makefile.in
+--- Yap-5.1.2.orig/LGPL/JPL/src/Makefile.in	2006-05-25 13:02:03.000000000 +1200
++++ Yap-5.1.2/LGPL/JPL/src/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -19,7 +19,7 @@
+ #
+ # where YAP should look for libraries
+ #
+-LIBDIR=$(EROOTDIR)/lib/Yap
++LIBDIR=@libdir@/Yap
+ #
+ #
+ CC=@CC@
+diff -ur Yap-5.1.2.orig/LGPL/clp/Makefile.in Yap-5.1.2/LGPL/clp/Makefile.in
+--- Yap-5.1.2.orig/LGPL/clp/Makefile.in	2005-10-28 15:43:57.000000000 +1300
++++ Yap-5.1.2/LGPL/clp/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -9,7 +9,7 @@
+ #
+ # where YAP should look for binary libraries
+ #
+-LIBDIR=$(ROOTDIR)/lib/Yap
++LIBDIR=@libdir@/Yap
+ #
+ # where YAP should look for architecture-independent Prolog libraries
+ #
+diff -ur Yap-5.1.2.orig/Makefile.in Yap-5.1.2/Makefile.in
+--- Yap-5.1.2.orig/Makefile.in	2007-06-21 01:45:42.000000000 +1200
++++ Yap-5.1.2/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -4,7 +4,7 @@
+ #
+ prefix = @prefix@
+ ROOTDIR = $(prefix)
+-EROOTDIR = @exec_prefix@
++EROOTDIR = @prefix@
+ #
+ # where the binary should be
+ #
+@@ -12,8 +12,8 @@
+ #
+ # where YAP should look for binary libraries
+ #
+-LIBDIR=$(EROOTDIR)/lib
+-YAPLIBDIR=$(EROOTDIR)/lib/Yap
++LIBDIR=@libdir@
++YAPLIBDIR=@libdir@/Yap
+ #
+ # where YAP should look for architecture-independent Prolog libraries
+ #
+diff -ur Yap-5.1.2.orig/library/Makefile.in Yap-5.1.2/library/Makefile.in
+--- Yap-5.1.2.orig/library/Makefile.in	2007-06-21 01:46:02.000000000 +1200
++++ Yap-5.1.2/library/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -9,7 +9,7 @@
+ #
+ # where YAP should look for binary libraries
+ #
+-LIBDIR=$(ROOTDIR)/lib/Yap
++LIBDIR=@libdir@/Yap
+ #
+ # where YAP should look for architecture-independent Prolog libraries
+ #
+diff -ur Yap-5.1.2.orig/library/Tries/Makefile.in Yap-5.1.2/library/Tries/Makefile.in
+--- Yap-5.1.2.orig/library/Tries/Makefile.in	2004-12-15 06:00:33.000000000 +1300
++++ Yap-5.1.2/library/Tries/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -18,7 +18,7 @@
+ #
+ # where YAP should look for libraries
+ #
+-LIBDIR=$(EROOTDIR)/lib/Yap
++LIBDIR=@libdir@/Yap
+ #
+ #
+ CC=@CC@
+diff -ur Yap-5.1.2.orig/library/mpi/Makefile.in Yap-5.1.2/library/mpi/Makefile.in
+--- Yap-5.1.2.orig/library/mpi/Makefile.in	2004-12-15 06:00:33.000000000 +1300
++++ Yap-5.1.2/library/mpi/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -20,8 +20,8 @@
+ #
+ # where YAP should look for binary libraries
+ #
+-LIBDIR=$(EROOTDIR)/lib
+-YAPLIBDIR=$(EROOTDIR)/lib/Yap
++LIBDIR=@libdir@
++YAPLIBDIR=@libdir@/Yap
+ #
+ # where YAP should look for architecture-independent Prolog libraries
+ #
+diff -ur Yap-5.1.2.orig/library/random/Makefile.in Yap-5.1.2/library/random/Makefile.in
+--- Yap-5.1.2.orig/library/random/Makefile.in	2004-12-15 06:00:33.000000000 +1300
++++ Yap-5.1.2/library/random/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -12,7 +12,7 @@
+ #
+ # where YAP should look for libraries
+ #
+-LIBDIR=$(EROOTDIR)/lib/Yap
++LIBDIR=@libdir@/Yap
+ #
+ #
+ CC=@CC@
+diff -ur Yap-5.1.2.orig/library/regex/Makefile.in Yap-5.1.2/library/regex/Makefile.in
+--- Yap-5.1.2.orig/library/regex/Makefile.in	2004-12-15 06:00:33.000000000 +1300
++++ Yap-5.1.2/library/regex/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -12,7 +12,7 @@
+ #
+ # where YAP should look for libraries
+ #
+-LIBDIR=$(EROOTDIR)/lib/Yap
++LIBDIR=@libdir@/Yap
+ #
+ #
+ CC=@CC@
+diff -ur Yap-5.1.2.orig/library/system/Makefile.in Yap-5.1.2/library/system/Makefile.in
+--- Yap-5.1.2.orig/library/system/Makefile.in	2004-12-15 06:00:33.000000000 +1300
++++ Yap-5.1.2/library/system/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -12,7 +12,7 @@
+ #
+ # where YAP should look for libraries
+ #
+-LIBDIR=$(EROOTDIR)/lib/Yap
++LIBDIR=@libdir@/Yap
+ #
+ #
+ CC=@CC@
+diff -ur Yap-5.1.2.orig/library/yap2swi/Makefile.in Yap-5.1.2/library/yap2swi/Makefile.in
+--- Yap-5.1.2.orig/library/yap2swi/Makefile.in	2004-12-15 06:00:33.000000000 +1300
++++ Yap-5.1.2/library/yap2swi/Makefile.in	2007-08-20 20:24:58.000000000 +1200
+@@ -12,7 +12,7 @@
+ #
+ # where YAP should look for libraries
+ #
+-LIBDIR=$(EROOTDIR)/lib/Yap
++LIBDIR=@libdir@/Yap
+ #
+ #
+ CC=@CC@

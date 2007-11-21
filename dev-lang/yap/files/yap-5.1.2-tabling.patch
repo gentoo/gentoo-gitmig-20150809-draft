@@ -1,0 +1,61 @@
+diff -ur Yap-5.1.2.orig/OPTYap/opt.structs.h Yap-5.1.2/OPTYap/opt.structs.h
+--- Yap-5.1.2.orig/OPTYap/opt.structs.h	2007-05-02 07:33:53.000000000 +1200
++++ Yap-5.1.2/OPTYap/opt.structs.h	2007-08-21 19:44:56.000000000 +1200
+@@ -41,7 +41,7 @@
+ ** ---------------------- */
+ 
+ struct pages {
+-#ifdef YAPOR
++#if defined(YAPOR) || defined(THREADS)
+   lockvar lock;
+ #endif /* YAPOR */
+   volatile long pages_allocated;
+@@ -275,9 +275,11 @@
+ ** --------------------------- */
+ 
+ struct local_data{
++#if defined(YAPOR) || defined(THREADS)
++  lockvar lock;
++#endif
+ #ifdef YAPOR
+   /* local data related to or-parallelism */
+-  lockvar lock;
+   volatile int load;
+   choiceptr top_choice_point;
+   struct or_frame *top_or_frame;
+diff -ur Yap-5.1.2.orig/OPTYap/tab.structs.h Yap-5.1.2/OPTYap/tab.structs.h
+--- Yap-5.1.2.orig/OPTYap/tab.structs.h	2005-08-05 06:06:35.000000000 +1200
++++ Yap-5.1.2/OPTYap/tab.structs.h	2007-08-21 19:30:06.000000000 +1200
+@@ -50,7 +50,7 @@
+ ** ---------------------------- */
+ 
+ typedef struct table_entry {
+-#ifdef YAPOR
++#if defined(YAPOR) || defined(THREADS)
+   lockvar lock;
+ #endif /* YAPOR */
+   struct pred_entry *pred_entry;
+@@ -149,8 +149,10 @@
+ ** ------------------------------ */
+ 
+ typedef struct subgoal_frame {
+-#ifdef YAPOR
++#if defined(YAPOR) || defined(THREADS)
+   lockvar lock;
++#endif
++#ifdef YAPOR
+   int generator_worker;
+   struct or_frame *top_or_frame_on_generator_branch;
+ #endif /* YAPOR */
+@@ -225,8 +227,10 @@
+ ** --------------------------------- */
+ 
+ typedef struct dependency_frame {
+-#ifdef YAPOR
++#if defined(YAPOR) || defined(THREADS)
+   lockvar lock;
++#endif
++#ifdef YAPOR
+   int leader_dependency_is_on_stack;
+   struct or_frame *top_or_frame;
+ #ifdef TIMESTAMP_CHECK

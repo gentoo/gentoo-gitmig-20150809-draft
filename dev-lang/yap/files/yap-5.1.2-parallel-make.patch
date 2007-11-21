@@ -1,0 +1,77 @@
+--- Yap-5.1.2.orig/Makefile.in	2007-06-21 01:45:42.000000000 +1200
++++ Yap-5.1.2/Makefile.in	2007-11-20 21:09:49.000000000 +1300
+@@ -549,15 +549,15 @@
+ 	$(CC) $(CFLAGS) $(srcdir)/mycb.c -o mycb
+ 
+ all: startup
+-	@INSTALL_DLLS@ (cd library/random; make)
+-	@INSTALL_DLLS@ (cd library/regex; make)
+-	@INSTALL_DLLS@ (cd library/system; make)
+-	@INSTALL_DLLS@ (cd library/yap2swi; make)
+-	@INSTALL_DLLS@ (cd library/tries; make)
+-	@INSTALL_DLLS@ (cd library/lammpi; make)
+-	@INSTALL_DLLS@ (cd library/matrix; make)
+-	@INSTALL_MATLAB@ (cd library/matlab; make)
+-	@ENABLE_JPL@ @INSTALL_DLLS@ (cd LGPL/JPL/src; make)
++	@INSTALL_DLLS@ (cd library/random; $(MAKE))
++	@INSTALL_DLLS@ (cd library/regex; $(MAKE))
++	@INSTALL_DLLS@ (cd library/system; $(MAKE))
++	@INSTALL_DLLS@ (cd library/yap2swi; $(MAKE))
++	@INSTALL_DLLS@ (cd library/tries; $(MAKE))
++	@INSTALL_DLLS@ (cd library/lammpi; $(MAKE))
++	@INSTALL_DLLS@ (cd library/matrix; $(MAKE))
++	@INSTALL_MATLAB@ (cd library/matlab; $(MAKE))
++	@ENABLE_JPL@ @INSTALL_DLLS@ (cd LGPL/JPL/src; $(MAKE))
+ 
+ startup: yap@EXEC_SUFFIX@ $(PL_SOURCES)
+ 	-rm -f startup
+@@ -587,15 +587,15 @@
+ 	mkdir -p $(DESTDIR)$(SHAREDIR)/Yap
+ 	mkdir -p $(DESTDIR)$(SHAREDIR)/Yap/pl
+ 	for f in $(PL_SOURCES); do $(INSTALL) $$f $(DESTDIR)$(SHAREDIR)/Yap/pl; done
+-	@INSTALL_DLLS@ (cd library/random; make install)
+-	@INSTALL_DLLS@ (cd library/regex; make install)
+-	@INSTALL_DLLS@ (cd library/system; make install)
+-	@INSTALL_DLLS@ (cd library/yap2swi; make install)
+-	@INSTALL_DLLS@ (cd library/tries; make install)
+-	@INSTALL_DLLS@ (cd library/lammpi; make install)
+-	@INSTALL_DLLS@ (cd library/matrix; make install)
+-	@INSTALL_MATLAB@ (cd library/matlab; make install)
+-	@ENABLE_JPL@ @INSTALL_DLLS@ (cd LGPL/JPL/src; make install)
++	@INSTALL_DLLS@ (cd library/random; $(MAKE) install)
++	@INSTALL_DLLS@ (cd library/regex; $(MAKE) install)
++	@INSTALL_DLLS@ (cd library/system; $(MAKE) install)
++	@INSTALL_DLLS@ (cd library/yap2swi; $(MAKE) install)
++	@INSTALL_DLLS@ (cd library/tries; $(MAKE) install)
++	@INSTALL_DLLS@ (cd library/lammpi; $(MAKE) install)
++	@INSTALL_DLLS@ (cd library/matrix; $(MAKE) install)
++	@INSTALL_MATLAB@ (cd library/matlab; $(MAKE) install)
++	@ENABLE_JPL@ @INSTALL_DLLS@ (cd LGPL/JPL/src; $(MAKE) install)
+ 	mkdir -p $(DESTDIR)$(INCLUDEDIR)
+ 	for h in $(INTERFACE_HEADERS); do $(INSTALL) $$h $(DESTDIR)$(INCLUDEDIR); done
+ 
+@@ -627,17 +627,17 @@
+ 	for h in $(HEADERS); do $(INSTALL) $$h $(DESTDIR)$(INCLUDEDIR); done
+ 
+ install_data:
+-	(cd library ; make install)
+-	@ENABLE_JPL@ (cd LGPL/JPL ; make install)
+-	@ENABLE_JPL@ (cd LGPL/JPL/java; make install)
++	(cd library ; $(MAKE) install)
++	@ENABLE_JPL@ (cd LGPL/JPL ; $(MAKE) install)
++	@ENABLE_JPL@ (cd LGPL/JPL/java; $(MAKE) install)
+ 	$(INSTALL_DATA) $(srcdir)/LGPL/pillow/icon_address.pl $(DESTDIR)$(SHAREDIR)/Yap/
+ 	$(INSTALL_DATA) $(srcdir)/LGPL/pillow/pillow.pl $(DESTDIR)$(SHAREDIR)/Yap/
+ #	(cd CLPQR ; make install)
+-	@INSTALLCLP@(cd LGPL/clp ; make install)
+-	@INSTALLCLP@(cd LGPL/clpr ; make install)
++	@INSTALLCLP@(cd LGPL/clp ; $(MAKE) install)
++	@INSTALLCLP@(cd LGPL/clpr ; $(MAKE) install)
+ #	(cd CHR ; make install)
+-	@INSTALLCLP@(cd LGPL/chr ; make install)
+-	@INSTALLCLP@(cd CLPBN ; make install)
++	@INSTALLCLP@(cd LGPL/chr ; $(MAKE) install)
++	@INSTALLCLP@(cd CLPBN ; $(MAKE) install)
+ 
+ 
+ ##########
