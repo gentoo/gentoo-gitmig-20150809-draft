@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.106 2007/10/18 13:34:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.107 2007/11/21 13:37:19 fmccor Exp $
+
+  21 Nov 2007; Ferris McCormick <fmccor@gentoo.org> fox-1.6.30.ebuild:
+  Sparc stable --- Bug #199853 --- builds as expected and checks out fine with
+  fxruby-1.6.13.
 
   18 Oct 2007; Christoph Mende <angelos@gentoo.org> fox-1.6.27.ebuild:
   Stable on amd64 wrt bug #194813
