@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnuplot-py
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.21 2007/11/20 21:15:31 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.22 2007/11/21 01:52:22 lavajoe Exp $
+
+  21 Nov 2007; Joe Peterson <lavajoe@gentoo.org> gnuplot-py-1.7-r2.ebuild:
+  Add ~x86-fbsd keyword (bug #199825)
 
 *gnuplot-py-1.7-r2 (20 Nov 2007)
 
