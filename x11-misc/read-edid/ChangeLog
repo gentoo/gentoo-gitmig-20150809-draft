@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/read-edid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.10 2007/11/04 14:23:53 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.11 2007/11/21 17:16:41 nixnut Exp $
+
+  21 Nov 2007; nixnut <nixnut@gentoo.org> read-edid-1.4.1-r1.ebuild:
+  Stable on ppc wrt bug 195220
 
   04 Nov 2007; Christoph Mende <angelos@gentoo.org>
   read-edid-1.4.1-r1.ebuild:
