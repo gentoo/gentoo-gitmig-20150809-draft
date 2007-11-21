@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.8.1.ebuild,v 1.2 2007/02/07 16:45:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.8.1.ebuild,v 1.3 2007/11/21 04:26:02 dirtyepic Exp $
 
 inherit eutils games
 
@@ -21,7 +21,7 @@ RDEPEND="dedicated? ( app-misc/screen )
 	media-libs/sdl-image
 	dev-games/physfs"
 DEPEND="${RDEPEND}
-	dev-util/jam"
+	|| ( dev-util/jam dev-util/ftjam )"
 
 src_compile() {
 	egamesconf || die
