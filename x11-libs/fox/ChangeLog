@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.110 2007/11/21 16:48:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.111 2007/11/21 18:19:44 nixnut Exp $
+
+  21 Nov 2007; nixnut <nixnut@gentoo.org> fox-1.6.30.ebuild:
+  Stable on ppc wrt bug 198932
 
   21 Nov 2007; Jeroen Roovers <jer@gentoo.org> fox-1.6.30.ebuild:
   Stable for HPPA (bug #199853).
