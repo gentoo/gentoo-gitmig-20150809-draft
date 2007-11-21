@@ -1,6 +1,14 @@
 # ChangeLog for app-dicts/ispell-nl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-nl/ChangeLog,v 1.3 2007/01/01 11:57:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-nl/ChangeLog,v 1.4 2007/11/21 11:15:43 philantrop Exp $
+
+*ispell-nl-1.00 (20 Nov 2007)
+
+  20 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +ispell-nl-1.00.ebuild, -ispell-nl-1996.ebuild:
+  Added a new ebuild for ispell-nl which obsoletes the version 1996 which was
+  a mess and problematic with respect to the licensing. Fixes bug 163640. This
+  new version installs a dictionary for the official 2005 spelling.
 
   01 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Removed arj as he is retired
