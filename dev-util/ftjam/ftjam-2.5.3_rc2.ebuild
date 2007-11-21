@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ftjam/ftjam-2.5.3_rc2.ebuild,v 1.3 2007/11/20 17:40:52 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ftjam/ftjam-2.5.3_rc2.ebuild,v 1.4 2007/11/21 00:44:19 dirtyepic Exp $
 
 inherit eutils versionator
 
@@ -10,7 +10,7 @@ DESCRIPTION="Jam is a powerful alternative to make.  FTJam is a 100% compatible 
 HOMEPAGE="http://freetype.sourceforge.net/jam/index.html"
 SRC_URI="http://david.freetype.org/jam/ftjam-${MY_PV}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="perforce GPL-2"
 SLOT="0"
 KEYWORDS="~sparc ~x86"
 IUSE=""
