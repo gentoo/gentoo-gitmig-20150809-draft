@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/virtuals,v 1.7 2007/10/10 12:34:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/virtuals,v 1.8 2007/11/21 00:22:13 bicatali Exp $
 
 # This file defines the virtuals that all Gentoo/*BSD need to modify respect
 # the base profile
@@ -8,7 +8,6 @@
 # KEEP THIS FILE SORTED ALPHABETICALLY OR RISK WRATH
 
 virtual/eject			sys-block/unieject
-virtual/lapack			sci-libs/lapack-reference
 virtual/linux-sources		sys-kernel/gentoo-sources
 virtual/mpg123			media-sound/mpg321
 virtual/utempter		sys-libs/libutempter

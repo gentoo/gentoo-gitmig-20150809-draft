@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.12 2007/10/15 09:06:15 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.13 2007/11/21 00:22:13 bicatali Exp $
+
+  21 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> virtuals:
+  Removed virtual/lapack, now new style
 
   15 Oct 2007; Roy Marples <uberlord@gentoo.org> package.mask:
   unmask m4-1.4.10 as it now works for us
