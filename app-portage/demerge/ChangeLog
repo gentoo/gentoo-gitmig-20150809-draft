@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/demerge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.34 2007/11/20 19:40:50 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.35 2007/11/21 12:07:17 armin76 Exp $
+
+  21 Nov 2007; Raúl Porcel <armin76@gentoo.org> demerge-0.045.ebuild:
+  Add ~sparc
 
 *demerge-0.045 (20 Nov 2007)
 
