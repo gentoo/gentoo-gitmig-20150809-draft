@@ -1,6 +1,9 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.35 2007/10/10 12:35:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.36 2007/11/21 15:04:52 armin76 Exp $
+
+  21 Nov 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask chicken and clisp as they don't work
 
   10 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> virtuals:
   removed virtual/blas, now new style

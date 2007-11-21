@@ -1,15 +1,15 @@
 # This is a list of USE flags that should not be used on ia64.
 
+
 # Raúl Porcel <armin76@gentoo.org>
+# clisp and chicken doesn't work
+clisp
+chicken
 # No hardware to test
 lirc
 gnokii
-
-# Raúl Porcel <armin76@gentoo.org>
 # Depends on libnl which doesn't compile, bug 175714
 networkmanager
-
-# Raúl Porcel <armin76@gentoo.org>
 # Not needed
 cpufreq
 
