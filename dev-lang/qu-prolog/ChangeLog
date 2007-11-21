@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.36 2007/11/16 17:49:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.37 2007/11/21 11:07:27 armin76 Exp $
+
+  21 Nov 2007; Raúl Porcel <armin76@gentoo.org> qu-prolog-8.2.ebuild:
+  sparc stable wrt #199014
 
   16 Nov 2007; nixnut <nixnut@gentoo.org> qu-prolog-8.2.ebuild:
   Stable on ppc wrt bug 199014
