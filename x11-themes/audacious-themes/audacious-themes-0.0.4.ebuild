@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/audacious-themes/audacious-themes-0.0.3.ebuild,v 1.9 2007/11/21 13:39:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/audacious-themes/audacious-themes-0.0.4.ebuild,v 1.1 2007/11/21 13:39:15 chainsaw Exp $
 
 DESCRIPTION="Collection of XMMS themes for Audacious"
 HOMEPAGE="http://www.xmms.org"
@@ -98,11 +98,12 @@ SRC_URI="${THEME_URI}/AbsoluteE_Xmms.zip
 	http://waledawg.com/v5/files/wale_atmosphere.wsz
 	http://waledawg.com/v5/files/wale_RLH.wsz
 	http://waledawg.com/v5/files/wale_poopshingles.wsz
-	http://www.gnome-look.org/content/files/14870-Winamp5-XMMS.tar.bz2"
+	http://www.gnome-look.org/content/files/14870-Winamp5-XMMS.tar.bz2
+	http://www.winamp.com/skins/download/145489?/Nucleo_AlienMind_v5.wsz"
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE=""
 
@@ -126,6 +127,9 @@ src_unpack() {
 			fi
 		fi
 	done
+
+	# remove nasty .xvpics directories in Fire theme
+	rm -rf Fire/.xvpics
 
 	mv 7947-plastik.zip Plastik.zip
 }
