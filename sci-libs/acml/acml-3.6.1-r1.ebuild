@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.4 2007/10/18 14:18:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.5 2007/11/21 00:25:36 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -27,8 +27,6 @@ DEPEND="app-admin/eselect-blas
 
 RDEPEND="${DEPEND}
 	doc? ( app-doc/blas-docs app-doc/lapack-docs )"
-
-PROVIDE="virtual/lapack"
 
 pkg_nofetch() {
 	einfo "Please download the ACML from:"

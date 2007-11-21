@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/acml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.25 2007/10/18 14:18:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.26 2007/11/21 00:25:36 bicatali Exp $
+
+  21 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> acml-3.6.0-r1.ebuild,
+  acml-3.6.1-r1.ebuild, acml-4.0.0.ebuild:
+  Removed PROVIDE, now lapack is new style virtual
 
   18 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> acml-3.6.0-r1.ebuild,
   acml-3.6.1-r1.ebuild, acml-4.0.0.ebuild:
