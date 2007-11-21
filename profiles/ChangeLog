@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.842 2007/11/21 07:16:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.843 2007/11/21 17:42:40 chainsaw Exp $
+
+  21 Nov 2007; Tony Vroon <chainsaw@gentoo.org> package.mask:
+  Mask audacious-docklet for removal.
 
   21 Nov 2007; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
   Add local USE flag tex for app-emacs/bbdb.
