@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.39 2007/11/12 16:55:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.40 2007/11/21 01:31:17 lavajoe Exp $
+
+  21 Nov 2007; Joe Peterson <lavajoe@gentoo.org>
+  +files/numpy-1.0.4-freebsd.patch, numpy-1.0.4.ebuild:
+  Patch for FreeBSD, and add ~x86-fbsd keyword (bug #199825)
 
 *numpy-1.0.4 (12 Nov 2007)
 

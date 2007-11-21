@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.4.ebuild,v 1.1 2007/11/12 16:55:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.4.ebuild,v 1.2 2007/11/21 01:31:17 lavajoe Exp $
 
 NEED_PYTHON=2.3
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 
 IUSE="lapack"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 LICENSE="BSD"
 
 S="${WORKDIR}/${MY_P}"
@@ -45,8 +45,13 @@ pkgconf_cfg() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	# Fix some paths and docs in f2py
 	epatch "${FILESDIR}"/${PN}-1.0.1-f2py.patch
+
+	# Patch to use feclearexcept(3) rather than fpsetsticky(3) on FreeBSD 5.3+
+	epatch "${FILESDIR}"/${P}-freebsd.patch
+
 	# Gentoo patch for ATLAS library names
 	sed -i \
 		-e "s:'f77blas':'blas':g" \
