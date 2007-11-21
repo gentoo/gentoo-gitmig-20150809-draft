@@ -1,6 +1,11 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.50 2007/08/30 07:52:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.51 2007/11/21 09:19:53 uid895 Exp $
+
+*gnash-0.8.1 (21 Nov 2007)
+
+  21 Nov 2007; Stefan Schweizer <genstef@gentoo.org> +gnash-0.8.1.ebuild:
+  Version bump thanks to many contributions in bug 190753
 
   30 Aug 2007; Stefan Schweizer <genstef@gentoo.org> gnash-9999.ebuild:
   add depend, bug 187723 thanks Michael Zanetti <michael_zanetti@gmx.net>
