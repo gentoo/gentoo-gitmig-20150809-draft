@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.68 2007/11/17 14:02:30 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.69 2007/11/21 22:27:00 tgurr Exp $
+
+*ktorrent-2.2.4 (21 Nov 2007)
+
+  21 Nov 2007; Timo Gurr <tgurr@gentoo.org> -ktorrent-2.2.3.ebuild,
+  +ktorrent-2.2.4.ebuild:
+  Add ktorrent-2.2.4.ebuild, fixes bug #199627 and bug #199631. Cleanup older
+  version.
 
   17 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
   ktorrent-2.2.2.ebuild:
