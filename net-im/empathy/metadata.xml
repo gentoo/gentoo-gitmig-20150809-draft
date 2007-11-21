@@ -6,6 +6,7 @@
   <email>coldwind@gentoo.org</email>
   <name>Santiago M. Mola</name>
 </maintainer>
+<herd>gnome</herd>
   <longdescription>Empathy consists of a rich set of reusable instant messaging
   widgets, and a GNOME client using those widgets. It uses Telepathy and Nokia's
   Mission Control, and reuses Gossip's UI. The main goal is to permit desktop
