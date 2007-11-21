@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/http-access2-2.0.6.ebuild,v 1.5 2007/11/20 18:18:51 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/http-access2-2.0.6.ebuild,v 1.6 2007/11/21 19:34:50 nixnut Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://dev.ctor.org/http-access2/"
 SRC_URI="http://dev.ctor.org/download/${MY_P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 USE_RUBY="any"
 
