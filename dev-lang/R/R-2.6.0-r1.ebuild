@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.0-r1.ebuild,v 1.4 2007/11/21 17:11:40 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.0-r1.ebuild,v 1.5 2007/11/21 18:50:05 lavajoe Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -57,6 +57,9 @@ src_unpack() {
 	sed -e "s:\$(rhome):/usr/$(get_libdir)/R:g" \
 		-i "${S}"/src/unix/Makefile.in ||
 		die "Failed to fix Rscript makefile"
+
+	# This is needed for FreeBSD; please do not remove
+	elibtoolize
 }
 
 src_compile() {

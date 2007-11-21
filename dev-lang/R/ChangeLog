@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.101 2007/11/21 17:11:40 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.102 2007/11/21 18:50:05 lavajoe Exp $
+
+  21 Nov 2007; Joe Peterson <lavajoe@gentoo.org> R-2.6.0-r1.ebuild:
+  Add elibtoolize
 
   21 Nov 2007; Joe Peterson <lavajoe@gentoo.org> R-2.6.0-r1.ebuild:
   Added ~x86-fbsd keyword (bug #199368)
