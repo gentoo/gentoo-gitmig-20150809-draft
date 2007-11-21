@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.9.2.ebuild,v 1.2 2007/11/21 16:02:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.9.2.ebuild,v 1.3 2007/11/21 16:43:48 jer Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ia64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ia64 ~ppc ~sparc x86 ~x86-fbsd"
 RESTRICT="mirror"
 
 RDEPEND="dev-lang/perl
@@ -79,7 +79,7 @@ src_compile() {
 		myconf="${myconf} --disable-multinet --disable-donkey"
 	fi
 
-	cd ${S}
+	cd "${S}"
 	econf \
 		--sysconfdir=/etc/mldonkey \
 		--sharedstatedir=/var/mldonkey \
@@ -113,26 +113,26 @@ src_install() {
 
 	if use gtk; then
 		dobin mlgui mlguistarter || die "dobin failed"
-		domenu ${FILESDIR}/${PN}-gui.desktop
-		doicon ${FILESDIR}/${PN}.png
+		domenu "${FILESDIR}"/${PN}-gui.desktop
+		doicon "${FILESDIR}"/${PN}.png
 	fi
 
 	if use doc ; then
-		cd ${S}/distrib
+		cd "${S}"/distrib
 		dodoc ChangeLog *.txt
 		dohtml *.html
 
 		insinto /usr/share/doc/${PF}/scripts
 		doins kill_mldonkey mldonkey_command mldonkey_previewer make_buginfo
 
-		cd ${S}/docs
+		cd "${S}"/docs
 		dodoc *.txt *.tex *.pdf
 		dohtml *.html
 
-		cd ${S}/docs/developers
+		cd "${S}"/docs/developers
 		dodoc *.txt *.tex
 
-		cd ${S}/docs/images
+		cd "${S}"/docs/images
 		insinto /usr/share/doc/${PF}/html/images
 		doins *
 	fi
