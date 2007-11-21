@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_python
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.5 2007/11/21 14:57:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.6 2007/11/21 19:43:46 nixnut Exp $
+
+  21 Nov 2007; nixnut <nixnut@gentoo.org> mod_python-3.3.1.ebuild:
+  Stable on ppc wrt bug 199815
 
   21 Nov 2007; Markus Meier <maekke@gentoo.org> mod_python-3.3.1.ebuild:
   x86 stable, bug #199815
