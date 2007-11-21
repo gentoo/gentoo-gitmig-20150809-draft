@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.3.ebuild,v 1.10 2007/07/08 05:47:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.3.ebuild,v 1.11 2007/11/21 20:59:57 drac Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Gnome Power Manager"
 HOMEPAGE="http://www.gnome.org/projects/gnome-power-manager/"
@@ -69,6 +69,8 @@ src_unpack() {
 		# parameter in configure.in.
 		sed -i -e 's:@HAVE_DOCBOOK2MAN_TRUE@.*::' ${S}/man/Makefile.in
 	fi
+
+	epatch "${FILESDIR}"/${P}-doc.patch
 }
 
 pkg_postinst() {
