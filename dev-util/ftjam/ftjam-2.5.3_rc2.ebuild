@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ftjam/ftjam-2.5.3_rc2.ebuild,v 1.4 2007/11/21 00:44:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ftjam/ftjam-2.5.3_rc2.ebuild,v 1.5 2007/11/21 04:44:59 dirtyepic Exp $
 
 inherit eutils versionator
 
@@ -12,7 +12,7 @@ SRC_URI="http://david.freetype.org/jam/ftjam-${MY_PV}.tar.bz2"
 
 LICENSE="perforce GPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="!dev-util/jam
