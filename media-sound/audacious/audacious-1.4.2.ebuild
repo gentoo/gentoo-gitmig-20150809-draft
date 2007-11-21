@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.4.2.ebuild,v 1.1 2007/11/21 15:32:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.4.2.ebuild,v 1.2 2007/11/21 17:48:20 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -26,6 +26,7 @@ RDEPEND="dbus? ( >=dev-libs/dbus-glib-0.60 )
 	>=dev-libs/glib-2.10"
 
 DEPEND="${RDEPEND}
+	!media-plugins/audacious-plugins-ugly
 	>=dev-util/pkgconfig-0.9.0
 	nls? ( dev-util/intltool )"
 
