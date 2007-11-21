@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r5.ebuild,v 1.2 2007/11/18 15:22:27 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r6.ebuild,v 1.1 2007/11/21 19:54:40 grobian Exp $
 
 inherit autotools eutils gnustep-base flag-o-matic
 
@@ -44,9 +44,9 @@ src_unpack() {
 	epatch "${psd}"/WindowMaker-0.92.0-cvs-gcc41.patch
 	epatch "${FILESDIR}"/${PV/0.92/0.91}/wlist-0.9x.patch
 	epatch "${FILESDIR}"/${PV}/${P}-gif-before-ungif.patch
+	epatch "${FILESDIR}"/${PV}/${P}-math_h.patch
 
 	# Patches from altlinux
-	epatch "${psd}"/WindowMaker-0.91.0-alt-sowings.patch
 	epatch "${psd}"/WindowMaker-0.91.0-alt-session.patch
 	epatch "${psd}"/WindowMaker-0.91.0-alt-restartscrpt.patch
 	epatch "${psd}"/WindowMaker-0.91.0-alt-menutrans.patch
@@ -70,9 +70,6 @@ src_unpack() {
 	epatch "${psd}"/WindowMaker-0.91.0-peter-appicon-bouncer2.patch
 	epatch "${psd}"/WindowMaker-0.91.0-sga-swpanel-customization.patch
 	epatch "${psd}"/WindowMaker-0.92.0-alt-newpo.patch
-
-	# Bug 199520
-	epatch "${FILESDIR}"/${PV}/${P}-as-needed.patch
 
 	# Add UK localisation
 	cp "${psd}"/WindowMaker-uk.po po/uk.po
