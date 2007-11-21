@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-2.0.1.ebuild,v 1.1 2007/09/26 21:55:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-2.0.1.ebuild,v 1.2 2007/11/21 04:19:03 dirtyepic Exp $
 
 inherit autotools eutils games
 
@@ -29,7 +29,7 @@ RDEPEND="media-libs/libsdl
 	media-fonts/font-adobe-utopia-75dpi"
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	dev-util/jam"
+	|| ( dev-util/jam dev-util/ftjam )"
 
 S=${WORKDIR}/mk/linux
 
