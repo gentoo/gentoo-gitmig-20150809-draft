@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.212 2007/11/12 16:19:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.213 2007/11/21 20:11:29 nixnut Exp $
+
+  21 Nov 2007; nixnut <nixnut@gentoo.org> hal-0.5.9.1-r3.ebuild:
+  Stable on ppc wrt bug 199654
 
   12 Nov 2007; Samuli Suominen <drac@gentoo.org> hal-0.5.9.1-r3.ebuild:
   amd64 stable
