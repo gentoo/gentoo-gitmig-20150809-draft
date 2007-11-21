@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/cel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.23 2007/11/13 23:32:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.24 2007/11/21 03:27:09 dirtyepic Exp $
+
+  21 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> cel-1.0.1.ebuild,
+  cel-1.2.ebuild:
+  Allow building with ftjam for bug #188194
 
   13 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org> cel-1.0.1.ebuild:
   Changing ~amd64 to -amd64 due to bug #187093.

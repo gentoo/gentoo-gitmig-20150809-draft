@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-1.2.ebuild,v 1.2 2007/10/30 17:10:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-1.2.ebuild,v 1.3 2007/11/21 03:27:09 dirtyepic Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="python"
 RDEPEND=">=dev-games/crystalspace-1.1
 	dev-games/hawknl"
 DEPEND="${RDEPEND}
-	dev-util/jam"
+	|| ( dev-util/jam dev-util/ftjam )"
 
 S=${WORKDIR}/${MY_P}
 
