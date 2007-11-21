@@ -1,0 +1,15 @@
+--- ndiswrapper-1.50rc1/driver/Makefile.org	2007-11-21 03:38:46.000000000 +0100
++++ ndiswrapper-1.50rc1/driver/Makefile	2007-11-21 03:38:50.000000000 +0100
+@@ -322,10 +322,10 @@
+ distclean: clean
+ 	rm -f *_exports.h .\#* win2lin_stubs.h built-in.o
+ 
+-flags := $(shell if grep -qw "EXTRA_CFLAGS" $(KBUILD)/scripts/Makefile.build; \
++cflags_var := $(shell if grep -qw "EXTRA_CFLAGS" $(KSRC)/scripts/Makefile.build; \
+ 		             then echo "EXTRA_CFLAGS"; else echo "CFLAGS"; fi)
+ 
+-ifeq ($(flags), CFLAGS)
++ifeq ($(cflags_var), CFLAGS)
+ CFLAGS += $(MOD_CFLAGS)
+ else
+ EXTRA_CFLAGS += $(MOD_CFLAGS)
