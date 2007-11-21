@@ -1,0 +1,11 @@
+diff -Naur kile-2.0/src/kile/kile.desktop kile-2.0.new/src/kile/kile.desktop
+--- kile-2.0/src/kile/kile.desktop	2007-06-01 08:45:56.000000000 +0200
++++ kile-2.0.new/src/kile/kile.desktop	2007-11-21 12:02:51.163648540 +0100
+@@ -77,6 +77,6 @@
+ GenericName[uk]=Інтерфейс до LaTeX
+ GenericName[xx]=xxLaTeX Frontendxx
+ GenericName[zh_CN]=LaTeX 前端
+-MimeType=text/x-tex;text/x-kilepr
++MimeType=text/x-tex;text/x-kilepr;
+ Categories=Qt;KDE;Office;
+ Encoding=UTF-8

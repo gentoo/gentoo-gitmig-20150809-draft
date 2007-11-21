@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.97 2007/08/21 22:45:12 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.98 2007/11/21 19:33:34 tgurr Exp $
+
+*kile-2.0 (21 Nov 2007)
+
+  21 Nov 2007; Timo Gurr <tgurr@gentoo.org>
+  -files/kile-1.9.2-backupfile.patch, -files/kile-1.9_rc1-gcc41.patch,
+  +files/kile-2.0-desktopentry.patch, -kile-1.9.2-r1.ebuild,
+  kile-1.9.3.ebuild, -kile-2.0_beta1.ebuild, +kile-2.0.ebuild:
+  Add kile-2.0.ebuild, fixes bug #196381, bug #196799 and bug #199803. Cleanup
+  older versions and fixed some quoting.
 
   21 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
   kile-2.0_beta1.ebuild:

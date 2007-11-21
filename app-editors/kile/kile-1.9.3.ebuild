@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.9.3.ebuild,v 1.7 2007/04/11 19:05:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.9.3.ebuild,v 1.8 2007/11/21 19:33:34 tgurr Exp $
 
 inherit kde
 
@@ -39,7 +39,7 @@ src_unpack() {
 	if [[ -n ${LINGUAS} ]]; then
 		MAKE_TRANSL=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
 		einfo "Building translations for: ${MAKE_TRANSL}"
-		sed -i -e "s:^SUBDIRS.*=.*:SUBDIRS = ${MAKE_TRANSL}:" ${S}/translations/Makefile.am || die "sed for locale failed"
-		rm -f ${S}/configure
+		sed -i -e "s:^SUBDIRS.*=.*:SUBDIRS = ${MAKE_TRANSL}:" "${S}/translations/Makefile.am" || die "sed for locale failed"
+		rm -f "${S}/configure"
 	fi
 }
