@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-audio
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-audio/ChangeLog,v 1.16 2007/11/21 11:12:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-audio/ChangeLog,v 1.17 2007/11/21 22:32:09 jokey Exp $
+
+  21 Nov 2007; Markus Ullmann <jokey@gentoo.org> gnome-audio-2.0.0.ebuild:
+  ARMed for Flameeyes with a cookie
 
   21 Nov 2007; Luca Barbato <lu_zero@gentoo.org> gnome-audio-2.0.0.ebuild:
   Marked ~ppc64
