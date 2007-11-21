@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.20 2007/11/20 15:50:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.21 2007/11/21 17:49:33 cla Exp $
+
+  21 Nov 2007; Dawid Węgliński <cla@gentoo.org> orca-2.20.1.ebuild:
+  Stable on x86 (bug #199740)
 
   20 Nov 2007; Samuli Suominen <drac@gentoo.org> orca-2.20.1.ebuild:
   amd64 stable wrt #199740
