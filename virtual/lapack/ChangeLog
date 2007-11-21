@@ -1,6 +1,10 @@
 # ChangeLog for virtual/blas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/lapack/ChangeLog,v 1.1 2007/11/21 00:20:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/lapack/ChangeLog,v 1.2 2007/11/21 09:27:25 uid2162 Exp $
+
+  21 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> lapack-3.0.ebuild,
+  lapack-3.1.ebuild:
+  added hppa
 
 *lapack-3.1 (21 Nov 2007)
 *lapack-3.0 (21 Nov 2007)
