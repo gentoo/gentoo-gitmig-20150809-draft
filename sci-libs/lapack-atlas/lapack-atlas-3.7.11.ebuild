@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11.ebuild,v 1.14 2007/10/10 10:04:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11.ebuild,v 1.15 2007/11/21 00:43:41 bicatali Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -28,8 +28,6 @@ DEPEND="virtual/libc
 RDEPEND="virtual/libc
 	virtual/blas
 	ifc? ( dev-lang/ifc )" # Need Intel runtime libraries
-
-PROVIDE="virtual/lapack"
 
 FORTRAN="g77 gfortran ifc"
 
