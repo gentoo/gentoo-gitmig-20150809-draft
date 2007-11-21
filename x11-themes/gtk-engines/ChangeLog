@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.111 2007/11/20 14:07:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.112 2007/11/21 16:38:00 cla Exp $
+
+  21 Nov 2007; Dawid Węgliński <cla@gentoo.org> gtk-engines-2.12.2.ebuild:
+  Stable on x86 (bug #199740)
 
   20 Nov 2007; Samuli Suominen <drac@gentoo.org> gtk-engines-2.12.2.ebuild:
   amd64 stable wrt #199740
