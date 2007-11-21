@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.1 2007/11/20 05:04:49 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.2 2007/11/21 22:34:38 hawking Exp $
+
+  21 Nov 2007; Ali Polatel <hawking@gentoo.org>
+  qscintilla-python-2.1.ebuild:
+  fixed dependency issue with qscintilla.
 
 *qscintilla-python-2.1 (20 Nov 2007)
 

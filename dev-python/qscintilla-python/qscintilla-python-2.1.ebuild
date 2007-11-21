@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.1.ebuild,v 1.1 2007/11/20 05:04:49 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.1.ebuild,v 1.2 2007/11/21 22:34:38 hawking Exp $
 
 inherit eutils python
 
@@ -19,6 +19,7 @@ IUSE="qt4"
 
 DEPEND=">=dev-python/sip-4.4
 	=x11-libs/qscintilla-${PV}*
+	!<x11-libs/qscintilla-2.1-r1
 	qt4? ( dev-python/PyQt4 )
 	!qt4? ( dev-python/PyQt )"
 RDEPEND="${DEPEND}"
