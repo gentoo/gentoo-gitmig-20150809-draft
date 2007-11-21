@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/gargoyle
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.7 2007/04/27 15:37:51 s4t4n Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.8 2007/11/21 03:42:37 dirtyepic Exp $
+
+  21 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> gargoyle-20060917-r1.ebuild:
+  Allow building with ftjam for bug #188194
 
   27 Apr 2007; Michele Noberasco <s4t4n@gentoo.org> gargoyle-20060917-r1.ebuild:
   Stable for x86.
