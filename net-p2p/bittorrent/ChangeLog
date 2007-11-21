@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.118 2007/10/16 11:54:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.119 2007/11/21 11:47:49 cla Exp $
+
+  21 Nov 2007; Dawid Węgliński <cla@gentoo.org> bittorrent-5.0.9.ebuild:
+  Stable on x86
 
 *bittorrent-5.0.9 (16 Oct 2007)
 
