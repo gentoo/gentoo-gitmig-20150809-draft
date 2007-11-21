@@ -9,3 +9,7 @@ x11-terms/eterm sse2
 # Diego Pettenò <flameeyes@gentoo.org> (14 Nov 2007)
 # Mask glibc-omitfp on glibc 2.7 until bug #196926 is fixed.
 ~sys-libs/glibc-2.7 glibc-omitfp
+
+# Dawid Węgliński <cla@gentoo.org> (21.11.2007)
+# Masking afs for gdm
+=gnome-base/gdm-2.20.1 afs
