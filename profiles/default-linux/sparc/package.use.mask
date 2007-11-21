@@ -8,3 +8,5 @@ media-libs/gst-plugins-base debug
 dev-lang/swig	chicken
 # Needs pike
 dev-lang/swig	pike
+# Temporary for amarok
+media-sound/amarok	mtp
