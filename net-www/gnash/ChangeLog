@@ -1,6 +1,10 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.51 2007/11/21 09:19:53 uid895 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.52 2007/11/21 09:41:17 genstef Exp $
+
+  21 Nov 2007; Stefan Schweizer <genstef@gentoo.org> gnash-9999.ebuild:
+  change cvs ebuild to a stub to point to the cvs ebuild overlay made by
+  Harley Peters <harley@thepetersclan.com> in bug 187444
 
 *gnash-0.8.1 (21 Nov 2007)
 
