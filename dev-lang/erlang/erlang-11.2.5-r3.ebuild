@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.5-r3.ebuild,v 1.1 2007/11/21 17:14:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.5-r3.ebuild,v 1.2 2007/11/21 17:37:13 opfer Exp $
 
 inherit elisp-common eutils flag-o-matic multilib versionator
 
@@ -54,7 +54,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gethostbyname.patch"
 
 	# odbc is disabled in the amd64 code, but it works
-	if use x86 && use odbc; then
+	if use amd64 && use odbc; then
 		epatch "${FILESDIR}/${P}-odbc-support-amd64.patch"
 	fi
 
