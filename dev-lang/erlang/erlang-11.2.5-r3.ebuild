@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.5-r1.ebuild,v 1.1 2007/08/15 07:54:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.5-r3.ebuild,v 1.1 2007/11/21 17:14:08 opfer Exp $
 
 inherit elisp-common eutils flag-o-matic multilib versionator
 
@@ -41,18 +41,30 @@ S="${WORKDIR}/${MY_P}"
 SITEFILE=50erlang-gentoo.el
 
 src_unpack() {
-	## fix compilation on hardened systems, see bug #154338
-	filter-flags "-fstack-protector"
-	filter-flags "-fstack-protector-all"
 
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-build.patch #184419
+
 	# needed for amd64
 	epatch "${FILESDIR}/${PN}-10.2.6-export-TARGET.patch"
+
 	# needed for FreeBSD
-	epatch "${FILESDIR}/${PN}-11.2.5-gethostbyname.patch"
+	epatch "${FILESDIR}/${P}-gethostbyname.patch"
+
+	# odbc is disabled in the amd64 code, but it works
+	if use x86 && use odbc; then
+		epatch "${FILESDIR}/${P}-odbc-support-amd64.patch"
+	fi
+
+	# needed for building with hipe and recent coreutils
+	use hipe && epatch "${FILESDIR}"/${P}-hipe.patch
+
 	use odbc || sed -i 's: odbc : :' lib/Makefile
+
+	# make sure we only link ssl dynamically
+	sed -i '/SSL_DYNAMIC_ONLY=/s:no:yes:' erts/configure #184419
 
 	if use hipe; then
 		ewarn
@@ -113,18 +125,19 @@ src_install() {
 
 	if use doc ; then
 		for i in "${WORKDIR}"/man/man* ; do
-			dodir "/usr/share/${i##${WORKDIR}}erl"
+			dodir "${ERL_LIBDIR}/${i##${WORKDIR}}"
 		done
 		for file in "${WORKDIR}"/man/man*/*.[1-9]; do
-			# Avoid namespace collisions
-			local newfile=${file}erl
-			cp ${file} ${newfile}
 			# Man page processing tools expect a capitalized "SEE ALSO" section
-			# header
-			sed -i -e 's,\.SH See Also,\.SH SEE ALSO,g' ${newfile}
+			# header, has been reported upstream, should be fixed in R12
+			sed -i -e 's,\.SH See Also,\.SH SEE ALSO,g' ${file}
 			# doman sucks so we can't use it
-			cp ${newfile} "${D}"/usr/share/man/man${newfile##*.}/
+			cp ${file} "${D}/${ERL_LIBDIR}"/man/man${file##*.}/
 		done
+		# extend MANPATH, so the normal man command can find it
+		# see bug 189639
+		dodir /etc/env.d/
+		echo "MANPATH=\"${ERL_LIBDIR}/man\"" > "${D}/etc/env.d/90erlang"
 		dohtml -A README,erl,hrl,c,h,kwc,info -r \
 			"${WORKDIR}"/doc "${WORKDIR}"/lib "${WORKDIR}"/erts-*
 	fi
