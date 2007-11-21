@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.78 2007/11/04 16:14:28 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.79 2007/11/21 17:17:47 nixnut Exp $
+
+  21 Nov 2007; nixnut <nixnut@gentoo.org> lm_sensors-2.10.4.ebuild:
+  Stable on ppc wrt bug 195220
 
   04 Nov 2007; Dawid Węgliński <cla@gentoo.org> lm_sensors-2.10.4.ebuild:
   Stable on x86 (bug #195220)
