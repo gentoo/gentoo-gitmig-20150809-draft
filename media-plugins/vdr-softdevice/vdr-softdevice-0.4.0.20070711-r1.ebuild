@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070711-r1.ebuild,v 1.3 2007/11/21 09:56:46 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070711-r1.ebuild,v 1.4 2007/11/21 09:58:54 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -20,7 +20,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="xv fbcon directfb mmx mmxext xinerama"
 
 RDEPEND=">=media-video/vdr-1.3.36
