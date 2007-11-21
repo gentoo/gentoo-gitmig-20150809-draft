@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/microdc2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/microdc2/ChangeLog,v 1.1 2007/01/16 13:34:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/microdc2/ChangeLog,v 1.2 2007/11/21 15:46:00 armin76 Exp $
+
+  21 Nov 2007; Raúl Porcel <armin76@gentoo.org> microdc2-0.15.6.ebuild:
+  Add missing DEPEND, bug #197170
 
 *microdc2-0.15.6 (16 Jan 2007)
 
