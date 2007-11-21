@@ -1,0 +1,170 @@
+Index: resources/installers/linux/iconinstall
+===================================================================
+--- resources/installers/linux/iconinstall	(revision 0)
++++ resources/installers/linux/iconinstall	(revision 0)
+@@ -0,0 +1,13 @@
++#!/bin/bash
++dir=$(dirname ${0})
++target=${1}
++[[ ${target} ]] || { echo "No target given!"; exit 1; }
++
++for size in 32 128; do
++	icondir="${target}/${size}x${size}/mimetypes/"
++	mkdir -pv "${icondir}"
++	cp -v "${dir}/subtitle-${size}.png" "${icondir}/subtitle.png"
++	for mime in srt ssa ass sub; do
++		ln -sv subtitle.png "${icondir}/application-x-${mime}.png"
++	done
++done
+
+Property changes on: resources/installers/linux/iconinstall
+___________________________________________________________________
+Name: svn:executable
+   + *
+
+Index: resources/installers/linux/jubler.xml
+===================================================================
+--- resources/installers/linux/jubler.xml	(revision 0)
++++ resources/installers/linux/jubler.xml	(revision 0)
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
++	<mime-type type="application/x-ass">
++		<comment xml:lang="en">ASS subtitle</comment>
++		<glob pattern="*.ass"/>
++		<sub-class-of type="text/plain" />
++	</mime-type>
++	<mime-type type="application/x-ssa">
++		<comment xml:lang="en">SSA subtitle</comment>
++		<glob pattern="*.ssa"/>
++		<sub-class-of type="text/plain" />
++	</mime-type>
++	<mime-type type="application/x-sub">
++		<comment xml:lang="en">SUB subtitle</comment>
++		<glob pattern="*.sub"/>
++		<sub-class-of type="text/plain" />
++	</mime-type>
++</mime-info>
+Index: resources/installers/linux/sub-ass.desktop
+===================================================================
+--- resources/installers/linux/sub-ass.desktop	(revision 344)
++++ resources/installers/linux/sub-ass.desktop	(working copy)
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Type=MimeType
+-MimeType=application/sub-ass
++MimeType=application/x-ass
+ Icon=subtitle
+ Patterns=*.ass;
+ DefaultApp=jubler
+Index: resources/installers/linux/sub-ssa.desktop
+===================================================================
+--- resources/installers/linux/sub-ssa.desktop	(revision 344)
++++ resources/installers/linux/sub-ssa.desktop	(working copy)
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Type=MimeType
+-MimeType=application/sub-ssa
++MimeType=application/x-ssa
+ Icon=subtitle
+ Patterns=*.ssa;
+ DefaultApp=jubler
+Index: resources/installers/linux/sub-sub.desktop
+===================================================================
+--- resources/installers/linux/sub-sub.desktop	(revision 344)
++++ resources/installers/linux/sub-sub.desktop	(working copy)
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Type=MimeType
+-MimeType=application/sub-sub
++MimeType=application/x-sub
+ Icon=subtitle
+ Patterns=*.sub;
+ DefaultApp=jubler
+Index: resources/installers/linux/jubler.desktop
+===================================================================
+--- resources/installers/linux/jubler.desktop	(revision 344)
++++ resources/installers/linux/jubler.desktop	(working copy)
+@@ -1,11 +1,10 @@
+ [Desktop Entry]
+-Categories=AudioVideo;;
++Categories=AudioVideo;
+ Comment=Subtitle editor and authoring tool
+-Encoding=UTF-8
+ Exec=jubler %f
+ GenericName=Jubler subtitle editor
+ Icon=jubler
+-MimeType=application/sub-srt;application/sub-sub;application/sub-ssa;application/sub-ass
++MimeType=application/x-srt;application/x-sub;application/x-ssa;application/x-ass;
+ Name=Jubler
+ Terminal=false
+ Type=Application
+Index: resources/installers/linux/sub-srt.desktop
+===================================================================
+--- resources/installers/linux/sub-srt.desktop	(revision 344)
++++ resources/installers/linux/sub-srt.desktop	(working copy)
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Type=MimeType
+-MimeType=application/sub-srt
++MimeType=application/x-srt
+ Icon=subtitle
+ Patterns=*.srt;
+ DefaultApp=jubler
+Index: build.xml
+===================================================================
+--- build.xml	(revision 344)
++++ build.xml	(working copy)
+@@ -228,11 +228,29 @@
+ 		<property name="mimedir" value="${sharedir}/mimelnk/application"/>
+ 	</target>
+ 
+-
+-	<target name="linuxinstall" depends="linuxproperties">
++	<target name="cleandestdir" depends="linuxproperties">
+ 		<!-- Cleanup -->
+ 		<exec executable="rm" failonerror="true"><arg line="-rf ${destdir}"/></exec>
++	</target>
+ 
++	<target name="linuxdesktopintegration" depends="linuxproperties">
++		<!-- Icon files -->
++		<copy file="resources/installers/linux/jubler.menu" tofile="${sharedir}/menu/jubler"/>
++		<copy file="resources/installers/linux/jubler.xpm" todir="${sharedir}/pixmaps"/>
++		<copy file="resources/installers/linux/jubler.png" todir="${sharedir}/icons/hicolor/32x32/apps"/>
++		<exec executable="resources/installers/linux/iconinstall" failonerror="true"><arg line="${sharedir}/icons/hicolor/"/></exec>
++		<copy file="resources/installers/linux/jubler.desktop" todir="${sharedir}/applications"/>
++
++		<!-- Mimetypes -->
++		<copy file="resources/installers/linux/sub-srt.desktop" todir="${mimedir}"/>
++		<copy file="resources/installers/linux/sub-sub.desktop" todir="${mimedir}"/>
++		<copy file="resources/installers/linux/sub-ass.desktop" todir="${mimedir}"/>
++		<copy file="resources/installers/linux/sub-ssa.desktop" todir="${mimedir}"/>
++		<copy file="resources/installers/linux/jubler.xml" todir="${sharedir}/mime/packages"/>
++	</target>
++
++	<target name="linuxinstall" depends="linuxproperties, cleandestdir, linuxdesktopintegration">
++
+ 		<!-- Basic Jubler files -->
+ 		<copy file="dist/Jubler.jar" todir="${libdir}"/>
+ 		<copy file="resources/system/findjava.sh" todir="${libdir}"/>
+@@ -251,20 +269,6 @@
+ 		<exec executable="ln" failonerror="true"><arg line="-s ${reldocdir} ${libdir}/help"/></exec>
+ 		<copy file="resources/installers/linux/jubler.1" todir="${mandir}"/>
+ 		<exec executable="gzip" failonerror="true"><arg line="-v -9 ${mandir}/jubler.1"/></exec>
+-		
+-		<!-- Icon files -->
+-		<copy file="resources/installers/linux/jubler.menu" tofile="${sharedir}/menu/jubler"/>
+-		<copy file="resources/installers/linux/jubler.xpm" todir="${sharedir}/pixmaps"/>
+-		<copy file="resources/installers/linux/jubler.png" todir="${sharedir}/icons/hicolor/32x32/apps"/>
+-		<copy file="resources/installers/linux/subtitle-128.png" tofile="${sharedir}/icons/hicolor/128x128/mimetypes/subtitle.png"/>
+-		<copy file="resources/installers/linux/subtitle-32.png" tofile="${sharedir}/icons/hicolor/32x32/mimetypes/subtitle.png"/>
+-		<copy file="resources/installers/linux/jubler.desktop" todir="${sharedir}/applications"/>
+-
+-		<!-- Mimetypes -->
+-		<copy file="resources/installers/linux/sub-srt.desktop" todir="${mimedir}"/>
+-		<copy file="resources/installers/linux/sub-sub.desktop" todir="${mimedir}"/>
+-		<copy file="resources/installers/linux/sub-ass.desktop" todir="${mimedir}"/>
+-		<copy file="resources/installers/linux/sub-ssa.desktop" todir="${mimedir}"/>
+ 	</target>
+ 
+ 
