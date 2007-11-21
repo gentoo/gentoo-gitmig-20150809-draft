@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070711.ebuild,v 1.2 2007/07/22 09:15:01 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070711.ebuild,v 1.3 2007/11/21 09:56:46 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -109,7 +109,7 @@ src_compile() {
 
 	[[ ${COMPILE_SHM} == 1 ]] || MYOPTS="${MYOPTS} --disable-shm"
 
-	cd ${S}
+	cd "${S}"
 	elog configure ${MYOPTS}
 	./configure ${MYOPTS} || die "configure failed"
 
@@ -119,7 +119,7 @@ src_compile() {
 src_install() {
 	vdr-plugin_src_install
 
-	cd ${S}
+	cd "${S}"
 
 	insinto "${VDR_PLUGIN_DIR}"
 	doins libsoftdevice-*.so.*
