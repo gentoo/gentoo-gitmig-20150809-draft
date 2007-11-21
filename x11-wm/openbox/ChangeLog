@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.146 2007/11/21 18:15:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.147 2007/11/21 18:52:06 nixnut Exp $
+
+  21 Nov 2007; nixnut <nixnut@gentoo.org> openbox-3.4.4.ebuild:
+  Stable on ppc wrt bug 199136
 
   21 Nov 2007; Jeroen Roovers <jer@gentoo.org> openbox-3.4.4.ebuild:
   Stable for HPPA (bug #199136).
