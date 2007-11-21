@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.57 2007/11/20 18:03:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.58 2007/11/21 15:06:17 drac Exp $
+
+  21 Nov 2007; Samuli Suominen <drac@gentoo.org> fxruby-1.4.7-r1.ebuild,
+  fxruby-1.6.12.ebuild:
+  amd64 stable wrt #199571
 
   20 Nov 2007; Raúl Porcel <armin76@gentoo.org> fxruby-1.6.12.ebuild:
   alpha stable wrt #199571
