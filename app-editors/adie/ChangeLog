@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/adie
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.14 2007/11/21 00:10:57 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.15 2007/11/21 14:46:45 drac Exp $
+
+  21 Nov 2007; Samuli Suominen <drac@gentoo.org> adie-1.6.30.ebuild:
+  amd64 stable wrt #199853
 
 *adie-1.6.30 (20 Nov 2007)
 
