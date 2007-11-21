@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.99 2007/11/20 21:56:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.100 2007/11/21 15:18:35 armin76 Exp $
+
+  21 Nov 2007; Raúl Porcel <armin76@gentoo.org> R-2.6.0-r1.ebuild:
+  Add ~alpha/~ia64 wrt #199368
 
   20 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org> R-2.2.1-r1.ebuild:
   Stable on amd64 wrt bug #198976.
