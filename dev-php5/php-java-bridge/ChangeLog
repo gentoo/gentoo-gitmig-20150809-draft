@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/php-java-bridge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-java-bridge/ChangeLog,v 1.19 2007/11/19 14:20:17 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-java-bridge/ChangeLog,v 1.20 2007/11/22 19:14:17 drac Exp $
+
+  22 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  php-java-bridge-4.3.0.ebuild:
+  amd64 stable wrt #199339
 
   19 Nov 2007; Dawid Węgliński <cla@gentoo.org>
   php-java-bridge-4.3.0.ebuild:
