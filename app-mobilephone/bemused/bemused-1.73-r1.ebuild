@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/bemused-1.73-r1.ebuild,v 1.2 2007/01/23 16:21:24 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/bemused-1.73-r1.ebuild,v 1.3 2007/11/22 10:16:00 mrness Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 S="${WORKDIR}/${PN}linuxserver${PV}"
 
-RDEPEND="media-sound/audacious
+RDEPEND="=media-sound/audacious-1.3*
 	net-wireless/bluez-libs"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
