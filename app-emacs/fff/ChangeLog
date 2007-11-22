@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/fff
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/fff/ChangeLog,v 1.2 2007/10/14 21:34:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/fff/ChangeLog,v 1.3 2007/11/22 07:33:12 opfer Exp $
+
+  22 Nov 2007; Christian Faulhammer <opfer@gentoo.org> fff-20050517.ebuild:
+  stable x86/amd64
 
   14 Oct 2007; Ulrich Mueller <ulm@gentoo.org> fff-20050517.ebuild:
   Keyworded ~amd64 wrt #195512.
