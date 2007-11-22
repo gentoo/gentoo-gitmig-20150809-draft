@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.48 2007/11/21 17:12:51 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.49 2007/11/22 14:54:53 armin76 Exp $
+
+  22 Nov 2007; Raúl Porcel <armin76@gentoo.org>
+  evolution-exchange-2.12.0.ebuild:
+  sparc stable wrt #199740
 
   21 Nov 2007; Dawid Węgliński <cla@gentoo.org>
   evolution-exchange-2.12.0.ebuild:
