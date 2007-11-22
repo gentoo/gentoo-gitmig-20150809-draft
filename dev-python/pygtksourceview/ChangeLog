@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtksourceview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.4 2007/11/21 17:27:31 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.5 2007/11/22 15:02:21 armin76 Exp $
+
+  22 Nov 2007; Raúl Porcel <armin76@gentoo.org>
+  pygtksourceview-2.0.0-r1.ebuild:
+  alpha/ia64/sparc stable wrt #199740
 
   21 Nov 2007; Dawid Węgliński <cla@gentoo.org>
   pygtksourceview-2.0.0-r1.ebuild:
