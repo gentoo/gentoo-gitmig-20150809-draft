@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
-  <documentElement localName="guide" uri="guide.rnc" />
-  <documentElement localName="project" uri="project.rnc" />
-  <documentElement localName="glsa" uri="glsa.rnc" />
-  <documentElement localName="pkgmetadata" uri="metadata.rnc" />
-</locatingRules>

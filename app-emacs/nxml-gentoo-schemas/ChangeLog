@@ -1,6 +1,17 @@
 # ChangeLog for app-emacs/nxml-gentoo-schemas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.4 2007/11/21 11:25:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.5 2007/11/22 15:24:48 flameeyes Exp $
+
+*nxml-gentoo-schemas-20071122 (22 Nov 2007)
+
+  22 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> -files/book.rnc,
+  -files/gleps.rnc, -files/glsa.rnc, -files/guide.rnc, -files/metadata.rnc,
+  -files/metadoc.rnc, -files/project.rnc, -files/schemas.xml,
+  -files/staffing-needs.rnc, -files/userinfo.rnc,
+  -nxml-gentoo-schemas-20070710.ebuild,
+  -nxml-gentoo-schemas-20071121.ebuild,
+  +nxml-gentoo-schemas-20071122.ebuild:
+  Version bump and remove old versions, included files in $FILESDIR.
 
 *nxml-gentoo-schemas-20071121 (21 Nov 2007)
 
