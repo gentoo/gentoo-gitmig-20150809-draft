@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.45 2007/08/22 06:31:26 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.46 2007/11/22 17:07:35 drac Exp $
+
+  22 Nov 2007; Samuli Suominen <drac@gentoo.org> qingy-0.9.6-r1.ebuild:
+  amd64 stable as requested and tested by Emil Karlson
 
   22 Aug 2007; Michele Noberasco <s4t4n@gentoo.org> qingy-0.9.6-r1.ebuild:
   Stable for x86.
