@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r5.ebuild,v 1.14 2007/10/15 11:04:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r5.ebuild,v 1.15 2007/11/22 02:16:52 dirtyepic Exp $
 
 # r3 change by me (danarmak): there's a contrib dir inside the freetype1
 # sources with important utils: ttf2bdf, ttf2pfb, ttf2pk, ttfbanner.
@@ -26,78 +26,70 @@ SRC_URI="ftp://ftp.freetype.org/freetype/freetype1/${P}.tar.gz
 LICENSE="FTL"
 SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
-IUSE="nls tetex"
+IUSE="nls latex"
 
-DEPEND="tetex? ( virtual/latex-base )"
+DEPEND="latex? ( virtual/latex-base )"
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
-
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	unpack ${P}.tar.gz
 	# freetype1-contrib goes under freetype-1.3.1
-	cd ${S}
+	cd "${S}"
 	unpack ${P2}.tar.gz
 
-	cd ${S}
+	cd "${S}"
 	# remove unneeded include for BSD (#104016)
-	epatch ${FILESDIR}/${P}-malloc.patch
+	epatch "${FILESDIR}"/${P}-malloc.patch
 
 	elibtoolize
-
 }
 
 src_compile() {
 	local myconf
 
-	use nls || myconf="${myconf} --disable-nls"
-
-	econf ${myconf} || die
+	use latex && myconf="${myconf} --with-kpathsea-dir=/usr/lib"
+	econf $(use_enable nls) ${myconf} || die "econf failed"
 
 	# Make a small fix to disable tests
-	# Now X11 is no longer required
-	cp Makefile Makefile.orig
-	sed -e "s:ttlib tttest ttpo:ttlib ttpo:" Makefile.orig > Makefile
+	sed -i -e "s:ttlib tttest ttpo:ttlib ttpo:" Makefile
 
-	make || die
+	emake || die "emake failed"
 
-	# make contrib utils
-
-	use tetex && myconf="${myconf} --with-kpathsea-dir=/usr/lib"
 
 	for x in ttf2bdf ttf2pfb ttf2pk ttfbanner ; do
-		cd ${S}/freetype1-contrib/${x}
-		econf ${myconf} || die
-		make || die
+		cd "${S}"/freetype1-contrib/${x}
+		econf ${myconf} || die "econf ${x} failed"
+		emake || die "emake ${x} failed"
 	done
 }
 
 src_install() {
-	cd lib
-
-	# Seems to require a shared libintl (getetxt comes only with a static one
-	# But it seems to work without problems
-
-	make -f arch/unix/Makefile prefix=${D}/usr libdir=${D}/usr/$(get_libdir) install || die
-
-	cd ${S}/po
-	make prefix=${D}/usr libdir=${D}/usr/$(get_libdir) install || die
-
-	cd ${S}
 	dodoc announce PATENTS README readme.1st
 	dodoc docs/*.txt docs/FAQ docs/TODO
 	dohtml -r docs
 
+	# package does not support DESTDIR
+
+	# Seems to require a shared libintl (getetxt comes only with a static one
+	# But it seems to work without problems
+	cd "${S}"/lib
+	emake -f arch/unix/Makefile \
+		prefix="${D}"/usr libdir="${D}"/usr/$(get_libdir) install || die
+
+	cd "${S}"/po
+	emake prefix="${D}"/usr libdir="${D}"/usr/$(get_libdir) install || die
+
 	# install contrib utils, omit t1asm (conflicts with t1lib)
 	# and getafm (conflicts with psutils)
-	cd ${S}/freetype1-contrib
+	cd "${S}"/freetype1-contrib
 	into /usr
 	dobin ttf2bdf/ttf2bdf ttf2pfb/.libs/ttf2pfb \
 		ttf2pk/.libs/ttf2pk ttf2pk/.libs/ttf2tfm \
 		ttfbanner/.libs/ttfbanner \
 		|| die
-	if use tetex ; then
+	if use latex ; then
 		insinto /usr/share/texmf/ttf2pk
 		doins ttf2pk/data/* || die
 		insinto /usr/share/texmf/ttf2pfb
