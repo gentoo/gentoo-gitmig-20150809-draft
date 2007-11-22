@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.844 2007/11/22 02:10:47 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.845 2007/11/22 20:55:21 compnerd Exp $
+
+  22 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org> package.mask:
+  Unmask firmware images for ipw3945 and ipw4965
 
   22 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> use.local.desc:
   Add local latex flag for freetype.
