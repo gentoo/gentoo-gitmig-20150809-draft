@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-extras
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.45 2007/11/21 18:03:17 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.46 2007/11/22 15:30:16 armin76 Exp $
+
+  22 Nov 2007; Raúl Porcel <armin76@gentoo.org>
+  gnome-themes-extras-2.20.ebuild:
+  alpha/ia64/sparc stable wrt #199740
 
   21 Nov 2007; Dawid Węgliński <cla@gentoo.org>
   gnome-themes-extras-2.20.ebuild:
