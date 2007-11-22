@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.102 2007/11/21 18:50:05 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.103 2007/11/22 00:20:37 bicatali Exp $
+
+*R-2.6.0-r2 (21 Nov 2007)
+
+  21 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> -R-2.2.1.ebuild,
+  -R-2.6.0.ebuild, +R-2.6.0-r2.ebuild:
+  Major cleaning of dependencies and ebuild in general, add/remove USE flags
+  making more sense, export pdf and html viewers with xdg-open
 
   21 Nov 2007; Joe Peterson <lavajoe@gentoo.org> R-2.6.0-r1.ebuild:
   Add elibtoolize
