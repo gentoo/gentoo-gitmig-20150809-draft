@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.18.ebuild,v 1.1 2007/11/22 21:07:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.18.ebuild,v 1.2 2007/11/22 21:19:05 drac Exp $
 
 EAPI=1
 
@@ -38,7 +38,6 @@ RDEPEND=">=dev-lang/mono-1.1.18
 	pdf? ( >=app-text/poppler-0.5.1 )
 	chm? ( app-doc/chmlib )
 	galago? ( >=dev-dotnet/galago-sharp-0.5 )
-	thunderbird? ( >=mail-client/mozilla-thunderbird-1.5 )
 	xscreensaver? ( x11-libs/libXScrnSaver )"
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
