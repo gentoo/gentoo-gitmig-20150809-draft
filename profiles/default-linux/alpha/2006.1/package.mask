@@ -1,3 +1,7 @@
+# Stefaan De Roeck <stefaan@gentoo.org> (22 Nov 2007)
+# sys-libs/glibc-2.3.6-r5 requires linux headers 2.6.17 or lower
+>sys-kernel/linux-headers-2.6.17
+
 # Bryan Øtergaard <kloeri@gentoo.org> (13 Feb 2007)
 # Mask as linuxthreads are broken.
 >=sys-libs/glibc-2.5
