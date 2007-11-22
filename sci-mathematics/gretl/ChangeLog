@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gretl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.2 2007/11/12 18:28:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.3 2007/11/22 00:23:50 bicatali Exp $
+
+  21 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> gretl-1.6.5.ebuild:
+  Now force nls (see bug #198720), and do not force both shared and static (do it
+  with EXTRA_ECONF)
 
   12 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
   +files/gretl-1.6.5-cli.patch, +files/gretl-1.6.5-nls.patch,

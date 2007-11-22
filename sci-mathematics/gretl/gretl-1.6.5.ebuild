@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.6.5.ebuild,v 1.2 2007/11/12 18:28:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.6.5.ebuild,v 1.3 2007/11/22 00:23:50 bicatali Exp $
 
 inherit eutils gnome2
 
@@ -12,7 +12,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="accessibility gmp gnome gtk nls png readline sourceview"
+# 1.6.5 too buggy without nls. now forcing.
+#IUSE="accessibility gmp gnome gtk nls png readline sourceview"
+IUSE="accessibility gmp gnome gtk png readline sourceview"
 
 RDEPEND="dev-libs/libxml2
 	>=dev-libs/glib-2
@@ -59,12 +61,10 @@ src_compile() {
 	fi
 
 	econf \
-		--enable-static \
-		--enable-shared \
+		--with-nls \
 		--with-mpfr \
 		--without-libole2 \
 		--without-gtkextra \
-		$(use_enable nls) \
 		$(use_enable png png-comments) \
 		$(use_with readline) \
 		$(use_with gmp) \
