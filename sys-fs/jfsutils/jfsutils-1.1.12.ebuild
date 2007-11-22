@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.12.ebuild,v 1.1 2007/08/26 16:13:02 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.12.ebuild,v 1.2 2007/11/22 23:38:56 stefaan Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,6 +16,9 @@ IUSE="static"
 DEPEND="virtual/libc"
 
 src_compile() {
+	# It doesn't compile on alpha without this LDFLAGS
+	use alpha && append-ldflags "-Wl,--no-relax"
+
 	use static && append-ldflags -static
 	econf --sbindir=/sbin || die "econf failed"
 	emake || die "emake failed"
