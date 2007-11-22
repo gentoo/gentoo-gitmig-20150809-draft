@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.3.ebuild,v 1.7 2007/11/19 15:03:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.3.ebuild,v 1.8 2007/11/22 12:26:54 drac Exp $
+
+inherit eutils
 
 DESCRIPTION="GTK+ utility for editing MP2, MP3, MP4, FLAC, Ogg and other media tags"
 HOMEPAGE="http://easytag.sourceforge.net"
@@ -23,6 +25,12 @@ RDEPEND=">=x11-libs/gtk+-2.4.1
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-desktop-entry.patch
+}
 
 src_compile() {
 	econf $(use_enable mp3) \
