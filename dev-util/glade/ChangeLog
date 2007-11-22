@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.83 2007/11/04 08:43:58 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.84 2007/11/22 22:27:38 compnerd Exp $
+
+  22 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  files/glade-2.0.0-scrollkeeper.patch:
+  Updated scrollkeeper patch from Philippe Chaintreuil (bug #192812)
 
   04 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org> glade-2.6.8.ebuild:
   Fix quoting issues

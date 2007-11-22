@@ -1,6 +1,13 @@
---- glade-2.0.0/omf-install/Makefile.in	2003-04-11 14:12:35.000000000 +0100
-+++ glade-2.0.0/omf-install/Makefile.in.new	2003-04-22 13:14:02.000000000 +0100
-@@ -238,7 +238,8 @@
+--- glade-2.6.8/omf-install/Makefile.in	2004-12-21 07:11:12.000000000 -0500
++++ glade-2.6.8/omf-install/Makefile.in.new	2007-10-18 12:08:09.000000000 -0400
+@@ -384,21 +384,22 @@
+ 	maintainer-clean maintainer-clean-generic mostlyclean \
+ 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+ 	uninstall uninstall-am uninstall-info-am uninstall-local
+ 
+ 
+ install-data-local:
+ 	$(mkinstalldirs) $(DESTDIR)$(omf_dest_dir)
  	-for file in $(srcdir)/*.omf; do \
  		$(INSTALL_DATA) $(srcdir)/$$file $(DESTDIR)$(omf_dest_dir); \
  	done
@@ -10,3 +17,10 @@
  
  uninstall-local:
  	-for file in $(srcdir)/*.omf; do \
+ 		basefile=`basename $$file`; \
+ 		rm -f $(omf_dest_dir)/$$basefile; \
+         done
+ 	-rmdir $(omf_dest_dir)
+ 	-scrollkeeper-update -p $(scrollkeeper_localstate_dir) 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
