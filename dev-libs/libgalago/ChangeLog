@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgalago
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgalago/ChangeLog,v 1.20 2007/10/24 11:17:33 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgalago/ChangeLog,v 1.21 2007/11/22 14:45:26 armin76 Exp $
+
+  22 Nov 2007; Raúl Porcel <armin76@gentoo.org> libgalago-0.5.2.ebuild:
+  alpha/ia64 stable
 
   24 Oct 2007; Roy Marples <uberlord@gentoo.org> libgalago-0.5.2.ebuild:
   Keyworded ~x86-fbsd, #196852
