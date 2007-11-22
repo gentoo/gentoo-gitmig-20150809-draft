@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.3.02.ebuild,v 1.1 2007/11/21 17:21:03 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.3.02.ebuild,v 1.2 2007/11/22 19:25:48 philantrop Exp $
 
 inherit eutils multilib
 
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake config.sh || die
+	emake -j1 config.sh || die "configuration failed"
 
 	# Fix config.sh to install to ${D}
 	cp -p config.sh config.sh.orig
@@ -39,7 +39,7 @@ src_compile() {
 		-e "s:^\(MAN45DIR='\)\(.*\):\1${D}\2:" \
 		< config.sh > config.sh.install
 
-	emake || die "compilation failed"
+	emake -j1 || die "compilation failed"
 }
 
 src_install() {
@@ -51,7 +51,7 @@ src_install() {
 	dodir /usr/bin /usr/$(get_libdir)/ispell /usr/share/info \
 		/usr/share/man/man1 /usr/share/man/man5
 
-	emake install || die "Installation Failed"
+	emake -j1 install || die "Installation Failed"
 
 	rmdir "${D}"/usr/share/info || die "removing empty info dir failed"
 	dodoc CHANGES Contributors README WISHES || die "installing docs failed"
