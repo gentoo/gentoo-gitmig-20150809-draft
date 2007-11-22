@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.11.5.ebuild,v 1.1 2007/11/22 15:12:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.11.5.ebuild,v 1.2 2007/11/22 15:13:05 dev-zero Exp $
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
@@ -31,7 +31,6 @@ RDEPEND="${CDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	cd ${S}
 	use ssl && \
 		myconf="${myconf} $(use_with gnutls) $(use_with !gnutls openssl)"
 
