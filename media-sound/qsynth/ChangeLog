@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.32 2007/11/21 19:25:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.33 2007/11/22 19:19:24 flameeyes Exp $
+
+  22 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> qsynth-0.3.1-r1.ebuild:
+  Bump fluidsynth dependency version.
 
   21 Nov 2007; nixnut <nixnut@gentoo.org> qsynth-0.3.1-r1.ebuild:
   Stable on ppc wrt bug 199695

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.1-r1.ebuild,v 1.4 2007/11/21 19:25:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.1-r1.ebuild,v 1.5 2007/11/22 19:19:24 flameeyes Exp $
 
 inherit qt4 eutils flag-o-matic
 
@@ -14,7 +14,7 @@ IUSE="debug jack alsa"
 KEYWORDS="amd64 ppc ~sparc x86"
 
 DEPEND="$(qt4_min_version 4.2)
-	media-sound/fluidsynth"
+	>=media-sound/fluidsynth-1.0.7a"
 
 pkg_setup() {
 	if use jack; then
