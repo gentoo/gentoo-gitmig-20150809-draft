@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/hellanzb-0.13-r2.ebuild,v 1.1 2007/11/20 14:43:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/hellanzb-0.13-r3.ebuild,v 1.1 2007/11/22 23:38:51 aballier Exp $
 
 inherit distutils eutils
 
