@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/lua-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.16 2007/11/14 22:29:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.17 2007/11/22 07:46:44 opfer Exp $
+
+  22 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  lua-mode-20070708.ebuild:
+  stable x86/amd64, bug 199953
 
   14 Nov 2007; Ulrich Mueller <ulm@gentoo.org> -lua-mode-1.26-r1.ebuild,
   lua-mode-20061208.ebuild:
