@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.11.2.ebuild,v 1.4 2007/11/22 19:32:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.11.2.ebuild,v 1.5 2007/11/22 21:42:16 angelos Exp $
 
 inherit rpm versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.fedora.redhat.com/pub/fedora/linux/development/source/S
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
