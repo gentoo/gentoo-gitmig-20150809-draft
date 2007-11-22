@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.56 2007/11/18 18:01:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.57 2007/11/22 18:45:19 nixnut Exp $
+
+  22 Nov 2007; nixnut <nixnut@gentoo.org> qwt-4.2.0-r3.ebuild:
+  Stable on ppc wrt bug 199232
 
   18 Nov 2007; Markus Rothe <corsair@gentoo.org> qwt-4.2.0-r3.ebuild:
   Stable on ppc64; bug #199232
