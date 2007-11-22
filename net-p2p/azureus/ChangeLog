@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.54 2007/11/22 20:57:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.55 2007/11/22 21:28:57 betelgeuse Exp $
+
+  22 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> files/azureus.desktop:
+  Fix stuff reported by desktop-file-validate.
 
   22 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
   -azureus-2.5.0.0-r3.ebuild, -azureus-2.5.0.4.ebuild:
