@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.7a.ebuild,v 1.4 2007/11/22 18:00:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.7a.ebuild,v 1.5 2007/11/22 18:30:10 nixnut Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -12,7 +12,7 @@ SRC_URI="http://savannah.nongnu.org/download/fluid/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 DEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	ladspa? ( >=media-libs/ladspa-sdk-1.12
