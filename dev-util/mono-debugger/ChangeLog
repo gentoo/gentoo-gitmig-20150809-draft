@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mono-debugger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.13 2007/08/07 03:53:06 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.14 2007/11/22 16:47:52 cardoe Exp $
+
+  22 Nov 2007; Doug Klima <cardoe@gentoo.org> metadata.xml:
+  Add DOCTYPE to metadata for validation
 
   07 Aug 2007; <metalgod@gentoo.org> mono-debugger-0.50.ebuild:
   Added ~amd64 keyword. Bug #183746.

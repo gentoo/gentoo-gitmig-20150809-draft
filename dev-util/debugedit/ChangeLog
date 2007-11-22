@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debugedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.13 2007/11/07 21:31:28 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.14 2007/11/22 16:47:14 cardoe Exp $
+
+  22 Nov 2007; Doug Klima <cardoe@gentoo.org> metadata.xml:
+  Add DOCTYPE to metadata for validation
 
   07 Nov 2007; <tester@gentoo.org> debugedit-4.4.6-r1.ebuild:
   Oops, forgot to inherit eutils for epatch
