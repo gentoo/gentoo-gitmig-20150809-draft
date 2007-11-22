@@ -1,6 +1,20 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.52 2007/11/16 13:52:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.53 2007/11/22 20:56:02 betelgeuse Exp $
+
+*azureus-3.0.3.4 (22 Nov 2007)
+
+  22 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/patches-3.0.3.4/01_all_remove-osx-and-win32-AzureusRestarterImpl.pa
+  tch,
+  +files/patches-3.0.3.4/02_all_remove-win32-TorrentListViewsUtils.patch,
+  +files/patches-3.0.3.4/03_all_remove-win32-PlatformManagerPluginDelegate.p
+  atch,
+  +files/patches-3.0.3.4/04_all_remove-osx-and-win32-PlatformManagerFactory.
+  patch,
+  +files/patches-3.0.3.4/azureus_all_modify-for-use-with-bcprov.patch,
+  +azureus-3.0.3.4.ebuild:
+  Version bump. Thanks to people in bug #184101.
 
   16 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
   azureus-2.5.0.4-r1.ebuild:

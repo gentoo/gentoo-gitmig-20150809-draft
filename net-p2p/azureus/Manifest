@@ -61,7 +61,28 @@ AUX fedora-2.5.0.4/azureus-remove-win32-osx-platforms.patch 1550 RMD160 027a7ed9
 MD5 ab96c7670004baf1457702756d196fcd files/fedora-2.5.0.4/azureus-remove-win32-osx-platforms.patch 1550
 RMD160 027a7ed97d182e1d5fde1b8d07585b1f8a52f19f files/fedora-2.5.0.4/azureus-remove-win32-osx-platforms.patch 1550
 SHA256 bb4fb65f7678bd711d7eb8cd5ab914a01b151429c95ee6350d7727435d3d879a files/fedora-2.5.0.4/azureus-remove-win32-osx-platforms.patch 1550
+AUX patches-3.0.3.4/01_all_remove-osx-and-win32-AzureusRestarterImpl.patch 5623 RMD160 980fc081de72e962ab798c3c01cd62c9d6ed1f27 SHA1 e0692235fa927363a30cd9a74fb6c1d85d753f96 SHA256 f3f19f46fee9b2d9dff9ab93eb103502dbe8393b7ac2d2b160a992b49ea7d892
+MD5 f96c694b77924b711114defb762d2e11 files/patches-3.0.3.4/01_all_remove-osx-and-win32-AzureusRestarterImpl.patch 5623
+RMD160 980fc081de72e962ab798c3c01cd62c9d6ed1f27 files/patches-3.0.3.4/01_all_remove-osx-and-win32-AzureusRestarterImpl.patch 5623
+SHA256 f3f19f46fee9b2d9dff9ab93eb103502dbe8393b7ac2d2b160a992b49ea7d892 files/patches-3.0.3.4/01_all_remove-osx-and-win32-AzureusRestarterImpl.patch 5623
+AUX patches-3.0.3.4/02_all_remove-win32-TorrentListViewsUtils.patch 1048 RMD160 ee69f760b2c8992bc747fd1bf055659dcd4f4685 SHA1 cb7299e3dd7cd90ec4044f8cdd72683e15bebe97 SHA256 5f82de3f4e9b9521acb1c8db42298c2718a75ac6ebf2094286f5a235376d3730
+MD5 2f547b807539aa0ce3a2dbe897b1e95a files/patches-3.0.3.4/02_all_remove-win32-TorrentListViewsUtils.patch 1048
+RMD160 ee69f760b2c8992bc747fd1bf055659dcd4f4685 files/patches-3.0.3.4/02_all_remove-win32-TorrentListViewsUtils.patch 1048
+SHA256 5f82de3f4e9b9521acb1c8db42298c2718a75ac6ebf2094286f5a235376d3730 files/patches-3.0.3.4/02_all_remove-win32-TorrentListViewsUtils.patch 1048
+AUX patches-3.0.3.4/03_all_remove-win32-PlatformManagerPluginDelegate.patch 1086 RMD160 59192da1d27a5aaa5fd76b5998f1ec4c0af34a9e SHA1 3338e359b7b85999171ffe09b5bca9742451c6b6 SHA256 bba8f9f9b6bb7ddf1b006514ca8e03ebd6fe6fe9dfd18e1c950d35ba22214dd4
+MD5 4b329376c250c464255ec71193beec91 files/patches-3.0.3.4/03_all_remove-win32-PlatformManagerPluginDelegate.patch 1086
+RMD160 59192da1d27a5aaa5fd76b5998f1ec4c0af34a9e files/patches-3.0.3.4/03_all_remove-win32-PlatformManagerPluginDelegate.patch 1086
+SHA256 bba8f9f9b6bb7ddf1b006514ca8e03ebd6fe6fe9dfd18e1c950d35ba22214dd4 files/patches-3.0.3.4/03_all_remove-win32-PlatformManagerPluginDelegate.patch 1086
+AUX patches-3.0.3.4/04_all_remove-osx-and-win32-PlatformManagerFactory.patch 1058 RMD160 60f5af39c2391f3d4c92887983a4a32adc40a5b5 SHA1 1f53db14df22eb864d7e50350d8bebb373089601 SHA256 f851491d02b0513870e5788bc0e8527f0f85d8f1d6983a035814c281d41bccc7
+MD5 9e7aa4d71e58e61b97ed5cfd8cf87813 files/patches-3.0.3.4/04_all_remove-osx-and-win32-PlatformManagerFactory.patch 1058
+RMD160 60f5af39c2391f3d4c92887983a4a32adc40a5b5 files/patches-3.0.3.4/04_all_remove-osx-and-win32-PlatformManagerFactory.patch 1058
+SHA256 f851491d02b0513870e5788bc0e8527f0f85d8f1d6983a035814c281d41bccc7 files/patches-3.0.3.4/04_all_remove-osx-and-win32-PlatformManagerFactory.patch 1058
+AUX patches-3.0.3.4/azureus_all_modify-for-use-with-bcprov.patch 1074 RMD160 2c7a602e1b6aff432b4aea7e945da656e5b8e9bf SHA1 455d8ceb06601255916d8d9b9195efbb4c0c6e22 SHA256 95db5ea188c72efa7c19958ec85ec0afb1b7ce9f35a34e2d69d40f0fe2130dea
+MD5 50a8ec08aae883720954e46ff140114a files/patches-3.0.3.4/azureus_all_modify-for-use-with-bcprov.patch 1074
+RMD160 2c7a602e1b6aff432b4aea7e945da656e5b8e9bf files/patches-3.0.3.4/azureus_all_modify-for-use-with-bcprov.patch 1074
+SHA256 95db5ea188c72efa7c19958ec85ec0afb1b7ce9f35a34e2d69d40f0fe2130dea files/patches-3.0.3.4/azureus_all_modify-for-use-with-bcprov.patch 1074
 DIST Azureus_2.5.0.0_source.zip 5856328 RMD160 7ec7e6ccb570651a655f6077d4b323a4d3b8fcb0 SHA1 4dfc99ace9f0755de3fe264c70c897c87ba844c1 SHA256 64aa4150bb8036f11e5207a602253431d46578ce9cd3b62732b0ae0f555a08c4
+DIST Azureus_3.0.3.4_source.zip 6988737 RMD160 18ec3bbbaa1776f242e5b5e39f5c6abece59f29e SHA1 18d6adf4b1849162323055d4d4f38e425c6b90d7 SHA256 e413ce9908ba940345b26024e2daedb2dbf3274aeba3996b7ed7a9b287072f8d
 DIST azureus_2.5.0.4_source.zip 6482560 RMD160 c4f245abf19a963e077b354fccd6a04547c741b1 SHA1 46ec8c12d27374d935a4ee9b40be464d111cbda5 SHA256 9ae32cbf88baf04b0e17456e92bc2634dd54e890dbece7211a83318b96d1b081
 EBUILD azureus-2.5.0.0-r3.ebuild 4186 RMD160 bcd81dd10318e2bb9785e49131f0cd607825a6df SHA1 05a02c0c545dab02c9f8f3445ddccbe69cfb0f11 SHA256 d7fd573cb48b8ff45b9e45ea4bc128ac78c8f3b17b0416d559e4ed390825c69e
 MD5 92f4d45d991a64551d3bba7051a180da azureus-2.5.0.0-r3.ebuild 4186
@@ -75,10 +96,14 @@ EBUILD azureus-2.5.0.4.ebuild 4264 RMD160 21f10e5e6bff4ac7c4e01564f9db5c1e3a03cb
 MD5 2ac84e7f79e801cf67c6f6671c369900 azureus-2.5.0.4.ebuild 4264
 RMD160 21f10e5e6bff4ac7c4e01564f9db5c1e3a03cb9c azureus-2.5.0.4.ebuild 4264
 SHA256 c8037fa6e402ad5d45d77e81bca2a51927d62685f7b1746aa42366c7e899a9d0 azureus-2.5.0.4.ebuild 4264
-MISC ChangeLog 10599 RMD160 f87019b3cbb73a285918b5d1acad2678cb7a0520 SHA1 da802197791b62d11b73915b298386ca91f168e8 SHA256 1c36f4adea842362ea899709f69db20cb555ab17fc344fefeeb307d8540c3f86
-MD5 60526c0c737f5560be985fa47bc99583 ChangeLog 10599
-RMD160 f87019b3cbb73a285918b5d1acad2678cb7a0520 ChangeLog 10599
-SHA256 1c36f4adea842362ea899709f69db20cb555ab17fc344fefeeb307d8540c3f86 ChangeLog 10599
+EBUILD azureus-3.0.3.4.ebuild 4684 RMD160 eb5141762dc23c04440126759e7de321055e3950 SHA1 8dce3939734cdd5cf3b8363c650307022af02e23 SHA256 3bbae576406d8f328da21113ecff1b2c0e99acc93b839aa5fda61e16ed81b7a2
+MD5 02ac8305c8f8bc68f5e7fd48b543f36c azureus-3.0.3.4.ebuild 4684
+RMD160 eb5141762dc23c04440126759e7de321055e3950 azureus-3.0.3.4.ebuild 4684
+SHA256 3bbae576406d8f328da21113ecff1b2c0e99acc93b839aa5fda61e16ed81b7a2 azureus-3.0.3.4.ebuild 4684
+MISC ChangeLog 11161 RMD160 b231288dcc01586907d95dfd87c0d042346e3313 SHA1 88cea6da1d78b987492b6ed189bb68f8825e230f SHA256 4893cfeffbed7c0a75701ec5b3d8282f6b63e3898da5f3caa59826bf20ca571a
+MD5 8f01d1affb37018ce92f1d447a60fdf9 ChangeLog 11161
+RMD160 b231288dcc01586907d95dfd87c0d042346e3313 ChangeLog 11161
+SHA256 4893cfeffbed7c0a75701ec5b3d8282f6b63e3898da5f3caa59826bf20ca571a ChangeLog 11161
 MISC metadata.xml 295 RMD160 544181b2b7e8b0d688b57a7290a362f3d2686f58 SHA1 f3aea2718d0f8b93e91c9fddd328b5108ce2bf53 SHA256 a96064243aa67bd00e443fd98621e45910882d3790467f8b0a837b694a351307
 MD5 315f038f311b0cb987f793266b9f5f2a metadata.xml 295
 RMD160 544181b2b7e8b0d688b57a7290a362f3d2686f58 metadata.xml 295
@@ -92,10 +117,13 @@ SHA256 b1bf328abef9e68ee1df0a5087bffa4e54b5fcba2f2f7823a1980ddd4f952266 files/di
 MD5 5f9475c83b5dc85ff00804857bb5d525 files/digest-azureus-2.5.0.4-r1 262
 RMD160 3e3f22f5dc0512b8044a11f388a7e540fdebdddc files/digest-azureus-2.5.0.4-r1 262
 SHA256 b1bf328abef9e68ee1df0a5087bffa4e54b5fcba2f2f7823a1980ddd4f952266 files/digest-azureus-2.5.0.4-r1 262
+MD5 9d4675cacd4bd399b34a0bbfdd181bce files/digest-azureus-3.0.3.4 262
+RMD160 27c6ae9ba659e3ff12b276979c39c34ebc76a413 files/digest-azureus-3.0.3.4 262
+SHA256 03e57a4141e2be43a5db50b622e89f2ee83129540de8b15157855c82720d40f5 files/digest-azureus-3.0.3.4 262
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFHPaCJcxLzpIGCsLQRAh6fAJwMnbMmdQBdOgJbfeISYskeeYw/vACeNDWW
-u4ZmNwNCsbIPXbabwnynYOQ=
-=03eG
+iD8DBQFHReyzcxLzpIGCsLQRAuIqAJ9V7YtKUfNsIP9iTYqY2TfpO4ApyQCfX7H4
+gNq8fsmFxwt/0tqkmKSXANc=
+=y2hW
 -----END PGP SIGNATURE-----
