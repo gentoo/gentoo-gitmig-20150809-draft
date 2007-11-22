@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r5.ebuild,v 1.15 2007/11/22 02:16:52 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r5.ebuild,v 1.16 2007/11/22 07:36:43 mr_bones_ Exp $
 
 # r3 change by me (danarmak): there's a contrib dir inside the freetype1
 # sources with important utils: ttf2bdf, ttf2pfb, ttf2pk, ttfbanner.
@@ -56,7 +56,6 @@ src_compile() {
 	sed -i -e "s:ttlib tttest ttpo:ttlib ttpo:" Makefile
 
 	emake || die "emake failed"
-
 
 	for x in ttf2bdf ttf2pfb ttf2pk ttfbanner ; do
 		cd "${S}"/freetype1-contrib/${x}
