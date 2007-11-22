@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.3.99.7_p235.ebuild,v 1.2 2007/08/30 01:44:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.3.99.7_p235.ebuild,v 1.3 2007/11/22 13:05:18 drac Exp $
 
 DESCRIPTION="A Better CD Encoder"
 HOMEPAGE="http://www.hispalinux.es/~data/abcde.php"
@@ -11,7 +11,7 @@ S=${WORKDIR}/${MY_PV}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aac cdparanoia id3 vorbis flac speex lame musepack replaygain"
 
 RDEPEND="
@@ -33,14 +33,14 @@ RDEPEND="
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i 's:/etc/abcde.conf:/etc/abcde/abcde.conf:g' abcde
 	sed -i 's:/etc:/etc/abcde/:g' Makefile
 }
 
 src_install() {
 	dodir /etc/abcde
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README TODO changelog FAQ KNOWN.BUGS USEPIPES
 	docinto examples/
 	dodoc examples/*
