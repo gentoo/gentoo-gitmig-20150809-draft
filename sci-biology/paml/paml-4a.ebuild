@@ -1,13 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/paml-3.15.ebuild,v 1.2 2007/11/22 13:26:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/paml-4a.ebuild,v 1.1 2007/11/22 13:26:59 markusle Exp $
 
 inherit toolchain-funcs
 
-MY_P="${P/-}"
+MY_PV="${PV:0:1}"
+MY_P="${PN}${MY_PV}"
 DESCRIPTION="Phylogenetic Analysis by Maximum Likelihood"
 HOMEPAGE="http://abacus.gene.ucl.ac.uk/software/paml.html"
-SRC_URI="http://abacus.gene.ucl.ac.uk/software/${MY_P}.tar.gz"
+SRC_URI="http://abacus.gene.ucl.ac.uk/software/${PN}${PV}.tar.gz"
 LICENSE="free-noncomm"
 SLOT="0"
 KEYWORDS="~x86"
@@ -30,4 +31,10 @@ src_install() {
 	dobin baseml codeml basemlg mcmctree pamp evolver yn00 chi2
 	popd
 	dodoc README.txt doc/*
+	insinto /usr/share/${PN}/control
+	doins *.ctl || die "Failed to install control files"
+	insinto /usr/share/${PN}/dat
+	doins stewart* *.dat dat/* || die "Failed to install data files"
+	insinto /usr/share/${PN}
+	doins -r examples/ || die "Failed to install examples"
 }
