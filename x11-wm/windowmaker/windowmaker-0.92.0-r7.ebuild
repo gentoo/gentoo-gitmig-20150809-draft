@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r6.ebuild,v 1.1 2007/11/21 19:54:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r7.ebuild,v 1.1 2007/11/22 22:09:59 truedfx Exp $
 
 inherit autotools eutils gnustep-base flag-o-matic
 
@@ -122,7 +122,6 @@ src_compile() {
 
 	if use nls; then
 		[ -z "$LINGUAS" ] && export LINGUAS="`ls po/*.po | sed 's:po/\(.*\)\.po$:\1:'`"
-		append-ldflags -lgettextlib
 	else
 		myconf="${myconf} --disable-locale"
 	fi
