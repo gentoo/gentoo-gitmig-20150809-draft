@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/vsound
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/ChangeLog,v 1.15 2007/03/12 04:27:15 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/ChangeLog,v 1.16 2007/11/22 13:24:58 drac Exp $
+
+  22 Nov 2007; Samuli Suominen <drac@gentoo.org> vsound-0.6-r1.ebuild:
+  amd64 stable wrt #199979
 
 *vsound-0.6-r1 (12 Mar 2007)
 
