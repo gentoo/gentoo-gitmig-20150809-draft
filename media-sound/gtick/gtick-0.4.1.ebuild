@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/gtick-0.4.1.ebuild,v 1.3 2007/11/11 17:24:09 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/gtick-0.4.1.ebuild,v 1.4 2007/11/22 17:44:08 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.antcom.de/gtick/download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc sparc x86 ~x86-fbsd"
 IUSE="nls sndfile"
 
 RDEPEND=">=x11-libs/gtk+-2
