@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.55 2007/11/22 08:25:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.56 2007/11/22 08:28:24 opfer Exp $
+
+  22 Nov 2007; Christian Faulhammer <opfer@gentoo.org> metadata.xml,
+  tmpwatch-2.9.11.2.ebuild:
+  adding myself to metadata.xml and stable on x86 per bug 199955
 
 *tmpwatch-2.9.11.2 (22 Nov 2007)
 
