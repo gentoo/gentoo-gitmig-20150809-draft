@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.60 2007/08/24 18:58:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.61 2007/11/22 21:07:45 drac Exp $
+
+*beagle-0.2.18 (22 Nov 2007)
+
+  22 Nov 2007; Samuli Suominen <drac@gentoo.org> +beagle-0.2.18.ebuild:
+  Version bump, closing bug #190707, for #196755 straight to stable for amd64.
 
   24 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   beagle-0.2.17.ebuild:
