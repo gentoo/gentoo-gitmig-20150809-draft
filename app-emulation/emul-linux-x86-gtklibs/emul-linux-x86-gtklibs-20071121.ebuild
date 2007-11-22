@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20071121.ebuild,v 1.1 2007/11/21 17:11:28 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20071121.ebuild,v 1.2 2007/11/22 00:46:44 drac Exp $
 
 inherit emul-linux-x86
 
@@ -44,7 +44,12 @@ pkg_postinst() {
 	mkdir -p ${GTK2_CONFDIR}
 	gtk-query-immodules-2.0-32 > "${ROOT}${GTK2_CONFDIR}/gtk.immodules"
 	gdk-pixbuf-query-loaders32 > "${ROOT}${GTK2_CONFDIR}/gdk-pixbuf.loaders"
-	ewarn "If you have problems with fonts and warnings from 32bit programs, try this:"
-	ewarn "gdk-pixbuf-query-loaders32 >> /etc/gtk+-2.0/gdk-pixbuf.loaders"
-	ewarn "pango-querymodules32 >> /etc/pango/pango.modules"
+
+	# gdk-pixbuf.loaders should be in their CHOST directories respectively.
+	if [[ -e ${ROOT}/etc/gtk-2.0/gdk-pixbuf.loaders ]] ; then
+		ewarn
+		ewarn "File /etc/gtk-2.0/gdk-pixbuf.loaders shouldn't be present on"
+		ewarn "multilib systems, please remove it by hand."
+		ewarn
+	fi
 }
