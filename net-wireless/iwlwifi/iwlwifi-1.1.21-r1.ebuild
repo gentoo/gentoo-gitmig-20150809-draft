@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/iwlwifi-1.1.21-r1.ebuild,v 1.1 2007/11/19 04:07:19 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/iwlwifi-1.1.21-r1.ebuild,v 1.2 2007/11/22 21:04:28 compnerd Exp $
 
 inherit eutils linux-mod
 
@@ -72,4 +72,13 @@ src_compile() {
 
 	make # generate the compatible sources (failure is expected)
 	make || die "compile failed"
+}
+
+pkg_postinst() {
+	linux-mod_pkg_postinst
+
+	elog "If you are switching from ipw3945, please cleanup your generated rules in"
+	elog "/etc/udev/rules.d/70-persistent-net.rules and run udev-trigger to"
+	elog "update them.  Failure to do so may result in the device being named"
+	elog "improperly."
 }
