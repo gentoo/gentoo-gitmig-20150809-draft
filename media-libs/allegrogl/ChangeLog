@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/allegrogl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/ChangeLog,v 1.13 2007/09/18 04:38:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/ChangeLog,v 1.14 2007/11/22 00:21:57 mr_bones_ Exp $
+
+*allegrogl-0.4.3 (21 Nov 2007)
+
+  21 Nov 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +allegrogl-0.4.3.ebuild:
+  version bump (bug #199083)
 
   18 Sep 2007; Michael Sterrett <mr_bones_@gentoo.org>
   allegrogl-0.2.4-r1.ebuild:
