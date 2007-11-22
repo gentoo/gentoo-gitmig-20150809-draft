@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.39 2007/11/10 03:53:32 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.40 2007/11/22 22:06:48 compnerd Exp $
+
+*transmission-0.93 (22 Nov 2007)
+
+  22 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +transmission-0.93.ebuild:
+  Version bump from upstream; drop wxwindows useflag for now
 
   10 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   +files/transmission-0.91-potfiles-fix.patch, transmission-0.91.ebuild:
