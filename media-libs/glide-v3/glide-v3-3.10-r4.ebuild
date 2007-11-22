@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r4.ebuild,v 1.13 2006/09/24 08:34:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r4.ebuild,v 1.14 2007/11/22 20:18:54 armin76 Exp $
 
 # NOTE:  Do NOT build this with optimizations, as it will make this package
 #        unstable!!!!
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/glide3x-${PV}.tar.gz
 
 LICENSE="3DFX"
 SLOT="0"
-KEYWORDS="x86 -sparc alpha"
+KEYWORDS="-sparc x86"
 IUSE="voodoo3"
 
 RDEPEND="x11-libs/libXxf86dga
