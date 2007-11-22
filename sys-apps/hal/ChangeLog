@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.213 2007/11/21 20:11:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.214 2007/11/22 18:29:46 cardoe Exp $
+
+  22 Nov 2007; Doug Klima <cardoe@gentoo.org> metadata.xml:
+  Provide explicit USE flag descriptions in metadata.xml
 
   21 Nov 2007; nixnut <nixnut@gentoo.org> hal-0.5.9.1-r3.ebuild:
   Stable on ppc wrt bug 199654
