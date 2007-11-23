@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.848 2007/11/23 17:29:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.849 2007/11/23 18:30:46 corsair Exp $
+
+  23 Nov 2007; Markus Rothe <corsair@gentoo.org>
+  default-linux/ppc/ppc64/package.use.mask, hardened/ppc64/use.mask:
+  removed afs from use.mask in ppc64 profile; bug #196847
 
   23 Nov 2007; Tony Vroon <chainsaw@gentoo.org> package.mask:
   Mask net-irc/audacious-show as upstream prevents automated downloads and an
