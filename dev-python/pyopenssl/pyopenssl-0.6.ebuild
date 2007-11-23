@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.6.ebuild,v 1.17 2007/03/05 03:02:54 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.6.ebuild,v 1.18 2007/11/23 01:06:29 hawking Exp $
 
 inherit distutils
 
@@ -14,16 +14,16 @@ SRC_URI="mirror://sourceforge/pyopenssl/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
-IUSE="tetex"
+IUSE="doc"
 
 RDEPEND="virtual/python
 	>=dev-libs/openssl-0.9.6g"
 DEPEND="${RDEPEND}
-	tetex? ( >=dev-tex/latex2html-2002.2 )"
+	doc? ( >=dev-tex/latex2html-2002.2 )"
 
 src_compile() {
 	distutils_src_compile
-	if use tetex ; then
+	if use doc ; then
 		addwrite /var/cache/fonts
 		addwrite /usr/share/texmf/fonts/pk
 
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 	distutils_src_install
 
-	if use tetex ; then
+	if use doc ; then
 		dohtml ${S}/doc/html/*
 		dodoc ${S}/doc/pyOpenSSL.*
 	fi
@@ -45,10 +45,4 @@ src_install() {
 	dodoc ${S}/examples/*
 	docinto examples/simple
 	dodoc ${S}/examples/simple/*
-}
-
-pkg_postinst() {
-	echo
-	elog "For docs in html you need to have tetex in your USE var"
-	echo
 }
