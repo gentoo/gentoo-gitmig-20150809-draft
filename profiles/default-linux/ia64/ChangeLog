@@ -1,6 +1,9 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.37 2007/11/23 14:30:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.38 2007/11/23 14:52:44 armin76 Exp $
+
+  23 Nov 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Reorder use.mask, it was a mess
 
   23 Nov 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
   use.mask bluetooth, no hardware to test

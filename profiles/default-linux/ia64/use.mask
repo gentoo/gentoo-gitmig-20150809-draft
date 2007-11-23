@@ -1,61 +1,52 @@
 # This is a list of USE flags that should not be used on ia64.
 
-
-# Raúl Porcel <armin76@gentoo.org>
-# clisp and chicken doesn't work
-clisp
-chicken
-# No hardware to test
-lirc
-gnokii
-bluetooth
-# Depends on libnl which doesn't compile, bug 175714
-networkmanager
-# Not needed
-cpufreq
-
-# Steve Dibb <beandog@gentoo.org>
-# media-tv/ivtv not keyworded
-ivtv
-
-# Samuli Suominen <drac@gentoo.org>
-# http://bugs.gentoo.org/show_bug.cgi?id=157881#c6
-battery
-
-# There is no stable blas/lapack implementation on ia64 (yet)
-blas
-lapack
-
-# These are debatable, since technically an ia64 could support this hardware
-pcmcia
+# No hardware to test by the team
 3dfx
-
-# The rest should work in theory. Feel free to test and remove.
-# No hardware to test
+bluetooth
+gnokii
+ivtv
+lirc
+nvtv
+pcmcia
 pda
 sms
+wifi
 
-# No apm support on ia64
+# Hardware not available on ia64
 apm
+battery
+cpufreq
+lm_sensors
 
-# I don't think that openafs really works on other architectures,
-# despite some internal Gentoo efforts (mine) to port it
+# Stuff that doesn't work on ia64, or not tested
 afs
+blas
+djbfft
+emboss
+hardened
+jack
+lapack
+timidity
+
+# Stuff that doesn't compile on ia64
+chicken
+clisp
+diet
+emf
+fusion
+mono
+mzscheme
+pike
+xemacs
+
+# Other
+
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
 # all of these are binary-only, and not presently available on this
 # architecture.
 qdbm
-
-hardened
-djbfft
-mzscheme
-
-# dietlibc
-diet
-
-jack
 
 # java releated use flags
 # need to get dev-java/ant marked stable  and dev-php4/php-java-bridge stable
@@ -64,50 +55,24 @@ java
 java-internal
 java-external
 freetts
-
 # need to keyword openjms-bin, sun-jms
 jms
 # need to keyword sun-jmx
 jmx
 # need to keyword sun-javamail-bin, sun-javamail
 javamail
+# depends on ibm-jdk-bin which isn't available for ia64
+mpe-sdk
 
-lirc
-
-# mono compiler doesn't build on ia64 (20 Jan 2005 agriffis)
-mono
 # beagle depends on dev-dotnet/gnome-sharp.. masked for testing (19 Aug 2006 kloeri)
 beagle
 
-emboss
-
-# lm_sensors not supported on ia64 hw, afaik
-lm_sensors
-
-# we can't test wifi currently
-wifi
-
-pike
-
-timidity
-
-# emacs segfaults during build
-xemacs
 
 # 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
 video_cards_nsc
 video_cards_newport
 video_cards_sis
-
-# depends on ibm-jdk-bin which isn't available for ia64
-mpe-sdk
-
-# mask nvtv as I don't have the hardware to test it (19 Aug 2006 kloeri)
-nvtv
-
-# linux-fusion doesn't seem to build right now
-fusion
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
 # Mask ALSA drivers for ISA cards
@@ -143,6 +108,3 @@ alsa_cards_sb16_csp
 alsa_cards_sgalaxy
 alsa_cards_sscape
 alsa_cards_wavefront
-
-# libemf not ported
-emf
