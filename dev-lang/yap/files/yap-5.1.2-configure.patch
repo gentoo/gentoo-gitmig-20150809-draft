@@ -1,5 +1,5 @@
 --- Yap-5.1.2.orig/configure.in	2007-06-21 01:45:42.000000000 +1200
-+++ Yap-5.1.2/configure.in	2007-08-20 20:19:45.000000000 +1200
++++ Yap-5.1.2/configure.in	2007-11-23 20:20:36.000000000 +1300
 @@ -43,7 +43,7 @@
  	[ --enable-threads           support system threads ],
  	threads="$enableval", threads=no)
@@ -164,6 +164,15 @@
  
  if test "$myddasstats" = "yes"
    then
+@@ -623,7 +634,7 @@
+ OLD_CC=${CC}	
+ CC=${LAM_MPI_CC}
+ AC_CHECK_LIB([lam], [main],
+-	LAMOBJS=yap_mpi@SHLIB_SUFFIX@,
++	LAMOBJS='yap_mpi$(SHLIB_SUFFIX)',
+ 	LAMOBJS=no)
+ CC=${OLD_CC}
+ 
 @@ -946,7 +957,6 @@
  fi
  
