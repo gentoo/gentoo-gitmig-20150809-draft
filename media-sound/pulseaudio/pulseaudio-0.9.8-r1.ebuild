@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.8-r1.ebuild,v 1.1 2007/11/23 13:09:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.8-r1.ebuild,v 1.2 2007/11/23 15:47:45 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -28,11 +28,17 @@ RDEPEND="X? ( x11-libs/libX11 )
 	lirc? ( app-misc/lirc )
 	dbus? ( >=sys-apps/dbus-1.0.0 )
 	gnome? ( >=gnome-base/gconf-2.4.0 )
-	hal? ( >=sys-apps/hal-0.5.7 )
-	>=sys-apps/baselayout-2.0_rc5
+	hal? (
+		>=sys-apps/hal-0.5.7
+		>=sys-apps/dbus-1.0.0
+	)
 	app-admin/eselect-esd
-	bluetooth? ( >=net-wireless/bluez-libs-3 )
+	bluetooth? (
+		>=net-wireless/bluez-libs-3
+		>=sys-apps/dbus-1.0.0
+	)
 	policykit? ( sys-auth/policykit )
+	>=sys-apps/baselayout-2.0_rc5
 	>=sys-devel/libtool-1.5.24" # it's a valid RDEPEND, libltdl.so is used
 DEPEND="${RDEPEND}
 	dev-libs/libatomic_ops
@@ -68,6 +74,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-svn2074.patch"
 	epatch "${FILESDIR}/${P}-polkit.patch"
+	epatch "${FILESDIR}/${P}-bt-nohal.patch"
 
 	eautoreconf
 	elibtoolize
