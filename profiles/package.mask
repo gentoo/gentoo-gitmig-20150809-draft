@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7934 2007/11/23 13:09:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7935 2007/11/23 15:09:36 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,7 +23,7 @@
 
 # Raúl Porcel <armin76@gentoo.org> (22 Nov 2007)
 # Needs a lot of testing
-=www-client/mozilla-firefox-bin-3_beta*
+=www-client/mozilla-firefox-bin-3.0_beta*
 
 # Marijn Schouten <hkBst@gentoo.org> (21 Nov 2007)
 # masked for security bug 198979
