@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7936 2007/11/23 17:29:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7937 2007/11/23 20:52:06 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,15 @@
 ##
 ##   End example
 ##
+
+# Saleem Abdulrasool <compnerd@gentoo.org> (23 Nov 2007)
+# Mask this until we get the input and mounting issues worked out
+>=sys-apps/hal-0.5.10
+>=sys-auth/policykit-0.6
+>=app-misc/hal-info-20071011
+>=gnome-base/gnome-mount-0.7
+>=gnome-extra/policykit-gnome-0.6
+>=gnome-extra/gnome-power-manager-2.20.1
 
 # Tony Vroon <chainsaw@gentoo.org> (22 Nov 2007)
 # Upstream actively prevents automated downloads, consider using xchat-xsys instead.
