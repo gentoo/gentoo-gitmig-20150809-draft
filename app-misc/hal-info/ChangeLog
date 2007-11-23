@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.23 2007/09/26 18:11:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.24 2007/11/23 06:21:43 compnerd Exp $
+
+*hal-info-20071011 (23 Nov 2007)
+
+  23 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +hal-info-20071011.ebuild:
+  Version bump for HAL 0.5.10
 
   26 Sep 2007; Raúl Porcel <armin76@gentoo.org> hal-info-20070618.ebuild:
   x86 stable
