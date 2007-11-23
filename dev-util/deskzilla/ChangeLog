@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/deskzilla
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.8 2007/07/16 12:59:54 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.9 2007/11/23 23:10:56 caster Exp $
+
+*deskzilla-1.5.1 (23 Nov 2007)
+
+  23 Nov 2007; Vlastimil Babka <caster@gentoo.org> -deskzilla-1.4.ebuild,
+  +deskzilla-1.5.1.ebuild:
+  Version bump.
 
 *deskzilla-1.4.1 (16 Jul 2007)
 
