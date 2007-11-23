@@ -1,6 +1,15 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.21 2007/03/13 01:29:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.22 2007/11/23 20:50:17 mr_bones_ Exp $
+
+*doomsday-1.9.0_beta52 (23 Nov 2007)
+
+  23 Nov 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/doomsday-1.9.0_beta4-configure.patch,
+  -files/doomsday-1.9.0_beta4-music-driver.patch,
+  -doomsday-1.9.0_beta4.ebuild, -doomsday-1.9.0_beta4-r1.ebuild,
+  -doomsday-1.9.0_beta5.ebuild, +doomsday-1.9.0_beta52.ebuild:
+  version bump; clean out old, insecure versions
 
   13 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   doomsday-1.9.0_beta5.ebuild:

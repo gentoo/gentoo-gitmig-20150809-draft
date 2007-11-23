@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta5.ebuild,v 1.3 2007/04/09 17:52:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta52.ebuild,v 1.1 2007/11/23 20:50:17 mr_bones_ Exp $
 
 inherit toolchain-funcs games
 
-MY_P=deng-${PV/_/-}
+MY_P=deng-1.9.0-beta5.2 # FIXME, this is stupid
 DESCRIPTION="A modern gaming engine for Doom, Heretic, and Hexen"
 HOMEPAGE="http://www.doomsdayhq.com/"
 SRC_URI="mirror://sourceforge/deng/${MY_P}.tar.gz"
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4
 	app-arch/zip"
 
-S=${WORKDIR}/${MY_P}/${PN}/build
+S=${WORKDIR}/${MY_P}/${MY_P}/build
 
 src_compile() {
 	cmake \
@@ -60,7 +60,7 @@ src_install() {
 	done
 
 	doman ../engine/doc/${PN}.6
-	dodoc ../engine/doc/*.txt ../../README
+	dodoc ../engine/doc/*.txt README
 	prepgamesdirs
 }
 
