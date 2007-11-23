@@ -1,0 +1,10 @@
+# ChangeLog for sys-auth/policykit
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/policykit/ChangeLog,v 1.1 2007/11/23 06:06:22 compnerd Exp $
+
+*policykit-0.6 (23 Nov 2007)
+
+  23 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org> +metadata.xml,
+  +policykit-0.6.ebuild:
+  Initial import of policykit for HAL 0.5.10
+
