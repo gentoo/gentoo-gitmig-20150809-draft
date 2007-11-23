@@ -1,6 +1,9 @@
 # ChangeLog for net-print/fax4cups
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.17 2007/10/11 07:52:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.18 2007/11/23 18:42:59 drac Exp $
+
+  23 Nov 2007; Samuli Suominen <drac@gentoo.org> fax4cups-1.28.ebuild:
+  amd64 stable wrt #194298
 
   11 Oct 2007; Christian Faulhammer <opfer@gentoo.org> fax4cups-1.28.ebuild:
   stable x86, bug 194298
