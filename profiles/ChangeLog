@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.850 2007/11/23 20:47:02 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.851 2007/11/23 20:55:25 aballier Exp $
+
+  23 Nov 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
+  add cxx useflag for aften
 
   23 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org> use.local.desc:
   Add nautilus useflag for gnome-mount

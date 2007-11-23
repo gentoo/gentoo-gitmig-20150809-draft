@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3163 2007/11/23 20:47:02 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3164 2007/11/23 20:55:25 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -962,6 +962,7 @@ media-gfx/showimg:kipi - Support for the KDE Image Plugin Interface.
 media-gfx/ufraw:gimp - Build a plugin for the GIMP
 media-gfx/xsane:gimp - Build a plugin for the GIMP
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
+media-libs/aften:cxx - Enables C++ bindings
 media-libs/allegro:vga - Enables the VGA graphics driver
 media-libs/alsa-lib:alisp - Enable support for ALISP (ALSA LISP) interpreter for advanced features.
 media-libs/alsa-lib:midi - Enables MIDI output support (both Hardware and Software)
