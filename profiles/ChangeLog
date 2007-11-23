@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.847 2007/11/23 13:09:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.848 2007/11/23 17:29:10 chainsaw Exp $
+
+  23 Nov 2007; Tony Vroon <chainsaw@gentoo.org> package.mask:
+  Mask net-irc/audacious-show as upstream prevents automated downloads and an
+  alternative is available. Closes bug #199476.
 
   23 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask,
   use.local.desc:
