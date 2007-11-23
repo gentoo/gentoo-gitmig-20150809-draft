@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/oroborus-extras
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.22 2007/11/23 11:30:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.23 2007/11/23 12:48:47 cla Exp $
+
+  23 Nov 2007; Dawid Węgliński <cla@gentoo.org>
+  oroborus-extras-2.0.18.ebuild:
+  Stable on x86
 
   23 Nov 2007; Samuli Suominen <drac@gentoo.org>
   oroborus-extras-2.0.18.ebuild:
