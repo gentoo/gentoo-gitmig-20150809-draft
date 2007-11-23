@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/hrktorrent
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/hrktorrent/ChangeLog,v 1.1 2007/11/23 19:35:24 armin76 Exp $
+
+*hrktorrent-0.2.1 (23 Nov 2007)
+
+  23 Nov 2007; Raúl Porcel <armin76@gentoo.org> +metadata.xml,
+  +hrktorrent-0.2.1.ebuild:
+  Initial import, initial ebuild by 'most.idiot' from the forums
+
