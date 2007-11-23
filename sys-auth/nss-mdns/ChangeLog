@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss-mdns
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.25 2007/08/22 06:29:55 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.26 2007/11/23 15:27:27 maekke Exp $
+
+  23 Nov 2007; Markus Meier <maekke@gentoo.org> nss-mdns-0.10.ebuild:
+  x86 stable, security bug #199967
 
   22 Aug 2007; Stuart Longland <redhatter@gentoo.org> nss-mdns-0.10.ebuild:
   Tested and working on MIPS.  Keyworded ~mips.
