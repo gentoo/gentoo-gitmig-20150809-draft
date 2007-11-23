@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.55 2007/11/22 21:28:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.56 2007/11/23 22:25:19 caster Exp $
+
+  23 Nov 2007; Vlastimil Babka <caster@gentoo.org> azureus-3.0.3.4.ebuild:
+  Pass file lists to ejavac and jar via tmp files to prevent too long argument
+  list - bug #200072.
 
   22 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> files/azureus.desktop:
   Fix stuff reported by desktop-file-validate.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-3.0.3.4.ebuild,v 1.1 2007/11/22 20:56:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-3.0.3.4.ebuild,v 1.2 2007/11/23 22:25:19 caster Exp $
 
 ###
 ### @Todo The new Azureus gui requires swt built with embedded mozilla support,
@@ -82,10 +82,12 @@ src_compile() {
 	use amd64 && mem="256"
 	use x86   && mem="128"
 	use ppc   && mem="192"
+	find . -name "*.java" > "${T}/az-src"
 	ejavac -J-Xmx${mem}m -encoding latin1 \
 		-classpath $(java-pkg_getjars swt-3,commons-cli-1,log4j,bcprov) \
-		$(find . -name "*.java")
-	jar cf azureus.jar $(find . -type f -a ! -name "*.java")
+		@"${T}/az-src"
+	find . -type f -a ! -name "*.java" > "${T}/az-jarlist"
+	jar cf azureus.jar @"${T}/az-jarlist"
 }
 
 src_install() {
