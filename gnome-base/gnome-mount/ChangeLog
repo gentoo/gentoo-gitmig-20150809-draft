@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-mount
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.44 2007/10/12 14:55:36 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.45 2007/11/23 20:54:54 compnerd Exp $
+
+*gnome-mount-0.7 (23 Nov 2007)
+
+  23 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +gnome-mount-0.7.ebuild:
+  Version bump for all the new HAL-0.5.10 goodness
 
   12 Oct 2007; Mart Raudsepp <leio@gentoo.org> metadata.xml:
   Adding gentopia as co-maintainers to help with the HAL side of things
