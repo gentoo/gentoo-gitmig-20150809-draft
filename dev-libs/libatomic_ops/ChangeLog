@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libatomic_ops
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.13 2007/11/17 12:51:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.14 2007/11/23 14:13:39 drac Exp $
+
+  23 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  libatomic_ops-1.2-r1.ebuild:
+  amd64 stable wrt #197126
 
   17 Nov 2007; nixnut <nixnut@gentoo.org> libatomic_ops-1.2-r1.ebuild:
   Stable on ppc wrt bug 197126
