@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.132 2007/11/20 19:47:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.133 2007/11/23 19:49:26 dang Exp $
+
+  23 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.2.18.ebuild,
+  -liferea-1.2.20.ebuild, -liferea-1.2.22.ebuild, -liferea-1.2.23.ebuild:
+  Remove reduntant versions
 
   20 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> liferea-1.4.6.ebuild:
   Use slot deps for gtkhtml
