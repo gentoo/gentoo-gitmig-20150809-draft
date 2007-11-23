@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.67 2007/09/18 18:22:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.68 2007/11/23 10:51:34 drac Exp $
+
+  23 Nov 2007; Samuli Suominen <drac@gentoo.org> sox-14.0.0.ebuild:
+  amd64 stable wrt #200051
 
   18 Sep 2007; Alexis Ballier <aballier@gentoo.org>
   +files/sox-14.0.0-noexternalgsm.patch, sox-14.0.0.ebuild:

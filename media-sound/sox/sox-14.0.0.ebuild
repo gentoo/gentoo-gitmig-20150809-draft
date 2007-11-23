@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.0.0.ebuild,v 1.2 2007/09/18 18:22:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.0.0.ebuild,v 1.3 2007/11/23 10:51:34 drac Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/sox/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="alsa ao debug ffmpeg flac encode ladspa mad libsamplerate ogg oss sndfile"
 
 DEPEND="alsa? ( media-libs/alsa-lib )
@@ -61,11 +61,10 @@ src_compile () {
 
 	#workaround for flac, it wants to include a damn config.h file
 	touch src/config.h
-	emake || die "make failed"
+	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-
+	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc NEWS ChangeLog README AUTHORS
 }
