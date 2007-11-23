@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.1.ebuild,v 1.5 2007/11/03 15:27:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.1.ebuild,v 1.6 2007/11/23 01:04:22 hawking Exp $
 
 NEED_PYTHON=2.3
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://matplotlib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	doc? ( http://matplotlib.sourceforge.net/users_guide_${DOC_PV}.pdf )"
 
-IUSE="doc examples gtk tetex tk"
+IUSE="doc examples gtk dvi tk"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="PYTHON"
@@ -31,7 +31,7 @@ DEPEND="|| (
 	dev-python/python-dateutil"
 
 RDEPEND="${DEPEND}
-	tetex? ( app-text/dvipng )
+	dvi? ( app-text/dvipng )
 	media-fonts/ttf-bitstream-vera"
 
 DOCS="INTERACTIVE API_CHANGES NUMARRAY_ISSUES"
