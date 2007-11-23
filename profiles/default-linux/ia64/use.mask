@@ -26,6 +26,7 @@ emboss
 hardened
 jack
 lapack
+networkmanager
 timidity
 
 # Stuff that doesn't compile on ia64
