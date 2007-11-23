@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.472 2007/11/23 03:32:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.473 2007/11/23 12:08:20 zmedico Exp $
+
+*portage-2.1.4_rc2 (23 Nov 2007)
+
+  23 Nov 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.4_rc2.ebuild:
+  2.1.4_rc2 bump. This version makes the bashrc behavior in the ebuild
+  environment more compatible with older versions of portage. Now the
+  full environment will be available to the bashrc like it used to be,
+  which solves an issue with grep hanging indefinitely in
+  default-bsd/profile.bashrc.
 
 *portage-2.1.4_rc1 (23 Nov 2007)
 
