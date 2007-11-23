@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libspf2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.24 2007/11/03 15:57:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.25 2007/11/23 17:34:15 drac Exp $
+
+  23 Nov 2007; Samuli Suominen <drac@gentoo.org> libspf2-1.2.5-r2.ebuild:
+  amd64 stable wrt #196200
 
   03 Nov 2007; Raúl Porcel <armin76@gentoo.org> libspf2-1.2.5-r2.ebuild:
   alpha/ia64/sparc stable wrt #196200
