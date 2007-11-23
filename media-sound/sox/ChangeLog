@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.69 2007/11/23 16:05:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.70 2007/11/23 21:31:13 corsair Exp $
+
+  23 Nov 2007; Markus Rothe <corsair@gentoo.org> sox-14.0.0.ebuild:
+  Stable on ppc64; bug #200051
 
   23 Nov 2007; Markus Meier <maekke@gentoo.org> sox-14.0.0.ebuild:
   x86 stable, bug #200051
