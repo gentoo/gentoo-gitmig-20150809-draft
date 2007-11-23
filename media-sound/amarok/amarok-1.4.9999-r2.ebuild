@@ -1,32 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.7-r1.ebuild,v 1.6 2007/11/17 17:54:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9999-r2.ebuild,v 1.1 2007/11/23 13:55:00 flameeyes Exp $
 
-LANGS="af ar az be bg bn br ca cs cy da de el en_GB eo es et eu fa fi
-fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds ne nl nn pa pl
-pt pt_BR ro ru rw se sk sl sq sr sr@Latn ss sv ta tg th tr uk uz zh_CN
-zh_TW"
-LANGS_DOC="da de es et fr it nl pl pt pt_BR ru sv"
+inherit kde subversion
 
-USE_KEG_PACKAGING=1
-
-inherit kde eutils flag-o-matic
+ESVN_REPO_URI="svn://anonsvn.kde.org/home/kde/branches/stable/extragear/multimedia/amarok"
+ESVN_STORE_DIR="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/svn-src/"
 
 PKG_SUFFIX=""
-
-if [[ ${P/_pre} == ${P} ]]; then
-	MY_P="${P/_/-}"
-
-	if [[ ${P/_rc} == ${P} ]]; then
-		SRC_URI="mirror://kde/stable/amarok/${PV}/src/${MY_P}.tar.bz2"
-		S="${WORKDIR}/${P/_/-}"
-	else
-		SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
-		S="${WORKDIR}/${P/_rc*}"
-	fi
-else
-	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-fi
 
 DESCRIPTION="Advanced audio player based on KDE framework."
 HOMEPAGE="http://amarok.kde.org/"
@@ -34,7 +15,7 @@ HOMEPAGE="http://amarok.kde.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS=""
 IUSE="mp4 kde mysql amazon opengl postgres
 visualization ipod ifp real njb mtp musicbrainz daap
 python"
@@ -64,9 +45,25 @@ RDEPEND="${RDEPEND}
 	python? ( dev-python/PyQt )
 	daap? ( www-servers/mongrel )"
 
-PATCHES="${FILESDIR}/${P}+xine-lib-1.1.8-lastfm.patch"
-
 need-kde 3.3
+
+S="${WORKDIR}/${PN}"
+
+src_unpack() {
+	ESVN_UPDATE_CMD="svn update -N" \
+	ESVN_FETCH_CMD="svn checkout -N" \
+	ESVN_REPO_URI=`dirname ${ESVN_REPO_URI}` \
+		subversion_src_unpack
+
+	S="${WORKDIR}/${PN}/admin" \
+	ESVN_REPO_URI="svn://anonsvn.kde.org/home/kde/branches/KDE/3.5/kde-common/admin" \
+		subversion_src_unpack
+
+	ESVN_UPDATE_CMD="svn up" \
+	ESVN_FETCH_CMD="svn checkout" \
+	S="${WORKDIR}/${PN}/amarok" \
+		subversion_src_unpack
+}
 
 src_compile() {
 	# Extra, unsupported engines are forcefully disabled.

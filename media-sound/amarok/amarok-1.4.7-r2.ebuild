@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.7-r2.ebuild,v 1.6 2007/11/22 20:00:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.7-r2.ebuild,v 1.7 2007/11/23 13:55:00 flameeyes Exp $
 
 LANGS="af ar az be bg bn br ca cs cy da de el en_GB eo es et eu fa fi
 fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds ne nl nn pa pl
@@ -10,7 +10,7 @@ LANGS_DOC="da de es et fr it nl pl pt pt_BR ru sv"
 
 USE_KEG_PACKAGING=1
 
-inherit kde eutils flag-o-matic
+inherit kde
 
 PKG_SUFFIX=""
 
