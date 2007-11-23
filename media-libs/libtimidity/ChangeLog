@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libtimidity
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.6 2007/09/02 07:59:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.7 2007/11/23 23:23:32 drac Exp $
+
+  23 Nov 2007; Samuli Suominen <drac@gentoo.org> libtimidity-0.1.0.ebuild:
+  amd64 stable wrt #200134
 
   02 Sep 2007; nixnut <nixnut@gentoo.org> libtimidity-0.1.0.ebuild:
   Added ~ppc wrt bug 187498
