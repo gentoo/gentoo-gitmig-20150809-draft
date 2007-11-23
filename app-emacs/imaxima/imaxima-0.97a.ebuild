@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-0.97a.ebuild,v 1.2 2007/10/06 20:56:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-0.97a.ebuild,v 1.3 2007/11/23 07:21:37 ulm Exp $
 
-inherit eutils elisp
+inherit elisp
 
 MY_P="${PN}-imath-${PV}"
 DESCRIPTION="Imaxima enables graphical output in Maxima sessions with emacs"
@@ -23,7 +23,7 @@ SITEFILE=50${PN}-gentoo.el
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	econf || die "econf failed"
+	econf --with-lispdir="${SITELISP}/${PN}" || die "econf failed"
 	emake || die "emake failed"
 }
 

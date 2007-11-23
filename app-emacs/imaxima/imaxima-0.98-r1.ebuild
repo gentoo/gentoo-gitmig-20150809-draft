@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-0.98.ebuild,v 1.2 2007/11/03 18:28:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-0.98-r1.ebuild,v 1.1 2007/11/23 07:21:37 ulm Exp $
 
 inherit elisp
 
@@ -22,9 +22,8 @@ DEPEND="virtual/tetex
 SITEFILE=50${PN}-gentoo.el
 S="${WORKDIR}/${MY_P}"
 
-# This is NOT redundant: elisp.eclass redefines src_compile() from default
 src_compile() {
-	econf || die "econf failed"
+	econf --with-lispdir="${SITELISP}/${PN}" || die "econf failed"
 	emake || die "emake failed"
 }
 
