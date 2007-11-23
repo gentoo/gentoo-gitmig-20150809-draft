@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.35 2007/11/23 01:04:22 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.36 2007/11/23 09:35:07 hawking Exp $
+
+  23 Nov 2007; Ali Polatel <hawking@gentoo.org> matplotlib-0.90.1.ebuild:
+  switched dvi to latex, added virtual/latex-base and virtual/ghostscript to
+  DEPEND.
 
   23 Nov 2007; Ali Polatel <hawking@gentoo.org> matplotlib-0.90.1.ebuild:
   switched tetex USE to dvi wrt #196745
