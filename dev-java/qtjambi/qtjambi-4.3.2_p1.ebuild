@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.2_p1.ebuild,v 1.1 2007/10/23 12:33:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.2_p1.ebuild,v 1.2 2007/11/23 21:08:46 drac Exp $
 
 inherit eutils java-pkg-2
 
@@ -17,7 +17,7 @@ S=${WORKDIR}/qtjambi-gpl-src-${MY_PV}
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
