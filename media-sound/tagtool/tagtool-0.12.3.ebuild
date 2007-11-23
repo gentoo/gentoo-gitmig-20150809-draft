@@ -1,19 +1,21 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.12.3.ebuild,v 1.2 2007/03/09 07:52:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.12.3.ebuild,v 1.3 2007/11/23 19:20:42 drac Exp $
 
 DESCRIPTION="Audio Tag Tool Ogg/Mp3 Tagger"
-HOMEPAGE="http://pwp.netcabo.pt/paol/tagtool/"
+HOMEPAGE="http://pwp.netcabo.pt/paol/tagtool"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="vorbis mp3"
-DEPEND=">=x11-libs/gtk+-2.4.0-r1
-	>=gnome-base/libglade-2.6.0
+
+DEPEND=">=x11-libs/gtk+-2.4
+	>=gnome-base/libglade-2.6
 	dev-util/pkgconfig
 	mp3? ( >=media-libs/id3lib-3.8.3-r3 )
-	vorbis? ( >=media-libs/libvorbis-1.0.1 )"
+	vorbis? ( >=media-libs/libvorbis-1 )"
 
 src_compile() {
 	local myconf
@@ -32,16 +34,16 @@ src_compile() {
 		use vorbis || myconf="${myconf} --disable-vorbis"
 	fi
 
-	econf ${myconf} || die "econf failed"
-	emake || die "make failed"
+	econf ${myconf} || die "econf failed."
+	emake || die "make failed."
 }
 
 src_install() {
 	make install \
-		DESTDIR=${D} \
-		sysdir=${D}/usr/share/applets/Multimedia \
-		GNOME_SYSCONFDIR=${D}/etc \
-		|| die "make install failed"
+		DESTDIR="${D}" \
+		sysdir="${D}/usr/share/applets/Multimedia" \
+		GNOME_SYSCONFDIR="${D}/etc" \
+		|| die "make install failed."
 
 	dodoc ChangeLog NEWS README TODO THANKS
 }
