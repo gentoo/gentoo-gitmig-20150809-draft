@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-fr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fr/ChangeLog,v 1.10 2007/11/03 22:08:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fr/ChangeLog,v 1.11 2007/11/23 17:09:19 nixnut Exp $
+
+  23 Nov 2007; nixnut <nixnut@gentoo.org> aspell-fr-0.60.ebuild:
+  Added ~ppc wrt bug 195194
 
   03 Nov 2007; Roy Marples <uberlord@gentoo.org> aspell-fr-0.60.ebuild:
   Keyworded ~sparc-fbsd and ~x86-fbsd
