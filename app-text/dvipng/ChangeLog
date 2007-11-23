@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.21 2007/11/23 12:36:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.22 2007/11/23 21:45:33 corsair Exp $
+
+  23 Nov 2007; Markus Rothe <corsair@gentoo.org> dvipng-1.9.ebuild:
+  Stable on ppc64; bug #199765
 
   23 Nov 2007; Raúl Porcel <armin76@gentoo.org> dvipng-1.9.ebuild:
   sparc stable wrt #199765
