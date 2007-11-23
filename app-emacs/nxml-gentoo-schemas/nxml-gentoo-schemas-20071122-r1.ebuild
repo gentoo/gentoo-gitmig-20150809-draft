@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/nxml-gentoo-schemas-20071122-r1.ebuild,v 1.1 2007/11/23 15:49:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/nxml-gentoo-schemas-20071122-r1.ebuild,v 1.2 2007/11/23 17:32:39 ulm Exp $
 
 inherit elisp
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="app-emacs/nxml-mode"
+RDEPEND=">=app-emacs/nxml-mode-20041004-r3"
 
-SITEFILE=81${PN}-gentoo.el
+SITEFILE=60${PN}-gentoo.el
 
 src_compile() { :; }
 
