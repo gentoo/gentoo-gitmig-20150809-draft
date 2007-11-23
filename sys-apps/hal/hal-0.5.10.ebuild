@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.1 2007/11/23 06:29:51 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.2 2007/11/23 09:30:39 compnerd Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -235,9 +235,6 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
-
-	# remove dep on gnome-python
-	mv "${D}"/usr/bin/hal-device-manager "${D}"/usr/share/hal/device-manager/
 
 	# hal umount for unclean unmounts
 	exeinto /lib/udev/

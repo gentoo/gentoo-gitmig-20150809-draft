@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.216 2007/11/23 06:43:51 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.217 2007/11/23 09:30:39 compnerd Exp $
+
+  23 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org> hal-0.5.10.ebuild:
+  hal-device-manager is no longer bundled, dont move it
 
   23 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   hal-0.5.7.1-r5.ebuild, hal-0.5.9-r1.ebuild, hal-0.5.9.1-r1.ebuild,
