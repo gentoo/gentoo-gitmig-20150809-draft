@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/abcde
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.36 2007/11/22 18:03:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.37 2007/11/23 21:27:19 corsair Exp $
+
+  23 Nov 2007; Markus Rothe <corsair@gentoo.org> abcde-2.3.99.7_p235.ebuild:
+  Stable on ppc64; bug #199977
 
   22 Nov 2007; nixnut <nixnut@gentoo.org> abcde-2.3.99.7_p235.ebuild:
   Stable on ppc wrt bug 199977
