@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/kccmp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.4 2007/10/30 00:54:51 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.5 2007/11/23 21:14:57 drac Exp $
+
+  23 Nov 2007; Samuli Suominen <drac@gentoo.org> kccmp-0.2.ebuild:
+  Keyword ~amd64 wrt #197261.
 
   30 Oct 2007; Michael Pagano <mpagano@gentoo.org> ChangeLog:
   Fix for bug 197410, removing linking to boost for not use qt4
