@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.40.4.ebuild,v 1.4 2007/11/01 14:56:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.40.4.ebuild,v 1.5 2007/11/23 18:34:04 drac Exp $
 
 IUSE="acpi multilib"
 
@@ -12,7 +12,7 @@ ATI_URL="https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/"
 SRC_URI="${ATI_URL}/ati-driver-installer-${PV}-x86.x86_64.run"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 # The portage dep is for COLON_SEPARATED support in env-update.
 # The eselect dep (>=1.0.9) is for COLON_SEPARATED in eselect env update.
