@@ -1,0 +1,190 @@
+diff -ur mlt-0.2.4.orig/src/modules/sox/configure mlt-0.2.4/src/modules/sox/configure
+--- mlt-0.2.4.orig/src/modules/sox/configure	2005-05-04 22:37:08.000000000 +0300
++++ mlt-0.2.4/src/modules/sox/configure	2007-11-23 12:18:59.000000000 +0200
+@@ -4,7 +4,36 @@
+ then
+ 
+ 	which libst-config > /dev/null 2>&1
+-	disable_sox=$?
++	if [ $? -eq 0 ]
++	then
++		disable_sox=0
++		echo "CFLAGS += $(libst-config --cflags) -I../../" > config.mak
++		echo "LDFLAGS += -lst $(libst-config --libs)" >> config.mak
++	else
++		sox --version 2> /dev/null | grep 'v14.' > /dev/null
++		disable_sox=$?
++		if [ $disable_sox -eq 0 ]
++		then
++			LIBDIR=lib
++			#bits=$(uname -m)
++			#case $bits in
++			#x86_64)
++			#	export LIBDIR=lib64
++			#	;;
++			#*)
++			#	export LIBDIR=lib
++			#	;;
++			#esac
++
++			sox=$(which sox)
++			# chop sox
++			soxdir=$(dirname $sox)
++			# chop bin
++			soxdir=$(dirname $soxdir)
++			echo "CFLAGS += -DSOX14 -I$soxdir/include" > config.mak
++			echo "LDFLAGS += -L$soxdir/$LIBDIR -lsox -lsfx -lsamplerate" >> config.mak
++		fi
++	fi
+ 
+ 	if [ "$disable_sox" = "0" ]
+ 	then
+diff -ur mlt-0.2.4.orig/src/modules/sox/filter_sox.c mlt-0.2.4/src/modules/sox/filter_sox.c
+--- mlt-0.2.4.orig/src/modules/sox/filter_sox.c	2007-03-31 03:29:56.000000000 +0300
++++ mlt-0.2.4/src/modules/sox/filter_sox.c	2007-11-23 12:18:57.000000000 +0200
+@@ -28,7 +28,21 @@
+ #include <string.h>
+ #include <math.h>
+ 
+-#include <st.h>
++#ifdef SOX14
++#	include <sox.h>
++#	define ST_EOF SOX_EOF
++#	define ST_SUCCESS SOX_SUCCESS
++#	define st_sample_t sox_sample_t
++#	define eff_t sox_effect_t*
++#	define st_size_t sox_size_t
++#	define ST_LIB_VERSION_CODE SOX_LIB_VERSION_CODE
++#	define ST_LIB_VERSION SOX_LIB_VERSION
++#	define ST_SIGNED_WORD_TO_SAMPLE(d,clips) SOX_SIGNED_16BIT_TO_SAMPLE(d,clips)
++#	define ST_SSIZE_MIN SOX_SSIZE_MIN
++#	define ST_SAMPLE_TO_SIGNED_WORD(d,clips) SOX_SAMPLE_TO_SIGNED_16BIT(d,clips)
++#else
++#	include <st.h>
++#endif
+ 
+ #define BUFFER_LEN 8192
+ #define AMPLITUDE_NORM 0.2511886431509580 /* -12dBFS */
+@@ -61,21 +75,37 @@
+ static int create_effect( mlt_filter this, char *value, int count, int channel, int frequency )
+ {
+ 	mlt_tokeniser tokeniser = mlt_tokeniser_init();
++#ifdef SOX14
++	eff_t eff = mlt_pool_alloc( sizeof( sox_effect_t ) );
++#else
+ 	eff_t eff = mlt_pool_alloc( sizeof( struct st_effect ) );
++#endif
+ 	char id[ 256 ];
+ 	int error = 1;
+ 
+ 	// Tokenise the effect specification
+ 	mlt_tokeniser_parse_new( tokeniser, value, " " );
++	if ( tokeniser->count < 1 )
++		return error;
+ 
+ 	// Locate the effect
++#ifdef SOX14
++	//fprintf(stderr, "%s: effect %s count %d\n", __FUNCTION__, tokeniser->tokens[0], tokeniser->count );
++	sox_create_effect( eff, sox_find_effect( tokeniser->tokens[0] ) );
++	int opt_count = tokeniser->count - 1;
++#else
+ 	int opt_count = st_geteffect_opt( eff, tokeniser->count, tokeniser->tokens );
++#endif
+ 	
+ 	// If valid effect
+ 	if ( opt_count != ST_EOF )
+ 	{
+ 		// Supply the effect parameters
++#ifdef SOX14
++		if ( ( * eff->handler.getopts )( eff, opt_count, &tokeniser->tokens[ tokeniser->count > 1 ? 1 : 0  ] ) == ST_SUCCESS )
++#else
+ 		if ( ( * eff->h->getopts )( eff, opt_count, &tokeniser->tokens[ tokeniser->count - opt_count ] ) == ST_SUCCESS )
++#endif
+ 		{
+ 			// Set the sox signal parameters
+ 			eff->ininfo.rate = frequency;
+@@ -84,7 +114,11 @@
+ 			eff->outinfo.channels = 1;
+ 			
+ 			// Start the effect
++#ifdef SOX14
++			if ( ( * eff->handler.start )( eff ) == ST_SUCCESS )
++#else
+ 			if ( ( * eff->h->start )( eff ) == ST_SUCCESS )
++#endif
+ 			{
+ 				// Construct id
+ 				sprintf( id, "_effect_%d_%d", count, channel );
+@@ -123,7 +157,7 @@
+ 	st_sample_t *output_buffer = mlt_properties_get_data( filter_properties, "output_buffer", NULL );
+ 	int channels_avail = *channels;
+ 	int i; // channel
+-	int count = mlt_properties_get_int( filter_properties, "effect_count" );
++	int count = mlt_properties_get_int( filter_properties, "_effect_count" );
+ 
+ 	// Get the producer's audio
+ 	mlt_frame_get_audio( frame, buffer, format, frequency, &channels_avail, samples );
+@@ -211,7 +245,7 @@
+ 			}
+ 			
+ 			// Save the number of filters
+-			mlt_properties_set_int( filter_properties, "effect_count", count );
++			mlt_properties_set_int( filter_properties, "_effect_count", count );
+ 			
+ 		}
+ 		if ( *samples > 0 && count > 0 )
+@@ -295,7 +329,11 @@
+ 					float saved_gain = 1.0;
+ 					
+ 					// XXX: hack to apply the normalised gain level to the vol effect
++#ifdef SOX14
++					if ( normalise && strcmp( e->handler.name, "vol" ) == 0 )
++#else
+ 					if ( normalise && strcmp( e->name, "vol" ) == 0 )
++#endif
+ 					{
+ 						float *f = ( float * )( e->priv );
+ 						saved_gain = *f;
+@@ -303,7 +341,11 @@
+ 					}
+ 					
+ 					// Apply the effect
++#ifdef SOX14
++					if ( ( * e->handler.flow )( e, input_buffer, output_buffer, &isamp, &osamp ) == ST_SUCCESS )
++#else
+ 					if ( ( * e->h->flow )( e, input_buffer, output_buffer, &isamp, &osamp ) == ST_SUCCESS )
++#endif
+ 					{
+ 						// Swap input and output buffer pointers for subsequent effects
+ 						p = input_buffer;
+@@ -312,7 +354,11 @@
+ 					}
+ 					
+ 					// XXX: hack to restore the original vol gain to prevent accumulation
++#ifdef SOX14
++					if ( normalise && strcmp( e->handler.name, "vol" ) == 0 )
++#else
+ 					if ( normalise && strcmp( e->name, "vol" ) == 0 )
++#endif
+ 					{
+ 						float *f = ( float * )( e->priv );
+ 						*f = saved_gain;
+diff -ur mlt-0.2.4.orig/src/modules/sox/Makefile mlt-0.2.4/src/modules/sox/Makefile
+--- mlt-0.2.4.orig/src/modules/sox/Makefile	2005-12-05 13:35:55.000000000 +0200
++++ mlt-0.2.4/src/modules/sox/Makefile	2007-11-23 12:19:00.000000000 +0200
+@@ -1,12 +1,13 @@
+ include ../../../config.mak
++include config.mak
+ 
+ TARGET = ../libmltsox$(LIBSUF)
+ 
+ OBJS = factory.o \
+ 	   filter_sox.o 
+ 
+-CFLAGS += `libst-config --cflags` -I../../ 
+-LDFLAGS += -lst `libst-config --libs`
++CFLAGS += -I../../
++
+ LDFLAGS += -L../../framework -lmlt
+ 
+ SRCS := $(OBJS:.o=.c)

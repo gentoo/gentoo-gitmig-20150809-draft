@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.16 2007/08/21 08:59:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.17 2007/11/23 10:36:17 drac Exp $
+
+*mlt-0.2.4-r1 (23 Nov 2007)
+
+  23 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +files/mlt-0.2.4-sox1400.patch, +mlt-0.2.4-r1.ebuild:
+  Revision bump for SOX 14.0.0 compability and pkg setup check for USE
+  libsamplerate if USE sox is defined.
 
 *mlt-0.2.4 (21 Aug 2007)
 
