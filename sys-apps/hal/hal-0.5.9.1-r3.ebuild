@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1-r3.ebuild,v 1.4 2007/11/21 20:11:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1-r3.ebuild,v 1.5 2007/11/23 06:43:51 compnerd Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -107,7 +107,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \

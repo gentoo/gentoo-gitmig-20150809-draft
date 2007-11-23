@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9-r1.ebuild,v 1.17 2007/08/31 14:19:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9-r1.ebuild,v 1.18 2007/11/23 06:43:51 compnerd Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -113,33 +113,33 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Patches accepted upstream
-	epatch ${FILESDIR}/${PV}/01_luks_mount_fix.patch
-	epatch ${FILESDIR}/${PV}/02_acpi_repeated_property_change.patch
-	epatch ${FILESDIR}/${PV}/03_crasher_fix_fail_to_return_value.patch
-	epatch ${FILESDIR}/${PV}/04_cache_regen_return_fix.patch
-	epatch ${FILESDIR}/${PV}/05_freebsd_partutil_make_fix.patch
-	epatch ${FILESDIR}/${PV}/06_freebsd_backend_fix.patch
-	epatch ${FILESDIR}/${PV}/07_malloc_h_for_stdlib_h.patch
-	epatch ${FILESDIR}/${PV}/08_contains_not_fdi_directive.patch
-	epatch ${FILESDIR}/${PV}/09_hald_addon_keyboard_start_one.patch
-	epatch ${FILESDIR}/${PV}/10_freebsd_storage_reprobe_fix.patch
-	epatch ${FILESDIR}/${PV}/11_hal_fix_segfault_probe_volume.patch
-	epatch ${FILESDIR}/${PV}/12_hal_fix-vol_label_probe_volume.patch
-	epatch ${FILESDIR}/${PV}/13_detect_newer_macbooks.patch
-	epatch ${FILESDIR}/${PV}/14_ntfs_allows_utf8.patch
-	epatch ${FILESDIR}/${PV}/15_spec_fdi_matching.patch
-	epatch ${FILESDIR}/${PV}/16_dev_root_is_mounted.patch
-	epatch ${FILESDIR}/${PV}/18_hal_fix_info.category_for_laptop_panel_v2.patch
-	epatch ${FILESDIR}/${PV}/19_hald_runner_catch_dbus_disconnect.patch
+	epatch "${FILESDIR}/${PV}/01_luks_mount_fix.patch"
+	epatch "${FILESDIR}/${PV}/02_acpi_repeated_property_change.patch"
+	epatch "${FILESDIR}/${PV}/03_crasher_fix_fail_to_return_value.patch"
+	epatch "${FILESDIR}/${PV}/04_cache_regen_return_fix.patch"
+	epatch "${FILESDIR}/${PV}/05_freebsd_partutil_make_fix.patch"
+	epatch "${FILESDIR}/${PV}/06_freebsd_backend_fix.patch"
+	epatch "${FILESDIR}/${PV}/07_malloc_h_for_stdlib_h.patch"
+	epatch "${FILESDIR}/${PV}/08_contains_not_fdi_directive.patch"
+	epatch "${FILESDIR}/${PV}/09_hald_addon_keyboard_start_one.patch"
+	epatch "${FILESDIR}/${PV}/10_freebsd_storage_reprobe_fix.patch"
+	epatch "${FILESDIR}/${PV}/11_hal_fix_segfault_probe_volume.patch"
+	epatch "${FILESDIR}/${PV}/12_hal_fix-vol_label_probe_volume.patch"
+	epatch "${FILESDIR}/${PV}/13_detect_newer_macbooks.patch"
+	epatch "${FILESDIR}/${PV}/14_ntfs_allows_utf8.patch"
+	epatch "${FILESDIR}/${PV}/15_spec_fdi_matching.patch"
+	epatch "${FILESDIR}/${PV}/16_dev_root_is_mounted.patch"
+	epatch "${FILESDIR}/${PV}/18_hal_fix_info.category_for_laptop_panel_v2.patch"
+	epatch "${FILESDIR}/${PV}/19_hald_runner_catch_dbus_disconnect.patch"
 
 	# Gentoo patchset
-	epatch ${FILESDIR}/${PV}/95_gentoo_man_page.patch
-	epatch ${FILESDIR}/${PV}/96_plugdev_allow_send.patch
-	epatch ${FILESDIR}/${PV}/97_ignore_fixed_drives.patch
-	epatch ${FILESDIR}/${PV}/98_hald_cache_test_path.patch
+	epatch "${FILESDIR}/${PV}/95_gentoo_man_page.patch"
+	epatch "${FILESDIR}/${PV}/96_plugdev_allow_send.patch"
+	epatch "${FILESDIR}/${PV}/97_ignore_fixed_drives.patch"
+	epatch "${FILESDIR}/${PV}/98_hald_cache_test_path.patch"
 
 	eautoreconf
 }

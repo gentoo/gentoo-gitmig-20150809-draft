@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.15 2007/08/14 15:45:46 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.16 2007/11/23 06:43:51 compnerd Exp $
 
 inherit eutils linux-info
 
@@ -83,7 +83,7 @@ pkg_setup() {
 		linux_chkconfig_present PROC_FS || notify_procfs
 	fi
 
-	if [ -d ${ROOT}/etc/hal/device.d ]; then
+	if [ -d "${ROOT}/etc/hal/device.d" ]; then
 		eerror "HAL 0.5.x will not run with the HAL 0.4.x series of"
 		eerror "/etc/hal/device.d/ so please remove this directory"
 		eerror "with rm -rf /etc/hal/device.d/ and then re-emerge."

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1-r1.ebuild,v 1.9 2007/08/31 14:19:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1-r1.ebuild,v 1.10 2007/11/23 06:43:51 compnerd Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -113,17 +113,17 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Gentoo patchset
-	epatch ${FILESDIR}/0.5.9/07_malloc_h_for_stdlib_h.patch
-	epatch ${FILESDIR}/0.5.9/23_runner_64bit_values.patch
-	epatch ${FILESDIR}/0.5.9/24_libparted_1_8_7.patch
+	epatch "${FILESDIR}/0.5.9/07_malloc_h_for_stdlib_h.patch"
+	epatch "${FILESDIR}/0.5.9/23_runner_64bit_values.patch"
+	epatch "${FILESDIR}/0.5.9/24_libparted_1_8_7.patch"
 	#epatch ${FILESDIR}/0.5.9/95_gentoo_man_page.patch
-	epatch ${FILESDIR}/0.5.9/96_plugdev_allow_send.patch
-	epatch ${FILESDIR}/0.5.9/97_ignore_fixed_drives.patch
-	epatch ${FILESDIR}/0.5.9/98_hald_cache_test_path.patch
-	epatch ${FILESDIR}/0.5.9/99_sun_disklabel_ignore.patch
+	epatch "${FILESDIR}/0.5.9/96_plugdev_allow_send.patch"
+	epatch "${FILESDIR}/0.5.9/97_ignore_fixed_drives.patch"
+	epatch "${FILESDIR}/0.5.9/98_hald_cache_test_path.patch"
+	epatch "${FILESDIR}/0.5.9/99_sun_disklabel_ignore.patch"
 
 	eautoreconf
 }
