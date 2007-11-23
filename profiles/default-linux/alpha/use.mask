@@ -1,26 +1,55 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.84 2007/11/23 14:29:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.85 2007/11/23 15:15:38 armin76 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
 # profile (such as the selinux profiles) have a USE flag associated with
 # them.
 
-# 21 Nov 2007 Raúl Porcel <armin76@gentoo.org>
-# Doesn't compile on alpha
-clisp
-
-# 21 Jun 2007 Raúl Porcel <armin76@gentoo.org>
-# No hardware to test
-ipod
-lirc
+# No hardware to test by the team
+3dfx
+bluetooth
+chipcard
 gnokii
 hbci
-chipcard
-bluetooth
-# No dell hardware on alpha
+ipod
+ivtv
+nvtv
+lirc
+pcmcia
+pda
+sms
+upnp
+wifi
+
+# Hardware not available on alpha
+apm
+battery
+cpufreq
 dell
+dmi
+
+# Stuff that doesn't work on alpha, or not tested
+avi
+djbfft
+emboss
+freetts
+gnustep
+hardened
+howl
+lm_sensors
+mzscheme
+netbeans
+pike
+timidity
+
+# Stuff that doesn't compile on alpha
+clisp
+emf
+mono
+
+# Other
 
 # 13 Jun 2007 Jose Luis Rivero <yoswink@gentoo.org>
 # acpid masked and acpi use flag is deprecated now. 
@@ -30,31 +59,6 @@ acpi
 # Alpha doesn't have wpa_supplicant keyworded, bug 175714
 networkmanager
 
-# 14 May 2007 Raúl Porcel <armin76@gentoo.org>
-# Alpha doesn't support cpu freq scaling
-cpufreq
-
-# 21 Mar 2007 Steve Dibb <beandog@gentoo.org>
-# media-tv/ivtv not keyworded
-ivtv
-
-# 02 Mar 2007 Samuli Suominen <drac@gentoo.org>
-# See http://bugs.gentoo.org/show_bug.cgi?id=157881#c6
-battery
-
-# These are debatable, since technically an alpha could support this hardware
-pcmcia
-3dfx
-
-# avifile is broken atm
-avi
-
-# No hardware to test (unmask when tested)
-pda
-upnp
-
-# No apm support on alpha
-apm
 
 # alpha doesn't have java support other than compaq-j*, which isn't a
 # current version.  must mask this to keep things sane
@@ -62,37 +66,17 @@ java
 java-internal
 java-external
 
-hardened
-howl
-freetts
-djbfft
-lm_sensors
-
-gnustep
-
-emboss
-
 # Mask vpopmail until net-mail/vpopmail goes out of package.mask
 vpopmail
 
 # Mask pyste until gccxml / elementtree work on alpha
 pyste
 
-# Mask mono until ported to alpha
-mono
-
 # RDEPEND on mono
 beagle
 
-# can't test wireless currently
-wifi
-
 # apache segfaults when using mpm-peruser (bug 105778)
 mpm-peruser
-
-pike
-dmi
-timidity
 
 # We don't have any virtual/mpi (bug 111807)
 mpi
@@ -120,12 +104,6 @@ video_cards_tseng
 video_cards_vesa
 video_cards_via
 
-# Needed for vim-7
-mzscheme
-netbeans
-
-# No go in Alpha
-nvtv
 
 # dspam and dspam-web use this one
 # We've never supported cyrus-imapd because nobody asked for
@@ -138,17 +116,11 @@ bmpx
 # # bug 148402
 pcsc-lite
 
-# Mask sms (for kopete-3.5.5)
-sms
-
 # conky dependencies missing keywords related (dragonheart -20061112)
 # media-sound/mpd
 mpd
 # app-admin/hddtemp
 hddtemp
-
-# libemf not ported
-emf
 
 # USE=d seems to break gcc-4.1.2 (#178896)
 d
