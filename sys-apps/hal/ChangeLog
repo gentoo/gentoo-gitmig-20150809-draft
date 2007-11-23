@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.214 2007/11/22 18:29:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.215 2007/11/23 06:29:51 compnerd Exp $
+
+*hal-0.5.10 (23 Nov 2007)
+
+  23 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/0.5.10-hald.conf, +files/0.5.10-hald.rc,
+  +files/hal-0.5.9-hide-recovery-partitions.patch, +hal-0.5.10.ebuild:
+  Version bump from upstream
 
   22 Nov 2007; Doug Klima <cardoe@gentoo.org> metadata.xml:
   Provide explicit USE flag descriptions in metadata.xml
