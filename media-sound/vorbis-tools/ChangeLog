@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/vorbis-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.57 2007/11/23 19:05:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.58 2007/11/23 21:35:15 corsair Exp $
+
+  23 Nov 2007; Markus Rothe <corsair@gentoo.org>
+  vorbis-tools-1.1.1-r5.ebuild:
+  Stable on ppc64; bug #200103
 
   23 Nov 2007; Samuli Suominen <drac@gentoo.org>
   vorbis-tools-1.1.1-r5.ebuild:
