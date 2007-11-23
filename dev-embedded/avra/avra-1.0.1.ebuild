@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avra/avra-1.0.1.ebuild,v 1.2 2006/01/21 14:54:31 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avra/avra-1.0.1.ebuild,v 1.3 2007/11/23 21:39:57 drac Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Atmel AVR Assembler"
 HOMEPAGE="http://avra.sourceforge.net/"
@@ -8,34 +10,27 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
-IUSE="doc"
+KEYWORDS="~amd64 ppc x86"
+IUSE="examples"
 
-DEPEND=""
 RDEPEND=""
+DEPEND=""
 
-src_unpack() {
-	mkdir ${S}
-	cd ${S}
-	unpack ${A}
-}
+S="${WORKDIR}"
 
 src_compile() {
-	cd ${S}/SOURCE
-	make all
+	cd SOURCE
+	emake all CC="$(tc-getCC)" CFLAGS="${CFLAGS}" \
+		LD="$(tc-getCC)" LDFLAGS="${LDFLAGS}" \
+		|| die "emake failed."
 }
 
 src_install() {
-	cd ${S}/SOURCE
-	into /usr
-	dobin avra
+	dobin SOURCE/avra
+	dodoc ChangeLog README
 
-	cd ${S}
-	into /usr
-	dodoc COPYING ChangeLog README
-
-	if use doc ; then
-		docinto TEST
-		dodoc TEST/*
+	if use examples; then
+		insinto /usr/share/doc/${PF}/examples
+		doins TEST/*
 	fi
 }
