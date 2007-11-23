@@ -5,4 +5,21 @@
 <maintainer>
   <email>flameeyes@gentoo.org</email>
 </maintainer>
+<use>
+  <flag name="snapshot" restrict="=net-irc/rbot-9999">
+    Name the generated Ruby Gem in a proper manner to be used for a
+    snapshot ebuild. The format used is 9998_pre followed by the SVN
+    checked out revision number.
+  </flag>
+  <flag name="timezone">
+    Add dependency over <pkg>dev-ruby/tzinfo</pkg> to enable the "time"
+    plugin for rbot. If the USE flag is disabled the plugin is also
+    disabled by default.
+  </flag>
+  <flag name="aspell">
+    Use aspell instead of ispell in the "spell" plugin for rbot. The
+    vanilla plugin uses ispell, but enabling this flag makes it use
+    the ispell interface for aspell instead.
+  </flag>
+</use>
 </pkgmetadata>
