@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/riece
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.62 2007/11/21 18:31:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.63 2007/11/23 21:12:46 corsair Exp $
+
+  23 Nov 2007; Markus Rothe <corsair@gentoo.org> riece-4.0.0.ebuild:
+  Stable on ppc64; bug #199770
 
   21 Nov 2007; nixnut <nixnut@gentoo.org> riece-4.0.0.ebuild:
   Stable on ppc wrt bug 199770
