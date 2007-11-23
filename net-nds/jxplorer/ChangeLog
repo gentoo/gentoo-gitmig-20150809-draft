@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/jxplorer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.25 2007/11/15 21:17:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.26 2007/11/23 18:24:01 drac Exp $
+
+  23 Nov 2007; Samuli Suominen <drac@gentoo.org> jxplorer-3.2.ebuild:
+  amd64 stable wrt #199230
 
   15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> jxplorer-3.2.ebuild:
   Fix typo on doc installation. Reported in bug #199230.
