@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.846 2007/11/23 00:06:50 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.847 2007/11/23 13:09:14 flameeyes Exp $
+
+  23 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask,
+  use.local.desc:
+  Add policykit USE flag for pulseaudio and update the pulseaudio mask for
+  experimental init.d
 
   23 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> use.local.desc:
   Change freetype latex USE to kpathsea.
