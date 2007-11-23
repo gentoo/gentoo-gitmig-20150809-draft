@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/omptagger/omptagger-1.0.ebuild,v 1.1 2007/11/22 22:52:23 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/omptagger/omptagger-1.0.ebuild,v 1.2 2007/11/23 07:33:05 omp Exp $
 
 DESCRIPTION="CLI utility for tagging FLAC, Ogg Vorbis and MP3 files"
 HOMEPAGE="http://dev.gentoo.org/~omp/omptagger/"
@@ -22,9 +22,10 @@ src_unpack() {
 
 	# The id3lib-ruby ebuild in the tree installs the gem, thus requiring
 	# rubygems to be loaded prior to id3lib in any scripts using id3lib.
-	sed -i -e "s/require 'id3lib'/require 'rubygems'\n\0/" omptagger
+	sed -i -e "s/require 'id3lib'/require 'rubygems'\n\0/" \
+		omptagger || die "sed failed"
 }
 
 src_install() {
-	dobin omptagger
+	dobin omptagger || die "dobin failed"
 }
