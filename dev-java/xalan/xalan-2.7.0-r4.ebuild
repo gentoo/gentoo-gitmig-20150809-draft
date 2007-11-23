@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r4.ebuild,v 1.1 2007/05/26 19:09:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r4.ebuild,v 1.2 2007/11/23 16:57:42 corsair Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://xml.apache.org/xalan-j/index.html"
 SRC_URI="mirror://apache/xml/${MY_PN}/source/${MY_P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~x86 ~x86-fbsd"
 IUSE="doc source"
 COMMON_DEP="
 	dev-java/javacup

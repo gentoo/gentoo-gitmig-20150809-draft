@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.9.0.ebuild,v 1.1 2007/05/26 19:14:27 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.9.0.ebuild,v 1.2 2007/11/23 16:56:30 corsair Exp $
 
 # needed for the ANT_TASKS="xjavac-1" later so we don't need to use deprecated eant -lib
 # (because xjavac won't install jar in /usr/share/ant-core/lib anymore)
@@ -17,7 +17,7 @@ SRC_URI="mirror://apache/xml/${PN}-j/${DIST_PN}-src.${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="2"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 # ships with external-1.3.04, need slot dep with lower limit
