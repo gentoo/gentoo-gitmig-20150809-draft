@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/vorbisgain-0.36.ebuild,v 1.7 2007/11/22 18:01:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/vorbisgain-0.36.ebuild,v 1.8 2007/11/23 13:03:30 drac Exp $
 
 DESCRIPTION="Calculator of perceived sound level for Ogg Vorbis files"
 HOMEPAGE="http://sjeng.org/vorbisgain.html"
@@ -23,5 +23,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 }
