@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3162 2007/11/23 13:09:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3163 2007/11/23 20:47:02 compnerd Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -755,6 +755,7 @@ games-strategy/x2:modkit - Install the modkit
 gnome-base/gdm:branding - Enable a custom gentoo branded artwork
 gnome-base/gdm:dmx - Enable Distributed Multihead X (DMX) support
 gnome-base/gdm:remote - Enable secure remote support
+gnome-base/gnome-mount:nautilus - Enable the nautilus plugin
 gnome-base/gnome-session:branding - Enable a custom gentoo branded splashscreen
 gnome-base/nautilus:beagle - Enable support for beagle searching
 gnome-base/nautilus:tracker - Enable support for tracker searching

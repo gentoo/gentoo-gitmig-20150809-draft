@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.849 2007/11/23 18:30:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.850 2007/11/23 20:47:02 compnerd Exp $
+
+  23 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org> use.local.desc:
+  Add nautilus useflag for gnome-mount
 
   23 Nov 2007; Markus Rothe <corsair@gentoo.org>
   default-linux/ppc/ppc64/package.use.mask, hardened/ppc64/use.mask:
