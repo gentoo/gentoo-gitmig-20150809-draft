@@ -1,6 +1,37 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.133 2007/11/23 19:49:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.134 2007/11/23 19:59:32 dang Exp $
+
+*liferea-1.4.8 (23 Nov 2007)
+
+  23 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.4.8.ebuild:
+  Bump to 1.4.8
+  	* Now never loads duplicates when using recursive
+  	  folder view. This avoids duplicate removal problems
+  	  when using Mark-All-Read on such a view.
+  	* Fixes CVE-2005-4791: LD_LIBRARY_PATH problem in
+  	  Liferea starter script.
+  	* Fixes SF #1832671: use default update interval
+  	  even if feed specifies one if it is larger than
+  	  the feed specific one.
+  	* Fixes failing DB close when terminated by session
+  	  manager or SIGHUP/TERM/INT which causes long startup
+  	  durations (>30s) on next start due to leftover
+  	  sqlite journal file.
+  	* Patch SF #1835414 from goyko that improves menu enabling
+  	  and disabling for the "Item" menu options.
+  	* Fixes SF #1821179 crash with Catalan locale.
+  	  (reported by frango)
+  	* Fixes disabled mark-all-read toolbar button when
+  	  a folder is selected.
+  	* Fixes SF #1825113 crash when removing folders
+  	  when child feeds are in update.
+  	* Fixes drag&drop into empty folders.
+  	* Fixes handling of updated items. Now updated items
+  	  are replaced and marked again appropriately.
+  	* Fixes problems with search folders with more than
+  	  one rule.
+  	* Added kget download manager support SF #1824344.
 
   23 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.2.18.ebuild,
   -liferea-1.2.20.ebuild, -liferea-1.2.22.ebuild, -liferea-1.2.23.ebuild:
