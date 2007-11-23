@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.46 2007/11/23 17:37:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.47 2007/11/23 21:29:41 corsair Exp $
+
+  23 Nov 2007; Markus Rothe <corsair@gentoo.org> obconf-2.0.2.ebuild:
+  Stable on ppc64; bug #200033
 
   23 Nov 2007; Jeroen Roovers <jer@gentoo.org> obconf-2.0.2.ebuild:
   Stable for HPPA (bug #200033).
