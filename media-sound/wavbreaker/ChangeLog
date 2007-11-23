@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/wavbreaker
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.21 2007/08/27 14:54:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.22 2007/11/23 20:03:09 drac Exp $
+
+*wavbreaker-0.9 (23 Nov 2007)
+
+  23 Nov 2007; Samuli Suominen <drac@gentoo.org> +wavbreaker-0.9.ebuild:
+  Version bump.
 
   27 Aug 2007; Christoph Mende <angelos@gentoo.org> wavbreaker-0.8.1.ebuild:
   Stable on amd64 wrt bug #145105
