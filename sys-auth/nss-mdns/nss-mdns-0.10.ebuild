@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.10.ebuild,v 1.3 2007/11/23 15:27:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.10.ebuild,v 1.4 2007/11/23 15:29:21 maekke Exp $
 
 inherit autotools eutils
 
@@ -18,9 +18,9 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PN}-0.8-avahi-socket.patch
+	epatch "${FILESDIR}"/${PN}-0.8-avahi-socket.patch
 }
 
 src_compile() {
@@ -32,7 +32,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 
 	insinto /etc
-	doins ${FILESDIR}/mdns.allow
+	doins "${FILESDIR}"/mdns.allow
 
 	dodoc README
 }
