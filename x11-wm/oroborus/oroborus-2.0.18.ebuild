@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.18.ebuild,v 1.7 2007/11/23 12:39:38 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.18.ebuild,v 1.8 2007/11/23 12:50:44 cla Exp $
 
 DESCRIPTION="Small and fast window manager."
 HOMEPAGE="http://www.oroborus.org/"
@@ -31,15 +31,15 @@ src_compile() {
 }
 
 src_install () {
-	make prefix=${D}/usr \
-		sysconfdir=${D}/etc/X11/oroborus \
-		infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
+	make prefix="${D}"/usr \
+		sysconfdir="${D}"/etc/X11/oroborus \
+		infodir="${D}"/usr/share/info \
+		mandir="${D}"/usr/share/man \
 		install || die
 
 	if use gnome ; then
 		insinto /usr/share/gnome/wm-properties
-		doins ${FILESDIR}/oroborus.desktop
+		doins "${FILESDIR}"/oroborus.desktop
 	fi
 
 	dodoc README INSTALL ChangeLog TODO AUTHORS example.oroborusrc
