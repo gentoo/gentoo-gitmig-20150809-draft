@@ -8,6 +8,7 @@ chicken
 # No hardware to test
 lirc
 gnokii
+bluetooth
 # Depends on libnl which doesn't compile, bug 175714
 networkmanager
 # Not needed
