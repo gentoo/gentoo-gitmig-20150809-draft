@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.56 2007/11/18 18:19:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.57 2007/11/24 08:08:28 drac Exp $
+
+  24 Nov 2007; Samuli Suominen <drac@gentoo.org> rhino-1.6.5.ebuild:
+  amd64 stable wrt #199258
 
   18 Nov 2007; Markus Rothe <corsair@gentoo.org> rhino-1.6.5.ebuild:
   Stable on ppc64; bug #199258
