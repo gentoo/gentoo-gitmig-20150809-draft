@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.6.ebuild,v 1.4 2007/11/19 13:52:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.6.ebuild,v 1.5 2007/11/24 09:35:16 drac Exp $
 
 inherit toolchain-funcs autotools
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.namesys.com/pub/reiser4progs/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 -sparc x86"
+KEYWORDS="amd64 ppc ppc64 -sparc x86"
 IUSE="static debug readline"
 
 DEPEND="~sys-libs/libaal-1.0.5

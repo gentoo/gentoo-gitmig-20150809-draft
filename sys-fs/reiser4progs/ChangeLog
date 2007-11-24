@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/reiser4progs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.31 2007/11/19 13:52:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.32 2007/11/24 09:35:16 drac Exp $
+
+  24 Nov 2007; Samuli Suominen <drac@gentoo.org> reiser4progs-1.0.6.ebuild:
+  amd64 stable wrt #199308
 
   19 Nov 2007; Markus Meier <maekke@gentoo.org> reiser4progs-1.0.6.ebuild:
   x86 stable, bug #199308
