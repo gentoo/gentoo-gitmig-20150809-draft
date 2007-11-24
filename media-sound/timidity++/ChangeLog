@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.95 2007/11/24 12:41:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.96 2007/11/24 15:41:13 flameeyes Exp $
+
+*timidity++-2.13.2-r6 (24 Nov 2007)
+
+  24 Nov 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/init.d.timidity.2, +timidity++-2.13.2-r6.ebuild:
+  Revision bump with a new init script. Now TiMidity++'s init script starts
+  the synthesizer as the timidity user, to improve security. This should also
+  solve bug #169453.
 
   24 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> -files/timidity-update,
   -timidity++-2.13.2-r2.ebuild, -timidity++-2.13.2-r3.ebuild,
