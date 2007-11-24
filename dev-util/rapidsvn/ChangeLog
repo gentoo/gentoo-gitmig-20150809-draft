@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.48 2007/11/24 20:04:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.49 2007/11/24 20:34:15 drac Exp $
+
+  24 Nov 2007; Samuli Suominen <drac@gentoo.org> rapidsvn-0.9.4.ebuild:
+  amd64 stable wrt #186809
 
   24 Nov 2007; nixnut <nixnut@gentoo.org> rapidsvn-0.9.4.ebuild:
   Stable on ppc wrt bug 186809
