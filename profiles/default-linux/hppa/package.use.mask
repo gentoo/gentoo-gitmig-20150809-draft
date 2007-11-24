@@ -1,6 +1,6 @@
 # Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
-# This pulls in dev-scheme/drscheme which needs gjc to build
-# or dev-lisp/clisp which has many build issues
+# This pulls in dev-scheme/drscheme which needs the (yet unported) libffi to
+# build or dev-lisp/clisp which has similar build issues
 dev-lang/swig mzscheme clisp
 
 # Samuli Suominen <drac@gentoo.org> (17 Nov 2007)
