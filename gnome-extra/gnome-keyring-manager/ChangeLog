@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-keyring-manager
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/ChangeLog,v 1.53 2007/11/22 15:06:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/ChangeLog,v 1.54 2007/11/24 23:03:16 ranger Exp $
+
+  24 Nov 2007; Brent Baude <ranger@gentoo.org>
+  gnome-keyring-manager-2.20.0.ebuild:
+  Marking gnome-keyring-manager-2.20.0 ppc stable for bug 199740
 
   22 Nov 2007; Raúl Porcel <armin76@gentoo.org>
   gnome-keyring-manager-2.20.0.ebuild:
