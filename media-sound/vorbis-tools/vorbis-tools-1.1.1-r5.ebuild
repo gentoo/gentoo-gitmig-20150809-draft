@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.1.1-r5.ebuild,v 1.5 2007/11/23 22:42:46 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.1.1-r5.ebuild,v 1.6 2007/11/24 18:41:26 nixnut Exp $
 
 IUSE="nls flac speex minimal"
 
@@ -16,7 +16,7 @@ SRC_URI="http://downloads.xiph.org/releases/vorbis/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 
 RDEPEND=">=media-libs/libvorbis-1.1
 	!minimal? ( >=media-libs/libao-0.8.2
