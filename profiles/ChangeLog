@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.852 2007/11/24 07:01:34 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.853 2007/11/24 14:30:36 dirtyepic Exp $
+
+  24 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> use.local.desc:
+  Added local pch USE flag for x11-libs/wxGTK.
 
   24 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
   Add sys-libs/libtpm, last rites bug#198696
