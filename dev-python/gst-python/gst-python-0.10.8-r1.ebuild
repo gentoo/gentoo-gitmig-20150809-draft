@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.8-r1.ebuild,v 1.1 2007/11/04 06:40:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.8-r1.ebuild,v 1.2 2007/11/24 13:58:23 drac Exp $
 
 NEED_PYTHON=2.3
 
@@ -9,10 +9,15 @@ inherit eutils flag-o-matic python
 DESCRIPTION="A Python Interface to GStreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org"
 SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.gz"
+
 LICENSE="LGPL-2"
 SLOT="0.10"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
+
+# 0.10.8 is known to fail with current pygobject, please remove this 
+# RESTRICT when bumping gst-python.
+RESTRICT="test"
 
 RDEPEND=">=dev-python/pygtk-2.6.3
 	>=dev-libs/glib-2.8
