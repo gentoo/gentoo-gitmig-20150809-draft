@@ -1,0 +1,10 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/tex-base/ChangeLog,v 1.1 2007/11/24 23:18:26 ulm Exp $
+
+*tex-base-0 (24 Nov 2007)
+
+  24 Nov 2007; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
+  +tex-base-0.ebuild:
+  Initial import, taken from aballier's overlay. See discussion in gentoo-dev.
+
