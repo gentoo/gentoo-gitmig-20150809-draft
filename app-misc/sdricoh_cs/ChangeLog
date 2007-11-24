@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sdricoh_cs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sdricoh_cs/ChangeLog,v 1.2 2007/11/21 18:18:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sdricoh_cs/ChangeLog,v 1.3 2007/11/24 14:09:15 drac Exp $
+
+  24 Nov 2007; Samuli Suominen <drac@gentoo.org> sdricoh_cs-0.1.2.ebuild:
+  Keyword ~amd64 wrt #200180.
 
 *sdricoh_cs-0.1.2 (21 Nov 2007)
 
