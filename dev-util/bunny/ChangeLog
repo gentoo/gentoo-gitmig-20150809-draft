@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/bunny
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bunny/ChangeLog,v 1.1 2007/11/24 08:35:28 drac Exp $
+
+*bunny-0.92 (24 Nov 2007)
+
+  24 Nov 2007; Samuli Suominen <drac@gentoo.org> +bunny-0.92.ebuild:
+  Initial commit, ebuild by drear from freenode.
+
