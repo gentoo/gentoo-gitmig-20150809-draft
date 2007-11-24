@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss-mdns
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.28 2007/11/23 22:13:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.29 2007/11/24 04:37:32 ranger Exp $
+
+  24 Nov 2007; Brent Baude <ranger@gentoo.org> nss-mdns-0.10.ebuild:
+  Marking  nss-mdns-0.10 ppc for bug 199967
 
   23 Nov 2007; Samuli Suominen <drac@gentoo.org> nss-mdns-0.10.ebuild:
   amd64 stable for security #199967

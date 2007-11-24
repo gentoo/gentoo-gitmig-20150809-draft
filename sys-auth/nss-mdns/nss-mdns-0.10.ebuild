@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.10.ebuild,v 1.5 2007/11/23 22:13:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.10.ebuild,v 1.6 2007/11/24 04:37:32 ranger Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://0pointer.de/lennart/projects/nss-mdns/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~mips ~ppc x86"
+KEYWORDS="amd64 ~hppa ~mips ppc x86"
 IUSE=""
 
 DEPEND="net-dns/avahi"
