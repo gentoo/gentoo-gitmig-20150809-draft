@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ptabtools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.12 2007/07/28 14:45:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.13 2007/11/24 14:09:38 cla Exp $
+
+  24 Nov 2007; Dawid Węgliński <cla@gentoo.org> ptabtools-0.4.3.ebuild:
+  Stable on x86 (bug #200137)
 
   28 Jul 2007; Samuli Suominen <drac@gentoo.org> ptabtools-0.4.3.ebuild:
   Use multilib.
