@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.1.ebuild,v 1.1 2007/11/10 12:59:17 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.1.ebuild,v 1.2 2007/11/24 22:38:10 alonbl Exp $
 
 inherit eutils linux-info autotools
 
@@ -61,8 +61,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}/dist"
+	#http://sourceforge.net/tracker/index.php?func=detail&aid=1829497&group_id=126012&atid=704361
 	epatch "${FILESDIR}/${PN}-0.2.3-nouseradd.patch"
 	cd "${S}"
+	#http://sourceforge.net/tracker/index.php?func=detail&aid=1794686&group_id=126012&atid=704358
+	epatch "${FILESDIR}/${P}-qa.patch"
 }
 
 src_install() {

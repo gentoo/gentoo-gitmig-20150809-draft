@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.15 2007/11/10 12:59:17 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.16 2007/11/24 22:38:10 alonbl Exp $
+
+  24 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/trousers-0.3.1-qa.patch, trousers-0.3.1.ebuild:
+  Fix 64bit issue, bug#200218, thanks to dev-zero
 
 *trousers-0.3.1 (10 Nov 2007)
 
