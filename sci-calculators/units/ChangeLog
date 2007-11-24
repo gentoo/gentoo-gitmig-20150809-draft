@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.18 2007/10/26 07:52:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.19 2007/11/24 16:29:55 jer Exp $
+
+  24 Nov 2007; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Adding myself to metadata as maintainer.
 
 *units-1.87 (26 Oct 2007)
 
