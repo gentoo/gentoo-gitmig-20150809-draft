@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.244 2007/11/23 17:42:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.245 2007/11/24 23:01:21 ranger Exp $
+
+  24 Nov 2007; Brent Baude <ranger@gentoo.org> gnome-applets-2.20.0.ebuild:
+  Marking gnome-applets-2.20.0 ppc stable for bug 199740
 
   23 Nov 2007; Jeroen Roovers <jer@gentoo.org>
   gnome-applets-2.18.0-r3.ebuild:
