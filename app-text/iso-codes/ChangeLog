@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.37 2007/11/22 14:41:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.38 2007/11/24 22:50:38 ranger Exp $
+
+  24 Nov 2007; Brent Baude <ranger@gentoo.org> iso-codes-1.5.ebuild:
+  Marking iso-codes-1.5 ppc stable for bug 199740
 
   22 Nov 2007; Raúl Porcel <armin76@gentoo.org> iso-codes-1.5.ebuild:
   alpha/ia64/sparc stable wrt #199740
