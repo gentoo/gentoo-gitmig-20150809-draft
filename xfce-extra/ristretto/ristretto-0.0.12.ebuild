@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ristretto-0.0.12.ebuild,v 1.2 2007/11/23 19:17:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ristretto-0.0.12.ebuild,v 1.3 2007/11/24 04:17:05 ranger Exp $
 
 inherit xfce44
 
@@ -11,7 +11,7 @@ DESCRIPTION="a fast and lightweight picture-viewer for the Xfce desktop environm
 HOMEPAGE="http://goodies.xfce.org/projects/applications/ristretto"
 SRC_URI="http://goodies.xfce.org/releases/${PN}/${P}${COMPRESS}"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 
 RDEPEND=">=x11-libs/gtk+-2.10
