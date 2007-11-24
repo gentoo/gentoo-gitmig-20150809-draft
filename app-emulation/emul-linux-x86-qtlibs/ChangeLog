@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.35 2007/11/24 19:40:32 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.36 2007/11/24 23:01:31 kingtaco Exp $
+
+  24 Nov 2007; Mike Doty <kingtaco@gentoo.org>
+  emul-linux-x86-qtlibs-20071114-r1.ebuild:
+  fix missing inherit, bug 200163
 
 *emul-linux-x86-qtlibs-20071114-r1 (24 Nov 2007)
 
