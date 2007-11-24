@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.30 2007/11/22 13:58:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.31 2007/11/24 19:10:35 corsair Exp $
+
+  24 Nov 2007; Markus Rothe <corsair@gentoo.org> tracker-0.6.3.ebuild:
+  Added ~ppc64
 
   22 Nov 2007; Raúl Porcel <armin76@gentoo.org> tracker-0.6.3.ebuild:
   sparc stable wrt #199740
