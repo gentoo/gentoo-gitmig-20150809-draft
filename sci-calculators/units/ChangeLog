@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.21 2007/11/24 17:45:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.22 2007/11/24 18:50:27 cla Exp $
+
+  24 Nov 2007; Dawid Węgliński <cla@gentoo.org> units-1.87.ebuild:
+  Stable on x86 (bug #200211)
 
   24 Nov 2007; Jeroen Roovers <jer@gentoo.org> units-1.87.ebuild:
   Stable for HPPA (bug #200211).
