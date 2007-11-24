@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gob
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.55 2007/11/12 22:48:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.56 2007/11/24 15:21:36 cla Exp $
+
+  24 Nov 2007; Dawid Węgliński <cla@gentoo.org> gob-2.0.14.ebuild:
+  Stable on x86 as a dependency of mail-client/mail-notification see bug
+  #198055 for details
 
   12 Nov 2007; Samuli Suominen <drac@gentoo.org> gob-2.0.14.ebuild:
   amd64 stable
