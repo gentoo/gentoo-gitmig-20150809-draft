@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.11-r1.ebuild,v 1.1 2007/05/19 04:53:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.11-r1.ebuild,v 1.2 2007/11/24 22:43:39 drac Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://eciadsl.flashtux.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="tk"
 
 DEPEND="net-dialup/ppp"
@@ -23,9 +23,9 @@ S="${WORKDIR}/${MY_PN}"
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-synch.patch
+	epatch "${FILESDIR}"/${P}-pagesize.patch
 }
 
 src_install() {
