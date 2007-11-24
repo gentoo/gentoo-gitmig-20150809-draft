@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tagtool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.23 2007/11/24 12:03:30 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.24 2007/11/24 18:50:32 nixnut Exp $
+
+  24 Nov 2007; nixnut <nixnut@gentoo.org> tagtool-0.12.3.ebuild:
+  Stable on ppc wrt bug 200108
 
   24 Nov 2007; Dawid Węgliński <cla@gentoo.org> tagtool-0.12.3.ebuild:
   Stable on x86 (bug #200108)
