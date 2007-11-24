@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.0.2.ebuild,v 1.3 2007/11/24 17:13:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.0.2.ebuild,v 1.4 2007/11/24 17:44:24 jer Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://compression.ca/${PN}/${P}.tar.gz"
 
 LICENSE="PBZIP2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="static"
 
 DEPEND="app-arch/bzip2"
@@ -22,7 +22,7 @@ src_unpack() {
 
 src_compile() {
 	if use static ; then
-		cp -f /usr/$(get_libdir)/libbz2.a ${S}
+		cp -f /usr/$(get_libdir)/libbz2.a "${S}"
 		emake pbzip2-static || die "Failed to build"
 	else
 		emake pbzip2 || die "Failed to build"

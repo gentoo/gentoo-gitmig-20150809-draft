@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.37 2007/11/24 17:13:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.38 2007/11/24 17:44:24 jer Exp $
+
+  24 Nov 2007; Jeroen Roovers <jer@gentoo.org> pbzip2-1.0.2.ebuild:
+  Stable for HPPA (bug #198599).
 
   24 Nov 2007; nixnut <nixnut@gentoo.org> pbzip2-1.0.2.ebuild:
   Stable on ppc wrt bug 198599
