@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/cpphs-1.5.ebuild,v 1.1 2007/11/24 11:29:22 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/cpphs-1.5.ebuild,v 1.2 2007/11/24 11:33:39 kolmodin Exp $
 
 CABAL_FEATURES="profile haddock lib bin"
 inherit haskell-cabal
