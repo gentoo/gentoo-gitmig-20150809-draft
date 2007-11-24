@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.3.2.ebuild,v 1.6 2007/11/19 18:28:53 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.3.2.ebuild,v 1.7 2007/11/24 17:57:06 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -27,18 +27,25 @@ src_unpack() {
 	cd "${S}"
 	java-ant_ignore-system-classes
 	java-ant_rewrite-classpath
+	# Setting java.io.tmpdir doesn't have effect unless we do this because the
+	# vm is forked
+	java-ant_xml-rewrite -f build.xml --change -e junit -a clonevm -v "true"
 }
 
-src_compile() {
-	eant jar $(use_doc javadoc) -Duser.home="${T}"
-}
+EANT_EXTRA_ARGS="-Duser.home=${T}"
 
 src_test() {
-	ANT_OPTS="-Djava.io.tmpdir=${T} -Duser.home=${T}" \
-	ANT_TASKS="ant-junit" \
-		eant test \
-		-Dgentoo.classpath="$(java-pkg_getjars junit)" \
-		-Dlibdir="libdir"
+	if has userpriv ${FEATURES}; then
+		ANT_OPTS="-Djava.io.tmpdir=${T} -Duser.home=${T}" \
+		ANT_TASKS="ant-junit" \
+			eant test \
+			-Dgentoo.classpath="$(java-pkg_getjars junit)" \
+			-Dlibdir="libdir" \
+			-Djava.io.tmpdir="${T}"
+	else
+		elog "Tests fail unless userpriv is enabled because they test for"
+		elog "file permissions which doesn't work when run as root."
+	fi
 }
 
 src_install() {

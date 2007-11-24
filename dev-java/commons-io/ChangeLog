@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-io
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/ChangeLog,v 1.37 2007/11/19 18:28:53 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/ChangeLog,v 1.38 2007/11/24 17:57:06 betelgeuse Exp $
+
+  24 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-io-1.3.2.ebuild:
+  Only run tests when userpriv is enabled and rewrite build.xml to use clonevm
+  so that we can change java.io.tmpdir to $T.
 
   19 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   commons-io-1.3.2.ebuild:
