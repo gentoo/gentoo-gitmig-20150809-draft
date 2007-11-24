@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exif
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/ChangeLog,v 1.7 2007/06/05 08:53:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/ChangeLog,v 1.8 2007/11/24 19:09:10 corsair Exp $
+
+  24 Nov 2007; Markus Rothe <corsair@gentoo.org> exif-0.6.15.ebuild:
+  Added ~ppc64
 
 *exif-0.6.15 (05 Jun 2007)
 
