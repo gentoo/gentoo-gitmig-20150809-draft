@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.160 2007/11/18 21:52:10 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.161 2007/11/24 14:35:05 dirtyepic Exp $
+
+  24 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.6.4.0-r2.ebuild:
+  Add pch USE flag to control precompiled header support as suggested by
+  Rafał Mużyło. Drop joystick USE flag.
 
 *wxGTK-2.6.4.0-r2 (18 Nov 2007)
 

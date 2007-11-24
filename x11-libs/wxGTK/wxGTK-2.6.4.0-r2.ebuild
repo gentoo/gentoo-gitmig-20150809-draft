@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r2.ebuild,v 1.1 2007/11/18 21:52:10 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r2.ebuild,v 1.2 2007/11/24 14:35:05 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2
 		doc? ( mirror://sourceforge/wxwindows/wxWidgets-${BASE_PV}-HTML.tar.gz )"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="X doc debug gnome joystick odbc opengl sdl unicode"
+IUSE="X doc debug gnome odbc opengl pch sdl unicode"
 
 RDEPEND="
 	dev-libs/expat
@@ -88,7 +88,7 @@ src_compile() {
 			--with-regex=builtin
 			--with-zlib=sys
 			--with-expat
-			$(use_enable joystick)
+			$(use_enable pch precomp-headers)
 			$(use_with sdl)
 			$(use_with odbc)"
 
