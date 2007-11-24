@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.212 2007/11/22 14:53:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.213 2007/11/24 22:55:31 ranger Exp $
+
+  24 Nov 2007; Brent Baude <ranger@gentoo.org> evolution-2.12.1.ebuild:
+  Marking evolution-2.12.1 ppc stable for bug 199740
 
   22 Nov 2007; Raúl Porcel <armin76@gentoo.org> evolution-2.12.1.ebuild:
   alpha/ia64/sparc stable wrt #199740

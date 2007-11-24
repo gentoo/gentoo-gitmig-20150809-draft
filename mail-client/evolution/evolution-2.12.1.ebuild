@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.1.ebuild,v 1.9 2007/11/22 14:53:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.1.ebuild,v 1.10 2007/11/24 22:55:31 ranger Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI}"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2.0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 # gstreamer for audio-inline, when it uses 0.10
 IUSE="crypt dbus debug doc hal ipv6 kerberos krb4 ldap mono networkmanager nntp pda profile spell ssl"
 
