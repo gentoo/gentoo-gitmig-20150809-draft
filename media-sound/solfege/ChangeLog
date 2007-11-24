@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/solfege
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.23 2007/10/17 13:27:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.24 2007/11/24 12:27:10 cla Exp $
+
+  24 Nov 2007; Dawid Węgliński <cla@gentoo.org> -solfege-3.6.0.ebuild,
+  solfege-3.8.2.ebuild:
+  Stable on x86 (bug #200127); remove old version
 
 *solfege-3.8.2 (17 Oct 2007)
 
