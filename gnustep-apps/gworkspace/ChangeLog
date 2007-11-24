@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gworkspace
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.27 2007/11/16 17:17:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.28 2007/11/24 22:34:12 drac Exp $
+
+  24 Nov 2007; Samuli Suominen <drac@gentoo.org> gworkspace-0.8.6.ebuild:
+  amd64 stable wrt #195990
 
   16 Nov 2007; Bernard Cafarelli <voyageur@gentoo.org>
   files/gworkspace-0.8.6-rpath.patch:
