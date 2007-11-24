@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.99 2007/09/27 00:55:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.100 2007/11/24 16:17:24 hanno Exp $
+
+  24 Nov 2007; Hanno Boeck <hanno@gentoo.org> mailman-2.1.9-r2.ebuild:
+  Fix multilib-strict and change wrong variable name in info part.
 
 *mailman-2.1.9-r2 (26 Sep 2007)
 
