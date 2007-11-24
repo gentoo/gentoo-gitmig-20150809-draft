@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.4.ebuild,v 1.3 2005/01/30 18:21:09 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.4.ebuild,v 1.4 2007/11/24 15:10:04 markusle Exp $
 
 inherit flag-o-matic
 
@@ -56,9 +56,9 @@ src_install() {
 
 	if use perl; then
 		cd Perl
-		make install DESTDIR=${D} || die
+		make install DESTDIR="${D}" || die
 		dodoc RNA_wrap.doc
-		cd ${S}
+		cd "${S}"
 	fi
 
 	if ! use no-utils; then
