@@ -1,6 +1,6 @@
-# ChangeLog for net-irc/inspircd
+# ChangeLog for dev-python/demjson
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.1 2007/11/21 22:13:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.2 2007/11/24 18:57:49 swegener Exp $
 
 *demjson-1.1 (21 Nov 2007)
 
