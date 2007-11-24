@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha2.ebuild,v 1.4 2007/11/23 23:24:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha2.ebuild,v 1.5 2007/11/24 09:15:11 drac Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ RDEPEND="media-libs/libao
 	wavpack? ( >=media-sound/wavpack-4.31 )
 	sndfile? ( >=media-libs/libsndfile-1 )
 	modplug? ( >=media-libs/libmodplug-0.7 )
-	timidity? ( media-libs/libtimidity )
+	timidity? ( media-libs/libtimidity media-sound/timidity++ )
 	sid? ( >=media-libs/libsidplay-2 )
 	ffmpeg? ( media-video/ffmpeg )
 	speex? ( >=media-libs/speex-1 )
