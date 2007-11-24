@@ -1,0 +1,22 @@
+--- src/iff/Makefile.am.orig	2007-03-02 22:15:56.000000000 -0700
++++ src/iff/Makefile.am	2007-03-02 22:16:37.000000000 -0700
+@@ -6,6 +6,8 @@
+ 
+ pbs_iff_LDADD = $(PBS_LIBS)
+ 
++pbs_iff_LDFLAGS = -Wl,-z,now
++
+ pbs_iff_SOURCES = iff2.c
+ 
+ install-exec-hook:
+--- src/mom_rcp/Makefile.am.orig	2007-03-02 22:17:03.000000000 -0700
++++ src/mom_rcp/Makefile.am	2007-03-02 22:17:47.000000000 -0700
+@@ -4,6 +4,8 @@
+ 
+ pbs_rcp_SOURCES = rcp.c replace.c util.c extern.h  pathnames.h
+ 
++pbs_rcp_LDFLAGS = -Wl,-z,now
++
+ EXTRA_DIST = ReadMe
+ 
+ install-exec-hook:
