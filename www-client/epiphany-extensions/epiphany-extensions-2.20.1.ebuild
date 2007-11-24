@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.20.1.ebuild,v 1.4 2007/11/22 14:52:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.20.1.ebuild,v 1.5 2007/11/24 22:54:20 ranger Exp $
 
 WANT_AUTOMAKE="1.10"
 inherit eutils gnome2 autotools
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/extensions.html"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="amd64 ~hppa ppc sparc x86"
 IUSE="pcre python xulrunner"
 
 RDEPEND=">=www-client/epiphany-2.20
