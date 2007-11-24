@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.5.2.ebuild,v 1.3 2007/09/11 12:07:38 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.5.4.ebuild,v 1.1 2007/11/24 18:12:00 pclouds Exp $
 
 inherit eutils versionator
 
@@ -17,17 +17,18 @@ IUSE="ffmpeg gstreamer gnome mad oss"
 
 RESTRICT="test"
 
-RDEPEND=">=dev-libs/glib-2
+RDEPEND=">=dev-libs/glib-2.10
 	>=dev-libs/liboil-0.3.10-r1
 	x11-libs/pango
 	net-libs/libsoup
 	>=x11-libs/cairo-1.2
-	>=x11-libs/gtk+-2.0
+	>=x11-libs/gtk+-2.8.0
 	>=media-libs/alsa-lib-1.0.12
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070330 )
 	mad? ( >=media-libs/libmad-0.15.1b )
 	gstreamer? ( >=media-libs/gstreamer-0.10.11 )
-	gnome? ( gnome-base/gnome-vfs )"
+	gnome? ( gnome-base/gnome-vfs )
+	!<=net-www/swfdec-mozilla-0.5.2"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
