@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/wsdl4j
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/ChangeLog,v 1.18 2007/11/18 10:23:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/ChangeLog,v 1.19 2007/11/24 08:42:46 drac Exp $
+
+  24 Nov 2007; Samuli Suominen <drac@gentoo.org> wsdl4j-1.6.2.ebuild:
+  amd64 stable wrt #199261
 
   18 Nov 2007; Christian Faulhammer <opfer@gentoo.org> wsdl4j-1.6.2.ebuild:
   stable x86, bug 199261
