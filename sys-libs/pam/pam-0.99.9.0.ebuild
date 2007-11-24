@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.9.0.ebuild,v 1.10 2007/11/23 21:16:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.9.0.ebuild,v 1.11 2007/11/24 11:27:34 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -53,14 +53,17 @@ check_old_modules() {
 		retval=1
 	fi
 
-	if sed -e 's:#.*::' /etc/pam.d/* | egrep -q 'pam_(pwdb|radius|timestamp)'; then
+	if sed -e 's:#.*::' /etc/pam.d/* | egrep -q 'pam_(pwdb|radius|timestamp|console)'; then
 		eerror ""
 		eerror "Your current setup is using one or more of the following modules,"
 		eerror "that are not built or supported anymore:"
-		eerror "pam_pwdb, pam_radius, pam_timestamp"
+		eerror "pam_pwdb, pam_radius, pam_timestamp, pam_console"
 		eerror "If you are in real need for these modules, please contact the maintainers"
 		eerror "of PAM through http://bugs.gentoo.org/ providing information about its"
 		eerror "use cases."
+		eerror "Please also make sure to read the PAM Upgrade guide at the following URL:"
+		eerror "  http://www.gentoo.org/proj/en/base/pam/upgrade-0.99.xml"
+		eerror ""
 		ebeep 10
 
 		retval=1
@@ -71,7 +74,7 @@ check_old_modules() {
 
 	# This works only for those modules that are moved to sys-auth/$module, or the
 	# message will be wrong.
-	for module in pam_chroot pam_console pam_userdb; do
+	for module in pam_chroot pam_userdb; do
 		if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q ${module}.so; then
 			ewarn ""
 			ewarn "Your current setup is using the ${module} module."

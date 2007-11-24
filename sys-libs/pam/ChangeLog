@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.186 2007/11/23 21:16:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.187 2007/11/24 11:27:34 flameeyes Exp $
+
+  24 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> pam-0.99.9.0.ebuild:
+  Don't suggest using sys-auth/pam_console anymore, also link the upgrade
+  guide when a module is used that has been removed.
 
   23 Nov 2007; Markus Rothe <corsair@gentoo.org> pam-0.99.9.0.ebuild:
   Stable on ppc64; bug #199693
