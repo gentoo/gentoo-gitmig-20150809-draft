@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity-shompatches
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/ChangeLog,v 1.24 2007/09/29 09:04:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/ChangeLog,v 1.25 2007/11/24 12:43:47 flameeyes Exp $
+
+  24 Nov 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -timidity-shompatches-19960409-r3.ebuild:
+  Cleanup old version using timidity-update.
 
   29 Sep 2007; Samuli Suominen <drac@gentoo.org>
   timidity-shompatches-19960409-r4.ebuild:
