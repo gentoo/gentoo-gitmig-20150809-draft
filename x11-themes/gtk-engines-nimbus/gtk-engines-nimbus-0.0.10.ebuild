@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/gtk-engines-nimbus-0.0.9.ebuild,v 1.1 2007/10/20 17:09:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/gtk-engines-nimbus-0.0.10.ebuild,v 1.1 2007/11/24 11:38:48 flameeyes Exp $
 
 inherit libtool autotools gnome2-utils
 
@@ -18,7 +18,8 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.6"
 DEPEND=">=x11-libs/gtk+-2.6
-	>=x11-misc/icon-naming-utils-0.8.1"
+	>=x11-misc/icon-naming-utils-0.8.1
+	dev-util/intltool"
 
 S="${WORKDIR}/${MY_P}"
 
