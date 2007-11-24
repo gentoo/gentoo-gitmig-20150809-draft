@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.323 2007/11/24 04:34:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.324 2007/11/24 05:57:05 wolf31o2 Exp $
+
+  24 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org> samba-3.0.27a.ebuild:
+  Stable on amd64 wrt bug #197519.
 
   24 Nov 2007; Brent Baude <ranger@gentoo.org> samba-3.0.27a.ebuild:
   Marking samba-3.0.27a ppc for bug 197519
