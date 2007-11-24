@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-extras
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.46 2007/11/22 15:30:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.47 2007/11/24 23:12:57 ranger Exp $
+
+  24 Nov 2007; Brent Baude <ranger@gentoo.org>
+  gnome-themes-extras-2.20.ebuild:
+  Marking gnome-themes-extras-2.20 ppc stable for bug 199740
 
   22 Nov 2007; Raúl Porcel <armin76@gentoo.org>
   gnome-themes-extras-2.20.ebuild:
