@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20071114-r1.ebuild,v 1.1 2007/11/24 19:47:04 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20071114-r1.ebuild,v 1.2 2007/11/24 19:48:08 kingtaco Exp $
 
 inherit emul-linux-x86
 
 LICENSE="as-is BSD GPL-2 LGPL-2 LGPL-2.1"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 IUSE="arts esd oss"
 
 RDEPEND=">=app-emulation/emul-linux-x86-baselibs-20071114
