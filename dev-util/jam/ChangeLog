@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/jam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.25 2007/06/10 19:41:15 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.26 2007/11/24 16:13:04 grobian Exp $
+
+  24 Nov 2007; Fabian Groffen <grobian@gentoo.org> jam-2.5.ebuild,
+  jam-2.5-r3.ebuild:
+  Dropped ppc-macos keyword
 
   10 Jun 2007; Ryan Hill <dirtyepic@gentoo.org> jam-2.5.ebuild,
   jam-2.5-r3.ebuild:
