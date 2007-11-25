@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7941 2007/11/25 16:55:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7942 2007/11/25 16:59:05 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (25 Nov 2007)
+# Only version that builds for amd64, but it breaks new gwave.
+=dev-scheme/guile-gnome-platform-2.15.95*
 
 # Ulrich Mueller <ulm@gentoo.org> (25 Nov 2007)
 # Live SVN ebuild
