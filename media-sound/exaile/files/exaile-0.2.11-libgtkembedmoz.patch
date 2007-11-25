@@ -1,0 +1,10 @@
+--- exaile-0.2.11/Makefile.orig	2007-11-25 21:36:04.000000000 +0200
++++ exaile-0.2.11/Makefile	2007-11-25 21:38:28.000000000 +0200
+@@ -1,6 +1,6 @@
+ PREFIX ?= /usr/local
+ LIBDIR ?= /lib
+-FIREFOX ?= /usr/lib/firefox
++FIREFOX ?= $(PREFIX)$(LIBDIR)/xulrunner:$(PREFIX)$(LIBDIR)/mozilla-firefox:$(PREFIX)$(LIBDIR)/seamonkey
+ 
+ all: compile mmkeys.so translations
+ 	@echo "Done"
