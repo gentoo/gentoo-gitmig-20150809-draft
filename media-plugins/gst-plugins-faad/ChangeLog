@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-faad
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.56 2007/11/25 03:36:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.57 2007/11/25 09:34:46 drac Exp $
+
+  25 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  gst-plugins-faad-0.10.5.ebuild, gst-plugins-faad-0.10.5-r1.ebuild:
+  Change rdep of faad2 to =2.0* for stable users wrt #200252.
 
 *gst-plugins-faad-0.10.5-r1 (25 Nov 2007)
 
