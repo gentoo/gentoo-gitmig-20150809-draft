@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/gwave
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.13 2007/06/22 22:30:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.14 2007/11/25 14:54:46 calchan Exp $
+
+*gwave-20070514 (25 Nov 2007)
+
+  25 Nov 2007; Denis Dupeyron <calchan@gentoo.org> +gwave-20070514.ebuild:
+  Version bump with guile-1.8 support, thanks to Fabio Rossi (bug #195072).
+  Fixed linking with --as-needed instead of filtering it.
 
   22 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   gwave-20031224.ebuild, gwave-20051222.ebuild:
