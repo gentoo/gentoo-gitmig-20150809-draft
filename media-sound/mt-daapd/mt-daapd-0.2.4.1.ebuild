@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.4.1.ebuild,v 1.5 2007/11/25 16:17:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.4.1.ebuild,v 1.6 2007/11/25 17:08:39 drac Exp $
 
 inherit autotools eutils
 
@@ -20,6 +20,15 @@ RDEPEND="media-libs/libid3tag
 	vorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+pkg_setup() {
+	local fail="Re-emerge net-dns/avahi with USE dbus."
+
+	if use avahi && ! built_with_use net-dns/avahi dbus; then
+		eerror "${fail}"
+		die "${fail}"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

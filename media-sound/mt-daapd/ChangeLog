@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mt-daapd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.55 2007/11/25 16:17:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.56 2007/11/25 17:08:39 drac Exp $
+
+  25 Nov 2007; Samuli Suominen <drac@gentoo.org> mt-daapd-0.2.4.1.ebuild:
+  Add built_with_use check for avahi dbus support.
 
   25 Nov 2007; Brent Baude <ranger@gentoo.org> mt-daapd-0.2.4.1.ebuild:
   Marking mt-daapd-0.2.4.1 ppc for bug 200110
