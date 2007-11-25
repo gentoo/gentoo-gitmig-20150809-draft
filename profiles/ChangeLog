@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.855 2007/11/25 02:06:54 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.856 2007/11/25 08:19:59 mrness Exp $
+
+  25 Nov 2007; Alin Năstac <mrness@gentoo.org> use.local.desc:
+  Added nofax flag for net-dialup/mgetty (#195467).
 
   25 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Add >=wxpython-2.6.4.0-r1 to wxWidgets mask.
