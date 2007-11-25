@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.50 2007/11/25 14:39:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.51 2007/11/25 14:57:13 opfer Exp $
+
+  25 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  rapidsvn-0.9.4.ebuild:
+  quote variables and remove die statement for epatch, it will die on its own
 
   25 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   rapidsvn-0.9.4.ebuild:

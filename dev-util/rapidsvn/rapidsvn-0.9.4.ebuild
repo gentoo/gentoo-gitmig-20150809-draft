@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.15 2007/11/25 14:39:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.16 2007/11/25 14:57:13 opfer Exp $
 
 inherit eutils libtool autotools wxwidgets flag-o-matic fdo-mime
 
@@ -18,16 +18,16 @@ DEPEND=">=dev-util/subversion-1.3.2-r1
 	>=dev-libs/apr-0.9.7
 	>=dev-libs/apr-util-0.9.7
 	doc? ( dev-libs/libxslt
-	    app-text/docbook-sgml-utils
-	    app-doc/doxygen
-	    app-text/docbook-xsl-stylesheets )"
+		app-text/docbook-sgml-utils
+		app-doc/doxygen
+		app-text/docbook-xsl-stylesheets )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Apparently we still the --as-needed link patch...
-	epatch ${FILESDIR}/${PN}-svncpp_link.patch || die "epatch failed"
+	epatch "${FILESDIR}/${PN}-svncpp_link.patch"
 
 	export WANT_AUTOCONF=2.5
 	autoconf
@@ -37,11 +37,11 @@ src_unpack() {
 src_compile() {
 	einfo "Checking for subversion compiled with neon support..."
 	if built_with_use dev-util/subversion nowebdav; then
-	    ewarn "SVN (dev-util/subversion) must be compiled with neon support."
-	    ewarn "Please re-emerge subversion without the nowebdav USE flag."
-	    die "SVN merged with nowebdav USE flag"
+		ewarn "SVN (dev-util/subversion) must be compiled with neon support."
+		ewarn "Please re-emerge subversion without the nowebdav USE flag."
+		die "SVN merged with nowebdav USE flag"
 	else
-	    einfo "Found neon support; continuing..."
+		einfo "Found neon support; continuing..."
 	fi
 
 	# if you compiled subversion without (the) apache2 (flag) and with the
@@ -52,7 +52,7 @@ src_compile() {
 	local apr_suffix=""
 
 	if has_version ">dev-libs/apr-util-1"; then
-	    apr_suffix="-1"
+		apr_suffix="-1"
 	fi
 
 	if use doc; then
@@ -91,14 +91,14 @@ src_install() {
 
 	doicon src/res/rapidsvn.ico
 	make_desktop_entry rapidsvn "RapidSVN ${PV}" \
-	    "/usr/share/pixmaps/rapidsvn.ico" \
-	    "RevisionControl;Development"
+		"/usr/share/pixmaps/rapidsvn.ico" \
+		"RevisionControl;Development"
 
 	dodoc HACKING.txt TRANSLATIONS
 
 	if use doc ; then
-	    dodoc AUTHORS CHANGES NEWS README
-	    dohtml ${S}/doc/svncpp/html/*
+		dodoc AUTHORS CHANGES NEWS README
+		dohtml "${S}"/doc/svncpp/html/*
 	fi
 }
 
