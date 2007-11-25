@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.5.ebuild,v 1.6 2007/11/24 08:08:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.5.ebuild,v 1.7 2007/11/25 12:02:27 nelchael Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 java-ant-2 eutils versionator
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.mozilla.org/rhino/"
 # dual license for rhino and BSD-2 for the swing-ex from Sun's tutorial
 LICENSE="|| ( MPL-1.1 GPL-2 ) BSD-2"
 SLOT="1.6"
-KEYWORDS="amd64 ~ia64 ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
