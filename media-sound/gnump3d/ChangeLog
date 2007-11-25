@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.58 2007/11/25 00:00:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.59 2007/11/25 13:57:23 corsair Exp $
+
+  25 Nov 2007; Markus Rothe <corsair@gentoo.org> gnump3d-3.0.ebuild:
+  Stable on ppc64; bug #193132
 
 *gnump3d-3.0 (24 Nov 2007)
 
