@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/vmware-server-console-1.0.4.56528.ebuild,v 1.1 2007/09/20 17:16:01 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/vmware-server-console-1.0.4.56528.ebuild,v 1.2 2007/11/25 13:04:43 ikelos Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -59,10 +59,10 @@ etcdir="/etc/${PN}"
 ANY_ANY=""
 
 src_unpack() {
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	unpack ${A}
 	unpack ./${MY_P}.tar.gz
-	cd ${S}
+	cd "${S}"
 	unpack vmware-libssl.so.0.9.7l.tar.bz2
 	unpack vmware-libcrypto.so.0.9.7l.tar.bz2
 }
@@ -79,5 +79,5 @@ src_install() {
 
 pkg_config() {
 	einfo "Running ${ROOT}${dir}/bin/vmware-config-server-console.pl"
-	${ROOT}${dir}/bin/vmware-config-server-console.pl
+	"${ROOT}${dir}/bin/vmware-config-server-console.pl"
 }
