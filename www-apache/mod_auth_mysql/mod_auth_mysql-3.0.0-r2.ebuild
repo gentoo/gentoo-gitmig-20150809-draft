@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_mysql/mod_auth_mysql-3.0.0-r2.ebuild,v 1.4 2007/11/02 18:35:55 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_mysql/mod_auth_mysql-3.0.0-r2.ebuild,v 1.5 2007/11/25 14:59:05 hollow Exp $
 
 inherit apache-module eutils
 
@@ -21,7 +21,7 @@ APXS2_ARGS="-c -I/usr/include/mysql -lmysqlclient -lm -lz ${PN}.c"
 APACHE2_MOD_CONF="12_${PN}"
 APACHE2_MOD_DEFINE="AUTH_MYSQL"
 
-DOCFILES="README"
+DOCFILES="README CONFIGURE"
 
 need_apache2_2
 

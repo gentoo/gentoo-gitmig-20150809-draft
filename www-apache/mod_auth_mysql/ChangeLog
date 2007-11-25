@@ -1,11 +1,15 @@
 # ChangeLog for www-apache/mod_auth_mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_mysql/ChangeLog,v 1.5 2007/11/02 18:35:55 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_mysql/ChangeLog,v 1.6 2007/11/25 14:59:05 hollow Exp $
 
  07 Dec 2006; Luca Longinotti <chtekk@gentoo.org>
   -files/12_mod_auth_mysql.conf, -files/mod_auth_mysql.patch, metadata.xml,
   -mod_auth_mysql-3.0.0.ebuild, mod_auth_mysql-3.0.0-r1.ebuild:
   Ebuild cleanup, set mysql as herd too.
+
+  25 Nov 2007; Benedikt Böhm <hollow@gentoo.org>
+  -mod_auth_mysql-3.0.0-r1.ebuild, mod_auth_mysql-3.0.0-r2.ebuild:
+  fix #196938; cleanup
 
   02 Nov 2007; Steve Dibb <beandog@gentoo.org>
   mod_auth_mysql-3.0.0-r2.ebuild:
