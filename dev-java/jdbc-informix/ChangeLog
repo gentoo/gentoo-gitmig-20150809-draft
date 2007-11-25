@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-informix
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/ChangeLog,v 1.16 2007/11/25 08:54:44 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/ChangeLog,v 1.17 2007/11/25 10:27:57 drac Exp $
+
+  25 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  jdbc-informix-3.00.3.ebuild:
+  amd64 stable wrt #197705
 
   25 Nov 2007; Vlastimil Babka <caster@gentoo.org>
   jdbc-informix-3.00.3.ebuild:
