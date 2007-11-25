@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.1 2007/06/05 05:01:29 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.2 2007/11/25 11:35:14 tupone Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -16,6 +16,7 @@ IUSE="debug"
 
 RDEPEND="media-libs/libsdl
 	media-libs/sdl-image
+	virtual/glu
 	virtual/opengl"
 DEPEND="${RDEPEND}
 	dev-util/scons"

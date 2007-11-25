@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pouetchess
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/ChangeLog,v 1.7 2007/06/05 05:01:29 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/ChangeLog,v 1.8 2007/11/25 11:35:14 tupone Exp $
+
+  25 Nov 2007; Tupone Alfredo <tupone@gentoo.org>
+  pouetchess-0.2.0-r1.ebuild:
+  Add dependency on virtual/glu
 
 *pouetchess-0.2.0-r1 (05 Jun 2007)
 
