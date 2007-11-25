@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/zemberek
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/ChangeLog,v 1.1 2007/08/04 18:18:18 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/ChangeLog,v 1.2 2007/11/25 05:01:34 cla Exp $
+
+  25 Nov 2007; Dawid Węgliński <cla@gentoo.org> zemberek-2.0.ebuild:
+  Stable on x86 as dependency of media-video/jubler; see bug #200242 for details
 
 *zemberek-2.0 (04 Aug 2007)
 
