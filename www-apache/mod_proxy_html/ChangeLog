@@ -1,6 +1,14 @@
 # ChangeLog for www-apache/mod_proxy_html
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.11 2007/09/22 13:22:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.12 2007/11/25 13:30:42 hollow Exp $
+
+*mod_proxy_html-3.0.1_pre20071125 (25 Nov 2007)
+
+  25 Nov 2007; Benedikt Böhm <hollow@gentoo.org>
+  files/27_mod_proxy_html.conf, -mod_proxy_html-2.4.3.ebuild,
+  -mod_proxy_html-2.5.1.ebuild, mod_proxy_html-3.0.0.ebuild,
+  +mod_proxy_html-3.0.1_pre20071125.ebuild:
+  version bump (fixes #197605); cleanup
 
   22 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   mod_proxy_html-3.0.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/mod_proxy_html-3.0.0.ebuild,v 1.2 2007/09/22 13:22:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/mod_proxy_html-3.0.0.ebuild,v 1.3 2007/11/25 13:30:42 hollow Exp $
 
 inherit apache-module
 
@@ -15,7 +15,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="app-arch/bzip2
-		dev-libs/libxml2"
+	dev-libs/libxml2"
 RDEPEND="${DEPEND}"
 
 APACHE2_MOD_CONF="27_${PN}"
@@ -32,5 +32,5 @@ src_unpack() {
 
 src_compile() {
 	APXS2_ARGS="$(xml2-config --cflags) -c ${PN}.c"
-	apache2_src_compile
+	apache-module_src_compile
 }
