@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.37 2007/11/15 20:30:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.38 2007/11/25 20:05:37 bicatali Exp $
+
+  25 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  ifc-10.0.026-r1.ebuild, ifc-10.1.008.ebuild:
+  Added eutils
 
 *ifc-10.1.008 (15 Nov 2007)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.1.008.ebuild,v 1.1 2007/11/15 20:30:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.1.008.ebuild,v 1.2 2007/11/25 20:05:37 bicatali Exp $
 
-inherit rpm
+inherit rpm eutils
 
 PID=862
 PB=fc

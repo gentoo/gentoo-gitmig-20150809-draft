@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.008.ebuild,v 1.1 2007/11/15 20:23:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.008.ebuild,v 1.2 2007/11/25 20:09:21 bicatali Exp $
 
-inherit rpm
+inherit rpm eutils
 
 PID=861
 PB=cc
