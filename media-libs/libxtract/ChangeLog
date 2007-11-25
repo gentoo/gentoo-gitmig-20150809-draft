@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libxtract
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxtract/ChangeLog,v 1.2 2007/11/20 22:57:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxtract/ChangeLog,v 1.3 2007/11/25 02:38:44 ranger Exp $
+
+  25 Nov 2007; Brent Baude <ranger@gentoo.org> libxtract-0.4.7.ebuild:
+  Marking ~ppc for dep on bug 199390
 
   20 Nov 2007; Markus Rothe <corsair@gentoo.org> libxtract-0.4.7.ebuild:
   Added ~ppc64; bug #199390
