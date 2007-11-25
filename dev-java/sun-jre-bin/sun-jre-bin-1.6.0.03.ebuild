@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.03.ebuild,v 1.4 2007/10/12 00:14:43 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.03.ebuild,v 1.5 2007/11/25 13:52:13 caster Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -48,10 +48,6 @@ QA_TEXTRELS_x86="opt/${P}/lib/i386/client/libjvm.so
 	opt/${P}/lib/i386/server/libjvm.so"
 
 src_unpack() {
-	if [ ! -r ${DISTDIR}/${A} ]; then
-		die "cannot read ${A}. Please check the permission and try again."
-	fi
-
 	mkdir bundled-jdk
 	cd bundled-jdk
 	sh ${DISTDIR}/${A} --accept-license --unpack || die "Failed to unpack"

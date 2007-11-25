@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.114 2007/11/03 15:57:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.115 2007/11/25 13:52:13 caster Exp $
+
+  25 Nov 2007; Vlastimil Babka <caster@gentoo.org>
+  sun-jre-bin-1.5.0.13.ebuild, sun-jre-bin-1.6.0.03.ebuild:
+  Remove the now pointless distfiles readability check.
 
   03 Nov 2007; Vlastimil Babka <caster@gentoo.org>
   -sun-jre-bin-1.4.2.15.ebuild, -sun-jre-bin-1.5.0.12.ebuild,

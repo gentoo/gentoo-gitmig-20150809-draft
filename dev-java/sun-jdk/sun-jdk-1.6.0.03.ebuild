@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.03.ebuild,v 1.3 2007/10/12 00:34:38 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.03.ebuild,v 1.4 2007/11/25 13:51:01 caster Exp $
 
 inherit versionator java-vm-2 eutils pax-utils
 
@@ -51,10 +51,6 @@ JAVA_PROVIDE="jdbc-stdext jdbc-rowset"
 S="${WORKDIR}/jdk$(replace_version_separator 3 _)"
 
 src_unpack() {
-	if [ ! -r ${DISTDIR}/${A} ]; then
-		die "cannot read ${A}. Please check the permission and try again."
-	fi
-
 	sh ${DISTDIR}/${A} --accept-license --unpack || die "Failed to unpack"
 }
 

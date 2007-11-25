@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.16.ebuild,v 1.4 2007/10/12 00:34:38 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.16.ebuild,v 1.5 2007/11/25 13:51:01 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit pax-utils java-vm-2 eutils
@@ -65,7 +65,7 @@ pkg_nofetch() {
 
 src_unpack() {
 	if [ ! -r "${DISTDIR}/${At}" ]; then
-		die "cannot read ${At}.bin. Please check the permission and try again."
+		die "cannot read ${At}. Please check the permission and try again."
 	fi
 	if use jce; then
 		if [ ! -r "${DISTDIR}/${jce_policy}" ]; then
