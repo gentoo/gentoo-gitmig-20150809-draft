@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/sun-javamail-1.4.ebuild,v 1.12 2007/07/11 19:58:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/sun-javamail-1.4.ebuild,v 1.13 2007/11/25 08:00:39 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -27,14 +27,13 @@ JAVA_PKG_WANT_TARGET="1.4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	java-pkg_jar-from sun-jaf activation.jar activation-real.jar
 	cp -L activation-real.jar activation.jar
 }
 
 src_compile() {
-	# sysclasspath=ignore is for bug #143246
-	eant -Dbuild.sysclasspath=ignore -Djavaee.jar=activation.jar jar $(use_doc docs)
+	eant -Djavaee.jar=activation.jar jar $(use_doc docs)
 }
 
 src_install() {
