@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.2.1.ebuild,v 1.1 2007/11/24 17:47:09 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.2.1.ebuild,v 1.2 2007/11/25 00:28:37 mr_bones_ Exp $
 
 inherit autotools flag-o-matic eutils
 
@@ -145,7 +145,6 @@ pkg_preinst() {
 		cp "${ROOT}${PBS_SERVER_HOME}server_name" "${D}${PBS_SERVER_HOME}server_name"
 	fi
 }
-
 
 pkg_postinst() {
 	pbs_createspool "${ROOT}"
