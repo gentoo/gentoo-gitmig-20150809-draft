@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmlgraphics-commons
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/ChangeLog,v 1.10 2007/11/23 21:23:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/ChangeLog,v 1.11 2007/11/25 09:36:52 nelchael Exp $
+
+  25 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  xmlgraphics-commons-1.2.ebuild:
+  Stable on ppc, bug #199263.
 
   23 Nov 2007; Samuli Suominen <drac@gentoo.org>
   xmlgraphics-commons-1.2.ebuild:
