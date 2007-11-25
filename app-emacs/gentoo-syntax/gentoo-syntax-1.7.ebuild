@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.7.ebuild,v 1.1 2007/09/01 12:54:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.7.ebuild,v 1.2 2007/11/25 17:01:04 ulm Exp $
 
 inherit elisp
 
@@ -14,9 +14,4 @@ KEYWORDS="~amd64 ~ppc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
 SITEFILE=51${PN}-gentoo.el
-
-src_install() {
-	elisp-install ${PN} *.el *.elc
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
-	newdoc ChangeLog ChangeLog-Emacs
-}
+DOCS="ChangeLog"
