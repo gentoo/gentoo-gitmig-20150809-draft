@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3169 2007/11/25 12:16:03 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3170 2007/11/25 13:05:00 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -970,6 +970,7 @@ media-libs/alsa-lib:midi - Enables MIDI output support (both Hardware and Softwa
 media-libs/cal3d:16bit-indices - Enables use of 16bit indices
 media-libs/coin:fontconfig - Support for managing custom fonts via fontconfig.
 media-libs/devil:allegro - Add support for Allegro
+media-libs/faad2:drm - Add support for Digital Radio Mondiale (warning: disables other decoders)
 media-libs/farsight:jingle - Enables voice calls for jabber
 media-libs/flac:cxx - Enables FLAC++, C++ bindings to the FLAC library
 media-libs/freetype:kpathsea - Enable TeX support (ttf2pk and ttf2pfb)
