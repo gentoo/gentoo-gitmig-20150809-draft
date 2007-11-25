@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ipw3945
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.34 2007/11/05 21:14:16 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.35 2007/11/25 22:01:33 genstef Exp $
+
+  25 Nov 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/ipw3945-1.2.2-build.patch, ipw3945-1.2.2.ebuild:
+  Fix build problems thanks to Alon Bar-Lev <alonbl@gentoo.org> in bug 195137
 
   05 Nov 2007; Jim Ramsay <lack@gentoo.org> metadata.xml:
   Changing maintainers to myself, dang, and jkt

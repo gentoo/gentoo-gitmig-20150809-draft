@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.2.ebuild,v 1.3 2007/09/11 15:48:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.2.ebuild,v 1.4 2007/11/25 22:01:33 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -42,6 +42,13 @@ pkg_setup() {
 	linux-mod_pkg_setup
 
 	BUILD_PARAMS="KSRC=${KV_DIR} KSRC_OUTPUT=${KV_OUT_DIR} SHELL=/bin/bash"
+	BUILD_PARAMS="${BUILD_PARAMS} T=${T}"
+	BUILD_PARAMS="${BUILD_PARAMS} CONFIG_IPW3945_MONITOR=y CONFIG_IEEE80211_RADIOTAP=y CONFIG_IPW3945_PROMISCUOUS=y"
+	if use debug; then
+		BUILD_PARAMS="${BUILD_PARAMS} CONFIG_IPW3945_DEBUG=y"
+	else
+		BUILD_PARAMS="${BUILD_PARAMS} CONFIG_IPW3945_DEBUG=n"
+	fi
 
 	# users don't read the ChangeLog and wonder why the kernel check fails
 	# (1) check if the kernel dir (/usr/src/linux) is missing ieee80211
@@ -64,14 +71,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${P/_pre/-pre}.tgz
-
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-1.2.0-Makefile.patch
-
-	if use debug ; then
-		sed -i -e "s:^\(CONFIG_IPW3945_DEBUG\)=.*:\1=y:" "${S}"/Makefile || \
-			die "Failed to enable debugging support!"
-	fi
+	epatch "${FILESDIR}/${P}-build.patch"
 }
 
 src_install() {
