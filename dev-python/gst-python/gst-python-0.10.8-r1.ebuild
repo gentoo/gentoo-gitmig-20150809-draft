@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.8-r1.ebuild,v 1.2 2007/11/24 13:58:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.8-r1.ebuild,v 1.3 2007/11/25 00:28:15 mr_bones_ Exp $
 
 NEED_PYTHON=2.3
 
@@ -15,7 +15,7 @@ SLOT="0.10"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-# 0.10.8 is known to fail with current pygobject, please remove this 
+# 0.10.8 is known to fail with current pygobject, please remove this
 # RESTRICT when bumping gst-python.
 RESTRICT="test"
 
