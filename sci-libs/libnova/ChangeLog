@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/libnova
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.3 2007/02/09 05:23:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.4 2007/11/25 19:52:46 bicatali Exp $
+
+*libnova-0.12.1 (25 Nov 2007)
+
+  25 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/libnova-0.12.1-configure.patch, +libnova-0.12.1.ebuild:
+  Version bump, added src_test, doc use flag, and modernized the ebuild.
+  Closing bug #150774.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
