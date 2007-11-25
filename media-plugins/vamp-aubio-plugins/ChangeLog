@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vamp-aubio-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/ChangeLog,v 1.2 2007/11/20 22:56:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/ChangeLog,v 1.3 2007/11/25 02:43:56 ranger Exp $
+
+  25 Nov 2007; Brent Baude <ranger@gentoo.org>
+  vamp-aubio-plugins-0.3.2b.ebuild:
+  Marking ~ppc for dep on bug 199390
 
   20 Nov 2007; Markus Rothe <corsair@gentoo.org>
   vamp-aubio-plugins-0.3.2b.ebuild:

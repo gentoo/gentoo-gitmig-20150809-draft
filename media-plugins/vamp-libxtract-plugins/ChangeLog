@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vamp-libxtract-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-libxtract-plugins/ChangeLog,v 1.2 2007/11/20 22:57:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-libxtract-plugins/ChangeLog,v 1.3 2007/11/25 02:42:04 ranger Exp $
+
+  25 Nov 2007; Brent Baude <ranger@gentoo.org>
+  vamp-libxtract-plugins-0.4.2.20071019.ebuild:
+  Marking ~ppc for dep on bug 199390
 
   20 Nov 2007; Markus Rothe <corsair@gentoo.org>
   vamp-libxtract-plugins-0.4.2.20071019.ebuild:
