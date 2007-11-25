@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.33 2007/11/24 23:25:44 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.34 2007/11/25 23:02:43 kingtaco Exp $
+
+*emul-linux-x86-soundlibs-20071125 (25 Nov 2007)
+
+  25 Nov 2007; Mike Doty <kingtaco@gentoo.org>
+  +emul-linux-x86-soundlibs-20071125.ebuild:
+  fix cirular rdep, fix kde file collision (bug 200261), fix rpath setting
+  that causes revdep-rebuild to complain
 
 *emul-linux-x86-soundlibs-20071114-r2 (24 Nov 2007)
 
