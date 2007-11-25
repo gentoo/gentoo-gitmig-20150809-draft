@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20070211.ebuild,v 1.3 2007/07/20 15:13:42 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20070211.ebuild,v 1.4 2007/11/25 00:38:14 nelchael Exp $
 
 inherit linux-mod eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Linux kernel module for (but not limited to) HP Omnibook support"
 HOMEPAGE="http://www.sourceforge.net/projects/omnibook"
 SRC_URI="mirror://sourceforge/omnibook/${MY_P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc"
+KEYWORDS="~amd64 -ppc x86"
 IUSE=""
 S=${WORKDIR}/${MY_P}
 
