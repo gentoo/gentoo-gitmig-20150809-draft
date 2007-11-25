@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/omptagger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/omptagger/ChangeLog,v 1.3 2007/11/23 07:33:05 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/omptagger/ChangeLog,v 1.4 2007/11/25 13:37:33 corsair Exp $
+
+  25 Nov 2007; Markus Rothe <corsair@gentoo.org> omptagger-1.0.ebuild:
+  Added ~ppc64
 
   23 Nov 2007; David Shakaryan <omp@gentoo.org> omptagger-1.0.ebuild:
   Die on sed or dobin failure.
