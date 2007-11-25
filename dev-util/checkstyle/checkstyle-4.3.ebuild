@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-4.3.ebuild,v 1.1 2007/04/23 17:27:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-4.3.ebuild,v 1.2 2007/11/25 12:40:03 drac Exp $
 
 WANT_ANT_TASKS="ant-antlr ant-nodeps"
 JAVA_PKG_IUSE="doc source test"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/checkstyle/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 COMMON_DEP="dev-java/antlr
 	=dev-java/commons-beanutils-1.7*

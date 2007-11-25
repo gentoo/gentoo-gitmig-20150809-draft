@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/checkstyle
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.30 2007/06/10 16:18:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.31 2007/11/25 12:40:03 drac Exp $
+
+  25 Nov 2007; Samuli Suominen <drac@gentoo.org> checkstyle-4.3.ebuild:
+  amd64 stable wrt #200275
 
   10 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> -checkstyle-3.5.ebuild:
   Delete old version that uses generation 1.
