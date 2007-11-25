@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.14 2007/11/24 20:34:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.15 2007/11/25 14:39:08 opfer Exp $
 
 inherit eutils libtool autotools wxwidgets flag-o-matic fdo-mime
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://rapidsvn.tigris.org/"
 SRC_URI="http://www.rapidsvn.org/download/release/${PV}/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE="doc static"
 
 DEPEND=">=dev-util/subversion-1.3.2-r1
