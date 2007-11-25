@@ -1,0 +1,12 @@
+--- XSB.orig/packages/justify.P	2006-01-02 11:03:26.000000000 +1300
++++ XSB/packages/justify.P	2007-11-24 20:19:19.000000000 +1300
+@@ -11,7 +11,8 @@
+ 
+ :- import bootstrap_package/2 from packaging.
+ :- import slash/1 from machine.
+-:- bootstrap_package('justify',justify).
++:- bootstrap_package('justify',justify),
++   [jxm].
+ 
+ :- import jxm_/1, just_true_/2, just_false_/2 from jxm.
+ 

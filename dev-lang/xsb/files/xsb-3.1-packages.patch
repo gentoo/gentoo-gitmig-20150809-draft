@@ -1,0 +1,173 @@
+--- XSB.orig/packages/Makefile	2006-05-22 14:10:22.000000000 +1200
++++ XSB/packages/Makefile	2007-11-24 19:15:20.000000000 +1300
+@@ -22,17 +22,63 @@
+ ## 
+ ##
+ 
++config_libdir=../config/*/lib
++
+ OBJEXT=.xwam
+ 
+-ALL = 	slx${OBJEXT} perlmatch${OBJEXT} gap${OBJEXT} \
+-	regmatch${OBJEXT} wildmatch${OBJEXT} \
+-	xasp${OBJEXT} libwww${OBJEXT} xsbdoc${OBJEXT} \
+-	xmc${OBJEXT} justify${OBJEXT}
++#ALL = 
++ALL = chr.xwam chr_d.xwam gap.xwam justify.xwam regmatch.xwam sgml.xwam slx.xwam wildmatch.xwam
+ 
+-SUBDIR = flora2 slx perlmatch gap regmatch wildmatch libwww xasp \
+-	 xsbdoc xmc justify
++#SUBMODULES = 
++SUBMODULES = chr/chr_interp.xwam chr/chr_pp.xwam chr_d/attv_aux.xwam chr_d/chr2attv.xwam chr_d/print_chrd.xwam gap/gapmeta.xwam justify/jxm.xwam regmatch/regmtchconfig.xwam sgml/sgmlconfig.xwam slx/slxshell.xwam wildmatch/wldmtchconfig.xwam
++#SUBMODULES = xsbdoc/autodoc.xwam xsbdoc/autodocformats.xwam xsbdoc/ciaoaux.xwam xsbdoc/full_ciao_ops.xwam xsbdoc/rewrite_command.xwam xsbdoc/xsbdoc1.xwam xsbdoc/xsbdoc_term_proc.xwam
++
++#ARCHMODULES = 
++ARCHMODULES = $(config_libdir)/sgml2pl.xwam $(config_libdir)/xsb_re_match.xwam $(config_libdir)/xsb_wildmatch.xwam
++
++#SOLIBS = 
++SOLIBS = $(config_libdir)/sgml2pl.so $(config_libdir)/xsb_re_match.so $(config_libdir)/xsb_wildmatch.so
++
++#HEADERS = 
++HEADERS = regmatch/cc/xsb_re_match.H sgml/cc/sgml2pl.H wildmatch/cc/xsb_wildmatch.H
++
++DBDRIVERS = dbdrivers.xwam
++DBDRIVERSSUBMODULES = dbdrivers/db_interface.xwam
++DBDRIVERSARCHMODULES = $(config_libdir)/driver_manager.xwam
++DBDRIVERSSOLIBS = $(config_libdir)/driver_manager.so
++DBDRIVERSHEADERS = dbdrivers/db_interface.H dbdrivers/cc/driver_manager.H
++
++LIBWWW = libwww.xwam
++LIBWWWSUBMODULES = libwww/libwww_init.xwam libwww/libwwwconfig.xwam
++LIBWWWARCHMODULES = $(config_libdir)/libwww_request.xwam
++LIBWWWSOLIBS = $(config_libdir)/libwww_parse_html.so $(config_libdir)/libwww_parse_rdf.so $(config_libdir)/libwww_parse_xml.so $(config_libdir)/libwww_request.so
++LIBWWWHEADERS = libwww/cc/libwww_request.H
++
++MYSQL = dbdrivers/mysql.xwam
++MYSQLSUBMODULES = dbdrivers/mysql/mysql_driver_config.xwam dbdrivers/mysql/mysql_init.xwam
++MYSQLARCHMODULES = $(config_libdir)/mysql_driver.xwam
++MYSQLSOLIBS = $(config_libdir)/mysql_driver.so
++MYSQLHEADERS = dbdrivers/mysql/cc/mysql_driver.H
++
++ODBC = dbdrivers/odbc.xwam
++ODBCSUBMODULES = dbdrivers/odbc/odbc_driver_config.xwam dbdrivers/odbc/odbc_init.xwam
++ODBCARCHMODULES = $(config_libdir)/odbc_driver.xwam
++ODBCSOLIBS = $(config_libdir)/odbc_driver.so
++ODBCHEADERS = dbdrivers/odbc/cc/odbc_driver.H
++
++PERLMATCH = perlmatch.xwam
++PERLSUBMODULES = perlmatch/plmchconfig.xwam perlmatch/plmchshell.xwam
++PERLARCHMODULES = $(config_libdir)/xsbpattern.xwam
++PERLSOLIBS = $(config_libdir)/xsbpattern.so
++PERLHEADERS = perlmatch/cc/xsbpattern.H
++
++XPATH = xpath.xwam
++XPATHSUBMODULES = xpath/xpath_init.xwam xpath/xpathconfig.xwam
++XPATHARCHMODULES = $(config_libdir)/xpathparser.xwam
++XPATHSOLIBS = $(config_libdir)/xpathparser.so
++XPATHHEADERS = xpath/cc/xpathparser.H
+ 
+-Option = [optimize]
++Option = [optimize,quit_on_error]
+ 
+ #-----------------------------------------------------------------------#
+ #
+@@ -51,20 +97,28 @@
+ 
+ 
+ # continue to the next when one error occurs
+-.IGNORE:
++#.IGNORE:
+ 
+ # suffix rules
+ .SUFFIXES: .P ${OBJEXT} .H
+ 
+ .P${OBJEXT}:
+-	echo 'mc($*, $(Option)).' >> cmd...
+-
++	echo 'mc($*, $(Option)). [$*].' >> cmd...
+ 
+ all:  init $(ALL) finish $(SUBDIR)
+ 	@../build/touch.sh cmd...
+ 	$(Prolog) < cmd...
+ 	@rm cmd...
+ 	@cat $(SVFILE)
++	@for f in $(ARCHMODULES) $(SOLIBS) $(SUBMODULES) $(HEADERS); do \
++	  if [ ! -f $$f ]; then echo "$$f not build"; exit 1; fi; \
++	done
++
++dbdrivers/mysql.xwam: dbdrivers/mysql.P
++	echo 'mc($*, $(Option)). [dbdrivers], [mysql].' >> cmd...
++
++dbdrivers/odbc.xwam: dbdrivers/odbc.P
++	echo 'mc($*, $(Option)). [dbdrivers], [odbc].' >> cmd...
+ 
+ # clpqr::
+ # 	@echo ""
+@@ -82,13 +136,61 @@
+ 	@echo ""
+ 	cd iprolog; make
+ 
+-libwww::
+-	@echo ""
+-	cd libwww; make
++dbdrivers:  init $(DBDRIVERS) finish
++	@../build/touch.sh cmd...
++	$(Prolog) < cmd...
++	@rm cmd...
++	@cat $(SVFILE)
++	@for f in $(DBDRIVERSARCHMODULES) $(DBDRIVERSSOLIBS) $(DBDRIVERSSUBMODULES) $(DBDRIVERSHEADERS); do \
++	  if [ ! -f $$f ]; then echo "$$f not build"; exit 1; fi; \
++	done
+ 
+-perlmatch::
+-	@echo ""
+-	cd perlmatch; make
++libwww:  init $(LIBWWW) finish
++	@../build/touch.sh cmd...
++	$(Prolog) < cmd...
++	@rm cmd...
++	@cat $(SVFILE)
++	@for f in $(LIBWWWARCHMODULES) $(LIBWWWSOLIBS) $(LIBWWWSUBMODULES) $(LIBWWWHEADERS); do \
++	  if [ ! -f $$f ]; then echo "$$f not build"; exit 1; fi; \
++	done
++
++mysql:  dbdrivers init $(MYSQL) finish
++	@cp ../config/*/lib/driver_manager.so ./
++	@../build/touch.sh cmd...
++	$(Prolog) < cmd...
++	@rm cmd...
++	@cat $(SVFILE)
++	@for f in $(MYSQL) $(MYSQLARCHMODULES) $(MYSQLSOLIBS) $(MYSQLSUBMODULES) $(MYSQLHEADERS); do \
++	  if [ ! -f $$f ]; then echo "$$f not build"; exit 1; fi; \
++	done
++
++odbc:  dbdrivers init $(ODBC) finish
++	@cp ../config/*/lib/driver_manager.so ./
++	@../build/touch.sh cmd...
++	$(Prolog) < cmd...
++	@rm cmd...
++	@cat $(SVFILE)
++	@for f in $(ODBC) $(ODBCARCHMODULES) $(ODBCSOLIBS) $(ODBCSUBMODULES) $(ODBCHEADERS); do \
++	  if [ ! -f $$f ]; then echo "$$f not build"; exit 1; fi; \
++	done
++
++perlmatch:  init $(PERLMATCH) finish
++	@../build/touch.sh cmd...
++	$(Prolog) < cmd...
++	@rm cmd...
++	@cat $(SVFILE)
++	@for f in $(PERLARCHMODULES) $(PERLSOLIBS) $(PERLSUBMODULES) $(PERLHEADERS); do \
++	  if [ ! -f $$f ]; then echo "$$f not build"; exit 1; fi; \
++	done
++
++xpath:  init $(XPATH) finish
++	@../build/touch.sh cmd...
++	$(Prolog) < cmd...
++	@rm cmd...
++	@cat $(SVFILE)
++	@for f in $(XPATHARCHMODULES) $(XPATHSOLIBS) $(XPATHSUBMODULES) $(XPATHHEADERS); do \
++	  if [ ! -f $$f ]; then echo "$$f not build"; exit 1; fi; \
++	done
+ 
+ xasp::
+ 	@echo ""

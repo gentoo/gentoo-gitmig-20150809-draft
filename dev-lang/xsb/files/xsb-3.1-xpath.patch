@@ -1,0 +1,21 @@
+--- XSB.orig/packages/xpath/configure	2005-03-06 13:29:02.000000000 +1300
++++ XSB/packages/xpath/configure	2007-11-25 08:59:32.000000000 +1300
+@@ -592,6 +592,7 @@
+ ccflags=
+ ldflags=
+ 
++if test false ; then
+ case "$canonical" in
+      *-cygwin*)
+         pkg_src_dir=$build_dir/cc
+@@ -614,6 +615,10 @@
+ 	ldflags="`sh $xpath_config_prog $exec_prefix_option $prefix_option --libs`"
+ 	;;
+ esac
++fi
++
++xmllib_ccflags=`xml2-config --cflags`
++ldflags=`xml2-config --libs`
+ 
+ ccflags="$xmllib_ccflags"	
+ if test  "$xmllib_ccflags" != "ERROR" && test "$ldflags" != "ERROR"  ; then

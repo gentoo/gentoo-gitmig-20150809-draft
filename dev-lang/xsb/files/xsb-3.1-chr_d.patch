@@ -1,0 +1,13 @@
+--- XSB.orig/packages/chr_d.P	2006-05-26 02:49:06.000000000 +1200
++++ XSB/packages/chr_d.P	2007-11-24 20:12:59.000000000 +1300
+@@ -28,7 +28,9 @@
+ init_chr_d:- 
+ 	bootstrap_package([chr_d],'chr_d'),
+ 	[chr2attv],
+-	[attv_aux].
++	[attv_aux],
++	[flatten_chr],
++	[print_chrd].
+ 
+ :- init_chr_d.
+ 

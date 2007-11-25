@@ -1,0 +1,44 @@
+--- XSB.orig/build/xsb.in	2007-08-30 05:50:40.000000000 +1200
++++ XSB/build/xsb.in	2007-11-25 17:45:41.000000000 +1300
+@@ -47,7 +47,7 @@
+ 
+ # if we've a symbolic link, then extract the full path of the target
+ if test -h $invocation_name ; then
+-    invocation_name=`dirname $invocation_name`"/"`stat -f %Y $invocation_name`
++    invocation_name=`readlink $invocation_name`
+ fi
+ 
+ case $invocation_name in
+@@ -72,9 +72,7 @@
+ scriptdir=`dirname $thisfile`
+ topdir=`dirname $scriptdir`
+ 
+-config=`$topdir/build/config.guess`
+-canonical=`$topdir/build/config.sub $config`
+-exec_dir=$topdir/config/${canonical}${suffix}
++exec_dir=$topdir/config/@full_config_name@
+ executable=${exec_dir}/bin/xsb
+ 
+ # The purpose of this complex thing is to make sure that arguments
+@@ -95,18 +93,18 @@
+ fi
+ 
+ if test -x "$executable" ; then
+-   eval "exec @CROSS_SIMULATOR@ $executable $xsb_cmd"
++   LD_LIBRARY_PATH=${exec_dir}/lib eval "exec @CROSS_SIMULATOR@ $executable $xsb_cmd"
+ else
+    echo "${executable}: "
+    echo "       file doesn't exist or is not executable"
+    echo ""
+    echo "XSB might not have have been compiled for the following machine configuration:"
+-   echo "             " ${canonical}${suffix}
++   echo "             " @full_config_name@
+    echo "***This installation seems to have the following configurations available:"
+    # First drop files that don't have "-".
+    # Then drop the configuration that we just said doesn't exist.
+    ls -1  $topdir/config | egrep "-" \
+-    	    	    	    | egrep -v "^${canonical}${suffix}\$" 2> /dev/null
++    	    	    	    | egrep -v "^@full_config_name@\$" 2> /dev/null
+    echo "***configuration list end"
+    echo ""
+    echo "One other frequent problem: you might be over your disk quota,"

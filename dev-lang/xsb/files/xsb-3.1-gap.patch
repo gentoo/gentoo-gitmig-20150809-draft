@@ -1,0 +1,10 @@
+--- XSB.orig/packages/gap.P	1999-12-31 07:20:55.000000000 +1300
++++ XSB/packages/gap.P	2007-11-25 14:09:38.000000000 +1300
+@@ -33,5 +33,6 @@
+ 
+ gap_meta(Call):- meta(Call).
+ 
+-:- bootstrap_package('gap',gap).
++:- bootstrap_package('gap',gap),
++   [gapmeta].
+ 

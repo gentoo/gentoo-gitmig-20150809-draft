@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.8 2007/04/24 22:51:37 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.9 2007/11/25 05:09:31 keri Exp $
+
+*xsb-3.1 (25 Nov 2007)
+
+  25 Nov 2007; keri <keri@gentoo.org> +files/xsb-3.1-chr_d.patch,
+  +files/xsb-3.1-configure.patch, +files/xsb-3.1-gap.patch,
+  +files/xsb-3.1-justify.patch, +files/xsb-3.1-mysql.patch,
+  +files/xsb-3.1-nostrip.patch, +files/xsb-3.1-odbc.patch,
+  +files/xsb-3.1-orient.patch, +files/xsb-3.1-packages.patch,
+  +files/xsb-3.1-portage.patch, +files/xsb-3.1-varstring.patch,
+  +files/xsb-3.1-xpath.patch, +files/xsb-3.1-xsb-script.patch,
+  +xsb-3.1.ebuild:
+  Version bump.
 
   24 Apr 2007; keri <keri@gentoo.org> files/xsb-3.0.1-configure.patch:
   Respect -odbc -iodbc in USE flags. Closes bug #174696.

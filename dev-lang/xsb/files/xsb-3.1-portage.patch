@@ -1,0 +1,181 @@
+diff -ur XSB.orig/build/emuMakefile.in XSB/build/emuMakefile.in
+--- XSB.orig/build/emuMakefile.in	2007-08-23 07:21:23.000000000 +1200
++++ XSB/build/emuMakefile.in	2007-11-24 18:28:13.000000000 +1300
+@@ -42,6 +42,7 @@
+ LDFLAGS=@LDFLAGS@
+ ODBCSRC=@ODBCSRC@
+ ODBCOBJ=@ODBCOBJ@
++ODBC_CFLAGS=@ODBC_CFLAGS@
+ INTERPROLOGSRC=@INTERPROLOGSRC@
+ INTERPROLOGOBJ=@INTERPROLOGOBJ@
+ DLLTYPE=@DLLTYPE@
+@@ -242,26 +243,31 @@
+ 	@cp dynload.o $(arch_config_objlibdir) 2> /dev/null || echo ""
+ 
+ emuloop.o: emuloop.c
+-	@echo -e "\t[$(CC)] emuloop.c using $(emuloopCFLAGS)"
++	@echo -e "\t[$(CC)] emuloop.c"
+ 	@$(CC) -I$(arch_config_prefix)  -c $(emuloopCFLAGS) emuloop.c
+ 	@cp emuloop.o $(arch_config_objlibdir) 2> /dev/null || echo ""
+ 
+ # Higher optimization level has problem with some versions of gcc
+ tr_utils.o: tr_utils.c
+-	@echo -e "\t[$(CC)] tr_utils.c using $(trutilsCFLAGS)"
++	@echo -e "\t[$(CC)] tr_utils.c"
+ 	@$(CC) -I$(arch_config_prefix)  -c $(trutilsCFLAGS) tr_utils.c
+ 	@cp tr_utils.o $(arch_config_objlibdir) 2> /dev/null || echo ""
+ 
+ builtin.o: builtin.c
+-	@echo -e "\t[$(CC)] builtin.c using $(builtinsCFLAGS)"
++	@echo -e "\t[$(CC)] builtin.c"
+ 	@$(CC) -I$(arch_config_prefix)  -c $(builtinsCFLAGS) builtin.c
+ 	@cp builtin.o $(arch_config_objlibdir) 2> /dev/null || echo ""
+ 
+ loader_xsb.o: loader_xsb.c
+-	@echo -e "\t[$(CC)] loader_xsb.c using $(loaderCFLAGS)"
++	@echo -e "\t[$(CC)] loader_xsb.c"
+ 	@$(CC) -I$(arch_config_prefix)  -c $(loaderCFLAGS) loader_xsb.c
+ 	@cp loader_xsb.o $(arch_config_objlibdir) 2> /dev/null || echo ""
+ 
++odbc_xsb.o: odbc_xsb.c
++	@echo -e "\t[$(CC)] odbc_xsb.c"
++	@$(CC) -I$(arch_config_prefix)  -c $(ODBC_CFLAGS) $(CFLAGS) odbc_xsb.c
++	@cp odbc_xsb.o $(arch_config_objlibdir) 2> /dev/null || echo ""
++
+ .c.o:
+ 	@echo -e "\t[$(CC)] $*.c"
+ 	@$(CC) -I$(arch_config_prefix)  -c $(CFLAGS) $*.c
+diff -ur XSB.orig/build/topMakefile.in XSB/build/topMakefile.in
+--- XSB.orig/build/topMakefile.in	2007-07-14 06:30:58.000000000 +1200
++++ XSB/build/topMakefile.in	2007-11-24 18:32:48.000000000 +1300
+@@ -72,7 +72,7 @@
+ # Everything is placed in subdirectories of this directory.
+ # The values for many of the variables below are expressed
+ # in terms of this one, so you do not need to change them.
+-prefix=@prefix@
++prefix=$(DESTDIR)/usr/lib/xsb
+ 
+ srcdir=@topdir@
+ VPATH=$(srcdir)
+@@ -101,7 +101,7 @@
+ 
+ # Like `prefix', but used for architecture-specific files.
+ src_config_prefix=@arch_config_prefix@
+-install_config_prefix=@arch_install_config_prefix@
++install_config_prefix=$(DESTDIR)@arch_install_config_prefix@
+ # we copy the xsb.o module here
+ install_config_objlibdir=$(install_config_prefix)/saved.o
+ 
+@@ -150,7 +150,7 @@
+ emumake_goal=@emumake_goal@
+ 
+ # Normal user
+-all: prepare emulator xsbmod xsbdll gpp_exe remake_dot_O_files register emu_clean
++all: prepare emulator xsbmod gpp_exe remake_dot_O_files
+ 
+ # Developer who just checked out or updated CVS copy
+ devel: prepare emulator xsbmod xsbdll gpp_exe remake_dot_O_files emu_clean
+@@ -179,29 +179,22 @@
+ 			tee -a Installation_summary
+ prepare:
+ 	@echo ""; echo "Preparing..."
+-	@cd $(src_emudir); \
+-	  rm -f *.o Makefile  2> /dev/null || echo "" ; \
+-	  ln -s ${src_config_objlibdir}/*.o . 2> /dev/null || echo "" ; \
+-	  ln -s ${src_config_prefix}/emuMakefile ./Makefile
+-	@cd $(srcdir)/gpp; \
+-	  rm -f *.o Makefile ; \
+-	  ln -s ${src_config_prefix}/gppMakefile ./Makefile
+-	@rm -f $(srcdir)/build/.*.tmp
++	@(test -d $(src_bindir) || mkdir $(src_bindir))
++	@(test -d $(src_config_objlibdir) || mkdir $(src_config_objlibdir))
+ 
+-emulator: ${src_config_prefix}/xsb_config.h ${src_config_prefix}/xsb_debug.h
++emulator: ${src_config_prefix}/xsb_config.h ${src_config_prefix}/xsb_debug.h prepare
+ 	@echo ""; echo "Making emulator..." ; \
+ 		cd ${src_emudir} ; \
+-		makedepend || echo "" ; \
+ 		rm -f $(srcdir)/build/.xsb_build_failed; \
+-		(make EXECUTABLE="$(EXECUTABLE)" $(emumake_goal) || \
++		($(MAKE) EXECUTABLE="$(EXECUTABLE)" $(emumake_goal) || \
+ 			$(srcdir)/build/touch.sh $(srcdir)/build/.xsb_build_failed) \
+ 		2>&1 | tee -a ../build/Installation_summary; \
+ 		(test ! -f $(srcdir)/build/.xsb_build_failed || \
+ 					(rm -f $(srcdir)/build/.xsb_build_failed; exit 1))
+ 
+-gpp_exe:
++gpp_exe: xsbmod
+ 	@echo ""; echo "Making gpp"
+-	@cd $(srcdir)/gpp; make 2>&1 | tee -a ../build/Installation_summary
++	@cd $(srcdir)/gpp; $(MAKE) 2>&1 | tee -a ../build/Installation_summary
+ 
+ # Compiling the interface with SMODELS.
+ xasp:
+@@ -222,10 +215,10 @@
+ 
+ # if supporting Oracle, then emumake_goal=xsbora; else emumake_goal=xsb
+ # This invokes xsboramod and xsbmod goals in emuMakefile, respectively
+-xsbmod: ${src_config_prefix}/xsb_config.h ${src_config_prefix}/xsb_debug.h
++xsbmod: ${src_config_prefix}/xsb_config.h ${src_config_prefix}/xsb_debug.h emulator
+ 	@echo ""; echo "Making XSB module..."
+ 	@cd ${src_emudir}; \
+-		make $(emumake_goal)mod
++		$(MAKE) $(emumake_goal)mod
+ 
+ xsbdynmod: ${src_config_prefix}/xsb_config.h ${src_config_prefix}/xsb_debug.h
+ 	@cd ${src_emudir}; \
+@@ -270,7 +263,7 @@
+ 	@./register.sh
+ 
+ 
+-install:: make_directories copy_files configure_packages_install
++install:: make_directories copy_files
+ 
+ make_directories::
+ 	@echo "Verifying that installtion directories exist..."
+@@ -300,11 +293,6 @@
+ 		mkdir -p "${install_scriptdir}" ) && \
+ 		  echo "ok" || \
+ 		(echo "FAILED"; echo "+++Can't create ${install_scriptdir}" >> .missingdirs.tmp)
+-	@echo -n "Directory: ${install_builddir}..."
+-	  @(test -d "${install_builddir}" || \
+-		mkdir -p "${install_builddir}" ) && \
+-		  echo "ok" || \
+-		(echo "FAILED"; echo "+++Can't create ${install_builddir}" >> .missingdirs.tmp)
+ 	@echo -n "Directory: ${install_bindir}..."
+ 	  @(test -d "${install_bindir}" || \
+ 		mkdir -p "${install_bindir}" ) && \
+@@ -361,10 +344,6 @@
+ 		cp -f ${src_scriptdir}/xsb${config_tag} \
+ 				${install_scriptdir}/xsb${config_tag}; \
+ 		chmod 755 ${install_scriptdir}/* ${install_bindir}/* ; \
+-		cp -f ${srcdir}/build/config.sub \
+-		  ${srcdir}/build/config.guess \
+-		  ${prefix}/build; \
+-		chmod 755 ${prefix}/build/* ; \
+ 		echo "Copying config..." ; \
+ 		cp -f ${src_config_libdir}/xsb_configuration.* \
+ 			  ${install_config_libdir} ; \
+@@ -400,11 +379,6 @@
+ 		cp -f ${src_cmplibdir}/*$(xsb_obj_extension) ${install_cmplibdir} ; \
+ 		chmod 644 ${install_cmplibdir}/*$(xsb_obj_extension) ; \
+ 		./copysubdirs.sh ${src_cmplibdir} ${install_cmplibdir} ; \
+-		echo "Copying packages..."; \
+-		cp -f ${src_pkgdir}/*$(xsb_obj_extension) ${install_pkgdir}; \
+-		cp -f ${src_pkgdir}/*.P ${install_pkgdir}; \
+-		./touch.sh ${install_pkgdir}/*$(xsb_obj_extension); \
+-		./copysubdirs.sh ${src_pkgdir} ${install_pkgdir} ; \
+ 		echo "Copying etc..."; \
+ 		cp -fr ${src_etcdir}/* ${install_etcdir}; \
+ 		echo "Copying examples..."; \
+@@ -420,8 +394,8 @@
+ 	@./pkg_config.sh $(install_scriptdir)/xsb$(config_tag) ; \
+ 	  chmod 644  $(install_config_libdir)/xsb_configuration$(xsb_obj_extension)
+ 
+-remake_dot_O_files:
+-	@cd $(srcdir); make XSB=$(src_scriptdir)/xsb$(config_tag)
++remake_dot_O_files: gpp_exe
++	@cd $(srcdir); $(MAKE) XSB=$(src_scriptdir)/xsb$(config_tag)
+ 
+ remake_dot_O_files_force:
+ 	@cd $(srcdir); make force XSB=$(src_scriptdir)/xsb$(config_tag)

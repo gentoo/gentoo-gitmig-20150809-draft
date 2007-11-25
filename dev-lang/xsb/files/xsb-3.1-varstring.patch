@@ -1,0 +1,20 @@
+--- XSB.orig/emu/varstring_xsb.h	2005-07-08 06:59:43.000000000 +1200
++++ XSB/emu/varstring_xsb.h	2007-11-25 08:28:36.000000000 +1300
+@@ -40,7 +40,7 @@
+   void (*appendc)(VarString*,char);    /* append char to VarString   */
+   void (*prependv)(VarString*,VarString*); /* prepend 2nd VarString to 1st  */
+   int  (*compare)(VarString*,VarString*);  /* like strcmp for VarStrings    */
+-  int  (*strcmp)(VarString*,char*);        /* compare VarString to a char*  */
++  int  (*str_cmp)(VarString*,char*);        /* compare VarString to a char*  */
+ 
+   /* append block of N chars; don't NULL-terminate */
+   void (*appendblk)(VarString*,char*,int); 
+@@ -84,7 +84,7 @@
+ #define XSB_StrAppendC(vstr,code)      (vstr)->op->appendc(vstr,code)
+ #define XSB_StrPrependV(vstr1,vstr2)   (vstr)->op->prependv(vstr1,vstr2)
+ #define XSB_StrCompare(vstr1,vstr2)    (vstr1)->op->compare(vstr1,vstr2)
+-#define XSB_StrCmp(vstr,str)           (vstr)->op->strcmp(vstr,str)
++#define XSB_StrCmp(vstr,str)           (vstr)->op->str_cmp(vstr,str)
+ #define XSB_StrAppendBlk(vstr,blk,sz)  (vstr)->op->appendblk(vstr,blk,sz)
+ #define XSB_StrPrependBlk(vstr,blk,sz) (vstr)->op->prependblk(vstr,blk,sz)
+ #define XSB_StrNullTerminate(vstr)     (vstr)->op->null_terminate(vstr)

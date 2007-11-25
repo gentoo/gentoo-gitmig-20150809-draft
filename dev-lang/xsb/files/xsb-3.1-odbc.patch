@@ -1,0 +1,47 @@
+--- XSB.orig/packages/dbdrivers/odbc/configure	2003-09-29 21:40:01.000000000 +1200
++++ XSB/packages/dbdrivers/odbc/configure	2007-11-25 09:32:41.000000000 +1300
+@@ -626,8 +626,8 @@
+    LDFLAGS="-L${with_odbc_libdir} ${LDFLAGS}"
+ fi
+ 
+-echo $ac_n "checking for  in -lodbc""... $ac_c" 1>&6
+-echo "configure:631: checking for  in -lodbc" >&5
++echo $ac_n "checking for SQLAllocEnv in -lodbc""... $ac_c" 1>&6
++echo "configure:631: checking for SQLAllocEnv in -lodbc" >&5
+ ac_lib_var=`echo odbc'_' | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -640,10 +640,10 @@
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char ();
++char SQLAllocEnv ();
+ 
+ int main() {
+-()
++SQLAllocEnv()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:650: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+@@ -661,9 +661,9 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  odbc_error=yes
+ else
+   echo "$ac_t""no" 1>&6
++  odbc_error=yes
+ fi
+ 
+ 
+@@ -809,6 +809,9 @@
+ support=yes
+ fi
+ 
++libdir=`odbc_config --lib-prefix`
++CFLAGS=`odbc_config --cflags`
++LDFLAGS=`odbc_config --libs`
+ 
+ 
+ 
