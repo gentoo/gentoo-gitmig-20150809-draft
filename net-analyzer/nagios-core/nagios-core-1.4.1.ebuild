@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.4.1.ebuild,v 1.9 2007/06/26 02:21:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.4.1.ebuild,v 1.10 2007/11/25 13:53:20 hollow Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -20,7 +20,7 @@ DEPEND="virtual/mailx
 		>=media-libs/jpeg-6b-r3
 		>=media-libs/libpng-1.2.5-r4
 		>=media-libs/gd-1.8.3-r5
-		${NEED_APACHE_DEPEND}
+		${APACHE2_DEPEND}
 	)
 	perl? ( >=dev-lang/perl-5.6.1-r7 )
 	mysql? ( virtual/mysql )
