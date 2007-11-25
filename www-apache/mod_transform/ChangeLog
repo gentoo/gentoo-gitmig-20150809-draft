@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_transform
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/ChangeLog,v 1.4 2007/09/23 16:02:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/ChangeLog,v 1.5 2007/11/25 13:38:56 hollow Exp $
+
+  25 Nov 2007; Benedikt Böhm <hollow@gentoo.org>
+  mod_transform-0.6.0.ebuild, mod_transform-0.7.0_pre20070204.ebuild:
+  fix apache-module eclass usage
 
   23 Sep 2007; nixnut <nixnut@gentoo.org>
   mod_transform-0.7.0_pre20070204.ebuild:

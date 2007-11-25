@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/mod_transform-0.6.0.ebuild,v 1.1 2007/07/29 15:30:50 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/mod_transform-0.6.0.ebuild,v 1.2 2007/11/25 13:38:56 hollow Exp $
 
 inherit apache-module
 
@@ -29,5 +29,5 @@ src_compile() {
 
 src_install() {
 	mv -f "src/.libs/libmod_transform.so" "src/.libs/${PN}.so" || die "mv failed"
-	apache2_src_install
+	apache-module_src_install
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/mod_transform-0.7.0_pre20070204.ebuild,v 1.2 2007/09/23 16:02:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/mod_transform-0.7.0_pre20070204.ebuild,v 1.3 2007/11/25 13:38:56 hollow Exp $
 
 inherit apache-module
 
@@ -42,5 +42,5 @@ src_install() {
 	insinto ${PLUGIN_DIR}
 	doins src/.libs/http.so
 
-	apache2_src_install
+	apache-module_src_install
 }

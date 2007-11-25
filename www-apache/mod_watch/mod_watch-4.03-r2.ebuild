@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_watch/mod_watch-4.03-r2.ebuild,v 1.1 2007/07/29 14:01:06 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_watch/mod_watch-4.03-r2.ebuild,v 1.2 2007/11/25 13:37:21 hollow Exp $
 
 inherit apache-module
 
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	apache2_src_install
+	apache-module_src_install
 	dosbin apache2mrtg.pl mod_watch.pl Contrib/mod_watch_list.pl
 	keepdir /var/lib/${PN}
 }

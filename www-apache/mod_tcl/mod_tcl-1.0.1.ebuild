@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/mod_tcl-1.0.1.ebuild,v 1.5 2007/10/13 19:02:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/mod_tcl-1.0.1.ebuild,v 1.6 2007/11/25 13:33:16 hollow Exp $
 
 inherit apache-module
 
@@ -27,5 +27,5 @@ need_apache2
 
 src_compile() {
 	mv -f "tcl_core.c" "${PN}.c"
-	apache2_src_compile
+	apache-module_src_compile
 }

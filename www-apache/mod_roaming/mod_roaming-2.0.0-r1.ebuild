@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_roaming/mod_roaming-2.0.0-r1.ebuild,v 1.1 2007/07/29 14:11:12 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_roaming/mod_roaming-2.0.0-r1.ebuild,v 1.2 2007/11/25 13:34:35 hollow Exp $
 
 inherit apache-module
 
@@ -22,5 +22,5 @@ need_apache2
 
 pkg_postinst() {
 	install -d -m 0755 -o apache -g apache "${ROOT}"/var/lib/${PN}
-	apache2_pkg_postinst
+	apache-module_pkg_postinst
 }
