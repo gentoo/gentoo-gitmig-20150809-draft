@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.75 2007/11/25 09:24:00 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.76 2007/11/25 11:17:35 drac Exp $
+
+  25 Nov 2007; Samuli Suominen <drac@gentoo.org> xalan-2.7.0-r4.ebuild:
+  amd64 stable wrt #199501
 
   25 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org> xalan-2.7.0-r4.ebuild:
   Stable on ppc, bug #199501.

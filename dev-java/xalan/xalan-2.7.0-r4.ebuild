@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r4.ebuild,v 1.4 2007/11/25 09:24:00 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r4.ebuild,v 1.5 2007/11/25 11:17:35 drac Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://apache/xml/${MY_PN}/source/${SRC_DIST}
 	doc? ( mirror://apache/xml/${MY_PN}/binaries/${BIN_DIST} )"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 ~x86 ~x86-fbsd"
 IUSE="doc source"
 COMMON_DEP="
 	dev-java/javacup
