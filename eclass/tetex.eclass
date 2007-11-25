@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.52 2007/09/04 12:06:58 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.53 2007/11/25 17:00:22 aballier Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -253,9 +253,9 @@ tetex_pkg_postinst() {
 		/usr/sbin/texmf-update
 	fi
 	if [ -d "/etc/texmf" ] ; then
-		einfo
-		einfo "If you have configuration files in /etc/texmf to merge,"
-		einfo "please update them and run /usr/sbin/texmf-update."
-		einfo
+		elog
+		elog "If you have configuration files in /etc/texmf to merge,"
+		elog "please update them and run /usr/sbin/texmf-update."
+		elog
 	fi
 }
