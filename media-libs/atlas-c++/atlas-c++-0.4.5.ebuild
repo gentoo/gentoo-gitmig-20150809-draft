@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.4.5.ebuild,v 1.11 2007/05/06 00:28:03 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.4.5.ebuild,v 1.12 2007/11/25 10:19:45 tupone Exp $
 
 MY_PN="Atlas-C++"
 MY_P=${MY_PN}-${PV}
@@ -26,7 +26,7 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
-	dodoc AUTHORS COPYING ChangeLog NEWS README ROADMAP THANKS TODO
+	dodoc AUTHORS ChangeLog NEWS README ROADMAP THANKS TODO
 }

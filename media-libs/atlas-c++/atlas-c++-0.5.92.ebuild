@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.5.92.ebuild,v 1.3 2007/05/06 00:28:03 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.5.92.ebuild,v 1.4 2007/11/25 10:19:45 tupone Exp $
 
 inherit eutils
 
@@ -20,10 +20,10 @@ DEPEND="virtual/libc
 	>=dev-libs/libsigc++-1.2"
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	#dodoc will install all these docs and a few more
-	rm -rf ${D}/usr/share/doc/${My_P}
+	rm -rf "${D}"/usr/share/doc/${My_P}
 	#PR=r0 in this case, but don't fprget to add ${PR} here for non-zero revisions!
 
-	dodoc AUTHORS COPYING ChangeLog NEWS README ROADMAP THANKS TODO
+	dodoc AUTHORS ChangeLog NEWS README ROADMAP THANKS TODO
 }
