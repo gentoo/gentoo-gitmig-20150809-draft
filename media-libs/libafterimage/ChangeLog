@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libafterimage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.6 2007/11/25 18:36:09 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.7 2007/11/25 19:07:21 killerfox Exp $
+
+  25 Nov 2007; René Nussbaumer <killerfox@gentoo.org>
+  libafterimage-1.15.ebuild:
+  Added to ~hppa.
 
   25 Nov 2007; René Nussbaumer <killerfox@gentoo.org>
   libafterimage-1.15.ebuild:
