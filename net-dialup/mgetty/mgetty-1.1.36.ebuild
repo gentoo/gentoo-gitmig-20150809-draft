@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36.ebuild,v 1.1 2007/09/14 20:33:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36.ebuild,v 1.2 2007/11/25 08:21:35 mrness Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
-DESCRIPTION="Fax and Voice modem programs."
+DESCRIPTION="fax and voice modem programs"
 SRC_URI="ftp://mgetty.greenie.net/pub/mgetty/source/1.1/${PN}${PV}-Jun15.tar.gz"
 HOMEPAGE="http://mgetty.greenie.net/"
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
-IUSE="doc fidonet"
+IUSE="doc fidonet nofax"
 
 pkg_setup() {
 	enewgroup fax
@@ -36,6 +36,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-qa-fixes.patch"
 	epatch "${FILESDIR}/${P}-callback.patch" # add callback install to Makefile
 	epatch "${FILESDIR}/Lucent.c.patch" # Lucent modem CallerID patch - bug #80366
+	use nofax && epatch "${FILESDIR}/${P}-nofax.patch" # don't install fax related files - bug #195467
 
 	sed -e 's:var/log/mgetty:var/log/mgetty/mgetty:' \
 		-e 's:var/log/sendfax:var/log/mgetty/sendfax:' \
@@ -113,12 +114,14 @@ src_install () {
 	docinto vgetty/doc
 	dodoc voice/doc/*
 
-	mv samples/new_fax.all samples_new_fax.all || die "move failed."
-	docinto samples
-	dodoc samples/*
+	if ! use nofax; then
+		mv samples/new_fax.all samples_new_fax.all || die "move failed."
+		docinto samples
+		dodoc samples/*
 
-	docinto samples/new_fax
-	dodoc samples_new_fax.all/*
+		docinto samples/new_fax
+		dodoc samples_new_fax.all/*
+	fi
 
 	insinto /usr/share/${PN}
 	doins -r patches frontends
@@ -129,10 +132,12 @@ src_install () {
 	dodir /var/spool/voice
 	keepdir /var/spool/voice/incoming
 	keepdir /var/spool/voice/messages
-	dodir /var/spool/fax
-	dodir /var/spool/fax/outgoing
-	keepdir /var/spool/fax/outgoing/locks
-	keepdir /var/spool/fax/incoming
+	if ! use nofax; then
+		dodir /var/spool/fax
+		dodir /var/spool/fax/outgoing
+		keepdir /var/spool/fax/outgoing/locks
+		keepdir /var/spool/fax/incoming
+	fi
 }
 
 pkg_postinst() {
