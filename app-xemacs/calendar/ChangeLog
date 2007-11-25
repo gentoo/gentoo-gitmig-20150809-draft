@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/calendar
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.20 2007/10/29 10:23:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.21 2007/11/25 15:00:41 graaff Exp $
+
+  25 Nov 2007; Hans de Graaff <graaff@gentoo.org> calendar-1.32.ebuild:
+  Marked amd64 stable per kingtaco's email to -core
 
   29 Oct 2007; Raúl Porcel <armin76@gentoo.org> calendar-1.32.ebuild:
   alpha/sparc stable wrt #197046
