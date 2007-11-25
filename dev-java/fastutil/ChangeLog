@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.38 2007/11/19 18:53:40 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.39 2007/11/25 15:15:49 ranger Exp $
+
+  25 Nov 2007; Brent Baude <ranger@gentoo.org> fastutil-5.0.9.ebuild:
+  Marking fastutil-5.0.9 ppc for bug 199246
 
   19 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   fastutil-5.0.9.ebuild:
