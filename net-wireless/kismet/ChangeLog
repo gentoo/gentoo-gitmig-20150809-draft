@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.96 2007/11/04 10:36:13 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.97 2007/11/25 07:15:52 cla Exp $
+
+*kismet-2007.10.1 (25 Nov 2007)
+
+  25 Nov 2007; Dawid Węgliński <cla@gentoo.org>
+  +files/kismet-2007.10.1-Makefile.in.patch, +kismet-2007.10.1.ebuild:
+  Version bump, fixing bug #195077; thanks to Jukka Ruohonen <drear@iki.fi>
+  for patch
 
   04 Nov 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing myself as the maintainer.
