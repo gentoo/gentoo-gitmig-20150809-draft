@@ -1,20 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5b.ebuild,v 1.1 2007/11/03 21:29:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5_beta3.ebuild,v 1.1 2007/11/25 00:29:38 matsuu Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
 
 inherit autotools eutils multilib toolchain-funcs
 
-MY_P="${PN}${PV/b/b2}"
+MY_P="${PN}${PV/_beta/b}"
 DESCRIPTION="Tk Widget Set"
 HOMEPAGE="http://www.tcl.tk/"
 SRC_URI="mirror://sourceforge/tcl/${MY_P}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug threads"
 
 RDEPEND="x11-libs/libX11
