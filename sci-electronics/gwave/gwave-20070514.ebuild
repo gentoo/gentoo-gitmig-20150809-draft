@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20070514.ebuild,v 1.2 2007/11/25 16:10:40 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20070514.ebuild,v 1.3 2007/11/25 16:22:16 calchan Exp $
 
 MY_P="${PN}2-${PV}"
 DESCRIPTION="Analog waveform viewer for SPICE-like simulations"
 LICENSE="GPL-2"
 HOMEPAGE="http://www.geda.seul.org/tools/gwave/"
-SRC_URI="http://www.geda.seul.org/dist/${MY_P}.tar.gz"
+SRC_URI="http://www.telltronics.org/pub/gwave/${MY_P}.tar.gz"
 
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gnuplot plotutils"
