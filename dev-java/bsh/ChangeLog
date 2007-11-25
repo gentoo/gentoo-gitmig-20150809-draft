@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/bsh
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.48 2007/11/18 18:05:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.49 2007/11/25 11:05:14 nelchael Exp $
+
+  25 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  bsh-2.0_beta4-r3.ebuild:
+  Stable on ppc, bug #199237.
 
   18 Nov 2007; Markus Rothe <corsair@gentoo.org> bsh-2.0_beta4-r3.ebuild:
   Stable on ppc64; bug #199237
