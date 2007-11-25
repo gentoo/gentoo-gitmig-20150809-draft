@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.58 2007/11/02 19:10:44 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.59 2007/11/25 01:24:38 ranger Exp $
+
+  25 Nov 2007; Brent Baude <ranger@gentoo.org> lshw-02.11.01b.ebuild:
+  Marked lshw-02.11.01b ppc stable for bug 194114
 
   02 Nov 2007; Steve Dibb <beandog@gentoo.org> lshw-02.11.01b.ebuild:
   Drop amd64 stable keyword
