@@ -1,6 +1,9 @@
 # ChangeLog for app-office/tedia2sql
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tedia2sql/ChangeLog,v 1.11 2007/05/15 09:45:54 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tedia2sql/ChangeLog,v 1.12 2007/11/25 17:22:48 drac Exp $
+
+  25 Nov 2007; Samuli Suominen <drac@gentoo.org> tedia2sql-1.2.12.ebuild:
+  Keyword ~amd64 wrt #192542.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
