@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gwave
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.14 2007/11/25 14:54:46 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.15 2007/11/25 16:10:40 calchan Exp $
+
+  25 Nov 2007; Denis Dupeyron <calchan@gentoo.org> gwave-20070514.ebuild:
+  Re-keyworded ~amd64 now that dev-scheme/guile-gnome-platform works on that
+  architecture.
 
 *gwave-20070514 (25 Nov 2007)
 
