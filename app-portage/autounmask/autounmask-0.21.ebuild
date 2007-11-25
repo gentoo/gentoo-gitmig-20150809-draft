@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/autounmask-0.21.ebuild,v 1.3 2007/11/25 10:54:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/autounmask-0.21.ebuild,v 1.4 2007/11/25 15:03:52 opfer Exp $
 
 DESCRIPTION="autounmask - Unmasking packages the easy way"
 HOMEPAGE="http://download.mpsna.de/opensource/autounmask/"
@@ -8,7 +8,7 @@ SRC_URI="http://download.mpsna.de/opensource/autounmask/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ia64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
