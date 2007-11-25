@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/zemberek-2.0.ebuild,v 1.4 2007/11/25 12:29:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/zemberek-2.0.ebuild,v 1.5 2007/11/25 12:30:14 drac Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -29,7 +29,7 @@ DEPEND=">=virtual/jdk-1.5
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	mkdir lib/dagitim
 	rm lib/gelistirme/*.jar
 }
