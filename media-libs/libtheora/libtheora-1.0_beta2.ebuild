@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_beta2.ebuild,v 1.1 2007/11/25 21:11:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_beta2.ebuild,v 1.2 2007/11/25 21:12:14 drac Exp $
 
 inherit autotools eutils
 
@@ -32,7 +32,6 @@ src_compile() {
 	local myconf
 
 	use pic && myconf="--disable-asm"
-		
 	use doc || export ac_cv_prog_HAVE_DOXYGEN="false"
 
 	econf --disable-dependency-tracking --disable-examples \
