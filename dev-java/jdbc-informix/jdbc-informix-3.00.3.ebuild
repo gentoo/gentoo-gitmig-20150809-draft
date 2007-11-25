@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/jdbc-informix-3.00.3.ebuild,v 1.2 2007/11/01 20:50:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/jdbc-informix-3.00.3.ebuild,v 1.3 2007/11/25 08:54:44 caster Exp $
 
 JAVA_PKG_IUSE="doc examples"
 
@@ -35,6 +35,7 @@ pkg_nofetch() {
 
 src_compile() {
 	einfo "Performing silent installation"
+	addpredict /root/vpd.properties
 	java -jar setup.jar -P product.installLocation=. -silent
 	if use examples; then
 		einfo "Cleaning compiled examples"
