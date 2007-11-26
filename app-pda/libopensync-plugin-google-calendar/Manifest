@@ -11,10 +11,14 @@ EBUILD libopensync-plugin-google-calendar-0.22.ebuild 705 RMD160 d6c9fd196e3b622
 MD5 e40c064bc1e1013412c609e072c18de0 libopensync-plugin-google-calendar-0.22.ebuild 705
 RMD160 d6c9fd196e3b62293ea047448bc409563c65e745 libopensync-plugin-google-calendar-0.22.ebuild 705
 SHA256 6eb8d1cb1fd85978e1c34babc52fbfd39e6961aa962231000445bd8eec7dfb29 libopensync-plugin-google-calendar-0.22.ebuild 705
-MISC ChangeLog 1382 RMD160 f6a91e1ee24620f8c7682060791eeb5f5fb8f781 SHA1 733ac06cc345e7f27e4296a066b7f4a6e1c620aa SHA256 690f2ecfb12df2db2707a5fed56788d4772cd3ac3099cf5d2bc65317d2aa2e7f
-MD5 2f6669cda6257ecd89668b8b831773e2 ChangeLog 1382
-RMD160 f6a91e1ee24620f8c7682060791eeb5f5fb8f781 ChangeLog 1382
-SHA256 690f2ecfb12df2db2707a5fed56788d4772cd3ac3099cf5d2bc65317d2aa2e7f ChangeLog 1382
+EBUILD libopensync-plugin-google-calendar-9999.ebuild 615 RMD160 826b264432729d388a5055da74bdaa4497a2b553 SHA1 13657a303c57304d8e500c2a33206d7490f186b3 SHA256 163ce467e228eea26e6ef14c051b533d0f08869ba09a4ff5aa2fcae29699349a
+MD5 24d0712c3635319ec067be06b9557c15 libopensync-plugin-google-calendar-9999.ebuild 615
+RMD160 826b264432729d388a5055da74bdaa4497a2b553 libopensync-plugin-google-calendar-9999.ebuild 615
+SHA256 163ce467e228eea26e6ef14c051b533d0f08869ba09a4ff5aa2fcae29699349a libopensync-plugin-google-calendar-9999.ebuild 615
+MISC ChangeLog 1566 RMD160 d3d9a2034dde7452e3a6849eea1bf3db9009f085 SHA1 f4109746d6694b9e2dd40ab7ff03154ba86aed67 SHA256 1d5a9ab2e8bce9af79f39a93607322b8cd049c4934e57c3cab1b9ee70d80c25b
+MD5 914ffa2abfdaa7d5a8f0330af455e624 ChangeLog 1566
+RMD160 d3d9a2034dde7452e3a6849eea1bf3db9009f085 ChangeLog 1566
+SHA256 1d5a9ab2e8bce9af79f39a93607322b8cd049c4934e57c3cab1b9ee70d80c25b ChangeLog 1566
 MISC metadata.xml 304 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 SHA1 b96c72c417192c099990a616b12a1d2f55a06064 SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a
 MD5 45ae331a9c100ecabad1b4cd916f3d37 metadata.xml 304
 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 metadata.xml 304
@@ -25,10 +29,13 @@ SHA256 b3b99302645e5db4eb0dad25b9db03dc9714ac4bd0cc2aff0e80ff4cf853c1e5 files/di
 MD5 7ef438af1d1ace561e710e1e0d89cd24 files/digest-libopensync-plugin-google-calendar-0.22 322
 RMD160 348e6d4b3ef95eb4ebf4e7563080777ad3b7ef0b files/digest-libopensync-plugin-google-calendar-0.22 322
 SHA256 a0162170e557cb53acb01f76f7ac0dc9ac312209ba484300ee82cd917d002a3c files/digest-libopensync-plugin-google-calendar-0.22 322
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-libopensync-plugin-google-calendar-9999 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-libopensync-plugin-google-calendar-9999 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-libopensync-plugin-google-calendar-9999 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
+Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFGCs2SppoStNGKGywRAlJrAJ9T8T4f8waHgY+Ki+R9/9lepcGgrgCeOLOB
-OL1UGttQ1V1VxFysGoA+NBU=
-=SYvp
+iD8DBQFHSymyppoStNGKGywRAtl+AKCC50aAiKrXRGtysU1CX/+VEX+pRACgmzBJ
+h0+RVJ1L6G3tRmvNWbeih4c=
+=nDBA
 -----END PGP SIGNATURE-----
