@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/libopensync-plugin-irmc-9999.ebuild,v 1.1 2007/11/26 20:18:45 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/libopensync-plugin-irmc-9999.ebuild,v 1.2 2007/11/26 20:20:06 peper Exp $
 
 inherit eutils cmake-utils subversion
 
@@ -49,6 +49,6 @@ src_compile() {
 	local mycmakeargs="
 		$(cmake-utils_use_enable bluetooth BLUETOOTH)
 		$(cmake-utils_use_enable irda IRDA)"
-	
+
 	cmake-utils_src_compile
 }
