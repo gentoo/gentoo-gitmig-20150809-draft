@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.5 2007/11/26 02:24:29 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.6 2007/11/26 02:44:44 hanno Exp $
 
 inherit eutils python multilib
 
@@ -124,7 +124,7 @@ pkg_postinst() {
 	ewarn "MAILMAN_PREFIX (default: /usr/$(get_libdir)/mailman)"
 	ewarn "MAILMAN_VAR_PREFIX (default: /var/lib/mailman)"
 	ewarn "MAILMAN_CGIGID (default: 81)"
-	ewarn "MAILMAN_CGIEXT (default: empty)" \
+	ewarn "MAILMAN_CGIEXT (default: empty)"
 	ewarn "MAILMAN_MAILUSR (default: mailman)"
 	ewarn "MAILMAN_MAILUID (default: 280)"
 	ewarn "MAILMAN_MAILGRP (default: mailman)"
