@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.3 2007/11/24 16:17:24 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.4 2007/11/26 02:12:38 hanno Exp $
 
 inherit eutils python multilib
 
@@ -39,10 +39,11 @@ src_unpack() {
 
 src_compile() {
 	econf --without-permcheck \
-		--prefix=${INSTALLDIR} \
+		--prefix="${INSTALLDIR}" \
 		--with-mail-gid=${MAILGID} \
 		--with-cgi-gid=${CGIGID} \
-		--with-var-prefix=${VAR_PREFIX} \
+		--with-cgi-ext="${MAILMAN_CGIEXT}" \
+		--with-var-prefix="${VAR_PREFIX}" \
 	|| die "configure failed"
 
 	emake || die "make failed"
@@ -118,6 +119,7 @@ pkg_postinst() {
 	ewarn "MAILMAN_PREFIX (default: /usr/$(get_libdir)/mailman)"
 	ewarn "MAILMAN_VAR_PREFIX (default: /var/lib/mailman)"
 	ewarn "MAILMAN_CGIGID (default: 81)"
+	ewarn "MAILMAN_CGIEXT (default: empty)" \
 	ewarn "MAILMAN_MAILGID (default: 280)"
 	ewarn
 	ewarn "Config file is now symlinked in /etc/mailman, so etc-update works."
