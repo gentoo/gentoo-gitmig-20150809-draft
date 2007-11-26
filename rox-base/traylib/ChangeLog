@@ -1,0 +1,10 @@
+# ChangeLog for rox-base/traylib
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.1 2007/11/26 13:33:56 lack Exp $
+
+*traylib-0.2.5 (26 Nov 2007)
+
+  26 Nov 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +traylib-0.2.5.ebuild:
+  New package: TrayLib is a convenience library used for some rox applets.
+
