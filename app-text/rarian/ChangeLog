@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rarian
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.16 2007/11/24 22:35:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.17 2007/11/26 13:15:46 corsair Exp $
+
+  26 Nov 2007; Markus Rothe <corsair@gentoo.org> rarian-0.6.0-r1.ebuild:
+  Stable on ppc64; bug #199740
 
   24 Nov 2007; Brent Baude <ranger@gentoo.org> rarian-0.6.0-r1.ebuild:
   Marking rarian-0.6.0-r1 ppc stable for bug 199740
