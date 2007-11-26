@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/memcached
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.52 2007/11/18 15:03:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.53 2007/11/26 23:49:05 robbat2 Exp $
+
+  26 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Update metadata to reflect new ownership, as lisa is retiring.
 
   18 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
   memcached-1.1.11.ebuild, memcached-1.1.12.ebuild,
