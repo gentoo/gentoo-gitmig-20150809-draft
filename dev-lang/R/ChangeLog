@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.103 2007/11/22 00:20:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.104 2007/11/26 23:02:37 markusle Exp $
+
+*R-2.6.1 (26 Nov 2007)
+
+  26 Nov 2007; Markus Dittrich <markusle@gentoo.org> +R-2.6.1.ebuild:
+  Version bump.
 
 *R-2.6.0-r2 (21 Nov 2007)
 
