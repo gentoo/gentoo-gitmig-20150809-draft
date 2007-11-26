@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libafterimage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.7 2007/11/25 19:07:21 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.8 2007/11/26 15:17:02 corsair Exp $
+
+  26 Nov 2007; Markus Rothe <corsair@gentoo.org> libafterimage-1.15.ebuild:
+  Added ~ppc64; bug #200316
 
   25 Nov 2007; René Nussbaumer <killerfox@gentoo.org>
   libafterimage-1.15.ebuild:
