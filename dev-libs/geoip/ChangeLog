@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.71 2007/06/05 22:11:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.72 2007/11/26 15:07:04 jokey Exp $
+
+  26 Nov 2007; Markus Ullmann <jokey@gentoo.org> geoip-1.4.2.ebuild:
+  even parallel install explodes, see bug #198531
 
   05 Jun 2007; Markus Ullmann <jokey@gentoo.org> geoip-1.4.0-r1.ebuild,
   geoip-1.4.2.ebuild:
