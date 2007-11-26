@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.31 2007/11/26 08:17:37 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.32 2007/11/26 14:48:55 jer Exp $
+
+  26 Nov 2007; Jeroen Roovers <jer@gentoo.org> Manifest:
+  Fix manifest.
 
 *apcupsd-3.14.2 (26 Nov 2007)
 
