@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.89 2007/11/26 21:15:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.90 2007/11/26 23:27:40 ranger Exp $
+
+  26 Nov 2007; Brent Baude <ranger@gentoo.org> rails-1.2.6.ebuild:
+  Marking rails-1.2.6 ppc for bug 200159
 
   26 Nov 2007; Christian Faulhammer <opfer@gentoo.org> rails-1.2.6.ebuild:
   stable x86, security bug 200159
