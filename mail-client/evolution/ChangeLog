@@ -1,6 +1,32 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.214 2007/11/26 13:55:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.215 2007/11/26 16:27:32 dang Exp $
+
+*evolution-2.12.2 (26 Nov 2007)
+
+  26 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> +evolution-2.12.2.ebuild:
+  Bump to 2.12.2
+  	- Do not start appointment time drop-down at midnight (Milan Crha)
+  	- New task creation can now be aborted by pressing "Escape" (Milan Crha)
+  	- Show description of operation, if available, instead of empty string
+  	  (Milan Crha)
+  	- Stop processing immediately when page is filled incorrectly (Milan Crha)
+  	- Check for non-NULL source before using it to prevent a crash (Milan
+  	  Crha)
+  	- Check for input validity immediately after creating setup widgets (Milan
+  	  Crha)
+  	- Do not forget about organizer icon when counting used icons. (Milan
+  	  Crha)
+  	- Sometimes evolution does not recognize attachments (Milan Crha)
+  	- Free memory properly (Milan Crha)
+  	- Hide completed tasks option requires evo's restart (Milan Crha)
+  	- Plug memory leak (Milan Crha)
+  	- Pass real widget as parent to e_notice, not a GObject. (Milan Crha)
+  	- Message viewer jumps to the top when asking an attachment to be
+  	  displayed inline (Milan Crha)
+  	- Allow saving of multiple attachments with same name (Milan Crha)
+  	- Forgotten "Loading..." node under account name with no subscribed
+  	  folders (Milan Crha)
 
   26 Nov 2007; Markus Rothe <corsair@gentoo.org> evolution-2.12.1.ebuild:
   Stable on ppc64; bug #199740
