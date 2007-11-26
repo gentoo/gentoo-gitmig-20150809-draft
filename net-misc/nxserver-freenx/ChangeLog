@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.37 2007/11/07 09:52:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.38 2007/11/26 12:50:25 voyageur Exp $
+
+  26 Nov 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  files/nxserver-freenx-0.7.1-nxloadconfig.patch:
+  Fix nxloadconfig patch, thanks Bruno Redondi <bruno@altarisoluzione.com> in
+  bug #198927
 
   07 Nov 2007; Bernard Cafarelli <voyageur@gentoo.org>
   nxserver-freenx-0.7.1.ebuild:
