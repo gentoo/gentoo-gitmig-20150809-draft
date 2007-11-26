@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.4.6.ebuild,v 1.1 2007/11/25 17:21:16 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.4.6-r1.ebuild,v 1.1 2007/11/26 12:09:04 chtekk Exp $
 
 # NOTE: this ebuild is a regular ebuild without mailer-config support!
 # Comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -21,7 +21,7 @@ IUSE="cdb dovecot-sasl hardened ipv6 ldap mailwrapper mbox mysql nis pam postgre
 MY_PV="${PV/_rc/-RC}"
 MY_SRC="${PN}-${MY_PV}"
 MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
-VDA_P="${P}-vda-ng-r1"
+VDA_P="${P}-vda-ng-r2"
 RC_VER="2.2.9"
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail."

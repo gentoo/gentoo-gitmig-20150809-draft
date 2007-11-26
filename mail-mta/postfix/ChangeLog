@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.140 2007/11/25 17:21:16 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.141 2007/11/26 12:09:04 chtekk Exp $
+
+*postfix-2.4.6-r1 (26 Nov 2007)
+
+  26 Nov 2007; Luca Longinotti <chtekk@gentoo.org> -postfix-2.4.6.ebuild,
+  +postfix-2.4.6-r1.ebuild:
+  Fix VDA-NG with quota=0 and mailboxes.
 
 *postfix-2.4.6 (25 Nov 2007)
 
