@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.33 2007/11/24 23:11:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.34 2007/11/26 14:26:30 corsair Exp $
+
+  26 Nov 2007; Markus Rothe <corsair@gentoo.org> sabayon-2.20.1.ebuild:
+  Stable on ppc64; bug #199740
 
   24 Nov 2007; Brent Baude <ranger@gentoo.org> sabayon-2.20.1.ebuild:
   Marking sabayon-2.20.1 ppc stable for bug 199740
