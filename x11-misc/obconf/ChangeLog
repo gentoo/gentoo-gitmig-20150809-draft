@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.49 2007/11/24 17:29:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.50 2007/11/26 08:03:07 omp Exp $
+
+  26 Nov 2007; David Shakaryan <omp@gentoo.org> -obconf-1.6.ebuild,
+  -obconf-2.0.1.ebuild:
+  Remove older versions.
 
   24 Nov 2007; nixnut <nixnut@gentoo.org> obconf-2.0.2.ebuild:
   Stable on ppc wrt bug 200033
