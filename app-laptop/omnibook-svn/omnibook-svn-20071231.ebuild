@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook-svn/omnibook-svn-20073112.ebuild,v 1.1 2007/11/26 07:35:06 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook-svn/omnibook-svn-20071231.ebuild,v 1.1 2007/11/26 07:40:03 s4t4n Exp $
 
 inherit linux-mod subversion
 
