@@ -1,0 +1,29 @@
+--- TaskTray-orig/AppletRun	2007-06-29 16:06:19.000000000 -0400
++++ TaskTray/AppletRun	2007-11-25 14:42:27.000000000 -0500
+@@ -12,7 +12,7 @@
+ def debug(message):
+ 	sys.stderr.write(str(message) + "\n")
+ 
+-def active_workspace_changed(screen):
++def active_workspace_changed(screen, dummy=None):
+ 	"""Called when the active workspace has changed. Hides icons of that don't 
+ 	have windows open on the new workspace and updates the tooltips of all other
+ 	icons."""
+@@ -80,7 +80,7 @@
+ 	else:
+ 		icon.add_window(window)
+ 	icon.show_or_hide()
+-	window.connect("workspace_changed", active_workspace_changed)
++	window.connect("workspace_changed", active_workspace_changed,window)
+ 	window.connect("name_changed", window_name_changed)
+ 	window.connect("icon_changed", window_icon_changed)
+ 	window.connect("state_changed", window_state_changed)
+@@ -117,7 +117,7 @@
+ 	return (window.get_workspace() == screen.get_active_workspace() 
+ 			or window.is_pinned())
+ 
+-def active_window_changed(screen):
++def active_window_changed(screen,dummy=None):
+ 	"""Called when the active window has changed. If the new active window 
+ 	belongs to a different app, it is enlarged and the old one is resized to 
+ 	normal size."""
