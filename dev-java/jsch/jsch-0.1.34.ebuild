@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.34.ebuild,v 1.5 2007/11/17 00:07:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.34.ebuild,v 1.6 2007/11/26 20:17:29 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source examples"
 
@@ -21,7 +21,7 @@ DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}"
 
 src_compile() {
-	eant -Dproject.cp="$(java-pkg_getjars jzlib)" dist $(use_doc)
+	ANT_TASKS="none" eant -Dproject.cp="$(java-pkg_getjars jzlib)" dist $(use_doc)
 }
 
 src_install() {
