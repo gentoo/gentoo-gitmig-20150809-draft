@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.4 2007/11/26 02:12:38 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.5 2007/11/26 02:24:29 hanno Exp $
 
 inherit eutils python multilib
 
@@ -22,13 +22,16 @@ pkg_setup() {
 	INSTALLDIR=${MAILMAN_PREFIX:-"/usr/$(get_libdir)/mailman"}
 	VAR_PREFIX=${MAILMAN_VAR_PREFIX:-"/var/lib/mailman"}
 	CGIGID=${MAILMAN_CGIGID:-81}
+	MAILUSR=${MAILMAN_MAILUSR:-mailman}
+	MAILUID=${MAILMAN_MAILUID:-280}
+	MAILGRP=${MAILMAN_MAILGRP:-mailman}
 	MAILGID=${MAILMAN_MAILGID:-280}
 
 	# Bug #58526: switch to enew{group,user}.
 	# need to add mailman here for compile process.
 	# Duplicated at pkg_postinst() for binary install.
-	enewgroup mailman 280
-	enewuser mailman 280 /bin/bash ${INSTALLDIR} mailman -G cron -c mailman
+	enewgroup ${MAILGRP} ${MAILGID}
+	enewuser  ${MAILUSR} ${MAILUID} /bin/bash ${INSTALLDIR} mailman -G cron -c "mailman"
 }
 
 src_unpack() {
@@ -44,6 +47,8 @@ src_compile() {
 		--with-cgi-gid=${CGIGID} \
 		--with-cgi-ext="${MAILMAN_CGIEXT}" \
 		--with-var-prefix="${VAR_PREFIX}" \
+		--with-username=${MAILUSR} \
+		--with-groupname=${MAILGRP} \
 	|| die "configure failed"
 
 	emake || die "make failed"
@@ -87,7 +92,7 @@ src_install () {
 	keepdir ${VAR_PREFIX}/lists
 	keepdir ${VAR_PREFIX}/qfiles
 
-	chown -R mailman:mailman "${D}/${VAR_PREFIX}" "${D}/${INSTALLDIR}" "${D}"/etc/mailman/*
+	chown -R ${MAILUSR}:${MAILGRP} "${D}/${VAR_PREFIX}" "${D}/${INSTALLDIR}" "${D}"/etc/mailman/*
 	chmod 2775 "${D}/${INSTALLDIR}" "${D}/${INSTALLDIR}"/templates/* \
 		"${D}/${INSTALLDIR}"/messages/* "${D}/${VAR_PREFIX}" "${D}/${VAR_PREFIX}"/{logs,lists,spam,locks,archives/public}
 	chmod 2750 "${D}/${VAR_PREFIX}/archives/private"
@@ -99,8 +104,8 @@ src_install () {
 pkg_postinst() {
 	python_mod_optimize ${INSTALLDIR}/bin/ ${INSTALLDIR}/Mailman
 
-	enewgroup mailman 280
-	enewuser mailman 280 -1 ${INSTALLDIR} mailman -G cron -c "mailman"
+	enewgroup ${MAILGRP} ${MAILGID}
+	enewuser  ${MAILUSR} ${MAILUID} -1 ${INSTALLDIR} mailman -G cron -c "mailman"
 	elog
 	elog "Please read /usr/share/doc/${PF}/README.gentoo.gz for additional"
 	elog "Setup information, mailman will NOT run unless you follow"
@@ -120,6 +125,9 @@ pkg_postinst() {
 	ewarn "MAILMAN_VAR_PREFIX (default: /var/lib/mailman)"
 	ewarn "MAILMAN_CGIGID (default: 81)"
 	ewarn "MAILMAN_CGIEXT (default: empty)" \
+	ewarn "MAILMAN_MAILUSR (default: mailman)"
+	ewarn "MAILMAN_MAILUID (default: 280)"
+	ewarn "MAILMAN_MAILGRP (default: mailman)"
 	ewarn "MAILMAN_MAILGID (default: 280)"
 	ewarn
 	ewarn "Config file is now symlinked in /etc/mailman, so etc-update works."
