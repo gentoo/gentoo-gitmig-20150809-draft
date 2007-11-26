@@ -1,0 +1,61 @@
+*** platforms/etc.bak/changeme.in       2007-02-18 14:58:16.000000000 +0100
+--- platforms/etc/changeme.in   2007-02-18 15:01:36.000000000 +0100
+***************
+*** 13,18 ****
+--- 13,19 ----
+  #
+  (
+     echo "Subject: $MSG"
++    echo "To: $SYSADMIN"
+     echo " "
+     echo "$MSG"
+     echo " "
+*** platforms/etc.bak/commfailure.in    2007-02-18 14:58:16.000000000 +0100
+--- platforms/etc/commfailure.in        2007-02-18 15:01:56.000000000 +0100
+***************
+*** 13,18 ****
+--- 13,19 ----
+  #
+  (
+     echo "Subject: $MSG"
++    echo "To: $SYSADMIN"
+     echo " "
+     echo "$MSG"
+     echo " "
+*** platforms/etc.bak/commok.in 2007-02-18 14:58:16.000000000 +0100
+--- platforms/etc/commok.in     2007-02-18 15:02:24.000000000 +0100
+***************
+*** 13,18 ****
+--- 13,19 ----
+  #
+  (
+     echo "Subject: $MSG"
++    echo "To: $SYSADMIN"
+     echo " "
+     echo "$MSG"
+     echo " "
+*** platforms/etc.bak/offbattery.in     2007-02-18 14:58:16.000000000 +0100
+--- platforms/etc/offbattery.in 2007-02-18 15:04:43.000000000 +0100
+***************
+*** 13,18 ****
+--- 13,19 ----
+  #
+  (
+     echo "Subject: $MSG"
++    echo "To: $SYSADMIN"
+     echo " "
+     echo "$MSG"
+     echo " "
+*** platforms/etc.bak/onbattery.in      2007-02-18 14:58:16.000000000 +0100
+--- platforms/etc/onbattery.in  2007-02-18 15:04:47.000000000 +0100
+***************
+*** 13,18 ****
+--- 13,19 ----
+  #
+  (
+     echo "Subject: $MSG"
++    echo "To: $SYSADMIN"
+     echo " "
+     echo "$MSG"
+     echo " "
+
