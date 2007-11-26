@@ -1,0 +1,26 @@
+diff -ur hrktorrent-0.2.2.orig/Makefile hrktorrent-0.2.2/Makefile
+--- hrktorrent-0.2.2.orig/Makefile	2007-11-25 17:17:16.000000000 +0200
++++ hrktorrent-0.2.2/Makefile	2007-11-26 21:26:51.000000000 +0200
+@@ -1,17 +1,17 @@
+-C	= g++
++CXX	= g++
+ OBJ	= main.o core.o settings.o utils.o
+ OUT	= hrktorrent
+ 
+-CFLAGS 	= `pkg-config --cflags libtorrent` -O2 -pipe
+-LDFLAGS	= `pkg-config --libs libtorrent` -lpthread
++CXXFLAGS	+= `pkg-config --cflags libtorrent`
++LIBS		= `pkg-config --libs libtorrent` -lpthread
+ 
+ all: $(OUT)
+ 
+ %.o: %.cpp
+-	$(C) -c -o $@ $<
++	$(CXX) $(CXXFLAGS) -c -o $@ $<
+ 
+ $(OUT): $(OBJ)
+-	$(C) $(LDFLAGS) $(OBJ) -o $(OUT)
++	$(CXX) $(LDFLAGS) $(OBJ) $(LIBS) -o $(OUT)
+ 
+ clean:
+ 	rm -rf $(OBJ) $(OUT)
