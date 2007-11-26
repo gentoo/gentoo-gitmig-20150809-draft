@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.23 2007/11/24 23:08:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.24 2007/11/26 14:20:26 corsair Exp $
+
+  26 Nov 2007; Markus Rothe <corsair@gentoo.org> orca-2.20.1.ebuild:
+  Stable on ppc64; bug #199740
 
   24 Nov 2007; Brent Baude <ranger@gentoo.org> orca-2.20.1.ebuild:
   Marking orca-2.20.1 ppc stable for bug 199740
