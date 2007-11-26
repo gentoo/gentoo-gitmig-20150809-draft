@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/uptimes/uptimes-2.3-r1.ebuild,v 1.2 2007/11/25 21:47:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uptimes/uptimes-2.3-r1.ebuild,v 1.3 2007/11/26 15:18:39 corsair Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ppc64 ~x86"
 IUSE=""
 
 SITEFILE=51${PN}-gentoo.el
