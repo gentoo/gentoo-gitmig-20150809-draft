@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.76 2007/11/17 20:38:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.77 2007/11/26 18:54:06 corsair Exp $
+
+  26 Nov 2007; Markus Rothe <corsair@gentoo.org> less-409.ebuild:
+  Stable on ppc64; bug #200348
 
   17 Nov 2007; Raúl Porcel <armin76@gentoo.org> less-409.ebuild:
   alpha/ia64/sparc/x86 stable
