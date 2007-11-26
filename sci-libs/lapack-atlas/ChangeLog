@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.55 2007/11/26 00:15:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.56 2007/11/26 18:52:13 corsair Exp $
+
+  26 Nov 2007; Markus Rothe <corsair@gentoo.org> lapack-atlas-3.8.0.ebuild:
+  Stable on ppc64; bug #200337
 
   26 Nov 2007; Samuli Suominen <drac@gentoo.org> lapack-atlas-3.8.0.ebuild:
   amd64 stable wrt #200337
