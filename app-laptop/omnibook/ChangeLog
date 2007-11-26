@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/omnibook
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.20 2007/11/25 00:38:14 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.21 2007/11/26 16:10:13 s4t4n Exp $
+
+  26 Nov 2007; Michele Noberasco <s4t4n@gentoo.org> omnibook-20070211.ebuild:
+  Added code to prevent this package from being built on kernels greater than 2.6.11.
+  Closes bug #200399.
 
   25 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   omnibook-20070211.ebuild:

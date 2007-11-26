@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20070211.ebuild,v 1.4 2007/11/25 00:38:14 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20070211.ebuild,v 1.5 2007/11/26 16:10:13 s4t4n Exp $
 
 inherit linux-mod eutils
 
@@ -18,6 +18,10 @@ MODULE_NAMES="omnibook(char:)"
 BUILD_TARGETS=" "
 
 pkg_setup() {
+	if ! kernel_is le 2 6 11; then
+		die "This version of omnibook cannot be built on a kernel > 2.6.11!"
+	fi
+
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERNEL=${KV_MAJOR}.${KV_MINOR} KSRC=${KV_DIR}"
 }
