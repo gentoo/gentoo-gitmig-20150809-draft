@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.913.ebuild,v 1.1 2007/09/18 03:39:22 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.1120.ebuild,v 1.1 2007/11/26 17:17:42 chutzpah Exp $
 
 inherit multilib toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.ntfs-3g.org/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="suid"
+IUSE="debug suid"
 
 RDEPEND=">=sys-fs/fuse-2.6.3"
 DEPEND="${RDEPEND}
@@ -23,7 +23,11 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	econf --disable-ldconfig --libdir=/$(get_libdir)
+	econf \
+		--disable-ldconfig \
+		--libdir=/$(get_libdir) \
+		$(use_enable debug)
+
 	emake || die "emake failed"
 }
 
