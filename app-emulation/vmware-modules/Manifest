@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX patches/000_all_makefile-include-directory.patch 342 RMD160 ae8b7c2e628681fff153bfa10242e62df5ab2e10 SHA1 be4f203063e676dc022ce600e15479b6ea56b954 SHA256 2da16602ef3c4cb040ac80a9fed18660fadcae2e843f425da0872f50aa5356db
 MD5 d2a8db48485977f21067a20798219821 files/patches/000_all_makefile-include-directory.patch 342
 RMD160 ae8b7c2e628681fff153bfa10242e62df5ab2e10 files/patches/000_all_makefile-include-directory.patch 342
@@ -28,10 +25,10 @@ EBUILD vmware-modules-1.0.0.16-r1.ebuild 350 RMD160 1be5daf6e1bbf0a83dace59330e3
 MD5 3b1bba3e7941a463ac4542d07296e6fb vmware-modules-1.0.0.16-r1.ebuild 350
 RMD160 1be5daf6e1bbf0a83dace59330e327d628624cde vmware-modules-1.0.0.16-r1.ebuild 350
 SHA256 191e9998c8351111566e9e2dc68ac5e20f6dd48b6ad1998eb60403b7334158bc vmware-modules-1.0.0.16-r1.ebuild 350
-EBUILD vmware-modules-1.0.0.17.ebuild 629 RMD160 6dd439afb6fca0596ba7a4a49efe910fb0cfe9fb SHA1 be38c5352769deabeb75e9161a1146b72e559660 SHA256 ca201409c490bd16874746fc37a7cbc1ce5646244560cea8424b98044ddc6760
-MD5 4b935906dab4d230150cfefa33bc007c vmware-modules-1.0.0.17.ebuild 629
-RMD160 6dd439afb6fca0596ba7a4a49efe910fb0cfe9fb vmware-modules-1.0.0.17.ebuild 629
-SHA256 ca201409c490bd16874746fc37a7cbc1ce5646244560cea8424b98044ddc6760 vmware-modules-1.0.0.17.ebuild 629
+EBUILD vmware-modules-1.0.0.17.ebuild 631 RMD160 ff0c15ea2f767f35d7ffa7a611f931ced71eff47 SHA1 dcd2851c5e6c591772dd7fa75ac4ce2f857d69df SHA256 d4514fc8c500f87342fa9cd971400919c3b727d71581ab9d6c85e9859036f8ae
+MD5 1686bbc6dfaa539397161dd4815adfcf vmware-modules-1.0.0.17.ebuild 631
+RMD160 ff0c15ea2f767f35d7ffa7a611f931ced71eff47 vmware-modules-1.0.0.17.ebuild 631
+SHA256 d4514fc8c500f87342fa9cd971400919c3b727d71581ab9d6c85e9859036f8ae vmware-modules-1.0.0.17.ebuild 631
 MISC ChangeLog 6133 RMD160 6ab62443b7a78437d7b8be43b5609c2e64632430 SHA1 a8b3744911318d772d3ddf207b70385b5a22ec27 SHA256 0837dfec11d82b8338fc99d7586d341ebc5b7cc63537d54edc4b0470ed466686
 MD5 349cfab5a949f05f6a1707839d78d6e6 ChangeLog 6133
 RMD160 6ab62443b7a78437d7b8be43b5609c2e64632430 ChangeLog 6133
@@ -55,10 +52,3 @@ SHA256 512ff77000e6217eafdd934eb8699c63ed78ea4b7a96a1db1d812cc820878db7 files/di
 MD5 7d94407c410b455e7d9478842bea1645 files/digest-vmware-modules-1.0.0.17 602
 RMD160 69b566301ac646cf8d0d04a4cf87c3e9e34fa7c5 files/digest-vmware-modules-1.0.0.17 602
 SHA256 eb6ffc7f02ee381e269af65129504e5be6d677a978a9275771a35aa6705ac926 files/digest-vmware-modules-1.0.0.17 602
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHSW35u7rWomwgFXoRAqNZAJ9aDSCxTU1F/yoYLbO1eyu1t4YodwCgqul/
-7lvAgVScaNK/SjsJYGiYcIQ=
-=w8aD
------END PGP SIGNATURE-----
