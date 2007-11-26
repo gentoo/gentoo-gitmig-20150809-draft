@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7943 2007/11/25 21:08:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7944 2007/11/26 15:16:28 je_fro Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jeffrey Gardner <je_fro@gentoo.org> (26 Nov 2007)
+# Masked as new version fixes multiple issues.
+=x11-drivers/ati-drivers-8.42.3
 
 # Samuli Suominen <drac@gentoo.org> (25 Nov 2007)
 # Masked for testing.
