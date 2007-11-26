@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/libol-0.3.18.ebuild,v 1.11 2007/04/24 22:12:05 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/libol-0.3.18.ebuild,v 1.12 2007/11/26 07:11:24 mr_bones_ Exp $
 
 inherit eutils
 
 DESCRIPTION="Support library for syslog-ng"
 HOMEPAGE="http://www.balabit.com/products/syslog_ng/"
-SRC_URI="http://www.balabit.com/downloads/libol/0.3/${P}.tar.gz"
+SRC_URI="http://www.balabit.com/downloads/files/libol/0.3/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
