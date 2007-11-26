@@ -1,6 +1,30 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.159 2007/11/26 13:30:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.160 2007/11/26 15:33:47 dang Exp $
+
+*evolution-data-server-1.12.2 (26 Nov 2007)
+
+  26 Nov 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +evolution-data-server-1.12.2.ebuild:
+  Bump to 1.12.2
+  	- Keep character's case as user types. (Milan Crha)
+  	- Use correct year when filling structure, not only years 1970+ (Peter
+  	  Lord)
+  	- Disable SSLv2 compatible HELLO on SSL stream when SSLv2 is disabled
+  	  (Niels Vorgaard Christensen)
+  	- Use proxy if user uses it and do not crash if have proxy without name
+  	  and password (Milan Crha)
+  	- Fix a crash when IMAP server sent response to FETCH BODY containing
+  	  size=0 (Milan Crha)
+  	- The base URL can be without a path, so do not crash, if that happen
+  	  (Milan Crha)
+  	- Move mail to/from sent-items (Sankar P)
+  	- Avoid a double free and make sure that the view_ functions free at all
+  	  cases (Akhil Laddha)
+  	- Don't reopen a database using the same DB handle (Matthew Barnes)
+  	- Return NULL pointer after freeing timezone structure (Ondrej Jirman)
+  	- Check for NULL too, so do not crash when something goes wrong (Milan
+  	  Crha)
 
   26 Nov 2007; Markus Rothe <corsair@gentoo.org>
   evolution-data-server-1.12.1.ebuild:
