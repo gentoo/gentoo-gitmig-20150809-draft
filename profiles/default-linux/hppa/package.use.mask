@@ -1,3 +1,7 @@
+# Jeroen Roovers <jer@gentoo.org> (26 Nov 2007)
+# emacs doesn't build with USE=gtk (bug #193703)
+>=app-editors/emacs-22 gtk
+
 # Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
 # This pulls in dev-scheme/drscheme which needs the (yet unported) libffi to
 # build or dev-lisp/clisp which has similar build issues
