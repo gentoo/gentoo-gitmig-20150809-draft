@@ -145,7 +145,7 @@ diff -ur XSB.orig/build/topMakefile.in XSB/build/topMakefile.in
  	@echo -n "Directory: ${install_bindir}..."
  	  @(test -d "${install_bindir}" || \
  		mkdir -p "${install_bindir}" ) && \
-@@ -361,10 +344,6 @@
+@@ -361,15 +344,11 @@
  		cp -f ${src_scriptdir}/xsb${config_tag} \
  				${install_scriptdir}/xsb${config_tag}; \
  		chmod 755 ${install_scriptdir}/* ${install_bindir}/* ; \
@@ -154,8 +154,16 @@ diff -ur XSB.orig/build/topMakefile.in XSB/build/topMakefile.in
 -		  ${prefix}/build; \
 -		chmod 755 ${prefix}/build/* ; \
  		echo "Copying config..." ; \
- 		cp -f ${src_config_libdir}/xsb_configuration.* \
+-		cp -f ${src_config_libdir}/xsb_configuration.* \
++		cp -f ${src_config_libdir}/xsb_configuration$(xsb_obj_extension) \
  			  ${install_config_libdir} ; \
+-		chmod 644 ${install_config_libdir}/xsb_configuration.* ; \
+-		./touch.sh ${install_config_libdir}/xsb_configuration$(xsb_obj_extension) ; \
++		chmod 644 ${install_config_libdir}/xsb_configuration$(xsb_obj_extension) ; \
++		rm -f ${src_config_libdir}/xsb_configuration.P ; \
+ 		cp -f ${src_config_prefix}/banner.msg ${src_config_prefix}/*.h \
+ 			  ${install_config_prefix} ; \
+ 		chmod 644 ${install_config_prefix}/banner.msg \
 @@ -400,11 +379,6 @@
  		cp -f ${src_cmplibdir}/*$(xsb_obj_extension) ${install_cmplibdir} ; \
  		chmod 644 ${install_cmplibdir}/*$(xsb_obj_extension) ; \

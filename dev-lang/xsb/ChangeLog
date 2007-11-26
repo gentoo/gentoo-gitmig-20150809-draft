@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.9 2007/11/25 05:09:31 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.10 2007/11/26 07:26:34 keri Exp $
+
+  26 Nov 2007; keri <keri@gentoo.org> files/xsb-3.1-portage.patch:
+  Do not install xsb_configuration.P since we do not regenerate
+  xsb_configuration.xwam.
 
 *xsb-3.1 (25 Nov 2007)
 
