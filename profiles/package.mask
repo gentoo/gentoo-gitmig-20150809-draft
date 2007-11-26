@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7944 2007/11/26 15:16:28 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7945 2007/11/26 19:56:46 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -281,11 +281,6 @@ net-voip/telepathy-butterfly
 # Package will be moved to junkyard overlay after 30 days
 # unless users express interest in this package.
 dev-db/xpg
-
-# Petteri Räty <betelgeuse@gentoo.org> (23 Oct 2007)
-# These classes are included in the JDK since 1.4
-# Will be moved to Java overlays after a month
-dev-java/jdbc2-stdext
 
 # Markus Ullmann <jokey@gentoo.org> (20 Oct 2007)
 # dependency unneeded now, merged upstream

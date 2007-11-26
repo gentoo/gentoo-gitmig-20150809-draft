@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.857 2007/11/26 15:16:28 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.858 2007/11/26 19:56:46 betelgeuse Exp $
+
+  26 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  dev-java/jdbc2-stdext moved to java overlay so remove package.mask
 
   26 Nov 2007; Jeff Gardner <je_fro@gentoo.org> package.mask:
   ati-drivers-8.42.3 masked because new version fixes many issues.
