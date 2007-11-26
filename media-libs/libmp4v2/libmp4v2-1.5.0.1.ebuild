@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.5.0.1.ebuild,v 1.14 2007/07/26 14:04:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.5.0.1.ebuild,v 1.15 2007/11/26 02:40:59 jer Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mpeg4ip/mpeg4ip-${PV}.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
