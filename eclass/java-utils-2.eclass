@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.97 2007/11/26 20:38:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.98 2007/11/26 21:00:59 betelgeuse Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -2067,7 +2067,9 @@ java-pkg_init() {
 	fi
 
 	if [[ -z ${accept} ]]; then
-		export _JAVA_OPTIONS=
+		# export _JAVA_OPTIONS= doesn't work because it will show up in java
+		# -version output
+		unset _JAVA_OPTIONS
 		# phase hooks make this run many times without this
 		I_WANT_GLOBAL_JAVA_OPTIONS="true"
 	fi
