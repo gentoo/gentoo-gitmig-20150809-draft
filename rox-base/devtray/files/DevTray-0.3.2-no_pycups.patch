@@ -1,0 +1,34 @@
+--- DevTray-orig/Handlers/Printer/__init__.py	2007-09-22 02:23:04.000000000 -0400
++++ DevTray/Handlers/Printer/__init__.py	2007-11-26 09:00:57.000000000 -0500
+@@ -78,14 +78,15 @@
+ 	def get_printer_name(self):
+ 		if self.__cups_name != None:
+ 			return self.__cups_name
+-		for uri in conn.getDevices():
+-			if self.__serial in uri:
+-				printers = conn.getPrinters()
+-				for name in printers:
+-					printer = printers[name]
+-					if printer['device-uri'] == uri:
+-						self.__cups_name = name
+-						return self.__cups_name
++		if have_cups:
++			for uri in conn.getDevices():
++				if self.__serial in uri:
++					printers = conn.getPrinters()
++					for name in printers:
++						printer = printers[name]
++						if printer['device-uri'] == uri:
++							self.__cups_name = name
++							return self.__cups_name
+ 		self.__cups_name = ''
+ 		return ''
+ 
+@@ -178,7 +179,6 @@
+ 				menu_item.connect("activate", self.__add)
+ 			menu.prepend(menu_item)
+ 		
+-		menu.prepend(menu_item)
+ 		menu_item = g.ImageMenuItem(_("Enable"))
+ 		if info:
+ 			if info.get('printer-state', 0) == cups.IPP_PRINTER_STOPPED:
