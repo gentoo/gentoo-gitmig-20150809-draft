@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bunny/bunny-0.92.ebuild,v 1.1 2007/11/24 08:35:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bunny/bunny-0.92.ebuild,v 1.2 2007/11/26 00:25:18 drac Exp $
 
 inherit toolchain-funcs
 
@@ -14,13 +14,13 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="dev-libs/openssl"
-DEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" \
-		|| die "emake failed"
+		|| die "emake failed."
 }
 
 src_test() {
