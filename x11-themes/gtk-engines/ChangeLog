@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.114 2007/11/24 22:43:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.115 2007/11/26 13:32:30 corsair Exp $
+
+  26 Nov 2007; Markus Rothe <corsair@gentoo.org> gtk-engines-2.12.2.ebuild:
+  Stable on ppc64; bug #199740
 
   24 Nov 2007; Brent Baude <ranger@gentoo.org> gtk-engines-2.12.2.ebuild:
   Marking gtk-engines-2.12.2 ppc stable for bug 199740
