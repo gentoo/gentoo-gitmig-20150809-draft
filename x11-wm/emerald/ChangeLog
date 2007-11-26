@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/emerald
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.13 2007/10/24 11:10:32 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.14 2007/11/26 16:52:11 corsair Exp $
+
+  26 Nov 2007; Markus Rothe <corsair@gentoo.org> emerald-0.5.2.ebuild:
+  Added ~ppc64
 
   24 Oct 2007; Hanno Boeck <hanno@gentoo.org> emerald-0.5.2.ebuild:
   Doesn't build without compiz.

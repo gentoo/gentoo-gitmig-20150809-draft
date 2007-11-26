@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.22 2007/11/06 00:53:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.23 2007/11/26 16:51:23 corsair Exp $
+
+  26 Nov 2007; Markus Rothe <corsair@gentoo.org> compiz-0.6.2-r1.ebuild:
+  Added ~ppc64
 
 *compiz-0.6.2-r1 (06 Nov 2007)
 
