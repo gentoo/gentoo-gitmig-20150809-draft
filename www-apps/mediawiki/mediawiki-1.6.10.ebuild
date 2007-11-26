@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.6.10.ebuild,v 1.2 2007/07/02 14:36:56 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.6.10.ebuild,v 1.3 2007/11/26 12:00:23 tchiwam Exp $
 
 inherit webapp depend.php
 
@@ -139,6 +139,6 @@ src_install() {
 		webapp_serverowned ${MY_HTDOCSDIR}/images/tmp
 	fi
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-1.5-en.txt
+	webapp_postinst_txt en "${FILESDIR}/postinstall-1.5-en.txt"
 	webapp_src_install
 }

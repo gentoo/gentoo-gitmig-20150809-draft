@@ -62,7 +62,11 @@ Things you need to have on the server:
 - SQL database of your choice.
 - dev-php/PEAR-Mail for external smtp server.
 
-These are not installed as dependencies as it is possible to run the database
+These are not installed as dependencies since it is possible to run the database
 and other services on other machines.
 
+It is very important that you follow all the major versions upgrade
+instructions from the mediawiki.org web page,
+http://www.mediawiki.org/wiki/Manual:Upgrading 
+Do not, I repeat, do not assume that we can upgrade from version to version just like this. Make backups before upgrading.
 

@@ -1,6 +1,21 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.91 2007/09/29 14:48:14 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.92 2007/11/26 12:00:23 tchiwam Exp $
+
+  26 Nov 2007; <tchiwam@gentoo.org> files/postinstall-1.5-en.txt,
+  mediawiki-1.6.10.ebuild, mediawiki-1.8.5.ebuild, mediawiki-1.9.4.ebuild,
+  mediawiki-1.10.2.ebuild, mediawiki-1.11.0.ebuild:
+  Fixed quoting complaint from repoman
+
+  26 Nov 2007; Philippe Trottier <tchiwam@gentoo.org>
+  files/postinstall-1.5-en.txt, mediawiki-1.11.0.ebuild:
+  Bug 199361 xml support needed in php, Thanks to Jakub we also clean up the
+  dieing properly.
+
+  26 Nov 2007; Philippe Trottier <tchiwam@gentoo.org>
+  files/postinstall-1.5-en.txt:
+  Make it even more clear to users not to just expect upgrade and work. Bug
+  185731
 
   29 Sep 2007; <wrobel@gentoo.org> -mediawiki-1.8.3.ebuild,
   -mediawiki-1.8.4.ebuild, -mediawiki-1.9.0.ebuild, -mediawiki-1.9.1.ebuild,

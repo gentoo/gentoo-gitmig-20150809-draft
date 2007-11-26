@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.0.ebuild,v 1.2 2007/09/19 14:49:56 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.0.ebuild,v 1.3 2007/11/26 12:00:23 tchiwam Exp $
 
 inherit webapp depend.php versionator
 
@@ -36,25 +36,24 @@ need_php
 
 pkg_setup() {
 	webapp_pkg_setup
-	require_php_with_use pcre session
-	if use mysql ; then
-		require_php_with_use mysql
+	local flags="pcre session xml"
+	use mysql && flags="${flags} mysql"
+	use postgres && flags="${flags} postgres"
+	if ! PHPCHECKNODIE="yes" require_php_with_use ${flags} || \
+		! PHPCHECKNODIE="yes" require_php_with_any_use gd gd-external ; then
+		die "Re-install ${PHP_PKG} with ${flags} and either gd or gd-external"
 	fi
-	if use postgres ; then
-		require_php_with_use postgres
-	fi
-	require_gd
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# XXX: besides, is/was this patch really that required? if so, why? (trapni)
 #	epatch ${FILESDIR}/jobindexlength-mysql.patch
 
 	if use restrict ; then
-		epatch ${FILESDIR}/access_restrict.patch
+		epatch "${FILESDIR}/access_restrict.patch"
 	fi
 }
 
@@ -168,6 +167,6 @@ src_install() {
 		webapp_serverowned ${MY_HTDOCSDIR}/images/tmp
 	fi
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-1.5-en.txt
+	webapp_postinst_txt en "${FILESDIR}/postinstall-1.5-en.txt"
 	webapp_src_install
 }

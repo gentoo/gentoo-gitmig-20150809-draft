@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.8.5.ebuild,v 1.5 2007/09/29 11:31:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.8.5.ebuild,v 1.6 2007/11/26 12:00:23 tchiwam Exp $
 
 inherit webapp depend.php versionator
 
@@ -46,10 +46,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/jobindexlength-mysql.patch
+	cd "${S}"
+	epatch "${FILESDIR}/jobindexlength-mysql.patch"
 	if use restrict ; then
-		epatch ${FILESDIR}/access_restrict.patch
+		epatch "${FILESDIR}/access_restrict.patch"
 	fi
 }
 
@@ -159,6 +159,6 @@ src_install() {
 		webapp_serverowned ${MY_HTDOCSDIR}/images/tmp
 	fi
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-1.5-en.txt
+	webapp_postinst_txt en "${FILESDIR}/postinstall-1.5-en.txt"
 	webapp_src_install
 }
