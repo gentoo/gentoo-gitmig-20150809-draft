@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/uptimes
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/uptimes/ChangeLog,v 1.16 2007/11/26 15:18:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uptimes/ChangeLog,v 1.17 2007/11/26 20:11:47 opfer Exp $
+
+  26 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  uptimes-2.3-r1.ebuild:
+  stable x86, bug 200329
 
   26 Nov 2007; Markus Rothe <corsair@gentoo.org> uptimes-2.3-r1.ebuild:
   Stable on ppc64; bug #200329
