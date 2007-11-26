@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.209 2007/11/25 17:13:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.210 2007/11/26 00:06:48 jer Exp $
+
+  26 Nov 2007; Jeroen Roovers <jer@gentoo.org> emacs-21.4-r14.ebuild:
+  Stable for HPPA.
 
 *emacs-22.1-r3 (25 Nov 2007)
 *emacs-21.4-r14 (25 Nov 2007)
