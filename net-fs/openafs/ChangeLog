@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.125 2007/11/23 23:09:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.126 2007/11/26 11:04:14 stefaan Exp $
+
+  26 Nov 2007; Stefaan De Roeck <stefaan@gentoo.org> -openafs-1.4.4.ebuild,
+  -openafs-1.4.4_p20070724.ebuild, -openafs-1.4.5_pre1.ebuild,
+  -openafs-1.5.19.ebuild:
+  Remove obsolete versions
 
   23 Nov 2007; Christoph Mende <angelos@gentoo.org> openafs-1.4.5.ebuild:
   Stable on amd64 wrt bug #199876
