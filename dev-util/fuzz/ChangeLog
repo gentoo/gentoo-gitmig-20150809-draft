@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/fuzz
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fuzz/ChangeLog,v 1.1 2007/11/26 18:32:10 robbat2 Exp $
+
+*fuzz-0.6 (26 Nov 2007)
+
+  26 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +fuzz-0.6.ebuild:
+  Initial commit, vaguely based on original submission in bug #144749 by
+  Aggelos Orfanakos <agorf@gentoo.org>.
+
