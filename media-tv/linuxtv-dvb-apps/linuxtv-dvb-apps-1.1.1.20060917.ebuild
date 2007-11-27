@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20060917.ebuild,v 1.7 2007/06/08 10:31:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20060917.ebuild,v 1.8 2007/11/27 10:04:07 zzam Exp $
 
 inherit eutils versionator multilib
 
@@ -23,7 +23,7 @@ src_unpack()
 {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	# disables compilation of ttusb_dec_reset which requires libusb
 	if ! use usb; then
 		sed -i util/Makefile \
@@ -54,28 +54,28 @@ src_install()
 	unset ARCH
 
 	insinto /usr/bin
-	emake bindir=/usr/bin datadir=/usr/share libdir=/usr/lib prefix=${D}/usr \
-		DESTDIR=${D} INSTDIR=${T} install || die "install failed"
+	emake bindir=/usr/bin datadir=/usr/share libdir=/usr/lib prefix="${D}"/usr \
+		DESTDIR="${D}" INSTDIR="${T}" install || die "install failed"
 
 	# rename scan to dvbscan
-	mv ${D}/usr/bin/scan ${D}/usr/bin/dvbscan
+	mv "${D}"/usr/bin/scan "${D}"/usr/bin/dvbscan
 
 	# install scan-files
 	local dir
 	for dir in dvb-{s,c,t} atsc; do
 		insinto /usr/share/dvb/scan/${dir}
-		doins ${S}/util/scan/${dir}/*
+		doins "${S}"/util/scan/${dir}/*
 	done
 
 	# install zap-files
 	for dir in dvb-{s,c,t} atsc; do
 		insinto /usr/share/dvb/zap/${dir}
-		doins ${S}/util/szap/channels-conf/${dir}/*
+		doins "${S}"/util/szap/channels-conf/${dir}/*
 	done
 
 	# install remote-key files
 	insinto /usr/share/dvb/av7110_loadkeys
-	doins ${S}/util/av7110_loadkeys/*.rc*
+	doins "${S}"/util/av7110_loadkeys/*.rc*
 
 	# install Documentation
 	dodoc README TODO

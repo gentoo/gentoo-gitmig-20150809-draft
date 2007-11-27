@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20071126.ebuild,v 1.1 2007/11/26 20:25:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20071126.ebuild,v 1.2 2007/11/27 10:04:07 zzam Exp $
 
 inherit eutils versionator multilib
 
@@ -55,7 +55,7 @@ src_install()
 
 	insinto /usr/bin
 	emake bindir=/usr/bin datadir=/usr/share libdir=/usr/$(get_libdir) prefix=/usr \
-		DESTDIR=${D} INSTDIR=${T} install || die "install failed"
+		DESTDIR="${D}" INSTDIR="${T}" install || die "install failed"
 
 	# rename scan to dvbscan
 	mv "${D}"/usr/bin/scan "${D}"/usr/bin/dvbscan

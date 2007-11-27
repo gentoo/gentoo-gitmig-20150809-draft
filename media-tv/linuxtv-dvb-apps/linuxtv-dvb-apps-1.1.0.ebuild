@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.0.ebuild,v 1.8 2007/06/06 17:21:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.0.ebuild,v 1.9 2007/11/27 10:04:07 zzam Exp $
 
 DESCRIPTION="small utils for DVB to scan, zap, view signal strength, ..."
 HOMEPAGE="http://www.linuxtv.org/wiki/index.php/LinuxTV_dvb-apps"
@@ -14,12 +14,12 @@ DEPEND="usb? ( >=dev-libs/libusb-0.1.10a )"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	cd ${S}/util
+	cd "${S}"/util
 	make
 	if use usb; then
 		elog "Building ttusb_dec_reset"
 		# build the ttusb_dec_reset program
-		cd ${S}/util/ttusb_dec_reset
+		cd "${S}"/util/ttusb_dec_reset
 		make
 	else
 		elog "Not building ttusb_dec_reset"
@@ -27,7 +27,7 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}/util
+	cd "${S}"/util
 
 	dobin av7110_loadkeys/av7110_loadkeys av7110_loadkeys/evtest
 	dobin dvbdate/dvbdate
@@ -39,35 +39,35 @@ src_install() {
 	dobin szap czap tzap femon
 
 	if use usb; then
-		dobin ${S}/util/ttusb_dec_reset/ttusb_dec_reset
+		dobin "${S}"/util/ttusb_dec_reset/ttusb_dec_reset
 	fi
 
 	# Install Documentation and test code:
 	DOCDIR="/usr/share/doc/${PF}"
 
-	mkdir ${S}/docs
-	cp ${S}/util/av7110_loadkeys/README  ${S}/docs/README.av7110_loadkeys
-	cp ${S}/util/scan/README ${S}/docs/README.scan
-	cp ${S}/util/szap/README ${S}/docs/README.szap
-	cp ${S}/README ${S}/docs/README
-	cp ${S}/TODO ${S}/docs/TODO
-	cp ${S}/libdvb2/README ${S}/docs/README.libdvb2
+	mkdir "${S}"/docs
+	cp "${S}"/util/av7110_loadkeys/README  "${S}"/docs/README.av7110_loadkeys
+	cp "${S}"/util/scan/README "${S}"/docs/README.scan
+	cp "${S}"/util/szap/README "${S}"/docs/README.szap
+	cp "${S}"/README "${S}"/docs/README
+	cp "${S}"/TODO "${S}"/docs/TODO
+	cp "${S}"/libdvb2/README "${S}"/docs/README.libdvb2
 	if use usb; then
-		cp ${S}/util/ttusb_dec_reset/README ${S}/docs/README.ttusb_dec_reset
+		cp "${S}"/util/ttusb_dec_reset/README "${S}"/docs/README.ttusb_dec_reset
 	fi
-	dodoc ${S}/docs/*
+	dodoc "${S}"/docs/*
 
 	insinto "${DOCDIR}/test/"
-	doins ${S}/test/*
+	doins "${S}"/test/*
 
 	insinto "${DOCDIR}/dvbnet/"
-	doins ${S}/util/dvbnet/net_start.*
+	doins "${S}"/util/dvbnet/net_start.*
 
 	insinto "${DOCDIR}/szap/"
-	doins ${S}/util/szap/channels.*
+	doins "${S}"/util/szap/channels.*
 
 	insinto "${DOCDIR}/scan/"
-	cp -r ${S}/util/scan/dvb-[sct] ${D}/${DOCDIR}/scan/
+	cp -r "${S}"/util/scan/dvb-[sct] "${D}/${DOCDIR}/scan/"
 
 }
 
