@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.2.ebuild,v 1.1 2007/11/26 16:27:32 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.2.ebuild,v 1.2 2007/11/27 05:08:23 leio Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -53,7 +53,7 @@ RDEPEND="
 #		>=media-libs/gst-plugins-base-0.10 )
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	>=dev-util/pkgconfig-0.16
 	>=dev-util/intltool-0.35.5
 	sys-devel/gettext
 	sys-devel/bison
