@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.10_rc6.ebuild,v 1.1 2006/06/28 02:21:13 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.10_rc6.ebuild,v 1.2 2007/11/27 11:06:58 zzam Exp $
 
 inherit gnome2
 
@@ -39,10 +39,11 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-pkg_preinst() {
+src_install() {
+	gnome2_src_install
+
 	# thx to Andreas Kotowicz <koto@mynetix.de> for mailing me this fix:
-	rm ${D}/usr/bin/zapping_setup_fb
-	cd ${S}
+	rm "${D}"/usr/bin/zapping_setup_fb
 	dobin zapping_setup_fb/zapping_setup_fb
 	dodoc AUTHORS BUGS ChangeLog NEWS README README.plugins THANKS TODO
 }
