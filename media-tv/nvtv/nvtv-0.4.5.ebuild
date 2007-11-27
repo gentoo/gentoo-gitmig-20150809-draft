@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.5.ebuild,v 1.9 2007/04/28 11:40:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.5.ebuild,v 1.10 2007/11/27 10:47:09 zzam Exp $
 
 IUSE="X gtk"
 
@@ -49,5 +49,5 @@ src_install() {
 		doc/USAGE doc/chips.txt doc/overview.txt \
 		doc/timing.txt xine/tvxine
 
-	newinitd ${FILESDIR}/nvtv.start nvtv
+	newinitd "${FILESDIR}"/nvtv.start nvtv
 }

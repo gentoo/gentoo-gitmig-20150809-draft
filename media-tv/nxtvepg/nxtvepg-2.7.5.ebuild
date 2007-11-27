@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/nxtvepg-2.7.5.ebuild,v 1.3 2006/11/24 11:51:26 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/nxtvepg-2.7.5.ebuild,v 1.4 2007/11/27 10:42:59 zzam Exp $
 
 inherit eutils
 
@@ -25,8 +25,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/nxtvepg-db.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/nxtvepg-db.patch
 }
 
 src_compile() {
@@ -34,7 +34,7 @@ src_compile() {
 }
 
 src_install() {
-	make install ROOT=${D} prefix="/usr" || die "install failed"
+	make install ROOT="${D}" prefix="/usr" || die "install failed"
 	dodoc README COPYRIGHT CHANGES TODO
 	dohtml manual.html
 }

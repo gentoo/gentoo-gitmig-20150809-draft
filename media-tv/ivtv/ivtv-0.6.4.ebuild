@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.6.4.ebuild,v 1.8 2007/04/27 01:43:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.6.4.ebuild,v 1.9 2007/11/27 10:35:43 zzam Exp $
 
 inherit eutils linux-mod
 
@@ -52,28 +52,28 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -e "s:^VERS26=.*:VERS26=${KV_MAJOR}.${KV_MINOR}:g" \
-		-i ${S}/driver/Makefile || die "sed failed"
+		-i "${S}"/driver/Makefile || die "sed failed"
 }
 
 src_compile() {
-	cd ${S}/driver
+	cd "${S}"/driver
 	linux-mod_src_compile || die "failed to build driver "
 
-	cd ${S}/utils
+	cd "${S}"/utils
 	emake ||  die "failed to build utils "
 }
 
 src_install() {
-	cd ${S}/utils
+	cd "${S}"/utils
 	make KERNELDIR="${KERNEL_DIR}" DESTDIR="${D}" PREFIX=/usr install \
 		|| die "failed to install utils"
 
-	cd ${S}
+	cd "${S}"
 	dodoc README doc/* utils/README.X11
 
-	cd ${S}/driver
+	cd "${S}"/driver
 	linux-mod_src_install || die "failed to install modules"
 
 	# Add the aliases

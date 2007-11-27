@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1_p20060108.ebuild,v 1.6 2007/01/05 17:07:37 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1_p20060108.ebuild,v 1.7 2007/11/27 10:37:09 zzam Exp $
 
 inherit eutils linux-mod
 
@@ -41,7 +41,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cp ${DISTDIR}/${DVB_TTPCI_FW} ${S}/dvb-ttpci-01.fw
+	cp "${DISTDIR}"/${DVB_TTPCI_FW} "${S}"/dvb-ttpci-01.fw
 }
 
 src_install() {
@@ -55,16 +55,16 @@ src_install() {
 	make install DESTDIR="${D}" DEST="/lib/modules/${KV_FULL}/dvb"
 
 	# install the header files
-	cd ${S}/../linux/include/linux/dvb
+	cd "${S}"/../linux/include/linux/dvb
 	insinto /usr/include/linux/dvb
 	doins *.h
 
 	#install the main docs
-	cd ${S}
+	cd "${S}"
 	dodoc MAKEDEV-DVB.sh NEWS README README.bt8xx TODO TROUBLESHOOTING
 
 	#install the other docs
-	cd ${S}/doc
+	cd "${S}"/doc
 	dodoc HOWTO-use-the-demux-api \
 	README.valgrind HOWTO-use-the-frontend-api \
 	convert.sh valgrind-2.1.0-dvb.patch

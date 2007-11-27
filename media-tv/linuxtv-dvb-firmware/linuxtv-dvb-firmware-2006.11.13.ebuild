@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2006.11.13.ebuild,v 1.7 2007/07/13 05:03:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2006.11.13.ebuild,v 1.8 2007/11/27 10:39:37 zzam Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -219,7 +219,7 @@ src_unpack() {
 	fi
 
 	# Adjust temp-dir of get_dvb_firmware
-	sed ${FILESDIR}/get_dvb_firmware-${PV} \
+	sed "${FILESDIR}"/get_dvb_firmware-${PV} \
 		-e "s#/tmp#${T}#g" \
 		> get_dvb_firmware
 	chmod a+x get_dvb_firmware
@@ -238,7 +238,6 @@ src_unpack() {
 }
 
 src_install() {
-	cd ${S}
 	insinto /lib/firmware
 
 	for ((CARD=0; CARD < ${#FW_USE_FLAGS[*]}; CARD++)) do

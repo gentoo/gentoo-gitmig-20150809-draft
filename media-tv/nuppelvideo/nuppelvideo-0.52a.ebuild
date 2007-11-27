@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuppelvideo/nuppelvideo-0.52a.ebuild,v 1.6 2007/05/01 00:31:16 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuppelvideo/nuppelvideo-0.52a.ebuild,v 1.7 2007/11/27 10:48:02 zzam Exp $
 
 inherit eutils
 
@@ -21,8 +21,8 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/gcc3.4.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/gcc3.4.patch
 	sed -e 's:^CFLAGS.*::' -i Makefile || die "sed failed"
 }
 

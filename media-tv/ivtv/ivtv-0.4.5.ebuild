@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.5.ebuild,v 1.9 2007/07/02 15:20:29 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.5.ebuild,v 1.10 2007/11/27 10:35:43 zzam Exp $
 
 inherit eutils linux-mod
 
@@ -82,19 +82,19 @@ src_unpack() {
 	unpack ${FW_VER_ENC}
 
 	sed -e "s:^VERS26=.*:VERS26=${KV_MAJOR}.${KV_MINOR}:g" \
-		-i ${S}/driver/Makefile || die "sed failed"
+		-i "${S}"/driver/Makefile || die "sed failed"
 }
 
 src_compile() {
-	cd ${S}/driver
+	cd "${S}"/driver
 	linux-mod_src_compile || die "failed to build driver "
 
-	cd ${S}/utils
+	cd "${S}"/utils
 	emake ||  die "failed to build utils "
 }
 
 src_install() {
-	cd ${S}/utils
+	cd "${S}"/utils
 	dodir /lib/firmware
 	./ivtvfwextract.pl "${DISTDIR}"/${FW_VER_DEC} \
 		"${D}"/lib/firmware/v4l-cx2341x-enc.fw \
@@ -104,12 +104,12 @@ src_install() {
 
 	insinto /lib/firmware
 	newins "${WORKDIR}"/HcwMakoA.ROM v4l-cx25840.fw
-	newins ${S}/v4l-cx2341x-init.mpg v4l-cx2341x-init.mpg
+	newins "${S}"/v4l-cx2341x-init.mpg v4l-cx2341x-init.mpg
 
-	cd ${S}
+	cd "${S}"
 	dodoc README doc/* utils/README.X11
 
-	cd ${S}/driver
+	cd "${S}"/driver
 	linux-mod_src_install || die "failed to install modules"
 
 	# Add the aliases

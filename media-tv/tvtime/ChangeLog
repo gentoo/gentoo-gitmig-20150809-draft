@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.42 2007/11/17 13:35:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.43 2007/11/27 10:46:09 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> tvtime-1.0.2.ebuild,
+  tvtime-1.0.2-r1.ebuild, tvtime-1.0.2-r2.ebuild:
+  Fixed quoting.
 
 *tvtime-1.0.2-r2 (17 Nov 2007)
 

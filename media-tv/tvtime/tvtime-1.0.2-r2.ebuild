@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2-r2.ebuild,v 1.1 2007/11/17 13:35:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2-r2.ebuild,v 1.2 2007/11/27 10:46:09 zzam Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=2.5
@@ -39,7 +39,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/tvtime-1.0.2-gcc41.patch
+	epatch "${FILESDIR}"/tvtime-1.0.2-gcc41.patch
 
 	# use 'tvtime' for the application icon see bug #66293
 	sed -i -e "s/tvtime.png/tvtime/" docs/net-tvtime.desktop
