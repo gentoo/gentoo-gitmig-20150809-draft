@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.293 2007/11/27 08:59:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.294 2007/11/27 14:47:30 armin76 Exp $
+
+  27 Nov 2007; Raúl Porcel <armin76@gentoo.org> openldap-2.3.39-r1.ebuild:
+  alpha/ia64/sparc stable wrt security #197446
 
   27 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   openldap-2.3.39-r1.ebuild:
