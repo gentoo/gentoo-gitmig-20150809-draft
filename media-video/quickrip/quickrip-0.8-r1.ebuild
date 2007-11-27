@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.8-r1.ebuild,v 1.4 2007/07/12 02:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.8-r1.ebuild,v 1.5 2007/11/27 12:35:10 zzam Exp $
 
 inherit eutils qt3
 
@@ -21,12 +21,12 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-sizetype.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-sizetype.patch"
 }
 
 src_install() {
-	MANDIR=${D}/usr/share/man/man1
+	MANDIR="${D}"/usr/share/man/man1
 	exeinto /usr/share/quickrip
 	doexe *.py ui/*.ui quickriprc
 	doman *.1.gz

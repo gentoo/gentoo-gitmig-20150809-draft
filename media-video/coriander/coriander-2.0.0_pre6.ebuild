@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation and Pieter Van den Abeele
+# Copyright 1999-2007 Gentoo Foundation and Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0_pre6.ebuild,v 1.2 2007/07/12 02:40:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0_pre6.ebuild,v 1.3 2007/11/27 12:40:08 zzam Exp $
 
 MY_P=${P/_/-}
 
@@ -34,6 +34,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc NEWS README AUTHORS
 }

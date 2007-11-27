@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/goggles-0.9.1.ebuild,v 1.4 2007/05/15 17:25:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/goggles-0.9.1.ebuild,v 1.5 2007/11/27 12:44:39 zzam Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,7 +20,7 @@ DEPEND="=x11-libs/fox-1.6*
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "/^export CC=/s:=.*:=\"$(tc-getCC)\":" \
 		-e "/^export CXX=/s:=.*:=\"$(tc-getCXX)\":" \
@@ -48,19 +48,19 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${S}/scripts/goggles || die
+	dobin "${S}"/scripts/goggles || die
 
 	# the binary is no longer (statically) named "ogle_gui_goggles", but
 	# (dynamically) after the package name which is "goggles"
-	newbin ${S}/src/goggles ogle_gui_goggles || die
+	newbin "${S}"/src/goggles ogle_gui_goggles || die
 
 	if use doc; then
-		dodoc ${S}/desktop/goggles_manual.pdf || die
+		dodoc "${S}"/desktop/goggles_manual.pdf || die
 	fi
 
 	insinto /usr/share/applications
-	doins ${S}/desktop/${PN}.desktop || die
+	doins "${S}"/desktop/${PN}.desktop || die
 
 	insinto /usr/share/pixmaps
-	newins ${S}/icons/goggleslogosmall.png goggles.png || die
+	newins "${S}"/icons/goggleslogosmall.png goggles.png || die
 }

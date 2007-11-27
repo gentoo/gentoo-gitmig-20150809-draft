@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gephex
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.17 2007/05/01 00:45:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.18 2007/11/27 12:43:39 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> gephex-0.4.3.ebuild:
+  Fixed quoting.
 
   01 May 2007; Marius Mauch <genone@gentoo.org> gephex-0.4.3.ebuild:
   Replacing einfo with elog

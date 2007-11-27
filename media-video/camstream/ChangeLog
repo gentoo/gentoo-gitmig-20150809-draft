@@ -1,6 +1,10 @@
 # ChangeLog for media-video/camstream
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.19 2007/08/13 06:31:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.20 2007/11/27 12:41:29 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
+  camstream-0.26.3.ebuild, camstream-20070315.ebuild:
+  Fixed quoting.
 
   13 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   camstream-20070315.ebuild:

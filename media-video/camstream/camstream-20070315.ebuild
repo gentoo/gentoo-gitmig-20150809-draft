@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-20070315.ebuild,v 1.3 2007/08/13 06:31:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-20070315.ebuild,v 1.4 2007/11/27 12:41:29 zzam Exp $
 
 inherit eutils libtool autotools
 
@@ -27,9 +27,9 @@ WANT_AUTOMAKE="1.9.6"
 
 src_unpack () {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}.patch
-	for dir in ${S} ${S}/ccvt; do
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}.patch"
+	for dir in "${S}" "${S}"/ccvt; do
 		cd ${dir}
 		eautoconf
 		elibtoolize
@@ -45,7 +45,7 @@ src_compile () {
 	local myconf
 	# Need to fake out Qt or we'll get sandbox problems
 	REALHOME="$HOME"
-	mkdir -p $T/fakehome/.qt
+	mkdir -p "$T"/fakehome/.qt
 	export HOME="$T/fakehome"
 	addwrite "${QTDIR}/etc/settings"
 	if ! use mmx || use amd64; then
@@ -56,5 +56,5 @@ src_compile () {
 }
 
 src_install () {
-	make DESTDIR=${D} install
+	make DESTDIR="${D}" install
 }

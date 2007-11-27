@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation and Pieter Van den Abeele
+# Copyright 1999-2007 Gentoo Foundation and Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0_rc1-r1.ebuild,v 1.2 2007/07/12 02:40:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0_rc1-r1.ebuild,v 1.3 2007/11/27 12:40:08 zzam Exp $
 
 inherit eutils
 
@@ -31,10 +31,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Bug #133143, already merged upstream
-	epatch ${FILESDIR}/${P}-ffmpeg-configure.patch
+	epatch "${FILESDIR}/${P}-ffmpeg-configure.patch"
 }
 
 src_compile() {
@@ -44,6 +44,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc NEWS README AUTHORS
 }

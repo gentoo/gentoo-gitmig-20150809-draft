@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.11 2007/05/01 00:45:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.12 2007/11/27 12:43:39 zzam Exp $
 
 inherit eutils
 
@@ -27,9 +27,9 @@ RDEPEND=${DEPEND}
 
 src_unpack() {
 	unpack ${A} || die
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
 src_compile() {
@@ -57,7 +57,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	elog "Please read /usr/share/doc/gephex/html/documentation.html to get started."
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/dvdbackup-0.1.1-r1.ebuild,v 1.10 2007/05/05 22:04:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/dvdbackup-0.1.1-r1.ebuild,v 1.11 2007/11/27 12:38:23 zzam Exp $
 
 inherit toolchain-funcs eutils
 
@@ -19,8 +19,8 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-debian-FPE.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-debian-FPE.patch
 }
 
 src_compile() {

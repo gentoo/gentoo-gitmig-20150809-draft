@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gspca
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gspca/ChangeLog,v 1.5 2007/05/01 00:46:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gspca/ChangeLog,v 1.6 2007/11/27 12:45:04 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> gspca-01.00.10.ebuild:
+  Fixed quoting.
 
   01 May 2007; Marius Mauch <genone@gentoo.org> gspca-01.00.10.ebuild:
   Replacing einfo with elog

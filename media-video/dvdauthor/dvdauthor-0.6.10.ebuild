@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.10.ebuild,v 1.13 2005/05/05 02:41:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.10.ebuild,v 1.14 2007/11/27 12:39:02 zzam Exp $
 
 inherit eutils
 
@@ -20,16 +20,16 @@ DEPEND="media-libs/libdvdread
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc34.patch
-	epatch ${FILESDIR}/${P}-utf8.patch
-	epatch ${FILESDIR}/${P}-im6.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc34.patch
+	epatch "${FILESDIR}"/${P}-utf8.patch
+	epatch "${FILESDIR}"/${P}-im6.patch
 
 	# see #62836
-	epatch ${FILESDIR}/${P}-debugsegfault.patch
+	epatch "${FILESDIR}"/${P}-debugsegfault.patch
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "installation failed"
+	make install DESTDIR="${D}" || die "installation failed"
 	dodoc README HISTORY TODO
 }

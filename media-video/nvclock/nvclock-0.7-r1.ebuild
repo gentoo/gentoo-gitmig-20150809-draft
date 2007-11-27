@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.7-r1.ebuild,v 1.9 2007/05/01 00:59:17 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.7-r1.ebuild,v 1.10 2007/11/27 12:36:28 zzam Exp $
 
 inherit eutils
 
@@ -23,9 +23,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/configure.in.diff
-	epatch ${FILESDIR}/callbacks.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/configure.in.diff
+	epatch "${FILESDIR}"/callbacks.patch
 }
 
 src_compile() {
@@ -46,8 +46,8 @@ src_install() {
 	einstall || die
 	dodoc AUTHORS README
 
-	newinitd ${FILESDIR}/nvclock_initd nvclock
-	newconfd ${FILESDIR}/nvclock_confd nvclock
+	newinitd "${FILESDIR}"/nvclock_initd nvclock
+	newconfd "${FILESDIR}"/nvclock_confd nvclock
 }
 
 pkg_postinst() {

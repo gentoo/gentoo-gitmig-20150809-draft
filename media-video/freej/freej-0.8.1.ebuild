@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/freej/freej-0.8.1.ebuild,v 1.2 2007/06/24 18:04:04 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/freej/freej-0.8.1.ebuild,v 1.3 2007/11/27 12:43:06 zzam Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND=">=media-libs/libsdl-1.2.0
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 }
 
 src_compile() {
@@ -40,7 +40,7 @@ src_compile() {
 	# give us custom CFLAGS
 	sed -i \
 	-e "s:^CFLAGS = .*:CFLAGS = -D_REENTRANT ${CFLAGS}:" \
-	-e "s:^CXXFLAGS = .*:CXXFLAGS = -D_REENTRANT ${CXXFLAGS}:" ${S}/src/Makefile \
+	-e "s:^CXXFLAGS = .*:CXXFLAGS = -D_REENTRANT ${CXXFLAGS}:" "${S}"/src/Makefile \
 	|| die "Could not patch custom CFLAGS!"
 
 	emake || die "emake failed"

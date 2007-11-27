@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.3.ebuild,v 1.10 2005/07/26 18:29:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.3.ebuild,v 1.11 2007/11/27 12:41:29 zzam Exp $
 
 inherit eutils
 
@@ -17,15 +17,15 @@ DEPEND="=x11-libs/qt-3*
 
 src_unpack () {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# Camstream has 32 bit asssembler normally.
-	use amd64 && epatch ${FILESDIR}/x86_64-asm.patch
+	use amd64 && epatch "${FILESDIR}"/x86_64-asm.patch
 }
 
 src_compile () {
 	# Need to fake out Qt or we'll get sandbox problems
 	REALHOME="$HOME"
-	mkdir -p $T/fakehome/.qt
+	mkdir -p "$T"/fakehome/.qt
 	export HOME="$T/fakehome"
 	addwrite "${QTDIR}/etc/settings"
 	autoreconf &> autoreconf-output || \
