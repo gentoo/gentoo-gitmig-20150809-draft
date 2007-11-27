@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.2.6-r1.ebuild,v 1.6 2007/10/08 14:14:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.2.6-r1.ebuild,v 1.7 2007/11/27 11:50:06 zzam Exp $
 
 inherit eutils check-kernel
 
@@ -33,7 +33,7 @@ src_compile() {
 
 src_install() {
 	make VIDEODIR=/etc/vdr DESTDIR="${D}" install || die "install failed"
-	dodoc COPYING INSTALL README MANUAL CONTRIBUTORS HISTORY
+	dodoc INSTALL README MANUAL CONTRIBUTORS HISTORY
 	dohtml PLUGINS.html
 	dodir /usr/share/doc/${PF}/scripts
 	insinto /usr/share/doc/${PF}/scripts
