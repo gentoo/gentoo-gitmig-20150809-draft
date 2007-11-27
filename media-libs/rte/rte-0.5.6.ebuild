@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/rte-0.5.6.ebuild,v 1.5 2006/05/25 06:48:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/rte-0.5.6.ebuild,v 1.6 2007/11/27 18:57:00 zzam Exp $
 
 inherit eutils
 
@@ -23,10 +23,10 @@ KEYWORDS="-* x86"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-config.patch
+	epatch "${FILESDIR}"/${P}-config.patch
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
 }

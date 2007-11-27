@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.0-r3.ebuild,v 1.10 2007/03/01 17:51:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.0-r3.ebuild,v 1.11 2007/11/27 18:53:20 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 inherit eutils fixheadtails autotools
@@ -30,7 +30,7 @@ src_unpack() {
 	epatch "${WORKDIR}/${PN}-1.1.2-noexec-stack.patch"
 	epatch "${FILESDIR}/${P}-3dnow-2.patch"
 
-	cd ${S}
+	cd "${S}"
 	eautoreconf
 }
 

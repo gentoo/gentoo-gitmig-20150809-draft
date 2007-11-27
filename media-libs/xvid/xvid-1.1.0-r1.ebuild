@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.0-r1.ebuild,v 1.14 2007/08/25 14:16:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.0-r1.ebuild,v 1.15 2007/11/27 18:53:20 zzam Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -31,7 +31,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-3dnow.patch"
 	epatch "${DISTDIR}/${P}-textrel-2.patch.bz2"
 
-	cd ${S}
+	cd "${S}"
 	eautoreconf
 }
 

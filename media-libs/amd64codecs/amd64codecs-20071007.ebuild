@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amd64codecs/amd64codecs-20071007.ebuild,v 1.1 2007/10/08 11:16:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amd64codecs/amd64codecs-20071007.ebuild,v 1.2 2007/11/27 18:49:54 zzam Exp $
 
 inherit multilib
 
@@ -14,8 +14,6 @@ S="${WORKDIR}/essential-amd64-${PV}"
 RESTRICT="strip"
 
 src_install() {
-	cd ${S}
-
 	# see #83221
 	insopts -m0644
 

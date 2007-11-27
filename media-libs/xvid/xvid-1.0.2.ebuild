@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.2.ebuild,v 1.16 2007/07/13 17:17:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.2.ebuild,v 1.17 2007/11/27 18:53:20 zzam Exp $
 
 inherit eutils
 
@@ -21,17 +21,17 @@ S="${WORKDIR}/${MY_P}/build/generic"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-DESTDIR.patch
-	cd ${S}/../..
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-DESTDIR.patch
+	cd "${S}"/../..
 	epatch "${FILESDIR}"/${PN}-1.0-ia64.patch
-	epatch ${FILESDIR}/${PN}-1.0.1-64bit-clean.patch
+	epatch "${FILESDIR}"/${PN}-1.0.1-64bit-clean.patch
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die "make install failed"
 
-	cd ${S}/../../
+	cd "${S}"/../../
 	dodoc AUTHORS ChangeLog README TODO doc/*
 
 	local mylib="$(basename $(ls ${D}/usr/$(get_libdir)/libxvidcore.so*))"
