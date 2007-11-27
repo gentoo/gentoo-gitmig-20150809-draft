@@ -1,8 +1,8 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.861 2007/11/27 14:09:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.862 2007/11/27 14:16:53 mrness Exp $
 
-  27 Nov 2007; Alin Năstac <mrness@gentoo.org> use.local.desc:
+  27 Nov 2007; Alin Năstac <mrness@gentoo.org> base/package.use, use.local.desc:
   Replace nofax flag for net-dialup/mgetty with fax (#195467).
 
   27 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> package.mask:

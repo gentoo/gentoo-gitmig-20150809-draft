@@ -26,3 +26,7 @@ sys-fs/lvm2 static
 # Scheduled for removal, so the tools support only LVM2 by default as of the
 # 2008.0 release.
 sys-fs/lvm2 lvm1
+
+# 2007/11/27 - Alin Năstac <mrness@gentoo.org>
+# mgetty have fax flag because it collides with hylafax otherwise (see bug 195467)
+net-dialup/mgetty fax
