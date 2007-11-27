@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.67 2007/11/26 23:25:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.68 2007/11/27 01:32:53 ranger Exp $
+
+  27 Nov 2007; Brent Baude <ranger@gentoo.org> actionpack-1.13.6.ebuild:
+  Marking actionpack-1.13.6 ppc64 for bug 200159
 
   26 Nov 2007; Brent Baude <ranger@gentoo.org> actionpack-1.13.6.ebuild:
   Marking actionpack-1.13.6 ppc for bug 200159
