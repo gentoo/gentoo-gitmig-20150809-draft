@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.75 2007/11/25 08:21:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.76 2007/11/27 14:19:42 mrness Exp $
+
+*mgetty-1.1.36-r1 (27 Nov 2007)
+
+  27 Nov 2007; Alin Năstac <mrness@gentoo.org> -mgetty-1.1.36.ebuild,
+  +mgetty-1.1.36-r1.ebuild:
+  Replace nofax USE flag with fax (#195467).
 
   25 Nov 2007; Alin Năstac <mrness@gentoo.org>
   +files/mgetty-1.1.36-nofax.patch, mgetty-1.1.36.ebuild:
