@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.39-r1.ebuild,v 1.3 2007/11/27 01:28:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.39-r1.ebuild,v 1.4 2007/11/27 03:18:20 jer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ SRC_URI="mirror://openldap/openldap-release/${P}.tgz"
 
 LICENSE="OPENLDAP"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="berkdb crypt debug gdbm ipv6 kerberos minimal odbc overlays perl readline
 samba sasl slp smbkrb5passwd ssl tcpd selinux"
 
@@ -79,7 +79,7 @@ openldap_upgrade_howto() {
 openldap_find_versiontags() {
 	# scan for all datadirs
 	openldap_datadirs=""
-	if [ -f ${ROOT}/etc/openldap/slapd.conf ]; then
+	if [ -f "${ROOT}"/etc/openldap/slapd.conf ]; then
 		openldap_datadirs="$(awk '{if($1 == "directory") print $2 }' ${ROOT}/etc/openldap/slapd.conf)"
 	fi
 	openldap_datadirs="${openldap_datadirs} ${OPENLDAP_DEFAULTDIR_VERSIONTAG}"
@@ -178,14 +178,14 @@ src_unpack() {
 	# (the net result is that "passwd" can be used to change ldap passwords w/
 	#  proper pam support)
 	sed -i -e 's/$(SECURITY_LIBS) $(LDIF_LIBS) $(LUTIL_LIBS)/$(LUTIL_LIBS) $(SECURITY_LIBS) $(LDIF_LIBS)/' \
-		${S}/servers/slapd/Makefile.in
+		"${S}"/servers/slapd/Makefile.in
 
 	# supersedes old fix for bug #31202
 	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.14-perlthreadsfix.patch
 
 	# ensure correct SLAPI path by default
 	sed -i -e 's,\(#define LDAPI_SOCK\).*,\1 "/var/run/openldap/slapd.sock",' \
-		${S}/include/ldap_defaults.h
+		"${S}"/include/ldap_defaults.h
 
 	EPATCH_OPTS="-p0 -d ${S}"
 
@@ -261,7 +261,7 @@ src_compile() {
 		# slapd overlay options
 		myconf="${myconf} --enable-dyngroup --enable-proxycache"
 		use overlays && myconf="${myconf} --enable-overlays=mod"
-                myconf="${myconf} --enable-syncprov"
+		myconf="${myconf} --enable-syncprov"
 	else
 		myconf="${myconf} --disable-slapd --disable-slurpd"
 		myconf="${myconf} --disable-bdb --disable-ldbm"
@@ -366,9 +366,9 @@ src_install() {
 		fperms 0700 /var/lib/openldap-${x}
 	done
 
-	echo "OLDPF='${PF}'" >${D}${OPENLDAP_DEFAULTDIR_VERSIONTAG}/${OPENLDAP_VERSIONTAG}
-	echo "# do NOT delete this. it is used" >>${D}${OPENLDAP_DEFAULTDIR_VERSIONTAG}/${OPENLDAP_VERSIONTAG}
-	echo "# to track versions for upgrading." >>${D}${OPENLDAP_DEFAULTDIR_VERSIONTAG}/${OPENLDAP_VERSIONTAG}
+	echo "OLDPF='${PF}'" >"${D}"${OPENLDAP_DEFAULTDIR_VERSIONTAG}/${OPENLDAP_VERSIONTAG}
+	echo "# do NOT delete this. it is used" >>"${D}"${OPENLDAP_DEFAULTDIR_VERSIONTAG}/${OPENLDAP_VERSIONTAG}
+	echo "# to track versions for upgrading." >>"${D}"${OPENLDAP_DEFAULTDIR_VERSIONTAG}/${OPENLDAP_VERSIONTAG}
 
 	# manually remove /var/tmp references in .la
 	# because it is packaged with an ancient libtool
