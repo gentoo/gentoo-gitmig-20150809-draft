@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.6.0.ebuild,v 1.6 2007/07/02 15:20:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.6.0.ebuild,v 1.7 2007/11/27 11:14:27 zzam Exp $
 
 inherit distutils
 
@@ -56,7 +56,7 @@ src_install() {
 	newins local_conf.py.example local_conf.py
 
 	if [ "${PROFILE_ARCH}" == "xbox" ]; then
-		sed -i -e "s/# MPLAYER_AO_DEV.*/MPLAYER_AO_DEV='alsa1x'/" ${D}/etc/freevo/local_conf.py
+		sed -i -e "s/# MPLAYER_AO_DEV.*/MPLAYER_AO_DEV='alsa1x'/" "${D}"/etc/freevo/local_conf.py
 		newins "${FILESDIR}"/xbox-lircrc lircrc
 	fi
 
