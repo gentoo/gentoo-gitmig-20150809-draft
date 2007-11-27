@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.15.ebuild,v 1.5 2007/11/26 15:17:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.15.ebuild,v 1.6 2007/11/27 15:27:08 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.afterstep.org/stable/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gif jpeg mmx nls png tiff examples"
 
 RDEPEND="media-libs/freetype
