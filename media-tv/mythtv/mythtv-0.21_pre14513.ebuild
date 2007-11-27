@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14513.ebuild,v 1.2 2007/09/27 14:24:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14513.ebuild,v 1.3 2007/11/27 11:20:18 zzam Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
 
@@ -201,7 +201,7 @@ src_compile() {
 #			die	"failed to compile firewire_tester"
 	fi
 
-	cd ${S}/contrib/channel_changers
+	cd "${S}"/contrib/channel_changers
 	$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../red_eye red_eye.c ${LDFLAGS} || \
 		die "failed to compile red_eye"
 }
@@ -219,8 +219,8 @@ src_install() {
 	exeinto /usr/share/mythtv
 	doexe "${FILESDIR}/mythfilldatabase.cron"
 
-	newinitd ${FILESDIR}/mythbackend-0.18.2.rc mythbackend
-	newconfd ${FILESDIR}/mythbackend-0.18.2.conf mythbackend
+	newinitd "${FILESDIR}"/mythbackend-0.18.2.rc mythbackend
+	newconfd "${FILESDIR}"/mythbackend-0.18.2.conf mythbackend
 
 	dodoc keys.txt docs/*.{txt,pdf}
 	dohtml docs/*.html
@@ -243,7 +243,7 @@ src_install() {
 
 	if use autostart; then
 		dodir /etc/env.d/
-		echo 'CONFIG_PROTECT="/home/mythtv/"' > ${D}/etc/env.d/95mythtv
+		echo 'CONFIG_PROTECT="/home/mythtv/"' > "${D}"/etc/env.d/95mythtv
 
 		insinto /home/mythtv
 		newins "${FILESDIR}"/bash_profile .bash_profile
