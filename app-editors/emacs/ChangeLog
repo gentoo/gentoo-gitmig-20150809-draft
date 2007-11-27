@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.213 2007/11/27 00:29:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.214 2007/11/27 16:55:55 corsair Exp $
+
+  27 Nov 2007; Markus Rothe <corsair@gentoo.org> emacs-21.4-r14.ebuild,
+  emacs-22.1-r3.ebuild:
+  Stable on ppc64; bug #200297
 
   27 Nov 2007; Jeroen Roovers <jer@gentoo.org> emacs-22.1-r3.ebuild:
   Dropping compiler optimisations to -O1 for hppa (solves bug #193703).
