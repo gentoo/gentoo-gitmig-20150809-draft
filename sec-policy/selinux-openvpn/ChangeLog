@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-openvpn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-openvpn/ChangeLog,v 1.8 2007/08/29 18:41:52 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-openvpn/ChangeLog,v 1.9 2007/11/27 02:45:50 pebenito Exp $
+
+*selinux-openvpn-20070928 (26 Nov 2007)
+
+  26 Nov 2007; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-openvpn-20070928.ebuild:
+  New SVN snapshot.
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing kaiowas from metadata due to his retirement (see #61930 for
