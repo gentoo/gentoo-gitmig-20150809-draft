@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.156 2007/11/25 11:02:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.157 2007/11/27 07:24:52 mr_bones_ Exp $
 
 # Depends on Xen
 app-emulation/ganeti
@@ -385,6 +385,7 @@ dev-db/mysql-gui-tools
 >=x11-themes/gnome-themes-extras-2.20
 >=app-mobilephone/gnome-phone-manager-0.20
 app-accessibility/gnopernicus
+rox-base/devtray
 
 # Hanno Boeck <hanno@gentoo.org>
 # Needs gnome 2.16
