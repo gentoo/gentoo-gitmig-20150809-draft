@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10.ebuild,v 1.4 2007/11/26 21:43:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10.ebuild,v 1.5 2007/11/27 00:55:30 jer Exp $
 
 DESCRIPTION="Meta ebuild to pull in gst plugins for apps"
 HOMEPAGE="http://www.gentoo.org"
 
 LICENSE="GPL-2"
 SLOT="0.10"
-KEYWORDS="alpha amd64 arm ia64 sparc"
+KEYWORDS="alpha amd64 arm hppa ia64 sparc"
 IUSE="alsa esd oss X xv"
 
 RDEPEND="oss? ( >=media-plugins/gst-plugins-oss-0.10 )

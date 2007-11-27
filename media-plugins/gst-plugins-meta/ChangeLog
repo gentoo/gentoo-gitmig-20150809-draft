@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.4 2007/11/26 21:43:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.5 2007/11/27 00:55:30 jer Exp $
+
+  27 Nov 2007; Jeroen Roovers <jer@gentoo.org> gst-plugins-meta-0.10.ebuild:
+  Stable for HPPA (bug #200445).
 
   26 Nov 2007; Daniel Gryniewicz <dang@gentoo.org>
   gst-plugins-meta-0.10.ebuild:
