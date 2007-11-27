@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/actionmailer-1.3.6.ebuild,v 1.4 2007/11/27 01:33:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/actionmailer-1.3.6.ebuild,v 1.5 2007/11/27 14:57:40 armin76 Exp $
 
 inherit ruby gems
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://rubyforge.org/projects/actionmailer/"
 
 LICENSE="MIT"
 SLOT="1.2"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="=dev-ruby/actionpack-1.13.6
