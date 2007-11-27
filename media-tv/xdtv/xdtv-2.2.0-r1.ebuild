@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.16 2007/07/22 09:03:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.17 2007/11/27 10:14:40 zzam Exp $
 
 WANT_AUTOMAKE="1.7"
 WANT_AUTOCONF="2.5"
@@ -119,7 +119,7 @@ extension_iter() {
 
 extension_compile() {
 	einfo "Building ${1}"
-	cd ${WORKDIR}/${1}
+	cd "${WORKDIR}/${1}"
 
 	econf || die "econf failed"
 	emake || die "emake failed"
@@ -127,8 +127,8 @@ extension_compile() {
 
 extension_install() {
 	einfo "Installing ${1}"
-	cd ${WORKDIR}/${1} \
-		&& make DESTDIR=${D} LIBDIR="/usr/$(get_libdir)/${PN}" install
+	cd "${WORKDIR}/${1}" \
+		&& make DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)/${PN}" install
 }
 
 src_unpack() {
@@ -138,7 +138,7 @@ src_unpack() {
 	# Disable /usr/share/xdtv/icons/* installation
 	sed -i -e '/^install-data-local:/,${\:share/xdtv/icons:d}' "${S}"/Makefile.in
 
-	cd ${S}
+	cd "${S}"
 	epatch "${WORKDIR}/${P}-gcc4-amd64.patch"
 
 	has_version '<x11-base/xorg-x11-7.0' && \
@@ -190,17 +190,17 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Installation failed."
+	make DESTDIR="${D}" install || die "Installation failed."
 
 	# .desktop file and default icon
 	domenu gentoo/xdtv.desktop
 	insinto /usr/share/icons
-	doins ${S}/src/xdtv.xpm
+	doins "${S}"/src/xdtv.xpm
 
 	# Install the icons in the hicolor theme
 	for dim in 48 32 16; do
 		insinto /usr/share/icons/hicolor/${dim}x${dim}/apps
-		newins ${S}/xdtv-${dim}.png xdtv.png
+		newins "${S}"/xdtv-${dim}.png xdtv.png
 	done
 
 	# Install the led-fixed font with font.eclass

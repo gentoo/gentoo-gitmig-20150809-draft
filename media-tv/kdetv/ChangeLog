@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/kdetv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.34 2007/09/24 17:39:52 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.35 2007/11/27 10:20:15 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> kdetv-0.8.9.ebuild:
+  Fixed quoting.
 
   24 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   -files/kdetv-0.8.8-bindnow.patch, -files/kdetv-0.8.8-xinerama.patch,

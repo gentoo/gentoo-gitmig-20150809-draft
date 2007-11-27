@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9.ebuild,v 1.7 2007/09/24 17:39:52 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9.ebuild,v 1.8 2007/11/27 10:20:15 zzam Exp $
 
 LANGS="bg ca br da de cs cy el es et fi ga fr gl hu is it lt nb mt nl pa pl pt ro ru rw ta sr sv tr en_GB pt_BR zh_CN sr@Latn"
 LANGS_DOC="da et fr it nl pt ru sv"
@@ -65,6 +65,6 @@ src_install() {
 
 	# Move the .desktop file in FDO's suggested place
 	dodir /usr/share/applications/kde
-	mv ${D}/usr/share/applnk/Multimedia/kdetv.desktop \
-		${D}/usr/share/applications/kde
+	mv "${D}"/usr/share/applnk/Multimedia/kdetv.desktop \
+		"${D}"/usr/share/applications/kde
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/dvbstream-0.5.ebuild,v 1.4 2007/07/13 05:03:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/dvbstream-0.5.ebuild,v 1.5 2007/11/27 10:16:17 zzam Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${A}
 
 	#epatch ${FILESDIR}/${P}-gentoo.diff
-	cd ${S}
+	cd "${S}"
 	sed -i Makefile \
 		-e 's:$(CFLAGS):$(CFLAGS) $(CPPFLAGS):' \
 		-e '/CFLAGS.*=.*-g -Wall -O2/s:-g -Wall -O2::' \

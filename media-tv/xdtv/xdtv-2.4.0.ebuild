@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.4 2007/07/22 09:03:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.5 2007/11/27 10:14:40 zzam Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs
 
@@ -92,7 +92,7 @@ extension_compile() {
 
 extension_install() {
 	einfo "Installing ${1}"
-	cd ${WORKDIR}/${1} \
+	cd "${WORKDIR}/${1}" \
 		&& emake DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)/${PN}" install
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.23 2007/07/22 09:04:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.24 2007/11/27 10:22:56 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -102,46 +102,45 @@ src_compile() {
 	emake BINDNOW_FLAGS=$(bindnow-flags) verbose=yes || die "Make failed"
 
 	if use X; then
-		cd ${WORKDIR}/${MY_FONT}
+		cd "${WORKDIR}/${MY_FONT}"
 		emake -j1 DISPLAY= || die "tvfonts failed"
 	fi
 }
 
 src_install() {
-	cd ${S}
-	make install DESTDIR=${D} resdir=${D}/etc/X11 || die "make install failed"
+	make install DESTDIR="${D}" resdir="${D}"/etc/X11 || die "make install failed"
 
 	# v4lctl is only installed automatically if the X USE flag is enabled
 	use X || \
 		dobin x11/v4lctl
 
-	dodoc Changes README* TODO ${FILESDIR}/webcamrc
+	dodoc Changes README* TODO "${FILESDIR}"/webcamrc
 	docinto cgi-bin
 	dodoc scripts/webcam.cgi
 
 	use X || \
-		rm -f ${D}/usr/share/man/man1/{pia,propwatch}.1 \
-			${D}/usr/share/{man,man/fr,man/es}/man1/xawtv.1 \
-			${D}/usr/share/{man,man/es}/man1/rootv.1
+		rm -f "${D}"/usr/share/man/man1/{pia,propwatch}.1 \
+			"${D}"/usr/share/{man,man/fr,man/es}/man1/xawtv.1 \
+			"${D}"/usr/share/{man,man/es}/man1/rootv.1
 
 	use motif || \
-		rm -f ${D}/usr/share/man/man1/{motv,mtt}.1
+		rm -f "${D}"/usr/share/man/man1/{motv,mtt}.1
 
 	use zvbi || \
-		rm -f ${D}/usr/share/man/man1/{alevtd,mtt}.1 \
-			${D}/usr/share/{man,man/es}/man1/scantv.1
+		rm -f "${D}"/usr/share/man/man1/{alevtd,mtt}.1 \
+			"${D}"/usr/share/{man,man/es}/man1/scantv.1
 
 	use nls || \
-		rm -f ${D}/usr/share/man/fr \
-			${D}/usr/share/man/es
+		rm -f "${D}"/usr/share/man/fr \
+			"${D}"/usr/share/man/es
 
 	# The makefile seems to be fubar'd for some data
 	dodir /usr/share/${PN}
-	mv ${D}/usr/share/*.list ${D}/usr/share/${PN}
-	mv ${D}/usr/share/Index* ${D}/usr/share/${PN}
+	mv "${D}"/usr/share/*.list "${D}"/usr/share/${PN}
+	mv "${D}"/usr/share/Index* "${D}"/usr/share/${PN}
 
 	if use X; then
-		cd ${WORKDIR}/${MY_FONT}
+		cd "${WORKDIR}/${MY_FONT}"
 		insinto /usr/share/fonts/xawtv
 		doins *.gz fonts.alias
 

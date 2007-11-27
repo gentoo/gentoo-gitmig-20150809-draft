@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.57 2007/07/22 09:04:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.58 2007/11/27 10:22:56 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> xawtv-3.95-r1.ebuild:
+  Fixed quoting.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; xawtv-3.95-r1.ebuild:
   Drop virtual/x11 references.

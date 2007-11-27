@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-0.6.ebuild,v 1.5 2007/11/19 09:07:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-0.6.ebuild,v 1.6 2007/11/27 10:17:10 zzam Exp $
 
 inherit multilib
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	# delete unneeded linking against libtermcap
-	sed -i ${S}/src/Makefile* -e 's:-ltermcap::'
+	sed -i "${S}"/src/Makefile* -e 's:-ltermcap::'
 }
 
 src_compile() {
@@ -33,7 +33,7 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "make install failed"
-	rm -rf ${D}/usr/doc/DVBStreamer/
+	rm -rf "${D}"/usr/doc/DVBStreamer/
 
 	dodoc doc/*.txt ChangeLog README AUTHORS NEWS TODO || die "dodoc failed"
 }
