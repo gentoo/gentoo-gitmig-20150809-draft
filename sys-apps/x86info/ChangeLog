@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/x86info
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.17 2007/04/24 07:36:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.18 2007/11/27 01:59:50 robbat2 Exp $
+
+*x86info-1.21 (27 Nov 2007)
+
+  27 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> +files/1.21-pic.patch,
+  +x86info-1.21.ebuild:
+  Version bump.
 
   24 Apr 2007; Christian Faulhammer <opfer@gentoo.org> x86info-1.20.ebuild:
   stable amd64, bug 175732
