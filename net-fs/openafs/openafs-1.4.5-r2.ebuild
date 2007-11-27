@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.5-r2.ebuild,v 1.1 2007/11/27 17:19:46 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.5-r2.ebuild,v 1.2 2007/11/27 17:29:53 stefaan Exp $
 
 inherit flag-o-matic eutils toolchain-funcs versionator pam
 
@@ -31,7 +31,7 @@ src_unpack() {
 	# to be more FHS friendly, and the fix the incorrect typecasts for va_arg
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 
-	epatch ${FILESDIR}/openafs-alpha-ucontext.patch
+	epatch "${FILESDIR}"/openafs-alpha-ucontext.patch
 
 	sed -i 's/^[ \t]*XCFLAGS.*//' src/cf/osconf.m4
 
