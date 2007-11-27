@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/memcached
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.53 2007/11/26 23:49:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.54 2007/11/27 01:22:15 robbat2 Exp $
+
+*memcached-1.2.4_rc1 (27 Nov 2007)
+
+  27 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> +files/1.2.4/conf,
+  +files/1.2.4/init, +memcached-1.2.4_rc1.ebuild:
+  Version bump to upstream release candidate. Also include the updated scripts
+  with multiconf support per bug #194868. Multiconf was possible before, but
+  the PIDFILE was not always handled correctly.
 
   26 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Update metadata to reflect new ownership, as lisa is retiring.
