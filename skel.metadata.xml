@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <!-- 
-$Header: /var/cvsroot/gentoo-x86/skel.metadata.xml,v 1.16 2007/11/27 21:06:49 cardoe Exp $
+$Header: /var/cvsroot/gentoo-x86/skel.metadata.xml,v 1.17 2007/11/27 21:18:51 cardoe Exp $
 
 This is the example metadata file.
 The root element of this file is <pkgmetadata>. Within this element a 
@@ -22,4 +22,10 @@ not relevant for general metadata.xml files.
 <!--  <description>Description of the maintainership</description> -->
 </maintainer>
 <!-- <longdescription>Long description of the package</longdescription> -->
+<!--
+<use>
+  <flag name='flag'>Description of how USE='flag' affects this package.</flag>
+  <flag name='userland_GNU'>Description of how USERLAND='GNU' affects this package.</flag>
+</use>
+-->
 </pkgmetadata>
