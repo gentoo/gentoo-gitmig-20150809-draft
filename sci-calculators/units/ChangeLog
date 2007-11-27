@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.24 2007/11/27 16:07:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.25 2007/11/27 16:26:23 jer Exp $
+
+  27 Nov 2007; Jeroen Roovers <jer@gentoo.org> -units-1.86.ebuild:
+  Remove old version.
 
   27 Nov 2007; Raúl Porcel <armin76@gentoo.org> units-1.87.ebuild:
   alpha/sparc stable wrt #200211
