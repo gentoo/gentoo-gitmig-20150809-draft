@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r9.ebuild,v 1.4 2007/07/17 09:12:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r9.ebuild,v 1.5 2007/11/27 11:45:45 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -24,16 +24,16 @@ DEPEND="media-libs/libmpeg2
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/patches-${PV}/directoryfix.diff
-	epatch ${FILESDIR}/patches-${PV}/as-needed.diff
-	epatch ${FILESDIR}/patches-${PV}/cflags.diff
-	epatch ${FILESDIR}/patches-${PV}/framesize.diff
-	epatch ${FILESDIR}/patches-${PV}/delete-while-scanning.diff
-	epatch ${FILESDIR}/patches-${PV}/fix-osd.patch
-	epatch ${FILESDIR}/patches-${PV}/hangcheck.diff
-	epatch ${FILESDIR}/patches-${PV}/new-ffmpeg-extern-c.diff
+	epatch "${FILESDIR}"/patches-${PV}/directoryfix.diff
+	epatch "${FILESDIR}"/patches-${PV}/as-needed.diff
+	epatch "${FILESDIR}"/patches-${PV}/cflags.diff
+	epatch "${FILESDIR}"/patches-${PV}/framesize.diff
+	epatch "${FILESDIR}"/patches-${PV}/delete-while-scanning.diff
+	epatch "${FILESDIR}"/patches-${PV}/fix-osd.patch
+	epatch "${FILESDIR}"/patches-${PV}/hangcheck.diff
+	epatch "${FILESDIR}"/patches-${PV}/new-ffmpeg-extern-c.diff
 
 	rm configure
 	eautoreconf
@@ -55,24 +55,24 @@ src_install() {
 	dobin noad showindex
 	use imagemagick && dobin markpics
 
-	dodoc COPYING README INSTALL
+	dodoc README INSTALL
 	# example scripts are installed as dokumentation
 	dodoc allnewnoad allnoad allnoadnice clearlogos noadifnew stat2html
 
-	CONF_SOURCE=${FILESDIR}/0.6.0-r7
-	newconfd ${CONF_SOURCE}/confd_vdraddon.noad vdraddon.noad
+	CONF_SOURCE="${FILESDIR}/0.6.0-r7"
+	newconfd "${CONF_SOURCE}"/confd_vdraddon.noad vdraddon.noad
 
 	insinto /usr/share/vdr/record
-	doins ${CONF_SOURCE}/record-50-noad.sh
+	doins "${CONF_SOURCE}"/record-50-noad.sh
 
 	insinto /usr/share/vdr/shutdown
-	doins ${FILESDIR}/pre-shutdown-15-noad.sh
+	doins "${FILESDIR}"/pre-shutdown-15-noad.sh
 
 	insinto /etc/vdr/reccmds
-	doins ${CONF_SOURCE}/reccmds.noad.conf
+	doins "${CONF_SOURCE}"/reccmds.noad.conf
 
 	exeinto /usr/share/vdr/bin
-	doexe ${CONF_SOURCE}/noad-reccmd
+	doexe "${CONF_SOURCE}"/noad-reccmd
 }
 
 pkg_postinst() {
