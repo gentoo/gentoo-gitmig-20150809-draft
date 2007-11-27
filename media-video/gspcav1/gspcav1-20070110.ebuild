@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gspcav1/gspcav1-20070110.ebuild,v 1.1 2007/01/20 06:50:48 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gspcav1/gspcav1-20070110.ebuild,v 1.2 2007/11/27 14:16:48 zzam Exp $
 
 inherit linux-mod
 
@@ -26,7 +26,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	convert_to_m ${S}/Makefile
+	convert_to_m "${S}"/Makefile
 }
 
 src_install() {

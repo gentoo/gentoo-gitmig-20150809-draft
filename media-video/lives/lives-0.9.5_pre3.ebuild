@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.5_pre3.ebuild,v 1.3 2006/11/13 15:24:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.5_pre3.ebuild,v 1.4 2007/11/27 14:14:27 zzam Exp $
 
 inherit flag-o-matic
 
@@ -46,7 +46,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${WORKDIR}/${PN}-${MY_PV}
+	cd "${WORKDIR}"/${PN}-${MY_PV}
 	use amd64 && append-flags -fPIC -DPIC
 	econf \
 		$(use_enable libvisual) || die "configure failed"
@@ -54,7 +54,7 @@ src_compile() {
 }
 
 src_install() {
-	cd ${WORKDIR}/${PN}-${MY_PV}
-	emake DESTDIR=${D} install || die
+	cd "${WORKDIR}"/${PN}-${MY_PV}
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS CHANGELOG FEATURES GETTING.STARTED
 }

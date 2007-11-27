@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/konverter-0.93.ebuild,v 1.1 2007/03/14 23:42:43 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/konverter-0.93.ebuild,v 1.2 2007/11/27 14:15:50 zzam Exp $
 
 inherit qt3 eutils
 
@@ -25,16 +25,16 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# make sure that sourced binary will not be install
-	rm ${S}/src/bin/${PN}
+	rm "${S}"/src/bin/${PN}
 
-	epatch ${FILESDIR}/${P}-pro_files.patch
-	epatch ${FILESDIR}/${PN}-desktop.patch
+	epatch "${FILESDIR}"/${P}-pro_files.patch
+	epatch "${FILESDIR}"/${PN}-desktop.patch
 
 	# icon for desktop file
-	cp ${S}/media/hi32-app-konverter.png ${S}/media/${PN}.png
+	cp "${S}"/media/hi32-app-konverter.png "${S}"/media/${PN}.png
 }
 
 src_compile() {
@@ -46,7 +46,7 @@ src_compile() {
 		QMAKE_RPATH= \
 		|| die "qmake failed"
 
-	cd ${S}/src
+	cd "${S}"/src
 	qmake src.pro \
 		QTDIR=/usr/lib \
 		QMAKE_CFLAGS_RELEASE="${CFLAGS}" \
@@ -62,9 +62,9 @@ src_install() {
 	# for now - useless...
 	# make INSTALL_ROOT="${D}" install || die "make install failed"
 
-	dobin ${S}/bin/${PN}
-	dodoc ${S}/distfiles/{AUTHORS,ChangeLog,README,TODO}
+	dobin "${S}"/bin/${PN}
+	dodoc "${S}"/distfiles/{AUTHORS,ChangeLog,README,TODO}
 
-	domenu ${S}/distfiles/${PN}.desktop
-	doicon ${S}/media/${PN}.png
+	domenu "${S}"/distfiles/${PN}.desktop
+	doicon "${S}"/media/${PN}.png
 }

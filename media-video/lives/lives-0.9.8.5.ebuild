@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.8.5.ebuild,v 1.1 2007/06/04 14:21:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.8.5.ebuild,v 1.2 2007/11/27 14:14:27 zzam Exp $
 
 inherit flag-o-matic
 
@@ -42,8 +42,8 @@ src_unpack() {
 	unpack ${A}
 	# hardcoding -03 is wrong!
 	sed -i -e "s:-O3::g" \
-	${S}/{,src,lives-plugins,lives-plugins/plugins/playback/video,lives-plugins/weed-plugins}/Makefile*
-	cd ${S}
+	"${S}"/{,src,lives-plugins,lives-plugins/plugins/playback/video,lives-plugins/weed-plugins}/Makefile*
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-install-paths.patch"
 }
 
@@ -58,6 +58,6 @@ src_compile() {
 src_install() {
 	dodir /usr/share/pixmaps
 	dodir /usr/share/applications
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS CHANGELOG FEATURES GETTING.STARTED
 }

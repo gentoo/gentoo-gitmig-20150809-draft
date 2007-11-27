@@ -1,6 +1,9 @@
 # ChangeLog for media-video/konverter
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.10 2007/03/14 23:42:43 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.11 2007/11/27 14:15:50 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> konverter-0.93.ebuild:
+  Fixed quoting.
 
 *konverter-0.93 (14 Mar 2007)
 

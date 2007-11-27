@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gspcav1
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gspcav1/ChangeLog,v 1.4 2007/05/19 16:36:07 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gspcav1/ChangeLog,v 1.5 2007/11/27 14:16:48 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
+  gspcav1-20060925.ebuild, gspcav1-20070110.ebuild, gspcav1-20070508.ebuild:
+  Fixed quoting.
 
 *gspcav1-20070508 (19 May 2007)
 
