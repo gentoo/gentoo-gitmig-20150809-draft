@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r1.ebuild,v 1.8 2007/07/22 08:45:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r1.ebuild,v 1.9 2007/11/27 15:10:56 zzam Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -58,7 +58,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/mpeg4ip-1.4.1-disable-faac-test.patch"
 	epatch "${FILESDIR}/${P}-x264.patch"
 	epatch "${FILESDIR}/mpeg4ip-1.5.0.1-newffmpeg.patch"
@@ -68,8 +68,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}
-
 	local myconf
 	myconf=" --datadir=/usr/share/mpeg4ip
 			$(use_enable ipv6)
@@ -134,11 +132,10 @@ src_compile() {
 }
 
 src_install () {
-	cd ${S}
 	make install DESTDIR="${D}" || die "make install failed"
 
-	rm -f ${D}/usr/include/mp4.h
-	rm -f ${D}/usr/$(get_libdir)/libmp4v2*
+	rm -f "${D}"/usr/include/mp4.h
+	rm -f "${D}"/usr/$(get_libdir)/libmp4v2*
 
 	dodoc doc/MPEG4IP_Guide.pdf doc/*txt AUTHORS TODO
 

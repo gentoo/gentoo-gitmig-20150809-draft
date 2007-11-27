@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r2.ebuild,v 1.4 2007/10/28 19:20:53 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r2.ebuild,v 1.5 2007/11/27 15:10:56 zzam Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -70,8 +70,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd "${S}"
-
 	local myconf
 	myconf=" --datadir=/usr/share/mpeg4ip
 			$(use_enable ipv6)
@@ -136,7 +134,6 @@ src_compile() {
 }
 
 src_install () {
-	cd "${S}"
 	make install DESTDIR="${D}" || die "make install failed"
 
 	rm -f "${D}"/usr/include/mp4.h
