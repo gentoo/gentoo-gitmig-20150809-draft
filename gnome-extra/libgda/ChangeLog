@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.117 2007/11/10 12:12:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.118 2007/11/27 19:36:54 dang Exp $
+
+  27 Nov 2007; Daniel Gryniewicz <dang@gentoo.org>
+  -files/libgda-1.2.3-freetds_api_fixes.patch, -libgda-1.2.3.ebuild,
+  libgda-3.0.1.ebuild:
+  Hide firebird behind bindist; bug #200284
 
   10 Nov 2007; nixnut <nixnut@gentoo.org> libgda-1.2.4.ebuild:
   Stable on ppc wrt bug 197799
