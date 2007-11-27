@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.1.ebuild,v 1.6 2007/07/22 09:01:22 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.1.ebuild,v 1.7 2007/11/27 10:53:54 zzam Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -43,7 +43,7 @@ IUSE="doc jikes themes source"
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/${P}-makefiles.patch
+	epatch "${FILESDIR}"/${P}-makefiles.patch
 
 	local J_ARCH
 	case "${ARCH}" in
@@ -52,10 +52,10 @@ src_unpack() {
 		*) die "not supported arch for this ebuild" ;;
 	esac
 
-	sed -i ${S}/deployment/x11/src/Makefile.am \
+	sed -i "${S}"/deployment/x11/src/Makefile.am \
 		-e "s-/lib/i386/-/lib/${J_ARCH}/-"
 
-	cd ${S}/lib
+	cd "${S}"/lib
 	rm *.jar
 
 	java-pkg_jar-from junit
@@ -64,7 +64,7 @@ src_unpack() {
 	java-pkg_jar-from bsh bsh.jar bsh-2.0b1.jar
 	java-pkg_jar-from skinlf
 
-	cd ${S}/deployment/x11
+	cd "${S}"/deployment/x11
 	rm configure
 
 	eautoreconf
@@ -74,12 +74,12 @@ src_compile() {
 	local antflags="runtime-linux"
 	use doc && antflags="${antflags} public-doc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	cd ${S}
+	cd "${S}"
 	mkdir public
 	ant ${antflags} || die "compilation failed !"
 
 	# second part: systray-module
-	cd ${S}/deployment/x11
+	cd "${S}"/deployment/x11
 	append-flags -fPIC
 	econf || die "econf failed"
 	emake || die "emake failed"
@@ -97,11 +97,11 @@ src_install() {
 		todir="${todir}-${SLOT}"
 	fi
 
-	cp -a imgs ${D}/${todir}
-	cp -a plugins ${D}/${todir}
-	cp linux.properties ${D}/${todir}
+	cp -a imgs "${D}"/${todir}
+	cp -a plugins "${D}"/${todir}
+	cp linux.properties "${D}"/${todir}
 
-	cp libDesktopIndicator.so ${D}/${todir}
+	cp libDesktopIndicator.so "${D}"/${todir}
 
 	mkdir "${D}/usr/share/${PN}-themepacks"
 	cp themepacks/themepack.zip "${D}/usr/share/${PN}-themepacks"
@@ -111,7 +111,7 @@ src_install() {
 		unpack allthemepacks.zip
 	fi
 
-	mkdir ${D}/${todir}/bin
+	mkdir "${D}"/${todir}/bin
 
 	echo "#!/bin/bash" > "${D}/${todir}/bin/tvbrowser.sh"
 	echo "cd ${todir}" >> "${D}/${todir}/bin/tvbrowser.sh"
