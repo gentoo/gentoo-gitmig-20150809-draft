@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obpager
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/ChangeLog,v 1.8 2006/10/22 00:08:14 omp Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/ChangeLog,v 1.9 2007/11/27 21:21:50 angelos Exp $
+
+  27 Nov 2007; Christoph Mende <angelos@gentoo.org> obpager-1.8.ebuild:
+  Added ~amd64
 
   22 Oct 2006; David Shakaryan <omp@gentoo.org> obpager-1.8.ebuild:
   Remove monolithic X from dependencies and fix quotes.
