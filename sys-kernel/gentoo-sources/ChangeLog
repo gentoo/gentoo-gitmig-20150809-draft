@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.448 2007/11/17 19:07:47 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.449 2007/11/27 18:34:27 dsd Exp $
+
+*gentoo-sources-2.6.23-r3 (27 Nov 2007)
+
+  27 Nov 2007; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.23-r3.ebuild:
+  Update to Linux 2.6.23.9. Fix missing USB attributes in sysfs. Fix 7 hour
+  boot delay for buggy forcedeth hardware.
 
 *gentoo-sources-2.6.23-r2 (17 Nov 2007)
 
