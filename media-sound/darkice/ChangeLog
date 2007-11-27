@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/darkice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.42 2007/11/26 20:41:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.43 2007/11/27 11:28:00 maekke Exp $
+
+  27 Nov 2007; Markus Meier <maekke@gentoo.org> darkice-0.18.1.ebuild:
+  x86 stable, bug #200414
 
   26 Nov 2007; Christoph Mende <angelos@gentoo.org> darkice-0.18.1.ebuild:
   Stable on amd64 wrt bug #200414
