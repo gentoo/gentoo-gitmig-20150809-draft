@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.118 2007/11/21 16:01:35 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.119 2007/11/27 08:27:25 opfer Exp $
+
+  27 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  no-nptl/2.4/package.mask:
+  mask app-text/gnomesword versions greater than 2.2.2
 
   21 Nov 2007; Dawid Węgliński <cla@gentoo.org> package.use.mask:
   Masking afs for gnome-base/gdm-2.20.1 - sys-libs/lwp installs file with
