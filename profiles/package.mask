@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7948 2007/11/27 15:36:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7949 2007/11/27 17:36:40 matsuu Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# MATSUU Takuto <matsuu@gentoo.org> (27 Nov 2007)
+# Lots of security issues: bug #196673
+app-text/ptex
 
 # Robin H. Johnson <robbat2@gentoo.org> (26 Nov 2007)
 # For testing only
