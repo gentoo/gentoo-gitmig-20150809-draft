@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vcdgear
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/ChangeLog,v 1.15 2007/02/22 01:56:22 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/ChangeLog,v 1.16 2007/11/27 11:36:42 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> vcdgear-1.6e.ebuild:
+  Fixed quoting.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

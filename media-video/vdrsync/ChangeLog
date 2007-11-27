@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vdrsync
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdrsync/ChangeLog,v 1.10 2006/10/24 12:15:36 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdrsync/ChangeLog,v 1.11 2007/11/27 11:35:34 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdrsync-0.1.3_pre050322-r1.ebuild:
+  Fixed quoting.
 
   24 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
   -vdrsync-0.1.3_pre050322.ebuild:

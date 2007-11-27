@@ -1,6 +1,10 @@
 # ChangeLog for media-video/tuxzap-programs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/ChangeLog,v 1.12 2006/05/28 13:11:18 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/ChangeLog,v 1.13 2007/11/27 11:37:20 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
+  tuxzap-programs-0.5.4.ebuild:
+  Fixed quoting.
 
   28 May 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/tuxzap-programs-0.5.4-gcc-34.diff, tuxzap-programs-0.5.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-20061023.042702-r1.ebuild,v 1.7 2007/05/01 01:47:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-20061023.042702-r1.ebuild,v 1.8 2007/11/27 11:40:27 zzam Exp $
 
 inherit linux-mod eutils
 
@@ -38,8 +38,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/config.h.patch
+	cd "${S}"
+	epatch "${FILESDIR}/config.h.patch"
 }
 
 pkg_setup() {

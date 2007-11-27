@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/tuxzap-programs-0.5.4.ebuild,v 1.3 2006/05/28 13:11:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/tuxzap-programs-0.5.4.ebuild,v 1.4 2007/11/27 11:37:20 zzam Exp $
 
 inherit multilib eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=media-libs/libdvb-0.2.1
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/${P}-gcc-34.diff
+	epatch "${FILESDIR}/${P}-gcc-34.diff"
 }
 
 src_compile() {
