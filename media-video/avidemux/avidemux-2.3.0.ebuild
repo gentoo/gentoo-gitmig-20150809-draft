@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.3.0.ebuild,v 1.9 2007/07/22 08:57:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.3.0.ebuild,v 1.10 2007/11/27 11:57:23 zzam Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -103,10 +103,10 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog History README TODO
 	insinto /usr/share/pixmaps
-	newins ${S}/avidemux_icon.png avidemux.png
+	newins "${S}"/avidemux_icon.png avidemux.png
 	make_desktop_entry avidemux2 "Avidemux2" avidemux.png
 }
 

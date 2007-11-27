@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkentools/blinkentools-2.9.ebuild,v 1.3 2006/05/28 11:13:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkentools/blinkentools-2.9.ebuild,v 1.4 2007/11/27 12:22:11 zzam Exp $
 
 DESCRIPTION="blinkentools is a set of commandline utilities related to Blinkenlights."
 HOMEPAGE="http://www.blinkenlights.de"
@@ -21,6 +21,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} \
+	make DESTDIR="${D}" \
 		install || die "install failed"
 }

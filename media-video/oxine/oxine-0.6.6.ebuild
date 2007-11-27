@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.6.6.ebuild,v 1.3 2007/07/22 08:41:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.6.6.ebuild,v 1.4 2007/11/27 12:11:35 zzam Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils autotools
@@ -77,7 +77,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
-	cd ${S}
+	cd "${S}"
 	epatch ${DISTDIR}/${PN}-0_6_0-to-0_6_6.patch
 	AT_M4DIR="m4" eautoreconf
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/dfbsee-0.7.4-r1.ebuild,v 1.2 2007/09/21 16:12:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/dfbsee-0.7.4-r1.ebuild,v 1.3 2007/11/27 12:23:42 zzam Exp $
 
 inherit flag-o-matic eutils
 
@@ -25,7 +25,7 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-direcfb-0.9.24.patch"
 	epatch "${FILESDIR}/${P}-gcc4.patch"
@@ -39,6 +39,6 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc README AUTHORS
 }

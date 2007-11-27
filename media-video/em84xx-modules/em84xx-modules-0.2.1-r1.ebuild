@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em84xx-modules/em84xx-modules-0.2.1-r1.ebuild,v 1.1 2007/07/16 20:51:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em84xx-modules/em84xx-modules-0.2.1-r1.ebuild,v 1.2 2007/11/27 12:18:27 zzam Exp $
 
 inherit linux-mod eutils
 
@@ -33,10 +33,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-kernel-2.6.19.diff
-	epatch ${FILESDIR}/${P}-kernel-2.6.22.diff
+	epatch "${FILESDIR}/${P}-kernel-2.6.19.diff"
+	epatch "${FILESDIR}/${P}-kernel-2.6.22.diff"
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dfbsee
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/ChangeLog,v 1.9 2007/09/21 16:12:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/ChangeLog,v 1.10 2007/11/27 12:23:42 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> dfbsee-0.7.4.ebuild,
+  dfbsee-0.7.4-r1.ebuild:
+  Fixed quoting.
 
   21 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   dfbsee-0.7.4-r1.ebuild:

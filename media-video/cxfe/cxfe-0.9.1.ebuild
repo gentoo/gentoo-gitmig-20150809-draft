@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/cxfe-0.9.1.ebuild,v 1.5 2007/07/22 08:54:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/cxfe-0.9.1.ebuild,v 1.6 2007/11/27 11:59:57 zzam Exp $
 
 inherit eutils
 
@@ -27,9 +27,9 @@ src_unpack() {
 	unpack ${A}
 	mv cxfe ${P}
 	cd ${P}
-	epatch ${FILESDIR}/gcc-2.95-fix.patch
-	epatch ${FILESDIR}/max-osd-fix.patch
-	epatch ${FILESDIR}/xv-default.patch
+	epatch "${FILESDIR}"/gcc-2.95-fix.patch
+	epatch "${FILESDIR}"/max-osd-fix.patch
+	epatch "${FILESDIR}"/xv-default.patch
 }
 
 src_install() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/spca5xx-20060501-r1.ebuild,v 1.1 2006/10/22 15:04:58 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/spca5xx-20060501-r1.ebuild,v 1.2 2007/11/27 12:12:52 zzam Exp $
 
 inherit linux-mod
 
@@ -26,7 +26,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	convert_to_m ${S}/Makefile
+	convert_to_m "${S}"/Makefile
 	cd "${S}"
 	epatch "${FILESDIR}"/spca-20060501-defines.patch
 	epatch "${FILESDIR}"/spca-20060501-2.6.18.patch

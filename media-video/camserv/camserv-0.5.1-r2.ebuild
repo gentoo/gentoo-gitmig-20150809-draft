@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1-r2.ebuild,v 1.9 2005/12/08 15:55:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1-r2.ebuild,v 1.10 2007/11/27 11:58:01 zzam Exp $
 
 inherit eutils autotools
 
@@ -28,14 +28,14 @@ src_unpack() {
 	export WANT_AUTOMAKE="1.6"
 
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.5-errno.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-0.5-errno.patch"
 	AT_M4DIR="${S}/macros" eautoreconf
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 	dodoc AUTHORS BUGS ChangeLog NEWS README TODO javascript.txt
 
-	newinitd ${FILESDIR}/camserv.init camserv
+	newinitd "${FILESDIR}"/camserv.init camserv
 }

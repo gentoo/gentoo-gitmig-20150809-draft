@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/matroxset-0.4.ebuild,v 1.4 2006/08/19 13:22:54 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/matroxset-0.4.ebuild,v 1.5 2007/11/27 12:15:19 zzam Exp $
 
 IUSE=""
 
@@ -16,12 +16,11 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86"
 
 src_compile() {
-	cd ${S}
 #	make clean || die
 	make all || die
 
 	#prepare small README
-	cat >> ${S}/README << _EOF_
+	cat >> "${S}"/README << _EOF_
 This utility has been created by Petr Vandrovec
 
 Not much info here, but here are some pointers

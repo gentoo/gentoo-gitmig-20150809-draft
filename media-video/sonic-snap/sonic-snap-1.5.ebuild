@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.5 2007/07/22 08:28:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.6 2007/11/27 11:51:42 zzam Exp $
 
 inherit eutils linux-info
 
@@ -31,7 +31,7 @@ are enabled as modules in your kernel."
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	use mpeg && sed -i -e "s?USE_FAME=0?USE_FAME=1?g" Makefile
 }
 
@@ -41,7 +41,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/bin
-	make DESTDIR=${D} install || die '"make install" failed.'
+	make DESTDIR="${D}" install || die '"make install" failed.'
 	#einstall || die "einstall failed"
 
 	dodoc ChangeLog README

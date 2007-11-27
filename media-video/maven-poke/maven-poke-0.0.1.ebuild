@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/maven-poke/maven-poke-0.0.1.ebuild,v 1.4 2005/07/28 10:39:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/maven-poke/maven-poke-0.0.1.ebuild,v 1.5 2007/11/27 12:14:23 zzam Exp $
 
 IUSE=""
 
@@ -16,11 +16,10 @@ LICENSE="GPL-2"
 KEYWORDS="~ppc ~x86"
 
 src_compile() {
-	cd ${S}
 	make all || die
 
 	#prepare small README
-	cat >> ${S}/README << _EOF_
+	cat >> "${S}"/README << _EOF_
 This utility has been created by Petr Vandrovec.
 It was formerly called maven-prog (and the executable was matrox).
 

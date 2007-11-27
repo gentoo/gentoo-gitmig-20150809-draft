@@ -1,6 +1,10 @@
 # ChangeLog for media-video/blinkenthemes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkenthemes/ChangeLog,v 1.4 2007/02/22 01:43:05 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkenthemes/ChangeLog,v 1.5 2007/11/27 12:21:36 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
+  blinkenthemes-0.10.ebuild:
+  Fixed quoting.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/effectv-0.3.11.ebuild,v 1.2 2007/07/12 02:40:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/effectv-0.3.11.ebuild,v 1.3 2007/11/27 12:00:34 zzam Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ DEPEND="x86? ( dev-lang/nasm )
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${PN}-0.3.10-makefile.patch"
 	epatch "${FILESDIR}/${PN}-0.3.10-trunc-name-collision.patch"
 	epatch "${FILESDIR}/${P}-timedist.patch"

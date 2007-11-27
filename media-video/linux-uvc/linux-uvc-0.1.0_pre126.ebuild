@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/linux-uvc-0.1.0_pre126.ebuild,v 1.1 2007/09/27 21:30:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/linux-uvc-0.1.0_pre126.ebuild,v 1.2 2007/11/27 12:16:07 zzam Exp $
 
 inherit eutils linux-mod
 
@@ -29,7 +29,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	use isight && epatch patch/isight-base.patch
 	use isight && epatch patch/isight-against-uvcvideo-r126.diff
 }

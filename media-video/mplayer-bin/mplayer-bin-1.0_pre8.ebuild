@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_pre8.ebuild,v 1.4 2007/07/02 15:23:16 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_pre8.ebuild,v 1.5 2007/11/27 12:03:37 zzam Exp $
 
 inherit multilib
 
@@ -36,7 +36,7 @@ pkg_setup() {
 }
 
 src_install() {
-	cp -pPRvf ${WORKDIR}/* ${D}/
+	cp -pPRvf "${WORKDIR}"/* "${D}"/
 	dosym /opt/mplayer-bin/bin/mplayer-bin /opt/mplayer-bin/bin/gmplayer-bin
 	dosed dosed -e "s/gmplayer/gmplayer-bin/" /opt/mplayer-bin/share/applications/mplayer.desktop
 	dosym /opt/mplayer-bin/share/applications/mplayer.desktop /usr/share/applications/mplayer-bin.desktop

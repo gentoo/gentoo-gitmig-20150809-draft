@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.7.ebuild,v 1.1 2007/09/04 04:16:39 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.7.ebuild,v 1.2 2007/11/27 12:19:26 zzam Exp $
 
 inherit eutils flag-o-matic perl-module
 
@@ -63,7 +63,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	filter-flags "-ftracer"
 	sed -i -e 's:cc :$(CC) :' src/Makefile || die "sed failed"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/camserv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/ChangeLog,v 1.18 2007/02/03 20:58:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/ChangeLog,v 1.19 2007/11/27 11:58:01 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
+  camserv-0.5.1-r2.ebuild:
+  Fixed quoting.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/motiontrack-0.1.3.ebuild,v 1.4 2007/07/12 02:40:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/motiontrack-0.1.3.ebuild,v 1.5 2007/11/27 12:13:51 zzam Exp $
 
 DESCRIPTION="A set of tools that detect motion between two images"
 SRC_URI="http://gemia.de/motion/${P}.tar.gz"
@@ -73,6 +73,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc README src/TheCode.txt
 }

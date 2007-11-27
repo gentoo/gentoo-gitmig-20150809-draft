@@ -1,6 +1,9 @@
 # ChangeLog for media-video/qc-usb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.26 2007/09/27 13:14:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.27 2007/11/27 12:02:11 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> qc-usb-0.6.6.ebuild:
+  Fixed quoting.
 
   27 Sep 2007; Christoph Mende <angelos@gentoo.org> qc-usb-0.6.6.ebuild:
   Stable on amd64 wrt bug #193763

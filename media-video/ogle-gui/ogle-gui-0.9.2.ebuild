@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.2.ebuild,v 1.19 2006/11/22 14:32:55 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.2.ebuild,v 1.20 2007/11/27 12:02:55 zzam Exp $
 
 inherit libtool eutils
 
@@ -31,8 +31,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-text-encoding.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-text-encoding.patch"
 }
 
 src_compile() {

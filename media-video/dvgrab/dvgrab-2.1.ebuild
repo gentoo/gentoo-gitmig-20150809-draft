@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-2.1.ebuild,v 1.3 2007/04/08 12:38:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-2.1.ebuild,v 1.4 2007/11/27 12:17:47 zzam Exp $
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.9
@@ -26,7 +26,7 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack "${A}"
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-automagic.patch"
 	eautoreconf
 }
@@ -39,6 +39,6 @@ src_compile() {
 }
 
 src_install () {
-	emake DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog README TODO NEWS || die "dodoc failed"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/kavi2svcd-0.8.7.ebuild,v 1.1 2006/07/05 10:26:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/kavi2svcd-0.8.7.ebuild,v 1.2 2007/11/27 12:06:12 zzam Exp $
 
 inherit kde
 
@@ -25,7 +25,7 @@ S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i 's:;;$:;:' src/{prefclass,vcdclass}.h
 
 	sed -r "s:0\.8\.[^7]:0.8.7:" -i Makefile.in {,src/}config.h admin/Makefile \

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/sonic-snap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.4 2007/07/22 08:28:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.5 2007/11/27 11:51:42 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> sonic-snap-1.5.ebuild:
+  Fixed quoting.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   sonic-snap-1.5.ebuild:

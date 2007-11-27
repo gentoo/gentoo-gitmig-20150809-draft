@@ -1,6 +1,9 @@
 # ChangeLog for media-video/sswf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/ChangeLog,v 1.6 2007/04/18 20:16:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/ChangeLog,v 1.7 2007/11/27 12:01:26 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> sswf-1.7.1.ebuild:
+  Fixed quoting.
 
 *sswf-1.8.0-r1 (18 Apr 2007)
 

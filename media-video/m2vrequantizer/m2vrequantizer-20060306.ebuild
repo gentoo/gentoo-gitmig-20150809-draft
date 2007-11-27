@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/m2vrequantizer-20060306.ebuild,v 1.4 2007/07/12 02:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/m2vrequantizer-20060306.ebuild,v 1.5 2007/11/27 11:55:55 zzam Exp $
 
 MY_P="${PN/m2vr/M2VR}-${PV}"
 
@@ -20,7 +20,7 @@ S=${WORKDIR}/M2VRequantiser
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i "s:#elif defined(__i386__):#elif defined(__i386__) || defined(__amd64__):" main.c
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.1-r3.ebuild,v 1.4 2007/07/22 08:59:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.1-r3.ebuild,v 1.5 2007/11/27 11:58:57 zzam Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-gentoo.diff"
 	epatch "${FILESDIR}/${P}-gcc4.patch"
 	epatch "${DISTDIR}/${PN}-dvb.patch"

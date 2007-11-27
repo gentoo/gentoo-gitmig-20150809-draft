@@ -1,6 +1,10 @@
 # ChangeLog for media-video/maven-poke
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/maven-poke/ChangeLog,v 1.5 2007/02/03 21:06:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/maven-poke/ChangeLog,v 1.6 2007/11/27 12:14:23 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
+  maven-poke-0.0.1.ebuild:
+  Fixed quoting.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

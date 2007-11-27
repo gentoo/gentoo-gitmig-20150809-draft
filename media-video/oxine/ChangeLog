@@ -1,6 +1,10 @@
 # ChangeLog for media-video/oxine
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.27 2007/07/22 08:41:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.28 2007/11/27 12:11:35 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> oxine-0.6.3-r1.ebuild,
+  oxine-0.6.6.ebuild:
+  Fixed quoting.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; oxine-0.5.ebuild,
   oxine-0.6.3-r1.ebuild, oxine-0.6.6.ebuild:

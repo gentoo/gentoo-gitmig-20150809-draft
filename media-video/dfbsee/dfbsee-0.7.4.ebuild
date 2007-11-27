@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/dfbsee-0.7.4.ebuild,v 1.5 2005/10/31 11:16:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/dfbsee-0.7.4.ebuild,v 1.6 2007/11/27 12:23:42 zzam Exp $
 
 inherit flag-o-matic
 
@@ -29,6 +29,6 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc README AUTHORS
 }

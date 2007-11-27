@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2-r1.ebuild,v 1.12 2007/07/22 08:50:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2-r1.ebuild,v 1.13 2007/11/27 12:08:54 zzam Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -64,8 +64,8 @@ src_unpack() {
 
 	if use amr; then
 		cd modules/amr_float_dec
-		unzip -jaq ${WORKDIR}/26104-${NBV}_ANSI_C_source_code.zip -d amr_nb_ft
-		unzip -jaq ${WORKDIR}/26204-${WBV}_ANSI-C_source_code.zip -d amr_wb_ft
+		unzip -jaq "${WORKDIR}"/26104-${NBV}_ANSI_C_source_code.zip -d amr_nb_ft
+		unzip -jaq "${WORKDIR}"/26204-${WBV}_ANSI-C_source_code.zip -d amr_wb_ft
 	fi
 
 	cd "${S}"

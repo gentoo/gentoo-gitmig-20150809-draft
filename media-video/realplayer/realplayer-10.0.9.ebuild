@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.9.ebuild,v 1.3 2007/08/28 22:23:01 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.9.ebuild,v 1.4 2007/11/27 11:52:59 zzam Exp $
 
 inherit nsplugins eutils rpm
 
@@ -58,7 +58,7 @@ pkg_setup() {
 src_unpack() {
 	rpm_src_unpack
 
-	dosed -i -e 's:realplay.png:realplay:' ${S}/share/realplay.desktop
+	dosed -i -e 's:realplay.png:realplay:' "${S}"/share/realplay.desktop
 }
 
 src_install() {
@@ -71,19 +71,19 @@ src_install() {
 		dosym ${x}.so /opt/${MY_PN}/codecs/${x}.so.6.0
 	done
 
-	cd ${S}
+	cd "${S}"
 	dodoc README
 	dohtml share/hxplay_help.html share/tigris.css
 
 	if use X; then
 		for x in common lib mozilla plugins postinst realplay realplay.bin share; do
-			mv $x ${D}/opt/${MY_PN}
+			mv $x "${D}"/opt/${MY_PN}
 		done;
 
 		dodir /usr/bin
 		dosym /opt/${MY_PN}/realplay /usr/bin/realplay
 
-		cd ${D}/opt/${MY_PN}/share
+		cd "${D}"/opt/${MY_PN}/share
 		domenu realplay.desktop
 
 		for res in 16 192 32 48; do
@@ -94,7 +94,7 @@ src_install() {
 
 		# mozilla plugin
 		if use nsplugin ; then
-			cd ${D}/opt/${MY_PN}/mozilla
+			cd "${D}"/opt/${MY_PN}/mozilla
 			exeinto /opt/netscape/plugins
 			doexe nphelix.so
 			inst_plugin /opt/netscape/plugins/nphelix.so
@@ -105,9 +105,9 @@ src_install() {
 		fi
 
 		# Language resources
-		cd ${D}/opt/RealPlayer/share/locale
+		cd "${D}"/opt/RealPlayer/share/locale
 		for LC in *; do
-			mkdir -p ${D}/usr/share/locale/${LC}/LC_MESSAGES
+			mkdir -p "${D}"/usr/share/locale/${LC}/LC_MESSAGES
 			dosym /opt/RealPlayer/share/locale/${LC}/player.mo /usr/share/locale/${LC}/LC_MESSAGES/realplay.mo
 			dosym /opt/RealPlayer/share/locale/${LC}/widget.mo /usr/share/locale/${LC}/LC_MESSAGES/libgtkhx.mo
 		done

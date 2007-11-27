@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mp1e/mp1e-0.5.2.20040909.ebuild,v 1.5 2007/07/12 02:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mp1e/mp1e-0.5.2.20040909.ebuild,v 1.6 2007/11/27 11:56:34 zzam Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -46,7 +46,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	einfo "Applying vdr-analogtv patch:"
 	epatch ${DISTDIR}/${MY_P}-mp1e-gentoo.patch
 
@@ -54,7 +54,6 @@ src_unpack() {
 }
 
 src_install() {
-	cd ${S}
 	doman mp1e.1
 
 	dodoc BUGS ChangeLog

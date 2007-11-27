@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cinepaint
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.17 2007/04/25 20:47:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.18 2007/11/27 12:22:57 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
+  cinepaint-0.21.1.ebuild:
+  Fixed quoting.
 
   25 Apr 2007; Alexis Ballier <aballier@gentoo.org> cinepaint-0.22.0.ebuild:
   Add gimpprint useflag/support, thanks to Honza Macháček

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/linux-uvc-0.1.0_pre100.ebuild,v 1.2 2007/07/12 02:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/linux-uvc-0.1.0_pre100.ebuild,v 1.3 2007/11/27 12:16:07 zzam Exp $
 
 inherit eutils linux-mod
 
@@ -31,8 +31,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
-	use isight || patch -p0 -R < ${S}/patch/isight.patch
+	cd "${S}"/src
+	use isight || patch -p0 -R < "${S}"/patch/isight.patch
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/mplayer-sh-0.8.7.ebuild,v 1.3 2007/07/12 02:40:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/mplayer-sh-0.8.7.ebuild,v 1.4 2007/11/27 11:48:52 zzam Exp $
 
 inherit eutils
 
@@ -20,9 +20,9 @@ S=${WORKDIR}
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-parameter-aid.diff
+	epatch "${FILESDIR}/${P}-parameter-aid.diff"
 
 	sed -i "s:^declare CFGFIL.*$:declare CFGFIL=\"\/etc\/vdr\/plugins\/mplayer\/mplayer.sh.conf\":"  mplayer.sh
 	sed -i mplayer.sh.conf -e "s:^LIRCRC.*$:LIRCRC=\/etc\/lircd.conf:" \
@@ -38,6 +38,6 @@ src_install() {
 	dobin mplayer.sh
 
 	dodir /etc/vdr/plugins/DVD-VCD
-	touch	${D}/etc/vdr/plugins/DVD-VCD/{DVD,VCD}
+	touch "${D}"/etc/vdr/plugins/DVD-VCD/{DVD,VCD}
 	fowners vdr:vdr /etc/vdr/plugins/DVD-VCD/{DVD,VCD}
 }

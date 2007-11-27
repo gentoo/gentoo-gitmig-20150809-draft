@@ -1,6 +1,10 @@
 # ChangeLog for media-video/blinkentools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkentools/ChangeLog,v 1.4 2007/02/22 01:43:40 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkentools/ChangeLog,v 1.5 2007/11/27 12:22:11 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
+  blinkentools-2.9.ebuild:
+  Fixed quoting.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

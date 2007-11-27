@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/sswf-1.7.1.ebuild,v 1.3 2005/03/23 14:33:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/sswf-1.7.1.ebuild,v 1.4 2007/11/27 12:01:26 zzam Exp $
 
 inherit eutils
 
@@ -21,9 +21,9 @@ DEPEND="sys-libs/zlib
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/bitsize.patch
-	epatch ${FILESDIR}/sound_wave_t.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/bitsize.patch
+	epatch "${FILESDIR}"/sound_wave_t.patch
 }
 
 src_compile() {
@@ -35,5 +35,5 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }

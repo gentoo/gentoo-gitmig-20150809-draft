@@ -1,6 +1,9 @@
 # ChangeLog for media-video/blinkensim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.6 2007/02/22 01:42:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.7 2007/11/27 12:21:16 zzam Exp $
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> blinkensim-2.7.ebuild:
+  Fixed quoting.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

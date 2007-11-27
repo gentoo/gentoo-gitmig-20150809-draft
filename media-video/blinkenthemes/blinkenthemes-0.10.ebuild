@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkenthemes/blinkenthemes-0.10.ebuild,v 1.3 2006/05/28 11:36:43 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkenthemes/blinkenthemes-0.10.ebuild,v 1.4 2007/11/27 12:21:36 zzam Exp $
 
 DESCRIPTION="Themes for blinkensim"
 HOMEPAGE="http://www.blinkenlights.de/"
@@ -20,6 +20,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} \
+	make DESTDIR="${D}" \
 		install || die "install failed"
 }

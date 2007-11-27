@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.4.1.ebuild,v 1.2 2007/04/28 11:55:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.4.1.ebuild,v 1.3 2007/11/27 12:06:46 zzam Exp $
 
 inherit eutils gnome2
 
@@ -55,7 +55,7 @@ src_compile() {
 
 	emake || die
 	# fix ${exec_prefix} not being expanded
-	cd ${S}/bin
+	cd "${S}"/bin
 	cp flumotion-manager flumotion-manager.orig
 	sed -e 's:${exec_prefix}:/usr':g flumotion-manager.orig \
 		> flumotion-manager
