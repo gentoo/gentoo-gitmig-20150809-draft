@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/http-access2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/ChangeLog,v 1.16 2007/11/23 21:09:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/ChangeLog,v 1.17 2007/11/27 14:51:35 armin76 Exp $
+
+  27 Nov 2007; Raúl Porcel <armin76@gentoo.org> http-access2-2.0.6.ebuild:
+  ia64 stable wrt #199662
 
   23 Nov 2007; Markus Rothe <corsair@gentoo.org> http-access2-2.0.6.ebuild:
   Stable on ppc64; bug #199662
