@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/tcmplex-panteltje-0.3.ebuild,v 1.5 2007/06/26 02:19:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/tcmplex-panteltje-0.3.ebuild,v 1.6 2007/11/27 11:39:43 zzam Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	# fix multiline string
-	cd ${S}; epatch ${FILESDIR}/${P}.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}.patch"
 }
 
 src_compile() {
@@ -26,5 +27,5 @@ src_compile() {
 
 src_install() {
 	dobin tcmplex-panteltje
-	dodoc CHANGES COPYRIGHT LICENSE README
+	dodoc CHANGES COPYRIGHT README
 }

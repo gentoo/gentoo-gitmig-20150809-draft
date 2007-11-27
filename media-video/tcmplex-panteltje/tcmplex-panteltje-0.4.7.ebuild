@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/tcmplex-panteltje-0.4.7.ebuild,v 1.3 2006/01/03 23:32:47 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/tcmplex-panteltje-0.4.7.ebuild,v 1.4 2007/11/27 11:39:43 zzam Exp $
 
 inherit eutils
 
@@ -22,5 +22,5 @@ src_compile() {
 
 src_install() {
 	dobin tcmplex-panteltje
-	dodoc CHANGES COPYRIGHT LICENSE README
+	dodoc CHANGES COPYRIGHT README
 }
