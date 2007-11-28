@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/btg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.3 2007/11/13 16:36:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.4 2007/11/28 13:34:14 angelos Exp $
+
+*btg-0.9.6-r1 (28 Nov 2007)
+
+  28 Nov 2007; Christoph Mende <angelos@gentoo.org> files/btgd-confd,
+  files/btgd-init, +btg-0.9.6-r1.ebuild:
+  Added make_desktop_entry for the gtk+ client and fixed the init script to
+  work by default, thanks to Fabio Bonfante (Bug 200581)
 
   13 Nov 2007; Christoph Mende <angelos@gentoo.org> btg-0.9.6.ebuild:
   Stable on amd64

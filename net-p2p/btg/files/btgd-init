@@ -1,9 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/files/btgd-init,v 1.1 2007/10/14 23:37:14 angelos Exp $ 
-
-BTG_HOME="$(getent passwd ${BTG_USER} | cut -d : -f 6)"
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/files/btgd-init,v 1.2 2007/11/28 13:34:15 angelos Exp $ 
 
 depend() {
 	need net
@@ -13,12 +11,15 @@ checkconfig() {
 	if [ -z ${BTG_USER} ]; then
 		eerror "BTG_USER unset, please edit /etc/conf.d/btgd first"
 		return 1
+	elif [ -z ${BTG_CONFIG_FILE} ]; then
+		eerror "BTG_CONFIG_FILE unset, please edit /etc/conf.d/btgd first"
+		return 1
 	elif [ ! -d "${BTG_HOME}" ]; then
 		eerror "The home for ${BTG_USER} does not exist"
 		eerror "Please check /etc/conf.d/btgd"
 		return 1
-	elif [ ! -f "${BTG_HOME}/.btg/daemon.ini" ]; then
-		eerror "Unable to find daemon.ini in ${BTG_HOME}/.btg"
+	elif [ ! -f "${BTG_CONFIG_FILE}" ]; then
+		eerror "Unable to find ${BTG_CONFIG_FILE}"
 		eerror "Please run btg-config first"
 		return 1
 	fi
@@ -31,7 +32,7 @@ start() {
 	start-stop-daemon --start \
 		-c ${BTG_USER} --quiet -b --make-pidfile \
 		--pidfile /var/run/btgdaemon.pid \
-		-x /usr/bin/btgdaemon -- -n
+		-x /usr/bin/btgdaemon -- -n -c ${BTG_CONFIG_FILE}
 	eend $?
 }
 
