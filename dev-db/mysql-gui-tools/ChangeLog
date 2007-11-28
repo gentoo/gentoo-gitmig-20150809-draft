@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-gui-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/ChangeLog,v 1.21 2007/11/10 21:26:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/ChangeLog,v 1.22 2007/11/28 20:11:00 swegener Exp $
+
+*mysql-gui-tools-5.0_p12-r2 (28 Nov 2007)
+
+  28 Nov 2007; Sven Wegener <swegener@gentoo.org>
+  +files/mysql-gui-tools-5.0_p12-query-browser-sps.patch,
+  -mysql-gui-tools-5.0_p12-r1.ebuild, +mysql-gui-tools-5.0_p12-r2.ebuild:
+  Revision bump to fix a hang in mysql-query-browser, bug #170943.
 
   10 Nov 2007; Sven Wegener <swegener@gentoo.org>
   mysql-gui-tools-5.0_p12-r1.ebuild:
