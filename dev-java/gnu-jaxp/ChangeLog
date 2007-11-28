@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-jaxp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.28 2007/01/22 09:18:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.29 2007/11/28 03:42:12 betelgeuse Exp $
+
+  28 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -gnu-jaxp-1.0_beta1-r1.ebuild:
+  Delete old ebuild.
 
   22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   gnu-jaxp-1.0_beta1-r1.ebuild, gnu-jaxp-1.3.ebuild, gnu-jaxp-1.3-r1.ebuild:
