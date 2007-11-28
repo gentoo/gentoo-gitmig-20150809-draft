@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/gputils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.33 2007/03/27 22:25:26 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.34 2007/11/28 21:05:54 calchan Exp $
+
+*gputils-0.13.5 (28 Nov 2007)
+
+  28 Nov 2007; Denis Dupeyron <calchan@gentoo.org> +gputils-0.13.5.ebuild:
+  Version bump, thanks to David Barnett (bug #197255).
 
 *gputils-0.13.4-r1 (27 Mar 2007)
 
