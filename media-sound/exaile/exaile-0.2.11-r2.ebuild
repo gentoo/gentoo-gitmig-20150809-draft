@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.11.ebuild,v 1.1 2007/10/18 17:26:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.11-r2.ebuild,v 1.1 2007/11/28 15:42:49 drac Exp $
 
 inherit eutils fdo-mime multilib python
 
@@ -60,6 +60,12 @@ pkg_setup() {
 			die "${fail_b}"
 		fi
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-libgtkembedmoz.patch
 }
 
 src_compile() {

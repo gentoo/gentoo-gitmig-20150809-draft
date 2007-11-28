@@ -1,10 +1,19 @@
---- exaile-0.2.11/Makefile.orig	2007-11-25 21:36:04.000000000 +0200
-+++ exaile-0.2.11/Makefile	2007-11-25 21:38:28.000000000 +0200
-@@ -1,6 +1,6 @@
+diff -ur exaile-0.2.11.orig/Makefile exaile-0.2.11/Makefile
+--- exaile-0.2.11.orig/Makefile	2007-10-02 19:25:55.000000000 +0300
++++ exaile-0.2.11/Makefile	2007-11-28 17:35:52.000000000 +0200
+@@ -1,6 +1,5 @@
  PREFIX ?= /usr/local
  LIBDIR ?= /lib
 -FIREFOX ?= /usr/lib/firefox
-+FIREFOX ?= $(PREFIX)$(LIBDIR)/xulrunner:$(PREFIX)$(LIBDIR)/mozilla-firefox:$(PREFIX)$(LIBDIR)/seamonkey
  
  all: compile mmkeys.so translations
  	@echo "Done"
+@@ -69,8 +68,6 @@
+ 	  /bin/echo -e \
+ 	    "#!/bin/sh\n" \
+ 	    "cd $(PREFIX)/share/exaile\n" \
+-	    "export LD_LIBRARY_PATH=\$$LD_LIBRARY_PATH:$(FIREFOX)\n" \
+-		"export MOZILLA_FIVE_HOME=$(FIREFOX)\n" \
+ 	    "exec python $(PREFIX)$(LIBDIR)/exaile/exaile.py \"\$$@\"" \
+ 	    > exaile && \
+ 	  chmod 755 exaile
