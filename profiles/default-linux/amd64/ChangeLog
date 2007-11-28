@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.122 2007/11/20 22:06:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.123 2007/11/28 23:38:37 bicatali Exp $
+
+  28 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> use.mask:
+  Unmasking cdf, since it does work on amd64
 
   20 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask,
