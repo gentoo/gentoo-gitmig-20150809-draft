@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/liborigin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.8 2007/11/04 10:56:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.9 2007/11/28 22:49:44 bicatali Exp $
+
+*liborigin-20071119 (28 Nov 2007)
+
+  28 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +liborigin-20071119.ebuild:
+  Version bump
 
 *liborigin-20070926 (04 Nov 2007)
 
