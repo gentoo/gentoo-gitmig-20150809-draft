@@ -1,7 +1,17 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.11 2007/02/22 01:11:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.12 2007/11/28 23:28:27 bicatali Exp $
 
+*qtiplot-0.9.1 (28 Nov 2007)
+
+  28 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/qtiplot-0.8.2-qmake.patch, +files/qtiplot-0.9.1-systemlibs.patch,
+  qtiplot-0.7.7.ebuild, -qtiplot-0.8.2.ebuild, qtiplot-0.8.5.ebuild,
+  +qtiplot-0.9.1.ebuild:
+  Version bump. Now uses qt4. Closing bug #144286, thanks everyone and
+  especially Andrey Grozin for maintaining in the science overlay.
+  Dropped ppc and ppc64, untested for now.
+	
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
 

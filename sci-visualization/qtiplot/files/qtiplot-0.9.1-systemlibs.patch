@@ -1,0 +1,105 @@
+--- qtiplot/qtiplot.pro.orig	2007-11-27 09:56:05.000000000 +0000
++++ qtiplot/qtiplot.pro	2007-11-27 10:09:13.000000000 +0000
+@@ -34,12 +34,11 @@
+ #!!! Warning: You must modify these paths according to your computer settings
+ #############################################################################
+ 
+-INCLUDEPATH       += ../3rdparty/muparser/include
+-INCLUDEPATH       += ../3rdparty/qwtplot3d/include
+-INCLUDEPATH       += ../3rdparty/qwt/src
+-INCLUDEPATH       += ../3rdparty/liborigin
+-INCLUDEPATH       += ../3rdparty/gsl/include
+-INCLUDEPATH       += ../3rdparty/zlib123/include
++INCLUDEPATH       += /usr/include/muParser
++INCLUDEPATH       += /usr/include/qwtplot3d
++INCLUDEPATH       += /usr/include/qwt5
++INCLUDEPATH       += /usr/include/liborigin
++INCLUDEPATH       += /usr/include/gsl
+ 
+ ##################### 3rd PARTY LIBRARIES SECTION ###########################
+ #!!! Warning: You must modify these paths according to your computer settings
+@@ -47,18 +46,13 @@
+ 
+ ##################### Linux (Mac OS X) ######################################
+ 
+-# statically link against libraries in 3rdparty
+-unix:LIBS         += ../3rdparty/muparser/lib/libmuparser.a
+-unix:LIBS         += ../3rdparty/qwtplot3d/lib/libqwtplot3d.a
+-unix:LIBS         += ../3rdparty/qwt/lib/libqwt.a
+-unix:LIBS         += ../3rdparty/gsl/lib/libgsl.a
+-unix:LIBS         += ../3rdparty/gsl/lib/libgslcblas.a
+-
+ # dynamically link against dependencies if they are installed system-wide
+-#unix:LIBS         += -lmuparser
+-#unix:LIBS         += -lqwtplot3d
+-#unix:LIBS         += -lqwt
+-#unix:LIBS         += -lgsl -lgslcblas
++unix:LIBS         += -lmuparser
++unix:LIBS         += -lqwtplot3d
++unix:LIBS         += -lqwt
++unix:LIBS         += -lgsl -lgslcblas
++unix:LIBS         += -lorigin
++unix:LIBS         += -lz
+ 
+ ##################### Windows ###############################################
+ 
+@@ -111,14 +105,13 @@
+                   translations/qtiplot_ja.ts \
+                   translations/qtiplot_sv.ts
+ 
+-#system(lupdate -verbose qtiplot.pro)
+-#system(lrelease -verbose qtiplot.pro)
++system(lupdate -verbose qtiplot.pro)
++system(lrelease -verbose qtiplot.pro)
+ 
+ ###################### DOCUMENTATION ########################################
+ 
+ documentation.files += ../manual/html \
+                        ../README.html \
+-                       ../gpl_licence.txt \
+ 
+ ###################### HEADERS ##############################################
+ 
+@@ -363,8 +356,6 @@
+ ################# Origin Import (liborigin) ###################
+ ###############################################################
+ 
+-HEADERS += ../3rdparty/liborigin/OPJFile.h
+-SOURCES += ../3rdparty/liborigin/OPJFile.cpp
+ 
+ ###############################################################
+ ################# Restricted Module: FFT 2D ###################
+--- fitPlugins/fitRational0/fitRational0.pro.orig	2007-11-27 09:54:29.000000000 +0000
++++ fitPlugins/fitRational0/fitRational0.pro	2007-11-27 10:10:45.000000000 +0000
+@@ -12,12 +12,10 @@
+ DESTDIR           = ../
+  
+ # statically link against GSL in 3rdparty
+-INCLUDEPATH += ../../3rdparty/gsl/include/
+-LIBS        += ../../3rdparty/gsl/lib/libgsl.a
+-LIBS        += ../../3rdparty/gsl/lib/libgslcblas.a
++INCLUDEPATH += /usr/include/gsl
+ 
+ #dynamically link against GSL installed system-wide
+-#unix:LIBS += -L /usr/lib$${libsuff} -lgsl -lgslcblas
++unix:LIBS += -lgsl -lgslcblas
+ 
+ target.path=/usr/lib$${libsuff}/qtiplot/plugins
+ INSTALLS += target
+--- fitPlugins/fitRational1/fitRational1.pro.orig	2007-11-27 09:54:39.000000000 +0000
++++ fitPlugins/fitRational1/fitRational1.pro	2007-11-27 10:17:16.000000000 +0000
+@@ -12,12 +12,10 @@
+ DESTDIR           = ../
+  
+ # statically link against GSL in 3rdparty
+-INCLUDEPATH += ../../3rdparty/gsl/include/
+-LIBS        += ../../3rdparty/gsl/lib/libgsl.a
+-LIBS        += ../../3rdparty/gsl/lib/libgslcblas.a
++INCLUDEPATH += /usr/include/gsl
+ 
+ #dynamically link against GSL installed system-wide
+-#unix:LIBS += -L /usr/lib$${libsuff} -lgsl -lgslcblas
++#unix:LIBS += -lgsl -lgslcblas
+ 
+ target.path=/usr/lib$${libsuff}/qtiplot/plugins
+ INSTALLS += target
