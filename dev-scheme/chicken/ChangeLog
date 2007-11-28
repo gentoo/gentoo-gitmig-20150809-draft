@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/chicken
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.15 2007/11/21 15:10:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.16 2007/11/28 17:09:59 hkbst Exp $
+
+*chicken-2.731 (28 Nov 2007)
+
+  28 Nov 2007; Marijn Schouten <hkBst@gentoo.org> +chicken-2.731.ebuild:
+  bump
 
   21 Nov 2007; Raúl Porcel <armin76@gentoo.org> chicken-2.6.ebuild:
   Add ~alpha wrt #199368
