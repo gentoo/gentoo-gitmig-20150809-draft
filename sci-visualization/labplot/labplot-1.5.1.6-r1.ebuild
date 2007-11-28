@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.6.ebuild,v 1.3 2007/11/28 23:34:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.6-r1.ebuild,v 1.1 2007/11/28 23:34:56 bicatali Exp $
 
 inherit eutils kde
 
@@ -22,19 +22,19 @@ KEYWORDS="~x86 ~amd64"
 SLOT="0"
 IUSE="cdf fftw imagemagick jpeg2k kexi opengl tiff"
 
-DEPEND=">=sci-libs/gsl-1.6
+DEPEND="sci-libs/gsl
+	media-gfx/pstoedit
 	sci-libs/netcdf
 	virtual/ghostscript
-	<x11-libs/qwtplot3d-0.2.7
+	x11-libs/qwtplot3d-qt3
 	media-libs/audiofile
 	fftw? ( >=sci-libs/fftw-3 )
-	imagemagick? ( >=media-gfx/imagemagick-5.5.6-r1 )
-	jpeg2k? ( >=media-libs/jasper-1.700.5-r1 )
-	tiff? ( >=media-libs/tiff-3.5.5 )
+	imagemagick? ( media-gfx/imagemagick )
+	jpeg2k? ( media-libs/jasper )
+	tiff? ( media-libs/tiff )
 	opengl? ( virtual/opengl )
 	kexi? ( || ( app-office/kexi app-office/koffice ) )
-	!amd64? ( cdf? ( sci-libs/cdf )
-		>=media-gfx/pstoedit-3.33 )"
+	cdf? ( sci-libs/cdf )"
 
 RDEPEND="${DEPEND}"
 
@@ -48,6 +48,14 @@ src_unpack() {
 	echo "# Using shared libs!" >| netcdf/netcdf.h
 	echo "# Using shared libs!" >| qwtplot3d/qwt3d_plot.h
 	echo "# Using shared libs!" >| audiofile/audiofile.h
+
+	# sed for qwtplot3d, qt3 version (gentoo-specific)
+	# (gone in versions > 1.6.0, with qt4)
+	sed -i \
+		-e 's:-lqwtplot3d:-lqwtplot3d-qt3:g' \
+		-e 's:include/qwtplot3d:include/qwtplot3d-qt3:g' \
+		-e 's:AC_CHECK_LIB(qwtplot3d,:AC_CHECK_LIB(qwtplot3d-qt3,:' \
+		configure configure.in || die
 }
 
 src_compile() {
@@ -61,25 +69,20 @@ src_compile() {
 		--disable-texvc --disable-ocaml --enable-netcdf --enable-audiofile \
 		--enable-system-qwtplot3d --enable-libundo --disable-qsa"
 
-	if use amd64; then
-		myconf="${myconf} --disable-cdf"
-	else
-		myconf="${myconf} $(use_enable cdf)"
-	fi
-
-	local myconf="${myconf} \
+	myconf="${myconf} \
 		$(use_enable fftw fftw3) \
 		$(use_enable imagemagick ImageMagick) \
 		$(use_enable jpeg2k jasper) \
 		$(use_enable tiff) \
 		$(use_enable kexi KexiDB) \
-		$(use_enable opengl)"
+		$(use_enable opengl) \
+		$(use_enable cdf)"
 	kde_src_compile
 }
 
 src_install() {
 	kde_src_install
-	mv ${D}/usr/bin/opj2dat ${D}/usr/bin/LabPlot-opj2dat
+	mv "${D}"/usr/bin/opj2dat "${D}"/usr/bin/LabPlot-opj2dat
 }
 
 pkg_postinst() {

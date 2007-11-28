@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/labplot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.14 2007/05/06 14:35:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.15 2007/11/28 23:34:56 bicatali Exp $
+
+*labplot-1.5.1.6-r1 (28 Nov 2007)
+
+  28 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  labplot-1.5.1.5.ebuild, labplot-1.5.1.6.ebuild,
+  +labplot-1.5.1.6-r1.ebuild:
+  Now uses splitted qwtplot3d from qt3. Older revisions using older qwtplot3d.
+  Also amd64 has cdf now. Closing bug #199407.
 
 *labplot-1.5.1.6 (06 May 2007)
 

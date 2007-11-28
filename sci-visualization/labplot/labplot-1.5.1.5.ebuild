@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.5.ebuild,v 1.4 2007/07/15 02:36:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.5.ebuild,v 1.5 2007/11/28 23:34:56 bicatali Exp $
 
 inherit eutils kde
 
@@ -25,7 +25,7 @@ IUSE="cdf fftw imagemagick jpeg2k kexi opengl tiff"
 DEPEND=">=sci-libs/gsl-1.6
 	sci-libs/netcdf
 	virtual/ghostscript
-	x11-libs/qwtplot3d
+	<x11-libs/qwtplot3d-0.2.7
 	media-libs/audiofile
 	fftw? ( >=sci-libs/fftw-3 )
 	imagemagick? ( >=media-gfx/imagemagick-5.5.6-r1 )
