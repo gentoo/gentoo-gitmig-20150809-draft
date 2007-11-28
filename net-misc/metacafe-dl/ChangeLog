@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/metacafe-dl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/metacafe-dl/ChangeLog,v 1.8 2007/10/09 19:27:17 agorf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/metacafe-dl/ChangeLog,v 1.9 2007/11/28 09:37:14 corsair Exp $
+
+  28 Nov 2007; Markus Rothe <corsair@gentoo.org>
+  metacafe-dl-2007.10.09.ebuild:
+  Added ~amd64
 
 *metacafe-dl-2007.10.09 (09 Oct 2007)
 
