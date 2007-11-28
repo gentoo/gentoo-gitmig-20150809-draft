@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/wipe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.18 2007/11/05 16:31:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.19 2007/11/28 20:16:51 drac Exp $
+
+  28 Nov 2007; Samuli Suominen <drac@gentoo.org> wipe-2.2.20050509.ebuild:
+  amd64 stable wrt #196392
 
   05 Nov 2007; Raúl Porcel <armin76@gentoo.org> wipe-2.2.20050509.ebuild:
   sparc stable wrt #196392
