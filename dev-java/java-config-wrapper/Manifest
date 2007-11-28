@@ -1,8 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST java-config-wrapper-0.13.tar.bz2 6156 RMD160 bd5ee1e800f87820c2f8a7058e7d1b9ff8cbbee8 SHA1 d0fddf292f486b487756fdc33f96b2d977cd287a SHA256 e1d008c00a2f7ffd7bb5e53a4e4dea6f9c24c1ca7ba2eed84326be9e7f1a2209
 DIST java-config-wrapper-0.14.tar.bz2 7409 RMD160 c09217a5888a7e8dc22fef38e590084acaf6493f SHA1 279e14a2598135be8b7c38e8f49d50cf5b1cc250 SHA256 523ab848e1c3fe04fe6f5a99ac1893d6aae658d7e30f17679faf29e77c043ad9
+DIST java-config-wrapper-0.15.tar.bz2 6362 RMD160 0d3dd5c8d31a3fbff7ce171186f82988082eac33 SHA1 a94636e9c39d8e290d1de498bd2f789e4fad0f25 SHA256 d3af272ecb5a2adbe4dfe718f9efe76af8a9eeb0d2745235879d35ef5aad4ccf
 EBUILD java-config-wrapper-0.13.ebuild 605 RMD160 3bc702f5e8ba3569cae7d10eb3e1dd9e70cee53b SHA1 1fc893c40a6c020b94949660b9b5eacfcac52bca SHA256 3e96c31ff200abbfda137b7d73ccf9b7084f552a59b51c0e79c2b6a8322949db
 MD5 9edb5108f03a972dc7c8b4f6fc21430b java-config-wrapper-0.13.ebuild 605
 RMD160 3bc702f5e8ba3569cae7d10eb3e1dd9e70cee53b java-config-wrapper-0.13.ebuild 605
@@ -11,10 +9,14 @@ EBUILD java-config-wrapper-0.14.ebuild 623 RMD160 cde83283c89282e3db2f4bc528d0b6
 MD5 c19feba35ef5ee4843c9710254348e94 java-config-wrapper-0.14.ebuild 623
 RMD160 cde83283c89282e3db2f4bc528d0b676e6e503b4 java-config-wrapper-0.14.ebuild 623
 SHA256 d7075832c6ac4c0e2d181c64ab2bcc021ce7d8b507496c4adc8cb8348b9cfe71 java-config-wrapper-0.14.ebuild 623
-MISC ChangeLog 6891 RMD160 afe66bc6fea3b9468139e7b56c08a1ee81896f26 SHA1 69222ed27881300a7b9627e0b77e1736f7cd58dd SHA256 e026e8f0fb0d60a76a28af13df5e9ccb4e908ecd323b799a4bc434664e306e8c
-MD5 3a217f68b46b14d3f367702fd20a655d ChangeLog 6891
-RMD160 afe66bc6fea3b9468139e7b56c08a1ee81896f26 ChangeLog 6891
-SHA256 e026e8f0fb0d60a76a28af13df5e9ccb4e908ecd323b799a4bc434664e306e8c ChangeLog 6891
+EBUILD java-config-wrapper-0.15.ebuild 611 RMD160 9a49e5cdb5b3d0d9d0bf3cd71833f1a50baf8922 SHA1 4bd29e68a908c327c7eb2cdb979942b0d32c1d21 SHA256 6e8ad31cca3c46412792571c56068f4aeb8c0ac747757216ea070edea1b935a5
+MD5 b8533b8c473dd3924581c9a638a05085 java-config-wrapper-0.15.ebuild 611
+RMD160 9a49e5cdb5b3d0d9d0bf3cd71833f1a50baf8922 java-config-wrapper-0.15.ebuild 611
+SHA256 6e8ad31cca3c46412792571c56068f4aeb8c0ac747757216ea070edea1b935a5 java-config-wrapper-0.15.ebuild 611
+MISC ChangeLog 7095 RMD160 00009d2f4e10da59b5ef8a831a6d01e2fc64e6f7 SHA1 ab63e4498b17d119cc0e4a4acbbd5f0885e027f2 SHA256 c3db3c45469eb77cbe54dbd653aada2d7f81973ebb9b533a6f6c23928f3e38d3
+MD5 46b083c5b7b037f42ce24dedf443d807 ChangeLog 7095
+RMD160 00009d2f4e10da59b5ef8a831a6d01e2fc64e6f7 ChangeLog 7095
+SHA256 c3db3c45469eb77cbe54dbd653aada2d7f81973ebb9b533a6f6c23928f3e38d3 ChangeLog 7095
 MISC metadata.xml 158 RMD160 493079b5fb71d66863beea1b023901c90ba81be5 SHA1 77cd509a8b3c377b9a24480b48a5d5481b7874f1 SHA256 ea882ceccfd160b16cf7e79de423bdcc12b3fa000f124491a6df36f5783894fb
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 RMD160 493079b5fb71d66863beea1b023901c90ba81be5 metadata.xml 158
@@ -25,10 +27,6 @@ SHA256 8d96cd4f8daa152db80172931719ba1448699d196f67c4291d8c81f6d3074178 files/di
 MD5 7d7e69ac3da97b48f8bfcdf5cd0a5bbf files/digest-java-config-wrapper-0.14 271
 RMD160 cb548c2c874756a13152acbb35a969b5578e691d files/digest-java-config-wrapper-0.14 271
 SHA256 4c5b41986dd478aadde42d693badfa71611d444fcd8df15bf409fec961354cf1 files/digest-java-config-wrapper-0.14 271
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
-
-iD8DBQFGs0kgcxLzpIGCsLQRAmAeAJ9AQHOiY/Nwm1wNAKUIHV8yRtcb6gCfVVID
-RpAgwBNoB72aQgcgEMbnU0Q=
-=XKJE
------END PGP SIGNATURE-----
+MD5 a47fe36ac0aff96f89f23dd39d4bf72e files/digest-java-config-wrapper-0.15 271
+RMD160 68fabefce4474b397aba38a3dbf693799135eaa7 files/digest-java-config-wrapper-0.15 271
+SHA256 8c400ba46b8fed17f702ea1ef073c5bb526e7ab8198def7773eb1e98cb4e87b4 files/digest-java-config-wrapper-0.15 271
