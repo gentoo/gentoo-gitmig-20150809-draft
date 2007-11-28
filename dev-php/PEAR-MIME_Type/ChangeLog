@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-MIME_Type
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MIME_Type/ChangeLog,v 1.8 2007/02/21 23:27:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MIME_Type/ChangeLog,v 1.9 2007/11/28 19:09:30 angelos Exp $
+
+  28 Nov 2007; Christoph Mende <angelos@gentoo.org>
+  PEAR-MIME_Type-1.0.0.ebuild:
+  Stable on amd64 wrt bug #200678
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
