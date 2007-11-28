@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.17 2007/11/23 21:19:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.18 2007/11/28 09:29:50 corsair Exp $
+
+  28 Nov 2007; Markus Rothe <corsair@gentoo.org>
+  youtube-dl-2007.10.12.ebuild:
+  Stable on amd64
 
   23 Nov 2007; Markus Rothe <corsair@gentoo.org>
   youtube-dl-2007.10.12.ebuild:
