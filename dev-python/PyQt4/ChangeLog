@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.19 2007/11/09 17:47:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.20 2007/11/28 12:56:37 caleb Exp $
+
+  28 Nov 2007; Caleb Tennis <caleb@gentoo.org> -PyQt4-4.2.ebuild,
+  -PyQt4-4.3.ebuild:
+  Remove old versions
 
   09 Nov 2007; Jeroen Roovers <jer@gentoo.org> PyQt4-4.3.1.ebuild:
   Marked ~hppa (bug #198456). Fixed quoting issues.
