@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmail
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/ChangeLog,v 1.16 2007/08/22 06:17:54 s4t4n Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/ChangeLog,v 1.17 2007/11/28 19:45:53 drac Exp $
+
+  28 Nov 2007; Samuli Suominen <drac@gentoo.org> wmail-2.0-r3.ebuild:
+  amd64 stable wrt #200650
 
   22 Aug 2007; Michele Noberasco <a4t4n@gentoo.org> wmail-2.0-r3.ebuild:
   Stable for x86.
