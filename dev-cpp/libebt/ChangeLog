@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libebt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.28 2007/04/23 20:54:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.29 2007/11/28 15:54:47 drac Exp $
+
+  28 Nov 2007; Samuli Suominen <drac@gentoo.org> libebt-1.3.0.ebuild:
+  Allow using also berlios #2 download mirror, and ours so it's actually
+  fetchable wrt #197268
 
   23 Apr 2007; Raúl Porcel <armin76@gentoo.org> libebt-1.3.0.ebuild:
   Add ~ia64
