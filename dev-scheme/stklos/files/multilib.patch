@@ -1,0 +1,22 @@
+Index: stklos-0.95/extensions/Makefile.am
+===================================================================
+--- stklos-0.95.orig/extensions/Makefile.am
++++ stklos-0.95/extensions/Makefile.am
+@@ -11,7 +11,7 @@ CC	  = @CC@
+ CFLAGS	  = @CFLAGS@ @SH_COMP_FLAGS@ @GTK_CONFIG_CFLAGS@ @GCINC@ $(INCLUDES)
+ 
+ 
+-shobjectdir	    = $(prefix)/lib/@PACKAGE@/@VERSION@
++shobjectdir	    = $(libdir)/@PACKAGE@/@VERSION@
+ shobject_SCRIPTS    = ldap.@SH_SUFFIX@
+ 
+ #======================================================================
+@@ -20,7 +20,7 @@ shobject_SCRIPTS    = ldap.@SH_SUFFIX@
+ scheme_SRCS = ldap.stk
+ scheme_OBJS = ldap.ostk
+ 
+-schemedir   = $(prefix)/share/@PACKAGE@/@VERSION@
++schemedir   = $(datadir)/@PACKAGE@/@VERSION@
+ scheme_DATA = $(scheme_SRCS) $(scheme_OBJS) 
+ 
+ 
