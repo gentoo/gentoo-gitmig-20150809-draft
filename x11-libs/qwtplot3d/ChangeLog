@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qwtplot3d
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.10 2007/02/23 12:06:47 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.11 2007/11/28 23:13:49 bicatali Exp $
+
+*qwtplot3d-0.2.7 (28 Nov 2007)
+
+  28 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/qwtplot3d-doxygen.patch, +files/qwtplot3d-examples.patch,
+  +files/qwtplot3d-profile.patch, +qwtplot3d-0.2.7.ebuild:
+  Version bump, modernized the ebuild. Now Qt4 only, Qt3 version split in
+  x11-libs/qwplot3d-qt3. 
 
   23 Feb 2007; Marcus D. Hanwell <cryos@gentoo.org>
   -qwtplot3d-0.2.6-r1.ebuild, qwtplot3d-0.2.6-r2.ebuild:
