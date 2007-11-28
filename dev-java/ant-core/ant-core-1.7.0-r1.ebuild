@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.0-r1.ebuild,v 1.1 2007/11/28 02:07:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.0-r1.ebuild,v 1.2 2007/11/28 02:09:02 betelgeuse Exp $
 
 # don't depend on itself
 JAVA_ANT_DISABLE_ANT_CORE_DEP=true
@@ -40,7 +40,7 @@ src_unpack() {
 	rm -v lib/*.jar
 
 	# use our split-ant build.xml
-	mv -f ${WORKDIR}/build.xml .
+	mv -f "${WORKDIR}/build.xml" .
 }
 
 src_compile() {
@@ -61,16 +61,16 @@ src_compile() {
 }
 
 src_install() {
-	newbin ${FILESDIR}/${PV}-ant ant || die "failed to install wrapper"
+	newbin "${FILESDIR}/${PV}-ant" ant || die "failed to install wrapper"
 
 	dodir /usr/share/${PN}/bin
 	for each in antRun runant.pl runant.py complete-ant-cmd.pl ; do
-		dobin ${S}/src/script/${each}
+		dobin "${S}/src/script/${each}"
 		dosym /usr/bin/${each} /usr/share/${PN}/bin/${each}
 	done
 
-	echo "ANT_HOME=\"/usr/share/${PN}\"" > ${T}/20ant
-	doenvd ${T}/20ant || die "failed to install env.d file"
+	echo "ANT_HOME=\"/usr/share/${PN}\"" > "${T}/20ant"
+	doenvd "${T}/20ant" || die "failed to install env.d file"
 
 	java-pkg_dojar build/lib/ant.jar
 	java-pkg_dojar build/lib/ant-bootstrap.jar
