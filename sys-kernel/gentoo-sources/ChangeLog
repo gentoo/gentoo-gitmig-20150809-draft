@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.449 2007/11/27 18:34:27 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.450 2007/11/28 11:29:13 corsair Exp $
+
+  28 Nov 2007; Markus Rothe <corsair@gentoo.org>
+  gentoo-sources-2.6.22-r9.ebuild:
+  Stable on ppc64
 
 *gentoo-sources-2.6.23-r3 (27 Nov 2007)
 
