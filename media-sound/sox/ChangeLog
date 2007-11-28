@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.72 2007/11/26 01:00:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.73 2007/11/28 17:34:41 armin76 Exp $
+
+  28 Nov 2007; Raúl Porcel <armin76@gentoo.org> sox-14.0.0.ebuild:
+  alpha/sparc stable wrt #200051
 
   26 Nov 2007; Jeroen Roovers <jer@gentoo.org> sox-14.0.0.ebuild:
   Stable for HPPA (bug #200051).
