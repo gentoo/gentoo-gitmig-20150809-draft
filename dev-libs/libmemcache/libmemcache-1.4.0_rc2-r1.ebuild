@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/libmemcache-1.4.0_rc2.ebuild,v 1.2 2007/11/28 18:51:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/libmemcache-1.4.0_rc2-r1.ebuild,v 1.1 2007/11/28 18:51:45 robbat2 Exp $
 
 inherit toolchain-funcs autotools
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86"
 IUSE=""
 
-RDEPEND="net-misc/memcached"
+RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
