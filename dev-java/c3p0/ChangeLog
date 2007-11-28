@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/c3p0
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.24 2007/02/11 12:22:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.25 2007/11/28 03:15:14 betelgeuse Exp $
+
+  28 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> c3p0-0.9.0.4.ebuild:
+  Prefer 1.5 over 1.4 and ebuild cleanup.
 
   11 Feb 2007; Vlastimil Babka <caster@gentoo.org>
   -c3p0-0.8.5_pre9-r1.ebuild:
