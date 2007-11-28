@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/ChangeLog,v 1.17 2007/04/12 18:11:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/ChangeLog,v 1.18 2007/11/28 03:18:04 betelgeuse Exp $
+
+  28 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> jmp-0.51.ebuild:
+  Prefer 1.5 over 1.4.
 
   12 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -jmp-0.46.ebuild,
   -jmp-0.47.ebuild, -jmp-0.48.ebuild:
