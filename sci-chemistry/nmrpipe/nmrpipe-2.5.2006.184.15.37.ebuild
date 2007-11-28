@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-2.5.2006.184.15.37.ebuild,v 1.2 2007/07/22 07:24:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-2.5.2006.184.15.37.ebuild,v 1.3 2007/11/28 07:17:20 je_fro Exp $
 
 DESCRIPTION="Spectral visualisation, analysis and Fourier processing"
 # The specific terms of this license are printed automatically on startup
@@ -101,6 +101,7 @@ src_compile() {
 		sed -e "s%/u/delaglio%${NMRBASE}%" -i ${i} || die \
 			"Failed patching scripts."
 	done
+	sed -i 's/\/var\/tmp\/portage\/sci-chemistry\/nmrpipe-2.5.2006.184.15.37\/work\//\/opt\/nmrpipe\//' font.com
 	# Remove installation log files.
 	cd "${S}"
 	rm *.log || die "Failed to remove installation log."

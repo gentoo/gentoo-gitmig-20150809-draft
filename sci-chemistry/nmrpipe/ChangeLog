@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/nmrpipe
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/ChangeLog,v 1.13 2007/07/22 07:24:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/ChangeLog,v 1.14 2007/11/28 07:17:20 je_fro Exp $
+
+  28 Nov 2007; Jeff Gardner <je_fro@gentoo.org>
+  nmrpipe-2.5.2006.184.15.37.ebuild:
+  Fixing manifest and adding sed call as suggested by justin in bug 200389.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   nmrpipe-2.5.2006.184.15.37.ebuild:
