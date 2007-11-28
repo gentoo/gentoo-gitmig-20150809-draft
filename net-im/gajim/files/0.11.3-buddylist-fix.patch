@@ -1,7 +1,7 @@
-Index: /branches/gajim_0.11.3-bugfixes/src/common/contacts.py
+Index: src/common/contacts.py
 ===================================================================
---- /branches/gajim_0.11.3-bugfixes/src/common/contacts.py (revision 8719)
-+++ /branches/gajim_0.11.3-bugfixes/src/common/contacts.py (revision 9019)
+--- src/common/contacts.py (revision 8719)
++++ src/common/contacts.py (revision 9019)
 @@ -421,4 +421,11 @@
  		if jid2 > jid1:
  			return -1

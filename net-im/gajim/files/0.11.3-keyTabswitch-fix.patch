@@ -1,7 +1,7 @@
-Index: /branches/gajim_0.11.3-bugfixes/src/message_window.py
+Index: src/message_window.py
 ===================================================================
---- /branches/gajim_0.11.3-bugfixes/src/message_window.py (revision 8991)
-+++ /branches/gajim_0.11.3-bugfixes/src/message_window.py (revision 9020)
+--- src/message_window.py (revision 8991)
++++ src/message_window.py (revision 9020)
 @@ -577,7 +577,10 @@
  	def _on_notebook_key_press(self, widget, event):
  		control = self.get_active_control()
