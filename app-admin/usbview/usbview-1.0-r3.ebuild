@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-1.0-r3.ebuild,v 1.9 2007/08/24 13:58:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-1.0-r3.ebuild,v 1.10 2007/11/28 15:50:12 drac Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Display the topology of devices on the USB bus"
 HOMEPAGE="http://www.kroah.com/linux-usb/"
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}"/${PN}_${PV}-11.diff
+	eautoreconf
 }
 
 src_install() {
