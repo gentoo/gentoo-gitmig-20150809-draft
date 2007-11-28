@@ -1,0 +1,16 @@
+diff -urNp busybox-1.8.2.org/Makefile.flags busybox-1.8.2/Makefile.flags
+--- busybox-1.8.2.org/Makefile.flags	2007-11-10 03:40:54.000000000 +0200
++++ busybox-1.8.2/Makefile.flags	2007-11-26 12:02:27.000000000 +0200
+@@ -41,12 +41,10 @@ ifneq ($(CONFIG_WERROR),y)
+ CFLAGS += $(call cc-option,-Wmissing-prototypes -Wmissing-declarations,)
+ endif
+ 
+-CFLAGS += $(call cc-option,-Os -fno-builtin-strlen -finline-limit=0 -fomit-frame-pointer -ffunction-sections -fdata-sections,)
+ # -fno-guess-branch-probability: prohibit pseudo-random guessing
+ # of branch probabilities (hopefully makes bloatcheck more stable):
+ CFLAGS += $(call cc-option,-fno-guess-branch-probability,)
+ CFLAGS += $(call cc-option,-funsigned-char -static-libgcc,)
+-CFLAGS += $(call cc-option,-falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1,)
+ 
+ # FIXME: These warnings are at least partially to be concerned about and should
+ # be fixed..
