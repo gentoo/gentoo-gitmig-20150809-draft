@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/devtray
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/devtray/ChangeLog,v 1.1 2007/11/26 14:36:58 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/devtray/ChangeLog,v 1.2 2007/11/28 20:04:52 lack Exp $
+
+*devtray-0.3.2-r1 (28 Nov 2007)
+
+  28 Nov 2007; Jim Ramsay <lack@gentoo.org> +devtray-0.3.2-r1.ebuild:
+  Added pyalsaaudio and cddb-py optional dependencies
 
 *devtray-0.3.2 (26 Nov 2007)
 
