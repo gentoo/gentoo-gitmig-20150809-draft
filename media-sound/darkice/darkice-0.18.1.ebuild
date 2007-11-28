@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.18.1.ebuild,v 1.3 2007/11/27 11:28:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.18.1.ebuild,v 1.4 2007/11/28 17:06:17 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.tyrell.hu/dist/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~sparc x86"
+KEYWORDS="amd64 ~hppa ~ppc sparc x86"
 IUSE="aac alsa encode jack twolame vorbis"
 
 DEPEND="encode?	( >=media-sound/lame-1.89 )
