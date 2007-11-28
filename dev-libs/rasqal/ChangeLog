@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.12 2007/11/04 10:10:22 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.13 2007/11/28 09:41:21 corsair Exp $
+
+  28 Nov 2007; Markus Rothe <corsair@gentoo.org> rasqal-0.9.14.ebuild:
+  Added ~ppc64
 
   04 Nov 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to maintainer-needed.

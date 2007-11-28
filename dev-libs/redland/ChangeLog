@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.25 2007/11/04 10:11:18 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.26 2007/11/28 09:44:15 corsair Exp $
+
+  28 Nov 2007; Markus Rothe <corsair@gentoo.org> redland-1.0.6-r1.ebuild:
+  Added ~ppc64
 
   04 Nov 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to maintainer-needed.
