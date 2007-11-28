@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/amd64/use.mask,v 1.10 2007/06/22 18:53:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/amd64/use.mask,v 1.11 2007/11/28 23:41:43 bicatali Exp $
 
 # SECTION: Unmask
 
@@ -72,10 +72,6 @@ video_cards_nsc
 # cmucl is not available on amd64. Masking to keep "sci-mathematics/maxima"
 # happy.
 cmucl
-
-# 2005/08/28 - Simon Stelling <blubb@gentoo.org>
-# sci-libs/cdf doesn't build
-cdf
 
 # 2005/06/04 - Simon Stelling <blubb@gentoo.org>
 # dev-util/xdelta doesn't work as expected by this use flag, it can only use

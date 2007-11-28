@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.27 2007/08/24 23:18:52 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.28 2007/11/28 23:41:42 bicatali Exp $
 
 multilib
 
@@ -73,10 +73,6 @@ doomsday
 # cmucl is not available on amd64. Masking to keep "sci-mathematics/maxima"
 # happy.
 cmucl
-
-# 2005/08/28 - Simon Stelling <blubb@gentoo.org>
-# sci-libs/cdf doesn't build
-cdf
 
 # 2004/11/13 - Tom Martin <slarti@gentoo.org>
 # dev-libs/mzscheme won't build, #65216
