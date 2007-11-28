@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.15 2007/11/20 05:24:13 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.16 2007/11/28 07:11:51 ali_bush Exp $
+
+  28 Nov 2007; <alistair@gentoo.org> bcmail-1.37-r1.ebuild:
+  Dropping ~arch's not keyworded in java-virtuals/javamail yet.
 
 *bcmail-1.37-r1 (20 Nov 2007)
 
