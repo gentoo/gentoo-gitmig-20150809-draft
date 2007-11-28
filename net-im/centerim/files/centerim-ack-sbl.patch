@@ -1,0 +1,21 @@
+From: Roger <roger@jikos.cz>
+Date: Sun, 25 Nov 2007 18:18:07 +0000 (+0100)
+Subject: Bug #39: Ack SBL to get status notifications
+X-Git-Url: http://repo.or.cz/w/centerim.git?a=commitdiff_plain;h=152235ac92c0c1c9a26ccb05e43c423b4ed64783
+
+Bug #39: Ack SBL to get status notifications
+---
+
+diff --git a/libicq2000/src/Client.cpp b/libicq2000/src/Client.cpp
+index 3bb4d36..8e453c8 100644
+--- a/libicq2000/src/Client.cpp
++++ b/libicq2000/src/Client.cpp
+@@ -1524,7 +1524,7 @@ namespace ICQ2000
+ 	SignalLog(LogEvent::INFO, "Received server-based list from server\n");
+ 	SBLListSNAC *sbs = static_cast<SBLListSNAC*>(snac);
+ 	mergeSBL( sbs->getContactTree() );
+-//        SendSBLReceivedACK();
++        SendSBLReceivedACK();
+ 	break;
+       }
+       

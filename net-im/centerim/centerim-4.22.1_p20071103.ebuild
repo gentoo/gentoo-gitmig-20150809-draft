@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.1_p20071022.ebuild,v 1.4 2007/11/28 20:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.1_p20071103.ebuild,v 1.1 2007/11/28 20:08:06 swegener Exp $
 
 inherit eutils
 

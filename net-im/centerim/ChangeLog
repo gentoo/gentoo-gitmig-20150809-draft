@@ -1,6 +1,13 @@
 # ChangeLog for net-im/centerim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.6 2007/11/03 09:33:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.7 2007/11/28 20:08:06 swegener Exp $
+
+*centerim-4.22.1_p20071103 (28 Nov 2007)
+
+  28 Nov 2007; Sven Wegener <swegener@gentoo.org>
+  +files/centerim-ack-sbl.patch, centerim-4.22.1_p20071003.ebuild,
+  centerim-4.22.1_p20071022.ebuild, +centerim-4.22.1_p20071103.ebuild:
+  Version bump. Pull in a patch from upstream to fix contact list problems.
 
   03 Nov 2007; Sven Wegener <swegener@gentoo.org>
   centerim-4.22.1_p20071003.ebuild, centerim-4.22.1_p20071022.ebuild:
