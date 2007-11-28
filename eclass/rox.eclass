@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.23 2007/11/28 14:20:58 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.24 2007/11/28 17:20:03 lack Exp $
 
 # ROX eclass Version 3
 
@@ -38,8 +38,11 @@
 #       APPMIME="a/foo-1;a/foo-2
 #                $(usemime three "a/three")
 #                text/plain"
-#    will be expanded to either "a/foo-1;a/foo-2;a/three;text/plain" if USE=three
-#    or "a/foo-1;a/foo-2;text/plain" if not.
+#    will be expanded to either "a/foo-1;a/foo-2;a/three;text/plain" if 
+#    USE=three or "a/foo-1;a/foo-2;text/plain" if not.
+#    WARNING: the 'usemime' function cannot be used in global scope. You should
+#    set APPMIME (or at least the USE-dependant parts) in your own src_install
+#    before calling rox_src_install.  See rox-extra/archive for an example.
 # KEEP_SRC - this flag, if set, will not remove the source directory
 #    but will do a 'make clean' in it. This is useful if users wish to
 #    preserve the source code for some reason
@@ -84,9 +87,11 @@ LIBDIR="/usr/$(get_libdir)"
 # External Functions
 
 # Used for assembling APPMIME with USE-dependent parts
+# WARNING: Cannot be used in global scope.
+#          Set this in src_install just before you call rox_src_install
 usemime() {
 	local myuse=$1; shift
-	useq $myuse && echo "$@"
+	use $myuse && echo "$@"
 }
 
 # Utility Functions
@@ -95,7 +100,7 @@ usemime() {
 # where needed.
 expandmime() {
 	local old_IFS=$IFS
-	IFS=";$' \t\n'"
+	IFS=$'; \t\n'
 	echo "$*"
 	IFS=$old_IFS
 }
