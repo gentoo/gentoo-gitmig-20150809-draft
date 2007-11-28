@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-4.15.ebuild,v 1.1 2005/09/14 23:26:47 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-4.15.ebuild,v 1.2 2007/11/28 15:30:11 grobian Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${PN}_${PV}${DEB_PV}.tar.gz"
 
 LICENSE="LLGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 sparc ppc ~mips ~ppc-macos amd64"
+KEYWORDS="x86 sparc ppc ~mips amd64"
 IUSE=""
 
 DEPEND="app-admin/realpath
