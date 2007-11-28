@@ -1,15 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST ganeti-instance-debian-etch-0.2.tar 40960 RMD160 d6c04c8b5c20b8b30229ae44bc0900b2319800f6 SHA1 8428d69122637f1c3468c5d317092f260fc4c19c SHA256 906fe435ae11472ebda8086109caae07d1c8b9fe7a7f2627ba0adf91515d7c1a
+DIST ganeti-instance-debian-etch-0.3.tar 40960 RMD160 8714bbd4ed3deccdee0657f768d6b0f1a9e2804d SHA1 2b23c3a51adb8874d702d2c076828ba5fcb4ae31 SHA256 41d7b23fafb9a3de4faa775258519f7136ba2c499e85d52fecef5042087ca401
 EBUILD ganeti-instance-debian-etch-0.2.ebuild 751 RMD160 663864687dfd36ab1d09970e3828ddd9c7dfcb3b SHA1 75f31389552109e31f1471394543a88b322a0772 SHA256 936e198cf09c002ac52151beb24ed925a70f540401f248f81fc02461097c0e5f
 MD5 2174b88f7bfeedeea04541a018b2016e ganeti-instance-debian-etch-0.2.ebuild 751
 RMD160 663864687dfd36ab1d09970e3828ddd9c7dfcb3b ganeti-instance-debian-etch-0.2.ebuild 751
 SHA256 936e198cf09c002ac52151beb24ed925a70f540401f248f81fc02461097c0e5f ganeti-instance-debian-etch-0.2.ebuild 751
-MISC ChangeLog 452 RMD160 dcb734a9221659dcdb6ca1569afce255789145f5 SHA1 dd3994caa16a2e9e4311a1e4886a801d1109aada SHA256 79af1483d90773b947f746bdc92d95f178b49bdbbea30c8d8eb64b3939eed557
-MD5 c68c8aaa3c50348af62ba5646241304e ChangeLog 452
-RMD160 dcb734a9221659dcdb6ca1569afce255789145f5 ChangeLog 452
-SHA256 79af1483d90773b947f746bdc92d95f178b49bdbbea30c8d8eb64b3939eed557 ChangeLog 452
+EBUILD ganeti-instance-debian-etch-0.3.ebuild 751 RMD160 56ada7f16ab47f548a496408ff4b24afcdfa42e6 SHA1 1a082be103175e4d3bac872cfc91ea4b5aa1b3f1 SHA256 5d4dd7fab4b46e4fd3045d102aabfbc53849fac0e72fbdc2ad213e63bdf70de1
+MD5 c36031ad4880e3391d87688d8245ae94 ganeti-instance-debian-etch-0.3.ebuild 751
+RMD160 56ada7f16ab47f548a496408ff4b24afcdfa42e6 ganeti-instance-debian-etch-0.3.ebuild 751
+SHA256 5d4dd7fab4b46e4fd3045d102aabfbc53849fac0e72fbdc2ad213e63bdf70de1 ganeti-instance-debian-etch-0.3.ebuild 751
+MISC ChangeLog 612 RMD160 368d093f28922d437a4ba56737b13e6c021095b3 SHA1 b6da9bbb4d0a9ca037868ac975c83cd2f53c1c6a SHA256 a29e94a3789b0d99a4643c94632b88427595285fdccd31783f6b055939a90d88
+MD5 7a499e8896c0ecf0b6858f9cf2e66ed6 ChangeLog 612
+RMD160 368d093f28922d437a4ba56737b13e6c021095b3 ChangeLog 612
+SHA256 a29e94a3789b0d99a4643c94632b88427595285fdccd31783f6b055939a90d88 ChangeLog 612
 MISC metadata.xml 240 RMD160 ada734d9e8b8d174d95fd283dabd424935240959 SHA1 86567cf95bf92d192f1a23651f779fcfa9b3990d SHA256 07bc47a81206f97947b6765f1f1a329f761634f7e4f7e95b6e780da3b4020472
 MD5 201334e4c74f2c6c98426275f4eceaaf metadata.xml 240
 RMD160 ada734d9e8b8d174d95fd283dabd424935240959 metadata.xml 240
@@ -17,10 +19,6 @@ SHA256 07bc47a81206f97947b6765f1f1a329f761634f7e4f7e95b6e780da3b4020472 metadata
 MD5 36926f06e5f7e8e9559aaaacaa243fb2 files/digest-ganeti-instance-debian-etch-0.2 283
 RMD160 82a7034363fe7c75f86e02eed31bf1d8b5fb772d files/digest-ganeti-instance-debian-etch-0.2 283
 SHA256 a1fd1eba6208a6f66f1056c857ec352f7e8f14af1e643b11e19baf09f9f04ad4 files/digest-ganeti-instance-debian-etch-0.2 283
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHSHPvI1lqEGTUzyQRAj84AKCewP5Qpj52wbNipeweyVLeQ017dQCff7Nf
-R2+uNZNRJo1m+bLolMRjg2s=
-=Poe8
------END PGP SIGNATURE-----
+MD5 0fbe20d54684facbc958246b412cbdf6 files/digest-ganeti-instance-debian-etch-0.3 283
+RMD160 5a6807c4dd35c0dffefac8f5690d86d1d5931b4f files/digest-ganeti-instance-debian-etch-0.3 283
+SHA256 9aea8920360c470f4d5fda515b68637a9e523de6d63ef5af182ebd41a9fbb070 files/digest-ganeti-instance-debian-etch-0.3 283
