@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.7.2.ebuild,v 1.2 2007/11/14 16:49:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.5.ebuild,v 1.1 2007/11/28 18:51:17 mr_bones_ Exp $
 
 inherit autotools games
 

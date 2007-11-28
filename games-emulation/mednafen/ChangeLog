@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/mednafen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.9 2007/11/14 05:38:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.10 2007/11/28 18:51:17 mr_bones_ Exp $
+
+*mednafen-0.8.5 (28 Nov 2007)
+
+  28 Nov 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  -mednafen-0.7.2.ebuild, -mednafen-0.8.1.ebuild, -mednafen-0.8.4.ebuild,
+  +mednafen-0.8.5.ebuild:
+  version bump (bug #200666); clean out old ebuilds
 
 *mednafen-0.8.4 (14 Nov 2007)
 
