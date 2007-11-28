@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dd-rhelp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rhelp/ChangeLog,v 1.4 2007/04/11 07:45:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rhelp/ChangeLog,v 1.5 2007/11/28 20:59:47 drac Exp $
+
+  28 Nov 2007; Samuli Suominen <drac@gentoo.org> dd-rhelp-0.0.6.ebuild:
+  Keyword ~amd64 wrt #173523
 
   11 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   dd-rhelp-0.0.6.ebuild:
