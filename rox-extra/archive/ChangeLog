@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/archive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.14 2007/11/16 15:03:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.15 2007/11/28 17:24:32 lack Exp $
+
+*archive-2.1-r3 (28 Nov 2007)
+
+  28 Nov 2007; Jim Ramsay <lack@gentoo.org> +archive-2.1-r3.ebuild:
+  Added MimeType to the .desktop file
 
   16 Nov 2007; Samuli Suominen <drac@gentoo.org> archive-2.1-r2.ebuild:
   amd64 stable wrt #197514
