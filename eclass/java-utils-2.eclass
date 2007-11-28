@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.99 2007/11/28 01:54:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.100 2007/11/28 02:03:48 betelgeuse Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -612,7 +612,7 @@ java-pkg_dojavadoc() {
 	java-pkg_dohtml -r "${dir_to_install}"
 
 	# Let's make a symlink to the directory we have everything else under
-	dosym ${dest} "${JAVA_PKG_SHAREPATH}/api" || die
+	dosym ${dest}/api "${JAVA_PKG_SHAREPATH}/api" || die
 
 	if [[ ${symlink} ]]; then
 		dosym ${dest}/{api,${symlink}} || die
