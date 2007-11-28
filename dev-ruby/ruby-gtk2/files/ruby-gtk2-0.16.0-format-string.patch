@@ -1,0 +1,15 @@
+This patch fixes a format string vulnerability that got reported in bug #200623.
+It is already fixed in upstream SVN in an identical manner.
+
+--- gtk/src/rbgtkmessagedialog.c
++++ gtk/src/rbgtkmessagedialog.c
+@@ -28,7 +28,8 @@
+                                RVAL2GFLAGS(flags, GTK_TYPE_DIALOG_FLAGS), 
+                                RVAL2GENUM(type, GTK_TYPE_MESSAGE_TYPE), 
+                                RVAL2GENUM(buttons, GTK_TYPE_BUTTONS_TYPE),
+-                               (const gchar*)(NIL_P(message) ? "": RVAL2CSTR(message)));
++                               "%s",
++                               NIL_P(message) ? "": RVAL2CSTR(message));
+     RBGTK_INITIALIZE(self, w);
+     return Qnil;
+ }
