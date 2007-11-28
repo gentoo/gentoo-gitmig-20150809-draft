@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.5.ebuild,v 1.1 2007/11/26 21:08:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.5.ebuild,v 1.2 2007/11/28 02:10:48 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -33,10 +33,12 @@ src_compile() {
 	# Handwritten in perl so not using econf
 	./configure --prefix=/usr || die
 
-	emake || die "Compilation of java-gnome failed"
+	# Fails parallel build in case GCJ is detected
+	# See https://bugs.gentoo.org/show_bug.cgi?id=200550
+	emake -j1 || die "Compilation of java-gnome failed"
 
 	if use doc; then
-		emake doc || die "Making documentation failed"
+		emake -j1 doc || die "Making documentation failed"
 	fi
 }
 
