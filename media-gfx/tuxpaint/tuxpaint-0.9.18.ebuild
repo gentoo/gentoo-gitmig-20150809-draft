@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.17.ebuild,v 1.2 2007/08/16 03:48:00 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.18.ebuild,v 1.1 2007/11/28 00:41:44 leonardop Exp $
 
 inherit eutils gnome2-utils
 
@@ -18,6 +18,7 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-ttf
 	media-libs/sdl-mixer
+	media-libs/sdl-pango
 	>=media-libs/libpng-1.2
 	>=media-libs/freetype-2
 	app-text/libpaper
@@ -27,11 +28,11 @@ DEPEND="media-libs/libsdl
 		x11-libs/cairo )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# Sanitize the Makefile and correct a few other issues.
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
 src_compile() {

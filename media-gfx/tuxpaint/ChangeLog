@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/tuxpaint
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.36 2007/09/11 20:30:37 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.37 2007/11/28 00:41:44 leonardop Exp $
+
+*tuxpaint-0.9.18 (28 Nov 2007)
+
+  28 Nov 2007; Leonardo Boshell <leonardop@gentoo.org>
+  +files/tuxpaint-0.9.18-gentoo.patch, +tuxpaint-0.9.18.ebuild:
+  New version. Updated gentoo's patch. Added sdl-pango dependency.
 
 *tuxpaint-0.9.17-r1 (11 Sep 2007)
 
