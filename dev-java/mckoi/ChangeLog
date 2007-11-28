@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/mckoi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/ChangeLog,v 1.10 2007/04/29 23:00:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/ChangeLog,v 1.11 2007/11/28 18:56:09 opfer Exp $
+
+  28 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  mckoi-1.0.3-r1.ebuild:
+  stable x86, bug 200587
 
 *mckoi-1.0.3-r1 (29 Apr 2007)
 
