@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.863 2007/11/28 04:43:20 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.864 2007/11/28 12:53:47 hollow Exp $
+
+  28 Nov 2007; Benedikt Böhm <hollow@gentoo.org> package.mask:
+  Add www-servers/apache-2.2.6-r4 for testing
 
   28 Nov 2007; <alistair@gentoo.org> package.mask:
   Unleashed java-virtual/javamail onto ~arch.
