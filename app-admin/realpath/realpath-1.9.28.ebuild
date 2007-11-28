@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/realpath-1.9.28.ebuild,v 1.10 2007/06/23 17:22:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/realpath-1.9.28.ebuild,v 1.11 2007/11/28 15:33:38 grobian Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/d/dwww/dwww_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa mips ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="amd64 ~hppa mips ppc ppc64 sparc x86"
 IUSE=""
 
 # tests only operate upon things we don't use
@@ -21,18 +21,7 @@ RDEPEND="!sys-freebsd/freebsd-bin"
 S=${WORKDIR}/dwww-${PV}
 
 src_unpack() {
-	if use userland_Darwin; then
-		local dirname="dwww-${PV}"
-		tar xzf ${DISTDIR}/${A} \
-			${dirname}/Makefile \
-			${dirname}/realpath.c \
-			${dirname}/README \
-			${dirname}/TODO \
-			${dirname}/BUGS \
-			${dirname}/man/realpath.1 || die "unpack failed."
-	else
-		unpack ${A}
-	fi
+	unpack ${A}
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-Makefile.patch
