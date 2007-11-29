@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.218 2007/11/26 14:05:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.219 2007/11/29 18:14:32 jer Exp $
+
+  29 Nov 2007; Jeroen Roovers <jer@gentoo.org> gedit-2.20.3.ebuild:
+  Apply libattr patch to 2.20.3 as well.
 
   26 Nov 2007; Markus Rothe <corsair@gentoo.org> gedit-2.20.3.ebuild:
   Stable on ppc64; bug #199740
