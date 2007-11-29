@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX control-center-2.11-gentoo_xcursor.patch 527 RMD160 bf455b0cf0c98c303c0885d5bcc7a72005b63108 SHA1 dc3e5afcb696034069d2ddc4d87c2905532e914c SHA256 682ed264c5ac0ed848b5cf3e856ee4440201be94f81b3dad4066233aaec48d9a
 MD5 6d346011e61ca1c016c3c391881f9a4a files/control-center-2.11-gentoo_xcursor.patch 527
 RMD160 bf455b0cf0c98c303c0885d5bcc7a72005b63108 files/control-center-2.11-gentoo_xcursor.patch 527
@@ -20,7 +23,6 @@ RMD160 ca43e6a2abbf145c7da529dfe39ddfaba659ee45 files/control-center-2.19.90-no-
 SHA256 c32780e50c751234e6e4412fe3a6deaf5635a030553fbe1a61fb19cd47defc98 files/control-center-2.19.90-no-esd.patch 1169
 DIST control-center-2.16.3.tar.bz2 2025478 RMD160 313804094b0ad0f5dd801d71fc1214798290ed99 SHA1 fcf34601399a2f432fb7189b354007d37803f87b SHA256 6bffec96f9014b3742df80f193b68877e31b26b2a1cc0ba961fcba15a22af9d9
 DIST control-center-2.18.1.tar.bz2 2150134 RMD160 f3980d2348a699f646d87ec27c61f27057594302 SHA1 4325caeb94de9b77cd57fc210f1ba623458a2aa8 SHA256 3bb1474a6914d5a210a6f21368c48c9c302918a4ab94a5282b84b57ebc432c87
-DIST gnome-control-center-2.20.0.1.tar.bz2 2290108 RMD160 5da149dbd78bb2daaadb4d548cce12561028807c SHA1 62e9439dbfb1e0b174b44590108dd89afb39b999 SHA256 46feb6e00cba24269887ec1d3fce57323d4b3314dfa8ec280c7669c389df0997
 DIST gnome-control-center-2.20.1.tar.bz2 2292719 RMD160 ce5c5a270679f779fbec59aa887aba239b3f1d84 SHA1 6eb9bd032da71ad8dceafddc288bbca6dbc1d6ea SHA256 631d7621584a27a0edc43f05c6e2b45d6c44c1bc570abaa155472ca9b321d4d0
 EBUILD control-center-2.16.3.ebuild 2432 RMD160 777abfae5896d139436ac3c2b93d25250902540a SHA1 3d8b2e73ff757b1eacdb500023705fc5879172b0 SHA256 966b515d38e7d99dadad9e92208df420621fbf57e89a05274fd166bb824a3abf
 MD5 8169bfc5ae41a7c5555e5cedc9c9b45f control-center-2.16.3.ebuild 2432
@@ -30,10 +32,6 @@ EBUILD control-center-2.18.1.ebuild 2806 RMD160 fbb5e5e426b92514ccbb5a98f00f02df
 MD5 99b774c280b282f1d9229e109e570a2a control-center-2.18.1.ebuild 2806
 RMD160 fbb5e5e426b92514ccbb5a98f00f02df808aed24 control-center-2.18.1.ebuild 2806
 SHA256 a2a238dd23d3cc160feb1eb5569914960baf7e3e5847e8861ee4baa15f387c0d control-center-2.18.1.ebuild 2806
-EBUILD control-center-2.20.0.1.ebuild 2550 RMD160 01e454510500a92c920b365413fa272f96215c38 SHA1 04db7cdcad33f2304dd154f91b8deb4827492cd3 SHA256 ca3fb15ed252f7d0cbffa31431bd5be0f6f729ad5eceea93308bb925863a54d9
-MD5 512ccf806e3e41c9cf16a69a9f067e9a control-center-2.20.0.1.ebuild 2550
-RMD160 01e454510500a92c920b365413fa272f96215c38 control-center-2.20.0.1.ebuild 2550
-SHA256 ca3fb15ed252f7d0cbffa31431bd5be0f6f729ad5eceea93308bb925863a54d9 control-center-2.20.0.1.ebuild 2550
 EBUILD control-center-2.20.1.ebuild 2586 RMD160 11cbaf33cadead6b0236a2b58e3c997dbeff7e2a SHA1 4107f264213e09bb8cebd75a45a3ff49a3ee2e83 SHA256 2c24ed3c9009d3ae851eb890fac94378829f7d3005e53b6334a10fa0f5065320
 MD5 78f7726793b462adddf65650065f633d control-center-2.20.1.ebuild 2586
 RMD160 11cbaf33cadead6b0236a2b58e3c997dbeff7e2a control-center-2.20.1.ebuild 2586
@@ -52,9 +50,13 @@ SHA256 f99a2c73b62026d56e94fdc85a28fe8ddf14e45f03626524dcfbd62f55c7323d files/di
 MD5 f84d983b3484feb31c85348fa89d37d0 files/digest-control-center-2.18.1 271
 RMD160 f191c70a67df5a477abd305cfb019055a3bb6c45 files/digest-control-center-2.18.1 271
 SHA256 cf2bc498f431016785a9c2b0d2dca076c48dc66ac884bcfd4a8593f0be501df7 files/digest-control-center-2.18.1 271
-MD5 4ab18a4fb98db3fad52b86b7caa7de6a files/digest-control-center-2.20.0.1 295
-RMD160 b5ba300c3c3bb849e9016868630ddf182f244628 files/digest-control-center-2.20.0.1 295
-SHA256 f7e318517a102ac566cb63a9ce5104b016c90187557955bb72c366a62ae38991 files/digest-control-center-2.20.0.1 295
 MD5 e4ad65f913bb0f8bd38e017cfd9a09a1 files/digest-control-center-2.20.1 289
 RMD160 9e20b544b119f6bfefd460a7a49bf6b6eebc76ae files/digest-control-center-2.20.1 289
 SHA256 eaabb8385f5f1c9d7aea8e916626f9db23a1f3e01ad159c26e9a50aa8000ce84 files/digest-control-center-2.20.1 289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHToTBkeYb6olFHJcRAoMQAKDExTClZqKOIF20lbrTPc4bnB4GvwCgnBtR
+xyscNw8gJ4cfWNfFcgf7z6k=
+=Vndv
+-----END PGP SIGNATURE-----
