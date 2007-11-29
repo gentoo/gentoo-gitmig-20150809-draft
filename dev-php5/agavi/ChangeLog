@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/agavi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/agavi/ChangeLog,v 1.6 2007/03/17 22:44:49 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/agavi/ChangeLog,v 1.7 2007/11/29 23:43:43 jokey Exp $
+
+*agavi-0.11.0 (29 Nov 2007)
+
+  29 Nov 2007; Markus Ullmann <jokey@gentoo.org> +agavi-0.11.0.ebuild:
+  Version bump from project overlay
+
+  22 Nov 2007; Jakub Moc <jakub@gentoo.org> +agavi-0.11.0.ebuild:
+  Version bump, fix LICENSE.
 
   17 Mar 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
   -agavi-0.10.0.ebuild, agavi-0.10.1b.ebuild:
