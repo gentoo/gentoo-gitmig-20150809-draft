@@ -1,0 +1,11 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_GraphViz/PEAR-Image_GraphViz-1.3.0_rc2.ebuild,v 1.1 2007/11/29 23:26:45 jokey Exp $
+
+inherit php-pear-r1
+
+DESCRIPTION="PHP interface to AT&T's GraphViz tools."
+LICENSE="PHP"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE=""

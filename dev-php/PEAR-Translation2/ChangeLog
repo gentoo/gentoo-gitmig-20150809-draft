@@ -1,6 +1,18 @@
 # ChangeLog for dev-php/PEAR-Translation2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Translation2/ChangeLog,v 1.15 2007/10/22 18:34:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Translation2/ChangeLog,v 1.16 2007/11/29 23:40:36 jokey Exp $
+
+*PEAR-Translation2-2.0.0_rc2 (29 Nov 2007)
+
+  29 Nov 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/PEAR-Translation2-2.0.0_rc2-scriptdir.patch,
+  +PEAR-Translation2-2.0.0_rc2.ebuild:
+  Version bump from project overlay
+
+  25 Nov 2007; Jakub Moc <jakub@gentoo.org>
+  +files/PEAR-Translation2-2.0.0_rc2-scriptdir.patch,
+  +PEAR-Translation2-2.0.0_rc2.ebuild:
+  Version bump, fix script install location
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org>
   PEAR-Translation2-2.0.0_rc1.ebuild:

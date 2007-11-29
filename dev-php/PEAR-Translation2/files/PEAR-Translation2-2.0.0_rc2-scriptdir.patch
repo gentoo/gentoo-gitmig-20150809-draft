@@ -1,0 +1,11 @@
+--- package.xml.orig	2007-11-25 21:07:43.000000000 +0100
++++ package.xml	2007-11-25 21:08:31.000000000 +0100
+@@ -95,7 +95,7 @@
+    <file baseinstalldir="Translation2" md5sum="b19437377bc378fdb371452f68397443" name="docs/examples/Translation2_example.sql" role="doc" />
+    <file baseinstalldir="Translation2" md5sum="5a5c8cbbde45281e80177f7219f34d21" name="docs/examples/Translation2_gettext_example.php" role="doc" />
+    <file baseinstalldir="Translation2" md5sum="60fe3be0922e2ab732401836d9e20d44" name="docs/gettext_readme.txt" role="doc" />
+-   <file baseinstalldir="Translation2" md5sum="79a73900efcf8b00eba40b9ebd49876f" name="scripts/t2xmlchk.php" role="script" />
++   <file baseinstalldir="/" md5sum="79a73900efcf8b00eba40b9ebd49876f" install-as="t2xmlchk.php" name="scripts/t2xmlchk.php" role="script" />
+    <file baseinstalldir="Translation2" md5sum="2cfb1de17efea9611965df45a1a1888d" name="tests/admin_containers_tests.php" role="test" />
+    <file baseinstalldir="Translation2" md5sum="44229ed2cdc3a125eec99a40adf5f3a7" name="tests/admin_db_test.php" role="test" />
+    <file baseinstalldir="Translation2" md5sum="c82bcb483f62a1dca1bb6ff9c86c3ff4" name="tests/admin_gettext_po_test.php" role="test" />
