@@ -1,0 +1,62 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+. /etc/conf.d/torque 
+PBS_SERVER_HOME="$(. /etc/env.d/25torque; echo ${PBS_SERVER_HOME})"
+
+depend() {
+    need net
+    before pbs_sched
+    before pbs_mom
+    after logger
+}
+
+checkconfig() {
+    for i in "server_name" "server_priv/nodes"; do
+        if [ ! -e "${PBS_SERVER_HOME}/${i}" ]; then
+            eerror "Missing config file ${PBS_SERVER_HOME}/${i}"
+            return 1
+        fi
+    done
+
+    for i in "acl_svr/operators" "serverdb"; do
+        if [ ! -e "${PBS_SERVER_HOME}/server_priv/${i}" ]; then
+            eerror "Torque has not been fully configured to run."
+            eerror "Missing ${i}"
+            return 1
+        fi
+    done
+    
+    if [ -z "$(grep 'queue_type' ${PBS_SERVER_HOME}/server_priv/queues/*)" ]; then
+        eerror "No queues have been defined yet."
+        return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+
+    ebegin "Starting Torque pbs_server"
+    local extra_args=""
+    if [ -n "${PBS_SERVER_LOG}" ]; then
+        extra_args="-L ${PBS_SERVER_LOG}"
+    fi
+
+    start-stop-daemon  --start -p ${PBS_SERVER_HOME}/server_priv/server.lock \
+        --exec /usr/sbin/pbs_server -- -d ${PBS_SERVER_HOME} ${extra_args}
+    eend ${?}		
+}
+
+stop() {
+    ebegin "Stopping Torque pbs_server"
+    stop_type="${PBS_SERVER_STOP}"
+    if [ -z "${stop_type}" ]; then
+        ewarn "PBS_SERVER_STOP is not defined, defaulting to quick"
+        stop_type=quick
+    fi
+
+    /usr/bin/qterm -t ${stop_type} || start-stop-daemon --stop -p ${PBS_SERVER_HOME}/server_priv/server.lock
+    eend ${?}
+}
+# vim:ts=4

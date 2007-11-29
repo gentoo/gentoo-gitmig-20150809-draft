@@ -1,0 +1,7 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+# Configuration files that are included in the initial Torque install
+PBS_SERVER_HOME="/var/spool/torque"
+CONFIG_PROTECT="${PBS_SERVER_HOME}/sched_priv/{holidays,resource_group,dedicated_time,sched_config} ${PBS_SERVER_HOME}/{server_name,pbs_environment}"
+
