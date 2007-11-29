@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/find
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/find/ChangeLog,v 1.10 2007/11/16 15:14:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/find/ChangeLog,v 1.11 2007/11/29 16:13:04 lack Exp $
+
+  29 Nov 2007; Jim Ramsay <lack@gentoo.org> -find-007.ebuild:
+  Version cleanup
 
   16 Nov 2007; Samuli Suominen <drac@gentoo.org> find-007-r1.ebuild:
   amd64 stable wrt #197514
