@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.2.1-r1.ebuild,v 1.1 2007/11/29 01:01:35 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.2.1-r1.ebuild,v 1.2 2007/11/29 07:30:34 mr_bones_ Exp $
 
 inherit autotools flag-o-matic eutils
 
@@ -30,7 +30,6 @@ DEPEND="${DEPEND_COMMON}
 RDEPEND="${DEPEND_COMMON}
 	crypt? ( net-misc/openssh )
 	!crypt? ( net-misc/netkit-rsh )"
-
 
 [ -n "${PBS_SERVER_HOME}" ] || PBS_SERVER_HOME="/var/spool/torque"
 
@@ -171,7 +170,6 @@ pkg_postinst() {
 	elog "changed PBS_SERVER_HOME!"
 }
 
-
 # Either the correct PBS_SERVER_HOME and PBS_SERVER_NAME are set
 # or we use the default HOME and the localhost as the server.
 # root will be setup as the primary operator/manager, the local machine
@@ -216,7 +214,7 @@ pkg_config() {
 
 			"${ROOT}"/usr/bin/qterm -t quick ${PBS_SERVER_NAME} || rc=1
 
-			# Add the local machine as a node.  
+			# Add the local machine as a node.
 			echo "$(hostname -f) np=1" > "${h}/server_priv/nodes"
 		fi
 	fi
