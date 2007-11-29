@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.109 2007/11/26 01:41:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.110 2007/11/29 22:46:17 mr_bones_ Exp $
+
+  29 Nov 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  -wesnoth-1.2.7.ebuild, wesnoth-1.2.8.ebuild:
+  force stable and remove old (security bug #200789)
 
 *wesnoth-1.2.8 (26 Nov 2007)
 
