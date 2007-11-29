@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.6.5069.ebuild,v 1.2 2007/11/28 19:38:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.6.5069.ebuild,v 1.3 2007/11/29 08:17:34 opfer Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libsigc++-2.0
