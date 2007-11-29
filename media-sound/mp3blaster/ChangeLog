@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3blaster
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.39 2007/11/24 17:15:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.40 2007/11/29 17:58:15 armin76 Exp $
+
+  29 Nov 2007; Raúl Porcel <armin76@gentoo.org> mp3blaster-3.2.3-r1.ebuild:
+  alpha/ia64/sparc stable wrt #200136 thanks to Tobias Klausmann and Alex
+  Maclean for testing
 
   24 Nov 2007; nixnut <nixnut@gentoo.org> mp3blaster-3.2.3-r1.ebuild:
   Stable on ppc wrt bug 200136
