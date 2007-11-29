@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7955 2007/11/29 21:41:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7956 2007/11/29 22:14:11 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -549,11 +549,6 @@ media-libs/freeimage
 # Sven Wegener <swegener@gentoo.org> (07 Aug 2007)
 # CVS snapshot, needs some more testing
 ~app-misc/screen-4.0.3_p20070403
-
-# Andrej Kacian <ticho@gentoo.org> (02 Aug 2007)
-# Deprecated plugin, use pgpmime/pgpinline plugins shipped directly with
-# claws-mail and claws-mail-smime plugin shipped as a separate package.
-mail-client/claws-mail-etpan-privacy
 
 # Ulrich Mueller <ulm@gentoo.org> (26 Jul 2007)
 # CVS snapshots, bug #185106
