@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.122 2007/11/26 14:00:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.123 2007/11/29 05:58:43 jer Exp $
+
+  29 Nov 2007; Jeroen Roovers <jer@gentoo.org> gconf-editor-2.20.0.ebuild:
+  Stable for HPPA (bug #199740).
 
   26 Nov 2007; Markus Rothe <corsair@gentoo.org> gconf-editor-2.20.0.ebuild:
   Stable on ppc64; bug #199740
