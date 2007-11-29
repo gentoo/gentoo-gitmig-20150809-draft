@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-0.49.ebuild,v 1.8 2007/05/26 01:34:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-0.49.ebuild,v 1.9 2007/11/29 09:47:37 jokey Exp $
 
 DESCRIPTION="A portable, efficient middleware for different kinds of mail access."
 HOMEPAGE="http://libetpan.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
@@ -46,7 +47,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc NEWS TODO ChangeLog
 }
 

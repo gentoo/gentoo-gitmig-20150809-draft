@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.56 2007/09/02 21:48:43 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.57 2007/11/29 09:47:37 jokey Exp $
+
+  29 Nov 2007; Markus Ullmann <jokey@gentoo.org> libetpan-0.49.ebuild,
+  libetpan-0.52.ebuild, libetpan-0.52-r1.ebuild:
+  TODO file vanished in 0.52, quoting
 
 *libetpan-0.52-r1 (02 Sep 2007)
 
