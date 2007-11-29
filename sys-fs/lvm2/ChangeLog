@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.124 2007/11/28 23:51:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.125 2007/11/29 00:28:09 robbat2 Exp $
+
+*lvm2-2.02.28-r4 (29 Nov 2007)
+
+  29 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +lvm2-2.02.28-r4.ebuild:
+  Bug #199860, snapshot support code was not being built properly when
+  non-static LVM was in use.
 
   28 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> -lvm2-2.02.10.ebuild,
   -lvm2-2.02.17.ebuild, -lvm2-2.02.25.ebuild, -lvm2-2.02.27.ebuild:
