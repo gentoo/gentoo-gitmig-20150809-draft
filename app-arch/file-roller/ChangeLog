@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.222 2007/11/29 05:57:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.223 2007/11/29 09:21:36 leio Exp $
+
+*file-roller-2.20.2 (29 Nov 2007)
+
+  29 Nov 2007; Mart Raudsepp <leio@gentoo.org> -file-roller-2.20.0.ebuild,
+  +file-roller-2.20.2.ebuild:
+  Version bump with only translation updates
 
   29 Nov 2007; Jeroen Roovers <jer@gentoo.org> file-roller-2.20.1.ebuild:
   Stable for HPPA (bug #199740).
