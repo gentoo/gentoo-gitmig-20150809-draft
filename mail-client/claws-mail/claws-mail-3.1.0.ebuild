@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.0.1.ebuild,v 1.1 2007/09/18 09:08:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.1.0.ebuild,v 1.1 2007/11/29 22:31:26 ticho Exp $
 
-IUSE="bogofilter clamav crypt dillo doc gnome imap ipv6 kde ldap pda session spell ssl startup-notification xface"
+IUSE="bogofilter clamav crypt dillo doc gnome imap ipv6 kde ldap nntp pda session spell ssl startup-notification xface"
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Claws-Mail is an email client (and news reader) based on GTK+"
 HOMEPAGE="http://www.claws-mail.org"
@@ -31,6 +31,7 @@ COMMONDEPEND=">=x11-libs/gtk+-2.6
 	clamav? ( app-antivirus/clamav )
 	kde? ( kde-base/kdelibs )
 	imap? ( >=net-libs/libetpan-0.49 )
+	nntp? ( >=net-libs/libetpan-0.49 )
 	gnome? ( >=gnome-base/libgnomeprintui-2.2 )
 	startup-notification? ( x11-libs/startup-notification )
 	bogofilter? ( mail-filter/bogofilter )
@@ -50,11 +51,15 @@ RDEPEND="${COMMONDEPEND}
 PLUGIN_NAMES="acpi-notifier att-remover attachwarner cachesaver etpan-privacy fetchinfo gtkhtml maildir mailmbox newmail notification pdf-viewer perl rssyl smime synce vcalendar"
 
 src_compile() {
-	local myconf
+	local myconf="--disable-libetpan"
+
+	# libetpan is needed if user wants nntp or imap functionality
+	# TODO: Perhaps change it into a single "libetpan" USE flag?
+	use imap && myconf="--enable-libetpan"
+	use nntp && myconf="--enable-libetpan"
 
 	# Optional features
 	myconf="${myconf} `use_enable gnome gnomeprint`"
-	myconf="${myconf} `use_enable imap libetpan`"
 	myconf="${myconf} `use_enable ipv6`"
 	myconf="${myconf} `use_enable ldap`"
 	myconf="${myconf} `use_enable pda jpilot`"
@@ -83,7 +88,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	# Makefile install claws-mail.png in /usr/share/icons/hicolor/48x48/apps
 	# => also install it in /usr/share/pixmaps for other desktop envs
@@ -105,8 +110,8 @@ src_install() {
 	doins ${PN}.desktop
 
 	einfo "Installing extra tools"
-	cd ${S}/tools
-	exeinto /usr/lib/${PN}/tools
+	cd "${S}"/tools
+	exeinto /usr/$(get_libdir)/${PN}/tools
 	doexe *.pl *.py *.rc *.conf *.sh || die
 	doexe tb2claws-mail update-po uudec uuooffice || die
 
@@ -115,7 +120,7 @@ src_install() {
 		local kdeprefix="$(kde-config --prefix)"
 		local servicescript="${PN}-kdeservicemenu.pl"
 		local desktopfile="${PN}-attach-files.desktop"
-		cd ${S}/tools/kdeservicemenu
+		cd "${S}"/tools/kdeservicemenu
 		sed -i -e "s:SCRIPT_PATH:${kdeprefix}/bin/${servicescript}:g" \
 			template_${desktopfile}
 		dodir /usr/share/apps/konqueror/servicemenus
@@ -129,11 +134,11 @@ src_install() {
 	fi
 
 	# kill useless plugin files
-	rm -f ${D}/usr/lib*/${PN}/plugins/*.{la,a}
+	rm -f "${D}"/usr/lib*/${PN}/plugins/*.{la,a}
 }
 
 pkg_postinst() {
-	gtk-update-icon-cache -f -t ${ROOT}/usr/share/icons/hicolor
+	gtk-update-icon-cache -f -t "${ROOT}"/usr/share/icons/hicolor
 
 	UPDATE_PLUGINS=""
 	RENAME_PLUGINS=""
@@ -178,5 +183,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	gtk-update-icon-cache -f -t /usr/share/icons/hicolor
+	gtk-update-icon-cache -f -t "${ROOT}"/usr/share/icons/hicolor
 }

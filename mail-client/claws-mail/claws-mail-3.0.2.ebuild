@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.0.2.ebuild,v 1.2 2007/10/03 13:49:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.0.2.ebuild,v 1.3 2007/11/29 22:31:26 ticho Exp $
 
 IUSE="bogofilter clamav crypt dillo doc gnome imap ipv6 kde ldap pda session spell ssl startup-notification xface"
 
@@ -133,7 +133,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	gtk-update-icon-cache -f -t ${ROOT}/usr/share/icons/hicolor
+	gtk-update-icon-cache -f -t "${ROOT}"/usr/share/icons/hicolor
 
 	UPDATE_PLUGINS=""
 	RENAME_PLUGINS=""
@@ -178,5 +178,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	gtk-update-icon-cache -f -t ${ROOT}/usr/share/icons/hicolor
+	gtk-update-icon-cache -f -t "${ROOT}"/usr/share/icons/hicolor
 }
