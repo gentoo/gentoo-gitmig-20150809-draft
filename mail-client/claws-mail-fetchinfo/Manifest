@@ -1,40 +1,34 @@
-DIST fetchinfo-plugin-0.4.17.tar.gz 325773 RMD160 a0af05bf3b2613dd17f8da68b6947ea2084885b7 SHA1 55f5b7b7a02c9c4e17948fc32472efa86e0465d2 SHA256 31f3f3e73adb7ab12ca9ae03d32ede52a616e5578b968a1e6a1d78fc3b7bc10d
-DIST fetchinfo-plugin-0.4.18.tar.gz 325753 RMD160 39c59d0a41ee365ecfcd955208ea352e6ca8784a SHA1 0f4a0bff859ad982b50a93ec36ca3be98047b880 SHA256 5ff1935796c0f7d0600ba4693870ff1ade89f84e5fddeefd893cc259d3ad01f2
-DIST fetchinfo-plugin-0.4.19.tar.gz 328005 RMD160 e4f3bbe2658f98683db0c011fd7ad342c0dbd0b3 SHA1 6492dec2641261cd68d93629873c47a00daaf9dd SHA256 fc8160cb6fdd8d7b00ce672c0f6d6d5f5d00b722b0bb57f13173730cf2f420ce
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST fetchinfo-plugin-0.4.20.tar.gz 329720 RMD160 ce8399ce428e033bf550be0d4aed00c4718f83f6 SHA1 ad5b1e0e395b13f0fb47f967cff6e2d2845e1a9d SHA256 ae3e1728e5ca531e5d60edbdd853628b63a27b82438e4e205bc68712b78d269d
-EBUILD claws-mail-fetchinfo-0.4.17.ebuild 757 RMD160 57b9fa215832991915eb5bb923f6d4d5f4f89be2 SHA1 87aa227c8ca7b7e393fcf8d9cfd4b08c3703f016 SHA256 710c49df3f8c629602f0c8f4cf62953ffdf02963f1d96c3384a4a69199d0953a
-MD5 a06bf3eb60f9dfa265ab928851f0f407 claws-mail-fetchinfo-0.4.17.ebuild 757
-RMD160 57b9fa215832991915eb5bb923f6d4d5f4f89be2 claws-mail-fetchinfo-0.4.17.ebuild 757
-SHA256 710c49df3f8c629602f0c8f4cf62953ffdf02963f1d96c3384a4a69199d0953a claws-mail-fetchinfo-0.4.17.ebuild 757
-EBUILD claws-mail-fetchinfo-0.4.18.ebuild 757 RMD160 d8db3db86b2454ba4fc01fc737a219c3c37cdc98 SHA1 c889e7db048d48dff643064d8fd79ec483543bb6 SHA256 807152f5bbda73f7549334d41f87bc365bfaafad1e9df87df64ccdd65cc90c32
-MD5 f77d7135b68f7e9ca4f58d9a2465b523 claws-mail-fetchinfo-0.4.18.ebuild 757
-RMD160 d8db3db86b2454ba4fc01fc737a219c3c37cdc98 claws-mail-fetchinfo-0.4.18.ebuild 757
-SHA256 807152f5bbda73f7549334d41f87bc365bfaafad1e9df87df64ccdd65cc90c32 claws-mail-fetchinfo-0.4.18.ebuild 757
-EBUILD claws-mail-fetchinfo-0.4.19.ebuild 758 RMD160 62149c6a96a6f55d59117f6bc93ffd16fdef9bd9 SHA1 3f2680125ac023a511a6bbc9d5d1c2351b55809a SHA256 48c03c43f77cd56e260edfd515e3e56314aeba866113ee1726dec1053dc58315
-MD5 f082cba61fe81bab56306e56ae2d1560 claws-mail-fetchinfo-0.4.19.ebuild 758
-RMD160 62149c6a96a6f55d59117f6bc93ffd16fdef9bd9 claws-mail-fetchinfo-0.4.19.ebuild 758
-SHA256 48c03c43f77cd56e260edfd515e3e56314aeba866113ee1726dec1053dc58315 claws-mail-fetchinfo-0.4.19.ebuild 758
-EBUILD claws-mail-fetchinfo-0.4.20.ebuild 757 RMD160 09af227a615e74fb9864778db576b46cab7f35fc SHA1 5d5444a8b7514d778f059fff57a5bb2bcdacf48f SHA256 792e1a78bc7397ea50656c041c5a5be05fb694d2eb0f14a10eb4b4949c5e710a
-MD5 71e5308697a8f4d22a110b26badbd0ff claws-mail-fetchinfo-0.4.20.ebuild 757
-RMD160 09af227a615e74fb9864778db576b46cab7f35fc claws-mail-fetchinfo-0.4.20.ebuild 757
-SHA256 792e1a78bc7397ea50656c041c5a5be05fb694d2eb0f14a10eb4b4949c5e710a claws-mail-fetchinfo-0.4.20.ebuild 757
-MISC ChangeLog 1363 RMD160 88ce6fa95176c65486428ce903fc6a47ca9e73db SHA1 a010bb767025c83d487c761e60e2459778674843 SHA256 fe1051248c50c37066c25ca231d9948cf9dc39fb319f6fc09f8aa7c66c15b72a
-MD5 7c511d657fe29a0ad5b7170d3ed83ee9 ChangeLog 1363
-RMD160 88ce6fa95176c65486428ce903fc6a47ca9e73db ChangeLog 1363
-SHA256 fe1051248c50c37066c25ca231d9948cf9dc39fb319f6fc09f8aa7c66c15b72a ChangeLog 1363
+DIST fetchinfo-plugin-0.4.21.tar.gz 329807 RMD160 fb750056f0ee7157f604620c96de6b91b6010663 SHA1 da488af94daf69e8c4f73113d6a143cbb7e62bbc SHA256 c2d8b04144f2447c1fe83185989097fd6caa07521509ce8b5dcfe613d8293aa5
+EBUILD claws-mail-fetchinfo-0.4.20.ebuild 757 RMD160 13279a74f9574df6539344c503fad9c6393b2a3c SHA1 cda214b515f0b6c9312c4a0d894544a2c2d08e94 SHA256 1376786ccddb28e9c31a4abfcceaac19b31bece3be16a9bd316ade6d79eb100f
+MD5 bd5e40da81c13703355f173aea9dd062 claws-mail-fetchinfo-0.4.20.ebuild 757
+RMD160 13279a74f9574df6539344c503fad9c6393b2a3c claws-mail-fetchinfo-0.4.20.ebuild 757
+SHA256 1376786ccddb28e9c31a4abfcceaac19b31bece3be16a9bd316ade6d79eb100f claws-mail-fetchinfo-0.4.20.ebuild 757
+EBUILD claws-mail-fetchinfo-0.4.21.ebuild 759 RMD160 253bfc3f2a4e30b1b988229ef0ed64837c76dabd SHA1 e8257e9af241ea2756046073f4f2bcc2fad30db8 SHA256 58a218fdddc9773a2964249063079e54c9f15aefae71841901fcf7cb38022160
+MD5 1b67c6b59efa70ce700c0cf4c8fd17f3 claws-mail-fetchinfo-0.4.21.ebuild 759
+RMD160 253bfc3f2a4e30b1b988229ef0ed64837c76dabd claws-mail-fetchinfo-0.4.21.ebuild 759
+SHA256 58a218fdddc9773a2964249063079e54c9f15aefae71841901fcf7cb38022160 claws-mail-fetchinfo-0.4.21.ebuild 759
+MISC ChangeLog 1677 RMD160 af63a3af719a2dfd29a75964ec33b01d7eae59ff SHA1 aabcd3cbdc9aaa9f9830c067bca7842548d08cf0 SHA256 29775b842aa0dff6dbf5f46dd931345fc97263a38f13510929241f5503a6c44c
+MD5 b1ef14865a8e2f379dfd190764d612b0 ChangeLog 1677
+RMD160 af63a3af719a2dfd29a75964ec33b01d7eae59ff ChangeLog 1677
+SHA256 29775b842aa0dff6dbf5f46dd931345fc97263a38f13510929241f5503a6c44c ChangeLog 1677
 MISC metadata.xml 282 RMD160 1d03f1568fddc66e17cf5682b1a15c726504f11e SHA1 96f90f3697c0650e0da34123668cdf39534e6e43 SHA256 148041720f922c4238c1c22d9e92d7438e1126b8875765f470e0d5b3914313c3
 MD5 61bc32b1f15be05122b2d7989e02aec0 metadata.xml 282
 RMD160 1d03f1568fddc66e17cf5682b1a15c726504f11e metadata.xml 282
 SHA256 148041720f922c4238c1c22d9e92d7438e1126b8875765f470e0d5b3914313c3 metadata.xml 282
-MD5 c2d90cc2ea87682302f6f0d7c513d30e files/digest-claws-mail-fetchinfo-0.4.17 271
-RMD160 ab5fff8f560af80ca22d354bcfebdccebc2e22fc files/digest-claws-mail-fetchinfo-0.4.17 271
-SHA256 74b8e75873107559d1be0a4bb31bddff9b43f155b029a6aa52b188b2a62fc661 files/digest-claws-mail-fetchinfo-0.4.17 271
-MD5 24f6f1acc072b60ce1b145099f6df15c files/digest-claws-mail-fetchinfo-0.4.18 271
-RMD160 d7069ac8ebbe24a9ec3fdbeec398fd1f0c0cb5cf files/digest-claws-mail-fetchinfo-0.4.18 271
-SHA256 f2c9135251d36ab08da587f3c433e7bf55cce95aa87b9314a4485673f9bb95ac files/digest-claws-mail-fetchinfo-0.4.18 271
-MD5 559be22417bb31e442d55465aab6e73b files/digest-claws-mail-fetchinfo-0.4.19 271
-RMD160 2837f33a5d62360ed8b6071c5c22c32a9e6c61bb files/digest-claws-mail-fetchinfo-0.4.19 271
-SHA256 4abfdd2b63e467c649e84779298df7a3958484676e6b0b8dafadacefc5ec3283 files/digest-claws-mail-fetchinfo-0.4.19 271
 MD5 3c4882c6955b71b5f21d8812a2f8c911 files/digest-claws-mail-fetchinfo-0.4.20 271
 RMD160 e738071e8043a89abff96d7113919a67710224d8 files/digest-claws-mail-fetchinfo-0.4.20 271
 SHA256 4c0606625d6c198538e561eb4732982f912ab5e385dbc21404c9f92aecb73d19 files/digest-claws-mail-fetchinfo-0.4.20 271
+MD5 ffff2f951c2704d0004a37068a49ad90 files/digest-claws-mail-fetchinfo-0.4.21 271
+RMD160 f634139f073a306f45764bf3316826e75afb3290 files/digest-claws-mail-fetchinfo-0.4.21 271
+SHA256 a5f426c4069fcc25f6a4f26b465a6f4007a9db38c8d5e90c84c37d706457fc43 files/digest-claws-mail-fetchinfo-0.4.21 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (GNU/Linux)
+
+iD8DBQFHT0FrQlM6RnzZP+IRAuSvAJ0brER/Mu9ZUY8PJQA7UlKGTLl5pwCeNqEV
+g/vxau37r7kxwmoLkGyv2rY=
+=PKLG
+-----END PGP SIGNATURE-----

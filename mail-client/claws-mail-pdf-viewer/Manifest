@@ -1,48 +1,34 @@
-DIST pdf_viewer-0.2.tar.gz 376186 RMD160 64e45788900d0e47fc94864a70d3df99971ba04c SHA1 4144d9e2d667cce575852d85e4db353b7693ee91 SHA256 cb8cb6555a3d076c8eb31d8422f38333404ff798e03058abef282544cdfe82e3
-DIST pdf_viewer-0.3.tar.gz 395053 RMD160 dcbad3196f9deb3ba4b489c56075ef07c0d20333 SHA1 dedfb226c5070f2130059af8b89201e82f3d96b9 SHA256 c990a4aad21579c82c937bd46373f5b8e12a7a851696b7e78b237ceb68d3fd20
-DIST pdf_viewer-0.4.tar.gz 395108 RMD160 20feac5277cc33853f74f75bbb405eccc5a43b57 SHA1 33dc9b0ccf115e1be84ae2bb5f6988c3cf1824de SHA256 2e2d1f9a1154d1ce71eabab36d9a3e885c9f9111f93da94576e5e30aefaa3735
-DIST pdf_viewer-0.5.tar.gz 396385 RMD160 65bf8df2dfabc21aa39ee7e72a56fb8b8b6ec51b SHA1 d1191d90e9a86708508ebebfb9a69004530d7bf1 SHA256 bac6789784fd53ec6adcfc8cc5f4a1c8f4abe567f0086133ee9bd3ee26a77483
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST pdf_viewer-0.6.tar.gz 403190 RMD160 0872158bfd778c5e370d2a7164c1406b9a299086 SHA1 54313c7782a002fcf188b0ab8097fc096ff95148 SHA256 0a6d1375eaebca13db443772c3652c97716a63fba770d8e80949aa16501103f9
-EBUILD claws-mail-pdf-viewer-0.2.ebuild 822 RMD160 d900ff502a50d3835dc397dc8224c9d462f58824 SHA1 f70c4555bb43e2f82965a522bce889bbdbbbf2e2 SHA256 a29e9603050184041156bc07d90c0b9e40b18b85cc817fea51896f22aa740eed
-MD5 683656e06f988eaeecf1f154113d13b6 claws-mail-pdf-viewer-0.2.ebuild 822
-RMD160 d900ff502a50d3835dc397dc8224c9d462f58824 claws-mail-pdf-viewer-0.2.ebuild 822
-SHA256 a29e9603050184041156bc07d90c0b9e40b18b85cc817fea51896f22aa740eed claws-mail-pdf-viewer-0.2.ebuild 822
-EBUILD claws-mail-pdf-viewer-0.3.ebuild 821 RMD160 3126208dba2b9ffd358e18bbd898cdcda808fd8f SHA1 39814f0716c8479147da8a99483fb333dd5607af SHA256 44006accd16a76ae506d2e67cde40202156ae71eedc68c3288daa7b32c18a315
-MD5 3edfb88ac79e52429a0d4cd062725396 claws-mail-pdf-viewer-0.3.ebuild 821
-RMD160 3126208dba2b9ffd358e18bbd898cdcda808fd8f claws-mail-pdf-viewer-0.3.ebuild 821
-SHA256 44006accd16a76ae506d2e67cde40202156ae71eedc68c3288daa7b32c18a315 claws-mail-pdf-viewer-0.3.ebuild 821
-EBUILD claws-mail-pdf-viewer-0.4.ebuild 826 RMD160 76791f3885ddb4ad4db40b7c06b0eecbbe2ac379 SHA1 fcca19740f57b93a553c51b71a9c6a47a9cf0734 SHA256 c875d1a8629a4afe13b0c8322d0b925e711bff644af1590799d31e6189b5aefe
-MD5 80d2d52c524cb7a53e0df3eb03f1acf3 claws-mail-pdf-viewer-0.4.ebuild 826
-RMD160 76791f3885ddb4ad4db40b7c06b0eecbbe2ac379 claws-mail-pdf-viewer-0.4.ebuild 826
-SHA256 c875d1a8629a4afe13b0c8322d0b925e711bff644af1590799d31e6189b5aefe claws-mail-pdf-viewer-0.4.ebuild 826
-EBUILD claws-mail-pdf-viewer-0.5.ebuild 831 RMD160 1235d93dd03fb23881236587334b9d5dcaa3d2c9 SHA1 6c31a0860e652388100666d3ac7027a744ce94e6 SHA256 e9687723220a791136190957df78e2e271e5b532ee537aa44c9d2e584d6f1354
-MD5 3b6a5e2466b9f2885afbeb4fe3b23956 claws-mail-pdf-viewer-0.5.ebuild 831
-RMD160 1235d93dd03fb23881236587334b9d5dcaa3d2c9 claws-mail-pdf-viewer-0.5.ebuild 831
-SHA256 e9687723220a791136190957df78e2e271e5b532ee537aa44c9d2e584d6f1354 claws-mail-pdf-viewer-0.5.ebuild 831
+DIST pdf_viewer-0.7.tar.gz 405671 RMD160 1f502ed9993868d32ed8c13e68218049c87eb5ba SHA1 883092c2be34b9005210e750a68f7bd86e255cf9 SHA256 4577ac4d1355eb277d877e0dfe6d49f005dbc1e6978d0793530e0dba6e5a8b39
 EBUILD claws-mail-pdf-viewer-0.6.ebuild 826 RMD160 b7f1783dd3ce51df02354d232edbbd9bb47e1f0b SHA1 4f6c888df4eb465cfaac14c95b843fa9f1a8a6e7 SHA256 6958e318aad4d18376b7e05ed3ed6f5bb7e97a1833b8619a01bd67c04e3cfaf3
 MD5 e281631586ff8fc10d966cc4dc87dd99 claws-mail-pdf-viewer-0.6.ebuild 826
 RMD160 b7f1783dd3ce51df02354d232edbbd9bb47e1f0b claws-mail-pdf-viewer-0.6.ebuild 826
 SHA256 6958e318aad4d18376b7e05ed3ed6f5bb7e97a1833b8619a01bd67c04e3cfaf3 claws-mail-pdf-viewer-0.6.ebuild 826
-MISC ChangeLog 2268 RMD160 8544b9d3daf71a5de9db8e0a85ec8aa55ec35a42 SHA1 6216cf87d8f4ca96ed869eb0321d8e221e13b20f SHA256 dc43af0086e6f7080c9c9a3d04809a35f91f35e85c2c94beaef08e135ada061b
-MD5 0546e949cb3a93e4b1780670ba7e735e ChangeLog 2268
-RMD160 8544b9d3daf71a5de9db8e0a85ec8aa55ec35a42 ChangeLog 2268
-SHA256 dc43af0086e6f7080c9c9a3d04809a35f91f35e85c2c94beaef08e135ada061b ChangeLog 2268
+EBUILD claws-mail-pdf-viewer-0.7.ebuild 828 RMD160 b420f3c73a9c12b3541048c2704657ed7106631d SHA1 4895e223acabd3efe10e5cd45b2775a9019e8062 SHA256 591552e73b450d408abc5c687420ebc0132cbfc914c46d4a974922967ecffeeb
+MD5 b0dff75d58f38221a3cc2f9821ba3551 claws-mail-pdf-viewer-0.7.ebuild 828
+RMD160 b420f3c73a9c12b3541048c2704657ed7106631d claws-mail-pdf-viewer-0.7.ebuild 828
+SHA256 591552e73b450d408abc5c687420ebc0132cbfc914c46d4a974922967ecffeeb claws-mail-pdf-viewer-0.7.ebuild 828
+MISC ChangeLog 2571 RMD160 f2211f8175ee611e258d9dd4ea0e704bd9f15978 SHA1 d5876e516c23915b8e9230117b476dc563dd8b12 SHA256 a239a1189a9a8f27eb00559e2447a20d860b961bb1586bcff6f6e3f091795bd0
+MD5 af413233dce40f70a090782925b3733c ChangeLog 2571
+RMD160 f2211f8175ee611e258d9dd4ea0e704bd9f15978 ChangeLog 2571
+SHA256 a239a1189a9a8f27eb00559e2447a20d860b961bb1586bcff6f6e3f091795bd0 ChangeLog 2571
 MISC metadata.xml 282 RMD160 1d03f1568fddc66e17cf5682b1a15c726504f11e SHA1 96f90f3697c0650e0da34123668cdf39534e6e43 SHA256 148041720f922c4238c1c22d9e92d7438e1126b8875765f470e0d5b3914313c3
 MD5 61bc32b1f15be05122b2d7989e02aec0 metadata.xml 282
 RMD160 1d03f1568fddc66e17cf5682b1a15c726504f11e metadata.xml 282
 SHA256 148041720f922c4238c1c22d9e92d7438e1126b8875765f470e0d5b3914313c3 metadata.xml 282
-MD5 3a898d0df1e7c5cff74da13e6904230f files/digest-claws-mail-pdf-viewer-0.2 244
-RMD160 0d68102567d3d3f4293ae720a27673b65ddf1b6c files/digest-claws-mail-pdf-viewer-0.2 244
-SHA256 a26e1ea059936d69ac42214d25d717e5b71fc87c92306e863a24128ca7d11f9d files/digest-claws-mail-pdf-viewer-0.2 244
-MD5 79e8d73de9d940023adb80b4e67f200f files/digest-claws-mail-pdf-viewer-0.3 244
-RMD160 b9b93787b54eb4c5857ab0ca2524d1969b2867be files/digest-claws-mail-pdf-viewer-0.3 244
-SHA256 471dbd833d4f987e7670d48ba6cefb761886a465f41f7c159fc129f5697d39f8 files/digest-claws-mail-pdf-viewer-0.3 244
-MD5 628bd5aca3bd93f582c2ca980577b19b files/digest-claws-mail-pdf-viewer-0.4 244
-RMD160 a2335c7cdb2b6db4fe9e4d1f2d2ab569bd5f53d1 files/digest-claws-mail-pdf-viewer-0.4 244
-SHA256 d3af0e3e2774108bb6c9a2e3a57f781895890baa561f635f64129bdef4d0699a files/digest-claws-mail-pdf-viewer-0.4 244
-MD5 b17eb692c37492627a3ff46d7a0248d7 files/digest-claws-mail-pdf-viewer-0.5 244
-RMD160 d6fd0a9f4fe4fbca0dbcd05e086e1ce07c699b05 files/digest-claws-mail-pdf-viewer-0.5 244
-SHA256 f3de31818e4aeb07e6b7a313a0830b42ddd2abfd7c81f67e8eca5c848921cb40 files/digest-claws-mail-pdf-viewer-0.5 244
 MD5 12f9a26e6bbbb76e586ac880adb64214 files/digest-claws-mail-pdf-viewer-0.6 244
 RMD160 c5b49fcc4dab03955ef2ebb183242443ff9f6f82 files/digest-claws-mail-pdf-viewer-0.6 244
 SHA256 f1b664eaf6b5e85b130c1bbf946a76d990c0c698bc4f8e8d3d10f6a930199d87 files/digest-claws-mail-pdf-viewer-0.6 244
+MD5 c08e04784b24d63c7514e062a09a3081 files/digest-claws-mail-pdf-viewer-0.7 244
+RMD160 57a41bc3ab71f39f3b24287cc8ac4c99744a763b files/digest-claws-mail-pdf-viewer-0.7 244
+SHA256 03b84ebf4a4a3c21121b15ca804a03997b4691a0bc7ddeaaedb62a75c262da27 files/digest-claws-mail-pdf-viewer-0.7 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (GNU/Linux)
+
+iD8DBQFHT0OsQlM6RnzZP+IRAjYyAKCL0va7NgwJ4rYTMdvJ9kl8Z4sqSACgsqDF
+dwabp9mzAjN1U1azcwI+cho=
+=v6Vn
+-----END PGP SIGNATURE-----

@@ -1,82 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST acpi_notifier-1.0.10.tar.gz 408863 RMD160 02f02d4c601756351a67107ecdf1faade75385fb SHA1 07942773ac59b8a0d284e03fbb904c897ff2abc8 SHA256 9bb0a2530772cde05b6394699bac18cdf638b49facb2628afc189ba17cb1bb8c
-DIST acpi_notifier-1.0.11.tar.gz 409404 RMD160 6dfd30eceee6e57d2598ec578d06045b5359c6b1 SHA1 5a7d116717efc358aa4375dc88e62e1e4e8055cb SHA256 612e6427c67e320d7f0128a14459d736cddcea35bcf75517b79b5495b6b15c26
 DIST acpi_notifier-1.0.12.tar.gz 412624 RMD160 eba4a4cc68eb65eaaa9cf3e7c0923b7a35883c91 SHA1 9fcb6d59ba6ba4b25eaa6c1cdcf52927ee948614 SHA256 71ed07fe0d643b67a75c61c7abaedf7c218155c0614a01a543caf136da15d6d2
-DIST acpi_notifier-1.0.5.tar.gz 402641 RMD160 287334aed059fbe1151c4c743994ce5e57ed91c9 SHA1 4f22dee123ea49f4595e79adbc18a00d1ae6b253 SHA256 892d21c9274b512d601b408f15acd8b9f450b7071f588f118872c872248adb15
-DIST acpi_notifier-1.0.6.tar.gz 402589 RMD160 39a3c243c8ad4dfba6eafc4575b992c45c645ed3 SHA1 0ef1378a1477c8679f1c924c9b05e11290325eb2 SHA256 84f138d4f927b837f588c58f62e982aff21fac365fbb57b57c429bc024bb9a94
-DIST acpi_notifier-1.0.7.tar.gz 402231 RMD160 c15b5e2f6ed7ffd66c0d55c526db45349594c531 SHA1 0665ca70c03d4f657139f3774969da5a7491987f SHA256 90d2630008163b26e980ee97cb70a63b65d3b2fcd25cef23adaed2880a79c8f9
-DIST acpi_notifier-1.0.8.tar.gz 407244 RMD160 c5baac5e56234c8f467b4edacccdd63bd0c7604e SHA1 b81b77cabed7f1f0d4dd29e6b648a6446a9ac8cb SHA256 5a060ee974a8b81ffd8d94f32c34dffccce9842d117617a2878cb093755cd241
-DIST acpi_notifier-1.0.9.tar.gz 408480 RMD160 42b88d90317f30a3687f54d72bb1f190d0f055bf SHA1 10934ff03099007779d70ede129edaa783ae8982 SHA256 c602543e8aef02d747920818e8cdaf04a89ba9715cbb3a06a2f4c07f4dd35f4b
-EBUILD claws-mail-acpi-notifier-1.0.10.ebuild 1103 RMD160 2378916afe948d66ee7f1ce45ab5c14a71521255 SHA1 18e80261dad3baae93cdb7a0cce5ef49bf07c531 SHA256 6fdeacfddc29ee0cdab97f26b2b12eb1b2279f12adf0bdce52faecddb93615ea
-MD5 0ed286a8b5102129605e9a60a9ab4fe7 claws-mail-acpi-notifier-1.0.10.ebuild 1103
-RMD160 2378916afe948d66ee7f1ce45ab5c14a71521255 claws-mail-acpi-notifier-1.0.10.ebuild 1103
-SHA256 6fdeacfddc29ee0cdab97f26b2b12eb1b2279f12adf0bdce52faecddb93615ea claws-mail-acpi-notifier-1.0.10.ebuild 1103
-EBUILD claws-mail-acpi-notifier-1.0.11.ebuild 1104 RMD160 2b45c96cfa3089789475a0eca2660fbad79020be SHA1 6ad232043cf1f101b575b0b224f6c51184f552f6 SHA256 a0cbb0728425e7bafd0fe32da3e22acf7c6436e8fc0b1edf79aad2f213ec6324
-MD5 03cc654563ee2f55a1a66162aace3b17 claws-mail-acpi-notifier-1.0.11.ebuild 1104
-RMD160 2b45c96cfa3089789475a0eca2660fbad79020be claws-mail-acpi-notifier-1.0.11.ebuild 1104
-SHA256 a0cbb0728425e7bafd0fe32da3e22acf7c6436e8fc0b1edf79aad2f213ec6324 claws-mail-acpi-notifier-1.0.11.ebuild 1104
-EBUILD claws-mail-acpi-notifier-1.0.12.ebuild 1102 RMD160 ef4110dc4e6f9d28e5c07fc86d3f1f81195b792e SHA1 bc8a684cf9b7f5d112b6b3e4da5b526b5fbb4532 SHA256 30140189af343a683249007f1b8c2d77270e5d2a9757e95e3cbd339516bc9a6a
-MD5 47cd8823d5da9193b375e0cff6387f00 claws-mail-acpi-notifier-1.0.12.ebuild 1102
-RMD160 ef4110dc4e6f9d28e5c07fc86d3f1f81195b792e claws-mail-acpi-notifier-1.0.12.ebuild 1102
-SHA256 30140189af343a683249007f1b8c2d77270e5d2a9757e95e3cbd339516bc9a6a claws-mail-acpi-notifier-1.0.12.ebuild 1102
-EBUILD claws-mail-acpi-notifier-1.0.5.ebuild 1101 RMD160 5d8e472325c96d3f3e5052a1b0fa56310ce65bf4 SHA1 66cbf642ec9af941645a37a638d75b075d688464 SHA256 4555fad81134402cf8bfaff91c62966333112dfc2babbc95f90b6b7e4b1c68ac
-MD5 c99a246dc2c16919a3a6cbe5086dbae1 claws-mail-acpi-notifier-1.0.5.ebuild 1101
-RMD160 5d8e472325c96d3f3e5052a1b0fa56310ce65bf4 claws-mail-acpi-notifier-1.0.5.ebuild 1101
-SHA256 4555fad81134402cf8bfaff91c62966333112dfc2babbc95f90b6b7e4b1c68ac claws-mail-acpi-notifier-1.0.5.ebuild 1101
-EBUILD claws-mail-acpi-notifier-1.0.6.ebuild 1102 RMD160 8f72609a652e02840ec232f2c9674100dde2cdf0 SHA1 c5da5363245342383279764e00587b452c9c43a8 SHA256 45e203fda590ba198af61fcf1c6f93cf231950789b859ec5bfa142e568bab93f
-MD5 e9e1674a0b2a74ece62c7f79e76eb17d claws-mail-acpi-notifier-1.0.6.ebuild 1102
-RMD160 8f72609a652e02840ec232f2c9674100dde2cdf0 claws-mail-acpi-notifier-1.0.6.ebuild 1102
-SHA256 45e203fda590ba198af61fcf1c6f93cf231950789b859ec5bfa142e568bab93f claws-mail-acpi-notifier-1.0.6.ebuild 1102
-EBUILD claws-mail-acpi-notifier-1.0.7.ebuild 1102 RMD160 ca67713cf96c0465fe1fd6cfbc2ffe4688733711 SHA1 610ca251f3f398dc7f7b069f4786513e9732be3e SHA256 817c1b328eb9dc2d7e856159a8238d0a8fa12ca6631f8d85656244e030b1c60c
-MD5 fbc5fd4ad54310604c9a4e04a9600e6c claws-mail-acpi-notifier-1.0.7.ebuild 1102
-RMD160 ca67713cf96c0465fe1fd6cfbc2ffe4688733711 claws-mail-acpi-notifier-1.0.7.ebuild 1102
-SHA256 817c1b328eb9dc2d7e856159a8238d0a8fa12ca6631f8d85656244e030b1c60c claws-mail-acpi-notifier-1.0.7.ebuild 1102
-EBUILD claws-mail-acpi-notifier-1.0.8.ebuild 1102 RMD160 7b362080b52ee0fd9a2968f1014fbfbb346360dc SHA1 f249ed9c522892beae1325c450e8aa2a811fa45b SHA256 99fc62365fd6a88ebb4df3f5f970b9965a4625536a0752097e3b5bef391fe28f
-MD5 0d2cfebaa674578d8fd10c8c9de7f135 claws-mail-acpi-notifier-1.0.8.ebuild 1102
-RMD160 7b362080b52ee0fd9a2968f1014fbfbb346360dc claws-mail-acpi-notifier-1.0.8.ebuild 1102
-SHA256 99fc62365fd6a88ebb4df3f5f970b9965a4625536a0752097e3b5bef391fe28f claws-mail-acpi-notifier-1.0.8.ebuild 1102
-EBUILD claws-mail-acpi-notifier-1.0.9.ebuild 1102 RMD160 05097a89cc56fb91c838194aa707c15768785201 SHA1 0c14e5fcb77931548dd6b066cb58a3cfe8cea261 SHA256 1de437e76fa111471f60d049d074d074457b804542082ea3ac2edd3252dbcb02
-MD5 5d7ca5577a6c80f269c3687f66619699 claws-mail-acpi-notifier-1.0.9.ebuild 1102
-RMD160 05097a89cc56fb91c838194aa707c15768785201 claws-mail-acpi-notifier-1.0.9.ebuild 1102
-SHA256 1de437e76fa111471f60d049d074d074457b804542082ea3ac2edd3252dbcb02 claws-mail-acpi-notifier-1.0.9.ebuild 1102
-MISC ChangeLog 1789 RMD160 b829ef3ee44fc07abbc6cd2242bcb6f960b3aaac SHA1 6d5b9c90943457bac460b69642e2f0d804489d4f SHA256 4e4fbbf8d99648ae301e642e9217da19adba738252373bdfa687b86b520c2fa6
-MD5 5dcd1a5c36fbd06fed7f524ef28a8adf ChangeLog 1789
-RMD160 b829ef3ee44fc07abbc6cd2242bcb6f960b3aaac ChangeLog 1789
-SHA256 4e4fbbf8d99648ae301e642e9217da19adba738252373bdfa687b86b520c2fa6 ChangeLog 1789
+DIST acpi_notifier-1.0.13.tar.gz 412555 RMD160 40659307123224279db8487e598beea911d937a7 SHA1 e3a04ec85b5fc9709ac56477be22249a3eba2839 SHA256 74403d434a8cbe1a19830bba65d6e7d7118e8e330d9bbee9f28fc01c6ccb6ea6
+EBUILD claws-mail-acpi-notifier-1.0.12.ebuild 1105 RMD160 f7d618b5a4d303996327933f4b9d9d6b08073533 SHA1 e17a314fe5fcce7bbf10b9f202144e4d549b1738 SHA256 1ed997df081cd4b97e4480b3f858d0dea87a543e82940fc42ed11aecf7e71fe0
+MD5 a486455aac7aeb4e6864e4837dd84c3b claws-mail-acpi-notifier-1.0.12.ebuild 1105
+RMD160 f7d618b5a4d303996327933f4b9d9d6b08073533 claws-mail-acpi-notifier-1.0.12.ebuild 1105
+SHA256 1ed997df081cd4b97e4480b3f858d0dea87a543e82940fc42ed11aecf7e71fe0 claws-mail-acpi-notifier-1.0.12.ebuild 1105
+EBUILD claws-mail-acpi-notifier-1.0.13.ebuild 1106 RMD160 2f1de1b54cf808c50544ca0978cd592a0c904e65 SHA1 738b32a35c87f509f05dcc1df91adafa1dbee120 SHA256 0454f7b9c000cbba5def56b64c744fa06604f0c69762a632565f48a80dd9a13a
+MD5 804cc6764e86b10eed3cf9d419747274 claws-mail-acpi-notifier-1.0.13.ebuild 1106
+RMD160 2f1de1b54cf808c50544ca0978cd592a0c904e65 claws-mail-acpi-notifier-1.0.13.ebuild 1106
+SHA256 0454f7b9c000cbba5def56b64c744fa06604f0c69762a632565f48a80dd9a13a claws-mail-acpi-notifier-1.0.13.ebuild 1106
+MISC ChangeLog 2257 RMD160 e35b2c14bc5ff0bec7017f513c63605dce0a1472 SHA1 44ce499868f1a4a4b29a5b60e91b860e26905539 SHA256 13f65a0685df71d1e7ec4021f45763c2102b406296c7bcfffdc773ff68724b2a
+MD5 9e8a20e1c715d0f92801a343b62cdd76 ChangeLog 2257
+RMD160 e35b2c14bc5ff0bec7017f513c63605dce0a1472 ChangeLog 2257
+SHA256 13f65a0685df71d1e7ec4021f45763c2102b406296c7bcfffdc773ff68724b2a ChangeLog 2257
 MISC metadata.xml 282 RMD160 1d03f1568fddc66e17cf5682b1a15c726504f11e SHA1 96f90f3697c0650e0da34123668cdf39534e6e43 SHA256 148041720f922c4238c1c22d9e92d7438e1126b8875765f470e0d5b3914313c3
 MD5 61bc32b1f15be05122b2d7989e02aec0 metadata.xml 282
 RMD160 1d03f1568fddc66e17cf5682b1a15c726504f11e metadata.xml 282
 SHA256 148041720f922c4238c1c22d9e92d7438e1126b8875765f470e0d5b3914313c3 metadata.xml 282
-MD5 869002937611a6df3acdd5eb310f0373 files/digest-claws-mail-acpi-notifier-1.0.10 262
-RMD160 afbcb1d4b5433ac90bd21258b1c1e8ee0752eb58 files/digest-claws-mail-acpi-notifier-1.0.10 262
-SHA256 399746d568cae71f32df5ff2cb487fffb45bae4d12e5bd36855823a7bb07447c files/digest-claws-mail-acpi-notifier-1.0.10 262
-MD5 eadc4dbf3b1aaf16f3bd5e172039dd37 files/digest-claws-mail-acpi-notifier-1.0.11 262
-RMD160 a575a21a9c001844d4996dc6762b0c5a47c52589 files/digest-claws-mail-acpi-notifier-1.0.11 262
-SHA256 13222fa38519d41e3de0c069e59934e3d21e40badf87c7ad4406f77c98d65e12 files/digest-claws-mail-acpi-notifier-1.0.11 262
 MD5 b5edd46b5d5d0f954dab98709e773a4e files/digest-claws-mail-acpi-notifier-1.0.12 262
 RMD160 fe24f12954167925628114cc23e99949acf9df56 files/digest-claws-mail-acpi-notifier-1.0.12 262
 SHA256 98135bc19bb27c8e6a9c94f74117aa307c9fe83fe9319891a42bd697ea7cf6b6 files/digest-claws-mail-acpi-notifier-1.0.12 262
-MD5 40ef589168eec9bf968f32f5dffd6198 files/digest-claws-mail-acpi-notifier-1.0.5 259
-RMD160 e716f981b9e5ded2d2a0bb1e8efb25b5abce1363 files/digest-claws-mail-acpi-notifier-1.0.5 259
-SHA256 e6d37fcb551e4e792b6db80b0d4a060507323d749c37c9ae48ad40a5f2c5f26c files/digest-claws-mail-acpi-notifier-1.0.5 259
-MD5 61c7ac76fb24454c27e688272ae6eb2e files/digest-claws-mail-acpi-notifier-1.0.6 259
-RMD160 435b27eaf636730f5443530ee5ec63ed88044a59 files/digest-claws-mail-acpi-notifier-1.0.6 259
-SHA256 041eaa86deed649aaac17b2f6e902df740cdf9de4e1b9ebfacae1f5b82acf06d files/digest-claws-mail-acpi-notifier-1.0.6 259
-MD5 e35e897767873524949db1532646721d files/digest-claws-mail-acpi-notifier-1.0.7 259
-RMD160 b56c7d674bd5e15e9562888dbfa5a59f2a86b5b9 files/digest-claws-mail-acpi-notifier-1.0.7 259
-SHA256 ed3662303b9b245a90eefbc5d661bc7661e673eb1679c648e5dd9e87978be3c3 files/digest-claws-mail-acpi-notifier-1.0.7 259
-MD5 debf7d0b6bc1245612fa74aec2c934fe files/digest-claws-mail-acpi-notifier-1.0.8 259
-RMD160 6eb5045f742f74eb930425bd516bf599f3dad7ff files/digest-claws-mail-acpi-notifier-1.0.8 259
-SHA256 2c9146cfd3fae36998825a042dbb62034705915c1913f7e7ec4dea188cc09df4 files/digest-claws-mail-acpi-notifier-1.0.8 259
-MD5 645c8a37a139a29873fe739a8497a7e9 files/digest-claws-mail-acpi-notifier-1.0.9 259
-RMD160 9e7c5ee8ce6e5667305369353a51b292d0dc0366 files/digest-claws-mail-acpi-notifier-1.0.9 259
-SHA256 df038b0c29378a62ae2f1c59572f8a64fbced52a7e3f9357a9d9e9fa2904f9f9 files/digest-claws-mail-acpi-notifier-1.0.9 259
+MD5 c9e6758ae11b3f0b9af469127bf9c53f files/digest-claws-mail-acpi-notifier-1.0.13 262
+RMD160 38673a29960f44686a6904b3662ca452f2779abc files/digest-claws-mail-acpi-notifier-1.0.13 262
+SHA256 a0cd800ffbcab89b9a254dcbb0090ba6406dff6470990bbdc66d9f1c95deb3df files/digest-claws-mail-acpi-notifier-1.0.13 262
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.7 (GNU/Linux)
 
-iD8DBQFG6X/rNQqtfCuFneMRAr1vAJ47TShVHELki2LKGQNT5rBMkWuPzQCglB+k
-hIeNkm9fdtuvYd/SvmrzcdM=
-=+5m8
+iD8DBQFHTz99QlM6RnzZP+IRAgjdAJ9KRCPCvbVlPkOYFVMC4WsB4Ydz4ACfbREe
+X94Xllvkj+XKVlZ/dY/jXes=
+=AkwT
 -----END PGP SIGNATURE-----
