@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.1.ebuild,v 1.1 2007/11/28 23:28:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.1.ebuild,v 1.2 2007/11/29 23:13:41 mr_bones_ Exp $
 
 NEED_PYTHON=2.5
 
@@ -33,7 +33,7 @@ RDEPEND=">=x11-libs/qwt-5.0.2
 
 DEPEND="${RDEPEND}
 	python? ( >=dev-python/sip-4.5.2 )
-	doc? ( lingias_es? ( app-arch/unzip ) )"
+	doc? ( linguas_es? ( app-arch/unzip ) )"
 
 QT4_BUILT_WITH_USE_CHECK="qt3support"
 
