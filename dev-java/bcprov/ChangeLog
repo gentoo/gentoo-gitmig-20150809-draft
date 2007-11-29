@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/bcprov
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.25 2007/10/15 14:08:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.26 2007/11/29 16:16:35 wltjr Exp $
+
+*bcprov-1.38 (29 Nov 2007)
+
+  29 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +bcprov-1.38.ebuild:
+  Bumped to latest release
 
   15 Oct 2007; Markus Rothe <corsair@gentoo.org> bcprov-1.37.ebuild:
   Stable on ppc64
