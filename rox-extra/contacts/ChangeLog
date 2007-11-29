@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/contacts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/contacts/ChangeLog,v 1.9 2007/11/16 15:06:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/contacts/ChangeLog,v 1.10 2007/11/29 16:02:50 lack Exp $
+
+  29 Nov 2007; Jim Ramsay <lack@gentoo.org> -contacts-0.8.3.ebuild:
+  Version cleanup
 
   16 Nov 2007; Samuli Suominen <drac@gentoo.org> contacts-0.8.3-r1.ebuild:
   amd64 stable wrt #197514

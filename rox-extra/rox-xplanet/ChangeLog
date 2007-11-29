@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/rox-xplanet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/rox-xplanet/ChangeLog,v 1.7 2007/11/16 15:16:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/rox-xplanet/ChangeLog,v 1.8 2007/11/29 15:55:50 lack Exp $
+
+  29 Nov 2007; Jim Ramsay <lack@gentoo.org> -rox-xplanet-0.0.1.ebuild:
+  Version cleanup
 
   16 Nov 2007; Samuli Suominen <drac@gentoo.org> rox-xplanet-0.0.2.ebuild:
   amd64 stable wrt #197514
