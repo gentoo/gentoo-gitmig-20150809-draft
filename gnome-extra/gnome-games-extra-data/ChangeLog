@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games-extra-data
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.48 2007/11/26 14:09:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.49 2007/11/29 06:03:58 jer Exp $
+
+  29 Nov 2007; Jeroen Roovers <jer@gentoo.org>
+  gnome-games-extra-data-2.20.0.ebuild:
+  Stable for HPPA (bug #199740).
 
   26 Nov 2007; Markus Rothe <corsair@gentoo.org>
   gnome-games-extra-data-2.20.0.ebuild:

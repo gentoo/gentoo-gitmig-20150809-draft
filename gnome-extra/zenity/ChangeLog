@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.140 2007/11/26 14:25:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.141 2007/11/29 06:18:04 jer Exp $
+
+  29 Nov 2007; Jeroen Roovers <jer@gentoo.org> zenity-2.20.0.ebuild:
+  Stable for HPPA (bug #199740).
 
   26 Nov 2007; Markus Rothe <corsair@gentoo.org> zenity-2.20.0.ebuild:
   Stable on ppc64; bug #199740
