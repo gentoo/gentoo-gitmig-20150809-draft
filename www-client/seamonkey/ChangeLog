@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.101 2007/11/23 17:33:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.102 2007/11/29 16:47:38 armin76 Exp $
+
+  29 Nov 2007; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.6.ebuild:
+  Bump patchset to fix bug #180870
 
   23 Nov 2007; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.6.ebuild:
   Add ~sparc
