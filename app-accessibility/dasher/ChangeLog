@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.120 2007/11/26 13:43:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.121 2007/11/29 05:01:46 jer Exp $
+
+  29 Nov 2007; Jeroen Roovers <jer@gentoo.org>
+  +files/dasher-4.6.1-lldiv.patch, dasher-4.6.1.ebuild:
+  Fixing bug #200659 and stable for HPPA (bug #199740).
 
   26 Nov 2007; Markus Rothe <corsair@gentoo.org> dasher-4.6.1.ebuild:
   Stable on ppc64; bug #199740

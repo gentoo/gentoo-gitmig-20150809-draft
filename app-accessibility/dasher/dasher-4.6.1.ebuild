@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.6.1.ebuild,v 1.8 2007/11/26 13:43:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.6.1.ebuild,v 1.9 2007/11/29 05:01:46 jer Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.8"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 IUSE="accessibility cairo gnome"
 
@@ -76,6 +76,9 @@ src_unpack() {
 
 	# Fix compilation with gcc-4
 	epatch "${FILESDIR}/${PN}-4.5.2-gcc4-speech-fix.patch"
+
+	# Fix compilation with glibc-2.5
+	epatch "${FILESDIR}/${P}-lldiv.patch"
 
 	cp aclocal.m4 old-macros.m4
 	AT_M4DIR="." eautoreconf
