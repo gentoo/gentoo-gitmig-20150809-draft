@@ -185,6 +185,8 @@ java-internal
 # No reliable java, no netbeans. bug 66762
 netbeans
 
+# 29 Nov 2007 Jeroen Roovers <jer@gentoo.org>
+# I tested it. It still sucks. :)
 # 19 Mar 2003 Guy Martin <gmsoft@gentoo.org>
 # acl not tested yet
 acl
