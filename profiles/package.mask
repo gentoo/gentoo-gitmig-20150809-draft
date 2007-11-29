@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7953 2007/11/28 21:30:34 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7954 2007/11/29 19:39:22 peper Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -43,6 +43,7 @@
 # opensync svn ebuilds
 =app-pda/libsyncml-9999
 =app-pda/libopensync-9999
+=app-pda/msynctool-9999
 =app-pda/libopensync-plugin-evolution2-9999
 =app-pda/libopensync-plugin-file-9999
 =app-pda/libopensync-plugin-gnokii-9999
