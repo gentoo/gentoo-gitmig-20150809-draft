@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/libopensync-plugin-vformat
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-vformat/ChangeLog,v 1.1 2007/11/29 21:42:50 peper Exp $
+
+*libopensync-plugin-vformat-9999 (29 Nov 2007)
+
+  29 Nov 2007; Piotr Jaroszyński <peper@gentoo.org> +metadata.xml,
+  +libopensync-plugin-vformat-9999.ebuild:
+  Add live svn ebuild. Thanks to Elias Probst <mail@eliasprobst.eu>.
+
