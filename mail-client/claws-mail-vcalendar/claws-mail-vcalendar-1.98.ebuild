@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/claws-mail-vcalendar-1.98.ebuild,v 1.1 2007/09/18 09:17:05 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/claws-mail-vcalendar-1.98.ebuild,v 1.2 2007/11/29 23:11:45 ticho Exp $
 
 inherit eutils
 
@@ -23,8 +23,8 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README
 
 	# kill useless files
-	rm -f ${D}/usr/lib*/claws-mail/plugins/*.{a,la}
+	rm -f "${D}"/usr/lib*/claws-mail/plugins/*.{a,la}
 
 	# going to conflict with libical
-	rm -f ${D}/usr/include/ical.h
+	rm -f "${D}"/usr/include/ical.h
 }
