@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7957 2007/11/29 22:19:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7958 2007/11/29 23:17:13 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,21 +20,6 @@
 ##
 ##   End example
 ##
-
-# Andrej Kacian <ticho@gentoo.org> (29 Nov 2007)
-# Masked temporarily, until new plugins are in the tree
-=mail-client/claws-mail-3.1.0
-=mail-client/claws-mail-acpi-notifier-1.0.13
-=mail-client/claws-mail-attachwarner-0.2.9
-=mail-client/claws-mail-fetchinfo-0.4.21
-=mail-client/claws-mail-gtkhtml-0.16
-=mail-client/claws-mail-notification-0.13
-=mail-client/claws-mail-pdf-viewer-0.7
-=mail-client/claws-mail-perl-0.9.11
-=mail-client/claws-mail-rssyl-0.16
-=mail-client/claws-mail-smime-0.7.3
-mail-client/claws-mail-tnef
-=mail-client/claws-mail-vcalendar-1.99
 
 # Alon Bar-Lev <alonbl@gentoo.org> (28 Nov 2007)
 # Masked for testing, bug#200367
