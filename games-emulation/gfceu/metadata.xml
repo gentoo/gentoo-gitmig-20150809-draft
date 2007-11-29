@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>games</herd>
+<longdescription lang="en">
+GFCE Ultra is a GTK frontend for the FCE Ultra Nintendo Entertainment System
+emulator. It allows users to easily play NES ROM files on their PC.
+</longdescription>
+</pkgmetadata>

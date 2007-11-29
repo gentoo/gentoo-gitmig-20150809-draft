@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/gfceu
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceu/ChangeLog,v 1.1 2007/11/29 20:01:19 tupone Exp $
+
+*gfceu-0.6.0 (29 Nov 2007)
+
+  29 Nov 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/gfceu-0.6.0-gentoo.patch, +metadata.xml, +gfceu-0.6.0.ebuild:
+  New ebuild. Bug #200553 by Michael de la Fuente
+

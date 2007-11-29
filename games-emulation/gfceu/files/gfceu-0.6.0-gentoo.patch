@@ -1,0 +1,18 @@
+--- gfceu.old	2007-11-29 20:01:21.000000000 +0100
++++ gfceu	2007-11-29 20:04:32.000000000 +0100
+@@ -495,13 +495,8 @@
+ class WidgetsWrapper:
+   def __init__(self):
+     # Search for the glade file
+-    # Check first in the directory of this script.
+-    if os.path.isfile(os.path.dirname(sys.argv[0])+'/gfceu.glade'):
+-      glade_file = os.path.dirname(sys.argv[0])+'/gfceu.glade'
+-    # Then check in the share directory (installed)
+-    elif os.path.isfile(os.path.dirname(sys.argv[0]) +\
+-    '/../share/gfceu/gfceu.glade'):
+-      glade_file = os.path.dirname(sys.argv[0])+'/../share/gfceu/gfceu.glade'
++    if os.path.isfile('@GENTOO_DATADIR@/gfceu/gfceu.glade'):
++      glade_file = '@GENTOO_DATADIR@/gfceu/gfceu.glade'
+     else:
+       print 'ERROR.'
+       print 'Could not find the glade interface file.'
