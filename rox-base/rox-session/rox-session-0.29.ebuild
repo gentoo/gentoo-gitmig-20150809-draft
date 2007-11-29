@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.29.ebuild,v 1.6 2007/07/13 06:15:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.29.ebuild,v 1.7 2007/11/29 15:20:44 lack Exp $
 
 ROX_LIB_VER="2.0.0"
 inherit eutils rox
@@ -21,7 +21,7 @@ APPNAME=${MY_PN}
 
 pkg_preinst() {
 	# need to fixup some permissions
-	cd ${D}/usr/lib/rox/${APPNAME}
+	cd "${D}/usr/lib/rox/${APPNAME}"
 	chmod 0755 browser Login RunROX SetupPanel
 }
 
