@@ -1,18 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6-r4.ebuild,v 1.1 2007/11/28 13:26:23 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6-r4.ebuild,v 1.2 2007/11/29 18:45:39 hollow Exp $
 
 # latest gentoo apache files
 GENTOO_PATCHSTAMP="20071128"
 GENTOO_DEVELOPER="hollow"
-
-DESCRIPTION="The Apache Web Server."
-HOMEPAGE="http://httpd.apache.org/"
-
-# some helper scripts are apache-1.1, thus both are here
-LICENSE="Apache-2.0 Apache-1.1"
-SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 # IUSE/USE_EXPAND magic
 IUSE_MPMS_FORK="itk peruser prefork"
@@ -32,6 +24,7 @@ status unique_id userdir usertrack version vhost_alias"
 MODULE_DEPENDS="
 	dav_fs:dav
 	dav_lock:dav
+	deflate:filter
 	disk_cache:cache
 	ext_filter:filter
 	file_cache:cache
@@ -72,6 +65,14 @@ MODULE_DEFINES="
 "
 
 inherit apache-2
+
+DESCRIPTION="The Apache Web Server."
+HOMEPAGE="http://httpd.apache.org/"
+
+# some helper scripts are apache-1.1, thus both are here
+LICENSE="Apache-2.0 Apache-1.1"
+SLOT="2"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 DEPEND="${DEPEND}
 	apache2_modules_deflate? ( sys-libs/zlib )"
