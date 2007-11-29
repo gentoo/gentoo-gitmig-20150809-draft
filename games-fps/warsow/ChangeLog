@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.11 2007/11/28 19:12:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.12 2007/11/29 08:10:51 opfer Exp $
+
+  29 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  warsow-0.3.2-r1.ebuild:
+  stable x86, bug 200610
 
   28 Nov 2007; Christoph Mende <angelos@gentoo.org> warsow-0.3.2-r1.ebuild:
   Stable on amd64 wrt bug #200610
