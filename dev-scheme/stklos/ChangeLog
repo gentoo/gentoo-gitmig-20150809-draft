@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/stklos
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/ChangeLog,v 1.5 2007/11/28 17:59:26 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/ChangeLog,v 1.6 2007/11/29 07:15:27 opfer Exp $
+
+  29 Nov 2007; Christian Faulhammer <opfer@gentoo.org> stklos-0.96.ebuild:
+  keywording ~x86, bug 200696
 
 *stklos-0.96 (28 Nov 2007)
 
