@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.96 2007/11/20 05:35:19 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.97 2007/11/29 07:51:02 opfer Exp $
+
+  29 Nov 2007; Christian Faulhammer <opfer@gentoo.org> PyQt-3.17.3.ebuild:
+  stable x86, bug 200630
 
   20 Nov 2007; Ali Polatel <hawking@gentoo.org> PyQt-3.14.1-r1.ebuild,
   PyQt-3.14.1-r2.ebuild, PyQt-3.17.ebuild, PyQt-3.17.2.ebuild,
