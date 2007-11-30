@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/iverilog
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.19 2007/04/01 11:48:03 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.20 2007/11/30 09:11:22 calchan Exp $
+
+*iverilog-0.8.6 (30 Nov 2007)
+
+  30 Nov 2007; Denis Dupeyron <calchan@gentoo.org> +iverilog-0.8.6.ebuild:
+  Version bump.
 
 *iverilog-0.8.4 (01 Apr 2007)
 
