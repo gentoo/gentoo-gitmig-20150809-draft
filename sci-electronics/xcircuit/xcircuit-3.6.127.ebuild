@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.6.109.ebuild,v 1.1 2007/07/23 19:24:35 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.6.127.ebuild,v 1.1 2007/11/30 21:32:10 calchan Exp $
 
 DESCRIPTION="Circuit drawing and schematic capture program."
 SRC_URI="http://opencircuitdesign.com/xcircuit/archive/${P}.tgz"
@@ -17,9 +17,7 @@ RESTRICT="test"
 
 DEPEND="virtual/ghostscript
 	dev-lang/tk
-	|| ( x11-libs/libXt
-	     virtual/x11
-	)"
+	x11-libs/libXt"
 
 src_compile() {
 	econf \
@@ -31,11 +29,11 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die "Installation failed"
+	make DESTDIR="${D}" install || die "Installation failed"
 	dodoc CHANGES README* TODO
 
-	doman ${D}/usr/lib/xcircuit-3.6/man/xcircuit.1
-	rm ${D}/usr/lib/xcircuit-3.6/man -rf
+	doman "${D}"/usr/lib/xcircuit-3.6/man/xcircuit.1
+	rm "${D}"/usr/lib/xcircuit-3.6/man -rf
 }
 
 src_postinst() {
