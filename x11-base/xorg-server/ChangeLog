@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.302 2007/11/29 18:44:02 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.303 2007/11/30 06:29:48 dberkholz Exp $
+
+  30 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.4-r2.ebuild:
+  (#200731) Forgot to remove the blocker for ati-drivers (Sascha Beck).
 
   29 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.4-r2.ebuild:
