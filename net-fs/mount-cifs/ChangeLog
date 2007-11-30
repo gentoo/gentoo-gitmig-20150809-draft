@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/mount-cifs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/ChangeLog,v 1.1 2007/09/07 20:42:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/ChangeLog,v 1.2 2007/11/30 21:39:34 beandog Exp $
+
+  30 Nov 2007; Steve Dibb <beandog@gentoo.org> mount-cifs-3.0.25c.ebuild:
+  amd64 stable, bug 200837
 
 *mount-cifs-3.0.25c (07 Sep 2007)
 
