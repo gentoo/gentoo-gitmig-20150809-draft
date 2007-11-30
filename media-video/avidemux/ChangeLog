@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.116 2007/11/27 11:57:23 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.117 2007/11/30 20:46:24 drac Exp $
+
+*avidemux-2.4_pre3 (30 Nov 2007)
+
+  30 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +files/avidemux-2.4_pre3-libdca.patch, +avidemux-2.4_pre3.ebuild:
+  Version bump, ebuild from /dev/null but thanks to yngwin for original ebuild
+  at berkano overlay and Ingmar from #genkdesvn for helping with cmake utils.
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> avidemux-2.3.0.ebuild:
   Fixed quoting.

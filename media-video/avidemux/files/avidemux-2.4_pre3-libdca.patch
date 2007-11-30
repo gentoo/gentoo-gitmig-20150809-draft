@@ -1,0 +1,24 @@
+diff -ur avidemux_2.4_preview3.orig/ConfigureChecks.cmake avidemux_2.4_preview3/ConfigureChecks.cmake
+--- avidemux_2.4_preview3.orig/ConfigureChecks.cmake	2007-11-10 15:44:58.000000000 +0200
++++ avidemux_2.4_preview3/ConfigureChecks.cmake	2007-11-30 22:28:27.000000000 +0200
+@@ -405,7 +405,7 @@
+ IF (USE_LATE_BINDING)
+ 	CHECK_INCLUDE_FILES(dts.h USE_LIBDCA)
+ ELSE (USE_LATE_BINDING)
+-	ADM_CHECK_HL(libdca dts.h dts dts_init USE_LIBDCA)
++	ADM_CHECK_HL(libdca dts.h dca dca_init USE_LIBDCA)
+ ENDIF (USE_LATE_BINDING)
+ 
+ SET(CMAKE_REQUIRED_LIBRARIES)
+diff -ur avidemux_2.4_preview3.orig/avidemux/CMakeLists.txt avidemux_2.4_preview3/avidemux/CMakeLists.txt
+--- avidemux_2.4_preview3.orig/avidemux/CMakeLists.txt	2007-11-09 18:34:00.000000000 +0200
++++ avidemux_2.4_preview3/avidemux/CMakeLists.txt	2007-11-30 22:17:20.000000000 +0200
+@@ -326,7 +326,7 @@
+ 
+ #libdts
+ if(USE_LIBDCA AND NOT USE_LATE_BINDING)
+-	add_libs_all_targets(dts)
++	add_libs_all_targets(dca)
+ endif(USE_LIBDCA AND NOT USE_LATE_BINDING)
+ 
+ # Lame
