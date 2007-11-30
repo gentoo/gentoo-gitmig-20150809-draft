@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.9.ebuild,v 1.4 2007/05/12 09:15:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.9.ebuild,v 1.5 2007/11/30 19:47:49 tupone Exp $
 
 inherit eutils games
 
@@ -43,9 +43,11 @@ RDEPEND="readline? ( sys-libs/readline )
 	)"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	!dedicated? ( gtk? ( dev-util/pkgconfig ) )
-	x11-proto/xextproto
-	media-libs/libpng"
+	!dedicated? (
+		gtk? ( dev-util/pkgconfig )
+		x11-proto/xextproto
+		media-libs/libpng
+	)"
 
 S=${WORKDIR}/${MY_P}
 

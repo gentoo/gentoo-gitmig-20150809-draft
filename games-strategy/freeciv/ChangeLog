@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.64 2007/11/29 07:26:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.65 2007/11/30 19:47:49 tupone Exp $
+
+  30 Nov 2007; Tupone Alfredo <tupone@gentoo.org> freeciv-2.0.9.ebuild,
+  freeciv-2.1.1.ebuild:
+  Removing unneeded dependency when dedicated. Bug #200840 by Luke-Jr
 
 *freeciv-2.1.1 (29 Nov 2007)
 
