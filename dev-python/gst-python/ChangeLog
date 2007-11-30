@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.31 2007/11/28 16:26:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.32 2007/11/30 21:35:44 drac Exp $
+
+  30 Nov 2007; Samuli Suominen <drac@gentoo.org> gst-python-0.10.9.ebuild:
+  Remove xmlto dep. since it's not used.
 
 *gst-python-0.10.9 (28 Nov 2007)
 

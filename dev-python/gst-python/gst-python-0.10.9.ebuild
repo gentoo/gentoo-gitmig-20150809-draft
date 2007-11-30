@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.9.ebuild,v 1.1 2007/11/28 16:26:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.9.ebuild,v 1.2 2007/11/30 21:35:44 drac Exp $
 
 NEED_PYTHON=2.3
 
@@ -23,8 +23,7 @@ RDEPEND=">=dev-python/pygtk-2.6.3
 	>=media-libs/gst-plugins-base-0.10.0.2
 	dev-libs/libxml2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	doc? ( app-text/xmlto )"
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
