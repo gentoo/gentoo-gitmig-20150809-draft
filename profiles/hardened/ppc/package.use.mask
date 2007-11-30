@@ -19,5 +19,5 @@ media-gfx/gthumb iptc
 =sys-libs/pam-0.99* test
 
 # Samuli Suominen <drac@gentoo.org> (30 Nov 2007)
-# # media-libs/aften broken, and not keyworded.
+# media-libs/aften broken, and not keyworded.
 media-video/avidemux aften
