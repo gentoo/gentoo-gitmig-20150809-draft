@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.112 2007/11/18 09:28:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.113 2007/11/30 15:45:30 drac Exp $
+
+  30 Nov 2007; Samuli Suominen <drac@gentoo.org> xfce4-4.4.2.ebuild:
+  Allow usage of gnome-screensaver instead of xscreensaver too.
 
 *xfce4-4.4.2 (18 Nov 2007)
 
