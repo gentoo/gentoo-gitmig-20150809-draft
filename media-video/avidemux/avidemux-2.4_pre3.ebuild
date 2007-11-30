@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4_pre3.ebuild,v 1.1 2007/11/30 20:46:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4_pre3.ebuild,v 1.2 2007/11/30 20:50:17 drac Exp $
 
 inherit cmake-utils eutils
 
@@ -57,7 +57,7 @@ src_unpack() {
 
 src_compile() {
 	# Commented options are breaking the build. -drac
-	
+
 	local mycmakeargs
 
 	# ConfigureChecks.cmake
