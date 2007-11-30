@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-htscanner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/ChangeLog,v 1.1 2007/11/29 23:48:01 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/ChangeLog,v 1.2 2007/11/30 00:30:20 jokey Exp $
+
+  30 Nov 2007; Markus Ullmann <jokey@gentoo.org>
+  pecl-htscanner-0.8.1.ebuild:
+  This is actually cgi only
 
 *pecl-htscanner-0.8.1 (29 Nov 2007)
 
