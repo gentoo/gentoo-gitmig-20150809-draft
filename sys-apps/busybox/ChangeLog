@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.164 2007/11/28 21:34:01 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.165 2007/11/30 21:49:34 alonbl Exp $
+
+  30 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> busybox-1.8.2.ebuild:
+  Fix cross compile, bug#200367, thanks to Joakim Tjernlund
 
 *busybox-1.8.2 (28 Nov 2007)
 

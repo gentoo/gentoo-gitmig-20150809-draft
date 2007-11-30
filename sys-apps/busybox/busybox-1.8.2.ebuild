@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.8.2.ebuild,v 1.1 2007/11/28 21:34:01 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.8.2.ebuild,v 1.2 2007/11/30 21:49:34 alonbl Exp $
 
-inherit eutils flag-o-matic savedconfig
+inherit eutils flag-o-matic savedconfig toolchain-funcs
 
 ################################################################################
 # BUSYBOX ALTERNATE CONFIG MINI-HOWTO
@@ -88,6 +88,9 @@ src_unpack() {
 	# patches go here!
 	epatch "${FILESDIR}"/busybox-1.7.0-bb.patch
 
+	# set build environment
+	MAKE_CONFIG="CROSS_COMPILE=${CHOST}- ARCH=$(tc-arch-kernel) HOSTCC=${CBUILD}-gcc"
+
 	# work around broken ass powerpc compilers
 	use ppc64 && append-flags -mminimal-toc
 	if ! use uclibc; then
@@ -95,10 +98,8 @@ src_unpack() {
 		sed -i 's:-Wl,--gc-sections::' scripts/trylink
 		sed -i '/^#error Aborting compilation./d' applets/applets.c
 	fi
-	echo "CROSS_COMPILE := ${CHOST}-" >> Makefile.local
 
 	# check for a busybox config before making one of our own.
-	# if one exist lets return and use it.
 
 	restore_config .config
 	if [ -f .config ]; then
@@ -151,10 +152,10 @@ src_unpack() {
 src_compile() {
 	unset KBUILD_OUTPUT #88088
 
-	emake busybox || die "build failed"
+	emake busybox ${MAKE_CONFIG} || die "build failed"
 	if ! use static && ! use pam ; then
 		mv busybox_unstripped{,.bak}
-		emake CONFIG_STATIC=y busybox || die "static build failed"
+		emake busybox CONFIG_STATIC=y ${MAKE_CONFIG} || die "static build failed"
 		mv busybox_unstripped bb
 		mv busybox_unstripped{.bak,}
 	fi
@@ -177,7 +178,7 @@ src_install() {
 	doins "${FILESDIR}"/mdev-start.sh || die
 
 	# bundle up the symlink files for use later
-	emake install || die
+	emake install ${MAKE_CONFIG} || die
 	rm _install/bin/busybox
 	tar cf busybox-links.tar -C _install . || : #;die
 	insinto /usr/share/${PN}
