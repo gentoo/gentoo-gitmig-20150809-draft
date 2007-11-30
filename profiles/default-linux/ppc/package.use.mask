@@ -14,3 +14,6 @@ app-misc/lcd4linux lcd_devices_hd44780
 # Mask iptc flag until libiptcdata is keyworded
 media-gfx/gthumb iptc
 
+# Samuli Suominen <drac@gentoo.org> (30 Nov 2007)
+# media-libs/aften broken, and not keyworded.
+media-video/avidemux aften
