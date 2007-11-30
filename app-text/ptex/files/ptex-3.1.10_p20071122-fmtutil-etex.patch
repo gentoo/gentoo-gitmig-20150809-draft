@@ -1,0 +1,13 @@
+diff -Naur tetex-src-3.0.orig/texk/web2c/fmtutil.in tetex-src-3.0/texk/web2c/fmtutil.in
+--- tetex-src-3.0.orig/texk/web2c/fmtutil.in	2005-02-06 09:27:46.000000000 +0900
++++ tetex-src-3.0/texk/web2c/fmtutil.in	2007-11-30 01:39:55.000000000 +0900
+@@ -40,7 +40,8 @@
+ # if you want babel support in tex:
+ tex		tex		-		-translate-file=cp227.tcx tex.ini
+ @PETEX@latex		pdfetex		language.dat	-translate-file=cp227.tcx *latex.ini
+-@PETEX@etex		pdfetex		language.def	-translate-file=cp227.tcx *etex.ini
++@PETEX@etex		etex		language.def	-etex -translate-file=cp227.tcx *etex.ini
++@PETEX@elatex		etex		language.def	-translate-file=cp227.tcx *latex.ini
+ @PETEX@pdftex		pdfetex		-	-translate-file=cp227.tcx *pdftex.ini
+ @PETEX@pdflatex	pdfetex		language.dat	-translate-file=cp227.tcx *pdflatex.ini
+ @PETEX@pdfetex		pdfetex		language.def	-translate-file=cp227.tcx *pdfetex.ini

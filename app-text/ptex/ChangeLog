@@ -1,6 +1,24 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.64 2007/09/02 12:45:40 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.65 2007/11/30 14:20:42 matsuu Exp $
+
+*ptex-3.1.10_p20071122 (30 Nov 2007)
+
+  30 Nov 2007; <matsuu@gentoo.org> +files/tetex-3.0-kpathsea-pic.patch,
+  +files/tetex-3.0_p1-create-empty-files.patch,
+  +files/tetex-3.0_p1-dvipdfm-timezone.patch,
+  +files/tetex-3.0_p1-dvips_bufferoverflow.patch,
+  +files/tetex-3.0_p1-mptest.patch,
+  +files/tetex-3.0_p1-t1lib-SA26241_buffer_overflow.patch,
+  +files/ptex-3.1.10_p20071122-epstopdf-wrong-rotation.patch,
+  +files/ptex-3.1.10_p20071122-fmtutil-etex.patch,
+  +files/ptex-3.1.10_p20071122-gentoo.patch,
+  +files/ptex-3.1.10_p20071122-pdftosrc-install.patch, +files/texmf-update,
+  +ptex-3.1.10_p20071122.ebuild:
+  Version bumped. Ebuild submitted by aisomur <aisomur@gmail.com>. bug #196342
+  Fixed various security issue. bug #196673
+  Removed old versions.
+  Dropped ppc-macos keyword, see you in prefix
 
   02 Sep 2007; Robert Buchholz <rbu@gentoo.org>
   files/digest-ptex-3.1.8.1_p20050418, files/digest-ptex-3.1.10_beta3,

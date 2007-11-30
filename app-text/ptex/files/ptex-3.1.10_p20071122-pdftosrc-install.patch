@@ -1,0 +1,19 @@
+diff -Naur tetex-src-3.0.orig/texk/web2c/Makefile.in tetex-src-3.0/texk/web2c/Makefile.in
+--- tetex-src-3.0.orig/texk/web2c/Makefile.in	2007-11-30 01:20:29.000000000 +0900
++++ tetex-src-3.0/texk/web2c/Makefile.in	2007-11-30 01:46:41.000000000 +0900
+@@ -652,13 +652,13 @@
+ programs = bibtex ctangle ctie cweave dvicopy dvitomp dvitype gftodvi gftopk \
+  ofm2opl opl2ofm ovf2ovp ovp2ovf \
+  gftype mft $(odvicopy) $(odvitype) $(otangle) patgen pktogf pktype pltotf \
+- pooltype tangle tftopl tie $(ttf2afm) vftovp vptovf weave
++ pooltype tangle tftopl tie $(ttf2afm) vftovp vptovf weave pdftosrc
+ engines = $(tex) $(etex) $(mf) $(mfn) $(mpost) \
+           $(omega) $(aleph) \
+           $(pdftex) $(pdfetex) $(pdfxtex)
+ 
+ programs: $(programs) $(engines) $(mpware) \
+-          $(omegafonts_programs) $(otps_programs) $(pdftosrc)
++          $(omegafonts_programs) $(otps_programs)
+ 
+ # We put some programs (written directly in C) in a subdirectory.
+ $(mpware): $(mpware_sources)
