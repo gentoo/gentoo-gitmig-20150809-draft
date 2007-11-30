@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.6.1.ebuild,v 1.1 2007/11/29 01:48:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.6.1.ebuild,v 1.2 2007/11/30 00:56:39 dirtyepic Exp $
 
 EAPI=1
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2
 		doc? ( mirror://sourceforge/wxwindows/wxWidgets-${BASE_PV}-HTML.zip )"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="X doc debug gnome gstreamer odbc opengl sdl"
+IUSE="X doc debug gnome gstreamer odbc opengl pch sdl"
 
 RDEPEND="
 	dev-libs/expat
@@ -88,8 +88,8 @@ src_compile() {
 			--with-regex=builtin
 			--with-zlib=sys
 			--with-expat
-			--disable-precomp-headers
 			$(use_enable debug)
+			$(use_enable pch precomp-headers)
 			$(use_with sdl)
 			$(use_with odbc)"
 
