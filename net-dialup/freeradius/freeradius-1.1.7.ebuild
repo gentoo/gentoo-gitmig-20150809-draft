@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.7.ebuild,v 1.4 2007/11/05 06:19:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.7.ebuild,v 1.5 2007/11/30 05:24:47 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.freeradius.org/"
 KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug edirectory firebird frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl udpfromto"
+IUSE="bindist debug edirectory firebird frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl udpfromto"
 
 RDEPEND="!net-dialup/cistronradius
 	!net-dialup/gnuradius
@@ -23,7 +23,7 @@ RDEPEND="!net-dialup/cistronradius
 	snmp? ( net-analyzer/net-snmp )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
-	firebird? ( dev-db/firebird )
+	!bindist? ( firebird? ( dev-db/firebird ) )
 	pam? ( sys-libs/pam )
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
@@ -78,8 +78,8 @@ src_unpack() {
 		rm -rf src/modules/rlm_sql/drivers/rlm_sql_postgresql
 		sed -i -e '/rlm_sql_postgresql/d' src/modules/rlm_sql/stable
 	fi
-	if ! use firebird; then
-		einfo "removing rlm_sql_firebird (no use firebird)"
+	if use bindist || ! use firebird; then
+		einfo "removing rlm_sql_firebird (use bindist or no use firebird)"
 		rm -rf src/modules/rlm_sql/drivers/rlm_sql_firebird
 		sed -i -e '/rlm_sql_firebird/d' src/modules/rlm_sql/stable
 	fi
