@@ -1,23 +1,24 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.60.ebuild,v 1.8 2007/11/02 23:45:42 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.61.ebuild,v 1.1 2007/11/30 22:37:50 tgurr Exp $
 
 inherit autotools elisp-common eutils versionator flag-o-matic
 
 DESCRIPTION="GPL Ghostscript - the most current Ghostscript, AFPL, relicensed"
-HOMEPAGE="http://ghostscript.com"
+HOMEPAGE="http://ghostscript.com/"
 
 MY_P=${P/-gpl}
-GSDJVU_PV=1.2
+GSDJVU_PV=1.3
 PVM=$(get_version_component_range 1-2)
 SRC_URI="cjk? ( ftp://ftp.gyve.org/pub/gs-cjk/adobe-cmaps-200406.tar.gz
 		ftp://ftp.gyve.org/pub/gs-cjk/acro5-cmaps-2001.tar.gz )
 	!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )
-	mirror://sourceforge/ghostscript/${MY_P}.tar.bz2"
+	mirror://sourceforge/ghostscript/${MY_P}.tar.bz2
+	mirror://gentoo/${P}-patchset-1.tar.bz2"
 
 LICENSE="GPL-2 CPL-1.0"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="bindist cjk cups djvu gtk jpeg2k X"
 
 COMMON_DEPEND="media-libs/fontconfig
@@ -47,8 +48,8 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A/adobe-cmaps-200406.tar.gz acro5-cmaps-2001.tar.gz}
 	if use cjk ; then
-		cat "${FILESDIR}/ghostscript-esp-8.15.2-cidfmap.cjk" >> "${S}/lib/cidfmap"
-		cat "${FILESDIR}/ghostscript-esp-8.15.2-FAPIcidfmap.cjk" >> "${S}/lib/FAPIcidfmap"
+		cat "${WORKDIR}/patches/ghostscript-esp-8.15.2-cidfmap.cjk" >> "${S}/lib/cidfmap"
+		cat "${WORKDIR}/patches/ghostscript-esp-8.15.2-FAPIcidfmap.cjk" >> "${S}/lib/FAPIcidfmap"
 		cd "${S}/Resource"
 		unpack adobe-cmaps-200406.tar.gz
 		unpack acro5-cmaps-2001.tar.gz
@@ -59,15 +60,14 @@ src_unpack() {
 
 	# Fedora patches
 	# upstream bug http://bugs.ghostscript.com/show_bug.cgi?id=689393
-	epatch "${FILESDIR}/ghostscript-8.60-ijs-krgb.patch"
-	epatch "${FILESDIR}/ghostscript-8.60-fPIC.patch"
-	epatch "${FILESDIR}/ghostscript-8.60-multilib.patch"
-	epatch "${FILESDIR}/ghostscript-8.60-noopt.patch"
-	epatch "${FILESDIR}/ghostscript-8.60-scripts.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.61-ijs-krgb.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.60-fPIC.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.61-multilib.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.60-noopt.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.60-scripts.patch"
 
-	# additional Gentoo patches
-	epatch "${FILESDIR}/ghostscript-afpl-8.54-rinkj.patch"
-	epatch "${FILESDIR}/ghostscript-8.60-include.patch"
+	# additional Gentoo patches, compilation fixes
+	epatch "${WORKDIR}/patches/${PN}-8.61-rinkj.patch"
 
 	if use bindist && use djvu ; then
 		ewarn "You have bindist in your USE, djvu support will NOT be compiled!"
@@ -78,11 +78,15 @@ src_unpack() {
 		unpack gsdjvu-${GSDJVU_PV}.tar.gz
 		cp gsdjvu-${GSDJVU_PV}/gsdjvu "${S}"
 		cp gsdjvu-${GSDJVU_PV}/gdevdjvu.c "${S}/src"
-		epatch "${FILESDIR}/djvu-gs-gpl-8.60.patch"
+		epatch "${WORKDIR}/patches/${PN}-8.61-gsdjvu-1.3.patch"
 		cp gsdjvu-${GSDJVU_PV}/ps2utf8.ps "${S}/lib"
 		cp "${S}/src/contrib.mak" "${S}/src/contrib.mak.gsdjvu"
 		grep -q djvusep "${S}/src/contrib.mak" || \
 			cat gsdjvu-${GSDJVU_PV}/gsdjvu.mak >> "${S}/src/contrib.mak"
+
+		# install ps2utf8.ps, bug #197818
+		sed -i -e '/$(EXTRA_INIT_FILES)/ a\ps2utf8.ps \\' "${S}/src/unixinst.mak" \
+		|| die "sed failed"
 	fi
 
 	if ! use gtk ; then
@@ -116,15 +120,13 @@ src_compile() {
 	|| die "econf failed"
 
 	if ! use bindist && use djvu ; then
-		sed -i -e 's!$(DD)bbox.dev!& $(DD)djvumask.dev $(DD)djvusep.dev!g'		Makefile
-		sed -i -e 's:(/\(Resource/[a-zA-Z/]*\)):(\1) findlibfile {pop} {pop &}
-		ifelse:' lib/gs_res.ps
+		sed -i -e 's!$(DD)bbox.dev!& $(DD)djvumask.dev $(DD)djvusep.dev!g' Makefile
 	fi
 
 	emake -j1 so all || die "emake failed"
 
 	cd "${S}/ijs"
-	econf || die "ijs econf failed"
+	./autogen.sh || die "ijs autogen failed"
 	emake || die "ijs emake failed"
 }
 
@@ -135,7 +137,7 @@ src_install() {
 		dobin gsdjvu || die "dobin gsdjvu install failed"
 	fi
 
-	rm -fr "${D}/usr/share/doc/${PF}/html/"{README,PUBLIC}
+	rm -rf "${D}/usr/share/doc/${PF}/html/"{README,PUBLIC}
 	dodoc doc/README || die "dodoc install failed"
 
 	cd "${S}/ijs"
