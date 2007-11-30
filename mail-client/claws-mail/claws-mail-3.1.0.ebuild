@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.1.0.ebuild,v 1.1 2007/11/29 22:31:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.1.0.ebuild,v 1.2 2007/11/30 19:22:13 ticho Exp $
 
 IUSE="bogofilter clamav crypt dillo doc gnome imap ipv6 kde ldap nntp pda session spell ssl startup-notification xface"
 
@@ -122,11 +122,11 @@ src_install() {
 		local desktopfile="${PN}-attach-files.desktop"
 		cd "${S}"/tools/kdeservicemenu
 		sed -i -e "s:SCRIPT_PATH:${kdeprefix}/bin/${servicescript}:g" \
-			template_${desktopfile}
+			${desktopfile}.template
 		dodir /usr/share/apps/konqueror/servicemenus
 		insopts -m 0644
 		insinto /usr/share/apps/konqueror/servicemenus
-		newins template_${desktopfile} ${desktopfile} || die
+		newins ${desktopfile}.template ${desktopfile} || die
 		dodir ${kdeprefix}/bin
 		insopts -m 755
 		exeinto ${kdeprefix}/bin
