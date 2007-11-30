@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7960 2007/11/30 15:03:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7961 2007/11/30 15:38:22 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -140,6 +140,7 @@ app-admin/eselect-wxwidgets
 =xfce-base/xfdesktop-4.4.2*
 =xfce-base/xfwm4-4.4.2*
 =xfce-base/xfprint-4.4.2*
+=xfce-base/xfce4-extras-4.4.2*
 =x11-themes/gtk-engines-xfce-2.4.2*
 =xfce-extra/xfce4-appfinder-4.4.2*
 =xfce-extra/xfwm4-themes-4.4.2*
