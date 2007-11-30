@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.16.0-r1.ebuild,v 1.1 2007/08/11 21:02:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.16.0-r1.ebuild,v 1.2 2007/11/30 18:14:04 corsair Exp $
 
 inherit eutils distutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug doc examples"
 
 DEPEND="|| ( kde-base/kdebase kde-base/konsole )"
