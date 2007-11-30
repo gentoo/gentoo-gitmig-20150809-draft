@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.2.2.ebuild,v 1.2 2007/11/30 16:42:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.3.0.ebuild,v 1.1 2007/11/30 16:42:23 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
@@ -132,8 +132,8 @@ pkg_setup() {
 
 	if ! use gtk && ! use ncurses ; then
 		einfo
-		elog "As you did not pick gtk or ncurses use flag, building"
-		elog "console only."
+		elog "You did not pick the ncurses or gtk use flags, only libpurple"
+		elog "will be built."
 		einfo
 	fi
 
@@ -197,15 +197,11 @@ src_compile() {
 		myconf="${myconf} --enable-gnutls=no --enable-nss=yes"
 	fi
 
-	if ! use ncurses && ! use gtk; then
-		myconf="${myconf} --enable-consoleui --disable-gtkui"
-	else
-		myconf="${myconf} $(use_enable ncurses consoleui) $(use_enable gtk gtkui)"
-	fi
-
 	econf \
+		$(use_enable ncurses consoleui) \
 		$(use_enable nls) \
 		$(use_enable perl) \
+		$(use_enable gtk gtkui) \
 		$(use_enable gtk startup-notification) \
 		$(use_enable gtk screensaver) \
 		$(use_enable gtk sm) \
