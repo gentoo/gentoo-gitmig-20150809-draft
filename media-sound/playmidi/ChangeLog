@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/playmidi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/ChangeLog,v 1.12 2007/11/30 21:35:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/ChangeLog,v 1.13 2007/11/30 23:31:24 opfer Exp $
+
+  30 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  playmidi-2.5-r2.ebuild:
+  stable x86, bug 200822
 
   30 Nov 2007; Steve Dibb <beandog@gentoo.org> playmidi-2.5-r2.ebuild:
   amd64 stable, bug 200822
