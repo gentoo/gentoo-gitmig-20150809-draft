@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.1-r2.ebuild,v 1.1 2007/09/09 01:58:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.1-r2.ebuild,v 1.2 2007/11/30 03:38:43 josejx Exp $
 
 inherit autotools flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc ~x86"
 IUSE="acpi alsa debug doc ibam macbook oss"
 
 DEPEND="macbook? ( sys-libs/libsmbios )
@@ -20,10 +20,16 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0 )
 		 >=dev-libs/glib-2.6"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack "${A}"
+	cd "${S}"
 
-	epatch ${FILESDIR}/pmcs.patch
+	epatch "${FILESDIR}/pmcs.patch"
+	### Don't link with g++ if we don't use ibam
+	if ! use ibam; then
+		epatch "${FILESDIR}/g++.patch"
+	fi
+	### Fix macbook -lz issue
+	epatch "${FILESDIR}/lz.patch"
 	eautoconf
 }
 
@@ -64,8 +70,8 @@ src_compile() {
 src_install() {
 	dodir /etc/power
 	use ibam && dodir /var/lib/ibam
-	make DESTDIR=${D} install || die "failed to install"
-	newinitd ${FILESDIR}/pbbuttonsd.rc6 pbbuttonsd
+	make DESTDIR="${D}" install || die "failed to install"
+	newinitd "${FILESDIR}/pbbuttonsd.rc6" pbbuttonsd
 	dodoc README
 	use doc && dohtml -r doc/*
 
@@ -73,8 +79,8 @@ src_install() {
 	dodir /etc/power/suspend.d
 	dodir /etc/power/scripts.d
 	exeinto "/etc/power/scripts.d"
-	doexe ${FILESDIR}/wireless
-	ln -s ${D}/etc/power/scripts.d/wireless ${D}/etc/power/resume.d/wireless
+	doexe "${FILESDIR}/wireless"
+	ln -s "${D}/etc/power/scripts.d/wireless" "${D}/etc/power/resume.d/wireless"
 }
 
 pkg_postinst() {

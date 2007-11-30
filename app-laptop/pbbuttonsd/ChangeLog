@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.70 2007/09/09 01:58:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.71 2007/11/30 03:38:43 josejx Exp $
+
+  30 Nov 2007; Joseph Jezak <josejx@gentoo.org> +files/g++.patch,
+  +files/lz.patch, -pbbuttonsd-0.8.1.ebuild, -pbbuttonsd-0.8.1-r1.ebuild,
+  pbbuttonsd-0.8.1-r2.ebuild:
+  Marked ppc stable. Added patches to not link in g++ if ibam is not enabled.
+  Also added patch for bug #194595. Fixed some unquoted variables and removed
+  old versions.
 
 *pbbuttonsd-0.8.1-r2 (09 Sep 2007)
 
