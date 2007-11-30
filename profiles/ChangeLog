@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.868 2007/11/30 00:53:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.869 2007/11/30 07:43:38 alonbl Exp $
+
+  30 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
+  Remove libtpm from tree, bug#198696
 
   30 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> use.local.desc:
   Readding pch local USE flag to x11-libs/wxGTK.
