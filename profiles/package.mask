@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7959 2007/11/30 07:43:38 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7960 2007/11/30 15:03:21 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -61,7 +61,8 @@
 =x11-drivers/ati-drivers-8.42.3
 
 # Samuli Suominen <drac@gentoo.org> (25 Nov 2007)
-# Version with ~amd64, but it breaks sci-electronics/gwave.
+# sci-electronics/gwave segmentation faults with this.
+# this version builds on ~amd64. also see bug 200702.
 =dev-scheme/guile-gnome-platform-2.15.95*
 
 # Ulrich Mueller <ulm@gentoo.org> (25 Nov 2007)
