@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/javamail/javamail-1.0-r1.ebuild,v 1.1 2007/11/28 17:27:08 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/javamail/javamail-1.0-r1.ebuild,v 1.2 2007/11/30 13:35:41 corsair Exp $
 
 inherit java-virtuals-2
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=""
