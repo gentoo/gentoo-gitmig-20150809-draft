@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.433.ebuild,v 1.2 2007/11/27 07:07:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.433.ebuild,v 1.3 2007/12/01 20:06:44 je_fro Exp $
 
 IUSE="acpi debug"
 
@@ -21,6 +21,7 @@ RDEPEND="x11-base/xorg-server
 	>=app-admin/eselect-1.0.9
 	app-admin/eselect-opengl
 	=virtual/libstdc++-3.3*
+	amd64? ( app-emulation/emul-linux-x86-xlibs )
 	acpi? (
 		x11-apps/xauth
 		sys-power/acpid

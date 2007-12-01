@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.98 2007/11/26 15:10:07 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.99 2007/12/01 20:06:44 je_fro Exp $
+
+  01 Dec 2007; Jeff Gardner <je_fro@gentoo.org> ati-drivers-8.433.ebuild:
+  Adding emul-linux-x86-xlibs as a dep for amd64 systems
 
 *ati-drivers-8.433 (26 Nov 2007)
 
