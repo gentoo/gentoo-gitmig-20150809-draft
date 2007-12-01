@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.45 2007/09/06 10:03:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.46 2007/12/01 09:36:17 mrness Exp $
+
+*gammu-1.15.0 (01 Dec 2007)
+
+  01 Dec 2007; Alin Năstac <mrness@gentoo.org> +gammu-1.15.0.ebuild:
+  Version bump (#200881).
 
 *gammu-1.13.0 (06 Sep 2007)
 
