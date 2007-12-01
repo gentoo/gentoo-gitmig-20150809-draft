@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ngnus/ngnus-9999.ebuild,v 1.1 2007/10/15 17:16:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ngnus/ngnus-9999.ebuild,v 1.2 2007/12/01 16:09:49 ulm Exp $
 
 ECVS_SERVER="cvs.gnus.org:/usr/local/cvsroot"
 ECVS_MODULE="gnus"
@@ -30,7 +30,7 @@ src_compile() {
 	econf \
 		--with-emacs --without-w3 --without-url \
 		--with-lispdir=${SITELISP}/${PN} \
-		--with-etcdir=/usr/share/emacs/etc \
+		--with-etcdir=${SITEETC} \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
@@ -38,7 +38,7 @@ src_compile() {
 src_install() {
 	einstall \
 		lispdir="${D}${SITELISP}/${PN}" \
-		etcdir="${D}/usr/share/emacs/etc" \
+		etcdir="${D}${SITEETC}" \
 		|| die "einstall failed"
 
 	# fix info documentation
