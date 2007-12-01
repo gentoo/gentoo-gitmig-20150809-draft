@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ristretto-0.0.12.ebuild,v 1.3 2007/11/24 04:17:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ristretto-0.0.14.ebuild,v 1.1 2007/12/01 17:20:49 angelos Exp $
 
 inherit xfce44
 
