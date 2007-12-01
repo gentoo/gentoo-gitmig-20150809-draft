@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/calc/calc-2.02f.ebuild,v 1.5 2007/10/27 10:52:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/calc/calc-2.02f.ebuild,v 1.6 2007/12/01 01:02:34 ulm Exp $
 
 inherit elisp eutils versionator
 
@@ -14,6 +14,15 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 SITEFILE="50calc-gentoo.el"
+
+pkg_setup() {
+	if version_is_at_least 22 "$(elisp-emacs-version)"; then
+		echo
+		elog "Please note that \"${PN}\" is already included with Emacs 22 or"
+		elog "later, so ${CATEGORY}/${PN} is only needed for lower versions."
+		elog "You may select the active Emacs version with \"eselect emacs\"."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -35,15 +44,4 @@ src_install() {
 
 	doinfo calc.info*
 	dodoc README README.prev
-}
-
-pkg_postinst() {
-	elisp-site-regen
-
-	if version_is_at_least 22 "$(elisp-emacs-version)"; then
-		echo
-		elog "Please note that \"${PN}\" is already included with Emacs 22 or"
-		elog "later, so ${CATEGORY}/${PN} is only needed for lower versions."
-		elog "You may select the active Emacs version with \"eselect emacs\"."
-	fi
 }
