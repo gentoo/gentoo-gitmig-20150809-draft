@@ -1,6 +1,17 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.63 2007/11/13 05:00:43 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.64 2007/12/01 20:12:20 dberkholz Exp $
+
+*xf86-video-i810-2.2.0 (01 Dec 2007)
+
+  01 Dec 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-i810-2.2.0.ebuild:
+  (#199896) Bump, with more than 160 bugfixes since 2.1. Framebuffer
+  compression should be enabled by default now (except on 965GM), which will
+  save some power (~0.5W during typical 2D usage). It won't work if you have
+  tiling forced off, though. Other than that, lots of EXA fixes, some
+  dual-monitor fixes, enabled the CH7017/7018 DVO driver by default, a few
+  backlight fixes, and more.
 
 *xf86-video-i810-2.1.99 (13 Nov 2007)
 
