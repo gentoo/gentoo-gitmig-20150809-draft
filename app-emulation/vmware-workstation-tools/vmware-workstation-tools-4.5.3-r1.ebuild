@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-4.5.3-r1.ebuild,v 1.3 2007/07/13 00:36:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-4.5.3-r1.ebuild,v 1.4 2007/12/01 13:14:08 ikelos Exp $
 
 inherit eutils vmware
 
@@ -55,15 +55,15 @@ src_install() {
 	cp -pPR etc/* ${Detcdir} || die
 
 	# install the init scripts
-	newinitd ${FILESDIR}/${PN}.rc ${product} || die
+	newinitd "${FILESDIR}/${PN}.rc" ${product} || die
 
 	# Environment
-	doenvd ${FILESDIR}/90${product} || die
+	doenvd "${FILESDIR}/90${product}" || die
 
 	# if we have X, install the default config
 	if use X ; then
 		insinto /etc/X11
-		doins ${FILESDIR}/xorg.conf
+		doins "${FILESDIR}/xorg.conf"
 	fi
 
 	vmware_create_initd || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-5.5.2.ebuild,v 1.2 2007/03/05 09:32:14 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-5.5.2.ebuild,v 1.3 2007/12/01 13:14:08 ikelos Exp $
 
 inherit eutils vmware
 
@@ -36,6 +36,6 @@ src_install() {
 	# if we have X, install the default config
 	if use X ; then
 		insinto /etc/X11
-		doins ${FILESDIR}/xorg.conf
+		doins "${FILESDIR}/xorg.conf"
 	fi
 }
