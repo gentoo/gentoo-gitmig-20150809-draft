@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/nxml-gentoo-schemas-20071122-r1.ebuild,v 1.2 2007/11/23 17:32:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/nxml-gentoo-schemas-20071122-r1.ebuild,v 1.3 2007/12/01 15:56:18 ulm Exp $
 
 inherit elisp
 
@@ -20,7 +20,7 @@ SITEFILE=60${PN}-gentoo.el
 src_compile() { :; }
 
 src_install() {
-	insinto /usr/share/emacs/etc/${PN}
+	insinto ${SITEETC}/${PN}
 	doins schemas.xml *.rnc || die
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 }

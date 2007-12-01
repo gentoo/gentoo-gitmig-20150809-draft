@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/nxml-gentoo-schemas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.7 2007/11/23 17:32:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.8 2007/12/01 15:56:18 ulm Exp $
+
+  01 Dec 2007; Ulrich Mueller <ulm@gentoo.org>
+  files/60nxml-gentoo-schemas-gentoo.el,
+  nxml-gentoo-schemas-20071122-r1.ebuild:
+  Use SITEETC eclass variable.
 
 *nxml-gentoo-schemas-20071122-r1 (23 Nov 2007)
 
