@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.3.0-r1.ebuild,v 1.7 2007/10/27 08:54:14 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.3.0-r1.ebuild,v 1.8 2007/12/01 17:10:51 corsair Exp $
 
 inherit eutils java-utils-2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/eclipse/downloads/drops/${DMF/.0}/${MY_PN}src.zip"
 
 LICENSE="EPL-1.0"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 SLOT="3.3"
 IUSE=""
 
