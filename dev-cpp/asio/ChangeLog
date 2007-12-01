@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/asio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.9 2007/07/12 23:17:07 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.10 2007/12/01 18:28:12 dev-zero Exp $
+
+*asio-0.3.8 (01 Dec 2007)
+
+  01 Dec 2007; Tiziano Müller <dev-zero@gentoo.org> +asio-0.3.8.ebuild:
+  Version bump (bug #199226)
 
 *asio-0.3.7-r1 (12 Jul 2007)
 
