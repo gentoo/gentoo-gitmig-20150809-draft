@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4_pre3.ebuild,v 1.4 2007/11/30 21:45:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4_pre3.ebuild,v 1.5 2007/12/01 18:08:15 drac Exp $
 
 inherit cmake-utils eutils
 
@@ -45,7 +45,7 @@ RDEPEND="dev-libs/libxml2
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig
-	dev-util/cmake"
+	>=dev-util/cmake-2.4.4"
 
 S=${WORKDIR}/${MY_P}
 
