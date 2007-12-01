@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.26 2007/10/11 08:54:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.27 2007/12/01 10:03:48 mrness Exp $
+
+*wammu-0.24 (01 Dec 2007)
+
+  01 Dec 2007; Alin Năstac <mrness@gentoo.org> +wammu-0.24.ebuild:
+  Version bump (#200881).
 
 *wammu-0.23 (11 Oct 2007)
 
