@@ -1,27 +1,23 @@
-# kudzu effectively does latest match scanning; the list of aliases is built
-# via head insertion, but then scanned from head to tail, so later lines in
-# this file will win.
-#
-# Therefore, we whitelist devices over to the modesetting driver by listing
-# subdevice matches _after_ the general match.
-
-alias pcivideo:v00008086d00001132sv*sd*bc*sc*i* i810	# i815
-alias pcivideo:v00008086d00002562sv*sd*bc*sc*i* i810	# 845G
-alias pcivideo:v00008086d00002572sv*sd*bc*sc*i* i810	# 865G
-alias pcivideo:v00008086d00002582sv*sd*bc*sc*i* i810	# 915G
-# ajax's desktop
-alias pcivideo:v00008086d00002582sv00008086sd00004556bc*sc*i* intel
-alias pcivideo:v00008086d0000258Asv*sd*bc*sc*i* i810	# E7221G
+alias pcivideo:v00008086d00001132sv*sd*bc*sc*i* intel	# i815
+alias pcivideo:v00008086d00002562sv*sd*bc*sc*i* intel	# 845G
+alias pcivideo:v00008086d00002572sv*sd*bc*sc*i* intel	# 865G
+alias pcivideo:v00008086d00002582sv*sd*bc*sc*i* intel	# 915G
+alias pcivideo:v00008086d0000258Asv*sd*bc*sc*i* intel	# E7221G ("915G")
 alias pcivideo:v00008086d00002592sv*sd*bc*sc*i* intel	# 915GM
-alias pcivideo:v00008086d00002772sv*sd*bc*sc*i* i810	# 945G
+alias pcivideo:v00008086d00002772sv*sd*bc*sc*i* intel	# 945G
 alias pcivideo:v00008086d000027A2sv*sd*bc*sc*i* intel	# 945GM
+alias pcivideo:v00008086d000027AEsv*sd*bc*sc*i* intel	# 945GME
 alias pcivideo:v00008086d00002972sv*sd*bc*sc*i* intel	# 946GZ, really a 965
 alias pcivideo:v00008086d00002982sv*sd*bc*sc*i* intel	# 965G1
 alias pcivideo:v00008086d00002992sv*sd*bc*sc*i* intel	# 965Q
 alias pcivideo:v00008086d000029A2sv*sd*bc*sc*i* intel	# 965G
+alias pcivideo:v00008086d000029B2sv*sd*bc*sc*i* intel	# Q35
+alias pcivideo:v00008086d000029C2sv*sd*bc*sc*i* intel	# G33
+alias pcivideo:v00008086d000029D2sv*sd*bc*sc*i* intel	# Q33
 alias pcivideo:v00008086d00002A02sv*sd*bc*sc*i* intel	# 965GM
-alias pcivideo:v00008086d00003577sv*sd*bc*sc*i* i810	# i830
-alias pcivideo:v00008086d00003582sv*sd*bc*sc*i* i810	# 855GM
-alias pcivideo:v00008086d00007121sv*sd*bc*sc*i* i810	# i810
-alias pcivideo:v00008086d00007123sv*sd*bc*sc*i* i810	# i810 DC100
-alias pcivideo:v00008086d00007125sv*sd*bc*sc*i* i810	# i810E
+alias pcivideo:v00008086d00002A12sv*sd*bc*sc*i* intel	# 965GME
+alias pcivideo:v00008086d00003577sv*sd*bc*sc*i* intel	# i830
+alias pcivideo:v00008086d00003582sv*sd*bc*sc*i* intel	# 855GM
+alias pcivideo:v00008086d00007121sv*sd*bc*sc*i* intel	# i810
+alias pcivideo:v00008086d00007123sv*sd*bc*sc*i* intel	# i810 DC100
+alias pcivideo:v00008086d00007125sv*sd*bc*sc*i* intel	# i810E
