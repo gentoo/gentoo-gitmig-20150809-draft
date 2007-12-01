@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/sheerdns
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/sheerdns/ChangeLog,v 1.5 2007/03/18 23:29:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/sheerdns/ChangeLog,v 1.6 2007/12/01 23:57:14 angelos Exp $
+
+  01 Dec 2007; Christoph Mende <angelos@gentoo.org> sheerdns-1.0.1.ebuild:
+  Added ~amd64 wrt bug #189789
 
   18 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove iggy from metadata.xml due to retirement.
