@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/alliance
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/ChangeLog,v 1.8 2006/10/14 13:33:40 calchan Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/ChangeLog,v 1.9 2007/12/01 22:30:56 calchan Exp $
+
+*alliance-5.0.20070718 (01 Dec 2007)
+
+  01 Dec 2007; Denis Dupeyron <calchan@gentoo.org>
+  +alliance-5.0.20070718.ebuild:
+  Version bump.
 
   14 Oct 2006; Denis Dupeyron <calchan@gentoo.org>
   -alliance-5.0.20060329.ebuild:
