@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.17.3.ebuild,v 1.6 2007/11/29 07:51:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.17.3.ebuild,v 1.7 2007/12/01 13:53:19 nixnut Exp $
 
 inherit distutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.riverbankcomputing.com/Downloads/PyQt3/GPL/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug doc examples"
 
 RDEPEND="=x11-libs/qt-3*
