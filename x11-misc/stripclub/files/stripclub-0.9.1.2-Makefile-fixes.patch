@@ -1,0 +1,79 @@
+diff -ur stripclub-0.9.1.2.orig/configure stripclub-0.9.1.2/configure
+--- stripclub-0.9.1.2.orig/configure	2007-12-01 21:44:41.000000000 +0100
++++ stripclub-0.9.1.2/configure	2007-12-01 21:48:36.000000000 +0100
+@@ -77,12 +77,17 @@
+ 		else echo "success" ; \
+ 	fi
+ fi
+-	
++
++fltk_ldflags=`fltk-config --ldflags`
++fltk_cflags=`fltk-config --cflags`
++
+ echo "Writing Makefile.inc..."
+ sed \
+ -e "s%@prefix@%$prefix%" -e "s%@mandir@%$mandir%" \
+ -e "s%@bindir@%$bindir%" -e "s%@docdir@%$docdir%" \
+ -e "s%@browser@%$browser%" \
++-e "s%@fltk_ldflags@%$fltk_ldflags%" \
++-e "s%@fltk_cflags@%$fltk_cflags%" \
+ Makefile.inc.in >Makefile.inc
+ 
+ echo "Success! Run 'make' to compile."
+diff -ur stripclub-0.9.1.2.orig/Makefile.inc.in stripclub-0.9.1.2/Makefile.inc.in
+--- stripclub-0.9.1.2.orig/Makefile.inc.in	2007-12-01 21:44:41.000000000 +0100
++++ stripclub-0.9.1.2/Makefile.inc.in	2007-12-01 21:46:14.000000000 +0100
+@@ -3,4 +3,5 @@
+ MANDIR=@mandir@
+ DOCDIR=@docdir@
+ BROWSER=@browser@
+-
++FLTK_LDFLAGS=@fltk_ldflags@
++FLTK_CFLAGS=@fltk_cflags@
+diff -ur stripclub-0.9.1.2.orig/Makefile.linux stripclub-0.9.1.2/Makefile.linux
+--- stripclub-0.9.1.2.orig/Makefile.linux	2007-12-01 21:44:41.000000000 +0100
++++ stripclub-0.9.1.2/Makefile.linux	2007-12-01 21:45:58.000000000 +0100
+@@ -1,11 +1,11 @@
+-CC = gcc
+-CXX = g++
++CC ?= gcc
++CXX ?= g++
+ RM = rm -f
+ TARGET = stripclub
+ SOURCES = $(wildcard *.cpp)
+ OBJECTS = $(SOURCES:.cpp=.o) util.o
+-LDFLAGS = -Wall -L/usr/X11R6/lib -lfltk -lfltk_images -lpcre -lXpm
+-CFLAGS = -g -Wall -I.
++LDFLAGS += -Wall -L/usr/X11R6/lib $(FLTK_LDFLAGS) -lfltk -lfltk_images -lpcre -lXpm
++CFLAGS += -g -Wall -I. $(FLTK_CFLAGS)
+ 
+ all:	interface.h depend $(TARGET)
+ 
+@@ -28,7 +28,7 @@
+ CXXFLAGS = $(CFLAGS)
+ 
+ $(TARGET): $(OBJECTS)
+-	$(CXX) $(LDFLAGS) $(OBJECTS) -o $(TARGET)
++	$(CXX) $(OBJECTS) $(LDFLAGS) -o $(TARGET)
+ 
+ interface.cpp: interface.fl
+ 	fluid -c interface.fl
+@@ -40,12 +40,12 @@
+ 	$(RM) $(TARGET) $(OBJECTS) interface.cpp interface.h depend Makefile.inc
+ 
+ install: all
+-	strip $(TARGET)
+-	install -D -c -m 755 $(TARGET) $(BINDIR)/$(TARGET)
+-	install -D -c -m 644 $(TARGET).1 $(MANDIR)/man1/$(TARGET).1
+-	install -D -c -m 644 readme.txt FAQ $(DOCDIR)/
+-	gzip -9 $(MANDIR)/man1/$(TARGET).1
+-	gzip -9 $(DOCDIR)/readme.txt
++	install -D -c -m 755 $(TARGET) $(DESTDIR)/$(BINDIR)/$(TARGET)
++	install -D -c -m 644 $(TARGET).1 $(DESTDIR)/$(MANDIR)/man1/$(TARGET).1
++	install -D -c -m 644 readme.txt $(DESTDIR)/$(DOCDIR)/readme.txt
++	install -D -c -m 644 FAQ $(DESTDIR)/$(DOCDIR)/FAQ
++	gzip -9 $(DESTDIR)/$(MANDIR)/man1/$(TARGET).1
++	gzip -9 $(DESTDIR)/$(DOCDIR)/readme.txt
+ 
+ uninstall:
+ 	rm -f $(BINDIR)/$(TARGET)

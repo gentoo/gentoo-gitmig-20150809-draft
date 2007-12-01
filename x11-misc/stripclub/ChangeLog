@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/stripclub
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/ChangeLog,v 1.7 2007/08/23 17:56:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/ChangeLog,v 1.8 2007/12/01 20:57:19 coldwind Exp $
+
+*stripclub-0.9.1.2-r1 (01 Dec 2007)
+
+  01 Dec 2007; Santiago M. Mola <coldwind@gentoo.org>
+  +files/stripclub-0.9.1.2-Makefile-fixes.patch,
+  +stripclub-0.9.1.2-r1.ebuild:
+  Honour user settings and fix --as-needed, bug #199536. Use DESTDIR and more
+  clean up.
 
   23 Aug 2007; Jeroen Roovers <jer@gentoo.org> stripclub-0.9.1.2.ebuild:
   Marked ~hppa too.
