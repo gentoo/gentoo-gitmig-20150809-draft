@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/mount-cifs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/ChangeLog,v 1.3 2007/11/30 23:12:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/ChangeLog,v 1.4 2007/12/01 09:12:07 corsair Exp $
+
+  01 Dec 2007; Markus Rothe <corsair@gentoo.org> mount-cifs-3.0.25c.ebuild:
+  Stable on ppc64; bug #200837
 
   30 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   mount-cifs-3.0.25c.ebuild:
