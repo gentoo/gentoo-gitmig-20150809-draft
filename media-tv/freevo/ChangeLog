@@ -1,6 +1,17 @@
 # ChangeLog for media-tv/freevo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.54 2007/11/27 11:14:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.55 2007/12/01 21:04:50 rbu Exp $
+
+*freevo-1.7.4 (01 Dec 2007)
+
+  01 Dec 2007; Robert Buchholz <rbu@gentoo.org> -freevo-1.5.4-r2.ebuild,
+  -freevo-1.6.0.ebuild, -freevo-1.6.1.ebuild, +freevo-1.7.4.ebuild:
+  Version bump (bug #199580), changes include:
+  * Lots of translation updates
+  * New plug-ins: DVB, eject, fxd, internet tv, lastfm, mplayer aspect,
+    podcast, youtube
+  * Lots of updates and bugfixes
+  * Fix for bug #163052 (twisted-2.5 breaks recordserver)
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> freevo-1.5.4.ebuild,
   freevo-1.5.4-r2.ebuild, freevo-1.6.0.ebuild, freevo-1.6.1.ebuild,
