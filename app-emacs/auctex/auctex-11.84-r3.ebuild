@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.84-r3.ebuild,v 1.2 2007/11/24 21:11:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.84-r3.ebuild,v 1.3 2007/12/01 15:40:35 ulm Exp $
 
 inherit elisp eutils latex-package
 
@@ -38,7 +38,7 @@ src_compile() {
 		--with-auto-dir="/var/lib/auctex" \
 		--with-lispdir="${SITELISP}/${PN}" \
 		--with-packagelispdir="${SITELISP}/${PN}" \
-		--with-packagedatadir="/usr/share/emacs/etc/${PN}" \
+		--with-packagedatadir="${SITEETC}/${PN}" \
 		--with-texmf-dir="${TEXMF}" \
 		$(use_enable preview-latex preview) || die "econf failed"
 	emake || die "emake failed"
