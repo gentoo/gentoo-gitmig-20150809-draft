@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gnuserv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.23 2007/10/31 07:51:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.24 2007/12/01 11:23:28 opfer Exp $
+
+  01 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  gnuserv-3.12.8.ebuild:
+  stable x86/amd64
 
 *gnuserv-3.12.8 (31 Oct 2007)
 
