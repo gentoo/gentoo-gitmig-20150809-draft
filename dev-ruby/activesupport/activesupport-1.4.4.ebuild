@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-1.4.4.ebuild,v 1.5 2007/10/21 15:07:09 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-1.4.4.ebuild,v 1.6 2007/12/01 09:13:41 corsair Exp $
 
 inherit ruby gems
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://rubyforge.org/projects/activesupport/"
 
 LICENSE="MIT"
 SLOT="1.2"
-KEYWORDS="amd64 ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8.5
