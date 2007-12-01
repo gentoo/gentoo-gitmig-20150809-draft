@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/dbench
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.24 2007/10/03 06:11:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.25 2007/12/01 16:45:05 jer Exp $
+
+  01 Dec 2007; Jeroen Roovers <jer@gentoo.org> dbench-3.04.ebuild:
+  dbench has no hard dependency on sys-apps/attr. Removed
 
   03 Oct 2007; Tom Gall <tgall@gentoo.org> dbench-3.04.ebuild:
   stable on ppc64
