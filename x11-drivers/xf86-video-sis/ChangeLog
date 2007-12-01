@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-sis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sis/ChangeLog,v 1.29 2007/09/09 15:46:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sis/ChangeLog,v 1.30 2007/12/01 20:20:48 dberkholz Exp $
+
+*xf86-video-sis-0.9.4 (01 Dec 2007)
+
+  01 Dec 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-sis-0.9.4.ebuild:
+  (#167256, #189456) Bump. Should fix DRI.
 
   09 Sep 2007; Raúl Porcel <armin76@gentoo.org>
   xf86-video-sis-0.9.3.ebuild:
