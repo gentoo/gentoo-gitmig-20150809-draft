@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/elscreen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.17 2007/11/06 08:53:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.18 2007/12/01 17:49:43 ulm Exp $
+
+  01 Dec 2007; Ulrich Mueller <ulm@gentoo.org> -files/60elscreen-gentoo.el,
+  -elscreen-1.4.5.ebuild:
+  Remove old.
 
   06 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   elscreen-1.4.5-r1.ebuild:
