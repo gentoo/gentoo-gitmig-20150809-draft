@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.131 2007/11/29 05:54:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.132 2007/12/01 17:25:01 corsair Exp $
+
+  01 Dec 2007; Markus Rothe <corsair@gentoo.org> gtkhtml-3.2.5.ebuild:
+  Stable on ppc64
 
   29 Nov 2007; Jeroen Roovers <jer@gentoo.org> gtkhtml-3.16.1.ebuild:
   Stable for HPPA (bug #199740).
