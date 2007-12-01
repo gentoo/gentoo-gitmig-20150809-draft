@@ -1,6 +1,16 @@
---- configure.in.bak	2007-11-29 22:29:42.000000000 -0500
-+++ configure.in	2007-11-29 22:30:06.000000000 -0500
-@@ -59,10 +59,9 @@
+--- configure.in.bak	2007-12-01 11:45:51.000000000 -0500
++++ configure.in	2007-12-01 11:46:42.000000000 -0500
+@@ -33,6 +33,9 @@
+ PB_OBJECTS=
+ PB_LIBS=
+ 
++### Setup PKG_CONFIG
++PKG_PROG_PKG_CONFIG
++
+ if test "x$laptop" != "x"; then
+     ac_laptop=$laptop
+ elif test "x$LAPTOP" != "x"; then
+@@ -59,10 +62,9 @@
  		AC_CHECK_HEADERS([smbios/SystemInfo.h],
  			AC_DEFINE_UNQUOTED(WITH_SMBIOS, 1, [SMBIOS available]),
  			AC_MSG_ERROR([SMBios library not available. Please install development files for libsmbios.]), [/* dummy */])

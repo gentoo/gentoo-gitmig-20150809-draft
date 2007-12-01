@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.1-r2.ebuild,v 1.2 2007/11/30 03:38:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.1-r2.ebuild,v 1.3 2007/12/01 16:52:36 josejx Exp $
 
 inherit autotools flag-o-matic eutils
 
@@ -13,7 +13,10 @@ SLOT="0"
 KEYWORDS="ppc ~x86"
 IUSE="acpi alsa debug doc ibam macbook oss"
 
-DEPEND="macbook? ( sys-libs/libsmbios )
+DEPEND="macbook? (
+			sys-libs/libsmbios
+			sys-apps/pciutils
+		)
 		>=dev-libs/glib-2.6
 		doc? ( app-doc/doxygen )"
 RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0 )
