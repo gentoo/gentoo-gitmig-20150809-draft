@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.196 2007/12/01 16:01:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.197 2007/12/01 16:09:02 cardoe Exp $
+
+*mythtv-0.20.2_p14972 (01 Dec 2007)
+
+  01 Dec 2007; Doug Klima <cardoe@gentoo.org> +mythtv-0.20.2_p14972.ebuild:
+  Fixes crashers in network control. Additional Firewire vendor/device IDs.
+  ATSC EIT fixes
 
 *mythtv-0.21_p15014 (01 Dec 2007)
 
