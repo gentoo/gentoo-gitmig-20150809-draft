@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071122.ebuild,v 1.1 2007/11/30 14:20:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071122.ebuild,v 1.2 2007/12/01 02:52:55 matsuu Exp $
 
 TETEX_PV=3.0_p1
 
@@ -91,6 +91,8 @@ make_option vartexfonts="${T}/texfonts"
 make_option CC="$(tc-getCC)"
 make_option CXX="$(tc-getCXX)"
 JAPANESE=international
+XDVI=echo
+PXDVI=echo
 PLATEX209=no
 conf_option --without-dviljk
 conf_option --without-dvipng
@@ -135,6 +137,7 @@ EOF
 	else
 		echo "conf_option --without-x" >> "${S}"/my_option
 		echo "conf_option --without-xdvik" >> "${S}"/my_option
+		echo "conf_option --without-pxdvik" >> "${S}"/my_option
 	fi
 
 	cd "${S}"
@@ -153,7 +156,8 @@ EOF
 	epatch "${FILESDIR}/tetex-${TETEX_PV}-mptest.patch"
 
 	#bug 98029
-	epatch "${FILESDIR}/${P}-fmtutil-etex.patch"
+	# no need
+	#epatch "${FILESDIR}/${P}-fmtutil-etex.patch"
 
 	#bug 115775
 	# ptex included
@@ -256,7 +260,7 @@ src_install() {
 	rm -r "${D}"/usr/share/texmf/web2c/texmf.cnf.*
 	rm -r "${D}"/usr/share/texmf/web2c/fmtutil.cnf.*
 	rm -r "${D}"/usr/info/dir
-	#find "${D}"/usr/share/texmf | grep "ls-R" | xargs rm -f
+	find "${D}"/usr/share/texmf | grep "ls-R" | xargs rm -f
 
 	einfo "Installing texmf-update scripte ..."
 	dosbin "${FILESDIR}"/texmf-update
