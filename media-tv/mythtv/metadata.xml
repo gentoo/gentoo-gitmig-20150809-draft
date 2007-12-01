@@ -5,4 +5,12 @@
 <maintainer>
 	<email>cardoe@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name="video_cards_i810">When combined with the xvmc USE flag, enables
+	Intel specific XvMC extension usage.</flag>
+	<flag name="video_cards_nvidia">When combined with the xvmc USE flag,
+		enables NVIDIA specific XvMC extension usage.</flag>
+	<flag name="video_cards_via">When combined with the xvmc USE flag, enables
+		VIA specific XvMC extension usage.</flag>
+</use>
 </pkgmetadata>
