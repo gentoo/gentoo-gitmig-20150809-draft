@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.20 2007/08/28 14:38:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.21 2007/12/01 19:47:49 rbu Exp $
+
+*libnl-1.0_pre6-r1 (01 Dec 2007)
+
+  01 Dec 2007; Robert Buchholz <rbu@gentoo.org>
+  +files/libnl-1.0_pre6-__u64_x86_64.patch, +libnl-1.0_pre6-r1.ebuild:
+  Non maintainer commit: Bump to the actual pre6 release (bug #197450) and do
+  not install pkgconfig file to /usr/share (bug #185878).
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> libnl-1.0_pre6.ebuild:
   Stable on ppc wrt bug 189781
