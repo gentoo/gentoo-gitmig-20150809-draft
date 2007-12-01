@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/linuxtv-dvb-apps
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.37 2007/11/27 10:04:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.38 2007/12/01 21:41:22 zzam Exp $
+
+*linuxtv-dvb-apps-1.1.1.20071201 (01 Dec 2007)
+
+  01 Dec 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +linuxtv-dvb-apps-1.1.1.20071201.ebuild:
+  Added new snapshot. This solves Bug #200608
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
   linuxtv-dvb-apps-1.1.0.ebuild, linuxtv-dvb-apps-1.1.1.20060917.ebuild,
