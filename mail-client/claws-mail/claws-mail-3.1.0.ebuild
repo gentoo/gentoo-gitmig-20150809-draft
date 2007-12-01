@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.1.0.ebuild,v 1.2 2007/11/30 19:22:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.1.0.ebuild,v 1.3 2007/12/01 20:01:02 ticho Exp $
 
-IUSE="bogofilter clamav crypt dillo doc gnome imap ipv6 kde ldap nntp pda session spell ssl startup-notification xface"
+IUSE="bogofilter clamav crypt dillo doc gnome gnutls imap ipv6 kde ldap nntp pda session spamassassin spell ssl startup-notification xface"
 
 inherit eutils multilib
 
@@ -33,6 +33,7 @@ COMMONDEPEND=">=x11-libs/gtk+-2.6
 	imap? ( >=net-libs/libetpan-0.49 )
 	nntp? ( >=net-libs/libetpan-0.49 )
 	gnome? ( >=gnome-base/libgnomeprintui-2.2 )
+	gnutls? ( net-libs/gnutls )
 	startup-notification? ( x11-libs/startup-notification )
 	bogofilter? ( mail-filter/bogofilter )
 	session? ( x11-libs/libSM
@@ -64,6 +65,7 @@ src_compile() {
 	myconf="${myconf} `use_enable ldap`"
 	myconf="${myconf} `use_enable pda jpilot`"
 	myconf="${myconf} `use_enable spell aspell`"
+	myconf="${myconf} `use_enable gnutls`"
 	myconf="${myconf} `use_enable ssl openssl`"
 	myconf="${myconf} `use_enable xface compface`"
 	myconf="${myconf} `use_enable doc manual`"
