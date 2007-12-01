@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0-r3.ebuild,v 1.4 2007/11/28 21:52:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0-r3.ebuild,v 1.5 2007/12/01 12:50:13 nixnut Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.minet.uni-jena.de/~topical/sveng/wmail/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="x11-libs/libdockapp"
