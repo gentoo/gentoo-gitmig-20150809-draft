@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.3.ebuild,v 1.1 2007/11/25 12:16:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.3.ebuild,v 1.2 2007/12/01 20:51:37 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -131,8 +131,6 @@ src_install() {
 
 	insinto /etc/splash
 	doins "${SM}"/fbtruetype/luxisri.ttf
-
-	dodoc docs/* README AUTHORS
 
 	if has_version ">=sys-apps/baselayout-1.13.99"; then
 		cd "${SG}"
