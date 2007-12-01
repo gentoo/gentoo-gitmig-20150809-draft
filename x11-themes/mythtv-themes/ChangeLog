@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.39 2007/10/15 16:03:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.40 2007/12/01 16:06:38 cardoe Exp $
+
+*mythtv-themes-0.21_pre14992 (01 Dec 2007)
+
+  01 Dec 2007; Doug Klima <cardoe@gentoo.org>
+  mythtv-themes-0.20.2_p14301.ebuild, -mythtv-themes-0.21_pre14221.ebuild,
+  mythtv-themes-0.21_pre14467.ebuild, +mythtv-themes-0.21_pre14992.ebuild:
+  newer trunk revision. fix quoting per repoman
 
   15 Oct 2007; Doug Goldstein <cardoe@gentoo.org>
   -mythtv-themes-0.20.1.ebuild, -mythtv-themes-0.20.1_p14221.ebuild:
