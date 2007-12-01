@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/lookup
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/ChangeLog,v 1.14 2007/10/30 21:26:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/ChangeLog,v 1.15 2007/12/01 00:08:26 opfer Exp $
+
+  01 Dec 2007; Christian Faulhammer <opfer@gentoo.org> lookup-1.4.1.ebuild:
+  stable amd64, bug 195512
 
   30 Oct 2007; Ulrich Mueller <ulm@gentoo.org> -files/50lookup-gentoo.el,
   -lookup-1.4.ebuild, -lookup-1.4-r1.ebuild:
