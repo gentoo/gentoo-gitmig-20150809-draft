@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.1.ebuild,v 1.4 2007/12/01 21:24:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.1.ebuild,v 1.5 2007/12/01 22:19:47 angelos Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -19,7 +19,7 @@ SRC_URI="ftp://rumba.gsfc.nasa.gov/pub/${PN}/dist/${MY_P}/unix/${MY_P}-dist-${PN
 
 LICENSE="CDF"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="ncurses java doc examples"
 
 RDEPEND="ncurses? ( sys-libs/ncurses )"
