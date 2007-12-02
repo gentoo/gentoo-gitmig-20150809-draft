@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Time-TAI64
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-TAI64/ChangeLog,v 1.1 2007/12/02 10:06:23 robbat2 Exp $
+
+*Time-TAI64-2.11 (02 Dec 2007)
+
+  02 Dec 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +Time-TAI64-2.11.ebuild:
+  New package. Dependancy for WattsUp-Daemon. Ebuild by Robin H. Johnson
+  <robbat2@gentoo.org>.
+
