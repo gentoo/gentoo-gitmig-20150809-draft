@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.9.0.ebuild,v 1.1 2007/12/02 16:28:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.9.0.ebuild,v 1.2 2007/12/02 16:43:57 drac Exp $
 
 EAPI=1
 
@@ -59,6 +59,8 @@ pkg_setup() {
 		XFCE_CONFIG="${XFCE_CONFIG} --enable-dbus"
 		ewarn "USE trash-plugin detected, enabling dbus for you."
 	fi
+
+	use trash-plugin || XFCE_CONFIG="${XFCE_CONFIG} --disable-tpa-plugin"
 
 	if use hal && ! use dbus; then
 		ewarn "USE hal detected, enabling dbus for you."
