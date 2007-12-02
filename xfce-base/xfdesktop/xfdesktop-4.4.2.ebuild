@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.4.2.ebuild,v 1.2 2007/12/02 17:14:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.4.2.ebuild,v 1.3 2007/12/02 20:52:06 drac Exp $
 
 EAPI=1
 
@@ -37,12 +37,14 @@ for X in ${LANG}; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-XFCE_CONFIG="${XFCE_CONFIG} $(use_enable doc xsltproc) $(use_enable menu-plugin panel-plugin) --enable-exo"
 DOCS="AUTHORS ChangeLog NEWS TODO README"
+
 XFCE_LOCALIZED_CONFIGS="/etc/xdg/xfce4/desktop/xfce-registered-categories.xml
 	/etc/xdg/xfce4/desktop/menu.xml"
 
 pkg_setup() {
+	XFCE_CONFIG="${XFCE_CONFIG} $(use_enable doc xsltproc) $(use_enable menu-plugin panel-plugin) --enable-exo"
+
 	if use dbus; then
 		XFCE_CONFIG="${XFCE_CONFIG} --enable-thunarx --enable-file-icons"
 	else
