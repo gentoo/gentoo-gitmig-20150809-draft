@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3177 2007/12/02 16:29:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3178 2007/12/02 17:15:11 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2246,9 +2246,10 @@ x11-wm/stumpwm-cvs:clisp - Use CLISP for the runtime
 x11-wm/stumpwm-cvs:sbcl - Use SBCL for the runtime
 x11-wm/vtwm:rplay - Enable rplay support, needed for sound.
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
-xfce-base/thunar:trash-plugin - Enable trash panel plugin.
+xfce-base/thunar:trash-plugin - Enable panel trash plugin.
 xfce-base/xfce4-extras:battery - Meta pulls in xfce4-battery dependency.
 xfce-base/xfce4-extras:cpufreq - Meta pulls in xfce4-cpu-freq dependency.
+xfce-base/xfdesktop:menu-plugin - Enable panel menu plugin.
 xfce-extra/thunar-thumbnailers:grace - Enable support for grace thumbnails.
 xfce-extra/thunar-thumbnailers:latex - Enable support for latex thumbnails.
 xfce-extra/thunar-thumbnailers:raw - Enable support for raw image thumbnails.
