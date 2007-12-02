@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/mockobjects
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.20 2007/10/24 05:40:22 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.21 2007/12/02 13:37:30 caster Exp $
+
+*mockobjects-0.09-r3 (02 Dec 2007)
+
+  02 Dec 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/mockobjects-0.09-java15.patch, +mockobjects-0.09-r3.ebuild:
+  Revbump with patch to build with jdk 1.5 to satisfy ricers. Patch from bug
+  #119080 by Mathias Hasselmann <mathias.hasselmann@gmx.de>. Forcing javac to
+  compile because ecj doesn't like something in 1.5 API.
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -mockobjects-0.09.ebuild, -mockobjects-0.09-r1.ebuild:
