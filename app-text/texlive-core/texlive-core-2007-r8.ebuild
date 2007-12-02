@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r8.ebuild,v 1.3 2007/12/02 22:35:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r8.ebuild,v 1.4 2007/12/02 23:56:38 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -221,6 +221,11 @@ src_install() {
 
 	mv "${D}${TEXMF_PATH}/web2c/updmap.cfg"	"${D}/etc/texmf/updmap.d/00updmap.cfg" || die "moving updmap.cfg failed"
 
+	# dvips config file
+	keepdir /etc/texmf/dvips/config
+	dodir /etc/texmf/dvips.d
+	mv "${D}${TEXMF_PATH}/dvips/config/config.ps" "${D}/etc/texmf/dvips.d/00${PN}-config.ps" || die "moving config.ps failed"
+
 	# Create symlinks from format to engines
 	# This will avoid having to call texlinks in texmf-update
 	cd "${S}"
@@ -235,6 +240,7 @@ src_install() {
 	dosym /etc/texmf/web2c/fmtutil.cnf ${TEXMF_PATH}/web2c/fmtutil.cnf
 	dosym /etc/texmf/web2c/texmf.cnf ${TEXMF_PATH}/web2c/texmf.cnf
 	dosym /etc/texmf/web2c/updmap.cfg ${TEXMF_PATH}/web2c/updmap.cfg
+	dosym /etc/texmf/dvips/config/config.ps ${TEXMF_PATH}/dvips/config/config.ps
 
 	# the virtex symlink is not installed
 	# The links has to be relative, since the targets
