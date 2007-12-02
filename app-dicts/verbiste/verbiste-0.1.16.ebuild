@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.16.ebuild,v 1.7 2007/07/11 05:41:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.16.ebuild,v 1.8 2007/12/02 18:12:48 tester Exp $
 
 inherit autotools eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 
 	gettext_modify
 
-	cd ${S}
+	cd "${S}"
 	"${T}"/gettextize --force --intl --copy
 	AT_M4DIR=macros eautoreconf
 }
@@ -46,6 +46,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "can't install"
+	make install DESTDIR="${D}" || die "can't install"
 	dodoc AUTHORS ChangeLog HACKING LISEZMOI NEWS README THANKS TODO
 }
