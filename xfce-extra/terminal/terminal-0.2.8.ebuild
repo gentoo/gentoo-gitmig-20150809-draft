@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.8.ebuild,v 1.1 2007/12/02 15:38:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.8.ebuild,v 1.2 2007/12/02 15:50:05 drac Exp $
 
 inherit xfce44
 
@@ -34,9 +34,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	doc? ( dev-libs/libxslt )"
 
-XFCE_CONFIG="${XFCE_CONFIG} $(use_enable dbus) $(use_enable doc xsltproc) \
-	--enable-maintainer-mode"
-
+XFCE_CONFIG="${XFCE_CONFIG} $(use_enable dbus) $(use_enable doc xsltproc)"
 DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS TODO"
 
 xfce44_extra_package
