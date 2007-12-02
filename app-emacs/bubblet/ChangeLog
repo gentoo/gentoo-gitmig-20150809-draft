@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/bubblet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bubblet/ChangeLog,v 1.11 2007/10/07 09:20:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bubblet/ChangeLog,v 1.12 2007/12/02 23:45:53 opfer Exp $
+
+  02 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  bubblet-0.74-r1.ebuild:
+  amd64 stable
 
   07 Oct 2007; Ulrich Mueller <ulm@gentoo.org> -files/50bubblet-gentoo.el,
   -bubblet-0.74.ebuild:
