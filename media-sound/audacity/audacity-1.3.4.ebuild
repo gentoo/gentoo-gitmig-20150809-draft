@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.4.ebuild,v 1.5 2007/11/25 02:45:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.4.ebuild,v 1.6 2007/12/02 13:27:19 aballier Exp $
 
 inherit eutils wxwidgets
 
@@ -85,7 +85,4 @@ src_install() {
 
 	# Install our docs
 	dodoc README.txt
-
-	insinto /usr/share/audacity/
-	newins images/AudacityLogo48x48.xpm audacity.xpm
 }

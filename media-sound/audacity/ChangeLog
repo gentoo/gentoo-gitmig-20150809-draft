@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.73 2007/11/25 02:45:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.74 2007/12/02 13:27:19 aballier Exp $
+
+  02 Dec 2007; Alexis Ballier <aballier@gentoo.org> audacity-1.3.4.ebuild:
+  no need to manually install the icon as the makefiles handle them; thanks to
+  Richard Ash <richard@audacityteam.org>, bug #200870
 
   25 Nov 2007; Brent Baude <ranger@gentoo.org> audacity-1.3.4.ebuild:
   Marking audacity-1.3.4 ~ppc for bug 199390
