@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.13 2007/07/15 09:24:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.14 2007/12/02 22:42:22 maekke Exp $
+
+*ufraw-0.13 (02 Dec 2007)
+
+  02 Dec 2007; Markus Meier <maekke@gentoo.org>
+  +files/ufraw-0.13-cflags.patch, +ufraw-0.13.ebuild:
+  bump to 0.13, bug #187933
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to graphics, as nattfodd is being retired (#108329).
