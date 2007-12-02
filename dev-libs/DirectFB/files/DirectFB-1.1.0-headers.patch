@@ -1,0 +1,46 @@
+Don't rely on the kernel to tell us what the cpu target is ... we'll just
+use the default values all the time instead.
+
+http://bugs.gentoo.org/152614
+
+--- lib/direct/ppcasm_memcpy_cachable.S
++++ lib/direct/ppcasm_memcpy_cachable.S
+@@ -34,8 +34,6 @@
+ 
+ #define __ASSEMBLY__
+ 
+-#include <linux/config.h>
+-
+ #if defined(CONFIG_8xx) || defined(CONFIG_403GCX)
+ #define L1_CACHE_LINE_SIZE       16
+ #define LG_L1_CACHE_LINE_SIZE     4 
+
+Don't pollute the namespace with define hacks, just use the real deal.
+
+--- include/dfb_types.h
++++ include/dfb_types.h
+@@ -60,6 +60,8 @@
+ 
+ #endif
+ 
++#include <asm/types.h>
++#define DIRECTFB_NO_CRUFT
+ #ifndef DIRECTFB_NO_CRUFT
+ #define __u8   u8
+ #define __u16  u16
+
+some arches (*cough* powerpc *cough*) are retarded and export a completely
+worthless asm/page.h ... so set a fallback for PAGE_SIZE
+
+--- lib/direct/system.c
++++ lib/direct/system.c
+@@ -35,7 +35,8 @@
+ 
+ #if HAVE_ASM_PAGE_H
+ #include <asm/page.h>
+-#else
++#endif
++#ifndef PAGE_SIZE
+ #define PAGE_SIZE   sysconf( _SC_PAGESIZE )
+ #endif
+ 
