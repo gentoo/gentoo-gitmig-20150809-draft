@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/DirectFB-extra
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.19 2007/08/16 16:42:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.20 2007/12/02 22:29:43 vapier Exp $
+
+*DirectFB-extra-1.0.0-r1 (02 Dec 2007)
+
+  02 Dec 2007; Mike Frysinger <vapier@gentoo.org>
+  +DirectFB-extra-1.0.0-r1.ebuild:
+  Add support for USE="ffmpeg fusion svg zlib" as proposed by Christian
+  Ruppert (idl0r) in #171582.
 
 *DirectFB-extra-1.0.0 (16 Aug 2007)
 
