@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/asio-0.3.8.ebuild,v 1.1 2007/12/01 18:28:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/asio-0.3.8.ebuild,v 1.2 2007/12/02 01:47:28 mr_bones_ Exp $
 
 inherit eutils
 
@@ -48,4 +48,3 @@ src_install() {
 		doins -r src/examples
 	fi
 }
-
