@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.164 2007/11/16 14:56:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.165 2007/12/02 13:08:36 corsair Exp $
+
+  02 Dec 2007; Markus Rothe <corsair@gentoo.org> lirc-0.8.2-r2.ebuild:
+  Stable on ppc64; bug #197768
 
   16 Nov 2007; Steve Dibb <beandog@gentoo.org> lirc-0.8.2-r2.ebuild:
   amd64 stable, bug 197768
