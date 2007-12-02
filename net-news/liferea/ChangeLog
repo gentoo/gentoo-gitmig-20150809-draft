@@ -1,6 +1,25 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.134 2007/11/23 19:59:32 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.135 2007/12/02 04:01:24 dang Exp $
+
+*liferea-1.4.9 (02 Dec 2007)
+
+  02 Dec 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.4.9.ebuild:
+  Bump to 1.4.9
+  	* Adds a Ctrl-W binding to close browser tabs.
+  	  (patch from Gustavo Chain)
+  	* Fixes SF #1836691 core dump when sqlite DB file is
+  	  already locked (reported by Kees Cook)
+  	* Fixes a crash when marking search folders as read.
+  	  (reported by goyko)
+  	* Fixes loose of feed description text after restarts.
+  	  (reported by Vincent Lefevre)
+  	* Fixes impossible use of --version/--help when 
+  	  Liferea is already running due to wrong check order.
+  	  (reported by Gustavo Chain) 
+  	* Fixes an assertion when changing search folder rules.
+  	* Fixes broken negative search folders rules
+  	  (Debian #453521, reported by Erich Schubert)
 
 *liferea-1.4.8 (23 Nov 2007)
 
