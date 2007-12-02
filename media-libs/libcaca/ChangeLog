@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.52 2007/12/02 16:57:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.53 2007/12/02 19:26:14 aballier Exp $
+
+  02 Dec 2007; Alexis Ballier <aballier@gentoo.org>
+  libcaca-0.99_beta13.ebuild:
+  inherit mono eclass to get temp dirs set up correctly and avoid sandbox
+  violations, bug #201015
 
   02 Dec 2007; Alexis Ballier <aballier@gentoo.org>
   libcaca-0.99_beta13.ebuild:

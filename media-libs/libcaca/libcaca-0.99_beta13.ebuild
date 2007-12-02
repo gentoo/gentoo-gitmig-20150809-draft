@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta13.ebuild,v 1.2 2007/12/02 16:57:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta13.ebuild,v 1.3 2007/12/02 19:26:14 aballier Exp $
 
-inherit eutils autotools libtool
+inherit eutils autotools libtool mono
 
 MY_P="${P/_beta/.beta}"
 
@@ -60,5 +60,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS BUGS ChangeLog NEWS NOTES README TODO
+	dodoc AUTHORS ChangeLog NEWS NOTES README TODO
 }
