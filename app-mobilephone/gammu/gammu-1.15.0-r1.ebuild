@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.15.0.ebuild,v 1.1 2007/12/01 09:36:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.15.0-r1.ebuild,v 1.1 2007/12/02 10:33:21 mrness Exp $
 
-inherit multilib
+inherit cmake-utils
 
 DESCRIPTION="a fork of the gnokii project, a tool to handle your cellular phone"
 HOMEPAGE="http://www.gammu.org"
@@ -40,40 +40,12 @@ src_unpack() {
 	done
 }
 
-my_use_with() {
-	local WITH_PREFIX
-	if [ -n "${2}" ]; then
-		WITH_PREFIX="-DWITH_${2}"
-	else
-		WITH_PREFIX="-DWITH_${1}"
-	fi
-	if use $1 ; then
-		echo ${WITH_PREFIX}=ON
-	else
-		echo ${WITH_PREFIX}=OFF
-	fi
-}
-
 src_compile() {
-	local myconf="$(my_use_with bluetooth Bluez) \
-		$(my_use_with irda IrDA) \
-		$(my_use_with mysql MySQL) \
-		$(my_use_with postgres Postgres)"
-	use debug && myconf="${myconf} -DCMAKE_BUILD_TYPE=Debug"
-
-	mkdir "${S}/build" && \
-		cd "${S}/build" && \
-		cmake .. \
-			-DCMAKE_INSTALL_PREFIX=/usr \
-			-DINSTALL_LIB_DIR=/usr/$(get_libdir) \
-			-DINSTALL_DOC_DIR="/usr/share/doc/${P}" \
-			-DENABLE_SHARED=ON \
-			-DHAVE_SIN=NO \
-			${myconf} || die "cmake failed"
-	emake || die "make failed"
-}
-
-src_install () {
-	cd "${S}/build"
-	make DESTDIR="${D}" install || die "install failed"
+	# debug flag is used inside cmake-utils.eclass
+	local mycmakeargs="$(cmake-utils_use_with bluetooth Bluez) \
+		$(cmake-utils_use_with irda IrDA) \
+		$(cmake-utils_use_with mysql MySQL) \
+		$(cmake-utils_use_with postgres Postgres) \
+		-DENABLE_SHARED=ON -DHAVE_SIN=NO"
+	cmake-utils_src_compile
 }

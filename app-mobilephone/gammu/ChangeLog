@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.46 2007/12/01 09:36:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.47 2007/12/02 10:33:21 mrness Exp $
+
+*gammu-1.15.0-r1 (02 Dec 2007)
+
+  02 Dec 2007; Alin Năstac <mrness@gentoo.org> -gammu-1.15.0.ebuild,
+  +gammu-1.15.0-r1.ebuild:
+  Inherit cmake-utils.eclass.
 
 *gammu-1.15.0 (01 Dec 2007)
 
