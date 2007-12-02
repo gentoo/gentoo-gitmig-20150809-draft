@@ -1,9 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/mousepad/mousepad-0.2.13.ebuild,v 1.1 2007/11/18 07:40:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/mousepad/mousepad-0.2.13.ebuild,v 1.2 2007/12/02 20:53:11 drac Exp $
 
 inherit xfce44
 
+XFCE_VERSION=4.4.2
 xfce44
 
 DESCRIPTION="Text editor"
