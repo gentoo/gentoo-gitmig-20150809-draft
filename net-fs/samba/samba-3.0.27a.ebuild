@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.27a.ebuild,v 1.7 2007/11/24 05:57:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.27a.ebuild,v 1.8 2007/12/02 18:28:55 dev-zero Exp $
 
 inherit eutils pam python multilib versionator confutils
 
@@ -298,6 +298,10 @@ pkg_postinst() {
 
 	elog "The mount/umount.cifs helper applications are not included anymore."
 	elog "Please install net-fs/mount-cifs instead."
+
+	ewarn "If you're upgrading from 3.0.24 or earlier, please make sure to"
+	ewarn "restart your clients to clear any cached information about the server."
+	ewarn "Otherwise they might not be able to connect to the volumes."
 }
 
 pkg_postrm() {
