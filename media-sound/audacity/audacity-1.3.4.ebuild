@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.4.ebuild,v 1.6 2007/12/02 13:27:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.4.ebuild,v 1.7 2007/12/02 13:59:34 aballier Exp $
 
 inherit eutils wxwidgets
 
@@ -50,7 +50,6 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
 	WX_GTK_VER="2.6"
 
 	if use unicode; then
@@ -71,8 +70,7 @@ src_compile() {
 		$(use_with twolame libtwolame) \
 		$(use_with soundtouch) \
 		$(use_with libsamplerate) \
-		--without-libresample \
-		${myconf} || die
+		|| die
 
 	emake || die
 }
