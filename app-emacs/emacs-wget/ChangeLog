@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-wget
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.17 2007/10/06 20:42:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.18 2007/12/02 14:41:42 opfer Exp $
+
+  02 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  emacs-wget-0.5.0.ebuild:
+  stable amd64
 
   06 Oct 2007; Ulrich Mueller <ulm@gentoo.org> -emacs-wget-0.4.2.ebuild:
   Remove old.
