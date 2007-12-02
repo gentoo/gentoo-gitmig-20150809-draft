@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.383 2007/11/28 11:27:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.384 2007/12/02 13:11:11 corsair Exp $
+
+  02 Dec 2007; Markus Rothe <corsair@gentoo.org>
+  vanilla-sources-2.6.23.9.ebuild:
+  Stable on ppc64; bug #200994
 
   28 Nov 2007; Markus Rothe <corsair@gentoo.org>
   vanilla-sources-2.6.22.9.ebuild:
