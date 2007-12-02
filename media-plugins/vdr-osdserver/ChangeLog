@@ -1,0 +1,12 @@
+# ChangeLog for media-plugins/vdr-osdserver
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdserver/ChangeLog,v 1.1 2007/12/02 16:02:36 hd_brummy Exp $
+
+*vdr-osdserver-0.1.1 (02 Dec 2007)
+
+  02 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-osdserver-0.1.1-gentoo.diff, +files/confd,
+  +files/osdserverhosts.conf, +files/rc-addon.sh, +metadata.xml,
+  +vdr-osdserver-0.1.1.ebuild:
+  initial ebuild, tanks to Guido Zuliani on bug 200903
+
