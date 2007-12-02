@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.64 2007/12/01 10:42:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.65 2007/12/02 09:48:19 mrness Exp $
+
+*gnokii-0.6.22-r1 (02 Dec 2007)
+
+  02 Dec 2007; Alin Năstac <mrness@gentoo.org> -gnokii-0.6.22.ebuild,
+  +gnokii-0.6.22-r1.ebuild:
+  Install headers and pkgconfig files (#200952).
 
 *gnokii-0.6.22 (01 Dec 2007)
 

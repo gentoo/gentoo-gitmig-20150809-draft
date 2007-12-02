@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22.ebuild,v 1.1 2007/12/01 10:42:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r1.ebuild,v 1.1 2007/12/02 09:48:19 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -107,7 +107,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "make install failed"
+	einstall install-includes || die "make install failed"
 
 	if use X; then
 		insinto /usr/share/pixmaps
