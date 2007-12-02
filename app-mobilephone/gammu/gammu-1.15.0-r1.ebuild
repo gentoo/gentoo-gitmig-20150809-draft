@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.15.0-r1.ebuild,v 1.1 2007/12/02 10:33:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.15.0-r1.ebuild,v 1.2 2007/12/02 10:35:38 mrness Exp $
 
 inherit cmake-utils
 
@@ -46,6 +46,6 @@ src_compile() {
 		$(cmake-utils_use_with irda IrDA) \
 		$(cmake-utils_use_with mysql MySQL) \
 		$(cmake-utils_use_with postgres Postgres) \
-		-DENABLE_SHARED=ON -DHAVE_SIN=NO"
+		-DENABLE_SHARED=ON"
 	cmake-utils_src_compile
 }
