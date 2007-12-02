@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta13.ebuild,v 1.1 2007/12/02 16:22:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta13.ebuild,v 1.2 2007/12/02 16:57:27 aballier Exp $
 
 inherit eutils autotools libtool
 
@@ -24,7 +24,8 @@ RDEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
 	ruby? ( virtual/ruby )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen
-		virtual/latex-base )"
+		virtual/latex-base
+		|| ( dev-texlive/texlive-fontsrecommended virtual/tetex ) )"
 
 S="${WORKDIR}/${MY_P}"
 
