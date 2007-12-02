@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mell
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/ChangeLog,v 1.15 2007/07/04 23:13:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/ChangeLog,v 1.16 2007/12/02 15:14:47 opfer Exp $
+
+  02 Dec 2007; Christian Faulhammer <opfer@gentoo.org> mell-1.0.0.ebuild:
+  only install useful documentation and make dodoc argument readable
 
   04 Jul 2007; Christian Faulhammer <opfer@gentoo.org> mell-1.0.0.ebuild:
   removed virtual/emacs from DEPEND; relocated IUSE; reordered KEYWORDS; added

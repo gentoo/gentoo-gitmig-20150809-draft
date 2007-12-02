@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/mell-1.0.0.ebuild,v 1.13 2007/07/04 23:13:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/mell-1.0.0.ebuild,v 1.14 2007/12/02 15:14:47 opfer Exp $
 
 inherit elisp
 
@@ -29,6 +29,6 @@ src_install() {
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	dosed "${SITELISP}/init-mell.el" || die "dosed failed"
 
-	dodoc [A-Z][A-Z]* ChangeLog
+	dodoc README AUTHORS NEWS ChangeLog
 
 }
