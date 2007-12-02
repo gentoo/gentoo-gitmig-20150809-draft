@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.2.ebuild,v 1.1 2007/11/30 15:39:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.2.ebuild,v 1.2 2007/12/02 21:19:08 drac Exp $
 
 DESCRIPTION="Meta ebuild for panel plugins and extra applications"
 HOMEPAGE="http://www.xfce.org"
@@ -37,8 +37,7 @@ RDEPEND=">=xfce-extra/xfce4-time-out-0.1.1
 	>=xfce-extra/thunar-thumbnailers-0.3
 	>=xfce-extra/thunar-archive-0.2.4-r1
 	>=xfce-extra/thunar-media-tags-0.1.2
-	>=xfce-extra/ristretto-0.0.13
-	hal? ( >=xfce-extra/thunar-volman-0.1.3_pre20071026 )
+	hal? ( >=xfce-extra/thunar-volman-0.2.0 )
 	cpufreq? ( >=xfce-extra/xfce4-cpu-freq-0.0.1 )
 	gnome? ( >=xfce-extra/xfce4-xfapplet-0.1 )
 	battery? ( >=xfce-extra/xfce4-battery-0.5.0-r2 )
