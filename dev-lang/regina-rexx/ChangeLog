@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/regina-rexx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.18 2007/08/13 20:16:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.19 2007/12/02 13:29:50 opfer Exp $
+
+  02 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  regina-rexx-3.3.ebuild:
+  fix shebang line in example scripts, x86 stable, bug 200973
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   regina-rexx-3.3.ebuild:
