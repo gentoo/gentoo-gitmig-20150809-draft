@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7966 2007/12/02 21:07:05 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7967 2007/12/02 21:44:29 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -134,34 +134,6 @@ app-admin/eselect-wxwidgets
 # an incomplete fix for the non-remote vulnerability
 # CVE-2007-4572
 =net-fs/samba-3.0.27
-
-# Samuli Suominen <drac@gentoo.org> (18 Nov 2007)
-# Based on Xfce 4.4.2 testing tarballs at
-# http://mocha.xfce.org/archive/.testing/xfce-4.4.2/src
-# Content and digest might still change, be careful.
-=xfce-base/libxfce4mcs-4.4.2*
-=xfce-base/libxfce4util-4.4.2*
-=xfce-base/libxfcegui4-4.4.2*
-=xfce-base/orage-4.4.2*
-=xfce-base/xfce-mcs-manager-4.4.2*
-=xfce-base/xfce-mcs-plugins-4.4.2*
-=xfce-base/xfce-utils-4.4.2*
-=xfce-base/xfce4-4.4.2*
-=xfce-base/xfce4-panel-4.4.2*
-=xfce-base/xfce4-session-4.4.2*
-=xfce-base/xfdesktop-4.4.2*
-=xfce-base/xfwm4-4.4.2*
-=xfce-base/xfprint-4.4.2*
-=xfce-base/xfce4-extras-4.4.2*
-=x11-themes/gtk-engines-xfce-2.4.2*
-=xfce-extra/xfce4-appfinder-4.4.2*
-=xfce-extra/xfwm4-themes-4.4.2*
-=xfce-extra/xfce4-mixer-4.4.2*
-=xfce-extra/xfce4-icon-theme-4.4.2*
-=xfce-extra/mousepad-0.2.13*
-=xfce-extra/exo-0.3.4*
-=xfce-extra/terminal-0.2.8*
-=xfce-base/thunar-0.9.0*
 
 # Doug Klima <cardoe@gentoo.org> (16 Nov 2007)
 # new heimdal version that's not too tested
