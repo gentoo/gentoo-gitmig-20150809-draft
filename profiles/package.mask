@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7962 2007/11/30 20:55:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7963 2007/12/02 15:10:35 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -147,6 +147,9 @@ app-admin/eselect-wxwidgets
 =xfce-extra/xfce4-mixer-4.4.2*
 =xfce-extra/xfce4-icon-theme-4.4.2*
 =xfce-extra/mousepad-0.2.13*
+=xfce-extra/exo-0.3.4*
+=xfce-extra/terminal-0.2.8*
+=xfce-base/thunar-0.9.0*
 
 # Doug Klima <cardoe@gentoo.org> (16 Nov 2007)
 # new heimdal version that's not too tested
