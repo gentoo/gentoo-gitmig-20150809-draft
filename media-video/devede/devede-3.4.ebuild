@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.2.ebuild,v 1.1 2007/10/11 17:28:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.4.ebuild,v 1.1 2007/12/02 11:34:43 drac Exp $
 
 inherit multilib python
 
@@ -21,16 +21,11 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	media-video/vcdimager
 	psyco? ( dev-python/psyco )
 	virtual/cdrtools"
-DEPEND="${RDEPEND}
-	sys-apps/sed"
-
-src_unpack() {
-	unpack ${A}
-	sed -i -e 's:usr/local:usr:g' "${S}"/install.sh
-}
+DEPEND="${RDEPEND}"
 
 src_install() {
-	./install.sh DESTDIR="${D}" || die "install.sh failed."
+	./install.sh prefix="/usr" libdir="/usr/$(get_libdir)" \
+		DESTDIR="${D}" || die "install.sh failed."
 	rm -rf "${D}"/usr/share/doc/devede
 	use doc && dohtml docs/*
 }
