@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11.3-r1.ebuild,v 1.1 2007/11/25 13:12:37 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11.3-r1.ebuild,v 1.2 2007/12/02 16:57:38 welp Exp $
 
 inherit multilib python eutils
 
@@ -68,8 +68,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-buddylist-fix.patch"
-	epatch "${FILESDIR}/${PV}-keyTabswitch-fix.patch"
+	epatch "${FILESDIR}/${PV}-misc-fixes.patch"
 }
 
 src_compile() {
