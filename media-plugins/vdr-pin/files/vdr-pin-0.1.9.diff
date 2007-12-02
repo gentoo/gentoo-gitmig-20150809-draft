@@ -1,0 +1,11 @@
+diff -Naur pin-0.1.9.orig/Makefile pin-0.1.9/Makefile
+--- pin-0.1.9.orig/Makefile	2007-12-02 19:22:47.000000000 +0100
++++ pin-0.1.9/Makefile	2007-12-02 19:23:10.000000000 +0100
+@@ -106,7 +106,6 @@
+ 
+ fskcheck: $(CMDOBJS)
+ 	$(CXX) $(CXXFLAGS) $(CMDOBJS) -o $@
+-	@cp $@ $(FSKCHKDIR)
+ 
+ libvdr-$(PLUGIN).so: $(OBJS)
+ 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -shared $(OBJS) -o $@
