@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.12.ebuild,v 1.2 2007/08/09 11:12:06 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.14.ebuild,v 1.1 2007/12/02 14:54:18 wrobel Exp $
 
 inherit webapp versionator depend.php
 
+MY_PV=$(delete_all_version_separators)
 DESCRIPTION="Feature rich web picture gallery script written in PHP using GD or ImageMagick lib with a MySQL backend."
 HOMEPAGE="http://coppermine.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/cpg${PV}.zip"
+SRC_URI="mirror://sourceforge/${PN}/cpg${MY_PV}.zip"
 
 LICENSE="GPL-2"
 KEYWORDS="~sparc ~x86 ~amd64"
@@ -37,18 +38,18 @@ src_install() {
 	dodoc ${docs}
 
 	einfo "Installing main files"
-	cp -r * ${D}${MY_HTDOCSDIR}
+	cp -r * "${D}${MY_HTDOCSDIR}"
 	einfo "Done"
 
 	# owned files
-	dodir ${MY_HTDOCSDIR}/albums
-	webapp_serverowned ${MY_HTDOCSDIR}/albums
-	webapp_serverowned ${MY_HTDOCSDIR}/albums/userpics
-	webapp_serverowned ${MY_HTDOCSDIR}/albums/edit
-	webapp_serverowned ${MY_HTDOCSDIR}/include
+	dodir "${MY_HTDOCSDIR}"/albums
+	webapp_serverowned "${MY_HTDOCSDIR}"/albums
+	webapp_serverowned "${MY_HTDOCSDIR}"/albums/userpics
+	webapp_serverowned "${MY_HTDOCSDIR}"/albums/edit
+	webapp_serverowned "${MY_HTDOCSDIR}"/include
 
 	dohtml docs/*
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 
 	webapp_src_install
 }

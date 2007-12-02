@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/coppermine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.19 2007/09/18 04:20:51 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.20 2007/12/02 14:54:18 wrobel Exp $
+
+*coppermine-1.4.14 (02 Dec 2007)
+
+  02 Dec 2007; <wrobel@gentoo.org> -coppermine-1.4.12.ebuild,
+  -coppermine-1.4.13.ebuild, +coppermine-1.4.14.ebuild:
+  -m Updated to coppermine-1.4.14 in response to sec bug #198400. Removed
+  vulnerable versions.
 
 *coppermine-1.4.13 (18 Sep 2007)
 
