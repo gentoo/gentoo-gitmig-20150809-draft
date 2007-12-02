@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.451 2007/12/02 13:09:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.452 2007/12/02 20:33:06 tester Exp $
+
+  02 Dec 2007; Olivier Crête <tester@gentoo.org>
+  gentoo-sources-2.6.23-r3.ebuild:
+  Mark stable on amd64 for bug #200994
 
   02 Dec 2007; Markus Rothe <corsair@gentoo.org>
   gentoo-sources-2.6.23-r3.ebuild:
