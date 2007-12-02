@@ -1,6 +1,19 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.353 2007/10/21 07:04:28 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.354 2007/12/02 20:32:09 suka Exp $
+
+*openoffice-2.3.1_rc1 (02 Dec 2007)
+
+  02 Dec 2007; Andreas Proschofsky <suka@gentoo.org>
+  +files/2.3.1_rc1/regcompapply.diff,
+  +files/2.3.1_rc1/gentoo-2.3.1_rc1.diff,
+  +files/2.3.1_rc1/disable-regcomp-java.diff,
+  +files/2.3.1_rc1/ooo-env_log.diff,
+  +files/2.3.1_rc1/stlport-ppc-buildfix.diff,
+  +files/2.3.1_rc1/disable-regcomp-python.diff,
+  +files/2.3.1_rc1/stlport-ppc-buildfix-apply.diff, openoffice-2.3.0.ebuild,
+  +openoffice-2.3.1_rc1.ebuild:
+  Add masked release candidate for openoffice 2.3.1
 
   21 Oct 2007; Andreas Proschofsky <suka@gentoo.org>
   -files/2.2.1/ooo-env_log.diff, -files/2.2.1/gentoo-2.2.1.diff,

@@ -1,0 +1,13 @@
+--- patches/src680/apply 
++++ patches/src680/apply 
+@@ -1087,6 +1087,9 @@
+ [ GentooOnly ]
+ SectionOwner => aprosky
+ 
++#fix build on ppc
++disable-regcomp-java.diff
++disable-regcomp-python.diff
+ # Allow build to proceed with PaX enabled
+ gentoo-pax-fix.diff, aprosky
+ # support server-only versions of 64bit JDKs
+

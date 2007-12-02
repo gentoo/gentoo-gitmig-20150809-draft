@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.0.ebuild,v 1.15 2007/12/02 20:32:09 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1_rc1.ebuild,v 1.1 2007/12/02 20:32:09 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -9,18 +9,19 @@ inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 
 
 IUSE="binfilter cairo cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono sound odk pam seamonkey webdav xulrunner"
 
-MY_PV="2.3.0.5"
+MY_PV="2.3.0.7"
+MY_PV2="2.3.1rc1"
 PATCHLEVEL="OOG680"
-SRC="OOo_${PV}_src"
+SRC="OOo_${MY_PV2}_src"
 S="${WORKDIR}/ooo"
 S_OLD="${WORKDIR}/ooo-build-${MY_PV}"
 CONFFILE="${S}/distro-configs/Gentoo.conf.in"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
 
-SRC_URI="mirror://openoffice/stable/${PV}/${SRC}_core.tar.bz2
-	binfilter? ( mirror://openoffice/stable/${PV}/${SRC}_binfilter.tar.bz2 )
+SRC_URI="mirror://openoffice/contrib/rc/${MY_PV2}/${SRC}_core.tar.bz2
+	binfilter? ( mirror://openoffice/contrib/rc/${MY_PV2}/${SRC}_binfilter.tar.bz2 )
 	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${MY_PV}.tar.gz
-	odk? ( mirror://openoffice/stable/${PV}/${SRC}_sdk.tar.bz2
+	odk? ( mirror://openoffice/contrib/rc/${MY_PV2}/${SRC}_sdk.tar.bz2
 		java? ( http://tools.openoffice.org/unowinreg_prebuild/680/unowinreg.dll ) )
 	http://go-oo.org/packages/SRC680/extras-2.tar.bz2
 	http://go-oo.org/packages/SRC680/biblio.tar.bz2
@@ -38,14 +39,14 @@ for X in ${LANGS} ; do
 done
 
 for Y in ${LANGS1} ; do
-	SRC_URI="${SRC_URI} linguas_${Y}? ( mirror://openoffice/stable/${PV}/${SRC}_l10n.tar.bz2 )"
+	SRC_URI="${SRC_URI} linguas_${Y}? ( mirror://openoffice/contrib/rc/${PV}/${SRC}_l10n.tar.bz2 )"
 done
 
 HOMEPAGE="http://go-oo.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc -sparc x86"
+KEYWORDS="~amd64 ~ppc -sparc ~x86"
 
 COMMON_DEPEND="!app-office/openoffice-bin
 	x11-libs/libXaw
@@ -94,6 +95,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	dev-libs/expat
 	>=dev-libs/icu-3.6
 	>=sys-libs/db-4.3
+	>=dev-libs/STLport-5.1.2
 	>=app-text/libwpd-0.8.8
 	>=media-libs/libsvg-0.1.4
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
@@ -316,7 +318,7 @@ src_compile() {
 		--with-num-cpus="${JOBS}" \
 		--without-binsuffix \
 		--with-installed-ooo-dirname="openoffice" \
-		--with-tag="OOG680_m5" \
+		--with-tag="OOG680_m9" \
 		"${GTKFLAG}" \
 		`use_enable kde` \
 		`use_enable cairo` \

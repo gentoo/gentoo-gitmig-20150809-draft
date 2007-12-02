@@ -1,0 +1,38 @@
+--- bin/package-ooo 
++++ bin/package-ooo 
+@@ -33,6 +33,7 @@
+ {
+     cat <<EOT >$1
+ #!/bin/sh
++unset PYTHONPATH
+ $OOINSTBASE/program/soffice $2 "\$@"
+ EOT
+     chmod 755 $1
+--- distro-configs/Gentoo.conf.in 
++++ distro-configs/Gentoo.conf.in 
+@@ -3,12 +3,11 @@
+ --enable-libsn
+ --enable-xsltproc
+ --with-dynamic-xinerama
+---with-stlport=/usr
+ --with-system-boost
+ --with-system-curl
+ --with-system-db
+ --with-system-expat
+---with-system-icu
++--without-system-icu
+ --with-system-libxslt
+ --with-system-xmlsec
+ --with-system-xrender-headers
+--- configure.in 
++++ configure.in 
+@@ -1048,7 +1048,7 @@
+ if test "$with_tag" = "OOG680_m5" ; then # more milestones to come...
+    UPSTREAM_VERSION=2.3.0
+ elif test "$with_tag" = "OOG680_m9" ; then
+-   UPSTREAM_VERSION=2.3.1
++   UPSTREAM_VERSION=2.3.1rc1
+ fi
+ if test -n "$UPSTREAM_VERSION"; then
+    UPSTREAM_NAME="OOo_${UPSTREAM_VERSION}_src"
+
