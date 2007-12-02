@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50_p20070829-r2.ebuild,v 1.2 2007/12/01 01:13:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50_p20070829-r2.ebuild,v 1.3 2007/12/02 20:01:33 ulm Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -145,6 +145,8 @@ src_compile() {
 }
 
 src_install () {
+	local i m
+
 	emake install DESTDIR="${D}" || die "make install failed"
 
 	rm "${D}"/usr/bin/emacs-${FULL_VERSION}-${EMACS_SUFFIX} \
@@ -155,13 +157,13 @@ src_install () {
 	# move info documentation to the correct place
 	einfo "Fixing info documentation ..."
 	for i in "${D}"/usr/share/info/${EMACS_SUFFIX}/*; do
-		mv ${i} ${i}.info || die "mv info failed"
+		mv "${i}" "${i}.info" || die "mv info failed"
 	done
 
 	# move man pages to the correct place
 	einfo "Fixing manpages ..."
 	for m in "${D}"/usr/share/man/man1/* ; do
-		mv ${m} ${m%.1}-${EMACS_SUFFIX}.1 || die "mv man failed"
+		mv "${m}" "${m%.1}-${EMACS_SUFFIX}.1" || die "mv man failed"
 	done
 
 	# avoid collision between slots, see bug #169033 e.g.
@@ -198,7 +200,7 @@ emacs-infodir-rebuild() {
 	rm -f "${ROOT}"${infodir}/dir{,.*}
 	for f in "${ROOT}"${infodir}/*.info*; do
 		[[ ${f##*/} == *[0-9].info* ]] \
-			|| install-info --info-dir="${ROOT}"${infodir} ${f} &>/dev/null
+			|| install-info --info-dir="${ROOT}"${infodir} "${f}" &>/dev/null
 	done
 	echo
 }
@@ -209,7 +211,7 @@ pkg_postinst() {
 
 	local f
 	for f in "${ROOT}"/var/lib/games/emacs/{snake,tetris}-scores; do
-		test -e ${f} || touch ${f}
+		test -e "${f}" || touch "${f}"
 	done
 
 	elisp-site-regen

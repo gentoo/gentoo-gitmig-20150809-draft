@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.33 2007/10/14 08:34:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.34 2007/12/02 20:00:52 ulm Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -128,9 +128,11 @@ src_compile() {
 }
 
 src_install() {
+	local i m
+
 	einstall || die "einstall failed"
 	for i in "${D}"/usr/bin/* ; do
-		mv ${i} ${i}-emacs-${SLOT} || die "mv ${i} failed"
+		mv "${i}" "${i}-emacs-${SLOT}" || die "mv ${i} failed"
 	done
 	mv "${D}"/usr/bin/emacs{-emacs,}-${SLOT} || die "mv emacs failed"
 	rm "${D}"/usr/bin/emacs-${PV}-emacs-${SLOT}
@@ -140,14 +142,14 @@ src_install() {
 	mv "${D}/usr/share/info/dir" "${T}"
 	for i in "${D}"/usr/share/info/*
 	do
-		mv ${i} "${T}"/emacs-${SLOT}/${i##*/}.info
+		mv "${i}" "${T}/emacs-${SLOT}/${i##*/}.info"
 	done
 	mv "${T}/emacs-${SLOT}" "${D}/usr/share/info"
 	mv "${T}/dir" "${D}/usr/share/info/emacs-${SLOT}"
 
 	einfo "Fixing manpages..."
 	for m in "${D}"/usr/share/man/man1/* ; do
-		mv ${m} ${m%.1}-emacs-${SLOT}.1 || die "mv ${m} failed"
+		mv "${m}" "${m%.1}-emacs-${SLOT}.1" || die "mv ${m} failed"
 	done
 
 	# avoid collision between slots
@@ -173,7 +175,7 @@ emacs-infodir-rebuild() {
 	rm -f "${ROOT}"${infodir}/dir{,.*}
 	for f in "${ROOT}"${infodir}/*.info*; do
 		[[ ${f##*/} == *[0-9].info* ]] \
-			|| install-info --info-dir="${ROOT}"${infodir} ${f} &>/dev/null
+			|| install-info --info-dir="${ROOT}"${infodir} "${f}" &>/dev/null
 	done
 	echo
 }

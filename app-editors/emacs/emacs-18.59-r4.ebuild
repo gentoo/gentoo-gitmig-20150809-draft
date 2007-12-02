@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r4.ebuild,v 1.6 2007/11/03 16:14:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r4.ebuild,v 1.7 2007/12/02 20:00:52 ulm Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -60,6 +60,8 @@ src_compile() {
 }
 
 src_install() {
+	local i
+
 	dodir ${MY_BASEDIR}
 	dodir /usr/share/man/man1
 	make install LIBDIR="${D}${MY_BASEDIR}" BINDIR="${D}/usr/bin" \
