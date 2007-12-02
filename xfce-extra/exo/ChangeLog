@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.46 2007/06/11 14:43:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.47 2007/12/02 15:12:37 drac Exp $
+
+*exo-0.3.4 (02 Dec 2007)
+
+  02 Dec 2007; Samuli Suominen <drac@gentoo.org> +exo-0.3.4.ebuild:
+  Version bump.
 
   11 Jun 2007; Samuli Suominen <drac@gentoo.org> exo-0.3.2.ebuild:
   Adjust sys-apps/hal dep to 0.5.7.1 because of compilation failure on arm.
