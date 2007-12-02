@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/primegen-0.97.ebuild,v 1.3 2007/01/14 07:33:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/primegen-0.97.ebuild,v 1.4 2007/12/02 13:14:16 markusle Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -28,7 +28,7 @@ src_compile() {
 src_install() {
 	dobin primegaps primes primespeed || die "dobin failed"
 	doman primegaps.1 primes.1 primespeed.1
-	doman error.3 error_str.3 primegen.3
+	doman primegen.3
 	dolib.a primegen.a || die "dolib.a failed"
 	insinto /usr/include
 	doins primegen.h uint32.h uint64.h

@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/primegen
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/ChangeLog,v 1.4 2007/01/14 07:33:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/ChangeLog,v 1.5 2007/12/02 13:14:16 markusle Exp $
+
+  02 Dec 2007; Markus Dittrich <markusle@gentoo.org> primegen-0.97.ebuild:
+  Disabled installation of error man pages since they collide with 
+  the ones from man and we don't actually install primegen's error
+  library anyway (fixes bug #200932).
 
   14 Jan 2007; Joseph Jezak <josejx@gentoo.org> primegen-0.97.ebuild:
   Added ~ppc for bug #161015.  Added -fsigned-char to produce correct results.
