@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/libferrisstreams-0.5.0.ebuild,v 1.2 2006/03/23 05:13:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/libferrisstreams-0.5.0.ebuild,v 1.3 2007/12/02 20:07:40 vapier Exp $
 
 inherit flag-o-matic
 
@@ -21,6 +21,6 @@ DEPEND=">=dev-libs/STLport-4.6.2-r1
 S=${WORKDIR}/ferrisstreams-${PV}
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog NEWS README
 }
