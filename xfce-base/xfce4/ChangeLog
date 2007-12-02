@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.113 2007/11/30 15:45:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.114 2007/12/02 16:40:18 drac Exp $
+
+  02 Dec 2007; Samuli Suominen <drac@gentoo.org> xfce4-4.4.2.ebuild:
+  Bump Thunar and Terminal deps. for 4.4.2.
 
   30 Nov 2007; Samuli Suominen <drac@gentoo.org> xfce4-4.4.2.ebuild:
   Allow usage of gnome-screensaver instead of xscreensaver too.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.2.ebuild,v 1.2 2007/11/30 15:45:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.2.ebuild,v 1.3 2007/12/02 16:40:18 drac Exp $
 
 inherit xfce44
 
@@ -13,7 +13,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 IUSE="alsa cups minimal oss xscreensaver"
 
 RDEPEND=">=x11-themes/gtk-engines-xfce-2.4.2
-	>=xfce-base/thunar-${THUNAR_MASTER_VERSION}
+	>=xfce-base/thunar-0.9.0
 	>=xfce-base/xfce-mcs-plugins-${XFCE_MASTER_VERSION}
 	>=xfce-base/xfce4-panel-${XFCE_MASTER_VERSION}
 	>=xfce-base/xfwm4-${XFCE_MASTER_VERSION}
@@ -27,7 +27,7 @@ RDEPEND=">=x11-themes/gtk-engines-xfce-2.4.2
 	!minimal? ( >=xfce-base/orage-${XFCE_MASTER_VERSION}
 		>=xfce-extra/mousepad-0.2.13
 		>=xfce-extra/xfwm4-themes-${XFCE_MASTER_VERSION}
-		>=xfce-extra/terminal-0.2.6
+		>=xfce-extra/terminal-0.2.8
 		>=xfce-extra/xfce4-appfinder-${XFCE_MASTER_VERSION} )
 	xscreensaver? ( || ( >=x11-misc/xscreensaver-5.03
 		gnome-extra/gnome-screensaver ) )"
