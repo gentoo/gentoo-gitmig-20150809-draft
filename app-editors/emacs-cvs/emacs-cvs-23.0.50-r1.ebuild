@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50-r1.ebuild,v 1.2 2007/12/01 01:13:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50-r1.ebuild,v 1.3 2007/12/02 18:22:04 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -20,7 +20,7 @@ SRC_URI=""
 LICENSE="GPL-3 FDL-1.2 BSD"
 SLOT="23"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="alsa gif gpm gtk gzip-el hesiod jpeg kerberos motif png spell sound source svg tiff toolkit-scroll-bars X Xaw3d xpm"
+IUSE="alsa dbus gif gpm gtk gzip-el hesiod jpeg kerberos motif png spell sound source svg tiff toolkit-scroll-bars X Xaw3d xpm"
 RESTRICT="strip"
 
 X_DEPEND="x11-libs/libXmu x11-libs/libXt x11-misc/xbitmaps"
@@ -34,6 +34,7 @@ RDEPEND="!=app-editors/emacs-cvs-23.0.0-r6
 	spell? ( || ( app-text/ispell app-text/aspell ) )
 	alsa? ( media-libs/alsa-lib )
 	gpm? ( sys-libs/gpm )
+	dbus? ( sys-apps/dbus )
 	X? (
 		$X_DEPEND
 		x11-misc/emacs-desktop
@@ -148,7 +149,7 @@ src_compile() {
 
 	myconf="${myconf} $(use_with hesiod)"
 	myconf="${myconf} $(use_with kerberos) $(use_with kerberos kerberos5)"
-	myconf="${myconf} $(use_with gpm)"
+	myconf="${myconf} $(use_with gpm) $(use_with dbus)"
 
 	econf \
 		--program-suffix=-${EMACS_SUFFIX} \
