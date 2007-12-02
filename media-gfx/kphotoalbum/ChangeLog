@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.19 2007/06/17 14:26:02 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.20 2007/12/02 00:58:19 philantrop Exp $
+
+*kphotoalbum-3.1.0 (02 Dec 2007)
+
+  02 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kphotoalbum-3.1.0-exiv2.patch, -kphotoalbum-2.2.ebuild,
+  -kphotoalbum-3.0.1.ebuild, -kphotoalbum-3.0.2.ebuild,
+  +kphotoalbum-3.1.0.ebuild:
+  Version bump as per bug 200378. Removed obsolete versions.
 
 *kphotoalbum-3.0.2-r1 (17 Jun 2007)
 

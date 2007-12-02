@@ -1,0 +1,146 @@
+--- kphotoalbum/src/Makefile.am	2007/12/01 00:03:03	743451
++++ kphotoalbum/src/Makefile.am	2007/12/01 00:09:53	743452
+@@ -10,8 +10,6 @@
+ if compile_with_exiv2
+   EXIF_DIR = Exif
+   KPHOTOALBUM_EXIV2_LIBS = Exif/libexif.la -lexiv2
+-else
+-  KPHOTOALBUM_EXIV2_LIBS = Exif/libexif.la
+ endif
+ 
+ if compile_with_kexidb
+--- kphotoalbum/src/Settings/SettingsDialog.cpp	2007/12/01 00:03:03	743451
++++ kphotoalbum/src/Settings/SettingsDialog.cpp	2007/12/01 00:09:53	743452
+@@ -57,6 +57,7 @@
+ #ifdef HASEXIV2
+ #  include "Exif/Info.h"
+ #  include "Exif/TreeView.h"
++#  include "Exif/SyncWidget.h"
+ #endif
+ 
+ #ifdef SQLDB_SUPPORT
+@@ -65,7 +66,6 @@
+ #endif
+ 
+ #include "CategoryItem.h"
+-#include "Exif/SyncWidget.h"
+ 
+ Settings::SettingsDialog::SettingsDialog( QWidget* parent, const char* name )
+     :KDialogBase( IconList, i18n( "Settings" ), Apply | Ok | Cancel, Ok, parent, name, false ), _currentCategory( QString::null ), _currentGroup( QString::null )
+@@ -435,7 +435,6 @@
+     _exifForViewer->setSelected( Settings::SettingsData::instance()->exifForViewer() );
+     _exifForDialog->setSelected( Settings::SettingsData::instance()->exifForDialog() );
+     _iptcCharset->setCurrentItem( opt->iptcCharset() );
+-#endif
+ 
+     // Synchronization page
+     _orientationRead->updatePreferred( Settings::SettingsData::instance()->orientationSyncing( false ) );
+@@ -458,6 +457,7 @@
+             _catMulti[ (*it)->name() ]->setCurrentItem( opt->categorySyncingMultiValue( (*it)->name() ) );
+             _catAddName[ (*it)->name() ]->setChecked( opt->categorySyncingAddName( (*it)->name() ) );
+         }
++#endif
+ 
+     QString backend = Settings::SettingsData::instance()->backend();
+     if (backend == QString::fromLatin1("xml"))
+@@ -548,7 +548,6 @@
+     opt->setExifForViewer( _exifForViewer->selected() ) ;
+     opt->setExifForDialog( _exifForDialog->selected() ) ;
+     opt->setIptcCharset( _iptcCharset->currentItem() );
+-#endif
+ 
+     // Synchronization
+     opt->setOrientationSyncing( false, _orientationRead->items() );
+@@ -559,6 +558,7 @@
+     opt->setDescriptionSyncing( true, _descriptionWrite->items() );
+     opt->setDateSyncing( false, _dateRead->items() );
+     opt->setDateSyncing( true, _dateWrite->items() );
++
+     for (QDictIterator<Exif::SyncWidget> it( _catFieldsRead ); it.current(); ++it ) {
+         opt->setCategorySyncingFields( false, it.currentKey(), it.current()->items() );
+     }
+@@ -574,6 +574,7 @@
+     for (QDictIterator<QCheckBox> it( _catAddName ); it.current(); ++it ) {
+         opt->setCategorySyncingAddName( it.currentKey(), it.current()->isChecked() );
+     }
++#endif
+ 
+     // SQLDB
+ #ifdef SQLDB_SUPPORT
+@@ -1023,6 +1024,7 @@
+ 
+ void Settings::SettingsDialog::createSyncPage()
+ {
++#ifdef HASEXIV2
+     _syncPage = addPage( i18n("Metadata"), i18n("Metadata Synchronization"),
+                         KGlobal::iconLoader()->loadIcon( QString::fromLatin1( "saveas" ),
+                                                          KIcon::Desktop, 32 ) );
+@@ -1073,6 +1075,7 @@
+             slotCategoryAdded( (*it)->name() );
+ 
+     _lay->addWidget( _syncTabs );
++#endif
+ }
+ 
+ void Settings::SettingsDialog::slotCategoryAdded( const QString& name )
+@@ -1086,6 +1089,8 @@
+     QGrid* box = new QGrid( 2, Horizontal, _syncPage );
+     box->setSpacing( 6 );
+ 
++
++#ifdef HASEXIV2
+     const Settings::SettingsData* opt = Settings::SettingsData::instance();
+ 
+     _catFieldsRead.replace( name, new Exif::SyncWidget( i18n("Fields to get value from"), box,
+@@ -1107,10 +1112,12 @@
+     new QWidget( box );
+     _catAddName.replace( name, new QCheckBox( i18n("Include category name in tag value" ), box ) );
+     _syncTabs->addTab( box, name );
++#endif
+ }
+ 
+ void Settings::SettingsDialog::slotCategoryRemoved( const QString& name )
+ {
++#ifdef HASEXIV2
+     for (int i = 0; _syncTabs->page( i ); ++i )
+         if ( _syncTabs->label( i ).remove( '&' ) == name ) {
+             _catFieldsRead.remove( name );
+@@ -1123,6 +1130,9 @@
+             delete tab;
+             return;
+         }
++#else
++    Q_UNUSED( name );
++#endif
+ }
+ 
+ void Settings::SettingsDialog::slotCategoryRenamed( const QString& oldName, const QString& newName )
+--- kphotoalbum/src/Settings/SettingsDialog.h	2007/12/01 00:03:03	743451
++++ kphotoalbum/src/Settings/SettingsDialog.h	2007/12/01 00:09:53	743452
+@@ -21,7 +21,11 @@
+ #include <kdialogbase.h>
+ #include "Settings/SettingsData.h"
+ #include "DB/MemberMap.h"
+-#include "Exif/SyncWidget.h"
++
++#ifdef HASEXIV2
++#  include "Exif/SyncWidget.h"
++#endif
++
+ class QListView;
+ class KColorButton;
+ class QSpinBox;
+@@ -171,11 +175,13 @@
+     // Synchronization
+     QTabWidget* _syncTabs;
+     QWidget* _syncPage;
++#ifdef HASEXIV2
+     Exif::SyncWidget *_labelRead, *_labelWrite, *_descriptionRead, *_descriptionWrite,
+         *_orientationRead, *_orientationWrite, *_dateRead, *_dateWrite;
+     QDict<Exif::SyncWidget> _catFieldsRead, _catFieldsWrite;
+     QDict<KComboBox> _catSuper, _catMulti;
+     QDict<QCheckBox> _catAddName;
++#endif
+ 
+     int _backendPageIndex;
+     QButtonGroup* _backendButtons;
