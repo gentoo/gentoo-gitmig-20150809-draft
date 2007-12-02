@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.39 2007/08/28 18:26:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.40 2007/12/02 16:28:48 drac Exp $
+
+*thunar-0.9.0 (02 Dec 2007)
+
+  02 Dec 2007; Samuli Suominen <drac@gentoo.org> thunar-0.8.0-r3.ebuild,
+  +thunar-0.9.0.ebuild:
+  Version bump, rename USE plugins to USE trash-plugin and enable it by
+  default using EAPI=1.
 
   28 Aug 2007; Samuli Suominen <drac@gentoo.org> thunar-0.8.0-r3.ebuild:
   Add die to src_test.
