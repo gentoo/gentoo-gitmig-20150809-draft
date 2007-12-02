@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/thumbs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/thumbs/ChangeLog,v 1.16 2007/10/23 09:46:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/thumbs/ChangeLog,v 1.17 2007/12/02 14:28:58 opfer Exp $
+
+  02 Dec 2007; Christian Faulhammer <opfer@gentoo.org> -thumbs-1.8.ebuild:
+  clean up
 
   23 Oct 2007; Raúl Porcel <armin76@gentoo.org> thumbs-2.0.ebuild:
   sparc stable wrt
