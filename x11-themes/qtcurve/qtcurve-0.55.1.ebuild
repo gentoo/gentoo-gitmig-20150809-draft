@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.55.1.ebuild,v 1.1 2007/12/02 19:59:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.55.1.ebuild,v 1.2 2007/12/02 20:02:41 drac Exp $
 
 ARTS_REQUIRED="never"
 
-inherit eutils kde cmake-utils
+# Order is important, so we get src_compile from cmake-utils.
+inherit kde cmake-utils
 
 MY_P=${P/qtcurve/QtCurve-KDE3}
 
