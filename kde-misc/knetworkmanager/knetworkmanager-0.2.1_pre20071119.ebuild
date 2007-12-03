@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-0.2_p20070831.ebuild,v 1.1 2007/08/31 18:38:43 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-0.2.1_pre20071119.ebuild,v 1.1 2007/12/03 00:37:30 rbu Exp $
 
 inherit kde eutils
 
-MY_P=${PN}-0.2
+MY_PV="0.2.1r738551"
+MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="A KDE frontend for NetworkManager"
 HOMEPAGE="http://en.opensuse.org/Projects/KNetworkManager"
 LICENSE="GPL-2"
-SRC_URI="ftp://ftp.kde.org/pub/kde/stable/apps/KDE3.x/network/${MY_P}.tar.bz2
-	mirror://gentoo/${P}.patch.bz2
-	mirror://gentoo/kde-admindir-3.5.5.tar.bz2"
+#SRC_URI="ftp://ftp.kde.org/pub/kde/stable/apps/KDE3.x/network/${P}.tar.bz2"
+SRC_URI="http://beta1.suse.com/private/hschaa/knetworkmanager/${MY_P}.tar.bz2"
 KEYWORDS="~amd64 ~x86"
 
 IUSE="cisco openvpn pptp dialup"
@@ -21,13 +21,13 @@ DEPEND="net-misc/networkmanager
 	>=dev-libs/dbus-qt3-old-0.70
 	sys-apps/hal
 	net-wireless/wireless-tools
-	dev-libs/libnl
+	>=dev-libs/libnl-1.0_pre6-r1
 	cisco?   ( <net-misc/networkmanager-vpnc-0.7.0 )
 	openvpn? ( <net-misc/networkmanager-openvpn-0.3.3 )
 	pptp?    ( <net-misc/networkmanager-pptp-0.7.0 )
 	dialup? ( || ( kde-base/kppp kde-base/kdenetwork ) )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	kde_pkg_setup
@@ -41,17 +41,10 @@ pkg_setup() {
 
 src_unpack() {
 	kde_src_unpack
-	ln -s "${WORKDIR}/admin" "${S}/admin"
 	cd "${S}"
 
-	#epatch "${FILESDIR}/${MY_P}-kppp.patch"
-	epatch "${FILESDIR}/${MY_P}-pam_console-fix.patch"
-	epatch "${FILESDIR}/${MY_P}-fix-desktop-icon.patch"
-	epatch "${FILESDIR}/${MY_P}-fixbuild_u64-hschaa-01.patch"
-
-	cd knetworkmanager
-	epatch "${WORKDIR}/${P}.patch"
-	epatch "${FILESDIR}/${P}-optional-dialup.patch"
+	epatch "${FILESDIR}/${PN}-0.2-pam_console-fix.patch"
+	epatch "${FILESDIR}/${PN}-0.2.1-fixbuild_u64-hschaa-01.patch"
 }
 
 src_compile() {

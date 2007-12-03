@@ -1,6 +1,19 @@
 # ChangeLog for kde-misc/knetworkmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.4 2007/08/31 18:38:43 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.5 2007/12/03 00:37:30 rbu Exp $
+
+*knetworkmanager-0.2.1_pre20071119 (03 Dec 2007)
+
+  03 Dec 2007; Robert Buchholz <rbu@gentoo.org>
+  -files/knetworkmanager-0.2-fixbuild_u64-hschaa-01.patch,
+  +files/knetworkmanager-0.2.1-fixbuild_u64-hschaa-01.patch,
+  -files/knetworkmanager-0.2-fix-desktop-icon.patch,
+  -files/knetworkmanager-0.2-kppp.patch,
+  -files/knetworkmanager-0.2_p20070831-optional-dialup.patch,
+  -knetworkmanager-0.2.ebuild, -knetworkmanager-0.2_p20070831.ebuild,
+  +knetworkmanager-0.2.1_pre20071119.ebuild:
+  Version bump, mainly a bugfix release. Fix building against
+  >=libnl-1.0_pre6-r1 (bug #201033)
 
 *knetworkmanager-0.2_p20070831 (31 Aug 2007)
 
