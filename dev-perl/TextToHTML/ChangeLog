@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/TextToHTML
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TextToHTML/ChangeLog,v 1.1 2007/12/03 22:56:46 hd_brummy Exp $
+
+*TextToHTML-2.46 (03 Dec 2007)
+
+  03 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
+  +TextToHTML-2.46.ebuild:
+  initial ebuild
+
