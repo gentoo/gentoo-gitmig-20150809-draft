@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/ultrastar-songs
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-songs/ChangeLog,v 1.1 2007/12/03 21:08:34 tupone Exp $
+
+*ultrastar-songs-1 (03 Dec 2007)
+
+  03 Dec 2007; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
+  +ultrastar-songs-1.ebuild:
+  New package. Bug #198283 by Lasse Kärkkäinen
+
