@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-MIME-ContentType
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-ContentType/ChangeLog,v 1.10 2007/11/10 12:49:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-ContentType/ChangeLog,v 1.11 2007/12/03 08:20:35 opfer Exp $
+
+  03 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  Email-MIME-ContentType-1.014.ebuild:
+  stable x86, bug 198075
 
   10 Nov 2007; Samuli Suominen <drac@gentoo.org>
   Email-MIME-ContentType-1.014.ebuild:

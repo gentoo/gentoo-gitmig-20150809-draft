@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-Send
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/ChangeLog,v 1.9 2007/10/19 19:43:55 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/ChangeLog,v 1.10 2007/12/03 08:31:23 opfer Exp $
+
+  03 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  Email-Send-2.190.ebuild:
+  stable x86, bug 198075
 
 *Email-Send-2.190 (19 Oct 2007)
 

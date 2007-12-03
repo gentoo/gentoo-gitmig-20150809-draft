@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple-Creator/Email-Simple-Creator-1.422.ebuild,v 1.1 2007/10/19 21:28:07 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple-Creator/Email-Simple-Creator-1.422.ebuild,v 1.2 2007/12/03 08:38:46 opfer Exp $
 
 inherit perl-module versionator
 
@@ -15,7 +15,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 DEPEND="dev-perl/Email-Date
 	virtual/perl-Test-Simple
