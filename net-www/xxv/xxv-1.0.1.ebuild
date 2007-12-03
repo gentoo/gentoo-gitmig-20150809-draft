@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/xxv-1.0.1.ebuild,v 1.2 2007/12/03 22:06:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/xxv-1.0.1.ebuild,v 1.3 2007/12/03 22:58:56 hd_brummy Exp $
 
 inherit eutils
 
@@ -39,6 +39,7 @@ RDEPEND=">=media-video/vdr-1.2.6
 	dev-perl/Net-Telnet
 	dev-perl/Net-XMPP
 	dev-perl/Proc-ProcessTable
+	dev-perl/TextToHTML
 	dev-perl/Template-Toolkit
 	dev-perl/SOAP-Lite
 	dev-perl/XML-RSS"
