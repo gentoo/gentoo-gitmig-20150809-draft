@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.476 2007/12/03 00:59:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.477 2007/12/03 07:10:21 zmedico Exp $
+
+*portage-2.1.4_rc6 (03 Dec 2007)
+
+  03 Dec 2007; Zac Medico <zmedico@gentoo.org> -portage-2.1.4_rc5.ebuild,
+  +portage-2.1.4_rc6.ebuild:
+  2.1.4_rc6 regression fix. This solves an issue with sandbox violations
+  triggered by having the CCACHE_DIR variable exported in the calling
+  environment.
 
 *portage-2.1.4_rc5 (03 Dec 2007)
 
