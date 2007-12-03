@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwtplot3d-qt3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d-qt3/ChangeLog,v 1.1 2007/11/28 23:09:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d-qt3/ChangeLog,v 1.2 2007/12/03 10:17:10 bicatali Exp $
+
+  03 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  qwtplot3d-qt3-0.2.7.ebuild:
+  Added check for opengl flag
 
 *qwtplot3d-qt3-0.2.7 (28 Nov 2007)
 
