@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7969 2007/12/03 17:51:00 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7970 2007/12/03 19:24:10 suka Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -34,6 +34,7 @@
 www-apps/viewcvs
 
 # Andreas Proschofsky <suka@gentoo.org> (02 Dec 2007)
+# Release candidates, so masking for testing
 >=app-office/openoffice-bin-2.3.1_rc1
 >=app-office/openoffice-2.3.1_rc1
 
