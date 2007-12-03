@@ -1,0 +1,60 @@
+--- Makefile.in.orig	2007-12-02 12:26:02.000000000 -0800
++++ Makefile.in	2007-12-02 12:47:58.000000000 -0800
+@@ -64,6 +64,7 @@
+ # TODO: should probably check for bison and flex in configure
+ BISON = bison
+ FLEX = flex
++LN = ln -s
+ BUILD_BMI_TCP = @BUILD_BMI_TCP@
+ BUILD_GM = @BUILD_GM@
+ BUILD_MX = @BUILD_MX@
+@@ -163,6 +164,8 @@
+ REDHAT_RELEASE = @REDHAT_RELEASE@
+ NPTL_WORKAROUND = @NPTL_WORKAROUND@
+ STRICT_CFLAGS = @STRICT_CFLAGS@
++SO_LIBS = -lcrypt -lssl  -lpthread
++SO_VER = 2.0
+ # for Solaris:
+ # LIBS += -lsocket -lnsl
+ 
+@@ -436,8 +439,10 @@
+ LIBRARIES :=
+ LIBRARIES_THREADED :=
+ ifeq ($(build_shared),yes)
+-LIBRARIES_SHARED = lib/libpvfs2.so
++LIBRARIES_SHARED = lib/libpvfs2.so.$(SO_VER)
+ LIBRARIES += $(LIBRARIES_SHARED)
++LIBRARIES_THREADED_SHARED = lib/libpvfs2-threaded.so.$(SO_VER)
++LIBRARIES_THREADED += $(LIBRARIES_THREADED_SHARED)
+ endif
+ ifeq ($(build_static),yes)
+ LIBRARIES_STATIC = lib/libpvfs2.a
+@@ -628,16 +633,16 @@
+ 	$(E)ar rcs $@ $(LIBTHREADEDOBJS)
+ 
+ # rule for building the pvfs2 library
+-lib/libpvfs2.so: $(LIBPICOBJS)
++lib/libpvfs2.so.$(SO_VER): $(LIBPICOBJS)
+ 	$(Q) "  LDSO		$@"
+ 	$(E)$(INSTALL) -d lib
+-	$(E)$(LDSHARED) -o $@ $(LIBPICOBJS)
++	$(E)$(LDSHARED) -Wl,-soname,libpvfs2.so.$(SO_VER) -o $@ $(LIBPICOBJS) $(SO_LIBS)
+ 
+ # rule for building the pvfs2 _multithreaded_ library
+-lib/libpvfs2-threaded.so: $(LIBTHREADEDPICOBJS)
++lib/libpvfs2-threaded.so.$(SO_VER): $(LIBTHREADEDPICOBJS)
+ 	$(Q) "  LDSO		$@"
+ 	$(E)$(INSTALL) -d lib
+-	$(E)$(LDSHARED) -o $@ $(LIBTHREADEDPICOBJS)
++	$(E)$(LDSHARED) -Wl,-soname,libpvfs2-threaded.so.$(SO_VER) -o $@ $(LIBTHREADEDPICOBJS) $(SO_LIBS)
+ 
+ # rule for building the pvfs2 server library
+ lib/libpvfs2-server.a: $(SERVEROBJS)
+@@ -896,6 +901,7 @@
+ 
+ 	install -d $(libdir)
+ 	install -m 755 $(LIBRARIES) $(libdir)
++	install -m 755 $(LIBRARIES_THREADED) $(libdir)
+ 
+ ifdef TARGET_OS_DARWIN
+ #       TOC needs to be regenerated in libs after they get moved
