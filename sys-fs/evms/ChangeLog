@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.77 2007/10/22 14:33:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.78 2007/12/03 20:13:28 dev-zero Exp $
+
+*evms-2.5.5-r10 (03 Dec 2007)
+
+  03 Dec 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/evms-2.5.5-snapshot.patch, +evms-2.5.5-r10.ebuild:
+  Added fix for snapshots on kernel >=2.6.19 (bug #192036). Fixed tests and
+  disabled them.
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org> evms-2.5.5-r9.ebuild:
   Re-add ~ia64 wrt #190828
