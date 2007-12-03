@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.141 2007/12/03 17:21:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.142 2007/12/03 21:51:00 armin76 Exp $
+
+  03 Dec 2007; Raúl Porcel <armin76@gentoo.org> rsync-2.6.9-r5.ebuild:
+  ia64 stable wrt security #200821
 
   03 Dec 2007; Jeroen Roovers <jer@gentoo.org> rsync-2.6.9-r5.ebuild:
   Stable for HPPA (bug #200821).
