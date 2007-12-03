@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.6.1.ebuild,v 1.3 2007/12/03 19:16:06 dirtyepic Exp $
-
-EAPI=1
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1.ebuild,v 1.1 2007/12/03 21:59:47 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -25,8 +23,8 @@ RDEPEND="
 	odbc?   ( dev-db/unixODBC )
 	sdl?    ( media-libs/libsdl )
 	X?  (
-		x11-libs/gtk+:2
-		dev-libs/glib:2
+		>=x11-libs/gtk+-2.4
+		>=dev-libs/glib-2.4
 		media-libs/jpeg
 		media-libs/tiff
 		x11-libs/libSM
@@ -36,7 +34,7 @@ RDEPEND="
 				gnome-base/libgnomeprintui
 				gnome-base/gnome-vfs
 				)
-		gstreamer? ( media-libs/gstreamer:0.10 )
+		gstreamer? ( >=media-libs/gstreamer-0.10 )
 		opengl? ( virtual/opengl )
 		)"
 
@@ -70,17 +68,14 @@ src_unpack() {
 
 	# Patches specific to this Version
 
-	epatch "${FILESDIR}"/${PN}-2.8.6-extralibs-media.patch
+	# none yet :)
+
 }
 
 src_compile() {
 	local myconf
 
 	append-flags -fno-strict-aliasing
-
-	# configure notes:
-	#   --disable-precomp-headers saves us about 800MiB of disk space and 1/3
-	#   compile time
 
 	# X independent options
 	myconf="--enable-compat26
