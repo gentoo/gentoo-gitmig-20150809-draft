@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.11 2007/09/20 23:13:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.12 2007/12/03 22:17:32 voyageur Exp $
+
+*nx-3.0.0-r1 (03 Dec 2007)
+
+  03 Dec 2007; Bernard Cafarelli <voyageur@gentoo.org> +nx-3.0.0-r1.ebuild:
+  Update some components, ebuild cleanup
 
   20 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
   -files/nx-2.1.0-nxagent-mem-leaks.patch, -nx-2.1.0.ebuild,
