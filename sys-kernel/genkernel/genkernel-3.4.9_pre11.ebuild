@@ -1,14 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.9_pre8.ebuild,v 1.1 2007/11/07 21:50:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.9_pre11.ebuild,v 1.1 2007/12/03 23:51:34 wolf31o2 Exp $
 
 inherit bash-completion eutils
 
 VERSION_DMAP='1.02.22'
 VERSION_DMRAID='1.0.0.rc14'
 VERSION_E2FSPROGS='1.39'
-VERSION_LVM2='2.02.28'
-VERSION_PKG='3.4-r2'
+VERSION_LVM='2.02.28'
+VERSION_PKG='3.4-r3'
 VERSION_UNIONFS='1.5pre-cvs200701042308'
 
 DESCRIPTION="Gentoo automatic kernel building scripts"
@@ -19,8 +19,8 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~wolf31o2/sources/${PN}/${PN}-pkg-${VERSION_PKG}.tar.bz2
 	http://people.redhat.com/~heinzm/sw/dmraid/src/dmraid-${VERSION_DMRAID}.tar.bz2
 	http://people.redhat.com/~heinzm/sw/dmraid/src/old/dmraid-${VERSION_DMRAID}.tar.bz2
-	ftp://sources.redhat.com/pub/lvm2/LVM2.${VERSION_LVM2}.tgz
-	ftp://sources.redhat.com/pub/lvm2/old/LVM2.${VERSION_LVM2}.tgz
+	ftp://sources.redhat.com/pub/lvm2/LVM2.${VERSION_LVM}.tgz
+	ftp://sources.redhat.com/pub/lvm2/old/LVM2.${VERSION_LVM}.tgz
 	ftp://sources.redhat.com/pub/dm/device-mapper.${VERSION_DMAP}.tgz
 	ftp://sources.redhat.com/pub/dm/old/device-mapper.${VERSION_DMAP}.tgz
 	ftp://ftp.fsl.cs.sunysb.edu/pub/unionfs/unionfs-1.x/snapshots/unionfs-${VERSION_UNIONFS}.tar.gz
@@ -44,6 +44,7 @@ src_unpack() {
 	cd "${S}"
 	unpack ${PN}-pkg-${VERSION_PKG}.tar.bz2
 	use selinux && sed -i 's/###//g' gen_compile.sh
+#	epatch "${FILESDIR}"/${P}-lvm2fix.patch
 }
 
 src_install() {
@@ -53,7 +54,7 @@ src_install() {
 	sed -i -e "s:VERSION_DMAP:$VERSION_DMAP:" \
 		-e "s:VERSION_DMRAID:$VERSION_DMRAID:" \
 		-e "s:VERSION_E2FSPROGS:$VERSION_E2FSPROGS:" \
-		-e "s:VERSION_LVM2:$VERSION_LVM2:" \
+		-e "s:VERSION_LVM:$VERSION_LVM:" \
 		-e "s:VERSION_UNIONFS:$VERSION_UNIONFS:" \
 		"${D}"/etc/genkernel.conf || die "Could not adjust versions"
 
@@ -72,7 +73,7 @@ src_install() {
 	rm genkernel.8
 
 	cp "${DISTDIR}"/dmraid-${VERSION_DMRAID}.tar.bz2 \
-	"${DISTDIR}"/LVM2.${VERSION_LVM2}.tgz \
+	"${DISTDIR}"/LVM2.${VERSION_LVM}.tgz \
 	"${DISTDIR}"/device-mapper.${VERSION_DMAP}.tgz \
 	"${DISTDIR}"/unionfs-${VERSION_UNIONFS}.tar.gz \
 	"${DISTDIR}"/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz \
