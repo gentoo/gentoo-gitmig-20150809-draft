@@ -15,10 +15,10 @@ MISC ChangeLog 2904 RMD160 f01bccb6247fff92f6df556a284e5c3589527bf6 SHA1 592337e
 MD5 e443dff0da8e8fd28660548d0b7496bc ChangeLog 2904
 RMD160 f01bccb6247fff92f6df556a284e5c3589527bf6 ChangeLog 2904
 SHA256 4321bf4a7a683f9956592d51948039057d99e20171d03f61783d38368c18859c ChangeLog 2904
-MISC metadata.xml 326 RMD160 2c6d88ba5492a8e1c31d2307255ebda3b8a98bec SHA1 4c2d6aa99ae4afdf1f2a7dc5337ea657f7a7ba01 SHA256 5a07616d6934b102a4dcd2e6a1645f463ff285255eca75776a0dbade52a5a642
-MD5 91c5f5799223e74695157f48777d2a06 metadata.xml 326
-RMD160 2c6d88ba5492a8e1c31d2307255ebda3b8a98bec metadata.xml 326
-SHA256 5a07616d6934b102a4dcd2e6a1645f463ff285255eca75776a0dbade52a5a642 metadata.xml 326
+MISC metadata.xml 265 RMD160 953f2593288ab9bad782bfaa7e06d9882c54983a SHA1 9baac383263a16b2e9ba4ad20e894885cdff73db SHA256 264af5a2b0a773c6c8cbccac44d7ce0d26d537adf74b3568e6f0ff96cc92645c
+MD5 b271a6bfaccfb6f7f996fb135c3c3e40 metadata.xml 265
+RMD160 953f2593288ab9bad782bfaa7e06d9882c54983a metadata.xml 265
+SHA256 264af5a2b0a773c6c8cbccac44d7ce0d26d537adf74b3568e6f0ff96cc92645c metadata.xml 265
 MD5 46b8980d359b6f9f38cead60c285c069 files/digest-claws-mail-rssyl-0.15 232
 RMD160 6c7de83324cae9a50b28dfa5e2dfc2bc9db07e3b files/digest-claws-mail-rssyl-0.15 232
 SHA256 a3648dd8dd362ce20e3eb6b81821ab4daf6a93f2b55f601978faa65a304dddaf files/digest-claws-mail-rssyl-0.15 232
@@ -26,9 +26,9 @@ MD5 0f874d66139b37e5a8f906c307de2a9a files/digest-claws-mail-rssyl-0.16 232
 RMD160 a1c0a13d08f70cc6457dfda975242e383f10e609 files/digest-claws-mail-rssyl-0.16 232
 SHA256 ba0afd0ee42a4d0b50dc51debd88fbeb7978404c265178eb7231981baef6e02c files/digest-claws-mail-rssyl-0.16 232
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFHT0W3QlM6RnzZP+IRAlpcAJ95Hc/dKSmjcu+s54hyrQiI+VVNYwCggCc3
-deg0oZzQoUnB94pDLdTEqFE=
-=fi83
+iD8DBQFHU/Jp6J2i8a8J4okRAs4rAJ9a0G42WI6tjj6snv5tsGv+MVQ/cgCgsTI2
+82QoOwNo6Qu6zr/zAVKndVk=
+=C2wO
 -----END PGP SIGNATURE-----
