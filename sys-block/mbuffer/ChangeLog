@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/mbuffer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.17 2007/12/03 08:08:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.18 2007/12/03 16:41:59 angelos Exp $
+
+  03 Dec 2007; Christoph Mende <angelos@gentoo.org> mbuffer-20070911.ebuild:
+  Stable on amd64 wrt bug #201037
 
   03 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   mbuffer-20070911.ebuild:
