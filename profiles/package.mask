@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7970 2007/12/03 19:24:10 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7971 2007/12/03 19:56:26 aballier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Alexis Ballier <aballier@gentoo.org> (03 Dec 2007)
+# Small api changes, mask libcaca-0.99_beta13
+# until the issues are resolved (e.g. bug #201107)
+=media-libs/libcaca-0.99_beta13
 
 # Zac Medico <zmedico@gentoo.org> (03 Dec 2007)
 # Masked due to bug #201082.
