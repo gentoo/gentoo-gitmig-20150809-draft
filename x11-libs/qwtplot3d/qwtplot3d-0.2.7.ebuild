@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7.ebuild,v 1.1 2007/11/28 23:13:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7.ebuild,v 1.2 2007/12/03 10:15:39 bicatali Exp $
 
 inherit multilib qt4
 
@@ -16,6 +16,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 RDEPEND="$(qt4_min_version 4)"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
+
+QT4_BUILT_WITH_USE_CHECK="opengl"
 
 S="${WORKDIR}/${PN}"
 
@@ -34,6 +36,10 @@ src_compile () {
 
 	eqmake4 ${PN}.pro || die "eqmake4 failed"
 	emake || die "emake failed"
+	 if use doc ; then
+		 cd doc
+		 doxygen Doxyfile.doxygen || die "doxygen failed"
+	 fi
 }
 
 src_install () {
