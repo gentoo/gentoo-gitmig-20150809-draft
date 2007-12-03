@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/files/nxserver.init,v 1.1 2007/12/03 20:00:26 voyageur Exp $
+
+depend() {
+	before sshd
+}
+
+start() {
+	ebegin "Starting FreeNX server"
+	/usr/bin/nxserver --cleanup &>/dev/null
+	/usr/bin/nxserver --start &>/dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping FreeNX server"
+	/usr/bin/nxserver --stop &>/dev/null
+	eend 0
+}
+
+# vim:ts=4
