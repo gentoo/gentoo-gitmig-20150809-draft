@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1-r1.ebuild,v 1.1 2007/12/03 22:03:13 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1-r1.ebuild,v 1.2 2007/12/03 22:06:38 tupone Exp $
 
 inherit eutils games
 
@@ -14,7 +14,9 @@ HOMEPAGE="http://sourceforge.net/projects/ultrastar-ng/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 	songs? ( mirror://sourceforge/${PN}/${SONGS_P}.tar.bz2 )"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2
+	CCPL-Attribution-ShareAlike-NonCommercial-2.5
+	CCPL-Attribution-NonCommercial-NoDerivs-2.5"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="novideo opengl xine debug alsa gstreamer portaudio songs"
