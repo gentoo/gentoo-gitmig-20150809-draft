@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.871 2007/12/02 21:07:05 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.872 2007/12/03 09:53:57 calchan Exp $
+
+  03 Dec 2007; Denis Dupeyron <calchan@gentoo.org> use.local.desc:
+  Added local USE flag unit-mm for sci-electronics/gerbv.
 
   02 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   masked net-www/xxv-1.0.1 ; need review of depend perl modules
