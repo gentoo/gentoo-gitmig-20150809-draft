@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.8.2.ebuild,v 1.2 2007/11/30 21:49:34 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.8.2.ebuild,v 1.3 2007/12/03 00:14:07 vapier Exp $
 
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
@@ -58,7 +58,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="debug pam static make-symlinks selinux uclibc"
+IUSE="debug make-symlinks pam selinux static"
 RESTRICT="test"
 
 DEPEND="selinux? ( sys-libs/libselinux )
@@ -88,18 +88,22 @@ src_unpack() {
 	# patches go here!
 	epatch "${FILESDIR}"/busybox-1.7.0-bb.patch
 
-	# set build environment
-	MAKE_CONFIG="CROSS_COMPILE=${CHOST}- ARCH=$(tc-arch-kernel) HOSTCC=${CBUILD}-gcc"
-
 	# work around broken ass powerpc compilers
 	use ppc64 && append-flags -mminimal-toc
-	if ! use uclibc; then
-		epatch "${FILESDIR}/${P}-flags-strip.patch"
-		sed -i 's:-Wl,--gc-sections::' scripts/trylink
-		sed -i '/^#error Aborting compilation./d' applets/applets.c
-	fi
+	# flag cleanup
+	sed -i -r \
+		-e 's:[[:space:]]?-(Werror|Os|falign-(functions|jumps|loops|labels)=1|fomit-frame-pointer)\>::g' \
+		Makefile.flags || die
+	sed -i '/^#error Aborting compilation./d' applets/applets.c || die
+	use elibc_glibc && sed -i 's:-Wl,--gc-sections::' Makefile
+	cat <<-EOF >> Makefile.flags
+	CROSS_COMPILE := ${CHOST}-
+	HOSTCC := $(tc-getBUILD_CC)
+	SKIP_STRIP = y
+	EOF
 
 	# check for a busybox config before making one of our own.
+	# if one exist lets return and use it.
 
 	restore_config .config
 	if [ -f .config ]; then
@@ -107,29 +111,19 @@ src_unpack() {
 		return 0
 	else
 		ewarn "Could not locate user configfile, so we will save a default one"
-
-		# setup the config file
-		make allyesconfig > /dev/null
-		busybox_config_option n DMALLOC
-		busybox_config_option n FEATURE_SUID_CONFIG
-		busybox_config_option n BUILD_AT_ONCE
-		busybox_config_option n BUILD_LIBBUSYBOX
-
-		# If these are not set and we are using a uclibc/busybox setup
-		# all calls to system() will fail.
-		busybox_config_option y FEATURE_SH_IS_ASH
-		busybox_config_option n FEATURE_SH_IS_NONE
-
-		# default a bunch of uncommon options to off
-		for opt in LOCALE_SUPPORT TFTP FTP{GET,PUT} IPCALC TFTP HUSH \
-			LASH MSH INETD DPKG RPM2CPIO RPM FOLD LOGNAME OD CRONTAB \
-			UUDECODE UUENCODE SULOGIN DC DEBUG_INIT \
-			DEBUG_CROND_OPTION FEATURE_UDHCP_DEBUG TASKSET \
-			WERROR
-		do
-			busybox_config_option n ${opt}
-		done
 	fi
+
+	# setup the config file
+	make allyesconfig > /dev/null
+	busybox_config_option n DMALLOC
+	busybox_config_option n FEATURE_SUID_CONFIG
+	busybox_config_option n BUILD_AT_ONCE
+	busybox_config_option n BUILD_LIBBUSYBOX
+
+	# If these are not set and we are using a uclibc/busybox setup
+	# all calls to system() will fail.
+	busybox_config_option y FEATURE_SH_IS_ASH
+	busybox_config_option n FEATURE_SH_IS_NONE
 
 	if use static && use pam ; then
 		ewarn "You cannot have USE='static pam'.  Assuming static is more important."
@@ -146,16 +140,25 @@ src_unpack() {
 
 	busybox_config_option selinux SELINUX
 
+	# default a bunch of uncommon options to off
+	for opt in LOCALE_SUPPORT TFTP FTP{GET,PUT} IPCALC TFTP HUSH \
+		LASH MSH INETD DPKG RPM2CPIO RPM FOLD LOGNAME OD CRONTAB \
+		UUDECODE UUENCODE SULOGIN DC DEBUG_YANK_SUSv2 DEBUG_INIT \
+		DEBUG_CROND_OPTION FEATURE_UDHCP_DEBUG TASKSET
+	do
+		busybox_config_option n ${opt}
+	done
+
 	make oldconfig > /dev/null
 }
 
 src_compile() {
 	unset KBUILD_OUTPUT #88088
 
-	emake busybox ${MAKE_CONFIG} || die "build failed"
+	emake busybox || die "build failed"
 	if ! use static && ! use pam ; then
 		mv busybox_unstripped{,.bak}
-		emake busybox CONFIG_STATIC=y ${MAKE_CONFIG} || die "static build failed"
+		emake CONFIG_STATIC=y busybox || die "static build failed"
 		mv busybox_unstripped bb
 		mv busybox_unstripped{.bak,}
 	fi
@@ -178,7 +181,7 @@ src_install() {
 	doins "${FILESDIR}"/mdev-start.sh || die
 
 	# bundle up the symlink files for use later
-	emake install ${MAKE_CONFIG} || die
+	emake install || die
 	rm _install/bin/busybox
 	tar cf busybox-links.tar -C _install . || : #;die
 	insinto /usr/share/${PN}
