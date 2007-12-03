@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.0.ebuild,v 1.1 2007/12/03 00:00:45 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.0.ebuild,v 1.2 2007/12/03 07:21:55 mr_bones_ Exp $
 
 inherit linux-mod autotools toolchain-funcs
 
@@ -44,7 +44,7 @@ pkg_setup() {
 	# Notice I don't include --disable-static because it makes the linker
 	# fail due to a missing library needed by LIBS_THREADED += -lpvfs2-threaded.
 	# However that library is only compiled if static is enabled. Anyway
-	# it is used to build pvfs2-client-core-threaded, which is not installed 
+	# it is used to build pvfs2-client-core-threaded, which is not installed
 	# by make kmod_install (unstable perhaps?)
 
 	# As of version 2.7.0 both static and shared versions of lpvfs2-threaded
