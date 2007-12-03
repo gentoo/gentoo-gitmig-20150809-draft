@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/mbuffer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.16 2007/09/11 20:04:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.17 2007/12/03 08:08:08 opfer Exp $
+
+  03 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  mbuffer-20070911.ebuild:
+  stable x86, bug 201037
 
 *mbuffer-20070911 (11 Sep 2007)
 
