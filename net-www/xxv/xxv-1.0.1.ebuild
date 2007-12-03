@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/xxv-1.0.1.ebuild,v 1.1 2007/12/02 16:45:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/xxv-1.0.1.ebuild,v 1.2 2007/12/03 22:06:35 hd_brummy Exp $
 
 inherit eutils
 
@@ -14,40 +14,34 @@ KEYWORDS="~x86 ~amd64"
 IUSE="mplayer"
 
 RDEPEND=">=media-video/vdr-1.2.6
-	perl-core/Test-Simple
+	media-video/vdr2jpeg
+	media-fonts/ttf-bitstream-vera
+	dev-db/mysql
+	perl-core/CGI
+	perl-core/Digest-MD5
+	perl-core/Getopt-Long
 	perl-core/MIME-Base64
 	perl-core/Time-HiRes
+	dev-perl/Compress-Zlib
+	dev-perl/Config-Tiny
+	dev-perl/Digest-HMAC
+	dev-perl/Encode-Detect
+	dev-perl/GD
+	dev-perl/DateManip
+	dev-perl/DBD-mysql
 	dev-perl/DBI
 	dev-perl/Event
-	dev-perl/URI
-	dev-perl/Locale-gettext
-	dev-perl/DBD-mysql
-	dev-db/mysql
-	dev-perl/Locale-gettext
-	dev-perl/WWW-Mechanize
-	dev-perl/GD
-	dev-perl/GDGraph
-	dev-perl/GD-Graph3d
-	dev-perl/Proc-ProcessTable
-	dev-perl/WWW-Mechanize-FormFiller
-	dev-perl/XML-RSS
-	dev-perl/Net-XMPP
-	dev-perl/Term-ReadLine-Perl
-	dev-perl/Term-ReadLine-Gnu
-	dev-perl/TimeDate
-	dev-perl/Template-Toolkit
-	dev-perl/Log-Log4perl
-	dev-perl/SOAP-Lite
-	dev-perl/Net-IP
-	dev-perl/Data-Random
-	dev-perl/Net-Amazon
-	dev-perl/JSON
-	dev-perl/Net-Telnet
-	dev-perl/Socket6
 	dev-perl/IO-Socket-INET6
-	dev-perl/Config-Tiny
-	media-video/vdr2jpeg
-	media-fonts/ttf-bitstream-vera"
+	dev-perl/JSON
+	dev-perl/Locale-gettext
+	dev-perl/MP3-Info
+	dev-perl/Net-Amazon
+	dev-perl/Net-Telnet
+	dev-perl/Net-XMPP
+	dev-perl/Proc-ProcessTable
+	dev-perl/Template-Toolkit
+	dev-perl/SOAP-Lite
+	dev-perl/XML-RSS"
 
 PDEPEND="mplayer? ( media-video/mplayer )"
 
