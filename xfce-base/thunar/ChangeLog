@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.40 2007/12/02 16:28:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.41 2007/12/03 16:57:39 drac Exp $
+
+*thunar-0.9.0-r1 (03 Dec 2007)
+
+  03 Dec 2007; Samuli Suominen <drac@gentoo.org>
+  +files/thunar-0.9.0-missing-audio-cds-for-volman.patch,
+  +thunar-0.9.0-r1.ebuild:
+  Upstream patch to fix audio cd support with thunar-volman.
 
 *thunar-0.9.0 (02 Dec 2007)
 
