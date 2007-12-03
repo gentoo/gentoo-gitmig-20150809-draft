@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/htdig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.34 2007/06/25 14:21:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.35 2007/12/03 08:13:25 wrobel Exp $
+
+*htdig-3.2.0_beta6-r3 (03 Dec 2007)
+
+  03 Dec 2007; <wrobel@gentoo.org> +files/htdig-3.2.0_beta6-quoting.patch,
+  +htdig-3.2.0_beta6-r3.ebuild:
+  -m htdig-3.2.0_beta6-r3 fixes sec bug #200285.
 
   25 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   htdig-3.2.0_beta6-r2.ebuild:
