@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.36 2007/12/03 12:31:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.37 2007/12/03 16:43:31 angelos Exp $
+
+  03 Dec 2007; Christoph Mende <angelos@gentoo.org> ghex-2.8.2.ebuild:
+  Stable on amd64 wrt bug #201079
 
   03 Dec 2007; Markus Meier <maekke@gentoo.org> ghex-2.8.2.ebuild:
   x86 stable, bug #201079
