@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.61.ebuild,v 1.1 2007/11/30 22:37:50 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.61-r1.ebuild,v 1.1 2007/12/03 21:41:14 tgurr Exp $
 
 inherit autotools elisp-common eutils versionator flag-o-matic
 
@@ -104,6 +104,9 @@ src_unpack() {
 
 	cd "${S}"
 	eautoreconf
+
+	cd "${S}/ijs"
+	eautoreconf
 }
 
 src_compile() {
@@ -126,7 +129,7 @@ src_compile() {
 	emake -j1 so all || die "emake failed"
 
 	cd "${S}/ijs"
-	./autogen.sh || die "ijs autogen failed"
+	econf || die "ijs econf failed"
 	emake || die "ijs emake failed"
 }
 
