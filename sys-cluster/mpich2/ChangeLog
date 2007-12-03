@@ -1,6 +1,17 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.21 2007/07/10 04:57:34 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.22 2007/12/03 06:03:02 nerdboy Exp $
+
+*mpich2-1.0.6 (03 Dec 2007)
+
+  03 Dec 2007; Steve Arnold <nerdboy@gentoo.org>
+  +files/mpich2-1.0.6-cxx.patch, +files/mpich2-1.0.6-fPIC.patch,
+  +files/mpich2-1.0.6-makefile.patch, +files/mpich2-1.0.6-shlib.patch,
+  mpich2-1.0.5_p4.ebuild, +mpich2-1.0.6.ebuild:
+  Updated to latest upstream release with pvfs2 support and shared lib fixes;
+  this version actually has proper shared libraries and support for pvfs2, so
+  feel free to test and report any problems.  Tested successfully with hdf5-
+  parallel (but needs real cluster testing).
 
   10 Jul 2007; Steve Arnold <nerdboy@gentoo.org> mpich2-1.0.5_p4.ebuild:
   fixed a leftover development hack alertly noticed by Mr_Bones

@@ -1,0 +1,48 @@
+--- src/util/createshlib.in.orig	2007-09-12 07:39:20.000000000 -0700
++++ src/util/createshlib.in	2007-10-13 10:06:51.000000000 -0700
+@@ -207,12 +207,12 @@
+ 
+     *)
+     # Typical Unix default
+-    soName=$srclibbase.$SHLIB_EXT.$dottedVersion
++    soName=$srclibbase.$SHLIB_EXT.$majorVersion
+     realName=$srclibbase.$SHLIB_EXT.$dottedVersion
+     altNames="$srclibbase.$SHLIB_EXT"
+-    if [ -n "$majorVersion" ] ; then
+-	altNames="$altNames $srclibbase.$SHLIB_EXT.$majorVersion"
+-    fi
++#    if [ -n "$majorVersion" ] ; then
++#	altNames="$altNames $srclibbase.$SHLIB_EXT.$majorVersion"
++#    fi
+     ;;
+ esac
+ 
+@@ -293,15 +293,16 @@
+         # Typically -Wl,-h,$soName
+ 	# FIXME: C_LINK_SHL knows the options for shared libraries,
+ 	# but not the args for setting the soname.
+-	$Show ${C_LINK_SHL} -o $realName -Wl,-h,$soName .tmp/*.o 
+-	# Do we need to add $dependentLibs ?
++	$Show ${C_LINK_SHL} -Wl,-soname,$soName -o $realName .tmp/*.o $dependentLibs
++	# Do we need to add $dependentLibs ? Yes!
+ 	;;
+     esac
+     if [ -n "$altNames" ] ; then
+         for alt in $altNames ; do
+ 	    # Remove any alternate names before executing the ln step
+ 	    rm -f $alt
+-            $Show ln -s $realName $alt
++	    $Show ln -s $realName $soName
++	    $Show ln -s $soName $alt
+         done
+     fi
+ 
+@@ -345,7 +346,7 @@
+     fi
+     if [ -n "$altNames" ] ; then
+         for alt in $altNames ; do
+-            ( cd $destdir && $Show rm -f $alt && $Show ln -s $realName $alt )
++            ( cd $destdir && $Show rm -f $alt && $Show ln -s $soName $alt )
+         done
+     fi
+ fi

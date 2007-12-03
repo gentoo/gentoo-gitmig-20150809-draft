@@ -1,0 +1,107 @@
+--- configure.orig	2007-10-10 20:59:53.000000000 -0700
++++ configure	2007-10-10 21:04:17.000000000 -0700
+@@ -8783,24 +8783,24 @@
+ 	 # if the compiler allows it (e.g., building with gcc but
+ 	 # a different Fortran compiler. Another option is to
+ 	 # *require* g77.
+-	 { echo "$as_me:$LINENO: checking whether $F77 allows -shared -fpic" >&5
+-echo $ECHO_N "checking whether $F77 allows -shared -fpic... $ECHO_C" >&6; }
++	 { echo "$as_me:$LINENO: checking whether $F77 allows -shared -fPIC" >&5
++echo $ECHO_N "checking whether $F77 allows -shared -fPIC... $ECHO_C" >&6; }
+ 	 rm -f conftest.f
+ 	 cat > conftest.f <<EOF
+        program main
+        end
+ EOF
+-         if $F77 -shared -fpic -o conftest conftest.f >/dev/null 2>&1 ; then
+-	     FC_SHL="$F77 -shared -fpic"
++         if $F77 -shared -fPIC -o conftest conftest.f >/dev/null 2>&1 ; then
++	     FC_SHL="$F77 -shared -fPIC"
+              { echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }
+          else
+              { echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6; }
+-             { echo "$as_me:$LINENO: checking whether $F77 allows -fpic" >&5
+-echo $ECHO_N "checking whether $F77 allows -fpic... $ECHO_C" >&6; }
+-             if $F77 -fpic -o conftest conftest.f >/dev/null 2>&1 ; then
+-	         FC_SHL="$F77 -fpic"
++             { echo "$as_me:$LINENO: checking whether $F77 allows -fPIC" >&5
++echo $ECHO_N "checking whether $F77 allows -fPIC... $ECHO_C" >&6; }
++             if $F77 -fPIC -o conftest conftest.f >/dev/null 2>&1 ; then
++	         FC_SHL="$F77 -fPIC"
+                  { echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }
+              else
+@@ -9837,7 +9837,7 @@
+     gcc)
+     if test "$pac_cv_f90_vendor" = gnu -o "$F90" = "g95" ; then
+         # If we have the GNU Fortran 95 compiler (untested)
+-        F90_SHL="$F90 -shared -fpic"
++        F90_SHL="$F90 -shared -fPIC"
+         F90_LINKPATH_SHL="-Wl,-rpath -Wl,"
+     else
+         case "$pac_cv_f90_vendor" in
+@@ -9848,13 +9848,13 @@
+ 
+ 	    intel)
+ 	    # Intel implements the GNU options
+-	    F90_SHL="$F90 -shared -fpic"
++	    F90_SHL="$F90 -shared -fPIC"
+             F90_LINKPATH_SHL="-Wl,-rpath -Wl,"
+ 	    ;;
+ 
+ 	    pgi)
+ 	    # Portland Group implements the GNU options
+-	    F90_SHL="$F90 -shared -fpic"
++	    F90_SHL="$F90 -shared -fPIC"
+             F90_LINKPATH_SHL="-Wl,-rpath -Wl,"
+ 	    ;;
+ 
+@@ -10852,7 +10852,7 @@
+ 	;;
+ 	gcc)
+         # Assume that the compiler is g++ if gcc style shared libraries chosen
+-        CXX_SHL="$CXX -shared -fpic"
++        CXX_SHL="$CXX -shared -fPIC"
+         CXX_LINKPATH_SHL="-Wl,-rpath -Wl,"
+ 	;;
+ 	cygwin|cygwin-gcc)
+@@ -12571,7 +12571,7 @@
+     # For example, include the libname as ${LIBNAME_SHL}
+     #C_LINK_SHL='${CC} -shared -Wl,-h,<finallibname>'
+     # May need -fPIC
+-    CC_SHL='${CC} -fpic'
++    CC_SHL='${CC} -fPIC'
+     #C_LINKPATH_SHL="-Wl,-rpath -Wl,"
+     # More recent versions allow multiple args, separated by commas
+     C_LINKPATH_SHL="-Wl,-rpath,"
+@@ -12839,7 +12839,7 @@
+     gcc)
+     # For example, include the libname as ${LIBNAME_SHL}
+     #C_LINK_SHL='${CC} -shared -Wl,-h,<finallibname>'
+-    pac_cc_sharedlibs='gcc -shared -fpic'
++    pac_cc_sharedlibs='gcc -shared -fPIC'
+     pac_clink_sharedlibs='gcc -shared'
+     ;;
+     libtool)
+--- confdb/aclocal_shl.m4.orig	2007-05-16 06:39:01.000000000 -0700
++++ confdb/aclocal_shl.m4	2007-10-10 21:05:15.000000000 -0700
+@@ -89,7 +89,7 @@
+     # For example, include the libname as ${LIBNAME_SHL}
+     #C_LINK_SHL='${CC} -shared -Wl,-h,<finallibname>'
+     # May need -fPIC 
+-    CC_SHL='${CC} -fpic'
++    CC_SHL='${CC} -fPIC'
+     #C_LINKPATH_SHL="-Wl,-rpath -Wl,"
+     # More recent versions allow multiple args, separated by commas
+     C_LINKPATH_SHL="-Wl,-rpath,"
+@@ -233,7 +233,7 @@
+     gcc)
+     # For example, include the libname as ${LIBNAME_SHL}
+     #C_LINK_SHL='${CC} -shared -Wl,-h,<finallibname>'
+-    pac_cc_sharedlibs='gcc -shared -fpic'
++    pac_cc_sharedlibs='gcc -shared -fPIC'
+     pac_clink_sharedlibs='gcc -shared'
+     ;;
+     libtool)

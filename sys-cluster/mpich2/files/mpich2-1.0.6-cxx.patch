@@ -1,0 +1,31 @@
+--- configure.orig	2007-10-14 13:47:58.000000000 -0700
++++ configure	2007-10-14 13:50:27.000000000 -0700
+@@ -655,6 +655,7 @@
+ NUMVERSION
+ VERSION
+ ABIVERSION
++CXXLIBPATH
+ CONFIGURE_ARGUMENTS
+ MPIFLIBNAME
+ PMPIFLIBNAME
+@@ -2199,6 +2200,10 @@
+ # libtool manual)
+ ABIVERSION="1:1"
+ 
++# This is needed for the C++ wrapper lib build (so we don't have unresolved
++# symbols).  The value is replaced via sed in the ebuild.
++export CXXLIBPATH="nerdboy"
++
+ CONFIGURE_ARGUMENTS="$ac_configure_args"
+ 
+ if test -n "$ac_configure_args" ; then
+--- Makefile.in.orig	2007-10-14 14:51:03.000000000 -0700
++++ Makefile.in	2007-10-14 15:27:04.000000000 -0700
+@@ -27,6 +27,7 @@
+ MAKE            = @MAKE@
+ MPILIBNAME      = @MPILIBNAME@
+ PMPILIBNAME     = @PMPILIBNAME@
++CXXLIBPATH	= @CXXLIBPATH@
+ 
+ 
+ VPATH = .:@srcdir@
