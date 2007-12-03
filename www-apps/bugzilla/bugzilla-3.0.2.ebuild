@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.0.2.ebuild,v 1.2 2007/12/03 08:45:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.0.2.ebuild,v 1.3 2007/12/03 08:50:19 opfer Exp $
 
 inherit webapp depend.apache versionator eutils
 
@@ -79,23 +79,23 @@ src_unpack() {
 	fi
 
 	# remove CVS directories
-	cd ${S}
+	cd "${S}"
 	find . -type d -name 'CVS' -print | xargs rm -rf
 }
 
 src_install () {
 	webapp_src_preinst
 
-	cp -r ${S}/* ${D}/${MY_HTDOCSDIR} || die
+	cp -r "${S}"/* "${D}"/${MY_HTDOCSDIR} || die
 
 	local FILE="bugzilla.cron.daily bugzilla.cron.tab"
-	cd ${FILESDIR}
-	cp ${FILE} ${D}/${MY_HTDOCSDIR}
+	cd "${FILESDIR}"
+	cp ${FILE} "${D}/${MY_HTDOCSDIR}"
 
-	webapp_hook_script ${FILESDIR}/$(get_version_component_range 1-2)/reconfig
-	webapp_postinst_txt en ${FILESDIR}/$(get_version_component_range 1-2)/postinstall-en.txt
+	webapp_hook_script "${FILESDIR}"/$(get_version_component_range 1-2)/reconfig
+	webapp_postinst_txt en "${FILESDIR}"/$(get_version_component_range 1-2)/postinstall-en.txt
 	webapp_src_install
 
 	# bug #124282
-	chmod -R +x ${D}/${MY_HTDOCSDIR}/*.cgi
+	chmod -R +x "${D}"/${MY_HTDOCSDIR}/*.cgi
 }
