@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/jasmin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jasmin/ChangeLog,v 1.12 2007/06/24 12:54:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jasmin/ChangeLog,v 1.13 2007/12/03 08:13:45 opfer Exp $
+
+  03 Dec 2007; Christian Faulhammer <opfer@gentoo.org> jasmin-1.2-r1.ebuild:
+  amd64 stable
 
   24 Jun 2007; Fabian Groffen <grobian@gentoo.org> jasmin-1.2.ebuild,
   jasmin-1.2-r1.ebuild:
