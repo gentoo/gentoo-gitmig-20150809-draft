@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.1.ebuild,v 1.2 2007/11/29 23:13:41 mr_bones_ Exp $
-
-NEED_PYTHON=2.5
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.2.ebuild,v 1.1 2007/12/03 11:20:14 bicatali Exp $
 
 inherit eutils multilib qt4 python
 
@@ -22,18 +20,25 @@ for l in ${LANGUAGES}; do
 	IUSE="${IUSE} linguas_${l}"
 done
 
-RDEPEND=">=x11-libs/qwt-5.0.2
+CDEPEND=">=x11-libs/qwt-5.0.2
 	>=x11-libs/qwtplot3d-0.2.7
 	>=dev-cpp/muParser-1.28
 	>=sci-libs/liborigin-20071119
-	>=sci-libs/gsl-1.10
-	python? ( dev-python/PyQt4
-		dev-python/pygsl
-		sci-libs/scipy )"
+	>=sci-libs/gsl-1.10"
 
 DEPEND="${RDEPEND}
 	python? ( >=dev-python/sip-4.5.2 )
 	doc? ( linguas_es? ( app-arch/unzip ) )"
+
+RDEPEND="${CDEPEND}
+	python? ( >=dev-lang/python-2.5
+		dev-python/PyQt4
+		dev-python/pygsl
+		sci-libs/scipy )"
+
+# manual-en.html never changes version
+# could also uses docbook2html, but the dep is quite heavy
+RESTRICT=" doc? ( mirror )"
 
 QT4_BUILT_WITH_USE_CHECK="qt3support"
 
@@ -41,15 +46,18 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-systemlibs.patch
+
 	for l in ${LANGUAGES}; do
 		use linguas_${l} || \
 			sed -i -e "s:translations/qtiplot_${l}.ts::" ${PN}/${PN}.pro
 	done
 	use python || sed -i -e 's/^\(SCRIPTING_LANGS += Python\)/#\1/' ${PN}.pro
+
 	# the lib$$suff did not work in the fitRational*.pro files
 	sed -i \
 		-e "s|/usr/lib\$\${libsuff}|$(get_libdir)|g" \
-		fit*/fitRational*.pro
+		fitPlugins/fit*/fitRational*.pro \
+		|| die "sed fitRational* failed"
 }
 
 src_compile() {
@@ -89,10 +97,10 @@ src_install() {
 
 pkg_postinst() {
 	use python && python_mod_optimize \
-		"${ROOT}" /usr/$(get_libdir)/python${PYVER}/site-packages/qtiUtil
+		"${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/qtiUtil
 }
 
 pkg_postrm() {
 	use python && python_mod_cleanup \
-		"${ROOT}" /usr/$(get_libdir)/python${PYVER}/site-packages/qtiUtil
+		"${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/qtiUtil
 }

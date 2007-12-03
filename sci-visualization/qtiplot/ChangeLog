@@ -1,6 +1,15 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.12 2007/11/28 23:28:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.13 2007/12/03 11:20:14 bicatali Exp $
+
+*qtiplot-0.9.2 (03 Dec 2007)
+
+  03 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/qtiplot-0.9.1-systemlibs.patch,
+  +files/qtiplot-0.9.2-systemlibs.patch, -qtiplot-0.9.1.ebuild,
+  +qtiplot-0.9.2.ebuild:
+  Version bump. Removed 0.9.1 because many issues and missing doc upstream.
+  python-2.5 now only needed if python flag set.
 
 *qtiplot-0.9.1 (28 Nov 2007)
 
