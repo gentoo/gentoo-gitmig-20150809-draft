@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-recstatus/vdr-recstatus-0.0.5.ebuild,v 1.1 2007/12/02 15:15:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-recstatus/vdr-recstatus-0.0.5.ebuild,v 1.2 2007/12/03 07:20:45 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -16,4 +16,3 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.4.6"
 
 RDEPEND=""
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pin/vdr-pin-0.1.9.ebuild,v 1.1 2007/12/02 18:36:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pin/vdr-pin-0.1.9.ebuild,v 1.2 2007/12/03 07:20:22 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -24,7 +24,7 @@ pkg_setup() {
 		echo
 		eerror "Patched VDR needed"
 		echo
-		elog "reemerge VDR with USE=\"child-protection\" or USE=\"bigpatch\"" 
+		elog "reemerge VDR with USE=\"child-protection\" or USE=\"bigpatch\""
 		elog "or in newer VDR versiones use USE=\"pinplugin\"" && die "unpack failed, patched VDR needed"
 	fi
 }
@@ -32,9 +32,9 @@ pkg_setup() {
 src_unpack() {
     vdr-plugin_src_unpack
 
-	epatch ${FILESDIR}/${P}.diff	
+	epatch ${FILESDIR}/${P}.diff
 }
-  
+
 src_install() {
 	vdr-plugin_src_install
 
