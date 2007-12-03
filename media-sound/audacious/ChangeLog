@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.132 2007/12/03 15:50:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.133 2007/12/03 18:00:35 chainsaw Exp $
+
+*audacious-1.4.4 (03 Dec 2007)
+
+  03 Dec 2007; Tony Vroon <chainsaw@gentoo.org> -audacious-1.4.0.ebuild,
+  -audacious-1.4.2.ebuild, +audacious-1.4.4.ebuild:
+  New upstream release with stability improvements, especially with regard to
+  streams stored in M3U playlists. Removed older 1.4 ebuilds.
 
 *audacious-1.4.3 (03 Dec 2007)
 
