@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.164 2007/11/30 00:56:39 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.165 2007/12/03 19:16:06 dirtyepic Exp $
+
+  03 Dec 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/wxGTK-2.8.6-wxrc_link_fix.patch, wxGTK-2.8.6.1.ebuild:
+  Port wxrc link patch to 2.8, where it turns out it hasn't been applied yet
+  like I thought. Thanks to devurandom.
 
   30 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.6.4.0-r2.ebuild,
   wxGTK-2.8.6.1.ebuild:

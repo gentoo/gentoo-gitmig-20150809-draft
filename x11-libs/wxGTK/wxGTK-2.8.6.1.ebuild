@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.6.1.ebuild,v 1.2 2007/11/30 00:56:39 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.6.1.ebuild,v 1.3 2007/12/03 19:16:06 dirtyepic Exp $
 
 EAPI=1
 
@@ -66,6 +66,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-2.6.3-unicode-odbc.patch
 	epatch "${FILESDIR}"/${PN}-2.8.4-collision.patch
+	epatch "${FILESDIR}"/${PN}-2.8.6-wxrc_link_fix.patch
 
 	# Patches specific to this Version
 
