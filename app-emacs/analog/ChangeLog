@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/analog
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/analog/ChangeLog,v 1.10 2007/07/03 18:56:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/analog/ChangeLog,v 1.11 2007/12/03 07:49:38 opfer Exp $
+
+*analog-1.9.99 (03 Dec 2007)
+
+  03 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  +analog-1.9.99.ebuild:
+  version bump
 
   03 Jul 2007; Ulrich Mueller <ulm@gentoo.org> analog-1.29.ebuild:
   Remove redundant functions.
