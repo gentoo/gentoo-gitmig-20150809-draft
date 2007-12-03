@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.11.ebuild,v 1.2 2007/12/03 21:53:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.11.ebuild,v 1.3 2007/12/03 22:05:19 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -42,8 +42,8 @@ done
 RDEPEND="java? ( virtual/jre )
 	>=www-client/mozilla-launcher-1.39
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.11.5
-	>=dev-libs/nspr-4.6.5"
+	>=dev-libs/nss-3.11.7
+	>=dev-libs/nspr-4.6.7"
 
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )"
