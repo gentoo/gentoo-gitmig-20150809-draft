@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05.ebuild,v 1.8 2007/03/18 05:35:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05.ebuild,v 1.9 2007/12/03 21:37:50 robbat2 Exp $
 
 inherit eutils toolchain-funcs fixheadtails
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.qmail.org/ http://cr.yp.to/qmail/mini.html"
 SRC_URI="mirror://qmail/netqmail-${PV}.tar.gz
 	http://www.din.or.jp/~ushijima/mini-qmail-kit/mini-qmail-kit-0.52.tar.gz"
 
-LICENSE="as-is"
+LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="amd64 arm hppa mips ppc sparc x86"
 IUSE=""

@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/qmail-ldap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.23 2007/11/06 08:28:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.24 2007/12/03 21:38:27 robbat2 Exp $
+
+  03 Dec 2007; Robin H. Johnson <robbat2@gentoo.org>
+  qmail-ldap-1.03-r7.ebuild:
+  DJB has relicensed qmail to the public domain, see
+  http://cr.yp.to/qmail/dist.html
 
   06 Nov 2007; Benedikt Böhm <hollow@gentoo.org> qmail-ldap-1.03-r7.ebuild:
   remove controldb from IUSE

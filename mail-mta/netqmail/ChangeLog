@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.41 2007/06/30 18:43:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.42 2007/12/03 21:36:57 robbat2 Exp $
+
+  03 Dec 2007; Robin H. Johnson <robbat2@gentoo.org>
+  netqmail-1.05-r4.ebuild, netqmail-1.05-r8.ebuild:
+  DJB has relicensed qmail to the public domain, see
+  http://cr.yp.to/qmail/dist.html
 
   30 Jun 2007; Raúl Porcel <armin76@gentoo.org> netqmail-1.05-r8.ebuild:
   alpha stable wrt #169591

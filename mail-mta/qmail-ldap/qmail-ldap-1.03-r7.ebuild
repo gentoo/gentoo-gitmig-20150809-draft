@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r7.ebuild,v 1.3 2007/11/06 08:28:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r7.ebuild,v 1.4 2007/12/03 21:38:27 robbat2 Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -22,7 +22,7 @@ SRC_URI="
 	qmail-spp? ( mirror://gentoo/${P}-spp-${QMAIL_SPP_PATCH}.patch )
 "
 
-LICENSE="as-is"
+LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="cluster debug gencertdaily highvolume mailwrapper qmail-spp rfc2307 rfc822 ssl zlib"
