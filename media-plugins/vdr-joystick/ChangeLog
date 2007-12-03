@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/vdr-joystick
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-joystick/ChangeLog,v 1.1 2007/12/03 20:47:01 hd_brummy Exp $
+
+*vdr-joystick-0.0.3 (03 Dec 2007)
+
+  03 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> +files/confd,
+  +files/mapping.conf, +files/rc-addon.sh, +metadata.xml,
+  +vdr-joystick-0.0.3.ebuild:
+  initial ebuild; thanks to Guido Zuliani on bug 201072
+
