@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.103 2007/11/29 18:26:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.104 2007/12/03 21:44:18 armin76 Exp $
+
+*seamonkey-1.1.7 (03 Dec 2007)
+
+  03 Dec 2007; Raúl Porcel <armin76@gentoo.org> +seamonkey-1.1.7.ebuild:
+  Version bump wrt #200909
 
   29 Nov 2007; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.6.ebuild:
   Make 1.1.6 it's own patchset
