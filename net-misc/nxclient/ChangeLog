@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.58 2007/10/21 21:26:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.59 2007/12/03 21:28:37 voyageur Exp $
+
+*nxclient-3.0.0-r5 (03 Dec 2007)
+
+  03 Dec 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -nxclient-3.0.0-r4.ebuild, +nxclient-3.0.0-r5.ebuild:
+  Version bump
 
 *nxclient-3.0.0-r4 (21 Oct 2007)
 
