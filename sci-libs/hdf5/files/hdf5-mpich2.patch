@@ -1,0 +1,17 @@
+--- config/mpich.orig	2005-10-26 13:31:41.000000000 -0700
++++ config/mpich	2007-11-04 15:46:53.000000000 -0800
+@@ -31,11 +31,13 @@
+ 	# $CC is an MPICH compiler. Grab the version numbers.
+         ccversion=`echo $ccversion | cut -f3 -d' '`
+ 	case "$ccversion" in
+-	    1.2.[0-5]*)
++	    # modified for mpich2 versioning
++	    1.0.[0-5]*)
+ 		hdf5_mpi_complex_derived_datatype_works='no'
+ 		;;
+ 	    *)
+ 		# assume okay
++		hdf5_mpi_complex_derived_datatype_works='yes'
+ 		;;
+ 	esac
+     fi

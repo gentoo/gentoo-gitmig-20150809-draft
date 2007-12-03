@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5-r1.ebuild,v 1.3 2006/07/13 05:05:56 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5-r1.ebuild,v 1.4 2007/12/03 07:21:53 nerdboy Exp $
 
 inherit fortran eutils toolchain-funcs
 
@@ -161,7 +161,7 @@ src_install() {
 	fi
 
 	dobin ${S}/bin/iostats || die "dobin failed"
-	dodoc README.txt COPYING MANIFEST
+	dodoc README.txt MANIFEST
 	dohtml doc/html/*
 
 	if use mpi ; then

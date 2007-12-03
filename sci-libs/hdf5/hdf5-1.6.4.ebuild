@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.4.ebuild,v 1.8 2007/06/26 02:43:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.4.ebuild,v 1.9 2007/12/03 07:21:53 nerdboy Exp $
 
 inherit eutils
 
@@ -64,6 +64,6 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		install || die "make install failed"
 
-	dodoc README.txt COPYING MANIFEST
+	dodoc README.txt MANIFEST
 	dohtml doc/html/*
 }
