@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.3 2007/08/24 14:27:39 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.4 2007/12/03 23:54:34 wschlich Exp $
+
+*zabbix-1.4.2-r1 (03 Dec 2007)
+
+  03 Dec 2007; Wolfram Schlich <wschlich@gentoo.org>
+  +files/1.4.2/initgroups.patch, +zabbix-1.4.2-r1.ebuild:
+  Added initgroups patch from
+  http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=452682
 
 *zabbix-1.4.2 (24 Aug 2007)
 

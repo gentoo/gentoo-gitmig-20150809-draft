@@ -1,0 +1,39 @@
+--- zabbix-1.4.2/src/libs/zbxnix/daemon.c	2007-08-20 21:22:22.000000000 +0200
++++ zabbix-1.4.2/src/libs/zbxnix/daemon.c	2007-11-25 15:53:31.890046746 +0100
+@@ -90,20 +90,33 @@
+ 	pid_t   		pid;
+ 	struct passwd		*pwd;
+ 	struct sigaction	phan;
++	char user[7] = "zabbix";
+ 
+ 	/* running as root ?*/
+ 	if((0 == allow_root) && (0 == getuid() || 0 == getgid()))
+ 	{
+-		pwd = getpwnam("zabbix");
++		pwd = getpwnam(user);
+ 		if (NULL == pwd)
+ 		{
+ 			zbx_error("User zabbix does not exist.");
+ 			zbx_error("Cannot run as root !");
+ 			exit(FAIL);
+ 		}
+-		if( (setgid(pwd->pw_gid) ==-1) || (setuid(pwd->pw_uid) == -1) )
++		if( (setgid(pwd->pw_gid) ==-1) )
+ 		{
+-			zbx_error("Cannot setgid or setuid to zabbix [%s].", strerror(errno));
++			zbx_error("Cannot setgid to zabbix [%s].", strerror(errno));
++			exit(FAIL);
++		}
++
++		if( (initgroups(user, pwd->pw_gid) == -1) ) 
++		{
++			zbx_error("Cannot initgroups to zabbix [%s].", strerror(errno));
++			exit(FAIL);
++		}
++		
++		if( (setuid(pwd->pw_uid) ==-1) )
++		{
++			zbx_error("Cannot setuid to zabbix [%s].", strerror(errno));
+ 			exit(FAIL);
+ 		}
+ 
