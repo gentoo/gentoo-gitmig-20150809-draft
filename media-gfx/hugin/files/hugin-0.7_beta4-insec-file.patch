@@ -1,0 +1,35 @@
+diff -ur hugin-0.7_beta4.orig/src/hugin/AutoCtrlPointCreator.cpp hugin-0.7_beta4/src/hugin/AutoCtrlPointCreator.cpp
+--- hugin-0.7_beta4.orig/src/hugin/AutoCtrlPointCreator.cpp	2007-12-03 00:53:19.000000000 +0100
++++ hugin-0.7_beta4/src/hugin/AutoCtrlPointCreator.cpp	2007-12-03 00:55:18.000000000 +0100
+@@ -219,7 +219,7 @@
+ 	}
+ #endif
+ 
+-    wxString ptofile(wxT("autopano_result_tempfile.pto"));
++    wxString ptofile = wxFileName::CreateTempFileName(wxT("ap_res"));
+     autopanoArgs.Replace(wxT("%o"), ptofile);
+     wxString tmp;
+     tmp.Printf(wxT("%d"), nFeatures);
+@@ -373,7 +373,7 @@
+         imgNr++;
+     }
+ 
+-    wxString ptofile(wxT("autopano_result_tempfile"));
++    wxString ptofile = wxFileName::CreateTempFileName(wxT("ap_res"));
+     autopanoArgs.Replace(wxT("%o"), ptofile);
+     wxString tmp;
+     tmp.Printf(wxT("%d"), nFeatures);
+diff -ur hugin-0.7_beta4.orig/src/Panorama/PTOptimise.cpp hugin-0.7_beta4/src/Panorama/PTOptimise.cpp
+--- hugin-0.7_beta4.orig/src/Panorama/PTOptimise.cpp	2007-12-03 00:53:19.000000000 +0100
++++ hugin-0.7_beta4/src/Panorama/PTOptimise.cpp	2007-12-03 00:56:05.000000000 +0100
+@@ -36,8 +36,8 @@
+ #include <boost/property_map.hpp>
+ #include <boost/graph/graph_utility.hpp>
+ 
+-#define DEBUG_WRITE_OPTIM_OUTPUT
+-#define DEBUG_WRITE_OPTIM_OUTPUT_FILE "hugin_debug_optim_results.txt"
++//#define DEBUG_WRITE_OPTIM_OUTPUT
++//#define DEBUG_WRITE_OPTIM_OUTPUT_FILE "hugin_debug_optim_results.txt"
+ 
+ using namespace std;
+ using namespace PT;

@@ -1,0 +1,11 @@
+diff -Naur hugin-0.6.1.org/src/Panorama/Makefile.am hugin-0.6.1/src/Panorama/Makefile.am
+--- hugin-0.6.1.org/src/Panorama/Makefile.am	2006-02-11 22:29:51.000000000 +0100
++++ hugin-0.6.1/src/Panorama/Makefile.am	2007-06-01 21:49:57.000000000 +0200
+@@ -7,5 +7,7 @@
+ noinst_LTLIBRARIES = libpanorama.la
+ libpanorama_la_SOURCES = Panorama.cpp PanoramaMemento.cpp PanoImage.cpp PanoToolsInterface.cpp SpaceTransform.cpp PTOptimise.cpp ImageGraph.cpp Stitcher.cpp Stitcher1.cpp Stitcher2.cpp Stitcher3.cpp Stitcher4.cpp
+ 
++libpanorama_la_LIBADD = $(BOOST_THREAD_LIB)
++
+ EXTRA_DIST=Panorama.vcproj OptimizeOptions.cpp
+ noinst_HEADERS =
