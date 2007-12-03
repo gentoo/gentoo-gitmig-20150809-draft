@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/thumbs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/thumbs/ChangeLog,v 1.17 2007/12/02 14:28:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/thumbs/ChangeLog,v 1.18 2007/12/03 13:46:21 angelos Exp $
+
+  03 Dec 2007; Christoph Mende <angelos@gentoo.org> thumbs-2.0.ebuild:
+  Stable on amd64 wrt bug #196255
 
   02 Dec 2007; Christian Faulhammer <opfer@gentoo.org> -thumbs-1.8.ebuild:
   clean up
