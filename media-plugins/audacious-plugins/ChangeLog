@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.71 2007/11/21 18:49:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.72 2007/12/03 15:50:54 chainsaw Exp $
+
+*audacious-plugins-1.4.2 (03 Dec 2007)
+
+  03 Dec 2007; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-plugins-1.4.2.ebuild:
+  Version bump. Add SSE2 USE-flag as suggested by Risto A. Paju
+  <teknohog+gentoobugz@iki.fi>, closes bug #200532.
 
   21 Nov 2007; Tony Vroon <chainsaw@gentoo.org>
   audacious-plugins-1.4.1.ebuild:
