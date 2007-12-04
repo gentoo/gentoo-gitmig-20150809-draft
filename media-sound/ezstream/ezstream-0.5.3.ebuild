@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ezstream/ezstream-0.5.1.ebuild,v 1.1 2007/09/20 14:57:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ezstream/ezstream-0.5.3.ebuild,v 1.1 2007/12/04 18:04:46 drac Exp $
 
 DESCRIPTION="Enables you to stream mp3 or vorbis files to an icecast server without reencoding"
 HOMEPAGE="http://www.icecast.org/ezstream.php"
@@ -9,7 +9,7 @@ SRC_URI="http://downloads.xiph.org/releases/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="examples taglib"
+IUSE="taglib"
 
 DEPEND="media-libs/libvorbis
 	media-libs/libogg
@@ -20,24 +20,15 @@ DEPEND="media-libs/libvorbis
 RDEPEND="${DEPEND}
 	net-misc/icecast"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	# handle these in src_install
-	sed -e "s:COPYING NEWS README::" -e "s:examples::" -i Makefile.in
-}
-
 src_compile() {
-	econf $(use_with taglib)
+	econf --enable-examplesdir="/usr/share/doc/${PF}/examples" \
+		--docdir="/usr/share/doc/${PF}" $(use_with taglib)
 	emake || die "emake failed."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc ChangeLog NEWS README
-
-	if use examples; then
-		docinto examples
-		dodoc examples/{*.xml,*.sh}
-	fi
+	rm -f "${D}"/usr/share/doc/${PF}/COPYING
+	dodoc ChangeLog
+	prepalldocs
 }
