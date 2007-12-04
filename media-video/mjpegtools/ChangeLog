@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.129 2007/11/27 11:55:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.130 2007/12/04 21:18:16 zzam Exp $
+
+*mjpegtools-1.9.0_rc3 (04 Dec 2007)
+
+  04 Dec 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +mjpegtools-1.9.0_rc3.ebuild:
+  Version bumped. Seems to solve some rate control problem and maybe more
+  small bugs.
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
   mjpegtools-1.8.0-r1.ebuild, mjpegtools-1.8.0-r2.ebuild,
