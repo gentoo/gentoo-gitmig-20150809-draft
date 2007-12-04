@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.6.5.ebuild,v 1.4 2007/12/04 11:45:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.7.0.ebuild,v 1.1 2007/12/04 11:45:18 bicatali Exp $
 
 inherit eutils gnome2
 
@@ -12,9 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-# 1.6.5 too buggy without nls. now forcing.
-#IUSE="accessibility gmp gnome gtk nls png readline sourceview"
-IUSE="accessibility gmp gnome gtk png readline sourceview"
+IUSE="accessibility gmp gnome gtk nls png readline sourceview"
 
 RDEPEND="dev-libs/libxml2
 	>=dev-libs/glib-2
@@ -39,10 +37,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# fix when nls not selected (bug #198720)
-	epatch "${FILESDIR}"/${P}-nls.patch
 	# makefile in cli not propagating flags
-	epatch "${FILESDIR}"/${P}-cli.patch
+	epatch "${FILESDIR}"/${PN}-1.6.5-cli.patch
 }
 
 src_compile() {
@@ -61,10 +57,10 @@ src_compile() {
 	fi
 
 	econf \
-		--with-nls \
 		--with-mpfr \
 		--without-libole2 \
 		--without-gtkextra \
+		$(use_enable nls) \
 		$(use_enable png png-comments) \
 		$(use_with readline) \
 		$(use_with gmp) \
