@@ -1,0 +1,22 @@
+--- config_office/configure.in.orig	2007-11-30 23:50:32.000000000 +0100
++++ config_office/configure.in	2007-11-30 23:47:39.000000000 +0100
+@@ -4061,8 +4061,8 @@
+ }
+       ], [AC_MSG_RESULT(OK)], [AC_MSG_RESULT([not suitable, only 3.6 supported currently])])
+      AC_MSG_CHECKING(whether setBreakType is public)
+-     save_LDFLAGS="$LDFLAGS"
+-     LDFLAGS="$LDFLAGS -licuuc"
++     save_LIBS="$LIBS"
++     LIBS="$LIBS -licuuc"
+ 	   AC_TRY_LINK([#include <unicode/rbbi.h>], [
+ 	   RuleBasedBreakIterator *rbi = NULL;
+ 	   rbi = new RuleBasedBreakIterator();
+@@ -4073,7 +4073,7 @@
+       else
+         AC_MSG_RESULT(yes)
+       fi
+-      LDFLAGS="$save_LDFLAGS"
++      LIBS="$save_LIBS"
+ else
+     AC_MSG_RESULT([internal])
+     SYSTEM_ICU=NO
