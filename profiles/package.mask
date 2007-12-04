@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7975 2007/12/04 09:36:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7976 2007/12/04 12:33:11 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Raúl Porcel <armin76@gentoo.org> (04 Dec 2007)
+# Mozilla stopped supporting 1.5 series in October 2007
+# Will be removed when mips stabilizes 2.0
+=mail-client/mozilla-thunderbird-1.5*
 
 # Ulrich Mueller <ulm@gentoo.org> (04 Dec 2007)
 # md5 is a built-in function in Emacs 21.4 and later. An sha1 module
