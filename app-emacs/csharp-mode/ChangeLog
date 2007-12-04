@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/csharp-mode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/ChangeLog,v 1.4 2007/10/24 20:57:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/ChangeLog,v 1.5 2007/12/04 12:29:01 ulm Exp $
+
+  04 Dec 2007; Ulrich Mueller <ulm@gentoo.org> csharp-mode-0.6.0-r1.ebuild,
+  csharp-mode-0.7.0.ebuild:
+  Explicitely call elisp_pkg_setup.
 
 *csharp-mode-0.7.0 (24 Oct 2007)
 
