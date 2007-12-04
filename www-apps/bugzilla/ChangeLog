@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.102 2007/12/04 19:40:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.103 2007/12/04 20:42:52 corsair Exp $
+
+  04 Dec 2007; Markus Rothe <corsair@gentoo.org> bugzilla-3.0.2.ebuild:
+  Stable on ppc64; bug #198075
 
   04 Dec 2007; nixnut <nixnut@gentoo.org> bugzilla-3.0.2.ebuild:
   Stable on ppc wrt bug 198075
