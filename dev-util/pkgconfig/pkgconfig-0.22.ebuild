@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.22.ebuild,v 1.4 2007/12/04 08:08:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.22.ebuild,v 1.5 2007/12/04 08:12:18 opfer Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,10 +21,10 @@ DEPEND=""
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/${MY_PN}-0.21-fix-tests.patch
+	epatch "${FILESDIR}/${MY_PN}-0.21-fix-tests.patch"
 
 	use ppc64 && use hardened && replace-flags -O[2-3] -O1
 }
