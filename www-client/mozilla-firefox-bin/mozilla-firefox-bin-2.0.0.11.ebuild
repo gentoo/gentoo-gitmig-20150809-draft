@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.11.ebuild,v 1.1 2007/12/03 21:49:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.11.ebuild,v 1.2 2007/12/04 02:11:06 cla Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -14,7 +14,7 @@ RESTRICT="strip"
 QA_EXECSTACK="opt/firefox/extensions/talkback@mozilla.org/components/libqfaservices.so"
 QA_TEXTRELS="opt/firefox/extensions/talkback@mozilla.org/components/libqfaservices.so"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="restrict-javascript"
