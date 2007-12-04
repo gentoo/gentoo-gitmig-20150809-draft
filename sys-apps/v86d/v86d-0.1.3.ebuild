@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.3.ebuild,v 1.1 2007/12/03 00:39:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.3.ebuild,v 1.2 2007/12/04 07:16:15 opfer Exp $
 
 inherit linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~spock/projects/uvesafb/archive/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="debug"
 
 DEPEND="dev-libs/klibc"
