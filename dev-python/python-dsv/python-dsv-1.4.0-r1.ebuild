@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dsv/python-dsv-1.4.0.ebuild,v 1.2 2007/10/03 04:41:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dsv/python-dsv-1.4.0-r1.ebuild,v 1.1 2007/12/04 08:34:03 hawking Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Python module for importing and exporting DSV files"
 HOMEPAGE="http://python-dsv.sourceforge.net/"
@@ -16,3 +16,8 @@ IUSE=""
 DEPEND="=dev-python/wxpython-2.6*"
 
 S="${WORKDIR}/DSV-${PV}"
+
+src_unpack() {
+	distutils_src_unpack
+	epatch "${FILESDIR}"/${P}-wxversion.patch
+}
