@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.8.1.ebuild,v 1.2 2007/07/02 14:38:33 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.10.ebuild,v 1.1 2007/12/04 20:41:56 dertobi123 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,24 +27,22 @@ pkg_setup() {
 src_compile() {
 	local myconf
 
-	myconf="${myconf} `use_enable ssl` \
-					  `use_enable command-args`"
+	myconf="${myconf} $(use_enable ssl) \
+					  $(use_enable command-args)"
 
 	# Generate the dh.h header file for better security (2005 Mar 20 eldad)
 	if useq ssl ; then
-		openssl dhparam -C 512 | sed -n '1,/BEGIN DH PARAMETERS/p' | grep -v "BEGIN DH PARAMETERS" > ${S}/src/dh.h
+		openssl dhparam -C 512 | sed -n '1,/BEGIN DH PARAMETERS/p' | grep -v "BEGIN DH PARAMETERS" > "${S}"/src/dh.h
 	fi
 
-	./configure ${myconf} \
+	econf ${myconf} \
 		--host=${CHOST} \
 		--prefix=/usr/nagios \
 		--localstatedir=/var/nagios \
 		--sysconfdir=/etc/nagios \
 		--with-nrpe-user=nagios \
-		--with-nrpe-grp=nagios \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
-	emake all || die
+		--with-nrpe-grp=nagios || die "econf failed"
+	emake all || die "make failed"
 	# Add nifty nrpe check tool
 	cd contrib
 	$(tc-getCC) ${CFLAGS} -o nrpe_check_control	nrpe_check_control.c
@@ -88,6 +86,6 @@ pkg_postinst() {
 		ewarn "the ability for clients to supply arguments to commands"
 		ewarn "which should be run. "
 		ewarn "THIS IS CONSIDERED A SECURITY RISK!"
-		ewarn "Please read /usr/share/doc/${PF}/SECURITY.gz for more info"
+		ewarn "Please read /usr/share/doc/${PF}/SECURITY.bz2 for more info"
 	fi
 }
