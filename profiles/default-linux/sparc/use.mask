@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.120 2007/11/20 12:45:01 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.121 2007/12/04 15:25:08 armin76 Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -163,10 +163,6 @@ bmpx
 # Jason Wever <weeve@gentoo.org> - 10 Jun 2006
 # Mask kdehiddenvisibility as we don't have gcc-4.1.x unmasked in any profiles
 kdehiddenvisibility
-
-# Gustavo Zacarias <gustavoz@gentoo.org> - 1 July 2006
-# seamonkey doesn't work yet, see bug #137198
-seamonkey
 
 # Jason Wever <weeve@gentoo.org> - 5 Aug 2006
 # Mask njb use flag until someone has a Nomad Jukebox to test with.
