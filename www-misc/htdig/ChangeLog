@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/htdig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.40 2007/12/04 17:59:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.41 2007/12/04 19:46:11 dertobi123 Exp $
+
+  04 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  htdig-3.2.0_beta6-r3.ebuild:
+  ppc stable, bug #200285
 
   04 Dec 2007; Markus Rothe <corsair@gentoo.org>
   htdig-3.2.0_beta6-r3.ebuild:
