@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/boa-constructor
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/ChangeLog,v 1.28 2007/09/29 01:22:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/ChangeLog,v 1.29 2007/12/04 03:50:05 dirtyepic Exp $
+
+  04 Dec 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/boa-constructor-0.4.0_alpha, +files/boa-constructor-0.6.1,
+  -files/boa-constructor, boa-constructor-0.4.0_alpha.ebuild,
+  boa-constructor-0.6.1.ebuild:
+  Add -W 2.6 option to 0.6.1 launcher to be sure we're always using wxpython-2.6.
 
 *boa-constructor-0.6.1 (29 Sep 2007)
 

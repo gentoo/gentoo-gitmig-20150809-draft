@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.6.1.ebuild,v 1.1 2007/09/29 01:22:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.6.1.ebuild,v 1.2 2007/12/04 03:50:05 dirtyepic Exp $
 
 inherit eutils python
 
@@ -44,7 +44,7 @@ src_install() {
 	insinto "${boadir}/Plug-ins"
 	doins Plug-ins/*
 
-	dobin "${FILESDIR}/boa-constructor"
+	newbin "${FILESDIR}"/${P} boa-constructor
 
 	dodoc Bugs.txt Changes.txt Credits.txt README.txt
 }

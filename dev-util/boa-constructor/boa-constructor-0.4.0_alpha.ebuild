@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.4.0_alpha.ebuild,v 1.6 2006/12/29 18:40:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.4.0_alpha.ebuild,v 1.7 2007/12/04 03:50:05 dirtyepic Exp $
 
 inherit eutils python
 
@@ -22,8 +22,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} || die "Failed to cd ${S}"
-	epatch ${FILESDIR}/${P}-wxversion.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-wxversion.patch
 }
 
 src_compile() {
@@ -51,7 +51,7 @@ src_install () {
 	insinto "${boadir}/Plug-ins"
 	doins Plug-ins/*
 
-	dobin "${FILESDIR}/boa-constructor"
+	newbin "${FILESDIR}"/${P} boa-constructor
 
 	dodoc Bugs.txt Changes.txt Credits.txt README.txt
 }
