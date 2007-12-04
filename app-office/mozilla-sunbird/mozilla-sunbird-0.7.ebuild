@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.7.ebuild,v 1.5 2007/12/04 11:07:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.7.ebuild,v 1.6 2007/12/04 11:17:44 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -40,7 +40,7 @@ SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 
 RDEPEND=">=www-client/mozilla-launcher-1.55
-	>=dev-libs/nss-3.11.5"
+	>=dev-libs/nss-3.11.7"
 
 S="${WORKDIR}/mozilla"
 
@@ -69,7 +69,7 @@ linguas() {
 				fi
 			done
 		fi
-		ewarn "Sorry, but mozilla-firefox does not support the ${LANG} LINGUA"
+		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
 	done
 }
 
@@ -178,10 +178,10 @@ src_install() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 
 	# Most of the installation happens here
-	dodir "${MOZILLA_FIVE_HOME}"
-	cp -RL "${S}/dist/bin/"* "${D}${MOZILLA_FIVE_HOME}" || die "Copy of files failed"
-	touch "${D}${MOZILLA_FIVE_HOME}"/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/chrome.manifest
-	touch "${D}${MOZILLA_FIVE_HOME}"/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome.manifest
+	dodir ${MOZILLA_FIVE_HOME}
+	cp -RL "${S}"/dist/bin/* "${D}"${MOZILLA_FIVE_HOME} || die "Copy of files failed"
+	touch "${D}"${MOZILLA_FIVE_HOME}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/chrome.manifest
+	touch "${D}"${MOZILLA_FIVE_HOME}/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome.manifest
 
 	linguas
 	for X in ${linguas}; do
@@ -192,13 +192,13 @@ src_install() {
 	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
 		einfo "Setting default locale to ${LANG}"
 		dosed -e "s:general.useragent.locale\", \"en-US\":general.useragent.locale\", \"${LANG}\":" \
-			"${MOZILLA_FIVE_HOME}"/defaults/pref/sunbird.js \
-			"${MOZILLA_FIVE_HOME}"/defaults/pref/sunbird-l10n.js || \
+			${MOZILLA_FIVE_HOME}/defaults/pref/sunbird.js \
+			${MOZILLA_FIVE_HOME}/defaults/pref/sunbird-l10n.js || \
 			die "sed failed to change locale"
 	fi
 
 	# Create /usr/bin/sunbird
-	install_mozilla_launcher_stub sunbird "${MOZILLA_FIVE_HOME}"
+	install_mozilla_launcher_stub sunbird ${MOZILLA_FIVE_HOME}
 
 	# Install icon and .desktop for menu entry
 	if ! use bindist; then
