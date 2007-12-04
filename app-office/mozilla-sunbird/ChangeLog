@@ -1,6 +1,9 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.20 2007/11/12 21:28:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.21 2007/12/04 11:07:35 armin76 Exp $
+
+  04 Dec 2007; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.7.ebuild:
+  x86 stable
 
   06 Nov 2007; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.7.ebuild:
   Bump patchset to add patches for bug 188636, among others, and use official
