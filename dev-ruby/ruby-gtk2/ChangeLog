@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gtk2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.56 2007/12/02 15:38:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.57 2007/12/04 17:37:25 armin76 Exp $
+
+  04 Dec 2007; Raúl Porcel <armin76@gentoo.org> ruby-gtk2-0.16.0-r2.ebuild:
+  alpha/ia64/sparc stable wrt security #200623
 
   02 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   ruby-gtk2-0.16.0-r2.ebuild:
