@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/dclibc
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/dclibc/ChangeLog,v 1.1 2006/06/19 06:49:43 squinky86 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/dclibc/ChangeLog,v 1.2 2007/12/04 20:13:52 armin76 Exp $
+
+  04 Dec 2007; Raúl Porcel <armin76@gentoo.org> dclibc-0.1.1_beta1.ebuild:
+  Remove static USE-flag, bug #165614
 
 *dclibc-0.1.1_beta1 (19 Jun 2006)
 
