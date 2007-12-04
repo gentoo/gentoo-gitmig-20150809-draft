@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.69 2007/12/04 17:14:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.70 2007/12/04 18:06:43 corsair Exp $
+
+  04 Dec 2007; Markus Rothe <corsair@gentoo.org> pkgconfig-0.22.ebuild:
+  Stable on ppc64; bug #201122
 
   04 Dec 2007; nixnut <nixnut@gentoo.org> pkgconfig-0.22.ebuild:
   Stable on ppc wrt bug 201122
