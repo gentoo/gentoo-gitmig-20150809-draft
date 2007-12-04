@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/wxmaxima
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.6 2007/09/29 00:16:14 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.7 2007/12/04 11:58:39 bicatali Exp $
+
+  04 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  wxmaxima-0.7.3a.ebuild:
+  Modernized with newer wxwigets eclass, fixed missing running dependencies
 
   29 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> wxmaxima-0.7.1.ebuild,
   wxmaxima-0.7.3a.ebuild:

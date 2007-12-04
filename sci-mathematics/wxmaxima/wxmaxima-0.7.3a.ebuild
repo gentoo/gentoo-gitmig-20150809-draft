@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.3a.ebuild,v 1.2 2007/09/29 00:16:14 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.3a.ebuild,v 1.3 2007/12/04 11:58:39 bicatali Exp $
 
+WX_GTK_VER="2.6"
 inherit eutils autotools wxwidgets fdo-mime
 
 MYP=wxMaxima-${PV}
@@ -16,17 +17,20 @@ KEYWORDS="~amd64 ~x86"
 IUSE="unicode"
 DEPEND=">=dev-libs/libxml2-2.5.0
 	=x11-libs/wxGTK-2.6*"
-RDEPEND=">=sci-mathematics/maxima-5.13.0"
+RDEPEND="${DEPEND}
+	>=sci-mathematics/maxima-5.13.0"
 
-S=${WORKDIR}/${MYP}
+S="${WORKDIR}/${MYP}"
 
-src_compile () {
-	export WX_GTK_VER="2.6"
+pkg_setup() {
 	if use unicode; then
 		need-wxwidgets unicode
 	else
-		need-wxwidgets gtk2
+		need-wxwidgets ansi
 	fi
+}
+
+src_compile () {
 
 	# consistent package names
 	sed -i \
@@ -54,7 +58,7 @@ src_install () {
 	make_desktop_entry wxmaxima "wxMaxima ${PV}" wxmaxima \
 		"Science;Math;Education"
 
-	dosym ${PORTDIR}/licenses/${LICENSE} /usr/share/${PN}/COPYING
+	dosym "${PORTDIR}"/licenses/${LICENSE} /usr/share/${PN}/COPYING
 	dodir /usr/share/doc/${PF}
 	dosym /usr/share/${PN}/README /usr/share/doc/${PF}/README
 	dodoc AUTHORS
