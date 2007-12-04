@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Date
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/ChangeLog,v 1.11 2007/12/03 08:36:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/ChangeLog,v 1.12 2007/12/04 19:23:40 nixnut Exp $
+
+  04 Dec 2007; nixnut <nixnut@gentoo.org> Email-Date-1.102.ebuild:
+  Stable on ppc wrt bug 198075
 
   03 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   Email-Date-1.102.ebuild:
