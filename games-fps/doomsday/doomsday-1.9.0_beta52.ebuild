@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta52.ebuild,v 1.1 2007/11/23 20:50:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta52.ebuild,v 1.2 2007/12/04 02:10:27 mr_bones_ Exp $
 
 inherit toolchain-funcs games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/deng/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc x86"
 IUSE="openal"
 
 RDEPEND="virtual/opengl

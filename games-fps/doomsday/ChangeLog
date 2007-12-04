@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.22 2007/11/23 20:50:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.23 2007/12/04 02:10:27 mr_bones_ Exp $
+
+  04 Dec 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  doomsday-1.9.0_beta52.ebuild:
+  mark stable to avoid p.mask downgrade
 
 *doomsday-1.9.0_beta52 (23 Nov 2007)
 
