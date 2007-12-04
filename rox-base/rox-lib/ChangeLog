@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/rox-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.20 2007/11/29 16:14:38 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.21 2007/12/04 17:32:27 lack Exp $
+
+*rox-lib-2.0.4-r1 (04 Dec 2007)
+
+  04 Dec 2007; Jim Ramsay <lack@gentoo.org> +rox-lib-2.0.4-r1.ebuild:
+  Updated to install 0install native feed for the new rox-0install eclass
 
   29 Nov 2007; Jim Ramsay <lack@gentoo.org> -rox-lib-2.0.3-r1.ebuild,
   -rox-lib-2.0.3-r2.ebuild, -rox-lib-2.0.3-r3.ebuild:
