@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7978 2007/12/04 16:36:58 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7979 2007/12/04 21:40:12 suka Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -51,11 +51,6 @@ app-emacs/sha1
 # Gunnar Wrobel <wrobel@gentoo.org> (02 Dec 2007)
 # Masked in favor of www-apps/viewvc
 www-apps/viewcvs
-
-# Andreas Proschofsky <suka@gentoo.org> (02 Dec 2007)
-# Release candidates, so masking for testing
->=app-office/openoffice-bin-2.3.1_rc1
->=app-office/openoffice-2.3.1_rc1
 
 # Benedikt Böhm <hollow@gentoo.org> (28 Nov 2007)
 # Masked for USE_EXPAND and eclass testing.
