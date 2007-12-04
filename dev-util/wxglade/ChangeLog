@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/wxglade
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.43 2007/12/04 04:27:31 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.44 2007/12/04 15:42:07 dirtyepic Exp $
+
+  04 Dec 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/wxglade-0.6.1-wxversion.patch, wxglade-0.6.ebuild,
+  wxglade-0.6.1.ebuild:
+  Lock to wxpython-2.6 at runtime.
 
   04 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> -wxglade-0.4.1.ebuild:
   Remove old.
