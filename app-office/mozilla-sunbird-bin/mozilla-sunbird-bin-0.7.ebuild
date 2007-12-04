@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.7.ebuild,v 1.2 2007/12/04 11:10:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.7.ebuild,v 1.3 2007/12/04 11:13:46 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -95,14 +95,14 @@ src_unpack() {
 }
 
 src_install() {
-	declare MOZILLA_FIVE_HOME=/opt/sunbird
+	declare MOZILLA_FIVE_HOME="/opt/sunbird"
 
 	# Install sunbird in /opt
 	dodir ${MOZILLA_FIVE_HOME%/*}
-	touch ${S}/extensions/talkback@mozilla.org/chrome.manifest
-	touch ${S}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/chrome.manifest
-	touch ${S}/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome.manifest
-	mv ${S} ${D}${MOZILLA_FIVE_HOME}
+	touch "${S}"/extensions/talkback@mozilla.org/chrome.manifest
+	touch "${S}"/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/chrome.manifest
+	touch "${S}"/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome.manifest
+	mv "${S}" "${D}"${MOZILLA_FIVE_HOME}
 
 	linguas
 	for X in ${linguas}; do
@@ -113,8 +113,8 @@ src_install() {
 	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
 		einfo "Setting default locale to ${LANG}"
 		dosed -e "s:general.useragent.locale\", \"en-US\":general.useragent.locale\", \"${LANG}\":" \
-			"${MOZILLA_FIVE_HOME}"/defaults/pref/sunbird.js \
-			"${MOZILLA_FIVE_HOME}"/defaults/pref/sunbird-l10n.js || \
+			${MOZILLA_FIVE_HOME}/defaults/pref/sunbird.js \
+			${MOZILLA_FIVE_HOME}/defaults/pref/sunbird-l10n.js || \
 			die "sed failed to change locale"
 	fi
 
@@ -122,16 +122,16 @@ src_install() {
 	install_mozilla_launcher_stub sunbird-bin ${MOZILLA_FIVE_HOME}
 
 	# Install icon and .desktop for menu entry
-	doicon ${FILESDIR}/icon/${PN}-icon.png
-	domenu ${FILESDIR}/icon/${PN}.desktop
+	doicon "${FILESDIR}"/icon/${PN}-icon.png
+	domenu "${FILESDIR}"/icon/${PN}.desktop
 }
 
 pkg_preinst() {
-	declare MOZILLA_FIVE_HOME=/opt/sunbird
+	declare MOZILLA_FIVE_HOME="/opt/sunbird"
 
 	# Remove entire installed instance to prevent all kinds of
 	# problems... see bug 44772 for example
-	rm -rf ${ROOT}${MOZILLA_FIVE_HOME}
+	rm -rf "${ROOT}"${MOZILLA_FIVE_HOME}
 }
 
 pkg_postinst() {
