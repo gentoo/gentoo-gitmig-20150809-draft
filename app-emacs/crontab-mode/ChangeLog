@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/crontab-mode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/crontab-mode/ChangeLog,v 1.11 2007/03/07 09:32:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/crontab-mode/ChangeLog,v 1.12 2007/12/04 08:15:46 ulm Exp $
+
+  04 Dec 2007; Ulrich Mueller <ulm@gentoo.org> crontab-mode-1.20.ebuild:
+  Stable on amd64, bug #195512.
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50crontab-mode-gentoo.el:
