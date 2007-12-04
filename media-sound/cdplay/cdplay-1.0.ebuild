@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdplay/cdplay-1.0.ebuild,v 1.5 2007/11/25 02:56:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdplay/cdplay-1.0.ebuild,v 1.6 2007/12/04 19:05:55 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ta-sa.org/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="!media-sound/cdtool"
