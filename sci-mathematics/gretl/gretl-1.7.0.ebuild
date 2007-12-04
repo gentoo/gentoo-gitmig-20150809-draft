@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.7.0.ebuild,v 1.1 2007/12/04 11:45:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.7.0.ebuild,v 1.2 2007/12/04 17:59:37 bicatali Exp $
+
+USE_EINSTALL=true
 
 inherit eutils gnome2
 
