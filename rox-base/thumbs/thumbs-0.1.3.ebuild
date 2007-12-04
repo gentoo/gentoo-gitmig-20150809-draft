@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/thumbs/thumbs-0.1.3.ebuild,v 1.6 2007/11/15 20:19:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/thumbs/thumbs-0.1.3.ebuild,v 1.7 2007/12/04 21:25:56 lack Exp $
 
-ROX_LIB="2.0.0"
+ROX_LIB_VER="2.0.0"
 inherit rox
 
 MY_PN="Thumbs"
