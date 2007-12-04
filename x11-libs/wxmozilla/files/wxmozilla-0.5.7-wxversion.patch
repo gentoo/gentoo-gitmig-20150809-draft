@@ -1,0 +1,21 @@
+diff -Naur wxMozilla-orig/configure.in wxMozilla/configure.in
+--- wxMozilla-orig/configure.in	2006-11-15 08:19:06.000000000 -0600
++++ wxMozilla/configure.in	2007-12-03 22:03:09.000000000 -0600
+@@ -287,7 +287,7 @@
+     if test "$wxrelease" = 2.4 ; then
+         WXPYTHONDIR="$pythondir"
+     else
+-        wxpyvername=`$PYTHON -c "from wx.build.config import getExtraPath; print getExtraPath(addOpts=1)"`
++        wxpyvername=`$PYTHON -c "import wxversion; wxversion.select('2.6'); from wx.build.config import getExtraPath; print getExtraPath(addOpts=1)"`
+         WXPYTHONDIR="$pythondir/$wxpyvername"
+     fi
+     
+@@ -295,7 +295,7 @@
+     AC_MSG_RESULT([$WXPYTHONDIR])
+     
+     AC_MSG_CHECKING([whether wxPython is >= 2.6.3])
+-    wxpyverok=`$PYTHON -c "import wx; print wx.__version__ > '2.6.3'"`
++    wxpyverok=`$PYTHON -c "import wxversion; wxversion.select('2.6'); import wx; print wx.__version__ > '2.6.3'"`
+     if test "$wxpyverok" = "True" ; then
+         AC_MSG_RESULT([yes])
+     else

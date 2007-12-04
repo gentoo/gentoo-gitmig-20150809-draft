@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/wxmozilla
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/ChangeLog,v 1.14 2007/09/16 05:07:13 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/ChangeLog,v 1.15 2007/12/04 04:23:43 dirtyepic Exp $
+
+  04 Dec 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/wxmozilla-0.5.7-wxversion.patch,
+  wxmozilla-0.5.7_pre20070102.ebuild:
+  Fix configure to find wxpython-2.6 install instead of highest version
+  available.
 
   16 Sep 2007; Ryan Hill <dirtyepic@gentoo.org>
   +files/wxmozilla-0.5.7-python-2.5.patch,

@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.7_pre20070102.ebuild,v 1.4 2007/09/16 05:07:13 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.7_pre20070102.ebuild,v 1.5 2007/12/04 04:23:43 dirtyepic Exp $
 
-inherit eutils wxwidgets
+inherit eutils wxwidgets autotools
 
 # Currently force building against firefox.  Seamonkey is supported but
 # crashes.  Upstream will fix and release as 0.5.7. bug #130969
@@ -35,6 +35,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-0.5.7-python-2.5.patch
+	epatch "${FILESDIR}"/${PN}-0.5.7-wxversion.patch
+
+	eautoconf
 }
 
 src_compile() {
