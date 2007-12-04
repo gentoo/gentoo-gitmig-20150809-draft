@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18.ebuild,v 1.13 2007/11/21 15:54:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18-r1.ebuild,v 1.1 2007/12/04 19:11:55 armin76 Exp $
 
 inherit distutils eutils
 
@@ -34,8 +34,8 @@ src_unpack() {
 
 	# fixes wrong icons path
 	sed -i "s:os.path.abspath(os.path.dirname(os.path.realpath(sys.argv\[0\]))):\"${PIXMAPLOC}/\":" btdownloadgui.py
-	# fixes a bug with < wxpython-2.5 which is not yet available in portage
-	epatch "${FILESDIR}"/${PN}-wxpython-pre2.5-fix.patch
+	# Needs wxpython-2.6 only, bug #201247
+	epatch "${FILESDIR}"/${P}-wxversion.patch
 }
 
 src_install() {
