@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox-0install.eclass,v 1.1 2007/12/04 17:07:52 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox-0install.eclass,v 1.2 2007/12/04 21:26:55 lack Exp $
 
 # ROX-0install eclass Version 1
 
@@ -21,7 +21,7 @@
 inherit rox
 
 DEPEND="${DEPEND}
-	rox-base/zeroinstall-injector"
+	>=rox-base/zeroinstall-injector-0.31"
 
 # Some locations for ZEROINSTALL
 NATIVE_FEED_DIR="/usr/share/0install.net/native_feeds"
@@ -41,10 +41,9 @@ ICON_CACHE_DIR="/var/cache/0install.net/interface_icons"
 #  path  - The path where the implementation will be installed 
 #          IE, the final edited xml will be at <path>/<basename of src>
 0install_native_feed() {
-	local src="${1}"; shift
-	local path="${1}"; shift
-	local feedfile=$(basename "${src}")
-	local dest="${path}/$feedfile"
+	local src=$1 path=$2
+	local feedfile=${src##*/}
+	local dest="${path}/${feedfile}"
 
 	0distutils "${src}" > tmp.native_feed || die "0distutils feed edit failed"
 
@@ -60,11 +59,11 @@ ICON_CACHE_DIR="/var/cache/0install.net/interface_icons"
 	)
 
 	local feedname
-	feedname=$(0distutils -e "${src}") || "0distutils URI escape failed"
+	feedname=$(0distutils -e "${src}") || die "0distutils URI escape failed"
 	dosym "${dest}" "${NATIVE_FEED_DIR}/${feedname}"
 
 	local cachedname
-	cachedname=$(0distutils -c "${src}") || "0distutils URI escape failed"
+	cachedname=$(0distutils -c "${src}") || die "0distutils URI escape failed"
 	dosym "${path}/.DirIcon" "${ICON_CACHE_DIR}/${cachedname}"
 }
 
@@ -75,16 +74,16 @@ rox-0install_src_install() {
 
 	# Now search for the feed, and install it if found.
 	local search_list="${LOCAL_FEED_SRC} ${APPNAME}/${APPNAME}.xml ${APPNAME}.xml"
-	local installed=false
+	local installed=""
 	for feed in ${search_list}; do
 		if [[ -f "${feed}" ]]; then
 			0install_native_feed "${feed}" "${APPDIR}/${APPNAME}"
-			installed=true
+			installed="true"
 			break
 		fi
 	done
 
-	if ! $installed; then
+	if [[ -z ${installed} ]]; then
 		ewarn "No native feed found - This application will not be found by 0launch."
 	fi
 }
