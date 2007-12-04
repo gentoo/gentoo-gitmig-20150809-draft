@@ -1,0 +1,19 @@
+Index: configure.ac
+===================================================================
+--- configure.ac	(révision 2693)
++++ configure.ac	(copie de travail)
+@@ -189,6 +189,14 @@
+ 
+ AM_CONDITIONAL(HAVE_GNOME_KEYRING, test x$have_gnome_keyring = xyes)
+ 
++AC_ARG_ENABLE(debug,
++	      AS_HELP_STRING([--enable-debug],[enable support for debug path (needs libloudmouth to be compiled in debug mode)]), ,
++	      enable_debug=no)
++
++if test "x$enable_debug" = "xno"; then
++	AC_DEFINE(LM_NO_DEBUG, 1, [enable loudmouth debug path])
++fi
++
+ dnl -----------------------------------------------------------
+ dnl ISO codes, used for aspell support
+ dnl -----------------------------------------------------------

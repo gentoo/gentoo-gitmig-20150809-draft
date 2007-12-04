@@ -6,4 +6,12 @@
 <longdescription>
 Gossip is a Gnome integrated and HIG compliant jabber messaging client.    
 </longdescription>
+<use>
+	<flag name='debug'>Enable debug path in gossip.
+		<pkg>net-libs/loudmouth</pkg> needs to be compiled with USE="debug" to
+		allow Gossip to actually build the debug code path.</flag>
+	<flag name='keyring'>Allows Gossip to use gnome-keyring to store passwords.</flag>
+	<flag name='libnotify'>Allows Gossip to show visual notifications concerning
+		various activities via libnotify.</flag>
+</use>
 </pkgmetadata>
