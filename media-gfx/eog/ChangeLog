@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.186 2007/11/26 13:52:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.187 2007/12/04 20:28:11 jer Exp $
+
+  04 Dec 2007; Jeroen Roovers <jer@gentoo.org> eog-2.20.2.ebuild:
+  Stable for HPPA (bug #199740).
 
   26 Nov 2007; Markus Rothe <corsair@gentoo.org> eog-2.20.2.ebuild:
   Stable on ppc64; bug #199740
