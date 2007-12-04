@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7974 2007/12/04 02:12:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7975 2007/12/04 09:36:19 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Ulrich Mueller <ulm@gentoo.org> (04 Dec 2007)
+# md5 is a built-in function in Emacs 21.4 and later. An sha1 module
+# comes with app-emacs/flim and app-emacs/gnus, and is also included
+# in Emacs 22.1 and later.
+# Masked for removal in 30 days, bug #201191.
+app-emacs/md5
+app-emacs/sha1
 
 # Alexis Ballier <aballier@gentoo.org> (03 Dec 2007)
 # Small api changes, mask libcaca-0.99_beta13

@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.873 2007/12/03 22:08:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.874 2007/12/04 09:36:19 ulm Exp $
+
+  04 Dec 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Package mask app-emacs/md5 and app-emacs/sha1 for removal.
 
   03 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> ChangeLog:
   net-www/xxv-1.0.1 unmasked
