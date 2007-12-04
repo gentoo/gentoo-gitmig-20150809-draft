@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/drpython
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.14 2007/11/20 06:45:45 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.15 2007/12/04 07:51:55 hawking Exp $
+
+*drpython-165-r1 (04 Dec 2007)
+
+  04 Dec 2007; Ali Polatel <hawking@gentoo.org>
+  -files/drpython.py-3.10.12.patch, -files/drpython.py-3.10.13.patch,
+  +files/drpython-165-wxversion.patch, -drpython-164.ebuild,
+  -drpython-165.ebuild, +drpython-165-r1.ebuild:
+  Revbump. Added patch to prevent running against other SLOTs of wxpython,
+  #201158. Drop old.
 
 *drpython-165 (20 Nov 2007)
 

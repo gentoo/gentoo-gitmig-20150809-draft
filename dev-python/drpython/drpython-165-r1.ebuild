@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-164.ebuild,v 1.3 2007/10/03 04:48:15 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-165-r1.ebuild,v 1.1 2007/12/04 07:51:55 hawking Exp $
 
 inherit distutils eutils multilib
 
@@ -17,6 +17,11 @@ DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/${PN}
 
+src_unpack() {
+	distutils_src_unpack
+	epatch "${FILESDIR}"/${P}-wxversion.patch
+}
+
 src_install() {
 	distutils_python_version
 
@@ -29,10 +34,11 @@ src_install() {
 	#Windows-only setup script:
 	rm "${D}"/usr/bin/postinst.py
 
-	make_wrapper drpython "python ${destdir}drpython.py"
+	make_wrapper drpython "python ${destdir}drpython_wx26.py"
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
 	elog "See the DrPython homepage for 20+ available plugins:"
 	elog "http://sourceforge.net/project/showfiles.php?group_id=83074"
 }
