@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.355 2007/12/04 21:24:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.356 2007/12/04 21:38:44 suka Exp $
+
+  04 Dec 2007; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.3.1.ebuild:
+  Remove useless STLport dependency
 
 *openoffice-2.3.1 (04 Dec 2007)
 
