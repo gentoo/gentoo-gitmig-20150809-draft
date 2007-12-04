@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.0.0.ebuild,v 1.9 2007/11/29 22:31:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.0.0.ebuild,v 1.10 2007/12/04 18:48:04 ticho Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification bogofilter"
 
@@ -46,6 +46,14 @@ RDEPEND="${COMMONDEPEND}
 	x11-misc/shared-mime-info"
 
 PLUGIN_NAMES="acpi-notifier att-remover attachwarner cachesaver etpan-privacy fetchinfo gtkhtml maildir mailmbox newmail notification pdf-viewer perl rssyl smime synce vcalendar"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Remove unmaintained insecure script, following upstream action
+	rm tools/*sylprint* || die
+}
 
 src_compile() {
 	local myconf
