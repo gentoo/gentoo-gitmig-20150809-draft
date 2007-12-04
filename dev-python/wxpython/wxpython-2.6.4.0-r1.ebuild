@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r1.ebuild,v 1.1 2007/11/25 03:03:09 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r1.ebuild,v 1.2 2007/12/04 15:58:27 dirtyepic Exp $
 
 WX_GTK_VER="2.6"
 
@@ -60,7 +60,7 @@ src_compile() {
 		&& mypyconf="${mypyconf} UNICODE=1" \
 		|| mypyconf="${mypyconf} UNICODE=0"
 
-	mypyconf="${mypyconf} WXPORT=gtk2 EP_ADD_OPTS=0"
+	mypyconf="${mypyconf} WXPORT=gtk2"
 
 	python setup.py ${mypyconf} build || die "setup.py build failed"
 }
@@ -81,7 +81,7 @@ src_install() {
 		&& mypyconf="${mypyconf} UNICODE=1" \
 		|| mypyconf="${mypyconf} UNICODE=0"
 
-	mypyconf="${mypyconf} WXPORT=gtk2 EP_ADD_OPTS=0"
+	mypyconf="${mypyconf} WXPORT=gtk2"
 
 	python setup.py ${mypyconf} install --prefix=/usr --root="${D}" \
 		|| die "setup.py install failed"
