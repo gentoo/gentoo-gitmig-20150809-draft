@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.875 2007/12/04 13:07:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.876 2007/12/04 16:36:58 dirtyepic Exp $
+
+  04 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Mask net-www/pears - bug #201246.
 
   04 Dec 2007; Alin Năstac <mrness@gentoo.org> package.mask:
   Mask net-proxy/squid-3.0 (#201209).
