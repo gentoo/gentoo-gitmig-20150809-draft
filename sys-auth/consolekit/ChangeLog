@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.28 2007/12/04 17:34:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.29 2007/12/04 18:01:54 corsair Exp $
+
+  04 Dec 2007; Markus Rothe <corsair@gentoo.org> consolekit-0.2.3.ebuild:
+  Stable on ppc64; bug #201103
 
   04 Dec 2007; nixnut <nixnut@gentoo.org> consolekit-0.2.3.ebuild:
   Stable on ppc wrt bug 201103
