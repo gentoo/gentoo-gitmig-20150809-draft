@@ -26,7 +26,7 @@ diff -ur gajim-0.11.3.orig/src/message_window.py gajim-0.11.3/src/message_window
 +		# Ctrl+PageUP / DOWN has to be handled by notebook
 +		if event.state & gtk.gdk.CONTROL_MASK and event.keyval in (
 +		gtk.keysyms.Page_Down, gtk.keysyms.Page_Up):
-+			return false
++			return False
  		if isinstance(control, ChatControlBase):
 -			#we forwarded it to message textview
 +			# we forwarded it to message textview

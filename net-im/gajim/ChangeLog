@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.63 2007/12/02 17:33:54 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.64 2007/12/04 20:44:43 welp Exp $
+
+  04 Dec 2007; <welp@gentoo.org> files/0.11.3-misc-fixes.patch:
+  Fix typo in patch
 
   02 Dec 2007; Peter Weller <welp@gentoo.org> files/0.11.3-misc-fixes.patch:
   OK, fix for real this time...
