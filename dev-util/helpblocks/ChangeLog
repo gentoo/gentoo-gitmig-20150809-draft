@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/helpblocks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.4 2007/09/25 21:46:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.5 2007/12/04 14:32:25 mrness Exp $
+
+*helpblocks-1.20 (04 Dec 2007)
+
+  04 Dec 2007; Alin Năstac <mrness@gentoo.org> +helpblocks-1.20.ebuild:
+  Version bump.
 
   25 Sep 2007; Alin Năstac <mrness@gentoo.org> helpblocks-1.19.ebuild:
   Restrict strip (helperblocks is distributed without symbols table).
