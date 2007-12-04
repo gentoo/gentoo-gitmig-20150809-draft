@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.172 2007/12/04 19:44:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.173 2007/12/04 19:55:16 corsair Exp $
+
+  04 Dec 2007; Markus Rothe <corsair@gentoo.org> busybox-1.7.4.ebuild:
+  Stable on ppc64; bug #201036
 
   04 Dec 2007; nixnut <nixnut@gentoo.org> busybox-1.7.4.ebuild:
   Stable on ppc wrt bug 201036
