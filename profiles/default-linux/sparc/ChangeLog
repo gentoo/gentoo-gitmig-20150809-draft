@@ -1,9 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.84 2007/12/04 15:25:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.85 2007/12/04 15:27:09 armin76 Exp $
 
   04 Dec 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
-  Unmask semonkey use-flag now that it works and is stable
+  Unmask seamonkey use-flag now that it works and is stable
 
   21 Nov 2007; Ferris McCormick <fmccor@gentoo.org> package.use.mask:
   Mask mtp use flag for amarok until libmtp can go stable.
