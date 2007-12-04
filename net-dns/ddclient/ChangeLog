@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.29 2007/12/03 16:02:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.30 2007/12/04 08:05:09 opfer Exp $
+
+  04 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  ddclient-3.7.3-r1.ebuild:
+  stable x86, bug 201115
 
 *ddclient-3.7.3-r1 (03 Dec 2007)
 
