@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.12 2007/04/28 16:58:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.13 2007/12/04 10:02:54 ulm Exp $
 
 inherit eutils
 
@@ -28,8 +28,8 @@ pkg_setup() {
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-eb4-gentoo.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-eb4-gentoo.diff"
 }
 
 src_compile() {
@@ -44,16 +44,7 @@ src_install() {
 
 	einstall || die
 
-	if ! $(grep 2010/tcp /etc/services >/dev/null 2>&1) ; then
-		cp /etc/services ${T}/services
-		cat >>${T}/services<<-EOF
-		ndtp		2010/tcp			# Network Dictionary Transfer Protocol
-		EOF
-		insinto /etc
-		doins ${T}/services
-	fi
-
-	newinitd ${FILESDIR}/ndtpd.initd ndtpd
+	newinitd "${FILESDIR}/ndtpd.initd" ndtpd
 
 	insinto /etc
 	newins ndtpd.conf{.sample,}
