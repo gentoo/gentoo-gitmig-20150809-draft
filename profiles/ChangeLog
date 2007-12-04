@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.874 2007/12/04 09:36:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.875 2007/12/04 13:07:57 mrness Exp $
+
+  04 Dec 2007; Alin Năstac <mrness@gentoo.org> package.mask:
+  Mask net-proxy/squid-3.0 (#201209).
 
   04 Dec 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Package mask app-emacs/md5 and app-emacs/sha1 for removal.

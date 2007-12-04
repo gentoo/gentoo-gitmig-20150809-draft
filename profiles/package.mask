@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7976 2007/12/04 12:33:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7977 2007/12/04 13:07:57 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Alin Năstac <mrness@gentoo.org> (04 Dec 2007)
+# Not ready for prime time (see bugs 197147 and 201209)
+=net-proxy/squid-3.0*
 
 # Raúl Porcel <armin76@gentoo.org> (04 Dec 2007)
 # Mozilla stopped supporting 1.5 series in October 2007
