@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.7.3-r1.ebuild,v 1.2 2007/12/04 08:05:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.7.3-r1.ebuild,v 1.3 2007/12/04 20:45:02 corsair Exp $
 
 inherit eutils
 
@@ -64,6 +64,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	# ensure the directories are owned by the user:group for this pkg
+	chown ${PN}:${PN} /var/{cache,run}/${PN}
+
 	use ssl && return
 	ewarn
 	ewarn "$PN will not have support for ssl, which means your dynamic DNS account"
@@ -71,7 +74,4 @@ pkg_postinst() {
 	ewarn "clear. To secure your information, add 'ssl' to your USEflags,"
 	ewarn "emerge -N ddclient, and add 'ssl=yes' to /etc/$PN/$PN.conf"
 	ewarn
-
-	# ensure the directories are owned by the user:group for this pkg
-	chown ${PN}:${PN} /var/{cache,run}/${PN}
 }
