@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-MIME
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/ChangeLog,v 1.14 2007/12/03 08:27:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/ChangeLog,v 1.15 2007/12/04 19:15:58 nixnut Exp $
+
+  04 Dec 2007; nixnut <nixnut@gentoo.org> Email-MIME-1.860.ebuild:
+  Stable on ppc wrt bug 201036
 
   03 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   Email-MIME-1.860.ebuild:
