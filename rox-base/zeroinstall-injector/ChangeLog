@@ -1,0 +1,11 @@
+# ChangeLog for rox-base/zeroinstall-injector
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.1 2007/12/04 17:02:45 lack Exp $
+
+*zeroinstall-injector-0.31 (04 Dec 2007)
+
+  04 Dec 2007; Jim Ramsay <lack@gentoo.org> +files/0distutils,
+  +files/global.cfg, +metadata.xml, +zeroinstall-injector-0.31.ebuild:
+  New package: Zeroinstall Injector allows regular users to install software
+  themselves
+
