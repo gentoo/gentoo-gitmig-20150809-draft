@@ -1,6 +1,21 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.82 2007/11/12 18:09:41 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.83 2007/12/04 23:59:54 wltjr Exp $
+
+*firebird-2.1.0.16780_beta2-r2 (04 Dec 2007)
+*firebird-2.0.3.12981.0-r4 (04 Dec 2007)
+
+  04 Dec 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/firebird-2.1.0.16780_beta2-deps-flags-libs.patch,
+  -files/firebird-2.1.0.16780_beta2-deps-flags-libs-paths.patch,
+  +files/firebird.conf.d, -firebird-2.0.3.12981.0-r3.ebuild,
+  +firebird-2.0.3.12981.0-r4.ebuild, -firebird-2.1.0.16780_beta2-r1.ebuild,
+  +firebird-2.1.0.16780_beta2-r2.ebuild:
+  Switched from patches to sed for path changes w/ sed checks via function.
+  Moved core from /usr/share/firebird -> /usr/lib/firebird since it contains
+  arch specific binaries, per FHS. Renamed isql -> fbsql per bug #198388.
+  Fixed missing path tweak for bug #198540. Removed past versions, should be
+  all folks :)
 
   12 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -files/firebird.conf.d, -files/firebird.init.d, -files/firebird.xinetd,

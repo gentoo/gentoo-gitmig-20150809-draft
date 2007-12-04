@@ -1,0 +1,103 @@
+diff -Naur Firebird-2.1.0.16780-Beta2_orig/builds/posix/Makefile.in.firebird Firebird-2.1.0.16780-Beta2/builds/posix/Makefile.in.firebird
+--- Firebird-2.1.0.16780-Beta2_orig/builds/posix/Makefile.in.firebird	2007-11-14 13:22:07.000000000 -0500
++++ Firebird-2.1.0.16780-Beta2/builds/posix/Makefile.in.firebird	2007-11-14 13:43:55.000000000 -0500
+@@ -185,14 +185,7 @@
+ # 
+ 
+ external_libraries:
+-ifeq ($(STD_ICU),false)
+-	$(MAKE) -f $(GEN_ROOT)/Makefile.extern.icu
+-endif
+-ifeq ($(STD_EDITLINE),false)
+-ifeq ($(EDITLINE_FLG),Y)
+-	$(MAKE) -f $(GEN_ROOT)/Makefile.extern.editline
+-endif
+-endif
++
+ 
+ btyacc_binary: $(BTYACC)
+ 
+--- Firebird-2.1.0.16780-Beta2_orig/builds/posix/make.defaults	2007-11-14 13:22:07.000000000 -0500
++++ Firebird-2.1.0.16780-Beta2/builds/posix/make.defaults	2007-11-14 13:44:39.000000000 -0500
+@@ -229,11 +229,7 @@
+ LIBFBSTATIC_A = $(LIB)/libfbstatic.a
+ 
+ ifeq ($(EDITLINE_FLG),Y)
+-  ifeq ($(STD_EDITLINE), true)
+-	LIBEDITLINE := -leditline
+-  else
+-	LIBEDITLINE := $(LIB)/libeditline.a
+-  endif
++	LIBEDITLINE := -ledit
+ endif
+ 
+ LIBICU_SO = $(LIB)/$(LIB_PREFIX)icuuc.$(SHRLIB_EXT) \
+diff -Naur Firebird-2.1.0.16780-Beta2_orig/builds/posix/make.rules Firebird-2.1.0.16780-Beta2/builds/posix/make.rules
+--- Firebird-2.1.0.16780-Beta2_orig/builds/posix/make.rules	2007-11-14 13:22:07.000000000 -0500
++++ Firebird-2.1.0.16780-Beta2/builds/posix/make.rules	2007-11-14 14:30:13.000000000 -0500
+@@ -33,9 +33,6 @@
+ 
+ # Please don't use compiler/platform specific flags here - nmcc 02-Nov-2002
+ CFLAGS:= $(CFLAGS) -I$(SRC_ROOT)/include/gen -I$(SRC_ROOT)/include -I$(SRC_ROOT)/vulcan -DNAMESPACE=Vulcan
+-ifeq ($(STD_ICU),false)
+-  CFLAGS:= $(CFLAGS) -I$(ROOT)/extern/icu/source/common -I$(ROOT)/extern/icu/source/i18n
+-endif
+ 
+ ifeq ($(IsProdTypeBuild),Y)
+   CFLAGS:= $(CFLAGS) $(PROD_FLAGS) -DPROD_BUILD
+@@ -69,19 +66,19 @@
+ 
+ .SUFFIXES: .c .e .epp .cpp
+ 
+-.e.c:
++.e.c: $(GPRE_CURRENT)
+ 	$(GPRE_CURRENT) $(GPRE_FLAGS) $< $@
+ 
+ 
+-.epp.cpp:
++.epp.cpp: $(GPRE_CURRENT)
+ 	$(GPRE_CURRENT) $(GPRE_FLAGS) $< $@
+ 
+ 
+-$(SRC_ROOT)/jrd/%.cpp:: $(SRC_ROOT)/jrd/%.epp 
++$(SRC_ROOT)/jrd/%.cpp:: $(SRC_ROOT)/jrd/%.epp $(GPRE_CURRENT)
+ 	$(GPRE_CURRENT) $(JRD_GPRE_FLAGS) $< $@
+ 
+ 
+-$(SRC_ROOT)/dsql/%.cpp:: $(SRC_ROOT)/dsql/%.epp 
++$(SRC_ROOT)/dsql/%.cpp:: $(SRC_ROOT)/dsql/%.epp $(GPRE_CURRENT)
+ 	$(GPRE_CURRENT) $(DSQL_GPRE_FLAGS) $< $@
+ 
+ 
+diff -Naur Firebird-2.1.0.16780-Beta2_orig/builds/posix/make.shared.targets Firebird-2.1.0.16780-Beta2/builds/posix/make.shared.targets
+--- Firebird-2.1.0.16780-Beta2_orig/builds/posix/make.shared.targets	2007-11-14 13:22:07.000000000 -0500
++++ Firebird-2.1.0.16780-Beta2/builds/posix/make.shared.targets	2007-11-14 13:46:49.000000000 -0500
+@@ -49,7 +49,7 @@
+ 
+ # gpre_meta needs a special boot build since there is no database.
+ 
+-$(SRC_ROOT)/gpre/gpre_meta.cpp:  $(SRC_ROOT)/gpre/gpre_meta.epp
++$(SRC_ROOT)/gpre/gpre_meta.cpp:  $(SRC_ROOT)/gpre/gpre_meta.epp $(GPRE_BOOT)
+ 	$(GPRE_BOOT) -lang_internal $(GPRE_FLAGS) $< $@
+ 
+ 
+diff -Naur Firebird-2.1.0.16780-Beta2_orig/configure Firebird-2.1.0.16780-Beta2/configure
+--- Firebird-2.1.0.16780-Beta2_orig/configure	2007-11-14 13:22:15.000000000 -0500
++++ Firebird-2.1.0.16780-Beta2/configure	2007-11-14 13:48:51.000000000 -0500
+@@ -3928,13 +3928,13 @@
+ # not need editline in default libs, but need to test for its presence
+ saveLIBS=$LIBS
+ if test "$STD_EDITLINE" = "true"; then
+-  { echo "$as_me:$LINENO: checking for readline in -leditline" >&5
+-echo $ECHO_N "checking for readline in -leditline... $ECHO_C" >&6; }
++  { echo "$as_me:$LINENO: checking for readline in -ledit" >&5
++echo $ECHO_N "checking for readline in -ledit... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_editline_readline+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-leditline  $LIBS"
++LIBS="-ledit  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
