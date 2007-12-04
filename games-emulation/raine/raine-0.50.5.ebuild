@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.50.5.ebuild,v 1.2 2007/10/02 09:37:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.50.5.ebuild,v 1.3 2007/12/04 03:56:43 mr_bones_ Exp $
 
 inherit versionator games
 
@@ -35,6 +35,7 @@ src_unpack() {
 	echo > cpuinfo
 	sed -i \
 		-e "/prefix =/s:/usr::" \
+		-e "s:nasm -r:echo nasm:" \
 		-e "/bindir/s:=.*:=\$(DESTDIR)${GAMES_BINDIR}:" \
 		-e "/sharedir =/s:=.*:=\$(DESTDIR)${GAMES_DATADIR}:" \
 		-e "/mandir/s:=.*:=\$(DESTDIR)/usr/share/man/man6:" \
