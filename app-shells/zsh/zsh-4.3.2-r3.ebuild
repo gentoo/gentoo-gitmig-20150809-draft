@@ -1,34 +1,41 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.6-r1.ebuild,v 1.5 2007/02/27 16:59:15 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.2-r3.ebuild,v 1.1 2007/12/04 16:10:23 tove Exp $
 
 inherit eutils multilib
+
+LOVERS_PV=0.5
+LOVERS_P=zsh-lovers-${LOVERS_PV}
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
-	linguas_ja? ( http://www.ono.org/software/dist/${PN}-4.2.4-euc-0.3.patch.gz )
+	examples? (
+	http://www.grml.org/repos/zsh-lovers_${LOVERS_PV}.orig.tar.gz )
 	doc? ( ftp://ftp.zsh.org/pub/${P}-doc.tar.bz2 )"
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc ~x86"
-IUSE="maildir ncurses static doc pcre cap"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+IUSE="maildir ncurses static doc examples pcre caps unicode"
 
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
-	cap? ( sys-libs/libcap )
+	caps? ( sys-libs/libcap )
 	ncurses? ( >=sys-libs/ncurses-5.1 )"
 DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
 	${RDEPEND}"
 
 src_unpack() {
-	unpack ${P}.tar.bz2
-	use doc && unpack ${P}-doc.tar.bz2
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-init.d-gentoo.diff
-	use linguas_ja && epatch ${DISTDIR}/${PN}-4.2.4-euc-0.3.patch.gz
-	cd ${S}/Doc
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-init.d-gentoo.diff
+
+	# fixes #201022 and
+	# http://www.zsh.org/mla/workers/2007/msg01065.html
+	rm Util/difflog.pl
+
+	cd "${S}"/Doc
 	ln -sf . man1
 	# fix zshall problem with soelim
 	soelim zshall.1 > zshall.1.soelim
@@ -58,7 +65,8 @@ src_compile() {
 		$(use_with ncurses curses-terminfo) \
 		$(use_enable maildir maildir-support) \
 		$(use_enable pcre) \
-		$(use_enable cap) \
+		$(use_enable caps) \
+		$(use_enable unicode multibyte) \
 		${myconf} || die "configure failed"
 
 	if use static ; then
@@ -66,10 +74,10 @@ src_compile() {
 		sed -i -e "s/link=no/link=static/g" \
 			-e "s/load=no/load=yes/g" \
 			config.modules || die
-	else
+#	else
 		# avoid linking to libs in /usr/lib, see Bug #27064
-		sed -i -e "/LIBS/s%-lpcre%/usr/$(get_libdir)/libpcre.a%" \
-			Makefile || die
+#		sed -i -e "/LIBS/s%-lpcre%/usr/$(get_libdir)/libpcre.a%" \
+#			Makefile || die
 	fi
 
 	# emake still b0rks
@@ -85,19 +93,20 @@ src_test() {
 
 src_install() {
 	einstall \
-		bindir=${D}/bin \
-		libdir=${D}/usr/$(get_libdir) \
-		fndir=${D}/usr/share/zsh/${PV%_*}/functions \
-		sitefndir=${D}/usr/share/zsh/site-functions \
+		bindir="${D}"/bin \
+		libdir="${D}"/usr/$(get_libdir) \
+		fndir="${D}"/usr/share/zsh/${PV%_*}/functions \
+		sitefndir="${D}"/usr/share/zsh/site-functions \
+		scriptdir="${D}"/usr/share/zsh/${PV%_*}/scripts \
 		install.bin install.man install.modules \
 		install.info install.fns || die "make install failed"
 
 	insinto /etc/zsh
-	doins ${FILESDIR}/zprofile
+	doins "${FILESDIR}"/zprofile
 
 	keepdir /usr/share/zsh/site-functions
 	insinto /usr/share/zsh/${PV%_*}/functions/Prompts
-	doins ${FILESDIR}/prompt_gentoo_setup || die
+	doins "${FILESDIR}"/prompt_gentoo_setup || die
 
 	# install miscellaneous scripts; bug #54520
 	sed -i -e "s:/usr/local:/usr:g" {Util,Misc}/* || "sed failed"
@@ -111,7 +120,19 @@ src_install() {
 	if use doc ; then
 		dohtml Doc/*
 		insinto /usr/share/doc/${PF}
-		doins Doc/zsh{.dvi,_us.ps,_a4.ps}
+		doins Doc/zsh.{dvi,pdf}
+	fi
+
+	if use examples; then
+		cd "${WORKDIR}"/${LOVERS_P}
+		doman  zsh-lovers.1    || die "doman zsh-lovers failed"
+		dohtml zsh-lovers.html || die "dohtml zsh-lovers failed"
+		docinto zsh-lovers
+		dodoc zsh.vim README
+		insinto /usr/share/doc/${PF}/zsh-lovers
+		doins zsh-lovers.{ps,pdf} refcard.{dvi,ps,pdf}
+		doins -r zsh_people || die "doins zsh_people failed"
+		cd -
 	fi
 
 	docinto StartupFiles
@@ -122,8 +143,10 @@ pkg_preinst() {
 	# Our zprofile file does the job of the old zshenv file
 	# Move the old version into a zprofile script so the normal
 	# etc-update process will handle any changes.
-	if [ -f /etc/zsh/zshenv -a ! -f /etc/zsh/zprofile ]; then
-		mv /etc/zsh/zshenv /etc/zsh/zprofile
+	if [ -f "${ROOT}/etc/zsh/zshenv" -a ! -f "${ROOT}/etc/zsh/zprofile" ]; then
+		ewarn "Renaming /etc/zsh/zshenv to /etc/zsh/zprofile."
+		ewarn "The zprofile file does the job of the old zshenv file."
+		mv "${ROOT}"/etc/zsh/{zshenv,zprofile}
 	fi
 }
 
