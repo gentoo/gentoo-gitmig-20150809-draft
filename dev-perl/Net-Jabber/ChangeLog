@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Jabber
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Jabber/ChangeLog,v 1.19 2007/06/11 15:27:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Jabber/ChangeLog,v 1.20 2007/12/04 20:38:55 corsair Exp $
+
+  04 Dec 2007; Markus Rothe <corsair@gentoo.org> Net-Jabber-2.0.ebuild:
+  Stable on ppc64; bug #198075
 
   11 Jun 2007; Brent Baude <ranger@gentoo.org> Net-Jabber-2.0.ebuild:
   Marking Net-Jabber-2.0.ebuild ~ppc64 for bug #181650

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-DBI
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.52 2007/05/27 13:06:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.53 2007/12/04 20:41:32 corsair Exp $
+
+  04 Dec 2007; Markus Rothe <corsair@gentoo.org> Apache-DBI-1.06.ebuild:
+  Stable on ppc64; bug #198075
 
   27 May 2007; Brent Baude <ranger@gentoo.org> Apache-DBI-1.06.ebuild:
   Marking Apache-DBI-1.06 ~ppc64 as a dep to bug 165190

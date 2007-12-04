@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Stream
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.19 2007/06/11 15:23:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.20 2007/12/04 20:37:15 corsair Exp $
+
+  04 Dec 2007; Markus Rothe <corsair@gentoo.org> XML-Stream-1.22.ebuild:
+  Stable on ppc64; bug #198075
 
   11 Jun 2007; Brent Baude <ranger@gentoo.org> XML-Stream-1.22.ebuild:
   Marking XML-Stream-1.22 ~ppc64 for bug #181650

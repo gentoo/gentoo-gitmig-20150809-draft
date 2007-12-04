@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-ISA
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ISA/ChangeLog,v 1.17 2007/02/14 11:02:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ISA/ChangeLog,v 1.18 2007/12/04 20:28:12 corsair Exp $
+
+  04 Dec 2007; Markus Rothe <corsair@gentoo.org> Class-ISA-0.33.ebuild:
+  Stable on ppc64; bug #198075
 
   14 Feb 2007; Markus Rothe <corsair@gentoo.org> Class-ISA-0.33.ebuild:
   Added ~ppc64
