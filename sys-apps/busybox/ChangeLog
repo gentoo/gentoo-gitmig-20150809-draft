@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.168 2007/12/03 17:02:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.169 2007/12/04 06:42:48 vapier Exp $
+
+  04 Dec 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/busybox-1.7.4-signal-hack.patch, busybox-1.7.4.ebuild:
+  Add a quick hack for building on hppa while we sort things out upstream
+  #201114.
 
   03 Dec 2007; Christoph Mende <angelos@gentoo.org> busybox-1.7.4.ebuild:
   Stable on amd64 wrt bug #201036
