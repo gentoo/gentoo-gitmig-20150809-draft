@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.111 2007/12/02 18:39:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.112 2007/12/04 17:17:46 cla Exp $
+
+  04 Dec 2007; Dawid Węgliński <cla@gentoo.org> kdm-3.5.7-r3.ebuild:
+  Stable on x86
 
   02 Dec 2007; Markus Rothe <corsair@gentoo.org> kdm-3.5.7-r3.ebuild:
   Stable on ppc64
