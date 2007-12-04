@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.1.0.ebuild,v 1.5 2007/12/04 20:42:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.0.2-r1.ebuild,v 1.1 2007/12/04 20:42:45 ticho Exp $
 
-IUSE="bogofilter clamav crypt dillo doc gnome gnutls imap ipv6 kde ldap nntp pda session spamassassin spell ssl startup-notification xface"
+IUSE="bogofilter clamav crypt dillo doc gnome imap ipv6 kde ldap pda session spamassassin spell ssl startup-notification xface"
 
 inherit eutils multilib
 
@@ -31,9 +31,7 @@ COMMONDEPEND=">=x11-libs/gtk+-2.6
 	clamav? ( app-antivirus/clamav )
 	kde? ( kde-base/kdelibs )
 	imap? ( >=net-libs/libetpan-0.49 )
-	nntp? ( >=net-libs/libetpan-0.49 )
 	gnome? ( >=gnome-base/libgnomeprintui-2.2 )
-	gnutls? ( net-libs/gnutls )
 	startup-notification? ( x11-libs/startup-notification )
 	bogofilter? ( mail-filter/bogofilter )
 	session? ( x11-libs/libSM
@@ -51,21 +49,24 @@ RDEPEND="${COMMONDEPEND}
 
 PLUGIN_NAMES="acpi-notifier att-remover attachwarner cachesaver etpan-privacy fetchinfo gtkhtml maildir mailmbox newmail notification pdf-viewer perl rssyl smime synce vcalendar"
 
-src_compile() {
-	local myconf="--disable-libetpan"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 
-	# libetpan is needed if user wants nntp or imap functionality
-	# TODO: Perhaps change it into a single "libetpan" USE flag?
-	use imap && myconf="--enable-libetpan"
-	use nntp && myconf="--enable-libetpan"
+	# Remove unmaintained insecure script, following upstream action
+	rm tools/*sylprint* || die
+}
+
+src_compile() {
+	local myconf
 
 	# Optional features
 	myconf="${myconf} `use_enable gnome gnomeprint`"
+	myconf="${myconf} `use_enable imap libetpan`"
 	myconf="${myconf} `use_enable ipv6`"
 	myconf="${myconf} `use_enable ldap`"
 	myconf="${myconf} `use_enable pda jpilot`"
 	myconf="${myconf} `use_enable spell aspell`"
-	myconf="${myconf} `use_enable gnutls`"
 	myconf="${myconf} `use_enable ssl openssl`"
 	myconf="${myconf} `use_enable xface compface`"
 	myconf="${myconf} `use_enable doc manual`"
@@ -124,11 +125,11 @@ src_install() {
 		local desktopfile="${PN}-attach-files.desktop"
 		cd "${S}"/tools/kdeservicemenu
 		sed -i -e "s:SCRIPT_PATH:${kdeprefix}/bin/${servicescript}:g" \
-			${desktopfile}.template
+			template_${desktopfile}
 		dodir /usr/share/apps/konqueror/servicemenus
 		insopts -m 0644
 		insinto /usr/share/apps/konqueror/servicemenus
-		newins ${desktopfile}.template ${desktopfile} || die
+		newins template_${desktopfile} ${desktopfile} || die
 		dodir ${kdeprefix}/bin
 		insopts -m 755
 		exeinto ${kdeprefix}/bin

@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.52 2007/12/04 18:48:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.53 2007/12/04 20:42:45 ticho Exp $
+
+*claws-mail-3.1.0-r1 (04 Dec 2007)
+*claws-mail-3.0.2-r1 (04 Dec 2007)
+
+  04 Dec 2007; Andrej Kacian <ticho@gentoo.org> claws-mail-3.0.2.ebuild,
+  +claws-mail-3.0.2-r1.ebuild, claws-mail-3.1.0.ebuild,
+  +claws-mail-3.1.0-r1.ebuild:
+  Revision bump for the security fix.
 
   04 Dec 2007; Andrej Kacian <ticho@gentoo.org> claws-mail-3.0.0.ebuild,
   claws-mail-3.0.2.ebuild, claws-mail-3.1.0.ebuild:
