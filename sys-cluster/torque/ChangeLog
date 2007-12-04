@@ -1,10 +1,15 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.53 2007/11/29 01:01:35 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.54 2007/12/04 21:38:12 jsbronder Exp $
+
+  04 Dec 2007; <jsbronder@gentoo.org> files/torque-env.d-2.2.1-r1,
+  torque-2.2.1-r1.ebuild:
+  Don't expect variable expansion in env.d.  Thanks to jer for reporting this
+  (Bug #201260).
 
 *torque-2.2.1-r1 (29 Nov 2007)
 
-  29 Nov 2007; <jbronder@gentoo.org> +files/pbs_mom-init.d-2.2.1-r1,
+  29 Nov 2007; <jsbronder@gentoo.org> +files/pbs_mom-init.d-2.2.1-r1,
   +files/pbs_sched-init.d-2.2.1-r1, +files/pbs_server-init.d-2.2.1-r1,
   +files/torque-conf.d-2.2.1-r1, +files/torque-env.d-2.2.1-r1,
   +torque-2.2.1-r1.ebuild:
@@ -12,7 +17,7 @@
 
 *torque-2.2.1 (24 Nov 2007)
 
-  24 Nov 2007; <jbronder@gentoo.org> +files/pbs_mom-init.d-2.2.1,
+  24 Nov 2007; <jsbronder@gentoo.org> +files/pbs_mom-init.d-2.2.1,
   +files/pbs_sched-init.d-2.2.1, +files/pbs_server-init.d-2.2.1,
   +files/torque-conf.d-2.2.1, +files/torque-env.d-2.2.1,
   +files/torque-setuid-safety-am.patch, +torque-2.2.1.ebuild:

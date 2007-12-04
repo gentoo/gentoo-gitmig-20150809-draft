@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.2.1-r1.ebuild,v 1.2 2007/11/29 07:30:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.2.1-r1.ebuild,v 1.3 2007/12/04 21:38:12 jsbronder Exp $
 
 inherit autotools flag-o-matic eutils
 
@@ -149,9 +149,8 @@ pkg_preinst() {
 		cp "${ROOT}${PBS_SERVER_HOME}/server_name" "${D}${PBS_SERVER_HOME}/server_name"
 	fi
 
-	# Fix up the conf.d file to use our set server home.
-	sed -i "s:^PBS_SERVER_HOME=.*:PBS_SERVER_HOME=\"${PBS_SERVER_HOME}\":" \
-		"${D}/etc/env.d/25torque"
+	# Fix up the env.d file to use our set server home.
+	sed -i "s:/var/spool/torque:${PBS_SERVER_HOME}:g" "${D}"/etc/env.d/25torque
 }
 
 pkg_postinst() {
