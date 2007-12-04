@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.1.ebuild,v 1.2 2007/11/21 22:34:38 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.1.ebuild,v 1.3 2007/12/04 10:17:58 hawking Exp $
 
 inherit eutils python
 
@@ -39,6 +39,13 @@ pkg_setup() {
 			die "qscintilla built with qt4"
 		fi
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-nostrip.patch
 }
 
 src_compile() {

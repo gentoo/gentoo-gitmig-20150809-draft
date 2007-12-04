@@ -1,0 +1,32 @@
+--- configure.py	2007-06-01 20:10:16.000000000 +0300
++++ configure.py	2007-12-04 11:51:56.000000000 +0200
+@@ -229,7 +229,8 @@
+             installs=installs,
+             static=opt_static,
+             debug=opt_debug,
+-            universal=pyqt.universal
++            universal=pyqt.universal,
++            strip=0
+         )
+     elif pyqt.pyqt_version >= 0x040000:
+         makefile = pyqt4.QtGuiModuleMakefile(
+@@ -238,7 +239,8 @@
+             install_dir=opt_qscimoddir,
+             installs=installs,
+             static=opt_static,
+-            debug=opt_debug
++            debug=opt_debug,
++            strip=0
+         )
+     else:
+         makefile = pyqt3.QtModuleMakefile(
+@@ -247,7 +249,8 @@
+             install_dir=opt_qscimoddir,
+             installs=installs,
+             static=opt_static,
+-            debug=opt_debug
++            debug=opt_debug,
++            strip=0
+         )
+ 
+     makefile.extra_include_dirs.append(opt_qsciincdir)
