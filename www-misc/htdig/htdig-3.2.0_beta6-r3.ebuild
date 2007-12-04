@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6-r3.ebuild,v 1.2 2007/12/03 12:19:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6-r3.ebuild,v 1.3 2007/12/04 03:12:02 beandog Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="HTTP/HTML indexing and searching system"
 SRC_URI="http://www.htdig.org/files/${PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://www.htdig.org"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 
 DEPEND=">=sys-libs/zlib-1.1.3
@@ -51,7 +51,7 @@ src_compile() {
 src_install () {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dodoc ChangeLog COPYING README
+	dodoc ChangeLog README
 	dohtml -r htdoc
 
 	dosed /etc/${PN}/${PN}.conf
