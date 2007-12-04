@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1.ebuild,v 1.1 2007/12/03 21:59:47 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1.ebuild,v 1.2 2007/12/04 18:42:40 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -11,9 +11,8 @@ BASE_PV="$(get_version_component_range 1-3)"
 BASE_P="${PN}-${BASE_PV}"
 
 # we use the wxPython tarballs because they include the full wxGTK sources and
-# are released more frequently than wxGTK.
-SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2
-		doc? ( mirror://sourceforge/wxwindows/wxWidgets-${BASE_PV}-HTML.zip )"
+# docs, and are released more frequently than wxGTK.
+SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="X doc debug gnome gstreamer odbc opengl pch sdl"
@@ -54,7 +53,6 @@ LICENSE="wxWinLL-3
 		doc?	( wxWinFDL-3 )"
 
 S="${WORKDIR}/wxPython-src-${PV}"
-HTML_S="${WORKDIR}/wxWidgets-${BASE_PV}"
 
 src_unpack() {
 	unpack ${A}
@@ -131,8 +129,10 @@ src_install() {
 		emake DESTDIR="${D}" install || die "install contrib failed."
 	fi
 
+	cd "${S}"
+
 	if use doc; then
-		dohtml -r "${HTML_S}"/docs/html/*
+		dohtml -r "${S}"/docs/html/*
 	fi
 
 	# We don't want this
