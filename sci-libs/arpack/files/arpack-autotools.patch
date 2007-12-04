@@ -1,5 +1,5 @@
 --- configure.ac 	1970-01-01 01:00:00.000000000 +0100
-+++ configure.ac	2007-09-26 19:35:49.186784649 +0100
++++ configure.ac	2007-12-04 12:43:37.000000000 +0000
 @@ -0,0 +1,45 @@
 +AC_PREREQ(2.59)
 +AC_INIT([arpack], [96], [arpack@caam.rice.edu])
@@ -46,204 +46,8 @@
 +	PARPACK/UTIL/Makefile
 +	PARPACK/UTIL/MPI/Makefile])
 +AC_OUTPUT
---- Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ Makefile.am	2007-09-26 12:54:25.487623476 +0100
-@@ -0,0 +1,7 @@
-+SUBDIRS = UTIL SRC LAPACK @MPIDIR@
-+SUBLIBS = SRC/libarpacksrc.la UTIL/libarpackutil.la LAPACK/liblapack_arpack.la
-+lib_LTLIBRARIES = libarpack.la
-+libarpack_la_SOURCES =
-+libarpack_la_LDFLAGS = -version-info 0:0
-+libarpack_la_LIBADD = $(SUBLIBS)
-+EXTRA_DIST = README
---- acx_mpi.m4 	1970-01-01 01:00:00.000000000 +0100
-+++ acx_mpi.m4	2007-08-04 22:50:48.000000000 +0100
-@@ -0,0 +1,183 @@
-+##### http://autoconf-archive.cryp.to/acx_mpi.html
-+#
-+# SYNOPSIS
-+#
-+#   ACX_MPI([ACTION-IF-FOUND[, ACTION-IF-NOT-FOUND]])
-+#
-+# DESCRIPTION
-+#
-+#   This macro tries to find out how to compile programs that use MPI
-+#   (Message Passing Interface), a standard API for parallel process
-+#   communication (see http://www-unix.mcs.anl.gov/mpi/)
-+#
-+#   On success, it sets the MPICC, MPICXX, MPIF77, or MPIFC output
-+#   variable to the name of the MPI compiler, depending upon the
-+#   current language. (This may just be $CC/$CXX/$F77/$FC, but is more
-+#   often something like mpicc/mpiCC/mpif77/mpif90.) It also sets
-+#   MPILIBS to any libraries that are needed for linking MPI (e.g.
-+#   -lmpi or -lfmpi, if a special MPICC/MPICXX/MPIF77/MPIFC was not
-+#   found).
-+#
-+#   If you want to compile everything with MPI, you should set:
-+#
-+#       CC="MPICC" #OR# CXX="MPICXX" #OR# F77="MPIF77" #OR# FC="MPIFC"
-+#       LIBS="$MPILIBS $LIBS"
-+#
-+#   NOTE: The above assumes that you will use $CC (or whatever) for
-+#   linking as well as for compiling. (This is the default for automake
-+#   and most Makefiles.)
-+#
-+#   The user can force a particular library/compiler by setting the
-+#   MPICC/MPICXX/MPIF77/MPIFC and/or MPILIBS environment variables.
-+#
-+#   ACTION-IF-FOUND is a list of shell commands to run if an MPI
-+#   library is found, and ACTION-IF-NOT-FOUND is a list of commands to
-+#   run if it is not found. If ACTION-IF-FOUND is not specified, the
-+#   default action will define HAVE_MPI.
-+#
-+# LAST MODIFICATION
-+#
-+#   2007-07-29
-+#
-+# COPYLEFT
-+#
-+#   Copyright (c) 2007 Steven G. Johnson <stevenj@alum.mit.edu>
-+#   Copyright (c) 2007 Julian C. Cummings <cummings@cacr.caltech.edu>
-+#
-+#   This program is free software: you can redistribute it and/or
-+#   modify it under the terms of the GNU General Public License as
-+#   published by the Free Software Foundation, either version 3 of the
-+#   License, or (at your option) any later version.
-+#
-+#   This program is distributed in the hope that it will be useful, but
-+#   WITHOUT ANY WARRANTY; without even the implied warranty of
-+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-+#   General Public License for more details.
-+#
-+#   You should have received a copy of the GNU General Public License
-+#   along with this program. If not, see
-+#   <http://www.gnu.org/licenses/>.
-+#
-+#   As a special exception, the respective Autoconf Macro's copyright
-+#   owner gives unlimited permission to copy, distribute and modify the
-+#   configure scripts that are the output of Autoconf when processing
-+#   the Macro. You need not follow the terms of the GNU General Public
-+#   License when using or distributing such scripts, even though
-+#   portions of the text of the Macro appear in them. The GNU General
-+#   Public License (GPL) does govern all other use of the material that
-+#   constitutes the Autoconf Macro.
-+#
-+#   This special exception to the GPL applies to versions of the
-+#   Autoconf Macro released by the Autoconf Macro Archive. When you
-+#   make and distribute a modified version of the Autoconf Macro, you
-+#   may extend this special exception to the GPL to apply to your
-+#   modified version as well.
-+
-+AC_DEFUN([ACX_MPI], [
-+AC_PREREQ(2.50) dnl for AC_LANG_CASE
-+
-+AC_LANG_CASE([C], [
-+	AC_REQUIRE([AC_PROG_CC])
-+	AC_ARG_VAR(MPICC,[MPI C compiler command])
-+	AC_CHECK_PROGS(MPICC, mpicc hcc mpxlc_r mpxlc mpcc cmpicc, $CC)
-+	acx_mpi_save_CC="$CC"
-+	CC="$MPICC"
-+	AC_SUBST(MPICC)
-+],
-+[C++], [
-+	AC_REQUIRE([AC_PROG_CXX])
-+	AC_ARG_VAR(MPICXX,[MPI C++ compiler command])
-+	AC_CHECK_PROGS(MPICXX, mpic++ mpicxx mpiCC hcp mpxlC_r mpxlC mpCC cmpic++, $CXX)
-+	acx_mpi_save_CXX="$CXX"
-+	CXX="$MPICXX"
-+	AC_SUBST(MPICXX)
-+],
-+[Fortran 77], [
-+	AC_REQUIRE([AC_PROG_F77])
-+	AC_ARG_VAR(MPIF77,[MPI Fortran 77 compiler command])
-+	AC_CHECK_PROGS(MPIF77, mpif77 hf77 mpxlf_r mpxlf mpf77 cmpifc, $F77)
-+	acx_mpi_save_F77="$F77"
-+	F77="$MPIF77"
-+	AC_SUBST(MPIF77)
-+],
-+[Fortran], [
-+	AC_REQUIRE([AC_PROG_FC])
-+	AC_ARG_VAR(MPIFC,[MPI Fortran compiler command])
-+	AC_CHECK_PROGS(MPIFC, mpif90 mpxlf95_r mpxlf90_r mpxlf95 mpxlf90 mpf90 cmpif90c, $FC)
-+	acx_mpi_save_FC="$FC"
-+	FC="$MPIFC"
-+	AC_SUBST(MPIFC)
-+])
-+
-+if test x = x"$MPILIBS"; then
-+	AC_LANG_CASE([C], [AC_CHECK_FUNC(MPI_Init, [MPILIBS=" "])],
-+		[C++], [AC_CHECK_FUNC(MPI_Init, [MPILIBS=" "])],
-+		[Fortran 77], [AC_MSG_CHECKING([for MPI_Init])
-+			AC_LINK_IFELSE([AC_LANG_PROGRAM([],[      call MPI_Init])],[MPILIBS=" "
-+				AC_MSG_RESULT(yes)], [AC_MSG_RESULT(no)])],
-+		[Fortran], [AC_MSG_CHECKING([for MPI_Init])
-+			AC_LINK_IFELSE([AC_LANG_PROGRAM([],[      call MPI_Init])],[MPILIBS=" "
-+				AC_MSG_RESULT(yes)], [AC_MSG_RESULT(no)])])
-+fi
-+AC_LANG_CASE([Fortran 77], [
-+	if test x = x"$MPILIBS"; then
-+		AC_CHECK_LIB(fmpi, MPI_Init, [MPILIBS="-lfmpi"])
-+	fi
-+	if test x = x"$MPILIBS"; then
-+		AC_CHECK_LIB(fmpich, MPI_Init, [MPILIBS="-lfmpich"])
-+	fi
-+],
-+[Fortran], [
-+	if test x = x"$MPILIBS"; then
-+		AC_CHECK_LIB(fmpi, MPI_Init, [MPILIBS="-lfmpi"])
-+	fi
-+	if test x = x"$MPILIBS"; then
-+		AC_CHECK_LIB(mpichf90, MPI_Init, [MPILIBS="-lmpichf90"])
-+	fi
-+])
-+if test x = x"$MPILIBS"; then
-+	AC_CHECK_LIB(mpi, MPI_Init, [MPILIBS="-lmpi"])
-+fi
-+if test x = x"$MPILIBS"; then
-+	AC_CHECK_LIB(mpich, MPI_Init, [MPILIBS="-lmpich"])
-+fi
-+
-+dnl We have to use AC_TRY_COMPILE and not AC_CHECK_HEADER because the
-+dnl latter uses $CPP, not $CC (which may be mpicc).
-+AC_LANG_CASE([C], [if test x != x"$MPILIBS"; then
-+	AC_MSG_CHECKING([for mpi.h])
-+	AC_TRY_COMPILE([#include <mpi.h>],[],[AC_MSG_RESULT(yes)], [MPILIBS=""
-+		AC_MSG_RESULT(no)])
-+fi],
-+[C++], [if test x != x"$MPILIBS"; then
-+	AC_MSG_CHECKING([for mpi.h])
-+	AC_TRY_COMPILE([#include <mpi.h>],[],[AC_MSG_RESULT(yes)], [MPILIBS=""
-+		AC_MSG_RESULT(no)])
-+fi],
-+[Fortran 77], [if test x != x"$MPILIBS"; then
-+	AC_MSG_CHECKING([for mpif.h])
-+	AC_COMPILE_IFELSE([AC_LANG_PROGRAM([],[      include 'mpif.h'])],[AC_MSG_RESULT(yes)], [MPILIBS=""
-+		AC_MSG_RESULT(no)])
-+fi],
-+[Fortran], [if test x != x"$MPILIBS"; then
-+	AC_MSG_CHECKING([for mpif.h])
-+	AC_COMPILE_IFELSE([AC_LANG_PROGRAM([],[      include 'mpif.h'])],[AC_MSG_RESULT(yes)], [MPILIBS=""
-+		AC_MSG_RESULT(no)])
-+fi])
-+
-+AC_LANG_CASE([C], [CC="$acx_mpi_save_CC"],
-+	[C++], [CXX="$acx_mpi_save_CXX"],
-+	[Fortran 77], [F77="$acx_mpi_save_F77"],
-+	[Fortran], [FC="$acx_mpi_save_FC"])
-+
-+AC_SUBST(MPILIBS)
-+
-+# Finally, execute ACTION-IF-FOUND/ACTION-IF-NOT-FOUND:
-+if test x = x"$MPILIBS"; then
-+        $2
-+        :
-+else
-+        ifelse([$1],,[AC_DEFINE(HAVE_MPI,1,[Define if you have the MPI library.])],[$1])
-+        :
-+fi
-+])dnl ACX_MPI
 --- acx_blas.m4 	1970-01-01 01:00:00.000000000 +0100
-+++ acx_blas.m4	2007-08-04 22:50:48.000000000 +0100
++++ acx_blas.m4	2007-12-04 12:43:37.000000000 +0000
 @@ -0,0 +1,191 @@
 +##### http://autoconf-archive.cryp.to/acx_blas.html
 +#
@@ -436,8 +240,242 @@
 +        $2
 +fi
 +])dnl ACX_BLAS
---- SRC/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ SRC/Makefile.am	2007-09-26 11:15:34.850827457 +0100
+--- acx_mpi.m4 	1970-01-01 01:00:00.000000000 +0100
++++ acx_mpi.m4	2007-12-04 12:43:37.000000000 +0000
+@@ -0,0 +1,183 @@
++##### http://autoconf-archive.cryp.to/acx_mpi.html
++#
++# SYNOPSIS
++#
++#   ACX_MPI([ACTION-IF-FOUND[, ACTION-IF-NOT-FOUND]])
++#
++# DESCRIPTION
++#
++#   This macro tries to find out how to compile programs that use MPI
++#   (Message Passing Interface), a standard API for parallel process
++#   communication (see http://www-unix.mcs.anl.gov/mpi/)
++#
++#   On success, it sets the MPICC, MPICXX, MPIF77, or MPIFC output
++#   variable to the name of the MPI compiler, depending upon the
++#   current language. (This may just be $CC/$CXX/$F77/$FC, but is more
++#   often something like mpicc/mpiCC/mpif77/mpif90.) It also sets
++#   MPILIBS to any libraries that are needed for linking MPI (e.g.
++#   -lmpi or -lfmpi, if a special MPICC/MPICXX/MPIF77/MPIFC was not
++#   found).
++#
++#   If you want to compile everything with MPI, you should set:
++#
++#       CC="MPICC" #OR# CXX="MPICXX" #OR# F77="MPIF77" #OR# FC="MPIFC"
++#       LIBS="$MPILIBS $LIBS"
++#
++#   NOTE: The above assumes that you will use $CC (or whatever) for
++#   linking as well as for compiling. (This is the default for automake
++#   and most Makefiles.)
++#
++#   The user can force a particular library/compiler by setting the
++#   MPICC/MPICXX/MPIF77/MPIFC and/or MPILIBS environment variables.
++#
++#   ACTION-IF-FOUND is a list of shell commands to run if an MPI
++#   library is found, and ACTION-IF-NOT-FOUND is a list of commands to
++#   run if it is not found. If ACTION-IF-FOUND is not specified, the
++#   default action will define HAVE_MPI.
++#
++# LAST MODIFICATION
++#
++#   2007-07-29
++#
++# COPYLEFT
++#
++#   Copyright (c) 2007 Steven G. Johnson <stevenj@alum.mit.edu>
++#   Copyright (c) 2007 Julian C. Cummings <cummings@cacr.caltech.edu>
++#
++#   This program is free software: you can redistribute it and/or
++#   modify it under the terms of the GNU General Public License as
++#   published by the Free Software Foundation, either version 3 of the
++#   License, or (at your option) any later version.
++#
++#   This program is distributed in the hope that it will be useful, but
++#   WITHOUT ANY WARRANTY; without even the implied warranty of
++#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
++#   General Public License for more details.
++#
++#   You should have received a copy of the GNU General Public License
++#   along with this program. If not, see
++#   <http://www.gnu.org/licenses/>.
++#
++#   As a special exception, the respective Autoconf Macro's copyright
++#   owner gives unlimited permission to copy, distribute and modify the
++#   configure scripts that are the output of Autoconf when processing
++#   the Macro. You need not follow the terms of the GNU General Public
++#   License when using or distributing such scripts, even though
++#   portions of the text of the Macro appear in them. The GNU General
++#   Public License (GPL) does govern all other use of the material that
++#   constitutes the Autoconf Macro.
++#
++#   This special exception to the GPL applies to versions of the
++#   Autoconf Macro released by the Autoconf Macro Archive. When you
++#   make and distribute a modified version of the Autoconf Macro, you
++#   may extend this special exception to the GPL to apply to your
++#   modified version as well.
++
++AC_DEFUN([ACX_MPI], [
++AC_PREREQ(2.50) dnl for AC_LANG_CASE
++
++AC_LANG_CASE([C], [
++	AC_REQUIRE([AC_PROG_CC])
++	AC_ARG_VAR(MPICC,[MPI C compiler command])
++	AC_CHECK_PROGS(MPICC, mpicc hcc mpxlc_r mpxlc mpcc cmpicc, $CC)
++	acx_mpi_save_CC="$CC"
++	CC="$MPICC"
++	AC_SUBST(MPICC)
++],
++[C++], [
++	AC_REQUIRE([AC_PROG_CXX])
++	AC_ARG_VAR(MPICXX,[MPI C++ compiler command])
++	AC_CHECK_PROGS(MPICXX, mpic++ mpicxx mpiCC hcp mpxlC_r mpxlC mpCC cmpic++, $CXX)
++	acx_mpi_save_CXX="$CXX"
++	CXX="$MPICXX"
++	AC_SUBST(MPICXX)
++],
++[Fortran 77], [
++	AC_REQUIRE([AC_PROG_F77])
++	AC_ARG_VAR(MPIF77,[MPI Fortran 77 compiler command])
++	AC_CHECK_PROGS(MPIF77, mpif77 hf77 mpxlf_r mpxlf mpf77 cmpifc, $F77)
++	acx_mpi_save_F77="$F77"
++	F77="$MPIF77"
++	AC_SUBST(MPIF77)
++],
++[Fortran], [
++	AC_REQUIRE([AC_PROG_FC])
++	AC_ARG_VAR(MPIFC,[MPI Fortran compiler command])
++	AC_CHECK_PROGS(MPIFC, mpif90 mpxlf95_r mpxlf90_r mpxlf95 mpxlf90 mpf90 cmpif90c, $FC)
++	acx_mpi_save_FC="$FC"
++	FC="$MPIFC"
++	AC_SUBST(MPIFC)
++])
++
++if test x = x"$MPILIBS"; then
++	AC_LANG_CASE([C], [AC_CHECK_FUNC(MPI_Init, [MPILIBS=" "])],
++		[C++], [AC_CHECK_FUNC(MPI_Init, [MPILIBS=" "])],
++		[Fortran 77], [AC_MSG_CHECKING([for MPI_Init])
++			AC_LINK_IFELSE([AC_LANG_PROGRAM([],[      call MPI_Init])],[MPILIBS=" "
++				AC_MSG_RESULT(yes)], [AC_MSG_RESULT(no)])],
++		[Fortran], [AC_MSG_CHECKING([for MPI_Init])
++			AC_LINK_IFELSE([AC_LANG_PROGRAM([],[      call MPI_Init])],[MPILIBS=" "
++				AC_MSG_RESULT(yes)], [AC_MSG_RESULT(no)])])
++fi
++AC_LANG_CASE([Fortran 77], [
++	if test x = x"$MPILIBS"; then
++		AC_CHECK_LIB(fmpi, MPI_Init, [MPILIBS="-lfmpi"])
++	fi
++	if test x = x"$MPILIBS"; then
++		AC_CHECK_LIB(fmpich, MPI_Init, [MPILIBS="-lfmpich"])
++	fi
++],
++[Fortran], [
++	if test x = x"$MPILIBS"; then
++		AC_CHECK_LIB(fmpi, MPI_Init, [MPILIBS="-lfmpi"])
++	fi
++	if test x = x"$MPILIBS"; then
++		AC_CHECK_LIB(mpichf90, MPI_Init, [MPILIBS="-lmpichf90"])
++	fi
++])
++if test x = x"$MPILIBS"; then
++	AC_CHECK_LIB(mpi, MPI_Init, [MPILIBS="-lmpi"])
++fi
++if test x = x"$MPILIBS"; then
++	AC_CHECK_LIB(mpich, MPI_Init, [MPILIBS="-lmpich"])
++fi
++
++dnl We have to use AC_TRY_COMPILE and not AC_CHECK_HEADER because the
++dnl latter uses $CPP, not $CC (which may be mpicc).
++AC_LANG_CASE([C], [if test x != x"$MPILIBS"; then
++	AC_MSG_CHECKING([for mpi.h])
++	AC_TRY_COMPILE([#include <mpi.h>],[],[AC_MSG_RESULT(yes)], [MPILIBS=""
++		AC_MSG_RESULT(no)])
++fi],
++[C++], [if test x != x"$MPILIBS"; then
++	AC_MSG_CHECKING([for mpi.h])
++	AC_TRY_COMPILE([#include <mpi.h>],[],[AC_MSG_RESULT(yes)], [MPILIBS=""
++		AC_MSG_RESULT(no)])
++fi],
++[Fortran 77], [if test x != x"$MPILIBS"; then
++	AC_MSG_CHECKING([for mpif.h])
++	AC_COMPILE_IFELSE([AC_LANG_PROGRAM([],[      include 'mpif.h'])],[AC_MSG_RESULT(yes)], [MPILIBS=""
++		AC_MSG_RESULT(no)])
++fi],
++[Fortran], [if test x != x"$MPILIBS"; then
++	AC_MSG_CHECKING([for mpif.h])
++	AC_COMPILE_IFELSE([AC_LANG_PROGRAM([],[      include 'mpif.h'])],[AC_MSG_RESULT(yes)], [MPILIBS=""
++		AC_MSG_RESULT(no)])
++fi])
++
++AC_LANG_CASE([C], [CC="$acx_mpi_save_CC"],
++	[C++], [CXX="$acx_mpi_save_CXX"],
++	[Fortran 77], [F77="$acx_mpi_save_F77"],
++	[Fortran], [FC="$acx_mpi_save_FC"])
++
++AC_SUBST(MPILIBS)
++
++# Finally, execute ACTION-IF-FOUND/ACTION-IF-NOT-FOUND:
++if test x = x"$MPILIBS"; then
++        $2
++        :
++else
++        ifelse([$1],,[AC_DEFINE(HAVE_MPI,1,[Define if you have the MPI library.])],[$1])
++        :
++fi
++])dnl ACX_MPI
+--- ./LAPACK/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ ./LAPACK/Makefile.am	2007-12-04 15:09:01.000000000 +0000
+@@ -0,0 +1,37 @@
++noinst_LTLIBRARIES = liblapack_arpack.la
++
++NOOPT_FFLAGS = -O0
++
++liblapack_arpack_la_SOURCES = \
++	sgeqr2.f slabad.f slacon.f slacpy.f sladiv.f slae2.f slaev2.f \
++        slaexc.f slagtm.f slahqr.f slaln2.f slange.f slanhs.f \
++        slanst.f slanv2.f slaptm.f slapy2.f slapy3.f slaran.f slarf.f \
++        slarfg.f slarfx.f slarnd.f slarnv.f slartg.f slascl.f \
++        slaset.f slasr.f  slasrt.f slassq.f slasy2.f sorm2r.f ssteqr.f \
++        strevc.f strexc.f strsen.f strsyl.f slamch.f slaruv.f \
++	dgeqr2.f dlabad.f dlacon.f dlacpy.f dladiv.f dlae2.f dlaev2.f \
++        dlaexc.f dlagtm.f dlahqr.f dlaln2.f dlange.f dlanhs.f \
++        dlanst.f dlanv2.f dlaptm.f dlapy2.f dlapy3.f dlaran.f dlarf.f \
++        dlarfg.f dlarfx.f dlarnd.f dlarnv.f dlartg.f dlascl.f \
++        dlaset.f dlasr.f  dlasrt.f dlassq.f dlasy2.f dorm2r.f dsteqr.f \
++        dtrevc.f dtrexc.f dtrsen.f dtrsyl.f dlamch.f dlaruv.f \
++	ilaenv.f lsame.f lsamen.f xerbla.f xlaenv.f icmax1.f izmax1.f  \
++	cgeqr2.f clacon.f clacpy.f cladiv.f clahqr.f clange.f clanhs.f \
++        clarf.f  clarfg.f clarnv.f clartg.f clascl.f claset.f classq.f \
++        clatrs.f cmach.f  crot.f   ctrevc.f ctrexc.f ctrsen.f ctrsyl.f \
++	zgeqr2.f zlacon.f zlacpy.f zladiv.f zlahqr.f zlange.f zlanhs.f \
++        zlarf.f  zlarfg.f zlarnv.f zlartg.f zlascl.f zlaset.f zlassq.f \
++        zlatrs.f zmach.f  zrot.f   ztrevc.f ztrexc.f ztrsen.f ztrsyl.f \
++        zunm2r.f dzsum1.f cunm2r.f scsum1.f
++
++slamch.lo: slamch.f
++	$(LIBTOOL) --tag=F77 $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(F77) $(NOOPT_FFLAGS) -c -o slamch.lo `test -f 'slamch.f' || echo '$(srcdir)/'`slamch.f
++
++slaruv.lo: slaruv.f
++	$(LIBTOOL) --tag=F77 $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(F77) $(NOOPT_FFLAGS) -c -o slaruv.lo `test -f 'slaruv.f' || echo '$(srcdir)/'`slaruv.f
++
++dlamch.lo: dlamch.f
++	$(LIBTOOL) --tag=F77 $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(F77) $(NOOPT_FFLAGS) -c -o dlamch.lo `test -f 'dlamch.f' || echo '$(srcdir)/'`dlamch.f
++
++dlaruv.lo: dlaruv.f
++	$(LIBTOOL) --tag=F77 $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(F77) $(NOOPT_FFLAGS) -c -o dlaruv.lo `test -f 'dlaruv.f' || echo '$(srcdir)/'`dlaruv.f
+--- ./UTIL/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ ./UTIL/Makefile.am	2007-12-04 12:43:37.000000000 +0000
+@@ -0,0 +1,5 @@
++noinst_LTLIBRARIES = libarpackutil.la
++libarpackutil_la_SOURCES = \
++	icnteq.f icopy.f iset.f iswap.f ivout.f second.f \
++	svout.f  smout.f dvout.f  dmout.f cvout.f  cmout.f \
++	zvout.f  zmout.f
+--- ./SRC/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ ./SRC/Makefile.am	2007-12-04 12:43:37.000000000 +0000
 @@ -0,0 +1,14 @@
 +noinst_LTLIBRARIES = libarpacksrc.la
 +libarpacksrc_la_SOURCES = \
@@ -453,82 +491,39 @@
 +        cgetv0.f csortc.f cstatn.f \
 +	znaitr.f znapps.f znaup2.f znaupd.f zneigh.f zneupd.f zngets.f \
 +        zgetv0.f zsortc.f zstatn.f
---- LAPACK/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ LAPACK/Makefile.am	2007-09-26 12:54:25.479623020 +0100
-@@ -0,0 +1,27 @@
-+noinst_LTLIBRARIES = liblapack_arpack.la
-+liblapack_arpack_la_SOURCES = \
-+	sgeqr2.f slabad.f slacon.f slacpy.f sladiv.f slae2.f slaev2.f\
-+        slaexc.f slagtm.f slahqr.f slaln2.f slamch.f slange.f slanhs.f\
-+        slanst.f slanv2.f slaptm.f slapy2.f slapy3.f slaran.f slarf.f\
-+        slarfg.f slarfx.f slarnd.f slarnv.f slartg.f slaruv.f slascl.f\
-+        slaset.f slasr.f  slasrt.f slassq.f slasy2.f sorm2r.f ssteqr.f\
-+        strevc.f strexc.f strsen.f strsyl.f\
-+	dgeqr2.f dlabad.f dlacon.f dlacpy.f dladiv.f dlae2.f dlaev2.f\
-+        dlaexc.f dlagtm.f dlahqr.f dlaln2.f dlamch.f dlange.f dlanhs.f\
-+        dlanst.f dlanv2.f dlaptm.f dlapy2.f dlapy3.f dlaran.f dlarf.f\
-+        dlarfg.f dlarfx.f dlarnd.f dlarnv.f dlartg.f dlaruv.f dlascl.f\
-+        dlaset.f dlasr.f  dlasrt.f dlassq.f dlasy2.f dorm2r.f dsteqr.f\
-+        dtrevc.f dtrexc.f dtrsen.f dtrsyl.f\
-+	ilaenv.f lsame.f lsamen.f xerbla.f xlaenv.f\
-+	icmax1.f\
-+	izmax1.f\
-+	cgeqr2.f clacon.f clacpy.f cladiv.f clahqr.f clange.f clanhs.f\
-+        clarf.f  clarfg.f clarnv.f clartg.f clascl.f claset.f classq.f\
-+        clatrs.f cmach.f  crot.f   ctrevc.f ctrexc.f ctrsen.f ctrsyl.f\
-+        cunm2r.f\
-+        scsum1.f \
-+	zgeqr2.f zlacon.f zlacpy.f zladiv.f zlahqr.f zlange.f zlanhs.f\
-+        zlarf.f  zlarfg.f zlarnv.f zlartg.f zlascl.f zlaset.f zlassq.f\
-+        zlatrs.f zmach.f  zrot.f   ztrevc.f ztrexc.f ztrsen.f ztrsyl.f\
-+        zunm2r.f\
-+        dzsum1.f
---- UTIL/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ UTIL/Makefile.am	2007-09-26 11:15:34.850827457 +0100
-@@ -0,0 +1,5 @@
-+noinst_LTLIBRARIES = libarpackutil.la
-+libarpackutil_la_SOURCES = \
-+	icnteq.f icopy.f iset.f iswap.f ivout.f second.f \
-+	svout.f  smout.f dvout.f  dmout.f cvout.f  cmout.f \
-+	zvout.f  zmout.f
---- PARPACK/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ PARPACK/Makefile.am	2007-09-26 11:17:50.418553022 +0100
-@@ -0,0 +1,6 @@
-+SUBDIRS = UTIL SRC
-+SUBLIBS = SRC/MPI/libparpacksrcmpi.la UTIL/MPI/libparpackutilmpi.la
-+lib_LTLIBRARIES = libparpack.la
-+libparpack_la_SOURCES = 
-+libparpack_la_LDFLAGS = -version-info 0:0
-+libparpack_la_LIBADD = $(SUBLIBS) @MPILIBS@
---- PARPACK/SRC/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ PARPACK/SRC/Makefile.am	2007-09-26 18:34:31.611823276 +0100
-@@ -0,0 +1 @@
-+SUBDIRS = MPI
---- PARPACK/UTIL/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ PARPACK/UTIL/Makefile.am	2007-09-26 18:33:15.487485197 +0100
-@@ -0,0 +1,2 @@
-+SUBDIRS = MPI
-+
---- PARPACK/SRC/MPI/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ PARPACK/SRC/MPI/Makefile.am	2007-09-26 19:42:38.902132996 +0100
-@@ -0,0 +1,15 @@
+--- ./PARPACK/SRC/MPI/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ ./PARPACK/SRC/MPI/Makefile.am	2007-12-04 15:37:36.000000000 +0000
+@@ -0,0 +1,24 @@
 +F77= $(MPIF77)
 +noinst_LTLIBRARIES = libparpacksrcmpi.la
++
++NOOPT_FFLAGS = -O0
++
 +libparpacksrcmpi_la_SOURCES = \
 +	psgetv0.f  \
 +	psnaitr.f psnapps.f psnaup2.f psnaupd.f psneigh.f psngets.f \
 +	pssaitr.f pssapps.f pssaup2.f pssaupd.f psseigt.f pssgets.f \
-+	psneupd.f psseupd.f pslarnv.f pslamch.f psnorm2.f \
-+	pdgetv0.f \
++	psneupd.f psseupd.f pslarnv.f psnorm2.f pdgetv0.f \
 +	pdnaitr.f pdnapps.f pdnaup2.f pdnaupd.f pdneigh.f pdngets.f \
 +	pdsaitr.f pdsapps.f pdsaup2.f pdsaupd.f pdseigt.f pdsgets.f \
-+	pdneupd.f pdseupd.f pdlarnv.f pdlamch.f pdnorm2.f \
++	pdneupd.f pdseupd.f pdlarnv.f pdnorm2.f \
 +	pcnaitr.f pcnapps.f pcnaup2.f pcnaupd.f pcneigh.f \
 +	pcneupd.f pcngets.f pcgetv0.f pscnorm2.f pclarnv.f \
 +	pznaitr.f pznapps.f pznaup2.f pznaupd.f pzneigh.f \
 +	pzneupd.f pzngets.f pzgetv0.f pdznorm2.f pzlarnv.f
---- PARPACK/UTIL/MPI/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ PARPACK/UTIL/MPI/Makefile.am	2007-09-26 19:42:57.543195289 +0100
++
++
++pslamch.lo: pslamch.f
++	$(LIBTOOL) --tag=F77 $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(F77) $(NOOPT_FFLAGS) -c -o pslamch.lo `test -f 'pslamch.f' || echo '$(srcdir)/'`pslamch.f
++
++pdlamch.lo: pdlamch.f
++	$(LIBTOOL) --tag=F77 $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(F77) $(NOOPT_FFLAGS) -c -o pdlamch.lo `test -f 'pdlamch.f' || echo '$(srcdir)/'`pdlamch.f
+--- ./PARPACK/SRC/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ ./PARPACK/SRC/Makefile.am	2007-12-04 12:43:37.000000000 +0000
+@@ -0,0 +1 @@
++SUBDIRS = MPI
+--- ./PARPACK/UTIL/MPI/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ ./PARPACK/UTIL/MPI/Makefile.am	2007-12-04 12:43:37.000000000 +0000
 @@ -0,0 +1,6 @@
 +F77 = $(MPIF77)
 +noinst_LTLIBRARIES = libparpackutilmpi.la
@@ -536,3 +531,27 @@
 +	pivout.f psvout.f  psmout.f pdvout.f \
 +	pdmout.f  pcvout.f  pcmout.f pzvout.f  pzmout.f
 +
+--- ./PARPACK/UTIL/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ ./PARPACK/UTIL/Makefile.am	2007-12-04 12:43:37.000000000 +0000
+@@ -0,0 +1,2 @@
++SUBDIRS = MPI
++
+--- ./PARPACK/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ ./PARPACK/Makefile.am	2007-12-04 12:43:37.000000000 +0000
+@@ -0,0 +1,6 @@
++SUBDIRS = UTIL SRC
++SUBLIBS = SRC/MPI/libparpacksrcmpi.la UTIL/MPI/libparpackutilmpi.la
++lib_LTLIBRARIES = libparpack.la
++libparpack_la_SOURCES = 
++libparpack_la_LDFLAGS = -version-info 0:0
++libparpack_la_LIBADD = $(SUBLIBS) @MPILIBS@
+--- ./Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ ./Makefile.am	2007-12-04 12:43:37.000000000 +0000
+@@ -0,0 +1,7 @@
++SUBDIRS = UTIL SRC LAPACK @MPIDIR@
++SUBLIBS = SRC/libarpacksrc.la UTIL/libarpackutil.la LAPACK/liblapack_arpack.la
++lib_LTLIBRARIES = libarpack.la
++libarpack_la_SOURCES =
++libarpack_la_LDFLAGS = -version-info 0:0
++libarpack_la_LIBADD = $(SUBLIBS)
++EXTRA_DIST = README

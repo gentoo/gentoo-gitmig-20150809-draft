@@ -1,6 +1,6 @@
-diff -urN arpack.old/ARPACK/SRC/cgetv0.f arpack.new/ARPACK/SRC/cgetv0.f
---- arpack.old/ARPACK/SRC/cgetv0.f	1999-04-08 00:46:44.000000000 +0200
-+++ arpack.new/ARPACK/SRC/cgetv0.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/cgetv0.f ARPACK/SRC/cgetv0.f
+--- ARPACK.orig/SRC/cgetv0.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/cgetv0.f	2007-12-04 12:40:24.000000000 +0000
 @@ -89,7 +89,7 @@
  c     pp 357-385.
  c
@@ -91,9 +91,9 @@ diff -urN arpack.old/ARPACK/SRC/cgetv0.f arpack.new/ARPACK/SRC/cgetv0.f
        tgetv0 = tgetv0 + (t1 - t0)
  c 
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/cnaitr.f arpack.new/ARPACK/SRC/cnaitr.f
---- arpack.old/ARPACK/SRC/cnaitr.f	1996-08-27 18:12:56.000000000 +0200
-+++ arpack.new/ARPACK/SRC/cnaitr.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/cnaitr.f ARPACK/SRC/cnaitr.f
+--- ARPACK.orig/SRC/cnaitr.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/cnaitr.f	2007-12-04 12:40:24.000000000 +0000
 @@ -131,7 +131,7 @@
  c\Routines called:
  c     cgetv0  ARPACK routine to generate the initial vector.
@@ -225,9 +225,9 @@ diff -urN arpack.old/ARPACK/SRC/cnaitr.f arpack.new/ARPACK/SRC/cnaitr.f
              tcaitr = tcaitr + (t1 - t0)
              ido = 99
              do 110 i = max(1,k), k+np-1
-diff -urN arpack.old/ARPACK/SRC/cnapps.f arpack.new/ARPACK/SRC/cnapps.f
---- arpack.old/ARPACK/SRC/cnapps.f	1998-05-20 16:45:03.000000000 +0200
-+++ arpack.new/ARPACK/SRC/cnapps.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/cnapps.f ARPACK/SRC/cnapps.f
+--- ARPACK.orig/SRC/cnapps.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/cnapps.f	2007-12-04 12:40:24.000000000 +0000
 @@ -92,7 +92,7 @@
  c
  c\Routines called:
@@ -264,9 +264,9 @@ diff -urN arpack.old/ARPACK/SRC/cnapps.f arpack.new/ARPACK/SRC/cnapps.f
        tcapps = tcapps + (t1 - t0)
  c 
        return
-diff -urN arpack.old/ARPACK/SRC/cnaup2.f arpack.new/ARPACK/SRC/cnaup2.f
---- arpack.old/ARPACK/SRC/cnaup2.f	2000-06-01 22:28:53.000000000 +0200
-+++ arpack.new/ARPACK/SRC/cnaup2.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/cnaup2.f ARPACK/SRC/cnaup2.f
+--- ARPACK.orig/SRC/cnaup2.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/cnaup2.f	2007-12-04 12:40:24.000000000 +0000
 @@ -135,7 +135,7 @@
  c     cngets  ARPACK reorder Ritz values and error bounds routine.
  c     csortc  ARPACK sorting routine.
@@ -321,9 +321,9 @@ diff -urN arpack.old/ARPACK/SRC/cnaup2.f arpack.new/ARPACK/SRC/cnaup2.f
        tcaup2 = t1 - t0
  c     
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/cnaupd.f arpack.new/ARPACK/SRC/cnaupd.f
---- arpack.old/ARPACK/SRC/cnaupd.f	2002-08-15 07:50:57.000000000 +0200
-+++ arpack.new/ARPACK/SRC/cnaupd.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/cnaupd.f ARPACK/SRC/cnaupd.f
+--- ARPACK.orig/SRC/cnaupd.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/cnaupd.f	2007-12-04 12:40:24.000000000 +0000
 @@ -356,7 +356,7 @@
  c     cstatn  ARPACK routine that initializes the timing variables.
  c     ivout   ARPACK utility routine that prints integers.
@@ -360,9 +360,9 @@ diff -urN arpack.old/ARPACK/SRC/cnaupd.f arpack.new/ARPACK/SRC/cnaupd.f
        tcaupd = t1 - t0
  c
        if (msglvl .gt. 0) then
-diff -urN arpack.old/ARPACK/SRC/cneigh.f arpack.new/ARPACK/SRC/cneigh.f
---- arpack.old/ARPACK/SRC/cneigh.f	1996-04-20 19:15:53.000000000 +0200
-+++ arpack.new/ARPACK/SRC/cneigh.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/cneigh.f ARPACK/SRC/cneigh.f
+--- ARPACK.orig/SRC/cneigh.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/cneigh.f	2007-12-04 12:40:24.000000000 +0000
 @@ -64,7 +64,7 @@
  c
  c\Routines called:
@@ -399,9 +399,9 @@ diff -urN arpack.old/ARPACK/SRC/cneigh.f arpack.new/ARPACK/SRC/cneigh.f
        tceigh = tceigh + (t1 - t0)
  c
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/cngets.f arpack.new/ARPACK/SRC/cngets.f
---- arpack.old/ARPACK/SRC/cngets.f	1996-04-20 19:15:56.000000000 +0200
-+++ arpack.new/ARPACK/SRC/cngets.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/cngets.f ARPACK/SRC/cngets.f
+--- ARPACK.orig/SRC/cngets.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/cngets.f	2007-12-04 12:40:24.000000000 +0000
 @@ -63,7 +63,7 @@
  c\Routines called:
  c     csortc  ARPACK sorting routine.
@@ -438,9 +438,9 @@ diff -urN arpack.old/ARPACK/SRC/cngets.f arpack.new/ARPACK/SRC/cngets.f
        tcgets = tcgets + (t1 - t0)
  c
        if (msglvl .gt. 0) then
-diff -urN arpack.old/ARPACK/SRC/dgetv0.f arpack.new/ARPACK/SRC/dgetv0.f
---- arpack.old/ARPACK/SRC/dgetv0.f	1999-04-08 00:42:47.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dgetv0.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dgetv0.f ARPACK/SRC/dgetv0.f
+--- ARPACK.orig/SRC/dgetv0.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dgetv0.f	2007-12-04 12:40:24.000000000 +0000
 @@ -93,7 +93,7 @@
  c     TR95-13, Department of Computational and Applied Mathematics.
  c
@@ -531,9 +531,9 @@ diff -urN arpack.old/ARPACK/SRC/dgetv0.f arpack.new/ARPACK/SRC/dgetv0.f
        tgetv0 = tgetv0 + (t1 - t0)
  c 
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/dnaitr.f arpack.new/ARPACK/SRC/dnaitr.f
---- arpack.old/ARPACK/SRC/dnaitr.f	1996-08-27 18:09:00.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dnaitr.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dnaitr.f ARPACK/SRC/dnaitr.f
+--- ARPACK.orig/SRC/dnaitr.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dnaitr.f	2007-12-04 12:40:24.000000000 +0000
 @@ -132,7 +132,7 @@
  c\Routines called:
  c     dgetv0  ARPACK routine to generate the initial vector.
@@ -665,9 +665,9 @@ diff -urN arpack.old/ARPACK/SRC/dnaitr.f arpack.new/ARPACK/SRC/dnaitr.f
              tnaitr = tnaitr + (t1 - t0)
              ido = 99
              do 110 i = max(1,k), k+np-1
-diff -urN arpack.old/ARPACK/SRC/dnapps.f arpack.new/ARPACK/SRC/dnapps.f
---- arpack.old/ARPACK/SRC/dnapps.f	1998-05-20 16:58:56.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dnapps.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dnapps.f ARPACK/SRC/dnapps.f
+--- ARPACK.orig/SRC/dnapps.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dnapps.f	2007-12-04 12:40:24.000000000 +0000
 @@ -97,7 +97,7 @@
  c
  c\Routines called:
@@ -704,9 +704,9 @@ diff -urN arpack.old/ARPACK/SRC/dnapps.f arpack.new/ARPACK/SRC/dnapps.f
        tnapps = tnapps + (t1 - t0)
  c 
        return
-diff -urN arpack.old/ARPACK/SRC/dnaup2.f arpack.new/ARPACK/SRC/dnaup2.f
---- arpack.old/ARPACK/SRC/dnaup2.f	2002-08-23 07:31:50.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dnaup2.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dnaup2.f ARPACK/SRC/dnaup2.f
+--- ARPACK.orig/SRC/dnaup2.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dnaup2.f	2007-12-04 12:40:24.000000000 +0000
 @@ -143,7 +143,7 @@
  c     dngets  ARPACK reorder Ritz values and error bounds routine.
  c     dsortc  ARPACK sorting routine.
@@ -761,9 +761,9 @@ diff -urN arpack.old/ARPACK/SRC/dnaup2.f arpack.new/ARPACK/SRC/dnaup2.f
        tnaup2 = t1 - t0
  c     
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/dnaupd.f arpack.new/ARPACK/SRC/dnaupd.f
---- arpack.old/ARPACK/SRC/dnaupd.f	2002-08-23 07:29:34.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dnaupd.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dnaupd.f ARPACK/SRC/dnaupd.f
+--- ARPACK.orig/SRC/dnaupd.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dnaupd.f	2007-12-04 12:40:24.000000000 +0000
 @@ -379,7 +379,7 @@
  c     dnaup2  ARPACK routine that implements the Implicitly Restarted
  c             Arnoldi Iteration.
@@ -800,9 +800,9 @@ diff -urN arpack.old/ARPACK/SRC/dnaupd.f arpack.new/ARPACK/SRC/dnaupd.f
        tnaupd = t1 - t0
  c
        if (msglvl .gt. 0) then
-diff -urN arpack.old/ARPACK/SRC/dnconv.f arpack.new/ARPACK/SRC/dnconv.f
---- arpack.old/ARPACK/SRC/dnconv.f	1996-04-20 18:27:05.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dnconv.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dnconv.f ARPACK/SRC/dnconv.f
+--- ARPACK.orig/SRC/dnconv.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dnconv.f	2007-12-04 12:40:24.000000000 +0000
 @@ -38,7 +38,7 @@
  c     xxxxxx  real
  c
@@ -830,9 +830,9 @@ diff -urN arpack.old/ARPACK/SRC/dnconv.f arpack.new/ARPACK/SRC/dnconv.f
        tnconv = tnconv + (t1 - t0)
  c 
        return
-diff -urN arpack.old/ARPACK/SRC/dneigh.f arpack.new/ARPACK/SRC/dneigh.f
---- arpack.old/ARPACK/SRC/dneigh.f	1996-04-20 18:27:06.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dneigh.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dneigh.f ARPACK/SRC/dneigh.f
+--- ARPACK.orig/SRC/dneigh.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dneigh.f	2007-12-04 12:40:24.000000000 +0000
 @@ -63,7 +63,7 @@
  c\Routines called:
  c     dlaqrb  ARPACK routine to compute the real Schur form of an
@@ -869,9 +869,9 @@ diff -urN arpack.old/ARPACK/SRC/dneigh.f arpack.new/ARPACK/SRC/dneigh.f
        tneigh = tneigh + (t1 - t0)
  c
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/dngets.f arpack.new/ARPACK/SRC/dngets.f
---- arpack.old/ARPACK/SRC/dngets.f	1996-04-20 18:27:07.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dngets.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dngets.f ARPACK/SRC/dngets.f
+--- ARPACK.orig/SRC/dngets.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dngets.f	2007-12-04 12:40:24.000000000 +0000
 @@ -135,7 +135,7 @@
  c     | External Subroutines |
  c     %----------------------%
@@ -899,9 +899,9 @@ diff -urN arpack.old/ARPACK/SRC/dngets.f arpack.new/ARPACK/SRC/dngets.f
        tngets = tngets + (t1 - t0)
  c
        if (msglvl .gt. 0) then
-diff -urN arpack.old/ARPACK/SRC/dsaitr.f arpack.new/ARPACK/SRC/dsaitr.f
---- arpack.old/ARPACK/SRC/dsaitr.f	1996-08-28 16:21:43.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dsaitr.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dsaitr.f ARPACK/SRC/dsaitr.f
+--- ARPACK.orig/SRC/dsaitr.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dsaitr.f	2007-12-04 12:40:24.000000000 +0000
 @@ -262,7 +262,7 @@
  c     %----------------------%
  c
@@ -1025,9 +1025,9 @@ diff -urN arpack.old/ARPACK/SRC/dsaitr.f arpack.new/ARPACK/SRC/dsaitr.f
              tsaitr = tsaitr + (t1 - t0)
              ido = 99
  c
-diff -urN arpack.old/ARPACK/SRC/dsapps.f arpack.new/ARPACK/SRC/dsapps.f
---- arpack.old/ARPACK/SRC/dsapps.f	1998-05-20 16:58:59.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dsapps.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dsapps.f ARPACK/SRC/dsapps.f
+--- ARPACK.orig/SRC/dsapps.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dsapps.f	2007-12-04 12:40:24.000000000 +0000
 @@ -91,7 +91,7 @@
  c
  c\Routines called:
@@ -1064,9 +1064,9 @@ diff -urN arpack.old/ARPACK/SRC/dsapps.f arpack.new/ARPACK/SRC/dsapps.f
        tsapps = tsapps + (t1 - t0)
  c 
   9000 continue 
-diff -urN arpack.old/ARPACK/SRC/dsaup2.f arpack.new/ARPACK/SRC/dsaup2.f
---- arpack.old/ARPACK/SRC/dsaup2.f	1998-05-20 16:59:00.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dsaup2.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dsaup2.f ARPACK/SRC/dsaup2.f
+--- ARPACK.orig/SRC/dsaup2.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dsaup2.f	2007-12-04 12:40:24.000000000 +0000
 @@ -148,7 +148,7 @@
  c     dsgets  ARPACK reorder Ritz values and error bounds routine.
  c     dsortr  ARPACK sorting routine.
@@ -1121,9 +1121,9 @@ diff -urN arpack.old/ARPACK/SRC/dsaup2.f arpack.new/ARPACK/SRC/dsaup2.f
        tsaup2 = t1 - t0
  c 
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/dsaupd.f arpack.new/ARPACK/SRC/dsaupd.f
---- arpack.old/ARPACK/SRC/dsaupd.f	2001-04-11 00:52:40.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dsaupd.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dsaupd.f ARPACK/SRC/dsaupd.f
+--- ARPACK.orig/SRC/dsaupd.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dsaupd.f	2007-12-04 12:40:24.000000000 +0000
 @@ -380,7 +380,7 @@
  c     dstats   ARPACK routine that initialize timing and other statistics
  c             variables.
@@ -1160,9 +1160,9 @@ diff -urN arpack.old/ARPACK/SRC/dsaupd.f arpack.new/ARPACK/SRC/dsaupd.f
        tsaupd = t1 - t0
  c 
        if (msglvl .gt. 0) then
-diff -urN arpack.old/ARPACK/SRC/dsconv.f arpack.new/ARPACK/SRC/dsconv.f
---- arpack.old/ARPACK/SRC/dsconv.f	1996-04-20 18:27:11.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dsconv.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dsconv.f ARPACK/SRC/dsconv.f
+--- ARPACK.orig/SRC/dsconv.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dsconv.f	2007-12-04 12:40:24.000000000 +0000
 @@ -34,7 +34,7 @@
  c\BeginLib
  c
@@ -1190,9 +1190,9 @@ diff -urN arpack.old/ARPACK/SRC/dsconv.f arpack.new/ARPACK/SRC/dsconv.f
        tsconv = tsconv + (t1 - t0)
  c 
        return
-diff -urN arpack.old/ARPACK/SRC/dseigt.f arpack.new/ARPACK/SRC/dseigt.f
---- arpack.old/ARPACK/SRC/dseigt.f	1996-08-27 07:29:04.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dseigt.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dseigt.f ARPACK/SRC/dseigt.f
+--- ARPACK.orig/SRC/dseigt.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dseigt.f	2007-12-04 12:40:24.000000000 +0000
 @@ -59,7 +59,7 @@
  c     dstqrb  ARPACK routine that computes the eigenvalues and the
  c             last components of the eigenvectors of a symmetric
@@ -1229,9 +1229,9 @@ diff -urN arpack.old/ARPACK/SRC/dseigt.f arpack.new/ARPACK/SRC/dseigt.f
        tseigt = tseigt + (t1 - t0)
  c
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/dsgets.f arpack.new/ARPACK/SRC/dsgets.f
---- arpack.old/ARPACK/SRC/dsgets.f	1996-04-20 18:27:14.000000000 +0200
-+++ arpack.new/ARPACK/SRC/dsgets.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/dsgets.f ARPACK/SRC/dsgets.f
+--- ARPACK.orig/SRC/dsgets.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/dsgets.f	2007-12-04 12:40:24.000000000 +0000
 @@ -65,7 +65,7 @@
  c\Routines called:
  c     dsortr  ARPACK utility sorting routine.
@@ -1268,9 +1268,9 @@ diff -urN arpack.old/ARPACK/SRC/dsgets.f arpack.new/ARPACK/SRC/dsgets.f
        tsgets = tsgets + (t1 - t0)
  c
        if (msglvl .gt. 0) then
-diff -urN arpack.old/ARPACK/SRC/sgetv0.f arpack.new/ARPACK/SRC/sgetv0.f
---- arpack.old/ARPACK/SRC/sgetv0.f	1999-04-08 00:42:46.000000000 +0200
-+++ arpack.new/ARPACK/SRC/sgetv0.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/sgetv0.f ARPACK/SRC/sgetv0.f
+--- ARPACK.orig/SRC/sgetv0.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/sgetv0.f	2007-12-04 12:40:24.000000000 +0000
 @@ -93,7 +93,7 @@
  c     TR95-13, Department of Computational and Applied Mathematics.
  c
@@ -1361,9 +1361,9 @@ diff -urN arpack.old/ARPACK/SRC/sgetv0.f arpack.new/ARPACK/SRC/sgetv0.f
        tgetv0 = tgetv0 + (t1 - t0)
  c 
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/snaitr.f arpack.new/ARPACK/SRC/snaitr.f
---- arpack.old/ARPACK/SRC/snaitr.f	1996-08-27 18:09:01.000000000 +0200
-+++ arpack.new/ARPACK/SRC/snaitr.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/snaitr.f ARPACK/SRC/snaitr.f
+--- ARPACK.orig/SRC/snaitr.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/snaitr.f	2007-12-04 12:40:24.000000000 +0000
 @@ -132,7 +132,7 @@
  c\Routines called:
  c     sgetv0  ARPACK routine to generate the initial vector.
@@ -1495,9 +1495,9 @@ diff -urN arpack.old/ARPACK/SRC/snaitr.f arpack.new/ARPACK/SRC/snaitr.f
              tnaitr = tnaitr + (t1 - t0)
              ido = 99
              do 110 i = max(1,k), k+np-1
-diff -urN arpack.old/ARPACK/SRC/snapps.f arpack.new/ARPACK/SRC/snapps.f
---- arpack.old/ARPACK/SRC/snapps.f	1998-05-20 16:58:55.000000000 +0200
-+++ arpack.new/ARPACK/SRC/snapps.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/snapps.f ARPACK/SRC/snapps.f
+--- ARPACK.orig/SRC/snapps.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/snapps.f	2007-12-04 12:40:24.000000000 +0000
 @@ -97,7 +97,7 @@
  c
  c\Routines called:
@@ -1534,9 +1534,9 @@ diff -urN arpack.old/ARPACK/SRC/snapps.f arpack.new/ARPACK/SRC/snapps.f
        tnapps = tnapps + (t1 - t0)
  c 
        return
-diff -urN arpack.old/ARPACK/SRC/snaup2.f arpack.new/ARPACK/SRC/snaup2.f
---- arpack.old/ARPACK/SRC/snaup2.f	2002-08-23 07:31:49.000000000 +0200
-+++ arpack.new/ARPACK/SRC/snaup2.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/snaup2.f ARPACK/SRC/snaup2.f
+--- ARPACK.orig/SRC/snaup2.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/snaup2.f	2007-12-04 12:40:24.000000000 +0000
 @@ -143,7 +143,7 @@
  c     sngets  ARPACK reorder Ritz values and error bounds routine.
  c     ssortc  ARPACK sorting routine.
@@ -1591,9 +1591,9 @@ diff -urN arpack.old/ARPACK/SRC/snaup2.f arpack.new/ARPACK/SRC/snaup2.f
        tnaup2 = t1 - t0
  c     
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/snaupd.f arpack.new/ARPACK/SRC/snaupd.f
---- arpack.old/ARPACK/SRC/snaupd.f	2002-08-23 07:29:34.000000000 +0200
-+++ arpack.new/ARPACK/SRC/snaupd.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/snaupd.f ARPACK/SRC/snaupd.f
+--- ARPACK.orig/SRC/snaupd.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/snaupd.f	2007-12-04 12:40:24.000000000 +0000
 @@ -379,7 +379,7 @@
  c     snaup2  ARPACK routine that implements the Implicitly Restarted
  c             Arnoldi Iteration.
@@ -1630,9 +1630,9 @@ diff -urN arpack.old/ARPACK/SRC/snaupd.f arpack.new/ARPACK/SRC/snaupd.f
        tnaupd = t1 - t0
  c
        if (msglvl .gt. 0) then
-diff -urN arpack.old/ARPACK/SRC/snconv.f arpack.new/ARPACK/SRC/snconv.f
---- arpack.old/ARPACK/SRC/snconv.f	1996-04-20 18:27:21.000000000 +0200
-+++ arpack.new/ARPACK/SRC/snconv.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/snconv.f ARPACK/SRC/snconv.f
+--- ARPACK.orig/SRC/snconv.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/snconv.f	2007-12-04 12:40:24.000000000 +0000
 @@ -38,7 +38,7 @@
  c     xxxxxx  real
  c
@@ -1660,9 +1660,9 @@ diff -urN arpack.old/ARPACK/SRC/snconv.f arpack.new/ARPACK/SRC/snconv.f
        tnconv = tnconv + (t1 - t0)
  c 
        return
-diff -urN arpack.old/ARPACK/SRC/sneigh.f arpack.new/ARPACK/SRC/sneigh.f
---- arpack.old/ARPACK/SRC/sneigh.f	1996-04-20 18:27:22.000000000 +0200
-+++ arpack.new/ARPACK/SRC/sneigh.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/sneigh.f ARPACK/SRC/sneigh.f
+--- ARPACK.orig/SRC/sneigh.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/sneigh.f	2007-12-04 12:40:24.000000000 +0000
 @@ -63,7 +63,7 @@
  c\Routines called:
  c     slaqrb  ARPACK routine to compute the real Schur form of an
@@ -1699,9 +1699,9 @@ diff -urN arpack.old/ARPACK/SRC/sneigh.f arpack.new/ARPACK/SRC/sneigh.f
        tneigh = tneigh + (t1 - t0)
  c
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/sngets.f arpack.new/ARPACK/SRC/sngets.f
---- arpack.old/ARPACK/SRC/sngets.f	1996-04-20 18:27:24.000000000 +0200
-+++ arpack.new/ARPACK/SRC/sngets.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/sngets.f ARPACK/SRC/sngets.f
+--- ARPACK.orig/SRC/sngets.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/sngets.f	2007-12-04 12:40:24.000000000 +0000
 @@ -135,7 +135,7 @@
  c     | External Subroutines |
  c     %----------------------%
@@ -1729,9 +1729,9 @@ diff -urN arpack.old/ARPACK/SRC/sngets.f arpack.new/ARPACK/SRC/sngets.f
        tngets = tngets + (t1 - t0)
  c
        if (msglvl .gt. 0) then
-diff -urN arpack.old/ARPACK/SRC/ssaitr.f arpack.new/ARPACK/SRC/ssaitr.f
---- arpack.old/ARPACK/SRC/ssaitr.f	1996-08-28 16:21:43.000000000 +0200
-+++ arpack.new/ARPACK/SRC/ssaitr.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/ssaitr.f ARPACK/SRC/ssaitr.f
+--- ARPACK.orig/SRC/ssaitr.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/ssaitr.f	2007-12-04 12:40:24.000000000 +0000
 @@ -262,7 +262,7 @@
  c     %----------------------%
  c
@@ -1855,9 +1855,9 @@ diff -urN arpack.old/ARPACK/SRC/ssaitr.f arpack.new/ARPACK/SRC/ssaitr.f
              tsaitr = tsaitr + (t1 - t0)
              ido = 99
  c
-diff -urN arpack.old/ARPACK/SRC/ssapps.f arpack.new/ARPACK/SRC/ssapps.f
---- arpack.old/ARPACK/SRC/ssapps.f	1998-05-20 16:58:58.000000000 +0200
-+++ arpack.new/ARPACK/SRC/ssapps.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/ssapps.f ARPACK/SRC/ssapps.f
+--- ARPACK.orig/SRC/ssapps.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/ssapps.f	2007-12-04 12:40:25.000000000 +0000
 @@ -91,7 +91,7 @@
  c
  c\Routines called:
@@ -1894,9 +1894,9 @@ diff -urN arpack.old/ARPACK/SRC/ssapps.f arpack.new/ARPACK/SRC/ssapps.f
        tsapps = tsapps + (t1 - t0)
  c 
   9000 continue 
-diff -urN arpack.old/ARPACK/SRC/ssaup2.f arpack.new/ARPACK/SRC/ssaup2.f
---- arpack.old/ARPACK/SRC/ssaup2.f	1998-05-20 16:58:59.000000000 +0200
-+++ arpack.new/ARPACK/SRC/ssaup2.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/ssaup2.f ARPACK/SRC/ssaup2.f
+--- ARPACK.orig/SRC/ssaup2.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/ssaup2.f	2007-12-04 12:40:25.000000000 +0000
 @@ -148,7 +148,7 @@
  c     ssgets  ARPACK reorder Ritz values and error bounds routine.
  c     ssortr  ARPACK sorting routine.
@@ -1951,9 +1951,9 @@ diff -urN arpack.old/ARPACK/SRC/ssaup2.f arpack.new/ARPACK/SRC/ssaup2.f
        tsaup2 = t1 - t0
  c 
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/ssaupd.f arpack.new/ARPACK/SRC/ssaupd.f
---- arpack.old/ARPACK/SRC/ssaupd.f	2001-04-11 00:52:40.000000000 +0200
-+++ arpack.new/ARPACK/SRC/ssaupd.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/ssaupd.f ARPACK/SRC/ssaupd.f
+--- ARPACK.orig/SRC/ssaupd.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/ssaupd.f	2007-12-04 12:40:25.000000000 +0000
 @@ -380,7 +380,7 @@
  c     sstats  ARPACK routine that initialize timing and other statistics
  c             variables.
@@ -1990,9 +1990,9 @@ diff -urN arpack.old/ARPACK/SRC/ssaupd.f arpack.new/ARPACK/SRC/ssaupd.f
        tsaupd = t1 - t0
  c 
        if (msglvl .gt. 0) then
-diff -urN arpack.old/ARPACK/SRC/ssconv.f arpack.new/ARPACK/SRC/ssconv.f
---- arpack.old/ARPACK/SRC/ssconv.f	1996-04-20 18:27:27.000000000 +0200
-+++ arpack.new/ARPACK/SRC/ssconv.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/ssconv.f ARPACK/SRC/ssconv.f
+--- ARPACK.orig/SRC/ssconv.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/ssconv.f	2007-12-04 12:40:25.000000000 +0000
 @@ -34,7 +34,7 @@
  c\BeginLib
  c
@@ -2020,9 +2020,9 @@ diff -urN arpack.old/ARPACK/SRC/ssconv.f arpack.new/ARPACK/SRC/ssconv.f
        tsconv = tsconv + (t1 - t0)
  c 
        return
-diff -urN arpack.old/ARPACK/SRC/sseigt.f arpack.new/ARPACK/SRC/sseigt.f
---- arpack.old/ARPACK/SRC/sseigt.f	1996-08-27 07:29:04.000000000 +0200
-+++ arpack.new/ARPACK/SRC/sseigt.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/sseigt.f ARPACK/SRC/sseigt.f
+--- ARPACK.orig/SRC/sseigt.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/sseigt.f	2007-12-04 12:40:25.000000000 +0000
 @@ -59,7 +59,7 @@
  c     sstqrb  ARPACK routine that computes the eigenvalues and the
  c             last components of the eigenvectors of a symmetric
@@ -2059,9 +2059,9 @@ diff -urN arpack.old/ARPACK/SRC/sseigt.f arpack.new/ARPACK/SRC/sseigt.f
        tseigt = tseigt + (t1 - t0)
  c
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/ssgets.f arpack.new/ARPACK/SRC/ssgets.f
---- arpack.old/ARPACK/SRC/ssgets.f	1996-04-20 18:27:30.000000000 +0200
-+++ arpack.new/ARPACK/SRC/ssgets.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/ssgets.f ARPACK/SRC/ssgets.f
+--- ARPACK.orig/SRC/ssgets.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/ssgets.f	2007-12-04 12:40:25.000000000 +0000
 @@ -65,7 +65,7 @@
  c\Routines called:
  c     ssortr  ARPACK utility sorting routine.
@@ -2098,9 +2098,9 @@ diff -urN arpack.old/ARPACK/SRC/ssgets.f arpack.new/ARPACK/SRC/ssgets.f
        tsgets = tsgets + (t1 - t0)
  c
        if (msglvl .gt. 0) then
-diff -urN arpack.old/ARPACK/SRC/zgetv0.f arpack.new/ARPACK/SRC/zgetv0.f
---- arpack.old/ARPACK/SRC/zgetv0.f	1999-04-08 00:46:45.000000000 +0200
-+++ arpack.new/ARPACK/SRC/zgetv0.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/zgetv0.f ARPACK/SRC/zgetv0.f
+--- ARPACK.orig/SRC/zgetv0.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/zgetv0.f	2007-12-04 12:40:25.000000000 +0000
 @@ -89,7 +89,7 @@
  c     pp 357-385.
  c
@@ -2191,9 +2191,9 @@ diff -urN arpack.old/ARPACK/SRC/zgetv0.f arpack.new/ARPACK/SRC/zgetv0.f
        tgetv0 = tgetv0 + (t1 - t0)
  c 
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/znaitr.f arpack.new/ARPACK/SRC/znaitr.f
---- arpack.old/ARPACK/SRC/znaitr.f	1996-08-27 18:12:57.000000000 +0200
-+++ arpack.new/ARPACK/SRC/znaitr.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/znaitr.f ARPACK/SRC/znaitr.f
+--- ARPACK.orig/SRC/znaitr.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/znaitr.f	2007-12-04 12:40:25.000000000 +0000
 @@ -131,7 +131,7 @@
  c\Routines called:
  c     zgetv0  ARPACK routine to generate the initial vector.
@@ -2325,9 +2325,9 @@ diff -urN arpack.old/ARPACK/SRC/znaitr.f arpack.new/ARPACK/SRC/znaitr.f
              tcaitr = tcaitr + (t1 - t0)
              ido = 99
              do 110 i = max(1,k), k+np-1
-diff -urN arpack.old/ARPACK/SRC/znapps.f arpack.new/ARPACK/SRC/znapps.f
---- arpack.old/ARPACK/SRC/znapps.f	1998-05-20 16:45:03.000000000 +0200
-+++ arpack.new/ARPACK/SRC/znapps.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/znapps.f ARPACK/SRC/znapps.f
+--- ARPACK.orig/SRC/znapps.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/znapps.f	2007-12-04 12:40:25.000000000 +0000
 @@ -92,7 +92,7 @@
  c
  c\Routines called:
@@ -2364,9 +2364,9 @@ diff -urN arpack.old/ARPACK/SRC/znapps.f arpack.new/ARPACK/SRC/znapps.f
        tcapps = tcapps + (t1 - t0)
  c 
        return
-diff -urN arpack.old/ARPACK/SRC/znaup2.f arpack.new/ARPACK/SRC/znaup2.f
---- arpack.old/ARPACK/SRC/znaup2.f	2000-06-01 22:28:53.000000000 +0200
-+++ arpack.new/ARPACK/SRC/znaup2.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/znaup2.f ARPACK/SRC/znaup2.f
+--- ARPACK.orig/SRC/znaup2.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/znaup2.f	2007-12-04 12:40:25.000000000 +0000
 @@ -135,7 +135,7 @@
  c     zngets   ARPACK reorder Ritz values and error bounds routine.
  c     zsortc   ARPACK sorting routine.
@@ -2421,9 +2421,9 @@ diff -urN arpack.old/ARPACK/SRC/znaup2.f arpack.new/ARPACK/SRC/znaup2.f
        tcaup2 = t1 - t0
  c     
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/znaupd.f arpack.new/ARPACK/SRC/znaupd.f
---- arpack.old/ARPACK/SRC/znaupd.f	2002-08-15 07:50:57.000000000 +0200
-+++ arpack.new/ARPACK/SRC/znaupd.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/znaupd.f ARPACK/SRC/znaupd.f
+--- ARPACK.orig/SRC/znaupd.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/znaupd.f	2007-12-04 12:40:25.000000000 +0000
 @@ -356,7 +356,7 @@
  c     zstatn  ARPACK routine that initializes the timing variables.
  c     ivout   ARPACK utility routine that prints integers.
@@ -2460,9 +2460,9 @@ diff -urN arpack.old/ARPACK/SRC/znaupd.f arpack.new/ARPACK/SRC/znaupd.f
        tcaupd = t1 - t0
  c
        if (msglvl .gt. 0) then
-diff -urN arpack.old/ARPACK/SRC/zneigh.f arpack.new/ARPACK/SRC/zneigh.f
---- arpack.old/ARPACK/SRC/zneigh.f	1996-04-20 19:16:01.000000000 +0200
-+++ arpack.new/ARPACK/SRC/zneigh.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/zneigh.f ARPACK/SRC/zneigh.f
+--- ARPACK.orig/SRC/zneigh.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/zneigh.f	2007-12-04 12:40:25.000000000 +0000
 @@ -64,7 +64,7 @@
  c
  c\Routines called:
@@ -2499,9 +2499,9 @@ diff -urN arpack.old/ARPACK/SRC/zneigh.f arpack.new/ARPACK/SRC/zneigh.f
        tceigh = tceigh + (t1 - t0)
  c
   9000 continue
-diff -urN arpack.old/ARPACK/SRC/zngets.f arpack.new/ARPACK/SRC/zngets.f
---- arpack.old/ARPACK/SRC/zngets.f	1996-04-20 19:16:02.000000000 +0200
-+++ arpack.new/ARPACK/SRC/zngets.f	2007-11-01 14:45:15.000000000 +0100
+diff -Nur ARPACK.orig/SRC/zngets.f ARPACK/SRC/zngets.f
+--- ARPACK.orig/SRC/zngets.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/SRC/zngets.f	2007-12-04 12:40:25.000000000 +0000
 @@ -63,7 +63,7 @@
  c\Routines called:
  c     zsortc  ARPACK sorting routine.
@@ -2538,104 +2538,37 @@ diff -urN arpack.old/ARPACK/SRC/zngets.f arpack.new/ARPACK/SRC/zngets.f
        tcgets = tcgets + (t1 - t0)
  c
        if (msglvl .gt. 0) then
-diff -urN arpack.old/ARPACK/UTIL/Makefile arpack.new/ARPACK/UTIL/Makefile
---- arpack.old/ARPACK/UTIL/Makefile	1996-09-09 16:30:48.000000000 +0200
-+++ arpack.new/ARPACK/UTIL/Makefile	2007-11-01 14:45:15.000000000 +0100
-@@ -31,7 +31,7 @@
- #  ../ARmake.inc and is created at the next higher directory level.
- #
- 
--OBJS  = icnteq.o icopy.o iset.o iswap.o ivout.o second.o
-+OBJS  = icnteq.o icopy.o iset.o iswap.o ivout.o arscnd.o
- 
- SOBJ  = svout.o  smout.o
- 
-diff -urN arpack.old/ARPACK/UTIL/Makefile.am arpack.new/ARPACK/UTIL/Makefile.am
---- arpack.old/ARPACK/UTIL/Makefile.am	2007-11-01 14:44:11.000000000 +0100
-+++ arpack.new/ARPACK/UTIL/Makefile.am	2007-11-01 14:51:36.000000000 +0100
-@@ -1,5 +1,5 @@
- noinst_LTLIBRARIES = libarpackutil.la
- libarpackutil_la_SOURCES = \
--	icnteq.f icopy.f iset.f iswap.f ivout.f second.f \
-+	icnteq.f icopy.f iset.f iswap.f ivout.f arscnd.f \
- 	svout.f  smout.f dvout.f  dmout.f cvout.f  cmout.f \
- 	zvout.f  zmout.f
-diff -urN arpack.old/ARPACK/UTIL/arscnd.f arpack.new/ARPACK/UTIL/arscnd.f
---- arpack.old/ARPACK/UTIL/arscnd.f	1970-01-01 01:00:00.000000000 +0100
-+++ arpack.new/ARPACK/UTIL/arscnd.f	2007-11-01 14:45:24.000000000 +0100
-@@ -0,0 +1,35 @@
-+      SUBROUTINE ARSCND( T )
-+*
-+      REAL       T
-+*
-+*  -- LAPACK auxiliary routine (preliminary version) --
-+*     Univ. of Tennessee, Univ. of California Berkeley, NAG Ltd.,
-+*     Courant Institute, Argonne National Lab, and Rice University
-+*     July 26, 1991
-+*
-+*  Purpose
-+*  =======
-+*
-+*  ARSCND returns the user time for a process in seconds.
-+*  This version gets the time from the system function ETIME.
-+*
-+*     .. Local Scalars ..
-+      REAL               T1
-+*     ..
-+*     .. Local Arrays ..
-+      REAL               TARRAY( 2 )
-+*     ..
-+*     .. External Functions ..
-+      REAL               ETIME
-+*     ..
-+*     .. Executable Statements ..
-+*
-+
-+      T1 = ETIME( TARRAY )
-+      T  = TARRAY( 1 )
-+
-+      RETURN
-+*
-+*     End of ARSCND
-+*
-+      END
-diff -urN arpack.old/ARPACK/UTIL/second.f arpack.new/ARPACK/UTIL/second.f
---- arpack.old/ARPACK/UTIL/second.f	1995-10-02 19:56:44.000000000 +0100
-+++ arpack.new/ARPACK/UTIL/second.f	1970-01-01 01:00:00.000000000 +0100
-@@ -1,36 +0,0 @@
+diff -Nur ARPACK.orig/UTIL/second.f ARPACK/UTIL/second.f
+--- ARPACK.orig/UTIL/second.f	2007-12-04 12:40:20.000000000 +0000
++++ ARPACK/UTIL/second.f	2007-12-04 12:42:15.000000000 +0000
+@@ -1,4 +1,4 @@
 -      SUBROUTINE SECOND( T )
--*
--      REAL       T
--*
--*  -- LAPACK auxiliary routine (preliminary version) --
--*     Univ. of Tennessee, Univ. of California Berkeley, NAG Ltd.,
--*     Courant Institute, Argonne National Lab, and Rice University
--*     July 26, 1991
--*
--*  Purpose
--*  =======
--*
++      SUBROUTINE ARSCND( T )
+ *
+       REAL       T
+ *
+@@ -10,7 +10,7 @@
+ *  Purpose
+ *  =======
+ *
 -*  SECOND returns the user time for a process in seconds.
--*  This version gets the time from the system function ETIME.
--*
--*     .. Local Scalars ..
--      REAL               T1
--*     ..
--*     .. Local Arrays ..
--      REAL               TARRAY( 2 )
--*     ..
--*     .. External Functions ..
--      REAL               ETIME
++*  ARSCND returns the user time for a process in seconds.
+ *  This version gets the time from the system function ETIME.
+ *
+ *     .. Local Scalars ..
+@@ -21,7 +21,6 @@
+ *     ..
+ *     .. External Functions ..
+       REAL               ETIME
 -      EXTERNAL           ETIME
--*     ..
--*     .. Executable Statements ..
--*
--
--      T1 = ETIME( TARRAY )
--      T  = TARRAY( 1 )
--
--      RETURN
--*
+ *     ..
+ *     .. Executable Statements ..
+ *
+@@ -31,6 +30,6 @@
+ 
+       RETURN
+ *
 -*     End of SECOND
--*
--      END
++*     End of ARSCND
+ *
+       END
