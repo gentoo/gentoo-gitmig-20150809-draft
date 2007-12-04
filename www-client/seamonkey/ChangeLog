@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.106 2007/12/04 15:21:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.107 2007/12/04 18:00:51 corsair Exp $
+
+  04 Dec 2007; Markus Rothe <corsair@gentoo.org> seamonkey-1.1.7.ebuild:
+  Stable on ppc64; bug #200909
 
   04 Dec 2007; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.7.ebuild:
   alpha/ia64/sparc stable wrt security #200909
