@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.20.1.ebuild,v 1.6 2007/11/26 13:53:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.20.1.ebuild,v 1.7 2007/12/04 20:20:56 jer Exp $
 
 inherit gnome2 eutils multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc python xulrunner spell"
 
 # FIXME: add webkit/gecko switch possibility
