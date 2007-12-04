@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.74 2007/11/20 06:35:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.75 2007/12/04 15:16:22 pva Exp $
+
+  04 Dec 2007; <pva@gentoo.org>
+  -files/openvz-sources-028.047-build-with-recent-binutils.patch,
+  -files/openvz-sources-028.047-compilation-vpid.patch,
+  -files/openvz-sources-028.047-cpt-vsyscall-comp.patch,
+  -files/openvz-sources-028.047-grsec-2.1.10-comp-off.patch,
+  -files/openvz-sources-028.047-grsec-2.1.10-tpe-comp.patch,
+  -openvz-sources-028.027.ebuild, -openvz-sources-028.039.ebuild,
+  -openvz-sources-028.045.ebuild, -openvz-sources-028.047.ebuild:
+  Clean old versions. Now new versioning scheme should affect everybody.
 
   20 Nov 2007; <pva@gentoo.org> openvz-sources-2.6.18.028.049.ebuild:
   x86/amd64 stable, bug #198632.
