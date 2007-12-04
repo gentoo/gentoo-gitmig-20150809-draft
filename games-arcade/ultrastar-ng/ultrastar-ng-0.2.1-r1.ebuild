@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1-r1.ebuild,v 1.3 2007/12/03 22:11:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1-r1.ebuild,v 1.4 2007/12/04 00:04:30 tupone Exp $
 
 inherit eutils games
 
@@ -87,7 +87,7 @@ src_install() {
 	keepdir "${GAMES_DATADIR}"/${PN}/songs
 	if use songs; then
 		insinto "${GAMES_DATADIR}"/${PN}
-		doins -r ../songs
+		doins -r ../songs || die "doins songs failed"
 	fi
 	mv "${D}${GAMES_DATADIR}"/{applications,pixmaps} "${D}"/usr/share/
 	dodoc AUTHORS ChangeLog README TODO
