@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta52.ebuild,v 1.2 2007/12/04 02:10:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta52.ebuild,v 1.3 2007/12/05 16:27:18 mr_bones_ Exp $
 
 inherit toolchain-funcs games
 
@@ -22,7 +22,7 @@ RDEPEND="virtual/opengl
 	media-libs/libpng
 	openal? ( media-libs/openal )"
 DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.4
+	>=dev-util/cmake-2.4.5
 	app-arch/zip"
 
 S=${WORKDIR}/${MY_P}/${MY_P}/build
