@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.118.ebuild,v 1.4 2007/11/15 20:03:57 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.118.ebuild,v 1.5 2007/12/05 19:16:56 humpback Exp $
 
 inherit eutils qt4 pax-utils
 
@@ -60,11 +60,11 @@ pkg_setup() {
 src_unpack() {
 	use amd64 && unpack ${LIBSIGC_FILENAME}
 	if use qt-static ; then
-		unpack $SFILENAME
-		cd $S
+		unpack ${SFILENAME}
+		cd ${S}
 		unpack ${PN}-lang-${PV}.tar.bz2
 	else
-		unpack $DFILENAME
+		unpack ${DFILENAME}
 	fi
 }
 
