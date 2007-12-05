@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5.ebuild,v 1.4 2007/12/03 07:21:53 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5.ebuild,v 1.5 2007/12/05 14:45:21 markusle Exp $
 
 inherit eutils
 
@@ -58,33 +58,33 @@ src_compile() {
 
 src_install() {
 	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		docdir=${D}/usr/share/doc/${PF} \
-		libdir=${D}/usr/$(get_libdir)/ \
-		infodir=${D}/usr/share/info \
+		prefix="${D}"/usr \
+		mandir="${D}"/usr/share/man \
+		docdir="${D}"/usr/share/doc/${PF} \
+		libdir="${D}"/usr/$(get_libdir)/ \
+		infodir="${D}"/usr/share/info \
 		install || die "make install failed"
 
-	dolib.so ${S}/test/.libs/lib*so* || die "dolib.so failed"
+	dolib.so "${S}"/test/.libs/lib*so* || die "dolib.so failed"
 
 	if use static ; then
-	    dolib.a ${S}/tools/lib/.libs/libh5tools.a \
-		${S}/test/.libs/libh5test.a || die "dolib.a failed"
+	    dolib.a "${S}"/tools/lib/.libs/libh5tools.a \
+		"${S}"/test/.libs/libh5test.a || die "dolib.a failed"
 	    insinto /usr/$(get_libdir)
-	    doins ${S}/tools/lib/libh5tools.la \
-		${S}/test/libh5test.la || die "doins failed"
+	    doins "${S}"/tools/lib/libh5tools.la \
+		"${S}"/test/libh5test.la || die "doins failed"
 	fi
 
-	dobin ${S}/bin/iostats || die "dobin failed"
+	dobin "${S}"/bin/iostats || die "dobin failed"
 
 	dodoc README.txt MANIFEST
 	dohtml doc/html/*
 
 	if use mpi ; then
-	    mv ${D}usr/bin/h5pcc ${D}usr/bin/h5cc
+	    mv "${D}"usr/bin/h5pcc "${D}"usr/bin/h5cc
 	fi
 	# change the SHLIB default for C
 	if ! use static ; then
-	    dosed "s/SHLIB:-no/SHLIB:-yes/g" ${D}usr/bin/h5cc || die "dosed failed"
+	    dosed "s/SHLIB:-no/SHLIB:-yes/g" "${D}"usr/bin/h5cc || die "dosed failed"
 	fi
 }

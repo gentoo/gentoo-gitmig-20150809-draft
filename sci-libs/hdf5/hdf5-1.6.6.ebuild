@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.1 2007/12/03 07:21:53 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.2 2007/12/05 14:45:21 markusle Exp $
 
 inherit eutils flag-o-matic fortran toolchain-funcs
 
@@ -116,7 +116,7 @@ src_compile() {
 	    append-ldflags "${LIBS}"
 	fi
 
-	./configure --prefix=/usr "${myconf}" \
+	./configure --prefix=/usr ${myconf} \
 		$(use_enable zlib) \
 		$(use_with ssl) \
 		--enable-linux-lfs  \
