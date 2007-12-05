@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/sispmctl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/sispmctl/ChangeLog,v 1.2 2007/10/03 09:04:29 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/sispmctl/ChangeLog,v 1.3 2007/12/05 09:14:55 wschlich Exp $
+
+*sispmctl-2.5 (05 Dec 2007)
+
+  05 Dec 2007; Wolfram Schlich <wschlich@gentoo.org> +sispmctl-2.5.ebuild:
+  version bump
 
 *sispmctl-2.4b (03 Oct 2007)
 
