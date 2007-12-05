@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3183 2007/12/05 18:33:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3184 2007/12/05 19:52:33 lack Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2201,6 +2201,7 @@ x11-libs/wxGTK:pch - Enable precompiled header support for faster compilation at
 x11-misc/adesklets:ctrlmenu - force CTRL to be pressed to fire context menu
 x11-misc/adesklets:fontconfig - Support for managing custom fonts via fontconfig
 x11-misc/dmenu:savedconfig - Add support to user defined configs
+x11-misc/fbdesk:imlib2 - Add support for imlib2 (pixmap themes)
 x11-misc/openclipart:gzip - Compresses clip art using gzip
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
 x11-misc/x11vnc:system-libvncserver - Build x11vnc against the system libvncserver (experimental)
