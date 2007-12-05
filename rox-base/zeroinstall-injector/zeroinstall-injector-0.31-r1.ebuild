@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.31.ebuild,v 1.1 2007/12/04 17:02:45 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.31-r1.ebuild,v 1.1 2007/12/05 15:14:29 lack Exp $
 
 inherit distutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=dev-python/pygtk-2.0"
+RDEPEND=">=dev-python/pygtk-2.0
+	app-crypt/gnupg"
 
 src_install() {
 	distutils_src_install
