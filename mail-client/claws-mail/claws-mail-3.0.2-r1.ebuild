@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.0.2-r1.ebuild,v 1.3 2007/12/05 07:49:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.0.2-r1.ebuild,v 1.4 2007/12/05 21:29:23 ticho Exp $
 
 IUSE="bogofilter clamav crypt dillo doc gnome imap ipv6 kde ldap pda session spamassassin spell ssl startup-notification xface"
 
@@ -55,6 +55,7 @@ src_unpack() {
 
 	# Remove unmaintained insecure script, following upstream action
 	rm tools/*sylprint* || die
+	sed -i -e '/sylprint/d' tools/Makefile.in || die
 }
 
 src_compile() {
@@ -115,7 +116,7 @@ src_install() {
 	einfo "Installing extra tools"
 	cd "${S}"/tools
 	exeinto /usr/$(get_libdir)/${PN}/tools
-	doexe *.pl *.py *.rc *.conf *.sh || die
+	doexe *.pl *.py *.conf *.sh || die
 	doexe tb2claws-mail update-po uudec uuooffice || die
 
 	if use kde; then
