@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-2.8.2.ebuild,v 1.4 2007/12/04 17:25:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-2.8.2.ebuild,v 1.5 2007/12/05 12:49:38 armin76 Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/gail-0.17
