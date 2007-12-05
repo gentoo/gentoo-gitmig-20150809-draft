@@ -1,6 +1,12 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.112 2007/11/20 06:18:47 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.113 2007/12/05 10:28:39 angelos Exp $
+
+*xfce4-panel-4.4.1-r2 (04 Dec 2007)
+
+  04 Dec 2007; Christoph Mende <angelos@gentoo.org>
+  +files/xfce4-panel-4.4.1-overflow.patch, +xfce4-panel-4.4.1-r2.ebuild:
+  Fixed a possible buffer overflow, bug 201293
 
   20 Nov 2007; Joshua Kinard <kumba@gentoo.org> xfce4-panel-4.4.1-r1.ebuild:
   Stable on mips, per #198845.
