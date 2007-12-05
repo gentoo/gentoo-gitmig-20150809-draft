@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/fbdesk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.23 2007/10/11 19:18:58 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.24 2007/12/05 19:54:47 lack Exp $
+
+  05 Dec 2007; Jim Ramsay <lack@gentoo.org> fbdesk-1.2.1.ebuild,
+  fbdesk-1.4.1.ebuild:
+  Adding imlib2 USE flag for fbdesk-1.4.1 (bug 196166), and removed COPYING
+  from dodoc in all versions
 
 *fbdesk-1.4.1 (11 Oct 2007)
 
