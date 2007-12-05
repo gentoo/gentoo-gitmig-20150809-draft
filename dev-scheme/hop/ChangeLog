@@ -1,12 +1,24 @@
 # ChangeLog for dev-scheme/hop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/hop/ChangeLog,v 1.3 2007/09/27 08:24:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/hop/ChangeLog,v 1.4 2007/12/05 10:58:27 hkbst Exp $
+
+*hop-1.8.1 (05 Dec 2007)
+
+  05 Dec 2007; Marijn Schouten <hkBst@gentoo.org> +hop-1.8.1.ebuild:
+    1- A new packaging system (Hz) that allows end users to
+       run and install Hop programs with a single click.
+    2- Support for MathML (with an extension that allows users to use TeX
+       syntax).
+    3- Support for SVG (with an extension that allows users to inline SVG
+       external images inside Hop documents).
+    4- Pre-compiled JVM version is now fully compatible with the native
+       version.
 
   27 Sep 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog, Manifest:
   fixing Changelog, regenerating Manifest
 
   27 Sep 2007; Christian Faulhammer <opfer@gentoo.org> hop-1.7.0.ebuild:
-  keywording ~x86, requested by kiuma on gentoo-lisp mailint list
+  keywording ~x86, requested by kiuma on gentoo-lisp mailing list
 
 *hop-1.7.0 (25 Sep 2007)
 
