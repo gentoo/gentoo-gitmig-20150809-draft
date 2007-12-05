@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.66 2007/11/28 23:38:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.67 2007/12/05 00:30:20 wltjr Exp $
 
 # SECTION: Unmask
 
@@ -45,7 +45,6 @@
 # Unmask the flags for PHP that are available only on x86/amd64
 -oci8
 -oracle7
--firebird
 -db2
 
 # George Shapovalov <george@gentoo.org> (8 Apr 2007)
@@ -117,10 +116,6 @@ pvm
 # 2004/06/22 - Taken from 2004.0 profile
 # masked
 3dfx
-
-# 2007/02/02 - Simon Stelling <blubb@gentoo.org>
-# firebird 1.5* has known problems on amd64; bug 156885
-firebird
 
 # 2007/02/02 - Simon Stelling <blubb@gentoo.org>
 # we don't have no gcc64; bug 144535
