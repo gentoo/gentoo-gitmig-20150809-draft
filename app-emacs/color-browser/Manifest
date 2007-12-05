@@ -5,10 +5,10 @@ AUX 0.3-gentoo.patch 2448 RMD160 fab8a4482807050cb7c58879842b7fe4aad0227c SHA1 f
 MD5 cf69527b14ac63f9bc1e3bf64f04c7cb files/0.3-gentoo.patch 2448
 RMD160 fab8a4482807050cb7c58879842b7fe4aad0227c files/0.3-gentoo.patch 2448
 SHA256 1ee805895e63b32912818277e758b4f0d1993544f296ccc6e5c9de32b1c5d50f files/0.3-gentoo.patch 2448
-AUX 60color-browser-gentoo.el 178 RMD160 281ffd7385fdbb97c5c1c1a2a080a97bb9c5fcbd SHA1 e0b7e5cf648e945a8ede9fc45e9a2e152b34442c SHA256 7e47271d8119babc8deb6b10d78dac872e0f4a4e2079e50663546462508277ba
-MD5 364b5c8aa7aceaa524aa11c088283402 files/60color-browser-gentoo.el 178
-RMD160 281ffd7385fdbb97c5c1c1a2a080a97bb9c5fcbd files/60color-browser-gentoo.el 178
-SHA256 7e47271d8119babc8deb6b10d78dac872e0f4a4e2079e50663546462508277ba files/60color-browser-gentoo.el 178
+AUX 60color-browser-gentoo.el 173 RMD160 56ee749c2b03bb250a68a503194e7030bcf6433f SHA1 ad8d8e17e6bf6aacbc9323bd42f69f3db323a828 SHA256 cdc5059dd43cddda7649eb0c006ccfc665e0ccf1dce778d67922599a63f663e7
+MD5 0ce6b39fe98ca6ac6bb91265e45f0f0d files/60color-browser-gentoo.el 173
+RMD160 56ee749c2b03bb250a68a503194e7030bcf6433f files/60color-browser-gentoo.el 173
+SHA256 cdc5059dd43cddda7649eb0c006ccfc665e0ccf1dce778d67922599a63f663e7 files/60color-browser-gentoo.el 173
 DIST color-browser-0.3.tar.gz 18685 RMD160 06a0558c343381aab08d5511db99629e4866f0b1 SHA1 8a4f31be72dfe5fc54f6a0ed296bc68055d44a4e SHA256 5456c099f8c90d943f8b8e02a4199a631cac0952a91b41bede09b2dc0464fdc7
 EBUILD color-browser-0.3.ebuild 600 RMD160 536a34b62f22e18e24ca0bcf142705880bfeb74e SHA1 843e2dd1354ab782e6a451f368e63aaf10ac5443 SHA256 b71556925df6b30c21264f7ddcf8ea7f43bd60fed49360489c1b4a3fe207ad58
 MD5 6fbe34463d14b041eb702f92573a90e7 color-browser-0.3.ebuild 600
@@ -28,7 +28,7 @@ SHA256 5d948874acb1a4259bee0f64319fcc7d53a7300c68d1a3f4acb61fbef39bdf06 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.7 (GNU/Linux)
 
-iD8DBQFHB/oxOeoy/oIi7uwRAsIyAJ9e7SfC0EO/RnEK3RdgzMLzwZyE8wCfVEki
-jle7PxqBmLdbihEJGESvSIM=
-=tgQD
+iD8DBQFHVwDrOeoy/oIi7uwRAjHpAJ0RvR9vRBlUmZlFOhqaEocYkQJkZQCg3xjF
+1XAL7V9Qv0cc/4/lOdJc0Bg=
+=PGhE
 -----END PGP SIGNATURE-----
