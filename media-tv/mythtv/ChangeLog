@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.197 2007/12/01 16:09:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.198 2007/12/05 22:56:21 cardoe Exp $
+
+  05 Dec 2007; Doug Klima <cardoe@gentoo.org> metadata.xml:
+  Add documentation for USE flags
 
 *mythtv-0.20.2_p14972 (01 Dec 2007)
 
