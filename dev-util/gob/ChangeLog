@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.58 2007/12/01 17:22:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.59 2007/12/05 17:37:01 armin76 Exp $
+
+  05 Dec 2007; Raúl Porcel <armin76@gentoo.org> gob-2.0.14.ebuild:
+  alpha/ia64/sparc stable
 
   01 Dec 2007; Markus Rothe <corsair@gentoo.org> gob-2.0.14.ebuild:
   Stable on ppc64
