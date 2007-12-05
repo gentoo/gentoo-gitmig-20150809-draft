@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7979 2007/12/04 21:40:12 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7980 2007/12/05 01:52:48 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -265,11 +265,6 @@ dev-java/libgtk-java
 dev-java/libvte-java
 dev-java/libgnome-java
 =dev-java/java-gnome-2*
-
-# Petteri Räty <betelgeuse@gentoo.org> (3 Nov 2007)
-# Replaced by dev-java/sun-jaf. Will be moved to Junkyard
-# after the month is up.
-dev-java/sun-jaf-bin
 
 # Steve Dibb <beandog@gentoo.org> (01 Nov 2007)
 # Forked version of libdvdnav provided by upstream MPlayer
