@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Cache
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.37 2006/05/21 01:33:00 chtekk Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.38 2007/12/05 23:36:42 jokey Exp $
+
+  05 Dec 2007; Markus Ullmann <jokey@gentoo.org> PEAR-Cache-1.5.4-r1.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org> PEAR-Cache-1.5.4-r1.ebuild:
+  Fix LICENSE
 
   21 May 2006; Luca Longinotti <chtekk@gentoo.org> -PEAR-Cache-1.5.4.ebuild:
   Remove old-style PHP packages.

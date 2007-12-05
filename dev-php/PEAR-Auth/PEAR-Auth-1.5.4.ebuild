@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/PEAR-Auth-1.5.4.ebuild,v 1.8 2007/10/25 17:59:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/PEAR-Auth-1.5.4.ebuild,v 1.9 2007/12/05 23:31:53 jokey Exp $
 
 inherit php-pear-r1 depend.php eutils
 
 DESCRIPTION="Provides methods for creating an authentication system using PHP."
-LICENSE="PHP"
+LICENSE="PHP-3.01"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="minimal"
