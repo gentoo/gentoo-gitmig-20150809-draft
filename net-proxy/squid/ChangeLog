@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.169 2007/12/04 20:23:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.170 2007/12/05 11:17:25 armin76 Exp $
+
+  05 Dec 2007; Raúl Porcel <armin76@gentoo.org> squid-2.6.17.ebuild:
+  alpha/ia64/sparc stable wrt security #201209
 
   04 Dec 2007; Christian Faulhammer <opfer@gentoo.org> squid-2.6.17.ebuild:
   stable x86, security bug 201209
