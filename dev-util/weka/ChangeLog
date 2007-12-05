@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/weka
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.20 2007/12/05 01:43:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.21 2007/12/05 19:39:01 maekke Exp $
+
+  05 Dec 2007; Markus Meier <maekke@gentoo.org> weka-3.4.10.ebuild:
+  x86 stable, bug #201304
 
   05 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> weka-3.4.10.ebuild:
   Use JAVA_PKG_IUSE.
