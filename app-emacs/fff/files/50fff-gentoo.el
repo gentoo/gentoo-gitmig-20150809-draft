@@ -1,5 +1,5 @@
 
-;; fff site-lisp configuration
+;;; fff site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'fff-find-file-in-envvar-path			"fff" nil t)

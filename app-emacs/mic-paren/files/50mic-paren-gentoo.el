@@ -1,5 +1,5 @@
 
-;; mic-paren site-lisp configuration
+;;; mic-paren site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'paren-activate "mic-paren"

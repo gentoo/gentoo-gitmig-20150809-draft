@@ -1,5 +1,5 @@
 
-;; rnc-mode site-lisp configuration
+;;; rnc-mode site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
 

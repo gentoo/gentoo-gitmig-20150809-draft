@@ -1,5 +1,5 @@
 
-;; site-file configuration for YaTeX-mode
+;;; yatex site-lisp configuration
 
 ;; YaTeX-mode
 (setq auto-mode-alist

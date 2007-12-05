@@ -1,5 +1,5 @@
 
-;; cldoc site-lisp configuration
+;;; cldoc site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
 

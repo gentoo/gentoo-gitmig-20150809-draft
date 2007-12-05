@@ -1,5 +1,5 @@
 
-;; ssh site-lisp configuration
+;;; ssh site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
 

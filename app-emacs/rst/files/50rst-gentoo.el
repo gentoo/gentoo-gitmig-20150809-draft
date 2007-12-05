@@ -1,5 +1,5 @@
 
-;; rst site-lisp configuration
+;;; rst site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'rst-mode "rst" "mode for editing reStructuredText documents" t)

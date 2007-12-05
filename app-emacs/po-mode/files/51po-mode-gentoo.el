@@ -1,5 +1,5 @@
 
-;; po-mode site-lisp configuration
+;;; po-mode site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'po-mode "po-mode" "Major mode for translators to edit PO files" t)
