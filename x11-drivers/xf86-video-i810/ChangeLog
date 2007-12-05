@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.65 2007/12/01 20:13:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.66 2007/12/05 21:11:40 dberkholz Exp $
+
+  05 Dec 2007; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  remi's taking over maintenance.
 
   01 Dec 2007; Donnie Berkholz <dberkholz@gentoo.org>; files/i810.xinf:
   Update xinf file, used by sys-apps/kudzu and thus by system-config-display.
