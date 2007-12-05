@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.77 2007/11/01 12:49:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.78 2007/12/05 21:34:08 jokey Exp $
+
+  05 Dec 2007; Markus Ullmann <jokey@gentoo.org> devtodo-0.1.20.ebuild:
+  Stable on arm
 
   01 Nov 2007; Raúl Porcel <armin76@gentoo.org> devtodo-0.1.20.ebuild:
   alpha/ia64 stable wrt #197414
