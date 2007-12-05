@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.6.ebuild,v 1.7 2007/12/04 15:42:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.6.ebuild,v 1.8 2007/12/05 16:25:34 mr_bones_ Exp $
 
 inherit python multilib eutils
 
@@ -22,7 +22,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-0.6.1-wxversion.patch
 }
-
 
 src_install() {
 	python_version
