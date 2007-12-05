@@ -1,14 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r1.ebuild,v 1.2 2007/11/18 13:58:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r1.ebuild,v 1.3 2007/12/05 19:31:25 pva Exp $
 
 inherit kde-functions eutils flag-o-matic
 
-SIM_URI="http://download.berlios.de/sim-im/${P}.tar.bz2"
-
 DESCRIPTION="Simple Instant Messenger (with KDE support). ICQ/AIM/Jabber/MSN/Yahoo."
 HOMEPAGE="http://sim-im.org/"
-SRC_URI="${SIM_URI} mirror://gentoo/${P}-r1919_1924.patch.bz2"
+SRC_URI="http://download.berlios.de/sim-im/${P}.tar.bz2
+	http://dev.gentoo.org/~pva/${P}-r1919_1924.patch.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -38,7 +37,7 @@ pkg_nofetch() {
 	einfo "you have to download and it put into ${DISTDIR} by yourself."
 	einfo "Download location:"
 	echo
-	einfo "${SIM_URI}"
+	einfo "${SRC_URI}"
 	echo
 	einfo "See http://archives.gentoo.org/gentoo-dev/msg_144003.xml for further"
 	einfo "information."
