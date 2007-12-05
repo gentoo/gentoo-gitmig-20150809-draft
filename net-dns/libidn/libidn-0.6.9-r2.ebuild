@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.6.9-r2.ebuild,v 1.1 2007/09/16 17:33:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.6.9-r2.ebuild,v 1.2 2007/12/05 09:17:25 ulm Exp $
 
 inherit autotools elisp-common java-pkg-opt-2 mono
 
@@ -33,7 +33,7 @@ src_compile() {
 	local myconf=" --disable-csharp"
 
 	use mono && myconf="--enable-csharp=mono"
-	use emacs && myconf="${myconf} --with-lispdir="${SITELISP}/${PN}""
+	use emacs && myconf="${myconf} --with-lispdir=${SITELISP}/${PN}"
 
 	econf \
 		$(use_enable nls) \
