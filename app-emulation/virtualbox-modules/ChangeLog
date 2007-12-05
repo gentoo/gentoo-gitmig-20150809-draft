@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.11 2007/11/03 15:28:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.12 2007/12/05 23:01:24 jokey Exp $
+
+*virtualbox-modules-1.5.2-r1 (05 Dec 2007)
+
+  05 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-modules_2.6.24.patch, -virtualbox-modules-1.5.2.ebuild,
+  +virtualbox-modules-1.5.2-r1.ebuild:
+  Add 2.6.24 kernel patch from bug #199798 , thanks to Bjoern Olausson
 
   03 Nov 2007; Markus Ullmann <jokey@gentoo.org>
   -virtualbox-modules-1.4.0.ebuild:

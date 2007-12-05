@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-1.5.2.ebuild,v 1.2 2007/10/29 06:21:53 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-1.5.2-r1.ebuild,v 1.1 2007/12/05 23:01:24 jokey Exp $
 
 inherit eutils linux-mod
 
@@ -26,6 +26,12 @@ pkg_setup() {
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 	enewgroup vboxusers
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}_2.6.24.patch
 }
 
 src_install() {
