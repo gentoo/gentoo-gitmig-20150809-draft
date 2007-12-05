@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ptabtools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.13 2007/11/24 14:09:38 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.14 2007/12/05 14:56:59 armin76 Exp $
+
+  05 Dec 2007; Raúl Porcel <armin76@gentoo.org>
+  -files/ptabtools-0.3.1-fPIC.patch,
+  -files/ptabtools-0.3.1-respectflags.patch,
+  -files/ptabtools-0.3.1-soname.patch, -ptabtools-0.3.1.ebuild,
+  -ptabtools-0.3.1-r2.ebuild, ptabtools-0.4.3.ebuild:
+  sparc stable wrt #200137, remove old
 
   24 Nov 2007; Dawid Węgliński <cla@gentoo.org> ptabtools-0.4.3.ebuild:
   Stable on x86 (bug #200137)
