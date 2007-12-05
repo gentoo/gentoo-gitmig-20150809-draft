@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.31-r1.ebuild,v 1.1 2007/12/05 15:14:29 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.31-r1.ebuild,v 1.2 2007/12/05 16:25:56 mr_bones_ Exp $
 
 inherit distutils
 
@@ -31,4 +31,3 @@ src_install() {
 
 	dodir "${BASE_XDG_DATA}/native_feeds"
 }
-
