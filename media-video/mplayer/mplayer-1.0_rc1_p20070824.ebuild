@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1_p20070824.ebuild,v 1.9 2007/10/08 17:25:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1_p20070824.ebuild,v 1.10 2007/12/05 17:55:19 cla Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -169,7 +169,7 @@ src_unpack() {
 
 	use svga && unpack svgalib_helper-${SVGV}-mplayer.tar.bz2
 
-	cd ${S}
+	cd "${S}"
 
 	# Fix hppa compilation
 	use hppa && sed -i -e "s/-O4/-O1/" "${S}/configure"
@@ -181,7 +181,7 @@ src_unpack() {
 		einfo " to actually use this)"
 		echo
 
-		mv ${WORKDIR}/svgalib_helper ${S}/libdha
+		mv "${WORKDIR}"/svgalib_helper "${S}"/libdha
 	fi
 
 	# Remove kernel-2.6 workaround as the problem it works around is
@@ -192,8 +192,12 @@ src_unpack() {
 	# sed -i -e "s:-O4:-O4 -D__STDC_LIMIT_MACROS:" configure
 
 	# Fix XShape detection
-	epatch ${FILESDIR}/${PN}-xshape.patch
-	epatch ${FILESDIR}/${PN}-dpms.patch
+	epatch "${FILESDIR}"/${PN}-xshape.patch
+	epatch "${FILESDIR}"/${PN}-dpms.patch
+
+	# Fix polish spelling errors
+	[[ -n ${LINGUAS} ]] && sed -e 's:Zarządano:Zażądano:' -i help/help_mp-pl.h
+
 }
 
 src_compile() {
@@ -204,7 +208,7 @@ src_compile() {
 	# MPlayer reads in the LINGUAS variable from make.conf, and sets
 	# the languages accordingly.  Some will have to be altered to match
 	# upstream's naming scheme.
-	[[ -n $LINGUAS ]] && LINGUAS=${LINGUAS/da/dk}
+	[[ -n ${LINGUAS} ]] && LINGUAS=${LINGUAS/da/dk}
 
 	################
 	#Optional features#
@@ -406,7 +410,7 @@ src_compile() {
 	#leave this in place till the configure/compilation borkage is completely corrected back to pre4-r4 levels.
 	# it's intended for debugging so we can get the options we configure mplayer w/, rather then hunt about.
 	# it *will* be removed asap; in the meantime, doesn't hurt anything.
-	echo "${myconf}" > ${T}/configure-options
+	echo "${myconf}" > "${T}"/configure-options
 
 	if use custom-cflags; then
 		# let's play the filtration game!  MPlayer hates on all!
@@ -448,7 +452,7 @@ src_compile() {
 src_install() {
 
 	einfo "Make install"
-	make prefix=${D}/usr \
+	make prefix="${D}"/usr \
 		 BINDIR=${D}/usr/bin \
 		 LIBDIR=${D}/usr/$(get_libdir) \
 		 CONFDIR=${D}/etc/mplayer \
@@ -474,10 +478,10 @@ src_install() {
 	# Install the default Skin and Gnome menu entry
 	if use gtk; then
 		dodir /usr/share/mplayer/skins
-		cp -r ${WORKDIR}/Blue ${D}/usr/share/mplayer/skins/default || die
+		cp -r "${WORKDIR}"/Blue "${D}"/usr/share/mplayer/skins/default || die
 
 		# Fix the symlink
-		rm -rf ${D}/usr/bin/gmplayer
+		rm -rf "${D}"/usr/bin/gmplayer
 		dosym mplayer /usr/bin/gmplayer
 	fi
 
@@ -486,20 +490,20 @@ src_install() {
 		local x=
 		# Do this generic, as the mplayer people like to change the structure
 		# of their zips ...
-		for x in $(find ${WORKDIR}/ -type d -name 'font-arial-*')
+		for x in $(find "${WORKDIR}"/ -type d -name 'font-arial-*')
 		do
-			cp -pPR ${x} ${D}/usr/share/mplayer/fonts
+			cp -pPR ${x} "${D}"/usr/share/mplayer/fonts
 		done
 		# Fix the font symlink ...
-		rm -rf ${D}/usr/share/mplayer/font
+		rm -rf "${D}"/usr/share/mplayer/font
 		dosym fonts/font-arial-14-iso-8859-1 /usr/share/mplayer/font
 	fi
 
 	insinto /etc/mplayer
-	newins ${S}/etc/example.conf mplayer.conf
+	newins "${S}"/etc/example.conf mplayer.conf
 
 	if use srt || use truetype;	then
-		cat >> ${D}/etc/mplayer/mplayer.conf << EOT
+		cat >> "${D}"/etc/mplayer/mplayer.conf << EOT
 fontconfig=1
 subfont-osd-scale=4
 subfont-text-scale=3
@@ -508,18 +512,18 @@ EOT
 
 	dosym ../../../etc/mplayer/mplayer.conf /usr/share/mplayer/mplayer.conf
 
-	dobin ${D}/usr/share/doc/${PF}/TOOLS/midentify
+	dobin "${D}"/usr/share/doc/${PF}/TOOLS/midentify
 
 	insinto /usr/share/mplayer
-	doins ${S}/etc/input.conf
-	doins ${S}/etc/menu.conf
+	doins "${S}"/etc/input.conf
+	doins "${S}"/etc/menu.conf
 }
 
 pkg_preinst() {
 
 	if [ -d "${ROOT}/usr/share/mplayer/Skin/default" ]
 	then
-		rm -rf ${ROOT}/usr/share/mplayer/Skin/default
+		rm -rf "${ROOT}"/usr/share/mplayer/Skin/default
 	fi
 }
 
@@ -534,15 +538,15 @@ pkg_postinst() {
 pkg_postrm() {
 
 	# Cleanup stale symlinks
-	if [ -L ${ROOT}/usr/share/mplayer/font -a \
-		 ! -e ${ROOT}/usr/share/mplayer/font ]
+	if [ -L "${ROOT}"/usr/share/mplayer/font -a \
+		 ! -e "${ROOT}"/usr/share/mplayer/font ]
 	then
-		rm -f ${ROOT}/usr/share/mplayer/font
+		rm -f "${ROOT}"/usr/share/mplayer/font
 	fi
 
-	if [ -L ${ROOT}/usr/share/mplayer/subfont.ttf -a \
-		 ! -e ${ROOT}/usr/share/mplayer/subfont.ttf ]
+	if [ -L "${ROOT}"/usr/share/mplayer/subfont.ttf -a \
+		 ! -e "${ROOT}"/usr/share/mplayer/subfont.ttf ]
 	then
-		rm -f ${ROOT}/usr/share/mplayer/subfont.ttf
+		rm -f "${ROOT}"/usr/share/mplayer/subfont.ttf
 	fi
 }

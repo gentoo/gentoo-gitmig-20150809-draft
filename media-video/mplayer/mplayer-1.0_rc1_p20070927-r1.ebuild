@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1_p20070927-r1.ebuild,v 1.1 2007/09/28 15:39:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1_p20070927-r1.ebuild,v 1.2 2007/12/05 17:55:19 cla Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -189,6 +189,10 @@ src_unpack() {
 	# Fix XShape detection
 	epatch "${FILESDIR}/${PN}-xshape.patch"
 	epatch "${FILESDIR}/${PN}-dpms.patch"
+
+	# Fix polish spelling errors
+	[[ -n ${LINGUAS} ]] && sed -e 's:Zarządano:Zażądano:' -i help/help_mp-pl.h
+
 }
 
 src_compile() {
@@ -396,7 +400,7 @@ src_compile() {
 	#leave this in place till the configure/compilation borkage is completely corrected back to pre4-r4 levels.
 	# it's intended for debugging so we can get the options we configure mplayer w/, rather then hunt about.
 	# it *will* be removed asap; in the meantime, doesn't hurt anything.
-	echo "${myconf}" > ${T}/configure-options
+	echo "${myconf}" > "${T}"/configure-options
 
 	if use custom-cflags; then
 		# let's play the filtration game!  MPlayer hates on all!
@@ -438,12 +442,12 @@ src_compile() {
 src_install() {
 
 	einfo "Make install"
-	make prefix=${D}/usr \
-		 BINDIR=${D}/usr/bin \
-		 LIBDIR=${D}/usr/$(get_libdir) \
-		 CONFDIR=${D}/etc/mplayer \
-		 DATADIR=${D}/usr/share/mplayer \
-		 MANDIR=${D}/usr/share/man \
+	make prefix="${D}"/usr \
+		 BINDIR="${D}"/usr/bin \
+		 LIBDIR="${D}"/usr/$(get_libdir) \
+		 CONFDIR="${D}"/etc/mplayer \
+		 DATADIR="${D}"/usr/share/mplayer \
+		 MANDIR="${D}"/usr/share/man \
 		 install || die "Failed to install MPlayer!"
 	einfo "Make install completed"
 
@@ -508,7 +512,7 @@ EOT
 
 pkg_preinst() {
 
-	if [ -d ${ROOT}/usr/share/mplayer/Skin/default ]
+	if [ -d "${ROOT}"/usr/share/mplayer/Skin/default ]
 	then
 		rm -rf "${ROOT}/usr/share/mplayer/Skin/default"
 	fi
@@ -525,15 +529,15 @@ pkg_postinst() {
 pkg_postrm() {
 
 	# Cleanup stale symlinks
-	if [ -L ${ROOT}/usr/share/mplayer/font -a \
-		 ! -e ${ROOT}/usr/share/mplayer/font ]
+	if [ -L "${ROOT}"/usr/share/mplayer/font -a \
+		 ! -e "${ROOT}"/usr/share/mplayer/font ]
 	then
-		rm -f ${ROOT}/usr/share/mplayer/font
+		rm -f "${ROOT}"/usr/share/mplayer/font
 	fi
 
-	if [ -L ${ROOT}/usr/share/mplayer/subfont.ttf -a \
-		 ! -e ${ROOT}/usr/share/mplayer/subfont.ttf ]
+	if [ -L "${ROOT}"/usr/share/mplayer/subfont.ttf -a \
+		 ! -e "${ROOT}"/usr/share/mplayer/subfont.ttf ]
 	then
-		rm -f ${ROOT}/usr/share/mplayer/subfont.ttf
+		rm -f "${ROOT}"/usr/share/mplayer/subfont.ttf
 	fi
 }
