@@ -1,8 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r2.ebuild,v 1.5 2007/05/01 17:40:17 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r2.ebuild,v 1.6 2007/12/05 22:28:27 jokey Exp $
 
-inherit eutils
+WANT_AUTOMAKE="1.4"
+inherit eutils autotools
 
 DESCRIPTION="Fast output system for Snort"
 HOMEPAGE="http://www.snort.org/dl/barnyard/"
@@ -14,10 +15,10 @@ LICENSE="QPL"
 KEYWORDS="~x86 -sparc"
 IUSE="mysql postgres sguil"
 
-DEPEND="virtual/libc
-	net-libs/libpcap
+DEPEND="net-libs/libpcap
 	postgres? ( >=dev-db/postgresql-7.2 )
-	mysql? ( virtual/mysql )"
+	mysql? ( virtual/mysql )
+	sguil? ( dev-lang/tcl )"
 
 RDEPEND="${DEPEND}
 	net-analyzer/snort"
@@ -25,7 +26,8 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${P/_/-}"
 
 src_unpack() {
-	unpack ${A} && cd "${S}"
+	unpack ${A}
+	cd "${S}"
 
 	if use sguil ; then
 		epatch "${WORKDIR}/${PV}-sguil_files.patch"
@@ -33,9 +35,7 @@ src_unpack() {
 		cd "${S}/src/output-plugins"
 		epatch "${WORKDIR}/${PV}-op_plugbase.c.patch"
 		cd "${S}"
-		ebegin "Recreating configure"
-		aclocal && autoheader && automake --add-missing --copy \
-		&& autoconf || die "recreate configure failed"
+		eautoreconf
 	fi
 }
 
@@ -49,13 +49,13 @@ src_compile() {
 		${myconf} \
 		--sysconfdir=/etc/snort \
 		$(use_enable postgres) \
-		$(use_enable mysql)|| die "bad ./configure"
+		$(use_enable mysql)
 	emake || die "compile problem"
 }
 
 src_install () {
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc docs/*
 	dodoc AUTHORS README
@@ -73,14 +73,14 @@ src_install () {
 			"${D}/etc/snort/barnyard.conf" || die "sed failed"
 	fi
 
-	newconfd ${FILESDIR}/barnyard.confd barnyard
+	newconfd "${FILESDIR}"/barnyard.confd barnyard
 	if use sguil ; then
 		sed -i -e s:/var/log/snort:/var/lib/sguil/$(hostname): \
 		-e s:/var/run/barnyard.pid:/var/run/sguil/barnyard.pid: \
 			"${D}/etc/conf.d/barnyard" || die "sed failed"
 	fi
 
-	newinitd ${FILESDIR}/barnyard.rc6 barnyard
+	newinitd "${FILESDIR}"/barnyard.rc6 barnyard
 	if use sguil ; then
 		sed -i -e "/start-stop-daemon --start/s:--exec:-c sguil --exec:" \
 			"${D}/etc/init.d/barnyard" || die "sed failed"
