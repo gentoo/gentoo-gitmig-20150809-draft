@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/dotproject
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/ChangeLog,v 1.3 2007/10/21 12:56:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/ChangeLog,v 1.4 2007/12/05 09:16:37 wrobel Exp $
+
+*dotproject-2.1.1 (05 Dec 2007)
+
+  05 Dec 2007; Gunnar Wrobel <wrobel@gentoo.org> -dotproject-2.1.ebuild,
+  +dotproject-2.1.1.ebuild:
+  -m Added dotproject-2.1.1 to the tree. Includes security fixes: Removed
+  dotproject-2.1 from the tree (#201333).
 
   16 Oct 2007; <wrobel@gentoo.org> dotproject-2.1.ebuild:
   Added app-text poppler dependency (see #189203).
