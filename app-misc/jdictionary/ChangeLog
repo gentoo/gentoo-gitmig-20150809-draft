@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jdictionary
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/ChangeLog,v 1.16 2007/10/23 20:43:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/ChangeLog,v 1.17 2007/12/05 19:30:25 maekke Exp $
+
+  05 Dec 2007; Markus Meier <maekke@gentoo.org> jdictionary-1.8-r2.ebuild:
+  x86 stable, bug #201303
 
   23 Oct 2007; Petteri Räty <betelgeuse@gentoo.org>
   jdictionary-1.8-r2.ebuild:
