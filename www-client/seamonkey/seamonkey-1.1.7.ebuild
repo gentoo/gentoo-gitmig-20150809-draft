@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.7.ebuild,v 1.5 2007/12/04 21:09:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.7.ebuild,v 1.6 2007/12/05 10:51:38 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
 
-PATCH="${P}-patches-0.1"
+PATCH="${P}-patches-0.2"
 EMVER="0.95.5"
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
