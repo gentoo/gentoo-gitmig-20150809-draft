@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/jsr101-1.1.ebuild,v 1.4 2007/08/19 19:19:08 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/jsr101-1.1.ebuild,v 1.5 2007/12/05 19:59:50 nelchael Exp $
 
 JAVA_PKG_IUSE=""
 
@@ -24,10 +24,11 @@ S="${WORKDIR}"
 
 pkg_nofetch() {
 
-	einfo "Please go to http://java.sun.com/xml/downloads/jaxrpc.html"
+	einfo "Please go to:"
+	einfo ' http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=7935-jax_rpc-1.1-fr-class-oth-JSpec&SiteId=JSC&TransactionId=noreg'
 	einfo "and download file:"
-	einfo ' "Java API for XML-Based RPC (JAX-RPC) JAR with API Class Files 1.1"'
-	einfo "Place the file jaxrpc-1_1-fr-spec-api.zip in:"
+	einfo " ${SRC_URI}"
+	einfo "and place it in:"
 	einfo " ${DISTDIR}"
 
 }
