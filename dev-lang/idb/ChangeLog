@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/idb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.6 2007/11/21 19:09:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.7 2007/12/05 20:37:47 armin76 Exp $
+
+  05 Dec 2007; Raúl Porcel <armin76@gentoo.org> idb-10.0.026.ebuild,
+  idb-10.1.008.ebuild:
+  Drop ia64 keyword because gcc-3.3.2-r7 is missing
 
 *idb-10.1.008 (21 Nov 2007)
 

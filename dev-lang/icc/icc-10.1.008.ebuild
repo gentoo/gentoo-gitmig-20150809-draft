@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.008.ebuild,v 1.2 2007/11/25 20:09:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.008.ebuild,v 1.3 2007/12/05 20:38:52 armin76 Exp $
 
 inherit rpm eutils
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.intel.com/software/products/compilers/clin/"
 # no eclass: very likely to change for next versions
 ###
 PACKAGEID="l_${PB}_p_${PV}"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~x86"
 SRC_URI="amd64? ( http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID}_intel64.tar.gz )
 	ia64? ( http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID}_ia64.tar.gz )
 	x86?  ( http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID}_ia32.tar.gz )"
