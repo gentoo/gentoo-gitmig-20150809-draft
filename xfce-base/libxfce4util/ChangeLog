@@ -1,6 +1,12 @@
 # ChangeLog for xfce-base/libxfce4util
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.96 2007/11/18 06:23:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.97 2007/12/05 10:28:14 angelos Exp $
+
+*libxfce4util-4.4.1-r1 (04 Dec 2007)
+
+  04 Dec 2007; Christoph Mende <angelos@gentoo.org>
+  +files/libxfce4util-4.4.1-overflow.patch, +libxfce4util-4.4.1-r1.ebuild:
+  Fixed a possible buffer overflow, bug 201289
 
 *libxfce4util-4.4.2 (18 Nov 2007)
 
