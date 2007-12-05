@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.41 2007/11/20 15:03:57 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.42 2007/12/05 16:49:30 maekke Exp $
+
+  05 Dec 2007; Markus Meier <maekke@gentoo.org> maxima-5.13.0-r1.ebuild:
+  x86 stable, bug #201216
 
   20 Nov 2007; Markus Dittrich <markusle@gentoo.org> maxima-5.9.1.ebuild,
   maxima-5.13.0-r1.ebuild:
