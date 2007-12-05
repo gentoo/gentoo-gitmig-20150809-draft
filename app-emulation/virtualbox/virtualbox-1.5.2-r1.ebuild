@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.5.2-r1.ebuild,v 1.1 2007/11/03 15:08:51 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.5.2-r1.ebuild,v 1.2 2007/12/05 22:52:44 jokey Exp $
 
-inherit eutils flag-o-matic qt3 toolchain-funcs
+inherit eutils flag-o-matic qt3 toolchain-funcs fdo-mime
 
 MY_P=VirtualBox-${PV}_OSE
 DESCRIPTION="Softwarefamily of powerful x86 virtualization"
@@ -115,14 +115,12 @@ src_install() {
 	dosym /opt/VirtualBox/VBoxAddIF.sh /usr/bin/VBoxDeleteIF
 
 	# desktop entry
-	insinto /usr/share/pixmaps
-	newins "${S}"/src/VBox/Frontends/VirtualBox/images/ico32x01.png ${PN}.png
-	insinto /usr/share/applications
-	doins "${FILESDIR}"/${PN}.desktop
-	dosed -e "s/Version=/Version=${PV}/" /usr/share/applications/${PN}.desktop
+	newicon "${S}"/src/VBox/Frontends/VirtualBox/images/ico32x01.png ${PN}.png
+	domenu "${FILESDIR}"/${PN}.desktop
 }
 
 pkg_postinst() {
+	fdo-mime_desktop_database_update
 	elog ""
 	elog "To launch VirtualBox just type: \"VirtualBox\""
 	elog "You must be in the vboxusers group to use VirtualBox,"
@@ -130,4 +128,8 @@ pkg_postinst() {
 	elog "The last user manual is available for download at:"
 	elog "http://www.virtualbox.org/download/UserManual.pdf"
 	elog ""
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
 }

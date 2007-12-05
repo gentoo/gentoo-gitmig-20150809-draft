@@ -1,11 +1,8 @@
 [Desktop Entry]
-Encoding=UTF-8
-Version=
 Name=Innotek VirtualBox
 Type=Application
 Comment=Run several virtual systems on a single host computer
-Exec=virtualbox
-TryExec=virtualbox
-Path=
-Icon=virtualbox.png
-Categories=Application;Emulator;System;
+Exec=VirtualBox
+TryExec=VirtualBox
+Icon=virtualbox
+Categories=System;Emulator;
