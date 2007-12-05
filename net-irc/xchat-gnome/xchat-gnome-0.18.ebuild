@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.18.ebuild,v 1.1 2007/11/03 21:36:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.18.ebuild,v 1.2 2007/12/05 21:40:55 dsd Exp $
 
 inherit gnome2 eutils autotools
 
@@ -42,7 +42,6 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/0.17-libnotify-configure.patch
-	epatch "${FILESDIR}"/0.17-segfault-fix.patch
 
 	AT_M4DIR="m4" eautoreconf
 }

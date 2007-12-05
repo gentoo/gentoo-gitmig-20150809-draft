@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.31 2007/11/03 21:36:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.32 2007/12/05 21:40:55 dsd Exp $
+
+  05 Dec 2007; Daniel Drake <dsd@gentoo.org> xchat-gnome-0.18.ebuild:
+  Fix compilation error thanks to Ed Catmur and Cosimo Cecchi in bug #198090
 
 *xchat-gnome-0.18 (03 Nov 2007)
 
