@@ -1,5 +1,5 @@
 
-;;; site-lisp configuration for gentoo-syntax
+;;; gentoo-syntax site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
 
