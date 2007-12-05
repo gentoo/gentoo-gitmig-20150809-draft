@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.113 2007/12/05 10:28:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.114 2007/12/05 23:04:23 angelos Exp $
+
+  05 Dec 2007; Christoph Mende <angelos@gentoo.org>
+  xfce4-panel-4.4.1-r2.ebuild:
+  Stable on amd64 wrt bug #201293
 
 *xfce4-panel-4.4.1-r2 (04 Dec 2007)
 
