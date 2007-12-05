@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.12.1.ebuild,v 1.1 2007/09/05 17:59:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.12.1-r1.ebuild,v 1.1 2007/12/05 22:16:48 jokey Exp $
 
 inherit distutils
 
@@ -20,18 +20,22 @@ DEPEND=">=dev-lang/python-2.3
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	if ! built_with_use dev-libs/libprelude python ;
-	then
+	if ! built_with_use dev-libs/libprelude python ; then
 		die 'requires dev-libs/libprelude to be built with "python" use flag'
 	fi
+}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-create-user.patch
 }
 
 src_install() {
 	distutils_src_install
 	dodir /etc/prewikka
 	insinto /etc/prewikka
-	doins ${FILESDIR}/prewikka.conf-sample
+	doins "${FILESDIR}"/prewikka.conf-sample
 	rm "${D}"/\-dist
 }
 

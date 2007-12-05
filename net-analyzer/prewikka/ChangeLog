@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/prewikka
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.24 2007/09/05 17:59:04 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.25 2007/12/05 22:16:48 jokey Exp $
+
+*prewikka-0.9.12.1-r1 (05 Dec 2007)
+
+  05 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/prewikka-0.9.12.1-create-user.patch, -prewikka-0.9.12.1.ebuild,
+  +prewikka-0.9.12.1-r1.ebuild:
+  Fix user creation for bug #193656
 
 *prewikka-0.9.12.1 (05 Sep 2007)
 
