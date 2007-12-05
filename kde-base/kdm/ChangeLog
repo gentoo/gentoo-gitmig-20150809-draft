@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.113 2007/12/04 20:53:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.114 2007/12/05 15:20:01 welp Exp $
+
+  05 Dec 2007; Peter Weller <welp@gentoo.org> kdm-3.5.7-r3.ebuild:
+  Stable on amd64
 
   04 Dec 2007; Raúl Porcel <armin76@gentoo.org> kdm-3.5.7-r3.ebuild:
   alpha/ia64/sparc stable
