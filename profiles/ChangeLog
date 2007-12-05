@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.877 2007/12/05 01:52:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.878 2007/12/05 20:40:08 hd_brummy Exp $
+
+  05 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> use.local.desc:
+  net-www/xxv:themes - Enable more themes via x11-themes/xxv-skins use-flag added
 
   05 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Remove mask for sun-jaf-bin as the package is gone from the main tree.
