@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.4.5.ebuild,v 1.1 2007/12/05 14:51:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.4.5.ebuild,v 1.2 2007/12/05 21:02:21 drac Exp $
 
 inherit eutils libtool toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.freebsd.org/~kientzle/libarchive/src/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~hppa ~ppc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="build static acl xattr kernel_linux"
 
 RDEPEND="!dev-libs/libarchive
