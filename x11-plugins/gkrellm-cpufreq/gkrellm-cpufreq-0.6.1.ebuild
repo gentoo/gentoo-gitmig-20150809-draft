@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-cpufreq/gkrellm-cpufreq-0.6.1.ebuild,v 1.2 2007/07/16 01:12:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-cpufreq/gkrellm-cpufreq-0.6.1.ebuild,v 1.3 2007/12/05 22:32:12 angelos Exp $
 
 inherit gkrellm-plugin
 
@@ -12,7 +12,7 @@ SRC_URI="http://iacs.epfl.ch/~winkelma/gkrellm2-cpufreq//${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
