@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.6.1.ebuild,v 1.9 2007/11/14 22:06:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.6.1.ebuild,v 1.10 2007/12/05 18:51:18 cardoe Exp $
 
 inherit autotools eutils multilib
 
@@ -24,7 +24,7 @@ KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="gtk qt3 cairo qt4 test"
 
 RDEPEND="~app-text/poppler-${PV}
-	cairo? ( >=x11-libs/cairo-0.5 )
+	cairo? ( >=x11-libs/cairo-1.4 )
 	gtk? (
 		>=x11-libs/gtk+-2.6
 		>=gnome-base/libglade-2
