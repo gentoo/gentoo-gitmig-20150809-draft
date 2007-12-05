@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/wtf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/ChangeLog,v 1.14 2007/12/05 15:57:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/ChangeLog,v 1.15 2007/12/05 16:00:41 grobian Exp $
+
+  05 Dec 2007; Fabian Groffen <grobian@gentoo.org> wtf-20051104.ebuild,
+  wtf-20071004.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   05 Dec 2007; Raúl Porcel <armin76@gentoo.org> wtf-20071004.ebuild:
   alpha/ia64/sparc/x86 stable wrt #198911
