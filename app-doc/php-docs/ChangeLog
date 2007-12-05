@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/php-docs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.33 2007/12/05 23:25:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.34 2007/12/05 23:40:21 jokey Exp $
+
+  05 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  php-docs-20070202-r1.ebuild:
+  There was an error in the matrix
 
 *php-docs-20071125-r1 (05 Dec 2007)
 
