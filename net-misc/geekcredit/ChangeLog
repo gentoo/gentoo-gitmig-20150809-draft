@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/geekcredit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/ChangeLog,v 1.15 2007/05/14 19:45:45 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/ChangeLog,v 1.16 2007/12/05 12:54:26 coldwind Exp $
+
+  05 Dec 2007; Santiago M. Mola <coldwind@gentoo.org>
+  geekcredit-0.019.ebuild:
+  Update HOMEPAGE, elog and quoting.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
