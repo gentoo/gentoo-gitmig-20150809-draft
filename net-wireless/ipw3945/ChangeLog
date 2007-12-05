@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw3945
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.35 2007/11/25 22:01:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.36 2007/12/05 22:33:28 angelos Exp $
+
+  05 Dec 2007; Christoph Mende <angelos@gentoo.org> ipw3945-1.2.2.ebuild:
+  Stable on amd64 wrt bug #197806
 
   25 Nov 2007; Stefan Schweizer <genstef@gentoo.org>
   +files/ipw3945-1.2.2-build.patch, ipw3945-1.2.2.ebuild:
