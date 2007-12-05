@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.2.6.ebuild,v 1.5 2007/10/03 04:29:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.2.6.ebuild,v 1.6 2007/12/05 03:45:13 dirtyepic Exp $
 
 inherit eutils
 
@@ -32,8 +32,17 @@ pkg_setup () {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-wxversion.patch
+}
+
 src_install () {
 	emake DESTDIR="${D}" install || die
 
 	dodoc AUTHORS FAQ NEWS README TODO
+
+	fperms 0755 /usr/$(get_libdir)/documancer/documancer.py
 }

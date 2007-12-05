@@ -1,0 +1,16 @@
+diff -Naur documancer-0.2.6-orig/src/utils.py documancer-0.2.6/src/utils.py
+--- documancer-0.2.6-orig/src/utils.py	2005-06-09 01:32:30.000000000 -0600
++++ documancer-0.2.6/src/utils.py	2007-12-04 21:40:43.000000000 -0600
+@@ -121,6 +121,12 @@
+ def config():
+     global __configObject
+     if __configObject == None:
++        try:
++            import wxversion
++            wxversion.select("2.6")
++        except Exception, e:
++            print >> sys.stderr, "%s: wxPython 2.6 not installed." %e
++            sys.exit(1)
+         import wxPython.wx
+         if sys.platform == 'win32':
+             cfg = wxPython.wx.wxConfig('Documancer', 'Vaclav Slavik')
