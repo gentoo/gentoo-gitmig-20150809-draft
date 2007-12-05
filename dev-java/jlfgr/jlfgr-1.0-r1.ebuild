@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jlfgr/jlfgr-1.0-r1.ebuild,v 1.1 2007/01/30 10:50:31 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jlfgr/jlfgr-1.0-r1.ebuild,v 1.2 2007/12/05 20:12:51 maekke Exp $
 
 inherit versionator java-pkg-2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/jlfgr-${MY_PV}.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
