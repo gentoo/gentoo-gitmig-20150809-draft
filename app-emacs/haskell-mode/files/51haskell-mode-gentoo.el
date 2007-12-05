@@ -1,3 +1,4 @@
-;;; app-emacs/haskell-mode site file initialisation
 
-(load "/usr/share/emacs/site-lisp/haskell-mode/haskell-site-file")
+;;; haskell-mode site-lisp configuration
+
+(load "@SITELISP@/haskell-site-file" nil t)

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/haskell-mode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.25 2007/07/04 23:32:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.26 2007/12/05 20:17:09 ulm Exp $
+
+  05 Dec 2007; Ulrich Mueller <ulm@gentoo.org>
+  -files/50haskell-mode-gentoo.el, files/51haskell-mode-gentoo.el:
+  Use SITELISP variable in site-init file. Remove stale file.
 
   04 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   haskell-mode-2.3.ebuild:
