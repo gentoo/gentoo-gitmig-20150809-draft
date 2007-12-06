@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/alliance
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/ChangeLog,v 1.9 2007/12/01 22:30:56 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/ChangeLog,v 1.10 2007/12/06 12:44:51 corsair Exp $
+
+  06 Dec 2007; Markus Rothe <corsair@gentoo.org>
+  alliance-5.0.20070718.ebuild:
+  Added ~amd64
 
 *alliance-5.0.20070718 (01 Dec 2007)
 

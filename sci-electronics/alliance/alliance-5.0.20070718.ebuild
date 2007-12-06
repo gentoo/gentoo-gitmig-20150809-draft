@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20070718.ebuild,v 1.1 2007/12/01 22:30:56 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20070718.ebuild,v 1.2 2007/12/06 12:44:51 corsair Exp $
 
 inherit versionator flag-o-matic rpm
 
@@ -14,7 +14,7 @@ SRC_URI="${URL_AND_NAME}-${MY_PV}.tar.gz
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 DEPEND="x11-libs/openmotif"
 S="${WORKDIR}/${PN}-${UPSTREAM_VERSION}"
