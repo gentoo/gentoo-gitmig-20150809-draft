@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.2 2007/12/05 14:45:21 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.3 2007/12/06 15:11:01 markusle Exp $
 
 inherit eutils flag-o-matic fortran toolchain-funcs
 
@@ -160,7 +160,7 @@ src_install() {
 	insinto /usr/$(get_libdir)
 	doins "${S}"/tools/lib/libh5tools.la \
 	    "${S}"/test/libh5test.la || die "doins failed"
-	dolib.so" ${S}"/test/.libs/lib*so* || die "dolib.so failed"
+	dolib.so "${S}"/test/.libs/lib*so* || die "dolib.so failed"
 
 	exeinto /usr/bin
 	newexe "${S}"/bin/iostats iostats.pl || die "newexe failed"

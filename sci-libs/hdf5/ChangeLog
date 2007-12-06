@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.20 2007/12/05 14:45:21 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.21 2007/12/06 15:11:01 markusle Exp $
+
+  06 Dec 2007; Markus Dittrich <markusle@gentoo.org> hdf5-1.6.6.ebuild:
+  Fixed misplaced quotation mark (fixes bug #201479).
 
   05 Dec 2007; Markus Dittrich <markusle@gentoo.org> hdf5-1.6.6.ebuild:
   Removed quotes around myconf since they confuse configure (fixes bug #201205).
