@@ -1,43 +1,44 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/php-qt-0.1.ebuild,v 1.1 2007/08/30 13:09:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/php-qt-0.1.ebuild,v 1.2 2007/12/06 01:23:49 jokey Exp $
 
-inherit eutils kde-functions qt4 toolchain-funcs depend.php
+PHP_EXT_NAME="php_qt"
+PHP_EXT_INI="yes"
+PHP_EXT_ZENDEXT="no"
+PHPSAPILIST="cli"
+inherit php-ext-base-r1 qt4 eutils depend.php toolchain-funcs
 
 DESCRIPTION="PHP5 bindings for the Qt4 framework."
 HOMEPAGE="http://php-qt.org/"
 SRC_URI="http://download.berlios.de/php-qt/${P}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=kde-base/smoke-3.5.6
-	$(qt4_min_version 4)"
+RDEPEND="$(qt4_min_version 4)
+	>=x11-libs/qscintilla-2.1-r1
+	!kde-base/smoke" # yes, this IS required, installs a bundled QT4-compatible copy
 
 DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.4"
+	>=dev-util/cmake-2.4
+	dev-lang/perl"
 
 need_php_by_category
 
 S="${WORKDIR}/${PN/-/_}"
 
 pkg_setup() {
-	has_php
+	require_php_cli
 	if built_with_use =${PHP_PKG} threads; then
-		eerror "dev-lang/php must be compiled without \"threads\" support."
+		eerror "dev-lang/php must be compiled without threads support."
 		die "Recompile ${PHP_PKG} with USE=\"-threads\" and try again."
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	set-kdedir
-	sed -i -e "/add_subdirectory(smoke)/d" CMakeLists.txt
-	sed -i -e "/\/smoke/d" -e "/include_directories/a\\
-		${KDEDIR}/include" php_qt/CMakeLists.txt
+	if ! built_with_use x11-libs/qscintilla qt4 ; then
+		eerror  "x11-libs/qscintilla must be compiled with qt4 support."
+		die "Recompile x11-libs/qscintilla with USE=\"qt4\" and try again."
+	fi
 }
 
 src_compile() {
@@ -47,14 +48,20 @@ src_compile() {
 		-DCMAKE_CXX_COMPILER=$(type -P $(tc-getCXX)) \
 		-DCMAKE_CXX_FLAGS="${CXXFLAGS}" \
 		-DQT_QMAKE_EXECUTABLE="/usr/bin/qmake" \
+		-DQSCINTILLA_INCLUDE_DIR="/usr/include/Qsci" \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		|| die "cmake failed"
+
 	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
-	dodoc COPYING CREDITS README #COPYING is a dependent license
+
+	php-ext-base-r1_src_install
+
+	# COPYING is a dependent license
+	dodoc COPYING ChangeLog CREDITS README
 	insinto /usr/share/doc/${PF}/examples/
 	doins -r "${S}"/examples/*
 }

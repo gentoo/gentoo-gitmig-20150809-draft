@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-zip/pecl-zip-1.8.10.ebuild,v 1.7 2007/11/14 16:02:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-zip/pecl-zip-1.8.10.ebuild,v 1.8 2007/12/06 01:22:42 jokey Exp $
 
 PHP_EXT_NAME="zip"
 PHP_EXT_INI="yes"
@@ -11,7 +11,7 @@ inherit php-ext-pecl-r1
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 
 DESCRIPTION="PHP zip management extension."
-LICENSE="PHP"
+LICENSE="PHP-3.01 BSD"
 SLOT="0"
 IUSE="examples"
 
