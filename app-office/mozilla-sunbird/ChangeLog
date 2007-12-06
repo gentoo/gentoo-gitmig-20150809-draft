@@ -1,6 +1,9 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.21 2007/12/04 11:07:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.22 2007/12/06 15:23:48 drac Exp $
+
+  06 Dec 2007; Samuli Suominen <drac@gentoo.org> mozilla-sunbird-0.7.ebuild:
+  amd64 stable wrt #201204
 
   04 Dec 2007; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.7.ebuild:
   x86 stable
