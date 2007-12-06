@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfce4util
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.98 2007/12/05 23:03:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.99 2007/12/06 10:10:18 opfer Exp $
+
+  06 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  libxfce4util-4.4.1-r1.ebuild:
+  stable x86, security bug 201289
 
   05 Dec 2007; Christoph Mende <angelos@gentoo.org>
   libxfce4util-4.4.1-r1.ebuild:
