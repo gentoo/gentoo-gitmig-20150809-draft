@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.37 2007/10/18 06:30:12 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.38 2007/12/06 14:40:54 wrobel Exp $
+
+*drupal-5.4 (06 Dec 2007)
+
+  06 Dec 2007; Gunnar Wrobel <wrobel@gentoo.org> +files/postinstall-en.txt,
+  metadata.xml, -drupal-5.2.ebuild, -drupal-5.3.ebuild, +drupal-5.4.ebuild:
+  Added drupal-5.4 to the tree. Fixes security bug #201478. Removed Roy
+  Marples as maintainer since he retired. Added a postinstall instructions
+  file.
 
 *drupal-5.3 (18 Oct 2007)
 
