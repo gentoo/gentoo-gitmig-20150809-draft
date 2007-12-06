@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7.ebuild,v 1.17 2007/08/22 09:25:10 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7.ebuild,v 1.18 2007/12/06 08:55:41 nelchael Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -33,7 +33,7 @@ DEPEND="x11-libs/libXext
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/libs-1.7.diff" || die "patch failed"
 	use amd64 && {
 		epatch "${FILESDIR}/${P}-amd64.patch" || die "patch failed"
