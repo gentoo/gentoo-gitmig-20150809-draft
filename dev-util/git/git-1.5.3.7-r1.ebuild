@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.3.7-r1.ebuild,v 1.2 2007/12/06 03:12:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.3.7-r1.ebuild,v 1.3 2007/12/06 04:46:48 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -148,7 +148,7 @@ src_install() {
 			"${D}"/usr/share/${PN}/contrib \
 			|| die "Failed contrib ${i}"
 	done
-	
+
 	if use cgi ; then
 		dodir /usr/share/${PN}/gitweb
 		insinto /usr/share/${PN}/gitweb
