@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/irtrans-irclient
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irclient/ChangeLog,v 1.2 2007/08/26 11:46:57 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irclient/ChangeLog,v 1.3 2007/12/06 18:58:15 hd_brummy Exp $
+
+*irtrans-irclient-5.9.07 (06 Dec 2007)
+
+  06 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -irtrans-irclient-5.9.01.ebuild, irtrans-irclient-5.9.04.ebuild,
+  +irtrans-irclient-5.9.07.ebuild:
+  version bump, tanks to M.Fetka on #200224 ; clean up; fix quoting warnings
+  to make repoman happy
 
 *irtrans-irclient-5.9.04 (26 Aug 2007)
 

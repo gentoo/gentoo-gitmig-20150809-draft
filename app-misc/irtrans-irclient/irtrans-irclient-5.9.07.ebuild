@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irclient/irtrans-irclient-5.9.01.ebuild,v 1.2 2007/08/17 00:34:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irclient/irtrans-irclient-5.9.07.ebuild,v 1.1 2007/12/06 18:58:15 hd_brummy Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.irtrans.de"
 SRC_URI="ftp://mars.arge.at/irtrans/irserver-src-${PV}.tar.gz
 		http://ftp.mars.arge.at/irtrans/irserver-src-${PV}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
@@ -20,19 +20,22 @@ RDEPEND="virtual/libc"
 
 src_unpack() {
 
-	unpack ${A}
-	cd ${WORKDIR}
+	unpack "${A}"
+	cd "${WORKDIR}"
 
-	epatch ${FILESDIR}/${P}-missing-include.diff
+	epatch "${FILESDIR}/${PN}"-5.9.01-missing-include.diff
 }
 
 src_compile() {
 
 	append-flags -DLINUX -Icommon
-	$(tc-getCC) ${CFLAGS} -o irclient  client.c || die "irclient compile failed"
+	$(tc-getCC) "${CFLAGS}" -o irclient  client.c || die "irclient compile failed"
+	$(tc-getCC) "${CFLAGS}" -o ip_assign  ip_assign.c || die "ip_assign compile failed"
 }
 
 src_install() {
 
-	dobin ${WORKDIR}/irclient
+	dobin "${WORKDIR}"/irclient
+	dobin "${WORKDIR}"/ip_assign
 }
+
