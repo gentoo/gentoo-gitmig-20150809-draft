@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/PEAR-Console_Table
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Table/ChangeLog,v 1.25 2007/10/22 16:34:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Table/ChangeLog,v 1.26 2007/12/05 23:50:18 jokey Exp $
+
+  05 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  -PEAR-Console_Table-1.0.2-r1.ebuild, PEAR-Console_Table-1.0.7.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  PEAR-Console_Table-1.0.7.ebuild:
+  Fix LICENSE
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org>
   PEAR-Console_Table-1.0.7.ebuild:

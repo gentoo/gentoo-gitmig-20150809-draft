@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/PEAR-HTML_Template_IT
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_IT/ChangeLog,v 1.36 2007/10/22 18:36:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_IT/ChangeLog,v 1.37 2007/12/06 00:16:18 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  -PEAR-HTML_Template_IT-1.1.3.ebuild, PEAR-HTML_Template_IT-1.2.1.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  PEAR-HTML_Template_IT-1.2.1.ebuild:
+  Fix LICENSE
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org>
   PEAR-HTML_Template_IT-1.2.1.ebuild:

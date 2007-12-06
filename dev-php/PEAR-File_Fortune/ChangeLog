@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/PEAR-File_Fortune
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Fortune/ChangeLog,v 1.8 2007/09/06 14:11:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Fortune/ChangeLog,v 1.9 2007/12/05 23:58:51 jokey Exp $
+
+  05 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  PEAR-File_Fortune-1.0.0.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  PEAR-File_Fortune-1.0.0.ebuild:
+  Fix LICENSE
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
   -PEAR-File_Fortune-0.9.0.ebuild:

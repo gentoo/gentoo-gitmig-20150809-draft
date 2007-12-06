@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/PEAR-Net_SMTP-1.2.10.ebuild,v 1.8 2007/10/22 18:48:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/PEAR-Net_SMTP-1.2.10.ebuild,v 1.9 2007/12/06 00:41:40 jokey Exp $
 
 inherit php-pear-r1
 
 DESCRIPTION="An implementation of the SMTP protocol"
 
-LICENSE="PHP"
+LICENSE="PHP-2.02"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="minimal"

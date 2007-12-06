@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/PEAR-Text_Password
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Password/ChangeLog,v 1.18 2007/02/21 23:37:55 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Password/ChangeLog,v 1.19 2007/12/06 00:55:08 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  PEAR-Text_Password-1.1.0.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  PEAR-Text_Password-1.1.0.ebuild:
+  Fix LICENSE
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

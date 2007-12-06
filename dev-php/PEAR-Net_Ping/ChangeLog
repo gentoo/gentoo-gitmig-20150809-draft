@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Net_Ping
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Ping/ChangeLog,v 1.7 2007/08/20 21:58:03 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Ping/ChangeLog,v 1.8 2007/12/06 00:41:05 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org> PEAR-Net_Ping-2.4.2.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org> PEAR-Net_Ping-2.4.2.ebuild:
+  Fix LICENSE
 
   15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
   +PEAR-Net_Ping-2.4.2.ebuild:

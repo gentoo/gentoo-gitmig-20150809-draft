@@ -1,6 +1,15 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.62 2007/11/29 23:25:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.63 2007/12/05 23:54:05 jokey Exp $
+
+  05 Dec 2007; Markus Ullmann <jokey@gentoo.org> PEAR-DB-1.7.6-r1.ebuild,
+  PEAR-DB-1.7.12.ebuild, -PEAR-DB-1.7.13.ebuild, PEAR-DB-1.7.14_rc1.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  PEAR-DB-1.7.6-r1.ebuild, PEAR-DB-1.7.12.ebuild,
+  PEAR-DB-1.7.14_rc1.ebuild:
+  Fix LICENSE
 
 *PEAR-DB-1.7.14_rc1 (29 Nov 2007)
 

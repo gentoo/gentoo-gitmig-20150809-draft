@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/PEAR-Tree
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Tree/ChangeLog,v 1.31 2007/10/22 19:10:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Tree/ChangeLog,v 1.32 2007/12/06 00:56:45 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org> -PEAR-Tree-0.2.4-r1.ebuild,
+  PEAR-Tree-0.3.2.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org> PEAR-Tree-0.3.2.ebuild:
+  Fix LICENSE
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org> PEAR-Tree-0.3.2.ebuild:
   ia64 stable wrt #192247

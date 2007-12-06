@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Download/PEAR-HTTP_Download-1.1.3.ebuild,v 1.1 2007/11/08 16:45:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Download/PEAR-HTTP_Download-1.1.3.ebuild,v 1.2 2007/12/06 00:21:06 jokey Exp $
 
 inherit php-pear-r1 depend.php eutils
 
 DESCRIPTION="Provides functionality to send HTTP downloads."
-LICENSE="BSD"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="minimal"

@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNSBL/PEAR-Net_DNSBL-1.3.0.ebuild,v 1.8 2007/10/22 18:44:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNSBL/PEAR-Net_DNSBL-1.3.0.ebuild,v 1.9 2007/12/06 00:39:30 jokey Exp $
 
 inherit php-pear-r1
 
 DESCRIPTION="DNSBL Checker"
 
-LICENSE="PHP"
+LICENSE="PHP-3.01"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""

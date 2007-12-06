@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/PEAR-Validate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.27 2007/10/22 19:10:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.28 2007/12/06 00:57:20 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  -PEAR-Validate-0.6.2.ebuild, PEAR-Validate-0.7.0.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org> PEAR-Validate-0.7.0.ebuild:
+  Fix LICENSE
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org> PEAR-Validate-0.7.0.ebuild:
   ia64 stable wrt #192247

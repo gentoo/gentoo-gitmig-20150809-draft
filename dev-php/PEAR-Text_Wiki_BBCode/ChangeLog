@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/PEAR-Text_Wiki_BBCode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki_BBCode/ChangeLog,v 1.9 2007/08/20 23:00:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki_BBCode/ChangeLog,v 1.10 2007/12/06 00:55:49 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  PEAR-Text_Wiki_BBCode-0.0.4.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  PEAR-Text_Wiki_BBCode-0.0.4.ebuild:
+  Fix LICENSE, check for pcre support in PHP
 
   15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
   +PEAR-Text_Wiki_BBCode-0.0.4.ebuild:

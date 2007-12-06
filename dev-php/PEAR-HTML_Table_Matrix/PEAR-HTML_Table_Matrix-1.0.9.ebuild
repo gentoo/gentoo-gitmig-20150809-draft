@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table_Matrix/PEAR-HTML_Table_Matrix-1.0.9.ebuild,v 1.12 2006/05/21 18:09:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table_Matrix/PEAR-HTML_Table_Matrix-1.0.9.ebuild,v 1.13 2007/12/06 00:13:56 jokey Exp $
 
 inherit php-pear-r1
 
 DESCRIPTION="Autofill a table with data."
 
-LICENSE="PHP"
+LICENSE="PHP-3"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""

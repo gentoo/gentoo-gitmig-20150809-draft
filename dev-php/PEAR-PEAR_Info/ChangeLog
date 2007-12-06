@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/PEAR-PEAR_Info
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.35 2007/10/22 18:52:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.36 2007/12/06 00:47:46 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  -PEAR-PEAR_Info-1.6.0.ebuild, PEAR-PEAR_Info-1.7.0.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org> PEAR-PEAR_Info-1.7.0.ebuild:
+  Fix LICENSE
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org>
   PEAR-PEAR_Info-1.7.0.ebuild:

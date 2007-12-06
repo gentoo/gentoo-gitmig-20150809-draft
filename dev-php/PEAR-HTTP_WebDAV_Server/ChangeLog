@@ -1,6 +1,15 @@
 # ChangeLog for dev-php/PEAR-HTTP_WebDAV_Server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_WebDAV_Server/ChangeLog,v 1.33 2007/10/22 18:38:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_WebDAV_Server/ChangeLog,v 1.34 2007/12/06 00:24:10 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  -PEAR-HTTP_WebDAV_Server-0.99.1-r1.ebuild,
+  PEAR-HTTP_WebDAV_Server-1.0.0_rc4.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  PEAR-HTTP_WebDAV_Server-1.0.0_rc4.ebuild:
+  Fix LICENSE
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org>
   PEAR-HTTP_WebDAV_Server-1.0.0_rc4.ebuild:

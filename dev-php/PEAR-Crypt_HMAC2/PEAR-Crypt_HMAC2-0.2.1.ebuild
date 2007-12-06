@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_HMAC2/PEAR-Crypt_HMAC2-0.2.1.ebuild,v 1.1 2007/11/15 18:03:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_HMAC2/PEAR-Crypt_HMAC2-0.2.1.ebuild,v 1.2 2007/12/05 23:52:09 jokey Exp $
 
 inherit php-pear-r1 depend.php
 
 DESCRIPTION="Implementation of Hashed Message Authentication Code for PHP5"
-LICENSE="PHP"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

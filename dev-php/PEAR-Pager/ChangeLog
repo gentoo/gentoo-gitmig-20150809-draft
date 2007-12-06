@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/PEAR-Pager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.29 2007/10/22 18:52:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.30 2007/12/06 00:49:24 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org> -PEAR-Pager-2.3.4.ebuild,
+  PEAR-Pager-2.4.4.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  PEAR-Pager-2.4.4.ebuild:
+  Fix LICENSE
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org> PEAR-Pager-2.4.4.ebuild:
   ia64 stable wrt #192247

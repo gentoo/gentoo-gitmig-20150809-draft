@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_Beautifier/PEAR-PHP_Beautifier-0.1.13.ebuild,v 1.1 2007/08/30 12:37:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_Beautifier/PEAR-PHP_Beautifier-0.1.13.ebuild,v 1.2 2007/12/06 00:48:39 jokey Exp $
 
 inherit php-pear-r1 depend.php eutils
 
 KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Code Beautifier for PHP."
-LICENSE="PHP"
+LICENSE="PHP-3"
 SLOT="0"
 IUSE=""
 

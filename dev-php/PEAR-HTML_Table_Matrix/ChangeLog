@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/PEAR-HTML_Table_Matrix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table_Matrix/ChangeLog,v 1.20 2007/02/09 02:53:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table_Matrix/ChangeLog,v 1.21 2007/12/06 00:13:56 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  PEAR-HTML_Table_Matrix-1.0.9.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  PEAR-HTML_Table_Matrix-1.0.9.ebuild:
+  Fix LICENSE
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

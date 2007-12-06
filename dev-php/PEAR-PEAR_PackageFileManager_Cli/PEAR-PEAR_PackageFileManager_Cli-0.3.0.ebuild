@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_PackageFileManager_Cli/PEAR-PEAR_PackageFileManager_Cli-0.3.0.ebuild,v 1.1 2007/08/30 12:36:04 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_PackageFileManager_Cli/PEAR-PEAR_PackageFileManager_Cli-0.3.0.ebuild,v 1.2 2007/12/06 00:48:23 jokey Exp $
 
 inherit php-pear-r1 depend.php
 
 DESCRIPTION="A command line interface to PEAR_PackageFileManager."
 
-LICENSE="LGPL-3"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

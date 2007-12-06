@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/PEAR-Services_Amazon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Amazon/ChangeLog,v 1.11 2007/08/20 22:41:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Amazon/ChangeLog,v 1.12 2007/12/06 00:50:19 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  PEAR-Services_Amazon-0.7.0.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  PEAR-Services_Amazon-0.7.0.ebuild:
+  Fix LICENSE
 
   15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
   +PEAR-Services_Amazon-0.7.0.ebuild:
