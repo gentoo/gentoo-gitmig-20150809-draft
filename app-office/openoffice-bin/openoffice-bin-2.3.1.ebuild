@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.3.1.ebuild,v 1.2 2007/12/06 07:49:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.3.1.ebuild,v 1.3 2007/12/06 08:13:35 opfer Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -60,14 +60,14 @@ src_unpack() {
 	unpack ${A}
 
 	for i in base calc core01 core02 core03 core03u core04 core04u core05 core05u core06 core07 core08 core09 core10 draw emailmerge graphicfilter headless impress math pyuno testtool writer xsltfilter ; do
-		rpm_unpack ${S}/openoffice.org-${i}-${MY_PV3}.i586.rpm
+		rpm_unpack "${S}/openoffice.org-${i}-${MY_PV3}.i586.rpm"
 	done
 
-	rpm_unpack ${S}/desktop-integration/openoffice.org-freedesktop-menus-2.3-9238.noarch.rpm
+	rpm_unpack "${S}/desktop-integration/openoffice.org-freedesktop-menus-2.3-9238.noarch.rpm"
 
-	use gnome && rpm_unpack ${S}/openoffice.org-gnome-integration-${MY_PV3}.i586.rpm
-	use kde && rpm_unpack ${S}/openoffice.org-kde-integration-${MY_PV3}.i586.rpm
-	use java && rpm_unpack ${S}/openoffice.org-javafilter-${MY_PV3}.i586.rpm
+	use gnome && rpm_unpack "${S}/openoffice.org-gnome-integration-${MY_PV3}.i586.rpm"
+	use kde && rpm_unpack "${S}/openoffice.org-kde-integration-${MY_PV3}.i586.rpm"
+	use java && rpm_unpack "${S}/openoffice.org-javafilter-${MY_PV3}.i586.rpm"
 
 	strip-linguas en ${LANGS}
 
@@ -91,10 +91,10 @@ src_install () {
 
 	einfo "Installing OpenOffice.org into build root..."
 	dodir ${INSTDIR}
-	mv ${WORKDIR}/opt/openoffice.org2.3/* ${D}${INSTDIR}
+	mv "${WORKDIR}"/opt/openoffice.org2.3/* "${D}${INSTDIR}"
 
 	#Menu entries, icons and mime-types
-	cd ${D}${INSTDIR}/share/xdg/
+	cd "${D}${INSTDIR}/share/xdg/"
 
 	for desk in base calc draw impress math printeradmin writer; do
 		mv ${desk}.desktop openoffice.org-2.3-${desk}.desktop
@@ -102,15 +102,15 @@ src_install () {
 		sed -i -e s/openofficeorg23-${desk}/ooo-${desk}/g openoffice.org-2.3-${desk}.desktop || die
 		domenu openoffice.org-2.3-${desk}.desktop
 		insinto /usr/share/pixmaps
-		newins ${WORKDIR}/usr/share/icons/gnome/48x48/apps/openofficeorg23-${desk}.png ooo-${desk}.png
+		newins "${WORKDIR}/usr/share/icons/gnome/48x48/apps/openofficeorg23-${desk}.png" ooo-${desk}.png
 	done
 
 	insinto /usr/share/mime/packages
-	doins ${WORKDIR}/usr/share/mime/packages/openoffice.org.xml
+	doins "${WORKDIR}/usr/share/mime/packages/openoffice.org.xml"
 
 	# Install wrapper script
-	newbin ${FILESDIR}/wrapper.in ooffice
-	sed -i -e s/LIBDIR/$(get_libdir)/g ${D}/usr/bin/ooffice || die
+	newbin "${FILESDIR}/wrapper.in" ooffice
+	sed -i -e s/LIBDIR/$(get_libdir)/g "${D}/usr/bin/ooffice" || die
 
 	# Component symlinks
 	for app in base calc draw impress math writer; do
@@ -121,16 +121,16 @@ src_install () {
 	dosym ${INSTDIR}/program/soffice /usr/bin/soffice
 
 	# Change user install dir
-	sed -i -e s/.openoffice.org2/.ooo-2.0/g ${D}${INSTDIR}/program/bootstraprc || die
+	sed -i -e s/.openoffice.org2/.ooo-2.0/g "${D}${INSTDIR}/program/bootstraprc" || die
 
 	# Non-java weirdness see bug #99366
-	use !java && rm -f ${D}${INSTDIR}/program/javaldx
+	use !java && rm -f "${D}${INSTDIR}/program/javaldx"
 
 	# Remove the provided dictionaries, we use our own instead
-	rm -f ${D}${INSTDIR}/share/dict/ooo/*
+	rm -f "${D}"${INSTDIR}/share/dict/ooo/*
 
 	# prevent revdep-rebuild from attempting to rebuild all the time
-	insinto /etc/revdep-rebuild && doins ${FILESDIR}/50-openoffice-bin
+	insinto /etc/revdep-rebuild && doins "${FILESDIR}/50-openoffice-bin"
 
 }
 
