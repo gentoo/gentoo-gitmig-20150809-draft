@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-1.5.2-r1.ebuild,v 1.1 2007/12/05 23:01:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-1.5.2-r1.ebuild,v 1.2 2007/12/06 19:14:10 jokey Exp $
 
-inherit eutils linux-mod
+inherit eutils linux-mod linux-info
 
 MY_P=vbox-kernel-module-src-${PV}
 DESCRIPTION="Modules for Virtualbox OSE"
@@ -31,7 +31,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}_2.6.24.patch
+	if kernel_is 2 6 24 ; then
+		epatch "${FILESDIR}"/${PN}_2.6.24.patch
+	fi
 }
 
 src_install() {
