@@ -3,13 +3,10 @@
 <pkgmetadata>
 <herd>gentopia</herd>
 <maintainer>
-	<email>cardoe@gentoo.org</email>
+	<email>compnerd@gentoo.org</email>
 </maintainer>
 <maintainer>
 	<email>steev@gentoo.org</email>
-</maintainer>
-<maintainer>
-	<email>compnerd@gentoo.org</email>
 </maintainer>
 <use>
 	<flag name='acpi'>Enables HAL to attempt to read from /proc/acpi/event, if
