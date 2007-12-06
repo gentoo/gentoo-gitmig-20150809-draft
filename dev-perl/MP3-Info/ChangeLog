@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MP3-Info
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.54 2007/11/10 13:47:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.55 2007/12/06 16:31:40 armin76 Exp $
+
+  06 Dec 2007; Raúl Porcel <armin76@gentoo.org> MP3-Info-1.23.ebuild:
+  alpha/ia64/sparc/x86 stable
 
   10 Nov 2007; Samuli Suominen <drac@gentoo.org> MP3-Info-1.22.ebuild:
   amd64 stable

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Types
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.39 2007/12/04 20:00:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.40 2007/12/06 16:30:35 armin76 Exp $
+
+  06 Dec 2007; Raúl Porcel <armin76@gentoo.org> MIME-Types-1.21.ebuild:
+  alpha/ia64/sparc/x86 stable
 
   04 Dec 2007; Markus Rothe <corsair@gentoo.org> MIME-Types-1.20.ebuild:
   Stable on ppc64; bug #198075

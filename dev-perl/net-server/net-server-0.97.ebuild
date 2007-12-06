@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/net-server-0.97.ebuild,v 1.3 2007/12/01 17:16:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/net-server-0.97.ebuild,v 1.4 2007/12/06 16:33:20 armin76 Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/R/RH/RHANDOM/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 SRC_TEST="do"
