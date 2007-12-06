@@ -1,6 +1,15 @@
 # ChangeLog for dev-php5/pecl-id3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-id3/ChangeLog,v 1.2 2007/03/17 23:59:59 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-id3/ChangeLog,v 1.3 2007/12/06 01:10:42 jokey Exp $
+
+*pecl-id3-0.2-r1 (06 Dec 2007)
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org> -pecl-id3-0.2.ebuild,
+  +pecl-id3-0.2-r1.ebuild:
+  LICENSE fix from project overlay and version bump
+
+  03 Dec 2007; Jakub Moc <jakub@gentoo.org> +pecl-id3-0.2-r1.ebuild:
+  Fix LICENSE, add examples USE flag, install some docs
 
   17 Mar 2007; Luca Longinotti <chtekk@gentoo.org> pecl-id3-0.2.ebuild:
   Cleanup.
