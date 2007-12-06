@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.45.1.ebuild,v 1.7 2007/04/09 19:47:47 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.45.1.ebuild,v 1.8 2007/12/06 21:27:55 maekke Exp $
 
 inherit gnome2
 
@@ -20,6 +20,7 @@ COMMON_DEPEND=">=x11-libs/gtk+-2.10.7
 	>=dev-libs/boehm-gc-6.4
 	>=dev-libs/glib-2.6.5
 	>=dev-libs/libsigc++-2.0.12
+	>=dev-libs/libxslt-1.0.15
 	dev-libs/popt
 	media-libs/fontconfig
 	>=media-libs/freetype-2
