@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.879 2007/12/06 02:07:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.880 2007/12/06 17:33:08 flameeyes Exp $
+
+  06 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
+  Bump once again the experimental version of PulseAudio.
 
   06 Dec 2007; Robin H. Johnson <robbat2@gentoo.org> use.local.desc:
   Add CGI use flag for Git.
