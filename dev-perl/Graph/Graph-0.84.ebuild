@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/Graph-0.84.ebuild,v 1.1 2007/10/19 21:17:41 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/Graph-0.84.ebuild,v 1.2 2007/12/06 16:03:48 armin76 Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Graph/${P}.readme"
 IUSE=""
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc sparc x86"
 SRC_TEST="do"
 
 DEPEND="<dev-perl/Heap-0.80

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GnuPG-Interface
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.22 2007/11/10 13:17:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.23 2007/12/06 16:00:07 armin76 Exp $
+
+  06 Dec 2007; Raúl Porcel <armin76@gentoo.org>
+  GnuPG-Interface-0.36.ebuild:
+  alpha/ia64/sparc/x86 stable
 
   10 Nov 2007; Samuli Suominen <drac@gentoo.org>
   GnuPG-Interface-0.35.ebuild:
