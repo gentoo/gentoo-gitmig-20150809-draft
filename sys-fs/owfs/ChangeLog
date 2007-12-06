@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/owfs
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.1 2007/12/06 15:00:50 wschlich Exp $
+
+*owfs-2.7_p0 (06 Dec 2007)
+
+  06 Dec 2007; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
+  +owfs-2.7_p0.ebuild:
+  initial import
+
