@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r2.ebuild,v 1.15 2007/10/08 10:16:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r2.ebuild,v 1.16 2007/12/06 08:52:27 nelchael Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -97,6 +97,10 @@ src_install() {
 	dohtml -A xbm,xpm,h,cxx,fl,menu -r "${D}"/usr/share/doc/fltk/*
 	rm -rf "${D}"/usr/share/doc/fltk
 	rm -rf "${D}"/usr/share/man/cat{1,3}
+	
+	sed -i -e 's,^LDFLAGS=.*$,LDFLAGS="",g' "${D}/usr/bin/fltk-config" || \
+		die "sed of fltk-config failed"
+
 }
 
 pkg_postinst() {
