@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/symfony-1.0.8.ebuild,v 1.1 2007/10/28 12:08:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/symfony-1.0.9.ebuild,v 1.1 2007/12/06 01:24:28 jokey Exp $
 
 inherit php-pear-lib-r1 depend.php
 

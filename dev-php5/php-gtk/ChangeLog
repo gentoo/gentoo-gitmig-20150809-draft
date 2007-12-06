@@ -1,6 +1,18 @@
 # ChangeLog for dev-php5/php-gtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.9 2007/10/12 08:48:23 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.10 2007/12/06 01:23:39 jokey Exp $
+
+*php-gtk-2.0.0_beta-r1 (06 Dec 2007)
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org> -php-gtk-2.0.0_beta.ebuild,
+  +php-gtk-2.0.0_beta-r1.ebuild:
+  LICENSE fix from project overlay and version bump
+
+  30 Nov 2007; Jakub Moc <jakub@gentoo.org> +php-gtk-2.0.0_beta-r1.ebuild:
+  Add USE=doc to install the manual, get rid of eclass duplication in
+  src_install() and set PHPSAPILIST instead, get rid of nolibglade flag and
+  replace it with USE=glade (enabled by default via EAPI-1). Ebuild cleanup.
+  Fix LICENSE.
 
   12 Oct 2007; Rémi Cardona <remi@gentoo.org> php-gtk-2.0.0_beta.ebuild:
   update gtksourceview deps (see bug #195366)
