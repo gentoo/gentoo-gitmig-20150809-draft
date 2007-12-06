@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.2.ebuild,v 1.5 2007/09/28 11:25:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.2.ebuild,v 1.6 2007/12/06 17:20:09 bicatali Exp $
 
 inherit fortran eutils toolchain-funcs flag-o-matic autotools
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	doc? ( virtual/tetex )"
+	doc? ( virtual/latex-base )"
 
 pkg_setup() {
 	if use fortran ; then
@@ -28,6 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-parallel-make.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 	eautoreconf
 }
 
