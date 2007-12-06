@@ -1,6 +1,18 @@
 # ChangeLog for gnome-extra/avant-window-navigator-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/ChangeLog,v 1.2 2007/11/10 03:57:14 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/ChangeLog,v 1.3 2007/12/06 17:42:36 wltjr Exp $
+
+*avant-window-navigator-extras-0.2.1-r1 (06 Dec 2007)
+
+  06 Dec 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -avant-window-navigator-extras-0.2.1.ebuild,
+  +avant-window-navigator-extras-0.2.1-r1.ebuild:
+  Fixed colliding issue with schemas per bug #198647. Patch fix submitted by
+  Pacho Ramos.
+
+  29 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  avant-window-navigator-extras-0.2.1.ebuild:
+  Corrected/added deps
 
   10 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org> metadata.xml:
   Corrected metadata
