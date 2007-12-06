@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.878 2007/12/05 20:40:08 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.879 2007/12/06 02:07:13 robbat2 Exp $
+
+  06 Dec 2007; Robin H. Johnson <robbat2@gentoo.org> use.local.desc:
+  Add CGI use flag for Git.
 
   05 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> use.local.desc:
   net-www/xxv:themes - Enable more themes via x11-themes/xxv-skins use-flag added

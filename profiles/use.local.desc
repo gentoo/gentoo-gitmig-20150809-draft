@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3186 2007/12/05 21:04:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3187 2007/12/06 02:07:13 robbat2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -627,6 +627,7 @@ dev-util/cvs:server - Enable server support
 dev-util/debootstrap:nodpkg - Don't install dpkg (useful for building a non-debian system)
 dev-util/eclipse-sdk:branding - Enable Gentoo branded splash screen
 dev-util/eric:idl - Enable omniorb support
+dev-util/git:cgi - Add CGI script support
 dev-util/git:mozsha1 - makes git use an optimized SHA1 routine from Mozilla that should be fast on non-x86 machines
 dev-util/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arch
 dev-util/git:webdav - Adds support for push'ing to HTTP repositories via DAV
