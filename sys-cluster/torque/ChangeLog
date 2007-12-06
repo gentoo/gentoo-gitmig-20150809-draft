@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.54 2007/12/04 21:38:12 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.55 2007/12/06 00:18:40 jsbronder Exp $
+
+*torque-2.2.1-r2 (06 Dec 2007)
+
+  06 Dec 2007; <jbronder@gentoo.org> +torque-2.2.1-r2.ebuild:
+  Revbump to get fixes to env.d out, also added blocker with x11-misc/qterm
+  (Bug #176533)
 
   04 Dec 2007; <jsbronder@gentoo.org> files/torque-env.d-2.2.1-r1,
   torque-2.2.1-r1.ebuild:
