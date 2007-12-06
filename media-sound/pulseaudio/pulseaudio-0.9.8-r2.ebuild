@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.8-r1.ebuild,v 1.2 2007/11/23 15:47:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.8-r2.ebuild,v 1.1 2007/12/06 17:34:44 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -38,12 +38,10 @@ RDEPEND="X? ( x11-libs/libX11 )
 		>=sys-apps/dbus-1.0.0
 	)
 	policykit? ( sys-auth/policykit )
-	>=sys-apps/baselayout-2.0_rc5
 	>=sys-devel/libtool-1.5.24" # it's a valid RDEPEND, libltdl.so is used
 DEPEND="${RDEPEND}
 	dev-libs/libatomic_ops
-	dev-util/pkgconfig
-	dev-util/unifdef"
+	dev-util/pkgconfig"
 
 # alsa-utils dep is for the alsasound init.d script (see bug #155707)
 # bluez-utils dep is for the bluetooth init.d script
@@ -75,6 +73,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-svn2074.patch"
 	epatch "${FILESDIR}/${P}-polkit.patch"
 	epatch "${FILESDIR}/${P}-bt-nohal.patch"
+	epatch "${FILESDIR}/${P}-esoundpath.patch"
 
 	eautoreconf
 	elibtoolize
@@ -113,18 +112,12 @@ src_install() {
 
 	newconfd "${FILESDIR}/pulseaudio.conf.d" pulseaudio
 
-	use_define() {
-		local define=${2:-$(echo $1 | tr '[:lower:]' '[:upper:]')}
-
-		use "$1" && echo "-D$define" || echo "-U$define"
-	}
-
-	unifdef "${FILESDIR}/pulseaudio.init.d-3" \
-		$(use_define hal) \
-		$(use_define avahi) \
-		$(use_define alsa) \
-		$(use_define bluetooth) \
-		> "${T}/pulseaudio"
+	local neededservices
+	use alsa && neededservices="$neededservices alsasound"
+	use avahi && neededservices="$neededservices avahi-daemon"
+	use hal && neededservices="$neededservices hald"
+	use bluetooth && neededservices="$neededservices bluetooth"
+	[[ -n ${neededservices} ]] && sed -e "s/@neededservices@/need $neededservices/" "${FILESDIR}/pulseaudio.init.d-2" > "${T}/pulseaudio"
 	doinitd "${T}/pulseaudio"
 
 	if ! use hal; then
