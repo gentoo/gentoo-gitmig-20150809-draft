@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.13 2007/10/17 05:34:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.14 2007/12/06 18:20:55 opfer Exp $
+
+  06 Dec 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  fix ChangeLog
 
   17 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   keepassx-0.2.2-r1.ebuild:
@@ -29,7 +32,7 @@
   Quote has_version argument because of > operator. Use full atoms for
   built_with_use.
 
-  30 Dec 2006; <fauli@gentoo.org> keepassx-0.2.2.ebuild:
+  30 Dec 2006; <opfer@gentoo.org> keepassx-0.2.2.ebuild:
   fixed bug #158149....again (forgot an exclamation mark)
 
   23 Dec 2006; <nixnut@gentoo.org> keepassx-0.2.2.ebuild:
