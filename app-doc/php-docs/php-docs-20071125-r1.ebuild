@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20071125-r1.ebuild,v 1.3 2007/12/06 00:53:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20071125-r1.ebuild,v 1.4 2007/12/06 14:58:52 armin76 Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.php.net/download-docs.php"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="+linguas_en"
 SRC_URI="linguas_en? ( http://dev.gentooexperimental.org/~jakub/distfiles/${P}_en.tar.gz
 			mirror://gentoo/${P}_en.tar.gz )"
