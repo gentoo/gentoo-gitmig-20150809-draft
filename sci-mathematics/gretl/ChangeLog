@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gretl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.5 2007/12/04 17:59:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.6 2007/12/06 11:37:10 bicatali Exp $
+
+  06 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/50gretl-gentoo.el, gretl-1.7.0.ebuild:
+  Added emacs capability thanks to the emacs team (bug #201461).
 
   04 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org> gretl-1.7.0.ebuild:
   Added einstall for gnome, closing bug #201238
