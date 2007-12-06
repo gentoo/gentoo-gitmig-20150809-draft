@@ -1,6 +1,14 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.66 2007/12/01 02:52:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.67 2007/12/06 14:57:58 matsuu Exp $
+
+*ptex-3.1.10_p20071203 (06 Dec 2007)
+
+  06 Dec 2007; <matsuu@gentoo.org>
+  +files/ptex-3.1.10_p20071203-gentoo.patch, +files/xpdf-3.02pl2.patch,
+  +ptex-3.1.10_p20071203.ebuild:
+  Version bumbed.
+  Added xpdf security patch, bug #196673.
 
   01 Dec 2007; <matsuu@gentoo.org> ptex-3.1.10_p20071122.ebuild:
   Fixed to work with "USE=-X".
