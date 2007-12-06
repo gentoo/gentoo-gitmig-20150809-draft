@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Want
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.29 2007/10/19 20:14:29 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.30 2007/12/06 16:55:40 armin76 Exp $
+
+  06 Dec 2007; Raúl Porcel <armin76@gentoo.org> Want-0.15.ebuild:
+  alpha/ia64/sparc/x86 stable
 
 *Want-0.15 (19 Oct 2007)
 
