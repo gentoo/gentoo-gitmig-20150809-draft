@@ -7,5 +7,5 @@ GenericName[de]=Passwortverwaltung
 Comment=Cross Platform Password Manager
 Comment[de]=Plattformübergreifende Passwortverwaltung
 Exec=keepass
-Icon=keepassx.png
+Icon=keepassx
 Categories=Qt;KDE;Utility;Security;
