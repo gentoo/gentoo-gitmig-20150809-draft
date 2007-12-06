@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-HomeDir
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.34 2007/11/10 13:05:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.35 2007/12/06 15:30:20 armin76 Exp $
+
+  06 Dec 2007; Raúl Porcel <armin76@gentoo.org> File-HomeDir-0.66.ebuild:
+  alpha/ia64/sparc/x86 stable
 
   10 Nov 2007; Samuli Suominen <drac@gentoo.org> File-HomeDir-0.65.ebuild:
   amd64 stable
