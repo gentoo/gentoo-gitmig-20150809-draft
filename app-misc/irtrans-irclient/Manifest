@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX irtrans-irclient-5.9.01-missing-include.diff 363 RMD160 fff180d91331e6a0b1939e320a5ee7854bae2de6 SHA1 6a0b103619a802ceb541cee15d8436ac32e995b0 SHA256 48753faa1661c2519dc55fcb95da93319e36cebdc5ea48ece4f633b36fdcc288
 MD5 f923d8a7bc401c6a0737e679850dace0 files/irtrans-irclient-5.9.01-missing-include.diff 363
 RMD160 fff180d91331e6a0b1939e320a5ee7854bae2de6 files/irtrans-irclient-5.9.01-missing-include.diff 363
@@ -11,10 +8,10 @@ EBUILD irtrans-irclient-5.9.04.ebuild 971 RMD160 8d81407b6cf92fc786994ee595de7b2
 MD5 0114334fe34ab2a4c2fdb2258c89a908 irtrans-irclient-5.9.04.ebuild 971
 RMD160 8d81407b6cf92fc786994ee595de7b26ae6d780d irtrans-irclient-5.9.04.ebuild 971
 SHA256 a83e45d4c1cafdceb09ba6461dbcad629e297cf6f9fd3afb0b15a7cfed260665 irtrans-irclient-5.9.04.ebuild 971
-EBUILD irtrans-irclient-5.9.07.ebuild 972 RMD160 1ffec5f0f03ba503d7ce690d28af68f8df16061c SHA1 f26dd01285f340e8d2d3dc877ae0bd1f618da0ca SHA256 39e9bac6fb6152c24dcde7cf7e62fa77ada9a5075d3bab80121fdd9fd396c632
-MD5 0c7a64b146db12d7c512a34d02d03ec0 irtrans-irclient-5.9.07.ebuild 972
-RMD160 1ffec5f0f03ba503d7ce690d28af68f8df16061c irtrans-irclient-5.9.07.ebuild 972
-SHA256 39e9bac6fb6152c24dcde7cf7e62fa77ada9a5075d3bab80121fdd9fd396c632 irtrans-irclient-5.9.07.ebuild 972
+EBUILD irtrans-irclient-5.9.07.ebuild 971 RMD160 0801da1bc9466634b28f1e42ca0b368e724c99aa SHA1 9c8e9d36c348f10d9b5ea64573b7b0e315ede84e SHA256 cf96a9b6bd346b3210ae9aa958a9fbceaac9756184b2b372935c065b8d199c07
+MD5 0d92734d815297a7e77ba00b820b304d irtrans-irclient-5.9.07.ebuild 971
+RMD160 0801da1bc9466634b28f1e42ca0b368e724c99aa irtrans-irclient-5.9.07.ebuild 971
+SHA256 cf96a9b6bd346b3210ae9aa958a9fbceaac9756184b2b372935c065b8d199c07 irtrans-irclient-5.9.07.ebuild 971
 MISC ChangeLog 979 RMD160 7a9808a1060ff64b0ea33d185c7093d54de3eece SHA1 abeb5edf50a4ab6b7f33052cbb2051eac18111a0 SHA256 92e3d483521b274449fd89282b1d43b1cac3c665e3aa730c4ef30c4b37eae838
 MD5 32b9e584307bdc1510945364cbef0f1c ChangeLog 979
 RMD160 7a9808a1060ff64b0ea33d185c7093d54de3eece ChangeLog 979
@@ -29,11 +26,3 @@ SHA256 999ec2a22b693063f50b857a3dcbc79dadd8ff0e2c731ff1853cf9b7e9ecbeb5 files/di
 MD5 95bface1a727f4b738920545824a3216 files/digest-irtrans-irclient-5.9.07 259
 RMD160 b49d95769284cc57cc6c847d2162aaca53b16735 files/digest-irtrans-irclient-5.9.07 259
 SHA256 94fd2fe1f3a81cd843f163a49a5af9941d0bb12a5cec11d86d22243fb335cd28 files/digest-irtrans-irclient-5.9.07 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-Comment: added by hd_brummy@gentoo.org
-
-iD8DBQFHWEY9dn07HTTCgIoRAh+ZAKCj8BDILz1JTg6qG2+RsUn5zcWO9gCgnvub
-/uHrvwJXiY3zMRfpdJJu4Wg=
-=76cG
------END PGP SIGNATURE-----
