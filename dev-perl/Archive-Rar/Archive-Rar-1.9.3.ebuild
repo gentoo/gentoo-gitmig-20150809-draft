@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/Archive-Rar-1.9.3.ebuild,v 1.1 2007/11/19 18:59:14 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/Archive-Rar-1.9.3.ebuild,v 1.2 2007/12/06 15:08:06 armin76 Exp $
 
 inherit perl-module versionator
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/S/SM/SMUELLER/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="test"
 DEPEND="dev-lang/perl
 		app-arch/rar
