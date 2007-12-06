@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.3.0.ebuild,v 1.1 2007/11/30 16:42:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.3.0.ebuild,v 1.2 2007/12/06 20:08:57 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
@@ -230,7 +230,10 @@ src_compile() {
 src_install() {
 	gnome2_src_install
 	use perl && fixlocalpod
-	dodoc AUTHORS COPYING HACKING INSTALL NEWS README ChangeLog
+	dodoc AUTHORS HACKING INSTALL NEWS README ChangeLog
+
+	# Remove superfluous desktop file
+	use gtk || rm -rf "${D}/usr/share/applications"
 }
 
 pkg_postinst() {
