@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p0.ebuild,v 1.1 2007/12/06 15:00:50 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p0.ebuild,v 1.2 2007/12/06 16:52:01 wschlich Exp $
 
 inherit eutils
 
-MY_P="${P/_/}"
+MY_P=${P/_/}
 
 DESCRIPTION="Access 1-Wire devices like a filesystem"
 SRC_URI="mirror://sourceforge/owfs/${MY_P}.tar.gz"
@@ -48,6 +48,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc README NEWS ChangeLog AUTHORS
 }
