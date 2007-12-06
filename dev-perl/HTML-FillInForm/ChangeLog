@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-FillInForm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FillInForm/ChangeLog,v 1.11 2007/08/20 09:26:49 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FillInForm/ChangeLog,v 1.12 2007/12/06 16:10:49 armin76 Exp $
+
+  06 Dec 2007; Raúl Porcel <armin76@gentoo.org>
+  HTML-FillInForm-1.07.ebuild:
+  ia64/sparc/x86 stable
 
 *HTML-FillInForm-1.07 (20 Aug 2007)
 
