@@ -1,0 +1,26 @@
+--- pkgcore-0.3.2/pkgcore/bin/ebuild-env/ebuild-functions.sh	2007-08-16 16:30:43 +0000
++++ pkgcore-0.3.2/pkgcore/bin/ebuild-env/ebuild-functions.sh	2007-11-02 11:44:59 +0000
+@@ -234,7 +234,9 @@
+ 
+ src_compile()
+ {
+-    if [ -x ./configure ]; then
++    if [ "${EAPI:-0}" == 0 ] ; then
++        [ -x ./configure ] && econf
++    elif [ -x ${ECONF_SOURCE}/configure ]; then
+         econf || die "econf failed"
+     fi
+     if [ -f Makefile ] || [ -f GNUmakefile ] || [ -f makefile ]; then
+
+--- pkgcore-0.3.2/pkgcore/ebuild/ebd.py	2007-11-02 01:56:46 +0000
++++ pkgcore-0.3.2/pkgcore/ebuild/ebd.py	2007-11-08 23:35:41 +0000
+@@ -599,7 +599,7 @@
+         does nothing if the pkg is EAPI=0 (that spec lacks a seperated
+         configure phase).
+         """
+-        if self.eapi > 0:
++        if self.eapi > 1:
+             return self._generic_phase("configure", True, True, False)
+         return True
+ 
+
