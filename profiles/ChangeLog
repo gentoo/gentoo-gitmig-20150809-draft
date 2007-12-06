@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.880 2007/12/06 17:33:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.881 2007/12/06 21:51:28 eva Exp $
+
+  06 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
+  add keyring for gossip
 
   06 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
   Bump once again the experimental version of PulseAudio.
