@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.42 2007/12/05 16:49:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.43 2007/12/06 16:33:14 fmccor Exp $
+
+  06 Dec 2007; Ferris McCormick <fmccor@gentoo.org> maxima-5.13.0-r1.ebuild:
+  Sparc stable --- Bug #201216 --- all tests pass.
 
   05 Dec 2007; Markus Meier <maekke@gentoo.org> maxima-5.13.0-r1.ebuild:
   x86 stable, bug #201216
