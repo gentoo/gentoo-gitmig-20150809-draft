@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.176 2007/12/01 17:35:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.177 2007/12/06 19:57:24 jer Exp $
+
+  06 Dec 2007; Jeroen Roovers <jer@gentoo.org> -files/opera.desktop,
+  opera-9.24.ebuild, opera-9.50_beta1.ebuild, opera-9.50_beta2_p1652.ebuild,
+  opera-9.50_beta2_p1662.ebuild, opera-9.50_beta2_p1669.ebuild,
+  opera-9.50_beta2_p1678.ebuild, opera-9.50_beta2_p1709.ebuild:
+  Fix .desktop entry (bug #201498).
 
 *opera-9.50_beta2_p1709 (01 Dec 2007)
 

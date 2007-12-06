@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.24.ebuild,v 1.5 2007/10/22 00:44:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.24.ebuild,v 1.6 2007/12/06 19:57:24 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -113,8 +113,7 @@ src_install() {
 	done
 
 	# Install the menu entry
-	insinto /usr/share/applications
-	doins "${FILESDIR}"/opera.desktop
+	make_desktop_entry opera Opera /usr/share/pixmaps/opera.xpm 'Network;WebBrowser;Email;FileTransfer;IRCClient'
 
 	# Install a symlink /usr/bin/opera
 	dodir /usr/bin
