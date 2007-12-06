@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20071125-r1.ebuild,v 1.2 2007/12/05 23:40:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20071125-r1.ebuild,v 1.3 2007/12/06 00:53:59 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -15,7 +15,6 @@ SRC_URI="linguas_en? ( http://dev.gentooexperimental.org/~jakub/distfiles/${P}_e
 			mirror://gentoo/${P}_en.tar.gz )"
 
 RESTRICT="strip binchecks"
-
 
 LANGS="cs da de el es fi fr he hu it ja ko nl pl pt_BR ro ru sk sv zh_CN zh_TW"
 for lang in ${LANGS} ; do
@@ -37,7 +36,6 @@ src_unpack() {
 		fi
 	done
 }
-
 
 pkg_preinst() {
 	# remove broken/stale symlink created by previous ebuilds
