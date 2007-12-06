@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.18.3.ebuild,v 1.1 2007/12/05 21:43:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.18.3.ebuild,v 1.2 2007/12/06 09:45:26 leio Exp $
 
 inherit eutils gnome2
 
@@ -45,7 +45,4 @@ src_unpack() {
 	# This needs to resolve a few bugs (#120294,)
 	# Leave out for now; causing too many problems
 	#epatch ${FILESDIR}/${PN}-2.13.90-TERM-gnome.patch
-
-	# Remove the intltoolize call when tarballs are made with >=intltool-0.35.5
-	intltoolize --force || die
 }

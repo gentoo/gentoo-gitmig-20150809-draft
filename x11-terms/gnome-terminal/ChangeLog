@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.156 2007/12/05 21:43:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.157 2007/12/06 09:45:26 leio Exp $
+
+  06 Dec 2007; Mart Raudsepp <leio@gentoo.org> gnome-terminal-2.18.3.ebuild:
+  Remove intltoolize call, so that we wouldn't get mismatching Makefiles, bug
+  201470
 
 *gnome-terminal-2.18.3 (05 Dec 2007)
 
