@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/typespeed
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/ChangeLog,v 1.17 2007/12/01 21:08:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/ChangeLog,v 1.18 2007/12/06 00:15:09 mr_bones_ Exp $
+
+  06 Dec 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  -typespeed-0.5.1.ebuild, -typespeed-0.6.2.ebuild, -typespeed-0.6.3.ebuild,
+  typespeed-0.6.4.ebuild:
+  force stabilize for security bug #201435 and remove old vulnerable versions
 
 *typespeed-0.6.4 (01 Dec 2007)
 
