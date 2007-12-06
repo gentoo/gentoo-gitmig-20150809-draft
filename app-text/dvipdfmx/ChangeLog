@@ -1,6 +1,14 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.34 2007/12/03 20:51:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.35 2007/12/06 08:02:02 aballier Exp $
+
+*dvipdfmx-20071115-r1 (06 Dec 2007)
+
+  06 Dec 2007; Alexis Ballier <aballier@gentoo.org>
+  -dvipdfmx-20071115.ebuild, +dvipdfmx-20071115-r1.ebuild:
+  install config file in /etc/texmf/dvipdfm/, rdepend on poppler-data and
+  symlink it from dvipdfmx cMap directory to allow it to find it; thanks to
+  Jie Luo <clotho67@gmail.com>, bug #201258
 
 *dvipdfmx-20071115 (03 Dec 2007)
 

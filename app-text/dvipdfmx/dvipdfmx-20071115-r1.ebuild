@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20071115.ebuild,v 1.1 2007/12/03 20:51:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20071115-r1.ebuild,v 1.1 2007/12/06 08:02:02 aballier Exp $
 
 inherit eutils
 
@@ -14,14 +14,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
-RDEPEND="virtual/tex-base
+DEPEND="virtual/tex-base
 	virtual/ghostscript
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
 	app-text/libpaper
 	!<app-text/texlive-core-2007-r10"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+RDEPEND="${DEPEND}
+	app-text/poppler-data"
 
 has_tetex_3() {
 	if has_version '>=app-text/tetex-3' || has_version '>=app-text/ptex-3.1.8' || has_version '>=app-text/texlive-core-2007' ; then
@@ -32,8 +32,13 @@ has_tetex_3() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	# Override dvipdfmx.cfg default installation location so that it is easy to
+	# modify it and it gets config protected. Symlink it from the old location.
+	emake configdatadir="/etc/texmf/dvipdfm" DESTDIR="${D}" install || die "make install failed"
+	dosym /etc/texmf/dvipdfm/dvipdfmx.cfg /usr/share/texmf/dvipdfm/dvipdfmx.cfg
 
+	# Symlink poppler-data cMap, bug #201258
+	dosym /usr/share/poppler/cMap /usr/share/texmf/fonts/cmap/cMap
 	dodoc AUTHORS ChangeLog README TODO
 }
 
