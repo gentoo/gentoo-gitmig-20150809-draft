@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libferrisstreams
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/ChangeLog,v 1.15 2007/12/06 20:38:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/ChangeLog,v 1.16 2007/12/06 23:16:47 opfer Exp $
+
+  06 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  libferrisstreams-0.5.0.ebuild:
+  stable x86, bug 197673
 
   06 Dec 2007; Samuli Suominen <drac@gentoo.org>
   libferrisstreams-0.5.0.ebuild:
