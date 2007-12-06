@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-5.0.8-r4.ebuild,v 1.1 2007/01/28 20:28:16 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-5.0.8-r4.ebuild,v 1.2 2007/12/06 09:05:10 nelchael Exp $
 
 inherit eutils rpm kde-functions autotools
 
@@ -29,8 +29,8 @@ DEPEND="${RDEPEND}
 src_compile() {
 
 	cd "${S}"
-	epatch ${WORKDIR}/redhat-artwork-5.0.5-add-dirs-to-bluecurve-theme-index.patch
-	epatch ${WORKDIR}/redhat-artwork-5.0.8-echo.patch
+	epatch "${WORKDIR}/redhat-artwork-5.0.5-add-dirs-to-bluecurve-theme-index.patch"
+	epatch "${WORKDIR}/redhat-artwork-5.0.8-echo.patch"
 
 	if use kde; then
 		set-qtdir 3
@@ -87,6 +87,10 @@ src_compile() {
 
 	eautoreconf --force --install || die "autoreconf failed"
 
+	ebegin "Running intltoolize"
+	intltoolize --force || die "intltoolize failed"
+	eend $?
+
 	sed -i -e "s|GtkStyle|4|" art/qt/Bluecurve/bluecurve.cpp || die
 
 	econf || die
@@ -104,10 +108,10 @@ src_install () {
 	     DESTDIR="${D}" install || die
 
 	# yank redhat logos (registered trademarks, etc)
-	rm -f ${D}/usr/share/gdm/themes/Bluecurve/rh_logo-header.png
-	rm -f ${D}/usr/share/gdm/themes/Bluecurve/screenshot.png
+	rm -f "${D}/usr/share/gdm/themes/Bluecurve/rh_logo-header.png"
+	rm -f "${D}/usr/share/gdm/themes/Bluecurve/screenshot.png"
 
-	cd ${D}/usr/share/gdm/themes/Bluecurve/
+	cd "${D}/usr/share/gdm/themes/Bluecurve/"
 
 	# replace redhat logo with gnome logo from happygnome theme, use .svg if >=gnome-base/gdm-2.14 installed
 	if has_version gnome-base/gdm >=2.14; then
@@ -126,7 +130,7 @@ src_install () {
 
 	for x in Bluecurve Bluecurve-inverse; do
 		dodir /usr/share/cursors/${X11_IMPLEM}/${x}
-		mv ${D}/usr/share/icons/${x}/cursors ${D}/usr/share/cursors/${X11_IMPLEM}/${x}
+		mv "${D}/usr/share/icons/${x}/cursors" "${D}/usr/share/cursors/${X11_IMPLEM}/${x}"
 		dosym /usr/share/cursors/${X11_IMPLEM}/${x}/cursors /usr/share/icons/${x}/cursors
 	done
 
@@ -137,20 +141,20 @@ src_install () {
 		mv "${D}/usr/share/xmms" "${D}/usr/share/audacious"
 	fi
 
-	cd ${S}
+	cd "${S}"
 	dodoc AUTHORS NEWS README ChangeLog
 
 	###
 	# Some extra features - allows redhat-artwork to be very light:
 	###
-	use gdm || rm -rf ${D}/usr/share/gdm
-	use kdm || rm -rf ${D}/usr/share/apps/kdm
-	use cursors || rm -rf ${D}/usr/share/cursors
+	use gdm || rm -rf "${D}/usr/share/gdm"
+	use kdm || rm -rf "${D}/usr/share/apps/kdm"
+	use cursors || rm -rf "${D}/usr/share/cursors"
 	use icons || {
-		rm -rf ${D}/usr/share/icons
-		rm -rf ${D}/usr/share/pixmaps/*.png
+		rm -rf "${D}"/usr/share/icons
+		rm -rf "${D}"/usr/share/pixmaps/*.png
 	}
-	use nautilus || rm -rf ${D}/usr/share/pixmaps/nautilus
+	use nautilus || rm -rf "${D}/usr/share/pixmaps/nautilus"
 
 }
 
