@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0_beta-r1.ebuild,v 1.1 2007/12/06 01:23:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0_beta-r1.ebuild,v 1.2 2007/12/06 04:46:25 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -69,7 +69,7 @@ src_unpack() {
 	unpack ${MY_P}.tar.gz
 
 	cd "${S}"
-	# we already check for CLI and built-in check creates trouble 
+	# we already check for CLI and built-in check creates trouble
 	# on suhosin-based installations, so we remove it
 	epatch "${FILESDIR}"/no-cli-check.patch
 
