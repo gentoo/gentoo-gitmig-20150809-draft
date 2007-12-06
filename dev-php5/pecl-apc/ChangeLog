@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.30 2007/11/12 10:44:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.31 2007/12/06 01:05:47 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org> pecl-apc-3.0.12_p2.ebuild,
+  -pecl-apc-3.0.14.ebuild, pecl-apc-3.0.15.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  pecl-apc-3.0.12_p2.ebuild, pecl-apc-3.0.15.ebuild:
+  Fix LICENSE, install more docs
 
   12 Nov 2007; Raúl Porcel <armin76@gentoo.org> pecl-apc-3.0.15.ebuild:
   sparc stable wrt #198566

@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-enchant
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-enchant/ChangeLog,v 1.1 2007/11/15 19:11:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-enchant/ChangeLog,v 1.2 2007/12/06 01:08:40 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org> pecl-enchant-1.0.1.ebuild:
+  LICENSE fix from project overlay
+
+  03 Dec 2007; Jakub Moc <jakub@gentoo.org> pecl-enchant-1.0.1.ebuild:
+  Fix LICENSE
 
 *pecl-enchant-1.0.1 (15 Nov 2007)
 

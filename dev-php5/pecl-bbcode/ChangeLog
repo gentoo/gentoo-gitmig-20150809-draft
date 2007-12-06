@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/pecl-bbcode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-bbcode/ChangeLog,v 1.1 2007/11/15 19:10:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-bbcode/ChangeLog,v 1.2 2007/12/06 01:06:01 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org> pecl-bbcode-0.10.4.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  pecl-bbcode-0.10.4.ebuild:
+  Fix license
 
 *pecl-bbcode-0.10.4 (15 Nov 2007)
 

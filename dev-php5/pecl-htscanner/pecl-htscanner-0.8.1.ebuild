@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/pecl-htscanner-0.8.1.ebuild,v 1.2 2007/11/30 00:30:20 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/pecl-htscanner-0.8.1.ebuild,v 1.3 2007/12/06 01:08:00 jokey Exp $
 
 PHP_EXT_NAME="htscanner"
 PHP_EXT_INI="yes"
@@ -13,7 +13,7 @@ inherit php-ext-pecl-r1 eutils depend.php php-ext-base-r1
 KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Enables .htaccess options for php-scripts running as cgi."
-LICENSE="PHP"
+LICENSE="PHP-3"
 SLOT="0"
 IUSE=""
 

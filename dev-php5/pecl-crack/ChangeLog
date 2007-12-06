@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-crack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-crack/ChangeLog,v 1.17 2007/08/20 20:43:16 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-crack/ChangeLog,v 1.18 2007/12/06 01:06:34 jokey Exp $
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org> pecl-crack-0.4.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org> pecl-crack-0.4.ebuild:
+  Fix LICENSE
 
   20 Aug 2007; Markus Ullmann <jokey@gentoo.org> pecl-crack-0.4.ebuild:
   Stable on x86 wrt bug #187234
