@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/irtrans-irserver-5.9.01.ebuild,v 1.1 2007/08/16 14:07:42 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/irtrans-irserver-5.9.07.ebuild,v 1.1 2007/12/06 19:09:30 hd_brummy Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,10 +8,9 @@ RESTRICT="strip"
 
 DESCRIPTION="IRTrans Server"
 HOMEPAGE="http://www.irtrans.de"
-SRC_URI="http://ftp.mars.arge.at/irtrans/irserver-src-${PV}.tar.gz
-		http://ftp.mars.arge.at/irtrans/irserver-${PV}.tar.gz"
+SRC_URI="http://ftp.mars.arge.at/irtrans/irserver-src-${PV}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
@@ -19,14 +18,6 @@ IUSE=""
 DEPEND=""
 
 RDEPEND="virtual/libc"
-
-src_unpack() {
-
-	unpack ${A}
-	cd ${WORKDIR}
-
-	epatch ${FILESDIR}/${P}-missing-include.diff
-}
 
 src_compile() {
 
@@ -39,12 +30,12 @@ src_compile() {
 	fi
 
 	einfo "CFLAGS=\"${CFLAGS}\""
-	emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" ${irbuild} || die "emake irserver failed"
+	emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" "${irbuild}" || die "emake irserver failed"
 }
 
 src_install() {
 
-	newbin ${WORKDIR}/${irbuild} irserver
+	newbin "${WORKDIR}/${irbuild}" irserver
 
 	keepdir /etc/irserver/remotes
 

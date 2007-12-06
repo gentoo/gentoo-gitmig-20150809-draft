@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/irtrans-irserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/ChangeLog,v 1.2 2007/08/26 11:13:22 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/ChangeLog,v 1.3 2007/12/06 19:09:30 hd_brummy Exp $
+
+*irtrans-irserver-5.9.07 (06 Dec 2007)
+
+  06 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/irtrans-server.initd, -irtrans-irserver-5.9.01.ebuild,
+  irtrans-irserver-5.9.04.ebuild, +irtrans-irserver-5.9.07.ebuild:
+  version bump, updated initscrit with provide lirc, tanks to M.Fetka on
+  #200224 ; clean up; fix quoting warnings to make repoman happy
 
 *irtrans-irserver-5.9.04 (26 Aug 2007)
 

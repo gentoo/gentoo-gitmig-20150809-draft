@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/irtrans-irserver-5.9.04.ebuild,v 1.1 2007/08/26 11:13:22 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/irtrans-irserver-5.9.04.ebuild,v 1.2 2007/12/06 19:09:30 hd_brummy Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -30,12 +30,12 @@ src_compile() {
 	fi
 
 	einfo "CFLAGS=\"${CFLAGS}\""
-	emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" ${irbuild} || die "emake irserver failed"
+	emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" "${irbuild}" || die "emake irserver failed"
 }
 
 src_install() {
 
-	newbin ${WORKDIR}/${irbuild} irserver
+	newbin "${WORKDIR}/${irbuild}" irserver
 
 	keepdir /etc/irserver/remotes
 
