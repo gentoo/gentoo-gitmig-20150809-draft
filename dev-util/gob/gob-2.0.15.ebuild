@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.15.ebuild,v 1.1 2007/12/06 21:17:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.15.ebuild,v 1.2 2007/12/06 22:08:23 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
-
