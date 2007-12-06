@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.19 2007/05/28 23:44:11 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.20 2007/12/06 14:47:09 matsuu Exp $
+
+*tix-8.4.2-r1 (06 Dec 2007)
+
+  06 Dec 2007; <matsuu@gentoo.org> +tix-8.4.2-r1.ebuild:
+  Added symlink for netgen, bug #201138.
 
   28 May 2007; MATSUU Takuto <matsuu@gentoo.org> tix-8.4.2.ebuild:
   Fixed bug #168897 (again).
