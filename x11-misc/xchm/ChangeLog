@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xchm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.54 2007/07/30 02:31:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.55 2007/12/07 02:59:47 dirtyepic Exp $
+
+  07 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> files/xchm-1.13.desktop,
+  xchm-1.13.ebuild:
+  Fix .desktop file to pass validation.  Clean up ebuild & fix quoting.
 
   30 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> -xchm-1.9.ebuild,
   xchm-1.13.ebuild:

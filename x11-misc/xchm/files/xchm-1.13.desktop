@@ -1,6 +1,5 @@
 [Desktop Entry]
-Encoding=UTF-8
-Version=0.9.2
+Version=1.0
 Name=xCHM
 Comment=Utility for viewing Microsoft .chm files
 Exec=xchm %f
