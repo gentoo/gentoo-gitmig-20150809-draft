@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.40 2007/11/22 22:06:48 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.41 2007/12/07 04:28:15 compnerd Exp $
+
+*transmission-0.94 (07 Dec 2007)
+
+  07 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +transmission-0.94.ebuild:
+  Version bump from upstream (bug #200728)
 
 *transmission-0.93 (22 Nov 2007)
 
