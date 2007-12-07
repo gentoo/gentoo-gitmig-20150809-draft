@@ -1,6 +1,11 @@
 # ChangeLog for games-util/mattricks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/mattricks/ChangeLog,v 1.8 2007/02/24 19:24:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/mattricks/ChangeLog,v 1.9 2007/12/07 00:04:32 dirtyepic Exp $
+
+  07 Dec 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/mattricks-0.7-wxversion.patch, mattricks-0.7.ebuild:
+  Use wxversion to force wxpython-2.6 when multiple slots are available. Bug
+  201317.
 
   24 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> mattricks-0.7.ebuild:
   Works with wxpython-2.6 as well
