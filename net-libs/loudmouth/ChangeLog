@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.50 2007/11/04 23:47:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.51 2007/12/07 18:20:46 jer Exp $
+
+  07 Dec 2007; Jeroen Roovers <jer@gentoo.org> loudmouth-1.2.3.ebuild:
+  Marked ~hppa (bug #201532).
 
   04 Nov 2007; Gilles Dartiguelongue <eva@gentoo.org>
   loudmouth-1.2.3.ebuild:
