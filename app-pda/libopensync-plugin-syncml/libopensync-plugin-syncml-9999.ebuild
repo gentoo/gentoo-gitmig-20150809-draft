@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/libopensync-plugin-syncml-9999.ebuild,v 1.1 2007/11/26 20:25:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/libopensync-plugin-syncml-9999.ebuild,v 1.2 2007/12/07 16:34:57 peper Exp $
+
+EAPI="1"
 
 inherit eutils cmake-utils subversion
 
@@ -13,7 +15,7 @@ ESVN_REPO_URI="http://svn.opensync.org/plugins/syncml"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
-IUSE="http obex"
+IUSE="http +obex"
 
 DEPEND="=app-pda/libopensync-${PV}*
 	>=app-pda/libsyncml-0.4.3"
