@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.42 2007/12/06 18:39:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.43 2007/12/07 01:06:44 opfer Exp $
+
+  07 Dec 2007; Christian Faulhammer <opfer@gentoo.org> netcdf-3.6.2.ebuild:
+  stable x86, bug 201477
 
   06 Dec 2007; Samuli Suominen <drac@gentoo.org> netcdf-3.6.2.ebuild:
   amd64 stable wrt #201477
