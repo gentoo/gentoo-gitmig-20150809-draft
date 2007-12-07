@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.36 2007/11/23 09:35:07 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.37 2007/12/07 11:29:28 bicatali Exp $
+
+*matplotlib-0.91.1 (07 Dec 2007)
+
+  07 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +matplotlib-0.91.1.ebuild:
+  Version bump, also adding a bunch of new use flags, restructuring the ebuild
+  a bit. Thanks for Darren Dale from upstream for his help. Closing bug
+  #198360. Dropped ppc, waiting to keyword pyfltk.
 
   23 Nov 2007; Ali Polatel <hawking@gentoo.org> matplotlib-0.90.1.ebuild:
   switched dvi to latex, added virtual/latex-base and virtual/ghostscript to
