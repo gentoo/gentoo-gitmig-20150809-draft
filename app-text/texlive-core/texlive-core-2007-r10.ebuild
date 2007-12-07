@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r10.ebuild,v 1.2 2007/12/07 15:10:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r10.ebuild,v 1.3 2007/12/07 17:04:33 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
 PATCHLEVEL="2"
+TEXMFD_VERSION="1"
 
 DESCRIPTION="A complete TeX distribution"
 HOMEPAGE="http://tug.org/texlive/"
@@ -32,7 +33,8 @@ done
 SRC_URI="${SRC_URI} mirror://gentoo/${P}-updated-config.ps.bz2"
 
 # Fetch patches
-SRC_URI="${SRC_URI} mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
+SRC_URI="${SRC_URI} mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2
+	mirror://gentoo/${P}-texmf.d-${TEXMFD_VERSION}.tar.bz2"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"
 IUSE="X doc"
@@ -217,7 +219,7 @@ src_install() {
 	rm -f "${D}${TEXMF_PATH}/web2c/texmf.cnf"
 
 	insinto /etc/texmf/texmf.d
-	doins "${FILESDIR}/${PV}/texmf.d/"{00header,05searchpaths,10standardpaths,15options,20sizes,25misc}.cnf
+	doins "${WORKDIR}/texmf.d/"*.cnf
 
 	mv "${D}${TEXMF_PATH}/web2c/updmap.cfg"	"${D}/etc/texmf/updmap.d/00updmap.cfg" || die "moving updmap.cfg failed"
 
