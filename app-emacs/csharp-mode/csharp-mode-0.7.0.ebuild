@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/csharp-mode-0.7.0.ebuild,v 1.2 2007/12/04 12:29:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/csharp-mode-0.7.0.ebuild,v 1.3 2007/12/07 14:04:40 ulm Exp $
 
 inherit elisp versionator
 
@@ -22,8 +22,6 @@ SIMPLE_ELISP=t
 SITEFILE=80${PN}-gentoo.el
 
 pkg_setup () {
-	elisp_pkg_setup
-
 	local HAVE_CCMODE
 	HAVE_CCMODE=$(emacs -batch -q \
 		--eval "(and (require 'cc-mode nil t) (princ c-version))")
