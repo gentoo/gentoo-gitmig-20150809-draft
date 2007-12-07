@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20071115-r1.ebuild,v 1.1 2007/12/06 08:02:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20071115-r1.ebuild,v 1.2 2007/12/07 13:32:40 aballier Exp $
 
 inherit eutils
 
@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="virtual/tex-base
-	virtual/ghostscript
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
 	app-text/libpaper
