@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r10.ebuild,v 1.3 2007/12/07 17:04:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r10.ebuild,v 1.4 2007/12/07 17:34:12 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -12,9 +12,9 @@ HOMEPAGE="http://tug.org/texlive/"
 SLOT="0"
 LICENSE="GPL-2 LPPL-1.3c"
 
-TEXLIVE_BASICBIN_CONTENTS="bin-bibtex bin-dialog bin-dvipsk bin-etex bin-getnonfreefonts bin-gsftopk bin-kpathsea bin-makeindex bin-metafont bin-mfware bin-pdftex bin-tetex bin-tex bin-texconfig lib-regex lib-zlib"
+TEXLIVE_BASICBIN_CONTENTS="bin-bibtex bin-dvipsk bin-etex bin-getnonfreefonts bin-gsftopk bin-kpathsea bin-makeindex bin-metafont bin-mfware bin-pdftex bin-tetex bin-tex bin-texconfig lib-regex lib-zlib"
 
-TEXLIVE_BINEXTRA_CONTENTS="bin-bibtex8 bin-chktex bin-ctie bin-cweb bin-detex bin-dtl bin-dvi2tty bin-dvicopy bin-dvidvi bin-dviljk bin-lacheck bin-patgen bin-pdftools bin-seetexk bin-texdoc bin-texware bin-thumbpdf bin-tie bin-tpic2pdftex bin-vpe bin-web bin-xpdf cweb mkind-english"
+TEXLIVE_BINEXTRA_CONTENTS="bin-bibtex8 bin-chktex bin-ctie bin-cweb bin-dtl bin-dvi2tty bin-dvicopy bin-dvidvi bin-dviljk bin-lacheck bin-patgen bin-pdftools bin-seetexk bin-texdoc bin-texware bin-thumbpdf bin-tie bin-tpic2pdftex bin-vpe bin-web bin-xpdf cweb mkind-english"
 
 TEXLIVE_FONTBIN_CONTENTS="bin-afm2pl bin-fontware bin-ps2pkm fontinst mft"
 
