@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.7 2007/09/11 11:29:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.8 2007/12/07 15:06:30 drac Exp $
 
 inherit cvs eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://linuxdcpp.berlios.de"
 SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE="debug"
 
 ECVS_SERVER="cvs.linuxdcpp.berlios.de:/cvsroot/linuxdcpp"

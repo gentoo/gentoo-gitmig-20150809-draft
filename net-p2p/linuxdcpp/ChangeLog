@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/linuxdcpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.15 2007/10/02 10:49:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.16 2007/12/07 15:06:30 drac Exp $
+
+  07 Dec 2007; Samuli Suominen <drac@gentoo.org> linuxdcpp-9999.ebuild:
+  Reset keywords for CVS ebuild.
 
 *linuxdcpp-1.0.0 (02 Oct 2007)
 
