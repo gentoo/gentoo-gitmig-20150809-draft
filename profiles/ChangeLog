@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.881 2007/12/06 21:51:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.882 2007/12/07 18:08:25 betelgeuse Exp $
+
+  07 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
+  Add threadsafe use flag for dev-db/sqlite
 
   06 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
   add keyring for gossip
