@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.40 2007/11/21 01:31:17 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.41 2007/12/07 11:14:17 bicatali Exp $
+
+  07 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org> numpy-1.0.4.ebuild:
+  Fixed for LDFLAGS, now adding a -shared
 
   21 Nov 2007; Joe Peterson <lavajoe@gentoo.org>
   +files/numpy-1.0.4-freebsd.patch, numpy-1.0.4.ebuild:

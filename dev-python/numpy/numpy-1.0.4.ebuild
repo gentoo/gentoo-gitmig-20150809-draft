@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.4.ebuild,v 1.2 2007/11/21 01:31:17 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.4.ebuild,v 1.3 2007/12/07 11:14:17 bicatali Exp $
 
 NEED_PYTHON=2.3
 
-inherit distutils eutils
+inherit distutils eutils flag-o-matic
 
 MY_P=${P/_beta/b}
 MY_P=${MY_P/_}
@@ -26,12 +26,8 @@ LICENSE="BSD"
 S="${WORKDIR}/${MY_P}"
 
 # whatever LDFLAGS set will break linking
-# as reported in many tickets in http://projects.scipy.org/scipy/numpy
-LDFLAGS_sav="${LDFLAGS}"
-unset LDFLAGS
-pkg_setup() {
-	[[ -n "${LDFLAGS_sav}" ]] && einfo "Ignoring LDFLAGS=${LDFLAGS_sav}"
-}
+# see progress in http://projects.scipy.org/scipy/numpy/ticket/573
+[ -n "${LDFLAGS}" ] && append-ldflags -shared
 
 # ex usage: pkgconf_cfg --libs-only-l cblas: ['cblas','atlas']
 pkgconf_cfg() {
