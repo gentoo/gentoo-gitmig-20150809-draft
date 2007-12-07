@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtelepathy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.17 2007/12/04 14:26:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.18 2007/12/07 15:45:07 peper Exp $
+
+  07 Dec 2007; Piotr Jaroszyński <peper@gentoo.org>
+  libtelepathy-0.3.1.ebuild:
+  Force at least -O1. bug #201556.
 
 *libtelepathy-0.3.1 (04 Dec 2007)
 
