@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.7 2007/06/22 07:01:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.8 2007/12/07 08:58:57 dberkholz Exp $
+
+*cns-1.2-r1 (07 Dec 2007)
+
+  07 Dec 2007; Donnie Berkholz <dberkholz@gentoo.org>; +cns-1.2-r1.ebuild:
+  Fix non-g77 build; make cns_web work; install the environment script to
+  /etc/profile.d/ so people don't need to manually source it; also install the
+  (hidden) bash/sh-compatible script; don't pass LDFLAGS because gfortran
+  doesn't deal with them properly.
 
 *cns-1.2 (22 Jun 2007)
 
