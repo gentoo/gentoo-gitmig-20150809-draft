@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/systempreferences
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/systempreferences/ChangeLog,v 1.5 2007/11/16 15:33:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/systempreferences/ChangeLog,v 1.6 2007/12/07 18:36:53 voyageur Exp $
+
+  07 Dec 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -systempreferences-1.0.1.ebuild:
+  Remove old version
 
   16 Nov 2007; Steve Dibb <beandog@gentoo.org>
   systempreferences-1.0.1_p24791.ebuild:
