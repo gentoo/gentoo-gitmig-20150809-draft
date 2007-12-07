@@ -1,6 +1,11 @@
 # ChangeLog for games-board/crafty
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.21 2007/03/12 13:44:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.22 2007/12/07 22:33:56 tupone Exp $
+
+*crafty-21.6 (07 Dec 2007)
+
+  07 Dec 2007; Tupone Alfredo <tupone@gentoo.org> +crafty-21.6.ebuild:
+  Version bump. Bug #197935 by Christos Gitsis
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> crafty-20.13.ebuild,
   crafty-20.14.ebuild:

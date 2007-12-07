@@ -1,0 +1,81 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-21.6.ebuild,v 1.1 2007/12/07 22:33:56 tupone Exp $
+
+inherit flag-o-matic games
+
+DESCRIPTION="Bob Hyatt's strong chess engine"
+HOMEPAGE="ftp://ftp.cis.uab.edu/pub/hyatt/"
+SRC_URI="ftp://ftp.cis.uab.edu/pub/hyatt/source/${P}.zip"
+
+LICENSE="crafty"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="icc no-opts"
+RESTRICT="test"
+
+RDEPEND=""
+DEPEND="${RDEPEND}
+	app-arch/unzip
+	icc? ( >=dev-lang/icc-5.0 )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e '/-o crafty/s/CC/CXX/' \
+		-e 's:CXFLAGS:CXXFLAGS:g' \
+		Makefile \
+		|| die "sed failed"
+	sed -i \
+		-e "s:\"crafty.hlp\":\"${GAMES_DATADIR}/${PN}/crafty.hlp\":" option.c \
+		|| die "sed failed"
+}
+
+src_compile() {
+	local makeopts="target=LINUX"
+
+	if ! use no-opts ; then
+		if use icc ; then
+			makeopts="${makeopts} CC=icc CXX=gcc asm=X86.o"
+			append-flags -D_REENTRANT -tpp6 \
+				-DCOMPACT_ATTACKS -DUSE_ATTACK_FUNCTIONS \
+				-DUSE_ASSEMBLY_A -DUSE_ASSEMBLY_B -DFAST \
+				-DSMP -DCPUS=4 -DCLONE -DDGT
+			append-flags -O2 -fno-alias -fforce-mem \
+				-fomit-frame-pointer -fno-gcse -mpreferred-stack-boundary=2
+		else
+			if [[ "${CHOST}" == "i686-pc-linux-gnu" ]] \
+			|| [[ "${CHOST}" == "i586-pc-linux-gnu" ]] ; then
+				append-flags -DCOMPACT_ATTACKS -DUSE_ATTACK_FUNCTIONS \
+					-DUSE_ASSEMBLY_A -DUSE_ASSEMBLY_B \
+					-DFAST -DSMP -DCPUS=4 -DCLONE -DDGT
+				append-flags -fno-gcse \
+					-fomit-frame-pointer -mpreferred-stack-boundary=2
+				makeopts="${makeopts} CC=gcc CXX=g++ asm=X86.o"
+			else
+				: # everything else :)
+			fi
+		fi
+	fi
+	append-flags -DPOSIX
+	emake ${makeopts} crafty-make LDFLAGS="${LDFLAGS} -lpthread" || die "build failed"
+}
+
+src_install() {
+	dogamesbin crafty || die "dogamesbin failed"
+	insinto "${GAMES_DATADIR}/${PN}"
+	doins crafty.hlp || die "doins failed"
+	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	elog
+	elog "Note: No books or tablebases have been installed. If you want them, just"
+	elog "      download them from ${HOMEPAGE}."
+	elog "      You will find documentation there too. In most cases you take now "
+	elog "      your xboard compatible application, (xboard, eboard, knights) and "
+	elog "      just play chess against computer opponent. Have fun."
+	elog
+}
