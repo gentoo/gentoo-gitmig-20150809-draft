@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/pypolicyd-spf-0.5.2.ebuild,v 1.1 2007/10/28 09:43:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/pypolicyd-spf-0.5.2.ebuild,v 1.2 2007/12/07 07:28:57 opfer Exp $
 
 inherit distutils eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.openspf.org/Software"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=">=dev-python/pyspf-2.0.3"
 
