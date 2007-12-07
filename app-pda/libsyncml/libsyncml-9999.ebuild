@@ -1,8 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-9999.ebuild,v 1.1 2007/11/26 20:10:00 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-9999.ebuild,v 1.2 2007/12/07 16:25:18 peper Exp $
 
-inherit eutils subversion autotools
+EAPI="1"
+
+inherit eutils subversion cmake-utils
 
 DESCRIPTION="Implementation of the SyncML protocol"
 HOMEPAGE="http://libsyncml.opensync.org/"
@@ -13,7 +15,7 @@ ESVN_REPO_URI="http://svn.opensync.org/libsyncml/trunk"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
-IUSE="bluetooth debug doc http obex"
+IUSE="bluetooth +debug http +obex"
 
 RDEPEND=">=dev-libs/glib-2.0
 	>=dev-libs/libwbxml-0.9.2
@@ -53,26 +55,11 @@ pkg_setup() {
 }
 
 src_compile() {
-	eautoreconf
+	local mycmakeargs="
+		$(cmake-utils_use_enable http HTTP)
+		$(cmake-utils_use_enable obex OBEX)
+		$(cmake-utils_use_enable bluetooth BLUETOOTH)
+		$(cmake-utils_use_enable debug TRACE)"
 
-	econf \
-		$(use_enable bluetooth) \
-		$(use_enable obex) \
-		$(use_enable http) \
-		$(use_enable debug) \
-		$(use_enable debug tracing) \
-		--disable-unit-tests \
-		|| die "econf failed"
-		#$(use_enable test unit-tests) \
-
-	emake || die "emake failed"
-
-	use doc && doxygen Doxyfile
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README
-
-	use doc && dohtml docs/html/*
+	cmake-utils_src_compile
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libsyncml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.6 2007/11/26 20:10:00 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.7 2007/12/07 16:25:18 peper Exp $
+
+  07 Dec 2007; Piotr Jaroszyński <peper@gentoo.org> libsyncml-9999.ebuild:
+  Update the scm ebuild wrt to the upstream switch to cmake. Make obex and
+  debug default.
 
 *libsyncml-9999 (26 Nov 2007)
 
