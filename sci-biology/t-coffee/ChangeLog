@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.23 2007/07/02 15:24:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.24 2007/12/07 05:53:05 je_fro Exp $
+
+*t-coffee-5.31 (07 Dec 2007)
+
+  07 Dec 2007; Jeff Gardner <je_fro@gentoo.org> +t-coffee-5.31.ebuild:
+  Latest version - thanks to Martin Mokrejs on bug #201495
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> t-coffee-4.96.ebuild,
   t-coffee-5.05.ebuild:
