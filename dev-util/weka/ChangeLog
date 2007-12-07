@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/weka
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.22 2007/12/06 15:55:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.23 2007/12/07 18:41:37 betelgeuse Exp $
+
+  07 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> -weka-3.4.6.ebuild:
+  Delete generation 1 ebuild.
 
   06 Dec 2007; Samuli Suominen <drac@gentoo.org> weka-3.4.10.ebuild:
   amd64 stable wrt #201304
