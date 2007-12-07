@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libferrisstreams
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/ChangeLog,v 1.16 2007/12/06 23:16:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/ChangeLog,v 1.17 2007/12/07 21:53:44 vapier Exp $
+
+  07 Dec 2007; Mike Frysinger <vapier@gentoo.org>
+  libferrisstreams-0.5.0.ebuild:
+  We need dejagnu when running tests as pointed out by Samuli Suominen #197673.
 
   06 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   libferrisstreams-0.5.0.ebuild:
