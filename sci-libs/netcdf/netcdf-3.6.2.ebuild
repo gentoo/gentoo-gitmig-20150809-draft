@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.2.ebuild,v 1.8 2007/12/07 01:06:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.2.ebuild,v 1.9 2007/12/07 14:14:20 corsair Exp $
 
 inherit fortran eutils toolchain-funcs flag-o-matic autotools
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://my.unidata.ucar.edu/content/software/netcdf/index.html"
 LICENSE="UCAR-Unidata"
 SLOT="0"
 IUSE="fortran debug doc"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc x86"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
