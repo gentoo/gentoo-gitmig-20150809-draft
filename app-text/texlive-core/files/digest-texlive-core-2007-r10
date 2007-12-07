@@ -4,9 +4,9 @@ SHA256 ff12f1f6a68e45ad8d8f960f5fe76aae159d64074507a4a650973e1e865c8acd texlive-
 MD5 d539b5a6b9f96cc2616f09f4543394c8 texlive-core-2007.tar.bz2 31078286
 RMD160 496cb3fa3c5cd9b2ea5da3b0bced67a2b5afe7b9 texlive-core-2007.tar.bz2 31078286
 SHA256 96c12147ea9717539553eb6b3be52c2df6163ca617dccc71282ccd39c2e5773b texlive-core-2007.tar.bz2 31078286
-MD5 a4fd38982d0b991cb53c99cba91c7ba4 texlive-core-patches-1.tar.bz2 17159
-RMD160 38f401727619714fbbf310d822702ce9f0c4afed texlive-core-patches-1.tar.bz2 17159
-SHA256 65e37bfa985f5faa3b8ef86fea29e6e1326bff53c795dd6d423df9ad6a790f4a texlive-core-patches-1.tar.bz2 17159
+MD5 c5a496d27168aba031b72b2d2578106b texlive-core-patches-2.tar.bz2 17459
+RMD160 9d167a7651ed4d778b96de3f6b5464202bf72a2d texlive-core-patches-2.tar.bz2 17459
+SHA256 21ff74c02fa15bd817f2724a60c6bc469cbf4e161c7f0c31b0165e4402620851 texlive-core-patches-2.tar.bz2 17459
 MD5 04850af5320c53804353a072f6b0ff30 texlive-module-bin-afm2pl-2007.zip 25453
 RMD160 af1597b5ed9ed7bc9766139e3434f5e42b483087 texlive-module-bin-afm2pl-2007.zip 25453
 SHA256 9efc5a4306a43bf36d9c84ef05d213fcf1d62354b8403eddaf3e4e699a297d31 texlive-module-bin-afm2pl-2007.zip 25453
