@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.5.4.ebuild,v 1.1 2007/12/05 18:33:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.5.4.ebuild,v 1.2 2007/12/07 22:39:16 cardoe Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -32,7 +32,6 @@ RDEPEND="media-libs/fontconfig
 
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19
-		sys-apps/findutils
 		test? (
 				virtual/ghostscript
 				>=app-text/poppler-bindings-0.4.1
