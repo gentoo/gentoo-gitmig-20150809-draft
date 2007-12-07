@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.4.ebuild,v 1.2 2007/05/29 11:51:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.4.ebuild,v 1.3 2007/12/07 22:48:58 maekke Exp $
 
 inherit eutils multilib perl-app
 
@@ -11,7 +11,7 @@ DESCRIPTION="A collection of tools and libraries for many image formats"
 HOMEPAGE="http://www.imagemagick.org/"
 SRC_URI="ftp://ftp.imagemagick.org/pub/${MY_PN}/${MY_P}-4.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="imagemagick"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="bzip2 doc fpx graphviz gs jbig jpeg jpeg2k lcms mpeg nocxx perl png tiff truetype X wmf xml zlib"
