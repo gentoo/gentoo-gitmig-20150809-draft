@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.13.1.ebuild,v 1.3 2007/12/07 00:34:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.13.1.ebuild,v 1.4 2007/12/07 01:55:55 mr_bones_ Exp $
 
 inherit eutils pam versionator
 
@@ -14,10 +14,10 @@ SNAP_URIBASE="mirror://gnu/non-gnu/cvs/source/nightly-snapshots/feature/"
 SRC_URI="
 	${FEAT_URIBASE}/${P}.tar.bz2
 	${SNAP_URIBASE}/${P}.tar.bz2
-	doc? ( 
+	doc? (
 		${DOC_URIBASE}/cederqvist-${DOC_PV}.html.tar.bz2
 		${DOC_URIBASE}/cederqvist-${DOC_PV}.pdf
-		${DOC_URIBASE}/cederqvist-${DOC_PV}.ps 
+		${DOC_URIBASE}/cederqvist-${DOC_PV}.ps
 		)"
 
 LICENSE="GPL-2 LGPL-2"
@@ -40,7 +40,7 @@ src_unpack() {
 	# Applied by upstream:
 	#EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-1.12.13-openat.patch
 	#EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-1.12.13-zlib.patch
-	
+
 	cd "${S}"
 	# this testcase was not updated
 	#sed -i.orig -e '/unrecognized keyword.*BogusOption/s,98,73,g' \
@@ -125,7 +125,7 @@ src_test() {
 	else
 		einfo "Only testing local mode. Please see ebuild for other modes."
 	fi
-	
+
 	# we only do the local tests by default
 	_run_one_test local
 
