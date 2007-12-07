@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.3.ebuild,v 1.10 2007/11/26 13:13:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.3.ebuild,v 1.11 2007/12/07 18:11:15 betelgeuse Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -66,9 +66,10 @@ function inotify_enabled() {
 pkg_setup() {
 	linux-info_pkg_setup
 
-	if built_with_use 'dev-db/sqlite' 'nothreadsafe' ; then
+	if ! built_with_use --missing true 'dev-db/sqlite' 'threadsafe' \
+		|| built_with_use --missing false 'dev-db/sqlite' 'nothreadsafe'; then
 		eerror "You must build sqlite with threading support"
-		die "dev-db/sqlite built with nothreadsafe"
+		die "dev-db/sqlite built without thread safety"
 	fi
 
 	if ! built_with_use 'app-text/poppler-bindings' 'gtk' ; then
