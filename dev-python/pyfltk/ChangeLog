@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pyfltk
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.1 2007/12/07 11:24:11 bicatali Exp $
+
+*pyfltk-1.1.2 (07 Dec 2007)
+
+  07 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +pyfltk-1.1.2.ebuild:
+  Initial import. Closing bug #144281, thanks to Tuna.
+
