@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.67 2007/12/04 19:11:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.68 2007/12/07 14:07:27 coldwind Exp $
+
+  07 Dec 2007; Santiago M. Mola <coldwind@gentoo.org>
+  files/bittornado.desktop:
+  .desktop file fixed.
 
 *bittornado-0.3.18-r1 (04 Dec 2007)
 
