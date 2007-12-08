@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.883 2007/12/08 11:34:04 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.884 2007/12/08 15:19:07 dirtyepic Exp $
+
+  08 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Remove punted t1lib from mask.
 
   08 Dec 2007; Wolfram Schlich <wschlich@gentoo.org> use.local.desc:
   add managesieve USE flag for net-mail/dovecot
