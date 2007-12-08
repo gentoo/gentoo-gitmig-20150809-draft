@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.275 2007/12/08 16:49:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.276 2007/12/08 17:09:15 welp Exp $
+
+  08 Dec 2007; <welp@gentoo.org> cups-1.2.12-r3.ebuild:
+  Stable on amd64 wrt bug 199195
 
   08 Dec 2007; Jeroen Roovers <jer@gentoo.org> cups-1.2.12-r3.ebuild:
   Stable for HPPA (bug #199195).
