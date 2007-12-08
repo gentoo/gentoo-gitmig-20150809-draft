@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/opendbx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.12 2007/12/05 22:08:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.13 2007/12/08 20:36:01 swegener Exp $
+
+  08 Dec 2007; Sven Wegener <swegener@gentoo.org> opendbx-1.2.3-r1.ebuild,
+  opendbx-1.3.4.ebuild:
+  Do not die with no backend selected.
 
   05 Dec 2007; Sven Wegener <swegener@gentoo.org> opendbx-1.2.3-r1.ebuild,
   opendbx-1.3.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.2.3-r1.ebuild,v 1.3 2007/12/05 22:08:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.2.3-r1.ebuild,v 1.4 2007/12/08 20:36:01 swegener Exp $
 
 inherit flag-o-matic
 
@@ -24,7 +24,8 @@ RDEPEND="${DEPEND}"
 pkg_setup() {
 	if ! ( use !bindist && use firebird || use mysql || use oracle || use postgres || use sqlite || use sqlite3 )
 	then
-		die "Need at least one of firebird, mysql, oracle, postgres, sqlite and sqlite3 activated!"
+		ewarn "You should enable at least one of the following USE flags:"
+		ewarn "firebird, mysql, oracle, postgres, sqlite or sqlite3"
 	fi
 
 	if use oracle && [[ ! -d ${ORACLE_HOME} ]]
