@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.24 2007/12/07 05:53:05 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.25 2007/12/08 18:11:52 je_fro Exp $
+
+  08 Dec 2007; <jeff@gentoo.org> t-coffee-5.31.ebuild:
+  Adding ~amd64
 
 *t-coffee-5.31 (07 Dec 2007)
 
