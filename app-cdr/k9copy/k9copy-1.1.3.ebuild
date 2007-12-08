@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.1.3.ebuild,v 1.1 2007/08/22 20:27:40 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.1.3.ebuild,v 1.2 2007/12/08 10:58:28 mattepiu Exp $
 
 inherit kde
 
@@ -30,7 +30,7 @@ src_unpack() {
 	kde_src_unpack
 
 	# Fix the desktop file for compliance with the spec.
-	sed -i -e '/MimeTypes/d' ${S}/src/${PN}.desktop
+	sed -i -e '/MimeTypes/d' "${S}/src/${PN}.desktop"
 }
 
 src_install() {
