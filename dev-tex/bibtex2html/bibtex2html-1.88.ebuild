@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/bibtex2html-1.88.ebuild,v 1.1 2007/12/08 10:06:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/bibtex2html-1.88.ebuild,v 1.2 2007/12/08 10:11:00 aballier Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ SLOT="0"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
+RESTRICT="test"
 
 RDEPEND=">=dev-lang/ocaml-3.09"
 # With use doc we need a latex compile to generate manual.ps
