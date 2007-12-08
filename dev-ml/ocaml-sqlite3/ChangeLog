@@ -1,6 +1,13 @@
 # ChangeLog for dev-ml/ocaml-sqlite3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ChangeLog,v 1.1 2007/08/31 07:23:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ChangeLog,v 1.2 2007/12/08 00:07:11 aballier Exp $
+
+*ocaml-sqlite3-0.23.0 (08 Dec 2007)
+
+  08 Dec 2007; Alexis Ballier <aballier@gentoo.org>
+  +ocaml-sqlite3-0.23.0.ebuild:
+  version bump, thanks to Arfrever Frehtes Taifersar Arahesis
+  <Arfrever.FTA@GMail.Com> for reporting, bug #201634
 
 *ocaml-sqlite3-0.22.0 (31 Aug 2007)
 
