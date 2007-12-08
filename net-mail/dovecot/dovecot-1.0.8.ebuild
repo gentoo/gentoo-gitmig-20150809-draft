@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.8.ebuild,v 1.1 2007/12/08 11:35:02 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.8.ebuild,v 1.2 2007/12/08 23:02:46 mr_bones_ Exp $
 
 inherit autotools eutils ssl-cert
 
@@ -46,7 +46,7 @@ src_unpack() {
 
 pkg_setup() {
 	if ! use sieve && use managesieve; then
-		eerror "managesieve USE flag selected but sieve USE flag unselected" 
+		eerror "managesieve USE flag selected but sieve USE flag unselected"
 		die "USE flag problem"
 	fi
 	# Add user and group for login process (same as for fedora/redhat)
