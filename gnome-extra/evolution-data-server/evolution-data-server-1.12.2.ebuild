@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.2.ebuild,v 1.1 2007/11/26 15:33:47 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.2.ebuild,v 1.2 2007/12/08 17:46:25 eva Exp $
 
 inherit db-use eutils flag-o-matic gnome2 autotools
 
@@ -79,6 +79,9 @@ src_unpack() {
 
 	# Don't assume that endian.h and byteswap.h exist on all non sun os's
 	epatch "${FILESDIR}"/${PN}-1.12.1-icaltz-util.patch
+
+	# Fix selection of mbox for local delivery (bug #201504)
+	epatch "${FILESDIR}"/${PN}-1.12.2-local-delivery.patch
 
 #-------------Upstream GNOME look here -----------------#
 

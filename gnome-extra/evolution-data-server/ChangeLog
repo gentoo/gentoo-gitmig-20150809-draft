@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.161 2007/11/29 05:19:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.162 2007/12/08 17:46:25 eva Exp $
+
+  08 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/evolution-data-server-1.12.2-local-delivery.patch,
+  evolution-data-server-1.12.2.ebuild:
+  fix selection of mbox file for local delivery, see bug #201504
 
   29 Nov 2007; Jeroen Roovers <jer@gentoo.org>
   evolution-data-server-1.12.1.ebuild:
