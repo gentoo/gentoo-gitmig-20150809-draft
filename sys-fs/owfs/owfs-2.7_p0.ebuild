@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p0.ebuild,v 1.2 2007/12/06 16:52:01 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p0.ebuild,v 1.3 2007/12/08 02:24:51 wschlich Exp $
 
 inherit eutils
 
@@ -16,14 +16,14 @@ DEPEND="fuse? ( sys-fs/fuse )
 	python? ( dev-lang/python dev-lang/swig )
 	tcl? ( dev-lang/tcl )
 	usb? ( dev-libs/libusb )"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="debug fuse ftp httpd parport perl php python server tcl usb"
 
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	if ! built_with_use dev-lang/php cli; then
+	if use php && has_version dev-lang/php && ! built_with_use dev-lang/php cli; then
 		eerror "${PN} needs the command line interface (CLI) of php"
 		eerror "Please re-emerge dev-lang/php with USE=cli"
 		die "need dev-lang/php built with cli USE flag"
