@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-libs/gsweb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/ChangeLog,v 1.9 2007/09/11 18:40:31 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/ChangeLog,v 1.10 2007/12/08 19:51:56 voyageur Exp $
+
+*gsweb-1.3.0_pre20071207 (08 Dec 2007)
+
+  08 Dec 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/2/42_mod_gsweb.conf, +files/42_mod_gsweb.conf,
+  -gsweb-1.2.0_pre20060324.ebuild, +gsweb-1.3.0_pre20071207.ebuild:
+  Version bump, ebuild heavily rewritten, ported to gnustep-2 eclass
 
   11 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
   -files/1.1.1_pre20050312-build-fixes.patch:
