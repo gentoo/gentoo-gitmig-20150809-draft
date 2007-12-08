@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audtty
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.11 2007/03/17 19:56:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.12 2007/12/08 16:39:57 chainsaw Exp $
+
+*audtty-0.1.7 (08 Dec 2007)
+
+  08 Dec 2007; Tony Vroon <chainsaw@gentoo.org> +audtty-0.1.7.ebuild:
+  Version bump, thanks to Hlevyn <hlevyn@gmail.com>. Closes bug #200354.
 
   17 Mar 2007; nixnut <nixnut@gentoo.org> audtty-0.1.5a.ebuild:
   Stable on ppc wrt bug 169823
