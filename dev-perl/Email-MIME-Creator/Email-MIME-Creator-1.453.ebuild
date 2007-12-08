@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Creator/Email-MIME-Creator-1.453.ebuild,v 1.8 2007/12/04 20:32:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Creator/Email-MIME-Creator-1.453.ebuild,v 1.9 2007/12/08 16:09:34 armin76 Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
 DEPEND=">=dev-perl/Email-Simple-Creator-1.41
 	virtual/perl-Test-Simple
