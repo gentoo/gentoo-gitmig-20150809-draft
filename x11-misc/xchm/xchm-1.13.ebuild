@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.13.ebuild,v 1.7 2007/12/07 02:59:47 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.13.ebuild,v 1.8 2007/12/08 23:51:19 dirtyepic Exp $
 
 inherit wxwidgets flag-o-matic fdo-mime gnome2-utils
 
@@ -66,7 +66,7 @@ src_install() {
 	install -m 644 "${S}"/art/xchmdoc-128.xpm \
 		"${D}"/usr/share/icons/hicolor/128x128/mimetypes/application-x-chm.xpm
 	insinto /usr/share/applications
-	newins "${FILESDIR}"/${P}.desktop ${PN}.desktop
+	doins "${FILESDIR}"/xchm.desktop
 }
 
 pkg_postinst() {
