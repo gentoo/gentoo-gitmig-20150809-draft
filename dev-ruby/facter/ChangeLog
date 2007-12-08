@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.4 2007/10/14 04:27:24 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.5 2007/12/08 00:06:08 matsuu Exp $
+
+*facter-1.3.8 (08 Dec 2007)
+
+  08 Dec 2007; MATSUU Takuto <matsuu@gentoo.org> metadata.xml,
+  +facter-1.3.8.ebuild:
+  Version bumped.
+  maintainership takeover.
 
   13 Oct 2007; Tom Gall <tgall@gentoo.org> facter-1.3.7.ebuild:
   added ~ppc64
