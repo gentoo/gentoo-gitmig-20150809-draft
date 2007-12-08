@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.884 2007/12/08 15:19:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.885 2007/12/08 16:44:53 tester Exp $
+
+  08 Dec 2007; Olivier Crête <tester@gentoo.org> package.mask:
+  Mask for removal net-im/gaim and its plugins
 
   08 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Remove punted t1lib from mask.

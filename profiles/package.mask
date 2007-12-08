@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7984 2007/12/08 15:19:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7985 2007/12/08 16:44:53 tester Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,30 @@
 ##
 ##   End example
 ##
+
+# Olivier Crete <tester@gentoo.org> (08 Dec 2007)
+# Remove gaim and its plugins (now its called pidgin)
+net-im/gaim
+app-accessibility/festival-gaim
+net-im/gaim-blogger
+net-im/gaim-bnet
+net-im/gaim-meanwhile
+net-im/gaim-snpp
+x11-plugins/autoprofile
+x11-plugins/bangexec
+x11-plugins/gaim-assistant
+x11-plugins/gaim-encryption
+x11-plugins/gaim-extprefs
+x11-plugins/gaim-galago
+x11-plugins/gaim-hotkeys
+x11-plugins/gaim-latex
+x11-plugins/gaim-otr
+x11-plugins/gaim-rhythmbox
+x11-plugins/gaim-slashexec
+x11-plugins/gaim-xfire
+x11-plugins/gaimosd
+x11-plugins/ignorance
+x11-themes/gaim-smileys
 
 # Marijn Schouten <hkBst@gentoo.org> (07 Dec 2007)
 # Guile that installs to prefix=/ for einit.
