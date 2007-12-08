@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.74 2007/10/22 10:59:18 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.75 2007/12/08 11:08:02 mattepiu Exp $
+
+*xmltv-0.5.50 (08 Dec 2007)
+
+  08 Dec 2007; Matteo Azzali <mattepiu@gentoo.org> +xmltv-0.5.50.ebuild:
+  Version Bump.
 
 *xmltv-0.5.49 (22 Oct 2007)
 
