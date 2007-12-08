@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.885 2007/12/08 16:44:53 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.886 2007/12/08 20:26:13 voyageur Exp $
+
+  08 Dec 2007; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Last rites for gnustep-base/gnustep-env, gnustep-libs/artresources
 
   08 Dec 2007; Olivier Crête <tester@gentoo.org> package.mask:
   Mask for removal net-im/gaim and its plugins
