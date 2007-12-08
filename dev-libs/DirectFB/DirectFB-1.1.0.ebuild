@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.1.0.ebuild,v 1.1 2007/12/02 22:22:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.1.0.ebuild,v 1.2 2007/12/08 18:50:44 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -48,6 +48,19 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.9.24-CFLAGS.patch
 	epatch "${FILESDIR}"/${P}-headers.patch
 	epatch "${FILESDIR}"/${P}-pkgconfig.patch
+
+	# This is only a partial fix to the X11 order issue #201626.  It's just
+	# the only part we need in order to make the issue go away.  Upstream
+	# bug tracker is currently broken, so list things to do here:
+	#  configure.in:
+	#   - only add -I/usr/X11R6/include to X11_CFLAGS as needed
+	#   - only add -L/usr/X11R6/lib to X11_LIBS as needed
+	#  systems/x11/Makefile.am:
+	#   - add $(X11_LIBS) to end of _LIBADD variables
+	sed -i \
+		-e '/X11_LIBS/s:-L/usr/X11R6/lib::' \
+		-e '/CFLAGS/s:-I/usr/X11R6/include::' \
+		configure
 }
 
 src_compile() {
