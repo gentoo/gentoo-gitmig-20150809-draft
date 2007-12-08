@@ -1,6 +1,15 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.72 2007/11/25 06:08:17 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.73 2007/12/08 07:58:04 alonbl Exp $
+
+*hibernate-script-1.97-r4 (08 Dec 2007)
+
+  08 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  -hibernate-script-1.95-r3.ebuild, -hibernate-script-1.96.ebuild,
+  -hibernate-script-1.96-r1.ebuild, -hibernate-script-1.97-r2.ebuild,
+  -hibernate-script-1.97-r3.ebuild, +hibernate-script-1.97-r4.ebuild:
+  Fix init.d script dependencies, bug#201485, thanks to David Durrleman,
+  cleanup.
 
 *hibernate-script-1.97-r3 (25 Nov 2007)
 
