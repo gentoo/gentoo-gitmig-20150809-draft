@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r5.ebuild,v 1.18 2007/01/24 14:58:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r5.ebuild,v 1.19 2007/12/08 17:15:55 ulm Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.sparc.spb.su/solaris/skey/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 		mirror://gentoo/skey-1.1.5-gentoo.diff.gz"
 
-LICENSE="BSD X11"
+LICENSE="BSD MIT RSA-MD4 RSA-MD5 BEER-WARE"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""

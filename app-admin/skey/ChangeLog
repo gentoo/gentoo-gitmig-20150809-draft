@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/skey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.47 2007/01/24 14:58:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.48 2007/12/08 17:15:55 ulm Exp $
+
+  08 Dec 2007; Ulrich Mueller <ulm@gentoo.org> skey-1.1.5-r5.ebuild,
+  skey-1.1.5-r6.ebuild:
+  Update LICENSE information, fixes bug #200319.
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> skey-1.1.5-r5.ebuild,
   skey-1.1.5-r6.ebuild:
