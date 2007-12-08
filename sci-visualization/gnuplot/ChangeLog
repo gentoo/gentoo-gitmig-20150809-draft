@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.58 2007/12/08 09:42:26 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.59 2007/12/08 11:50:31 armin76 Exp $
+
+  08 Dec 2007; Raúl Porcel <armin76@gentoo.org> gnuplot-4.2.2-r1.ebuild:
+  alpha/ia64 stable wrt #189672
 
   08 Dec 2007; Ferris McCormick <fmccor@gentoo.org> gnuplot-4.2.2-r1.ebuild:
   Sparc stable --- Bug #189672 --- good since 31.x.07
