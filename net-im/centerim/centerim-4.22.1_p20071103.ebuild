@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.1_p20071103.ebuild,v 1.1 2007/11/28 20:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.1_p20071103.ebuild,v 1.2 2007/12/08 20:51:13 swegener Exp $
 
 inherit eutils
 
@@ -78,7 +78,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-imotr-config.patch
 	epatch "${FILESDIR}"/${PN}-ack-sbl.patch
 }
 

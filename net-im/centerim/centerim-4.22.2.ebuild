@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.1_p20070625.ebuild,v 1.4 2007/11/03 09:28:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.2.ebuild,v 1.1 2007/12/08 20:51:13 swegener Exp $
 
 inherit eutils
 
 PROTOCOL_IUSE="aim gadu icq irc jabber lj msn rss yahoo"
-IUSE="${PROTOCOL_IUSE} bidi nls ssl crypt jpeg"
+IUSE="${PROTOCOL_IUSE} bidi nls ssl crypt jpeg otr"
 
 DESCRIPTION="CenterIM is a fork of CenterICQ - a ncurses ICQ/Yahoo!/AIM/IRC/MSN/Jabber/GaduGadu/RSS/LiveJournal Client"
 if [[ ${PV} = *_p* ]] # is this a snaphot?
@@ -23,6 +23,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	bidi? ( dev-libs/fribidi )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	jpeg? ( media-libs/jpeg )
+	otr? ( net-libs/libotr )
 	jabber? ( crypt? ( >=app-crypt/gpgme-1.0.2 ) )
 	msn? (
 		net-misc/curl
@@ -30,7 +31,6 @@ DEPEND=">=sys-libs/ncurses-5.2
 	)"
 
 RDEPEND="${DEPEND}
-	!net-im/centericq
 	nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}"/${P/_p*}
@@ -80,6 +80,7 @@ src_compile() {
 		$(use_enable aim) \
 		$(use_with bidi fribidi) \
 		$(use_with jpeg libjpeg) \
+		$(use_with otr libotr) \
 		$(use_enable gadu gg) \
 		$(use_enable icq) \
 		$(use_enable irc) \
