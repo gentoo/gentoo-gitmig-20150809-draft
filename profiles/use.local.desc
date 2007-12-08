@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3192 2007/12/08 11:06:59 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3193 2007/12/08 11:34:04 wschlich Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1586,6 +1586,7 @@ net-mail/cyrus-imapd:idled - Enable idled vs poll IMAP IDLE method
 net-mail/cyrus-imapd:replication - Enable replication support in the cyrus imap server
 net-mail/cyrus-imapd:unsupported_8bit - Enable 8bit not supported patch
 net-mail/dbmail:sieve - Enable sieve filter support
+net-mail/dovecot:managesieve - Adds managesieve protocol support
 net-mail/dovecot:pop3d - Build pop3d support
 net-mail/dovecot:sieve - Build the sieve plugin
 net-mail/dovecot:suid - Install the deliver binary suid, acknowledging the usual risks

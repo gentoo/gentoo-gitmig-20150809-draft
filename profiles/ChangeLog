@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.882 2007/12/07 18:08:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.883 2007/12/08 11:34:04 wschlich Exp $
+
+  08 Dec 2007; Wolfram Schlich <wschlich@gentoo.org> use.local.desc:
+  add managesieve USE flag for net-mail/dovecot
 
   07 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Add threadsafe use flag for dev-db/sqlite
