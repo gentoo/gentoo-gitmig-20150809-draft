@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/guifications-2.14.ebuild,v 1.6 2007/08/28 14:43:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/guifications-2.14.ebuild,v 1.7 2007/12/08 16:33:47 tester Exp $
 
 MY_PN=pidgin-${PN}
 MY_PV=${PV/_beta/beta}
@@ -25,6 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failure"
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README TODO VERSION
+	make install DESTDIR="${D}" || die "make install failure"
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO VERSION
 }
