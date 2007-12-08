@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.5.4.ebuild,v 1.2 2007/12/07 16:54:40 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.5.4.ebuild,v 1.3 2007/12/08 23:06:15 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.olsr.org/releases/${PV%.*}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="gtk"
 
 DEPEND="gtk? ( =x11-libs/gtk+-2* )"

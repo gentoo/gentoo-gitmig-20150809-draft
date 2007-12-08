@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/olsrd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.13 2007/12/07 16:54:40 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.14 2007/12/08 23:06:15 cedk Exp $
+
+  08 Dec 2007; Cédric Krier <cedk@gentoo.org> olsrd-0.5.4.ebuild:
+  Add amd64 for Patrick Grimm
 
   07 Dec 2007; Cédric Krier <cedk@gentoo.org>
   +files/olsrd-0.5.4-build_fix.patch, olsrd-0.5.4.ebuild:
