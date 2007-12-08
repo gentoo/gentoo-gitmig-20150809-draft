@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.11 2007/11/01 15:41:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.12 2007/12/08 09:27:28 mr_bones_ Exp $
 
 inherit games
 
 MY_P="ChickensForLinux-Linux-${PV}"
 DESCRIPTION="Target chickens with rockets and shotguns. Funny"
-HOMEPAGE="http://codefever.net/chickens/"
+HOMEPAGE="http://www.chickensforlinux.com"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="as-is"
