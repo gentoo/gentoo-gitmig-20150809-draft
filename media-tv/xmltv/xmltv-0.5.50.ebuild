@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.50.ebuild,v 1.1 2007/12/08 11:08:02 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.50.ebuild,v 1.2 2007/12/08 23:02:24 mr_bones_ Exp $
 
 inherit eutils perl-module
 
@@ -27,8 +27,7 @@ PREFIX="/usr"
 # enable graphical front-end, Italy grabber
 #  in /etc/portage/package.use : media-tv/xmltv tv_check it
 
-
-# Care!!!! grab_il is actually missing Text::Bidi 
+# Care!!!! grab_il is actually missing Text::Bidi
 #
 
 RDEPEND=">=dev-perl/libwww-perl-5.65
