@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.69 2007/12/06 22:45:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.70 2007/12/08 06:53:43 jer Exp $
+
+  08 Dec 2007; Jeroen Roovers <jer@gentoo.org> inkscape-0.45.1-r1.ebuild:
+  Marked ~hppa (bug #201532).
 
 *inkscape-0.45.1-r1 (06 Dec 2007)
 
