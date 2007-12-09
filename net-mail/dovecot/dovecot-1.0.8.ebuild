@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.8.ebuild,v 1.2 2007/12/08 23:02:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.8.ebuild,v 1.3 2007/12/09 02:22:06 wschlich Exp $
 
 inherit autotools eutils ssl-cert
 
@@ -141,15 +141,6 @@ src_install () {
 		sed -i -e 's,^#ssl_cert_file =.*,ssl_cert_file = /etc/ssl/dovecot/server.pem,' \
 			-e 's,^#ssl_key_file =.*,ssl_key_file = /etc/ssl/dovecot/server.key,' \
 			"${conf}" || die "failed to update SSL settings in dovecot.conf"
-
-		# Let's not make a new certificate if we already have one
-		if ! [[ -e "${ROOT:-/}"etc/ssl/dovecot/server.pem && \
-			-e "${ROOT:-/}"etc/ssl/dovecot/server.key ]]; then
-			SSL_ORGANIZATION="${SSL_ORGANIZATION:-Dovecot IMAP Server}"
-			insinto "${ROOT:-/}"etc/ssl/dovecot
-			docert server
-			fowners dovecot:mail /etc/ssl/dovecot/server.{key,pem}
-		fi
 	fi
 
 	# Install SQL configuration
@@ -194,31 +185,34 @@ get_config_var() {
 }
 
 pkg_postinst() {
-	# Touch ssl certs so that they are modified outisde of src_install
-	# We do this so portage does't unmerge them - silly portage
-	if use ssl; then
-		touch "${ROOT:-/}"/etc/ssl/dovecot/server.{key,pem}
-	fi
-
 	elog "The Dovecot configuration has vastly changed since 0.99."
 	elog "You are encouraged to start afresh with a new configuration file."
 	elog "see http://wiki.dovecot.org/ for configuration examples."
 
 	if [[ -e "${ROOT:-/}"etc/dovecot.conf ]]; then
-		ewarn
+		echo
 		ewarn "The Dovecot configuration now resides in ${ROOT:-/}etc/dovecot"
 	fi
 
 	local base_dir="$(get_config_var base_dir)"
 	base_dir="${base_dir:-/var/run/dovecot}"
-	if use ssl \
-		&& [[ ! -e "${ROOT:-/}${base_dir}/login/ssl-parameters.dat" ]]; then
-		elog
-		elog "Dovecot requires DH SSL Parameters if you use SSL connections"
-		elog "These take some time to make, and dovecot will create them before"
-		elog "it allows any SSL connections."
-		elog "You can create them now before starting dovecot like so"
-		elog "   emerge --config =${PF}"
+	if use ssl; then
+		# Let's not make a new certificate if we already have one
+		if ! [[ -e "${ROOT:-/}"etc/ssl/dovecot/server.pem && \
+			-e "${ROOT:-/}"etc/ssl/dovecot/server.key ]]; then
+			einfo "Creating SSL certificate"
+			SSL_ORGANIZATION="${SSL_ORGANIZATION:-Dovecot IMAP Server}"
+			install_cert "${ROOT:-/}"etc/ssl/dovecot/server
+			chown dovecot:mail "${ROOT:-/}"etc/ssl/dovecot/server.{key,pem}
+		fi
+		if [[ ! -e "${ROOT:-/}${base_dir}/login/ssl-parameters.dat" ]]; then
+			echo
+			elog "Dovecot requires DH SSL Parameters if you use SSL connections"
+			elog "These take some time to make, and dovecot will create them before"
+			elog "it allows any SSL connections."
+			elog "You can create them now before starting dovecot like so"
+			elog "   emerge --config =${PF}"
+		fi
 	fi
 }
 
