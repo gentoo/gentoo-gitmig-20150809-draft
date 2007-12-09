@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.36 2007/08/29 17:22:31 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.37 2007/12/09 11:13:04 calchan Exp $
+
+*avrdude-5.5 (09 Dec 2007)
+
+  09 Dec 2007; Denis Dupeyron <calchan@gentoo.org> +avrdude-5.5.ebuild:
+  Version bump, ebuild cleanups.
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing gustavoz from metadata due to his retirement (see #36010 for
