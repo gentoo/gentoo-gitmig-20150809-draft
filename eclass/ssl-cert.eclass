@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.11 2007/12/09 08:06:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.12 2007/12/09 08:09:56 ulm Exp $
 #
 # Author: Max Kalika <max@gentoo.org>
 #
@@ -26,7 +26,7 @@ gen_cnf() {
 	SSL_RANDOM="${T}/environment:${T}/eclass-debug.log:/etc/resolv.conf"
 
 	# These can be overridden in the ebuild
-	SSL_DAYS="${SSL_BITS:-730}"
+	SSL_DAYS="${SSL_DAYS:-730}"
 	SSL_BITS="${SSL_BITS:-1024}"
 	SSL_COUNTRY="${SSL_COUNTRY:-US}"
 	SSL_STATE="${SSL_STATE:-California}"
