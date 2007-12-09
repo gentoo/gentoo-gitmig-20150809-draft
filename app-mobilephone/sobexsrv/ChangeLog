@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/sobexsrv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.12 2007/10/26 15:58:37 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.13 2007/12/09 18:26:43 joker Exp $
+
+  09 Dec 2007; Christian Birchinger <joker@gentoo.org>
+  sobexsrv-1.0.1.ebuild:
+  Added sparc stable keyword
 
 *sobexsrv-1.0.1 (26 Oct 2007)
 
