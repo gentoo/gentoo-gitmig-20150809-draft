@@ -1,12 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3193 2007/12/08 11:34:04 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3194 2007/12/09 07:34:33 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 
 # Keep it sorted.
 
+app-arch/rpm:file - add magic file support
+app-arch/rpm:neon - include support for neon
 app-accessibility/festival:asterisk - adds a new command named tts_textasterisk that is required by net-misc/asterisk to communicate with the Festival server
 app-accessibility/festival:mbrola - Adds support for mbrola voices
 app-accessibility/freetts:jsapi - build Java Speech API (JSAPI) support
