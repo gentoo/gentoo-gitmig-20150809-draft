@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.9.ebuild,v 1.2 2007/09/07 19:53:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.9-r1.ebuild,v 1.1 2007/12/09 19:21:45 dertobi123 Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam
 
@@ -96,10 +96,13 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
-	ht_fix_file ${S}/imap/xversion.sh
+	ht_fix_file "${S}"/imap/xversion.sh
 
 	# Fix prestripped binaries
 	epatch "${FILESDIR}/${PN}-strip.patch"
+
+	# Parallel make fix
+	epatch "${FILESDIR}"/${PN}-parallel.patch
 
 	# Unsupported UoA patch. Bug #112912 .
 	# http://email.uoa.gr/projects/cyrus/autocreate/
@@ -170,10 +173,10 @@ src_compile() {
 		${myconf} || die "econf failed"
 
 	# needed for parallel make. Bug #72352.
-	cd ${S}/imap
+	cd "${S}"/imap
 	emake xversion.h || die "emake xversion.h failed"
 
-	cd ${S}
+	cd "${S}"
 	emake || die "compile problem"
 }
 
@@ -200,14 +203,6 @@ src_install() {
 	newconfd "${FILESDIR}/cyrus.confd" cyrus
 	newpamd "${FILESDIR}/cyrus.pam-include" sieve
 
-	# do not install server.{key,pem) if they are exist.
-	if use ssl && [[ ! -f /etc/ssl/cyrus/server.key && ! -f /etc/ssl/cyrus/server.pem ]] ; then
-		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Cyrus IMAP Server}"
-		insinto /etc/ssl/cyrus
-		docert server
-		fowners cyrus:mail /etc/ssl/cyrus/server.{key,pem}
-	fi
-
 	for subdir in imap/{,db,log,msg,proc,socket,sieve} spool/imap/{,stage.} ; do
 		keepdir "/var/${subdir}"
 		fowners cyrus:mail "/var/${subdir}"
@@ -223,6 +218,15 @@ src_install() {
 }
 
 pkg_postinst() {
+	# do not install server.{key,pem) if they are exist.
+	use ssl && {
+		if [ ! -f "${ROOT}"/etc/ssl/cyrus/server.key ]; then
+			dodir "${ROOT}"/etc/ssl/cyrus
+			insinto "${ROOT}"etc/ssl/cyrus/
+			install_cert /etc/ssl/cyrus/server
+			chown cyrus:mail "${ROOT:-/}"etc/ssl/cyrus/server.{key,pem}
+	fi
+	}
 
 	enewuser cyrus -1 -1 /usr/cyrus mail
 
