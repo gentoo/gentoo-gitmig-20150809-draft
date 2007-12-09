@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/amiwm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/ChangeLog,v 1.8 2007/07/22 04:27:07 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/ChangeLog,v 1.9 2007/12/09 18:05:27 coldwind Exp $
+
+  09 Dec 2007; Santiago M. Mola <coldwind@gentoo.org> amiwm-0.20_p48.ebuild:
+  Keyworded ~amd64
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> amiwm-0.20_p48.ebuild:
   Remove virtual/x11 from dependencies.
