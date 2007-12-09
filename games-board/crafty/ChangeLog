@@ -1,6 +1,11 @@
 # ChangeLog for games-board/crafty
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.22 2007/12/07 22:33:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.23 2007/12/09 10:25:17 tupone Exp $
+
+  09 Dec 2007; <atupone@gentoo.org> crafty-21.6.ebuild:
+  Fix problem on x86_64 platform.
+  Bug #195918 by HTS.
+  Bug #201630 by Chris Smith
 
 *crafty-21.6 (07 Dec 2007)
 
