@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.128 2007/12/09 02:22:06 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.129 2007/12/09 22:36:43 wschlich Exp $
+
+  09 Dec 2007; Wolfram Schlich <wschlich@gentoo.org> dovecot-1.0.8.ebuild:
+  ROOT fixes
 
   09 Dec 2007; Wolfram Schlich <wschlich@gentoo.org> dovecot-1.0.8.ebuild:
   fix bug #201686

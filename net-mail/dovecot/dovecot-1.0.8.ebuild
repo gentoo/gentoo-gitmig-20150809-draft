@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.8.ebuild,v 1.3 2007/12/09 02:22:06 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.8.ebuild,v 1.4 2007/12/09 22:36:43 wschlich Exp $
 
 inherit autotools eutils ssl-cert
 
@@ -181,7 +181,7 @@ get_config_var() {
 		die "${FUNCNAME}: variable name missing"
 	fi
 	sed -n 's/^[[:space:]]\?'"${varname}"'[[:space:]]*="*\([^#"]\+\)"*/\1/p' \
-		"${ROOT:-/}"etc/dovecot/dovecot.conf
+		"${ROOT}"/etc/dovecot/dovecot.conf
 }
 
 pkg_postinst() {
@@ -189,23 +189,23 @@ pkg_postinst() {
 	elog "You are encouraged to start afresh with a new configuration file."
 	elog "see http://wiki.dovecot.org/ for configuration examples."
 
-	if [[ -e "${ROOT:-/}"etc/dovecot.conf ]]; then
+	if [[ -e "${ROOT}"/etc/dovecot.conf ]]; then
 		echo
-		ewarn "The Dovecot configuration now resides in ${ROOT:-/}etc/dovecot"
+		ewarn "The Dovecot configuration now resides in ${ROOT}/etc/dovecot"
 	fi
 
 	local base_dir="$(get_config_var base_dir)"
 	base_dir="${base_dir:-/var/run/dovecot}"
 	if use ssl; then
 		# Let's not make a new certificate if we already have one
-		if ! [[ -e "${ROOT:-/}"etc/ssl/dovecot/server.pem && \
-			-e "${ROOT:-/}"etc/ssl/dovecot/server.key ]]; then
+		if ! [[ -e "${ROOT}"/etc/ssl/dovecot/server.pem && \
+			-e "${ROOT}"/etc/ssl/dovecot/server.key ]]; then
 			einfo "Creating SSL certificate"
 			SSL_ORGANIZATION="${SSL_ORGANIZATION:-Dovecot IMAP Server}"
-			install_cert "${ROOT:-/}"etc/ssl/dovecot/server
-			chown dovecot:mail "${ROOT:-/}"etc/ssl/dovecot/server.{key,pem}
+			install_cert /etc/ssl/dovecot/server
+			chown dovecot:mail "${ROOT}"/etc/ssl/dovecot/server.{key,pem}
 		fi
-		if [[ ! -e "${ROOT:-/}${base_dir}/login/ssl-parameters.dat" ]]; then
+		if [[ ! -e "${ROOT}${base_dir}/login/ssl-parameters.dat" ]]; then
 			echo
 			elog "Dovecot requires DH SSL Parameters if you use SSL connections"
 			elog "These take some time to make, and dovecot will create them before"
@@ -222,6 +222,6 @@ pkg_config() {
 
 	if use ssl; then
 		einfo "Regenerating SSL parameters. This will take some time."
-		"${ROOT:-/}"usr/libexec/dovecot/ssl-build-param "${base_dir}/login/ssl-parameters.dat"
+		"${ROOT}"/usr/libexec/dovecot/ssl-build-param "${base_dir}/login/ssl-parameters.dat"
 	fi
 }
