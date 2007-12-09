@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.359 2007/12/06 22:19:22 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.360 2007/12/09 07:18:17 drac Exp $
+
+  09 Dec 2007; Samuli Suominen <drac@gentoo.org> openoffice-2.3.1.ebuild:
+  amd64 stable wrt #201168
 
   06 Dec 2007; Andreas Proschofsky <suka@gentoo.org>
   -files/2.3.0/disable-regcomp-java.diff,
