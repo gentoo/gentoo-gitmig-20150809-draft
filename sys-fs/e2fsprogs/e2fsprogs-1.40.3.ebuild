@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.40.3.ebuild,v 1.1 2007/12/08 21:16:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.40.3.ebuild,v 1.2 2007/12/09 22:38:29 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -94,9 +94,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc ChangeLog README RELEASE-NOTES SHLIBS
-	docinto e2fsck
-	dodoc e2fsck/ChangeLog e2fsck/CHANGES
+	dodoc README RELEASE-NOTES
 
 	# Move shared libraries to /lib/, install static libraries to /usr/lib/,
 	# and install linker scripts to /usr/lib/.
