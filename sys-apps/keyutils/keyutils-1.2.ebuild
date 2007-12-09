@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/keyutils-1.2.ebuild,v 1.1 2007/10/06 17:22:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/keyutils-1.2.ebuild,v 1.2 2007/12/09 17:23:58 corsair Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.redhat.com/~dhowells/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=sys-kernel/linux-headers-2.6.11"
