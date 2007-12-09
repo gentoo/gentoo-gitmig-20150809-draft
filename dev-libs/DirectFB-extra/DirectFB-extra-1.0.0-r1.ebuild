@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-1.0.0-r1.ebuild,v 1.1 2007/12/02 22:29:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-1.0.0-r1.ebuild,v 1.2 2007/12/09 10:09:02 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc -sparc ~x86"
 IUSE="ffmpeg flash fusion imlib mmx mpeg quicktime svg xine zlib"
 
-RDEPEND=">=dev-libs/DirectFB-${PV}
+RDEPEND="~dev-libs/DirectFB-${PV}
 	ffmpeg? ( media-video/ffmpeg )
 	flash? ( media-libs/libflash )
 	fusion? ( dev-libs/linux-fusion )
