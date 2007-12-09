@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.6.9.ebuild,v 1.2 2007/11/06 17:23:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.7.4.ebuild,v 1.1 2007/12/09 16:15:35 armin76 Exp $
 
 inherit eutils fdo-mime
 
@@ -27,7 +27,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Respect CFLAGS and don't use --as-needed by default
-	epatch "${FILESDIR}/notecase-1.6.9-CFLAGS.patch"
+	epatch "${FILESDIR}/notecase-1.7.2-CFLAGS.patch"
 
 	if ! use gnome; then
 		# Comment variable in the Makefile if we don't have gnome
