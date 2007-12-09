@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r4.ebuild,v 1.5 2006/10/26 19:47:24 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r4.ebuild,v 1.6 2007/12/09 13:08:07 ticho Exp $
 
 inherit eutils perl-module
 
@@ -33,14 +33,14 @@ src_compile() {
 
 	echo
 	einfo "Preparing silc-client\n"
-	cd ${S_SILC}
+	cd "${S_SILC}"
 	if has_version ">=net-irc/irssi-0.8.10_rc1" ; then
 		sed -i -e "s:\"term_type\":\"term_charset\":" \
 			irssi/src/silc/core/silc-servers.c
 		sed -i -e "s:\"term_type\":\"term_charset\":" \
 			irssi/src/fe-text/term.c
 	fi
-	econf --with-helpdir=${D}/usr/share/irssi/help/silc/ \
+	econf --with-helpdir="${D}"/usr/share/irssi/help/silc/ \
 		--without-libtoolfix \
 		--enable-static \
 		`use_enable debug` || die "silc-client configure failed"
@@ -48,14 +48,14 @@ src_compile() {
 
 	echo
 	einfo "Patching irssi source for silc-plugin\n"
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-branch-update.patch || die "${PV}-branch-update.patch failed"
-	emake patch IRSSI=${S_IRSSI} SILC=${S_SILC} || die "patching irssi sources failed"
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-branch-update.patch || die "${PV}-branch-update.patch failed"
+	emake patch IRSSI="${S_IRSSI}" SILC="${S_SILC}" || die "patching irssi sources failed"
 
-	cd ${S_IRSSI}
+	cd "${S_IRSSI}"
 
 	# this tiny patch fixes a compile-time error (bug #67255)  - ticho
-	epatch ${FILESDIR}/${PV}-gcc34.patch || die "${PV}-gcc34.patch failed"
+	epatch "${FILESDIR}"/${PV}-gcc34.patch || die "${PV}-gcc34.patch failed"
 
 	echo
 	einfo "Configuring irssi\n"
@@ -68,22 +68,22 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S_IRSSI}
-	make -C src/perl/silc DESTDIR=${D} install || die "irssi's src/perl/silc installation failed"
-	make -C src/fe-common/silc DESTDIR=${D} install || die "irssi's src/fe-common/silc installation failed"
-	make -C src/silc/core install DESTDIR=${D} install ||  die "irssi's src/silc/core installation failed"
+	cd "${S_IRSSI}"
+	make -C src/perl/silc DESTDIR="${D}" install || die "irssi's src/perl/silc installation failed"
+	make -C src/fe-common/silc DESTDIR="${D}" install || die "irssi's src/fe-common/silc installation failed"
+	make -C src/silc/core install DESTDIR="${D}" install ||  die "irssi's src/silc/core installation failed"
 
-	cd ${S_SILC}
+	cd "${S_SILC}"
 	make -C irssi/docs/help install || die "silc-client's helpfiles installation failed"
 
-	cd ${S}
+	cd "${S}"
 	insinto /usr/share/irssi/scripts
 	doins scripts/*
 
 	insinto /usr/share/irssi
 	doins default.theme
 
-	dodoc AUTHORS COPYING README USAGE
+	dodoc AUTHORS README USAGE
 
 	fixlocalpod
 }

@@ -1,6 +1,15 @@
 # ChangeLog for net-im/silc-plugin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/ChangeLog,v 1.27 2007/10/01 20:19:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/ChangeLog,v 1.28 2007/12/09 13:08:07 ticho Exp $
+
+*silc-plugin-1.1.2-r1 (09 Dec 2007)
+
+  09 Dec 2007; Andrej Kacian <ticho@gentoo.org> silc-plugin-1.0.1-r4.ebuild,
+  -silc-plugin-1.0.1-r5.ebuild, -silc-plugin-1.0.3.ebuild,
+  -silc-plugin-1.0.4.1.ebuild, silc-plugin-1.1.2.ebuild,
+  +silc-plugin-1.1.2-r1.ebuild:
+  Remove legacy libfe_silc.so symlink to prevent signed messages from
+  appearing twice. Old versions cleanup. Variable quoting fixed.
 
   01 Oct 2007; Sven Wegener <swegener@gentoo.org> silc-plugin-1.1.2.ebuild:
   Use full atoms for built_with_use.
