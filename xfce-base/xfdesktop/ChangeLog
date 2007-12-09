@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.113 2007/12/09 17:28:09 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.114 2007/12/09 18:07:31 drac Exp $
+
+  09 Dec 2007; Samuli Suominen <drac@gentoo.org> xfdesktop-4.4.2.ebuild:
+  Fix test suite, thanks to dertobi123.
 
   09 Dec 2007; Dawid Węgliński <cla@gentoo.org> xfdesktop-4.4.2.ebuild:
   Stable on amd64/x86 (bug #201747)

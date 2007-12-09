@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.4.2.ebuild,v 1.5 2007/12/09 17:28:09 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.4.2.ebuild,v 1.6 2007/12/09 18:07:31 drac Exp $
 
 EAPI=1
 
@@ -50,6 +50,11 @@ pkg_setup() {
 	else
 		XFCE_CONFIG+=" --disable-thunarx --disable-file-icons --disable-exo"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	echo src/xfdesktop-clipboard-manager.c >> "${S}"/po/POTFILES.skip
 }
 
 src_install() {
