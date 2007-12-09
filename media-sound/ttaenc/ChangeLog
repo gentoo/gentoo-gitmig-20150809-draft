@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ttaenc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ttaenc/ChangeLog,v 1.2 2007/08/05 11:41:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ttaenc/ChangeLog,v 1.3 2007/12/09 11:34:51 drac Exp $
+
+  09 Dec 2007; Samuli Suominen <drac@gentoo.org> ttaenc-3.4.1.ebuild:
+  ~amd64 wrt #201756
 
 *ttaenc-3.4.1 (05 Aug 2007)
 
