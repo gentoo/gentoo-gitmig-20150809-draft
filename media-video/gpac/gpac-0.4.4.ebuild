@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.4.ebuild,v 1.7 2007/11/27 12:08:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.4.ebuild,v 1.8 2007/12/09 23:37:15 aballier Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="aac alsa amr debug ffmpeg ipv6 jpeg jpeg2k javascript mad ogg opengl oss png sdl ssl theora truetype vorbis wxwindows xml xvid"
+IUSE="aac alsa amr debug ffmpeg ipv6 jpeg jpeg2k javascript mad ogg opengl oss png sdl ssl theora truetype unicode vorbis wxwindows xml xvid"
 
 S="${WORKDIR}/${PN}"
 
@@ -73,7 +73,7 @@ src_unpack() {
 	# make sure configure looks for wx-2.6
 	if use wxwindows; then
 		WX_GTK_VER=2.6
-		need-wxwidgets gtk2
+		use unicode && need-wxwidgets unicode || need-wxwidgets ansi
 		sed -i -e "s:wx-config:${WX_CONFIG}:g" configure
 	else
 		sed -i -e 's:^has_wx="yes:has_wx="no:' configure
