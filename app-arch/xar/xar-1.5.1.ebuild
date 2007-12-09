@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/xar-1.5.1.ebuild,v 1.1 2007/06/12 17:15:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/xar-1.5.1.ebuild,v 1.2 2007/12/09 07:35:31 vapier Exp $
 
-DESCRIPTION="The XAR project aims to provide an easily extensible archive format."
+DESCRIPTION="an easily extensible archive format"
 HOMEPAGE="http://code.google.com/p/xar"
 SRC_URI="http://xar.googlecode.com/files/${P}.tar.gz"
 
@@ -11,9 +11,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND="virtual/libc"
-DEPEND="${RDEPEND}
-	dev-libs/openssl
+# this also has optional acl/bzip2 linkage ...
+DEPEND="dev-libs/openssl
 	dev-libs/libxml2
 	sys-libs/zlib"
 
