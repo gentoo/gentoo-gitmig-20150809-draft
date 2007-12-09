@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.183 2007/12/08 21:59:36 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.184 2007/12/09 00:00:48 suka Exp $
+
+  08 Dec 2007; Andreas Proschofsky <suka@gentoo.org>
+  -openoffice-bin-2.3.0.ebuild:
+  Clean out vulnerable release
 
   08 Dec 2007; Peter Weller <welp@gentoo.org> openoffice-bin-2.3.1.ebuild:
   Stable on amd64 wrt bug 200771
