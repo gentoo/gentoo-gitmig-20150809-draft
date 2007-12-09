@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r4.ebuild,v 1.5 2007/10/07 16:38:52 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r4.ebuild,v 1.6 2007/12/09 23:04:41 sbriesen Exp $
 
 inherit eutils
 
@@ -30,6 +30,9 @@ src_unpack() {
 	# comment out obsolete options
 	sed -i -e "s:^\(run-as-user.*\):#\1:g" \
 		-e "s:^\(cache-file.*\):#\1:g" ex*conf
+
+	# make 'missing' executable (bug #103480)
+	chmod +x missing
 }
 
 src_compile() {
