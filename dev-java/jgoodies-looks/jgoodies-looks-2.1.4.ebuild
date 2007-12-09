@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-2.1.4.ebuild,v 1.3 2007/11/19 18:12:06 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-2.1.4.ebuild,v 1.4 2007/12/09 15:02:27 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.jgoodies.com/download/libraries/${MY_PN}/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="2.0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
@@ -39,6 +39,9 @@ src_unpack() {
 
 	rm -v *.jar demo/*.jar lib/*.jar || die
 	rm -rv docs/api || die
+
+	epatch "${FILESDIR}/${P}-configureEditor.patch"
+
 }
 
 src_compile() {

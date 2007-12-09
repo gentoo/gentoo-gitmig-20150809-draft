@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jgoodies-looks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.34 2007/11/19 18:12:06 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.35 2007/12/09 15:02:27 nelchael Exp $
+
+  09 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/jgoodies-looks-2.1.4-configureEditor.patch,
+  jgoodies-looks-2.1.4.ebuild:
+  Add patch to fix compiling on ppc, stable on ppc, bug #199254.
 
   19 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   jgoodies-looks-2.1.4.ebuild:
