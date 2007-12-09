@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.6.20.ebuild,v 1.1 2007/11/29 12:14:29 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.6.21.ebuild,v 1.1 2007/12/09 14:27:35 voxus Exp $
 
 inherit eutils ssl-cert
 
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
 
-HOMEPAGE="http://sysoev.ru/nginx/"
+HOMEPAGE="http://nginx.net/"
 SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug fastcgi flv imap pcre perl ssl status sub webdav zlib"
+IUSE="addition debug fastcgi flv imap pcre perl ssl status sub webdav zlib"
 
 DEPEND="dev-lang/perl
 	pcre? ( >=dev-libs/libpcre-4.2 )
@@ -39,6 +39,7 @@ src_compile() {
 	# 	myconf="${myconf} --with-threads"
 	# fi
 
+	use addition && myconf="${myconf} --with-http_addition_module"
 	use fastcgi	|| myconf="${myconf} --without-http_fastcgi_module"
 	use fastcgi	&& myconf="${myconf} --with-http_realip_module"
 	use flv		&& myconf="${myconf} --with-http_flv_module"
@@ -64,6 +65,7 @@ src_compile() {
 		--http-proxy-temp-path=/var/tmp/${PN}/proxy \
 		--http-fastcgi-temp-path=/var/tmp/${PN}/fastcgi \
 		--with-md5-asm --with-md5=/usr/include \
+		--with-sha1-asm --with-sha1=/usr/include \
 		${myconf} || die "configure failed"
 
 	emake || die "failed to compile"
@@ -92,10 +94,11 @@ src_install() {
 
 pkg_postinst() {
 	use ssl && {
-		if [ ! -f "${ROOT}"etc/ssl/${PN}/${PN}.key ]; then
-			insinto "${ROOT}"etc/ssl/${PN}
+		if [ ! -f "${ROOT}"/etc/ssl/${PN}/${PN}.key ]; then
+			dodir "${ROOT}"/etc/ssl/${PN}
+			insinto "${ROOT}"etc/ssl/${PN}/
 			insopts -m0644 -o nginx -g nginx
-			docert nginx
+			install_cert /etc/ssl/nginx/nginx
 		fi
 	}
 }

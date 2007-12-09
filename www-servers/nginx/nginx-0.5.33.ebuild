@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.5.33.ebuild,v 1.1 2007/11/08 13:28:59 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.5.33.ebuild,v 1.2 2007/12/09 14:27:35 voxus Exp $
 
 inherit eutils ssl-cert
 
@@ -92,10 +92,11 @@ src_install() {
 
 pkg_postinst() {
 	use ssl && {
-		if [ ! -f "${ROOT}"etc/ssl/${PN}/${PN}.key ]; then
-			insinto "${ROOT}"etc/ssl/${PN}
+		if [ ! -f "${ROOT}"/etc/ssl/${PN}/${PN}.key ]; then
+			dodir "${ROOT}"/etc/ssl/${PN}
+			insinto "${ROOT}"etc/ssl/${PN}/
 			insopts -m0644 -o nginx -g nginx
-			docert nginx
+			install_cert /etc/ssl/nginx/nginx
 		fi
 	}
 }
