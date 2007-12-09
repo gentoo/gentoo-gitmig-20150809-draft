@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.9 2007/11/23 16:01:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.10 2007/12/09 17:35:12 bicatali Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 fortran
 
@@ -14,16 +14,18 @@ HOMEPAGE="http://root.cern.ch/"
 SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="amd64 sparc x86"
-IUSE="afs cern doc fftw kerberos ldap mysql odbc opengl postgres
+
+IUSE="afs cern doc fftw kerberos ldap mysql odbc postgres
 	python ruby qt3 ssl truetype xml"
 
 DEPEND="sys-apps/shadow
 	x11-libs/libXpm
 	>=sci-libs/gsl-1.8
 	dev-libs/libpcre
+	virtual/opengl
+	virtual/glu
 	|| ( media-libs/libafterimage x11-wm/afterstep )
-	opengl? ( virtual/opengl virtual/glu )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
 	afs? ( net-fs/openafs )
 	kerberos? ( virtual/krb5 )
@@ -54,6 +56,12 @@ pkg_setup() {
 		FORTRAN="gfortran g77 ifc"
 		fortran_pkg_setup
 	fi
+	if [[ "$(tc-getCXX)" == *g++* ]] && \
+		version_is_at_least 4.2 $(gcc-version); then
+		eerror "${P} will not compile with g++ >= 4.2"
+		eerror "Either downgrade gcc, use another C++ compiler or use root >= 5.18."
+		die "wrong g++ version"
+	fi
 }
 
 src_unpack() {
@@ -79,7 +87,7 @@ src_compile() {
 			target=linuxicc
 		fi
 	fi
-
+	use afs && append-flags -DAFS_OLD_COM_ERR
 	local myfortran
 	use cern && myfortran="F77=${FORTRANC}"
 
@@ -126,6 +134,7 @@ src_compile() {
 		--enable-mathcore \
 		--enable-mathmore \
 		--enable-minuit2 \
+		--enable-opengl \
 		--enable-reflex \
 		--enable-roofit \
 		--enable-shared	\
@@ -140,7 +149,6 @@ src_compile() {
 		$(use_enable ldap) \
 		$(use_enable mysql) \
 		$(use_enable odbc) \
-		$(use_enable opengl) \
 		$(use_enable postgres pgsql) \
 		$(use_enable python) \
 		$(use_enable qt3 qt) \
