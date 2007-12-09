@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-0.22.5.ebuild,v 1.1 2007/12/09 06:44:26 drac Exp $
-
-IUSE="cjk ipv6 mysql ssl xmlrpc"
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-0.22.5.ebuild,v 1.2 2007/12/09 06:45:10 drac Exp $
 
 DESCRIPTION="Anti-spam bayesian filter"
 HOMEPAGE="http://popfile.sourceforge.net/"
