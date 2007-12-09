@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp-module/onphp-module-0.10.7.ebuild,v 1.3 2007/10/21 00:07:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp-module/onphp-module-0.10.8.ebuild,v 1.1 2007/12/09 19:28:53 voxus Exp $
 
 PHP_EXT_NAME="onphp"
 PHP_EXT_INI="yes"
@@ -26,13 +26,6 @@ PHP_VERSION="5"
 PHP_SHARED_CAT="php5"
 
 S="${WORKDIR}/onphp-${PV}/ext"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	epatch ${FILESDIR}/${P}-wrong_propagation.patch
-}
 
 pkg_setup() {
 	has_php
