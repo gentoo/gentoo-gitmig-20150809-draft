@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-jaxp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.29 2007/11/28 03:42:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.30 2007/12/09 14:30:37 nelchael Exp $
+
+  09 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org> -gnu-jaxp-1.3.ebuild,
+  gnu-jaxp-1.3-r1.ebuild:
+  Remove ~ppc keyword, remove old version.
 
   28 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
   -gnu-jaxp-1.0_beta1-r1.ebuild:
