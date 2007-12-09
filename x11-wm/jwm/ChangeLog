@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/jwm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.13 2007/08/13 22:09:06 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.14 2007/12/09 17:59:21 coldwind Exp $
+
+*jwm-2.0.1 (09 Dec 2007)
+
+  09 Dec 2007; Santiago M. Mola <coldwind@gentoo.org>
+  +files/jwm-2.0.1-nostrip.patch, +jwm-2.0.1.ebuild:
+  Version bump to 2.0.1.
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> jwm-1.7.ebuild:
   ppc. stable

@@ -1,0 +1,11 @@
+diff -ur jwm-2.0.1.orig/src/Makefile.in jwm-2.0.1/src/Makefile.in
+--- jwm-2.0.1.orig/src/Makefile.in	2007-12-09 18:51:46.000000000 +0100
++++ jwm-2.0.1/src/Makefile.in	2007-12-09 18:52:02.000000000 +0100
+@@ -20,7 +20,6 @@
+ all: $(EXE)
+ 
+ install: all
+-	strip $(EXE)
+ 	install -d $(BINDIR)
+ 	install $(EXE) $(BINDIR)/$(EXE)
+ 
