@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.24.ebuild,v 1.1 2007/12/08 00:11:23 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.24.ebuild,v 1.2 2007/12/09 08:37:46 truedfx Exp $
 
 inherit eutils
 
@@ -50,6 +50,8 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${T}"/fpcsrc.patch
+
+	epatch "${FILESDIR}"/${P}-cputarget.patch
 }
 
 src_compile() {

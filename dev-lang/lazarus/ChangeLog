@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/lazarus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.18 2007/12/08 00:11:23 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.19 2007/12/09 08:37:46 truedfx Exp $
+
+  09 Dec 2007; Harald van Dĳk <truedfx@gentoo.org>
+  +files/lazarus-0.9.24-cputarget.patch, lazarus-0.9.24.ebuild:
+  Restore part of Makefile so that non-x86 can build lazarus
 
 *lazarus-0.9.24 (08 Dec 2007)
 

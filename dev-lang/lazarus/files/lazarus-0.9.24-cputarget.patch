@@ -1,0 +1,14 @@
+
+  Bug #201666: CPU_TARGET is not yet set when looking for fpc, so don't use it
+
+--- lazarus/Makefile
++++ lazarus/Makefile
+@@ -107,7 +107,7 @@
+ FPCPROG:=$(strip $(wildcard $(addsuffix /fpc$(SRCEXEEXT),$(SEARCHPATH))))
+ ifneq ($(FPCPROG),)
+ FPCPROG:=$(firstword $(FPCPROG))
+-FPC:=$(shell $(FPCPROG) -P$(CPU_TARGET) -PB)
++FPC:=$(shell $(FPCPROG) -PB)
+ ifneq ($(findstring Error,$(FPC)),)
+ override FPC=$(firstword $(strip $(wildcard $(addsuffix /ppc386$(SRCEXEEXT),$(SEARCHPATH)))))
+ endif
