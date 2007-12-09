@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-sensors
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.23 2007/11/06 23:06:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.24 2007/12/09 17:47:24 cla Exp $
+
+  09 Dec 2007; Dawid Węgliński <cla@gentoo.org>
+  xfce4-sensors-0.10.99.2.ebuild:
+  Stable on amd64/x86 (bug #201747)
 
 *xfce4-sensors-0.10.99.2 (06 Nov 2007)
 

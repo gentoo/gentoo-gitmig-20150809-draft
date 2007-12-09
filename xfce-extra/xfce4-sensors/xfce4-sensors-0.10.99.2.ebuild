@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/xfce4-sensors-0.10.99.2.ebuild,v 1.1 2007/11/06 23:06:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/xfce4-sensors-0.10.99.2.ebuild,v 1.2 2007/12/09 17:47:24 cla Exp $
 
 inherit xfce44
 
 xfce44
 
 DESCRIPTION="lm_sensors and hddtemp panel plugin"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug hddtemp lm_sensors"
 
 RDEPEND="lm_sensors? ( sys-apps/lm_sensors )

@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/mousepad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/mousepad/ChangeLog,v 1.41 2007/11/18 07:40:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/mousepad/ChangeLog,v 1.42 2007/12/09 17:33:51 cla Exp $
+
+  09 Dec 2007; Dawid Węgliński <cla@gentoo.org> mousepad-0.2.13.ebuild:
+  Stable on amd64/x86 (bug #201747)
 
 *mousepad-0.2.13 (18 Nov 2007)
 
