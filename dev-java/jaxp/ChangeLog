@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.12 2007/08/19 19:22:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.13 2007/12/09 14:27:47 nelchael Exp $
+
+  09 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org> jaxp-1.4.ebuild:
+  Stable on ppc, see bug #200585.
 
   19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org> jaxp-1.4.ebuild:
   amd64 stable, bug #187681.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/jaxp-1.4.ebuild,v 1.7 2007/08/19 19:22:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/jaxp-1.4.ebuild,v 1.8 2007/12/09 14:27:47 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="CDDL"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4"
