@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.40.3.ebuild,v 1.1 2007/12/08 21:13:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.40.3.ebuild,v 1.2 2007/12/09 23:00:58 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -19,16 +19,21 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/e2fsprogs-${PV}
 
+env_setup() {
+	export LDCONFIG=/bin/true
+	export CC=$(tc-getCC)
+	export STRIP=/bin/true
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.39-makefile.patch
+	epatch "${FILESDIR}"/${PN}-1.40.3-check.patch #201762
 }
 
 src_compile() {
-	export LDCONFIG=/bin/true
-	export CC=$(tc-getCC)
-	export STRIP=/bin/true
+	env_setup
 
 	# We want to use the "bsd" libraries while building on Darwin, but while
 	# building on other Gentoo/*BSD we prefer elf-naming scheme.
@@ -47,13 +52,14 @@ src_compile() {
 }
 
 src_test() {
-	make -C lib/ss check || die "make check failed"
+	env_setup
+
+	ln -s $(${CC} -print-file-name=libcom_err.so) lib/libcom_err.so
+	emake -j1 -C lib/ss check || die "make check failed"
 }
 
 src_install() {
-	export LDCONFIG=/bin/true
-	export CC=$(tc-getCC)
-	export STRIP=/bin/true
+	env_setup
 
 	dodir /usr/share/man/man1
 	make -C lib/ss DESTDIR="${D}" install || die
