@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.17 2007/12/09 13:49:16 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.18 2007/12/09 16:48:24 corsair Exp $
+
+  09 Dec 2007; Markus Rothe <corsair@gentoo.org> bcmail-1.37-r1.ebuild:
+  Added ~ppc64; bug #200752
 
   09 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org> bcmail-1.37-r1.ebuild:
   Add ~ppc keyword, see bug #200752.
