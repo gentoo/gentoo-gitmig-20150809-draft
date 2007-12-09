@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.81 2007/10/05 13:26:46 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.82 2007/12/09 07:34:38 vapier Exp $
+
+  09 Dec 2007; Mike Frysinger <vapier@gentoo.org> +rpm-5.0_alpha4.ebuild:
+  Version bump #190132 by Andrey Falko.
+
+*rpm-5.0_alpha4 (09 Dec 2007)
+
+  09 Dec 2007; Mike Frysinger <vapier@gentoo.org> +rpm-5.0_alpha4.ebuild:
+  Version bump #190132 by Andrey Falko.
 
   05 Oct 2007; Ferris McCormick <fmccor@gentoo.org> rpm-4.4.7-r3.ebuild:
   Adding ~sparc for testing (because masked as well for testing ---
