@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.115 2007/12/09 17:49:52 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.116 2007/12/09 20:51:24 dertobi123 Exp $
+
+  09 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org> xfce4-4.4.2.ebuild:
+  ppc stable, bug #201747
 
   09 Dec 2007; Dawid Węgliński <cla@gentoo.org> xfce4-4.4.2.ebuild:
   Stable on amd64/x86 (bug #201747)
