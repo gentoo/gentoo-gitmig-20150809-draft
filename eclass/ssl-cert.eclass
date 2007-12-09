@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.10 2007/12/07 22:41:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.11 2007/12/09 08:06:11 ulm Exp $
 #
 # Author: Max Kalika <max@gentoo.org>
 #
@@ -144,6 +144,9 @@ gen_pem() {
 #
 # Access: public
 docert() {
+	ewarn "Function \"docert\" is deprecated for security reasons."
+	ewarn "\"install_cert\" should be used instead. See bug #174759."
+
 	if [ $# -lt 1 ] ; then
 		eerror "At least one argument needed"
 		return 1;
@@ -207,6 +210,11 @@ docert() {
 
 # Uses all the private functions above to generate
 # and install the requested certificates
+#
+# Usage: install_cert <certificates>
+# where <certificates> are full pathnames relative to ROOT, without extension.
+#
+# Example: "install_cert /foo/bar" installs ${ROOT}/foo/bar.{key,csr,crt,pem}
 #
 # Access: public
 install_cert() {
