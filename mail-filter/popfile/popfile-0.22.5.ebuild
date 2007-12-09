@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-0.22.5.ebuild,v 1.2 2007/12/09 06:45:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-0.22.5.ebuild,v 1.3 2007/12/09 06:51:16 drac Exp $
 
 DESCRIPTION="Anti-spam bayesian filter"
-HOMEPAGE="http://popfile.sourceforge.net/"
-SRC_URI="mirror://sourceforge/popfile/${P}.zip"
+HOMEPAGE="http://popfile.sourceforge.net"
+SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +17,6 @@ RDEPEND="virtual/perl-Digest-MD5
 	dev-perl/HTML-Tagset
 	dev-perl/HTML-Template
 	dev-perl/TimeDate
-	app-arch/unzip
 	cjk? ( dev-perl/Encode-compat
 		dev-perl/Text-Kakasi )
 	mysql? ( dev-perl/DBD-mysql	)
@@ -35,5 +34,5 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins -r *
 	fperms 755 /usr/share/${PN}/*.pl
-	dosbin "${FILESDIR}"/popfile
+	dosbin "${FILESDIR}"/${PN}
 }
