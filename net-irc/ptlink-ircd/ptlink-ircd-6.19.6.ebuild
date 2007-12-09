@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.6.ebuild,v 1.2 2007/05/06 12:44:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.6.ebuild,v 1.3 2007/12/09 01:04:05 cla Exp $
 
 inherit eutils ssl-cert
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ptlink.net/"
 SRC_URI="ftp://ftp.sunsite.dk/projects/ptlink/ircd/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~ppc ~sparc ~x86"
 
 IUSE="ssl"
 DEPEND="sys-libs/zlib
@@ -57,22 +57,24 @@ src_install() {
 
 	newinitd "${FILESDIR}/ptlink-ircd.initd" ptlink-ircd || die "newinitd failed"
 	newconfd "${FILESDIR}/ptlink-ircd.confd" ptlink-ircd || die "newconfd failed"
-
-	use ssl && (
-		insinto /etc/ptlink-ircd
-		docert server || die "docert failed"
-		mv ${D}/etc/ptlink-ircd/server.crt ${D}/etc/ptlink-ircd/server.cert.pem
-		mv ${D}/etc/ptlink-ircd/server.csr ${D}/etc/ptlink-ircd/server.req.pem
-		mv ${D}/etc/ptlink-ircd/server.key ${D}/etc/ptlink-ircd/server.key.pem
-	)
 }
 
 pkg_postinst() {
+	# Move docert from src_install() to install_cert for bug #201678
+	use ssl && (
+		if [[ ! -f "${ROOT}"/etc/ptlink-ircd/server.key.pem ]]; then
+			install_cert /etc/ptlink-ircd/server || die "install_cert failed"
+			mv "${ROOT}"/etc/ptlink-ircd/server.crt	"${ROOT}"/etc/ptlink-ircd/server.cert.pem
+			mv "${ROOT}"/etc/ptlink-ircd/server.csr "${ROOT}"/etc/ptlink-ircd/server.req.pem
+			mv "${ROOT}"/etc/ptlink-ircd/server.key "${ROOT}"/etc/ptlink-ircd/server.key.pem
+		fi
+	)
+
 	enewuser ptlink-ircd
 
 	chown ptlink-ircd \
-		${ROOT}/{etc,var/{log,lib}}/ptlink-ircd \
-		${ROOT}/etc/ptlink-ircd/server.key.pem
+		"${ROOT}"/{etc,var/{log,lib}}/ptlink-ircd \
+		"${ROOT}"/etc/ptlink-ircd/server.key.pem
 
 	elog
 	elog "PTlink IRCd will run without configuration, although this is strongly"
