@@ -1,0 +1,33 @@
+--- swig/Fl_Bitmap.i.orig	2007-12-09 15:34:18.633043673 +0000
++++ swig/Fl_Bitmap.i	2007-12-09 15:34:56.675211572 +0000
+@@ -13,7 +13,7 @@
+ 
+ %typemap(in) const uchar *bits {
+     /* Check if the input support the buffer protocol */
+-    int size_buffer;
++    Py_ssize_t size_buffer;
+     const void * buffer;
+     int failure = PyObject_AsReadBuffer($input,&buffer,&size_buffer);
+     if (!failure) {
+--- swig/fl_draw.i.orig	2007-12-09 15:34:37.166099811 +0000
++++ swig/fl_draw.i	2007-12-09 15:35:15.200267255 +0000
+@@ -9,7 +9,7 @@
+ 
+ %typemap(in) const uchar * {
+        /* Check if the input support the buffer protocol */
+-       int size_buffer;
++       Py_ssize_t size_buffer;
+        const void * buffer;
+        int failure = PyObject_AsReadBuffer($input,&buffer,&size_buffer);
+        if (!failure) {
+--- swig/Fl_Image.i.orig	2007-12-09 15:34:30.577724361 +0000
++++ swig/Fl_Image.i	2007-12-09 15:35:30.549141938 +0000
+@@ -23,7 +23,7 @@
+ 
+ %typemap(in) const uchar *bits {
+     /* Check if the input support the buffer protocol */
+-  int size_buffer;
++  Py_ssize_t size_buffer;
+   const void * buffer;
+   int failure = PyObject_AsReadBuffer($input,&buffer,&size_buffer);
+   if (!failure) {

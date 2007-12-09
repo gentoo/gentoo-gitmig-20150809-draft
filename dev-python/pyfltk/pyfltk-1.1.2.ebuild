@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.2.ebuild,v 1.1 2007/12/07 11:24:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.2.ebuild,v 1.2 2007/12/09 16:54:13 bicatali Exp $
 
-inherit distutils
+inherit eutils distutils
 
 MY_P=pyFltk-${PV}
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc opengl"
 
 DEPEND=">=dev-lang/swig-1.3.29
 	>=x11-libs/fltk-1.1.7"
@@ -25,10 +25,30 @@ S="${WORKDIR}/${MY_P}"
 
 DOCS="CHANGES"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	distutils_python_version
+	[[ "${PYVER}" == 2.5 ]] && epatch "${FILESDIR}"/${P}-python25.patch
+	# move docs because the swig stuff will remove them
+	use doc && cp -r fltk fltk.docs
+}
+
+src_compile() {
+	cd python
+	rm -f fltk*
+	${python} MakeSwig.py || die "swigging wrappers failed"
+	cd "${S}"
+	distutils_src_compile \
+		$(use opengl || echo "--disable-gl")
+}
+
 src_install() {
 	distutils_src_install --install-data /usr/share/doc/${PF}
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins "${DISTDIR}"/pyfltkmanual.pdf
+		doins "${DISTDIR}"/pyfltkmanual.pdf || die
+		dohtml fltk.docs/docs/* || die
+		doins -r fltk.docs/test || die
 	fi
 }

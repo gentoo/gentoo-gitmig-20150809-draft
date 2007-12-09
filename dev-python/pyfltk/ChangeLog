@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyfltk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.1 2007/12/07 11:24:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.2 2007/12/09 16:54:13 bicatali Exp $
+
+  09 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/pyfltk-1.1.2-python25.patch, pyfltk-1.1.2.ebuild:
+  added opengl flag, fixed for python-2.5 (ssize_t) and install doc properly
 
 *pyfltk-1.1.2 (07 Dec 2007)
 
