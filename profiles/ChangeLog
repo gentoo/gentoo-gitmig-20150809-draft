@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.887 2007/12/10 16:29:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.888 2007/12/10 23:13:45 eva Exp $
+
+  10 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org> updates/4Q-2007:
+  slot goffice for 0.4 inclusion and future releases
 
   10 Dec 2007; Markus Meier <maekke@gentoo.org> use.local.desc:
   clarify inkjar description, bug #201040
