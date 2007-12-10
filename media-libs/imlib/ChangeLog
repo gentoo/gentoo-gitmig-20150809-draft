@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/imlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.57 2007/09/23 14:18:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.58 2007/12/10 20:14:24 pva Exp $
+
+*imlib-1.9.15-r2 (10 Dec 2007)
+
+  10 Dec 2007; <pva@gentoo.org>
+  +files/imlib-1.9.15-bpp16-CVE-2007-3568.patch,
+  +files/imlib-1.9.15-fix-rendering.patch, +imlib-1.9.15-r2.ebuild:
+  Fixed denial of service (infinite loop) via a BMP image, bug #201887. Fixed
+  bug which prevented imlib to render images is MIT-SHM when the MIT-SHM
+  extension doesn't support shared pixmaps (bugs.debian.org/448360). Thank for
+  report Antti Mäkelä <zarhan AT cs.tut.fi>. Homepage changed. No website is
+  available for this old library, so pointing to sources location.
 
   23 Sep 2007; Samuli Suominen <drac@gentoo.org> imlib-1.9.15-r1.ebuild:
   Fix modular X deps wrt #192733.
