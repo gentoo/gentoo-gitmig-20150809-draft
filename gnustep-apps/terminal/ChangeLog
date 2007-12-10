@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/terminal
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.15 2007/09/10 18:31:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.16 2007/12/10 10:03:51 voyageur Exp $
+
+  10 Dec 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/terminal-0.9.5_pre20060324-gnustep-base1.15.patch,
+  terminal-0.9.5_pre20060324-r1.ebuild:
+  Add patch to make it compile with gnustep-base 1.15
 
 *terminal-0.9.5_pre20060324-r1 (10 Sep 2007)
 

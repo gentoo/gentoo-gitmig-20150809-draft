@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/terminal-0.9.5_pre20060324-r1.ebuild,v 1.1 2007/09/10 18:31:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/terminal-0.9.5_pre20060324-r1.ebuild,v 1.2 2007/12/10 10:03:51 voyageur Exp $
 
 inherit gnustep-2
 
@@ -20,4 +20,5 @@ src_unpack() {
 	# on Solaris -lutil doesn't exist, which hence doesn't provide forkpty
 	epatch "${FILESDIR}"/${P}-solaris.patch
 	epatch "${FILESDIR}"/${P}-size_t.patch
+	epatch "${FILESDIR}"/${P}-gnustep-base1.15.patch
 }
