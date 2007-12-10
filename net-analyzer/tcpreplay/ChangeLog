@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/tcpreplay
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.22 2007/11/05 16:40:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.23 2007/12/10 12:09:15 pva Exp $
+
+*tcpreplay-3.2.3 (10 Dec 2007)
+
+  10 Dec 2007; <pva@gentoo.org> tcpreplay-3.2.1.ebuild,
+  +tcpreplay-3.2.3.ebuild:
+  Version bump. Fixed bug, which caused emerge with FEATURES=test always fail
+  on tests.
 
   05 Nov 2007; Raúl Porcel <armin76@gentoo.org> tcpreplay-3.2.1.ebuild:
   Re-add ~sparc wrt #197761
