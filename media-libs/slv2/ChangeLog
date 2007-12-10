@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/slv2
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/ChangeLog,v 1.1 2007/12/10 21:41:52 aballier Exp $
+
+*slv2-0.3.2 (10 Dec 2007)
+
+  10 Dec 2007; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +slv2-0.3.2.ebuild:
+  initial import: a library to use ladspa v2 plugins easily
+
