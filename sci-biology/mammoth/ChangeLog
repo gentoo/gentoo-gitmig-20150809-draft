@@ -1,0 +1,12 @@
+# ChangeLog for sci-biology/mammoth
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mammoth/ChangeLog,v 1.1 2007/12/10 09:11:28 dberkholz Exp $
+
+*mammoth-1.0 (10 Dec 2007)
+
+  10 Dec 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.0-consistent-system-intrinsic.patch, +metadata.xml,
+  +mammoth-1.0.ebuild:
+  Add mammoth, a nice structural alignment program. It contains the MaxSub
+  algorithm, which is used by lots of people.
+
