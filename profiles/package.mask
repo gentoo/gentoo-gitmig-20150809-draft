@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7988 2007/12/10 20:23:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7989 2007/12/10 20:44:08 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,10 +20,6 @@
 ##
 ##   End example
 ##
-
-# Samuli Suominen <drac@gentoo.org> (10 Dec 2007)
-# autotools broken wrt #201892
-=media-sound/mpg123-1.0_rc2*
 
 # Bernard Cafarelli <voyageur@gentoo.org> (08 Dec 2007)
 # Masked for removal in 30 days
