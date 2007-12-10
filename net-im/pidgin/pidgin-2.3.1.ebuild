@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.3.0.ebuild,v 1.2 2007/12/06 20:08:57 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.3.1.ebuild,v 1.1 2007/12/10 16:26:22 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
@@ -58,24 +58,6 @@ S="${WORKDIR}/${MY_PV}"
 # Enable Default protocols
 DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn,myspace"
 
-# List of plugins yet to be ported (will be removed at some point)
-#   net-im/gaim-bnet
-#   x11-plugins/autoprofile
-#   x11-plugins/gaim-xfire
-#   x11-plugins/gaim-galago
-
-# Abandonned
-#   x11-plugins/gaim-assistant
-# Last release in 2004
-#   net-im/gaim-blogger
-#   x11-plugins/gaimosd
-# Merged into something else
-#   net-im/gaim-meanwhile (integrated in gaim)
-#   net-im/gaim-snpp (merged into the plugin pack)
-#   x11-plugins/gaim-slashexec (integrated into plugin pack)
-#   x11-plugins/ignorance (into plugin pack)
-#   x11-plugins/bangexec (into slashexec into plugin pack)
-
 # List of plugins
 #   app-accessibility/pidgin-festival
 #   net-im/librvp
@@ -91,12 +73,6 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn,myspace"
 #   x11-themes/pidgin-smileys
 
 print_pidgin_warning() {
-	ewarn
-	ewarn "We strongly recommend that you backup your ~/.gaim directory"
-	ewarn "before running Pidgin for the first time. Things you should be"
-	ewarn "on the lookout for include problems with preferences being lost"
-	ewarn "or forgotten, buddy icons not working as you expect, plugins or"
-	ewarn "other external files not properly being found."
 	ewarn
 	ewarn "If you experience problems with pidgin, file them as bugs with"
 	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org.  DO NOT report them"
