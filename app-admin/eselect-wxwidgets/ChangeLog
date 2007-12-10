@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-wxwidgets
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.4 2007/11/23 21:48:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.5 2007/12/10 07:03:01 jer Exp $
+
+  10 Dec 2007; Jeroen Roovers <jer@gentoo.org> eselect-wxwidgets-0.5.ebuild:
+  Marked ~hppa (bug #199594).
 
   23 Nov 2007; Markus Rothe <corsair@gentoo.org>
   eselect-wxwidgets-0.5.ebuild:
