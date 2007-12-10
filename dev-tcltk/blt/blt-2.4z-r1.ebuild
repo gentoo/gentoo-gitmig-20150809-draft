@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r1.ebuild,v 1.7 2007/04/29 00:40:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r1.ebuild,v 1.8 2007/12/10 17:33:57 tgall Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,29 +11,27 @@ DEPEND=">=dev-lang/tk-8.0"
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 
 S="${WORKDIR}/${PN}${PV}"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/blt2.4z-install.diff
+	epatch "${FILESDIR}"/blt2.4z-install.diff
 
-	if [ "${ARCH}" = "amd64" -o "${ARCH}" = "ia64" ] ; then
-		# From blt-2.4z-6mdk.src.rpm
-		epatch ${FILESDIR}/blt2.4z-64bit.patch
-	fi
+	# From blt-2.4z-6mdk.src.rpm
+	epatch "${FILESDIR}"/blt2.4z-64bit.patch
 
 	# Set the correct libdir
 	sed -i -e "s:\(^libdir=\${exec_prefix}/\)lib:\1$(get_libdir):" \
-		${S}/configure || die "sed failed"
+		"${S}"/configure || die "sed failed"
 }
 
 src_compile() {
 	# bug 167934
 	append-flags -fPIC
 
-	cd ${S}
+	cd "${S}"
 	./configure --host=${CHOST} \
 				--prefix=/usr \
 				--libdir=/usr/$(get_libdir) \
@@ -51,10 +49,10 @@ src_install() {
 		/usr/share/man/mann \
 		/usr/include \
 			|| die "dodir failed"
-	make INSTALL_ROOT=${D} install || die "make install failed"
+	emake -j1 INSTALL_ROOT="${D}" install || die "make install failed"
 
 	dodoc NEWS PROBLEMS README
-	for f in `ls ${D}/usr/share/man/mann` ; do
-		mv ${D}/usr/share/man/mann/${f} ${D}/usr/share/man/mann/${f/.n/.nblt}
+	for f in `ls "${D}"/usr/share/man/mann` ; do
+		mv "${D}"/usr/share/man/mann/${f} "${D}"/usr/share/man/mann/${f/.n/.nblt}
 	done
 }

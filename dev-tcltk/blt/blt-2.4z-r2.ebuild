@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r2.ebuild,v 1.2 2007/04/29 00:59:53 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r2.ebuild,v 1.3 2007/12/10 17:33:57 tgall Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ DESCRIPTION="BLT is an extension to the Tk toolkit adding new widgets, geometry 
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=dev-lang/tk-8.0
 	x11-libs/libX11"
@@ -23,10 +23,8 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/blt2.4z-install.diff
-	if [ "${ARCH}" = "amd64" -o "${ARCH}" = "ia64" ] ; then
-		# From blt-2.4z-6mdk.src.rpm
-		epatch "${FILESDIR}"/blt2.4z-64bit.patch
-	fi
+	# From blt-2.4z-6mdk.src.rpm
+	epatch "${FILESDIR}"/blt2.4z-64bit.patch
 
 	# Set the correct libdir
 	sed -i -e "s:\(^libdir=\${exec_prefix}/\)lib:\1$(get_libdir):" \
@@ -52,7 +50,7 @@ src_install() {
 		/usr/share/man/mann \
 		/usr/include \
 			|| die "dodir failed"
-	emake INSTALL_ROOT="${D}" install || die "make install failed"
+	emake -j1 INSTALL_ROOT="${D}" install || die "make install failed"
 
 	dodoc NEWS PROBLEMS README
 	dohtml html/*.html

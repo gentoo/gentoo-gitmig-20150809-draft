@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.21 2007/04/29 00:40:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.22 2007/12/10 17:33:57 tgall Exp $
+
+  10 Dec 2007; Tom Gall <tgall@gentoo.org> blt-2.4z-r1.ebuild,
+  blt-2.4z-r2.ebuild:
+  added ~ppc64, change 64 bit fix to always apply (it's safe)
 
 *blt-2.4z-r2 (29 Apr 2007)
 
