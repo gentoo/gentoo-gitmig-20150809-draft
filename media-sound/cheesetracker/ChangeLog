@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/cheesetracker
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/ChangeLog,v 1.23 2007/01/28 11:48:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/ChangeLog,v 1.24 2007/12/10 18:12:54 drac Exp $
+
+*cheesetracker-0.9.15.2 (10 Dec 2007)
+
+  10 Dec 2007; Samuli Suominen <drac@gentoo.org>
+  +cheesetracker-0.9.15.2.ebuild:
+  Version bump wrt #201267, thanks to dword ptr for reporting. Install desktop
+  menu entry with icon and song examples in .it and .xm formats. Now depends
+  on audiofile and can use ALSA.
 
   28 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   -cheesetracker-0.9.9.ebuild:
