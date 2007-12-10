@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.44 2007/12/07 14:14:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.45 2007/12/10 03:21:12 jer Exp $
+
+  10 Dec 2007; Jeroen Roovers <jer@gentoo.org> netcdf-3.6.2.ebuild:
+  Stable for HPPA (bug #201477).
 
   07 Dec 2007; Markus Rothe <corsair@gentoo.org> netcdf-3.6.2.ebuild:
   Stable on ppc64; bug #201477
