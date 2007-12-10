@@ -1,6 +1,16 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.565 2007/11/18 03:49:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.566 2007/12/10 01:29:35 vapier Exp $
+
+*glibc-2.7-r1 (10 Dec 2007)
+
+  10 Dec 2007; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_install.eblit, +glibc-2.7-r1.ebuild:
+  Add fixes for #196926 (build failure with USE=glibc-omitfp), #201646 (double
+  free on sscanf("", "%as")), #199479 (build failure for i586-* targets due to
+  duplicate _chk defs), #198949 (static link failure when using
+  pthread_cond_timedwait), #196933 (build failure on hppa), and #196031 (gdb
+  debugging errors with pthreads).
 
   18 Nov 2007; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_compile.eblit, glibc-2.6.1.ebuild, glibc-2.7.ebuild:

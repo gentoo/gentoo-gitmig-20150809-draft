@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.3 2007/08/08 23:23:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.4 2007/12/10 01:29:36 vapier Exp $
 
 toolchain-glibc_src_install() {
 	# These should not be set, else the
@@ -200,14 +200,20 @@ toolchain-glibc_headers_install() {
 }
 
 src_strip() {
-	# Now, strip everything but the thread libs #46186, as well as the dynamic
-	# linker, else we cannot set breakpoints in shared libraries due to bugs in
-	# gdb.  Also want to grab stuff in tls subdir.  whee.
+	# gdb is lame and requires some debugging information to remain in
+	# libpthread, so we need to strip it by hand.  libthread_db makes no
+	# sense stripped as it is only used when debugging.
+	local pthread=$(hasq splitdebug ${FEATURES} && echo "libthread_db" || echo "lib{pthread,thread_db}")
 	env \
 		-uRESTRICT \
 		CHOST=${CTARGET} \
-		STRIP_MASK="/*/{,tls/}libthread_db*" \
+		STRIP_MASK="/*/{,tls/}${pthread}*" \
 		prepallstrip
+	# if user has stripping enabled and does not have split debug turned on,
+	# then leave the debugging sections in libpthread.
+	if ! hasq nostrip ${FEATURES} && ! hasq splitdebug ${FEATURES} ; then
+		${STRIP:-${CTARGET}-strip} --strip-debug "${D}"/*/libpthread-*.so
+	fi
 }
 
 eblit-glibc-src_install() {
