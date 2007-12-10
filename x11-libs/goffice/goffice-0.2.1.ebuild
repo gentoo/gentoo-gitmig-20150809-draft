@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.2.1.ebuild,v 1.8 2006/10/14 17:11:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.2.1.ebuild,v 1.9 2007/12/10 23:11:21 eva Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="A library of document-centric objects and utilities"
 HOMEPAGE="http://freshmeat.net/projects/goffice/"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="0.2"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="gnome"
 #cairo support broken and -gtk broken

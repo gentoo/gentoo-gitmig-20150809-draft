@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.21 2007/02/21 23:55:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.22 2007/12/10 23:11:21 eva Exp $
+
+*goffice-0.4.3 (09 Dec 2007)
+
+  09 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org> -goffice-0.2.0.ebuild,
+  goffice-0.2.1.ebuild, +goffice-0.4.3.ebuild:
+  add version 0.4.3 to fix bug #156984 and bug #198385, slot ebuilds and remove
+  older 0.2.0 release
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
