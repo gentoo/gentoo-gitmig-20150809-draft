@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/keyutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.7 2007/12/10 02:26:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.8 2007/12/10 17:09:14 armin76 Exp $
+
+  10 Dec 2007; Raúl Porcel <armin76@gentoo.org> keyutils-1.2.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #201744
 
   10 Dec 2007; Jeroen Roovers <jer@gentoo.org> keyutils-1.2.ebuild:
   Marked ~hppa (bug #201744).
