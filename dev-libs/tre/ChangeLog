@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/tre
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.30 2007/08/25 17:31:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.31 2007/12/10 20:35:56 pva Exp $
+
+*tre-0.7.5 (10 Dec 2007)
+
+  10 Dec 2007; <pva@gentoo.org> -tre-0.7.0.ebuild, -tre-0.7.3.ebuild,
+  +tre-0.7.5.ebuild:
+  Version bump, bug #190270. Thank Tomas Charvat <eaglecz AT tiscali.cz> for
+  report. Fixes USE=static, bug #165378.
 
   25 Aug 2007; Steve Dibb <beandog@gentoo.org> tre-0.7.4.ebuild:
   amd64 stable
