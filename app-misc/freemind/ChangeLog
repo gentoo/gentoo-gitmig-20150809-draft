@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/freemind
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.35 2007/06/06 14:41:56 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.36 2007/12/10 22:43:25 caster Exp $
+
+*freemind-0.9.0_beta15 (10 Dec 2007)
+
+  10 Dec 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/freemind-0.9.0_beta15-build.xml.patch,
+  +freemind-0.9.0_beta15.ebuild:
+  Version bump, bug #200853. Dropped keywords for new dependency dev-java/hoteqn.
 
   06 Jun 2007; Vlastimil Babka <caster@gentoo.org>
   -freemind-0.7.1-r1.ebuild:
