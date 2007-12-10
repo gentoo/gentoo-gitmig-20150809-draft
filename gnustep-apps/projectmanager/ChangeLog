@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/projectmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectmanager/ChangeLog,v 1.2 2007/09/10 21:09:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectmanager/ChangeLog,v 1.3 2007/12/10 11:01:24 voyageur Exp $
+
+  10 Dec 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/projectmanager-0.2-gnustep-base1.15.patch,
+  projectmanager-0.2.ebuild:
+  Add patch to make it compile with gnustep-base 1.15
 
 *projectmanager-0.2 (10 Sep 2007)
 

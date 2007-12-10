@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectmanager/projectmanager-0.2.ebuild,v 1.1 2007/09/10 21:09:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectmanager/projectmanager-0.2.ebuild,v 1.2 2007/12/10 11:01:24 voyageur Exp $
 
 inherit gnustep-2
 
@@ -23,8 +23,9 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-gui12.patch
-	epatch ${FILESDIR}/${P}-pathdomainmask.patch
+	epatch "${FILESDIR}"/${P}-gui12.patch
+	epatch "${FILESDIR}"/${P}-pathdomainmask.patch
+	epatch "${FILESDIR}"/${P}-gnustep-base1.15.patch
 }
