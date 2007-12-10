@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/nicotine-1.0.8.ebuild,v 1.9 2007/07/13 05:52:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/nicotine-1.0.8.ebuild,v 1.10 2007/12/10 07:25:47 betelgeuse Exp $
 
 inherit distutils
 
@@ -25,9 +25,7 @@ src_install() {
 
 	distutils_src_install
 
-	insinto /usr/share/pixmaps
-	doins ${FILESDIR}/nicotine-n.png
+	doicon "${FILESDIR}/nicotine-n.png"
 
-	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop
+	make_desktop_entry nicotine Nicotine nicotine-n
 }
