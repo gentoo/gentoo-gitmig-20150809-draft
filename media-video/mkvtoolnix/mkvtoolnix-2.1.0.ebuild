@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.1.0.ebuild,v 1.5 2007/11/18 14:46:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.1.0.ebuild,v 1.6 2007/12/10 08:25:48 aballier Exp $
 
 inherit eutils wxwidgets flag-o-matic qt4 autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 x86"
-IUSE="wxwindows flac bzip2 lzo qt4 debug"
+IUSE="wxwindows flac bzip2 lzo qt4 debug unicode"
 
 DEPEND=">=dev-libs/libebml-0.7.7
 	>=media-libs/libmatroska-0.8.1
@@ -29,7 +29,7 @@ DEPEND=">=dev-libs/libebml-0.7.7
 pkg_setup() {
 	WX_GTK_VER="2.6"
 	if use wxwindows; then
-		need-wxwidgets gtk2
+		use unicode && need-wxwidgets unicode || need-wxwidgets ansi
 	fi
 
 	if ! built_with_use --missing true dev-libs/libpcre cxx; then
