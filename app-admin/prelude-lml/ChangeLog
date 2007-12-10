@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.35 2007/12/08 17:19:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.36 2007/12/10 14:52:18 armin76 Exp $
+
+  10 Dec 2007; Raúl Porcel <armin76@gentoo.org>
+  prelude-lml-0.9.10.1.ebuild:
+  sparc stable wrt #191415
 
   08 Dec 2007; Samuli Suominen <drac@gentoo.org>
   prelude-lml-0.9.10.1.ebuild:
