@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.2.ebuild,v 1.2 2007/12/08 17:46:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.2-r1.ebuild,v 1.1 2007/12/10 00:13:36 eva Exp $
 
 inherit db-use eutils flag-o-matic gnome2 autotools
 
