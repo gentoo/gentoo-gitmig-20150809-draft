@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.16 2007/07/12 03:35:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.17 2007/12/10 21:29:56 pva Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Move/copy/append/link multiple files according to a set of wildcard patterns."
-HOMEPAGE="http://packages.debian.org/unstable/utils/mmv.html"
+HOMEPAGE="http://packages.debian.org/unstable/utils/mmv"
 
 PATCH_DEB_VER="12"
 
@@ -17,17 +17,17 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-S="${WORKDIR}/${P}.orig"
+S=${WORKDIR}/${P}.orig
 
 src_unpack() {
 	unpack ${P/-/_}.orig.tar.gz
-	epatch ${DISTDIR}/${P/-/_}-${PATCH_DEB_VER}.diff.gz
+	epatch "${DISTDIR}"/${P/-/_}-${PATCH_DEB_VER}.diff.gz
 
 	#apply both patches to compile with gcc-3.4 closing bug #62711
 	if [[ $(gcc-major-version) -eq 3 && $(gcc-minor-version) -ge 4 ]] || \
 		[[ $(gcc-major-version) -gt 3 ]]
 	then
-		epatch ${FILESDIR}/${PN}-gcc34.patch
+		epatch "${FILESDIR}"/${PN}-gcc34.patch
 	fi
 }
 
