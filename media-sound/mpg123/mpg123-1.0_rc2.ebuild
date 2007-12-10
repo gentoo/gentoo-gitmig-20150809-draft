@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.0_rc2.ebuild,v 1.4 2007/12/10 20:50:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.0_rc2.ebuild,v 1.5 2007/12/10 21:34:00 drac Exp $
+
+WANT_AUTOMAKE=1.9
 
 inherit eutils autotools
 
