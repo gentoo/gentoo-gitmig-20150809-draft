@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/keyutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.6 2007/12/09 17:23:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.7 2007/12/10 02:26:49 jer Exp $
+
+  10 Dec 2007; Jeroen Roovers <jer@gentoo.org> keyutils-1.2.ebuild:
+  Marked ~hppa (bug #201744).
 
   09 Dec 2007; Markus Rothe <corsair@gentoo.org> keyutils-1.2.ebuild:
   Added ~ppc64; bug #201744
