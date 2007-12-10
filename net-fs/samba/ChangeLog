@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.325 2007/12/02 18:28:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.326 2007/12/10 16:39:55 dev-zero Exp $
+
+*samba-3.0.28 (10 Dec 2007)
+
+  10 Dec 2007; Tiziano Müller <dev-zero@gentoo.org> +samba-3.0.28.ebuild:
+  Version bump for security bug #200773 (CVE-2007-6015). 
+  Minor fixes for bugs #200132 and #199934.
 
   02 Dec 2007; Tiziano Müller <dev-zero@gentoo.org> samba-3.0.27a.ebuild:
   Added note to restart clients
