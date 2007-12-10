@@ -108,7 +108,3 @@ media-libs/xine-lib -real
 # Mask x86-32 asm only flags
 # bug #178033
 media-video/cinelerra-cvs mmx 3dnow
-
-# Diego Pettenò <flameeyes@gentoo.org> (14 Nov 2007)
-# Mask glibc-omitfp on glibc 2.7 until bug #196926 is fixed.
-~sys-libs/glibc-2.7 glibc-omitfp
