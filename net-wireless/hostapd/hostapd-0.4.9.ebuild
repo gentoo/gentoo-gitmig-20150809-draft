@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.9.ebuild,v 1.5 2007/06/19 07:50:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.9.ebuild,v 1.6 2007/12/10 09:42:02 gurligebis Exp $
 
 inherit toolchain-funcs
 
@@ -28,7 +28,7 @@ src_unpack() {
 	unpack ${A}
 
 	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \
-		${S}/hostapd.conf
+		"${S}/hostapd.conf"
 
 	# toolchain setup
 	echo "CC = $(tc-getCC)" > ${CONFIG}
@@ -79,8 +79,8 @@ src_install() {
 	dosbin hostapd
 	dobin hostapd_cli
 
-	newinitd ${FILESDIR}/${P}-init.d hostapd
-	newconfd ${FILESDIR}/${P}-conf.d hostapd
+	newinitd "${FILESDIR}/${P}-init.d" hostapd
+	newconfd "${FILESDIR}/${P}-conf.d" hostapd
 
 	doman hostapd.8 hostapd_cli.1
 
