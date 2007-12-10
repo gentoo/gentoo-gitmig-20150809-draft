@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-1.10.ebuild,v 1.1 2007/12/08 09:52:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-1.10.ebuild,v 1.2 2007/12/10 01:08:09 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -27,6 +27,11 @@ src_unpack() {
 		-e "s/^\(CC =\).*/\1 $(tc-getCC) ${CFLAGS}/" \
 		-e "s:-O2:${CFLAGS}:" \
 		Makefile || die "sed failed"
+}
+
+src_compile() {
+	rm -f fbzx_fs fbzx *.o # clean out accidentally packaged .o files
+	emake || die
 }
 
 src_install() {
