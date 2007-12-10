@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-5.0_beta1.ebuild,v 1.1 2007/12/10 08:52:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-5.0_beta1.ebuild,v 1.2 2007/12/10 09:07:23 vapier Exp $
 
 inherit multilib distutils
 
@@ -81,7 +81,7 @@ pkg_preinst() {
 pkg_postinst() {
 	chown -R rpm:rpm "${ROOT}"/usr/$(get_libdir)/rpm
 	chown -R rpm:rpm "${ROOT}"/var/lib/rpm
-	chown rpm:rpm "${ROOT}"/usr/bin/rpm{,2cpio,build,db,query,sign,verify}
+	chown rpm:rpm "${ROOT}"/usr/bin/rpm{,2cpio,build,contant}
 	if [[ ${ROOT} == "/" ]] ; then
 		if [[ -f ${ROOT}/var/lib/rpm/Packages ]] ; then
 			einfo "RPM database found... Rebuilding database (may take a while)..."
