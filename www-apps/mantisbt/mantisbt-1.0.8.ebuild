@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.8.ebuild,v 1.5 2007/11/18 08:45:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.8.ebuild,v 1.6 2007/12/10 16:14:57 pva Exp $
 
 inherit eutils webapp
 
@@ -16,8 +16,8 @@ S=${WORKDIR}/${MY_P}
 KEYWORDS="amd64 ppc x86"
 
 RDEPEND="
-	www-servers/apache
 	virtual/httpd-php
+	virtual/httpd-cgi
 	!bundled-adodb? ( dev-php/adodb )
 "
 
