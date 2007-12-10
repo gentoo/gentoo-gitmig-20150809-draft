@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.45.1-r1.ebuild,v 1.2 2007/12/08 06:53:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.45.1-r1.ebuild,v 1.3 2007/12/10 11:33:31 maekke Exp $
 
 inherit gnome2
 
@@ -48,6 +48,7 @@ COMMON_DEPEND=">=x11-libs/gtk+-2.10.7
 # on that.
 RDEPEND="
 	${COMMON_DEPEND}
+	dev-python/numpy
 	dia? ( app-office/dia )
 	postscript? ( >=media-gfx/pstoedit-3.44 media-gfx/skencil )
 	wmf? ( media-libs/libwmf )"
