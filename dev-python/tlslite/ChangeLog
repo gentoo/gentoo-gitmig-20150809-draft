@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tlslite
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.4 2006/05/30 19:06:01 sbriesen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.5 2007/12/10 01:05:12 sbriesen Exp $
+
+  10 Dec 2007; Stefan Briesenick <sbriesen@gentoo.org> tlslite-0.3.8.ebuild:
+  corrected dependencies, removed ia64 keyword (see bugs #198366 and 199481).
 
   30 May 2006; Stefan Briesenick <sbriesen@gentoo.org> tlslite-0.3.8.ebuild:
   fixed 'userpriv' problem, see bug #134917.
