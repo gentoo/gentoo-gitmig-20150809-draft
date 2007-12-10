@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/gigabase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.28 2007/11/11 10:32:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.29 2007/12/10 15:03:50 cla Exp $
+
+  10 Dec 2007; Dawid Węgliński <cla@gentoo.org> gigabase-3.61.ebuild:
+  Stable on x86 (bug #201840)
 
 *gigabase-3.61 (11 Nov 2007)
 
