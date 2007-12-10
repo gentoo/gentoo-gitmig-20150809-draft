@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.2.0.ebuild,v 1.1 2007/10/23 17:52:53 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.2.0.ebuild,v 1.2 2007/12/10 01:16:50 cryos Exp $
 
 inherit toolchain-funcs multilib
 
@@ -22,6 +22,7 @@ RDEPEND=">=x11-libs/qt-4.3.0
 src_compile() {
 	cmake -DCMAKE_INSTALL_PREFIX=/usr \
 		-DLIBRARY_OUTPUT_PATH=PROJECT_BINARY_DIR/$(get_libdir) \
+		-DCMAKE_BUILD_TYPE=release \
 		-DLIB_INSTALL_DIR=$(get_libdir) \
 		-DCMAKE_C_COMPILER=$(type -p $(tc-getCC)) \
 		-DCMAKE_CXX_COMPILER=$(type -p $(tc-getCXX)) || die "cmake failed"
