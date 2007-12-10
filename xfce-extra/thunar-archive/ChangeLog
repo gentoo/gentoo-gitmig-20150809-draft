@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/thunar-archive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.28 2007/07/04 18:21:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.29 2007/12/10 15:08:10 drac Exp $
+
+  10 Dec 2007; Samuli Suominen <drac@gentoo.org>
+  thunar-archive-0.2.4-r1.ebuild:
+  Change position of xfce44_goodies_thunar_plugin to get HOMEPAGE from ebuild
+  instead of eclass wrt #201795
 
   04 Jul 2007; Samuli Suominen <drac@gentoo.org>
   thunar-archive-0.2.4-r1.ebuild:
