@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnome-avrdude/gnome-avrdude-0.1.ebuild,v 1.1 2007/12/09 16:39:43 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnome-avrdude/gnome-avrdude-0.1.ebuild,v 1.2 2007/12/10 17:44:44 calchan Exp $
 
 inherit gnome2 autotools
 
@@ -18,11 +18,13 @@ RDEPEND=">=dev-libs/glib-2
 	gnome-base/libgnome
 	gnome-base/libgnomeui
 	gnome-base/libglade
-	x11-libs/pango
-	dev-embedded/avrdude"
+	x11-libs/pango"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+RDEPEND="${RDEPEND}
+	dev-embedded/avrdude"
 
 DOCS="AUTHORS NEWS README"
 
