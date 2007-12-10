@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.886 2007/12/08 20:26:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.887 2007/12/10 16:29:30 maekke Exp $
+
+  10 Dec 2007; Markus Meier <maekke@gentoo.org> use.local.desc:
+  clarify inkjar description, bug #201040
 
   08 Dec 2007; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Last rites for gnustep-base/gnustep-env, gnustep-libs/artresources
