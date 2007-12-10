@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.28 2007/11/03 20:22:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.29 2007/12/10 14:58:14 cla Exp $
+
+  10 Dec 2007; Dawid Węgliński <cla@gentoo.org>
+  darkstat-3.0.707-r1.ebuild:
+  Stable on x86 (bug #201839)
 
   03 Nov 2007; <pva@gentoo.org> darkstat-3.0.707-r1.ebuild:
   Respect ROOT in pkg_* functions.
