@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.1.123.ebuild,v 1.8 2007/11/10 22:02:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.1.123.ebuild,v 1.9 2007/12/11 09:22:31 vapier Exp $
 
 inherit vim
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.vim.org/pub/vim/unstable/unix/vim-${VIM_VERSION}.tar.bz2
 
 S="${WORKDIR}/vim${VIM_VERSION/.}"
 DESCRIPTION="Vim, an improved vi-style text editor"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 DEPEND="${DEPEND}
 	!minimal? ( ~app-editors/vim-core-${PV} )"
