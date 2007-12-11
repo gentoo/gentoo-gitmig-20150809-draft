@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.20.2.ebuild,v 1.7 2007/12/04 20:28:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.20.2.ebuild,v 1.8 2007/12/11 23:10:21 vapier Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/eog/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="dbus jpeg lcms python"
 
 # FIXME: add exempi to the tree ?
