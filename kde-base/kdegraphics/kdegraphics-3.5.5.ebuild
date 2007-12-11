@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.5.ebuild,v 1.9 2006/12/11 15:03:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.5.ebuild,v 1.10 2007/12/11 10:30:51 aballier Exp $
 
 inherit kde-dist eutils
 
@@ -30,7 +30,6 @@ RDEPEND="${DEPEND}
 	tetex? (
 	|| ( >=app-text/tetex-2
 		 app-text/ptex
-		 app-text/cstetex
 		 app-text/dvipdfm ) )"
 
 DEPEND="${DEPEND}
