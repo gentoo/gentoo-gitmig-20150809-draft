@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.11-r1.ebuild,v 1.2 2007/07/22 07:54:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.11-r1.ebuild,v 1.3 2007/12/11 17:32:51 anant Exp $
 
-inherit eutils
+inherit eutils versionator
 
 DESCRIPTION="Network Simulator GUI for NS"
 HOMEPAGE="http://www.isi.edu/nsnam/nam"
@@ -33,15 +33,17 @@ src_unpack() {
 src_compile() {
 	local tclver=$(best_version ">=dev-lang/tcl-8.4.4")
 	einfo "Using ${tclver}"
+	tclver=$(get_version_component_range 1-3 "${tclver:13}")
 
 	local tkver=$(best_version ">=dev-lang/tk-8.4.4")
 	einfo "Using ${tkver}"
+	tkver=$(get_version_component_range 1-3 "${tkver:12}")
 
 	econf \
 		--mandir=/usr/share/man \
 		--enable-release \
-		--with-tcl-ver=${tclver:13} \
-		--with-tk-ver=${tkver:12} \
+		--with-tcl-ver=${tclver} \
+		--with-tk-ver=${tkver} \
 		$(use_enable debug) \
 		|| die "econf failed"
 
