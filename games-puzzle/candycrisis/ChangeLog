@@ -1,0 +1,11 @@
+# ChangeLog for games-puzzle/candycrisis
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/candycrisis/ChangeLog,v 1.1 2007/12/11 21:17:22 tupone Exp $
+
+*candycrisis-1.0 (11 Dec 2007)
+
+  11 Dec 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/candycrisis-1.0-gentoo.patch, +metadata.xml,
+  +candycrisis-1.0.ebuild:
+  New package. Bug #197770 by Marcel Unbehaun
+

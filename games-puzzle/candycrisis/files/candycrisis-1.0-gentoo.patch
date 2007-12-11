@@ -1,0 +1,81 @@
+--- main.cpp.old	2007-12-10 22:33:59.000000000 +0100
++++ main.cpp	2007-12-10 22:34:30.000000000 +0100
+@@ -592,7 +592,7 @@
+ 	strcpy( candyCrisisResources, ":CandyCrisisResources:" );
+ #endif
+ #ifdef linux
+-	strcpy( candyCrisisResources, "CandyCrisisResources/" );
++	strcpy( candyCrisisResources, "@GENTOO_DATADIR@" );
+ #endif
+ 
+ 	if( SDL_Init( SDL_INIT_VIDEO | SDL_INIT_AUDIO ) < 0 )
+@@ -626,7 +626,6 @@
+ 	}
+ #else
+     SDL_WM_IconifyWindow();
+-	ShellExecute( NULL, "open", url, "", "c:\\", SW_SHOWNORMAL );
+ 	WaitForRegainFocus();
+ #endif
+ }
+@@ -703,7 +703,7 @@
+ 
+ void InitRegistration()
+ {
+-	playerIsRegistered = ValidateCode( registeredName, registeredKey );
++	playerIsRegistered = true;
+ }
+ 
+ 
+--- Makefile.old	2007-12-10 22:38:42.000000000 +0100
++++ Makefile	2007-12-10 22:39:59.000000000 +0100
+@@ -1,7 +1,7 @@
+ 
+ OPTIMIZE := -O3
+ CXXFLAGS := $(shell sdl-config --cflags) -DHAVE_MIKMOD $(OPTIMIZE)
+-LIBS   := $(shell sdl-config --libs) -lSDL_image -lmikmod
++LIBS   := $(shell sdl-config --libs) -lSDL_image -lfmod
+ 
+ TARGET := CandyCrisis
+ 
+@@ -18,7 +18,9 @@
+ 	keyselect.o \
+ 	level.o \
+ 	main.o \
+-	midi.o \
++	fmodsoundfx.o \
++	fmodmusic.o \
++	RegAlgorithm.o \
+ 	moving.o \
+ 	MTypes.o \
+ 	next.o \
+--- fmodsoundfx.cpp.old	2007-12-10 22:41:02.000000000 +0100
++++ fmodsoundfx.cpp	2007-12-10 22:41:37.000000000 +0100
+@@ -22,7 +22,7 @@
+ 	
+ 	for( index=0; index<kNumSounds; index++ )
+ 	{
+-		sound[index] = FSOUND_Sample_Load( FSOUND_UNMANAGED, QuickResourceName( "snd", index+128, ".wav" ), FSOUND_NORMAL | FSOUND_LOOP_OFF | FSOUND_2D, 0 );
++		sound[index] = FSOUND_Sample_Load( FSOUND_UNMANAGED, QuickResourceName( "snd", index+128, ".wav" ), FSOUND_NORMAL | FSOUND_LOOP_OFF | FSOUND_2D, 0, 0 );
+ 		if( sound[index] == NULL )
+ 		{
+ 			Error( "InitSound: files are missing" );
+--- prefs.cpp.old	2007-12-10 23:10:49.000000000 +0100
++++ prefs.cpp	2007-12-10 23:18:45.000000000 +0100
+@@ -37,7 +37,7 @@
+ 	int fileSize, count, digitsLeft;
+ 	unsigned char info, *infoAt, *dataAt, *fileData;
+ 	
+-	F = fopen( QuickResourceName( "Preferences", 0, ".txt" ), "r" );
++	F = fopen( "@GENTOO_STATEDIR@/Preferences.txt", "r" );
+ 
+ 	if( F != NULL )
+ 	{
+@@ -128,7 +128,7 @@
+ 	short count, size;
+ 	unsigned char* dataAt;
+ 	
+-	F = fopen( QuickResourceName( "Preferences", 0, ".txt" ), "w" );
++	F = fopen( "@GENTOO_STATEDIR@/Preferences.txt", "w" );
+ 	
+ 	if( F != NULL )
+ 	{
