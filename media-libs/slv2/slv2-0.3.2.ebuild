@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/slv2-0.3.2.ebuild,v 1.1 2007/12/10 21:41:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/slv2-0.3.2.ebuild,v 1.2 2007/12/11 01:53:31 mr_bones_ Exp $
 
 DESCRIPTION="A library to make the use of LV2 plugins as simple as possible for applications"
 HOMEPAGE="http://wiki.drobilla.net/SLV2"
@@ -17,7 +17,6 @@ RDEPEND="dev-libs/redland
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	dev-util/pkgconfig"
-
 
 src_compile() {
 	econf $(use_enable debug) \
