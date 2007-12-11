@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.9-r1.ebuild,v 1.2 2007/12/09 19:35:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.9-r1.ebuild,v 1.3 2007/12/11 16:35:41 dertobi123 Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam
 
@@ -220,11 +220,9 @@ src_install() {
 pkg_postinst() {
 	# do not install server.{key,pem) if they are exist.
 	use ssl && {
-		if [ ! -f "${ROOT:-/}"etc/ssl/cyrus/server.key ]; then
-			dodir "${ROOT:-/}"etc/ssl/cyrus
-			insinto "${ROOT:-/}"etc/ssl/cyrus/
-			install_cert "${ROOT:-/}"etc/ssl/cyrus/server
-			chown cyrus:mail "${ROOT:-/}"etc/ssl/cyrus/server.{key,pem}
+		if [ ! -f "${ROOT}"etc/ssl/cyrus/server.key ]; then
+			install_cert /etc/ssl/cyrus/server
+			chown cyrus:mail "${ROOT}"etc/ssl/cyrus/server.{key,pem}
 	fi
 	}
 

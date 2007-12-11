@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.8.ebuild,v 1.5 2007/12/09 19:36:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.8.ebuild,v 1.6 2007/12/11 16:34:13 dertobi123 Exp $
 
 inherit eutils ssl-cert
 
@@ -67,8 +67,6 @@ pkg_postinst() {
 	if use ssl ; then
 		dosed "s:#IMSPD_USE_SSL:IMSPD_USE_SSL:" "${ROOT:-/}"etc/conf.d/imsp
 		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Cyrus IMSP Server}"
-		dodir "${ROOT:-/}"etc/ssl/imspd
-		insinto "${ROOT:-/}"etc/ssl/imspd
-		install_cert "${ROOT:-/}"etc/ssl/imspd/server
+		install_cert /etc/ssl/imspd/server
 	fi
 }
