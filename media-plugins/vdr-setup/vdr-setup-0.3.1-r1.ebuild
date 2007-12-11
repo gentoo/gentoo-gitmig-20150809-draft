@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1-r1.ebuild,v 1.3 2007/10/21 20:53:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1-r1.ebuild,v 1.4 2007/12/11 11:13:00 zzam Exp $
 
 inherit vdr-plugin
 
@@ -35,11 +35,18 @@ pkg_setup() {
 		echo
 		eerror "Patched VDR needed"
 		echo
+		local flag="setup-plugin"
 		if has_version ">=media-video/vdr-1.4.7" ; then
-			elog "reemerge VDR with USE=\"setup\" " && die "unpack failed, patched VDR needed"
-		else
-			elog "reemerge VDR with USE=\"setup-plugin\" " && die "unpack failed, patched VDR needed"
+			flag="setup"
 		fi
+
+		ewarn "you need to reemerge VDR with USE=\"${flag}\""
+		ewarn
+		ewarn "If you did USE=\"${flag}\" emerge vdr"
+		ewarn 'and it failed with this message, then try'
+		ewarn "\tUSE=\"${flag}\" emerge vdr vdr-setup"
+
+		die "unpack failed, patched VDR needed"
 	fi
 }
 
