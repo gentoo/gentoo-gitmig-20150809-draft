@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/currvita/currvita-0.9i.ebuild,v 1.6 2006/03/16 13:54:17 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/currvita/currvita-0.9i.ebuild,v 1.7 2007/12/11 10:39:00 aballier Exp $
 
 inherit latex-package
 
@@ -19,7 +19,6 @@ IUSE=""
 # >=tetex-2 includes currvita
 DEPEND="!>=app-text/tetex-2
 	!app-text/ptex
-	!app-text/cstetex
 	virtual/tetex"
 
 S="${WORKDIR}/${PN}"

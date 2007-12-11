@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/eurosym
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.19 2007/03/13 00:17:31 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.20 2007/12/11 10:37:38 aballier Exp $
+
+  11 Dec 2007; Alexis Ballier <aballier@gentoo.org> eurosym-1.4.ebuild:
+  remove cstetex references, its being removed, part of bug #196673
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).

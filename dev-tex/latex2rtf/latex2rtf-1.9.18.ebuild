@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.18.ebuild,v 1.1 2007/10/31 12:22:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.18.ebuild,v 1.2 2007/12/11 10:34:15 aballier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,6 @@ DEPEND="virtual/tetex
 	test? ( || (
 		dev-texlive/texlive-langgerman
 		app-text/tetex
-		app-text/cstetex
 		app-text/ptex
 		)
 	)"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex2rtf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.18 2007/11/24 11:08:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.19 2007/12/11 10:34:15 aballier Exp $
+
+  11 Dec 2007; Alexis Ballier <aballier@gentoo.org> latex2rtf-1.9.18.ebuild,
+  latex2rtf-1.9.19.ebuild:
+  remove cstetex references, its being removed, part of bug #196673
 
 *latex2rtf-1.9.19 (24 Nov 2007)
 
