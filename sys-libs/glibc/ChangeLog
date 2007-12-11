@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.567 2007/12/10 20:28:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.568 2007/12/11 04:58:01 vapier Exp $
+
+  11 Dec 2007; Mike Frysinger <vapier@gentoo.org> glibc-2.7-r1.ebuild:
+  Add patch to fix building on alpha #201910 by Jose Luis Rivero.
 
   10 Dec 2007; Jeroen Roovers <jer@gentoo.org> glibc-2.7-r1.ebuild:
   Marked ~hppa too.

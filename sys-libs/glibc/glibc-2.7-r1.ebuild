@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7-r1.ebuild,v 1.2 2007/12/10 20:28:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7-r1.ebuild,v 1.3 2007/12/11 04:58:01 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -17,7 +17,7 @@ RELEASE_VER=$(get_version_component_range 1-3) # major glibc version
 BRANCH_UPDATE=$(get_version_component_range 4) # upstream cvs snaps
 MANPAGE_VER=""                                 # pregenerated manpages
 INFOPAGE_VER=""                                # pregenerated infopages
-PATCH_VER="1.3"                                # Gentoo patchset
+PATCH_VER="1.4"                                # Gentoo patchset
 PATCH_GLIBC_VER=${RELEASE_VER}                 # glibc version in patchset
 PORTS_VER=${RELEASE_VER}                       # version of glibc ports addon
 LT_VER=""                                      # version of linuxthreads addon
