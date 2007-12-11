@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST notification-daemon-xfce-0.3.7.tar.bz2 329496 RMD160 d5df3795d7d7a5f5fceee6ac7672c7e173f01070 SHA1 46d8dead23db347db7aae56b90ecca4a1dedf545 SHA256 c0dc4100a9fc6cbc45ce8741fd360f4d80ad57ced6905e42a70a92855d09a38a
 EBUILD notification-daemon-xfce-0.3.7.ebuild 1202 RMD160 ab7fb8dfccf95175953b13462a89dcc1461a892f SHA1 a561bfe37af1b205eabc6447ccc5de14af120090 SHA256 f87b49b1309ab1b7d66ca9b430bc299145a64bc195faa0414d90a036801f496d
 MD5 c6b8a6d11b8865c52c977b5579e1f477 notification-daemon-xfce-0.3.7.ebuild 1202
@@ -14,3 +17,10 @@ SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata
 MD5 5ec8ad97b1c0e1bd31f363a4e0414cfb files/digest-notification-daemon-xfce-0.3.7 295
 RMD160 2f9ca0690f4472c2b9c47fa8dd7277503bf0eeb6 files/digest-notification-daemon-xfce-0.3.7 295
 SHA256 27b29cafc0a157679d7a6311a3cd1668a73fdbb81128aca9e851850bd0d95e9b files/digest-notification-daemon-xfce-0.3.7 295
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXmmpp/wUKkr7RBoRAs25AKCFM6DxbiPLoHq96RLcLojcCKivMQCdF5R6
+wNAmSF3PuV6C9uSsbNJhTVc=
+=8edn
+-----END PGP SIGNATURE-----

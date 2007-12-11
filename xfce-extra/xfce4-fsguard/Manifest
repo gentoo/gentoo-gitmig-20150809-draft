@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfce4-fsguard-0.3.0-asneeded.patch 531 RMD160 c987087bd42c5f7b0a70beadfac3b7c366efc195 SHA1 d9a29018df089a7a2a2a6a6b33cc031baa75bd80 SHA256 7cffd105f1ccb2da3a2fa5a5efe8d254c0eb892f41b82604f344fa1a9e410314
 MD5 ae4dd790b11df6d78140e9b85011864e files/xfce4-fsguard-0.3.0-asneeded.patch 531
 RMD160 c987087bd42c5f7b0a70beadfac3b7c366efc195 files/xfce4-fsguard-0.3.0-asneeded.patch 531
@@ -26,3 +29,10 @@ SHA256 5e56b6d6afad55a8edf5d90721ffb14df02bbe3f7c90172f5bba5be53827c8f0 files/di
 MD5 8817fc87d4ec7aaf7b77d612462bba01 files/digest-xfce4-fsguard-0.4.0 283
 RMD160 a3fa744a15ba2bc5f5810d3ddd36ddd2bfa74697 files/digest-xfce4-fsguard-0.4.0 283
 SHA256 104303558c3b6e54d7ad09335810c359cf0421c14924be66a515f3c76e4ecfe6 files/digest-xfce4-fsguard-0.4.0 283
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXmmqp/wUKkr7RBoRAokUAJwODl0UnwXOE4dmF+XWfiN3rv3WxACgx0QD
+bgQmHElzpnWIcn5iO3BUBtk=
+=gOsI
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX notes_applet.c.patch 285 RMD160 ccdc6f6fa9fabb306b599bfa3e123a2f96093ff3 SHA1 702ddbd7a1d418a6ed5943e2fd735e1823906401 SHA256 97128cc77617c8e1fc1a493faaa1ecdf12796f3bb73c1f4ca53bd78652571dee
 MD5 26718c962f6a184d14efff98f76c2bd7 files/notes_applet.c.patch 285
 RMD160 ccdc6f6fa9fabb306b599bfa3e123a2f96093ff3 files/notes_applet.c.patch 285
@@ -26,3 +29,10 @@ SHA256 825d125bb2b175725a9ef02c9380e9d9dfe59a51456ee777cda3888ad11a4273 files/di
 MD5 85c66803cc800a49e3321525deef9a16 files/digest-xfce4-notes-1.6.0 277
 RMD160 9696b7fc4aed26c162f95c1963edabaaa8464d54 files/digest-xfce4-notes-1.6.0 277
 SHA256 8bcaf5cbec5387f27ece083c5e4a85657e469c957e2f0ddd61cc415698275f20 files/digest-xfce4-notes-1.6.0 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXmmqp/wUKkr7RBoRAk7GAKCN325hcyifgwd/RF04IHW4/mnqWgCcDkz3
+HRjfkvfWJCOpg1Q33GUxJdg=
+=FWZO
+-----END PGP SIGNATURE-----

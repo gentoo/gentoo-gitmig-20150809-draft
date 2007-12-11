@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfce4-cpugraph-0.3.0-asneeded.patch 538 RMD160 eb0d2984789c3c3b13837ba1b6ebfb76f8d8d2c9 SHA1 be76224d236c49bf4a158fd0049c26039208322c SHA256 442a91e48ec5921fe05e55e6745c63b91f71e3fa357c8baf86901f2a18a5f9e0
 MD5 69c8924af5d872ff2310673f87f0066b files/xfce4-cpugraph-0.3.0-asneeded.patch 538
 RMD160 eb0d2984789c3c3b13837ba1b6ebfb76f8d8d2c9 files/xfce4-cpugraph-0.3.0-asneeded.patch 538
@@ -30,3 +33,10 @@ SHA256 818354f2225005c8f4b12730746c184cd4833cb1de8debadfaec675181480d36 files/di
 MD5 e8c3c683d8a3d42ff1944333042cd943 files/digest-xfce4-cpugraph-0.4.0 283
 RMD160 44b3072660845aedd66ece6eda58c120f7f257da files/digest-xfce4-cpugraph-0.4.0 283
 SHA256 8cec600aa5c628f8d3e5fc598c605fe44b7ba8f998ce491e0d8ec62745216f8b files/digest-xfce4-cpugraph-0.4.0 283
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXmmqp/wUKkr7RBoRAhT2AKC9dLVfGv9azZSalNCxu0ePWsPlWQCgohIq
+geii+ZV9PV6ZHcgidDtI15U=
+=tNPz
+-----END PGP SIGNATURE-----
