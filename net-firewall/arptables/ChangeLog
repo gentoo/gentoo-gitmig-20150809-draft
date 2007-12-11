@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/arptables
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.10 2007/12/10 14:52:16 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.11 2007/12/11 17:13:10 nixnut Exp $
+
+  11 Dec 2007; nixnut <nixnut@gentoo.org> arptables-0.0.3.3-r1.ebuild:
+  Stable on ppc wrt bug 201836
 
   10 Dec 2007; Dawid Węgliński <cla@gentoo.org>
   arptables-0.0.3.3-r1.ebuild:
