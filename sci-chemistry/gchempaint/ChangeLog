@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/gchempaint
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchempaint/ChangeLog,v 1.1 2007/12/11 05:00:23 je_fro Exp $
+
+*gchempaint-0.8.4 (11 Dec 2007)
+
+  11 Dec 2007; Jeff Gardner <je_fro@gentoo.org> +metadata.xml,
+  +gchempaint-0.8.4.ebuild:
+  Imported from the science overlay.
+
