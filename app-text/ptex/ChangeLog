@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.67 2007/12/06 14:57:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.68 2007/12/11 10:10:32 opfer Exp $
+
+  11 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  ptex-3.1.10_p20071203.ebuild:
+  stable x86, security bug 196673
 
 *ptex-3.1.10_p20071203 (06 Dec 2007)
 
