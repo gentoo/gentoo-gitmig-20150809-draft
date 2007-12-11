@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.84 2007/12/10 20:28:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.85 2007/12/11 11:01:29 armin76 Exp $
+
+  11 Dec 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  Mask media-video/transcode on 2.4 profiles as it needs 2.6 headers
 
   10 Dec 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
   Unmask x264 USE-flag, bug #201529
