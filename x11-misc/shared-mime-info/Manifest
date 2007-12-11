@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX shared-mime-info-0.21-pkgconfig.patch 361 RMD160 e4423d4c82379624a7aa1a5327bbe3d81a8fd546 SHA1 4a6a425b47fe5f64ce0879f919f6d41c9fccab2a SHA256 3f3388ae3e6a2b77aca960c5d778269cdce0625fdf34088fa02e0795bdf5fa0c
 MD5 25ca273e1955e015f82b0cc7b814da05 files/shared-mime-info-0.21-pkgconfig.patch 361
 RMD160 e4423d4c82379624a7aa1a5327bbe3d81a8fd546 files/shared-mime-info-0.21-pkgconfig.patch 361
@@ -17,14 +20,14 @@ EBUILD shared-mime-info-0.21-r1.ebuild 1038 RMD160 56b69e66c99f593aedafdf1ae6a7a
 MD5 2c7c8277d47e3fa53db5ce31dc64913b shared-mime-info-0.21-r1.ebuild 1038
 RMD160 56b69e66c99f593aedafdf1ae6a7ac0141259f2e shared-mime-info-0.21-r1.ebuild 1038
 SHA256 229d4325d0d46d8464b00ed659c39c8645d9ab51c9694ae7cb89ebe7dd1ec82b shared-mime-info-0.21-r1.ebuild 1038
-EBUILD shared-mime-info-0.22-r1.ebuild 1089 RMD160 3e1e49765216a5900ec020c77acd20063ba44012 SHA1 895e442d897c34eff7303281124338f4da36c567 SHA256 e7d4ecc775b02ca204a1e69ffac236c6bb47263c2a2a5352eaffea21b5067c6f
-MD5 f29b61da1982bf9927eee9ca64ff1329 shared-mime-info-0.22-r1.ebuild 1089
-RMD160 3e1e49765216a5900ec020c77acd20063ba44012 shared-mime-info-0.22-r1.ebuild 1089
-SHA256 e7d4ecc775b02ca204a1e69ffac236c6bb47263c2a2a5352eaffea21b5067c6f shared-mime-info-0.22-r1.ebuild 1089
-EBUILD shared-mime-info-0.22.ebuild 929 RMD160 2437fc598ed5e341045190fd1a12bbd87185e54e SHA1 a487f320e8152b3dbf66dc49ad73f5786b789d23 SHA256 b7f0f67a1f136d81d0d09e0d46b41c89bdc023bf67141f7e2e5a9a62670e2874
-MD5 b9b6f67f8fb4bea9ea7ea8e8ab574494 shared-mime-info-0.22.ebuild 929
-RMD160 2437fc598ed5e341045190fd1a12bbd87185e54e shared-mime-info-0.22.ebuild 929
-SHA256 b7f0f67a1f136d81d0d09e0d46b41c89bdc023bf67141f7e2e5a9a62670e2874 shared-mime-info-0.22.ebuild 929
+EBUILD shared-mime-info-0.22-r1.ebuild 1089 RMD160 7a0cd6715734ff4e2863eecc50faec9a60377385 SHA1 a05afd7ca43857e84ce42052914459757160dccb SHA256 e4d1902484185f71932449e3ede2b5bedd49a1cd2978b3f592214ffebac7170c
+MD5 36b38a2d11117e9ddb6a45c07b588960 shared-mime-info-0.22-r1.ebuild 1089
+RMD160 7a0cd6715734ff4e2863eecc50faec9a60377385 shared-mime-info-0.22-r1.ebuild 1089
+SHA256 e4d1902484185f71932449e3ede2b5bedd49a1cd2978b3f592214ffebac7170c shared-mime-info-0.22-r1.ebuild 1089
+EBUILD shared-mime-info-0.22.ebuild 925 RMD160 f73a6d60674e78286dc3336fe46c5accab17c982 SHA1 4f9dfc1830d5176f8c9c2f03d8f69d1c4888fd92 SHA256 2e82ea95bf8a5e2e226c577066122bcc8a48e250eae0c1e4103f8fc185a9d062
+MD5 756630963f65225c57b9b9ee19efd06f shared-mime-info-0.22.ebuild 925
+RMD160 f73a6d60674e78286dc3336fe46c5accab17c982 shared-mime-info-0.22.ebuild 925
+SHA256 2e82ea95bf8a5e2e226c577066122bcc8a48e250eae0c1e4103f8fc185a9d062 shared-mime-info-0.22.ebuild 925
 MISC ChangeLog 14407 RMD160 baa0e0137cd7112e37c7bc8ea36ad6a0ce30f966 SHA1 79bf737902d0fdb765781c74c74c5f2f5d6cc621 SHA256 70ec71928c3d7b841d92f33e73d29133c27d697b5fcb5b38c84a6038a521fb97
 MD5 c233b4f94797380a0d286d0aac260727 ChangeLog 14407
 RMD160 baa0e0137cd7112e37c7bc8ea36ad6a0ce30f966 ChangeLog 14407
@@ -45,3 +48,10 @@ SHA256 aee99cbaed5d50b02e212b7dc64c4bc3e61855cdb61144ce5e3cb92c1ecdd0a1 files/di
 MD5 61f7a249cc5f71e265351758617450ed files/digest-shared-mime-info-0.22-r1 268
 RMD160 c9486aa31a218f6ec51bfbab34a0dfa522230923 files/digest-shared-mime-info-0.22-r1 268
 SHA256 aee99cbaed5d50b02e212b7dc64c4bc3e61855cdb61144ce5e3cb92c1ecdd0a1 files/digest-shared-mime-info-0.22-r1 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXm0Vp/wUKkr7RBoRAh8EAJ9s6zEjWmoqbz3T7DjTKq+DPahQ0ACglXy5
+rQGa1hVd1TaKXi4FvQa3yVw=
+=oIG2
+-----END PGP SIGNATURE-----
