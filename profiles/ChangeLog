@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.888 2007/12/10 23:13:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.889 2007/12/11 14:01:01 alonbl Exp $
+
+  11 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
+  Masked >=dev-libs/libgcrypt-1.4.0
 
   10 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org> updates/4Q-2007:
   slot goffice for 0.4 inclusion and future releases
