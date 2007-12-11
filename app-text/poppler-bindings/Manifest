@@ -32,10 +32,10 @@ EBUILD poppler-bindings-0.5.4.ebuild 1814 RMD160 075c8e04d914681ca9702c2286f8393
 MD5 34153bfdeaf3ed8be4c9d4f4f4d9d183 poppler-bindings-0.5.4.ebuild 1814
 RMD160 075c8e04d914681ca9702c2286f8393a046a6767 poppler-bindings-0.5.4.ebuild 1814
 SHA256 9d2fe71e7cddfe0a5276ad0234c8b706dfd27ed6f97fe05af39c0ea4e8b72301 poppler-bindings-0.5.4.ebuild 1814
-EBUILD poppler-bindings-0.6.1.ebuild 2017 RMD160 3ef3e4b90bfa5141dfca5c0794198502f2990ed4 SHA1 8952953e73ad5b4077176b8be11464eea095ab5e SHA256 4c12dbae61ec1b1be4726e8fd5a7b73a00c159c541f723baebd9a0e7525b91f5
-MD5 7c2b7167dcea95b7e3d9fa76a5567848 poppler-bindings-0.6.1.ebuild 2017
-RMD160 3ef3e4b90bfa5141dfca5c0794198502f2990ed4 poppler-bindings-0.6.1.ebuild 2017
-SHA256 4c12dbae61ec1b1be4726e8fd5a7b73a00c159c541f723baebd9a0e7525b91f5 poppler-bindings-0.6.1.ebuild 2017
+EBUILD poppler-bindings-0.6.1.ebuild 2014 RMD160 91a9021da21d17a5b5edf6867e664eb7dd3da7d8 SHA1 e1b572a82d9a90abb8a5bf2e5201da53db934069 SHA256 c3b35165e90d731c5bf9077ed372c1e587711596245e645ab71635212a315db5
+MD5 7ba99dd110514116032012150317bdde poppler-bindings-0.6.1.ebuild 2014
+RMD160 91a9021da21d17a5b5edf6867e664eb7dd3da7d8 poppler-bindings-0.6.1.ebuild 2014
+SHA256 c3b35165e90d731c5bf9077ed372c1e587711596245e645ab71635212a315db5 poppler-bindings-0.6.1.ebuild 2014
 EBUILD poppler-bindings-0.6.2.ebuild 2024 RMD160 c3678cdf6bf711bff4bf9d1df2c25620bc89df6e SHA1 0d25b2eacffb058b3fdcd45642e10682f1f31e9e SHA256 213838855688307cde71723ddfdf6e32d219b4d581e9a03006a1c77f705e580b
 MD5 c5bc17687ac38c5ce6e93c6d53dad22d poppler-bindings-0.6.2.ebuild 2024
 RMD160 c3678cdf6bf711bff4bf9d1df2c25620bc89df6e poppler-bindings-0.6.2.ebuild 2024
@@ -70,7 +70,7 @@ SHA256 b233f755509d3953964c7fcdd20375a0bf88be999c0c1a25c412c5c407485fe8 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFHVvNsoeSe8B0zEfwRAqJ7AKCBODSBhao7djbSmi9ym1txNJHNDACfSFPX
-75SKmm0/Kh0QaFgdXgiH+98=
-=Myev
+iD8DBQFHXlnip/wUKkr7RBoRAu9KAJ0ZOxRNCCwrwwpkIKzjkiSbp2OjEgCeLuwQ
+1nyTrrtdTEJGcMiQlrtT4dI=
+=s1dC
 -----END PGP SIGNATURE-----
