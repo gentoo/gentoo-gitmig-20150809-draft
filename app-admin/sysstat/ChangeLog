@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.91 2007/12/11 17:52:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.92 2007/12/11 19:35:11 armin76 Exp $
+
+  11 Dec 2007; Raúl Porcel <armin76@gentoo.org> sysstat-8.0.2.ebuild:
+  alpha/sparc stable wrt #201956
 
   11 Dec 2007; Christian Faulhammer <opfer@gentoo.org> sysstat-8.0.2.ebuild:
   stable x86, bug 201956
