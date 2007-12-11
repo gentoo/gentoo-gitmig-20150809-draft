@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.480 2007/12/08 07:09:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.481 2007/12/11 00:33:54 zmedico Exp $
+
+  11 Dec 2007; Zac Medico <zmedico@gentoo.org> ChangeLog,
+  -portage-2.1.4_rc4.ebuild, -portage-2.1.4_rc8.ebuild:
+  Remove old versions and prune useless ChangeLog entries.
 
 *portage-2.1.4_rc9 (08 Dec 2007)
 
@@ -105,20 +109,6 @@
   a package should not be tried on archs other than those for which it
   already has KEYWORDS. Bug #198097 tracks all bugs fixed since 2.1.3.16.
 
-*portage-2.1.3.18 (04 Nov 2007)
-
-  04 Nov 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.3.18.ebuild:
-  2.1.3.18 bump. This fixes bugs #197797, #197932, #197965, #197990,
-  and #198062. Bug #198097 tracks all bugs fixed since 2.1.3.16.
-
-*portage-2.1.3.17 (02 Nov 2007)
-
-  02 Nov 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.3.17.ebuild:
-  2.1.3.17 bump. This release includes a merge order optimization that
-  helps in cases where there are circular dependencies involving PDEPEND
-  that trigger built_with_use() failures during installation of binary
-  packages as reported in bug #189966.
-
   28 Oct 2007; Markus Rothe <corsair@gentoo.org> portage-2.1.3.16.ebuild:
   Stable on ppc64; bug #197165
 
@@ -151,38 +141,10 @@
   2.1.3.16 bump. This fixes bugs #196435, #196537, #196565, #196652, and
   #196680. Bug #194041 tracks all bugs fixed since 2.1.3.9.
 
-*portage-2.1.3.15 (18 Oct 2007)
-
-  18 Oct 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.3.15.ebuild:
-  2.1.3.15 bump. This fixes bugs #196043 (clarification of when bugs should
-  be filed in the event of file collisions) and #195375 (USE=multislot
-  triggers false file collisions). Also included is a new `portageq owners`
-  command that is similar to `equery belongs` but is capable of efficiently
-  finding packages that own files even when paths are ambiguous due to
-  symlinked directories. When collision-protect is enabled and a collision
-  occurs, the search for owners does much fewer stat calls than before but
-  is still as accurate as possible. Bug #194041 tracks all bugs fixed since
-  2.1.3.9.
-
   18 Oct 2007; Zac Medico <zmedico@gentoo.org> -portage-2.1.3.11.ebuild,
   -portage-2.1.3.13.ebuild, portage-2.1.3.14.ebuild:
   Bug #196278 - Bump bash dependency to 3.2_p17 to fix etc-update
   compatibility issue. Remove old versions.
-
-*portage-2.1.3.14 (15 Oct 2007)
-
-  15 Oct 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.3.14.ebuild:
-  2.1.3.14 bump. This fixes bug #195920 (etc-update hangs when using an
-  editor for diff_command). Bug #194041 tracks all bugs fixed since
-  2.1.3.9.
-
-*portage-2.1.3.13 (13 Oct 2007)
-
-  13 Oct 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.3.13.ebuild:
-  2.1.3.13 bump. This fixes bugs #171272, #183808, #195370, and #195527.
-  This also solves a regression in 2.1.3.12 that caused `repoman commit`
-  to bail out if ebuild checksums did not match the current Manifest.
-  Bug #194041 tracks all bugs fixed since 2.1.3.9.
 
 *portage-2.1.3.12 (06 Oct 2007)
 
@@ -197,26 +159,6 @@
   defining EAPI="1" in any ebuilds, especially if other packages depend
   on those ebuilds. See the ebuild(5) and emerge(1) manual pages for
   EAPI related documentation.
-
-  30 Sep 2007; Zac Medico <zmedico@gentoo.org> -portage-2.1.2.2.ebuild,
-  -portage-2.1.2.9.ebuild, -portage-2.1.2.11.ebuild:
-  Remove old versions.
-
-*portage-2.1.3.11 (28 Sep 2007)
-
-  28 Sep 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.3.11.ebuild:
-  2.1.3.11 bump. This fixes bugs #192706, #193548, and #194081. Most
-  important is bug #194081 which is a regression in 2.1.3.10 that causes
-  'Device or resource busy' errors during unmerge. Bug #194041 tracks
-  all bugs fixed since 2.1.3.9.
-
-*portage-2.1.3.10 (27 Sep 2007)
-
-  27 Sep 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.3.10.ebuild:
-  2.1.3.10 bump. This fixes bugs #74615, #168772, #187795, #190179,
-  #190781, #191645, #192195, #192254, #192298, #192321, #192341,
-  #192346, #193486, #193695, and #194025. Bug #194041 tracks all bugs
-  fixed since 2.1.3.9.
 
   26 Sep 2007; Joshua Kinard <kumba@gentoo.org> portage-2.1.3.9.ebuild:
   Stable on mips, per #192572.
@@ -354,12 +296,6 @@
   2.1.2.9 maintenance release.  This fixes bugs #179008, #179766,
   #179870, #180009, #180079, #180222, #180399
 
-*portage-2.1.2.8 (25 May 2007)
-
-  25 May 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2.8.ebuild:
-  2.1.2.8 maintenance release.  This fixes bugs #176539, #177591,
-  #177601, #177763, #178293, #178544, #179008, and #179206.
-
   25 May 2007; Joshua Kinard <kumba@gentoo.org> portage-2.1.2.7.ebuild:
   Stable on mips, per #179036.
 
@@ -388,30 +324,8 @@
   07 May 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2.7.ebuild:
   2.1.2.7 maintenance release.  This fixes bugs #171259, #175058, and #177211.
 
-*portage-2.1.2.6 (05 May 2007)
-
-  05 May 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2.6.ebuild:
-  2.1.2.6 maintenance release. This fixes bugs #175058, #175444, #176305,
-  #176384, and #176765.
-
-*portage-2.1.2.5 (26 Apr 2007)
-
-  26 Apr 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2.5.ebuild:
-  2.1.2.5 maintenance release.  This fixes bugs #175344, #175781, and #176139.
-
-*portage-2.1.2.4 (15 Apr 2007)
-
-  15 Apr 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2.4.ebuild:
-  2.1.2.4 maintenance release. This fixes bugs #173184, #173808, and #174260.
-
   13 Apr 2007; Mike Frysinger <vapier@gentoo.org> portage-2.1.2.3.ebuild:
   Add update-etc/update-env symlinks to etc-update/env-update.
-
-*portage-2.1.2.3 (29 Mar 2007)
-
-  29 Mar 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2.3.ebuild:
-  2.1.2.3 maintenance release. This fixes bugs #163262, #170178, #171007,
-  #171117, #171212, #171840, #172033, #172539, and #172571.
 
   12 Mar 2007; Jose Luis Rivero <yoswink@gentoo.org> portage-2.1.2.2.ebuild:
   Stable on alpha wrt bug #169882
@@ -450,102 +364,3 @@
   -portage-2.1.2.1-r1.ebuild, +portage-2.1.2.2.ebuild:
   Rename 2.1.2.1-r1 to 2.1.2.2 in order to stop abusing revbumps for
   patches (non-ebuild code changes).  These two versions are identical.
-
-*portage-2.1.2.1-r1 (06 Mar 2007)
-
-  06 Mar 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2.1-r1.ebuild:
-  2.1.2.1-r1 revbump.  This fixes bugs #169620 and #167795. Bug #167107
-  tracks fixes since 2.1.2-r9.
-
-  26 Feb 2007; Fabian Groffen <grobian@gentoo.org>
-  portage-2.0.51.22-r3.ebuild, portage-2.1.1-r2.ebuild,
-  portage-2.1.2-r9.ebuild, portage-2.1.2-r11.ebuild:
-  Portage 2.1 is horribly broken on ppc-macos, 2.0.51 too old. Dropped
-  ppc-macos keyword, your only resort is now Gentoo/Alt:Prefix
-
-  26 Feb 2007; Zac Medico <zmedico@gentoo.org>
-  portage-2.1.2-r9.ebuild, portage-2.1.2-r11.ebuild:
-  RDEPEND on >=sys-apps/findutils-4.2.29 to prevent invalid predicate `-L'
-  errors from the find command in ecompressdir (bug #168432).
-
-  12 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
-  portage-2.1.2-r9.ebuild:
-  Stable on sparc wrt #166118
-
-  11 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org>
-  portage-2.1.2-r9.ebuild:
-  Stable on Alpha; bug #166118
-
-  11 Feb 2007; Markus Rothe <corsair@gentoo.org> portage-2.1.2-r9.ebuild:
-  Stable on ppc64; bug #166118
-
-  11 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org>
-  portage-2.1.2-r9.ebuild:
-  Stable on IA64; bug #166118
-
-  11 Feb 2007; Joseph Jezak <josejx@gentoo.org> portage-2.1.2-r9.ebuild:
-  Marked ppc stable for bug #166118.
-
-  10 Feb 2007; Jeroen Roovers <jer@gentoo.org> portage-2.1.2-r9.ebuild:
-  Stable for HPPA (bug #166118).
-
-  10 Feb 2007; Raúl Porcel <armin76@gentoo.org> portage-2.1.2-r9.ebuild:
-  x86 stable wrt bug 166118
-
-  10 Feb 2007; Simon Stelling <blubb@gentoo.org> portage-2.1.2-r9.ebuild:
-  stable on amd64; bug 166118
-
-  10 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org>
-  portage-2.1.2-r9.ebuild:
-  Stable on MIPS; bug #166118
-
-*portage-2.1.2-r9 (07 Feb 2007)
-
-  07 Feb 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2-r9.ebuild:
-  2.1.2-r9 revbump. Bugs #162453 and #147007 track fixes since 2.1.1.
-
-  31 Jan 2007; Zac Medico <zmedico@gentoo.org> portage-2.1.2-r5.ebuild:
-  Add RDEPEND=">=coreutils-6.4" for bug #164532.
-
-  24 Jan 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2-r4.ebuild:
-  2.1.2-r4 revbump.  Bugs #162453 and #147007 track fixes since 2.1.1.
-  KEYWORDS.missing is only a warning now.  Ebuilds with no KEYWORDS can now be
-  accepted in package.keywords via the new ** token.  This will allow
-  KEYWORDS="-*" to be phased out as per bug #160519.
-
-  20 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
-  portage-2.1.1-r2.ebuild:
-  Stable on MIPS; bug #154510
-
-  15 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
-  portage-2.1.1-r2.ebuild:
-  Stable on alpha wrt bug #154510.
-
-  15 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
-  portage-2.1.1-r2.ebuild:
-  Stable on amd64 wrt bug #154510.
-
-  15 Nov 2006; Markus Rothe <corsair@gentoo.org> portage-2.1.1-r2.ebuild:
-  Stable on ppc64; bug #154510
-
-  15 Nov 2006; Jeroen Roovers <jer@gentoo.org> portage-2.1.1-r2.ebuild:
-  Stable for HPPA (bug #154510).
-
-  11 Nov 2006; nixnut <nixnut@gentoo.org> portage-2.1.1-r2.ebuild:
-  Stable on ppc wrt bug 154510
-
-  09 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
-  portage-2.1.1-r2.ebuild:
-  Stable on sparc wrt #154510
-
-  09 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
-  portage-2.1.1-r2.ebuild:
-  stable x86, bug #154510
-
-*portage-2.1.1-r2 (08 Nov 2006)
-
-  08 Nov 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.1-r2.ebuild:
-  2.1.1-r2 regression fix revbump for bug #153591. This release is masked
-  because implicit RDEPEND behavior has been reverted back to the way it was
-  in <portage-2.0.52.  Please refer to bug #153591 and the postinst ewarn
-  message for more information.
