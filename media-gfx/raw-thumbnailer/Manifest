@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST raw-thumbnailer-0.1.tar.gz 85560 RMD160 279028dc19d34747c2af6198897b1ddbec060b11 SHA1 23e40a1e6de5bf20923b9cdd3f2e72ba48c4f4a2 SHA256 5b9aea43d56ecf8ffc2ad36523a6ce2aee5b7fbd93e1052ac7986aad8f3304c9
-EBUILD raw-thumbnailer-0.1.ebuild 898 RMD160 0ab4350820a371357cb4473f8d5d16d0cab11fa0 SHA1 1f8b6fba083989c8e472803649acbf7315930201 SHA256 5c427bebc9d4e627016bf7c83e3654ec2024b38f308c3180a10f4f083ccba00a
-MD5 3a1931bf976bb183f7361966b7584a75 raw-thumbnailer-0.1.ebuild 898
-RMD160 0ab4350820a371357cb4473f8d5d16d0cab11fa0 raw-thumbnailer-0.1.ebuild 898
-SHA256 5c427bebc9d4e627016bf7c83e3654ec2024b38f308c3180a10f4f083ccba00a raw-thumbnailer-0.1.ebuild 898
+EBUILD raw-thumbnailer-0.1.ebuild 896 RMD160 d6db7a7e52e6c7a567b829fe2fecc928470c52fa SHA1 a36dac2e55c0eda71965b397cea9dcc5d90febf5 SHA256 4c6ff889bd29bca3ccafad7394d7f7e0e26d3e8ad2cd748da0c3513811dd1f5e
+MD5 c74731e3fc7f82a555c576b395f7707a raw-thumbnailer-0.1.ebuild 896
+RMD160 d6db7a7e52e6c7a567b829fe2fecc928470c52fa raw-thumbnailer-0.1.ebuild 896
+SHA256 4c6ff889bd29bca3ccafad7394d7f7e0e26d3e8ad2cd748da0c3513811dd1f5e raw-thumbnailer-0.1.ebuild 896
 MISC ChangeLog 1706 RMD160 3db8eb7802e9f962e21f8ac3e88ebbcc0bb575fd SHA1 a1890b64c8b5313d82bc27a050e28d3dcf2c0ad1 SHA256 fcc0ca489e551aba9583e3b760d46f3c3b996d8b43ceba14c8129311288b36d4
 MD5 145b057a3936c47101c5fb15983d229a ChangeLog 1706
 RMD160 3db8eb7802e9f962e21f8ac3e88ebbcc0bb575fd ChangeLog 1706
@@ -14,3 +17,10 @@ SHA256 e9a54476dd9fc13688e8d3c4d8b59da8ef982556ca64b69b51c49ddd496f2ae3 metadata
 MD5 7e23684cd6aaf8f3f63350240a8a393c files/digest-raw-thumbnailer-0.1 256
 RMD160 cd913580de4bdfc44ff2ca9d3d210b88d8704359 files/digest-raw-thumbnailer-0.1 256
 SHA256 bb9a218b2ca7691120e0e817ce6479cb3e2047851837dcf75c9aaad8edd7818c files/digest-raw-thumbnailer-0.1 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXmlPp/wUKkr7RBoRAt4DAKDbZn7cmamQmq94NCz6fXAszAW8KgCbBa5s
+5AQ+CVgVWdmkfsd50zxmo0A=
+=iYQO
+-----END PGP SIGNATURE-----
