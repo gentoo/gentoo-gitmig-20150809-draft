@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.3.ebuild,v 1.11 2007/12/06 22:15:06 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.3.ebuild,v 1.12 2007/12/11 11:08:04 vapier Exp $
 
 inherit eutils autotools multilib pam
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/ConsoleKit"
 SRC_URI="http://people.freedesktop.org/~mccann/dist/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="debug pam"
 
 # Not parallel make safe
