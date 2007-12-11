@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfdesktop-4.4.1-translation.patch 16569 RMD160 7bbd9d40a212f13ab3e94ad49d1f6e129fc47788 SHA1 78d1e3297e06fa40d63354c597c1c0ad47c23e05 SHA256 c5a4895f1db46ba0d5c32095c00d0108a80c326b8b2cfb42956eeafdb0721bd1
 MD5 6435a1847154ad95f304acd9a83e79f7 files/xfdesktop-4.4.1-translation.patch 16569
 RMD160 7bbd9d40a212f13ab3e94ad49d1f6e129fc47788 files/xfdesktop-4.4.1-translation.patch 16569
@@ -26,3 +29,10 @@ SHA256 4d54e57f1f9b6ad05a5e4b2fd4b79c6a8ee44855a6f5fcaef4475d062d63e45b files/di
 MD5 c9350049bac6c19b810eb5deab175394 files/digest-xfdesktop-4.4.2 253
 RMD160 a44be0e64f09152b1fb45432403fa4ebe6ca8725 files/digest-xfdesktop-4.4.2 253
 SHA256 e3956fbe379fdc2ca8b4846b4d697f48f4dc83b595be722e3adbb6daf94b675f files/digest-xfdesktop-4.4.2 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXmysp/wUKkr7RBoRAlZTAJ9kOw9tWALnbutxYrKFrS6bjHRt/ACgqYnV
+mnyObHTjyseQpEeq5wt4alw=
+=WjUg
+-----END PGP SIGNATURE-----

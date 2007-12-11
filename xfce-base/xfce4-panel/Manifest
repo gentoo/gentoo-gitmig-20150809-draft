@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfce4-panel-4.4.1-gtk212.patch 400 RMD160 c16a2cac4caf09a8fd68bfc8b2df368e051e8a97 SHA1 be4e14af6fea0a2c49f2786f8b3698b3e8545fef SHA256 c3174ce11f549ff96ae791793b388b08534b1a80ec706477f12a46e0c68f2835
 MD5 3bdbf4ec07acae3eac084e1bc6535ee7 files/xfce4-panel-4.4.1-gtk212.patch 400
 RMD160 c16a2cac4caf09a8fd68bfc8b2df368e051e8a97 files/xfce4-panel-4.4.1-gtk212.patch 400
@@ -44,3 +47,10 @@ SHA256 cb4b7e0970b943b8cdad047d572a767963c3dcf9cec209362d4573ef27b5030d files/di
 MD5 dd163c550b5ccaa02d9f98beaa1f9284 files/digest-xfce4-panel-4.4.2 256
 RMD160 b094aed59f90ae82408bcb401508348567e3089d files/digest-xfce4-panel-4.4.2 256
 SHA256 644ddd21e83a93d0c56f1d2841af045e4b64f2bd0110de40899a8bf7af9ed85b files/digest-xfce4-panel-4.4.2 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXmytp/wUKkr7RBoRAvwLAKCP3yd2/m8ZxBjeZ6RrDpCqOk1W0gCgpK+b
+zaoarMiO+1yn+ctziIClDkw=
+=seVU
+-----END PGP SIGNATURE-----

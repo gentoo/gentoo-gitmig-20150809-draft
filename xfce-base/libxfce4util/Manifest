@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX libxfce4util-4.4.1-overflow.patch 452 RMD160 cd06f9a6f5b6780701a6e771eb46a50eaf0d6be3 SHA1 7c39230265f31ab36b3d8cb80748fa5df0734d93 SHA256 f16df31cc4b3aa3cfade4add7643984564b323e1352ac38a3e1edec1635f509a
 MD5 3a7f8b92d931a65eff19cfde8b1a82bf files/libxfce4util-4.4.1-overflow.patch 452
 RMD160 cd06f9a6f5b6780701a6e771eb46a50eaf0d6be3 files/libxfce4util-4.4.1-overflow.patch 452
@@ -33,3 +36,10 @@ SHA256 8453ed6134701cd194cbbcd8273871d7f66b43b1958af0efe670f5353a2fbf41 files/di
 MD5 da5f7ad335ab877b42a39b649a88873b files/digest-libxfce4util-4.4.2 259
 RMD160 8548b8741b3d5aa29cbfc90346bcb674b4a11d22 files/digest-libxfce4util-4.4.2 259
 SHA256 b9bd36894be047b952013dcd641a633d4b84318e5858ad456ee42071f2ce1547 files/digest-libxfce4util-4.4.2 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXmysp/wUKkr7RBoRAnjpAKDdabZmgf0WZP2PK5zwmCA+XL5WnACgz17F
+rFA48NQgVyLn5rtBnYvMQKA=
+=+nik
+-----END PGP SIGNATURE-----

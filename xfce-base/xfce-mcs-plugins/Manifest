@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfce-mcs-plugins-4.4.1-xrdb.patch 14504 RMD160 04a8cb18b7b314ac87fc204b48377464b44ab32b SHA1 c3181d6e8afedb6327a5937b7a87ea4a4b69c09c SHA256 890b5cd6f624cad08647fc78d1bde2386b408a1f64b3da060a57619bde90c0c7
 MD5 df66e36ad76b7e66a798ea7acf6aecf3 files/xfce-mcs-plugins-4.4.1-xrdb.patch 14504
 RMD160 04a8cb18b7b314ac87fc204b48377464b44ab32b files/xfce-mcs-plugins-4.4.1-xrdb.patch 14504
@@ -33,3 +36,10 @@ SHA256 cf0a2bfd1fec7bfc923b081e236d95677b1c5c387dcce848f795dc3f19dd1b32 files/di
 MD5 f3961aa4b9a4ca658d4b6c24a7648529 files/digest-xfce-mcs-plugins-4.4.2 271
 RMD160 2ee81172625148a49059681d56f730e14426218d files/digest-xfce-mcs-plugins-4.4.2 271
 SHA256 40ce014de267fbc599e52426c44dce557aeb6739fdb0475f6272a98b31766a4f files/digest-xfce-mcs-plugins-4.4.2 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXmytp/wUKkr7RBoRAvMCAKC9O5jbcEYIEqSFdKvgCXIlh0kjcgCeOj+O
+R5e2P0k+aUScCVa50O9htdM=
+=aMfa
+-----END PGP SIGNATURE-----

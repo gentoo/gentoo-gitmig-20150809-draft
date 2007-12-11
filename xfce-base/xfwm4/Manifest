@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfwm4-gtk212.patch 5606 RMD160 153f7bff7f6ae99698072f922524c7c21dd826f6 SHA1 dd74f3102e54ca3ad7b6bdcd97d7af9aab4346e9 SHA256 a119dcbc0d5dc336fe670c82db339f94d04d238eacb869f77228d4bd6d938994
 MD5 73765d05f08d9519fa7b7f7976bbc4c1 files/xfwm4-gtk212.patch 5606
 RMD160 153f7bff7f6ae99698072f922524c7c21dd826f6 files/xfwm4-gtk212.patch 5606
@@ -33,3 +36,10 @@ SHA256 a2bad18f9b1b43e5a52608ed006e918b333d0a7f5adcda94b3a15b717daf7a5e files/di
 MD5 8b321dd31959ef7fda9aa33b9107d3ae files/digest-xfwm4-4.4.2 241
 RMD160 646db55c6538b4d0c737fba849866fc822a37bf9 files/digest-xfwm4-4.4.2 241
 SHA256 02ffc6acb4ee8ce5eea2dfad9d987579e11c9ead11c04c0241dffbd50e88167d files/digest-xfwm4-4.4.2 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXmysp/wUKkr7RBoRAokTAJ0awXds+hmLE1aonzcba4UmvXiuGgCgziq/
+AoLyKpuMFaecmsCUenWDPNM=
+=93sb
+-----END PGP SIGNATURE-----
