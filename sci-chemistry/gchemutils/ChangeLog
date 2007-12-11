@@ -1,0 +1,8 @@
+# ChangeLog for sci-chemistry/gchemutils
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.1 2007/12/11 04:50:25 je_fro Exp $
+
+  23 Oct 2007; Jeff Gardner <je_fro@gentoo.org> gchemutils-0.8.3.ebuild:
+  Creating ChangeLog and adding chemical-mime-data as a dep, thanks to
+  urcindalo on bug 60666.
+
