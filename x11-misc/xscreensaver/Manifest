@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX desktop_entries/screensaver-properties.desktop 1000 RMD160 9e331cdba7b943c9e5dc076c3a60e32bf0340111 SHA1 f55ab9f6430ee339edc6aab428bc277d1b84e03d SHA256 b2a5d44a6a6463beab7cb1d3b9d9f5613c765b48ce319232517b6097afad1fbd
 MD5 51377e1938cf119bd11972b3c30c0a25 files/desktop_entries/screensaver-properties.desktop 1000
 RMD160 9e331cdba7b943c9e5dc076c3a60e32bf0340111 files/desktop_entries/screensaver-properties.desktop 1000
@@ -28,10 +31,10 @@ EBUILD xscreensaver-5.02-r2.ebuild 4551 RMD160 9b33dcfdc20c1963b1a3334cffb5812ce
 MD5 c270e07b5dd2ed1f2167ccca3f53945f xscreensaver-5.02-r2.ebuild 4551
 RMD160 9b33dcfdc20c1963b1a3334cffb5812ce81b3dce xscreensaver-5.02-r2.ebuild 4551
 SHA256 d6ee0323fcec042ed8d53a74880940d99e765f474b0a1d62def723f5e995ac92 xscreensaver-5.02-r2.ebuild 4551
-EBUILD xscreensaver-5.03.ebuild 4474 RMD160 1f6f2efd2d6125ca03b56dff6eede39974a2341e SHA1 138ec29682fa79cf34ef7b4bf24367a9385d898f SHA256 ef0935a4784e5ba72a41b8be6d715e4e4a2ef6ad08ffa9f258dd55d6593596e9
-MD5 3783a12d7d722ea4bf645ee2f34c3b1b xscreensaver-5.03.ebuild 4474
-RMD160 1f6f2efd2d6125ca03b56dff6eede39974a2341e xscreensaver-5.03.ebuild 4474
-SHA256 ef0935a4784e5ba72a41b8be6d715e4e4a2ef6ad08ffa9f258dd55d6593596e9 xscreensaver-5.03.ebuild 4474
+EBUILD xscreensaver-5.03.ebuild 4475 RMD160 72bfbe6fd349d3d35af9ce7d1501dff553a56187 SHA1 8b623c40d88d037f7aad8c9e36a5850f46b3200d SHA256 f7279fa3d14a512710a653bcdabc27258eeaff267b3cf2d1f8916e0e6b0c91dd
+MD5 1f7365b42242eefaba3aa81b4d26f2c1 xscreensaver-5.03.ebuild 4475
+RMD160 72bfbe6fd349d3d35af9ce7d1501dff553a56187 xscreensaver-5.03.ebuild 4475
+SHA256 f7279fa3d14a512710a653bcdabc27258eeaff267b3cf2d1f8916e0e6b0c91dd xscreensaver-5.03.ebuild 4475
 MISC ChangeLog 33267 RMD160 933a6eafed6b5f4234410d0ec062442ed6a3a7d2 SHA1 6346e4d7e0fc1fc5e30308732a6bb2a6687a171a SHA256 c5b988d0e01becff1f515a508f9c54626eb35ecdabc6b897dc702ed9bb7cf713
 MD5 2e81588b7fa092e41c4844e6ea948b8f ChangeLog 33267
 RMD160 933a6eafed6b5f4234410d0ec062442ed6a3a7d2 ChangeLog 33267
@@ -46,3 +49,10 @@ SHA256 2fe607acbd85f0d6d4fcad4d3f7339d9635beb16204735d3592886159383e584 files/di
 MD5 82caac3ed6f83a07288c64daefb57193 files/digest-xscreensaver-5.03 256
 RMD160 359617a69dbf49adb94994d5828c9bf9a7735ecd files/digest-xscreensaver-5.03 256
 SHA256 5a1407b2a4cd6433097013d06427db0ba73592f23a15d972285a14947b7792a2 files/digest-xscreensaver-5.03 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXxgvp/wUKkr7RBoRAoqgAKC02BeG3N3Z9035H9HOvtY6QMWSHQCgrp1i
+nAwGorSTHZLXYwWE+tse4xc=
+=xgPF
+-----END PGP SIGNATURE-----

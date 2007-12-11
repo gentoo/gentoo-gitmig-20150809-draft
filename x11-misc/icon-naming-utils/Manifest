@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX icon-naming-utils-0.8.2-pkgconfig.patch 471 RMD160 e64b08f8ef2db011e0c0fbcc1bdea18472c65a1f SHA1 70691e7aee7a6b14da4fe9b36c158481e22d1640 SHA256 8084e51e6efdd4bc5954e98609f86d2401ca3feda1d68b8804a660a84f0b10e4
 MD5 338a913c66b3ea69961298aec7d622d8 files/icon-naming-utils-0.8.2-pkgconfig.patch 471
 RMD160 e64b08f8ef2db011e0c0fbcc1bdea18472c65a1f files/icon-naming-utils-0.8.2-pkgconfig.patch 471
@@ -12,10 +15,10 @@ EBUILD icon-naming-utils-0.8.2.ebuild 809 RMD160 6d250c5495eaf907bcbdb9d72020517
 MD5 1cff353c2004e41ebf41188826c781c8 icon-naming-utils-0.8.2.ebuild 809
 RMD160 6d250c5495eaf907bcbdb9d7202051797cd44799 icon-naming-utils-0.8.2.ebuild 809
 SHA256 e1ff47650bf8f98d3b601cafdc55d42a7f909b95b476c1b40a06fb4b10f15635 icon-naming-utils-0.8.2.ebuild 809
-EBUILD icon-naming-utils-0.8.6.ebuild 719 RMD160 2fda28bde059369161a9541a99c54a5fe76f0f90 SHA1 e1229a213cd5446cf8d0303520c0593ec68a07d7 SHA256 f7ce417cd76ed914d1346169cc714077ff5896a510d088127e9e37cb5c0d12a6
-MD5 a50aa958a2f9d7f6a89ee2db9bfae6dc icon-naming-utils-0.8.6.ebuild 719
-RMD160 2fda28bde059369161a9541a99c54a5fe76f0f90 icon-naming-utils-0.8.6.ebuild 719
-SHA256 f7ce417cd76ed914d1346169cc714077ff5896a510d088127e9e37cb5c0d12a6 icon-naming-utils-0.8.6.ebuild 719
+EBUILD icon-naming-utils-0.8.6.ebuild 720 RMD160 b2e0ef86b5b701d86b9ab1c359d545c9a664fac2 SHA1 bbb7925f300d3e6b47140a07971a96cd833fdc73 SHA256 7edf01a5fa493d1f5caa8519830209e9f59174a85415a29237d4a37602af9746
+MD5 965ad6ab8c24e8db3c29cc2f1595711b icon-naming-utils-0.8.6.ebuild 720
+RMD160 b2e0ef86b5b701d86b9ab1c359d545c9a664fac2 icon-naming-utils-0.8.6.ebuild 720
+SHA256 7edf01a5fa493d1f5caa8519830209e9f59174a85415a29237d4a37602af9746 icon-naming-utils-0.8.6.ebuild 720
 MISC ChangeLog 8050 RMD160 52aa8abcf182fc5fb1e881f91e303d7ce9d3f8b1 SHA1 03f4a1f1d80c589c6b7260b0181ceb604e9c8737 SHA256 75abc8b571e5e023035989f9e5384144c6fbb27706d610bea7ef8b03b43b15c3
 MD5 eef2c10898941e298cdf0bca7d468132 ChangeLog 8050
 RMD160 52aa8abcf182fc5fb1e881f91e303d7ce9d3f8b1 ChangeLog 8050
@@ -33,3 +36,10 @@ SHA256 fc7de4daf2b93eba5713f1f36cda49e4342f5335b499e7ec88bc69a61399b5eb files/di
 MD5 69d4762dd4c852d44d8109c9c80d0556 files/digest-icon-naming-utils-0.8.6 268
 RMD160 1361bc341fa565a10f97ad64d999eba7f12a8e1f files/digest-icon-naming-utils-0.8.6 268
 SHA256 8369842b561904a6b2533f31817c4fea5ed2ed10a5c8c479ff3a4b8b1e5a3be2 files/digest-icon-naming-utils-0.8.6 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXxgRp/wUKkr7RBoRAla+AKCX9XLU9rWy4JskYbTZGDtf8HIDsQCgivVX
+IeUYjJ9Mq7MLTyQCx5Wb5Ys=
+=7F4g
+-----END PGP SIGNATURE-----
