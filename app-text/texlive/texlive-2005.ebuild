@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2005.ebuild,v 1.5 2007/07/22 10:27:06 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2005.ebuild,v 1.6 2007/12/11 10:44:15 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator virtualx
 
@@ -47,7 +47,6 @@ MODULAR_X_DEPEND="X? ( x11-libs/libXmu
 
 DEPEND="${MODULAR_X_DEPEND}
 	!app-text/ptex
-	!app-text/cstetex
 	!app-text/tetex
 	X? ( motif? ( lesstif? ( x11-libs/lesstif )
 			!lesstif? ( x11-libs/openmotif ) )
