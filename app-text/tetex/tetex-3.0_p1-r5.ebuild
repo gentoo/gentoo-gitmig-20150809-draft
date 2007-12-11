@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r5.ebuild,v 1.7 2007/11/13 17:25:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r5.ebuild,v 1.8 2007/12/11 09:29:37 vapier Exp $
 
 inherit tetex-3 flag-o-matic versionator virtualx autotools
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://gentoo/${TETEX_SRC}
 	mirror://gentoo/${P}-gentoo.tar.gz
 	mirror://gentoo/${P}-dviljk-security-fixes.patch.bz2"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 # these are defined in tetex.eclass and tetex-3.eclass
 IUSE=""
