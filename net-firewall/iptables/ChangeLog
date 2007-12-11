@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.147 2007/12/11 17:11:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.148 2007/12/11 17:50:14 opfer Exp $
+
+  11 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  iptables-1.3.8-r2.ebuild:
+  stable x86, bug 201909
 
   11 Dec 2007; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 201909
