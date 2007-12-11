@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.47 2007/11/10 17:55:24 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.48 2007/12/11 13:15:10 alonbl Exp $
+
+  11 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org> -opensc-0.10.1.ebuild,
+  -files/0.8.1-64bit.patch:
+  Cleanup
 
   10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
   -files/opensc-0.9.4-gcc4.patch, -files/opensc-0.11.1-dep.patch,
