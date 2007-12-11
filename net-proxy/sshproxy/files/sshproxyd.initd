@@ -7,10 +7,11 @@ depend() {
 
 start() {
 	ebegin "Starting SSH Proxy daemon"
-	start-stop-daemon --start --exec /usr/bin/sshproxyd -- \
+	start-stop-daemon --start --background \
+		--pidfile /var/run/sshproxyd.pid --exec /usr/bin/sshproxyd -- \
 		--daemon --user ${SSHPROXYD_USER:-sshproxy} \
-        --config-dir ${SSHPROXYD_CONFDIR:-/etc/sshproxy} \
-        --pid /var/run/sshproxyd.pid
+		--config-dir ${SSHPROXYD_CONFDIR:-/etc/sshproxy} \
+		--pid /var/run/sshproxyd.pid
 	eend $?
 }
 
