@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.46 2007/12/10 14:04:58 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.47 2007/12/11 16:56:22 nixnut Exp $
+
+  11 Dec 2007; nixnut <nixnut@gentoo.org> netcdf-3.6.2.ebuild:
+  Stable on ppc wrt bug 201477
 
   10 Dec 2007; Ferris McCormick <fmccor@gentoo.org> netcdf-3.6.2.ebuild:
   Sparc stable --- Bug #201477 --- all tests good (gfortran).
