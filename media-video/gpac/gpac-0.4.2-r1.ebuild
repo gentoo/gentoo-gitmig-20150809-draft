@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2-r1.ebuild,v 1.13 2007/11/27 12:08:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2-r1.ebuild,v 1.14 2007/12/11 11:07:00 armin76 Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="aac amr debug ffmpeg jpeg javascript mad ogg opengl oss png sdl ssl theora truetype vorbis wxwindows xml xvid"
 
 S="${WORKDIR}/${PN}"
