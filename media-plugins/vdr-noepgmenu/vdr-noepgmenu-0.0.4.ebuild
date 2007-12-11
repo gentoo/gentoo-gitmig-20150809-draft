@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-noepgmenu/vdr-noepgmenu-0.0.4.ebuild,v 1.1 2007/12/11 22:13:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-noepgmenu/vdr-noepgmenu-0.0.4.ebuild,v 1.2 2007/12/11 23:54:53 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -28,4 +28,3 @@ pkg_setup() {
 	eend $? "You need to recompile VDR with USE=noepg" \
 		|| die "VDR not compiled with new noepg-patch"
 }
-
