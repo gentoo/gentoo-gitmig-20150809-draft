@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 50desktop-file-utils-gentoo.el 293 RMD160 c2537f9cebc6fc1bf14ead0528b4da25a5f2d13c SHA1 9ca5c19e909eb8f13b911b73a96939e1cf0ebe41 SHA256 0e504b53f590c7212d24d173ca98e8fe114acf03ff7960a93139df04b18afc93
 MD5 f66c0aae8a09876c7d9ebd7680161676 files/50desktop-file-utils-gentoo.el 293
 RMD160 c2537f9cebc6fc1bf14ead0528b4da25a5f2d13c files/50desktop-file-utils-gentoo.el 293
@@ -21,10 +24,10 @@ EBUILD desktop-file-utils-0.13.ebuild 1287 RMD160 73240f17240dcb68307264fb919ae7
 MD5 d37a1d6eda5f4777537d8afbbeb7664e desktop-file-utils-0.13.ebuild 1287
 RMD160 73240f17240dcb68307264fb919ae7ae41f4263f desktop-file-utils-0.13.ebuild 1287
 SHA256 a86cd80e414f6eba6d8489c4a68bbbc02cf22161f2830f4352277c0f68c2705d desktop-file-utils-0.13.ebuild 1287
-EBUILD desktop-file-utils-0.14.ebuild 1369 RMD160 5f1e89a8f2ec4b274a9803f2fc368d49fb1bdb85 SHA1 b178d1831f830a1c5749f520343d30eaf50bd733 SHA256 54da2ff66b0759c4d464d2e484242e7dd69f73d0fae24e38b5d2a113d4e1b0c1
-MD5 221147b421746ff7dfa3eb55ec64c706 desktop-file-utils-0.14.ebuild 1369
-RMD160 5f1e89a8f2ec4b274a9803f2fc368d49fb1bdb85 desktop-file-utils-0.14.ebuild 1369
-SHA256 54da2ff66b0759c4d464d2e484242e7dd69f73d0fae24e38b5d2a113d4e1b0c1 desktop-file-utils-0.14.ebuild 1369
+EBUILD desktop-file-utils-0.14.ebuild 1368 RMD160 d6c80b33eab7c98bb96b0b33c84bf92ace0c70c3 SHA1 6e365b2887afaba969298d511a8ec1b3b6a48e38 SHA256 31c40dfd8765cc255f1a74f4c624fb49edcde7817d44bd76694669fdaeaaa07f
+MD5 aa16cb5355a3e7a472295effb017abfc desktop-file-utils-0.14.ebuild 1368
+RMD160 d6c80b33eab7c98bb96b0b33c84bf92ace0c70c3 desktop-file-utils-0.14.ebuild 1368
+SHA256 31c40dfd8765cc255f1a74f4c624fb49edcde7817d44bd76694669fdaeaaa07f desktop-file-utils-0.14.ebuild 1368
 MISC ChangeLog 8705 RMD160 1234d61462789d01a9ba512d36db10c2363977bb SHA1 5436eab273b457281b6cee6b680df898b141be6e SHA256 86308107d6ac1889a9861666989332c3521cf1b3ee2bc72c60d1267e608b6a9a
 MD5 476203a21a4189a7a8c5db35279a3448 ChangeLog 8705
 RMD160 1234d61462789d01a9ba512d36db10c2363977bb ChangeLog 8705
@@ -42,3 +45,10 @@ SHA256 3172e7df71dac61f27edd71eeb9bfd65c43d95808dbe6b90f6793956459fb0a4 files/di
 MD5 ed32d6405cf38f6c523b8f206ce9a9e9 files/digest-desktop-file-utils-0.14 271
 RMD160 63540612f54bd68a3d25fa050b7fff13d9580a2b files/digest-desktop-file-utils-0.14 271
 SHA256 71750049942519fdbc0a0f2a8d70d0bb308ef4c113f474a1506ca3ad4440d647 files/digest-desktop-file-utils-0.14 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXr9Dp/wUKkr7RBoRAk9+AKCIieVC5Nac3SgznHTnla8M72Vm3QCcC/li
+Zw+fEYJI4JXCWCRjsJGImk8=
+=1Tt+
+-----END PGP SIGNATURE-----
