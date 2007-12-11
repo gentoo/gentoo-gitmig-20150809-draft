@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/eselect-gnat-0.9.ebuild,v 1.1 2006/05/26 11:21:30 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/eselect-gnat-0.9.ebuild,v 1.2 2007/12/11 23:46:45 george Exp $
 
 inherit eutils
 
@@ -20,6 +20,6 @@ MODULEDIR="/usr/share/eselect/modules"
 src_install() {
 	dodir ${MODULEDIR}
 	insinto ${MODULEDIR}
-	doins ${FILESDIR}/gnat.eselect-${PVR}
-	mv ${D}${MODULEDIR}/gnat.eselect-${PVR} ${D}${MODULEDIR}/gnat.eselect
+	doins "${FILESDIR}"/gnat.eselect-${PVR}
+	mv "${D}${MODULEDIR}"/gnat.eselect-${PVR} "${D}${MODULEDIR}"/gnat.eselect
 }

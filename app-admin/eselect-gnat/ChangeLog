@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-gnat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.15 2007/09/19 20:24:04 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.16 2007/12/11 23:46:45 george Exp $
+
+*eselect-gnat-1.1-r1 (11 Dec 2007)
+
+  11 Dec 2007; George Shapovalov <george@gentoo.org>
+  +files/gnat.eselect-1.1-r1, +eselect-gnat-1.1-r1.ebuild:
+  replaced env0update with do_action env update, #179880
 
 *eselect-gnat-1.1 (19 Sep 2007)
 
