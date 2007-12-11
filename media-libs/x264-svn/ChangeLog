@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/x264-svn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.52 2007/12/10 18:20:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.53 2007/12/11 11:07:25 armin76 Exp $
+
+  11 Dec 2007; Raúl Porcel <armin76@gentoo.org> x264-svn-20060612.ebuild:
+  alpha stable
 
   10 Dec 2007; Luca Barbato <lu_zero@gentoo.org> x264-svn-20070924.ebuild:
   New homepage
