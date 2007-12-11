@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.4.0.ebuild,v 1.1 2007/12/10 21:12:46 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.4.0.ebuild,v 1.2 2007/12/11 15:41:09 alonbl Exp $
 
 inherit eutils autotools
 
@@ -35,7 +35,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# --disable-padlock-support for bug#201917
 	econf \
+		--disable-padlock-support \
 		--disable-dependency-tracking \
 		--with-pic \
 		--enable-noexecstack \
