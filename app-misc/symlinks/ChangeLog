@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/symlinks
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.16 2007/12/10 17:20:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.17 2007/12/11 08:36:49 pva Exp $
+
+  11 Dec 2007; <pva@gentoo.org>
+  +files/symlinks-1.2-fix-implicit-declaration.patch,
+  symlinks-1.2-r2.ebuild:
+  Fixed QA warning about implicit declarations, bug #201837. Thank Thomas A.
+  (Arch Tester) <gentoofan23 AT gmail.com> for report and fix.
 
   10 Dec 2007; Raúl Porcel <armin76@gentoo.org> symlinks-1.2-r2.ebuild:
   alpha/ia64/sparc stable wrt #201837
