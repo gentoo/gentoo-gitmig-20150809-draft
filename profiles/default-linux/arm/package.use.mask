@@ -1,12 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.10 2007/11/17 14:01:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.11 2007/12/11 14:49:52 drac Exp $
 
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here
 app-admin/gkrellm hddtemp
-
-# Samuli Suominen <drac@gentoo.org> (18 Aug 2007)
-# media-video/ffmpegthumbnailer needs to be stabilized first.
-xfce-extra/thunar-thumbnailers ffmpeg
 
 # Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
 # gdm depends on zenity which is not keyworded
