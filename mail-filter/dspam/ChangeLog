@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.104 2007/11/22 14:29:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.105 2007/12/11 20:53:16 mrness Exp $
+
+*dspam-3.8.0-r9 (11 Dec 2007)
+
+  11 Dec 2007; Alin Năstac <mrness@gentoo.org> files/dspam.cron-r1,
+  +dspam-3.8.0-r9.ebuild:
+  Correctly lock hash database at cssclean startup and remove useless
+  csscompress (#201656). Fix segfault, thanks to steveb <steeeeeveee@gmx.net>
+  (#199700).
 
 *dspam-3.8.0-r8 (22 Nov 2007)
 

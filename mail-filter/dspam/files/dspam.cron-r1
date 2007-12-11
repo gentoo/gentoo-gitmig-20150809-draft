@@ -212,9 +212,7 @@ clean_hash_drv() {
 	then
 		find ${DSPAM_HOMEDIR}/data/ -maxdepth 4 -mindepth 1 -type f -name "*.css" | while read name
 		do
-			/usr/bin/csscompress "${name}" 1>/dev/null 2>&1
 			/usr/bin/cssclean "${name}" 1>/dev/null 2>&1
-			# chown dspam:dspam "${name}"
 		done
 		find ${DSPAM_HOMEDIR}/data/ -maxdepth 4 -mindepth 1 -type d -name "*.sig" | while read name
 		do
