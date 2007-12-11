@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/vdr-noepgmenu
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-noepgmenu/ChangeLog,v 1.1 2007/12/11 22:13:13 zzam Exp $
+
+*vdr-noepgmenu-0.0.4 (11 Dec 2007)
+
+  11 Dec 2007; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +vdr-noepgmenu-0.0.4.ebuild:
+  Moved plugin to gentoo.org portage tree. Based on ebuild from vdr-testing
+  overlay by tioan.
+
