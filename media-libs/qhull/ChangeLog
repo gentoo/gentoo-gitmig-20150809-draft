@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/qhull
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.21 2007/11/18 13:15:43 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.22 2007/12/11 02:21:23 markusle Exp $
+
+*qhull-2003.1-r1 (10 Dec 2007)
+
+  10 Dec 2007; Markus Dittrich <markusle@gentoo.org>
+  +qhull-2003.1-r1.ebuild:
+  Restrict compilation flags on amd64 to -O1 since -O2 and higher 
+  generates bad code. General cleanup.
 
   18 Nov 2007; Markus Dittrich <markusle@gentoo.org>
   files/qhull-3.1-makefile.patch, metadata.xml, qhull-3.1-r1.ebuild,
