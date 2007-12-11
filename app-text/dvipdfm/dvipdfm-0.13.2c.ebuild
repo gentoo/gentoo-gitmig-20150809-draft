@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/dvipdfm-0.13.2c.ebuild,v 1.18 2007/10/14 18:46:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/dvipdfm-0.13.2c.ebuild,v 1.19 2007/12/11 10:58:15 aballier Exp $
 
 DESCRIPTION="DVI to PDF translator"
 SRC_URI="http://gaspra.kettering.edu/dvipdfm/${P}.tar.gz"
@@ -16,7 +16,6 @@ DEPEND="!>=app-text/tetex-2
 	>=sys-libs/zlib-1.1.4
 	!>=app-text/tetex-2
 	!app-text/ptex
-	!app-text/cstetex
 	virtual/tetex"
 
 S=${WORKDIR}/${PN}
