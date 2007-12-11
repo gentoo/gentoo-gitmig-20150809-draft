@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchempaint/gchempaint-0.8.4.ebuild,v 1.1 2007/12/11 05:00:23 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchempaint/gchempaint-0.8.4.ebuild,v 1.2 2007/12/11 17:08:30 mr_bones_ Exp $
 
 inherit autotools gnome2
 
@@ -19,4 +19,3 @@ src_compile() {
 	eautoreconf
 	gnome2_src_compile --disable-update-databases
 }
-
