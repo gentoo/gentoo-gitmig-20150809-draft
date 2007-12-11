@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/cuyo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/ChangeLog,v 1.14 2007/05/27 08:36:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/ChangeLog,v 1.15 2007/12/11 22:17:12 tupone Exp $
+
+  11 Dec 2007; Tupone Alfredo <tupone@gentoo.org> cuyo-1.8.6.ebuild:
+  Fix build: use moc from qt3 instead of the one in PATH
 
 *cuyo-1.8.6 (27 May 2007)
 

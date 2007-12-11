@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-1.8.6.ebuild,v 1.1 2007/05/27 08:36:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-1.8.6.ebuild,v 1.2 2007/12/11 22:17:12 tupone Exp $
 
 inherit toolchain-funcs eutils qt3 games
 
@@ -32,7 +32,7 @@ src_compile() {
 		--with-qtdir="${QTDIR}" \
 		--with-x \
 		|| die
-	emake CXX=$(tc-getCXX) || die "emake failed"
+	emake CXX=$(tc-getCXX) MOC="${QTDIR}"/bin/moc || die "emake failed"
 }
 
 src_install() {
