@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.14.ebuild,v 1.11 2007/10/09 07:46:00 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.14.ebuild,v 1.12 2007/12/11 16:48:05 vapier Exp $
 
 inherit eutils elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="emacs"
 
 RDEPEND=">=dev-libs/glib-2.8
