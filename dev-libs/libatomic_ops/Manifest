@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX libatomic_ops-1.2-ppc-asm.patch 427 RMD160 89773869a9336ff64aeac2b34091f3f93abd7817 SHA1 22b5a82efaa3e59d3f2372be51894201747d21e9 SHA256 a8cdb35c08084878a10c72ddfa318586135142dbbbb346e0d727e9d170eb28bb
 MD5 7b65b59a84e0251419ee3fb1a596d9d0 files/libatomic_ops-1.2-ppc-asm.patch 427
 RMD160 89773869a9336ff64aeac2b34091f3f93abd7817 files/libatomic_ops-1.2-ppc-asm.patch 427
@@ -12,10 +15,10 @@ EBUILD libatomic_ops-1.1.ebuild 619 RMD160 504726b1cbd8050d8e5291aa75adaf7dcc57a
 MD5 2746bafc148d159b0b3cc1ab8acbc42b libatomic_ops-1.1.ebuild 619
 RMD160 504726b1cbd8050d8e5291aa75adaf7dcc57ab93 libatomic_ops-1.1.ebuild 619
 SHA256 822e4bf132b233c6f9be11b6411e31972a25aaec9540f15f4a71ee290e4d022d libatomic_ops-1.1.ebuild 619
-EBUILD libatomic_ops-1.2-r1.ebuild 814 RMD160 42c3780c528fbf77243cb10ddde47c22124a99ea SHA1 5ae63027fb294cbe528fea36c95a76f01c77d4e7 SHA256 dbfe1534b22438e9dc42feae27b381d276a2be2edf3f61a7be2e56a7a30b2245
-MD5 48d89b0008dc66d2a5f70d4c9a692748 libatomic_ops-1.2-r1.ebuild 814
-RMD160 42c3780c528fbf77243cb10ddde47c22124a99ea libatomic_ops-1.2-r1.ebuild 814
-SHA256 dbfe1534b22438e9dc42feae27b381d276a2be2edf3f61a7be2e56a7a30b2245 libatomic_ops-1.2-r1.ebuild 814
+EBUILD libatomic_ops-1.2-r1.ebuild 814 RMD160 8a95260184b52ad641414e09b2de25449a4bcac7 SHA1 e9003dd762b9eae5704967982bf97a09be2693c3 SHA256 999770408b3a32930954cb46eee5bfe0b3bed71059ae04c8562b9183966f78b7
+MD5 e5012526a9d4c624898887939a639766 libatomic_ops-1.2-r1.ebuild 814
+RMD160 8a95260184b52ad641414e09b2de25449a4bcac7 libatomic_ops-1.2-r1.ebuild 814
+SHA256 999770408b3a32930954cb46eee5bfe0b3bed71059ae04c8562b9183966f78b7 libatomic_ops-1.2-r1.ebuild 814
 EBUILD libatomic_ops-1.2.ebuild 779 RMD160 ace6b11c94d75ef6ce3ba1b3bec89389cce8bceb SHA1 59616687d2624f1c5354b3a289767084d345c679 SHA256 750a492175e5325b1c37d83c5398d99ffb7fd2bdd4077ff2b8dc95338bb56407
 MD5 5ed5378cb7af91f1610201364524d21e libatomic_ops-1.2.ebuild 779
 RMD160 ace6b11c94d75ef6ce3ba1b3bec89389cce8bceb libatomic_ops-1.2.ebuild 779
@@ -37,3 +40,10 @@ SHA256 068e799786816e7e71300a769c7f88cd76975abca02cbe1d01aaebdf603c98ab files/di
 MD5 faaea89b811f750df83a5075c86e32eb files/digest-libatomic_ops-1.2-r1 253
 RMD160 77c985ce3474c71bdd7987cc2b68ce56671adbeb files/digest-libatomic_ops-1.2-r1 253
 SHA256 068e799786816e7e71300a769c7f88cd76975abca02cbe1d01aaebdf603c98ab files/digest-libatomic_ops-1.2-r1 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHXmDVp/wUKkr7RBoRAkA3AKCIDi/1g45zUzS9bRGCilFntKp8awCeJ2nn
+AaMNO8pWGLosxHqjAjyI+bk=
+=FuZm
+-----END PGP SIGNATURE-----
