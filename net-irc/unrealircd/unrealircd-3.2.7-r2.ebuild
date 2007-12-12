@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.7-r1.ebuild,v 1.2 2007/12/10 12:47:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.7-r2.ebuild,v 1.1 2007/12/12 15:56:31 ulm Exp $
 
 inherit eutils ssl-cert versionator multilib
 
@@ -14,7 +14,7 @@ SRC_URI="http://unreal.brueggisite.de/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="hub ipv6 ssl zlib curl prefixaq showlistmodes"
 
 RDEPEND="ssl? ( dev-libs/openssl )
@@ -125,7 +125,8 @@ pkg_postinst() {
 	use ssl && \
 		if [[ ! -f "${ROOT}"/etc/unrealircd/server.cert.key ]]; then
 			install_cert /etc/unrealircd/server.cert
-			dosym server.cert.key /etc/unrealircd/server.key.pem
+			chown unrealircd "${ROOT}"/etc/unrealircd/server.cert.*
+			ln -snf server.cert.key "${ROOT}"/etc/unrealircd/server.key.pem
 		fi
 
 	elog

@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.64 2007/12/10 12:47:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.65 2007/12/12 15:56:31 ulm Exp $
+
+*unrealircd-3.2.7-r2 (12 Dec 2007)
+
+  12 Dec 2007; Ulrich Mueller <ulm@gentoo.org> -unrealircd-3.2.7-r1.ebuild,
+  +unrealircd-3.2.7-r2.ebuild:
+  Set correct owner for the installed certificates, fixes bug #201996.
+  Thanks to Attila Tóth <atoth@atoth.sote.hu> and Stefan Becker
+  <stefan.becker@ip-exchange.de> for reporting and providing a patch.
 
   10 Dec 2007; Raúl Porcel <armin76@gentoo.org> unrealircd-3.2.7-r1.ebuild:
   sparc/x86 stable wrt #201682
