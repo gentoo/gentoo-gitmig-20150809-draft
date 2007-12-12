@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ipython
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.42 2007/10/24 17:20:06 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.43 2007/12/12 16:02:57 hawking Exp $
+
+*ipython-0.8.2 (12 Dec 2007)
+
+  12 Dec 2007; Ali Polatel <hawking@gentoo.org> +ipython-0.8.2.ebuild:
+  Version bump, modified emacs depend for emacs-22
 
 *ipython-0.8.1-r1 (24 Oct 2007)
 
