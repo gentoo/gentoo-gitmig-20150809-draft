@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.84 2007/11/22 22:27:38 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.85 2007/12/12 03:32:18 compnerd Exp $
+
+*glade-2.12.2 (12 Dec 2007)
+
+  12 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +glade-2.12.2.ebuild:
+  Version bump from upstream (fixes bug #201962).
 
   22 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   files/glade-2.0.0-scrollkeeper.patch:
