@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/pyrex-0.9.6.3.ebuild,v 1.1 2007/11/04 08:54:50 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/pyrex-0.9.6.4.ebuild,v 1.1 2007/12/12 15:27:53 hawking Exp $
 
 NEED_PYTHON=2.3
 
@@ -22,7 +22,6 @@ PYTHON_MODNAME="Pyrex"
 
 src_unpack() {
 	distutils_src_unpack
-	epatch "${FILESDIR}/${P}-setup_py.patch"
 	epatch "${FILESDIR}/${P}-setuptools-workaround.patch"
 }
 
