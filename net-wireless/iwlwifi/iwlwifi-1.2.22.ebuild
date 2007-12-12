@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/iwlwifi-1.2.22.ebuild,v 1.1 2007/12/12 02:58:56 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/iwlwifi-1.2.22.ebuild,v 1.2 2007/12/12 03:01:04 compnerd Exp $
 
 inherit eutils linux-mod
 
-DESCRIPTION="Intel (R) PRO/Wireless 3945ABG Network Drivers"
+DESCRIPTION="Intel (R) PRO/Wireless Network Drivers"
 HOMEPAGE="http://intellinuxwireless.org/?p=iwlwifi"
 SRC_URI="http://intellinuxwireless.org/${PN}/downloads/${P//_p/-}.tgz"
 
