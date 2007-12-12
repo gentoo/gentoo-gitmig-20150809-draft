@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/slv2-0.3.2.ebuild,v 1.2 2007/12/11 01:53:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/slv2-0.3.2.ebuild,v 1.3 2007/12/12 07:29:26 aballier Exp $
 
 DESCRIPTION="A library to make the use of LV2 plugins as simple as possible for applications"
 HOMEPAGE="http://wiki.drobilla.net/SLV2"
@@ -8,7 +8,7 @@ SRC_URI="http://download.drobilla.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug doc jack"
 
 RDEPEND="dev-libs/redland
