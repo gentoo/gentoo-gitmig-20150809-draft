@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1.ebuild,v 1.2 2007/12/04 18:42:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1.ebuild,v 1.3 2007/12/12 04:09:12 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -39,12 +39,13 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig
-		app-admin/eselect-wxwidgets
 		X?  (
 			x11-proto/xproto
 			x11-proto/xineramaproto
 			x11-proto/xf86vidmodeproto
 			)"
+
+PDEPEND="app-admin/eselect-wxwidgets"
 
 SLOT="2.8"
 LICENSE="wxWinLL-3
@@ -140,19 +141,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [[ ! -e /var/lib/wxwidgets/current \
-		|| $(grep 'WXCONFIG="none"' /var/lib/wxwidgets/current) ]]; then
-		local wxchar wxtoolkit wxdebug
-		[[ ${SLOT} == 2.6 ]] && wxchar=ansi || wxchar=unicode
-		use X && wxtoolkit=gtk2 || wxtoolkit=base
-		use debug && wxdebug=debug || wxdebug=release
-
-		eselect wxwidgets set ${wxtoolkit}-${wxchar}-${wxdebug}-${SLOT}
-	else
-		eselect wxwidgets update
-	fi
+	has_version app-admin/eselect-wxwidgets \
+		&& eselect wxwidgets update
 }
 
 pkg_postrm() {
-	eselect wxwidgets update
+	has_version app-admin/eselect-wxwidgets \
+		&& eselect wxwidgets update
 }

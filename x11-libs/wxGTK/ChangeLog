@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.168 2007/12/06 02:13:33 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.169 2007/12/12 04:09:12 dirtyepic Exp $
+
+  12 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.6.4.0-r2.ebuild,
+  wxGTK-2.8.7.1.ebuild:
+  Move eselect-wxwidgets to PDEPEND to prevent blocker on upgrade. Because
+  wxGTK may now be installed before eselect-wxwidgets, make post{inst,rm}
+  update conditional on it being available. Remove messy
+  auto-set-profile-if-profile-is-"none" stuff and just default to "none".
 
   06 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.6.4.0-r1.ebuild:
   Backport precompiled header option from later ebuilds for hardened. Bug
