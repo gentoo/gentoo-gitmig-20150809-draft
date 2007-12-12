@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/xhtml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.7 2007/12/12 09:34:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.8 2007/12/12 09:46:09 opfer Exp $
+
+  12 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  xhtml-3000.0.2.ebuild:
+  quote variable
 
   12 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   xhtml-3000.0.2.ebuild:

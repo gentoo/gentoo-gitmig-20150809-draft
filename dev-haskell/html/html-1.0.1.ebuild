@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/html-1.0.1.ebuild,v 1.3 2007/12/12 09:38:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/html-1.0.1.ebuild,v 1.4 2007/12/12 09:53:35 opfer Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -23,5 +23,5 @@ S="${WORKDIR}/ghc-${GHC_PV}/libraries/${PN}"
 # Sadly Setup.hs in the ghc-6.6.1 extralibs was not tested with Cabal-1.1.6.x
 src_unpack() {
 	unpack "${A}"
-	sed -i -e "/type Hook/ s/UserHooks/Maybe UserHooks/" ${S}/Setup.hs
+	sed -i -e "/type Hook/ s/UserHooks/Maybe UserHooks/" "${S}/Setup.hs"
 }
