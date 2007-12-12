@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.116 2007/12/12 09:06:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.117 2007/12/12 14:53:45 ranger Exp $
+
+  12 Dec 2007; Brent Baude <ranger@gentoo.org> xfdesktop-4.4.2.ebuild:
+  Marking xfdesktop-4.4.2 ppc64 stable for bug 201747
 
   12 Dec 2007; Raúl Porcel <armin76@gentoo.org> xfdesktop-4.4.2.ebuild:
   alpha/ia64/sparc stable wrt #201747
