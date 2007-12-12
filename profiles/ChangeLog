@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.890 2007/12/11 15:52:19 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.891 2007/12/12 05:51:01 compnerd Exp $
+
+  12 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org> use.local.desc:
+  Add and update tracker useflags
 
   11 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
   Unmask >=dev-libs/libgcrypt-1.4.0

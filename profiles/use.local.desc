@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3197 2007/12/11 16:11:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3198 2007/12/12 05:51:01 compnerd Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -212,7 +212,8 @@ app-misc/screen:nethack - Express error messages in nethack style
 app-misc/tablix:pvm - Add support for parallel virtual machine (http://www.epm.ornl.gov/pvm/pvm_home.html)
 app-misc/tomboy:galago - Add support for the galago desktop presence framework
 app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home banking software
-app-misc/tracker:applet - Enable deskbar applet support
+app-misc/tracker:applet - Build tracker monitor applet
+app-misc/tracker:deskbar - Build deskbar applet plugin
 app-misc/tracker:gsf - Enable libgsf based data extractor
 app-misc/worker:avfs - Enable avfs support
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
