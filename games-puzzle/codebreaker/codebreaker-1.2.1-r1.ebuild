@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/codebreaker/codebreaker-1.2.1-r1.ebuild,v 1.8 2006/12/06 16:55:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/codebreaker/codebreaker-1.2.1-r1.ebuild,v 1.9 2007/12/12 03:11:13 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="mastermind style game"
 HOMEPAGE="http://packages.debian.org/codebreaker"
@@ -20,16 +20,18 @@ S="${WORKDIR}/${P}.orig"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
-		'/-DHOWTO=/s:\${prefix}/doc/\$(PACKAGE)-\$(VERSION):/usr/share/doc/${PF}:' \
-		src/Makefile.in
+		-e '/-DHOWTO=/s:\${prefix}/doc/\$(PACKAGE)-\$(VERSION):/usr/share/doc/${PF}:' \
+		src/Makefile.in \
+		|| die "sed failed"
 }
 
 src_install() {
-	dogamesbin src/codebreaker
+	dogamesbin src/codebreaker || die
 	dodoc README AUTHORS
 	insinto /usr/share/doc/${PF}
 	doins doc/HOWTO # don't gzip this #38128
+	make_desktop_entry codebreaker Codebreaker
 	prepgamesdirs
 }
