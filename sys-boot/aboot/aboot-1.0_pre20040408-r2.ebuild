@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/aboot-1.0_pre20040408-r2.ebuild,v 1.1 2007/08/29 16:37:30 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/aboot-1.0_pre20040408-r2.ebuild,v 1.2 2007/12/12 23:52:17 yoswink Exp $
 
 inherit eutils
 
@@ -32,6 +32,11 @@ src_unpack() {
 	sed -i "s:/usr/man:/usr/share/man:" Makefile || die
 	epatch "${FILESDIR}/aboot-gcc-3.4.patch"
 	epatch "${FILESDIR}/aboot-pt_note.patch"
+}
+
+src_compile() {
+	# too many problems with parallel building
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
