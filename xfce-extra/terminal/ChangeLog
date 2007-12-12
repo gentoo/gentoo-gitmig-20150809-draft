@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/terminal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.56 2007/12/12 09:12:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.57 2007/12/12 14:57:00 ranger Exp $
+
+  12 Dec 2007; Brent Baude <ranger@gentoo.org> terminal-0.2.8.ebuild:
+  Marking terminal-0.2.8 ppc64 stable for bug 201747
 
   12 Dec 2007; Raúl Porcel <armin76@gentoo.org> terminal-0.2.8.ebuild:
   alpha/ia64/sparc stable wrt #201747
