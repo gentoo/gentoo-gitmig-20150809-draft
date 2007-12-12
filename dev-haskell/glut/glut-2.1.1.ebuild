@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/glut-2.1.1.ebuild,v 1.1 2007/07/09 12:41:01 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/glut-2.1.1.ebuild,v 1.2 2007/12/12 09:51:13 opfer Exp $
 
 CABAL_FEATURES="haddock lib profile"
 inherit haskell-cabal
@@ -14,7 +14,7 @@ SRC_URI="http://www.haskell.org/ghc/dist/${GHC_PV}/ghc-${GHC_PV}-src-extralibs.t
 LICENSE="BSD"
 SLOT="0"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 
 # TODO: Install examples when the "examples" USE flag is set
 IUSE=""

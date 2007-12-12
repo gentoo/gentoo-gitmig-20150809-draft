@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.19 2007/10/31 13:07:14 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.20 2007/12/12 09:42:23 opfer Exp $
+
+  12 Dec 2007; Christian Faulhammer <opfer@gentoo.org> hunit-1.1.1.ebuild:
+  stable x86, bug 201984
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> hunit-1.1.ebuild:
   Drop virtual/ghc in favour of dev-lang/ghc

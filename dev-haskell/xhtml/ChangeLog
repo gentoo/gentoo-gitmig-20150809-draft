@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/xhtml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.6 2007/07/11 18:40:37 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.7 2007/12/12 09:34:41 opfer Exp $
+
+  12 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  xhtml-3000.0.2.ebuild:
+  stable x86, bug 201984
 
   11 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> xhtml-3000.0.2.ebuild:
   Marked ~ia64.
