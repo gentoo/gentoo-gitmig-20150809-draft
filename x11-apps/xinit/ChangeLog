@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.107 2007/12/12 19:22:11 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.108 2007/12/12 19:46:05 armin76 Exp $
+
+  12 Dec 2007; Raúl Porcel <armin76@gentoo.org> xinit-1.0.5-r1.ebuild:
+  alpha/ia64 stable wrt #201998
 
   12 Dec 2007; Ferris McCormick <fmccor@gentoo.org> xinit-1.0.5-r1.ebuild:
   Sparc stable --- Bug #201998 --- good since mid-September.
