@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.119 2007/11/27 08:27:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.120 2007/12/12 05:53:54 compnerd Exp $
+
+  12 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  no-nptl/2.4/package.use.mask:
+  Mask deskbar useflag for tracker on no-nptl as they dont have it
 
   27 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   no-nptl/2.4/package.mask:
