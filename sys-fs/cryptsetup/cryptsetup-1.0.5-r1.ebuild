@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.5-r1.ebuild,v 1.9 2007/11/06 21:32:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.5-r1.ebuild,v 1.10 2007/12/11 23:54:30 vapier Exp $
 
 inherit linux-info eutils flag-o-matic multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://luks.endorphin.org/source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="build dynamic nls selinux"
 
 DEPEND=">=sys-fs/device-mapper-1.00.07-r1
