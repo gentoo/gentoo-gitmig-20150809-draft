@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.120 2007/12/09 20:34:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.121 2007/12/12 09:05:59 armin76 Exp $
+
+  12 Dec 2007; Raúl Porcel <armin76@gentoo.org> xfce-utils-4.4.2-r1.ebuild:
+  alpha/ia64/sparc stable wrt #201747
 
   09 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   xfce-utils-4.4.2-r1.ebuild:
