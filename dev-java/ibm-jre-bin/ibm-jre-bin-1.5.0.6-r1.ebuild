@@ -1,15 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.5.0.5a.ebuild,v 1.5 2007/09/08 01:23:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.5.0.6-r1.ebuild,v 1.1 2007/12/12 15:14:09 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
 JDK_RELEASE=$(get_version_component_range 2-3)
 SERVICE_RELEASE=$(get_version_component_range 4)
-SERVICE_RELEASE_LINK="${SERVICE_RELEASE}a"
-RPM_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.1"
+SERVICE_RELEASE_LINK="${SERVICE_RELEASE}"
+TGZ_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
 
-JRE_DIST_PREFIX="ibm-java2-jre-${RPM_PV}-linux"
+JRE_DIST_PREFIX="ibm-java2-jre-${TGZ_PV}-linux"
 
 X86_JRE_DIST="${JRE_DIST_PREFIX}-i386.tgz"
 AMD64_JRE_DIST="${JRE_DIST_PREFIX}-x86_64.tgz"
@@ -186,7 +186,7 @@ src_compile() { :; }
 src_install() {
 	# Copy all the files to the designated directory
 	dodir /opt/${P}
-	cp -pR ${S}/jre/* ${D}/opt/${P}/
+	cp -pR "${S}"/jre/* "${D}/opt/${P}/"
 
 	# setting the ppc stuff
 	#if use ppc; then
@@ -223,7 +223,7 @@ src_install() {
 	use !alsa && rm "${jrebindest}/libjsoundalsa.so"
 
 	dohtml -a html,htm,HTML -r docs || die
-	dodoc ${S}/COPYRIGHT || die
+	dodoc "${S}/COPYRIGHT" || die
 
 	set_java_env
 }
