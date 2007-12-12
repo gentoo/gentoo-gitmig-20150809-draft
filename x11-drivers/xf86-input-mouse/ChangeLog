@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-mouse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.56 2007/11/07 09:17:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.57 2007/12/12 21:57:05 fmccor Exp $
+
+  12 Dec 2007; Ferris McCormick <fmccor@gentoo.org>
+  xf86-input-mouse-1.2.2-r1.ebuild:
+  Sparc stable, Bug #202087.
 
 *xf86-input-mouse-1.2.3 (07 Nov 2007)
 

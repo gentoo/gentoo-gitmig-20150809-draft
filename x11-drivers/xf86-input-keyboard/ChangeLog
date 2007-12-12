@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-keyboard
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-keyboard/ChangeLog,v 1.45 2007/09/09 07:54:22 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-keyboard/ChangeLog,v 1.46 2007/12/12 21:54:11 fmccor Exp $
+
+  12 Dec 2007; Ferris McCormick <fmccor@gentoo.org>
+  xf86-input-keyboard-1.1.1-r1.ebuild:
+  Sparc stable, Bug #202087.
 
   09 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-input-keyboard-1.2.0.ebuild, xf86-input-keyboard-1.2.0-r1.ebuild:
