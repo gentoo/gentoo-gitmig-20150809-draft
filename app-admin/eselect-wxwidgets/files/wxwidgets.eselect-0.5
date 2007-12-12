@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/files/wxwidgets.eselect-0.5,v 1.1 2007/11/18 21:21:10 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/files/wxwidgets.eselect-0.5,v 1.2 2007/12/12 03:29:12 dirtyepic Exp $
 
 inherit config
 
@@ -34,11 +34,11 @@ set_config() {
 		:
 	else		
 		[[ ! -f ${WXCONFDIR}/${target} ]] && \
-			die -q "\"${1}\" doesn't appear to be a valid profile name."
+			die -q "\"${1}\" doesn't appear to be a valid profile name"
 	fi
 
 	echo
-	echo "Setting wxWidgets profile to ${target}."
+	echo "Setting wxWidgets profile to ${target}"
 	echo
 	store_config ${WXCONFFILE} WXCONFIG ${target}
 }
@@ -46,7 +46,7 @@ set_config() {
 ### show action ###
 
 describe_show() {
-	echo "Show the currently selected profile."
+	echo "Show the currently selected profile"
 }
 
 do_show() {
@@ -63,7 +63,7 @@ do_show() {
 ### list action ###
 
 describe_list() {
-	echo "List available profiles."
+	echo "List available profiles"
 }
 
 do_list() {
@@ -89,7 +89,7 @@ do_list() {
 ### set action ###
 
 describe_set() {
-	echo "Set the system wxWidgets profile."
+	echo "Set the system wxWidgets profile"
 }
 
 describe_set_options() {
@@ -111,30 +111,17 @@ do_set() {
 }
 
 describe_update() {
-	echo "Check the validity of the current profile and update it if invalid."
+	echo "Check current profile and update it if invalid (internal use only)"
 }
 
 do_update() {
-	# the only way we'd be without a conffile is if the user deleted it
-	# easy enough to generate a new one though
-	if [[ ! -e ${WXCONFFILE} ]];  then
-		echo
-		write_warning_msg "Could not find a current wxWidgets profile."
-		write_warning_msg
-		write_warning_msg "Please use eselect wxwidgets to set one."
-		echo
-		return 1
-	fi
-
 	currconf=$(load_config ${WXCONFFILE} WXCONFIG)
 
-	# if current config is valid, leave it alone
-	if [[ -e ${WXCONFDIR}/${currconf} ]]; then
-		echo
-		echo "Current wxWidgets profile is valid."
-		echo
-		return 0
-	fi
+	# if current config is "none" leave it alone
+	[[ ${currconf} == none ]] && return 0
+
+	# if current config is valid leave it alone
+	[[ -e ${WXCONFDIR}/${currconf} ]] && return 0
 
 	# split the config string into components
 	OIFS=${IFS}
@@ -149,7 +136,6 @@ do_update() {
 	wxchar=(${2})
 	wxdebug=(${3})
 	wxver=(${4})
-
 
 	# put available components into next element(s) of array
 	local component toolkit char debug ver element opt

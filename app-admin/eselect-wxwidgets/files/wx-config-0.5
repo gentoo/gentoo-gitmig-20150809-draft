@@ -5,29 +5,31 @@
 #  a lame wx-config wrapper by dirtyepic@gentoo.org
 
 _wxerror() {
+	echo "An error occurred while calling wx-config:"
 	echo
-	echo "Cannot find the currently selected wxWidgets profile."
+	echo "    ${1}"
 	echo
 	echo "Please use \`eselect wxwidgets\` to select an available profile and try again."
-	echo
 	exit 1
 }
 
 if [[ -n ${WX_ECLASS_CONFIG} ]]; then
-	${WX_ECLASS_CONFIG} $@
+	${WX_ECLASS_CONFIG} "$@"
 	exit 0
 else
 	if [[ -e /var/lib/wxwidgets/current ]]; then
 		source /var/lib/wxwidgets/current
 	else
-		_wxerror
+		_wxerror "Cannot find wxWidgets profile configuration file ( /var/lib/wxwidgets/current )"
 	fi
+
+	[[ ${WXCONFIG} == none ]] && _wxerror "No profile currently selected"
 
 	if [[ -f /usr/lib/wx/config/${WXCONFIG} \
 	   && -x /usr/lib/wx/config/${WXCONFIG} ]]; then
-	   /usr/lib/wx/config/${WXCONFIG} $@
+	   /usr/lib/wx/config/${WXCONFIG} "$@"
 	else
-		_wxerror
+		_wxerror "Cannot find wxWidgets profile ( ${WXCONFIG} )"
 	fi
 	exit 0
 fi

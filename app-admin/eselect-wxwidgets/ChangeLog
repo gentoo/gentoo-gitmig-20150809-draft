@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-wxwidgets
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.5 2007/12/10 07:03:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.6 2007/12/12 03:29:11 dirtyepic Exp $
+
+  12 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> files/wx-config-0.5,
+  files/wxrc-0.5, files/wxwidgets.eselect-0.5:
+  Output touchups.  Handle none profile better.
 
   10 Dec 2007; Jeroen Roovers <jer@gentoo.org> eselect-wxwidgets-0.5.ebuild:
   Marked ~hppa (bug #199594).
