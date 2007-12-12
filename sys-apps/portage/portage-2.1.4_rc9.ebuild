@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4_rc9.ebuild,v 1.1 2007/12/08 07:09:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4_rc9.ebuild,v 1.2 2007/12/12 07:33:11 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -19,8 +19,8 @@ RDEPEND=">=dev-lang/python-2.4
 	!build? ( >=sys-apps/sed-4.0.5
 		>=app-shells/bash-3.2_p17 )
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
-	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 )
-	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 )
+	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
+	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
 	>=app-misc/pax-utils-0.1.13
 	selinux? ( >=dev-python/python-selinux-2.16 )"
 PDEPEND="
@@ -199,9 +199,14 @@ src_install() {
 pkg_preinst() {
 	if ! use build && ! has_version dev-python/pycrypto && \
 		has_version '>=dev-lang/python-2.5' ; then
-		# Bug #198398 - Unless pycrypto is installed, we need
-		# python's ssl flag enabled for RMD160 support.
-		built_with_use '>=dev-lang/python-2.5' ssl
+		if ! built_with_use '>=dev-lang/python-2.5' ssl ; then
+			echo "If you are a Gentoo developer and you plan to" \
+			"commit ebuilds with this system then please install" \
+			"pycrypto or enable python's ssl USE flag in order" \
+			"to enable RMD160 hash support. See bug #198398 for" \
+			"more information." | \
+			fmt -w 70 | while read line ; do ewarn "${line}" ; done
+		fi
 	fi
 	local portage_base="/usr/$(get_libdir)/portage"
 	if has livecvsportage ${FEATURES} && [ "${ROOT}" = "/" ]; then

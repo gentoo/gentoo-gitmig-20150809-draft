@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3.19.ebuild,v 1.9 2007/12/11 10:15:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3.19.ebuild,v 1.10 2007/12/12 07:33:11 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -21,8 +21,8 @@ RDEPEND=">=dev-lang/python-2.4
 	!build? ( >=sys-apps/sed-4.0.5
 		>=app-shells/bash-3.2_p17 )
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
-	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 )
-	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 )
+	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
+	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
 	>=app-misc/pax-utils-0.1.13
 	selinux? ( >=dev-python/python-selinux-2.16 )"
 PDEPEND="
