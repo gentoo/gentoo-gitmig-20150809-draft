@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r9.ebuild,v 1.1 2007/12/11 20:53:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r9.ebuild,v 1.2 2007/12/12 20:38:05 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -10,7 +10,7 @@ inherit eutils autotools flag-o-matic multilib
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20071211.tar.gz
+	mirror://gentoo/${P}-patches-20071212.tar.gz
 	http://dspam.nuclearelephant.com/sources/extras/dspam_sa_trainer.tar.gz"
 
 LICENSE="GPL-2"
