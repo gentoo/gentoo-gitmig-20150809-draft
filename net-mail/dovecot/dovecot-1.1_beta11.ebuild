@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1_beta11.ebuild,v 1.1 2007/12/12 17:51:10 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1_beta11.ebuild,v 1.2 2007/12/12 20:23:56 mr_bones_ Exp $
 
 inherit autotools eutils ssl-cert
 
@@ -21,7 +21,7 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="-* ~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
-IUSE="debug doc ipv6 kerberos ldap mbox mysql pop3d pam postgres sieve ssl suid vpopmail" # managesieve 
+IUSE="debug doc ipv6 kerberos ldap mbox mysql pop3d pam postgres sieve ssl suid vpopmail" # managesieve
 
 # Developer documentation, controlled by the doc USE flag
 DEVDOCS="auth-protocol index multiaccess securecoding"
