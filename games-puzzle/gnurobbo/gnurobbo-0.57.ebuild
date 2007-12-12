@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/gnurobbo-0.57.ebuild,v 1.2 2005/06/10 13:45:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/gnurobbo-0.57.ebuild,v 1.3 2007/12/12 06:13:19 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -18,7 +18,7 @@ DEPEND="media-libs/libsdl
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	bunzip2 -v *bz2
 	mv gnurobbo.48.png "${T}/${PN}.png"
 }
@@ -33,9 +33,9 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS Bugs ChangeLog README TODO
 	doicon "${T}/${PN}.png"
-	make_desktop_entry gnurobbo Gnurobbo ${PN}.png
+	make_desktop_entry gnurobbo Gnurobbo
 	prepgamesdirs
 }
