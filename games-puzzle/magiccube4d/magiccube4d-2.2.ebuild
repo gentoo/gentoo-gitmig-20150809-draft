@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/magiccube4d/magiccube4d-2.2.ebuild,v 1.10 2007/10/22 20:30:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/magiccube4d/magiccube4d-2.2.ebuild,v 1.11 2007/12/12 02:10:17 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -20,12 +20,14 @@ S="${WORKDIR}/${PN}-src-${MY_PV}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch ${FILESDIR}/${PN}-EventHandler.patch \
 		"${FILESDIR}/${P}"-gcc41.patch \
 		"${FILESDIR}/${P}"-64bit-ptr.patch
-	sed -i -e "s:-Werror::" \
-		configure
+	sed -i \
+		-e "s:-Werror::" \
+		configure \
+		|| die "sed failed"
 }
 
 src_compile() {
