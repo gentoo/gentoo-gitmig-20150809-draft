@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/traverso
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.12 2007/08/22 08:12:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.13 2007/12/12 07:55:10 aballier Exp $
+
+*traverso-0.42.0 (12 Dec 2007)
+
+  12 Dec 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/traverso-0.42.0-nojack.patch,
+  +files/traverso-0.42.0-strictaliasing.patch, +traverso-0.42.0.ebuild:
+  version bump, thanks a lot Remon for the notice
 
   22 Aug 2007; Alexis Ballier <aballier@gentoo.org>
   traverso-0.41.0-r1.ebuild:
