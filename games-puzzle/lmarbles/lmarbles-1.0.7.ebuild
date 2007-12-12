@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lmarbles/lmarbles-1.0.7.ebuild,v 1.1 2005/02/18 16:03:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lmarbles/lmarbles-1.0.7.ebuild,v 1.2 2007/12/12 06:12:29 mr_bones_ Exp $
 
 inherit games
 
@@ -18,7 +18,7 @@ DEPEND=">=media-libs/libsdl-1.2.4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e '/^inst_dir/s:/games::' \
 		-e "/^prf_dir/s:/var/lib/games:${GAMES_STATEDIR}:" configure \
