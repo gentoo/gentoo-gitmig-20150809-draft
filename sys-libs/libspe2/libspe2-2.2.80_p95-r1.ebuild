@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libspe2/libspe2-2.2.80_p95-r1.ebuild,v 1.1 2007/10/27 11:56:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libspe2/libspe2-2.2.80_p95-r1.ebuild,v 1.2 2007/12/12 01:35:33 lu_zero Exp $
 inherit eutils
 
 MY_P=${P/_p/-}
@@ -46,14 +46,14 @@ src_compile() {
 	use debug && myconf="${myconf} DEBUG=1"
 	make all elfspe-all CROSS="${CTARGET}-" \
 		prefix=/usr SYSROOT="$SYSROOT" ${myconf} \
-		speinclude=/usr/spu-elf/include
+		speinclude=/usr/spu-elf/include || die
 }
 
 src_install() {
 	make CROSS="${CTARGET}-" prefix=/usr \
 		 speinclude=/usr/spu-elf/include \
 		 SYSROOT="$SYSROOT" \
-		 DESTDIR="$D" install elfspe-install
+		 DESTDIR="$D" install elfspe-install || die
 	newinitd "${FILESDIR}/spe.rc6" elfspe
 }
 
