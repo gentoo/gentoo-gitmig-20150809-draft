@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/iwlwifi-1.2.22.ebuild,v 1.2 2007/12/12 03:01:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/iwlwifi-1.2.22.ebuild,v 1.3 2007/12/12 03:05:07 compnerd Exp $
 
 inherit eutils linux-mod
 
@@ -18,13 +18,15 @@ RDEPEND="ipw3945? ( =net-wireless/iwl3945-ucode-2.14.1.5 )
 		 ipw4965? ( =net-wireless/iwl4965-ucode-4.44.1.18 )
 		 !ipw3945? ( !ipw4965? ( =net-wireless/iwl3945-ucode-2.14.1.5 =net-wireless/iwl4965-ucode-4.44.1.18 ) )"
 
+RESTRICT="test"
+
 pkg_setup() {
 	if kernel_is lt 2 6 22 ; then
 		eerror "iwlwifi requires a kernel >=2.6.22."
 		eerror "Please set your /usr/src/linux symlink accordingly."
 		die "invalid /usr/src/linux symlink"
 	else
-		CONFIG_CHECK="MAC80211"
+		CONFIG_CHECK="MAC80211 FW_LOADER"
 	fi
 
 	if kernel_is gt 2 6 23 ; then
@@ -57,4 +59,9 @@ pkg_setup() {
 		MODULE_NAMES="iwl3945(net/wireless:${S}/compatible) iwl4965(net/wireless:${S}/compatible)"
 		BUILD_PARAMS="${BUILD_PARAMS} CONFIG_IWL3945=m CONFIG_IWL4965=m"
 	fi
+}
+
+src_install() {
+	linux-mod_src_install
+	dodoc CHANGES ISSUES README.iwlwifi
 }

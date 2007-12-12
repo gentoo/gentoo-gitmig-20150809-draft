@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iwlwifi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/ChangeLog,v 1.14 2007/12/12 03:01:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/ChangeLog,v 1.15 2007/12/12 03:05:07 compnerd Exp $
+
+  12 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  iwlwifi-1.2.22.ebuild:
+  restrict tests as they fail, and add firmware loading support in the kernel.
+  Thanks to MATSUU Takuto (bug #191031)
 
   12 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   iwlwifi-1.2.22.ebuild:
