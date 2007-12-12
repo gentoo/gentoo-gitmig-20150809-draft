@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.4 2007/12/03 23:54:34 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.5 2007/12/12 17:21:25 wschlich Exp $
+
+*zabbix-1.4.3 (12 Dec 2007)
+
+  12 Dec 2007; Wolfram Schlich <wschlich@gentoo.org>
+  +files/1.4.3/init.d/zabbix-agentd, +files/1.4.3/init.d/zabbix-server,
+  +files/1.4.3/postinstall-en.txt, +files/1.4.3/zabbix_agent.conf,
+  +files/1.4.3/zabbix_agentd.conf, +files/1.4.3/zabbix_server.conf,
+  +zabbix-1.4.3.ebuild:
+  version bump
 
 *zabbix-1.4.2-r1 (03 Dec 2007)
 
