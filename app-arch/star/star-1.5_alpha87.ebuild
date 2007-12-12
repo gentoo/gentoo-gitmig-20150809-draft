@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha87.ebuild,v 1.5 2007/12/12 15:07:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha87.ebuild,v 1.6 2007/12/12 16:15:30 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/${PN}/alpha/${PN}-${PV/_alpha/a}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1 CDDL-Schily"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
