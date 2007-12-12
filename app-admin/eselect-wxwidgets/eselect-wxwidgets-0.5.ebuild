@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/eselect-wxwidgets-0.5.ebuild,v 1.5 2007/12/10 07:03:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/eselect-wxwidgets-0.5.ebuild,v 1.6 2007/12/12 03:47:30 dirtyepic Exp $
 
 DESCRIPTION="Manage the system default for wxWidgets packages."
 HOMEPAGE="http://www.gentoo.org"
@@ -29,4 +29,13 @@ pkg_postinst() {
 	if [[ ! -e ${ROOT}/var/lib/wxwidgets/current ]]; then
 		echo 'WXCONFIG="none"' > "${ROOT}"/var/lib/wxwidgets/current
 	fi
+
+	echo
+	elog "By default your system wxWidgets profile is set to \"none\"."
+	elog
+	elog "You will need to select a profile using \`eselect wxwidgets\` to"
+	elog "use wxGTK outside of portage.  If you do not plan on building"
+	elog "packages or doing development work with wxGTK outside of portage"
+	elog "then you can safely leave this set to \"none\"."
+	echo
 }
