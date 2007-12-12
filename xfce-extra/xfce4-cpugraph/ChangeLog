@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-cpugraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph/ChangeLog,v 1.33 2007/12/12 09:16:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph/ChangeLog,v 1.34 2007/12/12 14:59:18 ranger Exp $
+
+  12 Dec 2007; Brent Baude <ranger@gentoo.org> xfce4-cpugraph-0.4.0.ebuild:
+  Marking xfce4-cpugraph-0.4.0 ppc64 stable for bug 201747
 
   12 Dec 2007; Raúl Porcel <armin76@gentoo.org>
   xfce4-cpugraph-0.4.0.ebuild:
