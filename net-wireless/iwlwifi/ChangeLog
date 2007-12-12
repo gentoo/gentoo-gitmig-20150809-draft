@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/iwlwifi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/ChangeLog,v 1.12 2007/11/22 21:04:28 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/ChangeLog,v 1.13 2007/12/12 02:58:56 compnerd Exp $
+
+*iwlwifi-1.2.22 (12 Dec 2007)
+
+  12 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +iwlwifi-1.2.22.ebuild:
+  Version bump from upstream
 
   22 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   iwlwifi-1.1.21-r1.ebuild:
