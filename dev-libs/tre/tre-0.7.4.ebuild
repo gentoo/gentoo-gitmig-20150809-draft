@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.7.4.ebuild,v 1.12 2007/08/25 17:31:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.7.4.ebuild,v 1.13 2007/12/12 16:26:14 pva Exp $
 
 IUSE="nls static"
 
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc NEWS README THANKS TODO AUTHORS
 	dohtml doc/*.{html,css}
 }

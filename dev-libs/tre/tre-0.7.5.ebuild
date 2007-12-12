@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.7.5.ebuild,v 1.1 2007/12/10 20:35:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.7.5.ebuild,v 1.2 2007/12/12 16:26:14 pva Exp $
 
 IUSE="nls"
 
@@ -13,22 +13,22 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 DEPEND="sys-apps/gawk
-	sys-apps/grep
-	sys-apps/sed
-	sys-devel/gettext
-	sys-devel/libtool
-	sys-devel/gcc
-	dev-util/pkgconfig"
+		sys-apps/grep
+		sys-apps/sed
+		sys-devel/gettext
+		sys-devel/libtool
+		sys-devel/gcc
+		dev-util/pkgconfig"
 
-RDEPEND="virtual/libc
-	!app-misc/glimpse
-	!app-text/agrep"
+RDEPEND="!app-misc/glimpse
+		!app-text/agrep"
 
 src_compile() {
-	# Build TRE library.
+	# --enable-static is required for CRM114. See bug #165378.
 	econf \
 		$(use_enable nls) \
 		--enable-agrep \
+		--enable-static \
 		--enable-system-abi \
 		--disable-profile \
 		--disable-debug || die
