@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.121 2007/12/12 09:05:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.122 2007/12/12 14:53:16 ranger Exp $
+
+  12 Dec 2007; Brent Baude <ranger@gentoo.org> xfce-utils-4.4.2-r1.ebuild:
+  Marking xfce-utils-4.4.2-r1 ppc64 stable for bug 201747
 
   12 Dec 2007; Raúl Porcel <armin76@gentoo.org> xfce-utils-4.4.2-r1.ebuild:
   alpha/ia64/sparc stable wrt #201747
