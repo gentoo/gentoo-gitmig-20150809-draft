@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.12.10.ebuild,v 1.8 2007/12/11 11:03:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.12.10.ebuild,v 1.9 2007/12/12 01:44:24 leio Exp $
 
 inherit gnome2
 
@@ -34,11 +34,11 @@ src_install() {
 	gnome2_src_install
 
 	if ! use doc && ! use examples; then
-		rm -fr ${D}/usr/share/doc/glibmm-2.4
+		rm -fr "${D}"/usr/share/doc/glibmm-2.4
 	fi
 
 	if use examples; then
 		find examples -type d -name '.deps' -exec rm -fr {} \; 2>/dev/null
-		cp -R examples ${D}/usr/share/doc/${PF}
+		cp -R examples "${D}"/usr/share/doc/${PF}
 	fi
 }
