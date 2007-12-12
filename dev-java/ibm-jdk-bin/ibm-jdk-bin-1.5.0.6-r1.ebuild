@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.5a.ebuild,v 1.6 2007/09/08 01:21:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.6-r1.ebuild,v 1.1 2007/12/12 15:10:07 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
 JDK_RELEASE=$(get_version_component_range 2-3)
 SERVICE_RELEASE=$(get_version_component_range 4)
-SERVICE_RELEASE_LINK="${SERVICE_RELEASE}a"
-RPM_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.1"
+SERVICE_RELEASE_LINK="${SERVICE_RELEASE}"
+TGZ_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
 
-JDK_DIST_PREFIX="ibm-java2-sdk-${RPM_PV}-linux"
-JAVACOMM_DIST_PREFIX="ibm-java2-javacomm-${RPM_PV}-linux"
+JDK_DIST_PREFIX="ibm-java2-sdk-${TGZ_PV}-linux"
+JAVACOMM_DIST_PREFIX="ibm-java2-javacomm-${TGZ_PV}-linux"
 
 X86_JDK_DIST="${JDK_DIST_PREFIX}-i386.tgz"
 X86_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-i386.tgz"
@@ -217,14 +217,14 @@ src_compile() { :; }
 src_install() {
 	# Copy all the files to the designated directory
 	dodir /opt/${P}
-	cp -pR ${S}/{bin,jre,lib,include} ${D}/opt/${P}/
+	cp -pR "${S}"/{bin,jre,lib,include} "${D}/opt/${P}/"
 
 	dodir /opt/${P}/share
 	if use examples; then
-		cp -pPR ${S}/demo ${D}/opt/${P}/share/
+		cp -pPR "${S}/demo" "${D}/opt/${P}/share/"
 	fi
 
-	cp -pPR ${S}/src.jar "${D}/opt/${P}/"
+	cp -pPR "${S}/src.jar" "${D}/opt/${P}/"
 
 	# setting the ppc stuff
 	#if use ppc; then
@@ -261,7 +261,7 @@ src_install() {
 	use !alsa && rm "${jrebindest}/libjsoundalsa.so"
 
 	dohtml -a html,htm,HTML -r docs
-	dodoc ${S}/COPYRIGHT
+	dodoc "${S}/COPYRIGHT"
 
 	set_java_env
 }
