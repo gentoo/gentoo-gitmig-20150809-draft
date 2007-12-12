@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.4-r1.ebuild,v 1.2 2007/12/07 15:36:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.4-r1.ebuild,v 1.3 2007/12/12 19:56:48 lack Exp $
 
 NEED_PYTHON="2.3"
 inherit python eutils multilib
@@ -38,10 +38,10 @@ src_install() {
 	newins tmp.native_feed ROX-Lib2.xml
 
 	local feedname
-	feedname=$(0distutils -e tmp.native_feed) || "0distutils URI escape failed"
+	feedname=$(0distutils -e tmp.native_feed) || die "0distutils URI escape failed"
 	dosym "${baselibdir}/ROX-Lib2/ROX-Lib2.xml" "${NATIVE_FEED_DIR}/${feedname}"
 
 	local cachedname
-	cachedname=$(0distutils -c tmp.native_feed) || "0distutils URI escape failed"
+	cachedname=$(0distutils -c tmp.native_feed) || die "0distutils URI escape failed"
 	dosym "${baselibdir}/ROX-Lib2/.DirIcon" "${ICON_CACHE_DIR}/${cachedname}"
 }

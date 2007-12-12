@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.23 2007/12/11 20:59:48 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.24 2007/12/12 19:56:48 lack Exp $
+
+  12 Dec 2007; Jim Ramsay <lack@gentoo.org> rox-lib-2.0.4-r1.ebuild,
+  rox-lib-2.0.5.ebuild:
+  Adding missing 'die' command
 
 *rox-lib-2.0.5 (11 Dec 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.9-r2.ebuild,v 1.1 2007/12/04 17:50:56 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.9-r2.ebuild,v 1.2 2007/12/12 19:55:01 lack Exp $
 
 inherit multilib
 
@@ -61,11 +61,11 @@ src_install() {
 	newins tmp.native_feed ROX-CLib.xml
 
 	local feedname
-	feedname=$(0distutils -e tmp.native_feed) || "0distutils URI escape failed"
+	feedname=$(0distutils -e tmp.native_feed) || die "0distutils URI escape failed"
 	dosym "${baselibdir}/ROX-CLib/ROX-CLib.xml" "${NATIVE_FEED_DIR}/${feedname}"
 
 	local cachedname
-	cachedname=$(0distutils -c tmp.native_feed) || "0distutils URI escape failed"
+	cachedname=$(0distutils -c tmp.native_feed) || die "0distutils URI escape failed"
 	dosym "${baselibdir}/ROX-CLib/.DirIcon" "${ICON_CACHE_DIR}/${cachedname}"
 
 }
