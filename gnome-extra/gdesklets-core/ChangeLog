@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.80 2007/10/09 23:56:02 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.81 2007/12/12 19:44:59 nixphoeni Exp $
+
+  12 Dec 2007; Joe Sapp <nixphoeni@gentoo.org>
+  files/gdesklets-displays.desktop:
+  Fixed .desktop entry for browsing the global Displays directory.
+  Not sure this is needed or desired any more.
 
   09 Oct 2007; Joe Sapp <nixphoeni@gentoo.org>
   gdesklets-core-0.35.2-r1.ebuild, gdesklets-core-0.35.3.ebuild,
