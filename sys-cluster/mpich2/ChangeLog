@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.22 2007/12/03 06:03:02 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.23 2007/12/12 05:20:45 nerdboy Exp $
+
+  12 Dec 2007; Steve Arnold <nerdboy@gentoo.org> mpich2-1.0.6.ebuild:
+  fixed string quoting issue in bug 201182, although I can't reproduce
+  bug #201977 at the moment...
 
 *mpich2-1.0.6 (03 Dec 2007)
 

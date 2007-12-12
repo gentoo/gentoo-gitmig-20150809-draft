@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.2 2007/12/03 07:21:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.3 2007/12/12 05:20:45 nerdboy Exp $
 
 inherit autotools distutils eutils flag-o-matic fortran java-pkg-2
 
@@ -182,15 +182,16 @@ src_compile() {
 	fi
 
 	if use mpe-sdk; then
-	    mpe_conf='--with-java=${JDK_TOPDIR} --with-java2=${JDK_TOPDIR} \
+	    mpe_conf="--with-java=${JDK_TOPDIR} --with-java2=${JDK_TOPDIR} \
 		--enable-slog2=build \
-		--with-mpicc="${WORKDIR}"/build/bin/mpicc \
-		--with-mpif77="${WORKDIR}"/build/bin/mpif77 \
+		--with-mpicc=\"${WORKDIR}\"/build/bin/mpicc \
+		--with-mpif77=\"${WORKDIR}\"/build/bin/mpif77 \
 		--enable-collchk --enable-graphics=yes --enable-wrappers \
 		--with-trace-libdir=/usr/$(get_libdir)/mpe/trace_rlog \
 		--with-flib_path_leader=-Wl,-L --enable-mpich \
-		--enable-misc --enable-callstack --enable-logging'
-	    use debug && mpe_conf=" ${mpe_conf} --enable-g"
+		--enable-misc --enable-callstack --enable-logging"
+
+	    use debug && mpe_conf="${mpe_conf} --enable-g"
 
 	    sed -i -e "s:fpic:fPIC:g" \
 		src/mpe2/src/slog2sdk/trace_sample/configure \
@@ -219,7 +220,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--sysconfdir=/etc/"${PN}" \
 		--prefix=/usr --exec-prefix=/usr \
-		--datadir=/usr/share/${PN} || die "configure failed"
+		--datadir=/usr/share/"${PN}" || die "configure failed"
 
 	# no parallel make here
 	use fortran && export FFLAGS="-fPIC"
@@ -256,12 +257,13 @@ src_test() {
 	elog "Using ./configure --prefix=${TEST} --with-mpi=${TEST} etc..."
 	echo
 
-	"${S}"/configure --with-mpi="${TEST}" \
-	    --exec-prefix="${TEST}" \
+	export LD_LIBRARY_PATH="${TEST}/lib:$LD_LIBRARY_PATH"
+
+	"${S}"/configure \
+	    --exec-prefix="${TEST}" --with-mpi="${TEST}" \
 	    --disable-f90 --with-mpich2="${TEST}" $(use_enable threads) \
 	    || die "configure test failed"
 
-	export LD_LIBRARY_PATH="${TEST}/lib:$LD_LIBRARY_PATH"
 	nice --adjustment=3 make testing || die "make testing failed"
 
 	"${TEST}"/bin/mpdallexit
