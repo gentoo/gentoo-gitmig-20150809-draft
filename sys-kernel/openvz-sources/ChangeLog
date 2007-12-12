@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.76 2007/12/10 09:26:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.77 2007/12/12 20:47:16 pva Exp $
+
+  12 Dec 2007; <pva@gentoo.org> openvz-sources-2.6.18.028.051.ebuild:
+  Fixed emerge with new portage, bug #201973, reported by Lars Tiefland
+  <ltiefland AT gmail.com>.
 
 *openvz-sources-2.6.18.028.051 (10 Dec 2007)
 
