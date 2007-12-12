@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.110 2007/12/12 08:58:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.111 2007/12/12 14:49:55 ranger Exp $
+
+  12 Dec 2007; Brent Baude <ranger@gentoo.org> libxfcegui4-4.4.2.ebuild:
+  Marking libxfcegui4-4.4.2 ppc64 stable for bug 201747
 
   12 Dec 2007; Raúl Porcel <armin76@gentoo.org> libxfcegui4-4.4.2.ebuild:
   alpha/ia64/sparc stable wrt #201747
