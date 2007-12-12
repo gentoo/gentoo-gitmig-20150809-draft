@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/files/wxwidgets.eselect-0.5,v 1.2 2007/12/12 03:29:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/files/wxwidgets.eselect-0.5,v 1.3 2007/12/12 04:05:38 dirtyepic Exp $
 
 inherit config
 
@@ -115,6 +115,8 @@ describe_update() {
 }
 
 do_update() {
+	[[ ! -e ${WXCONFFILE} ]] && do_set none
+
 	currconf=$(load_config ${WXCONFFILE} WXCONFIG)
 
 	# if current config is "none" leave it alone
