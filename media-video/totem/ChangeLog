@@ -1,6 +1,13 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.195 2007/11/29 05:38:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.196 2007/12/12 05:20:05 compnerd Exp $
+
+  12 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/01_build_mozilla_plugin_with_seamonkey_xpcom.patch,
+  -files/totem-1.5.91-mozilla-firefox-include-fix.patch,
+  -files/01_build_mozilla_plugin_with_firefox_xpcom.patch,
+  -totem-2.16.5.ebuild, -totem-2.18.2.ebuild, -totem-2.20.0.ebuild:
+  prune unused versions
 
   29 Nov 2007; Jeroen Roovers <jer@gentoo.org> totem-2.20.1.ebuild:
   Stable for HPPA (bug #199740).
