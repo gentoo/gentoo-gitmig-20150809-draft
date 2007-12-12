@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cdplay
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdplay/ChangeLog,v 1.21 2007/12/04 19:05:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdplay/ChangeLog,v 1.22 2007/12/12 15:42:39 fmccor Exp $
+
+  12 Dec 2007; Ferris McCormick <fmccor@gentoo.org> cdplay-1.0.ebuild:
+  Sparc stable, Bug #200097.
 
   04 Dec 2007; Raúl Porcel <armin76@gentoo.org> cdplay-1.0.ebuild:
   alpha stable wrt #200097, thanks to Tobias Klausmann for testing
