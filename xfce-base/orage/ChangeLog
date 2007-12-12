@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/orage
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.38 2007/12/12 09:10:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.39 2007/12/12 14:55:37 ranger Exp $
+
+  12 Dec 2007; Brent Baude <ranger@gentoo.org> orage-4.4.2.ebuild:
+  Marking orage-4.4.2 ppc64 stable for bug 201747
 
   12 Dec 2007; Raúl Porcel <armin76@gentoo.org> orage-4.4.2.ebuild:
   alpha/ia64/sparc stable wrt #201747
