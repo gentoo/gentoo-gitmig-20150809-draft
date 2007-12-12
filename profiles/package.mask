@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7992 2007/12/11 21:11:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7993 2007/12/12 13:59:05 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Raúl Porcel <armin76@gentoo.org> (12 Dec 2007)
+# P.mask snapshots
+=dev-libs/nspr-4.7.0_pre*
+=dev-libs/nss-3.12_alpha*
 
 # Bernard Cafarelli <voyageur@gentoo.org> (08 Dec 2007)
 # Masked for removal in 30 days
