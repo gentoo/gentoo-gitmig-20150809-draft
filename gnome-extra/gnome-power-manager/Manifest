@@ -2,26 +2,13 @@ AUX gnome-power-manager-2.16.3-doc.patch 3920 RMD160 a5afc7b63f52769f080d02d2f18
 MD5 b45c57a3d395431479d350f9a707ee0d files/gnome-power-manager-2.16.3-doc.patch 3920
 RMD160 a5afc7b63f52769f080d02d2f1883f23c41e5aaf files/gnome-power-manager-2.16.3-doc.patch 3920
 SHA256 0c8b96a0ca75faf7132d3a80424175cac1ffe7271e7614fe956516fe67cf92fa files/gnome-power-manager-2.16.3-doc.patch 3920
-AUX gpm-2.18.3-slotted-gstreamer.patch 406 RMD160 a4a1acb11b57f7a0cbfc4609577cb27e26596bd7 SHA1 a8d4fb212cd97a682b7ccf64177f25740e06f953 SHA256 242b0d08cf380c5957be9d251f3135986f28131eddeb54b87af7ef683824965f
-MD5 8f4c8aa938b99a072cadb26702610958 files/gpm-2.18.3-slotted-gstreamer.patch 406
-RMD160 a4a1acb11b57f7a0cbfc4609577cb27e26596bd7 files/gpm-2.18.3-slotted-gstreamer.patch 406
-SHA256 242b0d08cf380c5957be9d251f3135986f28131eddeb54b87af7ef683824965f files/gpm-2.18.3-slotted-gstreamer.patch 406
 DIST gnome-power-manager-2.16.3.tar.gz 2382038 RMD160 97a93de5904e9c01567ba8eed6080d452ca61317 SHA1 2d9a1391b97a10bfd03829a3ea60550403b66ec5 SHA256 2e2c5b06f6c75903e48a017f7a909ef37292ffc60a9dea4877f3c61624664126
-DIST gnome-power-manager-2.18.3.tar.bz2 2068991 RMD160 0d07798d6b49cf7dece3b5989ee2b47c4dd25df7 SHA1 6f2fc8b21cf349c994cc3082443787d2d08378bd SHA256 0bcc8a35d52279cd24de93e957bf0f8b3359d096cd891e5bed07cb4b912f920b
 DIST gnome-power-manager-2.20.0.tar.bz2 2588839 RMD160 6f5cc9e9c57c1e913f0ef8a1d2d16784194bbd45 SHA1 117e8f5bc81ae81a110052df173eb75d87b08049 SHA256 bc1a3428bc98bfcab473e0f62387f32205c40693f6c6897931204ef4800aa1e5
 DIST gnome-power-manager-2.20.1.tar.bz2 2592825 RMD160 1ce9ff026cbadd8ab7473ca3f328e1210fb99d05 SHA1 ebee92e53827982993de3aa9dc6bb3283f7ce1fe SHA256 49b9bd62e521f08eae5cf1eb8fa4b1c7440ddfb664e16833af5fd13b97bc7d80
 EBUILD gnome-power-manager-2.16.3.ebuild 2192 RMD160 52d63dc78d7182c2bc2ee8a2f66e81b4b92f3269 SHA1 3859534f269add4e5b754bc82792498a4bac3bcb SHA256 e604745dd343c4bb2ee0d547cbd9e4dba0b4b938cce4bf840b57c1c907e7b498
 MD5 4badf1f654c54b5d73cceee72f3c9024 gnome-power-manager-2.16.3.ebuild 2192
 RMD160 52d63dc78d7182c2bc2ee8a2f66e81b4b92f3269 gnome-power-manager-2.16.3.ebuild 2192
 SHA256 e604745dd343c4bb2ee0d547cbd9e4dba0b4b938cce4bf840b57c1c907e7b498 gnome-power-manager-2.16.3.ebuild 2192
-EBUILD gnome-power-manager-2.18.3-r1.ebuild 2719 RMD160 caa357babe2b6e5c486633a0a3d48de2d437b8f1 SHA1 45ab3562557f5482d52ff3d01d1b80c1d376247e SHA256 847b022e97c13ec76ac75b6ff5ac1b59b8aca1200dce8f76295a55df9818c351
-MD5 b00f155de2faa1654a88b614788ac1cb gnome-power-manager-2.18.3-r1.ebuild 2719
-RMD160 caa357babe2b6e5c486633a0a3d48de2d437b8f1 gnome-power-manager-2.18.3-r1.ebuild 2719
-SHA256 847b022e97c13ec76ac75b6ff5ac1b59b8aca1200dce8f76295a55df9818c351 gnome-power-manager-2.18.3-r1.ebuild 2719
-EBUILD gnome-power-manager-2.18.3.ebuild 2588 RMD160 06935bb96e5d968df6b4c27def25f733c99edd33 SHA1 8515e066602de83d51b7f5d65fe1f4dd588dcb07 SHA256 35404cb581d043e75767472303ea922ceb7a1815729e07597246c2a868cfeaf8
-MD5 bb1e75fbb132afcf0d5d0e0848efe260 gnome-power-manager-2.18.3.ebuild 2588
-RMD160 06935bb96e5d968df6b4c27def25f733c99edd33 gnome-power-manager-2.18.3.ebuild 2588
-SHA256 35404cb581d043e75767472303ea922ceb7a1815729e07597246c2a868cfeaf8 gnome-power-manager-2.18.3.ebuild 2588
 EBUILD gnome-power-manager-2.20.0-r1.ebuild 2737 RMD160 582a0acf497ceedffb2a3d110a67e9b62dd2f581 SHA1 0f303f1ed03b7f271358c2c017a101c95cf777a0 SHA256 0c3158d15623ebee741f574478bc8278f0cb0ba8c6c3f7be0c048a4c21da6503
 MD5 2b3f784d2e0bea0aa72567d63544f901 gnome-power-manager-2.20.0-r1.ebuild 2737
 RMD160 582a0acf497ceedffb2a3d110a67e9b62dd2f581 gnome-power-manager-2.20.0-r1.ebuild 2737
@@ -30,10 +17,10 @@ EBUILD gnome-power-manager-2.20.1.ebuild 2439 RMD160 453483baf51b25b78dd78b7b34f
 MD5 82153a50e3f536081e3be7ebab10e89b gnome-power-manager-2.20.1.ebuild 2439
 RMD160 453483baf51b25b78dd78b7b34fb6c26688f5ee2 gnome-power-manager-2.20.1.ebuild 2439
 SHA256 b6a4672288468325734eb852bffc10ca7eaf5000b2c0435eb4bde900423b44cc gnome-power-manager-2.20.1.ebuild 2439
-MISC ChangeLog 12277 RMD160 c2425d9ad4957c777b9bd451027ff0bae5bbdaae SHA1 69ae15953197e3011aa3ef0499af78cd1fa44942 SHA256 4bf39c13433aeab18f8ea27584da9cbef16983b9dc2c0698713c2a75430e6bad
-MD5 75d82ee70af0096f0242f560819a579c ChangeLog 12277
-RMD160 c2425d9ad4957c777b9bd451027ff0bae5bbdaae ChangeLog 12277
-SHA256 4bf39c13433aeab18f8ea27584da9cbef16983b9dc2c0698713c2a75430e6bad ChangeLog 12277
+MISC ChangeLog 12485 RMD160 86758f321e7c4812c3f9a8e3faf409e534720dad SHA1 383c659d6f8d6b7c1b9cf87b17ad4a9a1c2fbb40 SHA256 f5f9e7df74cfbe9d3cfc7a5068dbab1f2324ab3ec7dfd9dcc2f57faa9dea916a
+MD5 b194f85950f2aa47039f230cca8f2435 ChangeLog 12485
+RMD160 86758f321e7c4812c3f9a8e3faf409e534720dad ChangeLog 12485
+SHA256 f5f9e7df74cfbe9d3cfc7a5068dbab1f2324ab3ec7dfd9dcc2f57faa9dea916a ChangeLog 12485
 MISC metadata.xml 328 RMD160 e83b5cef91422ece7e4991cc9f9422220d36b775 SHA1 c25df9c021e54eaf6c9add8db1c9954ac710b95e SHA256 2507b21284e65f9e7f5608d9865921192d0d6cdf46a35a705b0b2cb220583794
 MD5 a3d3afe281a135c24beb634426857a1d metadata.xml 328
 RMD160 e83b5cef91422ece7e4991cc9f9422220d36b775 metadata.xml 328
@@ -41,12 +28,6 @@ SHA256 2507b21284e65f9e7f5608d9865921192d0d6cdf46a35a705b0b2cb220583794 metadata
 MD5 ee3f12b4315e0eda003778ea8fed34c2 files/digest-gnome-power-manager-2.16.3 283
 RMD160 d72801946d21aef6b6d10eb31e262d6361b604d7 files/digest-gnome-power-manager-2.16.3 283
 SHA256 0f284634f495919f6decfe8500882189775a9892dbafdc43972bfffe0ca92647 files/digest-gnome-power-manager-2.16.3 283
-MD5 8108b6b581131cbff6f1ee43d0cbd911 files/digest-gnome-power-manager-2.18.3 286
-RMD160 18a7b660a93236fe41b46be227936373aa610c36 files/digest-gnome-power-manager-2.18.3 286
-SHA256 33ca63dfeea32cd478abfd6bfaeee97938c95e46bd10f6841b7e55d80ff27001 files/digest-gnome-power-manager-2.18.3 286
-MD5 8108b6b581131cbff6f1ee43d0cbd911 files/digest-gnome-power-manager-2.18.3-r1 286
-RMD160 18a7b660a93236fe41b46be227936373aa610c36 files/digest-gnome-power-manager-2.18.3-r1 286
-SHA256 33ca63dfeea32cd478abfd6bfaeee97938c95e46bd10f6841b7e55d80ff27001 files/digest-gnome-power-manager-2.18.3-r1 286
 MD5 87aa7a56b472d8c74a20d9596915ebba files/digest-gnome-power-manager-2.20.0-r1 286
 RMD160 4453134d83f050de361762dda29deb131d85b78a files/digest-gnome-power-manager-2.20.0-r1 286
 SHA256 6e0d208680953996329cb425500fbcb44677559c8dcbb58e1d459d4ba1b4242f files/digest-gnome-power-manager-2.20.0-r1 286
