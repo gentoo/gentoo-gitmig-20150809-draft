@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/edb-1.27_p2.ebuild,v 1.1 2007/05/20 18:23:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/edb-1.28_p1.ebuild,v 1.1 2007/12/13 15:23:07 ulm Exp $
 
 inherit elisp eutils versionator
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 IUSE=""
 
 S="${WORKDIR}/${PN}-${MY_PV}"
-SITEFILE="51${PN}-gentoo.el"
+SITEFILE="52${PN}-gentoo.el"
 
 src_unpack() {
 	unpack ${A}
@@ -31,6 +31,7 @@ src_compile() {
 src_install() {
 	einstall sitelisp="${D}${SITELISP}" || die "einstall failed"
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
-	dodoc AUTHORS BUGS ChangeLog HACKING NEWS README TODO || die "dodoc failed"
+	dodoc AUTHORS BUGS ChangeLog HACKING NEWS README TODO doc/refcard.* \
+		|| die "dodoc failed"
 	insinto /usr/share/doc/${PF}; doins -r examples
 }
