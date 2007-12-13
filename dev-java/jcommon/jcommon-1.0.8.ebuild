@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-1.0.8.ebuild,v 1.2 2007/03/17 12:14:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-1.0.8.ebuild,v 1.3 2007/12/13 18:27:09 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -32,6 +32,10 @@ src_compile() {
 	fi
 	eant -f ant/build.xml compile $(use_doc) $antflags
 }
+
+# Needs X11
+RESTRICT="test"
+
 src_test() {
 	cd lib/ || die
 	java-pkg_jar-from junit

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcommon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.14 2007/03/17 12:14:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.15 2007/12/13 18:27:09 betelgeuse Exp $
+
+  13 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> jcommon-1.0.8.ebuild:
+  Disable tests as they use X11.
 
   17 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> jcommon-0.9.7.ebuild,
   jcommon-0.9.7-r1.ebuild, jcommon-0.9.7-r2.ebuild, jcommon-1.0.5.ebuild,
