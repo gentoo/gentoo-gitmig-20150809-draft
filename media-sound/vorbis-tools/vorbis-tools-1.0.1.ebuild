@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.25 2006/10/19 17:18:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.26 2007/12/13 15:54:15 drac Exp $
 
 IUSE="nls flac speex"
 
@@ -41,7 +41,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 
-	rm -rf ${D}/usr/share/doc
+	rm -rf "${D}"/usr/share/doc
 	dodoc AUTHORS README
 	docinto ogg123
 	dodoc ogg123/ogg123rc-example
