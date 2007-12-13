@@ -1,25 +1,25 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.09.ebuild,v 1.5 2007/10/14 15:23:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.09.ebuild,v 1.6 2007/12/13 06:51:44 philantrop Exp $
 
 inherit eutils
 
 DESCRIPTION="A lightweigt RPC library based on XML and HTTP"
-SRC_URI="mirror://sourceforge/xmlrpc-c/${P}.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 HOMEPAGE="http://xmlrpc-c.sourceforge.net/"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="curl libwww threads"
-LICENSE="GPL-2"
+LICENSE="BSD"
 SLOT="0"
 
-DEPEND="virtual/libc
-	dev-libs/libxml2
-	libwww? ( net-libs/libwww )
+DEPEND="dev-libs/libxml2
+	libwww? ( net-libs/libwww
+			>=dev-libs/openssl-0.9.8g )
 	curl? ( net-misc/curl )"
 
 pkg_setup() {
-	# paralell make doesn't work
+	# parallel make doesn't work
 	MAKEOPTS="-j1"
 
 	if ! use curl && ! use libwww; then
@@ -46,5 +46,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die "installation failed"
+
+	dodoc README doc/CREDITS doc/DEVELOPING doc/HISTORY doc/SECURITY doc/TESTING \
+		doc/TODO || die "installing docs failed"
 }

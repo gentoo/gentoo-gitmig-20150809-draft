@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.32 2007/12/11 22:02:59 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.33 2007/12/13 06:51:44 philantrop Exp $
+
+  13 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  -files/xmlrpc-c-1.10.00-cmake.patch,
+  -files/xmlrpc-c-1.10.00-mutexcreate.patch, metadata.xml,
+  xmlrpc-c-1.06.09.ebuild, -xmlrpc-c-1.10.00.ebuild:
+  Removed broken version 1.10.00. Fixed several minor issues as per bug 194031.
 
   11 Dec 2007; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   update metadata
