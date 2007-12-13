@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/radiomixer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/ChangeLog,v 1.7 2007/07/14 14:15:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/ChangeLog,v 1.8 2007/12/13 16:15:40 jokey Exp $
+
+*radiomixer-1.1_rc1 (13 Dec 2007)
+
+  13 Dec 2007; Markus Ullmann <jokey@gentoo.org> +radiomixer-1.1_rc1.ebuild:
+  Version bump
 
 *radiomixer-1.1_pre20070714 (14 Jul 2007)
 
