@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.3.ebuild,v 1.11 2007/11/21 20:59:57 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.3.ebuild,v 1.12 2007/12/13 06:46:56 compnerd Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 
@@ -63,11 +63,11 @@ src_unpack() {
 	if use doc; then
 		# Actually install all html files, not just the index
 		sed -i -e 's:\(htmldoc_DATA = \).*:\1$(SPEC_HTML_FILES):' \
-			${S}/docs/Makefile.in
+			"${S}/docs/Makefile.in"
 	else
 		# Remove the docbook2man rules here since it's not handled by a proper
 		# parameter in configure.in.
-		sed -i -e 's:@HAVE_DOCBOOK2MAN_TRUE@.*::' ${S}/man/Makefile.in
+		sed -i -e 's:@HAVE_DOCBOOK2MAN_TRUE@.*::' "${S}/man/Makefile.in"
 	fi
 
 	epatch "${FILESDIR}"/${P}-doc.patch
