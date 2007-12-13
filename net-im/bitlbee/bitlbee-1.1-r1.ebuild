@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.1-r1.ebuild,v 1.2 2007/12/13 21:05:24 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.1-r1.ebuild,v 1.3 2007/12/13 21:36:44 mr_bones_ Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs confutils
@@ -71,7 +71,7 @@ src_unpack() {
 		-e "s/nobody/bitlbee/" \
 		-e "s/}/	disable         = yes\n}/" \
 		doc/bitlbee.xinetd || die "sed failed in xinetd"
-	
+
 	sed -i \
 		-e "s@mozilla-nss@nss@g" \
 		configure || die "sed failed in configure"
@@ -91,7 +91,7 @@ src_compile() {
 	done
 
 	# setup ssl use flags
-	if use gnutls ; then 
+	if use gnutls ; then
 		myconf="${myconf} --ssl=gnutls"
 	elif use nss ; then
 		myconf="${myconf} --ssl=nss"
@@ -101,7 +101,7 @@ src_compile() {
 		myconf="${myconf} --ssl=bogus"
 		einfo "You will not have any encryption support enabled."
 	fi
-	    
+
 	# NOTE: bitlbee's configure script is not an autotool creation,
 	# so that is why we don't use econf.
 	./configure --prefix=/usr --datadir=/usr/share/bitlbee \
