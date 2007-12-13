@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/candycrisis/candycrisis-1.0.ebuild,v 1.1 2007/12/11 21:17:22 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/candycrisis/candycrisis-1.0.ebuild,v 1.2 2007/12/13 00:06:02 tupone Exp $
 
 inherit eutils games
 
@@ -12,7 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-DEPEND=""
+DEPEND="=media-libs/fmod-3*
+	media-libs/sdl-image"
 
 S=${WORKDIR}/CandyCrisis/Source
 
