@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/eselect-wxwidgets
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.10 2007/12/13 02:01:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.11 2007/12/13 02:15:27 dirtyepic Exp $
+
+*eselect-wxwidgets-0.6 (13 Dec 2007)
+
+  13 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> -files/wx-config-0.5,
+  -files/wxrc-0.5, -files/wxwidgets.eselect-0.5, +files/wx-config-0.6,
+  +files/wxrc-0.6, +files/wxwidgets.eselect-0.6,
+  -eselect-wxwidgets-0.5.ebuild, +eselect-wxwidgets-0.6.ebuild:
+  Version bump to push out changes.
 
   13 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> files/wxrc-0.5,
   files/wxwidgets.eselect-0.5:

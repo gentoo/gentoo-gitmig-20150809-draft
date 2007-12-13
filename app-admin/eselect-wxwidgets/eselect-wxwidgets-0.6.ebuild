@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/eselect-wxwidgets-0.5.ebuild,v 1.6 2007/12/12 03:47:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/eselect-wxwidgets-0.6.ebuild,v 1.1 2007/12/13 02:15:27 dirtyepic Exp $
 
 DESCRIPTION="Manage the system default for wxWidgets packages."
 HOMEPAGE="http://www.gentoo.org"
