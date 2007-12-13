@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.1-r1.ebuild,v 1.17 2007/10/31 12:53:01 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.1-r1.ebuild,v 1.18 2007/12/13 00:39:22 dcoutts Exp $
 #
 # USE variable summary:
 #   doc	   - Build extra documenation from DocBook sources,
@@ -59,6 +59,5 @@ src_install() {
 		libdir0="${D}/usr/$(get_libdir)" \
 		|| die "make ${insttarget} failed"
 
-	cd ${S}/haddock
-	dodoc README
+	dodoc "${S}/haddock/README"
 }

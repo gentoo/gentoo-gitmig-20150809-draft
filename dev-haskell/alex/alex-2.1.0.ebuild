@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.1.0.ebuild,v 1.9 2007/10/31 12:53:01 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.1.0.ebuild,v 1.10 2007/12/13 00:39:22 dcoutts Exp $
 
 CABAL_FEATURES="bin"
 inherit autotools haskell-cabal
@@ -16,7 +16,7 @@ IUSE="doc"
 # java use flag disabled because of bug #107019
 
 DEPEND=">=dev-lang/ghc-6.2
-		>=dev-haskell/cabal-1.1.6
+		=dev-haskell/cabal-1.1.6*
 	doc? (	~app-text/docbook-xml-dtd-4.2
 		app-text/docbook-xsl-stylesheets
 		>=dev-libs/libxslt-1.1.2 )"

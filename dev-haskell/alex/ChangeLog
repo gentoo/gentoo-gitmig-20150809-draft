@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.32 2007/10/31 12:53:01 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.33 2007/12/13 00:39:22 dcoutts Exp $
+
+  12 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> alex-2.1.0.ebuild:
+  alex-2.1 works with cabal 1.1.6 only, not cabal 1.2
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> alex-2.0.1-r1.ebuild,
   alex-2.1.0.ebuild:
