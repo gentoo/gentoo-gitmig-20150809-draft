@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/opengl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/ChangeLog,v 1.4 2007/12/12 13:43:56 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/ChangeLog,v 1.5 2007/12/13 17:28:14 dcoutts Exp $
+
+*opengl-2.2.1.1 (13 Dec 2007)
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> +opengl-2.2.1.1.ebuild:
+  New version.
 
   12 Dec 2007; Ferris McCormick <fmccor@gentoo.org> opengl-2.2.1.ebuild:
   Add ~sparc keyword (completeness with bug #201984)
