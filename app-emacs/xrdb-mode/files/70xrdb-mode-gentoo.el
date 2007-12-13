@@ -7,5 +7,5 @@
       (append '(("\\.Xdefaults$"    . xrdb-mode)
                 ("\\.Xenvironment$" . xrdb-mode)
                 ("\\.Xresources$"   . xrdb-mode)
-                ("*.\\.ad$"         . xrdb-mode))
+                ("\\.ad$"         . xrdb-mode))
               auto-mode-alist))
