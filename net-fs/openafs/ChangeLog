@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.131 2007/12/06 20:33:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.132 2007/12/13 10:24:47 stefaan Exp $
+
+  13 Dec 2007; Stefaan De Roeck <stefaan@gentoo.org>
+  -files/openafs-ppc64.patch, -openafs-1.4.4_p20070724-r1.ebuild:
+  Remove obsolete files
 
   06 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   openafs-1.4.5-r2.ebuild:

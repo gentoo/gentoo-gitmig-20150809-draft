@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.5.27.ebuild,v 1.1 2007/11/15 11:52:11 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.5.27.ebuild,v 1.2 2007/12/13 10:27:46 stefaan Exp $
 
 inherit eutils linux-mod versionator toolchain-funcs
 
@@ -28,7 +28,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}; cd ${S}
+	unpack ${A}; cd "${S}"
 
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 
