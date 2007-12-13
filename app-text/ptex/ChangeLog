@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.70 2007/12/12 07:12:55 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.71 2007/12/13 07:45:29 jer Exp $
+
+  13 Dec 2007; Jeroen Roovers <jer@gentoo.org> ptex-3.1.10_p20071203.ebuild:
+  Stable for HPPA (bug #196673).
 
   12 Dec 2007; <welp@gentoo.org> ptex-3.1.10_p20071203.ebuild:
   Stable on amd64; bug 196673
