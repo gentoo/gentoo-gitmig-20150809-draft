@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/aboot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/ChangeLog,v 1.12 2007/12/12 23:52:17 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/ChangeLog,v 1.13 2007/12/13 20:42:35 yoswink Exp $
+
+  13 Dec 2007; Jose Luis Rivero <yoswink@gentoo.org>
+  aboot-1.0_pre20040408-r2.ebuild:
+  Stable. It has been in testing for the last 4 months. We need it stable to
+  avoid downgrading when 2007.1 will be released
 
   12 Dec 2007; Jose Luis Rivero <yoswink@gentoo.org>
   aboot-1.0_pre20040408-r2.ebuild:
