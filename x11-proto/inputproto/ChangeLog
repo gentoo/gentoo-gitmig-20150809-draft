@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/inputproto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.56 2007/12/12 21:17:01 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.57 2007/12/13 13:21:20 armin76 Exp $
+
+  13 Dec 2007; Raúl Porcel <armin76@gentoo.org> inputproto-1.4.2.1.ebuild:
+  alpha/ia64 stable wrt #202087
 
   12 Dec 2007; Ferris McCormick <fmccor@gentoo.org>
   inputproto-1.4.2.1.ebuild:
