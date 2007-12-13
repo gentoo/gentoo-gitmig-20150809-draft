@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hsshellscript
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/ChangeLog,v 1.17 2007/10/31 13:05:52 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/ChangeLog,v 1.18 2007/12/13 18:04:30 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org>
+  hsshellscript-2.2.2.ebuild, hsshellscript-2.3.0.ebuild:
+  Fix quoting in ebuild.
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org>
   hsshellscript-2.2.2.ebuild, hsshellscript-2.3.0.ebuild,

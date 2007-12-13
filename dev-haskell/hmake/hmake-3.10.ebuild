@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.10.ebuild,v 1.9 2007/10/31 13:02:30 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.10.ebuild,v 1.10 2007/12/13 18:03:54 dcoutts Exp $
 
 inherit base eutils fixheadtails
 
@@ -27,8 +27,8 @@ RDEPEND="dev-lang/ghc
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/ghc-version.patch
+	cd "${S}"
+	epatch "${FILESDIR}/ghc-version.patch"
 }
 
 src_compile() {
@@ -58,6 +58,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dohtml docs/hmake/*
 }

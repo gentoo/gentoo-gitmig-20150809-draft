@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/lhs2tex-1.11.ebuild,v 1.8 2007/10/31 13:08:10 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/lhs2tex-1.11.ebuild,v 1.9 2007/12/13 18:05:21 dcoutts Exp $
 
 DESCRIPTION="Preprocessor for typesetting Haskell sources with LaTeX"
 HOMEPAGE="http://www.iai.uni-bonn.de/~loeh/lhs2tex"
@@ -21,7 +21,7 @@ RDEPEND=">=dev-tex/polytable-0.8.2"
 
 src_unpack() {
 	unpack ${A}
-	sed -i "s|-package lang||" ${S}/config.mk.in || die "patch failed"
+	sed -i "s|-package lang||" "${S}/config.mk.in" || die "patch failed"
 }
 
 src_compile() {

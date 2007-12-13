@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.32 2007/10/31 12:57:48 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.33 2007/12/13 18:02:30 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> happy-1.16.ebuild:
+  Fix quoting in ebuild.
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> happy-1.15.ebuild,
   happy-1.16.ebuild:

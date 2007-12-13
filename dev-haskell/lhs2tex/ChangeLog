@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/lhs2tex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.19 2007/10/31 13:08:10 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.20 2007/12/13 18:05:21 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> lhs2tex-1.11.ebuild:
+  Fix quoting in ebuild.
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> lhs2tex-1.10_pre.ebuild,
   lhs2tex-1.11.ebuild:

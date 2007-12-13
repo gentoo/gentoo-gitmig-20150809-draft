@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/hsshellscript-2.2.2.ebuild,v 1.4 2007/10/31 13:05:52 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/hsshellscript-2.2.2.ebuild,v 1.5 2007/12/13 18:04:30 dcoutts Exp $
 
 inherit base eutils ghc-package
 
@@ -19,7 +19,7 @@ RDEPEND=""
 
 src_unpack() {
 	base_src_unpack
-	cd ${S}
+	cd "${S}"
 	sed -i -e "/ghc-pkg/d" Makefile
 }
 
@@ -28,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	ghc-setup-pkg ${S}/lib/hsshellscript.pkg
+	ghc-setup-pkg "${S}/lib/hsshellscript.pkg"
 	# Fix hsshellscript.pkg library path
 	ghc-fixlibpath "\${DEST_LIB}" "\${DEST_IMPORTS}"
 	make install \
@@ -38,5 +38,5 @@ src_install() {
 		DEST_DOC="/usr/share/doc/${PF}" \
 		|| die "make failed"
 	ghc-install-pkg
-	ghc-makeghcilib ${D}/$(ghc-libdir)/libhsshellscript.a
+	ghc-makeghcilib "${D}/$(ghc-libdir)/libhsshellscript.a"
 }

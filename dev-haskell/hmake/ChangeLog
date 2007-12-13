@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.33 2007/10/31 13:02:30 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.34 2007/12/13 18:03:54 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> hmake-3.10.ebuild,
+  hmake-3.11.ebuild, hmake-3.13.ebuild:
+  Fix quoting in ebuild.
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> hmake-3.10.ebuild,
   hmake-3.11.ebuild, hmake-3.13.ebuild:

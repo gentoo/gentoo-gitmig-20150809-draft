@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/frown/frown-0.6.1-r1.ebuild,v 1.11 2007/10/31 12:56:14 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/frown/frown-0.6.1-r1.ebuild,v 1.12 2007/12/13 18:01:45 dcoutts Exp $
 
 CABAL_FEATURES="bin"
 inherit haskell-cabal
@@ -21,7 +21,7 @@ S="${WORKDIR}/Frown-${PV}"
 src_unpack() {
 	unpack ${A}
 	# enabling optimisation is strongly recommended
-	echo "ghc-options: -O" >> ${S}/frown.cabal
+	echo "ghc-options: -O" >> "${S}/frown.cabal"
 }
 
 src_install() {
