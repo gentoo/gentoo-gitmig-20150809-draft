@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.45 2007/09/06 08:48:53 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.46 2007/12/13 17:28:26 cardoe Exp $
+
+  13 Dec 2007; Doug Klima <cardoe@gentoo.org> -pmount-0.9.9.ebuild,
+  -pmount-0.9.11.ebuild:
+  remove old versions
 
 *pmount-0.9.16 (06 Sep 2007)
 
