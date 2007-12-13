@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libSM
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.46 2007/12/12 21:19:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.47 2007/12/13 13:26:07 armin76 Exp $
+
+  13 Dec 2007; Raúl Porcel <armin76@gentoo.org> libSM-1.0.3.ebuild:
+  alpha/ia64 stable wrt #202087
 
   12 Dec 2007; Ferris McCormick <fmccor@gentoo.org> libSM-1.0.3.ebuild:
   Sparc stable --- Bug #202087 --- good for 3 months.

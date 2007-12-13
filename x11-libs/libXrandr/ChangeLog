@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXrandr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.44 2007/12/12 21:25:00 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.45 2007/12/13 13:27:31 armin76 Exp $
+
+  13 Dec 2007; Raúl Porcel <armin76@gentoo.org> libXrandr-1.2.2.ebuild:
+  alpha/ia64 stable wrt #202087
 
   12 Dec 2007; Ferris McCormick <fmccor@gentoo.org> libXrandr-1.2.2.ebuild:
   Sparc stable --- Bug #202087 --- good for 3 months.
