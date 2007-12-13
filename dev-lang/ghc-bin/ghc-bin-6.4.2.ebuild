@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.2.ebuild,v 1.16 2007/07/10 16:07:00 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.2.ebuild,v 1.17 2007/12/13 15:59:54 dcoutts Exp $
 
 # Note to users of hardened gcc-3.x:
 #
@@ -43,8 +43,6 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	>=sys-devel/gcc-2.95.3
 	>=dev-libs/gmp-4.1
 	=sys-libs/readline-5*"
-
-PROVIDE="virtual/ghc"
 
 S="${WORKDIR}"
 

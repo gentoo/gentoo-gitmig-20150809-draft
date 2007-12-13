@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.73 2007/07/10 17:20:21 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.74 2007/12/13 15:59:54 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> ghc-bin-6.2.2-r1.ebuild,
+  ghc-bin-6.4.2.ebuild, ghc-bin-6.4.2-r1.ebuild:
+  Stop providing virtual/ghc. Nothing in portage has depended on it for some
+  time.
 
   10 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> -ghc-bin-6.4.1.ebuild,
   -ghc-bin-6.4.1-r1.ebuild:

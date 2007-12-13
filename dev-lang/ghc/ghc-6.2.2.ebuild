@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.25 2007/11/05 10:27:49 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.26 2007/12/13 15:58:31 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -12,9 +12,6 @@
 # from source.  If the latter, then the relevant ghc-bin for the
 # arch in question will be used in the working directory to compile
 # ghc from source.
-#
-# This solution has the advantage of allowing us to retain the one
-# ebuild for both packages, and thus phase out virtual/ghc.
 
 # Note to users of hardened gcc-3.x:
 #
@@ -46,8 +43,6 @@ KEYWORDS="-* ppc sparc x86"
 IUSE="binary doc ghcbootstrap opengl"
 
 LOC="/opt/ghc" # location for installation of binary version
-
-PROVIDE="virtual/ghc"
 
 RDEPEND="
 	!dev-lang/ghc-bin
