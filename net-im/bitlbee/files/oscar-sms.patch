@@ -1,0 +1,22 @@
+diff -ru bitlbee-1.1dev~/protocols/oscar/oscar.c bitlbee-1.1dev/protocols/oscar/oscar.c
+--- bitlbee-1.1dev~/protocols/oscar/oscar.c	2007-12-13 21:24:28.000000000 +0100
++++ bitlbee-1.1dev/protocols/oscar/oscar.c	2007-12-13 21:30:18.000000000 +0100
+@@ -1093,8 +1093,17 @@
+ 		} else {
+ 			g_snprintf(tmp, BUF_LONG, "%s", args->msg);
+ 		}
+-	} else
++	} else if (args->mpmsg.numparts == 0) {
+ 		g_snprintf(tmp, BUF_LONG, "%s", args->msg);
++	} else {
++		int i;
++
++		*tmp = 0;
++		for (i = 0; i < args->mpmsg.numparts; i ++) {
++			g_strlcat(tmp, (char*) args->mpmsg.parts[i].data, BUF_LONG);
++			g_strlcat(tmp, "\n", BUF_LONG);
++		}
++	}
+ 	
+ 	strip_linefeed(tmp);
+ 	serv_got_im(gc, userinfo->sn, tmp, flags, time(NULL), -1);
