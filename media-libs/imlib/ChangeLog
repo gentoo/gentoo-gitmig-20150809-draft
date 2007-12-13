@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/imlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.58 2007/12/10 20:14:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.59 2007/12/13 08:33:55 opfer Exp $
+
+  13 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  imlib-1.9.15-r2.ebuild:
+  stable x86, security bug 201887
 
 *imlib-1.9.15-r2 (10 Dec 2007)
 
