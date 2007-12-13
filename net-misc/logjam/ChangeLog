@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/logjam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.41 2007/11/14 14:51:48 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.42 2007/12/13 23:26:40 eva Exp $
+
+  13 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org> -logjam-4.4.1.ebuild:
+  pruning old version wrt to bug #193496
 
   14 Nov 2007; Steve Dibb <beandog@gentoo.org> logjam-4.5.2.ebuild:
   amd64 stable, bug 195060
