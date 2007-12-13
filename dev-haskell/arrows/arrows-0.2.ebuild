@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/arrows-0.2.ebuild,v 1.1 2007/07/08 15:33:22 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/arrows-0.2.ebuild,v 1.2 2007/12/13 17:58:29 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit base haskell-cabal
@@ -19,3 +19,8 @@ IUSE=""
 DEPEND=">=dev-lang/ghc-6.6"
 
 S="${WORKDIR}/ghc-${GHC_PV}/libraries/${PN}"
+
+src_unpack() {
+	unpack "${A}"
+	cabal-mksetup
+}

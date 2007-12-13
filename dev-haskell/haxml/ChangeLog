@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haxml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.26 2007/12/13 00:47:17 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.27 2007/12/13 17:57:57 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> haxml-1.13.2.ebuild:
+  Fixes for compatability with cabal-1.2 and ghc-6.8.
 
   12 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> haxml-1.13-r1.ebuild:
   Remove unnecessary blocker.

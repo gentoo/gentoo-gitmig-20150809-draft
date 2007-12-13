@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13.2.ebuild,v 1.8 2007/10/31 12:59:40 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13.2.ebuild,v 1.9 2007/12/13 17:57:57 dcoutts Exp $
 
 CABAL_FEATURES="lib bin profile haddock"
-inherit base haskell-cabal
+inherit base haskell-cabal versionator
 
 MY_PN=HaXml
 MY_P=${MY_PN}-${PV}
@@ -30,6 +30,13 @@ src_unpack() {
 
 	# Don't warn so much, and don't compile with -O2
 	sed -i 's/GHC-Options: -Wall -O2/GHC-Options: -O/' "${S}/HaXml.cabal"
+
+	# Add in the extra split-base deps
+	if version_is_at_least "6.8" "$(ghc-version)"; then
+		sed -i -e '/build-depends:/a \
+			, pretty, containers' \
+			"${S}/HaXml.cabal"
+	fi
 }
 
 src_install() {
