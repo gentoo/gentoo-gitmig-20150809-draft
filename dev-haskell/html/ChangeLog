@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/html
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/ChangeLog,v 1.22 2007/12/12 13:50:54 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/ChangeLog,v 1.23 2007/12/13 00:48:50 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> html-1.0.ebuild:
+  Remove unnecessary blocker.
 
   12 Dec 2007; Ferris McCormick <fmccor@gentoo.org> html-1.0.1.ebuild:
   Sparc stable --- part of Bug #201984.
