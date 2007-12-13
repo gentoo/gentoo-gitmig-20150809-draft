@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-0.10.5.ebuild,v 1.2 2007/08/29 18:09:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-0.10.5.ebuild,v 1.3 2007/12/13 19:08:41 drac Exp $
 
 inherit gst-plugins-bad gnome2 eutils flag-o-matic libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~x86"
 
 RDEPEND=">=media-libs/gst-plugins-base-0.10.13
 	>=media-libs/gstreamer-0.10.13"
