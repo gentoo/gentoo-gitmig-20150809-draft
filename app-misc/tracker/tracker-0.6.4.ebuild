@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.4.ebuild,v 1.1 2007/12/12 05:54:35 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.4.ebuild,v 1.2 2007/12/13 04:57:04 compnerd Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -18,13 +18,13 @@ RDEPEND=">=dev-libs/glib-2.12.0
 		 >=dev-libs/gmime-2.1.0
 		 >=media-gfx/imagemagick-5.2.1
 		 >=dev-libs/dbus-glib-0.71
-		  =dev-db/sqlite-3.4*
+		 >=dev-db/sqlite-3.4
 		 >=media-libs/libpng-1.2
 		 >=dev-libs/libxml2-2.6
 		 >=dev-db/qdbm-1.8
 		   sys-libs/zlib
 		 applet? ( >=x11-libs/libnotify-0.4.3 )
-		 deskbar? ( gnome-extra/deskbar-applet )
+		 deskbar? ( >=gnome-extra/deskbar-applet-2.16 )
 		 gnome? (
 					>=x11-libs/gtk+-2.8
 					>=gnome-base/libglade-2.5
@@ -68,19 +68,20 @@ function inotify_enabled() {
 pkg_setup() {
 	linux-info_pkg_setup
 
-	if built_with_use 'dev-db/sqlite' 'nothreadsafe' ; then
+	if built_with_use --missing false 'dev-db/sqlite' 'nothreadsafe' ||
+		! built_with_use --missing true 'dev-db/sqlite' 'threadsafe' ; then
 		eerror "You must build sqlite with threading support"
-		die "dev-db/sqlite built with nothreadsafe"
-	fi
-
-	if ! built_with_use 'app-text/poppler-bindings' 'gtk' ; then
-		ewarn "You must build poppler-bindings with gtk to get support for PDFs"
-		die "poppler-bindings needs gtk support"
+		die "dev-db/sqlite built without thread safety"
 	fi
 
 	if ! built_with_use 'media-gfx/imagemagick' 'png' ; then
 		ewarn "You must build imagemagick with png"
 		die "imagemagick needs png support"
+	fi
+
+	if use pdf && ! built_with_use 'app-text/poppler-bindings' 'gtk' ; then
+		ewarn "You must build poppler-bindings with gtk to get support for PDFs"
+		die "poppler-bindings needs gtk support"
 	fi
 
 	if use jpeg && ! built_with_use 'media-gfx/imagemagick' 'jpeg' ; then

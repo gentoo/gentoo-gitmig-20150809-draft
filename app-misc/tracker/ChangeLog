@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.34 2007/12/12 05:54:35 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.35 2007/12/13 04:57:04 compnerd Exp $
+
+  13 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  tracker-0.6.4.ebuild:
+  Restore sqlite dep as the bug is fixed in the 0.6.4 release. Adjust sqlite
+  useflag accordingly. Fix poppler check to be conditional.
 
 *tracker-0.6.4 (12 Dec 2007)
 
