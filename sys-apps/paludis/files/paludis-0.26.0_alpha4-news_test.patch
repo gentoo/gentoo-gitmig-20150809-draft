@@ -1,3 +1,16 @@
+diff --git a/hooks/Makefile.am.m4 b/hooks/Makefile.am.m4
+index 5c46d22..a32565a 100644
+--- a/hooks/Makefile.am.m4
++++ b/hooks/Makefile.am.m4
+@@ -7,7 +7,7 @@ MAINTAINERCLEANFILES = Makefile.in Makefile.am
+ CLEANFILES = *~ gmon.out *.gcov *.gcno *.gcda .keep
+ SUBDIRS = . demos
+ 
+-installvarlibpaludisnewsdir = $(localstatedir)/paludis/news
++installvarlibpaludisnewsdir = $(localstatedir)/gentoo/news
+ 
+ installhookcommonprogdir = $(libexecdir)/paludis/hooks/common
+ installhookinstallallpostdir = $(libexecdir)/paludis/hooks/install_all_post
 diff --git a/hooks/news_TEST_setup.sh b/hooks/news_TEST_setup.sh
 index ceccb99..c895b1c 100755
 --- a/hooks/news_TEST_setup.sh
