@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.63.ebuild,v 1.4 2007/07/18 02:16:06 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.63.ebuild,v 1.5 2007/12/13 11:31:32 markusle Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -25,10 +25,13 @@ src_unpack() {
 	cd "${S}"
 
 	if ! use glut; then
-		sed -e 's:opengl::g' -i plugins/Makefile.am || \
+		sed -e "s:opengl::g" -i plugins/Makefile.am || \
 			die "sed (opengl) failed"
-		sed -e 's/\(^PLUGINDOCSCHAPTERS.*\)opengl.chapt\(.*\)/\1 \2/' -i \
-		manmake/Makefile.am || die 'sed (manmake) failed'
+		sed -e "s:\(^PLUGINDOCSCHAPTERS.*\)opengl.chapt\(.*\):\1 \2:" \
+			-i manmake/Makefile.am || die 'sed (manmake) failed'
+		sed -e "s:\*INCLUDE opengl.chapt::" \
+			-i manmake/plugin-docs.chapt.txt \
+			|| die "failed to fix plugin-doc.chapt"
 	fi
 
 	epatch "${FILESDIR}"/${P}-as-needed.patch
@@ -50,7 +53,6 @@ src_compile() {
 }
 
 src_install() {
-	cd "${S}"
 	make DESTDIR="${D}" install-strip || die
 
 	dodoc AUTHORS INSTALL NEWS README TODO

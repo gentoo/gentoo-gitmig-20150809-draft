@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.1.0.ebuild,v 1.1 2007/08/10 18:00:16 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.1.0.ebuild,v 1.2 2007/12/13 11:31:32 markusle Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -50,7 +50,6 @@ src_compile() {
 }
 
 src_install() {
-	cd "${S}"
 	make DESTDIR="${D}" install-strip || die
 
 	dodoc AUTHORS INSTALL NEWS README TODO

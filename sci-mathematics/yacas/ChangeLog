@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/yacas
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.18 2007/11/07 23:26:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.19 2007/12/13 11:31:32 markusle Exp $
+
+  13 Dec 2007; Markus Dittrich <markusle@gentoo.org> yacas-1.0.61.ebuild,
+  yacas-1.0.63.ebuild:
+  Fixed broken doc generation with USE="-glut" (fixes bug #200914).
 
 *yacas-1.2.2 (07 Nov 2007)
 
