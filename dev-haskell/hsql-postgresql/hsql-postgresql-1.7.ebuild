@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/hsql-postgresql-1.7.ebuild,v 1.6 2007/10/31 13:04:59 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/hsql-postgresql-1.7.ebuild,v 1.7 2007/12/13 05:42:46 dcoutts Exp $
 
 CABAL_FEATURES="lib haddock"
-inherit base haskell-cabal
+inherit haskell-cabal versionator
 
 DESCRIPTION="PostgreSQL driver for HSQL"
 HOMEPAGE="http://htoolkit.sourceforge.net/"
-SRC_URI="mirror://gentoo/HSQL-${PV}.tar.gz"
+SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -18,14 +18,15 @@ DEPEND=">=dev-lang/ghc-6.4.1
 	~dev-haskell/hsql-${PV}
 	>=dev-db/libpq-7"
 
-S="${WORKDIR}/HSQL/PostgreSQL"
-
 src_unpack() {
-	base_src_unpack
+	unpack "${A}"
 
-	echo '> import Distribution.Simple' > "${S}/Setup.lhs"
-	echo '> main = defaultMain' >> "${S}/Setup.lhs"
+	cabal-mksetup
+	echo >> "${S}/${PN}.cabal"
+	echo 'include-dirs: /usr/include/postgresql/server' >> "${S}/${PN}.cabal"
 
-	( echo;	echo 'include-dirs: /usr/include/postgresql/server' ) \
-		>> "${S}/PostgreSQL.cabal"
+	# Add in the extra split-base deps
+	if version_is_at_least "6.8" "$(ghc-version)"; then
+		echo "build-depends: old-time" >> "${S}/${PN}.cabal"
+	fi
 }

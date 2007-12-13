@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/html
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/ChangeLog,v 1.23 2007/12/13 00:48:50 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/ChangeLog,v 1.24 2007/12/13 05:44:03 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> html-1.0-r1.ebuild,
+  html-1.0.1.ebuild:
+  Updates for upward compatability with cabal-1.2 and ghc-6.8
 
   13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> html-1.0.ebuild:
   Remove unnecessary blocker.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/uulib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/ChangeLog,v 1.14 2007/10/31 13:10:46 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/ChangeLog,v 1.15 2007/12/13 05:50:07 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> uulib-0.9.2.ebuild:
+  Updates for upward compatability with cabal-1.2 and ghc-6.8
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> uulib-0.9.2.ebuild:
   Drop virtual/ghc in favour of dev-lang/ghc

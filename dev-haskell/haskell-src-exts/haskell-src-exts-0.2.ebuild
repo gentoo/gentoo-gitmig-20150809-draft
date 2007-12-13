@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/haskell-src-exts-0.2.ebuild,v 1.10 2007/10/31 12:59:13 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/haskell-src-exts-0.2.ebuild,v 1.11 2007/12/13 05:41:30 dcoutts Exp $
 
 CABAL_FEATURES="lib happy"
-inherit base haskell-cabal eutils
+inherit base haskell-cabal eutils versionator
 
 DESCRIPTION="An extension to haskell-src that handles most common syntactic extensions to Haskell"
 HOMEPAGE="http://www.cs.chalmers.se/~d00nibro/haskell-src-exts/"
@@ -28,8 +28,15 @@ src_unpack() {
 
 	# Make it work with ghc pre-6.4
 	sed -i 's/{-# OPTIONS_GHC /{-# OPTIONS /' \
-		${S}/Language/Haskell/Hsx/Syntax.hs \
-		${S}/Language/Haskell/Hsx/Pretty.hs
+		"${S}/Language/Haskell/Hsx/Syntax.hs" \
+		"${S}/Language/Haskell/Hsx/Pretty.hs"
 	sed -i 's/#ifdef __GLASGOW_HASKELL__/#if __GLASGOW_HASKELL__>=604/' \
-		${S}/Language/Haskell/Hsx/Syntax.hs
+		"${S}/Language/Haskell/Hsx/Syntax.hs"
+
+	if version_is_at_least "6.8" "$(ghc-version)"; then
+		sed -i -e '/Build-Depends:/a \
+			, array, pretty' \
+		"${S}/${PN}.cabal"
+	fi
+
 }

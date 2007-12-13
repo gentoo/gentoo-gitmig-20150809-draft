@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haskell-src
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.23 2007/12/13 00:46:10 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.24 2007/12/13 05:41:04 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> haskell-src-1.0-r1.ebuild,
+  haskell-src-1.0.1.ebuild:
+  Updates for upward compatability with cabal-1.2 and ghc-6.8
 
   12 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> haskell-src-1.0.ebuild:
   Remove unnecessary blocker.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hsql-mysql
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-mysql/ChangeLog,v 1.7 2007/10/31 13:03:59 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-mysql/ChangeLog,v 1.8 2007/12/13 05:42:21 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> hsql-mysql-1.7.ebuild:
+  Updates for upward compatability with cabal-1.2 and ghc-6.8
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> hsql-mysql-1.7.ebuild:
   Drop virtual/ghc in favour of dev-lang/ghc

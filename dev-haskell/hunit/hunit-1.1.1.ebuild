@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/hunit-1.1.1.ebuild,v 1.5 2007/12/12 13:57:32 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/hunit-1.1.1.ebuild,v 1.6 2007/12/13 05:44:32 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit base haskell-cabal
@@ -21,10 +21,9 @@ DEPEND=">=dev-lang/ghc-6.6"
 
 S="${WORKDIR}/ghc-${GHC_PV}/libraries/${MY_PN}"
 
-# Sadly Setup.hs in the ghc-6.6.1 extralibs was not tested with Cabal-1.1.6.x
 src_unpack() {
 	unpack "${A}"
-	sed -i -e "/type Hook/ s/UserHooks/Maybe UserHooks/" "${S}/Setup.hs"
+	cabal-mksetup
 }
 
 src_install () {

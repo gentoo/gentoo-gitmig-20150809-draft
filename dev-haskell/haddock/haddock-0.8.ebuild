@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.8.ebuild,v 1.11 2007/12/13 00:45:33 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.8.ebuild,v 1.12 2007/12/13 05:40:31 dcoutts Exp $
 
 CABAL_FEATURES="bin"
 inherit haskell-cabal eutils versionator
@@ -25,6 +25,26 @@ DEPEND=">=dev-lang/ghc-6.4
 RDEPEND=""
 
 S="${WORKDIR}/${MY_PF}"
+
+src_unpack () {
+	unpack "${A}"
+
+	#FIXME: remove the following two workarounds when haddock-0.9 is released
+
+	# Cabal 1.2 expects the pre-processed sources in a different location:
+	mkdir -p "${S}/dist/build/haddock/haddock-tmp/"
+	cp  "${S}/src/HaddockLex.hs" \
+		"${S}/src/HaddockParse.hs" \
+		"${S}/src/HsParser.hs" \
+		"${S}/dist/build/haddock/haddock-tmp/"
+
+	# Add in the extra split-base deps
+	if version_is_at_least "6.8" "$(ghc-version)"; then
+		sed -i -e '/build-depends:/a \
+			,array, containers, directory, pretty, process' \
+			"${S}/haddock.cabal"
+	fi
+}
 
 src_compile () {
 	cabal_src_compile

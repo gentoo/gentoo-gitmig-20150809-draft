@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/html-1.0-r1.ebuild,v 1.4 2007/07/08 15:36:36 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/html-1.0-r1.ebuild,v 1.5 2007/12/13 05:44:03 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -19,3 +19,8 @@ IUSE=""
 DEPEND=">=dev-lang/ghc-6.6"
 
 S="${WORKDIR}/ghc-${GHC_PV}/libraries/${PN}"
+
+src_unpack() {
+	unpack "${A}"
+	cabal-mksetup
+}
