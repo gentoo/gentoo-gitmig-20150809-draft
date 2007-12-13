@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jarjar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.22 2007/08/17 00:30:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.23 2007/12/13 16:14:15 betelgeuse Exp $
+
+  13 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> -jarjar-0.6-r1.ebuild,
+  jarjar-0.9.ebuild:
+  Add ANT_TASKS none as it and build.sysclasspath=ignore should be enough to
+  fix bug #191357 although I can't reproduce.
 
   17 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> jarjar-0.9.ebuild:
   ppc stable

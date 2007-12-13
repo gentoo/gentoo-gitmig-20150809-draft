@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.9.ebuild,v 1.9 2007/08/17 00:30:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.9.ebuild,v 1.10 2007/12/13 16:14:15 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -39,6 +39,7 @@ src_unpack() {
 	java-pkg_jar-from java-getopt-1
 }
 
+ANT_TASKS="none"
 EANT_BUILD_TARGET="jar-nojarjar"
 
 src_test() {
