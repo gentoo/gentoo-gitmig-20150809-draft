@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13-r1.ebuild,v 1.13 2007/10/31 12:59:40 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13-r1.ebuild,v 1.14 2007/12/13 00:47:17 dcoutts Exp $
 
 CABAL_FEATURES="lib bin profile haddock"
 inherit base haskell-cabal
@@ -20,8 +20,7 @@ IUSE=""
 
 # actually, >=ghc-5.02 should be ok (if not using cabal)
 # hugs and nhc98 are ok too, somebody might want to add support for them
-DEPEND=">=dev-lang/ghc-6.2
-		!>=dev-lang/ghc-6.6
+DEPEND="<dev-lang/ghc-6.6
 		>=dev-haskell/cabal-1.1.3-r1"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hs-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.16 2007/10/31 13:02:57 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.17 2007/12/13 00:48:12 dcoutts Exp $
+
+  12 Dec 2007; Duncan Coutts <dcoutts@gentoo.org>
+  hs-plugins-0.9.10-r1.ebuild, hs-plugins-1.0_rc0.ebuild:
+  Remove unnecessary blocker.
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org>
   hs-plugins-0.9.10-r1.ebuild, hs-plugins-1.0_rc0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.12 2007/10/31 13:11:43 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.13 2007/12/13 00:52:24 dcoutts Exp $
 
 inherit flag-o-matic wxwidgets ghc-package multilib
 
@@ -14,7 +14,6 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND="<dev-lang/ghc-6.6
-	!>=dev-lang/ghc-6.6
 	=x11-libs/wxGTK-2.6*"
 
 DEPEND="${RDEPEND}
@@ -38,12 +37,12 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	# adapt to Gentoo path convention
-	sed -i 's:/doc/html:/share/doc/html:' ${S}/configure
+	sed -i 's:/doc/html:/share/doc/html:' "${S}/configure"
 	# fix superfluous dependencies on hslibs packages
 	sed -i -e 's:,lang::' -e 's:,"lang"::' \
-		-e 's:,concurrent::' -e 's:,"concurrent"::' ${S}/configure
+		-e 's:,concurrent::' -e 's:,"concurrent"::' "${S}/configure"
 	# fix Makefile to respect CXXFLAGS
-	sed -i 's:^\(WXC-CXXFLAGS.*=\):\1\$(CXXFLAGS) :' ${S}/makefile
+	sed -i 's:^\(WXC-CXXFLAGS.*=\):\1\$(CXXFLAGS) :' "${S}/makefile"
 }
 
 src_compile() {
@@ -64,7 +63,7 @@ src_compile() {
 		--prefix=/usr \
 		--with-opengl \
 		--libdir=/usr/$(get_libdir)/${P} \
-		--package-conf=${S}/$(ghc-localpkgconf) \
+		--package-conf="${S}/$(ghc-localpkgconf)" \
 		|| die "./configure failed"
 
 	emake -j1 || die "make failed"
@@ -82,21 +81,21 @@ src_install() {
 	emake -j1 install-files DESTDIR="${D}" || die "make install failed"
 
 	# the .so needs to be on the lib path
-	mkdir -p ${D}/usr/$(get_libdir)
-	for f in ${D}/usr/$(get_libdir)/${P}/libwxc-*.so; do
-		mv ${f} ${D}/usr/$(get_libdir)/
+	mkdir -p "${D}/usr/$(get_libdir)"
+	for f in "${D}/usr/$(get_libdir)/${P}/"libwxc-*.so; do
+		mv ${f} "${D}/usr/$(get_libdir)/"
 	done
 
 	if use doc; then
 		dohtml -A haddock -r out/doc/*
-		cp -r samples ${D}/usr/share/doc/${PF}
+		cp -r samples "${D}/usr/share/doc/${PF}"
 	fi
 
 	# substitute for the ${wxhlibdir} in package files and register them
 	# for ghc-6.2 change the package to be exposed by default.
 	sed -i -e "s:\${wxhlibdir}:${D}/usr/$(get_libdir)/${P}:" \
 		   -e "s:auto = False:auto = True:" \
-		   ${D}/usr/$(get_libdir)/${P}/*.pkg
-	ghc-setup-pkg ${D}/usr/$(get_libdir)/${P}/*.pkg
+		   "${D}/usr/$(get_libdir)/${P}/"*.pkg
+	ghc-setup-pkg "${D}/usr/$(get_libdir)/${P}/"*.pkg
 	ghc-install-pkg
 }

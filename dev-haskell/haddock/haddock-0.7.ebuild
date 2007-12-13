@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.7.ebuild,v 1.16 2007/10/31 12:57:11 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.7.ebuild,v 1.17 2007/12/13 00:45:33 dcoutts Exp $
 #
 # USE variable summary:
-#   doc    - Build extra documenation from DocBook sources,
-#               in HTML format.
-#   java   - Build the above docs as PostScript as well.
+#	doc	   - Build extra documenation from DocBook sources,
+#				in HTML format.
+#	java   - Build the above docs as PostScript as well.
 
 inherit ghc-package multilib
 IUSE="doc"
@@ -19,8 +19,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86"
 LICENSE="as-is"
 
-DEPEND="dev-lang/ghc
-		!>=dev-lang/ghc-6.6
+DEPEND="<dev-lang/ghc-6.6
 	doc? (  ~app-text/docbook-xml-dtd-4.2
 		app-text/docbook-xsl-stylesheets
 		>=dev-libs/libxslt-1.1.2
@@ -75,7 +74,6 @@ src_compile() {
 
 src_install() {
 	local insttarget
-
 	insttarget="install"
 	use doc && insttarget="${insttarget} install-docs"
 
@@ -89,6 +87,6 @@ src_install() {
 		libdir0="${D}/usr/$(get_libdir)" \
 		|| die "make install failed"
 
-	cd ${S}/haddock
-	dodoc CHANGES LICENSE README TODO
+	cd "${S}/haddock"
+	dodoc CHANGES README TODO
 }

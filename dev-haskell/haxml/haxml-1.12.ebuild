@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.12.ebuild,v 1.9 2007/10/31 12:59:40 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.12.ebuild,v 1.10 2007/12/13 00:47:17 dcoutts Exp $
 
 inherit ghc-package fixheadtails
 
@@ -27,15 +27,15 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	ht_fix_file ${S}/configure
+	ht_fix_file "${S}/configure"
 }
 
 src_compile() {
 
-	./configure --prefix=${D}/usr/bin \
+	./configure --prefix="${D}/usr/bin" \
 		|| die "./configure failed"
 	# we only support ghc currently; overrides auto-detection
-	echo ghc > ${S}/obj/compilers
+	echo ghc > "${S}/obj/compilers"
 
 	emake -j1 || die "make failed"
 
@@ -49,7 +49,7 @@ src_compile() {
 		ghc-setup-pkg
 		$(ghc-getghcpkg) -f "${S}/$(ghc-localpkgconf)" --force register "${FILESDIR}/${MY_P}.cabal"
 	else
-		ghc-setup-pkg ${S}/obj/ghc/pkg.conf
+		ghc-setup-pkg "${S}/obj/ghc/pkg.conf"
 	fi
 	# make sure the libdir is correct
 	ghc-fixlibpath '$libdir'
@@ -57,10 +57,10 @@ src_compile() {
 
 src_install() {
 	# fix so it installs into image dir
-	echo ${D}/$(ghc-libdir) > ${S}/obj/ghc/ghclibdir
-	echo ${D}/$(ghc-libdir)/imports > ${S}/obj/ghc/ghcincdir
+	echo "${D}/$(ghc-libdir) > "${S}/obj/ghc/ghclibdir"
+	echo "${D}/$(ghc-libdir)/imports > "${S}/obj/ghc/ghcincdir"
 	# make sure all installation directories are there
-	mkdir -p ${D}/$(ghc-libdir)/imports
+	mkdir -p "${D}/$(ghc-libdir)/imports"
 
 	emake -j1 install-filesonly || die "make install failed"
 

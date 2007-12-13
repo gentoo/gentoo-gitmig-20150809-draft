@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-0.9.10-r1.ebuild,v 1.7 2007/10/31 13:02:57 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-0.9.10-r1.ebuild,v 1.8 2007/12/13 00:48:12 dcoutts Exp $
 
 inherit ghc-package
 
@@ -15,24 +15,23 @@ KEYWORDS="-amd64 ~ppc ~sparc ~x86" # currently broken on amd64
 IUSE="doc"
 
 DEPEND="<dev-lang/ghc-6.6
-	!>=dev-lang/ghc-6.6
 	>=dev-haskell/haskell-src-exts-0.2
 	dev-haskell/cabal"
 
 src_unpack() {
 	unpack ${A}
 	# for package management
-	sed -i 's:\$(GHC_PKG) -u:\${GHC_PKGF} -u:' ${S}/Makefile
+	sed -i 's:\$(GHC_PKG) -u:\${GHC_PKGF} -u:' "${S}/Makefile"
 
 	cabalversion=$(ghc-bestcabalversion)
 
 	sed -i "s:-package Cabal:-package ${cabalversion}:" \
-		${S}/src/plugins/Makefile
+		"${S}/src/plugins/Makefile"
 
 	# Also specify an exact version of Cabal otherwise ghc-pkg defaults it to
 	# the minimum version which is just wrong. Should be fixed in ghc-6.4.1
 	sed -i "s/depends:\(.*\) Cabal/depends:\1 ${cabalversion}/" \
-		${S}/src/plugins/plugins.conf.in.cpp
+		"${S}/src/plugins/plugins.conf.in.cpp"
 }
 
 src_compile() {
@@ -51,6 +50,6 @@ src_install() {
 	dodoc AUTHORS README TODO VERSION
 
 	if use doc; then
-		dohtml ${WORKDIR}/${PN}/*
+		dohtml "${WORKDIR}/${PN}/"*
 	fi
 }

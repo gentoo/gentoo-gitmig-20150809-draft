@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/wxhaskell
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.27 2007/10/31 13:11:43 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.28 2007/12/13 00:52:24 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> wxhaskell-0.9.4.ebuild:
+  Remove unnecessary blocker.
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> wxhaskell-0.9.4.ebuild:
   Drop virtual/ghc in favour of dev-lang/ghc

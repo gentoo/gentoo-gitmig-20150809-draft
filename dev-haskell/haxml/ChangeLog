@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haxml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.25 2007/10/31 12:59:40 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.26 2007/12/13 00:47:17 dcoutts Exp $
+
+  12 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> haxml-1.13-r1.ebuild:
+  Remove unnecessary blocker.
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> haxml-1.12.ebuild,
   haxml-1.13-r1.ebuild, haxml-1.13.2.ebuild:
