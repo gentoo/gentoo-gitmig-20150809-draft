@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/urlgfe/urlgfe-1.0.2.ebuild,v 1.1 2007/07/31 00:18:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/urlgfe/urlgfe-1.0.2.ebuild,v 1.2 2007/12/13 20:35:31 armin76 Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.10"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/urlget/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="nls"
 
 RDEPEND=">=net-misc/curl-7.10
