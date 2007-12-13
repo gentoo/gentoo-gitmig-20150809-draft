@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/hxt-7.2.ebuild,v 1.1 2007/07/28 17:58:47 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/hxt-7.2.ebuild,v 1.2 2007/12/13 17:31:46 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit base haskell-cabal
@@ -35,9 +35,9 @@ src_unpack() {
 src_install() {
 	cabal_src_install
 
-	dodoc LICENSE README
+	dodoc README
 	if use doc; then
-		cd ${S}/doc
+		cd "${S}/doc"
 		dodoc thesis.pdf
 	fi
 }

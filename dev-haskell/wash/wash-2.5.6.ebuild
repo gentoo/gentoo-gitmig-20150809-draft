@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.5.6.ebuild,v 1.5 2007/10/31 13:11:16 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.5.6.ebuild,v 1.6 2007/12/13 17:33:09 dcoutts Exp $
 
 inherit base eutils ghc-package check-reqs autotools
 
@@ -76,7 +76,7 @@ src_install() {
 
 	dodoc README
 	if use doc; then
-		cp -r Examples ${D}/usr/share/doc/${PF}
+		cp -r Examples "${D}/usr/share/doc/${PF}"
 		cd doc
 		dohtml -r *
 	fi

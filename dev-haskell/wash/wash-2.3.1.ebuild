@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.3.1.ebuild,v 1.3 2007/10/31 13:11:16 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.3.1.ebuild,v 1.4 2007/12/13 17:33:09 dcoutts Exp $
 
 inherit ghc-package
 
@@ -31,7 +31,7 @@ src_compile() {
 	./configure \
 		--prefix="${D}usr" \
 		--host=${CHOST} \
-		--libdir=${D}/$(ghc-libdir) \
+		--libdir="${D}/$(ghc-libdir)" \
 		${myopts} \
 		--enable-register-package="${S}/$(ghc-localpkgconf)" \
 			|| die "configure failed"
@@ -41,11 +41,11 @@ src_compile() {
 
 src_install() {
 	ghc-setup-pkg
-	make exec_prefix=${D}/usr install || die "make install failed"
+	make exec_prefix="${D}/usr" install || die "make install failed"
 	ghc-install-pkg
 	dodoc README
 	if use doc; then
-		cp -r Examples ${D}/usr/share/doc/${PF}
+		cp -r Examples "${D}/usr/share/doc/${PF}"
 		cd doc
 		dohtml -r *
 	fi

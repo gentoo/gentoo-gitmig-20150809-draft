@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/wash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/ChangeLog,v 1.12 2007/10/31 13:11:16 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/ChangeLog,v 1.13 2007/12/13 17:33:09 dcoutts Exp $
+
+*wash-2.12 (13 Dec 2007)
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> wash-2.0.6.ebuild,
+  wash-2.3.1.ebuild, wash-2.5.6.ebuild, +wash-2.12.ebuild:
+  New version. Fix quoting issues in older ebuilds.
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> wash-2.0.6.ebuild,
   wash-2.3.1.ebuild, wash-2.5.6.ebuild:
