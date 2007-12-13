@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.896 2007/12/13 18:43:48 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.897 2007/12/13 21:48:34 philantrop Exp $
+
+  13 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org> package.mask:
+  Removed the mask for dev-libs/xmlrpc-c-1.10.00 which is no longer in the tree.
 
   13 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org> use.local.desc:
   Add sys-fs/ecryptfs-utils:suid
