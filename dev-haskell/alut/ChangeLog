@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/alut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.5 2007/12/12 09:59:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.6 2007/12/13 17:46:52 dcoutts Exp $
+
+*alut-2.1.0.0 (13 Dec 2007)
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> +alut-2.1.0.0.ebuild:
+  New version.
 
   12 Dec 2007; Christian Faulhammer <opfer@gentoo.org> alut-2.0.1.ebuild:
   quote variable
