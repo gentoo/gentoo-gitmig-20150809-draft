@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.891 2007/12/12 05:51:01 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.892 2007/12/13 01:47:13 jsbronder Exp $
+
+  13 Dec 2007; Justin Bronder <jsbronder@gentoo.org> use.local.desc:
+  Clarify server use flag for sys-cluster/torque.
 
   12 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org> use.local.desc:
   Add and update tracker useflags
