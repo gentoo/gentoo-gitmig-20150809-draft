@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-amarok/vdr-amarok-0.0.2.ebuild,v 1.1 2007/12/13 13:21:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-amarok/vdr-amarok-0.0.2.ebuild,v 1.2 2007/12/13 21:36:01 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -23,4 +23,3 @@ pkg_postinst() {
 	elog "media-sound/vdramgw on this machine"
 	elog "or a machine reachable via network"
 }
-
