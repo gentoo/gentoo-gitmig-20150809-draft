@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-2.0.8.ebuild,v 1.1 2007/12/13 15:36:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-2.0.8.ebuild,v 1.2 2007/12/13 15:43:34 betelgeuse Exp $
 
-# doesn't need to anyherit any java eclasses, since it's not building
-# and doesn't use any of the functions
+inherit java-pkg-2
 
 MY_PN=apache-${PN%%-bin}
 MY_P="${MY_PN}-${PV}"
@@ -34,6 +33,8 @@ src_unpack() {
 src_install() {
 	dodir "${MAVEN_SHARE}"
 	cp -Rp bin boot conf lib "${D}/${MAVEN_SHARE}" || die "failed to copy"
+
+	java-pkg_regjar "${D}/${MAVEN_SHARE}"/lib/*.jar
 
 	dodoc NOTICE.txt README.txt || die
 
