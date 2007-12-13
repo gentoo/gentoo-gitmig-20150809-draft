@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.33 2007/07/06 22:34:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.34 2007/12/13 15:36:25 betelgeuse Exp $
+
+*maven-bin-2.0.8 (13 Dec 2007)
+
+  13 Dec 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +maven-bin-2.0.8.ebuild:
+  Version bump. Fixes bug #201566.
 
 *maven-bin-2.0.7 (06 Jul 2007)
 
