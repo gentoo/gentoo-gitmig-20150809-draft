@@ -1,6 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.24 2007/12/13 21:10:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.25 2007/12/13 21:32:12 alonbl Exp $
+
+#
+# NOTE: This revision is used by direct dependency. DO NOT REMOVE!
+#
 
 inherit eutils autotools
 

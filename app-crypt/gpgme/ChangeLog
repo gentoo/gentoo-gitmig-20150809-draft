@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.126 2007/12/13 21:10:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.127 2007/12/13 21:32:12 alonbl Exp $
+
+  13 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org> gpgme-0.3.14-r1.ebuild:
+  Add note not to remove gpgme-0.3.14-r1
 
   13 Dec 2007; Michael Sterrett <mr_bones_@gentoo.org>
   +files/gpgme3.m4.patch, +gpgme-0.3.14-r1.ebuild:
