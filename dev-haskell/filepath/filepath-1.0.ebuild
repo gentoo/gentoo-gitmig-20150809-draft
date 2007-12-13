@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/filepath/filepath-1.0.ebuild,v 1.11 2007/12/12 12:54:50 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/filepath/filepath-1.0.ebuild,v 1.12 2007/12/13 00:43:49 dcoutts Exp $
 
 CABAL_FEATURES="haddock lib profile"
 inherit haskell-cabal
@@ -11,7 +11,6 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 
-#if possible try testing with "~ppc"
 KEYWORDS="amd64 hppa ~ia64 ~ppc sparc x86"
 IUSE=""
 
