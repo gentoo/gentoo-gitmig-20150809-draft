@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/keyjnote
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/keyjnote/ChangeLog,v 1.8 2007/12/13 10:58:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/keyjnote/ChangeLog,v 1.9 2007/12/13 19:31:26 maekke Exp $
+
+  13 Dec 2007; Markus Meier <maekke@gentoo.org> keyjnote-0.10.1a.ebuild:
+  use newbin and die, thanks to opfer and vapier for the hint
 
 *keyjnote-0.10.1a (13 Dec 2007)
 
