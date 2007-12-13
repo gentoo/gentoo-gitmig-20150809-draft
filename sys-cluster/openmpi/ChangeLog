@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.10 2007/12/13 02:10:15 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.11 2007/12/13 22:39:53 jsbronder Exp $
+
+  13 Dec 2007; Justin Bronder <jsbronder@gentoo.org> openmpi-1.2.4.ebuild:
+  Minor fixes to sys-cluster/openmpi-1.2.4, thanks to dberkholz for pointing
+  them out.
 
 *openmpi-1.2.4 (13 Dec 2007)
 

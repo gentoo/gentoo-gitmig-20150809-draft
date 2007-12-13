@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.2.4.ebuild,v 1.1 2007/12/13 02:10:15 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.2.4.ebuild,v 1.2 2007/12/13 22:39:53 jsbronder Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs fortran
 
@@ -21,6 +21,21 @@ RDEPEND="pbs? ( sys-cluster/torque )
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
+	if use threads; then
+		ewarn
+		ewarn "WARNING: use of threads is still disabled by default in"
+		ewarn "upstream builds."
+		ewarn "You may stop now and set USE=-threads"
+		ewarn
+		epause 5
+	fi
+
+	elog
+	elog "OpenMPI has an overwhelming count of configuration options."
+	elog "Don't forget the EXTRA_ECONF environment variable can let you"
+	elog "specify configure options if you find them necessary."
+	elog
+
 	if use fortran; then
 		FORTRAN="g77 gfortran ifc"
 		fortran_pkg_setup
@@ -41,7 +56,7 @@ src_compile() {
 			--with-threads=posix"
 	fi
 
-	if [[ -n "${FORTRANC}" ]]; then
+	if use fortran; then
 		if [[ "${FORTRANC}" = "g77" ]]; then
 			myconf="${myconf} --disable-mpi-f90"
 		elif [[ "${FORTRANC}" = "gfortran" ]]; then
@@ -58,7 +73,7 @@ src_compile() {
 		$(use_enable !nocxx mpi-cxx) \
 		$(use_enable romio romio-io) \
 		$(use_enable smp smp-locks) \
-		$(use_enable heterogeneous heterogeneous) \
+		$(use_enable heterogeneous) \
 		$(use_with pbs tm /usr/$(get_libdir)/pbs) \
 		$(use_with slurm) \
 		$(use_enable ipv6) \
@@ -68,6 +83,6 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc README AUTHORS NEWS VERSION
 }
