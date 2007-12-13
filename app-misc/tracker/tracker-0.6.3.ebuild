@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.3.ebuild,v 1.11 2007/12/07 18:11:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.3.ebuild,v 1.12 2007/12/13 20:23:27 compnerd Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -107,6 +107,7 @@ src_unpack() {
 	echo "python/deskbar-handler/tracker-handler-static.py" >> "${S}/po/POTFILES.in"
 
 	eautoreconf
+	intltoolize --force || die "intltoolize failed"
 }
 
 src_compile() {
