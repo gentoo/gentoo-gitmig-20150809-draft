@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3200 2007/12/13 01:56:29 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3201 2007/12/13 18:43:48 alonbl Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2035,6 +2035,7 @@ sys-fs/cryptsetup:dynamic - Build cryptsetup dynamically
 sys-fs/ecryptfs-utils:openssl - Enable OpenSSL key module.
 sys-fs/ecryptfs-utils:pkcs11 - Enable PKCS#11 (Smartcards) key module.
 sys-fs/ecryptfs-utils:gpg - Enable gnupg key module.
+sys-fs/ecryptfs-utils:suid - Install the binary SUID root, allowing users to mount eCryptfs filesystems with potential security risks
 sys-fs/evms:hb - Enable support for heartbeat-1
 sys-fs/evms:hb2 - Enable support for heartbeat-2
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources

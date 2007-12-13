@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.895 2007/12/13 11:06:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.896 2007/12/13 18:43:48 alonbl Exp $
+
+  13 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org> use.local.desc:
+  Add sys-fs/ecryptfs-utils:suid
 
   13 Dec 2007; Peter Volkov <pva@gentoo.org> package.mask:
   Masked net-im/sim-9999, live svn ebuild.
