@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.897 2007/12/13 21:48:34 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.898 2007/12/13 23:36:48 eva Exp $
+
+  13 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  mask gal, fix bug #193496
 
   13 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org> package.mask:
   Removed the mask for dev-libs/xmlrpc-c-1.10.00 which is no longer in the tree.

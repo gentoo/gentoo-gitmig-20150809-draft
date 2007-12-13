@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7999 2007/12/13 21:48:34 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8000 2007/12/13 23:36:48 eva Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Gilles Dartiguelongue <eva@gentoo.org> (14 Dec 2007)
+# gal is an über old library of gnome and deserves to die.
+# see bug #193496
+=gnome-extra/gtkhtml-3.0.10-r1
+app-editors/peacock
+gnome-extra/gal
 
 # Doug Klima <cardoe@gentoo.org> (13 Dec 2007)
 # older then current releases and should be removed
