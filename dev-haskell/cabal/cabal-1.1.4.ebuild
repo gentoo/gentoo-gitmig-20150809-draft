@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.1.4.ebuild,v 1.11 2007/10/31 12:54:22 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.1.4.ebuild,v 1.12 2007/12/13 00:42:07 dcoutts Exp $
 
 CABAL_FEATURES="bootstrap profile lib"
 inherit haskell-cabal eutils base
@@ -15,8 +15,7 @@ KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="doc"
 
-DEPEND="<dev-lang/ghc-6.6
-	!>=dev-lang/ghc-6.6"
+DEPEND="<dev-lang/ghc-6.6"
 
 src_unpack() {
 	unpack ${A}
@@ -50,9 +49,9 @@ src_install() {
 
 pkg_postinst () {
 	if ghc-cabal && ghc-package-exists "Cabal-1.0"; then
-	        ebegin "Unregistering ghc's built-in cabal "
-	        $(ghc-getghcpkg) unregister "Cabal-1.0" > /dev/null
-	        eend $?
+		ebegin "Unregistering ghc's built-in cabal "
+		$(ghc-getghcpkg) unregister "Cabal-1.0" > /dev/null
+		eend $?
 	fi
 	ghc-package_pkg_postinst
 }

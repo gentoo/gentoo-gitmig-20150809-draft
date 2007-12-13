@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.1.6.1.ebuild,v 1.4 2007/10/31 12:54:22 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.1.6.1.ebuild,v 1.5 2007/12/13 00:42:07 dcoutts Exp $
 
 CABAL_FEATURES="bootstrap profile lib"
 inherit haskell-cabal eutils
@@ -8,11 +8,10 @@ inherit haskell-cabal eutils
 DESCRIPTION="Haskell Common Architecture for Building Applications and Libraries"
 HOMEPAGE="http://haskell.org/cabal"
 SRC_URI="http://haskell.org/cabal/release/${P}/${P}.tar.gz"
+
 LICENSE="as-is"
 SLOT="0"
-
 KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-
 IUSE="doc"
 
 DEPEND=">=dev-lang/ghc-6.2"
@@ -21,7 +20,7 @@ src_unpack() {
 	unpack "${A}"
 	if ! $(ghc-cabal); then
 		sed -i 's/Build-Depends: base/Build-Depends: base, unix/' \
-			${S}/Cabal.cabal
+			"${S}/Cabal.cabal"
 	fi
 }
 
@@ -39,8 +38,8 @@ src_install() {
 	cabal_src_install
 
 	# documentation (install directly)
-	dohtml -r doc/users-guide
 	if use doc; then
+		dohtml -r doc/users-guide
 		dohtml -r doc/API
 		dohtml -r doc/pkg-spec-html
 		dodoc doc/pkg-spec.pdf

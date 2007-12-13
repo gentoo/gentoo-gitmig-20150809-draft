@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.1.3-r1.ebuild,v 1.12 2007/10/31 12:54:22 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.1.3-r1.ebuild,v 1.13 2007/12/13 00:42:07 dcoutts Exp $
 
 CABAL_FEATURES="bootstrap lib"
 inherit haskell-cabal eutils base
@@ -31,14 +31,14 @@ src_unpack() {
 	# Update: Seems that solving this upstream causes problems on Windows, so
 	# this hack will remain for now.
 	if $(ghc-cabal); then
-		sed -i 's/Build-Depends: base, util/Build-Depends: base/' ${S}/Cabal.cabal
+		sed -i 's/Build-Depends: base, util/Build-Depends: base/' "${S}/Cabal.cabal"
 	else
-		sed -i 's/Build-Depends: base, util/Build-Depends: base, unix/' ${S}/Cabal.cabal
+		sed -i 's/Build-Depends: base, util/Build-Depends: base, unix/' "${S}/Cabal.cabal"
 	fi
 
 	# patch to make installed packages be exposed by default with
 	# ghc 6.2.2 (which is Cabal's default with ghc 6.4.1)
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${PN}-1.1.3-ghc622.patch"
 }
 
