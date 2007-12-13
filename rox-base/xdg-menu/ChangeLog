@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/xdg-menu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/ChangeLog,v 1.15 2007/11/29 16:08:23 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/ChangeLog,v 1.16 2007/12/13 21:44:36 lack Exp $
+
+*xdg-menu-1.4 (13 Dec 2007)
+
+  13 Dec 2007; Jim Ramsay <lack@gentoo.org> +xdg-menu-1.4.ebuild:
+  New version released - 1.4 (Bug 202107)
 
   29 Nov 2007; Jim Ramsay <lack@gentoo.org> -xdg-menu-1.2.ebuild:
   Version cleanup
