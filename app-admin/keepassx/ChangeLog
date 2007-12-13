@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.15 2007/12/06 18:24:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.16 2007/12/13 21:14:20 opfer Exp $
+
+  13 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  keepassx-0.2.2-r1.ebuild:
+  Add check for png support of x11-libs/qt, reported by Orson Teodoro
+  <orsonteodoro AT yahoo DOT com> in bug 202186
 
   06 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   files/keepassx.desktop:
