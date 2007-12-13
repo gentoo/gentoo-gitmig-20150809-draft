@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7994 2007/12/12 17:00:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7995 2007/12/13 04:14:00 dirtyepic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -185,9 +185,8 @@ dev-java/blackdown-java3d-bin
 
 # Ryan Hill <dirtyepic@gentoo.org> (18 Nov 2007)
 # Mask for keywording/testing.
-app-admin/eselect-wxwidgets
->=x11-libs/wxGTK-2.6.4.0-r2
->=dev-python/wxpython-2.6.4.0-r1
+>=x11-libs/wxGTK-2.8
+>=dev-python/wxpython-2.8
 
 # Tiziano Müller <dev-zero@gentoo.org> (18 Nov 2007)
 # There is a serious regression (bug #199450) due to
