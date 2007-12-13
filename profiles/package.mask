@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7996 2007/12/13 11:06:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7997 2007/12/13 16:20:44 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Doug Klima <cardoe@gentoo.org> (13 Dec 2007)
+# older then current releases and should be removed
+=sys-auth/pam_krb5-20030601-r1
 
 # Peter Volkov <pva@gentoo.org> (13 Dec 2007)
 # Live svn ebuild... 0.9.4 branch is not supported atm.
