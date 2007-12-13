@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-amarok
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-amarok/ChangeLog,v 1.1 2007/12/13 13:21:16 zzam Exp $
+
+*vdr-amarok-0.0.2 (13 Dec 2007)
+
+  13 Dec 2007; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +vdr-amarok-0.0.2.ebuild:
+  Initial import of ebuild written by me.
+
