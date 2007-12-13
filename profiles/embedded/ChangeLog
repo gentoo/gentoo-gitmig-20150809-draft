@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.2 2007/11/05 10:45:44 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.3 2007/12/13 16:03:45 dcoutts Exp $
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> virtuals:
+  Remove old-style virtual/ghc as it is no longer used.
 
   05 Nov 2007; Duncan Coutts <dcoutts@gentoo.org> virtuals:
   Switch to ghc rather than ghc-bin for virtual as we're p.masking ghc-bin

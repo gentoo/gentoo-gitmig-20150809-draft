@@ -6,7 +6,6 @@ virtual/blackbox		x11-wm/blackbox
 virtual/bootloader		sys-boot/grub
 virtual/cron			sys-process/dcron
 virtual/dhcpcd			net-misc/dhcpcd
-virtual/ghc			dev-lang/ghc
 virtual/glibc			sys-libs/glibc
 virtual/libc			sys-libs/glibc
 virtual/gzip			app-arch/gzip
