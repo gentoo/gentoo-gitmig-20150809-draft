@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.1-r1.ebuild,v 1.1 2007/12/13 20:40:21 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.1-r1.ebuild,v 1.2 2007/12/13 21:05:24 cedk Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs confutils
@@ -97,9 +97,8 @@ src_compile() {
 		myconf="${myconf} --ssl=nss"
 	elif use ssl ; then
 		myconf="${myconf} --ssl=openssl"
-	elif use jabber && ! use gnutls && ! use nss && ! use ssl ; then
-		myconf="${myconf} --ssl=bogus"
 	else
+		myconf="${myconf} --ssl=bogus"
 		einfo "You will not have any encryption support enabled."
 	fi
 	    
