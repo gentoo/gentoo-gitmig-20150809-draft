@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/honeyd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.33 2007/11/16 15:33:06 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.34 2007/12/13 11:00:46 pva Exp $
+
+  13 Dec 2007; <pva@gentoo.org> -honeyd-1.5b.ebuild, honeyd-1.5c.ebuild:
+  Updated dependency: >=libevent-1.2, bug #199905, reported by Luc Stepniewski
+  <lstep AT adelux.fr>. Remove old.
 
   16 Nov 2007; Steve Dibb <beandog@gentoo.org> honeyd-1.5c.ebuild:
   amd64 stable, bug 192446
