@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.1.7.ebuild,v 1.7 2007/01/28 05:47:45 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.1.7.ebuild,v 1.8 2007/12/13 22:35:30 eva Exp $
 
 inherit libtool gnome2 eutils
 
@@ -17,7 +17,6 @@ RDEPEND="=gnome-extra/gtkhtml-3*
 	=app-text/sword-1.5.8*
 	>=x11-libs/gtk+-2
 	>=gnome-base/libgnomeui-2
-	>=gnome-extra/gal-0.22
 	dev-libs/libxml2
 	virtual/libc
 	spell? ( app-text/gnome-spell
@@ -33,8 +32,8 @@ DOCS="NEWS ChangeLog README TODO"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-commentary_dialog.c.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-commentary_dialog.c.patch"
 }
 
 pkg_postinst() {
