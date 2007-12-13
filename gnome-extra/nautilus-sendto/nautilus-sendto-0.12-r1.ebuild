@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.12-r1.ebuild,v 1.3 2007/11/05 15:53:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.12-r1.ebuild,v 1.4 2007/12/13 20:01:45 compnerd Exp $
 
 inherit gnome2 eutils autotools
 
@@ -67,6 +67,7 @@ src_unpack() {
 
 	# Oh the joys of autotools
 	eautoreconf
+	intltoolize --force || die "intltoolize force"
 }
 
 pkg_postinst() {
