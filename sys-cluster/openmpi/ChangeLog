@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.9 2007/04/26 06:12:57 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.10 2007/12/13 02:10:15 jsbronder Exp $
+
+*openmpi-1.2.4 (13 Dec 2007)
+
+  13 Dec 2007; Justin Bronder <jsbronder@gentoo.org> +openmpi-1.2.4.ebuild:
+  Bump sys-cluster/openmpi-1.2.4 (Bug #166787).  Change virtual/pbs to
+  sys-cluster/torque.  Add use flags nocxx romio slurm heterogeneous smp and
+  ipv6.  Disable xgrid support (OS X).  Include /usr/include by default with
+  gfortran and mpif77.
 
   26 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update for cluster herd split to hp-cluster and ha-cluster.
