@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.894 2007/12/13 04:14:00 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.895 2007/12/13 11:06:43 pva Exp $
+
+  13 Dec 2007; Peter Volkov <pva@gentoo.org> package.mask:
+  Masked net-im/sim-9999, live svn ebuild.
 
   13 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Unmask the new wxGTK-2.6 stuff.
