@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r10.ebuild,v 1.5 2007/12/11 10:40:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r10.ebuild,v 1.6 2007/12/14 14:14:02 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -166,6 +166,10 @@ src_install() {
 	einstall bindir="${D}/usr/bin" texmf="${D}${TEXMF_PATH:-/usr/share/texmf}" || die "einstall failed"
 
 	dosbin "${FILESDIR}/texmf-update"
+
+	# When X is disabled mf-nowin doesn't exist but some scripts expect it to
+	# exist. Instead, it is called mf, so we symlink it to please everything.
+	use X || dosym mf /usr/bin/mf-nowin
 
 	docinto texk
 	cd "${S}/texk"
