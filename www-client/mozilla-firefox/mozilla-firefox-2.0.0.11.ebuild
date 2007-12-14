@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.11.ebuild,v 1.8 2007/12/13 20:31:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.11.ebuild,v 1.9 2007/12/14 17:38:02 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -16,11 +16,12 @@ HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
-IUSE="java mozdevelop bindist xforms restrict-javascript filepicker"
+IUSE="java mozdevelop bindist xforms restrict-javascript filepicker iceweasel"
 
 MOZ_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${PV}"
 SRC_URI="${MOZ_URI}/source/firefox-${PV}-source.tar.bz2
-	mirror://gentoo/${PATCH}.tar.bz2"
+	mirror://gentoo/${PATCH}.tar.bz2
+	iceweasel? ( mirror://gentoo/iceweasel-icons-2.0.0.11.tar.bz2 )"
 
 # These are in
 #
@@ -88,7 +89,7 @@ pkg_setup(){
 		die "Cairo needs X"
 	fi
 
-	if ! use bindist; then
+	if ! use bindist && ! use iceweasel; then
 		elog "You are enabling official branding. You may not redistribute this build"
 		elog "to any users on your network or the internet. Doing so puts yourself into"
 		elog "a legal problem with Mozilla Foundation"
@@ -101,6 +102,12 @@ pkg_setup(){
 
 src_unpack() {
 	unpack firefox-${PV}-source.tar.bz2  ${PATCH}.tar.bz2
+
+	if use iceweasel; then
+		unpack iceweasel-icons-2.0.0.11.tar.bz2
+
+		cp -r iceweaselicons/browser mozilla/
+	fi
 
 	linguas
 	for X in ${linguas}; do
@@ -118,6 +125,10 @@ src_unpack() {
 
 	if use filepicker; then
 		epatch "${FILESDIR}"/mozilla-filepicker.patch
+	fi
+
+	if use iceweasel; then
+		sed -i -e "s|Bon Echo|Iceweasel|" browser/locales/en-US/chrome/branding/brand.*
 	fi
 
 	eautoreconf
@@ -145,7 +156,7 @@ src_compile() {
 		echo "ac_cv_visibility_pragma=no" >>  "${S}/.mozconfig"
 	fi
 
-	if ! use bindist; then
+	if ! use bindist && ! use iceweasel; then
 		mozconfig_annotate '' --enable-official-branding
 	fi
 
@@ -231,7 +242,11 @@ src_install() {
 	install_mozilla_launcher_stub firefox "${MOZILLA_FIVE_HOME}"
 
 	# Install icon and .desktop for menu entry
-	if ! use bindist; then
+	if use iceweasel; then
+		newicon "${S}"/browser/base/branding/icon48.png iceweasel-icon.png
+		newmenu "${FILESDIR}"/icon/iceweasel.desktop \
+			mozilla-firefox-2.0.desktop
+	elif ! use bindist; then
 		doicon "${FILESDIR}"/icon/firefox-icon.png
 		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5.desktop \
 			mozilla-firefox-2.0.desktop
