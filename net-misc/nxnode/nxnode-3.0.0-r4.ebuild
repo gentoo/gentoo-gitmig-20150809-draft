@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0-r4.ebuild,v 1.1 2007/12/03 21:48:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0-r4.ebuild,v 1.2 2007/12/14 12:11:41 voyageur Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RESTRICT="strip"
 DEPEND="!net-misc/nxserver-freenx
 	!<net-misc/nxserver-freeedition-3.0.0"
 
-RDEPEND="=net-misc/nxclient-3*
+RDEPEND="=net-misc/nxclient-3.0*
 	x11-libs/libICE
 	x11-libs/libXmu
 	x11-libs/libSM

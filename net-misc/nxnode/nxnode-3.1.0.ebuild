@@ -1,24 +1,25 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0-r3.ebuild,v 1.4 2007/12/14 12:11:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.1.0.ebuild,v 1.1 2007/12/14 12:11:41 voyageur Exp $
 
 inherit eutils
 
+MY_PV="${PV}-3"
 DESCRIPTION="nxnode provides the components that are shared between the different editions of NoMachine's NX Server"
 HOMEPAGE="http://www.nomachine.com/"
-SRC_URI="amd64? ( http://64.34.161.181/download/3.0.0/Linux/nxnode-${PV}-83.x86_64.tar.gz )
-	x86? ( http://64.34.161.181/download/3.0.0/Linux/nxnode-${PV}-83.i386.tar.gz )"
+SRC_URI="amd64? ( http://64.34.161.181/download/${PV}/Linux/nxnode-${MY_PV}.x86_64.tar.gz )
+	x86? ( http://64.34.161.181/download/${PV}/Linux/nxnode-${MY_PV}.i386.tar.gz )"
 
 LICENSE="nomachine"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="rdesktop vnc"
 RESTRICT="strip"
 
 DEPEND="!net-misc/nxserver-freenx
 	!<net-misc/nxserver-freeedition-3.0.0"
 
-RDEPEND="=net-misc/nxclient-3.0*
+RDEPEND="=net-misc/nxclient-3.1*
 	x11-libs/libICE
 	x11-libs/libXmu
 	x11-libs/libSM
@@ -48,8 +49,8 @@ pkg_setup() {
 src_unpack()
 {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/nxnode-3.0.0-setup.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/nxnode-3.0.0-setup.patch
 }
 
 src_install()
@@ -63,42 +64,42 @@ src_install()
 	done
 
 	dodir /usr/NX/etc
-	cp etc/node-debian.cfg.sample ${D}/usr/NX/etc/node-gentoo.cfg.sample || die
-	sed -e 's|COMMAND_FUSER = .*|COMMAND_FUSER = "/usr/bin/fuser"|;' -i ${D}/usr/NX/etc/node-gentoo.cfg.sample || die
-	cp etc/node.lic.sample ${D}/usr/NX/etc/node.lic.sample || die
+	cp etc/node-debian.cfg.sample "${D}"/usr/NX/etc/node-gentoo.cfg.sample || die
+	sed -e 's|COMMAND_FUSER = .*|COMMAND_FUSER = "/usr/bin/fuser"|;' -i "${D}"/usr/NX/etc/node-gentoo.cfg.sample || die
+	cp etc/node.lic.sample "${D}"/usr/NX/etc/node.lic.sample || die
 
 	dodir /usr/NX/lib
-	cp -R lib ${D}/usr/NX || die
+	cp -R lib "${D}"/usr/NX || die
 
 	dodir /usr/NX/scripts
-	cp -R scripts ${D}/usr/NX || die
+	cp -R scripts "${D}"/usr/NX || die
 
 	dodir /usr/NX/share
-	cp -R share ${D}/usr/NX || die
+	cp -R share "${D}"/usr/NX || die
 
 	dodir /usr/NX/var
-	cp -R var ${D}/usr/NX || die
+	cp -R var "${D}"/usr/NX || die
 
 	dodir /etc/init.d
-	newinitd ${FILESDIR}/nxnode-3.0.0-init nxsensor
+	newinitd "${FILESDIR}"/nxnode-3.0.0-init nxsensor
 }
 
 pkg_postinst()
 {
 	# Only install license file if none is found
 	if [ ! -f /usr/NX/etc/node.lic ]; then
-		cp ${ROOT}/usr/NX/etc/node.lic.sample ${ROOT}/usr/NX/etc/node.lic || die
-		chmod 0400 ${ROOT}/usr/NX/etc/node.lic
-		chown nx:root ${ROOT}/usr/NX/etc/node.lic
+		cp "${ROOT}"/usr/NX/etc/node.lic.sample "${ROOT}"/usr/NX/etc/node.lic || die
+		chmod 0400 "${ROOT}"/usr/NX/etc/node.lic
+		chown nx:root "${ROOT}"/usr/NX/etc/node.lic
 	fi
 
 	# only run install on the first time
 	if [ -f /usr/NX/etc/node.cfg ]; then
 		einfo "Running NoMachine's update script"
-		${ROOT}/usr/NX/scripts/setup/nxnode --update
+		"${ROOT}"/usr/NX/scripts/setup/nxnode --update
 	else
 		einfo "Running NoMachine's setup script"
-		${ROOT}/usr/NX/scripts/setup/nxnode --install
+		"${ROOT}"/usr/NX/scripts/setup/nxnode --install
 	fi
 
 	elog "If you want server statistics, please add nxsensor to your default runlevel"
