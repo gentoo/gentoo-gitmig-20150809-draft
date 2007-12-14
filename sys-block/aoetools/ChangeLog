@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/aoetools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.13 2007/05/15 14:13:31 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.14 2007/12/14 12:07:34 robbat2 Exp $
+
+*aoetools-22 (14 Dec 2007)
+
+  14 Dec 2007; Robin H. Johnson <robbat2@gentoo.org> +aoetools-22.ebuild:
+  Version bump.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
