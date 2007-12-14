@@ -1,0 +1,46 @@
+diff -Naur ParaView3.2.old/Utilities/Xdmf2/CMakeLists.txt ParaView3.2.new/Utilities/Xdmf2/CMakeLists.txt
+--- ParaView3.2.old/Utilities/Xdmf2/CMakeLists.txt	2007-10-15 14:15:47.000000000 -0400
++++ ParaView3.2.new/Utilities/Xdmf2/CMakeLists.txt	2007-11-17 17:51:51.000000000 -0500
+@@ -14,7 +14,7 @@
+ ENDIF(NOT BUILD_SHARED_LIBS)
+ 
+ SET(XDMF_BUILD_VTK 1)
+-SET(LIBXML2_LIBRARY vtklibxml2)
++SET(LIBXML2_LIBRARY xml2)
+ 
+ SET(HDF5_LIBRARY ${PARAVIEW_HDF5_LIBRARIES})
+ IF(VTK_USE_SYSTEM_EXPAT)
+@@ -91,6 +91,7 @@
+   ${ParaView_BINARY_DIR}/VTK/Utilities
+   ${ParaView_BINARY_DIR}/VTK/Utilities/vtklibxml2
+   ${HDF5_INCLUDE_DIR}
++  /usr/include/libxml2
+   )
+ SUBDIRS(Ice)
+ SUBDIRS(libsrc)
+diff -Naur ParaView3.2.old/VTK/Infovis/CMakeLists.txt ParaView3.2.new/VTK/Infovis/CMakeLists.txt
+--- ParaView3.2.old/VTK/Infovis/CMakeLists.txt	2007-10-15 14:16:13.000000000 -0400
++++ ParaView3.2.new/VTK/Infovis/CMakeLists.txt	2007-11-17 17:45:18.000000000 -0500
+@@ -3,7 +3,7 @@
+ SET(KIT_TCL_LIBS vtkWidgetsTCL)
+ SET(KIT_PYTHON_LIBS vtkWidgetsPythonD)
+ SET(KIT_JAVA_LIBS vtkWidgetsJava)
+-SET(KIT_LIBS vtkWidgets vtklibxml2)
++SET(KIT_LIBS vtkWidgets xml2)
+ 
+ SET( Kit_SRCS
+ vtkCommunity2DLayoutStrategy.cxx
+diff -Naur ParaView3.2.old/VTK/Infovis/vtkXMLTreeReader.cxx ParaView3.2.new/VTK/Infovis/vtkXMLTreeReader.cxx
+--- ParaView3.2.old/VTK/Infovis/vtkXMLTreeReader.cxx	2007-10-15 14:16:13.000000000 -0400
++++ ParaView3.2.new/VTK/Infovis/vtkXMLTreeReader.cxx	2007-11-17 15:22:10.000000000 -0500
+@@ -27,8 +27,8 @@
+ #include "vtkStringArray.h"
+ #include "vtkTree.h"
+ 
+-#include <vtklibxml2/libxml/parser.h>
+-#include <vtklibxml2/libxml/tree.h>
++#include <libxml/parser.h>
++#include <libxml/tree.h>
+ 
+ vtkCxxRevisionMacro(vtkXMLTreeReader, "$Revision: 1.1 $");
+ vtkStandardNewMacro(vtkXMLTreeReader);

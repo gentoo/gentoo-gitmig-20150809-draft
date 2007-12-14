@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-2.6.2.ebuild,v 1.1 2007/07/25 21:14:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-2.6.2.ebuild,v 1.2 2007/12/14 19:59:46 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python
 
@@ -94,7 +94,7 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_USE_PTHREADS:BOOL=OFF"
 	fi
 
-	cmake ${CMAKE_VARIABLES} ${S} \
+	cmake ${CMAKE_VARIABLES} "${S}" \
 		|| die "cmake configuration failed"
 
 	emake || die "emake failed"
@@ -106,6 +106,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	# set up the environment
-	echo "LDPATH=/usr/${PVLIBDIR}" >> ${T}/40${PN}
-	doenvd ${T}/40${PN}
+	echo "LDPATH=/usr/${PVLIBDIR}" >> "${T}"/40${PN}
+	doenvd "${T}"/40${PN}
 }
