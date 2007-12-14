@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.31-r1.ebuild,v 1.3 2007/12/07 15:35:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.31-r1.ebuild,v 1.4 2007/12/14 21:34:29 lack Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="!<=rox-base/rox-session-0.30"
 RDEPEND=">=dev-python/pygtk-2.0
 	app-crypt/gnupg"
 
