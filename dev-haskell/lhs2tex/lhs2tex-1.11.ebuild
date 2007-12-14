@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/lhs2tex-1.11.ebuild,v 1.9 2007/12/13 18:05:21 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/lhs2tex-1.11.ebuild,v 1.10 2007/12/14 01:31:45 dcoutts Exp $
 
 DESCRIPTION="Preprocessor for typesetting Haskell sources with LaTeX"
 HOMEPAGE="http://www.iai.uni-bonn.de/~loeh/lhs2tex"
@@ -14,7 +14,8 @@ IUSE="doc"
 S="${WORKDIR}/${P/_pre/pre}"
 
 DEPEND=">=dev-tex/polytable-0.8.2
-	>=dev-lang/ghc-6.2.2
+	<dev-lang/ghc-6.8
+	=dev-haskell/cabal-1.1.6*
 	doc? ( dev-lang/hugs98 virtual/tetex )"
 
 RDEPEND=">=dev-tex/polytable-0.8.2"
