@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.61 2007/12/14 09:42:51 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.62 2007/12/14 09:51:38 nelchael Exp $
+
+  14 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/3.0.25/resin.conf, +files/3.0.25/resin.init,
+  +files/3.1.4/resin.conf, +files/3.1.4/resin.init:
+  Add missing init.d/conf.d files.
 
 *resin-3.1.4 (14 Dec 2007)
 *resin-3.0.25 (14 Dec 2007)
