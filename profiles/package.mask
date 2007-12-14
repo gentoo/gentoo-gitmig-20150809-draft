@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8001 2007/12/14 01:07:22 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8002 2007/12/14 02:54:54 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Saleem Abdulrasool <compnerd@gentoo.org> (13 Dec 2007)
+# Retired by upstream in favor of gnome-system-tools since 2005
+# Masked for removal in 30 days
+app-admin/grubconf
+
 
 # Duncan Coutts <dcoutts@gentoo.org> (14 Dec 2007)
 # the 0.9x regex packages are not actually the latest stable versions
