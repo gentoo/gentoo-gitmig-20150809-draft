@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.7.ebuild,v 1.1 2007/10/17 23:09:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.7.ebuild,v 1.2 2007/12/14 05:58:13 opfer Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 IUSE="exif gphoto2 iptc raw tiff"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 x86"
 
 # FIXME
 # missing: libiptcdata-0.2.1
