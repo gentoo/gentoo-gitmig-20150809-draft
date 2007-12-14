@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/glut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/ChangeLog,v 1.4 2007/12/12 13:46:21 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/ChangeLog,v 1.5 2007/12/14 01:34:59 dcoutts Exp $
+
+  14 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> glut-2.1.1.ebuild:
+  Updates for upward compatability with cabal-1.2 and ghc-6.8
 
   12 Dec 2007; Ferris McCormick <fmccor@gentoo.org> glut-2.1.1.ebuild:
   Add ~sparc keyword (completeness with bug #201984)
