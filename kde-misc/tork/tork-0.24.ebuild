@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.23.ebuild,v 1.2 2007/12/14 23:00:24 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.24.ebuild,v 1.1 2007/12/14 23:00:24 philantrop Exp $
 
 inherit kde multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-libs/openssl
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 
 need-kde 3.5
 
-PATCHES="${FILESDIR}/${PN}-0.20-ext_tsocks.patch"
+PATCHES="${FILESDIR}/${P}-ext_tsocks.patch"
 
 src_compile() {
 	# Fix desktop file

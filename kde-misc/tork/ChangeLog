@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.20 2007/11/19 15:16:10 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.21 2007/12/14 23:00:24 philantrop Exp $
+
+*tork-0.24 (14 Dec 2007)
+
+  14 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/tork-0.24-ext_tsocks.patch, tork-0.23.ebuild, +tork-0.24.ebuild:
+  Version bump as per bug 202187. Marked 0.23 stable on amd64.
 
 *tork-0.23 (19 Nov 2007)
 

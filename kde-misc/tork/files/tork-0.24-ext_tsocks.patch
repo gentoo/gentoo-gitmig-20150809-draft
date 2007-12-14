@@ -1,0 +1,24 @@
+diff -Naur tork-0.24.orig/src/Makefile.am tork-0.24/src/Makefile.am
+--- tork-0.24.orig/src/Makefile.am	2007-12-08 16:44:30.000000000 +0100
++++ tork-0.24/src/Makefile.am	2007-12-14 23:26:27.000000000 +0100
+@@ -11,9 +11,9 @@
+ geoipdir=GeoIP-1.4.0
+ endif
+ 
+-tsocks=tsocks
++tsocks=-ltsocks
+ 
+-SUBDIRS=icons arkollon $(geoipdir) $(tsocks) privoxytemplates libwhich torkapplet konqplugin tor_ioslave menu .
++SUBDIRS=icons arkollon $(geoipdir) privoxytemplates libwhich torkapplet konqplugin tor_ioslave menu .
+ 
+ DISTCLEANFILES=dcoptork.kidl
+ 
+@@ -27,7 +27,7 @@
+ tork_LDFLAGS = $(KDE_RPATH) $(all_libraries)
+ 
+ # the libraries to link against.
+-tork_LDADD   = $(LIB_KFILE) $(LIB_KHTML) $(geoiplib) libwhich/libwhich.la
++tork_LDADD   = $(LIB_KFILE) $(LIB_KHTML) $(geoiplib) $(tsocks) libwhich/libwhich.la
+ 
+ # which sources should be compiled for tork
+ tork_SOURCES = trayicon.cpp trayhoverpopup.cpp chart.cpp configdialog.cpp crashhandler.cpp crypto.cpp \
