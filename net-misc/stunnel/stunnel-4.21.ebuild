@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.21.ebuild,v 1.4 2007/12/12 15:13:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.21.ebuild,v 1.5 2007/12/14 12:44:45 armin76 Exp $
 
 inherit autotools ssl-cert eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.stunnel.org/download/stunnel/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~ppc ppc64 sparc x86"
 IUSE="ipv6 selinux tcpd"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )
