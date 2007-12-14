@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.2.0.ebuild,v 1.1 2007/12/14 14:25:30 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.2.0.ebuild,v 1.2 2007/12/14 17:40:47 alonbl Exp $
 
-inherit libtool
+inherit libtool autotools
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -31,6 +31,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	elibtoolize # for sane .so versioning on FreeBSD
+
+	epatch "${FILESDIR}/${P}-selflink.patch"
+	AT_M4DIR="m4 gl/m4 lgl/m4" eautoreconf
 }
 
 src_compile() {
