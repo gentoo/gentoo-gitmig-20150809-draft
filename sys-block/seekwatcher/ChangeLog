@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/seekwatcher
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/ChangeLog,v 1.1 2007/08/18 23:02:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/ChangeLog,v 1.2 2007/12/14 12:58:34 robbat2 Exp $
+
+*seekwatcher-0.9 (14 Dec 2007)
+
+  14 Dec 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +seekwatcher-0.9.ebuild:
+  Version bump.
 
 *seekwatcher-0.6 (18 Aug 2007)
 
