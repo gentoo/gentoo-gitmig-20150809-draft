@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/undvd/undvd-0.3.0.ebuild,v 1.1 2007/12/14 17:46:51 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/undvd/undvd-0.3.0.ebuild,v 1.2 2007/12/14 22:29:04 mr_bones_ Exp $
 
 inherit eutils
 
@@ -23,7 +23,6 @@ DEPEND="sys-apps/coreutils
 	media-video/lsdvd
 	media-video/mplayer"
 RDEPEND="${DEPEND}"
-
 
 pkg_setup() {
 	einfo "Checking mplayer for USE flags we need..."
