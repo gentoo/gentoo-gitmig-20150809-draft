@@ -1,0 +1,15 @@
+loop-aes patch forgets to include -P in getopt call
+
+http://bugs.gentoo.org/201981
+
+--- mount/lomount.c
++++ mount/lomount.c
+@@ -1249,7 +1249,7 @@
+ 
+ 	delete = 0;
+ 	progname = argv[0];
+-	while ((c = getopt(argc,argv,"aC:de:FG:H:I:K:o:p:rRs:S:Tv")) != -1) {
++	while ((c = getopt(argc,argv,"aC:de:FG:H:I:K:o:p:rRs:S:TvP:")) != -1) {
+ 		switch (c) {
+ 		case 'a':		/* show status of all loops */
+ 			option_a = 1;

@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.211 2007/11/19 07:20:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.212 2007/12/14 03:18:57 vapier Exp $
+
+*util-linux-2.13-r3 (14 Dec 2007)
+
+  14 Dec 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.13-hwclock-rtc.patch,
+  +files/util-linux-2.13-losetup-P.patch, +util-linux-2.13-r3.ebuild:
+  Fix from upstream for rtc/hwclock handling #179780 and fix for losetup -P
+  with loop-aes #201981.
 
   19 Nov 2007; Joshua Kinard <kumba@gentoo.org> util-linux-2.12r-r8.ebuild:
   Stable on mips, per #195390.
