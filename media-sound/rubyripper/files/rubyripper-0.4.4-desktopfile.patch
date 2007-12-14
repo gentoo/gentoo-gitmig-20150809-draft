@@ -1,0 +1,27 @@
+Fix the desktop file to comply with current desktop file specs.
+
+From: Diego 'Flameeyes' Pettenò <flameeyes@gmail.com>
+
+
+---
+
+ rubyripper.desktop |    5 ++---
+ 1 files changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/rubyripper.desktop b/rubyripper.desktop
+index 501564d..350646a 100644
+--- a/rubyripper.desktop
++++ b/rubyripper.desktop
+@@ -1,9 +1,8 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Type=Application
+ Name=Rubyripper
+ GenericName=Secure Audio Disc Ripper
+ GenericName[nl]=Veilige Audio CD Ripper
+-Icon=rubyripper_22.png
++Icon=rubyripper
+ Exec=rrip_gui
+-Categories=AudioVideo;
+\ No newline at end of file
++Categories=AudioVideo;Audio;

@@ -1,0 +1,24 @@
+Check if the EDITOR environment variable is set, in which case use
+
+From: Diego 'Flameeyes' Pettenò <flameeyes@gmail.com>
+
+that rather than trying to find the default editor almost randomly.
+---
+
+ rubyripper_gtk2.rb |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+diff --git a/rubyripper_gtk2.rb b/rubyripper_gtk2.rb
+index a12c0ff..4492094 100755
+--- a/rubyripper_gtk2.rb
++++ b/rubyripper_gtk2.rb
+@@ -35,7 +35,8 @@ def filemanager #look for default filemanager
+ end
+ 
+ def editor # look for default editor
+-	if installed('mousepad') : return 'mousepad' #Xfce4 editor
++	if ENV['EDITOR'] : return ENV['EDITOR'] # User's setting
++	elsif installed('mousepad') : return 'mousepad' #Xfce4 editor
+ 	elsif installed('kwrite') : return 'kwrite' #Kde editor
+ 	elsif installed('gedit') : return 'gedit' #Gnome editor
+ 	else puts "No editor found. Please tell the developer which editor you use!" ; return 'unknown'

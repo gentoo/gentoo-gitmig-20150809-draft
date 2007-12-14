@@ -1,0 +1,113 @@
+Install the icon in proper FDO Icon Theme path, with just rubyripper as name.
+
+From: Diego 'Flameeyes' Pettenò <flameeyes@gmail.com>
+
+
+---
+
+ configure          |   20 ++++++++++----------
+ rubyripper_gtk2.rb |    4 ++--
+ 2 files changed, 12 insertions(+), 12 deletions(-)
+
+diff --git a/configure b/configure
+index 2a62554..993ed75 100755
+--- a/configure
++++ b/configure
+@@ -18,7 +18,7 @@
+ $PREFIX='/usr/local'
+ $BINDIR='/bin'
+ $LOCALE='/share/locale'
+-$PIXMAPS='/share/pixmaps'
++$ICONDIR='/share/icons/hicolor'
+ $DESKTOP='/share/applications'
+ $RUBYDIR= "#{$:[0]}"
+ $RUBYDIR= $RUBYDIR[$RUBYDIR.index('/lib')..-1] # remove the prefix
+@@ -33,7 +33,7 @@ if ARGV.include?('--help') || ARGV.include?('-h') || ARGV.length == 0
+ 	puts "--prefix=<destination_dir>  (default: #{$PREFIX})"
+ 	puts "--bindir=<bin_dir>  (default: #{$BINDIR})"
+ 	puts "--locale=<locale_dir>  (default: #{$LOCALE})"
+-	puts "--pixmaps=<pixmaps_dir>  (default: #{$PIXMAPS}"
++	puts "--icondir=<icon_theme_dir>  (default: #{$ICONDIR}"
+ 	puts "--desktop=<desktop_dir>  (default: #{$DESKTOP}"
+ 	puts "--ruby=<ruby_dir>  (default: #{$RUBYDIR})"
+ 	puts ""
+@@ -66,8 +66,8 @@ def update_lib
+ 			if line =~ /LOCALE=/
+ 				file[index] = "LOCALE=[ENV['PWD'] + \"/locale\", \"#{$PREFIX + $LOCALE}\"]"
+ 				break
+-			elsif line =~ /PIXMAPS=/
+-				file[index] = "PIXMAPS=[ENV['PWD'], \"#{$PREFIX + $PIXMAPS}\"]"
++			elsif line =~ /ICONDIR=/
++				file[index] = "ICONDIR=[ENV['PWD'], \"#{$PREFIX + $ICONDIR}\"]"
+ 			elsif line =~ /RUBYDIR=/
+ 				file[index] = "RUBYDIR=[ENV['PWD'], \"#{$PREFIX + $RUBYDIR}\"]"
+ 				break
+@@ -87,8 +87,8 @@ ARGV.each do |argument|
+ 		$BINDIR = argument[9..-1]
+ 	elsif argument[0,9] == "--locale="
+ 		$LOCALE = argument[9..-1]
+-	elsif argument[0,10] == "--pixmaps="
+-		$PIXMAPS = argument[10..-1]
++	elsif argument[0,10] == "--icondir="
++		$ICONDIR = argument[10..-1]
+ 	elsif argument[0,10] == "--desktop="
+ 		$DESKTOP = argument[10..-1]
+ 	elsif argument[0,7] == "--ruby="
+@@ -125,7 +125,7 @@ makefile.puts "#This Makefile is automatically created by configure"
+ makefile.puts ""
+ makefile.puts "BINDIR=#{$PREFIX}#{$BINDIR}"
+ makefile.puts "LOCALE=#{$PREFIX}#{$LOCALE}"
+-makefile.puts "PIXMAPS=#{$PREFIX}#{$PIXMAPS}"
++makefile.puts "ICONDIR=#{$PREFIX}#{$ICONDIR}"
+ makefile.puts "DESKTOP=#{$PREFIX}#{$DESKTOP}"
+ makefile.puts "RUBYDIR=#{$PREFIX}#{$RUBYDIR}"
+ makefile.puts ""
+@@ -137,7 +137,7 @@ makefile.puts "\tinstall -D rr_lib.rb $(prefix)$(DESTDIR)$(RUBYDIR)/rr_lib.rb"
+ 
+ if $GTK2
+ 	makefile.puts "\tinstall -m 755 -D rubyripper_gtk2.rb $(prefix)$(DESTDIR)$(BINDIR)/rrip_gui"
+-	makefile.puts "\tinstall -D rubyripper_22.png $(prefix)$(DESTDIR)$(PIXMAPS)/rubyripper_22.png"
++	makefile.puts "\tinstall -D rubyripper_22.png $(prefix)$(DESTDIR)$(ICONDIR)/22x22/apps/rubyripper.png"
+ 	makefile.puts "\tinstall -D rubyripper.desktop $(prefix)$(DESTDIR)$(DESKTOP)/rubyripper.desktop"
+ end
+ 
+@@ -157,7 +157,7 @@ makefile.puts "\trm $(prefix)$(DESTDIR)$(RUBYDIR)/rr_lib.rb"
+ 
+ if $GTK2
+ 	makefile.puts "\trm $(prefix)$(DESTDIR)$(BINDIR)/rrip_gui"
+-	makefile.puts "\trm $(prefix)$(DESTDIR)$(PIXMAPS)/rubyripper_22.png"
++	makefile.puts "\trm $(prefix)$(DESTDIR)$(ICONDIR)/22x22/apps/rubyripper.png"
+ 	makefile.puts "\trm $(prefix)$(DESTDIR)$(DESKTOP)/rubyripper.desktop"
+ end
+ 
+@@ -185,7 +185,7 @@ puts ""
+ puts "Using the following locations for install:"
+ puts "* Executables: #{$PREFIX}#{$BINDIR}"
+ puts "* Localization files: #{$PREFIX}#{$LOCALE}"
+-puts "* Icon file: #{$PREFIX}#{$PIXMAPS}"
++puts "* Icon file: #{$PREFIX}#{$ICONDIR}"
+ puts "* Desktop file: #{$PREFIX}#{$DESKTOP}"
+ puts "* Ruby library: #{$PREFIX}#{$RUBYDIR}"
+ puts ""
+diff --git a/rubyripper_gtk2.rb b/rubyripper_gtk2.rb
+index 879e155..a12c0ff 100755
+--- a/rubyripper_gtk2.rb
++++ b/rubyripper_gtk2.rb
+@@ -15,7 +15,7 @@
+ #    You should have received a copy of the GNU General Public License
+ #    along with this program.  If not, see <http://www.gnu.org/licenses/>
+ 
+-PIXMAPS=[ENV['PWD'], "/usr/local/share/pixmaps"]
++ICONDIR=[ENV['PWD'], "/usr/local/share/icons/hicolor"]
+ RUBYDIR=[ENV['PWD'], "/usr/local/lib/ruby/site_ruby/1.8"]
+ 
+ begin
+@@ -51,7 +51,7 @@ attr_reader :change_display, :instances
+ 		@instances = {'Preferences' => false, 'Metadata' => false, 'ShortMessage' => false, 'RipStatus' => false, 'DirExists' => false, 'MultipleFreedbHits' => false, 'Summary' => false}
+ 		@current_instance = false
+ 		@gtk_window = Gtk::Window.new('Rubyripper')
+-		PIXMAPS.each{|dir| if File.exist?(file = File.join(dir, 'rubyripper_22.png')) : @gtk_window.icon = Gdk::Pixbuf.new(file) ; break end }
++		ICONDIR.each{|dir| if File.exist?(file = File.join(dir, '/22x22/apps/rubyripper.png')) : @gtk_window.icon = Gdk::Pixbuf.new(file) ; break end }
+ 		@gtk_window.set_default_size(520, 400) #width, height
+ 		
+ 		@hbox1 = Gtk::HBox.new(false,5)
