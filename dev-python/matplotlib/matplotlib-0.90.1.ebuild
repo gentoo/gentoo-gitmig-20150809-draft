@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.1.ebuild,v 1.7 2007/11/23 09:35:07 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.1.ebuild,v 1.8 2007/12/14 17:36:48 nixnut Exp $
 
 NEED_PYTHON=2.3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 IUSE="doc examples gtk latex tk"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 LICENSE="PYTHON"
 
 DEPEND="|| (
