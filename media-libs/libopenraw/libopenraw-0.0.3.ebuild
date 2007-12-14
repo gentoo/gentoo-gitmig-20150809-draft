@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.0.3.ebuild,v 1.1 2007/12/11 15:50:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.0.3.ebuild,v 1.2 2007/12/14 18:36:59 drac Exp $
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Decoding library for RAW image formats"
 HOMEPAGE="http://libopenraw.freedesktop.org"
@@ -22,9 +22,14 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# Fix linking with -Wl,--as-needed for configure.
+
+	# http://bugs.freedesktop.org/show_bug.cgi?id=13658
 	sed -i -e 's:LDFLAGS:LIBS:g' m4/ax_boost_unit_test_framework.m4
-	AT_M4DIR="m4" eautoconf
+
+	# http://bugs.freedesktop.org/show_bug.cgi?id=13659
+	epatch "${FILESDIR}"/${P}-disable-ljpegtest.patch
+
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
