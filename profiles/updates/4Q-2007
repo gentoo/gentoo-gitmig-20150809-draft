@@ -14,3 +14,4 @@ move app-emacs/slime-cvs app-emacs/slime
 move app-emacs/wanderlust-cvs app-emacs/wanderlust
 move dev-python/qscintilla x11-libs/qscintilla
 slotmove =x11-libs/goffice-0.2* 0 0.2
+move app-emacs/df app-emacs/df-mode
