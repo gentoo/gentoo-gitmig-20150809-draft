@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.2.4.ebuild,v 1.3 2007/12/14 15:58:10 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.2.4-r1.ebuild,v 1.1 2007/12/14 15:58:10 jsbronder Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs fortran
 
