@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-bootparamd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/ChangeLog,v 1.4 2007/11/05 13:41:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/ChangeLog,v 1.5 2007/12/14 17:25:09 armin76 Exp $
+
+  14 Dec 2007; Raúl Porcel <armin76@gentoo.org>
+  netkit-bootparamd-0.17-r2.ebuild:
+  sparc stable wrt #197822
 
   05 Nov 2007; Markus Meier <maekke@gentoo.org>
   netkit-bootparamd-0.17-r2.ebuild:

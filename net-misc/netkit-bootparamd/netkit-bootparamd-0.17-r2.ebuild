@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/netkit-bootparamd-0.17-r2.ebuild,v 1.4 2007/11/05 13:41:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/netkit-bootparamd-0.17-r2.ebuild,v 1.5 2007/12/14 17:25:09 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/n/netkit-bootparamd/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~hppa ~mips ppc ~sparc x86"
+KEYWORDS="~hppa ~mips ppc sparc x86"
 IUSE=""
 
 DEPEND="!<=net-misc/netkit-bootpd-0.17-r2"
