@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.20.2.ebuild,v 1.1 2007/12/06 21:02:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.20.2.ebuild,v 1.2 2007/12/14 15:51:25 dang Exp $
 
 inherit gnome2 eutils multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc python xulrunner spell"
+IUSE="doc networkmanager python spell xulrunner"
 
 # FIXME: add webkit/gecko switch possibility
 # dang: *after* webkit actually works.
@@ -28,6 +28,7 @@ RDEPEND=">=dev-libs/glib-2.13.4
 	>=dev-libs/dbus-glib-0.71
 	>=gnome-base/gconf-2
 	>=app-text/iso-codes-0.35
+	networkmanager? ( net-misc/networkmanager )
 	!xulrunner? ( >=www-client/mozilla-firefox-1.5 )
 	xulrunner? ( net-libs/xulrunner )
 	python? (
@@ -51,6 +52,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-scrollkeeper
 		--with-engine=mozilla
+		$(use_enable networkmanager network-manager)
 		$(use_enable spell spell-checker)
 		$(use_enable python)"
 

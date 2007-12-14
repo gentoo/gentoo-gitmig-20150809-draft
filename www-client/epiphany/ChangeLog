@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.141 2007/12/06 21:02:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.142 2007/12/14 15:51:25 dang Exp $
+
+  14 Dec 2007; Daniel Gryniewicz <dang@gentoo.org> epiphany-2.20.2.ebuild:
+  Add networkmanager support. bug #201694
 
 *epiphany-2.20.2 (06 Dec 2007)
 
