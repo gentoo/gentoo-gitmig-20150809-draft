@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.2.ebuild,v 1.1 2007/11/17 00:13:28 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.2.ebuild,v 1.2 2007/12/14 17:26:58 rbu Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -73,6 +73,12 @@ pkg_setup() {
 		eerror "USE=doc requires latex2html with image support. Please add"
 		eerror "'png' and/or 'gif' to your use flags and re-emerge latex2html"
 		die "latex2html missing both png and gif flags"
+	fi
+
+	if use pygrub && ! built_with_use dev-lang/python ncurses; then
+		eerror "USE=pygrub requires python to be built with ncurses support. Please add"
+		eerror "'ncurses' to your use flags and re-emerge python"
+		die "python is missing ncurses flags"
 	fi
 }
 
