@@ -1,6 +1,38 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.303 2007/11/30 06:29:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.304 2007/12/14 07:55:38 dberkholz Exp $
+
+*xorg-server-1.4.0.90 (14 Dec 2007)
+
+  14 Dec 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.4.0.90-clean-generated-files.patch,
+  +files/1.4-dont-hang-openoffice.patch,
+  +files/1.4-fix-kdrive-automake.patch, +xorg-server-1.4.0.90.ebuild:
+  Bump to 1.4.1 release candidate. It's gotta be an improvement over 1.4, 
+  so i'm letting it go into ~arch.
+  
+  (#192221) 'xorg-server-1.4 - keyboard LEDs do not work' fixed upstream.
+  
+  (#201047) 'xorg-server 1.4 no longer loads xmodmap via xinitrc properly' 
+  fixed upstream.
+  
+  (#197104) 'xorg-server-1.3 and 1.4 consumes 100% CPU, locking the 
+  keyboard, apparently triggered by opening an OpenOffice pulldown menu' 
+  fixed with patch from master branch.
+  
+  (#196019) 'xorg-server creates unnecessary file 
+  /etc/X11/X11/Xsession.d/92xprint-xpserverlist' fixed by not installing 
+  the same file twice to 2 different places (Andy Crook).
+  
+  (#195886) 'xorg-server-1.4.0-r2 built with hal USE flag crashes on 
+  shutdown if dbus service is not running' fixed upstream.
+  
+  (#195551) 'xorg-server-1.4 fails to build w/kdrive on amd64' fixed with 
+  Makefile.am patch designed for easier sed but unsuitable for upstream 
+  because the line gets too long (Michael Gorse).
+  
+  (#194503) Don't spit versions when showing drivers to rebuild via qlist, 
+  and also provide a command for people to do it themselves later.
 
   30 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.4-r2.ebuild:
