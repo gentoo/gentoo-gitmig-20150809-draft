@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mtree
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtree/ChangeLog,v 1.7 2007/02/22 01:16:14 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtree/ChangeLog,v 1.8 2007/12/14 12:30:47 opfer Exp $
+
+  14 Dec 2007; Christian Faulhammer <opfer@gentoo.org> mtree-1.5.ebuild:
+  stable x86, bug 202180
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
