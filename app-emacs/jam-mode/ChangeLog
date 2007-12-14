@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/jam-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jam-mode/ChangeLog,v 1.8 2007/07/04 05:41:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jam-mode/ChangeLog,v 1.9 2007/12/14 05:45:44 opfer Exp $
+
+  14 Dec 2007; Christian Faulhammer <opfer@gentoo.org> jam-mode-0.1.ebuild:
+  amd64 stable
 
   04 Jul 2007; Ulrich Mueller <ulm@gentoo.org> jam-mode-0.1.ebuild:
   Remove redundant functions. Dropped ~ppc-macos keyword.
