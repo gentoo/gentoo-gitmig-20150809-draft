@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/ecryptfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.13 2007/12/13 18:45:03 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.14 2007/12/14 18:14:21 alonbl Exp $
+
+*ecryptfs-utils-33 (14 Dec 2007)
+
+  14 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/ecryptfs-utils-33-mkdir.patch, -ecryptfs-utils-32.ebuild,
+  +ecryptfs-utils-33.ebuild:
+  Version bump
 
 *ecryptfs-utils-32 (13 Dec 2007)
 
