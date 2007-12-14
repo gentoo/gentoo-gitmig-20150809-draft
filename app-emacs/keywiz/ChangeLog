@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/keywiz
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/keywiz/ChangeLog,v 1.6 2007/12/13 08:43:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/keywiz/ChangeLog,v 1.7 2007/12/14 05:19:54 opfer Exp $
+
+  14 Dec 2007; Christian Faulhammer <opfer@gentoo.org> keywiz-1.4.ebuild:
+  amd64/x86 stable
 
   13 Dec 2007; Christian Faulhammer <opfer@gentoo.org> keywiz-1.4.ebuild:
   set to correct HOMEPAGE; remove virtual/emacs from DEPEND (provided by
