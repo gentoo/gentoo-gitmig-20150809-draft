@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.25.ebuild,v 1.1 2007/12/14 12:47:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.25-r1.ebuild,v 1.1 2007/12/14 13:43:56 jokey Exp $
 
 EAPI="1"
 inherit eutils qt4 toolchain-funcs
@@ -28,4 +28,6 @@ src_compile() {
 src_install() {
 	dodoc ChangeLog.txt README.txt
 	dobin bin/qdevelop
+	newicon "${S}"/resources/images/QDevelop.png qdevelop.png
+	domenu "${FILESDIR}"/qdevelop.desktop
 }
