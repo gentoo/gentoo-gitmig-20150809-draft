@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.1.ebuild,v 1.4 2007/11/07 09:52:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.1-r2.ebuild,v 1.1 2007/12/14 14:22:17 voyageur Exp $
 
 inherit multilib eutils
 
@@ -32,7 +32,8 @@ RDEPEND="${DEPEND}
 	media-fonts/font-misc-misc
 	media-fonts/font-cursor-misc
 	x11-apps/xauth
-	x11-apps/xrdb"
+	x11-apps/xrdb
+	x11-apps/sessreg"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
@@ -52,6 +53,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-cups.patch
 	epatch "${FILESDIR}"/${P}-nxdialog.patch
 	epatch "${FILESDIR}"/${P}-nscd.patch
+	epatch "${FILESDIR}"/${P}-usession_fixes.patch
+	epatch "${FILESDIR}"/${P}-nxserver_fixes.patch
+	epatch "${FILESDIR}"/${P}-samba.patch
 
 	sed -i "/PATH_LIB=/s/lib/$(get_libdir)/g" nxloadconfig || die
 	sed -i "/REAL_PATH_BIN=/s/lib/$(get_libdir)/g" nxloadconfig || die
@@ -111,6 +115,8 @@ src_install() {
 		keepdir ${NX_SESS_DIR}/$x
 		fperms 0700 ${NX_SESS_DIR}/$x
 	done
+
+	newinitd "${FILESDIR}"/nxserver.init nxserver
 }
 
 pkg_postinst () {
@@ -119,11 +125,13 @@ pkg_postinst () {
 	if [[ ${ROOT} == "/" ]]; then
 		usermod -s /usr/bin/nxserver nx || die "Unable to set login shell of nx user!!"
 		usermod -d ${NX_HOME_DIR} nx || die "Unable to set home directory of nx user!!"
+		usermod -G utmp nx || die "Unable to add nx user to utmp group!!"
 	else
 		elog "If you had another NX server installed before, please make sure"
 		elog "the nx user account is correctly set to:"
 		elog " * login shell: /usr/bin/nxserver"
 		elog " * home directory: ${NX_HOME_DIR}"
+		elog " * supplementary groups: utmp"
 	fi
 
 	elog "To complete the installation, run:"
