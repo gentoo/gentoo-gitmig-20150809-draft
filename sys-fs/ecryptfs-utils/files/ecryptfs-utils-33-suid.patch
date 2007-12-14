@@ -1,0 +1,24 @@
+diff --git a/src/libecryptfs/key_management.c b/src/libecryptfs/key_management.c
+index acedc26..2c88357 100644
+--- a/src/libecryptfs/key_management.c
++++ b/src/libecryptfs/key_management.c
+@@ -486,6 +486,7 @@ int ecryptfs_append_sig(char *auth_tok_sig, char *sig_cache_filename)
+ 		rc = -EIO;
+ 		goto out;
+ 	}
++	fchown(fd, getuid(), getgid());
+ 	lseek(fd, 0, SEEK_END);
+ 	memcpy(tmp, auth_tok_sig, ECRYPTFS_SIG_SIZE_HEX);
+ 	tmp[ECRYPTFS_SIG_SIZE_HEX] = '\n';
+diff --git a/src/utils/mount.ecryptfs.c b/src/utils/mount.ecryptfs.c
+index 4e14795..86d15ac 100644
+--- a/src/utils/mount.ecryptfs.c
++++ b/src/utils/mount.ecryptfs.c
+@@ -310,6 +310,7 @@ static int process_sig(char *auth_tok_sig)
+ 		goto out;
+ 	}
+ 	mkdir(dot_ecryptfs_dir, S_IRWXU);
++	chown(dot_ecryptfs_dir, getuid(), getgid());
+ 	free(dot_ecryptfs_dir);
+ 	rc = asprintf(&sig_cache_filename, "%s/.ecryptfs/sig-cache.txt",
+ 		      home);
