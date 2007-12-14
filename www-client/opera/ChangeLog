@@ -1,6 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.177 2007/12/06 19:57:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.178 2007/12/14 17:16:19 jer Exp $
+
+*opera-9.50_beta2_p1719 (14 Dec 2007)
+
+  14 Dec 2007; Jeroen Roovers <jer@gentoo.org>
+  +opera-9.50_beta2_p1719.ebuild:
+  Weekly version bump
+  <http://my.opera.com/desktopteam/blog/2007/12/14/new-snapshot>. Removed
+  libflashplayer.so symlink.
 
   06 Dec 2007; Jeroen Roovers <jer@gentoo.org> -files/opera.desktop,
   opera-9.24.ebuild, opera-9.50_beta1.ebuild, opera-9.50_beta2_p1652.ebuild,
