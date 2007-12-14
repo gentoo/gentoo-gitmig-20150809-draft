@@ -1,6 +1,12 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.82 2007/12/13 11:52:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.83 2007/12/14 17:11:21 pva Exp $
+
+*sim-9999 (14 Dec 2007)
+
+  14 Dec 2007; <pva@gentoo.org> +sim-9999.ebuild:
+  Added live svn ebuild, suggested by Bernd Steinhauser <gentoo AT
+  bernd-steinhauser.de> in bug #200684.
 
   13 Dec 2007; Markus Meier <maekke@gentoo.org> sim-0.9.4.3-r1.ebuild:
   x86 stable, bug #202113
