@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0-r1.ebuild,v 1.1 2007/12/14 12:22:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0-r1.ebuild,v 1.2 2007/12/14 17:50:19 mr_bones_ Exp $
 
 inherit gnat versionator
 
@@ -35,7 +35,7 @@ src_unpack()
 	# fix profile independent stuff in xmlada-config
 	sed -i -e "s:\${prefix}/include/xmlada:${AdalibSpecsDir}/${PN}:" \
 		xmlada-config.in || die "failed to adjust xmlada-config"
-	
+
 	# doinfo changed from gzipping stuff to bzipping, so we better rename the
 	# file before calling it to guard against other possible changes
 	mv docs/xml.info docs/${PN}.info
@@ -64,7 +64,7 @@ lib_install() {
 
 		# the library and *.ali
 		mv lib/${PN}/* .
-		rm -rf bin include share lib 
+		rm -rf bin include share lib
 
 		# fix the .so links
 		rm *.so
