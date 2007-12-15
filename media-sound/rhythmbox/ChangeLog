@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.109 2007/12/14 12:27:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.110 2007/12/15 08:53:13 drac Exp $
+
+  15 Dec 2007; Samuli Suominen <drac@gentoo.org> rhythmbox-0.10.1-r1.ebuild:
+  amd64 stable wrt #202175
 
   14 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   rhythmbox-0.10.1-r1.ebuild:
