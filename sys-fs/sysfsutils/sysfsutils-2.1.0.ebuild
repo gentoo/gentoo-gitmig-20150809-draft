@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-2.1.0.ebuild,v 1.6 2007/12/15 16:44:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-2.1.0.ebuild,v 1.7 2007/12/15 16:46:21 vapier Exp $
 
-inherit toolchain-funcs
+inherit multilib
 
 DESCRIPTION="System Utilities Based on Sysfs"
 HOMEPAGE="http://linux-diag.sourceforge.net/Sysfsutils.html"
@@ -12,8 +12,6 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~mips ppc ppc64 s390 sh ~sparc x86"
 IUSE=""
-
-DEPEND=""
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
