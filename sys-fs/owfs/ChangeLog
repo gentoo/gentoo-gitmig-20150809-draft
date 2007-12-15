@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/owfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.2 2007/12/08 02:24:51 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.3 2007/12/15 16:10:06 wschlich Exp $
+
+*owfs-2.7_p0-r1 (15 Dec 2007)
+
+  15 Dec 2007; Wolfram Schlich <wschlich@gentoo.org> +files/owftpd.confd,
+  +files/owftpd.initd, +files/owhttpd.confd, +files/owhttpd.initd,
+  +files/owserver.confd, +files/owserver.initd, +owfs-2.7_p0-r1.ebuild:
+  added daemon init scripts and zeroconf USE flag, renamed ftp
+  USE flag to ftpd
 
   08 Dec 2007; Wolfram Schlich <wschlich@gentoo.org> owfs-2.7_p0.ebuild:
   fix php check, add ~amd64
