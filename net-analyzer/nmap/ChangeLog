@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.148 2007/12/15 15:00:04 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.149 2007/12/15 18:19:58 jer Exp $
+
+  15 Dec 2007; Jeroen Roovers <jer@gentoo.org> nmap-4.50.ebuild:
+  Dropping hppa keyword because of missing dep.
 
 *nmap-4.50 (15 Dec 2007)
 
