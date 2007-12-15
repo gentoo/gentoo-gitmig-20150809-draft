@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Testing_Selenium
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Testing_Selenium/ChangeLog,v 1.4 2007/12/06 00:53:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Testing_Selenium/ChangeLog,v 1.5 2007/12/15 12:00:06 jokey Exp $
+
+*PEAR-Testing_Selenium-0.4.1 (15 Dec 2007)
+
+  15 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  +PEAR-Testing_Selenium-0.4.1.ebuild:
+  Version bump from project overlay
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   -PEAR-Testing_Selenium-0.3.2.ebuild, PEAR-Testing_Selenium-0.4.0.ebuild:
