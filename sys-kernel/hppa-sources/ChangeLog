@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hppa-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.83 2007/10/01 13:48:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.84 2007/12/15 16:42:17 jer Exp $
+
+  15 Dec 2007; Jeroen Roovers <jer@gentoo.org> -files/lba-pci-no-crash.diff,
+  -hppa-sources-2.6.16.24_p11.ebuild, -hppa-sources-2.6.17.6_p6.ebuild,
+  -hppa-sources-2.6.17.7_p6.ebuild, -hppa-sources-2.6.17.10_p6.ebuild,
+  -hppa-sources-2.6.18.2.ebuild, -hppa-sources-2.6.19.1.ebuild:
+  Remove old versions (bug #202391).
 
   01 Oct 2007; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Linux 2.6 is released!
