@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.27 2007/11/29 17:04:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.28 2007/12/15 18:19:52 jer Exp $
+
+  15 Dec 2007; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Removing useless mask.
 
   29 Nov 2007; Jeroen Roovers <jer@gentoo.org> use.mask:
   Add comment to acl USE mask.
