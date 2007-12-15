@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.0.20070730162628.ebuild,v 1.1 2007/08/18 22:28:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.0.20070730162628.ebuild,v 1.2 2007/12/15 00:58:25 robbat2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_PN}"
 
 src_compile() {
-	append-flags -DLVM_REMAP_WORKAROUND -W -I${S}
+	append-flags -DLVM_REMAP_WORKAROUND -W -I"${S}"
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
 	if use doc; then
 		emake docs || die "emake docs failed"
