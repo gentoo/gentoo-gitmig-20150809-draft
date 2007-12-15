@@ -1,26 +1,24 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.2.8-r1.ebuild,v 1.3 2007/07/31 10:35:02 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.2.12.ebuild,v 1.1 2007/12/15 14:26:31 hollow Exp $
 
 inherit autotools eutils flag-o-matic libtool db-use
 
-DBD_MYSQL=84
-
-DESCRIPTION="Apache Portable Runtime Library"
+DESCRIPTION="Apache Portable Runtime Utility Library"
 HOMEPAGE="http://apr.apache.org/"
 SRC_URI="mirror://apache/apr/${P}.tar.gz
-	mirror://apache/apr/apr-${PV}.tar.gz
-	mysql? ( mirror://gentoo/apr_dbd_mysql-r${DBD_MYSQL}.c )"
+	mirror://apache/apr/apr-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="berkdb gdbm ldap mysql postgres sqlite sqlite3"
+IUSE="berkdb doc gdbm ldap mysql postgres sqlite sqlite3"
 RESTRICT="test"
 
 DEPEND="dev-libs/expat
 	>=dev-libs/apr-${PV}
 	berkdb? ( =sys-libs/db-4* )
+	doc? ( app-doc/doxygen )
 	gdbm? ( sys-libs/gdbm )
 	ldap? ( =net-nds/openldap-2* )
 	mysql? ( =virtual/mysql-5* )
@@ -31,11 +29,6 @@ DEPEND="dev-libs/expat
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	if use mysql ; then
-		cp "${DISTDIR}"/apr_dbd_mysql-r${DBD_MYSQL}.c \
-			"${S}"/dbd/apr_dbd_mysql.c || die "could not copy mysql driver"
-	fi
 
 	./buildconf --with-apr=../apr-${PV} || die "buildconf failed"
 	elibtoolize || die "elibtoolize failed"
@@ -64,15 +57,23 @@ src_compile() {
 		$(use_with postgres pgsql) \
 		$(use_with sqlite sqlite2) \
 		$(use_with sqlite3) \
-		${myconf} || die "econf failed!"
+		${myconf}
 
 	emake || die "emake failed!"
+
+	if use doc; then
+		emake dox || die "emake dox failed"
+	fi
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc CHANGES NOTICE
+
+	if use doc; then
+		dohtml docs/dox/html/* || die "dohtml failed"
+	fi
 
 	# This file is only used on AIX systems, which gentoo is not,
 	# and causes collisions between the SLOTs, so kill it
