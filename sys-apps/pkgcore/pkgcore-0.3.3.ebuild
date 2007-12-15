@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.3.1.ebuild,v 1.1 2007/06/28 07:20:34 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.3.3.ebuild,v 1.1 2007/12/15 21:34:08 jokey Exp $
 
 inherit distutils eutils
 
@@ -10,24 +10,17 @@ SRC_URI="http://www.pkgcore.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/python-2.4
-	dev-python/snakeoil
+	>=dev-python/snakeoil-0.1
 	>=app-shells/bash-3.0
 	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/docutils-0.4 )"
 
 DOCS="AUTHORS NEWS"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-pmerge-unmerge-ask.patch"
-}
 
 src_compile() {
 	distutils_src_compile
@@ -56,16 +49,12 @@ pkg_postinst() {
 
 	if [[ -d "${ROOT}etc/pkgcore/plugins" ]]; then
 		elog "You still have an /etc/pkgcore/plugins from pkgcore 0.1."
-		elog "It is unused by pkgcore >= 0.2, so you can remove it now."
+		elog "It is unused by pkgcore >= 0.2, remove it now."
+		die "remove /etc/pkgcore/plugins from pkgcore 0.1"
 	fi
 
 	# This is left behind by pkgcore 0.2.
 	rm -f "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/pkgcore/plugins/plugincache
-
-	elog "If the new layman sync support causes problems you can disable it"
-	elog "with FEATURES=-layman-sync. If you cannot sync a layman overlay"
-	elog "using pkgcore, file a bug in pkgcore.org trac instead of complaining"
-	elog "to the layman or overlay maintainer."
 }
 
 pkg_postrm() {

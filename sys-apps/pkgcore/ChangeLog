@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.45 2007/12/06 20:57:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.46 2007/12/15 21:34:08 jokey Exp $
+
+*pkgcore-0.3.3 (15 Dec 2007)
+
+  15 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/pkgcore-0.3.1-pmerge-unmerge-ask.patch, -pkgcore-0.3.1.ebuild,
+  -pkgcore-0.3.2.ebuild, +pkgcore-0.3.3.ebuild:
+  Version bump, EAPI1 fixups
 
 *pkgcore-0.3.2-r1 (06 Dec 2007)
 
