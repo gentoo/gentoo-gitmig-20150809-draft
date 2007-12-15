@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gsm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/ChangeLog,v 1.24 2007/12/15 17:13:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/ChangeLog,v 1.25 2007/12/15 17:14:55 drac Exp $
+
+  15 Dec 2007; Samuli Suominen <drac@gentoo.org> gsm-1.0.12-r1.ebuild:
+  Marking amd64 stable to get shared library for linking.
 
   15 Dec 2007; Samuli Suominen <drac@gentoo.org> gsm-1.0.12-r1.ebuild:
   Symlink ../gsm/gsm.h to /usr/include/libgsm/gsm.h so net-im/ekg2 finds it.
