@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/PEAR-MDB2_Driver_mysqli
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_mysqli/ChangeLog,v 1.18 2007/11/18 17:58:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_mysqli/ChangeLog,v 1.19 2007/12/15 11:42:31 jokey Exp $
+
+*PEAR-MDB2_Driver_mysqli-1.5.0_alpha2 (15 Dec 2007)
+
+  15 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  -PEAR-MDB2_Driver_mysqli-1.5.0_alpha1.ebuild,
+  +PEAR-MDB2_Driver_mysqli-1.5.0_alpha2.ebuild:
+  Version bump from project overlay
 
   18 Nov 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   PEAR-MDB2_Driver_mysqli-1.5.0_alpha1.ebuild:
