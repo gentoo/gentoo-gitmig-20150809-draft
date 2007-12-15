@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/dnspython-1.3.5.ebuild,v 1.11 2007/03/17 19:10:08 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/dnspython-1.3.5.ebuild,v 1.12 2007/12/15 11:34:12 lucass Exp $
 
 inherit distutils
 
 DESCRIPTION="DNS toolkit for Python."
 HOMEPAGE="http://www.dnspython.org/"
-SRC_URI="http://www.dnspython.org/kits/stable/${P}.tar.gz"
+SRC_URI="http://www.dnspython.org/kits/${PV}/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh ~sparc x86"
