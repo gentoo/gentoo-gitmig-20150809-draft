@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1.ebuild,v 1.4 2007/12/13 04:04:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1.ebuild,v 1.5 2007/12/15 00:40:08 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -91,6 +91,7 @@ src_compile() {
 	# wxGTK options
 	use X && \
 		myconf="${myconf}
+			--enable-graphics_ctx
 			--enable-gui
 			--with-libpng
 			--with-libxpm
