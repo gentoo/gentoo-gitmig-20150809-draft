@@ -1,10 +1,11 @@
 # ChangeLog for x11-wm/xmonad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.1 2007/12/15 22:58:29 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.2 2007/12/15 23:03:04 kolmodin Exp $
 
 *xmonad-0.5 (16 Dec 2007)
 
   16 Dec 2007; Lennart Kolmodin <kolmodin@gentoo.org> +files/xmonad.desktop,
   +metadata.xml, +xmonad-0.5.ebuild:
-  Initial import. xmonad is a tiling window manager for X.
+  Initial import. xmonad is a tiling window manager for X. xmonad is
+  extensible in Haskell, allowing for powerful customisation.
 
