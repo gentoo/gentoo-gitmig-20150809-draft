@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.0.20071210202527.ebuild,v 1.2 2007/12/14 17:23:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.0.20071210202527.ebuild,v 1.3 2007/12/15 00:55:27 robbat2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -19,7 +19,8 @@ RDEPEND="virtual/libc"
 # This is a Linux specific app!
 DEPEND="${RDEPEND}
 		|| ( sys-kernel/linux-headers sys-kernel/mips-headers )
-		doc? ( virtual/tetex )"
+		doc? ( virtual/tetex )
+		dev-libs/libaio"
 S="${WORKDIR}/${MY_PN}"
 
 src_compile() {
