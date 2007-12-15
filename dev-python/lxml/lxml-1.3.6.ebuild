@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.3.4.ebuild,v 1.1 2007/08/31 18:47:00 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.3.6.ebuild,v 1.1 2007/12/15 10:06:15 lucass Exp $
 
 NEED_PYTHON=2.3
 
