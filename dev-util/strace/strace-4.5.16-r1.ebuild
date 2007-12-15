@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.16-r1.ebuild,v 1.2 2007/12/15 16:26:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.16-r1.ebuild,v 1.3 2007/12/15 16:43:08 vapier Exp $
 
 inherit flag-o-matic autotools
 
@@ -26,6 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-4.5.12-libaio.patch #103427
 	epatch "${FILESDIR}"/${P}-mips-syscallent.patch
 	epatch "${FILESDIR}"/${P}-sh-updates.patch
+	epatch "${FILESDIR}"/${P}-sparc-updates.patch #162789
 
 	eautoreconf
 }

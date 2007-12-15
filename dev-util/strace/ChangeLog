@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.109 2007/11/02 03:53:28 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.110 2007/12/15 16:43:08 vapier Exp $
+
+  15 Dec 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/strace-4.5.16-sparc-updates.patch, strace-4.5.16-r1.ebuild:
+  Fixes from upstream for building on sparc #162789.
 
   02 Nov 2007; Steve Dibb <beandog@gentoo.org> strace-4.5.16.ebuild:
   amd64 stable, bug 197398
