@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.92 2007/12/14 17:19:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.93 2007/12/15 17:59:37 calchan Exp $
+
+  15 Dec 2007; Denis Dupeyron <calchan@gentoo.org> -kino-1.0.0.ebuild:
+  Post-stabilization cleanup.
 
   14 Dec 2007; Raúl Porcel <armin76@gentoo.org> kino-1.1.1.ebuild:
   sparc stable wrt #193947
