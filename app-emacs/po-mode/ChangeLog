@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/po-mode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.10 2007/12/14 19:07:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.11 2007/12/15 08:12:28 drac Exp $
+
+  15 Dec 2007; Samuli Suominen <drac@gentoo.org> po-mode-0.17.ebuild:
+  amd64 stable wrt #202168
 
   14 Dec 2007; nixnut <nixnut@gentoo.org> po-mode-0.17.ebuild:
   Stable on ppc wrt bug 202168
