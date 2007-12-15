@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8005 2007/12/15 10:38:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8006 2007/12/15 12:26:17 jurek Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jurek Bartuszek <jurek@gentoo.org> (15 Dec 2007)
+# Waiting until wxGTK-2.8 gets unmasked
+>=dev-util/codeblocks-1.0_pre20071215
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (13 Dec 2007)
 # Retired by upstream in favor of gnome-system-tools since 2005
