@@ -78,7 +78,7 @@ www-client/opera spell
 
 # Jan 14th 2007; blubb@gentoo.org
 # bug 107648: yate tries to link to static gsm which is a no-go
-net-misc/yate gsm
+net-voip/yate gsm
 
 # Feb 17th 2007; drizzt@gentoo.org
 # amd64 does not have an emul libao package
