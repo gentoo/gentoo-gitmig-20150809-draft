@@ -17,7 +17,7 @@ diff -u ../qemacs/Makefile ./Makefile
  DEFINES=-DHAVE_QE_CONFIG_H
  
  ########################################################
-@@ -211,15 +202,17 @@
+@@ -211,15 +202,19 @@
  	rm -f config.h config.mak
  
  install: $(TARGETS) qe.1 kmaps ligatures
@@ -25,7 +25,9 @@ diff -u ../qemacs/Makefile ./Makefile
 -	ln -sf qemacs $(prefix)/bin/qe$(EXE)
 +	mkdir -p $(DESTDIR)$(prefix)/bin
 +	install -m 755 qe $(DESTDIR)$(prefix)/bin/qemacs
++ifdef CONFIG_HTML
 +	install -m 755 libqhtml/csstoqe $(DESTDIR)$(prefix)/bin/csstoqe
++endif
  ifdef CONFIG_FFMPEG
 -	ln -sf qemacs $(prefix)/bin/ffplay
 +	ln -sf qemacs $(DESTDIR)$(prefix)/bin/qemacs-ffplay

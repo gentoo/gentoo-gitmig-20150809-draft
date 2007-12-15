@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.35 2007/10/10 07:20:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.36 2007/12/15 09:07:10 ulm Exp $
+
+  15 Dec 2007; Ulrich Mueller <ulm@gentoo.org>
+  files/qemacs-0.3.2_pre20070226-Makefile-gentoo.patch:
+  Fix install failure with USE="-X", bug #202355.
 
   10 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   qemacs-0.3.2_pre20070226.ebuild:
