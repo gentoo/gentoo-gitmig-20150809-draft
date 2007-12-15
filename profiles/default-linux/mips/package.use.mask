@@ -1,8 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.18 2007/12/15 14:56:32 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.19 2007/12/15 14:59:11 spock Exp $
 
 # Michał Januszewski <spock@gentoo.org> (15 Dec 2007)
 # Missing dep: pysqlite not keyworded.
->=net-analyzer/nmap-3.50 gtk
+>=net-analyzer/nmap-4.50 gtk
 
 # Wolfram Schlich <wschlich@gentoo.org> (20 Nov 2007)
 # dependency can't be fulfilled at the moment

@@ -17,5 +17,5 @@ media-libs/gst-plugins-base debug
 
 # Michał Januszewski <spock@gentoo.org> (15 Dec 2007)
 # Missing dep: pysqlite not keyworded.
->=net-analyzer/nmap-3.50 gtk
+>=net-analyzer/nmap-4.50 gtk
 
