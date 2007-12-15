@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.12-r1.ebuild,v 1.1 2007/12/15 17:02:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.12-r1.ebuild,v 1.2 2007/12/15 17:13:07 drac Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -43,6 +43,8 @@ src_install() {
 		install || die "emake install failed."
 
 	dolib lib/libgsm.so*
+
+	dosym ../gsm/gsm.h /usr/include/libgsm/gsm.h
 
 	dodoc ChangeLog* MACHINES MANIFEST README
 }
