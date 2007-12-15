@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.39 2007/12/15 14:32:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.40 2007/12/15 17:57:24 jer Exp $
+
+  15 Dec 2007; Jeroen Roovers <jer@gentoo.org> apache-2.2.6-r5.ebuild:
+  Stable for HPPA (bug #202327).
 
 *apache-2.2.6-r6 (15 Dec 2007)
 
