@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/winpdb-1.1.2.ebuild,v 1.2 2007/10/03 04:36:33 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/winpdb-1.3.2.ebuild,v 1.1 2007/12/15 11:10:51 lucass Exp $
 
 NEED_PYTHON=2.3
 
