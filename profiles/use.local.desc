@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3210 2007/12/15 15:00:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3211 2007/12/15 16:01:32 wschlich Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2045,9 +2045,11 @@ sys-fs/lvm2:nolvmstatic - Allow users to build lvm2 dynamically
 sys-fs/ntfs3g:suid - Install the binary SUID root, allowing users to mount ntfs-3g filesystems with potential security risks
 sys-fs/ntfsprogs:fuse - Build a FUSE module
 sys-fs/owfs:fuse - Enable building the FUSE-based OWFS client (owfs)
+sys-fs/owfs:ftpd - Enable building the OWFS FTP server (owftpd)
 sys-fs/owfs:httpd - Enable building the OWFS web server (owhttpd)
 sys-fs/owfs:parport - Enable support for the DS1410E parallel port adapter
 sys-fs/owfs:server - Enable building the OWFS server (owserver)
+sys-fs/owfs:zeroconf - Enable support for DNS Service Discovery (DNS-SD).
 sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/unionfs:nfs - Adds support for NFS file system
 sys-kernel/ck-sources:ck-server - Tune the kernel for servers
