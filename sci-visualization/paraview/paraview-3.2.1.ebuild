@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.1 2007/12/14 19:59:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.2 2007/12/15 22:41:56 mr_bones_ Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python
 
@@ -151,4 +151,3 @@ src_install() {
 	echo "LDPATH=/usr/${PVLIBDIR}" >> "${T}"/40${PN}
 	doenvd "${T}"/40${PN}
 }
-
