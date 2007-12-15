@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6-r4.ebuild,v 1.2 2007/11/29 18:45:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6-r6.ebuild,v 1.1 2007/12/15 14:32:52 hollow Exp $
 
 # latest gentoo apache files
-GENTOO_PATCHSTAMP="20071128"
+GENTOO_PATCHSTAMP="20071215"
 GENTOO_DEVELOPER="hollow"
 
 # IUSE/USE_EXPAND magic
@@ -64,6 +64,12 @@ MODULE_DEFINES="
 	userdir:USERDIR
 "
 
+MODULE_CRITICAL="
+authz_host
+dir
+mime
+"
+
 inherit apache-2
 
 DESCRIPTION="The Apache Web Server."
@@ -73,12 +79,21 @@ HOMEPAGE="http://httpd.apache.org/"
 LICENSE="Apache-2.0 Apache-1.1"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="sni"
 
 DEPEND="${DEPEND}
 	apache2_modules_deflate? ( sys-libs/zlib )"
 
 RDEPEND="${RDEPEND}
 	apache2_modules_mime? ( app-misc/mime-types )"
+
+src_unpack() {
+	if ! use sni ; then
+		EPATCH_EXCLUDE="04_all_mod_ssl_tls_sni.patch"
+	fi
+
+	apache-2_src_unpack
+}
 
 pkg_postinst() {
 	apache-2_pkg_postinst

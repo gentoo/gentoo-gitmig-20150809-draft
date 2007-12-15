@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.38 2007/12/14 22:34:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.39 2007/12/15 14:32:52 hollow Exp $
+
+*apache-2.2.6-r6 (15 Dec 2007)
+
+  15 Dec 2007; Benedikt Böhm <hollow@gentoo.org> -apache-2.2.6-r2.ebuild,
+  -apache-2.2.6-r4.ebuild, +apache-2.2.6-r6.ebuild:
+  fix #201163, #201586, #201923, #202327, #202376; first unmasked USE_EXPAND
+  version
 
 *apache-2.2.6-r5 (14 Dec 2007)
 
