@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/valkyrie
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/ChangeLog,v 1.5 2007/03/19 03:21:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/ChangeLog,v 1.6 2007/12/15 13:35:43 flameeyes Exp $
+
+  15 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> valkyrie-1.2.0.ebuild:
+  Change dependencies, make it depend on valgrind 3.2 series as it breaks with
+  3.3.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove flameeyes from metadata.xml due to retirement.
