@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.157 2007/12/14 22:16:59 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.158 2007/12/15 08:13:45 drac Exp $
+
+  15 Dec 2007; Samuli Suominen <drac@gentoo.org> gettext-0.17.ebuild:
+  amd64 stable wrt #202168
 
   14 Dec 2007; Dawid Węgliński <cla@gentoo.org> gettext-0.17.ebuild:
   Stable on x86 (bug #202168)
