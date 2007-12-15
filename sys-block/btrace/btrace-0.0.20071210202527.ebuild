@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.0.20071210202527.ebuild,v 1.3 2007/12/15 00:55:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.0.20071210202527.ebuild,v 1.4 2007/12/15 01:01:59 cla Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -13,7 +13,7 @@ MY_P="${MY_PN}-${MY_PV}"
 SRC_URI="http://brick.kernel.dk/snaps/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="doc"
 RDEPEND="virtual/libc"
 # This is a Linux specific app!
