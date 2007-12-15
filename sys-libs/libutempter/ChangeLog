@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libutempter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.30 2007/12/14 21:20:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.31 2007/12/15 12:28:32 drac Exp $
+
+  15 Dec 2007; Samuli Suominen <drac@gentoo.org> libutempter-1.1.5.ebuild:
+  amd64 stable wrt #202079
 
   14 Dec 2007; Jeroen Roovers <jer@gentoo.org> libutempter-1.1.5.ebuild:
   Stable for HPPA (bug #202079).
