@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hxt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.10 2007/12/13 17:31:46 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.11 2007/12/15 16:35:38 dcoutts Exp $
+
+  15 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> hxt-7.3.ebuild:
+  Added ~sparc.
 
 *hxt-7.3 (13 Dec 2007)
 

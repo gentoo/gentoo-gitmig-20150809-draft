@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hslogger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.4 2007/12/13 17:22:18 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.5 2007/12/15 16:33:12 dcoutts Exp $
+
+  15 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> hslogger-1.0.2.ebuild:
+  Added ~sparc.
 
 *hslogger-1.0.2 (13 Dec 2007)
 

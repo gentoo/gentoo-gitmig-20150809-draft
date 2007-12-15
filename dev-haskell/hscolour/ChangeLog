@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hscolour
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.1 2007/07/26 16:17:33 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.2 2007/12/15 16:32:32 dcoutts Exp $
+
+  15 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> hscolour-1.8.ebuild:
+  Added ~sparc.
 
 *hscolour-1.8 (26 Jul 2007)
 

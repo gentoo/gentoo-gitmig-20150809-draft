@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.4.0.ebuild,v 1.1 2007/12/13 17:34:10 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.4.0.ebuild,v 1.2 2007/12/15 16:38:04 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 CABAL_MIN_VERSION=1.1.6
@@ -15,7 +15,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.4.2

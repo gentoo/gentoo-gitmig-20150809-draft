@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/http
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.5 2007/10/31 13:06:47 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.6 2007/12/15 16:34:50 dcoutts Exp $
+
+  15 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> http-2006.7.7.ebuild:
+  Added ~sparc.
 
   31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> http-2006.7.7.ebuild:
   Drop virtual/ghc in favour of dev-lang/ghc

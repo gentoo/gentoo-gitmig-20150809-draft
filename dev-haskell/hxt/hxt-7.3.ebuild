@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/hxt-7.3.ebuild,v 1.1 2007/12/13 17:31:46 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/hxt-7.3.ebuild,v 1.2 2007/12/15 16:35:38 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal versionator
@@ -11,7 +11,7 @@ SRC_URI="http://www.fh-wedel.de/~si/HXmlToolbox/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.6

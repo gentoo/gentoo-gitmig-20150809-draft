@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/missingh
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.8 2007/12/13 05:46:34 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.9 2007/12/15 16:36:28 dcoutts Exp $
+
+  15 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> missingh-0.18.6.ebuild:
+  Added ~sparc.
 
   13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> missingh-0.18.6.ebuild:
   Updates for upward compatability with cabal-1.2 and ghc-6.8
