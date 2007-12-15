@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.38 2007/12/14 17:36:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.39 2007/12/15 06:25:27 cla Exp $
+
+  15 Dec 2007; Dawid Węgliński <cla@gentoo.org> matplotlib-0.90.1.ebuild:
+  Stable on x86 (bug #202250)
 
   14 Dec 2007; nixnut <nixnut@gentoo.org> matplotlib-0.90.1.ebuild:
   Stable on ppc wrt bug 202250
