@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.904 2007/12/15 12:26:17 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.905 2007/12/15 15:00:09 armin76 Exp $
+
+  15 Dec 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
+  Add iceweasel use-flag for www-client/mozilla-firefox
 
   15 Dec 2007; Jurek Bartuszek <jurek@gentoo.org> package.mask:
   Added >=dev-util/codeblocks-1.0_pre20071215

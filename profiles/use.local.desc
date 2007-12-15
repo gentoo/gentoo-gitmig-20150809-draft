@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3209 2007/12/15 14:02:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3210 2007/12/15 15:00:10 armin76 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2146,7 +2146,8 @@ www-client/elinks:gopher - Enable support for the gopher protocol
 www-client/epiphany:networkmanager - Enable NetworkManager support (online/offline)
 www-client/kazehakase:hyperestraier - enable hyperestraier support for full-text search in history.
 www-client/mozilla-firefox-bin:restrict-javascript - Pull in noscript extension to disable javascript globally, putting user fully in control of the sites he/she visits
-www-client/mozilla-firefox:filepicker - enable old gtkfilepicker from 1.0.x firefox
+www-client/mozilla-firefox:filepicker - Enable old gtkfilepicker from 1.0.x firefox
+www-client/mozilla-firefox:iceweasel - Enable iceweasel branding
 www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/mozilla-firefox:moznopango - Disable pango during runtime
 www-client/mozilla-firefox:restrict-javascript - Pull in noscript extension to disable javascript globally, putting user fully in control of the sites he/she visits
