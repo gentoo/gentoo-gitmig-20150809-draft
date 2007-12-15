@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.5.ebuild,v 1.1 2007/09/19 07:34:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.5.ebuild,v 1.2 2007/12/15 15:39:41 drac Exp $
 
 inherit gst-plugins10
 
@@ -14,8 +14,7 @@ SLOT=${GST_MAJOR}
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="jpeg2k gsm jingle msn yahoo"
-#jrtplib
+IUSE="jpeg2k gsm jingle jrtplib msn yahoo"
 
 DEPEND=">=media-libs/gstreamer-0.10.13
 	>=media-libs/gst-plugins-base-0.10.13
@@ -24,22 +23,21 @@ DEPEND=">=media-libs/gstreamer-0.10.13
 	gsm? ( media-sound/gsm )
 	jingle? ( net-libs/libjingle )
 	msn? ( media-libs/libmimic )
-	yahoo? ( media-libs/libj2k )"
-	#jrtplib? ( dev-libs/jthread
-	#	>=dev-libs/jrtplib-3.5 )
+	yahoo? ( media-libs/libj2k )
+	jrtplib? ( dev-libs/jthread
+		>=dev-libs/jrtplib-3.7.1 )"
 
 RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf \
 		--enable-g729 \
-		--disable-jrtplib \
 		$(use_enable jpeg2k jasper) \
 		$(use_enable gsm) \
 		$(use_enable jingle jingle-p2p) \
 		$(use_enable msn mimic) \
-		$(use_with yahoo libj2k) || die "econf failed"
-		# $(use_enable jrtplib) \
+		$(use_with yahoo libj2k) \
+		$(use_enable jrtplib) || die "econf failed"
 	emake || die "emake failed"
 }
 

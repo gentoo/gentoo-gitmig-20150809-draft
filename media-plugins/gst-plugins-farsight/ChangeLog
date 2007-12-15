@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-farsight
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/ChangeLog,v 1.10 2007/09/19 07:34:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/ChangeLog,v 1.11 2007/12/15 15:39:41 drac Exp $
+
+  15 Dec 2007; Samuli Suominen <drac@gentoo.org>
+  gst-plugins-farsight-0.12.5.ebuild:
+  Restore USE jrtplib as it's working with 3.7.1 again, closing #175425.
+  Thanks to Branko Majic for reporting.
 
 *gst-plugins-farsight-0.12.5 (19 Sep 2007)
 
