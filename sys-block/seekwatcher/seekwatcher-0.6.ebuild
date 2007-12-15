@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/seekwatcher-0.6.ebuild,v 1.2 2007/12/14 17:37:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/seekwatcher-0.6.ebuild,v 1.3 2007/12/15 06:26:38 cla Exp $
 
 DESCRIPTION="Seekwatcher generates graphs from blktrace runs to help visualize IO patterns and performance."
 HOMEPAGE="http://oss.oracle.com/~mason/seekwatcher/"
@@ -8,7 +8,7 @@ SRC_URI="http://oss.oracle.com/~mason/seekwatcher/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND=""
