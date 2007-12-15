@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.2.6.ebuild,v 1.1 2007/12/14 20:10:30 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.2.6.ebuild,v 1.2 2007/12/15 02:28:56 jurek Exp $
 
 inherit mono multilib autotools eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
-DEPEND=">=dev-lang/mono-${PV}"
+DEPEND=">=dev-lang/mono-${PV}
+		=dev-db/sqlite-3*"
 
 pkg_preinst() {
 	enewgroup aspnet
