@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-MDB2_Driver_oci8
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_oci8/ChangeLog,v 1.9 2007/12/15 11:43:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_oci8/ChangeLog,v 1.10 2007/12/15 11:53:40 jokey Exp $
+
+  15 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  +PEAR-MDB2_Driver_oci8-1.5.0_alpha1.ebuild:
+  Readd accidentally dropped version
 
 *PEAR-MDB2_Driver_oci8-1.5.0_alpha2 (15 Dec 2007)
 
