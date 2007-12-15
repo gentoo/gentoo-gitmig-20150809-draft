@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.217 2007/12/12 01:13:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.218 2007/12/15 14:44:10 welp Exp $
+
+  15 Dec 2007; <welp@gentoo.org> php-5.2.5-r1.ebuild:
+  Stable on amd64; bug 201885
 
   12 Dec 2007; Brent Baude <ranger@gentoo.org> php-5.2.5-r1.ebuild:
   Marked php-5.2.5-r1 ppc & ppc64 stable for bug 201885
