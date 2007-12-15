@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/aoetools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.15 2007/12/14 17:21:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.16 2007/12/15 00:27:58 cla Exp $
+
+  15 Dec 2007; Dawid Węgliński <cla@gentoo.org> aoetools-12.ebuild:
+  Stable on x86 (bug #202239)
 
   14 Dec 2007; nixnut <nixnut@gentoo.org> aoetools-12.ebuild:
   Stable on ppc wrt bug 202239
