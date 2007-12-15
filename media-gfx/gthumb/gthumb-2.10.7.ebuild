@@ -1,21 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.7.ebuild,v 1.3 2007/12/14 11:07:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.7.ebuild,v 1.4 2007/12/15 07:26:45 drac Exp $
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Image viewer and browser for Gnome"
-HOMEPAGE="http://gthumb.sourceforge.net/"
+HOMEPAGE="http://gthumb.sourceforge.net"
+
 LICENSE="GPL-2"
-
-IUSE="exif gphoto2 iptc raw tiff"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ~ia64 ~ppc ppc64 x86"
+IUSE="exif gphoto2 iptc raw tiff"
 
-# FIXME
-# missing: libiptcdata-0.2.1
-# what is gtkunique ???
-
+# Unknown item missing from deps, gtkunique.
 RDEPEND=">=dev-libs/glib-2.6
 	>=x11-libs/gtk+-2.10
 	>=dev-libs/libxml2-2.4
@@ -33,20 +30,16 @@ RDEPEND=">=dev-libs/glib-2.6
 	media-libs/jpeg
 	tiff? ( media-libs/tiff )
 	raw? ( media-libs/libopenraw )"
-
 DEPEND="${RDEPEND}
-	  x11-proto/inputproto
+	x11-proto/inputproto
 	>=dev-util/pkgconfig-0.9.0
-	  app-text/scrollkeeper
+	app-text/scrollkeeper
 	>=dev-util/intltool-0.29
-	  app-text/gnome-doc-utils"
+	app-text/gnome-doc-utils"
 
-DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	G2CONF="$(use_enable exif) \
-		$(use_enable gphoto2) \
-		$(use_enable raw libopenraw) \
-		$(use_enable iptc iptcdata) \
-		$(use_enable tiff)"
+	G2CONF="$(use_enable exif) $(use_enable gphoto2) $(use_enable raw libopenraw)
+		$(use_enable iptc iptcdata) $(use_enable tiff)"
 }
