@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.26 2007/11/02 06:50:13 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.27 2007/12/15 18:33:50 alonbl Exp $
+
+  15 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/truecrypt-4.3a-2.6.24.patch, truecrypt-4.3a.ebuild:
+  Add 2.6.24 support, bug#198394, thanks to elschner.net
 
   02 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> truecrypt-4.3a.ebuild:
   Remove requirement to unload modules, test not use the modules anyway,

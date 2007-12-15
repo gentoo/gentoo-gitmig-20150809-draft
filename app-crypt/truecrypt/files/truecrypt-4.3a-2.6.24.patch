@@ -1,0 +1,15 @@
+--- truecrypt-4.3a-source-code.org/Linux/Kernel/Dm-target.c	2007-04-24 18:32:06.000000000 +0200
++++ truecrypt-4.3a-source-code/Linux/Kernel/Dm-target.c	2007-12-15 18:22:39.000000000 +0100
+@@ -375,7 +375,12 @@ static void dereference_bio_ctx (struct 
+ 	if (!atomic_dec_and_test (&bc->ref_count))
+ 		return;
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,24)
+ 	bio_endio (bc->orig_bio, bc->orig_bio->bi_size, bc->error);
++#else
++	bio_endio (bc->orig_bio, bc->orig_bio->bi_size);
++#endif
++
+ 	mempool_free (bc, tc->bio_ctx_pool);
+ }
+ 
