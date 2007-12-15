@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.13.ebuild,v 1.1 2007/12/13 16:16:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.13.ebuild,v 1.2 2007/12/15 08:44:35 drac Exp $
 
 inherit distutils
 
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 		media-sound/vorbis-tools )"
 
 DOCS="API-NOTES NEWS README TODO TUTORIAL"
+
+RESTRICT="test"
 
 src_test() {
 	python setup.py test || die "src_test failed."

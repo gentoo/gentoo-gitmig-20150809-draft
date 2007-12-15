@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.54 2007/12/13 16:16:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.55 2007/12/15 08:44:35 drac Exp $
+
+  15 Dec 2007; Samuli Suominen <drac@gentoo.org> mutagen-1.12.ebuild,
+  mutagen-1.13.ebuild:
+  Restrict test suite, known to fail and hogs all memory leaving desktop
+  unusable. Has been reported upstream, hope dies last.
 
 *mutagen-1.13 (13 Dec 2007)
 

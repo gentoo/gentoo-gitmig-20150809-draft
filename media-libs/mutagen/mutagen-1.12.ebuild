@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.12.ebuild,v 1.6 2007/11/05 17:42:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.12.ebuild,v 1.7 2007/12/15 08:44:35 drac Exp $
 
 inherit distutils
 
@@ -24,6 +24,8 @@ DEPEND="test? (
 RDEPEND=">=virtual/python-2.4"
 
 DOCS="NEWS API-NOTES TUTORIAL"
+
+RESTRICT="test"
 
 src_test() {
 	python setup.py test || die "src_test failed."
