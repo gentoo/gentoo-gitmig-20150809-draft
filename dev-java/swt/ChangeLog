@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.73 2007/12/16 10:36:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.74 2007/12/16 15:59:09 maekke Exp $
+
+  16 Dec 2007; Markus Meier <maekke@gentoo.org> swt-3.3.ebuild:
+  x86 stable, bug #202458
 
   16 Dec 2007; Vlastimil Babka <caster@gentoo.org> -swt-3.3_rc4.ebuild,
   swt-3.3.ebuild:
