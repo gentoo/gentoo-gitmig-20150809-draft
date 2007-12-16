@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.32 2007/12/16 01:22:32 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.33 2007/12/16 14:21:52 maekke Exp $
+
+  16 Dec 2007; Markus Meier <maekke@gentoo.org> exiv2-0.13-r1.ebuild:
+  x86 stable, security bug #202351
 
   16 Dec 2007; Stefan Briesenick <sbriesen@gentoo.org> -exiv2-0.15.ebuild:
   removed unpatched revision.
