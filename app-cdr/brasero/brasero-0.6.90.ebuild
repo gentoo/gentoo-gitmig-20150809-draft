@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.5.2.ebuild,v 1.7 2007/07/29 18:17:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.6.90.ebuild,v 1.1 2007/12/16 21:40:50 pylon Exp $
 
 inherit gnome2 gnome.org
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://www.gnome.org/projects/brasero"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
-IUSE="beagle gdl libburn totem nls"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+IUSE="beagle dvd gdl libburn libnotify totem nls"
 
 RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-base/libgnome-2.10
@@ -25,10 +25,12 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	app-cdr/cdrdao
 	virtual/cdrtools
 	gnome-base/gnome-mount
+	dvd? ( media-libs/libdvdcss )
 	gdl? ( >=dev-libs/gdl-0.6 )
 	totem? ( >=media-video/totem-1.4.2 )
 	beagle? ( >=app-misc/beagle-0.2.5 )
-	libburn? ( >=dev-libs/libburn-0.2.4
+	libnotify? ( >=x11-libs/libnotify-0.3.0 )
+	libburn? ( >=dev-libs/libburn-0.3.4
 		>=dev-libs/libisofs-0.2.4 )"
 
 DEPEND="${RDEPEND}
@@ -40,6 +42,7 @@ G2CONF="${G2CONF} \
 	$(use_enable totem playlist) \
 	$(use_enable beagle search) \
 	$(use_enable libburn) \
+	$(use_enable libnotify) \
 	--disable-caches"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO.tasks"
@@ -47,7 +50,7 @@ USE_DESTDIR="1"
 
 src_install() {
 	gnome2_src_install
-	use nls || rm -rf ${D}/usr/share/locale
+	use nls || rm -rf "${D}"/usr/share/locale
 }
 
 pkg_postinst() {
@@ -55,5 +58,8 @@ pkg_postinst() {
 	elog
 	elog "For a best experience you should have a Linux Kernel >= 2.6.13"
 	elog "to enable system features such as Extended Attributes and inotify."
+	elog
+	elog "To use the libburn backend you need to add USE=libburn and activate"
+	elog "in gconf editor. Note that the default backend is the cdrtools/cdrkit."
 	elog
 }
