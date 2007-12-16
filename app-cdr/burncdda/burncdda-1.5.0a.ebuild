@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/burncdda-1.5.0a.ebuild,v 1.4 2007/05/05 14:55:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/burncdda-1.5.0a.ebuild,v 1.5 2007/12/16 20:22:38 pylon Exp $
 
 DESCRIPTION="Console app for copying burning audio cds"
 SLOT="0"
@@ -20,7 +20,7 @@ DEPEND="dev-util/dialog
 	media-sound/vorbis-tools"
 
 src_install() {
-	dodoc CHANGELOG INSTALL LICENSE
+	dodoc CHANGELOG
 	insinto /etc
 	doins burncdda.conf
 	dobin burncdda
