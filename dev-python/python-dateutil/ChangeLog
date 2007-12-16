@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-dateutil
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.10 2007/06/27 06:12:44 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.11 2007/12/16 10:00:28 drac Exp $
+
+  16 Dec 2007; Samuli Suominen <drac@gentoo.org> python-dateutil-1.2.ebuild:
+  amd64 stable
 
 *python-dateutil-1.2 (27 Jun 2007)
 
