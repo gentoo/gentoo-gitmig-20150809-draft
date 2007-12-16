@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/seekwatcher
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/ChangeLog,v 1.4 2007/12/15 06:26:38 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/ChangeLog,v 1.5 2007/12/16 10:31:17 drac Exp $
+
+  16 Dec 2007; Samuli Suominen <drac@gentoo.org> seekwatcher-0.6.ebuild:
+  amd64 stable wrt #202250
 
   15 Dec 2007; Dawid Węgliński <cla@gentoo.org> seekwatcher-0.6.ebuild:
   Stable on x86 (bug #202250)
