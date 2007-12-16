@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-9999.ebuild,v 1.2 2007/12/07 16:25:18 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-9999.ebuild,v 1.3 2007/12/16 18:42:43 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ ESVN_REPO_URI="http://svn.opensync.org/libsyncml/trunk"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
-IUSE="bluetooth +debug http +obex"
+IUSE="bluetooth +debug doc http +obex"
 
 RDEPEND=">=dev-libs/glib-2.0
 	>=dev-libs/libwbxml-0.9.2
