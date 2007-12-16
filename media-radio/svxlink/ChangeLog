@@ -1,0 +1,10 @@
+# ChangeLog for media-radio/svxlink
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.1 2007/12/16 19:25:39 pylon Exp $
+
+*svxlink-070415 (16 Dec 2007)
+
+  16 Dec 2007; Lars Weiler <pylon@gentoo.org> +files/kde.patch,
+  +metadata.xml, +svxlink-070415.ebuild:
+  New application for all those Gentoo ham-radio users out there.
+
