@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.14 2007/10/10 19:26:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.15 2007/12/16 22:35:57 pylon Exp $
+
+*libburn-0.4.0 (16 Dec 2007)
+
+  16 Dec 2007; Lars Weiler <pylon@gentoo.org> -libburn-0.2.2.ebuild,
+  -libburn-0.2.6.1.ebuild, -libburn-0.3.0.1.ebuild, -libburn-0.3.2.ebuild,
+  -libburn-0.3.4.ebuild, -libburn-0.3.8.ebuild, +libburn-0.4.0.ebuild:
+  Version bump; bug #198338.  Cleanup.
 
   10 Oct 2007; Markus Rothe <corsair@gentoo.org> libburn-0.3.8.ebuild:
   Added ~ppc64; bug #189993
