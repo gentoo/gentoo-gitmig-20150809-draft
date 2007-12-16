@@ -1,6 +1,14 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.16 2007/12/09 17:35:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.17 2007/12/16 05:05:17 markusle Exp $
+
+*root-5.16.00-r1 (15 Dec 2007)
+
+  15 Dec 2007; Markus Dittrich <markusle@gentoo.org>
+  +root-5.16.00-r1.ebuild:
+  New revision with patch fixing compile failure under gcc-4.2 
+  (see bug #199591). Also removed afs support until compilation 
+  problems are fixed.
 
   09 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org> -root-4.02.00.ebuild,
   root-5.16.00.ebuild:
