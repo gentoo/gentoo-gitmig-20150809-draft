@@ -1,6 +1,11 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.196 2007/12/12 05:20:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.197 2007/12/16 04:35:52 compnerd Exp $
+
+  16 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/totem-2.20.1-startup-notification.patch,
+  +files/totem-2.20.1-xpcom-hack.patch:
+  Be more strict about applying the xpcom hack (bug #198058)
 
   12 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   -files/01_build_mozilla_plugin_with_seamonkey_xpcom.patch,
