@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.20.2.ebuild,v 1.8 2007/12/11 23:10:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.20.2.ebuild,v 1.9 2007/12/16 22:14:06 eva Exp $
 
 inherit gnome2
 
@@ -39,16 +39,18 @@ RDEPEND=">=x11-libs/gtk+-2.11.6
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
+	app-text/gnome-doc-utils
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.17"
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README THANKS TODO"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_with jpeg libjpeg) \
-		$(use_with jpeg libexif) \
-		$(use_with dbus dbus-glib-1) \
-		$(use_with lcms cms) \
-		$(use_with python) \
-		--disable-exempi"
+	G2CONF="${G2CONF}
+		$(use_with jpeg libjpeg)
+		$(use_with jpeg libexif)
+		$(use_with dbus dbus-glib-1)
+		$(use_with lcms cms)
+		$(use_with python)
+		--disable-xmp"
 }

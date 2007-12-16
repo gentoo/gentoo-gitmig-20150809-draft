@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.188 2007/12/05 21:02:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.189 2007/12/16 22:14:06 eva Exp $
+
+  16 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org> eog-2.20.2.ebuild,
+  eog-2.20.3.ebuild:
+  add gnome-doc-utils dependency and fix configure switch
 
 *eog-2.20.3 (05 Dec 2007)
 
