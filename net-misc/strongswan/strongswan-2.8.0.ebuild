@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.8.0.ebuild,v 1.11 2007/02/28 16:47:04 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.8.0.ebuild,v 1.12 2007/12/16 14:32:49 pylon Exp $
 
 inherit eutils linux-info
 
@@ -52,9 +52,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/ipsec-path.patch.bz2
+	epatch "${FILESDIR}"/ipsec-path.patch.bz2
 
 	if use curl ; then
 		ebegin "Curl support requested. Enabling curl support"
@@ -112,8 +112,8 @@ src_install() {
 		install || die "make install failed"
 
 	dohtml doc/*html
-	rm -f ${S}/doc/*.html
-	dodoc CHANGES COPYING CREDITS INSTALL LICENSE README doc/*
+	rm -f "${S}"/doc/*.html
+	dodoc CHANGES COPYING CREDITS INSTALL README doc/*
 
 	doinitd "${FILESDIR}"/ipsec
 

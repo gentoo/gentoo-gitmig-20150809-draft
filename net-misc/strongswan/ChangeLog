@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.57 2007/10/08 17:50:51 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.58 2007/12/16 14:32:49 pylon Exp $
+
+*strongswan-4.1.9 (16 Dec 2007)
+
+  16 Dec 2007; Lars Weiler <pylon@gentoo.org>
+  +files/ipsec-install-4.1.9.patch, files/ipsec, strongswan-2.8.0.ebuild,
+  -strongswan-2.8.3.ebuild, strongswan-2.8.4.ebuild,
+  +strongswan-4.1.9.ebuild:
+  Version bump; new init-script; cleanup; quotes.
 
   08 Oct 2007; Lars Weiler <pylon@gentoo.org> strongswan-4.1.6.ebuild:
   Removed experimental dbus/networkmanager-support.
