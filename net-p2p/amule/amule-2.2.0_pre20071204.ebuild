@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20071204.ebuild,v 1.1 2007/12/05 15:50:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20071204.ebuild,v 1.2 2007/12/16 03:20:44 mr_bones_ Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -14,14 +14,14 @@ SRC_URI="http://www.hirnriss.net/files/cvs/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="amuled debug geoip gtk nls remote stats"
+IUSE="amuled debug geoip gtk nls remote stats unicode"
 
 DEPEND="=x11-libs/wxGTK-2.8*
 		>=sys-libs/zlib-1.2.1
 		stats? ( >=media-libs/gd-2.0.26 )
 		geoip? ( dev-libs/geoip )
 		remote? ( >=media-libs/libpng-1.2.0
-			unicode? ( >=media-libs/gd-2.0.26 ) )"
+		unicode? ( >=media-libs/gd-2.0.26 ) )"
 
 pkg_setup() {
 		if ! use gtk && ! use remote && ! use amuled; then
