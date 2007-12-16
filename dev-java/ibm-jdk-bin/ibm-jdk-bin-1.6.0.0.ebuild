@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.0.ebuild,v 1.2 2007/12/16 17:13:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.0.ebuild,v 1.3 2007/12/16 18:40:45 mr_bones_ Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -190,7 +190,6 @@ src_install() {
 		fi
 	fi
 
-
 	if use x86 || use ppc; then
 		if use nsplugin; then
 			local plugin="/opt/${P}/jre/plugin/$(get_system_arch)/ns7/libjavaplugin_oji.so"
@@ -212,7 +211,6 @@ src_install() {
 
 		domenu "${desktop_out}" || die
 	fi
-
 
 	dohtml -a html,htm,HTML -r docs || die
 	dodoc "${S}"/{copyright,notices.txt,readmefirst.lnx.txt} || die
