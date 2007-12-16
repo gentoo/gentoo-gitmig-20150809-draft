@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.36 2007/12/13 20:06:39 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.37 2007/12/16 11:14:44 drac Exp $
+
+  16 Dec 2007; Samuli Suominen <drac@gentoo.org> maven-bin-2.0.7.ebuild:
+  amd64 stable wrt #202137
 
   13 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org> maven-bin-2.0.7.ebuild:
   Stable on ppc, bug #202137.
