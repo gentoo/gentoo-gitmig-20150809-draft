@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libSM
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.48 2007/12/15 15:26:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.49 2007/12/16 14:52:50 nixnut Exp $
+
+  16 Dec 2007; nixnut <nixnut@gentoo.org> libSM-1.0.3.ebuild:
+  Stable on ppc wrt bug 202087
 
   15 Dec 2007; Doug Klima <cardoe@gentoo.org> libSM-1.0.3.ebuild:
   amd64 stable wrt bug #202087
