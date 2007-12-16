@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.2_p0.ebuild,v 1.2 2007/07/13 05:40:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.2_p0.ebuild,v 1.3 2007/12/16 21:15:59 pylon Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -23,7 +23,7 @@ RDEPEND="gnome-base/libgnomeui
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i "s#prefix = /usr/local#prefix = /usr#" po/Makefile.in
 }
@@ -47,5 +47,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
-	dodoc AUTHORS ChangeLog COPYING NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }

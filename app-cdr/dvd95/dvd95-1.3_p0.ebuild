@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.1_p1.ebuild,v 1.3 2007/07/13 05:40:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.3_p0.ebuild,v 1.1 2007/12/16 21:15:59 pylon Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/dvd95/${MY_P/_/}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE_LINGUAS="linguas_en linguas_fr"
+IUSE_LINGUAS="linguas_de linguas_cs linguas_el linguas_en linguas_fr linguas_hu linguas_nl linguas_pt_BR"
 IUSE="${IUSE_LINGUAS} mmx 3dnow sse sse2"
 
 DEPEND="gnome-base/libgnomeui
@@ -21,9 +21,14 @@ DEPEND="gnome-base/libgnomeui
 RDEPEND="gnome-base/libgnomeui
 	media-libs/libdvdread"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 
-	# This package provides en and fr for LINGUAS.
+	sed -i "s#prefix = /usr/local#prefix = /usr#" po/Makefile.in
+}
+
+src_compile() {
 	# Default language is French, but switch to English if no LINGUAS is set.
 
 	if [ -z "${LINGUAS}" ]; then
@@ -41,5 +46,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
-	dodoc AUTHORS ChangeLog COPYING NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
