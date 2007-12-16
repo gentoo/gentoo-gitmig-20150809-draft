@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.7 2007/12/15 16:31:31 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.8 2007/12/16 20:14:07 drac Exp $
+
+  16 Dec 2007; Samuli Suominen <drac@gentoo.org> alut-2.0.1.ebuild:
+  amd64 stable wrt #201984
 
   15 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> alut-2.0.1.ebuild:
   Added ~sparc.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/html
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/ChangeLog,v 1.26 2007/12/16 18:59:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/ChangeLog,v 1.27 2007/12/16 20:23:50 drac Exp $
+
+  16 Dec 2007; Samuli Suominen <drac@gentoo.org> html-1.0.1.ebuild:
+  amd64 stable wrt #201984
 
   16 Dec 2007; nixnut <nixnut@gentoo.org> html-1.0.1.ebuild:
   Stable on ppc wrt bug 201984

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.26 2007/12/16 19:00:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.27 2007/12/16 20:32:53 drac Exp $
+
+  16 Dec 2007; Samuli Suominen <drac@gentoo.org> hunit-1.1.1.ebuild:
+  amd64 stable wrt #201984
 
   16 Dec 2007; nixnut <nixnut@gentoo.org> hunit-1.1.1.ebuild:
   Stable on ppc wrt bug 201984
