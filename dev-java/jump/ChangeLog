@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jump
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.15 2007/10/24 05:32:58 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.16 2007/12/16 02:33:16 betelgeuse Exp $
+
+  16 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> +files/0.5-test.patch,
+  jump-0.5.ebuild:
+  Add patch to fix unit tests. Fixes bug #193372. Thanks to Pierre Colot
+  <pierre_jr_colot@hotmail.com>.
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -jump-0.4.1-r1.ebuild, -jump-0.4.1-r2.ebuild:

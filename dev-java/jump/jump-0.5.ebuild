@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/jump-0.5.ebuild,v 1.3 2007/09/21 17:01:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/jump-0.5.ebuild,v 1.4 2007/12/16 02:33:16 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 inherit java-pkg-2 java-ant-2
@@ -18,6 +18,8 @@ RDEPEND=">=virtual/jre-1.4"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/0.5-test.patch"
 
 	sed -i 's:${java.home}/src::' -i build.xml || die
 	java-ant_rewrite-classpath
