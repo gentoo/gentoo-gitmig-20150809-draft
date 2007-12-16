@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.47 2007/12/14 05:50:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.48 2007/12/16 13:27:15 nixnut Exp $
+
+  16 Dec 2007; nixnut <nixnut@gentoo.org> ifplugd-0.28-r9.ebuild:
+  Stable on ppc wrt bug 195214
 
   14 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   ifplugd-0.28-r9.ebuild:
