@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.7.ebuild,v 1.4 2007/12/16 21:59:10 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.9.ebuild,v 1.1 2007/12/16 21:59:10 pylon Exp $
 
 inherit gnome2 mono
 
