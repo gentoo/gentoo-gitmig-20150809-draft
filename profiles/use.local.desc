@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3213 2007/12/16 14:20:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3214 2007/12/16 18:53:58 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1082,7 +1082,6 @@ media-sound/kid3:taglib - Enable tagging support with taglib
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**
 media-sound/lastfm-ripper:amazon - Enable advanced tagging using amazon webservices
 media-sound/lastfm-ripper:tagwriting - Enable MP3 tagging
-media-sound/lilypond:vim - Enable installation of lilypond vim plugins
 media-sound/listen:libsexy - Enable libsexy support
 media-sound/moc:sid - Build with SID (Commodore 64 Audio) support
 media-sound/moc:timidity - Add support for timidity
