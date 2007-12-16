@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.1-r2.ebuild,v 1.8 2007/12/16 22:20:22 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.2.ebuild,v 1.1 2007/12/16 22:20:22 pylon Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gnomebaker/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="dvdr nls mp3 flac vorbis libnotify"
-KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 DEPEND=">=gnome-base/libglade-2.0
 	>=gnome-base/libgnomeui-2.10
 	>=media-libs/gstreamer-0.10.0
@@ -36,8 +36,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-export-dynamic_for_glade.patch"
-	epatch "${FILESDIR}/${P}-thread_init.patch"
+	epatch "${FILESDIR}"/${P}-genisofs.patch
+	epatch "${FILESDIR}"/${P}-fix_fstab_parsing.patch
 
 	gnome2_omf_fix
 }

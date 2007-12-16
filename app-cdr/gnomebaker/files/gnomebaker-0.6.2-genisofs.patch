@@ -1,0 +1,11 @@
+--- gnomebaker-0.6.2/src/execfunctions.c.genisofs	2007-09-19 14:50:19.000000000 +0200
++++ gnomebaker-0.6.2/src/execfunctions.c	2007-09-19 14:50:47.000000000 +0200
+@@ -868,7 +868,7 @@
+ 			exec_cmd_add_arg(e, "mkisofs");			
+ 			break;
+ 		case BACKEND_WODIM:
+-			exec_cmd_add_arg(e, "genisofs");
++			exec_cmd_add_arg(e, "genisoimage");
+ 			break;			
+ 	}
+ 

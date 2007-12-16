@@ -1,0 +1,30 @@
+diff -urNad gnomebaker-0.6.2~/src/devices.c gnomebaker-0.6.2/src/devices.c
+--- gnomebaker-0.6.2~/src/devices.c	2007-09-16 13:36:33.000000000 -0300
++++ gnomebaker-0.6.2/src/devices.c	2007-10-23 17:30:38.000000000 -0200
+@@ -111,7 +111,10 @@
+ 		g_strstrip(*line);
+ 		if((*line)[0] != '#') /* ignore commented out lines */
+ 		{
+-			gchar node[64], mount[64];
++			gchar *node, *mount;
++			int line_size = strlen(*line);
++			node = g_new0(gchar, line_size);
++			mount = g_new0(gchar, line_size);
+ 			if(sscanf(*line, "%s\t%s", node, mount) == 2)
+ 			{
+ 				GB_TRACE("devices_add_device - node [%s] mount [%s]\n", node, mount);
+@@ -134,8 +137,14 @@
+ 				}
+ 
+ 				if(mount_point != NULL)
++				{
++					g_free(node);
++					g_free(mount);
+ 					break;
++				}
+ 			}
++			g_free(node);
++			g_free(mount);
+ 		}
+ 		++line;
+ 	}
