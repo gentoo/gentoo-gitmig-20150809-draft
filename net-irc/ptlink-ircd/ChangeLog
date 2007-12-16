@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/ptlink-ircd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.12 2007/05/06 12:44:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.13 2007/12/16 17:48:04 cla Exp $
+
+*ptlink-ircd-6.19.6-r1 (16 Dec 2007)
+
+  16 Dec 2007; Dawid Węgliński <cla@gentoo.org>
+  +ptlink-ircd-6.19.6-r1.ebuild:
+  Revbump, force users to reinstall package with install_cert function, see
+  bug #201678 for details
 
   06 May 2007; Marius Mauch <genone@gentoo.org> ptlink-ircd-6.19.6.ebuild:
   Replacing einfo with elog
