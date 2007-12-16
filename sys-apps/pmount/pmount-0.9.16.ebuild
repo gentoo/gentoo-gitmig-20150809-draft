@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.16.ebuild,v 1.2 2007/12/14 21:45:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.16.ebuild,v 1.3 2007/12/16 11:06:22 drac Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://alioth.debian.org/frs/download.php/2057/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="crypt hal"
 
 DEPEND="hal? ( >=sys-apps/dbus-0.33 >=sys-apps/hal-0.5.2 )
@@ -19,6 +19,14 @@ DEPEND="hal? ( >=sys-apps/dbus-0.33 >=sys-apps/hal-0.5.2 )
 
 pkg_setup() {
 	enewgroup plugdev
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# Fix make check wrt #202150.
+	echo src/luks.c >> po/POTFILES.skip
+	echo src/realpath.c >> po/POTFILES.skip
 }
 
 src_compile() {
