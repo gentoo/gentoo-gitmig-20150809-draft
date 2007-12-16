@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/vdr-vcd-0.7.ebuild,v 1.5 2007/07/10 23:09:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/vdr-vcd-0.7.ebuild,v 1.6 2007/12/16 13:43:58 hd_brummy Exp $
 
 inherit eutils vdr-plugin
 
-DESCRIPTION="vdr plugin to play video cds"
+DESCRIPTION="VDR plugin: play video cds"
 
-HOMEPAGE="http://vdr.heiligenmann.de/"
-SRC_URI=" http://vdr.heiligenmann.de/download/vdr-${VDRPLUGIN}-${PV}.tgz
+HOMEPAGE="http://vdr.heiligenmann.de/vdr/"
+SRC_URI=" http://www.heiligenmann.de/vdr/download/${P}.tgz
 		mirror://vdrfiles/${PN}/vcd-0.7.patch"
 
 SLOT="0"
