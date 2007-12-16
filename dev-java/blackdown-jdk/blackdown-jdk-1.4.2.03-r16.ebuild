@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r16.ebuild,v 1.1 2007/05/26 10:50:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r16.ebuild,v 1.2 2007/12/16 22:02:26 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 versionator pax-utils
@@ -18,9 +18,24 @@ HOMEPAGE="http://www.blackdown.org"
 SLOT="1.4.2"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="doc examples nsplugin"
+IUSE="X alsa doc examples nsplugin odbc"
 
-DEPEND="doc? ( =dev-java/java-sdk-docs-1.4.2* )"
+DEPEND=""
+RDEPEND="odbc? ( dev-db/unixODBC )
+	alsa? ( media-libs/alsa-lib )
+	x86? ( net-libs/libnet )
+	sys-libs/glibc
+	X? (
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libXext
+		x11-libs/libXi
+		x11-libs/libXp
+		x11-libs/libXtst
+		x11-libs/libXt
+		x11-libs/libX11
+	)
+	doc? ( =dev-java/java-sdk-docs-1.4.2* )"
 
 JAVA_PROVIDE="jdbc-stdext"
 
@@ -83,18 +98,18 @@ src_install() {
 
 	# Set PaX markings on all JDK/JRE executables to allow code-generation on
 	# the heap by the JIT compiler.
-	pax-mark m $(list-paxables ${S}{,/jre}/bin/*)
+	pax-mark m $(list-paxables "${S}"{,/jre}/bin/*)
 
 	dodir /opt/${P}
 
-	cp -pPR ${S}/{bin,jre,lib,man,include} ${D}/opt/${P} || die "failed to copy"
+	cp -pPR "${S}"/{bin,jre,lib,man,include} "${D}"/opt/${P} || die "failed to copy"
 
 	dodir /opt/${P}/share/
 	if use examples; then
-		cp -pPR ${S}/demo ${D}/opt/${P}/share/ || die "failed to copy"
+		cp -pPR "${S}"/demo "${D}"/opt/${P}/share/ || die "failed to copy"
 	fi
 
-	cp -pPR ${S}/src.zip "${D}/opt/${P}/" || die "failed to copy"
+	cp -pPR "${S}"/src.zip "${D}/opt/${P}/" || die "failed to copy"
 	dosym "../src.zip" /opt/${P}/share || die "failed dosym"
 
 	dodoc README
@@ -110,15 +125,16 @@ src_install() {
 
 		install_mozilla_plugin /opt/${P}/jre/plugin/${platform}/mozilla/libjavaplugin_oji.so
 	else
-		rm -f ${D}/opt/${P}/jre/plugin/${platform}/mozilla/libjavaplugin_oji.so
+		rm -f "${D}"/opt/${P}/jre/plugin/${platform}/mozilla/libjavaplugin_oji.so
 	fi
 
-	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
+	find "${D}"/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
 
-	sed -i "s/standard symbols l/symbol/g" ${D}/opt/${P}/jre/lib/font.properties
+	sed -i "s/standard symbols l/symbol/g" "${D}"/opt/${P}/jre/lib/font.properties
 
 	# install env into /etc/env.d
 	set_java_env
+	java-vm_revdep-mask
 
 	# Fix for bug 26629
 	if [[ "${PROFILE_ARCH}" == "sparc64" ]]; then

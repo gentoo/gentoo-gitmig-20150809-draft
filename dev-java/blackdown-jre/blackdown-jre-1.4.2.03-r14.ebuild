@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.03-r14.ebuild,v 1.1 2007/05/20 21:44:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.03-r14.ebuild,v 1.2 2007/12/16 22:03:30 caster Exp $
 
 inherit java-vm-2 versionator
 
@@ -19,8 +19,24 @@ HOMEPAGE="http://www.blackdown.org"
 SLOT="1.4.2"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="-* amd64 x86"
-IUSE="nsplugin"
-DEPEND=">=sys-apps/sed-4"
+IUSE="X alsa nsplugin odbc"
+
+DEPEND=""
+RDEPEND="odbc? ( dev-db/unixODBC )
+	alsa? ( media-libs/alsa-lib )
+	x86? ( net-libs/libnet )
+	sys-libs/glibc
+	X? (
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libXext
+		x11-libs/libXi
+		x11-libs/libXp
+		x11-libs/libXtst
+		x11-libs/libXt
+		x11-libs/libX11
+	)"
+
 JAVA_PROVIDE="jdbc-stdext"
 
 S="${WORKDIR}/j2re${JV}"
@@ -87,7 +103,7 @@ src_install() {
 
 	dodir /opt/${P}
 
-	cp -pPR ${S}/{bin,lib,man,plugin,javaws} ${JAVAHOME} || die "failed to copy"
+	cp -pPR "${S}"/{bin,lib,man,plugin,javaws} ${JAVAHOME} || die "failed to copy"
 
 	newicon ${JAVAHOME}/plugin/desktop/sun_java.png ${PN}-${SLOT}.png || die "failed to install icon"
 	rm -fr ${JAVAHOME}/plugin/desktop
@@ -107,12 +123,13 @@ src_install() {
 		install_mozilla_plugin /opt/${P}/plugin/${platform}/mozilla/libjavaplugin_oji.so
 	fi
 
-	sed -i "s/standard symbols l/symbol/g" ${D}/opt/${P}/lib/font.properties
+	sed -i "s/standard symbols l/symbol/g" "${D}"/opt/${P}/lib/font.properties
 
 	find ${JAVAHOME} -type f -name "*.so" -exec chmod +x \{\} \;
 
 	# install env into /etc/env.d
 	set_java_env
+	java-vm_revdep-mask
 
 	# Fix for bug 26629
 	if [[ "${PROFILE_ARCH}" = "sparc64" ]]; then
