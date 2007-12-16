@@ -1,6 +1,23 @@
 # ChangeLog for dev-scheme/stklos
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/ChangeLog,v 1.6 2007/11/29 07:15:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/ChangeLog,v 1.7 2007/12/16 12:51:11 hkbst Exp $
+
+*stklos-0.97 (16 Dec 2007)
+
+  16 Dec 2007; Marijn Schouten <hkBst@gentoo.org> +stklos-0.97.ebuild:
+  Changes:
+    * Fixed support for recent versions of SLIB
+    * Added boxes: they were used by the system but unavailable to the user.
+    * Improved the stklos-pkg command
+    * Fixed several mutexes bugs
+    * Minor improvements of the FFI
+    * Updated PCRE to version 7.4
+    * New implemented SRFIs
+          o SRFI-45 (Primitives for expressing iterative lazy algorithms)
+          o SRFI-59 (Vicinity)
+          o SRFI-88 (Keyword Objects)
+          o SRFI-89 (Optional and named parameters)
+    * Bug fixes	
 
   29 Nov 2007; Christian Faulhammer <opfer@gentoo.org> stklos-0.96.ebuild:
   keywording ~x86, bug 200696
