@@ -1,0 +1,33 @@
+diff -Naur root/configure root.new/configure
+--- root/configure	2007-06-07 02:48:25.000000000 -0500
++++ root.new/configure	2007-12-16 07:18:51.000000000 -0500
+@@ -307,7 +307,7 @@
+     # the .lib export library to link.
+     libs=""
+     for i in $lib ; do
+-	for ext in .a .lib "" ; do     # lib without extension for MacOS X
++	for ext in foobar "" ; do     # lib without extension for MacOS X
+ 	    libs="$libs $i$ext"
+ 	done
+     done
+@@ -403,7 +403,7 @@
+ 	flib=""
+         maclib=""
+ 	for i in $lib ; do
+-	    for ext in .a .lib "" ; do     # lib without extension for MacOS X
++	    for ext in foobar "" ; do     # lib without extension for MacOS X
+ 		if test "x$found_lib" = "x$i$ext" ; then
+ 		    flib=$i$ext
+                     if test "x$ext" = "x" ; then
+diff -Naur root/xrootd/Module.mk root.new/xrootd/Module.mk
+--- root/xrootd/Module.mk	2007-03-24 09:06:26.000000000 -0500
++++ root.new/xrootd/Module.mk	2007-12-16 07:25:47.000000000 -0500
+@@ -77,6 +77,8 @@
+ 		   gunzip -c $(XROOTDVERS).src.tgz | tar xf -; \
+ 		   etag=`basename $(XROOTDETAG)` ; \
+ 		   touch $$etag ; \
++		   sed -e "s:.a .lib:.foobar:" -i xrootd/configure.classic ; \
++		   sed -e "s:-lXrdSys:-lXrdSys -lresolv:" -i xrootd/src/XrdSecpwd/GNUmakefile ; \
+ 		fi)
+ ifeq ($(PLATFORM),win32)
+ 		@(if [ -d $(XROOTDDIRD)/pthreads-win32 ]; then \

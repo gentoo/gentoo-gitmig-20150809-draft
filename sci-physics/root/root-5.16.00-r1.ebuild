@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00-r1.ebuild,v 1.1 2007/12/16 05:05:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00-r1.ebuild,v 1.2 2007/12/16 17:04:42 markusle Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 fortran
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="~amd64 ~sparc ~x86"
 
-IUSE="cern doc fftw kerberos ldap mysql odbc postgres
+IUSE="afs cern doc fftw kerberos ldap mysql odbc postgres
 	python ruby qt3 ssl truetype xml"
 
 DEPEND="sys-apps/shadow
@@ -26,6 +26,7 @@ DEPEND="sys-apps/shadow
 	virtual/opengl
 	virtual/glu
 	|| ( media-libs/libafterimage x11-wm/afterstep )
+	afs? ( net-fs/openafs )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
 	kerberos? ( virtual/krb5 )
@@ -64,6 +65,7 @@ src_unpack() {
 	# patch to properly set link flags with fortran compilers
 	epatch "${FILESDIR}"/${P}-fortran.patch
 	epatch "${DISTDIR}"/${P}-gcc-4.2.patch.bz2
+	epatch "${FILESDIR}"/${P}-afs.patch
 	if [[ ${ARCH} == sparc ]]; then
 		cd "${S}/xrootd/src"
 		tar xzf xrootd-20060928-1600.src.tgz
@@ -82,7 +84,7 @@ src_compile() {
 			target=linuxicc
 		fi
 	fi
-	#use afs && append-flags -DAFS_OLD_COM_ERR
+	use afs && append-flags -DAFS_OLD_COM_ERR
 	local myfortran
 	use cern && myfortran="F77=${FORTRANC}"
 
@@ -137,7 +139,7 @@ src_compile() {
 		--enable-table \
 		--enable-unuran \
 		--enable-xrootd \
-		--disable-afs \
+		$(use_enable afs) \
 		$(use_enable cern) \
 		$(use_enable fftw fftw3) \
 		$(use_enable kerberos krb5) \
@@ -155,7 +157,7 @@ src_compile() {
 		${EXTRA_CONF} \
 		|| die "configure failed"
 
-	emake -j1 \
+	emake \
 		OPTFLAGS="${CXXFLAGS}" \
 		${myfortran} \
 		|| die "emake failed"

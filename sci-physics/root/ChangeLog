@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.17 2007/12/16 05:05:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.18 2007/12/16 17:04:42 markusle Exp $
+
+  16 Dec 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/root-5.16.00-afs.patch, root-5.16.00-r1.ebuild:
+  Added patch to fix linking problem with afs libs. Re-added afs
+  USE flag.
 
 *root-5.16.00-r1 (15 Dec 2007)
 
