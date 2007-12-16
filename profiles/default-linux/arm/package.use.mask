@@ -1,8 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.13 2007/12/15 14:59:10 spock Exp $
-
-# Michał Januszewski <spock@gentoo.org> (15 Dec 2007)
-# Missing dep: pysqlite not keyworded.
->=net-analyzer/nmap-4.50 gtk
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.14 2007/12/16 10:02:52 spock Exp $
 
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here

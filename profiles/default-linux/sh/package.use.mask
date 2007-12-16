@@ -15,7 +15,3 @@ x11-libs/gtk+ vim-syntax
 media-libs/gstreamer debug
 media-libs/gst-plugins-base debug
 
-# Michał Januszewski <spock@gentoo.org> (15 Dec 2007)
-# Missing dep: pysqlite not keyworded.
->=net-analyzer/nmap-4.50 gtk
-
