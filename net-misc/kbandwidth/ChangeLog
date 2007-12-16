@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/kbandwidth
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kbandwidth/ChangeLog,v 1.9 2007/10/09 15:13:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kbandwidth/ChangeLog,v 1.10 2007/12/16 23:08:39 philantrop Exp $
+
+*kbandwidth-1.0.4-r1 (16 Dec 2007)
+
+  16 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  -kbandwidth-1.0.2.ebuild, -kbandwidth-1.0.3.ebuild,
+  +kbandwidth-1.0.4-r1.ebuild:
+  Added a patch by mkay to fix bug 202388. Removed obsolete versions.
 
   09 Oct 2007; Christoph Mende <angelos@gentoo.org> kbandwidth-1.0.4.ebuild:
   Stable on amd64 wrt bug #194451
