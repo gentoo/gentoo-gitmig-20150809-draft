@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3212 2007/12/16 03:54:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3213 2007/12/16 14:20:30 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1115,6 +1115,7 @@ media-sound/rhythmbox:daap - support for daap
 media-sound/rhythmbox:keyring - gnome-keyring support for daap share passwords
 media-sound/rhythmbox:tagwriting - support for tag writing in certain audio files
 media-sound/rosegarden:dssi - Enable support for DSSI Soft Synth Interface
+media-sound/rubyripper:cli - Build command line interface rubyripper
 media-sound/shntool:wavpack - Add support for wavpack
 media-sound/slimserver:alac - Enable support for alac
 media-sound/sonata:lyrics - Support for lyrics fetching
