@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.23 2007/12/16 14:40:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.24 2007/12/16 23:20:38 philantrop Exp $
+
+  16 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org> -tork-0.17.ebuild,
+  -tork-0.20.ebuild, -tork-0.21.ebuild:
+  Removed obsolete versions.
 
   16 Dec 2007; nixnut <nixnut@gentoo.org> tork-0.23.ebuild:
   Stable on ppc wrt bug 202342
