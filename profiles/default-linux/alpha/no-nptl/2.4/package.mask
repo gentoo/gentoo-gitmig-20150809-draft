@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.41 2007/12/11 11:01:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.42 2007/12/16 23:54:53 mr_bones_ Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (11 Dec 2007)
 # Needs 2.6 headers
@@ -11,6 +11,7 @@ media-video/transcode
 >=sys-power/nut-2.2.0
 >=sys-fs/device-mapper-1.02.22-r5
 >=sys-fs/lvm2-2.02.28-r2
+=xfce-extra/ristretto-0.0.14
 
 # Mart Raudsepp <leio@gentoo.org> (25 Aug 2007)
 # need directly or indirectly gnome-python-desktop or nautilus-cd-burner,
