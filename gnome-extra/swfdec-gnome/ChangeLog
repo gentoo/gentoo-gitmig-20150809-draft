@@ -1,0 +1,10 @@
+# ChangeLog for gnome-extra/swfdec-gnome
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/swfdec-gnome/ChangeLog,v 1.1 2007/12/16 18:52:39 pclouds Exp $
+
+*swfdec-gnome-0.5.4 (16 Dec 2007)
+
+  16 Dec 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
+  +swfdec-gnome-0.5.4.ebuild:
+  Initial ebuild from Christoph Brill (egore) <egore@gmx.de>, #202372
+
