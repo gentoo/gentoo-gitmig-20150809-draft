@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/btrace
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.12 2007/12/16 04:24:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.13 2007/12/16 09:57:44 drac Exp $
+
+  16 Dec 2007; Samuli Suominen <drac@gentoo.org>
+  btrace-0.0.20071210202527.ebuild:
+  amd64 stable wrt #202240
 
   16 Dec 2007; Robin H. Johnson <robbat2@gentoo.org>
   btrace-0.0.20071210202527.ebuild:
