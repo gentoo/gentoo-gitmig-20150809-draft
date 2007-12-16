@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/tkdvd-3.10.1.ebuild,v 1.3 2006/05/28 11:33:00 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/tkdvd-3.10.1.ebuild,v 1.4 2007/12/16 14:50:00 pylon Exp $
 
 DESCRIPTION="A Tcl/Tk GUI for dvd+rw-tools"
 HOMEPAGE="http://regis.damongeot.free.fr/tkdvd/"
@@ -29,7 +29,7 @@ src_install() {
 
 	dodir /usr/bin
 
-	cat <<EOF >${D}/usr/bin/tkdvd
+	cat <<EOF >"${D}"/usr/bin/tkdvd
 #!/bin/sh
 cd /usr/share/${PF}
 ./TkDVD.sh
@@ -37,7 +37,7 @@ EOF
 
 	fperms 755 /usr/bin/tkdvd
 
-	dodoc COPYING ChangeLog FAQ INSTALL README TODO doc/config_file
+	dodoc ChangeLog FAQ INSTALL README TODO doc/config_file
 
 	insinto /usr/share/pixmaps
 	doins icons/*.png
