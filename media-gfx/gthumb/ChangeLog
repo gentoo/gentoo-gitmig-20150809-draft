@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.78 2007/12/15 07:26:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.79 2007/12/16 16:42:51 nixnut Exp $
+
+  16 Dec 2007; nixnut <nixnut@gentoo.org> gthumb-2.10.7.ebuild:
+  Stable on ppc wrt bug 199799
 
   15 Dec 2007; Samuli Suominen <drac@gentoo.org> gthumb-2.10.7.ebuild:
   amd64 stable wrt #199799
