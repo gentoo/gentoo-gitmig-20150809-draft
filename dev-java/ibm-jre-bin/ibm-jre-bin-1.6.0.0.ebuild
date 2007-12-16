@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.0.ebuild,v 1.1 2007/12/16 13:47:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.0.ebuild,v 1.2 2007/12/16 17:16:32 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -50,7 +50,7 @@ SRC_URI="x86? ( ${X86_JRE_DIST} )
 LICENSE="IBM-J1.6"
 KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="fetch"
-IUSE="X alsa nsplugin"
+IUSE="X alsa nsplugin odbc"
 
 RDEPEND="x86? ( net-libs/libnet )
 		X? (
@@ -62,7 +62,8 @@ RDEPEND="x86? ( net-libs/libnet )
 			x11-libs/libX11
 			amd64? ( x11-libs/libXt )
 		)
-		alsa? ( media-libs/alsa-lib )"
+		alsa? ( media-libs/alsa-lib )
+		odbc? ( dev-db/unixODBC )"
 DEPEND=""
 
 QA_TEXTRELS_x86="opt/${P}/lib/i386/libj9jvmti24.so
@@ -164,15 +165,5 @@ src_install() {
 	dodoc "${S}"/{copyright,notices.txt,readmefirst.lnx.txt} || die
 
 	set_java_env
-}
-
-pkg_postinst() {
-	java-vm-2_pkg_postinst
-	if ! use X; then
-		echo
-		ewarn "You're not using X so its possible that you dont have"
-		ewarn "a X server installed, please read the following warning: "
-		ewarn "Some parts of IBM JDK require XFree86 to be installed."
-		ewarn "Be careful which Java libraries you attempt to use."
-	fi
+	java-vm_revdep-mask
 }

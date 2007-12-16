@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.80 2007/12/16 13:47:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.81 2007/12/16 17:16:32 caster Exp $
+
+  16 Dec 2007; Vlastimil Babka <caster@gentoo.org>
+  ibm-jre-bin-1.6.0.0.ebuild:
+  Add odbc USE flag and revdep-rebuild control file for bug #177925.
 
 *ibm-jre-bin-1.6.0.0 (16 Dec 2007)
 
