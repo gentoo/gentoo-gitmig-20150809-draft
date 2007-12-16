@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.78 2007/12/06 17:34:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.79 2007/12/16 22:33:04 betelgeuse Exp $
 
 *pulseaudio-0.9.8-r3 (06 Dec 2007)
 *pulseaudio-0.9.8-r2 (06 Dec 2007)
@@ -22,7 +22,10 @@
   23 Nov 2007; Samuli Suominen <drac@gentoo.org> pulseaudio-0.9.7.ebuild:
   amd64 stable wrt #197126, thanks to Angelo Arrifano for testing
 
-  23 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+*pulseaudio-0.9.8 (23 Nov 2007)
+
+  23 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog,
+  +pulseaudio-0.9.8.ebuild:
   Version bump, remove old experimental init.d version (now 0.9.8-r1). Add
   better documentation of the USE flags. The new version supports bluetooth
   and policykit USE flags now.
