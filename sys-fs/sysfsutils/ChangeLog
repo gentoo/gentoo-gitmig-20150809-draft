@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sysfsutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.46 2007/12/14 21:05:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.47 2007/12/16 11:01:25 drac Exp $
+
+  16 Dec 2007; Samuli Suominen <drac@gentoo.org> sysfsutils-2.1.0.ebuild:
+  amd64 stable wrt #202080
 
   14 Dec 2007; Jeroen Roovers <jer@gentoo.org> sysfsutils-2.1.0.ebuild:
   Stable for HPPA (bug #202080).
