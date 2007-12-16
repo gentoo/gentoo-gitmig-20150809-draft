@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3216 2007/12/16 19:13:35 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3217 2007/12/16 21:52:31 pylon Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -64,7 +64,7 @@ app-cdr/k3b:css - Enables ripping of encrypted dvds
 app-cdr/k3b:emovix - Enable burning support for eMoviX images
 app-cdr/mybashburn:normalize - Add support for normalizing audio file volume levels
 app-cdr/pxlinux:gnuplot - enable gnuplot support
-app-cdr/serpentine:muine - Enable Muine support
+app-cdr/serpentine:muine - Enable support for the GNOME music player Muine
 app-crypt/ccid:nousb - Disable USB support via pcsc-lite
 app-crypt/ccid:twinserial - Enable twinserial reader
 app-crypt/gnupg:ecc - Use elliptic curve cryptosystem patch
