@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.16.ebuild,v 1.5 2007/11/25 13:51:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.16.ebuild,v 1.6 2007/12/16 21:10:16 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit pax-utils java-vm-2 eutils
@@ -22,21 +22,23 @@ LICENSE="sun-bcla-java-vm"
 KEYWORDS="x86"
 # files are prestripped
 RESTRICT="fetch strip"
-IUSE="X alsa doc examples nsplugin jce"
+IUSE="X alsa doc examples jce nsplugin odbc"
 
 DEPEND="sys-apps/sed
 	app-arch/unzip"
 
-RDEPEND="alsa? ( media-libs/alsa-lib )
+RDEPEND="net-libs/libnet
+	alsa? ( media-libs/alsa-lib )
 	doc? ( =dev-java/java-sdk-docs-1.4.2* )
 	X? (
-		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXi
 		x11-libs/libXp
-		x11-libs/libXt
 		x11-libs/libXtst
-	)"
+		x11-libs/libXt
+		x11-libs/libX11
+	)
+	odbc? ( dev-db/unixODBC )"
 
 JAVA_PROVIDE="jdbc-stdext"
 
@@ -108,7 +110,7 @@ src_install() {
 	# the heap by the JIT compiler.
 	pax-mark srpm $(list-paxables "${D}"/opt/${P}/{,/jre}/bin/*)
 
-	dodoc COPYRIGHT README LICENSE THIRDPARTYLICENSEREADME.txt || die
+	dodoc COPYRIGHT README THIRDPARTYLICENSEREADME.txt || die
 	dohtml README.html || die
 	if use examples; then
 		cp -pPR demo "${D}/opt/${P}/" || die
@@ -162,19 +164,5 @@ src_install() {
 	domenu "${T}/sun_java-${SLOT}.desktop"
 
 	set_java_env
-}
-
-pkg_postinst() {
-	# Set as default VM if none exists
-	java-vm-2_pkg_postinst
-
-	if ! use X; then
-		ewarn "Some parts of Sun's JDK require X11 libraries to be installed."
-		ewarn "Be careful which Java libraries you attempt to use."
-	fi
-	elog "Starting with 1.4.2.14 the src.zip is installed to the standard"
-	elog "location only (/opt/${P}/) and not /opt/${P}/share/"
-	elog "as we used to. See https://bugs.gentoo.org/show_bug.cgi?id=2241 and"
-	elog "http://java.sun.com/j2se/1.4.2/docs/tooldocs/linux/jdkfiles.html"
-	elog "for more details."
+	java-vm_revdep-mask
 }

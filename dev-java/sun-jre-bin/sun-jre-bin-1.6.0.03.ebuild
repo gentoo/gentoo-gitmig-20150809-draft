@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.03.ebuild,v 1.5 2007/11/25 13:52:13 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.03.ebuild,v 1.6 2007/12/16 21:08:51 caster Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -24,19 +24,24 @@ SLOT="1.6"
 LICENSE="dlj-1.1"
 KEYWORDS="-* amd64 x86"
 RESTRICT="strip"
-IUSE="X alsa nsplugin"
+IUSE="X alsa nsplugin odbc"
 
 RDEPEND="
 	sys-libs/glibc
-	x86? ( =virtual/libstdc++-3.3 )
+	x86? (
+		=virtual/libstdc++-3.3
+		net-libs/libnet
+	)
 	alsa? ( media-libs/alsa-lib )
 	X? (
-		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXi
 		x11-libs/libXp
 		x11-libs/libXtst
-	)"
+		amd64? ( x11-libs/libXt )
+		x11-libs/libX11
+	)
+	odbc? ( dev-db/unixODBC )"
 
 DEPEND=""
 
@@ -101,21 +106,13 @@ src_install() {
 	newins "${FILESDIR}"/fontconfig.Gentoo.properties fontconfig.properties
 
 	set_java_env
+	java-vm_revdep-mask
 }
 
 pkg_postinst() {
 	# Set as default VM if none exists
 	java-vm-2_pkg_postinst
 
-	if ! use X; then
-		local xwarn="X11 libraries and/or"
-	fi
-
-	echo
-	ewarn "Some parts of Sun's JDK require ${xwarn} virtual/lpr to be installed."
-	ewarn "Be careful which Java libraries you attempt to use."
-
-	echo
 	elog "Beginning with 1.5.0.10 the hotspot vm can use epoll"
 	elog "The epoll-based implementation of SelectorProvider is not selected by"
 	elog "default."

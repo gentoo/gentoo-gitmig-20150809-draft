@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.16.ebuild,v 1.4 2007/10/12 00:14:43 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.16.ebuild,v 1.5 2007/12/16 21:08:51 caster Exp $
 
 inherit eutils pax-utils java-vm-2
 
@@ -16,19 +16,21 @@ LICENSE="sun-bcla-java-vm-1.4.2"
 KEYWORDS="-* x86"
 # pre stripped
 RESTRICT="fetch strip"
-IUSE="X alsa nsplugin"
+IUSE="X alsa nsplugin odbc"
 
 DEPEND=""
 
-RDEPEND="alsa? ( media-libs/alsa-lib )
+RDEPEND="net-libs/libnet
+	alsa? ( media-libs/alsa-lib )
 	X? (
-		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXi
 		x11-libs/libXp
-		x11-libs/libXt
 		x11-libs/libXtst
-	)"
+		x11-libs/libXt
+		x11-libs/libX11
+	)
+	odbc? ( dev-db/unixODBC )"
 
 DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=j2re-${MY_PV}-oth-JPR&SiteId=JSC&TransactionId=noreg"
 
@@ -82,7 +84,7 @@ src_install() {
 
 	pax-mark srpm $(list-paxables "${D}"/opt/${P}/bin/*)
 
-	dodoc CHANGES COPYRIGHT README LICENSE THIRDPARTYLICENSEREADME.txt || die
+	dodoc CHANGES COPYRIGHT README THIRDPARTYLICENSEREADME.txt || die
 	dohtml Welcome.html ControlPanel.html || die
 
 	if use nsplugin; then
@@ -115,15 +117,5 @@ src_install() {
 	domenu "${T}/sun_java-jre.desktop"
 
 	set_java_env
-}
-
-pkg_postinst () {
-	# Set as default VM if none exists
-	java-vm-2_pkg_postinst
-
-	if ! use X; then
-		echo
-		ewarn "Some parts of Sun's JDK require X11 libraries to be installed."
-		ewarn "Be careful which Java libraries you attempt to use."
-	fi
+	java-vm_revdep-mask
 }
