@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libiptcdata
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/ChangeLog,v 1.9 2007/12/15 19:20:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/ChangeLog,v 1.10 2007/12/16 17:48:49 nixnut Exp $
+
+  16 Dec 2007; nixnut <nixnut@gentoo.org> libiptcdata-1.0.2.ebuild:
+  Added ~ppc
 
   15 Dec 2007; Markus Rothe <corsair@gentoo.org> libiptcdata-1.0.2.ebuild:
   Stable on ppc64; 199799
