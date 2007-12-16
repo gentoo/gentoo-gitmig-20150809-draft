@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.30 2007/12/16 01:04:50 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.31 2007/12/16 01:20:13 sbriesen Exp $
+
+*exiv2-0.15-r1 (16 Dec 2007)
+*exiv2-0.13-r1 (16 Dec 2007)
+
+  16 Dec 2007; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/CVE-2007-6353.diff, +exiv2-0.13-r1.ebuild, +exiv2-0.15-r1.ebuild:
+  added patch against integer overflow (see bug #202351).
 
   16 Dec 2007; Stefan Briesenick <sbriesen@gentoo.org> -exiv2-0.14.ebuild:
   removed old version
