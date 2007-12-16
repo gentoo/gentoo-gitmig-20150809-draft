@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.16 2007/10/19 14:55:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.17 2007/12/16 11:12:06 caster Exp $
+
+  16 Dec 2007; Vlastimil Babka <caster@gentoo.org> jdk-1.6.0.ebuild:
+  Add ibm-jdk-bin-1.6 to jdk-1.6 alternatives.
 
   19 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org> jdk-1.6.0.ebuild:
   amd64 stable, bug #194711
