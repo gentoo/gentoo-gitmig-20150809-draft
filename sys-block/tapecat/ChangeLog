@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/tapecat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tapecat/ChangeLog,v 1.3 2007/12/14 17:28:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tapecat/ChangeLog,v 1.4 2007/12/16 10:54:17 drac Exp $
+
+  16 Dec 2007; Samuli Suominen <drac@gentoo.org> tapecat-1.0.0.ebuild:
+  amd64 stable wrt #202251
 
   14 Dec 2007; nixnut <nixnut@gentoo.org> tapecat-1.0.0.ebuild:
   Stable on ppc wrt bug 202251
