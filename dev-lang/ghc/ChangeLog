@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.144 2007/12/13 15:58:31 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.145 2007/12/16 18:36:39 nixnut Exp $
+
+  16 Dec 2007; nixnut <nixnut@gentoo.org> ghc-6.6.1.ebuild:
+  Stable on ppc wrt bug 201984
 
   13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> files/ghc-updater,
   ghc-6.2.2.ebuild, ghc-6.4.2.ebuild, ghc-6.6.ebuild, ghc-6.6.1.ebuild:
