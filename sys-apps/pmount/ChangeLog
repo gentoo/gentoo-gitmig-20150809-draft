@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.48 2007/12/16 11:06:22 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.49 2007/12/16 13:04:05 nixnut Exp $
+
+  16 Dec 2007; nixnut <nixnut@gentoo.org> pmount-0.9.16.ebuild:
+  Stable on ppc wrt bug 202150
 
   16 Dec 2007; Samuli Suominen <drac@gentoo.org> pmount-0.9.16.ebuild:
   amd64 stable and fix test suite wrt #202150
