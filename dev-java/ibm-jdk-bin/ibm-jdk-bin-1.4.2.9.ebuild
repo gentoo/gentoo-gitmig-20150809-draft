@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.9.ebuild,v 1.5 2007/08/12 14:29:16 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.9.ebuild,v 1.6 2007/12/16 19:52:57 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils versionator
@@ -64,24 +64,24 @@ SRC_URI="x86? ( ${X86_JDK_DIST} )
 		amd64? ( ${AMD64_JAVACOMM_DIST} )
 		ppc? ( ${PPC_JAVACOMM_DIST} )
 		ppc64? ( ${PPC64_JAVACOMM_DIST} )
-		)"
+	)"
 
 LICENSE="IBM-J1.4"
 SLOT="1.4"
 KEYWORDS="-* amd64 ppc ppc64 x86"
 IUSE="X alsa doc examples javacomm nsplugin"
 
-RDEPEND="
+RDEPEND="x86? ( net-libs/libnet )
 		=virtual/libstdc++-3.3
 		alsa? ( media-libs/alsa-lib )
 		X? (
-			x11-libs/libXt
-			x11-libs/libX11
-			x11-libs/libXtst
-			x11-libs/libXp
 			x11-libs/libXext
 			x11-libs/libXi
 			x11-libs/libXmu
+			x11-libs/libXp
+			x11-libs/libXtst
+			x11-libs/libXt
+			x11-libs/libX11
 		)
 		x86? ( nsplugin? ( =x11-libs/gtk+-1* =dev-libs/glib-1* ) )
 		doc? ( =dev-java/java-sdk-docs-1.4.2* )"
@@ -132,7 +132,7 @@ src_install() {
 	# javaws is on x86 only
 	if use x86; then
 		# The javaws execution script is 777 why?
-		chmod 0755 ${S}/jre/javaws/javaws
+		chmod 0755 "${S}"/jre/javaws/javaws
 
 		# bug #147259
 		dosym ../jre/javaws/javaws /opt/${P}/bin/javaws
@@ -141,22 +141,19 @@ src_install() {
 
 	# Copy all the files to the designated directory
 	dodir /opt/${P}
-	cp -pR ${S}/{bin,jre,lib,include} ${D}opt/${P}/
+	cp -pR "${S}"/{bin,jre,lib,include,src.jar} "${D}"/opt/${P}/
 
 	dodir /opt/${P}/share
 	if use examples; then
-		cp -pPR ${S}/demo ${D}opt/${P}/share/
+		cp -pPR "${S}"/demo "${D}"/opt/${P}/share/
 	fi
-
-	cp -pPR ${S}/src.jar "${D}/opt/${P}/"
-	dosym "../src.jar" /opt/${P}/share
 
 	# setting the ppc stuff
 	if use ppc; then
 		dosed s:/proc/cpuinfo:/etc//cpuinfo:g /opt/${P}/jre/bin/libjitc.so
 		dosed s:/proc/cpuinfo:/etc//cpuinfo:g /opt/${P}/jre/bin/libjitc_g.so
 		insinto /etc
-		doins ${FILESDIR}/cpuinfo
+		doins "${FILESDIR}/cpuinfo"
 	fi
 
 	if use x86 && use nsplugin; then
@@ -167,39 +164,11 @@ src_install() {
 		fi
 
 		install_mozilla_plugin /opt/${P}/jre/bin/${plugin}
-	elif use x86; then
-		rm ${D}/opt/${P}/jre/bin/libjavaplugin*.so
-	fi
-
-	if ! use alsa; then
-		rm ${D}/opt/${P}/jre/bin/libjsoundalsa.so \
-			|| eerror "${D}/opt/${P}/jre/bin/libjsoundalsa.so not found"
 	fi
 
 	dohtml -a html,htm,HTML -r docs
-	dodoc ${S}/docs/COPYRIGHT
+	dodoc "${S}"/docs/COPYRIGHT
 
 	set_java_env
-}
-
-pkg_postinst() {
-	java-vm-2_pkg_postinst
-
-	if ! use X; then
-		ewarn
-		ewarn "You have not enabled the X useflag.  It is possible that"
-		ewarn "you do not have an X server installed.  Please note that"
-		ewarn "some parts of the IBM JDK require an X server to properly"
-		ewarn "function.  Be careful which Java libraries you attempt to"
-		ewarn "use with your installation."
-		ewarn
-	fi
-	elog ""
-	elog "Starting with 1.4.2.8 demos are installed only with USE=examples"
-	elog ""
-	elog "Starting with 1.4.2.8 the src.jar is installed to the standard"
-	elog "location. It is still symlinked to the old location (/opt/${P}/share)"
-	elog "but it will be removed if there will ever be a version bump."
-	elog "See https://bugs.gentoo.org/show_bug.cgi?id=2241"
-	elog "for more details."
+	java-vm_revdep-mask
 }

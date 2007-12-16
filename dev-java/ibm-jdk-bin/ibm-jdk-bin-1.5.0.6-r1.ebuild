@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.6-r1.ebuild,v 1.1 2007/12/12 15:10:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.6-r1.ebuild,v 1.2 2007/12/16 19:52:57 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -68,25 +68,27 @@ SRC_URI="x86? ( ${X86_JDK_DIST} )
 LICENSE="IBM-J1.5"
 KEYWORDS="-* amd64 ppc ppc64 x86"
 RESTRICT="fetch"
-IUSE="X alsa doc examples javacomm nsplugin"
+IUSE="X alsa doc examples javacomm nsplugin odbc"
 
-RDEPEND="
+RDEPEND="x86? ( net-libs/libnet )
 		=virtual/libstdc++-3.3
-		X? ( x11-libs/libXt
-			x11-libs/libX11
-			x11-libs/libXtst
-			x11-libs/libXp
+		X? (
 			x11-libs/libXext
+			x11-libs/libXft
 			x11-libs/libXi
 			x11-libs/libXmu
-			x11-libs/libXft
-			)
+			x11-libs/libXp
+			x11-libs/libXtst
+			x11-libs/libXt
+			x11-libs/libX11
+		)
 		alsa? ( media-libs/alsa-lib )
 		doc? ( =dev-java/java-sdk-docs-1.5.0* )
 		nsplugin? (
 			x86? ( =x11-libs/gtk+-2* =x11-libs/gtk+-1* )
 			ppc? ( =x11-libs/gtk+-1* )
-		)"
+		)
+		odbc? ( dev-db/unixODBC )"
 DEPEND=""
 
 QA_EXECSTACK_amd64="opt/${P}/jre/bin/libjclscar_23.so
@@ -217,22 +219,12 @@ src_compile() { :; }
 src_install() {
 	# Copy all the files to the designated directory
 	dodir /opt/${P}
-	cp -pR "${S}"/{bin,jre,lib,include} "${D}/opt/${P}/"
+	cp -pR "${S}"/{bin,jre,lib,include,src.jar} "${D}/opt/${P}/"
 
 	dodir /opt/${P}/share
 	if use examples; then
 		cp -pPR "${S}/demo" "${D}/opt/${P}/share/"
 	fi
-
-	cp -pPR "${S}/src.jar" "${D}/opt/${P}/"
-
-	# setting the ppc stuff
-	#if use ppc; then
-	#	dosed s:/proc/cpuinfo:/etc//cpuinfo:g /opt/${P}/jre/bin/libjitc.so
-	#	dosed s:/proc/cpuinfo:/etc//cpuinfo:g /opt/${P}/jre/bin/libjitc_g.so
-	#	insinto /etc
-	#	doins ${FILESDIR}/cpuinfo
-	#fi
 
 	local x86plugin=libjavaplugin_ojigtk2.so
 	local ppcplugin=libjavaplugin_oji.so
@@ -243,8 +235,6 @@ src_install() {
 		plugin=${x86plugin}
 	elif use ppc; then
 		plugin=${ppcplugin}
-	#	rm "${jrebindest}/${x86plugin}" "${jrebindest}/libjavaplugin_nscpgtk2.so" || \
-	#		eerror "Failed to delete gtk2 javaplugin."
 	fi
 
 	plugin=/opt/${P}/jre/bin/${plugin}
@@ -252,35 +242,12 @@ src_install() {
 	if use x86 || use ppc; then
 		if use nsplugin; then
 			install_mozilla_plugin ${plugin}
-		else
-			rm "${jrebindest}/*javaplugin*.so" || \
-				eerror "Failed to delete javaplugin shared libraries"
 		fi
 	fi
-
-	use !alsa && rm "${jrebindest}/libjsoundalsa.so"
 
 	dohtml -a html,htm,HTML -r docs
 	dodoc "${S}/COPYRIGHT"
 
 	set_java_env
-}
-
-pkg_postinst() {
-	java-vm-2_pkg_postinst
-	if ! use X; then
-		echo
-		ewarn "You're not using X so its possible that you dont have"
-		ewarn "a X server installed, please read the following warning: "
-		ewarn "Some parts of IBM JDK require XFree86 to be installed."
-		ewarn "Be careful which Java libraries you attempt to use."
-	fi
-
-	elog ""
-	elog "Starting with 1.5.0.4-r1 demos are installed only with USE=examples"
-	elog ""
-	elog "Starting with 1.5.0.5 the src.jar is installed to the standard"
-	elog "location only (/opt/${P}/) and not /opt/${P}/share/"
-	elog "as we used to. See https://bugs.gentoo.org/show_bug.cgi?id=2241"
-	elog "for more details."
+	java-vm_revdep-mask
 }
