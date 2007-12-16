@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.4.0.ebuild,v 1.1 2007/11/04 16:57:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.4.0.ebuild,v 1.2 2007/12/16 11:30:25 drac Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tgz"
 
 LICENSE="BSD GLX SGI-B GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="virtual/opengl
@@ -18,7 +18,7 @@ RDEPEND="virtual/opengl
 DEPEND="${RDEPEND}
 	sys-apps/sed"
 
-S="${WORKDIR}"/${PN}
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
@@ -28,7 +28,8 @@ src_unpack() {
 
 src_compile(){
 	emake LD="$(tc-getCC) ${LDFLAGS}" CC="$(tc-getCC)" \
-		POPT="${CFLAGS}" M_ARCH="" || die "emake failed."
+		POPT="${CFLAGS}" M_ARCH="" AR="$(tc-getAR)" \
+		|| die "emake failed."
 }
 
 src_install() {
