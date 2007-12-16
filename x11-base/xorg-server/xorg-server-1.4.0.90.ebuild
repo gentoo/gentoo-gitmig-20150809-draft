@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90.ebuild,v 1.1 2007/12/14 07:55:38 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90.ebuild,v 1.2 2007/12/16 23:30:23 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -350,9 +350,9 @@ src_unpack() {
 	x-modular_patch_source
 
 	# Clean up for ${PV}-clean-generated-files.patch
-	pushd hw/xprint
+	pushd hw/xprint >/dev/null
 	rm -f *-wrapper.c || die
-	popd
+	popd >/dev/null
 
 	# Set up kdrive servers to build
 	if use kdrive; then

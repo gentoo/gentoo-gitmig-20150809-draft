@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.304 2007/12/14 07:55:38 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.305 2007/12/16 23:30:23 dberkholz Exp $
+
+  16 Dec 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.4.0.90.ebuild:
+  Don't print output of pushd/popd (Mike Frysinger).
 
 *xorg-server-1.4.0.90 (14 Dec 2007)
 
