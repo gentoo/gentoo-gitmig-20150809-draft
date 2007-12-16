@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXcursor
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.51 2007/12/15 15:29:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.52 2007/12/16 15:07:11 nixnut Exp $
+
+  16 Dec 2007; nixnut <nixnut@gentoo.org> libXcursor-1.1.9.ebuild:
+  Stable on ppc wrt bug 202087
 
   15 Dec 2007; Doug Klima <cardoe@gentoo.org> libXcursor-1.1.9.ebuild:
   amd64 stable wrt bug #202087
