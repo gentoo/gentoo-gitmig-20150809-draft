@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/fgl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.25 2007/12/13 17:48:22 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.26 2007/12/16 18:53:05 nixnut Exp $
+
+  16 Dec 2007; nixnut <nixnut@gentoo.org> fgl-5.4.1.ebuild:
+  Stable on ppc wrt bug 201984
 
 *fgl-5.4.1.1 (13 Dec 2007)
 
