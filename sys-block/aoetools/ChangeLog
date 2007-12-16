@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/aoetools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.17 2007/12/16 09:52:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.18 2007/12/16 17:06:36 corsair Exp $
+
+  16 Dec 2007; Markus Rothe <corsair@gentoo.org> aoetools-12.ebuild:
+  Stable on ppc64; bug #202239
 
   16 Dec 2007; Samuli Suominen <drac@gentoo.org> aoetools-12.ebuild:
   amd64 stable wrt #202239
