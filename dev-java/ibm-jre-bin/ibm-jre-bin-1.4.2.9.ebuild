@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.9.ebuild,v 1.5 2007/08/12 14:35:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.9.ebuild,v 1.6 2007/12/16 20:13:03 caster Exp $
 
 inherit java-vm-2 eutils versionator
 
@@ -51,19 +51,18 @@ SLOT="1.4"
 KEYWORDS="-* amd64 ppc ppc64 x86"
 IUSE="X alsa nsplugin"
 
-RDEPEND="
+RDEPEND="x86? ( net-libs/libnet )
 	=virtual/libstdc++-3.3
 	alsa? ( media-libs/alsa-lib )
 	X? (
-		x11-libs/libXt
-		x11-libs/libX11
-		x11-libs/libXtst
-		x11-libs/libXp
 		x11-libs/libXext
 		x11-libs/libXi
 		x11-libs/libXmu
-	)
-	x86? ( nsplugin? ( =x11-libs/gtk+-1* =dev-libs/glib-1* ) )"
+		x11-libs/libXp
+		x11-libs/libXtst
+		x11-libs/libXt
+		x11-libs/libX11
+	)"
 DEPEND=""
 
 RESTRICT="fetch"
@@ -101,7 +100,7 @@ src_install() {
 	# javaws is on x86 only
 	if use x86; then
 		# The javaws execution script is 777 why?
-		chmod 0755 ${S}/jre/javaws/javaws
+		chmod 0755 "${S}"/jre/javaws/javaws
 
 		# bug #147259
 		dosym ../javaws/javaws /opt/${P}/bin/javaws
@@ -109,7 +108,7 @@ src_install() {
 
 	# Copy all the files to the designated directory
 	dodir /opt/${P}
-	cp -pR ${S}/jre/* ${D}opt/${P}/
+	cp -pR "${S}"/jre/* "${D}"/opt/${P}/
 
 	if use x86 && use nsplugin; then
 		local plugin="libjavaplugin_oji.so"
@@ -119,31 +118,11 @@ src_install() {
 		fi
 
 		install_mozilla_plugin /opt/${P}/bin/${plugin}
-	elif use x86; then
-		rm ${D}/opt/${P}/bin/libjavaplugin*.so
-	fi
-
-	if ! use alsa; then
-		rm ${D}/opt/${P}/bin/libjsoundalsa.so \
-			|| eerror "${D}/opt/${P}/bin/libjsoundalsa.so not found"
 	fi
 
 	dohtml -a html,htm,HTML -r docs
-	dodoc ${S}/docs/COPYRIGHT
+	dodoc "${S}"/docs/COPYRIGHT
 
 	set_java_env
-}
-
-pkg_postinst() {
-	java-vm-2_pkg_postinst
-
-	if ! use X; then
-		ewarn
-		ewarn "You have not enabled the X useflag.  It is possible that"
-		ewarn "you do not have an X server installed.  Please note that"
-		ewarn "some parts of the IBM JRE require an X server to properly"
-		ewarn "function.  Be careful which Java libraries you attempt to"
-		ewarn "use with your installation."
-		ewarn
-	fi
+	java-vm_revdep-mask
 }
