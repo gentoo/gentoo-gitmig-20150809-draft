@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/owfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.3 2007/12/15 16:10:06 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.4 2007/12/17 17:26:35 wschlich Exp $
+
+*owfs-2.7_p0-r2 (17 Dec 2007)
+
+  17 Dec 2007; Wolfram Schlich <wschlich@gentoo.org> +files/owfs.confd,
+  +files/owfs.initd, files/owftpd.initd, files/owhttpd.initd,
+  files/owserver.initd, +owfs-2.7_p0-r2.ebuild:
+  added owfs FUSE daemon support, small fixup for init scripts
 
 *owfs-2.7_p0-r1 (15 Dec 2007)
 
