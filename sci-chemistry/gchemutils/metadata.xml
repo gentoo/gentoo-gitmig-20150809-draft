@@ -7,8 +7,7 @@
 <name>Jeff Gardner</name>
 </maintainer>
 <longdescription lang="en">
-gchemutils provides utilities and a library containing gtk
-widgets and some C++ classes related to chemistry
+gchemutils provides several programs and widgets required by gchempaint.
 </longdescription>
 </pkgmetadata>
 
