@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p2.ebuild,v 1.1 2007/10/20 15:37:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p2.ebuild,v 1.2 2007/12/17 21:28:47 aballier Exp $
 
 inherit eutils multilib
 
@@ -58,7 +58,7 @@ src_compile() {
 
 src_install() {
 	emake COQINSTALLPREFIX="${D}" install || die
-	dodoc README CREDITS CHANGES LICENSE
+	dodoc README CREDITS CHANGES
 
 	if use ide; then
 		domenu "${FILESDIR}/coqide.desktop"

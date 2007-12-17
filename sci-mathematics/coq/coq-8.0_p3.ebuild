@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.0_p3.ebuild,v 1.7 2007/10/20 15:55:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.0_p3.ebuild,v 1.8 2007/12/17 21:28:47 aballier Exp $
 
 inherit eutils
 
@@ -70,7 +70,7 @@ src_compile() {
 
 src_install() {
 	make COQINSTALLPREFIX="${D}" install || die
-	dodoc README CREDITS CHANGES LICENSE
+	dodoc README CREDITS CHANGES
 
 	if use translator; then
 		cd "${WORKDIR}/${MY_P}-translator"
