@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3218 2007/12/17 04:17:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3219 2007/12/17 15:04:13 lack Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1787,6 +1787,7 @@ net-www/mplayerplug-in:mplayer-bin - Use binary mplayer for 32 bit codecs on amd
 net-www/mplayerplug-in:realmedia - Real Media Playback Support
 net-www/mplayerplug-in:wmp - Windows Media Playback Support
 net-www/xxv:themes - Enable more themes via x11-themes/xxv-skins
+rox-base/rox:video - Enables video thumbnails using mplayer or totem
 rox-extra/archive:ace - Enable .ace support via unace package
 rox-extra/archive:compress - Enable tar.Z and *.Z via ncompress package
 rox-extra/archive:cpio - Enable .cpio extraction via cpio package
