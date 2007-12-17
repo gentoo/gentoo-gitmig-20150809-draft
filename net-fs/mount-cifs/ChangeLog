@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/mount-cifs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/ChangeLog,v 1.4 2007/12/01 09:12:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/ChangeLog,v 1.5 2007/12/17 11:59:59 armin76 Exp $
+
+  17 Dec 2007; Raúl Porcel <armin76@gentoo.org> mount-cifs-3.0.25c.ebuild:
+  alpha/ia64/sparc stable wrt #200837
 
   01 Dec 2007; Markus Rothe <corsair@gentoo.org> mount-cifs-3.0.25c.ebuild:
   Stable on ppc64; bug #200837
