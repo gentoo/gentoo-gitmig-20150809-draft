@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.1b.ebuild,v 1.5 2007/07/13 05:52:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.1b.ebuild,v 1.6 2007/12/17 19:51:10 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -15,7 +15,7 @@ SRC_URI="http://gnunet.org/download/GNUnet-${PV}.tar.bz2"
 RESTRICT="test"
 
 IUSE="ipv6 mysql sqlite ncurses nls gtk"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.58 2007/12/17 19:47:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.59 2007/12/17 19:51:10 armin76 Exp $
+
+  17 Dec 2007; Raúl Porcel <armin76@gentoo.org> -gnunet-0.7.0e.ebuild,
+  gnunet-0.7.1b.ebuild:
+  x86 stable and remove old
 
 *gnunet-0.7.2c (17 Dec 2007)
 
