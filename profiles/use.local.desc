@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3219 2007/12/17 15:04:13 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3220 2007/12/17 16:50:37 gregkh Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1262,6 +1262,7 @@ media-video/transcode:network - Enables network streaming support
 media-video/transcode:nuv - NuppelVideo container format demuxing
 media-video/transcode:postproc - Build with ffmpeg libpostproc support
 media-video/transcode:v4l2 - Enable video4linux2 support
+media-video/undvd:css - Enables ripping of encrypted dvds
 media-video/vdr:aio - Use "all in one" patch (or its successor "liemikuutio") with much additional features
 media-video/vdr:bigpatch - Enables almost all additional features flying around on the net (including aio)
 media-video/vdr:child-protection - Enable support for the plugin vdr-pin (Protecting some recordings / channels with a PIN)
