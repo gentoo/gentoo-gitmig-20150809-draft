@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8013 2007/12/17 20:23:12 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8014 2007/12/17 21:28:15 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Petteri Räty <betelgeuse@gentoo.org> (17 Dec 2007)
+# Package.masked until builds without having tcl installed
+=dev-db/sqlite-3.5.4
 
 # Markus Ullmann <jokey@gentoo.org> (17 Dec 2007)
 # Masked for USE failure
