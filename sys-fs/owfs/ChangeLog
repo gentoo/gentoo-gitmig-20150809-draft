@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/owfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.4 2007/12/17 17:26:35 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.5 2007/12/17 17:41:51 wschlich Exp $
+
+  17 Dec 2007; Wolfram Schlich <wschlich@gentoo.org> files/owfs.confd,
+  files/owfs.initd, files/owftpd.confd, files/owftpd.initd,
+  files/owhttpd.confd, files/owhttpd.initd, files/owserver.confd,
+  files/owserver.initd:
+  change owserver port number to its IANA assigned port 4304, owhttpd and
+  owftpd now use unassigned ones from the 43xx range
 
 *owfs-2.7_p0-r2 (17 Dec 2007)
 
