@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Archive-Rar
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/ChangeLog,v 1.22 2007/12/06 15:08:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/ChangeLog,v 1.23 2007/12/17 17:20:30 drac Exp $
+
+  17 Dec 2007; Samuli Suominen <drac@gentoo.org> Archive-Rar-1.9.3.ebuild:
+  amd64 stable
 
   06 Dec 2007; Raúl Porcel <armin76@gentoo.org> Archive-Rar-1.9.3.ebuild:
   x86 stable
