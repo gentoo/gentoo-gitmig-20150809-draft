@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.2.5.ebuild,v 1.9 2007/12/11 16:51:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.2.5.ebuild,v 1.10 2007/12/17 05:23:41 robbat2 Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -68,7 +68,7 @@ showpkgdeps() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-1.5.0-symlinks.patch
 
@@ -99,7 +99,7 @@ src_install() {
 
 	doman "${WORKDIR}"/man?/*
 
-	dodoc README COPYING Documentation/SubmittingPatches
+	dodoc README Documentation/SubmittingPatches
 	if use doc ; then
 		dodoc Documentation/technical/*
 		dodir /usr/share/doc/${PF}/html
@@ -129,7 +129,6 @@ src_install() {
 }
 
 src_test() {
-	cd "${S}"
 	has_version dev-util/subversion || \
 		MY_MAKEOPTS="${MY_MAKEOPTS} NO_SVN_TESTS=YesPlease"
 	has_version app-arch/unzip || \
