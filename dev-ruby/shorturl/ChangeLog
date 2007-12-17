@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/shorturl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.1 2007/12/17 22:08:19 flameeyes Exp $
+
+*shorturl-0.8.3 (17 Dec 2007)
+
+  17 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +shorturl-0.8.3.ebuild:
+  Initial import of dev-ruby/shorturl, needed for net-irc/rbot with shorturl
+  USE flag enabled.
+
