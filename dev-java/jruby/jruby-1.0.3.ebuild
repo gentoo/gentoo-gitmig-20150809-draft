@@ -1,20 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.0.0.ebuild,v 1.4 2007/12/17 13:58:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.0.3.ebuild,v 1.1 2007/12/17 13:58:17 caleb Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit eutils java-pkg-2 java-ant-2
 
-# 1.0 < 1.0.0_rcX
-# so, we'll pretend 1.0 is actually 1.0.0
-# remove this for next release
-# TODO complain to upstream
-MY_PV="1.0"
-MY_P="${PN}-${MY_PV}"
-
 DESCRIPTION="Java based ruby interpreter implementation"
 HOMEPAGE="http://jruby.codehaus.org/"
-SRC_URI="http://dist.codehaus.org/${PN}/${PN}-src-${MY_PV}.tar.gz"
+SRC_URI="http://dist.codehaus.org/${PN}/${PN}-src-${PV}.tar.gz"
 
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
@@ -38,8 +31,6 @@ DEPEND=">=virtual/jdk-1.4
 PDEPEND="dev-ruby/rubygems
 	>=dev-ruby/rake-0.7.3
 	>=dev-ruby/rspec-1.0.4"
-
-S="${WORKDIR}/${MY_P}"
 
 RUBY_HOME=/usr/share/${PN}/lib/ruby
 SITE_RUBY=${RUBY_HOME}/site_ruby
