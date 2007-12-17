@@ -1,14 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3217 2007/12/16 21:52:31 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3218 2007/12/17 04:17:42 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 
 # Keep it sorted.
 
-app-arch/rpm:file - add magic file support
-app-arch/rpm:neon - include support for neon
 app-accessibility/festival:asterisk - adds a new command named tts_textasterisk that is required by net-misc/asterisk to communicate with the Festival server
 app-accessibility/festival:mbrola - Adds support for mbrola voices
 app-accessibility/freetts:jsapi - build Java Speech API (JSAPI) support
@@ -37,6 +35,8 @@ app-admin/webalizer:xtended - Include the 404 extension
 app-admin/webmin:webmin-minimal - Install the minimal webmin distribution
 app-arch/dump:ermt - encrypted rmt support
 app-arch/pdv:nomotif - Disable motif frontend.
+app-arch/rpm:file - add magic file support
+app-arch/rpm:neon - include support for neon
 app-backup/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
 app-backup/bacula:bacula-clientonly - Disable DB support, and just build a client
 app-backup/bacula:bacula-console - Build (GUI) console program(s)
@@ -337,8 +337,8 @@ dev-db/postgis:proj - Add the Proj library for reprojection features.
 dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/rekall:xbase - Support for the Xbase db family, covering dBase, Clipper, FoxPro, Visual dBase/Objects/FoxPro plus some older products.
 dev-db/sqlite:nothreadsafe - turn off thread safe operation of sqlite
-dev-db/sqlite:threadsafe - Enable thread safe operation of sqlite
 dev-db/sqlite:soundex - Enable the soundex function to compute soundex encodings of strings
+dev-db/sqlite:threadsafe - Enable thread safe operation of sqlite
 dev-db/tora:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
 dev-embedded/ponyprog:epiphany - Enable epiphany support
 dev-games/cegui:devil - image loading support with DevIL
@@ -470,11 +470,11 @@ dev-lang/ruby:xemacs - Add support for XEmacs
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
 dev-lang/spidermonkey:threadsafe - Build a threadsafe version of spidermonkey
 dev-lang/swi-prolog:latex - Enable ltx2htm Prolog support
+dev-lang/swig:R - Enable R support
 dev-lang/swig:chicken - Enable chicken Scheme support
 dev-lang/swig:clisp - Enable CLisp support
 dev-lang/swig:mzscheme - Enable PLT mzscheme support
 dev-lang/swig:pike - Enable Pike scripting support
-dev-lang/swig:R - Enable R support
 dev-libs/DirectFB-extra:flash - Adds support for creating SWF files using Ming
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/DirectFB:sysfs - Add support for the sysfs filesystem (requires Linux-2.6+)
@@ -940,6 +940,7 @@ media-gfx/graphicsmagick:lzw - enable LZW support
 media-gfx/graphviz:pango - Enables the rendering of the graphs using pango & cairo (with antialiasing support)
 media-gfx/gthumb:iptc - Add support for IPTC metadata
 media-gfx/gthumb:raw - Add support for raw image formats 
+media-gfx/gthumb:raw - Add support for raw image formats 
 media-gfx/gtkam:gimp - GIMP plugin from gtkam
 media-gfx/gwenview:kipi - Support for the KDE Image Plugin Interface.
 media-gfx/hugin:enblend - Pull media-gfx/enblend as a dependency
@@ -956,7 +957,6 @@ media-gfx/inkscape:plugin - enables extra plugins
 media-gfx/inkscape:postscript - Pull in dependencies needed for the postscript import extension
 media-gfx/iscan:gimp - Build a plugin for the GIMP
 media-gfx/k3d:plib - build plib-based import/export library
-media-gfx/gthumb:raw - Add support for raw image formats 
 media-gfx/kphotoalbum:raw - Add support for raw image formats
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
 media-gfx/maya:maya-shaderlibrary - Install the maya shader library
@@ -1004,8 +1004,9 @@ media-libs/sdl-mixer:timidity - Add support for timidity
 media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/sge:image - enable sdl-image support
 media-libs/speex:vorbis-psy - Enable Vorbis-style psychoacoustics
-media-libs/swfdec:soup - Enable HTTP support via libsoup
+media-libs/speex:wideband - Enable Wideband codec
 media-libs/svgalib:no-helper - Do not build the helper kernel module
+media-libs/swfdec:soup - Enable HTTP support via libsoup
 media-libs/urt:gs - Add support for postscript
 media-libs/win32codecs:real - Installs the real video codecs
 media-libs/x264-svn:mp4 - Enables mp4 encoding support
@@ -1050,11 +1051,11 @@ media-sound/amarok:mtp - Enable support for libMTP (Plays4Sure) devices access t
 media-sound/amarok:njb - Enable support for NJB (Creative) devices access through libnjb
 media-sound/amarok:real - Build with real/helix player support
 media-sound/amarok:visualization - Support visualization plugins through media-libs/libvisual
+media-sound/audacious:chardet - Try to handle non-UTF8 chinese/japanese/korean ID3 tags
 media-sound/audacity:id3tag - Enables ID3 tagging with id3tag library
 media-sound/audacity:soundtouch - Enables soundtouch library support
 media-sound/audacity:twolame - Enables twolame support (MPEG Audio Layer 2 encoder)
 media-sound/audacity:vamp - Enables vamp plugins support (Audio analysing plugins)
-media-sound/audacious:chardet - Try to handle non-UTF8 chinese/japanese/korean ID3 tags
 media-sound/banshee:boo - Use external Boo instead of the bundled one
 media-sound/banshee:daap - Build with Daap support
 media-sound/banshee:njb - Build with njb audio player support
@@ -1168,8 +1169,8 @@ media-tv/xmltv:is - Iceland tv listing grabber
 media-tv/xmltv:it - Italy tv listing grabber
 media-tv/xmltv:jp - Japan tv listing grabber
 media-tv/xmltv:na_dd - North America tv listing grabber
-media-tv/xmltv:na_icons - option for na_dd to download icons
 media-tv/xmltv:na_dtv - North America Direct TV grabber
+media-tv/xmltv:na_icons - option for na_dd to download icons
 media-tv/xmltv:nc - Caledonie Island tv listing grabber
 media-tv/xmltv:nl - Netherlands tv listing grabber
 media-tv/xmltv:nl_wolf - Netherlands alternative tv listing grabber
@@ -1409,8 +1410,8 @@ net-dialup/isdn4k-utils:ipppd - Build the (ISDN) PPP daemon for synchronous PPP 
 net-dialup/isdn4k-utils:isdnlog - Install the isdn log system
 net-dialup/isdn4k-utils:mschap - Enable Microsoft chap authentication for ipppd
 net-dialup/ivcall:softfax - Enables soft fax support
-net-dialup/mgetty:fidonet - Enables FidoNet support
 net-dialup/mgetty:fax - Enables fax support
+net-dialup/mgetty:fidonet - Enables FidoNet support
 net-dialup/misdn:ecaggressive - Make the selected echo canceller a little more aggressive
 net-dialup/misdn:eckb1 - Use the KB1 echo canceller
 net-dialup/misdn:ecmark2 - Use the MARK2 echo canceller
@@ -2026,9 +2027,9 @@ sys-freebsd/freebsd-usbin:suid - Enable setuid root programs
 sys-fs/clvm:nocman - Allow users to build clvm without cman support and with gulm support
 sys-fs/cryptsetup-luks:dynamic - Build cryptsetup-luks dynamically
 sys-fs/cryptsetup:dynamic - Build cryptsetup dynamically
+sys-fs/ecryptfs-utils:gpg - Enable gnupg key module.
 sys-fs/ecryptfs-utils:openssl - Enable OpenSSL key module.
 sys-fs/ecryptfs-utils:pkcs11 - Enable PKCS#11 (Smartcards) key module.
-sys-fs/ecryptfs-utils:gpg - Enable gnupg key module.
 sys-fs/ecryptfs-utils:suid - Install the binary SUID root, allowing users to mount eCryptfs filesystems with potential security risks
 sys-fs/evms:hb - Enable support for heartbeat-1
 sys-fs/evms:hb2 - Enable support for heartbeat-2
@@ -2042,8 +2043,8 @@ sys-fs/lvm2:nolvm1 - Allow users to build lvm2 without lvm1 support
 sys-fs/lvm2:nolvmstatic - Allow users to build lvm2 dynamically
 sys-fs/ntfs3g:suid - Install the binary SUID root, allowing users to mount ntfs-3g filesystems with potential security risks
 sys-fs/ntfsprogs:fuse - Build a FUSE module
-sys-fs/owfs:fuse - Enable building the FUSE-based OWFS client (owfs)
 sys-fs/owfs:ftpd - Enable building the OWFS FTP server (owftpd)
+sys-fs/owfs:fuse - Enable building the FUSE-based OWFS client (owfs)
 sys-fs/owfs:httpd - Enable building the OWFS web server (owhttpd)
 sys-fs/owfs:parport - Enable support for the DS1410E parallel port adapter
 sys-fs/owfs:server - Enable building the OWFS server (owserver)
@@ -2170,10 +2171,10 @@ www-servers/apache:mpm-peruser - (experimental) Peruser MPM - child processes ha
 www-servers/apache:mpm-prefork - Prefork MPM - non-threaded, forking MPM - similar manner to Apache 1.3
 www-servers/apache:mpm-threadpool - (experimental) Threadpool MPM - keeps pool of idle threads to handle requests
 www-servers/apache:mpm-worker - Worker MPM - hybrid multi-process multi-thread MPM
-www-servers/apache:sni - Enable TLS Server Name Indication (SNI) - EXPERIMENTAL!
-www-servers/apache:suexec - Install suexec with apache
 www-servers/apache:no-suexec - Don't install suexec with apache
+www-servers/apache:sni - Enable TLS Server Name Indication (SNI) - EXPERIMENTAL!
 www-servers/apache:static-modules - Build modules into apache instead of having them load at run time
+www-servers/apache:suexec - Install suexec with apache
 www-servers/cherokee:coverpage - Installs the default cherokee coverpage
 www-servers/fnord:auth - Enable HTTP authentication support
 www-servers/lighttpd:memcache - Enable memcache support for mod_cml and mod_trigger_b4_dl
