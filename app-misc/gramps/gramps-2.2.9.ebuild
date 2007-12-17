@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-2.2.9.ebuild,v 1.1 2007/12/13 19:19:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-2.2.9.ebuild,v 1.2 2007/12/17 07:54:27 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -49,9 +49,4 @@ src_unpack() {
 	gnome2_src_unpack
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.2.2-desktop-entry-icon.patch"
-}
-
-src_install() {
-	gnome2_src_install scrollkeeper_localstate_dir="${D}/var/lib/scrollkeeper/"
-	mv "${D}/usr/share/gramps.desktop" "${D}/usr/share/applications/gramps.desktop"
 }
