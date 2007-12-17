@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r4.ebuild,v 1.1 2007/11/19 16:42:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r5.ebuild,v 1.1 2007/12/17 22:13:09 flameeyes Exp $
 
 inherit ruby gems eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.linuxbrit.co.uk/rbot/"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS=""
-IUSE="spell aspell timezone"
+IUSE="spell aspell timezone translator shorturl"
 ILINGUAS="zh ru nl de fr it en ja"
 
 for lang in $ILINGUAS; do
@@ -25,7 +25,9 @@ RDEPEND=">=virtual/ruby-1.8
 	spell? (
 		aspell? ( app-text/aspell )
 		!aspell? ( app-text/ispell )
-	)"
+	)
+	translator? ( dev-ruby/mechanize )
+	shorturl? ( dev-ruby/shorturl )"
 DEPEND=""
 
 if [[ ${PV} == "9999" ]]; then
@@ -98,6 +100,9 @@ src_install() {
 			"${rbot_datadir}"/plugins/spell.rb \
 			|| die "Unable to replace ispell with aspell."
 	fi
+
+	use translator || disable_rbot_plugin translator
+	use shorturl || disable_rbot_plugin shortenurls
 
 	# This is unfortunately pretty manual at the moment, but it's just
 	# to avoid having to run special scripts to package new versions
