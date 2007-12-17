@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.75 2007/08/13 22:34:35 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.76 2007/12/17 20:41:44 jer Exp $
+
+  17 Dec 2007; Jeroen Roovers <jer@gentoo.org> maildrop-2.0.4.ebuild:
+  Stable for HPPA (bug #202591).
 
   13 Aug 2007; Fernando J. Pereda <ferdy@gentoo.org> maildrop-2.0.4.ebuild:
   Do not use bindnow-flags
