@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/rsibreak
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.22 2007/07/22 10:38:08 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.23 2007/12/17 20:59:47 philantrop Exp $
+
+  17 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  rsibreak-0.8.0.ebuild:
+  Marked stable on amd64 as per bug 190625.
 
   22 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
   rsibreak-0.7.0.ebuild, rsibreak-0.8.0.ebuild:
