@@ -1,6 +1,13 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.23 2007/11/16 15:11:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.24 2007/12/17 18:00:58 aballier Exp $
+
+*ocamlnet-2.2.9-r1 (17 Dec 2007)
+
+  17 Dec 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/build_w_camlp5.dpatch, +ocamlnet-2.2.9-r1.ebuild:
+  Import a patch from Stefano Zacchiroli (debian) to force building with
+  camlp5 now that is has findlib support, this fixes the build with ocaml 3.10
 
   16 Nov 2007; Steve Dibb <beandog@gentoo.org> ocamlnet-2.2.8.1.ebuild:
   amd64 stable, bug 195535
