@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.34 2007/12/16 16:49:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.35 2007/12/17 11:07:03 armin76 Exp $
+
+  17 Dec 2007; Raúl Porcel <armin76@gentoo.org> exiv2-0.13-r1.ebuild:
+  alpha/ia64 stable wrt security #202351
 
   16 Dec 2007; Ferris McCormick <fmccor@gentoo.org> exiv2-0.13-r1.ebuild:
   Sparc stable, security Bug #202351.
