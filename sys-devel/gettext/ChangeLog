@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.160 2007/12/16 17:05:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.161 2007/12/17 01:24:14 jer Exp $
+
+  17 Dec 2007; Jeroen Roovers <jer@gentoo.org> gettext-0.17.ebuild:
+  Stable for HPPA (bug #202168).
 
   16 Dec 2007; Markus Rothe <corsair@gentoo.org> gettext-0.17.ebuild:
   Stable on ppc64; bug #202168
