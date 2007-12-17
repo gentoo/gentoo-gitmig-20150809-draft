@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/detox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.14 2007/02/21 22:26:39 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.15 2007/12/17 18:09:33 armin76 Exp $
+
+*detox-1.2.0_rc3 (17 Dec 2007)
+*detox-1.1.1-r2 (17 Dec 2007)
+
+  17 Dec 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/1.1.1-install-permissions-fix.patch, +detox-1.1.1-r2.ebuild,
+  +detox-1.2.0_rc3.ebuild:
+  Version bump wrt #191559 and fix bug #184548
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
