@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.908 2007/12/17 04:50:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.909 2007/12/17 13:19:48 remi Exp $
+
+  17 Dec 2007; Rémi Cardona <remi@gentoo.org> package.mask:
+  mask =x11-drivers/xf86-video-i810-2.2.0
 
   17 Dec 2007; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   git-1.5.4_rc0 is for testing only, not production usage.
