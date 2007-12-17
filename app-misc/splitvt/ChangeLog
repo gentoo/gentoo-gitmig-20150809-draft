@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/splitvt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.17 2007/02/09 07:16:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.18 2007/12/17 17:11:44 armin76 Exp $
+
+*splitvt-1.6.6 (17 Dec 2007)
+
+  17 Dec 2007; Raúl Porcel <armin76@gentoo.org> +splitvt-1.6.6.ebuild:
+  Version bump wrt #190727 and add ~ia64 wrt #202177
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
