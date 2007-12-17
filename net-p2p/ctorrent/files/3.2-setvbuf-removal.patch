@@ -1,0 +1,10 @@
+--- btfiles.cpp.orig	2007-12-12 15:01:51.000000000 +0000
++++ btfiles.cpp	2007-12-12 15:02:59.000000000 +0000
+@@ -126,7 +126,6 @@
+         return -1;  // caller prints error
+     }else return -1;  // caller prints error
+   }
+-  setvbuf(pbf->bf_fp, m_buffer, _IOFBF, DEFAULT_SLICE_SIZE);
+ 
+   pbf->bf_flag_opened = 1;
+   pbf->bf_flag_readonly = iotype ? 0 : 1;
