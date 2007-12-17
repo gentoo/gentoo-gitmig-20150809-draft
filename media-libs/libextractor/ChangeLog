@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libextractor
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.48 2007/10/14 16:02:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.49 2007/12/17 19:45:09 armin76 Exp $
+
+*libextractor-0.5.18a (17 Dec 2007)
+
+  17 Dec 2007; Raúl Porcel <armin76@gentoo.org>
+  -libextractor-0.5.16.ebuild, -libextractor-0.5.18.ebuild,
+  +libextractor-0.5.18a.ebuild:
+  Version bump, remove old
 
   14 Oct 2007; Markus Rothe <corsair@gentoo.org> libextractor-0.5.18.ebuild:
   Added ~ppc64; bug #195605
