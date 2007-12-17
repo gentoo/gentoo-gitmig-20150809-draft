@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/gnus-5.10.ebuild,v 1.7 2007/11/26 07:35:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/gnus-5.10.ebuild,v 1.8 2007/12/17 07:39:29 ulm Exp $
 
 inherit versionator
 
@@ -8,7 +8,7 @@ DESCRIPTION="Virtual for the Gnus newsreader"
 HOMEPAGE="http://www.gentoo.org/proj/en/lisp/emacs/"
 SRC_URI=""
 
-LICENSE="GPL-2"
+LICENSE=""
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
