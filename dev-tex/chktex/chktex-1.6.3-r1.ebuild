@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/chktex-1.6.3-r1.ebuild,v 1.4 2007/10/26 20:13:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/chktex-1.6.3-r1.ebuild,v 1.5 2007/12/18 19:09:04 jer Exp $
 
 DESCRIPTION="Checks latex source for common mistakes"
 HOMEPAGE="http://baruch.ev-en.org/proj/chktex/"
@@ -8,7 +8,7 @@ SRC_URI="http://baruch.ev-en.org/proj/chktex/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug doc"
 
 DEPEND="virtual/latex-base
