@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ersatz-emacs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ChangeLog,v 1.3 2007/10/12 21:28:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ChangeLog,v 1.4 2007/12/18 21:45:45 ulm Exp $
+
+  18 Dec 2007; Ulrich Mueller <ulm@gentoo.org> ersatz-emacs-20060515.ebuild:
+  Add ~amd64 keyword, bug #202428.
 
   12 Oct 2007; Ulrich Mueller <ulm@gentoo.org> ersatz-emacs-20060515.ebuild:
   Blocker against app-editors/easyedit, since both install /usr/bin/ee.

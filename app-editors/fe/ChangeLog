@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/fe
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fe/ChangeLog,v 1.3 2007/12/16 10:09:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fe/ChangeLog,v 1.4 2007/12/18 21:46:03 ulm Exp $
+
+  18 Dec 2007; Ulrich Mueller <ulm@gentoo.org> fe-1.8.ebuild:
+  Add ~amd64 keyword, bug #202428.
 
 *fe-1.8 (16 Dec 2007)
 
