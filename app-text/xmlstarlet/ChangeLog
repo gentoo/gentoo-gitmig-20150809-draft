@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xmlstarlet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.12 2007/03/14 07:26:38 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.13 2007/12/18 08:19:41 opfer Exp $
+
+  18 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  xmlstarlet-1.0.1-r1.ebuild:
+  stable x86, bug 202642
 
 *xmlstarlet-1.0.1-r1 (14 Mar 2007)
 
