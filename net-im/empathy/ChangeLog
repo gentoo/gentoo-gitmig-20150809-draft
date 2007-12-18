@@ -1,6 +1,12 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.12 2007/12/04 15:40:14 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.13 2007/12/18 12:51:27 coldwind Exp $
+
+*empathy-0.21.4 (18 Dec 2007)
+
+  18 Dec 2007; Santiago M. Mola <coldwind@gentoo.org>
+  +empathy-0.21.4.ebuild:
+  Version bump.
 
 *empathy-0.21.3 (04 Dec 2007)
 
