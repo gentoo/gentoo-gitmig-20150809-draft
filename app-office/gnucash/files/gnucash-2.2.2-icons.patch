@@ -1,0 +1,39 @@
+--- src/pixmaps/Makefile.am	2007-12-18 11:25:57.000000000 +0100
++++ src/pixmaps/Makefile.am	2007-12-18 11:33:13.000000000 +0100
+@@ -36,10 +36,31 @@
+   stock_split_title.png \
+   stock_split_watermark.png
+ 
+-gncicondir = ${datadir}/pixmaps
+-gncicon_DATA = gnucash-icon-16x16.png \
+-  gnucash-icon-32x32.png \
+-  gnucash-icon-48x48.png
++gncnormalicondir = ${datadir}/icons/hicolor/48x48/apps
++gncnormalicon_DATA = 48x48/gnucash-icon.png
++48x48/gnucash-icon.png: gnucash-icon-48x48.png
++	-mkdir 48x48
++	cp gnucash-icon-48x48.png 48x48/gnucash-icon.png
++
++gncmediumicondir = ${datadir}/icons/hicolor/32x32/apps
++gncmediumicon_DATA = 32x32/gnucash-icon.png
++32x32/gnucash-icon.png: gnucash-icon-32x32.png
++	-mkdir 32x32
++	cp gnucash-icon-32x32.png 32x32/gnucash-icon.png
++
++gncsmallicondir = ${datadir}/icons/hicolor/16x16/apps
++gncsmallicon_DATA = 16x16/gnucash-icon.png
++16x16/gnucash-icon.png: gnucash-icon-16x16.png
++	-mkdir 16x16
++	cp gnucash-icon-16x16.png 16x16/gnucash-icon.png
++
++gncsvgicondir = ${datadir}/icons/hicolor/scalable/apps
++gncsvgicon_DATA = gnucash-icon.svg
+ 
+ EXTRA_DIST = \
+-  ${gncpixmap_DATA} ${gncicon_DATA}
++  ${gncpixmap_DATA} \
++  ${gncnormalicon_DATA} ${gncmediumicon_DATA} ${gncsmallicon_DATA} \
++  ${gncsvgicon_DATA}
++
++clean-local:
++	-rm -rf 48x48 32x32 16x16

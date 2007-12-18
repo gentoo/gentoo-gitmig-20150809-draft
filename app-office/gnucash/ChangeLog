@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.143 2007/10/25 06:50:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.144 2007/12/18 12:23:38 tove Exp $
+
+*gnucash-2.2.2 (18 Dec 2007)
+
+  18 Dec 2007; Torsten Veller <tove@gentoo.org>
+  +files/gnucash-2.2.2-icons.patch, +gnucash-2.2.2.ebuild:
+  Version bump. Thanks to Alex Rostovtsev for the icons patch (#199730).
+  Change goffice dependency because gnucash works with >=goffice-0.5.1 (#191555).
 
   25 Oct 2007; Torsten Veller <tove@gentoo.org> gnucash-2.2.1-r1.ebuild:
   Change slib dependency
