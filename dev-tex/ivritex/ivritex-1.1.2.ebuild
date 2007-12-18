@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ivritex-1.1.2.ebuild,v 1.8 2007/10/26 20:08:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ivritex-1.1.2.ebuild,v 1.9 2007/12/18 20:34:34 jer Exp $
 
 inherit latex-package
 
@@ -15,10 +15,10 @@ LICENSE="LPPL-1.2"
 
 SLOT="0"
 DEPEND="virtual/tetex"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~sparc x86"
 
 src_install () {
 
-	make TEX_ROOT=${D}/usr/share/texmf install || die
+	make TEX_ROOT="${D}"/usr/share/texmf install || die
 
 }
