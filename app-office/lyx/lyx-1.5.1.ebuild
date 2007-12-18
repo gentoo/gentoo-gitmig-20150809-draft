@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.1.ebuild,v 1.3 2007/10/26 20:19:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.1.ebuild,v 1.4 2007/12/18 22:23:03 jer Exp $
 
 inherit qt4 eutils flag-o-matic font
 
@@ -20,7 +20,7 @@ SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86" # dev-tex/ivritex
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86" # dev-tex/ivritex
 IUSE="cups debug nls linguas_he tetex"
 RESTRICT="test"
 
