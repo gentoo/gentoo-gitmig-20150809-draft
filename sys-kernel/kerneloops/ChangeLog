@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/kerneloops
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/ChangeLog,v 1.1 2007/12/18 17:23:33 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/ChangeLog,v 1.2 2007/12/18 22:22:51 gregkh Exp $
+
+*kerneloops-0.5-r1 (18 Dec 2007)
+
+  18 Dec 2007; Greg Kroah-Hartman <gregkh@gentoo.org> +files/kerneloops,
+  +kerneloops-0.5-r1.ebuild:
+  added a init.d file to start this up automatically.
+  
+  Note that you MUST edit the /etc/kerneloops.org file by hand for this to work
+  properly, and that you might be sending data to the world that you don't
+  realize!
+  
+  USE AT YOUR OWN RISK!!!
 
 *kerneloops-0.5 (18 Dec 2007)
 
