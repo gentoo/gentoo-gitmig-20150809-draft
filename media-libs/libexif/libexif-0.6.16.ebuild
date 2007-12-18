@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.16.ebuild,v 1.11 2007/12/18 17:31:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.16.ebuild,v 1.12 2007/12/18 17:33:40 eradicator Exp $
 
 inherit eutils libtool
 
@@ -22,8 +22,8 @@ RDEPEND="nls? ( virtual/libintl )"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.6.13-pkgconfig.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-0.6.13-pkgconfig.patch"
 
 	# We do this for sane .so versioning on FreeBSD
 	elibtoolize
@@ -49,7 +49,7 @@ src_install() {
 	dodoc ChangeLog README
 
 	# installs a blank directory for whatever broken reason
-	use nls || rm -rf ${D}usr/share/locale
+	use nls || rm -rf "${D}usr/share/locale"
 }
 
 pkg_postinst() {
