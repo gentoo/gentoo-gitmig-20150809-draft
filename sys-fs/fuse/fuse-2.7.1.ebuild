@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.7.1.ebuild,v 1.1 2007/10/18 16:03:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.7.1.ebuild,v 1.2 2007/12/18 10:09:00 caster Exp $
 
 inherit linux-mod eutils libtool
 
@@ -16,7 +16,7 @@ PDEPEND="kernel_FreeBSD? ( sys-fs/fuse4bsd )"
 
 pkg_setup() {
 	if use kernel_linux ; then
-		if kernel_is ge 2 6 23; then
+		if kernel_is ge 2 6 24; then
 			CONFIG_CHECK="FUSE_FS"
 			FUSE_FS_ERROR="You need to build the FUSE module from the kernel source, because your kernel is too new"
 		else

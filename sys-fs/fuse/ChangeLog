@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.109 2007/12/17 22:37:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.110 2007/12/18 10:09:00 caster Exp $
+
+  18 Dec 2007; Vlastimil Babka <caster@gentoo.org> fuse-2.7.1.ebuild:
+  Allow the kernel module in 2.7.1 to be compiled with kernel 2.6.23 because
+  it's supported and working. Bug #200053.
 
 *fuse-2.7.2 (17 Dec 2007)
 
