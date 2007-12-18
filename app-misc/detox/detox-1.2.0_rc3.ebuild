@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/detox-1.2.0_rc3.ebuild,v 1.2 2007/12/17 18:10:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/detox-1.2.0_rc3.ebuild,v 1.3 2007/12/18 21:33:12 ulm Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
 	rm -f "${D}/etc/detoxrc.sample"
 	dodoc README CHANGES
