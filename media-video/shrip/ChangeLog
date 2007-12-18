@@ -1,6 +1,11 @@
 # ChangeLog for media-video/shrip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/shrip/ChangeLog,v 1.1 2007/04/11 13:26:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/shrip/ChangeLog,v 1.2 2007/12/18 15:09:38 beandog Exp $
+
+*shrip-0.4.0 (18 Dec 2007)
+
+  18 Dec 2007; Steve Dibb <beandog@gentoo.org> +shrip-0.4.0.ebuild:
+  Version bump, bug 196661
 
 *shrip-0.3.0 (11 Apr 2007)
 
