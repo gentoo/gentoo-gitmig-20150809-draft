@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/knetdockapp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetdockapp/ChangeLog,v 1.4 2007/06/16 19:01:18 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetdockapp/ChangeLog,v 1.5 2007/12/18 07:00:05 philantrop Exp $
+
+*knetdockapp-0.82.1 (18 Dec 2007)
+
+  18 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org> metadata.xml,
+  +knetdockapp-0.82.1.ebuild:
+  Version bump as per the author's request. This release fixes amd64
+  compatibility. KDE herd takes over maintainership because Roy retired.
 
   16 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
   knetdockapp-0.67.5.3.ebuild:
