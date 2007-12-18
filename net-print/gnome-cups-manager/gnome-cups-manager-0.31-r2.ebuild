@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.31-r2.ebuild,v 1.14 2007/09/03 02:35:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.31-r2.ebuild,v 1.15 2007/12/18 16:20:11 dang Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -67,5 +67,5 @@ src_install() {
 	gnome2_src_install
 	cd ${WORKDIR}/ubuntu/debian
 	doman gnome-cups-icon.1 gnome-cups-manager.1 gnome-cups-add.8
-	domenu gnome-cups-icon.desktop gnome-cups-manager.desktop
+	domenu gnome-cups-manager.desktop
 }
