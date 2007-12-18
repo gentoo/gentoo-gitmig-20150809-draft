@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.16.ebuild,v 1.10 2007/07/31 06:02:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.16.ebuild,v 1.11 2007/12/18 17:31:44 eradicator Exp $
 
 inherit eutils libtool
 
@@ -53,11 +53,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "If you are upgrading from a version of libexif older than 0.6.13-r2,"
-	elog "you will need to do the following to rebuild dependencies:"
-	elog "# revdep-rebuild --soname libexif.so.9"
-	elog "# revdep-rebuild --soname libexif.so.10"
-	elog ""
-	elog "Note, it is actually safe to create a symlink from libexif.so.10 to"
-	elog "libexif.so.12 if you need to during the update."
+	if has_version '<media-libs/libexif-0.6.13-r2'; then
+		elog "If you are upgrading from a version of libexif older than 0.6.13-r2,"
+		elog "you will need to do the following to rebuild dependencies:"
+		elog "# revdep-rebuild --soname libexif.so.9"
+		elog "# revdep-rebuild --soname libexif.so.10"
+		elog ""
+		elog "Note, it is actually safe to create a symlink from libexif.so.10 to"
+		elog "libexif.so.12 if you need to during the update."
+	fi
 }
