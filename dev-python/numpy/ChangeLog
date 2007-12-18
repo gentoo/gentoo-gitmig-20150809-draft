@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.41 2007/12/07 11:14:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.42 2007/12/18 04:00:24 jer Exp $
+
+  18 Dec 2007; Jeroen Roovers <jer@gentoo.org> numpy-1.0.4.ebuild:
+  Stable for HPPA (bug #202202).
 
   07 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org> numpy-1.0.4.ebuild:
   Fixed for LDFLAGS, now adding a -shared
