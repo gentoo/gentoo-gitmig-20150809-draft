@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.171 2007/12/18 21:19:17 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.172 2007/12/18 21:25:16 jer Exp $
+
+  18 Dec 2007; Jeroen Roovers <jer@gentoo.org> syslog-ng-2.0.6.ebuild:
+  Stable for HPPA (bug #202718).
 
   18 Dec 2007; Ferris McCormick <fmccor@gentoo.org> syslog-ng-2.0.6.ebuild:
   Sparc stable, security Bug #202718, all tests good and it still starts up.
