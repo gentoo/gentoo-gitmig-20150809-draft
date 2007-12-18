@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r2.ebuild,v 1.3 2007/11/20 14:46:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r2.ebuild,v 1.4 2007/12/18 10:29:01 markusle Exp $
 
-inherit flag-o-matic fortran autotools
+inherit flag-o-matic fortran autotools xemacs-elisp-common
 
 DESCRIPTION="GNU Octave is a high-level language (MatLab compatible) intended for numerical computations"
 LICENSE="GPL-2"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2
 		ftp://ftp.math.uni-hamburg.de/pub/soft/math/octave/${P}.tar.bz2"
 
 SLOT="0"
-IUSE="emacs static readline zlib doc hdf5 mpi"
+IUSE="emacs static readline zlib doc hdf5 mpi xemacs"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="virtual/libc
@@ -26,7 +26,10 @@ DEPEND="virtual/libc
 	hdf5? ( sci-libs/hdf5 )
 	doc? ( virtual/latex-base )
 	mpi? ( virtual/mpi )
+	xemacs? ( virtual/xemacs )
 	!=app-text/texi2html-1.70"
+RDEPEND="${DEPEND}
+	emacs? ( virtual/emacs )"
 
 # NOTE: octave supports blas/lapack from intel but this is not open
 # source nor is it free (as in beer OR speech) Check out...
@@ -83,6 +86,11 @@ src_compile() {
 		|| die "econf failed"
 
 	emake || die "emake failed"
+
+	if use xemacs; then
+		cd "${S}/emacs"
+		xemacs-elisp-comp *.el
+	fi
 }
 
 src_install() {
@@ -90,15 +98,14 @@ src_install() {
 	if use doc; then
 		octave-install-doc || die "Octave doc install failed"
 	fi
-	if use emacs; then
+	if use emacs || use xemacs; then
 		cd emacs
 		exeinto /usr/bin
 		doexe otags || die
 		doman otags.1 || die
-		for emacsdir in /usr/share/emacs/site-lisp /usr/lib/xemacs/site-lisp; do
-			insinto ${emacsdir}
-			doins *.el || die
-		done
+		if use xemacs; then
+			xemacs-elisp-install ${PN} *.el *.elc
+		fi
 		cd ..
 	fi
 	dodir /etc/env.d || die
