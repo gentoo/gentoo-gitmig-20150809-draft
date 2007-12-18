@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.52.ebuild,v 1.6 2007/10/16 17:13:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.52.ebuild,v 1.7 2007/12/18 00:17:10 redhatter Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_install() {
 pkg_postinst() {
 	local f
 
-	find ${ROOT}/usr/bin -maxdepth 1 -type l | \
+	find "${ROOT}/usr/bin" -maxdepth 1 -type l | \
 	while read f; do
 		[[ $(readlink ${f}) == mozilla-launcher ]] || continue
 		einfo "Updating ${f} symlink to /usr/libexec/mozilla-launcher"
