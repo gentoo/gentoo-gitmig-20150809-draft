@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.50 2007/12/18 14:31:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.51 2007/12/18 14:34:19 cardoe Exp $
+
+  18 Dec 2007; Doug Klima <cardoe@gentoo.org> dmapi-2.2.8.ebuild:
+  amd64 stable wrt bug #202153
 
   18 Dec 2007; Doug Klima <cardoe@gentoo.org>
   -files/dmapi-2.2.3-LDFLAGS.patch, -dmapi-2.2.3.ebuild:
