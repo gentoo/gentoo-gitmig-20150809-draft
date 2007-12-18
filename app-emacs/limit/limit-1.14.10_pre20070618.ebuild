@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/limit-1.14.10_pre20070618.ebuild,v 1.1 2007/08/27 09:16:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/limit-1.14.10_pre20070618.ebuild,v 1.2 2007/12/18 07:59:37 opfer Exp $
 
 inherit elisp versionator
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.jpl.org/ftp/pub/m17n/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="!app-emacs/flim
