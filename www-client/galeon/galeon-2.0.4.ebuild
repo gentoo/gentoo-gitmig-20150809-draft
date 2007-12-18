@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.4.ebuild,v 1.1 2007/12/16 22:12:48 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.4.ebuild,v 1.2 2007/12/18 23:03:21 hanno Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
 HOMEPAGE="http://galeon.sourceforge.net"
@@ -35,6 +35,12 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11"
 
 DOCS="AUTHORS ChangeLog FAQ README README.ExtraPrefs THANKS TODO NEWS"
+
+src_unpack() {
+	gnome2_src_unpack
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-maketest.diff"
+}
 
 src_compile() {
 	if use xulrunner; then

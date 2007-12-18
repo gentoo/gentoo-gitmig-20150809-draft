@@ -1,6 +1,10 @@
 # ChangeLog for www-client/galeon
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.41 2007/12/16 22:12:48 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.42 2007/12/18 23:03:21 hanno Exp $
+
+  18 Dec 2007; Hanno Boeck <hanno@gentoo.org>
+  +files/galeon-2.0.4-maketest.diff, galeon-2.0.4.ebuild:
+  Fix test.
 
 *galeon-2.0.4 (15 Dec 2007)
 
