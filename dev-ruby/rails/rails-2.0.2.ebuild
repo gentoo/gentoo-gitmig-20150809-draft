@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-2.0.2.ebuild,v 1.1 2007/12/18 07:15:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-2.0.2.ebuild,v 1.2 2007/12/18 07:18:13 graaff Exp $
 
 inherit ruby gems
 
@@ -29,8 +29,8 @@ src_install() {
 	gems_src_install
 	# Rename slotted files that may clash so that eselect can handle
 	# them
-	mv ${D}/usr/bin/rails ${D}/usr/bin/rails-${PV}
-	mv ${D}/${GEMSDIR}/bin/rails ${D}/${GEMSDIR}/bin/rails-${PV}
+	mv "${D}/usr/bin/rails" "${D}/usr/bin/rails-${PV}"
+	mv "${D}/${GEMSDIR}/bin/rails" "${D}/${GEMSDIR}/bin/rails-${PV}"
 }
 
 pkg_postinst() {
@@ -39,7 +39,7 @@ pkg_postinst() {
 	# Bring users to rails 2.0.x by default when updating
 	eselect rails update 2
 
-	einfo "All database USE flags have been moved to dev-ruby/activerecord"
+	ewarn "All database USE flags have been moved to dev-ruby/activerecord"
 }
 
 pkg_postrm() {
