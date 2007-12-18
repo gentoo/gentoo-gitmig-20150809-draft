@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.89 2007/12/18 17:45:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.90 2007/12/18 20:20:48 fmccor Exp $
+
+  18 Dec 2007; Ferris McCormick <fmccor@gentoo.org>
+  libexif-0.6.16-r1.ebuild:
+  Sparc stable --- security Bug #202350 --- all tests pass.
 
 *libexif-0.6.16-r1 (18 Dec 2007)
 
