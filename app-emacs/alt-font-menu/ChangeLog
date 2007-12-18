@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/alt-font-menu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/alt-font-menu/ChangeLog,v 1.11 2007/10/08 14:30:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/alt-font-menu/ChangeLog,v 1.12 2007/12/18 11:13:23 ulm Exp $
+
+  18 Dec 2007; Ulrich Mueller <ulm@gentoo.org> alt-font-menu-0.4.ebuild:
+  Update DESCRIPTION. Stable on amd64, bug #195512.
 
   08 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   alt-font-menu-0.4.ebuild:

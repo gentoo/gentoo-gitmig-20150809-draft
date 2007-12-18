@@ -1,5 +1,5 @@
 
-;;; site-lisp configuration for alt-font-menu
+;;; alt-font-menu site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'alt-mouse-set-font "alt-font-menu"
