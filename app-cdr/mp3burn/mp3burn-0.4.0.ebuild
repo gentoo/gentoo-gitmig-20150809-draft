@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mp3burn/mp3burn-0.4.0.ebuild,v 1.1 2007/12/18 17:23:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mp3burn/mp3burn-0.4.0.ebuild,v 1.2 2007/12/18 17:26:16 eradicator Exp $
 
 IUSE=""
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i 's:mpg321:mpg123:g' mp3burn
 }
 
