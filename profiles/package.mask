@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8015 2007/12/18 03:17:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8016 2007/12/18 23:42:16 robbat2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -167,7 +167,7 @@ www-apps/viewcvs
 
 # Robin H. Johnson <robbat2@gentoo.org> (26 Nov 2007)
 # For testing only
-=net-misc/memcached-1.24_rc1
+=net-misc/memcached-1.2.4_rc1
 
 # Piotr Jaroszyński <peper@gentoo.org> (26 Nov 2007)
 # opensync svn ebuilds
