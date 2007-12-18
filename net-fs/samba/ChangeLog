@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.326 2007/12/10 16:39:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.327 2007/12/18 18:57:34 dev-zero Exp $
+
+  18 Dec 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -files/3.0.25c-CVE-2007-4138.patch, -files/3.0.25c-lazyldflags.patch,
+  -files/3.0.25c-py_smp.patch, -samba-3.0.25c-r2.ebuild,
+  -samba-3.0.26a-r1.ebuild, -samba-3.0.26a-r2.ebuild, samba-3.0.27.ebuild,
+  -samba-3.0.27a.ebuild, samba-3.0.28.ebuild:
+  Version cleanup. Added X64, IA64, COLOR printer driver directories.
 
 *samba-3.0.28 (10 Dec 2007)
 

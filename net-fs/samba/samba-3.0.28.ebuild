@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.28.ebuild,v 1.1 2007/12/10 16:39:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.28.ebuild,v 1.2 2007/12/18 18:57:34 dev-zero Exp $
 
 inherit eutils pam python multilib versionator confutils
 
@@ -232,7 +232,7 @@ src_install() {
 	diropts -m0755
 	keepdir /var/{log,run,cache}/samba
 	keepdir /var/lib/samba/{netlogon,profiles}
-	keepdir /var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC}
+	keepdir /var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC,X64,IA64,COLOR}
 	keepdir /usr/$(get_libdir)/samba/{rpc,idmap,auth}
 
 	# docs
