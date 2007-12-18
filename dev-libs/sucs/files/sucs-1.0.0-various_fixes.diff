@@ -1,0 +1,242 @@
+diff -Naur sucs-1.0.0.orig/ipc/sema.cpp sucs-1.0.0/ipc/sema.cpp
+--- sucs-1.0.0.orig/ipc/sema.cpp	2007-12-18 20:43:20.000000000 +0100
++++ sucs-1.0.0/ipc/sema.cpp	2007-12-18 20:49:08.000000000 +0100
+@@ -15,6 +15,7 @@
+ #pragma implementation
+ 
+ #include <iostream>
++#include <cerrno>
+ using namespace std;
+ 
+ #include <semaphore.h>
+diff -Naur sucs-1.0.0.orig/network/link.cpp sucs-1.0.0/network/link.cpp
+--- sucs-1.0.0.orig/network/link.cpp	2007-12-18 20:43:20.000000000 +0100
++++ sucs-1.0.0/network/link.cpp	2007-12-18 20:49:08.000000000 +0100
+@@ -17,6 +17,7 @@
+ #include <string>
+ //#include <cstring>
+ #include <cassert>
++#include <cerrno>
+ using namespace std;
+ 
+ #include <netinet/in.h>
+diff -Naur sucs-1.0.0.orig/signals/signallistener.cpp sucs-1.0.0/signals/signallistener.cpp
+--- sucs-1.0.0.orig/signals/signallistener.cpp	2007-12-18 20:43:20.000000000 +0100
++++ sucs-1.0.0/signals/signallistener.cpp	2007-12-18 20:49:08.000000000 +0100
+@@ -29,6 +29,8 @@
+ namespace sucs
+ {
+ 
++void actualHandler(int signal);
++
+ SignalListener *SignalListener::theOne = NULL;
+ 
+ SignalListener::SignalListener()
+@@ -79,7 +81,7 @@
+ 	theHandlers.erase(signal);
+ }
+ 
+-void sucs::actualHandler(int signal)
++void actualHandler(int signal)
+ {
+ //	cerr << "actualHandler: Received signal " << signal << "." << endl << flush;
+ 	SignalListener *l = SignalListener::signalListener();
+diff -Naur sucs-1.0.0.orig/signals/signallistener.cpp.orig sucs-1.0.0/signals/signallistener.cpp.orig
+--- sucs-1.0.0.orig/signals/signallistener.cpp.orig	1970-01-01 01:00:00.000000000 +0100
++++ sucs-1.0.0/signals/signallistener.cpp.orig	2007-12-18 20:48:54.000000000 +0100
+@@ -0,0 +1,93 @@
++//
++// C++ Implementation: signallistener
++//
++// Description:
++//
++//
++// Author: Gav Wood <gav@indigoarchive.net>, (C) 2004
++//
++// Copyright: See COPYING file that comes with this distribution
++//
++//
++
++#ifdef HAVE_CONFIG_H
++#include <config.h>
++#endif
++
++#define __SUCS 1
++
++#include <iostream>
++using namespace std;
++
++#include <signal.h>
++
++#include "thread.h"
++#include "signalhandler.h"
++#include "signallistener.h"
++using namespace sucs;
++
++namespace sucs
++{
++
++void actualHandler(int signal);
++
++SignalListener *SignalListener::theOne = NULL;
++
++SignalListener::SignalListener()
++{
++}
++
++SignalListener::~SignalListener()
++{
++}
++
++void SignalListener::set(int signal, SignalHandler *handler)
++{
++/*	struct sigaction *act = new struct sigaction;
++	act->sa_sigaction = actualHandler;
++	act->sa_mask = 0;
++	act->sa_flags = SA_SIGINFO;
++	sigaction(a, act, NULL);
++	delect act;
++*/
++	tdbg("SignalListener::set: Object " << handler << " is handling signal " << signal << "." << endl);
++	if(!theHandlers.count(signal))
++		::signal(signal, actualHandler);
++	theHandlers.insert(make_pair<int, SignalHandler *>(signal, handler));
++}
++
++void SignalListener::reset(int signal, SignalHandler *handler)
++{
++	tdbg("SignalListener::reset: Object " << handler << " is not handling signal " << signal << "." << endl);
++
++	// erase the signal handler from the handlers list
++	for(multimap<int, SignalHandler *>::iterator i = theHandlers.lower_bound(signal); i != theHandlers.upper_bound(signal); i++)
++		if((*i).second == handler)
++		{	theHandlers.erase(i);
++			break;
++		}
++	
++	// if no signals are being handled, resort to the default action
++	if(!theHandlers.count(signal))
++		::signal(signal, SIG_DFL);
++}
++
++void SignalListener::ignore(int signal)
++{
++	tdbg("SignalListener::ignore: Ignoring signal " << signal << "." << endl);
++	::signal(signal, SIG_IGN);
++	for(multimap<int, SignalHandler *>::iterator i = theHandlers.lower_bound(signal); i != theHandlers.upper_bound(signal); i++)
++		(*i).second->unregister(signal);
++	theHandlers.erase(signal);
++}
++
++void sucs::actualHandler(int signal)
++{
++//	cerr << "actualHandler: Received signal " << signal << "." << endl << flush;
++	SignalListener *l = SignalListener::signalListener();
++	for(multimap<int, SignalHandler *>::iterator i = l->theHandlers.lower_bound(signal); i != l->theHandlers.upper_bound(signal); i++)
++		(*i).second->handler(signal);
++	::signal(signal, actualHandler);
++}
++
++};
+diff -Naur sucs-1.0.0.orig/thread/thread.cpp sucs-1.0.0/thread/thread.cpp
+--- sucs-1.0.0.orig/thread/thread.cpp	2007-12-18 20:43:20.000000000 +0100
++++ sucs-1.0.0/thread/thread.cpp	2007-12-18 20:49:08.000000000 +0100
+@@ -17,6 +17,7 @@
+ #include <iostream>
+ #include <string>
+ #include <cassert>
++#include <cerrno>
+ using namespace std;
+ 
+ #include <csignal>
+@@ -28,17 +29,24 @@
+ 
+ Sema sucs::__output;
+ 
++namespace sucs {
++	void *gameOn(void *arg);
++	void cleanup(void *arg);
++}
++
+ int Thread::theIdCount = 0, Thread::theCount = 0, Thread::theNowRunningCount = 0;
+ Sema Thread::theNowRunning;
+ pthread_t Thread::theMainId = (pthread_t)NULL;
+ map<pthread_t, Thread *> Thread::theThreads;
+ 
+-ostream &sucs::operator<<(ostream &out, const Thread &t)
+-{
+-	if(&t)
+-		return out << t.id() << " (" << t.name() << "-" << t.threadId() << ")";
+-	else
+-		return out << "0 (main-" << Thread::theMainId << ")";
++namespace sucs {
++	ostream &operator<<(ostream &out, const Thread &t)
++	{
++		if(&t)
++			return out << t.id() << " (" << t.name() << "-" << t.threadId() << ")";
++		else
++			return out << "0 (main-" << Thread::theMainId << ")";
++	}
+ }
+ 
+ void Thread::waitForDeath() const
+diff -Naur sucs-1.0.0.orig/xml/xmlreader.cpp sucs-1.0.0/xml/xmlreader.cpp
+--- sucs-1.0.0.orig/xml/xmlreader.cpp	2007-12-18 20:43:20.000000000 +0100
++++ sucs-1.0.0/xml/xmlreader.cpp	2007-12-18 20:46:02.000000000 +0100
+@@ -24,6 +24,12 @@
+ 
+ using namespace sucs;
+ 
++namespace sucs {
++	void cStartElement(void *userdata, const char *name, const char **atts);
++	void cEndElement(void *userdata, const char *name);
++	void cCharData(void *userdata, const XML_Char *s, int len);
++}
++
+ XMLReader::XMLReader(bool newStripWhite)
+ {
+ 	StripWhite = newStripWhite;
+@@ -39,7 +45,9 @@
+ 	XML_ParserFree(theParser);
+ }
+ 
+-istream &sucs::operator>>(istream &in, XMLReader &me)
++namespace sucs {
++
++istream &operator>>(istream &in, XMLReader &me)
+ {
+ 	char Buffer[256];
+ 	while(!in.eof())
+@@ -52,9 +60,9 @@
+ 		}
+ 	}
+ 	return in;
+-};
++}
+ 
+-void sucs::cStartElement(void *userdata, const char *name, const char **atts)
++void cStartElement(void *userdata, const char *name, const char **atts)
+ {
+ 	map<string, string> Attributes;
+ 
+@@ -64,12 +72,12 @@
+ 	((XMLReader *)userdata)->StartElement(name, Attributes);
+ }
+ 
+-void sucs::cEndElement(void *userdata, const char *name)
++void cEndElement(void *userdata, const char *name)
+ {
+ 	((XMLReader *)userdata)->EndElement(name);
+ }
+ 
+-void sucs::cCharData(void *userdata, const XML_Char *s, int len)
++void cCharData(void *userdata, const XML_Char *s, int len)
+ {
+ 	char Buffer[len + 1];
+ 
+@@ -89,3 +97,5 @@
+ 		((XMLReader *)userdata)->CharData(Buffer);
+ 	}
+ }
++
++}

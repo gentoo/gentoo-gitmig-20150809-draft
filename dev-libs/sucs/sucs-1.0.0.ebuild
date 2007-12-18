@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/sucs-1.0.0.ebuild,v 1.4 2006/10/20 19:37:30 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/sucs-1.0.0.ebuild,v 1.5 2007/12/18 19:57:56 dev-zero Exp $
 
 inherit eutils
 
@@ -20,10 +20,7 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-gcc4.diff"
-	epatch "${FILESDIR}/${P}-thread.diff"
-	epatch "${FILESDIR}/${P}-signals.diff"
-	epatch "${FILESDIR}/${P}-xml.diff"
+	epatch "${FILESDIR}/${P}-various_fixes.diff"
 }
 
 src_install() {
