@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-2.1.8.ebuild,v 1.10 2007/09/20 14:31:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-2.1.8.ebuild,v 1.11 2007/12/18 03:05:25 hanno Exp $
 
 MY_P="${PN}2-${PV}"
 DESCRIPTION="Libchipcard is a library for easy access to chip cards via chip card readers (terminals)."
@@ -32,13 +32,13 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	keepdir /var/log/chipcard2 \
 		/var/lib/chipcard2/newcerts \
 		/usr/lib/chipcard2-server/lowlevel
 
-	doinitd ${FILESDIR}/chipcardd2
+	doinitd "${FILESDIR}/chipcardd2"
 
 	dodoc AUTHORS ChangeLog README doc/CERTIFICATES doc/CONFIG doc/IPCCOMMANDS
 	if use doc ; then
