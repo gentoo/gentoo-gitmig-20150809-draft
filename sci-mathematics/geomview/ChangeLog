@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/geomview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.8 2007/09/25 13:39:19 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.9 2007/12/18 16:43:20 markusle Exp $
+
+  18 Dec 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/50geomview-gentoo.el, geomview-1.9.2.ebuild, geomview-1.9.4.ebuild, -geomview-1.8.1-r3.ebuild, -geomview-1.8.2_rc9.ebuild, 
+  -files/geomview-1.8.1-configure.diff, files/geomview-1.8.1-stdiostream.diff:
+  Updated emacs support and removed old versions (fixes bug #194543).
 
 *geomview-1.9.4 (25 Sep 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.2.ebuild,v 1.4 2007/07/13 05:28:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.2.ebuild,v 1.5 2007/12/18 16:43:20 markusle Exp $
 
 inherit eutils flag-o-matic fdo-mime
 
@@ -50,9 +50,9 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
-	doicon ${FILESDIR}/geomview.png
+	doicon "${FILESDIR}"/geomview.png
 	make_desktop_entry geomview "GeomView ${PV}" \
 	    "/usr/share/pixmaps/geomview.png" \
 	    "Science;Math;Education"
@@ -60,12 +60,12 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS INSTALL.Geomview
 
 	if ! use pdf; then
-	    rm ${D}usr/share/doc/${PF}/${PN}.pdf
+	    rm "${D}"usr/share/doc/${PF}/${PN}.pdf
 	fi
 
 	if use emacs; then
 	    insinto /usr/share/geomview
-	    doins ${FILESDIR}/gvcl-mode.el || die
+	    doins "${FILESDIR}"/gvcl-mode.el || die
 	fi
 }
 

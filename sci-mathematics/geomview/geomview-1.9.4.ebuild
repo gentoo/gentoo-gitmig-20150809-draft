@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.4.ebuild,v 1.1 2007/09/25 13:39:19 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.4.ebuild,v 1.2 2007/12/18 16:43:20 markusle Exp $
 
-inherit eutils flag-o-matic fdo-mime
+inherit elisp-common eutils flag-o-matic fdo-mime
 
 DESCRIPTION="Interactive Geometry Viewer"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -14,6 +14,7 @@ SLOT="0"
 IUSE="avg bzip2 debug emacs netpbm pdf zlib"
 
 DEPEND="zlib? ( sys-libs/zlib )
+	emacs? ( virtual/emacs )
 	virtual/motif
 	virtual/opengl"
 
@@ -32,21 +33,28 @@ RDEPEND="${DEPEND}
 	virtual/w3m"
 
 S="${WORKDIR}/${P/_/-}"
+SITEFILE=50${PN}-gentoo.el
 
 src_compile() {
 	# GNU standard is /usr/share/doc/${PN}, so override this; also note
 	# that motion averaging is still experimental.
 	if use pdf; then
-	    local myconf="--docdir=/usr/share/doc/${PF}"
+		local myconf="--docdir=/usr/share/doc/${PF}"
 	else
-	    local myconf="--docdir=/usr/share/doc/${PF} --without-pdfviewer"
+		local myconf="--docdir=/usr/share/doc/${PF} --without-pdfviewer"
 	fi
 
 	econf ${myconf} $(use_enable debug d1debug) $(use_with zlib) \
-	    $(use_enable avg motion-averaging) \
-	    || die "could not configure"
+		$(use_enable avg motion-averaging) \
+		|| die "could not configure"
 
 	emake || die "make failed"
+
+	if use emacs; then
+		cp "${FILESDIR}/gvcl-mode.el" "${S}"
+		elisp-compile *.el || die "elisp-compile failed"
+	fi
+
 }
 
 src_install() {
@@ -54,18 +62,19 @@ src_install() {
 
 	doicon "${FILESDIR}"/geomview.png
 	make_desktop_entry geomview "GeomView ${PV}" \
-	    "/usr/share/pixmaps/geomview.png" \
-	    "Science;Math;Education"
+		"/usr/share/pixmaps/geomview.png" \
+		"Science;Math;Education"
 
 	dodoc AUTHORS ChangeLog NEWS INSTALL.Geomview
 
 	if ! use pdf; then
-	    rm "${D}"/usr/share/doc/${PF}/${PN}.pdf
+		rm "${D}"/usr/share/doc/${PF}/${PN}.pdf
 	fi
 
 	if use emacs; then
-	    insinto /usr/share/geomview
-	    doins "${FILESDIR}"/gvcl-mode.el || die
+		elisp-install ${PN} *.el *.elc|| die "elisp-install failed"
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || \
+			die "elisp-site-file-install failed"
 	fi
 }
 
@@ -79,14 +88,11 @@ pkg_postinst() {
 	elog "you wish to use an alternate PDF viewer, feel free to remove"
 	elog "xpdf and use the viewer of your choice (see the docs for how"
 	elog "to setup the \'(ui-pdf-viewer VIEWER)\' GCL-command)."
-	elog ""
-	elog "If you use emacs, enable the corresponding use flag and check"
-	elog "out the provided mode file for editing the GeomView command"
-	elog "language (courtesy of Claus-Justus Heine).  Incorporating it"
-	elog "into your emacs configuration is left as an exercise..."
-	elog ""
+
+	use emacs && elisp-site-regen
 }
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
+	use emacs && elisp-site-regen
 }
