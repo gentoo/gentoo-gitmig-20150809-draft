@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-3.99.3.1.ebuild,v 1.2 2007/10/08 13:16:42 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.1.ebuild,v 1.1 2007/12/18 03:11:07 markusle Exp $
 
 inherit fortran flag-o-matic
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="blas debug doc fftw lapack minimal"
 
-DEPEND="!minimal? ( fftw? ( || ( >=sci-libs/fftw-3.0.0
-								>=sci-libs/acml-2.5.3 ) ) )
+DEPEND="!minimal? ( fftw? ( || ( >=sci-libs/fftw-3.0.0 ) ) )
 		blas? ( virtual/blas
 				lapack? ( virtual/lapack ) )
 		doc? ( app-doc/doxygen
@@ -32,11 +31,21 @@ src_compile() {
 	# versions
 	append-flags -DNDEBUG
 
-	local myconf
+	local blas_conf="--without-blas"
+	local lapack_conf="--without-lapack"
 	if use blas; then
-		myconf="--with-blas=-lblas"
-	else
-		myconf="--without-blas"
+		if use lapack; then
+			blas_conf="--with-blas=$(pkg-config lapack --libs)"
+			lapack_conf="--with-lapack"
+		else
+			blas_conf="--with-blas=$(pkg-config blas --libs)"
+		fi
+	fi
+
+	local fftw_conf;
+	if use fftw;
+	then
+		fftw_conf="--with-fft=-lfftw3"
 	fi
 
 	if use minimal; then
@@ -45,9 +54,9 @@ src_compile() {
 
 	econf $(use_enable doc html-doc) \
 		$(use_enable debug) \
-		$(use_with lapack) \
-		$(use_with fftw fft) \
-		"${myconf}" \
+		"${blas_conf}" \
+		"${lapack_conf}" \
+		"${fftw_conf}" \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
@@ -55,5 +64,5 @@ src_compile() {
 src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
 	dodoc AUTHORS ChangeLog ChangeLog-2006 ChangeLog-2005 INSTALL \
-		NEWS NEWS-3.10 README TODO || die "failed to install docs"
+		NEWS NEWS-3.10 NEWS-3.99 README TODO || die "failed to install docs"
 }
