@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.110 2007/12/16 09:35:44 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.111 2007/12/18 02:21:58 jer Exp $
+
+  18 Dec 2007; Jeroen Roovers <jer@gentoo.org> xinit-1.0.5-r1.ebuild:
+  Stable for HPPA (bug #201998).
 
   16 Dec 2007; Samuli Suominen <drac@gentoo.org> xinit-1.0.5-r1.ebuild:
   amd64 stable wrt #201998
