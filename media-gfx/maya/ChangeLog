@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/maya
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.25 2007/07/02 15:06:25 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.26 2007/12/18 17:28:44 eradicator Exp $
+
+  18 Dec 2007; Jeremy Huddleston <eradicator@gentoo.org> maya-6.5.ebuild:
+  Fixed homepage url.  Closes bug #190309.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> maya-6.5.ebuild:
   (QA) RESTRICT clean up.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.7 2007/07/02 15:06:25 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.8 2007/12/18 17:28:44 eradicator Exp $
 
 inherit rpm eutils versionator
 
@@ -9,7 +9,7 @@ IUSE="bundled-libs maya-shaderlibrary doc"
 S="${WORKDIR}"
 
 DESCRIPTION="Alias Wavefront's Maya.  Commercial modeling and animation package."
-HOMEPAGE="http://www.alias.com/eng/products-services/maya/index.shtml"
+HOMEPAGE="http://www.autodesk.com/maya"
 
 # RPM versions within the tarballs which will get installed
 AWCOMMON_RPM="AWCommon-6.3-1.i686.rpm"
