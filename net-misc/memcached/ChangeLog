@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/memcached
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.55 2007/12/18 21:47:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.56 2007/12/18 21:53:21 robbat2 Exp $
+
+  18 Dec 2007; Robin H. Johnson <robbat2@gentoo.org>
+  -memcached-1.2.2.ebuild, -memcached-1.2.2-r1.ebuild:
+  The first releases of 1.2.2 suffered from the pidfile bug, so lets ditch them.
 
 *memcached-1.2.4_rc1 (27 Nov 2007)
 
