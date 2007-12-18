@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r6.ebuild,v 1.3 2007/10/26 20:18:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r6.ebuild,v 1.4 2007/12/18 21:13:36 jer Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ DESCRIPTION="a literate programming tool, lighter than web"
 
 SLOT="0"
 IUSE="icon"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"	# will test ppc later
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86"	# will test ppc later
 
 DEPEND="sys-devel/gcc
 	virtual/tetex
@@ -23,10 +23,10 @@ DEPEND="sys-devel/gcc
 
 src_unpack() {
 
-	unpack ${A} ; cd ${S}
+	unpack ${A} ; cd "${S}"
 
-	epatch ${FILESDIR}/${P}-security.patch
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch "${FILESDIR}"/${P}-security.patch
+	epatch "${FILESDIR}"/${P}-gentoo.diff
 
 	# make touch only touches the files required, not the whole
 	# tree as with find . -type f | xargs touch <obz@gentoo.org>
@@ -41,7 +41,7 @@ src_compile() {
 	# noweb tries to use notangle and noweb; see bug #50429
 	( cd c; emake CFLAGS="${CFLAGS}" LIBSRC="$libsrc" ) || die
 	export PATH="${PATH}:${T}"
-	emake BIN=${T} LIB=${T} LIBSRC="$libsrc" install-code \
+	emake BIN="${T}" LIB="${T}" LIBSRC="$libsrc" install-code \
 		|| die "make temporal install failed."
 
 	emake CFLAGS="${CFLAGS}" LIBSRC="$libsrc" || die
@@ -50,11 +50,11 @@ src_compile() {
 src_install () {
 	local libsrc
 	use icon && libsrc="icon" || libsrc="awk"
-	make DESTDIR=${D} LIBSRC="$libsrc" install || die
+	make DESTDIR="${D}" LIBSRC="$libsrc" install || die
 	use icon || [ -x /usr/bin/nawk ] || dosym /usr/bin/gawk /usr/bin/nawk
 
 	# fix man pages to be LFH compliant
-	mv ${D}/usr/man ${D}/usr/share
+	mv "${D}"/usr/man "${D}"/usr/share
 }
 
 pkg_postinst() {
