@@ -1,0 +1,14 @@
+diff -Nur avahi-0.6.22.orig/avahi-ui/bssh.c avahi-0.6.22/avahi-ui/bssh.c
+--- avahi-0.6.22.orig/avahi-ui/bssh.c	2007-12-17 15:12:57.000000000 +0000
++++ avahi-0.6.22/avahi-ui/bssh.c	2007-12-17 16:07:54.021586488 +0000
+@@ -86,8 +86,8 @@
+ 
+             gtk_widget_destroy(d);
+ 
+-            g_print("xvncviewer %s\n", p);
+-            execlp("xvncviewer", "xvncviewer", p, NULL);
++            g_print("vncviewer %s\n", p);
++            execlp("vncviewer", "vncviewer", p, NULL);
+ 
+         } else {
+             char p[16];
