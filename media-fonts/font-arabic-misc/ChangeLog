@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-arabic-misc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-arabic-misc/ChangeLog,v 1.19 2007/02/04 18:42:01 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-arabic-misc/ChangeLog,v 1.20 2007/12/19 23:34:52 cla Exp $
+
+  19 Dec 2007; Dawid Węgliński <cla@gentoo.org>
+  font-arabic-misc-1.0.0.ebuild:
+  Stable on x86 (bug #202087)
 
   04 Feb 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   font-arabic-misc-1.0.0.ebuild:

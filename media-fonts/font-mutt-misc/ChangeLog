@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-mutt-misc
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-mutt-misc/ChangeLog,v 1.15 2006/11/26 23:41:10 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-mutt-misc/ChangeLog,v 1.16 2007/12/19 23:40:11 cla Exp $
+
+  19 Dec 2007; Dawid Węgliński <cla@gentoo.org>
+  font-mutt-misc-1.0.0.ebuild:
+  Stable on x86 (bug #202087)
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   font-mutt-misc-1.0.0.ebuild:
