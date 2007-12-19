@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.30 2007/05/27 18:31:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.31 2007/12/19 23:48:54 tupone Exp $
+
+*simgear-1.0.0 (19 Dec 2007)
+
+  19 Dec 2007; Tupone Alfredo <tupone@gentoo.org> +simgear-1.0.0.ebuild:
+  Version bump. Bug #202826 by Aniruddha
 
   27 May 2007; nixnut <nixnut@gentoo.org> simgear-0.3.10.ebuild:
   Stable on ppc wrt bug 164239
