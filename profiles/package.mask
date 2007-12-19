@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8017 2007/12/19 04:24:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8018 2007/12/19 05:05:10 wltjr Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# William L. Thomson Jr. <wltjr@gentoo.org> (19 Dec 2007)
+# Gen 1 java ebuild, older drivers and naming scheme for
+# jdbc drivers. Please switch to jdbc-oracle-bin, which
+# is gen 2, and should be more up2date. Will be moved to
+# java junkyard overlay in 30 days
+dev-java/jdbc2-oracle
+dev-java/jdbc3-oracle
 
 # Petteri Räty <betelgeuse@gentoo.org> (17 Dec 2007)
 # Package.masked until builds without having tcl installed
