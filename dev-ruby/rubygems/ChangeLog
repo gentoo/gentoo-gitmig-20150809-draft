@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.76 2007/12/17 21:55:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.77 2007/12/19 12:18:43 armin76 Exp $
+
+  19 Dec 2007; Raúl Porcel <armin76@gentoo.org> rubygems-0.9.4-r2.ebuild:
+  alpha/ia64/x86 stable wrt #202608
 
   17 Dec 2007; Jeroen Roovers <jer@gentoo.org> rubygems-0.9.4-r2.ebuild:
   Stable for HPPA (bug #202608).
