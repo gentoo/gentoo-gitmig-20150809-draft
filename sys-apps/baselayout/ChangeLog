@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.442 2007/11/05 23:32:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.443 2007/12/19 18:14:20 fmccor Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  19 Dec 2007; Ferris McCormick <fmccor@gentoo.org>
+  baselayout-1.12.10-r5.ebuild:
+  Sparc stable, Bug #202791, no problems seen (still boots, ...).
 
   05 Nov 2007; <solar@gentoo.org> -baselayout-2.0.0_rc5.ebuild:
   - UberLord said to punt rc5 for a digest mismatch and now that r6 is here
