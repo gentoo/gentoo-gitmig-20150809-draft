@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.5 2007/11/21 00:25:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.6 2007/12/19 19:30:47 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -62,7 +62,7 @@ src_unpack() {
 	(DISTDIR="${S}" unpack contents-acml-*.tgz)
 	case ${FORTRANC} in
 		gfortran) FORT=gfortran ;;
-		ifc|ifort) FORT=ifort ;;
+		if*) FORT=ifort ;;
 		*) eerror "Unsupported fortran compiler: ${FORTRANC}"
 			die ;;
 	esac
@@ -114,9 +114,10 @@ src_install() {
 			ESELECT_PROF=${ESELECT_PROF}-int64
 			extflags="${extflags} -fdefault-integer-8"
 		fi
+		[[ ${fort} =~ gfortran ]] && extlibs="${extlibs} -lgfortran"
 		if [[ ${fort} =~ _mp ]]; then
 			ESELECT_PROF=${ESELECT_PROF}-openmp
-			extlibs=-lpthread
+			extlibs="${extlibs} -lpthread"
 			libname=${libname}_mp
 			extflags="${extflags} -fopenmp"
 		fi
@@ -124,7 +125,7 @@ src_install() {
 			# pkgconfig files
 			sed -e "s:@LIBDIR@:$(get_libdir):" \
 				-e "s:@PV@:${PV}:" \
-				-e "s:@ACMLDIR@:${acmldir}:g" \
+				-e "s:@ACMLDIR@:${acmldir}/lib:g" \
 				-e "s:@EXTLIBS@:${extlibs}:g" \
 				-e "s:@EXTFLAGS@:${extflags}:g" \
 				"${FILESDIR}"/${l}.pc.in > ${l}.pc \
@@ -133,12 +134,12 @@ src_install() {
 			doins ${l}.pc
 
 			# eselect files
-			cat > eselect.${l} << EOF
-${libname}.so /usr/@LIBDIR@/lib${l}.so.0
-${libname}.so /usr/@LIBDIR@/lib${l}.so
-${libname}.a /usr/@LIBDIR@/lib${l}.a
-${acmldir}/lib/${l}.pc  /usr/@LIBDIR@/pkgconfig/${l}.pc
-EOF
+			cat > eselect.${l} <<-EOF
+				${libname}.so /usr/@LIBDIR@/lib${l}.so.0
+				${libname}.so /usr/@LIBDIR@/lib${l}.so
+				${libname}.a /usr/@LIBDIR@/lib${l}.a
+				${acmldir}/lib/${l}.pc  /usr/@LIBDIR@/pkgconfig/${l}.pc
+			EOF
 			eselect ${l} add $(get_libdir) eselect.${l} ${ESELECT_PROF}
 		done
 		echo "LDPATH=${acmldir}/lib" > "${S}"/35acml
