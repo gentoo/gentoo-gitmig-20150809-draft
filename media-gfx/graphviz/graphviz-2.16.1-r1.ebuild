@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.16.1-r1.ebuild,v 1.1 2007/12/19 01:38:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.16.1-r1.ebuild,v 1.2 2007/12/19 02:12:35 mr_bones_ Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -48,22 +48,22 @@ DEPEND="${RDEPEND}
 # Dependency description / Maintainer-Info:
 
 # Rendering is done via the following plugins (/plugins):
-# - core, dot_layout, neato_layout, gd 
+# - core, dot_layout, neato_layout, gd
 #   (the ones which are always compiled in, depend on zlib, gd)
 # - dot
 #   ( depends explicitly on pango and cairo now,
 #     --without-x --without-pangocairo will fail!)
-# - gtk 
-#   ( depends on gtk-2, cairo, libX11, 
+# - gtk
+#   ( depends on gtk-2, cairo, libX11,
 #   gtk-2 depends on cairo and libX11 as well)
-# - ming 
+# - ming
 #   ( depends on ming-3.0 which is still p.masked)
 # - pango, cairo
 #   ( depends on pango and cairo, pango depends on an older cairo as well)
-# - xlib 
-#   ( depends on libX11, Xrender AND pango, can make use of gnomeui and 
+# - xlib
+#   ( depends on libX11, Xrender AND pango, can make use of gnomeui and
 #   inotify support, libXaw deps on libXpm)
-# - ming 
+# - ming
 #   ( depends on ming-3 which is still masked, ?)
 # - gdk-pixbuf
 #   ( disabled, GTK-1 junk )
