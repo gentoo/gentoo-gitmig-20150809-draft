@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-33.ebuild,v 1.2 2007/12/14 19:12:36 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-36.ebuild,v 1.1 2007/12/19 21:09:26 alonbl Exp $
 
 inherit eutils
 
@@ -27,13 +27,6 @@ RDEPEND="sys-apps/keyutils
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-lang/perl"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-mkdir.patch"
-	epatch "${FILESDIR}/${P}-suid.patch"
-}
 
 src_compile() {
 	econf \
