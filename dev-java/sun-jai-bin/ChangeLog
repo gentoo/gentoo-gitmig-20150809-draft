@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jai-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/ChangeLog,v 1.17 2007/11/02 03:31:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/ChangeLog,v 1.18 2007/12/19 04:37:47 wltjr Exp $
+
+  19 Dec 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -sun-jai-bin-1.1.2.01-r1.ebuild, sun-jai-bin-1.1.3.ebuild:
+  Removed gen1 version, quoted var.
 
   02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   sun-jai-bin-1.1.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.3.ebuild,v 1.8 2007/11/02 03:31:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.3.ebuild,v 1.9 2007/12/19 04:37:47 wltjr Exp $
 
 inherit java-pkg-2
 
@@ -20,7 +20,7 @@ S=${WORKDIR}/jai-${MY_PV}/
 
 src_unpack() {
 	unpack ${A}
-	rm ${S}/LICENSE-jai.txt
+	rm "${S}"/LICENSE-jai.txt
 }
 
 src_compile() { :; }
