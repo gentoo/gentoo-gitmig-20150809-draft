@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/gtk-engines-nimbus-0.0.10.ebuild,v 1.2 2007/12/19 18:55:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/gtk-engines-nimbus-0.0.10.ebuild,v 1.3 2007/12/19 19:36:58 flameeyes Exp $
 
-inherit libtool autotools gnome2-utils
+inherit libtool autotools gnome2-utils eutils
 
 MY_PN="nimbus"
 MY_P="${MY_PN}-${PV}"
@@ -27,6 +27,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
+	epatch "${FILESDIR}/${MY_P}-declarations.patch"
+
 	intltoolize || die "intltoolize failed"
 
 	eautoreconf
