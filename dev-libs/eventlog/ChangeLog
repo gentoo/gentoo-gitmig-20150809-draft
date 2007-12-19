@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eventlog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.17 2007/12/19 03:07:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.18 2007/12/19 16:15:36 armin76 Exp $
+
+  19 Dec 2007; Raúl Porcel <armin76@gentoo.org> eventlog-0.2.5.ebuild:
+  alpha/ia64 stable wrt #202726
 
   19 Dec 2007; Brent Baude <ranger@gentoo.org> eventlog-0.2.5.ebuild:
   Marking eventlog-0.2.5 ppc stable for a dep on 202718 (syslog-ng)
