@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/evilwm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.41 2007/12/18 15:36:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.42 2007/12/19 12:54:10 armin76 Exp $
+
+  19 Dec 2007; Raúl Porcel <armin76@gentoo.org> evilwm-1.0.0.ebuild:
+  alpha/sparc/x86 stable wrt #202703
 
   18 Dec 2007; Doug Klima <cardoe@gentoo.org> evilwm-1.0.0.ebuild:
   amd64 stable wrt bug #202703
