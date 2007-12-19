@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.0.ebuild,v 1.5 2007/10/29 14:52:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.0.ebuild,v 1.6 2007/12/19 16:27:06 aballier Exp $
 
-inherit flag-o-matic eutils multilib pax-utils versionator toolchain-funcs
+inherit flag-o-matic eutils multilib versionator toolchain-funcs
 
 DESCRIPTION="fast modern type-inferring functional programming language descended from the ML (Meta Language) family"
 HOMEPAGE="http://www.ocaml.org/"
@@ -21,15 +21,14 @@ DEPEND="tk? ( >=dev-lang/tk-3.3.3 )
 PDEPEND="emacs? ( app-emacs/ocaml-mode )
 	xemacs? ( app-xemacs/ocaml )"
 
-QA_EXECSTACK="/usr/lib/ocaml/compiler-*"
-
 pkg_setup() {
-	# dev-lang/ocaml fails with -fPIC errors due to a "relocation R_X86_64_32S" on AMD64/hardened
-	if use amd64 && gcc-specs-pie ; then
-		echo
-		eerror "${CATEGORY}/${PF} is currently broken on this platform with specfiles injecting -PIE."
-		eerror "Please switch to your \"${CHOST}-$(gcc-fullversion)-hardenednopie\" specfile via gcc-config!"
-		die "Current specfile (${CHOST}-$(gcc-fullversion)) not supported by ${PF}!"
+	# dev-lang/ocaml creates its own objects but calls gcc for linking, which will
+	# results in relocations if gcc wants to create a PIE executable 
+	if gcc-specs-pie ; then
+		append-ldflags -nopie
+		ewarn "Ocaml generates its own native asm, you're using a PIE compiler"
+		ewarn "We have appended -nopie to ocaml build options"
+		ewarn "because linking an executable with pie while the objects are not pic will not work"
 	fi
 }
 
@@ -43,7 +42,7 @@ src_unpack() {
 	# Quick and somewhat dirty fix for bug #110541
 	# The sed in the Makefile doesn't replace all occurences of @compiler@
 	# in driver/ocamlcomp.sh.in. Reported upstream as issue 0004268.
-	epatch "${FILESDIR}"/${P}-execheap.patch
+	#epatch "${FILESDIR}"/${P}-execheap.patch
 
 	# The configure script doesn't inherit previous defined variables,
 	# overwriting previous declarations of bytecccompopts, bytecclinkopts,
@@ -59,10 +58,6 @@ src_unpack() {
 	# See comment in the patch
 	epatch "${FILESDIR}/${P}-call-ld-with-proper-ldflags.patch"
 
-	# Ocaml native code generation for hppa has a bug
-	# See comments in the patch
-	# http://bugs.gentoo.org/show_bug.cgi?id=178256
-#	use hppa && epatch "${FILESDIR}/${P}-hppa-optimize-for-size-ocamlp4.patch"
 }
 
 src_compile() {
@@ -116,13 +111,6 @@ src_install() {
 
 	dodoc Changes INSTALL LICENSE README Upgrading
 
-	# Turn MPROTECT off for some of the ocaml binaries, since they are trying to
-	# rewrite the segment (which will obviously fail on systems having
-	# PAX_MPROTECT enabled).
-	pax-mark -m "${D}"/usr/bin/ocamldoc.opt "${D}"/usr/bin/ocamldep.opt \
-		"${D}"/usr/bin/ocamllex.opt "${D}"/usr/bin/camlp4r.opt \
-		"${D}"/usr/bin/camlp4o.opt
-
 	# Create and envd entry for latex input files (this definitely belongs into
 	# CONTENT and not in pkg_postinst.
 	if use latex ; then
@@ -135,12 +123,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use amd64 && gcc-specs-ssp ; then
-		ewarn
-		ewarn "Make sure, you switch back to the default specfile ${CHOST}-$(gcc-fullversion) via gcc-config!"
-		ewarn
-	fi
-
 	echo
 	elog "OCaml is not binary compatible from version to version, so you (may)"
 	elog "need to rebuild all packages depending on it, that are actually"
