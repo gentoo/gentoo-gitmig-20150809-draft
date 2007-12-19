@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8022 2007/12/19 20:14:02 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8023 2007/12/19 21:52:47 caleb Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -28,6 +28,7 @@
 # Caleb Tennis <caleb@gentoo.org> (19 Dec 2007)
 # Mask qt-4.4 package while testing them in portage
 =x11-libs/qt-4.4*
+=x11-libs/qt-webkit-4.4*
 
 # Peter Volkov <pva@gentoo.org> (19 Dec 2007)
 # Italics are assigned to condensed, see bug 202255
