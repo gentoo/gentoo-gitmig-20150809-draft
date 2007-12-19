@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cblas-reference
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.30 2007/11/12 17:04:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.31 2007/12/19 14:47:38 jsbronder Exp $
+
+  19 Dec 2007; Justin Bronder <jsbronder@gentoo.org>
+  cblas-reference-20030223-r4.ebuild:
+  Move ESELECT_PROF so binary packages work.
 
   12 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
   files/cblas-reference-20030223-autotool.patch,

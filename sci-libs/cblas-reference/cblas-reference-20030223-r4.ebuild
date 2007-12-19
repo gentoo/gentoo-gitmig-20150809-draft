@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.11 2007/11/12 17:04:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.12 2007/12/19 14:47:38 jsbronder Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -20,7 +20,7 @@ DEPEND="virtual/blas
 	app-admin/eselect-cblas"
 
 FORTRAN="gfortran g77 ifc"
-
+ESELECT_PROF=reference
 S="${WORKDIR}/CBLAS"
 
 src_unpack() {
@@ -43,7 +43,6 @@ src_install() {
 	dodoc README || die "failed to install docs"
 	insinto /usr/share/doc/${PF}
 	doins cblas_example*c || die "install examples failed"
-	ESELECT_PROF=reference
 	eselect cblas add $(get_libdir) "${FILESDIR}"/eselect.cblas.reference ${ESELECT_PROF}
 }
 
