@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.4.ebuild,v 1.4 2007/12/18 04:00:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.4.ebuild,v 1.5 2007/12/19 02:15:07 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -65,15 +65,15 @@ src_unpack() {
 
 	if use lapack; then
 		unset BLAS LAPACK
-		cat > setup.cfg << EOF
-[blas_opt]
-libraries = $(pkgconf_cfg --libs-only-l cblas)
-library_dirs = $(pkgconf_cfg --libs-only-L cblas)
+		cat > site.cfg <<-EOF
+			[blas]
+			blas_libs = $(pkgconf_cfg --libs-only-l cblas)
+			library_dirs = $(pkgconf_cfg --libs-only-L cblas)
 
-[lapack_opt]
-libraries = $(pkgconf_cfg --libs-only-l lapack)
-library_dirs = $(pkgconf_cfg --libs-only-L lapack)
-EOF
+			[lapack]
+			lapack_libs = $(pkgconf_cfg --libs-only-l lapack)
+			library_dirs = $(pkgconf_cfg --libs-only-L lapack)
+		EOF
 	fi
 }
 

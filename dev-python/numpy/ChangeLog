@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.42 2007/12/18 04:00:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.43 2007/12/19 02:15:07 bicatali Exp $
+
+  19 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org> numpy-1.0.4.ebuild:
+  Fixed site.cfg generation for external blas/lapack
 
   18 Dec 2007; Jeroen Roovers <jer@gentoo.org> numpy-1.0.4.ebuild:
   Stable for HPPA (bug #202202).
