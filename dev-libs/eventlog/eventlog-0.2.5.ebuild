@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/eventlog-0.2.5.ebuild,v 1.10 2007/12/19 16:15:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/eventlog-0.2.5.ebuild,v 1.11 2007/12/19 17:02:03 mr_bones_ Exp $
 
 inherit libtool eutils
 
 DESCRIPTION="Support library for syslog-ng"
 HOMEPAGE="http://www.balabit.com/products/syslog_ng/"
-SRC_URI="http://www.balabit.com/downloads/syslog-ng/2.0/src/${P}.tar.gz"
+SRC_URI="http://www.balabit.com/downloads/files/syslog-ng/sources/2.0/src/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
