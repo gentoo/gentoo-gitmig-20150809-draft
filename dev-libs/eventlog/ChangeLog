@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eventlog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.16 2007/12/18 21:14:36 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.17 2007/12/19 03:07:03 ranger Exp $
+
+  19 Dec 2007; Brent Baude <ranger@gentoo.org> eventlog-0.2.5.ebuild:
+  Marking eventlog-0.2.5 ppc stable for a dep on 202718 (syslog-ng)
 
   18 Dec 2007; Ferris McCormick <fmccor@gentoo.org> eventlog-0.2.5.ebuild:
   Sparc stable, required for Bug #202718.
