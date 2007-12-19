@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.914 2007/12/18 04:04:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.915 2007/12/19 10:24:44 dev-zero Exp $
+
+  19 Dec 2007; Tiziano Müller <dev-zero@gentoo.org> use.local.desc:
+  Added icu USE-flag for dev-libs/xerces-c
 
   18 Dec 2007; Mark Loeser <halcy0n@gentoo.org> use.desc:
   Make the description for the profile use flag a bit clearer; bug #190431
