@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/hsqldb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.30 2007/12/19 21:58:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.31 2007/12/19 22:01:54 caster Exp $
+
+  19 Dec 2007; Vlastimil Babka <caster@gentoo.org> hsqldb-1.8.0.9.ebuild:
+  Add forgotten ~x86-fbsd.
 
 *hsqldb-1.8.0.9 (19 Dec 2007)
 
