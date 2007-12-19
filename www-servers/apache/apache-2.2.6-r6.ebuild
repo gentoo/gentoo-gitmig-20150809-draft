@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6-r6.ebuild,v 1.1 2007/12/15 14:32:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6-r6.ebuild,v 1.2 2007/12/19 21:13:50 hollow Exp $
 
 # latest gentoo apache files
 GENTOO_PATCHSTAMP="20071215"
@@ -57,6 +57,7 @@ MODULE_DEFINES="
 	proxy_ajp:PROXY
 	proxy_balancer:PROXY
 	proxy_connect:PROXY
+	proxy_ftp:PROXY
 	proxy_http:PROXY
 	ssl:SSL
 	status:INFO

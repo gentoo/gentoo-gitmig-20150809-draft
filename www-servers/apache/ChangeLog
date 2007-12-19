@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.44 2007/12/16 17:34:37 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.45 2007/12/19 21:13:50 hollow Exp $
+
+  19 Dec 2007; Benedikt Böhm <hollow@gentoo.org> -apache-2.2.6.ebuild,
+  apache-2.2.6-r6.ebuild:
+  fix #202800; cleanup
 
   16 Dec 2007; Peter Weller <welp@gentoo.org> apache-2.2.6-r5.ebuild:
   Stable on amd64; bug 202327
