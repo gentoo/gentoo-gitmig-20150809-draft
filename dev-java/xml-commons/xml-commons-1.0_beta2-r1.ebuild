@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2-r1.ebuild,v 1.8 2007/11/10 12:25:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2-r1.ebuild,v 1.9 2007/12/19 04:32:35 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -38,7 +38,7 @@ src_compile() {
 	local antflags="jar"
 	use doc && antflags="${antflags} javadocs"
 
-	cd ${S}/java
+	cd "${S}"/java
 	eant -f resolver.xml ${antflags} || die "XML-Resolver Compile failed"
 	eant -f which.xml ${antflags} || die "XML-Which Compile failed"
 }
