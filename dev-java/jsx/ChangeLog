@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jsx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/ChangeLog,v 1.11 2007/11/14 15:15:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/ChangeLog,v 1.12 2007/12/19 04:34:27 wltjr Exp $
+
+  19 Dec 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -jsx-1.0.7.5.ebuild:
+  Removed gen1 version.
 
   14 Nov 2007; Steve Dibb <beandog@gentoo.org> jsx-1.0.7.5-r1.ebuild:
   amd64 stable, bug 198012
