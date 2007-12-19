@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/grubconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.15 2007/02/09 07:08:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.16 2007/12/19 18:31:45 armin76 Exp $
+
+  19 Dec 2007; Raúl Porcel <armin76@gentoo.org> grubconfig-1.26.ebuild:
+  x86 stable
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
