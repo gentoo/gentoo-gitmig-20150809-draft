@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.30 2007/10/07 17:15:16 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.31 2007/12/19 21:09:49 philantrop Exp $
+
+*pilot-link-0.12.3 (19 Dec 2007)
+
+  19 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/pilot-link-0.12.3-java-install.patch,
+  +files/pilot-link-0.12.3-png.patch, +pilot-link-0.12.3.ebuild:
+  Version bump as per bug 202383.
 
   07 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/pilot-link-0.12.2-werror_194921.patch, pilot-link-0.11.8.ebuild,
