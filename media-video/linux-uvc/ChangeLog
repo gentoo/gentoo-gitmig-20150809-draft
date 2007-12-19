@@ -1,12 +1,12 @@
 # ChangeLog for media-video/linux-uvc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/ChangeLog,v 1.11 2007/12/19 11:35:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/ChangeLog,v 1.12 2007/12/19 11:37:35 genstef Exp $
 
 *linux-uvc-0.1.0_pre157 (19 Dec 2007)
 
   19 Dec 2007; Stefan Schweizer <genstef@gentoo.org>
   +linux-uvc-0.1.0_pre157.ebuild:
-  version bump, upstream included uvc support
+  version bump, upstream included iSight support
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
   linux-uvc-0.1.0_pre100.ebuild, linux-uvc-0.1.0_pre126.ebuild:
