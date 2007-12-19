@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.15 2007/11/21 00:44:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.16 2007/12/19 14:45:48 jsbronder Exp $
 
 inherit eutils autotools flag-o-matic fortran multilib
 
@@ -32,6 +32,7 @@ pkg_setup() {
 		export LDFLAGS="$(raw-ldflags)"
 		export NOOPT_FFLAGS=-O
 	fi
+	ESELECT_PROF=reference
 }
 
 src_unpack() {
@@ -62,7 +63,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc README || die "dodoc failed"
-	ESELECT_PROF=reference
 	eselect lapack add $(get_libdir) "${FILESDIR}"/eselect.lapack.reference ${ESELECT_PROF}
 }
 
