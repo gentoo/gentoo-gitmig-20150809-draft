@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-exec
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-exec/ChangeLog,v 1.1 2007/12/11 22:51:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-exec/ChangeLog,v 1.2 2007/12/19 13:58:38 hd_brummy Exp $
+
+  19 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-exec-0.0.2.ebuild:
+  keyword ~amd64
 
 *vdr-exec-0.0.2 (11 Dec 2007)
 
