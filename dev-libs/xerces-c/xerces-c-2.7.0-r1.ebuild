@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.11 2007/10/03 10:59:04 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.12 2007/12/19 20:31:13 dev-zero Exp $
 
 inherit eutils multilib versionator
 
@@ -18,7 +18,7 @@ IUSE="doc elibc_FreeBSD"
 
 DEPEND="doc? ( app-doc/doxygen )"
 
-S=${WORKDIR}/${MY_PN}
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	eval unset ${!LC_*} LANG

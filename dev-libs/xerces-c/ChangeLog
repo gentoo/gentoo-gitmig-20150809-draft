@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.49 2007/10/03 10:59:04 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.50 2007/12/19 20:31:13 dev-zero Exp $
+
+*xerces-c-2.8.0 (19 Dec 2007)
+
+  19 Dec 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/xerces-c-2.8.0-64bit_cast.patch, +files/50xerces-c,
+  +files/xerces-c-2.8.0-icu_ressource_fix.patch, metadata.xml,
+  xerces-c-2.7.0-r1.ebuild, +xerces-c-2.8.0.ebuild:
+  Version bump (bug #196800). Redigested version 2.7.0-r1 for new tarball (bug
+  #192829).
 
   03 Oct 2007; Roy Marples <uberlord@gentoo.org> xerces-c-2.7.0-r1.ebuild:
   Keyworded ~x86-fbsd, #194578 thanks to Andreas Nilsson.

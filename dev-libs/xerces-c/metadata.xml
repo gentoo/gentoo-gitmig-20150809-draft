@@ -4,3 +4,18 @@
 	<herd>cpp</herd>
 	<longdescription>xerces-c is a C++ library specializing in XML parsing. It is released by the Apache Foundation</longdescription>
 </pkgmetadata>
+<use>
+	<flag name='iconv'>Use iconv as message loader and transcoder (in general it
+	would be possible to use iconv only as message loader and something else
+	like icu or the native method as transcoder and vice-versa, but this is a
+	less common case and hard to handle)</flag>
+	<flag name='icu'>Use ICU as message loader and transcoder. ICU supports over
+	180 different encodings and/or locale specific message support.</flag>
+	<flag name='libwww'>Use the libwww library for fetching URLs, instead
+	of the builtin method</flag>
+	<flag name='native'>Use the 'native' method to fetch URLs. Please read
+	the documentation for this. This is only available on MacOS X</flag>
+	<flag name='threads'>Enable threading support through pthread (or other
+	libraries on AIX, IRIX, HPUX, Solars). Highly recommended.</flag>
+</use>
+
