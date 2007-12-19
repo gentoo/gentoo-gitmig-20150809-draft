@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-1.2_beta2-r1.ebuild,v 1.1 2007/11/23 12:44:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-1.2.0.ebuild,v 1.1 2007/12/19 22:06:01 hansmi Exp $
 
 NEED_PYTHON=2.4
 
