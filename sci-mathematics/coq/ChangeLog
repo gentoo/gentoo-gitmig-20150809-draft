@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.22 2007/12/17 21:28:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.23 2007/12/19 20:08:01 aballier Exp $
+
+  19 Dec 2007; Alexis Ballier <aballier@gentoo.org> coq-8.1_p2.ebuild,
+  coq-8.1_p3.ebuild:
+  fix depends so that portage doesnt try to downgrade ocaml if you have 3.10
+  installed but not camlp5, thanks jakub for the help there
 
   17 Dec 2007; Alexis Ballier <aballier@gentoo.org> coq-8.0_p3.ebuild,
   coq-8.1_p1.ebuild, coq-8.1_p2.ebuild:

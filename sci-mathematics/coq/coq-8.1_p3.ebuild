@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p3.ebuild,v 1.1 2007/12/17 21:26:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p3.ebuild,v 1.2 2007/12/19 20:08:01 aballier Exp $
 
 inherit eutils multilib
 
@@ -19,7 +19,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="|| ( >=dev-ml/camlp5-5.01 <dev-lang/ocaml-3.10 )
+DEPEND="|| ( ( >=dev-lang/ocaml-3.10 >=dev-ml/camlp5-5.01 ) <dev-lang/ocaml-3.10 )
 >=dev-lang/ocaml-3.08
 ide? ( >=dev-ml/lablgtk-2.2.0 )"
 
