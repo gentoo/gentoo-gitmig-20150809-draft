@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.24_rc1-r15.ebuild,v 1.2 2007/11/14 03:10:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.24_rc5-r6.ebuild,v 1.1 2007/12/19 15:25:19 mpagano Exp $
 
 UNIPATCH_STRICTORDER="yes"
 K_NOUSENAME="yes"
