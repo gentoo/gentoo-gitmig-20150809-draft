@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.0.ebuild,v 1.6 2007/12/19 16:27:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.0.ebuild,v 1.7 2007/12/19 16:31:54 aballier Exp $
 
 inherit flag-o-matic eutils multilib versionator toolchain-funcs
 
@@ -109,7 +109,7 @@ src_install() {
 	# Remove ${D} from ld.conf, as the buildsystem isn't $(DESTDIR) aware
 	dosed "s:${D}::g" /usr/$(get_libdir)/ocaml/ld.conf
 
-	dodoc Changes INSTALL LICENSE README Upgrading
+	dodoc Changes INSTALL README Upgrading
 
 	# Create and envd entry for latex input files (this definitely belongs into
 	# CONTENT and not in pkg_postinst.

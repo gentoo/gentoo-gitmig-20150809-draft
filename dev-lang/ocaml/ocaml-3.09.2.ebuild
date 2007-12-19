@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.2.ebuild,v 1.12 2007/05/11 19:12:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.2.ebuild,v 1.13 2007/12/19 16:31:54 aballier Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -70,7 +70,7 @@ src_install() {
 	dosed "s:${D}::g" /usr/$(get_libdir)/ocaml/ld.conf
 
 	# documentation
-	dodoc Changes INSTALL LICENSE README Upgrading
+	dodoc Changes INSTALL README Upgrading
 }
 
 pkg_postinst() {

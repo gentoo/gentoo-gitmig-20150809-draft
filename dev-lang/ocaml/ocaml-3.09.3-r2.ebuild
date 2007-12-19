@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3-r2.ebuild,v 1.1 2007/10/29 14:52:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3-r2.ebuild,v 1.2 2007/12/19 16:31:54 aballier Exp $
 
 inherit flag-o-matic eutils multilib pax-utils versionator toolchain-funcs
 
@@ -124,7 +124,7 @@ src_install() {
 	# Remove ${D} from ld.conf, as the buildsystem isn't $(DESTDIR) aware
 	dosed "s:${D}::g" /usr/$(get_libdir)/ocaml/ld.conf
 
-	dodoc Changes INSTALL LICENSE README Upgrading
+	dodoc Changes INSTALL README Upgrading
 
 	# Turn MPROTECT off for some of the ocaml binaries, since they are trying to
 	# rewrite the segment (which will obviously fail on systems having
