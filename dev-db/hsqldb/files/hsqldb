@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/files/hsqldb,v 1.1 2004/10/30 20:58:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/files/hsqldb,v 1.2 2007/12/19 21:58:05 caster Exp $
 
 depend() {
     use net
@@ -14,7 +14,7 @@ start() {
 }
 
 stop() {
-	ebegin "Stopping HSQL Databse"
+	ebegin "Stopping HSQL Database"
 	hsqldb_enable=yes /var/lib/hsqldb/bin/hsqldb stop
 	eend $?
 }
