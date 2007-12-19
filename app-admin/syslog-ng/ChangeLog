@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.172 2007/12/18 21:25:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.173 2007/12/19 03:08:51 ranger Exp $
+
+  19 Dec 2007; Brent Baude <ranger@gentoo.org> syslog-ng-2.0.6.ebuild:
+  Marking syslog-ng-2.0.6 ppc & ppc64 stable for 202718 (also marked eventlog
+  for ppc dep)
 
   18 Dec 2007; Jeroen Roovers <jer@gentoo.org> syslog-ng-2.0.6.ebuild:
   Stable for HPPA (bug #202718).
