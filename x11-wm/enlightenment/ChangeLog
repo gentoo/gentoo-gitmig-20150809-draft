@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.75 2007/12/19 04:30:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.76 2007/12/19 20:54:04 ranger Exp $
+
+  19 Dec 2007; Brent Baude <ranger@gentoo.org>
+  enlightenment-0.16.8.10.ebuild:
+  Marking enlightenment-0.16.8.10 ppc and ppc64 stable for bug 202663
 
   19 Dec 2007; Jeroen Roovers <jer@gentoo.org>
   enlightenment-0.16.8.10.ebuild:
