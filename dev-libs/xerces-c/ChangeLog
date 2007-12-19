@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.51 2007/12/19 20:33:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.52 2007/12/19 20:35:32 dev-zero Exp $
+
+  19 Dec 2007; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
+  ... and fixed the syntax error.
 
   19 Dec 2007; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
   Updated metadata.xml again.
