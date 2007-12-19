@@ -61,7 +61,7 @@ Index: incron-0.5.7/incrond-init.d
 +#!/sbin/runscript
 +# Copyright 1999-2007 Gentoo Foundation
 +# Distributed under the terms of the GNU General Public License v2
-+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/files/incron-0.5.7-gentoo.patch,v 1.1 2007/12/19 20:50:04 hollow Exp $
++# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/files/incron-0.5.7-gentoo.patch,v 1.2 2007/12/19 20:56:38 hollow Exp $
 +
 +depend() {
 +	use clock logger
@@ -70,7 +70,7 @@ Index: incron-0.5.7/incrond-init.d
 +
 +start() {
 +	ebegin "Starting incrond"
-+	start-stop-daemon --start --quiet --exec /usr/sbin/incrond -f /etc/incron.conf
++	start-stop-daemon --start --quiet --exec /usr/sbin/incrond -- -f /etc/incron.conf
 +	eend $?
 +}
 +
