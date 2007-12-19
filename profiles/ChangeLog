@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.915 2007/12/19 10:24:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.916 2007/12/19 14:30:50 pva Exp $
+
+  19 Dec 2007; Peter Volkov <pva@gentoo.org> package.mask: Masked
+  =media-fonts/dejavu-2.22, italics are assigned to condensed, see bug 202255
 
   19 Dec 2007; Tiziano Müller <dev-zero@gentoo.org> use.local.desc:
   Added icu USE-flag for dev-libs/xerces-c
