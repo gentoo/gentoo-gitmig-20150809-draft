@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-1.5.1.ebuild,v 1.1 2007/12/19 16:35:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-1.5.1.ebuild,v 1.2 2007/12/20 22:49:30 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 
@@ -29,7 +29,9 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	rm -v "${S}"/*.jar || die
+	cd "${S}"
+	rm -v *.jar || die
+	epatch "${FILESDIR}/1.5.1-ecj.patch"
 }
 
 # chokes on static inner class making instance of non-static inner class
