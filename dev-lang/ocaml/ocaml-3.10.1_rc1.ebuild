@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.1_rc1.ebuild,v 1.2 2007/12/20 20:24:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.1_rc1.ebuild,v 1.3 2007/12/20 22:07:05 mr_bones_ Exp $
 
 inherit flag-o-matic eutils multilib versionator toolchain-funcs
 
@@ -25,7 +25,7 @@ PDEPEND="emacs? ( app-emacs/ocaml-mode )
 S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	# dev-lang/ocaml creates its own objects but calls gcc for linking, which will
-	# results in relocations if gcc wants to create a PIE executable 
+	# results in relocations if gcc wants to create a PIE executable
 	if gcc-specs-pie ; then
 		append-ldflags -nopie
 		ewarn "Ocaml generates its own native asm, you're using a PIE compiler"
