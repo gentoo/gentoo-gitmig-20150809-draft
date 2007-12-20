@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.74 2007/12/12 19:03:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.75 2007/12/20 11:13:12 markusle Exp $
+
+  20 Dec 2007; Markus Dittrich <markusle@gentoo.org>
+  blas-atlas-3.8.0.ebuild:
+  Added fix to enable proper arch detection for pentium M chips.
 
   12 Dec 2007; Raúl Porcel <armin76@gentoo.org> blas-atlas-3.8.0.ebuild:
   sparc stable wrt #200336, thanks to Aaron Mavrinac

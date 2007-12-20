@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.8.0.ebuild,v 1.6 2007/12/12 19:03:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.8.0.ebuild,v 1.7 2007/12/20 11:13:12 markusle Exp $
 
 inherit eutils toolchain-funcs fortran multilib
 
@@ -62,6 +62,11 @@ src_unpack() {
 	epatch "${DISTDIR}"/${MY_PN}-${PATCH_V}-shared-libs.patch.bz2
 	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
 	epatch "${FILESDIR}"/${MY_PN}-${PATCH_V}-decl-fix.patch
+
+	# fix for pentium M
+	sed -e "s|iret = IntPM;|iret = IntPM;  break;|g" \
+		-i CONFIG/src/backend/archinfo_x86.c \
+		|| die "failed to fix pentium M arch detection"
 
 	BLD_DIR="${S}"/gentoo-build
 	mkdir "${BLD_DIR}" || die "failed to generate build directory"
