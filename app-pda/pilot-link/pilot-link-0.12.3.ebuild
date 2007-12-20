@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3.ebuild,v 1.1 2007/12/19 21:09:49 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3.ebuild,v 1.2 2007/12/20 23:08:58 philantrop Exp $
 
 inherit perl-module java-pkg-opt-2 eutils autotools
 
@@ -30,6 +30,9 @@ DEPEND="${BOTH_DEPEND}
 RDEPEND="${BOTH_DEPEND}
 	java? ( >=virtual/jre-1.4 )"
 
+# Unfortunately, parallel compilation is badly broken. cf. bug  202857.
+MAKEOPTS="${MAKEOPTS} -j1"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -45,6 +48,9 @@ src_unpack() {
 	# We install the Java bindings using the eclass functions so we disable
 	# their installation here.
 	use java && epatch "${FILESDIR}/${P}-java-install.patch"
+
+	# Upstream patch to fix 64-bit issues.
+	epatch "${FILESDIR}/${P}-int_types.patch"
 
 	AT_M4DIR="m4" eautoreconf
 }

@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.31 2007/12/19 21:09:49 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.32 2007/12/20 23:08:58 philantrop Exp $
+
+  20 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/pilot-link-0.12.3-int_types.patch, pilot-link-0.12.3.ebuild:
+  Added an upstream patch to fix 64-bit issues causing problems in some
+  applications using pilot-link (e. g. jpilot, bug 87842). Disabled parallel
+  make for now as it's badly broken (bug 202857).
 
 *pilot-link-0.12.3 (19 Dec 2007)
 
