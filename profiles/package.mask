@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8029 2007/12/20 13:32:00 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8030 2007/12/20 15:34:55 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -63,10 +63,6 @@ dev-java/jdbc3-oracle
 # Masked pending removal - see bug #202391
 # Please switch to sys-kernel/gentoo-sources
 sys-kernel/hppa-sources
-
-# Diego Pettenò <flameeyes@gentoo.org> (17 Dec 2007)
-# Mask until the tarball is publically available.
-~media-sound/amarok-1.4.8
 
 # Rémi Cardona <remi@gentoo.org> (17 Dec 2007)
 # Has major regressions, see bug #201519
