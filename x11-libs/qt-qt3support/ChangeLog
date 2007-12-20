@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/qt-qt3support
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.1 2007/12/20 13:01:44 caleb Exp $
+
+*qt-qt3support-4.4.0_rc1 (20 Dec 2007)
+
+  20 Dec 2007; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +qt-qt3support-4.4.0_rc1.ebuild:
+  Initial import
+
