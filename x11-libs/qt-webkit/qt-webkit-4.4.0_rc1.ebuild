@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.0_rc1.ebuild,v 1.1 2007/12/20 12:25:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.0_rc1.ebuild,v 1.2 2007/12/20 16:07:59 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -39,26 +39,10 @@ pkg_setup() {
 	QTDEMOSDIR=${QTDATADIR}/demos
 }
 
-qt_use() {
-	local flag="$1"
-	local feature="$1"
-	local enableval=
-
-	[[ -n $2 ]] && feature=$2
-	[[ -n $3 ]] && enableval="-$3"
-
-	useq $flag && echo "${enableval}-${feature}" || echo "-no-${feature}"
-	return 0
-}
-
 src_unpack() {
 
 	unpack ${A}
 	cd "${S}"
-	# epatch "${FILESDIR}"/qt-4.2.3-hppa-ldcw-fix.patch
-
-	cd "${S}"/mkspecs/$(qt_mkspecs_dir)
-	# set c/xxflags and ldflags
 
 	# Don't let the user go too overboard with flags.  If you really want to, uncomment
 	# out the line below and give 'er a whirl.
@@ -70,7 +54,9 @@ src_unpack() {
 		append-flags -fno-stack-protector
 	fi
 
-
+	# Override the creation of qmake and copy over the one from the system.  This speeds up compilation time a lot.
+	epatch "${FILESDIR}"/configure.patch
+	cp ${QTBINDIR}/qmake "${S}"/bin/qmake
 }
 
 src_compile() {
@@ -125,3 +111,17 @@ src_install() {
 	dodir ${QTPCDIR}
 	mv "${D}"/${QTLIBDIR}/pkgconfig/*.pc "${D}"/${QTPCDIR}
 }
+
+pkg_postinst()
+{
+	# Need to add webkit to QT_CONFIG line
+	sed -i -e "s:webkit ::g" ${QTDATADIR}/mkspecs/qconfig.pri
+	sed -i -e "s:QT_CONFIG += :QT_CONFIG += webkit :g" ${QTDATADIR}/mkspecs/qconfig.pri
+}
+
+pkg_postrm()
+{
+	# Need to add qdbus to QT_CONFIG line
+	sed -i -e "s:webkit ::g" ${QTDATADIR}/mkspecs/qconfig.pri
+}
+
