@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.918 2007/12/20 02:50:45 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.919 2007/12/20 10:13:24 mrness Exp $
+
+  20 Dec 2007; Alin Năstac <mrness@gentoo.org> package.mask:
+  Unmask squid-3.0.1 (#197147).
 
   20 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> package.mask:
   p.mask new dev-haskell/stm and dev-haskell/parallel because they need
