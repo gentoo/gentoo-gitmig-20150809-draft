@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xgamma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgamma/ChangeLog,v 1.16 2007/09/08 06:14:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgamma/ChangeLog,v 1.17 2007/12/20 00:13:16 cla Exp $
+
+  19 Dec 2007; Dawid Węgliński <cla@gentoo.org> xgamma-1.0.2.ebuild:
+  Stable on x86 (bug #202087)
 
 *xgamma-1.0.2 (08 Sep 2007)
 
