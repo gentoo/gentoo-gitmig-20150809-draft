@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.187 2007/11/24 11:27:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.188 2007/12/20 15:45:36 flameeyes Exp $
+
+  20 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> pam-0.78-r5.ebuild:
+  Remove pam_console USE flag so that it's always disabled.
 
   24 Nov 2007; Diego Pettenò <flameeyes@gentoo.org> pam-0.99.9.0.ebuild:
   Don't suggest using sys-auth/pam_console anymore, also link the upgrade

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.20 2007/11/15 16:59:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.21 2007/12/20 15:45:36 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -23,24 +23,21 @@ S="${WORKDIR}/Linux-PAM-${PV}"
 S2="${WORKDIR}/pam-${PV}-patches"
 SRC_URI="mirror://kernel/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz
 	mirror://gentoo/pam-${PV}-patches-${PATCH_LEVEL}.tar.bz2
-	berkdb? ( http://downloads.sleepycat.com/db-${BDB_VER}.tar.gz )
-	pam_console? ( ftp://ftp.gtk.org/pub/gtk/v2.6/glib-${GLIB_VER}.tar.bz2 )"
+	berkdb? ( http://downloads.sleepycat.com/db-${BDB_VER}.tar.gz )"
 
 LICENSE="PAM"
 SLOT="0"
 KEYWORDS="mips"
-IUSE="berkdb pwdb selinux pam_chroot pam_console pam_timestamp nis"
+IUSE="berkdb pwdb selinux pam_chroot pam_timestamp nis"
 
 RDEPEND=">=sys-libs/cracklib-2.8.3
 	selinux? ( >=sys-libs/libselinux-1.28 )
 	berkdb? ( >=sys-libs/db-${BDB_VER2} )
 	pwdb? ( >=sys-libs/pwdb-0.62 )
-	!sys-auth/pam_console
 	!sys-auth/pam_userdb
 	!sys-auth/pam_chroot"
 
-# Note that we link to static versions of glib (pam_console.so)
-# and pwdb (pam_pwdb.so), so we need glib-2.6.2-r1 or later ...
+# Note that we link to static versions of and pwdb (pam_pwdb.so)
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-util/pkgconfig
@@ -89,14 +86,6 @@ pkg_setup() {
 	#		fi
 	#	done
 	#fi
-	#if use pam_console; then
-	#	x="libglib-2.0.a"
-	#	if [ ! -f "${ROOT}/usr/$(get_libdir)/${x}" ]; then
-	#		eerror "Could not find /usr/$(get_libdir)/${x} needed to build Linux-PAM!"
-	#		eerror "Please remerge glib-2.6.* to make sure you have static changes."
-	#		die "Could not find /usr/$(get_libdir)/${x} needed to build Linux-PAM!"
-	#	fi
-	#fi
 
 	return 0
 }
@@ -122,9 +111,10 @@ src_unpack() {
 
 	# Check which extra modules should be built
 	# (Do this after apply_pam_patches(), else some may fail)
-	for x in pam_chroot pam_console pam_timestamp; do
+	for x in pam_chroot pam_timestamp; do
 		use "${x}" || rm -rf "${S}/modules/${x}"
 	done
+	rm -rf "${S}/modules/pam_console"
 	use berkdb || rm -rf "${S}/modules/pam_userdb"
 	use pwdb || rm -rf "${S}/modules/pam_pwdb"
 	use pwdb || rm -rf "${S}/modules/pam_radius"
@@ -196,35 +186,7 @@ src_compile() {
 		make install || die
 	fi
 
-	if use pam_console ; then
-		einfo "Building GLIB ${GLIB_VER}..."
-		cd "${GLIB_DIR}" || die
-
-		# The __attribute__((visibility("hidden"))) causes TEXTREL issues
-		sed -i -s 's:G_GNUC_INTERNAL::g' "${GLIB_DIR}/glib"/*.c
-
-		CFLAGS="${CFLAGS} -fPIC" \
-		./configure \
-			--host=${CHOST} \
-			--enable-static \
-			--disable-shared \
-			--with-pic \
-			--disable-threads \
-			--with-threads=none \
-			--prefix="${S}" \
-			--includedir="${S}/include" \
-			--libdir="${S}/lib" || die "Bad GLIB ./configure"
-
-		# Do not need to build the whole shebang
-		cd "${GLIB_DIR}/glib" || die
-		make CC="$(tc-getCC)" || die "GLIB build failed"
-		make install || die
-		# Install pkg-config stuff and needed headers
-		cd "${GLIB_DIR}" || die
-		make install-pkgconfigDATA install-exec-local || die
-	fi
-
-	if use berkdb || use pam_console ; then
+	if use berkdb ; then
 		# Make sure out static libs are used
 		export CFLAGS="-I${S}/include -Wl,-L${S}/lib ${CFLAGS}"
 		export LDFLAGS="-L${S}/lib ${LDFLAGS}"
@@ -327,9 +289,6 @@ src_install() {
 
 	cd ${S}
 
-	# need this for pam_console
-	keepdir /var/run/console
-
 	newpamd "${FILESDIR}/system-auth.pamd.0.78" system-auth
 	newpamd "${FILESDIR}/other.pamd" other
 
@@ -345,8 +304,6 @@ src_install() {
 
 	dodoc CHANGELOG Copyright README
 	docinto modules ; dodoc modules/README ; dodoc doc/txts/README.*
-	# Install our own README.pam_console
-	docinto modules ; dodoc "${S2}/gentoo-extrafiles/README.pam_console"
 	docinto txt ; dodoc doc/specs/*.txt #doc/txts/*.txt
 #	docinto print ; dodoc doc/ps/*.ps
 
@@ -381,12 +338,5 @@ pkg_postinst() {
 		else
 			rm -f ${ROOT}/etc/pam.d/system-auth.new
 		fi
-	fi
-
-	if use pam_console; then
-		echo
-		elog "If you want to enable the pam_console module, please follow"
-		elog "the instructions in /usr/share/doc/${PF}/README.pam_console."
-		echo
 	fi
 }
