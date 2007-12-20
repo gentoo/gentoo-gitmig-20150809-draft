@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.7-r1.ebuild,v 1.1 2007/12/15 09:43:26 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.7-r1.ebuild,v 1.2 2007/12/20 15:49:15 hollow Exp $
 
 inherit eutils webapp versionator depend.apache
 
@@ -77,7 +77,7 @@ src_install() {
 	docinto xslt
 	dodoc tools/xslt/*
 
-	webapp_postinst_txt en "${WORKDIR}"/postinst-en-r1.txt
+	webapp_postinst_txt en "${FILESDIR}"/postinst-en-r1.txt
 
 	keepdir /var/lib/awstats
 
