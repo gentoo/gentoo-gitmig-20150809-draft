@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.1 2007/12/20 13:01:44 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.2 2007/12/20 13:40:53 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -54,6 +54,9 @@ src_unpack() {
 		append-flags -fno-stack-protector
 	fi
 
+	# Override the creation of qmake and copy over the one from the system.  This speeds up compilation time a lot.
+	epatch "${FILESDIR}"/configure.patch
+	cp ${QTBINDIR}/qmake "${S}"/bin/qmake
 }
 
 src_compile() {
