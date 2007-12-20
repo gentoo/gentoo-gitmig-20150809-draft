@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.28 2007/11/28 23:41:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.29 2007/12/20 09:53:00 vapier Exp $
 
 multilib
 
@@ -90,9 +90,6 @@ pvm
 3dfx
 
 # NOT NECESSARY - SECTION
-
-# gcc doesn't build if we have a multitarget binutils
-multitarget
 
 # Unmask emul-linux-x86
 -emul-linux-x86

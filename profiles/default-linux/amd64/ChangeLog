@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.123 2007/11/28 23:38:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.124 2007/12/20 09:53:00 vapier Exp $
+
+  20 Dec 2007; Mike Frysinger <vapier@gentoo.org> use.mask:
+  Stable binutils (2.18-r1) has fixed support for multitarget, so building
+  gcc and glibc is OK now.
 
   28 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> use.mask:
   Unmasking cdf, since it does work on amd64
