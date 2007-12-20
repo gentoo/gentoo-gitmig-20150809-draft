@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.3.ebuild,v 1.1 2007/07/23 09:17:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.3.ebuild,v 1.2 2007/12/20 15:30:44 maekke Exp $
 
 inherit eutils qt3 linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/oprofile/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 # IUSE: it also needs kernel sources but all gentoo users have them
 IUSE="qt3"
 DEPEND=">=dev-libs/popt-1.7-r1
@@ -24,8 +24,8 @@ src_compile() {
 	if use qt3
 	then
 		REALHOME="$HOME"
-		mkdir -p $T/fakehome/.kde
-		mkdir -p $T/fakehome/.qt
+		mkdir -p "$T"/fakehome/.kde
+		mkdir -p "$T"/fakehome/.qt
 		export HOME="$T/fakehome"
 		addwrite "${QTDIR}/etc/settings"
 
@@ -54,7 +54,7 @@ src_install() {
 	local myinst=""
 
 	myinst="${myinst} MODINSTALLDIR=${D}/lib/modules/${KV_FULL}"
-	make DESTDIR=${D} ${myinst} install || die "make install failed"
+	make DESTDIR="${D}" ${myinst} install || die "make install failed"
 
 	dodoc ChangeLog* README TODO
 }
