@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.0.ebuild,v 1.9 2007/12/19 20:04:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.0.ebuild,v 1.10 2007/12/20 20:24:12 aballier Exp $
 
 inherit flag-o-matic eutils multilib versionator toolchain-funcs
 
@@ -38,11 +38,6 @@ src_unpack() {
 
 	# Fix the EXEC_STACK in ocaml compiled binaries (#153382)
 	epatch "${FILESDIR}"/${P}-exec-stack-fixes.patch
-
-	# Quick and somewhat dirty fix for bug #110541
-	# The sed in the Makefile doesn't replace all occurences of @compiler@
-	# in driver/ocamlcomp.sh.in. Reported upstream as issue 0004268.
-	#epatch "${FILESDIR}"/${P}-execheap.patch
 
 	# The configure script doesn't inherit previous defined variables,
 	# overwriting previous declarations of bytecccompopts, bytecclinkopts,
