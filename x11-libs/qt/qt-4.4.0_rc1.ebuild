@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.4.0_rc1.ebuild,v 1.4 2007/12/20 13:06:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.4.0_rc1.ebuild,v 1.5 2007/12/20 13:19:21 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -43,7 +43,6 @@ RDEPEND="x11-libs/libXrandr
 	postgres? ( dev-db/libpq )
 	cups? ( net-print/cups )
 	glib? ( dev-libs/glib )
-	dbus? ( >=sys-apps/dbus-1.0.2 )
 	ssl? ( dev-libs/openssl )
 	input_devices_wacom? ( x11-libs/libXi x11-drivers/linuxwacom )"
 
@@ -53,7 +52,8 @@ DEPEND="${RDEPEND}
 	x11-proto/inputproto
 	dev-util/pkgconfig"
 
-PDEPEND="qt3support? ( =x11-libs/qt-qt3support-${PV} )"
+PDEPEND="qt3support? ( =x11-libs/qt-qt3support-${PV} )
+	dbus? ( =x11-libs/qt-dbus-${PV} )"
 
 pkg_setup() {
 	QTBASEDIR=/usr/$(get_libdir)/qt4
@@ -205,7 +205,6 @@ src_compile() {
 	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite2" || myconf="${myconf} -no-sql-sqlite2"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc" || myconf="${myconf} -no-sql-odbc"
 
-	use dbus	&& myconf="${myconf} -qdbus" || myconf="${myconf} -no-qdbus"
 	use glib	&& myconf="${myconf} -glib" || myconf="${myconf} -no-glib"
 	use ssl		&& myconf="${myconf} -openssl" || myconf="${myconf} -no-openssl"
 
@@ -228,7 +227,7 @@ src_compile() {
 
 	# Explictly don't compile these packages.
 	# Emerge "qt-webkit", "qt-phonon", etc for their functionality.
-	myconf="${myconf} -no-webkit -no-phonon -no-qt3support"
+	myconf="${myconf} -no-webkit -no-phonon -no-qt3support -no-qdbus"
 
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
