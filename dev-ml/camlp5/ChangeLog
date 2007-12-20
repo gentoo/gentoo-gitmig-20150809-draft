@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.11 2007/12/17 17:41:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.12 2007/12/20 17:32:52 aballier Exp $
+
+*camlp5-5.06 (20 Dec 2007)
+
+  20 Dec 2007; Alexis Ballier <aballier@gentoo.org> -camlp5-5.03.ebuild,
+  -camlp5-5.04.ebuild, +camlp5-5.06.ebuild:
+  version bump, remove old
 
 *camlp5-5.05 (17 Dec 2007)
 

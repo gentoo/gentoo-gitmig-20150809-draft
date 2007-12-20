@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-5.04.ebuild,v 1.1 2007/11/27 20:10:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-5.06.ebuild,v 1.1 2007/12/20 17:32:52 aballier Exp $
 
-inherit multilib eutils
+inherit multilib findlib
 
 DESCRIPTION="A preprocessor-pretty-printer of ocaml"
 HOMEPAGE="http://pauillac.inria.fr/~ddr/camlp5/"
@@ -28,6 +28,10 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	# findlib support
+	insinto "$(ocamlfind printconf destdir)/${PN}"
+	doins etc/META || die "failed to install META file for findlib support"
+
 	use doc && dohtml -r doc/*
 
 	dodoc CHANGES DEVEL ICHANGES README UPGRADING MODE
