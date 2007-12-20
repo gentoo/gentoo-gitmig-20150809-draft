@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r2.ebuild,v 1.11 2007/11/13 06:50:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r2.ebuild,v 1.12 2007/12/20 10:39:45 caster Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -16,11 +16,7 @@ SLOT="0"
 IUSE="doc"
 
 RDEPEND=">=virtual/jre-1.4"
-# FIXME doesn't like Java 1.6 for some reason
-DEPEND="|| (
-		=virtual/jdk-1.5*
-		=virtual/jdk-1.4*
-	)
+DEPEND=">=virtual/jdk-1.4
 	doc? (
 		=app-text/docbook-xml-dtd-4.3*
 		>=app-text/docbook-xsl-stylesheets-1.65.1
@@ -32,6 +28,8 @@ S="${WORKDIR}/jEdit"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-jdk-1.6.patch"
 
 	if use doc; then
 		local xsl=$(echo /usr/share/sgml/docbook/xsl-stylesheets-*)

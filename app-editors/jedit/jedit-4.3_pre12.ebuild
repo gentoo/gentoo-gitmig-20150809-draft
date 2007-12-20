@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre9.ebuild,v 1.5 2007/11/13 06:50:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre12.ebuild,v 1.1 2007/12/20 10:39:45 caster Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
-inherit java-pkg-2 java-ant-2 eutils
+inherit java-pkg-2 java-ant-2 eutils fdo-mime
 
 # TODO use versionator
 MY_PV="${PV//_/}"
@@ -75,18 +75,20 @@ src_install () {
 	make_desktop_entry ${PN} \
 		jEdit \
 		${JEDIT_HOME}/doc/${PN}.png \
-		"Application;Development;"
+		"Development;Utility;TextEditor"
 
 	# keep the plugin directory
 	keepdir ${JEDIT_HOME}/jars
 }
 
 pkg_postinst() {
+	fdo-mime_desktop_database_update
 	elog "The system directory for jEdit plugins is"
 	elog "${JEDIT_HOME}/jars"
 }
 
 pkg_postrm() {
+	fdo-mime_desktop_database_update
 	elog "jEdit plugins installed into /usr/share/jedit/jars"
 	elog "(after installation of jEdit itself) haven't been"
 	elog "removed. To get rid of jEdit completely, you may"
