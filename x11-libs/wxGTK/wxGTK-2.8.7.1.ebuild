@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1.ebuild,v 1.5 2007/12/15 00:40:08 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1.ebuild,v 1.6 2007/12/20 00:14:00 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 			x11-proto/xf86vidmodeproto
 			)"
 
-PDEPEND="app-admin/eselect-wxwidgets"
+PDEPEND=">=app-admin/eselect-wxwidgets-0.7"
 
 SLOT="2.8"
 LICENSE="wxWinLL-3

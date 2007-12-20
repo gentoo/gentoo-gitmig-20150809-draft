@@ -1,6 +1,18 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.171 2007/12/15 00:40:08 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.172 2007/12/20 00:14:00 dirtyepic Exp $
+
+*wxGTK-2.6.4.0-r3 (20 Dec 2007)
+
+  20 Dec 2007; Ryan Hill <dirtyepic@gentoo.org>
+  -files/wxGTK-2.6.3.3-dialog_focus.patch,
+  -files/wxGTK-2.6.3.3-slider_linesize.patch,
+  -files/wxGTK-2.6.3.3-wxrc_build_fix.patch,
+  -files/wxGTK-2.6.3.3-wxrc_link_fix.patch,
+  files/wxGTK-2.6.4-collision.patch, files/wxGTK-2.8.4-collision.patch,
+  -wxGTK-2.6.3.3.ebuild, -wxGTK-2.6.4.0-r2.ebuild, +wxGTK-2.6.4.0-r3.ebuild,
+  wxGTK-2.8.7.1.ebuild:
+  Move wxwin.m4 handling to eselect-wxwidgets. Remove old.
 
   15 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.8.7.1.ebuild:
   Pass --enable-graphics_ctx to configure for wxWebKit/Editra/leio.
