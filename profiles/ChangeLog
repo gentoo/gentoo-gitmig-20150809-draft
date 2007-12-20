@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.924 2007/12/20 15:50:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.925 2007/12/20 19:43:05 aballier Exp $
+
+  20 Dec 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask ocaml 3.10.1 release candidate 1, its redundant with the older 3.10
+  mask but this one isn't good for ~arch yet, and its only a release candidate
 
   20 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
   Fix masking of Amarok Live SVN ebuild.
