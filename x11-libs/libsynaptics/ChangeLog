@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libsynaptics
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/ChangeLog,v 1.6 2007/05/14 13:17:21 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/ChangeLog,v 1.7 2007/12/20 19:18:23 maekke Exp $
+
+  20 Dec 2007; Markus Meier <maekke@gentoo.org> libsynaptics-0.14.6c.ebuild:
+  x86 stable, bug #202658
 
   14 May 2007; Christian Parpart <trapni@gentoo.org>
   libsynaptics-0.14.6c.ebuild:
