@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.0_rc1.ebuild,v 1.2 2007/12/20 16:07:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.0_rc1.ebuild,v 1.3 2007/12/20 17:25:23 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -94,10 +94,16 @@ src_compile() {
 
 	cd "${S}"/src/3rdparty/webkit/WebCore
 	qmake "LIBS+=-L${QTLIBDIR}" && emake || die
+
+	cd "${S}"/tools/designer/src/plugins/qwebview
+	qmake "LIBS+=-L${QTLIBDIR}" && emake || die
 }
 
 src_install() {
 	cd "${S}"/src/3rdparty/webkit/WebCore
+	emake INSTALL_ROOT="${D}" install || die
+
+	cd "${S}"/tools/designer/src/plugins/qwebview
 	emake INSTALL_ROOT="${D}" install || die
 
 	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" "${D}"/${QTLIBDIR}/*.la
