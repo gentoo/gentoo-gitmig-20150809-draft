@@ -1,18 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.16.ebuild,v 1.12 2007/11/15 08:37:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.1.ebuild,v 1.1 2007/12/20 10:07:12 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
 inherit eutils pam toolchain-funcs flag-o-matic autotools linux-info
 
-#lame archive versioning scheme..
+# lame archive versioning scheme..
 S_PMV="${PV%%.*}"
 S_PV="${PV%.*}"
 S_PL="${PV##*.}"
-S_PL="${S_PL/_rc/-RC}"
 S_PP="${PN}-${S_PV}.STABLE${S_PL}"
+
+RESTRICT="test" # check if test works in next bump
 
 DESCRIPTION="A full-featured web proxy cache"
 HOMEPAGE="http://www.squid-cache.org/"
@@ -20,15 +21,15 @@ SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="pam ldap samba sasl nis ssl snmp selinux logrotate qos zero-penalty-hit \
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="pam ldap samba sasl nis radius ssl snmp selinux icap-client logrotate \
 	pf-transparent ipf-transparent \
 	elibc_uclibc kernel_linux"
 
 DEPEND="pam? ( virtual/pam )
-	ldap? ( >=net-nds/openldap-2.1.26 )
-	ssl? ( >=dev-libs/openssl-0.9.7j )
-	sasl? ( >=dev-libs/cyrus-sasl-2.1.21 )
+	ldap? ( >=net-nds/openldap-2.3.35 )
+	ssl? ( >=dev-libs/openssl-0.9.8d )
+	sasl? ( >=dev-libs/cyrus-sasl-2.1.22 )
 	selinux? ( sec-policy/selinux-squid )
 	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )
 	>=sys-libs/db-4
@@ -39,23 +40,22 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${S_PP}"
 
 pkg_setup() {
+	if hasq qos ${USE} || hasq zero-penalty-hit ${USE} ; then
+		eerror "qos and zero-penalty-hit useflags are not supported by squid-3."
+		eerror "Please remove them from your USE or use =net-proxy/squid-2.6* instead."
+		die "unsupported USE flags detected"
+	fi
 	enewgroup squid 31
 	enewuser squid 31 -1 /var/cache/squid squid
 }
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
-	cd "${S}" || die "dir ${S} not found"
+	cd "${S}" || die "source dir not found"
 
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-	use zero-penalty-hit && epatch "${FILESDIR}"/${P}-ToS_Hit_ToS_Preserve.patch
-	use qos && epatch "${FILESDIR}"/${P}-qos.patch
 
 	sed -i -e 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in
-
-	# disable lazy bindings on (some at least) suided basic auth programs
-	sed -i -e '$aAM_LDFLAGS = '$(bindnow-flags) \
-		helpers/basic_auth/*/Makefile.am
 
 	eautoreconf
 }
@@ -67,6 +67,7 @@ src_compile() {
 	use pam && basic_modules="PAM,${basic_modules}"
 	use sasl && basic_modules="SASL,${basic_modules}"
 	use nis && ! use elibc_uclibc && basic_modules="YP,${basic_modules}"
+	use radius && basic_modules="squid_radius_auth,${basic_modules}"
 
 	local ext_helpers="ip_user,session,unix_group"
 	use samba && ext_helpers="wbinfo_group,${ext_helpers}"
@@ -80,17 +81,12 @@ src_compile() {
 	# Support for uclibc #61175
 	if use elibc_uclibc; then
 		myconf="${myconf} --enable-storeio=ufs,diskd,aufs,null"
-		myconf="${myconf} --disable-async-io"
 	else
 		myconf="${myconf} --enable-storeio=ufs,diskd,coss,aufs,null"
-		myconf="${myconf} --enable-async-io"
 	fi
 
 	if use kernel_linux; then
 		myconf="${myconf} --enable-linux-netfilter"
-		if kernel_is ge 2 6 && linux_chkconfig_present EPOLL ; then
-			myconf="${myconf} --enable-epoll"
-		fi
 	elif use kernel_FreeBSD || use kernel_OpenBSD || use kernel_NetBSD ; then
 		myconf="${myconf} --enable-kqueue"
 		if use pf-transparent; then
@@ -107,26 +103,23 @@ src_compile() {
 		--libexecdir=/usr/libexec/squid \
 		--localstatedir=/var \
 		--datadir=/usr/share/squid \
-		--enable-auth="basic,digest,ntlm" \
+		--with-default-user=squid \
+		--enable-auth="basic,digest,negotiate,ntlm" \
 		--enable-removal-policies="lru,heap" \
 		--enable-digest-auth-helpers="password" \
 		--enable-basic-auth-helpers="${basic_modules}" \
 		--enable-external-acl-helpers="${ext_helpers}" \
 		--enable-ntlm-auth-helpers="${ntlm_helpers}" \
-		--enable-ident-lookups \
 		--enable-useragent-log \
 		--enable-cache-digests \
 		--enable-delay-pools \
 		--enable-referer-log \
 		--enable-arp-acl \
-		--with-pthreads \
 		--with-large-files \
-		--enable-htcp \
-		--enable-carp \
-		--enable-follow-x-forwarded-for \
-		--with-maxfd=8192 \
+		--with-filedescriptors=8192 \
 		$(use_enable snmp) \
 		$(use_enable ssl) \
+		$(use_enable icap-client) \
 		${myconf} || die "econf failed"
 
 	emake || die "emake failed"
