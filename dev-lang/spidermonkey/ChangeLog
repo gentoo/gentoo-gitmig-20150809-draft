@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.36 2007/12/11 11:06:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.37 2007/12/20 19:49:59 fmccor Exp $
+
+  20 Dec 2007; Ferris McCormick <fmccor@gentoo.org>
+  spidermonkey-1.7.0.ebuild:
+  Sparc stable, Bug #202885, 30 day rule.
 
   11 Dec 2007; Raúl Porcel <armin76@gentoo.org> spidermonkey-1.6.ebuild:
   alpha stable
