@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.8.0.ebuild,v 1.1 2007/12/19 20:31:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.8.0.ebuild,v 1.2 2007/12/20 13:15:45 dev-zero Exp $
 
 EAPI="1"
 
@@ -40,7 +40,7 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i \
-		-e 's|sh ./configure.*|/usr/bin/true|' \
+		-e 's|sh ./configure.*|true|' \
 		src/xercesc/runConfigure || die "sed failed"
 
 	sed -i \

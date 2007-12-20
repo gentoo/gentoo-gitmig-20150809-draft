@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.52 2007/12/19 20:35:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.53 2007/12/20 13:15:45 dev-zero Exp $
+
+  20 Dec 2007; Tiziano Müller <dev-zero@gentoo.org> xerces-c-2.8.0.ebuild:
+  Changed /usr/bin/true to true (bug #202830)
 
   19 Dec 2007; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
   ... and fixed the syntax error.
