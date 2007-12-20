@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.2 2007/12/20 13:40:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.3 2007/12/20 16:09:17 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -57,6 +57,12 @@ src_unpack() {
 	# Override the creation of qmake and copy over the one from the system.  This speeds up compilation time a lot.
 	epatch "${FILESDIR}"/configure.patch
 	cp ${QTBINDIR}/qmake "${S}"/bin/qmake
+
+	if use accessibility && !built_with_use =x11-libs/qt-4* accessibility; then
+		eerror "Attempting to build qt3support with accessibility use flag without support in Qt4."
+		eerror "You must either turn off this use flag or re-emerge x11-libs/qt with accessibility support."
+		die
+	fi
 }
 
 src_compile() {
@@ -127,3 +133,17 @@ src_install() {
 	dodir ${QTPCDIR}
 	mv "${D}"/${QTLIBDIR}/pkgconfig/*.pc "${D}"/${QTPCDIR}
 }
+
+pkg_postinst()
+{
+	# Need to add qt3support to QT_CONFIG line
+	sed -i -e "s:qt3support ::g" ${QTDATADIR}/mkspecs/qconfig.pri
+	sed -i -e "s:QT_CONFIG += :QT_CONFIG += qt3support :g" ${QTDATADIR}/mkspecs/qconfig.pri
+}
+
+pkg_postrm()
+{
+	# Need to add qt3support to QT_CONFIG line
+	sed -i -e "s:qt3support ::g" ${QTDATADIR}/mkspecs/qconfig.pri
+}
+
