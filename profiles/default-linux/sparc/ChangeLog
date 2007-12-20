@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.85 2007/12/04 15:27:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.86 2007/12/20 14:06:29 fmccor Exp $
+
+  20 Dec 2007; Ferris McCormick <fmccor@gentoo.org> package.use.mask:
+  Remove package.use.mask mtp entry for media-sound/amarok because sparc now has
+  a stable version of media-libs/libmtp.
 
   04 Dec 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
   Unmask seamonkey use-flag now that it works and is stable
