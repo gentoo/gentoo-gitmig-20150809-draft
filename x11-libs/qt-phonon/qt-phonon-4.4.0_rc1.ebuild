@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.4.0_rc1.ebuild,v 1.1 2007/12/20 12:26:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.4.0_rc1.ebuild,v 1.2 2007/12/20 13:45:11 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -17,11 +17,12 @@ LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
 KEYWORDS="~x86"
 
-IUSE="debug"
+IUSE="debug dbus"
 
 RDEPEND="=x11-libs/qt-4.4.0_rc1
 	media-libs/gstreamer
-	media-libs/gst-plugins-base"
+	media-libs/gst-plugins-base
+	dbus? ( =x11-libs/qt-dbus-${PV} )"
 
 DEPEND="${RDEPEND}"
 
@@ -59,7 +60,9 @@ src_unpack() {
 		append-flags -fno-stack-protector
 	fi
 
-
+	# Override the creation of qmake and copy over the one from the system.  This speeds up compilation time a lot.
+	epatch "${FILESDIR}"/configure.patch
+	cp ${QTBINDIR}/qmake "${S}"/bin/qmake
 }
 
 src_compile() {
@@ -77,6 +80,8 @@ src_compile() {
 	# cases.  From bug #178535
 	myconf="${myconf} -fast -reduce-relocations -phonon"
 	use debug	&& myconf="${myconf} -debug -no-separate-debug-info" || myconf="${myconf} -release -no-separate-debug-info"
+
+	use dbus	&& myconf="${myconf} -qdbus" || myconf="${myconf} -no-qdbus"
 
 	myconf="${myconf} -nomake examples -nomake demos"
 
