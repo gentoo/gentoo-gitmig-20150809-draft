@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-fontconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-fontconfig/ChangeLog,v 1.9 2007/12/04 03:07:54 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-fontconfig/ChangeLog,v 1.10 2007/12/20 15:14:09 cardoe Exp $
+
+  20 Dec 2007; Doug Klima <cardoe@gentoo.org> eselect-fontconfig-1.0.ebuild:
+  ~sparc-fbsd and ~x86-fbsd for bug #180231
 
   04 Dec 2007; Ryan Hill <dirtyepic@gentoo.org>
   eselect-fontconfig-1.0.ebuild:
