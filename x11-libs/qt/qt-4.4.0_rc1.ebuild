@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.4.0_rc1.ebuild,v 1.3 2007/12/20 09:52:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.4.0_rc1.ebuild,v 1.4 2007/12/20 13:06:17 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -52,6 +52,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/inputproto
 	dev-util/pkgconfig"
+
+PDEPEND="qt3support? ( =x11-libs/qt-qt3support-${PV} )"
 
 pkg_setup() {
 	QTBASEDIR=/usr/$(get_libdir)/qt4
@@ -205,7 +207,6 @@ src_compile() {
 
 	use dbus	&& myconf="${myconf} -qdbus" || myconf="${myconf} -no-qdbus"
 	use glib	&& myconf="${myconf} -glib" || myconf="${myconf} -no-glib"
-	use qt3support		&& myconf="${myconf} -qt3support" || myconf="${myconf} -no-qt3support"
 	use ssl		&& myconf="${myconf} -openssl" || myconf="${myconf} -no-openssl"
 
 	use pch		&& myconf="${myconf} -pch" || myconf="${myconf} -no-pch"
@@ -225,8 +226,9 @@ src_compile() {
 		-sysconfdir ${QTSYSCONFDIR} -translationdir ${QTTRANSDIR} \
 		-examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR} ${myconf}"
 
-	# Explictly don't compile webkit.  Emerge "qt-webkit" for its functionality.
-	myconf="${myconf} -no-webkit"
+	# Explictly don't compile these packages.
+	# Emerge "qt-webkit", "qt-phonon", etc for their functionality.
+	myconf="${myconf} -no-webkit -no-phonon -no-qt3support"
 
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
