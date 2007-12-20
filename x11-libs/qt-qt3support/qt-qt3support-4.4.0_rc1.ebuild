@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.3 2007/12/20 16:09:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.4 2007/12/20 18:47:51 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -107,6 +107,9 @@ src_compile() {
 
 	cd "${S}"/tools/qtconfig
 	qmake "LIBS+=-L${QTLIBDIR}" && emake || die
+
+	cd "${S}"/src/tools/uic3
+	qmake "LIBS+=-L${QTLIBDIR}" && emake || die
 }
 
 src_install() {
@@ -120,6 +123,9 @@ src_install() {
 	emake INSTALL_ROOT="${D}" install || die
 
 	cd "${S}"/tools/qtconfig
+	emake INSTALL_ROOT="${D}" install || die
+
+	cd "${S}"/src/tools/uic3
 	emake INSTALL_ROOT="${D}" install || die
 
 	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" "${D}"/${QTLIBDIR}/*.la
