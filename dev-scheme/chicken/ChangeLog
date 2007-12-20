@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/chicken
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.16 2007/11/28 17:09:59 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.17 2007/12/20 14:56:59 hkbst Exp $
+
+  20 Dec 2007; Marijn Schouten <hkBst@gentoo.org> chicken-2.731.ebuild:
+  fix bug 201220, thanks to José Romildo Malaquias <j.romildo@gmail.com> for
+  the patch
 
 *chicken-2.731 (28 Nov 2007)
 

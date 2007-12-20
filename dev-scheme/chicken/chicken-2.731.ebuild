@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-2.731.ebuild,v 1.1 2007/11/28 17:09:59 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-2.731.ebuild,v 1.2 2007/12/20 14:56:59 hkbst Exp $
 
 inherit multilib elisp-common
 
@@ -18,6 +18,13 @@ IUSE="emacs"
 DEPEND="sys-apps/texinfo emacs? ( virtual/emacs )"
 
 SITEFILE=50hen-gentoo.el
+
+src_unpack() {
+	unpack ${A}; cd "${S}"
+#	cp defaults.make defaults.make.old
+	sed "s,/lib,/$(get_libdir),g" -i defaults.make
+#	diff -u defaults.make.old defaults.make
+}
 
 src_compile() {
 	OPTIONS="PLATFORM=linux PREFIX=/usr"
