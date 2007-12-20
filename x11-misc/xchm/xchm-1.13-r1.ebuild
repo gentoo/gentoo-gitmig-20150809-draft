@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.13-r1.ebuild,v 1.1 2007/12/08 23:51:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.13-r1.ebuild,v 1.2 2007/12/20 01:13:42 dirtyepic Exp $
 
-inherit wxwidgets flag-o-matic fdo-mime gnome2-utils
+inherit eutils wxwidgets flag-o-matic fdo-mime gnome2-utils
 
 DESCRIPTION="Utility for viewing Microsoft .chm files."
 HOMEPAGE="http://xchm.sf.net"
@@ -16,6 +16,13 @@ IUSE="nls unicode"
 DEPEND=">=app-doc/chmlib-0.36
 	=x11-libs/wxGTK-2.6*"
 # Tested to work against a local install of 2.8.3
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
+}
 
 src_compile() {
 	local myconf
