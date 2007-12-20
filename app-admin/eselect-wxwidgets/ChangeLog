@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/eselect-wxwidgets
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.11 2007/12/13 02:15:27 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.12 2007/12/20 00:11:49 dirtyepic Exp $
+
+*eselect-wxwidgets-0.7 (20 Dec 2007)
+
+  20 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> -files/wx-config-0.6,
+  -files/wxrc-0.6, -files/wxwidgets.eselect-0.6, +files/wx-config-0.7,
+  +files/wxrc-0.7, +files/wxwidgets.eselect-0.7, +files/wxwin.m4,
+  -eselect-wxwidgets-0.6.ebuild, +eselect-wxwidgets-0.7.ebuild:
+  Version bump. Move wxwin.m4 handling from wxGTK to here. Die if wrapper
+  called from portage (currently disabled for testing).
 
 *eselect-wxwidgets-0.6 (13 Dec 2007)
 

@@ -13,6 +13,22 @@ _wxerror() {
 	exit 1
 }
 
+# Ebuilds should not use this wrapper and use wxwidgets.eclass instead.
+#if [[ -n ${EBUILD_PHASE} ]]; then
+#	cat <<- EOF
+#"
+#
+#
+#***     This ebuild is attempting to use /usr/bin/wx-config directly.
+#***     Please see wxwidgets.eclass for instructions how to add wxWidgets support
+#***     to your package.
+#
+#
+#"
+#	EOF
+#	exit 1
+#fi
+
 if [[ -n ${WX_ECLASS_CONFIG} ]]; then
 	${WX_ECLASS_CONFIG} "$@"
 	exit 0

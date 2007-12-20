@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/eselect-wxwidgets-0.6.ebuild,v 1.1 2007/12/13 02:15:27 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/eselect-wxwidgets-0.7.ebuild,v 1.1 2007/12/20 00:11:50 dirtyepic Exp $
 
 DESCRIPTION="Manage the system default for wxWidgets packages."
 HOMEPAGE="http://www.gentoo.org"
@@ -11,13 +11,16 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="!<=x11-libs/wxGTK-2.6.4.0-r1"
+DEPEND="!<=x11-libs/wxGTK-2.6.4.0-r2"
 RDEPEND="app-admin/eselect"
 
 src_install() {
 	insinto /usr/share/eselect/modules
 	newins "${FILESDIR}"/wxwidgets.eselect-${PV} wxwidgets.eselect \
 		|| die "Failed installing module"
+
+	insinto /usr/share/aclocal
+	doins "${FILESDIR}"/wxwin.m4
 
 	newbin "${FILESDIR}"/wx-config-${PV} wx-config
 	newbin "${FILESDIR}"/wxrc-${PV} wxrc
