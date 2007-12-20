@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.7 2007/11/03 17:19:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.8 2007/12/20 23:25:38 dirtyepic Exp $
+
+  20 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> italc-1.0.2.ebuild:
+  Remove bogus wxGTK dependency from old ebuild as well.
 
   03 Nov 2007; Samuli Suominen <drac@gentoo.org>
   +files/italc-1.0.3-fpic-asneeded.patch, italc-1.0.3.ebuild:
