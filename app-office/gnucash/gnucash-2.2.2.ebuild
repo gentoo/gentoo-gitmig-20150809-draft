@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.2.ebuild,v 1.1 2007/12/18 12:23:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.2.ebuild,v 1.2 2007/12/20 15:20:13 tove Exp $
 
 inherit autotools eutils gnome2
 
@@ -34,6 +34,7 @@ RDEPEND=">=dev-libs/glib-2.6.3
 	>=dev-libs/libxml2-2.5.10
 	>=gnome-base/gconf-2
 	>=app-text/scrollkeeper-0.3
+	x11-libs/goffice
 	ofx? ( >=dev-libs/libofx-0.7.0 )
 	hbci? ( net-libs/aqbanking
 		chipcard? ( sys-libs/libchipcard )
