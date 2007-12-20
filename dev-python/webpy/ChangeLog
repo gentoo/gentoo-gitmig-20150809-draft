@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.2 2007/04/26 23:48:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.3 2007/12/20 14:30:04 wrobel Exp $
+
+  20 Dec 2007; Gunnar Wrobel <wrobel@gentoo.org> ChangeLog:
+  Added webpy-0.22 to the tree (#196487).
 
   26 Apr 2007; Steve Dibb <beandog@gentoo.org> webpy-0.2.ebuild:
   add ~amd64, bug 175187
