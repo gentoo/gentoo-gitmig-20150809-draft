@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.43 2007/11/18 15:15:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.44 2007/12/20 15:31:15 jer Exp $
+
+  20 Dec 2007; Jeroen Roovers <jer@gentoo.org> debootstrap-1.0.7.ebuild:
+  Stable for HPPA.
 
   18 Nov 2007; Raúl Porcel <armin76@gentoo.org> debootstrap-1.0.7.ebuild:
   Re-fix, thanks to drac
