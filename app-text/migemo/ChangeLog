@@ -1,6 +1,11 @@
 # ChangeLog for app-text/migemo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.16 2007/10/06 17:50:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.17 2007/12/20 08:01:48 matsuu Exp $
+
+*migemo-0.40-r2 (20 Dec 2007)
+
+  20 Dec 2007; MATSUU Takuto <matsuu@gentoo.org> +migemo-0.40-r2.ebuild:
+  Added emacs USE flag, bug #202796.
 
   06 Oct 2007; Ulrich Mueller <ulm@gentoo.org> migemo-0.40-r1.ebuild:
   Minor QA: quote some variables. Add a die command. Drop ppc-macos keyword.
