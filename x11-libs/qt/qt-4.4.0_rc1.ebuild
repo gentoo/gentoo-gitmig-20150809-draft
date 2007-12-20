@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.4.0_rc1.ebuild,v 1.5 2007/12/20 13:19:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.4.0_rc1.ebuild,v 1.6 2007/12/20 16:36:41 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -39,7 +39,6 @@ RDEPEND="x11-libs/libXrandr
 	firebird? ( dev-db/firebird )
 	sqlite3? ( =dev-db/sqlite-3* )
 	sqlite? ( =dev-db/sqlite-2* )
-	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( dev-db/libpq )
 	cups? ( net-print/cups )
 	glib? ( dev-libs/glib )
@@ -53,7 +52,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 PDEPEND="qt3support? ( =x11-libs/qt-qt3support-${PV} )
-	dbus? ( =x11-libs/qt-dbus-${PV} )"
+	dbus? ( =x11-libs/qt-dbus-${PV} )
+        opengl? ( =x11-libs/qt-opengl-${PV} )"
 
 pkg_setup() {
 	QTBASEDIR=/usr/$(get_libdir)/qt4
@@ -188,7 +188,7 @@ src_compile() {
 	myconf="${myconf} -reduce-relocations"
 
 	myconf="${myconf} $(qt_use accessibility) $(qt_use cups) $(qt_use xinerama)"
-	myconf="${myconf} $(qt_use opengl) $(qt_use nis)"
+	myconf="${myconf} $(qt_use nis)"
 
 	use nas		&& myconf="${myconf} -system-nas-sound"
 
@@ -227,7 +227,7 @@ src_compile() {
 
 	# Explictly don't compile these packages.
 	# Emerge "qt-webkit", "qt-phonon", etc for their functionality.
-	myconf="${myconf} -no-webkit -no-phonon -no-qt3support -no-qdbus"
+	myconf="${myconf} -no-webkit -no-phonon -no-qt3support -no-qdbus -no-opengl"
 
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
