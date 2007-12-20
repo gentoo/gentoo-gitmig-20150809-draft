@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.7.ebuild,v 1.1 2007/08/15 13:08:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.8.ebuild,v 1.1 2007/12/20 18:04:33 dertobi123 Exp $
 
 inherit gnome2 eutils
 
