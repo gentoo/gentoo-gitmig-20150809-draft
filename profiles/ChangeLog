@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.922 2007/12/20 15:47:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.923 2007/12/20 15:48:30 flameeyes Exp $
+
+  20 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
+  Remove pam_console USE flag for sys-libs/pam and sys-power/powersave.
 
   20 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
   Remove pam_console masking now that it's gone.
