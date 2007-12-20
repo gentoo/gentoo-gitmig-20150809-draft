@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.4 2007/12/20 18:47:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.5 2007/12/20 22:07:50 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -152,4 +152,3 @@ pkg_postrm()
 	# Need to add qt3support to QT_CONFIG line
 	sed -i -e "s:qt3support ::g" ${QTDATADIR}/mkspecs/qconfig.pri
 }
-

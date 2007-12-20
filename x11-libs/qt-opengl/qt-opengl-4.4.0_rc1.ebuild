@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.4.0_rc1.ebuild,v 1.1 2007/12/20 16:33:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.4.0_rc1.ebuild,v 1.2 2007/12/20 22:07:26 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -136,4 +136,3 @@ pkg_postrm()
 	# Need to add opengl to QT_CONFIG line
 	sed -i -e "s:opengl ::g" ${QTDATADIR}/mkspecs/qconfig.pri
 }
-
