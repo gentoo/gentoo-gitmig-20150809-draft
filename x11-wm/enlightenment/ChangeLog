@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.76 2007/12/19 20:54:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.77 2007/12/20 19:38:34 maekke Exp $
+
+  20 Dec 2007; Markus Meier <maekke@gentoo.org>
+  enlightenment-0.16.8.10.ebuild:
+  x86 stable, bug #202663
 
   19 Dec 2007; Brent Baude <ranger@gentoo.org>
   enlightenment-0.16.8.10.ebuild:
