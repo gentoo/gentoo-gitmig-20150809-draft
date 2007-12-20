@@ -1,14 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.5.3.ebuild,v 1.4 2007/12/20 14:38:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.6.1.ebuild,v 1.1 2007/12/20 14:38:01 zzam Exp $
 
 inherit eutils
 
+MY_P="${P/_/}"
+
 DESCRIPTION="WWW Admin for the Video Disk Recorder"
 HOMEPAGE="http://andreas.vdr-developer.org/"
-SRC_URI="http://andreas.vdr-developer.org/download/${P}.tar.bz2"
+SRC_URI="http://andreas.vdr-developer.org/download/${MY_P}.tar.bz2"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="unicode"
@@ -30,6 +32,8 @@ LIB_DIR="/usr/share/vdradmin"
 VDRADMIN_USER="vdradmin"
 VDRADMIN_GROUP="vdradmin"
 TMP_DIR=/var/tmp/vdradmin
+
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	enewuser ${VDRADMIN_USER} -1 /bin/bash ${TMP_DIR}
@@ -93,7 +97,7 @@ pkg_preinst() {
 		elog "Creating a new config-file."
 		echo
 
-		cat <<-EOF > "${D}${ETC_DIR}/vdradmind.conf"
+		cat <<-EOF > "${D}"${ETC_DIR}/vdradmind.conf
 			VDRCONFDIR = /etc/vdr
 			VIDEODIR = /var/vdr/video
 			EPG_FILENAME = /var/vdr/video/epg.data
