@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.85 2007/12/20 15:01:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.86 2007/12/20 15:42:55 fmccor Exp $
+
+  20 Dec 2007; Ferris McCormick <fmccor@gentoo.org> stunnel-4.21-r1.ebuild:
+  Sparc stable, Bug #201896 fixing security violation (setuid/setgid).
 
   20 Dec 2007; Markus Meier <maekke@gentoo.org> stunnel-4.21-r1.ebuild:
   x86 stable, bug #201896
