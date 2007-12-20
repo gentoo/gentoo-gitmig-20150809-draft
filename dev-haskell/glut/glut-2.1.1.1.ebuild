@@ -1,15 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/alut-2.1.0.0.ebuild,v 1.2 2007/12/20 02:33:19 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/glut-2.1.1.1.ebuild,v 1.1 2007/12/20 02:36:07 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
+CABAL_MIN_VERSION=1.2
 inherit haskell-cabal
 
-MY_PN="ALUT"
+MY_PN="GLUT"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A Haskell binding for the OpenAL Utility Toolkit"
-HOMEPAGE="http://haskell.org/ghc/"
+DESCRIPTION="GLUT bindings for haskell"
+HOMEPAGE="http://www.haskell.org/HOpenGL/"
 SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
@@ -19,9 +20,9 @@ IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.4
 	>=dev-haskell/opengl-2.2.1
-	>=dev-haskell/openal-1.3.1
-	media-libs/freealut"
+	virtual/glu
+	virtual/glut"
 
 S="${WORKDIR}/${MY_P}"
 
-#TODO: install examples perhaps?
+# TODO: Install examples when the "examples" USE flag is set
