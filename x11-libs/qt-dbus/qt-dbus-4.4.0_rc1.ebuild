@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.4.0_rc1.ebuild,v 1.2 2007/12/20 13:32:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.4.0_rc1.ebuild,v 1.3 2007/12/20 16:05:52 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -120,4 +120,17 @@ src_install() {
 	# Move .pc files into the pkgconfig directory
 	dodir ${QTPCDIR}
 	mv "${D}"/${QTLIBDIR}/pkgconfig/*.pc "${D}"/${QTPCDIR}
+}
+
+pkg_postinst()
+{
+	# Need to add qdbus to QT_CONFIG line
+	sed -i -e "s:qdbus ::g" ${QTDATADIR}/mkspecs/qconfig.pri
+	sed -i -e "s:QT_CONFIG += :QT_CONFIG += qdbus :g" ${QTDATADIR}/mkspecs/qconfig.pri
+}
+
+pkg_postrm()
+{
+	# Need to add qdbus to QT_CONFIG line
+	sed -i -e "s:qdbus::g" ${QTDATADIR}/mkspecs/qconfig.pri
 }
