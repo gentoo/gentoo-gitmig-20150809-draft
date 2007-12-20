@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r4.ebuild,v 1.1 2007/06/15 16:25:32 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.4.ebuild,v 1.1 2007/12/20 19:03:53 alonbl Exp $
 
-WANT_AUTOCONF="2.5"
-WANT_AUTOMAKE="1.9"
+#WANT_AUTOCONF="2.5"
+#WANT_AUTOMAKE="1.9"
 
 inherit flag-o-matic qt3 multilib eutils autotools
 
@@ -21,17 +21,6 @@ DEPEND="gtk? ( =x11-libs/gtk+-2* )
 	qt3? ( $(qt_min_version 3.3) )
 	!gtk? ( !qt3? ( !ncurses? ( sys-libs/ncurses ) ) )
 	caps? ( sys-libs/libcap )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${PV}-libcap.patch
-	epatch "${FILESDIR}"/${PV}-info.patch
-	epatch "${FILESDIR}"/${P}-grab.patch
-
-	AT_M4DIR="m4" eautoreconf
-}
 
 src_compile() {
 	local myconf=""
