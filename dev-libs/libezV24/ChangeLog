@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libezV24
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libezV24/ChangeLog,v 1.6 2007/12/18 17:34:39 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libezV24/ChangeLog,v 1.7 2007/12/21 15:05:10 nixnut Exp $
+
+  21 Dec 2007; nixnut <nixnut@gentoo.org> libezV24-0.1.1.ebuild:
+  Stable on ppc wrt bug 202668
 
   18 Dec 2007; Ferris McCormick <fmccor@gentoo.org> libezV24-0.1.1.ebuild:
   Sparc stable, Bug #202668.
