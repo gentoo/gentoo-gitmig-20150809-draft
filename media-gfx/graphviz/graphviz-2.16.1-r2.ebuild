@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.16.1-r2.ebuild,v 1.2 2007/12/21 04:09:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.16.1-r2.ebuild,v 1.3 2007/12/21 10:23:46 mr_bones_ Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -38,7 +38,6 @@ RDEPEND="
 			  >=x11-libs/cairo-1.1.10
 			  gnome? ( gnome-base/libgnomeui )
 			)"
-
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.20
