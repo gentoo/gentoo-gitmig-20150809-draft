@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/usb-robot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/usb-robot/ChangeLog,v 1.6 2007/08/11 04:16:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/usb-robot/ChangeLog,v 1.7 2007/12/21 14:33:14 nixnut Exp $
+
+  21 Dec 2007; nixnut <nixnut@gentoo.org> usb-robot-0.2.0.ebuild:
+  Stable on ppc wrt bug 202736
 
   10 Aug 2007; Steve Dibb <beandog@gentoo.org> usb-robot-0.2.0.ebuild:
   amd64 stable, bug 184332
