@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/mmdb
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.1 2007/12/21 23:23:46 dberkholz Exp $
+
+*mmdb-1.0.8.3 (21 Dec 2007)
+
+  21 Dec 2007; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +mmdb-1.0.8.3.ebuild:
+  New package that's a dependency of Coot: The Coordinate Library is designed
+  to assist CCP4 developers in working with coordinate files.
+
