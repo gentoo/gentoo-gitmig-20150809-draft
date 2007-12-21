@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.16 2007/12/13 21:14:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.17 2007/12/21 08:27:17 opfer Exp $
+
+*keepassx-0.2.2-r2 (21 Dec 2007)
+
+  21 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  +keepassx-0.2.2-r2.ebuild:
+  remove USE flag check and depend on new split Qt ebuilds
 
   13 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   keepassx-0.2.2-r1.ebuild:
