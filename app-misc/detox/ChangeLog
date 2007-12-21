@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/detox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.17 2007/12/18 21:33:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.18 2007/12/21 17:25:45 drac Exp $
+
+  21 Dec 2007; Samuli Suominen <drac@gentoo.org>
+  files/1.1.1-install-permissions-fix.patch, detox-1.1.1-r2.ebuild:
+  Fix executable permissions for installed binary, amd64 stable wrt #184548
 
   18 Dec 2007; Ulrich Mueller <ulm@gentoo.org> detox-1.1.1-r2.ebuild,
   detox-1.2.0_rc3.ebuild:
