@@ -1,0 +1,22 @@
+--- src.fcdsl/driver.c.orig	2007-12-22 00:07:35.000000000 +0100
++++ src.fcdsl/driver.c	2007-12-22 00:07:46.000000000 +0100
+@@ -121,7 +121,7 @@
+ 
+ static DECLARE_WAIT_QUEUE_HEAD(wait);
+ static DECLARE_WAIT_QUEUE_HEAD(capi_wait);
+-static DECLARE_MUTEX_LOCKED(hotplug);
++static DECLARE_MUTEX(hotplug);
+ 
+ #define SCHED_WAKEUP_CAPI       { atomic_set (&thread_capi_flag, 1); wake_up_interruptible (&capi_wait); }
+ #define SCHED_WAKEUP            { atomic_set (&got_kicked, 1); wake_up_interruptible (&wait); }
+@@ -210,7 +210,9 @@
+ 		cp->rx_dmabuf = NULL;
+ 		goto dma_rx_exit;
+ 	}
+-	res = request_irq (cp->irq, &irq_handler, SA_INTERRUPT | SA_SHIRQ, TARGET, cp);
++	/* Renamed function now: IRQF_DISABLED and IRQF_SHARED */
++        /* Arnd Feldmueller <arnd.feldmueller@web.de> */
++	res = request_irq (cp->irq, &irq_handler, IRQF_DISABLED | IRQF_SHARED, TARGET, cp);
+ 	if (res) {
+ 		LOG("Could not install irq handler.\n");
+ 		goto dma_tx_exit;

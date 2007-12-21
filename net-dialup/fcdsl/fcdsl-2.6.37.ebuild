@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.8 2007/07/13 08:00:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.9 2007/12/21 23:15:54 genstef Exp $
 
 inherit linux-mod eutils rpm
 
@@ -35,7 +35,7 @@ pkg_setup() {
 	FCDSL_FIRMWARES=("fds2base.bin" "fdssbase.bin" "fdsubase.frm" "fdlubase.frm"
 		"fds2base.frm" "fdslbase.bin" "fdlabase.frm")
 
-	CONFIG_CHECK="ISDN_CAPI_CAPI20"
+	#CONFIG_CHECK="ISDN_CAPI_CAPI20"
 	linux-mod_pkg_setup
 
 	MODULE_NAMES=""
@@ -74,7 +74,7 @@ src_unpack() {
 	cd "${S}"
 	mv usr/src/kernel-modules/fcdsl/src/src.fcdslusb1 \
 		usr/src/kernel-modules/fcdsl/src/src.fcdslusb
-	# do not fail even if some drivers are not present
+	# use -f to not fail even if some drivers are not present
 	einfo "When you have FCDSL_CARDS set some errors are OK here"
 	if kernel_is ge 2 6 22 ; then
 		patch -p0 -f < "${FILESDIR}"/fcdsl-2.6.22.diff
@@ -84,6 +84,7 @@ src_unpack() {
 	patch -p0 -f < ${FILESDIR}/fcdslslusb-2.6.20.diff
 	cd usr/src/kernel-modules/fcdsl/src
 	kernel_is ge 2 6 20 && patch -p1 -f < ${FILESDIR}/usb-2.6.20.diff
+	kernel_is ge 2 6 24 && patch -p0 -f < ${FILESDIR}/fcdsl-2.6.24.diff
 	cd "${S}"
 
 	if use x86; then
