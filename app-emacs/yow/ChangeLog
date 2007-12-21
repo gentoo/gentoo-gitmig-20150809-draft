@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/yow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/ChangeLog,v 1.2 2007/11/20 22:31:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/ChangeLog,v 1.3 2007/12/21 08:06:55 opfer Exp $
+
+  21 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  yow-21.4_p20020329.ebuild:
+  stable amd64/x86
 
 *yow-21.4_p20020329 (20 Nov 2007)
 

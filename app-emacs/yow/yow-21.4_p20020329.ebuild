@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/yow-21.4_p20020329.ebuild,v 1.2 2007/12/01 15:44:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/yow-21.4_p20020329.ebuild,v 1.3 2007/12/21 08:06:55 opfer Exp $
 
 inherit elisp eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/emacs/${MY_P}a.tar.gz"
 # games-misc/fortune-mod which is under a BSD licence.
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}/etc"
