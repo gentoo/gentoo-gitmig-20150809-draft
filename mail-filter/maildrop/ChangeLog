@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.77 2007/12/18 15:13:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.78 2007/12/21 14:01:32 armin76 Exp $
+
+  21 Dec 2007; Raúl Porcel <armin76@gentoo.org> maildrop-2.0.4.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #202591
 
   18 Dec 2007; Doug Klima <cardoe@gentoo.org> maildrop-2.0.4.ebuild:
   amd64 stable wrt bug #202591
