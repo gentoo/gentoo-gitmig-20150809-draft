@@ -1,6 +1,14 @@
 # ChangeLog for app-text/migemo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.18 2007/12/20 14:05:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.19 2007/12/21 07:51:49 ulm Exp $
+
+*migemo-0.40-r3 (21 Dec 2007)
+
+  21 Dec 2007; Ulrich Mueller <ulm@gentoo.org> +files/51migemo-gentoo.el,
+  +files/migemo-0.40-without-emacs.patch, -migemo-0.40-r2.ebuild,
+  +migemo-0.40-r3.ebuild:
+  Modify build system to work without Emacs at compile time, bug #202796.
+  Don't enable adviced search functions as site default.
 
   20 Dec 2007; MATSUU Takuto <matsuu@gentoo.org> migemo-0.40-r2.ebuild:
   Fixed emacs dependency, bug #202796.
