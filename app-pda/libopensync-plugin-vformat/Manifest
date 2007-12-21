@@ -1,25 +1,33 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+DIST libopensync-plugin-vformat-0.35.tar.bz2 84028 RMD160 4886b137a0fcebaf0f97344cab30982dd392e1b5 SHA1 bbc355fcb908c22b81f3d3709ea358375de45434 SHA256 3fdcc5dba83de37f5991d285b8c44b2cde2bed3979d8ed08ddfdd329cf515682
+EBUILD libopensync-plugin-vformat-0.35.ebuild 565 RMD160 08afc291f7ffed556da8b833fbeecde586e2b31b SHA1 6804508fc72aa865e2a0b3aa28bfeabc41f368b9 SHA256 2a586638d22e0ac20d326a7e1060c9f715ccaf4fde97dbbe280b9999f7d48486
+MD5 402c656177dd87649dedad351d3721a3 libopensync-plugin-vformat-0.35.ebuild 565
+RMD160 08afc291f7ffed556da8b833fbeecde586e2b31b libopensync-plugin-vformat-0.35.ebuild 565
+SHA256 2a586638d22e0ac20d326a7e1060c9f715ccaf4fde97dbbe280b9999f7d48486 libopensync-plugin-vformat-0.35.ebuild 565
 EBUILD libopensync-plugin-vformat-9999.ebuild 551 RMD160 47a75359ba5c5ce4cd541de9d070e876b29b715e SHA1 e4d211685ea1653c86faf3156b3cba0d355d7af6 SHA256 7be4e51c44db2991ca1b66c892f150a2266fa8f07ebbc728f0afb2d02d5458a6
 MD5 b2a911dae922636386f8380b86ba11aa libopensync-plugin-vformat-9999.ebuild 551
 RMD160 47a75359ba5c5ce4cd541de9d070e876b29b715e libopensync-plugin-vformat-9999.ebuild 551
 SHA256 7be4e51c44db2991ca1b66c892f150a2266fa8f07ebbc728f0afb2d02d5458a6 libopensync-plugin-vformat-9999.ebuild 551
-MISC ChangeLog 469 RMD160 15cb5bcb4771fe67995700d5943e4fc3708c79a6 SHA1 896bae53816d8265f4febed858994864ca0cbe29 SHA256 61b3f8bca0c040bab87c4300fad19a3359b7d69da66525107628773499ee642e
-MD5 7ff299dc17b536248e2879296e7d002a ChangeLog 469
-RMD160 15cb5bcb4771fe67995700d5943e4fc3708c79a6 ChangeLog 469
-SHA256 61b3f8bca0c040bab87c4300fad19a3359b7d69da66525107628773499ee642e ChangeLog 469
+MISC ChangeLog 626 RMD160 7b89e6b77a7cd5991b6bfa430eef2d6a5d77617b SHA1 2151745d172ef210d7dc7a93673430e538cf1d68 SHA256 b07dc0bd9f523dc8da2b2c6b2b7e306b0a5ad9427ac106fb8bd2f4048da5269c
+MD5 6148791a9e243817e29f978faf2a6ad5 ChangeLog 626
+RMD160 7b89e6b77a7cd5991b6bfa430eef2d6a5d77617b ChangeLog 626
+SHA256 b07dc0bd9f523dc8da2b2c6b2b7e306b0a5ad9427ac106fb8bd2f4048da5269c ChangeLog 626
 MISC metadata.xml 303 RMD160 6be72a25c2c9929f92335f19b42519982fa681df SHA1 b7bbf0fa123b6da656c067f7ef84e68b25d86a51 SHA256 66dc8d7d77ec892d03fa718d49600f4c2d526963d7327dde134adad41426ca46
 MD5 de2ca23925a0ac872df626bd57c22276 metadata.xml 303
 RMD160 6be72a25c2c9929f92335f19b42519982fa681df metadata.xml 303
 SHA256 66dc8d7d77ec892d03fa718d49600f4c2d526963d7327dde134adad41426ca46 metadata.xml 303
+MD5 f63e06aa8958ac908e2daf80444bd9c9 files/digest-libopensync-plugin-vformat-0.35 295
+RMD160 dfbed9787b7a189e044caf638c3ff2d88168255b files/digest-libopensync-plugin-vformat-0.35 295
+SHA256 0255cedb361f91ee322a558be64d0d0fe8150d244e1d16db4be6ef93ecf74a33 files/digest-libopensync-plugin-vformat-0.35 295
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-libopensync-plugin-vformat-9999 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-libopensync-plugin-vformat-9999 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-libopensync-plugin-vformat-9999 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
+Version: GnuPG v2.0.8 (GNU/Linux)
 
-iD8DBQFHTzJgppoStNGKGywRAuf2AKCD4A/cXpDfxofd8tgDr0LMugUDrQCeLbgy
-zh8o745JTIQm/pcK1PmbEqQ=
-=dUJX
+iEYEARECAAYFAkdsSpUACgkQppoStNGKGywluwCeJWQZaBvU5CfJqNbP+ZqEF/Pz
+K50An0yD3dF90j36f0v17CYPyKKs3Ulk
+=vS6q
 -----END PGP SIGNATURE-----

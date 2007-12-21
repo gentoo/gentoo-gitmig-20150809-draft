@@ -7,6 +7,7 @@ RMD160 a6435df7ad196cedd88c6fb525ca4d0cd692bcae files/libopensync-plugin-palm-in
 SHA256 b1fdb6c9789e94373a1fb9df6cf8e1ed429e0354f9e2e27fd087cea19eacccf5 files/libopensync-plugin-palm-include_pisock.patch 375
 DIST libopensync-plugin-palm-0.21.tar.bz2 244339 RMD160 44f9d2c8932fa143be24e4e212aa7e730aa138e3 SHA1 6b5f7036be1b4fcca498976dadb68355284fd7d4 SHA256 420287bdf2e9214ce9c5b188aaac1526da564e4fb52d47fffd76cbe4272e8009
 DIST libopensync-plugin-palm-0.22.tar.bz2 232123 RMD160 fd12139784acb92c5e070c6ee573ec9176726cfa SHA1 acc9027e2655f5c68b8d0270f55857a9877d1d53 SHA256 a96c25ce7a68a1e6455a6f05fec20e8db77dab319de7e330145b3cfef8e0ce0d
+DIST libopensync-plugin-palm-0.35.tar.bz2 45503 RMD160 f56efa6a9eefc87c28b40946246b081dfbbb48a8 SHA1 94d0e9a3fd59aa8ef775a172bac501d7ebfbc4ed SHA256 9470d83db93f09834cc2d043bdbcf6fc70c1141e4d605a9ffbf4875d08e081c5
 EBUILD libopensync-plugin-palm-0.21.ebuild 827 RMD160 7cb9cf75769bdcd7520e870bd320695d5f2aee01 SHA1 98633d49404ff5cc5d17c21fc8f605cb84e5f59c SHA256 3b31112a0c3f97c42fcbb2742f4787e53ebdd8204955807cfff2d70df8207412
 MD5 586d29912fb3d1e0172a2e80157b91f5 libopensync-plugin-palm-0.21.ebuild 827
 RMD160 7cb9cf75769bdcd7520e870bd320695d5f2aee01 libopensync-plugin-palm-0.21.ebuild 827
@@ -15,14 +16,18 @@ EBUILD libopensync-plugin-palm-0.22.ebuild 827 RMD160 8d4ab2bb26f6c668cd5a471ae5
 MD5 7a8f651905b58d17f85fcc2f3f963ee4 libopensync-plugin-palm-0.22.ebuild 827
 RMD160 8d4ab2bb26f6c668cd5a471ae5ab9f97f5ff8d8d libopensync-plugin-palm-0.22.ebuild 827
 SHA256 36a6962a9abb5dc7b603dea7a083172dc27c47aa1aa6f783f41bc19dc70a98ec libopensync-plugin-palm-0.22.ebuild 827
+EBUILD libopensync-plugin-palm-0.35.ebuild 559 RMD160 fcae97d55235dfada6a8e4bdc05a8ebba3734032 SHA1 99a56e011052b9192fb38aa14d030a793e37cc67 SHA256 f8c3d875ca43576ae601a9ea10babaf6d5bc315d20a5606ff4583cd555fc3d6b
+MD5 94769927c0105eb1867f97a189dadf0d libopensync-plugin-palm-0.35.ebuild 559
+RMD160 fcae97d55235dfada6a8e4bdc05a8ebba3734032 libopensync-plugin-palm-0.35.ebuild 559
+SHA256 f8c3d875ca43576ae601a9ea10babaf6d5bc315d20a5606ff4583cd555fc3d6b libopensync-plugin-palm-0.35.ebuild 559
 EBUILD libopensync-plugin-palm-9999.ebuild 564 RMD160 baa9b93db68778a295e00474564389a5d0318679 SHA1 ebfaa439707b7d92950b4ab79a892e7ef473e039 SHA256 5f7e72282afb504c2e49eab049018da35e10ff34d28046008cea91362909a303
 MD5 a72794465623a15d0b4608603227396b libopensync-plugin-palm-9999.ebuild 564
 RMD160 baa9b93db68778a295e00474564389a5d0318679 libopensync-plugin-palm-9999.ebuild 564
 SHA256 5f7e72282afb504c2e49eab049018da35e10ff34d28046008cea91362909a303 libopensync-plugin-palm-9999.ebuild 564
-MISC ChangeLog 1587 RMD160 6f94e2651dbdee18ec687712c0fcc80378a4c160 SHA1 bdc7447d9072cf34abddc55cb1fe94bc13d605c6 SHA256 706d9b3ca82fb0442f035ab4bcb07576f4f4cea4126d4c30055da76fbef8e2d5
-MD5 429a20a4a150bde162096efcdbbac172 ChangeLog 1587
-RMD160 6f94e2651dbdee18ec687712c0fcc80378a4c160 ChangeLog 1587
-SHA256 706d9b3ca82fb0442f035ab4bcb07576f4f4cea4126d4c30055da76fbef8e2d5 ChangeLog 1587
+MISC ChangeLog 1738 RMD160 d00d43deb5fd1f0e05bdbff470b66254255ae21e SHA1 c8a403606b88405b9054a3c6098ddfb10c9b1cfd SHA256 2269ade1c03ad7212f8e0e2fed664659757ff7ec4a06e21f84ddcfb873051ce1
+MD5 b9a6c123854c61adc2d38bf309e111f7 ChangeLog 1738
+RMD160 d00d43deb5fd1f0e05bdbff470b66254255ae21e ChangeLog 1738
+SHA256 2269ade1c03ad7212f8e0e2fed664659757ff7ec4a06e21f84ddcfb873051ce1 ChangeLog 1738
 MISC metadata.xml 304 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 SHA1 b96c72c417192c099990a616b12a1d2f55a06064 SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a
 MD5 45ae331a9c100ecabad1b4cd916f3d37 metadata.xml 304
 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 metadata.xml 304
@@ -33,13 +38,16 @@ SHA256 cc45696b2b2eaf3631ee3df052e499f56f94ba0e3692cc22f1becebe40748f98 files/di
 MD5 976801da36604c8b33f2ce593d7086bf files/digest-libopensync-plugin-palm-0.22 289
 RMD160 fa0afed22fd89571222a5e6d2846d677b6b1ac7f files/digest-libopensync-plugin-palm-0.22 289
 SHA256 4f15e58a6f425dea7e4c756a2d60ac5aa33c7fd07f63b36cefd244d476f9cd94 files/digest-libopensync-plugin-palm-0.22 289
+MD5 4449422cca0905bd32bcd5d68fd3a985 files/digest-libopensync-plugin-palm-0.35 286
+RMD160 3e85eda45567d7573d028faa30dcbabbd1fc1914 files/digest-libopensync-plugin-palm-0.35 286
+SHA256 07c54e73298eddc76d80b493a9b11b074906adcc8c552f2e40966e9382fcabf9 files/digest-libopensync-plugin-palm-0.35 286
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-libopensync-plugin-palm-9999 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-libopensync-plugin-palm-9999 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-libopensync-plugin-palm-9999 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
+Version: GnuPG v2.0.8 (GNU/Linux)
 
-iD8DBQFHSyqtppoStNGKGywRAi6UAKDYcp9n3hDwj7uBdiVlbiAm6YTt8gCguvq8
-A6LAg6XIOOyro3HHB0wqm/A=
-=7/PZ
+iEYEARECAAYFAkdsSWgACgkQppoStNGKGyzmuQCeOURxcdVxia2+WRncK6PZtWv/
+F8EAoJPsYeeEWq/guOlVu1HLw2k2psfJ
+=eMUO
 -----END PGP SIGNATURE-----
