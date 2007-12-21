@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8038 2007/12/21 15:53:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8039 2007/12/21 19:04:40 caleb Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -63,6 +63,7 @@
 =x11-libs/qt-qt3support-4.4*
 =x11-libs/qt-dbus-4.4*
 =x11-libs/qt-opengl-4.4*
+=x11-libs/qt-sql-4.4*
 
 # Peter Volkov <pva@gentoo.org> (19 Dec 2007)
 # Italics are assigned to condensed, see bug 202255
