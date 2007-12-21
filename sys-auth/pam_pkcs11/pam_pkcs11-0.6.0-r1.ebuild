@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/pam_pkcs11-0.6.0.ebuild,v 1.1 2007/06/13 10:08:55 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/pam_pkcs11-0.6.0-r1.ebuild,v 1.1 2007/12/21 22:02:41 alonbl Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND="
 src_compile() {
 		econf \
 			$(use_with curl) \
-			$(use_with pcsc-lite pcsclite) \
+			$(use_with pcsc-lite) \
 			$(use_with ldap) \
 			|| die "econf failed"
 
