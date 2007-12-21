@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.925 2007/12/20 19:43:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.926 2007/12/21 08:18:30 opfer Exp $
+
+  21 Dec 2007; Christian Faulhammer <opfer@gentoo.org> package.mask:
+  mask newest revision of app-admin/keepassx, has masked dependencies
 
   20 Dec 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask ocaml 3.10.1 release candidate 1, its redundant with the older 3.10

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8035 2007/12/20 19:43:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8036 2007/12/21 08:18:30 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,8 @@
 ##   End example
 ##
 
+
+
 # Alexis Ballier <aballier@gentoo.org> (20 Dec 2007)
 # Release candidate, some packages fail to build with it
 # Only here for testing
@@ -31,7 +33,10 @@
 >=dev-scheme/gambit-4.1.1
 
 # Caleb Tennis <caleb@gentoo.org> (19 Dec 2007)
+# Christian Faulhammer <opfer@gentoo.org>
 # Mask qt-4.4 package while testing them in portage
+# Plus packages depending on them
+=app-admin/keepassx-0.2.2-r1
 =x11-libs/qt-4.4*
 =x11-libs/qt-webkit-4.4*
 =x11-libs/qt-phonon-4.4*
