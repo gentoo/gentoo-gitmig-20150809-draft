@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.52 2007/12/21 14:05:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.53 2007/12/21 14:48:55 nixnut Exp $
+
+  21 Dec 2007; nixnut <nixnut@gentoo.org> dmapi-2.2.8.ebuild:
+  Stable on ppc wrt bug 202153
 
   21 Dec 2007; Raúl Porcel <armin76@gentoo.org> dmapi-2.2.8.ebuild:
   alpha/ia64 stable wrt #202153
