@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.1.ebuild,v 1.2 2007/12/18 11:29:32 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.1.ebuild,v 1.3 2007/12/21 14:50:30 markusle Exp $
 
 inherit fortran flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="blas debug doc fftw lapack minimal"
 
-DEPEND="!minimal? ( fftw? ( || ( >=sci-libs/fftw-3.0.0 ) ) )
+DEPEND="!minimal? ( fftw? ( >=sci-libs/fftw-3.0.0 ) )
 		blas? ( virtual/blas
 				lapack? ( virtual/lapack ) )
 		doc? ( app-doc/doxygen
@@ -26,9 +26,15 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-zdotu-debian.patch
+}
+
+
 src_compile() {
-	# turn off performance critical debug code in development
-	# versions
+	# turn off performance critical debug code 
 	append-flags -DNDEBUG
 
 	local blas_conf="--without-blas"
@@ -42,7 +48,7 @@ src_compile() {
 		fi
 	fi
 
-	local fftw_conf;
+	local fftw_conf="--without-fft";
 	if use fftw;
 	then
 		fftw_conf="--with-fft=-lfftw3"

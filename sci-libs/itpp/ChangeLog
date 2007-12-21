@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.58 2007/12/18 11:29:32 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.59 2007/12/21 14:50:30 markusle Exp $
+
+  21 Dec 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/itpp-4.0.1-zdotu-debian.patch, itpp-4.0.1.ebuild:
+  Added a patch from upstream and cleaned up the ebuild. Thanks much
+  to Adam Piątyszek <ediap@ET.PUT.Poznan.PL> for his help.
 
   18 Dec 2007; Markus Dittrich <markusle@gentoo.org> itpp-4.0.1.ebuild:
   Added missing myconf to econf and fixed installation path of html docs
