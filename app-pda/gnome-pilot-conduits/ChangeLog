@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot-conduits
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.25 2007/11/15 18:37:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.26 2007/12/21 12:46:01 nixnut Exp $
+
+  21 Dec 2007; nixnut <nixnut@gentoo.org>
+  gnome-pilot-conduits-2.0.15.ebuild:
+  Stable on ppc wrt bug 197693
 
   15 Nov 2007; Samuli Suominen <drac@gentoo.org>
   gnome-pilot-conduits-2.0.15.ebuild:
