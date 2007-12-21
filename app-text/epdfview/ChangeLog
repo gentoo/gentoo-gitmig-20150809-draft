@@ -1,6 +1,10 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.21 2007/12/21 11:41:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.22 2007/12/21 14:04:59 fmccor Exp $
+
+  21 Dec 2007; Ferris McCormick <fmccor@gentoo.org>
+  epdfview-0.1.6-r1.ebuild:
+  Sparc stable --- Bug #202871 --- works fine for me.
 
   21 Dec 2007; nixnut <nixnut@gentoo.org> epdfview-0.1.6-r1.ebuild:
   Stable on ppc wrt bug 202871
