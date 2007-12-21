@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.0.9.ebuild,v 1.3 2007/12/20 13:52:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.0.9.ebuild,v 1.4 2007/12/21 08:05:11 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils versionator java-pkg-2 java-ant-2
@@ -51,6 +51,7 @@ src_unpack() {
 	eant -q -f "${EANT_BUILD_XML}" cleanall > /dev/null
 
 	epatch "${FILESDIR}/resolve-config-softlinks.patch"
+	java-pkg_filter-compiler jikes
 
 	mkdir conf
 	sed -e "s/^HSQLDB_JAR_PATH=.*$/HSQLDB_JAR_PATH=${HSQLDB_JAR//\//\\/}/g" \

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/hsqldb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.32 2007/12/20 13:52:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.33 2007/12/21 08:05:11 opfer Exp $
+
+  21 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  hsqldb-1.8.0.9.ebuild:
+  filter jikes
 
   20 Dec 2007; Markus Meier <maekke@gentoo.org> hsqldb-1.8.0.9.ebuild:
   x86 stable, security bug #201799
