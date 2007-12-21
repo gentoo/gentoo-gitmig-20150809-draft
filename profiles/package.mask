@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8039 2007/12/21 19:04:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8040 2007/12/21 19:33:59 dirtyepic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -291,7 +291,6 @@ sys-auth/pam_keyring
 
 # Ryan Hill <dirtyepic@gentoo.org> (18 Nov 2007)
 # Mask for keywording/testing.
->=x11-libs/wxGTK-2.8
 >=dev-python/wxpython-2.8
 
 # Tiziano Müller <dev-zero@gentoo.org> (18 Nov 2007)
