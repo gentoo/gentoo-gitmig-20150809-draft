@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.4.0_rc1.ebuild,v 1.8 2007/12/21 20:24:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.4.0_rc1.ebuild,v 1.9 2007/12/21 20:27:04 caleb Exp $
 
 SRCTYPE="preview-opensource-src"
 DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework."
@@ -15,7 +15,7 @@ LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
 KEYWORDS="~x86"
 
-IUSE="opengl"
+IUSE="opengl qt3support"
 
 RDEPEND="~x11-libs/qt-gui-${PV}
 	opengl? ( ~x11-libs/qt-opengl-${PV} )
