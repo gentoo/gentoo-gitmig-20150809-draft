@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.0.9.ebuild,v 1.4 2007/12/21 08:05:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.0.9.ebuild,v 1.5 2007/12/21 12:51:53 dertobi123 Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils versionator java-pkg-2 java-ant-2
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 # doesn't like Java 1.6 due to JDBC changes
