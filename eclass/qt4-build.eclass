@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.1 2007/12/21 16:11:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.2 2007/12/21 21:10:34 caleb Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -79,7 +79,7 @@ build_directories() {
 	local dirs="$@"
 	for x in ${dirs}; do
 		cd "${S}"/${x}
-		qmake "LIBS+=-L${QTLIBDIR}" && emake || die
+		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" && emake || die
 	done
 }
 
