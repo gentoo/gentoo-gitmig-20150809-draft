@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.16.1-r2.ebuild,v 1.1 2007/12/21 04:08:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.16.1-r2.ebuild,v 1.2 2007/12/21 04:09:06 robbat2 Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -167,7 +167,7 @@ src_compile() {
 		--with-freetype
 		--with-libgd
 		--without-gdk-pixbuf"
-	
+
 	# Bindings:
 	myconf="${myconf}
 		--disable-guile
