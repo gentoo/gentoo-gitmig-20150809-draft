@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/koverartist
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.23 2007/12/19 02:18:33 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.24 2007/12/21 14:01:42 nixnut Exp $
+
+  21 Dec 2007; nixnut <nixnut@gentoo.org> koverartist-0.5.ebuild:
+  Stable on ppc wrt bug 202645
 
   19 Dec 2007; Jurek Bartuszek <jurek@gentoo.org> koverartist-0.5.ebuild:
   x86 stable (bug #202645)
