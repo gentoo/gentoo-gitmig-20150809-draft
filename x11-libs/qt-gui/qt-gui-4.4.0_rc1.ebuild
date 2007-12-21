@@ -1,0 +1,167 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_rc1.ebuild,v 1.1 2007/12/21 19:10:35 caleb Exp $
+
+inherit eutils qt4-build
+
+SRCTYPE="preview-opensource-src"
+DESCRIPTION="The GUI module(s) for the Qt toolkit."
+HOMEPAGE="http://www.trolltech.com/"
+
+MY_PV=${PV/_rc/-tp}
+
+SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-${SRCTYPE}-${MY_PV}.tar.gz"
+S=${WORKDIR}/qt-x11-${SRCTYPE}-${MY_PV}
+
+LICENSE="|| ( QPL-1.0 GPL-2 )"
+SLOT="4"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+
+IUSE_INPUT_DEVICES="input_devices_wacom"
+
+IUSE="accessibility cups dbus debug mng nas nis tiff xinerama ${IUSE_INPUT_DEVICES}"
+
+RDEPEND="~x11-libs/qt-core-${PV}
+	~x11-libs/qt-script-${PV}
+	dbus? ( ~x11-libs/qt-dbus-${PV} )
+	x11-libs/libXrandr
+	x11-libs/libXcursor
+	x11-libs/libXfont
+	x11-libs/libSM
+	xinerama? ( x11-libs/libXinerama )
+	media-libs/fontconfig
+	>=media-libs/freetype-2
+	media-libs/libpng
+	media-libs/jpeg
+	sys-libs/zlib
+	mng? ( >=media-libs/libmng-1.0.9 )
+	tiff? ( media-libs/tiff )
+	nas? ( >=media-libs/nas-1.5 )
+	cups? ( net-print/cups )
+	input_devices_wacom? ( x11-libs/libXi x11-drivers/linuxwacom )"
+
+DEPEND="${RDEPEND}
+	xinerama? ( x11-proto/xineramaproto )
+	x11-proto/xextproto
+	x11-proto/inputproto"
+
+src_unpack() {
+	qt4-build_src_unpack
+
+	skip_qmake_build_patch
+	skip_project_generation_patch
+	install_binaries_to_buildtree
+
+	# Don't build plugins this go around, because they depend on qt3support lib
+	sed -i -e "s:CONFIG(shared:#CONFIG(shared:g" "${S}"/tools/designer/src/src.pro
+}
+
+src_compile() {
+	export PATH="${S}/bin:${PATH}"
+	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
+
+	local myconf=$(standard_configure_options)
+
+	myconf="${myconf} $(qt_use accessibility) $(qt_use cups) $(qt_use xinerama)"
+	myconf="${myconf} $(qt_use nis)"
+
+	use nas		&& myconf="${myconf} -system-nas-sound"
+
+	myconf="${myconf} -qt-gif -system-libpng -system-libjpeg"
+	myconf="${myconf} $(qt_use tiff libtiff system)"
+	myconf="${myconf} $(qt_use mng libmng system)"
+
+	myconf="${myconf} -no-sql-mysql -no-sql-psql -no-sql-ibase -no-sql-sqlite -no-sql-sqlite2 -no-sql-odbc"
+
+	if built_with_use ~x11-libs/qt-core-${PV} glib; then
+		myconf="${myconf} -glib"
+	else
+		myconf="${myconf} -no-glib"
+	fi
+
+	if built_with_use ~x11-libs/qt-core-${PV} qt3support; then
+		myconf="${myconf} -qt3support"
+	else
+		myconf="${myconf} -no-qt3support"
+	fi
+
+	use input_devices_wacom	&& myconf="${myconf} -tablet" || myconf="${myconf} -no-tablet"
+
+	myconf="${myconf} -xrender -xrandr -xkb -xshape -sm"
+
+	# Explictly don't compile these packages.
+	# Emerge "qt-webkit", "qt-phonon", etc for their functionality.
+	myconf="${myconf} -no-webkit -no-phonon -no-qdbus -no-opengl"
+
+	use dbus && myconf="${myconf} -qdbus" || myconf="${myconf} -no-qdbus"
+
+	echo ./configure ${myconf}
+	./configure ${myconf} || die
+
+	build_directories src/gui tools/assistant tools/designer tools/linguist
+	use dbus && build_directories tools/qdbus/qdbusviewer
+}
+
+src_install() {
+	install_directories src/gui tools/assistant tools/designer tools/linguist
+	use dbus && install_directories tools/qdbus/qdbusviewer
+
+	fix_library_files
+
+	# Install .desktop files, from bug #174033
+	insinto /usr/share/applications
+	doins "${FILESDIR}"/qt4/*.desktop
+}
+
+pkg_postinst()
+{
+	qconfig_add_option x11sm
+	qconfig_add_option xshape
+	qconfig_add_option xcursor
+	qconfig_add_option xfixes
+	qconfig_add_option xrandr
+	qconfig_add_option xrender
+	qconfig_add_option xkb
+	qconfig_add_option fontconfig
+	use input_devices_wacom && qconfig_add_option tablet
+	use accessibility && qconfig_add_option accessibility
+	use xinerama && qconfig_add_option xinerama
+	use cups && qconfig_add_option cups
+	use nas && qconfig_add_option nas
+
+	qconfig_remove_option no-gif
+	qconfig_add_option gif
+
+	qconfig_remove_option no-png
+	qconfig_add_option png
+	qconfig_add_option system-png
+
+	# Need to do the same for tiff and mng
+}
+
+pkg_postrm()
+{
+	qconfig_remove_option x11sm
+	qconfig_remove_option xshape
+	qconfig_remove_option xcursor
+	qconfig_remove_option xfixes
+	qconfig_remove_option xrandr
+	qconfig_remove_option xrender
+	qconfig_remove_option xkb
+	qconfig_remove_option fontconfig
+
+	qconfig_remove_option tablet
+	qconfig_remove_option accessibility
+	qconfig_remove_option xinerama
+	qconfig_remove_option cups
+	qconfig_remove_option nas
+
+	qconfig_remove_option png
+	qconfig_remove_option system-png
+	qconfig_add_option no-png
+
+	qconfig_remove_option gif
+	qconfig_add_option no-gif
+
+	# Need to do the same for tiff and mng
+}
