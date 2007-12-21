@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-2.21.ebuild,v 1.1 2007/06/16 23:53:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-2.28.2.ebuild,v 1.1 2007/12/21 18:20:31 cardoe Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ PDEPEND="sys-apps/mktemp"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-2.14.1-no-bs-namespace.patch
+	epatch "${FILESDIR}"/${PN}-2.28.2-no-bs-namespace.patch
 	epatch "${FILESDIR}"/${PN}-2.16.2-palo.patch
 }
 
