@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.6 2007/12/21 19:36:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.7 2007/12/21 19:41:24 caleb Exp $
 
 inherit qt4-build
 
@@ -17,7 +17,7 @@ LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
 KEYWORDS="~x86"
 
-IUSE="debug accessibility"
+IUSE="debug"
 
 RDEPEND="~x11-libs/qt-gui-${PV}
 	~x11-libs/qt-sql-${PV}"
@@ -25,13 +25,7 @@ RDEPEND="~x11-libs/qt-gui-${PV}
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
-	if use accessibility && !built_with_use =x11-libs/qt-gui-4* accessibility; then
-		eerror "Attempting to build qt3support with accessibility use flag without support in Qt4."
-		eerror "You must either turn off this use flag or re-emerge x11-libs/qt with accessibility support."
-		die
-	fi
-
-	if !built_with_use =x11-libs/qt-core-4* qt3support; then
+	if ! built_with_use =x11-libs/qt-core-4* qt3support; then
 		eerror "In order for the qt-qt3support package to install, you must set the \"qt3support\" use flag, then"
 		eerror "re-emerge the following packages: x11-libs/qt-core, x11-libs/qt-gui, x11-libs/qt-sql."
 		die
@@ -49,9 +43,11 @@ src_unpack() {
 src_compile() {
 	local myconf=$(standard_configure_options)
 
-	# Add a switch that will attempt to use recent binutils to reduce relocations.  Should be harmless for other
-	# cases.  From bug #178535
-	use accessibility && myconf="${myconf} -accessibility" || myconf="${myconf} -no-accessibility"
+	if built_with_use ~x11-libs/qt-gui-${PV} accessibility; then
+		myconf="${myconf} -accessibility"
+	else
+		myconf="${myconf} -no-accessibility"
+	fi
 
 	myconf="${myconf} -qt3support"
 
