@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.7-r2.ebuild,v 1.2 2007/11/14 21:49:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.7-r2.ebuild,v 1.3 2007/12/21 15:07:36 nixnut Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -31,7 +31,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/libs/klibc/${P}.tar.bz2
 	${KERNEL_URI}"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
-KEYWORDS="~amd64 -mips ~ppc ~x86 ~sparc"
+KEYWORDS="~amd64 -mips ppc ~sparc ~x86"
 SLOT="0"
 IUSE="debug n32"
 
