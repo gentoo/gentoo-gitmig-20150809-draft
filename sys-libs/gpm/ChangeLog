@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.61 2007/12/21 10:30:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.62 2007/12/21 12:41:55 nixnut Exp $
+
+  21 Dec 2007; nixnut <nixnut@gentoo.org> gpm-1.20.1-r6.ebuild:
+  Stable on ppc wrt bug 202853
 
   21 Dec 2007; Raúl Porcel <armin76@gentoo.org> gpm-1.20.1-r6.ebuild:
   alpha/ia64/sparc stable wrt #202853
