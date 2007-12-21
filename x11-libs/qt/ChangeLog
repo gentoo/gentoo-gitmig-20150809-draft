@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.509 2007/12/19 18:05:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.510 2007/12/21 20:24:16 caleb Exp $
+
+  21 Dec 2007; Caleb Tennis <caleb@gentoo.org> qt-4.4.0_rc1.ebuild:
+  I've completely changed this. Now it's a meta-ebuild that pulls in all of
+  the smaller package deps.
 
 *qt-4.4.0_rc1 (19 Dec 2007)
 
