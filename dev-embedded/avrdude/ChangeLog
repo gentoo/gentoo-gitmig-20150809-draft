@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.37 2007/12/09 11:13:04 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.38 2007/12/21 08:27:06 calchan Exp $
+
+  21 Dec 2007; Denis Dupeyron <calchan@gentoo.org> avrdude-5.5.ebuild:
+  Re-added -j1 for compilation (see bug #202576).
 
 *avrdude-5.5 (09 Dec 2007)
 

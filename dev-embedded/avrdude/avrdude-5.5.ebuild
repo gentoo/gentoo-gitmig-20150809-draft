@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.5.ebuild,v 1.1 2007/12/09 11:13:04 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.5.ebuild,v 1.2 2007/12/21 08:27:06 calchan Exp $
 
 DESCRIPTION="AVR Downloader/UploaDEr"
 HOMEPAGE="http://savannah.nongnu.org/projects/avrdude"
@@ -29,9 +29,11 @@ src_unpack() {
 
 src_compile() {
 	econf --disable-dependency-tracking --disable-doc || die "econf failed"
-	emake || die "emake failed"
 
-	# We build docs separately since they fail to parallel-build
+	# Re-adding -j1 here (see bug #202576) but that should be fixed someday
+	emake -j1 || die "emake failed"
+
+	# We build docs separately since the makefile doesn't do it in a really nice way
 	if use doc ; then
 		cd doc
 		emake -j1 || die "emake doc failed"
