@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX splashutils-1.4.2-getcfg.patch 336 RMD160 73f1c0e85ea4cac92fa323447742fc08db0bb8bd SHA1 5330ed4437334cb479dfd9edfb78075f3fc2e349 SHA256 9073cd34faba8b41a66b9bad28cfadb71cb216c3288c20d852eb2aea3d035d70
 MD5 4a2e9913222523d5c0e3a0651a77323b files/splashutils-1.4.2-getcfg.patch 336
 RMD160 73f1c0e85ea4cac92fa323447742fc08db0bb8bd files/splashutils-1.4.2-getcfg.patch 336
@@ -47,10 +44,10 @@ EBUILD splashutils-1.4.2.ebuild 6837 RMD160 fc93b9b3d2f3584cf1e98aee5b4f679a160a
 MD5 dd7875311f8cfd9ca6afb2f30c83ab73 splashutils-1.4.2.ebuild 6837
 RMD160 fc93b9b3d2f3584cf1e98aee5b4f679a160a0922 splashutils-1.4.2.ebuild 6837
 SHA256 dc886049220bcd31d8005cff90436e95577b9c86d7b4aa58acb7ccf6b3b6bbc8 splashutils-1.4.2.ebuild 6837
-EBUILD splashutils-1.5.2.1.ebuild 7422 RMD160 f0f8ffd8047014be870be7508e9d247ad8b65c1d SHA1 f331681a494c714eab222b3a752d023dbbcf1e2b SHA256 3eff1703faa0ad6b3659afc3f6d7eeff5c3d2866acecb385dc41cfbe6314fa47
-MD5 955d1c7166705451daa0ce90863d49f5 splashutils-1.5.2.1.ebuild 7422
-RMD160 f0f8ffd8047014be870be7508e9d247ad8b65c1d splashutils-1.5.2.1.ebuild 7422
-SHA256 3eff1703faa0ad6b3659afc3f6d7eeff5c3d2866acecb385dc41cfbe6314fa47 splashutils-1.5.2.1.ebuild 7422
+EBUILD splashutils-1.5.2.1.ebuild 7420 RMD160 aa0ced0d43d564d522dadf55a823c9bffcfb80b5 SHA1 1eddc1f44ed7b9384d8860cf84fe08c595a08095 SHA256 15c9cc4266f4ccb6beca3f105bf72fb8bb49b4f4ba9220aadd14fecaf7c99c1e
+MD5 c5cca943f01f7fdde4b9ea896341c9e6 splashutils-1.5.2.1.ebuild 7420
+RMD160 aa0ced0d43d564d522dadf55a823c9bffcfb80b5 splashutils-1.5.2.1.ebuild 7420
+SHA256 15c9cc4266f4ccb6beca3f105bf72fb8bb49b4f4ba9220aadd14fecaf7c99c1e splashutils-1.5.2.1.ebuild 7420
 EBUILD splashutils-1.5.2.ebuild 7236 RMD160 7ec01451f8329e5bd974b7af3c441feeefdc61a3 SHA1 aa7ea712f887ed39780f283709757a8034c0824e SHA256 37340e3c0707a7675790ff5c06cf348c2cb053725bd37bee0ce7b41d324b19da
 MD5 b834ef17b504360a488e75ad504247f8 splashutils-1.5.2.ebuild 7236
 RMD160 7ec01451f8329e5bd974b7af3c441feeefdc61a3 splashutils-1.5.2.ebuild 7236
@@ -67,10 +64,10 @@ EBUILD splashutils-1.5.3.ebuild 6165 RMD160 1f93d058e2dd01f9adbabb55785dda6ff912
 MD5 15dd660d69f6931d77c21479c67ac651 splashutils-1.5.3.ebuild 6165
 RMD160 1f93d058e2dd01f9adbabb55785dda6ff912be93 splashutils-1.5.3.ebuild 6165
 SHA256 01a4ec31eb1b6caf27e046a6383fc4ac0f387f749631eb3cf5aef3872bd26252 splashutils-1.5.3.ebuild 6165
-MISC ChangeLog 23171 RMD160 857249e13972891e51d64e72c089231515e54bfd SHA1 eec6b6d6be6dbc199a4e3b34d07aa231da8db2da SHA256 17fd568cb51d7bbb7449e24d13dd405a6375d472fa1cb08d366a3f38069d80f6
-MD5 cd0aece68457d210fa0864dd3f3ed169 ChangeLog 23171
-RMD160 857249e13972891e51d64e72c089231515e54bfd ChangeLog 23171
-SHA256 17fd568cb51d7bbb7449e24d13dd405a6375d472fa1cb08d366a3f38069d80f6 ChangeLog 23171
+MISC ChangeLog 23274 RMD160 40f1f4e4349e2e2d3240efab55fd57a7c7c8dde6 SHA1 9883f732e2f942b7ba67803396f5584ae5176660 SHA256 5f439a8e4b64b3caf542ed9df58f169dbb5d40c34aebc2ada3e1ee95edd6eae4
+MD5 153aea42b022ab30342a70227c3d6a98 ChangeLog 23274
+RMD160 40f1f4e4349e2e2d3240efab55fd57a7c7c8dde6 ChangeLog 23274
+SHA256 5f439a8e4b64b3caf542ed9df58f169dbb5d40c34aebc2ada3e1ee95edd6eae4 ChangeLog 23274
 MISC metadata.xml 220 RMD160 6bb03cb6947aadf2672a58c61c1fb7aa405eaf86 SHA1 7810907f03c5a3ee23eeaa4b42699ce17bc5c3a7 SHA256 969b4125e7620e2fe0d616cb3cabbe52bd79e6c4bdd725ce807d5f4c7c1ad75d
 MD5 87131e5c56922624f8a0c7fe61cd28da metadata.xml 220
 RMD160 6bb03cb6947aadf2672a58c61c1fb7aa405eaf86 metadata.xml 220
@@ -96,10 +93,3 @@ SHA256 93cd2fff0e7160f8bb8730c07546b67e3a61353f4d31ebe957c0f51e32c3c1d1 files/di
 MD5 afa8f5d4d4ae191fbce697497ff7994b files/digest-splashutils-1.5.3.2 1783
 RMD160 c7f85eed0a74911690eed00df8da6a81aeae0fab files/digest-splashutils-1.5.3.2 1783
 SHA256 7c3c4226b3a74d42871c36d4cfddaadcd4eb03c2fd5dc5f0219a542d7a5f780c files/digest-splashutils-1.5.3.2 1783
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHZXe4chej4aZK9/cRAqSgAJ9ZchT/tXFFQy+4QH/AgQ/gMbkh7ACfcfXt
-RETYrzqyocvBVtyKSWmVlpM=
-=YGQE
------END PGP SIGNATURE-----
