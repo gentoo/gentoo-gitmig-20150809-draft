@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.6.ebuild,v 1.8 2007/10/31 13:17:50 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.6.ebuild,v 1.9 2007/12/21 00:29:10 dcoutts Exp $
 
 inherit base
 
@@ -37,7 +37,7 @@ src_unpack() {
 	# If we're going to use the CFLAGS with GHC's -optc flag then we'd better
 	# use it with -opta too or it'll break with some CFLAGS, eg -mcpu on sparc
 	sed -i 's:\($(addprefix -optc,$(CFLAGS))\):\1 $(addprefix -opta,$(CFLAGS)):' \
-		${S}/autoconf.mk.in
+		"${S}/autoconf.mk.in"
 
 	# On ia64 we need to tone down the level of inlining so we don't break some
 	# of the low level ghc/gcc interaction gubbins.
@@ -68,5 +68,5 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "installation failed"
+	make DESTDIR="${D}" install || die "installation failed"
 }

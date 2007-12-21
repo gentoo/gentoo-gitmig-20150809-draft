@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.1.0_pre1.ebuild,v 1.1 2007/12/20 13:48:35 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.1.0_pre1.ebuild,v 1.2 2007/12/21 00:29:10 dcoutts Exp $
 
 inherit base autotools eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://darcs.net/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 DEPEND=">=net-misc/curl-7.10.2
@@ -20,6 +20,8 @@ DEPEND=">=net-misc/curl-7.10.2
 	dev-haskell/quickcheck
 	dev-haskell/mtl
 	dev-haskell/html
+	dev-haskell/parsec
+	dev-haskell/regex-compat
 	sys-apps/diffutils
 	doc?  ( virtual/tetex
 		>=dev-tex/latex2html-2002.2.1_pre20041025-r1 )"

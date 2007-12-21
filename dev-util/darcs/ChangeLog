@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.80 2007/12/20 13:48:35 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.81 2007/12/21 00:29:10 dcoutts Exp $
+
+  21 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> darcs-1.1.0_pre1.ebuild:
+  Add missing deps on parsec and regex-compat. Fixes bug #202887.
+  Sadly have to drop some keywords because of the dep on the parsec package
+  which does not yet have all the arch keywords. Also fix some quoting issues
+  in the older versions of the ebuild.
 
 *darcs-1.1.0_pre1 (20 Dec 2007)
 
