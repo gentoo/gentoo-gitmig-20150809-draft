@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-1.0.4.ebuild,v 1.2 2007/07/15 00:12:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-1.0.4.ebuild,v 1.3 2007/12/21 22:39:22 bangert Exp $
 
 inherit eutils
 DESCRIPTION="Varnish is an HTTP accelerator"
@@ -19,8 +19,8 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	newinitd ${FILESDIR}/varnishd.initd varnishd || die
-	newconfd ${FILESDIR}/varnishd.confd varnishd || die
+	newinitd "${FILESDIR}"/varnishd.initd varnishd || die
+	newconfd "${FILESDIR}"/varnishd.confd varnishd || die
 }
 
 pkg_postinst () {

@@ -1,8 +1,0 @@
---- Makefile.am.orig    2007-08-03 01:20:32.000000000 +0200
-+++ Makefile.am 2007-08-03 01:20:47.000000000 +0200
-@@ -10,4 +10,4 @@
- EXTRA_DIST = LICENSE autogen.sh varnishapi.pc.in
-
- install-data-local:
--	$(install_sh) -d -m 0755 $(localstatedir)/varnish
-+	$(install_sh) -d -m 0755 $(DESTDIR)$(localstatedir)/varnish
