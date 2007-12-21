@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.73 2007/12/20 20:43:13 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.74 2007/12/21 07:27:15 alonbl Exp $
+
+  21 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org> pinentry-0.7.4.ebuild:
+  Readd flag-o-matic
 
   20 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org>
   +files/pinentry-0.7.4-grab.patch, pinentry-0.7.4.ebuild:
