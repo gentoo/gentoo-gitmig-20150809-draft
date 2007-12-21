@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.44 2007/12/19 12:50:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.45 2007/12/21 12:32:50 nixnut Exp $
+
+  21 Dec 2007; nixnut <nixnut@gentoo.org> numpy-1.0.4.ebuild:
+  Stable on ppc wrt bug 202202
 
   19 Dec 2007; Raúl Porcel <armin76@gentoo.org> numpy-1.0.4.ebuild:
   alpha/ia64/sparc/x86 stable wrt #202202
