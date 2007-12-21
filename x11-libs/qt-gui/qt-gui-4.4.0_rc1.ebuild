@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_rc1.ebuild,v 1.2 2007/12/21 19:54:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_rc1.ebuild,v 1.3 2007/12/21 20:41:33 caleb Exp $
 
 inherit eutils qt4-build
 
@@ -15,7 +15,7 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${MY_PV}
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~x86"
 
 IUSE_INPUT_DEVICES="input_devices_wacom"
 
