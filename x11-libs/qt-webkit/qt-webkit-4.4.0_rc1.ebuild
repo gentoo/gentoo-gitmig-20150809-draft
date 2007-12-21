@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.0_rc1.ebuild,v 1.6 2007/12/21 20:06:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.0_rc1.ebuild,v 1.7 2007/12/21 22:38:38 mr_bones_ Exp $
 
 inherit qt4-build
 
@@ -20,7 +20,6 @@ KEYWORDS="~x86"
 RDEPEND="~x11-libs/qt-gui-${PV}"
 
 DEPEND="${RDEPEND}"
-
 
 src_unpack() {
 	qt4-build_src_unpack
@@ -56,4 +55,3 @@ pkg_postrm()
 {
 	qconfig_remove_option webkit
 }
-
