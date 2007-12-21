@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.1 2007/12/21 18:59:13 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.2 2007/12/21 20:55:35 caleb Exp $
 
 inherit qt4-build
 
@@ -82,6 +82,9 @@ pkg_setup() {
 	qt4-build_pkg_setup
 
 	if has_version x11-libs/qt-core; then
+
+		# Check to see if they've changed the glib flag since the last time installing this package.
+
 		if use glib && ! built_with_use x11-libs/qt-core glib && has_version x11-libs/qt-gui; then
 			ewarn "You have changed the \"glib\" use flag since the last time you have emerged this package."
 			ewarn "You should also re-emerge x11-libs/qt-gui in order for it to pick up this change."
@@ -90,35 +93,32 @@ pkg_setup() {
 			ewarn "You should also re-emerge x11-libs/qt-gui in order for it to pick up this change."
 		fi
 
+		# Check to see if they've changed the qt3support flag since the last time installing this package.
+		# If so, give a list of packages they need to un-emerge first.
+
 		if use qt3support && ! built_with_use x11-libs/qt-core qt3support; then
 			local need_to_remove="";
 			ewarn "You have changed the \"qt3support\" use flag since the last time you have emerged this package."
-			if has_version x11-libs/qt-sql; then
-				need_to_remove="${need_to_remove} x11-libs/qt-sql"
-			fi
-			if has_version x11-libs/qt-opengl; then
-				need_to_remove="${need_to_remove} x11-libs/qt-opengl"
-			fi
-			if has_version x11-libs/qt-gui; then
-				need_to_remove="${need_to_remove} x11-libs/qt-gui"
-			fi
+			for x in sql opengl gui qt3support; do
+				local pkg="x11-libs/qt-${x}"
+				if has_version $pkg; then
+					need_to_remove="${need_to_remove} ${pkg}"
+				fi
+			done
 			if [ -n "${need_to_remove}" ]; then
-				die "You must first unmerge these packages before continuing: ${need_to_remove}"
+				die "You must first un-emerge these packages before continuing: \n\t\t${need_to_remove}"
 			fi
 		elif ! use qt3support && built_with_use x11-libs/qt-core qt3support; then
 			local need_to_remove="";
 			ewarn "You have changed the \"qt3support\" use flag since the last time you have emerged this package."
-			if has_version x11-libs/qt-sql; then
-				need_to_remove="${need_to_remove} x11-libs/qt-sql"
-			fi
-			if has_version x11-libs/qt-opengl; then
-				need_to_remove="${need_to_remove} x11-libs/qt-opengl"
-			fi
-			if has_version x11-libs/qt-gui; then
-				need_to_remove="${need_to_remove} x11-libs/qt-gui"
-			fi
+			for x in sql opengl gui qt3support; do
+				local pkg="x11-libs/qt-${x}"
+				if has_version $pkg; then
+					need_to_remove="${need_to_remove} ${pkg}"
+				fi
+			done
 			if [ -n "${need_to_remove}" ]; then
-				die "You must first unmerge these packages before continuing: ${need_to_remove}"
+				die "You must first un-emerge these packages before continuing: \n\t\t${need_to_remove}"
 			fi
 		fi
 	fi
