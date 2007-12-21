@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/limit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/ChangeLog,v 1.24 2007/12/19 12:39:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/ChangeLog,v 1.25 2007/12/21 14:28:41 nixnut Exp $
+
+  21 Dec 2007; nixnut <nixnut@gentoo.org> limit-1.14.10_pre20070618.ebuild:
+  Stable on ppc wrt bug 202655
 
   19 Dec 2007; Raúl Porcel <armin76@gentoo.org>
   limit-1.14.10_pre20070618.ebuild:
