@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.7 2007/12/21 19:41:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.8 2007/12/21 19:44:18 caleb Exp $
 
 inherit qt4-build
 
@@ -25,6 +25,8 @@ RDEPEND="~x11-libs/qt-gui-${PV}
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
+	qt4-build_pkg_setup
+
 	if ! built_with_use =x11-libs/qt-core-4* qt3support; then
 		eerror "In order for the qt-qt3support package to install, you must set the \"qt3support\" use flag, then"
 		eerror "re-emerge the following packages: x11-libs/qt-core, x11-libs/qt-gui, x11-libs/qt-sql."
