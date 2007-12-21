@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.23.ebuild,v 1.1 2007/11/01 05:49:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.23.ebuild,v 1.2 2007/12/21 20:14:52 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -183,7 +183,9 @@ src_unpack() {
 	# Use some more sensible gl headers and make way for new glext.h
 	epatch "${FILESDIR}"/NVIDIA_glx-glheader.patch
 	# allow on board sensors to work with lm_sensors
-	epatch "${FILESDIR}"/NVIDIA_i2c-hwmon.patch
+	if ! use x86-fbsd; then
+		epatch "${FILESDIR}"/NVIDIA_i2c-hwmon.patch
+	fi
 
 	if ! use x86-fbsd; then
 		# Quiet down warnings the user does not need to see
