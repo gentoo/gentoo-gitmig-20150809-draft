@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.38 2007/12/21 14:14:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.39 2007/12/21 15:03:43 nixnut Exp $
+
+  21 Dec 2007; nixnut <nixnut@gentoo.org> spidermonkey-1.7.0.ebuild:
+  Stable on ppc wrt bug 202885
 
   21 Dec 2007; Raúl Porcel <armin76@gentoo.org> spidermonkey-1.7.0.ebuild:
   alpha/x86 stable wrt #202885
