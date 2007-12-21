@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.4.0_rc1.ebuild,v 1.3 2007/12/21 19:14:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.4.0_rc1.ebuild,v 1.4 2007/12/21 20:01:42 caleb Exp $
 
 inherit qt4-build
 
@@ -19,7 +19,7 @@ KEYWORDS="~x86"
 
 IUSE="debug"
 
-RDEPEND="~x11-libs/qt-gui-4.4.0_rc1
+RDEPEND="~x11-libs/qt-gui-${PV}
 	( virtual/opengl virtual/glu )"
 
 DEPEND="${RDEPEND}"
@@ -65,3 +65,4 @@ pkg_postrm()
 {
 	qconfig_remove_option opengl
 }
+
