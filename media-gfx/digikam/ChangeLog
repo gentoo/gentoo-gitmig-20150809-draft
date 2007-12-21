@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.102 2007/11/04 18:44:34 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.103 2007/12/21 17:19:15 keytoaster Exp $
+
+*digikam-0.9.3_rc1 (21 Dec 2007)
+
+  21 Dec 2007; Tobias Heinlein <keytoaster@gentoo.org>
+  +digikam-0.9.3_rc1.ebuild:
+  Version bump (bug #202494) and new -doc tarball version
 
 *digikam-0.9.3_beta2 (04 Nov 2007)
 
