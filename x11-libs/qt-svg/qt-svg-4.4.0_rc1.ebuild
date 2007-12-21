@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/qt-svg-4.4.0_rc1.ebuild,v 1.1 2007/12/21 19:12:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/qt-svg-4.4.0_rc1.ebuild,v 1.2 2007/12/21 20:04:45 caleb Exp $
 
 inherit qt4-build
 
@@ -16,8 +16,6 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${MY_PV}
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
 KEYWORDS="~x86"
-
-IUSE="debug"
 
 RDEPEND="~x11-libs/qt-gui-${PV}"
 
