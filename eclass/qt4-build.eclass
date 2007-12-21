@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.2 2007/12/21 21:10:34 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.3 2007/12/21 21:44:03 caleb Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -70,7 +70,7 @@ standard_configure_options() {
 	-sysconfdir ${QTSYSCONFDIR} -translationdir ${QTTRANSDIR} \
 	-examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR}"
 
-	myconf="${myconf} -fast -reduce-relocations -nomake examples -nomake demos"
+	myconf="${myconf} -silent -fast -reduce-relocations -nomake examples -nomake demos"
 
 	echo "${myconf}"
 }
@@ -79,7 +79,7 @@ build_directories() {
 	local dirs="$@"
 	for x in ${dirs}; do
 		cd "${S}"/${x}
-		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" && emake || die
+		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" "CONFIG+=nostrip" && emake || die
 	done
 }
 
