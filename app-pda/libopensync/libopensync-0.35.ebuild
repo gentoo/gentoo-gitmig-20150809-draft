@@ -1,14 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-9999.ebuild,v 1.2 2007/12/21 23:02:25 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.35.ebuild,v 1.1 2007/12/21 23:02:25 peper Exp $
 
-inherit cmake-utils eutils subversion
+inherit cmake-utils eutils
 
 DESCRIPTION="OpenSync synchronisation framework library"
 HOMEPAGE="http://www.opensync.org/"
-SRC_URI=""
-
-ESVN_REPO_URI="http://svn.opensync.org/trunk"
+SRC_URI="http://www.opensync.org/download/releases/${PV}/${P}.tar.bz2"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
