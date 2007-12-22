@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jgoodies-forms
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/ChangeLog,v 1.21 2007/11/19 18:09:50 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/ChangeLog,v 1.22 2007/12/22 11:14:43 nixnut Exp $
+
+  22 Dec 2007; nixnut <nixnut@gentoo.org> jgoodies-forms-1.1.0.ebuild:
+  Stable on ppc wrt bug 199252
 
   19 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   jgoodies-forms-1.1.0.ebuild:
