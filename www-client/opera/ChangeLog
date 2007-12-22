@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.183 2007/12/21 17:15:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.184 2007/12/22 11:12:48 welp Exp $
+
+  22 Dec 2007; Peter Weller <welp@gentoo.org> opera-9.25.ebuild:
+  Stable on amd64; bug 202770
 
 *opera-9.50_beta2_p1729 (21 Dec 2007)
 
