@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.928 2007/12/21 19:33:59 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.929 2007/12/22 00:01:02 halcy0n Exp $
+
+  22 Dec 2007; Mark Loeser <halcy0n@gentoo.org> use.local.desc:
+  Remove duplicated local use flags for selinux-desktop:avahi and
+  busybox:savedconfig
 
   21 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Unmask wxGTK-2.8.
