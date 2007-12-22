@@ -1,15 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.14-r1.ebuild,v 1.1 2007/07/12 18:06:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.0.ebuild,v 1.1 2007/12/22 03:54:54 matsuu Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
 
 inherit autotools eutils multilib toolchain-funcs
 
+MY_P="${PN}${PV/_beta/b}"
 DESCRIPTION="Tool Command Language"
 HOMEPAGE="http://www.tcl.tk/"
-SRC_URI="mirror://sourceforge/tcl/${PN}${PV}-src.tar.gz"
+SRC_URI="mirror://sourceforge/tcl/${MY_P}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -18,7 +19,7 @@ IUSE="debug threads"
 
 DEPEND=""
 
-S=${WORKDIR}/${PN}${PV}
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	if use threads ; then
@@ -36,17 +37,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-8.4.11-multilib.patch
+	epatch "${FILESDIR}"/${PN}-8.5_alpha6-multilib.patch
 
 	# Bug 125971
-	epatch "${FILESDIR}"/${PN}-8.3.5-tclm4-soname.patch
-
-	local d
-	for d in */configure ; do
-		cd "${S}"/${d%%/*}
-		EPATCH_SINGLE_MSG="Patching nls cruft in ${d}" \
-		epatch "${FILESDIR}"/tcl-configure-LANG.patch
-	done
+	epatch "${FILESDIR}"/${PN}-8.5_alpha6-tclm4-soname.patch
 
 	cd "${S}"/unix
 	eautoreconf
@@ -54,11 +48,6 @@ src_unpack() {
 
 src_compile() {
 	tc-export CC
-	local local_config_use=""
-
-	if use threads ; then
-		local_config_use="--enable-threads"
-	fi
 
 	cd "${S}"/unix
 	econf \
@@ -73,7 +62,7 @@ src_install() {
 	v1=${PV%.*}
 
 	cd "${S}"/unix
-	S= make DESTDIR="${D}" install || die
+	S= emake DESTDIR="${D}" install || die
 
 	# fix the tclConfig.sh to eliminate refs to the build directory
 	local mylibdir=$(get_libdir) ; mylibdir=${mylibdir//\/}
@@ -97,22 +86,18 @@ src_install() {
 	rm -f "${D}"/usr/${mylibdir}/tcl${v1}/include/generic/tclPlatDecls.h
 
 	# install symlink for libraries
-	if use debug ; then
-		dosym libtcl${v1}g.so /usr/${mylibdir}/libtcl${v1}.so
-		dosym libtclstub${v1}g.a /usr/${mylibdir}/libtclstub${v1}.a
-	fi
 	dosym libtcl${v1}.so /usr/${mylibdir}/libtcl.so
 	dosym libtclstub${v1}.a /usr/${mylibdir}/libtclstub.a
 
 	dosym tclsh${v1} /usr/bin/tclsh
 
 	cd "${S}"
-	dodoc README changes license.terms
+	dodoc ChangeLog* README changes
 }
 
 pkg_postinst() {
 	ewarn
-	ewarn "If you're upgrading from tcl-8.3, you must recompile the other"
+	ewarn "If you're upgrading from <dev-lang/tcl-8.5, you must recompile the other"
 	ewarn "packages on your system that link with tcl after the upgrade"
 	ewarn "completes.  To perform this action, please run revdep-rebuild"
 	ewarn "in package app-portage/gentoolkit."
