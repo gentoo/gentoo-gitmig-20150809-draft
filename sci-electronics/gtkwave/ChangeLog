@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.41 2007/12/22 17:05:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.42 2007/12/22 17:25:26 calchan Exp $
+
+  22 Dec 2007; Denis Dupeyron <calchan@gentoo.org> -gtkwave-3.0.22.ebuild:
+  Removed old ebuild.
 
   22 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   gtkwave-3.1.1.ebuild:
