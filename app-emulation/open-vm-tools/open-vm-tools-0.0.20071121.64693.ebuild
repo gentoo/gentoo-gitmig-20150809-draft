@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20071121.64693.ebuild,v 1.1 2007/12/22 17:32:11 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20071121.64693.ebuild,v 1.2 2007/12/22 23:05:54 mr_bones_ Exp $
 
 inherit eutils linux-mod versionator
 
@@ -153,4 +153,3 @@ src_install() {
 		elog "	to the group 'vmware'"
 	fi
 }
-
