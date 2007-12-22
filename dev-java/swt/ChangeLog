@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.74 2007/12/16 15:59:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.75 2007/12/22 13:45:31 nixnut Exp $
+
+  22 Dec 2007; nixnut <nixnut@gentoo.org> swt-3.3.ebuild:
+  Stable on ppc wrt bug 202458
 
   16 Dec 2007; Markus Meier <maekke@gentoo.org> swt-3.3.ebuild:
   x86 stable, bug #202458
