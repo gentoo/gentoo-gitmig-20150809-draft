@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.3 2007/12/22 16:30:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.4 2007/12/22 16:35:34 caleb Exp $
+
+EAPI=1
 
 inherit qt4-build
 
@@ -25,10 +27,7 @@ RDEPEND="ssl? ( dev-libs/openssl )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	!=x11-libs/qt-4.3*
-	!=x11-libs/qt-4.2*
-	!=x11-libs/qt-4.1*
-	!=x11-libs/qt-4.0*"
+	!<=x11-libs/qt-4.3*:4"
 
 QT4_TARGET_DIRECTORIES="src/tools/moc src/tools/rcc src/tools/uic src/corelib src/xml src/network"
 
