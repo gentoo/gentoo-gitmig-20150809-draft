@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0.ebuild,v 1.10 2007/11/04 14:34:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0.ebuild,v 1.11 2007/12/22 13:49:08 dirtyepic Exp $
 
 inherit python wxwidgets eutils multilib
 
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="unicode opengl"
 
 RDEPEND=">=dev-lang/python-2.1
-	>=x11-libs/wxGTK-${PV}
+	~x11-libs/wxGTK-${PV}
 	>=x11-libs/gtk+-2.0
 	>=x11-libs/pango-1.2
 	>=dev-libs/glib-2.0
@@ -30,8 +30,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}/wxPython/"
-
-WX_GTK_VER="2.6"
 
 pkg_setup() {
 	echo
@@ -49,6 +47,8 @@ src_unpack() {
 
 src_compile() {
 	local mypyconf
+	WX_GTK_VER="2.6"
+
 	if use unicode; then
 		need-wxwidgets unicode
 	else
