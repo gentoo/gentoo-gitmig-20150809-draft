@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.10 2007/12/21 22:38:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.11 2007/12/22 17:57:22 caleb Exp $
 
 inherit qt4-build
 
@@ -21,6 +21,8 @@ RDEPEND="~x11-libs/qt-gui-${PV}
 	~x11-libs/qt-sql-${PV}"
 
 DEPEND="${RDEPEND}"
+
+QT4_TARGET_DIRECTORIES="src/qt3support tools/designer/src/plugins/widgets tools/qtconfig src/tools/uic3"
 
 pkg_setup() {
 	qt4-build_pkg_setup
@@ -54,13 +56,7 @@ src_compile() {
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
 
-	build_directories src/qt3support tools/designer/src/plugins/widgets tools/qtconfig src/tools/uic3
-}
-
-src_install() {
-	install_directories src/qt3support tools/designer/src/plugins/widgets tools/qtconfig src/tools/uic3
-
-	fix_library_files
+	build_target_directories
 }
 
 # Don't postinst qt3support into qconfig.pri here, it's handled in qt-core by way of the use flag.
