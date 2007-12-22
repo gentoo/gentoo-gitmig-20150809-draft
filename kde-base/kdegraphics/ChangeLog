@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.324 2007/12/11 10:30:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.325 2007/12/22 21:07:21 carlo Exp $
+
+*kdegraphics-3.5.8-r2 (22 Dec 2007)
+
+  22 Dec 2007; Carsten Lohrke <carlo@gentoo.org>
+  +kdegraphics-3.5.8-r2.ebuild:
+  Do not install kmrml as its runtime requirements are not met and apparently
+  no one is using it anyways.
 
   11 Dec 2007; Alexis Ballier <aballier@gentoo.org>
   kdegraphics-3.5.5.ebuild, kdegraphics-3.5.5-r1.ebuild,
