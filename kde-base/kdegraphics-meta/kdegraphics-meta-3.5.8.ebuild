@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/kdegraphics-meta-3.5.8.ebuild,v 1.1 2007/10/19 22:24:47 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/kdegraphics-meta-3.5.8.ebuild,v 1.2 2007/12/22 20:23:10 carlo Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -20,7 +20,6 @@ RDEPEND="gphoto2? ( $(deprange $PV $MAXKDEVER kde-base/kamera) )
 	$(deprange $PV $MAXKDEVER kde-base/kgamma)
 	$(deprange $PV $MAXKDEVER kde-base/kghostview)
 	$(deprange $PV $MAXKDEVER kde-base/kiconedit)
-	$(deprange $PV $MAXKDEVER kde-base/kmrml)
 	$(deprange $PV $MAXKDEVER kde-base/kolourpaint)
 	scanner? ( $(deprange $PV $MAXKDEVER kde-base/kooka)
 			$(deprange $PV $MAXKDEVER kde-base/libkscan) )
