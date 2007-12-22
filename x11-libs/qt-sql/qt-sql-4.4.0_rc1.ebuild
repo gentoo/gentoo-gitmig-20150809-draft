@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.4.0_rc1.ebuild,v 1.1 2007/12/21 19:04:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.4.0_rc1.ebuild,v 1.2 2007/12/22 17:04:17 caleb Exp $
 
 inherit qt4-build
 
@@ -27,6 +27,8 @@ RDEPEND="~x11-libs/qt-core-${PV}
 		odbc? ( dev-db/unixODBC )"
 
 DEPEND="${RDEPEND}"
+
+QT4_TARGET_DIRECTORIES="src/sql src/plugins/sqldrivers"
 
 src_unpack() {
 	qt4-build_src_unpack
@@ -58,13 +60,6 @@ src_compile() {
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
 
-	build_directories src/sql src/plugins/sqldrivers
-
+	build_target_directories
 }
 
-src_install() {
-
-	install_directories src/sql src/plugins/sqldrivers
-
-	fix_library_files
-}
