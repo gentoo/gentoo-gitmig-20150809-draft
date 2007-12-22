@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.5.4.ebuild,v 1.1 2007/11/24 18:12:00 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.5.5.ebuild,v 1.1 2007/12/22 10:21:29 pclouds Exp $
 
-inherit eutils versionator
+inherit eutils versionator confutils
 
 MY_PV=$(get_version_component_range 1-2)
 DESCRIPTION="Macromedia Flash decoding library"
@@ -13,14 +13,14 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="ffmpeg gstreamer gnome mad oss"
+IUSE="ffmpeg gstreamer gnome mad oss alsa pulseaudio soup"
 
 RESTRICT="test"
 
-RDEPEND=">=dev-libs/glib-2.10
-	>=dev-libs/liboil-0.3.10-r1
-	x11-libs/pango
-	net-libs/libsoup
+RDEPEND=">=dev-libs/glib-2.12
+	>=dev-libs/liboil-0.3.1
+	>=x11-libs/pango-1.16.4
+	soup? ( >=net-libs/libsoup-2.2.0 )
 	>=x11-libs/cairo-1.2
 	>=x11-libs/gtk+-2.8.0
 	>=media-libs/alsa-lib-1.0.12
@@ -28,7 +28,8 @@ RDEPEND=">=dev-libs/glib-2.10
 	mad? ( >=media-libs/libmad-0.15.1b )
 	gstreamer? ( >=media-libs/gstreamer-0.10.11 )
 	gnome? ( gnome-base/gnome-vfs )
-	!<=net-www/swfdec-mozilla-0.5.2"
+	alsa? ( >=media-libs/alsa-lib-1.0 )
+	pulseaudio? ( media-sound/pulseaudio )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -44,19 +45,31 @@ pkg_setup() {
 		ewarn "In order to compile libswfdec-gtk with Gnome-VFS"
 		ewarn "support you must have 'gnome' USE flag enabled"
 	fi
+	if use !soup ; then
+		ewarn "swfdec will be built without HTTP protocol support"
+		ewarn "so you won't be able to use swfdec-mozilla, please"
+		ewarn "add 'soup' to your USE flags"
+	fi
+	confutils_use_conflict oss alsa pulseaudio
 }
 
 src_compile() {
 	local myconf
+	local myaudio
 
 	#--with-audio=[auto/alsa/oss/none]
-	use oss && myconf=" --with-audio=oss"
+	myaudio="none"
+	use oss && myaudio="oss"
+	use pulseaudio && myaudio="pa"
+	use alsa && myaudio="alsa"
+	myconf=" --with-audio=$myaudio"
 
 	econf \
 		$(use_enable gstreamer) \
 		$(use_enable ffmpeg) \
 		$(use_enable mad) \
 		$(use_enable gnome gnome-vfs) \
+		$(use_enable soup) \
 		${myconf} || die "configure failed"
 
 	emake || die "emake failed"

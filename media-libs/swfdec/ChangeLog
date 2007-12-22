@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.23 2007/12/16 18:46:20 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.24 2007/12/22 10:21:29 pclouds Exp $
+
+*swfdec-0.5.5 (22 Dec 2007)
+
+  22 Dec 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  -swfdec-0.5.3.ebuild, -swfdec-0.5.4.ebuild, +swfdec-0.5.5.ebuild:
+  Version bump and remove old versions, #202960
 
 *swfdec-0.5.4-r1 (16 Dec 2007)
 
