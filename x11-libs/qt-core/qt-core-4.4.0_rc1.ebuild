@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.2 2007/12/21 20:55:35 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.3 2007/12/22 16:30:25 caleb Exp $
 
 inherit qt4-build
 
@@ -30,11 +30,14 @@ DEPEND="${RDEPEND}
 	!=x11-libs/qt-4.1*
 	!=x11-libs/qt-4.0*"
 
+QT4_TARGET_DIRECTORIES="src/tools/moc src/tools/rcc src/tools/uic src/corelib src/xml src/network"
+
 src_unpack() {
 	qt4-build_src_unpack
 }
 
 src_compile() {
+	unset QMAKESPEC
 	local myconf=$(standard_configure_options)
 
 	use ssl		&& myconf="${myconf} -openssl" || myconf="${myconf} -no-openssl"
@@ -49,7 +52,7 @@ src_compile() {
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
 
-	build_directories src/tools/moc src/tools/rcc src/tools/uic src/corelib src/xml src/network
+	build_target_directories
 }
 
 src_install() {
