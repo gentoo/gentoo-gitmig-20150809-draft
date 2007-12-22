@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.4.0_rc1.ebuild,v 1.5 2007/12/21 20:05:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.4.0_rc1.ebuild,v 1.6 2007/12/22 17:46:11 caleb Exp $
 
 inherit qt4-build
 
@@ -25,6 +25,8 @@ RDEPEND="~x11-libs/qt-gui-${PV}
 	dbus? ( =x11-libs/qt-dbus-${PV} )"
 
 DEPEND="${RDEPEND}"
+
+QT4_TARGET_DIRECTORIES="src/phonon src/plugins/phonon"
 
 src_unpack() {
 
@@ -56,12 +58,7 @@ src_compile() {
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
 
-	build_directories src/phonon src/plugins/phonon
-}
-
-src_install() {
-	install_directories src/phonon src/plugins/phonon
-	fix_library_files
+	build_target_directories
 }
 
 pkg_postinst()
