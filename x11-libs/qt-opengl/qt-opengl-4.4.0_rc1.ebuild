@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.4.0_rc1.ebuild,v 1.6 2007/12/21 22:37:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.4.0_rc1.ebuild,v 1.7 2007/12/22 18:18:39 caleb Exp $
 
 inherit qt4-build
 
@@ -21,6 +21,8 @@ RDEPEND="~x11-libs/qt-gui-${PV}
 	( virtual/opengl virtual/glu )"
 
 DEPEND="${RDEPEND}"
+
+QT4_TARGET_DIRECTORIES="src/opengl"
 
 src_unpack() {
 
@@ -44,14 +46,9 @@ src_compile() {
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
 
-	build_directories src/opengl
+	build_target_directories
+
 	# Not building tools/designer/src/plugins/tools/view3d as it's commented out of the build in the source
-}
-
-src_install() {
-	install_directories src/opengl
-
-	fix_library_files
 }
 
 pkg_postinst()

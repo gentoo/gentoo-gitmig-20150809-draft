@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/qt-xmlpatterns-4.4.0_rc1.ebuild,v 1.2 2007/12/21 20:03:35 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/qt-xmlpatterns-4.4.0_rc1.ebuild,v 1.3 2007/12/22 18:17:11 caleb Exp $
 
 inherit qt4-build
 
@@ -21,6 +21,8 @@ RDEPEND="~x11-libs/qt-core-${PV}"
 
 DEPEND="${RDEPEND}"
 
+QT4_TARGET_DIRECTORIES="src/xmlpatterns tools/patternist"
+
 src_unpack() {
 
 	qt4-build_src_unpack
@@ -37,13 +39,7 @@ src_compile() {
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
 
-	build_directories src/xmlpatterns tools/patternist
-}
-
-src_install() {
-	install_directories src/xmlpatterns tools/patternist
-
-	fix_library_files
+	build_target_directories
 }
 
 pkg_postinst()

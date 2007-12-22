@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.0_rc1.ebuild,v 1.7 2007/12/21 22:38:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.0_rc1.ebuild,v 1.8 2007/12/22 18:16:33 caleb Exp $
 
 inherit qt4-build
 
@@ -21,6 +21,8 @@ RDEPEND="~x11-libs/qt-gui-${PV}"
 
 DEPEND="${RDEPEND}"
 
+QT4_TARGET_DIRECTORIES="src/3rdparty/webkit/WebCore tools/designer/src/plugins/qwebview"
+
 src_unpack() {
 	qt4-build_src_unpack
 
@@ -37,13 +39,7 @@ src_compile() {
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
 
-	build_directories src/3rdparty/webkit/WebCore tools/designer/src/plugins/qwebview
-}
-
-src_install() {
-	install_directories src/3rdparty/webkit/WebCore tools/designer/src/plugins/qwebview
-
-	fix_library_files
+	build_target_directories
 }
 
 pkg_postinst()
