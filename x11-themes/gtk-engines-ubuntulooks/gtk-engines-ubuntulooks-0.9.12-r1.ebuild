@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-ubuntulooks/gtk-engines-ubuntulooks-0.9.12-r1.ebuild,v 1.2 2007/11/01 21:05:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-ubuntulooks/gtk-engines-ubuntulooks-0.9.12-r1.ebuild,v 1.3 2007/12/22 18:16:47 nixnut Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://archive.ubuntu.com/ubuntu/pool/main/u/${MY_PN}/${MY_PN}_${PV}.or
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.8"
