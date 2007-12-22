@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.407 2007/12/09 22:58:24 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.408 2007/12/22 21:21:56 carlo Exp $
+
+*kdebase-3.5.8-r4 (22 Dec 2007)
+
+  22 Dec 2007; Carsten Lohrke <carlo@gentoo.org> +kdebase-3.5.8-r4.ebuild:
+  Make joystock control applet installation optional. Don't install
+  soundserver control applet, when building without aRts.
 
 *kdebase-3.5.8-r3 (09 Dec 2007)
 *kdebase-3.5.7-r6 (09 Dec 2007)
