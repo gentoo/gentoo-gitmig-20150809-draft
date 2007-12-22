@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.3 2007/12/21 21:44:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.4 2007/12/22 16:28:59 caleb Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -52,6 +52,11 @@ qt4-build_src_unpack() {
 	fi
 }
 
+qt4-build_src_install() {
+	install_directories "${QT4_TARGET_DIRECTORIES}"
+	fix_library_files
+}
+
 standard_configure_options() {
 	local myconf=""
 
@@ -73,6 +78,10 @@ standard_configure_options() {
 	myconf="${myconf} -silent -fast -reduce-relocations -nomake examples -nomake demos"
 
 	echo "${myconf}"
+}
+
+build_target_directories() {
+	build_directories "${QT4_TARGET_DIRECTORIES}"
 }
 
 build_directories() {
@@ -176,4 +185,4 @@ qt_mkspecs_dir() {
         echo "${spec}"
 }
 
-EXPORT_FUNCTIONS pkg_setup src-unpack
+EXPORT_FUNCTIONS pkg_setup src_unpack src_install
