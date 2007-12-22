@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/policykit/policykit-0.6.ebuild,v 1.1 2007/11/23 06:06:22 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/policykit/policykit-0.6.ebuild,v 1.2 2007/12/22 16:32:31 jer Exp $
 
 inherit eutils autotools multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="doc selinux"
 
 RDEPEND=">=dev-libs/glib-2.7
