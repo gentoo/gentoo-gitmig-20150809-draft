@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.7 2007/12/11 14:16:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.8 2007/12/22 18:08:04 nixnut Exp $
+
+  22 Dec 2007; nixnut <nixnut@gentoo.org> awesome-2.0.ebuild:
+  Added ~ppc wrt bug 202051
 
 *awesome-2.0 (11 Dec 2007)
 
