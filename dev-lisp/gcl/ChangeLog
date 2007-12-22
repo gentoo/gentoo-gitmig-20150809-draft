@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.49 2007/09/04 11:21:56 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.50 2007/12/22 13:12:38 nixnut Exp $
+
+  22 Dec 2007; nixnut <nixnut@gentoo.org> gcl-2.6.7-r3.ebuild:
+  Stable on ppc wrt bug 201216
 
   04 Sep 2007; Marijn Schouten <hkBst@gentoo.org> gcl-2.6.7-r3.ebuild:
   put back sandbox workaround (commented this time), bug 190950

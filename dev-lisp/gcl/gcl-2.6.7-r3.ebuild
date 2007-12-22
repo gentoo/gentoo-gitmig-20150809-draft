@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r3.ebuild,v 1.2 2007/09/04 11:21:56 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r3.ebuild,v 1.3 2007/12/22 13:12:38 nixnut Exp $
 
 #removing flag-o-matic results in make install failing due to a segfault
 inherit elisp-common flag-o-matic
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/g/gcl/gcl_${PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 IUSE="emacs readline debug X tk doc ansi"
 
 RDEPEND="emacs? ( virtual/emacs )
