@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/swfdec-mozilla-0.5.3.ebuild,v 1.1 2007/10/20 10:51:58 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/swfdec-mozilla-0.5.5.ebuild,v 1.1 2007/12/22 10:24:35 pclouds Exp $
 
 inherit multilib versionator
 
@@ -13,10 +13,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="xulrunner"
 
-DEPEND="=media-libs/swfdec-0.5.3*
+DEPEND="=media-libs/swfdec-${PV}*
 	xulrunner? ( net-libs/xulrunner )
 	!xulrunner? ( || ( www-client/mozilla-firefox www-client/seamonkey ) )"
 RDEPEND=""
+
+src_compile() {
+	econf --with-plugin-dir=/usr/$(get_libdir)/nsbrowser/plugins
+	emake || die "emake failed"
+}
 
 src_install() {
 		  exeinto /usr/$(get_libdir)/nsbrowser/plugins
