@@ -1,0 +1,14 @@
+# ChangeLog for net-ftp/filezilla
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.1 2007/12/22 04:27:55 jsin Exp $
+
+  22 Dec 2007; Jason Smathers <jsin@gentoo.org> +metadata.xml,
+  +filezilla-3.0.4.ebuild:
+  added metadata.xml
+
+*filezilla-3.0.4 (22 Dec 2007)
+
+  22 Dec 2007; Jason Smathers <jsin@gentoo.org> +filezilla-3.0.4.ebuild:
+  New ebuild, thanks to the users whom contributed:  Matthew Schultz, Kalidarn,
+  Paul Bredbury, zhoumi, Alois Hammer, and Pham Ngoc Hai.  Bug #89290
+
