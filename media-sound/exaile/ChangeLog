@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.35 2007/12/15 09:04:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.36 2007/12/22 14:30:31 dertobi123 Exp $
+
+  22 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  exaile-0.2.11.1.ebuild:
+  ppc stable, bug #202174
 
   15 Dec 2007; Samuli Suominen <drac@gentoo.org> exaile-0.2.11.1.ebuild:
   gst-plugins-jpeg is required for some podcasts.
