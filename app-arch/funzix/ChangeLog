@@ -1,0 +1,9 @@
+# ChangeLog for app-arch/funzix
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/funzix/ChangeLog,v 1.1 2007/12/22 20:37:31 vapier Exp $
+
+*funzix-1.0 (22 Dec 2007)
+
+  22 Dec 2007; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +funzix-1.0.ebuild:
+  Initial import.  Ebuild by me.
