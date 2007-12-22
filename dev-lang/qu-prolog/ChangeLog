@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.38 2007/11/22 05:33:10 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.39 2007/12/22 06:28:28 keri Exp $
+
+*qu-prolog-8.3 (22 Dec 2007)
+
+  22 Dec 2007; keri <keri@gentoo.org> +files/qu-prolog-8.3-configure.patch,
+  +files/qu-prolog-8.3-debug.patch, +files/qu-prolog-8.3-gcc4.patch,
+  +files/qu-prolog-8.3-portage.patch, +qu-prolog-8.3.ebuild:
+  Version bump.
 
   22 Nov 2007; keri <keri@gentoo.org> -files/qu-prolog-7.4-configure.patch,
   -files/qu-prolog-7.4-debug.patch, -files/qu-prolog-7.4-gcc4.patch,

@@ -1,0 +1,19 @@
+--- qp8.3.orig/configure	2007-12-13 15:46:22.000000000 +1300
++++ qp8.3/configure	2007-12-22 19:10:16.000000000 +1300
+@@ -3786,6 +3786,8 @@
+ 
+ fi
+ 
++if false; then
++
+ # Extract the first word of "perl", so it can be a program name with args.
+ set dummy perl; ac_word=$2
+ { echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -3836,6 +3838,7 @@
+    { (exit 1); exit 1; }; }
+ fi
+ 
++fi
+ 
+ GCCINCLUDES=
+ 
