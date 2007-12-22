@@ -1,6 +1,12 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.932 2007/12/22 10:57:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.933 2007/12/22 11:29:15 maekke Exp $
+
+  22 Dec 2007; Markus Meier <maekke@gentoo.org> use.desc, use.local.desc:
+  move the atm, branding, cgi, enscript, gimp, gnuplot, hddtemp, hddtemp,
+  jingle, latex, lzo, networkmanager, oci8-instant-client, raw, rss, suid,
+  taglib, timidity, v4l2, vnc, wavpack, xcb, xemacs and zeroconf useflags from
+  local to global
 
   22 Dec 2007; Markus Meier <maekke@gentoo.org> use.desc, use.local.desc:
   move the subversion useflag from local to global
