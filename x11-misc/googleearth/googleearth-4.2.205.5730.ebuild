@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.2.205.5730.ebuild,v 1.1 2007/12/22 16:15:07 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.2.205.5730.ebuild,v 1.2 2007/12/22 16:17:09 genstef Exp $
 
 inherit eutils fdo-mime
 
@@ -10,7 +10,7 @@ SRC_URI="http://dl.google.com/earth/client/current/GoogleEarthLinux.bin"
 
 LICENSE="googleearth MIT X11 SGI-B-1.1 openssl as-is ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 RESTRICT="mirror strip"
 IUSE=""
 

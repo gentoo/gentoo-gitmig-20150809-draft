@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.34 2007/11/29 19:09:37 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.35 2007/12/22 16:17:09 genstef Exp $
+
+  22 Dec 2007; Stefan Schweizer <genstef@gentoo.org>
+  -googleearth-4.2.198.2451.ebuild, +googleearth-4.2.205.5730.ebuild:
+  version bump thanks Toralf Förster <toralf.foerster@gmx.de> in bug 203027
 
   29 Nov 2007; <welp@gentoo.org> files/digest-googleearth-4.2.198.2451,
   Manifest:
