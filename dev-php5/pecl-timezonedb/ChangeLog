@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-timezonedb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-timezonedb/ChangeLog,v 1.6 2007/12/06 01:21:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-timezonedb/ChangeLog,v 1.7 2007/12/22 18:52:42 nixnut Exp $
+
+  22 Dec 2007; nixnut <nixnut@gentoo.org> pecl-timezonedb-2007.10.ebuild:
+  Added ~ppc wrt bug 197785
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   -pecl-timezonedb-2007.8.ebuild, -pecl-timezonedb-2007.9.ebuild,
