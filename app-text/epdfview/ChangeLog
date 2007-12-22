@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.22 2007/12/21 14:04:59 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.23 2007/12/22 20:20:32 maekke Exp $
+
+  22 Dec 2007; Markus Meier <maekke@gentoo.org> epdfview-0.1.6-r1.ebuild:
+  x86 stable, bug #202871
 
   21 Dec 2007; Ferris McCormick <fmccor@gentoo.org>
   epdfview-0.1.6-r1.ebuild:
