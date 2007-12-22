@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/koverartist-0.5.ebuild,v 1.7 2007/12/21 14:01:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/koverartist-0.5.ebuild,v 1.8 2007/12/22 11:32:30 armin76 Exp $
 
 inherit kde eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kde-apps.org/content/show.php?content=38195"
 SRC_URI="http://members.inode.at/499177/software/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="cddb"
 
 DEPEND="!app-cdr/kover
