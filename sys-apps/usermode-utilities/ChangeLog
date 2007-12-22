@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/usermode-utilities
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.22 2007/06/11 16:10:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.23 2007/12/22 15:52:46 dang Exp $
+
+*usermode-utilities-20070815 (22 Dec 2007)
+
+  22 Dec 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/usermode-utilities-20070815-nostrip.patch,
+  +usermode-utilities-20070815.ebuild:
+  Bump to 20070815
 
 *usermode-utilities-20060323 (11 Jun 2007)
 
