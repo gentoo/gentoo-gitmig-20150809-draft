@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.375 2007/12/22 11:29:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.376 2007/12/22 11:36:26 armin76 Exp $
 
 # Keep them sorted
 
@@ -361,7 +361,7 @@ vcd - Video CD support
 vhosts - Adds support for installing web-based applications into a virtual-hosting environment
 videos - Install optional video files (used in some games)
 vim-syntax - Pulls in related vim syntax scripts.
-vnc - Enable vnc (remote desktop viewer) support
+vnc - Enable VNC (remote desktop viewer) support
 voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE.
 vorbis - Adds support for the OggVorbis audio codec
 wavpack - Add support for wavpack audio compression tools
