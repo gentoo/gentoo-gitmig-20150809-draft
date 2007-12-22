@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_rc1.ebuild,v 1.3 2007/12/21 20:41:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_rc1.ebuild,v 1.4 2007/12/22 17:34:16 caleb Exp $
 
 inherit eutils qt4-build
 
@@ -21,9 +21,13 @@ IUSE_INPUT_DEVICES="input_devices_wacom"
 
 IUSE="accessibility cups dbus debug mng nas nis tiff xinerama ${IUSE_INPUT_DEVICES}"
 
+# The dep on qt-sql may be able to come out when we track down which
+# part of the build is linking to it.
+
 RDEPEND="~x11-libs/qt-core-${PV}
 	~x11-libs/qt-script-${PV}
 	dbus? ( ~x11-libs/qt-dbus-${PV} )
+	~x11-libs/qt-sql-${PV}
 	x11-libs/libXrandr
 	x11-libs/libXcursor
 	x11-libs/libXfont
@@ -44,6 +48,8 @@ DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )
 	x11-proto/xextproto
 	x11-proto/inputproto"
+
+QT4_TARGET_DIRECTORIES="src/gui tools/assistant tools/designer tools/linguist"
 
 src_unpack() {
 	qt4-build_src_unpack
@@ -98,15 +104,13 @@ src_compile() {
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
 
-	build_directories src/gui tools/assistant tools/designer tools/linguist
-	use dbus && build_directories tools/qdbus/qdbusviewer
+	use dbus && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} tools/qdbus/qdbusviewer"
+	build_target_directories
 }
 
 src_install() {
-	install_directories src/gui tools/assistant tools/designer tools/linguist
-	use dbus && install_directories tools/qdbus/qdbusviewer
-
-	fix_library_files
+	use dbus && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} tools/qdbus/qdbusviewer"
+	qt4-build_src_install
 
 	# Install .desktop files, from bug #174033
 	insinto /usr/share/applications
