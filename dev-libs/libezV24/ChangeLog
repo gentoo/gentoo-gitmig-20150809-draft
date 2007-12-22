@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libezV24
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libezV24/ChangeLog,v 1.7 2007/12/21 15:05:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libezV24/ChangeLog,v 1.8 2007/12/22 20:28:20 maekke Exp $
+
+  22 Dec 2007; Markus Meier <maekke@gentoo.org> libezV24-0.1.1.ebuild:
+  x86 stable, bug #202668
 
   21 Dec 2007; nixnut <nixnut@gentoo.org> libezV24-0.1.1.ebuild:
   Stable on ppc wrt bug 202668
