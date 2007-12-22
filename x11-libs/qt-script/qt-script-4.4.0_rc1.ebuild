@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/qt-script-4.4.0_rc1.ebuild,v 1.3 2007/12/22 16:31:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/qt-script-4.4.0_rc1.ebuild,v 1.4 2007/12/22 23:06:15 mr_bones_ Exp $
 
 inherit qt4-build
 
@@ -44,4 +44,3 @@ src_compile() {
 
 	build_target_directories
 }
-
