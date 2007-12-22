@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.81 2007/03/10 21:16:25 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.82 2007/12/22 15:15:42 eva Exp $
+
+*gnome-spell-1.0.8 (22 Dec 2007)
+
+  22 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gnome-spell-1.0.8-enchant.patch, gnome-spell-1.0.7-r1.ebuild,
+  +gnome-spell-1.0.8.ebuild:
+  bump to 1.0.8, remove static USE flag
 
   10 Mar 2007; Roy Marples <uberlord@gentoo.org>
   gnome-spell-1.0.7-r1.ebuild:

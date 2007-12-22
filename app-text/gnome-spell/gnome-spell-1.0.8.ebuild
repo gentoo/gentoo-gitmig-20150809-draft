@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.7-r1.ebuild,v 1.15 2007/12/22 15:15:42 eva Exp $
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.8.ebuild,v 1.1 2007/12/22 15:15:42 eva Exp $
 
 inherit eutils gnome2 autotools
 
@@ -12,8 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="static"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND=">=gnome-base/libgnome-1.112.1
 	>=gnome-base/libbonoboui-1.112.1
@@ -30,16 +26,8 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-pkg_setup() {
-
-	G2CONF="${G2CONF} $(use_enable static)"
-
-}
-
 src_unpack() {
-
-	unpack ${A}
-	cd "${S}"
+	gnome2_src_unpack
 
 	# note that the combo and enchant patch are intertwined
 	# the enchant patch changes libgnomeui dep to libgnome
@@ -47,10 +35,11 @@ src_unpack() {
 	# Marinus Schraal <foser@gentoo.org> - 02 Apr 2006
 
 	# Use enchant backend instead of aspell
-	epatch "${FILESDIR}/${P}-enchant-r2.patch"
+	epatch "${FILESDIR}/${P}-enchant.patch"
+
 	# replace gtkentry with gtkcombo widget
-	epatch "${FILESDIR}/${P}-combo.patch"
-	epatch "${FILESDIR}/${P}-remove_gnome_h.patch"
+	epatch "${FILESDIR}/${PN}-1.0.7-combo.patch"
+	epatch "${FILESDIR}/${PN}-1.0.7-remove_gnome_h.patch"
 
 	eautoreconf
 }
