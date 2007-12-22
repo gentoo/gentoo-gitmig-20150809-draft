@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.2.1.ebuild,v 1.1 2007/12/08 10:58:28 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.2.1.ebuild,v 1.2 2007/12/22 20:24:37 carlo Exp $
+
+EAPI="1"
 
 inherit kde
 
@@ -25,6 +27,16 @@ DEPEND="media-video/dvdauthor
 	media-video/mplayer"
 
 need-kde 3.5
+
+pkg_setup() {
+	kde_pkg_setup
+
+	if ! built_with_use x11-libs/qt:3 opengl ; then
+		eerror "K9Copy needs Qt 3 built with OpenGL support. Please set the"
+		errror "\"opengl\" use flag and run \"emerge --oneshot x11-libs/qt:3\""
+		die "Please follow the above error message."
+	fi
+}
 
 src_unpack() {
 	kde_src_unpack
