@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.931 2007/12/22 07:08:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.932 2007/12/22 10:57:02 maekke Exp $
+
+  22 Dec 2007; Markus Meier <maekke@gentoo.org> use.desc, use.local.desc:
+  move the subversion useflag from local to global
 
   22 Dec 2007; Daniel Black <dragonheart@gentoo.org> use.local.desc:
   removed savedconfig as its in global - bug #202967
