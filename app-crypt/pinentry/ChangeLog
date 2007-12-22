@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.74 2007/12/21 07:27:15 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.75 2007/12/22 05:17:11 alonbl Exp $
+
+*pinentry-0.7.4-r1 (22 Dec 2007)
+
+  22 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  files/pinentry-0.7.4-grab.patch, -pinentry-0.7.4.ebuild,
+  +pinentry-0.7.4-r1.ebuild:
+  Fix grab (again), this time, remove the map-event completely, bug#201951
 
   21 Dec 2007; Alon Bar-Lev <alonbl@gentoo.org> pinentry-0.7.4.ebuild:
   Readd flag-o-matic
