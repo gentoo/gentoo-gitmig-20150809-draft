@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/qt-svg-4.4.0_rc1.ebuild,v 1.2 2007/12/21 20:04:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/qt-svg-4.4.0_rc1.ebuild,v 1.3 2007/12/22 18:02:26 caleb Exp $
 
 inherit qt4-build
 
@@ -21,6 +21,8 @@ RDEPEND="~x11-libs/qt-gui-${PV}"
 
 DEPEND="${RDEPEND}"
 
+QT4_TARGET_DIRECTORIES="src/svg src/plugins/imageformats/svg src/plugins/iconengines/svgiconengine"
+
 src_unpack() {
 	qt4-build_src_unpack
 
@@ -40,11 +42,7 @@ src_compile() {
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
 
-	build_directories src/svg src/plugins/imageformats/svg src/plugins/iconengines/svgiconengine
+	build_target_directories
 }
 
-src_install() {
-	install_directories src/svg src/plugins/imageformats/svg src/plugins/iconengines/svgiconengine
 
-	fix_library_files
-}
