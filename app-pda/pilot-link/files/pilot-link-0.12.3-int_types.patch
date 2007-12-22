@@ -1,12 +1,5 @@
 --- pilot-link-0.12.3/include/pi-md5.h	2006-10-17 15:24:07.000000000 +0200
 +++ pilot-link/include/pi-md5.h	2007-12-18 04:03:09.000000000 +0100
-@@ -1,5 +1,5 @@
- /*
-- * $Id: pilot-link-0.12.3-int_types.patch,v 1.1 2007/12/20 23:08:58 philantrop Exp $
-+ * $Id: pilot-link-0.12.3-int_types.patch,v 1.1 2007/12/20 23:08:58 philantrop Exp $
-  *
-  * pi-md5.h: Header file for Colin Plumb's MD5 implementation.
-  *           Modified by Ian Jackson so as not to use Colin Plumb's
 @@ -13,8 +13,20 @@
  #ifndef MD5_H
  #define MD5_H

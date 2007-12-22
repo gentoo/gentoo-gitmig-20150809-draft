@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.32 2007/12/20 23:08:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.33 2007/12/22 14:49:18 philantrop Exp $
+
+  22 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  files/pilot-link-0.12.3-int_types.patch:
+  Fixed the patch which was auto-broken by our beloved CVS. Fixes bug 202985.
 
   20 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/pilot-link-0.12.3-int_types.patch, pilot-link-0.12.3.ebuild:
