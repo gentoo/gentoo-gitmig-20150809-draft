@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.197 2007/12/16 20:39:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.198 2007/12/22 07:37:39 vapier Exp $
+
+  22 Dec 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/wine-0.9.51-valgrind.patch, wine-0.9.51.ebuild:
+  Fix building with newer valgrinds #202542.
 
 *wine-0.9.51 (16 Dec 2007)
 
