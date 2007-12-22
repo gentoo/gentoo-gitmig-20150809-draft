@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.22 2007/12/10 23:11:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.23 2007/12/22 19:10:35 eva Exp $
+
+  22 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/goffice-0.6.1-die-gtk-doc.patch, +goffice-0.6.1.ebuild:
+  bump to 0.6.1, disable gtk-doc unconditionnaly until upstream fixes it gtk-doc
+  requirement
 
 *goffice-0.4.3 (09 Dec 2007)
 
