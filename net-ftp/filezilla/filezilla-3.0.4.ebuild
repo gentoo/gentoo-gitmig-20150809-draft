@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.0.4.ebuild,v 1.1 2007/12/22 04:27:55 jsin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.0.4.ebuild,v 1.2 2007/12/22 14:50:21 jsin Exp $
 
 WX_GTK_VER="2.8"
 
@@ -18,12 +18,12 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="unicode"
 
-RDEPEND="net-dns/libidn"
+RDEPEND="net-dns/libidn
+	>=x11-libs/wxGTK-2.8.6"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.4
 	>=sys-devel/gettext-0.11
-	>=net-libs/gnutls-2.0.4
-	>=x11-libs/wxGTK-2.8.6"
+	>=net-libs/gnutls-2.0.4"
 
 S="${WORKDIR}"/${PN}-${MY_PV}
 
@@ -47,7 +47,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	doicon src/interface/resources/48x48/${PN}.png || die "doicon failed"
-	make_desktop_entry ${PN} "FileZilla" ${PN}.png
 
 	dodoc AUTHORS ChangeLog NEWS
 }

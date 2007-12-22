@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.1 2007/12/22 04:27:55 jsin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.2 2007/12/22 14:50:21 jsin Exp $
+
+  22 Dec 2007; Jason Smathers <jsin@gentoo.org> filezilla-3.0.4.ebuild:
+  updated rdepend and removed desktop entry
 
   22 Dec 2007; Jason Smathers <jsin@gentoo.org> +metadata.xml,
   +filezilla-3.0.4.ebuild:
