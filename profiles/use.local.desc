@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3228 2007/12/22 00:01:02 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3229 2007/12/22 07:08:18 dragonheart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2225,7 +2225,6 @@ x11-libs/qt-core:glib - Enable glib eventloop support
 x11-libs/wxGTK:pch - Enable precompiled header support for faster compilation at the expense of disk space and memory
 x11-misc/adesklets:ctrlmenu - force CTRL to be pressed to fire context menu
 x11-misc/adesklets:fontconfig - Support for managing custom fonts via fontconfig
-x11-misc/dmenu:savedconfig - Add support to user defined configs
 x11-misc/fbdesk:imlib2 - Add support for imlib2 (pixmap themes)
 x11-misc/openclipart:gzip - Compresses clip art using gzip
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
@@ -2261,7 +2260,6 @@ x11-themes/redhat-artwork:kdm - Install Bluecurve KDM theme
 x11-themes/redhat-artwork:nautilus - Install Bluecurve Nautilus icons
 x11-themes/skinenigmang-logos:dxr3 - install logos for lower osd color deep on dxr3 cards
 x11-wm/beryl:emerald - Add support for one of the three decorators for Beryl
-x11-wm/dwm:savedconfig - Add support to user defined configs
 x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
 x11-wm/fluxbox:disableslit - Disable the slit. Works around bug 122380.
 x11-wm/fluxbox:disabletoolbar - Disable the toolbar.

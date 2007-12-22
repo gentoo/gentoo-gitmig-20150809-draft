@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.930 2007/12/22 01:39:18 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.931 2007/12/22 07:08:18 dragonheart Exp $
+
+  22 Dec 2007; Daniel Black <dragonheart@gentoo.org> use.local.desc:
+  removed savedconfig as its in global - bug #202967
 
   22 Dec 2007; Jurek Bartuszek <jurek@gentoo.org> package.mask:
   Removed codeblocks entry
