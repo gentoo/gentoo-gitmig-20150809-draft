@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.10 2007/11/13 23:25:33 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.11 2007/12/22 18:55:33 nixnut Exp $
+
+  22 Dec 2007; nixnut <nixnut@gentoo.org> pygments-0.9.ebuild:
+  Added ~ppc wrt bug 198989
 
   13 Nov 2007; Lukasz Strzygowski <lucass@gentoo.org>
   -pygments-0.8.1.ebuild, pygments-0.9.ebuild:
