@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-DesktopEntry
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/ChangeLog,v 1.4 2006/10/09 14:29:17 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/ChangeLog,v 1.5 2007/12/22 19:25:16 nixnut Exp $
+
+  22 Dec 2007; nixnut <nixnut@gentoo.org> File-DesktopEntry-0.02.ebuild:
+  Added ~ppc wrt bug 202638
 
   09 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   File-DesktopEntry-0.02.ebuild:
