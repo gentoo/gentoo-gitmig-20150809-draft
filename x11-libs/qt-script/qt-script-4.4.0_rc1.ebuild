@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/qt-script-4.4.0_rc1.ebuild,v 1.2 2007/12/21 20:06:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/qt-script-4.4.0_rc1.ebuild,v 1.3 2007/12/22 16:31:49 caleb Exp $
 
 inherit qt4-build
 
@@ -21,6 +21,8 @@ RDEPEND="~x11-libs/qt-core-${PV}"
 
 DEPEND="${RDEPEND}"
 
+QT4_TARGET_DIRECTORIES="src/script"
+
 src_unpack() {
 	qt4-build_src_unpack
 
@@ -40,11 +42,6 @@ src_compile() {
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
 
-	build_directories src/script
+	build_target_directories
 }
 
-src_install() {
-	install_directories src/script
-
-	fix_library_files
-}
