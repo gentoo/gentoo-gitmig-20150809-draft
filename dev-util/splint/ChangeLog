@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/splint
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.14 2007/10/25 16:02:18 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.15 2007/12/23 23:38:26 fmccor Exp $
+
+  23 Dec 2007; Ferris McCormick <fmccor@gentoo.org> splint-3.1.2.ebuild:
+  ~sparc added, thanks to Tiago Cunha, all tests good.
 
 *splint-3.1.2 (25 Oct 2007)
 
