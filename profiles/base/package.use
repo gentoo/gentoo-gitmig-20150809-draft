@@ -30,3 +30,7 @@ sys-fs/lvm2 lvm1
 # 2007/11/27 - Alin Năstac <mrness@gentoo.org>
 # mgetty have fax flag because it collides with hylafax otherwise (see bug 195467)
 net-dialup/mgetty fax
+
+# 2007/12/23 - Richard Brown <rbrown@gentoo.org>
+# It's better to install ruby with these than without
+dev-lang/ruby berkdb gdbm openssl
