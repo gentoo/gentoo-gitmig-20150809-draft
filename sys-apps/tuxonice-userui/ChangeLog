@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tuxonice-userui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.3 2007/11/03 09:50:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.4 2007/12/23 13:57:47 nelchael Exp $
+
+  23 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
+  Change maintainer.
 
   30 Oct 2007; Alon Bar-Lev <alonbl@gentoo.org>
   files/digest-tuxonice-userui-0.7.2, Manifest:
