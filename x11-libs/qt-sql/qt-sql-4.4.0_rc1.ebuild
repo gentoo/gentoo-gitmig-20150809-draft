@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.4.0_rc1.ebuild,v 1.3 2007/12/22 23:06:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.4.0_rc1.ebuild,v 1.4 2007/12/23 20:15:32 caleb Exp $
 
 inherit qt4-build
 
@@ -46,6 +46,9 @@ src_compile() {
 	use firebird    && myconf="${myconf} -plugin-sql-ibase -I/opt/firebird/include" || myconf="${myconf} -no-sql-ibase"
 	use sqlite      && myconf="${myconf} -plugin-sql-sqlite -system-sqlite" || myconf="${myconf} -no-sql-sqlite"
 	use odbc        && myconf="${myconf} -plugin-sql-odbc" || myconf="${myconf} -no-sql-odbc"
+
+	# Don't support sqlite2 anymore
+	myconf="${myconf} -no-sql-sqlite2"
 
 	if built_with_use ~x11-libs/qt-core-${PV} qt3support; then
 		myconf="${myconf} -qt3support"
