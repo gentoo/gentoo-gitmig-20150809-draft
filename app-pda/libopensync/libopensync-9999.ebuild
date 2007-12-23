@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-9999.ebuild,v 1.2 2007/12/21 23:02:25 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-9999.ebuild,v 1.3 2007/12/23 02:19:16 peper Exp $
 
 inherit cmake-utils eutils subversion
 
@@ -26,6 +26,7 @@ RDEPEND=">=dev-db/sqlite-3
 	python? ( >=dev-lang/python-2.2 >=dev-lang/swig-1.3.17 )"
 
 DEPEND="${RDEPEND}
+	>=dev-util/cmake-2.4.7
 	>=dev-util/pkgconfig-0.9.0
 	doc? ( app-doc/doxygen )"
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libopensync
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.22 2007/12/21 23:02:25 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.23 2007/12/23 02:19:16 peper Exp $
+
+  23 Dec 2007; Piotr Jaroszyński <peper@gentoo.org>
+  libopensync-0.35.ebuild, libopensync-9999.ebuild:
+  Fix cmake dep.
 
 *libopensync-0.35 (21 Dec 2007)
 
