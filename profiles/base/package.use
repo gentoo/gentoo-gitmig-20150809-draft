@@ -1,5 +1,6 @@
 # This file requires >=portage-2.1.2 (see bug #61732)
 
+# 2007/05/23 - Ulrich Mueller <ulm@gentoo.org>
 # Strongly recommended, otherwise all logos, icons, etc. appear in b/w.
 app-editors/emacs xpm
 app-editors/emacs-cvs xpm
