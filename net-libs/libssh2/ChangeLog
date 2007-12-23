@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.4 2007/09/13 23:00:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.5 2007/12/23 12:15:35 cedk Exp $
+
+*libssh2-0.18 (23 Dec 2007)
+
+  23 Dec 2007; Cédric Krier <cedk@gentoo.org> +libssh2-0.18.ebuild:
+  Version bump
 
   13 Sep 2007; Daniel Black <dragonheart@gentoo.org> libssh2-0.17.ebuild:
   added ~amd64 keyword - works with curl-7.17.0-r1
