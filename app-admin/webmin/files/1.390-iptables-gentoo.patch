@@ -1,0 +1,11 @@
+--- firewall/gentoo-linux-lib.pl.orig	2007-12-23 13:27:20.000000000 +0100
++++ firewall/gentoo-linux-lib.pl	2007-12-23 13:27:28.000000000 +0100
+@@ -19,7 +19,7 @@
+ # Applies the current iptables configuration from the save file
+ sub apply_iptables
+ {
+-local $out = &backquote_logged("cd / ; /etc/init.d/iptables restart 2>&1");
++local $out = &backquote_logged("cd / ; /etc/init.d/iptables reload 2>&1");
+ return $? ? "<pre>$out</pre>" : undef;
+ }
+ 

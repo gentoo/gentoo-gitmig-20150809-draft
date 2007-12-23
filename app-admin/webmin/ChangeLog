@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.157 2007/10/30 10:36:06 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.158 2007/12/23 17:14:32 armin76 Exp $
+
+*webmin-1.390 (23 Dec 2007)
+
+  23 Dec 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/1.390-iptables-gentoo.patch, +webmin-1.390.ebuild:
+  Version bump wrt #199131 and fix bug #172048
 
 *webmin-1.370-r1 (30 Oct 2007)
 
