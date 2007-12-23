@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.24 2007/11/03 21:54:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.25 2007/12/23 20:15:15 josejx Exp $
+
+  23 Dec 2007; <jjezak@gentoo.org> package.use.mask:
+  Removed libiptcdata mask from package use mask for bug #203059.
 
   03 Nov 2007; Markus Rothe <corsair@gentoo.org>
   dev/ppc64/2007.1/64bit-userland/use.mask,
