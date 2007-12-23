@@ -1,6 +1,28 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.135 2007/12/02 04:01:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.136 2007/12/23 16:03:29 dang Exp $
+
+*liferea-1.4.10 (23 Dec 2007)
+
+  23 Dec 2007; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.4.6.ebuild,
+  -liferea-1.4.8.ebuild, +liferea-1.4.10.ebuild:
+  Bump to 1.4.10
+  	* Fixes SF #1842579: feed:// URI handling broken
+  	  for URIs without protocol part. Such URIs are
+  	  used by Firefox 3.0 (reported by Phil Ringnalda)
+  	* Fixes a memory leak in the item list loading
+  	  duplicate elimination handling.
+  	* Fixes SF #1832389: cache limit causes flipping
+  	  between old items (reported by Mike Auty)
+  	* Fixes SF #1850139: assertion when searching for
+  	  feed item (reported by Mlind)
+  	* Fixes broken indication of updated items.
+  	  (patch by Chris Siebenmann)
+  	* Fixes removal of comments along with parent items.
+  	  This was broken with earlier releases and causes
+  	  uncontrolled DB file growth.
+  	* On migration from 1.4.9 or older versions it drops
+  	  all comment items to clean up the database.
 
 *liferea-1.4.9 (02 Dec 2007)
 
