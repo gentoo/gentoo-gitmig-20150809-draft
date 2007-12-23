@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.3.2.ebuild,v 1.1 2007/12/16 19:08:22 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.3.2.ebuild,v 1.2 2007/12/23 12:22:05 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -159,6 +159,14 @@ pkg_postinst() {
 		elog "Since you are upgrading from a pre-1.0 version, please make sure that you"
 		elog "rebuild your initrds. You can use the splash_geninitramfs script to do that."
 		elog ""
+	fi
+
+	if has_version '<media-gfx/splashutils-1.5.3' && ! use fbcondecor ; then
+		elog "Starting with splashutils-1.5.3, support for the fbcondecor kernel patch"
+		elog "is optional and dependent on the the 'fbcondecor' USE flag.  If you wish"
+		elog "to use fbcondecor, run:"
+		elog "  echo \"media-gfx/splashutils fbcondecor\" >> /etc/portage/package.use"
+		elog "and re-emerge splashutils."
 	fi
 
 	if ! test -f /proc/cmdline ||

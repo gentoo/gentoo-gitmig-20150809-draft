@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.121 2007/12/21 15:09:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.122 2007/12/23 12:22:05 spock Exp $
+
+  23 Dec 2007; Michał Januszewski <spock@gentoo.org>
+  splashutils-1.5.3.2.ebuild:
+  Add info about the fbcondecor USE flag for users upgrading from pre-1.5.3
+  versions (bug #202686).
 
   21 Dec 2007; nixnut <nixnut@gentoo.org> splashutils-1.5.2.1.ebuild:
   Stable on ppc wrt bug 195443
