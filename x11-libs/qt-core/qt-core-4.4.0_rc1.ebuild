@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.5 2007/12/23 20:48:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.6 2007/12/23 20:55:17 caleb Exp $
 
 EAPI=1
 
@@ -40,13 +40,13 @@ src_compile() {
 	local myconf=$(standard_configure_options)
 
 	use ssl		&& myconf="${myconf} -openssl" || myconf="${myconf} -no-openssl"
-	use glib		&& myconf="${myconf} -glib" || myconf="${myconf} -no-glib"
+	use glib	&& myconf="${myconf} -glib" || myconf="${myconf} -no-glib"
 	use qt3support	&& myconf="${myconf} -qt3support" || myconf="${myconf} -no-qt3support"
 
 	myconf="${myconf} -no-xkb -no-tablet -no-fontconfig -no-xrender -no-xrandr -no-xfixes -no-xcursor \
 	-no-xinerama -no-xshape -no-sm -no-opengl -no-nas-sound -no-qdbus -iconv -no-cups -no-nis \
 	-no-gif -no-libpng -no-libmng -no-libjpeg -no-openssl -system-zlib -no-webkit -no-phonon \
-	-no-xmlpatterns -no-freetype -no-libtiff  -no-accessibility -no-fontconfig -no-glib -no-opengl ${myconf}"
+	-no-xmlpatterns -no-freetype -no-libtiff  -no-accessibility -no-fontconfig -no-glib -no-opengl"
 
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
