@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.14 2007/12/16 10:02:52 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.15 2007/12/23 10:31:16 rbrown Exp $
 
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here
@@ -20,3 +20,7 @@ x11-libs/gtk+ vim-syntax
 # Needs valgrind
 media-libs/gstreamer debug
 media-libs/gst-plugins-base debug
+
+# Richard Brown <rbrown@gentoo.org> (23 Dec 2007)
+# app-xemacs/ruby-modes is not keyworded on this arch
+dev-lang/ruby xemacs

@@ -15,3 +15,7 @@ x11-libs/gtk+ vim-syntax
 media-libs/gstreamer debug
 media-libs/gst-plugins-base debug
 
+# Richard Brown <rbrown@gentoo.org> (23 Dec 2007)
+# app-xemacs/ruby-modes is not keyworded on this arch
+dev-lang/ruby xemacs
+
