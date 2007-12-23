@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/linuxfromscratch-html
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/ChangeLog,v 1.16 2007/08/11 17:52:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/ChangeLog,v 1.17 2007/12/23 16:50:32 dirtyepic Exp $
+
+*linuxfromscratch-html-6.3 (23 Dec 2007)
+
+  23 Dec 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +linuxfromscratch-html-6.3.ebuild:
+  Version bump.
 
   11 Aug 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
   Maintainer ^^^
