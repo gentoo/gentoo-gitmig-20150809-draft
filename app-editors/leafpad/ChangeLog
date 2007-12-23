@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/leafpad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/ChangeLog,v 1.11 2007/12/23 21:41:59 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/ChangeLog,v 1.12 2007/12/23 21:44:28 compnerd Exp $
+
+  23 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -leafpad-0.7.9.ebuild, -leafpad-0.8.1.ebuild, -leafpad-0.8.3.ebuild:
+  Prune unused versions
 
   23 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org> metadata.xml:
   Add myself as a maintainer
