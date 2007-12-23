@@ -5,4 +5,8 @@
 <maintainer>
   <email>taviso@gentoo.org</email>
 </maintainer>
+<maintainer>
+	<email>compnerd@gentoo.org</email>
+	<name>Saleem Abdulrasool</name>
+</maintainer>
 </pkgmetadata>
