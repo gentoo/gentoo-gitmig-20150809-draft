@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.934 2007/12/22 16:45:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.935 2007/12/23 19:42:50 zzam Exp $
+
+  23 Dec 2007; Matthias Schwarzott <zzam@gentoo.org> use.local.desc:
+  Added local vdr use-flags lircsettings and volctrl.
 
   22 Dec 2007; Markus Meier <maekke@gentoo.org> use.desc:
   fix a typo, spotted by Arfrever Frehtes Taifersar Arahesis
