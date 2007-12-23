@@ -1,0 +1,17 @@
+--- src/mumble/Database.cpp.orig	2006-11-25 12:13:13.745701315 +0100
++++ src/mumble/Database.cpp	2006-11-25 12:14:31.167122733 +0100
+@@ -37,10 +37,10 @@
+ 	QStringList datapaths;
+ 	int i;
+ 
+-	datapaths << qs.value(QLatin1String("InstPath")).toString();
+-	datapaths << QDir::homePath();
+-	datapaths << qApp->applicationDirPath();
+-	datapaths << QDir::currentPath();
++	QDir dir;
++
++	datapaths << QDir::homePath() + "/.qt";
++	dir.mkpath (datapaths[0]);
+ 	bool found = false;
+ 
+ 	for(i = 0; (i < datapaths.size()) && ! found; i++) {
