@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.1.1.ebuild,v 1.1 2007/12/23 20:19:11 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.1.1.ebuild,v 1.2 2007/12/23 23:36:36 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs qt4
 
@@ -76,7 +76,7 @@ src_install() {
 
 	dobin ${dir}/mumble	|| die "installing failed"
 	dolib.so ${dir}/lib*.so* || die "installing failed"
-	
+
 	dobin scripts/mumble-overlay || die "installing failed"
 	newicon icons/mumble.64x64.png mumble.png || die "installing icon failed"
 	make_desktop_entry ${PN} "Mumble" mumble.png "KDE;Qt;AudioVideo" \
