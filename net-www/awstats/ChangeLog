@@ -1,6 +1,11 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.52 2007/12/20 15:49:15 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.53 2007/12/23 23:41:35 cla Exp $
+
+*awstats-6.7-r2 (23 Dec 2007)
+
+  23 Dec 2007; Dawid Węgliński <cla@gentoo.org> +awstats-6.7-r2.ebuild:
+  Fix bug #203187
 
   20 Dec 2007; Benedikt Böhm <hollow@gentoo.org> awstats-6.7-r1.ebuild:
   fix #202676
