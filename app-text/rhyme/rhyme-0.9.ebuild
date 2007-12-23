@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/rhyme-0.9.ebuild,v 1.8 2005/10/07 16:05:37 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/rhyme-0.9.ebuild,v 1.9 2007/12/23 05:53:24 halcy0n Exp $
 
 inherit ccc
 
@@ -22,10 +22,10 @@ src_compile() {
 	replace-cc-hardcode
 
 	# CFLAGS are hardcoded, replace with user specified flags
-	sed -i "s#\(^FLAGS =\).*#\1 ${CFLAGS}#g" ${S}/Makefile
+	sed -i "s#\(^FLAGS =\).*#\1 ${CFLAGS}#g" "${S}"/Makefile
 
 	# termcap is used by default, switch to ncurses
-	sed -i 's/-ltermcap/-lncurses/g' ${S}/Makefile
+	sed -i 's/-ltermcap/-lncurses/g' "${S}"/Makefile
 
 	# works fine with parallel build
 	emake || die
@@ -35,9 +35,7 @@ src_install() {
 	# author doesnt use -D for install
 	dodir /usr/share/rhyme /usr/bin /usr/share/man/man1
 
-	einstall BINPATH=${D}/usr/bin \
-			MANPATH=${D}/usr/share/man/man1 \
-			RHYMEPATH=${D}/usr/share/rhyme
-
-	prepallman
+	einstall BINPATH="${D}"/usr/bin \
+			MANPATH="${D}"/usr/share/man/man1 \
+			RHYMEPATH="${D}"/usr/share/rhyme
 }

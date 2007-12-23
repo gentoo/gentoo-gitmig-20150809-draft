@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rhyme
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.8 2007/02/09 01:05:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.9 2007/12/23 05:53:24 halcy0n Exp $
+
+  23 Dec 2007; Mark Loeser <halcy0n@gentoo.org> rhyme-0.9.ebuild:
+  Remove call to prepallman bug #140697; fix some quoting
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
