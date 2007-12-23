@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.4 2007/12/22 16:35:34 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.5 2007/12/23 20:48:57 caleb Exp $
 
 EAPI=1
 
@@ -19,7 +19,7 @@ LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
 KEYWORDS="~x86"
 
-IUSE="glib qt3support ssl"
+IUSE="doc glib qt3support ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	sys-libs/zlib
@@ -64,6 +64,8 @@ src_install() {
 
 	# TODO: don't override qconfig.pri when a new fresh set of options if there are some already installed on the system
 	cd "${S}" && emake INSTALL_ROOT="${D}" install_mkspecs || die
+
+	use doc && emake INSTALL_ROOT="${D}" install_htmldocs
 
 	fix_library_files
 
