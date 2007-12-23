@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.37 2007/12/19 15:39:40 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.38 2007/12/23 19:25:46 rbu Exp $
+
+  23 Dec 2007; Robert Buchholz <rbu@gentoo.org> exiv2-0.13-r1.ebuild:
+  amd64 stable, now for real (bug #202351)
 
   19 Dec 2007; Peter Weller <welp@gentoo.org> ChangeLog:
   Stable on amd64; bug 202351
