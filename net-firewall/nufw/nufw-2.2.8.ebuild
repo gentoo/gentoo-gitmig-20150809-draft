@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.8.ebuild,v 1.1 2007/11/18 13:39:05 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.8.ebuild,v 1.2 2007/12/23 11:47:24 cedk Exp $
 
 inherit autotools ssl-cert eutils
 
@@ -87,7 +87,6 @@ src_install() {
 
 	insinto /etc/nufw
 	doins conf/nuauth.conf
-	docert nufw nuauth
 	keepdir /var/run/nuauth
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
@@ -95,4 +94,8 @@ src_install() {
 	dodoc scripts/{clean_conntrack.pl,nuaclgen,nutop,README,ulog_rotate_daily.sh,ulog_rotate_weekly.sh}
 	docinto conf
 	dodoc conf/*.{nufw,schema,conf,dump,xml}
+}
+
+pkg_postinst() {
+	docert nufw nuauth
 }
