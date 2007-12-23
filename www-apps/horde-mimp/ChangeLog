@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde-mimp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mimp/ChangeLog,v 1.2 2007/07/12 14:28:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mimp/ChangeLog,v 1.3 2007/12/23 01:17:21 vapier Exp $
+
+*horde-mimp-1.0.2 (23 Dec 2007)
+
+  23 Dec 2007; Mike Frysinger <vapier@gentoo.org> +horde-mimp-1.0.2.ebuild:
+  Version bump.
 
   12 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   horde-mimp-1.0.1.ebuild:
