@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/nufw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.22 2007/12/23 12:05:44 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.23 2007/12/23 12:06:56 cedk Exp $
+
+  23 Dec 2007; Cédric Krier <cedk@gentoo.org> -nufw-2.2.7.ebuild:
+  Clean old
 
 *nufw-2.2.10 (23 Dec 2007)
 
