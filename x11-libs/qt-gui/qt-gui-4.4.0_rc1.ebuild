@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_rc1.ebuild,v 1.4 2007/12/22 17:34:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_rc1.ebuild,v 1.5 2007/12/23 20:27:20 caleb Exp $
 
 inherit eutils qt4-build
 
@@ -53,6 +53,8 @@ QT4_TARGET_DIRECTORIES="src/gui tools/assistant tools/designer tools/linguist"
 
 src_unpack() {
 	qt4-build_src_unpack
+
+	epatch "${FILESDIR}"/xinerama.patch
 
 	skip_qmake_build_patch
 	skip_project_generation_patch
