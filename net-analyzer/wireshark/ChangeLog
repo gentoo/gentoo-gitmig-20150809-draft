@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.71 2007/12/23 04:38:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.72 2007/12/23 14:06:51 maekke Exp $
+
+  23 Dec 2007; Markus Meier <maekke@gentoo.org> wireshark-0.99.7.ebuild:
+  x86 stable, security bug #199958
 
   23 Dec 2007; Brent Baude <ranger@gentoo.org> wireshark-0.99.7.ebuild:
   Marking wireshark-0.99.7 ppc and ppc64 stable for bug 199958
