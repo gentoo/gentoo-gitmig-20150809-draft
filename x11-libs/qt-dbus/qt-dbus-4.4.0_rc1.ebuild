@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.4.0_rc1.ebuild,v 1.5 2007/12/22 16:38:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.4.0_rc1.ebuild,v 1.6 2007/12/23 20:08:29 caleb Exp $
 
 inherit qt4-build
 
@@ -26,7 +26,7 @@ RDEPEND="~x11-libs/qt-core-4.4.0_rc1
 
 DEPEND="${RDEPEND}"
 
-QT4_TARGET_DIRECTORIES="src/qdbus tools/qdbus/qdbuscpp2xml tools/qdbus/qdbusxml2cpp"
+QT4_TARGET_DIRECTORIES="src/qdbus tools/qdbus/qdbuscpp2xml tools/qdbus/qdbusxml2cpp tools/qdbus/qdbus"
 
 src_unpack() {
 	qt4-build_src_unpack
