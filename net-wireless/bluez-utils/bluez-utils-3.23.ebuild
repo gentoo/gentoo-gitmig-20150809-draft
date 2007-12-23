@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.23.ebuild,v 1.1 2007/12/09 02:02:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.23.ebuild,v 1.2 2007/12/23 23:35:19 betelgeuse Exp $
 
-inherit autotools eutils
+inherit autotools multilib eutils
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -106,7 +106,7 @@ src_install() {
 	newins "${FILESDIR}/${PN}-3.10.1-udev.rules" 70-bluetooth.rules || die
 	newins "${S}/scripts/bluetooth.rules" 70-bluetooth-pcmcia.rules || die
 
-	exeinto /lib/udev/
+	exeinto /$(get_libdir)/udev/
 	newexe "${FILESDIR}/${PN}-3.10.1-udev.script" bluetooth.sh || die
 	doexe  "${S}/scripts/bluetooth_serial" || die
 }
