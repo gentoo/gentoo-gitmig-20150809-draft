@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-1.2.9.ebuild,v 1.1 2007/04/13 09:36:24 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-1.2.12.ebuild,v 1.1 2007/12/23 16:30:36 nakano Exp $
 
 inherit eutils
 
