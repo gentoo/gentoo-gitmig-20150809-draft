@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.99 2007/11/27 11:50:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.100 2007/12/23 19:48:07 zzam Exp $
+
+*vdr-1.4.7-r9 (23 Dec 2007)
+
+  23 Dec 2007; Matthias Schwarzott <zzam@gentoo.org> +vdr-1.4.7-r9.ebuild:
+  Updated extensions-patch to version 41. Added volctrl and lircsettings
+  useflags.
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> vdr-1.2.6-r1.ebuild:
   No longer install COPYING.
