@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.311 2007/12/23 10:37:33 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.312 2007/12/23 13:45:40 maekke Exp $
+
+  23 Dec 2007; Markus Meier <maekke@gentoo.org> ruby-1.8.6_p111.ebuild:
+  x86 stable, security bug #199191
 
 *ruby-1.8.6_p111 (23 Dec 2007)
 
