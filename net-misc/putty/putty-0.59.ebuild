@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.59.ebuild,v 1.1 2007/03/05 15:15:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.59.ebuild,v 1.2 2007/12/23 06:03:18 halcy0n Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND} dev-lang/perl"
 src_compile() {
 	use gtk && unset ptargets || local ptargets="puttygen plink pscp psftp"
 
-	cd ${S}/unix
+	cd "${S}"/unix
 
 	append-flags '-I.././' '-I../charset/' '-I../unix/'
 
@@ -31,26 +31,24 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}/doc
+	cd "${S}"/doc
 	use gtk && doman pterm.1 putty.1 puttytel.1
 	use doc && dohtml *.html
 	dodoc puttydoc.txt
 	doman puttygen.1 plink.1
 
-	cd ${S}/unix
+	cd "${S}"/unix
 	use gtk && dobin pterm putty puttytel
 	dobin puttygen plink pscp psftp
 
-	cd ${S}
+	cd "${S}"
 	dodoc README README.txt CHECKLST.txt LATEST.VER
-
-	prepallman
 
 	# install desktop file provided by Gustav Schaffter in #49577
 	use gtk && {
 		dodir /usr/share/applications
 		insinto /usr/share/applications
-		doins ${FILESDIR}/putty.desktop
+		doins "${FILESDIR}"/putty.desktop
 	}
 
 	if test ! -c /dev/ptmx; then

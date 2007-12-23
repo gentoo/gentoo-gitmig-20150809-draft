@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/putty
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.33 2007/02/22 02:43:10 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.34 2007/12/23 06:03:18 halcy0n Exp $
+
+  23 Dec 2007; Mark Loeser <halcy0n@gentoo.org> putty-0.58.ebuild,
+  putty-0.59.ebuild:
+  Remove call to prepallman bug #140697; fix some quoting
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
