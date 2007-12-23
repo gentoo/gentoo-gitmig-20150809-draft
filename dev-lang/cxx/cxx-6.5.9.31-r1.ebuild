@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.12 2007/01/31 14:26:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.13 2007/12/23 05:59:39 halcy0n Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -60,7 +60,7 @@ src_unpack() {
 	# :-NULL safeguards against bash bug.
 	einfo "Decrypting cxx distribution..."
 	gpg --quiet \
-		--homedir=${T} --no-permission-warning \
+		--homedir="${T}" --no-permission-warning \
 		--no-mdc-warning \
 		--passphrase-fd 0 \
 		--output ${cxx_rpm} \
@@ -130,10 +130,9 @@ src_compile() {
 
 src_install() {
 	# move files over
-	mv usr ${D} || die "cxx installation failed"
+	mv usr "${D}" || die "cxx installation failed"
 
-	# prep manpages
-	prepallman
+	# prep docs
 	prepalldocs
 }
 

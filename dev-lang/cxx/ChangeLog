@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/cxx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/ChangeLog,v 1.10 2007/01/31 14:26:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/ChangeLog,v 1.11 2007/12/23 05:59:39 halcy0n Exp $
+
+  23 Dec 2007; Mark Loeser <halcy0n@gentoo.org> cxx-6.5.9.31.ebuild,
+  cxx-6.5.9.31-r1.ebuild:
+  Remove call to prepallman bug #140697; fix some quoting
 
   31 Jan 2007; Marius Mauch <genone@gentoo.org> cxx-6.5.9.31.ebuild,
   cxx-6.5.9.31-r1.ebuild:
