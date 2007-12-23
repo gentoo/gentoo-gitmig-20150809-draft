@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.2 2007/12/22 14:50:21 jsin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.3 2007/12/23 02:29:10 jsin Exp $
+
+  23 Dec 2007; Jason Smathers <jsin@gentoo.org> filezilla-3.0.4.ebuild:
+  removed unicode use flag as it is the only option now
 
   22 Dec 2007; Jason Smathers <jsin@gentoo.org> filezilla-3.0.4.ebuild:
   updated rdepend and removed desktop entry
