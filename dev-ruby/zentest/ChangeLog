@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.20 2007/10/14 05:49:24 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.21 2007/12/23 13:55:48 graaff Exp $
+
+  23 Dec 2007; Hans de Graaff <graaff@gentoo.org> -zentest-3.3.0.ebuild,
+  -zentest-3.6.0.ebuild:
+  Remove old versions
 
   14 Oct 2007; Tom Gall <tgall@gentoo.org> zentest-3.6.1.ebuild:
   added ~ppc64
