@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/qterm
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.20 2006/12/14 06:16:45 mr_bones_ Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.21 2007/12/24 03:24:41 matsuu Exp $
+
+*qterm-0.4.0-r1 (24 Dec 2007)
+
+  24 Dec 2007; MATSUU Takuto <matsuu@gentoo.org> +qterm-0.4.0-r1.ebuild:
+  Renamed from /usr/bin/qterm to /usr/bin/QTerm, bug #176533.
 
   14 Dec 2006; Michael Sterrett <mr_bones_@gentoo.org> -qterm-0.3.8.ebuild:
   clean old, non-modX ebuild
