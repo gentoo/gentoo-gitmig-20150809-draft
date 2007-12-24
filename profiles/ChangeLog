@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.938 2007/12/24 01:42:58 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.939 2007/12/24 02:06:44 compnerd Exp $
+
+  24 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org> package.mask:
+  gnome-power-manager 2.20.2 should work with HAL 0.5.9
 
   24 Dec 2007; Jeff Gardner <je_fro@gentoo.org> use.local.desc:
   Removing the jmol dupe in use.local.desc wrt bug #202967
