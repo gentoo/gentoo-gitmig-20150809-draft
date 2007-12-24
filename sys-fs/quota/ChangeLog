@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.31 2007/07/12 18:34:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.32 2007/12/24 12:00:08 vapier Exp $
+
+*quota-3.15 (24 Dec 2007)
+
+  24 Dec 2007; Mike Frysinger <vapier@gentoo.org> +quota-3.15.ebuild:
+  Version bump #200397 by Hanno Boeck.
 
   12 Jul 2007; Jeroen Roovers <jer@gentoo.org> quota-3.14-r1.ebuild:
   Stable for HPPA (bug #184382).
