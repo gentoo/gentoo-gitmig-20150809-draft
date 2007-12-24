@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.0.ebuild,v 1.1 2007/12/24 11:25:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.0.ebuild,v 1.2 2007/12/24 11:53:40 pva Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -97,9 +97,13 @@ src_unpack() {
 		#yes choosing 2.6.20 was deliberate - upstream mistake possibly
 		if kernel_is ge 2 6 20
 		then
-			L7_PATCH=iptables-1.3-for-kernel-2.6.20forward-layer7-${L7_PV}.patch
+			L7_PATCH=iptables-1.4-for-kernel-2.6.20forward-layer7-${L7_PV}.patch
 		else
-			L7_PATCH=iptables-1.3-for-kernel-pre2.6.20-layer7-${L7_PV}.patch
+			eerror "Currently there is no l7-filter patch available for this"
+			eerror "kernel iptables-1.4 and kernel version pre 2.6.20."
+			eerror "If you need to compile iptables 1.4.x against Linux 2.6.19.x"
+			eerror "or earlier, with l7-filter patch, please, report upstream."
+			die "No patch available."
 		fi
 		EPATCH_OPTS="-p1" epatch "${WORKDIR}"/${L7_P}/${L7_PATCH}
 		chmod +x extensions/.layer7-test*

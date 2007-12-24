@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.154 2007/12/24 11:25:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.155 2007/12/24 11:53:40 pva Exp $
+
+  24 Dec 2007; <pva@gentoo.org> iptables-1.4.0.ebuild:
+  Updated l7-filter patches for iptables-1.4.x.
 
 *iptables-1.4.0 (24 Dec 2007)
 
