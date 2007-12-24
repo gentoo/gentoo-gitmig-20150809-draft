@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3234 2007/12/23 21:33:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3235 2007/12/24 01:42:58 je_fro Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1712,7 +1712,6 @@ sci-chemistry/ghemical:openbabel - Use the OpenBabel package for file conversion
 sci-chemistry/ghemical:toolbar - Build the shortcuts toolbar
 sci-chemistry/gromacs:double-precision - more precise calculations at the expense of speed
 sci-chemistry/jmol:client-only - Install the viewer only, no applet files for httpd.
-sci-chemistry/jmol:vhosts - Install jmol applet files into a virtual hosting environment.
 sci-chemistry/shelx:dosformat - Use CR/LF to end lines; useful in mixed Linux/Windows environments
 sci-electronics/gerbv:unit-mm - Set default unit for coordinates in status bar to mm
 sci-geosciences/gmt:gmtfull - Full resolution bathymetry database
