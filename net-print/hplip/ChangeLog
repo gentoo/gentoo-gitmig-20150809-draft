@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.90 2007/12/23 10:29:11 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.91 2007/12/24 19:50:50 ranger Exp $
+
+  24 Dec 2007; Brent Baude <ranger@gentoo.org> hplip-2.7.10.ebuild:
+  Marking hplip-2.7.10 ppc64 for bug 202916
 
 *hplip-2.7.12 (23 Dec 2007)
 
