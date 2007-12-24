@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/asio-0.3.8.ebuild,v 1.2 2007/12/02 01:47:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/asio-0.3.9.ebuild,v 1.1 2007/12/24 07:42:09 dev-zero Exp $
 
 inherit eutils
 
@@ -41,8 +41,11 @@ src_install() {
 		dohtml -r doc/*
 	fi
 	if use examples ; then
-		# Get rid of the object files
-		emake clean || die "emake clean failed"
+
+		if use test ; then
+			# Get rid of the object files
+			emake clean || die "emake clean failed"
+		fi
 
 		insinto /usr/share/doc/${PF}
 		doins -r src/examples
