@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8048 2007/12/24 02:41:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8049 2007/12/24 03:17:16 matsuu Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -726,6 +726,11 @@ dev-util/larch
 # Raúl Porcel <armin76@gentoo.org> (15 Jun 2007)
 # Mask livesvn ebuild
 =net-p2p/deluge-9999
+
+# MATSUU Takuto <matsuu@gentoo.org> (12 Jun 2007)
+# Mask alpha versions
+=dev-lang/tcl-8.5*
+=dev-lang/tk-8.5*
 
 # Petteri Räty <betelgeuse@gentoo.org> (09 Jun 2007)
 # Deprecated by JDO (not packaged currently). File a request
