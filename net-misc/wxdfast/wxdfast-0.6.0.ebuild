@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wxdfast/wxdfast-0.6.0.ebuild,v 1.2 2007/10/21 02:04:59 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wxdfast/wxdfast-0.6.0.ebuild,v 1.3 2007/12/24 02:32:19 dirtyepic Exp $
 
 WX_GTK_VER="2.6"
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-wxrc-configure.patch
+	epatch "${FILESDIR}"/${P}-cflags.patch
 	eautoreconf
 }
 
