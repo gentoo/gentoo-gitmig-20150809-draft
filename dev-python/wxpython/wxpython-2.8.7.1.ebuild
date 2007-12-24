@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.7.1.ebuild,v 1.1 2007/12/24 02:01:57 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.7.1.ebuild,v 1.2 2007/12/24 02:49:18 dirtyepic Exp $
 
+EAPI="1"
 WX_GTK_VER="2.8"
 
 inherit alternatives eutils multilib python wxwidgets
@@ -13,20 +14,18 @@ SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.bz2"
 
 LICENSE="wxWinLL-3"
 SLOT="2.8"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="opengl"
 
 RDEPEND=">=dev-lang/python-2.1
-	>=x11-libs/wxGTK-${PV}
+	>=x11-libs/wxGTK-${PV}:2.8
 	>=x11-libs/gtk+-2.4
 	>=x11-libs/pango-1.2
 	>=dev-libs/glib-2.0
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff
-	>=sys-libs/zlib-1.1.4
-	opengl? ( >=dev-python/pyopengl-2.0.0.44 )
-	!<dev-python/wxpython-2.4.2.4-r1"
+	opengl? ( >=dev-python/pyopengl-2.0.0.44 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
