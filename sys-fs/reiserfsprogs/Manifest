@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX reiserfsprogs-3.6.19-fsck-n.patch 657 RMD160 db1743daa987ea162a9a574adcf4e2f841d645a3 SHA1 fa42d0f5ea6b3210932fe4f16e1dd24caa7a55b0 SHA256 5e35c0846d7995a7a02fe9f6c08b3267a614fbc18249f9c2a40f4165bf577e9b
 MD5 2a4b9de13b5df4d4e5b00e441d743a97 files/reiserfsprogs-3.6.19-fsck-n.patch 657
 RMD160 db1743daa987ea162a9a574adcf4e2f841d645a3 files/reiserfsprogs-3.6.19-fsck-n.patch 657
@@ -16,10 +19,10 @@ EBUILD reiserfsprogs-3.6.19-r1.ebuild 846 RMD160 a40b39548eee19ec7fbacafe6adceb0
 MD5 ad954c934a7eb26ad5582a8ddd83c2a1 reiserfsprogs-3.6.19-r1.ebuild 846
 RMD160 a40b39548eee19ec7fbacafe6adceb0a2f27065f reiserfsprogs-3.6.19-r1.ebuild 846
 SHA256 e5b1ca5f3190d6935b2148c58acdfbad04e803de2d431d1d13033e9b5e707c7f reiserfsprogs-3.6.19-r1.ebuild 846
-EBUILD reiserfsprogs-3.6.19-r2.ebuild 892 RMD160 16f4415c49e8cd6090242986d0e79ddd9ab6f8b8 SHA1 d68be90268fcee873ddecd5648bcfd2a6d4fbb1b SHA256 fa9b5d351e3242f29231cfdcdad56bc17c9252d3ecbbd2bc60f8c485b387b743
-MD5 69187784d5891c988ba41661e596d5a8 reiserfsprogs-3.6.19-r2.ebuild 892
-RMD160 16f4415c49e8cd6090242986d0e79ddd9ab6f8b8 reiserfsprogs-3.6.19-r2.ebuild 892
-SHA256 fa9b5d351e3242f29231cfdcdad56bc17c9252d3ecbbd2bc60f8c485b387b743 reiserfsprogs-3.6.19-r2.ebuild 892
+EBUILD reiserfsprogs-3.6.19-r2.ebuild 891 RMD160 cd68f180f0fb0707de214e6ebd0ff2e90f026991 SHA1 02929217f651b4e3ecf94d7e98794d50d1d3f90f SHA256 8cf7f23c7e5084fb43116314067e65d99a006992937b277a09df4717db2cae90
+MD5 4e7904aaf9625d111c4ca30eeb1175fa reiserfsprogs-3.6.19-r2.ebuild 891
+RMD160 cd68f180f0fb0707de214e6ebd0ff2e90f026991 reiserfsprogs-3.6.19-r2.ebuild 891
+SHA256 8cf7f23c7e5084fb43116314067e65d99a006992937b277a09df4717db2cae90 reiserfsprogs-3.6.19-r2.ebuild 891
 EBUILD reiserfsprogs-3.6.19.ebuild 666 RMD160 7f4fe3a45bf315082710e521910a68052d68cf2d SHA1 f79a3fb07cc1450705254245045a7eaf9e572f7b SHA256 9f453559a4fee87cb6acefd7940e09e00dadee4a507fc6bc2e3f3e6219baf713
 MD5 ea977b4c371b9a7bc67079fcbf463fc5 reiserfsprogs-3.6.19.ebuild 666
 RMD160 7f4fe3a45bf315082710e521910a68052d68cf2d reiserfsprogs-3.6.19.ebuild 666
@@ -55,3 +58,10 @@ SHA256 01c34718a761d25552745efc5713f687f0dfbfdb66602264ad620c91e4de0e5b files/di
 MD5 9573520829903a49edbab0108fa649fb files/digest-reiserfsprogs-3.6.20-r1 262
 RMD160 875df15cf4eff4524ba2b0ebed3f373ea0582d38 files/digest-reiserfsprogs-3.6.20-r1 262
 SHA256 01c34718a761d25552745efc5713f687f0dfbfdb66602264ad620c91e4de0e5b files/digest-reiserfsprogs-3.6.20-r1 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkdvswMACgkQj9hvisErhMJ0NACguHK1K27kEoo1Izuu0vLXlN7x
+tFQAn1piPhqsA1YVGVDT4pYsQu4cUCCt
+=ZqYw
+-----END PGP SIGNATURE-----
