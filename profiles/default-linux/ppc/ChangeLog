@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.25 2007/12/23 20:15:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.26 2007/12/24 20:18:05 nixnut Exp $
+
+  24 Dec 2007; nixnut <nixnut@gentoo.org> package.use.mask:
+  unmasked nsplugin for ibm-j{re,dk}-bin-1.6*
 
   23 Dec 2007; <jjezak@gentoo.org> package.use.mask:
   Removed libiptcdata mask from package use mask for bug #203059.
