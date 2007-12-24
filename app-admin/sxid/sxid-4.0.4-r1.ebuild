@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4-r1.ebuild,v 1.7 2007/03/12 18:08:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4-r1.ebuild,v 1.8 2007/12/24 10:07:30 carlo Exp $
 
 DESCRIPTION="suid, sgid file and directory checking"
 SRC_URI="http://www.phunnypharm.org/pub/sxid/${P/-/_}.tar.gz"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc
-		mail-client/mailx"
+		virtual/mailx"
 DEPEND="virtual/libc
 	sys-apps/sed
 	sys-devel/gcc
