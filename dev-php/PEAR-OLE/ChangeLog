@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/PEAR-OLE
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-OLE/ChangeLog,v 1.28 2007/12/15 11:57:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-OLE/ChangeLog,v 1.29 2007/12/24 12:45:00 armin76 Exp $
+
+*PEAR-OLE-0.6.1 (24 Dec 2007)
+
+  24 Dec 2007; Raúl Porcel <armin76@gentoo.org> +PEAR-OLE-0.6.1.ebuild:
+  Version bump from the php-overlay
+
+  18 Dec 2007; Jakub Moc <jakub@gentoo.org> +PEAR-OLE-0.6.1.ebuild:
+  Version bump
 
 *PEAR-OLE-0.6.0 (15 Dec 2007)
 

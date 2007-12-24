@@ -1,6 +1,19 @@
 # ChangeLog for dev-php/PEAR-HTTP
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/ChangeLog,v 1.27 2007/12/06 00:19:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/ChangeLog,v 1.28 2007/12/24 12:38:32 armin76 Exp $
+
+*PEAR-HTTP-1.4.0-r1 (24 Dec 2007)
+
+  24 Dec 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/PEAR-HTTP-1.4.0-trailingslash-redirect-bug12672.patch,
+  +PEAR-HTTP-1.4.0-r1.ebuild:
+  Version bump from the php-overlay
+
+  22 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  +files/PEAR-HTTP-1.4.0-trailingslash-redirect-bug12672.patch,
+  +PEAR-HTTP-1.4.0-r1.ebuild:
+  Add a patch for PECL Bug #12672 (PHP_SELF ending on / causes incorrect
+  redirects) and fix nasty DOS linebreaks
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org> PEAR-HTTP-1.4.0.ebuild:
   LICENSE fix from project overlay
