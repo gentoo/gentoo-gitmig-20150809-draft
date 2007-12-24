@@ -11,7 +11,7 @@ http://bugs.gentoo.org/192819
 +ifeq ($(USE_NLS),yes)
  LINGUAS = $(shell sed -ne 's/^.*\[po4a_langs\] \(.*\)$$/\1/p' $(srcdir)/po/po4a.cfg)
 +else
-+LINGUAS = C
++LINGUAS =
 +endif
  dist_man_MANS = \
  	822-date.1 \
