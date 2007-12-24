@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/jpgraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.26 2007/11/14 15:27:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.27 2007/12/24 14:45:33 armin76 Exp $
+
+*jpgraph-2.3 (24 Dec 2007)
+
+  24 Dec 2007; Raúl Porcel <armin76@gentoo.org> +jpgraph-2.3.ebuild:
+  Version bump from the php-overlay
+
+  21 Dec 2007; Jakub Moc <jakub@gentoo.org> +jpgraph-2.3.ebuild:
+  Version bump
 
   14 Nov 2007; Jeroen Roovers <jer@gentoo.org> jpgraph-2.2.ebuild:
   Stable for HPPA (bug #198564).
