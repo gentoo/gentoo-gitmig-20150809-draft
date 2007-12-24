@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.6.1.ebuild,v 1.1 2007/12/24 09:31:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.6.1.ebuild,v 1.2 2007/12/24 12:27:05 dev-zero Exp $
 
 inherit eutils autotools
 
@@ -55,6 +55,12 @@ src_install () {
 		cd demo
 		doins *.cpp *.h *.xml README
 	fi
+}
+
+pkg_postinst() {
+	ewarn "There's a change in the ABI between version 1.5.x and 1.6.x, please"
+	ewarn "run the following command to find broken packages and rebuild them:"
+	ewarn "    revdep-rebuild --library=libccext2-1.5.so"
 }
 
 # Some of the tests hang forever
