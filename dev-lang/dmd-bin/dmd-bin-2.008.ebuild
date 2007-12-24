@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.023.ebuild,v 1.1 2007/11/03 21:48:10 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-2.008.ebuild,v 1.1 2007/12/24 20:08:28 anant Exp $
 
 inherit eutils
 
@@ -27,14 +27,9 @@ src_unpack() {
 	unpack "${A}"
 
 	# Remove unneccessary files
-	mv "${S}/dmd/lib/libphobos.a" "${S}/dmd"
 	rm -r "${S}/dmd/lib"
-	mkdir "${S}/dmd/lib"
-	mv "${S}/dmd/libphobos.a" "${S}/dmd/lib"
-
 	rm -r "${S}/dm"
-	rm "${S}/dmd/bin/*.dll" "${S}/dmd/bin/*.exe" "${S}/dmd/bin/readme.txt"
-	rm "${S}/dmd/bin/sc.ini" "${S}/dmd/bin/windbg.hlp"
+	rm dmd/license.txt dmd/readme
 
 	# Cleanup line endings
 	cd "${S}/dmd"
@@ -45,43 +40,52 @@ src_unpack() {
 	edos2unix `find . -name '*.mak' -type f`
 	edos2unix `find . -name '*.txt' -type f`
 	edos2unix `find samples -name '*.html' -type f`
+	edos2unix src/phobos/linux.mak src/phobos/internal/gc/linux.mak
 
-	# Fix permissions
+	# Fix permissions and clean up
 	fperms guo=r `find . -type f`
 	fperms guo=rx `find . -type d`
 	fperms guo=rx bin/dmd bin/dumpobj bin/obj2asm bin/rdmd
+	mv bin/{dmd,dumpobj,obj2asm,rdmd} .
+	rm -r bin/
+	mkdir bin
+	mkdir lib
+	mv ./{dmd,dumpobj,obj2asm,rdmd} bin/
 }
 
 src_compile() {
+	# Don't use teh bundled library since on gentoo we do teh compile
 	cd "${S}/dmd/src/phobos"
-	sed -i -e "s:DMD=.*:DMD=${S}/dmd/bin/dmd -I${S}/dmd/src/phobos -L${S}/dmd/lib/libphobos.a:" linux.mak internal/gc/linux.mak
+	sed -i -e "s:DMD=.*:DMD=${S}/dmd/bin/dmd:" linux.mak internal/gc/linux.mak
 	# Can't use emake, customized build system
-	edos2unix linux.mak internal/gc/linux.mak
 	make -f linux.mak
-	cp libphobos.a "${S}/dmd/lib"
+	cp obj/release/libphobos2.a "${S}/dmd/lib"
 
 	# Clean up
 	make -f linux.mak clean
-	rm internal/gc/*.o
 }
 
 src_install() {
 	cd "${S}/dmd"
 
-	# Broken dmd.conf
-	# http://d.puremagic.com/issues/show_bug.cgi?id=278
-	mv bin/dmd bin/dmd.bin
-	cat <<END > "bin/dmd"
-#!/bin/sh
-${LOC}/bin/dmd.bin -I${LOC}/src/phobos -L${LOC}/lib/libphobos.a \$*
+	# Setup dmd.conf
+	cat <<END > "bin/dmd.conf"
+[Environment]
+DFLAGS=-I/opt/dmd/src/phobos -L-L/opt/dmd/lib
 END
-	fperms guo=rx bin/dmd bin/dmd.bin
+	insinto /etc
+	doins bin/dmd.conf
+	rm bin/dmd.conf
 
 	# Man pages
 	doman man/man1/dmd.1
 	doman man/man1/dumpobj.1
 	doman man/man1/obj2asm.1
 	rm -r man
+
+	# Documentation
+	dohtml html/d/* html/d/phobos/*
+	rm -r html
 
 	# Install
 	mkdir "${D}/opt"
@@ -92,19 +96,11 @@ END
 }
 
 pkg_postinst () {
-	ewarn "The DMD Configuration file has been disabled,    "
-	ewarn "and will be re-enabled when:                     "
-	ewarn "                                                 "
-	ewarn "http://d.puremagic.com/issues/show_bug.cgi?id=278"
-	ewarn "                                                 "
-	ewarn "has been fixed. Meanwhile, please supply all your"
-	ewarn "configuration options in the /opt/dmd/bin/dmd    "
-	ewarn "shell script.                                    "
-	ewarn "                                                 "
 	ewarn "You may need to run:                             "
-	ewarn "                                                 "
 	ewarn "env-update && source /etc/profile                "
-	ewarn "                                                 "
 	ewarn "to be able to use the compiler immediately.      "
-	ewarn "                                                 "
+	einfo "                                                 "
+	einfo "The bundled sources and samples may be found in  "
+	einfo "/opt/dmd/src and /opt/dmd/samples respectively.  "
+	einfo "                                                 "
 }
