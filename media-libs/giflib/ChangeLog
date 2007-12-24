@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giflib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.49 2007/12/24 02:22:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.50 2007/12/24 19:35:09 ranger Exp $
+
+  24 Dec 2007; Brent Baude <ranger@gentoo.org> giflib-4.1.6.ebuild:
+  Marking giflib-4.1.6 ppc64 for bug 203032
 
   24 Dec 2007; Jeroen Roovers <jer@gentoo.org> giflib-4.1.6.ebuild:
   Stable for HPPA (bug #203032).
