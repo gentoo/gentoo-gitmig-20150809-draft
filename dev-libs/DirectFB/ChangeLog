@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.66 2007/12/08 18:50:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.67 2007/12/24 10:20:03 vapier Exp $
+
+*DirectFB-1.1.1 (24 Dec 2007)
+
+  24 Dec 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/DirectFB-1.1.1-headers.patch,
+  +files/DirectFB-1.1.1-pkgconfig.patch, +DirectFB-1.1.1.ebuild:
+  Version bump.
 
   08 Dec 2007; Mike Frysinger <vapier@gentoo.org> DirectFB-1.1.0.ebuild:
   Delete /usr/X11R6/ flags from build #201626 by Arfrever Frehtes Taifersar
