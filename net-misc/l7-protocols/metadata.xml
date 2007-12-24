@@ -11,11 +11,9 @@
   <name>Peter Volkov</name>
 </maintainer>
 <longdescription>
-  L7-filter is a packet classifier for Linux. Unlike most other classifiers, it
-  doesn't just look at simple values such as port numbers. Instead, it does
-  regular expression matching on the application layer data to determine what
-  protocols are being used. This is kernel version - old and well tested, but it
-  is complicated to install and seems to cause SMP systems to crash. It can only
-  use fairly simple regular expressions.
+  These are patterns (protocol definitions) for the Linux layer 7 packet
+  classifier (l7-filter). To use them, you need the kernel and iptables patches
+  (or l7-filter userspace version) available trough ebuild tree as
+  net-misc/l7-filter and net-firewall/iptables built with l7filter USE flag.
 </longdescription>
 </pkgmetadata>
