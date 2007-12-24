@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/leaktracer-2.4-r1.ebuild,v 1.1 2007/12/24 09:56:30 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/leaktracer-2.4-r1.ebuild,v 1.2 2007/12/24 11:50:59 mr_bones_ Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -54,4 +54,3 @@ pkg_postinst() {
 	elog "To use LeakTracer, run LeakCheck my_prog and then leak-analyze my_prog leak.out"
 	elog "Please reffer to README file for more info."
 }
-
