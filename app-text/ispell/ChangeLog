@@ -1,10 +1,6 @@
 # ChangeLog for app-text/ispell
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.33 2007/11/22 19:25:48 philantrop Exp $
-
-  22 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org> ispell-3.3.02.ebuild:
-  Set -j1 to avoid parallel make issues and added a die message. Fixes bug
-  199931.
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.34 2007/12/24 18:53:17 jer Exp $
 
   22 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org> ispell-3.3.02.ebuild:
   Set -j1 to avoid parallel make issues and added a die message. Fixes bug
