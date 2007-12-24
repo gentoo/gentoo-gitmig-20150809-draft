@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jre
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.19 2007/12/16 13:59:53 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.20 2007/12/24 20:11:14 nixnut Exp $
+
+  24 Dec 2007; nixnut <nixnut@gentoo.org> jre-1.6.0.ebuild:
+  Added ~ppc wrt bug 166789
 
   16 Dec 2007; Vlastimil Babka <caster@gentoo.org> jre-1.6.0.ebuild:
   Add ibm-jre-bin-1.6 as an alternative.
