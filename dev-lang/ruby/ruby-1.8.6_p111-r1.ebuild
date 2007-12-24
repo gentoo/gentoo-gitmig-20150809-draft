@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p111-r1.ebuild,v 1.2 2007/12/24 02:37:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p111-r1.ebuild,v 1.3 2007/12/24 08:37:23 graaff Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -157,10 +157,6 @@ src_install() {
 
 pkg_postinst() {
 
-	ewarn "If you upgrade to >=sys-apps/coreutils-6.7-r1,"
-	ewarn "you should re-emerge ruby again."
-	ewarn "See bug #159922 for details"
-	ewarn
 	if [[ ! -n $(readlink "${ROOT}"usr/bin/ruby) ]] ; then
 		"${ROOT}usr/sbin/ruby-config" ruby$MY_SUFFIX
 	fi
