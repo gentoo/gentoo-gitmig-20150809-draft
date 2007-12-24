@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.3 2007/12/12 05:20:45 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.4 2007/12/24 17:32:54 nerdboy Exp $
 
 inherit autotools distutils eutils flag-o-matic fortran java-pkg-2
 
@@ -16,17 +16,17 @@ SRC_URI="http://www.mcs.anl.gov/research/projects/mpich2/downloads/${MY_P}.tar.g
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="crypt cxx debug doc fast fortran mpe mpe-sdk pvfs2 romio threads"
+IUSE="crypt cxx debug doc fast fortran mpe mpe-sdk pvfs2 threads"
 
 DEPEND="virtual/libc
 	sys-devel/libtool
 	dev-lang/perl
 	>=dev-lang/python-2.3
+	>=dev-libs/libaio-0.3.106
+	net-fs/nfs-utils
+	pvfs2? ( >=sys-cluster/pvfs2-2.7.0 )
 	mpe-sdk? ( >=virtual/jdk-1.5
 		x11-proto/xproto )
-	romio? ( >=dev-libs/libaio-0.3.106
-		net-fs/nfs-utils )
-	pvfs2? ( >=sys-cluster/pvfs2-2.7.0 )
 	doc? ( virtual/tetex )"
 
 RDEPEND="${DEPEND}
@@ -99,8 +99,17 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-makefile.patch" || die "make patch failed"
 
 	if use pvfs2; then
-	    sed -i -e "s:-laio:-lpvfs2 -laio:g" Makefile.in \
+	    sed -i -e "s:-laio:-laio -lpvfs2:g" Makefile.in \
 		|| die "sed pvfs2 failed"
+	else
+	    epatch "${FILESDIR}/${P}-no-pvfs2.patch" || die "no pvfs patch failed"
+	    elog ""
+	    ewarn "If you wish to build without pvfs2 support, then you will"
+	    ewarn "need to remove the pvfs2 package if already installed."
+	    ewarn "Please remove pvfs2 and then rebuild mpich2.  If pvfs2"
+	    ewarn "is not installed, then you can safely ignore this warning."
+	    elog ""
+	    epause 5
 	fi
 
 	use mpe-sdk && setup-jvm-opts
@@ -149,16 +158,20 @@ src_compile() {
 		;;
 	esac
 
-	if use romio; then
-	    myconf="${myconf} --enable-aio"
-	    if use pvfs2; then
-		myconf="${myconf} --with-file-system=pvfs2+nfs+ufs \
-		    --with-pvfs2=/usr"
-	    else
-		myconf="${myconf} --with-file-system=nfs+ufs"
-	    fi
-	    use debug && myconf="${myconf} --enable-debug"
+	# top-level configure option is romio
+	myconf="${myconf} --enable-romio"
+
+	# several of these are romio-specific configure options
+	myconf="${myconf} --enable-aio --with-mpi=mpich2_mpi"
+	if use pvfs2; then
+	    myconf="${myconf} --with-file-system=pvfs2+nfs+ufs \
+		--with-pvfs2=/usr"
+	else
+	    # support for nfs and unix-like filesystems is the minimum
+	    myconf="${myconf} --with-file-system=nfs+ufs --with-pvfs2=no"
 	fi
+	# enable debug for romio
+	use debug && myconf="${myconf} --enable-debug"
 
 	use mpe && MPE_SRC_DIR="${S}"/src/mpe2
 
@@ -207,19 +220,19 @@ src_compile() {
 
 	"${S}"/configure \
 		--with-pm=mpd,gforker \
+		--prefix=/usr \
+		--exec-prefix=/usr \
 		${myconf} \
 		${mpe_conf} \
 		${doc_conf} \
 		$(use_enable fast) \
 		$(use_enable cxx) \
 		$(use_enable mpe) \
-		$(use_enable romio) \
 		$(use_enable threads) \
 		--libdir=/usr/$(get_libdir) \
 		--includedir=/usr/include \
 		--mandir=/usr/share/man \
 		--sysconfdir=/etc/"${PN}" \
-		--prefix=/usr --exec-prefix=/usr \
 		--datadir=/usr/share/"${PN}" || die "configure failed"
 
 	# no parallel make here
@@ -319,7 +332,12 @@ pkg_postinst() {
 	elog "utilities.  You probably don't want to enable the mpe-sdk USE"
 	elog "flag on a server, cluster node, etc."
 	elog ""
-	elog "Note 2: this package still needs testing with other Fortran90"
+	elog "Note 2: the shared libraries are now building correctly, at"
+	elog "least with and without pvfs2 support (the romio USE flag is no"
+	elog "longer availaible, at least until the configure scripts can be"
+	elog "made to stop finding things when they're disabled)."
+	elog ""
+	elog "Note 3: this package still needs testing with other Fortran90"
 	elog "compilers besides gfortran (gcc4).  The tests also need some"
 	elog "magic to build properly within the portage build environment."
 	elog "(currently the tests only build and run manually)"
