@@ -1,19 +1,21 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.0-r1.ebuild,v 1.2 2007/07/15 23:28:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.1-r1.ebuild,v 1.1 2007/12/24 08:07:43 dev-zero Exp $
 
 inherit distutils flag-o-matic multilib toolchain-funcs versionator check-reqs
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 MY_P=${PN}_$(replace_all_version_separators _)
+PATCHSET_VERSION="${PV}-1"
 
 DESCRIPTION="Boost Libraries for C++"
 HOMEPAGE="http://www.boost.org/"
-SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2
+	mirror://gentoo/boost-patches-${PATCHSET_VERSION}.tbz2"
 LICENSE="freedist Boost-1.0"
 SLOT="0"
-IUSE="debug doc icu pyste tools userland_Darwin"
+IUSE="debug doc icu pyste tools"
 
 DEPEND="icu? ( >=dev-libs/icu-3.2 )
 		sys-libs/zlib
@@ -25,7 +27,6 @@ S=${WORKDIR}/${MY_P}
 
 # Maintainer Information
 # ToDo:
-# - gccxml needed by pyste is broken with >=gcc-4.1.1 (bug #147976)
 # - write a patch to support /dev/urandom on FreeBSD and OSX (see below)
 
 pkg_setup() {
@@ -47,9 +48,12 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-gcc42-atomicity.h.patch"
+	EPATCH_SOURCE="${WORKDIR}/patches"
+	EPATCH_SUFFIX="patch"
+	epatch
+
+	cd "${S}"
 
 	rm boost-build.jam
 
@@ -90,9 +94,10 @@ generate_userconfig() {
 	distutils_python_version
 
 	local compiler compilerVersion compilerExecutable
-	if use userland_Darwin ; then
+	if [[ ${CHOST} == *-darwin* ]] ; then
 		compiler=darwin
-		compilerExecutable=c++
+		compilerVersion=$(gcc-version)
+		compilerExecutable=$(tc-getCXX)
 		append-ldflags -ldl
 	else
 		compiler=gcc
@@ -124,7 +129,7 @@ src_compile() {
 
 	for linkoption in ${LINK_OPTIONS} ; do
 		einfo "Building ${linkoption} libraries"
-		bjam ${NUMJOBS} \
+		bjam ${NUMJOBS} -q \
 			${OPTIONS} \
 			threading=single,multi \
 			runtime-link=${linkoption} link=${linkoption} \
@@ -142,7 +147,7 @@ src_compile() {
 		cd "${S}/tools/"
 		# We have to set optimization to -O0 or -O1 to work around a gcc-bug
 		# optimization=off adds -O0 to the compiler call and overwrites our settings.
-		bjam ${NUMJOBS} \
+		bjam ${NUMJOBS} -q \
 			release debug-symbols=none \
 			optimization=off \
 			--prefix="${D}/usr" \
@@ -153,7 +158,7 @@ src_compile() {
 
 	if has test ${FEATURES} ; then
 		cd "${S}/tools/regression/build"
-		bjam \
+		bjam -q \
 			${OPTIONS} \
 			--prefix="${D}/usr" \
 			--layout=system \
@@ -170,7 +175,7 @@ src_install () {
 	export BOOST_BUILD_PATH=/usr/share/boost-build
 
 	for linkoption in ${LINK_OPTIONS} ; do
-		bjam \
+		bjam -q \
 			${OPTIONS} \
 			threading=single,multi \
 			runtime-link=${linkoption} link=${linkoption} \
@@ -185,8 +190,13 @@ src_install () {
 
 	if use doc ; then
 		dohtml -A pdf,txt \
-			*.htm *.gif *.css \
+			*.htm *.png *.css \
 			-r doc libs more people wiki
+
+		insinto /usr/share/doc/${PF}/html
+		doins LICENSE_1_0.txt
+
+		dosym /usr/include/boost /usr/share/doc/${PF}/html/boost
 	fi
 
 	cd "${D}/usr/$(get_libdir)"
