@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.50 2007/12/24 11:39:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.51 2007/12/24 15:01:56 ranger Exp $
+
+  24 Dec 2007; Brent Baude <ranger@gentoo.org> dpkg-1.13.25.ebuild:
+  Marking dpkg-1.13.25 ppc for bug 203220
 
 *dpkg-1.14.12 (24 Dec 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.13.25.ebuild,v 1.6 2007/10/26 02:21:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.13.25.ebuild,v 1.7 2007/12/24 15:01:56 ranger Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/d/dpkg/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~ppc s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc s390 sh sparc x86"
 IUSE="bzip2 selinux zlib"
 
 RDEPEND=">=dev-lang/perl-5.6.0
