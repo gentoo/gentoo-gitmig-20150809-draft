@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.051.ebuild,v 1.2 2007/12/12 20:47:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.051.ebuild,v 1.3 2007/12/24 10:21:43 pva Exp $
 
 inherit versionator
 
@@ -17,7 +17,7 @@ KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.t
 inherit kernel-2
 detect_version
 
-KEYWORDS="~amd64 ~ia64 ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc64 ~sparc x86"
 IUSE=""
 
 DESCRIPTION="Full sources including OpenVZ patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
