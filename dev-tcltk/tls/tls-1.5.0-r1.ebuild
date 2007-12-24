@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/tls-1.5.0-r1.ebuild,v 1.1 2007/07/21 03:46:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/tls-1.5.0-r1.ebuild,v 1.2 2007/12/24 04:08:28 matsuu Exp $
 
 inherit eutils
 
@@ -12,6 +12,8 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="tk"
+
+RESTRICT="test"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	dev-libs/openssl

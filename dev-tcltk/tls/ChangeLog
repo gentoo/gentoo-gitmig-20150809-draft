@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tls
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.17 2007/07/21 03:46:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.18 2007/12/24 04:08:28 matsuu Exp $
+
+  24 Dec 2007; MATSUU Takuto <matsuu@gentoo.org> tls-1.5.0-r1.ebuild:
+  Added RESTRICT="test"
 
 *tls-1.5.0-r1 (21 Jul 2007)
 
