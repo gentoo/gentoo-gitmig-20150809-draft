@@ -1,5 +1,5 @@
---- ati-powermode.sh-orig	2007-12-23 22:48:55.873089378 -0600
-+++ ati-powermode.sh	2007-12-23 22:49:59.246421379 -0600
+--- common/usr/share/doc/fglrx/examples/etc/acpi/ati-powermode.sh-orig	2007-12-23 22:48:55.873089378 -0600
++++ common/usr/share/doc/fglrx/examples/etc/acpi/ati-powermode.sh	2007-12-23 22:49:59.246421379 -0600
 @@ -4,6 +4,8 @@
  # Control script for ACPI lid state and AC adapter state
  #
