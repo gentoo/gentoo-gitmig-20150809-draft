@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX mail-notification-4.1-evo-2.12-api-change.patch 622 RMD160 36d58e59ce8a88e2dd8da3e84c4bb0ef18062555 SHA1 95ba0a1e3b1c80af1ff1c3f69d6a62f0b5305176 SHA256 23aae8ca76d7654acdb8f2feadc4ac6b93c2ceda1263c6ee81cb8876a84836d8
 MD5 8da5d1a0ccee677932cdf87dd7693abe files/mail-notification-4.1-evo-2.12-api-change.patch 622
 RMD160 36d58e59ce8a88e2dd8da3e84c4bb0ef18062555 files/mail-notification-4.1-evo-2.12-api-change.patch 622
@@ -6,34 +9,26 @@ AUX mail-notification-4.1-find-evo-2.12.patch 1212 RMD160 08202b50d5bad3095acdf7
 MD5 2c1eb8c36220495e1025ee851c24a1e7 files/mail-notification-4.1-find-evo-2.12.patch 1212
 RMD160 08202b50d5bad3095acdf78c176d3397adcd8469 files/mail-notification-4.1-find-evo-2.12.patch 1212
 SHA256 0807c1ad9b45e9ab44483915a143453e60dee47b2d74590c6ddf7523c8c45a2a files/mail-notification-4.1-find-evo-2.12.patch 1212
-DIST mail-notification-4.0.tar.gz 956007 RMD160 67804814f82a8048c5887dcf4e3c2d827790dc80 SHA1 9cc832ff75913a80198e5b3d6a51c282e422a20f SHA256 e8f462420d1398d293ee3b9451e854c4ca9bf030111c38e3e4247cf2813db378
 DIST mail-notification-4.1.tar.bz2 713068 RMD160 2c261dd53c4f1142cd2744bbdf45e687fbf1f11a SHA1 6c1d480aa2f33e5e3790d0b0970018dc0ddd94a0 SHA256 c3dea02bf7060e3e30851adb629b3b3b78e163371c4001028d011d81976d9193
-EBUILD mail-notification-4.0.ebuild 2298 RMD160 9b14bce0e17fe11a8015e8b6a951075562d5c0c9 SHA1 1308b19daa3697f8b3cc2b0c13eac9e2d194565e SHA256 5f642ee11b32e3464d98b75da7dc2a66a8715fe827043d32fc062e0eccb70916
-MD5 37abdca6a1047412eca20ca52005c6a6 mail-notification-4.0.ebuild 2298
-RMD160 9b14bce0e17fe11a8015e8b6a951075562d5c0c9 mail-notification-4.0.ebuild 2298
-SHA256 5f642ee11b32e3464d98b75da7dc2a66a8715fe827043d32fc062e0eccb70916 mail-notification-4.0.ebuild 2298
 EBUILD mail-notification-4.1-r1.ebuild 2497 RMD160 6c70477805ccc4fa891643f9c395946b847563fb SHA1 a74c9dfb4b9fbcb7e06e5d8164ddba05501f871e SHA256 119bdc1816cc8f83f6d5b00fb24cc45e9186460aa3eb04f98f163b75daed8166
 MD5 e120952672ccc1f436463ca57ad890fc mail-notification-4.1-r1.ebuild 2497
 RMD160 6c70477805ccc4fa891643f9c395946b847563fb mail-notification-4.1-r1.ebuild 2497
 SHA256 119bdc1816cc8f83f6d5b00fb24cc45e9186460aa3eb04f98f163b75daed8166 mail-notification-4.1-r1.ebuild 2497
-EBUILD mail-notification-4.1.ebuild 2323 RMD160 1b995e21d44b372afe4cb62ec21890635eb61fb2 SHA1 d123a1c046925362c5a9f4caa21399827036d817 SHA256 4a818168a33020388f6bd1aa4ffc729ff70f4bbffdd37168b88131aaefd05d12
-MD5 c43f37a4c30e067d943623d0a73a3346 mail-notification-4.1.ebuild 2323
-RMD160 1b995e21d44b372afe4cb62ec21890635eb61fb2 mail-notification-4.1.ebuild 2323
-SHA256 4a818168a33020388f6bd1aa4ffc729ff70f4bbffdd37168b88131aaefd05d12 mail-notification-4.1.ebuild 2323
-MISC ChangeLog 10030 RMD160 0dda37203cb19c0b4f2a3184c43abe81ba5a4c06 SHA1 875fdcc8aa3ce65eb68065f779f59193fc94b86b SHA256 07c1574495c4b654b5b242bcbeb9d8c1a9c70b9bd883f9093a51123035aa2863
-MD5 64431fb59449e1ffa15ee7524a877df4 ChangeLog 10030
-RMD160 0dda37203cb19c0b4f2a3184c43abe81ba5a4c06 ChangeLog 10030
-SHA256 07c1574495c4b654b5b242bcbeb9d8c1a9c70b9bd883f9093a51123035aa2863 ChangeLog 10030
+MISC ChangeLog 10168 RMD160 ae7a3c2eaca0719f67e97245d4f5242ba190766d SHA1 a6634fbb0854dcbe56db436c1570fe15efb3c906 SHA256 b0f029bddda3fb1809345812d8d4f37a8650368cd671e19aa72d20042c32422c
+MD5 455757cf3ee08caad8b0125aacd222a8 ChangeLog 10168
+RMD160 ae7a3c2eaca0719f67e97245d4f5242ba190766d ChangeLog 10168
+SHA256 b0f029bddda3fb1809345812d8d4f37a8650368cd671e19aa72d20042c32422c ChangeLog 10168
 MISC metadata.xml 249 RMD160 04d89c188271eaa50c1cc0d6da917ab82ebf2575 SHA1 f2e6db3ef2b8f01a573bdcadecd66ef0e559a8da SHA256 3fda5e8d8d26f5c30c584a3bcbd2cbbfddacb94ed6522d71d8047bf7503ac78c
 MD5 19ab74103e1e821c48fc9e46d9adce4d metadata.xml 249
 RMD160 04d89c188271eaa50c1cc0d6da917ab82ebf2575 metadata.xml 249
 SHA256 3fda5e8d8d26f5c30c584a3bcbd2cbbfddacb94ed6522d71d8047bf7503ac78c metadata.xml 249
-MD5 cc025cf8b5cb0e7fb9578c891f9782ea files/digest-mail-notification-4.0 265
-RMD160 67508dfbcbded5307ed461553eeac1d8b85b9977 files/digest-mail-notification-4.0 265
-SHA256 1c59c77e88dd6bbef302586859f7ab5f4462da96f4981ff6ba2fa834717a972a files/digest-mail-notification-4.0 265
-MD5 23ad45905a1e2ecbd406c733fd7b7cb0 files/digest-mail-notification-4.1 268
-RMD160 fdfff97abf539b820e772b6c0c494d3db966b02e files/digest-mail-notification-4.1 268
-SHA256 74682bc3195b5afed994f05ee30f393a1315155ed76a843c936ee4ab54ac19dd files/digest-mail-notification-4.1 268
 MD5 23ad45905a1e2ecbd406c733fd7b7cb0 files/digest-mail-notification-4.1-r1 268
 RMD160 fdfff97abf539b820e772b6c0c494d3db966b02e files/digest-mail-notification-4.1-r1 268
 SHA256 74682bc3195b5afed994f05ee30f393a1315155ed76a843c936ee4ab54ac19dd files/digest-mail-notification-4.1-r1 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHb7jrQUozDL2JlH4RAmiFAJ0Ywqxp/hsZJgH3n5PiR2AZxX7xpwCfQcVw
+kFy+89wMkrCYGP7Lk8NU7/E=
+=KM+1
+-----END PGP SIGNATURE-----
