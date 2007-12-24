@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.49 2007/10/26 02:21:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.50 2007/12/24 11:39:11 vapier Exp $
+
+*dpkg-1.14.12 (24 Dec 2007)
+
+  24 Dec 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/dpkg-1.14.12-nls.patch, +dpkg-1.14.12.ebuild:
+  Version bump #192113 which includes zlib fix #166437 by Thilo Bangert. Also
+  make nls stuff optional #192819 by Natanael Copa.
 
   26 Oct 2007; Jeroen Roovers <jer@gentoo.org> dpkg-1.13.25.ebuild:
   Stable for HPPA too.
