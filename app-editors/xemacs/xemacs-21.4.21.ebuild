@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.21.ebuild,v 1.1 2007/11/11 09:25:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.21.ebuild,v 1.2 2007/12/24 00:03:16 graaff Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -153,6 +153,9 @@ src_compile() {
 	use alpha && myconf="${myconf} --with-system-malloc"
 	use ppc64 && myconf="${myconf} --with-system-malloc"
 	use ia64  && myconf="${myconf} --with-system-malloc"
+
+	# Enabling modules will cause segfaults outside the XEmacs build directory
+	use ia64  && myconf="${myconf} --without-modules"
 
 	einfo "${myconf}"
 
