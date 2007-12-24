@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.443.1.ebuild,v 1.1 2007/12/21 05:01:58 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.443.1.ebuild,v 1.2 2007/12/24 05:03:46 je_fro Exp $
 
 IUSE="acpi debug"
 
@@ -151,8 +151,8 @@ src_unpack() {
 			"${S}/common/usr/share/doc/fglrx/examples/etc/acpi/ati-powermode.sh" \
 			|| die "Replacing 'finger' with 'who' failed."
 		# Adjust paths in the script from /usr/X11R6/bin/ to /opt/bin/ and
-		# add funktion to detect default state.
-		epatch "${FILESDIR}"/${PV}/ati-powermode-opt-path-1.patch
+		# add function to detect default state.
+		epatch "${FILESDIR}"/${PV}/ati-powermode-opt-path-2.patch
 	fi
 
 	pushd ${MODULE_DIR} >/dev/null

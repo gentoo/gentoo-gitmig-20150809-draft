@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.100 2007/12/21 05:01:58 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.101 2007/12/24 05:03:46 je_fro Exp $
+
+  24 Dec 2007; Jeff Gardner <je_fro@gentoo.org>
+  +files/8.443.1/ati-powermode-opt-path-2.patch, ati-drivers-8.443.1.ebuild:
+  Fixup wrt bug #202906. Thanks to Jory Pratt and Bernd Steinhauser.
 
 *ati-drivers-8.443.1 (21 Dec 2007)
 
