@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2007.05.09.ebuild,v 1.3 2007/09/18 03:46:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2007.05.09.ebuild,v 1.4 2007/12/24 08:57:25 pva Exp $
 
 inherit fixheadtails toolchain-funcs
 
@@ -45,8 +45,8 @@ src_install() {
 
 	dodir /usr/share/${PN}
 	cd testing
-	cp -pPR randprintable randchars test_speed match README *.sh ${D}/usr/share/${PN}
-	cd ${S}
+	cp -pPR randprintable randchars test_speed match README *.sh "${D}"/usr/share/${PN}
+	cd "${S}"
 
 	dodoc README CHANGELOG HOWTO WANTED
 	dodoc README.weakpatterns
@@ -56,7 +56,7 @@ src_install() {
 	newdoc testing/README README.testing
 	rm -rf README CHANGELOG HOWTO LICENSE WANTED */README testing
 
-	make PREFIX=${D} install || die
-	rm ${D}/etc/${PN}/Makefile
-	chown -R root:0 ${D}
+	make PREFIX="${D}" install || die
+	rm "${D}"/etc/${PN}/Makefile
+	chown -R root:0 "${D}"
 }
