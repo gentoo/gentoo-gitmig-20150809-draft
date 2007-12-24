@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.16.ebuild,v 1.3 2007/07/13 07:32:46 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.22.ebuild,v 1.1 2007/12/24 10:29:12 pva Exp $
 
 inherit bash-completion eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc64 ~sparc ~x86"
 IUSE="bash-completion logrotate"
 
 RDEPEND="logrotate? ( app-admin/logrotate )
@@ -21,13 +21,6 @@ RDEPEND="logrotate? ( app-admin/logrotate )
 	virtual/cron"
 
 DEPEND="${RDEPEND}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${P}-prevent-stripping.patch
-}
 
 src_compile() {
 	econf --localstatedir=/var \
@@ -46,8 +39,9 @@ src_install() {
 	rm -rf "${D}"/etc/bash_completion.d
 	dobashcompletion "${S}"/etc/bash_completion.d/vzctl.sh vzctl
 
-	# We need to keep /etc/vz/names
-	keepdir /etc/vz/names
+	# We need to keep some dirs
+	keepdir /vz/{dump,lock,root,private,template/cache}
+	keepdir /etc/vz/names /var/lib/vzctl/veip
 }
 
 pkg_postinst() {

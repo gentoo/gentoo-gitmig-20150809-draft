@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.18-r1.ebuild,v 1.1 2007/08/16 11:43:29 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.18-r1.ebuild,v 1.2 2007/12/24 10:29:12 pva Exp $
 
 inherit bash-completion eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc64 ~sparc x86"
 IUSE="bash-completion logrotate"
 
 RDEPEND="logrotate? ( app-admin/logrotate )

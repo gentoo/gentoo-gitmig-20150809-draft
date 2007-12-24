@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.50 2007/11/20 07:05:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.51 2007/12/24 10:29:12 pva Exp $
+
+*vzctl-3.0.22 (24 Dec 2007)
+
+  24 Dec 2007; <pva@gentoo.org> -vzctl-3.0.16.ebuild, -vzctl-3.0.18.ebuild,
+  vzctl-3.0.18-r1.ebuild, +vzctl-3.0.22.ebuild:
+  Version bump. 3.0.18-r1 - x86/amd64 stable, bug 199738. Remove old from the
+  tree.
 
   20 Nov 2007; <pva@gentoo.org> -files/vzctl-3.0.14-ndsend.c.patch,
   metadata.xml, -vzctl-3.0.0.8.ebuild, -vzctl-3.0.14.ebuild:
