@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 1.3.1-files/grsecurity-1.2.8-iptables.patch-1.3.1 1315 RMD160 3665aaa6788261f16372c1e34810fe99fd60453c SHA1 b3c88dc5ceebc15aca73fcc02afdf8d0fa6a389f SHA256 f86e32f84af0e68b927b712a60e5d02d1bc27972537f476c71a311711fdcfc12
 MD5 319d0b089a495ce1ab8ca02b3820dfe3 files/1.3.1-files/grsecurity-1.2.8-iptables.patch-1.3.1 1315
 RMD160 3665aaa6788261f16372c1e34810fe99fd60453c files/1.3.1-files/grsecurity-1.2.8-iptables.patch-1.3.1 1315
@@ -85,10 +88,10 @@ EBUILD iptables-1.3.8-r1.ebuild 6219 RMD160 715c30797cb164645b0deb7d2ae7e7bc0463
 MD5 212a3a243a3fde8226d63f61fe4464c9 iptables-1.3.8-r1.ebuild 6219
 RMD160 715c30797cb164645b0deb7d2ae7e7bc046370c5 iptables-1.3.8-r1.ebuild 6219
 SHA256 0bbe6e5d7943b3abd8375c516308364fc1e048e91d61d3f495fb91a36c70ff52 iptables-1.3.8-r1.ebuild 6219
-EBUILD iptables-1.3.8-r2.ebuild 7055 RMD160 b5430ee703e121c03c9b0186aa302e3a3a6c76bb SHA1 f7d1ac0ac10b55e6fae11eb2e4cbc8bcd2e1904f SHA256 f5a71b6679a4b01a3731564c8fa85a87d5b981df88cf72f3e43505e6a3150803
-MD5 9b67d3b7dab8961bf07a7b5446d29b4b iptables-1.3.8-r2.ebuild 7055
-RMD160 b5430ee703e121c03c9b0186aa302e3a3a6c76bb iptables-1.3.8-r2.ebuild 7055
-SHA256 f5a71b6679a4b01a3731564c8fa85a87d5b981df88cf72f3e43505e6a3150803 iptables-1.3.8-r2.ebuild 7055
+EBUILD iptables-1.3.8-r2.ebuild 7050 RMD160 3839e75fdc63db600099b38c1e35c9cc9fd432e7 SHA1 88bdefafb44401d1f5d04fb8b8ce68beb67e505c SHA256 d8bcdb7c0166d14d45e2e9706f9d65ca2320479db5b6fb24e6b8cbdbb460ee6d
+MD5 1a432f079bed45eb72d833a6c340aad4 iptables-1.3.8-r2.ebuild 7050
+RMD160 3839e75fdc63db600099b38c1e35c9cc9fd432e7 iptables-1.3.8-r2.ebuild 7050
+SHA256 d8bcdb7c0166d14d45e2e9706f9d65ca2320479db5b6fb24e6b8cbdbb460ee6d iptables-1.3.8-r2.ebuild 7050
 EBUILD iptables-1.3.8-r3.ebuild 7066 RMD160 011c44f25f7c485a93edd63dd8a7aca90f40d09b SHA1 286c6fa378bbd09eecf27aad86e5c4069168b102 SHA256 5038c5ac3d7b9b35f01d726a263edb6eda5a033a4e0c98400df260c904d89a62
 MD5 a888e2cc14c2737bfdca9fb8cfc24041 iptables-1.3.8-r3.ebuild 7066
 RMD160 011c44f25f7c485a93edd63dd8a7aca90f40d09b iptables-1.3.8-r3.ebuild 7066
@@ -129,3 +132,10 @@ SHA256 426a4daf870687aa1bc82a5460edc55857d7362477a5a34b4ea8d14b31953c76 files/di
 MD5 63456cee00fe02abb381bdea0895b851 files/digest-iptables-1.3.8-r3 759
 RMD160 194a8727a705f5865add7ea879b3b14d3fc1e736 files/digest-iptables-1.3.8-r3 759
 SHA256 31958f9bc65d8bb0aaf1af3d2cf744da7a2b279963085102f432d9a52b5b8e12 files/digest-iptables-1.3.8-r3 759
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkdvkaMACgkQj9hvisErhMLzeACeNge+liLo1uWgGPn91U6tfenl
+YTAAn2dseSSEyErCYPNWDCcnP2mCiP7Z
+=ieqO
+-----END PGP SIGNATURE-----
