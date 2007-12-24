@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.6 2007/12/23 20:55:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.7 2007/12/24 15:06:13 caleb Exp $
 
 EAPI=1
 
@@ -78,8 +78,12 @@ src_install() {
 	cat > "${T}/44qt4" << EOF
 LDPATH=${libdirs:1}
 EOF
-
 	doenvd "${T}/44qt4"
+
+	# If we already have a qconfig.pri installed on the system, don't overwrite it with a new one.
+	if [ -a ${QTDATADIR}/mkspecs/qconfig.pri ]; then
+		rm "${D}"/${QTDATDIR}/mkspecs/qconfig.pri
+	fi
 }
 
 pkg_setup() {
