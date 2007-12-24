@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.1.1.ebuild,v 1.1 2007/12/24 10:20:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.1.1.ebuild,v 1.2 2007/12/24 10:27:40 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,16 +14,19 @@ SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~ppc64 ~sh -sparc ~x86"
-IUSE="debug fbcon fusion gif jpeg mmx png sdl sse sysfs truetype v4l v4l2 zlib"
+IUSE="debug fbcon fusion gif jpeg mmx png sdl sse sysfs truetype v4l v4l2 X zlib"
 
 #	fusion? ( >=dev-libs/linux-fusion-7.0.1 )
-DEPEND="sdl? ( media-libs/libsdl )
+RDEPEND="sdl? ( media-libs/libsdl )
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	sysfs? ( sys-fs/sysfsutils )
 	zlib? ( sys-libs/zlib )
-	truetype? ( >=media-libs/freetype-2.0.1 )"
+	truetype? ( >=media-libs/freetype-2.0.1 )
+	X? ( x11-libs/libXext x11-libs/libX11 )"
+DEPEND="${RDEPEND}
+	X? ( x11-proto/xextproto x11-proto/xproto )"
 
 pkg_setup() {
 	if [[ -z ${VIDEO_CARDS} ]] ; then
@@ -91,6 +94,7 @@ src_compile() {
 
 	econf \
 		--enable-static \
+		$(use_enable x11 X) \
 		$(use_enable fbcon fbdev) \
 		$(use_enable mmx) \
 		$(use_enable sse) \
