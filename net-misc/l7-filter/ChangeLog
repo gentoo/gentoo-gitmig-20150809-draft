@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/l7-filter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.53 2007/12/11 17:09:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.54 2007/12/24 09:26:19 pva Exp $
+
+*l7-filter-2.17 (24 Dec 2007)
+
+  24 Dec 2007; <pva@gentoo.org> metadata.xml, l7-filter-2.8.ebuild,
+  l7-filter-2.9.ebuild, l7-filter-2.12.ebuild, l7-filter-2.13.ebuild,
+  +l7-filter-2.17.ebuild:
+  Version bump, bug 195669, thank <cilly AT cilly.mine.nu> for report and
+  Bjoern Olausson <spamsuxx AT gmail.com> for ebuild. Added myself into
+  metadata, updated longdescription. Quotation fixes to shutup repoman.
 
   11 Dec 2007; nixnut <nixnut@gentoo.org> l7-filter-2.13.ebuild:
   Stable on ppc wrt bug 201909

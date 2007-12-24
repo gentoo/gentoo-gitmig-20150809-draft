@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.9.ebuild,v 1.4 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.9.ebuild,v 1.5 2007/12/24 09:26:19 pva Exp $
 
 inherit linux-info eutils
 
@@ -70,14 +70,14 @@ src_unpack() {
 	[ ! -f "${S}/${PATCH}" ] && \
 		die "patch ${PATCH} not found. Please enter a bug at bugs.gentoo.org"
 
-	cd ${S}
+	cd "${S}"
 
 	mkdir  kernel
 	mkdir  kernel/Documentation
 
 	# create needed directories
-	mkdir -p ${S}/kernel/net/ipv4/netfilter/regexp/
-	mkdir -p ${S}/kernel/include/linux/netfilter_ipv4/
+	mkdir -p "${S}"/kernel/net/ipv4/netfilter/regexp/
+	mkdir -p "${S}"/kernel/include/linux/netfilter_ipv4/
 
 	cd ${KV_DIR}
 
@@ -94,7 +94,7 @@ src_unpack() {
 	done
 
 	#patch the copied kernel source
-	cd ${S}/kernel
+	cd "${S}"/kernel
 	EPATCH_OPTS="-F 3" epatch "${S}/${PATCH}"
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=106009#c5
@@ -137,7 +137,7 @@ pkg_postinst() {
 
 pkg_prerm() {
 	# How to determine what version it was installed against? - measily
-	eval $(/bin/fgrep KV=2 ${ROOT}/var/db/pkg/net-misc/${PF}/environment |\
+	eval $(/bin/fgrep KV=2 "${ROOT}"/var/db/pkg/net-misc/${PF}/environment |\
 		/bin/head -1)
 	KV_DIR=/usr/src/linux-"${KV}"
 	if [ -d  ${KV_DIR} ]; then

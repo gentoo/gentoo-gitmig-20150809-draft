@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.12.ebuild,v 1.5 2007/08/13 21:45:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.12.ebuild,v 1.6 2007/12/24 09:26:19 pva Exp $
 
 inherit linux-info eutils
 
@@ -77,7 +77,7 @@ src_unpack() {
 	[ ! -f "${S}/${PATCH}" ] && \
 		die "patch ${PATCH} not found. Please enter a bug at bugs.gentoo.org"
 
-	cd ${S}
+	cd "${S}"
 
 	mkdir  kernel
 	mkdir  kernel/Documentation
@@ -107,7 +107,7 @@ src_unpack() {
 	done
 
 	#patch the copied kernel source
-	cd ${S}/kernel
+	cd "${S}"/kernel
 	EPATCH_OPTS="-F 3" epatch "${S}/${PATCH}"
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=106009#c5
@@ -150,14 +150,14 @@ pkg_postinst() {
 
 pkg_prerm() {
 	# How to determine what version it was installed against? - measily
-	if [ -f ${ROOT}/var/db/pkg/net-misc/${PF}/environment ]; then
-		eval $(/bin/fgrep KV=2 ${ROOT}/var/db/pkg/net-misc/${PF}/environment |\
+	if [ -f "${ROOT}"/var/db/pkg/net-misc/${PF}/environment ]; then
+		eval $(/bin/fgrep KV=2 "${ROOT}"/var/db/pkg/net-misc/${PF}/environment |\
 			/bin/head -1)
-	elif [ -f ${ROOT}/var/db/pkg/net-misc/${PF}/environment.bz2 ]; then
-		eval $(/bin/bzfgrep KV=2 ${ROOT}/var/db/pkg/net-misc/${PF}/environment.bz2 |\
+	elif [ -f "${ROOT}"/var/db/pkg/net-misc/${PF}/environment.bz2 ]; then
+		eval $(/bin/bzfgrep KV=2 "${ROOT}"/var/db/pkg/net-misc/${PF}/environment.bz2 |\
 			/bin/head -1)
-	elif [ -f ${ROOT}/var/db/pkg/net-misc/${PF}/environment.gz ]; then
-		eval $(/usr/bin/zfgrep KV=2	${ROOT}/var/db/pkg/net-misc/${PF}/environment.gz |\
+	elif [ -f "${ROOT}"/var/db/pkg/net-misc/${PF}/environment.gz ]; then
+		eval $(/usr/bin/zfgrep KV=2	"${ROOT}"/var/db/pkg/net-misc/${PF}/environment.gz |\
 			/bin/head -1)
 	else
 		die 'could not find previous version'
