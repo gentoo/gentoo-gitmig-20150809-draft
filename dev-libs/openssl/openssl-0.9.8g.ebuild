@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8g.ebuild,v 1.14 2007/11/24 04:24:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8g.ebuild,v 1.15 2007/12/24 17:22:17 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -120,11 +120,6 @@ src_compile() {
 	# rehash is needed to prep the certs/ dir
 	emake -j1 depend || die "depend failed"
 	emake all rehash || die "make all failed"
-
-	# force until we get all the gentoo.config kinks worked out
-	if ! use test && ! tc-is-cross-compiler ; then
-		src_test
-	fi
 }
 
 src_test() {
