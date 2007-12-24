@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_rc1.ebuild,v 1.5 2007/12/23 20:27:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_rc1.ebuild,v 1.6 2007/12/24 14:53:11 caleb Exp $
 
 inherit eutils qt4-build
 
@@ -21,13 +21,9 @@ IUSE_INPUT_DEVICES="input_devices_wacom"
 
 IUSE="accessibility cups dbus debug mng nas nis tiff xinerama ${IUSE_INPUT_DEVICES}"
 
-# The dep on qt-sql may be able to come out when we track down which
-# part of the build is linking to it.
-
 RDEPEND="~x11-libs/qt-core-${PV}
 	~x11-libs/qt-script-${PV}
 	dbus? ( ~x11-libs/qt-dbus-${PV} )
-	~x11-libs/qt-sql-${PV}
 	x11-libs/libXrandr
 	x11-libs/libXcursor
 	x11-libs/libXfont
@@ -49,7 +45,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/inputproto"
 
-QT4_TARGET_DIRECTORIES="src/gui tools/assistant tools/designer tools/linguist"
+QT4_TARGET_DIRECTORIES="src/gui tools/designer tools/linguist"
 
 src_unpack() {
 	qt4-build_src_unpack
