@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.39 2007/07/22 06:28:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.40 2007/12/25 12:14:35 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing dholm from metadata.xml as per #24623.
 
   22 Jul 2007; <pva@gentoo.org> e-uae-0.8.28-r3.ebuild,
   -e-uae-0.8.29_rc4.ebuild, e-uae-0.8.29_rc4-r1.ebuild:

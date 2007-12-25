@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>dholm@gentoo.org</email>
-  <name>David Holm</name>
-</maintainer>
-<maintainer>
-  <email>pva@gentoo.org</email>
-  <name>Peter Volkov</name>
-</maintainer>
-<longdescription lang="en">
-E-UAE is a fork of UAE which intends to merge all the new features of WinUAE with UAE.
-</longdescription>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>pva@gentoo.org</email>
+		<name>Peter Volkov</name>
+	</maintainer>
+	<longdescription lang="en">
+		E-UAE is a fork of UAE which intends to merge all the new features of
+		WinUAE with UAE.
+	</longdescription>
 </pkgmetadata>
