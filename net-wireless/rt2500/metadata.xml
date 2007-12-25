@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>mobile</herd>
-<maintainer>
-	<email>uberlord@gentoo.org</email>
-	<name>Roy Marples</name>
-</maintainer>
-<maintainer>
-  <email>radek@gentoo.org</email>
-  <name>Radoslaw Stachowiak</name>
-</maintainer>
+	<herd>mobile</herd>
+	<maintainer>
+		<email>radek@gentoo.org</email>
+		<name>Radoslaw Stachowiak</name>
+	</maintainer>
 </pkgmetadata>
