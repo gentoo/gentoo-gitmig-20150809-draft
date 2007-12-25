@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-1.0.8a.ebuild,v 1.1 2007/12/15 03:50:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-1.0.8a.ebuild,v 1.2 2007/12/25 02:23:05 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -32,7 +32,8 @@ src_unpack() {
 		epatch "${FILESDIR}/${PN}-1.0.4-build.xml.patch"
 	fi
 
-	rm -v lib/* *.jar || die
+	epatch "${FILESDIR}/1.0.8-test-timezone.patch"
+	rm -v *.jar lib/*.jar || die
 }
 
 src_compile() {
