@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/snarf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/ChangeLog,v 1.21 2007/03/30 19:52:10 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/ChangeLog,v 1.22 2007/12/25 16:05:34 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing taviso from metadata.xml as per #202471. Assigning to
+  maintainer-needed.
 
 *snarf-7.0-r3 (30 Mar 2007)
 
