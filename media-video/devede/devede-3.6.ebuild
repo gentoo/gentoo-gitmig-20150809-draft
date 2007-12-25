@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.3.ebuild,v 1.1 2007/11/04 09:15:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.6.ebuild,v 1.1 2007/12/25 09:01:06 drac Exp $
 
 inherit multilib python
 
@@ -21,22 +21,17 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	media-video/vcdimager
 	psyco? ( dev-python/psyco )
 	virtual/cdrtools"
-DEPEND="${RDEPEND}
-	sys-apps/sed"
-
-src_unpack() {
-	unpack ${A}
-	sed -i -e 's:usr/local:usr:g' "${S}"/install.sh
-}
+DEPEND="${RDEPEND}"
 
 src_install() {
-	./install.sh DESTDIR="${D}" || die "install.sh failed."
+	./install.sh prefix="/usr" libdir="/usr/$(get_libdir)" \
+		DESTDIR="${D}" || die "install.sh failed."
 	rm -rf "${D}"/usr/share/doc/devede
 	use doc && dohtml docs/*
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/${PN}
+	python_mod_optimize "${ROOT}"usr/$(get_libdir)/${PN}
 	elog "To create DIVX/MPEG4 files, be sure that MPlayer is compiled with LAME support."
 	elog "In this case you want to check for both the encode and mp3 USE flags."
 	elog "To change the font used to render the subtitles, choose a TrueType font you like"
@@ -44,5 +39,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}"/usr/$(get_libdir)/${PN}
+	python_mod_cleanup "${ROOT}"usr/$(get_libdir)/${PN}
 }
