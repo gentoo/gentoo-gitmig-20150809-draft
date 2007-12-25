@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk-sounds
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sounds/ChangeLog,v 1.14 2007/11/14 19:11:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sounds/ChangeLog,v 1.15 2007/12/25 22:39:28 rajiv Exp $
+
+*asterisk-sounds-1.2.1-r1 (25 Dec 2007)
+
+  25 Dec 2007; Rajiv Aaron Manglani <rajiv@gentoo.org> metadata.xml,
+  +asterisk-sounds-1.2.1-r1.ebuild:
+  new version to prevent file collisions with newer asterisk versions.
 
   14 Nov 2007; Steve Dibb <beandog@gentoo.org> asterisk-sounds-1.2.1.ebuild:
   amd64 stable, bug 175318
