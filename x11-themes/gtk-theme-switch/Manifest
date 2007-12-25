@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gtk-theme-switch-2.0.0_rc2-gtk+-2.4_fix.patch 360 RMD160 05ac0f0be6c0435efaf040769912c245e167da6f SHA1 a00b101c7dc42f111b4fca24a8aae3721f3682ba SHA256 288ba30436e2db9b3c43038405d9da36a54a16206b500e2654ec40b1141acd1c
 MD5 2fd14f20a592a23b3cba7552d0c74490 files/gtk-theme-switch-2.0.0_rc2-gtk+-2.4_fix.patch 360
 RMD160 05ac0f0be6c0435efaf040769912c245e167da6f files/gtk-theme-switch-2.0.0_rc2-gtk+-2.4_fix.patch 360
@@ -14,17 +17,24 @@ EBUILD gtk-theme-switch-2.0.0_rc2-r2.ebuild 960 RMD160 474e4d531e298b935eafee739
 MD5 bf6cbf1eb477651201f55bb9e7747c0f gtk-theme-switch-2.0.0_rc2-r2.ebuild 960
 RMD160 474e4d531e298b935eafee7395d184d4680bf9cf gtk-theme-switch-2.0.0_rc2-r2.ebuild 960
 SHA256 c0be1a8c2b4e9fb585d81de8ce34059661ad00a5216804f1f2c260814cc1e6cf gtk-theme-switch-2.0.0_rc2-r2.ebuild 960
-MISC ChangeLog 5713 RMD160 de722754036a8984c4984f8de4c99de7a2c42d1c SHA1 c6ca4c52928bd8d7485fb6e94339b26dd1a6bb7b SHA256 d2dfd66cfb4398b0cb853bd793a48b9b12c780863e3e957845cf88fe1bda6649
-MD5 04004daa4de7a42b92fa7aef1ecf44d9 ChangeLog 5713
-RMD160 de722754036a8984c4984f8de4c99de7a2c42d1c ChangeLog 5713
-SHA256 d2dfd66cfb4398b0cb853bd793a48b9b12c780863e3e957845cf88fe1bda6649 ChangeLog 5713
-MISC metadata.xml 259 RMD160 79bec94f9bef57fcb77d96aae0f773253135f202 SHA1 18c4770a9d1a4cdd5c5ca621ba7ff3b0b9f12bb7 SHA256 56f51434965befef4a19ed42df481bcbecfc6359bbcfb4dbf6ec9e7f77242091
-MD5 b68fb5f668070579e860f9dacd82d413 metadata.xml 259
-RMD160 79bec94f9bef57fcb77d96aae0f773253135f202 metadata.xml 259
-SHA256 56f51434965befef4a19ed42df481bcbecfc6359bbcfb4dbf6ec9e7f77242091 metadata.xml 259
+MISC ChangeLog 5830 RMD160 7f8b11c979a64369e15e1de0d976f8d78d039e00 SHA1 f9f9dfa3ae93e1ce677e66fad88d079a3d6a6001 SHA256 351d20a6ae5d8b9ed93d8734f33503379da4a45d65b3f2e77f3df0135502c409
+MD5 c4e614417668d9cd91115f2d1f4bc4ac ChangeLog 5830
+RMD160 7f8b11c979a64369e15e1de0d976f8d78d039e00 ChangeLog 5830
+SHA256 351d20a6ae5d8b9ed93d8734f33503379da4a45d65b3f2e77f3df0135502c409 ChangeLog 5830
+MISC metadata.xml 166 RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 SHA1 e6c6436c304a65b4a012a5b7be7ee264b228a645 SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 metadata.xml 166
+SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826 metadata.xml 166
 MD5 4fa2c36822aab51b6e348f0ed2b70a4c files/digest-gtk-theme-switch-1.0.1-r2 533
 RMD160 2883bd61bd827d93fac2529dd86b2086efe8d6c8 files/digest-gtk-theme-switch-1.0.1-r2 533
 SHA256 e64658cd3d367e8d93d60091c555e59304ab1cf3ef93d561497d0d4dce457a6d files/digest-gtk-theme-switch-1.0.1-r2 533
 MD5 bbe05a6bb2382d3d4cbe8e81e5cbe0b5 files/digest-gtk-theme-switch-2.0.0_rc2-r2 551
 RMD160 a2c37f5df54878477a94d091b8d3622ecad6b7b7 files/digest-gtk-theme-switch-2.0.0_rc2-r2 551
 SHA256 d5513eaad2739af145d251529fb90642aef40ceaf69fe193ef56144ef26de6e5 files/digest-gtk-theme-switch-2.0.0_rc2-r2 551
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHcSCryuNVb5qfaOYRAshWAJ4weEzvSgvgurOqFaWudxa57zeNcgCfatNs
+gkn2UX7Fpw6v+4W16/YNrRo=
+=tijw
+-----END PGP SIGNATURE-----
