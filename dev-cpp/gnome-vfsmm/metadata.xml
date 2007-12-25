@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-	<email>pyrania@gentoo.org</email>
-	<name>Markus Nigbur</name>
-</maintainer>
-<herd>gnome-mm</herd>
+	<herd>gnome-mm</herd>
 </pkgmetadata>

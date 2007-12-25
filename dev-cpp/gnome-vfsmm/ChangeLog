@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.50 2007/10/04 22:07:59 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.51 2007/12/25 14:36:12 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing pyrania from metadata.xml as per #26352.
 
   04 Oct 2007; Tom Gall <tgall@gentoo.org> gnome-vfsmm-2.18.0.ebuild:
   stable on ppc64
