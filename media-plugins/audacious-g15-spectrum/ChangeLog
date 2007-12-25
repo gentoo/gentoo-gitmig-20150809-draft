@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/audacious-g15-spectrum
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-g15-spectrum/ChangeLog,v 1.3 2007/05/01 10:20:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-g15-spectrum/ChangeLog,v 1.4 2007/12/25 14:42:42 jokey Exp $
+
+*audacious-g15-spectrum-2.5.2 (25 Dec 2007)
+
+  25 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  +audacious-g15-spectrum-2.5.2.ebuild:
+  Version bump wrt bug #197587 thanks to Barry Gear for the notify
 
   01 May 2007; Markus Rothe <corsair@gentoo.org>
   audacious-g15-spectrum-1.0_pre.ebuild:
