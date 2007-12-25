@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/rio
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rio/ChangeLog,v 1.7 2007/05/14 16:47:40 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rio/ChangeLog,v 1.8 2007/12/25 14:47:53 drac Exp $
+
+  25 Dec 2007; Samuli Suominen <drac@gentoo.org>
+  +files/rio-1.0.7-includes.patch, rio-1.0.7-r1.ebuild:
+  Applied includes patch from Debian project, fixing asm/io.h vs. sys/io.h
+  problem with sanitized linux headers but most likely also building on Alpha
+  and FreeBSD.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
