@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ndtpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ChangeLog,v 1.14 2007/12/04 10:02:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ChangeLog,v 1.15 2007/12/25 17:13:26 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing usata from metadata.xml as per #22931. Assigning to maintainer-needed.
 
   04 Dec 2007; Ulrich Mueller <ulm@gentoo.org> ndtpd-3.1.5.ebuild:
   Don't tamper with /etc/services. Fixes bug #195120.
