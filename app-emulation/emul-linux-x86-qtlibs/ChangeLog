@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.40 2007/12/25 14:10:29 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.41 2007/12/25 14:11:20 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing herbs from metadata.xml as per #88780.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing kugelfang from metadata.xml as per #46972.
