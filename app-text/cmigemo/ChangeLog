@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cmigemo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.14 2007/01/28 05:40:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.15 2007/12/25 16:55:08 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing usata from metadata.xml as per #22931. Assigning to maintainer-needed.
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> cmigemo-1.2.ebuild,
   cmigemo-1.3c.ebuild:

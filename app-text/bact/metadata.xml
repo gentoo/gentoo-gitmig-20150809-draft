@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>usata@gentoo.org</email>
-</maintainer>
-<longdescription>BACT is an implementation of [Kudo &amp; Matsumoto 2004],
-and is designed to handle the tree classification problem. The important
-characteristic is that the input example x is represented not as a
-numerical feature vector (bag-of-words) but a labeled ordered tree.
-</longdescription>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+	</maintainer>
+	<longdescription lang="en">
+		BACT is an implementation of [Kudo &amp; Matsumoto 2004], and is
+		designed to handle the tree classification problem. The important
+		characteristic is that the input example x is represented not as a
+		numerical feature vector (bag-of-words) but a labeled ordered tree.
+	</longdescription>
 </pkgmetadata>
