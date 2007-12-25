@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/iwlwifi-1.2.22.ebuild,v 1.3 2007/12/12 03:05:07 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/iwlwifi-1.2.22.ebuild,v 1.4 2007/12/25 20:40:19 compnerd Exp $
 
 inherit eutils linux-mod
 
@@ -15,8 +15,8 @@ IUSE="ipw3945 ipw4965"
 
 DEPEND="|| ( =virtual/linux-sources-2.6.22* =virtual/linux-sources-2.6.23* )"
 RDEPEND="ipw3945? ( =net-wireless/iwl3945-ucode-2.14.1.5 )
-		 ipw4965? ( =net-wireless/iwl4965-ucode-4.44.1.18 )
-		 !ipw3945? ( !ipw4965? ( =net-wireless/iwl3945-ucode-2.14.1.5 =net-wireless/iwl4965-ucode-4.44.1.18 ) )"
+		 ipw4965? ( =net-wireless/iwl4965-ucode-4.44.1* )
+		 !ipw3945? ( !ipw4965? ( =net-wireless/iwl3945-ucode-2.14.1.5 =net-wireless/iwl4965-ucode-4.44.1* ) )"
 
 RESTRICT="test"
 
