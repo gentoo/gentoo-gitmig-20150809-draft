@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.243 2007/12/25 16:17:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.244 2007/12/25 19:58:32 armin76 Exp $
+
+  25 Dec 2007; Raúl Porcel <armin76@gentoo.org> git-1.5.3.7-r1.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #202383
 
   25 Dec 2007; Brent Baude <ranger@gentoo.org> git-1.5.3.7-r1.ebuild:
   Marking git-1.5.3.7-r1 ppc64 for bug 203283
