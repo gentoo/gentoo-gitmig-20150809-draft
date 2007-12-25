@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.22 2007/09/16 09:16:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.23 2007/12/25 14:30:07 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing metalgod from metadata.xml as per #99350.
 
   16 Sep 2007; Markus Meier <maekke@gentoo.org>
   networkmanager-0.6.5_p20070823.ebuild:
