@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.71 2007/12/10 11:33:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.72 2007/12/25 17:18:22 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing zeypher from metadata.xml as per #141801.
 
   10 Dec 2007; Markus Meier <maekke@gentoo.org> inkscape-0.45.1.ebuild,
   inkscape-0.45.1-r1.ebuild:
