@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ezquake-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ChangeLog,v 1.6 2007/08/11 07:36:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ChangeLog,v 1.7 2007/12/25 22:17:21 solar Exp $
+
+  25 Dec 2007; <solar@gentoo.org> ezquake-bin-1517.ebuild:
+  - binary packages that are linked with libc.so.6 need to use sys-libs/glibc
+  in RDEPEND
 
   11 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
   ezquake-bin-1517.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1517.ebuild,v 1.6 2007/08/11 07:36:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1517.ebuild,v 1.7 2007/12/25 22:17:21 solar Exp $
 
 inherit games
 
@@ -22,6 +22,7 @@ QA_EXECSTACK_amd64="${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake-gl.glx
 	${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake.svga"
 
 RDEPEND=">=dev-libs/expat-2.0
+	sys-libs/glibc
 	=dev-libs/glib-1.2*
 	!svga? ( x11-libs/libXext )
 	svga? ( media-libs/svgalib )
