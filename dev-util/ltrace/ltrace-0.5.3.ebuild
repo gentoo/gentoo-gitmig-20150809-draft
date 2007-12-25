@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.5.3.ebuild,v 1.1 2007/12/24 15:36:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.5.3.ebuild,v 1.2 2007/12/25 00:04:51 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -34,7 +34,6 @@ src_unpack() {
 		sysdeps/linux-gnu/Makefile > sysdeps/linux-gnu/Makefile.in
 	eautoconf
 }
-
 
 src_install() {
 	emake DESTDIR="${D}" docdir=/usr/share/doc/${PF} install || die "make install failed"
