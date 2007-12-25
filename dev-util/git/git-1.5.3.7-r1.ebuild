@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.3.7-r1.ebuild,v 1.4 2007/12/17 05:23:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.3.7-r1.ebuild,v 1.5 2007/12/25 08:39:00 robbat2 Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -138,6 +138,10 @@ src_install() {
 		newbin "${S}"/contrib/blameview/blameview.perl blameview
 		newdoc "${S}"/contrib/blameview/README README.blameview
 	fi
+
+	dobin contrib/fast-import/git-p4
+	dodoc contrib/fast-import/git-p4.txt
+	newbin contrib/fast-import/import-tars.perl import-tars
 
 	dodir /usr/share/${PN}/contrib
 	for i in continuous fast-import hg-to-git \
