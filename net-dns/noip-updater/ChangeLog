@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.26 2007/12/25 15:25:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.27 2007/12/25 15:28:32 jokey Exp $
+
+  25 Dec 2007; Markus Ullmann <jokey@gentoo.org> noip-updater-2.1.7.ebuild:
+  make qa tools happy
 
   25 Dec 2007; Markus Ullmann <jokey@gentoo.org> noip-updater-2.1.7.ebuild:
   Stable on sparc/x86
