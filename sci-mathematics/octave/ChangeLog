@@ -1,6 +1,16 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.50 2007/12/18 10:29:01 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.51 2007/12/25 01:46:56 nerdboy Exp $
+
+  25 Dec 2007; Steve Arnold <nerdboy@gentoo.org> octave-2.1.73.ebuild,
+  octave-2.1.73-r1.ebuild, octave-2.1.73-r2.ebuild:
+  Updated to check for mpich2 cxx interface (which breaks standard headers)
+  to address bug #182904).  Unfortunately, the mpich2 headers aren't
+  compatible with the standard ones (see bug #202304) so each package is
+  responsible for the workaround and breakage checking; see the above bug
+  for upstream octave response.  Although it kicks the build, the best way
+  to handle it for now seems to be getting rid of the offending mpich2 C++
+  libraries and include nastiness.
 
   18 Dec 2007; Markus Dittrich <markusle@gentoo.org>
   octave-2.1.73-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r2.ebuild,v 1.4 2007/12/18 10:29:01 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r2.ebuild,v 1.5 2007/12/25 01:46:56 nerdboy Exp $
 
 inherit flag-o-matic fortran autotools xemacs-elisp-common
 
@@ -62,23 +62,29 @@ src_compile() {
 	# mpicc/mpic++
 	# octave links agains -lmpi by default
 	# mpich needs -lmpich instead
-	if use mpi; then
-		CC="mpicc" && CXX="mpiCC"
-		if has_version 'sys-cluster/mpich'; then
-			myconf="${myconf} --with-mpi=mpich"
+	if use mpi ; then
+	    if built_with_use sys-cluster/mpich2 cxx ; then
+		elog "mpich2 must be built without C++ support!"
+		die "please rebuild mpich2 with USE=-cxx..."
+	    else
+		CC="mpicc"
+		if has_version 'sys-cluster/mpich' ; then
+		    CXX="mpiCC"
+		    myconf="${myconf} --with-mpi=mpich"
+		elif has_version 'sys-cluster/mpich2' ; then
+		    F77="mpif77"
+		    myconf="${myconf} --with-mpi=mpich"
 		else
-			myconf="${myconf} --with-mpi=mpi"
+		    myconf="${myconf} --with-mpi=mpi"
 		fi
+	    fi
 	else
-		CC="$(tc-getCC)"
-		CXX="$(tc-getCXX)"
-		myconf="${myconf} --without-mpi"
+	    CC="$(tc-getCC)"
+	    CXX="$(tc-getCXX)"
+	    myconf="${myconf} --without-mpi"
 	fi
 
-	# force use of external blas and lapack
-	myconf="${myconf} --with-blas=blas --with-lapack=lapack"
-
-	CC="${CC}" CXX="${CXX}" \
+	CC="${CC}" CXX="${CXX}" F77="${F77}" \
 	econf \
 		$(use_with hdf5) \
 		$(use_enable readline) \
