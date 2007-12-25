@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.47 2007/10/08 20:53:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.48 2007/12/25 16:17:37 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing uberlord from metadata.xml as per #199318.
 
 *dash-0.5.4.1-r2 (08 Oct 2007)
 
