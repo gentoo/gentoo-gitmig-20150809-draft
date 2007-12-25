@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sci</herd>
-	<maintainer>
-		<email>kugelfang@gentoo.org</email>
-	</maintainer>
 	<longdescription lang="en">
 		The AMD(R) Core Math Library provides an implementation of the "Basic Linear
 		Algebra Subprograms" (BLAS) and the "Linear Algebra PACKage" (LAPACK) as
