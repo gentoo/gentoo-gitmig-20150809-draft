@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2007.08.29.ebuild,v 1.1 2007/09/24 22:03:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2007.08.29.ebuild,v 1.2 2007/12/25 22:47:58 solar Exp $
 
 inherit eutils multilib games
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND="x86? (
+DEPEND="sys-libs/glibc
+	x86? (
 		media-libs/libsdl
 		media-libs/sdl-mixer
 		media-libs/sdl-image

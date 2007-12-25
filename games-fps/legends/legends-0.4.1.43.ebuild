@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.43.ebuild,v 1.1 2007/09/17 21:41:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.43.ebuild,v 1.2 2007/12/25 22:44:27 solar Exp $
 
 inherit eutils games
 
@@ -26,6 +26,7 @@ RDEPEND=">=media-libs/libsdl-1.2
 	media-libs/libogg
 	media-libs/libvorbis
 	media-libs/openal
+	sys-libs/glibc
 	amd64? ( >=app-emulation/emul-linux-x86-sdl-2.1
 		>=app-emulation/emul-linux-x86-soundlibs-2.1 )
 	media-fonts/font-adobe-75dpi"

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/sauerbraten
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/ChangeLog,v 1.7 2007/09/24 22:03:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/ChangeLog,v 1.8 2007/12/25 22:47:58 solar Exp $
+
+  25 Dec 2007; <solar@gentoo.org> sauerbraten-2007.08.29.ebuild:
+  - binary packages that are linked with libc.so.6 need to use sys-libs/glibc
+  in RDEPEND
 
 *sauerbraten-2007.08.29 (24 Sep 2007)
 

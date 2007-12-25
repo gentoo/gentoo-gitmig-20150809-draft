@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.16 2007/04/13 21:47:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.17 2007/12/25 22:50:43 solar Exp $
 
 inherit eutils games
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="-amd64 x86"
 RESTRICT="mirror strip"
 
-DEPEND="virtual/libc
+DEPEND="sys-libs/glibc
 	games-util/loki_patch"
 RDEPEND="${DEPEND}
 	virtual/opengl"

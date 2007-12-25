@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nprquake-sdl/nprquake-sdl-1-r1.ebuild,v 1.13 2007/07/02 21:46:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nprquake-sdl/nprquake-sdl-1-r1.ebuild,v 1.14 2007/12/25 22:45:44 solar Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="cdinstall"
 
-DEPEND="media-libs/libsdl"
+DEPEND="media-libs/libsdl sys-libs/glibc"
 RDEPEND="${DEPEND}
 	cdinstall? ( games-fps/quake1-data )"
 
