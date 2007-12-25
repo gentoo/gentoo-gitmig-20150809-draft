@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/jfbterm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.50 2007/09/29 15:56:08 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.51 2007/12/25 16:46:14 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing usata from metadata.xml as per #22931.
 
   29 Sep 2007; MATSUU Takuto <matsuu@gentoo.org> -jfbterm-0.4.7-r2.ebuild,
   -jfbterm-0.4.7-r3.ebuild:
