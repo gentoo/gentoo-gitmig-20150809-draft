@@ -1,0 +1,13 @@
+# ChangeLog for dev-util/gitosis
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gitosis/ChangeLog,v 1.1 2007/12/25 10:50:21 robbat2 Exp $
+
+*gitosis-0.2_p20071217 (25 Dec 2007)
+
+  25 Dec 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +gitosis-0.2_p20071217.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>, per bug
+  #199177. If you want to set it up, the best existing documentation is
+  http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-w
+  ay however you still need to jump some hoops.
+
