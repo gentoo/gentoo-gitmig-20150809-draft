@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.49 2007/12/16 17:30:22 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.50 2007/12/25 16:33:43 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing uberlord from metadata.xml as per #199318.
 
   16 Dec 2007; Samuli Suominen <drac@gentoo.org> ifplugd-0.28-r9.ebuild:
   amd64 stable wrt #195214
