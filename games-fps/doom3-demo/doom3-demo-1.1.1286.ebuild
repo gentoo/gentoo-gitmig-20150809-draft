@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.20 2007/08/01 06:04:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.21 2007/12/25 22:28:48 solar Exp $
 
 inherit eutils games
 
@@ -20,6 +20,7 @@ QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/${PN}/*"
 # Do not remove the amd64 dep unless you are POSITIVE that it is not necessary.
 # See bug #88227 for more.
 RDEPEND="opengl? ( virtual/opengl )
+	sys-libs/glibc
 	amd64? ( app-emulation/emul-linux-x86-xlibs
 		|| (
 			>=app-emulation/emul-linux-x86-xlibs-7.0
