@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.325 2007/12/22 21:07:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.326 2007/12/25 13:00:25 carlo Exp $
+
+  25 Dec 2007; Carsten Lohrke <carlo@gentoo.org>
+  kdegraphics-3.5.7-r3.ebuild, kdegraphics-3.5.8-r2.ebuild:
+  Adjust dependencies, bug #199792.
 
 *kdegraphics-3.5.8-r2 (22 Dec 2007)
 

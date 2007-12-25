@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.8-r1.ebuild,v 1.1 2007/11/10 16:47:41 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.8-r1.ebuild,v 1.2 2007/12/25 13:02:17 carlo Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -14,8 +14,8 @@ KMEXTRA="kfile-plugins/pdf"
 
 DEPEND=">=media-libs/freetype-2.0.5
 	media-libs/t1lib
-	>=app-text/poppler-0.5.1
-	>=app-text/poppler-bindings-0.5.1"
+	>=app-text/poppler-0.6.1
+	>=app-text/poppler-bindings-0.6.1"
 RDEPEND="${DEPEND}
 	$(deprange-dual $PV $MAXKDEVER kde-base/kdeprint)"
 

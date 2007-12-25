@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.8-r2.ebuild,v 1.1 2007/12/22 21:07:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.8-r2.ebuild,v 1.2 2007/12/25 13:00:25 carlo Exp $
 
 inherit kde-dist eutils
 
@@ -23,8 +23,8 @@ DEPEND="~kde-base/kdebase-${PV}
 	openexr? ( >=media-libs/openexr-1.2 )
 	povray? ( media-gfx/povray
 				virtual/opengl )
-	pdf? ( >=app-text/poppler-0.5.1
-			>=app-text/poppler-bindings-0.5.1 )"
+	pdf? ( >=app-text/poppler-0.6.1
+			>=app-text/poppler-bindings-0.6.1 )"
 
 RDEPEND="${DEPEND}
 	tetex? (
