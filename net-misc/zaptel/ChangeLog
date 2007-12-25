@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.98 2007/11/14 19:08:35 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.99 2007/12/25 06:26:11 rajiv Exp $
+
+*zaptel-1.2.22.1 (25 Dec 2007)
+
+  25 Dec 2007; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  +files/zaptel-1.2.22.1-gentoo.diff, +zaptel-1.2.22.1.ebuild:
+  version bump, bug #198503, #201665. florz patched dropped until we can get a
+  clean version.
 
   14 Nov 2007; Steve Dibb <beandog@gentoo.org> zaptel-1.2.18.ebuild:
   amd64 stable, bug 175321
