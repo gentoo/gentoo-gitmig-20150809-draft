@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.25 2007/08/07 11:46:53 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.26 2007/12/25 15:32:27 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing taviso from metadata.xml as per #202471. Assigning to
+  maintainer-needed.
 
   07 Aug 2007; Roy Marples <uberlord@gentoo.org> tripwire-2.3.1.2-r1.ebuild,
   tripwire-2.3.1.2-r2.ebuild:
