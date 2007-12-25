@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaptury/libcaptury-0.3.0_pre200706031.ebuild,v 1.4 2007/12/25 18:02:25 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaptury/libcaptury-0.3.0_pre200712251.ebuild,v 1.1 2007/12/25 18:02:25 trapni Exp $
 
 inherit multilib flag-o-matic
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug multilib"
 
-RDEPEND=">=media-libs/capseo-0.3.0_pre200706031
+RDEPEND=">=media-libs/capseo-0.3.0_pre200712251
 		 x11-libs/libX11
 		 x11-libs/libXfixes
 		 virtual/opengl
