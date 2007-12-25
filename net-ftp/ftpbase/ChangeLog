@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/ftpbase
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.15 2007/07/10 13:07:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.16 2007/12/25 16:20:28 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing uberlord from metadata.xml as per #199318. Assigning to
+  maintainer-needed.
 
 *ftpbase-0.01 (09 Jul 2007)
 
