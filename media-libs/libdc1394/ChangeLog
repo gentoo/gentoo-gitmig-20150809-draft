@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.27 2007/07/22 09:35:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.28 2007/12/25 14:54:17 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing seemant from metadata.xml as per #202469. Assigning to
+  maintainer-needed.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   libdc1394-1.0.0-r1.ebuild, libdc1394-1.2.1.ebuild,
