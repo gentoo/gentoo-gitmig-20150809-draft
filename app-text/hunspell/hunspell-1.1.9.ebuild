@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.9.ebuild,v 1.7 2007/12/12 18:38:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.9.ebuild,v 1.8 2007/12/25 20:29:53 jer Exp $
 
 inherit eutils multilib autotools
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://hunspell.sourceforge.net/"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="ncurses readline"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86"
 
 DEPEND="readline? ( sys-libs/readline )
 	ncurses? ( sys-libs/ncurses )
@@ -22,13 +22,13 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e 's:tail +:tail -n +:' ${S}/tests/test.sh ||\
+	sed -i -e 's:tail +:tail -n +:' "${S}"/tests/test.sh ||\
 		die "Failed to fix-up tail for POSIX compliance"
 	# Upstream package creates executables 'example', 'munch'
 	# and 'unmunch' which are too generic to be placed in
 	# /usr/bin - this patch prefixes them with 'hunspell-'.
 	# It modifies a Makefile.am file, hence autoreconf.
-	epatch ${FILESDIR}/hunspell-1.1.5-renameexes.patch
+	epatch "${FILESDIR}"/hunspell-1.1.5-renameexes.patch
 	# Would do eautoreconf - but until bug #142787 is fixed, eautoreconf
 	# isn't enough.
 	libtoolize --copy --force
@@ -47,7 +47,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO license.hunspell || die "installing docs failed"
 	# hunspell is derived from myspell
 	dodoc AUTHORS.myspell README.myspell license.myspell || die "installing myspell docs failed"
@@ -61,13 +61,13 @@ src_install() {
 	doins license.myspell license.hunspell config.h
 
 	# These are in the wrong place.
-	mv ${D}/usr/include/munch.h ${D}/usr/include/hunspell/munch.h
-	mv ${D}/usr/include/unmunch.h ${D}/usr/include/hunspell/unmunch.h
+	mv "${D}"/usr/include/munch.h "${D}"/usr/include/hunspell/munch.h
+	mv "${D}"/usr/include/unmunch.h "${D}"/usr/include/hunspell/unmunch.h
 
 	# Libraries include the version in their name, so make a sensible
 	# default symlink.  They should probably be libhunspell.so.1.1 etc.
 	dodir /usr/$(get_libdir)
-	cd ${D}/usr/$(get_libdir)
+	cd "${D}"/usr/$(get_libdir)
 	ln -s libhunspell-1.1.so.0.0.0 libhunspell.so
 }
 
