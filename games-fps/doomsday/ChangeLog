@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.23 2007/12/04 02:10:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.24 2007/12/25 22:36:37 solar Exp $
+
+  25 Dec 2007; <solar@gentoo.org> doomsday-1.9.0_beta52.ebuild:
+  - binary packages that are linked with libc.so.6 need to use sys-libs/glibc
+  in RDEPEND
 
   04 Dec 2007; Michael Sterrett <mr_bones_@gentoo.org>
   doomsday-1.9.0_beta52.ebuild:
