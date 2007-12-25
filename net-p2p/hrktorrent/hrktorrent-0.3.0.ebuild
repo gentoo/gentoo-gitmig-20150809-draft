@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/hrktorrent/hrktorrent-0.2.2.ebuild,v 1.2 2007/11/26 19:32:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/hrktorrent/hrktorrent-0.3.0.ebuild,v 1.1 2007/12/25 17:35:40 drac Exp $
 
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="A slim rb_libtorrent based console torrent application supporting DHT"
 HOMEPAGE="http://henrik.unit5.ca/hrktorrent"
@@ -17,13 +17,6 @@ RDEPEND="=net-libs/rb_libtorrent-0.12*"
 DEPEND="${RDEPEND}
 	dev-cpp/asio
 	dev-util/pkgconfig"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	# Makefile is confusing LIBS with LDFLAGS and CFLAGS with CXXFLAGS.
-	epatch "${FILESDIR}"/${P}-Makefile.patch
-}
 
 src_compile() {
 	emake CXX="$(tc-getCXX)" || die "emake failed."
