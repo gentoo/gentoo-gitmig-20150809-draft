@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ebview
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.21 2006/11/04 17:24:56 usata Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.22 2007/12/25 16:38:40 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing usata from metadata.xml as per #22931. Assigning to maintainer-needed.
 
   04 Nov 2006; Mamoru KOMACHI <usata@gentoo.org>
   +files/ebview-0.3.6-gtk28.diff, ebview-0.3.6.ebuild:
