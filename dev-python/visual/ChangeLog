@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.16 2007/03/05 03:10:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.17 2007/12/25 16:12:53 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing tercel from metadata.xml as per #88960.
 
   05 Mar 2007; Marius Mauch <genone@gentoo.org> visual-3.2.9.ebuild,
   visual-4_beta0.ebuild:
