@@ -2,13 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>karltk@gentoo.org</email>
-  <description>Primary maintainer</description>
-</maintainer>
-
-<longdescription>
-
-</longdescription>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+	</maintainer>
 </pkgmetadata>
