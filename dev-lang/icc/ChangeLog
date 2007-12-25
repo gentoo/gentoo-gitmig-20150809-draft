@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.55 2007/12/24 19:35:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.56 2007/12/25 13:54:19 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing karltk from metadata.xml as per #200332.
 
   24 Dec 2007; Raúl Porcel <armin76@gentoo.org> icc-10.0.026.ebuild,
   icc-10.1.008.ebuild:
