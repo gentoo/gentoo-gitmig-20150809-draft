@@ -1,16 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.2 2007/11/23 09:30:39 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.3 2007/12/25 05:00:50 compnerd Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
+PATCH_VER="p1"
+
 DESCRIPTION="Hardware Abstraction Layer"
 HOMEPAGE="http://www.freedesktop.org/Software/hal"
-SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
+SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz
+		http://dev.gentoo.org/~cardoe/files/${PN}/${P}-${PATCH_VER}.tar.bz2"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
-KEYWORDS="~amd64 -mips -ppc64 ~x86"
+KEYWORDS="~amd64 ~x86"
 
 KERNEL_IUSE="kernel_linux kernel_FreeBSD"
 IUSE="acpi apm crypt debug dell disk-partition doc selinux ${KERNEL_IUSE}"
@@ -152,11 +155,18 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	# patchset from http://dev.gentoo.org/~cardoe/repos/hal.git
+	EPATCH_MULTI_MSG="Applying http://dev.gentoo.org/~cardoe/repos/hal.git patchset ..." \
+	EPATCH_SUFFIX="patch" \
+	EPATCH_SOURCE="${WORKDIR}/hal-0.5.10-patches/" \
+	EPATCH_FORCE="yes" \
+	epatch 
+
 	# Hide recovery partitions
 	epatch "${FILESDIR}/hal-0.5.9-hide-recovery-partitions.patch"
 
 	# Enable plugdev support
-	epatch "${FILESDIR}/0.5.9/96_plugdev_allow_send.patch"
+	epatch "${FILESDIR}/96_plugdev_allow_send.patch"
 }
 
 src_compile() {
