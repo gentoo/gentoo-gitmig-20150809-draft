@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.18 2007/07/22 08:51:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.19 2007/12/25 17:24:20 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing zypher from metadata.xml as per #26909. Assigning to
+  maintainer-needed.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; kdenlive-0.4.ebuild:
   Drop virtual/x11 references.
