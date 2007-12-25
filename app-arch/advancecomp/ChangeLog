@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/advancecomp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.33 2007/06/11 21:11:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.34 2007/12/25 15:33:12 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing taviso from metadata.xml as per #202471. Assigning to
+  maintainer-needed.
 
   11 Jun 2007; Raúl Porcel <armin76@gentoo.org> advancecomp-1.15.ebuild:
   alpha stable
