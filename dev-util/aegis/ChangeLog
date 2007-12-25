@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/aegis
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.21 2007/04/09 15:37:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.22 2007/12/25 14:02:21 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing karltk from metadata.xml as per #200332. Assigning to
+  maintainer-needed.
 
   09 Apr 2007; Doug Goldstein <cardoe@gentoo.org> aegis-4.9.ebuild,
   aegis-4.11.ebuild, aegis-4.16.ebuild:
