@@ -6,10 +6,6 @@
 		<email>tester@gentoo.org</email>
 		<name>Olivier Crete</name>
 	</maintainer>
-	<maintainer>
-		<email>joem@gentoo.org</email>
-		<name>Joe McCann</name>
-	</maintainer>
 	<longdescription lang="en">
 		libgpod is a shared library to access the contents of an iPod. This
 		library is based on code used in the gtkpod project.
