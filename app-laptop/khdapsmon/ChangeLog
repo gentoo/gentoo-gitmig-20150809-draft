@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/khdapsmon
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/khdapsmon/ChangeLog,v 1.1 2006/06/26 20:27:04 uberlord Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/khdapsmon/ChangeLog,v 1.2 2007/12/25 16:15:28 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing uberlord from metadata.xml as per #199318.
 
 *khdapsmon-0.1.2 (26 Jun 2006)
 

@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>mobile</herd>
-	<maintainer>
-		<email>uberlord@gentoo.org</email>
-		<name>Roy Marples</name>
-	</maintainer>
-	<longdescription>KDE monitor for the Hard Drive Active Protection System</longdescription>
+	<longdescription lang="en">
+		KDE monitor for the Hard Drive Active Protection System.
+	</longdescription>
 </pkgmetadata>
