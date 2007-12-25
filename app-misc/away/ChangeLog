@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/away
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.13 2007/10/03 11:49:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.14 2007/12/25 14:34:44 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing pyrania from metadata.xml as per #26352. Assigning to
+  maintainer-needed.
 
   03 Oct 2007; Christoph Mende <angelos@gentoo.org> away-0.9.5.ebuild:
   Stable on amd64 wrt bug #194328
