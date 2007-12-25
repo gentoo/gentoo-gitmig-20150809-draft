@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.39-r1.ebuild,v 1.7 2007/11/28 23:22:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.39-r1.ebuild,v 1.8 2007/12/25 20:17:12 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -348,7 +348,7 @@ src_test() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE "${FILESDIR}"/DB_CONFIG.fast.example
+	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README "${FILESDIR}"/DB_CONFIG.fast.example
 	docinto rfc ; dodoc doc/rfc/*.txt
 
 	# openldap modules go here
@@ -366,9 +366,9 @@ src_install() {
 		fperms 0700 /var/lib/openldap-${x}
 	done
 
-	echo "OLDPF='${PF}'" >"${D}"${OPENLDAP_DEFAULTDIR_VERSIONTAG}/${OPENLDAP_VERSIONTAG}
-	echo "# do NOT delete this. it is used" >>"${D}"${OPENLDAP_DEFAULTDIR_VERSIONTAG}/${OPENLDAP_VERSIONTAG}
-	echo "# to track versions for upgrading." >>"${D}"${OPENLDAP_DEFAULTDIR_VERSIONTAG}/${OPENLDAP_VERSIONTAG}
+	echo "OLDPF='${PF}'" > "${D}${OPENLDAP_DEFAULTDIR_VERSIONTAG}/${OPENLDAP_VERSIONTAG}"
+	echo "# do NOT delete this. it is used"	>> "${D}${OPENLDAP_DEFAULTDIR_VERSIONTAG}/${OPENLDAP_VERSIONTAG}"
+	echo "# to track versions for upgrading." >> "${D}${OPENLDAP_DEFAULTDIR_VERSIONTAG}/${OPENLDAP_VERSIONTAG}"
 
 	# manually remove /var/tmp references in .la
 	# because it is packaged with an ancient libtool
