@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bootchart
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.5 2007/08/10 11:13:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.6 2007/12/25 16:14:46 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing uberlord from metadata.xml as per #199318.
 
 *bootchart-0.9-r2 (10 Aug 2007)
 
