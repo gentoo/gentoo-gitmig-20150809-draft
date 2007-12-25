@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.242 2007/11/16 16:43:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.243 2007/12/25 16:13:37 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing tercel from metadata.xml as per #88960.
 
   16 Nov 2007; nixnut <nixnut@gentoo.org> fluxbox-1.0.0.ebuild:
   Stable on ppc wrt bug 198968
