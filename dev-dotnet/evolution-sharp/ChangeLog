@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/evolution-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.21 2007/11/25 00:36:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.22 2007/12/25 13:19:38 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing joem from metadata.xml as per #69387.
 
   25 Nov 2007; Brent Baude <ranger@gentoo.org>
   evolution-sharp-0.14.0.1.ebuild:
