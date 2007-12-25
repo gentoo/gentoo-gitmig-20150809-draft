@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.9 2007/12/21 23:15:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.10 2007/12/25 18:05:51 genstef Exp $
 
 inherit linux-mod eutils rpm
 
@@ -84,7 +84,7 @@ src_unpack() {
 	patch -p0 -f < ${FILESDIR}/fcdslslusb-2.6.20.diff
 	cd usr/src/kernel-modules/fcdsl/src
 	kernel_is ge 2 6 20 && patch -p1 -f < ${FILESDIR}/usb-2.6.20.diff
-	kernel_is ge 2 6 24 && patch -p0 -f < ${FILESDIR}/fcdsl-2.6.24.diff
+	kernel_is ge 2 6 23 && patch -p0 -f < ${FILESDIR}/fcdsl-2.6.23.diff
 	cd "${S}"
 
 	if use x86; then
