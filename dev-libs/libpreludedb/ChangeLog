@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpreludedb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.36 2007/12/10 14:51:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.37 2007/12/25 14:58:01 nixnut Exp $
+
+  25 Dec 2007; nixnut <nixnut@gentoo.org> libpreludedb-0.9.13.ebuild:
+  Stable on ppc wrt bug 191415
 
   10 Dec 2007; Raúl Porcel <armin76@gentoo.org> libpreludedb-0.9.13.ebuild:
   sparc stable wrt #191415
