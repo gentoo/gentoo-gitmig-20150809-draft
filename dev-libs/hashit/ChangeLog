@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/hashit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/ChangeLog,v 1.9 2007/03/21 10:10:23 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/ChangeLog,v 1.10 2007/12/25 14:35:50 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing pyrania from metadata.xml as per #26352. Assigning to
+  maintainer-needed.
 
   21 Mar 2007; Markus Nigbur <pyrania@gentoo.org> hashit-0.9.4.ebuild:
   Handling -fPIC for x86_64. Fixed bug #167628.
