@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gephex
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.18 2007/11/27 12:43:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.19 2007/12/25 17:22:33 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing zypher from metadata.xml as per #26909.
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> gephex-0.4.3.ebuild:
   Fixed quoting.

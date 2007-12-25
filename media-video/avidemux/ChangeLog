@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.119 2007/12/01 18:08:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.120 2007/12/25 17:21:08 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing zypher from metadata.xml as per #26909.
 
   01 Dec 2007; Samuli Suominen <drac@gentoo.org> avidemux-2.4_pre3.ebuild:
   Update cmake dep. to 2.4.4 wrt #200940, thanks to Honza for reporting.
