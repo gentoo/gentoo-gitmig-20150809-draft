@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcommon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.17 2007/12/15 03:55:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.18 2007/12/25 13:52:34 nixnut Exp $
+
+  25 Dec 2007; nixnut <nixnut@gentoo.org> jcommon-1.0.12.ebuild:
+  Stable on ppc wrt bug 201306
 
 *jcommon-1.0.12 (15 Dec 2007)
 

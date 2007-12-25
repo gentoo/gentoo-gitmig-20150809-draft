@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jfreechart
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.30 2007/12/25 02:23:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.31 2007/12/25 13:53:22 nixnut Exp $
+
+  25 Dec 2007; nixnut <nixnut@gentoo.org> jfreechart-1.0.8a.ebuild:
+  Stable on ppc wrt bug 201306
 
   25 Dec 2007; Petteri Räty <betelgeuse@gentoo.org>
   +files/1.0.8-test-timezone.patch, jfreechart-1.0.8a.ebuild:
