@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/ircd-hybrid
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ChangeLog,v 1.26 2007/05/21 10:29:30 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ChangeLog,v 1.27 2007/12/25 12:30:31 cla Exp $
+
+*ircd-hybrid-7.2.3 (25 Dec 2007)
+
+  25 Dec 2007; Dawid Węgliński <cla@gentoo.org>
+  +files/7.2.3-default-config.patch, +ircd-hybrid-7.2.3.ebuild:
+  Version bump. Thanks to James Spahlinger <intelligent.nerd@gmail.com> for
+  patches.
 
   21 May 2007; Peter Weller <welp@gentoo.org> ircd-hybrid-7.2.2.ebuild:
   multilib-strict fix for amd64 - bug 178519
