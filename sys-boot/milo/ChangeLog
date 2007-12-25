@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/milo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/ChangeLog,v 1.6 2007/04/08 18:11:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/ChangeLog,v 1.7 2007/12/25 16:06:58 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing taviso from metadata.xml as per #202471.
 
   08 Apr 2007; Mike Frysinger <vapier@gentoo.org> milo-2.4.18.ebuild:
   Remove output hacks for countdown.
