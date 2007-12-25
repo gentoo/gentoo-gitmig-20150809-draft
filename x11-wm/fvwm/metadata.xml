@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>desktop-wm</herd>
-<maintainer>
-  <email>taviso@gentoo.org</email>
-  <name>Tavis Ormandy</name>
-</maintainer>
-<longdescription>
-fvwm is an ICCCM-compliant X window manager providing a 3D look for window decorations, multiple discontiguous virtual desktops, a high degree of configurability, and an external module interface for implementing functional extensions.
-</longdescription>
+	<herd>desktop-wm</herd>
+	<longdescription lang="en">
+		fvwm is an ICCCM-compliant X window manager providing a 3D look for
+		window decorations, multiple discontiguous virtual desktops, a high
+		degree of configurability, and an external module interface for
+		implementing functional extensions.
+	</longdescription>
 </pkgmetadata>
