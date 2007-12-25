@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gps
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/ChangeLog,v 1.18 2007/07/02 13:35:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/ChangeLog,v 1.19 2007/12/25 14:41:16 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing seemant from metadata.xml as per #202469.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> gps-1.1.0-r1.ebuild:
   (QA) RESTRICT clean up.
