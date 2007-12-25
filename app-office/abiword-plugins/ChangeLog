@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.37 2007/10/19 14:46:52 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.38 2007/12/25 13:18:42 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing joem from metadata.xml as per #69387.
 
   19 Oct 2007; <jeff@gentoo.org> abiword-plugins-2.4.6.ebuild:
   Reverting the change as this appears fine with goffice-0.4.

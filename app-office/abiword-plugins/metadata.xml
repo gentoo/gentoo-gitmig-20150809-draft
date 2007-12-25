@@ -2,11 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>gnome-office</herd>
-	<maintainer>
-		<email>joem@gentoo.org</email>
-		<name>Joe McCann</name>
-	</maintainer>
-	<longdescription lang="en">Set of plugins for the abiword word processor
+	<longdescription lang="en">
+		Set of plugins for the abiword word processor.
 	</longdescription>
 </pkgmetadata>
 
