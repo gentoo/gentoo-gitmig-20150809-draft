@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/g15macro
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15macro/ChangeLog,v 1.2 2007/05/01 10:18:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15macro/ChangeLog,v 1.3 2007/12/25 14:58:03 jokey Exp $
+
+*g15macro-1.0.1 (25 Dec 2007)
+
+  25 Dec 2007; Markus Ullmann <jokey@gentoo.org> +g15macro-1.0.1.ebuild:
+  Version bump
 
   01 May 2007; Markus Rothe <corsair@gentoo.org> g15macro-1.0.0.ebuild:
   Added ~ppc64; bug #175120
