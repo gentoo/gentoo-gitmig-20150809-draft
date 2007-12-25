@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/yatex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.20 2007/08/26 20:11:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.21 2007/12/25 16:44:51 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing usata from metadata.xml as per #22931.
 
   26 Aug 2007; Ulrich Mueller <ulm@gentoo.org>
   -files/yatex-1.71-gentoo.diff, -files/yatex-1.71-yatexhlp-gentoo.diff,
