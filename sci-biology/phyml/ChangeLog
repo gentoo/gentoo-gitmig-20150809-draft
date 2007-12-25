@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/phyml
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phyml/ChangeLog,v 1.1 2006/08/18 19:27:04 gongloo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phyml/ChangeLog,v 1.2 2007/12/25 13:17:09 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing gongloo from metadata.xml as per #53935.
 
 *phyml-2.4.5 (18 Aug 2006)
 
