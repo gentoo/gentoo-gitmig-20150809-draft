@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ccc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.12 2007/07/02 14:39:33 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.13 2007/12/25 15:52:38 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing taviso from metadata.xml as per #202471. Assigning to
+  maintainer-needed.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   ccc-6.5.9.001-r3.ebuild:
