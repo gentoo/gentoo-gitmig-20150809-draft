@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p13.ebuild,v 1.2 2007/07/13 21:47:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p15.ebuild,v 1.1 2007/12/25 07:07:02 alonbl Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs multilib
 
@@ -21,27 +21,35 @@ DEPEND="virtual/linux-sources"
 
 S="${WORKDIR}/${MY_PN}-${MY_PV}"
 
-#get-version
-MODULE_NAMES="bc(block:"${S}"/mod)
-		bc_des(block:"${S}"/mod/des)
-		bc_3des(block:"${S}"/mod/3des)
-		bc_bf128(block:"${S}"/mod/bf128)
-		bc_bf448(block:"${S}"/mod/bf448)
-		bc_blowfish(block:"${S}"/mod/blowfish)
-		bc_cast(block:"${S}"/mod/cast)
-		bc_gost(block:"${S}"/mod/gost)
-		bc_idea(block:"${S}"/mod/idea)
-		bc_rijn(block:"${S}"/mod/rijn)
-		bc_twofish(block:"${S}"/mod/twofish)
-		bc_serpent(block:"${S}"/mod/serpent)
-		bc_rc6(block:"${S}"/mod/rc6)"
+pkg_setup() {
+	linux-mod_pkg_setup
+
+	MODULE_NAMES="bc(block:"${S}/mod")
+		bc_3des(block:"${S}/mod":mod/3des)
+		bc_bf128(block:"${S}/mod":mod/bf128)
+		bc_bf448(block:"${S}/mod":mod/bf448)
+		bc_blowfish(block:"${S}/mod":mod/blowfish)
+		bc_cast(block:"${S}/mod":mod/cast)
+		bc_des(block:"${S}/mod":mod/des)
+		bc_gost(block:"${S}/mod":mod/gost)
+		bc_idea(block:"${S}/mod":mod/idea)
+		bc_rc6(block:"${S}/mod":mod/rc6)
+		bc_rijn(block:"${S}/mod":mod/rijn)
+		bc_serpent(block:"${S}/mod":mod/serpent)
+		bc_twofish(block:"${S}/mod":mod/twofish)"
+	BUILD_TARGETS="all"
+	BUILD_PARAMS="
+		CPP=\"$(tc-getCXX)\"
+		KERNEL_DIR=\"${KV_DIR}\"
+		VER=${KV_MAJOR}.${KV_MINOR}
+		KEXT=${KV_OBJ}"
+}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	if use x86;
-	then
+	if use x86;	then
 		epatch "${WORKDIR}/bcrypt-rc6-serpent.diff"
 	else
 		epatch "${WORKDIR}/bcrypt-rc6-serpent-c.diff"
@@ -49,44 +57,29 @@ src_unpack() {
 }
 
 src_compile() {
+	linux-mod_src_compile
+
 	filter-flags -fforce-addr
 
 	emake -C kgsha CPP="$(tc-getCXX)" EXTRA_CXXFLAGS="${CXXFLAGS}" || die "library compile failed"
 	emake -C kgsha256 CPP="$(tc-getCXX)"  EXTRA_CXXFLAGS="${CXXFLAGS}" || die "library compile failed"
 	emake -C src CC="$(tc-getCC)"  EXTRA_CFLAGS="${CFLAGS} -I../kgsha256" || die "bctool compile failed"
-
-	# Don't put stack protection in the kernel - it just is bad
-	_filter-hardened -fstack-protector-all -fstack-protector
-
-	emake  -C mod KERNEL_DIR=${KV_DIR} KEXT=${KV_OBJ} CC=$(tc-getCC) LD=$(tc-getLD) \
-		AS=$(tc-getAS) CPP=$(tc-getCXX) EXTRA_CFLAGS="${CFLAGS}" \
-		KVER=${KV_MAJOR}.${KV_MINOR} \
-		|| die "compile failed"
-
-	einfo "Modules compiled"
 }
 
 src_install() {
 	linux-mod_src_install
 
-	cd "${S}"
-	dodir /etc
-	insinto /etc
-	newins etc/bc.conf bc.conf
-
 	dobin bin/bctool
+	dolib.so lib/libkgsha{,256}.so
 	insinto /usr/bin
+	doman man/bctool.8
 	for link in bcumount bcformat bcfsck bcnew bcpasswd bcinfo \
-		bclink bcunlink bcmake_hidden bcreencrypt;
-	do
-		dosym bctool /usr/bin/${link}
+			bclink bcunlink bcmake_hidden bcreencrypt; do
+		dosym bctool "/usr/bin/${link}"
 	done
 
-	# bug 107392
-	insinto /usr/$(get_libdir)
-	doins lib/libkgsha{,256}.so
-
-	doman man/bctool.8
+	insinto /etc
+	newins etc/bc.conf bc.conf
 	newinitd "${FILESDIR}"/bcrypt3 bcrypt
 	dodoc README HIDDEN_PART
 }
