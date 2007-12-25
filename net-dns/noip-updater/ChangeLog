@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.23 2007/07/26 11:29:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.24 2007/12/25 15:11:00 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing seemant from metadata.xml as per #202469.
 
 *noip-updater-2.1.4-r1 (26 Jul 2007)
 
