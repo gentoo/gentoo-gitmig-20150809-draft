@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-nn
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nn/ChangeLog,v 1.9 2006/08/06 18:46:18 kevquinn Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nn/ChangeLog,v 1.10 2007/12/25 20:55:39 jer Exp $
+
+  25 Dec 2007; Jeroen Roovers <jer@gentoo.org> myspell-nn-20060530.ebuild:
+  Marked ~hppa for armin76.
 
 *myspell-nn-20060530 (06 Aug 2006)
 

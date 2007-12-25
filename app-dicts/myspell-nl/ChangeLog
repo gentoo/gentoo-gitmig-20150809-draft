@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-nl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/ChangeLog,v 1.9 2007/09/20 15:25:53 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/ChangeLog,v 1.10 2007/12/25 20:40:06 jer Exp $
+
+  25 Dec 2007; Jeroen Roovers <jer@gentoo.org> myspell-nl-20070607.ebuild:
+  Marked ~hppa for armin76.
 
 *myspell-nl-20070607 (20 Sep 2007)
 

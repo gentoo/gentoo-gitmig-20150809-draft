@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-hu
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/ChangeLog,v 1.15 2006/11/17 14:14:26 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/ChangeLog,v 1.16 2007/12/25 20:50:14 jer Exp $
+
+  25 Dec 2007; Jeroen Roovers <jer@gentoo.org> myspell-hu-20061117.ebuild:
+  Marked ~hppa for armin76.
 
 *myspell-hu-20061117 (17 Nov 2006)
 
