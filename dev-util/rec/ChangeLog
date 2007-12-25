@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/rec
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rec/ChangeLog,v 1.4 2007/03/05 04:12:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rec/ChangeLog,v 1.5 2007/12/25 15:58:52 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing taviso from metadata.xml as per #202471. Assigning to
+  maintainer-needed.
 
   05 Mar 2007; Marius Mauch <genone@gentoo.org> rec-1.6.ebuild:
   Replacing einfo with elog
