@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.22 2007/08/23 13:12:09 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.23 2007/12/25 14:15:53 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing kugelfang from metadata.xml as per #46972.
 
   23 Aug 2007; Roy Marples <uberlord@gentoo.org> libf2c-20051004.ebuild:
   Keyworded ~x86-fbsd.
