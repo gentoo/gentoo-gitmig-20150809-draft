@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.3 2007/12/25 05:00:50 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.4 2007/12/25 12:19:05 mr_bones_ Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -160,7 +160,7 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_SOURCE="${WORKDIR}/hal-0.5.10-patches/" \
 	EPATCH_FORCE="yes" \
-	epatch 
+	epatch
 
 	# Hide recovery partitions
 	epatch "${FILESDIR}/hal-0.5.9-hide-recovery-partitions.patch"
