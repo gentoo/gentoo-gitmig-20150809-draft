@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-<email>metalgod@gentoo.org</email>
-<name>Luis Medinas</name>
-</maintainer>
-<longdescription lang="en">
-TMSNC is a textbased (console) MSN client written in C. TMSNC should work on
-most Unix (Linux, BSD, MacOS) compatible operating systems. The goal of this
-project is to create a client like MSN Messenger (with sound, webcam and file
-transfer support), but without any graphical features.
-</longdescription>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+	</maintainer>
+	<longdescription lang="en">
+		TMSNC is a textbased (console) MSN client written in C. TMSNC should work on
+		most Unix (Linux, BSD, MacOS) compatible operating systems. The goal of this
+		project is to create a client like MSN Messenger (with sound, webcam and file
+		transfer support), but without any graphical features.
+	</longdescription>
 </pkgmetadata>
-
