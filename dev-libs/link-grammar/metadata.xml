@@ -2,14 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>gnome</herd>
-	<maintainer>
-		<email>joem@gentoo.org</email>
-		<name>Joe McCann</name>
-	</maintainer>
-	<longdescription lang="en"> The Link Grammar Parser is a syntactic parser of
-		English, based on link grammar, an original theory of English syntax.
-		The system is written in generic C code, and runs on any platform with a
-		C compiler.
+	<longdescription lang="en">
+		The Link Grammar Parser is a syntactic parser of English, based on link
+		grammar, an original theory of English syntax. The system is written in
+		generic C code, and runs on any platform with a C compiler.
 	</longdescription>
 </pkgmetadata>
-
