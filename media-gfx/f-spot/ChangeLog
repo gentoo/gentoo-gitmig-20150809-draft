@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.23 2007/08/23 00:39:06 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.24 2007/12/25 13:23:01 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing joem from metadata.xml as per #69387. Assigning to maintainer-needed.
 
 *f-spot-0.4.0 (23 Aug 2007)
 
