@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.4_rc1.ebuild,v 1.1 2007/12/25 08:47:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.4_rc1.ebuild,v 1.2 2007/12/25 08:57:27 robbat2 Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -59,6 +59,7 @@ exportmakeopts() {
 	myopts="${myopts} WITH_SEND_EMAIL=YesPlease"
 
 	use iconv || myopts="${myopts} NO_ICONV=YesPlease"
+	use tk || myopts="${myopts} NO_TCLTK=YesPlease"
 
 	export MY_MAKEOPTS=${myopts}
 }
@@ -106,8 +107,6 @@ src_compile() {
 src_install() {
 	emake ${MY_MAKEOPTS} DESTDIR="${D}" prefix=/usr install || \
 		die "make install failed"
-
-	use tk || rm "${D}"/usr/bin/git{k,-gui}
 
 	doman man?/*
 
