@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.3 2007/12/23 02:29:10 jsin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.4 2007/12/25 05:38:16 jsin Exp $
+
+  25 Dec 2007; Jason Smathers <jsin@gentoo.org> filezilla-3.0.4.ebuild:
+  WXRC magic no longer required with eselect-wxwidgets-0.7-r1
 
   23 Dec 2007; Jason Smathers <jsin@gentoo.org> filezilla-3.0.4.ebuild:
   removed unicode use flag as it is the only option now
