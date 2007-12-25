@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/tinysvm
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/tinysvm/ChangeLog,v 1.4 2006/11/02 17:47:07 usata Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/tinysvm/ChangeLog,v 1.5 2007/12/25 17:14:41 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing usata from metadata.xml as per #22931.
 
   02 Nov 2006; Mamoru KOMACHI <usata@gentoo.org> -tinysvm-0.09.ebuild,
   tinysvm-0.09-r1.ebuild:
