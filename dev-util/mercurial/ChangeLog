@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.58 2007/11/07 10:57:51 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.59 2007/12/25 19:44:41 nelchael Exp $
+
+*mercurial-0.9.5-r1 (25 Dec 2007)
+
+  25 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/mercurial-0.9.5-hide-passwords.diff, metadata.xml,
+  +mercurial-0.9.5-r1.ebuild:
+  Add upstream patch to hide passwords with http://user:password@.../ URLs.
 
 *mercurial-0.9.5 (07 Nov 2007)
 
