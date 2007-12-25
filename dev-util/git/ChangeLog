@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.241 2007/12/25 08:57:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.242 2007/12/25 12:36:43 nixnut Exp $
+
+  25 Dec 2007; nixnut <nixnut@gentoo.org> ChangeLog:
+  Stable on ppc wrt bug 203283
 
   25 Dec 2007; Robin H. Johnson <robbat2@gentoo.org> git-1.5.3.7-r1.ebuild,
   git-1.5.4_rc0.ebuild, git-1.5.4_rc1.ebuild:
