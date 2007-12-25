@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ipkg-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.10 2007/10/13 01:11:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.11 2007/12/25 14:42:56 phreak Exp $
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing seemant from metadata.xml as per #202469.
 
 *ipkg-utils-1.7.050831-r1 (13 Oct 2007)
 *ipkg-utils-1.7-r1 (13 Oct 2007)
