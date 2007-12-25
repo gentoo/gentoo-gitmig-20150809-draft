@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/prewikka
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.28 2007/12/10 14:49:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.29 2007/12/25 15:02:09 nixnut Exp $
+
+  25 Dec 2007; nixnut <nixnut@gentoo.org> prewikka-0.9.12.1-r1.ebuild:
+  Stable on ppc wrt bug 191415
 
   10 Dec 2007; Raúl Porcel <armin76@gentoo.org>
   prewikka-0.9.12.1-r1.ebuild:
