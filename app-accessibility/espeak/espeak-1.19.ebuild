@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.19.ebuild,v 1.5 2007/07/15 23:02:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.19.ebuild,v 1.6 2007/12/26 22:25:47 phreak Exp $
 
 inherit eutils
 
@@ -31,10 +31,10 @@ src_unpack() {
 	fi
 
 	# Apply patch to support big-endian processors
-	epatch ${FILESDIR}/${P}-big-endian.patch
+	epatch "${FILESDIR}/${P}-big-endian.patch"
 
 	# Apply patch for ppc64 segfault
-	epatch ${FILESDIR}/${P}-ppc64-segfault.patch
+	epatch "${FILESDIR}/${P}-ppc64-segfault.patch"
 }
 
 src_compile() {

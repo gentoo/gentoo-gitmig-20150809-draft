@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.26.ebuild,v 1.1 2007/06/09 02:10:02 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.26.ebuild,v 1.2 2007/12/26 22:25:47 phreak Exp $
 
 inherit eutils
 
@@ -32,11 +32,11 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}/src"
 	emake CXXFLAGS="${CXXFLAGS}" || die "Compilation failed"
 
 	einfo "Fixing byte order of phoneme data files"
-	cd ${S}/big_endian
+	cd "${S}/big_endian"
 	make
 	./espeak-phoneme-data "${S}/espeak-data"
 	cp -f phondata phonindex phontab "${S}/espeak-data"
@@ -47,7 +47,7 @@ src_compile() {
 	local lang
 	for l in *_rules; do
 		lang=${l/_rules/}
-		${S}/src/speak --compile=$lang
+		"${S}/src/speak" --compile=$lang
 	done
 }
 
