@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aget
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/ChangeLog,v 1.11 2007/12/26 22:01:13 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/ChangeLog,v 1.12 2007/12/26 22:04:20 phreak Exp $
+
+  26 Dec 2007; Christian Heim <phreak@gentoo.org> aget-0.4.ebuild:
+  Fix the quotation.
 
   26 Dec 2007; Christian Heim <phreak@gentoo.org> Manifest:
   Fixing digestentry.unused (.metadata.xml.swp).

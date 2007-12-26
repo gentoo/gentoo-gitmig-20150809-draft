@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/aget-0.4.ebuild,v 1.10 2007/09/28 18:49:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/aget-0.4.ebuild,v 1.11 2007/12/26 22:04:20 phreak Exp $
 
 inherit eutils
 
@@ -19,8 +19,8 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/${DEB_PATCH}
+	cd "${S}"
+	epatch "${WORKDIR}"/${DEB_PATCH}
 	sed -i "/^CFLAGS/s:-g:${CFLAGS}:" Makefile
 }
 
