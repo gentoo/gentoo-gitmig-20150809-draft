@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcommon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.19 2007/12/25 14:19:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.20 2007/12/26 11:06:26 maekke Exp $
+
+  26 Dec 2007; Markus Meier <maekke@gentoo.org> jcommon-1.0.12.ebuild:
+  x86 stable, bug #201306
 
   25 Dec 2007; Samuli Suominen <drac@gentoo.org> jcommon-1.0.12.ebuild:
   amd64 stable wrt #201306

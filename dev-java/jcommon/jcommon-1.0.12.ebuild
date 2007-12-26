@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-1.0.12.ebuild,v 1.3 2007/12/25 14:19:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-1.0.12.ebuild,v 1.4 2007/12/26 11:06:26 maekke Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -12,7 +12,7 @@ MY_P=${PN}-$(replace_version_separator 3 -)
 SRC_URI="mirror://sourceforge/jfreechart/${MY_P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="1.0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug"
 DEPEND=">=virtual/jdk-1.4
 		test? ( dev-java/junit )"
