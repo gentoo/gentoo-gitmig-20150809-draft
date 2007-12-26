@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courierpassd/courierpassd-1.1.2.ebuild,v 1.1 2007/07/26 23:05:10 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courierpassd/courierpassd-1.1.2.ebuild,v 1.2 2007/12/26 21:39:47 phreak Exp $
 
 inherit eutils
 DESCRIPTION="Courierpassd is a utility for changing a user's password from across a network"
 HOMEPAGE="http://www.arda.homeunix.net/"
 SRC_URI="http://www.arda.homeunix.net/store/${P}.tar.gz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
