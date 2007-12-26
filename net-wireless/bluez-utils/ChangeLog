@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.112 2007/12/26 14:44:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.113 2007/12/26 14:48:57 betelgeuse Exp $
+
+  26 Dec 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -bluez-utils-3.12.ebuild, -bluez-utils-3.14.ebuild,
+  -bluez-utils-3.15.ebuild, -bluez-utils-3.16.ebuild,
+  -bluez-utils-3.18.ebuild:
+  Remove old versions.
 
 *bluez-utils-3.24 (26 Dec 2007)
 

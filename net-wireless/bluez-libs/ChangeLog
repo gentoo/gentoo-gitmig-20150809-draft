@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.97 2007/12/26 14:44:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.98 2007/12/26 14:48:45 betelgeuse Exp $
+
+  26 Dec 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -bluez-libs-2.24.ebuild, -bluez-libs-3.12.ebuild, -bluez-libs-3.14.ebuild,
+  -bluez-libs-3.15.ebuild, -bluez-libs-3.16.ebuild, -bluez-libs-3.18.ebuild:
+  Remove old versions.
 
 *bluez-libs-3.24 (26 Dec 2007)
 
