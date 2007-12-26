@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/seaview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.20 2007/12/25 12:57:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.21 2007/12/26 10:26:29 drac Exp $
+
+  26 Dec 2007; Samuli Suominen <drac@gentoo.org> seaview-2.2.ebuild:
+  amd64 stable wrt #203185
 
   25 Dec 2007; nixnut <nixnut@gentoo.org> seaview-2.2.ebuild:
   Stable on ppc wrt bug 203185

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/muscle-3.6.ebuild,v 1.4 2007/12/25 12:55:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/muscle-3.6.ebuild,v 1.5 2007/12/26 10:25:01 drac Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.drive5.com/muscle/"
 SRC_URI="http://www.drive5.com/muscle/downloads${PV}/${MY_P}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}"
