@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.1-r2.ebuild,v 1.9 2007/11/14 20:12:38 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.1-r2.ebuild,v 1.10 2007/12/26 22:25:43 coldwind Exp $
 
 inherit eutils
 
@@ -27,9 +27,10 @@ DEPEND="${RDEPEND}
 	dev-scheme/guile"
 
 pkg_setup() {
-	if ! built_with_use dev-libs/nettle ssl ; then
-		eerror "Please rebuild dev-libs/nettle with enabled ssl useflag"
-		die "dev-libs/nettle needs rebuilding with ssl useflag"
+	if ! built_with_use -a dev-libs/nettle gmp ssl ; then
+		eerror "Please rebuild dev-libs/nettle with gmp and ssl"
+		eerror "useflags enabled."
+		die "dev-libs/nettle needs rebuilding with gmp and ssl useflags"
 	fi
 }
 
