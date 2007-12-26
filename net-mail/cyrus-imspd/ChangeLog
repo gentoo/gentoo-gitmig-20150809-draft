@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imspd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.17 2007/12/16 13:48:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.18 2007/12/26 21:54:03 phreak Exp $
+
+  26 Dec 2007; Christian Heim <phreak@gentoo.org>
+  -files/digest-cyrus-imspd-1.8:
+  Cleaning out unused digest files.
 
 *cyrus-imspd-1.8-r1 (16 Dec 2007)
 
