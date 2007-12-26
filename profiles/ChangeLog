@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.942 2007/12/25 20:43:48 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.943 2007/12/26 13:29:13 betelgeuse Exp $
+
+  26 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Package.mask security vulnerable slot of dev-java/jfreechart.
 
   25 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org> package.mask:
   Mask herdstat-1.1.91
