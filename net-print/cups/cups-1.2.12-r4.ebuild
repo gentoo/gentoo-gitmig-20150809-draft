@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.12-r4.ebuild,v 1.1 2007/12/18 20:57:22 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.12-r4.ebuild,v 1.2 2007/12/26 16:55:59 cardoe Exp $
 
 WANT_AUTOMAKE=latest
 
@@ -98,6 +98,11 @@ src_unpack() {
 
 src_compile() {
 	export DSOFLAGS="${LDFLAGS}"
+
+	if use ldap; then
+		append-flags -DLDAP_DEPRECATED
+	fi
+
 	econf \
 		--with-cups-user=lp \
 		--with-cups-group=lp \
