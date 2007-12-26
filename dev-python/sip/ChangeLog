@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.108 2007/12/01 13:47:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.109 2007/12/26 00:50:24 caleb Exp $
+
+*sip-4.7.3 (26 Dec 2007)
+
+  26 Dec 2007; Caleb Tennis <caleb@gentoo.org> +sip-4.7.3.ebuild:
+  Version bump
 
   01 Dec 2007; nixnut <nixnut@gentoo.org> sip-4.7.1.ebuild:
   Stable on ppc wrt bug 200630
