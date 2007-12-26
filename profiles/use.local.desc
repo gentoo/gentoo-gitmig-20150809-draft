@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3238 2007/12/26 18:40:03 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3239 2007/12/26 21:25:05 phreak Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -542,6 +542,7 @@ dev-php5/eaccelerator:contentcache - Enable content caching
 dev-php5/eaccelerator:disassembler - Enable the eA disassembler
 dev-php5/eaccelerator:inode - Use inode-based caching
 dev-php5/php-gtk:extra - Enable GtkExtra support
+dev-php5/php-gtk:glade - Enable libglade support
 dev-php5/php-gtk:html - Enable GtkHTML2 support
 dev-php5/php-gtk:libsexy - Enable libsexy support
 dev-php5/php-gtk:mozembed - Enable GtkMozembed support
