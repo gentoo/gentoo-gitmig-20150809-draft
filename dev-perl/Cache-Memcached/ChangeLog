@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Cache-Memcached
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.56 2007/12/25 20:23:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.57 2007/12/26 07:43:37 drac Exp $
+
+  26 Dec 2007; Samuli Suominen <drac@gentoo.org>
+  Cache-Memcached-1.24.ebuild:
+  amd64 stable wrt #202730
 
   25 Dec 2007; Brent Baude <ranger@gentoo.org> Cache-Memcached-1.24.ebuild:
   Marking Cache-Memcached-1.24 ppc64 for bug 202730
