@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.5.3.ebuild,v 1.2 2007/12/25 00:04:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.5.3.ebuild,v 1.3 2007/12/26 19:08:52 nixnut Exp $
 
 inherit eutils autotools
 
@@ -32,6 +32,7 @@ src_unpack() {
 	sed \
 		-e 's:uname -m:echo @HOST_CPU@:' \
 		sysdeps/linux-gnu/Makefile > sysdeps/linux-gnu/Makefile.in
+	epatch "${FILESDIR}"/${P}-ppc.patch
 	eautoconf
 }
 

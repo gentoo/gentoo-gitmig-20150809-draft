@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.42 2007/12/24 15:36:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.43 2007/12/26 19:08:52 nixnut Exp $
+
+  26 Dec 2007; nixnut <nixnut@gentoo.org> +files/ltrace-0.5.3-ppc.patch,
+  ltrace-0.5.3.ebuild:
+  patch to make ltrace-0.5.3 build on ppc wrt bug 203380
 
 *ltrace-0.5.3 (24 Dec 2007)
 
