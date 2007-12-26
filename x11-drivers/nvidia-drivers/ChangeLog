@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.76 2007/12/21 20:34:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.77 2007/12/26 19:47:24 cardoe Exp $
+
+  26 Dec 2007; Doug Klima <cardoe@gentoo.org>
+  nvidia-drivers-100.14.19.ebuild, nvidia-drivers-100.14.23.ebuild:
+  fix patch to nvidia-xconfig on FreeBSD. bug #199761
 
   21 Dec 2007; Doug Klima <cardoe@gentoo.org>
   -nvidia-drivers-1.0.7185.ebuild, -nvidia-drivers-1.0.9639.ebuild:
