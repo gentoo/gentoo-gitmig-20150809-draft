@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/flamerobin-0.7.6.ebuild,v 1.4 2007/10/09 20:00:46 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/flamerobin-0.8.3.ebuild,v 1.1 2007/12/26 16:03:17 wltjr Exp $
 
 inherit eutils wxwidgets
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 
 LICENSE="BSD as-is"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="=x11-libs/wxGTK-2.6*
@@ -25,6 +25,9 @@ pkg_setup() {
 	need-wxwidgets gtk2
 }
 src_compile() {
+	# temp hack since configure is not executable
+	chmod +x configure
+
 	local myconf
 	myconf="${myconf} \
 		--disable-shared \
