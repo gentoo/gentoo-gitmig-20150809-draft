@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.9 2007/12/26 12:40:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.10 2007/12/26 21:44:04 caleb Exp $
 
 EAPI=1
 
@@ -23,11 +23,11 @@ IUSE="doc glib qt3support ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	sys-libs/zlib
-	glib? ( dev-libs/glib )" 	# Used in QtNetwork module
+	glib? ( dev-libs/glib )
+	!<=x11-libs/qt-4.4_rc:4"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	!<=x11-libs/qt-4.4_rc:4"
+	dev-util/pkgconfig"
 
 QT4_TARGET_DIRECTORIES="src/tools/moc src/tools/rcc src/tools/uic src/corelib src/xml src/network"
 
