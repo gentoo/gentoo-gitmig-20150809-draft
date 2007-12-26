@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/eselect-gnat-1.2.ebuild,v 1.1 2007/12/14 12:13:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/eselect-gnat-1.2.ebuild,v 1.2 2007/12/26 02:06:27 truedfx Exp $
 
 inherit eutils
 
@@ -28,5 +28,5 @@ src_install() {
 	newins "${FILESDIR}"/gnat.eselect-${PVR} gnat.eselect
 	dodir ${LIBDIR}
 	insinto ${LIBDIR}
-	newins "${FILESDIR}"/gnat-common-${PWR}.bash gnat-common.bash
+	newins "${FILESDIR}"/gnat-common-${PVR}.bash gnat-common.bash
 }

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-gnat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.17 2007/12/14 12:13:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.18 2007/12/26 02:06:27 truedfx Exp $
+
+  26 Dec 2007; Harald van Dĳk <truedfx@gentoo.org> eselect-gnat-1.2.ebuild:
+  Fix typo that left gnat-common.bash uninstalled
 
 *eselect-gnat-1.2 (14 Dec 2007)
 
