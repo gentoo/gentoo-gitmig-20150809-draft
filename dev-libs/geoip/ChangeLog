@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.77 2007/12/10 02:03:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.78 2007/12/26 17:47:07 pva Exp $
+
+*geoip-1.4.3 (26 Dec 2007)
+
+  26 Dec 2007; <pva@gentoo.org> +geoip-1.4.3.ebuild:
+  Version bump. Thank armin76 for report.
 
   10 Dec 2007; Jeroen Roovers <jer@gentoo.org> geoip-1.4.2.ebuild:
   Stable for HPPA (bug #201263).
