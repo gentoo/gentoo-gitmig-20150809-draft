@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/tsemgr
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/tsemgr/ChangeLog,v 1.1 2006/08/26 23:11:10 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/tsemgr/ChangeLog,v 1.2 2007/12/26 16:28:07 cla Exp $
+
+  26 Dec 2007; Dawid Węgliński <cla@gentoo.org> tsemgr-0.08.ebuild:
+  Stable on x86 (bug #202670)
 
 *tsemgr-0.08 (26 Aug 2006)
 
