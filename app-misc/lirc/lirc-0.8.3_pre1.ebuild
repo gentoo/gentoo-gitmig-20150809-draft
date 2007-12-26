@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre1.ebuild,v 1.7 2007/11/12 20:15:23 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre1.ebuild,v 1.8 2007/12/26 19:29:28 hd_brummy Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -250,6 +250,11 @@ src_unpack() {
 	if kernel_is ge 2 6 22 ; then
 		ewarn "Disabling lirc_gpio driver as it does no longer work Kernel 2.6.22+"
 		sed -i -e "s:lirc_gpio\.o::" drivers/lirc_gpio/Makefile.am
+	fi
+
+	# Bug #200508
+	if kernel_is ge 2 6 24 ; then
+		epatch "${FILESDIR}"/${P}-kernel-2.6.24.patch
 	fi
 
 	# respect CFLAGS
