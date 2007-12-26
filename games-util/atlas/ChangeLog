@@ -1,6 +1,10 @@
 # ChangeLog for games-util/atlas
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.13 2007/03/12 18:20:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.14 2007/12/26 00:12:19 tupone Exp $
+
+  26 Dec 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/atlas-0.3.1-simgearNew.patch, atlas-0.3.1.ebuild:
+  Fix building with simgear 1.0.0 Bug #203303 by Thomas Witt
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> atlas-0.2.2-r1.ebuild,
   atlas-0.3.0.ebuild, atlas-0.3.1.ebuild:

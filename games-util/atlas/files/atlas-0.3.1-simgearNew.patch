@@ -1,0 +1,31 @@
+--- src/Makefile.am.old	2007-12-26 00:41:52.000000000 +0100
++++ src/Makefile.am	2007-12-26 00:42:10.000000000 +0100
+@@ -23,7 +23,7 @@
+ 	Projection.cxx Projection.hxx
+ 
+ Atlas_LDADD = \
+-	-lsgmagvar -lsgtiming -lsgmisc -lsgio -lsgserial -lsgdebug -lsgbucket\
++	-lsgmagvar -lsgtiming -lsgstructure -lsgmisc -lsgio -lsgserial -lsgdebug -lsgbucket\
+ 	-lsgxml -lplibsg -lplibpu -lplibul -lplibfnt -lplibnet \
+ 	$(opengl_LIBS) \
+ 	-lpng -lz -lpthread -ljpeg
+--- src/Makefile.am.old	2007-12-26 00:51:56.000000000 +0100
++++ src/Makefile.am	2007-12-26 00:52:37.000000000 +0100
+@@ -40,7 +40,7 @@
+ 	fg_mkdir.cxx fg_mkdir.hxx
+ 
+ Map_LDADD = \
+-	-lsgmagvar -lsgtiming -lsgmisc -lsgio -lsgdebug \
++	-lsgmagvar -lsgtiming -lsgstructure -lsgmisc -lsgio -lsgdebug \
+ 	-lplibsg -lplibpu -lplibul -lplibfnt -lsgbucket -lsgscreen \
+ 	$(opengl_LIBS) \
+ 	-lpng -lz -ljpeg
+@@ -56,7 +56,7 @@
+ 	Scenery.cxx Scenery.hxx
+ 
+ MapPS_LDADD = \
+-	-lsgmagvar -lsgtiming -lsgmisc -lsgio -lsgdebug \
++	-lsgmagvar -lsgtiming -lsgstructure -lsgmisc -lsgio -lsgdebug \
+ 	-lplibsg -lsgbucket \
+ 	-lpng -lz
+ 
