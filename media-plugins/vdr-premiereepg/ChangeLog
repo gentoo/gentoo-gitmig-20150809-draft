@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-premiereepg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/ChangeLog,v 1.8 2007/10/28 16:27:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/ChangeLog,v 1.9 2007/12/26 10:57:07 hd_brummy Exp $
+
+  26 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -files/vdr-premiereepg-0.0.6-fix-epg.patch,
+  +files/vdr-premiereepg-0.0.8-fix-epg.patch,
+  -vdr-premiereepg-0.0.6-r1.ebuild, -vdr-premiereepg-0.0.7.ebuild,
+  vdr-premiereepg-0.0.8.ebuild:
+  clean up; stable on x86; added fix for missing epg on some direkt feeds; fix
+  wrong sed call in Makefile
 
 *vdr-premiereepg-0.0.8 (28 Oct 2007)
 

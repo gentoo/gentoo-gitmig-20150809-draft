@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/vdr-premiereepg-0.0.8.ebuild,v 1.1 2007/10/28 16:27:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/vdr-premiereepg-0.0.8.ebuild,v 1.2 2007/12/26 10:57:07 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -10,18 +10,21 @@ SRC_URI="http://www.muempf.de/down/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 # This plugin uses the libsi-code fixed in v1.4.0-3
 DEPEND=">=media-video/vdr-1.4.1"
 RDEPEND="${DEPEND}"
 
+PATCHES="${FILESDIR}/${P}-fix-epg.patch"
+
 src_unpack() {
 	vdr-plugin_src_unpack
 
 	cd "${S}"
 	fix_vdr_libsi_include premiereepg.c
+	sed -i Makefile -e "s:i18n.c:i18n.h:"
 }
 
 pkg_postinst() {
