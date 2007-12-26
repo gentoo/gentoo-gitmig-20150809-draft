@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mktorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mktorrent/ChangeLog,v 1.1 2007/10/16 16:29:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mktorrent/ChangeLog,v 1.2 2007/12/26 21:48:34 phreak Exp $
+
+  26 Dec 2007; Christian Heim <phreak@gentoo.org>
+  +files/digest-mktorrent-0.2, Manifest:
+  Adding the missing digest.
 
 *mktorrent-0.2 (16 Oct 2007)
 
