@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.4.0_rc1.ebuild,v 1.1 2007/12/24 14:52:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.4.0_rc1.ebuild,v 1.2 2007/12/26 00:44:32 caleb Exp $
 
 inherit qt4-build
 
 SRCTYPE="preview-opensource-src"
-DESCRIPTION="The SQL module for the Qt toolkit."
+DESCRIPTION="The assistant help module for the Qt toolkit."
 HOMEPAGE="http://www.trolltech.com/"
 
 MY_PV=${PV/_rc/-tp}
