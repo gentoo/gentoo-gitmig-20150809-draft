@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.8 2007/12/26 12:39:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.4.0_rc1.ebuild,v 1.9 2007/12/26 12:40:32 caleb Exp $
 
 EAPI=1
 
@@ -45,8 +45,8 @@ src_compile() {
 
 	myconf="${myconf} -no-xkb -no-tablet -no-fontconfig -no-xrender -no-xrandr -no-xfixes -no-xcursor \
 	-no-xinerama -no-xshape -no-sm -no-opengl -no-nas-sound -no-qdbus -iconv -no-cups -no-nis \
-	-no-gif -no-libpng -no-libmng -no-libjpeg -no-openssl -system-zlib -no-webkit -no-phonon \
-	-no-xmlpatterns -no-freetype -no-libtiff  -no-accessibility -no-fontconfig -no-glib -no-opengl"
+	-no-gif -no-libpng -no-libmng -no-libjpeg -system-zlib -no-webkit -no-phonon \
+	-no-xmlpatterns -no-freetype -no-libtiff  -no-accessibility -no-fontconfig -no-opengl"
 
 	echo ./configure ${myconf}
 	./configure ${myconf} || die
