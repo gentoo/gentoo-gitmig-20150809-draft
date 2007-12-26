@@ -1,0 +1,11 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ada/ChangeLog,v 1.1 2007/12/26 22:07:35 george Exp $
+
+*ada-2005 (26 Dec 2007)
+*ada-1995 (26 Dec 2007)
+
+  26 Dec 2007; George Shapovalov <george@gentoo.org> +metadata.xml,
+  +ada-1995.ebuild, +ada-2005.ebuild:
+  new virtual, to track Ada standard versions
+
