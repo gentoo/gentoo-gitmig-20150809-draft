@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.7.2.ebuild,v 1.12 2007/07/31 02:28:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.7.2.ebuild,v 1.13 2007/12/26 22:11:25 phreak Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND="gpm? ( >=sys-libs/gpm-1.20 )
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-3.7.2-nostrip.patch
 }
 
@@ -32,11 +32,11 @@ src_compile() {
 }
 
 src_install() {
-	make INSTALL_ROOT=${D} install || die
-	TMPDIR=../../Programs scanelf -RBXr ${D} -o /dev/null
+	make INSTALL_ROOT="${D}" install || die
+	TMPDIR=../../Programs scanelf -RBXr "${D}" -o /dev/null
 	libdir="$(get_libdir)"
-	mkdir -p ${D}/usr/${libdir}/
-	mv ${D}/${libdir}/*.a ${D}/usr/${libdir}/
+	mkdir -p "${D}"/usr/${libdir}/
+	mv "${D}"/${libdir}/*.a "${D}"/usr/${libdir}/
 	gen_usr_ldscript libbrlapi.so
 	cd Documents
 	rm *.made

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8-r2.ebuild,v 1.13 2007/04/28 17:17:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8-r2.ebuild,v 1.14 2007/12/26 22:13:14 phreak Exp $
 
 IUSE=""
 
@@ -23,10 +23,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-shared_flite.patch
-	epatch ${FILESDIR}/${P}-daemon.patch
-	epatch ${FILESDIR}/${P}-read_pipe.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-shared_flite.patch
+	epatch "${FILESDIR}"/${P}-daemon.patch
+	epatch "${FILESDIR}"/${P}-read_pipe.patch
 
 	sed -i 's:/etc/es.conf:/etc/eflite/es.conf:g' *
 
@@ -38,9 +38,9 @@ src_install() {
 	dodoc ChangeLog README INSTALL eflite_test.txt
 
 	insinto /etc/eflite
-	doins ${FILESDIR}/es.conf
+	doins "${FILESDIR}"/es.conf
 
-	newinitd ${FILESDIR}/eflite.rc eflite
+	newinitd "${FILESDIR}"/eflite.rc eflite
 }
 
 pkg_postinst() {

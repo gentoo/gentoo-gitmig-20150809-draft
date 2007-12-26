@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.8.ebuild,v 1.9 2007/09/22 14:26:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.8.ebuild,v 1.10 2007/12/26 22:11:25 phreak Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -26,17 +26,17 @@ src_compile() {
 }
 
 src_install() {
-	make INSTALL_PROGRAM="\${INSTALL_SCRIPT}" INSTALL_ROOT=${D} install || die
-	TMPDIR=../../Programs scanelf -RBXr ${D} -o /dev/null
+	make INSTALL_PROGRAM="\${INSTALL_SCRIPT}" INSTALL_ROOT="${D}" install || die
+	TMPDIR=../../Programs scanelf -RBXr "${D}" -o /dev/null
 	libdir="$(get_libdir)"
-	mkdir -p ${D}/usr/${libdir}/
-	mv ${D}/${libdir}/*.a ${D}/usr/${libdir}/
+	mkdir -p "${D}"/usr/${libdir}/
+	mv "${D}"/${libdir}/*.a "${D}"/usr/${libdir}/
 	gen_usr_ldscript libbrlapi.so
 	cd Documents
 	rm *.made
 	dodoc ChangeLog README* Manual.* TODO brltty.conf
 	dohtml -r Manual-HTML
-	newinitd ${FILESDIR}/brltty.rc brltty
+	newinitd "${FILESDIR}"/brltty.rc brltty
 	if use doc; then
 		dodoc BrlAPI.* BrlAPIref.doxy
 		dohtml -r BrlAPI-HTML BrlAPIref-HTML

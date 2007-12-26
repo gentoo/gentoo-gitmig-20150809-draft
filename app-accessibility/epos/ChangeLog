@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/epos
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.23 2007/09/13 13:31:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.24 2007/12/26 22:19:50 phreak Exp $
+
+  26 Dec 2007; Christian Heim <phreak@gentoo.org> epos-2.5.23-r1.ebuild:
+  Fix the quotation.
 
   13 Sep 2007; William Hubbs <williamh@gentoo.org> epos-2.5.37.ebuild:
   Fixed compilation issue, thanks to kavol@email.cz.

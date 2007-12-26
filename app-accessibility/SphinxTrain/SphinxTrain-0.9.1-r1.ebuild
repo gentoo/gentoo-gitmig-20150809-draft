@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.10 2007/01/23 14:35:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.11 2007/12/26 22:07:22 phreak Exp $
 
 inherit eutils
 
@@ -21,9 +21,9 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/gcc.patch
-	epatch ${FILESDIR}/gcc34.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/gcc.patch
+	epatch "${FILESDIR}"/gcc34.patch
 }
 
 src_install() {
