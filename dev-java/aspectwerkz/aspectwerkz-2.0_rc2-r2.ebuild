@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r2.ebuild,v 1.7 2007/12/25 13:19:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r2.ebuild,v 1.8 2007/12/26 12:34:52 maekke Exp $
 
 JAVA_PKG_BSFIX="off"
 # no rewriting required since we patch build.xml to contain target/source
@@ -12,7 +12,7 @@ SRC_URI="http://dist.codehaus.org/${PN}/distributions/${P/_rc/.RC}.zip"
 HOMEPAGE="http://aspectwerkz.codehaus.org"
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 RDEPEND=">=virtual/jre-1.3
 	=dev-java/asm-1.5*
 	dev-java/bcel
@@ -38,12 +38,12 @@ S=${WORKDIR}/aw_2_0_2
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch
-	epatch ${FILESDIR}/${P}-jdk15.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-jdk15.patch
 
 	find . -name '*.jar' -exec rm {} \; || die
-	cd ${S}/lib
+	cd "${S}"/lib
 	#rm *.jar
 	java-pkg_jar-from asm-1.5
 	java-pkg_jar-from bcel
