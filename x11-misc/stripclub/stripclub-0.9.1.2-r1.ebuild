@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/stripclub-0.9.1.2-r1.ebuild,v 1.1 2007/12/01 20:57:19 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/stripclub-0.9.1.2-r1.ebuild,v 1.2 2007/12/26 22:49:42 cla Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/stripclub/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc x86"
 IUSE=""
 
 DEPEND=">=x11-libs/fltk-1.1.4
