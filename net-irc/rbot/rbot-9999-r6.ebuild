@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r5.ebuild,v 1.1 2007/12/17 22:13:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r6.ebuild,v 1.1 2007/12/26 20:25:18 flameeyes Exp $
 
 inherit ruby gems eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.linuxbrit.co.uk/rbot/"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS=""
-IUSE="spell aspell timezone translator shorturl"
+IUSE="spell aspell timezone translator shorturl nls"
 ILINGUAS="zh ru nl de fr it en ja"
 
 for lang in $ILINGUAS; do
@@ -27,8 +27,9 @@ RDEPEND=">=virtual/ruby-1.8
 		!aspell? ( app-text/ispell )
 	)
 	translator? ( dev-ruby/mechanize )
-	shorturl? ( dev-ruby/shorturl )"
-DEPEND=""
+	shorturl? ( dev-ruby/shorturl )
+	nls? ( dev-ruby/ruby-gettext )"
+DEPEND="nls? ( dev-ruby/ruby-gettext )"
 
 if [[ ${PV} == "9999" ]]; then
 	SRC_URI=""
@@ -66,6 +67,9 @@ src_unpack() {
 
 src_compile() {
 	[[ ${PV} == "9999" ]] || return 0
+	if use nls; then
+		rake makemo || die "locale generation failed"
+	fi
 	rake || die "Gem generation failed"
 }
 
