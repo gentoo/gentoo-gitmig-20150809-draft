@@ -5,10 +5,10 @@ AUX otpcalc-0.97-badindex.diff 300 RMD160 7a4eb69a009df9d3666ce135a3fc9061284c6d
 MD5 9f150d63ce347efb91f683233ff9b53d files/otpcalc-0.97-badindex.diff 300
 RMD160 7a4eb69a009df9d3666ce135a3fc9061284c6db6 files/otpcalc-0.97-badindex.diff 300
 SHA256 e61ee91721e6accb7b54697619422f38bb961136462ef1a2342ba7ad11623703 files/otpcalc-0.97-badindex.diff 300
-AUX otpcalc-0.97-gtk2-gentoo.patch 2012 RMD160 8e46237d01de8b8c9496631a226837e2d8ed56e7 SHA1 1f83cf0bf14370e942a2d9e29b74cae1135b1d80 SHA256 0f7443d566af50e01b599554d722e1851b2c17db6c2fe69528697f92520c9236
-MD5 995e29c736eaf8f3266d6a329b5bd63b files/otpcalc-0.97-gtk2-gentoo.patch 2012
-RMD160 8e46237d01de8b8c9496631a226837e2d8ed56e7 files/otpcalc-0.97-gtk2-gentoo.patch 2012
-SHA256 0f7443d566af50e01b599554d722e1851b2c17db6c2fe69528697f92520c9236 files/otpcalc-0.97-gtk2-gentoo.patch 2012
+AUX otpcalc-0.97-gtk2-gentoo.patch 2010 RMD160 859253c77a9f68e3f0fc048b579a0e4d6a5e6f1c SHA1 8e53b5bc316cdab11c3f2f99d3e8911b5b7d0b60 SHA256 edfabb39df8e1b82b084485cb5a9231956f0b22255f065624bb25fd73f4b7b82
+MD5 27aa6f46596c9bb85730790635dd5eda files/otpcalc-0.97-gtk2-gentoo.patch 2010
+RMD160 859253c77a9f68e3f0fc048b579a0e4d6a5e6f1c files/otpcalc-0.97-gtk2-gentoo.patch 2010
+SHA256 edfabb39df8e1b82b084485cb5a9231956f0b22255f065624bb25fd73f4b7b82 files/otpcalc-0.97-gtk2-gentoo.patch 2010
 AUX otpcalc-crypto-proto.diff 528 RMD160 94792659215b7948befdf0032c1cfa03ca60dd92 SHA1 6e1f518c345d10fdb31b1f8c677c28f63e4b89ef SHA256 906d0b413d531fe2782c2ab4724a44ca856072895e2538a4e78d59929136a00d
 MD5 2d197e8e21678130894cb4fbeb7c1899 files/otpcalc-crypto-proto.diff 528
 RMD160 94792659215b7948befdf0032c1cfa03ca60dd92 files/otpcalc-crypto-proto.diff 528
@@ -43,7 +43,7 @@ SHA256 1655a62fd47487dca1851278538a0e5a0af1e679b445bd65b48aee89e1f51cbb files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.8 (GNU/Linux)
 
-iEYEARECAAYFAkdxo6EACgkQOeoy/oIi7uyy6QCgsVc6JUYE9SsJvpDnLLShNQUs
-gbkAoM1n3LkWyIRAZOj6wIRKr7vNkgQj
-=jRzD
+iEYEARECAAYFAkdxqPgACgkQOeoy/oIi7uxL9wCgqUonFRX4rhcupbVv1EZ6PLgA
+++IAn1qIjIUnGVz8ilPDjBJ9sW1dfC+q
+=kW9O
 -----END PGP SIGNATURE-----

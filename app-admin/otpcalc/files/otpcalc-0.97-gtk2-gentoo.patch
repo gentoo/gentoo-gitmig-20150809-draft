@@ -64,7 +64,7 @@
  			words[extract(message, 44, 11)],
  			words[extract(message, 55, 11)],
 -			(newline == 1) ? "\n" : NULL);
-+			(newline == 1) ? "\n" : "\0");
++			(newline == 1) ? "\n" : "");
  
  	return response;
  
