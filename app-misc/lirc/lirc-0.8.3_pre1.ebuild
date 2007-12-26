@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre1.ebuild,v 1.8 2007/12/26 19:29:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre1.ebuild,v 1.9 2007/12/26 23:31:52 hd_brummy Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -254,7 +254,7 @@ src_unpack() {
 
 	# Bug #200508
 	if kernel_is ge 2 6 24 ; then
-		epatch "${FILESDIR}"/${P}-kernel-2.6.24.patch
+		epatch "${FILESDIR}"/${P}-kernel-2.6.24.diff
 	fi
 
 	# respect CFLAGS
