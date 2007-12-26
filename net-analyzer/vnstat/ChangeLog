@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.25 2007/09/06 18:50:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.26 2007/12/26 17:28:51 pva Exp $
+
+*vnstat-1.5 (26 Dec 2007)
+
+  26 Dec 2007; <pva@gentoo.org> metadata.xml, vnstat-1.4-r2.ebuild,
+  +vnstat-1.5.ebuild:
+  Version bump. Thank armin76 for report. --dbdir is droped as you can do the
+  same in configuration file.
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -vnstat-1.1.ebuild,
   -vnstat-1.4.ebuild, -vnstat-1.4-r1.ebuild:

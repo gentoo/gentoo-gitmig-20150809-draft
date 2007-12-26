@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4-r2.ebuild,v 1.10 2007/12/26 17:28:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.5.ebuild,v 1.1 2007/12/26 17:28:51 pva Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,37 +10,29 @@ SRC_URI="http://humdi.net/vnstat/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="virtual/cron"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch \
-		"${FILESDIR}/${P}-long_iface_name.patch" \
-		"${FILESDIR}/${P}-dbdir.patch"
-	sed -i \
-		-e "s:^\(CFLAGS = \).*$:\1${CFLAGS}:" \
-		-e "s:^\(CC = \).*$:\1$(tc-getCC):" \
-		src/Makefile || die "sed failed"
-}
-
 src_compile() {
-	emake || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "Compilation failed"
 }
 
 src_install() {
-	keepdir /var/lib/vnstat
-
 	dobin src/vnstat || die
 	exeinto /etc/cron.hourly
 	newexe "${FILESDIR}"/vnstat.cron vnstat
+
+	insinto /etc
+	doins cfg/vnstat.conf
+
 	doman man/vnstat.1
 
-	newdoc pppd/vnstat_ip-down ip-down.example
+	keepdir /var/lib/vnstat
+
 	newdoc pppd/vnstat_ip-up ip-up.example
+	newdoc pppd/vnstat_ip-down ip-down.example
 	dodoc CHANGES README UPGRADE FAQ
 	newdoc INSTALL README.setup
 }
@@ -63,7 +55,7 @@ pkg_postinst() {
 	elog
 
 	if [[ -e ${ROOT}/etc/cron.d/vnstat ]] ; then
-		elog "vnstat\'s cron script is now installed as /etc/cron.hourly/vnstat."
+		elog "vnstat's cron script is now installed as /etc/cron.hourly/vnstat."
 		elog "Please remove /etc/cron.d/vnstat."
 		elog
 	else
@@ -72,4 +64,7 @@ pkg_postinst() {
 	fi
 	elog "To update your interface database automatically with"
 	elog "cron, uncomment the lines in /etc/cron.hourly/vnstat."
+	elog
+	elog "Starting with version 1.5 --dbdir option is droped. You can do the same"
+	elog "with DatabaseDir directive in configuration file (/etc/vnstat.conf)."
 }
