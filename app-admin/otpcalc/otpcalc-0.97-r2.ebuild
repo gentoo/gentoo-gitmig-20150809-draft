@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/otpcalc-0.97-r2.ebuild,v 1.1 2007/12/26 00:42:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/otpcalc-0.97-r2.ebuild,v 1.2 2007/12/26 10:14:53 ulm Exp $
 
 inherit eutils
 
@@ -37,4 +37,15 @@ src_unpack() {
 src_install() {
 	dobin otpCalc || die
 	newman otpCalc.man otpCalc.1 || die
+
+	cat <<-EOF >"${T}"/${PN}.desktop
+	[Desktop Entry]
+	Type=Application
+	Version=1.0
+	Name=otpCalc
+	Comment=One Time Password and S/Key calculator
+	Exec=otpCalc
+	Categories=Utility;GTK;Security;
+	EOF
+	domenu "${T}"/${PN}.desktop || die
 }
