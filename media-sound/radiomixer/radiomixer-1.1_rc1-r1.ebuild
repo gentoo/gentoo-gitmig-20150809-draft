@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.1_rc1-r1.ebuild,v 1.1 2007/12/26 01:35:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.1_rc1-r1.ebuild,v 1.2 2007/12/26 12:47:33 mr_bones_ Exp $
 
 inherit kde-functions eutils
 
@@ -117,4 +117,3 @@ pkg_postinst() {
 		fi
 	fi
 }
-
