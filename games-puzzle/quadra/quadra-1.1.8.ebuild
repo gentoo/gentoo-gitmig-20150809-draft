@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.16 2007/07/06 22:18:36 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.17 2007/12/26 12:24:24 tupone Exp $
 
 inherit eutils games
 
@@ -26,6 +26,7 @@ src_unpack() {
 		"${FILESDIR}"/${P}-gcc3.patch \
 		"${FILESDIR}"/libpng-1.2.5.patch \
 		"${FILESDIR}"/${P}-amd64.patch \
+		"${FILESDIR}"/${P}-asneeded.patch \
 		"${FILESDIR}"/${P}-gcc42.patch
 	sed -i \
 		-e 's:-pedantic::' config/vars.mk \
