@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/scala-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.8 2007/12/25 13:26:13 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.9 2007/12/26 13:41:14 betelgeuse Exp $
+
+  26 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Move from maintainer-needed to java.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing karltk from metadata.xml as per #200332. Assigning to
