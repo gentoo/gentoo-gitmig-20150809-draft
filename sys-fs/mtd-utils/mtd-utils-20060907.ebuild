@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20060907.ebuild,v 1.1 2006/09/08 01:02:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20060907.ebuild,v 1.2 2007/12/26 05:52:11 robbat2 Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -15,9 +15,11 @@ IUSE=""
 
 S=${WORKDIR}/${PN}
 
-DEPEND="sys-libs/zlib
-		sys-apps/acl
-		!sys-fs/mtd"
+RDEPEND="!sys-fs/mtd
+		sys-libs/zlib"
+# ACL is only required for the <sys/acl.h> header file to build mkfs.jffs2
+DEPEND="sys-apps/acl
+		${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
