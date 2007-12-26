@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courierpassd/courierpassd-1.1.2.ebuild,v 1.2 2007/12/26 21:39:47 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courierpassd/courierpassd-1.1.2.ebuild,v 1.3 2007/12/26 21:42:31 phreak Exp $
 
 inherit eutils
 DESCRIPTION="Courierpassd is a utility for changing a user's password from across a network"
@@ -18,12 +18,12 @@ DEPEND="net-libs/courier-authlib
 RDEPEND="${DEPEND}"
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	if use xinetd; then
 		insinto /etc/xinetd.d
-		doins ${FILESDIR}/courierpassd || die "doins failed"
+		doins "${FILESDIR}/courierpassd" || die "doins failed"
 	fi
 
-	dodoc README AUTHORS COPYING ChangeLog INSTALL NEWS || die "dodoc failed"
+	dodoc README AUTHORS ChangeLog NEWS || die "dodoc failed"
 }
