@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.1_rc1.ebuild,v 1.1 2007/12/13 16:15:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.1_rc1-r1.ebuild,v 1.1 2007/12/26 01:35:24 jokey Exp $
 
 inherit kde-functions eutils
 
@@ -91,6 +91,7 @@ src_compile() {
 	export QTDIR PATH LD_LIBRARY_PATH DYLD_LIBRARY_PATH
 	einfo "Using QTDIR: '$QTDIR'."
 
+	# qcm, not autotools!
 	./configure ${myconf}
 
 	emake || die "emake failed"
@@ -98,4 +99,22 @@ src_compile() {
 
 src_install() {
 	dobin bin/radiomixer || die "dobin failed"
+	if use jack; then
+		if use mad || use vorbis; then
+			insinto /usr/share/doc/${PF}
+			doins "${FILESDIR}"/radiomixer{rc,-patchbay.xml}
+		fi
+	fi
 }
+
+pkg_postinst() {
+	if use jack; then
+		if use mad || use vorbis; then
+			elog "In your system docdir there is a sample config. Just stick"
+			elog "it into ~/.qt of the user you run it as, and take a look at"
+			elog "the sample patchbay file for qjackctl on how to connect it"
+			elog "in jack"
+		fi
+	fi
+}
+
