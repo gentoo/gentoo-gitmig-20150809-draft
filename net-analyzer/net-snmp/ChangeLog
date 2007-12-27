@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.163 2007/12/27 17:15:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.164 2007/12/27 20:05:32 pva Exp $
+
+*net-snmp-5.4.1-r3 (27 Dec 2007)
+
+  27 Dec 2007; <pva@gentoo.org>
+  -files/net-snmp-5.2.1-fix-64bit-interface-counters.diff,
+  -files/net-snmp-5.2.1-fix-insecure-fixproc.diff,
+  -net-snmp-5.2.1.2-r1.ebuild, -net-snmp-5.3.0.1.ebuild,
+  -net-snmp-5.3.1.ebuild, -net-snmp-5.4-r1.ebuild, -net-snmp-5.4.1.ebuild,
+  -net-snmp-5.4.1-r2.ebuild, +net-snmp-5.4.1-r3.ebuild:
+  Added extensible USE flag to build extensible mib module, bug 200279, thank
+  Honza <hkmaly AT bigfoot.com> for report. Remove old.
 
 *net-snmp-5.4.1-r2 (27 Dec 2007)
 
