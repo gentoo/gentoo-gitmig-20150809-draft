@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.8-r4.ebuild,v 1.1 2007/12/22 21:21:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.8-r4.ebuild,v 1.2 2007/12/27 17:19:08 carlo Exp $
 
 inherit multilib kde-dist eutils flag-o-matic
 
@@ -15,7 +15,7 @@ pam samba xcomposite xscreensaver xinerama kdehiddenvisibility"
 
 # hal: enables hal backend for 'media:' ioslave
 
-DEPEND=">=media-libs/freetype-2
+DEPEND=">=media-libs/freetype-2.3
 	media-libs/fontconfig
 	dev-libs/openssl
 	pam? ( kde-base/kdebase-pam )

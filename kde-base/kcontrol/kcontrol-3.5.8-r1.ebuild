@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.8-r1.ebuild,v 1.1 2007/12/22 21:16:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.8-r1.ebuild,v 1.2 2007/12/27 17:16:02 carlo Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -14,7 +14,7 @@ DESCRIPTION="The KDE Control Center"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="arts ieee1394 joystick logitech-mouse opengl kdehiddenvisibility"
 
-DEPEND=">=media-libs/freetype-2
+DEPEND=">=media-libs/freetype-2.3
 	media-libs/fontconfig
 	dev-libs/openssl
 	arts? ( $(deprange 3.5.5 $MAXKDEVER kde-base/arts) )

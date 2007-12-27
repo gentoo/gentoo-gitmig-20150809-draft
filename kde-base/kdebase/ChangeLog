@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.408 2007/12/22 21:21:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.409 2007/12/27 17:19:08 carlo Exp $
+
+  27 Dec 2007; Carsten Lohrke <carlo@gentoo.org> kdebase-3.5.8-r4.ebuild:
+  Raise minimum Freetype version, bug #196450.
 
 *kdebase-3.5.8-r4 (22 Dec 2007)
 

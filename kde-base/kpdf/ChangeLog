@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.146 2007/12/25 13:02:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.147 2007/12/27 17:26:31 carlo Exp $
+
+  27 Dec 2007; Carsten Lohrke <carlo@gentoo.org> kpdf-3.5.8-r1.ebuild:
+  Raise minimum Freetype version, bug #196450.
 
   25 Dec 2007; Carsten Lohrke <carlo@gentoo.org> kpdf-3.5.7-r3.ebuild,
   kpdf-3.5.8-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/kdvi-3.5.8.ebuild,v 1.1 2007/10/19 22:51:04 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/kdvi-3.5.8.ebuild,v 1.2 2007/12/27 17:23:05 carlo Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -12,7 +12,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="emacs tetex"
 
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/kviewshell)
-	>=media-libs/freetype-2
+	>=media-libs/freetype-2.3
 	emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}
 	tetex? ( virtual/tetex )"

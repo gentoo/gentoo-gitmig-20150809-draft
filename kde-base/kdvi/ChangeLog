@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdvi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/ChangeLog,v 1.75 2007/10/19 22:51:04 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/ChangeLog,v 1.76 2007/12/27 17:23:05 carlo Exp $
+
+  27 Dec 2007; Carsten Lohrke <carlo@gentoo.org> kdvi-3.5.8.ebuild:
+  Raise minimum Freetype version, bug #196450.
 
 *kdvi-3.5.8 (19 Oct 2007)
 
