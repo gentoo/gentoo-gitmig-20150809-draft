@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX 0.15-optional-features.patch 1374 RMD160 235f18e4c6b452e0cc8ecccf6062d6f8ba3995df SHA1 6af95a8e42ca8dac352848af43d38751ebcc03be SHA256 89878cbe6ff1ac632c93c6dec01488535ff994c21e926afe29d93d180fc29b9c
 MD5 0e9ad49dee7a897a1890fc2ba54758c0 files/0.15-optional-features.patch 1374
 RMD160 235f18e4c6b452e0cc8ecccf6062d6f8ba3995df files/0.15-optional-features.patch 1374
@@ -20,10 +17,10 @@ EBUILD bluez-gnome-0.14.ebuild 762 RMD160 d40278ead5d9feb039ee6d2a5671b1e1d26bd4
 MD5 1c48f5612966764dc9d882189eb398a1 bluez-gnome-0.14.ebuild 762
 RMD160 d40278ead5d9feb039ee6d2a5671b1e1d26bd454 bluez-gnome-0.14.ebuild 762
 SHA256 2f5dfcda65c842dcc1cda8a5270a438d56c48b85f9b6f4e1dcab900973884b63 bluez-gnome-0.14.ebuild 762
-EBUILD bluez-gnome-0.15.ebuild 959 RMD160 2abf1eedd40cf5dba8d25a632b8454980ba7c32a SHA1 44f609941ed0497d9661350dcdda7e1294ba2104 SHA256 9823ec13988b05faebad635d98a2f6c3a536f7ddb6d0c4ac8bd9f891485deb68
-MD5 c2bccfe8c724b52ce1385dfcae782d69 bluez-gnome-0.15.ebuild 959
-RMD160 2abf1eedd40cf5dba8d25a632b8454980ba7c32a bluez-gnome-0.15.ebuild 959
-SHA256 9823ec13988b05faebad635d98a2f6c3a536f7ddb6d0c4ac8bd9f891485deb68 bluez-gnome-0.15.ebuild 959
+EBUILD bluez-gnome-0.15.ebuild 957 RMD160 a9abf785b617b496a504785ab67dae20ae662d82 SHA1 540e11a2ad1845b89e0ca92691d3e5cab766fc96 SHA256 1d2358dfca132deb4f31ba87bcb6bc3b81675877c54b35d1a16440debecead02
+MD5 322ff2d6f6478f14f048e7b6d785e9d0 bluez-gnome-0.15.ebuild 957
+RMD160 a9abf785b617b496a504785ab67dae20ae662d82 bluez-gnome-0.15.ebuild 957
+SHA256 1d2358dfca132deb4f31ba87bcb6bc3b81675877c54b35d1a16440debecead02 bluez-gnome-0.15.ebuild 957
 MISC ChangeLog 2491 RMD160 43b22db7641b5784742c778ffc91e964af519d59 SHA1 94204ab042d0e7cd52f413dfd5f3dc91aff5420d SHA256 3581f97335acd97ded0e55e6d315fe153346c67c753a6b7cbcff915b97e20a0f
 MD5 79d2f1ed508f3f712e6bbd2b3fb6afe0 ChangeLog 2491
 RMD160 43b22db7641b5784742c778ffc91e964af519d59 ChangeLog 2491
@@ -41,10 +38,3 @@ SHA256 324b9365d72c581f74e994ca66cc40988663ea67ff30d3a45240ce2d7dfd2ea7 files/di
 MD5 490f81d40f890a7872db6bac0544d412 files/digest-bluez-gnome-0.15 250
 RMD160 31d624dd33314229e4a8decfc5c5a60f393e826e files/digest-bluez-gnome-0.15 250
 SHA256 93af5b209f9afd13bc67189bd42f9943fcaa7e31be59e0b55b2f9be893592d32 files/digest-bluez-gnome-0.15 250
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHcmipcxLzpIGCsLQRAogVAJ9GqZ3tDaPEIQPKrPUH++2juNjHwACfR8SO
-ZyF9mVPPqKC55mu7G3c/zx4=
-=3j5J
------END PGP SIGNATURE-----

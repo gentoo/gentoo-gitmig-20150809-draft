@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-0.15.ebuild,v 1.1 2007/12/26 14:43:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-0.15.ebuild,v 1.2 2007/12/27 06:32:18 mr_bones_ Exp $
 
 inherit autotools gnome2
 
@@ -32,6 +32,5 @@ src_unpack() {
 		$(use_enable hal)
 		$(use_enable libnotify)"
 }
-
 
 DOCS="AUTHORS README NEWS ChangeLog"
