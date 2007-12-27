@@ -96,7 +96,7 @@ diff -ur dmalloc-5.5.2.orig/Makefile.in dmalloc-5.5.2/Makefile.in
 -	$(srcdir)/mkinstalldirs $(shlibdir)
 -	$(INSTALL_PROGRAM) $(LIB_TH_CXX_SL) $(shlibdir)
 +	$(srcdir)/mkinstalldirs $(DESTDIR)$(shlibdir)
-+	$(INSTALL) $(LIB_TH) $(DESTDIR)$(libdir)
++	$(INSTALL) $(LIB_TH_CXX_SL) $(DESTDIR)$(libdir)
  
  installthcxx : $(INSTALL_TH_CXX)
 -	$(srcdir)/mkinstalldirs $(libdir)

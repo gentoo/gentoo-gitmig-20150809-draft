@@ -18,10 +18,10 @@ AUX dmalloc-5.4.2-sandbox.patch 2961 RMD160 f6fb37c3928e9b26f31ed471f61a3ee783cd
 MD5 d2bee893329cf15e900c4b653a533a0c files/dmalloc-5.4.2-sandbox.patch 2961
 RMD160 f6fb37c3928e9b26f31ed471f61a3ee783cdedf5 files/dmalloc-5.4.2-sandbox.patch 2961
 SHA256 626ea71be0d1e5433ba8f2e13f6033f9abfe386b35ad68966d131da105f528a3 files/dmalloc-5.4.2-sandbox.patch 2961
-AUX dmalloc-5.5.2-Makefile.in.patch 14015 RMD160 fa1abc717d769b83290f196f5b0302141202fda7 SHA1 e6200156c2744d2f4890be03c622c7706397df50 SHA256 a52b91c5bd0ab75773f121c35b398564096b39da684ea4ad691687e08d2e2467
-MD5 4079451e0cb1ab126b549dea2ac45ed6 files/dmalloc-5.5.2-Makefile.in.patch 14015
-RMD160 fa1abc717d769b83290f196f5b0302141202fda7 files/dmalloc-5.5.2-Makefile.in.patch 14015
-SHA256 a52b91c5bd0ab75773f121c35b398564096b39da684ea4ad691687e08d2e2467 files/dmalloc-5.5.2-Makefile.in.patch 14015
+AUX dmalloc-5.5.2-Makefile.in.patch 14022 RMD160 22917b8235f32522731198f5dd00e852c9c34e11 SHA1 0e46fe842a7b918ed740c4910f9d804a36253ff1 SHA256 b4eb76731fd732da31945e9b04efe7c30e1f3bef15f19ddc9d88375fb8619b99
+MD5 7db3cfbcae316a7182bae32312e029e4 files/dmalloc-5.5.2-Makefile.in.patch 14022
+RMD160 22917b8235f32522731198f5dd00e852c9c34e11 files/dmalloc-5.5.2-Makefile.in.patch 14022
+SHA256 b4eb76731fd732da31945e9b04efe7c30e1f3bef15f19ddc9d88375fb8619b99 files/dmalloc-5.5.2-Makefile.in.patch 14022
 AUX dmalloc-5.5.2-SONAME.patch 725 RMD160 be1c7b304487931e1233ec0560baacc428f926ea SHA1 fd3551ed0ed7a922533c7cab5e63843e7b6d013d SHA256 8fee842ff7bd1c1207fee05a4e1a6103c5e5f3eb3f9f1fa3ff60300e80ba196e
 MD5 82853f8cef039c8c6bd57ebf14430a9b files/dmalloc-5.5.2-SONAME.patch 725
 RMD160 be1c7b304487931e1233ec0560baacc428f926ea files/dmalloc-5.5.2-SONAME.patch 725
