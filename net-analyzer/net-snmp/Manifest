@@ -30,10 +30,14 @@ AUX net-snmp-5.4-makefile.patch 597 RMD160 90f8e6db0a05fd21c06e98b65b4bbd377f931
 MD5 d61d49e044489f4b4549cda0b7cbc336 files/net-snmp-5.4-makefile.patch 597
 RMD160 90f8e6db0a05fd21c06e98b65b4bbd377f931fe9 files/net-snmp-5.4-makefile.patch 597
 SHA256 fd8c6ceda9c5d99cd92f81a7977d2134960ee14fac3ab9f1f8c6d03c6a69edb1 files/net-snmp-5.4-makefile.patch 597
-AUX net-snmp-5.4.1-clientaddr-fix.patch 2942 RMD160 02893663d464cce39f6b54c3e27776d27fe5fe67 SHA1 fee0d795797f73de463aceaad13ebc24311763b9 SHA256 355b5661d1ecc066a8094969269b8af35e63e406a32547d6b0f8c3c57b1a4685
-MD5 68ccb8d180ff38847ed5e8d2561cbaee files/net-snmp-5.4.1-clientaddr-fix.patch 2942
-RMD160 02893663d464cce39f6b54c3e27776d27fe5fe67 files/net-snmp-5.4.1-clientaddr-fix.patch 2942
-SHA256 355b5661d1ecc066a8094969269b8af35e63e406a32547d6b0f8c3c57b1a4685 files/net-snmp-5.4.1-clientaddr-fix.patch 2942
+AUX net-snmp-5.4.1-clientaddr-fix.patch 4013 RMD160 52c45d7dd34b5aadcfd7ef48c445d47b5491936d SHA1 714fc3fccc65516ae2a6d836ce181edfd4dc83c3 SHA256 15a8f05e47eb337d8963ed2b1fd81ecb00fe9b631d3281507bdc1b17c5d542cb
+MD5 a2d2ee125af2704131671fa9bae4202f files/net-snmp-5.4.1-clientaddr-fix.patch 4013
+RMD160 52c45d7dd34b5aadcfd7ef48c445d47b5491936d files/net-snmp-5.4.1-clientaddr-fix.patch 4013
+SHA256 15a8f05e47eb337d8963ed2b1fd81ecb00fe9b631d3281507bdc1b17c5d542cb files/net-snmp-5.4.1-clientaddr-fix.patch 4013
+AUX net-snmp-5.4.1-suppresssuppress-annoying.patch 800 RMD160 aa23a30241ae64aeed6a08a630326fd7c2e0f9fe SHA1 2b99c56d1f659f324c5676d48ab257ea3b55467f SHA256 f5249b782079be96256ab6e7a0d398c04dfbcabffa7f4c716fe1abd39897aabe
+MD5 c7a81ab1db56208f1741b55a603cd9a0 files/net-snmp-5.4.1-suppresssuppress-annoying.patch 800
+RMD160 aa23a30241ae64aeed6a08a630326fd7c2e0f9fe files/net-snmp-5.4.1-suppresssuppress-annoying.patch 800
+SHA256 f5249b782079be96256ab6e7a0d398c04dfbcabffa7f4c716fe1abd39897aabe files/net-snmp-5.4.1-suppresssuppress-annoying.patch 800
 AUX net-snmp-lm_sensors.patch 13686 RMD160 b2e67c6f5a5347442fbaa97c9ce209f1d9bed194 SHA1 3e795339fc93306a4d662feeaa16faca2509a058 SHA256 51dc2363a687d9f4e65b0a59e767b33129d07623a0b4da07b685e406d2576b86
 MD5 25d92c9a7adcbb80240a914a8f6bbfe5 files/net-snmp-lm_sensors.patch 13686
 RMD160 b2e67c6f5a5347442fbaa97c9ce209f1d9bed194 files/net-snmp-lm_sensors.patch 13686
@@ -100,6 +104,10 @@ EBUILD net-snmp-5.4.1-r1.ebuild 5671 RMD160 f80be0a51951407ea401887739415e4bbde6
 MD5 3a7d3dd24eb2b1fd67ac39da6d17149b net-snmp-5.4.1-r1.ebuild 5671
 RMD160 f80be0a51951407ea401887739415e4bbde6ab42 net-snmp-5.4.1-r1.ebuild 5671
 SHA256 1baa77f1f39a2015cc5c66487cceef4d87719b3ad142993b094469d7ea6067e3 net-snmp-5.4.1-r1.ebuild 5671
+EBUILD net-snmp-5.4.1-r2.ebuild 5169 RMD160 7a50bb113a9e575e199c4535f1f4d8ad4f3d5496 SHA1 af5afa610acdbccd3632175d9ce4526e692b35de SHA256 0cd1e6f6a9e1880e2c0eba731269241199bb90c03ee19638da43561a02fb7eaf
+MD5 4707202a75c151e5dcf7109967d17253 net-snmp-5.4.1-r2.ebuild 5169
+RMD160 7a50bb113a9e575e199c4535f1f4d8ad4f3d5496 net-snmp-5.4.1-r2.ebuild 5169
+SHA256 0cd1e6f6a9e1880e2c0eba731269241199bb90c03ee19638da43561a02fb7eaf net-snmp-5.4.1-r2.ebuild 5169
 EBUILD net-snmp-5.4.1.ebuild 5051 RMD160 a113ba6a87b6c7094aba585d03243fece4c26eba SHA1 46501f28f9fc0fea166b0a5446b2bd8c055fe4a5 SHA256 3609f85a23da0f2c1ecb1543c8e6a4f920b8d420c0c7aefcf40e84dee54bee8d
 MD5 37f33954140d72610c3123bde5c1b0e7 net-snmp-5.4.1.ebuild 5051
 RMD160 a113ba6a87b6c7094aba585d03243fece4c26eba net-snmp-5.4.1.ebuild 5051
@@ -108,10 +116,10 @@ EBUILD net-snmp-5.4.ebuild 4980 RMD160 0644c9f896aad2319b6118a0197b1e5e1bf9dbae 
 MD5 b364b3ea366405299dd623556f0cac96 net-snmp-5.4.ebuild 4980
 RMD160 0644c9f896aad2319b6118a0197b1e5e1bf9dbae net-snmp-5.4.ebuild 4980
 SHA256 ca149d10943ae6cb71d0485fa939bb6d6ed0636f084948b03a91c0266a67b333 net-snmp-5.4.ebuild 4980
-MISC ChangeLog 26087 RMD160 2a76cc4161dd6b9d8c3e118c3f01dc648745be95 SHA1 cdd9b4809ccb96db75d51c55c41a7cbad52656cf SHA256 84c8ee783780d5735f9a5dd37a8ffe56255fe55bf902fdf46b08fe0d28d902ed
-MD5 871022ce023ba2b3127a81aea5d19ad7 ChangeLog 26087
-RMD160 2a76cc4161dd6b9d8c3e118c3f01dc648745be95 ChangeLog 26087
-SHA256 84c8ee783780d5735f9a5dd37a8ffe56255fe55bf902fdf46b08fe0d28d902ed ChangeLog 26087
+MISC ChangeLog 26491 RMD160 ad6f6a614d82f8ff8898598dc30369fa6318c452 SHA1 af7ce8a5d165b22c7f346df0522e0ea7b72006d3 SHA256 b8ab2fe0dfdcdcc73c985eebac34d221fcf0c73f62c90234c19f8afd4615880b
+MD5 c646683507cfe31808ea535361f7d32b ChangeLog 26491
+RMD160 ad6f6a614d82f8ff8898598dc30369fa6318c452 ChangeLog 26491
+SHA256 b8ab2fe0dfdcdcc73c985eebac34d221fcf0c73f62c90234c19f8afd4615880b ChangeLog 26491
 MISC metadata.xml 160 RMD160 2738573ec519cbef4b293bc132f7dd9d02291137 SHA1 29b8b234e0f3a475b50bd4df1ef8b4e5749823ce SHA256 39e232fc7ec88ca0b077cb3950cb39d15cd990842b88d5bfe14f02f34d72f37b
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 RMD160 2738573ec519cbef4b293bc132f7dd9d02291137 metadata.xml 160
@@ -143,3 +151,6 @@ SHA256 2f2084a65a62043ef1cb434c7ed0717ed22310fa0bd3225946c19b7fb6864ecb files/di
 MD5 2e34b0d7a577176cbcf6ef8d902718fb files/digest-net-snmp-5.4.1-r1 247
 RMD160 eea7a4c51416de3c43bcf3c2404be5affd3f6118 files/digest-net-snmp-5.4.1-r1 247
 SHA256 2f2084a65a62043ef1cb434c7ed0717ed22310fa0bd3225946c19b7fb6864ecb files/digest-net-snmp-5.4.1-r1 247
+MD5 2e34b0d7a577176cbcf6ef8d902718fb files/digest-net-snmp-5.4.1-r2 247
+RMD160 eea7a4c51416de3c43bcf3c2404be5affd3f6118 files/digest-net-snmp-5.4.1-r2 247
+SHA256 2f2084a65a62043ef1cb434c7ed0717ed22310fa0bd3225946c19b7fb6864ecb files/digest-net-snmp-5.4.1-r2 247

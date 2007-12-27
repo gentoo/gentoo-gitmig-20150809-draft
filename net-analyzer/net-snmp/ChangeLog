@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.162 2007/11/19 06:16:52 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.163 2007/12/27 17:15:32 pva Exp $
+
+*net-snmp-5.4.1-r2 (27 Dec 2007)
+
+  27 Dec 2007; <pva@gentoo.org> files/net-snmp-5.4.1-clientaddr-fix.patch,
+  +files/net-snmp-5.4.1-suppresssuppress-annoying.patch,
+  +net-snmp-5.4.1-r2.ebuild:
+  Fixes memory leaks reported in bug #180266, thank Doug <doug.manley AT
+  gmail.com> for report and ivestigation. Added upstream patch to suppress
+  annoying "registration != duplicate" warning for root oids.
 
   19 Nov 2007; Joshua Kinard <kumba@gentoo.org> net-snmp-5.4.1-r1.ebuild:
   Marked unstable on mips, per #198346.
