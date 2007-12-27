@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.5.3.ebuild,v 1.1 2007/12/27 12:21:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.5.3.ebuild,v 1.2 2007/12/27 12:43:23 ticho Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 	app-arch/freeze
 	app-arch/lha
 	app-arch/unarj
-	app-arch/unrar
+	|| ( app-arch/unrar app-arch/rar )
 	app-arch/zoo
 	>=dev-perl/Archive-Zip-1.14
 	>=dev-perl/Compress-Zlib-1.35

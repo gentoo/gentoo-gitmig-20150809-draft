@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.112 2007/12/27 12:21:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.113 2007/12/27 12:43:23 ticho Exp $
+
+  27 Dec 2007; Andrej Kacian <ticho@gentoo.org> amavisd-new-2.4.1.ebuild,
+  amavisd-new-2.5.2.ebuild, amavisd-new-2.5.3.ebuild:
+  Depend on either app-arch/rar or app-arch/unrar, since they both provide the
+  unrar binary which amavis uses. Bug #202919 by Frittella Laurento <mrfree at
+  infinito.it>.
 
 *amavisd-new-2.5.3 (27 Dec 2007)
 
