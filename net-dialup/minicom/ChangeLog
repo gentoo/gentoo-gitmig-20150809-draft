@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.61 2007/07/11 04:55:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.62 2007/12/27 09:12:16 mrness Exp $
+
+  27 Dec 2007; Alin Năstac <mrness@gentoo.org> minicom-2.2-r1.ebuild:
+  Added nls support (#203225).
 
   11 Jul 2007; Alin Năstac <mrness@gentoo.org>
   -files/minicom-2.1-gcc4.patch, -files/minicom-2.1-gentoo-runscript.patch,

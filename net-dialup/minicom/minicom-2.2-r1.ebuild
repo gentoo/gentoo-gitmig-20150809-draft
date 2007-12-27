@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.2-r1.ebuild,v 1.12 2007/06/24 22:05:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.2-r1.ebuild,v 1.13 2007/12/27 09:12:16 mrness Exp $
 
 inherit eutils
 
@@ -13,11 +13,18 @@ SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
-IUSE=""
+IUSE="nls"
 
-DEPEND=">=sys-libs/ncurses-5.2-r3"
-RDEPEND="${DEPEND}
+COMM0N_DEPEND="sys-libs/ncurses"
+DEPEND="${COMMON_DEPEND}
+	nls? ( sys-devel/gettext )"
+RDEPEND="${COMMON_DEPEND}
 	net-dialup/lrzsz"
+
+# Supported languages and translated documentation
+# Be sure all languages are prefixed with a single space!
+MY_AVAILABLE_LINGUAS=" cs da de es fi fr hu ja no pl pt_BR ro ru rw sv vi zh_TW"
+IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 src_unpack() {
 	unpack ${A}
@@ -27,7 +34,9 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --sysconfdir=/etc/${PN} || die "econf failed"
+	econf --sysconfdir=/etc/${PN} \
+		$(use_enable nls) \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
