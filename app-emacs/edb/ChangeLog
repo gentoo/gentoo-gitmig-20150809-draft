@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/edb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.7 2007/12/13 15:23:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.8 2007/12/27 17:10:54 ulm Exp $
+
+*edb-1.28_p2 (27 Dec 2007)
+
+  27 Dec 2007; Ulrich Mueller <ulm@gentoo.org> +edb-1.28_p2.ebuild:
+  Version bump.
 
 *edb-1.28_p1 (13 Dec 2007)
 
