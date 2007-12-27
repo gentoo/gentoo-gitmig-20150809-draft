@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20071210.ebuild,v 1.2 2007/12/13 07:15:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20071210.ebuild,v 1.3 2007/12/27 23:02:18 dirtyepic Exp $
 
 inherit eutils
 
@@ -30,6 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-parallel-build.patch #202019
+	epatch "${FILESDIR}"/${P}-noX-nopython-build.patch #202360
 }
 
 src_compile() {

@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.64 2007/12/13 07:15:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.65 2007/12/27 23:02:18 dirtyepic Exp $
+
+  27 Dec 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/fontforge-20071210-noX-nopython-build.patch,
+  fontforge-20071210.ebuild:
+  Fix build error with USE="-X -python".  Bug #202360 by Diego.
 
   13 Dec 2007; Mike Frysinger <vapier@gentoo.org>
   +files/fontforge-20071210-parallel-build.patch, fontforge-20071210.ebuild:
