@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.9_pre10.ebuild,v 1.1 2007/11/28 22:49:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.9_pre12.ebuild,v 1.1 2007/12/27 19:10:13 wolf31o2 Exp $
 
 inherit bash-completion eutils
 
