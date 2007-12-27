@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX sshproxy.ini 493 RMD160 a3374b25ca48b9e06def302ca6ccf490893487ce SHA1 27046518680f5d72a0205c1a3cee82d56ecad692 SHA256 4ef520bf7ca985232ed54abf6c68c62d76d60ca5061ae38dc346a6efad70aecd
 MD5 bbffdbdcfe8160580f736fee440f4582 files/sshproxy.ini 493
 RMD160 a3374b25ca48b9e06def302ca6ccf490893487ce files/sshproxy.ini 493
@@ -42,3 +45,10 @@ SHA256 7ffa9fb7f80f7b22bb4d958bb9e8120e82ae773f59637b90536d87a6ba30d5f6 files/di
 MD5 26cc6f25bfba719ba323c1134918e934 files/digest-sshproxy-0.6.0_beta1 262
 RMD160 c0532193ef8d98eee1abb27e51e194eebed672a6 files/digest-sshproxy-0.6.0_beta1 262
 SHA256 e5a2b7222b65e8dd0a7ee9717fc570d41a128d25715d11010ed9eeca9a83a6e3 files/digest-sshproxy-0.6.0_beta1 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHc20k/iem3UOQEXURAjJuAJ0TUKRzNzS9xTsPQxmcUa9W0MnuCgCeKPGt
+gk3xjvj77Jx1d+a9zjXu36w=
+=gDqv
+-----END PGP SIGNATURE-----
