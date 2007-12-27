@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2.ebuild,v 1.3 2007/12/27 14:21:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2.ebuild,v 1.4 2007/12/27 15:03:12 drac Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,9 @@ SRC_URI="http://dmalloc.com/releases/${P}.tgz"
 
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+# Marked -amd64 again because no shared libraries are built, -fPIC regression
+# caused by broken -SONAME.patch. Also cxx and threaded thcxx libs are not built.
+KEYWORDS="~alpha -amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=""

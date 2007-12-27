@@ -1,9 +1,12 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.32 2007/12/27 14:21:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.33 2007/12/27 15:03:12 drac Exp $
 
-  27 Dec 2007; Samuli Suominen <drac@gentoo.org> dmalloc-5.5.2.ebuild:
-  amd64 stable wrt #201897
+  27 Dec 2007; Samuli Suominen <drac@gentoo.org> dmalloc-5.4.2.ebuild,
+  dmalloc-5.5.2.ebuild:
+  Marking latest version -amd64 because SONAME patch included breaks building
+  shared libraries on amd64, and this version doesn't built cxx and thcxx
+  libraries while it configures for them. 5.4.2 amd64 stable wrt #201897.
 
   07 Aug 2007; Timothy Redaelli <drizzt@gentoo.org> dmalloc-5.5.2.ebuild:
   Fix SRC_URI wrt bug #187755.
