@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/zsync
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zsync/ChangeLog,v 1.4 2007/12/25 14:05:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zsync/ChangeLog,v 1.5 2007/12/27 14:46:58 armin76 Exp $
+
+*zsync-0.5 (27 Dec 2007)
+
+  27 Dec 2007; Raúl Porcel <armin76@gentoo.org> -zsync-0.3.2.ebuild,
+  -zsync-0.4.1.ebuild, +zsync-0.5.ebuild:
+  Version bump wrt #159135, remove old
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing karltk from metadata.xml as per #200332. Assigning to
