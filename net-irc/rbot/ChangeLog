@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/rbot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.25 2007/12/26 20:25:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.26 2007/12/27 13:46:04 flameeyes Exp $
+
+*rbot-9999-r7 (27 Dec 2007)
+
+  27 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  -rbot-9999-r6.ebuild, +rbot-9999-r7.ebuild:
+  Always depend on ruby-gettext when building the gem, so that the data is
+  properly added to the gem. Add a dict USE flag for the dictclient plugin,
+  depending on the new ruby-dict ebuild.
 
 *rbot-9999-r6 (26 Dec 2007)
 
