@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.33 2007/12/27 15:03:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.34 2007/12/27 17:42:19 drac Exp $
+
+*dmalloc-5.5.2-r1 (27 Dec 2007)
+
+  27 Dec 2007; Samuli Suominen <drac@gentoo.org>
+  +files/dmalloc-5.5.2-Makefile.in.patch, +files/dmalloc-5.5.2-cxx.patch,
+  +dmalloc-5.5.2-r1.ebuild:
+  Build objects twice, once -fPIC for shared and once without for static.
+  REALLY fix soname handling. Also includes the previous fix for DESTDIR.
+  Restore ~amd64 since it's usable again.
 
   27 Dec 2007; Samuli Suominen <drac@gentoo.org> dmalloc-5.4.2.ebuild,
   dmalloc-5.5.2.ebuild:
