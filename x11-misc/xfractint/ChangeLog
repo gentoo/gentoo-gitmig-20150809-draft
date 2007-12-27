@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfractint
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.45 2007/12/27 20:42:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.46 2007/12/27 20:47:01 drac Exp $
+
+  27 Dec 2007; Samuli Suominen <drac@gentoo.org> xfractint-20.04_p07.ebuild:
+  amd64 stable
 
 *xfractint-20.04_p07 (27 Dec 2007)
 *xfractint-20.04_p03 (27 Dec 2007)
