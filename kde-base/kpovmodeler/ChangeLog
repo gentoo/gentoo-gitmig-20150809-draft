@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpovmodeler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpovmodeler/ChangeLog,v 1.71 2007/10/19 23:24:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpovmodeler/ChangeLog,v 1.72 2007/12/27 17:31:57 carlo Exp $
+
+  27 Dec 2007; Carsten Lohrke <carlo@gentoo.org> kpovmodeler-3.5.8.ebuild:
+  Raise minimum Freetype version, bug #196450.
 
 *kpovmodeler-3.5.8 (19 Oct 2007)
 
