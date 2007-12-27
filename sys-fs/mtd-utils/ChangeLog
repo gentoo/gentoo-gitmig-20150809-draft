@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.4 2007/12/26 05:52:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.5 2007/12/27 21:13:10 vapier Exp $
+
+*mtd-utils-9999 (27 Dec 2007)
+
+  27 Dec 2007; Mike Frysinger <vapier@gentoo.org> +mtd-utils-9999.ebuild:
+  Live cvs ebuild.
 
   26 Dec 2007; Robin H. Johnson <robbat2@gentoo.org>
   mtd-utils-20060907.ebuild:
