@@ -1,31 +1,28 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.0.ebuild,v 1.2 2007/12/24 11:53:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.0.ebuild,v 1.3 2007/12/27 21:48:28 vapier Exp $
 
 inherit eutils toolchain-funcs linux-info
 
 L7_PV=2.17
 L7_P=netfilter-layer7-v${L7_PV}
-IMQ_PATCH=iptables-1.3.6-imq.diff
 
 DESCRIPTION="Linux kernel (2.4+) firewall, NAT and packet mangling tools"
-HOMEPAGE="http://www.iptables.org/ http://www.linuximq.net/ http://l7-filter.sf.net/"
+HOMEPAGE="http://www.iptables.org/ http://l7-filter.sf.net/"
 SRC_URI="http://iptables.org/projects/iptables/files/${P}.tar.bz2
-	imq? ( http://www.linuximq.net/patchs/${IMQ_PATCH} )
 	l7filter? ( mirror://sourceforge/l7-filter/${L7_P}.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="extensions imq ipv6 l7filter static"
+IUSE="extensions ipv6 l7filter static"
 
 DEPEND="virtual/os-headers
-	l7filter? ( virtual/linux-sources )
-	imq? ( virtual/linux-sources )"
+	l7filter? ( virtual/linux-sources )"
 RDEPEND=""
 
 pkg_setup() {
-	if use l7filter || use imq || use extensions ; then
+	if use l7filter || use extensions ; then
 		ewarn "WARNING: 3rd party extensions has been enabled."
 		ewarn "This means that iptables will use your currently installed"
 		ewarn "kernel in ${KERNEL_DIR} as headers for iptables."
@@ -48,10 +45,6 @@ pkg_setup() {
 	if use l7filter && \
 		[ ! -f "${L7FILE}" ]; then
 		die "For layer 7 support emerge net-misc/l7-filter-${L7_PV} before this"
-	fi
-	if use imq && \
-		[ ! -f "${KERNEL_DIR}/net/ipv4/netfilter/ipt_IMQ.c" ]; then
-		die "For IMQ support add a patch from http://www.linuximq.net/patches.html to your kernel"
 	fi
 }
 
@@ -84,15 +77,6 @@ src_unpack() {
 		fi
 	done
 
-	if use imq ; then
-		EPATCH_OPTS="-p1" epatch "${DISTDIR}"/${IMQ_PATCH}
-		for OA in extensions/.IMQ-test extensions/.IMQ-test6 ; do
-			mv ${OA} ${OA}.orig
-			tr '\015' '\012'  < ${OA}.orig > ${OA}
-			rm ${OA}.orig
-		done
-		chmod +x extensions/.IMQ-test*
-	fi
 	if use l7filter ; then
 		#yes choosing 2.6.20 was deliberate - upstream mistake possibly
 		if kernel_is ge 2 6 20
@@ -130,7 +114,7 @@ src_defs() {
 	use ipv6 || myconf="${myconf} DO_IPV6=0"
 	use static && myconf="${myconf} NO_SHARED_LIBS=0"
 	export myconf
-	if ! use l7filter && ! use imq && ! use extensions ; then
+	if ! use l7filter && ! use extensions ; then
 		export KERNEL_DIR=$(
 			# ugh -- iptables has scripts which check for the existence of
 			# files so we need to give it the right path to our toolchains
@@ -141,7 +125,7 @@ src_defs() {
 		export KBUILD_OUTPUT=${KERNEL_DIR}
 		diemsg="failure"
 	else
-		diemsg="failure - with l7filter and/or imq patch and/or other miscellanious patches added"
+		diemsg="failure - with l7filter and/or other miscellanious patches added"
 	fi
 	export diemsg
 }
