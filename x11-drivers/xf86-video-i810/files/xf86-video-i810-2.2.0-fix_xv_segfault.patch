@@ -1,0 +1,28 @@
+From: Michel DÃ¤nzer <michel@tungstengraphics.com>
+Date: Tue, 18 Dec 2007 18:37:46 +0000 (+0100)
+Subject: Always set pPriv->buf to NULL after freeing the memory it pointed to.
+X-Git-Url: http://gitweb.freedesktop.org/?p=xorg/driver/xf86-video-intel.git;a=commitdiff;h=4757a218d733af12d04674455fc6e1fad48a1cd0
+
+Always set pPriv->buf to NULL after freeing the memory it pointed to.
+
+Fixes https://bugs.freedesktop.org/show_bug.cgi?id=13108 .
+---
+
+--- a/src/i830_video.c
++++ b/src/i830_video.c
+@@ -2574,6 +2574,7 @@ I830VideoBlockHandler(int i, pointer blo
+ 		 */
+ 		I830Sync(pScrn);
+ 		i830_free_memory(pScrn, pPriv->buf);
++		pPriv->buf = NULL;
+ 		pPriv->videoStatus = 0;
+ 	    }
+ 	}
+@@ -2686,6 +2687,7 @@ I830FreeSurface(XF86SurfacePtr surface)
+     /* Sync before freeing the buffer, because the pages will be unbound. */
+     I830Sync(pScrn);
+     i830_free_memory(surface->pScrn, pPriv->buf);
++    pPriv->buf = NULL;
+     xfree(surface->pitches);
+     xfree(surface->offsets);
+     xfree(surface->devPrivate.ptr);
