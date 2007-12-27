@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.4.03.ebuild,v 1.9 2007/07/22 03:21:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.04_p03.ebuild,v 1.1 2007/12/27 20:42:56 drac Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${PN}-20.4.03-makefile.patch
 }
 
 src_compile() {

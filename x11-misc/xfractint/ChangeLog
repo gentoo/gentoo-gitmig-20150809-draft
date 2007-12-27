@@ -1,6 +1,21 @@
 # ChangeLog for x11-misc/xfractint
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.44 2007/07/22 03:21:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.45 2007/12/27 20:42:56 drac Exp $
+
+*xfractint-20.04_p07 (27 Dec 2007)
+*xfractint-20.04_p03 (27 Dec 2007)
+
+  27 Dec 2007; Samuli Suominen <drac@gentoo.org>
+  -files/xfractint-20.02p05.patch, -files/xfractint-20.03p00.patch,
+  -files/xfractint-20.03p01-make.patch,
+  +files/xfractint-20.04_p07-Makefile.patch, -xfractint-20.3.01.ebuild,
+  -xfractint-20.3.02.ebuild, +xfractint-20.04_p03.ebuild,
+  +xfractint-20.04_p07.ebuild, -xfractint-20.4.00.ebuild,
+  -xfractint-20.4.03.ebuild:
+  Correct versioning scheme; rename stable 20.4.03 to 20.04_p03 and add
+  20.04_p07 as version bump. Reverting commit for bug 48923, couldn't care
+  less about users adding -funroll-all-loops into global CFLAGS. Fixing bug
+  203498, manpage installation location.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   xfractint-20.3.01.ebuild, xfractint-20.3.02.ebuild,
