@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.92 2007/12/26 09:46:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.93 2007/12/27 21:27:27 calchan Exp $
+
+  27 Dec 2007; Denis Dupeyron <calchan@gentoo.org>
+  -files/hplip-1.7.4a-subprocess_replacement.patch,
+  -files/hplip-2.7.9-subprocess_replacement.patch, -files/hplip.init.d,
+  -hplip-1.7.4a-r2.ebuild, -hplip-2.7.9-r1.ebuild:
+  Post-stabilization cleanup.
 
   26 Dec 2007; Samuli Suominen <drac@gentoo.org> hplip-2.7.10.ebuild:
   amd64 stable wrt #202916
