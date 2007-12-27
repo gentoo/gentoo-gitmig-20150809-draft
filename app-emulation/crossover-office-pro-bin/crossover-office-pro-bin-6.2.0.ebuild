@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/crossover-office-pro-bin-6.2.0.ebuild,v 1.1 2007/12/02 23:39:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/crossover-office-pro-bin-6.2.0.ebuild,v 1.2 2007/12/27 21:30:54 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="specialized version of wine for MS Office"
-HOMEPAGE="http://www.codeweavers.com/site/products/cxoffice/"
+DESCRIPTION="simplified/streamlined version of wine with commercial support"
+HOMEPAGE="http://www.codeweavers.com/products/cxoffice/"
 SRC_URI="install-crossover-pro-${PV}.sh"
 
 LICENSE="CROSSOVER"
