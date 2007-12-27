@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.167 2007/12/26 23:31:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.168 2007/12/27 00:12:21 hd_brummy Exp $
+
+  27 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  lirc-0.8.3_pre1.ebuild:
+  removed workless kernel-2.6.24.diff, wont work with LIRC_DEVICES=serial;
+  reopend bug 200508
 
   26 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   lirc-0.8.3_pre1.ebuild:
