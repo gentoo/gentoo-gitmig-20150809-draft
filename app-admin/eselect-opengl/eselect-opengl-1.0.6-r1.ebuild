@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.6-r1.ebuild,v 1.2 2007/12/27 23:34:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.6-r1.ebuild,v 1.3 2007/12/27 23:41:51 eradicator Exp $
 
 inherit multilib
 
@@ -48,16 +48,16 @@ pkg_preinst() {
 		if [[ -e "${ROOT}/usr/$(get_libdir)/opengl/xorg-x11/lib/libMesaGL.so" ]]
 		then
 			einfo "Removing libMesaGL.so from xorg-x11 profile. See bug #47598."
-			rm -f ${ROOT}/usr/$(get_libdir)/opengl/xorg-x11/lib/libMesaGL.so
+			rm -f "${ROOT}/usr/$(get_libdir)/opengl/xorg-x11/lib/libMesaGL.so"
 		fi
 		if [[ -e "${ROOT}/usr/$(get_libdir)/libMesaGL.so" ]]
 		then
 			einfo "Removing libMesaGL.so from /usr/$(get_libdir).  See bug #47598."
-			rm -f ${ROOT}/usr/$(get_libdir)/libMesaGL.so
+			rm -f "${ROOT}/usr/$(get_libdir)/libMesaGL.so"
 		fi
 
-		for f in ${ROOT}/usr/$(get_libdir)/libGL.so.* ${ROOT}/usr/$(get_libdir)/libGLcore.so.* ${ROOT}/usr/$(get_libdir)/libnvidia-tls* ${ROOT}/usr/$(get_libdir)/tls/libnvidia-tls* ; do
-			[[ -e ${f} ]] && rm -f ${f}
+		for f in "${ROOT}/usr/$(get_libdir)"/libGL.so.* "${ROOT}/usr/$(get_libdir)"/libGLcore.so.* "${ROOT}/usr/$(get_libdir)"/libnvidia-tls* "${ROOT}/usr/$(get_libdir)"/tls/libnvidia-tls* ; do
+			[[ -e ${f} ]] && rm -f "${f}"
 		done
 	done
 	ABI="${OABI}"
@@ -76,7 +76,7 @@ src_install() {
 	doins opengl.eselect
 
 	# Install default glext.h
-	insinto /usr/$(get_libdir)/opengl/global/include
-	doins ${WORKDIR}/glext.h || die
-	doins ${WORKDIR}/glxext.h || die
+	insinto "/usr/$(get_libdir)/opengl/global/include"
+	doins "${WORKDIR}/glext.h" || die
+	doins "${WORKDIR}/glxext.h" || die
 }
