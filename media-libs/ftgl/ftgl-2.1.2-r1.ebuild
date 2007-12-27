@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2-r1.ebuild,v 1.15 2007/10/23 23:57:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2-r1.ebuild,v 1.16 2007/12/27 06:52:37 mr_bones_ Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -10,7 +10,7 @@ DESCRIPTION="library to use arbitrary fonts in OpenGL applications"
 HOMEPAGE="http://homepages.paradise.net.nz/henryj/code/#FTGL"
 SRC_URI="http://opengl.geek.nz/ftgl/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
@@ -35,20 +35,19 @@ src_unpack() {
 		ln -fs ../../docs/html "${S}/docs"
 	fi
 	sed -i \
-		-e "s:\((PACKAGE_NAME)\):\1-${PVR}:g" ${S}/docs/Makefile \
+		-e "s:\((PACKAGE_NAME)\):\1-${PVR}:g" "${S}"/docs/Makefile \
 		|| die "sed failed"
 	sed -i \
-		-e "s:    \\$:\t\\$:g" ${S}/src/Makefile \
+		-e "s:    \\$:\t\\$:g" "${S}"/src/Makefile \
 		|| die "sed failed"
 
-	cd ${S}
+	cd "${S}"
 	AT_M4DIR=m4 eautoreconf
 }
 
 src_compile() {
 	strip-flags # ftgl is sensitive - bug #112820
 	econf \
-		--enable-shared \
 		--enable-shared \
 		|| die
 	emake || die

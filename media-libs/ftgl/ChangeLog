@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ftgl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.18 2007/12/25 14:52:55 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.19 2007/12/27 06:52:37 mr_bones_ Exp $
+
+  27 Dec 2007; Michael Sterrett <mr_bones_@gentoo.org> ftgl-2.1.2-r1.ebuild:
+  license should have been LGPL-2 (bug #174440)
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing seemant from metadata.xml as per #202469.
