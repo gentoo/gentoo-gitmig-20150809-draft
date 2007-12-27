@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9.ebuild,v 1.11 2007/06/27 16:36:18 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9.ebuild,v 1.12 2007/12/27 20:42:10 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,7 +31,8 @@ DEPEND="x11-libs/libX11
 	x11-misc/gccmakedep
 	~media-libs/jpeg-6b
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )
-	!net-misc/vnc"
+	!net-misc/vnc
+	!net-misc/xf4vnc"
 
 RDEPEND="${DEPEND}
 	server? (

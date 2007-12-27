@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9-r1.ebuild,v 1.1 2007/10/17 23:32:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9-r1.ebuild,v 1.2 2007/12/27 20:42:10 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -41,7 +41,8 @@ DEPEND="${RDEPEND}
 	>=x11-misc/imake-1
 	x11-misc/gccmakedep
 	x11-misc/makedepend
-	!net-misc/vnc"
+	!net-misc/vnc
+	!net-misc/xf4vnc"
 
 src_unpack() {
 
