@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.5.ebuild,v 1.9 2007/03/26 08:06:37 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.5.ebuild,v 1.10 2007/12/27 12:23:07 armin76 Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ MY_PV="${PV/%.0}"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="A simple port-knocking daemon"
-HOMEPAGE="http://www.zeroflux.org/knock/"
+HOMEPAGE="http://www.zeroflux.org/cgi-bin/cvstrac.cgi/knock/wiki"
 SRC_URI="http://www.zeroflux.org/knock/files/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
