@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.50 2007/12/05 20:27:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.51 2007/12/27 09:39:03 phreak Exp $
+
+  27 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fixing the maintainer. It's supposed to be maintainer-needed.
 
   05 Dec 2007; Michael Sterrett <mr_bones_@gentoo.org> -libffi-3.3.5.ebuild:
   remove old, dep-broken version
