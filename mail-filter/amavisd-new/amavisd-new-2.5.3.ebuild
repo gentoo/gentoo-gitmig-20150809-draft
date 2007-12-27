@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.5.1.ebuild,v 1.1 2007/06/18 16:03:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.5.3.ebuild,v 1.1 2007/12/27 12:21:42 ticho Exp $
 
 inherit eutils
 
@@ -54,12 +54,10 @@ src_unpack() {
 	cd "${S}"
 
 	if use courier ; then
-		elog "Patching with courier support."
 		epatch amavisd-new-courier.patch
 	fi
 
 	if use qmail ; then
-		elog "Patching with qmail qmqp support."
 		epatch amavisd-new-qmqpqq.patch
 	fi
 
@@ -120,7 +118,7 @@ src_install() {
 		if [ -f ${AMAVIS_ROOT}/${i} ]; then
 			cp "${AMAVIS_ROOT}/${i}" "${D}/${AMAVIS_ROOT}"
 		else
-			touch ${D}/${AMAVIS_ROOT}/${i}
+			touch "${D}"/${AMAVIS_ROOT}/${i}
 		fi
 	done
 
@@ -133,8 +131,8 @@ src_install() {
 		newins LDAP.schema ${PN}.schema.default || die
 	fi
 
-	find ${D}/${AMAVIS_ROOT} -name "*" -type d -exec chmod 0750 \{\} \;
-	find ${D}/${AMAVIS_ROOT} -name "*" -type f -exec chmod 0640 \{\} \;
+	find "${D}"/${AMAVIS_ROOT} -name "*" -type d -exec chmod 0750 \{\} \;
+	find "${D}"/${AMAVIS_ROOT} -name "*" -type f -exec chmod 0640 \{\} \;
 }
 
 pkg_preinst() {
@@ -153,9 +151,9 @@ pkg_preinst() {
 		if [ ! -d ${AMAVIS_ROOT}/.razor ] ; then
 			elog "Setting up initial razor config files..."
 
-			razor-admin -create -home=${D}/${AMAVIS_ROOT}/.razor
+			razor-admin -create -home="${D}"/${AMAVIS_ROOT}/.razor
 			sed -i -e "s:debuglevel\([ ]*\)= .:debuglevel\1= 0:g" \
-				${D}/${AMAVIS_ROOT}/.razor/razor-agent.conf
+				"${D}"/${AMAVIS_ROOT}/.razor/razor-agent.conf
 		fi
 	fi
 }

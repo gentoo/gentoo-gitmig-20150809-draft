@@ -1,6 +1,23 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.111 2007/07/05 19:05:18 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.112 2007/12/27 12:21:42 ticho Exp $
+
+*amavisd-new-2.5.3 (27 Dec 2007)
+
+  27 Dec 2007; Andrej Kacian <ticho@gentoo.org>
+  -files/amavisd-new-2.2.1-qmail-lf-workaround.patch,
+  -files/amavisd-new-2.3.0-amavisd.conf-gentoo.patch,
+  -files/amavisd-new-2.3.3-bsmtp-quarantine.patch,
+  -files/amavisd-new-2.4.2-amavisd.conf-gentoo.patch,
+  -files/amavisd-new-2.4.4-qmail-lf-workaround.patch,
+  -amavisd-new-2.3.3-r2.ebuild, amavisd-new-2.4.1.ebuild,
+  -amavisd-new-2.4.2.ebuild, -amavisd-new-2.4.2-r1.ebuild,
+  -amavisd-new-2.4.3.ebuild, -amavisd-new-2.4.4.ebuild,
+  -amavisd-new-2.4.5-r1.ebuild, -amavisd-new-2.5.0.ebuild,
+  -amavisd-new-2.5.1.ebuild, amavisd-new-2.5.2.ebuild,
+  +amavisd-new-2.5.3.ebuild:
+  Version bump. Bug #202230 by Jason Phillips <gentoo at jbpc.com>. Shell
+  variables quoting fix. Old ebuilds cleanup.
 
 *amavisd-new-2.5.2 (05 Jul 2007)
 

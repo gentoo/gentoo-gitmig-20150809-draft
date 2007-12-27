@@ -1,5 +1,5 @@
---- amavisd.conf-sample.orig	2006-06-27 13:31:44.000000000 +0200
-+++ amavisd.conf-sample	2006-07-02 19:25:02.000000000 +0200
+--- amavisd.conf-sample.orig	2006-12-18 17:14:43.000000000 +0100
++++ amavisd.conf-sample	2006-12-18 17:19:46.000000000 +0100
 @@ -74,14 +74,14 @@
  
  # Set the user and group to which the daemon will change if started as root
@@ -17,27 +17,9 @@
 +#$TEMPBASE = $MYHOME;	        # (must be set if other config vars use is), -T
 +$TEMPBASE = "$MYHOME/tmp";     # prefer to keep home dir /var/amavis clean?
  
- #$db_home = "$MYHOME/db";	# DB databases directory, default "$MYHOME/db", -D
+ #$db_home = "$MYHOME/db";    # DB databases directory, default "$MYHOME/db", -D
  
-@@ -155,7 +155,7 @@
- # feeding amavisd, e.g. with Postfix the 'Max procs' field in the
- # master.cf file, like the '2' in the:  smtp-amavis unix - - n - 2 smtp
- #
--$max_servers  =  2;   # number of pre-forked children          (default 2), -m
-+$max_servers  =  4;   # number of pre-forked children          (default 2), -m
- $max_requests = 20;   # retire a child after that many accepts (default 10)
- 
- $child_timeout=5*60;  # abort child if it does not complete its processing in
-@@ -470,7 +470,7 @@
- 
- # Alternatives to consider for spam:
- # - use D_PASS if clients will do filtering based on inserted
--#   mail headers or added address extensions ('plus-addressing');
-+#   mail headers or added address extensions ('plus-addressing')2;
- # - use D_DISCARD, if kill_level is set comfortably high;
- #
- # D_BOUNCE is preferred for viruses, but consider:
-@@ -487,22 +487,45 @@
+@@ -492,22 +492,43 @@
  # default setting of an associative array %final_destiny_by_ccat which is
  # backwards compatible and contains references to these traditional variables:
  #
@@ -70,8 +52,6 @@
 +# -Cory Visi <merlin@gentoo.org> 07/28/04
 +#
 +#######
-+
-+
  
  # to explicitly list all (or most) possible contents category (ccat) keys:
 -#%final_destiny_by_ccat = (
@@ -97,7 +77,7 @@
  
  # to rely on a catchall ccat key and only list exceptions (alternative 1):
  #%final_destiny_by_ccat = (
-@@ -684,7 +707,7 @@
+@@ -689,7 +710,7 @@
  #   or a directory (no trailing slash)
  #   (the default value is undef, meaning no quarantine)
  #
@@ -106,7 +86,7 @@
  
  #$quarantine_subdir_levels = 1;  # add level of subdirs to disperse quarantine
  
-@@ -1594,7 +1617,7 @@
+@@ -1658,7 +1679,7 @@
  # NOTE: if $daemon_chroot_dir is nonempty, the directories will be
  #       relative to the chroot directory specified;
  
@@ -115,7 +95,7 @@
  
  # For external programs specify one string or a search list of strings (first
  # match wins). The string (or: each string in a list) may be an absolute path,
-@@ -2025,7 +2048,7 @@
+@@ -2124,7 +2145,7 @@
  
    ### http://www.nai.com/
    ['NAI McAfee AntiVirus (uvscan)', 'uvscan',
@@ -124,12 +104,12 @@
      qr/(?x) Found (?:
          \ the\ (.+)\ (?:virus|trojan)  |
          \ (?:virus|trojan)\ or\ variant\ ([^ ]+)  |
-@@ -2143,7 +2166,7 @@
+@@ -2246,7 +2267,7 @@
  
    ### http://www.f-prot.com/   - backs up F-Prot Daemon
    ['FRISK F-Prot Antivirus', ['f-prot','f-prot.sh'],
--    '-dumb -archive -packed {}', [0,8], [3,6],
-+    '-dumb -ai -archive -packed -server {}', [0,8], [3,6],
-     qr/Infection: (.+)|\s+contains\s+(.+)$/ ],
+-    '-dumb -archive -packed {}', [0,8], [3,6],   # or: [0], [3,6,8],
++    '-dumb -ai -archive -packed -server {}', [0,8], [3,6],   # or: [0], [3,6,8],
+     qr/(?:Infection:|security risk named) (.+)|\s+contains\s+(.+)$/ ],
  
    ### http://www.trendmicro.com/   - backs up Trophie

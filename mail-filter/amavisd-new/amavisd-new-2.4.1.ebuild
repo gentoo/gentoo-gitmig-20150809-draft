@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.1.ebuild,v 1.11 2007/05/23 22:51:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.1.ebuild,v 1.12 2007/12/27 12:21:42 ticho Exp $
 
 inherit eutils
 
@@ -59,7 +59,7 @@ src_unpack() {
 		epause
 	fi
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	if $(has_version mail-mta/courier) ; then
 		elog "Patching with courier support."
 		epatch "amavisd-new-courier.patch" || die "patch failed"
@@ -132,8 +132,8 @@ src_install() {
 	fi
 
 	for i in whitelist blacklist spam_lovers; do
-		if [ ! -f ${D}/${AMAVIS_ROOT}/${i} ]; then
-			touch ${D}/${AMAVIS_ROOT}/${i}
+		if [ ! -f "${D}"/${AMAVIS_ROOT}/${i} ]; then
+			touch "${D}"/${AMAVIS_ROOT}/${i}
 		fi
 	done
 
@@ -141,9 +141,9 @@ src_install() {
 		if [ ! -f ${AMAVIS_ROOT}/.razor/razor-agent.conf ] ; then
 			elog "Setting up initial razor config files..."
 
-			razor-admin -create -home=${D}/${AMAVIS_ROOT}/.razor
+			razor-admin -create -home="${D}"/${AMAVIS_ROOT}/.razor
 			sed -i -e "s:debuglevel\([ ]*\)= .:debuglevel\1= 0:g" \
-				${D}/${AMAVIS_ROOT}/.razor/razor-agent.conf
+				"${D}"/${AMAVIS_ROOT}/.razor/razor-agent.conf
 		else
 			elog "Copying existing razor config files..."
 			insinto ${AMAVIS_ROOT}/.razor
@@ -151,8 +151,8 @@ src_install() {
 		fi
 	fi
 
-	find ${D}/${AMAVIS_ROOT} -name "*" -type d -exec chmod 0750 \{\} \;
-	find ${D}/${AMAVIS_ROOT} -name "*" -type f -exec chmod 0640 \{\} \;
+	find "${D}"/${AMAVIS_ROOT} -name "*" -type d -exec chmod 0750 \{\} \;
+	find "${D}"/${AMAVIS_ROOT} -name "*" -type f -exec chmod 0640 \{\} \;
 }
 
 pkg_preinst() {
