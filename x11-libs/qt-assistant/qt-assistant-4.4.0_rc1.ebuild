@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.4.0_rc1.ebuild,v 1.2 2007/12/26 00:44:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.4.0_rc1.ebuild,v 1.3 2007/12/27 23:25:07 caleb Exp $
 
 inherit qt4-build
 
@@ -49,7 +49,7 @@ src_compile() {
 pkg_setup() {
 	qt4-build_pkg_setup
 
-	if ! built_with_use ~x11-libs/qt-sql sqlite; then
+	if ! built_with_use x11-libs/qt-sql sqlite; then
 		die "You must first emerge x11-libs/qt-sql with the \"sqlite\" use flag in order to use qt-assistant"
 	fi
 }
