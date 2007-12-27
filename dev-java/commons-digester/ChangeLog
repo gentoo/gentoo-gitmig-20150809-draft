@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-digester
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.44 2007/12/26 00:56:38 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.45 2007/12/27 10:12:15 caster Exp $
+
+  27 Dec 2007; Vlastimil Babka <caster@gentoo.org> Manifest:
+  Fix Manifest, bug #203408.
 
 *commons-digester-1.8 (26 Dec 2007)
 
