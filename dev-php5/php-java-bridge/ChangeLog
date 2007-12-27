@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/php-java-bridge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-java-bridge/ChangeLog,v 1.23 2007/12/24 14:47:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-java-bridge/ChangeLog,v 1.24 2007/12/27 16:56:37 hoffie Exp $
+
+  27 Dec 2007; Christian Hoffmann <hoffie@gentoo.org> metadata.xml:
+  moving to no-herd/maintainer-needed -- php does not want this package
 
 *php-java-bridge-4.3.2 (24 Dec 2007)
 
