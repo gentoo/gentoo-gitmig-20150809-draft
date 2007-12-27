@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm-cvs/stumpwm-cvs-0.ebuild,v 1.3 2007/08/29 15:28:03 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm-cvs/stumpwm-cvs-0.ebuild,v 1.4 2007/12/27 10:54:34 joslwah Exp $
 
 inherit common-lisp cvs eutils
 
@@ -27,6 +27,7 @@ CLPACKAGE="stumpwm"
 
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
+	dev-lisp/cl-ppcre
 	doc? ( sys-apps/texinfo )"
 
 # If clisp is selected, we need at least dev-lisp/clisp-2.38-r2
