@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3240 2007/12/27 13:49:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3241 2007/12/27 19:52:11 pva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1281,6 +1281,7 @@ net-analyzer/nagios-plugins:nagios-ssh - installs deps for monitoring ssh
 net-analyzer/nagios-plugins:ups - installs deps for monitoring Network-UPS (sys-power/nut)
 net-analyzer/net-snmp:diskio - Enable the use of diskio mibs
 net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some sytems
+net-analyzer/net-snmp:extensible - build deprecated extensible mib module (extend is successor)
 net-analyzer/net-snmp:mfd-rewrites - Use MFD rewrites of mib modules where available
 net-analyzer/net-snmp:rpm - Enable the rpm snmp probing
 net-analyzer/net-snmp:sendmail - Enable sendmail statistics monitoring

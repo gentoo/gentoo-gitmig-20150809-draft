@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.945 2007/12/27 16:52:30 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.946 2007/12/27 19:52:11 pva Exp $
+
+  27 Dec 2007; Peter Volkov <pva@gentoo.org> use.local.desc:
+  Added extensible USE flag for net-analyzer/net-snmp.
 
   27 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add the dict USE flag for rbot.
