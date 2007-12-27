@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-NFSLock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NFSLock/ChangeLog,v 1.7 2007/07/14 09:51:06 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NFSLock/ChangeLog,v 1.8 2007/12/27 13:04:21 ticho Exp $
+
+  27 Dec 2007; Andrej Kacian <ticho@gentoo.org> File-NFSLock-1.20.ebuild:
+  Stable on x86.
 
   14 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning dev-perl/File-NFSLock to perl-herd, as chriswhite has been retired
