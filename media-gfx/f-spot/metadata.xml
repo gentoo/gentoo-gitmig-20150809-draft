@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>calchan@gentoo.org</email>
+		<name>Denis Dupeyron</name>
 	</maintainer>
 	<longdescription lang="en">
 		Personal photo manager for gnome 2 desktop that uses mono
