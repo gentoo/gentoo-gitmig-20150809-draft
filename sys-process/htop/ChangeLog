@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.49 2007/11/24 01:55:10 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.50 2007/12/28 16:31:28 armin76 Exp $
+
+  28 Dec 2007; Raúl Porcel <armin76@gentoo.org> htop-0.7.ebuild:
+  ia64/sparc/x86 stable
 
 *htop-0.7 (24 Nov 2007)
 
