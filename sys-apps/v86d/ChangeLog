@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/v86d
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.10 2007/12/28 14:42:32 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.11 2007/12/28 14:46:09 spock Exp $
+
+  28 Dec 2007; Michał Januszewski <spock@gentoo.org> -v86d-0.1.1.ebuild,
+  -v86d-0.1.2.ebuild:
+  Remove old ebuilds.
 
 *v86d-0.1.3-r1 (28 Dec 2007)
 
