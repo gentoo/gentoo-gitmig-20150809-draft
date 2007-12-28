@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/captury/captury-0.3.0_pre200712251.ebuild,v 1.1 2007/12/25 18:14:36 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/captury/captury-0.3.0_pre200712251.ebuild,v 1.2 2007/12/28 21:00:38 mr_bones_ Exp $
 
 inherit multilib flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://upstream.rm-rf.in/captury/captury-${PV}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug"
+IUSE="debug multilib"
 
 RDEPEND=">=media-libs/libcaptury-0.3.0_pre200712251
 		 x11-libs/libX11
