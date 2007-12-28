@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/mod_auth_nufw-2.2.0.ebuild,v 1.2 2007/09/21 21:07:07 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/mod_auth_nufw-2.2.0.ebuild,v 1.3 2007/12/28 16:42:59 hollow Exp $
 
 inherit eutils apache-module autotools
 
 DESCRIPTION="A NuFW authentication module for Apache."
-HOMEPAGE="http://www.inl.fr/mod-auth-nufw.html"
+HOMEPAGE="http://software.inl.fr/trac/wiki/EdenWall/mod_auth_nufw"
 SRC_URI="http://software.inl.fr/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="ldap mysql postgres"
 
-DEPEND="=dev-libs/apr-0*
-	ldap? ( net-nds/openldap )
+DEPEND="ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )"
 RDEPEND="${DEPEND}"
@@ -25,7 +24,7 @@ APACHE2_MOD_DEFINE="AUTH_NUFW"
 
 DOCFILES="doc/mod_auth_nufw.html"
 
-need_apache
+need_apache2_2
 
 pkg_setup() {
 	local cnt=0
@@ -49,13 +48,11 @@ src_unpack() {
 }
 
 src_compile() {
-	cd "${S}"
-
-	econf --with-apache20 \
+	CPPFLAGS="-I$(/usr/bin/apr-1-config --includedir) ${CPPFLAGS}" \
+	econf --with-apache22 \
+		--with-apxs=${APXS2} \
 		$(use_with ldap ldap-uids) \
 		$(use_with mysql) \
-		--with-apxs=${APXS2} \
-		CPPFLAGS="-I$($(apr_config) --includedir) ${CPPFLAGS}" \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
