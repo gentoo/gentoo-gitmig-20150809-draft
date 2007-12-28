@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.160 2007/12/19 03:35:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.161 2007/12/28 18:11:40 mr_bones_ Exp $
 
 # Depends on Xen
 app-emulation/ganeti
@@ -17,6 +17,7 @@ app-emulation/ganeti-instance-debian-etch
 >=media-radio/xdx-2.3
 =xfce-extra/ristretto-0.0.14
 >=media-libs/swfdec-0.5.4-r1
+>=net-www/swfdec-mozilla-0.5.4
 >=gnome-extra/swfdec-gnome-0.5.4
 
 # Michael Sterrett <mr_bones_@gentoo.org (14 Oct 2007)
