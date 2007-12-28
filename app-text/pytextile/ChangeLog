@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pytextile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.12 2007/05/15 16:45:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.13 2007/12/28 19:17:40 cardoe Exp $
+
+  28 Dec 2007; Doug Klima <cardoe@gentoo.org> pytextile-2.0.11.ebuild:
+  amd64 stable wrt bug #203602
 
   15 May 2007; Steve Dibb <beandog@gentoo.org> pytextile-2.0.10.ebuild:
   amd64 stable
