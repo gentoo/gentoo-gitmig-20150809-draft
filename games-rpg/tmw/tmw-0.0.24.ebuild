@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.23.ebuild,v 1.1 2007/06/06 18:42:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.24.ebuild,v 1.1 2007/12/28 03:02:12 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-games/physfs-1.0.0
 	media-libs/sdl-image
 	media-libs/sdl-net
 	net-misc/curl
-	>=dev-games/guichan-0.6.0"
+	>=dev-games/guichan-0.7.0"
 
 pkg_setup() {
 	games_pkg_setup
@@ -52,7 +52,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	insinto "${GAMES_DATADIR}"/${PN}/data/music
 	doins ${MUSIC}/data/music/*.ogg || die
 	newdoc ${MUSIC}/README README.music
