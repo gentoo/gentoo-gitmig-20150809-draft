@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.69 2007/09/29 15:56:15 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.70 2007/12/28 23:49:25 gmsoft Exp $
+
+  28 Dec 2007; Guy Martin <gmsoft@gentoo.org> smartmontools-5.37.ebuild:
+  Added hppa to KEYWORDS.
 
   29 Sep 2007; Christian Birchinger <joker@gentoo.org>
   smartmontools-5.37.ebuild:
