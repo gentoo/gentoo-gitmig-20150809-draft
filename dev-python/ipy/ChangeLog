@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.7 2007/07/26 18:14:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.8 2007/12/28 10:45:02 maekke Exp $
+
+  28 Dec 2007; Markus Meier <maekke@gentoo.org> ipy-0.53.ebuild:
+  x86 stable, bug #203554
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> ipy-0.53.ebuild:
   Added ~ppc64; bug #186188
