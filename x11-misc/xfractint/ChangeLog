@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xfractint
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.47 2007/12/28 11:57:35 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.48 2007/12/28 12:46:11 spock Exp $
+
+  28 Dec 2007; Michał Januszewski <spock@gentoo.org>
+  +files/xfractint-20.04p07-xioerror.patch, xfractint-20.04_p07.ebuild:
+  Add a fix for bug #203552.
 
   28 Dec 2007; Michał Januszewski <spock@gentoo.org>
   +files/xfractint-20.04p07-filename-buffer-overflow-fix.patch,

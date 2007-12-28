@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.04_p07.ebuild,v 1.3 2007/12/28 11:57:35 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.04_p07.ebuild,v 1.4 2007/12/28 12:46:11 spock Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-Makefile.patch
 	epatch "${FILESDIR}"/xfractint-20.04p07-filename-buffer-overflow-fix.patch
+	epatch "${FILESDIR}"/xfractint-20.04p07-xioerror.patch
 }
 
 src_compile() {
