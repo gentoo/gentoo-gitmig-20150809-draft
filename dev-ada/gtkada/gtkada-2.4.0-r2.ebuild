@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.4.0-r2.ebuild,v 1.5 2007/09/24 22:17:04 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.4.0-r2.ebuild,v 1.6 2007/12/28 22:40:13 george Exp $
 
 inherit eutils gnat
 
@@ -14,7 +14,7 @@ SLOT="2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls opengl"
 
-DEPEND="virtual/gnat
+DEPEND="virtual/ada
 	>=x11-libs/gtk+-2.2.0
 	>=sys-apps/sed-4"
 RDEPEND=""
@@ -41,7 +41,7 @@ lib_compile() {
 	# ATTN! Check if this is fixed when new version comes out!
 	# this one fails on 4.1 without and 3.4 with..
 	if [[ $(get_gnat_SLOT $1) > 3.4 ]] ; then
-		epatch ${FILESDIR}/${P}.patch
+		epatch "${FILESDIR}"/${P}.patch
 	fi
 
 	local myconf
@@ -90,8 +90,8 @@ src_install() {
 	doins "${CommonInst}"/adainclude/*
 
 	#docs
-	cd ${S}
-	dodoc ANNOUNCE AUTHORS COPYING README
+	cd "${S}"
+	dodoc ANNOUNCE AUTHORS README
 	cd "${CommonInst}"
 	cp -dPr doc/${Name}/* share/${PN}/examples/ "${D}/usr/share/doc/${PF}"
 }

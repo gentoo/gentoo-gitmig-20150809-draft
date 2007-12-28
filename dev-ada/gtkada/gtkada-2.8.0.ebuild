@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.8.0.ebuild,v 1.8 2007/09/24 22:17:04 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.8.0.ebuild,v 1.9 2007/12/28 22:40:13 george Exp $
 
 inherit eutils gnat versionator
 
@@ -15,7 +15,7 @@ SLOT="2"
 KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="nls opengl"
 
-DEPEND="virtual/gnat
+DEPEND="virtual/ada
 	>=dev-libs/glib-2.8.0
 	>=x11-libs/pango-1.10.0
 	>=dev-libs/atk-1.10.0
@@ -76,16 +76,16 @@ src_install() {
 	gnat_src_install
 
 	#specs
-	cd ${S}/src
+	cd "${S}"/src
 	dodir "${AdalibSpecsDir}/${PN}"
 	insinto "${AdalibSpecsDir}/${PN}"
 	doins *.ad? glade/*.ad? gnome/*.ad? opengl/*.{ad?,c,h}
 
 	#docs
-	cd ${S}
-	dodoc ANNOUNCE AUTHORS COPYING README
+	cd "${S}"
+	dodoc ANNOUNCE AUTHORS README
 	cp -dPr examples/ testgtk/ "${D}/usr/share/doc/${PF}"
-	cd ${S}/docs
+	cd "${S}"/docs
 	doinfo gtkada_ug/gtkada_ug.info
 	ps2pdf gtkada_ug/gtkada_ug.ps
 	ps2pdf gtkada_rm/gtkada_rm.ps
@@ -94,7 +94,7 @@ src_install() {
 	cp -dPr gtkada_rm/gtkada_rm/ "${D}/usr/share/doc/${PF}/html"
 
 	# utility stuff
-	cd ${S}
+	cd "${S}"
 	dodir "${AdalibDataDir}/${PN}"
 	insinto "${AdalibDataDir}/${PN}"
 	doins -r xml/gtkada.xml projects/
