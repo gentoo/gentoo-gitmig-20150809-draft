@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-5.0.9.ebuild,v 1.8 2007/12/28 12:52:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-5.0.9.ebuild,v 1.9 2007/12/28 17:17:48 mr_bones_ Exp $
 
 WX_GTK_VER="2.6"
 inherit distutils fdo-mime eutils wxwidgets
@@ -38,7 +38,7 @@ pkg_setup() {
 	if use gtk ; then
 		need-wxwidgets unicode ||
 			die "You must build wxGTK and wxpython with unicode support"
-		
+
 		if ! built_with_use =dev-python/wxpython-2.6* unicode ; then
 			die "You must build wxGTK and wxpython with unicode support"
 		fi
