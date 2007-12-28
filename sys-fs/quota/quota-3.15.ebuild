@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.15.ebuild,v 1.1 2007/12/24 12:00:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.15.ebuild,v 1.2 2007/12/28 02:16:56 robbat2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE="nls tcpd ldap rpc"
 
-RDEPEND="ldap? ( net-nds/openldap )
+RDEPEND="ldap? ( >=net-nds/openldap-2.3.35 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	rpc? ( net-nds/portmap )"
 DEPEND="${RDEPEND}
@@ -32,7 +32,9 @@ src_unpack() {
 	# Don't strip binaries (from Fedora)
 	epatch "${FILESDIR}"/quota-3.06-no-stripping.patch
 
-	append-cppflags -DLDAP_DEPRECATED=1
+	# This was for openldap-2.2 support before,
+	# Now we only support >=2.3
+	append-cppflags -DLDAP_DEPRECATED=0
 
 	sed -i -e "s:,LIBS=\"\$saved_LIBS=\":;LIBS=\"\$saved_LIBS\":" configure
 }
