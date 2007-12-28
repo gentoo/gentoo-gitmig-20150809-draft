@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.8_rc2.ebuild,v 1.1 2007/12/25 19:21:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.8_rc2.ebuild,v 1.2 2007/12/28 12:45:13 armin76 Exp $
 
 inherit eutils distutils flag-o-matic
 
@@ -25,7 +25,8 @@ RDEPEND="${DEPEND}
 	dev-python/pyxdg
 	dev-python/dbus-python
 	gnome-base/librsvg
-	libnotify? ( dev-python/notify-python )"
+	libnotify? ( dev-python/notify-python )
+	browser? ( dev-python/gnome-python-extras )"
 
 pkg_setup() {
 	if has_version "<dev-libs/boost-1.34" && \
