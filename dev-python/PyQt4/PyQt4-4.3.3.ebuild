@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.3.3.ebuild,v 1.1 2007/12/26 00:56:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.3.3.ebuild,v 1.2 2007/12/28 14:05:07 caleb Exp $
 
 inherit distutils qt4
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug doc examples"
 
-RDEPEND="=x11-libs/qt-4*
+RDEPEND="=x11-libs/qt-4.3*
 	>=dev-python/sip-4.7.3"
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
