@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.448 2007/12/24 16:40:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.449 2007/12/28 11:09:07 hollow Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-2.0.0_rc6-r1 (28 Dec 2007)
+
+  28 Dec 2007; Benedikt Böhm <hollow@gentoo.org>
+  +files/baselayout-2.0.0_rc6-ssd-path.patch,
+  +baselayout-2.0.0_rc6-r1.ebuild:
+  fix #199749
 
   24 Dec 2007; Brent Baude <ranger@gentoo.org> baselayout-1.12.10-r5.ebuild:
   Marking baselayout-1.12.10-r5 ppc64 for bug 202791
