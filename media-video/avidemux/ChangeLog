@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.120 2007/12/25 17:21:08 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.121 2007/12/28 18:53:57 drac Exp $
+
+*avidemux-2.4 (28 Dec 2007)
+
+  28 Dec 2007; Samuli Suominen <drac@gentoo.org>
+  +files/avidemux-2.4-i18n.patch, +files/avidemux-2.4-libdca.patch,
+  +avidemux-2.4.ebuild:
+  Version bump wrt #203164, thanks to Joe for reporting.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing zypher from metadata.xml as per #26909.
