@@ -84,3 +84,27 @@
  		ir->t_notify = NULL;
  		ir->t_notify2 = NULL;
  	}
+diff -Naur lirc-0.8.3pre1.orig/drivers/lirc_serial/lirc_serial.c lirc-0.8.3pre1/drivers/lirc_serial/lirc_serial.c
+--- lirc-0.8.3pre1.orig/drivers/lirc_serial/lirc_serial.c	2007-12-27 01:27:36.143803257 +0100
++++ lirc-0.8.3pre1/drivers/lirc_serial/lirc_serial.c	2007-12-27 01:29:38.149303268 +0100
+@@ -961,7 +961,7 @@
+ 	do_gettimeofday(&lasttv);
+ 
+ 	result = request_irq(irq, irq_handler,
+-			   SA_INTERRUPT | (share_irq ? SA_SHIRQ:0),
++			   IRQF_DISABLED | (share_irq ? IRQF_SHARED:0),
+ 			   LIRC_DRIVER_NAME, (void *)&hardware);
+ 
+ 	switch (result) {
+diff -Naur lirc-0.8.3pre1.orig/drivers/lirc_sir/lirc_sir.c lirc-0.8.3pre1/drivers/lirc_sir/lirc_sir.c
+--- lirc-0.8.3pre1.orig/drivers/lirc_sir/lirc_sir.c	2007-12-28 15:11:48.142285437 +0100
++++ lirc-0.8.3pre1/drivers/lirc_sir/lirc_sir.c	2007-12-28 15:13:05.561290741 +0100
+@@ -1025,7 +1025,7 @@
+ 		return -EBUSY;
+ 	}
+ #endif
+-	retval = request_irq(irq, sir_interrupt, SA_INTERRUPT,
++	retval = request_irq(irq, sir_interrupt, IRQF_DISABLED,
+ 			     LIRC_DRIVER_NAME, NULL);
+ 	if (retval < 0) {
+ #               ifndef LIRC_ON_SA1100

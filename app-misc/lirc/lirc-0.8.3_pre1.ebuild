@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre1.ebuild,v 1.10 2007/12/27 00:12:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre1.ebuild,v 1.11 2007/12/28 14:23:21 hd_brummy Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -252,10 +252,10 @@ src_unpack() {
 		sed -i -e "s:lirc_gpio\.o::" drivers/lirc_gpio/Makefile.am
 	fi
 
-#	# Bug #200508
-#	if kernel_is ge 2 6 24 ; then
-#		epatch "${FILESDIR}"/${P}-kernel-2.6.24.diff
-#	fi
+	# Bug #200508
+	if kernel_is ge 2 6 24 ; then
+		epatch "${FILESDIR}"/${P}-kernel-2.6.24.diff
+	fi
 
 	# respect CFLAGS
 	sed -i -e 's:CFLAGS="-O2:CFLAGS=""\n#CFLAGS="-O2:' configure.ac
