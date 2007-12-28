@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/tuxonice-userui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.4 2007/12/23 13:57:47 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.5 2007/12/28 12:29:06 maekke Exp $
+
+  28 Dec 2007; Markus Meier <maekke@gentoo.org>
+  tuxonice-userui-0.7.2.ebuild:
+  x86 stable, bug #202064
 
   23 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
   Change maintainer.
