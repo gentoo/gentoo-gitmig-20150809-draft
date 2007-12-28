@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r7.ebuild,v 1.1 2007/12/27 13:46:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r7.ebuild,v 1.2 2007/12/28 14:08:10 flameeyes Exp $
 
 inherit ruby gems eutils
 
@@ -105,6 +105,7 @@ src_install() {
 			|| die "Unable to replace ispell with aspell."
 	fi
 
+	use timezone || disable_rbot_plugin time
 	use translator || disable_rbot_plugin translator
 	use shorturl || disable_rbot_plugin shortenurls
 	use dict || disable_rbot_plugin dictclient
