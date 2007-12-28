@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/ipp
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.1 2007/12/28 11:24:56 bicatali Exp $
+
+*ipp-5.3.1.062 (28 Dec 2007)
+
+  28 Dec 2007; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +ipp-5.3.1.062.ebuild:
+  Initial import, closing bug #165934. Thanks Eric Thibodeau for his help.
+
