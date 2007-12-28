@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.946 2007/12/27 19:52:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.947 2007/12/28 07:46:53 ali_bush Exp $
+
+  28 Dec 2007; <alistair@gentoo.org> package.mask:
+  Adding dev-util/poseidonCE to package mask for removal in 30 days.
 
   27 Dec 2007; Peter Volkov <pva@gentoo.org> use.local.desc:
   Added extensible USE flag for net-analyzer/net-snmp.
