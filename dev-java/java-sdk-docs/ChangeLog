@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.54 2007/10/12 00:27:50 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.55 2007/12/28 18:49:49 nixnut Exp $
+
+  28 Dec 2007; nixnut <nixnut@gentoo.org> java-sdk-docs-1.6.0-r1.ebuild:
+  Added ~ppc wrt bug 166789
 
   12 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   java-sdk-docs-1.4.2.ebuild, java-sdk-docs-1.6.0-r1.ebuild:
