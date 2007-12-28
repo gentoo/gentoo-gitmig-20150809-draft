@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/portmap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.44 2007/10/06 08:32:53 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.45 2007/12/28 11:40:40 gmsoft Exp $
+
+  28 Dec 2007; Guy Martin <gmsoft@gentoo.org> portmap-6.0.ebuild:
+  Strip -fpie LDFLAGS when building on hppa since pie support is broken.
 
   06 Oct 2007; Tom Gall <tgall@gentoo.org> portmap-6.0.ebuild:
   stable on ppc64, bug 190182

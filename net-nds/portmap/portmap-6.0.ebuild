@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-6.0.ebuild,v 1.10 2007/10/06 08:32:53 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-6.0.ebuild,v 1.11 2007/12/28 11:40:40 gmsoft Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,6 +27,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-tcpd.patch #178242
+
+	use hppa && sed -e '/LDFLAGS/s/^/#/' -i "${S}/Makefile" #190458
 }
 
 src_compile() {
