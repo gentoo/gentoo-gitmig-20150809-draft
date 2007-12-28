@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.10.ebuild,v 1.2 2007/12/23 12:45:46 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.10.ebuild,v 1.3 2007/12/28 19:23:56 cedk Exp $
 
 inherit autotools ssl-cert eutils
 
@@ -27,6 +27,7 @@ DEPEND=">=dev-libs/glib-2
 	nfqueue? ( net-libs/libnfnetlink
 		net-libs/libnetfilter_queue )
 	nfconntrack? ( net-libs/libnetfilter_conntrack )
+	prelude? ( dev-libs/libprelude )
 	dev-python/ipy"
 RDEPEND=${DEPEND}
 
