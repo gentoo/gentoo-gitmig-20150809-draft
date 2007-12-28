@@ -1,0 +1,11 @@
+# ChangeLog for games-mud/wxmud
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/wxmud/ChangeLog,v 1.1 2007/12/28 02:32:00 leio Exp $
+
+*wxmud-9999 (28 Dec 2007)
+
+  28 Dec 2007; Mart Raudsepp <leio@gentoo.org> +metadata.xml,
+  +wxmud-9999.ebuild:
+  Initial import of wxMUD as a live SVN version till first release is out - a
+  graphical MUD client with MXP support amongst other more usual features
+
