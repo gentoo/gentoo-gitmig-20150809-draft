@@ -1,12 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/wxmud/wxmud-9999.ebuild,v 1.1 2007/12/28 02:32:00 leio Exp $
-
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
+# $Header: /var/cvsroot/gentoo-x86/games-mud/wxmud/wxmud-9999.ebuild,v 1.2 2007/12/28 03:14:12 leio Exp $
 
 WX_GTK_VER=2.8
-inherit flag-o-matic subversion wxwidgets autotools
+inherit flag-o-matic subversion wxwidgets autotools games
 
 DESCRIPTION="Cross-platform MUD client"
 HOMEPAGE="http://wxmud.sourceforge.net/"
@@ -31,7 +28,8 @@ src_unpack() {
 
 src_compile() {
 	append-flags -fno-strict-aliasing
-	econf --with-wx-config="${WX_CONFIG}" \
+	# No audiere in portage yet, so useful MSP support is disabled for now
+	egamesconf --with-wx-config="${WX_CONFIG}" \
 		$(use_enable python) \
 		--disable-audiere \
 		|| die
@@ -41,4 +39,5 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS README TODO docs/input.txt docs/scripting.txt
+	prepgamesdirs
 }
