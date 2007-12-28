@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclxml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.30 2007/12/24 04:44:07 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.31 2007/12/28 17:22:03 mr_bones_ Exp $
+
+  28 Dec 2007; Michael Sterrett <mr_bones_@gentoo.org> +tclxml-2.4.ebuild:
+  resurrect tclxml-2.4.ebuild which is still in use
 
 *tclxml-3.1-r1 (24 Dec 2007)
 
