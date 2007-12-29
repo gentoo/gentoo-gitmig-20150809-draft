@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.31 2007/12/27 01:40:44 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.32 2007/12/29 23:41:29 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -31,6 +31,9 @@ inherit flag-o-matic eutils
 # functions!
 GnatCommon="/usr/share/gnat/lib/gnat-common.bash"
 
+# !!NOTE!!
+# src_install should not be exported!
+# Instead gnat_src_install should be explicitly called from within src_install.
 EXPORT_FUNCTIONS pkg_setup pkg_postinst src_compile
 
 DESCRIPTION="Common procedures for building Ada libs using split gnat compilers"
@@ -269,6 +272,17 @@ gnat_filter_flags() {
 
 gnat_pkg_setup() {
 	debug-print-function $FUNCNAME $*
+
+	# check whether all the primary compilers are installed
+	. ${GnatCommon} || die "failed to source gnat-common lib"
+	for fn in $(cat ${PRIMELIST}); do
+		if [[ ! -f ${SPECSDIR}/${fn} ]]; then 
+			elog "The ${fn} Ada compiler profile is specified as primary, but is not installed."
+			elog "Please rectify the situation before emerging Ada library!"
+			die "Primary compiler is missing"
+		fi
+	done
+	
 	export ADAC=${ADAC:-gnatgcc}
 	export ADAMAKE=${ADAMAKE:-gnatmake}
 	export ADABIND=${ADABIND:-gnatbind}
