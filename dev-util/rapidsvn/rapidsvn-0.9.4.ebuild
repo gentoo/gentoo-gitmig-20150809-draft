@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.17 2007/11/27 15:19:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.18 2007/12/29 06:29:57 nerdboy Exp $
 
 inherit eutils libtool autotools wxwidgets flag-o-matic fdo-mime
 
@@ -12,11 +12,11 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="doc static"
 
-DEPEND=">=dev-util/subversion-1.3.2-r1
+DEPEND=">=dev-util/subversion-1.4.0
 	>=net-misc/neon-0.26
 	=x11-libs/wxGTK-2.6*
-	>=dev-libs/apr-0.9.7
-	>=dev-libs/apr-util-0.9.7
+	>=dev-libs/apr-1.2.10
+	>=dev-libs/apr-util-1.2.10
 	doc? ( dev-libs/libxslt
 		app-text/docbook-sgml-utils
 		app-doc/doxygen
