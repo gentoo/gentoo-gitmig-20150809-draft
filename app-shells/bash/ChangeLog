@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.161 2007/12/29 12:59:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.162 2007/12/29 15:37:25 ranger Exp $
+
+  29 Dec 2007; Brent Baude <ranger@gentoo.org> bash-3.2_p17-r1.ebuild:
+  Marking bash-3.2_p17-r1 ppc64 for bug 203603
 
   29 Dec 2007; nixnut <nixnut@gentoo.org> bash-3.2_p17-r1.ebuild:
   Stable on ppc wrt bug 203603
