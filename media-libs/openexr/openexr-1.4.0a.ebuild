@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.4.0a.ebuild,v 1.11 2007/10/09 17:48:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.4.0a.ebuild,v 1.12 2007/12/29 11:28:06 vapier Exp $
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.9
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.openexr.com"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 ~sh sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE_VIDEO_CARDS="video_cards_nvidia"
 IUSE="doc examples opengl ${IUSE_VIDEO_CARDS}"
 
