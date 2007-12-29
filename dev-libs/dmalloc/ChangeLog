@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.37 2007/12/29 17:00:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.38 2007/12/29 17:22:33 armin76 Exp $
+
+  29 Dec 2007; Raúl Porcel <armin76@gentoo.org> dmalloc-5.5.2-r1.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #203589
 
   29 Dec 2007; Brent Baude <ranger@gentoo.org> dmalloc-5.5.2-r1.ebuild:
   Marking dmalloc-5.5.2-r1 ppc64 for bug 203589
