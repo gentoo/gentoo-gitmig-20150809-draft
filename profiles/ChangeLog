@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.951 2007/12/29 16:12:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.952 2007/12/29 17:17:26 flameeyes Exp $
+
+  29 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
+  Add a new version to pulseaudio mask.
 
   29 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
   Remove old version of PulseAudio mask.
