@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.16.1-r2.ebuild,v 1.3 2007/12/21 10:23:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.16.1-r2.ebuild,v 1.4 2007/12/29 00:28:42 maekke Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -119,6 +119,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc43-missing-includes.patch
 	epatch "${FILESDIR}"/${P}-python-buildfix.patch
 	epatch "${FILESDIR}"/${P}-pango-optional.patch
+	epatch "${FILESDIR}"/${P}-tcltk.patch
 
 	# ToDo: Do the same thing for examples and/or
 	#       write a patch for a configuration-option
