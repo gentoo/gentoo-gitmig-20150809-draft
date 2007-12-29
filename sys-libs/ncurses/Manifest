@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX ncurses-5.4-c++-templates.patch 351 RMD160 d9a0e9387367be813e7067b4ddeddf907a2217b8 SHA1 80471645bee521e6f154c7ff5a9acdc2e87879ef SHA256 853fc14f7ab2f5eb156b2e7d658d79243877102a18cd2845e3ebd4eb24193d7c
 MD5 118971faee11066510aa77e6c6a2c51b files/ncurses-5.4-c++-templates.patch 351
 RMD160 d9a0e9387367be813e7067b4ddeddf907a2217b8 files/ncurses-5.4-c++-templates.patch 351
@@ -42,10 +45,10 @@ EBUILD ncurses-5.6-r1.ebuild 4509 RMD160 7b18beee4f035cabd7ed73a6fb38da336a12d28
 MD5 0d06168b794883b05012f027b6a5d6f1 ncurses-5.6-r1.ebuild 4509
 RMD160 7b18beee4f035cabd7ed73a6fb38da336a12d285 ncurses-5.6-r1.ebuild 4509
 SHA256 d66f1b48a3af5059a68aac9ad0b7108fce31a033ac9c0087dc5d8f17987babb6 ncurses-5.6-r1.ebuild 4509
-EBUILD ncurses-5.6-r2.ebuild 4879 RMD160 d1d60ffb30f4599dc75dd8d457ee06c4fb329e62 SHA1 c17a037bbf1e4b809307a3d734e0d37b69efc62c SHA256 772fc7ee81bbfd7b8aa55b774b7cbef6e9eb306bbbe9558b37c7b6f659feadee
-MD5 864ac9c3a5071180fb8dbaecb0da6c40 ncurses-5.6-r2.ebuild 4879
-RMD160 d1d60ffb30f4599dc75dd8d457ee06c4fb329e62 ncurses-5.6-r2.ebuild 4879
-SHA256 772fc7ee81bbfd7b8aa55b774b7cbef6e9eb306bbbe9558b37c7b6f659feadee ncurses-5.6-r2.ebuild 4879
+EBUILD ncurses-5.6-r2.ebuild 4874 RMD160 8755cbcd1eddfe05346609a0bbb471ce40596ce3 SHA1 edfb46f6acb6af34c66eb4d3b51b122514fe8bed SHA256 9fee0b4f43aa19d9b90b1d35e0dfba57bb33eef876e1a5dd7e5aa64d49eca1e6
+MD5 8c679b06412df890cf0d7034da692c2a ncurses-5.6-r2.ebuild 4874
+RMD160 8755cbcd1eddfe05346609a0bbb471ce40596ce3 ncurses-5.6-r2.ebuild 4874
+SHA256 9fee0b4f43aa19d9b90b1d35e0dfba57bb33eef876e1a5dd7e5aa64d49eca1e6 ncurses-5.6-r2.ebuild 4874
 EBUILD ncurses-5.6.ebuild 4440 RMD160 a52592fa52df37fc10b88afcd233ada177acf0f0 SHA1 c074a68dc742f17a1d5d2100fba7aa756793c1f4 SHA256 64e2c6fd56c06fea4eec93e49fbfdeaf3342a1d79c32c5f868ced17a373f87ae
 MD5 04c5c49ff9ecef9f65d4f94f76fd7049 ncurses-5.6.ebuild 4440
 RMD160 a52592fa52df37fc10b88afcd233ada177acf0f0 ncurses-5.6.ebuild 4440
@@ -73,3 +76,10 @@ SHA256 0ebdcdfd302a82613b796db3a2cfce0c7a6319992f7fc9ec80c1301444766042 files/di
 MD5 4113e58a2761a788de58821d1058f534 files/digest-ncurses-5.6-r2 500
 RMD160 467579d539f83f3e670698737d5c1a5a2b78a05b files/digest-ncurses-5.6-r2 500
 SHA256 0ebdcdfd302a82613b796db3a2cfce0c7a6319992f7fc9ec80c1301444766042 files/digest-ncurses-5.6-r2 500
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkd2OxAACgkQj9hvisErhMK/GgCfVxHFtpUwg8qR40vArNFiBH+d
+jGAAoK/JroidAYFZWaTgBRf3XREu+DFI
+=oPeb
+-----END PGP SIGNATURE-----
