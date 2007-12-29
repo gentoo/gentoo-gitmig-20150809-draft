@@ -1,9 +1,9 @@
 # ChangeLog for net-analyzer/amap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.36 2007/12/29 10:56:33 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.37 2007/12/29 11:50:59 welp Exp $
 
   29 Dec 2007; <welp@gentoo.org> amap-5.2.ebuild:
-  Keyworded ~x86; bug 203149
+  Keyworded ~x86-fbsd; bug 203149
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org>
   -files/4.7-system-pcre.patch, -files/amap-5.0-gcc4.patch,
