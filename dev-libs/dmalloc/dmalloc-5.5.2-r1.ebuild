@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2-r1.ebuild,v 1.3 2007/12/29 16:09:32 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2-r1.ebuild,v 1.4 2007/12/29 17:00:18 ranger Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dmalloc.com/releases/${P}.tgz"
 
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
