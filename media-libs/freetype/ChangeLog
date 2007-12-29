@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.164 2007/12/28 17:22:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.165 2007/12/29 17:37:32 armin76 Exp $
+
+  29 Dec 2007; Raúl Porcel <armin76@gentoo.org> freetype-2.3.5-r2.ebuild:
+  alpha/ia64/sparc stable wrt #203290
 
   28 Dec 2007; Markus Meier <maekke@gentoo.org> freetype-2.3.5-r2.ebuild:
   x86 stable, bug #203290
