@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.199 2007/12/28 19:08:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.200 2007/12/29 11:11:49 vapier Exp $
+
+  29 Dec 2007; Mike Frysinger <vapier@gentoo.org> wine-0.9.52.ebuild:
+  Add USE=samba to force lazy people to upgrade their samba #195621 and
+  auto-install the gecko cab when USE=gecko #197443 by Jacek Caban.
 
 *wine-0.9.52 (28 Dec 2007)
 

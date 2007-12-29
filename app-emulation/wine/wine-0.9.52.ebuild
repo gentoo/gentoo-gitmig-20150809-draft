@@ -1,17 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.52.ebuild,v 1.1 2007/12/28 19:08:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.52.ebuild,v 1.2 2007/12/29 11:11:49 vapier Exp $
+
+EAPI="1"
 
 inherit eutils flag-o-matic multilib
 
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.com/"
-SRC_URI="mirror://sourceforge/${PN}/wine-${PV}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/wine-${PV}.tar.bz2
+	gecko? ( mirror://sourceforge/wine/wine_gecko-0.1.0.cab )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
-IUSE="alsa cups dbus esd hal jack jpeg lcms ldap nas ncurses opengl oss scanner xml X"
+IUSE="alsa cups dbus esd +gecko hal jack jpeg lcms ldap nas ncurses +opengl oss samba scanner xml +X"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -36,6 +39,7 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	jpeg? ( media-libs/jpeg )
 	ldap? ( net-nds/openldap )
 	lcms? ( media-libs/lcms )
+	samba? ( >=net-fs/samba-3.0.25 )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	>=media-gfx/fontforge-20060703
 	scanner? ( media-gfx/sane-backends )
@@ -115,8 +119,12 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc ANNOUNCE AUTHORS ChangeLog README
+	if use gecko ; then
+		insinto /usr/share/wine/gecko
+		doins "${DISTDIR}"/wine_gecko-*.cab || die
+	fi
 }
 
 pkg_postinst() {
