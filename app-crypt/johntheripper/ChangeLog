@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.75 2007/12/29 12:57:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.76 2007/12/29 17:03:06 ranger Exp $
+
+  29 Dec 2007; Brent Baude <ranger@gentoo.org>
+  johntheripper-1.7.2-r3.ebuild:
+  Marking johntheripper-1.7.2-r3 ppc64 for bug 202306
 
   29 Dec 2007; nixnut <nixnut@gentoo.org> johntheripper-1.7.2-r3.ebuild:
   Stable on ppc wrt bug 202306
