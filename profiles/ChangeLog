@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.949 2007/12/29 03:11:32 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.950 2007/12/29 16:05:49 flameeyes Exp $
+
+  29 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
+  Add 0.9.8-r5 to PulseAudio mask.
 
   29 Dec 2007; Richard Freeman <rich0@gentoo.org> use.local.desc:
   Add sound useflag for games-rpg/eternal-lands-data.
