@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dump
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.57 2007/08/29 16:31:36 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.58 2007/12/29 21:53:13 rich0 Exp $
+
+  29 Dec 2007; Richard Freeman <rich0@gentoo.org> dump-0.4.41.ebuild:
+  amd64 stable
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing agriffis from metadata due to his retirement (see #182294 for
