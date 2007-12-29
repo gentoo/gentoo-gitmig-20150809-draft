@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/exiftags
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/ChangeLog,v 1.20 2007/12/17 18:52:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/ChangeLog,v 1.21 2007/12/29 22:43:14 maekke Exp $
+
+  29 Dec 2007; Markus Meier <maekke@gentoo.org> -exiftags-0.99.1.ebuild,
+  -exiftags-1.00.ebuild:
+  old
 
   17 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   exiftags-1.01.ebuild:
