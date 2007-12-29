@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-2.70.ebuild,v 1.2 2007/12/08 02:21:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-2.70.ebuild,v 1.3 2007/12/29 23:10:19 vapier Exp $
 
 inherit eutils
 
@@ -12,6 +12,7 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls"
+RESTRICT="binchecks"
 
 RDEPEND="virtual/man"
 PDEPEND="nls? (
