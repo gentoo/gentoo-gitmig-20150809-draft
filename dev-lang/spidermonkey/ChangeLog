@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.41 2007/12/26 10:36:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.42 2007/12/29 16:58:01 ranger Exp $
+
+  29 Dec 2007; Brent Baude <ranger@gentoo.org> spidermonkey-1.7.0.ebuild:
+  Marking spidermonkey-1.7.0 ppc64 for bug 202885
 
   26 Dec 2007; Samuli Suominen <drac@gentoo.org> spidermonkey-1.7.0.ebuild:
   amd64 stable wrt #202885
