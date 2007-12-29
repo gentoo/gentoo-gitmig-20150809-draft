@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libiodbc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.36 2007/12/29 13:34:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.37 2007/12/29 17:34:35 ranger Exp $
+
+  29 Dec 2007; Brent Baude <ranger@gentoo.org> libiodbc-3.52.6.ebuild:
+  Marking libiodbc-3.52.6 ppc64 for bug 203633
 
   29 Dec 2007; nixnut <nixnut@gentoo.org> libiodbc-3.52.6.ebuild:
   Stable on ppc wrt bug 203633
