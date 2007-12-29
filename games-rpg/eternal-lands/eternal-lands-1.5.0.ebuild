@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.5.0.ebuild,v 1.1 2007/12/29 03:16:04 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.5.0.ebuild,v 1.2 2007/12/29 03:52:47 rich0 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -47,6 +47,7 @@ DEPEND="${RDEPEND}
 		>=media-gfx/graphviz-1.10 )"
 
 pkg_setup() {
+	games_pkg_setup
 	if built_with_use media-libs/cal3d 16bit-indices ; then
 		eerror "${PN} won't work if media-libs/cal3d has been built with 16bit-indices"
 		die "re-emerge  media-libs/cal3d without the 16bit-indices USE flag"
