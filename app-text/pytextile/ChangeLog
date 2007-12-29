@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pytextile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.14 2007/12/29 13:13:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.15 2007/12/29 17:02:09 ranger Exp $
+
+  29 Dec 2007; Brent Baude <ranger@gentoo.org> pytextile-2.0.11.ebuild:
+  Marking pytextile-2.0.11 ppc64 for bug 203602
 
   29 Dec 2007; nixnut <nixnut@gentoo.org> pytextile-2.0.11.ebuild:
   Stable on ppc wrt bug 203602
