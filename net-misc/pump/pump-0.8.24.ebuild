@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.24.ebuild,v 1.9 2007/12/29 20:04:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.24.ebuild,v 1.10 2007/12/29 20:05:38 phreak Exp $
 
 inherit eutils
 
@@ -34,7 +34,6 @@ src_unpack() {
 	epatch "${FILESDIR}/pump-${PV}-gentoo.patch"
 
 	# Add an if defined around the definition of foo, just like in popt.h
-	# Fixes #201958
 	epatch "${FILESDIR}/${P}-redefinition.patch"
 
 	# Only install specific po files if LINGUAS is set
