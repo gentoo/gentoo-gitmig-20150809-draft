@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.952 2007/12/29 17:17:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.953 2007/12/29 17:38:26 flameeyes Exp $
+
+  29 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
+  Add asycns USE flag for pulseaudio.
 
   29 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
   Add a new version to pulseaudio mask.

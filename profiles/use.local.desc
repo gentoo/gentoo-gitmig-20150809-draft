@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3245 2007/12/29 11:10:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3246 2007/12/29 17:38:26 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1034,6 +1034,7 @@ media-sound/noteedit:kmid - Use KDE's kmid to play sound
 media-sound/noteedit:tse3 - Use tse3 library to play/export sound
 media-sound/picard:cdaudio - Enable support for CD Index Lookups.
 media-sound/podcatcher:bittorrent - Enable support for bittorrent downloads
+media-sound/pulseaudio:asyncns - Use libasyncns for asynchronous name resolution.
 media-sound/pulseaudio:policykit - Enable support for PolicyKit framework.
 media-sound/quodlibet:mmkeys - Enable support for special keys on multimedia keyboards
 media-sound/quodlibet:trayicon - Enable support for trayicon
