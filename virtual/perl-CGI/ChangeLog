@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CGI
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.41 2007/11/19 03:40:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.42 2007/12/29 10:20:39 welp Exp $
+
+  29 Dec 2007; <welp@gentoo.org> perl-CGI-3.15.ebuild:
+  Keyworded ~sparc-fbsd; bug 203655
 
   19 Nov 2007; Joshua Kinard <kumba@gentoo.org> perl-CGI-3.29.ebuild:
   Stable on mips.
