@@ -1,13 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/endpoint/endpoint-0.1.0.ebuild,v 1.3 2007/12/15 01:09:30 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/endpoint/endpoint-0.1.0.ebuild,v 1.4 2007/12/29 06:40:25 robbat2 Exp $
+
+inherit eutils
 
 DESCRIPTION="Endpoint turns a Linux machine with one or more firewire cards into an SBP-2 device."
 HOMEPAGE="http://oss.oracle.com/projects/endpoint/"
 SRC_URI="http://oss.oracle.com/projects/endpoint/dist/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 DEPEND="virtual/libc
 		>=sys-libs/libraw1394-0.9
@@ -15,7 +17,7 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-errormessages.patch
+	epatch "${FILESDIR}"/${P}-errormessages.patch
 }
 
 src_install() {
