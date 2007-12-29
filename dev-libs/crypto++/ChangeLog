@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.34 2007/12/29 15:43:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.35 2007/12/29 15:48:19 ranger Exp $
+
+  29 Dec 2007; Brent Baude <ranger@gentoo.org> crypto++-5.5.2.ebuild:
+  Marking crypto++-5.5.2 ppc64 for bug 198687
 
   29 Dec 2007; Brent Baude <ranger@gentoo.org> crypto++-5.5.2.ebuild:
   Marking crypto++-5.5.2 ppc for bug 198687
