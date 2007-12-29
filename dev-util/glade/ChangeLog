@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.89 2007/12/16 08:58:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.90 2007/12/29 22:09:40 compnerd Exp $
+
+*glade-3.4.1 (29 Dec 2007)
+
+  29 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org> +glade-3.4.1.ebuild:
+  Version bump from upstream
 
   16 Dec 2007; Samuli Suominen <drac@gentoo.org> glade-3.4.0.ebuild:
   amd64 stable wrt #202008
