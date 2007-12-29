@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libtirpc
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.1 2007/12/29 08:58:18 vapier Exp $
+
+*libtirpc-0.1.7 (29 Dec 2007)
+
+  29 Dec 2007; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +libtirpc-0.1.7.ebuild:
+  Initial ebuild by me.
+
