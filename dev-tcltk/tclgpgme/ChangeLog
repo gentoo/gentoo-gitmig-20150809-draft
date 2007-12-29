@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclgpgme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.27 2007/12/29 12:45:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.28 2007/12/29 16:47:28 ranger Exp $
+
+  29 Dec 2007; Brent Baude <ranger@gentoo.org> tclgpgme-1.0-r3.ebuild:
+  Marking tclgpgme-1.0-r3 ppc64 for bug 202192
 
   29 Dec 2007; nixnut <nixnut@gentoo.org> tclgpgme-1.0-r3.ebuild:
   Stable on ppc wrt bug 202192
