@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.24.ebuild,v 1.8 2006/09/26 05:37:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.24.ebuild,v 1.9 2007/12/29 20:04:20 phreak Exp $
 
 inherit eutils
 
@@ -32,6 +32,10 @@ src_unpack() {
 	# Enable the --keep-up option to keep interfaces up when we release
 	# Enable the creation of /etc/ntp.conf and the --no-ntp option
 	epatch "${FILESDIR}/pump-${PV}-gentoo.patch"
+
+	# Add an if defined around the definition of foo, just like in popt.h
+	# Fixes #201958
+	epatch "${FILESDIR}/${P}-redefinition.patch"
 
 	# Only install specific po files if LINGUAS is set
 	if [[ -n ${LINGUAS} ]]; then

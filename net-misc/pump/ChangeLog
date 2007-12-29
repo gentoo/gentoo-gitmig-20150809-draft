@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/pump
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.38 2007/12/25 16:26:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.39 2007/12/29 20:04:20 phreak Exp $
+
+  29 Dec 2007; Christian Heim <phreak@gentoo.org>
+  +files/pump-0.8.24-redefinition.patch, pump-0.8.24.ebuild:
+  Adding patch for compilation against dev-libs/popt-1.12, as N is already
+  defined in popt.h. This keeps it working with current stable dev-libs/popt,
+  which doesn't have the define in popt.h. Thanks to Preston Crow
+  <pc_gentoo_bugzilla at crowcastle.net> in #201958 for the idea.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing uberlord from metadata.xml as per #199318. Assigning to
