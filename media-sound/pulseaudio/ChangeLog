@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.85 2007/12/29 16:11:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.86 2007/12/29 17:39:01 flameeyes Exp $
+
+*pulseaudio-0.9.8-r7 (29 Dec 2007)
+*pulseaudio-0.9.8-r6 (29 Dec 2007)
+
+  29 Dec 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +pulseaudio-0.9.8-r6.ebuild, +pulseaudio-0.9.8-r7.ebuild:
+  Add new revisions with an asyncns USE flag to use libasyncns.
 
   29 Dec 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/pulseaudio-0.9.6-build.patch, -pulseaudio-0.9.6-r1.ebuild,
