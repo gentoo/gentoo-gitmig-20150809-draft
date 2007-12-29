@@ -1,6 +1,16 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.110 2007/12/29 06:57:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.111 2007/12/29 09:33:27 vapier Exp $
+
+*nfs-utils-1.1.1 (29 Dec 2007)
+
+  29 Dec 2007; Mike Frysinger <vapier@gentoo.org> files/nfs.initd,
+  files/rpc.gssd.initd, files/rpc.idmapd.initd, files/rpc.statd.initd,
+  +nfs-utils-1.1.1.ebuild:
+  Version bump #197336 by Francisco Javier. Tweak nfs init.d needs based on
+  exportfs #172431. Only mount nfsd fs in nfs init.d script. Mount rpc_pipefs
+  in rpc.idmapd and rpc.gssd after making sure the dir exists #180425 by
+  Maurice Volaski.
 
   29 Dec 2007; Mike Frysinger <vapier@gentoo.org> files/rpc.statd.initd:
   Look up the full path of rpc.statd to avoid matching the init.d script
