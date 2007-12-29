@@ -1,0 +1,10 @@
+# ChangeLog for net-nds/rpcbind
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.1 2007/12/29 09:13:54 vapier Exp $
+
+*rpcbind-0.1.4 (29 Dec 2007)
+
+  29 Dec 2007; Mike Frysinger <vapier@gentoo.org> +files/rpcbind.confd,
+  +files/rpcbind.initd, +metadata.xml, +rpcbind-0.1.4.ebuild:
+  Initial ebuild by me.
+
