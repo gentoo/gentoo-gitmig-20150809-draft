@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.5 2007/03/19 21:32:12 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd,v 1.6 2007/12/29 06:37:59 robbat2 Exp $
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
@@ -187,7 +187,7 @@ save() {
 }
 
 start() {
-	if [ -f /proc/modules ] ; then
+	if [ -f /proc/modules ] && [ "${LOAD_ON_START}" = "yes" ]; then
 		ebegin "Loading ALSA modules"
 		eindent
 		load_modules
@@ -217,8 +217,8 @@ stop() {
 	ebegin "Killing processes using ALSA"
 	terminate
 	eend 0
-
-	if [ -f /proc/modules ]; then
+	
+	if [ -f /proc/modules ] && [ "${UNLOAD_ON_STOP}" = "yes" ]; then
 		local ver="24"
 		rmmod --version | grep -q module-init-tools && ver="26"
 

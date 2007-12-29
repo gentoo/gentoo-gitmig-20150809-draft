@@ -20,3 +20,15 @@ RESTORE_ON_START="yes"
 # yes - Save state
 
 SAVE_ON_STOP="yes"
+
+# LOAD_ON_START:
+# Do you want to load sound modules when alsasound starts?
+# no - Do not load modules
+# yes - Load modules
+LOAD_ON_START="yes"
+
+# UNLOAD_ON_STOP:
+# Do you want to unload sound modules when alsasound stops?
+# no - Do not unload modules
+# yes - Unload modules
+UNLOAD_ON_STOP="yes"
