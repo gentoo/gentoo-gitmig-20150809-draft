@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gst-plugins-ugly-0.10.6-mpegaudioparse-cvs20071117.patch 25499 RMD160 3709e7f28de171c67ca598c0e6ea0fbe42f796a7 SHA1 c06ef86eb038d2e6d580cfb46b25cb89f32aaa3c SHA256 6d72fe9bedcef784965f6e95e965461e495881470a8c5eff02bc282bab59dedf
 MD5 188c5a7af994b8a527e53decf5fd2b78 files/gst-plugins-ugly-0.10.6-mpegaudioparse-cvs20071117.patch 25499
 RMD160 3709e7f28de171c67ca598c0e6ea0fbe42f796a7 files/gst-plugins-ugly-0.10.6-mpegaudioparse-cvs20071117.patch 25499
@@ -17,10 +20,10 @@ EBUILD gst-plugins-ugly-0.10.6-r1.ebuild 1729 RMD160 47ef1439184c5c9427db80a0183
 MD5 032239469de0611918f49265269c6edd gst-plugins-ugly-0.10.6-r1.ebuild 1729
 RMD160 47ef1439184c5c9427db80a0183252ffdecd4ae1 gst-plugins-ugly-0.10.6-r1.ebuild 1729
 SHA256 af46d9ce004d434f46807e4496eabd5530fc84098207f32b5e2011eb7e0c7a4a gst-plugins-ugly-0.10.6-r1.ebuild 1729
-EBUILD gst-plugins-ugly-0.10.6.ebuild 1771 RMD160 fbea7825b019fa676bc977f410bbe47b952d0352 SHA1 4bb0e31bcd58fcb9a1e8ff01fa36044b0ff4d0d1 SHA256 acc563e9619f2d7ff3cc0456c43d7dfd252ddc1ce02665105721d5d0090062d2
-MD5 34fbd3031781d70fdb2b9a381eb13660 gst-plugins-ugly-0.10.6.ebuild 1771
-RMD160 fbea7825b019fa676bc977f410bbe47b952d0352 gst-plugins-ugly-0.10.6.ebuild 1771
-SHA256 acc563e9619f2d7ff3cc0456c43d7dfd252ddc1ce02665105721d5d0090062d2 gst-plugins-ugly-0.10.6.ebuild 1771
+EBUILD gst-plugins-ugly-0.10.6.ebuild 1768 RMD160 102cfb1048a794cec880d3e7431e07592763d407 SHA1 cf009e9d07e15a1861831aa62fd6478c3d4ebdf6 SHA256 b7fd1cafe53f3c5ddaa0802d31303a93cc10fc4efb6b26c83abb83252be9d89a
+MD5 7c0d22933741a4e3d812673c4ea816cd gst-plugins-ugly-0.10.6.ebuild 1768
+RMD160 102cfb1048a794cec880d3e7431e07592763d407 gst-plugins-ugly-0.10.6.ebuild 1768
+SHA256 b7fd1cafe53f3c5ddaa0802d31303a93cc10fc4efb6b26c83abb83252be9d89a gst-plugins-ugly-0.10.6.ebuild 1768
 MISC ChangeLog 4169 RMD160 b1378d8060d411505dda53485fa58e938d094165 SHA1 710d8c027d6ee7c3259b2a704b7a58b3264d01c9 SHA256 87fb23d6aaf2d55224c76fa965f2aad02b1ac4fba3612ace5bf0f441ca3e43b6
 MD5 46bf1ed032050ab53fa6851cd161802f ChangeLog 4169
 RMD160 b1378d8060d411505dda53485fa58e938d094165 ChangeLog 4169
@@ -41,3 +44,10 @@ SHA256 d9a8448534a0f7934aaba344e30d0859b58ba5895eb8fac25357bf0d29105bab files/di
 MD5 6e902d1ab1d5e7124701131138506545 files/digest-gst-plugins-ugly-0.10.6-r1 274
 RMD160 331d1af999a48e6fad0e63220cddf1b3a5dcd52d files/digest-gst-plugins-ugly-0.10.6-r1 274
 SHA256 d9a8448534a0f7934aaba344e30d0859b58ba5895eb8fac25357bf0d29105bab files/digest-gst-plugins-ugly-0.10.6-r1 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkd2MKUACgkQj9hvisErhMI0pgCfWMYhqotRNhrTu6XIoerIB1m2
+jBsAn3dCi7G3YNeTRWA5tIqh8Xi0CvN3
+=mFwb
+-----END PGP SIGNATURE-----
