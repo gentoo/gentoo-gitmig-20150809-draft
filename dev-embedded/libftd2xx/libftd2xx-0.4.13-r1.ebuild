@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/libftd2xx-0.4.13.ebuild,v 1.1 2007/09/02 19:05:52 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/libftd2xx-0.4.13-r1.ebuild,v 1.1 2007/12/29 12:27:16 jurek Exp $
 
 inherit multilib
 
@@ -26,6 +26,7 @@ src_install() {
 
 	insinto /usr/include || die "insinto failed"
 	doins ftd2xx.h || die "doins failed"
+	doins WinTypes.h || die "doins failed"
 
 	dolib.so ${ftdifile} || die "dolib.so failed"
 	for i in ${ftdisym}
