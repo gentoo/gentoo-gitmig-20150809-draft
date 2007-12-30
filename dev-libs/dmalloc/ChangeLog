@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.38 2007/12/29 17:22:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.39 2007/12/30 11:24:23 drac Exp $
+
+  30 Dec 2007; Samuli Suominen <drac@gentoo.org>
+  -files/dmalloc-5.2.4-fpic.patch, -files/dmalloc-5.3.0-fpic.patch,
+  -files/dmalloc-5.3.0-respect-DESTDIR.diff,
+  -files/dmalloc-5.4.2-respect-DESTDIR.diff,
+  -files/dmalloc-5.4.2-sandbox.patch, -files/dmalloc-5.5.2-SONAME.patch,
+  -files/dmalloc-5.5.2-respect-DESTDIR.diff, -dmalloc-4.8.2-r1.ebuild,
+  -dmalloc-5.3.0.ebuild, -dmalloc-5.4.2.ebuild, -dmalloc-5.5.2.ebuild:
+  Clean directory.
 
   29 Dec 2007; Raúl Porcel <armin76@gentoo.org> dmalloc-5.5.2-r1.ebuild:
   alpha/ia64/sparc/x86 stable wrt #203589
