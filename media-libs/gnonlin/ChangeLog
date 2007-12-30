@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gnonlin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/ChangeLog,v 1.8 2007/09/13 15:25:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/ChangeLog,v 1.9 2007/12/30 12:24:41 jokey Exp $
+
+  30 Dec 2007; Markus Ullmann <jokey@gentoo.org> gnonlin-0.10.9.ebuild:
+  Stable on x86
 
 *gnonlin-0.10.9 (13 Sep 2007)
 
