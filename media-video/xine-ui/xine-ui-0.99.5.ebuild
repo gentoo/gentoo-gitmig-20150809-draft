@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5.ebuild,v 1.7 2007/05/11 14:50:48 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5.ebuild,v 1.8 2007/12/30 13:55:55 drac Exp $
 
 # WANT_AUTOCONF=latest
 # WANT_AUTOMAKE=latest
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="X nls lirc aalib libcaca readline curl ncurses vdr xinerama debug"
+IUSE="X nls lirc aalib libcaca readline curl vdr xinerama debug"
 
 RDEPEND=">=media-libs/libpng-1.2.8
 	>=media-libs/xine-lib-1.1.0
@@ -24,7 +24,6 @@ RDEPEND=">=media-libs/libpng-1.2.8
 	aalib? ( media-libs/aalib )
 	libcaca? ( media-libs/libcaca )
 	curl? ( >=net-misc/curl-7.10.2 )
-	ncurses? ( sys-libs/ncurses )
 	X? ( x11-libs/libX11
 		x11-libs/libXrender
 		x11-libs/libICE
@@ -57,7 +56,7 @@ src_compile() {
 		$(use_with libcaca) \
 		$(use_with curl) \
 		$(use_with readline) \
-		$(use_with ncurses) \
+		--without-ncurses \
 		|| die "econf failed."
 	emake || die "emake failed."
 }
