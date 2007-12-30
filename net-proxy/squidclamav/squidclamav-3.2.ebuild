@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/squidclamav-3.0.ebuild,v 1.3 2007/04/11 13:38:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/squidclamav-3.2.ebuild,v 1.1 2007/12/30 12:16:37 mrness Exp $
 
 inherit eutils
 
@@ -13,14 +13,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=net-misc/curl-7.12.1
+DEPEND="net-misc/curl
 	dev-libs/openssl
 	sys-libs/zlib
 	app-arch/bzip2"
 RDEPEND="${DEPEND}
 	net-proxy/squid"
-
-S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
@@ -29,7 +27,7 @@ src_unpack() {
 }
 
 src_install() {
-	dosbin squidclamav
+	dosbin squidclamav || die "dosbin failed"
 	insinto /etc
 	newins squidclamav.conf.dist squidclamav.conf
 	keepdir /var/log/squidclamav
