@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.02-r2.ebuild,v 1.13 2007/06/27 06:02:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.04.ebuild,v 1.1 2007/12/30 19:39:31 drac Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -10,8 +10,8 @@ HOMEPAGE="http://www.jwz.org/xscreensaver"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="gnome jpeg insecure-savers new-login offensive opengl pam xinerama"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="jpeg new-login offensive opengl pam suid xinerama"
 
 RDEPEND="x11-libs/libXxf86misc
 	x11-apps/xwininfo
@@ -43,12 +43,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-gentoo.patch
-	epatch "${FILESDIR}"/${P}-gdmflexiserver.patch
-	epatch "${FILESDIR}"/${P}-pam.patch
+	epatch "${FILESDIR}"/${PN}-5.02-gentoo.patch
+
+	# Update spec. using desktop-file-validate.
+	epatch "${FILESDIR}"/${P}-desktop-entry.patch
 
 	# disable offensive screensavers.
-	use offensive || epatch "${FILESDIR}/${P}-nsfw.patch"
+	use offensive || epatch "${FILESDIR}"/${P}-nsfw.patch
 
 	eautoreconf
 
@@ -64,6 +65,7 @@ src_compile() {
 
 	unset BC_ENV_ARGS
 	econf \
+		--with-x-app-defaults=/usr/share/X11/app-defaults \
 		--with-hackdir=/usr/lib/misc/xscreensaver \
 		--with-configdir=/usr/share/xscreensaver/config \
 		--x-libraries=/usr/$(get_libdir) \
@@ -79,58 +81,31 @@ src_compile() {
 		--with-gtk \
 		--without-kerberos \
 		--without-gle \
-		$(use_with insecure-savers setuid-hacks) \
+		$(use_with suid setuid-hacks) \
 		$(use_with new-login login-manager) \
 		$(use_with xinerama xinerama-ext) \
 		$(use_with pam) \
 		$(use_with opengl gl) \
 		$(use_with jpeg)
 
-	# bug 155049
+	# Fix bug 155049.
 	emake -j1 || die "emake failed."
 }
 
 src_install() {
-	[[ -n "${KDEDIR}" ]] && dodir "${KDEDIR}/bin"
-
 	emake install_prefix="${D}" install || die "emake install failed."
 
 	dodoc README*
 
-	# install correctly in gnome, including info about configuration preferences
-	if use gnome; then
-		dodir /usr/share/gnome/capplets
-		insinto /usr/share/gnome/capplets
-		doins driver/screensaver-properties.desktop
-
-		newicon "${S}/utils/images/logo-50.xpm" xscreensaver.xpm
-
-		dodir /usr/share/control-center-2.0/capplets
-		insinto /usr/share/control-center-2.0/capplets
-		newins "${FILESDIR}/desktop_entries/screensaver-properties.desktop"
-	fi
-
-	# Remove "extra" capplet
-	rm -f "${D}/usr/share/applications/gnome-screensaver-properties.desktop"
-
-	# Allways install Settings .desktop for enviroments following
-	# freedesktop.org standard, e.g. xfce-base/xfdesktop and rox-base/xdg-menu
-	domenu "${FILESDIR}/desktop_entries/screensaver-properties.desktop"
-
 	use pam && fperms 755 /usr/bin/xscreensaver
 	pamd_mimic_system xscreensaver auth
 
-	# Fix bug #135549:
-	rm -f "${D}/usr/share/xscreensaver/config/electricsheep.xml"
-	rm -f "${D}/usr/share/xscreensaver/config/fireflies.xml"
+	# Fix bug #135549.
+	rm -f "${D}"/usr/share/xscreensaver/config/electricsheep.xml
+	rm -f "${D}"/usr/share/xscreensaver/config/fireflies.xml
 	dodir /usr/share/man/man6x
-	mv "${D}/usr/share/man/man6/worm.6" \
-		"${D}/usr/share/man/man6x/worm.6x"
-
-	# Fix bug #152250:
-	dodir "/usr/share/X11/app-defaults"
-	mv "${D}/usr/lib/X11/app-defaults/XScreenSaver" \
-		"${D}/usr/share/X11/app-defaults/XScreenSaver"
+	mv "${D}"/usr/share/man/man6/worm.6 \
+		"${D}"/usr/share/man/man6x/worm.6x
 }
 
 pkg_postinst() {
@@ -143,15 +118,5 @@ pkg_postinst() {
 		elog "screen is locked to another account. If you want this"
 		elog "feature, please recompile with USE=\"new-login\"."
 		elog
-	fi
-
-	if use insecure-savers;then
-		ewarn
-		ewarn "You have chosen USE=insecure-savers. While upstream"
-		ewarn "has made every effort to make sure these savers do not"
-		ewarn "abuse their setuid root status, the possibilty exists that"
-		ewarn "someone will exploit xscreensaver and will be able to gain"
-		ewarn "root privileges. You have been warned."
-		ewarn
 	fi
 }

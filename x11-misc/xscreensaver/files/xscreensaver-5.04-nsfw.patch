@@ -1,10 +1,10 @@
-diff -ur xscreensaver-5.02.orig/driver/XScreenSaver.ad.in xscreensaver-5.02/driver/XScreenSaver.ad.in
---- xscreensaver-5.02.orig/driver/XScreenSaver.ad.in	2007-04-21 06:33:17.000000000 +0300
-+++ xscreensaver-5.02/driver/XScreenSaver.ad.in	2007-05-01 21:36:47.000000000 +0300
-@@ -302,10 +302,6 @@
- 				fiberlamp -root				    \n\
- 				boxfit -root				    \n\
- 				celtic -root				    \n\
+diff -ur xscreensaver-5.04.orig/driver/XScreenSaver.ad.in xscreensaver-5.04/driver/XScreenSaver.ad.in
+--- xscreensaver-5.04.orig/driver/XScreenSaver.ad.in	2007-11-13 10:36:00.000000000 +0200
++++ xscreensaver-5.04/driver/XScreenSaver.ad.in	2007-12-30 21:13:12.000000000 +0200
+@@ -305,10 +305,6 @@
+ 				cwaves -root				    \n\
+ 				m6502 -root				    \n\
+ 				abstractile -root			    \n\
 -- default-n:			webcollage -root			    \n\
 -- default-n:  "WebCollage (whacked)"					      \
 -				webcollage -root -filter		      \
@@ -12,7 +12,7 @@ diff -ur xscreensaver-5.02.orig/driver/XScreenSaver.ad.in xscreensaver-5.02/driv
  - default-n:			vidwhacker -root			    \n\
  									      \
  @GL_KLUDGE@ GL:			gears -root				    \n\
-@@ -488,7 +484,6 @@
+@@ -495,7 +491,6 @@
  *hacks.xanalogtv.name:      XAnalogTV
  *hacks.xspirograph.name:    XSpiroGraph
  *hacks.nerverot.name:       NerveRot
@@ -20,9 +20,9 @@ diff -ur xscreensaver-5.02.orig/driver/XScreenSaver.ad.in xscreensaver-5.02/driv
  *hacks.vidwhacker.name:     VidWhacker
  *hacks.morph3d.name:        Morph3D
  *hacks.bubble3d.name:       Bubble3D
-diff -ur xscreensaver-5.02.orig/hacks/glx/glsnake.c xscreensaver-5.02/hacks/glx/glsnake.c
---- xscreensaver-5.02.orig/hacks/glx/glsnake.c	2006-05-03 22:39:21.000000000 +0300
-+++ xscreensaver-5.02/hacks/glx/glsnake.c	2007-05-01 21:35:04.000000000 +0300
+diff -ur xscreensaver-5.04.orig/hacks/glx/glsnake.c xscreensaver-5.04/hacks/glx/glsnake.c
+--- xscreensaver-5.04.orig/hacks/glx/glsnake.c	2006-05-03 22:39:21.000000000 +0300
++++ xscreensaver-5.04/hacks/glx/glsnake.c	2007-12-30 21:15:41.000000000 +0200
 @@ -565,21 +565,6 @@
  	ZERO, PIN, ZERO, ZERO, ZERO, ZERO, PIN, ZERO, ZERO, ZERO, ZERO,
  	ZERO, PIN, ZERO }
@@ -55,10 +55,10 @@ diff -ur xscreensaver-5.02.orig/hacks/glx/glsnake.c xscreensaver-5.02/hacks/glx/
      { "PictureComingSoon",
          { LEFT, LEFT, ZERO, RIGHT, LEFT, PIN, RIGHT, RIGHT, PIN, RIGHT, LEFT, PIN, LEFT, RIGHT, PIN, RIGHT, RIGHT, PIN, RIGHT, LEFT, ZERO, RIGHT, RIGHT, ZERO }
      },
-diff -ur xscreensaver-5.02.orig/hacks/Makefile.in xscreensaver-5.02/hacks/Makefile.in
---- xscreensaver-5.02.orig/hacks/Makefile.in	2007-04-21 06:33:23.000000000 +0300
-+++ xscreensaver-5.02/hacks/Makefile.in	2007-05-01 21:33:28.000000000 +0300
-@@ -102,7 +102,7 @@
+diff -ur xscreensaver-5.04.orig/hacks/Makefile.in xscreensaver-5.04/hacks/Makefile.in
+--- xscreensaver-5.04.orig/hacks/Makefile.in	2007-11-13 10:39:36.000000000 +0200
++++ xscreensaver-5.04/hacks/Makefile.in	2007-12-30 21:19:15.000000000 +0200
+@@ -103,7 +103,7 @@
  		  blaster.c bumps.c ripples.c xspirograph.c \
  		  nerverot.c xrayswarm.c hyperball.c zoom.c whirlwindwarp.c \
  		  rotzoomer.c whirlygig.c speedmine.c vermiculate.c \
@@ -67,19 +67,19 @@ diff -ur xscreensaver-5.02.orig/hacks/Makefile.in xscreensaver-5.02/hacks/Makefi
  		  euler2d.c juggle.c polyominoes.c thornbird.c fluidballs.c \
  		  anemone.c halftone.c metaballs.c eruption.c popsquares.c \
  		  barcode.c piecewise.c cloudlife.c fontglide.c apple2.c \
-@@ -110,9 +110,8 @@
- 		  mismunch.c pacman.c pacman_ai.c pacman_level.c \
+@@ -112,9 +112,8 @@
  		  fuzzyflakes.c anemotaxis.c memscroller.c substrate.c \
  		  intermomentary.c fireworkx.c fireworkx_mmx.S fiberlamp.c \
--		  boxfit.c interaggregate.c celtic.c webcollage-cocoa.m \
--		  webcollage-helper-cocoa.m
+ 		  boxfit.c interaggregate.c celtic.c cwaves.c m6502.c \
+-		  asm6502.c abstractile.c \
+-		  webcollage-cocoa.m webcollage-helper-cocoa.m
 -SCRIPTS		= vidwhacker webcollage ljlatest
-+		  boxfit.c interaggregate.c celtic.c
++		  asm6502.c abstractile.c
 +SCRIPTS		= vidwhacker ljlatest
  
  # Programs that are mentioned in XScreenSaver.ad, and that have XML files,
  # but that are not shipped with xscreensaver itself.
-@@ -140,7 +139,7 @@
+@@ -142,7 +141,7 @@
  		  blaster.o bumps.o ripples.o xspirograph.o \
  		  nerverot.o xrayswarm.o hyperball.o zoom.o whirlwindwarp.o \
  		  rotzoomer.o whirlygig.o speedmine.o vermiculate.o \
@@ -88,18 +88,19 @@ diff -ur xscreensaver-5.02.orig/hacks/Makefile.in xscreensaver-5.02/hacks/Makefi
  		  euler2d.o juggle.o polyominoes.o thornbird.o fluidballs.o \
  		  anemone.o halftone.o metaballs.o eruption.o popsquares.o \
  		  barcode.o piecewise.o cloudlife.o fontglide.o apple2.o \
-@@ -148,8 +147,7 @@
+@@ -150,8 +149,8 @@
  		  mismunch.o pacman.o pacman_ai.o pacman_level.o \
  		  fuzzyflakes.o anemotaxis.o memscroller.o substrate.o \
  		  intermomentary.o fireworkx.o fiberlamp.o boxfit.o \
--		  interaggregate.o celtic.o webcollage-cocoa.o \
--		  webcollage-helper-cocoa.o
-+		  interaggregate.o celtic.o
+-		  interaggregate.o celtic.o cwaves.o webcollage-cocoa.o \
+-		  webcollage-helper-cocoa.o m6502.0 asm6502.o abstractile.o
++		  interaggregate.o celtic.o cwaves.o \
++		  m6502.0 asm6502.o abstractile.o
  
  NEXES		= attraction blitspin bouboule braid bubbles decayscreen deco \
  		  drift flag flame forest vines galaxy grav greynetic halo \
-@@ -173,7 +171,7 @@
- 		  celtic \
+@@ -175,7 +174,7 @@
+ 		  celtic cwaves m6502 abstractile \
  		  @JPEG_EXES@
  SEXES		= sonar
 -JPEG_EXES	= webcollage-helper
@@ -107,7 +108,7 @@ diff -ur xscreensaver-5.02.orig/hacks/Makefile.in xscreensaver-5.02/hacks/Makefi
  EXES		= $(NEXES) $(SEXES)
  
  HACK_OBJS_1	= $(UTILS_BIN)/resources.o $(UTILS_BIN)/visual.o \
-@@ -209,7 +207,7 @@
+@@ -211,7 +210,7 @@
  	          spotlight.man squiral.man starfish.man strange.man \
  	          swirl.man t3d.man thornbird.man triangle.man truchet.man \
  	          twang.man vermiculate.man vidwhacker.man vines.man \
@@ -116,18 +117,17 @@ diff -ur xscreensaver-5.02.orig/hacks/Makefile.in xscreensaver-5.02/hacks/Makefi
  	          worm.man xflame.man xjack.man xlyap.man xmatrix.man \
  	          xrayswarm.man xspirograph.man xsublim.man \
  	          zoom.man halftone.man eruption.man metaballs.man \
-@@ -978,10 +976,6 @@
+@@ -988,9 +987,6 @@
  xsublim:	xsublim.o	$(HACK_OBJS_1)
  	$(CC_HACK) -o $@ $@.o	$(HACK_OBJS_1) $(HACK_LIBS)
  
 -webcollage-helper: webcollage-helper.o
 -	$(CC_HACK) -o $@ $@.o	$(XPM_LIBS) $(JPEG_LIBS)
 -
--
+ 
  ##############################################################################
  #
- # DO NOT DELETE: updated by make distdepend
-@@ -2476,17 +2470,6 @@
+@@ -2521,17 +2517,6 @@
  wander.o: $(UTILS_SRC)/usleep.h
  wander.o: $(UTILS_SRC)/visual.h
  wander.o: $(UTILS_SRC)/yarandom.h
@@ -145,12 +145,12 @@ diff -ur xscreensaver-5.02.orig/hacks/Makefile.in xscreensaver-5.02/hacks/Makefi
  whirlwindwarp.o: ../config.h
  whirlwindwarp.o: $(srcdir)/screenhackI.h
  whirlwindwarp.o: $(srcdir)/screenhack.h
-diff -ur xscreensaver-5.02.orig/po/POTFILES.in xscreensaver-5.02/po/POTFILES.in
---- xscreensaver-5.02.orig/po/POTFILES.in	2007-04-21 06:33:29.000000000 +0300
-+++ xscreensaver-5.02/po/POTFILES.in	2007-05-01 21:35:33.000000000 +0300
-@@ -203,7 +203,6 @@
- hacks/config/vidwhacker.xml
+diff -ur xscreensaver-5.04.orig/po/POTFILES.in xscreensaver-5.04/po/POTFILES.in
+--- xscreensaver-5.04.orig/po/POTFILES.in	2007-11-13 10:39:40.000000000 +0200
++++ xscreensaver-5.04/po/POTFILES.in	2007-12-30 21:19:50.000000000 +0200
+@@ -210,7 +210,6 @@
  hacks/config/vines.xml
+ hacks/config/voronoi.xml
  hacks/config/wander.xml
 -hacks/config/webcollage.xml
  hacks/config/whirlwindwarp.xml
