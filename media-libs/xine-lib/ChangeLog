@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.484 2007/10/08 17:20:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.485 2007/12/30 14:04:13 flameeyes Exp $
+
+  30 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Document non-obvious USE flags on metadata.xml.
 
   08 Oct 2007; Markus Rothe <corsair@gentoo.org> xine-lib-1.1.8.ebuild:
   Stable on ppc64; bug #192577
