@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.04.ebuild,v 1.1 2007/12/30 19:39:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.04.ebuild,v 1.2 2007/12/30 20:06:21 drac Exp $
 
-inherit eutils flag-o-matic pam fixheadtails autotools
+inherit autotools eutils fixheadtails flag-o-matic pam
 
 DESCRIPTION="A modular screen saver and locker for the X Window System"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -43,27 +43,28 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-5.02-gentoo.patch
-
-	# Update spec. using desktop-file-validate.
-	epatch "${FILESDIR}"/${P}-desktop-entry.patch
-
-	# disable offensive screensavers.
+	# Gentoo specific hacks and settings.
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 	use offensive || epatch "${FILESDIR}"/${P}-nsfw.patch
+
+	# TODO. Get this fixed upstream.
+	epatch "${FILESDIR}"/${P}-desktop-entry.patch
 
 	eautoreconf
 
-	# change head and tail calls to POSIX ones.
+	# TODO. Get this fixed upstream.
 	ht_fix_all
 }
 
 src_compile() {
-	# simple workaround for the flurry screensaver
+	# Simple workaround for the flurry screensaver.
+	# TODO. Figure out if this is still needed?
 	filter-flags -mabi=altivec
 	filter-flags -maltivec
 	append-flags -U__VEC__
 
 	unset BC_ENV_ARGS
+
 	econf \
 		--with-x-app-defaults=/usr/share/X11/app-defaults \
 		--with-hackdir=/usr/lib/misc/xscreensaver \
@@ -88,7 +89,7 @@ src_compile() {
 		$(use_with opengl gl) \
 		$(use_with jpeg)
 
-	# Fix bug 155049.
+	# Bug 155049.
 	emake -j1 || die "emake failed."
 }
 
@@ -100,7 +101,7 @@ src_install() {
 	use pam && fperms 755 /usr/bin/xscreensaver
 	pamd_mimic_system xscreensaver auth
 
-	# Fix bug #135549.
+	# Bug 135549.
 	rm -f "${D}"/usr/share/xscreensaver/config/electricsheep.xml
 	rm -f "${D}"/usr/share/xscreensaver/config/fireflies.xml
 	dodir /usr/share/man/man6x
