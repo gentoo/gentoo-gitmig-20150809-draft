@@ -60,6 +60,28 @@
  #  define my_io_remap_page_range(vma, start, ofs, len, prot) \
  		io_remap_page_range(vma,start,ofs,len,prot)
  # else
+@@ -70,6 +70,7 @@
+ 
+ /* These are also not present in 2.6 kernels ... */
+ #if (!defined _LINUX_DEVFS_FS_KERNEL_H) || (defined KERNEL_2_6)
++#include <linux/fs.h>
+ static inline int devfs_register_chrdev (unsigned int major, const char *name,
+                                          struct file_operations *fops)
+ {
+@@ -77,7 +78,12 @@
+ }
+ static inline int devfs_unregister_chrdev (unsigned int major,const char *name)
+ {
+-    return unregister_chrdev (major, name);
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)    
++   return unregister_chrdev (major, name);
++#else
++    unregister_chrdev (major, name);
++    return 0;
++#endif
+ }
+ #endif
+ 
 --- svgalib/kernel/svgalib_helper/main.c
 +++ svgalib/kernel/svgalib_helper/main.c
 @@ -1,5 +1,3 @@
