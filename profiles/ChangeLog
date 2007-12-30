@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.956 2007/12/30 21:03:54 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.957 2007/12/30 21:11:46 opfer Exp $
+
+  30 Dec 2007; <opfer@gentoo.org> use.desc, use.local.desc:
+  adjust description of svg and app-editors/emacs-cvs:xft USE flags
 
   30 Dec 2007; Mark Loeser <halcy0n@gentoo.org> use.local.desc:
   Remove mono from use.local.desc for media-libs/libkarma

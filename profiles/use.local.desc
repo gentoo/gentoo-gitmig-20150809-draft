@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3249 2007/12/30 21:03:54 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3250 2007/12/30 21:11:46 opfer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -82,7 +82,7 @@ app-editors/emacs-cvs:gzip-el - Compress bundled Emacs Lisp source
 app-editors/emacs-cvs:hesiod - Enable support for hesiod
 app-editors/emacs-cvs:sound - Enable sound
 app-editors/emacs-cvs:toolkit-scroll-bars - Use the selected toolkit's scrollbars in preference to Emacs' own scrollbars
-app-editors/emacs-cvs:xft - Build Emacs with support for the XFT font renderer (ie. the XFT_JHD_BRANCH branch from CVS)
+app-editors/emacs-cvs:xft - Build Emacs with support for the XFT font renderer
 app-editors/emacs:gzip-el - Compress bundled Emacs Lisp source
 app-editors/emacs:hesiod - Enable support for hesiod
 app-editors/emacs:sendmail - Build Emacs with MTA support
