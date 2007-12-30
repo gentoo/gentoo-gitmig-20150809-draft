@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.1.1.ebuild,v 1.2 2007/12/24 10:27:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.1.1.ebuild,v 1.3 2007/12/30 18:18:22 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -94,7 +94,7 @@ src_compile() {
 
 	econf \
 		--enable-static \
-		$(use_enable x11 X) \
+		$(use_enable X x11) \
 		$(use_enable fbcon fbdev) \
 		$(use_enable mmx) \
 		$(use_enable sse) \
