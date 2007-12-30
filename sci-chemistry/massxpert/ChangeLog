@@ -1,0 +1,9 @@
+# ChangeLog for sci-chemistry/massxpert
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/ChangeLog,v 1.1 2007/12/30 00:53:45 je_fro Exp $
+
+*massxpert-1.6.7 (30 Dec 2007)
+
+  30 Dec 2007; <jeff@gentoo.org> +metadata.xml, +massxpert-1.6.7.ebuild:
+  Initial import from the science overlay.
+
