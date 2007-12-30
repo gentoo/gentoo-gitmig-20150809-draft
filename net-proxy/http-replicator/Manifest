@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX http-replicator-3.0-callrepcacheman-0.1 86 RMD160 ccd133c228f7e0ee08ce32842bcdcf80d6f1122e SHA1 2587f07d9beb03cc641b69f9eb97516670e8e085 SHA256 9f7cff787b49eb8cb6ca4581c77167b305a766785a0897ee663ca94cf3aa97fd
 MD5 1ebb63eb67b5ce575bb5e353973ed225 files/http-replicator-3.0-callrepcacheman-0.1 86
 RMD160 ccd133c228f7e0ee08ce32842bcdcf80d6f1122e files/http-replicator-3.0-callrepcacheman-0.1 86
@@ -6,10 +9,6 @@ AUX http-replicator-3.0-repcacheman-0.21 6205 RMD160 89bf1048cbcb6bf0bd104d37e14
 MD5 839e5906b6eb7f21380e836321dd5739 files/http-replicator-3.0-repcacheman-0.21 6205
 RMD160 89bf1048cbcb6bf0bd104d37e14a9916e6ae9269 files/http-replicator-3.0-repcacheman-0.21 6205
 SHA256 13d6fca03290169ebb292b31041836c4fb332076d9693569fb0192a735079e5d files/http-replicator-3.0-repcacheman-0.21 6205
-AUX http-replicator-3.0-repcacheman-0.33 6225 RMD160 a655250dd747beb6fe5cd3cb58cb85a924756905 SHA1 13aead3c6307cb3317081f10e23cadab0ecc72ac SHA256 abdce2b0f307c7ae3dad6caee6b7f032696c0ce1fab98cc8f7a952ce4f53293b
-MD5 20a9fbec924f5e4ade7b3e98009e3560 files/http-replicator-3.0-repcacheman-0.33 6225
-RMD160 a655250dd747beb6fe5cd3cb58cb85a924756905 files/http-replicator-3.0-repcacheman-0.33 6225
-SHA256 abdce2b0f307c7ae3dad6caee6b7f032696c0ce1fab98cc8f7a952ce4f53293b files/http-replicator-3.0-repcacheman-0.33 6225
 AUX http-replicator-3.0-repcacheman-0.44 5327 RMD160 5545856f99674ff7bb7aedd946284904e525d6f2 SHA1 8168528d7062ff00b6a9189b5ab8d6651b76155a SHA256 28d45098bf29ce050aa94b47c9a5fee28f5f083a8bf213f90044881092125bbe
 MD5 9dd9b2b03ee2a05252e099985de3adf9 files/http-replicator-3.0-repcacheman-0.44 5327
 RMD160 5545856f99674ff7bb7aedd946284904e525d6f2 files/http-replicator-3.0-repcacheman-0.44 5327
@@ -31,21 +30,21 @@ EBUILD http-replicator-3.0-r1.ebuild 1934 RMD160 cce81f7e96a47c31380543024b84cff
 MD5 4847962877a6c0addbb2e4e2ae78e63e http-replicator-3.0-r1.ebuild 1934
 RMD160 cce81f7e96a47c31380543024b84cffd3f6671bf http-replicator-3.0-r1.ebuild 1934
 SHA256 f16a4df001908db444f93ff8b4d5e6968ace1dab2a513bb4cccd40e8cabfca05 http-replicator-3.0-r1.ebuild 1934
-EBUILD http-replicator-3.0.ebuild 1934 RMD160 5bcab6349c368ce716a0fa2bac5a95351abc3689 SHA1 ba089cd2ac3aba4989b5775c15ad618c9f6c10f3 SHA256 ddccc53fdb5b54721fc400c51b73015cc003dbf88680c75342ef02429978c0b4
-MD5 64dbcc61014037b1de10b260d4314cf5 http-replicator-3.0.ebuild 1934
-RMD160 5bcab6349c368ce716a0fa2bac5a95351abc3689 http-replicator-3.0.ebuild 1934
-SHA256 ddccc53fdb5b54721fc400c51b73015cc003dbf88680c75342ef02429978c0b4 http-replicator-3.0.ebuild 1934
-MISC ChangeLog 3801 RMD160 43ba3c36c90337fdd92679974311df5146bde2a1 SHA1 a42b72a25ae44890ec805557743fc9d7e4c5f811 SHA256 4c48dad6b5f8c444c5e110e2811fe036265848868a2998656838073c6fe65770
-MD5 20cc62acdf876c107b7988b045bda910 ChangeLog 3801
-RMD160 43ba3c36c90337fdd92679974311df5146bde2a1 ChangeLog 3801
-SHA256 4c48dad6b5f8c444c5e110e2811fe036265848868a2998656838073c6fe65770 ChangeLog 3801
+MISC ChangeLog 3953 RMD160 0fccec44d9d60c77ee2446f9a448283120bb5602 SHA1 63a0927cc4a0440946931fbd2c5bd5e7b5ccc48f SHA256 d5860ca2fdb599b3679b2c559166345f84dd58e4ff22e8713645593eca0c204a
+MD5 8c41c70b6d004c0463337c3dd3fc962e ChangeLog 3953
+RMD160 0fccec44d9d60c77ee2446f9a448283120bb5602 ChangeLog 3953
+SHA256 d5860ca2fdb599b3679b2c559166345f84dd58e4ff22e8713645593eca0c204a ChangeLog 3953
 MISC metadata.xml 227 RMD160 125266cd9f70c3363b95f8cafb269831182e64fd SHA1 c915ed723f874f24c32b96f22778390715e60d77 SHA256 4a4ffece3d4de0d1311ec96e7001a11e40cf3558d0aab7ed5ea0d3a6b29fbb34
 MD5 eae37ad8073b8190842199931528eecc metadata.xml 227
 RMD160 125266cd9f70c3363b95f8cafb269831182e64fd metadata.xml 227
 SHA256 4a4ffece3d4de0d1311ec96e7001a11e40cf3558d0aab7ed5ea0d3a6b29fbb34 metadata.xml 227
-MD5 2b88869ff8557ffc40a86e2038eefbcb files/digest-http-replicator-3.0 256
-RMD160 6c0895be4847cec1873c855a6fb04ff70b6a8369 files/digest-http-replicator-3.0 256
-SHA256 5ae4510802aa59aeea1329df4a82b4ab0370f0ffa9ddabe84f55c51e55e946ce files/digest-http-replicator-3.0 256
 MD5 2b88869ff8557ffc40a86e2038eefbcb files/digest-http-replicator-3.0-r1 256
 RMD160 6c0895be4847cec1873c855a6fb04ff70b6a8369 files/digest-http-replicator-3.0-r1 256
 SHA256 5ae4510802aa59aeea1329df4a82b4ab0370f0ffa9ddabe84f55c51e55e946ce files/digest-http-replicator-3.0-r1 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkd3hOgACgkQ+fWpoTWIA9FYXQCdHjMyY6IPKr5GBk7s4yBMRu2c
+rfcAnA5ctUH5HPAQ1M2VyJfGox7jNGxv
+=C5mk
+-----END PGP SIGNATURE-----
