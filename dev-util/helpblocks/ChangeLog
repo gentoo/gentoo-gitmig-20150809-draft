@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/helpblocks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.5 2007/12/04 14:32:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.6 2007/12/30 09:06:14 mrness Exp $
+
+  30 Dec 2007; Alin Năstac <mrness@gentoo.org> files/helpblocks.desktop,
+  -helpblocks-1.19.ebuild:
+  Remove old version. Cleanup desktop file.
 
 *helpblocks-1.20 (04 Dec 2007)
 
