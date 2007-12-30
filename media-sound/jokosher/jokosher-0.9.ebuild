@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.9.ebuild,v 1.4 2007/12/30 12:25:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.9.ebuild,v 1.5 2007/12/30 21:31:55 drac Exp $
 
 NEED_PYTHON=2.4
 
@@ -37,7 +37,6 @@ RDEPEND="dev-python/dbus-python
 	x11-themes/hicolor-icon-theme
 	dev-python/setuptools"
 DEPEND="${RDEPEND}
-	dev-python/setuptools
 	app-text/scrollkeeper"
 
 PYTHON_MODNAME="Jokosher"
