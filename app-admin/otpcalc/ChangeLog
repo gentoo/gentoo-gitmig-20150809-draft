@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/otpcalc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.26 2007/12/26 10:14:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.27 2007/12/30 23:15:51 ulm Exp $
+
+  30 Dec 2007; Ulrich Mueller <ulm@gentoo.org> otpcalc-0.97-r2.ebuild:
+  Add missing dependency on openssl. Install docs.
 
 *otpcalc-0.97-r2 (26 Dec 2007)
 
