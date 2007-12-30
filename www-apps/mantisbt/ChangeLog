@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.48 2007/12/10 16:14:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.49 2007/12/30 19:17:36 pva Exp $
+
+*mantisbt-1.0.8-r1 (30 Dec 2007)
+
+  30 Dec 2007; <pva@gentoo.org>
+  +files/mantisbt-1.0.8-avoid-XSS-in-file_api.php.patch,
+  +mantisbt-1.0.8-r1.ebuild:
+  Fixes "Upload File" Script Insertion Vulnerability, bug 203791, reported by
+  Pierre-Yves Rofes <py AT gentoo.org>.
 
   10 Dec 2007; <pva@gentoo.org> mantisbt-1.0.8.ebuild:
   Fixed apache2 DEPEND, bug #201822. Thank Nick Devito <nick AT nick125.com>
