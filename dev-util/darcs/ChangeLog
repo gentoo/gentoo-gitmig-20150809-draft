@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.82 2007/12/30 16:30:48 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.83 2007/12/30 19:33:01 kolmodin Exp $
+
+  30 Dec 2007; Lennart Kolmodin <kolmodin@gentoo.org>
+  files/darcs-1.1.0pre1-ghc68.patch, darcs-1.1.0_pre1.ebuild:
+  Rewrite the GHC version patch. It should now work with all versions of GHC
+  where darcs previously worked. This fixes bug #203507.
 
   30 Dec 2007; Lennart Kolmodin <kolmodin@gentoo.org> darcs-1.0.5.ebuild,
   darcs-1.0.6.ebuild, darcs-1.0.7.ebuild, darcs-1.0.8-r2.ebuild,
