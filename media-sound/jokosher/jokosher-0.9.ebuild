@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.9.ebuild,v 1.3 2007/12/30 12:13:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.9.ebuild,v 1.4 2007/12/30 12:25:21 jokey Exp $
 
 NEED_PYTHON=2.4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.jokosher.org/downloads/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 # NOTE: setuptools are a runtime requirement as the app
@@ -35,7 +35,7 @@ RDEPEND="dev-python/dbus-python
 	>=media-plugins/gst-plugins-vorbis-0.10.14
 	>=media-plugins/gst-plugins-ladspa-0.10.5
 	x11-themes/hicolor-icon-theme
-        dev-python/setuptools"
+	dev-python/setuptools"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	app-text/scrollkeeper"
