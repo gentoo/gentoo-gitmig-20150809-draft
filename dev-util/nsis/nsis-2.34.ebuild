@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.30.ebuild,v 1.2 2007/10/22 22:34:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.34.ebuild,v 1.1 2007/12/30 08:30:35 mrness Exp $
 
 mingw32_variants=$(eval echo {,i{6,5,4,3}86-}mingw32)
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bzip2 config-log zlib"
 
 # NSIS Menu uses wxwindows but it's all broken, so disable for now
@@ -54,9 +54,7 @@ get_additional_options() {
 		STRIP=no
 	echo \
 		SKIPSTUBS=\"$(use zlib || echo zlib) $(use bzip2 || echo bzip2)\" \
-		SKIPPLUGINS=\"\" \
-		SKIPUTILS=\"NSIS Menu\" \
-		SKIPMISC=\"\"
+		SKIPUTILS=\"NSIS Menu\"
 	use config-log && echo NSIS_CONFIG_LOG=yes
 	# remove the following line when nsis bug 1753070 will be fixed
 	use amd64 && echo APPEND_CCFLAGS=-m32 APPEND_LINKFLAGS=-m32
