@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3250 2007/12/30 21:11:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3251 2007/12/30 21:40:19 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1963,7 +1963,7 @@ sys-libs/pam:pam_chroot - Builds the pam_chroot module (enables per-user chroots
 sys-libs/pam:pam_timestamp - Builds the pam_timestamp module (enables recent successful attempt authentication)
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 sys-libs/uclibc:pregen - Use pregenerated locales
-sys-libs/uclibc:savedconfig - Adds support to user defined configs
+sys-libs/uclibc:savedconfig - Adds support for user defined configs
 sys-libs/uclibc:uclibc-compat - build uclibc with backwards compatible options
 sys-libs/uclibc:userlocales - build only the locales specified in /etc/locales.build
 sys-libs/uclibc:wordexp - add support for word expansion (wordexp.h)
