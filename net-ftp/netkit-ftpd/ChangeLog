@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/netkit-ftpd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.7 2007/05/06 10:59:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.8 2007/12/30 20:38:31 ulm Exp $
+
+*netkit-ftpd-0.17-r6 (30 Dec 2007)
+
+  30 Dec 2007; Ulrich Mueller <ulm@gentoo.org> +netkit-ftpd-0.17-r6.ebuild:
+  Replace call to docert by install_cert, bug #201675.
 
   06 May 2007; Marius Mauch <genone@gentoo.org> netkit-ftpd-0.17-r4.ebuild,
   netkit-ftpd-0.17-r5.ebuild:
