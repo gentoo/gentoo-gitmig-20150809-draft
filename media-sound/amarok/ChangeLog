@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.249 2007/12/17 18:38:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.250 2007/12/30 15:10:00 flameeyes Exp $
+
+  30 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Clarify that RealPlayer is GPL-incompatible.
 
 *amarok-1.4.8 (17 Dec 2007)
 

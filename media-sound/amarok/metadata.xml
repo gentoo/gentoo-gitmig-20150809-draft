@@ -33,6 +33,8 @@
       <pkg>media-video/realplayer</pkg>. This is an alternative engine
       to the xine one, which supports a different set of formats. Only
       available for x86 architecture as it uses the binary version of
+      RealPlayer. Plase note that by enabling this USE flag, the resulting
+      package will not be redistributable, as it links to the non-GPL compatible
       RealPlayer.
     </flag>
   </use>
