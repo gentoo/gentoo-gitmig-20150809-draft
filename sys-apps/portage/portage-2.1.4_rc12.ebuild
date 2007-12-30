@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4_rc10.ebuild,v 1.1 2007/12/14 01:13:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4_rc12.ebuild,v 1.1 2007/12/30 17:25:46 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -141,6 +141,13 @@ src_install() {
 	# BSD and OSX need a sed wrapper so that find/xargs work properly
 	if use userland_GNU; then
 		rm "${S}"/bin/sed || die "Failed to remove sed wrapper"
+	else
+		local x
+		for x in awk make patch ; do
+			# these wrappers will be preferred in $PATH
+			# and they do foo -> gfoo translation
+			dosym sed "${portage_base}/bin/${x}"
+		done
 	fi
 	cd "${S}"/bin
 	doexe *
