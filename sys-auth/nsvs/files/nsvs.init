@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nsvs/files/nsvs.init,v 1.1 2007/12/30 02:51:10 chtekk Exp $
+
+depend() {
+	after net mysql
+}
+
+checkconfig() {
+	if [[ ! -e /etc/nsvsd.conf ]] ; then
+		eerror "Configuration file /etc/nsvsd.conf does not exist!"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting nsvsd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/nsvsd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping nsvsd"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/nsvsd
+	eend $?
+}

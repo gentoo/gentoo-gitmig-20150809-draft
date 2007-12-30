@@ -1,0 +1,10 @@
+# ChangeLog for sys-auth/nsvs
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nsvs/ChangeLog,v 1.1 2007/12/30 02:51:09 chtekk Exp $
+
+*nsvs-20070407 (30 Dec 2007)
+
+  30 Dec 2007; Luca Longinotti <chtekk@gentoo.org> +files/nsvs.init,
+  +metadata.xml, +nsvs-20070407.ebuild:
+  Add nsvs package, fixes bug #94579.
+
