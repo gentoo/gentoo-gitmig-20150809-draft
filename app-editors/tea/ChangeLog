@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.26 2007/12/16 17:49:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.27 2007/12/30 12:19:24 drac Exp $
+
+  30 Dec 2007; Samuli Suominen <drac@gentoo.org> -files/tea_icon_v2.png,
+  -tea-16.1.1.ebuild, -tea-16.1.1-r1.ebuild, -tea-17.0.0.ebuild,
+  -tea-17.0.2.ebuild, -tea-17.3.5.ebuild, tea-17.4.1.ebuild:
+  amd64 stable, closing also #200306, leaving QA bugs 200229 and 200304 open -
+  not a regression.
 
   16 Dec 2007; Raúl Porcel <armin76@gentoo.org> tea-17.4.1.ebuild:
   x86 stable
