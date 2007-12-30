@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/sguil-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/ChangeLog,v 1.5 2007/05/01 22:34:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/ChangeLog,v 1.6 2007/12/30 20:08:38 ulm Exp $
+
+*sguil-server-0.6.1-r1 (30 Dec 2007)
+
+  30 Dec 2007; Ulrich Mueller <ulm@gentoo.org> -sguil-server-0.5.3.ebuild,
+  -sguil-server-0.6.0_p1.ebuild, -sguil-server-0.6.1.ebuild,
+  +sguil-server-0.6.1-r1.ebuild:
+  Replace call to docert by install_cert, bug #201672. Remove old.
 
   01 May 2007; Marius Mauch <genone@gentoo.org> sguil-server-0.5.3.ebuild,
   sguil-server-0.6.0_p1.ebuild, sguil-server-0.6.1.ebuild:

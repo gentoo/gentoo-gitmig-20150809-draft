@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.6.0_p1.ebuild,v 1.2 2007/05/01 22:34:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.6.1-r1.ebuild,v 1.1 2007/12/30 20:08:38 ulm Exp $
 
 inherit eutils ssl-cert
 
@@ -39,7 +39,7 @@ pkg_setup() {
 
 src_unpack(){
 	unpack ${A}
-	cd ${S}/server
+	cd "${S}"/server
 	sed -i -e 's:DEBUG 2:DEBUG 1:' -e 's:DAEMON 0:DAEMON 1:' \
 		-e 's:SGUILD_LIB_PATH ./lib:SGUILD_LIB_PATH /usr/lib/sguild:g' \
 		-e 's:/sguild_data/rules:/var/lib/sguil/rules:g' \
@@ -64,14 +64,8 @@ src_install(){
 	newinitd "${FILESDIR}/sguild.initd" sguild
 	newconfd "${FILESDIR}/sguild.confd" sguild
 
-	if use ssl
-	then
+	if use ssl; then
 		sed -i -e "s/#OPENSSL/OPENSSL/" "${D}/etc/conf.d/sguild"
-
-		if ! [ -f ${ROOT}/etc/sguil/sguild.key ]; then
-			insinto /etc/sguil
-			docert sguild
-		fi
 	fi
 
 	diropts -g sguil -o sguil
@@ -83,9 +77,15 @@ src_install(){
 }
 
 pkg_postinst(){
+	if use ssl && ! [ -f "${ROOT}"/etc/sguil/sguild.key ]; then
+		install_cert /etc/sguil/sguild
+	fi
 
-	if [ -d ${ROOT}/etc/snort/rules ] ; then
-		ln -s /etc/snort/rules ${ROOT}/var/lib/sguil/rules/${HOSTNAME}
+	chown -R sguil:sguil "${ROOT}"/etc/sguil/sguild.*
+	chown -R sguil:sguil "${ROOT}"/usr/lib/sguild
+
+	if [ -d "${ROOT}"/etc/snort/rules ] ; then
+		ln -s /etc/snort/rules "${ROOT}"/var/lib/sguil/rules/${HOSTNAME}
 	fi
 
 	elog
