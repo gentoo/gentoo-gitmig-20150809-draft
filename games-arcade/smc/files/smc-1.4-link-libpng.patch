@@ -1,0 +1,15 @@
+Index: configure.ac
+===================================================================
+--- configure.ac	(revision 907)
++++ configure.ac	(working copy)
+@@ -26,6 +26,10 @@
+ CPPFLAGS="$CPPFLAGS $SDL_CFLAGS"
+ LIBS="$LIBS $SDL_LIBS"
+ 
++# Check for libpng
++AC_CHECK_LIB(png, png_init_io, ,
++	AC_MSG_ERROR([Unable to find libpng]))
++
+ # Check for SDL_image library
+ AC_CHECK_LIB(SDL_image, IMG_LoadPNG_RW, ,
+ 	AC_MSG_ERROR([Unable to find the SDL_image library with PNG support]))
