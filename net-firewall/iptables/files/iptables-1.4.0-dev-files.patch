@@ -39,7 +39,7 @@ install headers and make a small archive for people to use
  endif
  
 +DEVEL_LIBS+=libiptc/libiptc.a
-+DEVEL_HEADERS+=include/libiptc/libiptc.h include/libiptc/ipt_kernel_headers.h
++DEVEL_HEADERS+=include/libiptc/libiptc.h include/libiptc/ipt_kernel_headers.h include/libiptc/libxtc.h
 +
  libiptc/libip4tc.d libiptc/libip6tc.d: %.d: %.c
  	@-$(CC) -M -MG $(CFLAGS) $< | sed -e 's@^.*\.o:@$*.d libiptc/libiptc.a($*.o):@' > $@
