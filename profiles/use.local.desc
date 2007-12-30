@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3247 2007/12/30 00:25:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3248 2007/12/30 13:23:34 maekke Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -893,6 +893,7 @@ media-gfx/gthumb:iptc - Add support for IPTC metadata
 media-gfx/gwenview:kipi - Support for the KDE Image Plugin Interface.
 media-gfx/hugin:enblend - Pull media-gfx/enblend as a dependency
 media-gfx/hugin:sift - Pull media-gfx/autopano-sift as a dependency
+media-gfx/imagemagick:djvu - Enable djvu support
 media-gfx/imagemagick:fpx - enable libfpx support
 media-gfx/imagemagick:gs - enable ghostscript support
 media-gfx/imagemagick:hdri - Enables High Dynamic Range Images formats
