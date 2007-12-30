@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.9.ebuild,v 1.2 2007/11/18 17:27:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.9.ebuild,v 1.3 2007/12/30 12:13:47 jokey Exp $
 
 NEED_PYTHON=2.4
 
@@ -15,6 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+# NOTE: setuptools are a runtime requirement as the app
+#       loads its extensions via pkg_resources
 RDEPEND="dev-python/dbus-python
 	dev-python/gnome-python
 	>=dev-python/gst-python-0.10.8
@@ -32,7 +34,8 @@ RDEPEND="dev-python/dbus-python
 	>=media-plugins/gst-plugins-ogg-0.10.14
 	>=media-plugins/gst-plugins-vorbis-0.10.14
 	>=media-plugins/gst-plugins-ladspa-0.10.5
-	x11-themes/hicolor-icon-theme"
+	x11-themes/hicolor-icon-theme
+        dev-python/setuptools"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	app-text/scrollkeeper"
