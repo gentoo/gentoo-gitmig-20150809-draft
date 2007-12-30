@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2-r4.ebuild,v 1.5 2007/08/13 07:07:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2-r4.ebuild,v 1.6 2007/12/30 18:28:16 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -37,6 +37,9 @@ src_unpack() {
 	sed -i -e "s/^IPTABLES_VERSION/#IPTABLES_VERSION/" Makefile
 	if has_version '>=net-firewall/iptables-1.3.6' ; then
 	    sed -i -e "s/ld -shared/\$\(CC\) -shared/" Makefile
+		if has_version '>=net-firewall/iptables-1.4.0' ; then
+			epatch "${FILESDIR}"/${P}-iptables-1.4.0.patch
+		fi
 	fi
 }
 

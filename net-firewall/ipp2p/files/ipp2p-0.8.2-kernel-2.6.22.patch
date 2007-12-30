@@ -1,6 +1,6 @@
 diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
---- ipp2p-0.8.2.orig/ipt_ipp2p.c	2006-09-27 12:52:00.000000000 +0300
-+++ ipp2p-0.8.2/ipt_ipp2p.c	2007-07-11 08:00:26.000000000 +0300
+--- ipp2p-0.8.2.orig/ipt_ipp2p.c	2007-12-04 07:50:55.000000000 +0200
++++ ipp2p-0.8.2/ipt_ipp2p.c	2007-12-04 07:50:43.000000000 +0200
 @@ -2,9 +2,18 @@
  #include <linux/modversions.h>
  #endif
@@ -21,7 +21,27 @@ diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
  #include "ipt_ipp2p.h"
  #include <net/tcp.h>
  #include <net/udp.h>
-@@ -748,7 +757,11 @@
+@@ -725,7 +734,11 @@
+ };
+ 
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++static bool
++#else
+ static int
++#endif
+ match(const struct sk_buff *skb,
+       const struct net_device *in,
+       const struct net_device *out,
+@@ -744,11 +757,19 @@
+       u_int16_t datalen,
+ #endif
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++      bool *hotdrop)
++#else
+       int *hotdrop)
++#endif
  {
      const struct ipt_p2p_info *info = matchinfo;
      unsigned char  *haystack;
@@ -33,7 +53,19 @@ diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
      int p2p_result = 0, i = 0;
  //    int head_len;
      int hlen = ntohs(ip->tot_len)-(ip->ihl*4);	/*hlen = packet-data length*/
-@@ -831,7 +844,9 @@
+@@ -822,7 +843,11 @@
+ 
+ 
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++static bool
++#else
+ static int
++#endif
+ checkentry(const char *tablename,
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,17)
+            const void *ip, 
+@@ -831,7 +856,9 @@
             const struct ipt_ip *ip,
  #endif
  	   void *matchinfo,
@@ -43,7 +75,7 @@ diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
  	   unsigned int hook_mask)
  {
          /* Must specify -p tcp */
-@@ -843,15 +858,6 @@
+@@ -843,15 +870,6 @@
  }
  									    
  
@@ -59,7 +91,7 @@ diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
  static struct ipt_match ipp2p_match = { 
  #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
  	{ NULL, NULL }, 
-@@ -860,17 +866,16 @@
+@@ -860,17 +878,16 @@
  	&checkentry, 
  	NULL, 
  	THIS_MODULE
