@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mktorrent-borg/mktorrent-borg-0.9.6.ebuild,v 1.1 2007/10/16 16:22:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mktorrent-borg/mktorrent-borg-0.9.8.ebuild,v 1.1 2007/12/30 15:45:57 armin76 Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Console .torrent file creator. It support Multi Trackers (tier groups)"
 HOMEPAGE="http://borg.uu3.net/~borg/"
@@ -18,7 +18,9 @@ S="${WORKDIR}/${PN%-borg}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-CFLAGS.patch"
+
+	epatch "${FILESDIR}/0.9.8-CFLAGS.patch"
+	sed -i -e "s/CC=gcc/CC=$(tc-getCC)/g" Makefile
 }
 
 src_install() {
