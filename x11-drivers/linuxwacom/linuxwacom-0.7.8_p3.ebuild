@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.4_p3.ebuild,v 1.10 2007/12/30 16:09:28 rbu Exp $
-
-IUSE="gtk tcl tk usb"
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.8_p3.ebuild,v 1.1 2007/12/30 16:09:28 rbu Exp $
 
 inherit eutils autotools
 
@@ -10,15 +8,19 @@ DESCRIPTION="Input driver for Wacom tablets and drawing devices"
 HOMEPAGE="http://linuxwacom.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P/_p/-}.tar.bz2"
 
+IUSE="gtk tcl tk usb"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-RDEPEND="x11-proto/inputproto
-	x11-base/xorg-server
+RDEPEND="|| ( ( x11-proto/inputproto
+		x11-base/xorg-server )
+		  virtual/x11 )
+	media-libs/libpixman
 	gtk? ( >=x11-libs/gtk+-2 )
-	tcl? ( dev-lang/tcl )
-	tk? ( dev-lang/tk )
+	tcltk? ( dev-lang/tcl dev-lang/tk )
+	sys-fs/udev
 	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
@@ -29,10 +31,11 @@ S=${WORKDIR}/${P/_p/-}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/linuxwacom-xorg71.diff
 
 	# Fix multilib-strict error for Tcl/Tk library install
 	sed -i -e "s:WCM_EXECDIR/lib:WCM_EXECDIR/$(get_libdir):" configure.in
+
+	epatch "${FILESDIR}"/${P%_p*}-pDev.patch
 
 	eautoreconf
 }
@@ -45,17 +48,21 @@ src_compile() {
 	fi
 
 	econf ${myconf} \
-		`use_with tcl` \
-		`use_with tk` \
+		$(use_with tcl tcl) \
+		$(use_with tk tk) \
 		--enable-wacomdrv --enable-wacdump \
-		--enable-xsetwacom --enable-dlloader || die
+		--enable-xsetwacom --enable-dlloader || die "econf failed"
 
 	unset ARCH
-	emake || die "build failed."
+	emake || die "emake failed."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed."
+
+	insinto /etc/udev/rules.d/
+	newins "${FILESDIR}"/xserver-xorg-input-wacom.udev 60-wacom.rules
+
 	dohtml -r docs/*
 	dodoc AUTHORS ChangeLog NEWS README
 }

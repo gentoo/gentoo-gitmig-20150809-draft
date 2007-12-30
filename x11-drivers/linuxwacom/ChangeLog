@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/linuxwacom
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.11 2007/07/22 02:37:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.12 2007/12/30 16:09:28 rbu Exp $
+
+*linuxwacom-0.7.8_p3 (30 Dec 2007)
+
+  30 Dec 2007; Robert Buchholz <rbu@gentoo.org>
+  +files/linuxwacom-0.7.8-pDev.patch, +files/xserver-xorg-input-wacom.udev,
+  metadata.xml, linuxwacom-0.7.4_p3.ebuild, +linuxwacom-0.7.8_p3.ebuild:
+  Version bump (bug #147537). Thanks to all the people on the bug!
+  Adding myself and ikelos as maintainer.
+  Install udev rules for tablets, see NEWS file for more.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   linuxwacom-0.7.4_p3.ebuild:
