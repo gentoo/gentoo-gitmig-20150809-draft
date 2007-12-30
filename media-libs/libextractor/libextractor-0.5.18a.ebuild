@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.18a.ebuild,v 1.2 2007/12/30 11:34:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.18a.ebuild,v 1.3 2007/12/30 15:09:59 armin76 Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnunet.org/libextractor/"
 SRC_URI="http://gnunet.org/${PN}/download/${P}.tar.gz"
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 # Disabled tests because they dont work (tester@g.o)
 RESTRICT="test"
 DEPEND=">=sys-devel/libtool-1.4.1
