@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/gnocky
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnocky/ChangeLog,v 1.4 2007/10/25 20:21:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnocky/ChangeLog,v 1.5 2007/12/30 09:34:20 mrness Exp $
+
+*gnocky-0.0.5 (30 Dec 2007)
+
+  30 Dec 2007; Alin Năstac <mrness@gentoo.org> +gnocky-0.0.5.ebuild:
+  Version bump.
 
   25 Oct 2007; Alin Năstac <mrness@gentoo.org> -gnocky-0.0.3.ebuild:
   Remove obsolete version.
