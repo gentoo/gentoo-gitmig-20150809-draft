@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.15.ebuild,v 1.1 2007/08/19 01:24:26 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.15.ebuild,v 1.2 2007/12/30 09:39:28 compnerd Exp $
 
 inherit autotools eutils fdo-mime mono multilib
 
@@ -61,10 +61,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-configure.patch
-	epatch ${FILESDIR}/${P}-aspnet-template-fix.patch
+	epatch "${FILESDIR}/${P}-configure.patch"
+	epatch "${FILESDIR}/${P}-aspnet-template-fix.patch"
 
 	# Bundled jscall version is messed up
 	if use aspnetedit; then

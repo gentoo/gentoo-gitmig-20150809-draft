@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.10.ebuild,v 1.2 2006/10/29 16:56:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.10.ebuild,v 1.3 2007/12/30 09:39:28 compnerd Exp $
 
 inherit mono eutils fdo-mime
 
@@ -40,7 +40,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc ChangeLog README
 }
 

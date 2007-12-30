@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.12.ebuild,v 1.4 2007/07/01 19:09:25 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.12.ebuild,v 1.5 2007/12/30 09:39:28 compnerd Exp $
 
 inherit mono eutils fdo-mime
 
@@ -29,8 +29,8 @@ SLOT="0"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-fixes.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-fixes.diff"
 }
 
 src_compile() {
@@ -46,7 +46,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc ChangeLog README
 }
 

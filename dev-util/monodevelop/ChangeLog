@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.52 2007/12/30 09:36:33 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.53 2007/12/30 09:39:28 compnerd Exp $
+
+  30 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  monodevelop-0.10.ebuild, monodevelop-0.12.ebuild, monodevelop-0.14.ebuild,
+  monodevelop-0.15.ebuild:
+  fix a few quoting issues
 
 *monodevelop-0.18 (30 Dec 2007)
 
