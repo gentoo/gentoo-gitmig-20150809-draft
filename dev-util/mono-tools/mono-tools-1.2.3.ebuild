@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.2.3.ebuild,v 1.3 2007/03/05 03:56:52 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.2.3.ebuild,v 1.4 2007/12/30 06:23:08 compnerd Exp $
 
 inherit eutils mono multilib autotools
 
@@ -35,19 +35,19 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Make the browser optional
-	epatch ${FILESDIR}/${PN}-1.1.17-html-renderer-fixes.diff
+	epatch "${FILESDIR}/${PN}-1.1.17-html-renderer-fixes.diff"
 
 	# Install all our .dlls under $(libdir), not $(prefix)/lib
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e 's:$(prefix)/lib:$(libdir):'                    \
-			${S}/{asn1view/gtk,docbrowser,gnunit/src}/Makefile.am \
+			"${S}"/{asn1view/gtk,docbrowser,gnunit/src}/Makefile.am \
 		|| die "sed failed"
 
 		sed -i -e 's:$prefix/lib:@libdir@:' \
-			${S}/docbrowser/monodoc.in      \
+			"${S}"/docbrowser/monodoc.in      \
 		|| die "sed failed"
 	fi
 
