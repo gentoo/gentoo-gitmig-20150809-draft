@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.12.ebuild,v 1.1 2007/12/23 10:29:11 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.12.ebuild,v 1.2 2007/12/30 18:39:13 vapier Exp $
 
 inherit eutils linux-info
 
@@ -110,13 +110,16 @@ src_install() {
 }
 
 pkg_preinst() {
-	if ! use minimal && use scanner ; then
-		insinto /etc/sane.d
-		[ -e /etc/sane.d/dll.conf ] && cp /etc/sane.d/dll.conf .
-		[ -e "${ROOT}"/etc/sane.d/dll.conf ] && cp "${ROOT}"/etc/sane.d/dll.conf .
-		grep -q hpaio dll.conf || echo hpaio >> "${T}"/dll.conf
-		doins "${T}"/dll.conf
-	fi
+	# try to be very conservative as to when we screw around with config files
+	use minimal && return 0
+	use scanner || return 0
+	[[ ! -e ${ROOT}/etc/sane.d/dll.conf ]] && return 0
+	grep -qs '\<hpaio\>' "${ROOT}"/etc/sane.d/dll.conf && return 0
+
+	cp "${ROOT}"/etc/sane.d/dll.conf "${T}"/dll.conf || return 1
+	echo hpaio >> "${T}"/dll.conf
+	insinto /etc/sane.d
+	doins "${T}"/dll.conf
 }
 
 pkg_postinst() {
