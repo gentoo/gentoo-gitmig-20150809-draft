@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.2.487-r1.ebuild,v 1.6 2007/11/14 07:31:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.2.487-r1.ebuild,v 1.7 2007/12/30 12:07:03 ulm Exp $
 
 inherit elisp eutils versionator
 
@@ -20,6 +20,7 @@ DEPEND="bbdb? ( app-emacs/bbdb )"
 RDEPEND="${DEPEND}
 	ssl? ( net-misc/stunnel )"
 
+SITEFILE=50${PN}-gentoo.el
 S="${WORKDIR}/${VM_P}"
 
 src_unpack() {
