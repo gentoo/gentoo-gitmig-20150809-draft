@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/mono-addins-0.2.ebuild,v 1.2 2007/07/21 12:23:19 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/mono-addins-0.2.ebuild,v 1.3 2007/12/30 09:26:45 compnerd Exp $
 
 inherit eutils mono
 
@@ -22,9 +22,9 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-disable-gui.patch
+	epatch "${FILESDIR}/${P}-disable-gui.patch"
 }
 
 src_compile() {
