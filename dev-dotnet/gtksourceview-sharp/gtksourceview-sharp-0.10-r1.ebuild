@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.10-r1.ebuild,v 1.2 2007/10/12 08:29:14 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.10-r1.ebuild,v 1.3 2007/12/30 06:06:35 compnerd Exp $
 
 inherit mono multilib eutils
 
@@ -31,13 +31,13 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-monodoc-update.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-monodoc-update.diff"
 
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e 's:$(prefix)/lib:$(libdir):' \
 			-e 's:${prefix}/lib:${libdir}:' \
-			${S}/Makefile.{am,in} ${S}/*.pc.in || die
+			"${S}"/Makefile.{am,in} "${S}"/*.pc.in || die
 	fi
 
 	aclocal || die
@@ -53,9 +53,9 @@ src_compile() {
 
 src_install() {
 	dodir $(pkg-config --variable=sourcesdir monodoc)
-	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) -package gtksourceview-sharp-2.0" \
-		DESTDIR=${D} install || die
+	make GACUTIL_FLAGS="/root ""${D}""/usr/$(get_libdir) /gacdir /usr/$(get_libdir) -package gtksourceview-sharp-2.0" \
+		DESTDIR="${D}" install || die
 
 	# newer gtksourceview versions install these
-	rm ${D}/usr/share/gtksourceview-1.0/language-specs/{vbnet,nemerle}.lang
+	rm "${D}"/usr/share/gtksourceview-1.0/language-specs/{vbnet,nemerle}.lang
 }
