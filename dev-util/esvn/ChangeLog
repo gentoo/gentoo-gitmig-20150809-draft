@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/esvn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/ChangeLog,v 1.21 2007/10/22 22:27:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/ChangeLog,v 1.22 2007/12/30 08:56:46 mrness Exp $
+
+  30 Dec 2007; Alin Năstac <mrness@gentoo.org> esvn-0.6.12.ebuild:
+  Update HOMEPAGE.
 
   22 Oct 2007; Alin Năstac <mrness@gentoo.org>
   -files/esvn-0.6.11-include-cmd_lineedit.patch, -esvn-0.6.11.ebuild:

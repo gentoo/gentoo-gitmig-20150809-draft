@@ -1,14 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.12.ebuild,v 1.5 2007/10/14 15:20:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.12.ebuild,v 1.6 2007/12/30 08:56:46 mrness Exp $
 
 inherit kde-functions
 
 MY_P="${P}-1"
 DESCRIPTION="GUI frontend to the Subversion revision system"
-HOMEPAGE="http://zoneit.free.fr/esvn/"
-SRC_URI="http://zoneit.free.fr/esvn/${MY_P}.tar.gz
-	mirror://sourceforge/esvn/${MY_P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/esvn/"
+SRC_URI="mirror://sourceforge/esvn/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
