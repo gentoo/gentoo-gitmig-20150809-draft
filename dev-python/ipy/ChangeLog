@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.9 2007/12/28 11:04:53 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.10 2007/12/30 09:32:30 drac Exp $
+
+  30 Dec 2007; Samuli Suominen <drac@gentoo.org> ipy-0.53.ebuild:
+  amd64 stable wrt #203554
 
 *ipy-0.55 (28 Dec 2007)
 
