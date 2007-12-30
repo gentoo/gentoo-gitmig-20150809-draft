@@ -1,6 +1,17 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.143 2007/12/30 16:50:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.144 2007/12/30 17:06:32 betelgeuse Exp $
+
+  30 Dec 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -files/openmotif-2.1.30-CAN-2004-0687-0688.patch,
+  -files/openmotif-2.1.30-CAN-2004-0914_sec8.patch,
+  -files/openmotif-2.1.30-imake-ansi.patch,
+  -files/openmotif-2.1.30-imake-tmpdir.patch,
+  -files/openmotif-2.1.30-uil-bad_grammar_fix.diff,
+  -files/openmotif-2.1.30-xpm.diff, -files/openmotif-2.1.30-xpm2.diff,
+  -files/openmotif-2.2.3-CVE-2005-3964.patch,
+  -files/openmotif-2.2.3-Mwm.defaults, -files/site.def, -files/site.def.1:
+  Clean files.
 
   30 Dec 2007; Petteri Räty <betelgeuse@gentoo.org>
   -openmotif-2.1.30-r14.ebuild:
