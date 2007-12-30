@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9c.ebuild,v 1.6 2007/11/16 15:27:11 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9c.ebuild,v 1.7 2007/12/30 13:02:12 mrness Exp $
 
 inherit eutils
 
@@ -43,6 +43,7 @@ src_install() {
 	rmdir "${D}/usr/doc/${PN}"/{it,nl,ru}
 	dodir /usr/share/doc
 	mv "${D}/usr/doc/wwwoffle" "${D}/usr/share/doc/${PF}"
+	rmdir "${D}/usr/doc"
 
 	# install the wwwoffled init script
 	newinitd "${FILESDIR}/${PN}.initd" wwwoffled
@@ -68,8 +69,6 @@ src_install() {
 	# robots.txt modification - /var/spool/wwwoffle/html/en
 	# 		- remove Disallow: /index
 	sed -i -e "s|Disallow:.*/index|#Disallow: /index|" "${D}/var/spool/wwwoffle/html/en/robots.txt"
-
-	rmdir "${D}/usr/doc"
 }
 
 pkg_preinst() {
