@@ -1,10 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/webcpp-0.8.4.ebuild,v 1.5 2006/12/11 07:43:29 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/webcpp-0.8.4.ebuild,v 1.6 2007/12/30 18:13:21 vapier Exp $
 
-inherit toolchain-funcs
+inherit eutils
 
-S=${WORKDIR}/${P}-src
 DESCRIPTION="converts source code into HTML file using a customizable syntax highlighting engine and colour schemes"
 HOMEPAGE="http://webcpp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/webcpp/${P}-src.tar.gz"
@@ -14,13 +13,16 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
-pkg_setup() {
-	[ `gcc-major-version` -eq 2 ] \
-		&& die "WebCPP only works with gcc-3.x" \
-		|| return 0
+S=${WORKDIR}/${P}-src
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc.patch
 }
 
 src_install() {
-	einstall || die
+	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS CREDITS ChangeLog README TODO
+	fperms a+x /usr/bin/webc++ /usr/bin/scs2scs2.pl
 }
