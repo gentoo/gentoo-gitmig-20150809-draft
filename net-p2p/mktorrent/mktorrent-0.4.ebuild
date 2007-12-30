@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mktorrent/mktorrent-0.2.ebuild,v 1.1 2007/10/16 16:29:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mktorrent/mktorrent-0.4.ebuild,v 1.1 2007/12/30 15:55:51 armin76 Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Simple command line utility to create BitTorrent metainfo files"
 HOMEPAGE="http://mktorrent.sourceforge.net/"
@@ -15,7 +17,8 @@ RDEPEND="dev-libs/openssl"
 
 src_unpack() {
 	unpack ${A}
-	sed -i 's/^#DONT_STRIP/DONT_STRIP/' "${S}"/Makefile
+	sed -i -e 's/^#DONT_STRIP/DONT_STRIP/' \
+		-e "s/CC\t?= cc/CC = $(tc-getCC)/g" "${S}"/Makefile
 }
 
 src_install() {
