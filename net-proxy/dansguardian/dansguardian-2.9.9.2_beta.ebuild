@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.9.0_beta.ebuild,v 1.1 2007/08/18 14:34:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.9.2_beta.ebuild,v 1.1 2007/12/30 11:35:14 mrness Exp $
 
-inherit eutils autotools
+inherit eutils
 
 MY_P=${P/_beta/}
 
@@ -44,11 +44,6 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${FILESDIR}/${P%_beta}-gentoo.patch"
-	epatch "${FILESDIR}/${P%_beta}-uclibc++.patch"
-	epatch "${FILESDIR}/${P%_beta}-no-default-lists.patch"
-
-	cd "${S}"
-	eautoreconf
 }
 
 src_compile() {
@@ -101,7 +96,11 @@ src_install() {
 	touch "${T}"/emptyfile
 	insinto /etc/dansguardian/lists
 	for f in exceptionfileurllist bannedregexpheaderlist logsitelist logurllist headerregexplist logregexpurllist; do
-		newins "${T}"/emptyfile ${f}
+		if [ -f "${f}" ] ; then
+			einfo "${f} already exists"
+		else
+			newins "${T}"/emptyfile ${f}
+		fi
 	done
 }
 
