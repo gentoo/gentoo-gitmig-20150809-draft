@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8069 2007/12/29 17:17:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8070 2007/12/30 00:01:49 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -108,7 +108,7 @@ www-servers/jboss
 # Christian Faulhammer <opfer@gentoo.org>
 # Mask qt-4.4 package while testing them in portage
 # Plus packages depending on them
-~app-admin/keepassx-0.2.2
+=app-admin/keepassx-0.2.2-r2
 =x11-libs/qt-4.4*
 =x11-libs/qt-assistant-4.4*
 =x11-libs/qt-core-4.4*
