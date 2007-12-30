@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dwarves
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.2 2007/11/07 07:44:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.3 2007/12/30 18:26:57 flameeyes Exp $
+
+  30 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> dwarves-1.0.ebuild,
+  dwarves-9999.ebuild:
+  Add debug USE flags to 1.0 and live versions. Fix SRC_URI for 1.0.
 
 *dwarves-9999 (07 Nov 2007)
 
