@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.36 2007/12/30 06:23:08 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.37 2007/12/30 21:06:53 compnerd Exp $
+
+  30 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/mono-tools-1.2.6-html-renderer-fixes.patch:
+  Add skipped patch
 
   30 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   mono-tools-1.1.17.ebuild, mono-tools-1.1.17-r1.ebuild,
