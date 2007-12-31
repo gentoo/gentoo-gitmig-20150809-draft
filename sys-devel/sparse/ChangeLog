@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/sparse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.22 2007/12/10 04:00:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.23 2007/12/31 21:50:47 solar Exp $
+
+  31 Dec 2007; <solar@gentoo.org> metadata.xml:
+  - removing self from metadata.xml
 
   10 Dec 2007; Luca Barbato <lu_zero@gentoo.org> sparse-0.4.ebuild:
   Marked ppc

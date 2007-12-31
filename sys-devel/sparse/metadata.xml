@@ -3,9 +3,6 @@
 <pkgmetadata>
 <herd>kernel-misc</herd>
 <maintainer>
-  <email>solar@gentoo.org</email>
-</maintainer>
-<maintainer>
   <email>vapier@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
