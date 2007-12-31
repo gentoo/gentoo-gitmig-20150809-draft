@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.4.5.ebuild,v 1.1 2007/12/31 11:44:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.4.5.ebuild,v 1.2 2007/12/31 21:55:16 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
 	nls? ( dev-util/intltool )"
 
-PDEPEND=">=media-plugins/audacious-plugins-1.4.3.2"
+PDEPEND=">=media-plugins/audacious-plugins-1.4.4"
 
 src_compile() {
 	econf \
