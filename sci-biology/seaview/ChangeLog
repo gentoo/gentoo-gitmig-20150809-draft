@@ -1,8 +1,11 @@
 # ChangeLog for sci-biology/seaview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.22 2007/12/26 21:21:18 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.23 2007/12/31 15:37:40 je_fro Exp $
 
-  26 Dec 2007; <jeff@gentoo.org> Manifest:
+  31 Dec 2007; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
+  Fixing my email addy in the Changelog
+
+  26 Dec 2007; <je_fro@gentoo.org> Manifest:
   Dropping old versions.
 
   26 Dec 2007; Samuli Suominen <drac@gentoo.org> seaview-2.2.ebuild:
@@ -14,23 +17,23 @@
   24 Dec 2007; Dawid Węgliński <cla@gentoo.org> seaview-2.2.ebuild:
   Stable on x86 (bug #203185)
 
-  23 Dec 2007; <jeff@gentoo.org> seaview-2.2.ebuild:
+  23 Dec 2007; <je_fro@gentoo.org> seaview-2.2.ebuild:
   Adding menu entries.
 
-  22 Dec 2007; <jeff@gentoo.org> -seaview-20060213.ebuild,
+  22 Dec 2007; <je_fro@gentoo.org> -seaview-20060213.ebuild,
   -seaview-20070919.ebuild:
   Removing obsolete versions
 
 *seaview-2.2 (19 Dec 2007)
 
-  19 Dec 2007; <jeff@gentoo.org> +seaview-2.2.ebuild:
+  19 Dec 2007; <je_fro@gentoo.org> +seaview-2.2.ebuild:
   Bump to latest version.
 
-  22 Oct 2007; <jeff@gentoo.org> +files/seaview.desktop,
+  22 Oct 2007; <je_fro@gentoo.org> +files/seaview.desktop,
   seaview-20070919.ebuild:
   Adding desktop entry
 
-  21 Oct 2007; <jeff@gentoo.org> seaview-20041220.ebuild,
+  21 Oct 2007; <je_fro@gentoo.org> seaview-20041220.ebuild,
   seaview-20060213.ebuild, seaview-20070919.ebuild:
   remove excessive quotes
 
@@ -42,7 +45,7 @@
 
 *seaview-20070919 (21 Oct 2007)
 
-  21 Oct 2007; <jeff@gentoo.org> seaview-20041220.ebuild,
+  21 Oct 2007; <je_fro@gentoo.org> seaview-20041220.ebuild,
   seaview-20060213.ebuild, +seaview-20070919.ebuild:
   Bumping to latest version which contains several new features.
 
