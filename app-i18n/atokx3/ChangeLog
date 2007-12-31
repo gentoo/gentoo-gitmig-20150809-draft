@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/atokx3
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.1 2007/12/31 16:21:52 matsuu Exp $
+
+*atokx3-1.0.0 (31 Dec 2007)
+
+  31 Dec 2007; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
+  +atokx3-1.0.0.ebuild:
+  Initial import.
+
