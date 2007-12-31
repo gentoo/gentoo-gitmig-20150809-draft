@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8071 2007/12/30 04:42:17 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8072 2007/12/31 00:54:13 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -606,12 +606,6 @@ dev-util/bk_client
 # Benedikt Boehm <hollow@gentoo.org> (08 Sep 2007)
 # breaks apr and openldap
 =sys-libs/db-4.6*
-
-# Mike Frysinger <vapier@gentoo.org> (08 Sep 2007)
-# Use sys-auth/thinkfinger instead
-sys-auth/tfm-fingerprint
-sys-auth/pam_bioapi
-sys-auth/bioapi
 
 # Markus Ullmann <jokey@gentoo.org> (05 Sept 2007)
 # masked for testing
