@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8072 2007/12/31 00:54:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8073 2007/12/31 17:37:37 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (31 Dec 2007)
+# Masked pending removal 31 Jan 2008
+# Superseded by dev-ruby/httpclient, drop-in replacement
+dev-ruby/http-access2
 
 # David Shakaryan <omp@gentoo.org> (30 Dec 2007)
 # Masked pending removal 30 Jan 2008.
