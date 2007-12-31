@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-g15-spectrum/audacious-g15-spectrum-2.5.2.ebuild,v 1.1 2007/12/25 14:42:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-g15-spectrum/audacious-g15-spectrum-2.5.2.ebuild,v 1.2 2007/12/31 10:19:19 jokey Exp $
 
 inherit eutils versionator
 
@@ -24,7 +24,15 @@ DEPEND=">=app-misc/g15daemon-1.9.0
 
 RDEPEND="${DEPEND}"
 
-S="$WORKDIR/${MY_PN}-${MY_PV}"
+S="${WORKDIR}/${MY_PN}-${PV}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	if has_version '>=media-sound/audacious-1.4'; then
+		epatch "${FILESDIR}"/${P}-audacious-1.4.patch
+	fi
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
