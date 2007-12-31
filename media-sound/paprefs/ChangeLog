@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/paprefs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/ChangeLog,v 1.7 2007/11/03 00:29:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/ChangeLog,v 1.8 2007/12/31 22:51:25 josejx Exp $
+
+  31 Dec 2007; Joseph Jezak <josejx@gentoo.org> paprefs-0.9.5.ebuild,
+  paprefs-0.9.6.ebuild:
+  Marked ~ppc for bug #197340.
 
 *paprefs-0.9.6 (03 Nov 2007)
 
