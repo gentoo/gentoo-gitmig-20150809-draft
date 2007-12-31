@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pavumeter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavumeter/ChangeLog,v 1.4 2007/10/31 15:43:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavumeter/ChangeLog,v 1.5 2007/12/31 22:53:56 josejx Exp $
+
+  31 Dec 2007; Joseph Jezak <josejx@gentoo.org> pavumeter-0.9.2.ebuild,
+  pavumeter-0.9.3.ebuild:
+  Marked ~ppc for bug #197341.
 
 *pavumeter-0.9.3 (31 Oct 2007)
 
