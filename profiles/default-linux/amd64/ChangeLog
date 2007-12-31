@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.124 2007/12/20 09:53:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.125 2007/12/31 17:38:52 welp Exp $
+
+  31 Dec 2007; <welp@gentoo.org> package.use.mask:
+  app-emulation/wine - masking of various use flags; bug 203680
 
   20 Dec 2007; Mike Frysinger <vapier@gentoo.org> use.mask:
   Stable binutils (2.18-r1) has fixed support for multitarget, so building
