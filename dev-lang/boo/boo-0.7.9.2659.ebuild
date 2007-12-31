@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.7.9.2659.ebuild,v 1.1 2007/12/31 04:00:52 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.7.9.2659.ebuild,v 1.2 2007/12/31 04:34:40 jurek Exp $
 
 inherit mono fdo-mime eutils autotools
 
@@ -27,6 +27,11 @@ src_unpack() {
 
 	sed -i -e \
 		's#boo.lang##' extras/Makefile.am \
+	|| die "sed failed"
+
+	sed -i -e \
+		's#^libdir=${prefix}/lib$#libdir=${prefix}/lib/mono#' \
+		extras/boo.pc.in \
 	|| die "sed failed"
 
 	eautoreconf || die "eautoreconf failed"
