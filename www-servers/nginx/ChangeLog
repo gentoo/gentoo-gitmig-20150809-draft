@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.169 2007/12/30 20:30:47 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.170 2007/12/31 19:54:24 voxus Exp $
+
+  31 Dec 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  nginx-0.5.34.ebuild, nginx-0.6.24.ebuild:
+  Stabilization wrt bug #201691.
 
 *nginx-0.6.24 (30 Dec 2007)
 
