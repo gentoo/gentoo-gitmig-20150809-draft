@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.6.1.ebuild,v 1.2 2007/11/25 13:06:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.6.1.ebuild,v 1.3 2007/12/31 11:49:28 aballier Exp $
 
 inherit eutils autotools
 
@@ -39,4 +39,12 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog NEWS README README.linux TODO
+}
+
+pkg_postinst() {
+	elog "Please note that from ${PN}-2.0* to ${P}, ABI has changed"
+	elog "So if you are upgrading from those versions, you need to rebuild"
+	elog "all the packages linked against ${PN}."
+	elog "You can use revdep-rebuild from app-portage/gentoolkit if you are"
+	elog "using portage or reconcilio if you are using paludis, or ..."
 }
