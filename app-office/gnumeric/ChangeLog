@@ -1,6 +1,17 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.144 2007/10/19 14:12:42 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.145 2007/12/31 01:15:19 eva Exp $
+
+*gnumeric-1.8.0 (31 Dec 2007)
+
+  31 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnumeric-1.4.3-libgsf-1.patch,
+  -files/gnumeric-1.4.3-makejobs.patch,
+  -files/gnumeric-1.4.3-new_gsf_api.patch,
+  -files/gnumeric-1.4.3-pcre_int_overflow.patch,
+  -files/gnumeric-1.4.3-remove-deprecated.patch,
+  +files/gnumeric-1.8.0-omf.patch, metadata.xml, +gnumeric-1.8.0.ebuild:
+  bump to 1.8.0 and cleanup old patches
 
   19 Oct 2007; <jeff@gentoo.org> gnumeric-1.6.3.ebuild:
   Changed goffice dependency as per bug #191555. Big Thanks(tm) to rbridge.
