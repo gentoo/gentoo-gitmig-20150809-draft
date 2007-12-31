@@ -1,0 +1,11 @@
+# ChangeLog for rox-base/tasklist
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasklist/ChangeLog,v 1.1 2007/12/31 15:51:20 lack Exp $
+
+*tasklist-0.5 (31 Dec 2007)
+
+  31 Dec 2007; Jim Ramsay <lack@gentoo.org> +files/Tasklist-0.5.xml,
+  +files/choicespath.patch, +metadata.xml, +tasklist-0.5.ebuild:
+  New package - Tasklist is a ROX panel applet which lists all running windows
+  (Bug 81216)
+
