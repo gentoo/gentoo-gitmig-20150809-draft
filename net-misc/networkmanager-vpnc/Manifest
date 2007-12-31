@@ -14,10 +14,10 @@ MD5 065e0e8aee1b047cdebc0da98a0c3bb3 files/nm-vpnc-path.patch 418
 RMD160 cf6138d9847db1310e095e559822f13956a9fc6b files/nm-vpnc-path.patch 418
 SHA256 5557a9956d3dd9921b2722045d5dbb675f8e17dca1de8603cf6adb7fc3fa3672 files/nm-vpnc-path.patch 418
 DIST NetworkManager-vpnc-0.6.4_p20070621.tar.gz 435524 RMD160 0849848fe6311eb1ec0b18d64607fe5388370fb6 SHA1 16c7697598ef76a3b338bbb75693d800b96862a0 SHA256 bff3d3ef3f9140095554b0aa57db7f6fe12176675f5016f51e247a9c4990f979
-EBUILD networkmanager-vpnc-0.6.4_p20070621.ebuild 1802 RMD160 b8fab6c8252535070d1bb337a1e6d8d846f31cc0 SHA1 8d5453436a06ef4aeb26e516bb413b6386419ad5 SHA256 39c991472119125dda60e1fc3f88f66871bf4d8a89c452b13eecbb0a8716e30f
-MD5 d4bc908b0828ecc9b0cf8f70facc04f2 networkmanager-vpnc-0.6.4_p20070621.ebuild 1802
-RMD160 b8fab6c8252535070d1bb337a1e6d8d846f31cc0 networkmanager-vpnc-0.6.4_p20070621.ebuild 1802
-SHA256 39c991472119125dda60e1fc3f88f66871bf4d8a89c452b13eecbb0a8716e30f networkmanager-vpnc-0.6.4_p20070621.ebuild 1802
+EBUILD networkmanager-vpnc-0.6.4_p20070621.ebuild 1810 RMD160 731c922d7d3e03a72ba2c1f7c3a7d9e162bb4e44 SHA1 17f08c4af1c926fef0ecd9dcdfe439de56ae3b91 SHA256 6aecee40049a542c55f9ad049350294702785fc88a6cf489b75e1b12f91a39fb
+MD5 9d5f9a4d967b6555238ebd489c51aca0 networkmanager-vpnc-0.6.4_p20070621.ebuild 1810
+RMD160 731c922d7d3e03a72ba2c1f7c3a7d9e162bb4e44 networkmanager-vpnc-0.6.4_p20070621.ebuild 1810
+SHA256 6aecee40049a542c55f9ad049350294702785fc88a6cf489b75e1b12f91a39fb networkmanager-vpnc-0.6.4_p20070621.ebuild 1810
 MISC ChangeLog 577 RMD160 a8aff3b6f2322e1af50ffa834ecfba22a38dfe1f SHA1 09ba6bdd0656ccca2463a579785bab350ab1f8ae SHA256 f78b5aa37db5feed0926a148dbb1181cb0cdbd08ec493b0ae34d766e2261fb94
 MD5 c062e771d99689cf0b18baa5cd96b233 ChangeLog 577
 RMD160 a8aff3b6f2322e1af50ffa834ecfba22a38dfe1f ChangeLog 577
@@ -30,9 +30,9 @@ MD5 8b5fa806c082bf8a8f6e07f57f9f8221 files/digest-networkmanager-vpnc-0.6.4_p200
 RMD160 5c72a504241e52a45dc7b85005249bb130f4d38f files/digest-networkmanager-vpnc-0.6.4_p20070621 307
 SHA256 de305389abd172a32735fd85ba0f91db95ed8fc15eebcf10a7dd3aee9f5e4be8 files/digest-networkmanager-vpnc-0.6.4_p20070621 307
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.8 (GNU/Linux)
 
-iD8DBQFGzX1kyZx3L/ph1soRAqjVAJ90ZuLM8naZyOK/Y26gMhm81vPiewCeP4GV
-1AkFLtlZI5jo9dzoo5cyVfI=
-=mtp7
+iEYEARECAAYFAkd5bWQACgkQcsIHjyDViGTbZQCfdwNhR/qITvV8+zPiSFWeFcNc
+RscAni8Nrq6X1mrAryKLGIJFlOoKFOgU
+=8NKv
 -----END PGP SIGNATURE-----
