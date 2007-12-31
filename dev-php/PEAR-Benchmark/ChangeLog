@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Benchmark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.47 2007/12/05 23:35:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.48 2007/12/31 15:48:37 josejx Exp $
+
+  31 Dec 2007; Joseph Jezak <josejx@gentoo.org>
+  PEAR-Benchmark-1.2.7-r1.ebuild:
+  Marked ppc stable for bug #194033.
 
   05 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   -PEAR-Benchmark-1.2.6.ebuild, PEAR-Benchmark-1.2.7.ebuild,
