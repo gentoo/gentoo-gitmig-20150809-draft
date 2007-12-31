@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071122.ebuild,v 1.2 2007/12/01 02:52:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071214.ebuild,v 1.1 2007/12/31 14:18:51 matsuu Exp $
 
 TETEX_PV=3.0_p1
 
@@ -25,10 +25,10 @@ SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 	${SRC_PATH_TETEX}/${TETEX_TEXMF_SRC}
 	http://tutimura.ath.cx/~nob/tex/ptetex/ptetex3/${PTETEX}.tar.gz
 	http://tutimura.ath.cx/~nob/tex/ptetex/ptetex-cmap/${PTETEX_CMAP}.tar.gz
-	mirror://gentoo/${P}-dviljk-security-fixes.patch.bz2"
+	mirror://gentoo/${PN}-3.1.10_p20071122-dviljk-security-fixes.patch.bz2"
 #	mirror://gentoo/tetex-${TETEX_PV}-gentoo.tar.gz
 
-KEYWORDS="~alpha ~arm ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 
 BUILD_DIR="${WORKDIR}/build/usr"
 
@@ -45,20 +45,17 @@ DEPEND="!app-text/tetex
 		>=media-libs/freetype-2.3.4
 		|| (
 			media-fonts/ja-ipafonts
+			media-fonts/ipamonafont
+			media-fonts/vlgothic
 			media-fonts/sazanami
 			media-fonts/kochi-substitute
 		)
 	)"
 
-RESTRICT="test"
-
 S="${WORKDIR}/${PTETEX}"
 
 # Sorry this provides tetex again...
 PROVIDE="virtual/tetex"
-
-# Parallel make b0rks
-MAKEOPTS="-j1"
 
 src_unpack() {
 	#tetex-3_src_unpack
@@ -68,7 +65,7 @@ src_unpack() {
 	cd "${WORKDIR}"
 	unpack ${TETEX_SRC}
 	cd "${WORKDIR}"
-	unpack ${P}-dviljk-security-fixes.patch.bz2
+	unpack ${PN}-3.1.10_p20071122-dviljk-security-fixes.patch.bz2
 	unpack ${PTETEX}.tar.gz
 	unpack ${PTETEX_CMAP}.tar.gz
 	echo ">>> Unpacking jis and morisawa fonts ..."
@@ -77,7 +74,7 @@ src_unpack() {
 
 	# Gentoo box reserves variable ${P}!!
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-3.1.10_p20071203-gentoo.patch
 
 	cat <<EOF > "${S}"/my_option
 SRC_DIR="${WORKDIR}"
@@ -142,14 +139,14 @@ EOF
 
 	cd "${S}"
 	unset TEXMFMAIN TEXMF HOME
-	emake x || die "emake x failed"
+	emake -j1 x || die "emake x failed"
 
 	cd "${TETEX_S}"
 
 	epatch "${FILESDIR}/tetex-${SMALL_PV}-kpathsea-pic.patch"
 
 	# bug 85404
-	epatch "${FILESDIR}/${P}-epstopdf-wrong-rotation.patch"
+	epatch "${FILESDIR}/${PN}-3.1.10_p20071122-epstopdf-wrong-rotation.patch"
 
 	# ptetex included
 	#epatch "${FILESDIR}/tetex-${TETEX_PV}-amd64-xdvik-wp.patch"
@@ -157,14 +154,14 @@ EOF
 
 	#bug 98029
 	# no need
-	#epatch "${FILESDIR}/${P}-fmtutil-etex.patch"
+	#epatch "${FILESDIR}/${PN}-3.1.10_p20071122-fmtutil-etex.patch"
 
 	#bug 115775
 	# ptex included
 	#epatch "${FILESDIR}/tetex-${TETEX_PV}-xpdf-vulnerabilities.patch"
 
 	# bug 94860
-	epatch "${FILESDIR}/${P}-pdftosrc-install.patch"
+	epatch "${FILESDIR}/${PN}-3.1.10_p20071122-pdftosrc-install.patch"
 
 	# bug 126918
 	epatch "${FILESDIR}/tetex-${TETEX_PV}-create-empty-files.patch"
@@ -184,8 +181,7 @@ EOF
 	epatch "${FILESDIR}/tetex-${TETEX_PV}-dvips_bufferoverflow.patch"
 
 	# securty bug #196735
-	# ptetex included
-	#epatch "${FILESDIR}/xpdf-3.02pl2.patch"
+	epatch "${FILESDIR}/xpdf-3.02pl2.patch"
 
 	# Construct a Gentoo site texmf directory
 	# that overlays the upstream supplied
@@ -193,7 +189,7 @@ EOF
 	#epatch "${FILESDIR}/tetex-${TETEX_PV}-texmf-site.patch"
 
 	# security bug #198238
-	epatch "${WORKDIR}/${P}-dviljk-security-fixes.patch"
+	epatch "${WORKDIR}/${PN}-3.1.10_p20071122-dviljk-security-fixes.patch"
 
 	# security bug #198238 and bug #193437
 	epatch "${FILESDIR}/tetex-${TETEX_PV}-t1lib-SA26241_buffer_overflow.patch"
@@ -205,15 +201,19 @@ EOF
 src_compile() {
 	unset TEXMFMAIN TEXMF HOME
 
-	emake c || die "emake c failed"
-	emake macro || die "emake macro failed"
-	emake otf || die "emake otf failed"
-	emake fonty || die "emake fonty failed"
-	emake babel || die "emake babel failed"
+	emake -j1 c || die "emake c failed"
+	emake -j1 macro || die "emake macro failed"
+	emake -j1 otf || die "emake otf failed"
+	emake -j1 fonty || die "emake fonty failed"
+	emake -j1 babel || die "emake babel failed"
 
 	einfo "Setting ptetex-cmap ..."
 	cd "${WORKDIR}/${PTETEX_CMAP}"
 	PATH="${BUILD_DIR}/bin:$PATH" ./setup.sh "${BUILD_DIR}"/share/texmf/fonts/cmap
+}
+
+src_test() {
+	emake -j1 test || die "emake test failed"
 }
 
 src_install() {
@@ -268,10 +268,8 @@ src_install() {
 	#TEXMF="${D}"/usr/share/texmf "${D}"/usr/bin/mktexlsr || die
 }
 
-pkg_config() {
-	if [ "$ROOT" = "/" ] ; then
-		/usr/sbin/texmf-update
-	fi
+pkg_postinst() {
+	tetex-3_pkg_postinst
 
 	elog
 	elog "Japanese dvips and xdvi have been renamed to pdvipsk and pxdvik."
