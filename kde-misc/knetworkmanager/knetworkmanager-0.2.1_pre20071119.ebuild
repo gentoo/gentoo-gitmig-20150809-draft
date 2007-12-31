@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-0.2.1_pre20071119.ebuild,v 1.1 2007/12/03 00:37:30 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-0.2.1_pre20071119.ebuild,v 1.2 2007/12/31 22:35:43 josejx Exp $
 
 inherit kde eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://en.opensuse.org/Projects/KNetworkManager"
 LICENSE="GPL-2"
 #SRC_URI="ftp://ftp.kde.org/pub/kde/stable/apps/KDE3.x/network/${P}.tar.bz2"
 SRC_URI="http://beta1.suse.com/private/hschaa/knetworkmanager/${MY_P}.tar.bz2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="cisco openvpn pptp dialup"
 
