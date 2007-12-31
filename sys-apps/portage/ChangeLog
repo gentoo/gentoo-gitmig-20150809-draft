@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.485 2007/12/30 17:25:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.486 2007/12/31 12:13:55 zmedico Exp $
+
+*portage-2.1.4_rc13 (31 Dec 2007)
+
+  31 Dec 2007; Zac Medico <zmedico@gentoo.org> -portage-2.1.4_rc12.ebuild,
+  +portage-2.1.4_rc13.ebuild:
+  2.1.4_rc13 fixes a regression from 2.1.4_rc12 that triggered incorrect
+  USE=test calculation in some cases when FEATURES=test was enabled.
 
 *portage-2.1.4_rc12 (30 Dec 2007)
 
