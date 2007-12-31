@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/qt4-qtruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.13 2007/11/06 12:34:54 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.14 2007/12/31 18:35:03 caleb Exp $
+
+*qt4-qtruby-1.4.9-r3 (31 Dec 2007)
+
+  31 Dec 2007; Caleb Tennis <caleb@gentoo.org>
+  +files/libsmoke-multilib.patch, +qt4-qtruby-1.4.9-r3.ebuild:
+  Update to cmake-utils and add patch for multilib support, from bug #202632
 
 *qt4-qtruby-1.4.9-r2 (06 Nov 2007)
 
