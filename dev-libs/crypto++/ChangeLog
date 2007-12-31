@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.36 2007/12/30 01:50:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.37 2007/12/31 15:12:16 armin76 Exp $
+
+  31 Dec 2007; Raúl Porcel <armin76@gentoo.org> crypto++-5.5.2.ebuild:
+  sparc stable wrt #198687
 
   30 Dec 2007; Markus Meier <maekke@gentoo.org> crypto++-5.5.2.ebuild:
   x86 stable, bug #198687
