@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/ikvm-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.6 2007/06/28 03:46:37 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.7 2007/12/31 18:59:37 jurek Exp $
+
+*ikvm-bin-0.36.0.5 (31 Dec 2007)
+
+  31 Dec 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/ikvm-0.36.0.5.pc.in, +ikvm-bin-0.36.0.5.ebuild:
+  Version bump
 
   28 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> ikvm-bin-0.34.0.2.ebuild:
   Fixed SRC_URI (bug #183478)
