@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.77 2007/12/31 06:16:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.78 2007/12/31 16:05:51 ranger Exp $
+
+  31 Dec 2007; Brent Baude <ranger@gentoo.org> libcdio-0.78.2-r2.ebuild:
+  Marking libcdio-0.78.2-r2 ppc for bug 203777
 
   31 Dec 2007; Jeroen Roovers <jer@gentoo.org> libcdio-0.78.2-r2.ebuild:
   Stable for HPPA and x86 (bug #203777).
