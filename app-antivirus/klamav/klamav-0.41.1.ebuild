@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.41.1.ebuild,v 1.2 2007/12/30 17:50:04 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.41.1.ebuild,v 1.3 2007/12/31 18:21:21 carlo Exp $
 
 inherit kde
 
@@ -16,10 +16,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=app-antivirus/clamav-0.90"
+DEPEND=">=app-antivirus/clamav-0.92"
 RDEPEND="${DEPEND}"
 
-need-kde 3.4
+need-kde 3.5
 
 PATCHES="${FILESDIR}/${P}-cl_loaddbdir.patch
 	${FILESDIR}/${P}-gentempdesc.patch"
