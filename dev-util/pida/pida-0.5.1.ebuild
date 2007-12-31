@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.5.1.ebuild,v 1.1 2007/12/31 00:52:50 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.5.1.ebuild,v 1.2 2007/12/31 01:11:21 welp Exp $
 
 NEED_PYTHON=2.4
 
-inherit distutils
+inherit distutils eutils
 MY_P="PIDA-${PV}"
 
 DESCRIPTION="Gtk and/or Vim-based Python Integrated Development Application"
@@ -31,6 +31,14 @@ pkg_setup() {
 		eerror "x11-libs/vte has to be built with python USE-flag"
 		die "missing python USE-flag for x11-libs/vte"
 	fi
+}
+
+src_install() {
+	distutils_src_install
+
+	make_desktop_entry pida Pida \
+		/usr/lib/python2.5/site-packages/pida/resources/pixmaps/pida-icon.png \
+		Development
 }
 
 pkg_postinst() {
