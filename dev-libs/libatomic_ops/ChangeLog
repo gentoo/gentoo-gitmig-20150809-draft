@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libatomic_ops
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.14 2007/11/23 14:13:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.15 2007/12/31 16:19:37 ranger Exp $
+
+  31 Dec 2007; Brent Baude <ranger@gentoo.org> libatomic_ops-1.2-r1.ebuild:
+  Marking libatomic_ops-1.2-r1 ppc64 for bug 197126
 
   23 Nov 2007; Samuli Suominen <drac@gentoo.org>
   libatomic_ops-1.2-r1.ebuild:
