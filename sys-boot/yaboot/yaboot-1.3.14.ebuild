@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14.ebuild,v 1.1 2007/09/06 21:18:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14.ebuild,v 1.2 2007/12/31 22:47:15 josejx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ SRC_URI="http://yaboot.ozlabs.org/releases/${P}.tar.gz"
 HOMEPAGE="http://yaboot.ozlabs.org"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* ~ppc -ppc64"
+KEYWORDS="-* ppc -ppc64"
 IUSE="ibm"
 
 DEPEND="sys-apps/powerpc-utils"
@@ -33,5 +33,5 @@ src_install() {
 	cp etc/yaboot.conf etc/yaboot.conf.bak
 	sed -e 's/\/local//' etc/yaboot.conf >| etc/yaboot.conf.edit
 	mv -f etc/yaboot.conf.edit etc/yaboot.conf
-	make ROOT=${D} PREFIX=/usr MANDIR=share/man install || die
+	make ROOT="${D}" PREFIX=/usr MANDIR=share/man install || die
 }
