@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd/ChangeLog,v 1.13 2007/06/26 06:00:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd/ChangeLog,v 1.14 2007/12/31 21:59:22 solar Exp $
+
+  31 Dec 2007; <solar@gentoo.org> metadata.xml:
+  - update metadata to show this pkg is now obsolete. please use mtd-utils
 
   26 Jun 2007; Joshua Kinard <kumba@gentoo.org> mtd-20050519.ebuild:
   Stable on mips, per #151027.
