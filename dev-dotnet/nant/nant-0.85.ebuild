@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.85.ebuild,v 1.7 2007/08/11 04:19:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.85.ebuild,v 1.8 2007/12/31 16:32:28 jurek Exp $
 
 inherit mono eutils
 
@@ -21,19 +21,22 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix a problem with duplicate building caused by the doc= target
-	for file in $(find ${S}/src -name '*.build') ; do
+	for file in $(find "${S}"/src -name '*.build') ; do
 		sed -i "s: doc=.*>:>:" ${file}
 	done
 
 	# Build against the .NET 2.0 Framework, as it is backwards compatible
 	sed -i -e "s/-f:NAnt.build/-t:mono-2.0 -f:NAnt.build/" \
-		${S}/Makefile || die "sed failed"
+		"${S}"/Makefile || die "sed failed"
+
+	# Patch to prevent build from failing due to threading issues (see bug #199748)
+	epatch "${FILESDIR}"/${P}-threadingfix.patch
 
 	# Patch to allow building on current mono releases
-	epatch ${FILESDIR}/${PN}-0.85-obselencense.patch
+	epatch "${FILESDIR}"/${PN}-0.85-obselencense.patch
 }
 
 src_compile() {
@@ -53,7 +56,7 @@ src_install() {
 	sed -i \
 		-e "s:${D}::" \
 		-e "2iexport MONO_SILENT_WARNING=1" \
-		${D}/usr/bin/nant
+		"${D}"/usr/bin/nant
 
 	dodoc README.txt
 }
