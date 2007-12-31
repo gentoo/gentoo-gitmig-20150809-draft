@@ -1,6 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.959 2007/12/31 02:58:23 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.960 2007/12/31 11:00:14 eva Exp $
+
+  31 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  default-linux/x86/no-nptl/2.4/package.mask,
+  hardened/ia64/package.use.mask, hardened/ppc/package.use.mask,
+  hardened/ppc64/package.use.mask:
+  prepare bump of app-office/glabels to 2.2.0
+
+  31 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  hardened/ia64/package.use.mask, hardened/ppc/package.use.mask,
+  hardened/ppc64/package.use.mask:
+  clean up iptc package.use.mask since bug #156398 is fixed
 
   30 Dec 2007; Christian Faulhammer <opfer@gentoo.org> use.desc, use.local.desc:
   adjust description of svg and app-editors/emacs-cvs:xft USE flags
