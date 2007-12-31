@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.9-r1.ebuild,v 1.3 2007/12/11 16:35:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.9-r1.ebuild,v 1.4 2007/12/31 16:01:50 ranger Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam
 
@@ -15,7 +15,7 @@ AUTOSIEVE_PATCH_VER="0.6.0"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~hppa ~ppc64"
+KEYWORDS="~amd64 ~hppa ppc ~ppc64 ~sparc ~x86"
 IUSE="autocreate autosieve drac idled kerberos nntp pam replication snmp ssl tcpd"
 
 PROVIDE="virtual/imapd"
