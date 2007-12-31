@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.6.4_p20070621.ebuild,v 1.1 2007/08/23 12:28:15 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.6.4_p20070621.ebuild,v 1.2 2007/12/31 22:29:52 josejx Exp $
 
 inherit gnome2 eutils autotools
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="crypt doc gnome"
 
 RDEPEND=">=sys-apps/dbus-0.60

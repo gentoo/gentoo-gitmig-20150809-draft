@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.1.0_p20070726.ebuild,v 1.2 2007/08/23 20:01:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.1.0_p20070726.ebuild,v 1.3 2007/12/31 22:31:56 josejx Exp $
 
 inherit gnome2 eutils autotools
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="crypt debug doc gnome"
 
 RDEPEND=">=sys-apps/dbus-0.35.2
