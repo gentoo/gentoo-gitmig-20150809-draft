@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.3.ebuild,v 1.1 2007/12/30 23:16:13 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.3.ebuild,v 1.2 2007/12/31 00:20:30 keytoaster Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -9,7 +9,7 @@ inherit kde eutils
 
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
-P_DOC="${PN}-doc-0.9.3-beta3"
+P_DOC="${PN}-doc-0.9.2-beta2"
 S_DOC="${WORKDIR}/${P_DOC}"
 
 DESCRIPTION="A digital photo management application for KDE."
@@ -63,6 +63,17 @@ src_unpack(){
 	local MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | tr '\n' ' ')
 	elog "Enabling translations for: en ${MAKE_PO}"
 	sed -i -e "s:^SUBDIRS =.*:SUBDIRS = . ${MAKE_PO}:" "${S}/po/Makefile.am" || die "sed for locale failed"
+
+	if use doc; then
+		local MAKE_DOC=$(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d | tr '\n' ' ')
+		elog "Enabling documentation for: en ${MAKE_DOC}"
+		cd "${S_DOC}/doc"
+		for X in ${MAKE_DOC}; do
+			DIRS+="$(ls -d ${X}*) "
+		done
+		DIRS="$(echo ${DIRS} | tr '\n' ' ')"
+		sed -i -e "s:^SUBDIRS =.*:SUBDIRS = digikam ${DIRS}:" "${S_DOC}/doc/Makefile.am" || die "sed for locale (docs) failed"
+	fi
 }
 
 src_compile(){
