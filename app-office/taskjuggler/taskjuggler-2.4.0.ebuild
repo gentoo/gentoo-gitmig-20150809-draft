@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/taskjuggler-2.4.0.ebuild,v 1.1 2007/12/31 19:13:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/taskjuggler-2.4.0.ebuild,v 1.2 2007/12/31 19:16:22 dertobi123 Exp $
 
 inherit eutils qt3
 
@@ -38,8 +38,8 @@ src_compile() {
 	# Need to fake out QT or we'll get sandbox probles
 	# from http://www.gentoo.org/cgi-bin/viewcvs.cgi/dev-db/tora/tora-1.3.13.ebuild?r1=1.2&r2=1.3
 	REALHOME="$HOME"
-	mkdir -p $T/fakehome/.kde
-	mkdir -p $T/fakehome/.qt
+	mkdir -p "$T"/fakehome/.kde
+	mkdir -p "$T"/fakehome/.qt
 	export HOME="$T/fakehome"
 	addwrite "${QTDIR}/etc/settings"
 
@@ -64,9 +64,9 @@ src_compile() {
 src_install() {
 #	dodir /usr/share/apps/katepart/syntax
 #	doins Contrib/kate/taskjuggler.xml || die
-	make install DESTDIR=${D} || die "install failed"
+	make install DESTDIR="${D}" || die "install failed"
 	if use kde; then
 		cd Contrib/kate
-		make install DESTDIR=${D} || die "install kate-addons failed"
+		make install DESTDIR="${D}" || die "install kate-addons failed"
 	fi
 }

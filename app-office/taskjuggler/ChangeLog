@@ -1,6 +1,10 @@
 # ChangeLog for app-office/taskjuggler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/ChangeLog,v 1.8 2007/12/31 19:13:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/ChangeLog,v 1.9 2007/12/31 19:16:22 dertobi123 Exp $
+
+  31 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  taskjuggler-2.4.0.ebuild:
+  Fix quoting
 
 *taskjuggler-2.4.0 (31 Dec 2007)
 
