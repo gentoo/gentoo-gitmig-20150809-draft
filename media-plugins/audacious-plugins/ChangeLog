@@ -1,12 +1,24 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.74 2007/12/31 11:44:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.75 2007/12/31 21:55:13 chainsaw Exp $
+
+*audacious-plugins-1.4.4 (31 Dec 2007)
+
+  31 Dec 2007; Tony Vroon <chainsaw@gentoo.org>
+  -audacious-plugins-1.4.3.2.ebuild, +audacious-plugins-1.4.4.ebuild:
+  More last-minute bugfixes. Remove intermediate 1.4.3.X version.
 
 *audacious-plugins-1.4.3.2 (31 Dec 2007)
 
   31 Dec 2007; Tony Vroon <chainsaw@gentoo.org>
   +audacious-plugins-1.4.3.2.ebuild:
   Version bump. Numerous bugfixes.
+
+*audacious-plugins-1.4.3.1 (30 Dec 2007)
+
+  30 Dec 2007; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-plugins-1.4.3.1.ebuild:
+  Version bump. Large amount of bugfixes.
 
   03 Dec 2007; Tony Vroon <chainsaw@gentoo.org>
   -audacious-plugins-1.4.0.ebuild, audacious-plugins-1.4.2.ebuild:
