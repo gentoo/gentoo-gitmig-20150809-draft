@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/dspam-web
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.39 2007/10/22 22:51:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.40 2007/12/31 08:00:11 mrness Exp $
+
+*dspam-web-3.8.0-r1 (31 Dec 2007)
+
+  31 Dec 2007; Alin Năstac <mrness@gentoo.org> -dspam-web-3.8.0.ebuild,
+  +dspam-web-3.8.0-r1.ebuild:
+  Fix dspam-web graphs by correcting 14_all_cgi-fixes patch.
 
   22 Oct 2007; Alin Năstac <mrness@gentoo.org> dspam-web-3.8.0.ebuild:
   Use the latest patches tarball.
