@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.570 2007/12/29 07:09:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.571 2007/12/31 12:36:25 jer Exp $
+
+  31 Dec 2007; Jeroen Roovers <jer@gentoo.org> glibc-2.7-r1.ebuild:
+  Stable for HPPA.
 
   29 Dec 2007; Mike Frysinger <vapier@gentoo.org> glibc-2.7-r1.ebuild:
   Add patches to fix hppa.
