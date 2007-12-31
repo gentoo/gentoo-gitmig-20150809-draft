@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.2.ebuild,v 1.3 2007/12/31 08:08:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.3.ebuild,v 1.1 2007/12/31 08:08:57 dev-zero Exp $
 
 NEED_PYTHON=2.3
 
 inherit distutils
 
-DESCRIPTION="datetime math and logic library for python"
+DESCRIPTION="dateutil datetime math and logic library for python"
 HOMEPAGE="http://labix.org/python-dateutil"
 SRC_URI="http://labix.org/download/python-dateutil/${P}.tar.bz2"
 
@@ -16,10 +16,9 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="!<=dev-python/matplotlib-0.82"
-RDEPEND="${DEPEND}"
 
 DOCS="NEWS example.py sandbox/rrulewrapper.py sandbox/scheduler.py"
 
 src_test() {
-	PYTHONPATH="." "${python}" test.py || die "tests failed"
+	"${python}" test.py
 }
