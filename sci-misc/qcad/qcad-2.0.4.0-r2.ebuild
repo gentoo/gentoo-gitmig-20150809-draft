@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r2.ebuild,v 1.5 2007/08/10 19:43:38 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r2.ebuild,v 1.6 2007/12/31 19:24:55 je_fro Exp $
 
 inherit kde-functions eutils
 
@@ -24,8 +24,8 @@ need-qt 3.3
 src_unpack() {
 	unpack ${A}
 	# Bug 112864 - fix dir unpack bug
-	touch ${WORKDIR}
-	cd ${S}
+	touch "${WORKDIR}"
+	cd "${S}"
 	echo >> defs.pro "DEFINES += _REENTRANT QT_THREAD_SUPPORT"
 	echo >> defs.pro "CONFIG += thread release"
 	echo >> defs.pro "QMAKE_CFLAGS_RELEASE += ${CFLAGS}"
@@ -34,14 +34,14 @@ src_unpack() {
 		sed -i -e 's~qmake~${QTDIR}/bin/qmake~g' $file || \
 			die "unable to correct path to qmake in $file"
 	done
-	epatch ${FILESDIR}/${MY_P}-gentoo.patch
-	epatch ${FILESDIR}/manual.patch-r1
-	cd ${S}/scripts
+	epatch "${FILESDIR}"/${MY_P}-gentoo.patch
+	epatch "${FILESDIR}"/manual.patch-r1
+	cd "${S}"/scripts
 	sed -i -e 's/^make/make ${MAKEOPTS}/' build_qcad.sh || \
 		die "unable to add MAKEOPTS"
 	sed -i -e 's/^\.\/configure/.\/configure --host=${CHOST}/' build_qcad.sh \
 		|| die "unable to set CHOST"
-	cd ${S}/qcad/src
+	cd "${S}"/qcad/src
 	sed -i -e "s:FULLASSISTANTPATH:${QTDIR}/bin:" qc_applicationwindow.cpp \
 		|| die "sed failed on assistant path"
 	sed -i -e "s:QCADDOCPATH:/usr/share/doc/${PF}:" \
@@ -56,14 +56,14 @@ src_compile() {
 	# this is a fake homedir that is writeable under the sandbox, so that the build process
 	# can do anything it wants with it.
 	REALHOME="$HOME"
-	mkdir -p $T/fakehome/.kde
-	mkdir -p $T/fakehome/.qt
-	export HOME="$T/fakehome"
+	mkdir -p "${T}"/fakehome/.kde
+	mkdir -p "${T}"fakehome/.qt
+	export HOME="${T}/fakehome"
 	# things that should access the real homedir
 	[ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"
 	cd scripts
 	sh build_qcad.sh || die "build failed"
-	if ! test -f ${S}/qcad/qcad; then
+	if ! test -f "${S}"/qcad/qcad; then
 		die "no binary created, build failed"
 	fi
 }
@@ -76,13 +76,13 @@ src_install () {
 	chmod ugo+rx qcad
 	dobin qcad
 	dodir /usr/share/${P}
-	cp -pPR patterns examples fonts qm ${D}/usr/share/${P}
+	cp -pPR patterns examples fonts qm "${D}"/usr/share/${P}
 	cd ..
 	dodoc README
 	if use doc; then
 		insinto /usr/share/doc/${PF}/
-		cd ${WORKDIR}
-		cp -pPR qcaddoc.adp cad ${D}usr/share/doc/${PF}
+		cd "${WORKDIR}"
+		cp -pPR qcaddoc.adp cad "${D}"usr/share/doc/${PF}
 	fi
 	make_desktop_entry ${PN} ${PN} ${PN} Office
 }
