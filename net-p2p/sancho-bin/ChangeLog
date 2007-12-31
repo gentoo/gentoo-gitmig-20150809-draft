@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/sancho-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.44 2007/11/04 23:47:19 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.45 2007/12/31 03:44:32 mabi Exp $
+
+  31 Dec 2007; Matti Bickel <mabi@gentoo.org> sancho-bin-0.9.4.58-r1.ebuild:
+  marked ~ppc on user request (bug #198116), be careful USE='-java' is
+  NON-functional!
 
   04 Nov 2007; Santiago M. Mola <coldwind@gentoo.org>
   sancho-bin-0.9.4.58-r1.ebuild:
