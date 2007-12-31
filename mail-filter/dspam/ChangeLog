@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.106 2007/12/12 20:38:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.107 2007/12/31 07:56:49 mrness Exp $
+
+  31 Dec 2007; Alin Năstac <mrness@gentoo.org> dspam-3.8.0-r9.ebuild:
+  Fix dspam-web graphs by correcting 14_all_cgi-fixes patch.
 
   12 Dec 2007; Alin Năstac <mrness@gentoo.org> dspam-3.8.0-r9.ebuild:
   Fix unused variables warnings, thanks to a steveb's improvement to
