@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.2.0.ebuild,v 1.1 2007/12/31 12:46:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.2.0.ebuild,v 1.2 2007/12/31 18:31:38 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -34,4 +34,3 @@ pkg_setup() {
 		--disable-update-mimedb
 		--disable-update-desktopdb"
 }
-
