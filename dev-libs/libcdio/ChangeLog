@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcdio
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.79 2007/12/31 17:37:44 welp Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.80 2008/01/01 02:41:19 flameeyes Exp $
+
+  01 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Take maintainership as I end up looking after it anyway, and add
+  documentation for the minimal USE flag.
 
   31 Dec 2007; Peter Weller <welp@gentoo.org> libcdio-0.78.2-r2.ebuild:
   Stable on amd64
