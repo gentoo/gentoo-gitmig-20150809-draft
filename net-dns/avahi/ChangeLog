@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.132 2007/12/18 13:38:33 swegener Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.133 2008/01/01 19:57:12 swegener Exp $
+
+  01 Jan 2008; Sven Wegener <swegener@gentoo.org> avahi-0.6.19-r2.ebuild,
+  avahi-0.6.20-r2.ebuild, avahi-0.6.21.ebuild, avahi-0.6.22.ebuild:
+  Install into /$(get_libdir)/rcscripts, bug #172391.
 
 *avahi-0.6.22 (18 Dec 2007)
 

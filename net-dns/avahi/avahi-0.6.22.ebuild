@@ -1,8 +1,8 @@
-# Copyright 2000-2007 Gentoo Foundation
+# Copyright 2000-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.22.ebuild,v 1.1 2007/12/18 13:38:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.22.ebuild,v 1.2 2008/01/01 19:57:12 swegener Exp $
 
-inherit eutils mono python qt3 qt4
+inherit eutils mono python qt3 qt4 multilib
 
 DESCRIPTION="System which facilitates service discovery on a local network"
 HOMEPAGE="http://avahi.org/"
@@ -156,7 +156,7 @@ src_install() {
 
 	if use autoipd
 	then
-		insinto /lib/rcscripts/net
+		insinto /$(get_libdir)/rcscripts/net
 		doins "${FILESDIR}"/autoipd.sh
 	fi
 
