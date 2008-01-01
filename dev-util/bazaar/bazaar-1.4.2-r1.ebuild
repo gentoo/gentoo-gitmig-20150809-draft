@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.4.2-r1.ebuild,v 1.5 2007/10/24 16:33:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.4.2-r1.ebuild,v 1.6 2008/01/01 20:31:53 betelgeuse Exp $
 
 inherit eutils
 
@@ -40,9 +40,9 @@ src_unpack() {
 	# baz annotate does the same thing as this binary
 	rm -rf src/baz/annotate
 
-	epatch ${FILESDIR}/baz-gpgme-fix.patch
-	epatch ${FILESDIR}/neon-0.24-fix.patch
-	epatch ${FILESDIR}/neon-0.26-fix.patch
+	epatch "${FILESDIR}/baz-gpgme-fix.patch"
+	epatch "${FILESDIR}/neon-0.24-fix.patch"
+	epatch "${FILESDIR}/neon-0.26-fix.patch"
 }
 
 src_compile() {
@@ -57,13 +57,8 @@ src_install () {
 	make install prefix="${D}/usr" \
 		|| die "make install failed"
 
-	cd ${WORKDIR}/${P}/
-	dodoc =ARCH-USERS-README
-	cd ${WORKDIR}/${P}/src
-	dodoc COPYING
-	dodoc baz/=THANKS
-	cd ${WORKDIR}
-	doman baz.1
+	cd "${WORKDIR}/${P}/src" || die
+	dodoc "COPYING" "baz/=THANKS" || die
 }
 
 pkg_postinst() {
