@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.188 2007/12/20 15:45:36 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.189 2008/01/01 02:32:51 flameeyes Exp $
+
+  01 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> pam-0.99.9.0.ebuild:
+  Check for /etc/pam.d files in $ROOT, add missing flex build-time dependency.
+  Fixes bug #203929.
 
   20 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> pam-0.78-r5.ebuild:
   Remove pam_console USE flag so that it's always disabled.

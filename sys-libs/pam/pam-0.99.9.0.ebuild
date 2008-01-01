@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.9.0.ebuild,v 1.11 2007/11/24 11:27:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.9.0.ebuild,v 1.12 2008/01/01 02:32:51 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -26,6 +26,7 @@ RDEPEND="nls? ( virtual/libintl )
 	sys-libs/pwdb
 	selinux? ( >=sys-libs/libselinux-1.28 )"
 DEPEND="${RDEPEND}
+	sys-devel/flex
 	test? ( elibc_glibc? ( >=sys-libs/glibc-2.4 ) )
 	nls? ( sys-devel/gettext )"
 PDEPEND="vim-syntax? ( app-vim/pam-syntax )"
@@ -37,7 +38,7 @@ PROVIDE="virtual/pam"
 check_old_modules() {
 	local retval="0"
 
-	if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q pam_stack.so; then
+	if sed -e 's:#.*::' "${ROOT}"/etc/pam.d/* | fgrep -q pam_stack.so; then
 		eerror ""
 		eerror "Your current setup is using the pam_stack module."
 		eerror "This module is deprecated and no longer supported, and since version"
@@ -53,7 +54,7 @@ check_old_modules() {
 		retval=1
 	fi
 
-	if sed -e 's:#.*::' /etc/pam.d/* | egrep -q 'pam_(pwdb|radius|timestamp|console)'; then
+	if sed -e 's:#.*::' "${ROOT}"/etc/pam.d/* | egrep -q 'pam_(pwdb|radius|timestamp|console)'; then
 		eerror ""
 		eerror "Your current setup is using one or more of the following modules,"
 		eerror "that are not built or supported anymore:"
@@ -75,7 +76,7 @@ check_old_modules() {
 	# This works only for those modules that are moved to sys-auth/$module, or the
 	# message will be wrong.
 	for module in pam_chroot pam_userdb; do
-		if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q ${module}.so; then
+		if sed -e 's:#.*::' "${ROOT}"/etc/pam.d/* | fgrep -q ${module}.so; then
 			ewarn ""
 			ewarn "Your current setup is using the ${module} module."
 			ewarn "Since version 0.99, ${CATEGORY}/${PN} does not provide this module"
