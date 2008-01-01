@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r1.ebuild,v 1.1 2007/12/02 09:48:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r1.ebuild,v 1.2 2008/01/01 15:44:57 maekke Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.gnokii.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="nls bluetooth ical irda sms postgres mysql usb X debug"
 
 RESTRICT="test" #test fails; maybe it will work in the future, but till then...
