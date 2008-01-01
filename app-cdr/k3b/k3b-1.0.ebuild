@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.ebuild,v 1.8 2007/11/18 20:44:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.ebuild,v 1.9 2008/01/01 23:51:31 aballier Exp $
 
 inherit kde eutils
 
@@ -28,7 +28,7 @@ DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 	mp3? ( media-libs/libmad )
 	musepack? ( media-libs/libmpcdec )
 	vorbis? ( media-libs/libvorbis )
-	musicbrainz? ( media-libs/musicbrainz )
+	musicbrainz? ( =media-libs/musicbrainz-2* )
 	encode? ( media-sound/lame )
 	alsa? ( media-libs/alsa-lib )
 	dvdread? ( media-libs/libdvdread )"
