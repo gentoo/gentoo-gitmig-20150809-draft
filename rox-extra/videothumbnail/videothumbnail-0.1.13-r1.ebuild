@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/videothumbnail-0.1.13-r1.ebuild,v 1.3 2007/12/11 23:14:32 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/videothumbnail-0.1.13-r1.ebuild,v 1.4 2008/01/01 16:48:51 josejx Exp $
 
 #Setting ROX_VER to 2.3 to be on safe side. See bug #112849
 ROX_VER="2.3"
@@ -15,7 +15,7 @@ SRC_URI="http://www.kerofin.demon.co.uk/rox/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~alpha ~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="|| ( >=media-video/mplayer-0.9.0 >=media-video/totem-1.4.2 )"
 
