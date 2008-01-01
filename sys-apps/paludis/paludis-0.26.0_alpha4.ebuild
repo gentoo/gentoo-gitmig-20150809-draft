@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_alpha4.ebuild,v 1.3 2007/12/30 18:13:45 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_alpha4.ebuild,v 1.4 2008/01/01 18:53:27 peper Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -129,4 +129,11 @@ src_test() {
 	export BASH_ENV=/dev/null
 
 	emake check || die "Make check failed"
+}
+
+pkg_postinst() {
+	# Remove the symlink created by app-admin/eselect-news
+	if [[ -L "${ROOT}/var/lib/paludis/news" ]] ; then
+		rm "${ROOT}/var/lib/paludis/news"
+	fi
 }

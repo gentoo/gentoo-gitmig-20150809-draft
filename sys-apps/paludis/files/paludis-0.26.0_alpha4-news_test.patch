@@ -1,3 +1,17 @@
+diff --git a/hooks/Makefile.am.m4 b/hooks/Makefile.am.m4
+index 5c46d22..a32565a 100644
+--- a/hooks/Makefile.am.m4
++++ b/hooks/Makefile.am.m4
+@@ -7,7 +7,7 @@ MAINTAINERCLEANFILES = Makefile.in Makefile.am
+ CLEANFILES = *~ gmon.out *.gcov *.gcno *.gcda .keep
+ SUBDIRS = . demos
+
+-installvarlibpaludisnewsdir = $(localstatedir)/paludis/news
++installvarlibpaludisnewsdir = $(localstatedir)/gentoo/news
+
+ installhookcommonprogdir = $(libexecdir)/paludis/hooks/common
+ installhookinstallallpostdir = $(libexecdir)/paludis/hooks/install_all_post
+
 diff --git a/hooks/news_TEST_setup.sh b/hooks/news_TEST_setup.sh
 index ceccb99..c895b1c 100755
 --- a/hooks/news_TEST_setup.sh
@@ -22,3 +36,19 @@ index ceccb99..c895b1c 100755
  monkey
  END
  
+diff --git a/paludis/repositories/e/e_repository_news.cc b/paludis/repositories/e/e_repository_news.cc
+index 9ebd737..6b25a74 100644
+--- a/paludis/repositories/e/e_repository_news.cc
++++ b/paludis/repositories/e/e_repository_news.cc
+@@ -67,9 +67,9 @@ namespace paludis
+             environment(e),
+             e_repository(p),
+             params(k),
+-            skip_file(e->root() / "var" / "lib" / "paludis" / "news" /
++            skip_file(e->root() / "var" / "lib" / "gentoo" / "news" /
+                     ("news-" + stringify(e_repository->name()) + ".skip")),
+-            unread_file(e->root() / "var" / "lib" / "paludis" / "news" /
++            unread_file(e->root() / "var" / "lib" / "gentoo" / "news" /
+                     ("news-" + stringify(e_repository->name()) + ".unread"))
+         {
+         }

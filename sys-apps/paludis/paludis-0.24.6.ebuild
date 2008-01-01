@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.24.6.ebuild,v 1.1 2007/08/14 20:13:40 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.24.6.ebuild,v 1.2 2008/01/01 18:53:27 peper Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 
 COMMON_DEPEND="
 	>=app-admin/eselect-1.0.2
-	app-admin/eselect-news
+	<app-admin/eselect-news-20071201
 	>=app-shells/bash-3
 	qa? ( dev-libs/pcre++ >=dev-libs/libxml2-2.6 app-crypt/gnupg )
 	inquisitio? ( dev-libs/pcre++ )
