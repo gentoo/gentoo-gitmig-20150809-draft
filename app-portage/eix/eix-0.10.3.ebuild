@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.10.3.ebuild,v 1.1 2007/12/31 21:15:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.10.3.ebuild,v 1.2 2008/01/01 14:18:23 mr_bones_ Exp $
 
 DESCRIPTION="Small utility for searching ebuilds with indexing for fast results"
 HOMEPAGE="http://eix.sourceforge.net"
@@ -30,7 +30,6 @@ pkg_postinst() {
 	elog "As of >=eix-0.5.4, \"metadata\" is the new default cache."
 	elog "It's independent of the portage-version and the cache used by portage."
 
-	
 	elog /etc/eixrc will not get updated anymore by the eix ebuild.
 	elog Upstream strongly recommends to remove this file resp. to keep
 	elog only those entries which you want to differ from the defaults.
