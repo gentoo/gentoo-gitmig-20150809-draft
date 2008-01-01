@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/suspend-0.8.ebuild,v 1.1 2008/01/01 13:15:43 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/suspend-0.8.ebuild,v 1.2 2008/01/01 14:23:44 alonbl Exp $
 
 DESCRIPTION="Userspace Software Suspend and S2Ram"
 HOMEPAGE="http://suspend.sourceforge.net/"
@@ -35,6 +35,7 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
+	prepalldocs
 }
 
 pkg_postinst() {
