@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.12 2007/11/18 22:13:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.13 2008/01/01 22:26:07 aballier Exp $
 
 inherit eutils kde-functions
 
@@ -17,7 +17,7 @@ IUSE="ogg debug"
 RDEPEND="=x11-libs/qt-3*
 	media-libs/flac
 	media-libs/id3lib
-	media-libs/musicbrainz
+	=media-libs/musicbrainz-2*
 	media-libs/libmad
 	ogg? ( media-sound/vorbis-tools )"
 
