@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.3-r1.ebuild,v 1.6 2007/07/10 23:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.5-r1.ebuild,v 1.1 2008/01/01 12:04:41 hd_brummy Exp $
 
 inherit eutils vdr-plugin
 
@@ -8,7 +8,7 @@ DESCRIPTION="VDR Graphical LCD Plugin"
 HOMEPAGE="http://graphlcd.berlios.de/"
 SRC_URI="mirror://berlios/${PN#vdr-}/${P}.tgz"
 
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -17,12 +17,28 @@ IUSE="truetype"
 DEPEND=">=media-video/vdr-1.2.6
 	>=app-misc/graphlcd-base-${PV}"
 
-PATCHES="${FILESDIR}/0.1.3/radiotext-lcr-service.diff
-	${FILESDIR}/0.1.3/graphlcd-0.1.3-span.diff
-	${FILESDIR}/${P}-uint64.diff"
+PATCHES="
+	${FILESDIR}/${PV}/graphlcd-${PV}-span.diff
+	${FILESDIR}/${PV}/graphlcd-${PV}-radiotext-lcr-service.diff
+	${FILESDIR}/${PV}/${P}-missing-include.patch
+	${FILESDIR}/${PV}/graphlcd-${PV}_vdr-1.5.3.diff"
+
+pkg_setup() {
+	vdr-plugin_pkg_setup
+
+	if ! getent group lp | grep -q vdr; then
+		echo
+		einfo "Add user 'vdr' to group 'lp' for full user access to parport device"
+		echo
+		elog "User vdr added to group lp"
+		gpasswd -a vdr lp
+	fi
+}
 
 src_unpack() {
 	vdr-plugin_src_unpack
+
+	use truetype && epatch "${FILESDIR}/${PV}/${P}-missing-freetyp2.diff"
 
 	sed -i "s:/usr/local:/usr:" Makefile
 }

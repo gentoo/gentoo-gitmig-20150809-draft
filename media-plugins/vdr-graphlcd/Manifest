@@ -1,31 +1,6 @@
-AUX 0.1.2/radiotext-lcr-service.diff 3429 RMD160 5ac8a870a814bc3c4337f5b15fd70700c1099dae SHA1 92037a8340529cc89e8a7c89691107602465581b SHA256 5240892a8e8c9ba3966e1b961009991dc79818340e26984a50af367d4b785bf6
-MD5 9edde30be18467eead751bd619a887bd files/0.1.2/radiotext-lcr-service.diff 3429
-RMD160 5ac8a870a814bc3c4337f5b15fd70700c1099dae files/0.1.2/radiotext-lcr-service.diff 3429
-SHA256 5240892a8e8c9ba3966e1b961009991dc79818340e26984a50af367d4b785bf6 files/0.1.2/radiotext-lcr-service.diff 3429
-AUX 0.1.3/graphlcd-0.1.3-span.diff 13383 RMD160 a0ba04bdb6130bb0ded0d57f7de39901c9fddc2e SHA1 8cc48cd709890129e7356ca3b5580d4952bd4230 SHA256 4d844f4dc989098072ce7eeb1f036eadf48c9acf3405db84c995cc71fbf6efac
-MD5 c73974e0556b36934b129f2b0d95922a files/0.1.3/graphlcd-0.1.3-span.diff 13383
-RMD160 a0ba04bdb6130bb0ded0d57f7de39901c9fddc2e files/0.1.3/graphlcd-0.1.3-span.diff 13383
-SHA256 4d844f4dc989098072ce7eeb1f036eadf48c9acf3405db84c995cc71fbf6efac files/0.1.3/graphlcd-0.1.3-span.diff 13383
-AUX 0.1.3/radiotext-lcr-service.diff 4307 RMD160 86bdbf240429b0ed984ae9992d080d04b384d3c7 SHA1 7ef6caaf178bbd48d8bbb42b005d9ddf6ca553b5 SHA256 59a652e77a10c2fa737368bb5a95fb59ee72c1bc15d14be705b8ac51803f7aca
-MD5 f9dbceea60471cbeb4538f2a36152e16 files/0.1.3/radiotext-lcr-service.diff 4307
-RMD160 86bdbf240429b0ed984ae9992d080d04b384d3c7 files/0.1.3/radiotext-lcr-service.diff 4307
-SHA256 59a652e77a10c2fa737368bb5a95fb59ee72c1bc15d14be705b8ac51803f7aca files/0.1.3/radiotext-lcr-service.diff 4307
-AUX 0.1.4/graphlcd-0.1.4-better-readable-on-medium-displays.diff 1510 RMD160 c773a42a33896608252b035001e48d871dea7856 SHA1 8aa69bfda3116caede5889b1b345744a46fc304a SHA256 522b6a86f283d943bc8a6969f7970633cae60afaf2f33dfbdc84eb516dd1882a
-MD5 8d5a50d57d3176ea7cb8d26df3832843 files/0.1.4/graphlcd-0.1.4-better-readable-on-medium-displays.diff 1510
-RMD160 c773a42a33896608252b035001e48d871dea7856 files/0.1.4/graphlcd-0.1.4-better-readable-on-medium-displays.diff 1510
-SHA256 522b6a86f283d943bc8a6969f7970633cae60afaf2f33dfbdc84eb516dd1882a files/0.1.4/graphlcd-0.1.4-better-readable-on-medium-displays.diff 1510
-AUX 0.1.4/graphlcd-0.1.4-radiotext-lcr-service.diff 4396 RMD160 fc9d56c25e619a366b093ca0074fa8227fc89ccf SHA1 1ceab6545461158d526ace1d7028198a20d7a8d2 SHA256 9f5d27b974c3432e2dd3c0cf9987b74ce5635ea3fa33823444b68ab8f05fc5d3
-MD5 20740cf60e47e586ce298086d47fc2db files/0.1.4/graphlcd-0.1.4-radiotext-lcr-service.diff 4396
-RMD160 fc9d56c25e619a366b093ca0074fa8227fc89ccf files/0.1.4/graphlcd-0.1.4-radiotext-lcr-service.diff 4396
-SHA256 9f5d27b974c3432e2dd3c0cf9987b74ce5635ea3fa33823444b68ab8f05fc5d3 files/0.1.4/graphlcd-0.1.4-radiotext-lcr-service.diff 4396
-AUX 0.1.4/graphlcd-0.1.4-span.diff 13307 RMD160 ad56e604871b0ad681b46d2efb8e4b934bddec8a SHA1 f0714211195f7f6da09b563734c7fba2f056c189 SHA256 20016c754c948664dd0fad53f70f68a5e9b95d1b8d14b9d0f959d664194d6876
-MD5 282df25630e2f3bf9212a6b73a9d9482 files/0.1.4/graphlcd-0.1.4-span.diff 13307
-RMD160 ad56e604871b0ad681b46d2efb8e4b934bddec8a files/0.1.4/graphlcd-0.1.4-span.diff 13307
-SHA256 20016c754c948664dd0fad53f70f68a5e9b95d1b8d14b9d0f959d664194d6876 files/0.1.4/graphlcd-0.1.4-span.diff 13307
-AUX 0.1.4/vdr-graphlcd-0.1.4-missing-include.patch 316 RMD160 099abb5f1cf7d6e81af41d6a3f5ab3ca029fd5b5 SHA1 bb48fddb12ab2dcb6a25789c9d6049951d73c369 SHA256 f5db943352b5cfb505e0a505659e267c9c046314c5006f53044e0abd7fe1b131
-MD5 afcb680c6883ff8f08d84a952a7270cc files/0.1.4/vdr-graphlcd-0.1.4-missing-include.patch 316
-RMD160 099abb5f1cf7d6e81af41d6a3f5ab3ca029fd5b5 files/0.1.4/vdr-graphlcd-0.1.4-missing-include.patch 316
-SHA256 f5db943352b5cfb505e0a505659e267c9c046314c5006f53044e0abd7fe1b131 files/0.1.4/vdr-graphlcd-0.1.4-missing-include.patch 316
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 0.1.5/graphlcd-0.1.5-radiotext-lcr-service.diff 4396 RMD160 fc9d56c25e619a366b093ca0074fa8227fc89ccf SHA1 1ceab6545461158d526ace1d7028198a20d7a8d2 SHA256 9f5d27b974c3432e2dd3c0cf9987b74ce5635ea3fa33823444b68ab8f05fc5d3
 MD5 20740cf60e47e586ce298086d47fc2db files/0.1.5/graphlcd-0.1.5-radiotext-lcr-service.diff 4396
 RMD160 fc9d56c25e619a366b093ca0074fa8227fc89ccf files/0.1.5/graphlcd-0.1.5-radiotext-lcr-service.diff 4396
@@ -38,6 +13,10 @@ AUX 0.1.5/graphlcd-0.1.5_vdr-1.5.3.diff 608 RMD160 f257b0ab385822fc48bab96670db1
 MD5 0129bcf6e83617a28943ea5cfe97e3bf files/0.1.5/graphlcd-0.1.5_vdr-1.5.3.diff 608
 RMD160 f257b0ab385822fc48bab96670db14bb9cfb6b83 files/0.1.5/graphlcd-0.1.5_vdr-1.5.3.diff 608
 SHA256 13bddb071ea62ce14fe09124fe76f52ea747636d2e207db55f3de5818766a009 files/0.1.5/graphlcd-0.1.5_vdr-1.5.3.diff 608
+AUX 0.1.5/vdr-graphlcd-0.1.5-missing-freetyp2.diff 917 RMD160 9ac7f812e7db50d60a6383683aea05e19021df4b SHA1 a54a3a91390dd8e754acd679719f6fe9f41203a1 SHA256 9e6d93943b0f8f0beb0292580fc2e61fb1d612778319cc342de7e0e0add17a71
+MD5 0510b26836898fc593425b9f96930806 files/0.1.5/vdr-graphlcd-0.1.5-missing-freetyp2.diff 917
+RMD160 9ac7f812e7db50d60a6383683aea05e19021df4b files/0.1.5/vdr-graphlcd-0.1.5-missing-freetyp2.diff 917
+SHA256 9e6d93943b0f8f0beb0292580fc2e61fb1d612778319cc342de7e0e0add17a71 files/0.1.5/vdr-graphlcd-0.1.5-missing-freetyp2.diff 917
 AUX 0.1.5/vdr-graphlcd-0.1.5-missing-include.patch 316 RMD160 099abb5f1cf7d6e81af41d6a3f5ab3ca029fd5b5 SHA1 bb48fddb12ab2dcb6a25789c9d6049951d73c369 SHA256 f5db943352b5cfb505e0a505659e267c9c046314c5006f53044e0abd7fe1b131
 MD5 afcb680c6883ff8f08d84a952a7270cc files/0.1.5/vdr-graphlcd-0.1.5-missing-include.patch 316
 RMD160 099abb5f1cf7d6e81af41d6a3f5ab3ca029fd5b5 files/0.1.5/vdr-graphlcd-0.1.5-missing-include.patch 316
@@ -50,54 +29,34 @@ AUX rc-addon.sh 364 RMD160 d06c372e8b734a6d0c2b646ecf894aa8f481c669 SHA1 d40b3ba
 MD5 23729c11a1aba1544cea6eded779a80d files/rc-addon.sh 364
 RMD160 d06c372e8b734a6d0c2b646ecf894aa8f481c669 files/rc-addon.sh 364
 SHA256 0d05404c0f1a10eba580090b83bd413c5571d81b13c9ab0678038f6e7e77b0b7 files/rc-addon.sh 364
-AUX vdr-graphlcd-0.1.3-uint64.diff 1809 RMD160 6f1831ed6a9ea5a08bbec7a2fa8cf10cfb84f3dd SHA1 72c6ca51d11ce8af2248146f8efed9d5f0eb8a06 SHA256 b7144d161050ba6d0b1e05f25a974f4a4f6a5ccd9a4bfd69b89237b93532ce2d
-MD5 0faeb2267e7aa3deffcaa336966d3568 files/vdr-graphlcd-0.1.3-uint64.diff 1809
-RMD160 6f1831ed6a9ea5a08bbec7a2fa8cf10cfb84f3dd files/vdr-graphlcd-0.1.3-uint64.diff 1809
-SHA256 b7144d161050ba6d0b1e05f25a974f4a4f6a5ccd9a4bfd69b89237b93532ce2d files/vdr-graphlcd-0.1.3-uint64.diff 1809
-DIST vdr-graphlcd-0.1.2-pre6.tgz 232345 RMD160 5e47c30c9a7b5f7649a8cf12c38da73fa9bf76ae SHA1 4bfe58e96964f3563d018266a472075a20608b1b SHA256 3f5d772d392373c744a2945254039cfc4846f505683d90569845ef8be8c8aafd
-DIST vdr-graphlcd-0.1.3.tgz 244387 RMD160 6856258bc3938a4a817fc583f2624c499f595013 SHA1 d8264ed9e1ceb2b5ddc8093252bfbe5d03cfa65f SHA256 70cac20084f5613b8f9a5bf08b10564c0e0ce890a87062d323e08739017c74ef
-DIST vdr-graphlcd-0.1.4.tgz 240053 RMD160 88114a3bbf68231428de441c4cf5cc45b0d2e6a4 SHA1 24caadf77e84e11df05296b9477f19ae8e8f96b0 SHA256 f5cbe57b559d5b68492301bf89eca9ec16022a4bb8c09ccd2727cfeb273ac146
 DIST vdr-graphlcd-0.1.5.tgz 240133 RMD160 9d8c6753fca9881d6eb204a88128bc4e8a508966 SHA1 022c2c56dbca9742ec55f5d32756d3223aa1d29d SHA256 63ccb6e195be639a12cc2b6bb6550acc05eca161226e6692c22c31ec5e7c2769
-EBUILD vdr-graphlcd-0.1.2_pre6-r1.ebuild 2360 RMD160 5b672d6207728a8b0ef034731772152e11e59899 SHA1 9ba8ebb21491b77550056ebe9c21e693b8a8a665 SHA256 8b7b8f574cbec8c4a106d383c8dfb535efdaec19c86a7b66bf6f6bf213f437ee
-MD5 7372cba427ae49debcf9284eab9d8d4c vdr-graphlcd-0.1.2_pre6-r1.ebuild 2360
-RMD160 5b672d6207728a8b0ef034731772152e11e59899 vdr-graphlcd-0.1.2_pre6-r1.ebuild 2360
-SHA256 8b7b8f574cbec8c4a106d383c8dfb535efdaec19c86a7b66bf6f6bf213f437ee vdr-graphlcd-0.1.2_pre6-r1.ebuild 2360
-EBUILD vdr-graphlcd-0.1.3-r1.ebuild 2354 RMD160 3d0c6e63839985ec9420da633287ac24999120f1 SHA1 15318b0bed157c0a55cdc5ac916f1c4cbfaaf6d4 SHA256 cb0de2bcc7ba2523ef7f4d38d8b40b0148549b88c2511230fe32f05561e521a2
-MD5 be2f957631c9adf54b22a7a765e1fe94 vdr-graphlcd-0.1.3-r1.ebuild 2354
-RMD160 3d0c6e63839985ec9420da633287ac24999120f1 vdr-graphlcd-0.1.3-r1.ebuild 2354
-SHA256 cb0de2bcc7ba2523ef7f4d38d8b40b0148549b88c2511230fe32f05561e521a2 vdr-graphlcd-0.1.3-r1.ebuild 2354
-EBUILD vdr-graphlcd-0.1.3.ebuild 2254 RMD160 8f012c7f8e7e73ad63235cb54b5c02c8d100180d SHA1 4b799bcc71f090052e90ab458f575ba8f7c2ead4 SHA256 789a02479a88b4ba5e87405bf89589f9b1c6301a7ed28e0f87dc544d623b9c4b
-MD5 6d3eee1dc8be97f89952f4c97d7a1a93 vdr-graphlcd-0.1.3.ebuild 2254
-RMD160 8f012c7f8e7e73ad63235cb54b5c02c8d100180d vdr-graphlcd-0.1.3.ebuild 2254
-SHA256 789a02479a88b4ba5e87405bf89589f9b1c6301a7ed28e0f87dc544d623b9c4b vdr-graphlcd-0.1.3.ebuild 2254
-EBUILD vdr-graphlcd-0.1.4.ebuild 2384 RMD160 fc346fb344d86405b82b8dbd89bc87cec10a0564 SHA1 46b5ecce91bc1bfd469771ff67da6569f9552c24 SHA256 4deb6f87a1f4f83e0c166c92dabaff685208e85d68faf1497913e353851dbffa
-MD5 0e9d764998c33326bdd59541e7be6409 vdr-graphlcd-0.1.4.ebuild 2384
-RMD160 fc346fb344d86405b82b8dbd89bc87cec10a0564 vdr-graphlcd-0.1.4.ebuild 2384
-SHA256 4deb6f87a1f4f83e0c166c92dabaff685208e85d68faf1497913e353851dbffa vdr-graphlcd-0.1.4.ebuild 2384
+EBUILD vdr-graphlcd-0.1.5-r1.ebuild 2743 RMD160 b327f5a3a9a39deb01c544dd9dff7764fe7658d8 SHA1 15b51ab0c3c409868621b10f619fee90a4a3fd54 SHA256 99287949818f16d51e40785150bde99180116eccb7a1c5668fc08573358b3cf8
+MD5 c5ee77c9ccfa8a2dcf549a8a6aff71d9 vdr-graphlcd-0.1.5-r1.ebuild 2743
+RMD160 b327f5a3a9a39deb01c544dd9dff7764fe7658d8 vdr-graphlcd-0.1.5-r1.ebuild 2743
+SHA256 99287949818f16d51e40785150bde99180116eccb7a1c5668fc08573358b3cf8 vdr-graphlcd-0.1.5-r1.ebuild 2743
 EBUILD vdr-graphlcd-0.1.5.ebuild 2667 RMD160 d077a24adcbd855b8592933bc9529309b98edf28 SHA1 44b7c9c5008d2aaa9ab8877c1a62dcf4c4a32912 SHA256 2ace4503dc5a478cdbd5e69a7ca31a2351509e0fff6313d9f7219dc443f51d36
 MD5 1a08ef0099cbedd4df9c9237fba2fea8 vdr-graphlcd-0.1.5.ebuild 2667
 RMD160 d077a24adcbd855b8592933bc9529309b98edf28 vdr-graphlcd-0.1.5.ebuild 2667
 SHA256 2ace4503dc5a478cdbd5e69a7ca31a2351509e0fff6313d9f7219dc443f51d36 vdr-graphlcd-0.1.5.ebuild 2667
-MISC ChangeLog 3689 RMD160 ad1803131f000fdaaac8fe7ffa2376f11f2009cb SHA1 ef674e0aa3a769b67c36e1213fa3bcdd62084da8 SHA256 b78c52c5da137924bc0ef540283c5c098304bb2d919ef72e6b349cbdf1da90e9
-MD5 cc4eec3777d6de2c0cf18185682d593b ChangeLog 3689
-RMD160 ad1803131f000fdaaac8fe7ffa2376f11f2009cb ChangeLog 3689
-SHA256 b78c52c5da137924bc0ef540283c5c098304bb2d919ef72e6b349cbdf1da90e9 ChangeLog 3689
+MISC ChangeLog 4444 RMD160 80140320b1ceb668f3afaf52f18c885c5d4ad49e SHA1 0a470282ea0c85740aacd6bdbc5fe9921d18c3a4 SHA256 7f9dbf1c3bf5db6fb04e8caa0a87e41ca9537cf7a36426967bcf6cee727596da
+MD5 7392364ad5d057071618f11c3980281d ChangeLog 4444
+RMD160 80140320b1ceb668f3afaf52f18c885c5d4ad49e ChangeLog 4444
+SHA256 7f9dbf1c3bf5db6fb04e8caa0a87e41ca9537cf7a36426967bcf6cee727596da ChangeLog 4444
 MISC metadata.xml 399 RMD160 da803ab914b85f48f99cd09321a577b2ae2df876 SHA1 ed8cb826e20b52e381e5926e3f5df01da6d02fd8 SHA256 fb14b64f0c614498c334e60f3774e886fbb5a6143bce4f162f39bb61fee0be67
 MD5 d620f1598e91e4b0e15a579df112c8f0 metadata.xml 399
 RMD160 da803ab914b85f48f99cd09321a577b2ae2df876 metadata.xml 399
 SHA256 fb14b64f0c614498c334e60f3774e886fbb5a6143bce4f162f39bb61fee0be67 metadata.xml 399
-MD5 ccbd801b62f1827b801358532980cd5a files/digest-vdr-graphlcd-0.1.2_pre6-r1 262
-RMD160 57944c4327a7a4a6035b1a7df09bd248d64a9f18 files/digest-vdr-graphlcd-0.1.2_pre6-r1 262
-SHA256 9750d20743f6572f8ce54f1ff9c4251500e89ae48d57cb4e576ed5cc0cbd426e files/digest-vdr-graphlcd-0.1.2_pre6-r1 262
-MD5 507d59b9796312e258732bccb923e0aa files/digest-vdr-graphlcd-0.1.3 247
-RMD160 3f02a2d6d1b8c2185979c412c85d3e84d2504be6 files/digest-vdr-graphlcd-0.1.3 247
-SHA256 990f5369e29f626a3f387ced1c4c22eb9bf51f888d146d00fe38da720919d914 files/digest-vdr-graphlcd-0.1.3 247
-MD5 507d59b9796312e258732bccb923e0aa files/digest-vdr-graphlcd-0.1.3-r1 247
-RMD160 3f02a2d6d1b8c2185979c412c85d3e84d2504be6 files/digest-vdr-graphlcd-0.1.3-r1 247
-SHA256 990f5369e29f626a3f387ced1c4c22eb9bf51f888d146d00fe38da720919d914 files/digest-vdr-graphlcd-0.1.3-r1 247
-MD5 9bf29d35bc734f973ebbcb5fe8c7d586 files/digest-vdr-graphlcd-0.1.4 247
-RMD160 34b54054fdf74bfab72ea20b395317a9d48640cb files/digest-vdr-graphlcd-0.1.4 247
-SHA256 53fd99ce448b67cb1014be71d9da0ee3ff1008b65fd01cc9d4e4dafbba8bdbe0 files/digest-vdr-graphlcd-0.1.4 247
 MD5 3349175bffbaec993b2c4c0023b5f206 files/digest-vdr-graphlcd-0.1.5 247
 RMD160 a36f175f993d027556dcb4d99f16768ebf3c286d files/digest-vdr-graphlcd-0.1.5 247
 SHA256 2cc332c11be2cfe0eede68779893edcbfafdb0a1cb479df2fcf1288611d48c19 files/digest-vdr-graphlcd-0.1.5 247
+MD5 3349175bffbaec993b2c4c0023b5f206 files/digest-vdr-graphlcd-0.1.5-r1 247
+RMD160 a36f175f993d027556dcb4d99f16768ebf3c286d files/digest-vdr-graphlcd-0.1.5-r1 247
+SHA256 2cc332c11be2cfe0eede68779893edcbfafdb0a1cb479df2fcf1288611d48c19 files/digest-vdr-graphlcd-0.1.5-r1 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+Comment: added by hd_brummy@gentoo.org
+
+iD8DBQFHeixOdn07HTTCgIoRAvCGAJ9yYxGrVM89eLI09G3SxXGVFIL0bwCgma1O
+WF5xgdD+iQtUy+4B2nJTSvE=
+=TFo1
+-----END PGP SIGNATURE-----
