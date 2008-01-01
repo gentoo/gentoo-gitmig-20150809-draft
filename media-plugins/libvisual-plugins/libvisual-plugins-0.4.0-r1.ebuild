@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.16 2007/09/03 02:33:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.17 2008/01/01 06:49:28 nerdboy Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -52,15 +52,14 @@ src_compile() {
 	econf $(use_enable debug) \
 		$(use_enable debug inputdebug) \
 		$(use_enable gtk gdkpixbuf-plugin) \
-		--disable-gstreamer-plugin \
 		$(use_enable alsa) \
 		$(use_enable opengl gltest) \
-		$(use_enable opengl nastyfft) \
 		$(use_enable opengl madspin) \
 		$(use_enable opengl flower) \
 		$(use_enable mplayer) \
 		$(use_enable esd) \
 		$(use_enable jack) \
+		--enable-static --disable-nastyfft --disable-gstreamer \
 		|| die "econf failed"
 	emake || die "emake failed"
 }

@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/libvisual-plugins
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.39 2007/09/02 16:21:15 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.40 2008/01/01 06:49:28 nerdboy Exp $
+
+  01 Jan 2008; Steve Arnold <nerdboy@gentoo.org>
+  libvisual-plugins-0.4.0-r1.ebuild:
+  Disabled problematic nastyfft plugin (see bug #143810 for an example) and
+  enabled static libs to conform to libvisual.  Should fix several reported 
+  problems related to libvisual and gst-plugins.  Report any new bugs per 
+  usual... (gstreamer plugin needs updating to the new gstreamer 0.10 API)
 
   02 Sep 2007; Samuli Suominen <drac@gentoo.org>
   +files/libvisual-plugins-0.4.0-qa.patch,
