@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.0.ebuild,v 1.1 2007/12/31 01:15:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.0.ebuild,v 1.2 2008/01/01 18:36:45 eva Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -13,6 +13,9 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="gnome perl python"
 # bonobo libgda
+
+# lots of missing files, wait for next release
+RESTRICT="test"
 
 RDEPEND="sys-libs/zlib
 	app-arch/bzip2
