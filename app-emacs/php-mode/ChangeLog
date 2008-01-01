@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/php-mode
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/php-mode/ChangeLog,v 1.23 2007/11/15 06:40:37 ulm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/php-mode/ChangeLog,v 1.24 2008/01/01 17:38:28 ulm Exp $
+
+*php-mode-1.4.0_beta (01 Jan 2008)
+
+  01 Jan 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/php-mode-1.4.0_beta-conditional-key.patch,
+  +files/php-mode-info-direntry.patch, +php-mode-1.4.0_beta.ebuild:
+  Version bump, thanks Flameeyes. Install GNU info file, FDL added to LICENSE.
 
   15 Nov 2007; Ulrich Mueller <ulm@gentoo.org> -files/50php-mode-gentoo.el,
   -php-mode-1.1.0.ebuild:
