@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/banshee
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.52 2007/12/25 14:28:23 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.53 2008/01/01 22:34:28 aballier Exp $
+
+  01 Jan 2008; Alexis Ballier <aballier@gentoo.org> banshee-0.12.1.ebuild,
+  banshee-0.13.0.ebuild, banshee-0.13.1.ebuild:
+  stick musicbrainz deps to -2*, bug #203784
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing metalgod from metadata.xml as per #99350.

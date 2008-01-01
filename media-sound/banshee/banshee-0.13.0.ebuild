@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.13.0.ebuild,v 1.1 2007/08/07 03:27:12 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.13.0.ebuild,v 1.2 2008/01/01 22:34:28 aballier Exp $
 
 inherit autotools eutils gnome2 mono
 
@@ -35,6 +35,7 @@ RDEPEND=">=dev-lang/mono-1.2.0
 		>=media-libs/faad2-2.0-r4 )
 	>=media-plugins/gst-plugins-cdparanoia-0.10.3
 	>=media-libs/musicbrainz-2.1.1
+	=media-libs/musicbrainz-2*
 	njb? ( >=dev-dotnet/njb-sharp-0.3.0 )
 	daap? ( >=net-dns/avahi-0.6.9 )
 	>=dev-libs/glib-2.0
