@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.4.ebuild,v 1.1 2007/12/30 02:20:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.4.ebuild,v 1.2 2008/01/01 18:35:38 nyhm Exp $
 
 inherit autotools eutils games
 
@@ -20,6 +20,7 @@ RDEPEND=">=dev-games/cegui-0.5
 	dev-libs/boost
 	virtual/opengl
 	virtual/glu
+	media-libs/libpng
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer
