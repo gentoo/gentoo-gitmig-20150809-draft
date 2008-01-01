@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sound-juicer
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.124 2007/11/29 06:16:03 jer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.125 2008/01/01 22:19:50 aballier Exp $
+
+  01 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  sound-juicer-2.16.4.ebuild, sound-juicer-2.20.0.ebuild,
+  sound-juicer-2.20.1.ebuild:
+  stick musicbrainz deps to -2*, bug #203784
 
   29 Nov 2007; Jeroen Roovers <jer@gentoo.org> sound-juicer-2.20.1.ebuild:
   Stable for HPPA (bug #199740).
