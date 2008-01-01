@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.10.ebuild,v 1.2 2007/11/25 13:53:20 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.10-r1.ebuild,v 1.1 2008/01/01 09:41:24 dertobi123 Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -13,8 +13,7 @@ SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="noweb perl debug"
-# mysql postgres
+IUSE="noweb perl debug vim-syntax"
 DEPEND="virtual/mailx
 	!noweb? (
 		>=media-libs/jpeg-6b-r3
@@ -24,6 +23,8 @@ DEPEND="virtual/mailx
 		perl? ( net-analyzer/traceroute )
 	)
 	perl? ( >=dev-lang/perl-5.6.1-r7 )"
+RDEPEND="${DEPEND}
+	vim-syntax? ( app-vim/nagios-syntax )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -94,7 +95,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc Changelog INSTALLING LEGAL LICENSE README UPGRADING
+	dodoc Changelog INSTALLING LEGAL README UPGRADING
 	docinto contrib
 	dodoc contrib/README
 
