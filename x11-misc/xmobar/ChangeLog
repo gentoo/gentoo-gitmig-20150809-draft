@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xmobar
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.1 2007/12/15 23:28:17 kolmodin Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.2 2008/01/01 16:30:03 kolmodin Exp $
+
+*xmobar-0.8-r1 (01 Jan 2008)
+
+  01 Jan 2008; Lennart Kolmodin <kolmodin@gentoo.org> +xmobar-0.8-r1.ebuild:
+  Add missing deps and install README and sample configuration
 
 *xmobar-0.8 (16 Dec 2007)
 
