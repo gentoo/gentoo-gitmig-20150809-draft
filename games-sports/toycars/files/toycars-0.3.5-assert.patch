@@ -1,0 +1,10 @@
+--- src/RobotHotPotatoPlayer.cpp
++++ src/RobotHotPotatoPlayer.cpp
+@@ -14,6 +14,7 @@
+  *  Created by Ruben Henner Zilibowitz on 31/10/07.
+  */
+ 
++#include <assert.h>
+ #include "RobotHotPotatoPlayer.h"
+ #include "HotPotatoGame.h"
+ 
