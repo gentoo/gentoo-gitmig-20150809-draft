@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.80 2008/01/01 02:41:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.81 2008/01/01 02:56:31 flameeyes Exp $
+
+*libcdio-0.79 (01 Jan 2008)
+
+  01 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> -libcdio-0.77.ebuild,
+  +libcdio-0.79.ebuild:
+  Version bump (somehow 0.79 was skipped), and remove 0.77.
 
   01 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Take maintainership as I end up looking after it anyway, and add

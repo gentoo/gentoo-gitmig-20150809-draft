@@ -1,11 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.77.ebuild,v 1.19 2007/07/22 20:51:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.79.ebuild,v 1.1 2008/01/01 02:56:31 flameeyes Exp $
 
-WANT_AUTOMAKE="1.9"
-WANT_AUTOCONF="2.5"
-
-inherit eutils libtool autotools
+inherit eutils libtool multilib
 
 DESCRIPTION="A library to encapsulate CD-ROM reading and control"
 HOMEPAGE="http://www.gnu.org/software/libcdio/"
@@ -13,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="cddb minimal nls nocxx"
 
 RDEPEND="cddb? ( >=media-libs/libcddb-1.0.1 )
@@ -28,9 +25,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-nocxx.patch"
-
-	eautoreconf
+	epatch "${FILESDIR}/${PN}-0.78.2-bug203777.patch"
+	elibtoolize
 }
 
 src_compile() {
@@ -52,8 +48,14 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS
+
+	# maybe next version is fixed
+	if use minimal; then
+		rm -f "${D}/usr/$(get_libdir)/pkgconfig/libcdio_cdda.pc"
+		rm -f "${D}/usr/include/cdio/cdda.h"
+	fi
 }
 
 pkg_postinst() {
