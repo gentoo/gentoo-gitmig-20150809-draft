@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.0.ebuild,v 1.2 2007/12/31 16:14:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.0.ebuild,v 1.3 2008/01/01 16:45:27 maekke Exp $
 
 inherit perl-app
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge.jp//chasen-legacy/24693/${MY_P}.tar.gz"
 
 LICENSE="chasen"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~ppc64 ~sparc x86"
 IUSE="perl"
 
 DEPEND=">=dev-libs/darts-0.31"
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 
 	if use perl ; then
-		cd ${S}/perl
+		cd "${S}"/perl
 		sed -i -e '5a"LD" => "g++",' Makefile.PL || die
 	fi
 }
@@ -34,7 +34,7 @@ src_compile() {
 	econf || die
 	emake || die
 	if use perl ; then
-		cd ${S}/perl
+		cd "${S}"/perl
 		perl-module_src_compile
 	fi
 }
@@ -43,10 +43,10 @@ src_install () {
 	einstall || die
 
 	if use perl ; then
-		cd ${S}/perl
+		cd "${S}"/perl
 		perl-module_src_install
 	fi
 
-	cd ${S}
+	cd "${S}"
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
 }
