@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/suspend-0.9_pre20071208.ebuild,v 1.1 2007/12/08 08:08:30 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/suspend-0.8.ebuild,v 1.1 2008/01/01 13:15:43 alonbl Exp $
 
 DESCRIPTION="Userspace Software Suspend and S2Ram"
 HOMEPAGE="http://suspend.sourceforge.net/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

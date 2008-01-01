@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/suspend
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.6 2007/12/08 08:08:30 alonbl Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.7 2008/01/01 13:15:43 alonbl Exp $
+
+*suspend-0.8 (01 Jan 2008)
+
+  01 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> +suspend-0.8.ebuild,
+  -suspend-0.9_pre20071208.ebuild:
+  Sync with upstream, not that it released all our work! The release is 0.8,
+  this is correct, sorry for the downgrade
 
 *suspend-0.9_pre20071208 (08 Dec 2007)
 
