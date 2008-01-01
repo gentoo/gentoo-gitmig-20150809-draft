@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/lpairs-1.0.3.ebuild,v 1.1 2007/11/27 22:15:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/lpairs-1.0.3.ebuild,v 1.2 2008/01/01 16:55:32 nyhm Exp $
 
 inherit games
 
@@ -13,7 +13,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls"
 
-DEPEND="media-libs/libsdl"
+RDEPEND="media-libs/libsdl
+	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e 's:$localedir:/usr/share/locale:' \
+		-e 's:$(localedir):/usr/share/locale:' \
+		configure po/Makefile.in.in \
+		|| die "sed failed"
+}
 
 src_compile() {
 	egamesconf \
