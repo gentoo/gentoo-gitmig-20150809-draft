@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.21.ebuild,v 1.3 2007/05/06 09:16:12 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.21.ebuild,v 1.4 2008/01/01 14:18:10 swegener Exp $
 
 inherit multilib eutils autotools
 
@@ -86,6 +86,12 @@ src_install () {
 
 	dodoc ChangeLog README TODO
 	use doc && dohtml -r codedocs/html/.
+
+	# Install development headers
+	insinto /usr/include/pdns
+	doins pdns/*.hh
+	insinto /usr/include/pdns/backends/gsql
+	doins pdns/backends/gsql/*.hh
 }
 
 pkg_preinst() {
