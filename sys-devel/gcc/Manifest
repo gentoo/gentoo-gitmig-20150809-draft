@@ -81,6 +81,10 @@ AUX 3.3.6/gcc-3.3.6-cross-compile.patch 2202 RMD160 6fcb5951ed3963fc82292a98b0ce
 MD5 d0f69e3626da1a439356a270e3bb8a20 files/3.3.6/gcc-3.3.6-cross-compile.patch 2202
 RMD160 6fcb5951ed3963fc82292a98b0ce6e25bbc650ba files/3.3.6/gcc-3.3.6-cross-compile.patch 2202
 SHA256 00e5152f211a2c0892ba4f5a7ebb078c1d5d1dfc77bd0ba81ab8dfcd2924ffb3 files/3.3.6/gcc-3.3.6-cross-compile.patch 2202
+AUX 3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563 RMD160 8d78b1270682050dd6e778e8d37aa0fa1cdd6fca SHA1 9be76babe84c50d2bbe8d0ce4e6ffa9c59264970 SHA256 abf20019827d50b4e4fa6bd27803083930a79a31ba7392ddf4fa3fcb5a2aee42
+MD5 17b3190d64e34ed7709d022b326d08ae files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
+RMD160 8d78b1270682050dd6e778e8d37aa0fa1cdd6fca files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
+SHA256 abf20019827d50b4e4fa6bd27803083930a79a31ba7392ddf4fa3fcb5a2aee42 files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
 AUX 3.4.1/gcc-3.4.1-mips-n32only.patch 614 RMD160 a629e12dc99f1bcbea60bc69eee5c3ffb7be8ddc SHA1 509b17d58acc232de7ef64666bccfb083638d3e5 SHA256 f75cbf7aab59b73f23f2a6b327f9c00bfa87f38a67a054c4aa5637dcbb8dad1e
 MD5 7cb2138ac2df6f8674d19974e966a45b files/3.4.1/gcc-3.4.1-mips-n32only.patch 614
 RMD160 a629e12dc99f1bcbea60bc69eee5c3ffb7be8ddc files/3.4.1/gcc-3.4.1-mips-n32only.patch 614
@@ -377,7 +381,7 @@ SHA256 d7b1a9dd570ffd3cd8f5fd721c6f9ce47fc238738b26efb5115c029f1347f6cc files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.8 (GNU/Linux)
 
-iEYEARECAAYFAkd5DYEACgkQj9hvisErhMKR4gCeJRkBGPpyEODCUAaynkvrKqTu
-1n0AoNBh2qxXsfxaTFOsLjJpH8nkS7K2
-=7UeT
+iEYEARECAAYFAkd6y4UACgkQj9hvisErhMJlYACeKfRH3kDyMUPq7tVGxrxpLWz3
+glAAniYRB+8JR6ezki1anxSFGv4tN98g
+=kfIA
 -----END PGP SIGNATURE-----
