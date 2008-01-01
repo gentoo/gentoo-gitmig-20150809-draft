@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.0-r1.ebuild,v 1.1 2007/10/27 18:02:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.0-r1.ebuild,v 1.2 2008/01/01 18:06:15 angelos Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs pam
 
 DESCRIPTION="Simple Login Manager"
 HOMEPAGE="http://slim.berlios.de"
@@ -41,9 +41,11 @@ src_unpack() {
 	# Set slim to daemon mode as default to stop xdm runscript from throwing errors on stop
 	# Set the default logfile to /dev/null to avoid cluttering up the harddisk
 	# as slim puts a lot of garbage in its logfile
+	# Make slim honor XSESSION in /etc/rc.conf by default.
 	sed -i -e 's#X11R6/##g' -e 's#/usr/bin:##' \
 		-e 's/# daemon/daemon/' \
 		-e 's#/var/log/slim.log#/dev/null#g' \
+		-e '/^login_cmd.*/s#exec /bin/bash.*#exec /bin/bash -login /etc/X11/xinit/xinitrc#' \
 		slim.conf || die "sed failed in slim.conf"
 }
 
@@ -58,6 +60,7 @@ src_compile() {
 src_install() {
 	if use pam ; then
 		emake USE_PAM=1 DESTDIR="${D}" install || die "emake install failed."
+		pamd_mimic_system slim auth account password session
 	else
 		emake DESTDIR="${D}" install || die "emake install failed."
 	fi
@@ -68,17 +71,13 @@ src_install() {
 pkg_postinst() {
 	elog
 	elog "The configuration file is located at /etc/slim.conf."
+	elog
 	elog "If you wish ${PN} to start automatically, set DISPLAYMANAGER=\"${PN}\" "
 	elog "in /etc/conf.d/xdm and run \"rc-update add xdm default\"."
+	elog "By default, ${PN} will use default XSESSION value set in /etc/rc.conf."
 	elog
-	elog "${PN} uses .xinitrc in the user's home directory and /etc/slim.conf"
-	elog "for session management. For further information, see README and"
-	elog "xinitrc.sample in /usr/share/doc/${PF}."
+	elog "If you want to use .xinitrc in the user's home directory for session management"
+	elog "instead, see README and xinitrc.sample in /usr/share/doc/${PF}."
+	elog "and change your login_cmd in /etc/slim.conf accordingly."
 	elog
-	if use pam ; then
-		elog "You need to create /etc/pam.d/slim for SLiM to work."
-		elog "A simple symlink to /etc/pam.d/system-auth is enough,"
-		elog "if you don't need any extra configuration"
-		elog
-	fi
 }
