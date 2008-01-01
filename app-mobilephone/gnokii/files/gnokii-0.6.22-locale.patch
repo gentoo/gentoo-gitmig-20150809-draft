@@ -1,0 +1,14 @@
+diff -Nru gnokii-0.6.22.orig/common/gsm-sms.c gnokii-0.6.22/common/gsm-sms.c
+--- gnokii-0.6.22.orig/common/gsm-sms.c	2007-11-24 13:31:01.000000000 +0200
++++ gnokii-0.6.22/common/gsm-sms.c	2008-01-01 18:11:40.000000000 +0200
+@@ -39,6 +39,10 @@
+ #include "gnokii-internal.h"
+ #include "gnokii.h"
+ 
++#ifdef ENABLE_NLS
++#  include <locale.h>
++#endif
++
+ #include "sms-nokia.h"
+ 
+ #undef ERROR
