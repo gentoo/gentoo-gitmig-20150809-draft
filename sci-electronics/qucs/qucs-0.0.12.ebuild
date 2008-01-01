@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/qucs-0.0.12.ebuild,v 1.2 2007/07/18 01:57:14 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/qucs-0.0.12.ebuild,v 1.3 2008/01/01 18:38:01 carlo Exp $
 
 inherit qt3
 
@@ -19,5 +19,5 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed."
+	make install DESTDIR="${D}" || die "make install failed."
 }

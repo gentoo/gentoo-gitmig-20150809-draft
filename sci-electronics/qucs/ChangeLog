@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/qucs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.16 2008/01/01 18:35:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.17 2008/01/01 18:38:01 carlo Exp $
+
+  01 Jan 2008; Carsten Lohrke <carlo@gentoo.org> qucs-0.0.12.ebuild,
+  qucs-0.0.13.ebuild:
+  Variable quoting. Whitespace.
 
 *qucs-0.0.13 (01 Jan 2008)
 
