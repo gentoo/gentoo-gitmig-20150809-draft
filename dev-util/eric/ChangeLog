@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.51 2008/01/01 16:00:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.52 2008/01/01 18:34:50 jokey Exp $
+
+*eric-4.0.4 (01 Jan 2008)
+
+  01 Jan 2008; Markus Ullmann <jokey@gentoo.org> +eric-4.0.4.ebuild:
+  Version bump as  keeps notifying the user that a new version is out
 
   01 Jan 2008; Raúl Porcel <armin76@gentoo.org> eric-4.0.3.ebuild:
   Readd ~sparc, keywords were dropped for no reason
