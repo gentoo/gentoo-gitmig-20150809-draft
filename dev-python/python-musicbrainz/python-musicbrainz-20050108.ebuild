@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/python-musicbrainz-20050108.ebuild,v 1.2 2005/08/31 17:58:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/python-musicbrainz-20050108.ebuild,v 1.3 2008/01/01 23:24:53 aballier Exp $
 
 inherit distutils
 
@@ -14,6 +14,7 @@ KEYWORDS="~x86"
 
 IUSE=""
 DEPEND=">=media-libs/musicbrainz-2.1.1
+	=media-libs/musicbrainz-2*
 	>=dev-python/ctypes-0.9.2
 	>=dev-lang/python-2.3"
 S=${WORKDIR}/${PN}
