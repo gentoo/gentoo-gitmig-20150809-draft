@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/darts-0.31.ebuild,v 1.4 2007/12/31 16:13:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/darts-0.31.ebuild,v 1.5 2008/01/01 16:36:19 maekke Exp $
 
 DESCRIPTION="A C++ template library that implements Double-Array"
 HOMEPAGE="http://chasen.org/~taku/software/darts/"
@@ -8,7 +8,7 @@ SRC_URI="http://chasen.org/~taku/software/darts/src/${P}.tar.gz"
 
 LICENSE="|| ( BSD LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ppc ppc64 ~sparc x86"
 IUSE="zlib"
 DEPEND="zlib? ( sys-libs/zlib )"
 
