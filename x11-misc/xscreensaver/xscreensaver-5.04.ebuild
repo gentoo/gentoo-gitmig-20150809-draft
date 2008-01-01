@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.04.ebuild,v 1.2 2007/12/30 20:06:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.04.ebuild,v 1.3 2008/01/01 16:44:54 drac Exp $
 
 inherit autotools eutils fixheadtails flag-o-matic pam
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.jwz.org/xscreensaver"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="jpeg new-login offensive opengl pam suid xinerama"
+IUSE="jpeg new-login opengl pam suid xinerama"
 
 RDEPEND="x11-libs/libXxf86misc
 	x11-apps/xwininfo
@@ -45,9 +45,9 @@ src_unpack() {
 
 	# Gentoo specific hacks and settings.
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-	use offensive || epatch "${FILESDIR}"/${P}-nsfw.patch
+	epatch "${FILESDIR}"/${P}-nsfw.patch
 
-	# TODO. Get this fixed upstream.
+	# Mailed upstream.
 	epatch "${FILESDIR}"/${P}-desktop-entry.patch
 
 	eautoreconf
@@ -57,8 +57,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# Simple workaround for the flurry screensaver.
-	# TODO. Figure out if this is still needed?
+	# Simple workaround for the flurry screensaver. Update, still needed for 5.04.
 	filter-flags -mabi=altivec
 	filter-flags -maltivec
 	append-flags -U__VEC__
@@ -79,9 +78,9 @@ src_compile() {
 		--with-xshm-ext \
 		--with-xdbe-ext \
 		--enable-locking \
-		--with-gtk \
 		--without-kerberos \
 		--without-gle \
+		--with-gtk \
 		$(use_with suid setuid-hacks) \
 		$(use_with new-login login-manager) \
 		$(use_with xinerama xinerama-ext) \
@@ -107,17 +106,4 @@ src_install() {
 	dodir /usr/share/man/man6x
 	mv "${D}"/usr/share/man/man6/worm.6 \
 		"${D}"/usr/share/man/man6x/worm.6x
-}
-
-pkg_postinst() {
-	if ! use new-login; then
-		elog
-		elog "You have chosen to not use the new-login USE flag."
-		elog "This is a new USE flag which enables individuals to"
-		elog "create new logins when the screensaver is active,"
-		elog "allowing others to use their account, even though the"
-		elog "screen is locked to another account. If you want this"
-		elog "feature, please recompile with USE=\"new-login\"."
-		elog
-	fi
 }
