@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/tnftp
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.24 2007/08/06 17:18:41 swegener Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.25 2008/01/01 19:20:17 swegener Exp $
+
+  01 Jan 2008; Sven Wegener <swegener@gentoo.org>
+  +files/tnftp-20050625-libedit.patch, +files/tnftp-20070806-libedit.patch,
+  tnftp-20050625-r1.ebuild, tnftp-20070806.ebuild:
+  Add a patch to fix linking failure, bug #198906.
 
 *tnftp-20070806 (06 Aug 2007)
 

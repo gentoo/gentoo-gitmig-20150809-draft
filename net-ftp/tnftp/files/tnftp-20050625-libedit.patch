@@ -1,0 +1,16 @@
+Completely disable external libedit support. When libedit is installed, the
+check will automatically add -ledit to LIBS and the result will be wrong
+strlcpy check results and linking failures.
+
+https://bugs.gentoo.org/198906
+
+--- tnftp-20050625/configure.in
++++ tnftp-20050625/configure.in
+@@ -40,7 +40,6 @@
+ if test $opt_editcomplete = yes; then
+ 	AC_SEARCH_LIBS(tgetent, [termcap termlib curses ncurses tinfo], ,
+ 	    AC_MSG_ERROR([no relevant library found containing tgetent]))
+-	AC_SEARCH_LIBS(el_init, [edit], [have_libedit=yes], [have_libedit=no])
+ fi
+ AC_LIBRARY_NET
+ AC_LIBRARY_SOCKS
