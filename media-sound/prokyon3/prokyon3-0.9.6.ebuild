@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.6.ebuild,v 1.6 2007/11/18 22:09:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.6.ebuild,v 1.7 2008/01/01 21:31:02 aballier Exp $
 
 inherit qt3 eutils autotools
 
@@ -16,7 +16,7 @@ IUSE="flac mp3 musicbrainz taglib vorbis"
 DEPEND="$(qt_min_version 3.2)
 	media-libs/taglib
 	taglib? ( media-libs/taglib )
-	musicbrainz? ( media-libs/musicbrainz
+	musicbrainz? ( =media-libs/musicbrainz-2*
 		mp3? ( media-libs/libmad )
 		vorbis? ( media-libs/libvorbis )
 		flac? ( media-libs/flac ) )"
@@ -84,7 +84,6 @@ pkg_postinst() {
 	elog " - media-video/mplayer"
 	elog " - kde-base/noatun or kde-base/kdemultimedia"
 	elog " - media-video/totem"
-	elog " - media-sound/xmms"
 	elog
 	elog "Prokyon3 also supports the following external"
 	elog "applications, if installed:"
