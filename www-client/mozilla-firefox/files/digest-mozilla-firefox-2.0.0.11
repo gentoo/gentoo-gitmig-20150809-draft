@@ -25,9 +25,9 @@ SHA256 d1aba8a4617cc48ac47e8632fa3aa79412b913e5af7d9ce3ed03f44d4dd873c9 mozilla-
 MD5 f7b81574873b7b26f8b8cd54d1e4f24a mozilla-firefox-2.0.0.11-da.xpi 152109
 RMD160 11b4dbd9fc4b7ef2c97b61aaf1cb619208421b98 mozilla-firefox-2.0.0.11-da.xpi 152109
 SHA256 dc9855ac3c525e06218dab1fa7dc960f7e887319314d7bca745920864c18ac5b mozilla-firefox-2.0.0.11-da.xpi 152109
-MD5 46fffdd1cc527af57bebdfffcaa7cc88 mozilla-firefox-2.0.0.11-de.xpi 164257
-RMD160 c745160a63a687e85686b0868f483a1dd0f118d8 mozilla-firefox-2.0.0.11-de.xpi 164257
-SHA256 77eba221c3192226d8bbac3b3ea19a165c2b8ccc1feb50dcec0601341ff770b8 mozilla-firefox-2.0.0.11-de.xpi 164257
+MD5 4f221428edbd836612875132897c29b0 mozilla-firefox-2.0.0.11-de.xpi 152536
+RMD160 9e02975e67022ed9b4a12515f6169204f436b858 mozilla-firefox-2.0.0.11-de.xpi 152536
+SHA256 4f3ad158eb1fc4c3764feed2502da253b07c71e57169cddd8cda82b4ef11d2d2 mozilla-firefox-2.0.0.11-de.xpi 152536
 MD5 6f67bbb16a765f8b90ca484d01eda3e7 mozilla-firefox-2.0.0.11-el.xpi 169726
 RMD160 9210767f9ef13e2c6318b2c948fe8dde006edfb1 mozilla-firefox-2.0.0.11-el.xpi 169726
 SHA256 cecdaebf5589cd781555de3fd1c9a364a97a2be9fefa5d771f08df7f6da770d0 mozilla-firefox-2.0.0.11-el.xpi 169726
@@ -37,9 +37,9 @@ SHA256 f1a646a7bbff7c798b85c1cb1cbaad521b60d749be0c886e737f45106e32a8a0 mozilla-
 MD5 ee4535d26ae31607a4b9e5842e1b03fe mozilla-firefox-2.0.0.11-es-AR.xpi 156154
 RMD160 b92c85c0ede8684256a318999a28fac5efcbda1d mozilla-firefox-2.0.0.11-es-AR.xpi 156154
 SHA256 df327c611491cf94456db41ecf67325201c9a76feb28796c9e20f3d40daa0fc1 mozilla-firefox-2.0.0.11-es-AR.xpi 156154
-MD5 e423050fd5ab7b5f9f3a2b6a66e0f3dc mozilla-firefox-2.0.0.11-es-ES.xpi 156616
-RMD160 4edaa7c4e5fa2353a2c2819b7908e7c2b64def1d mozilla-firefox-2.0.0.11-es-ES.xpi 156616
-SHA256 593e768e5fd7816172e2c56d43dad1d0bf1d4bdf7b6d7b3bafcad22dac50a603 mozilla-firefox-2.0.0.11-es-ES.xpi 156616
+MD5 98c7cc64f7a7affbc1d9d22a7b04d18f mozilla-firefox-2.0.0.11-es-ES.xpi 143595
+RMD160 6d40e18b1645f504fd51f71044940747dea83d16 mozilla-firefox-2.0.0.11-es-ES.xpi 143595
+SHA256 c7f91838623bd0330f8b7eac460f71fa15c584fd873e347b7c352bd9bcf86415 mozilla-firefox-2.0.0.11-es-ES.xpi 143595
 MD5 213358c98f638f79e2a38f248b5ada6b mozilla-firefox-2.0.0.11-eu.xpi 153658
 RMD160 d2e82fc93368fd14dbfa30a78d10b49cc2d4d1f7 mozilla-firefox-2.0.0.11-eu.xpi 153658
 SHA256 d15752bf4687a4620effdb9756eba7cf705f2e2752e859995471ef90c9781319 mozilla-firefox-2.0.0.11-eu.xpi 153658
