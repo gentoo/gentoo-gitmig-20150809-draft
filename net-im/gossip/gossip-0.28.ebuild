@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.28.ebuild,v 1.2 2008/01/01 19:42:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.28.ebuild,v 1.3 2008/01/01 20:20:01 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -67,6 +67,8 @@ src_unpack() {
 }
 
 pkg_postinst() {
+	gnome2_pkg_postinst
+
 	ewarn "This version will drop any previously registred accounts."
 	ewarn "However it does not drop history."
 }
