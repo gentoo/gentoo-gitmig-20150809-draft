@@ -1,0 +1,33 @@
+--- src/Makefile.am.orig	2007-12-31 20:06:28.000000000 +0100
++++ src/Makefile.am	2007-12-31 20:07:17.000000000 +0100
+@@ -50,7 +50,7 @@
+ AM_CXXFLAGS = -O3 -g3
+ 
+ applnkMultimedia_DATA = k9copy.desktop
+-applnkMultimediadir = $(kde_appsdir)/Multimedia
++applnkMultimediadir = $(xdg_appsdir)
+ SUBDIRS = icons
+ 
+ konquerorServicesMenusdir = $(kde_datadir)/konqueror/servicemenus
+--- src/k9copy.desktop.orig	2007-12-31 20:08:14.000000000 +0100
++++ src/k9copy.desktop	2007-12-31 20:14:04.000000000 +0100
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Type=Application
+ Name=k9copy
+ Exec=k9copy -caption "%c" %i %m  %u
+@@ -9,9 +8,8 @@
+ GenericName=Video DVD Backup
+ GenericName[fr]=Backup de DVD Video
+ GenericName[tr]=DVD Vidyo Yedekleme Aracı
+-MimeTypes=
+ Terminal=false
+-Icon=k9copy.png
+-DocPath=k9copy/index.html
++Icon=k9copy
++X-DocPath=k9copy/index.html
+ Categories=Qt;KDE;AudioVideo;DiscBurning;
+-X-KDE-StartupNotify=true
+\ No newline at end of file
++X-KDE-StartupNotify=true

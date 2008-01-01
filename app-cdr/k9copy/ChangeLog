@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/k9copy
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.31 2007/12/22 20:24:37 carlo Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.32 2008/01/01 18:33:44 carlo Exp $
+
+*k9copy-1.2.2 (01 Jan 2008)
+
+  01 Jan 2008; Carsten Lohrke <carlo@gentoo.org>
+  +files/k9copy-1.2.2-desktop-entry.diff, +k9copy-1.2.2.ebuild:
+  Version bump.
 
   22 Dec 2007; Carsten Lohrke <carlo@gentoo.org> k9copy-1.2.1.ebuild:
   Check Qt 3 being built with OpenGL support.
