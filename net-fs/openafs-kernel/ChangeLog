@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs-kernel
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.93 2007/12/31 19:01:15 welp Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.94 2008/01/01 16:45:44 josejx Exp $
+
+  01 Jan 2008; Joseph Jezak <josejx@gentoo.org> openafs-kernel-1.4.6.ebuild:
+  Marked ppc/ppc64 stable for bug #203573.
 
   31 Dec 2007; <welp@gentoo.org> openafs-kernel-1.4.6.ebuild:
   Stable on amd64; bug 203573
