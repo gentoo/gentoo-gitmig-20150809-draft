@@ -1,8 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.2.ebuild,v 1.1 2007/12/08 20:51:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.2.ebuild,v 1.2 2008/01/01 14:10:22 swegener Exp $
 
-inherit eutils
+WANT_AUTOMAKE="1.10"
+WANT_AUTOCONF="none"
+
+inherit eutils autotools
 
 PROTOCOL_IUSE="aim gadu icq irc jabber lj msn rss yahoo"
 IUSE="${PROTOCOL_IUSE} bidi nls ssl crypt jpeg otr"
@@ -72,6 +75,15 @@ pkg_setup() {
 		ewarn "You need jpeg support to be able to register Gadu-Gadu accounts!"
 		ewarn
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-fribidi.patch
+
+	eautomake
 }
 
 src_compile() {

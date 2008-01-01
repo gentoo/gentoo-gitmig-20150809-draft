@@ -1,0 +1,13 @@
+--- centerim-4.22.2/src/Makefile.am
++++ centerim-4.22.2/src/Makefile.am
+@@ -6,6 +6,10 @@
+ if HAVE_LIBOTR
+ centerim_SOURCES += imotr.cc
+ endif
++if HAVE_FRIBIDI
++centerim_LDADD += $(FRIBIDI_LIBS)
++#centerim_CFLAGS += $(FRIBIDI_CFLAGS)
++endif
+ if BUILD_FIRETALK
+ centerim_LDFLAGS += -L$(top_builddir)/firetalk
+ centerim_LDADD += -lfiretalk
