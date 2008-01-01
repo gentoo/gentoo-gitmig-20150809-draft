@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mantisbt
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.49 2007/12/30 19:17:36 pva Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.50 2008/01/01 16:59:27 maekke Exp $
+
+  01 Jan 2008; Markus Meier <maekke@gentoo.org> mantisbt-1.0.8-r1.ebuild:
+  x86 stable, security bug #203791
 
 *mantisbt-1.0.8-r1 (30 Dec 2007)
 
