@@ -1,12 +1,12 @@
 # Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/etc-proposals-1.4.ebuild,v 1.1 2008/01/01 09:19:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/etc-proposals-1.4.ebuild,v 1.2 2008/01/01 09:24:05 dertobi123 Exp $
 
 inherit distutils
 
 DESCRIPTION="a set of tools for updating gentoo config files"
 HOMEPAGE="http://developer.berlios.de/projects/etc-proposals/"
-SRC_URI="mirror://berlios/etc-proposals/${P}.tar.gz"
+SRC_URI="mirror://berlios/${PN}/${P/-}.tar.gz"
 
 IUSE="gtk qt4"
 LICENSE="GPL-2"
