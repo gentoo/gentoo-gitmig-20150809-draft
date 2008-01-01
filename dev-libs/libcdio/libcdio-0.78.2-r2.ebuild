@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.78.2-r2.ebuild,v 1.4 2007/12/31 17:37:44 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.78.2-r2.ebuild,v 1.5 2008/01/01 15:57:47 armin76 Exp $
 
 inherit eutils libtool multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ~ppc64 ~sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ~ppc64 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="cddb minimal nls nocxx"
 
 RDEPEND="cddb? ( >=media-libs/libcddb-1.0.1 )
