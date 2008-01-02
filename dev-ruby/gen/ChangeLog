@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gen
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gen/ChangeLog,v 1.9 2007/03/11 21:46:15 tove Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gen/ChangeLog,v 1.10 2008/01/02 19:45:41 graaff Exp $
+
+*gen-0.41.0 (02 Jan 2008)
+
+  02 Jan 2008; Hans de Graaff <graaff@gentoo.org> +gen-0.41.0.ebuild:
+  Version bump for #203942
 
   11 Mar 2007; Tom Gall <tgall@gentoo.org> gen-0.40.0.ebuild:
   added ~ppc64
