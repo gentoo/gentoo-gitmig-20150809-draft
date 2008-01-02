@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.0.1-r1.ebuild,v 1.1 2008/01/02 13:59:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.0.1-r1.ebuild,v 1.2 2008/01/02 16:49:29 mr_bones_ Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -46,7 +46,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 PROVIDE="virtual/quicktime"
-
 
 src_unpack() {
 	unpack ${A}
