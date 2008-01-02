@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/inotify-tools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.21 2007/11/29 20:39:22 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.22 2008/01/02 23:20:04 wschlich Exp $
+
+*inotify-tools-3.13 (02 Jan 2008)
+
+  02 Jan 2008; Wolfram Schlich <wschlich@gentoo.org>
+  +inotify-tools-3.13.ebuild:
+  version bump
 
   29 Nov 2007; Jeroen Roovers <jer@gentoo.org> inotify-tools-3.12.ebuild:
   Marked ~hppa too.
