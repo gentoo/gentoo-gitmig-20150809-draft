@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.125 2008/01/01 22:19:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.126 2008/01/02 12:22:27 aballier Exp $
+
+*sound-juicer-2.20.1-r1 (02 Jan 2008)
+
+  02 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  sound-juicer-2.16.4.ebuild, sound-juicer-2.20.0.ebuild,
+  sound-juicer-2.20.1.ebuild, +sound-juicer-2.20.1-r1.ebuild:
+  Fix musicbrainz deps again... add a revbump in ~arch for the latest version
+  for slot deps using eapi 1
 
   01 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   sound-juicer-2.16.4.ebuild, sound-juicer-2.20.0.ebuild,

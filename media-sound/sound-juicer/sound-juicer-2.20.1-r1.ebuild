@@ -1,15 +1,17 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.16.4.ebuild,v 1.15 2008/01/02 12:22:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.20.1-r1.ebuild,v 1.1 2008/01/02 12:22:27 aballier Exp $
 
 inherit gnome2
+
+EAPI="1"
 
 DESCRIPTION="CD ripper for GNOME 2"
 HOMEPAGE="http://www.burtonini.com/blog/computers/sound-juicer/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="flac ogg test"
 
 RDEPEND=">=dev-libs/glib-2
@@ -19,9 +21,9 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gconf-2
 	>=gnome-base/libgnomeui-2.13
 	>=gnome-base/gnome-vfs-2.9
-	>=media-libs/gstreamer-0.10.3
+	>=media-libs/gstreamer-0.10.5
 	>=gnome-extra/gnome-media-2.11.91
-	>=media-libs/musicbrainz-2.1
+	>=media-libs/musicbrainz-2.1.3:1
 	>=dev-libs/libcdio-0.70
 	media-libs/taglib
 	>=media-libs/gst-plugins-base-0.10
