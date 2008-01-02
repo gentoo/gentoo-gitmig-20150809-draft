@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.8 2007/10/15 18:46:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.9 2008/01/02 11:29:29 armin76 Exp $
 
 NEED_PYTHON=2.3
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 
 IUSE="doc lapack"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~x86 ~x86-fbsd"
 LICENSE="BSD"
 
 DOCS="LICENSE.txt Doc/*.txt Doc/release_notes/ANNOUNCE-${PV:0:3}"
