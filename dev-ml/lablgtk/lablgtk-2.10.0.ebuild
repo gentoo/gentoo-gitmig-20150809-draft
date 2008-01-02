@@ -1,10 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.10.0.ebuild,v 1.1 2007/10/30 22:41:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.10.0.ebuild,v 1.2 2008/01/02 20:50:47 aballier Exp $
 
 inherit eutils multilib
 
-IUSE="debug doc glade gnome gnomecanvas sourceview opengl spell svg"
+EAPI="1"
+
+IUSE="debug doc glade gnome gnomecanvas sourceview +ocamlopt opengl spell svg"
 
 DESCRIPTION="Objective CAML interface for Gtk+2"
 HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html"
@@ -28,6 +30,15 @@ DEPEND=">=x11-libs/gtk+-2.10
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
+pkg_setup() {
+	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "In order to build ${PN} with native code support from ocaml"
+		eerror "You first need to have a native code ocaml compiler."
+		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
+		die "Please install ocaml with ocamlopt useflag"
+	fi
+}
+
 src_compile() {
 	econf $(use_enable debug) \
 		$(use_with svg rsvg) \
@@ -40,7 +51,10 @@ src_compile() {
 		$(use_with gnomecanvas) \
 		|| die "configure failed"
 
-	emake -j1 all opt || die "make failed"
+	emake -j1 all || die "make failed"
+	if use ocamlopt; then
+		emake -j1 opt || die "Compiling native code failed"
+	fi
 }
 
 install_examples() {
