@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ledit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.16 2008/01/02 19:31:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.17 2008/01/02 19:34:33 aballier Exp $
+
+  02 Jan 2008; Alexis Ballier <aballier@gentoo.org> -ledit-1.11.ebuild,
+  ledit-1.11-r1.ebuild:
+  remove unused version, dont install license
 
   02 Jan 2008; Alexis Ballier <aballier@gentoo.org> ledit-1.15.ebuild:
   Add support for disabling ocamlopt
