@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/cryptokit-1.3.ebuild,v 1.2 2007/11/10 15:42:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/cryptokit-1.3.ebuild,v 1.3 2008/01/02 20:07:27 aballier Exp $
 
 inherit eutils findlib
+
+EAPI="1"
 
 DESCRIPTION="Cryptographic primitives library for Objective Caml"
 HOMEPAGE="http://cristal.inria.fr/~xleroy/software.html"
@@ -10,10 +12,19 @@ SRC_URI="http://caml.inria.fr/distrib/bazar-ocaml/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc +ocamlopt"
 
 DEPEND=">=dev-lang/ocaml-3.09
 		>=sys-libs/zlib-1.1"
+
+pkg_setup() {
+	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "In order to build ${PN} with native code support from ocaml"
+		eerror "You first need to have a native code ocaml compiler."
+		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
+		die "Please install ocaml with ocamlopt useflag"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -24,7 +35,9 @@ src_unpack() {
 
 src_compile() {
 	emake all || die "emake all failed"
-	emake allopt || die "emake allopt failed, is ocamlopt missing ?"
+	if use ocamlopt; then
+		emake allopt || die "emake allopt failed, is ocamlopt missing ?"
+	fi
 }
 
 src_install() {
