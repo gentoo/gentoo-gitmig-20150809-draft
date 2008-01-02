@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.52 2008/01/02 12:39:49 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.53 2008/01/02 12:44:42 lack Exp $
+
+  02 Jan 2008; Jim Ramsay <lack@gentoo.org> rox-2.6.1.ebuild,
+  rox-2.7.ebuild, rox-2.7-r2.ebuild:
+  Fixing compatibility of wrapper so it REALLY works with /bin/sh
 
   02 Jan 2008; Jim Ramsay <lack@gentoo.org> -rox-2.7-r1.ebuild,
   rox-2.7-r2.ebuild:

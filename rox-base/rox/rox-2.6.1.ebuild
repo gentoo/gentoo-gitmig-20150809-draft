@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.6.1.ebuild,v 1.7 2007/11/04 14:15:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.6.1.ebuild,v 1.8 2008/01/02 12:44:42 lack Exp $
 
 inherit eutils multilib
 
@@ -79,13 +79,13 @@ src_install() {
 
 	cat >"${D}/usr/bin/${WRAPPERNAME}" <<EOF
 #!/bin/sh
-if [[ "\${LIBDIRPATH}" ]]; then
+if [ "\${LIBDIRPATH}" ]; then
 	export LIBDIRPATH="\${LIBDIRPATH}:${LIBDIR}"
 else
 	export LIBDIRPATH="${LIBDIR}"
 fi
 
-if [[ "\${APPDIRPATH}" ]]; then
+if [ "\${APPDIRPATH}" ]; then
 	export APPDIRPATH="\${APPDIRPATH}:${APPDIR}"
 else
 	export APPDIRPATH="${APPDIR}"
