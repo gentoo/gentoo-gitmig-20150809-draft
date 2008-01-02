@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.1.1.ebuild,v 1.7 2007/10/21 20:23:06 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.1.1.ebuild,v 1.8 2008/01/02 14:33:03 armin76 Exp $
 
 RUBY_BUG_145222=yes
 inherit ruby
@@ -11,7 +11,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/12368/dbi-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ~ia64 ppc ~sparc x86"
 USE_RUBY="ruby18 ruby19"
 IUSE="examples firebird odbc postgres mysql sqlite"
 

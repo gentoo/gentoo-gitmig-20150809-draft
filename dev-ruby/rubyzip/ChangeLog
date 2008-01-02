@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyzip
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.7 2007/09/07 09:50:19 trapni Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.8 2008/01/02 14:37:29 armin76 Exp $
+
+  02 Jan 2008; Raúl Porcel <armin76@gentoo.org> rubyzip-0.9.1.ebuild:
+  Re-add ~ia64
 
 *rubyzip-0.9.1 (07 Sep 2007)
 
