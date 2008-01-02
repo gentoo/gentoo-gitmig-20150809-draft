@@ -1,11 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3.ebuild,v 1.8 2008/01/02 12:05:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r1.ebuild,v 1.1 2008/01/02 12:05:46 aballier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
 inherit eutils distutils autotools
+
+EAPI="1"
 
 MY_P="lib${P}"
 S="${WORKDIR}/${MY_P}"
@@ -16,7 +18,7 @@ SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 # Most use flags were void as not deterministic - needs a patch sooner or later.
 #IUSE="flac mp3 readline perl python vorbis"
 IUSE="python"
@@ -26,7 +28,7 @@ RDEPEND="sys-libs/zlib
 	net-misc/curl
 	>=media-libs/flac-1.1.2
 	media-libs/libmad
-	>=media-libs/musicbrainz-2.1.0
+	>=media-libs/musicbrainz-2.1.0:1
 	media-libs/libofa
 	media-libs/libvorbis
 	!media-sound/trm
@@ -50,7 +52,6 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog INSTALL README TODO
 	if use python; then
