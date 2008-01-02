@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.5.1-r1.ebuild,v 1.5 2006/12/10 19:23:34 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.5.1-r1.ebuild,v 1.6 2008/01/02 16:22:12 armin76 Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.bioperl.org/DIST/${P}.tar.bz2"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="mysql gd"
 
 DEPEND="
