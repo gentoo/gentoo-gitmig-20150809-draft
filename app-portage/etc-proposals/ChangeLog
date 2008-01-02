@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/etc-proposals
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/ChangeLog,v 1.2 2008/01/01 09:24:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/ChangeLog,v 1.3 2008/01/02 16:01:02 dertobi123 Exp $
+
+*etc-proposals-1.4.1 (02 Jan 2008)
+
+  02 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  -etc-proposals-1.4.ebuild, +etc-proposals-1.4.1.ebuild:
+  Version bump, bug #203984
 
   01 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   etc-proposals-1.4.ebuild:
