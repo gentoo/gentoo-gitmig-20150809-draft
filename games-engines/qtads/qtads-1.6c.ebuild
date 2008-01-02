@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-1.6c.ebuild,v 1.4 2007/01/26 08:32:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-1.6c.ebuild,v 1.5 2008/01/02 07:21:42 mr_bones_ Exp $
 
 inherit flag-o-matic qt3 games
 
@@ -23,12 +23,10 @@ src_unpack() {
 
 src_compile () {
 	append-flags -fno-strict-aliasing
-	addpredict "${QTDIR}"/etc/settings
-	qmake \
-		BIN_INSTALL="${GAMES_BINDIR}" \
-		DOC_INSTALL=/usr/share/doc/${PF} \
-		DATA_INSTALL="${GAMES_DATADIR}" \
-		qtads.pro
+	BIN_INSTALL="${GAMES_BINDIR}" \
+	DOC_INSTALL=/usr/share/doc/${PF} \
+	DATA_INSTALL="${GAMES_DATADIR}" \
+		eqmake3 qtads.pro
 	emake || die "emake failed"
 }
 
