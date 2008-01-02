@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-en
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-en/ChangeLog,v 1.10 2007/12/25 20:38:43 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-en/ChangeLog,v 1.11 2008/01/02 12:21:30 armin76 Exp $
+
+  02 Jan 2008; Raúl Porcel <armin76@gentoo.org> myspell-en-20060316.ebuild:
+  Add ~alpha/~ia64
 
   25 Dec 2007; Jeroen Roovers <jer@gentoo.org> myspell-en-20060316.ebuild:
   Marked ~hppa for armin76.

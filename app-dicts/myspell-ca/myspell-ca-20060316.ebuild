@@ -1,6 +1,6 @@
-# Copyright 2006-2007 Gentoo Foundation
+# Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ca/myspell-ca-20060316.ebuild,v 1.10 2007/12/25 20:41:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ca/myspell-ca-20060316.ebuild,v 1.11 2008/01/02 12:21:37 armin76 Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "ca,ES,ca_ES,Catalan (Spain),ca_ES.zip"
@@ -18,4 +18,4 @@ DESCRIPTION="Catalan dictionaries for myspell/hunspell"
 LICENSE="GPL-2"
 HOMEPAGE="http://lingucomponent.openoffice.org/"
 
-KEYWORDS="amd64 ~hppa ppc sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc sparc x86 ~x86-fbsd"
