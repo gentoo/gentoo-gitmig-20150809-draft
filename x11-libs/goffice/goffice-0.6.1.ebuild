@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.6.1.ebuild,v 1.7 2008/01/02 17:10:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.6.1.ebuild,v 1.8 2008/01/02 22:55:12 eva Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -38,21 +38,30 @@ DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_with gnome)"
 
+	local diemessage=""
+
 	if use gnome && ! built_with_use gnome-extra/libgsf gnome; then
 		eerror "Please rebuild gnome-extra/libgsf with gnome support enabled"
-		eerror "USE=\"gnome\" emerge gnome-extra/libgsf"
+		eerror "echo \"gnome-extra/libgsf gnome\" >> /etc/portage/package.use"
 		eerror "or add  \"gnome\" to your USE string in /etc/make.conf"
-		die "No Gnome support found in libgsf"
+		diemessage="No Gnome support found in libgsf."
 	fi
 
 	if ! built_with_use x11-libs/cairo svg ; then
-		eerror
 		eerror "Please rebuild x11-libs/cairo with svg support enabled"
 		eerror "echo \"x11-libs/cairo svg\" >> /etc/portage/package.use"
 		eerror "emerge -1 x11-libs/cairo"
-		eerror
-		die "cairo built with -svg"
+		diemessage="${diemessage} No SVG support found in cairo."
 	fi
+
+	if ! built_with_use dev-libs/libpcre unicode; then
+		eerror "Please rebuild dev-libs/libpcre with unicode support enabled"
+		eerror "echo \"dev-libs/libpcre unicode\" >> /etc/portage/package.use"
+		eerror "emerge -1 dev-libs/libpcre"
+		diemessage="${diemessage} No unicode support found in libpcre."
+	fi
+
+	[ -n "${diemessage}" ] && die ${diemessage}
 }
 
 src_unpack() {
