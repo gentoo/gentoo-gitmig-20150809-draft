@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.59 2008/01/02 14:14:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.60 2008/01/02 21:09:04 ranger Exp $
+
+  02 Jan 2008; Brent Baude <ranger@gentoo.org> qwt-5.0.2-r1.ebuild:
+  marking qwt-5.0.2-r1 ~ppc64 for bug 204048
 
   02 Jan 2008; Raúl Porcel <armin76@gentoo.org> qwt-5.0.2-r1.ebuild:
   Re-add ~ia64
