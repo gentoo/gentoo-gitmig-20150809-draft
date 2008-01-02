@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-FolderType/Email-FolderType-0.813.ebuild,v 1.2 2008/01/02 13:09:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-FolderType/Email-FolderType-0.813.ebuild,v 1.3 2008/01/02 16:48:46 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -16,4 +16,3 @@ SRC_TEST="do"
 SLOT="0"
 
 DEPEND="dev-lang/perl dev-perl/Module-Pluggable"
-
