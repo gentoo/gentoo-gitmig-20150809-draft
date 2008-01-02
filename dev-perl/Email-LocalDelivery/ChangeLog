@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Email-LocalDelivery
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-LocalDelivery/ChangeLog,v 1.1 2008/01/02 10:21:59 joslwah Exp $
+
+*Email-LocalDelivery-0.217 (02 Jan 2008)
+
+  02 Jan 2008; Joshua <joslwah@gentoo.org> +metadata.xml,
+  +Email-LocalDelivery-0.217.ebuild:
+  Initial commit of new module.
+
