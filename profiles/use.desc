@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.378 2007/12/30 21:11:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.379 2008/01/02 21:04:01 coldwind Exp $
 
 # Keep them sorted
 
 3dfx - Enable support for Voodoo chipsets, also called as 3DFX and TDFX
 3dnow - Adds support for 3dnow multimedia processor instructions
 X - Adds support for X11
-Xaw3d - Adds support of the 3d athena widget set
+Xaw3d - Adds support for the 3d athena widget set
 a52 - Enables support for decoding ATSC A/52 streams used in DVD
 aac - Enables support for MPEG-4 AAC Audio
 aalib - Adds support for media-libs/aalib (ASCII-Graphics Library)
@@ -44,7 +44,7 @@ bzip2 - Use the bzlib compression library
 cairo - Enable support for the cairo graphics library
 calendar - Adds support for calendars (not using mcal!)
 canna - Adds support for the Canna kana to kanji conversion engine
-caps - Use Linux capabilities library to control privileges.
+caps - Use Linux capabilities library to control privilege
 cdb - Adds support for the CDB database engine from the author of qmail
 cddb - Access cddb servers to retrieve and submit information about compact disks
 cdinstall - Copies files from the CD rather than asking the user to copy them, mostly used with games
@@ -57,17 +57,17 @@ clamav - Adds support for Clam AntiVirus software (usually with a plugin)
 cracklib - Support for cracklib strong password checking
 crypt - Add support for encryption -- using mcrypt or gpg where applicable
 cscope - Enables cscope interface -- in vim for example
-ctype - Enables ctype functions 
+ctype - Enables ctype functions
 cups - Add support for CUPS (Common Unix Printing System)
 curl - Adds support for client-side URL transfer library
 curlwrappers - Adds support for using curl in streams
 db2 - Enables support for IBM DB2 database server
 dbase - Adds support for dbase file format
-dbm - Adds support for generic DBM databases.
+dbm - Adds support for generic DBM databases
 dbmaker - Adds support for dbmaker database server
 dbus - Enable dbus support for anything that needs it (gpsd, gnomemeeting, etc)
 dbx - Adds database abstraction layer
-debug - Enable extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see http://www.gentoo.org/proj/en/qa/backtraces.xml .
+debug - Enable extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see http://www.gentoo.org/proj/en/qa/backtraces.xml
 dedicated - Adds support for dedicated game servers (some packages do not provide clients and servers at the same time)
 dga - Adds DGA (Direct Graphic Access) support for X
 directfb - Adds support for DirectFB layer (library for FB devices)
@@ -166,10 +166,10 @@ jikes - Compile Java source code with jikes (faster)
 jingle - Enables voice calls for jabber
 joystick - Add support for joysticks in all packages
 jpeg - Adds JPEG image support
-jpeg2k - Support for JPEG 2000, a wavelet-based image compression format.
-junit - Adds junit awareness -- useful for developers.
+jpeg2k - Support for JPEG 2000, a wavelet-based image compression format
+junit - Adds junit awareness -- useful for developers
 kde - Adds support for kde-base/kde (K Desktop Enviroment)
-kdeenablefinal - EXPERIMENTAL: KDE ebuilds will use the enable-final flag, yielding compilation speedups at the cost of heavy mem usage and potentially causing problems. We strongly discourage setting this.
+kdeenablefinal - EXPERIMENTAL: KDE ebuilds will use the enable-final flag, yielding compilation speedups at the cost of heavy mem usage and potentially causing problems. We strongly discourage setting this
 kdehiddenvisibility - Makes KDE symbols hidden by default, requires GCC 4.1 (experimental)
 kdexdeltas - Makes kde ebuilds download binary diffs rather than entire new tarballs for every new release
 kerberos - Adds kerberos support
@@ -191,7 +191,7 @@ libnotify - Enable notification support
 libsamplerate - Build with support for converting sample rates using libsamplerate
 libwww - Adds libwww support (General purpose WEB API)
 lirc - Adds support for lirc (Linux's Infra-Red Remote Control)
-livecd - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during livecd building.
+livecd - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during livecd building
 lm_sensors - Adds linux lm_sensors (hardware sensors) support
 lua - Enable Lua scripting support
 lzo - Enables support for lzo compression
@@ -220,8 +220,8 @@ mono - Build Mono bindings to support dotnet type stuff
 motif - Adds motif support (x11-libs/openmotif x11-libs/lesstif)
 mozilla - Adds support for the Mozilla web-browser
 mp3 - Add support for reading mp3 files
-mpeg - Adds libmpeg3 support to various packages.
-mpi - Adds MPI (Message Passing Interface) layer to the apps that support it.
+mpeg - Adds libmpeg3 support to various packages
+mpi - Adds MPI (Message Passing Interface) layer to the apps that support it
 mplayer - Enable mplayer support for playback or encoding
 msn - Enable MSN Messenger IM protocol support
 msql - Adds support for the MSQL database server
@@ -266,12 +266,12 @@ pam - Adds support PAM (Pluggable Authentication Modules) - DANGEROUS to arbitra
 pcmcia - Adds support for PCMCIA slots/devices found on laptop computers
 pcntl - Adds support for process creation functions
 pcre - Adds support for Perl Compatible Regular Expressions
-pda - Adds support for portable devices.
+pda - Adds support for portable devices
 pdf - Adds general support for PDF (Portable Document Format), this replaces the pdflib and cpdflib flags
-perl - Adds support/bindings for the Perl language.
+perl - Adds support/bindings for the Perl language
 pfpro - Adds support for Verisign Payflow Pro
 php - Include support for php
-pic - Build Position Independent Code.  Do not utilize this flag unless you know what you're doing.
+pic - Build Position Independent Code.  Do not utilize this flag unless you know what you're doing
 plotutils - Adds plotutils support to gnuplot (library for 2-D vector graphics)
 png - Adds support for libpng (PNG images)
 portaudio - Adds support for the crossplatform portaudio audio API
@@ -330,18 +330,18 @@ startup-notification - Enable application startup event feedback mechanism
 static - !!do not set this during bootstrap!! Causes binaries to be statically linked instead of dynamically
 subversion - Enable subversion (version control system) support
 suid - Enable setuid root program, with potential security risks
-svg - Adds support for SVG (Scalable Vector Graphics).
+svg - Adds support for SVG (Scalable Vector Graphics)
 svga - Adds support for SVGAlib (graphics library)
 sybase - Adds support for the Sybase SQL Database Server
 sybase-ct - Adds support for Sybase-CT
-symlink - Force kernel ebuilds to automatically update the /usr/src/linux symlink.
+symlink - Force kernel ebuilds to automatically update the /usr/src/linux symlink
 syslog - Enables support for syslog
 sysvipc - Support for System V-compatible inter-process communication
 szip - Use the szip compression library
 taglib - Enable tagging support with taglib
 tcl - Adds support the Tcl language
 tcpd - Adds support for TCP wrappers
-test - Workaround to pull in packages needed to run with FEATURES=test. Portage-2.1.2 handles this internally, so don't set it in make.conf/package.use anymore.
+test - Workaround to pull in packages needed to run with FEATURES=test. Portage-2.1.2 handles this internally, so don't set it in make.conf/package.use anymore
 tetex - Adds support for teTeX (typesetting package)
 theora - Adds support for the Theora Video Compression Codec
 threads - Adds threads support for various packages. Usually pthreads
@@ -360,9 +360,9 @@ vanilla - Do not add extra patches which change default behaviour; DO NOT USE TH
 vcd - Video CD support
 vhosts - Adds support for installing web-based applications into a virtual-hosting environment
 videos - Install optional video files (used in some games)
-vim-syntax - Pulls in related vim syntax scripts.
+vim-syntax - Pulls in related vim syntax scripts
 vnc - Enable VNC (remote desktop viewer) support
-voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE.
+voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE
 vorbis - Adds support for the OggVorbis audio codec
 wavpack - Add support for wavpack audio compression tools
 wddx - Adds support for Web Distributed Data eXchange
@@ -375,7 +375,7 @@ xattr - Adds support for extended attributes (filesystem-stored metadata)
 xcb - Support the X C-language Binding, a replacement for Xlib
 xcomposite - Enable support for the Xorg composite extension
 xemacs - Add support for XEmacs
-xface - Adds xface support used to allow a small image of xface format to be included in an email via the header 'X-Face'.
+xface - Adds xface support used to allow a small image of xface format to be included in an email via the header 'X-Face'
 xine - Add support for the XINE movie libraries
 xinerama - Add support for the xinerama X11 extension, which allows you to stretch your display across multiple monitors
 xinetd - Add support for the xinetd super-server
@@ -384,9 +384,9 @@ xmlrpc - Support for xml-rpc library
 xosd - Sends display using the X On Screen Display library
 xpm - Adds support for XPM graphics format
 xprint - Support for xprint, http://www.mozilla.org/projects/xprint/
-xscreensaver - Adds support for XScreenSaver extension.
+xscreensaver - Adds support for XScreenSaver extension
 xsl - Check/Support flag for XSL library (version 1)
-xulrunner - Build native browser integration against xulrunner instead of firefox or seamonkey.
+xulrunner - Build native browser integration against xulrunner instead of firefox or seamonkey
 xv - Adds in optional support for the Xvideo extension (an X API for video playback)
 xvid - Adds support for xvid.org's open-source mpeg-4 codec
 yahoo - Enable Yahoo Messenger IM protocol support
