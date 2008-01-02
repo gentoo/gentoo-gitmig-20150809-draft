@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/szip
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/ChangeLog,v 1.12 2007/11/03 19:21:50 bicatali Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/ChangeLog,v 1.13 2008/01/02 18:15:19 armin76 Exp $
+
+  02 Jan 2008; Raúl Porcel <armin76@gentoo.org> szip-2.1.ebuild:
+  Add ~alpha/~ia64
 
 *szip-2.1 (03 Nov 2007)
 
