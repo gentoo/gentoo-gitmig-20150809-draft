@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/ikvm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.18 2007/12/31 18:55:42 jurek Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.19 2008/01/02 21:46:51 jurek Exp $
+
+  02 Jan 2008; Jurek Bartuszek <jurek@gentoo.org> -files/key.snk,
+  ikvm-0.36.0.5.ebuild:
+  Fixed sandbox violation errors (bug #204107)
 
 *ikvm-0.36.0.5 (31 Dec 2007)
 

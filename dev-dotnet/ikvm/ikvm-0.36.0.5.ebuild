@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.36.0.5.ebuild,v 1.1 2007/12/31 18:55:42 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.36.0.5.ebuild,v 1.2 2008/01/02 21:46:51 jurek Exp $
 
 inherit eutils mono multilib
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	# Add missing strong name key
-	cp "${FILESDIR}"/key.snk "${S}"/mykey.snk
+	#cp "${FILESDIR}"/key.snk "${S}"/mykey.snk
 
 	# Remove unneccesary executables and
 	# Windows-only libraries (bug #186837)
@@ -43,7 +43,9 @@ src_compile() {
 		classpath/classpath.build \
 	|| die "sed failed"
 
-	nant -t:mono-2.0 signed || die "ikvm build failed"
+	mkdir -p "${T}"/home/test
+
+	XDG_CONFIG_HOME="${T}/home/test" nant -t:mono-2.0 signed || die "ikvm build failed"
 }
 
 src_install() {
