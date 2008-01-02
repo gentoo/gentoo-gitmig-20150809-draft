@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/og
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/og/ChangeLog,v 1.16 2007/11/03 08:30:09 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/og/ChangeLog,v 1.17 2008/01/02 19:40:39 graaff Exp $
+
+*og-0.41.0 (02 Jan 2008)
+
+  02 Jan 2008; Hans de Graaff <graaff@gentoo.org> +og-0.41.0.ebuild:
+  Version bump for #203942
 
   03 Nov 2007; Samuli Suominen <drac@gentoo.org> og-0.40.0.ebuild:
   Keyword ~amd64 wrt #185492.

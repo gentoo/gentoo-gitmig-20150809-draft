@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/glue
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/glue/ChangeLog,v 1.10 2007/09/17 20:20:17 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/glue/ChangeLog,v 1.11 2008/01/02 19:38:56 graaff Exp $
+
+*glue-0.41.0 (02 Jan 2008)
+
+  02 Jan 2008; Hans de Graaff <graaff@gentoo.org> +glue-0.41.0.ebuild:
+  Version bump for #203942
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing citizen428 from metadata.xml (see #56803 for reference).
