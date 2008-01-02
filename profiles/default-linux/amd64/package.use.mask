@@ -109,3 +109,6 @@ media-video/cinelerra-cvs mmx 3dnow
 # Mask dbus, hal, nas and scanner USE flags;
 # Bug 203680
 app-emulation/wine dbus hal nas scanner
+
+# missing the necessary linux-headers dep
+>=net-fs/netatalk-2.0.3-r3 xfs

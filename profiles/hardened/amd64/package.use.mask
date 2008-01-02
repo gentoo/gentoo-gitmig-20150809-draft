@@ -2,3 +2,6 @@
 # (Proxying for Diego Pettenò <flameeyes@gmail.com>)
 # ASIHPI driver is supported on 64-bit systems for newer versions
 <media-sound/alsa-driver-1.0.14_rc3 alsa_cards_asihpi
+
+# missing the necessary linux-headers dep
+>=net-fs/netatalk-2.0.3-r3 xfs

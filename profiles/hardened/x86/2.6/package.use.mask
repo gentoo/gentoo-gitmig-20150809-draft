@@ -8,3 +8,6 @@ dev-java/sun-jdk -nsplugin
 dev-java/sun-jre-bin -nsplugin
 dev-java/ibm-jdk-bin -nsplugin 
 dev-java/ibm-jre-bin -nsplugin
+
+# missing the necessary linux-headers dep
+>=net-fs/netatalk-2.0.3-r3 xfs
