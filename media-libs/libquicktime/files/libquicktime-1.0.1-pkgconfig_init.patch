@@ -1,0 +1,14 @@
+Index: libquicktime-1.0.1/configure.ac
+===================================================================
+--- libquicktime-1.0.1.orig/configure.ac
++++ libquicktime-1.0.1/configure.ac
+@@ -73,6 +73,9 @@ dnl
+ AM_GNU_GETTEXT([external])
+ 
+ 
++PKG_PROG_PKG_CONFIG
++
++
+ dnl This is necessary for libtool assembler support
+ 
+ AS=gcc
