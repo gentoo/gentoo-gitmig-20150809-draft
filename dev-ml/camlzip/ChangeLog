@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlzip
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.9 2007/11/10 14:35:46 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.10 2008/01/02 19:56:51 aballier Exp $
+
+  02 Jan 2008; Alexis Ballier <aballier@gentoo.org> camlzip-1.03-r1.ebuild:
+  Add support to not build with ocamlopt
 
   10 Nov 2007; Alexis Ballier <aballier@gentoo.org>
   files/camlzip-1.03-Makefile-findlib.patch:
