@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bcwipe
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.22 2007/12/31 15:43:34 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.23 2008/01/02 15:30:45 angelos Exp $
+
+  02 Jan 2008; Christoph Mende <angelos@gentoo.org> bcwipe-1.6_p8.ebuild:
+  Stable on amd64 wrt bug #198630
 
   31 Dec 2007; Raúl Porcel <armin76@gentoo.org> bcwipe-1.6_p8.ebuild:
   sparc stable wrt #198630
