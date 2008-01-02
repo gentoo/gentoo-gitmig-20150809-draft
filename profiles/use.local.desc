@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3262 2008/01/02 21:22:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3263 2008/01/02 21:56:05 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -539,6 +539,7 @@ dev-ml/lablgtk:ocamlopt - Build with ocamlopt (ocaml native code compiler) -- Pr
 dev-ml/lablgtk:sourceview - Enable GtkSourceView support
 dev-ml/ocaml-sqlite3:ocamlopt - Build with ocamlopt (ocaml native code compiler) -- Produces faster programs
 dev-ml/ocamlnet:httpd - Enables nethttpd web server component 
+dev-ml/pcre-ocaml:ocamlopt - Build with ocamlopt (ocaml native code compiler) -- Produces faster programs
 dev-perl/Eidetic:auth - Enables Apache-AuthTicket based cookie authentication
 dev-perl/GD:animgif - Enable animated gif support
 dev-perl/HTML-Mason:modperl - Enable modperl support
