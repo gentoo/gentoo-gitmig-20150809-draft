@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.153 2007/12/30 13:55:55 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.154 2008/01/02 11:44:18 flameeyes Exp $
+
+  02 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> xine-ui-0.99.5.ebuild:
+  Make sure to check for the proper video backend in xine-lib when enabling
+  aalib or libcaca frontends.
 
   30 Dec 2007; Samuli Suominen <drac@gentoo.org>
   -xine-ui-0.99.5_pre20070303.ebuild, xine-ui-0.99.5.ebuild:

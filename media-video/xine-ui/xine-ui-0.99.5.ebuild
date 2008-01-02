@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5.ebuild,v 1.8 2007/12/30 13:55:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5.ebuild,v 1.9 2008/01/02 11:44:18 flameeyes Exp $
 
 # WANT_AUTOCONF=latest
 # WANT_AUTOMAKE=latest
@@ -41,6 +41,20 @@ DEPEND="${RDEPEND}
 		x11-proto/xf86vidmodeproto
 		xinerama? ( x11-proto/xineramaproto ) )
 	dev-util/pkgconfig"
+
+pkg_setup() {
+	if use aalib && ! built_with_use media-libs/xine-lib aalib; then
+		eerror "To enable the AA frontend in xine-ui you need"
+		eerror "to enable the aalib video output in media-libs/xine-lib."
+		die "Missing aalib USE flag on media-libs/xine-lib."
+	fi
+
+	if use libcaca && ! built_with_use media-libs/xine-lib libcaca; then
+		eerror "To enable the CACA frontend in xine-ui you need"
+		eerror "to enable the libcaca video output in media-libs/xine-lib."
+		die "Missing libcaca USE flag on media-libs/xine-lib."
+	fi
+}
 
 src_compile() {
 	rm misc/xine-bugreport
