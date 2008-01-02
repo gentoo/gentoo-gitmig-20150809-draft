@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/traverso
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.14 2008/01/02 09:13:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.15 2008/01/02 10:44:29 aballier Exp $
+
+*traverso-9999 (02 Jan 2008)
+
+  02 Jan 2008; Alexis Ballier <aballier@gentoo.org> +traverso-9999.ebuild:
+  Add live ebuild for testing
 
   02 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   -traverso-0.41.0-r1.ebuild:
