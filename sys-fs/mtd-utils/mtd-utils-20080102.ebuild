@@ -1,20 +1,22 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-9999.ebuild,v 1.2 2008/01/02 21:36:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20080102.ebuild,v 1.1 2008/01/02 21:36:51 robbat2 Exp $
 
-ECVS_USER="anoncvs"
-ECVS_PASS="anoncvs"
-EGIT_REPO_URI="git://git.infradead.org/mtd-utils.git"
-inherit toolchain-funcs flag-o-matic git
+inherit toolchain-funcs flag-o-matic
 
-DESCRIPTION="MTD userspace tools"
+DESCRIPTION="MTD userspace tools, based on GIT snapshot from upstream"
 HOMEPAGE="http://git.infradead.org/?p=mtd-utils.git;a=summary"
-SRC_URI=""
+
+# Git ID for the snapshot
+MY_PV="${PV}-9ba41c4dc891e38c92126bfcc4c366d765841da0"
+SRC_URI="mirror://gentoo/${PN}-snapshot-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~x86"
 IUSE="xattr"
+
+S=${WORKDIR}/${PN}.git
 
 RDEPEND="!sys-fs/mtd
 		sys-libs/zlib"
@@ -24,8 +26,8 @@ DEPEND="xattr? ( sys-apps/acl )
 		${DEPEND}"
 
 src_unpack() {
-	git_src_unpack
-	sed -i \
+	unpack ${A}
+	sed -i.orig \
 		-e 's!^MANDIR.*!MANDIR = /usr/share/man!g' \
 		-e 's!-include.*!!g' \
 		-e '/make -C/s,make,$(MAKE),g' \
@@ -44,7 +46,6 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
-	rm -r "${D}"/usr/include || die
 	dodoc *.txt
 	# TODO: check ubi-utils for docs+scripts
 }
