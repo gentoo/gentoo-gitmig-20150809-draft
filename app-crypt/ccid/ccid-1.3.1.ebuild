@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.1.ebuild,v 1.2 2007/12/30 13:49:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.1.ebuild,v 1.3 2008/01/02 15:48:27 angelos Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://pcsclite.alioth.debian.org/ccid.html"
 SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86"
 IUSE="twinserial nousb"
 RDEPEND=">=sys-apps/pcsc-lite-1.3.3
 	>=dev-libs/libusb-0.1.4"
