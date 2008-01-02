@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.6.ebuild,v 1.4 2007/12/31 14:39:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.6.ebuild,v 1.5 2008/01/02 15:12:52 angelos Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://wald.intevation.org/frs/download.php/${STUPID_NUM}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ~ppc64 sparc x86"
 IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-2.2

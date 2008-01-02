@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.50 2007/12/31 14:39:25 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.51 2008/01/02 15:12:52 angelos Exp $
+
+  02 Jan 2008; Christoph Mende <angelos@gentoo.org> gpa-0.7.6.ebuild:
+  Stable on amd64 wrt bug #198653
 
   31 Dec 2007; Raúl Porcel <armin76@gentoo.org> gpa-0.7.6.ebuild:
   alpha/sparc stable wrt #198653
