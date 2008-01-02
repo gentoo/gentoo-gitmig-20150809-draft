@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocaml-sqlite3
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ChangeLog,v 1.2 2007/12/08 00:07:11 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ChangeLog,v 1.3 2008/01/02 21:23:59 aballier Exp $
+
+  02 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/ocaml-sqlite3-0.23.0-noocamlopt.patch, ocaml-sqlite3-0.23.0.ebuild:
+  Add support to not build with ocamlopt
 
 *ocaml-sqlite3-0.23.0 (08 Dec 2007)
 

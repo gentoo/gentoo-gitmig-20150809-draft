@@ -1,10 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ocaml-sqlite3-0.23.0.ebuild,v 1.1 2007/12/08 00:07:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ocaml-sqlite3-0.23.0.ebuild,v 1.2 2008/01/02 21:23:59 aballier Exp $
 
 inherit findlib eutils
 
-IUSE="doc"
+EAPI="1"
+
+IUSE="doc +ocamlopt"
 
 DESCRIPTION="A package for ocaml that provides access to SQLite databases."
 SRC_URI="http://ocaml.info/ocaml_sources/${P}.tar.bz2"
@@ -19,16 +21,28 @@ SLOT="0"
 LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 
+pkg_setup() {
+	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "In order to build ${PN} with native code support from ocaml"
+		eerror "You first need to have a native code ocaml compiler."
+		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
+		die "Please install ocaml with ocamlopt useflag"
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-0.22.0-destdir.patch"
+	epatch "${FILESDIR}/${P}-noocamlopt.patch"
 }
 
 src_compile() {
 	econf
 	emake -j1 bytecode || die "make bytecode failed"
-	emake -j1 opt || die "make opt failed"
+	if use ocamlopt; then
+		emake -j1 opt || die "make opt failed"
+	fi
 	if use doc; then
 		emake -j1 docs || die "make doc failed"
 	fi
