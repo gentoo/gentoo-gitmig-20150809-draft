@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_alpha4.ebuild,v 1.4 2008/01/01 18:53:27 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_alpha4.ebuild,v 1.5 2008/01/02 17:09:05 peper Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -35,6 +35,7 @@ DEPEND="${COMMON_DEPEND}
 	ruby? ( dev-ruby/syntax )"
 
 RDEPEND="${COMMON_DEPEND}
+	!>=app-shells/bash-3.2_p25
 	net-misc/wget
 	net-misc/rsync
 	sys-apps/sandbox"

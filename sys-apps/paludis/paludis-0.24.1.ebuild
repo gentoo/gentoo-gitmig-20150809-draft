@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.24.1.ebuild,v 1.2 2007/07/12 05:10:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.24.1.ebuild,v 1.3 2008/01/02 17:09:05 peper Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -30,6 +30,7 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen media-gfx/imagemagick )"
 
 RDEPEND="${COMMON_DEPEND}
+	!>=app-shells/bash-3.2_p25
 	>=app-admin/eselect-1.0.2
 	net-misc/wget
 	net-misc/rsync
