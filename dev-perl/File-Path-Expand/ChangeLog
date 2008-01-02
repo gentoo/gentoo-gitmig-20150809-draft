@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/File-Path-Expand
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Path-Expand/ChangeLog,v 1.1 2008/01/02 10:12:41 joslwah Exp $
+
+*File-Path-Expand-1.02 (02 Jan 2008)
+
+  02 Jan 2008; Joshua <joslwah@gentoo.org> +metadata.xml,
+  +File-Path-Expand-1.02.ebuild:
+  Initial commit of new module.
+
