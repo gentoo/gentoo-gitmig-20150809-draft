@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3256 2008/01/02 19:22:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3257 2008/01/02 19:28:11 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -188,6 +188,7 @@ app-misc/lcd4linux:mpd - Add support for display of mpd controlled music
 app-misc/lcdproc:irman - Enable support for IRMan
 app-misc/lcdproc:nfs - Adds support for NFS file system
 app-misc/lcdproc:seamless-hbars - Try to avoid gaps in horizontal bars
+app-misc/ledit:ocamlopt - Build with ocamlopt (ocaml native code compiler) -- Produces faster programs
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
 app-misc/lirc:transmitter - add transmitter support to some lirc-drivers (e.g. serial)
 app-misc/mc:7zip - add support for 7zip archives
