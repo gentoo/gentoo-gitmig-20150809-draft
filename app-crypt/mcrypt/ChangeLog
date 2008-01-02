@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mcrypt
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.24 2007/12/31 15:20:15 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.25 2008/01/02 15:39:38 angelos Exp $
+
+  02 Jan 2008; Christoph Mende <angelos@gentoo.org> mcrypt-2.6.7.ebuild:
+  Stable on amd64 wrt bug #198667
 
   31 Dec 2007; Raúl Porcel <armin76@gentoo.org> mcrypt-2.6.7.ebuild:
   sparc stable wrt #198667
