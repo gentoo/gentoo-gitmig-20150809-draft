@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1.ebuild,v 1.9 2008/01/02 07:42:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1.ebuild,v 1.10 2008/01/02 20:19:59 opfer Exp $
 
 inherit linux-info
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-libs/libgcrypt-1.1.91
 
 RDEPEND="${DEPEND}
 	resolvconf? ( ||
-		( net-dns/resolvconf-gentoo net-dns/openresol )
+		( net-dns/resolvconf-gentoo net-dns/openresolv )
 	)"
 
 pkg_setup()	 {
