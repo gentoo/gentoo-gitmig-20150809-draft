@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3259 2008/01/02 20:06:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3260 2008/01/02 20:12:03 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -532,6 +532,7 @@ dev-ml/camlp5:ocamlopt - Build with ocamlopt (ocaml native code compiler) -- Pro
 dev-ml/camlzip:ocamlopt - Build with ocamlopt (ocaml native code compiler) -- Produces faster programs
 dev-ml/cryptokit:ocamlopt - Build with ocamlopt (ocaml native code compiler) -- Produces faster programs
 dev-ml/findlib:ocamlopt - Build with ocamlopt (ocaml native code compiler) -- Produces faster programs
+dev-ml/lablgl:ocamlopt - Build with ocamlopt (ocaml native code compiler) -- Produces faster programs
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/lablgtk:gnomecanvas - Enable libgnomecanvas bindings compilation.
 dev-ml/lablgtk:sourceview - Enable GtkSourceView support
