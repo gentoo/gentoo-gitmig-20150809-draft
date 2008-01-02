@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.55 2008/01/02 20:50:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.56 2008/01/02 20:58:55 aballier Exp $
+
+  02 Jan 2008; Alexis Ballier <aballier@gentoo.org> lablgtk-2.10.0.ebuild:
+  Install all examples, controlled by examples useflag, thanks to
+  gmalecha@gmail.com, bug #203990
 
   02 Jan 2008; Alexis Ballier <aballier@gentoo.org> lablgtk-2.10.0.ebuild:
   Add support to not build with ocamlopt
