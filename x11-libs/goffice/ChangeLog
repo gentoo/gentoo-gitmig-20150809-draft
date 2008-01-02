@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.28 2008/01/02 10:09:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.29 2008/01/02 10:12:36 opfer Exp $
+
+  02 Jan 2008; Christian Faulhammer <opfer@gentoo.org> goffice-0.4.3.ebuild:
+  stable x86, security bug 198385
 
   02 Jan 2008; Christian Faulhammer <opfer@gentoo.org> goffice-0.6.1.ebuild:
   stable x86, security bug 198385
