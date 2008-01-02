@@ -1,10 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.2.1.ebuild,v 1.1 2007/11/13 13:49:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.2.1.ebuild,v 1.2 2008/01/02 19:24:38 aballier Exp $
 
 inherit multilib eutils
 
-IUSE="doc tk"
+EAPI="1"
+
+IUSE="doc +ocamlopt tk"
 
 DESCRIPTION="OCaml tool to find/use non-standard packages."
 HOMEPAGE="http://www.ocaml-programming.de/packages/"
@@ -29,6 +31,12 @@ pkg_setup()
 		eerror ""
 		die "Please make sure that ocaml is installed with tk support or remove the USE flag"
 	fi
+	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "In order to build ${PN} with native code support from ocaml"
+		eerror "You first need to have a native code ocaml compiler."
+		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
+		die "Please install ocaml with ocamlopt useflag"
+	fi
 }
 
 src_compile() {
@@ -37,7 +45,13 @@ src_compile() {
 		-config ${ocamlfind_destdir}/findlib/findlib.conf || die "configure failed"
 
 	emake all || die
-	emake opt || die # optimized code
+	if use ocamlopt; then
+		emake opt || die # optimized code
+	else
+		# If using bytecode we dont want to strip the binary as it would remove the
+		# bytecode and only leave ocamlrun...
+		export STRIP_MASK="*/bin/*"
+	fi
 }
 
 src_install() {
