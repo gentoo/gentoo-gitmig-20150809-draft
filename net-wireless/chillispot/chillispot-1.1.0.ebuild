@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-1.1.0.ebuild,v 1.1 2007/05/14 23:34:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-1.1.0.ebuild,v 1.2 2008/01/02 12:23:09 maekke Exp $
 
 DESCRIPTION="open source captive portal or wireless LAN access point controller"
 HOMEPAGE="http://www.chillispot.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.chillispot.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"

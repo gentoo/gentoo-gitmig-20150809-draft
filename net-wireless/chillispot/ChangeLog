@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/chillispot
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.16 2007/12/31 21:50:52 solar Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.17 2008/01/02 12:23:09 maekke Exp $
+
+  02 Jan 2008; Markus Meier <maekke@gentoo.org> chillispot-1.1.0.ebuild:
+  x86 stable, bug #203613
 
   31 Dec 2007; <solar@gentoo.org> metadata.xml:
   - pkg is up for grabs now
