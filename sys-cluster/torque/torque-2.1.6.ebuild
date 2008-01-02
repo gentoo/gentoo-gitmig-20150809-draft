@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.6.ebuild,v 1.10 2007/05/21 18:24:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.6.ebuild,v 1.11 2008/01/02 16:07:25 jsbronder Exp $
 
 inherit autotools flag-o-matic eutils
 
@@ -21,7 +21,8 @@ DEPEND_COMMON="virtual/libc
 	sys-libs/ncurses
 	sys-libs/readline
 	tk? ( dev-lang/tk )
-	!virtual/pbs"
+	!virtual/pbs
+	!<x11-misc/qterm-0.4.0-r1"
 
 DEPEND="${DEPEND_COMMON}
 	sys-apps/ed"
@@ -40,7 +41,7 @@ PBS_SERVER_HOME="${SPOOL_LOCATION}/PBS/"
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
-	epatch ${FILESDIR}/${PN}-setuid-safety.patch
+	epatch "${FILESDIR}"/${PN}-setuid-safety.patch
 }
 
 src_compile() {
