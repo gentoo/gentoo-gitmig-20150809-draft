@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/hevea
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.14 2007/08/30 13:30:59 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.15 2008/01/02 22:19:08 aballier Exp $
+
+*hevea-1.10 (02 Jan 2008)
+
+  02 Jan 2008; Alexis Ballier <aballier@gentoo.org> +hevea-1.10.ebuild:
+  Version bump and add support to not build with ocamlopt
 
   30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing mattam from metadata due to his retirement (see #30021 for reference).
