@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.25 2007/12/13 21:32:12 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.26 2008/01/02 18:26:44 alonbl Exp $
 
 #
 # NOTE: This revision is used by direct dependency. DO NOT REMOVE!
@@ -9,7 +9,7 @@
 inherit eutils autotools
 
 DESCRIPTION="GnuPG Made Easy (GPGME) is a library designed to make access to GnuPG easier for applications."
-HOMEPAGE="http://www.gnupg.org/gpgme.html"
+HOMEPAGE="http://www.gnupg.org/related_software/gpgme"
 SRC_URI="mirror://gnupg/gpgme/${P}.tar.gz"
 
 LICENSE="GPL-2"
