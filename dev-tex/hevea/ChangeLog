@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.15 2008/01/02 22:19:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.16 2008/01/02 22:21:37 aballier Exp $
+
+  02 Jan 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml,
+  hevea-1.07-r1.ebuild, hevea-1.08.ebuild:
+  Dont install license, add ml as fallback herd since its written in ocaml
 
 *hevea-1.10 (02 Jan 2008)
 
