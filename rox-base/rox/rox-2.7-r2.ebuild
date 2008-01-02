@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.7-r2.ebuild,v 1.2 2007/12/21 17:28:20 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.7-r2.ebuild,v 1.3 2008/01/02 12:39:49 lack Exp $
 
 EAPI=1
 inherit eutils multilib
@@ -21,10 +21,11 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/glib-2.2
 	>=dev-libs/libxml2-2.4.23
 	>=x11-misc/shared-mime-info-0.14
-	svg? ( gnome-base/librsvg )
-	!ppc? ( rox-base/mime-editor
+	svg? ( gnome-base/librsvg )"
+
+PDEPEND="rox-base/mime-editor
 		rox-base/thumbs
-		video? ( rox-extra/videothumbnail ) )"
+		video? ( rox-extra/videothumbnail )"
 
 DEPEND="${RDEPEND}
 	>=rox-base/zeroinstall-injector-0.31-r1
