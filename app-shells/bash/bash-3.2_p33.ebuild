@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p33.ebuild,v 1.3 2008/01/02 16:42:24 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p33.ebuild,v 1.4 2008/01/02 17:51:15 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -35,8 +35,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="afs bashlogger nls plugins vanilla"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
-RDEPEND="${DEPEND} !<sys-apps/portage-2.1.4_rc1
-				   !<sys-apps/paludis-0.26.0_alpha5"
+RDEPEND="${DEPEND}
+	!<sys-apps/portage-2.1.4_rc1
+	!<sys-apps/paludis-0.26.0_alpha5"
 
 S=${WORKDIR}/${MY_P}
 
