@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Path-Expand/File-Path-Expand-1.02.ebuild,v 1.1 2008/01/02 10:12:41 joslwah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Path-Expand/File-Path-Expand-1.02.ebuild,v 1.2 2008/01/02 13:07:32 maekke Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://cpan/authors/id/R/RC/RCLAMP/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~rclamp/"
 
 LICENSE="Artistic"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 SRC_TEST="do"

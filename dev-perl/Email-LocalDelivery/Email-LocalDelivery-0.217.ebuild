@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-LocalDelivery/Email-LocalDelivery-0.217.ebuild,v 1.1 2008/01/02 10:21:59 joslwah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-LocalDelivery/Email-LocalDelivery-0.217.ebuild,v 1.2 2008/01/02 13:10:50 maekke Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://cpan/authors/id/R/RJ/RJBS/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~rjbs/"
 
 LICENSE="Artistic"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 SRC_TEST="do"
