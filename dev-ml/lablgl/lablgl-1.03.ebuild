@@ -1,10 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.03.ebuild,v 1.1 2007/12/11 10:12:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.03.ebuild,v 1.2 2008/01/02 20:13:06 aballier Exp $
 
 inherit multilib eutils toolchain-funcs
 
-IUSE="doc"
+EAPI="1"
+
+IUSE="doc +ocamlopt"
 
 DESCRIPTION="Objective CAML interface for OpenGL"
 HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgl.html"
@@ -32,6 +34,13 @@ pkg_setup() {
 		eerror "Please recompile ocaml with tk useflag enabled."
 		die "Ocaml is missing tk support"
 	fi
+
+	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "In order to build ${PN} with native code support from ocaml"
+		eerror "You first need to have a native code ocaml compiler."
+		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
+		die "Please install ocaml with ocamlopt useflag"
+	fi
 }
 
 src_compile() {
@@ -45,7 +54,9 @@ src_compile() {
 	echo 'INCLUDES = $(TKINCLUDES) $(GLINCLUDES) $(XINCLUDES)' >> Makefile.config
 
 	emake -j1 || die "failed to build"
-	emake -j1 opt || die "failed to build opt"
+	if use ocamlopt; then
+		emake -j1 opt || die "failed to build opt"
+	fi
 }
 
 src_install () {
