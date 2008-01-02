@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/argtable
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/ChangeLog,v 1.10 2007/08/31 13:57:59 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/ChangeLog,v 1.11 2008/01/02 15:03:54 angelos Exp $
+
+*argtable-2.8 (02 Jan 2008)
+
+  02 Jan 2008; Christoph Mende <angelos@gentoo.org> +argtable-2.8.ebuild:
+  Version bump
 
   31 Aug 2007; Christoph Mende <angelos@gentoo.org> argtable-2.7.ebuild:
   Stable on amd64
