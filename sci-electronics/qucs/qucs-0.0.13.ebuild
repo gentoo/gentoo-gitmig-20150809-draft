@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/qucs-0.0.13.ebuild,v 1.2 2008/01/01 18:38:01 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/qucs-0.0.13.ebuild,v 1.3 2008/01/02 04:24:46 mr_bones_ Exp $
 
 EAPI=1
 
@@ -16,7 +16,6 @@ IUSE="debug"
 
 DEPEND="x11-libs/qt:3"
 RDEPEND="x11-libs/qt:3"
-
 
 src_compile() {
 	myconf="--with-x $(use_enable debug)"
