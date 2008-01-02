@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.1.5.ebuild,v 1.1 2008/01/01 20:06:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.1.5.ebuild,v 1.2 2008/01/02 00:40:09 aballier Exp $
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="Client library to access metadata of mp3/vorbis/CD media"
 HOMEPAGE="http://www.musicbrainz.org/"
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	elibtoolize
+	epatch "${FILESDIR}/${P}-gcc43-includes.patch"
 }
 
 src_compile() {
