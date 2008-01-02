@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/bm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bm/ChangeLog,v 1.1 2007/10/13 11:04:03 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bm/ChangeLog,v 1.2 2008/01/02 11:36:40 ulm Exp $
+
+  02 Jan 2008; Ulrich Mueller <ulm@gentoo.org> bm-1.32.ebuild:
+  Add ~amd64 keyword.
 
 *bm-1.32 (13 Oct 2007)
 
