@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mono
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.132 2007/12/14 19:59:25 jurek Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.133 2008/01/02 06:13:22 jurek Exp $
+
+*mono-1.2.6-r1 (02 Jan 2008)
+
+  02 Jan 2008; Jurek Bartuszek <jurek@gentoo.org>
+  +files/mono-1.2.6-threads-types-private-prototypes.patch,
+  +mono-1.2.6-r1.ebuild:
+  Added patch fixing bug #202358
 
 *mono-1.2.6 (14 Dec 2007)
 
