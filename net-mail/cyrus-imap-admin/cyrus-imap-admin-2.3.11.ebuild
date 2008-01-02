@@ -1,16 +1,17 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.12-r1.ebuild,v 1.9 2007/07/28 15:39:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.11.ebuild,v 1.1 2008/01/02 18:43:07 dertobi123 Exp $
 
 inherit autotools perl-app eutils
 
+PIC_PATCH_VER="2.2"
 DESCRIPTION="Utilities and Perl modules to administer a Cyrus IMAP server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
 SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-imapd-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~hppa ~ppc64"
 IUSE="ssl kerberos"
 
 RDEPEND=">=sys-libs/db-3.2
@@ -32,16 +33,16 @@ S="${WORKDIR}/cyrus-imapd-${PV}"
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
-	# When linking with rpm, you need to link with more libraries.
-	sed -e "s:lrpm:lrpm -lrpmio -lrpmdb:" -i configure || die "sed failed"
-
-	epatch "${FILESDIR}/${PN}-2.2-db45.patch"
-	epatch "${FILESDIR}/${PN}-2.2-fPIC.patch"
-	epatch "${FILESDIR}/${P}-gcc4.patch"
+	# Versioned symbols.
+	epatch "${FILESDIR}/${PN}-${PIC_PATCH_VER}-fPIC.patch"
 
 	# Recreate configure.
 	WANT_AUTOCONF="2.5"
 	eautoreconf
+
+	# When linking with rpm, you need to link with more libraries.
+	sed -e "s:lrpm:lrpm -lrpmio -lrpmdb:" -i configure || die "sed failed"
+
 }
 
 src_compile() {
