@@ -1,6 +1,9 @@
 # ChangeLog for virtual/cblas
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/ChangeLog,v 1.2 2007/10/22 19:04:28 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/ChangeLog,v 1.3 2008/01/02 16:47:59 armin76 Exp $
+
+  02 Jan 2008; Raúl Porcel <armin76@gentoo.org> cblas-1.0.ebuild:
+  Add ~ia64
 
   22 Oct 2007; Jeroen Roovers <jer@gentoo.org> cblas-1.0.ebuild:
   Stable for HPPA (USE=lapack).
