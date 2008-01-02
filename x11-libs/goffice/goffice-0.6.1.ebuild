@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.6.1.ebuild,v 1.1 2007/12/22 19:10:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.6.1.ebuild,v 1.2 2008/01/02 01:35:05 compnerd Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -43,6 +43,15 @@ pkg_setup() {
 		eerror "USE=\"gnome\" emerge gnome-extra/libgsf"
 		eerror "or add  \"gnome\" to your USE string in /etc/make.conf"
 		die "No Gnome support found in libgsf"
+	fi
+
+	if ! built_with_use x11-libs/cairo svg ; then
+		eerror
+		eerror "Please rebuild x11-libs/cairo with svg support enabled"
+		eerror "echo \"x11-libs/cairo svg\" >> /etc/portage/package.use"
+		eerror "emerge -1 x11-libs/cairo"
+		eerror
+		die "cairo built with -svg"
 	fi
 }
 
