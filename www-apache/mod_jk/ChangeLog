@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_jk
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.42 2007/12/24 16:34:32 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.43 2008/01/03 11:05:52 maekke Exp $
+
+  03 Jan 2008; Markus Meier <maekke@gentoo.org> mod_jk-1.2.25.ebuild:
+  x86 stable, bug #204098
 
 *mod_jk-1.2.26 (24 Dec 2007)
 
