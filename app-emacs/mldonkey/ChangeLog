@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/mldonkey
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.14 2007/10/26 13:42:19 ulm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.15 2008/01/03 15:10:38 ulm Exp $
+
+*mldonkey-0.0.4b-r1 (03 Jan 2008)
+
+  03 Jan 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/mldonkey-0.0.4b-vd.patch, +files/51mldonkey-gentoo.el,
+  +mldonkey-0.0.4b-r1.ebuild:
+  Add patch to conform to MLDonkey 2.9.2. Use autoload in site-init file;
+  remove redundant default configuration. Thanks to armin76 for testing.
 
   26 Oct 2007; Ulrich Mueller <ulm@gentoo.org> mldonkey-0.0.4b.ebuild:
   amd64 stable, bug 195512
