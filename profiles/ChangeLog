@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.968 2008/01/03 15:27:46 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.969 2008/01/03 21:58:37 aballier Exp $
+
+  03 Jan 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  last rite: dev-ml/{equeue,rpc,netclient}
 
   03 Jan 2008; Jose Luis Rivero <yoswink@gentoo.org> use.local.desc:
   Add guidexml USE-Flag for xmlcopyeditor
