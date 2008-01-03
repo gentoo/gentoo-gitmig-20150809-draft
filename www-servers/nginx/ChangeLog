@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.170 2007/12/31 19:54:24 voxus Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.171 2008/01/03 20:35:50 ulm Exp $
+
+  03 Jan 2008; Ulrich Mueller <ulm@gentoo.org> -nginx-0.5.26.ebuild:
+  Remove vulnerable version wrt security bugs #174759 and #201691.
 
   31 Dec 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
   nginx-0.5.34.ebuild, nginx-0.6.24.ebuild:
