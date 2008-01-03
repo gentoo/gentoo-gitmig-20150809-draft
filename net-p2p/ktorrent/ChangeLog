@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.71 2008/01/03 18:50:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.72 2008/01/03 21:09:22 ranger Exp $
+
+  03 Jan 2008; Brent Baude <ranger@gentoo.org> ktorrent-2.2.4.ebuild:
+  Marking ktorrent-2.2.4 ppc64 for bug 203756
 
   03 Jan 2008; Brent Baude <ranger@gentoo.org> ktorrent-2.2.4.ebuild:
   Marking ktorrent-2.2.4 ppc for bug 203756
