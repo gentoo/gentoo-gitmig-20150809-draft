@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxserver-freenx
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.40 2007/12/14 14:22:17 voyageur Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.41 2008/01/03 10:41:12 voyageur Exp $
+
+  03 Jan 2008; Bernard Cafarelli <voyageur@gentoo.org> files/nxserver.init:
+  Make init script POSIX-compliant, bug #203451
 
 *nxserver-freenx-0.7.1-r2 (14 Dec 2007)
 

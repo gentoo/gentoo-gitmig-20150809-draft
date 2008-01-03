@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/files/nxserver.init,v 1.1 2007/12/03 20:00:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/files/nxserver.init,v 1.2 2008/01/03 10:41:12 voyageur Exp $
 
 depend() {
 	before sshd
@@ -9,14 +9,14 @@ depend() {
 
 start() {
 	ebegin "Starting FreeNX server"
-	/usr/bin/nxserver --cleanup &>/dev/null
-	/usr/bin/nxserver --start &>/dev/null
+	/usr/bin/nxserver --cleanup >/dev/null 2>&1
+	/usr/bin/nxserver --start >/dev/null 2>&1
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping FreeNX server"
-	/usr/bin/nxserver --stop &>/dev/null
+	/usr/bin/nxserver --stop >/dev/null 2>&1
 	eend 0
 }
 
