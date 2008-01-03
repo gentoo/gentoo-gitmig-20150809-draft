@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.2.16-r1.ebuild,v 1.1 2007/08/28 23:31:14 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.2.18.ebuild,v 1.1 2008/01/03 21:02:50 opfer Exp $
 
 inherit eutils
 
