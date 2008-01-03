@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dvnet
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.16 2006/11/29 21:38:38 dev-zero Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.17 2008/01/03 23:00:28 dev-zero Exp $
+
+*dvnet-0.9.16 (03 Jan 2008)
+
+  03 Jan 2008; Tiziano Müller <dev-zero@gentoo.org> +dvnet-0.9.16.ebuild:
+  Version bump (bug #203806). Added ~amd64 keyword.
 
   29 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
   Set herd as maintainer
