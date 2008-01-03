@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.19-r2.ebuild,v 1.6 2008/01/01 19:57:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.19-r2.ebuild,v 1.7 2008/01/03 17:53:10 swegener Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="none"
@@ -40,7 +40,7 @@ RDEPEND=">=dev-libs/libdaemon-0.5
 	)
 	mono? (
 		>=dev-lang/mono-1.1.10
-		gtk? ( dev-dotnet/gtk-sharp )
+		gtk? ( >=dev-dotnet/gtk-sharp-2 )
 	)
 	howl-compat? ( !net-misc/howl )
 	mdnsresponder-compat? ( !net-misc/mDNSResponder )
@@ -55,6 +55,7 @@ RDEPEND=">=dev-libs/libdaemon-0.5
 	kernel_linux? ( sys-libs/libcap )
 	!net-misc/mDNSResponder"
 DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9.0
 	doc? (
 		app-doc/doxygen

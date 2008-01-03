@@ -1,11 +1,11 @@
 # Copyright 2000-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.20-r2.ebuild,v 1.7 2008/01/03 17:53:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.22-r1.ebuild,v 1.1 2008/01/03 17:53:10 swegener Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="none"
 
-inherit eutils mono python qt3 qt4 autotools multilib
+inherit eutils mono python qt3 qt4 multilib autotools
 
 DESCRIPTION="System which facilitates service discovery on a local network"
 HOMEPAGE="http://avahi.org/"
@@ -13,7 +13,7 @@ SRC_URI="http://avahi.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt3 qt4 autoipd kernel_linux test ipv6"
 
 RDEPEND=">=dev-libs/libdaemon-0.11-r1
@@ -100,17 +100,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-0.6.1-no-ipv6.patch
-	epatch "${FILESDIR}"/${P}-ui-sharp-gtk.patch
-	epatch "${FILESDIR}"/${P}-make-known-answers-not-conflict.patch
-	epatch "${FILESDIR}"/${P}-cleanup-dns-compression-table.patch
-	epatch "${FILESDIR}"/${P}-autoipd.patch
-	epatch "${FILESDIR}"/avahi-start-after-netmount.patch
-	epatch "${FILESDIR}"/avahi-vncviewer.patch
+	epatch "${FILESDIR}"/${P}-vncviewer.patch
+	epatch "${FILESDIR}"/${P}-gobject.patch
+
+	eautomake
 
 	use ipv6 && sed -i -e s/use-ipv6=no/use-ipv6=yes/ avahi-daemon/avahi-daemon.conf
 
-	eautomake
+	sed -i -e "s:\\.\\./\\.\\./\\.\\./doc/avahi-docs/html/:../../../doc/${PF}/html/:" doxygen_to_devhelp.xsl
 }
 
 src_compile() {
@@ -153,10 +150,12 @@ src_compile() {
 		${myconf} \
 		|| die "econf failed"
 	emake || die "emake failed"
+
+	use doc && emake avahi.devhelp
 }
 
 src_install() {
-	make install py_compile=true DESTDIR="${D}" || die "make install failed"
+	emake install py_compile=true DESTDIR="${D}" || die "make install failed"
 	use bookmarks || rm -f "${D}"/usr/bin/avahi-bookmarks
 
 	use howl-compat && ln -s avahi-compat-howl.pc "${D}"/usr/$(get_libdir)/pkgconfig/howl.pc
@@ -169,20 +168,35 @@ src_install() {
 	fi
 
 	dodoc docs/{AUTHORS,README,TODO}
+
+	if use doc
+	then
+		dohtml -r doxygen/html/.
+		insinto /usr/share/devhelp/books/avahi
+		doins avahi.devhelp
+	fi
 }
 
 pkg_postrm() {
-	use python && python_mod_cleanup "${ROOT}"/usr/lib/python*/site-packages/avahi
+	use python && python_mod_cleanup
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize "${ROOT}"/usr/lib/python*/site-packages/avahi
+	use python && python_mod_optimize "${ROOT}"/usr/lib*/python*/site-packages/avahi
 
 	if use autoipd
 	then
 		elog
 		elog "To use avahi-autoipd to configure your interfaces with IPv4LL (RFC3927)"
 		elog "addresses, just set config_<interface>=( autoipd ) in /etc/conf.d/net!"
+		elog
+	fi
+
+	if use dbus
+	then
+		elog
+		elog "If this is your first install of avahi please reload your dbus config"
+		elog "with /etc/init.d/dbus reload before starting avahi-daemon!"
 		elog
 	fi
 }
