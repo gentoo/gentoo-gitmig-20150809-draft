@@ -1,18 +1,18 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/leaktracer-2.4-r1.ebuild,v 1.2 2007/12/24 11:50:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/leaktracer-2.4-r2.ebuild,v 1.1 2008/01/03 21:03:48 dev-zero Exp $
 
 inherit eutils multilib toolchain-funcs
 
 # Upstream-package has no version in it's name.
 # We therefore repackage it directly, together with the patches.
-PATCH_LEVEL="1"
+PATCH_LEVEL="2"
 
 DESCRIPTION="trace and analyze memory leaks in C++ programs"
 HOMEPAGE="http://www.andreasen.org/LeakTracer/"
 SRC_URI="mirror://gentoo/${P}-gentoo_p${PATCH_LEVEL}.tbz2"
 
-LICENSE="as-is"
+LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
@@ -35,22 +35,23 @@ src_unpack() {
 	epatch
 
 	sed -i \
-		-e "s|%LIB%|$(get_libdir)|" \
+		-e "s|%LIBDIR%|$(get_libdir)|" \
 		LeakCheck || die "sed for setting lib path failed"
 }
 
 src_compile() {
-	emake CXX=$(tc-getCXX) LDFLAGS=${LDFLAGS} || die "emake failed"
+	emake CXX=$(tc-getCXX) || die "emake failed"
 }
 
 src_install() {
 	dobin LeakCheck leak-analyze || die "dobin failed"
 	dolib.so LeakTracer.so || die "dolib.so failed"
 	dohtml README.html
-	dodoc README "${WORKDIR}/patches/multi-stack.readme"
+	dodoc README test.cc
 }
 
 pkg_postinst() {
 	elog "To use LeakTracer, run LeakCheck my_prog and then leak-analyze my_prog leak.out"
 	elog "Please reffer to README file for more info."
 }
+
