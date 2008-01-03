@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/balsa
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.58 2007/10/10 15:22:32 remi Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.59 2008/01/03 22:54:02 eva Exp $
+
+*balsa-2.3.22 (03 Jan 2008)
+
+  03 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
+  -balsa-2.3.13.ebuild, -balsa-2.3.16.ebuild, +balsa-2.3.22.ebuild:
+  bump to 2.3.22, notably adds rubrica addressbook support
+  pruning old releases with security issues
 
   10 Oct 2007; Rémi Cardona <remi@gentoo.org> balsa-2.3.13.ebuild,
   balsa-2.3.16.ebuild, balsa-2.3.20.ebuild:
