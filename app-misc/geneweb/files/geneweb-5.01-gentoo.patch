@@ -1,0 +1,13 @@
+--- setup/setup.ml.old	2007-08-07 19:25:13.000000000 +0200
++++ setup/setup.ml	2007-08-07 19:24:59.000000000 +0200
+@@ -5,8 +5,8 @@
+ 
+ value port = ref 2316;
+ value default_lang = ref "en";
+-value setup_dir = ref ".";
+-value bin_dir = ref "";
++value setup_dir = ref "/usr/share/geneweb";
++value bin_dir = ref "/usr/bin";
+ value lang_param = ref "";
+ value only_file = ref "";
+ 
