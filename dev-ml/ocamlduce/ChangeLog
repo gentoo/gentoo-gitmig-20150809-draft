@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlduce
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ChangeLog,v 1.4 2007/05/26 18:42:28 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ChangeLog,v 1.5 2008/01/03 23:43:12 aballier Exp $
+
+  03 Jan 2008; Alexis Ballier <aballier@gentoo.org> ocamlduce-3.10.0.ebuild:
+  allow building without ocamlopt
 
 *ocamlduce-3.10.0 (26 May 2007)
 
