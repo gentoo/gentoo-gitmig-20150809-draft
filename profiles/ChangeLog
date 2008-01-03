@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.965 2008/01/03 12:06:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.966 2008/01/03 12:16:16 mrness Exp $
+
+  03 Jan 2008; Alin Năstac <mrness@gentoo.org> package.mask:
+  Mask net-dialup/gprs-easy-connect. Pending removal in 30 days.
 
   03 Jan 2008; Alexis Ballier <aballier@gentoo.org> use.desc,
   use.local.desc:
