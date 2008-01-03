@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/dvutil
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.27 2007/12/31 11:44:05 dev-zero Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.28 2008/01/03 21:15:02 dev-zero Exp $
+
+*dvutil-0.15.5 (03 Jan 2008)
+
+  03 Jan 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/dvutil-0.15.4-namespace_fix.patch, -dvutil-0.15.4.ebuild,
+  +dvutil-0.15.5.ebuild:
+  Version bump (upstream included our patch)
 
 *dvutil-0.15.4 (31 Dec 2007)
 
