@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-libs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.98 2007/12/26 14:48:45 betelgeuse Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.99 2008/01/03 03:20:03 betelgeuse Exp $
+
+  03 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> bluez-libs-3.24.ebuild:
+  Fix a typo in pkg_postinst elog messages. Fixes bug #204150.
 
   26 Dec 2007; Petteri Räty <betelgeuse@gentoo.org>
   -bluez-libs-2.24.ebuild, -bluez-libs-3.12.ebuild, -bluez-libs-3.14.ebuild,

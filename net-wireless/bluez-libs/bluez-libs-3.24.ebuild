@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/bluez-libs-3.24.ebuild,v 1.1 2007/12/26 14:44:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/bluez-libs-3.24.ebuild,v 1.2 2008/01/03 03:20:03 betelgeuse Exp $
 
 DESCRIPTION="Bluetooth Userspace Libraries"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -28,7 +28,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "If you are upgrading from =net-wireless/bluez-util-2*,"
+	elog "If you are upgrading from =${CATEGORY}/${PN}-2*,"
 	elog "the ABI version of libbluetooth has changed."
 	elog "Please run:"
 	elog "  revdep-rebuild --library libbluetooth.so.1"
