@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/chemical-mime-data
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemical-mime-data/ChangeLog,v 1.1 2007/12/11 04:36:01 je_fro Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemical-mime-data/ChangeLog,v 1.2 2008/01/03 15:29:48 je_fro Exp $
+
+  03 Jan 2008; <jeff@gentoo.org> chemical-mime-data-0.1.94.ebuild:
+  Die if imagemagick isn't emerged with USE=xml. Thanks to My Th on bug #204091.
 
 *chemical-mime-data-0.1.94 (11 Dec 2007)
 

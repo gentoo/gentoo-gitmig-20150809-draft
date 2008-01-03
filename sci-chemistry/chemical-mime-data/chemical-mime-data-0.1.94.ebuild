@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemical-mime-data/chemical-mime-data-0.1.94.ebuild,v 1.1 2007/12/11 04:36:01 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemical-mime-data/chemical-mime-data-0.1.94.ebuild,v 1.2 2008/01/03 15:29:48 je_fro Exp $
 
-inherit fdo-mime
+inherit eutils fdo-mime
 
 DESCRIPTION="A collection of data files to add support for chemical MIME types."
 HOMEPAGE="http://chemical-mime.sourceforge.net/"
@@ -22,6 +22,15 @@ DEPEND="dev-util/pkgconfig
 		gnome-base/gnome-mime-data"
 
 RDEPEND=""
+
+pkg_setup() {
+
+	if ! built_with_use 'media-gfx/imagemagick' xml; then
+		eerror "media-gfx/imagemagick must be built with the xml USE-flag enabled"
+		die "emerge media-gfx/imagemagick with the xml USE-flag enabled"
+	fi
+
+}
 
 src_compile() {
 
