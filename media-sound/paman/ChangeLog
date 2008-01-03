@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/paman
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/paman/ChangeLog,v 1.7 2007/10/31 15:28:10 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/paman/ChangeLog,v 1.8 2008/01/03 22:56:24 maekke Exp $
+
+  03 Jan 2008; Markus Meier <maekke@gentoo.org> paman-0.9.4.ebuild:
+  x86 stable, bug #204219 and remove inexistent doc
 
 *paman-0.9.4 (31 Oct 2007)
 

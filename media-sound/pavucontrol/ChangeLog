@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pavucontrol
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.9 2007/10/31 15:31:08 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.10 2008/01/03 22:58:16 maekke Exp $
+
+  03 Jan 2008; Markus Meier <maekke@gentoo.org> pavucontrol-0.9.4.ebuild:
+  x86 stable, bug #204219 and remove inexistent doc
 
 *pavucontrol-0.9.5 (31 Oct 2007)
 
