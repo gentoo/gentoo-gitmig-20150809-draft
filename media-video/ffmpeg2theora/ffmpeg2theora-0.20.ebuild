@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.20.ebuild,v 1.1 2008/01/03 16:11:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.20.ebuild,v 1.2 2008/01/03 16:14:12 drac Exp $
 
 inherit eutils
 
@@ -33,6 +33,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog README TODO
 	newdoc kino_export/README README.kino_export
-	insinto /usr/share/kino/scripts/exports
-	doins kino_export/ffmpeg2theora.sh
+	exeinto /usr/share/kino/scripts/exports
+	doexe kino_export/ffmpeg2theora.sh
 }
