@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/hcfusbmodem
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/ChangeLog,v 1.24 2007/11/05 23:01:03 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/ChangeLog,v 1.25 2008/01/03 12:20:27 mrness Exp $
+
+  03 Jan 2008; Alin Năstac <mrness@gentoo.org>
+  -files/hcfusbmodem-1.11-unset-locale.patch, -hcfusbmodem-1.11-r1.ebuild:
+  Remove old version.
 
 *hcfusbmodem-1.14 (05 Nov 2007)
 
