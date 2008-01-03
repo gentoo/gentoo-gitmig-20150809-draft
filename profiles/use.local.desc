@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3265 2008/01/02 22:17:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3266 2008/01/03 07:12:23 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2097,7 +2097,6 @@ x11-libs/qt:glib - Enable glib eventloop support
 x11-libs/qt:immqt - Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
 x11-libs/qt:pch - Enable precompiled header support for faster compilation times (gcc >3.4 only)
-x11-libs/qt-webkit:pch - Enable precompiled header support for faster compilation times (gcc > 3.4 only)
 x11-libs/qt:qt3support - Enable the Qt3Support libraries for Qt4
 x11-libs/qt-core:qt3support - Enable the Qt3Support libraries for Qt4
 x11-libs/qt-core:glib - Enable glib eventloop support
