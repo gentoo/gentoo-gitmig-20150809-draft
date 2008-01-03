@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0.ebuild,v 1.6 2008/01/03 18:38:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r1.ebuild,v 1.1 2008/01/03 18:38:29 swegener Exp $
 
 GCONF_DEBUG="no"
 
-inherit gnome2 python
+inherit gnome2 python eutils
 
 DESCRIPTION="GNOME Clipboard Manager"
 HOMEPAGE="http://glipper.sourceforge.net/"
@@ -25,6 +25,13 @@ DEPEND=">=dev-lang/python-2.4
 RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS ChangeLog NEWS"
+
+src_unpack() {
+	gnome2_src_unpack
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-binary-data.patch
+}
 
 src_install() {
 	gnome2_src_install py_compile=true
