@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg2theora
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.18 2007/08/12 19:14:55 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.19 2008/01/03 16:00:38 aballier Exp $
+
+  03 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  ffmpeg2theora-0.19.ebuild:
+  Keyword ~x86-fbsd, working fine here
 
 *ffmpeg2theora-0.19 (12 Aug 2007)
 
