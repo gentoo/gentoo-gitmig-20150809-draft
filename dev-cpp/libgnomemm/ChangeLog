@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libgnomemm
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.66 2007/10/10 09:09:12 remi Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.67 2008/01/03 20:33:40 eva Exp $
+
+*libgnomemm-2.20.0 (03 Jan 2008)
+
+  03 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +libgnomemm-2.20.0.ebuild:
+  bump to 2.20.0
 
   10 Oct 2007; Rémi Cardona <remi@gentoo.org> -libgnomemm-2.0.1.ebuild:
   remove 2.0.1 (also in bug #159996)
