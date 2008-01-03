@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8078 2008/01/03 12:16:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8079 2008/01/03 13:44:13 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -383,10 +383,6 @@ sys-auth/pam_keyring
 # no longer supported upstream.
 <net-misc/zaptel-1.2
 <net-misc/asterisk-sounds-1.2
-
-# Alin Năstac <mrness@gentoo.org> (08 Nov 2007)
-# Versions with kernel 2.4 support will be removed in 30 days.
-=net-dialup/ltmodem-8.31*
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (07 Nov 2007)
 # Masking for testing for the upcoming release since we don't want this hitting
