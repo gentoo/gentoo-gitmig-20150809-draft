@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.29.ebuild,v 1.8 2007/12/14 21:33:46 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.29.ebuild,v 1.9 2008/01/03 18:49:26 lack Exp $
 
 ROX_LIB_VER="2.0.0"
 inherit eutils rox
@@ -19,12 +19,6 @@ DEPEND="!rox-base/zeroinstall-injector"
 
 MY_PN="ROX-Session"
 APPNAME=${MY_PN}
-
-pkg_preinst() {
-	# need to fixup some permissions
-	cd "${D}/usr/lib/rox/${APPNAME}"
-	chmod 0755 browser Login RunROX SetupPanel
-}
 
 src_install() {
 	rox_src_install
