@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/hop
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/hop/ChangeLog,v 1.4 2007/12/05 10:58:27 hkbst Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/hop/ChangeLog,v 1.5 2008/01/03 13:47:32 hkbst Exp $
+
+*hop-1.8.5 (03 Jan 2008)
+
+  03 Jan 2008; Marijn Schouten <hkBst@gentoo.org> +hop-1.8.5.ebuild:
+  minor bump
 
 *hop-1.8.1 (05 Dec 2007)
 
