@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20.ebuild,v 1.4 2006/02/04 13:36:17 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20.ebuild,v 1.5 2008/01/03 20:36:50 aballier Exp $
 
 inherit findlib eutils
 
@@ -17,6 +17,15 @@ KEYWORDS="~amd64 x86 ppc"
 DEPEND=">=dev-lang/ocaml-3.08"
 
 MY_S="${WORKDIR}/${P/20/2}"
+
+pkg_setup() {
+	if ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "${PN} needs to be built with native code support from ocaml"
+		eerror "You first need to have a native code ocaml compiler."
+		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
+		die "Please install ocaml with ocamlopt useflag"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
