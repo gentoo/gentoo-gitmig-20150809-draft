@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlidl/camlidl-1.05.ebuild,v 1.1 2004/09/25 20:15:43 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlidl/camlidl-1.05.ebuild,v 1.2 2008/01/03 19:33:58 aballier Exp $
+
+inherit eutils
 
 DESCRIPTION="CamlIDL is a stub code generator for using C/C++ libraries from O'Caml"
 HOMEPAGE="http://caml.inria.fr/camlidl/"
@@ -10,6 +12,15 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 DEPEND=">=dev-lang/ocaml-3.07"
+
+pkg_setup() {
+	if ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "${PN} needs to be built with native code support from ocaml"
+		eerror "You first need to have a native code ocaml compiler."
+		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
+		die "Please install ocaml with ocamlopt useflag"
+	fi
+}
 
 src_compile() {
 	# Use the UNIX makefile
@@ -33,7 +44,7 @@ src_install() {
 	dodir ${libdir}/caml
 	dodir /usr/bin
 	# Install
-	emake BINDIR=${D}/usr/bin OCAMLLIB=${D}${libdir} install || die
+	emake BINDIR="${D}/usr/bin" OCAMLLIB="${D}${libdir}" install || die
 
 	# Documentation
 	dodoc README Changes
