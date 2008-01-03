@@ -1,0 +1,23 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## cmxa-install.dpatch by Samuel Mimram <smimram@debian.org>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: .cmxa are not generated on non-native archs, so don't install them.
+
+@DPATCH@
+diff -urNad coq-8.1+dfsg~/Makefile coq-8.1+dfsg/Makefile
+--- coq-8.1+dfsg~/Makefile	2007-02-18 13:25:29.000000000 +0100
++++ coq-8.1+dfsg/Makefile	2007-02-18 13:27:28.000000000 +0100
+@@ -1272,7 +1272,11 @@
+         parsing/parsing.cma tactics/tactics.cma toplevel/toplevel.cma \
+         parsing/highparsing.cma tactics/hightactics.cma contrib/contrib.cma
+ 
+-OBJECTCMXA=$(OBJECTCMA:.cma=.cmxa)
++ifeq ($(BEST),opt)
++  OBJECTCMXA=$(OBJECTCMA:.cma=.cmxa)
++else
++  OBJECTCMXA=
++endif
+ 
+ install-library:
+ 	$(MKDIR) $(FULLCOQLIB)

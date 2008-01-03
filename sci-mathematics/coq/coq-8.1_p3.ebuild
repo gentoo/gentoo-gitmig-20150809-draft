@@ -1,10 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p3.ebuild,v 1.2 2007/12/19 20:08:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p3.ebuild,v 1.3 2008/01/03 17:41:59 aballier Exp $
 
 inherit eutils multilib
 
-IUSE="norealanalysis ide debug"
+EAPI="1"
+
+IUSE="norealanalysis ide debug +ocamlopt"
 
 RESTRICT="strip"
 
@@ -25,6 +27,30 @@ ide? ( >=dev-ml/lablgtk-2.2.0 )"
 
 S="${WORKDIR}/${MY_P}"
 
+coq_need_ocamlopt() {
+	if use ocamlopt && ! built_with_use --missing true $1 ocamlopt; then
+		eerror "In order to build ${PN} with native code support from ocaml"
+		eerror "You first need to have a native code ocaml compiler and the related libraries."
+		eerror "You need to install $1 with ocamlopt useflag on."
+		die "Please install $1 with ocamlopt useflag"
+	fi
+}
+
+
+pkg_setup() {
+	coq_need_ocamlopt 'dev-lang/ocaml'
+	use ide && coq_need_ocamlopt 'dev-ml/lablgtk'
+	has_version '>=dev-lang/ocaml-3.10.0' && coq_need_ocamlopt 'dev-ml/camlp5'
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-noocamlopt.patch"
+	epatch "${FILESDIR}/${P}-cmxa-install.dpatch"
+}
+
 src_compile() {
 	local myconf="--prefix /usr \
 		--bindir /usr/bin \
@@ -38,10 +64,12 @@ src_compile() {
 	use norealanalysis || myconf="$myconf --reals all"
 
 	if use ide; then
-		myconf="$myconf --coqide opt"
+		use ocamlopt && myconf="$myconf --coqide opt"
+		use ocamlopt || myconf="$myconf --coqide byte"
 	else
 		myconf="$myconf --coqide no"
 	fi
+	use ocamlopt || myconf="$myconf -byte-only"
 
 	./configure $myconf || die "configure failed"
 
