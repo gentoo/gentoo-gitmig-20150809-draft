@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocamlnet
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.25 2007/12/31 19:35:50 mabi Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.26 2008/01/03 18:31:37 aballier Exp $
+
+  03 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  ocamlnet-2.2.9-r1.ebuild:
+  Allow to disable ocamlopt via an useflag
 
   31 Dec 2007; Matti Bickel <mabi@gentoo.org> ocamlnet-2.2.8.1.ebuild:
   ppc stable (bug #195535)

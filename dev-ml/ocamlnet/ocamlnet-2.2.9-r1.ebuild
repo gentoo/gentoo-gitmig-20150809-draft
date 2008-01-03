@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-2.2.9-r1.ebuild,v 1.1 2007/12/17 18:00:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-2.2.9-r1.ebuild,v 1.2 2008/01/03 18:31:37 aballier Exp $
 
 inherit eutils findlib
+
+EAPI="1"
 
 DESCRIPTION="Modules for OCaml application-level Internet protocols"
 HOMEPAGE="http://ocamlnet.sourceforge.net"
@@ -11,7 +13,7 @@ SRC_URI="mirror://sourceforge/ocamlnet/${P}.tar.gz"
 LICENSE="as-is GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="gtk ssl tk httpd"
+IUSE="gtk ssl tk httpd +ocamlopt"
 
 # the auth-dh compile flag has been disabled as well, since it depends on
 # ocaml-cryptgps, which is not available.
@@ -29,6 +31,12 @@ RDEPEND="${DEPEND}"
 pkg_setup() {
 	if use tk && ! built_with_use 'dev-lang/ocaml' tk ;
 		 then die "If you want to enable tcl/tk, you need to rebuild dev-lang/ocaml with the 'tk' USE flag";
+	fi
+	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "In order to build ${PN} with native code support from ocaml"
+		eerror "You first need to have a native code ocaml compiler."
+		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
+		die "Please install ocaml with ocamlopt useflag"
 	fi
 }
 
@@ -65,9 +73,13 @@ src_compile() {
 		$(ocamlnet_use_with httpd nethttpd) \
 		|| die "Error : econf failed!"
 
-	emake -j1 all opt || die "make failed"
+	emake -j1 all || die "make failed"
+	if use ocamlopt; then
+		emake -j1 opt || die "make failed"
+	fi
 }
 
 src_install() {
+	export STRIP_MASK="*/bin/*"
 	findlib_src_install
 }
