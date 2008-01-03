@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.0.0_rc11.ebuild,v 1.1 2007/12/31 11:34:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.0.0_rc11.ebuild,v 1.2 2008/01/03 20:40:02 armin76 Exp $
 
 inherit eutils qt4 multilib
 
@@ -18,10 +18,12 @@ IUSE=""
 
 DEPEND=">=net-libs/rb_libtorrent-0.13_pre1876
 	$(qt4_min_version 4.2)
-	>=dev-lang/python-2.3
 	dev-libs/boost
 	net-misc/curl
 	dev-cpp/commoncpp2"
+RDEPEND="${DEPEND}
+	>=dev-lang/python-2.3"
+
 
 pkg_setup() {
 	# We need boost built with threads
