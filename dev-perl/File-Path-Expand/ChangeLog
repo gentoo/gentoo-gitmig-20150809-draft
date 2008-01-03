@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Path-Expand
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Path-Expand/ChangeLog,v 1.3 2008/01/03 01:25:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Path-Expand/ChangeLog,v 1.4 2008/01/03 01:53:49 joslwah Exp $
+
+  03 Jan 2008; Joshua <joslwah@gentoo.org> File-Path-Expand-1.02.ebuild:
+  Dependency on dev-perl/module-build added. Thanks to ranger for picking this
+  up.
 
   03 Jan 2008; Brent Baude <ranger@gentoo.org> File-Path-Expand-1.02.ebuild:
   Marking File-Path-Expand-1.02 ~ppc64 for bug 204036
