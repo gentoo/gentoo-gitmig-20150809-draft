@@ -1,0 +1,32 @@
+diff -Naur taglib-sharp-2.0.2.0/docs/Makefile.am taglib-sharp-2.0.2.0.new/docs/Makefile.am
+--- taglib-sharp-2.0.2.0/docs/Makefile.am	2007-06-11 09:35:31.000000000 +0530
++++ taglib-sharp-2.0.2.0.new/docs/Makefile.am	2007-11-26 02:37:20.023389485 +0530
+@@ -33,12 +33,6 @@
+ 
+ taglib-sharp-docs.zip taglib-sharp-docs.tree: $(srcdir)/en/*/*.xml $(srcdir)/en/*.xml
+ 	$(DOC_ASSEMBLER) $(srcdir)/en
+-
+-install-data-hook:
+-	$(MONO) $(top_builddir)/docs/MonodocNodeConfig.exe --insert "TagLib#" classlib-taglib-sharp $(DOCDIR)/../monodoc.xml
+-
+-uninstall-hook:
+-	$(MONO) $(top_builddir)/docs/MonodocNodeConfig.exe --remove classlib-taglib-sharp $(DOCDIR)/../monodoc.xml
+ endif
+ 
+ EXTRA_DIST = \
+diff -Naur taglib-sharp-2.0.2.0/docs/Makefile.in taglib-sharp-2.0.2.0.new/docs/Makefile.in
+--- taglib-sharp-2.0.2.0/docs/Makefile.in	2007-07-04 03:42:06.000000000 +0530
++++ taglib-sharp-2.0.2.0.new/docs/Makefile.in	2007-11-26 02:37:45.355848954 +0530
+@@ -386,12 +386,6 @@
+ 
+ @BUILD_DOCS_TRUE@taglib-sharp-docs.zip taglib-sharp-docs.tree: $(srcdir)/en/*/*.xml $(srcdir)/en/*.xml
+ @BUILD_DOCS_TRUE@	$(DOC_ASSEMBLER) $(srcdir)/en
+-
+-@BUILD_DOCS_TRUE@install-data-hook:
+-@BUILD_DOCS_TRUE@	$(MONO) $(top_builddir)/docs/MonodocNodeConfig.exe --insert "TagLib#" classlib-taglib-sharp $(DOCDIR)/../monodoc.xml
+-
+-@BUILD_DOCS_TRUE@uninstall-hook:
+-@BUILD_DOCS_TRUE@	$(MONO) $(top_builddir)/docs/MonodocNodeConfig.exe --remove classlib-taglib-sharp $(DOCDIR)/../monodoc.xml
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

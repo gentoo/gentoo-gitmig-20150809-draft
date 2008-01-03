@@ -1,0 +1,24 @@
+diff -Naur taglib-sharp-2.0.2.0/docs/Makefile.am taglib-sharp-2.0.2.0.new/docs/Makefile.am
+--- taglib-sharp-2.0.2.0/docs/Makefile.am	2007-11-26 00:56:05.680848050 +0530
++++ taglib-sharp-2.0.2.0.new/docs/Makefile.am	2007-11-26 00:55:41.760847655 +0530
+@@ -9,7 +9,7 @@
+ if BUILD_DOCS
+ all:
+ 
+-monodocdir = $(DESTDIR)$(DOCDIR)
++monodocdir = $(DOCDIR)
+ monodoc_DATA = \
+ 	taglib-sharp-docs.zip \
+ 	taglib-sharp-docs.tree \
+diff -Naur taglib-sharp-2.0.2.0/docs/Makefile.in taglib-sharp-2.0.2.0.new/docs/Makefile.in
+--- taglib-sharp-2.0.2.0/docs/Makefile.in	2007-11-26 00:56:05.681849318 +0530
++++ taglib-sharp-2.0.2.0.new/docs/Makefile.in	2007-11-26 00:55:22.030848788 +0530
+@@ -162,7 +162,7 @@
+ 	$(top_builddir)/src/taglib-sharp.dll
+ 
+ ASSEMBLIES_BUILD = $(foreach asm,$(ASSEMBLIES),$(addprefix -assembly:,$(asm)))
+-@BUILD_DOCS_TRUE@monodocdir = $(DESTDIR)$(DOCDIR)
++@BUILD_DOCS_TRUE@monodocdir = $(DOCDIR)
+ @BUILD_DOCS_TRUE@monodoc_DATA = \
+ @BUILD_DOCS_TRUE@	taglib-sharp-docs.zip \
+ @BUILD_DOCS_TRUE@	taglib-sharp-docs.tree \
