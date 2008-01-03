@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.10.ebuild,v 1.1 2007/10/13 12:09:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.10.ebuild,v 1.2 2008/01/03 20:02:41 hawking Exp $
 
 inherit distutils eutils
 
@@ -25,7 +25,7 @@ DOCS="AUTHORS CHANGES INSTALL"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${P}.patch
+	epatch "${FILESDIR}"/${P}.patch
 }
 
 src_compile() {
