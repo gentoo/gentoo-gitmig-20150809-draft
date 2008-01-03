@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-3.0.1.ebuild,v 1.1 2008/01/02 00:17:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-3.0.1.ebuild,v 1.2 2008/01/03 12:10:49 aballier Exp $
 
-inherit cmake-utils
+inherit cmake-utils eutils
 
 DESCRIPTION="Client library to access metadata of mp3/vorbis/CD media"
 HOMEPAGE="http://www.musicbrainz.org/"
@@ -22,6 +22,13 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/lib${P}
 
 CMAKE_IN_SOURCE_BUILD=true
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-gcc-4.3-includes.patch"
+}
 
 src_install() {
 	cmake-utils_src_install

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.74 2008/01/02 00:40:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.75 2008/01/03 12:10:49 aballier Exp $
+
+  03 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/musicbrainz-3.0.1-gcc-4.3-includes.patch, musicbrainz-3.0.1.ebuild:
+  Add patch to fix build with gcc 4.3 for musicbrainz3, by Ryan Hill
+  <dirtyepic@gentoo.org>, bug #204152
 
   02 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   +files/musicbrainz-2.1.5-gcc43-includes.patch, musicbrainz-2.1.5.ebuild:
