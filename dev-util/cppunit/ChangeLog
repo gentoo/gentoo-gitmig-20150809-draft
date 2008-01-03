@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppunit
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.38 2007/09/25 13:56:20 caleb Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.39 2008/01/03 20:05:00 armin76 Exp $
+
+  03 Jan 2008; Raúl Porcel <armin76@gentoo.org> cppunit-1.12.0.ebuild:
+  Add alpha fix, and add ~alpha
 
   25 Sep 2007; Caleb Tennis <caleb@gentoo.org> cppunit-1.12.0.ebuild:
   Change qmake to eqmake3 from qt3 ebuild so we get the correct qmake (see bug
