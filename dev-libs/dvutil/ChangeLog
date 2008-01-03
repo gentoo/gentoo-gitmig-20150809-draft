@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvutil
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.29 2008/01/03 21:59:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.30 2008/01/03 22:00:11 dev-zero Exp $
+
+  03 Jan 2008; Tiziano Müller <dev-zero@gentoo.org> dvutil-0.15.5.ebuild:
+  ... and added ~amd64 keyword.
 
   03 Jan 2008; Tiziano Müller <dev-zero@gentoo.org> dvutil-0.15.5.ebuild:
   ... and fixed problems with detecting openssl.
