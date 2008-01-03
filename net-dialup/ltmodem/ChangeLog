@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ltmodem
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.37 2007/12/28 11:13:40 maekke Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.38 2008/01/03 13:41:48 mrness Exp $
+
+  03 Jan 2008; Alin Năstac <mrness@gentoo.org>
+  -files/ltmodem-2.6-alk-8-kernel-changes.patch, -files/ltmodem_devfs,
+  -ltmodem-8.31_alpha10-r3.ebuild:
+  Remove obsolete version, the last one compatible with 2.4 kernels.
 
   28 Dec 2007; Markus Meier <maekke@gentoo.org> ltmodem-2.6.9.ebuild:
   x86 stable, bug #202848
