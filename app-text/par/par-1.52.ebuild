@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/par/par-1.52.ebuild,v 1.9 2006/12/02 11:16:46 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/par/par-1.52.ebuild,v 1.10 2008/01/03 18:16:00 grobian Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.nicemice.net/par/${MY_P/./}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc-macos ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~sparc ~x86"
 IUSE=""
 
 DEPEND="!dev-util/par
@@ -20,7 +20,8 @@ DEPEND="!dev-util/par
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	make -f protoMakefile CC="$(tc-getCC) -c $CFLAGS" || die 'make failed'
+	make -f protoMakefile CC="$(tc-getCC) -c $CFLAGS" \
+		LINK1="$(tc-getCC) $LDFLAGS" || die 'make failed'
 }
 
 src_install() {
