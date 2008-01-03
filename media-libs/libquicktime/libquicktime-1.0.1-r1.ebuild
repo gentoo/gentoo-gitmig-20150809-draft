@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.0.1-r1.ebuild,v 1.2 2008/01/02 16:49:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.0.1-r1.ebuild,v 1.3 2008/01/03 14:25:19 aballier Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="mmx X opengl dv gtk alsa aac encode png jpeg vorbis lame x264 ffmpeg"
 
@@ -55,6 +55,8 @@ src_unpack() {
 	# Copy config.rapth to avoid failures..
 	cp /usr/share/gettext/config.rpath .
 	AT_M4DIR="m4" eautoreconf
+	# Dont forget to run elibtoolize for .so verionning on freebsd if we drop
+	# eautoreconf...
 }
 src_compile() {
 	local MY_OPTS=""
