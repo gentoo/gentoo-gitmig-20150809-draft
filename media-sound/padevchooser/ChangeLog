@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/padevchooser
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.7 2007/12/31 22:56:11 josejx Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.8 2008/01/03 22:53:34 maekke Exp $
+
+  03 Jan 2008; Markus Meier <maekke@gentoo.org> padevchooser-0.9.3.ebuild:
+  x86 stable, bug #204219
 
   31 Dec 2007; Joseph Jezak <josejx@gentoo.org> padevchooser-0.9.3.ebuild:
   Marked ~ppc.
