@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/cynthiune
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.10 2008/01/01 23:16:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.11 2008/01/04 13:01:27 voyageur Exp $
+
+  04 Jan 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/cynthiune-0.9.5-NSMutableDictionary.patch,
+  cynthiune-0.9.5-r1.ebuild:
+  Add compilation fix for stricter gnustep
 
   01 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   cynthiune-0.9.5-r1.ebuild:

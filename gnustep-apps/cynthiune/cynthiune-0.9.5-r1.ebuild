@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r1.ebuild,v 1.2 2008/01/01 23:16:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r1.ebuild,v 1.3 2008/01/04 13:01:27 voyageur Exp $
 
 inherit gnustep-2
 
@@ -33,11 +33,12 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-flac-1.1.3.patch
 	epatch "${FILESDIR}"/${P}-set-macro.patch
 	epatch "${FILESDIR}"/${P}-NSCellExtensions.patch
+	epatch "${FILESDIR}"/${P}-NSMutableDictionary.patch
 	epatch "${FILESDIR}"/${P}-gnustep-make-2.patch
 }
 
