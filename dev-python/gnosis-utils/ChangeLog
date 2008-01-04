@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnosis-utils
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/ChangeLog,v 1.9 2008/01/04 09:16:49 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/ChangeLog,v 1.10 2008/01/04 15:13:18 maekke Exp $
+
+  04 Jan 2008; Markus Meier <maekke@gentoo.org> gnosis-utils-1.2.1.ebuild:
+  x86 stable, bug #204251
 
   04 Jan 2008; Ali Polatel <hawking@gentoo.org> gnosis-utils-1.2.1.ebuild:
   Added src_test.
