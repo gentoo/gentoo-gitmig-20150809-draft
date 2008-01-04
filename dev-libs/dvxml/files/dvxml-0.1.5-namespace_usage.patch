@@ -1,0 +1,215 @@
+diff -Naur dvxml-0.1.5.orig/dvxml/node.C dvxml-0.1.5/dvxml/node.C
+--- dvxml-0.1.5.orig/dvxml/node.C	2008-01-04 09:22:42.000000000 +0100
++++ dvxml-0.1.5/dvxml/node.C	2008-01-04 09:24:21.000000000 +0100
+@@ -3,9 +3,12 @@
+ #include <iostream>
+ #include <dvutil/ntostr.h>
+ 
++namespace Dv {
++namespace Xml {
++
+ //////// Auxiliary assertion function.
+ void
+-Dv::Xml::Node::Ref::assert_valid(const std::string& operation) const 
++Node::Ref::assert_valid(const std::string& operation) const 
+   throw (Dv::Xml::Exception) {
+ if (nil())
+   throw Dv::Xml::Exception(operation + ": nil node");
+@@ -13,19 +16,19 @@
+ 
+ //////// Auxiliary Dv::Xml::Node::AttributeReference class.
+ 
+-Dv::Xml::Node::AttributeReference::AttributeReference(const xml::node::iterator n,
++Node::AttributeReference::AttributeReference(const xml::node::iterator n,
+   const std::string& nm): name(nm), node(n) {
+ }
+ 
+ const std::string&
+-Dv::Xml::Node::AttributeReference::operator=(const std::string& value) {
++Node::AttributeReference::operator=(const std::string& value) {
+ // node->get_attributes().insert(name.c_str(), Dv::Xml::to_html(value).c_str());
+ node->get_attributes().insert(name.c_str(), value.c_str());
+ return value;
+ }
+ 
+ std::string
+-Dv::Xml::Node::AttributeReference::str() const {
++Node::AttributeReference::str() const {
+ xml::attributes::iterator it(node->get_attributes().find(name.c_str()));
+ if ( it == node->get_attributes().end() ) 
+   return "";
+@@ -35,28 +38,28 @@
+ 
+ //////// Constructors.
+ 
+-Dv::Xml::Node::Ref::Ref(xml::node& node): it_(node.self()), nil_(false) {
++Node::Ref::Ref(xml::node& node): it_(node.self()), nil_(false) {
+ }
+ 
+-Dv::Xml::Node::Ref::Ref(xml::node::iterator it, bool nil): it_(it), nil_(nil) {
++Node::Ref::Ref(xml::node::iterator it, bool nil): it_(it), nil_(nil) {
+ }
+ 
+ //////// Retrieve info on Node
+ std::string
+-Dv::Xml::Node::Ref::name() const throw (Exception) {
++Node::Ref::name() const throw (Exception) {
+ assert_valid("name()");
+ return it_->get_name();
+ }
+ 
+-Dv::Xml::Node::Ref::operator const xml::node*() const {
++Node::Ref::operator const xml::node*() const {
+ if (nil())
+   return 0;
+ return &*it_;
+ }
+ 
+ //////// Setting Node properties
+-Dv::Xml::Node::Ref&
+-Dv::Xml::Node::Ref::name(const std::string& nm) throw (Exception) {
++Node::Ref&
++Node::Ref::name(const std::string& nm) throw (Exception) {
+ assert_valid("name(name)");
+ it_->set_name(nm.c_str());
+ return *this;
+@@ -64,16 +67,16 @@
+ 
+ //////// Finding and creating children.
+ 
+-Dv::Xml::Node::Ref
+-Dv::Xml::operator/(const Dv::Xml::Node::Ref& ref, const std::string& nm) 
++Node::Ref
++operator/(const Dv::Xml::Node::Ref& ref, const std::string& nm) 
+   throw (Dv::Xml::Exception) {
+ ref.assert_valid(nm + "/");
+ xml::node::iterator itc(ref.it_->find(nm.c_str()));
+ return Dv::Xml::Node::Ref(itc, itc == ref.it_->end() );
+ }
+ 
+-Dv::Xml::Node::Ref
+-Dv::Xml::operator>>(const Dv::Xml::Node::Ref& ref, const std::string& name) 
++Node::Ref
++operator>>(const Dv::Xml::Node::Ref& ref, const std::string& name) 
+   throw (Dv::Xml::Exception) {
+ static const std::string op(">>");
+ ref.assert_valid(op + name);
+@@ -81,8 +84,8 @@
+ return Dv::Xml::Node::Ref(ref.it_->insert(n));
+ } 
+ 
+-Dv::Xml::Node::Ref
+-Dv::Xml::operator>>(const Dv::Xml::Node::Ref& ref, const Dv::Xml::Node::Ref& nref) 
++Node::Ref
++operator>>(const Dv::Xml::Node::Ref& ref, const Dv::Xml::Node::Ref& nref) 
+   throw (Dv::Xml::Exception) {
+ ref.assert_valid("BadRef::operator>>(const Ref&)");
+ nref.assert_valid("operator>>(const BadRef&)");
+@@ -91,8 +94,8 @@
+ 
+ //////// Iterator operations
+ 
+-Dv::Xml::Node::Ref
+-Dv::Xml::Node::Ref::operator++() throw (Exception) {
++Node::Ref
++Node::Ref::operator++() throw (Exception) {
+ assert_valid("operator++");
+ xml::node::iterator parent(it_->parent());
+ xml::node::iterator next(it_);
+@@ -101,14 +104,14 @@
+ return *this;
+ }
+ 
+-Dv::Xml::Node::Ref
+-Dv::Xml::Node::Ref::end() const throw (Exception) {
++Node::Ref
++Node::Ref::end() const throw (Exception) {
+ assert_valid("end()");
+ return Ref(it_->end(), true);
+ }
+ 
+ bool
+-Dv::Xml::operator==(const Dv::Xml::Node::Ref& n, const Dv::Xml::Node::Ref& m) {
++operator==(const Dv::Xml::Node::Ref& n, const Dv::Xml::Node::Ref& m) {
+ if ( n.nil() )
+   return m.nil();
+ else
+@@ -118,14 +121,14 @@
+ //////// Setting and retrieving attributes.
+ 
+ bool
+-Dv::Xml::Node::Ref::defined(const std::string& name) const throw (Exception) {
++Node::Ref::defined(const std::string& name) const throw (Exception) {
+ assert_valid(name + "(defined)");
+ xml::attributes::iterator it(it_->get_attributes().find(name.c_str()));
+ return ( it != it_->get_attributes().end() );
+ }
+ 
+ const std::string
+-Dv::Xml::Node::Ref::operator()(const std::string& nm) const throw (Exception) {
++Node::Ref::operator()(const std::string& nm) const throw (Exception) {
+ assert_valid(nm + "(get_attr)");
+ xml::attributes::iterator it(it_->get_attributes().find(nm.c_str()));
+ if ( it == it_->get_attributes().end() )
+@@ -133,20 +136,20 @@
+ return it->get_value();
+ }
+ 
+-Dv::Xml::Node::AttributeReference
+-Dv::Xml::Node::Ref::operator[](const std::string& name) throw (Exception) {
++Node::AttributeReference
++Node::Ref::operator[](const std::string& name) throw (Exception) {
+ assert_valid(name + "[]");
+ return AttributeReference(it_, name);
+ }
+ 
+ //////// Setting and retrieving text content.
+ 
+-Dv::Xml::Node::Ref::operator std::string() const throw (Exception) {
++Node::Ref::operator std::string() const throw (Exception) {
+ return str(true);
+ }
+ 
+ std::string
+-Dv::Xml::Node::Ref::str(bool trim) const throw (Exception) {
++Node::Ref::str(bool trim) const throw (Exception) {
+ assert_valid("get_content");
+ if (trim) {
+   std::string result(it_->get_content());
+@@ -157,8 +160,8 @@
+   return it_->get_content();
+ }
+ 
+-Dv::Xml::Node::Ref&
+-Dv::Xml::Node::Ref::operator=(const std::string& text) throw (Exception) {
++Node::Ref&
++Node::Ref::operator=(const std::string& text) throw (Exception) {
+ assert_valid(text + ": set_content");
+ // it_->set_content(Dv::Xml::to_html(text).c_str());
+ it_->set_content(text.c_str());
+@@ -168,8 +171,8 @@
+ //////// Replacing a node.
+ 
+ 
+-Dv::Xml::Node::Ref&
+-Dv::Xml::Node::Ref::replace(const Ref& ref) {
++Node::Ref&
++Node::Ref::replace(const Ref& ref) {
+ assert_valid("replace");
+ if (this == &ref)
+   return *this;
+@@ -184,10 +187,13 @@
+ }
+ 
+ std::ostream&
+-Dv::Xml::operator<<(std::ostream& os, const Dv::Xml::Node::Ref& ref) {
++operator<<(std::ostream& os, const Dv::Xml::Node::Ref& ref) {
+ const xml::node* p(static_cast<const xml::node*>(ref));
+ if (p)
+   return os << *p;
+ else
+   return os << "NIL";
+ }
++
++} // namespace Xml
++} // namespace Dv
