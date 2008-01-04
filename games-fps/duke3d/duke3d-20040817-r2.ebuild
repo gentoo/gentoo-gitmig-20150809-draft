@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r2.ebuild,v 1.3 2007/11/20 02:16:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r2.ebuild,v 1.4 2008/01/04 20:59:41 mr_bones_ Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -98,6 +98,7 @@ src_unpack() {
 
 	# causes crazy redefine errors with gcc-3.[2-4].x
 	replace-flags -O3 -O2
+	strip-flags #203969
 }
 
 src_compile() {
