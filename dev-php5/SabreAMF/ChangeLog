@@ -1,0 +1,14 @@
+# ChangeLog for dev-php5/SabreAMF
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/SabreAMF/ChangeLog,v 1.1 2008/01/04 13:24:00 jokey Exp $
+
+*SabreAMF-1.0.174 (04 Jan 2008)
+
+  04 Jan 2008; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +SabreAMF-1.0.174.ebuild:
+  Initial import from project overlay
+
+  19 Dec 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +SabreAMF-1.0.174.ebuild:
+  New ebuild, Bug 202753
+
