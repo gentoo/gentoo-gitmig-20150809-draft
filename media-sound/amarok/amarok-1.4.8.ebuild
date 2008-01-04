@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.8.ebuild,v 1.4 2008/01/02 19:20:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.8.ebuild,v 1.5 2008/01/04 21:50:47 rich0 Exp $
 
 LANGS="af ar az be bg bn br ca cs cy da de el en_GB eo es et eu fa fi
 fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds ne nl nn pa
@@ -35,7 +35,7 @@ HOMEPAGE="http://amarok.kde.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="mp4 kde mysql amazon opengl postgres
 visualization ipod ifp real njb mtp musicbrainz daap
 python"

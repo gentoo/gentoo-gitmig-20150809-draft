@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.255 2008/01/02 19:20:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.256 2008/01/04 21:50:47 rich0 Exp $
+
+  04 Jan 2008; Richard Freeman <rich0@gentoo.org> amarok-1.4.8.ebuild:
+  amd64 stable - bug #204046
 
   02 Jan 2008; Brent Baude <ranger@gentoo.org> amarok-1.4.8.ebuild:
   Marking amarok-1.4.8 ppc for bug 204046
