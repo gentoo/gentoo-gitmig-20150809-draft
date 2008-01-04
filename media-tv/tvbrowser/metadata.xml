@@ -8,8 +8,8 @@
   <description>Proxied maintainer</description>
 </maintainer>
 <maintainer>
-  <email>zzam@gentoo.org</email>
-  <name>Matthias Schwarzott</name>
+  <email>vdr@gentoo.org</email>
+  <name>Gentoo VDR Project</name>
   <description>Proxy maintainer</description>
 </maintainer>
 </pkgmetadata>
