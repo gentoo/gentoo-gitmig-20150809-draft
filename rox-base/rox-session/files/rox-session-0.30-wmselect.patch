@@ -1,5 +1,5 @@
 --- ROX-Session/wm.py.orig	2008-01-04 10:42:40.000000000 -0500
-+++ ROX-Session/wm.py	2008-01-04 15:26:26.000000000 -0500
++++ ROX-Session/wm.py	2008-01-04 16:13:11.000000000 -0500
 @@ -44,7 +44,8 @@
  		import session
  		session.may_run_login_script()
@@ -34,8 +34,8 @@
  	box = rox.Dialog('Choose a window manager', None,
  		g.DIALOG_MODAL | g.DIALOG_NO_SEPARATOR)
 -	box.add_button(g.STOCK_CLOSE, g.RESPONSE_CANCEL)
-+	if current_wm is not None:
-+		box.add_button(g.STOCK_CLOSE, g.RESPONSE_CANCEL)
++	# TODO: Perhaps replace this with a 'Logout' button instead?
++	#box.add_button(g.STOCK_CLOSE, g.RESPONSE_CANCEL)
  	box.add_button(g.STOCK_EXECUTE, g.RESPONSE_OK)
  	box.set_position(g.WIN_POS_CENTER)
  

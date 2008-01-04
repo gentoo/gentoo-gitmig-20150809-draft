@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-session
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.31 2008/01/04 20:55:23 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.32 2008/01/04 21:19:29 lack Exp $
+
+  04 Jan 2008; Jim Ramsay <lack@gentoo.org>
+  files/rox-session-0.30-wmselect.patch:
+  Slight cosmetic change to the patch
 
 *rox-session-0.30-r3 (04 Jan 2008)
 
