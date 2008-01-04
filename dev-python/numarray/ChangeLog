@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numarray
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.29 2008/01/02 11:29:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.30 2008/01/04 14:26:03 bicatali Exp $
+
+  04 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -numarray-1.4.1.ebuild, -numarray-1.5.0.ebuild:
+  Removed obsolete versions
 
   02 Jan 2008; Raúl Porcel <armin76@gentoo.org> numarray-1.5.2-r1.ebuild:
   Re-add ~alpha/~ia64
