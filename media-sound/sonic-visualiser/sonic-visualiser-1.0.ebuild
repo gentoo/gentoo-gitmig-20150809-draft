@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.0.ebuild,v 1.1 2007/11/18 19:12:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.0.ebuild,v 1.2 2008/01/04 02:55:02 sbriesen Exp $
 
 inherit eutils qt4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/sv1/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="fftw jack mad ogg"
 
 RDEPEND="$(qt4_min_version 4.2)
