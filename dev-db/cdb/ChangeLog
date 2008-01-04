@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.41 2007/11/17 18:20:44 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.42 2008/01/04 22:56:15 hanno Exp $
+
+  04 Jan 2008; Hanno Boeck <hanno@gentoo.org> cdb-0.75-r2.ebuild:
+  Change license to public domain (according to source files).
 
   17 Nov 2007; Samuli Suominen <drac@gentoo.org> cdb-0.75-r2.ebuild:
   amd64 stable wrt #198575
