@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libfishsound
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/ChangeLog,v 1.1 2007/11/18 16:39:09 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/ChangeLog,v 1.2 2008/01/04 02:53:27 sbriesen Exp $
+
+  04 Jan 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  libfishsound-0.8.1.ebuild:
+  added ~x86 keyword
 
 *libfishsound-0.8.1 (18 Nov 2007)
 

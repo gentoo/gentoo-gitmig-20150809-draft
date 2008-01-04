@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/libfishsound-0.8.1.ebuild,v 1.1 2007/11/18 16:39:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/libfishsound-0.8.1.ebuild,v 1.2 2008/01/04 02:53:27 sbriesen Exp $
 
 DESCRIPTION="Simple programming interface for decoding and encoding audio data using Xiph.Org codecs (Vorbis and Speex)"
 HOMEPAGE="http://www.annodex.net/software/libfishsound/html/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.annodex.net/software/libfishsound/download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc vorbis"
 
 RDEPEND="vorbis? ( media-libs/libvorbis media-libs/libogg )
