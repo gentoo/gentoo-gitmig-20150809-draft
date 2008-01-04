@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlsdl
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlsdl/ChangeLog,v 1.10 2007/02/09 02:49:18 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlsdl/ChangeLog,v 1.11 2008/01/04 01:31:09 aballier Exp $
+
+  04 Jan 2008; Alexis Ballier <aballier@gentoo.org> ocamlsdl-0.7.2.ebuild:
+  ~amd64, working fine here
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
