@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.33 2008/01/04 04:08:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.34 2008/01/04 05:24:28 nerdboy Exp $
+
+  04 Jan 2008; Steve Arnold <nerdboy@gentoo.org> gdal-1.4.2.ebuild:
+  fixed mysql borkage; no idea what happened...
 
   04 Jan 2008; Steve Arnold <nerdboy@gentoo.org>
   -files/gdal-1.2.6-installpathfix.patch,

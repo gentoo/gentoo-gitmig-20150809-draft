@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.4.2.ebuild,v 1.2 2008/01/04 04:08:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.4.2.ebuild,v 1.3 2008/01/04 05:24:28 nerdboy Exp $
 
 inherit eutils libtool distutils toolchain-funcs
 
-IUSE="jpeg png geos gif jpeg2k netcdf hdf hdf5 python ruby postgres \
-	odbc sqlite ogdi fits gml doc debug"
+IUSE="debug doc fits geos gif gml hdf hdf5 jpeg jpeg2k mysql netcdf \
+	odbc png ogdi postgres python ruby sqlite"
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats (includes OGR support)"
 HOMEPAGE="http://www.gdal.org/"
@@ -36,6 +36,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	    hdf? ( sci-libs/hdf )
 	)
 	jpeg2k? ( media-libs/jasper )
+	mysql? ( virtual/mysql )
 	odbc?   ( dev-db/unixODBC )
 	geos?   ( >=sci-libs/geos-2.2.1 )
 	sqlite? ( >=dev-db/sqlite-3 )
@@ -106,7 +107,7 @@ src_compile() {
 	econf ${pkg_conf} ${use_conf} || die "econf failed"
 	# parallel makes fail on the ogr stuff (C++, what can I say?)
 	# also failing with gcc4 in libcsf
-	make || die "make failed"
+	emake -j1 || die "make failed"
 	if useq ruby ; then
 	    cd "${S}"/swig
 	    make build || die "make ruby failed"
