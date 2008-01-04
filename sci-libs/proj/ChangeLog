@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/proj
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.10 2006/11/24 20:34:56 djay Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.11 2008/01/04 16:42:11 bicatali Exp $
+
+*proj-4.6.0 (04 Jan 2008)
+
+  04 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org> +proj-4.6.0.ebuild:
+  Version bump
 
 *proj-4.5.0 (24 Nov 2006)
 
