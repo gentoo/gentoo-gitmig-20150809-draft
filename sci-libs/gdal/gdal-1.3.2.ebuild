@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.2.ebuild,v 1.4 2007/01/05 09:08:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.2.ebuild,v 1.5 2008/01/04 04:08:15 nerdboy Exp $
 
 inherit eutils libtool distutils toolchain-funcs
 
@@ -28,7 +28,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 		>=dev-lang/swig-1.3.28 )
 	fits? ( sci-libs/cfitsio )
 	ogdi? ( sci-libs/ogdi )
-	gml? ( dev-libs/xerces-c )
+	gml? ( <dev-libs/xerces-c-2.8.0 )
 	hdf5? ( >=sci-libs/hdf5-1.6.4 )
 	postgres? ( dev-db/postgresql )
 	|| (
@@ -43,11 +43,11 @@ DEPEND=">=sys-libs/zlib-1.1.4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-destdir.patch || die "epatch failed"
-	epatch ${FILESDIR}/${P}-ruby-install.patch || die "epatch failed"
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-destdir.patch" || die "epatch failed"
+	epatch "${FILESDIR}/${P}-ruby-install.patch" || die "epatch failed"
 	if [ $(gcc-major-version) -eq 4 ]; then
-	    epatch ${FILESDIR}/${P}-gcc4-stl.patch || die "epatch failed"
+	    epatch "${FILESDIR}/${P}-gcc4-stl.patch" || die "epatch failed"
 	fi
 	elibtoolize --patch-only
 	if useq netcdf && useq hdf; then
@@ -109,9 +109,9 @@ src_compile() {
 	# also failing with gcc4 in libcsf
 	make || die "make failed"
 	if useq ruby ; then
-	    cd ${S}/swig
+	    cd "${S}"/swig
 	    make build || die "make ruby failed"
-	    cd ${S}
+	    cd "${S}"
 	fi
 	if useq doc ; then
 	    make docs || die "make docs failed"
@@ -120,7 +120,7 @@ src_compile() {
 
 src_install() {
 	# einstall causes sandbox violations on /usr/lib/libgdal.so
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc Doxyfile.man Doxyfile HOWTO-RELEASE NEWS
 	if useq doc ; then
 	    dohtml html/* || die "install html failed"

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.14 2007/01/05 09:08:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.15 2008/01/04 04:08:15 nerdboy Exp $
 
 inherit eutils libtool distutils toolchain-funcs
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="MIT"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 # need to get these arches updated on several libs first
-#KEYWORDS="~alpha ~hppa ~ppc64"
+#KEYWORDS="~alpha ~hppa"
 
 DEPEND=">=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7.0
@@ -26,7 +26,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	python? ( dev-lang/python )
 	fits? ( sci-libs/cfitsio )
 	ogdi? ( sci-libs/ogdi )
-	gml? ( dev-libs/xerces-c )
+	gml? ( <dev-libs/xerces-c-2.8.0 )
 	hdf5? ( >=sci-libs/hdf5-1.6.4 )
 	postgres? ( dev-db/postgresql )
 	|| (
@@ -41,10 +41,10 @@ DEPEND=">=sys-libs/zlib-1.1.4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-installpathfix.patch || die "installpath patch failed"
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-installpathfix.patch" || die "installpath patch failed"
 	if [ $(gcc-major-version) -eq 4 ] ; then
-	    epatch ${FILESDIR}/${PN}-gcc4.patch || die "gcc4 patch failed"
+	    epatch "${FILESDIR}/${PN}-gcc4.patch" || die "gcc4 patch failed"
 	fi
 	elibtoolize --patch-only
 	if useq netcdf && useq hdf; then
@@ -111,7 +111,7 @@ src_compile() {
 
 src_install() {
 	# einstall causes sandbox violations on /usr/lib/libgdal.so
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc Doxyfile.man Doxyfile HOWTO-RELEASE NEWS
 	if useq doc ; then
 	    dohtml html/* || die "install html failed"
