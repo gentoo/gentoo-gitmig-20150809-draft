@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ounit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.7 2007/05/12 22:41:01 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.8 2008/01/04 01:38:29 aballier Exp $
+
+  04 Jan 2008; Alexis Ballier <aballier@gentoo.org> ounit-1.0.2.ebuild:
+  allow building without ocamlopt
 
 *ounit-1.0.2 (12 May 2007)
 
