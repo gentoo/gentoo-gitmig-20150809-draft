@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.81 2007/09/14 11:49:00 uberlord Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.82 2008/01/04 01:19:07 ranger Exp $
+
+  04 Jan 2008; Brent Baude <ranger@gentoo.org> lcms-1.17.ebuild:
+  Marking lcms-1.17 ppc64 for bug 203237
 
   14 Sep 2007; Roy Marples <uberlord@gentoo.org> lcms-1.17.ebuild:
   elibtoolize now patches install-sh for us.
