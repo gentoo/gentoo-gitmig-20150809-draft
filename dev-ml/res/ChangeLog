@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/res
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.4 2007/02/09 07:37:56 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.5 2008/01/04 02:19:53 aballier Exp $
+
+*res-2.2.5 (04 Jan 2008)
+
+  04 Jan 2008; Alexis Ballier <aballier@gentoo.org> +res-2.2.5.ebuild:
+  version bump, allow to build without ocamlopt
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
