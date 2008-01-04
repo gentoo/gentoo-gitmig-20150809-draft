@@ -1,6 +1,15 @@
 # ChangeLog for rox-base/rox-session
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.30 2008/01/03 18:49:26 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.31 2008/01/04 20:55:23 lack Exp $
+
+*rox-session-0.30-r3 (04 Jan 2008)
+
+  04 Jan 2008; Jim Ramsay <lack@gentoo.org>
+  +files/rox-session-0.30-wmselect.patch, +files/ROX-Defaults.xml,
+  -rox-session-0.30-r2.ebuild, +rox-session-0.30-r3.ebuild:
+  Fixed the default if you haven't run rox-session before. Instead of just
+  trying the first WM it sees, it presents you with a list to choose from (or
+  you can specify your own). Bug #204239
 
 *rox-session-0.30-r2 (03 Jan 2008)
 
