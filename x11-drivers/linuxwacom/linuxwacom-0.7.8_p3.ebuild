@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.8_p3.ebuild,v 1.1 2007/12/30 16:09:28 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.8_p3.ebuild,v 1.2 2008/01/04 23:03:22 rbu Exp $
 
 inherit eutils autotools
 
@@ -19,7 +19,8 @@ RDEPEND="|| ( ( x11-proto/inputproto
 		  virtual/x11 )
 	media-libs/libpixman
 	gtk? ( >=x11-libs/gtk+-2 )
-	tcltk? ( dev-lang/tcl dev-lang/tk )
+	tcl? ( dev-lang/tcl )
+	tk?  ( dev-lang/tk )
 	sys-fs/udev
 	sys-libs/ncurses"
 
