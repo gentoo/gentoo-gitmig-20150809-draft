@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.8.5.ebuild,v 1.1 2007/08/23 09:16:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.8.5.ebuild,v 1.2 2008/01/04 02:35:06 aballier Exp $
 
 inherit eutils toolchain-funcs multilib
+
+EAPI="1"
 
 EXTRAPV="-3"
 DESCRIPTION="Make replacement"
@@ -12,11 +14,20 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc fam ncurses readline"
+IUSE="doc fam ncurses +ocamlopt readline"
 DEPEND=">=dev-lang/ocaml-3.0.8
 	ncurses? ( >=sys-libs/ncurses-5.3 )
 	fam? ( virtual/fam )
 	readline? ( >=sys-libs/readline-4.3 )"
+
+pkg_setup() {
+	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "In order to build ${PN} with native code support from ocaml"
+		eerror "You first need to have a native code ocaml compiler."
+		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
+		die "Please install ocaml with ocamlopt useflag"
+	fi
+}
 
 use_boolean() {
 	if use $1; then
@@ -36,8 +47,13 @@ src_compile() {
 	echo "CC = $(tc-getCC)" >> .config
 	echo "CFLAGS = ${CFLAGS}" >> .config
 
-	echo "NATIVE_ENABLED = true" >> .config
-	echo "BYTE_ENABLED = false" >> .config
+	if use ocamlopt; then
+		echo "NATIVE_ENABLED = true" >> .config
+		echo "BYTE_ENABLED = false" >> .config
+	else
+		echo "NATIVE_ENABLED = false" >> .config
+		echo "BYTE_ENABLED = true" >> .config
+	fi
 
 	echo "NATIVE_PROFILE = false" >> .config
 
@@ -59,4 +75,5 @@ src_install() {
 		dodoc doc/ps/omake-doc.{pdf,ps} doc/txt/omake-doc.txt
 		dohtml -r doc/html/*
 	fi
+	use ocamlopt || export STRIP_MASK="*/bin/*"
 }
