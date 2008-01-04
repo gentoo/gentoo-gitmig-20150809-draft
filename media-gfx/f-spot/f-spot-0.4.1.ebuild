@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.4.1.ebuild,v 1.1 2007/12/27 21:38:26 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.4.1.ebuild,v 1.2 2008/01/04 14:47:42 calchan Exp $
 
 inherit gnome2 mono
 
@@ -34,3 +34,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
+
+# See bug #203566
+RESTRICT="test"
