@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-contrib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.27 2007/11/25 10:12:01 nelchael Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.28 2008/01/04 20:16:17 caster Exp $
+
+  04 Jan 2008; Vlastimil Babka <caster@gentoo.org>
+  -ant-contrib-1.0_beta2-r1.ebuild:
+  Clean old version.
 
   25 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   ant-contrib-1.0_beta2-r2.ebuild:
