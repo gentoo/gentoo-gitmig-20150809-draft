@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/mlmmj-1.2.4.ebuild,v 1.3 2007/06/12 12:55:54 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/mlmmj-1.2.4.ebuild,v 1.4 2008/01/04 07:25:48 robbat2 Exp $
 
 inherit eutils
 
@@ -24,18 +24,18 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodir ${SHAREDIR}
 	dodir ${SHAREDIR}/texts
 	insinto ${SHAREDIR}/texts
 	doins listtexts/*
 
-	dodoc AUTHORS ChangeLog COPYING FAQ LICENSE README
+	dodoc AUTHORS ChangeLog FAQ README
 	dodoc TODO TUNABLES UPGRADE VERSION README.access
 
 	insinto /usr/share/mlmmj
-	cd ${S}/contrib/web
+	cd "${S}"/contrib/web
 	doins -r *
 }
 
