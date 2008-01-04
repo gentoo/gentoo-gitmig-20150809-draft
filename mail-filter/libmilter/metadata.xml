@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <maintainer>
-  <email>mrmess@gentoo.org</email>
+  <email>mrness@gentoo.org</email>
     <name>Alin Năstac</name>
 </maintainer>
 <longdescription>The Sendmail filter API (Milter)</longdescription>
