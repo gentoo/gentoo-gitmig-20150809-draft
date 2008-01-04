@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/zsh
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.122 2007/12/06 05:04:56 beandog Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.123 2008/01/04 15:05:02 maekke Exp $
+
+  04 Jan 2008; Markus Meier <maekke@gentoo.org> zsh-4.3.4-r1.ebuild:
+  x86 stable, bug #204259
 
   06 Dec 2007; Steve Dibb <beandog@gentoo.org> zsh-4.3.2-r3.ebuild:
   amd64 stable, bug 201022
