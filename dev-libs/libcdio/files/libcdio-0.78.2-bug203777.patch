@@ -6,7 +6,7 @@ diff -Naur libcdio-0.78.2-orig/work/libcdio-0.78.2/src/cd-info.c libcdio-0.78.2/
        char *psz_iso_name = p_statbuf->filename;
        char _fullname[4096] = { 0, };
 -      char translated_name[MAX_ISONAME+1];
-+      char *translated_name = (char *) alloca(strlen(psz_iso_name+1));
++      char *translated_name = (char *) alloca(strlen(psz_iso_name)+1);
  
        if (yep != p_statbuf->rr.b3_rock || 1 == opts.no_rock_ridge) {
  	iso9660_name_translate_ext(psz_iso_name, translated_name, 
@@ -18,7 +18,7 @@ diff -Naur libcdio-0.78.2-orig/work/libcdio-0.78.2/src/iso-info.c libcdio-0.78.2
        char *psz_iso_name = p_statbuf->filename;
        char _fullname[4096] = { 0, };
 -      char translated_name[MAX_ISONAME+1];
-+      char *translated_name = (char *) alloca(strlen(psz_iso_name+1));
++      char *translated_name = (char *) alloca(strlen(psz_iso_name)+1);
 +
  
        if (yep != p_statbuf->rr.b3_rock || 1 == opts.no_rock_ridge) {

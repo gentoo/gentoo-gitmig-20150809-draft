@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.83 2008/01/01 17:59:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.84 2008/01/04 23:16:45 flameeyes Exp $
+
+*libcdio-0.78.2-r3 (04 Jan 2008)
+
+  04 Jan 2008; Diego Pettenò <flameeyes@gentoo.org>
+  files/libcdio-0.78.2-bug203777.patch, -libcdio-0.78.2-r2.ebuild,
+  +libcdio-0.78.2-r3.ebuild:
+  Fix patch for bug #203777 for an off by one. Straight-to-stable commit.
 
   01 Jan 2008; Brent Baude <ranger@gentoo.org> libcdio-0.78.2-r2.ebuild:
   Marking libcdio-0.78.2-r2 ppc64 for bug 203777
