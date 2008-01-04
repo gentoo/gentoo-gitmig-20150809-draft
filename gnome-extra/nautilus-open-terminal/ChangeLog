@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/nautilus-open-terminal
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/ChangeLog,v 1.23 2007/12/14 14:22:50 dang Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/ChangeLog,v 1.24 2008/01/04 03:47:01 compnerd Exp $
+
+  04 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org> metadata.xml,
+  -nautilus-open-terminal-0.7.ebuild:
+  prune unused versions and cleanup metadata.xml
 
   14 Dec 2007; Daniel Gryniewicz <dang@gentoo.org>
   nautilus-open-terminal-0.8.ebuild:
