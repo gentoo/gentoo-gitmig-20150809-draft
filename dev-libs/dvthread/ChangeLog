@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/dvthread
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/ChangeLog,v 1.18 2007/02/22 00:33:50 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/ChangeLog,v 1.19 2008/01/04 08:10:48 dev-zero Exp $
+
+*dvthread-0.6.2 (04 Jan 2008)
+
+  04 Jan 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/dvthread-0.4.7-fix-underquoted-m4.diff, -dvthread-0.4.7-r2.ebuild,
+  +dvthread-0.6.2.ebuild:
+  Version bump (bug #203806). Cleanup. Added missing (and possibly faulty but
+  checked for) dependency.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
