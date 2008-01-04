@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/d-feet
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.1 2007/12/13 20:41:12 cardoe Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.2 2008/01/04 23:28:48 cardoe Exp $
+
+*d-feet-0.1.6 (04 Jan 2008)
+
+  04 Jan 2008; Doug Klima <cardoe@gentoo.org> +d-feet-0.1.6.ebuild:
+  version bump
 
 *d-feet-0.1.4 (13 Dec 2007)
 
@@ -9,7 +14,7 @@
   +d-feet-0.1.4.ebuild:
   add d-feet to the tree
 
-  10 Dec 2007; Doug Goldstein <doug@gentoo.org>
+  10 Dec 2007; Doug Klima <doug@gentoo.org>
   +files/d-feet-0.1.4-show-properties.patch, d-feet-0.1.4.ebuild:
   Show properties patch from Marcel Holtmann <marcel@holtmann.org>. Previous
   python cleanup patch was incorrect, fixed.
