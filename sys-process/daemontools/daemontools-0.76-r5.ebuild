@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/daemontools-0.76-r5.ebuild,v 1.2 2006/03/02 03:57:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/daemontools-0.76-r5.ebuild,v 1.3 2008/01/04 22:43:36 hanno Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="Collection of tools for managing UNIX services"
 HOMEPAGE="http://cr.yp.to/daemontools.html"
 SRC_URI="http://cr.yp.to/daemontools/${P}.tar.gz"
 
-LICENSE="freedist"
+LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="selinux static doc"
@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}/src"
 	emake || die "make failed"
 }
 
@@ -43,7 +43,7 @@ src_install() {
 	keepdir /service
 
 	einfo "Installing package ..."
-	cd ${S}/src
+	cd "${S}/src"
 	exeinto /usr/bin
 	for x in `cat ../package/commands` ; do
 		doexe $x || die

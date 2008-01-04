@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/daemontools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/ChangeLog,v 1.5 2007/02/22 00:34:08 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/ChangeLog,v 1.6 2008/01/04 22:43:36 hanno Exp $
+
+  04 Jan 2008; Hanno Boeck <hanno@gentoo.org> daemontools-0.76-r5.ebuild:
+  Change license to public domain (http://cr.yp.to/distributors.html),
+  fix unquoted vars.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
