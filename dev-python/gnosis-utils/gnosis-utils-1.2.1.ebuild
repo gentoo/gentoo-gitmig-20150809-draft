@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/gnosis-utils-1.2.1.ebuild,v 1.1 2007/02/15 21:02:50 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/gnosis-utils-1.2.1.ebuild,v 1.2 2008/01/04 09:16:49 hawking Exp $
 
 NEED_PYTHON=2.1
 
@@ -39,4 +39,10 @@ src_install() {
 		MANIFEST || die "sed failed"
 
 	distutils_src_install
+}
+
+src_test() {
+	python_version
+	cd "${S}"/gnosis/xml/pickle/test
+	PYTHONPATH="${S}/build/lib" ${python} test_all.py || die "tests failed."
 }
