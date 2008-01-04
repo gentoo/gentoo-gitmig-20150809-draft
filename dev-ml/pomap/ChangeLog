@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pomap
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.12 2007/02/09 07:37:36 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.13 2008/01/04 01:51:11 aballier Exp $
+
+*pomap-2.9.8 (04 Jan 2008)
+
+  04 Jan 2008; Alexis Ballier <aballier@gentoo.org> +pomap-2.9.8.ebuild:
+  version bump, allow to build without ocamlopt
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
