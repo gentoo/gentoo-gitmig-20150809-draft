@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.0.4.ebuild,v 1.2 2008/01/04 00:44:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.0.4.ebuild,v 1.3 2008/01/04 08:12:11 hawking Exp $
 
 NEED_PYTHON=2.4
 
@@ -24,12 +24,20 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=dev-python/PyQt4-4.1
-	>=x11-libs/qscintilla-2.1
+	>=dev-python/qscintilla-python-2.1
 	>=x11-libs/qt-4.2.0"
+RDEPEND="${DEPEND}"
 
 LANGS="de fr ru"
 
 python_version
+
+pkg_setup() {
+	if ! built_with_use 'dev-python/qscintilla-python' 'qt4'; then
+		eerror "Please build qscintilla-python with qt4 useflag."
+		die "qscintilla-python built without qt4."
+	fi
+}
 
 src_install() {
 	# Change qt dir to be located in ${D}

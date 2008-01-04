@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.53 2008/01/04 00:44:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.54 2008/01/04 08:12:11 hawking Exp $
+
+  04 Jan 2008; Ali Polatel <hawking@gentoo.org> -eric-4.0.1.ebuild,
+  -eric-4.0.3.ebuild, eric-4.0.4.ebuild:
+  Changed qscintilla depend to qscintilla-python. Added built_with_use check
+  for qscintilla-python's qt4 USE flag, bug 198697. Drop old.
 
   04 Jan 2008; Brent Baude <ranger@gentoo.org> eric-4.0.1.ebuild,
   eric-4.0.3.ebuild, eric-4.0.4.ebuild:
