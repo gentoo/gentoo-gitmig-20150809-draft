@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.3.ebuild,v 1.3 2007/04/16 07:59:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.3.ebuild,v 1.4 2008/01/04 17:03:22 bicatali Exp $
 
 USE_RUBY="ruby18"
 RUBY_OPTIONAL="yes"
 
 inherit eutils distutils ruby toolchain-funcs
 
-DESCRIPTION="Geometry Engine - Open Source"
+DESCRIPTION="Geometry engine library for Geographic Information Systems"
 HOMEPAGE="http://geos.refractions.net"
 SRC_URI="http://geos.refractions.net/${P}.tar.bz2"
 
@@ -30,38 +30,37 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-pic --enable-static || die "econf failed"
+	econf || die "econf failed"
 	emake || die "emake failed"
 
 	if use python; then
-	    einfo "Compilling PyGEOS"
-	    cd "${S}/swig/python"
-	    cp "${FILESDIR}/python.i" "${S}/swig/python/"
-	    rm -f geos_wrap.cxx
-	    swig -c++ -python -modern -o geos_wrap.cxx ../geos.i
-	    distutils_src_compile
+		einfo "Compilling PyGEOS"
+		cd "${S}/swig/python"
+		cp "${FILESDIR}/python.i" "${S}/swig/python/"
+		rm -f geos_wrap.cxx
+		swig -c++ -python -modern -o geos_wrap.cxx ../geos.i
+		distutils_src_compile
 	fi
 	if use ruby; then
-	    einfo "Compilling Ruby bindings"
-	    cd "${S}/swig/ruby"
-	    swig -c++ -ruby -autorename -o geos_wrap.cxx ../geos.i
-	    local CXX=$(tc-getCXX)
-	    local RUBY_ARCHDIR="$(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')"
-	    ${CXX} ${CXXFLAGS} -I../../source/headers -I${RUBY_ARCHDIR} \
+		einfo "Compilling Ruby bindings"
+		cd "${S}"/swig/ruby
+		swig -c++ -ruby -autorename -o geos_wrap.cxx ../geos.i
+		local CXX=$(tc-getCXX)
+		local RUBY_ARCHDIR="$(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')"
+		${CXX} ${CXXFLAGS} -I../../source/headers -I${RUBY_ARCHDIR} \
 			-fPIC -c geos_wrap.cxx
-	    ${CXX} ${CXXFLAGS} -shared -L${S}/source/geom/.libs -lgeos \
+		${CXX} ${CXXFLAGS} -shared -L"${S}"/source/geom/.libs -lgeos \
 			-lruby geos_wrap.o -o geos.so
 	fi
 }
 
 src_test() {
-	cd "${S}"
 	emake check || die "Trying make check without success."
 	# I think this test must be made after the PyGEOS installation
 	#export PYTHONPATH=${S}/swig/python
 	if use python; then
-	    cd ${S}/swig/python
-	    python tests/runtests.py -v
+		cd "${S}"/swig/python
+		python tests/runtests.py -v
 	fi
 }
 
@@ -69,39 +68,39 @@ src_install(){
 	emake install DESTDIR="${D}" || die "emake install failed"
 
 	if use python; then
-	    einfo "Installing PyGEOS"
-	    cd ${S}/swig/python
-	    distutils_src_install
-	    insinto /usr/share/doc/${PF}/python
-	    doins README.txt tests/*.py
-	    insinto /usr/share/doc/${PF}/python/cases
-	    doins tests/cases/*
+		einfo "Installing PyGEOS"
+		cd "${S}"/swig/python
+		distutils_src_install
+		insinto /usr/share/doc/${PF}/python
+		doins README.txt tests/*.py || die
+		insinto /usr/share/doc/${PF}/python/cases
+		doins tests/cases/* || die
 	fi
 	if use ruby; then
-	    local RUBY_SITEARCHDIR="$(ruby -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')"
-	    einfo "Installing Ruby bindings in ${RUBY_SITEARCHDIR}/${PN}"
-	    cd ${S}/swig/ruby
-	    insinto ${RUBY_SITEARCHDIR}/${PN}
-	    doins geos.so
-	    insinto /usr/share/doc/${PF}/ruby
-	    doins README.txt test/*.rb
-	    if use doc; then
-		erubydoc
-	    fi
+		local RUBY_SITEARCHDIR="$(ruby -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')"
+		einfo "Installing Ruby bindings in ${RUBY_SITEARCHDIR}/${PN}"
+		cd "${S}"/swig/ruby
+		insinto ${RUBY_SITEARCHDIR}/${PN}
+		doins geos.so || die
+		insinto /usr/share/doc/${PF}/ruby
+		doins README.txt test/*.rb || die
+		if use doc; then
+			erubydoc
+		fi
 	fi
 	if use doc; then
-	    cd ${S}/doc
-	    make doxygen-html
-	    dohtml -r doxygen_docs/html/*
+		cd "${S}"/doc
+		emake doxygen-html || die "make doxygen docs failed"
+		dohtml -r doxygen_docs/html/*  || die
 	fi
 	cd "${S}"
-	dodoc AUTHORS NEWS README TODO
+	dodoc AUTHORS NEWS README TODO || die
 }
 
 pkg_postinst() {
 	if use python; then
 		python_version
-		python_mod_optimize ${ROOT}usr/bin
+		python_mod_optimize "${ROOT}"usr/bin
 	fi
 }
 
