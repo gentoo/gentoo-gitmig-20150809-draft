@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX dkim-filter-2.4.1-init 1193 RMD160 d9b60b111b37162c69fa9ddd711c30a9fe6ec049 SHA1 fbdbeddae4d8aabe6bbfa2ed6ba775eb16a58efc SHA256 35c26381706882282b70554ac591cb640be9139858a5899ddcac1a3d2ad33771
 MD5 49aff9bcb70d3ebbb01a0a47ca1bffd5 files/dkim-filter-2.4.1-init 1193
 RMD160 d9b60b111b37162c69fa9ddd711c30a9fe6ec049 files/dkim-filter-2.4.1-init 1193
@@ -18,8 +21,17 @@ AUX dkim-milter-2.4.1-gentoo.patch 4896 RMD160 512d18bdea174fdd9bd509fd0973c3a36
 MD5 01299aeb97d87692448eeef3dbf4a492 files/dkim-milter-2.4.1-gentoo.patch 4896
 RMD160 512d18bdea174fdd9bd509fd0973c3a36486f38c files/dkim-milter-2.4.1-gentoo.patch 4896
 SHA256 606a9d24ee164308f157de39c0d9378201914f4270294d94c09db3c2db613341 files/dkim-milter-2.4.1-gentoo.patch 4896
+AUX dkim-milter-2.4.2-gentoo.patch 5208 RMD160 48e062b2617cb9819bbd4995336475021bffd0c3 SHA1 53ab6c38295048c704eb3f8f824fb9e015a28de0 SHA256 ad38bed9787e8c0f4ffe89cdf87215dbb68632b3b611ed8a0feb4e7d1392d073
+MD5 466fbafc085c1143091eab2d724d8a4a files/dkim-milter-2.4.2-gentoo.patch 5208
+RMD160 48e062b2617cb9819bbd4995336475021bffd0c3 files/dkim-milter-2.4.2-gentoo.patch 5208
+SHA256 ad38bed9787e8c0f4ffe89cdf87215dbb68632b3b611ed8a0feb4e7d1392d073 files/dkim-milter-2.4.2-gentoo.patch 5208
+AUX dkim-milter-diffheaders.patch 612 RMD160 20fa51c4229ed6f8ecb3311d542f02356036bc45 SHA1 54db370a5772dcd322def7828f9d228066bd9a5f SHA256 37456d614a83eebeba0c622e1a0a022d2d009d3763ac27f36dc31d476edab762
+MD5 80b7bbaa44d4f9d9adc169ab8b4ad4c1 files/dkim-milter-diffheaders.patch 612
+RMD160 20fa51c4229ed6f8ecb3311d542f02356036bc45 files/dkim-milter-diffheaders.patch 612
+SHA256 37456d614a83eebeba0c622e1a0a022d2d009d3763ac27f36dc31d476edab762 files/dkim-milter-diffheaders.patch 612
 DIST dkim-milter-2.3.2.tar.gz 579540 RMD160 5a91e35e66f587256cb6b8d8f140feeb704ffd6f SHA1 71552afbef963384210adab3c9b680d48f40b7ea SHA256 ac6fb765cb5d5d95fafa6ab74b8efa4b5571a7acf5ce0c253d7a308a81a201d0
 DIST dkim-milter-2.4.1.tar.gz 614119 RMD160 ff24f468f0a741cc82d4b99d0b4f43d23dd132ab SHA1 61c833b7285152ee7bc8f4205bd89d92357ecfa0 SHA256 7b53f6650ba651ef7633c2de9d514056fd7150e0f4b71d5b5914eaa8b71d87d4
+DIST dkim-milter-2.4.2.tar.gz 613940 RMD160 a142124206c544b6543499b8f0adfc4b68ba1a37 SHA1 747c552907e4405e6e50ce81d5ac4d24793df6c3 SHA256 37eb77ebb2a3083a4b7d5792d50a80681d41deb5ee843ca23528bdeb49fab504
 EBUILD dkim-milter-2.3.2.ebuild 4620 RMD160 ad9e27b3b58c68ca7b360be0965752cedf8074ff SHA1 5d4c847cd0bb2e870efea281b9da93bfddf5fd89 SHA256 8da920e8f4e2f4dd6db1c6d08f93610ce6d333f262ce3fc8db41b1ea5abbe2f7
 MD5 abe4b54ed210ddaf90eb9e92818c4b9f dkim-milter-2.3.2.ebuild 4620
 RMD160 ad9e27b3b58c68ca7b360be0965752cedf8074ff dkim-milter-2.3.2.ebuild 4620
@@ -28,10 +40,14 @@ EBUILD dkim-milter-2.4.1.ebuild 4531 RMD160 adafd0379feb9b4b7df4c192aca925fd399f
 MD5 1d97d9720035b65ef1a8921ba2e5f2ef dkim-milter-2.4.1.ebuild 4531
 RMD160 adafd0379feb9b4b7df4c192aca925fd399ff8cf dkim-milter-2.4.1.ebuild 4531
 SHA256 67c2c4696f772f3832a999ae5f177447aea5f7418fa9746705faf8a630ac2467 dkim-milter-2.4.1.ebuild 4531
-MISC ChangeLog 3310 RMD160 1a6e68ba6f324646a3fbd8b77913e06a7f3ea215 SHA1 ad65a54cc758f1bc9b1b3e28fa939285d73fc4d7 SHA256 1838e4c4e6912279bd6f300b602aeaf3fee15e407ca16697207a56a44bcc099d
-MD5 6a91f2cd5a8aaa1fc1f064459b1132a1 ChangeLog 3310
-RMD160 1a6e68ba6f324646a3fbd8b77913e06a7f3ea215 ChangeLog 3310
-SHA256 1838e4c4e6912279bd6f300b602aeaf3fee15e407ca16697207a56a44bcc099d ChangeLog 3310
+EBUILD dkim-milter-2.4.2.ebuild 4903 RMD160 3f9f8457bfcbf52b01987ba0c6e1193039e438be SHA1 c2defb99c1e03f6f5b51283ba1be49ba42dc09c0 SHA256 23832a92a14abf85afa31e25a2ece0842749404acdfe6cc34d96dc9db31dd782
+MD5 c71db1ea41d9e62975ee540691799905 dkim-milter-2.4.2.ebuild 4903
+RMD160 3f9f8457bfcbf52b01987ba0c6e1193039e438be dkim-milter-2.4.2.ebuild 4903
+SHA256 23832a92a14abf85afa31e25a2ece0842749404acdfe6cc34d96dc9db31dd782 dkim-milter-2.4.2.ebuild 4903
+MISC ChangeLog 3512 RMD160 3a1f420aeb9fd0782ed02aefef1a214d8308f364 SHA1 a75bcbb8c361b048076479cce22432430762a578 SHA256 2323cef120ea2a2629b80e88e403ac49c0f780c394a3ac1251de39334de9ddee
+MD5 feabd906dd2a9341fd1eb1d7cde7d25c ChangeLog 3512
+RMD160 3a1f420aeb9fd0782ed02aefef1a214d8308f364 ChangeLog 3512
+SHA256 2323cef120ea2a2629b80e88e403ac49c0f780c394a3ac1251de39334de9ddee ChangeLog 3512
 MISC metadata.xml 470 RMD160 d6bce3384093365550d2728de1127be6ec5e638b SHA1 38d6d281eab07e1d1bdd5bfa96bb7b10f3f6acfb SHA256 2a797bd281b89c5cffd8de2feb41ea1c62a6107ac1d39681798fa922fcfdc043
 MD5 72766da9a21dfee5399abb0e34f2917a metadata.xml 470
 RMD160 d6bce3384093365550d2728de1127be6ec5e638b metadata.xml 470
@@ -42,3 +58,13 @@ SHA256 cbb2db7a37549326f2e6fea790b49678acf0562d0390c689f23a0f54284ffbe5 files/di
 MD5 b94cb2b1e695d2448339948e77eab9ec files/digest-dkim-milter-2.4.1 253
 RMD160 6779b52135408a7eae356eab48e9a6809016503b files/digest-dkim-milter-2.4.1 253
 SHA256 2257bcf279b604e97dcd62c1fe76c038d0a7c929216cc97ceafbdb8315584238 files/digest-dkim-milter-2.4.1 253
+MD5 f960c50c2c49e7eb2efbdfddcfad4e7c files/digest-dkim-milter-2.4.2 253
+RMD160 8cae2be4b03becd848083178c1f9fc9fac9022c4 files/digest-dkim-milter-2.4.2 253
+SHA256 58fcd1a8e62c77326d33e3d58621d02e4e8926615ab001d4857bebe8b36a9482 files/digest-dkim-milter-2.4.2 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkd+Cs8ACgkQ+fWpoTWIA9EfFwCdFbb0tpf8vr+gmdwjp95WSEZX
+NpQAn1iftnLI9dPij3Vd1o5tADg79HPm
+=+8F6
+-----END PGP SIGNATURE-----
