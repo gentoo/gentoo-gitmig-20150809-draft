@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.0.4.ebuild,v 1.1 2008/01/01 18:34:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.0.4.ebuild,v 1.2 2008/01/04 00:44:01 ranger Exp $
 
 NEED_PYTHON=2.4
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://sourceforge/eric-ide/${MY_P}.tar.gz
 
 SLOT="4"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=dev-python/PyQt4-4.1
 	>=x11-libs/qscintilla-2.1

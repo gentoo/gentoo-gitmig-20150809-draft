@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.52 2008/01/01 18:34:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.53 2008/01/04 00:44:01 ranger Exp $
+
+  04 Jan 2008; Brent Baude <ranger@gentoo.org> eric-4.0.1.ebuild,
+  eric-4.0.3.ebuild, eric-4.0.4.ebuild:
+  Marking eric-4.0.1|3|4 ~ppc64 per bug 203972
 
 *eric-4.0.4 (01 Jan 2008)
 
