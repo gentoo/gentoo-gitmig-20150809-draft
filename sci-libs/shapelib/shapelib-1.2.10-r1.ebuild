@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/shapelib-1.2.10-r1.ebuild,v 1.1 2006/02/20 00:41:08 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/shapelib-1.2.10-r1.ebuild,v 1.2 2008/01/04 17:47:08 bicatali Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,25 +15,25 @@ IUSE=""
 
 DEPEND=""
 
-export MY_LIBDIR=$(get_libdir)
-
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	sed \
-	    -e 's:/usr/local/:${DESTDIR}/usr/:g' \
-	    -e 's:/usr/lib:/usr/${MY_LIBDIR}:g' \
-	    -e 's:SHPLIB_VERSION=1.2.9:SHPLIB_VERSION=1.2.10:g' \
-	    -i Makefile || die
+	sed -i \
+		-e 's:/usr/local/:${DESTDIR}/usr/:g' \
+		-e "s:/usr/lib:/usr/$(get_libdir):g" \
+		-e 's:SHPLIB_VERSION=1.2.9:SHPLIB_VERSION=1.2.10:g' \
+		-e "s:-g:${CFLAGS}:g" \
+		"${S}"/Makefile || die
 }
 
 src_compile() {
 	emake || die "emake failed"
-	make lib || die "make lib failed"
+	emake lib || die "emake lib failed"
 }
 
 src_install() {
 	dobin shp{create,dump,test,add} dbf{create,dump,add} \
-	    || die "dobin failed"
-	make DESTDIR=${D} lib_install || die "lib_install failed"
+		|| die "dobin failed"
+	emake DESTDIR="${D}" lib_install || die "emake lib_install failed"
+	dodoc ChangeLog || die
+	dohtml *.html || die
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/shapelib
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.8 2007/02/22 01:24:54 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.9 2008/01/04 17:47:08 bicatali Exp $
+
+  04 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  shapelib-1.2.10-r1.ebuild:
+  Fixed to respect user's CFLAGS. A bit of cleaning, install basic docs.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
