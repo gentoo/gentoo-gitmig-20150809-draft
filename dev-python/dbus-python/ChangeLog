@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dbus-python
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.30 2007/12/08 03:55:44 cardoe Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.31 2008/01/04 23:26:37 cardoe Exp $
+
+*dbus-python-0.82.4 (04 Jan 2008)
+
+  04 Jan 2008; Doug Klima <cardoe@gentoo.org> +dbus-python-0.82.4.ebuild:
+  version bump
 
 *dbus-python-0.82.3 (08 Dec 2007)
 
