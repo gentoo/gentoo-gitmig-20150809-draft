@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/lprof-1.11.4.1.ebuild,v 1.2 2007/10/10 18:44:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/lprof-1.11.4.1.ebuild,v 1.3 2008/01/04 08:42:42 opfer Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://lprof.sourceforge.net/"
 SRC_URI="mirror://sourceforge/lprof/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 RDEPEND="=x11-libs/qt-3*
 	>=media-libs/lcms-1.14
