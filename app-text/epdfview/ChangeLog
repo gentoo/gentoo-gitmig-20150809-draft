@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.25 2008/01/03 18:36:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.26 2008/01/04 08:51:40 omp Exp $
+
+  04 Jan 2008; David Shakaryan <omp@gentoo.org> -epdfview-0.1.6.ebuild:
+  Remove older version.
 
   03 Jan 2008; Brent Baude <ranger@gentoo.org> epdfview-0.1.6-r1.ebuild:
   Marking epdfview-0.1.6-r1 ppc64 for bug 202871
