@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/djbdns
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.94 2007/10/15 14:41:10 corsair Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.95 2008/01/04 23:02:06 hanno Exp $
+
+  04 Jan 2008; Hanno Boeck <hanno@gentoo.org> djbdns-1.05-r17.ebuild,
+  djbdns-1.05-r19.ebuild, djbdns-1.05-r21.ebuild:
+  Change license to public domain (http://cr.yp.to/distributors.html) and fix
+  some unquoted vars.
 
   15 Oct 2007; Markus Rothe <corsair@gentoo.org> djbdns-1.05-r21.ebuild:
   Stable on ppc64

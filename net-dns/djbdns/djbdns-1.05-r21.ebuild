@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r21.ebuild,v 1.7 2007/10/15 14:41:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r21.ebuild,v 1.8 2008/01/04 23:02:06 hanno Exp $
 
 IUSE="doc ipv6 selinux static"
 
@@ -16,7 +16,7 @@ SRC_URI="
 "
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="public-domain"
 KEYWORDS="alpha ~amd64 ~hppa ~mips ppc ppc64 ~sparc x86"
 
 RDEPEND="
@@ -79,7 +79,7 @@ src_compile() {
 	# support.
 	if use ipv6; then
 		elog "Compiling dnstrace without ipv6 support"
-		cd ${S}-noipv6
+		cd "${S}-noipv6"
 		echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 		echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 		echo "/usr" > conf-home
