@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.3.22.ebuild,v 1.1 2008/01/03 22:54:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.3.22.ebuild,v 1.2 2008/01/04 07:19:03 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -85,4 +85,3 @@ pkg_setup() {
 		$(use_with sqlite)
 		$(use_with ssl)"
 }
-
