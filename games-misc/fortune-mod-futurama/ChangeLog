@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-futurama
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-futurama/ChangeLog,v 1.8 2006/07/19 19:47:57 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-futurama/ChangeLog,v 1.9 2008/01/04 21:18:05 mr_bones_ Exp $
+
+  04 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  fortune-mod-futurama-0.2.ebuild:
+  remove mirror restriction
 
   19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   fortune-mod-futurama-0.2.ebuild:
