@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3270 2008/01/03 22:53:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3271 2008/01/04 13:08:55 jokey Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -538,6 +538,7 @@ dev-perl/GD:animgif - Enable animated gif support
 dev-perl/HTML-Mason:modperl - Enable modperl support
 dev-perl/PDL:badval - Enable badval support in PDL
 dev-perl/RPC-XML:modperl - Enable modperl support
+dev-php/PEAR-PHP_Shell:auto-completion - Enable tab-completion
 dev-php4/eaccelerator:contentcache - Enable content caching
 dev-php4/eaccelerator:disassembler - Enable the eA disassembler
 dev-php4/eaccelerator:inode - Use inode-based caching
