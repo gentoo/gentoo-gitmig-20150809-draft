@@ -7,7 +7,7 @@
     <name>Daniel Black</name>
 </maintainer>
 <maintainer>
-  <email>mrmess@gentoo.org</email>
+  <email>mrness@gentoo.org</email>
     <name>Alin Năstac</name>
 </maintainer>
 <longdescription>A program implementing the Milter API that signs and verifies
