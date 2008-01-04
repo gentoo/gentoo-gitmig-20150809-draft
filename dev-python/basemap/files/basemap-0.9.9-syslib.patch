@@ -1,0 +1,56 @@
+--- setup.py.orig	2008-01-04 14:56:33.980098124 +0000
++++ setup.py	2008-01-04 18:00:54.978320866 +0000
+@@ -24,7 +24,7 @@
+     DBFUpdateHeader is available, we scan shapefil.h for the string
+     'DBFUpdateHeader'.
+     """
+-    f = open(convert_path("pyshapelib/shapelib/shapefil.h"))
++    f = open(convert_path("/usr/include/libshp/shapefil.h"))
+     contents = f.read()
+     f.close()
+     if contents.find("DBFUpdateHeader") >= 0:
+@@ -53,7 +53,7 @@
+ 
+ if GEOS_dir is None:
+     # if GEOS_dir not set, check a few standard locations.
+-    GEOS_dirs = ['/usr/local','/sw','/opt','/opt/local',os.path.expanduser('~')]
++    GEOS_dirs = ['/usr','/sw','/opt','/opt/local',os.path.expanduser('~')]
+     for direc in GEOS_dirs:
+         geos_version = check_geosversion(direc)
+         print 'checking for GEOS lib in %s ....' % direc
+@@ -86,8 +86,8 @@
+ 
+ packages          = ['matplotlib.toolkits.basemap']
+ package_dirs       = {'':'lib'}
+-extensions = [Extension("matplotlib.toolkits.basemap._proj",deps+['src/_proj.c'],include_dirs = ['src'],)]
+-extensions.append(Extension("matplotlib.toolkits.basemap._geod",deps+['src/_geod.c'],include_dirs = ['src'],))
++extensions = [Extension("matplotlib.toolkits.basemap._proj",['src/_proj.c'],libraries = ["proj"])]
++extensions.append(Extension("matplotlib.toolkits.basemap._geod",['src/_geod.c'],include_dirs = geos_include_dirs,libraries=['geos_c','geos']))
+ # for some reason, pickling won't work if this extension is installed
+ # as "matplotlib.toolkits.basemap._geos"
+ extensions.append(Extension("_geos",['src/_geos.c'],
+@@ -102,17 +102,16 @@
+ package_dirs['dbflib'] = os.path.join('lib','dbflib')
+ extensions = extensions + \
+          [Extension("shapelibc",
+-                    ["pyshapelib/shapelib_wrap.c",
+-                     "pyshapelib/shapelib/shpopen.c",
+-                     "pyshapelib/shapelib/shptree.c"],
+-                    include_dirs = ["pyshapelib/shapelib"]),
++                    ["pyshapelib/shapelib_wrap.c"],
++                    include_dirs = ["/usr/include/libshp"],
++                    libraries = ["shp"]),
+           Extension("shptree",
+                     ["pyshapelib/shptreemodule.c"],
+-                    include_dirs = ["pyshapelib/shapelib"]),
++                    include_dirs = ["/usr/include/libshp"]),
+           Extension("dbflibc",
+-                    ["pyshapelib/dbflib_wrap.c",
+-                     "pyshapelib/shapelib/dbfopen.c"],
+-                    include_dirs = ["pyshapelib/shapelib"],
++                    ["pyshapelib/dbflib_wrap.c"],
++                    include_dirs = ["/usr/include/libshp"],
++                    libraries = ["shp"],
+                     define_macros = dbf_macros()) ]
+ 
+ # install dap and httplib2, if not already available.
