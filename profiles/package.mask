@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8081 2008/01/04 12:18:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8082 2008/01/04 12:49:27 remi Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -217,7 +217,7 @@ sys-kernel/hppa-sources
 
 # Rémi Cardona <remi@gentoo.org> (17 Dec 2007)
 # Has major regressions, see bug #201519
-=x11-drivers/xf86-video-i810-2.2.0
+>=x11-drivers/xf86-video-i810-2.2.0
 
 # Robin H. Johnson <robbat2@gentoo.org> (16 Dec 2007)
 # For testing only
