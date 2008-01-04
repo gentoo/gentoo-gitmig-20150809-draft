@@ -1,0 +1,14 @@
+# ChangeLog for dev-php/PEAR-PHP_Shell
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_Shell/ChangeLog,v 1.1 2008/01/04 13:07:09 jokey Exp $
+
+*PEAR-PHP_Shell-0.3.1 (04 Jan 2008)
+
+  04 Jan 2008; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +PEAR-PHP_Shell-0.3.1.ebuild:
+  Initial import from project overlay
+
+  22 Dec 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-PHP_Shell-0.3.1.ebuild:
+  New ebuild, Bug 203036
+
