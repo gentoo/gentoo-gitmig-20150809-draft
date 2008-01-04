@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.8.0.ebuild,v 1.2 2007/12/20 13:15:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.8.0.ebuild,v 1.3 2008/01/04 13:36:42 jokey Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc iconv icu libwww +threads elibc_Darwin elibc_FreeBSD"
 
-RDEPEND="icu? ( dev-libs/icu )
+RDEPEND="icu? ( <dev-libs/icu-3.8 )
 	libwww? ( net-libs/libwww )
 	iconv? ( virtual/libiconv )"
 DEPEND="${RDEPEND}
