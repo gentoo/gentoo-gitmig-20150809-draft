@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/darts
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/ChangeLog,v 1.23 2008/01/05 10:13:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/ChangeLog,v 1.24 2008/01/05 11:30:44 jokey Exp $
+
+  05 Jan 2008; Markus Ullmann <jokey@gentoo.org> darts-0.31.ebuild:
+  Sparc stable
 
   05 Jan 2008; Samuli Suominen <drac@gentoo.org> darts-0.31.ebuild:
   amd64 stable wrt #203857
