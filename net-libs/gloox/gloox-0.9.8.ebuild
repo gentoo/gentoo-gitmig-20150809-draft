@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-0.9.8.ebuild,v 1.1 2007/12/14 14:04:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-0.9.8.ebuild,v 1.2 2008/01/05 17:57:18 jokey Exp $
 
 DESCRIPTION="A portable high-level Jabber/XMPP library for C++"
 HOMEPAGE="http://camaya.net/gloox"
@@ -14,8 +14,7 @@ IUSE="debug gnutls idn ssl zlib"
 DEPEND="idn? ( >=net-dns/libidn-0.5.0 )
 	gnutls? ( >=net-libs/gnutls-1.2.0 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
-	zlib? ( sys-libs/zlib )
-        dev-libs/iksemel"
+	zlib? ( sys-libs/zlib )"
 
 RDEPEND="${DEPEND}"
 
