@@ -1,6 +1,13 @@
 # ChangeLog for games-action/geki3-KXL
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/geki3-KXL/ChangeLog,v 1.8 2006/11/27 01:23:37 blubb Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/geki3-KXL/ChangeLog,v 1.9 2008/01/05 22:00:31 nyhm Exp $
+
+*geki3-KXL-1.0.3-r2 (05 Jan 2008)
+
+  05 Jan 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/geki3-KXL-1.0.3-paths.patch, +geki3-KXL-1.0.3-r2.ebuild:
+  Use autotools eclass, bug #204392; install menu entry, bug #159753; move
+  score file to $GAMES_STATEDIR
 
   27 Nov 2006; <blubb@gentoo.org> geki3-KXL-1.0.3-r1.ebuild:
   stable on amd64
