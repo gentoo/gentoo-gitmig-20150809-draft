@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/vanessa-socket
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/ChangeLog,v 1.14 2007/02/09 08:10:06 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/ChangeLog,v 1.15 2008/01/05 02:31:46 rbu Exp $
+
+  05 Jan 2008; Robert Buchholz <rbu@gentoo.org> vanessa-socket-0.0.7.ebuild:
+  keyworded ~amd64 (bug #176064)
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
