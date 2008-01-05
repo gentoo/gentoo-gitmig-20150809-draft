@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.971 2008/01/04 12:49:27 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.972 2008/01/05 00:26:50 dirtyepic Exp $
+
+  05 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Unmask wxpython-2.8.
 
   04 Jan 2008; Rémi Cardona <remi@gentoo.org> package.mask:
   upping the package.mask version for xf86-video-i810
