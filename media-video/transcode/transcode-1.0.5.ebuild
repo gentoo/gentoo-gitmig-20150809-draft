@@ -1,23 +1,19 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.5_rc2.ebuild,v 1.2 2007/12/10 20:59:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.5.ebuild,v 1.1 2008/01/05 20:09:05 beandog Exp $
 
 WANT_AUTOMAKE="1.8"
 
 inherit libtool flag-o-matic eutils multilib autotools
 
-MY_P="${P/_/}"
-
 DESCRIPTION="Utilities for transcoding video, audio and container formats."
 HOMEPAGE="http://www.transcoding.org/cgi-bin/transcode"
-SRC_URI="http://fromani.exit1.org/${MY_P}.tar.bz2"
+SRC_URI="http://fromani.exit1.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X 3dnow a52 altivec dv dvdread extrafilters mp3 fame truetype iconv
 imagemagick jpeg lzo mjpeg mpeg mmx network ogg oss vorbis quicktime sdl sse sse2 theora v4l2 xvid xml"
-
-S="${WORKDIR}/${MY_P}"
 
 RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	dv? ( >=media-libs/libdv-0.99 )
