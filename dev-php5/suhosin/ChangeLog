@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/suhosin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.21 2008/01/04 20:22:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.22 2008/01/05 12:54:33 jokey Exp $
+
+  05 Jan 2008; Markus Ullmann <jokey@gentoo.org> suhosin-0.9.22.ebuild:
+  SPARC/x86 stable wrt bug #204290
 
   04 Jan 2008; Brent Baude <ranger@gentoo.org> suhosin-0.9.22.ebuild:
   Marking suhosin-0.9.22 ppc64 for bug 204290
