@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/abe/abe-1.1.ebuild,v 1.5 2007/04/09 21:41:12 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/abe/abe-1.1.ebuild,v 1.6 2008/01/05 04:01:51 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -14,6 +14,7 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libsdl
+	x11-libs/libXi
 	media-libs/sdl-mixer"
 
 src_unpack() {
