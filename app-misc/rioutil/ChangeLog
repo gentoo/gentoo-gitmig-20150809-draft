@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/rioutil
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.24 2007/10/01 04:17:39 dirtyepic Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.25 2008/01/05 13:55:22 maekke Exp $
+
+  05 Jan 2008; Markus Meier <maekke@gentoo.org> rioutil-1.5.0-r1.ebuild:
+  x86 stable, bug #204358
 
 *rioutil-1.5.0-r1 (01 Oct 2007)
 
