@@ -1,6 +1,25 @@
 # ChangeLog for app-emulation/virtualbox
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.30 2007/12/05 22:52:44 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.31 2008/01/05 17:51:47 jokey Exp $
+
+*virtualbox-1.5.4 (05 Jan 2008)
+
+  05 Jan 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-1.5.4-remove-alsa.patch, +virtualbox-1.5.4.ebuild,
+  virtualbox-9999.ebuild:
+  Version bump wrt bug #203893 thanks to x-drum
+
+  03 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  virtualbox-1.5.4.ebuild, virtualbox-9999.ebuild:
+  remove redundant cd statements
+
+  02 Jan 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  -virtualbox-1.5.2.ebuild, -files/virtualbox-1.5.2-remove-alsa.patch,
+  -files/virtualbox-1.5.2-remove-splitted-stuff.patch,
+  +virtualbox-1.5.4.ebuild, +files/virtualbox-1.5.4-remove-alsa.patch,
+  virtualbox-9999.ebuild, files/virtualbox.desktop:
+  version bump; add pulseaudio use flag; fix remove alsa patch; drop unneeded
+  files; disable vboxdrv kernel module compilation
 
   05 Dec 2007; Markus Ullmann <jokey@gentoo.org> files/virtualbox.desktop,
   virtualbox-1.5.2-r1.ebuild:

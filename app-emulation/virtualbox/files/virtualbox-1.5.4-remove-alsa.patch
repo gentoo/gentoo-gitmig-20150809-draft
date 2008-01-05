@@ -1,0 +1,22 @@
+--- Config.kmk.orig	2008-01-02 17:21:25.000000000 +0100
++++ Config.kmk	2008-01-02 17:24:20.000000000 +0100
+@@ -208,7 +208,7 @@
+ # Enable the ISCSI feature.
+ VBOX_WITH_ISCSI = 1
+ # Enable ALSA support for Linux
+-VBOX_WITH_ALSA = 1
++#VBOX_WITH_ALSA = 1
+ # Enable Pulse support for Linux
+ VBOX_WITH_PULSE = 1
+ # Disable WINMM support for Windows (not implemented)
+--- configure.orig	2008-01-02 17:21:37.000000000 +0100
++++ configure	2008-01-02 17:24:42.000000000 +0100
+@@ -1526,7 +1526,7 @@
+     cnf_append "VBOX_WITH_VBOXDRV" ""
+     cnf_append "VBOX_WITH_LINUX_ADDITIONS_32BIT_R0" ""
+   fi
+-  check_alsa
++#  check_alsa
+   if [ $WITH_PULSE -eq 1 ]; then
+     check_pulse
+   else

@@ -1,21 +1,21 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.22 2008/01/05 17:51:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.5.4.ebuild,v 1.1 2008/01/05 17:51:47 jokey Exp $
 
-inherit eutils fdo-mime flag-o-matic linux-mod qt3 subversion toolchain-funcs
+inherit eutils fdo-mime flag-o-matic qt3 toolchain-funcs
 
+MY_P=VirtualBox-${PV}_OSE
 DESCRIPTION="Softwarefamily of powerful x86 virtualization"
 HOMEPAGE="http://www.virtualbox.org/"
-ESVN_REPO_URI="http://virtualbox.org/svn/vbox/trunk"
+SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="pulseaudio sdk"
+IUSE="additions alsa pulseaudio sdk"
 
 RDEPEND="!app-emulation/virtualbox-bin
-	!app-emulation/virtualbox-additions
-	!app-emulation/virtualbox-modules
+	~app-emulation/virtualbox-modules-${PV}
 	dev-libs/libIDL
 	>=dev-libs/libxslt-1.1.19
 	dev-libs/xalan-c
@@ -27,16 +27,16 @@ DEPEND="${RDEPEND}
 	sys-devel/bin86
 	sys-devel/dev86
 	sys-power/iasl
-	>=media-libs/alsa-lib-1.0.13
+	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	pulseaudio? ( media-sound/pulseaudio )"
 # sys-apps/hal is required at runtime (bug #197541)
 RDEPEND="${RDEPEND}
+	additions? ( ~app-emulation/virtualbox-additions-${PV} )
 	sys-apps/usermode-utilities
 	net-misc/bridge-utils
 	sys-apps/hal"
 
-BUILD_TARGETS="all"
-MODULE_NAMES="vboxdrv(misc:${S}/out/linux.${ARCH}/release/bin/src:${S}/out/linux.${ARCH}/release/bin/src)"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	# The VBoxSDL frontend needs media-libs/libsdl compiled
@@ -46,18 +46,23 @@ pkg_setup() {
 		eerror "Please re-emerge media-libs/libsdl with USE=\"X\"."
 		die "media-libs/libsdl should be compiled with the \"X\" USE flag."
 	fi
+}
 
-	linux-mod_pkg_setup
-	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 
-	# Add the vboxusers group before src_install
-	# see (bug #184504)
-	enewgroup vboxusers
+	# Don't build the Alsa audio driver and remove Alsa checks in configure
+	# when Alsa is not selected (bug #167739)
+	use alsa || epatch "${FILESDIR}/${P}-remove-alsa.patch"
 }
 
 src_compile() {
 
 	local myconf
+	# Don't build vboxdrv kernel module
+	myconf="--disable-kmods"
+
 	if ! use pulseaudio; then
 			myconf="${myconf} --disable-pulse"
 	fi
@@ -75,24 +80,25 @@ src_compile() {
 		TOOL_GCC3_LD="$(tc-getCXX)" TOOL_GCC3_LD_SYSMOD="$(tc-getLD)" \
 		TOOL_GCC3_CFLAGS="${CFLAGS}" TOOL_GCC3_CXXFLAGS="${CXXFLAGS}" \
 		all || die "kmk failed"
-
-	linux-mod_src_compile
 }
 
 src_install() {
-	linux-mod_src_install
-
 	cd "${S}"/out/linux.${ARCH}/release/bin
-	insinto /opt/VirtualBox
 
+	# create virtualbox configurations files
+	insinto /etc/vbox
+	newins "${FILESDIR}/${PN}-config" vbox.cfg
+	newins "${FILESDIR}/${PN}-interfaces" interfaces
+
+	insinto /opt/VirtualBox
 	if use sdk; then
 		doins -r sdk
 		fowners root:vboxusers /opt/VirtualBox/sdk/bin/xpidl
 		fperms 0750 /opt/VirtualBox/sdk/bin/xpidl
 	fi
 
-	rm -rf sdk src tst* testcase additions VBoxBFE vditool vboxdrv.ko xpidl SUPInstall \
-	SUPUninstall VBox.png
+	rm -rf sdk src tst* testcase xpidl SUPInstall SUPUninstall VBox.png \
+	VBoxBFE vditool VBoxSysInfo.sh
 
 	doins -r *
 	for each in VBox{Manage,SDL,SVC,XPCOMIPCD,Tunctl} VirtualBox ; do
@@ -115,31 +121,19 @@ src_install() {
 	dosym /opt/VirtualBox/VBoxAddIF.sh /usr/bin/VBoxAddIF
 	dosym /opt/VirtualBox/VBoxAddIF.sh /usr/bin/VBoxDeleteIF
 
-	# udev rule for vboxdrv
-	dodir /etc/udev/rules.d
-	echo 'KERNEL=="vboxdrv", GROUP="vboxusers" MODE=660' >> "${D}/etc/udev/rules.d/60-virtualbox.rules"
-
-	# create virtualbox configurations files
-	insinto /etc/vbox
-	newins "${FILESDIR}/${PN}-config" vbox.cfg
-	newins "${FILESDIR}/${PN}-interfaces" interfaces
-
 	# desktop entry
 	newicon "${S}"/src/VBox/Frontends/VirtualBox/images/ico32x01.png ${PN}.png
 	domenu "${FILESDIR}"/${PN}.desktop
 }
 
 pkg_postinst() {
-	linux-mod_pkg_postinst
 	fdo-mime_desktop_database_update
+	elog ""
 	elog "To launch VirtualBox just type: \"VirtualBox\""
-	elog "You must be in the vboxusers group to use VirtualBox."
+	elog "You must be in the vboxusers group to use VirtualBox,"
 	elog ""
 	elog "The last user manual is available for download at:"
 	elog "http://www.virtualbox.org/download/UserManual.pdf"
-	elog ""
-	elog "Due to the nature of the build process, there are not"
-	elog "additions available for the live ebuild"
 	elog ""
 }
 
