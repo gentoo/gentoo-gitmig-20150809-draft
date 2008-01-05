@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.220 2007/12/25 05:00:50 compnerd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.221 2008/01/05 19:23:07 compnerd Exp $
+
+  05 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  files/0.5.10-hald.rc, hal-0.5.10.ebuild:
+  Update the state to mirror gentopia's ebuild
 
   25 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   +files/96_plugdev_allow_send.patch, hal-0.5.10.ebuild:

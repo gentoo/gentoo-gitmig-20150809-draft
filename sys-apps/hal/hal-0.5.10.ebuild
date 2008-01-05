@@ -1,15 +1,15 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.4 2007/12/25 12:19:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.5 2008/01/05 19:23:07 compnerd Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
-PATCH_VER="p1"
+PATCH_VER="0"
 
 DESCRIPTION="Hardware Abstraction Layer"
 HOMEPAGE="http://www.freedesktop.org/Software/hal"
 SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz
-		http://dev.gentoo.org/~cardoe/files/${PN}/${P}-${PATCH_VER}.tar.bz2"
+		http://dev.gentoo.org/~compnerd/files/${PN}/${P}-gentoo-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
@@ -24,8 +24,6 @@ RDEPEND=">=dev-libs/glib-2.6
 		 >=sys-apps/pciutils-2.2.7-r1
 		 >=dev-libs/libusb-0.1.10a
 		 >=dev-util/gperf-3.0.3
-		 >=sys-auth/consolekit-0.2
-		 >=sys-auth/policykit-0.6
 		   sys-apps/usbutils
 		   virtual/eject
 		 amd64? ( >=sys-apps/dmidecode-2.7 )
@@ -117,7 +115,7 @@ pkg_setup() {
 
 		linux_chkconfig_present INOTIFY_USER || notify_inotify
 
-		if use acpi ; then
+		if kernel_is lt 2 6 23 && use acpi ; then
 			linux_chkconfig_present ACPI_PROCFS || notify_acpi_procfs
 			linux_chkconfig_present ACPI_PROC_EVENT || notify_acpi_proc_event
 		fi
@@ -155,8 +153,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# patchset from http://dev.gentoo.org/~cardoe/repos/hal.git
-	EPATCH_MULTI_MSG="Applying http://dev.gentoo.org/~cardoe/repos/hal.git patchset ..." \
+	EPATCH_MULTI_MSG="Applying Gentoo Patchset ..." \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_SOURCE="${WORKDIR}/hal-0.5.10-patches/" \
 	EPATCH_FORCE="yes" \
@@ -167,6 +164,8 @@ src_unpack() {
 
 	# Enable plugdev support
 	epatch "${FILESDIR}/96_plugdev_allow_send.patch"
+
+	eautoreconf
 }
 
 src_compile() {
@@ -222,9 +221,9 @@ src_compile() {
 		  --with-socket-dir=/var/run/hald \
 		  --enable-umount-helper \
 		  --enable-man-pages \
-		  --enable-policy-kit \
-		  --enable-console-kit \
-		  --enable-acl-management \
+		  --disable-policy-kit \
+		  --disable-console-kit \
+		  --disable-acl-management \
 		  --enable-pci \
 		  --enable-sonypic \
 		  $(use_enable apm) \
