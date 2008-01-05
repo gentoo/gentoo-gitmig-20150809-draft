@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.25-r1.ebuild,v 1.1 2007/12/14 13:43:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.25-r1.ebuild,v 1.2 2008/01/05 20:46:06 maekke Exp $
 
 EAPI="1"
 inherit eutils qt4 toolchain-funcs
@@ -10,7 +10,7 @@ HOMEPAGE="http://qdevelop.org/"
 SRC_URI="http://qdevelop.free.fr/download/${PN}_${PV}.zip"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 

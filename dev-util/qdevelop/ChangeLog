@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qdevelop
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/ChangeLog,v 1.2 2007/12/14 13:43:56 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/ChangeLog,v 1.3 2008/01/05 20:46:06 maekke Exp $
+
+  05 Jan 2008; Markus Meier <maekke@gentoo.org> qdevelop-0.25-r1.ebuild:
+  x86 stable, bug #202254
 
 *qdevelop-0.25-r1 (14 Dec 2007)
 
