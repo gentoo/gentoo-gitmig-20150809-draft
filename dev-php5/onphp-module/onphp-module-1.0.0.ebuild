@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp-module/onphp-module-0.10.0.ebuild,v 1.2 2007/06/02 15:15:02 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp-module/onphp-module-1.0.0.ebuild,v 1.1 2008/01/05 22:13:07 voxus Exp $
 
 PHP_EXT_NAME="onphp"
 PHP_EXT_INI="yes"
@@ -10,7 +10,7 @@ inherit php-ext-pecl-r1
 
 SRC_URI="http://onphp.org/download/onphp-${PV}.tar.bz2"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 DESCRIPTION="onPHP's module."
 HOMEPAGE="http://onphp.org/"
 LICENSE="GPL-2"
@@ -18,7 +18,7 @@ SLOT="0"
 IUSE=""
 
 # since need_php51 is missing
-DEPEND=">=dev-lang/php-5.1.4"
+DEPEND=">=dev-lang/php-5.2"
 RDEPEND="${DEPEND}
 		~dev-php5/onphp-${PV}"
 
