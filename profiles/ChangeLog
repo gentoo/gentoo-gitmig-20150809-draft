@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.972 2008/01/05 00:26:50 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.973 2008/01/05 01:22:17 caster Exp $
+
+  05 Jan 2008; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Unmask taskcoach.
 
   05 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Unmask wxpython-2.8.
