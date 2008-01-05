@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bashmark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bashmark/ChangeLog,v 1.10 2008/01/05 13:43:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bashmark/ChangeLog,v 1.11 2008/01/05 16:01:49 rich0 Exp $
+
+  05 Jan 2008; Richard Freeman <rich0@gentoo.org> bashmark-0.6.2.ebuild:
+  amd64 stable - bug #204317
 
   05 Jan 2008; Markus Meier <maekke@gentoo.org> bashmark-0.6.2.ebuild:
   x86 stable, bug #204317
