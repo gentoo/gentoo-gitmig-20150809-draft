@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.510 2007/12/21 20:24:16 caleb Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.511 2008/01/05 18:02:58 caleb Exp $
+
+  05 Jan 2008; Caleb Tennis <caleb@gentoo.org> qt-4.3.3.ebuild:
+  PF -> PV for docs
 
   21 Dec 2007; Caleb Tennis <caleb@gentoo.org> qt-4.4.0_rc1.ebuild:
   I've completely changed this. Now it's a meta-ebuild that pulls in all of
