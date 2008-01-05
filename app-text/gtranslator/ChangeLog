@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gtranslator
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.27 2008/01/05 14:08:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.28 2008/01/05 17:14:30 nixnut Exp $
+
+  05 Jan 2008; nixnut <nixnut@gentoo.org> gtranslator-1.1.6-r1.ebuild:
+  Stable on ppc wrt bug 204370
 
   05 Jan 2008; Markus Meier <maekke@gentoo.org> gtranslator-1.1.6-r1.ebuild:
   x86 stable, bug #204370

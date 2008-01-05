@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.1.6-r1.ebuild,v 1.2 2008/01/05 14:08:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.1.6-r1.ebuild,v 1.3 2008/01/05 17:14:30 nixnut Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gtranslator/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.4.12
