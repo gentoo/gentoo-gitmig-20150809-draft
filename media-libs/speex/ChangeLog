@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/speex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.70 2008/01/05 14:33:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.71 2008/01/05 15:40:41 ranger Exp $
+
+  05 Jan 2008; Brent Baude <ranger@gentoo.org> speex-1.2_beta3.ebuild:
+  Marking speex-1.2_beta3 ppc64 for bug 204405
 
   05 Jan 2008; Markus Ullmann <jokey@gentoo.org> speex-1.2_beta3.ebuild:
   Stable on sparc
