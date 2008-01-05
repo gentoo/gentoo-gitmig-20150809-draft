@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.203 2008/01/04 18:26:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.204 2008/01/05 19:56:48 ranger Exp $
+
+  05 Jan 2008; Brent Baude <ranger@gentoo.org> k3b-1.0.4.ebuild:
+  Marking k3b-1.0.4 ppc64 for bug 180917
 
   04 Jan 2008; nixnut <nixnut@gentoo.org> k3b-1.0.4.ebuild:
   Stable on ppc wrt bug 180917
