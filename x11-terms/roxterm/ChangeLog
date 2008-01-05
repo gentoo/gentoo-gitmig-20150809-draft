@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/roxterm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.19 2007/12/24 13:34:29 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.20 2008/01/05 10:03:03 drac Exp $
+
+  05 Jan 2008; Samuli Suominen <drac@gentoo.org> roxterm-1.7.4.ebuild:
+  amd64 stable wrt #203179
 
   24 Dec 2007; nixnut <nixnut@gentoo.org> roxterm-1.7.4.ebuild:
   Stable on ppc wrt bug 203179
