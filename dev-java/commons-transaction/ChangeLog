@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-transaction
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-transaction/ChangeLog,v 1.4 2007/05/27 00:39:18 betelgeuse Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-transaction/ChangeLog,v 1.5 2008/01/05 17:57:50 betelgeuse Exp $
+
+  05 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  commons-transaction-1.0.1-r1.ebuild:
+  Move too long DESCRIPTION to metadata.xml.
 
   27 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   -commons-transaction-1.0.1.ebuild, commons-transaction-1.0.1-r1.ebuild:
