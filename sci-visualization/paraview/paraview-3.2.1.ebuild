@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.2 2007/12/15 22:41:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.3 2008/01/05 11:18:47 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python
 
@@ -9,7 +9,8 @@ MY_MAJOR_PV=$(get_version_component_range 1-2)
 
 DESCRIPTION="ParaView is a powerful scientific data visualization application"
 HOMEPAGE="http://www.paraview.org"
-SRC_URI="http://www.${PN}.org/files/v3.2/${PN}-${MY_PV}.tar.gz"
+SRC_URI="http://www.${PN}.org/files/v3.2/${PN}-${MY_PV}.tar.gz
+		mirror://gentoo/${P}-OpenFOAM.patch.bz2"
 
 LICENSE="paraview"
 KEYWORDS="~x86 ~amd64"
@@ -44,6 +45,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-${MY_MAJOR_PV}-support-qt4.3.patch
 	epatch "${FILESDIR}"/${PN}-${MY_MAJOR_PV}-libxml2-fix.patch
+	epatch "${DISTDIR}"/${P}-OpenFOAM.patch.bz2
 
 	# rename paraview's assistant wrapper
 	if use qt4; then

@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/paraview
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.10 2007/12/14 19:59:46 markusle Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.11 2008/01/05 11:18:47 markusle Exp $
+
+  05 Jan 2008; Markus Dittrich <markusle@gentoo.org> paraview-3.2.1.ebuild:
+  Added patch to support OpenFOAM (see bug #202685). Thanks much to
+  Oliver Borm <oli.borm@web.de> for his help and patch.
 
 *paraview-3.2.1 (14 Dec 2007)
 
