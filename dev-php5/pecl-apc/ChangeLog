@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/pecl-apc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.32 2007/12/27 19:55:41 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.33 2008/01/05 18:04:07 jokey Exp $
+
+  05 Jan 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/pecl-apc-3.0.16-apc_set_signals.patch, pecl-apc-3.0.16.ebuild:
+  Fix from project overlay
+
+  04 Jan 2008; Jakub Moc <jakub@gentoo.org>
+  +files/pecl-apc-3.0.16-apc_set_signals.patch, pecl-apc-3.0.16.ebuild:
+  Add patch for Bug 204224
 
 *pecl-apc-3.0.16 (27 Dec 2007)
 
