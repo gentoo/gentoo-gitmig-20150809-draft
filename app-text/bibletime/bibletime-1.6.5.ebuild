@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.3.ebuild,v 1.3 2007/04/30 20:18:13 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.5.ebuild,v 1.1 2008/01/05 18:03:47 beandog Exp $
 
 inherit kde eutils versionator
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=app-text/sword-1.5.9
+DEPEND="=app-text/sword-1.5.10*
 	>=dev-cpp/clucene-0.9.16"
 
 LANGS_PKG=${PN}-i18n-${PV}
