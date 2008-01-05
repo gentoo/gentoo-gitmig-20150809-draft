@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/dsh
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dsh/ChangeLog,v 1.14 2007/11/23 13:44:16 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dsh/ChangeLog,v 1.15 2008/01/05 00:15:04 jsbronder Exp $
+
+  05 Jan 2008; Justin Bronder <jsbronder@gentoo.org> dsh-0.24.0.ebuild,
+  dsh-0.25.0.ebuild, dsh-0.25.3.ebuild, dsh-0.25.7.ebuild,
+  dsh-0.25.9.ebuild:
+  Fix typo where RDEPEND=RDEPEND instead of DEPEND and minor syntax stuff.
 
 *dsh-0.25.9 (23 Nov 2007)
 
