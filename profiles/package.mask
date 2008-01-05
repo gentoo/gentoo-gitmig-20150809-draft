@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8085 2008/01/05 01:22:17 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8086 2008/01/05 22:21:06 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -356,13 +356,10 @@ www-apps/viewcvs
 =dev-scheme/guile-gnome-platform-2.15.95*
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (23 Nov 2007)
-# Mask this until we get the input and mounting issues worked out
->=sys-apps/hal-0.5.10
+# These might break automounting, so keep them masked for now.
 >=sys-auth/policykit-0.6
->=app-misc/hal-info-20071011
 >=gnome-base/gnome-mount-0.7
 >=gnome-extra/policykit-gnome-0.6
-=gnome-extra/gnome-power-manager-2.20.1
 
 # Tony Vroon <chainsaw@gentoo.org> (22 Nov 2007)
 # Upstream actively prevents automated downloads, consider using xchat-xsys instead.
