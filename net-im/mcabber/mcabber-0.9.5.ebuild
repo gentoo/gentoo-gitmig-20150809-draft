@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.5.ebuild,v 1.3 2008/01/05 14:59:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.5.ebuild,v 1.4 2008/01/05 15:05:51 jokey Exp $
 
 DESCRIPTION="A small Jabber console client with various features, like MUC, SSL, PGP"
 HOMEPAGE="http://www.lilotux.net/~mikael/mcabber/"
@@ -37,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
+	make install DESTDIR="${D}" || die "make install failed"
 	# clean unneeded language documentation
 	for i in ${LANGS}; do
 		! use linguas_${i} && rm -rf "${D}"/usr/share/${PN}/help/${i}
