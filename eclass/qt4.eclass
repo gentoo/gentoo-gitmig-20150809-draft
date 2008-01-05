@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.32 2008/01/05 18:44:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.33 2008/01/05 20:24:32 swegener Exp $
 
 # @ECLASS: qt4.eclass
 # @MAINTAINER:
@@ -109,7 +109,7 @@ qt4_pkg_setup() {
 			elif [[ ${x} == sqlite3 ]]; then
 				if ! has_version x11-libs/qt-sql || ! built_with_use x11-libs/qt-sql sqlite; then
 					eerror "You must first install the x11-libs/qt-sql package with the sqlite flag enabled."
-					die "Install x11-libs/qt-sql with USE="\sqlite\""
+					die "Install x11-libs/qt-sql with USE=\"sqlite\""
 				fi
 			fi
 		elif ! built_with_use =x11-libs/qt-4* ${x}; then
