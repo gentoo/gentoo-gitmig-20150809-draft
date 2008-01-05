@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfburn
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfburn/ChangeLog,v 1.6 2007/11/08 11:24:46 lu_zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfburn/ChangeLog,v 1.7 2008/01/05 11:09:58 drac Exp $
+
+  05 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  xfburn-0.3.0_pre20070824.ebuild:
+  Fix building against >=libburn-0.4.0 wrt bug #203119.
 
   08 Nov 2007; Luca Barbato <lu_zero@gentoo.org>
   xfburn-0.3.0_pre20070824.ebuild:
