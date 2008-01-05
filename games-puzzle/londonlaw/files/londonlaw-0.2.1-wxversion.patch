@@ -1,0 +1,15 @@
+--- londonlaw-0.2.1/londonlaw/guiclient/__init__.py	2005-07-05 18:45:05.000000000 -0600
++++ /usr/lib/python2.5/site-packages/londonlaw/guiclient/__init__.py	2008-01-04 17:13:46.000000000 -0600
+@@ -23,6 +23,12 @@
+ 
+ from twisted.internet import protocol, reactor
+ from twisted.python import log
++try:
++    import wxversion
++    wxversion.select("2.6")
++except Exception, e:
++    print >> sys.stderr, "%s: wxPython 2.6 not installed." %e
++    sys.exit(1)
+ from wxPython.wx import *
+ from ConnectWindow import *
+ from GameListWindow import *

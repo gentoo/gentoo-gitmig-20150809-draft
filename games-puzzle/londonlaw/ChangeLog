@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/londonlaw
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/ChangeLog,v 1.8 2007/10/02 03:47:11 dirtyepic Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/ChangeLog,v 1.9 2008/01/05 00:47:38 dirtyepic Exp $
+
+*londonlaw-0.2.1-r1 (05 Jan 2008)
+
+  05 Jan 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/londonlaw-0.2.1-wxversion.patch, +londonlaw-0.2.1-r1.ebuild:
+  Add patch to force wxpython 2.6 at runtime to prevent errors with multiple
+  version installs. (Bug #204347)
 
   02 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> londonlaw-0.2.1.ebuild:
   Lock wxpython to 2.6.
