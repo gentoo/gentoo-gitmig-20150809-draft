@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/libotr-3.1.0.ebuild,v 1.2 2008/01/05 14:56:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/libotr-3.1.0.ebuild,v 1.3 2008/01/05 14:58:05 jokey Exp $
 
 inherit flag-o-matic eutils
 
@@ -25,6 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "Install failed"
-	dodoc COPYING ChangeLog README
+	make install DESTDIR="${D}" || die "Install failed"
+	dodoc ChangeLog README
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libotr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.21 2008/01/05 14:56:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.22 2008/01/05 14:58:05 jokey Exp $
+
+  05 Jan 2008; Markus Ullmann <jokey@gentoo.org> libotr-3.1.0.ebuild:
+  Quoting
 
   05 Jan 2008; Markus Ullmann <jokey@gentoo.org> libotr-3.1.0.ebuild:
   Stable on sparc as dep for mcabber 0.9.5
