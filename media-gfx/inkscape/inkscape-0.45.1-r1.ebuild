@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.45.1-r1.ebuild,v 1.3 2007/12/10 11:33:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.45.1-r1.ebuild,v 1.4 2008/01/05 15:47:42 maekke Exp $
 
 inherit gnome2
 
@@ -34,7 +34,6 @@ COMMON_DEPEND=">=x11-libs/gtk+-2.10.7
 		gnome-base/libgnomeprint
 		gnome-base/libgnomeprintui
 	)
-	jabber? ( >=net-libs/loudmouth-1.0 )
 	lcms? ( >=media-libs/lcms-1.14 )
 	perl? (
 		dev-perl/XML-Parser
