@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/ftgl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.19 2007/12/27 06:52:37 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.20 2008/01/05 01:15:02 mr_bones_ Exp $
+
+*ftgl-2.1.2-r2 (05 Jan 2008)
+
+  05 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/ftgl-2.1.2-configure.ac.patch, +files/ftgl-2.1.2-ftgl.pc.in.patch,
+  +ftgl-2.1.2-r2.ebuild:
+  add patch from Cedric Pinson to correct version in .pc file (bug #171047)
 
   27 Dec 2007; Michael Sterrett <mr_bones_@gentoo.org> ftgl-2.1.2-r1.ebuild:
   license should have been LGPL-2 (bug #174440)
