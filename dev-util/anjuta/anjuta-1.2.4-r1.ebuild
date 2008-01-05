@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4-r1.ebuild,v 1.10 2007/04/17 17:05:43 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4-r1.ebuild,v 1.11 2008/01/05 23:22:42 compnerd Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -42,9 +42,9 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/anjuta-1.2.4-gtk-fix.patch
+	epatch "${FILESDIR}/anjuta-1.2.4-gtk-fix.patch"
 
 	sed -i -e "s:packageplugindir=lib:packageplugindir=$(get_libdir):" \
 		configure.in

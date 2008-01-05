@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.2.0-r1.ebuild,v 1.2 2007/10/12 08:58:37 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.2.0-r1.ebuild,v 1.3 2008/01/05 23:22:42 compnerd Exp $
 
 inherit eutils gnome2 eutils autotools
 
@@ -74,10 +74,10 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
-	cd ${S}
+	cd "${S}"
 
 	# Patch to prevent an access violation (bug #164740)
-	epatch ${FILESDIR}/${PN}-2.1.0-sandbox-fix.patch
+	epatch "${FILESDIR}/${PN}-2.1.0-sandbox-fix.patch"
 }
 
 src_install() {
