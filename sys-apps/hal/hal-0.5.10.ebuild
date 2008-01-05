@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.5 2008/01/05 19:23:07 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.6 2008/01/05 21:45:18 compnerd Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 KERNEL_IUSE="kernel_linux kernel_FreeBSD"
-IUSE="acpi apm crypt debug dell disk-partition doc selinux ${KERNEL_IUSE}"
+IUSE="acpi apm crypt debug dell disk-partition doc laptop selinux ${KERNEL_IUSE}"
 
 RDEPEND=">=dev-libs/glib-2.6
 		 >=dev-libs/dbus-glib-0.61
@@ -60,7 +60,7 @@ DEPEND="${RDEPEND}
 					dev-libs/libxml2
 				)"
 PDEPEND=">=app-misc/hal-info-20071011
-		 >=sys-power/pm-utils-0.99.3"
+		 laptop? ( >=sys-power/pm-utils-0.99.3 )"
 
 ## HAL Daemon drops privledges so we need group access to read disks
 HALDAEMON_GROUPS_LINUX="haldaemon,plugdev,disk,cdrom,cdrw,floppy,usb"
