@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jsx
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/ChangeLog,v 1.12 2007/12/19 04:34:27 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/ChangeLog,v 1.13 2008/01/05 12:49:47 caster Exp $
+
+  05 Jan 2008; Vlastimil Babka <caster@gentoo.org> jsx-1.0.7.5-r1.ebuild:
+  Use jar to unpack instead of the missing unzip dep, fixes bug #204384. Also
+  fix dosrc which was used wrongly on whole WORKDIR.
 
   19 Dec 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -jsx-1.0.7.5.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/jsx-1.0.7.5-r1.ebuild,v 1.3 2007/11/14 15:15:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/jsx-1.0.7.5-r1.ebuild,v 1.4 2008/01/05 12:49:47 caster Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -21,7 +21,7 @@ S="${WORKDIR}"
 
 src_unpack() {
 
-	unpack ${A}
+	jar -xf "${DISTDIR}"/${A} || die "failed to unpack"
 
 	rm -f JSX/*.class JSX/magic/*.class
 
@@ -39,6 +39,6 @@ src_install() {
 	java-pkg_dojar jsx.jar
 
 	dodoc JSX/readme.txt
-	use source && java-pkg_dosrc "${S}"
+	use source && java-pkg_dosrc "${S}"/JSX
 
 }
