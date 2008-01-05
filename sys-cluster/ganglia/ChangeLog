@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ganglia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.9 2008/01/05 01:34:19 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.10 2008/01/05 02:22:11 jsbronder Exp $
+
+  05 Jan 2008; Justin Bronder <jsbronder@gentoo.org> files/gmond.rc:
+  Fix typo in gmond.rc (bug #194879)
 
 *ganglia-3.0.6 (05 Jan 2008)
 

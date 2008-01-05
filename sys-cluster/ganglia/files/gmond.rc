@@ -11,7 +11,7 @@ start() {
 }
 
 stop() {
-	ebegin "Shutting down GANGLIA gmnod: "
+	ebegin "Shutting down GANGLIA gmond: "
 	start-stop-daemon --stop --quiet --exec /usr/sbin/gmond
 	eend $? "Failed to stop gmond"
 }
