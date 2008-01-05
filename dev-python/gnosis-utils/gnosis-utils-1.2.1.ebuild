@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/gnosis-utils-1.2.1.ebuild,v 1.3 2008/01/04 15:13:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/gnosis-utils-1.2.1.ebuild,v 1.4 2008/01/05 17:19:56 armin76 Exp $
 
 NEED_PYTHON=2.1
 
@@ -12,7 +12,7 @@ DESCRIPTION="XML pickling and objectification with Python."
 SRC_URI="http://www.gnosis.cx/download/${MY_P}.tar.gz"
 HOMEPAGE="http://www.gnosis.cx/download/"
 SLOT="0"
-KEYWORDS="~ia64 x86"
+KEYWORDS="ia64 x86"
 LICENSE="PYTHON"
 IUSE=""
 
