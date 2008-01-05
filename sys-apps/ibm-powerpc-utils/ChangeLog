@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ibm-powerpc-utils
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.8 2007/05/29 17:05:46 ranger Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.9 2008/01/05 20:29:25 ranger Exp $
+
+  05 Jan 2008; Brent Baude <ranger@gentoo.org>
+  ibm-powerpc-utils-1.0.4.ebuild:
+  Correcting dependancy on librtas and stablizing ibm-powerpc-utils-1.0.4 
+  for ppc and ppc64
 
 *ibm-powerpc-utils-1.0.4 (29 May 2007)
 
