@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnetdude
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetdude/ChangeLog,v 1.4 2007/04/01 21:59:22 vanquirius Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetdude/ChangeLog,v 1.5 2008/01/05 20:19:06 jokey Exp $
+
+*libnetdude-0.10a (05 Jan 2008)
+
+  05 Jan 2008; Markus Ullmann <jokey@gentoo.org> +libnetdude-0.10a.ebuild:
+  Version bump wrt bug #200450
 
   01 Apr 2007; Marcelo Goes <vanquirius@gentoo.org> -libnetdude-0.8.ebuild,
   libnetdude-0.9.ebuild:
