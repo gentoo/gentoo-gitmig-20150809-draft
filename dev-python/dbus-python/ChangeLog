@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.31 2008/01/04 23:26:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.32 2008/01/05 17:55:06 hawking Exp $
+
+  05 Jan 2008; Ali Polatel <hawking@gentoo.org> dbus-python-0.82.4.ebuild:
+  Removed dbus/Makefile.in from sed as it no longer exists in this version,
+  bug 204372. quoting.
 
 *dbus-python-0.82.4 (04 Jan 2008)
 

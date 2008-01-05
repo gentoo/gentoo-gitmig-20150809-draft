@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.82.4.ebuild,v 1.1 2008/01/04 23:26:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.82.4.ebuild,v 1.2 2008/01/05 17:55:06 hawking Exp $
 
 inherit python multilib
 
@@ -30,7 +30,7 @@ src_unpack() {
 	# don't run py-compile
 	sed -i \
 		-e '/if test -n "$$dlist"; then/,/else :; fi/d' \
-		dbus/Makefile.in Makefile.in || die "sed in Makefile.in failed"
+		Makefile.in || die "sed in Makefile.in failed"
 }
 
 src_compile() {
@@ -43,7 +43,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize ${ROOT}usr/$(get_libdir)/python*/site-packages/dbus
+	python_mod_optimize "${ROOT}"usr/$(get_libdir)/python*/site-packages/dbus
 }
 
 pkg_postrm() {
