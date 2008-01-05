@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.73 2007/10/12 08:58:37 remi Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.74 2008/01/05 23:15:32 compnerd Exp $
+
+  05 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org> metadata.xml:
+  Add welp as co-maintainer
 
   12 Oct 2007; Rémi Cardona <remi@gentoo.org> anjuta-2.1.0_beta1.ebuild,
   anjuta-2.1.1_beta1.ebuild, anjuta-2.2.0.ebuild, anjuta-2.2.0-r1.ebuild:
