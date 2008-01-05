@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/tlslite
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.5 2007/12/10 01:05:12 sbriesen Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.6 2008/01/05 22:00:33 sbriesen Exp $
+
+*tlslite-0.3.8-r1 (05 Jan 2008)
+
+  05 Jan 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/tlslite-0.3.8-python25.diff, +tlslite-0.3.8-r1.ebuild:
+  added patch for python 2.5, solving bug #204278.
 
   10 Dec 2007; Stefan Briesenick <sbriesen@gentoo.org> tlslite-0.3.8.ebuild:
   corrected dependencies, removed ia64 keyword (see bugs #198366 and 199481).

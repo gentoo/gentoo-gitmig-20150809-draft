@@ -1,0 +1,29 @@
+diff -ru tlslite-0.3.8.orig/tlslite/integration/XMLRPCTransport.py tlslite-0.3.8/tlslite/integration/XMLRPCTransport.py
+--- tlslite-0.3.8.orig/tlslite/integration/XMLRPCTransport.py	2008-01-04 14:11:33.046005708 +0100
++++ tlslite-0.3.8/tlslite/integration/XMLRPCTransport.py	2008-01-04 14:26:41.738737158 +0100
+@@ -15,7 +15,8 @@
+                  cryptoID=None, protocol=None,
+                  x509Fingerprint=None,
+                  x509TrustList=None, x509CommonName=None,
+-                 settings=None):
++                 settings=None,
++                 use_datetime=0):
+         """Create a new XMLRPCTransport.
+ 
+         An instance of this class can be passed to L{xmlrpclib.ServerProxy}
+@@ -108,8 +109,15 @@
+         @param settings: Various settings which can be used to control
+         the ciphersuites, certificate types, and SSL/TLS versions
+         offered by the client.
++
++        @type use_datetime: bool
++        @param use_datetime: In python 2.5, present date/time values
++        as L{datetime.datetime} and accept L{datetime.datetime},
++        L{datetime.date} and L{datetime.time} objects, if flag is
++        true.
+         """
+ 
++        self._use_datetime = use_datetime
+         ClientHelper.__init__(self,
+                  username, password, sharedKey,
+                  certChain, privateKey,
