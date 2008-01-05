@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/input-utils
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/ChangeLog,v 1.3 2007/03/31 08:17:29 robbat2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/ChangeLog,v 1.4 2008/01/05 00:41:06 robbat2 Exp $
+
+*input-utils-0.0.1_pre20051128-r1 (05 Jan 2008)
+
+  05 Jan 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  input-utils-0.0.1_pre20050727.ebuild,
+  input-utils-0.0.1_pre20051128.ebuild,
+  +input-utils-0.0.1_pre20051128-r1.ebuild:
+  Minor bump for the newer debian patch. Cleans up manpage and uses system
+  header instead of bundled header. Also clean up ebuilds to modern standards.
 
 *input-utils-0.0.1_pre20051128 (31 Mar 2007)
 

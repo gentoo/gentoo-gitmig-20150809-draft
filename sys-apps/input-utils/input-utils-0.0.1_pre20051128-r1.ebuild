@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/input-utils-0.0.1_pre20051128.ebuild,v 1.3 2008/01/05 00:41:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/input-utils-0.0.1_pre20051128-r1.ebuild,v 1.1 2008/01/05 00:41:06 robbat2 Exp $
 
 inherit eutils
 
 MY_P="input-${PV/0.0.1_pre/}-143821"
-DEBIAN_PR=1
+DEBIAN_PR=4
 DEBIAN_P="${PN}_${PV/1_pre/}-${DEBIAN_PR}.diff.gz"
 
 DESCRIPTION="Small collection of linux input layer utils"
