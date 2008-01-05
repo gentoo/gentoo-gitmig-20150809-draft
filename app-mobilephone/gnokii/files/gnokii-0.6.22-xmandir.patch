@@ -1,0 +1,12 @@
+diff -Nru gnokii-0.6.22.orig/Makefile.global.in gnokii-0.6.22/Makefile.global.in
+--- gnokii-0.6.22.orig/Makefile.global.in	2007-11-24 13:31:01.000000000 +0200
++++ gnokii-0.6.22/Makefile.global.in	2008-01-05 14:33:21.000000000 +0200
+@@ -28,7 +28,7 @@
+ mandir         = @mandir@
+ man1dir        = ${mandir}/man1/
+ man8dir        = ${mandir}/man8/
+-xmandir        = @XGNOKIIDIR@/man/man1/
++xmandir        = ${mandir}/man1x/
+ datarootdir    = @datarootdir@
+ docdir         = @docdir@
+ datadir        = @datadir@

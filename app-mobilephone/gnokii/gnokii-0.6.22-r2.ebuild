@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r1.ebuild,v 1.3 2008/01/01 16:16:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r2.ebuild,v 1.1 2008/01/05 12:40:31 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -40,6 +40,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-locale.patch
+	epatch "${FILESDIR}"/${P}-xmandir.patch
 
 	if use sms ; then
 		local MY_SMSD_DB_OBJS="file.lo"

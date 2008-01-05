@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.67 2008/01/01 16:16:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.68 2008/01/05 12:40:31 mrness Exp $
+
+*gnokii-0.6.22-r2 (05 Jan 2008)
+
+  05 Jan 2008; Alin Năstac <mrness@gentoo.org>
+  +files/gnokii-0.6.22-xmandir.patch, -gnokii-0.6.22-r1.ebuild,
+  +gnokii-0.6.22-r2.ebuild:
+  Install xgnokii manpage in /usr/share/man directory (#204308).
 
   01 Jan 2008; Alin Năstac <mrness@gentoo.org>
   +files/gnokii-0.6.22-locale.patch, gnokii-0.6.22-r1.ebuild:
