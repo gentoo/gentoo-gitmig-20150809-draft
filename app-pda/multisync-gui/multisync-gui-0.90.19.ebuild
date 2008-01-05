@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync-gui/multisync-gui-0.90.19.ebuild,v 1.3 2007/02/12 20:49:51 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync-gui/multisync-gui-0.90.19.ebuild,v 1.4 2008/01/05 17:24:46 peper Exp $
 
 DESCRIPTION="OpenSync multisync-gui"
 HOMEPAGE="http://www.opensync.org/"
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE="evo"
 
-DEPEND="app-pda/libopensync
+DEPEND="<=app-pda/libopensync-0.35
 	evo? ( app-pda/libopensync-plugin-evolution2 )
 	>=gnome-base/libgnomeui-2.0"
 RDEPEND="${DEPEND}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync-gui/multisync-gui-0.91.0.ebuild,v 1.2 2007/09/17 02:05:34 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync-gui/multisync-gui-0.91.0.ebuild,v 1.3 2008/01/05 17:24:46 peper Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE="evo"
 
-DEPEND=">=app-pda/libopensync-0.20
+DEPEND="<=app-pda/libopensync-0.35
 	evo? ( >=app-pda/libopensync-plugin-evolution2-0.20 )
 	>=gnome-base/libgnomeui-2.0
 	>=x11-libs/gtk+-2.6.0"
