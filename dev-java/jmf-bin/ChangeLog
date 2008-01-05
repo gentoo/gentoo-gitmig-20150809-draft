@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jmf-bin
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/ChangeLog,v 1.8 2007/12/28 11:27:37 maekke Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/ChangeLog,v 1.9 2008/01/05 23:24:03 betelgeuse Exp $
+
+  05 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  jmf-bin-2.1.1e-r1.ebuild, jmf-bin-2.1.1e-r2.ebuild:
+  Shorten DESCRIPTION
 
   28 Dec 2007; Markus Meier <maekke@gentoo.org> jmf-bin-2.1.1e-r2.ebuild:
   x86 stable wrt bug #203272 and quotes
