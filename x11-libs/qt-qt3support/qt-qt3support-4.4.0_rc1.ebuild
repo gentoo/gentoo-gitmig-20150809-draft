@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.11 2007/12/22 17:57:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.4.0_rc1.ebuild,v 1.12 2008/01/05 00:11:32 caleb Exp $
 
 inherit qt4-build
 
@@ -22,7 +22,7 @@ RDEPEND="~x11-libs/qt-gui-${PV}
 
 DEPEND="${RDEPEND}"
 
-QT4_TARGET_DIRECTORIES="src/qt3support tools/designer/src/plugins/widgets tools/qtconfig src/tools/uic3"
+QT4_TARGET_DIRECTORIES="src/qt3support tools/designer/src/plugins/widgets tools/qtconfig src/tools/uic3 tools/porting"
 
 pkg_setup() {
 	qt4-build_pkg_setup
