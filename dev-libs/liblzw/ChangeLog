@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblzw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblzw/ChangeLog,v 1.4 2008/01/01 16:30:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblzw/ChangeLog,v 1.5 2008/01/05 10:05:34 drac Exp $
+
+  05 Jan 2008; Samuli Suominen <drac@gentoo.org> liblzw-0.1.2.ebuild:
+  amd64 stable wrt #202771
 
 *liblzw-0.1.2 (01 Jan 2008)
 
