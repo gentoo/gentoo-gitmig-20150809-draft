@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/avr-libc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.40 2007/08/29 17:19:56 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.41 2008/01/05 09:32:23 calchan Exp $
+
+  05 Jan 2008; Denis Dupeyron <calchan@gentoo.org> avr-libc-1.2.6.ebuild:
+  Shameless copy of avr-gcc check from later versions to fix bug #204377.
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing gustavoz from metadata due to his retirement (see #36010 for

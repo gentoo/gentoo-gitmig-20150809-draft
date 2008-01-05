@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.2.6.ebuild,v 1.6 2006/10/11 22:13:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.2.6.ebuild,v 1.7 2008/01/05 09:32:23 calchan Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,6 +19,22 @@ DEPEND=">=sys-devel/crossdev-0.9.1"
 [[ ${CATEGORY/cross-} != ${CATEGORY} ]] \
 	&& RDEPEND="!dev-embedded/avr-libc" \
 	|| RDEPEND=""
+
+pkg_setup() {
+	# check for avr-gcc, bug #134738 and bug #204377
+	ebegin "Checking for avr-gcc"
+	if type -p avr-gcc > /dev/null ; then
+		eend 0
+	else
+		eend 1
+
+		eerror
+		eerror "Failed to locate 'avr-gcc' in \$PATH. You can install an AVR toolchain using:"
+		eerror "  $ crossdev -t avr"
+		eerror
+		die "AVR toolchain not found"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
