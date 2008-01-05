@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libpcapnav
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/ChangeLog,v 1.6 2007/11/06 19:40:23 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/ChangeLog,v 1.7 2008/01/05 20:13:41 jokey Exp $
+
+*libpcapnav-0.8 (05 Jan 2008)
+
+  05 Jan 2008; Markus Ullmann <jokey@gentoo.org> +libpcapnav-0.8.ebuild:
+  Version bump wrt bug #200450
 
   06 Nov 2007; Raúl Porcel <armin76@gentoo.org> libpcapnav-0.7.ebuild:
   Add ~sparc
