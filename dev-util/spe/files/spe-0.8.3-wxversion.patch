@@ -1,0 +1,16 @@
+--- SPE-0.8.3.c-wx2.6.1.0/_spe/SPE.py	2006-01-21 21:01:56.000000000 -0600
++++ /usr/lib/python2.5/site-packages/_spe/SPE.py	2008-01-04 18:10:55.000000000 -0600
+@@ -1,11 +1,10 @@
+ import sys
+ 
+ try:
+-    WX_VERSION  = '2.5.4.1'
+     import wxversion
+-    wxversion.ensureMinimal(WX_VERSION)
++    wxversion.select('2.6')
+ except ImportError:
+-    print 'You need to install at least wxPython v%s to run SPE.\nGet it from http://www.wxpython.org'%WX_VERSION
++    print 'You need to install wxPython v%s to run SPE.\nGet it from http://www.wxpython.org'%WX_VERSION
+     sys.exit()
+     
+ import info
