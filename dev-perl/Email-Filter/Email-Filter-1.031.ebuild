@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Filter/Email-Filter-1.031.ebuild,v 1.4 2008/01/03 01:30:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Filter/Email-Filter-1.031.ebuild,v 1.5 2008/01/05 16:52:44 armin76 Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://cpan/authors/id/R/RJ/RJBS/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~rjbs/"
 
 LICENSE="Artistic"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
