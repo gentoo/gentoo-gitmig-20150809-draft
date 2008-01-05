@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/xkeyval-2.5f.ebuild,v 1.5 2007/11/19 10:35:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/xkeyval-2.5f.ebuild,v 1.6 2008/01/05 11:21:51 aballier Exp $
 
 inherit latex-package
 
@@ -12,7 +12,9 @@ LICENSE="LPPL-1.2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc-macos x86"
 IUSE="doc"
-DEPEND=">=app-text/tetex-3.0"
+RDEPEND=">=app-text/tetex-3.0"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 TEXMF="/usr/share/texmf-site"
 S=${WORKDIR}/${PN}
