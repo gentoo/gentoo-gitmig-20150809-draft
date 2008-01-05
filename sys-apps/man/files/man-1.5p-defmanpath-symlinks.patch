@@ -1,5 +1,11 @@
---- man-1.5o2/src/makewhatis.sh.orig	2005-01-07 21:19:37.812163552 -0500
-+++ man-1.5o2/src/makewhatis.sh	2005-01-07 21:20:43.023249960 -0500
+makewhatis traverses manpages twice, as default manpath contains two
+directories that are symlinked together ... this isn't a real fix, just
+a workaround that should be OK for the way Gentoo does things.  a real
+fix would be to filter out any directories which resolv to the same
+directory ...
+
+--- man-1.5o2/src/makewhatis.sh
++++ man-1.5o2/src/makewhatis.sh
 @@ -41,7 +41,7 @@
  # and should be first.
  # It is a bug to add /var/cache/man to DEFCATPATH.

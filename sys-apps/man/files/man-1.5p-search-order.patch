@@ -1,3 +1,6 @@
+Fix search order in man.conf so that system installed manpages
+will be found first ...
+
 --- man-1.5p/src/man.conf.in
 +++ man-1.5p/src/man.conf.in
 @@ -36,11 +36,11 @@
