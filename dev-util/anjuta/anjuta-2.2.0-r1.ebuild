@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.2.0-r1.ebuild,v 1.3 2008/01/05 23:22:42 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.2.0-r1.ebuild,v 1.4 2008/01/05 23:56:54 compnerd Exp $
 
 inherit eutils gnome2 eutils autotools
 
@@ -14,46 +14,47 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug devhelp doc glade inherit-graph sourceview subversion valgrind"
 
 RDEPEND=">=dev-libs/glib-2.8.0
-	 >=x11-libs/gtk+-2.8.0
-	 >=gnome-base/orbit-2.6.0
-	 >=gnome-base/libglade-2.3.0
-	 >=gnome-base/libgnome-2.12.0
-	 >=gnome-base/libgnomeui-2.12.0
-	 >=gnome-base/libgnomeprint-2.12.0
-	 >=gnome-base/libgnomeprintui-2.12.0
-	 >=gnome-base/gnome-vfs-2.12.0
-	 >=gnome-base/gconf-2.12.0
-	 >=x11-libs/vte-0.13.1
-	 >=dev-libs/libxml2-2.4.23
-	 >=x11-libs/pango-1.1.1
-	 >=dev-libs/gdl-0.7.5
-	 >=app-text/gnome-doc-utils-0.3.2
-	 >=dev-libs/gnome-build-0.1.6
-	 >=dev-libs/libpcre-5.0
-	 >=x11-libs/libwnck-2.12
-	 >=sys-devel/binutils-2.15.92
-	   dev-libs/libxslt
-	   sys-devel/autogen
-	 devhelp? ( >=dev-util/devhelp-0.13 )
-	 glade? ( >=dev-util/glade-3.1.4 )
-	 inherit-graph? ( >=media-gfx/graphviz-2.6.0 )
-	 sourceview? (
-					>=x11-libs/gtk+-2.10.0
-					>=gnome-base/libgnome-2.14.0
-					=x11-libs/gtksourceview-1*
-				 )
-	 subversion? (
-					>=dev-util/subversion-1.1.4
-					>=net-misc/neon-0.24.5
-					dev-libs/apr
-				 )
-	 valgrind? ( dev-util/valgrind )"
+		 >=x11-libs/gtk+-2.8.0
+		 >=gnome-base/orbit-2.6.0
+		 >=gnome-base/libglade-2.3.0
+		 >=gnome-base/libgnome-2.12.0
+		 >=gnome-base/libgnomeui-2.12.0
+		 >=gnome-base/libgnomeprint-2.12.0
+		 >=gnome-base/libgnomeprintui-2.12.0
+		 >=gnome-base/gnome-vfs-2.12.0
+		 >=gnome-base/gconf-2.12.0
+		 >=x11-libs/vte-0.13.1
+		 >=dev-libs/libxml2-2.4.23
+		 >=x11-libs/pango-1.1.1
+		 >=dev-libs/gdl-0.7.5
+		 >=app-text/gnome-doc-utils-0.3.2
+		 >=dev-libs/gnome-build-0.1.6
+		 >=dev-libs/libpcre-5.0
+		 >=x11-libs/libwnck-2.12
+		 >=sys-devel/binutils-2.15.92
+		   dev-libs/libxslt
+		   sys-devel/autogen
+		 devhelp? ( >=dev-util/devhelp-0.13 )
+		 glade? ( >=dev-util/glade-3.1.4 )
+		 inherit-graph? ( >=media-gfx/graphviz-2.6.0 )
+		 sourceview? (
+						>=x11-libs/gtk+-2.10.0
+						>=gnome-base/libgnome-2.14.0
+						=x11-libs/gtksourceview-1*
+					 )
+		 subversion? (
+						>=dev-util/subversion-1.1.4
+						>=net-misc/neon-0.24.5
+						dev-libs/apr
+					 )
+		 valgrind? ( dev-util/valgrind )"
 DEPEND="${RDEPEND}
-	  dev-lang/perl
-	>=sys-devel/gettext-0.14
-	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.20
-	doc? ( >=dev-util/gtk-doc-1.0 )"
+		  dev-lang/perl
+		>=sys-devel/gettext-0.14
+		>=dev-util/intltool-0.35
+		>=dev-util/pkgconfig-0.20
+		>=app-text/scrollkeeper-0.3.14-r2
+		doc? ( >=dev-util/gtk-doc-1.0 )"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
