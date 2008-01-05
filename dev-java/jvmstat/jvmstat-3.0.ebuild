@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvmstat/jvmstat-3.0.ebuild,v 1.4 2007/07/02 14:34:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvmstat/jvmstat-3.0.ebuild,v 1.5 2008/01/05 23:29:21 betelgeuse Exp $
 
 inherit java-pkg-2 versionator
 
@@ -16,7 +16,7 @@ IUSE="doc"
 
 RESTRICT="fetch strip"
 
-DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jre-1.5"
 
 S="${WORKDIR}/jvmstat/"
@@ -36,7 +36,7 @@ src_install() {
 
 	dodir "${INSTTO}"
 	cd "${S}"
-	cp -r jars bin ${D}/${INSTTO}
+	cp -r jars bin "${D}/${INSTTO}"
 
 	dodoc README
 	use doc && dodoc -r docs
