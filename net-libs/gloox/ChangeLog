@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gloox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.3 2008/01/05 17:57:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.4 2008/01/05 21:09:03 maekke Exp $
+
+  05 Jan 2008; Markus Meier <maekke@gentoo.org> gloox-0.9.8.ebuild:
+  x86 stable, bug #202261
 
   05 Jan 2008; Markus Ullmann <jokey@gentoo.org> gloox-0.9.8.ebuild:
   Drop iksemel dep per comment on bug #202261
