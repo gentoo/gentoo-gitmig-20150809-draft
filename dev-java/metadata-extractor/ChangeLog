@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/metadata-extractor
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/ChangeLog,v 1.9 2007/08/03 16:44:48 betelgeuse Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/ChangeLog,v 1.10 2008/01/05 23:39:17 betelgeuse Exp $
+
+  05 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Shorten DESCRIPTION.
 
   03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
   -metadata-extractor-2.2.2-r1.ebuild:
