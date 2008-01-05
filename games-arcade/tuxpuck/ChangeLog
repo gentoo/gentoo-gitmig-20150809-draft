@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/tuxpuck
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/ChangeLog,v 1.8 2007/06/01 06:18:45 tupone Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/ChangeLog,v 1.9 2008/01/05 04:04:14 mr_bones_ Exp $
+
+  05 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  tuxpuck-0.8.2-r1.ebuild:
+  fix deps for bug #204398
 
 *tuxpuck-0.8.2-r1 (01 Jun 2007)
 
