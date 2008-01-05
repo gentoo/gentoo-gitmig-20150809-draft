@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci</herd>
+<longdescription lang="en">
+  Orpie is a fullscreen RPN calculator for the console. Its operation is
+  similar to that of modern HP calculators, but data entry has been
+  optimized for efficiency on a PC keyboard.
+</longdescription>
 </pkgmetadata>
