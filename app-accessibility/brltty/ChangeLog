@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.66 2008/01/01 04:58:10 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.67 2008/01/05 22:46:49 williamh Exp $
+
+*brltty-3.9 (05 Jan 2008)
+
+  05 Jan 2008; William Hubbs <williamh@gentoo.org> files/brltty.rc,
+  +brltty-3.9.ebuild:
+  Version bump.  Also, I reworked the startup script so that brltty will start
+  early in the boot process.
 
   01 Jan 2008; William Hubbs <williamh@gentoo.org>
   -files/brltty-3.7.2-linux-compiler-h.patch,
