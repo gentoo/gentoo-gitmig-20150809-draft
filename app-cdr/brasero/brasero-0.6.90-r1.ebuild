@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.6.90.ebuild,v 1.1 2007/12/16 21:40:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.6.90-r1.ebuild,v 1.1 2008/01/05 16:44:59 beandog Exp $
 
-inherit gnome2 gnome.org
+inherit gnome2
 
 DESCRIPTION="Brasero (aka Bonfire) is yet another application to burn CD/DVD for the gnome desktop."
 HOMEPAGE="http://www.gnome.org/projects/brasero"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="beagle dvd gdl libburn libnotify totem nls"
 
-RDEPEND=">=x11-libs/gtk+-2.10
+RDEPEND=">=x11-libs/gtk+-2.11.6
 	>=gnome-base/libgnome-2.10
 	>=gnome-base/libgnomeui-2.10
 	>=gnome-base/gnome-vfs-2.14.2
@@ -25,7 +25,8 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	app-cdr/cdrdao
 	virtual/cdrtools
 	gnome-base/gnome-mount
-	dvd? ( media-libs/libdvdcss )
+	dvd? ( media-libs/libdvdcss
+		app-cdr/dvd+rw-tools )
 	gdl? ( >=dev-libs/gdl-0.6 )
 	totem? ( >=media-video/totem-1.4.2 )
 	beagle? ( >=app-misc/beagle-0.2.5 )

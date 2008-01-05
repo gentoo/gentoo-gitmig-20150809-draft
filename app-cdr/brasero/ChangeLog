@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.29 2008/01/05 06:23:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.30 2008/01/05 16:44:59 beandog Exp $
+
+*brasero-0.6.90-r1 (05 Jan 2008)
+*brasero-0.6.1-r1 (05 Jan 2008)
+
+  05 Jan 2008; Steve Dibb <beandog@gentoo.org> +brasero-0.6.1-r1.ebuild,
+  -brasero-0.6.90.ebuild, +brasero-0.6.90-r1.ebuild:
+  Fix gtk deps, bug 203198, dvd deps, bug 203967 and eclasses, bug 193223
 
 *brasero-0.7.0 (05 Jan 2008)
 
