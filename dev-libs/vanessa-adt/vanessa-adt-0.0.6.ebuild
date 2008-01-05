@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/vanessa-adt-0.0.6.ebuild,v 1.4 2005/03/07 17:58:45 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/vanessa-adt-0.0.6.ebuild,v 1.5 2008/01/05 02:34:29 rbu Exp $
 
 MY_PN="${PN/-/_}"
 MY_P="${MY_PN}-${PV}"
@@ -23,6 +23,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "error installing"
+	make DESTDIR="${D}" install || die "error installing"
 	dodoc AUTHORS NEWS README TODO
 }
