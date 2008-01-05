@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/x264-svn
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.59 2007/12/28 17:35:18 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.60 2008/01/05 16:04:11 ranger Exp $
+
+  05 Jan 2008; Brent Baude <ranger@gentoo.org> x264-svn-20070924.ebuild:
+  Marking x264-svn-20070924 ppc64 for bug 203443
 
   28 Dec 2007; Raúl Porcel <armin76@gentoo.org> x264-svn-20070924.ebuild:
   alpha/sparc stable wrt #200993
