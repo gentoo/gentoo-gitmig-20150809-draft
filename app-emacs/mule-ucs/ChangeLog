@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mule-ucs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/ChangeLog,v 1.7 2007/07/04 23:15:28 opfer Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/ChangeLog,v 1.8 2008/01/05 02:11:27 ulm Exp $
+
+  05 Jan 2008; Ulrich Mueller <ulm@gentoo.org> mule-ucs-0.85_rc3.ebuild:
+  Inherit elisp, not elisp-common. Fixes bug #204365.
 
   04 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   mule-ucs-0.85_rc3.ebuild:

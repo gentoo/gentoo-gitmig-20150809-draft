@@ -1,15 +1,16 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/mule-ucs-0.85_rc3.ebuild,v 1.6 2007/07/04 23:15:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/mule-ucs-0.85_rc3.ebuild,v 1.7 2008/01/05 02:11:27 ulm Exp $
 
-inherit elisp-common
+inherit elisp
 
 MY_PN="Mule-UCS"
 
-DESCRIPTION="A character code translator."
+DESCRIPTION="A character code translator"
 HOMEPAGE="http://www.m17n.org/mule/
 	http://tats.iris.ne.jp/mule-ucs/"
 SRC_URI="http://gentoojp.sourceforge.jp/distfiles/${MY_PN}-${PV}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 alpha ppc sparc x86"
