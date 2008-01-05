@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.3c.ebuild,v 1.6 2008/01/05 00:03:15 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.3c.ebuild,v 1.7 2008/01/05 00:15:39 dirtyepic Exp $
 
 inherit distutils eutils
 
@@ -25,6 +25,8 @@ RDEPEND="=dev-python/wxpython-2.6*
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-0.8.3-wxversion.patch
 	chmod -R go-w "${S}"/*
 }
 

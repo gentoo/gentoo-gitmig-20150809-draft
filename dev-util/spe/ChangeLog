@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.34 2008/01/05 00:03:15 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.35 2008/01/05 00:15:39 dirtyepic Exp $
+
+  05 Jan 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/spe-0.8.3-wxversion.patch, spe-0.8.3c.ebuild:
+  Add patch to force runtime against wxpython-2.6 when multiple versions are
+  installed.
 
   05 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> spe-0.8.2.ebuild,
   spe-0.8.3c.ebuild:
