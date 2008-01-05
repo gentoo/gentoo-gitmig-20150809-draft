@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.2_beta3.ebuild,v 1.1 2007/12/15 13:16:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.2_beta3.ebuild,v 1.2 2008/01/05 09:35:40 drac Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.xiph.org/releases/speex/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ogg sse"
 
 RDEPEND="ogg? ( >=media-libs/libogg-1 )"
