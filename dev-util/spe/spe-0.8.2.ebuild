@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.2.ebuild,v 1.5 2007/10/03 04:24:46 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.2.ebuild,v 1.6 2008/01/05 00:03:15 dirtyepic Exp $
 
 inherit distutils eutils
 
@@ -37,8 +37,6 @@ src_install() {
 	rm -rf "${D}${SITEPATH}/_spe/plugins/wxGlade"
 	rm -rf "${D}${SITEPATH}/_spe/plugins/pychecker"
 	ln -svf "../../wxglade" "${D}${SITEPATH}/_spe/plugins/wxGlade"
-	dodir "${SITEPATH}/wxglade"
-	touch "${D}${SITEPATH}/wxglade/__init__.py"
 	ln -svf "../../pychecker" "${D}${SITEPATH}/_spe/plugins/pychecker"
 }
 

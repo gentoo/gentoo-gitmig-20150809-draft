@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/spe
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.33 2007/10/03 04:24:46 dirtyepic Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.34 2008/01/05 00:03:15 dirtyepic Exp $
+
+  05 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> spe-0.8.2.ebuild,
+  spe-0.8.3c.ebuild:
+  Remove generation of an empty file that collides with wxglade.  Bug #178354.
 
   03 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> spe-0.8.2.ebuild,
   spe-0.8.3c.ebuild:
