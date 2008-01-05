@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta7.ebuild,v 1.4 2007/07/15 03:57:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta7.ebuild,v 1.5 2008/01/05 09:13:28 calchan Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ GCC_VER="4.1.2"
 GCC_SNAPSHOT="20060728"
 BIN_VER=${BASE_BINUTILS:0:4}
 ENV_FILE=${D}/etc/env.d/99tigcc
-S=$WORKDIR
+S="${WORKDIR}"
 DESCRIPTION="Cross compiler for Texas Instruments TI-89, TI-92(+) and V200 calculators"
 HOMEPAGE="http://tigcc.ticalc.org"
 
@@ -32,9 +32,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875"
+
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 RESTRICT="strip"
 
@@ -42,8 +45,8 @@ src_unpack() {
 	unpack ${A}
 
 	# start by patching and cleaning out binutils and gcc directories.
-	cd ${WORKDIR}/binutils-${BASE_BINUTILS}
-	epatch ${S}/sources/gcc/gas-${BIN_VER}-tigcc-*.diff
+	cd "${WORKDIR}"/binutils-${BASE_BINUTILS}
+	epatch "${S}"/sources/gcc/gas-${BIN_VER}-tigcc-*.diff
 
 	rm -f .brik
 	rm -f md5.sum
@@ -60,8 +63,8 @@ src_unpack() {
 	rm -f -r ld
 	rm -f -r texinfo
 
-	cd ${WORKDIR}/gcc-4.1-${GCC_SNAPSHOT}
-	epatch ${S}/sources/gcc/gcc-4.1-tigcc-patch.diff
+	cd "${WORKDIR}"/gcc-4.1-${GCC_SNAPSHOT}
+	epatch "${S}"/sources/gcc/gcc-4.1-tigcc-patch.diff
 
 	rm -f .brik
 	rm -f md5.sum
@@ -80,26 +83,26 @@ src_unpack() {
 	rm -f -r texinfo
 
 	# create build directories for binutils and gcc
-	mkdir -p ${WORKDIR}/build/binutils
-	mkdir ${WORKDIR}/build/gcc
+	mkdir -p "${WORKDIR}"/build/binutils
+	mkdir "${WORKDIR}"/build/gcc
 
 	# Workaround for non-existing directories
-	sed -ie '/SUBDIRS =/d' ${WORKDIR}/binutils-${BASE_BINUTILS}/gas/Makefile.in
+	sed -ie '/SUBDIRS =/d' "${WORKDIR}"/binutils-${BASE_BINUTILS}/gas/Makefile.in
 }
 
 src_compile() {
 	# build binutils
-	cd ${WORKDIR}/build/binutils
-	CFLAGS="${CFLAGS}" ${WORKDIR}/binutils-${BASE_BINUTILS}/configure \
+	cd "${WORKDIR}"/build/binutils
+	CFLAGS="${CFLAGS}" "${WORKDIR}"/binutils-${BASE_BINUTILS}/configure \
 		--disable-serial-configure --target=m68k-coff --disable-shared \
 		--enable-static --disable-multilib --disable-nls \
 		|| die
 	emake || die "gas"
 
 	# build gcc
-	cd ${WORKDIR}/build/gcc
-	CFLAGS="${CFLAGS}" ${WORKDIR}/gcc-4.1-${GCC_SNAPSHOT}/configure --target=m68k-coff \
-				--with-gnu-as --with-as=${WORKDIR}/build/binutils/gas/as-new --with-gnu-ld \
+	cd "${WORKDIR}"/build/gcc
+	CFLAGS="${CFLAGS}" "${WORKDIR}"/gcc-4.1-${GCC_SNAPSHOT}/configure --target=m68k-coff \
+				--with-gnu-as --with-as="${WORKDIR}"/build/binutils/gas/as-new --with-gnu-ld \
 				--disable-nls --disable-multilib --disable-shared --enable-static \
 				--disable-threads --enable-languages=c --disable-win32-registry \
 				--disable-checking --disable-werror --disable-pch --disable-mudflap \
@@ -110,26 +113,26 @@ src_compile() {
 	emake -j1
 
 	# Check if gcc has been built, die otherwise
-	( [ -e ${WORKDIR}/build/gcc/gcc/xgcc ] && [ -e ${WORKDIR}/build/gcc/gcc/cc1  ] ) || die "gcc"
+	( [ -e "${WORKDIR}"/build/gcc/gcc/xgcc ] && [ -e "${WORKDIR}"/build/gcc/gcc/cc1  ] ) || die "gcc"
 
 	# build a68k assembler
-	cd ${S}/sources/a68k
+	cd "${S}"/sources/a68k
 	emake -e || die "a68k"
 
 	# build ld-tigcc linker
-	cd ${S}/sources/ld-tigcc
+	cd "${S}"/sources/ld-tigcc
 	emake -e || die "ld-tigcc"
 
 	# build tigcc front-end
-	cd ${S}/sources/tigcc/src
+	cd "${S}"/sources/tigcc/src
 	emake -e || die "tigcc"
 
 	# build tprbuilder (TIGCC project builder)
-	cd ${S}/sources/tprbuilder/src
+	cd "${S}"/sources/tprbuilder/src
 	emake -e || die "tprbuilder"
 
 	# build patcher (object file patcher)
-	cd ${S}/sources/patcher/src
+	cd "${S}"/sources/patcher/src
 	emake -e || die "patcher"
 
 }
@@ -142,38 +145,38 @@ src_install() {
 		# patch the script that launches the documentation
 		# browser to point to the correct location
 		sed "s:\${TIGCC}/doc:/usr/share/doc/${P}:g" \
-			${S}/tigcclib/doc/converter/tigccdoc \
-		> ${S}/tigcclib/doc/converter/tigccdoc.new
+			"${S}"/tigcclib/doc/converter/tigccdoc \
+		> "${S}"/tigcclib/doc/converter/tigccdoc.new
 
-		cd ${S}/tigcclib/doc/converter
+		cd "${S}"/tigcclib/doc/converter
 		newbin tigccdoc.new tigccdoc
-		cd ${S}/tigcclib/doc
+		cd "${S}"/tigcclib/doc
 		dohtml -r html/*
-		cp html/qt-assistant.adp ${D}/usr/share/doc/${PF}/html
+		cp html/qt-assistant.adp "${D}"/usr/share/doc/${PF}/html
 
-		cd ${S}/sources/a68k
+		cd "${S}"/sources/a68k
 	fi
 
 	dodir /usr/share/doc/${PF}
-	cd ${S}
-	dodoc AUTHORS BUGS CHANGELOG COPYING DIRECTORIES HOWTO \
+	cd "${S}"
+	dodoc AUTHORS BUGS CHANGELOG DIRECTORIES HOWTO \
 		INSTALL README README.linux README.osX
 
-	cd ${S}/sources/tigcc
+	cd "${S}"/sources/tigcc
 	docinto tigcc
-	dodoc AUTHORS COPYING ChangeLog README
+	dodoc AUTHORS ChangeLog README
 
-	cd ${S}/sources/tprbuilder
+	cd "${S}"/sources/tprbuilder
 	docinto tprbuilder
-	dodoc AUTHORS COPYING ChangeLog README
+	dodoc AUTHORS ChangeLog README
 
-	cd ${S}/sources/patcher
+	cd "${S}"/sources/patcher
 	docinto patcher
-	dodoc AUTHORS COPYING ChangeLog README
+	dodoc AUTHORS ChangeLog README
 
 	exeinto /usr/ti-linux-gnu/tigcc-bin/${GCC_VER}
 	# install gcc
-	cd ${WORKDIR}/build/gcc
+	cd "${WORKDIR}"/build/gcc
 	doexe gcc/cc1
 	newexe gcc/xgcc gcc
 	dosym /usr/ti-linux-gnu/tigcc-bin/${GCC_VER}/gcc \
@@ -182,48 +185,48 @@ src_install() {
 	# install gas
 	# exeinto /usr/ti-linux-gnu/bin <-- a symlink will be
 	# created so that gas resides in /usr/ti-linux-gnu/bin too
-	cd ${WORKDIR}/build/binutils
+	cd "${WORKDIR}"/build/binutils
 	newexe gas/as-new as
 
 	# install a68k
-	cd ${S}/sources/a68k
+	cd "${S}"/sources/a68k
 	newexe A68k a68k
 
 	# install ld-tigcc
-	cd ${S}/sources/ld-tigcc
+	cd "${S}"/sources/ld-tigcc
 	doexe ld-tigcc
 	doexe ar-tigcc
 
 	# install tigcc
-	cd ${S}/sources/tigcc/src
+	cd "${S}"/sources/tigcc/src
 	doexe tigcc
 	dosym /usr/ti-linux-gnu/tigcc-bin/${GCC_VER}/tigcc \
 		/usr/ti-linux-gnu/tigcc-bin/${GCC_VER}/ti-linux-gnu-tigcc
 
 	# install tprbuilder
-	cd ${S}/sources/tprbuilder/src
+	cd "${S}"/sources/tprbuilder/src
 	doexe tprbuilder
 
 	# install patcher
-	cd ${S}/sources/patcher/src
+	cd "${S}"/sources/patcher/src
 	doexe patcher
 
 	# install header files
 	dodir /usr/include/tigcc
-	cp -R ${S}/tigcclib/include/* ${D}/usr/include/tigcc
+	cp -R "${S}"/tigcclib/include/* "${D}"/usr/include/tigcc
 	dosym /usr/include/tigcc/asm/os.h /usr/include/tigcc/asm/OS.h
 
 	insinto /usr/lib/gcc-lib/ti-linux-gnu/${GCC_VER}
 	# install library
-	cd ${S}/tigcclib
+	cd "${S}"/tigcclib
 	doins lib/*
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	doins flashos.a
 	doins fargo.a
 
 	dodir /usr/share/tigcc
 	# copy example programs
-	# cp -r ${S}/examples ${D}/usr/share/tigcc
+	# cp -r "${S}"/examples ${D}/usr/share/tigcc
 
 	# create TIGCC env variable
 	dodir /etc/env.d/gcc
