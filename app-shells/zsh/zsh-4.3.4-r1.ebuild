@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.4-r1.ebuild,v 1.4 2008/01/04 15:36:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.4-r1.ebuild,v 1.5 2008/01/05 10:11:29 drac Exp $
 
 inherit eutils multilib autotools
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="maildir static doc examples pcre caps unicode"
 
 RDEPEND=">=sys-libs/ncurses-5.1
