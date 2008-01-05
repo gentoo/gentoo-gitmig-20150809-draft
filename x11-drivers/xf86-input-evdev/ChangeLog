@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.69 2007/12/16 18:02:37 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.70 2008/01/05 22:22:11 compnerd Exp $
+
+  05 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  xf86-input-evdev-1.2.0.ebuild:
+  Restore keywords in 1.2.0 for amd64 and x86
 
   16 Dec 2007; Markus Rothe <corsair@gentoo.org>
   xf86-input-evdev-1.1.5-r2.ebuild:
