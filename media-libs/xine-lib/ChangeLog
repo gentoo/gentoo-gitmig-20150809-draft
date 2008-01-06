@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.485 2007/12/30 14:04:13 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.486 2008/01/06 20:09:03 flameeyes Exp $
+
+*xine-lib-1.1.9 (06 Jan 2008)
+
+  06 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> +xine-lib-1.1.9.ebuild:
+  Version bump, use EAPI 1 to provide some decent defaults for IUSE.
 
   30 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Document non-obvious USE flags on metadata.xml.
