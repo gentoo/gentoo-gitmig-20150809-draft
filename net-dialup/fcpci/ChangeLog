@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/fcpci
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.16 2006/03/12 11:40:20 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.17 2008/01/06 01:53:01 sbriesen Exp $
+
+*fcpci-0.1 (06 Jan 2008)
+
+  06 Jan 2008; Stefan Briesenick <sbriesen@gentoo.org> metadata.xml,
+  +fcpci-0.1.ebuild:
+  using special openSUSE repository for AVM drivers from now on.
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org> fcpci-3.11.02-r2.ebuild:
   Quote $WORKDIR.

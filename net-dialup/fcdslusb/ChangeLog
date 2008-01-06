@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/fcdslusb
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdslusb/ChangeLog,v 1.1 2008/01/06 01:47:59 sbriesen Exp $
+
+*fcdslusb-0.1 (06 Jan 2008)
+
+  06 Jan 2008; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +fcdslusb-0.1.ebuild:
+  using special openSUSE repository for AVM drivers from now on.
+
