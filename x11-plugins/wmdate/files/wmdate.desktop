@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=WmDate
-Comment=Dockable date-display utility for X11
-Comment[pl]=Dokowalny wyświetlacz daty dla X11
-Exec=wmdate
-Type=Application
-Encoding=UTF-8
-Terminal=0
-Categories=Application;Calendar;

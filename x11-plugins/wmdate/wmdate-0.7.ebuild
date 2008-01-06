@@ -1,40 +1,39 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/wmdate-0.7.ebuild,v 1.9 2006/01/24 22:59:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/wmdate-0.7.ebuild,v 1.10 2008/01/06 21:01:19 drac Exp $
 
-inherit eutils
-
-IUSE=""
+inherit eutils toolchain-funcs
 
 DESCRIPTION="yet another date-display dock application"
-SRC_URI="http://solfertje.student.utwente.nl/~dalroi/${PN}/files/${P}.tar.gz"
 HOMEPAGE="http://solfertje.student.utwente.nl/~dalroi/applications.php"
+SRC_URI="http://solfertje.student.utwente.nl/~dalroi/${PN}/files/${P}.tar.gz"
 
-DEPEND="x11-libs/libdockapp"
-
+LICENSE="as-is"
 SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc ppc64 ~sparc amd64"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+IUSE=""
+
+RDEPEND="x11-libs/libdockapp
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm"
+DEPEND="${RDEPEND}
+	x11-misc/gccmakedep
+	x11-misc/imake"
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-ComplexProgramTargetNoMan.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-ComplexProgramTargetNoMan.patch
 }
 
 src_compile() {
-	cd ${S}
-	PATH="$PATH:/usr/X11R6/bin"
-	xmkmf -a
-	emake CDEBUGFLAGS="${CFLAGS}" || die "make failed"
+	xmkmf || die "xmkmf failed."
+	emake CC="$(tc-getCC)" CDEBUGFLAGS="${CFLAGS}" \
+		|| die "emake failed."
 }
 
 src_install() {
-	einstall DESTDIR=${D} BINDIR=/usr/bin || DIE "make install failed"
-
-	dodoc README
-
-	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop
+	dobin ${PN}
+	dodoc Changelog README
 }
