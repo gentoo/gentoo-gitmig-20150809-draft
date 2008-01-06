@@ -1,0 +1,40 @@
+diff -Naur gimp-help-2.4.0.orig/configure.ac gimp-help-2.4.0/configure.ac
+--- gimp-help-2.4.0.orig/configure.ac	2007-11-18 22:48:21.000000000 +0300
++++ gimp-help-2.4.0/configure.ac	2008-01-06 01:44:03.000000000 +0300
+@@ -29,12 +29,24 @@
+ #  haven't been worked on for a while:
+ #  ALL_LINGUAS="cs de en es fr hr it ko nl no ru sv zh_CN"
+ 
++QUICKREFERENCE_ALL_LINGUAS="de en fr it ru sv"
++
+ if test "x$ALL_LINGUAS" = "x"; then
+   ALL_LINGUAS="de en es fr it ko nl no ru sv"
++else
++  QUICKREFERENCE_LINGUAS=""
++  for asked_lang in $ALL_LINGUAS ; do
++    for lang in $QUICKREFERENCE_ALL_LINGUAS ; do
++      if test "$lang" = "$asked_lang"; then
++        QUICKREFERENCE_LINGUAS="$QUICKREFERENCE_LINGUAS $asked_lang"
++      fi
++    done
++  done
++  QUICKREFERENCE_ALL_LINGUAS=$QUICKREFERENCE_LINGUAS
+ fi
+ 
+ AC_SUBST(ALL_LINGUAS)
+-
++AC_SUBST(QUICKREFERENCE_ALL_LINGUAS)
+ 
+ #  The build of the HTML files is optional.
+ 
+diff -Naur gimp-help-2.4.0.orig/quickreference/Makefile.am gimp-help-2.4.0/quickreference/Makefile.am
+--- gimp-help-2.4.0.orig/quickreference/Makefile.am	2007-11-18 21:33:23.000000000 +0300
++++ gimp-help-2.4.0/quickreference/Makefile.am	2008-01-06 01:45:08.000000000 +0300
+@@ -1,7 +1,5 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-QUICKREFERENCE_ALL_LINGUAS = de en fr it ru sv
+-
+ PO_FILES = \
+ 	po/gimp-keys.pot\
+ 	po/de.po	\

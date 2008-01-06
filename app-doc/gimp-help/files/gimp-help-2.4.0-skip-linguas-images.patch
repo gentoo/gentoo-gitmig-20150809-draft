@@ -1,0 +1,44 @@
+diff -Naur gimp-help-2.4.0.orig/configure.ac gimp-help-2.4.0/configure.ac
+--- gimp-help-2.4.0.orig/configure.ac	2008-01-06 02:25:10.000000000 +0300
++++ gimp-help-2.4.0/configure.ac	2008-01-06 02:26:45.000000000 +0300
+@@ -48,6 +48,29 @@
+ AC_SUBST(ALL_LINGUAS)
+ AC_SUBST(QUICKREFERENCE_ALL_LINGUAS)
+ 
++# Lists all existing language codes existed in the package.
++# This helps to filter images for languages user did not asked to install.
++ALL_EXISTING_LINGUAS="cs de en es fr hr it ko nl no ru sv zh_CN"
++
++SKIP_IMAGES_LINGUAS=""
++for lang in $ALL_EXISTING_LINGUAS ; do
++  filter="true"
++  for asked_lang in $ALL_LINGUAS ; do
++    if test "$lang" = "$asked_lang"; then
++      filter="false"
++    fi
++  done
++  if test "$filter" = "true" ; then
++    if test "x$SKIP_IMAGES_LINGUAS" = "x" ; then
++      SKIP_IMAGES_LINGUAS="$lang"
++    else
++      SKIP_IMAGES_LINGUAS="$SKIP_IMAGES_LINGUAS\|$lang"
++    fi
++  fi
++done
++
++AC_SUBST(SKIP_IMAGES_LINGUAS)
++
+ #  The build of the HTML files is optional.
+ 
+ AC_ARG_ENABLE(build,
+diff -Naur gimp-help-2.4.0.orig/Makefile.am gimp-help-2.4.0/Makefile.am
+--- gimp-help-2.4.0.orig/Makefile.am	2007-11-18 22:46:28.000000000 +0300
++++ gimp-help-2.4.0/Makefile.am	2008-01-06 02:27:13.000000000 +0300
+@@ -246,6 +246,7 @@
+ 	@echo "** Installing images: (G=gif, J=jpg, M=mng, P=png, X=xcf)"
+ 
+ 	@cd $(top_srcdir) && find images $(image_find_predicates) | \
++	sed "\:.*/\($(SKIP_IMAGES_LINGUAS)\)/.*:d" | \
+ 	while read file; do \
+ 		case "$$file" in \
+ 		  *.png) echo -n P ;; \
