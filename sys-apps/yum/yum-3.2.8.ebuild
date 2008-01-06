@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-3.2.8.ebuild,v 1.2 2007/12/30 18:53:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-3.2.8.ebuild,v 1.3 2008/01/06 18:38:27 vapier Exp $
 
 NEED_PYTHON=1
 inherit python eutils
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="app-arch/rpm
+RDEPEND=">=dev-lang/python-2.5
+	app-arch/rpm
 	dev-python/sqlitecachec
 	dev-python/celementtree
 	dev-libs/libxml2
