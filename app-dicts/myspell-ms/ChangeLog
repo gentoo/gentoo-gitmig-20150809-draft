@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-ms
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ms/ChangeLog,v 1.10 2008/01/02 12:21:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ms/ChangeLog,v 1.11 2008/01/06 15:30:36 ranger Exp $
+
+  06 Jan 2008; Brent Baude <ranger@gentoo.org> myspell-ms-20060316.ebuild:
+  Marking myspell-ms-20060316 ~ppc64 for bug 204587
 
   02 Jan 2008; Raúl Porcel <armin76@gentoo.org> myspell-ms-20060316.ebuild:
   Add ~alpha/~ia64
