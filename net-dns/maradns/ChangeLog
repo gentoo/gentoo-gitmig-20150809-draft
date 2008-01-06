@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/maradns
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.22 2008/01/06 18:36:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.23 2008/01/06 22:08:40 armin76 Exp $
+
+  06 Jan 2008; Raúl Porcel <armin76@gentoo.org> maradns-1.2.12.09.ebuild:
+  sparc stable wrt security #204351
 
   06 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   maradns-1.2.12.09.ebuild:
