@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gsynaptics
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/ChangeLog,v 1.9 2007/12/23 22:10:27 cla Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/ChangeLog,v 1.10 2008/01/06 03:18:19 compnerd Exp $
+
+  06 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  -gsynaptics-0.9.7.ebuild:
+  prune unused version
 
   23 Dec 2007; Dawid Węgliński <cla@gentoo.org> gsynaptics-0.9.10.ebuild:
   Stable on x86 (bug #203183)
