@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-et
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-et/ChangeLog,v 1.10 2008/01/02 12:21:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-et/ChangeLog,v 1.11 2008/01/06 15:25:16 ranger Exp $
+
+  06 Jan 2008; Brent Baude <ranger@gentoo.org> myspell-et-20060316.ebuild:
+  Marking myspell-et-20060316 ~ppc64 for bug 204587
 
   02 Jan 2008; Raúl Porcel <armin76@gentoo.org> myspell-et-20060316.ebuild:
   Add ~alpha/~ia64
