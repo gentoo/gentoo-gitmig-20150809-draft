@@ -1,6 +1,18 @@
 # ChangeLog for net-www/mplayerplug-in
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.100 2007/11/22 18:56:24 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.101 2008/01/06 22:34:21 josejx Exp $
+
+*mplayerplug-in-3.50 (06 Jan 2008)
+
+  06 Jan 2008; Joseph Jezak <josejx@gentoo.org>
+  -files/mplayerplug-in-3.31-firefox.patch,
+  -files/mplayerplug-in-3.31-seamonkey.patch,
+  +files/mplayerplug-in-3.50-seamonkey.patch, -mplayerplug-in-3.21.ebuild,
+  -mplayerplug-in-3.31-r1.ebuild, mplayerplug-in-3.35.ebuild,
+  -mplayerplug-in-3.40-r1.ebuild, mplayerplug-in-3.45.ebuild,
+  +mplayerplug-in-3.50.ebuild:
+  Removed old versions, added new version, closes bug #201257. Added amd64
+  multilib changes from bug #178857.
 
   22 Nov 2007; Raúl Porcel <armin76@gentoo.org> mplayerplug-in-3.45.ebuild:
   sparc stable wrt #192696, thanks to Alex Maclean for testing

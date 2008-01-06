@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.45.ebuild,v 1.5 2007/11/22 18:56:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.45.ebuild,v 1.6 2008/01/06 22:34:21 josejx Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 -hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 -hppa ~ia64 ppc ppc64 sparc x86"
 IUSE="gtk divx gmedia mplayer-bin nls realmedia quicktime wmp"
 
 LANGS="da de en_US es fr hu it ja ko nb pl pt_BR nl ru se zh_CN"
@@ -37,18 +37,18 @@ DEPEND="
 		!mplayer-bin? ( >=media-video/mplayer-1.0_pre5 )
 		dev-util/pkgconfig"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-3.40-cflags.patch
-	epatch ${FILESDIR}/${PN}-gcc4.patch
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-3.40-cflags.patch"
+	epatch "${FILESDIR}/${PN}-gcc4.patch"
 	### Adds support for 32 bit binary mplayer on amd64
 	if use mplayer-bin; then
-		epatch ${FILESDIR}/${PN}-mplayer-bin.patch
+		epatch "${FILESDIR}/${PN}-mplayer-bin.patch"
 	fi
-	epatch ${FILESDIR}/${PN}-3.35-seamonkey.patch
+	epatch "${FILESDIR}/${PN}-3.35-seamonkey.patch"
 }
 
 src_compile() {
