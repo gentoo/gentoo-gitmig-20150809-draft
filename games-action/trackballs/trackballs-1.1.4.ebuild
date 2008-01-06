@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.1.4.ebuild,v 1.4 2007/11/13 18:02:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.1.4.ebuild,v 1.5 2008/01/06 07:23:22 mr_bones_ Exp $
 
 inherit eutils games
 
 DESCRIPTION="simple game similar to the classical game Marble Madness"
 HOMEPAGE="http://trackballs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-	mirror://gentoo/${PN}-music-1.3.tar.bz2"
+	mirror://sourceforge/${PN}/${PN}-music-1.4.tar.bz2"
 
 LICENSE="GPL-2 FML-1"
 SLOT="0"
