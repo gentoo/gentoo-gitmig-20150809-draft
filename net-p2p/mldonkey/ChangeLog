@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.196 2007/12/23 13:58:46 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.197 2008/01/06 16:04:14 armin76 Exp $
+
+  06 Jan 2008; Raúl Porcel <armin76@gentoo.org> mldonkey-2.9.2.ebuild:
+  Remove RESTRICT=mirror as discussed with upstream
 
   23 Dec 2007; Raúl Porcel <armin76@gentoo.org> -mldonkey-2.9.0-r3.ebuild,
   -mldonkey-2.9.1.ebuild:
