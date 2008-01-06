@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/prelude-manager
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.48 2007/12/25 14:59:38 nixnut Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.49 2008/01/06 13:36:22 jokey Exp $
+
+  06 Jan 2008; Markus Ullmann <jokey@gentoo.org>
+  prelude-manager-0.9.9.1.ebuild:
+  Add elog notice for bug #186051
 
   25 Dec 2007; nixnut <nixnut@gentoo.org> prelude-manager-0.9.9.1.ebuild:
   Stable on ppc wrt bug 191415

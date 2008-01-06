@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.9.1.ebuild,v 1.5 2007/12/25 14:59:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.9.1.ebuild,v 1.6 2008/01/06 13:36:22 jokey Exp $
 
 inherit flag-o-matic
 
@@ -48,4 +48,9 @@ src_install() {
 
 	keepdir /var/spool/prelude-manager
 	keepdir /var/run/prelude-manager
+}
+
+pkg_postinst() {
+	elog "If you use it with mysql backend, take a look at mysql update files"
+	elog "at ${ROOT}/usr/share/libpreludedb/classic"
 }
