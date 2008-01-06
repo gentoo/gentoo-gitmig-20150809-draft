@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.3.2.ebuild,v 1.3 2007/09/30 16:00:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.3.2.ebuild,v 1.4 2008/01/06 16:37:05 nyhm Exp $
 
 inherit eutils versionator linux-info
 
@@ -14,6 +14,7 @@ KEYWORDS="amd64 x86"
 IUSE="acpi kde"
 
 RDEPEND=">=x11-libs/gtk+-2
+	x11-libs/libXtst
 	gnome-base/gnome-menus
 	media-libs/alsa-lib"
 DEPEND="${RDEPEND}
