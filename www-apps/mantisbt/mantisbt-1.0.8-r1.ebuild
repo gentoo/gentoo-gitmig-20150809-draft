@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.8-r1.ebuild,v 1.2 2008/01/01 16:59:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.8-r1.ebuild,v 1.3 2008/01/06 18:28:56 dertobi123 Exp $
 
 inherit eutils webapp
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 S=${WORKDIR}/${MY_P}
 
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 RDEPEND="
 	virtual/httpd-php
