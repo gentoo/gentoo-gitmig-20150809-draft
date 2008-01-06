@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/stldb4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/stldb4/ChangeLog,v 1.13 2008/01/06 09:49:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/stldb4/ChangeLog,v 1.14 2008/01/06 21:36:58 maekke Exp $
+
+  06 Jan 2008; Markus Meier <maekke@gentoo.org> stldb4-0.4.6.ebuild:
+  x86 stable, bug #204498
 
 *stldb4-0.4.96 (06 Jan 2008)
 
