@@ -1,0 +1,266 @@
+diff -Naur dvda-author-20050703.orig/src/ats.c dvda-author-20050703/src/ats.c
+--- dvda-author-20050703.orig/src/ats.c	2007-10-08 23:11:28.000000000 +0200
++++ dvda-author-20050703/src/ats.c	2008-01-03 07:38:57.000000000 +0100
+@@ -346,7 +346,7 @@
+ int write_pes_packet(FILE* fp, fileinfo_t* info, uint8_t* audio_buf, int bytesinbuffer, uint64_t pack_in_title, int pack_in_file, int last_pack) {
+  uint64_t PTS;
+  uint64_t SCR;
+- int audio_bytes;
++ int audio_bytes = 0;
+  static int cc;  // Continuity counter - reset to 0 when pack_in_title=0
+  int lpcm_payload;
+ 
+diff -Naur dvda-author-20050703.orig/src/audio.c dvda-author-20050703/src/audio.c
+--- dvda-author-20050703.orig/src/audio.c	2007-10-08 23:11:28.000000000 +0200
++++ dvda-author-20050703/src/audio.c	2008-01-03 07:38:57.000000000 +0100
+@@ -30,7 +30,7 @@
+ #include <string.h>
+ #include "audio.h"
+ 
+-void flac_metadata_callback(const FLAC__FileDecoder *dec, const FLAC__StreamMetadata *meta, void *data) {
++void flac_metadata_callback(const FLAC__StreamDecoder *dec, const FLAC__StreamMetadata *meta, void *data) {
+   fileinfo_t *info = (fileinfo_t*) data;
+  
+   if (meta->type==FLAC__METADATA_TYPE_STREAMINFO) {
+@@ -41,7 +41,7 @@
+   }
+ }
+ 
+-FLAC__StreamDecoderWriteStatus flac_null_write_callback(const FLAC__FileDecoder *dec,
++FLAC__StreamDecoderWriteStatus flac_null_write_callback(const FLAC__StreamDecoder *dec,
+                                                         const FLAC__Frame *frame,
+                                                         const FLAC__int32 * const buf[],
+                                                         void *data)
+@@ -49,7 +49,7 @@
+     return FLAC__STREAM_DECODER_WRITE_STATUS_CONTINUE;
+ }
+ 
+-FLAC__StreamDecoderWriteStatus flac_write_callback(const FLAC__FileDecoder *dec,
++FLAC__StreamDecoderWriteStatus flac_write_callback(const FLAC__StreamDecoder *dec,
+                                                    const FLAC__Frame *frame,
+                                                    const FLAC__int32 * const buf[],
+                                                    void *data)
+@@ -84,7 +84,7 @@
+ 
+ 
+ 
+-void flac_error_callback(const FLAC__FileDecoder *dec,
++void flac_error_callback(const FLAC__StreamDecoder *dec,
+                          FLAC__StreamDecoderErrorStatus status, void *data)
+ {
+     fprintf(stderr, "ERR: FLAC error callback called.\n");
+@@ -133,34 +133,35 @@
+ }
+ 
+ int flac_getinfo(fileinfo_t* info) {
+-  FLAC__FileDecoder* flac;
+-  FLAC__FileDecoderState result;
++  FLAC__StreamDecoder* flac;
++  FLAC__StreamDecoderState result;
+ 
+-  flac=FLAC__file_decoder_new();
++  flac=FLAC__stream_decoder_new();
+ 
+   if (flac==NULL) {
+     fprintf(stderr,"ERR: Fatal error - could not create FLAC decoder\n"); 
+     return(1);
+   }
+-  FLAC__file_decoder_set_filename(flac,info->filename);
+-  FLAC__file_decoder_set_client_data(flac,(void*)info);
+-  FLAC__file_decoder_set_write_callback(flac,flac_null_write_callback);
+-  FLAC__file_decoder_set_error_callback(flac,flac_error_callback);
+-  FLAC__file_decoder_set_metadata_callback(flac,flac_metadata_callback);
+ 
+-  result=FLAC__file_decoder_init(flac);
+-  if (result!=FLAC__FILE_DECODER_OK) {
++  result=FLAC__stream_decoder_init_file(flac,
++    info->filename,
++    flac_null_write_callback,
++    flac_metadata_callback,
++    flac_error_callback,
++    (void*)info);
++
++  if (result!=FLAC__STREAM_DECODER_INIT_STATUS_OK) {
+     fprintf(stderr,"ERR: Failed to initialise FLAC decoder\n");
+-    FLAC__file_decoder_delete(flac);
++    FLAC__stream_decoder_delete(flac);
+     return(1);
+   }
+ 
+-  if (!FLAC__file_decoder_process_until_end_of_metadata(flac)) {
++  if (!FLAC__stream_decoder_process_until_end_of_metadata(flac)) {
+     fprintf(stderr,"ERR: Failed to read metadata from FLAC file\n");
+-    FLAC__file_decoder_delete(flac);
++    FLAC__stream_decoder_delete(flac);
+     return(1);
+   }
+-  FLAC__file_decoder_finish(flac);
++  FLAC__stream_decoder_finish(flac);
+ 
+   if (((info->bitspersample!=16) && (info->bitspersample!=24)) || (info->channels > 2)) {
+     return(1);
+@@ -169,7 +170,7 @@
+   info->type=AFMT_FLAC;
+   info->numbytes=info->numsamples*info->channels*(info->bitspersample/8);
+   calc_info(info);
+-  FLAC__file_decoder_delete(flac);
++  FLAC__stream_decoder_delete(flac);
+   return(0);
+ }
+ 
+@@ -203,7 +204,7 @@
+ }
+ 
+ int audio_open(fileinfo_t* info) {
+-  FLAC__FileDecoderState result;
++  FLAC__StreamDecoderState result;
+ 
+   info->audio=malloc(sizeof(audio_input_t));
+   if (info->type==AFMT_WAVE) {
+@@ -214,7 +215,7 @@
+     fseek(info->audio->fp,44,SEEK_SET);
+     info->audio->bytesread=0;
+   } else if (info->type==AFMT_FLAC) {
+-    info->audio->flac=FLAC__file_decoder_new();
++    info->audio->flac=FLAC__stream_decoder_new();
+     info->audio->n=0;
+     info->audio->eos=0;
+ 
+@@ -222,22 +223,23 @@
+       fprintf(stderr,"ERR: Fatal error - could not create FLAC decoder\n"); 
+       return(1);
+     }
+-    FLAC__file_decoder_set_filename(info->audio->flac,info->filename);
+-    FLAC__file_decoder_set_client_data(info->audio->flac,(void*)info);
+-    FLAC__file_decoder_set_write_callback(info->audio->flac,flac_write_callback);
+-    FLAC__file_decoder_set_error_callback(info->audio->flac,flac_error_callback);
+-    FLAC__file_decoder_set_metadata_callback(info->audio->flac,flac_metadata_callback);
+ 
+-    result=FLAC__file_decoder_init(info->audio->flac);
+-    if (result!=FLAC__FILE_DECODER_OK) {
++    result=FLAC__stream_decoder_init_file(info->audio->flac,
++      info->filename,
++      flac_write_callback,
++      flac_metadata_callback,
++      flac_error_callback,
++      (void*)info);
++
++    if (result!=FLAC__STREAM_DECODER_INIT_STATUS_OK) {
+       fprintf(stderr,"ERR: Failed to initialise FLAC decoder\n");
+-      FLAC__file_decoder_delete(info->audio->flac);
++      FLAC__stream_decoder_delete(info->audio->flac);
+       return(1);
+     }
+ 
+-    if (!FLAC__file_decoder_process_until_end_of_metadata(info->audio->flac)) {
++    if (!FLAC__stream_decoder_process_until_end_of_metadata(info->audio->flac)) {
+       fprintf(stderr,"ERR: Failed to read metadata from FLAC file\n");
+-      FLAC__file_decoder_delete(info->audio->flac);
++      FLAC__stream_decoder_delete(info->audio->flac);
+       return(1);
+     }
+   }
+@@ -248,7 +250,7 @@
+ int audio_read(fileinfo_t* info, uint8_t* buf, int count) {
+   uint32_t i;
+   uint8_t x;
+-  int n;
++  int n = 0;
+   int bytesread;
+   FLAC__bool result;
+ 
+@@ -271,12 +273,12 @@
+     n=bytesread;
+   } else if (info->type==AFMT_FLAC) {
+     while ((info->audio->n < count) && (info->audio->eos==0)) {
+-      result=FLAC__file_decoder_process_single(info->audio->flac);
++      result=FLAC__stream_decoder_process_single(info->audio->flac);
+       if (result==0) {
+ 	fprintf(stderr,"ERR: Fatal error decoding FLAC file\n");
+         exit(0);
+       }
+-      if (FLAC__file_decoder_get_state(info->audio->flac)==FLAC__FILE_DECODER_END_OF_FILE) {
++      if (FLAC__stream_decoder_get_state(info->audio->flac)==FLAC__STREAM_DECODER_END_OF_STREAM) {
+         info->audio->eos=1;
+       }
+     }
+@@ -369,7 +371,7 @@
+   if (info->type==AFMT_WAVE) {
+     fclose(info->audio->fp);
+   } else if (info->type==AFMT_FLAC) {
+-    FLAC__file_decoder_delete(info->audio->flac);
++    FLAC__stream_decoder_delete(info->audio->flac);
+   }
+   free(info->audio);
+   return(0);
+diff -Naur dvda-author-20050703.orig/src/audio.h dvda-author-20050703/src/audio.h
+--- dvda-author-20050703.orig/src/audio.h	2007-10-08 23:11:28.000000000 +0200
++++ dvda-author-20050703/src/audio.h	2008-01-03 07:38:57.000000000 +0100
+@@ -30,14 +30,14 @@
+ 
+ #include <stdio.h>
+ #include <stdint.h>
+-#include "libFLAC/include/FLAC/file_decoder.h"
++#include <FLAC/all.h>
+ 
+ #define AFMT_WAVE 1
+ #define AFMT_FLAC 2
+ 
+ typedef struct {
+   FILE* fp;
+-  FLAC__FileDecoder* flac;
++  FLAC__StreamDecoder* flac;
+   // Used for FLAC decoding:
+   uint8_t buf[1024*256];
+   int n;
+diff -Naur dvda-author-20050703.orig/src/dvda-author.c dvda-author-20050703/src/dvda-author.c
+--- dvda-author-20050703.orig/src/dvda-author.c	2007-10-08 23:11:28.000000000 +0200
++++ dvda-author-20050703/src/dvda-author.c	2008-01-03 07:38:57.000000000 +0100
+@@ -52,7 +52,7 @@
+   char audiotsdir[540];
+   char videotsdir[540];
+   fileinfo_t files[9][99];
+-  uint64_t totalsize;
++  uint64_t totalsize = 0;
+ 
+   fprintf(stderr,"dvda-author v" VERSION " - Copyright (C) 2005 Dave Chapman\n");
+   fprintf(stderr,"Latest version available from http://dvd-audio.sourceforge.net/\n\n");
+diff -Naur dvda-author-20050703.orig/src/Makefile dvda-author-20050703/src/Makefile
+--- dvda-author-20050703.orig/src/Makefile	2007-10-08 23:11:28.000000000 +0200
++++ dvda-author-20050703/src/Makefile	2008-01-03 07:39:25.000000000 +0100
+@@ -7,20 +7,16 @@
+ 
+ CC=$(CROSS)gcc
+ AR=$(CROSS)ar
+-CFLAGS=-Wall
+-LIBS=-lm
++CFLAGS+=-Wall
++LIBS=`pkg-config --libs flac`
+ TARGETS=dvda-author$(EXT)
+ OBJS=dvda-author.o audio.o ats.o atsi.o amg.o samg.o
+ 
+-FLACOPTS=-DVERSION=\"1.1.2\" -DFLAC__NO_ASM -DFLAC__ALIGN_MALLOC_DATA -I libFLAC/include
+-FLACSRC=$(wildcard libFLAC/*.c)
+-FLACOBJS=$(FLACSRC:%.c=%.o)
+-
+ .PHONY: all
+ all: $(TARGETS)
+ 
+-dvda-author$(EXT): $(OBJS) $(FLACOBJS)
+-	$(CC) $(CFLAGS) $(LIBS) -o $@ $^
++dvda-author$(EXT): $(OBJS)
++	$(CC) $(LIBS) $(LDFLAGS) -o $@ $^
+ 
+ dvda-author.o: dvda-author.c version.h audio.h ats.h atsi.h
+ ats.o: ats.c ats.h audio.h
+@@ -29,9 +25,6 @@
+ atsi.o: atsi.c atsi.h audio.h
+ audio.o: audio.c audio.h
+ 
+-libFLAC/%.o: libFLAC/%.c
+-	$(CC) $(CFLAGS) $(FLACOPTS) -c -o $@ $<
+-
+ .PHONY: clean
+ clean:
+-	rm -f $(TARGETS) $(OBJS) $(FLACOBJS) *~
++	rm -f $(TARGETS) $(OBJS) *~
