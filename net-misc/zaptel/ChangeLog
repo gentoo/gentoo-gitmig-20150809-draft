@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/zaptel
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.99 2007/12/25 06:26:11 rajiv Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.100 2008/01/06 08:33:58 rajiv Exp $
+
+  06 Jan 2008; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  -files/zaptel-1.0.4-gcc34.patch, -files/zaptel-1.0.9-rtc.patch,
+  -files/zaptel-1.0.10-devfs26.diff,
+  -files/zaptel-1.0.10-fix-zapata-debug-undefined-warnings.diff,
+  -files/zaptel-1.0.10-gentoo.diff, -files/zaptel-1.0.10-linux2.6.16.diff,
+  -files/zaptel-1.0.10-ukcid.patch, -zaptel-1.0.10-r2.ebuild:
+  removing asterisk and zaptel 1.0.
 
 *zaptel-1.2.22.1 (25 Dec 2007)
 

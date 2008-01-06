@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-sounds
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sounds/ChangeLog,v 1.15 2007/12/25 22:39:28 rajiv Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sounds/ChangeLog,v 1.16 2008/01/06 08:31:25 rajiv Exp $
+
+  06 Jan 2008; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  -asterisk-sounds-1.0.8.ebuild:
+  removing asterisk and zaptel 1.0.
 
 *asterisk-sounds-1.2.1-r1 (25 Dec 2007)
 

@@ -1,9 +1,0 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.0.0/asterisk.confd,v 1.1 2004/09/24 00:01:57 stkn Exp $
-
-#
-# see "asterisk -h" for a list of options
-#
-
-OPTIONS=""

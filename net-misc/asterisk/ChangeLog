@@ -1,6 +1,33 @@
 # ChangeLog for net-misc/asterisk
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.173 2007/11/14 19:09:44 beandog Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.174 2008/01/06 08:36:26 rajiv Exp $
+
+  06 Jan 2008; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  -files/1.0.0/asterisk-1.0.5-astcfg-0.0.2.diff,
+  -files/1.0.0/asterisk-1.0.5-hppa.patch,
+  -files/1.0.0/asterisk-1.0.5-lpc10flags.diff,
+  -files/1.0.0/asterisk-1.0.5-speex.diff,
+  -files/1.0.0/asterisk-1.0.7-initgroups.diff,
+  -files/1.0.0/asterisk-1.0.7-manager-cli-segv.patch,
+  -files/1.0.0/asterisk-1.0.7-scripts.diff,
+  -files/1.0.0/asterisk-1.0.8-callerid.patch,
+  -files/1.0.0/asterisk-1.0.10-vmail.cgi.patch, -files/1.0.0/asterisk.confd,
+  -files/1.0.0/asterisk-1.0.8-hppa.patch,
+  -files/1.0.0/asterisk-1.0.10-weak-references.diff,
+  -files/1.0.0/asterisk.confd.sec,
+  -files/1.0.0/asterisk-1.0-CVE-2006-1827.patch,
+  -files/1.0.0/asterisk-1.0.8-initgroups.diff,
+  -files/1.0.0/asterisk-1.0.10-misdn.patch, -files/1.0.0/asterisk.rc6,
+  -files/1.0.0/asterisk-1.0.8-ptr64fix.diff,
+  -files/1.0.0/asterisk-1.0.12-r2-chan_sip.patch,
+  -files/1.0.0/asterisk.rc6.sec, -files/1.0.0/asterisk-1.0.9-freetds.diff,
+  -files/1.0.0/asterisk-uclibc-dns.diff,
+  -files/1.0.0/res_perl-1.0.7-bristuff-0.2.0.diff,
+  -files/1.0.0/asterisk-1.0.9-ukcid.patch,
+  -files/1.0.0/asterisk-1.0.9-vmail.cgi.patch,
+  -files/1.0.0/asterisk-1.0.9-weak-references.diff, metadata.xml,
+  -asterisk-1.0.12-r2.ebuild:
+  removing asterisk and zaptel 1.0.
 
   14 Nov 2007; Steve Dibb <beandog@gentoo.org> asterisk-1.2.14-r2.ebuild:
   amd64 stable, bug 175321
