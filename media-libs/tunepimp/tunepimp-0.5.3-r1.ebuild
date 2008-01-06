@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r1.ebuild,v 1.1 2008/01/02 12:05:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r1.ebuild,v 1.2 2008/01/06 15:59:38 philantrop Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit eutils distutils autotools
-
 EAPI="1"
+
+inherit eutils distutils autotools
 
 MY_P="lib${P}"
 S="${WORKDIR}/${MY_P}"
@@ -36,6 +36,9 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+# parallel build is broken - https://bugs.gentoo.org/204174
+MAKEOPTS="${MAKEOPTS} -j1"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -53,11 +56,12 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog INSTALL README TODO
+	dodoc AUTHORS ChangeLog INSTALL README TODO || die "installing docs failed"
+
 	if use python; then
 		cd "${S}/python"
 		distutils_src_install
 		insinto /usr/share/doc/${PF}/examples/
-		doins examples/*
+		doins examples/* || die "installing examples failed"
 	fi
 }

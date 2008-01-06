@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/tunepimp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.58 2008/01/02 12:05:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.59 2008/01/06 15:59:38 philantrop Exp $
+
+  06 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  tunepimp-0.5.3-r1.ebuild:
+  Put EAPI before the inherits to enable eclasses to test for it. Added some
+  die messages. Disabled parallel building to fix bug 204174.
 
 *tunepimp-0.5.3-r1 (02 Jan 2008)
 
