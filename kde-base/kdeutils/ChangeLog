@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeutils
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.215 2007/11/20 13:46:02 philantrop Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.216 2008/01/06 21:18:52 philantrop Exp $
+
+  06 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  kdeutils-3.5.7-r1.ebuild, kdeutils-3.5.8-r1.ebuild:
+  Added a check for app-crypt/pinentry having been built with either the gtk
+  or qt3 USE flag as otherwise essential functionality of kgpg won't be
+  accessible. Fixes bug 204139.
 
 *kdeutils-3.5.8-r1 (20 Nov 2007)
 
