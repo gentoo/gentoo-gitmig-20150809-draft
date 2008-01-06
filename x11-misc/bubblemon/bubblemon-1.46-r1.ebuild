@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/bubblemon-1.46-r1.ebuild,v 1.5 2007/06/30 11:54:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/bubblemon-1.46-r1.ebuild,v 1.6 2008/01/06 14:54:54 drac Exp $
 
 inherit eutils
 
@@ -13,10 +13,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2"
-RDEPEND="${DEPEND}"
+RDEPEND=">=x11-libs/gtk+-2"
+DEPEND="${DEPEND}
+	dev-util/pkgconfig"
 
-S="${WORKDIR}"/${PN}-dockapp-${PV}
+S=${WORKDIR}/${PN}-dockapp-${PV}
 
 src_unpack() {
 	unpack ${A}
