@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/aften
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/ChangeLog,v 1.1 2007/11/23 20:56:49 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/ChangeLog,v 1.2 2008/01/06 01:32:59 josejx Exp $
+
+  06 Jan 2008; Joseph Jezak <josejx@gentoo.org>
+  +files/aften-0.0.8-ppc.patch, aften-0.0.8.ebuild:
+  Added patch to fix compilation on ppc, bug #200866.
 
 *aften-0.0.8 (23 Nov 2007)
 

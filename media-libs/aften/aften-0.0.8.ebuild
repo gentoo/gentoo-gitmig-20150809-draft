@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/aften-0.0.8.ebuild,v 1.1 2007/11/23 20:56:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/aften-0.0.8.ebuild,v 1.2 2008/01/06 01:32:59 josejx Exp $
 
 inherit eutils cmake-utils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="cxx"
 DEPEND=""
 
@@ -18,6 +18,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-multilib.patch"
+	epatch "${FILESDIR}/${P}-ppc.patch"
 }
 
 src_compile() {
