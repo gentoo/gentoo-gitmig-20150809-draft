@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.10.ebuild,v 1.7 2007/12/31 01:16:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.10.ebuild,v 1.8 2008/01/06 02:27:33 vapier Exp $
 
 inherit eutils
 
@@ -33,6 +33,7 @@ RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
 	nls? ( virtual/libintl )
 	virtual/libiconv"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xf86vidmodeproto
 	xinerama? ( x11-proto/xineramaproto )

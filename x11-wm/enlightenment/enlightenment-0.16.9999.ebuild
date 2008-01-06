@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.27 2007/06/24 18:23:46 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.28 2008/01/06 02:27:33 vapier Exp $
 
 #ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_SERVER="anoncvs.enlightenment.org:/var/cvs/e"
@@ -34,9 +34,11 @@ RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
 	nls? ( virtual/libintl )
 	virtual/libiconv"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xf86vidmodeproto
 	xinerama? ( x11-proto/xineramaproto )
+	xcomposite? ( x11-proto/compositeproto )
 	x11-proto/xproto
 	nls? ( sys-devel/gettext )"
 PDEPEND="doc? ( app-doc/edox-data )"
