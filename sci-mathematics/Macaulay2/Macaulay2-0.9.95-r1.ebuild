@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95-r1.ebuild,v 1.6 2007/05/25 17:33:43 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.95-r1.ebuild,v 1.7 2008/01/06 15:51:17 markusle Exp $
 
 inherit elisp-common eutils flag-o-matic toolchain-funcs autotools
 
@@ -65,12 +65,10 @@ src_compile() {
 }
 
 src_test() {
-	cd "${S}"
 	make check || die "tests failed"
 }
 
 src_install () {
-	cd "${S}"
 	make install || die "install failed"
 
 	# nothing in here, get rid of it

@@ -1,6 +1,18 @@
 # ChangeLog for sci-mathematics/Macaulay2
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.15 2007/06/01 01:02:30 markusle Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.16 2008/01/06 15:51:17 markusle Exp $
+
+*Macaulay2-1.0 (06 Jan 2008)
+
+  06 Jan 2008; Markus Dittrich <markusle@gentoo.org>
+  -files/gentoo-libfac-0.3.2.include.diff,
+  +files/Macaulay2-1.0-example-fix.patch, 
+  -files/gentoo-factory-1.3b.diff,
+  -Macaulay2-0.9.2.ebuild, -Macaulay2-0.9.95.ebuild, 
+  +Macaulay2-1.0.ebuild:
+  Version bump and removed old versions. The tarball for
+  Macaulay2-1.0 was extracted from upstream's svn release
+  branch since no sources were posted.
 
   31 May 2007; Markus Dittrich <markusle@gentoo.org>
   Macaulay2-0.9.95-r2.ebuild:
