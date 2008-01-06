@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/gsynaptics
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/ChangeLog,v 1.10 2008/01/06 03:18:19 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/ChangeLog,v 1.11 2008/01/06 03:28:54 compnerd Exp $
+
+*gsynaptics-0.9.13-r1 (06 Jan 2008)
+
+  06 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/gsynaptics-0.9.13-CoastingSpeedThreshold.patch,
+  +files/gsynaptics-0.9.13-no-libgnome.patch, -gsynaptics-0.9.13.ebuild,
+  +gsynaptics-0.9.13-r1.ebuild:
+  Add no-libgnome patch by myself, and CoastingSpeedThreshold patch (bug
+  #202501) from Frittella Laurento
 
   06 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org>
   -gsynaptics-0.9.7.ebuild:
