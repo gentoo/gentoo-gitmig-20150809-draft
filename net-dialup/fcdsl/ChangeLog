@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/fcdsl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.34 2008/01/06 01:33:29 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.35 2008/01/06 01:35:57 sbriesen Exp $
+
+  06 Jan 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  -files/fcdsl-2.6.20.diff, -files/fcdslslusb-2.6.20.diff,
+  -files/usb-2.6.20.diff, -files/fcdsl-2.6.22.diff,
+  -files/fcdsl-2.6.23.diff, -files/fcdsl.diff, -files/fcdsl2.diff,
+  -files/fcdslsl.diff, -fcdsl-2.6.37.ebuild:
+  removed old ebuild, all drivers have their own package now
 
 *fcdsl-0.1 (06 Jan 2008)
 
