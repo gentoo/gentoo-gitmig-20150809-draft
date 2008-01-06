@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.3.ebuild,v 1.1 2007/10/09 20:26:03 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.3.ebuild,v 1.2 2008/01/06 21:43:54 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,7 +13,7 @@ SRC_URI="mirror://apache/jakarta/jcs/source/${P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="1.3"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="admin doc source"
+IUSE="admin"
 
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/commons-lang-2.0*
@@ -25,8 +27,6 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/xmlrpc
 	admin? ( dev-java/velocity )"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
-	source? ( app-arch/zip )
 	${RDEPEND}"
 
 LIBRARY_PKGS="servletapi-2.3,commons-lang,commons-logging,commons-pool,commons-dbcp,xmlrpc,concurrent-util,jisp-2.5,hsqldb"
