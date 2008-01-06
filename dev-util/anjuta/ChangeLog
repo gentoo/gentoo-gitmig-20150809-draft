@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.77 2008/01/05 23:56:54 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.78 2008/01/06 06:27:05 fmccor Exp $
+
+  06 Jan 2008; Ferris McCormick <fmccor@gentoo.org> anjuta-2.2.0-r1.ebuild:
+  Add ~sparc for testing, Bug #204495.
 
   05 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org>
   anjuta-2.2.0-r1.ebuild:
