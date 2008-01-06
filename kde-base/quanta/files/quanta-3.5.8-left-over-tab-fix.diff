@@ -1,0 +1,13 @@
+--- kdewebdev-3.5.8/quanta/src/quantadoc.cpp	2008/01/04 15:16:23	757249
++++ kdewebdev-3.5.8-patched/quanta/src/quantadoc.cpp	2008/01/04 15:17:38	757250
+@@ -99,6 +99,10 @@
+   QuantaView *view = ViewManager::ref()->isOpened(url);
+   if (!view || newfile)
+   {
++    w = ViewManager::ref()->activeDocument();
++    if (w && !newfile && !w->isModified() && w->isUntitled() && !w->busy)
++         ViewManager::ref()->removeActiveView(false);
++
+ /*    
+     // no modi and new -> we can remove                           !!!!
+     w = ViewManager::ref()->activeDocument();
