@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.1.1.ebuild,v 1.2 2007/12/23 23:36:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.1.1.ebuild,v 1.3 2008/01/06 20:55:23 drizzt Exp $
 
 inherit eutils toolchain-funcs qt4
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="pulseaudio vanilla"
 
 DEPEND="$(qt4_min_version 4.3)
-	>=media-libs/speex-1.2_beta2
+	>=media-libs/speex-1.2_beta3
 	media-libs/alsa-lib
 	dev-libs/boost
 	x11-libs/libXevie
@@ -48,6 +48,9 @@ src_unpack() {
 	use pulseaudio || sed -i -e '/CONFIG  += oss/s/ pulseaudio//' \
 		"${S}"/src/mumble/mumble.pro || die
 	use vanilla || epatch "${FILESDIR}"/${P}-path.patch
+
+	sed -i -e '/LIBS /s/-lspeex/& -lspeexdsp/' \
+		"${S}"/src/mumble/mumble.pro || die
 }
 
 src_compile() {
