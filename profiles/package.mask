@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8092 2008/01/06 18:16:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8093 2008/01/06 19:24:49 caster Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -845,11 +845,6 @@ app-shells/ash
 >=dev-ml/ulex-1.0
 >=dev-ml/ocamlduce-3.10.0
 >=app-emacs/ocaml-mode-3.10.0
-
-# Petteri Räty <betelgeuse@gentoo.org> (24 May 2007)
-# Doesn't compile atm. See https://bugs.gentoo.org/show_bug.cgi?id=164074
-# for more details.
-=app-text/jasperreports-1.0.1
 
 # Seemant Kulleen <seemant@gentoo.org> (23 May 2007)
 # Masked because 1.2.1 because it is broken
