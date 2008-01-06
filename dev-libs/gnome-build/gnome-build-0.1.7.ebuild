@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-0.1.7.ebuild,v 1.2 2007/07/17 01:59:53 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-0.1.7.ebuild,v 1.3 2008/01/06 05:22:09 fmccor Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 RDEPEND=">=dev-libs/glib-2
 		 >=x11-libs/gtk+-2.4
