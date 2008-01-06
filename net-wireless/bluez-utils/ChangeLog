@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-utils
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.113 2007/12/26 14:48:57 betelgeuse Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.114 2008/01/06 12:17:35 corsair Exp $
+
+  06 Jan 2008; Markus Rothe <corsair@gentoo.org> bluez-utils-3.24.ebuild:
+  Added ~ppc64; bug #200076
 
   26 Dec 2007; Petteri Räty <betelgeuse@gentoo.org>
   -bluez-utils-3.12.ebuild, -bluez-utils-3.14.ebuild,
