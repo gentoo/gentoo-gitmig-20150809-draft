@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.975 2008/01/05 22:21:06 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.976 2008/01/06 03:44:30 compnerd Exp $
+
+  06 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org> package.mask:
+  Mask howl for removal in 30 days
 
   05 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org> package.mask:
   Unmask HAL 0.5.10
