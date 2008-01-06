@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/lightspeed
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/ChangeLog,v 1.4 2007/02/22 01:14:21 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/ChangeLog,v 1.5 2008/01/06 16:46:45 bicatali Exp $
+
+  06 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  lightspeed-1.2a.ebuild:
+  Modernized ebuild, now forced png and tiff (did not want to fix the
+  autotools to allow -tiff -png when png and tiff are installed). Added
+  longdescription
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

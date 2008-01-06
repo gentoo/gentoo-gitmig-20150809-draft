@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a.ebuild,v 1.2 2007/07/15 06:01:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a.ebuild,v 1.3 2008/01/06 16:46:45 bicatali Exp $
 
-DESCRIPTION="Light Speed! is an OpenGL-based program developed to illustrate the effects of special relativity on the appearance of moving objects."
+DESCRIPTION="OpenGL interactive relativistic simulator"
 HOMEPAGE="http://lightspeed.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	 mirror://sourceforge/${PN}/objects-1.tar.gz"
@@ -10,33 +10,28 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
 
-IUSE="png tiff"
+IUSE=""
+
 DEPEND="virtual/opengl
 	=x11-libs/gtkglarea-1.2.3-r1
 	>=x11-libs/gtk+-1.0.1
-	png? ( media-libs/libpng )
-	tiff? ( media-libs/tiff )"
-#RDEPEND=""
+	media-libs/libpng
+	media-libs/tiff"
+
 S2="${WORKDIR}/objects"
 
-src_compile() {
-	econf || die "econf failed"
-	emake || die
-}
-
 src_install() {
-	einstall
-	dodoc AUTHORS COPYING ChangeLog INSTALL MATH NEWS README TODO
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS ChangeLog MATH NEWS README TODO || die
 	cd ${S2}
-	mv README objects-README
-	dodoc objects-README
+	newdoc README objects-README || die
 	insinto /usr/share/${PN}
-	doins *.3ds *.lwo
+	doins *.3ds *.lwo || die
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Some 3d models have been placed in /usr/share/${PN}"
-	einfo "You can load them in Light Speed! from the File menu."
-	einfo
+	elog
+	elog "Some 3d models have been placed in /usr/share/${PN}"
+	elog "You can load them in Light Speed! from the File menu."
+	elog
 }
