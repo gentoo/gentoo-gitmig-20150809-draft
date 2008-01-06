@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1.ebuild,v 1.3 2008/01/02 07:05:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1.ebuild,v 1.4 2008/01/06 17:01:13 betelgeuse Exp $
+
+WANT_ANT_TASKS="ant-nodeps"
 
 inherit eutils java-pkg-2 java-ant-2 versionator
 
@@ -36,6 +38,7 @@ COMMON_DEPEND="
 	>=dev-java/xml-commons-1.0_beta2"
 
 RDEPEND=">=virtual/jre-1.5
+	>=dev-java/ant-core-1.7.0
 	dev-java/antlr
 	=dev-java/commons-beanutils-1.7*
 	dev-java/commons-collections
