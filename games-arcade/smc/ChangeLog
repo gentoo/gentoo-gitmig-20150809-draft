@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/smc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.4 2007/12/30 02:20:48 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.5 2008/01/06 23:53:26 tupone Exp $
+
+  06 Jan 2008; Tupone Alfredo <tupone@gentoo.org> smc-1.4.ebuild:
+  Test for libpcre built with USE=unicode. Bug #203838 by Michiel de Bruijne
 
 *smc-1.4 (30 Dec 2007)
 

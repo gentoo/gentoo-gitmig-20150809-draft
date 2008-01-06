@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.4.ebuild,v 1.2 2008/01/01 18:35:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.4.ebuild,v 1.3 2008/01/06 23:53:26 tupone Exp $
 
 inherit autotools eutils games
 
@@ -39,6 +39,9 @@ pkg_setup() {
 	fi
 	if ! built_with_use dev-games/cegui devil ; then
 		die "Please emerge cegui with USE=devil"
+	fi
+	if ! built_with_use dev-libs/libpcre unicode ; then
+		die "Please emerge dev-libs/libpcre with USE=unicode"
 	fi
 }
 
