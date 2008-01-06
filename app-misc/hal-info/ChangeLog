@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/hal-info
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.24 2007/11/23 06:21:43 compnerd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.25 2008/01/06 06:44:41 compnerd Exp $
+
+*hal-info-20071030 (06 Jan 2008)
+
+  06 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/01_dell_cdrom_nopoll.patch,
+  +files/02_hardware_brightness_fixups.patch,
+  +files/03_feiya_memory_bar.patch, +hal-info-20071030.ebuild:
+  Version bump from upstream
 
 *hal-info-20071011 (23 Nov 2007)
 
