@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-3.5.8.ebuild,v 1.1 2007/10/19 21:54:55 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-3.5.8.ebuild,v 1.2 2008/01/06 18:23:28 aballier Exp $
 KMNAME=kdeedu
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
-inherit flag-o-matic kde-meta
+inherit flag-o-matic kde-meta eutils
 
 DESCRIPTION="KDE: periodic table of the elements"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
@@ -20,6 +20,22 @@ KMCOPYLIB="libkdeeduplot libkdeedu/kdeeduplot
 	libkdeeduui libkdeedu/kdeeduui"
 
 PATCHES="${FILESDIR}/${PN}-3.5.7-copy_string.patch"
+
+pkg_setup() {
+	if use solver && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "In order to build the solver for ${PN}, you first need"
+		eerror "to have dev-lang/ocaml built with the ocamlopt useflag"
+		eerror "in order to get a native code ocaml compiler"
+		die "Please install dev-lang/ocaml with ocamlopt support"
+	fi
+	if use solver && ! built_with_use --missing true dev-ml/facile ocamlopt; then
+		eerror "In order to build the solver for ${PN}, you first need"
+		eerror "to have dev-ml/facile built with the ocamlopt useflag"
+		eerror "in order to get the native code library"
+		die "Please install dev-ml/facile with ocamlopt support"
+	fi
+	kde_pkg_setup
+}
 
 src_compile() {
 	append-ldflags -Wl,-z,noexecstack
