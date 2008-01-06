@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.ebuild,v 1.6 2007/12/26 10:07:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.ebuild,v 1.7 2008/01/06 16:13:49 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2 toolchain-funcs
 
@@ -62,6 +62,7 @@ DEPEND=">=virtual/jdk-1.4
 		x11-libs/libXrender
 		x11-libs/libXt
 		x11-proto/xextproto
+		dev-util/pkgconfig
 		${COMMON}"
 
 # java-config for the env_var stuff, until it's stabled and forced by eclass

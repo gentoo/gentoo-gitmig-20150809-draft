@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.76 2007/12/26 10:07:20 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.77 2008/01/06 16:13:49 betelgeuse Exp $
+
+  06 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> swt-3.3.ebuild:
+  Add DEPEND on dev-util/pkgconfig. Fixes bug #204618.
 
   26 Dec 2007; Samuli Suominen <drac@gentoo.org> swt-3.3.ebuild:
   amd64 stable wrt #202458
