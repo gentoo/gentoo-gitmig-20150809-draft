@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/rosegarden
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.48 2007/12/23 12:56:26 carlo Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.49 2008/01/06 19:06:58 flameeyes Exp $
+
+*rosegarden-1.6.1-r1 (06 Jan 2008)
+
+  06 Jan 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/rosegarden-1.6.1-nojack.patch, -rosegarden-1.6.1.ebuild,
+  +rosegarden-1.6.1-r1.ebuild:
+  Fix handling of user-defined CXXFLAGS, revision bump to force rebuild. Fix
+  bug #204013. I hate cmake.
 
 *rosegarden-1.6.1 (23 Dec 2007)
 

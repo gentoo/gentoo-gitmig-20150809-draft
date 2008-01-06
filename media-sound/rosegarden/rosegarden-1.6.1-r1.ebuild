@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-1.6.1.ebuild,v 1.1 2007/12/23 12:56:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-1.6.1-r1.ebuild,v 1.1 2008/01/06 19:06:58 flameeyes Exp $
 
-inherit eutils kde-functions
+inherit eutils kde-functions cmake-utils
 
 MY_PV="${PV/_rc*/}"
 #MY_PV="${MY_PV/4./}"
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/rosegarden/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa jack dssi lirc debug"
+IUSE="alsa debug jack dssi lirc"
 
 RDEPEND="
 	alsa? ( >=media-libs/alsa-lib-1.0
@@ -35,12 +35,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.2"
 
 need-kde 3.5
-
-LANGS="ca cs cy de en_GB en es et eu fi fr it ja nl pl ru sv zh_CN"
-
-for lang in $LANGS; do
-	IUSE="${IUSE} linguas_$lang"
-done
 
 pkg_setup() {
 	if ! use alsa && use jack; then
@@ -62,24 +56,25 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}/rosegarden-1.6.1-asneeded.patch" \
-		"${FILESDIR}/rosegarden-1.6.1.desktop.diff"
+		"${FILESDIR}/rosegarden-1.6.1.desktop.diff" \
+		"${FILESDIR}/${P}-nojack.patch"
 }
 
 src_compile() {
-	local myconf=""
-	cmake . -DCMAKE_INSTALL_PREFIX=/usr \
-		-DWANT_DEBUG="$(! use debug; echo "$?")" \
-		-DWANT_FULLDBG="$(! use debug; echo "$?")" \
-		-DWANT_SOUND="$(! use alsa; echo "$?")" \
-		-DWANT_JACK="$(! use jack; echo "$?")" \
-		-DWANT_DSSI="$(! use dssi; echo "$?")" \
-		-DWANT_LIRC="$(! use lirc; echo "$?")" \
-		|| die "cmake failed"
+	tc-export CC CXX LD
 
-	emake || die "emake failed"
+	# cmake is stupid, very very stupid.
+	sed -i -e 's:CMAKE_CXX_FLAGS_\(RELEASE\|RELWITHDEBINFO\|DEBUG\).*".*"):CMAKE_CXX_FLAGS_\1 "'"${CXXFLAGS}"'"):' \
+		CMakeLists.txt || die "unable to sanitise CXXFLAGS"
+
+	mycmakeargs="$(cmake-utils_use_want alsa SOUND)
+		$(cmake-utils_use_want jack JACK)
+		$(cmake-utils_use_want dssi DSSI)
+		$(cmake-utils_use_want lirc LIRC)"
+	cmake-utils_src_compile
 }
 
 src_install() {
-	emake install DESTDIR="${D}" languages="$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))" || die "emake install failed"
-	dodoc ChangeLog AUTHORS README TRANSLATORS
+	cmake-utils_src_install
+	dodoc AUTHORS README TRANSLATORS
 }
