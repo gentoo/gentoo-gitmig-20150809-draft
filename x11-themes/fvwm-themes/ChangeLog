@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/fvwm-themes
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/ChangeLog,v 1.16 2006/07/08 08:40:31 corsair Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/ChangeLog,v 1.17 2008/01/06 08:57:22 omp Exp $
+
+  06 Jan 2008; David Shakaryan <omp@gentoo.org>
+  +files/fvwm-themes-0.7.0-gentoo1.patch, fvwm-themes-0.7.0.ebuild:
+  Patch by Jaroslaw Kalinowski to fix build error. (bug #150623)
 
   08 Jul 2006; Markus Rothe <corsair@gentoo.org> fvwm-themes-0.7.0.ebuild:
   Stable on ppc64
