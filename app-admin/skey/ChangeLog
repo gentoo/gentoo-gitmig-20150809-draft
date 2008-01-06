@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/skey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.50 2007/12/25 19:56:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.51 2008/01/06 19:29:50 ulm Exp $
 
   25 Dec 2007; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add myself as maintainer.
@@ -16,6 +16,8 @@
   24 Jan 2007; Marius Mauch <genone@gentoo.org> skey-1.1.5-r5.ebuild,
   skey-1.1.5-r6.ebuild:
   Replacing einfo with elog
+
+*skey-1.1.5-r6 (05 Jan 2007)
 
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> skey-1.1.5-r5.ebuild:
   Marked stable on mips.
