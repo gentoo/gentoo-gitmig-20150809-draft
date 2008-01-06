@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdmtheme
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmtheme/ChangeLog,v 1.8 2007/12/17 18:04:07 tgurr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmtheme/ChangeLog,v 1.9 2008/01/06 22:08:54 philantrop Exp $
+
+  06 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  kdmtheme-1.2.2.ebuild:
+  Ensure a suitable admindir is used. Marked stable on amd64 as per bug 204108.
 
 *kdmtheme-1.2.2 (17 Dec 2007)
 
