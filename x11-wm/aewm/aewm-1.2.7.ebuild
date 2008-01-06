@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.6 2007/08/02 14:34:34 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.7 2008/01/06 08:35:53 omp Exp $
 
 DESCRIPTION="A minimalistic X11 window manager."
 HOMEPAGE="http://www.red-bean.com/~decklin/software/aewm/"
@@ -17,6 +17,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXft
 	x11-libs/libXext"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	x11-proto/xproto
 	x11-proto/xextproto"
 
