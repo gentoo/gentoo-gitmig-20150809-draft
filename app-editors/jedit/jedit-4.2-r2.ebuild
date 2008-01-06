@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r2.ebuild,v 1.12 2007/12/20 10:39:45 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r2.ebuild,v 1.13 2008/01/06 18:44:39 caster Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -45,10 +45,10 @@ src_unpack() {
 	java-pkg_filter-compiler jikes
 }
 
-# Fails to build if asm gets pulled in via ant classpath
-ANT_TASKS=" "
-EANT_BUILD_TARGET="dist"
-EANT_DOC_TARGET="javadoc docs-html"
+src_compile() {
+	# Fails to build if asm gets pulled in via ant classpath
+	ANT_TASKS="none" eant dist $(use_doc javadoc docs-html -Dtools.jar=$(java-config --tools))
+}
 
 src_install() {
 	dodir /usr/share/jedit
