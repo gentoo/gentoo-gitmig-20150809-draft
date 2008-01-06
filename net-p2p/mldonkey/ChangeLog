@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.197 2008/01/06 16:04:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.198 2008/01/06 16:40:29 armin76 Exp $
+
+*mldonkey-2.9.2-r1 (06 Jan 2008)
+
+  06 Jan 2008; Raúl Porcel <armin76@gentoo.org> +mldonkey-2.9.2-r1.ebuild:
+  Revision bump with a fix from Alexis Ballier to build without ocamlopt
 
   06 Jan 2008; Raúl Porcel <armin76@gentoo.org> mldonkey-2.9.2.ebuild:
   Remove RESTRICT=mirror as discussed with upstream
