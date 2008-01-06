@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.15.ebuild,v 1.1 2007/09/08 16:30:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.15.ebuild,v 1.2 2008/01/06 20:17:49 hollow Exp $
 
 inherit apache-module eutils toolchain-funcs webapp
 
@@ -29,11 +29,10 @@ DOCFILES="CHANGELOG README"
 
 WEBAPP_MANUAL_SLOT="yes"
 
-need_apache2
+need_apache2_2
 
 pkg_setup() {
 	webapp_pkg_setup
-
 	apache-module_pkg_setup
 
 	if use ssl && ! built_with_use www-servers/apache ssl; then
@@ -41,7 +40,7 @@ pkg_setup() {
 		die
 	fi
 
-	if ! built_with_use dev-libs/boost threads; then
+	if ! built_with_use --missing true dev-libs/boost threads; then
 		eerror "Build dev-libs/boost with USE=threads."
 		die
 	fi
@@ -50,12 +49,14 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-browser-gentoo.patch"
-	sed -i -e "s:apr-config:$(apr_config):g" apachemod/Makefile
+	epatch "${FILESDIR}"/${P}-browser-gentoo.patch
+	sed -i -e "s:apr-config:apr-1-config:g" apachemod/Makefile
 }
 
 src_compile() {
-	( cd apachemod && emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die "Apachemod make failed" )
+	cd apachemod
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die "Apachemod make failed"
+	cd ..
 
 	# Modify browser files to reflect USE flags.
 	for flag in opera pam ssl ; do
@@ -74,25 +75,22 @@ src_install() {
 
 	webapp_src_preinst
 	cp -f browser/{*,.htaccess} "${D}/${MY_HTDOCSDIR}"
-	webapp_postinst_txt en "${FILESDIR}/${P}-postinst-en.txt"
+	webapp_postinst_txt en "${FILESDIR}"/${P}-postinst-en.txt
 	webapp_src_install
 }
 
 pkg_postinst() {
 	webapp_pkg_postinst
-
 	apache-module_pkg_postinst
 
 	if ! use ssl ; then
-		ewarn "USE=-ssl:   Anyterm without SSL is very insecure!"
+		ewarn "USE=-ssl: Anyterm without SSL is very insecure!"
 	fi
 	if ! use pam ; then
-		ewarn "USE=-pam:   You will have to add your own authentication"
-		ewarn "            mechanism."
+		ewarn "USE=-pam: You will have to add your own authentication mechanism."
 	fi
 	if use opera ; then
-		ewarn "USE=opera:  Be sure to disable some logging in your Apache"
-		ewarn "            configuration files!"
+		ewarn "USE=opera: Be sure to disable some logging in your Apache configuration files!"
 	fi
 	if ! use ssl || ! use pam || use opera ; then
 		ewarn "For more information see http://anyterm.org/security.html"
