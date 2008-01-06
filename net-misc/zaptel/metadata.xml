@@ -6,7 +6,7 @@
   <email>stkn@gentoo.org</email>
   <name>Stefan Knoblich</name>
 </maintainer>
-<maintainer restrict="&lt;net-misc/zaptel-1.2.0">
+<maintainer>
   <email>rajiv@gentoo.org</email>
   <name>Rajiv Aaron Manglani</name>
 </maintainer>
