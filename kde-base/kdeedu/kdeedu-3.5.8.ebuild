@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.5.8.ebuild,v 1.2 2007/10/23 21:19:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.5.8.ebuild,v 1.3 2008/01/06 18:29:20 aballier Exp $
 
-inherit kde-dist
+inherit kde-dist eutils
 
 DESCRIPTION="KDE educational apps"
 
@@ -11,6 +11,22 @@ IUSE="kig-scripting solver"
 
 DEPEND="kig-scripting? ( >=dev-libs/boost-1.32 )
 		solver? ( >=dev-ml/facile-1.1 )"
+
+pkg_setup() {
+	if use solver && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "In order to build the solver for ${PN}, you first need"
+		eerror "to have dev-lang/ocaml built with the ocamlopt useflag"
+		eerror "in order to get a native code ocaml compiler"
+		die "Please install dev-lang/ocaml with ocamlopt support"
+	fi
+	if use solver && ! built_with_use --missing true dev-ml/facile ocamlopt; then
+		eerror "In order to build the solver for ${PN}, you first need"
+		eerror "to have dev-ml/facile built with the ocamlopt useflag"
+		eerror "in order to get the native code library"
+		die "Please install dev-ml/facile with ocamlopt support"
+	fi
+	kde_pkg_setup
+}
 
 src_unpack() {
 	kde_src_unpack
