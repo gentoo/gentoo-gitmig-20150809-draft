@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xac
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/ChangeLog,v 1.10 2007/12/24 17:51:33 josejx Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/ChangeLog,v 1.11 2008/01/06 21:05:17 josejx Exp $
+
+*xac-0.6_pre4 (06 Jan 2008)
+
+  06 Jan 2008; Joseph Jezak <josejx@gentoo.org> +xac-0.6_pre4.ebuild:
+  Latest version fixes amd64 issue and range problems.
 
   24 Dec 2007; Joseph Jezak <josejx@gentoo.org> -files/xac-lz.patch,
   -xac-0.6_pre1.ebuild, -xac-0.6_pre2.ebuild, xac-0.6_pre3.ebuild:
