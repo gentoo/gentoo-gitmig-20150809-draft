@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.6.515.ebuild,v 1.1 2008/01/03 21:51:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.7.522.ebuild,v 1.1 2008/01/06 09:59:16 ulm Exp $
 
 inherit elisp eutils versionator
 
