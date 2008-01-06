@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/openvz-sources
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.78 2007/12/24 10:21:43 pva Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.79 2008/01/06 16:55:03 pva Exp $
+
+*openvz-sources-2.6.22.005 (06 Jan 2008)
+
+  06 Jan 2008; <pva@gentoo.org> +openvz-sources-2.6.22.005.ebuild:
+  Added unstables sources.
 
   24 Dec 2007; <pva@gentoo.org> -openvz-sources-2.6.18.028.049.ebuild,
   openvz-sources-2.6.18.028.051.ebuild:
