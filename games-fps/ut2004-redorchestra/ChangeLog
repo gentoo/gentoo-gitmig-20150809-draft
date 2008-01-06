@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-redorchestra
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-redorchestra/ChangeLog,v 1.9 2007/01/10 20:59:30 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-redorchestra/ChangeLog,v 1.10 2008/01/06 07:59:27 eradicator Exp $
+
+  06 Jan 2008; Jeremy Huddleston <eradicator@gentoo.org>
+  files/digest-ut2004-redorchestra-3.3-r2, Manifest:
+  Redigested - bug #164462.
 
   10 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -ut2004-redorchestra-3.3-r1.ebuild, ut2004-redorchestra-3.3-r2.ebuild:

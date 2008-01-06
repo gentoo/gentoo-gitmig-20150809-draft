@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-fragops
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-fragops/ChangeLog,v 1.7 2007/01/10 20:49:42 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-fragops/ChangeLog,v 1.8 2008/01/06 07:55:00 eradicator Exp $
+
+  06 Jan 2008; Jeremy Huddleston <eradicator@gentoo.org>
+  files/digest-ut2004-fragops-2.16-r1, Manifest:
+  Redigested - bug #164462.
 
   10 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -ut2004-fragops-2.16.ebuild, ut2004-fragops-2.16-r1.ebuild:
