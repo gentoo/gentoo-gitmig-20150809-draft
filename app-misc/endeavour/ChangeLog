@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/endeavour
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.26 2007/06/24 14:42:05 angelos Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.27 2008/01/06 20:51:06 maekke Exp $
+
+  06 Jan 2008; Markus Meier <maekke@gentoo.org> endeavour-2.7.3.ebuild:
+  x86 stable, bug #204355
 
   24 Jun 2007; Christoph Mende <angelos@gentoo.org>
   +files/endeavour-2.7.3-amd64-gtk-flags.patch, endeavour-2.7.3.ebuild:
