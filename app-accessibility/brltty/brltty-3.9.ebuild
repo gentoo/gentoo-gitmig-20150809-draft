@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.9.ebuild,v 1.1 2008/01/05 22:46:49 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.9.ebuild,v 1.2 2008/01/06 07:05:20 mr_bones_ Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -42,7 +42,6 @@ src_compile() {
 
 src_install() {
 	make INSTALL_PROGRAM="\${INSTALL_SCRIPT}" INSTALL_ROOT="${D}" install || die
-
 
 	cd Documents
 	rm *.made
