@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1.ebuild,v 1.7 2007/12/23 18:28:42 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1-r1.ebuild,v 1.1 2008/01/06 22:47:55 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -59,16 +59,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# General patches
-
 	epatch "${FILESDIR}"/${PN}-2.6.3-unicode-odbc.patch
 	epatch "${FILESDIR}"/${PN}-2.8.4-collision.patch
 	epatch "${FILESDIR}"/${PN}-2.8.6-wxrc_link_fix.patch
-
-	# Patches specific to this Version
-
-	# none yet :)
-
+	epatch "${FILESDIR}"/${PN}-2.8.7-mmedia.patch			# Bug #174874
 }
 
 src_compile() {
@@ -89,6 +83,9 @@ src_compile() {
 			$(use_with odbc)"
 
 	# wxGTK options
+	#   --enable-graphics_ctx - needed for webkit, editra
+	#   --without-gnomevfs - bug #203389
+
 	use X && \
 		myconf="${myconf}
 			--enable-graphics_ctx
@@ -101,7 +98,7 @@ src_compile() {
 			$(use_enable opengl)
 			$(use_with opengl)
 			$(use_with gnome gnomeprint)
-			$(use_with gnome gnomevfs)"
+			--without-gnomevfs"
 
 	# wxBase options
 	use X || \
