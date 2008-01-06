@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ferrisloki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.13 2008/01/06 01:18:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.14 2008/01/06 21:35:13 maekke Exp $
+
+  06 Jan 2008; Markus Meier <maekke@gentoo.org> ferrisloki-2.2.0.ebuild:
+  x86 stable, bug #204500
 
 *ferrisloki-3.0.1 (06 Jan 2008)
 
