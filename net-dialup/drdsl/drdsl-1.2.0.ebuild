@@ -1,41 +1,45 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/drdsl-1.2.0.ebuild,v 1.4 2006/03/12 10:10:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/drdsl-1.2.0.ebuild,v 1.5 2008/01/06 01:21:54 sbriesen Exp $
+
+inherit eutils rpm
+
+REL="10_3/2.6.22.13_0.3"
 
 DESCRIPTION="AVM DSL Assistant for autodetecting DSL values (VPI, VCI, VPP) for 'fcdsl' based cards"
-HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux/"
-SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/drdsl/${P}.tar.gz"
+HOMEPAGE="http://opensuse.foehr-it.de/"
+SRC_URI="x86? ( http://opensuse.foehr-it.de/rpms/${REL}/32bit/${PN}-1.0-1.i586.rpm )
+	amd64? ( http://opensuse.foehr-it.de/rpms/${REL}/64bit/${PN}-1.0-1.x86_64.rpm )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 -*"
+KEYWORDS="~amd64 x86"
 IUSE="unicode"
 
-DEPEND="sys-apps/coreutils"
-RDEPEND="sys-libs/glibc
-	net-dialup/capi4k-utils"
+DEPEND="unicode? ( virtual/libiconv )"
+RDEPEND="net-dialup/capi4k-utils"
+
+RESTRICT="strip test"
+
+S="${WORKDIR}"
 
 src_unpack() {
-	unpack ${A}
+	rpm_src_unpack ${A}
 	cd "${S}"
-
-	# convert 'crlf' to 'lf'
-	for i in drdsl.ini; do
-		tr -d "\r" < "${i}" > "${i}~" && mv -f "${i}~" "${i}" || rm -f "${i}~"
-	done
 
 	# convert 'latin1' to 'utf8'
 	if use unicode; then
-		for i in drdsl.ini; do
-			einfo "Converting '${i}' to UTF-8"
-			iconv -f latin1 -t utf8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"
+		for i in etc/drdsl/drdsl.ini; do
+			echo ">>> Converting '${i##*/}' to UTF-8"
+			iconv -f LATIN1 -t UTF8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"
 		done
 	fi
 }
 
 src_install() {
-	dosbin drdsl
+	into /
+	dosbin sbin/drdsl
 	insinto /etc/drdsl
-	doins drdsl.ini
-	dodoc README
+	doins etc/drdsl/drdsl.ini
+	dodoc "${FILESDIR}"/README
 }

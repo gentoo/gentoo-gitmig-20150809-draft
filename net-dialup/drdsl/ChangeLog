@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/drdsl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/ChangeLog,v 1.3 2005/06/26 10:48:35 sbriesen Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/ChangeLog,v 1.4 2008/01/06 01:21:54 sbriesen Exp $
+
+  06 Jan 2008; Stefan Briesenick <sbriesen@gentoo.org> +files/README,
+  drdsl-1.2.0.ebuild:
+  using special openSUSE repository for AVM drivers from now on.
 
   26 Jun 2005; Stefan Briesenick <sbriesen@gentoo.org> drdsl-1.2.0.ebuild:
   stable on x86
