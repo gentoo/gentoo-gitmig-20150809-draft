@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.18.ebuild,v 1.6 2007/11/23 12:48:47 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.18.ebuild,v 1.7 2008/01/06 08:34:05 omp Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ IUSE=""
 
 RDEPEND="x11-wm/oroborus
 	>=x11-libs/gtk+-2"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}"
 
