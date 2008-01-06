@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/taglib
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.59 2007/05/17 10:54:53 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.60 2008/01/06 23:27:56 philantrop Exp $
+
+  06 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/taglib-1.4-gcc-4.3-include.patch, taglib-1.4-r1.ebuild:
+  Added a patch for gcc-4.3-compatibility as kindly provided by Ryan dirtyepic
+  Hill on bug 203635. Thanks, Ryan!
 
   17 May 2007; Raúl Porcel <armin76@gentoo.org> taglib-1.4-r1.ebuild:
   alpha stable wrt #163117

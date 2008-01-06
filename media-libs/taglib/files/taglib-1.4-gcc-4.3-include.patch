@@ -1,0 +1,51 @@
+diff -Naur taglib-1.4-orig/bindings/c/tag_c.cpp taglib-1.4/bindings/c/tag_c.cpp
+--- taglib-1.4-orig/bindings/c/tag_c.cpp	2005-05-17 14:17:26.000000000 -0600
++++ taglib-1.4/bindings/c/tag_c.cpp	2007-12-28 18:27:28.000000000 -0600
+@@ -21,6 +21,8 @@
+ 
+ #include "tag_c.h"
+ 
++#include <cstring>
++
+ #include <fileref.h>
+ #include <tfile.h>
+ #include <vorbisfile.h>
+diff -Naur taglib-1.4-orig/taglib/toolkit/tbytevector.cpp taglib-1.4/taglib/toolkit/tbytevector.cpp
+--- taglib-1.4-orig/taglib/toolkit/tbytevector.cpp	2005-05-17 14:44:14.000000000 -0600
++++ taglib-1.4/taglib/toolkit/tbytevector.cpp	2007-12-28 18:26:39.000000000 -0600
+@@ -20,6 +20,7 @@
+  ***************************************************************************/
+ 
+ #include <iostream>
++#include <cstring>
+ 
+ #include <tstring.h>
+ #include <tdebug.h>
+diff -Naur taglib-1.4-orig/taglib/toolkit/tfile.cpp taglib-1.4/taglib/toolkit/tfile.cpp
+--- taglib-1.4-orig/taglib/toolkit/tfile.cpp	2005-07-25 15:16:32.000000000 -0600
++++ taglib-1.4/taglib/toolkit/tfile.cpp	2007-12-28 18:26:03.000000000 -0600
+@@ -27,6 +27,10 @@
+ #include <sys/stat.h>
+ #include <unistd.h>
+ 
++#include <cstdlib>
++#include <cstring>
++#include <climits>
++
+ using namespace TagLib;
+ 
+ class File::FilePrivate
+diff -Naur taglib-1.4-orig/taglib/toolkit/tstring.cpp taglib-1.4/taglib/toolkit/tstring.cpp
+--- taglib-1.4-orig/taglib/toolkit/tstring.cpp	2005-07-25 15:31:15.000000000 -0600
++++ taglib-1.4/taglib/toolkit/tstring.cpp	2007-12-28 18:24:59.000000000 -0600
+@@ -25,6 +25,10 @@
+ 
+ #include <iostream>
+ 
++#include <cstdlib>
++#include <cstring>
++#include <climits>
++
+ namespace TagLib {
+ 
+   inline unsigned short byteSwap(unsigned short x)

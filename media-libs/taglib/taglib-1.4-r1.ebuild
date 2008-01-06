@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.4-r1.ebuild,v 1.10 2007/05/17 10:54:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.4-r1.ebuild,v 1.11 2008/01/06 23:27:56 philantrop Exp $
 
 inherit libtool eutils
 
@@ -19,6 +19,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-dirtypointer.patch
+	# Fixes bug 203635.
+	epatch "${FILESDIR}"/${P}-gcc-4.3-include.patch
 	elibtoolize
 }
 
