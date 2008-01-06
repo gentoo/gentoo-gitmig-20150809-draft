@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2-r1.ebuild,v 1.2 2006/10/15 23:33:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2-r1.ebuild,v 1.3 2008/01/06 01:27:58 mr_bones_ Exp $
 
 inherit eutils games
 
-DEB_PATCH=4
+DEB_PATCH=7
 MY_PV=${PV/_p/r}
 DESCRIPTION="3rd person, side-view, fast-action, kill-them-before-they-kill-you game"
 HOMEPAGE="http://www.xevil.com/"
@@ -25,8 +25,7 @@ S=${WORKDIR}
 src_unpack() {
 	unpack ${A}
 	edos2unix readme.txt x11/*.{cpp,h} cmn/*.{cpp,h} makefile config.mk
-	epatch "${WORKDIR}"/xevil_${MY_PV}-${DEB_PATCH}.diff \
-		"${FILESDIR}"/${P}-memErr.patch
+	epatch "${WORKDIR}"/xevil_${MY_PV}-${DEB_PATCH}.diff
 	sed -i \
 		-e 's:-static::' \
 		-e "s:CFLAGS=\":CFLAGS=\"${CFLAGS} :g" \
