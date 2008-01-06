@@ -11,7 +11,3 @@
 
 # app-misc/lcd4linux
 app-misc/lcd4linux lcd_devices_hd44780
-
-# Samuli Suominen <drac@gentoo.org> (30 Nov 2007)
-# media-libs/aften broken, and not keyworded.
-media-video/avidemux aften
