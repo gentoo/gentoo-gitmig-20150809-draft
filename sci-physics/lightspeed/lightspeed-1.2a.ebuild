@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a.ebuild,v 1.3 2008/01/06 16:46:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a.ebuild,v 1.4 2008/01/06 16:51:11 bicatali Exp $
 
 DESCRIPTION="OpenGL interactive relativistic simulator"
 HOMEPAGE="http://lightspeed.sourceforge.net/"
@@ -14,7 +14,7 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	=x11-libs/gtkglarea-1.2.3-r1
-	>=x11-libs/gtk+-1.0.1
+	=x11-libs/gtk+-1.2*
 	media-libs/libpng
 	media-libs/tiff"
 
