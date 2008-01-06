@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmbiff
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.27 2007/07/22 05:24:06 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.28 2008/01/06 21:22:11 drac Exp $
+
+  06 Jan 2008; Samuli Suominen <drac@gentoo.org> -wmbiff-0.4.25.ebuild,
+  -wmbiff-0.4.25-r1.ebuild, wmbiff-0.4.27.ebuild:
+  Remove old versions and mark latest stable for amd64 wrt #204554. Sanitize
+  ebuild.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wmbiff-0.4.25.ebuild,
   wmbiff-0.4.25-r1.ebuild, wmbiff-0.4.27.ebuild:
