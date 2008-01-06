@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r5.ebuild,v 1.6 2007/01/15 15:58:20 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r5.ebuild,v 1.7 2008/01/06 19:04:55 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -28,20 +28,20 @@ src_compile() {
 }
 
 src_install() {
-	mv jsr{154,152}/dist/lib/*.jar ${S}
+	mv jsr{154,152}/dist/lib/*.jar "${S}"
 
 	if use doc ; then
 		mkdir docs
-		cd ${S}/jsr154/build
-		mv docs ${S}/docs/servlet
-		mv examples ${S}/docs/servlet/examples
+		cd "${S}"/jsr154/build
+		mv docs "${S}"/docs/servlet
+		mv examples "${S}"/docs/servlet/examples
 
-		cd ${S}/jsr152/build
-		mv docs ${S}/docs/jsp
-		mv examples ${S}/docs/jsp/examples
+		cd "${S}"/jsr152/build
+		mv docs "${S}"/docs/jsp
+		mv examples "${S}"/docs/jsp/examples
 	fi
 
-	cd ${S}
+	cd "${S}"
 	java-pkg_dojar *.jar
 	use doc && java-pkg_dohtml -r docs/*
 	use source && java-pkg_dosrc jsr{152,154}/src/share/javax
