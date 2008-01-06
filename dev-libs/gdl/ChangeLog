@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.10 2007/10/20 07:25:43 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.11 2008/01/06 05:10:05 fmccor Exp $
+
+  06 Jan 2008; Ferris McCormick <fmccor@gentoo.org> gdl-0.7.6.ebuild:
+  Add ~sparc for testing, needed by Bug #204495
 
   20 Oct 2007; Markus Rothe <corsair@gentoo.org> gdl-0.7.6.ebuild:
   Added ~ppc64; bug #189993
