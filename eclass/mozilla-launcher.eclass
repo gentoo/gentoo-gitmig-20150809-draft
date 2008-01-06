@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.15 2006/11/09 04:04:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.16 2008/01/06 19:43:49 armin76 Exp $
 
 inherit nsplugins multilib
 
@@ -68,6 +68,15 @@ install_mozilla_launcher_stub() {
 	declare name=$1
 	declare libdir=$2
 
+	# If we use xulrunner, the name of the binary should be the same
+	if use xulrunner; then
+		declare appname=xulrunner
+		declare xulparams="export XUL_PARAMS=${libdir}/application.ini"
+		declare libdir="/usr/$(get_libdir)/xulrunner"
+	else
+		declare appname=${name}
+	fi
+
 	dodir /usr/bin
 
 	if [[ ${PN: -4} == "-bin" ]]  || ! use moznopango; then
@@ -78,9 +87,10 @@ install_mozilla_launcher_stub() {
 # but OOo brokenness makes it necessary to use a stub instead:
 # http://bugs.gentoo.org/show_bug.cgi?id=78890
 
-export MOZILLA_LAUNCHER=${name}
+export MOZILLA_LAUNCHER=${appname}
 export MOZILLA_LIBDIR=${libdir}
 export MOZ_PLUGIN_PATH=\${MOZ_PLUGIN_PATH:-/usr/$(get_libdir)/$PLUGINS_DIR}
+${xulparams}
 exec /usr/libexec/mozilla-launcher "\$@"
 EOF
 	else
@@ -91,10 +101,11 @@ EOF
 # but OOo brokenness makes it necessary to use a stub instead:
 # http://bugs.gentoo.org/show_bug.cgi?id=78890
 
-export MOZILLA_LAUNCHER=${name}
+export MOZILLA_LAUNCHER=${appname}
 export MOZILLA_LIBDIR=${libdir}
 export MOZ_PLUGIN_PATH=\${MOZ_PLUGIN_PATH:-/usr/$(get_libdir)/$PLUGINS_DIR}
 export MOZ_DISABLE_PANGO=1
+${xulparams}
 exec /usr/libexec/mozilla-launcher "\$@"
 EOF
 	fi
@@ -102,7 +113,6 @@ EOF
 }
 
 warn_mozilla_launcher_stub() {
-
 	elog "Not all locales support the disabling of pango."
 	elog "If your locale does not support disabling pango,"
 	elog "please open a bug report on http://bugs.gentoo.org"
