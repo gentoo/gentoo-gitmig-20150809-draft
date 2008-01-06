@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/confluence
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/confluence/ChangeLog,v 1.5 2006/06/20 14:34:49 kingtaco Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/confluence/ChangeLog,v 1.6 2008/01/06 20:19:37 aballier Exp $
+
+*confluence-0.10.6 (06 Jan 2008)
+
+  06 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  +confluence-0.10.6.ebuild:
+  version bump, allow to build without ocamlopt, install machine independant
+  stuff in /usr/share
 
   20 Jun 2006; Mike Doty <kingtaco@gentoo.org> confluence-0.9.1.ebuild:
   ~amd64 added
