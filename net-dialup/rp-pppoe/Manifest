@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX rp-pppoe-3.8-configure.patch 2718 RMD160 fd30c474c49c27c8c6c1bc8d529165eabd7d5de7 SHA1 183d7fe2567f74c7fa8227f7d4a83fdfef966626 SHA256 746d3581e8c8a31d1848b76cc071ad82a4d4f81c31b79b5e285344eaa3065915
 MD5 1cbd938e71180f324baf19908d32b158 files/rp-pppoe-3.8-configure.patch 2718
 RMD160 fd30c474c49c27c8c6c1bc8d529165eabd7d5de7 files/rp-pppoe-3.8-configure.patch 2718
@@ -10,6 +13,10 @@ AUX rp-pppoe-3.8-plugin-options.patch 1364 RMD160 8af5cccf80a2c1b26fa50e4ee0da74
 MD5 1938913a9606e60e4fa510512e8f206e files/rp-pppoe-3.8-plugin-options.patch 1364
 RMD160 8af5cccf80a2c1b26fa50e4ee0da749dacc44222 files/rp-pppoe-3.8-plugin-options.patch 1364
 SHA256 508bedec65a24eb876b2eb2151adce84efd51689e8472383debb01b29b82be13 files/rp-pppoe-3.8-plugin-options.patch 1364
+AUX rp-pppoe-3.8-session-offset.patch 828 RMD160 c09fa3ccaa03bd8e1f0b1bce436eec21cd3eb179 SHA1 6160d3345c9a108ca0933eaba548711a5f76d5be SHA256 2428f350d6a9d654401e87def8faa7fc12fb3c6d9a7a698590716391efef30c0
+MD5 ed9370332f5dc582fcabe8fbfcfde536 files/rp-pppoe-3.8-session-offset.patch 828
+RMD160 c09fa3ccaa03bd8e1f0b1bce436eec21cd3eb179 files/rp-pppoe-3.8-session-offset.patch 828
+SHA256 2428f350d6a9d654401e87def8faa7fc12fb3c6d9a7a698590716391efef30c0 files/rp-pppoe-3.8-session-offset.patch 828
 AUX rp-pppoe-3.8-username-charset.patch 1946 RMD160 9aa18182f5a611f54041162976b4f33740439443 SHA1 423b76327e679b48cfee6dca6d611012680b2830 SHA256 21209268903d2c359e5eb4547ab6417f0c63d41791fe413728d690ed879c93bd
 MD5 1d75436eae3217598ce13b690f101978 files/rp-pppoe-3.8-username-charset.patch 1946
 RMD160 9aa18182f5a611f54041162976b4f33740439443 files/rp-pppoe-3.8-username-charset.patch 1946
@@ -20,10 +27,14 @@ EBUILD rp-pppoe-3.8-r1.ebuild 2397 RMD160 5f140f9f37f425d56b1d7cbd2ae7fcaabffe4d
 MD5 64f3e4290927ea8afde0b3cdf1a23681 rp-pppoe-3.8-r1.ebuild 2397
 RMD160 5f140f9f37f425d56b1d7cbd2ae7fcaabffe4d70 rp-pppoe-3.8-r1.ebuild 2397
 SHA256 1186eca50e80fa3e650dd5d77624b00f9f582a1d2c7d5e8227a29468ff9262cc rp-pppoe-3.8-r1.ebuild 2397
-MISC ChangeLog 13241 RMD160 977fc664dc7b3af8e70a5a15e0fcedc44bba4fcc SHA1 e585406419ee7ad7189b6a2201bc71e6e7f36dc1 SHA256 ed8ec0388fd8146d5bcdccb24c68d875f4e24a135b55e2a2fa2c1dda56efda4e
-MD5 bd2b6114f4e32d1fffd9c147b2a74197 ChangeLog 13241
-RMD160 977fc664dc7b3af8e70a5a15e0fcedc44bba4fcc ChangeLog 13241
-SHA256 ed8ec0388fd8146d5bcdccb24c68d875f4e24a135b55e2a2fa2c1dda56efda4e ChangeLog 13241
+EBUILD rp-pppoe-3.8-r2.ebuild 2475 RMD160 7958d40a60a8eccceaeed6b9be80270396323cba SHA1 25fca3cd9b7e4d58e9d4c2e84cf204539ab05224 SHA256 f891fd00b4ffdcc87c0ef00151937def5762a07e08ef4ee83f3d659b2c1a074f
+MD5 3cb456f081b278472b12553185a2a160 rp-pppoe-3.8-r2.ebuild 2475
+RMD160 7958d40a60a8eccceaeed6b9be80270396323cba rp-pppoe-3.8-r2.ebuild 2475
+SHA256 f891fd00b4ffdcc87c0ef00151937def5762a07e08ef4ee83f3d659b2c1a074f rp-pppoe-3.8-r2.ebuild 2475
+MISC ChangeLog 13523 RMD160 c6dc72369729c6e4239d87245ef82e3fca8b7610 SHA1 bc06c777641800d1285e6168945ff74ce5edb84c SHA256 befc0bcbf46e67f71bb09cb3b39d435dfe78102c7168775cab96bd3c0aebf4cc
+MD5 4dee3a9e0f0f07df83c90259db26c1eb ChangeLog 13523
+RMD160 c6dc72369729c6e4239d87245ef82e3fca8b7610 ChangeLog 13523
+SHA256 befc0bcbf46e67f71bb09cb3b39d435dfe78102c7168775cab96bd3c0aebf4cc ChangeLog 13523
 MISC metadata.xml 163 RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e SHA1 d8332605fd22c32f15438bbdf24aa622c3d2738a SHA256 1137a0fd866641cf719b0c2e9e77ca9fa4541a42f2cc851fe4659cf2677acca3
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e metadata.xml 163
@@ -31,3 +42,13 @@ SHA256 1137a0fd866641cf719b0c2e9e77ca9fa4541a42f2cc851fe4659cf2677acca3 metadata
 MD5 c345665140f7ae9908f3256aee68a72f files/digest-rp-pppoe-3.8-r1 467
 RMD160 7b4162f713393d8f869d7436d009f2ebe2d5c38a files/digest-rp-pppoe-3.8-r1 467
 SHA256 9f689e517bfc64f62e853de28c0b87a95e877d2ecf076ec4d556663820303ebe files/digest-rp-pppoe-3.8-r1 467
+MD5 c345665140f7ae9908f3256aee68a72f files/digest-rp-pppoe-3.8-r2 467
+RMD160 7b4162f713393d8f869d7436d009f2ebe2d5c38a files/digest-rp-pppoe-3.8-r2 467
+SHA256 9f689e517bfc64f62e853de28c0b87a95e877d2ecf076ec4d556663820303ebe files/digest-rp-pppoe-3.8-r2 467
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEUEARECAAYFAkeAzlgACgkQ+fWpoTWIA9EzTgCghGJMpul58XzGi2pXy5emXq6E
+jKoAlRlLB7hWS5C0LTAsluLfAoMqWoo=
+=B1j1
+-----END PGP SIGNATURE-----

@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/rp-pppoe
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.88 2007/05/06 08:11:04 genone Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.89 2008/01/06 12:49:18 mrness Exp $
+
+*rp-pppoe-3.8-r2 (06 Jan 2008)
+
+  06 Jan 2008; Alin Năstac <mrness@gentoo.org>
+  +files/rp-pppoe-3.8-session-offset.patch, +rp-pppoe-3.8-r2.ebuild:
+  Propagate pppoe-server session offset to PPP interface name, thanks to
+  Aleksey Shipilev <aleksey.shipilev@gmail.com> (#204476).
 
   06 May 2007; Marius Mauch <genone@gentoo.org> rp-pppoe-3.8-r1.ebuild:
   Replacing einfo with elog
