@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.4.2.ebuild,v 1.1 2008/01/04 10:30:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.4.2.ebuild,v 1.2 2008/01/06 03:38:03 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -114,9 +114,10 @@ pkg_config() {
 		esac
 
 		# generate the private and public keys
-		openssl genrsa -out "${ROOT}"etc/mail/dkim-filter/${selector}.private ${keysize} && \
-			chown milter:milter "${ROOT}"etc/mail/dkim-filter/${selector}.private && chmod u=r,g-rwx,o-rwx "${ROOT}"etc/mail/dkim-filter/${selector}.private &&
-			openssl rsa -in "${ROOT}"etc/mail/dkim-filter/${selector}.private -out "${ROOT}"etc/mail/dkim-filter/${selector}.public -pubout -outform PEM || \
+		dkim-genkey -b ${keysize} -D "${ROOT}"etc/mail/dkim-filter/ \
+			-s ${selector} && \
+			chown milter:milter \
+			"${ROOT}"etc/mail/dkim-filter/"${selector}".private || \
 				{ eerror "Failed to create private and public keys." ; return 1; }
 	fi
 
@@ -133,17 +134,10 @@ pkg_config() {
 	einfo "  non_smtpd_milters = unix:/var/run/dkim-filter/dkim-filter.sock"
 
 	# DNS configuration
-	{
-		local line
-		pubkey=
-		while read line; do
-			[[ "${line}" == "--"* ]] || pubkey="${pubkey}${line}"
-		done
-	} < "${ROOT}"etc/mail/dkim-filter/${selector}.public
-	echo
 	einfo "After you configured your MTA, publish your key by adding this TXT record to your domain:"
-	einfo "  ${selector}._domainkey   IN   TXT  \"v=DKIM1\\; k=rsa\\; t=y\\; p=${pubkey}\""
-	echo
+	cat "${ROOT}"etc/mail/dkim-filter/${selector}.txt
 	einfo "t=y signifies you only test the DKIM on your domain. See following page for the complete list of tags:"
 	einfo "  http://www.dkim.org/specs/rfc4871-dkimbase.html#key-text"
+	einfo
+	einfo "Also look at the draft SSP http://www.dkim.org/specs/draft-ietf-dkim-ssp-01.html"
 }
