@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/pidgin-latex-1.0.ebuild,v 1.6 2008/01/07 05:00:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/pidgin-latex-1.0.ebuild,v 1.7 2008/01/07 23:11:30 tester Exp $
 
-inherit flag-o-matic multilib
+inherit flag-o-matic multilib eutils
 
 DESCRIPTION="Pidgin plugin that renders latex formulae"
 HOMEPAGE="http://sourceforge.net/projects/pidgin-latex"

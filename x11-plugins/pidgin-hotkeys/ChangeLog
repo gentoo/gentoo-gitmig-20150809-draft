@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-hotkeys
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/ChangeLog,v 1.9 2008/01/07 05:05:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/ChangeLog,v 1.10 2008/01/07 23:09:51 tester Exp $
+
+  07 Jan 2008; <tester@gentoo.org> pidgin-hotkeys-0.2.3.ebuild:
+  Add missing inherit eutils for built_with_use
 
   07 Jan 2008; <tester@gentoo.org> pidgin-hotkeys-0.2.3.ebuild:
   Add dep on gtk (and check that pidgin has it too)

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-libnotify
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/ChangeLog,v 1.9 2008/01/07 04:42:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/ChangeLog,v 1.10 2008/01/07 23:12:58 tester Exp $
+
+  07 Jan 2008; <tester@gentoo.org> pidgin-libnotify-0.13.ebuild:
+  Add missing inherit eutils for built_with_use
 
   07 Jan 2008; <tester@gentoo.org> pidgin-libnotify-0.13.ebuild,
   pidgin-libnotify-0.13-r1.ebuild:
