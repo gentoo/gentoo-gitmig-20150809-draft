@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/dbus-sharp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-sharp/ChangeLog,v 1.1 2007/12/30 03:14:17 compnerd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-sharp/ChangeLog,v 1.2 2008/01/07 03:54:37 josejx Exp $
+
+  07 Jan 2008; Joseph Jezak <josejx@gentoo.org> dbus-sharp-0.6.0.ebuild:
+  Marked ~ppc for bug #204673.
 
 *dbus-sharp-0.6.0 (30 Dec 2007)
 
