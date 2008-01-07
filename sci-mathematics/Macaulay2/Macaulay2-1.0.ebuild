@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.0.ebuild,v 1.1 2008/01/06 15:51:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.0.ebuild,v 1.2 2008/01/07 06:27:55 mr_bones_ Exp $
 
 inherit elisp-common eutils flag-o-matic toolchain-funcs autotools
 
@@ -92,7 +92,7 @@ src_install () {
 	make install || die "install failed"
 
 	# nothing useful in here, get rid of it
-	# NOTE: Macaulay installs into lib even on amd64 hence don't 
+	# NOTE: Macaulay installs into lib even on amd64 hence don't
 	# replace lib with $(get_libdir) below!
 	rm -fr "${D}"/usr/lib \
 		|| die "failed to remove empty /usr/lib"
