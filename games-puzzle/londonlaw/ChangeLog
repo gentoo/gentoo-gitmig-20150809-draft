@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/londonlaw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/ChangeLog,v 1.9 2008/01/05 00:47:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/ChangeLog,v 1.10 2008/01/07 23:25:33 dirtyepic Exp $
+
+  07 Jan 2008; Ryan Hill <dirtyepic@gentoo.org>
+  files/londonlaw-0.2.1-wxversion.patch:
+  Fix ugly patch header that's probably causing bug #204678.
 
 *londonlaw-0.2.1-r1 (05 Jan 2008)
 

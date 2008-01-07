@@ -1,5 +1,6 @@
---- londonlaw-0.2.1/londonlaw/guiclient/__init__.py	2005-07-05 18:45:05.000000000 -0600
-+++ /usr/lib/python2.5/site-packages/londonlaw/guiclient/__init__.py	2008-01-04 17:13:46.000000000 -0600
+diff -Naur londonlaw-0.2.1-orig/londonlaw/guiclient/__init__.py londonlaw-0.2.1/londonlaw/guiclient/__init__.py
+--- londonlaw-0.2.1-orig/londonlaw/guiclient/__init__.py	2005-07-05 18:45:05.000000000 -0600
++++ londonlaw-0.2.1/londonlaw/guiclient/__init__.py	2008-01-07 17:15:06.000000000 -0600
 @@ -23,6 +23,12 @@
  
  from twisted.internet import protocol, reactor
