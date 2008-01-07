@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbpager
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.24 2007/07/02 22:17:27 omp Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.25 2008/01/07 04:14:10 omp Exp $
+
+  07 Jan 2008; David Shakaryan <omp@gentoo.org> bbpager-0.4.1_beta1.ebuild,
+  bbpager-0.4.3.ebuild:
+  Add dev-util/pkgconfig to DEPEND. (bug #204600)
 
 *bbpager-0.4.3 (02 Jul 2007)
 
