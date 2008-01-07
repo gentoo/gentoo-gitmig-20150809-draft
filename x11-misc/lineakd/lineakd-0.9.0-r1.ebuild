@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0-r1.ebuild,v 1.6 2007/07/28 16:11:06 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0-r1.ebuild,v 1.7 2008/01/07 10:51:50 nelchael Exp $
 
 inherit multilib
 
@@ -22,6 +22,7 @@ RDEPEND="x11-libs/libICE
 DEPEND="${RDEPEND}
 	x11-libs/libxkbfile
 	x11-libs/libXt
+	x11-proto/inputproto
 	x11-proto/xextproto
 	x11-proto/xproto
 	x11-libs/libXtst"
