@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdaliclock
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/ChangeLog,v 1.19 2007/09/02 10:36:04 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/ChangeLog,v 1.20 2008/01/07 19:00:10 fmccor Exp $
+
+  07 Jan 2008; Ferris McCormick <fmccor@gentoo.org> xdaliclock-2.24.ebuild:
+  Sparc stable --- Bug #204778 --- works fine.
 
 *xdaliclock-2.24 (02 Sep 2007)
 
