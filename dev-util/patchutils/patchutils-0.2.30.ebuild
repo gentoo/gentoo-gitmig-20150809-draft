@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/patchutils-0.2.30.ebuild,v 1.11 2007/08/07 11:41:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/patchutils-0.2.30.ebuild,v 1.12 2008/01/07 12:22:39 robbat2 Exp $
 
 WANT_AUTOMAKE=1.8
 inherit autotools
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
-	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 }
