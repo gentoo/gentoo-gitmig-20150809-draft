@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre4.ebuild,v 1.1 2008/01/06 21:05:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre4.ebuild,v 1.2 2008/01/07 15:44:28 josejx Exp $
 
 inherit toolchain-funcs
 
@@ -22,6 +22,9 @@ src_unpack() {
 
 	### Replace /usr/lib/xac with libdir version
 	sed -i "s:/usr/lib/xac:/usr/$(get_libdir)/xac:" xac
+
+	### Make setup.py executable
+	chmod +x "${S}/src/setup.py"
 }
 
 src_compile() {
