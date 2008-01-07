@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jfreechart
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.34 2007/12/26 13:24:50 betelgeuse Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.35 2008/01/07 16:45:11 betelgeuse Exp $
+
+*jfreechart-1.0.9 (07 Jan 2008)
+
+  07 Jan 2008; Petteri Räty <betelgeuse@gentoo.org>
+  +jfreechart-1.0.9.ebuild:
+  Version bump. Fixes regressions caused by 1.0.8 reported in bug #203193.
 
   26 Dec 2007; Petteri Räty <betelgeuse@gentoo.org>
   -files/jfreechart-1.0.3-build.xml.patch, -jfreechart-0.9.21-r2.ebuild,
