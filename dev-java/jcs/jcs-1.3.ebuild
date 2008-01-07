@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.3.ebuild,v 1.2 2008/01/06 21:43:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.3.ebuild,v 1.3 2008/01/07 16:30:55 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -42,10 +42,6 @@ src_unpack() {
 	if use admin; then
 		LIBRARY_PKGS="${LIBRARY_PKGS},velocity"
 	else
-		ewarn
-		ewarn "JCS Admin is disabled, if you want it hit Ctrl-C and add"
-		ewarn "\"admin\" USE flag."
-		ewarn
 		rm -fr "${S}/src/java/org/apache/jcs/admin"
 	fi
 
