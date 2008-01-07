@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.43 2008/01/07 07:30:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.44 2008/01/07 07:45:04 mr_bones_ Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (11 Dec 2007)
 # Needs 2.6 headers
@@ -144,7 +144,7 @@ x11-drivers/xf86-input-evdev
 >=www-client/epiphany-2.17.0
 >=mail-client/evolution-2.9.0
 >=gnome-extra/evolution-data-server-1.9.0
->=gnome-extra/evolution-exchange-2.8.0
+>=gnome-extra/evolution-exchange-2.6.2
 >=gnome-extra/evolution-webcal-2.8.0
 >=gnome-extra/fast-user-switch-applet-2.16.0
 >=app-arch/file-roller-2.16.0

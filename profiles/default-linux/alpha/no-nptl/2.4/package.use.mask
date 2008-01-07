@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.use.mask,v 1.3 2007/10/18 23:09:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.use.mask,v 1.4 2008/01/07 07:45:04 mr_bones_ Exp $
 
 # Samuli Suominen <drac@gentoo.org> (13 Aug 2007)
 # Needs gnome-panel which is masked in this profile.
@@ -10,3 +10,6 @@ xfce-base/thunar gnome
 # Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
 # pam isn't for no-nptl profiles it seems
 >=gnome-base/gdm-2.18.4 pam
+
+# evolution is masked for this profile
+net-mail/lbdb evo
