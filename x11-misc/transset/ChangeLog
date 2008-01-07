@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/transset
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/ChangeLog,v 1.12 2007/09/08 21:07:09 josejx Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/ChangeLog,v 1.13 2008/01/07 22:47:22 omp Exp $
+
+  07 Jan 2008; David Shakaryan <omp@gentoo.org>
+  transset-0.1_pre20040821.ebuild:
+  Add missing dev-util/pkgconfig dependency. (bug #204592)
 
   08 Sep 2007; Joseph Jezak <josejx@gentoo.org>
   transset-0.1_pre20040821.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/transset-0.1_pre20040821.ebuild,v 1.11 2007/09/08 21:07:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/transset-0.1_pre20040821.ebuild,v 1.12 2008/01/07 22:47:22 omp Exp $
 
 IUSE=""
 
@@ -19,6 +19,7 @@ RDEPEND="!<=x11-base/xorg-x11-6.7.99.902
 	x11-libs/libXfixes
 	x11-libs/libXrender"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	x11-libs/libX11"
 
 src_compile() {
