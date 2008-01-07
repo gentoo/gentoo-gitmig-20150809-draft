@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3274 2008/01/07 00:19:54 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3275 2008/01/07 07:19:44 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1550,14 +1550,10 @@ net-misc/asterisk:bri - Enable ISDN BRI support (bristuff)
 net-misc/asterisk:genericjb - Enable experimental generic jitter buffer
 net-misc/asterisk:h323 - Build the H.323 channel driver bundled with Asterisk
 net-misc/asterisk:lowmem - Build Asterisk for environments with low amounts of memory (embedded devices)
-net-misc/asterisk:mysqlfriends - Enable MySQL friends support in chan_sip
 net-misc/asterisk:nosamples - Don't install sample sound and configuration files
 net-misc/asterisk:osp - Enable support for the Open Settlement Protocol
 net-misc/asterisk:pri - Enables pri support (>=asterisk-1.0.1)
-net-misc/asterisk:resperl - Enables support for embedded perl in extensions.conf
 net-misc/asterisk:ukcid - Enable UK callerid support
-net-misc/asterisk:vmdbmysql - Enable mysql db support in voicemail application
-net-misc/asterisk:vmdbpostgres - Enable postgres db support in voicemail application
 net-misc/asterisk:zaptel - Enables zaptel support (>=asterisk-1.0.1)
 net-misc/bird:client - Enables the BIRD client
 net-misc/bird:ipv6only - Builds with only IPv6, note that this *disables* IPv4 entirely
@@ -1618,7 +1614,6 @@ net-misc/xf4vnc:xvnc - Install the Xvnc binary
 net-misc/xsupplicant:gsm - Add support for EAP-SIM authentication algorithm
 net-misc/zaptel:astribank - Install Xorcom Astribank utilities
 net-misc/zaptel:bri - Enable ISDN BRI support (bristuff)
-net-misc/zaptel:devfs26 - Devfs support for Linux-2.6
 net-misc/zaptel:ecaggressive - Make the mark2 echo canceller a little more aggressive
 net-misc/zaptel:eckb1 - Use the KB1 echo canceller
 net-misc/zaptel:ecmark - Use the MARK echo canceller
