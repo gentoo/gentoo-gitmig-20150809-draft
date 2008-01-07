@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.3.ebuild,v 1.3 2007/12/22 11:02:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.3.ebuild,v 1.4 2008/01/07 05:37:34 tester Exp $
 
 inherit eutils qt3 linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/oprofile/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
 # IUSE: it also needs kernel sources but all gentoo users have them
 IUSE="qt3"
 DEPEND=">=dev-libs/popt-1.7-r1
