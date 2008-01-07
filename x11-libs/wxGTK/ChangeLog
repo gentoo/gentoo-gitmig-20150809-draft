@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.175 2008/01/06 22:47:55 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.176 2008/01/07 23:28:02 dirtyepic Exp $
+
+  07 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.8.7.1-r1.ebuild:
+  We no longer need to depend on gnome-vfs.
 
 *wxGTK-2.8.7.1-r1 (06 Jan 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1-r1.ebuild,v 1.1 2008/01/06 22:47:55 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1-r1.ebuild,v 1.2 2008/01/07 23:28:02 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -29,10 +29,7 @@ RDEPEND="
 		x11-libs/libSM
 		x11-libs/libXinerama
 		x11-libs/libXxf86vm
-		gnome?  (
-				gnome-base/libgnomeprintui
-				gnome-base/gnome-vfs
-				)
+		gnome?  ( gnome-base/libgnomeprintui )
 		gstreamer? ( >=media-libs/gstreamer-0.10 )
 		opengl? ( virtual/opengl )
 		)"
