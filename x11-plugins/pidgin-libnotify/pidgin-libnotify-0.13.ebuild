@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/pidgin-libnotify-0.13.ebuild,v 1.5 2007/08/28 14:51:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/pidgin-libnotify-0.13.ebuild,v 1.6 2008/01/07 04:35:15 tester Exp $
 
 DESCRIPTION="pidgin-libnotify provides popups for pidgin via a libnotify interface"
 HOMEPAGE="http://gaim-libnotify.sourceforge.net/"
@@ -11,9 +11,16 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc x86"
 IUSE="nls debug"
 
-DEPEND=">=x11-libs/libnotify-0.3.2"
+DEPEND=">=x11-libs/libnotify-0.3.2
+	net-im/pidgin
+	>=x11-libs/gtk+-2"
 
-RDEPEND="net-im/pidgin ${DEPEND}"
+pkg_setup() {
+	if ! built_with_use net-im/pidgin gtk; then
+		eerror "You need to compile net-im/pidgin with USE=gtk"
+		die "Missing gtk USE flag on net-im/pidgin"
+	fi
+}
 
 src_compile() {
 	local myconf
@@ -27,6 +34,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
+	make install DESTDIR="${D}" || die "make install failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO VERSION
 }
