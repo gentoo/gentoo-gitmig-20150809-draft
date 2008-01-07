@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r6.ebuild,v 1.6 2008/01/07 06:47:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r6.ebuild,v 1.7 2008/01/07 23:05:48 ulm Exp $
 
 inherit flag-o-matic ccc eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="BSD MIT RSA-MD4 RSA-MD5 BEER-WARE"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
@@ -108,6 +108,6 @@ pkg_postinst() {
 	# these permissions are applied by the skey system if missing.
 	chmod 0600 /etc/skey/skeykeys
 
-	elog "For an instroduction into using s/key authentication, take"
+	elog "For an introduction into using s/key authentication, take"
 	elog "a look at the EXAMPLES section from the skey(1) manpage."
 }

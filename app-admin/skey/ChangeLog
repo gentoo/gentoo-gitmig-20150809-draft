@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/skey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.53 2008/01/07 06:47:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.54 2008/01/07 23:05:48 ulm Exp $
+
+  07 Jan 2008; Ulrich Mueller <ulm@gentoo.org> skey-1.1.5-r6.ebuild:
+  Stable on amd64, bug #204653.
 
   07 Jan 2008; Joseph Jezak <josejx@gentoo.org> skey-1.1.5-r6.ebuild:
   Marked ppc/ppc64 stable for bug #204653.
