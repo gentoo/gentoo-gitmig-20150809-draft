@@ -1,3 +1,7 @@
+# Jeroen Roovers <jer@gentoo.org> (4 Jan 2008)
+# Bug 179895: HPPA's gcc cannot build native code / lacking upstream support
+ocamlopt
+
 # 2007/05/17 Jeroen Roovers <jer@gentoo.org>
 # sys-devel/gcc fails to build with USE=d (bug #178896).
 d
