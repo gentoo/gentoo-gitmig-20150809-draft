@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/pidgin-otr-3.0.0.ebuild,v 1.8 2008/01/07 04:32:33 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/pidgin-otr-3.0.0.ebuild,v 1.9 2008/01/07 04:46:10 tester Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -16,9 +16,12 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND=">=net-libs/libotr-3.0.0
+RDEPEND=">=net-libs/libotr-3.0.0
 	>=x11-libs/gtk+-2
 	net-im/pidgin"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}"/${MY_P}
 
