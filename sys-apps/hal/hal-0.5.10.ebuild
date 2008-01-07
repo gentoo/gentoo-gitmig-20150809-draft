@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.6 2008/01/05 21:45:18 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.10.ebuild,v 1.7 2008/01/07 02:28:17 compnerd Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -291,4 +291,10 @@ pkg_postinst() {
 	elog "IF you have additional applications which consume ACPI events, you"
 	elog "should consider installing acpid to allow applications to share ACPI"
 	elog "events."
+
+	elog "If you wish to use a non US layout, you may do so by executing:"
+	elog "setxkbmap <layout> or by utilizing your Desktop Environment's"
+	elog "Keyboard Layout Settings mechanism."
+	elog "Under GNOME, this is gnome-keyboard-properties, and under KDE"
+	elog "it is kxkb."
 }
