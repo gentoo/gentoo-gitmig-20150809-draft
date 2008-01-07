@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.10.ebuild,v 1.1 2008/01/05 17:41:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.8-r1.ebuild,v 1.4 2008/01/07 03:19:54 beandog Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Library for Bible reading software."
 HOMEPAGE="http://www.crosswire.org/sword/"
@@ -8,39 +10,28 @@ SRC_URI="http://www.crosswire.org/ftpmirror/pub/sword/source/v1.5/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="curl debug doc icu lucene"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="curl icu debug"
 
-RDEPEND="sys-libs/zlib
+DEPEND="sys-libs/zlib
 	curl? ( net-misc/curl )
 	icu? ( dev-libs/icu )
-	lucene? ( dev-cpp/clucene )"
-
-DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-	econf --with-zlib \
-		--with-conf \
-		$(use_enable curl) \
-		$(use_enable debug) \
-		$(use_with icu) \
-		$(use_enable lucene) || die "configure failed"
+	strip-flags	
+	local myconf="--without-lucene --with-zlib --with-conf
+	              $(use_enable debug) $(use_with curl)"
+
+	econf ${myconf} || die "configure failed"
 	emake || die "make failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS CODINGSTYLE ChangeLog INSTALL README
-	if use doc ;then
-		rm -rf examples/.cvsignore
-		rm -rf examples/cmdline/.cvsignore
-		rm -rf examples/cmdline/.deps
-		cp -R samples examples ${D}/usr/share/doc/${PF}/
-	fi
-	# global configuration file
-	insinto /etc
-	doins "${FILESDIR}/sword.conf"
+
+	cp -R samples examples "${D}/usr/share/doc/${PF}/"
 }
 
 pkg_postinst() {

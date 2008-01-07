@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.9.ebuild,v 1.4 2007/03/10 21:06:57 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.10-r1.ebuild,v 1.1 2008/01/07 03:19:54 beandog Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Library for Bible reading software."
 HOMEPAGE="http://www.crosswire.org/sword/"
@@ -11,15 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="curl debug doc icu lucene"
 
-RDEPEND="sys-libs/zlib
+DEPEND="sys-libs/zlib
 	curl? ( net-misc/curl )
 	icu? ( dev-libs/icu )
-	lucene? ( dev-cpp/clucene )"
-
-DEPEND="${RDEPEND}
+	lucene? ( dev-cpp/clucene )
 	dev-util/pkgconfig"
 
 src_compile() {
+	strip-flags
 	econf --with-zlib \
 		--with-conf \
 		$(use_enable curl) \
@@ -36,7 +37,7 @@ src_install() {
 		rm -rf examples/.cvsignore
 		rm -rf examples/cmdline/.cvsignore
 		rm -rf examples/cmdline/.deps
-		cp -R samples examples ${D}/usr/share/doc/${PF}/
+		cp -R samples examples "${D}/usr/share/doc/${PF}/"
 	fi
 	# global configuration file
 	insinto /etc
