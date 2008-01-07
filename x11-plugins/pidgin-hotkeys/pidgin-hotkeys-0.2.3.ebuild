@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/pidgin-hotkeys-0.2.3.ebuild,v 1.8 2007/10/26 11:45:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/pidgin-hotkeys-0.2.3.ebuild,v 1.9 2008/01/07 05:05:31 tester Exp $
 
 DESCRIPTION="pidgin-hotkeys is a Pidgin plugin that allows you to define global hotkeys for various actions such as toggling buddy list, fetching queued messages, opening preferences or account dialog."
 
@@ -13,7 +13,18 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc x86"
 IUSE=""
 
-DEPEND="net-im/pidgin"
+RDEPEND="net-im/pidgin
+	>=x11-libs/gtk+-2"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
+
+pkg_setup() {
+	if ! built_with_use net-im/pidgin gtk; then
+		eerror "You need to compile net-im/pidgin with USE=gtk"
+		die "Missing gtk USE flag on net-im/pidgin"
+	fi
+}
 
 src_compile() {
 	econf || die "econf failed"

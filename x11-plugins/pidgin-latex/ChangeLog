@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-latex
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/ChangeLog,v 1.4 2007/08/28 16:19:13 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/ChangeLog,v 1.5 2008/01/07 05:00:37 tester Exp $
+
+  07 Jan 2008; <tester@gentoo.org> pidgin-latex-1.0.ebuild:
+  Add dep on gtk (and check that pidgin has it too)
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> pidgin-latex-1.0.ebuild:
   Stable on ppc wrt bug 189781

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/pidgin-latex-1.0.ebuild,v 1.5 2007/08/28 16:19:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/pidgin-latex-1.0.ebuild,v 1.6 2008/01/07 05:00:37 tester Exp $
 
 inherit flag-o-matic multilib
 
@@ -13,11 +13,20 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="net-im/pidgin"
-RDEPEND="virtual/tetex
-		media-gfx/imagemagick"
+DEPEND="net-im/pidgin
+	>=x11-libs/gtk+-2"
+RDEPEND="${DEPEND}
+	virtual/tetex
+	media-gfx/imagemagick"
 
 S=${WORKDIR}/${PN}
+
+pkg_setup() {
+	if ! built_with_use net-im/pidgin gtk; then
+		eerror "You need to compile net-im/pidgin with USE=gtk"
+		die "Missing gtk USE flag on net-im/pidgin"
+	fi
+}
 
 src_compile()
 {
@@ -27,7 +36,7 @@ src_compile()
 
 src_install()
 {
-	make LIB_INSTALL_DIR="${D}/usr/$(get_libdir)/pidgin" install PREFIX=${D}/usr \
+	make LIB_INSTALL_DIR="${D}/usr/$(get_libdir)/pidgin" install PREFIX="${D}/usr" \
 	|| die "make install failed"
-	dodoc README CHANGELOG COPYING TODO
+	dodoc README CHANGELOG TODO
 }
