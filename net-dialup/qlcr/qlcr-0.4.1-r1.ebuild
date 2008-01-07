@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.9 2007/07/18 08:00:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1-r1.ebuild,v 1.1 2008/01/07 14:22:28 mrness Exp $
 
 inherit eutils kde-functions
 
@@ -17,6 +17,17 @@ DEPEND="$(qt_min_version 3.3)
 	>=net-dialup/wvdial-1.54.0
 	net-misc/ntp
 	net-misc/wget"
+RDEPEND="${DEPEND}"
+
+src_unpack() { 
+	unpack ${A}
+
+	cd "${S}"
+	# use a different provider file since the original one is no longer available
+	epatch "${FILESDIR}/${P}-providerfileurl.patch"
+	# reduce font size to 8 pts
+	sed --in-place "s:<pointsize>9:<pointsize>8:" ${S}/src/lcr.ui || die "sed failed"
+}
 
 src_compile() {
 	cd src
@@ -25,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin bin/qlcr
+	dobin src/qlcr
 
 	domenu qlcr.desktop
 	doicon qlcr.png
