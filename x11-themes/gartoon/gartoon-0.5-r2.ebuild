@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/gartoon-0.5-r2.ebuild,v 1.4 2007/06/30 09:29:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/gartoon-0.5-r2.ebuild,v 1.5 2008/01/07 10:39:17 nelchael Exp $
 
 DESCRIPTION="Gartoon SVG icon theme"
 SRC_URI="http://zeus.qballcow.nl/icon/paket/${P}.tar.gz"
@@ -24,7 +24,7 @@ src_unpack() {
 
 src_install() {
 	insinto ${MY_DEST}
-	doins gartoon-pallete.svg index.theme scalable/stock/iconrc
+	doins index.theme scalable/stock/iconrc
 
 	dodoc AUTHORS README scalable/stock/changelog_mula.txt
 
