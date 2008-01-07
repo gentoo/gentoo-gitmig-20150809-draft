@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/shorturl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.1 2007/12/17 22:08:19 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.2 2008/01/07 21:58:23 flameeyes Exp $
+
+*shorturl-0.8.4 (07 Jan 2008)
+
+  07 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> +shorturl-0.8.4.ebuild:
+  Version bump.
 
 *shorturl-0.8.3 (17 Dec 2007)
 
