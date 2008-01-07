@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdmtheme
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmtheme/ChangeLog,v 1.9 2008/01/06 22:08:54 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmtheme/ChangeLog,v 1.10 2008/01/07 07:22:47 josejx Exp $
+
+  07 Jan 2008; Joseph Jezak <josejx@gentoo.org> kdmtheme-1.2.2.ebuild:
+  Marked ppc stable for bug #204108.
 
   06 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   kdmtheme-1.2.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmtheme/kdmtheme-1.2.2.ebuild,v 1.2 2008/01/06 22:08:54 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmtheme/kdmtheme-1.2.2.ebuild,v 1.3 2008/01/07 07:22:47 josejx Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://beta.smileaf.org/files/kdmtheme/${P}.tar.bz2
 		mirror://gentoo/kde-admindir-3.5.5.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 
 IUSE=""
 SLOT="0"
