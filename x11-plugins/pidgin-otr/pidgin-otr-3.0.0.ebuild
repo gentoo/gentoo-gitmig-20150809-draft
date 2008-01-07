@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/pidgin-otr-3.0.0.ebuild,v 1.6 2007/08/28 16:29:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/pidgin-otr-3.0.0.ebuild,v 1.7 2008/01/07 04:27:26 tester Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -17,9 +17,18 @@ KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND=">=net-libs/libotr-3.0.0
+	>=x11-libs/gtk+-2
 	net-im/pidgin"
 
 S="${WORKDIR}"/${MY_P}
+
+pkg_setup() {
+		if ! built_with_use net-im/pidgin gtk; then
+				eerror "You need to compile net-im/pidgin with USE=gtk"
+				die "Missing gtk USE flag on net-im/pidgin"
+		fi
+}
+
 
 src_unpack() {
 	unpack ${A}
@@ -40,5 +49,5 @@ src_compile() {
 
 src_install() {
 	emake -j1 install DESTDIR="${D}" || die "Install failed"
-	dodoc COPYING ChangeLog README
+	dodoc ChangeLog README
 }
