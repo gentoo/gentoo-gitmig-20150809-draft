@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/imwheel
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/ChangeLog,v 1.20 2007/07/22 03:15:45 coldwind Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/ChangeLog,v 1.21 2008/01/07 10:49:35 nelchael Exp $
+
+  07 Jan 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  imwheel-1.0.0_pre12.ebuild:
+  Add missing x11-proto/inputproto to DEPEND, see bug #204597.
 
   22 Jul 2007; Santiago M. Mola <coldwind@gentoo.org>
   imwheel-1.0.0_pre12.ebuild:

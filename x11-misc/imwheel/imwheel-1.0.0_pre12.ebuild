@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/imwheel-1.0.0_pre12.ebuild,v 1.7 2007/07/22 03:15:45 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/imwheel-1.0.0_pre12.ebuild,v 1.8 2008/01/07 10:49:35 nelchael Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ RDEPEND="x11-libs/libXtst
 	x11-libs/libXext"
 
 DEPEND="${RDEPEND}
+	x11-proto/inputproto
 	x11-proto/xextproto
 	x11-proto/xproto
 	>=sys-apps/sed-4"
