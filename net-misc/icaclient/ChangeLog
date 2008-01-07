@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/icaclient
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.39 2007/11/14 14:59:36 beandog Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.40 2008/01/07 10:54:04 opfer Exp $
+
+*icaclient-10.6-r1 (07 Jan 2008)
+
+  07 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  icaclient-10.6.ebuild, +icaclient-10.6-r1.ebuild:
+  revision bump to cooperate with openmotif 2.3 and higher, DEPEND adjusted,
+  creation of symlink and blocking of openmotif 2.2
 
   14 Nov 2007; Steve Dibb <beandog@gentoo.org> icaclient-10.6.ebuild:
   amd64 stable, bug 195588
