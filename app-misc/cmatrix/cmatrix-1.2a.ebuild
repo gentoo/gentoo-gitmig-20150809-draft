@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a.ebuild,v 1.21 2007/07/22 09:55:59 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a.ebuild,v 1.22 2008/01/07 17:07:25 jer Exp $
 
 WANT_AUTOMAKE="latest"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.asty.org/${PN}/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="alpha amd64 ~hppa ppc sparc x86"
 IUSE="X"
 
 DEPEND="X? ( x11-apps/mkfontdir )
@@ -23,8 +23,8 @@ src_unpack() {
 
 	# patch Makefile.am to make sure the fonts installations don't violate the
 	# sandbox.
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 	eautomake || die 'automake failed'
 }
 
@@ -35,19 +35,19 @@ src_install() {
 		dodir /usr/lib/X11/fonts/misc || die 'dodir failed'
 		dodir /usr/X11R6/lib/X11/fonts/misc || die 'dodir failed'
 	fi
-	emake DESTDIR=${D} install || die 'emake install failed'
+	emake DESTDIR="${D}" install || die 'emake install failed'
 }
 
 pkg_postinst() {
 	if use X ; then
-		if [ -d ${ROOT}/usr/lib/X11/fonts/misc ] ; then
+		if [ -d "${ROOT}"/usr/lib/X11/fonts/misc ] ; then
 			einfo ">>> Running mkfontdir on ${ROOT}/usr/lib/X11/fonts/misc"
-			mkfontdir ${ROOT}/usr/lib/X11/fonts/misc || die 'mkfontdir failed'
+			mkfontdir "${ROOT}"/usr/lib/X11/fonts/misc || die 'mkfontdir failed'
 		fi
 
-		if [ -d ${ROOT}/usr/X11R6/lib/X11/fonts/misc ] ; then
+		if [ -d "${ROOT}"/usr/X11R6/lib/X11/fonts/misc ] ; then
 			einfo ">>> Running mkfontdir on ${ROOT}/usr/X11R6/lib/X11/fonts/misc"
-			mkfontdir ${ROOT}/usr/X11R6/lib/X11/fonts/misc || die 'mkfontdir failed'
+			mkfontdir "${ROOT}"/usr/X11R6/lib/X11/fonts/misc || die 'mkfontdir failed'
 		fi
 	fi
 }

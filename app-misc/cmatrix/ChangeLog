@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cmatrix
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/ChangeLog,v 1.17 2007/07/22 09:55:59 omp Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/ChangeLog,v 1.18 2008/01/07 17:07:25 jer Exp $
+
+  07 Jan 2008; Jeroen Roovers <jer@gentoo.org> cmatrix-1.2a.ebuild:
+  Marked ~hppa (LuckyLuke in #gentoo-hppa).
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> cmatrix-1.2a.ebuild:
   Remove virtual/x11 from dependencies.
