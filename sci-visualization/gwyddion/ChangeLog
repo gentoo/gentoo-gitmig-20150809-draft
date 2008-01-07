@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gwyddion
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.9 2007/06/11 08:37:42 cryos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.10 2008/01/07 12:00:43 markusle Exp $
+
+  07 Jan 2008; Markus Dittrich <markusle@gentoo.org> gwyddion-2.5.ebuild:
+  Added pkconfig dependency (fixes bug #204722).
 
   11 Jun 2007; Marcus D. Hanwell <cryos@gentoo.org> -gwyddion-2.2.ebuild,
   gwyddion-2.5.ebuild:
