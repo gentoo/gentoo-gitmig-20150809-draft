@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.21.ebuild,v 1.3 2007/08/07 10:08:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.21.ebuild,v 1.4 2008/01/07 03:49:05 omp Exp $
 
 inherit eutils flag-o-matic
 
@@ -144,6 +144,8 @@ src_install() {
 
 	exeinto /etc/X11/Sessions
 	doexe fvwm2
+
+	wm=fvwm2 make_session_desktop FVWM fvwm2
 
 	dodoc AUTHORS ChangeLog COPYING README NEWS docs/ANNOUNCE docs/BUGS \
 	docs/COMMANDS docs/DEVELOPERS docs/FAQ docs/error_codes docs/TODO \
