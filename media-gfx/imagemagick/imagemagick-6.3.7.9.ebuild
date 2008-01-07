@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.7.9.ebuild,v 1.1 2008/01/05 18:07:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.7.9.ebuild,v 1.2 2008/01/07 23:10:54 maekke Exp $
 
 inherit eutils multilib perl-app
 
@@ -52,6 +52,13 @@ DEPEND="${RDEPEND}
 	X? ( x11-proto/xextproto )"
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	if use djvu && ! built_with_use app-text/djvu threads; then
+		eerror "app-text/djvu has to be built with threads support."
+		die "build app-text/djvu with USE=\"threads\""
+	fi
+}
 
 src_compile() {
 	local quantum
