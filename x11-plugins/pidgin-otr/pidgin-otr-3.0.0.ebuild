@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/pidgin-otr-3.0.0.ebuild,v 1.9 2008/01/07 04:46:10 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/pidgin-otr-3.0.0.ebuild,v 1.10 2008/01/07 06:28:41 mr_bones_ Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -31,7 +31,6 @@ pkg_setup() {
 		die "Missing gtk USE flag on net-im/pidgin"
 	fi
 }
-
 
 src_unpack() {
 	unpack ${A}
