@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1-r1.ebuild,v 1.1 2008/01/07 07:26:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1-r1.ebuild,v 1.2 2008/01/07 08:12:25 opfer Exp $
 
 inherit linux-info
 
@@ -46,6 +46,7 @@ src_install() {
 	emake PREFIX="/usr" DESTDIR="${D}" install || die "emake install failed"
 	dodoc README TODO VERSION
 	keepdir /var/run/vpnc
+	keepdir /etc/vpnc/scripts.d
 	newinitd "${FILESDIR}/vpnc-2.init" vpnc
 	newconfd "${FILESDIR}/vpnc.confd" vpnc
 }
