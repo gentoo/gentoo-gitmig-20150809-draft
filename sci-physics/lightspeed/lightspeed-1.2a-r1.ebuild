@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.1 2008/01/06 18:18:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.2 2008/01/07 06:28:18 mr_bones_ Exp $
 
 inherit eutils
 
@@ -20,7 +20,6 @@ LANGS="es"
 for i in ${LANGS}; do
 	IUSE="${IUSE} linguas_${i}"
 done
-
 
 DEPEND="virtual/opengl
 	x11-libs/gtkglext
