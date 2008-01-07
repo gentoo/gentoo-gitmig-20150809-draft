@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xsensors
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.20 2008/01/07 04:00:32 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.21 2008/01/07 04:06:28 omp Exp $
+
+  07 Feb 2008; David Shakaryan <omp@gentoo.org> xsensors-0.47.ebuild,
+  xsensors-0.60.ebuild:
+  Add dev-util/pkgconfig to DEPEND. (bug #204582)
 
   07 Jan 2008; David Shakaryan <omp@gentoo.org> -xsensors-0.50.ebuild:
   Remove older version.
