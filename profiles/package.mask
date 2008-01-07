@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8096 2008/01/07 18:24:07 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8097 2008/01/07 18:47:27 voyageur Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -301,14 +301,6 @@ gnome-extra/gal
 # P.mask snapshots
 =dev-libs/nspr-4.7.0_pre*
 =dev-libs/nss-3.12_alpha*
-
-# Bernard Cafarelli <voyageur@gentoo.org> (08 Dec 2007)
-# Masked for removal in 30 days
-# Used in old and deprecated gnustep eclass
-# (all gnustep ebuilds now use gnustep-2 eclass)
-gnustep-base/gnustep-env
-# Integrated in gnustep-base/gnustep-back-art
-gnustep-libs/artresources
 
 # Olivier Crete <tester@gentoo.org> (08 Dec 2007)
 # Remove gaim and its plugins (now its called pidgin)
