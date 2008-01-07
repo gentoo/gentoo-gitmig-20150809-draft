@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40-r1.ebuild,v 1.11 2006/04/04 10:21:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40-r7.ebuild,v 1.1 2008/01/07 20:53:27 truedfx Exp $
 
 inherit eutils
 
@@ -11,8 +11,9 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
+
 DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}
 	dev-lang/perl"
@@ -21,6 +22,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-useorder.patch
+	epatch "${FILESDIR}"/${P}-source.patch
+	epatch "${FILESDIR}"/${P}-comments.patch
+	epatch "${FILESDIR}"/${P}-masked.patch
+	epatch "${FILESDIR}"/${P}-packageusemask.patch
+	epatch "${FILESDIR}"/${P}-noremove.patch
 }
 
 src_compile() {
@@ -29,10 +35,10 @@ src_compile() {
 }
 
 src_install() {
-	newsbin ufed.pl ufed
+	newsbin ufed.pl ufed || die
 	doman ufed.8
 	insinto /usr/lib/ufed
-	doins *.pm
+	doins *.pm || die
 	exeinto /usr/lib/ufed
-	doexe ufed-curses
+	doexe ufed-curses || die
 }
