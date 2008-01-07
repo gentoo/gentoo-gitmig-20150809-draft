@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.41 2008/01/06 00:49:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.42 2008/01/07 22:01:05 pva Exp $
+
+  07 Jan 2008; <pva@gentoo.org> gimp-help-2.4.0.ebuild:
+  Fixed parallel build issue, bug #204794. Thank you Gunnar Steiniger
+  <stonie81 AT gmx.de> for report.
 
 *gimp-help-2.4.0 (06 Jan 2008)
 
