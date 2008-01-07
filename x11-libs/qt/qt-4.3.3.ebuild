@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.3.ebuild,v 1.2 2008/01/05 18:02:58 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.3.ebuild,v 1.3 2008/01/07 13:25:54 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -58,7 +58,7 @@ pkg_setup() {
 	QTLIBDIR=/usr/$(get_libdir)/qt4
 	QTPCDIR=/usr/$(get_libdir)/pkgconfig
 	QTDATADIR=/usr/share/qt4
-	QTDOCDIR=/usr/share/doc/${PV}
+	QTDOCDIR=/usr/share/doc/${P}
 	QTHEADERDIR=/usr/include/qt4
 	QTPLUGINDIR=${QTLIBDIR}/plugins
 	QTSYSCONFDIR=/etc/qt4
