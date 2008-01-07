@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.0_p20080102.ebuild,v 1.1 2008/01/07 01:33:34 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.0_beta20080102.ebuild,v 1.1 2008/01/07 19:26:59 lavajoe Exp $
 
 inherit eutils
 
-MY_PV="${PV:5:4}-${PV:9:2}-${PV:11:2}"
+MY_PV="${PV:8:4}-${PV:12:2}-${PV:14:2}"
 MY_P="SqueezeCenter_trunk_v${MY_PV}"
 
 DESCRIPTION="Logitech SqueezeCenter music server"
