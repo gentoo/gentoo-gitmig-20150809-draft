@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/domino
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/domino/ChangeLog,v 1.5 2008/01/06 23:51:00 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/domino/ChangeLog,v 1.6 2008/01/07 08:37:35 opfer Exp $
+
+  07 Jan 2008; Christian Faulhammer <opfer@gentoo.org> domino-0.4.ebuild:
+  stable x86, bug 203224
 
   06 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> domino-0.4.ebuild:
   Marked stable on amd64 as per bug 203224.
