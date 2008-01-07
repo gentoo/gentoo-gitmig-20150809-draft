@@ -1,13 +1,13 @@
 # ChangeLog for x11-misc/accessx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.22 2008/01/07 17:19:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.23 2008/01/07 17:20:41 drac Exp $
 
 *accessx-0951-r1 (07 Jan 2008)
 
   07 Jan 2008; Samuli Suominen <drac@gentoo.org>
   +files/accessx-0951-build.patch, +accessx-0951-r1.ebuild:
   Fix building with a patchset from FreeBSD and keyword ~amd64 wrt #196764,
-  thanks to Martic Berkemeier for reporting. Also respect correct CXX and
+  thanks to Martin Berkemeier for reporting. Also respect correct CXX and
   CXXFLAGS targets and sanitize ebuild.
 
   22 Jul 2007; Santiago M. Mola <coldwind@gentoo.org> accessx-0951.ebuild:
