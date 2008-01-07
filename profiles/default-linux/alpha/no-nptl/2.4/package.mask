@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.42 2007/12/16 23:54:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.43 2008/01/07 07:30:38 mr_bones_ Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (11 Dec 2007)
 # Needs 2.6 headers
@@ -44,6 +44,7 @@ xfce-extra/xfce4-volstatus-icon
 # Hanno Boeck <hanno@gentoo.org> (28 Apr 2007)
 # Requires pygtk-2.10
 >=media-gfx/gimp-2.3.16
+>=app-doc/gimp-help-2.4.0
 
 # Robin H. Johnson <robbat2@gentoo.org> (27 Apr 2007)
 # Requires 2.6 headers
