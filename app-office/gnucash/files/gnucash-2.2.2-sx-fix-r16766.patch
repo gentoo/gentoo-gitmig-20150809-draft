@@ -1,0 +1,19 @@
+http://svn.gnucash.org/trac/changeset/16766
+Index: /gnucash/trunk/src/app-utils/gnc-sx-instance-model.c
+===================================================================
+--- /gnucash/trunk/src/app-utils/gnc-sx-instance-model.c (revision 16670)
++++ /gnucash/trunk/src/app-utils/gnc-sx-instance-model.c (revision 16766)
+@@ -262,5 +262,5 @@
+ {
+     Account *template_root, *sx_template_acct;
+-    char sx_guid_str[GUID_ENCODING_LENGTH];
++    char sx_guid_str[GUID_ENCODING_LENGTH+1];
+ 
+     template_root = gnc_book_get_template_root(gnc_get_current_book());
+@@ -924,5 +924,5 @@
+     if (*split_acct == NULL)
+     {
+-        char guid_str[GUID_ENCODING_LENGTH];
++        char guid_str[GUID_ENCODING_LENGTH+1];
+         GString *err;
+         guid_to_string_buff((const GUID*)acct_guid, guid_str);

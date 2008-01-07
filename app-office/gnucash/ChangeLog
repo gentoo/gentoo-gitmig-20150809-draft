@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gnucash
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.145 2007/12/20 15:20:13 tove Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.146 2008/01/07 08:39:19 tove Exp $
+
+*gnucash-2.2.2-r1 (07 Jan 2008)
+
+  07 Jan 2008; Torsten Veller <tove@gentoo.org>
+  +files/gnucash-2.2.2-goffice.patch,
+  +files/gnucash-2.2.2-sx-fix-r16766.patch, +gnucash-2.2.2-r1.ebuild:
+  Fix for goffice-0.6 (#203979) and SX crashes (#204473).
 
   20 Dec 2007; Torsten Veller <tove@gentoo.org> gnucash-2.2.2.ebuild:
   Add goffice dependency again (#202862)
@@ -25,7 +32,7 @@
   Hopefully fixes bug #196417. Also #158013 and #174967.
   Documentation is now a separate package (app-doc/gnucash-docs).
 
-  19 Oct 2007; <jeff@gentoo.org> gnucash-2.2.0.ebuild, gnucash-2.2.1.ebuild:
+  19 Oct 2007; <je_fro@gentoo.org> gnucash-2.2.0.ebuild, gnucash-2.2.1.ebuild:
   Changed goffice dependency as per bug #191555. Big Thanks(tm) to rbridge.
 
 *gnucash-2.2.1 (09 Sep 2007)
