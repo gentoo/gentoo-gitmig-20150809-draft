@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/pidgin-libnotify-0.13.ebuild,v 1.6 2008/01/07 04:35:15 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/pidgin-libnotify-0.13.ebuild,v 1.7 2008/01/07 04:42:21 tester Exp $
 
 DESCRIPTION="pidgin-libnotify provides popups for pidgin via a libnotify interface"
 HOMEPAGE="http://gaim-libnotify.sourceforge.net/"
@@ -11,9 +11,12 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc x86"
 IUSE="nls debug"
 
-DEPEND=">=x11-libs/libnotify-0.3.2
+RDEPEND=">=x11-libs/libnotify-0.3.2
 	net-im/pidgin
 	>=x11-libs/gtk+-2"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	if ! built_with_use net-im/pidgin gtk; then
