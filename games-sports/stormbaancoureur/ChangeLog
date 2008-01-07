@@ -1,6 +1,12 @@
 # ChangeLog for games-sports/stormbaancoureur
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/ChangeLog,v 1.4 2007/12/29 03:36:08 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/ChangeLog,v 1.5 2008/01/07 02:43:35 mr_bones_ Exp $
+
+*stormbaancoureur-2.0.1 (07 Jan 2008)
+
+  07 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  -stormbaancoureur-2.0.0.ebuild, +stormbaancoureur-2.0.1.ebuild:
+  version bump (bug #204642)
 
 *stormbaancoureur-2.0.0 (29 Dec 2007)
 
