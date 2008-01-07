@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/guifications-2.14.ebuild,v 1.7 2007/12/08 16:33:47 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/guifications-2.14.ebuild,v 1.8 2008/01/07 05:14:09 tester Exp $
 
 MY_PN=pidgin-${PN}
 MY_PV=${PV/_beta/beta}
@@ -15,7 +15,18 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="debug nls"
 
-DEPEND="net-im/pidgin"
+RDEPEND="net-im/pidgin
+	>=x11-libs/gtk+-2"
+
+DEPEND="${DEPEND}
+	dev-util/pkgconfig"
+
+pkg_setup() {
+	if ! built_with_use net-im/pidgin gtk; then
+		eerror "You need to compile net-im/pidgin with USE=gtk"
+		die "Missing gtk USE flag on net-im/pidgin"
+	fi
+}
 
 src_compile() {
 	econf \

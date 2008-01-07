@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/guifications
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.52 2008/01/03 19:31:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.53 2008/01/07 05:14:09 tester Exp $
+
+  07 Jan 2008; <tester@gentoo.org> guifications-2.14.ebuild,
+  guifications-2.16.ebuild:
+  Add dep on gtk (and check that pidgin has it too)
 
 *guifications-2.16 (03 Jan 2008)
 
