@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/cherrypy
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.23 2007/11/01 19:25:42 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.24 2008/01/08 13:59:35 hawking Exp $
+
+*cherrypy-3.0.2-r1 (08 Jan 2008)
+
+  08 Jan 2008; Ali Polatel <hawking@gentoo.org>
+  +files/cherrypy-3.0.2-invalidsession.patch, +cherrypy-3.0.2-r1.ebuild:
+  Revision bump. Added patch from upstream for directory traversal via
+  malicious cookie, bug 204829
 
   01 Nov 2007; Markus Ullmann <jokey@gentoo.org> cherrypy-3.0.2.ebuild:
   Stable on x86
