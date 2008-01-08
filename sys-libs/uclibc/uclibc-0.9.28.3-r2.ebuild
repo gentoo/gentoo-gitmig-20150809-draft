@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3-r2.ebuild,v 1.1 2008/01/01 23:28:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3-r2.ebuild,v 1.2 2008/01/08 07:32:43 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -69,7 +69,7 @@ uclibc_endian() {
 	# XXX: this wont work for a toolchain which is bi-endian, but we
 	#      dont have any such thing at the moment, so not a big deal
 	touch "${T}"/endian.s
-	$(tc-getAS) "${T}"/endian.s -o "${T}"/endian.o
+	$(tc-getAS ${CTARGET}) "${T}"/endian.s -o "${T}"/endian.o
 	case $(file "${T}"/endian.o) in
 		*" MSB "*) echo "big";;
 		*" LSB "*) echo "little";;
