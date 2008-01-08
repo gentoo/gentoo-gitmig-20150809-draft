@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pgcalc2/pgcalc2-2.2.6.ebuild,v 1.1 2007/09/15 11:20:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pgcalc2/pgcalc2-2.2.6.ebuild,v 1.2 2008/01/08 15:18:13 bicatali Exp $
 
 inherit versionator kde
 
@@ -16,7 +16,9 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc ~x86"
 IUSE="doc"
 
-S=${WORKDIR}/${MY_P}
+need-kde 3
+
+S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
