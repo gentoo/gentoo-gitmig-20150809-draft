@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/accessx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.23 2008/01/07 17:20:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.24 2008/01/08 13:10:55 maekke Exp $
+
+  08 Jan 2008; Markus Meier <maekke@gentoo.org> accessx-0951-r1.ebuild:
+  x86 stable, bug #204779
 
 *accessx-0951-r1 (07 Jan 2008)
 
