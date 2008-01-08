@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/files/charybdis-ircd.initd,v 1.1 2006/03/07 02:50:56 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/files/charybdis-ircd.initd,v 1.2 2008/01/08 21:17:02 jokey Exp $
 
 depend() {
 	use net
@@ -10,7 +10,7 @@ depend() {
 
 start() {
 	ebegin "Starting ircd-charybdis"
-	start-stop-daemon --start --quiet --chuid ${CHARYBDIS_USER} --exec /usr/bin/ircd-charybdis >/dev/null
+	start-stop-daemon --start --quiet --chuid ${CHARYBDIS_USER} --exec /usr/bin/ircd >/dev/null
 	eend $?
 }
 

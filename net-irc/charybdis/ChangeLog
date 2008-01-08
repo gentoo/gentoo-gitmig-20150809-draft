@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/charybdis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.8 2008/01/08 14:24:09 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.9 2008/01/08 21:17:01 jokey Exp $
+
+  08 Jan 2008; Markus Ullmann <jokey@gentoo.org> files/charybdis-ircd.initd,
+  charybdis-2.1.5.ebuild, charybdis-2.2.0.ebuild,
+  charybdis-2.2.1_pre20080108.ebuild:
+  Install init script as well
 
   08 Jan 2008; Markus Ullmann <jokey@gentoo.org> charybdis-2.2.0.ebuild,
   charybdis-2.2.1_pre20080108.ebuild:
