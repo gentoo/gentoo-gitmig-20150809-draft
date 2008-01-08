@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.0.2-r1.ebuild,v 1.1 2008/01/08 13:59:35 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.0.2-r1.ebuild,v 1.2 2008/01/08 17:16:21 armin76 Exp $
 
 inherit eutils distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.cherrypy.org/cherrypy/${PV}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.cherrypy.org/"
 IUSE="doc"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ia64 ~ppc x86"
 LICENSE="BSD"
 
 DEPEND=""
