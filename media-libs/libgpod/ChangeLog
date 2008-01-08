@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgpod
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.45 2007/12/25 13:24:18 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.46 2008/01/08 15:18:16 armin76 Exp $
+
+  08 Jan 2008; Raúl Porcel <armin76@gentoo.org> libgpod-0.5.2.ebuild:
+  sparc stable
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing joem from metadata.xml as per #69387.
