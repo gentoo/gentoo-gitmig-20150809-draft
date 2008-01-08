@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/kobodeluxe
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.22 2007/11/30 19:23:08 tupone Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.23 2008/01/08 07:46:46 mr_bones_ Exp $
+
+*kobodeluxe-0.5.1 (08 Jan 2008)
+
+  08 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +kobodeluxe-0.5.1.ebuild:
+  version bump (bug #204551)
 
 *kobodeluxe-0.4.1 (30 Nov 2007)
 
