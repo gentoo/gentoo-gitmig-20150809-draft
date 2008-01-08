@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/anthy
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.109 2007/11/22 16:23:22 matsuu Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.110 2008/01/08 01:54:10 ranger Exp $
+
+  08 Jan 2008; Brent Baude <ranger@gentoo.org> anthy-9100d.ebuild:
+  Marking anthy-9100d ppc for bug 204758
 
 *anthy-9100d (22 Nov 2007)
 
