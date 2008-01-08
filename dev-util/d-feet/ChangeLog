@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/d-feet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.3 2008/01/06 02:58:40 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.4 2008/01/08 19:58:56 cardoe Exp $
+
+*d-feet-0.1.8 (08 Jan 2008)
+
+  08 Jan 2008; Doug Klima <cardoe@gentoo.org> +d-feet-0.1.8.ebuild:
+  add new version
 
   06 Jan 2008; <steev@gentoo.org> d-feet-0.1.6.ebuild:
   Remove the unnecessary patch from d-feet-0.1.6
