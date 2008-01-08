@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.14.ebuild,v 1.1 2007/11/05 22:53:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.14.ebuild,v 1.2 2008/01/08 10:02:53 maekke Exp $
 
 inherit eutils linux-info
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.linuxant.com/drivers/hcf/full/archive/${P}full/${P}full.tar.
 
 LICENSE="Conexant"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE="doc"
 
 DEPEND="dev-lang/perl
