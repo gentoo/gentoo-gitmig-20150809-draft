@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/gcolor2
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.22 2007/07/24 14:04:35 dang Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.23 2008/01/08 09:11:39 remi Exp $
+
+*gcolor2-0.4-r3 (08 Jan 2008)
+
+  08 Jan 2008; Rémi Cardona <remi@gentoo.org>
+  +files/gcolor2-0.4-pkg-config-macro.patch, files/modular-rgb.patch,
+  gcolor2-0.4-r2.ebuild, +gcolor2-0.4-r3.ebuild:
+  add patch to fix missing pkg-config macro (should fix bug #204598)
 
   24 Jul 2007; Daniel Gryniewicz <dang@gentoo.org> gcolor2-0.4-r2.ebuild:
   Marked stable on amd64 for bug #186470
