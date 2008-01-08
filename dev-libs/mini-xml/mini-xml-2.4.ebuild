@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.4.ebuild,v 1.2 2008/01/08 02:21:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.4.ebuild,v 1.3 2008/01/08 04:13:00 mr_bones_ Exp $
 
 inherit autotools multilib
 
@@ -19,7 +19,6 @@ DEPEND="dev-util/pkgconfig"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
-
 
 src_test() {
 	emake testmxml
