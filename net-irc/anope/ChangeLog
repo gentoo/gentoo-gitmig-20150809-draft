@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/anope
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.9 2007/12/27 22:25:55 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.10 2008/01/08 21:13:08 jokey Exp $
+
+*anope-1.7.20 (08 Jan 2008)
+
+  08 Jan 2008; Markus Ullmann <jokey@gentoo.org> +anope-1.7.20.ebuild:
+  Version bump
 
   27 Dec 2007; Markus Ullmann <jokey@gentoo.org> anope-1.7.19.ebuild:
   Install services.conf as services.conf.example to avoid overwriting
