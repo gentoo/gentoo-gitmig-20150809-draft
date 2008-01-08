@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.116 2008/01/08 14:51:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.117 2008/01/08 15:07:22 armin76 Exp $
+
+  08 Jan 2008; Raúl Porcel <armin76@gentoo.org> nfs-utils-1.1.0-r1.ebuild:
+  alpha/ia64/sparc stable wrt #201552
 
   08 Jan 2008; Jeroen Roovers <jer@gentoo.org> nfs-utils-1.1.0-r1.ebuild:
   Stable for HPPA (bug #201552).
