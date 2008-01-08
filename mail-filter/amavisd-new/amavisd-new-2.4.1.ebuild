@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.1.ebuild,v 1.13 2007/12/27 12:43:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.1.ebuild,v 1.14 2008/01/08 13:46:14 ticho Exp $
 
 inherit eutils
 
@@ -46,7 +46,7 @@ RDEPEND="${DEPEND}
 	ldap? ( >=dev-perl/perl-ldap-0.33 )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
-	milter? ( >=mail-mta/sendmail-8.12 )"
+	milter? ( || ( >=mail-mta/sendmail-8.12 mail-filter/libmilter ) )"
 
 AMAVIS_ROOT="/var/amavis"
 

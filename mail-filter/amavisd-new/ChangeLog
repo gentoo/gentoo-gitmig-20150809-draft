@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/amavisd-new
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.113 2007/12/27 12:43:23 ticho Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.114 2008/01/08 13:46:14 ticho Exp $
+
+  08 Jan 2008; Andrej Kacian <ticho@gentoo.org> amavisd-new-2.4.1.ebuild,
+  amavisd-new-2.5.2.ebuild:
+  Require either sendmail or libmilter also in 2.4.1. Marked 2.5.2 stable on x86.
 
   27 Dec 2007; Andrej Kacian <ticho@gentoo.org> amavisd-new-2.4.1.ebuild,
   amavisd-new-2.5.2.ebuild, amavisd-new-2.5.3.ebuild:
