@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ps3pf_utils/ps3pf_utils-2.1.1.ebuild,v 1.1 2008/01/08 01:20:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ps3pf_utils/ps3pf_utils-2.1.1.ebuild,v 1.2 2008/01/08 04:12:39 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -21,7 +21,7 @@ RDEPEND=""
 
 src_compile() {
 	#append-flags -I/usr/src/linux/include/
-	econf 
+	econf
 	emake || die "compile failed, do you have up to date kernel sources?"
 }
 
