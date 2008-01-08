@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/kerneloops
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/ChangeLog,v 1.3 2008/01/03 04:31:05 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/ChangeLog,v 1.4 2008/01/08 23:42:00 gregkh Exp $
+
+  08 Jan 2008; Greg Kroah-Hartman <gregkh@gentoo.org>
+  -kerneloops-0.5.ebuild, -kerneloops-0.5-r1.ebuild:
+  remove old 0.5 files
 
 *kerneloops-0.8 (03 Jan 2008)
 
