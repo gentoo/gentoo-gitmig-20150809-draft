@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-bitmapfont/wqy-bitmapfont-0.8.1-r1.ebuild,v 1.7 2007/12/16 20:29:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-bitmapfont/wqy-bitmapfont-0.8.1-r1.ebuild,v 1.8 2008/01/08 17:19:24 pva Exp $
 
 inherit font
 
@@ -12,9 +12,9 @@ SLOT="0"
 KEYWORDS="amd64 arm hppa ia64 ppc s390 sh x86 ~x86-fbsd"
 IUSE=""
 DEPEND=""
-S="${WORKDIR}/${PN}"
-FONT_S="${S}"
-FONT_CONF="85-wqy-bitmapsong.conf"
+S=${WORKDIR}/${PN}
+FONT_S=${S}
+FONT_CONF=( "85-wqy-bitmapsong.conf" )
 
 FONT_SUFFIX="pcf"
 DOCS="INSTALL* LATEST-IS* STAT README LOGO.PNG CREDIT ChangeLog"
