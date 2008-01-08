@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.6.1-r1.ebuild,v 1.3 2007/12/05 21:57:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.6.1-r1.ebuild,v 1.4 2008/01/08 17:38:53 jokey Exp $
 
 DESCRIPTION="ICQ text-mode client with many features"
 HOMEPAGE="http://www.climm.org/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gloox gnutls otr tcl ssl"
 
-DEPEND="gloox? ( net-libs/gloox )
+DEPEND="gloox? ( <net-libs/gloox-0.9 )
 	ssl? (
 		|| ( gnutls? ( >=net-libs/gnutls-0.8.10 )
 		dev-libs/openssl ) )
