@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wpa_supplicant
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.101 2007/12/25 16:32:54 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.102 2008/01/08 01:42:20 rbu Exp $
+
+*wpa_supplicant-0.6.1 (08 Jan 2008)
+
+  08 Jan 2008; Robert Buchholz <rbu@gentoo.org>
+  -wpa_supplicant-0.6.0.ebuild, +wpa_supplicant-0.6.1.ebuild:
+  Version bump by security for remote DoS vulnerability (CVE-2007-6025) in
+  0.6.0 (bug #199828)
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing uberlord from metadata.xml as per #199318.
