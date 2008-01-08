@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.112 2008/01/08 11:00:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.113 2008/01/08 17:25:53 armin76 Exp $
+
+  08 Jan 2008; Raúl Porcel <armin76@gentoo.org> anthy-9100d.ebuild:
+  alpha/ia64/sparc stable wrt #204758
 
   08 Jan 2008; Markus Meier <maekke@gentoo.org> anthy-9100d.ebuild:
   x86 stable, bug #204758
