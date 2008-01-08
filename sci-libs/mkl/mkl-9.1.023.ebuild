@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.6 2007/11/21 00:29:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.7 2008/01/08 09:53:37 bicatali Exp $
 
 inherit eutils versionator toolchain-funcs fortran
 
@@ -79,13 +79,13 @@ src_unpack() {
 	addwrite /opt/intel
 	cp ${MKL_LICENSE} "${WORKDIR}"/
 	MKL_LIC="$(basename ${MKL_LICENSE})"
-	cat > mkl.ini << EOF
-[MKL]
-EULA_ACCEPT_REJECT=ACCEPT
-FLEXLM_LICENSE_LOCATION=${WORKDIR}/${MKL_LIC}
-INSTALLMODE=NONRPM
-INSTALL_DESTINATION=${S}
-EOF
+	cat > mkl.ini <<- EOF
+		[MKL]
+		EULA_ACCEPT_REJECT=ACCEPT
+		FLEXLM_LICENSE_LOCATION=${WORKDIR}/${MKL_LIC}
+		INSTALLMODE=NONRPM
+		INSTALL_DESTINATION=${S}
+	EOF
 	einfo "Extracting ..."
 	./install \
 		--silent ${PWD}/mkl.ini \
@@ -207,15 +207,16 @@ mkl_install_lib() {
 	cp -pPR "${S}"/${proflib} "${D}"${MKL_DIR}
 
 	for x in blas cblas; do
-		cat  > eselect.${x}.${prof} << EOF
-${libdir}/libmkl_${MKL_KERN}.a /usr/@LIBDIR@/lib${x}.a
-${libdir}/libmkl.so /usr/@LIBDIR@/lib${x}.so
-${libdir}/libmkl.so /usr/@LIBDIR@/lib${x}.so.0
-${libdir}/${x}.pc /usr/@LIBDIR@/pkgconfig/${x}.pc
-EOF
+		cat  > eselect.${x}.${prof} <<- EOF
+			${libdir}/libmkl_${MKL_KERN}.a /usr/@LIBDIR@/lib${x}.a
+			${libdir}/libmkl.so /usr/@LIBDIR@/lib${x}.so
+			${libdir}/libmkl.so /usr/@LIBDIR@/lib${x}.so.0
+			${libdir}/${x}.pc /usr/@LIBDIR@/pkgconfig/${x}.pc
+		EOF
 
 		[[ ${x} == cblas ]] && \
-			echo "${MKL_DIR}/include/mkl_cblas.h /usr/include/cblas.h" >> eselect.${x}.${prof}
+			echo "${MKL_DIR}/include/mkl_cblas.h /usr/include/cblas.h" \
+			>> eselect.${x}.${prof}
 		eselect ${x} add $(get_libdir) eselect.${x}.${prof} ${prof}
 		sed -e "s:@LIBDIR@:$(get_libdir):" \
 			-e "s:@INCDIR@:${MKL_DIR}/include:" \
@@ -227,12 +228,12 @@ EOF
 		doins ${x}.pc
 	done
 
-	cat > eselect.lapack.${prof} << EOF
-${libdir}/libmkl_lapack.a /usr/@LIBDIR@/liblapack.a
-${libdir}/libmkl_lapack.so /usr/@LIBDIR@/liblapack.so
-${libdir}/libmkl_lapack.so /usr/@LIBDIR@/liblapack.so.0
-${libdir}/lapack.pc /usr/@LIBDIR@/pkgconfig/lapack.pc
-EOF
+	cat > eselect.lapack.${prof} <<- EOF
+		${libdir}/libmkl_lapack.a /usr/@LIBDIR@/liblapack.a
+		${libdir}/libmkl_lapack.so /usr/@LIBDIR@/liblapack.so
+		${libdir}/libmkl_lapack.so /usr/@LIBDIR@/liblapack.so.0
+		${libdir}/lapack.pc /usr/@LIBDIR@/pkgconfig/lapack.pc
+	EOF
 	sed -e "s:@LIBDIR@:$(get_libdir):" \
 		-e "s:@PV@:${PV}:" \
 		-e "s:@EXTLIBS@:${extlibs}:g" \
@@ -279,7 +280,6 @@ src_install() {
 	done
 
 	echo "MANPATH=${MKL_DIR}/man"  >> ${env_file}
-	echo "INCLUDE=${MKL_DIR}/include" >> ${env_file}
 	doenvd ${env_file} || die "doenvd failed"
 }
 
