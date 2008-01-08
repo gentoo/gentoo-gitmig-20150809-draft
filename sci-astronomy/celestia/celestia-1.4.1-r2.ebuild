@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1-r2.ebuild,v 1.8 2007/09/11 11:47:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1-r2.ebuild,v 1.9 2008/01/08 14:24:37 bicatali Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="cairo gnome gtk kde arts threads nls lua"
 
-DEPEND="virtual/glu
+RDEPEND="virtual/glu
 	media-libs/jpeg
 	media-libs/libpng
 	gtk? ( !gnome? ( !kde? (
@@ -32,6 +32,9 @@ DEPEND="virtual/glu
 	arts? ( kde-base/arts )
 	lua? ( >=dev-lang/lua-5.0 )
 	cairo? ( x11-libs/cairo )"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	# Check for one for the following use flags to be set.
@@ -68,32 +71,32 @@ src_unpack() {
 
 	# some lua patches to make it work for lua-5.1
 	has_version ">=dev-lang/lua-5.1.1" &&  \
-		epatch "${FILESDIR}/${P}-lua51.patch"
+		epatch "${FILESDIR}"/${P}-lua51.patch
 
 	# standard set of gcc-4.1 patches
-	epatch "${FILESDIR}/${P}-gcc-4.1.patch"
+	epatch "${FILESDIR}"/${P}-gcc-4.1.patch
 
 	# fix kde datadir in makefile.am and .desktop location
-	epatch "${FILESDIR}/${P}-kde-datadir.patch"
+	epatch "${FILESDIR}"/${P}-kde-datadir.patch
 
 	# add a desktop file that doesn't end up in lost+found
-	epatch "${FILESDIR}/${P}-kde-desktop.patch"
-	epatch "${FILESDIR}/${P}-gnome-desktop.patch"
+	epatch "${FILESDIR}"/${P}-kde-desktop.patch
+	epatch "${FILESDIR}"/${P}-gnome-desktop.patch
 
 	# add a ~/.celestia for extra directories
-	epatch "${FILESDIR}/${P}-cfg.patch"
+	epatch "${FILESDIR}"/${P}-cfg.patch
 
 	# strict aliasing from fedora
-	epatch "${FILESDIR}/${P}-strictalias.patch"
+	epatch "${FILESDIR}"/${P}-strictalias.patch
 
 	# install 3ds models by requests
-	epatch "${FILESDIR}/${P}-3dsmodels.patch"
+	epatch "${FILESDIR}"/${P}-3dsmodels.patch
 
 	# fix po/Makefile.in.in to regenerate
-	epatch "${FILESDIR}/${P}-locale.patch"
+	epatch "${FILESDIR}"/${P}-locale.patch
 
 	# fix for as-needed (bug #130091)
-	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 
 	# remove flags to let the user decide
 	for cf in -O2 -ffast-math \
@@ -145,10 +148,10 @@ src_install() {
 		emake DESTDIR="${D}" install || die "emake install failed"
 		for size in 16 22 32 48 ; do
 			insinto /usr/share/icons/hicolor/${size}x${size}/apps
-			newins ${S}/src/celestia/kde/data/hi${size}-app-${PN}.png ${PN}.png
+			newins "${S}"/src/celestia/kde/data/hi${size}-app-${PN}.png ${PN}.png
 		done
 	fi
-	dodoc AUTHORS README TODO NEWS TRANSLATORS *.txt
-	dohtml coding-standards.html
+	dodoc AUTHORS README TODO NEWS TRANSLATORS *.txt || die
+	dohtml coding-standards.html || die
 	dosym "${PORTDIR}"/licenses/GPL-2 /usr/share/${PN}/COPYING
 }
