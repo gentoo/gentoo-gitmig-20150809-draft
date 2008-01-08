@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tablix
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/ChangeLog,v 1.6 2006/11/10 19:37:05 dirtyepic Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/ChangeLog,v 1.7 2008/01/08 23:35:00 carlo Exp $
+
+*tablix-0.3.5 (08 Jan 2008)
+
+  08 Jan 2008; Carsten Lohrke <carlo@gentoo.org> +tablix-0.3.5.ebuild:
+  Version bump.
 
   10 Nov 2006; <dirtyepic@gentoo.org> tablix-0.3.4.ebuild:
   Runaway tabs.
