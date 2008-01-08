@@ -1,10 +1,11 @@
-prefix=/usr
+prefix=@ACMLDIR@
 exec_prefix=${prefix}
-libdir=/usr/@LIBDIR@
+libdir=${prefix}/lib
+includedir=${prefix}/include
 
 Name: lapack
 Description: ACML implementation of the F77 Linear Algebra PACKage
 Version: @PV@
 URL: http://developer.amd.com/acml.jsp
-Libs: -L@ACMLDIR@ -llapack -lacml_mv @EXTLIBS@
+Libs: -L${libdir} -llapack -lacml_mv @EXTLIBS@
 Cflags: @EXTFLAGS@

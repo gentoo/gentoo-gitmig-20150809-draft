@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.0.1.ebuild,v 1.2 2007/12/19 13:03:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.0.1.ebuild,v 1.3 2008/01/08 09:46:17 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -108,8 +108,8 @@ src_install() {
 		ESELECT_PROF=acml-${FORTRANC}
 		local acmldir=${instdir}/${fort}
 		local libname=${acmldir}/lib/libacml
-		local extlibs
-		local extflags
+		local extlibs=
+		local extflags=
 		if [[ ${fort} =~ int64 ]]; then
 			ESELECT_PROF=${ESELECT_PROF}-int64
 			extflags="${extflags} -fdefault-integer-8"
@@ -125,7 +125,7 @@ src_install() {
 			# pkgconfig files
 			sed -e "s:@LIBDIR@:$(get_libdir):" \
 				-e "s:@PV@:${PV}:" \
-				-e "s:@ACMLDIR@:${acmldir}/lib:g" \
+				-e "s:@ACMLDIR@:${acmldir}:g" \
 				-e "s:@EXTLIBS@:${extlibs}:g" \
 				-e "s:@EXTFLAGS@:${extflags}:g" \
 				"${FILESDIR}"/${l}.pc.in > ${l}.pc \

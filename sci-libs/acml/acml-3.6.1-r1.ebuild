@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.6 2007/12/19 19:30:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.7 2008/01/08 09:46:17 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -125,7 +125,7 @@ src_install() {
 			# pkgconfig files
 			sed -e "s:@LIBDIR@:$(get_libdir):" \
 				-e "s:@PV@:${PV}:" \
-				-e "s:@ACMLDIR@:${acmldir}/lib:g" \
+				-e "s:@ACMLDIR@:${acmldir}:g" \
 				-e "s:@EXTLIBS@:${extlibs}:g" \
 				-e "s:@EXTFLAGS@:${extflags}:g" \
 				"${FILESDIR}"/${l}.pc.in > ${l}.pc \
@@ -143,7 +143,6 @@ src_install() {
 			eselect ${l} add $(get_libdir) eselect.${l} ${ESELECT_PROF}
 		done
 		echo "LDPATH=${acmldir}/lib" > "${S}"/35acml
-		echo "INCLUDE=${acmldir}/include" >> "${S}"/35acml
 	done
 
 	doenvd "${S}"/35acml || die "doenvd failed"

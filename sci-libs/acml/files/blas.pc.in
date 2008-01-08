@@ -1,10 +1,11 @@
-prefix=/usr
+prefix=@ACMLDIR@
 exec_prefix=${prefix}
-libdir=/usr/@LIBDIR@
+libdir=${prefix}/lib
+includedir=${prefix}/include
 
 Name: blas
 Description: ACML implementations of the Basic Linear Algebra Subroutines
 Version: @PV@
 URL: http://developer.amd.com/acml.jsp
-Libs: -L@ACMLDIR@ -lblas -lacml_mv @EXTLIBS@
+Libs: -L${libdir} -lblas -lacml_mv @EXTLIBS@
 Cflags: @EXTFLAGS@
