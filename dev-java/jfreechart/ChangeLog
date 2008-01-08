@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jfreechart
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.35 2008/01/07 16:45:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.36 2008/01/08 02:12:58 ranger Exp $
+
+  08 Jan 2008; Brent Baude <ranger@gentoo.org> jfreechart-1.0.9.ebuild:
+  Marking jfreechart-1.0.9 ppc for bug 203193
 
 *jfreechart-1.0.9 (07 Jan 2008)
 
