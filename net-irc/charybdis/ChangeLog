@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/charybdis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.6 2008/01/08 13:33:28 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.7 2008/01/08 14:18:30 jokey Exp $
+
+*charybdis-2.2.1_pre20080108 (08 Jan 2008)
+
+  08 Jan 2008; Markus Ullmann <jokey@gentoo.org>
+  +charybdis-2.2.1_pre20080108.ebuild:
+  Add pre-release snapshot
 
   08 Jan 2008; Markus Ullmann <jokey@gentoo.org> charybdis-2.2.0.ebuild:
   Keyword ~x86
