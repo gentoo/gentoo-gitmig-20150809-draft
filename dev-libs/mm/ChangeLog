@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/mm
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.30 2007/05/11 21:57:18 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.31 2008/01/08 01:35:01 carlo Exp $
+
+*mm-1.4.2 (08 Jan 2008)
+
+  08 Jan 2008; Carsten Lohrke <carlo@gentoo.org> +mm-1.4.2.ebuild:
+  Version bump.
 
   11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
   add metadata.xml
