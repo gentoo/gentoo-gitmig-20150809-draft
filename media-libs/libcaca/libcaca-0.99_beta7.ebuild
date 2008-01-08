@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta7.ebuild,v 1.4 2006/11/29 10:11:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta7.ebuild,v 1.5 2008/01/08 12:00:26 flameeyes Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -27,6 +27,7 @@ RDEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
 		virtual/glut )"
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 S="${WORKDIR}/${MY_P}"
