@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/calcoo-1.3.18.ebuild,v 1.1 2007/09/15 13:29:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/calcoo-1.3.18.ebuild,v 1.2 2008/01/08 14:46:56 markusle Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+		dev-util/pkgconfig"
 
 src_compile() {
 	econf --disable-gtktest
