@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-2.2.1-r1.ebuild,v 1.2 2007/07/05 20:24:30 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-2.2.1-r2.ebuild,v 1.1 2008/01/08 22:18:10 hawking Exp $
 
-inherit distutils
+inherit eutils distutils
 
 MY_P=CherryPy-${PV}
 
@@ -23,6 +23,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-py2.5.patch
+	epatch "${FILESDIR}"/${P}-invalidsession.patch
 	sed -i \
 		-e '/raw_input/d' \
 		cherrypy/test/test.py || die "sed failed"
