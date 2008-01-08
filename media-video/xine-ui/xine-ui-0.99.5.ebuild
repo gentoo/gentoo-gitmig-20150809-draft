@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5.ebuild,v 1.9 2008/01/02 11:44:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5.ebuild,v 1.10 2008/01/08 22:21:05 aballier Exp $
 
 # WANT_AUTOCONF=latest
 # WANT_AUTOMAKE=latest
@@ -67,7 +67,7 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_with X x) \
 		$(use_with aalib) \
-		$(use_with libcaca) \
+		$(use_with libcaca caca) \
 		$(use_with curl) \
 		$(use_with readline) \
 		--without-ncurses \
