@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0-r1.ebuild,v 1.8 2007/12/22 13:13:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0-r1.ebuild,v 1.9 2008/01/08 01:23:19 bicatali Exp $
 
 inherit eutils elisp-common
 
@@ -14,9 +14,12 @@ KEYWORDS="amd64 ppc sparc x86"
 IUSE="cmucl clisp sbcl gcl latex emacs tk nls unicode"
 
 # rlwrap is recommended for cmucl and sbcl
+# tetex>=3, so no use of virtual/latex-base (bug #203558)
 RDEPEND=">=sci-visualization/gnuplot-4.0
 	x11-misc/xdg-utils
-	latex? ( virtual/latex-base )
+	latex? ( || ( dev-texlive/texlive-latexrecommended
+				>=app-text/tetex-3
+				app-text/ptex ) )
 	emacs? ( virtual/emacs
 		 latex? ( || ( app-emacs/auctex app-xemacs/auctex ) ) )
 	sbcl? ( dev-lisp/sbcl app-misc/rlwrap )
