@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.196 2008/01/07 06:51:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.197 2008/01/08 14:19:40 beandog Exp $
+
+*transcode-1.0.4-r1 (08 Jan 2008)
+
+  08 Jan 2008; Steve Dibb <beandog@gentoo.org> +transcode-1.0.4-r1.ebuild:
+  Add strip-flags to compile, custom-cflags use flag
 
   07 Jan 2008; Joseph Jezak <josejx@gentoo.org> transcode-1.0.4.ebuild:
   Marked ppc/ppc64 stable for bug #204255.
