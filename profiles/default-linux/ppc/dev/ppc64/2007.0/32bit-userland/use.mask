@@ -8,6 +8,9 @@ fmod
 i8x0
 xvmc
 
+# DVB bits aren't ~arch or arch on PPC
+dvb
+
 # Fixes bug #86787
 fusion
 

@@ -1,0 +1,5 @@
+CFLAGS="-O2 -pipe -mtune=970 -mcpu=970 -mabi=altivec"
+CXXFLAGS=${CFLAGS}
+
+STAGE1_USE="altivec ${STAGE1_USE} "
+USE="${STAGE1_USE} ${USE}"

@@ -1,3 +1,7 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc64/2007.0/32bit-userland/make.defaults,v 1.5 2008/01/08 01:03:49 ranger Exp $
+
 # This is make.defaults for 32-bit userland
 ARCH="ppc"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -8,25 +12,27 @@ PROFILE_ARCH="ppc64"
 CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
-ACCEPT_KEYWORDS="${ARCH}"
-
+# We build stage1 against this
 STAGE1_USE="gcc64 nptl nptlonly unicode"
-USE="${STAGE1_USE} alsa apache2 apm arts berkdb bitmap-fonts cups eds emboss encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk ibm imlib ipv6 jpeg kde libwww mad mikmod motif mp3 mpeg ncurses nls ogg opengl oss pam perl png python qt3 qt4 quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts vorbis X xml xv zlib"
+
+# We don't have any other USE here because it is inherited from the parent
+# profile.  Additional USE flags should be added into sub-profiles to keep this
+# from becoming polluted.
+USE="gcc64"
 
 # While this profile uses multilib functionality it is just to maintain
 # some similarity across profiles this profile is truly for a singe ABI, ppc32.
 
 FEATURES="autoconfig sandbox sfperms -multilib-pkg"
 
-#MULTILIB_ABIS="ppc"
 DEFAULT_ABI="ppc"
 KERNEL_ABI="ppc64"
 
-#CFLAGS_ppc="-m32"
-#LDFLAGS_ppc="-m elf32ppc"
-#CHOST_ppc="powerpc-unknown-linux-gnu"
-#CDEFINE_ppc="!__powerpc64__"
-#LIBDIR_ppc="lib"
+CFLAGS_ppc="-m32"
+LDFLAGS_ppc="-m elf32ppc"
+CHOST_ppc="powerpc-unknown-linux-gnu"
+CDEFINE_ppc="!__powerpc64__"
+LIBDIR_ppc="lib"
 
-#LDFLAGS_ppc64="-m elf64ppc"
-#CHOST_ppc64="powerpc64-unknown-linux-gnu"
+LDFLAGS_ppc64="-m elf64ppc"
+CHOST_ppc64="powerpc64-unknown-linux-gnu"

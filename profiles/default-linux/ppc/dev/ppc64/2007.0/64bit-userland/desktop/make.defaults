@@ -1,0 +1,3 @@
+STAGE1_USE="nptl nptlonly unicode"
+
+USE="alsa arts cairo cdr dbus dvd dvdr eds emboss encode esd fam firefox gif gnome gpm gstreamer gtk hal jpeg kde ldap mad mikmod mp3 mpeg ogg opengl oss png qt3 qt3support qt4 quicktime sdl spell truetype vorbis unicode X xml xv"

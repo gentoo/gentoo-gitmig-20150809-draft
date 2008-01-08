@@ -1,0 +1,7 @@
+# Copyright 1999-2007 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc64/2007.0/64bit-userland/package.mask,v 1.4 2008/01/08 01:03:51 ranger Exp $
+
+# Mask multilib ppc64 things
+# Maintained by Yuta Satoh <nigoro@gentoo.org>
+

@@ -1,0 +1,45 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc64/2007.0/64bit-userland/make.defaults,v 1.8 2008/01/08 01:03:51 ranger Exp $
+
+ARCH="ppc64"
+ACCEPT_KEYWORDS="ppc64"
+
+CHOST="powerpc64-unknown-linux-gnu"
+
+CFLAGS="-O2 -pipe"
+CXXFLAGS=${CFLAGS}
+
+STAGE1_USE="unicode nptl nptlonly"
+
+USE="unicode nptl nptlonly berkdb crypt ipv6 ncurses nls pam perl python readline ssl tcpd zlib"
+
+VIDEO_CARDS="dummy fbdev mach64 mga nv r128 radeon s3 vega vga"
+
+# While this profile uses multilib functionality it is just to maintain
+# some similarity across profiles this profile is truly for a singe ABI, ppc64.
+
+FEATURES="autoconfig sandbox sfperms -multilib-pkg"
+
+MULTILIB_ABIS="ppc64"
+DEFAULT_ABI="ppc64"
+
+CFLAGS_ppc64="-m64"
+LDFLAGS_ppc64="-m elf64ppc"
+CHOST_ppc64="powerpc64-unknown-linux-gnu"
+CDEFINE_ppc64="__powerpc64__"
+LIBDIR_ppc64="lib64"
+
+#CFLAGS_ppc="-m32"
+#LDFLAGS_ppc="-m elf32ppc"
+#CHOST_ppc="powerpc-unknown-linux-gnu"
+#CDEFINE_ppc="!__powerpc64__"
+#LIBDIR_ppc="lib32"
+
+# In case someone wants to help out by setting FEATURES="multilib-strict"
+MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib /usr/X11R6/lib"
+MULTILIB_STRICT_DENY="64-bit.*shared object"
+MULTILIB_STRICT_EXEMPT="(perl5|gcc|gcc-lib|eclipse-3)"
+
+# Hack to tell baselayout to use symlinks for /lib, /usr/lib, and /usr/local/lib
+SYMLINK_LIB="yes"
