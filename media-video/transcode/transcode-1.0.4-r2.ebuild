@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.4-r1.ebuild,v 1.1 2008/01/08 14:19:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.4-r2.ebuild,v 1.1 2008/01/08 15:17:15 beandog Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -14,7 +14,7 @@ SRC_URI="http://fromani.exit1.org/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="X 3dnow a52 altivec custom-cflags dv dvdread extrafilters mp3 fame truetype iconv imagemagick jpeg lzo mjpeg mpeg mmx network ogg oss vorbis quicktime sdl sse sse2 theora v4l2 xvid xml"
+IUSE="X 3dnow a52 altivec dv dvdread extrafilters mp3 fame truetype iconv imagemagick jpeg lzo mjpeg mpeg mmx network ogg oss vorbis quicktime sdl sse sse2 theora v4l2 xvid xml"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -61,18 +61,7 @@ src_unpack() {
 
 src_compile() {
 
-	if use custom-cflags; then
-		elog "Using custom CFLAGS on this ebuild may break your build,"
-		elog "and is unsupported."
-
-		# Filter flags known to break builds
-		filter-flags -maltivec -mabi=altivec -momit-leaf-frame-pointer \
-			-fforce-addr
-		#145849
-		use amd64 && filter-flags -fweb
-	else
-		strip-flags
-	fi
+	strip-flags
 
 	if use ppc || use ppc64 ; then
 		append-flags -U__ALTIVEC__
