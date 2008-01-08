@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ragel
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.7 2007/09/01 12:42:48 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.8 2008/01/08 01:36:13 carlo Exp $
+
+*ragel-5.25 (08 Jan 2008)
+
+  08 Jan 2008; Carsten Lohrke <carlo@gentoo.org> +ragel-5.25.ebuild:
+  Version bump.
 
   01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing twp from metadata due to his retirement (see #190561 for reference).
