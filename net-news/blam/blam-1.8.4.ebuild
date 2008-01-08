@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.4.ebuild,v 1.1 2008/01/08 02:40:46 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.4.ebuild,v 1.2 2008/01/08 09:26:36 opfer Exp $
 
 inherit mono eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cmartin.tk/blam/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-1.1.17
