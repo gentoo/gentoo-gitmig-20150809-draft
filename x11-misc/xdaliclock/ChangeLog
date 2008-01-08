@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdaliclock
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/ChangeLog,v 1.20 2008/01/07 19:00:10 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/ChangeLog,v 1.21 2008/01/08 01:48:37 ranger Exp $
+
+  08 Jan 2008; Brent Baude <ranger@gentoo.org> xdaliclock-2.24.ebuild:
+  Marking xdaliclock-2.24 ppc64 for bug 204778
 
   07 Jan 2008; Ferris McCormick <fmccor@gentoo.org> xdaliclock-2.24.ebuild:
   Sparc stable --- Bug #204778 --- works fine.
