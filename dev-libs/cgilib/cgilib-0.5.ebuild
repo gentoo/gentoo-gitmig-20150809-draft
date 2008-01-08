@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/cgilib-0.5.ebuild,v 1.18 2007/01/27 11:11:49 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/cgilib-0.5.ebuild,v 1.19 2008/01/08 00:59:25 jokey Exp $
 
 inherit toolchain-funcs
 
@@ -15,13 +15,13 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i "s|^\(CFLAGS = -I. -Wall\).*$|\1 ${CFLAGS}|" Makefile || \
 		die "sed Makefile failed"
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) CFLAGS="-I. -Wall ${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCC)" CFLAGS="-I. -Wall ${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
