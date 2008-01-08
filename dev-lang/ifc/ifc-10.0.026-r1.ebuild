@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.0.026-r1.ebuild,v 1.11 2007/12/24 19:36:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.0.026-r1.ebuild,v 1.12 2008/01/08 15:37:49 bicatali Exp $
 
 inherit rpm eutils
 
@@ -83,7 +83,6 @@ src_install() {
 	echo "ROOTPATH=${INSTALL_DIR}/bin" >> ${env_file}
 	echo "LDPATH=${INSTALL_DIR}/lib" >> ${env_file}
 	echo "MANPATH=${INSTALL_DIR}/man" >> ${env_file}
-	echo "INCLUDE=${INSTALL_DIR}/include" >> ${env_file}
 	doenvd ${env_file} || die "doenvd ${env_file} failed"
 }
 
