@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.4.ebuild,v 1.1 2008/01/08 00:31:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.4.ebuild,v 1.2 2008/01/08 02:21:39 carlo Exp $
 
 inherit autotools multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.easysw.com/pub/mxml/${PV}/${MY_P}.tar.gz"
 LICENSE="Mini-XML"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="test"
+IUSE=""
 
 DEPEND="dev-util/pkgconfig"
 RDEPEND=""
