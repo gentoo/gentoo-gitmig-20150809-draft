@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.5.0.ebuild,v 1.1 2006/11/24 20:34:56 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.5.0.ebuild,v 1.2 2008/01/08 15:23:46 bicatali Exp $
 
 inherit eutils
 N="${S}/nad"
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+RDEPEND=""
+DEPEND="app-arch/unzip"
 
 src_unpack() {
 	unpack ${P}.tar.gz || die
