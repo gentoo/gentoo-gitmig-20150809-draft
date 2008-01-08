@@ -31,3 +31,19 @@ Once this is done, you can log in to WordPress at
 http://${VHOST_HOSTNAME}/${VHOST_APPDIR}
                                                             
 ------------------------------------------------------------------------
+!!!!!!!!!                 SECURITY WARNING                   !!!!!!!!!!!
+
+Wordpress has had a history of serious security flaws. Any application
+with less widespread use but the same amount of security issues would
+have been removed from the tree.
+
+We decided to keep the application in the unstable portage tree so that
+it get's some level of attention from our security team. Currently
+you can expect us to react within 40 days of a reported security
+problem.
+
+This still means that you might open up your installation to hackers for
+about a month after an issue has been made public. This is a severe
+risk and you should keep a close eye on the common security trackers so
+that you are able to fix problems with your installation yourself if
+required.
