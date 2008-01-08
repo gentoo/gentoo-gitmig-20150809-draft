@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/yahoo-transport-2.3.1-r1.ebuild,v 1.9 2007/05/06 12:18:17 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/yahoo-transport-2.3.1-r1.ebuild,v 1.10 2008/01/08 08:32:55 nelchael Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~hppa ~ppc sparc x86"
 SLOT="0"
 IUSE=""
-DEPEND="=net-im/jabberd-1.4*
+DEPEND="net-im/jabberd
 	=dev-libs/glib-1*"
 
 src_unpack() {
