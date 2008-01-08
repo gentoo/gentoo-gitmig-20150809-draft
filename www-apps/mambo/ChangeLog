@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/mambo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.32 2007/08/30 14:15:47 wrobel Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.33 2008/01/08 07:18:52 wrobel Exp $
+
+*mambo-4.6.3 (08 Jan 2008)
+
+  08 Jan 2008; Gunnar Wrobel <wrobel@gentoo.org> -mambo-4.6.2.ebuild,
+  +mambo-4.6.3.ebuild:
+  Added mambo 4.6.3 to the tree, removed insecure 4.6.2 (sec issue #204352 and
+  maybe #203084).
 
   30 Aug 2007; <wrobel@gentoo.org> -mambo-4.6.1.ebuild:
   Removed mambo version affected by #176915.

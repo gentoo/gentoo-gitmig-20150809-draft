@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.6.2.ebuild,v 1.2 2007/07/29 17:29:39 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.6.3.ebuild,v 1.1 2008/01/08 07:18:52 wrobel Exp $
 
 inherit webapp depend.php
 
 MY_PN="${PN/m/M}"
 DESCRIPTION="Mambo is a dynamic portal engine and content management system"
 HOMEPAGE="http://www.mamboserver.com/"
-SRC_URI="http://mamboxchange.com/frs/download.php/8291/${MY_PN}V${PV}.tar.gz"
+SRC_URI="http://mambo-code.org/gf/download/frsrelease/274/437/${MY_PN}V${PV}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
@@ -33,13 +33,13 @@ src_install () {
 
 	dodoc CHANGELOG.php INSTALL.php README
 
-	cp -R [^d]* ${D}/${MY_HTDOCSDIR}
+	cp -R [^d]* "${D}/${MY_HTDOCSDIR}"
 
 	for file in ${files}; do
 		webapp_serverowned "${MY_HTDOCSDIR}/${file}"
 	done
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 
 	webapp_src_install
 }
