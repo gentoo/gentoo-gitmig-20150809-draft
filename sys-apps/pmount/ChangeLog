@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.52 2008/01/07 16:05:07 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.53 2008/01/08 10:57:41 armin76 Exp $
+
+  08 Jan 2008; Raúl Porcel <armin76@gentoo.org> pmount-0.9.16.ebuild:
+  ia64 stable wrt #202150
 
   07 Jan 2008; Ferris McCormick <fmccor@gentoo.org> pmount-0.9.16.ebuild:
   Sparc stable, Bug #202150 --- works here.
