@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.157 2007/12/30 15:00:48 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.158 2008/01/08 16:23:30 pva Exp $
+
+  08 Jan 2008; <pva@gentoo.org> metadata.xml, iptables-1.4.0-r1.ebuild:
+  IMQ patches updated for iptables 1.4.x. Added myself into metadata for
+  l7filter and imq extensions.
 
 *iptables-1.4.0-r1 (30 Dec 2007)
 
