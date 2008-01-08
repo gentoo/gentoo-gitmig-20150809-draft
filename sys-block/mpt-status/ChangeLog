@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/mpt-status
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.6 2007/02/15 16:25:24 nelchael Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.7 2008/01/08 07:53:15 nelchael Exp $
+
+  08 Jan 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  mpt-status-1.2.0.ebuild:
+  New version of kernel headers for mpt-status, see bug #204711.
 
   15 Feb 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   mpt-status-1.2.0.ebuild:
