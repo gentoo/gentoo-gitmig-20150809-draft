@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/emacs-wiki-blog
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki-blog/ChangeLog,v 1.4 2007/02/06 13:27:40 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki-blog/ChangeLog,v 1.5 2008/01/08 19:44:11 ulm Exp $
+
+*emacs-wiki-blog-0.4-r1 (08 Jan 2008)
+
+  08 Jan 2008; Ulrich Mueller <ulm@gentoo.org>
+  files/90emacs-wiki-blog-gentoo.el, -emacs-wiki-blog-0.4.ebuild,
+  +emacs-wiki-blog-0.4-r1.ebuild:
+  Use autoload mechanism in site-init file.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
