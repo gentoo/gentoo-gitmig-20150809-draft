@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.164 2008/01/07 07:45:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.165 2008/01/08 06:51:22 tove Exp $
 
 # Depends on Xen
 app-emulation/ganeti
@@ -9,6 +9,10 @@ app-emulation/ganeti-instance-debian-etch
 # needs hal
 >=app-pda/gtkpod-0.99.12
 =media-libs/libgpod-0.6.0
+
+# Torsten Veller <tove@gentoo.org> (07 Jan 2008)
+# Needs masked gtkhtml
+app-office/gnucash
 
 # Michael Sterrett <mr_bones_@gentoo.org (21 Oct 2007)
 # Needs masked gtk+

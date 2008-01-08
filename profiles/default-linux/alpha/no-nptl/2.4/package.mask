@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.44 2008/01/07 07:45:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.45 2008/01/08 06:51:21 tove Exp $
+
+# Torsten Veller <tove@gentoo.org> (07 Jan 2008)
+# Needs masked gtkhtml
+app-office/gnucash
 
 # Raúl Porcel <armin76@gentoo.org> (11 Dec 2007)
 # Needs 2.6 headers
