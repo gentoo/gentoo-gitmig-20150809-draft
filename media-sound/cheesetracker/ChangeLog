@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/cheesetracker
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/ChangeLog,v 1.27 2008/01/01 15:55:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/ChangeLog,v 1.28 2008/01/08 17:05:05 armin76 Exp $
+
+  08 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  cheesetracker-0.9.15.2.ebuild:
+  alpha/sparc stable wrt #203749, thanks to Tobias Klausmann and Alex Maclean
+  for testing
 
   01 Jan 2008; Markus Meier <maekke@gentoo.org>
   cheesetracker-0.9.15.2.ebuild:
