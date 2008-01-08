@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.2 2008/01/07 06:28:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.3 2008/01/08 01:21:34 bicatali Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 
-IUSE="nls"
+IUSE="nls truetype"
 LANGS="es"
 for i in ${LANGS}; do
 	IUSE="${IUSE} linguas_${i}"
