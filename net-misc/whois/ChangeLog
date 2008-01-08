@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.103 2008/01/08 01:45:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.104 2008/01/08 01:46:32 ranger Exp $
+
+  08 Jan 2008; Brent Baude <ranger@gentoo.org> whois-4.7.24.ebuild:
+  Marking whois-4.7.24 ppc64 for bug 202595
 
   08 Jan 2008; Brent Baude <ranger@gentoo.org> whois-4.7.24.ebuild:
   Marking whois-4.7.24 ppc for bug 202595
