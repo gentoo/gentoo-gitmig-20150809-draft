@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/glew
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.32 2007/12/16 11:30:25 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.33 2008/01/08 17:15:33 drac Exp $
+
+*glew-1.5.0 (08 Jan 2008)
+
+  08 Jan 2008; Samuli Suominen <drac@gentoo.org> +glew-1.5.0.ebuild:
+  Version bump.
 
   16 Dec 2007; Samuli Suominen <drac@gentoo.org> glew-1.4.0.ebuild:
   Use correct AR target, amd64 stable.
