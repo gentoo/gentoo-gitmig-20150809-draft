@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.22.20071220.2156.ebuild,v 1.1 2007/12/21 13:01:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.22.20071220.2156.ebuild,v 1.2 2008/01/08 17:29:39 pva Exp $
 
 inherit font versionator
 
@@ -34,4 +34,7 @@ FONT_S=${S}/ttf
 # Only installs fonts
 RESTRICT="strip binchecks"
 
-FONT_CONF="$(eval echo "${S}"/fontconfig/{20-unhint-small-dejavu.conf,20-unhint-small-dejavu-experimental.conf,57-dejavu.conf,61-dejavu-experimental.conf})"
+FONT_CONF=( "${S}/fontconfig/20-unhint-small-dejavu.conf"
+			"${S}/fontconfig/20-unhint-small-dejavu-experimental.conf"
+			"${S}/fontconfig/57-dejavu.conf"
+			"${S}/fontconfig/61-dejavu-experimental.conf" )

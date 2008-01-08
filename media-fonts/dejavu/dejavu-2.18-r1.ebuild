@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.18-r1.ebuild,v 1.8 2007/08/25 11:34:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.18-r1.ebuild,v 1.9 2008/01/08 17:29:39 pva Exp $
 
 inherit font
 
@@ -17,10 +17,10 @@ IUSE=""
 
 DOCS="AUTHORS BUGS NEWS README status.txt langcover.txt unicover.txt"
 FONT_SUFFIX="ttf"
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 FONT_S="${S}"
 
 # Only installs fonts
 RESTRICT="strip binchecks"
 
-FONT_CONF="${FILESDIR}/59-dejavu.conf"
+FONT_CONF=( "${FILESDIR}/59-dejavu.conf" )

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.20.ebuild,v 1.8 2007/12/11 10:12:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.20.ebuild,v 1.9 2008/01/08 17:29:39 pva Exp $
 
 inherit font
 
@@ -23,4 +23,4 @@ FONT_S=${S}
 # Only installs fonts
 RESTRICT="strip binchecks"
 
-FONT_CONF=${FILESDIR}/59-dejavu.conf
+FONT_CONF=( "${FILESDIR}/59-dejavu.conf" )
