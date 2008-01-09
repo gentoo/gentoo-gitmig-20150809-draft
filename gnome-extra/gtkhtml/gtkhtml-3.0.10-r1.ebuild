@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.0.10-r1.ebuild,v 1.3 2007/08/29 14:49:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.0.10-r1.ebuild,v 1.4 2008/01/09 21:18:52 eva Exp $
 
 inherit gnome2 eutils
 
@@ -33,11 +33,11 @@ ELTCONF="--reverse-deps"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
+	cd "${S}/src"
 
 	# bug 101970
-	epatch ${FILESDIR}/${P}-no-extern-cluealigned.diff
+	epatch "${FILESDIR}/${P}-no-extern-cluealigned.diff"
 
 	# bug 54244, patch for cjk input methods
-	epatch ${FILESDIR}/${PN}-fix_preedit.patch
+	epatch "${FILESDIR}/${PN}-fix_preedit.patch"
 }

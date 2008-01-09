@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-2.6.3.ebuild,v 1.6 2007/09/13 13:24:21 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-2.6.3.ebuild,v 1.7 2008/01/09 21:18:52 eva Exp $
 
 inherit eutils gnome2 versionator autotools
 
@@ -36,10 +36,10 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if use alpha; then
-		epatch ${FILESDIR}/${MY_PN}-2.2.0-alpha.patch || die
+		epatch "${FILESDIR}/${MY_PN}-2.2.0-alpha.patch" || die
 	fi
 
 	# We need a full autoreconf on FreeBSD at least to fix libtool errors.

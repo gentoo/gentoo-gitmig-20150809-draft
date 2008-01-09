@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.2.5.ebuild,v 1.7 2007/12/01 17:25:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.2.5.ebuild,v 1.8 2008/01/09 21:18:52 eva Exp $
 
 inherit gnome2 eutils
 
@@ -34,8 +34,8 @@ ELTCONF="--reverse-deps"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# bug 101970
-	epatch ${FILESDIR}/${PN}-3.0.10-no-extern-cluealigned.diff
-	epatch ${FILESDIR}/${PN}-3.2-i18n.patch || die "gettext fix"
+	epatch "${FILESDIR}/${PN}-3.0.10-no-extern-cluealigned.diff"
+	epatch "${FILESDIR}/${PN}-3.2-i18n.patch" || die "gettext fix"
 }

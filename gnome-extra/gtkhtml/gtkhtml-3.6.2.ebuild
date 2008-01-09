@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.6.2.ebuild,v 1.6 2007/07/12 04:19:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.6.2.ebuild,v 1.7 2008/01/09 21:18:52 eva Exp $
 
 inherit gnome2 eutils
 
@@ -38,7 +38,7 @@ G2CONF="${G2CONF} $(use_enable static)"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-fbsd.patch
+	epatch "${FILESDIR}/${P}-fbsd.patch"
 }
