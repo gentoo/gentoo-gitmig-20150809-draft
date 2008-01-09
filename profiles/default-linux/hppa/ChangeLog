@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.29 2008/01/07 17:26:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.30 2008/01/09 17:38:19 jer Exp $
+
+  09 Jan 2008; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Masking USE=laptop.
 
   07 Jan 2008; Jeroen Roovers <jer@gentoo.org> use.mask:
   Masked USE=ocamlopt (in accordance with bug #179895).
