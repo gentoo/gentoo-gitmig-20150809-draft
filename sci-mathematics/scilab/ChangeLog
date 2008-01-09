@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/scilab
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.39 2007/10/20 09:58:24 markusle Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.40 2008/01/09 03:04:10 markusle Exp $
+
+  09 Jan 2008; Markus Dittrich <markusle@gentoo.org>
+  files/scilab-4.1-header-fix.patch:
+  Fixed remaining QA issues caused by implicit declarations 
+  (fixes #204875).
 
   20 Oct 2007; Markus Dittrich <markusle@gentoo.org> scilab-4.0.ebuild,
   scilab-4.1.ebuild, scilab-4.1.1.ebuild:

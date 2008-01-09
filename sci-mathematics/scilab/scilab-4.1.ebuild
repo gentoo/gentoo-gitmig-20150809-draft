@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.ebuild,v 1.6 2007/10/20 09:58:24 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.ebuild,v 1.7 2008/01/09 03:04:10 markusle Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -91,7 +91,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd "${S}"
 	local myopts
 	myopts="${myopts} --with-atlas-library=/usr/$(get_libdir)"
 
