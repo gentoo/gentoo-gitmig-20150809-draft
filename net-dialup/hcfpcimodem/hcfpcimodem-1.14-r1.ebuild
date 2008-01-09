@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.14.ebuild,v 1.2 2008/01/08 10:02:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.14-r1.ebuild,v 1.1 2008/01/09 19:09:44 mrness Exp $
 
 inherit eutils linux-info
 
@@ -77,6 +77,14 @@ src_install () {
 }
 
 pkg_postinst() {
-	elog "To complete the installation and configuration of your HCF modem,"
-	elog "please run hcfpciconfig."
+	if [ "${ROOT}" = / ]; then
+		elog "To complete the installation and configuration of your HCF modem,"
+		elog "please run hcfpciconfig."
+	fi
+}
+
+pkg_prerm() {
+	if [ "${ROOT}" = / -a -f /etc/init.d/hcfpci ] ; then
+		hcfpciconfig --remove || die "hcfpciconfig --remove failed"
+	fi
 }

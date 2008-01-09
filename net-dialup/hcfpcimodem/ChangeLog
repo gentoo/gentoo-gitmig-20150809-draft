@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/hcfpcimodem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.34 2008/01/08 10:02:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.35 2008/01/09 19:09:44 mrness Exp $
+
+*hcfpcimodem-1.14-r1 (09 Jan 2008)
+
+  09 Jan 2008; Alin Năstac <mrness@gentoo.org> -hcfpcimodem-1.14.ebuild,
+  +hcfpcimodem-1.14-r1.ebuild:
+  Run hcfpciconfig --remove in pkg_prerm (#205071).
 
   08 Jan 2008; Markus Meier <maekke@gentoo.org> hcfpcimodem-1.14.ebuild:
   x86 stable, bug #204178
