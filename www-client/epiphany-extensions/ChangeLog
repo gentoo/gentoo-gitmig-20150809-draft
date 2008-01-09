@@ -1,6 +1,13 @@
 # ChangeLog for www-client/epiphany-extensions
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.69 2007/12/04 20:21:20 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.70 2008/01/09 22:57:37 eva Exp $
+
+*epiphany-extensions-2.20.3 (09 Jan 2008)
+
+  09 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -epiphany-extensions-2.16.1-r1.ebuild, -epiphany-extensions-2.20.0.ebuild,
+  +epiphany-extensions-2.20.3.ebuild:
+  bump to 2.20.3 and clean up old revisions
 
   04 Dec 2007; Jeroen Roovers <jer@gentoo.org>
   epiphany-extensions-2.20.1.ebuild:
