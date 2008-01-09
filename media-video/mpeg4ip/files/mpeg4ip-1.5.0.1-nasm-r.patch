@@ -1,0 +1,23 @@
+diff -ru mpeg4ip-1.5.0.1-orig/configure.in mpeg4ip-1.5.0.1/configure.in
+--- mpeg4ip-1.5.0.1-orig/configure.in	2006-06-08 15:15:16.000000000 -0400
++++ mpeg4ip-1.5.0.1/configure.in	2008-01-05 19:25:01.000000000 -0500
+@@ -682,7 +682,7 @@
+ 
+    if test x$USENASM = xtrue; then
+ 	AC_MSG_CHECKING(nasm version...)
+-	BILLSNASM_arg=`nasm -r | tr '.' ' '`
++	BILLSNASM_arg=`nasm -v | tr '.' ' '`
+         BILLSNASM_ret=`util/testnasm.sh $BILLSNASM_arg`
+ 	if test x$BILLSNASM_ret = x"yes"; then
+ 	   USENASM=true
+diff -ru mpeg4ip-1.5.0.1-orig/util/testlame.sh mpeg4ip-1.5.0.1/util/testlame.sh
+--- mpeg4ip-1.5.0.1-orig/util/testlame.sh	2002-10-07 14:47:00.000000000 -0400
++++ mpeg4ip-1.5.0.1/util/testlame.sh	2008-01-05 21:00:44.000000000 -0500
+@@ -1,6 +1,6 @@
+ #
+ # shell to verify nasm version
+-# nasm -r has format "NASM version <foo> <extra stuff>"
++# nasm -v has format "NASM version <foo> <extra stuff>"
+ #
+ # This shell looks for version, then sees if we're 0.98.19 or greater
+ #
