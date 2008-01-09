@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.12-r1.ebuild,v 1.4 2007/12/13 20:01:45 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.12-r1.ebuild,v 1.5 2008/01/09 14:21:32 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -64,6 +64,10 @@ src_unpack() {
 
 	# Fix plugin versioning for pidgin plugin
 	epatch "${FILESDIR}"/${PN}-0.12-pidgin-plugin-versioning.patch
+
+	# Fix tests
+	echo "pidgin_plugin/nautilus-sendto-plugin.c" >> po/POTFILES.in
+	echo "src/plugins/pidgin.c" >> po/POTFILES.in
 
 	# Oh the joys of autotools
 	eautoreconf
