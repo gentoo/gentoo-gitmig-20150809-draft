@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.1.ebuild,v 1.8 2007/07/22 03:17:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.1.ebuild,v 1.9 2008/01/09 15:27:10 armin76 Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ IUSE=""
 DEPEND="x11-misc/imake
 	x11-libs/libXt
 	x11-misc/gccmakedep
-	app-text/rman"
+	app-text/rman
+	x11-libs/libXaw"
 
 src_compile() {
 	xmkmf -a &> /dev/null || die
