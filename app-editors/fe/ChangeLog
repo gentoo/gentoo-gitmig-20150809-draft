@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/fe
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fe/ChangeLog,v 1.4 2007/12/18 21:46:03 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fe/ChangeLog,v 1.5 2008/01/09 13:00:45 ulm Exp $
+
+  09 Jan 2008; Ulrich Mueller <ulm@gentoo.org> -fe-1.6.ebuild,
+  fe-1.8.ebuild:
+  Add sendmail USE flag and dependency on virtual/mta, fixes bug #205036.
+  Remove old.
 
   18 Dec 2007; Ulrich Mueller <ulm@gentoo.org> fe-1.8.ebuild:
   Add ~amd64 keyword, bug #202428.
