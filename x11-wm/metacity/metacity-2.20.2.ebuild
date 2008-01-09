@@ -1,19 +1,17 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.16.3.ebuild,v 1.11 2007/01/18 23:51:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.20.2.ebuild,v 1.1 2008/01/09 22:48:58 eva Exp $
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Gnome default windowmanager"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="xinerama"
-
-# not parallel-safe; see bug #14405
-MAKEOPTS="${MAKEOPTS} -j1"
+# compositor needs libcm as well, not activating it for the time being
 
 RDEPEND=">=x11-libs/gtk+-2.10
 	>=x11-libs/pango-1.2
@@ -21,6 +19,9 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	>=dev-libs/glib-2.6
 	>=x11-libs/startup-notification-0.7
 	!x11-misc/expocity"
+
+# needs libcm too
+#	compositor? ( >=x11-libs/libXcomposite-0.2 )
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
@@ -30,6 +31,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog HACKING NEWS README *.txt doc/*.txt"
 
 pkg_setup() {
-	# Compositor is not deemed stable
-	G2CONF="$(use_enable xinerama) --disable-compositor"
+	G2CONF="${G2CONF}
+		$(use_enable xinerama)
+		--disable-compositor"
 }
