@@ -1,6 +1,17 @@
 # ChangeLog for x11-terms/gnome-terminal
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.157 2007/12/06 09:45:26 leio Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.158 2008/01/09 21:54:40 eva Exp $
+
+  09 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnome-terminal-2.15-tab-switching-no-resize.patch,
+  -gnome-terminal-2.16.1.ebuild, -gnome-terminal-2.18.1.ebuild:
+  cleanup old revisions
+
+*gnome-terminal-2.18.4 (09 Jan 2008)
+
+  09 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-terminal-2.18.4.ebuild:
+  bump to 2.18.4
 
   06 Dec 2007; Mart Raudsepp <leio@gentoo.org> gnome-terminal-2.18.3.ebuild:
   Remove intltoolize call, so that we wouldn't get mismatching Makefiles, bug
