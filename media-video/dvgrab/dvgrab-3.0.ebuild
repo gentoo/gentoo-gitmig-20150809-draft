@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-3.0.ebuild,v 1.1 2007/08/21 08:10:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-3.0.ebuild,v 1.2 2008/01/09 15:13:53 maekke Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/kino/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE="jpeg quicktime"
 
 DEPEND=">=sys-libs/libraw1394-1.1.0
