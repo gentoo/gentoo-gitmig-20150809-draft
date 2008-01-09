@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.1.9.ebuild,v 1.1 2008/01/09 16:17:50 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.1.9.ebuild,v 1.2 2008/01/09 19:44:57 welp Exp $
 
 inherit toolchain-funcs
 
@@ -22,9 +22,9 @@ src_unpack() {
 	cd "${S}"
 
 	if use zeroconf; then
-		einfo "ZeroConf support enabled"
+		elog "ZeroConf support enabled"
 	else
-		einfo "Disabling zeroconf support"
+		elog "Disabling zeroconf support"
 		{
 			echo
 			echo "/* User indicated no zeroconf support */"
@@ -35,14 +35,14 @@ src_unpack() {
 	# Disable DUID support if we have volatile storage.
 	# LiveCD's *should* enable this USE flag
 	if use vram; then
-		einfo "Disabling DUID support"
+		elog "Disabling DUID support"
 		{
 			echo
 			echo "/* User indicated volatile ram storage */"
 			echo "#undef ENABLE_DUID"
 		} >> config.h
 	else
-		einfo "DUID support enabled"
+		elog "DUID support enabled"
 	fi
 }
 
@@ -56,7 +56,7 @@ src_install() {
 
 pkg_postinst() {
 	if use zeroconf; then
-		ewarn "You have installed dhcpcd with zeroconf support."
+		elog "You have installed dhcpcd with zeroconf support."
 		elog "This means that it will always obtain an IP address even if no"
 		elog "DHCP server can be contacted, which will break any existing"
 		elog "failover support you may have configured in your net configuration."
@@ -66,16 +66,16 @@ pkg_postinst() {
 
 	if ! use vram; then
 		use zeroconf && echo
-		ewarn "You have installed dhcpcd with DUID support."
+		elog "You have installed dhcpcd with DUID support."
 		elog "This means that we will generate a DUID in /var/lib/dhcpcd/dhcpcd.duid"
 		elog "This is generated from a MAC address of the card and a timestamp."
 		elog "It will be used in every subsequent DHCP transaction, along with a IAID"
 		elog "in the ClientID option. This is required by RFC 4361."
 		echo
-		ewarn "Some DHCP server implementations require a MAC address only in the"
-		ewarn "ClientID field. These DHCP servers should be updated to be RFC"
-		ewarn "conformant. If you cannot do this, you can revert to the old"
-		ewarn "behaviour by using the -I '' option OR building dhcpcd with the"
-		ewarn "vram USE flag enabled."
+		elog "Some DHCP server implementations require a MAC address only in the"
+		elog "ClientID field. These DHCP servers should be updated to be RFC"
+		elog "conformant. If you cannot do this, you can revert to the old"
+		elog "behaviour by using the -I '' option OR building dhcpcd with the"
+		elog "vram USE flag enabled."
 	fi
 }
