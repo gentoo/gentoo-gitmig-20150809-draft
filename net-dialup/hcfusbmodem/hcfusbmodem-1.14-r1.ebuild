@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/hcfusbmodem-1.14.ebuild,v 1.1 2007/11/05 23:01:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/hcfusbmodem-1.14-r1.ebuild,v 1.1 2008/01/09 19:13:13 mrness Exp $
 
 inherit linux-info eutils
 
@@ -35,6 +35,14 @@ src_install () {
 }
 
 pkg_postinst() {
-	elog "To complete the installation and configuration of your HCF modem,"
-	elog "please run hcfusbconfig."
+	if [ "${ROOT}" = / ]; then
+		elog "To complete the installation and configuration of your HCF modem,"
+		elog "please run hcfusbconfig."
+	fi
+}
+
+pkg_prerm() {
+	if [ "${ROOT}" = / -a -f /etc/init.d/hcfusb ] ; then
+		hcfusbconfig --remove || die "hcfusbconfig --remove failed"
+	fi
 }
