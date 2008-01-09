@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.0.0_rc11.ebuild,v 1.3 2008/01/03 22:00:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.0.0_rc11-r1.ebuild,v 1.1 2008/01/09 19:53:47 armin76 Exp $
 
 inherit eutils qt4 multilib
 
