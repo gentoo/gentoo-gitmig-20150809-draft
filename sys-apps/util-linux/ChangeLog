@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.213 2008/01/09 17:44:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.214 2008/01/09 19:08:21 fmccor Exp $
+
+  09 Jan 2008; Ferris McCormick <fmccor@gentoo.org>
+  util-linux-2.13-r2.ebuild:
+  Sparc stable --- Bug #202181 --- utilities seem fine.
 
   09 Jan 2008; Jeroen Roovers <jer@gentoo.org> util-linux-2.13-r2.ebuild:
   Stable for HPPA (bug #202181).
