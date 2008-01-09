@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.214 2008/01/09 19:08:21 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.215 2008/01/09 20:02:33 maekke Exp $
+
+  09 Jan 2008; Markus Meier <maekke@gentoo.org> util-linux-2.13-r2.ebuild:
+  x86 stable, bug #202181
 
   09 Jan 2008; Ferris McCormick <fmccor@gentoo.org>
   util-linux-2.13-r2.ebuild:
