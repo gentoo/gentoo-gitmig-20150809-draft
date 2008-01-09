@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcsc-lite
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.56 2007/10/13 16:04:37 alonbl Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.57 2008/01/09 13:26:54 alonbl Exp $
+
+*pcsc-lite-1.4.99 (09 Jan 2008)
+
+  09 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> +pcsc-lite-1.4.99.ebuild:
+  Version bump
 
   13 Oct 2007; Alon Bar-Lev <alonbl@gentoo.org> pcsc-lite-1.4.4.ebuild:
   Modify docs installed, bug#195712, requested by Mart Raudsepp
