@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-ferret
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ferret/ChangeLog,v 1.1 2007/11/14 16:23:32 trapni Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ferret/ChangeLog,v 1.2 2008/01/09 09:29:25 rbrown Exp $
+
+  09 Jan 2008; Richard Brown <rbrown@gentoo.org> ruby-ferret-0.11.4.ebuild:
+  Fix P / MY_P usage for bug #202624
 
 *ruby-ferret-0.11.4 (14 Nov 2007)
 
