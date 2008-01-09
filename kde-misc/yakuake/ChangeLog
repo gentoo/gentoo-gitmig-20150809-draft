@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/yakuake
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.17 2008/01/09 15:28:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.18 2008/01/09 15:32:05 maekke Exp $
+
+  09 Jan 2008; Markus Meier <maekke@gentoo.org> yakuake-2.8.ebuild:
+  x86 stable, bug #204950
 
   09 Jan 2008; Brent Baude <ranger@gentoo.org> yakuake-2.8.ebuild:
   Marking yakuake-2.8 ppc64 for bug 204950
