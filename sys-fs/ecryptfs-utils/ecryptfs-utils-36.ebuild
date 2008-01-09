@@ -1,31 +1,29 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-36.ebuild,v 1.1 2007/12/19 21:09:26 alonbl Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-36.ebuild,v 1.2 2008/01/09 21:17:26 swegener Exp $
 
 DESCRIPTION="eCryptfs userspace utilities"
-HOMEPAGE="http://www.ecryptfs.org"
+HOMEPAGE="http://www.ecryptfs.org/"
 SRC_URI="mirror://sourceforge/ecryptfs/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="suid pam gtk openssl pkcs11 gpg doc"
 
-RDEPEND="sys-apps/keyutils
-	dev-libs/libgcrypt
+RDEPEND=">=sys-apps/keyutils-1.0
+	>=dev-libs/libgcrypt-1.2.0
 	pam? ( sys-libs/pam )
-	openssl? ( dev-libs/openssl )
+	openssl? ( >=dev-libs/openssl-0.9.7 )
 	pkcs11? (
-		dev-libs/openssl
+		>=dev-libs/openssl-0.9.7
 		>=dev-libs/pkcs11-helper-1.04
 	)
 	gpg? ( app-crypt/gpgme )
 	gtk? ( x11-libs/gtk+ )"
 # perl required for man generation
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	>=dev-util/pkgconfig-0.9.0
 	dev-lang/perl"
 
 src_compile() {

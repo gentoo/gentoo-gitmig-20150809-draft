@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ecryptfs-utils
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.16 2007/12/19 21:09:26 alonbl Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.17 2008/01/09 21:17:26 swegener Exp $
+
+  09 Jan 2008; Sven Wegener <swegener@gentoo.org> ecryptfs-utils-36.ebuild:
+  Add ~amd64 keyword. Drop useless inherit eutils.
 
 *ecryptfs-utils-36 (19 Dec 2007)
 
