@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/repodoc/repodoc-9999.ebuild,v 1.2 2007/08/08 16:17:25 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/repodoc/repodoc-9999.ebuild,v 1.3 2008/01/09 16:01:25 yoswink Exp $
 
 EGIT_REPO_URI="git://git.ferdyx.org/repodoc.git"
 EGIT_BRANCH="next"
@@ -21,6 +21,7 @@ COMMON_DEPEND="dev-libs/libxml2
 	gtk? ( dev-dotnet/gtk-sharp )"
 
 DEPEND="${COMMON_DEPEND}
+	dev-util/pkgconfig
 	doc? ( app-text/txt2tags )"
 
 RDEPEND="${COMMON_DEPEND}

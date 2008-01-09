@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/repodoc/repodoc-0.1.0.ebuild,v 1.1 2007/05/07 22:56:05 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/repodoc/repodoc-0.1.0.ebuild,v 1.2 2008/01/09 16:01:25 yoswink Exp $
 
 inherit mono
 
@@ -17,6 +17,7 @@ RDEPEND="${DEPEND}
 	|| ( sys-apps/gawk sys-apps/mawk sys-apps/busybox )"
 
 DEPEND="dev-libs/libxml2
+	dev-util/pkgconfig
 	gtk? ( dev-dotnet/gtk-sharp )"
 
 src_compile() {
