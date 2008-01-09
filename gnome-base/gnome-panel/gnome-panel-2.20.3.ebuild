@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.20.0.1.ebuild,v 1.2 2007/10/09 11:23:11 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.20.3.ebuild,v 1.1 2008/01/09 22:42:58 eva Exp $
 
 inherit autotools eutils gnome2
 
@@ -36,6 +36,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35
 	>=app-text/gnome-doc-utils-0.3.2
+	~app-text/docbook-xml-dtd-4.1.2
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
