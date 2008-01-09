@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/eselect-emacs-1.3-r1.ebuild,v 1.1 2007/12/21 08:47:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/eselect-emacs-1.3-r2.ebuild,v 1.1 2008/01/09 15:47:16 ulm Exp $
 
 DESCRIPTION="Manages Emacs versions"
 HOMEPAGE="http://www.gentoo.org/proj/en/lisp/emacs/"
@@ -22,4 +22,5 @@ src_install() {
 	doins emacs.eselect || die "doins failed"
 	doman emacs.eselect.5 || die "doman failed"
 	dodoc ChangeLog || die "dodoc failed"
+	dosbin "${FILESDIR}/emacs-updater" || die "dosbin failed"
 }
