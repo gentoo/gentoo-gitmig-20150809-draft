@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glew
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.34 2008/01/09 14:30:22 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.35 2008/01/09 14:43:24 maekke Exp $
+
+  09 Jan 2008; Markus Meier <maekke@gentoo.org> glew-1.4.0.ebuild:
+  x86 stable, bug #197162
 
   09 Jan 2008; Ferris McCormick <fmccor@gentoo.org> glew-1.4.0.ebuild:
   Sparc stable --- Bug #197162 --- glewinfo and visualinfo work fine.
