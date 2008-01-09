@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ddskk
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.22 2007/10/04 23:15:41 matsuu Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.23 2008/01/09 15:26:44 ulm Exp $
+
+  09 Jan 2008; Ulrich Mueller <ulm@gentoo.org> files/50ddskk-gentoo.el,
+  ddskk-13.1.ebuild:
+  Fix compile failure, bug #205045. Add missing load-path.
 
   04 Oct 2007; <matsuu@gentoo.org> -ddskk-12.2.1_pre20040822.ebuild,
   -ddskk-12.2.1_pre20050522.ebuild, ddskk-13.1.ebuild:
