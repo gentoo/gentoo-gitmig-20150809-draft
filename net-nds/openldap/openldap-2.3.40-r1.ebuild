@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.40.ebuild,v 1.1 2008/01/06 09:32:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.40-r1.ebuild,v 1.1 2008/01/09 23:14:25 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -474,10 +474,8 @@ pkg_postinst() {
 		# and a misconfiguration if multiple machines use the same key and cert.
 		# Additionally, it overwrites
 		if use ssl; then
-			insinto /etc/openldap/ssl
-			insopts -m0644 -o ldap -g ldap
-			docert ldap
-			##fowners ldap:ldap /etc/openldap/ssl/ldap.*
+			install_cert /etc/openldap/ssl/ldap
+			chown ldap:ldap "${ROOT}"etc/openldap/ssl/ldap.*
 			ewarn "Self-signed SSL certificates are treated harshly by OpenLDAP 2.[12]"
 			ewarn "Self-signed SSL certificates are treated harshly by OpenLDAP 2.[12]"
 			ewarn "add 'TLS_REQCERT never' if you want to use them."
