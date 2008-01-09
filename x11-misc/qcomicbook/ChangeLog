@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/qcomicbook
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.17 2007/11/13 09:47:36 nelchael Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.18 2008/01/09 08:33:34 nelchael Exp $
+
+  09 Jan 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  qcomicbook-0.4.0.ebuild:
+  Add missing dev-util/pkgconfig to DEPEND.
 
 *qcomicbook-0.4.0 (13 Nov 2007)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.4.0.ebuild,v 1.1 2007/11/13 09:47:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.4.0.ebuild,v 1.2 2008/01/09 08:33:34 nelchael Exp $
 
 inherit autotools eutils qt4
 
@@ -17,7 +17,8 @@ RDEPEND="$(qt4_min_version 4.0)
 	media-libs/imlib2
 	|| ( app-arch/unrar app-arch/rar )
 	app-arch/zip"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
