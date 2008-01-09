@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alock
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/ChangeLog,v 1.7 2007/10/18 21:50:40 hansmi Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/ChangeLog,v 1.8 2008/01/09 15:25:51 maekke Exp $
+
+  09 Jan 2008; Markus Meier <maekke@gentoo.org> alock-60-r3.ebuild:
+  make sure that imlib2 is built with X, x86 stable, bug #204934
 
   18 Oct 2007; Michael Hanselmann <hansmi@gentoo.org> -alock-60-r2.ebuild:
   Remove old ebuild.

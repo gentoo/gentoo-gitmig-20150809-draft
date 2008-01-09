@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.1 2007/07/07 09:15:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.2 2008/01/09 15:25:51 maekke Exp $
+
+inherit eutils
 
 DESCRIPTION="alock - locks the local X display until a password is entered"
 HOMEPAGE="
@@ -11,7 +13,7 @@ SRC_URI="http://alock.googlecode.com/files/alock-svn-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="
@@ -22,6 +24,13 @@ DEPEND="
 RDEPEND=""
 
 MY_S="${WORKDIR}/alock-svn-${PV}"
+
+pkg_setup() {
+	if ! built_with_use media-libs/imlib2 X ; then
+		eerror "media-libs/imlib2 has to be built with X support"
+		die "emerge media-libs/imlib2 with USE=\"X\""
+	fi
+}
 
 src_unpack() {
 	unpack "${A}"
