@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/superswitcher-0.6.ebuild,v 1.2 2007/10/22 16:56:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/superswitcher-0.6.ebuild,v 1.3 2008/01/09 19:53:01 swegener Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2.6
 	>=x11-libs/libwnck-2.10"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

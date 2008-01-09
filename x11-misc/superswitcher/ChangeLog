@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/superswitcher
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/ChangeLog,v 1.5 2007/10/23 16:54:22 swegener Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/ChangeLog,v 1.6 2008/01/09 19:53:01 swegener Exp $
+
+  09 Jan 2008; Sven Wegener <swegener@gentoo.org> superswitcher-0.6.ebuild:
+  Add missing pkgconfig dependency, bug #204960.
 
   23 Oct 2007; Sven Wegener <swegener@gentoo.org>
   files/superswitcher-0.6-wnck-workspace.patch:
