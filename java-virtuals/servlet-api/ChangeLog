@@ -1,6 +1,10 @@
 # ChangeLog for java-virtuals/servlet-api
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.2 2007/11/20 09:06:55 ali_bush Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.3 2008/01/09 07:05:37 josejx Exp $
+
+  09 Jan 2008; Joseph Jezak <josejx@gentoo.org> servlet-api-2.2.ebuild,
+  servlet-api-2.3.ebuild, servlet-api-2.4.ebuild, servlet-api-2.5.ebuild:
+  Marked ~ppc/~ppc64 for wltjr.
 
   20 Nov 2007; <alistair@gentoo.org> servlet-api-2.2.ebuild,
   servlet-api-2.3.ebuild, servlet-api-2.4.ebuild, servlet-api-2.5.ebuild:
