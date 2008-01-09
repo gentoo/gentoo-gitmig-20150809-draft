@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.68.00.04.ebuild,v 1.2 2008/01/08 10:06:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.68.00.04-r1.ebuild,v 1.1 2008/01/09 18:51:29 mrness Exp $
 
 inherit eutils linux-info
 
@@ -70,6 +70,14 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	elog "To complete the installation and configuration of your HSF modem,"
-	elog "please run hsfconfig."
+	if [ "${ROOT}" = / ]; then
+		elog "To complete the installation and configuration of your HSF modem,"
+		elog "please run hsfconfig."
+	fi
+}
+
+pkg_prerm() {
+	if [ "${ROOT}" = / -a -f /etc/init.d/hsf ] ; then
+		hsfconfig --remove || die "hsfconfig --remove failed"
+	fi
 }
