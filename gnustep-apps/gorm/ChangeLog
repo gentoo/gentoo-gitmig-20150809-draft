@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/gorm
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.20 2007/09/10 18:53:49 voyageur Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.21 2008/01/09 12:37:08 voyageur Exp $
+
+*gorm-1.2.2 (09 Jan 2008)
+
+  09 Jan 2008; Bernard Cafarelli <voyageur@gentoo.org> +gorm-1.2.2.ebuild:
+  Version bump (needs unstable gnustep)
 
 *gorm-1.2.1 (10 Sep 2007)
 
