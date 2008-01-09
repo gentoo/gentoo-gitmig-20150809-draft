@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/otpcalc-0.97-r2.ebuild,v 1.3 2007/12/30 23:15:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/otpcalc-0.97-r2.ebuild,v 1.4 2008/01/09 12:07:28 ulm Exp $
 
 inherit eutils
 
@@ -13,9 +13,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-2*
+RDEPEND="=x11-libs/gtk+-2*
 	dev-libs/openssl"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/otpCalc-${PV}"
 
