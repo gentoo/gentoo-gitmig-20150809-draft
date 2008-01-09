@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/yakuake
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.15 2007/10/01 21:39:56 genstef Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.16 2008/01/09 07:31:47 philantrop Exp $
+
+  09 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> yakuake-2.8.ebuild:
+  Marked stable on amd64 as per bug 204950.
 
 *yakuake-2.8 (01 Oct 2007)
 
