@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/libggiwmh
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.1 2008/01/10 20:01:59 drac Exp $
+
+*libggiwmh-0.3.2 (10 Jan 2008)
+
+  10 Jan 2008; Samuli Suominen <drac@gentoo.org> +libggiwmh-0.3.2.ebuild:
+  Initial commit wrt #126400, thanks to Kimura Masaru.
+
