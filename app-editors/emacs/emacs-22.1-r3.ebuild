@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r3.ebuild,v 1.13 2008/01/10 09:34:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r3.ebuild,v 1.14 2008/01/10 10:29:37 ulm Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -118,7 +118,7 @@ src_compile() {
 			echo
 			myconf="${myconf} --with-x-toolkit=gtk"
 		elif use Xaw3d; then
-			einfo "Configuring to build with Xaw3d(athena) support"
+			einfo "Configuring to build with Xaw3d (athena) support"
 			myconf="${myconf} --with-x-toolkit=athena"
 			myconf="${myconf} --without-gtk"
 		elif use motif; then
