@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rmagick
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.87 2007/12/29 14:43:55 graaff Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.88 2008/01/10 19:58:30 graaff Exp $
+
+*rmagick-2.1.0 (10 Jan 2008)
+
+  10 Jan 2008; Hans de Graaff <graaff@gentoo.org> +rmagick-2.1.0.ebuild:
+  Version bump: minor enhancements and bug fixes.
 
 *rmagick-2.0.0 (29 Dec 2007)
 
