@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-timers
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-timers/ChangeLog,v 1.2 2007/03/12 14:42:45 lack Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-timers/ChangeLog,v 1.3 2008/01/10 14:34:45 lack Exp $
+
+  10 Jan 2008; Jim Ramsay <lack@gentoo.org> gkrellm-timers-1.2.ebuild:
+  Adding ~amd64
 
   12 Mar 2007; Jim Ramsay <lack@gentoo.org> gkrellm-timers-1.2.ebuild:
   Updated to use new gkrellm-plugin eclass
