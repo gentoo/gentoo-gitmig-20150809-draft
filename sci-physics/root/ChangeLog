@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/root
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.18 2007/12/16 17:04:42 markusle Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.19 2008/01/10 00:08:22 bicatali Exp $
+
+  10 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/root-5.16.00-flags.patch, +files/root-5.16.00-postgres.patch,
+  +files/root-5.16.00-xft.patch, root-5.16.00-r1.ebuild:
+  Added various patches: one to respect flags in xrootd (needed for afs), one
+  to properly handle -truetype without libXft (bug #204725) and last one for
+  postgresql (bug #203015). Added pch use flag for faster compilation with g++
 
   16 Dec 2007; Markus Dittrich <markusle@gentoo.org>
   +files/root-5.16.00-afs.patch, root-5.16.00-r1.ebuild:

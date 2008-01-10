@@ -1,0 +1,13 @@
+--- xrootd/config/GNUmake.env.in.orig	2007-12-13 09:23:25.041447494 +0000
++++ xrootd/config/GNUmake.env.in	2007-12-13 09:24:10.056012728 +0000
+@@ -22,8 +22,8 @@
+ LIBDIR  = ../../lib$(ARCHDIR)
+ OBJDIR  = ../../obj$(ARCHDIR)
+ 
+-CFLAGS     = $(CF64) $(CFOP) -DXrdDEBUG=$(XrdDEBUG)
+-CFLAGS32   = $(CF32) $(CFOP) -DXrdDEBUG=$(XrdDEBUG)
++CFLAGS     = $(CF64) $(OPTFLAGS) $(CFOP) -DXrdDEBUG=$(XrdDEBUG)
++CFLAGS32   = $(CF32) $(OPTFLAGS) $(CFOP) -DXrdDEBUG=$(XrdDEBUG)
+ 
+ # Extra flags
+ CFTRACE   = @tracedbg@

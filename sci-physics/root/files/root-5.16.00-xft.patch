@@ -1,0 +1,24 @@
+--- config/Makefile.in.orig	2007-12-12 22:41:28.000000000 +0000
++++ config/Makefile.in	2007-12-12 22:45:27.000000000 +0000
+@@ -36,6 +36,7 @@
+ X11LIBDIR      := @x11libdir@
+ XPMLIBDIR      := @xpmlibdir@
+ XPMLIB         := @xpmlib@
++XFTLIB         := @enable_xft@
+ 
+ EXCEPTIONS     := @exceptions@
+ EXPLICITLINK   := @explicitlink@
+--- x11ttf/Module.mk.orig	2008-01-09 01:13:23.000000000 +0000
++++ x11ttf/Module.mk	2008-01-09 10:20:00.000000000 +0000
+@@ -31,9 +31,9 @@
+ ALLLIBS     += $(X11TTFLIB)
+ ALLMAPS     += $(X11TTFMAP)
+ 
+-#ifeq ($(XFTLIB),yes)
++ifeq ($(XFTLIB),yes)
+ XLIBS       += $(X11LIBDIR) -lXft
+-#endif
++endif
+ 
+ # include all dependency files
+ INCLUDEFILES += $(X11TTFDEP)

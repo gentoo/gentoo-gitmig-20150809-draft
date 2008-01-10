@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00-r1.ebuild,v 1.2 2007/12/16 17:04:42 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00-r1.ebuild,v 1.3 2008/01/10 00:08:22 bicatali Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 fortran
 
@@ -16,10 +16,10 @@ SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="~amd64 ~sparc ~x86"
 
-IUSE="afs cern doc fftw kerberos ldap mysql odbc postgres
+IUSE="afs cern doc fftw kerberos ldap mysql odbc pch postgres
 	python ruby qt3 ssl truetype xml"
 
-DEPEND="sys-apps/shadow
+RDEPEND="sys-apps/shadow
 	x11-libs/libXpm
 	>=sci-libs/gsl-1.8
 	dev-libs/libpcre
@@ -41,6 +41,9 @@ DEPEND="sys-apps/shadow
 	odbc? ( dev-db/unixODBC )
 	truetype? ( x11-libs/libXft )"
 
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
+
 S="${WORKDIR}/${PN}"
 
 pkg_setup() {
@@ -48,11 +51,11 @@ pkg_setup() {
 	elog "You may want to build ROOT with these non Gentoo extra packages:"
 	elog "AliEn, castor, Chirp, clarens, Globus, Monalisa, Oracle, peac, "
 	elog "PYTHIA, PYTHIA6, SapDB, SRP, Venus"
-	elog "You can use the EXTRA_CONF variable for this."
+	elog "You can use the EXTRA_ECONF variable for this."
 	elog "Example, for PYTHIA, you would do: "
-	elog "EXTRA_CONF=\"--enable-pythia --with-pythia-libdir=/usr/$(get_libdir)\" emerge root"
+	elog "EXTRA_ECONF=\"--enable-pythia --with-pythia-libdir=/usr/$(get_libdir)\" emerge root"
 	elog
-	epause 10
+	epause 7
 	if use cern; then
 		FORTRAN="gfortran g77 ifc"
 		fortran_pkg_setup
@@ -66,30 +69,36 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-fortran.patch
 	epatch "${DISTDIR}"/${P}-gcc-4.2.patch.bz2
 	epatch "${FILESDIR}"/${P}-afs.patch
-	if [[ ${ARCH} == sparc ]]; then
-		cd "${S}/xrootd/src"
-		tar xzf xrootd-20060928-1600.src.tgz
-		epatch "${FILESDIR}"/sparc-${P}.patch
-		tar czf xrootd-20060928-1600.src.tgz xrootd
-	fi
+	epatch "${FILESDIR}"/${P}-xft.patch
+	epatch "${FILESDIR}"/${P}-postgres.patch
+	cd "${S}"/xrootd/src
+	tar xzf xrootd-20060928-1600.src.tgz
+	epatch "${FILESDIR}"/sparc-${P}.patch
+	epatch "${FILESDIR}"/${P}-flags.patch
+	tar czf xrootd-20060928-1600.src.tgz xrootd
 }
 
 src_compile() {
 
 	local target
+	local myconf="--disable-pch"
+	use pch && myconf="--enable-pch"
 	if [[ "$(tc-getCXX)" == icc* ]]; then
 		if use amd64; then
 			target=linuxx8664icc
 		elif use x86; then
 			target=linuxicc
 		fi
+		myconf="--disable-pch"
 	fi
 	use afs && append-flags -DAFS_OLD_COM_ERR
+
 	local myfortran
 	use cern && myfortran="F77=${FORTRANC}"
 
 	# watch: the configure script is not the standard autotools
-	# disable-pch: precompiled headers buggy with icc
+	# precompiled headers buggy with icc
+
 
 	./configure ${target} \
 		--prefix=/usr \
@@ -117,7 +126,6 @@ src_compile() {
 		--disable-chirp \
 		--disable-dcache \
 		--disable-globus \
-		--disable-pch \
 		--disable-rfio \
 		--disable-rpath \
 		--disable-sapdb \
@@ -154,7 +162,8 @@ src_compile() {
 		$(use_enable ssl) \
 		$(use_enable truetype xft) \
 		$(use_enable xml) \
-		${EXTRA_CONF} \
+		${myconf} \
+		${EXTRA_ECONF} \
 		|| die "configure failed"
 
 	emake \

@@ -1,0 +1,24 @@
+--- ./pgsql/src/TPgSQLServer.cxx~	2007-06-08 18:45:02.000000000 +0900
++++ ./pgsql/src/TPgSQLServer.cxx	2007-12-22 22:41:25.000000000 +0900
+@@ -344,16 +344,16 @@
+       SetError(-1, "cannot allocate PGSQL_STMT" , "Statement");
+       return 0;
+    }
+-   stmt->conn=fPgSQL;
+-   stmt->res=PQprepare(fPgSQL,"", sql,0,(const Oid*)0);
++   stmt->fConn=fPgSQL;
++   stmt->fRes=PQprepare(fPgSQL,"", sql,0,(const Oid*)0);
+ 
+-   ExecStatusType stat = PQresultStatus(stmt->res);
++   ExecStatusType stat = PQresultStatus(stmt->fRes);
+    if (pgsql_success(stat)) {
+       fErrorOut=stat;
+       return new TPgSQLStatement(stmt, fErrorOut);
+    } else {
+-      SetError(stat, PQresultErrorMessage(stmt->res), "Statement");
+-      stmt->conn = 0;
++      SetError(stat, PQresultErrorMessage(stmt->fRes), "Statement");
++      stmt->fConn = 0;
+       delete stmt;
+       return 0;
+    }
