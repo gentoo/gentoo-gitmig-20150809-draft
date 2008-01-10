@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.20.3.ebuild,v 1.1 2008/01/09 23:28:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.20.3.ebuild,v 1.2 2008/01/10 21:48:38 eva Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
-inherit games eutils gnome2 autotools
+inherit games eutils gnome2 autotools virtualx
 
 DESCRIPTION="Collection of games for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -65,6 +65,10 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-2.14.0-no_lazy_bindings.patch"
 
 	AT_M4DIR="m4" eautoreconf
+}
+
+src_test() {
+	Xemake check || die "tests failed"
 }
 
 src_install() {
