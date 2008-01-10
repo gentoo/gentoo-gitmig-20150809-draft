@@ -7,10 +7,10 @@ EBUILD font-screen-cyrillic-1.0.0.ebuild 491 RMD160 63f55cd839823297da9156b68937
 MD5 3c557aed620919f2e5436b91febe300f font-screen-cyrillic-1.0.0.ebuild 491
 RMD160 63f55cd839823297da9156b689375773459f1a69 font-screen-cyrillic-1.0.0.ebuild 491
 SHA256 cb406854614e323ddf62ebddabec4fcdb0a4aa7486f3e108a65e61424357da3b font-screen-cyrillic-1.0.0.ebuild 491
-EBUILD font-screen-cyrillic-1.0.1.ebuild 498 RMD160 1c92452df863a548581d8990e8ca433b605d953a SHA1 cef9d76e3c161298ef62d6d088d07d998afab64c SHA256 4f81fc9d1bbbf16e22371cf8be76536deb739b70fe68a35861a6f4f65c792da6
-MD5 4ba7f985dce98809d13c49039e2c3d47 font-screen-cyrillic-1.0.1.ebuild 498
-RMD160 1c92452df863a548581d8990e8ca433b605d953a font-screen-cyrillic-1.0.1.ebuild 498
-SHA256 4f81fc9d1bbbf16e22371cf8be76536deb739b70fe68a35861a6f4f65c792da6 font-screen-cyrillic-1.0.1.ebuild 498
+EBUILD font-screen-cyrillic-1.0.1.ebuild 498 RMD160 6610bacc0dfb1c39dddb034b66ecb3b88caee7bf SHA1 f56b4b84067c0ba9c51063b4a70b901c15f8b006 SHA256 b41fe8514b031f4064f2de414f9631c47aba37cadb077ff70bff6c10686c822a
+MD5 c07c2acf0bbefb5450433e6e9328fc2d font-screen-cyrillic-1.0.1.ebuild 498
+RMD160 6610bacc0dfb1c39dddb034b66ecb3b88caee7bf font-screen-cyrillic-1.0.1.ebuild 498
+SHA256 b41fe8514b031f4064f2de414f9631c47aba37cadb077ff70bff6c10686c822a font-screen-cyrillic-1.0.1.ebuild 498
 MISC ChangeLog 2713 RMD160 fbc8b4297920a79ea29bb7f5841a62838fd8d6f3 SHA1 bd601f833f7598ce84cddb02f5c2df308a740b0a SHA256 5c5f72c2e48ba9fff533278fa063230660c2e833b338b75f7e144fdf175b0be2
 MD5 536e0f56a6d7c9a9bcf758326b463d4d ChangeLog 2713
 RMD160 fbc8b4297920a79ea29bb7f5841a62838fd8d6f3 ChangeLog 2713
@@ -26,9 +26,9 @@ MD5 83eebf2e4118d16b6c1e7c45d79bc457 files/digest-font-screen-cyrillic-1.0.1 280
 RMD160 a3e5547c773aa5155f69e16e18ea5d8207dbb815 files/digest-font-screen-cyrillic-1.0.1 280
 SHA256 f3e87bfca1163e5022e2edc0918231f8e9fc1c3fb6769d7af4e5b10e3124eff7 files/digest-font-screen-cyrillic-1.0.1 280
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.8 (GNU/Linux)
 
-iD8DBQFHaawEUPEOwClectkRAruAAJ0ZfbPszV0rNFPjUrJ5swtT1IA4gQCfYVWJ
-UoJ0rmcjkG3h3S6UbyMyTLk=
-=kTNZ
+iEYEARECAAYFAkeF6wgACgkQj9hvisErhMJxRgCgjQ7cDUNxD8pS8d8vUxiyUNj6
++VQAoNFvNVxLtUGLxfmZJHvx5Wj1pSvX
+=e5a0
 -----END PGP SIGNATURE-----
