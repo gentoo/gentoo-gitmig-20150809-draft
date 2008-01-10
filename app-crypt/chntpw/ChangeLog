@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/chntpw
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.11 2007/11/15 22:10:39 alonbl Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.12 2008/01/10 12:11:33 alonbl Exp $
+
+  10 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org>
+  -chntpw-0.99.3.20040818.ebuild, -chntpw-0.99.4.20070409.ebuild,
+  chntpw-0.99.4.20070923.ebuild:
+  Add unzip dependency, bug#205158, thanks to yahya, cleanup
 
   15 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml:
   Assign to maintainer-needed@gentoo.org, bug#185411.
