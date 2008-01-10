@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00-r1.ebuild,v 1.3 2008/01/10 00:08:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00-r1.ebuild,v 1.4 2008/01/10 07:38:17 mr_bones_ Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 fortran
 
@@ -98,7 +98,6 @@ src_compile() {
 
 	# watch: the configure script is not the standard autotools
 	# precompiled headers buggy with icc
-
 
 	./configure ${target} \
 		--prefix=/usr \
