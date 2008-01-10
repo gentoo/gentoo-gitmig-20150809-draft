@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/unieject
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.36 2007/05/15 14:13:31 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.37 2008/01/10 13:42:04 armin76 Exp $
+
+  10 Jan 2008; Raúl Porcel <armin76@gentoo.org> -unieject-5.2.ebuild,
+  unieject-5.3.2.ebuild:
+  Add missing pkgconfig dep, bug #205182, remove old
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>

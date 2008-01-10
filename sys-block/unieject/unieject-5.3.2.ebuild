@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.3.2.ebuild,v 1.3 2006/11/17 15:42:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.3.2.ebuild,v 1.4 2008/01/10 13:42:04 armin76 Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -19,7 +19,8 @@ RDEPEND=">=dev-libs/libcdio-0.77
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	sys-apps/sed"
+	sys-apps/sed
+	dev-util/pkgconfig"
 RDEPEND="${RDEPEND}
 	pmount? ( sys-apps/pmount )
 	!sys-apps/eject
