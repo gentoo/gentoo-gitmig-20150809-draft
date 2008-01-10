@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+ # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.2.ebuild,v 1.8 2007/11/12 10:57:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.2.ebuild,v 1.9 2008/01/10 07:16:58 opfer Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 
 IUSE=""
 
-DEPEND=""
+DEPEND="gnome-extra/libgda"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

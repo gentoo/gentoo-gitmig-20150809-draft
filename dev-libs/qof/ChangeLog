@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/qof
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.8 2007/11/12 10:57:46 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.9 2008/01/10 07:16:58 opfer Exp $
+
+  10 Jan 2008; Christian Faulhammer <opfer@gentoo.org> qof-0.7.2.ebuild:
+  add gnome-extra/libgda as DEPEND, fixes bug 204958, reported by Radoslaw
+  Szkodzinski <root AT astralstorm DOT puszkin DOT org>
 
   12 Nov 2007; Christian Faulhammer <opfer@gentoo.org> qof-0.7.2.ebuild:
   build it with -j1, see bug 197999; thanks to Volker Wegert
