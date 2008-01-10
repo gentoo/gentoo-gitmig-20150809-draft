@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.ebuild,v 1.4 2007/11/27 10:53:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.ebuild,v 1.5 2008/01/10 22:42:11 caster Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -26,7 +26,7 @@ RDEPEND="x11-libs/libXt
 	x11-libs/libXau
 	x11-libs/libXdmcp
 	>=virtual/jre-1.5
-	dev-java/junit
+	=dev-java/junit-3.8*
 	dev-java/commons-net
 	>=dev-java/jgoodies-forms-1.0.7
 	>=dev-java/jgoodies-looks-2.0
