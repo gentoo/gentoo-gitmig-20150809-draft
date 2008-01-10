@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2-r1.ebuild,v 1.1 2007/12/07 08:58:57 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2-r1.ebuild,v 1.2 2008/01/10 04:43:03 dberkholz Exp $
 
 inherit eutils fortran toolchain-funcs
 
@@ -36,6 +36,8 @@ src_unpack() {
 	# The length of time must be at least 10, not 9
 	# http://gcc.gnu.org/ml/fortran/2006-02/msg00198.html
 	epatch "${FILESDIR}"/1.1-time-length-10.patch
+
+	epatch "${FILESDIR}"/1.2-allow-unknown-architectures.patch
 
 	# Set up location for the build directory
 	# Uses obsolete `sort` syntax, so we set _POSIX2_VERSION
