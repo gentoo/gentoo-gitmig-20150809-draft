@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockmaker/mockmaker-1.12.0_p20050104-r1.ebuild,v 1.6 2007/11/10 12:21:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockmaker/mockmaker-1.12.0_p20050104-r1.ebuild,v 1.7 2008/01/10 22:38:11 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -15,7 +15,7 @@ IUSE="source"
 
 RDEPEND=">=virtual/jre-1.4
 	dev-java/qdox
-	dev-java/junit
+	=dev-java/junit-3.8*
 	>=dev-java/ant-core-1.4
 	dev-java/mockobjects"
 
