@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/arm-fdisk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/ChangeLog,v 1.3 2008/01/10 17:39:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/ChangeLog,v 1.4 2008/01/10 20:07:19 maekke Exp $
+
+  10 Jan 2008; Markus Meier <maekke@gentoo.org> arm-fdisk-3.0.6.ebuild:
+  x86 stable, bug #191241
 
   10 Jan 2008; Jeroen Roovers <jer@gentoo.org> arm-fdisk-3.0.6.ebuild:
   Stable for HPPA (bug #191241).
