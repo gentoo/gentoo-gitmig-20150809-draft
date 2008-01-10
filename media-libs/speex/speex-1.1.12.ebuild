@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.12.ebuild,v 1.12 2008/01/10 14:58:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.12.ebuild,v 1.13 2008/01/10 15:00:52 drac Exp $
 
 inherit eutils autotools libtool
 
 DESCRIPTION="Speech encoding library"
-HOMEPAGE="http://www.speex.org/"
+HOMEPAGE="http://www.speex.org"
 SRC_URI="http://downloads.xiph.org/releases/speex/${P}.tar.gz"
 
 LICENSE="BSD"
@@ -38,11 +38,11 @@ src_compile() {
 	econf \
 		$(use_enable vorbis-psy) \
 		$(use_enable sse) \
-		|| die
-	emake || die
+		|| die "econf failed."
+	emake || die "emake failed."
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog README* TODO NEWS
 }
