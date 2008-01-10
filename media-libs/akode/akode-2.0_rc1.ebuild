@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/akode-2.0_rc1.ebuild,v 1.12 2006/10/19 19:25:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/akode-2.0_rc1.ebuild,v 1.13 2008/01/10 17:04:04 drac Exp $
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -11,7 +11,7 @@ SRC_URI="http://www.kde-look.org/content/files/30375-${MY_P}.tar.gz"
 LICENSE="LGPL-2"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="mips"
 IUSE="alsa jack flac mp3 oss speex vorbis"
 
 DEPEND="media-libs/libsamplerate

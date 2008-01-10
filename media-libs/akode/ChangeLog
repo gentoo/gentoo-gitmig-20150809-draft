@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/akode
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.34 2007/10/14 10:08:08 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.35 2008/01/10 17:04:04 drac Exp $
+
+  10 Jan 2008; Samuli Suominen <drac@gentoo.org> -akode-2.0_beta3.ebuild,
+  akode-2.0_rc1.ebuild, -akode-2.0.1.ebuild:
+  Remove old versions, leave one ebuild behind for mips.
 
   14 Oct 2007; Raúl Porcel <armin76@gentoo.org> akode-2.0.1-r1.ebuild:
   sparc stable wrt #191292
