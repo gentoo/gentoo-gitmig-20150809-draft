@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/bcmail-1.36.ebuild,v 1.9 2007/10/05 07:34:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/bcmail-1.38-r1.ebuild,v 1.1 2008/01/10 22:15:31 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -13,12 +13,12 @@ SRC_URI="http://www.bouncycastle.org/download/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 COMMON_DEPEND="~dev-java/bcprov-${PV}
-		dev-java/junit
+		=dev-java/junit-3.8*
 		dev-java/sun-jaf
-		dev-java/sun-javamail"
+		java-virtuals/javamail"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
 	${COMMON_DEPEND}"
@@ -38,7 +38,7 @@ src_compile() {
 
 	find org -name "*.java" > "${T}/src.list"
 	ejavac -d "${S}/classes" \
-		-classpath $(java-pkg_getjars bcprov,junit,sun-jaf,sun-javamail) \
+		-classpath $(java-pkg_getjars bcprov,junit,sun-jaf,javamail) \
 		"@${T}/src.list"
 
 	cd "${S}/classes"

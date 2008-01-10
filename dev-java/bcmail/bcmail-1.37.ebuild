@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/bcmail-1.37.ebuild,v 1.5 2007/10/15 14:07:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/bcmail-1.37.ebuild,v 1.6 2008/01/10 22:15:31 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 
 COMMON_DEPEND="~dev-java/bcprov-${PV}
-		dev-java/junit
+		=dev-java/junit-3.8*
 		dev-java/sun-jaf
 		dev-java/sun-javamail"
 DEPEND=">=virtual/jdk-1.4
