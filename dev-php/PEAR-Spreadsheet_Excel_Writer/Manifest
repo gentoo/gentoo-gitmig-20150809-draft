@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX PEAR-Spreadsheet_Excel_Writer-0.9.1-utf8.patch 8017 RMD160 f392ae4a9a036649e66dc2c5d43fb2acf5e61651 SHA1 416b0f60e1ad5691b54e744dd67532ca93ac2f35 SHA256 358bbe62957f4fcae77be46986777e8543c4c13060b69de7bc50fdcd979367da
 MD5 b918c0fabb207146be28ccadc9a77eb5 files/PEAR-Spreadsheet_Excel_Writer-0.9.1-utf8.patch 8017
 RMD160 f392ae4a9a036649e66dc2c5d43fb2acf5e61651 files/PEAR-Spreadsheet_Excel_Writer-0.9.1-utf8.patch 8017
@@ -33,3 +36,10 @@ SHA256 789f1c366d1d62d55a65ea6f444a81ed778be6001ac29d5162f5e16fd6625c9d files/di
 MD5 d01ffd4e8d523bd8fa719df9c009ef90 files/digest-PEAR-Spreadsheet_Excel_Writer-0.9.1-r1 280
 RMD160 b6c6bd5bea52af6b2ce6226ad2a3b21bde7c8227 files/digest-PEAR-Spreadsheet_Excel_Writer-0.9.1-r1 280
 SHA256 789f1c366d1d62d55a65ea6f444a81ed778be6001ac29d5162f5e16fd6625c9d files/digest-PEAR-Spreadsheet_Excel_Writer-0.9.1-r1 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkeF7lEACgkQj9hvisErhMJDjgCg1Ig4HZIV+Nz/u9vewiW5AGn9
+cSQAnRO8XTP5F61t3oR5R5/yF14qezk/
+=cz4A
+-----END PGP SIGNATURE-----

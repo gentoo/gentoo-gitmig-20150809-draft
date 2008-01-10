@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 1.5.2-php-pass-by-reference-fix.patch 2480 RMD160 b59ab8b32138e9b5dce7a793c90cf9625aedc2c5 SHA1 c93e40f9530d32d152fd7a539a8cbe7fa59026c7 SHA256 56874d0a1513f5d3e20516e8b500bea6a38d2eeb0e83b0e2689c45fd83d8433a
 MD5 340a2b2d23a5e7e2f003c18661a76305 files/1.5.2-php-pass-by-reference-fix.patch 2480
 RMD160 b59ab8b32138e9b5dce7a793c90cf9625aedc2c5 files/1.5.2-php-pass-by-reference-fix.patch 2480
@@ -37,3 +40,10 @@ SHA256 a69780ddf8f6e9659bea5c35f97bdf14591dfb723c89689c1fec8a19e2d8ed0e files/di
 MD5 061e9628bfa8a67365e921290657c3b0 files/digest-PEAR-Mail_Mime-1.5.2 235
 RMD160 1e48f676874a37a0ccd110d3e80633fa3f82cac9 files/digest-PEAR-Mail_Mime-1.5.2 235
 SHA256 2dbced0d9f6e71385ca7ca03e1dae3fb7e3cf3c3b06a4b04b4a9ee3d40a64bbe files/digest-PEAR-Mail_Mime-1.5.2 235
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkeF7lIACgkQj9hvisErhMK6qwCfXGESm0w7q50dvwmfmpAm5eRL
+a0oAn0rUpreRCzfok/stbluDmetz5Qr5
+=/DPc
+-----END PGP SIGNATURE-----
