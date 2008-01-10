@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.50 2008/01/10 01:12:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.51 2008/01/10 08:43:28 opfer Exp $
+
+  10 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  java-gnome-4.0.5.ebuild:
+  stable x86, bug 200448
 
   10 Jan 2008; Petteri Räty <betelgeuse@gentoo.org>
   -java-gnome-2.14.3.ebuild:
