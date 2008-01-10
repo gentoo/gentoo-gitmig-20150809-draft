@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.19 2008/01/08 08:45:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.20 2008/01/10 09:06:05 opfer Exp $
+
+  10 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  files/digest-org-mode-5.18, Manifest:
+  regenerate all digests and Manifest, thanks to toto <toto AT darkside DOT
+  tomsk DOT ru>
 
 *org-mode-5.18a (08 Jan 2008)
 
