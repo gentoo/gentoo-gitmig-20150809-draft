@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-prime
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/ChangeLog,v 1.21 2007/11/16 17:58:48 matsuu Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/ChangeLog,v 1.22 2008/01/10 16:18:09 matsuu Exp $
+
+  10 Jan 2008; MATSUU Takuto <matsuu@gentoo.org> scim-prime-1.0.0.ebuild:
+  Added dev-util/pkgconfig to DEPEND, bug #205061.
 
   16 Nov 2007; <matsuu@gentoo.org> -scim-prime-0.2.10.ebuild,
   -scim-prime-0.3.0.ebuild, -scim-prime-0.3.1.ebuild,

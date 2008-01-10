@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/scim-prime-1.0.0.ebuild,v 1.6 2007/11/16 17:58:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/scim-prime-1.0.0.ebuild,v 1.7 2008/01/10 16:18:09 matsuu Exp $
 
 DESCRIPTION="Japanese input method PRIME IMEngine for SCIM"
 HOMEPAGE="http://scim-imengine.sourceforge.jp/index.cgi?cmd=view;name=SCIMPRIME"
@@ -11,8 +11,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="|| ( >=app-i18n/scim-1.0 >=app-i18n/scim-cvs-1.0 )
+RDEPEND="|| ( >=app-i18n/scim-1.0 >=app-i18n/scim-cvs-1.0 )
 	>=app-i18n/prime-1.0.0"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
