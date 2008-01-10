@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/pidgin-smileys/pidgin-smileys-20071023-r1.ebuild,v 1.1 2007/10/24 16:13:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/pidgin-smileys/pidgin-smileys-20071023-r2.ebuild,v 1.1 2008/01/10 00:39:56 beandog Exp $
 
 DESCRIPTION="Pidgin smiley themes"
 HOMEPAGE="http://pidgin.im/"
@@ -26,7 +26,7 @@ SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 RDEPEND="net-im/pidgin"
-DEPEND=""
+DEPEND="app-arch/unzip"
 
 S="${WORKDIR}"
 
