@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/rapidsvn
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.53 2007/12/29 06:29:57 nerdboy Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.54 2008/01/10 18:07:23 hollow Exp $
+
+  10 Jan 2008; Benedikt Böhm <hollow@gentoo.org> rapidsvn-0.9.3.ebuild,
+  rapidsvn-0.9.4.ebuild:
+  cleanup for bug #203587
 
   29 Dec 2007; Steve Arnold <nerdboy@gentoo.org> rapidsvn-0.9.3.ebuild,
   rapidsvn-0.9.4.ebuild:

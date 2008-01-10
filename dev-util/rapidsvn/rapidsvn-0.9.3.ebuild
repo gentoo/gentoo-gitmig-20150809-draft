@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.3.ebuild,v 1.20 2007/12/29 06:29:57 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.3.ebuild,v 1.21 2008/01/10 18:07:23 hollow Exp $
 
 inherit eutils libtool autotools wxwidgets flag-o-matic fdo-mime
 
@@ -49,11 +49,7 @@ src_compile() {
 	# Note: this should be fixed in rapidsvn 0.9.3 and later
 	local myconf
 	local xslss_dir
-	local apr_suffix=""
 
-	if has_version ">dev-libs/apr-util-1"; then
-	    apr_suffix="-1"
-	fi
 	if use doc; then
 		xslss_dir=$(ls -1d /usr/share/sgml/docbook/xsl-stylesheets*|head -n1)
 		myconf="--with-docbook-xsl=$xslss_dir"
@@ -71,13 +67,13 @@ src_compile() {
 	need-wxwidgets gtk2
 	myconf="${myconf} --with-wx-config=${WX_CONFIG}"
 
-	append-flags $( /usr/bin/apr${apr_suffix}-config --cppflags )
+	append-flags $( /usr/bin/apr-1-config --cppflags )
 
 	econf	--with-svn-lib=/usr/$(get_libdir) \
 		--with-svn-include=/usr/include \
 		--with-neon-config=/usr/bin/neon-config \
-		--with-apr-config="/usr/bin/apr${apr_suffix}-config" \
-		--with-apu-config="/usr/bin/apu${apr_suffix}-config" \
+		--with-apr-config=/usr/bin/apr-1-config \
+		--with-apu-config=/usr/bin/apu-1-config \
 		${myconf} || die "econf failed"
 
 	emake  || die "emake failed"
