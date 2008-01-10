@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.13-r1.ebuild,v 1.1 2007/08/05 23:14:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.13-r1.ebuild,v 1.2 2008/01/10 16:53:42 matsuu Exp $
 
 inherit eutils qt3 qt4
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc64 ~sparc ~x86"
 IUSE="doc gtk qt3 qt4"
 
-DEPEND=">=app-i18n/scim-1.4.6
+RDEPEND=">=app-i18n/scim-1.4.6
 	gtk? (
 		>=x11-libs/gtk+-2.2
 		>=x11-libs/pango-1.1
@@ -25,7 +25,9 @@ DEPEND=">=app-i18n/scim-1.4.6
 	qt4? (
 		$(qt4_min_version 4.0.0)
 		>=x11-libs/pango-1.1
-	)
+	)"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 get_gtk_confdir() {
