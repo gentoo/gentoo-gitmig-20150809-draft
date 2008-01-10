@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/squid
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.173 2007/12/20 10:07:12 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.174 2008/01/10 20:46:09 mrness Exp $
+
+*squid-2.6.18 (10 Jan 2008)
+
+  10 Jan 2008; Alin Năstac <mrness@gentoo.org>
+  +files/squid-2.6.18-ToS_Hit_ToS_Preserve.patch,
+  +files/squid-2.6.18-gentoo.patch, +files/squid-2.6.18-qos.patch,
+  +squid-2.6.18.ebuild:
+  Version bump (#205240).
 
 *squid-3.0.1 (20 Dec 2007)
 
