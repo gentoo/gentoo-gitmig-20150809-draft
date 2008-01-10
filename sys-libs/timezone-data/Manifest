@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX timezone-data-2005n-makefile.patch 3504 RMD160 c08c65c6a6ae0392dfc5128801251c5d1c6d3b0d SHA1 ba0f9dd788b0cce06c7b016e3a9ff672e307aa23 SHA256 5eb2068da4df12a2eb84caebe262c285b62e244e046b50869b6a80e16401d707
 MD5 1f6ffc1a5b1396663c9f044be9806cf3 files/timezone-data-2005n-makefile.patch 3504
 RMD160 c08c65c6a6ae0392dfc5128801251c5d1c6d3b0d files/timezone-data-2005n-makefile.patch 3504
@@ -12,10 +15,10 @@ EBUILD timezone-data-2007i.ebuild 2403 RMD160 472ab45788797a7bbc362872bf9dadb5a2
 MD5 e843a58ce6ed722c3aaf7ba0de712f76 timezone-data-2007i.ebuild 2403
 RMD160 472ab45788797a7bbc362872bf9dadb5a26ae9b7 timezone-data-2007i.ebuild 2403
 SHA256 d55b83bd78ff8bfab34684e93c4f1cc8765a0819e9ee5fb58bb713395c802b96 timezone-data-2007i.ebuild 2403
-EBUILD timezone-data-2007j.ebuild 2402 RMD160 819e3edff0ee23d74013cfc1a444691418239d47 SHA1 c9675e1bd72acd86bfe61110fa0a5ebeb008cfdc SHA256 ca5a7e25c6d4a72ca98c36dbe32f38f8bc19805c8be4826a8280d5150dd5d033
-MD5 72d71d7ee8fbe2cef5ada948afa4ada6 timezone-data-2007j.ebuild 2402
-RMD160 819e3edff0ee23d74013cfc1a444691418239d47 timezone-data-2007j.ebuild 2402
-SHA256 ca5a7e25c6d4a72ca98c36dbe32f38f8bc19805c8be4826a8280d5150dd5d033 timezone-data-2007j.ebuild 2402
+EBUILD timezone-data-2007j.ebuild 2398 RMD160 fa300b522a53f529fd9306e0596523ef63a1508c SHA1 c3c585cbfd5ff800fed71ae64222e0dff5c88fdd SHA256 99d3a713a735640a2c11cff3128524e305196914880bd410e34fc1dc86dbe419
+MD5 9828dcd5ba392ef35d0c0b910873b502 timezone-data-2007j.ebuild 2398
+RMD160 fa300b522a53f529fd9306e0596523ef63a1508c timezone-data-2007j.ebuild 2398
+SHA256 99d3a713a735640a2c11cff3128524e305196914880bd410e34fc1dc86dbe419 timezone-data-2007j.ebuild 2398
 EBUILD timezone-data-2007k.ebuild 2410 RMD160 eef45817ac3b7ca00d9f0f5f57f1e926d03fe5af SHA1 5a1755a0b6caafed20a81c64fc2463e72c413703 SHA256 bf0083a8e7a28b95b6928621f11ed15231ac8b33beda34c1bd09b523eeb272d3
 MD5 d46bf1ab47c7cd57bcc136ca7d12b377 timezone-data-2007k.ebuild 2410
 RMD160 eef45817ac3b7ca00d9f0f5f57f1e926d03fe5af timezone-data-2007k.ebuild 2410
@@ -37,3 +40,10 @@ SHA256 ffa14b409538845b693b84e5a366ec3ecb709351a9fa28b0c31c09a140959ec2 files/di
 MD5 25525e2cd0a17e3ffef2f4761f00ed69 files/digest-timezone-data-2007k 470
 RMD160 a3e83d706bdf0bc93dbd4e9109d1e6780ef7bcb7 files/digest-timezone-data-2007k 470
 SHA256 1d27a92aa0858b5ccdeb6887354fdf7e5c3e821e5bf5ab8bb8986a5a65debace files/digest-timezone-data-2007k 470
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkeF688ACgkQj9hvisErhMJrFgCaA95nRF0Wd7bm5/EsR0lXan8T
+S40AoJMNP2/shNiQfERFHsG/2pabU/GD
+=n9vo
+-----END PGP SIGNATURE-----
