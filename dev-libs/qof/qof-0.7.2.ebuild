@@ -1,6 +1,6 @@
  # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.2.ebuild,v 1.10 2008/01/10 20:33:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.2.ebuild,v 1.11 2008/01/10 21:38:07 fmccor Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc64 sparc x86"
 
 IUSE=""
 
