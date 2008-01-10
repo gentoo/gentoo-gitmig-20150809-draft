@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50-r1.ebuild,v 1.7 2008/01/10 14:47:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50-r1.ebuild,v 1.8 2008/01/10 17:26:15 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -184,6 +184,7 @@ src_install () {
 
 	# avoid collision between slots, see bug #169033 e.g.
 	rm "${D}"/usr/share/emacs/site-lisp/subdirs.el
+	rm -rf "${D}"/usr/share/{applications,icons}
 	rm "${D}"/var/lib/games/emacs/{snake,tetris}-scores
 	keepdir /var/lib/games/emacs/
 
