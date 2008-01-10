@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-1.0.3.ebuild,v 1.1 2007/12/03 10:03:28 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-1.0.3.ebuild,v 1.2 2008/01/10 10:45:08 calchan Exp $
 
 DESCRIPTION="A free Gerber viewer"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -11,8 +11,10 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="=x11-libs/gtk+-2*
+RDEPEND="=x11-libs/gtk+-2*
 	png? ( media-libs/libpng )"
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.9"
 
 src_compile() {
 	econf \
