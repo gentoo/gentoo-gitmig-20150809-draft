@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX nspluginwrapper-0.9.91.5-g_thread_init.patch 1294 RMD160 7dd5ddc17d09752d9f6cf3c1291e656ba774ee54 SHA1 b1bc0bd1f4fd1f147cbe7ebe1007f4b6843515db SHA256 541fdbfbfa69060f2fb7dbc2320a696f615dea6aa3a5aa7f74ebfa3d4252aa1c
 MD5 8a4db37c98b579d945fd581655b5a79a files/nspluginwrapper-0.9.91.5-g_thread_init.patch 1294
 RMD160 7dd5ddc17d09752d9f6cf3c1291e656ba774ee54 files/nspluginwrapper-0.9.91.5-g_thread_init.patch 1294
@@ -33,3 +36,10 @@ SHA256 969b85b240ad7b28b95efb0aa024f05be469f0f4b9cf2a30702bc33294ab5975 files/di
 MD5 8f03b1767fab5359815bd27da7e89f42 files/digest-nspluginwrapper-0.9.91.5-r1 277
 RMD160 eb3d4ab61494d78d04d76969466e39088033eff4 files/digest-nspluginwrapper-0.9.91.5-r1 277
 SHA256 969b85b240ad7b28b95efb0aa024f05be469f0f4b9cf2a30702bc33294ab5975 files/digest-nspluginwrapper-0.9.91.5-r1 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkeGNJMACgkQWt/XSf2CZdkFvQCeMXkJ3r4zumS66xFOo/YYUbrg
+Y0wAnApyKqisyIkZlX457JHpFMZhkVBX
+=6tZb
+-----END PGP SIGNATURE-----
