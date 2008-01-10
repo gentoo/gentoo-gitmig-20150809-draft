@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/netkit-ftpd-0.17-r6.ebuild,v 1.1 2007/12/30 20:38:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/netkit-ftpd-0.17-r7.ebuild,v 1.1 2008/01/10 23:51:08 rbu Exp $
 
 inherit eutils ssl-cert
 
@@ -30,6 +30,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-shadowfix.patch
 	epatch "${FILESDIR}"/${P}-gcc41.patch
 	epatch "${FILESDIR}"/${P}-setguid.patch
+	epatch "${FILESDIR}"/${P}-fclose-CVE-2007-6263.patch #199206
 }
 
 src_compile() {
