@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/anyterm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/ChangeLog,v 1.9 2008/01/06 20:17:49 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/ChangeLog,v 1.10 2008/01/10 16:16:00 hollow Exp $
+
+*anyterm-1.1.16 (10 Jan 2008)
+
+  10 Jan 2008; Benedikt Böhm <hollow@gentoo.org> files/50_anyterm.conf,
+  +anyterm-1.1.16.ebuild:
+  version bump, #203928
 
   06 Jan 2008; Benedikt Böhm <hollow@gentoo.org>
   -files/anyterm-1.1.8-apachemod-Makefile.patch,
