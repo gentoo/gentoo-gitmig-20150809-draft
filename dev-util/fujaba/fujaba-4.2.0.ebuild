@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/fujaba-4.2.0.ebuild,v 1.6 2005/08/26 13:24:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/fujaba-4.2.0.ebuild,v 1.7 2008/01/10 22:40:32 caster Exp $
 
 MY_PV="${PV//./_}"
 MY_PNB="Fujaba_${PV:0:1}"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 RDEPEND=">=virtual/jre-1.4
-	dev-java/junit
+	=dev-java/junit-3.8*
 	dev-java/log4j
 	~dev-java/jdom-1.0_beta10
 	=dev-java/xerces-1.3*"
