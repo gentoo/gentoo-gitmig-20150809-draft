@@ -1,0 +1,24 @@
+diff -ru nspluginwrapper-0.9.91.5.orig/Makefile nspluginwrapper-0.9.91.5/Makefile
+--- nspluginwrapper-0.9.91.5.orig/Makefile	2007-12-30 14:32:16.110109991 -0500
++++ nspluginwrapper-0.9.91.5/Makefile	2007-12-30 14:36:03.471424598 -0500
+@@ -96,7 +96,7 @@
+ npviewer_CFLAGS += -I$(LSB_INC_DIR)/glib-2.0
+ npviewer_CFLAGS += -I$(LSB_INC_DIR)/gtk-2.0
+ npviewer_LDFLAGS = $(LDFLAGS_32) -L$(LSB_OBJ_DIR)
+-npviewer_LDFLAGS += -lgtk-x11-2.0 -lgdk-x11-2.0 -lgobject-2.0 -ldl -lglib-2.0 -lX11 -lXt
++npviewer_LDFLAGS += -lgtk-x11-2.0 -lgdk-x11-2.0 -lgobject-2.0 -lgthread-2.0 -ldl -lglib-2.0 -lX11 -lXt
+ else
+ npviewer_CFLAGS += $(GTK_CFLAGS)
+ npviewer_LDFLAGS = $(GTK_LDFLAGS) $(X_LDFLAGS)
+diff -ru nspluginwrapper-0.9.91.5.orig/src/npw-viewer.c nspluginwrapper-0.9.91.5/src/npw-viewer.c
+--- nspluginwrapper-0.9.91.5.orig/src/npw-viewer.c	2007-12-30 14:32:16.138105720 -0500
++++ nspluginwrapper-0.9.91.5/src/npw-viewer.c	2007-12-30 14:32:29.974994816 -0500
+@@ -3001,6 +3001,7 @@
+   XtToolkitInitialize();
+   x_app_context = XtCreateApplicationContext();
+   x_display = XtOpenDisplay(x_app_context, NULL, "npw-viewer", "npw-viewer", NULL, 0, &argc, argv);
++  g_thread_init(NULL);
+   gtk_init(&argc, &argv);
+ 
+   // Initialize RPC communication channel
+Only in nspluginwrapper-0.9.91.5/src: npw-viewer.c.orig

@@ -1,6 +1,14 @@
 # ChangeLog for net-www/nspluginwrapper
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.14 2007/08/28 13:33:48 chutzpah Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.15 2008/01/10 15:06:42 chutzpah Exp $
+
+*nspluginwrapper-0.9.91.5-r1 (10 Jan 2008)
+
+  10 Jan 2008; Patrick McLean <chutzpah@gentoo.org>
+  +files/nspluginwrapper-0.9.91.5-g_thread_init.patch,
+  +nspluginwrapper-0.9.91.5-r1.ebuild:
+  Revision bump, add patch to add support for gthread, thanks to Alex
+  Rostovtsev for pulling the patch from Fedora's RPM. (bug #203820)
 
 *nspluginwrapper-0.9.91.5 (28 Aug 2007)
 
