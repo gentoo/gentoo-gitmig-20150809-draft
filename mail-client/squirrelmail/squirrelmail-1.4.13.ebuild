@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.13.ebuild,v 1.1 2007/12/18 17:03:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.13.ebuild,v 1.2 2008/01/10 17:06:36 alonbl Exp $
 
 IUSE="crypt ldap spell ssl filter mysql postgres nls"
 
@@ -45,7 +45,7 @@ DEPEND=""
 
 RDEPEND="virtual/php
 	virtual/perl-DB_File
-	crypt? ( app-crypt/gnupg )
+	crypt? ( =app-crypt/gnupg-1.4* )
 	ldap? ( net-nds/openldap )
 	spell? ( || ( app-text/aspell app-text/ispell ) )
 	filter? ( mail-filter/amavisd-new dev-php/PEAR-Log dev-php/PEAR-DB dev-php/PEAR-Net_SMTP )

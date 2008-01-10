@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/squirrelmail
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.108 2007/12/18 17:03:37 eradicator Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.109 2008/01/10 17:06:36 alonbl Exp $
+
+  10 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org>
+  squirrelmail-1.4.10a-r2.ebuild, squirrelmail-1.4.11.ebuild,
+  squirrelmail-1.4.13.ebuild, squirrelmail-1.5.1-r6.ebuild:
+  Depend on gnupg-1.4, bug#202406
 
 *squirrelmail-1.4.13 (18 Dec 2007)
 
