@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.87 2008/01/06 05:39:49 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.88 2008/01/10 01:45:01 bicatali Exp $
+
+  10 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org> use.mask:
+  Removed cern from use.mask (has been mark stable sparc,x86 and amd64)
 
   06 Jan 2008; Ferris McCormick <fmccor@gentoo.org> package.use.mask:
   package.use.mask valgrind for dev-util/anjuta
