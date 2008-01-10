@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-2.0.6.ebuild,v 1.8 2007/12/21 17:41:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-2.0.6.ebuild,v 1.9 2008/01/10 21:48:36 mr_bones_ Exp $
 
 inherit fixheadtails
 
@@ -19,6 +19,7 @@ RDEPEND=">=dev-libs/eventlog-0.2
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	>=dev-libs/glib-2.2"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	sys-devel/flex"
 PROVIDE="virtual/logger"
 
