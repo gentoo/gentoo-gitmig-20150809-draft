@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/mount-cifs-3.0.25c.ebuild,v 1.7 2008/01/10 09:46:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/mount-cifs-3.0.25c.ebuild,v 1.8 2008/01/10 20:13:24 ranger Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 	http://dev.gentooexperimental.org/~jakub/distfiles/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ppc64 ~s390 ~sh sparc x86"
 IUSE=""
 
 DEPEND="!<net-fs/samba-3.0.25"
