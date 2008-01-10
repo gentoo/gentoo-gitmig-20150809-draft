@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aspectj
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.22 2007/04/22 14:04:39 caster Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.23 2008/01/10 22:02:11 caster Exp $
+
+  10 Jan 2008; Vlastimil Babka <caster@gentoo.org> aspectj-1.2-r2.ebuild:
+  Restrict junit dependency.
 
   22 Apr 2007; Vlastimil Babka <caster@gentoo.org> aspectj-1.2-r2.ebuild:
   Add java-ant-2 to inherit and fix the deps a bit.
