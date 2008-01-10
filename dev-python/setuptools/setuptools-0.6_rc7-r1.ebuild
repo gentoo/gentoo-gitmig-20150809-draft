@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6_rc7-r1.ebuild,v 1.8 2007/12/31 16:24:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6_rc7-r1.ebuild,v 1.9 2008/01/10 09:43:08 vapier Exp $
 
 NEED_PYTHON=2.4.2
 
@@ -15,7 +15,7 @@ SRC_URI="http://cheeseshop.python.org/packages/source/s/setuptools/${MY_P}.tar.g
 
 LICENSE="PSF-2.2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DOCS="EasyInstall.txt api_tests.txt pkg_resources.txt setuptools.txt README.txt"
