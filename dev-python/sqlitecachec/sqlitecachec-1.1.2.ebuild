@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlitecachec/sqlitecachec-1.1.2.ebuild,v 1.2 2007/12/30 19:04:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlitecachec/sqlitecachec-1.1.2.ebuild,v 1.3 2008/01/10 20:14:52 lucass Exp $
 
 inherit distutils
 
@@ -17,6 +17,7 @@ IUSE=""
 
 DEPEND="=dev-libs/glib-2*
 	dev-libs/libxml2
-	=dev-db/sqlite-3*"
+	=dev-db/sqlite-3*
+	dev-util/pkgconfig"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sqlitecachec
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlitecachec/ChangeLog,v 1.1 2007/12/30 10:01:07 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlitecachec/ChangeLog,v 1.2 2008/01/10 20:14:52 lucass Exp $
+
+  10 Jan 2008; Lukasz Strzygowski <lucass@gentoo.org>
+  sqlitecachec-1.1.2.ebuild:
+  Added dev-util/pkgconfig dep (bug #205192).
 
 *sqlitecachec-1.1.2 (30 Dec 2007)
 
