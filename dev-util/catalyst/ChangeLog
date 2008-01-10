@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/catalyst
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.176 2007/11/25 05:49:26 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.177 2008/01/10 00:28:01 wolf31o2 Exp $
+
+*catalyst-2.0.5 (10 Jan 2008)
+
+  10 Jan 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  -catalyst-2.0.5_pre3.ebuild, -catalyst-2.0.5_pre4.ebuild,
+  -catalyst-2.0.5_pre5.ebuild, -catalyst-2.0.5_pre6.ebuild,
+  +catalyst-2.0.5.ebuild:
+  Adding catalyst 2.0.5 to the tree.
 
 *catalyst-2.0.5_pre6 (25 Nov 2007)
 
