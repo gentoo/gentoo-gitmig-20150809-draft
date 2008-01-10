@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.70 2008/01/05 22:22:11 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.71 2008/01/10 18:11:27 jer Exp $
+
+  10 Jan 2008; Jeroen Roovers <jer@gentoo.org>
+  xf86-input-evdev-1.2.0.ebuild:
+  Marked ~hppa again. No idea why the keyword was dropped.
 
   05 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org>
   xf86-input-evdev-1.2.0.ebuild:
