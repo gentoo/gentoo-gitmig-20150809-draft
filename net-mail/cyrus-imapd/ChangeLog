@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.117 2008/01/05 16:32:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.118 2008/01/10 18:15:43 jer Exp $
+
+  10 Jan 2008; Jeroen Roovers <jer@gentoo.org> cyrus-imapd-2.3.9-r1.ebuild:
+  Stable for HPPA (bug #201684).
 
   05 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   cyrus-imapd-2.3.9-r1.ebuild:
