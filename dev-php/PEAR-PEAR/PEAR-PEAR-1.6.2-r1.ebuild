@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.6.2-r1.ebuild,v 1.8 2007/12/06 00:45:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.6.2-r1.ebuild,v 1.9 2008/01/10 10:06:21 vapier Exp $
 
 inherit depend.php
 
@@ -12,7 +12,7 @@ PEAR="${PV}"
 
 [[ -z "${PEAR_CACHEDIR}" ]] && PEAR_CACHEDIR="/var/cache/pear"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 
 DESCRIPTION="PEAR Base System (PEAR, Archive_Tar, Console_Getopt, Structures_Graph, XML_RPC)."
 HOMEPAGE="http://pear.php.net/"
