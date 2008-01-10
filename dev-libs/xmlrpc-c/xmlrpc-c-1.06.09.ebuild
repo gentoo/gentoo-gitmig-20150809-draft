@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.09.ebuild,v 1.6 2007/12/13 06:51:44 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.09.ebuild,v 1.7 2008/01/10 10:12:15 gmsoft Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="A lightweigt RPC library based on XML and HTTP"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 HOMEPAGE="http://xmlrpc-c.sourceforge.net/"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="curl libwww threads"
 LICENSE="BSD"
 SLOT="0"
