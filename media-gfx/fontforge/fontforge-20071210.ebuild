@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20071210.ebuild,v 1.7 2008/01/10 14:08:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20071210.ebuild,v 1.8 2008/01/10 16:26:30 grobian Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/fontforge/${PN}_full-${PV}.tar.bz2
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc-macos ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="gif jpeg nls png python tiff truetype svg unicode X"
 
 RDEPEND="gif? ( >=media-libs/giflib-4.1.0-r1 )

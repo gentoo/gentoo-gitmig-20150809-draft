@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.70 2008/01/10 14:08:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.71 2008/01/10 16:26:30 grobian Exp $
+
+  10 Jan 2008; Fabian Groffen <grobian@gentoo.org>
+  fontforge-20070312.ebuild, fontforge-20070501.ebuild,
+  fontforge-20070607.ebuild, fontforge-20070723.ebuild,
+  fontforge-20070808.ebuild, fontforge-20070831.ebuild,
+  fontforge-20070915.ebuild, fontforge-20071002.ebuild,
+  fontforge-20071110.ebuild, fontforge-20071210.ebuild,
+  fontforge-20080109.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   10 Jan 2008; Raúl Porcel <armin76@gentoo.org> fontforge-20071210.ebuild:
   alpha/ia64 stable wrt #205145
