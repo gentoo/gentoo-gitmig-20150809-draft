@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r1.ebuild,v 1.8 2007/11/13 12:27:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r1.ebuild,v 1.9 2008/01/10 21:59:09 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -20,7 +20,7 @@ COMMON_DEP="
 	>=dev-java/xerces-2.7
 	>=dev-java/log4j-1.2.8
 	=dev-java/rhino-1.6*
-	dev-java/junit
+	=dev-java/junit-3.8*
 	>=dev-java/ant-core-1.4"
 
 # Does not like org.w3c.dom.Node
