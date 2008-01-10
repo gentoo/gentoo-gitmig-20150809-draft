@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.3.7.ebuild,v 1.2 2007/12/17 05:23:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.3.8.ebuild,v 1.1 2008/01/10 11:51:48 ferdy Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://kernel/software/scm/git/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="curl doc emacs gtk iconv mozsha1 perl ppcsha1 tk webdav"
+IUSE="curl cgi doc emacs gtk iconv mozsha1 perl ppcsha1 tk webdav"
 
 DEPEND="
 	!app-misc/git
@@ -31,6 +31,7 @@ DEPEND="
 	webdav? ( dev-libs/expat )
 	emacs?  ( virtual/emacs )"
 RDEPEND="${DEPEND}
+	cgi?    ( virtual/perl-CGI )
 	perl?   ( dev-perl/Error )
 	gtk?    ( >=dev-python/pygtk-2.8 )"
 
@@ -58,6 +59,7 @@ exportmakeopts() {
 	myopts="${myopts} WITH_SEND_EMAIL=YesPlease"
 
 	use iconv || myopts="${myopts} NO_ICONV=YesPlease"
+	use tk || myopts="${myopts} NO_TCLTK=YesPlease"
 
 	export MY_MAKEOPTS=${myopts}
 }
@@ -76,6 +78,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-1.5.3-symlinks.patch
+	epatch "${FILESDIR}"/${P}-t9106.patch
 
 	sed -i \
 		-e "s:^\(CFLAGS = \).*$:\1${CFLAGS} -Wall:" \
@@ -94,20 +97,23 @@ src_compile() {
 	if use emacs ; then
 		elisp-compile contrib/emacs/{,vc-}git.el || die "emacs modules failed"
 	fi
+	if use cgi ; then
+		emake ${MY_MAKEOPTS} \
+		DESTDIR="${D}" \
+		prefix=/usr \
+		gitweb/gitweb.cgi || die "make gitweb/gitweb.cgi failed"
+	fi
 }
 
 src_install() {
 	emake ${MY_MAKEOPTS} DESTDIR="${D}" prefix=/usr install || \
 		die "make install failed"
 
-	use tk || rm "${D}"/usr/bin/git{k,-gui}
-
 	doman man?/*
 
 	dodoc README Documentation/{SubmittingPatches,CodingGuidelines}
 	use doc && dodir /usr/share/doc/${PF}/html
 	for d in / /howto/ /technical/ ; do
-		einfo "Doing Documentation${d}"
 		docinto ${d}
 		dodoc Documentation${d}*.txt
 		use doc && dohtml -p ${d} Documentation${d}*.html
@@ -132,6 +138,10 @@ src_install() {
 		newdoc "${S}"/contrib/blameview/README README.blameview
 	fi
 
+	dobin contrib/fast-import/git-p4
+	dodoc contrib/fast-import/git-p4.txt
+	newbin contrib/fast-import/import-tars.perl import-tars
+
 	dodir /usr/share/${PN}/contrib
 	for i in continuous fast-import hg-to-git \
 		hooks remotes2config.sh vim stats \
@@ -141,6 +151,17 @@ src_install() {
 			"${D}"/usr/share/${PN}/contrib \
 			|| die "Failed contrib ${i}"
 	done
+
+	if use cgi ; then
+		dodir /usr/share/${PN}/gitweb
+		insinto /usr/share/${PN}/gitweb
+		doins "${S}"/gitweb/gitweb.{cgi,css}
+		doins "${S}"/gitweb/git-{favicon,logo}.png
+		docinto /
+		# INSTALL discusses configuration issues, not just installation
+		newdoc  "${S}"/gitweb/INSTALL INSTALL.gitweb
+		newdoc  "${S}"/gitweb/README README.gitweb
+	fi
 
 	insinto /etc/xinetd.d
 	newins "${FILESDIR}"/git-daemon.xinetd git-daemon
@@ -156,16 +177,14 @@ src_test() {
 		MY_MAKEOPTS="${MY_MAKEOPTS} NO_SVN_TESTS=YesPlease"
 	has_version app-arch/unzip || \
 		rm "${S}"/t/t5000-tar-tree.sh
-	# Stupid CVS won't let some people commit as root
-	if has userpriv "${FEATURES}"; then
-		einfo "Enabling CVS tests as we have FEATURES=userpriv"
-	else
+	if ! has userpriv "${FEATURES}"; then
 		ewarn "Skipping CVS tests because CVS does not work as root!"
 		ewarn "You should retest with FEATURES=userpriv!"
 		for i in t9200-git-cvsexportcommit.sh t9600-cvsimport.sh ; do
 			rm "${S}"/t/${i} || die "Failed to remove ${i}"
 		done
 	fi
+	built_with_use dev-util/cvs server || rm "${S}"/t/t9600-cvsimport.sh
 	emake ${MY_MAKEOPTS} DESTDIR="${D}" prefix=/usr test || die "tests failed"
 }
 
@@ -177,18 +196,20 @@ pkg_postinst() {
 		elog "if you are using such a version."
 	fi
 	elog "These additional scripts need some dependencies:"
+	elog "(These are also needed for FEATURES=test)"
 	echo
 	showpkgdeps git-archimport "dev-util/tla"
 	showpkgdeps git-cvsimport ">=dev-util/cvsps-2.1"
 	showpkgdeps git-svnimport "dev-util/subversion(USE=perl)"
 	showpkgdeps git-svn \
+		"USE=perl" \
 		"dev-util/subversion(USE=perl)" \
 		"dev-perl/libwww-perl" \
 		"dev-perl/TermReadKey"
 	showpkgdeps git-quiltimport "dev-util/quilt"
 	showpkgdeps git-cvsserver "dev-perl/DBI" "dev-perl/DBD-SQLite"
 	showpkgdeps git-instaweb \
-		"|| ( www-servers/lighttpd www-servers/apache(SLOT=2) )"
+		"|| ( www-servers/lighttpd www-servers/apache )"
 	showpkgdeps git-send-email "USE=perl"
 	showpkgdeps git-remote "USE=perl"
 	echo
