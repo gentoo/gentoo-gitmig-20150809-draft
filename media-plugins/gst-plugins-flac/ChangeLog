@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-flac
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.95 2007/11/01 14:00:41 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.96 2008/01/10 16:59:55 drac Exp $
+
+  10 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  -gst-plugins-flac-0.10.3.ebuild, -gst-plugins-flac-0.10.5.ebuild:
+  Remove old versions.
 
   01 Nov 2007; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-flac-0.10.6.ebuild:
