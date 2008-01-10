@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.0.1-r1.ebuild,v 1.7 2007/10/11 10:42:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.0.1-r1.ebuild,v 1.8 2008/01/10 23:13:03 caster Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 java-ant-2
@@ -33,7 +33,7 @@ src_unpack() {
 	cd "${S}"
 	# Patch that adds unofficial support for detection whether cell is
 	# date/time format till upstream solves that
-	epatch ${FILESDIR}/${P}-src-isDateFormat.patch
+	epatch "${FILESDIR}/${P}-src-isDateFormat.patch"
 
 	find -name "*.jar" | xargs rm -v
 
