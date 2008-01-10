@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.0-r1.ebuild,v 1.7 2007/08/22 06:32:44 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.0-r1.ebuild,v 1.8 2008/01/10 22:34:18 caster Exp $
 
 JAVA_PKG_IUSE="doc source examples test"
 
@@ -22,7 +22,7 @@ DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
 	dev-java/log4j
 	jni? ( dev-java/cpptasks )
 	test? (
-		dev-java/junit
+		=dev-java/junit-3.8*
 		dev-java/ant-junit
 	)"
 

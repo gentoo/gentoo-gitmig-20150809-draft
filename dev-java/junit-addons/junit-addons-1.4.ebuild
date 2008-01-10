@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit-addons/junit-addons-1.4.ebuild,v 1.1 2007/03/31 23:39:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit-addons/junit-addons-1.4.ebuild,v 1.2 2008/01/10 22:37:10 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 COMMON_DEP="
-	dev-java/junit
+	=dev-java/junit-3.8*
 	dev-java/ant-core
 	~dev-java/jdom-1.0
 	=dev-java/jaxen-1.1*

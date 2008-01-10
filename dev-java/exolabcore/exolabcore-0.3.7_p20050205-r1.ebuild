@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205-r1.ebuild,v 1.4 2007/10/18 13:27:56 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205-r1.ebuild,v 1.5 2008/01/10 22:29:32 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -30,7 +30,7 @@ DEPEND=">=virtual/jdk-1.4
 	test? (
 		dev-java/commons-cli
 		dev-java/log4j
-		dev-java/junit
+		=dev-java/junit-3.8*
 	)
 	source? ( app-arch/zip )"
 

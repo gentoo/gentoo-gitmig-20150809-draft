@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.4.ebuild,v 1.5 2007/11/27 20:40:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.4.ebuild,v 1.6 2008/01/10 22:31:10 caster Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.12.13
 		>=gnome-base/gnome-desktop-2.18.0
 		>=virtual/jre-1.4"
 DEPEND="${RDEPEND}
-		dev-java/junit
+		=dev-java/junit-3.8*
 		dev-lang/python
 		>=virtual/jdk-1.4"
 

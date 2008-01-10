@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.0.1.ebuild,v 1.14 2007/08/22 08:28:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.0.1.ebuild,v 1.15 2008/01/10 22:34:18 caster Exp $
 
 inherit eutils java-pkg-2
 
@@ -20,7 +20,7 @@ DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
 	app-arch/unzip
 	dev-java/cpptasks
 	test? (
-		dev-java/junit
+		=dev-java/junit-3.8*
 		dev-java/ant
 	)
 	source? ( app-arch/zip )
