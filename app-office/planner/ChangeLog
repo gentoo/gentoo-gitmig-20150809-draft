@@ -1,6 +1,10 @@
 # ChangeLog for app-office/planner
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.37 2008/01/10 15:54:09 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.38 2008/01/10 16:36:10 leio Exp $
+
+  10 Jan 2008; Mart Raudsepp <leio@gentoo.org> -planner-0.12.1.ebuild,
+  -planner-0.13.ebuild, -planner-0.14.ebuild:
+  Remove old versions as some do not compile anymore, bug 204367
 
   10 Jan 2008; Daniel Gryniewicz <dang@gentoo.org> planner-0.14.2.ebuild:
   Marked stable on amd64 for bug #204466
