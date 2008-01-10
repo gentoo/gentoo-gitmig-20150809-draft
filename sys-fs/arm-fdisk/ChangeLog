@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/arm-fdisk
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/ChangeLog,v 1.2 2007/02/09 06:02:52 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/ChangeLog,v 1.3 2008/01/10 17:39:54 jer Exp $
+
+  10 Jan 2008; Jeroen Roovers <jer@gentoo.org> arm-fdisk-3.0.6.ebuild:
+  Stable for HPPA (bug #191241).
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
