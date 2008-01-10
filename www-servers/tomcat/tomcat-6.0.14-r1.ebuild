@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.14-r1.ebuild,v 1.5 2007/10/18 17:02:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.14-r1.ebuild,v 1.6 2008/01/10 23:08:12 caster Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -31,7 +31,7 @@ RDEPEND=">=virtual/jre-1.5
 
 DEPEND=">=virtual/jdk-1.5
 	${COMMON_DEPEND}
-	test? ( dev-java/junit )"
+	test? ( =dev-java/junit-3.8* )"
 
 S=${WORKDIR}/${MY_P}
 

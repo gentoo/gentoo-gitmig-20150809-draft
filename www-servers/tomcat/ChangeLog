@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.175 2007/10/18 17:02:56 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.176 2008/01/10 23:08:12 caster Exp $
+
+  10 Jan 2008; Vlastimil Babka <caster@gentoo.org> tomcat-6.0.14.ebuild,
+  tomcat-6.0.14-r1.ebuild:
+  Restrict junit dependency.
 
   18 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   tomcat-6.0.14-r1.ebuild:
