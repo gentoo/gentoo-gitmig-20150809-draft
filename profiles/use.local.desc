@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3283 2008/01/10 08:39:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3284 2008/01/10 18:38:07 phreak Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1916,6 +1916,7 @@ sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gcc:objc++ - Build support for the Objective C++ language
 sys-devel/gcc:objc-gc - Build support for the Objective C code language Garbage Collector
 sys-devel/gcc:openmp - Build support for the OpenMP (support parallel computing)
+sys-devel/gettext:openmp - Build support for OpenMP (support parallel computing)
 sys-devel/kgcc64:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-freebsd/freebsd-lib:gpib - Enable gpib support (TODO improve description)
