@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jid3/jid3-0.46.ebuild,v 1.1 2007/05/06 10:19:28 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jid3/jid3-0.46.ebuild,v 1.2 2008/01/10 23:04:47 caster Exp $
 
 JAVA_PKG_IUSE="doc source test"
 # To make sure the javadoc patch doesn't break things
@@ -22,10 +22,10 @@ IUSE=""
 # Feel free to submit a patch that doesn't bundle the classes
 # into the result jar
 RDEPEND=">=virtual/jre-1.4
-	test? ( dev-java/junit )"
+	test? ( =dev-java/junit-3.8* )"
 
 DEPEND=">=virtual/jdk-1.4
-	test? ( dev-java/junit )"
+	test? ( =dev-java/junit-3.8* )"
 
 src_unpack() {
 	unpack ${A}

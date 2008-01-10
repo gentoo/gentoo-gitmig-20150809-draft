@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-1.1.01-r1.ebuild,v 1.6 2007/06/02 15:11:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-1.1.01-r1.ebuild,v 1.7 2008/01/10 23:03:52 caster Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -20,7 +20,7 @@ IUSE=""
 COMMON_DEP=""
 DEPEND="=virtual/jdk-1.4*
 	${COMMON_DEP}
-	test? ( dev-java/junit )"
+	test? ( =dev-java/junit-3.8* )"
 RDEPEND="=virtual/jre-1.4*
 	${COMMON_DEP}"
 

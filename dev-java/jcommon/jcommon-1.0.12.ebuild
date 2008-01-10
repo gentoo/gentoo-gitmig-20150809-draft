@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-1.0.12.ebuild,v 1.4 2007/12/26 11:06:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-1.0.12.ebuild,v 1.5 2008/01/10 23:04:33 caster Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -15,7 +15,7 @@ SLOT="1.0"
 KEYWORDS="amd64 ppc x86"
 IUSE="debug"
 DEPEND=">=virtual/jdk-1.4
-		test? ( dev-java/junit )"
+		test? ( =dev-java/junit-3.8* )"
 RDEPEND=">=virtual/jdk-1.4"
 
 S=${WORKDIR}/${MY_P}

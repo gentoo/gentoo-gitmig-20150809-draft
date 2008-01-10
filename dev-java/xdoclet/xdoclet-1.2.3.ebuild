@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.12 2007/11/01 23:46:20 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.13 2008/01/10 23:13:22 caster Exp $
 
 JAVA_PKG_IUSE="source"
 WANT_ANT_TASKS="ant-nodeps ant-trax"
@@ -22,7 +22,7 @@ CDEPEND=">=dev-java/bsf-2.3
 	dev-java/mockobjects
 	dev-java/velocity
 	dev-java/xjavadoc
-	dev-java/junit"
+	=dev-java/junit-3.8*"
 DEPEND=">=virtual/jdk-1.4
 	${CDEPEND}"
 RDEPEND=">=virtual/jre-1.4

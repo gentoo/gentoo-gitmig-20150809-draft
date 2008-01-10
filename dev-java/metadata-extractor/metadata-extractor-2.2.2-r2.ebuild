@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2-r2.ebuild,v 1.2 2007/07/11 19:58:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2-r2.ebuild,v 1.3 2008/01/10 23:10:39 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,7 +14,7 @@ IUSE="test"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
-	dev-java/junit"
+	=dev-java/junit-3.8*"
 RDEPEND=">=virtual/jre-1.4"
 S=${WORKDIR}/
 

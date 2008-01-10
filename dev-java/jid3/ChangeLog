@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jid3
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jid3/ChangeLog,v 1.1 2007/05/06 10:19:28 betelgeuse Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jid3/ChangeLog,v 1.2 2008/01/10 23:04:47 caster Exp $
+
+  10 Jan 2008; Vlastimil Babka <caster@gentoo.org> jid3-0.46.ebuild:
+  Restrict junit dependency.
 
 *jid3-0.46 (06 May 2007)
 
