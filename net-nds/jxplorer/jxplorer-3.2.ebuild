@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.2.ebuild,v 1.5 2007/11/25 11:55:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.2.ebuild,v 1.6 2008/01/10 23:14:59 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc x86"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/javahelp-2.0.02_p46
 	>=dev-java/log4j-1.2.8
-	dev-java/junit"
+	=dev-java/junit-3.8*"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}"
 
