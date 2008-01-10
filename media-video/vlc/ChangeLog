@@ -1,6 +1,14 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.274 2008/01/01 21:36:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.275 2008/01/10 22:21:26 aballier Exp $
+
+*vlc-0.9.0_alpha20080110 (10 Jan 2008)
+
+  10 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  +vlc-0.9.0_alpha20080110.ebuild:
+  bump a new snapshot, enable faad2 support to be closer to upstream, unleash
+  qt4 gui due to numerous requests, should fix a few bugs and hopefuly not
+  trigger a lot
 
   01 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   vlc-0.9.0_alpha20071022.ebuild:
