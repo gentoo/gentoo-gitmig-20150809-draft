@@ -1,6 +1,12 @@
 # ChangeLog for app-text/jabref
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.59 2007/12/22 11:16:25 nixnut Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.60 2008/01/10 21:20:09 caster Exp $
+
+*jabref-2.3.1 (10 Jan 2008)
+
+  10 Jan 2008; Vlastimil Babka <caster@gentoo.org> -jabref-2.2.ebuild,
+  +jabref-2.3.1.ebuild:
+  Version bump and version dump.
 
   22 Dec 2007; nixnut <nixnut@gentoo.org> jabref-2.3.ebuild:
   Stable on ppc wrt bug 199502
