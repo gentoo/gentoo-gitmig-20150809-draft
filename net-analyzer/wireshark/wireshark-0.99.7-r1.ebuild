@@ -1,18 +1,22 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.6.ebuild,v 1.11 2007/08/02 15:48:29 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.7-r1.ebuild,v 1.1 2008/01/10 18:36:34 pva Exp $
 
 WANT_AUTOMAKE="1.9"
-
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
-SRC_URI="mirror://sourceforge/wireshark/${P}.tar.bz2"
+
+# _rc versions has different download location.
+[[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && {
+SRC_URI="http://www.wireshark.org/download/prerelease/${PN}-${PV/_rc/pre}.tar.gz";
+S=${WORKDIR}/${PN}-${PV/_rc/pre} ; } || \
+SRC_URI="http://www.wireshark.org/download/src/all-versions/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="adns gtk ipv6 portaudio snmp ssl kerberos threads selinux"
 
 RDEPEND="sys-libs/zlib
@@ -26,6 +30,7 @@ RDEPEND="sys-libs/zlib
 	!ssl? (	net-libs/gnutls )
 	net-libs/libpcap
 	dev-libs/libpcre
+	sys-libs/libcap
 	adns? ( net-libs/adns )
 	kerberos? ( virtual/krb5 )
 	portaudio? ( media-libs/portaudio )
@@ -51,25 +56,36 @@ pkg_setup() {
 		ewarn "USE=-gtk will mean no gui called wireshark will be created and"
 		ewarn "only command line utils are available"
 	fi
+
+	# Add group for users allowed to sniff.
+	enewgroup wireshark || die "Failed to create wireshark group"
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-asneeded.patch
-	eautomake
-	cd epan
+	epatch "${FILESDIR}"/${PN}-0.99.7-libgcrypt.patch
+	epatch "${FILESDIR}"/${PN}-0.99.7-asneeded.patch
+
+	cd "${S}"/epan
 	epatch "${FILESDIR}"/wireshark-except-double-free.diff
-	epatch "${FILESDIR}"/wireshark-epan_dissectors_packet-diameter.diff
+
+	cd "${S}"
+	# http://bugs.wireshark.org/bugzilla/show_bug.cgi?id=2012
+	epatch "${FILESDIR}"/${P}-crash-emem.c.patch
+	# http://bugs.wireshark.org/bugzilla/show_bug.cgi?id=2177
+	epatch "${FILESDIR}"/${P}-exit.patch
+	AT_M4DIR="${S}/aclocal-fallback"
+	eautoreconf
 }
 
 src_compile() {
-	# optimization bug, see bug #165340
-	if [[ "$(gcc-version)" == "3.4" ]] ; then
+	# optimization bug, see bug #165340, bug #40660
+	if [[ $(gcc-version) == 3.4 ]] ; then
 		elog "Found gcc 3.4, forcing -O3 into CFLAGS"
 		replace-flags -O? -O3
-	else
-		elog "Forcing -O into CFLAGS"
+	elif [[ $(gcc-version) == 3.3 || $(gcc-version) == 3.2 ]] ; then
+		elog "Found <=gcc-3.3, forcing -O into CFLAGS"
 		replace-flags -O? -O
 	fi
 
@@ -82,7 +98,7 @@ src_compile() {
 		einfo "Building with gtk support"
 	else
 		einfo "Building without gtk support"
-		myconf="${myconf} --disable-wireshark"
+		myconf="${myconf} --disable-wireshark --disable-warnings-as-errors"
 		# the asn1 plugin needs gtk
 		sed -i -e '/plugins.asn1/d' Makefile.in || die "sed failed"
 		sed -i -e '/^SUBDIRS/s/asn1//' plugins/Makefile.in || die "sed failed"
@@ -97,6 +113,8 @@ src_compile() {
 		$(use_with portaudio) \
 		$(use_enable gtk gtk2) \
 		$(use_enable threads) \
+		--with-libcap \
+		--enable-setuid-install \
 		--without-ucd-snmp \
 		--enable-dftest \
 		--enable-randpkt \
@@ -104,7 +122,6 @@ src_compile() {
 		--enable-editcap \
 		--enable-capinfos \
 		--enable-text2pcap \
-		--disable-warnings-as-errors \
 		${myconf} || die "econf failed"
 
 	# fixes an access violation caused by libnetsnmp - see bug 79068
@@ -116,35 +133,40 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
+	for file in /usr/bin/tshark /usr/bin/dumpcap
+	do
+		fowners 0:wireshark ${file}
+		fperms 6550 ${file}
+	done
+
 	insinto /usr/include/wiretap
 	doins wiretap/wtap.h
 
 	dodoc AUTHORS ChangeLog NEWS README*
 
-	insinto /usr/share/icons/hicolor/16x16/apps
-	newins "${S}"/image/hi16-app-wireshark.png wireshark.png
-	insinto /usr/share/icons/hicolor/32x32/apps
-	newins "${S}"/image/hi32-app-wireshark.png wireshark.png
-	insinto /usr/share/icons/hicolor/48x48/apps
-	newins "${S}"/image/hi48-app-wireshark.png wireshark.png
-	make_desktop_entry wireshark "Wireshark" wireshark
-	dosym tshark /usr/bin/tethereal
-	use gtk && dosym wireshark /usr/bin/ethereal
+	if use gtk ; then
+		insinto /usr/share/icons/hicolor/16x16/apps
+		newins image/hi16-app-wireshark.png wireshark.png
+		insinto /usr/share/icons/hicolor/32x32/apps
+		newins image/hi32-app-wireshark.png wireshark.png
+		insinto /usr/share/icons/hicolor/48x48/apps
+		newins image/hi48-app-wireshark.png wireshark.png
+		insinto /usr/share/applications
+		# Wireshark should not be ran as root in KDE.
+		# Bug: http://bugs.wireshark.org/bugzilla/show_bug.cgi?id=2127
+		sed -i '/X-KDE-SubstituteUID/d' wireshark.desktop
+		doins wireshark.desktop
+	fi
 }
 
 pkg_postinst() {
-	ewarn "Due to a history of security flaws in this piece of software, it may contain"
-	ewarn "more flaws. To protect yourself against malicious damage due to potential"
-	ewarn "flaws in this product, we recommend that you take the following security"
-	ewarn "precautions when running wireshark in an untrusted environment:"
-	ewarn "do not run any longer than you need to;"
-	ewarn "use in a root jail - preferably one that has been hardened with grsec like
-	rootjail protections;"
-	ewarn "use a hardened operating system;"
-	ewarn "do not listen to addition interfaces;"
-	ewarn "if possible, run behind a firewall;"
-	ewarn "take a capture with tcpdump and analyze running wireshark as a least
-	privileged user;"
-	ewarn "and subscribe to wireshark's announce list to be notified of newly discovered
-	vulnerabilities."
+	echo
+	ewarn "With version 0.99.7, all function calls that require elevated privileges"
+	ewarn "have been moved out of the GUI to dumpcap. WIRESHARK CONTAINS OVER ONE"
+	ewarn "POINT FIVE MILLION LINES OF SOURCE CODE. DO NOT RUN THEM AS ROOT."
+	ewarn
+	ewarn "NOTE: To run wireshark as normal user you have to add yourself into"
+	ewarn "wireshark group. This security measure ensures that only trusted"
+	ewarn "users allowed to sniff your traffic."
+	echo
 }
