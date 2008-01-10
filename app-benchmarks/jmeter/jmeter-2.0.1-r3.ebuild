@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r3.ebuild,v 1.1 2007/11/20 05:21:29 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r3.ebuild,v 1.2 2008/01/10 21:58:30 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/jmeter/source/jakarta-${P}_src.tgz"
 COMMON_DEP="
 	beanshell? ( dev-java/bsh )
 	>=dev-java/bsf-2.3
-	dev-java/junit
+	=dev-java/junit-3.8*
 	java-virtuals/javamail"
 DEPEND=">=virtual/jdk-1.4
 	doc? ( >=dev-java/velocity-1.4 )
