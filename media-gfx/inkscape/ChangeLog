@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.73 2008/01/05 15:47:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.74 2008/01/10 08:35:45 maekke Exp $
+
+  10 Jan 2008; Markus Meier <maekke@gentoo.org>
+  -files/inkscape-0.41-configure.ac.patch,
+  -files/inkscape-0.41_gnome-print.patch, -files/inkscape-0.43-gcc41.patch,
+  -files/inkscape-gcc42.diff, -files/0.40-radial.patch, -files/string.patch,
+  -inkscape-0.44.ebuild, -inkscape-0.44.1.ebuild, -inkscape-0.45.ebuild:
+  remove old ebuilds and cruft
 
   05 Jan 2008; Markus Meier <maekke@gentoo.org> inkscape-0.45.1-r1.ebuild:
   remove loudmouth dep, bug #204414
