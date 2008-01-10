@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libipoddevice
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.18 2007/12/25 14:27:01 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.19 2008/01/10 18:19:36 drac Exp $
+
+  10 Jan 2008; Samuli Suominen <drac@gentoo.org> libipoddevice-0.5.3.ebuild:
+  Fix depends wrt #204868
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing metalgod from metadata.xml as per #99350.
