@@ -1,3 +1,5 @@
+# DON'T TOUCH THIS FILE. INSTEAD, FILE A BUG AND ASSIGN IT TO hppa@g.o.
+
 # Jeroen Roovers <jer@gentoo.org> (4 Jan 2008)
 # Masked until someone turns up with a PA-RISC laptop:
 laptop
