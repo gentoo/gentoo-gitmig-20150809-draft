@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gatt-svn
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/ChangeLog,v 1.17 2007/11/14 07:27:27 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/ChangeLog,v 1.18 2008/01/10 07:25:00 opfer Exp $
+
+  10 Jan 2008; Christian Faulhammer <opfer@gentoo.org> gatt-svn-9999.ebuild:
+  add TUTORIAL and manual to the note about how to use Gatt
 
   14 Nov 2007; Christian Faulhammer <opfer@gentoo.org> gatt-svn-9999.ebuild:
   remove the ebeep, people should know what they are doing
