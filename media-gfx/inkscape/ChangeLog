@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.74 2008/01/10 08:35:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.75 2008/01/10 10:11:36 maekke Exp $
+
+  10 Jan 2008; Markus Meier <maekke@gentoo.org> inkscape-0.45.1-r1.ebuild:
+  x86 stable, bug #205160
 
   10 Jan 2008; Markus Meier <maekke@gentoo.org>
   -files/inkscape-0.41-configure.ac.patch,
