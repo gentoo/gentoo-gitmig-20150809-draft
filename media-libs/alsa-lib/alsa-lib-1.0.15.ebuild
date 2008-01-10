@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.15.ebuild,v 1.2 2007/10/24 21:39:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.15.ebuild,v 1.3 2008/01/10 06:55:17 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -48,6 +48,9 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
+	use elibc_uclibc && myconf="--without-versioned"
+
 	# needed to avoid gcc looping internaly
 	use hppa && export CFLAGS="-O1 -pipe"
 
@@ -59,8 +62,9 @@ src_compile() {
 		$(use_enable alisp) \
 		$(use_enable midi instr) \
 		$(use_enable midi seq) $(use_enable midi aload) \
-		"--with-pcm-plugins=${ALSA_PCM_PLUGINS}" \
+		--with-pcm-plugins="${ALSA_PCM_PLUGINS}" \
 		--disable-dependency-tracking \
+		${myconf} \
 		|| die "configure failed"
 
 	emake || die "make failed"

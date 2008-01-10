@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.247 2007/11/19 05:42:32 kumba Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.248 2008/01/10 06:55:17 vapier Exp $
+
+  10 Jan 2008; Mike Frysinger <vapier@gentoo.org> alsa-lib-1.0.15.ebuild:
+  Since uclibc does not support symbol versioning, make sure to disable
+  versioned symbols for it.
 
   19 Nov 2007; Joshua Kinard <kumba@gentoo.org> alsa-lib-1.0.14a-r1.ebuild:
   Stable on mips.
