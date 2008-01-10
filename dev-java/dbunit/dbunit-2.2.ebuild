@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.2.ebuild,v 1.6 2007/08/26 14:14:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.2.ebuild,v 1.7 2008/01/10 22:22:20 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ppc x86"
 
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/poi-2.0
-	dev-java/junit
+	=dev-java/junit-3.8*
 	>=dev-java/ant-core-1.6
 	dev-java/commons-logging
 	>=dev-java/commons-lang-2.1
