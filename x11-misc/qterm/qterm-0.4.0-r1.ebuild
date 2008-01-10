@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.4.0-r1.ebuild,v 1.1 2007/12/24 03:24:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.4.0-r1.ebuild,v 1.2 2008/01/10 15:41:05 matsuu Exp $
 
 inherit eutils qt3
 
@@ -47,4 +47,11 @@ src_install() {
 	emake install DESTDIR="${D}" || die "install faled"
 	dodoc AUTHORS BUGS ChangeLog README* RELEASE_NOTES
 	mv "${D}"/usr/bin/qterm "${D}"/usr/bin/QTerm || die
+}
+
+pkg_postinst() {
+	elog
+	elog "Since 0.4.0-r1, /usr/bin/qterm has been renamed to /usr/bin/QTerm."
+	elog "Please see bug #176533 for more information."
+	elog
 }

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qterm
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.21 2007/12/24 03:24:41 matsuu Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.22 2008/01/10 15:41:05 matsuu Exp $
+
+  10 Jan 2008; MATSUU Takuto <matsuu@gentoo.org> qterm-0.4.0-r1.ebuild:
+  Added pkg_postinst. bug #176533.
 
 *qterm-0.4.0-r1 (24 Dec 2007)
 
