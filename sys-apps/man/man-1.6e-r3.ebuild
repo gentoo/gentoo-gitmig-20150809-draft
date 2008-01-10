@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6e-r3.ebuild,v 1.12 2007/07/04 18:42:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6e-r3.ebuild,v 1.13 2008/01/10 09:21:46 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbs
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
-DEPEND=">=sys-apps/groff-1.18
+RDEPEND=">=sys-apps/groff-1.18
 	!sys-apps/man-db"
 PROVIDE="virtual/man"
 
