@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3284 2008/01/10 18:38:07 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3285 2008/01/11 16:51:31 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -385,8 +385,6 @@ dev-java/aspectwerkz:java5 - Enable Java 5 specific features
 dev-java/avalon-logkit:javamail - Enable support for javamail
 dev-java/avalon-logkit:jms - Enable support for JMS (Java Message Service)
 dev-java/backport-util-concurrent:java5 - Enable also the 1.6 > 1.5 backport.
-dev-java/bsf:jython - Enable Jython support
-dev-java/bsf:rhino - Enable Rhino support
 dev-java/bsh:bsf - Enable support for Apache Bean Scripting Framework
 dev-java/commons-collections:test-framework - Install the test framework
 dev-java/commons-logging:avalon-framework - Add optional support for avalon-framework
