@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.7.ebuild,v 1.9 2007/01/04 13:13:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.7.ebuild,v 1.10 2008/01/11 21:46:17 grobian Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 #IUSE="unicode kde"
 IUSE="unicode"
-KEYWORDS="amd64 ppc ~ppc-macos sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND=""
 # KDE support will be available once a version of kaptain in stable
