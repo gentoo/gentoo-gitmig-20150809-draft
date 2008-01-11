@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gnome-system-tools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.76 2007/06/27 23:01:17 uberlord Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.77 2008/01/11 00:08:02 eva Exp $
+
+  11 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-system-tools-2.14.0.ebuild:
+  fix in preparation of intltool-0.37
 
   27 Jun 2007; Roy Marples <uberlord@gentoo.org>
   gnome-system-tools-2.14.0.ebuild:

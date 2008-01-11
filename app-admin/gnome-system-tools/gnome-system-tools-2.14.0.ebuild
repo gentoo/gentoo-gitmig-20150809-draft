@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.14.0.ebuild,v 1.17 2007/06/27 23:01:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.14.0.ebuild,v 1.18 2008/01/11 00:08:02 eva Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
@@ -34,10 +34,9 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README TODO"
 
-# --enable-disks is not (still) supported for Gentoo
-G2CONF="${G2CONF} --enable-boot --enable-services --disable-network"
-
 pkg_setup() {
+	# --enable-disks is not (still) supported for Gentoo
+	G2CONF="${G2CONF} --enable-boot --enable-services --disable-network"
 
 	if ! use nfs && ! use samba; then
 		G2CONF="${G2CONF} --disable-shares"
@@ -51,4 +50,5 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-ALL_LINGUAS.patch"
 	epatch "${FILESDIR}/${P}-doc.patch"
 	eautoreconf
+	intltoolize --force || die
 }
