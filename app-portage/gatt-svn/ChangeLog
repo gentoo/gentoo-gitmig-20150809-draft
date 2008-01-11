@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gatt-svn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/ChangeLog,v 1.18 2008/01/10 07:25:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/ChangeLog,v 1.19 2008/01/11 07:41:08 opfer Exp $
+
+  11 Jan 2008; Christian Faulhammer <opfer@gentoo.org> gatt-svn-9999.ebuild:
+  adjust dependency for new libthrowable version
 
   10 Jan 2008; Christian Faulhammer <opfer@gentoo.org> gatt-svn-9999.ebuild:
   add TUTORIAL and manual to the note about how to use Gatt

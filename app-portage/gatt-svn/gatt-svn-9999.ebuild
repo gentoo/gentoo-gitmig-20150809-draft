@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.17 2008/01/10 07:25:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.18 2008/01/11 07:41:08 opfer Exp $
 
 inherit subversion
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/boost-1.33.1
-	>=dev-cpp/libthrowable-0.9.6
+	>=dev-cpp/libthrowable-1.1.0
 	www-client/pybugz"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
