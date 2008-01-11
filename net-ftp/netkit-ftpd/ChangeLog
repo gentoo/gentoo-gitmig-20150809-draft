@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/netkit-ftpd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.11 2008/01/11 00:59:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.12 2008/01/11 11:24:54 rbu Exp $
+
+  11 Jan 2008; Robert Buchholz <rbu@gentoo.org> netkit-ftpd-0.17-r7.ebuild:
+  Fixed the patch when building with USE=-ssl, dropped ppc (bug #199206)
 
   11 Jan 2008; Brent Baude <ranger@gentoo.org> netkit-ftpd-0.17-r7.ebuild:
   Marking netkit-ftpd-0.17-r7 ppc for bug 199206
