@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/clusterssh
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/ChangeLog,v 1.19 2007/07/29 16:59:54 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/ChangeLog,v 1.20 2008/01/11 01:24:44 jsbronder Exp $
+
+*clusterssh-3.21 (11 Jan 2008)
+
+  11 Jan 2008; Justin Bronder <jsbronder@gentoo.org>
+  +files/clusterssh-3.21-disable-warning.patch,
+  +files/clusterssh-3.21-xrm-remove-class.patch, +clusterssh-3.21.ebuild:
+  Version bump (Bug 180892).  Add small patches from by tmancill@debian.org.
 
   29 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   clusterssh-3.18.1-r1.ebuild:
