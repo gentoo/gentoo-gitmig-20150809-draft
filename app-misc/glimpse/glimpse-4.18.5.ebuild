@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.18.5.ebuild,v 1.10 2007/02/06 12:10:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.18.5.ebuild,v 1.11 2008/01/11 21:00:12 grobian Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://webglimpse.net/trial/${P}.tar.gz"
 
 LICENSE="glimpse"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~mips ppc ~ppc-macos ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="static"
 
 RDEPEND="!dev-libs/tre
