@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.22 2007/10/09 07:40:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.23 2008/01/11 08:12:42 dberkholz Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -133,14 +133,7 @@ src_unpack() {
 			fi
 		fi
 
-		get_version
-		if [ "${KV_MAJOR}" -ge "2" -a "${KV_MINOR}" -ge "4" ] || \
-		     (  [ -e "${ROOT}/usr/src/linux" ] && \
-			      [ ! $(kernel_is "2" "2") ] ) || \
-				  [ "$(uname -r | cut -d. -f1,2)" != "2.2" ]
-		then
-			echo "#define HasLinuxInput YES" >> config/cf/host.def
-		fi
+		echo "#define HasLinuxInput YES" >> config/cf/host.def
 
 		echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
 		echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" >> config/cf/host.def
