@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.134 2008/01/11 10:24:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.135 2008/01/11 12:53:56 fmccor Exp $
+
+  11 Jan 2008; Ferris McCormick <fmccor@gentoo.org> ChangeLog:
+  Fix digests for 2.11.1
 
   11 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org> gtkhtml-2.11.1.ebuild:
   fix 2.11.1 $S (bug #205215)
