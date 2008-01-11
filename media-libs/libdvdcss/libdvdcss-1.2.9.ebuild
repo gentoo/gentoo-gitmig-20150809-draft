@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.21 2007/02/28 22:14:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.22 2008/01/11 19:02:03 aballier Exp $
 
 inherit eutils autotools flag-o-matic
 
 DESCRIPTION="A portable abstraction library for DVD decryption"
-HOMEPAGE="http://developers.videolan.org/libdvdcss/"
+HOMEPAGE="http://www.videolan.org/developers/libdvdcss.html"
 SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
