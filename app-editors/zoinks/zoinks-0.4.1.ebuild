@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.4.1.ebuild,v 1.2 2008/01/11 16:31:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.4.1.ebuild,v 1.3 2008/01/11 16:34:32 drac Exp $
 
 inherit eutils
 
@@ -33,6 +33,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README
-	newicon fw/Pixmaps/GrayFileIcon.xpm ${PN}.xpm
+	doicon ide/Pixmaps/${PN}.xpm
 	make_desktop_entry ${PN} "Zoinks!" ${PN} "Utility;TextEditor"
 }
