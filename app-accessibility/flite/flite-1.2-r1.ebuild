@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.2-r1.ebuild,v 1.10 2005/01/01 10:48:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.2-r1.ebuild,v 1.11 2008/01/11 15:42:15 jer Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.speech.cs.cmu.edu/flite/packed/${P}/${P}-release.tar.bz2
 
 LICENSE="BSD as-is"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 sparc"
+KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="static"
 
 RDEPEND="virtual/libc"
