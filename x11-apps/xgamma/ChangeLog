@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xgamma
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgamma/ChangeLog,v 1.17 2007/12/20 00:13:16 cla Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgamma/ChangeLog,v 1.18 2008/01/11 08:33:31 dberkholz Exp $
+
+  11 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>; xgamma-1.0.1.ebuild,
+  xgamma-1.0.2.ebuild:
+  (#204661) Missed build-time dep on xf86dgaproto (Patrick Lauer).
 
   19 Dec 2007; Dawid Węgliński <cla@gentoo.org> xgamma-1.0.2.ebuild:
   Stable on x86 (bug #202087)

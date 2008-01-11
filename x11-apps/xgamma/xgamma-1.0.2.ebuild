@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgamma/xgamma-1.0.2.ebuild,v 1.2 2007/12/20 00:13:16 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgamma/xgamma-1.0.2.ebuild,v 1.3 2008/01/11 08:33:31 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -12,4 +12,5 @@ DESCRIPTION="Alter a monitor's gamma correction through the X server"
 KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 
 RDEPEND="x11-libs/libXxf86vm"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	x11-proto/xf86vidmodeproto"
