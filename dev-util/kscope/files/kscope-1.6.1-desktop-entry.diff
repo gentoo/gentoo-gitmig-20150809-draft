@@ -1,0 +1,26 @@
+--- src/Makefile.am.orig	2008-01-11 15:04:58.000000000 +0100
++++ src/Makefile.am	2008-01-11 15:05:14.000000000 +0100
+@@ -52,7 +52,7 @@
+ kscope_LDADD = -lkateinterfaces -lktexteditor $(LIB_KDEUI)
+ 
+ # this is where the desktop file will go 
+-shelldesktopdir = $(kde_appsdir)/Development
++shelldesktopdir = $(xdg_appsdir)
+ shelldesktop_DATA = kscope.desktop
+ 
+ # this is where the shell's XML-GUI resource file goes
+--- src/kscope.desktop.orig	2008-01-11 15:06:13.000000000 +0100
++++ src/kscope.desktop	2008-01-11 15:06:27.000000000 +0100
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=KScope
+ Exec=kscope
+ Icon=kscope
+@@ -8,5 +7,5 @@
+ Comment[fr]=Editeur de codes sources pour de gros projets en C
+ GenericName=Source editing environment
+ GenericName[fr]=Editeur de code source
+-Categories=Qt;KDE;Development
++Categories=Qt;KDE;Development;
+ 
