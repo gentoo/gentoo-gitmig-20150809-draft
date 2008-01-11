@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-jelly
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.9 2008/01/11 07:06:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.10 2008/01/11 07:13:53 wltjr Exp $
+
+  11 Jan 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  commons-jelly-1.0-r3.ebuild:
+  Forgot --virtual
 
 *commons-jelly-1.0-r3 (11 Jan 2008)
 

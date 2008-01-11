@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r3.ebuild,v 1.1 2008/01/11 07:06:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r3.ebuild,v 1.2 2008/01/11 07:13:53 wltjr Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -45,7 +45,8 @@ src_unpack() {
 
 	mkdir -p "${S}/lib"
 	cd "${S}/lib"
-	java-pkg_jar-from servlet-api-2.3,commons-cli-1,commons-lang
+	java-pkg_jar-from --virtual servlet-api-2.3
+	java-pkg_jar-from commons-cli-1,commons-lang
 	java-pkg_jar-from commons-discovery,forehead,jakarta-jstl,commons-jexl-1.0
 	java-pkg_jar-from commons-beanutils-1.6,commons-collections
 	java-pkg_jar-from dom4j-1,jaxen-1.1,xerces-2
