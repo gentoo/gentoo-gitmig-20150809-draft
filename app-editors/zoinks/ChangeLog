@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zoinks
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.23 2008/01/11 16:45:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.24 2008/01/11 18:18:12 nixnut Exp $
+
+  11 Jan 2008; nixnut <nixnut@gentoo.org> zoinks-0.4.1.ebuild:
+  Stable on ppc wrt bug 205043
 
   11 Jan 2008; Samuli Suominen <drac@gentoo.org> zoinks-0.4.1.ebuild:
   amd64 stable wrt #205043
