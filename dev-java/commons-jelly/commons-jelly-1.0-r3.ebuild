@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r2.ebuild,v 1.2 2008/01/10 22:19:50 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r3.ebuild,v 1.1 2008/01/11 07:06:21 wltjr Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -11,11 +11,11 @@ SRC_URI="mirror://apache/jakarta/commons/jelly/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc test source"
 
 RDEPEND=">=virtual/jre-1.4
-	~dev-java/servletapi-2.3
+	~java-virtuals/servlet-api-2.3
 	=dev-java/commons-cli-1*
 	dev-java/commons-lang
 	dev-java/commons-discovery
@@ -45,7 +45,7 @@ src_unpack() {
 
 	mkdir -p "${S}/lib"
 	cd "${S}/lib"
-	java-pkg_jar-from servletapi-2.3,commons-cli-1,commons-lang
+	java-pkg_jar-from servlet-api-2.3,commons-cli-1,commons-lang
 	java-pkg_jar-from commons-discovery,forehead,jakarta-jstl,commons-jexl-1.0
 	java-pkg_jar-from commons-beanutils-1.6,commons-collections
 	java-pkg_jar-from dom4j-1,jaxen-1.1,xerces-2
