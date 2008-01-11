@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1-r3.ebuild,v 1.8 2006/11/24 21:45:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1-r3.ebuild,v 1.9 2008/01/11 09:48:56 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -21,7 +21,7 @@ RDEPEND=">=virtual/jre-1.3"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	unzip src.jar || die
 	rm -f junit.jar
 }
