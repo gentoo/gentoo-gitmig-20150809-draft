@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-2.4.ebuild,v 1.4 2008/01/10 23:24:34 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-2.4.ebuild,v 1.5 2008/01/11 00:02:43 ikelos Exp $
 
 inherit toolchain-funcs eutils
 
@@ -21,10 +21,13 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ophsmall"
 
 DEPEND="app-arch/unzip
+		>=dev-util/pkgconfig-0.22
 		dev-libs/openssl
 		net-libs/netwib
 		>=x11-libs/gtk+-2"
-RDEPEND="${DEPEND}"
+RDEPEND="dev-libs/openssl
+		 net-libs/netwib
+		 >=x11-libs/gtk+-2"
 
 src_compile() {
 	# Make samdump2
