@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.487 2008/01/06 20:11:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.488 2008/01/11 18:02:16 aballier Exp $
+
+*xine-lib-1.1.9.1-r1 (11 Jan 2008)
+*xine-lib-1.1.9.1 (11 Jan 2008)
+
+  11 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  +xine-lib-1.1.9.1.ebuild, +xine-lib-1.1.9.1-r1.ebuild:
+  bump for security fix bug #205197, giving two ebuilds at Diego's request,
+  one candidate for stable without IUSE default, one for ~arch due to numerous
+  people bitching about some defaults... bitching--
 
   06 Jan 2008; Diego Pettenò <flameeyes@gentoo.org>
   -files/xine-lib-1.1.4-CVE-2007-1246.patch,
