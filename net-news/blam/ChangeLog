@@ -1,6 +1,9 @@
 # ChangeLog for net-news/blam
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.44 2008/01/11 17:53:42 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.45 2008/01/11 19:42:09 dertobi123 Exp $
+
+  11 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org> blam-1.8.4.ebuild:
+  ppc stable, bug #199841
 
   11 Jan 2008; Peter Weller <welp@gentoo.org> blam-1.8.4.ebuild:
   Stable on amd64; bug 199841
