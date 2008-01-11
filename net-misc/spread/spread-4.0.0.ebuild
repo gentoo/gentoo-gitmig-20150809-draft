@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/spread-4.0.0.ebuild,v 1.2 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/spread-4.0.0.ebuild,v 1.3 2008/01/11 08:38:56 armin76 Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR=${D} -j1 install || die
 	newinitd ${FILESDIR}/spread.init.d spread
 	dodir /var/run/spread
 }
