@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1.ebuild,v 1.6 2008/01/07 15:30:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1.ebuild,v 1.7 2008/01/11 01:41:15 caster Exp $
 
 WANT_ANT_TASKS="ant-nodeps ant-trax"
 
@@ -17,7 +17,7 @@ SRC_URI="http://dlc.sun.com/${PN}/download/${MY_PV}/fcs/200704122300/${FILE_IDE}
 	c++? ( http://dlc.sun.com/${PN}/download/${MY_PV}/cnd/mlfcs/070610/${FILE_CPP} )"
 LICENSE="CDDL"
 SLOT="5.5"
-KEYWORDS="~amd64 x86 ~x86-fbsd"
+KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="c++ debug doc"
 
 COMMON_DEPEND="

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.75 2008/01/07 15:30:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.76 2008/01/11 01:41:15 caster Exp $
+
+  11 Jan 2008; Vlastimil Babka <caster@gentoo.org> netbeans-5.5-r6.ebuild,
+  netbeans-5.5.1.ebuild:
+  Stable on amd64, bug #204625. Also apply WANT_ANT_TASKS fix to 5.5-r6.
 
   07 Jan 2008; Markus Meier <maekke@gentoo.org> netbeans-5.5.1.ebuild:
   x86 stable, bug #204625

@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.11 2008/01/02 07:05:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.12 2008/01/11 01:41:15 caster Exp $
+
+WANT_ANT_TASKS="ant-nodeps ant-trax"
 
 inherit eutils java-pkg-2 java-ant-2 versionator
 
