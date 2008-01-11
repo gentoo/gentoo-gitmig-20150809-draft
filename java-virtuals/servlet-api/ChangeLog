@@ -1,6 +1,11 @@
 # ChangeLog for java-virtuals/servlet-api
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.4 2008/01/09 17:30:05 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.5 2008/01/11 08:11:35 wltjr Exp $
+
+  11 Jan 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  servlet-api-2.3.ebuild:
+  Added ~ia64, as this virtual provides only one package and it has keyword
+  already
 
   09 Jan 2008; William L. Thomson Jr. <wltjr@gentoo.org>
   servlet-api-2.2.ebuild, servlet-api-2.3.ebuild, servlet-api-2.5.ebuild:
