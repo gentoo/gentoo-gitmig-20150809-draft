@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-3.6.1.ebuild,v 1.1 2008/01/11 15:11:22 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-3.6.1.ebuild,v 1.2 2008/01/11 18:32:48 mr_bones_ Exp $
 
 # We currently download the Javadoc documentation.
 # It could optionally be built using the Ant build file.
@@ -16,7 +16,7 @@ DESCRIPTION="ICU4J is a mature, widely used set of Java libraries providing Unic
 MY_PV=${PV//./_}
 
 SRC_URI="http://download.icu-project.org/files/${PN}/${PV}/${PN}src_${MY_PV}.jar
-	doc? (http://download.icu-project.org/files/${PN}/${PV}/${PN}docs_${MY_PV}.jar)"
+	doc? ( http://download.icu-project.org/files/${PN}/${PV}/${PN}docs_${MY_PV}.jar )"
 
 HOMEPAGE="http://www.icu-project.org/"
 LICENSE="icu"
