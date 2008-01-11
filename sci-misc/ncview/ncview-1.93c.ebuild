@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-1.93c.ebuild,v 1.1 2007/08/20 13:40:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-1.93c.ebuild,v 1.2 2008/01/11 09:51:39 bicatali Exp $
 
 inherit multilib
 
@@ -21,6 +21,7 @@ DEPEND="sci-libs/netcdf
 src_compile() {
 	# force netpbm (could be a use flag, but worth it?)
 	econf \
+		--with-x \
 		--with-libppm \
 		$(use_with udunits) \
 		|| die "econf failed"

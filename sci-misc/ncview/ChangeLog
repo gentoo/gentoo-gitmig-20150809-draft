@@ -1,6 +1,14 @@
 # ChangeLog for sci-misc/ncview
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ChangeLog,v 1.10 2007/08/20 13:40:40 bicatali Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ChangeLog,v 1.11 2008/01/11 09:51:39 bicatali Exp $
+
+  11 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org> -ncview-1.93b.ebuild,
+  ncview-1.93c.ebuild:
+  added --with-x, possibly fixing bug #205257
+
+  11 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org> -ncview-1.93b.ebuild,
+  ncview-1.93c.ebuild:
+  Added libICE dependency (bug #205257), removed older version.
 
 *ncview-1.93c (20 Aug 2007)
 
