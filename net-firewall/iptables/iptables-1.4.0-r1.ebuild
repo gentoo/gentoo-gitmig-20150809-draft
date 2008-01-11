@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.0-r1.ebuild,v 1.2 2008/01/08 16:23:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.0-r1.ebuild,v 1.3 2008/01/11 17:47:01 pva Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -39,15 +39,16 @@ pkg_setup() {
 		linux-info_pkg_setup
 	fi
 
-	if kernel_is ge 2 6 20
-	then
-		L7FILE=${KERNEL_DIR}/net/netfilter/xt_layer7.c
-	else
-		L7FILE=${KERNEL_DIR}/net/ipv4/netfilter/ipt_layer7.c
-	fi
-	if use l7filter && \
-		[ ! -f "${L7FILE}" ]; then
-		die "For layer 7 support emerge net-misc/l7-filter-${L7_PV} before this"
+	if use l7filter ; then
+		if kernel_is lt 2 6 20 ; then
+			eerror "Currently there is no l7-filter patch available for iptables-1.4.x"
+			eerror "and kernel version before 2.6.20."
+			eerror "If you need to compile iptables 1.4.x against Linux 2.6.19.x"
+			eerror "or earlier, with l7-filter patch, please, report upstream."
+			die "No patch available."
+		fi
+		[ ! -f "${KERNEL_DIR}/include/linux/netfilter/xt_layer7.h" ] && \
+			die "For layer 7 support emerge net-misc/l7-filter-${L7_PV} before this."
 	fi
 	if use imq && \
 		[ ! -f "${KERNEL_DIR}/net/ipv4/netfilter/ipt_IMQ.c" ]; then
@@ -59,8 +60,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${P}.tar.bz2
-	if use l7filter
-	then
+	if use l7filter ; then
 		unpack ${L7_P}.tar.gz
 	fi
 	cd "${S}"
@@ -94,19 +94,9 @@ src_unpack() {
 	fi
 
 	if use l7filter ; then
-		#yes choosing 2.6.20 was deliberate - upstream mistake possibly
-		if kernel_is ge 2 6 20
-		then
-			L7_PATCH=iptables-1.4-for-kernel-2.6.20forward-layer7-${L7_PV}.patch
-		else
-			eerror "Currently there is no l7-filter patch available for this"
-			eerror "kernel iptables-1.4 and kernel version pre 2.6.20."
-			eerror "If you need to compile iptables 1.4.x against Linux 2.6.19.x"
-			eerror "or earlier, with l7-filter patch, please, report upstream."
-			die "No patch available."
-		fi
-		EPATCH_OPTS="-p1" epatch "${WORKDIR}"/${L7_P}/${L7_PATCH}
-		chmod +x extensions/.layer7-test*
+		EPATCH_OPTS="-p1" epatch \
+			"${WORKDIR}"/${L7_P}/iptables-1.4-for-kernel-2.6.20forward-layer7-${L7_PV}.patch
+		chmod +x extensions/.layer7-test
 	fi
 
 	if ! use extensions ; then
@@ -141,6 +131,7 @@ src_defs() {
 		export KBUILD_OUTPUT=${KERNEL_DIR}
 		diemsg="failure"
 	else
+		export KERNEL_DIR
 		diemsg="failure - with l7filter and/or imq patch and/or other miscellanious patches added"
 	fi
 	export diemsg
@@ -195,11 +186,5 @@ pkg_postinst() {
 		ewarn "and/or"
 		ewarn "  net.ipv6.ip_forward = 1"
 		ewarn "for ipv6."
-	fi
-	if has_version '=net-firewall/iptables-1.2*' ; then
-		ewarn
-		ewarn "When upgrading from iptables-1.2.x, you may be unable to remove"
-		ewarn "rules added with iptables-1.2.x.  This is a known issue, please see:"
-		ewarn "http://bugs.gentoo.org/92535"
 	fi
 }
