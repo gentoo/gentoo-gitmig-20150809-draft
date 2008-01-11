@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/gforth-0.6.2-r1.ebuild,v 1.3 2006/12/14 21:12:01 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/gforth-0.6.2-r1.ebuild,v 1.4 2008/01/11 21:56:14 grobian Exp $
 
 inherit elisp-common eutils toolchain-funcs flag-o-matic
 
@@ -11,8 +11,8 @@ SRC_URI="http://www.complang.tuwien.ac.at/forth/gforth/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-# KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
-KEYWORDS="~ppc ~x86 ~x86-fbsd"			# dev-libs/ffcall needs to be keyworded for amd64 and ppc-macos
+# KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~ppc ~x86 ~x86-fbsd"			# dev-libs/ffcall needs to be keyworded for amd64
 IUSE="emacs force-reg"
 
 DEPEND="virtual/libc
