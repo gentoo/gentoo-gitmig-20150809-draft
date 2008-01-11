@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.3.1.ebuild,v 1.7 2007/11/23 13:24:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.3.1.ebuild,v 1.8 2008/01/11 20:24:24 cardoe Exp $
 
 inherit python apache-module multilib
 
@@ -55,11 +55,11 @@ src_test() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize "/usr/$(get_libdir)/python${PYVER}/site-packages/mod_python"
+	python_mod_optimize "${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages/mod_python"
 	apache-module_pkg_postinst
 }
 
 pkg_postrm() {
 	python_version
-	python_mod_cleanup "/usr/$(get_libdir)/python${PYVER}/site-packages/mod_python"
+	python_mod_cleanup "${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages/mod_python"
 }
