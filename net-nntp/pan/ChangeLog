@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.52 2008/01/11 00:56:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.53 2008/01/11 16:25:32 maekke Exp $
+
+  11 Jan 2008; Markus Meier <maekke@gentoo.org> pan-0.132-r1.ebuild:
+  x86 stable, bug #195543
 
   11 Jan 2008; Brent Baude <ranger@gentoo.org> pan-0.132-r1.ebuild:
   Marking pan-0.132-r1 ppc and ppc64 for bug 195543
