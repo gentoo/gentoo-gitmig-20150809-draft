@@ -1,0 +1,131 @@
+Patch by Sergei Golovan fixes building ejabberd with erlang R12B-0.
+
+Index: ejabberd-1.1.4/src/ejabberd_s2s_in.erl
+===================================================================
+--- ejabberd-1.1.4.orig/src/ejabberd_s2s_in.erl
++++ ejabberd-1.1.4/src/ejabberd_s2s_in.erl
+@@ -30,8 +30,12 @@
+ 
+ -include("ejabberd.hrl").
+ -include("jlib.hrl").
++-ifdef(SSL39).
++-include_lib("ssl/include/ssl_pkix.hrl").
++-else.
+ -include_lib("ssl/include/PKIX1Explicit88.hrl").
+ -include_lib("ssl/include/PKIX1Implicit88.hrl").
++-endif.
+ -include("XmppAddr.hrl").
+ 
+ -define(DICT, dict).
+--- ejabberd-1.1.4.orig/src/configure
++++ ejabberd-1.1.4/src/configure
+@@ -648,6 +648,7 @@
+ ERLC
+ ERL
+ ERLANG_CFLAGS
++ERLANG_SSL39
+ ERLANG_LIBS
+ LIBICONV
+ CPP
+@@ -2865,14 +2866,21 @@
+ -author('alexey@sevcom.net').
+ 
+ -export([start/0]).
++-include_lib("ssl/include/ssl_pkix.hrl").
+ 
+ start() ->
+     EIDirS = code:lib_dir("erl_interface") ++ "\n",
+     EILibS =  libpath("erl_interface") ++ "\n",
+     RootDirS = code:root_dir() ++ "\n",
+-    file:write_file("conftest.out", list_to_binary(EIDirS ++ EILibS ++ RootDirS)),
++    file:write_file("conftest.out", list_to_binary(EIDirS ++ EILibS ++ ssldef() ++ RootDirS)),
+     halt().
+ 
++-ifdef('id-pkix').
++ssldef() -> "-DSSL39\n".
++-else.
++ssldef() -> "\n".
++-endif.
++
+ %% return physical architecture based on OS/Processor
+ archname() ->
+     ArchStr = erlang:system_info(system_architecture),
+@@ -2927,6 +2935,8 @@
+    # Second line
+    ERLANG_EI_LIB=`cat conftest.out | head -n 2 | tail -n 1`
+    # Third line
++   ERLANG_SSL39=`cat conftest.out | head -n 3 | tail -n 1`
++   # End line
+    ERLANG_DIR=`cat conftest.out | tail -n 1`
+ 
+    ERLANG_CFLAGS="-I$ERLANG_EI_DIR/include -I$ERLANG_DIR/usr/include"
+@@ -6205,6 +6215,7 @@
+ ERL!$ERL$ac_delim
+ ERLANG_CFLAGS!$ERLANG_CFLAGS$ac_delim
+ ERLANG_LIBS!$ERLANG_LIBS$ac_delim
++ERLANG_SSL39!$ERLANG_SSL39$ac_delim
+ LIBICONV!$LIBICONV$ac_delim
+ CPP!$CPP$ac_delim
+ GREP!$GREP$ac_delim
+@@ -6238,7 +6248,7 @@
+ LTLIBOBJS!$LTLIBOBJS$ac_delim
+ _ACEOF
+ 
+-  if test `grep -c "$ac_delim\$" conf$$subs.sed` = 79; then
++  if test `grep -c "$ac_delim\$" conf$$subs.sed` = 80; then
+     break
+   elif $ac_last_try; then
+     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
+--- ejabberd-1.1.4.orig/src/Makefile.in
++++ ejabberd-1.1.4/src/Makefile.in
+@@ -12,6 +12,8 @@
+ EXPAT_LIBS = @EXPAT_LIBS@
+ ERLANG_LIBS = @ERLANG_LIBS@
+ 
++ERLC_FLAGS += @ERLANG_SSL39@
++
+ # make debug=true to compile Erlang module with debug informations.
+ ifdef debug
+   ERLC_FLAGS+=+debug_info
+--- ejabberd-1.1.4.orig/src/aclocal.m4
++++ ejabberd-1.1.4/src/aclocal.m4
+@@ -79,14 +79,21 @@
+ -author('alexey@sevcom.net').
+ 
+ -export([[start/0]]).
++-include_lib("ssl/include/ssl_pkix.hrl").
+ 
+ start() ->
+     EIDirS = code:lib_dir("erl_interface") ++ "\n",
+     EILibS =  libpath("erl_interface") ++ "\n",
+     RootDirS = code:root_dir() ++ "\n",
+-    file:write_file("conftest.out", list_to_binary(EIDirS ++ EILibS ++ RootDirS)),
++    file:write_file("conftest.out", list_to_binary(EIDirS ++ EILibS ++ ssldef() ++ RootDirS)),
+     halt().
+ 
++-ifdef('id-pkix').
++ssldef() -> "-DSSL39\n".
++-else.
++ssldef() "\n".
++-endif.
++
+ %% return physical architecture based on OS/Processor
+ archname() ->
+     ArchStr = erlang:system_info(system_architecture),
+@@ -135,6 +142,8 @@
+    # Second line
+    ERLANG_EI_LIB=`cat conftest.out | head -n 2 | tail -n 1`
+    # Third line
++   ERLANG_SSL39=`cat conftest.out | head -n 3 | tail -n 1`
++   # End line
+    ERLANG_DIR=`cat conftest.out | tail -n 1`
+    
+    ERLANG_CFLAGS="-I$ERLANG_EI_DIR/include -I$ERLANG_DIR/usr/include"
+@@ -142,6 +151,7 @@
+    
+    AC_SUBST(ERLANG_CFLAGS)
+    AC_SUBST(ERLANG_LIBS)
++   AC_SUBST(ERLANG_SSL39)
+    AC_SUBST(ERLC)
+    AC_SUBST(ERL)
+ ])
