@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.0.2.ebuild,v 1.2 2007/09/28 15:41:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.0.2.ebuild,v 1.3 2008/01/11 14:42:56 markusle Exp $
 
 inherit elisp-common flag-o-matic toolchain-funcs bash-completion
 
@@ -31,7 +31,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd "${S}"
 	econf --with-nolisp || die "configure failed"
 	emake || die "compile failed"
 }

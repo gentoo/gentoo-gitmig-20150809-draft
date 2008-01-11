@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/epix
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.20 2007/10/05 02:00:36 markusle Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.21 2008/01/11 14:42:56 markusle Exp $
+
+  11 Jan 2008; Markus Dittrich <markusle@gentoo.org> epix-1.2.1.ebuild:
+  Updated epix to the new latex-base virtual. Thanks much to Alexis 
+  Ballier <aballier@gentoo.org> for his help with figuring out the 
+  required latex dependencies.
 
 *epix-1.2.1 (05 Oct 2007)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.1.ebuild,v 1.1 2007/10/05 02:00:36 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.1.ebuild,v 1.2 2008/01/11 14:42:56 markusle Exp $
 
 inherit elisp-common flag-o-matic toolchain-funcs bash-completion
 
@@ -13,7 +13,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="emacs"
 
-DEPEND="virtual/tetex
+DEPEND="virtual/latex-base
+		|| ( ( dev-texlive/texlive-pstricks
+				dev-texlive/texlive-pictures
+				dev-texlive/texlive-latexextra
+				dev-tex/xcolor )
+			app-text/tetex
+			app-text/ptex )
 		emacs? ( virtual/emacs )"
 
 SITEFILE=50${PN}-gentoo.el
@@ -27,7 +33,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd "${S}"
 	econf --disable-epix-el || die "configure failed"
 	emake || die "compile failed"
 }
