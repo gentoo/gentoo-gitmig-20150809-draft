@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8108 2008/01/11 14:25:54 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8109 2008/01/11 23:34:22 keytoaster Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -926,7 +926,7 @@ dev-java/aterm-java
 
 # Carsten Lohrke <carlo@gentoo.org> (4 Apr 2007)
 # mask kmess prereleases
->=net-im/kmess-1.5_pre1
+=net-im/kmess-1.5_pre*
 
 # Marcelo Goes <vanquirius@gentoo.org> (3 Apr 2007)
 # Nessus 2.3.x was discontinued
