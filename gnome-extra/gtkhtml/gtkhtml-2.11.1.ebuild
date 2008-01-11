@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-2.11.1.ebuild,v 1.2 2008/01/09 21:18:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-2.11.1.ebuild,v 1.3 2008/01/11 10:24:27 eva Exp $
 
 inherit eutils gnome2 versionator autotools
 
@@ -28,6 +28,8 @@ DEPEND="${RDEPEND}
 	 >=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS  README TODO docs/IDEAS"
+
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable accessibility)"
