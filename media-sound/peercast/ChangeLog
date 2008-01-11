@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/peercast
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.16 2008/01/10 22:38:54 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.17 2008/01/11 08:02:53 opfer Exp $
+
+  11 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  peercast-0.1218.ebuild:
+  stable x86, security bug 202747
 
   10 Jan 2008; Robert Buchholz <rbu@gentoo.org> peercast-0.1218.ebuild:
   amd64 stable (bug #202747)
