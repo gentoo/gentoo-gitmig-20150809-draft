@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r2.ebuild,v 1.8 2007/11/18 20:17:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r2.ebuild,v 1.9 2008/01/11 19:22:26 aballier Exp $
 
 inherit eutils kde-functions autotools multilib
 
 DESCRIPTION="Linux Drum Machine"
-HOMEPAGE="http://hydrogen.sourceforge.net/"
+HOMEPAGE="http://www.hydrogen-music.org/"
 SRC_URI="mirror://sourceforge/hydrogen/${P}.tar.gz"
 
 LICENSE="GPL-2"
