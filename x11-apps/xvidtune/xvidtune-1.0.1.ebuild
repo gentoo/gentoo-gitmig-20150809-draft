@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/xvidtune-1.0.1.ebuild,v 1.6 2006/10/10 23:55:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/xvidtune-1.0.1.ebuild,v 1.7 2008/01/11 08:31:59 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -14,7 +14,8 @@ IUSE="xprint"
 
 RDEPEND="x11-libs/libXxf86vm
 	x11-libs/libXaw"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	x11-proto/xf86vidmodeproto"
 
 CONFIGURE_OPTIONS="$(use_enable xprint)"
 
