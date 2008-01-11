@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.67 2008/01/05 22:46:49 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.68 2008/01/11 03:42:02 williamh Exp $
+
+  11 Jan 2008; William Hubbs <williamh@gentoo.org> brltty-3.9.ebuild:
+  Fixed building with the ocaml use flag -- bug #204789.
 
 *brltty-3.9 (05 Jan 2008)
 
