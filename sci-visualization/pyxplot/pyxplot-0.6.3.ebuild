@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.6.3.ebuild,v 1.3 2008/01/11 19:42:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.6.3.ebuild,v 1.4 2008/01/11 20:15:55 cardoe Exp $
 
 inherit eutils python
 
@@ -71,9 +71,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/share/${PN}
+	python_mod_optimize "${ROOT}/usr/share/${PN}"
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/share/${PN}
+	python_mod_cleanup "${ROOT}/usr/share/${PN}"
 }
