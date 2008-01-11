@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.2 2008/01/09 15:25:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.3 2008/01/11 22:01:59 killerfox Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ IUSE=""
 DEPEND="
 	x11-libs/libX11
 	x11-libs/libXext
+	x11-libs/libXpm
 	media-libs/imlib2
 "
 RDEPEND=""
