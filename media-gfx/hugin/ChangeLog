@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/hugin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.33 2007/12/17 08:36:48 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.34 2008/01/11 17:07:57 nixnut Exp $
+
+  11 Jan 2008; nixnut <nixnut@gentoo.org> hugin-0.6.1-r2.ebuild:
+  Stable on ppc wrt bug 205154
 
   17 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   hugin-0.6.1-r2.ebuild:
