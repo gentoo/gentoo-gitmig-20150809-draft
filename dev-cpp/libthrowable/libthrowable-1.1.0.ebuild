@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/libthrowable-0.9.6.ebuild,v 1.5 2007/07/10 19:22:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/libthrowable-1.1.0.ebuild,v 1.1 2008/01/11 07:35:32 opfer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="threads examples"
 
 DEPEND=""
@@ -21,17 +21,15 @@ pkg_setup() {
 	# must be done before anything is installed!
 	if use threads; then
 	   has_version dev-cpp/libthrowable && ! built_with_use dev-cpp/libthrowable threads \
-	       && ewarn "You recompile with USE=threads, so remember to rebuilt all depending packages!" && epause
+		   && ewarn "You recompile with USE=threads, so remember to rebuilt all depending packages!" && epause
 	else
 	   has_version dev-cpp/libthrowable && built_with_use dev-cpp/libthrowable threads \
-	       && ewarn "You recompile without USE=threads, so remember to rebuilt all depending packages!" && epause
+		   && ewarn "You recompile without USE=threads, so remember to rebuilt all depending packages!" && epause
 	fi
 }
 
 src_compile() {
-	econf $(use_enable threads pthreads) \
-		|| die "econf failed"
-
+	econf $(use_enable threads pthreads) || die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -43,4 +41,9 @@ src_install() {
 	   insinto /usr/share/doc/${PN}/examples/
 	   doins examples/*
 	fi
+}
+
+pkg_postinst() {
+	elog "Please run revdep-rebuild from app-portage/gentoolkit or rebuild"
+	elog "all depending packages yourself."
 }
