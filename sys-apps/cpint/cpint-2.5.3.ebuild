@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpint/cpint-2.5.3.ebuild,v 1.1 2007/04/07 15:05:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpint/cpint-2.5.3.ebuild,v 1.2 2008/01/11 07:16:12 vapier Exp $
 
-inherit linux-info
+inherit linux-info eutils
 
 MY_PV=${PV//./}
 
@@ -17,12 +17,18 @@ IUSE=""
 
 DEPEND=""
 
-src_compile() {
-	emake INCLUDEDIR=-I/usr/src/linux/include || die "emake failed"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-prototypes.patch
+	epatch "${FILESDIR}"/${P}-kernel.patch
+
+	# the makefile uses this variable
+	export KERNEL_DIR
 }
 
 src_install() {
-	einstall prefix="${D}" || die
-	rm -rf "${D}"/lib/modules/misc
+	emake install prefix="${D}" || die
 	dodoc ChangeLog HOW-TO
 }
