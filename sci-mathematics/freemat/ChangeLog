@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/freemat
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.6 2007/09/26 10:10:34 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.7 2008/01/11 11:22:28 markusle Exp $
+
+  11 Jan 2008; Markus Dittrich <markusle@gentoo.org> freemat-3.5.ebuild:
+  Added missing QT4 dependency (fixes bug #205259).
 
   26 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org> -freemat-3.2.ebuild,
   freemat-3.4.ebuild, freemat-3.5.ebuild:
