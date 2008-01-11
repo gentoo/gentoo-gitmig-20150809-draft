@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/ecls
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.25 2007/02/22 01:37:34 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.26 2008/01/11 14:50:18 hkbst Exp $
+
+*ecls-0.9j_p1 (11 Jan 2008)
+
+  11 Jan 2008; Marijn Schouten <hkBst@gentoo.org> +ecls-0.9j_p1.ebuild:
+  bump, bug 204011
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
