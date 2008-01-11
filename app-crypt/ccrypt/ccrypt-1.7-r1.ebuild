@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ccrypt-1.7-r1.ebuild,v 1.4 2007/11/11 06:53:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ccrypt-1.7-r1.ebuild,v 1.5 2008/01/11 20:38:20 grobian Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ccrypt.sourceforge.net"
 SRC_URI="http://ccrypt.sourceforge.net/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc-macos x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 src_unpack() {
