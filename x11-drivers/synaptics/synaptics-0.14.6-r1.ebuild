@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6-r1.ebuild,v 1.1 2008/01/11 19:57:47 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6-r1.ebuild,v 1.2 2008/01/11 22:12:11 killerfox Exp $
 
 inherit toolchain-funcs eutils
 
@@ -27,7 +27,11 @@ src_unpack() {
 		-e "s:CC = gcc:CC = $(tc-getCC):g" \
 		-e "s:CDEBUGFLAGS = -O2:CDEBUGFLAGS = ${CFLAGS}:g" \
 		"${S}"/Makefile
+
+	# Fix grabbing of event devices so it will not stop working together with
+	# packages which grab their devices at their own like sys-apps/inputd does.
 	epatch "${FILESDIR}"/synaptics-fixeventgrab.diff
+
 	epatch "${FILESDIR}"/synaptics_input_api.diff
 }
 
