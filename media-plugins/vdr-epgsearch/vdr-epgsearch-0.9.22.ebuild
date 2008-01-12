@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.22.ebuild,v 1.3 2007/07/10 23:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.22.ebuild,v 1.4 2008/01/12 11:57:34 zzam Exp $
 
 inherit vdr-plugin
 
@@ -19,7 +19,7 @@ DEPEND=">=media-video/vdr-1.3.45
 src_unpack() {
 	vdr-plugin_src_unpack
 
-	cd ${S}
+	cd "${S}"
 	fix_vdr_libsi_include conflictcheck.c
 
 	use pcre && sed -i Makefile -e 's/^#HAVE_PCREPOSIX/HAVE_PCREPOSIX/'
@@ -30,7 +30,7 @@ src_install() {
 	diropts "-m755 -o vdr -g vdr"
 	keepdir /etc/vdr/plugins/epgsearch
 
-	cd ${S}
+	cd "${S}"
 	emake install-doc MANDIR="${D}/usr/share/man"
 	dodoc MANUAL
 }
@@ -39,7 +39,7 @@ pkg_postinst() {
 	vdr-plugin_pkg_postinst
 	if has_version "<media-plugins/vdr-epgsearch-0.9.18"; then
 		elog "Moving config-files to new location /etc/vdr/plugins/epgsearch"
-		cd ${ROOT}/etc/vdr/plugins
+		cd "${ROOT}"/etc/vdr/plugins
 		local f
 		local moved=""
 		for f in epgsearch*.* .epgsearch*; do
