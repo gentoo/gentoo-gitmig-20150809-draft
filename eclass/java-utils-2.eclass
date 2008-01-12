@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.101 2008/01/12 15:03:13 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.102 2008/01/12 15:04:26 caster Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -1085,7 +1085,7 @@ java-pkg_getjar() {
 		elif [[ "${1}" == "--virtual" ]]; then
 			virtual="true"
 		else
-			die "java-pkg_jar-from called with unknown parameter: ${1}"
+			die "java-pkg_getjar called with unknown parameter: ${1}"
 		fi
 		shift
 	done
