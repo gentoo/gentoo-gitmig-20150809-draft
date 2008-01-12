@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.25.ebuild,v 1.1 2008/01/12 02:57:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.25.ebuild,v 1.2 2008/01/12 03:01:43 drac Exp $
 
 inherit flag-o-matic pam
 
@@ -56,7 +56,7 @@ src_install() {
 		mandir="${D}/usr/share/man/man1" || die "einstall failed."
 
 	pamd_mimic_system xlock auth
-	use pam && chmod 755 "${D}"/usr/bin/xlock
+	use pam && fperms 755 /usr/bin/xlock
 
 	dohtml docs/*.html
 	rm docs/*.html
