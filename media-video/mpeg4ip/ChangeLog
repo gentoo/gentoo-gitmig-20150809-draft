@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.55 2008/01/11 00:15:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.56 2008/01/12 21:03:53 tester Exp $
+
+*mpeg4ip-1.5.0.1-r4 (12 Jan 2008)
+
+  12 Jan 2008; Olivier Crête <tester@gentoo.org>
+  +files/mpeg4ip-1.5.0.1-avcodec_extern_c.patch, +mpeg4ip-1.5.0.1-r4.ebuild:
+  Add patch to make it compile with ffmpeg, bug #188183
 
   11 Jan 2008; Steve Dibb <beandog@gentoo.org> mpeg4ip-1.5.0.1-r3.ebuild:
   amd64 stable

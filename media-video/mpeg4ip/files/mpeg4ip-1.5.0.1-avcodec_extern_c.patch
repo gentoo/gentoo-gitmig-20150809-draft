@@ -1,0 +1,48 @@
+--- mpeg4ip-1.5.0.1/server/mp4live/audio_ffmpeg.h.unpatched	2007-11-24 09:07:06.000000000 +0100
++++ mpeg4ip-1.5.0.1/server/mp4live/audio_ffmpeg.h	2007-11-24 09:11:03.000000000 +0100
+@@ -24,9 +24,13 @@
+ 
+ #include "audio_encoder.h"
+ #ifdef HAVE_FFMPEG_INSTALLED
++extern "C" {
+ #include <ffmpeg/avcodec.h>
++}
+ #else
++extern "C" {
+ #include <avcodec.h>
++}
+ #endif
+ #include <sdp.h>
+ 
+--- mpeg4ip-1.5.0.1/server/mp4live/video_ffmpeg.h.unpatched	2007-11-24 09:09:04.000000000 +0100
++++ mpeg4ip-1.5.0.1/server/mp4live/video_ffmpeg.h	2007-11-24 09:10:18.000000000 +0100
+@@ -24,9 +24,13 @@
+ 
+ #include "video_encoder.h"
+ #ifdef HAVE_FFMPEG_INSTALLED
++extern "C" {
+ #include <ffmpeg/avcodec.h>
++}
+ #else
++extern "C" {
+ #include <avcodec.h>
++}
+ #endif
+ 
+ class CFfmpegVideoEncoder : public CVideoEncoder {
+--- mpeg4ip-1.5.0.1/server/mp4live/video_encoder_class.cpp.unpatched	2007-11-24 09:11:51.000000000 +0100
++++ mpeg4ip-1.5.0.1/server/mp4live/video_encoder_class.cpp	2007-11-24 09:12:17.000000000 +0100
+@@ -26,9 +26,13 @@
+ #include "video_util_filter.h"
+ #ifdef HAVE_FFMPEG
+ #ifdef HAVE_FFMPEG_INSTALLED
++extern "C" {
+ #include <ffmpeg/avcodec.h>
++}
+ #else
++extern "C" {
+ #include <avcodec.h>
++}
+ #endif
+ #endif
+ 
