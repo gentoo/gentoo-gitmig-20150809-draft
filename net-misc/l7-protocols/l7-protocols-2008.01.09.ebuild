@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2007.05.09.ebuild,v 1.5 2008/01/12 08:05:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2008.01.09.ebuild,v 1.1 2008/01/12 08:05:50 pva Exp $
 
 inherit fixheadtails toolchain-funcs
 
@@ -42,21 +42,20 @@ src_compile() {
 #}
 
 src_install() {
-
 	dodir /usr/share/${PN}
-	cd testing
-	cp -pPR randprintable randchars test_speed match README *.sh "${D}"/usr/share/${PN}
-	cd "${S}"
+	pushd testing
+	cp -pPR randprintable randchars test_speed-{kernel,userspace} README \
+		match_kernel speeds-2007-10-02-450MHz *.sh data "${D}"/usr/share/${PN}
+	popd
+	mv example_traffic "${D}"/usr/share/${PN}
 
 	dodoc README CHANGELOG HOWTO WANTED
-	dodoc README.weakpatterns
-	newdoc extra/README README.extra
-	newdoc file_types/README README.file_types
-	newdoc malware/README README.malware
-	newdoc testing/README README.testing
-	rm -rf README CHANGELOG HOWTO LICENSE WANTED */README testing
+	for dir in extra file_types malware ; do
+		newdoc ${dir}/README README.${dir}
+	done
+	rm -rf README CHANGELOG HOWTO LICENSE Makefile WANTED */README testing
 
-	make PREFIX="${D}" install || die
-	rm "${D}"/etc/${PN}/Makefile
+	dodir /etc/l7-protocols
+	cp -R * "${D}"/etc/l7-protocols
 	chown -R root:0 "${D}"
 }
