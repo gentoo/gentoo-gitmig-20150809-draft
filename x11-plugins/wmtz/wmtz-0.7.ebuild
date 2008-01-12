@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.17 2008/01/12 13:36:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.18 2008/01/12 13:41:03 drac Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -32,7 +32,7 @@ src_compile() {
 		LIBDIR="-L/usr/$(get_libdir)" || die "emake failed."
 }
 
-src_install () {
+src_install() {
 	dobin ${PN}
 	doman ${PN}.1
 	insinto /etc
