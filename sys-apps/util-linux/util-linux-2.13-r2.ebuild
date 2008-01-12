@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13-r2.ebuild,v 1.9 2008/01/11 19:08:38 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13-r2.ebuild,v 1.10 2008/01/12 10:50:31 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils
@@ -41,6 +41,7 @@ src_unpack() {
 	else
 		unpack ${A}
 		cd "${S}"
+		epatch "${FILESDIR}"/${P}-uclibc.patch #203711
 		epatch "${FILESDIR}"/${P}-locale.patch #191111
 		epatch "${FILESDIR}"/${P}-ioprio-syscalls.patch #190613
 		epatch "${FILESDIR}"/${P}-setuid-checks.patch

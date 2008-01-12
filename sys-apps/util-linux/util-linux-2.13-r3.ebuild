@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13-r3.ebuild,v 1.1 2007/12/14 03:18:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13-r3.ebuild,v 1.2 2008/01/12 10:50:31 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils
@@ -16,13 +16,13 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 else
 	SRC_URI="http://www.kernel.org/pub/linux/utils/util-linux-ng/v${PV:0:4}/${MY_P}.tar.bz2
-		crypt? ( http://loop-aes.sourceforge.net/updates/${MY_P}-1.diff.bz2 )"
+		loop-aes? ( http://loop-aes.sourceforge.net/loop-AES/loop-AES-v3.2b.tar.bz2 )"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="crypt nls old-linux selinux"
+IUSE="crypt loop-aes nls old-linux selinux"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -41,12 +41,13 @@ src_unpack() {
 	else
 		unpack ${A}
 		cd "${S}"
+		epatch "${FILESDIR}"/${P}-uclibc.patch #203711
 		epatch "${FILESDIR}"/${P}-locale.patch #191111
 		epatch "${FILESDIR}"/${P}-ioprio-syscalls.patch #190613
 		epatch "${FILESDIR}"/${P}-setuid-checks.patch
 		epatch "${FILESDIR}"/${P}-script-SIGWINCH.patch #191452
 		epatch "${FILESDIR}"/${P}-hwclock-rtc.patch #179780
-		use crypt && epatch "${WORKDIR}"/${MY_P}-1.diff "${FILESDIR}"/${P}-losetup-P.patch #201981
+		use loop-aes && epatch "${WORKDIR}"/loop-AES-*/util-linux-ng-2.13.0.1.diff
 		sed -i '/#include <asm\/page.h>/d' mount/swapon.c || die
 	fi
 }
