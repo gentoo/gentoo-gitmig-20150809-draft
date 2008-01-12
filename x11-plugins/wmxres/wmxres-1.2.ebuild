@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/wmxres-1.2.ebuild,v 1.6 2008/01/12 13:57:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/wmxres-1.2.ebuild,v 1.7 2008/01/12 13:58:15 drac Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -27,7 +27,7 @@ S=${WORKDIR}/${PN}.app
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${PN}-debian-1.1-1.2.patch
+	epatch "${FILESDIR}"/${PN}-debian-1.1-1.2.patch
 	sed -e "s:-g -c -O2:${CFLAGS} -c:" \
 		-e "s:cc:$(tc-getCC):g" -i Makefile
 }
