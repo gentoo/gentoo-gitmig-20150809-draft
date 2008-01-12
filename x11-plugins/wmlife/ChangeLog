@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmlife
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlife/ChangeLog,v 1.1 2008/01/12 12:55:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlife/ChangeLog,v 1.2 2008/01/12 13:30:43 maekke Exp $
+
+  12 Jan 2008; Markus Meier <maekke@gentoo.org> wmlife-1.0.0.ebuild:
+  add ~x86
 
 *wmlife-1.0.0 (12 Jan 2008)
 
