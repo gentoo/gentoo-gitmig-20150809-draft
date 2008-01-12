@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.22.ebuild,v 1.1 2007/12/24 10:29:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.22.ebuild,v 1.2 2008/01/12 07:28:39 pva Exp $
 
 inherit bash-completion eutils
 
@@ -46,8 +46,8 @@ src_install() {
 
 pkg_postinst() {
 	bash-completion_pkg_postinst
+	ewarn
 	if has_version "<3.0.10"; then
-		ewarn
 		ewarn "The location of some vzctl files have changed. Most notably,"
 		ewarn "VE configuration files and samples directory has changed from"
 		ewarn "/etc/vz to /etc/vz/conf. In order to be able to work with"
@@ -56,4 +56,15 @@ pkg_postinst() {
 		ewarn "bash# mv /etc/vz/[0-9]*.conf /etc/vz/conf/"
 		ewarn
 	fi
+	ewarn "NOTE: Starting with vzctl-3.0.22 the mechanism for choosing the"
+	ewarn "interfaces to send ARP requests to has been improved (see description"
+	ewarn "of NEIGHBOUR_DEVS in vz.conf(5) man page). In case VE IP addresses"
+	ewarn "are not on the same subnet as HN IPs, it may lead to such VEs being"
+	ewarn "unreachable from the outside world."
+	ewarn
+	ewarn "The solution is to set up a device route(s) for the network your VEs are"
+	ewarn "in. For more details, see http://bugzilla.openvz.org/show_bug.cgi?id=771#c1"
+	ewarn
+	ewarn "The old vzctl behavior can be restored by setting NEIGHBOUR_DEVS to any"
+	ewarn 'value other than "detect" in /etc/vz/vz.conf.'
 }

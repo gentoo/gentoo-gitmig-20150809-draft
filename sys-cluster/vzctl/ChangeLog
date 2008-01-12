@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/vzctl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.51 2007/12/24 10:29:12 pva Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.52 2008/01/12 07:28:39 pva Exp $
+
+  12 Jan 2008; <pva@gentoo.org> vzctl-3.0.22.ebuild:
+  Added compatibility note, announced by OpenVZ team.
 
 *vzctl-3.0.22 (24 Dec 2007)
 
