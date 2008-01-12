@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/horde-webmail
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-webmail/ChangeLog,v 1.4 2007/12/30 22:46:10 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-webmail/ChangeLog,v 1.5 2008/01/12 05:10:41 vapier Exp $
+
+*horde-webmail-1.0.4 (12 Jan 2008)
+
+  12 Jan 2008; Mike Frysinger <vapier@gentoo.org>
+  +horde-webmail-1.0.4.ebuild:
+  Version bump.
 
 *horde-webmail-1.0.3 (30 Dec 2007)
 
