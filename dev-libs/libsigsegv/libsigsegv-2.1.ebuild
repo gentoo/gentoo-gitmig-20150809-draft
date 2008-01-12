@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.1.ebuild,v 1.8 2007/04/07 16:36:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.1.ebuild,v 1.9 2008/01/12 20:46:22 grobian Exp $
 
 inherit eutils
 
@@ -9,18 +9,13 @@ HOMEPAGE="ftp://ftp.gnu.org/pub/gnu/libsigsegv/"
 SRC_URI="mirror://gnu/libsigsegv/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~ppc-macos"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND="virtual/libc"
 
 src_compile() {
-	if use ppc-macos ; then
-		epatch ${FILESDIR}/libsigsegv-2.1-darwin-7.x.patch || die
-		./configure --enable-shared || die
-	else
-		econf --enable-shared || die
-	fi
+	econf --enable-shared || die
 	emake || die
 }
 
