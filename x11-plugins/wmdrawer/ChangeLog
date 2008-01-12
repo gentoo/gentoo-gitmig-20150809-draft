@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmdrawer
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.19 2006/11/18 22:35:43 compnerd Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.20 2008/01/12 01:13:56 coldwind Exp $
+
+  12 Jan 2008; Santiago M. Mola <coldwind@gentoo.org>
+  wmdrawer-0.10.5-r2.ebuild:
+  Add pkgconfig to DEPEND (#204543), misc QA fixes.
 
   18 Nov 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   wmdrawer-0.10.5-r2.ebuild:
