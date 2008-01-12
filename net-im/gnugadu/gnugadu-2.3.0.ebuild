@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.6 2008/01/12 21:00:35 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.7 2008/01/12 21:13:13 spock Exp $
 
 IUSE="debug dbus tlen esd oss xosd arts jabber perl spell gnutls"
 
@@ -20,8 +20,6 @@ RDEPEND="net-libs/libgadu
 	>=x11-libs/gtk+-2.4.0
 	sys-devel/gettext
 	dev-util/pkgconfig
-	>=sys-devel/automake-1.7
-	>=sys-devel/libtool-1.4
 	jabber? ( >=net-libs/loudmouth-0.17 )
 	xosd? ( x11-libs/xosd )
 	perl? ( dev-lang/perl dev-perl/XML-Parser )
@@ -37,12 +35,11 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -re 's#GTKSPELL_LIBS=`(.*)`#GTKSPELL_LIBS="`\1` -laspell"#g' -i configure
 }
 
 src_compile() {
-
 	myconf="--with-gui --with-gadu --with-remote --with-docklet_system_tray --with-docklet_dockapp \
 		--with-sms --with-update --with-external --with-gghist --with-history-external-viewer --with-external-libgadu"
 
@@ -66,8 +63,7 @@ src_compile() {
 }
 
 src_install () {
-
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	insinto /usr/share/applications
 	doins gg2.desktop
 	dodoc AUTHORS ChangeLog NEWS README TODO

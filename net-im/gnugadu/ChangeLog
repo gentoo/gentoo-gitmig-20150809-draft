@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gnugadu
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.50 2008/01/12 21:00:35 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.51 2008/01/12 21:13:13 spock Exp $
+
+  12 Jan 2008; Michał Januszewski <spock@gentoo.org> gnugadu-2.3.0.ebuild:
+  Fix quoting issues, remove unused dependencies.
 
   12 Jan 2008; Michał Januszewski <spock@gentoo.org> gnugadu-2.3.0.ebuild:
   Fix bug #205499.
