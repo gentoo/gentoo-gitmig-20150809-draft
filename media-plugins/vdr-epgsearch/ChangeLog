@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-epgsearch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.25 2008/01/12 11:57:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.26 2008/01/12 12:01:36 zzam Exp $
+
+  12 Jan 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-epgsearch-0.9.23.ebuild:
+  Marked stable on x86.
 
   12 Jan 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-epgsearch-0.9.17d.ebuild, vdr-epgsearch-0.9.19.ebuild,
