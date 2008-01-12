@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmaiload
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.24 2007/02/21 23:39:18 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.25 2008/01/12 01:04:26 coldwind Exp $
+
+  12 Jan 2008; Santiago M. Mola <coldwind@gentoo.org>
+  wmmaiload-1.0.2.ebuild, wmmaiload-2.2.1.ebuild:
+  Add libXpm to DEPEND (#204541), depend on =x11-libs/gtk+-1*, misc QA fixes.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
