@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1-r2.ebuild,v 1.14 2007/03/10 14:31:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1-r2.ebuild,v 1.15 2008/01/12 03:32:49 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
-DESCRIPTION="The Portage Package Management System. The primary package management and distribution system for Gentoo."
+DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
