@@ -1,6 +1,10 @@
 # ChangeLog for net-im/tleenx2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/ChangeLog,v 1.11 2008/01/12 21:21:34 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/ChangeLog,v 1.12 2008/01/12 21:23:14 spock Exp $
+
+  12 Jan 2008; Michał Januszewski <spock@gentoo.org>
+  -tleenx2-20040106.ebuild, -tleenx2-20040214.ebuild:
+  Remove old ebuilds.
 
   12 Jan 2008; Michał Januszewski <spock@gentoo.org>
   tleenx2-20060309.ebuild:
