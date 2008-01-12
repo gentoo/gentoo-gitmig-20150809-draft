@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmsg
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.10 2007/02/06 02:03:25 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.11 2008/01/12 00:38:39 coldwind Exp $
+
+  12 Jan 2008; Santiago M. Mola <coldwind@gentoo.org> wmmsg-1.0.ebuild:
+  Add libXpm to deps (#204539), change HOMEPAGE, SRC_URI, remove redundant
+  src_compile.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
