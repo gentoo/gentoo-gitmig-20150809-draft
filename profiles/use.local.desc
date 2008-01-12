@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3290 2008/01/12 14:14:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3291 2008/01/12 18:15:31 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -954,6 +954,7 @@ media-libs/panda3d:nspr - Enables support for the Netscape Portable Runtime, use
 media-libs/ploticus:cpulimit - Limit cpu usage when generating graphics
 media-libs/ploticus:flash - Adds support for creating SWF files using Ming
 media-libs/ploticus:svgz - Compressed svg graphics support
+media-libs/portaudio:cxx - Enable C++ bindings
 media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/sge:image - enable sdl-image support
