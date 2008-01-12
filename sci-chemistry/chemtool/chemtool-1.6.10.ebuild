@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.10.ebuild,v 1.1 2007/04/17 19:56:45 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.10.ebuild,v 1.2 2008/01/12 04:30:57 je_fro Exp $
 
 inherit eutils kde-functions
 
@@ -15,6 +15,7 @@ IUSE="gnome kde nls"
 
 DEPEND="media-gfx/transfig
 		=x11-libs/gtk+-2*
+		dev-util/pkgconfig
 		kde? ( kde-base/kdelibs )
 		x86? ( media-libs/libemf )"
 
@@ -51,6 +52,6 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc ChangeLog INSTALL README TODO
 	insinto /usr/share/${PN}/examples
-	doins ${S}/examples/*
-	if ! use nls; then rm -rf ${D}/usr/share/locale; fi
+	doins "${S}"/examples/*
+	if ! use nls; then rm -rf "${D}"/usr/share/locale; fi
 }
