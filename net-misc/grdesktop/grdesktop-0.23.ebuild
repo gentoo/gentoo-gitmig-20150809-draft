@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.23.ebuild,v 1.9 2007/07/04 14:10:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.23.ebuild,v 1.10 2008/01/12 13:22:18 leio Exp $
 
 inherit eutils gnome2
 
@@ -20,7 +20,8 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/gconf-2"
 
 DEPEND="${RDEPEND}
-	app-text/scrollkeeper"
+	app-text/scrollkeeper
+	>=dev-util/pkgconfig-0.9"
 
 G2CONF="${G2CONF} --with-keymap-path=/usr/share/rdesktop/keymaps/"
 
@@ -28,7 +29,7 @@ docs="AUTHORS ChangeLog NEWS README TODO"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Correct icon path. See bug #50295.
 	sed -i -e 's:Icon=.*:Icon=grdesktop/icon.png:' grdesktop.desktop
