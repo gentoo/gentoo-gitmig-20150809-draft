@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080110.ebuild,v 1.2 2008/01/11 09:40:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080110.ebuild,v 1.3 2008/01/12 18:23:18 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -174,6 +174,7 @@ pkg_setup() {
 	vlc_use_needs vcdx cdio
 	vlc_use_needs libgcrypt gnutls
 	vlc_use_needs bidi truetype
+	vlc_use_needs qt4 vlm
 }
 
 src_unpack() {
