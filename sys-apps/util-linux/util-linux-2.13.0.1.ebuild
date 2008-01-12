@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13-r3.ebuild,v 1.2 2008/01/12 10:50:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13.0.1.ebuild,v 1.1 2008/01/12 22:26:51 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils
@@ -41,12 +41,11 @@ src_unpack() {
 	else
 		unpack ${A}
 		cd "${S}"
-		epatch "${FILESDIR}"/${P}-uclibc.patch #203711
-		epatch "${FILESDIR}"/${P}-locale.patch #191111
-		epatch "${FILESDIR}"/${P}-ioprio-syscalls.patch #190613
-		epatch "${FILESDIR}"/${P}-setuid-checks.patch
-		epatch "${FILESDIR}"/${P}-script-SIGWINCH.patch #191452
-		epatch "${FILESDIR}"/${P}-hwclock-rtc.patch #179780
+		epatch "${FILESDIR}"/${PN}-2.13-uclibc.patch #203711
+		epatch "${FILESDIR}"/${PN}-2.13-locale.patch #191111
+		epatch "${FILESDIR}"/${PN}-2.13-ioprio-syscalls.patch #190613
+		epatch "${FILESDIR}"/${PN}-2.13-script-SIGWINCH.patch #191452
+		epatch "${FILESDIR}"/${PN}-2.13-hwclock-rtc.patch #179780
 		use loop-aes && epatch "${WORKDIR}"/loop-AES-*/util-linux-ng-2.13.0.1.diff
 		sed -i '/#include <asm\/page.h>/d' mount/swapon.c || die
 	fi
