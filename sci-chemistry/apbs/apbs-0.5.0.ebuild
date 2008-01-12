@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.5.0.ebuild,v 1.2 2007/02/24 18:39:08 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.5.0.ebuild,v 1.3 2008/01/12 13:44:08 markusle Exp $
 
 inherit eutils fortran
 
@@ -38,7 +38,7 @@ src_compile() {
 	econf ${myconf} || die "configure failed"
 
 	# build
-	make DESTDIR=${D} || die "make failed"
+	make DESTDIR="${D}" || die "make failed"
 }
 
 src_install() {

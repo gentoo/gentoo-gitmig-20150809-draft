@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.5.1.ebuild,v 1.1 2007/07/18 17:37:48 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.5.1.ebuild,v 1.2 2008/01/12 13:44:08 markusle Exp $
 
 inherit eutils fortran
 
@@ -29,6 +29,10 @@ pkg_setup() {
 }
 
 src_compile() {
+	# fix apbsblas
+	sed -e "s:-L\${prefix}/lib -lapbsblas:${S}//contrib/blas/.libs/libapbsblas.a:" \
+		-i configure \
+		|| die "failed to fix configure"
 
 	# use blas
 	use blas && local myconf="--with-blas=-lblas"
@@ -38,7 +42,7 @@ src_compile() {
 	econf ${myconf} || die "configure failed"
 
 	# build
-	make DESTDIR=${D} || die "make failed"
+	make DESTDIR="${D}" || die "make failed"
 }
 
 src_install() {
