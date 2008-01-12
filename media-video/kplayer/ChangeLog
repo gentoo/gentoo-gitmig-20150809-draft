@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kplayer
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.33 2007/08/10 10:02:19 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.34 2008/01/12 00:25:32 carlo Exp $
+
+  12 Jan 2008; Carsten Lohrke <carlo@gentoo.org>
+  +files/kplayer-0.6.3-desktop-entry.diff, kplayer-0.6.3.ebuild:
+  Fix desktop entry.
 
   10 Aug 2007; Raúl Porcel <armin76@gentoo.org> kplayer-0.6.3.ebuild:
   Back to ~arch, went stright to stable
