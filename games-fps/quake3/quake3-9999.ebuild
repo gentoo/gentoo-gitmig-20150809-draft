@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.14 2007/12/31 21:27:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.15 2008/01/12 02:54:39 mr_bones_ Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -65,7 +65,7 @@ src_compile() {
 	buildit() { use $1 && echo 1 || echo 0 ; }
 	emake \
 		BUILD_SERVER=$(buildit dedicated) \
-		BUILD_CLIENT=$(buildit opengl) \
+		BUILD_CLIENT=$(( $(buildit opengl) | $(buildit !dedicated) )) \
 		TEMPDIR="${T}" \
 		CC="$(tc-getCC)" \
 		ARCH=$(tc-arch-kernel) \
