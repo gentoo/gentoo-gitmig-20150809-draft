@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta.ebuild,v 1.1 2007/08/28 05:17:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta.ebuild,v 1.2 2008/01/12 06:59:52 williamh Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,10 +27,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="mbrola"
 
-RDEPEND="mbrola? ( >=app-accessibility/mbrola-3.0.1h-r2 )"
-
-DEPEND="${RDEPEND}
-	>=app-accessibility/speech-tools-1.2.96_beta"
+DEPEND=">=app-accessibility/speech-tools-1.2.96_beta"
+RDEPEND="${DEPEND}
+	mbrola? ( >=app-accessibility/mbrola-3.0.1h-r2 )"
 
 S=${WORKDIR}/festival
 
@@ -42,20 +41,23 @@ src_unpack() {
 	unpack ${A}
 
 	# tell festival to use the speech-tools we have installed.
-	sed -i -e "s:\(EST=\).*:\1/usr/share/speech-tools:" ${S}/config/config.in
-	sed -i -e "s:\$(EST)/lib:/usr/$(get_libdir):" ${S}/config/project.mak
+	sed -i -e "s:\(EST=\).*:\1/usr/share/speech-tools:" "${S}"/config/config.in
+	sed -i -e "s:\$(EST)/lib:/usr/$(get_libdir):" "${S}"/config/project.mak
 
 	# disable the multisyn modules
-	sed -i -e "s:\(ALSO_INCLUDE.*=.*MultiSyn\):# \1:" ${S}/config/config.in
+	sed -i -e "s:\(ALSO_INCLUDE.*=.*MultiSyn\):# \1:" "${S}"/config/config.in
 
 	# fix the reference  to /usr/lib/festival
-	sed -i -e "s:\(FTLIBDIR.*=.*\)\$.*:\1/usr/share/festival:" ${S}/config/project.mak
+	sed -i -e "s:\(FTLIBDIR.*=.*\)\$.*:\1/usr/share/festival:" "${S}"/config/project.mak
 
 	# Fix path for examples in festival.scm
-	sed -i -e "s:\.\./examples/:/usr/share/doc/${PF}/examples/:" ${S}/lib/festival.scm
+	sed -i -e "s:\.\./examples/:/usr/share/doc/${PF}/examples/:" "${S}"/lib/festival.scm
 
 	# patch init.scm to look for siteinit.scm and sitevars.scm in /etc/festival
-	epatch ${FILESDIR}/${P}-init-scm.patch
+	epatch "${FILESDIR}"/${P}-init-scm.patch
+
+	# Apply a patch for gcc4.3.
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {
@@ -78,10 +80,10 @@ src_install() {
 	doins -r examples
 
 	# Need to fix saytime, etc. to look for festival in the correct spot
-	for ex in ${D}/usr/share/doc/${PF}/examples/*.sh; do
+	for ex in "${D}"/usr/share/doc/${PF}/examples/*.sh; do
 		exnoext=${ex%%.sh}
-		chmod a+x ${exnoext}
-		dosed "s:${S}/bin/festival:/usr/bin/festival:" ${exnoext##$D}
+		chmod a+x "${exnoext}"
+		dosed "s:${S}/bin/festival:/usr/bin/festival:" "${exnoext##$D}"
 	done
 
 	# Install the header files
@@ -90,15 +92,15 @@ src_install() {
 
 	insinto /etc/festival
 	# Sample server.scm configuration for the server
-	doins ${FILESDIR}/server.scm
+	doins "${FILESDIR}"/server.scm
 	doins lib/site*
 
 	# Install the init script
-	newinitd ${FILESDIR}/festival.rc festival
+	newinitd "${FILESDIR}"/festival.rc festival
 
 	# Install the docs
-	dodoc ${S}/{ACKNOWLEDGMENTS,NEWS,README}
-	doman ${S}/doc/{festival.1,festival_client.1}
+	dodoc "${S}"/{ACKNOWLEDGMENTS,NEWS,README}
+	doman "${S}"/doc/{festival.1,festival_client.1}
 
 	# create the directory where our log file will go.
 	diropts -m 0755 -o festival -g audio
@@ -138,7 +140,7 @@ mbrola_voices() {
 	# This assumes all mbrola voices are named after the voices defined
 	# in MBROLA, i.e. if MBROLA contains a voice fr1, then the Festival
 	# counterpart should be named fr1_mbrola.
-	for language in ${S}/lib/voices/*; do
+	for language in "${S}"/lib/voices/*; do
 		for mvoice in ${language}/*_mbrola; do
 			voice=${mvoice##*/}
 			database=${voice%%_mbrola}
