@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.6.5.ebuild,v 1.4 2007/12/04 11:45:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.7.1.ebuild,v 1.1 2008/01/12 19:54:36 bicatali Exp $
 
-inherit eutils gnome2
+USE_EINSTALL=true
+
+inherit eutils gnome2 elisp-common
 
 DESCRIPTION="Regression, econometrics and time-series library"
 HOMEPAGE="http://gretl.sourceforge.net/"
@@ -12,9 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-# 1.6.5 too buggy without nls. now forcing.
-#IUSE="accessibility gmp gnome gtk nls png readline sourceview"
-IUSE="accessibility gmp gnome gtk png readline sourceview"
+IUSE="accessibility emacs gmp gnome gtk nls png readline sourceview"
 
 RDEPEND="dev-libs/libxml2
 	>=dev-libs/glib-2
@@ -31,18 +31,19 @@ RDEPEND="dev-libs/libxml2
 			 >=gnome-base/libgnomeprint-2.2
 			 >=gnome-base/libgnomeprintui-2.2
 			 >=gnome-base/gconf-2.0 )
-	sourceview? ( x11-libs/gtksourceview )"
+	sourceview? ( x11-libs/gtksourceview )
+	emacs? ( virtual/emacs )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+SITEFILE=50${PN}-gentoo.el
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# fix when nls not selected (bug #198720)
-	epatch "${FILESDIR}"/${P}-nls.patch
 	# makefile in cli not propagating flags
-	epatch "${FILESDIR}"/${P}-cli.patch
+	epatch "${FILESDIR}"/${PN}-1.6.5-cli.patch
 }
 
 src_compile() {
@@ -61,10 +62,10 @@ src_compile() {
 	fi
 
 	econf \
-		--with-nls \
 		--with-mpfr \
 		--without-libole2 \
 		--without-gtkextra \
+		$(use_enable nls) \
 		$(use_enable png png-comments) \
 		$(use_with readline) \
 		$(use_with gmp) \
@@ -74,6 +75,10 @@ src_compile() {
 		|| die "econf failed"
 
 	emake || die "emake failed"
+
+	if use emacs; then
+		elisp-compile utils/emacs/gretl.el || die "elisp-compile failed"
+	fi
 }
 
 src_install() {
@@ -86,6 +91,25 @@ src_install() {
 		doicon gnome/gretl.png
 		make_desktop_entry gretlx11 gretl
 	fi
+	if use emacs; then
+		elisp-install ${PN} utils/emacs/gretl.{el,elc} \
+			|| die "elisp-install failed"
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
+			|| die "elisp-site-file-install failed"
+	fi
 	dodoc NEWS README README.audio ChangeLog TODO EXTENDING \
 		|| die "dodoc failed"
+}
+
+pkg_postinst() {
+	if use emacs; then
+		elisp-site-regen
+		elog "To begin using gretl-mode for all \".inp\" files that you edit,"
+		elog "add the following line to your \"~/.emacs\" file:"
+		elog "  (add-to-list 'auto-mode-alist '(\"\\\\.inp\\\\'\" . gretl-mode))"
+	fi
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
