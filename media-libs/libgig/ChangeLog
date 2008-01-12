@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgig
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgig/ChangeLog,v 1.6 2007/08/19 18:19:15 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgig/ChangeLog,v 1.7 2008/01/12 10:04:38 aballier Exp $
+
+*libgig-3.2.1 (12 Jan 2008)
+
+  12 Jan 2008; Alexis Ballier <aballier@gentoo.org> +libgig-3.2.1.ebuild:
+  version bump
 
 *libgig-3.1.1 (19 Aug 2007)
 
