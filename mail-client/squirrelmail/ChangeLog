@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.109 2008/01/10 17:06:36 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.110 2008/01/12 02:40:39 eradicator Exp $
+
+*squirrelmail-1.5.1-r7 (12 Jan 2008)
+*squirrelmail-1.4.13-r1 (12 Jan 2008)
+
+  12 Jan 2008; Jeremy Huddleston <eradicator@gentoo.org>
+  -squirrelmail-1.4.11.ebuild, -squirrelmail-1.4.13.ebuild,
+  +squirrelmail-1.4.13-r1.ebuild, -squirrelmail-1.5.1-r6.ebuild,
+  +squirrelmail-1.5.1-r7.ebuild:
+  Removing gpg plugin because it is broken.  See bug #202406.
 
   10 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org>
   squirrelmail-1.4.10a-r2.ebuild, squirrelmail-1.4.11.ebuild,

@@ -1,23 +1,22 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.11.ebuild,v 1.2 2008/01/10 17:06:36 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.5.1-r7.ebuild,v 1.1 2008/01/12 02:40:39 eradicator Exp $
 
-IUSE="crypt ldap spell ssl filter mysql postgres nls"
+IUSE="ldap spell ssl filter mysql postgres nls"
 
 inherit webapp eutils
 
 DESCRIPTION="Webmail for nuts!"
 
 # Plugin Versions
-COMPATIBILITY_VER=2.0.9-1.0
+COMPATIBILITY_VER=2.0.8-1.0
 USERDATA_VER=0.9-1.4.0
 ADMINADD_VER=0.1-1.4.0
 AMAVIS_VER=0.8.0-1.4
-GPG_VER=2.1
 LDAP_USERDATA_VER=0.4
 SECURELOGIN_VER=1.3-1.2.8
 SHOWSSL_VER=2.2-1.2.8
-LOCALES_VER=1.4.9-20070106
+LOCALES_VER=1.5.1-20060219
 DECODING_VER=1.2
 
 MY_P=${P/_rc/-RC}
@@ -32,7 +31,6 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	ssl? ( ${PLUGINS_LOC}/show_ssl_link-${SHOWSSL_VER}.tar.gz )
 	${PLUGINS_LOC}/admin_add.${ADMINADD_VER}.tar.gz
 	filter? ( ${PLUGINS_LOC}/amavisnewsql-0.8.0-1.4.tar.gz )
-	crypt? ( ${PLUGINS_LOC}/gpg-${GPG_VER}.tar.gz )
 	ldap? ( ${PLUGINS_LOC}/ldapuserdata-${LDAP_USERDATA_VER}.tar.gz )
 	nls? ( mirror://sourceforge/${PN}/all_locales-${LOCALES_VER}.tar.bz2 )"
 
@@ -45,7 +43,6 @@ DEPEND=""
 
 RDEPEND="virtual/php
 	virtual/perl-DB_File
-	crypt? ( =app-crypt/gnupg-1.4* )
 	ldap? ( net-nds/openldap )
 	spell? ( || ( app-text/aspell app-text/ispell ) )
 	filter? ( mail-filter/amavisd-new dev-php/PEAR-Log dev-php/PEAR-DB dev-php/PEAR-Net_SMTP )
@@ -57,15 +54,33 @@ src_unpack() {
 	unpack squirrelmail-decode-${DECODING_VER}.tar.bz2
 
 	cd ${S}
+	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2006-4019.patch
+	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2006-6142-draft_composesess.patch
+	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2006-6142-mailto.patch
+	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2006-6142-mime.patch
+	epatch ${FILESDIR}/squirrelmail-1.5.1-ie-mime.patch
+	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2007-1262.patch
+	epatch ${FILESDIR}/squirrelmail-1.5.1-sqimap_get_message.patch
 
 	mv config/config_default.php config/config.php
 
-	sed -i "s:'/var/local/squirrelmail/data/':SM_PATH . 'data/':" config/config.php
+	sed -i "s:'/var/local/squirrelmail/data':SM_PATH . 'data/':" config/config.php
 
 	# Now do the plugins
 	cd ${S}/plugins
 
-	sed -i 's:/usr/games/fortune:/usr/bin/fortune:g' fortune/setup.php || die "Unable to fix fortunes plugin."
+	mv fortune/config_default.php fortune/config.php
+	sed -i 's:/usr/games/fortune:/usr/bin/fortune:g' fortune/config.php
+
+	mv bug_report/config_default.php bug_report/config.php
+	mv change_password/config_default.php change_password/config.php
+	mv filters/config_default.php filters/config.php
+	mv mail_fetch/config_sample.php mail_fetch/config.php
+	mv newmail/config_default.php newmail/config.php
+	mv translate/config_default.php translate/config.php
+
+	rm newmail/config_sample.php
+	rm translate/config_sample.php
 
 	unpack compatibility-${COMPATIBILITY_VER}.tar.gz
 
@@ -76,9 +91,6 @@ src_unpack() {
 	use filter &&
 		unpack amavisnewsql-${AMAVIS_VER}.tar.gz &&
 		mv amavisnewsql/config.php.dist amavisnewsql/config.php
-
-	use crypt &&
-		unpack gpg-${GPG_VER}.tar.gz
 
 	use ldap &&
 		unpack ldapuserdata-${LDAP_USERDATA_VER}.tar.gz &&
@@ -94,9 +106,6 @@ src_unpack() {
 	use nls &&
 		cd ${S} &&
 		unpack all_locales-${LOCALES_VER}.tar.bz2
-
-	cd ${S}
-	use crypt && epatch ${FILESDIR}/squirrelmail-gpg-2.1-CVE-2005-1924.patch
 }
 
 src_compile() {
@@ -107,88 +116,37 @@ src_compile() {
 src_install() {
 	webapp_src_preinst
 
+	# Copy the app's main files
+	einfo "Installing squirrelmail files."
+	cp -r . ${D}${MY_HTDOCSDIR}
+
+	keepdir ${MY_HTDOCSDIR}/data
+
 	# handle documentation files
 	#
 	# NOTE that doc files go into /usr/share/doc as normal; they do NOT
 	# get installed per vhost!
 
-	for doc in AUTHORS COPYING ChangeLog INSTALL README ReleaseNotes UPGRADE; do
+	for doc in AUTHORS COPYING ChangeLog INSTALL README ReleaseNotes UPGRADE ; do
 		dodoc ${doc}
-		rm -f ${doc}
+		rm -f ${D}${MY_HTDOCSDIR}/${doc}
 	done
 
-	docinto compatibility
-	for doc in plugins/compatibility/INSTALL plugins/compatibility/README; do
-		dodoc ${doc}
-		rm -f ${doc}
+	for doc in plugins/{README.plugins,*/{INSTALL,README,COPYRIGHTS,CHANGELOG,API,UPGRADE,TODO,README.txt,INSTALL.txt,user_example.txt}} ; do
+		if [[ -f ${doc} ]] ; then
+			docinto $(dirname ${doc})
+			dodoc ${doc}
+			rm -f ${D}${MY_HTDOCSDIR}/${doc}
+		fi
 	done
-
-	docinto admin_add
-	for doc in plugins/admin_add/README; do
-		dodoc ${doc}
-		rm -f ${doc}
-	done
-
-	docinto retrieveuserdata
-	for doc in plugins/retrieveuserdata/INSTALL plugins/retrieveuserdata/changelog plugins/retrieveuserdata/users_example.txt; do
-		dodoc ${doc}
-		rm -f ${doc}
-	done
-
-	if use filter; then
-		docinto amavisnewsql
-		for doc in plugins/amavisnewsql/{CHANGELOG,README,UPGRADE}; do
-			dodoc ${doc}
-			rm -f ${doc}
-		done
-	fi
-
-	if use crypt; then
-		docinto gpg
-		for doc in plugins/gpg/README plugins/gpg/README.txt plugins/gpg/INSTALL plugins/gpg/INSTALL.txt plugins/gpg/TODO; do
-			dodoc ${doc}
-			rm -f ${doc}
-		done
-	fi
-
-	if use ldap; then
-		rm plugins/ldapuserdata/README
-		docinto ldapuserdata
-		for doc in plugins/ldapuserdata/doc/README; do
-			dodoc ${doc}
-			rm -f ${doc}
-		done
-	fi
-
-	if use ssl; then
-		docinto secure_login
-		for doc in plugins/secure_login/INSTALL plugins/secure_login/README; do
-			dodoc ${doc}
-			rm -f ${doc}
-		done
-
-		docinto show_ssl_link
-		for doc in plugins/show_ssl_link/INSTALL plugins/show_ssl_link/README; do
-			dodoc ${doc}
-			rm -f ${doc}
-		done
-	fi
-
-	# Copy the app's main files
-	einfo "Installing squirrelmail files."
-	cp -r . ${D}${MY_HTDOCSDIR}
 
 	cp ${WORKDIR}/squirrelmail-decode-${DECODING_VER}/*/*.php ${D}${MY_HTDOCSDIR}/functions/decode
 
 	# Identify the configuration files that this app uses
-	local configs="config/config.php config/config_local.php plugins/retrieveuserdata/config.php"
-	use filter && configs="${configs} plugins/amavisnewsql/config.php"
-	use crypt && configs="${configs} plugins/gpg/gpg_local_prefs.txt"
-	use ldap && configs="${configs} plugins/ldapuserdata/config.php"
-	use ssl && configs="${configs} plugins/show_ssl_link/config.php plugins/secure_login/config.php"
-
-	for file in ${configs}; do
-		webapp_configfile ${MY_HTDOCSDIR}/${file}
+	for file in config/config.php plugins/*/{config.php,sqspell_config.php,gpg_local_prefs.txt}; do
+		if [[ -f ${file} ]] ; then
+			webapp_configfile ${MY_HTDOCSDIR}/${file}
+		fi
 	done
 
 	# Identify any script files that need #! headers adding to run under

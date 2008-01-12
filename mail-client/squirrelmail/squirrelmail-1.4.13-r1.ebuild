@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.13.ebuild,v 1.2 2008/01/10 17:06:36 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.13-r1.ebuild,v 1.1 2008/01/12 02:40:39 eradicator Exp $
 
-IUSE="crypt ldap spell ssl filter mysql postgres nls"
+IUSE="ldap spell ssl filter mysql postgres nls"
 
 inherit webapp eutils
 
@@ -13,7 +13,6 @@ COMPATIBILITY_VER=2.0.9-1.0
 USERDATA_VER=0.9-1.4.0
 ADMINADD_VER=0.1-1.4.0
 AMAVIS_VER=0.8.0-1.4
-GPG_VER=2.1
 LDAP_USERDATA_VER=0.4
 SECURELOGIN_VER=1.3-1.2.8
 SHOWSSL_VER=2.2-1.2.8
@@ -32,7 +31,6 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	ssl? ( ${PLUGINS_LOC}/show_ssl_link-${SHOWSSL_VER}.tar.gz )
 	${PLUGINS_LOC}/admin_add.${ADMINADD_VER}.tar.gz
 	filter? ( ${PLUGINS_LOC}/amavisnewsql-0.8.0-1.4.tar.gz )
-	crypt? ( ${PLUGINS_LOC}/gpg-${GPG_VER}.tar.gz )
 	ldap? ( ${PLUGINS_LOC}/ldapuserdata-${LDAP_USERDATA_VER}.tar.gz )
 	nls? ( mirror://sourceforge/${PN}/all_locales-${LOCALES_VER}.tar.bz2 )"
 
@@ -45,7 +43,6 @@ DEPEND=""
 
 RDEPEND="virtual/php
 	virtual/perl-DB_File
-	crypt? ( =app-crypt/gnupg-1.4* )
 	ldap? ( net-nds/openldap )
 	spell? ( || ( app-text/aspell app-text/ispell ) )
 	filter? ( mail-filter/amavisd-new dev-php/PEAR-Log dev-php/PEAR-DB dev-php/PEAR-Net_SMTP )
@@ -77,9 +74,6 @@ src_unpack() {
 		unpack amavisnewsql-${AMAVIS_VER}.tar.gz &&
 		mv amavisnewsql/config.php.dist amavisnewsql/config.php
 
-	use crypt &&
-		unpack gpg-${GPG_VER}.tar.gz
-
 	use ldap &&
 		unpack ldapuserdata-${LDAP_USERDATA_VER}.tar.gz &&
 		epatch ${FILESDIR}/ldapuserdata-${LDAP_USERDATA_VER}-gentoo.patch &&
@@ -94,9 +88,6 @@ src_unpack() {
 	use nls &&
 		cd ${S} &&
 		unpack all_locales-${LOCALES_VER}.tar.bz2
-
-	cd ${S}
-	use crypt && epatch ${FILESDIR}/squirrelmail-gpg-2.1-CVE-2005-1924.patch
 }
 
 src_compile() {
@@ -143,14 +134,6 @@ src_install() {
 		done
 	fi
 
-	if use crypt; then
-		docinto gpg
-		for doc in plugins/gpg/README plugins/gpg/README.txt plugins/gpg/INSTALL plugins/gpg/INSTALL.txt plugins/gpg/TODO; do
-			dodoc ${doc}
-			rm -f ${doc}
-		done
-	fi
-
 	if use ldap; then
 		rm plugins/ldapuserdata/README
 		docinto ldapuserdata
@@ -183,7 +166,6 @@ src_install() {
 	# Identify the configuration files that this app uses
 	local configs="config/config.php config/config_local.php plugins/retrieveuserdata/config.php"
 	use filter && configs="${configs} plugins/amavisnewsql/config.php"
-	use crypt && configs="${configs} plugins/gpg/gpg_local_prefs.txt"
 	use ldap && configs="${configs} plugins/ldapuserdata/config.php"
 	use ssl && configs="${configs} plugins/show_ssl_link/config.php plugins/secure_login/config.php"
 
