@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2008.01.09.ebuild,v 1.1 2008/01/12 08:05:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2008.01.09.ebuild,v 1.2 2008/01/12 08:14:57 pva Exp $
 
 inherit fixheadtails toolchain-funcs
 
@@ -43,10 +43,10 @@ src_compile() {
 
 src_install() {
 	dodir /usr/share/${PN}
-	pushd testing
+	pushd testing > /dev/null
 	cp -pPR randprintable randchars test_speed-{kernel,userspace} README \
 		match_kernel speeds-2007-10-02-450MHz *.sh data "${D}"/usr/share/${PN}
-	popd
+	popd > /dev/null
 	mv example_traffic "${D}"/usr/share/${PN}
 
 	dodoc README CHANGELOG HOWTO WANTED
