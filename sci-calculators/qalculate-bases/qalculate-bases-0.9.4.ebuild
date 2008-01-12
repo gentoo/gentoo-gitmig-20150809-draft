@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/qalculate-bases-0.9.4.ebuild,v 1.2 2006/09/15 16:14:55 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/qalculate-bases-0.9.4.ebuild,v 1.3 2008/01/12 12:01:51 markusle Exp $
 
 DESCRIPTION="A GTK+ base conversion tool"
 LICENSE="GPL-2"
@@ -13,6 +13,7 @@ KEYWORDS="x86"
 
 DEPEND="~sci-libs/libqalculate-0.9.4
 	>=x11-libs/gtk+-2.4
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
