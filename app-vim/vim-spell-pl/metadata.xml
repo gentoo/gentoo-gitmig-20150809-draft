@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vim</herd>
-	<maintainer>
-		<email>nelchael@gentoo.org</email>
-		<name>Krzysiek Pawlik</name>
-	</maintainer>
 	<longdescription lang="en">
 		Vim spell files for Polish (pl). Supported character sets are UTF-8,
 		ISO-8859-2 and CP1250.
