@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/x264-svn-encoder-20070924.ebuild,v 1.7 2008/01/05 16:05:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/x264-svn-encoder-20070924.ebuild,v 1.8 2008/01/12 23:26:52 aballier Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -23,7 +23,8 @@ RDEPEND="mp4? ( >=media-video/gpac-0.4.1_pre20060122 )
 DEPEND="${RDEPEND}
 	amd64? ( >=dev-lang/yasm-0.6.0 )
 	x86? ( || ( >=dev-lang/yasm-0.6.2 dev-lang/nasm ) )
-	x86-fbsd? ( dev-lang/nasm )"
+	x86-fbsd? ( dev-lang/nasm )
+	dev-util/pkgconfig"
 
 # Block older than 0.6.2 versions of yasm
 # It generates incorect pic code and will cause segfaults
