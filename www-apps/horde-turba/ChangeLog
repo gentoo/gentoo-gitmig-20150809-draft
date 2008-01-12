@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde-turba
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.30 2007/12/30 18:51:16 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.31 2008/01/12 05:26:38 vapier Exp $
+
+*horde-turba-2.1.6 (12 Jan 2008)
+
+  12 Jan 2008; Mike Frysinger <vapier@gentoo.org> +horde-turba-2.1.6.ebuild:
+  Version bump.
 
   30 Dec 2007; Mike Frysinger <vapier@gentoo.org> horde-turba-2.1.5.ebuild:
   Pull in PEAR-Net_LDAP for USE=ldap #143170 by Marcin Deranek.

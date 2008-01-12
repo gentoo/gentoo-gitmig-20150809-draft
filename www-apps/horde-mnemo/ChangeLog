@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/horde-mnemo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.17 2006/11/15 22:02:19 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.18 2008/01/12 05:32:44 vapier Exp $
+
+  12 Jan 2008; Mike Frysinger <vapier@gentoo.org> +horde-mnemo-2.1.2.ebuild:
+  Version bump .
+
+*horde-mnemo-2.1.2 (12 Jan 2008)
+
+  12 Jan 2008; Mike Frysinger <vapier@gentoo.org> +horde-mnemo-2.1.2.ebuild:
+  Version bump.
 
 *horde-mnemo-2.1.1 (15 Nov 2006)
 

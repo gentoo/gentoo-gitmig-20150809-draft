@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde-ingo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.21 2007/12/23 01:15:51 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.22 2008/01/12 05:28:33 vapier Exp $
+
+*horde-ingo-1.1.5 (12 Jan 2008)
+
+  12 Jan 2008; Mike Frysinger <vapier@gentoo.org> +horde-ingo-1.1.5.ebuild:
+  Version bump.
 
 *horde-ingo-1.1.4 (23 Dec 2007)
 
