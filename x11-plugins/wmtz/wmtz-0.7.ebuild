@@ -1,17 +1,17 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.16 2007/07/22 04:24:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.17 2008/01/12 13:36:30 drac Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
-IUSE=""
 DESCRIPTION="dockapp that shows the time in multiple timezones."
-SRC_URI="http://www.geocities.com/jl1n/wmtz/${P}.tar.gz"
 HOMEPAGE="http://www.geocities.com/jl1n/wmtz/wmtz.html"
+SRC_URI="http://www.geocities.com/jl1n/wmtz/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc ~sparc"
+KEYWORDS="amd64 ppc ~sparc x86"
+IUSE=""
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
@@ -19,23 +19,23 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
+S=${WORKDIR}/${P}/${PN}
+
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
-	#apply both patches to compile with gcc-3.4 closing bug #64556
-	epatch ${FILESDIR}/wmtz-0.7-gcc34.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}.patch
 }
 
 src_compile() {
-	cd ${S}/wmtz
-	epatch ${FILESDIR}/wmtz.c.patch
-	emake FLAGS="$CFLAGS" || die
+	emake CC="$(tc-getCC)" FLAGS="${CFLAGS}" \
+		LIBDIR="-L/usr/$(get_libdir)" || die "emake failed."
 }
 
 src_install () {
-	dobin wmtz/wmtz
+	dobin ${PN}
+	doman ${PN}.1
 	insinto /etc
-	doins wmtz/wmtzrc
-	dodoc BUGS CHANGES README
+	doins wmtzrc
+	dodoc ../{BUGS,CHANGES,README}
 }
