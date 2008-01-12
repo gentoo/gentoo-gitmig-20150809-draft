@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050721.ebuild,v 1.2 2007/03/01 10:04:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050721.ebuild,v 1.3 2008/01/12 18:35:56 caster Exp $
 
 inherit eutils
 
@@ -44,22 +44,22 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Add the following to your ~/.bashrc to enable completion support."
-	einfo "NOTE: to avoid things like Gentoo bug #98627, you should set aliases"
-	einfo "after sourcing /etc/profile.d/bash-completion."
-	einfo
-	einfo "[[ -f /etc/profile.d/bash-completion ]] && \\ "
-	einfo "    source /etc/profile.d/bash-completion"
-	einfo
-	einfo "Additional completion functions can be enabled by installing"
-	einfo "app-admin/eselect and using the included bashcomp module."
+	elog "Add the following to your ~/.bashrc to enable completion support."
+	elog "NOTE: to avoid things like Gentoo bug #98627, you should set aliases"
+	elog "after sourcing /etc/profile.d/bash-completion."
+	elog
+	elog "[[ -f /etc/profile.d/bash-completion ]] && \\ "
+	elog "    source /etc/profile.d/bash-completion"
+	elog
+	elog "Additional completion functions can be enabled by installing"
+	elog "app-admin/eselect and using the included bashcomp module."
 	echo
 
 	if has_version 'app-shells/zsh' ; then
-		einfo "If you are interested in using the provided bash completion functions with"
-		einfo "zsh, valuable tips on the effective use of bashcompinit are available:"
-		einfo "  http://www.zsh.org/mla/workers/2003/msg00046.html"
-		einfo "  http://zshwiki.org/ZshSwitchingTo"
+		elog "If you are interested in using the provided bash completion functions with"
+		elog "zsh, valuable tips on the effective use of bashcompinit are available:"
+		elog "  http://www.zsh.org/mla/workers/2003/msg00046.html"
+		elog "  http://zshwiki.org/ZshSwitchingTo"
 		echo
 	fi
 }
