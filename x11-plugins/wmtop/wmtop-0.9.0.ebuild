@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/wmtop-0.9.0.ebuild,v 1.1 2008/01/12 12:04:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/wmtop-0.9.0.ebuild,v 1.2 2008/01/12 12:06:53 cla Exp $
 
 inherit multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.swanson.ukfsn.org/wmdock/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
