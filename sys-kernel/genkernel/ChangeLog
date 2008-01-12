@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/genkernel
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.186 2007/12/27 19:10:13 wolf31o2 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.187 2008/01/12 00:52:15 wolf31o2 Exp $
+
+*genkernel-3.4.9 (12 Jan 2008)
+
+  12 Jan 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  -genkernel-3.4.8.ebuild, -genkernel-3.4.9_pre11.ebuild,
+  -genkernel-3.4.9_pre12.ebuild, +genkernel-3.4.9.ebuild:
+  Version bump to 3.4.9 FINAL, which should be fast-tracked to stable. This
+  closes bug #162962, bug #182818, bug #194752, bug #203301, and bug #204087.
 
 *genkernel-3.4.9_pre12 (27 Dec 2007)
 
