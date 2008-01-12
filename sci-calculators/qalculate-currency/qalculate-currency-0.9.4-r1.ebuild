@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-currency/qalculate-currency-0.9.4-r1.ebuild,v 1.2 2007/09/22 22:09:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-currency/qalculate-currency-0.9.4-r1.ebuild,v 1.3 2008/01/12 12:19:36 markusle Exp $
 
 DESCRIPTION="A GTK+ currency converter"
 LICENSE="GPL-2"
@@ -13,6 +13,7 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND=">=sci-libs/libqalculate-0.9.4
 	>=x11-libs/gtk+-2.4
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
