@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfishtime
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/ChangeLog,v 1.17 2008/01/12 14:51:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/ChangeLog,v 1.18 2008/01/12 14:56:22 cla Exp $
+
+  12 Jan 2008; Dawid Węgliński <cla@gentoo.org> wmfishtime-1.24-r1.ebuild:
+  Stable on x86
 
   12 Jan 2008; Samuli Suominen <drac@gentoo.org> wmfishtime-1.24-r1.ebuild:
   amd64 stable.
