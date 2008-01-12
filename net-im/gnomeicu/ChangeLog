@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnomeicu
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.48 2007/11/03 19:36:34 tester Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.49 2008/01/12 17:48:13 tester Exp $
+
+  12 Jan 2008; Olivier Crête <tester@gentoo.org> gnomeicu-0.99.12.ebuild,
+  gnomeicu-0.99.14.ebuild:
+  Fix deps, bug #205501
 
 *gnomeicu-0.99.14 (03 Nov 2007)
 
