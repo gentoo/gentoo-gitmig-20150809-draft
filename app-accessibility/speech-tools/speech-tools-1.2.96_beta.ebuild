@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.4 2007/08/31 04:12:37 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.5 2008/01/12 04:47:00 williamh Exp $
 
 inherit eutils toolchain-funcs
 
@@ -28,18 +28,19 @@ src_unpack() {
 
 	unpack ${A}
 
-	# apply a patch for gcc 4.2
-	epatch ${FILESDIR}/${P}-gcc42.patch
+	# apply patches for gcc 4.2 and gcc 4.3
+	epatch "${FILESDIR}"/${P}-gcc42.patch
+	epatch "${FILESDIR}"/${P}-gcc43-include.patch
 
 # set compiler flags for base_class
-	sed -i -e "s:-O3:\$(OPTIMISE_CXXFLAGS):" ${S}/base_class/Makefile
+	sed -i -e "s:-O3:\$(OPTIMISE_CXXFLAGS):" "${S}"/base_class/Makefile
 
 	# enable building shared libraries
 	sed -i -e "s/#.*\(SHARED=2\)/\1/" ${CONFIG}
 
 	use esd && sed -i -e "s/#.*\(INCLUDE_MODULES += ESD_AUDIO\)/\1/" ${CONFIG}
 	use nas && sed -i -e "s/#.*\(INCLUDE_MODULES += NAS_AUDIO\)/\1/" ${CONFIG}
-	use X || sed -i -e "s/-lX11 -lXt//" ${S}/config/modules/esd_audio.mak
+	use X || sed -i -e "s/-lX11 -lXt//" "${S}"/config/modules/esd_audio.mak
 }
 
 src_compile() {
@@ -67,7 +68,7 @@ src_install() {
 		dosed "s:${S}/lib:/usr/$(get_libdir):g" ${dstfile}
 	done
 
-	cd ${S}
+	cd "${S}"
 	exeinto /usr/$(get_libdir)/speech-tools
 	for file in `find main -perm +100 -type f`; do
 		doexe ${file}
@@ -86,8 +87,8 @@ src_install() {
 	insinto /usr/include/speech-tools
 	doins -r *
 	dosym /usr/include/speech-tools /usr/share/speech-tools/include
-	cd ${S}
+	cd "${S}"
 
-	dodoc ${S}/README
-	dodoc ${S}/lib/cstrutt.dtd
+	dodoc "${S}"/README
+	dodoc "${S}"/lib/cstrutt.dtd
 }
