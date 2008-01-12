@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xlockmore
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.63 2007/05/06 15:04:38 dertobi123 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.64 2008/01/12 02:57:08 drac Exp $
+
+*xlockmore-5.25 (12 Jan 2008)
+
+  12 Jan 2008; Samuli Suominen <drac@gentoo.org> +xlockmore-5.25.ebuild:
+  Version bump.
 
   06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   xlockmore-5.23-r1.ebuild:
