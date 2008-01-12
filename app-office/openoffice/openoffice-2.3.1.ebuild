@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1.ebuild,v 1.6 2007/12/14 14:11:55 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1.ebuild,v 1.7 2008/01/12 16:35:31 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -9,7 +9,7 @@ inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 
 
 IUSE="binfilter cairo cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono sound odk pam seamonkey webdav xulrunner"
 
-MY_PV="2.3.1.1"
+MY_PV="2.3.1.2"
 PATCHLEVEL="OOG680"
 SRC="OOo_${PV}_src"
 S="${WORKDIR}/ooo"

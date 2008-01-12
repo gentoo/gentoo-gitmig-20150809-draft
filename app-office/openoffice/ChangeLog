@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.361 2007/12/14 14:11:55 suka Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.362 2008/01/12 16:35:31 suka Exp $
+
+  12 Jan 2008; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.3.1.ebuild:
+  Silent bump to ooo-build-2.3.1.2, fixing a gnome-vfs related problem
 
   14 Dec 2007; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.3.1.ebuild:
