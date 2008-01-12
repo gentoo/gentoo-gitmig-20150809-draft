@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mail-notification
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.54 2007/12/24 13:49:20 graaff Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.55 2008/01/12 17:15:23 graaff Exp $
+
+*mail-notification-5.0 (12 Jan 2008)
+
+  12 Jan 2008; Hans de Graaff <graaff@gentoo.org>
+  +mail-notification-5.0.ebuild:
+  Version bump with numerous changes. Also changed license to GPL-3, and cleanup
+  of ebuild now that evolution support is much more straightforward.
 
   24 Dec 2007; Hans de Graaff <graaff@gentoo.org>
   -mail-notification-4.0.ebuild, -mail-notification-4.1.ebuild:
