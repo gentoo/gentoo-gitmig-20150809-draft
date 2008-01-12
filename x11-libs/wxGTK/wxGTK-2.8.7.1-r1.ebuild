@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1-r1.ebuild,v 1.2 2008/01/07 23:28:02 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.7.1-r1.ebuild,v 1.3 2008/01/12 19:23:41 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -125,7 +125,10 @@ src_install() {
 		emake DESTDIR="${D}" install || die "install contrib failed."
 	fi
 
-	cd "${S}"
+	cd "${S}"/docs
+	dodoc changes.txt readme.txt todo30.txt
+	newdoc base/readme.txt base_readme.txt
+	newdoc gtk/readme.txt gtk_readme.txt
 
 	if use doc; then
 		dohtml -r "${S}"/docs/html/*
