@@ -1,6 +1,12 @@
 # ChangeLog for net-www/gnash
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.52 2007/11/21 09:41:17 genstef Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.53 2008/01/12 03:49:26 vapier Exp $
+
+*gnash-0.8.1-r1 (12 Jan 2008)
+
+  12 Jan 2008; Mike Frysinger <vapier@gentoo.org> +gnash-0.8.1-r1.ebuild:
+  Add support for more USE flags and let the ebuild select between competing
+  features rather than aborting #200759.
 
   21 Nov 2007; Stefan Schweizer <genstef@gentoo.org> gnash-9999.ebuild:
   change cvs ebuild to a stub to point to the cvs ebuild overlay made by
