@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.22.ebuild,v 1.9 2007/07/22 07:57:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.22.ebuild,v 1.10 2008/01/12 17:50:13 tester Exp $
 
 inherit gnome2 eutils
 
@@ -32,6 +32,7 @@ RDEPEND="x11-libs/libXScrnSaver
 DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2
 	app-text/scrollkeeper
+	x11-proto/scrnsaverproto
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35"
 
