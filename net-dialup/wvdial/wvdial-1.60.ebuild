@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.60.ebuild,v 1.6 2007/10/03 13:49:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.60.ebuild,v 1.7 2008/01/12 21:29:54 mrness Exp $
 
 inherit eutils
 
@@ -13,8 +13,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE=""
 
-DEPEND=">=net-libs/wvstreams-4.4"
-RDEPEND="${DEPEND}
+COMMON_DEPEND=">=net-libs/wvstreams-4.4"
+DEPEND="${COMMON_DEPEND}
+	dev-util/pkgconfig"
+RDEPEND="${COMMON_DEPEND}
 	net-dialup/ppp"
 
 src_unpack() {

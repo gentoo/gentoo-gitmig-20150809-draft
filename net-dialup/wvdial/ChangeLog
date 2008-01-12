@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/wvdial
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.50 2007/10/22 22:48:13 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.51 2008/01/12 21:29:54 mrness Exp $
+
+  12 Jan 2008; Alin Năstac <mrness@gentoo.org> wvdial-1.60.ebuild:
+  Add pkg-config to RDEPEND (#205513).
 
   22 Oct 2007; Alin Năstac <mrness@gentoo.org>
   -files/wvdial-1.56-destdir.patch, -wvdial-1.56.ebuild:
