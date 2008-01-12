@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.100 2007/11/28 02:03:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.101 2008/01/12 15:03:13 caster Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -1082,7 +1082,7 @@ java-pkg_getjar() {
 	while [[ "${1}" == --* ]]; do
 		if [[ "${1}" = "--build-only" ]]; then
 			build_only="build"
-		elif [[ "${1}" == --* ]]; then
+		elif [[ "${1}" == "--virtual" ]]; then
 			virtual="true"
 		else
 			die "java-pkg_jar-from called with unknown parameter: ${1}"
