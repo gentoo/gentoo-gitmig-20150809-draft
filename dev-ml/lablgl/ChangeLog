@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.42 2008/01/02 20:13:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.43 2008/01/12 19:13:19 aballier Exp $
+
+  12 Jan 2008; Alexis Ballier <aballier@gentoo.org> lablgl-1.03.ebuild:
+  Readd more modularity, bug #204121
 
   02 Jan 2008; Alexis Ballier <aballier@gentoo.org> lablgl-1.03.ebuild:
   Add support to not build with ocamlopt
