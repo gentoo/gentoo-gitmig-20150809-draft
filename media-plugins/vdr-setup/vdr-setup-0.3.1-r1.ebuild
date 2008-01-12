@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1-r1.ebuild,v 1.4 2007/12/11 11:13:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1-r1.ebuild,v 1.5 2008/01/12 11:50:51 zzam Exp $
 
 inherit vdr-plugin
 
@@ -56,7 +56,7 @@ src_install() {
 	keepdir /etc/vdr/channels.d
 
 	insinto /var/vdr
-	newins ${S}/Examples/sysconfig sysconfig-setup
+	newins "${S}"/Examples/sysconfig sysconfig-setup
 	fowners vdr:vdr /var/vdr/sysconfig-setup
 
 	local lang
@@ -64,13 +64,13 @@ src_install() {
 	[[ -z ${lang} ]] && lang="en"
 
 	insinto /etc/vdr/plugins/setup
-	newins ${FILESDIR}/vdr-menu.${lang}.xml vdr-menu.xml
-	newins ${FILESDIR}/vdr-setup.${lang}.xml vdr-setup.xml
+	newins "${FILESDIR}"/vdr-menu.${lang}.xml vdr-menu.xml
+	newins "${FILESDIR}"/vdr-setup.${lang}.xml vdr-setup.xml
 
 	insinto /etc/vdr/plugins/setup/help
-	doins ${S}/Examples/help/*.hlp
+	doins "${S}"/Examples/help/*.hlp
 
-	chown -R vdr:vdr ${D}/etc/vdr
+	chown -R vdr:vdr "${D}"/etc/vdr
 
 	dodoc MANUAL.DE Examples/*.xml
 }
