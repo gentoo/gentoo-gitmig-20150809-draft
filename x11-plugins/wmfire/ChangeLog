@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmfire
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/ChangeLog,v 1.9 2007/07/22 05:09:22 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/ChangeLog,v 1.10 2008/01/12 11:39:27 drac Exp $
+
+*wmfire-1.2.3 (12 Jan 2008)
+
+  12 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  +files/wmfire-1.2.3-stringh.patch, +wmfire-1.2.3.ebuild:
+  Version bump wrt #203120, thanks to Denilson for reporting.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmfire-0.0.3.9_pre4.ebuild:
