@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.48 2008/01/09 18:41:22 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.49 2008/01/12 16:33:51 ranger Exp $
+
+  12 Jan 2008; Brent Baude <ranger@gentoo.org> asm-2.0-r1.ebuild:
+  Marking asm-2.0-r1 ~ppc64 for bug 129773
 
   09 Jan 2008; Alistair Bush <ali_bush@gentoo.org> asm-1.4.3-r3.ebuild:
   Moved IUSE to JAVA_PKG_IUSE to resolve missing app-arch/zip dependency.
