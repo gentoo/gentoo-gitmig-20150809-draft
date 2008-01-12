@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/telepathy-idle-0.1.1.ebuild,v 1.2 2007/08/13 18:13:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/telepathy-idle-0.1.1.ebuild,v 1.3 2008/01/12 15:59:16 coldwind Exp $
 
 DESCRIPTION="Full-featured IRC connection manager for Telepathy."
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/Components"
@@ -11,12 +11,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/dbus-glib
+RDEPEND="dev-libs/dbus-glib
 	>=dev-libs/glib-2.8.6
 	dev-libs/openssl
 	net-libs/telepathy-glib
 	sys-apps/dbus"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

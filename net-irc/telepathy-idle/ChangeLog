@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/telepathy-idle
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.3 2007/09/28 21:37:37 coldwind Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.4 2008/01/12 15:59:16 coldwind Exp $
+
+  12 Jan 2008; Santiago M. Mola <coldwind@gentoo.org>
+  telepathy-idle-0.1.1.ebuild, telepathy-idle-0.1.2.ebuild:
+  Add pkgconfig to DEPEND, #205475.
 
 *telepathy-idle-0.1.2 (28 Sep 2007)
 
