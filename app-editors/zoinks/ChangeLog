@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/zoinks
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.25 2008/01/12 11:59:01 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.26 2008/01/12 13:13:18 drac Exp $
+
+  12 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  -files/zoinks-0.4.0-gcc-4.1-fix.diff, -files/xorg-library-configure.patch,
+  -zoinks-0.3.8-r1.ebuild, -zoinks-0.4.0.ebuild:
+  Remove unused versions and patches.
 
   12 Jan 2008; Dawid Węgliński <cla@gentoo.org> zoinks-0.4.1.ebuild:
   Stable on x86 (bug #205043)
