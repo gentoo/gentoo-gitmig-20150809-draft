@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-menuorg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/ChangeLog,v 1.2 2007/10/09 14:57:53 hd_brummy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/ChangeLog,v 1.3 2008/01/12 12:01:26 zzam Exp $
+
+*vdr-menuorg-0.3.2 (12 Jan 2008)
+
+  12 Jan 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-menuorg-0.3.2.ebuild:
+  Version bumped. This fixes some small bugs and adds italian translation.
 
   09 Oct 2007; Joerg Bornkessel <hd_brummy@gentoo.org> +files/rc-addon.sh,
   vdr-menuorg-0.3.ebuild:
