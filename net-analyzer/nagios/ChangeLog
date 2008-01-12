@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.54 2007/10/22 18:32:45 dertobi123 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.55 2008/01/12 06:44:09 cla Exp $
+
+  12 Jan 2008; Dawid Węgliński <cla@gentoo.org> nagios-2.10.ebuild:
+  Stable on x86 (bug #205335)
 
 *nagios-2.10 (22 Oct 2007)
 
