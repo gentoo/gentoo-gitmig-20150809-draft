@@ -108,7 +108,6 @@ sparc		default-linux/sparc/sparc64/2007.0/desktop	stable
 # x86 Profiles
 x86		default-linux/x86/2006.1			stable
 x86		default-linux/x86/no-nptl			dev
-x86		default-linux/x86/no-nptl/2.4			dev
 x86		default-linux/x86/2006.1/desktop		stable
 #x86		default-linux/x86/2006.1/server			stable
 x86		default-linux/x86/2007.0			stable
