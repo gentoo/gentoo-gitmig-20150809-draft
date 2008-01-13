@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.489 2008/01/13 19:07:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.490 2008/01/13 20:02:18 ranger Exp $
+
+  13 Jan 2008; Brent Baude <ranger@gentoo.org> xine-lib-1.1.9.1.ebuild:
+  Marking xine-lib-1.1.9.1 ppc64 for bug 205197
 
   13 Jan 2008; Brent Baude <ranger@gentoo.org> xine-lib-1.1.9.ebuild:
   Marking xine-lib-1.1.9 ppc64 for bug 205197
