@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.45.1-r1.ebuild,v 1.8 2008/01/11 16:55:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.45.1-r1.ebuild,v 1.9 2008/01/13 17:51:30 ranger Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~amd64 hppa ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 hppa ppc ppc64 sparc x86"
 IUSE="dia doc gnome inkjar jabber lcms mmx perl postscript spell wmf"
 RESTRICT="test"
 
