@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/ezc-Cache
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Cache/ChangeLog,v 1.17 2007/10/08 19:17:05 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Cache/ChangeLog,v 1.18 2008/01/13 16:00:23 jokey Exp $
+
+*ezc-Cache-1.3 (13 Jan 2008)
+
+  13 Jan 2008; Markus Ullmann <jokey@gentoo.org> +ezc-Cache-1.3.ebuild:
+  Add eZ Components 2007.2 from project overlay
+
+  12 Jan 2008; Jakub Moc <jakub@gentoo.org> +ezc-Cache-1.3.ebuild:
+  Version bump to 2007.2
 
   08 Oct 2007; Markus Ullmann <jokey@gentoo.org> ezc-Cache-1.2.ebuild:
   Rekeyword sparc per bug #190787 thanks to Tiago Cunha for digging into it
