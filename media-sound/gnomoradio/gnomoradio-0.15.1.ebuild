@@ -1,29 +1,27 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/gnomoradio-0.15.1.ebuild,v 1.7 2007/02/12 17:21:03 opfer Exp $
-
-IUSE="vorbis"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/gnomoradio-0.15.1.ebuild,v 1.8 2008/01/13 16:51:36 drac Exp $
 
 DESCRIPTION="Finds, fetches, shares, and plays freely licensed music."
-HOMEPAGE="http://gnomoradio.org/"
-SRC_URI="http://savannah.nongnu.org/download/gnomoradio/${P}.tar.bz2"
+HOMEPAGE="http://gnomoradio.org"
+SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="~amd64 ~ppc ~x86"
-# not linking for me on amd64 - eradicator
-# ~ppc - needs gconfmm keyworded
 KEYWORDS="amd64 ~ppc ~sparc x86"
+IUSE="vorbis"
 
-DEPEND=">=dev-cpp/gtkmm-2.4
+RDEPEND=">=dev-cpp/gtkmm-2.4
 	>=dev-cpp/glibmm-2.4
 	>=dev-cpp/gconfmm-2.6
 	>=dev-cpp/libxmlpp-2.6
-	>=dev-libs/libsigc++-2.0
+	>=dev-libs/libsigc++-2
 	media-libs/libao
 	vorbis? ( media-libs/libvorbis )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
