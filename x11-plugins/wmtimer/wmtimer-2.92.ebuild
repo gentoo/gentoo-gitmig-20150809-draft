@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.92.ebuild,v 1.1 2008/01/13 02:32:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.92.ebuild,v 1.2 2008/01/13 02:40:01 drac Exp $
 
 inherit multilib toolchain-funcs
 
@@ -25,7 +25,7 @@ S=${WORKDIR}/${P}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -e "s:-g:${CFLAGS}:g" -e "s:-O2::" -i Makefile
+	sed -e "s:-O2::" -e "s:-g:${CFLAGS}:g" -i Makefile
 }
 
 src_compile() {
