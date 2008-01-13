@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarokfs/amarokfs-0.5.ebuild,v 1.7 2007/08/16 00:13:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarokfs/amarokfs-0.5.ebuild,v 1.8 2008/01/13 20:25:23 flameeyes Exp $
 
-inherit qt3 kde-functions toolchain-funcs
+inherit qt3 kde-functions
 
 MY_PN="${PN/fs/FS}"
 MY_P="${MY_PN}-${PV}"
@@ -37,13 +37,9 @@ src_unpack() {
 }
 
 src_compile() {
-	${QTDIR}/bin/qmake QMAKE="${QTDIR}/bin/qmake" || die "qmake failed"
+	eqmake3 amarokFS-xml.pro
 	sed -i -e '/strip/d' Makefile || die "fix stripping failed."
-	emake \
-		CC="$(tc-getCC) ${CFLAGS}" \
-		CXX="$(tc-getCXX) ${CXXFLAGS}" \
-		LINK="$(tc-getCXX) ${LDFLAGS}" \
-		|| die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
