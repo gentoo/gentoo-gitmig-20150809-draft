@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpfc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/ChangeLog,v 1.18 2007/03/31 14:05:06 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/ChangeLog,v 1.19 2008/01/13 15:30:32 aballier Exp $
+
+  13 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/mpfc-mathlib.patch, mpfc-1.3.7-r1.ebuild:
+  the math lib is always needed, check for it and link to it even if mad is
+  not requested, fix bug #205620
 
   31 Mar 2007; Alexis Ballier <aballier@gentoo.org> -mpfc-1.3.5.ebuild:
   Cleanup old version
