@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX sessreg-1.0.2-fbsd.patch 495 RMD160 ba3f0e7dc8796bb6ea014da3fb4493a828e3d349 SHA1 7a1b6862c9a69cc8ebf9b3c17306b8654e6750c6 SHA256 3e02fe74414c7bbaad936b39c66dcbe62b0112d7a9dc2dd10bf9f794501042fa
 MD5 a810865bedda219fb31307506a949f8f files/sessreg-1.0.2-fbsd.patch 495
 RMD160 ba3f0e7dc8796bb6ea014da3fb4493a828e3d349 files/sessreg-1.0.2-fbsd.patch 495
@@ -26,3 +29,10 @@ SHA256 70c9c4a8dd8f0446d92e4c931040601bfbd8eb43187b5292f44d8a1bca7d0e6d files/di
 MD5 00eea21a04bb99165c2ae91ec1d08e0f files/digest-sessreg-1.0.3 241
 RMD160 2987430fa0c42cf6190dea396077f22323c26eb2 files/digest-sessreg-1.0.3 241
 SHA256 c851b6815b1d6605d63cd9340ed5fdbfff20f8d477a0051a2ac59196618705a7 files/digest-sessreg-1.0.3 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkeJ29wACgkQj9hvisErhMJ1WgCghlaoPcvbDMkY7HoSx/FThrH1
+ulIAn3dbwF/yNKHr34isVg8Xp8LXoV7R
+=1zy1
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xf86dga-1.0.1-setuid.diff 709 RMD160 fee5d3997ac54a7ffc7084d2d119d9e6807e106d SHA1 4f184e186b280792878ec9118181067de7339f96 SHA256 fe04a18b22aba808ae5a67883168a7472e78e5edfca0c2f1ff546391df558e7b
 MD5 2a07eebe5796a86f307f9c1a3d0a2fa0 files/xf86dga-1.0.1-setuid.diff 709
 RMD160 fee5d3997ac54a7ffc7084d2d119d9e6807e106d files/xf86dga-1.0.1-setuid.diff 709
@@ -26,3 +29,10 @@ SHA256 b1951aba88f17837b6439fc2fc5cab8d2d48c9ff8df27d15bfbbad1b5b9caefc files/di
 MD5 2a7d67461c53b1f2640b2b4c81de26f0 files/digest-xf86dga-1.0.2 241
 RMD160 95c661e7004d224ef5d0254d04ab768ff23ab2a2 files/digest-xf86dga-1.0.2 241
 SHA256 15c18faff8b73c47dae592c3b3f175d66ed2f0c989914ac7d7859f91f402253c files/digest-xf86dga-1.0.2 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkeJ2+AACgkQj9hvisErhMJZwACfZssB6EE0Sp3drgsD6XOKIn3+
+K8kAoLAiM6jBzqwaD9PQprzxlUo1nRJC
+=1Pbb
+-----END PGP SIGNATURE-----

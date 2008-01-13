@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xprehashprinterlist-1.0.1.tar.bz2 75613 RMD160 e5da12f61ef36264644d3f0b50fca304f10c443b SHA1 c40607bfd0ac86ed4d959af83a1a8583222dddf9 SHA256 ba67e9256f703d614ab891b1d676fc26e7479094b957370cbb363c78b2f20259
 EBUILD xprehashprinterlist-1.0.1.ebuild 498 RMD160 df1bc98b654d4d1575d3ebead3a32b21ee7c9d36 SHA1 07e2ab00211cded5f44dc6899129b878ada9c4ea SHA256 f976766da14dd699029eb13bd9c2887632b2c162fee99f23a97727981dcf74f4
 MD5 ec6ab2fae9209fd4b1bc0486ab342e82 xprehashprinterlist-1.0.1.ebuild 498
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 6744e563b76ce042e84a5a7c009ec7e8 files/digest-xprehashprinterlist-1.0.1 277
 RMD160 9d2e96f0e2da883d33ee9bfc082db9f08cadb0e7 files/digest-xprehashprinterlist-1.0.1 277
 SHA256 b1ea50e16fd70ccd3f286de46893dcdecc3ee1ce7c058758d4290e4904771f79 files/digest-xprehashprinterlist-1.0.1 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkeJ294ACgkQj9hvisErhMLwhACgjdL/cq/P8iy3hj4GS14LZebx
+yosAoKzzHOatVhacUTcQdQXRAaaCW1e8
+=OYX2
+-----END PGP SIGNATURE-----
