@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/wmalms-1.1.1.ebuild,v 1.1 2008/01/13 05:21:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/wmalms-1.1.1.ebuild,v 1.2 2008/01/13 05:35:20 drac Exp $
 
 inherit autotools eutils
 
@@ -19,6 +19,7 @@ RDEPEND="x11-libs/libXext
 	sys-apps/lm_sensors"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
+	x11-proto/xproto
 	x11-libs/libXt"
 
 src_unpack() {
