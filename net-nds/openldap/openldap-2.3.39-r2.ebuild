@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.39-r2.ebuild,v 1.9 2008/01/13 21:31:14 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.39-r2.ebuild,v 1.10 2008/01/13 21:41:09 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -14,8 +14,7 @@ SRC_URI="mirror://openldap/openldap-release/${P}.tgz"
 LICENSE="OPENLDAP"
 SLOT="0"
 KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="berkdb crypt debug gdbm ipv6 kerberos minimal odbc overlays perl readline
-samba sasl slp smbkrb5passwd ssl tcpd selinux"
+IUSE="berkdb crypt debug gdbm ipv6 kerberos minimal odbc overlays perl samba sasl slp smbkrb5passwd ssl tcpd selinux"
 
 # note that the 'samba' USE flag pulling in OpenSSL is NOT an error.  OpenLDAP
 # uses OpenSSL for LanMan/NTLM hashing (which is used in some enviroments, like
@@ -25,7 +24,6 @@ samba sasl slp smbkrb5passwd ssl tcpd selinux"
 RDEPEND="sys-libs/ncurses
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( dev-libs/openssl )
-	readline? ( sys-libs/readline )
 	sasl? ( dev-libs/cyrus-sasl )
 	!minimal? (
 		odbc? ( dev-db/unixODBC )
@@ -274,7 +272,7 @@ src_compile() {
 	myconf="${myconf} --enable-syslog --enable-dynamic"
 	myconf="${myconf} --enable-local --enable-proctitle"
 
-	myconf="${myconf} $(use_enable ipv6) $(use_enable readline)"
+	myconf="${myconf} $(use_enable ipv6)"
 	myconf="${myconf} $(use_with sasl cyrus-sasl) $(use_enable sasl spasswd)"
 	myconf="${myconf} $(use_enable tcpd wrappers) $(use_with ssl tls)"
 
