@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8115 2008/01/13 18:44:34 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8116 2008/01/13 20:28:09 coldwind Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -547,11 +547,6 @@ dev-java/libgnome-java
 # Markus Ullmann <jokey@gentoo.org> (29 Oct 2007)
 # mask 2.2 as announced on gwn half a year ago
 <net-nds/openldap-2.3
-
-# Santiago M. Mola <coldwind@gentoo.org> (29 Oct 2007)
-# Butterfly is broken with new Empathy due to API changes.
-# Waiting for a new release of pymsn and butterfly.
-net-voip/telepathy-butterfly
 
 # Diego Pettenò <flameeyes@gentoo.org> (26 Oct 2007)
 # Still-experimental support for dynamic service dependencies
