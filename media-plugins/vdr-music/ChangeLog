@@ -1,0 +1,13 @@
+# ChangeLog for media-plugins/vdr-music
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/ChangeLog,v 1.1 2008/01/13 16:40:51 hd_brummy Exp $
+
+*vdr-music-0.2.0 (13 Jan 2008)
+
+  13 Jan 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-music-0.2.0-gentoo.diff,
+  +files/vdr-music-0.2.0-graphtftcoverfix.diff,
+  +files/vdr-music-0.2.0-lyrics.diff, +files/vdr-music-0.2.0-vdr-1.5.x.diff,
+  +metadata.xml, +vdr-music-0.2.0.ebuild:
+  initial ebuild; moved from vdr-testing overlay; Thanks to T.Kost T.Rheinhold
+
