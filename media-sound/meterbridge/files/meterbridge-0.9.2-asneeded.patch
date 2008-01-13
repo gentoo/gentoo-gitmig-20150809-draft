@@ -1,0 +1,32 @@
+Index: meterbridge-0.9.2/src/Makefile.am
+===================================================================
+--- meterbridge-0.9.2.orig/src/Makefile.am
++++ meterbridge-0.9.2/src/Makefile.am
+@@ -6,4 +6,4 @@ bin_PROGRAMS = meterbridge
+ EXTRA_DIST = *.h
+ 
+ meterbridge_SOURCES = main.c linedraw.c vu_meters.c ppm_meters.c dpm_meters.c jf_meters.c scope.c envelopes.c find_image.c
+-meterbridge_LDFLAGS = -lm $(JACK_LIBS) $(SDL_LIBS) -lSDL_image
++meterbridge_LDADD = -lm $(JACK_LIBS) $(SDL_LIBS) -lSDL_image
+Index: meterbridge-0.9.2/src/Makefile.in
+===================================================================
+--- meterbridge-0.9.2.orig/src/Makefile.in
++++ meterbridge-0.9.2/src/Makefile.in
+@@ -89,7 +89,7 @@ bin_PROGRAMS = meterbridge
+ EXTRA_DIST = *.h
+ 
+ meterbridge_SOURCES = main.c linedraw.c vu_meters.c ppm_meters.c dpm_meters.c jf_meters.c scope.c envelopes.c find_image.c
+-meterbridge_LDFLAGS = -lm $(JACK_LIBS) $(SDL_LIBS) -lSDL_image
++meterbridge_LDFLAGS =
+ subdir = src
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = config.h
+@@ -102,7 +102,7 @@ am_meterbridge_OBJECTS = main.$(OBJEXT) 
+ 	jf_meters.$(OBJEXT) scope.$(OBJEXT) envelopes.$(OBJEXT) \
+ 	find_image.$(OBJEXT)
+ meterbridge_OBJECTS = $(am_meterbridge_OBJECTS)
+-meterbridge_LDADD = $(LDADD)
++meterbridge_LDADD = $(LDADD) -lm $(JACK_LIBS) $(SDL_LIBS) -lSDL_image
+ meterbridge_DEPENDENCIES =
+ 
+ DEFS = @DEFS@

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/meterbridge-0.9.2.ebuild,v 1.12 2006/04/14 05:57:23 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/meterbridge-0.9.2.ebuild,v 1.13 2008/01/13 14:47:08 aballier Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ DEPEND="media-sound/jack-audio-connection-kit
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}-gcc41.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 }
 
 src_install() {
