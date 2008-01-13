@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vdr2jpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.10 2008/01/04 20:33:40 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.11 2008/01/13 19:35:13 hd_brummy Exp $
+
+  13 Jan 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr2jpeg-0.0.11.ebuild, vdr2jpeg-0.0.12.ebuild:
+  fixed missing depend to dev-util/pkgconfig; thanks to nameles reporter on
+  bug 205341
 
   04 Jan 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr2jpeg-0.0.11.ebuild:

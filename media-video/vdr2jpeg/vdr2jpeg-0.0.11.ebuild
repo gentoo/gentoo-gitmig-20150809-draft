@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.0.11.ebuild,v 1.3 2008/01/04 20:33:40 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.0.11.ebuild,v 1.4 2008/01/13 19:35:13 hd_brummy Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND=">=media-video/ffmpeg-0.4.9_p20070330"
+DEPEND=">=media-video/ffmpeg-0.4.9_p20070330
+		dev-util/pkgconfig"
 
 src_unpack() {
 
