@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.6.1.ebuild,v 1.1 2008/01/13 06:46:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.6.1.ebuild,v 1.2 2008/01/13 07:39:15 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	dobin ${PN}
-	dodoc README 
+	dodoc README
 	use branding && dodoc "${FILESDIR}"/sample.wmbutton
 	use branding || newdoc .wmbutton sample.wmbutton
 }
