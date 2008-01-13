@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.55 2008/01/12 06:44:09 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.56 2008/01/13 19:43:23 ranger Exp $
+
+  13 Jan 2008; Brent Baude <ranger@gentoo.org> nagios-2.10.ebuild:
+  Marking nagios-2.10 ppc64 for bug 205570
 
   12 Jan 2008; Dawid Węgliński <cla@gentoo.org> nagios-2.10.ebuild:
   Stable on x86 (bug #205335)
