@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-Webdav
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Webdav/ChangeLog,v 1.1 2008/01/13 16:10:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Webdav/ChangeLog,v 1.2 2008/01/13 16:29:53 jokey Exp $
+
+  13 Jan 2008; Markus Ullmann <jokey@gentoo.org> ezc-Webdav-1.0.ebuild:
+  Add ~sparc per bug #205645
 
 *ezc-Webdav-1.0 (13 Jan 2008)
 

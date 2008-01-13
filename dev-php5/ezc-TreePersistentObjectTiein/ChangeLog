@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-TreePersistentObjectTiein
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-TreePersistentObjectTiein/ChangeLog,v 1.1 2008/01/13 16:09:53 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-TreePersistentObjectTiein/ChangeLog,v 1.2 2008/01/13 16:29:33 jokey Exp $
+
+  13 Jan 2008; Markus Ullmann <jokey@gentoo.org>
+  ezc-TreePersistentObjectTiein-1.0.ebuild:
+  Add ~sparc per bug #205645
 
 *ezc-TreePersistentObjectTiein-1.0 (13 Jan 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Webdav/ezc-Webdav-1.0.ebuild,v 1.1 2008/01/13 16:10:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Webdav/ezc-Webdav-1.0.ebuild,v 1.2 2008/01/13 16:29:53 jokey Exp $
 
 EZC_BASE_MIN="1.4"
 inherit php-ezc
@@ -8,7 +8,7 @@ inherit php-ezc
 DESCRIPTION="This eZ component allows to set up and run your own WebDAV (RFC 2518) server,
 to enable online content editing for the users of your system through the WebDAV HTTP extension."
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="${RDEPEND}
