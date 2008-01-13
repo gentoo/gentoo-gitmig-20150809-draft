@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.8.ebuild,v 1.2 2007/10/20 23:34:11 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.8.ebuild,v 1.3 2008/01/13 17:49:47 philantrop Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -28,7 +28,7 @@ BOTH_DEPEND="dev-libs/libxslt
 	dev-libs/libxml2
 	net-dns/libidn
 	>=dev-libs/glib-2
-	app-crypt/qca
+	=app-crypt/qca-1.0*
 	sametime? ( =net-libs/meanwhile-1.0* )
 	jingle? (
 		>=media-libs/speex-1.1.6
@@ -42,7 +42,7 @@ BOTH_DEPEND="dev-libs/libxslt
 	sms? ( app-mobilephone/gsmlib )"
 
 RDEPEND="${BOTH_DEPEND}
-	ssl? ( app-crypt/qca-tls )
+	ssl? ( =app-crypt/qca-tls-1.0* )
 	latex? ( virtual/tetex
 		media-gfx/imagemagick )
 	crypt? ( app-crypt/gnupg )"
