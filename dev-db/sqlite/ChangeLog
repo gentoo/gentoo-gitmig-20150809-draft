@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.175 2008/01/13 19:11:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.176 2008/01/13 23:40:50 opfer Exp $
+
+  13 Jan 2008; Christian Faulhammer <opfer@gentoo.org> sqlite-3.5.3.ebuild:
+  stable x86, bug 205556
 
   13 Jan 2008; Brent Baude <ranger@gentoo.org> sqlite-3.5.3.ebuild:
   Marking sqlite-3.5.3 ppc64 for bug 205556
