@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST xprehashprinterlist-1.0.1.tar.bz2 75613 RMD160 e5da12f61ef36264644d3f0b50fca304f10c443b SHA1 c40607bfd0ac86ed4d959af83a1a8583222dddf9 SHA256 ba67e9256f703d614ab891b1d676fc26e7479094b957370cbb363c78b2f20259
-EBUILD xprehashprinterlist-1.0.1.ebuild 494 RMD160 7f2cc54daace431a2f752d405a07e627a32023d4 SHA1 fc989f21b018276f76af23d4f9664cff3a531d62 SHA256 e96222002dcae59845168e987fbf1cb63cd64bfcd50b600265b4ff9818787c3a
-MD5 41b9e0a01122ce8f8bf64af86decec87 xprehashprinterlist-1.0.1.ebuild 494
-RMD160 7f2cc54daace431a2f752d405a07e627a32023d4 xprehashprinterlist-1.0.1.ebuild 494
-SHA256 e96222002dcae59845168e987fbf1cb63cd64bfcd50b600265b4ff9818787c3a xprehashprinterlist-1.0.1.ebuild 494
+EBUILD xprehashprinterlist-1.0.1.ebuild 498 RMD160 df1bc98b654d4d1575d3ebead3a32b21ee7c9d36 SHA1 07e2ab00211cded5f44dc6899129b878ada9c4ea SHA256 f976766da14dd699029eb13bd9c2887632b2c162fee99f23a97727981dcf74f4
+MD5 ec6ab2fae9209fd4b1bc0486ab342e82 xprehashprinterlist-1.0.1.ebuild 498
+RMD160 df1bc98b654d4d1575d3ebead3a32b21ee7c9d36 xprehashprinterlist-1.0.1.ebuild 498
+SHA256 f976766da14dd699029eb13bd9c2887632b2c162fee99f23a97727981dcf74f4 xprehashprinterlist-1.0.1.ebuild 498
 MISC ChangeLog 2087 RMD160 65e1ebdfd9ff3b8a24c42d6ad1561d2f95a57a09 SHA1 a37a863e780d7b336071f73e26eeb1f165860ad1 SHA256 5eadb7fc6344b2f0f461cbf30214d69b967479de6cb03baebb119b36e036e2cc
 MD5 4c619f8e60975adaa8c4e86bb37c8088 ChangeLog 2087
 RMD160 65e1ebdfd9ff3b8a24c42d6ad1561d2f95a57a09 ChangeLog 2087
@@ -17,10 +14,3 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 6744e563b76ce042e84a5a7c009ec7e8 files/digest-xprehashprinterlist-1.0.1 277
 RMD160 9d2e96f0e2da883d33ee9bfc082db9f08cadb0e7 files/digest-xprehashprinterlist-1.0.1 277
 SHA256 b1ea50e16fd70ccd3f286de46893dcdecc3ee1ce7c058758d4290e4904771f79 files/digest-xprehashprinterlist-1.0.1 277
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFHabWRUPEOwClectkRAgGeAJ9bFENRJeyZiFIC7j8wfhve8H0fTQCgnNRx
-aI4WHhQU2qTEKFAL/hrT74g=
-=F4l4
------END PGP SIGNATURE-----
