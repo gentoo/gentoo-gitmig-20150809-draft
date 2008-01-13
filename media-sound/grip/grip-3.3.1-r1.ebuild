@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.1-r1.ebuild,v 1.2 2007/10/01 13:54:03 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.1-r1.ebuild,v 1.3 2008/01/13 18:09:10 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -23,6 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.2
 	net-misc/curl
 	vorbis? ( media-sound/vorbis-tools )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {

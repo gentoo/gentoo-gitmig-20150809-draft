@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/grip
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.77 2007/10/01 13:54:03 lavajoe Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.78 2008/01/13 18:09:10 aballier Exp $
+
+  13 Jan 2008; Alexis Ballier <aballier@gentoo.org> grip-3.3.1.ebuild,
+  grip-3.3.1-r1.ebuild:
+  add missing pkgconfig dep, bug #205649
 
   01 Oct 2007; Joe Peterson <lavajoe@gentoo.org> grip-3.3.1-r1.ebuild:
   Add elibtoolize (required for FreeBSD)
