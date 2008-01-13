@@ -1,7 +1,0 @@
-# Copyright 2006 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2007.0/cobalt/use.mask,v 1.1 2007/02/11 11:20:43 eroyf Exp $
-
-# Cobalt only does mips32, thus it doesn't know about n32/n64 (yet)
-n32
-n64
