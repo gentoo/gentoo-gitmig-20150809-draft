@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.7.ebuild,v 1.2 2008/01/13 21:31:14 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.7.ebuild,v 1.3 2008/01/13 21:32:36 jokey Exp $
 
 EAPI="1"
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator
@@ -158,7 +158,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# ensure correct SLAPI path by default
 	sed -i -e 's,\(#define LDAPI_SOCK\).*,\1 "/var/run/openldap/slapd.sock",' \
@@ -202,7 +202,7 @@ src_compile() {
 		done
 		myconf="${myconf} $(use_enable perl perl mod)"
 		use odbc && myconf="${myconf} --enable-sql=mod --with-odbc=unixodbc"
-		
+
 		# slapd options
 		myconf="${myconf} $(use_enable crypt) $(use_enable slp)"
 		myconf="${myconf} $(use_enable samba lmpasswd)"
