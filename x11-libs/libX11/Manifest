@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX libX11-1.1.2-XGetMotionEvents-order-fix.patch 405 RMD160 811390446d70bacfec06cfe2b243ea5420bb23a3 SHA1 ffb6009f5365d902f2c2d63c210a4655cf7cf779 SHA256 65eb3ec5598d88e10b2cc5f79f5c5a0d77bc04140f02da749862587cf240ba9b
 MD5 7bfd6a4034d549b3d08d85876f51de7d files/libX11-1.1.2-XGetMotionEvents-order-fix.patch 405
 RMD160 811390446d70bacfec06cfe2b243ea5420bb23a3 files/libX11-1.1.2-XGetMotionEvents-order-fix.patch 405
@@ -30,3 +33,10 @@ SHA256 93fb5ad156795665ca5cf3506cb05c2e4cf8903acdfcdd3235aaeefe34363858 files/di
 MD5 04643209b953b7026c4175352b97cf83 files/digest-libX11-1.1.3 244
 RMD160 09571f710843c5a58bcf65ae8b6a551e106b0e3e files/digest-libX11-1.1.3 244
 SHA256 ff5237885679b9497d065ce214aa7759dc48f3d86fc6921c15eeb232886e0cf6 files/digest-libX11-1.1.3 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkeJ2K0ACgkQj9hvisErhMKFbgCdHS3Rgk+/osqpiGxFclG0TAJL
+LiMAoJtLoRDpIac11SDapsW584JIJSAt
+=t6as
+-----END PGP SIGNATURE-----
