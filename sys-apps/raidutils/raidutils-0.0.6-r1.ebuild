@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/raidutils-0.0.6-r1.ebuild,v 1.1 2007/02/28 22:59:11 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/raidutils-0.0.6-r1.ebuild,v 1.2 2008/01/13 23:30:34 xmerlin Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_unpack () {
 	#epatch ${FILESDIR}/raidutils-0.0.5-i2octl-fixpath.patch || die
 	#epatch ${FILESDIR}/raidutils-0.0.6-gcc41x-compilefix.patch || die
 	epatch ${FILESDIR}/${P}-misc-fixes.patch || die
-	#rm -f include/linux/i2o-dev.h
+	rm -f include/linux/i2o-dev.h
 }
 
 src_compile() {
