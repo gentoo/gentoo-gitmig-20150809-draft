@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.9.2.ebuild,v 1.8 2007/10/29 04:34:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.9.2.ebuild,v 1.9 2008/01/13 13:41:09 aballier Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="alsa ladspa vorbis mp3 libsamplerate speex"
 
-DEPEND=">=media-libs/libsndfile-1.0
+RDEPEND=">=media-libs/libsndfile-1.0
 	>=x11-libs/gtk+-2.4.0
 	>=dev-libs/glib-2.2.0
 	alsa? ( media-libs/alsa-lib )
@@ -22,6 +22,8 @@ DEPEND=">=media-libs/libsndfile-1.0
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	mp3? ( media-libs/libmad )
 	ladspa? ( media-libs/ladspa-sdk )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 LANGS="de el es_ES fr hu it pl ru"
 
