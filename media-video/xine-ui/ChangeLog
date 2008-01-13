@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.155 2008/01/08 22:21:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.156 2008/01/13 00:49:03 aballier Exp $
+
+  13 Jan 2008; Alexis Ballier <aballier@gentoo.org> xine-ui-0.99.5.ebuild:
+  add missing inputproto dep, bug #205548
 
   08 Jan 2008; Alexis Ballier <aballier@gentoo.org> xine-ui-0.99.5.ebuild:
   fix automagic on libcaca, thanks to Michael Donaghy

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5.ebuild,v 1.10 2008/01/08 22:21:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5.ebuild,v 1.11 2008/01/13 00:49:03 aballier Exp $
 
 # WANT_AUTOCONF=latest
 # WANT_AUTOMAKE=latest
@@ -39,6 +39,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	X? ( x11-libs/libXt
 		x11-proto/xf86vidmodeproto
+		x11-proto/inputproto
 		xinerama? ( x11-proto/xineramaproto ) )
 	dev-util/pkgconfig"
 
