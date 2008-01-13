@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.4.4.ebuild,v 1.1 2007/12/14 18:03:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.4.4.ebuild,v 1.2 2008/01/13 20:43:57 flameeyes Exp $
 EAPI="1"
 
 inherit ruby
@@ -20,7 +20,7 @@ for lingua in $ILINGUAS; do
 	IUSE="${IUSE} linguas_${lingua}"
 done
 
-DEPEND=""
+DEPEND="dev-ruby/ruby-gettext"
 RDEPEND="gtk? ( dev-ruby/ruby-gtk2 )
 	dev-ruby/ruby-gettext
 	virtual/eject
