@@ -46,26 +46,17 @@ ia64		default-linux/ia64/2007.0/server		dev
 m68k		default-linux/m68k				dev
 
 # MIPS Profiles
-mips		default-linux/mips/2006.1/cobalt/o32		stable
-mips		default-linux/mips/2006.1/generic-be/o32	stable
-mips		default-linux/mips/2006.1/ip27/o32		stable
-mips		default-linux/mips/2006.1/ip28/o32		stable
-mips		default-linux/mips/2006.1/ip30/o32		stable
-mips		default-linux/mips/2006.1/cobalt/o32/nptl	dev
-mips		default-linux/mips/2006.1/generic-be/o32/nptl	dev
-mips		default-linux/mips/2006.1/ip27/o32/nptl		dev
-mips		default-linux/mips/2006.1/ip28/o32/nptl		dev
-mips		default-linux/mips/2006.1/ip30/o32/nptl		dev
-mips		default-linux/mips/2006.1/generic-be/n32	dev
-mips		default-linux/mips/2006.1/ip27/n32		dev
-mips		default-linux/mips/2006.1/ip28/n32		dev
-mips		default-linux/mips/2006.1/ip30/n32		dev
-mips		default-linux/mips/2006.1/generic-be/n32/nptl	dev
-mips		default-linux/mips/2006.1/ip27/n32/nptl		dev
-mips		default-linux/mips/2006.1/ip28/n32/nptl		dev
-mips		default-linux/mips/2006.1/ip30/n32/nptl		dev
-mips		default-linux/mips/2006.1/generic-be/n64	dev
-mips		default-linux/mips/2006.1/generic-be/n64/nptl	dev
+mips		default-linux/mips/2007.1-dev/cobalt/o32	stable
+mips		default-linux/mips/2007.1-dev/generic-be/o32	stable
+mips		default-linux/mips/2007.1-dev/ip27/o32		stable
+mips		default-linux/mips/2007.1-dev/ip28/o32		stable
+mips		default-linux/mips/2007.1-dev/ip30/o32		stable
+mips		default-linux/mips/2007.1-dev/cobalt/n32	dev
+mips		default-linux/mips/2007.1-dev/generic-be/n32	dev
+mips		default-linux/mips/2007.1-dev/ip27/n32		dev
+mips		default-linux/mips/2007.1-dev/ip28/n32		dev
+mips		default-linux/mips/2007.1-dev/ip30/n32		dev
+mips		default-linux/mips/2007.1-dev/generic-be/n64	dev
 
 
 # PPC32 Profiles
