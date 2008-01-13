@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggiwmh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.1 2008/01/10 20:01:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.2 2008/01/13 19:56:29 ranger Exp $
+
+  13 Jan 2008; Brent Baude <ranger@gentoo.org> libggiwmh-0.3.2.ebuild:
+  Marking libggiwmh-0.3.2 ~ppc64 for bug 205570
 
 *libggiwmh-0.3.2 (10 Jan 2008)
 
