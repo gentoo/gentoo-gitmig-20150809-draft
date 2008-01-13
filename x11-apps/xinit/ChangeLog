@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xinit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.111 2007/12/18 02:21:58 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.112 2008/01/13 22:27:31 philantrop Exp $
+
+*xinit-1.0.5-r2 (13 Jan 2008)
+
+  13 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> files/xdm.confd-1,
+  files/xdm.initd-1, +xinit-1.0.5-r2.ebuild:
+  Added a patch kindly provided by zlin to allow for choosing any version of
+  kdm. Prerequisite for KDE4.
 
   18 Dec 2007; Jeroen Roovers <jer@gentoo.org> xinit-1.0.5-r1.ebuild:
   Stable for HPPA (bug #201998).

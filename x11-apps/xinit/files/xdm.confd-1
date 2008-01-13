@@ -5,6 +5,8 @@
 # in your /etc/inittab file so that you don't get a dead keyboard.
 CHECKVT=7
 
-# What display manager do you use ?  [ xdm | gdm | kdm | entrance ]
+# What display manager do you use ?  [ xdm | gdm | kdm | kdm-3.5 | kdm-4.0 | entrance ]
 # NOTE: If this is set in /etc/rc.conf, that setting will override this one.
+# KDE-specific note: kdm-3.5 and kdm-4.0 are just examples. You will find all 
+# possible versions by looking at the directories in /usr/kde/.
 DISPLAYMANAGER="xdm"
