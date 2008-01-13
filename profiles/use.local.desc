@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3292 2008/01/13 16:35:02 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3293 2008/01/13 16:36:56 hd_brummy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -984,9 +984,9 @@ media-plugins/mythphone:festival - Enable festival support
 media-plugins/vdr-burn:projectx - Enables support fur projectx
 media-plugins/vdr-dvdconvert:projectx - Enables support for projectx 
 media-plugins/vdr-graphtft:graphtft-fe - Install external x11 remote frontend
-media-plugins/vdr-musci:ff-card - Enables scrollmode on FF Card
+media-plugins/vdr-music:ff-card - Enables scrollmode on FF Card
 media-plugins/vdr-music:4mb-mod - Enables support for modded FF-Card to 4MB ram or softdecoder
-media-plugins/vdr-musiv:graphtft - Enables support for plugin vdr-graphtft
+media-plugins/vdr-music:graphtft - Enables support for plugin vdr-graphtft
 media-plugins/vdr-pvr350:yaepg - Enables full support for the ouput format of vdr-yaepg
 media-plugins/vdr-softdevice:mmxext - enables mmx2 support
 media-plugins/vdr-text2skin:direct_blit - not buffer picture, faster, but only for modified skins
