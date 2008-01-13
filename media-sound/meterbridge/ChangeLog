@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/meterbridge
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/ChangeLog,v 1.16 2007/07/02 15:15:25 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/ChangeLog,v 1.17 2008/01/13 14:42:16 aballier Exp $
+
+  13 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  -meterbridge-0.9.0.ebuild:
+  remove old
 
   02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Hand to newly-born proaudio herd.
