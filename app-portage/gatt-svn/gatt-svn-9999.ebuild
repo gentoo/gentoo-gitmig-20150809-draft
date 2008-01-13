@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.18 2008/01/11 07:41:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.19 2008/01/13 23:55:20 opfer Exp $
 
 inherit subversion
 
@@ -8,7 +8,8 @@ ESVN_REPO_URI="svn://80.108.115.144/gatt/trunk"
 ESVN_PROJECT="Gatt"
 
 DESCRIPTION="Gentoo Arch Testing Tool"
-HOMEPAGE="http://www.gentoo.org/proj/en/base/x86/at.xml
+HOMEPAGE="http://sourceforge.net/projects/gatt/
+	http://www.gentoo.org/proj/en/base/x86/at.xml
 	http://www.gentoo.org/proj/en/base/ppc/AT/index.xml
 	http://www.gentoo.org/proj/en/base/amd64/at/index.xml
 	http://www.gentoo.org/proj/en/base/alpha/AT/index.xml"
