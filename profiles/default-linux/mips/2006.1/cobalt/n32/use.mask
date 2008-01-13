@@ -1,6 +1,0 @@
-# Copyright 2006 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2006.1/cobalt/n32/use.mask,v 1.1 2006/10/02 05:24:39 redhatter Exp $
-
-# Unmask n32
--n32
