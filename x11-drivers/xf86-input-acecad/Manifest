@@ -18,10 +18,10 @@ EBUILD xf86-input-acecad-1.2.0.ebuild 614 RMD160 313c28b616c854db0d7ab9b4d4c4cd0
 MD5 215559e9f3437d89614005546badb5b9 xf86-input-acecad-1.2.0.ebuild 614
 RMD160 313c28b616c854db0d7ab9b4d4c4cd038380acdc xf86-input-acecad-1.2.0.ebuild 614
 SHA256 6ed4bebe4e47a88679552cddaf5dc38bfe4777888f1f2840dfeff0b37e5d996c xf86-input-acecad-1.2.0.ebuild 614
-EBUILD xf86-input-acecad-1.2.1.ebuild 573 RMD160 f69bc58b83989359840f6f4b65c490f76fbba64c SHA1 b14fda60a011a107bf331cbb08171cec6644e9ab SHA256 b8c3c54b27841412a51fd87ac78f32a4cb6de0af98577ab51d1f5bfcbb141011
-MD5 5d550d51cf28d4034646beda49d88181 xf86-input-acecad-1.2.1.ebuild 573
-RMD160 f69bc58b83989359840f6f4b65c490f76fbba64c xf86-input-acecad-1.2.1.ebuild 573
-SHA256 b8c3c54b27841412a51fd87ac78f32a4cb6de0af98577ab51d1f5bfcbb141011 xf86-input-acecad-1.2.1.ebuild 573
+EBUILD xf86-input-acecad-1.2.1.ebuild 574 RMD160 902c7ed4c4923c4c927d727911735c89eead0e52 SHA1 e371f3a0e4c246ecacb381479d27bd056de44f10 SHA256 8c7cd66408d2c90b17533e6295cb87c19cc26a9f19c65fc7b1c565c05bfd26a9
+MD5 3d87708cc47cd91efe8a17e0e9a892ee xf86-input-acecad-1.2.1.ebuild 574
+RMD160 902c7ed4c4923c4c927d727911735c89eead0e52 xf86-input-acecad-1.2.1.ebuild 574
+SHA256 8c7cd66408d2c90b17533e6295cb87c19cc26a9f19c65fc7b1c565c05bfd26a9 xf86-input-acecad-1.2.1.ebuild 574
 MISC ChangeLog 5235 RMD160 417ee3f41a613bfb396a113df7717d8fee282b80 SHA1 56e6520e5ebe8c3dd0d20bebd480a067987755e9 SHA256 231560dc83989ca9644f8655d28dd5aeae2a1d8cc3b1eaa1f4511dfbfa5d1e0f
 MD5 7b16b7bb4cda3cd17a6e54fc6361e4b5 ChangeLog 5235
 RMD160 417ee3f41a613bfb396a113df7717d8fee282b80 ChangeLog 5235
@@ -40,9 +40,9 @@ MD5 8bc75803752d949f96f630cda0cf8f90 files/digest-xf86-input-acecad-1.2.1 530
 RMD160 7dafce76042aa29d64fa4326e1e73a6e3088f6de files/digest-xf86-input-acecad-1.2.1 530
 SHA256 9af9bf9e63d61f4bfda40d894a7dd2bb3808577d8451323e8823ecee7730d428 files/digest-xf86-input-acecad-1.2.1 530
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.8 (GNU/Linux)
 
-iD8DBQFHabgYUPEOwClectkRAk4SAKCXXKhPLyOjmLNa9j/pPIW9IY06mQCfUdIb
-PrmCHMzVrPLTjyJCmPDmezI=
-=mehM
+iEYEARECAAYFAkeJ1dIACgkQj9hvisErhML5ygCePxAZwoh3ZmYnb3sYQRWmDwfJ
+WfsAoLSTmcdbS8h5BuZmiQgmwXLysnAy
+=5XNU
 -----END PGP SIGNATURE-----
