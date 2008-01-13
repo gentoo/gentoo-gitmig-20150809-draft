@@ -1,6 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/cobalt/packages,v 1.4 2005/02/27 18:24:30 kumba Exp $
-
-# Controls the front LCD panel
-*sys-apps/lcdutils
