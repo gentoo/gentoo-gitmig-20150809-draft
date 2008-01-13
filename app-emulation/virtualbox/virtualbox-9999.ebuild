@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.23 2008/01/06 22:20:49 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.24 2008/01/13 21:17:29 jokey Exp $
 
 inherit eutils fdo-mime flag-o-matic linux-mod qt3 subversion toolchain-funcs
 
@@ -10,7 +10,7 @@ ESVN_REPO_URI="http://virtualbox.org/svn/vbox/trunk"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="pulseaudio sdk"
 
 RDEPEND="!app-emulation/virtualbox-bin
