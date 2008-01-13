@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/e16menuedit2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit2/ChangeLog,v 1.3 2008/01/05 16:18:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit2/ChangeLog,v 1.4 2008/01/13 20:45:30 vapier Exp $
+
+  13 Jan 2008; Mike Frysinger <vapier@gentoo.org> e16menuedit2-0.0.3.ebuild:
+  Add pkg-config to DEPEND #204977.
 
   05 Jan 2008; Raúl Porcel <armin76@gentoo.org> e16menuedit2-0.0.3.ebuild:
   sparc stable wrt #203752
