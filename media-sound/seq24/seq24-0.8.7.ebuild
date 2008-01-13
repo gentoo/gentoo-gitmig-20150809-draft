@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/seq24-0.8.7.ebuild,v 1.4 2007/09/28 18:40:15 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/seq24-0.8.7.ebuild,v 1.5 2008/01/13 14:17:00 aballier Exp $
 
 inherit eutils
 
@@ -13,10 +13,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 
-DEPEND=">=media-libs/alsa-lib-0.9.0
+RDEPEND=">=media-libs/alsa-lib-0.9.0
 	>=dev-cpp/gtkmm-2.4
 	jack? ( >=media-sound/jack-audio-connection-kit-0.90.0 )
 	lash? ( >=media-sound/lash-0.5.0 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	if ! built_with_use --missing true media-libs/alsa-lib midi; then
