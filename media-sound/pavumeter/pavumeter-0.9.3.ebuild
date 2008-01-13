@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavumeter/pavumeter-0.9.3.ebuild,v 1.3 2008/01/03 23:00:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavumeter/pavumeter-0.9.3.ebuild,v 1.4 2008/01/13 20:49:20 flameeyes Exp $
 
 DESCRIPTION="PulseAudio Volume Meter, simple GTK volume meter for PulseAudio"
 HOMEPAGE="http://0pointer.de/lennart/projects/pavumeter/"
@@ -17,6 +17,8 @@ DEPEND=">=dev-cpp/gtkmm-2.4
 	>=media-sound/pulseaudio-0.9.7"
 RDEPEND="${DEPEND}
 	x11-themes/gnome-icon-theme"
+DEPEND="${DEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	# Lynx is used during make dist basically

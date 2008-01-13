@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/paman
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/paman/ChangeLog,v 1.8 2008/01/03 22:56:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/paman/ChangeLog,v 1.9 2008/01/13 20:47:24 flameeyes Exp $
+
+  13 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> -paman-0.9.3.ebuild,
+  paman-0.9.4.ebuild:
+  Add missing pkg-config dependency. Thanks Patrick in bug #205614.
 
   03 Jan 2008; Markus Meier <maekke@gentoo.org> paman-0.9.4.ebuild:
   x86 stable, bug #204219 and remove inexistent doc
