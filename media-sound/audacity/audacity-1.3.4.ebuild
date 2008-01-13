@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.4.ebuild,v 1.8 2007/12/04 17:40:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.4.ebuild,v 1.9 2008/01/13 19:34:46 aballier Exp $
 
 inherit eutils wxwidgets
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 RESTRICT="test"
 
-DEPEND="=x11-libs/wxGTK-2.6*
+COMMON_DEPEND="=x11-libs/wxGTK-2.6*
 	>=app-arch/zip-2.3
 	dev-libs/expat
 	>=media-libs/libsndfile-1.0.0
@@ -28,8 +28,10 @@ DEPEND="=x11-libs/wxGTK-2.6*
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.2 )
 	vamp? ( media-libs/vamp-plugin-sdk )
 	twolame? ( media-sound/twolame )"
-RDEPEND="${DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	mp3? ( >=media-sound/lame-3.70 )"
+DEPEND="${COMMON_DEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}-beta"
 
