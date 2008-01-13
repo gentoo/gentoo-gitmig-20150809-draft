@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-8.0.3.ebuild,v 1.4 2008/01/12 17:25:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-8.0.3.ebuild,v 1.5 2008/01/13 10:54:26 opfer Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://perso.orange.fr/sebastien.godard/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="nls"
 
 RDEPEND="nls? ( virtual/libintl )"
