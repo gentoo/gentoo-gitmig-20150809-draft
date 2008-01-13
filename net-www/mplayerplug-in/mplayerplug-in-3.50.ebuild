@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.50.ebuild,v 1.1 2008/01/06 22:34:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.50.ebuild,v 1.2 2008/01/13 19:49:51 josejx Exp $
 
 inherit eutils multilib autotools
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 -hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gtk divx firefox gmedia mplayer-bin nls quicktime realmedia seamonkey wmp"
 
-LANGS="da de en_US es fr hu it ja ko nb pl pt_BR nl ru se zh_CN"
+LANGS="cs da de en_US es fr hu it ja ko nb nl pl pt_BR ru sk se tr wa zh_CN"
 for X in ${LANGS}; do IUSE="${IUSE} linguas_${X}"; done
 
 DEPEND="
