@@ -1,7 +1,7 @@
-diff -rup tvbrowser-2.6.2-orig/src/util/ui/Localizer.java tvbrowser-2.6.2/src/util/ui/Localizer.java
---- tvbrowser-2.6.2-orig/src/util/ui/Localizer.java	2007-12-27 00:01:34.000000000 +0100
-+++ tvbrowser-2.6.2/src/util/ui/Localizer.java	2007-12-27 19:11:54.000000000 +0100
-@@ -364,7 +364,7 @@ public class Localizer {
+diff -Naur tvbrowser-2.6.2.orig/src/util/ui/Localizer.java tvbrowser-2.6.2/src/util/ui/Localizer.java
+--- tvbrowser-2.6.2.orig/src/util/ui/Localizer.java	2008-01-13 22:09:32.000000000 +0100
++++ tvbrowser-2.6.2/src/util/ui/Localizer.java	2008-01-13 22:10:08.000000000 +0100
+@@ -364,7 +364,7 @@
      langArray.add(Locale.ENGLISH);
  
      try {
@@ -10,4 +10,3 @@ diff -rup tvbrowser-2.6.2-orig/src/util/ui/Localizer.java tvbrowser-2.6.2/src/ut
  
        if (!jar.exists()) {
          URL url = getClass().getProtectionDomain().getCodeSource().getLocation();
-
