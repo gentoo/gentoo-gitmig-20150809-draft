@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.4.ebuild,v 1.6 2007/03/23 19:56:58 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.4.ebuild,v 1.7 2008/01/13 12:20:38 tantive Exp $
 
 WEBAPP_MANUAL_SLOT="yes"
 inherit eutils webapp
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86 ~x86-fbsd"
 IUSE="doc snmp usb cgi threads ncurses nls"
 
 DEPEND="doc? ( virtual/tetex dev-tex/latex2html )
@@ -69,7 +69,7 @@ src_compile() {
 
 	if use doc; then
 		einfo "Building full documentation..."
-		cd ${S}/doc/latex
+		cd "${S}"/doc/latex
 		make texcheck tex web pdf
 	fi
 }
@@ -93,7 +93,7 @@ src_install() {
 	fi
 
 	if use cgi; then
-		mv ${D}/etc/apcupsd/apcupsd.css ${D}${MY_CGIBINDIR}
+		mv "${D}"/etc/apcupsd/apcupsd.css "${D}"${MY_CGIBINDIR}
 		webapp_src_install
 	fi
 }
