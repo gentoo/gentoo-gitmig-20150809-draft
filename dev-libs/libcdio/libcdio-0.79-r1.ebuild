@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.79.ebuild,v 1.1 2008/01/01 02:56:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.79-r1.ebuild,v 1.1 2008/01/13 16:17:58 flameeyes Exp $
 
 inherit eutils libtool multilib
 
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${PN}-0.78.2-bug203777.patch"
+	epatch "${FILESDIR}/${PN}-0.78.2-bug203777-ter.patch"
 	elibtoolize
 }
 
