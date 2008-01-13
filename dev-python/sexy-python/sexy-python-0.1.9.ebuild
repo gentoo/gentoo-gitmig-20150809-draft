@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/sexy-python-0.1.9.ebuild,v 1.8 2007/12/22 13:48:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/sexy-python-0.1.9.ebuild,v 1.9 2008/01/13 19:43:48 lucass Exp $
 
 DESCRIPTION="Python bindings for libsexy."
 HOMEPAGE="http://www.chipx86.com/wiki/Libsexy"
@@ -11,9 +11,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=x11-libs/libsexy-${PV}"
-RDEPEND="${DEPEND}
+RDEPEND=">=x11-libs/libsexy-${PV}
 	>=dev-python/pygtk-2.6.2"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

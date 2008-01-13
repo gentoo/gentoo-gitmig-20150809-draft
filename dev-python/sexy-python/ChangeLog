@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sexy-python
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.8 2007/12/22 13:48:19 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.9 2008/01/13 19:43:48 lucass Exp $
+
+  13 Jan 2008; Lukasz Strzygowski <lucass@gentoo.org>
+  sexy-python-0.1.9.ebuild:
+  Added dev-util/pkgconfig dep (bug #205668).
 
   22 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   sexy-python-0.1.9.ebuild:
