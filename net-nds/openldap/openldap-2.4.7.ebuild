@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.7.ebuild,v 1.1 2008/01/13 21:24:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.7.ebuild,v 1.2 2008/01/13 21:31:14 jokey Exp $
 
 EAPI="1"
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator
@@ -297,12 +297,7 @@ src_install() {
 
 pkg_preinst() {
 	# keep old libs if any
-	LIBSUFFIXES="-2.3.so.0"
-	for LIBSUFFIX in ${LIBSUFFIXES} ; do
-		for each in liblber libldap libldap_r ; do
-			preserve_old_lib "${ROOT}usr/$(get_libdir)/${each}${LIBSUFFIX}"
-		done
-	done
+	preserve_old_lib usr/$(get_libdir)/{liblber,libldap,libldap_r}-2.3.so.0
 }
 
 pkg_postinst() {
@@ -333,10 +328,5 @@ pkg_postinst() {
 	elog "An example file for tuning BDB backends with openldap is:"
 	elog "/usr/share/doc/${PF}/DB_CONFIG.fast.example.gz"
 
-	LIBSUFFIXES="-2.3.so.0"
-	for LIBSUFFIX in ${LIBSUFFIXES} ; do
-		for each in liblber libldap libldap_r ; do
-			preserve_old_lib_notify "${ROOT}usr/$(get_libdir)/${each}${LIBSUFFIX}"
-		done
-	done
+	preserve_old_lib_notify usr/$(get_libdir)/{liblber,libldap,libldap_r}-2.3.so.0
 }
