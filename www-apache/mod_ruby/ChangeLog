@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_ruby
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.5 2008/01/13 14:52:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.6 2008/01/13 19:47:31 corsair Exp $
+
+  13 Jan 2008; Markus Rothe <corsair@gentoo.org> mod_ruby-1.2.6.ebuild:
+  Stable on ppc64; bug #205518
 
   13 Jan 2008; nixnut <nixnut@gentoo.org> mod_ruby-1.2.6.ebuild:
   Stable on ppc wrt bug 205518
