@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timemachine
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/ChangeLog,v 1.14 2007/09/17 20:53:37 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/ChangeLog,v 1.15 2008/01/13 13:14:27 aballier Exp $
+
+  13 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  timemachine-0.3.0.ebuild, timemachine-0.3.1.ebuild:
+  add missing pkgconfig dep, bug #205591
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing fvdpol from metadata.xml (see #51321 for reference).

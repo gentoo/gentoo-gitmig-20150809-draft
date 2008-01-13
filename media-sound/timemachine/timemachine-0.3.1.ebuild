@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/timemachine-0.3.1.ebuild,v 1.1 2006/05/09 22:52:43 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/timemachine-0.3.1.ebuild,v 1.2 2008/01/13 13:14:27 aballier Exp $
 
 IUSE="lash"
 
@@ -14,10 +14,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 
-DEPEND=">=media-sound/jack-audio-connection-kit-0.80.0
+RDEPEND=">=media-sound/jack-audio-connection-kit-0.80.0
 	>=x11-libs/gtk+-2.2.4-r1
 	>=media-libs/libsndfile-1.0.5
 	lash? ( >=media-sound/lash-0.5.0 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf `use_enable lash` || die
