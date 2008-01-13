@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-29_pre22.ebuild,v 1.4 2007/10/15 14:47:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-29_pre22.ebuild,v 1.5 2008/01/13 08:56:21 vapier Exp $
 
 inherit toolchain-funcs multilib
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ~ppc ppc64 sh ~sparc x86"
 IUSE="multicall nls"
 
 DEPEND="sys-apps/sed"
