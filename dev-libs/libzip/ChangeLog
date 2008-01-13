@@ -1,0 +1,19 @@
+# ChangeLog for dev-libs/libzip
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.1 2008/01/13 18:31:05 philantrop Exp $
+
+*libzip-0.8 (13 Jan 2008)
+
+  13 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +libzip-0.8.ebuild:
+  Initial import to the tree as per bug 120244.
+
+  25 Nov 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  libzip-0.8.ebuild:
+  Removed extra line.
+
+  06 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it> +metadata.xml,
+  +libzip-0.8.ebuild:
+  Added ebuild for libzip-0.8. Many thanks to Ryan Kelly and Benjamin K.
+  Stuhl. - See bug #120244
+
