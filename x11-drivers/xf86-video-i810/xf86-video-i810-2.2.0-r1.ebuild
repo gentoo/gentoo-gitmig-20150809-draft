@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.2.0-r1.ebuild,v 1.1 2007/12/27 16:36:52 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.2.0-r1.ebuild,v 1.2 2008/01/13 08:55:48 remi Exp $
 
 # Must be before x-modular eclass is inherited
 # Enable snapshot to get the man page in the right place
@@ -37,6 +37,7 @@ CONFIGURE_OPTIONS="$(use_enable dri)"
 src_unpack() {
 	x-modular_unpack_source
 	epatch "${FILESDIR}/${PN}-2.2.0-fix_xv_segfault.patch"
+	epatch "${FILESDIR}/${PN}-2.1.1-fix_build_without_dri.patch"
 }
 
 pkg_setup() {

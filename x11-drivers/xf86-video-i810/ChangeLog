@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.69 2008/01/10 14:28:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.70 2008/01/13 08:55:48 remi Exp $
+
+  13 Jan 2008; Rémi Cardona <remi@gentoo.org>
+  +files/xf86-video-i810-2.1.1-fix_build_without_dri.patch,
+  xf86-video-i810-2.1.1.ebuild, xf86-video-i810-2.2.0-r1.ebuild:
+  Add patch to fix build with USE=-dri (see bug #103192)
 
   10 Jan 2008; Daniel Gryniewicz <dang@gentoo.org>
   xf86-video-i810-2.1.1.ebuild:

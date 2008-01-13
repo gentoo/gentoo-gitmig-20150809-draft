@@ -1,0 +1,35 @@
+From: Jesse Barnes <jbarnes@hobbes.virtuousgeek.org>
+Date: Thu, 3 Jan 2008 19:16:15 +0000 (-0800)
+Subject: Fix compilation error when not using DRI
+X-Git-Url: http://gitweb.freedesktop.org/?p=xorg/driver/xf86-video-intel.git;a=commitdiff;h=f2ffc0f6e038357dda268363e52c11ada1d0b810
+
+Fix compilation error when not using DRI
+
+This patch complements 88f8b688e2316ae4a1f7485f0010ce90de54783a which
+added uint64_t typed variables to avoid unsigned long overflows in
+32-bit architectures but didn't include <stdint.h> with the required
+definition.
+
+When XF86DRI and _XF86DRI_SERVER_ are defined this header gets
+indirectly included through "i830_dri.h", thanks to "i830_common.h"
+which masquerades this problem as released in 2.1.0 and that manifests
+with :
+
+In file included from i810_driver.c:88:
+i830.h:137: error: expected specifier-qualifier-list before 'uint64_t'
+i830.h:240: error: expected specifier-qualifier-list before 'uint64_t'
+
+Patch from Carlo Marcelo Arenas Belon <carenas@sajinet.com.pe>
+---
+
+--- a/src/i830.h
++++ b/src/i830.h
+@@ -40,6 +40,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ #define I830DEBUG
+ #endif
+ 
++#include <stdint.h>
++
+ #ifndef REMAP_RESERVED
+ #define REMAP_RESERVED 0
+ #endif
