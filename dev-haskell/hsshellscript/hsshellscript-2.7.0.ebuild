@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/hsshellscript-2.7.0.ebuild,v 1.3 2007/12/15 16:34:00 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/hsshellscript-2.7.0.ebuild,v 1.4 2008/01/13 23:32:52 araujo Exp $
 
 inherit base eutils multilib ghc-package
 
@@ -20,6 +20,13 @@ RDEPEND=""
 
 pkg_setup() {
 	HSLIB="/usr/$(get_libdir)/${P}/ghc-$(ghc-version)/"
+	if has_version '>=dev-lang/ghc-6.8'; then
+		if (! has_version '>=dev-haskell/parsec-2.1.0.0' || ! built_with_use -o dev-haskell/parsec profile) ; then
+			echo
+			eerror "You need to install dev-haskell/parsec with the 'profile' USE flag."
+			die "hsshellscript needs the package dev-haskell/parsec."
+		fi
+	fi
 }
 
 src_unpack() {

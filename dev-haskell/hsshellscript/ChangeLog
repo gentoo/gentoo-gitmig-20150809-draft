@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hsshellscript
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/ChangeLog,v 1.19 2007/12/15 16:34:00 dcoutts Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/ChangeLog,v 1.20 2008/01/13 23:32:52 araujo Exp $
+
+  13 Jan 2008; Luis F. Araujo <araujo@gentoo.org>
+  hsshellscript-2.7.0.ebuild:
+  get hsshellscript to work with ghc6.8.x
 
   15 Dec 2007; Duncan Coutts <dcoutts@gentoo.org>
   hsshellscript-2.7.0.ebuild:
