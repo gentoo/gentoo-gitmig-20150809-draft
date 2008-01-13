@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r1.ebuild,v 1.1 2007/12/30 12:34:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r1.ebuild,v 1.2 2008/01/13 13:52:37 aballier Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -40,6 +40,7 @@ RDEPEND="=sci-libs/fftw-2*
 
 DEPEND="${RDEPEND}
 	sys-devel/bison
+	dev-util/pkgconfig
 	sys-devel/flex"
 
 pkg_setup() {
