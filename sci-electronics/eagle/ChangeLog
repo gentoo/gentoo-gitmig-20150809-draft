@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/eagle
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.10 2007/11/10 22:52:51 nixphoeni Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.11 2008/01/13 20:55:51 nixphoeni Exp $
+
+*eagle-4.16_p2-r2 (13 Jan 2008)
+
+  13 Jan 2008; Joe Sapp <nixphoeni@gentoo.org> files/eagle_wrapper_script,
+  -eagle-4.16_p2-r1.ebuild, +eagle-4.16_p2-r2.ebuild:
+  Pass arguments to the eagle wrapper script to the binary (thanks Denilson)
 
 *eagle-4.16_p2-r1 (10 Nov 2007)
 

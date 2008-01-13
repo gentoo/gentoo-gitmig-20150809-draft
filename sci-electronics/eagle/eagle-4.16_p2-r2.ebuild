@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p2-r1.ebuild,v 1.1 2007/11/10 22:52:51 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p2-r2.ebuild,v 1.1 2008/01/13 20:55:51 nixphoeni Exp $
 
 inherit eutils
 
@@ -64,8 +64,9 @@ src_install() {
 	# see bug #188368 or http://www.cadsoft.de/faq.htm#17040701
 	exeinto /usr/bin
 	newexe "${FILESDIR}/eagle_wrapper_script" eagle
-	# Finally, append the path of the eagle binary respecting INSTALLDIR
-	echo "${INSTALLDIR}/bin/eagle" >> "${D}/usr/bin/eagle"
+	# Finally, append the path of the eagle binary respecting INSTALLDIR and any
+	# arguments passed to the script (thanks Denilson)
+	echo "${INSTALLDIR}/bin/eagle" '"$@"' >> "${D}/usr/bin/eagle"
 
 	# Install the documentation
 	dodoc README doc/*
