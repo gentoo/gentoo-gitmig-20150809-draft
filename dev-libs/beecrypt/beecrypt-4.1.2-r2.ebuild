@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r2.ebuild,v 1.3 2007/02/07 19:47:17 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r2.ebuild,v 1.4 2008/01/13 01:02:25 vapier Exp $
 
 inherit flag-o-matic eutils multilib autotools java-pkg-opt-2
 
@@ -20,7 +20,6 @@ DEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jdk-1.4 )
 	doc? ( app-doc/doxygen
 		virtual/tetex )"
-
 RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.4 )"
 
@@ -34,15 +33,16 @@ src_unpack() {
 	# Set correct python libdir on multilib systems
 	sed -i -e 's:get_python_lib():get_python_lib(1,0):' \
 		configure.ac || die "sed failed"
-
-	# upstream patches from CVS
-	epatch "${FILESDIR}/${P}-python-Makefile-am.patch"
-	epatch "${FILESDIR}/${P}-python-debug-py-c.patch"
-	epatch "${FILESDIR}/${P}-build.patch"
-	epatch "${FILESDIR}/${P}-gcc4.patch"
-	epatch "${FILESDIR}/${P}-threads.patch"
-	#Patch from Fedora rpm, Miloslav Trmac <mitr@redhat.com>
-	epatch "${FILESDIR}/${P}-base64.patch"
+	# let configure figure out libpaths, not a pokey build system
+	sed -i \
+		-e '/^libaltdir=/s:=.*:=$(libdir):' \
+		$(find . -name Makefile.am) || die
+	epatch "${FILESDIR}"/${P}-python-Makefile-am.patch
+	epatch "${FILESDIR}"/${P}-python-debug-py-c.patch
+	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-threads.patch
+	epatch "${FILESDIR}"/${P}-base64.patch
 	eautoreconf
 }
 

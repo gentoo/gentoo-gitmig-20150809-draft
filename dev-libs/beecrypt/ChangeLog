@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/beecrypt
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.57 2007/06/02 07:34:14 alonbl Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.58 2008/01/13 01:02:25 vapier Exp $
+
+  13 Jan 2008; Mike Frysinger <vapier@gentoo.org> beecrypt-4.1.2-r1.ebuild,
+  beecrypt-4.1.2-r2.ebuild:
+  Do not let the configure script decide the lib64. Make it respect the
+  standard configure --libdir option.
 
   02 Jun 2007; Alon Bar-Lev <alonbl@gentoo.org>
   -files/beecrypt-3.1.0-alpha.patch, -files/beecrypt-3.1.0-athlon.diff,

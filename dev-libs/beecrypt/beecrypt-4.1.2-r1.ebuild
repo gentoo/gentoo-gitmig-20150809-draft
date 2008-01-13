@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r1.ebuild,v 1.21 2007/06/02 03:18:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r1.ebuild,v 1.22 2008/01/13 01:02:25 vapier Exp $
 
 inherit flag-o-matic eutils multilib autotools java-pkg-opt-2
 
@@ -32,6 +32,10 @@ src_unpack() {
 	# Set correct python libdir on multilib systems
 	sed -i -e 's:get_python_lib():get_python_lib(1,0):' \
 		configure.ac || die "sed failed"
+	# let configure figure out libpaths, not a pokey build system
+	sed -i \
+		-e '/^libaltdir=/s:=.*:=$(libdir):' \
+		$(find . -name Makefile.am) || die
 
 	# upstream patches from CVS
 	epatch "${FILESDIR}/${P}-python-Makefile-am.patch"
