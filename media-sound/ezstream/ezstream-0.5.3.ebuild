@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ezstream/ezstream-0.5.3.ebuild,v 1.1 2007/12/04 18:04:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ezstream/ezstream-0.5.3.ebuild,v 1.2 2008/01/13 18:49:03 aballier Exp $
 
 DESCRIPTION="Enables you to stream mp3 or vorbis files to an icecast server without reencoding"
 HOMEPAGE="http://www.icecast.org/ezstream.php"
@@ -11,14 +11,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="taglib"
 
-DEPEND="media-libs/libvorbis
+COMMON_DEPEND="media-libs/libvorbis
 	media-libs/libogg
 	>=media-libs/libshout-2.2
 	media-libs/libtheora
 	dev-libs/libxml2
 	taglib? ( media-libs/taglib )"
-RDEPEND="${DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	net-misc/icecast"
+DEPEND="${COMMON_DEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf --enable-examplesdir="/usr/share/doc/${PF}/examples" \

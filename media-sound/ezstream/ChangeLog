@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ezstream
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ezstream/ChangeLog,v 1.7 2007/12/04 18:04:46 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ezstream/ChangeLog,v 1.8 2008/01/13 18:49:03 aballier Exp $
+
+  13 Jan 2008; Alexis Ballier <aballier@gentoo.org> ezstream-0.5.3.ebuild:
+  add missing pkconfig dep, bug #205665
 
 *ezstream-0.5.3 (04 Dec 2007)
 
