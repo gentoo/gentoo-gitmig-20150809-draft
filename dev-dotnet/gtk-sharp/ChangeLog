@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.79 2008/01/13 02:25:08 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.80 2008/01/13 04:19:53 compnerd Exp $
+
+  13 Jan 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  gtk-sharp-1.0.10.ebuild, gtk-sharp-2.8.2.ebuild, gtk-sharp-2.10.0.ebuild:
+  Fix a few quoting issues
 
 *gtk-sharp-2.10.2 (13 Jan 2008)
 

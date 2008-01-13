@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.2.ebuild,v 1.9 2007/01/18 12:10:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.2.ebuild,v 1.10 2008/01/13 04:19:53 compnerd Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -30,23 +30,23 @@ KEYWORDS="amd64 ppc x86"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${WORKDIR}/${P}-configurable.diff
+	epatch "${WORKDIR}/${P}-configurable.diff"
 
 	# fixes support with pkgconfig-0.17, bug #92503
 	# as well as remove zapping of CFLAGS
 	sed -i -e 's/\<PKG_PATH\>/GTK_SHARP_PKG_PATH/g' \
 		-e ':^CFLAGS=:d' \
-		${S}/configure.in
+		"${S}/configure.in"
 
 	# Use correct libdir in pkgconfig files
 	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
-		${S}/*/{,GConf}/*.pc.in || die "sed failed"
+		"${S}"/*/{,GConf}/*.pc.in || die "sed failed"
 
 	# Fix install data hook (bug #161093)
 	sed -i -e 's/^install-hook/install-data-hook/' \
-		${S}/sample/gconf/Makefile.am || die "sed failed"
+		"${S}"/sample/gconf/Makefile.am || die "sed failed"
 
 	eautoreconf
 
@@ -68,8 +68,8 @@ src_compile() {
 }
 
 src_install () {
-	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}-2.0" \
-		DESTDIR=${D} install || die
+	make GACUTIL_FLAGS="/root "${D}"/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}-2.0" \
+		DESTDIR="${D}" install || die
 
 	dodoc README* ChangeLog
 }

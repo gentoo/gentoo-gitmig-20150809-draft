@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.10.ebuild,v 1.8 2007/01/04 14:41:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.10.ebuild,v 1.9 2008/01/13 04:19:53 compnerd Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="latest"
@@ -32,14 +32,14 @@ KEYWORDS="amd64 ppc x86"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${WORKDIR}/${P}-configurable.diff
+	epatch "${WORKDIR}/${P}-configurable.diff"
 	sed -i -e 's:\<PKG_PATH\>:GTK_SHARP_PKG_PATH:g' configure.in
 
 	# Use correct libdir in pkgconfig file
 	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
-		${S}/gtk-sharp.pc.in || die
+		"${S}/gtk-sharp.pc.in" || die
 
 	eautoreconf
 
@@ -60,7 +60,7 @@ src_compile() {
 
 src_install () {
 	LANG=C make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}" \
-		DESTDIR=${D} install || die
+		DESTDIR="${D}" install || die
 
 	dodoc README* ChangeLog
 }

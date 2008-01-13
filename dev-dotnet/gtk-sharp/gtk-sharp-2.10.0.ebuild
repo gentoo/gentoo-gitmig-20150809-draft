@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.10.0.ebuild,v 1.7 2007/04/30 17:33:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.10.0.ebuild,v 1.8 2008/01/13 04:19:53 compnerd Exp $
 
 inherit eutils mono autotools
 
@@ -27,19 +27,19 @@ KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${WORKDIR}/${P}-configurable.diff
+	epatch "${WORKDIR}/${P}-configurable.diff"
 
 	# fixes support with pkgconfig-0.17, bug #92503
 	# as well as remove zapping of CFLAGS
 	sed -i -e 's/\<PKG_PATH\>/GTK_SHARP_PKG_PATH/g' \
 		-e ':^CFLAGS=:d' \
-		${S}/configure.in
+		"${S}"/configure.in
 
 	# Use correct libdir in pkgconfig files
 	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
-		${S}/*/*.pc.in || die
+		"${S}"/*/*.pc.in || die
 
 	eautoreconf
 
@@ -61,8 +61,8 @@ src_compile() {
 }
 
 src_install () {
-	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}-2.0" \
-		DESTDIR=${D} install || die
+	make GACUTIL_FLAGS="/root "${D}"/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}-2.0" \
+		DESTDIR="${D}" install || die
 
 	dodoc README* ChangeLog
 }
