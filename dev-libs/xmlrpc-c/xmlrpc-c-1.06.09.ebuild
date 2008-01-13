@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.09.ebuild,v 1.8 2008/01/13 00:42:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.09.ebuild,v 1.9 2008/01/13 14:19:35 philantrop Exp $
 
 inherit eutils
 
@@ -35,6 +35,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.05-pic.patch
 	epatch "${FILESDIR}"/${PN}-1.06.02-threadupdatestatus.patch
 	epatch "${FILESDIR}"/${PN}-1.06.02-strsol.patch
+
+	# Respect the user's CFLAGS/CXXFLAGS.
+	sed -i -e "/CFLAGS_COMMON/s:-g -O3$:${CFLAGS}:" Makefile.common
+	sed -i -e "/CXXFLAGS_COMMON/s:-g$:${CXXFLAGS}:" Makefile.common
 }
 
 src_compile() {
