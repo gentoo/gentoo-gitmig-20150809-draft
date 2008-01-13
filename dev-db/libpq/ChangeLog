@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.127 2008/01/13 20:40:31 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.128 2008/01/13 21:45:10 mjolnir Exp $
+
+  13 Jan 2008; Martin Jackson <mjolnir@gentoo.org>
+  files/libpq-7.4.19-gentoo.patch:
+  Fix bad patch on 7.4.19 commit
 
 *libpq-7.3.21 (13 Jan 2008)
 
