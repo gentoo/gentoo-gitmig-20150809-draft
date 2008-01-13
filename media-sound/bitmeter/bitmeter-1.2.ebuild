@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bitmeter/bitmeter-1.2.ebuild,v 1.5 2007/06/17 07:18:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bitmeter/bitmeter-1.2.ebuild,v 1.6 2008/01/13 18:42:32 aballier Exp $
 
 DESCRIPTION="a diagnosis tool for JACK audio software"
 HOMEPAGE="http://users.ecs.soton.ac.uk/njl98r/code/audio/bitmeter"
@@ -14,6 +14,7 @@ IUSE="doc"
 RDEPEND="media-sound/jack-audio-connection-kit
 	>=x11-libs/gtk+-2"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	!media-sound/bitscope"
 
 src_install() {
