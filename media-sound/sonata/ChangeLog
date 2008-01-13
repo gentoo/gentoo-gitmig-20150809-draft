@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.15 2007/09/26 12:14:37 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.16 2008/01/13 15:06:51 drac Exp $
+
+  13 Jan 2008; Samuli Suominen <drac@gentoo.org> sonata-1.2.2.ebuild:
+  Reorganize ebuild and depends wrt #205597
 
   26 Sep 2007; Christoph Mende <angelos@gentoo.org> sonata-1.2.2.ebuild:
   Stable on amd64 wrt bug #193786
