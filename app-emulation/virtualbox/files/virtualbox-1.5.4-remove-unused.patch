@@ -1,0 +1,43 @@
+--- Config.kmk.orig	2008-01-07 23:00:24.000000000 +0100
++++ Config.kmk	2008-01-07 23:16:32.000000000 +0100
+@@ -134,7 +134,7 @@
+ 
+ # Build linux / win32 additions.
+ ifeq ($(BUILD_TARGET),linux)
+-  VBOX_WITH_LINUX_ADDITIONS = 1
++#  VBOX_WITH_LINUX_ADDITIONS = 1
+   VBOX_WITH_WIN32_ADDITIONS = 1
+ endif
+ ifeq ($(BUILD_TARGET),l4)
+@@ -186,7 +186,7 @@
+ # the SDL based GUI
+ VBOX_WITH_VBOXSDL = 1
+ # the basic frontend (w/o Main)
+-VBOX_WITH_VBOXBFE = 1
++#BOX_WITH_VBOXBFE = 1
+ # the Qt GUI
+ VBOX_WITH_QTGUI = 1
+ ## the Direct Framebuffer GUI
+--- configure.orig	2008-01-07 23:00:20.000000000 +0100
++++ configure	2008-01-07 23:03:23.000000000 +0100
+@@ -1471,14 +1471,14 @@
+ # some things are not available in for OSE
+ if [ $OSE -ge 1 ]; then
+   cnf_append "VBOX_OSE" "1"
+-  cnf_append "VBOX_WITH_TESTSUITE" ""
++#  cnf_append "VBOX_WITH_TESTSUITE" ""
+   cnf_append "VBOX_WITH_WIN32_ADDITIONS" ""
+ 
+-  if [ "$OS" = "linux" ]; then
+-    cnf_append "VBOX_WITH_LINUX_ADDITIONS" "1"
+-  else
+-    cnf_append "VBOX_WITH_LINUX_ADDITIONS" ""
+-  fi
++#  if [ "$OS" = "linux" ]; then
++#    cnf_append "VBOX_WITH_LINUX_ADDITIONS" "1"
++#  else
++#    cnf_append "VBOX_WITH_LINUX_ADDITIONS" ""
++#  fi
+   echo >> $CNF
+ fi
+ 

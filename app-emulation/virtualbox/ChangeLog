@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.32 2008/01/06 22:20:49 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.33 2008/01/13 16:41:44 jokey Exp $
+
+*virtualbox-1.5.4-r1 (13 Jan 2008)
+
+  13 Jan 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/virtualbox-1.5.4-remove-unused.patch, +virtualbox-1.5.4-r1.ebuild:
+  Version bump to prevent building of guest additions, thanks to x-drum for
+  providing the patch
 
   06 Jan 2008; Markus Ullmann <jokey@gentoo.org> virtualbox-1.5.4.ebuild,
   virtualbox-9999.ebuild:
