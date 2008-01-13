@@ -1,0 +1,9 @@
+# ChangeLog for xfce-extra/xfce4-wmdock
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock/ChangeLog,v 1.1 2008/01/13 15:40:58 drac Exp $
+
+*xfce4-wmdock-0.1.8 (13 Jan 2008)
+
+  13 Jan 2008; Samuli Suominen <drac@gentoo.org> +xfce4-wmdock-0.1.8.ebuild:
+  Initial commit.
+
