@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.4.14.ebuild,v 1.1 2007/12/19 10:43:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.4.14.ebuild,v 1.2 2008/01/13 14:54:16 aballier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND=">=x11-libs/gtk+-2
+RDEPEND=">=x11-libs/gtk+-2
 	sndfile? ( >=media-libs/libsndfile-1.0.10 )
 	sdl? ( >=media-libs/libsdl-1.2.3 )
 	alsa? ( media-libs/alsa-lib )
@@ -25,6 +25,8 @@ DEPEND=">=x11-libs/gtk+-2
 	ladspa? ( media-libs/ladspa-sdk )
 	sox? ( media-sound/sox )
 	arts? ( >=kde-base/arts-3.4.1 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf \
