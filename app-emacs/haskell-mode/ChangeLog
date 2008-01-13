@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/haskell-mode
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.27 2007/12/14 19:30:32 ulm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.28 2008/01/13 14:22:59 nixnut Exp $
+
+  13 Jan 2008; nixnut <nixnut@gentoo.org> haskell-mode-2.4.ebuild:
+  Stable on ppc wrt bug 205553
 
 *haskell-mode-2.4 (14 Dec 2007)
 
