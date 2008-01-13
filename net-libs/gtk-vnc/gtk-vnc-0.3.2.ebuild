@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.2.ebuild,v 1.1 2008/01/11 09:23:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.2.ebuild,v 1.2 2008/01/13 03:06:00 dberkholz Exp $
 
 DESCRIPTION="VNC viewer widget for GTK."
 HOMEPAGE="http://gtk-vnc.sourceforge.net/"
@@ -11,7 +11,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND=">=dev-python/pygtk-2
 	>=net-libs/gnutls-1.4"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die
