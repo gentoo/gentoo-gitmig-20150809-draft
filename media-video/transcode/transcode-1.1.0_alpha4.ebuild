@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.0_alpha4.ebuild,v 1.2 2007/09/24 18:19:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.0_alpha4.ebuild,v 1.3 2008/01/13 01:38:32 aballier Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.10"
@@ -19,6 +19,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X 3dnow a52 aac alsa altivec dv dvdread iconv imagemagick jpeg lzo mjpeg mp3 mmx nuv ogg oss postproc quicktime sdl sse sse2 theora truetype v4l2 vorbis x264 xvid xml"
 
 RDEPEND="a52? ( media-libs/a52dec )
+	alsa? ( media-libs/alsa-lib )
 	dv? ( media-libs/libdv )
 	dvdread? ( media-libs/libdvdread )
 	xvid? ( media-libs/xvid )
@@ -43,6 +44,7 @@ RDEPEND="a52? ( media-libs/a52dec )
 		x11-libs/libXv )"
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	v4l2? ( >=sys-kernel/linux-headers-2.6.11 )"
 # Make sure the assembler USE flags are unmasked on amd64
 # Remove this once default-linux/amd64/2006.1 is deprecated

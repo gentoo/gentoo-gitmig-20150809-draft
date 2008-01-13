@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.3.ebuild,v 1.8 2007/07/03 21:57:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.3.ebuild,v 1.9 2008/01/13 01:38:32 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -42,6 +42,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 		x11-libs/libXv )"
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	v4l2? ( >=sys-kernel/linux-headers-2.6.11 )"
 # Make sure the assembler USE flags are unmasked on amd64
 # Remove this once default-linux/amd64/2006.1 is deprecated
