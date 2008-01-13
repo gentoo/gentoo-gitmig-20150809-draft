@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/qca
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.28 2006/10/19 00:14:00 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.29 2008/01/13 17:54:13 philantrop Exp $
+
+*qca-2.0.0-r2 (13 Jan 2008)
+
+  13 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/qca-2.0.0-debug-same-pkgconfig-file.patch, +qca-2.0.0-r2.ebuild:
+  Version bump as per bug 129536.
 
   19 Oct 2006; Markus Ullmann <jokey@gentoo.org> qca-1.0-r2.ebuild:
   minor QA: IUSE wrt bug #150083
