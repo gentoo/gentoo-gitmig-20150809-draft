@@ -1,6 +1,10 @@
 # ChangeLog for media-video/frameworks
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/frameworks/ChangeLog,v 1.4 2007/11/27 12:42:16 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/frameworks/ChangeLog,v 1.5 2008/01/13 11:49:39 aballier Exp $
+
+  13 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  -frameworks-0.3.4.ebuild:
+  remove old
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
   frameworks-0.3.4.ebuild, frameworks-0.3.6.ebuild:
