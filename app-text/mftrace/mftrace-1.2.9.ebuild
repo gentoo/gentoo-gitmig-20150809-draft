@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.9.ebuild,v 1.6 2007/11/13 18:24:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.9.ebuild,v 1.7 2008/01/13 13:33:36 aballier Exp $
 
 IUSE="truetype"
 inherit python multilib
@@ -13,12 +13,12 @@ KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 # SLOT 1 was used in pktrace ebuild
 SLOT="1"
 
-DEPEND=">=dev-lang/python-2.2.2"
+DEPEND=">=dev-lang/python-2.2.2
+	|| ( media-gfx/potrace >=media-gfx/autotrace-0.30 )"
 
 RDEPEND="${DEPEND}
 	virtual/tetex
 	>=app-text/t1utils-1.25
-	|| ( media-gfx/potrace >=media-gfx/autotrace-0.30 )
 	truetype? ( media-gfx/fontforge )"
 
 src_compile() {
