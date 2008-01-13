@@ -1,0 +1,13 @@
+diff -rup tvbrowser-2.6.2-orig/src/util/ui/Localizer.java tvbrowser-2.6.2/src/util/ui/Localizer.java
+--- tvbrowser-2.6.2-orig/src/util/ui/Localizer.java	2007-12-27 00:01:34.000000000 +0100
++++ tvbrowser-2.6.2/src/util/ui/Localizer.java	2007-12-27 19:11:54.000000000 +0100
+@@ -364,7 +364,7 @@ public class Localizer {
+     langArray.add(Locale.ENGLISH);
+ 
+     try {
+-      File jar = new File("tvbrowser.jar");
++      File jar = new File("lib/tvbrowser.jar");
+ 
+       if (!jar.exists()) {
+         URL url = getClass().getProtectionDomain().getCodeSource().getLocation();
+
