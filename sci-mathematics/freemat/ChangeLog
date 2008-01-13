@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/freemat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.7 2008/01/11 11:22:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.8 2008/01/13 14:52:50 bicatali Exp $
+
+  13 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org> -freemat-3.4.ebuild,
+  freemat-3.5.ebuild:
+  Specify blas/lapack with new mechanism, added opengl requirement for
+  qt4, and some cleaning.
 
   11 Jan 2008; Markus Dittrich <markusle@gentoo.org> freemat-3.5.ebuild:
   Added missing QT4 dependency (fixes bug #205259).

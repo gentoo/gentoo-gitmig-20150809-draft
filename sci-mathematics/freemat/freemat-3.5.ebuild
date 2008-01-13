@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.5.ebuild,v 1.3 2008/01/11 11:22:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.5.ebuild,v 1.4 2008/01/13 14:52:50 bicatali Exp $
 
-inherit eutils flag-o-matic autotools qt4
+inherit flag-o-matic qt4
 
 MY_PN=FreeMat
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="Environment for rapid engineering and scientific prototyping and data processing"
+DESCRIPTION="Environment for rapid engineering and scientific processing"
 HOMEPAGE="http://freemat.sourceforge.net/"
 SRC_URI="mirror://sourceforge/freemat/${MY_P}.tar.gz"
 
@@ -16,10 +16,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="$(qt4_min_version 4)
+DEPEND="$(qt4_min_version 4.2)
 	dev-libs/libpcre
 	virtual/lapack
-	dev-util/pkgconfig
 	ncurses? ( >=sys-libs/ncurses-5.4 )
 	umfpack? ( sci-libs/umfpack )
 	arpack? ( sci-libs/arpack )
@@ -29,12 +28,19 @@ DEPEND="$(qt4_min_version 4)
 RDEPEND="${DEPEND}
 	ffcall? ( dev-libs/ffcall )"
 
-S=${WORKDIR}/${MY_P}
+DEPEND="dev-util/pkgconfig"
+
+QT4_BUILT_WITH_USE_CHECK="opengl"
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	# -O3 still doesn't compile freemat-3.5
 	replace-flags -O3 -O2
-	econf $(use_with ncurses) || die "econf failed"
+	econf \
+		--with-blas="(pkg-config --libs blas)" \
+		--with-lapack="(pkg-config --libs lapack)" \
+		$(use_with ncurses) \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
