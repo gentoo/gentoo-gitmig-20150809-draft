@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xinput/xinput-1.2.ebuild,v 1.8 2006/11/29 19:02:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xinput/xinput-1.2.ebuild,v 1.9 2008/01/13 16:59:24 welp Exp $
 
 DESCRIPTION="An utility to set XInput device parameters"
 HOMEPAGE="ftp://ftp.x.org/contrib/utilities/xinput.README"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.x.org/contrib/utilities/${P}.tar.gz"
 LICENSE="as-is"
 
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
