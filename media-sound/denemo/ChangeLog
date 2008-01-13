@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/denemo
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.21 2007/08/21 23:00:02 jurek Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.22 2008/01/13 18:52:05 aballier Exp $
+
+  13 Jan 2008; Alexis Ballier <aballier@gentoo.org> denemo-0.7.6.ebuild:
+  add missing pkgconfig dep, bug #205673
 
   21 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> denemo-0.7.6.ebuild:
   x86 stable (bug #189135)
