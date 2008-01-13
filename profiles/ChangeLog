@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.992 2008/01/13 19:01:30 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.993 2008/01/13 23:20:57 opfer Exp $
+
+  13 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  base/package.use.mask, default-linux/x86/package.use.mask:
+  mask alsa USE flag for dev-java/ibm-{jdk,jre}-bin in base and unmask it on x86
 
   13 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> use.local.desc:
   Added clucene description dev-libs/soprano
