@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
-# Copyright 2002-1997 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.204 2007/12/23 07:51:38 redhatter Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.205 2008/01/13 10:08:11 mrness Exp $
+
+  13 Jan 2008; Alin Năstac <mrness@gentoo.org> -files/ip-down,
+  -files/ip-up, -ppp-2.4.4-r9.ebuild, -ppp-2.4.4-r11.ebuild:
+  Remove obsolete revisions.
 
   23 Dec 2007; Stuart Longland <redhatter@gentoo.org> ppp-2.4.4-r13.ebuild:
   Tested and working on MIPS.  Marked stable.
