@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/mistbot/mistbot-0.9.ebuild,v 1.5 2007/10/30 22:04:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/mistbot/mistbot-0.9.ebuild,v 1.6 2008/01/13 10:48:25 cla Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -21,7 +21,8 @@ RDEPEND="virtual/libc
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen
-		app-text/xmlto )"
+		app-text/xmlto )
+	dev-util/pkgconfig"
 
 src_compile() {
 	ebegin "Change build.conf to fit needs"

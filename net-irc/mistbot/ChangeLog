@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/mistbot
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/mistbot/ChangeLog,v 1.4 2007/10/30 22:04:44 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/mistbot/ChangeLog,v 1.5 2008/01/13 10:48:25 cla Exp $
+
+  13 Jan 2008; Dawid Węgliński <cla@gentoo.org> mistbot-0.9.ebuild:
+  Add dev-util/pkgconfig to DEPEND (bug #205476)
 
   30 Oct 2007; Christoph Mende <angelos@gentoo.org> mistbot-0.9.ebuild:
   Added ~amd64 and small fixes
