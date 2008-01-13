@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.3.6.ebuild,v 1.1 2007/09/23 18:31:15 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.3.6.ebuild,v 1.2 2008/01/13 23:25:33 araujo Exp $
 
 inherit multilib elisp-common flag-o-matic eutils toolchain-funcs
 
@@ -21,16 +21,16 @@ DEPEND="sys-libs/gdbm
 	gmp? ( dev-libs/gmp )"
 RDEPEND=""
 
-S=${WORKDIR}/smalltalk-${PV}
+S="${WORKDIR}/smalltalk-${PV}"
 
 SITEFILE=50gnu-smalltalk-gentoo.el
 
 src_unpack() {
-	unpack ${A}
+	unpack "${A}"
 	# stack patch
-	epatch ${FILESDIR}/gst-stack-${PV}.patch
-	sed -i "s:\$(DESTDIR)\$(bindir)/gst \$\$srcdir/Finish.st \-VisqS \-a \"\$(DESTDIR)\" \$(MODULES): :" ${S}/Makefile.am
-	sed -i "s:\$(DESTDIR)\$(bindir)/gst \$\$srcdir/Finish.st \-VisqS \-a \"\$(DESTDIR)\" \$(MODULES): :" ${S}/Makefile.in
+	epatch "${FILESDIR}/gst-stack-${PV}.patch"
+	sed -i "s:\$(DESTDIR)\$(bindir)/gst \$\$srcdir/Finish.st \-VisqS \-a\"\$(DESTDIR)\" \$(MODULES): :" "${S}/Makefile.am"
+	sed -i "s:\$(DESTDIR)\$(bindir)/gst \$\$srcdir/Finish.st \-VisqS \-a\"\$(DESTDIR)\" \$(MODULES): :" "${S}/Makefile.in"
 }
 
 src_compile() {
@@ -48,17 +48,18 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr mandir=${D}/usr/share/man infodir=${D}/usr/share/info \
-		lispdir=${D}/usr/share/emacs/site-lisp/gnu-smalltalk \
-		libdir=${D}/usr/lib install || die
-	rm -rf ${D}/usr/include/sigsegv.h \
-		${D}/usr/include/snprintfv \
-		${D}/usr/share/aclocal/snprintfv.m4
+	make prefix="${D}/usr mandir=${D}/usr/share/man"
+		infodir="${D}/usr/share/info" \
+		lispdir="${D}/usr/share/emacs/site-lisp/gnu-smalltalk" \
+		libdir="${D}/usr/lib" install || die
+	rm -rf "${D}/usr/include/sigsegv.h" \
+		"${D}/usr/include/snprintfv" \
+		"${D}/usr/share/aclocal/snprintfv.m4"
 	dodoc AUTHORS COPYING* ChangeLog NEWS README THANKS TODO
-	rm -rf ${D}/var
+	rm -rf "${D}/var"
 	if use emacs; then
-		elisp-install ${PN} *.el *.elc
-		elisp-site-file-install ${FILESDIR}/${SITEFILE}
+		elisp-install "${PN}" *.el *.elc
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 	fperms 0444 /usr/share/smalltalk/packages.xml
 }
