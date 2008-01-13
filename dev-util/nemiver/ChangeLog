@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/nemiver
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.10 2007/11/16 09:20:52 eva Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.11 2008/01/13 09:05:40 remi Exp $
+
+  13 Jan 2008; Rémi Cardona <remi@gentoo.org> nemiver-0.4.0-r1.ebuild:
+  Add missing gnome-doc-utils dep (see bug #205368)
 
 *nemiver-0.4.0-r1 (16 Nov 2007)
 

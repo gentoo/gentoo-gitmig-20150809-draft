@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.4.0-r1.ebuild,v 1.1 2007/11/16 09:20:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.4.0-r1.ebuild,v 1.2 2008/01/13 09:05:40 remi Exp $
 
 inherit gnome2 eutils
 
@@ -28,7 +28,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=app-text/scrollkeeper-0.3.11
-	>=dev-util/intltool-0.35"
+	>=dev-util/intltool-0.35
+	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
