@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX djvu-gs-gpl-8.60.patch 1636 RMD160 ae4e7e848b0e44f7d58d3121c27dd4425c174844 SHA1 cb1bff94ec47ccdeb7914375d472a02f22b3f1db SHA256 8a30f9d8bc02ecd3cddb4c18d38fab125228b116e9939c8f8c23fa9642f54009
 MD5 7cabb316b2258839672fbad4e0629ad0 files/djvu-gs-gpl-8.60.patch 1636
 RMD160 ae4e7e848b0e44f7d58d3121c27dd4425c174844 files/djvu-gs-gpl-8.60.patch 1636
@@ -114,10 +117,10 @@ EBUILD ghostscript-gpl-8.60-r1.ebuild 4749 RMD160 ab276dc68a9a46fabc9c95a55df23c
 MD5 7f79ebb24170a379994c158efe9bba98 ghostscript-gpl-8.60-r1.ebuild 4749
 RMD160 ab276dc68a9a46fabc9c95a55df23cad0fadfbc7 ghostscript-gpl-8.60-r1.ebuild 4749
 SHA256 5b5d1e4e69175afd44ad898c84a280f87b6e58afdee661945320d583b42d7c57 ghostscript-gpl-8.60-r1.ebuild 4749
-EBUILD ghostscript-gpl-8.61-r1.ebuild 4613 RMD160 9afb0cf443270edff182d79caa375dc1d5c740b6 SHA1 4a7ab054d0f44f9cdbc58e2acbb01268ca4bbacc SHA256 06477d0eb47aa707c880e19736d741a9d0c009d0f91f9a5fc57a28fcd10c05bb
-MD5 0eef8d68113cffee9e8c0f36ff29480f ghostscript-gpl-8.61-r1.ebuild 4613
-RMD160 9afb0cf443270edff182d79caa375dc1d5c740b6 ghostscript-gpl-8.61-r1.ebuild 4613
-SHA256 06477d0eb47aa707c880e19736d741a9d0c009d0f91f9a5fc57a28fcd10c05bb ghostscript-gpl-8.61-r1.ebuild 4613
+EBUILD ghostscript-gpl-8.61-r1.ebuild 4614 RMD160 c9fb631ca8542824c62ad527646be75c16c9c3e4 SHA1 cc0f20f17ef1dc6be36d155c67ee6d2821e1a858 SHA256 9cf4a6a427f7bc2eedd064f36133ed5d4d15c154ecf37a7959a36c679b39bf84
+MD5 c52b16cbf7fb26e86ac5dbb7bf7d3da3 ghostscript-gpl-8.61-r1.ebuild 4614
+RMD160 c9fb631ca8542824c62ad527646be75c16c9c3e4 ghostscript-gpl-8.61-r1.ebuild 4614
+SHA256 9cf4a6a427f7bc2eedd064f36133ed5d4d15c154ecf37a7959a36c679b39bf84 ghostscript-gpl-8.61-r1.ebuild 4614
 MISC ChangeLog 7984 RMD160 6b6f9853b2275a7cbff5dc14c4275689b62128d9 SHA1 9f0cc6b3f3d751a1c568e19afa93b5f7a0a95669 SHA256 6a200d2337b959a89f1e330664235674a038c08f8aaf6aa2356d676dd33ca9c9
 MD5 52fc5caf68f5141122be17ffd619f06e ChangeLog 7984
 RMD160 6b6f9853b2275a7cbff5dc14c4275689b62128d9 ChangeLog 7984
@@ -141,3 +144,10 @@ SHA256 2b6a56bd1d93f9fce20899b6e023e9e3e25bcd96d7d30a414d73c9dde39e6a29 files/di
 MD5 3fe2b8b8aeab833d598853a5a9e59eef files/digest-ghostscript-gpl-8.61-r1 1292
 RMD160 fe9f1b1806bc465894a8e7d61beb4f8d3c9c1c20 files/digest-ghostscript-gpl-8.61-r1 1292
 SHA256 4dd36321aa88d39108e29c59c9320505e106de99f71d1925f553f3172811cf3e files/digest-ghostscript-gpl-8.61-r1 1292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.8 (GNU/Linux)
+
+iEYEARECAAYFAkeJW8wACgkQj9hvisErhMKS8QCgpMfqpJOouoaJrHiUOjiUQGAl
+yksAoKnIySRz7hGeLGxJCNULM+BqxgDm
+=bmsj
+-----END PGP SIGNATURE-----
