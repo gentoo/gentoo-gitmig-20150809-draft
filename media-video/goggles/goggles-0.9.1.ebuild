@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/goggles-0.9.1.ebuild,v 1.5 2007/11/27 12:44:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/goggles-0.9.1.ebuild,v 1.6 2008/01/13 12:04:18 aballier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,9 +13,11 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
-DEPEND="=x11-libs/fox-1.6*
+RDEPEND="=x11-libs/fox-1.6*
 	>=media-video/ogle-0.9.2
 	media-libs/libpng"
+DEPEND="${RDEPEND}
+	dev-util/reswrap"
 
 src_unpack() {
 	unpack ${A}
