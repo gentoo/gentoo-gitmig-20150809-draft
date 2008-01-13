@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.310 2008/01/13 22:16:49 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.311 2008/01/13 22:22:25 jokey Exp $
+
+  13 Jan 2008; Markus Ullmann <jokey@gentoo.org> openldap-2.3.39-r2.ebuild,
+  openldap-2.3.40-r1.ebuild:
+  Add samba flag warning for bug #196045
 
   13 Jan 2008; Markus Ullmann <jokey@gentoo.org> openldap-2.3.39-r2.ebuild:
   Stable on amd64 with welps permission
