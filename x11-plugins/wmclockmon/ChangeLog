@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmclockmon
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.26 2007/09/21 18:03:55 mr_bones_ Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.27 2008/01/13 11:42:20 drac Exp $
+
+*wmclockmon-0.8.1 (13 Jan 2008)
+
+  13 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  +files/wmclockmon-0.8.1-gtk.patch, +wmclockmon-0.8.1.ebuild:
+  Version bump to GTK+-2.0 version and mark it stable for amd64 because
+  current stable is broken wrt #204550
 
   21 Sep 2007; Michael Sterrett <mr_bones_@gentoo.org>
   wmclockmon-0.8.0-r1.ebuild:
