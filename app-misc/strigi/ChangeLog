@@ -1,0 +1,132 @@
+# ChangeLog for app-misc/strigi
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.1 2008/01/13 18:18:23 philantrop Exp $
+
+*strigi-0.5.7 (13 Jan 2008)
+
+  13 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/strigi-0.5.7-automagic-deps.patch, +metadata.xml,
+  +strigi-0.5.7.ebuild:
+  Initial import to the tree as per bug 147553.
+
+  08 Jan 2008; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
+  strigi-0.5.7.ebuild:
+  Fix src_test so that tests are actually run. RESTRICT=test, only 30% passes
+  for me. Unrestrict mirror. Better comments.
+
+  09 Dec 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
+  strigi-0.5.7.ebuild:
+  Removed USE="log sqlite" from non-live strigi ebuild, they're known broken.
+
+  10 Nov 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
+  strigi-0.5.7.ebuild, strigi-9999.ebuild:
+  Correct IUSE-defaults usage.
+
+  10 Nov 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  strigi-0.5.7.ebuild, strigi-9999.ebuild:
+  Disabled the hyperestraier in IUSE defaults and fixed a few QA issues.
+
+  31 Oct 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
+  +strigi-0.5.7.ebuild, +strigi-0.5.7-automagic-deps.patch,
+  -strigi-0.5.5-r1.ebuild, -strigi-0.5.5-automagic.patch:
+  Added strigi-0.5.7.ebuild. Added patch by Evgeny Egorochkin
+  <phreedom.stdin@gmail.com>, to fix strigi's automagic deps.
+  Removed old version.
+
+  25 Oct 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
+  strigi-0.5.5-r1.ebuild, strigi-9999.ebuild:
+  Add EAPI=1, since we're using IUSE-defaults now.
+
+  24 Oct 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
+  strigi-0.5.5-r1.ebuild, strigi-9999.ebuild:
+  Added some IUSE-defaults.
+
+  04 Oct 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
+  strigi-0.5.5-r1.ebuild, strigi-9999.ebuild:
+  inotify != libnotify (thanks Zephyrus).
+
+  03 Oct 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
+  strigi-0.5.5-r1.ebuild:
+  Apply the relevant fixes from the previous commit to
+  app-misc/strigi-0.5.5-r1.
+
+  02 Oct 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
+  strigi-9999.ebuild, -strigi-9999-sqliteindexer-fix.patch:
+  Depend on dev-cpp/clucene-0.9.16a or higher.
+  Removed app-arch/bzip2 & sys-libs/zlib from $DEPEND (part of base-system).
+  Removed DEPEND="!kde-misc/strigi".
+  Added USE-conditional (USE="java") dep on dev-libs/expat.
+
+  Updated USE-descriptions.
+  Remove warning about USE="libnotify" being unstable, add '(experimental)'
+    to USE descriptions of libnotify & hyperestraier.
+  Renamed inotify USE flag to libnotify, cfr the official tree.
+    Added USE-conditional depend on x11-libs/libnotify.
+  Renamed sqlite3 USE flag to sqlite, see relevant thread on gentoo-dev.
+  Removed xerces-c USE flag, xerces-c is only needed with USE="java".
+  Removed xattr USE flag, until upstream re-enables it.
+  die on 'use qt4 && ! use dbus', instead of only showing a warning.
+
+  Don't use subshells for '! use $useflag'.
+  Don't build tests for USE="-test".
+  Removed references to an obsolete (accepted upstream) patch.
+  Moved credits to ChangeLog.
+
+  02 Oct 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
+  strigi-9999.ebuild:
+  Revert previous commit, fixed upstream.
+
+  01 Oct 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
+  strigi-0.5.5-r1.ebuild, strigi-9999.ebuild:
+  Revert upstream change that broke finding CLucene. Fix typos.
+
+  28 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
+  -strigi-0.5.1.ebuild:
+  Removed ebuild for the old strigi 0.5.1.
+
+  22 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
+  +files/strigi-0.5.5-automagic.patch, -strigi-0.5.5.ebuild,
+  +strigi-0.5.5-r1.ebuild:
+  Added patch to remove automagic from CMakeLists.txt scripts of
+  strigi-0.5.5. Removed hyperestraier use flag from the same ebuild since
+  hyperestrayer support is broken.
+
+  05 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
+  strigi-0.5.1.ebuild, strigi-0.5.5.ebuild, strigi-9999.ebuild:
+  Fixed xattr use flag handling on g/fbsd, thanks to Mauro [equilibrium]
+  Toffanin.
+
+  29 Aug 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
+  strigi-0.5.1.ebuild, strigi-0.5.5.ebuild, strigi-9999.ebuild:
+  QA fixes.
+
+  29 Aug 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
+  strigi-0.5.1.ebuild, strigi-0.5.5.ebuild, strigi-9999.ebuild:
+  Added debug to IUSE because of cmake-utils eclass changes.
+
+  27 Aug 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
+  strigi-0.5.1.ebuild, strigi-0.5.5.ebuild, strigi-9999.ebuild:
+  The java dependency is now optional and it's controlled by the java use flag.
+
+  13 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> +strigi-0.5.5.ebuild:
+  Version bump to 0.5.5 with some bug fixes for the ebuild itself.
+
+  22 Jul 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
+  strigi-0.5.1.ebuild, strigi-9999.ebuild:
+  Modified ebuilds to reflect cmake-utils eclass changes.
+  Removed PATH and LIB_SUFFIX handling from the ebuild.
+
+  19 Jul 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
+  strigi-0.5.1.ebuild, strigi-9999.ebuild:
+  Strigi is officialy moved to app-misc and now this package is the dependency
+  required for kde4 ebuilds.
+
+  18 Jul 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
+  strigi-0.5.1.ebuild:
+  Fixed RESTRICT
+
+  18 Jul 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it> +metadata.xml,
+  strigi-0.5.1.ebuild, strigi-9999.ebuild:
+  Added metadata.xml and Changelog. Thanks to Franz Fellner for the initial
+  ebuild.
+

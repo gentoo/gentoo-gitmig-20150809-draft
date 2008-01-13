@@ -1,0 +1,100 @@
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.5.7.ebuild,v 1.1 2008/01/13 18:18:23 philantrop Exp $
+
+EAPI="1"
+inherit eutils cmake-utils
+
+DESCRIPTION="Fast crawling desktop search engine with Qt4 GUI"
+HOMEPAGE="http://www.vandenoever.info/software/strigi"
+SRC_URI="http://www.vandenoever.info/software/${PN}/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE="+clucene +dbus +exiv2 debug hyperestraier java inotify +qt4 test"
+# log sqlite
+RESTRICT="test"
+
+COMMONDEPEND="
+	dev-libs/libxml2
+	virtual/libiconv
+	clucene? ( >=dev-cpp/clucene-0.9.16a )
+	dbus? ( sys-apps/dbus )
+	exiv2? ( media-gfx/exiv2 )
+	hyperestraier? ( app-text/hyperestraier )
+	java? (
+		>=dev-libs/xerces-c-2.7.0-r1
+		>=virtual/jdk-1.4
+		)
+	qt4? ( >=x11-libs/qt-4.2.1-r1 )"
+#	log? ( >=dev-libs/log4cxx-0.9.7 )
+#	sqlite? ( dev-db/sqlite:3 )"
+DEPEND="${COMMONDEPEND}
+	test? ( dev-util/cppunit )"
+RDEPEND="${COMMONDEPEND}"
+
+pkg_setup() {
+	# & ! use sqlite
+	if ! use clucene && ! use hyperestraier; then
+		echo ""
+		ewarn "It's highly recommended to enable one of the supported backends:"
+		ewarn "clucene, hyperestraier and sqlite3"
+		ewarn "Clucene is currently the recommended backend."
+		ewarn "Without a backend you'll only be able to use deepgrep."
+		echo ""
+	fi
+
+	if use dbus && use qt4 && ! built_with_use x11-libs/qt:4 dbus; then
+		echo ""
+		eerror "You are building Strigi with qt4 and dbus, but qt4 wasn't built with dbus support."
+		eerror "Please re-emerge qt4 with dbus, or disable dbus in Strigi."
+		echo ""
+		die
+	fi
+
+	if use qt4 && ! use dbus; then
+		echo ""
+		eerror "You are building Strigi with qt4 but without dbus."
+		eerror "Strigiclient needs dbus to detect a running Strigi daemon."
+		eerror "Please enable both qt4 and dbus."
+		echo ""
+		die
+	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-automagic-deps.patch"
+}
+
+src_compile() {
+	# Strigi needs either expat or libxml2.
+	# However libxml2 seems to be required in both cases, linking to 2 xml parsers is
+	# just silly, so we forcefully disable linking to expat.
+
+	# Disabled: NEWXESAM (targetted at developers)
+
+	# Enabled: POLLING (only reliable way to check for files changed.)
+
+	mycmakeargs="${mycmakeargs}
+		-DENABLE_EXPAT=OFF -DENABLE_NEWXESAM=OFF -DENABLE_POLLING=ON
+		-DFORCE_DEPS=ON -DENABLE_CPPUNIT=OFF
+		$(cmake-utils_use_enable clucene CLUCENE)
+		$(cmake-utils_use_enable dbus DBUS)
+		$(cmake-utils_use_enable exiv2 EXIV2)
+		$(cmake-utils_use_enable hyperestraier HYPERESTRAIER)
+		$(cmake-utils_use_enable inotify INOTIFY)
+		$(cmake-utils_use_enable qt4 QT4)"
+	#	$(cmake-utils_use_enable log LOG4CXX)
+	#	$(cmake-utils_use_enable sqlite SQLITE)
+	cmake-utils_src_compile
+}
+
+src_test() {
+	mycmakeargs="${mycmakeargs} -DENABLE_CPPUNIT=ON"
+	cmake-utils_src_compile -j1
+	ctest --extra-verbose || die "Tests failed."
+}

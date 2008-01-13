@@ -1,0 +1,261 @@
+Patch by Evgeny Egorochkin <phreedom.stdin@gmail.com>
+
+Index: cmake/MacroFindOptionalDep.cmake
+===================================================================
+--- a/cmake/MacroFindOptionalDep.cmake	(revision 0)
++++ b/cmake/MacroFindOptionalDep.cmake	(revision 0)
+@@ -0,0 +1,35 @@
++# if ON, requested optional deps become required
++# if OFF, requested optional deps are linked to if found
++
++# macro name changed from FIND_OPTIONAL_PACKAGE to FIND_OPTIONAL_DEP due to clash with a macro from KDE4
++
++OPTION(FORCE_DEPS "Enforce strict dependencies" OFF)
++
++macro(FIND_OPTIONAL_DEP _package _enabled _found _description)
++
++    if(${_enabled})
++        if(FORCE_DEPS)
++            find_package(${_package} REQUIRED)
++        else(FORCE_DEPS)
++            find_package(${_package})
++        endif(FORCE_DEPS)
++    endif(${_enabled})
++
++    REPORT_OPTIONAL_PACKAGE_STATUS(${_package} ${_enabled} ${_found} ${_description})
++
++endmacro(FIND_OPTIONAL_DEP)
++
++
++macro(REPORT_OPTIONAL_PACKAGE_STATUS _package _enabled _found _description)
++
++    if(${_enabled})
++        if(${_found})
++            MESSAGE("** ${_package} is found. Support for ${_description} is enabled")
++        else(${_found})
++            MESSAGE("** ${_package} not found. Support for ${_description} is disabled")
++        endif(${_found})
++    else(${_enabled})
++        MESSAGE("** ${_package} is disabled. No support for ${_description}")
++    endif(${_enabled})
++
++endmacro(REPORT_OPTIONAL_PACKAGE_STATUS)
+\ No newline at end of file
+Index: src/xsd/CMakeLists.txt
+===================================================================
+--- a/src/xsd/CMakeLists.txt	(revision 730316)
++++ b/src/xsd/CMakeLists.txt	(working copy)
+@@ -20,7 +20,8 @@
+ endif (LIBXML2_FOUND)
+ 
+ # java is required to compile the xsd parser
+-find_package(Java REQUIRED)
++OPTION(ENABLE_REGENERATEXSD "regenerate xsd parser from *.xsd files(not normally required)" ON)
++FIND_OPTIONAL_DEP(Java ENABLE_REGENERATEXSD JAVA_COMPILE "generating xsd parser from *.xsd files")
+ 
+ # loop over all xsd files, the next line does not work everywhere,
+ # so we dont use it currently
+@@ -57,4 +58,3 @@
+   target_link_libraries(${XSDNAME}test ${XSDNAME} xmlstream)
+ 
+ endforeach (XSDFILE ${XSDFILES})
+-
+Index: src/streamanalyzer/endplugins/CMakeLists.txt
+===================================================================
+--- a/src/streamanalyzer/endplugins/CMakeLists.txt	(revision 730316)
++++ b/src/streamanalyzer/endplugins/CMakeLists.txt	(working copy)
+@@ -22,9 +22,9 @@
+   install(TARGETS ${libname} LIBRARY DESTINATION ${LIB_DESTINATION}/strigi)
+ ENDMACRO(ADD_STRIGIEA)
+ 
+-if(EXIV2_FOUND)
++if(Exiv2_FOUND)
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fexceptions")
+   include_directories(${EXIV2_INCLUDE_DIR})
+   ADD_STRIGIEA(jpeg jpegendanalyzer.cpp)
+   target_link_libraries(jpeg ${EXIV2_LIBRARIES})
+-endif(EXIV2_FOUND)
++endif(Exiv2_FOUND)
+Index: src/CMakeLists.txt
+===================================================================
+--- a/src/CMakeLists.txt	(revision 730316)
++++ b/src/CMakeLists.txt	(working copy)
+@@ -32,7 +32,7 @@
+ 
+ if (NOT CLucene_FOUND)
+   message("** No CLucene libraries were found, so Strigi cannot use indexes.")
+-  message("** It is recommended to install CLucene >= 0.9.16.")
++  message("** It is recommended to install CLucene >= 0.9.16a.")
+   message("** You will still be able to use deepfind, deepgrep and xmlindexer.")
+ endif (NOT CLucene_FOUND)
+ 
+Index: CMakeLists.txt
+===================================================================
+--- a/CMakeLists.txt	(revision 730316)
++++ b/CMakeLists.txt	(working copy)
+@@ -16,6 +16,7 @@
+ # include general modules
+ include(UsePkgConfig)
+ include(MacroCheckGccVisibility)
++include(MacroFindOptionalDep)
+ 
+ # compile in debug mode
+ IF(NOT CMAKE_BUILD_TYPE)
+@@ -67,52 +68,48 @@
+     REMOVE_DEFINITIONS(-fPIC)
+ ENDIF(CMAKE_SYSTEM MATCHES "SunOS-5*.")
+ 
+-OPTION(ENABLE_INOTIFY
+-  "enable inotify support (unstable)"
+-  OFF)
++OPTION(ENABLE_INOTIFY "enable inotify support (unstable)" OFF)
++OPTION(ENABLE_DBUS "enable dbus support" ON)
++OPTION(ENABLE_NEWXESAM "enable new xesam support" OFF)
++OPTION(ENABLE_LOG4CXX "enable log4cxx support for advanced logging" OFF)
++OPTION(ENABLE_CPPUNIT "enable CppUnit for unit tests" ON)
++OPTION(ENABLE_QT4 "enable Qt4 GUI" ON)
++OPTION(ENABLE_EXIV2
++	"enable exiv2 support. This allows you to index EXIF/IPTC metadata." ON)
+ 
+-OPTION(ENABLE_DBUS
+-  "enable dbus support"
+-  ON)
++# backends
++OPTION(ENABLE_CLUCENE "enable CLucene support (recommended)" ON)
++OPTION(ENABLE_HYPERESTRAIER "enable Hyper Estraier support(unreliable)" OFF)
++OPTION(ENABLE_SQLITE "enable SQLite support(unreliable)" OFF)
+ 
+-OPTION(ENABLE_NEWXESAM
+-  "enable new xesam support"
+-  OFF)
++#OPTION(ENABLE_LIBXML2 "enable libxml2 support" ON)
++OPTION(ENABLE_EXPAT "enable expat support" OFF)
+ 
+-OPTION(ENABLE_SQLITE "enable sqlite support" OFF)
+ 
+-OPTION(ENABLE_LOG4CXX
+-  "enable log4cxx support for advanced logging"
+-  OFF)
+-
+ find_package(ZLIB REQUIRED)
+ find_package(BZip2 REQUIRED)
+ find_package(Threads REQUIRED)
+ find_package(Iconv REQUIRED)
+ 
+ # use either expat or libxml2
+-find_package(Expat)
++FIND_OPTIONAL_DEP(Expat ENABLE_EXPAT Expat_FOUND "XML via Expat")
++# libxml seems to be required regardless of what because it's used by streamanalyzer
++#FIND_OPTIONAL_DEP(LibXml2 ENABLE_LIBXML2 LIBXML2_FOUND "XML via LibXml2")
+ find_package(LibXml2 REQUIRED)
++
+ if (NOT LIBXML2_FOUND AND NOT Expat_FOUND)
+-  MESSAGE(FATAL "You need libxml2 or libexpat")
++  MESSAGE(FATAL_ERROR "You need libxml2 or libexpat")
+ endif (NOT LIBXML2_FOUND AND NOT Expat_FOUND)
+ 
+-find_package(CLucene)
+-if(NOT CLucene_FOUND)
+-  MESSAGE("Could not find CLucene. Please install CLucene = 0.9.16a (http://clucene.sf.net)")
+-endif(NOT CLucene_FOUND)
++FIND_OPTIONAL_DEP(CLucene ENABLE_CLUCENE CLucene_FOUND "CLucene backend")
++FIND_OPTIONAL_DEP(HyperEstraier ENABLE_HYPERESTRAIER HyperEstraier_FOUND "HyperEstraier backend")
++FIND_OPTIONAL_DEP(SQLite ENABLE_SQLITE SQLite_FOUND "SQLite backend")
+ 
+-find_package(HyperEstraier)
+-find_package(Exiv2)
+-if(ENABLE_SQLITE)
+-  find_package(SQLite)
+-endif(ENABLE_SQLITE)
++FIND_OPTIONAL_DEP(Exiv2 ENABLE_EXIV2 EXIV2_FOUND "indexing of EXIF/IPTC metadata")
++
+ #find_package(XAttr)
+ set(QT_MIN_VERSION "4.2.0")
+-find_package(Qt4)
+-if (NOT QT4_FOUND)
+-    MESSAGE("** Qt4 was not found. No GUI will be built.")
+-endif (NOT QT4_FOUND)
++FIND_OPTIONAL_DEP(Qt4 ENABLE_QT4 QT4_FOUND "QT4 GUI client")
+ 
+ check_include_files(strings.h     HAVE_STRINGS_H)                      # various
+ 
+@@ -129,35 +126,40 @@
+   ELSE(WIN32)
+     include(UsePkgConfig)
+     PKGCONFIG(dbus-1 DBUS_INCLUDE_DIR DBUS_LIBRARY_DIR DBUS_LDFLAGS DBUS_CFLAGS)
+-    if (NOT DBUS_INCLUDE_DIR)
+-      MESSAGE(FATAL_ERROR "Could not find DBus")
+-    endif (NOT DBUS_INCLUDE_DIR)
+     
+-    EXEC_PROGRAM(${PKGCONFIG_EXECUTABLE} ARGS --atleast-version=1.0 dbus-1 RETURN_VALUE _return_VALUE OUTPUT_VARIABLE _pkgconfigDevNull )
+-    if(_return_VALUE STREQUAL "0")
+-         message(STATUS "Found dbus-1 release >= 1.0")
+-    else(_return_VALUE STREQUAL "0")
+-         message(STATUS "Found dbus-1 release < 1.0 support for dbus client will be disable")
+-         set(ENABLE_DBUS "OFF")
+-    endif(_return_VALUE STREQUAL "0")
++    if (DBUS_INCLUDE_DIR)
++      EXEC_PROGRAM(${PKGCONFIG_EXECUTABLE} ARGS --atleast-version=1.0 dbus-1 RETURN_VALUE _return_VALUE OUTPUT_VARIABLE _pkgconfigDevNull )
++      if(_return_VALUE STREQUAL "0")
++        message(STATUS "Found dbus-1 release >= 1.0")
++        set(DBUS_FOUND "ON") 
++      else(_return_VALUE STREQUAL "0")
++         message(STATUS "Found dbus-1 release < 1.0. Release >=1.0 is needed")
++      endif(_return_VALUE STREQUAL "0")
++    endif (DBUS_INCLUDE_DIR)
+ 
++    REPORT_OPTIONAL_PACKAGE_STATUS(DBus-1 ENABLE_DBUS DBUS_FOUND "DBus interface in Strigi daemon")
++    if(NOT DBUS_FOUND)
++      set(ENABLE_DBUS "OFF")
++      if(FORCE_DEPS)
++        MESSAGE(FATAL_ERROR "Aborting")
++      endif(FORCE_DEPS)
++    endif(NOT DBUS_FOUND)
++
+   ENDIF(WIN32)
+ ENDIF(ENABLE_DBUS)
+ 
+-find_program (BISON
+-              bison
+-              DOC "Path to bison command, used for xesam userlanguage parser generation"
+-)
++# Don't delete bison section, but only micron seems to need this
++#find_program (BISON
++#              bison
++#              DOC "Path to bison command, used for xesam userlanguage parser generation")
+ 
+-if (BISON)
+-  MESSAGE (STATUS "Found bison: ${BISON}")
+-else (BISON)
+-  MESSAGE ("** GNU bison not found. This affects the xesam parser.")
+-endif (BISON)
++#if (BISON)
++#  MESSAGE (STATUS "Found bison: ${BISON}")
++#else (BISON)
++#  MESSAGE ("** GNU bison not found. This affects the xesam parser.")
++#endif (BISON)
+ 
+-if (ENABLE_LOG4CXX)
+-    find_package (Log4cxx)
+-endif (ENABLE_LOG4CXX)
++FIND_OPTIONAL_DEP(Log4cxx ENABLE_LOG4CXX LOG4CXX_FOUND "advanced logging")
+ 
+ #
+ # AC_CHECK_LIB(dl, dlopen, DL_LIBRARY="-ldl", DL_LIBRARY="") for cmake by
+@@ -189,13 +191,10 @@
+ 
+ SET (DIRS ${DIRS} src)
+ 
+-find_package(CppUnit)
+-if (NOT CppUnit_FOUND)
+-    MESSAGE("** CppUnit was not found. Strigi unit tests will not be built.")
+-else (NOT CppUnit_FOUND)
+-    MESSAGE(STATUS "CppUnit found. Strigi unit tests will be built.")
++FIND_OPTIONAL_DEP(CppUnit ENABLE_CPPUNIT CppUnit_FOUND "Strigi unit tests")
++if (CppUnit_FOUND)
+     SET (DIRS ${DIRS} tests)
+-endif (NOT CppUnit_FOUND)
++endif (CppUnit_FOUND)
+ 
+ ENABLE_TESTING()
+ SUBDIRS (${DIRS})
