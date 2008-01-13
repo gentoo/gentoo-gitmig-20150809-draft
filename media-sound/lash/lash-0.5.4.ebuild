@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4.ebuild,v 1.1 2007/12/16 16:07:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4.ebuild,v 1.2 2008/01/13 14:32:56 aballier Exp $
 
 inherit eutils libtool
 
@@ -13,12 +13,14 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa debug gtk python"
 
-DEPEND="alsa? ( media-libs/alsa-lib )
+RDEPEND="alsa? ( media-libs/alsa-lib )
 	media-sound/jack-audio-connection-kit
 	dev-libs/libxml2
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	python? ( dev-lang/python )
 	|| ( sys-libs/readline sys-libs/libedit )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
