@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/FileHandle-Rollback
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Rollback/ChangeLog,v 1.16 2007/12/17 17:59:48 drac Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Rollback/ChangeLog,v 1.17 2008/01/13 21:27:53 dertobi123 Exp $
+
+  13 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  FileHandle-Rollback-1.06.ebuild:
+  ppc. stable
 
   17 Dec 2007; Samuli Suominen <drac@gentoo.org>
   FileHandle-Rollback-1.06.ebuild:

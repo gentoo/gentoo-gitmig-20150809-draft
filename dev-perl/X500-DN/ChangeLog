@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/X500-DN
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.15 2007/12/17 18:41:54 drac Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.16 2008/01/13 22:00:48 dertobi123 Exp $
+
+  13 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org> X500-DN-0.29.ebuild:
+  ppc. stable
 
   17 Dec 2007; Samuli Suominen <drac@gentoo.org> X500-DN-0.29.ebuild:
   amd64 stable

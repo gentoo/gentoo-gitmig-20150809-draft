@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Spreadsheet-WriteExcel
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/ChangeLog,v 1.38 2007/12/17 19:06:28 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/ChangeLog,v 1.39 2008/01/13 21:46:20 dertobi123 Exp $
+
+  13 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  Spreadsheet-WriteExcel-2.20.ebuild:
+  ppc. stable
 
   17 Dec 2007; Samuli Suominen <drac@gentoo.org>
   Spreadsheet-WriteExcel-2.20.ebuild:

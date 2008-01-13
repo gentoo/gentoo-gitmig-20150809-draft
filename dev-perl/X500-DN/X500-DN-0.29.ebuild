@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/X500-DN-0.29.ebuild,v 1.4 2007/12/17 18:41:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/X500-DN-0.29.ebuild,v 1.5 2008/01/13 22:00:48 dertobi123 Exp $
 
 inherit perl-module
 DESCRIPTION="handle X.500 DNs (Distinguished Names), parse and format them"
@@ -9,7 +9,7 @@ HOMEPAGE="http://search.cpan.org/~rjoop/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha amd64 arm ia64 ~ppc s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ppc s390 sh sparc x86"
 IUSE=""
 
 SRC_TEST="do"

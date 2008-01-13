@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-3.1.ebuild,v 1.3 2007/12/17 18:19:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-3.1.ebuild,v 1.4 2008/01/13 21:36:38 dertobi123 Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/R/RJ/RJRAY/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE="test"
 SRC_TEST="do"
 mydoc="ToDo"
