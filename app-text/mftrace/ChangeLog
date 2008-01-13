@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mftrace
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.41 2007/11/13 18:24:48 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.42 2008/01/13 13:30:20 aballier Exp $
+
+*mftrace-1.2.13 (13 Jan 2008)
+
+  13 Jan 2008; Alexis Ballier <aballier@gentoo.org> +mftrace-1.2.13.ebuild:
+  version bump, bug #200168, switch to latex-base
 
   13 Nov 2007; Raúl Porcel <armin76@gentoo.org> mftrace-1.2.9.ebuild:
   ia64 stable
