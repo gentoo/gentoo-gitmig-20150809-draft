@@ -1,0 +1,21 @@
+# ChangeLog for sci-mathematics/gmm
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmm/ChangeLog,v 1.1 2008/01/13 20:13:10 philantrop Exp $
+
+*gmm-3.0 (13 Jan 2008)
+
+  13 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +gmm-3.0.ebuild:
+  Initial import to the tree as per bug 205646.
+
+  29 Dec 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com> Manifest:
+  Manifest, upstream switched the tarball.
+
+  06 Dec 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com> gmm-3.0.ebuild:
+  Fix HOMEPAGE.
+
+  06 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it> +metadata.xml,
+  +gmm-3.0.ebuild:
+  Added gmm-3.0 ebuild. Many thanks to Erlend Davidson and Wojciech Myrda -
+  See bug #164560.
+
