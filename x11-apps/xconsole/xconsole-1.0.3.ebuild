@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xconsole/xconsole-1.0.3.ebuild,v 1.2 2007/12/19 23:59:21 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xconsole/xconsole-1.0.3.ebuild,v 1.3 2008/01/13 09:28:26 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="monitor system console messages with X"
-KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 arm ~mips ~ppc ~ppc64 s390 sh ~sparc x86"
 IUSE="xprint"
 RDEPEND="x11-libs/libXaw"
 DEPEND="${RDEPEND}"
