@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.33 2008/01/13 20:34:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.34 2008/01/13 20:44:37 kumba Exp $
+
+  13 Jan 2008; Joshua Kinard <kumba@gentoo.org> audit-1.6.2.ebuild:
+  Marked unstable on mips.
 
   13 Jan 2008; Joshua Kinard <kumba@gentoo.org> audit-1.5.4.ebuild:
   Stable on mips.
