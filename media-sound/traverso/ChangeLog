@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/traverso
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.15 2008/01/02 10:44:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.16 2008/01/13 13:10:48 aballier Exp $
+
+  13 Jan 2008; Alexis Ballier <aballier@gentoo.org> traverso-0.42.0.ebuild,
+  traverso-9999.ebuild:
+  add missing pkgconfig dep, bug #205590
 
 *traverso-9999 (02 Jan 2008)
 

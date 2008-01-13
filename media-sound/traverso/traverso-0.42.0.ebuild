@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.42.0.ebuild,v 1.1 2007/12/12 07:55:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.42.0.ebuild,v 1.2 2008/01/13 13:10:48 aballier Exp $
 
 inherit eutils qt4 cmake-utils
 
@@ -26,6 +26,8 @@ RDEPEND="$(qt4_min_version 4.3.1)
 	lv2? ( media-libs/slv2 )
 	mad? ( media-libs/libmad )
 	lame? ( media-sound/lame )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	if use opengl && ! built_with_use =x11-libs/qt-4* opengl; then
