@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.93 2007/12/27 21:27:27 calchan Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.94 2008/01/13 15:08:18 calchan Exp $
+
+*hplip-2.7.12-r1 (13 Jan 2008)
+
+  13 Jan 2008; Denis Dupeyron <calchan@gentoo.org> +hplip-2.7.12-r1.ebuild:
+  Use python.eclass, thanks to Mart Raudsepp (bug #203669).
 
   27 Dec 2007; Denis Dupeyron <calchan@gentoo.org>
   -files/hplip-1.7.4a-subprocess_replacement.patch,

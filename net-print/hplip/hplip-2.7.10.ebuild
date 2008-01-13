@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.10.ebuild,v 1.6 2007/12/30 18:39:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.10.ebuild,v 1.7 2008/01/13 15:08:18 calchan Exp $
 
 inherit eutils linux-info
 
