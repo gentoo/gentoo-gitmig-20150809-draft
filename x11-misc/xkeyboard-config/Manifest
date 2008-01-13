@@ -20,10 +20,10 @@ EBUILD xkeyboard-config-0.9.ebuild 1641 RMD160 1fb215254b85863d5dc2fc72f6fca9016
 MD5 4a3e674523837453422607aa9707cd45 xkeyboard-config-0.9.ebuild 1641
 RMD160 1fb215254b85863d5dc2fc72f6fca9016477d60c xkeyboard-config-0.9.ebuild 1641
 SHA256 51a7c4d54d3036f2c72d2ea361277cd31da343d434da89692862140cf78e6b5a xkeyboard-config-0.9.ebuild 1641
-EBUILD xkeyboard-config-1.1.ebuild 1543 RMD160 261ca3d016b205132e82bffb3fae51bf6aaae1e0 SHA1 d0f1f01666985f60189559a8b399747b10b5aa60 SHA256 3f9bf6f73902c14596cdc64245da8cce0416d0fa222363d02188a0a6e71e0060
-MD5 24b118134c08fedee97cdec29eb9bf02 xkeyboard-config-1.1.ebuild 1543
-RMD160 261ca3d016b205132e82bffb3fae51bf6aaae1e0 xkeyboard-config-1.1.ebuild 1543
-SHA256 3f9bf6f73902c14596cdc64245da8cce0416d0fa222363d02188a0a6e71e0060 xkeyboard-config-1.1.ebuild 1543
+EBUILD xkeyboard-config-1.1.ebuild 1542 RMD160 c8265b4963acd11d326b491853b8140d9174674c SHA1 e4ce5b06f8de96025f871f160675cfd63462badf SHA256 19b85684d426a597ed2fea5cedb5d9f2fcb03140985d3d9a7d270d1fc6eca6d2
+MD5 bc8c923527f693597f199c6c38344d62 xkeyboard-config-1.1.ebuild 1542
+RMD160 c8265b4963acd11d326b491853b8140d9174674c xkeyboard-config-1.1.ebuild 1542
+SHA256 19b85684d426a597ed2fea5cedb5d9f2fcb03140985d3d9a7d270d1fc6eca6d2 xkeyboard-config-1.1.ebuild 1542
 MISC ChangeLog 6567 RMD160 aa97a3462ab3a0837aabe7467bf9ffc085b02737 SHA1 f1b22fafa55c808dbad70669730391be0da1c145 SHA256 4440594010bd6b24c6f0eaa3e1464df35e772d7f4326644e41fe6c4cb0307d16
 MD5 9196bfd6517976af121a9d9f21782d17 ChangeLog 6567
 RMD160 aa97a3462ab3a0837aabe7467bf9ffc085b02737 ChangeLog 6567
@@ -45,9 +45,9 @@ MD5 00c4d38fd2a00cae0de2998333070d67 files/digest-xkeyboard-config-1.1 265
 RMD160 bd622ba6b72effc032be085aeb98be4edcf42f7f files/digest-xkeyboard-config-1.1 265
 SHA256 96afba7c1d443379bab5a49cc482adb73505f512aa8d8ee8578aa68e3dca0de9 files/digest-xkeyboard-config-1.1 265
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.8 (GNU/Linux)
 
-iD8DBQFHabeAUPEOwClectkRAujJAJ9FmogCl7aUvXAmOtwH0qrVPlbGZgCeIS5L
-ArmsojkvsE8D9xnv1bE1sE0=
-=XyNB
+iEYEARECAAYFAkeJ1lgACgkQj9hvisErhMKhrQCeNQ9+eF1sCXwq4LUf402WxtMi
+ueQAoJLmXa+YuxWugMEKvRW1yYF9P9DN
+=l3+P
 -----END PGP SIGNATURE-----
