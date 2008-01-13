@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.1 2007/07/29 16:48:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.2 2008/01/13 15:50:11 aballier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,9 +16,11 @@ IUSE=""
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/fltk
+	x11-libs/libXpm
 	media-libs/jpeg
 	media-libs/libpng"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${A}
