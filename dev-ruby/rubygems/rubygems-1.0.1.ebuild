@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.0.1.ebuild,v 1.2 2007/12/21 09:41:33 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.0.1.ebuild,v 1.3 2008/01/13 07:12:34 redhatter Exp $
 
 inherit ruby
 
@@ -15,7 +15,7 @@ RESTRICT="test"
 # change the filename on the end, it still downloads the same file.
 SRC_URI="http://rubyforge.org/frs/download.php/29548/${P}.tgz"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE="doc server examples"
 DEPEND=">=dev-lang/ruby-1.8"
