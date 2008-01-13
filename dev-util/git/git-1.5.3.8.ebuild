@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.3.8.ebuild,v 1.1 2008/01/10 11:51:48 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.3.8.ebuild,v 1.2 2008/01/13 22:02:28 ferdy Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -79,6 +79,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-1.5.3-symlinks.patch
 	epatch "${FILESDIR}"/${P}-t9106.patch
+	epatch "${FILESDIR}"/${P}-t9101.patch
 
 	sed -i \
 		-e "s:^\(CFLAGS = \).*$:\1${CFLAGS} -Wall:" \
