@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdjconsole
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdjconsole/ChangeLog,v 1.2 2007/07/02 15:54:34 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdjconsole/ChangeLog,v 1.3 2008/01/13 18:22:29 aballier Exp $
+
+  13 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  libdjconsole-0.1.2.ebuild:
+  add missing pkgconfig dep, bug #205674
 
   02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Hand to newly-born proaudio herd.
