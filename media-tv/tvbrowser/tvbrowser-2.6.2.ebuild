@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.6.2.ebuild,v 1.1 2008/01/13 18:23:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.6.2.ebuild,v 1.2 2008/01/13 19:48:07 hd_brummy Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -92,7 +92,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/tvbrowser-2.5-makefiles.patch
 
 	# fix bug #170363
-	epatch "${FILESDIR}/tvbrowser-2.6_Localizer.patch"
+	epatch "${FILESDIR}/tvbrowser-2.6._Localizer.patch"
 
 	local J_ARCH
 	case "${ARCH}" in

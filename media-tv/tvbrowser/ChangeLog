@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/tvbrowser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.24 2008/01/13 18:23:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.25 2008/01/13 19:48:07 hd_brummy Exp $
+
+  13 Jan 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
+  tvbrowser-2.6.2.ebuild:
+  typo fixed
 
 *tvbrowser-2.6.2 (13 Jan 2008)
 
