@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20070726.ebuild,v 1.2 2007/08/14 13:49:04 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20070726.ebuild,v 1.3 2008/01/13 18:28:47 aballier Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -47,6 +47,7 @@ RDEPEND="media-libs/libpng
 	x11-libs/libXft"
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	x86? ( dev-lang/nasm )"
 
 S="${WORKDIR}/${PN}"

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cinelerra-cvs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.35 2007/12/25 17:21:38 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.36 2008/01/13 18:28:47 aballier Exp $
+
+  13 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  cinelerra-cvs-20070726.ebuild:
+  add missing pkgconfig dep, bug #205580
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing zypher from metadata.xml as per #26909.
