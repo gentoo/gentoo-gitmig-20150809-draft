@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/xephem
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.16 2007/06/16 02:09:04 lavajoe Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.17 2008/01/14 18:44:49 angelos Exp $
+
+  14 Jan 2008; Christoph Mende <angelos@gentoo.org> xephem-3.7.2.ebuild:
+  Stable on amd64 wrt bug #186472
 
   16 Jun 2007; Joe Peterson <lavajoe@gentoo.org> xephem-3.7.2.ebuild:
   Add ~x86-fbsd keyword
