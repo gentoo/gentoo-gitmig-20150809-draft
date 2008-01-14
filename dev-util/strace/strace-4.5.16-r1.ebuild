@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.16-r1.ebuild,v 1.4 2007/12/26 16:12:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.16-r1.ebuild,v 1.5 2008/01/14 17:36:23 vapier Exp $
 
 inherit flag-o-matic autotools
 
@@ -27,6 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-mips-syscallent.patch
 	epatch "${FILESDIR}"/${P}-sh-updates.patch
 	epatch "${FILESDIR}"/${P}-sparc-updates.patch #162789
+	epatch "${FILESDIR}"/${P}-getdents-infinite-loop.patch
 
 	eautoreconf
 }

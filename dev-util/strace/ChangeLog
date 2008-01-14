@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/strace
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.111 2007/12/26 16:12:56 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.112 2008/01/14 17:36:23 vapier Exp $
+
+  14 Jan 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/strace-4.5.16-getdents-infinite-loop.patch,
+  strace-4.5.16-r1.ebuild:
+  Break out of infinite loop from corrupt getdents structs.
 
   26 Dec 2007; Raúl Porcel <armin76@gentoo.org> strace-4.5.16-r1.ebuild:
   sparc stable wrt #197398
