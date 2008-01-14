@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.10.ebuild,v 1.6 2007/09/09 16:52:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.10.ebuild,v 1.7 2008/01/14 20:19:20 armin76 Exp $
 
 inherit qt3 eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 x86"
 IUSE="ssl"
 
 DEPEND="$(qt_min_version 3)
+	dev-util/pkgconfig
 	>=dev-libs/libxml2-2.4.22
 	~net-p2p/dclib-${PV}
 	ssl? ( dev-libs/openssl )"
