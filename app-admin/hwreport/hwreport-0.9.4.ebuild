@@ -1,28 +1,30 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/hwreport-0.9.4.ebuild,v 1.2 2008/01/14 00:31:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/hwreport-0.9.4.ebuild,v 1.3 2008/01/14 15:37:07 drac Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Collect system informations for the hardware4linux.info site"
-HOMEPAGE="http://hardware4linux.info/"
+HOMEPAGE="http://hardware4linux.info"
 SRC_URI="http://hardware4linux.info/res/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
 RDEPEND=">=sys-apps/dmidecode-2.8 >=sys-apps/pciutils-2.2.0"
 
 src_compile() {
-	cc -o scan-printers scan-printers.c
+	$(tc-getCC) -o scan-printers scan-printers.c
 }
 
 src_install() {
-	dobin hwreport
-	dobin scan-printers
-	einfo "You can now generate your reports and post them on $HOMEPAGE"
+	dobin hwreport scan-printers
+	dodoc README
 }
+
 pkg_postinst() {
 	elog "You can now generate your reports and post them on $HOMEPAGE"
 }
