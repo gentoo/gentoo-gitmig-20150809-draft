@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/tome
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/ChangeLog,v 1.28 2007/07/23 05:27:54 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/ChangeLog,v 1.29 2008/01/14 20:35:11 grobian Exp $
+
+  14 Jan 2008; Fabian Groffen <grobian@gentoo.org> tome-2.3.1.ebuild,
+  tome-2.3.4.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   23 Jul 2007; Mike Frysinger <vapier@gentoo.org> tome-2.3.4.ebuild:
   Punt bindnow-flags usage.

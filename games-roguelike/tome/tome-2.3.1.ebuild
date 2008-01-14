@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.1.ebuild,v 1.6 2007/03/12 17:19:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.1.ebuild,v 1.7 2008/01/14 20:35:11 grobian Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://t-o-m-e.net/dl/src/tome-${MY_PV}-src.tar.bz2"
 
 LICENSE="Moria"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc-macos x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5
