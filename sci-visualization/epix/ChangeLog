@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.22 2008/01/14 11:40:02 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.23 2008/01/14 12:53:56 opfer Exp $
+
+  14 Jan 2008; Christian Faulhammer <opfer@gentoo.org> epix-1.2.1.ebuild:
+  stable x86, bug 205779
 
 *epix-1.2.2 (14 Jan 2008)
 
