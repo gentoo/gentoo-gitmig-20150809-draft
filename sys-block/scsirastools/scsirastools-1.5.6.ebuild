@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/scsirastools/scsirastools-1.5.4.ebuild,v 1.3 2008/01/14 01:56:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/scsirastools/scsirastools-1.5.6.ebuild,v 1.1 2008/01/14 01:56:04 robbat2 Exp $
 
 inherit autotools
 
@@ -19,7 +19,8 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 	# this builds a really old mdadm
-	sed -i.orig \
+	sed -i \
+		-e '/RPMB/d' \
 		-e '/^SUBDIRS/s,mdadm.d,,' \
 		-e '/^SUBDIRS/s,files,,' \
 		"${S}"/Makefile.am || die "sed Makefile.am failed"
