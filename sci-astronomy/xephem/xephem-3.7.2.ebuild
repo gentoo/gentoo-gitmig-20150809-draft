@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.2.ebuild,v 1.6 2008/01/14 19:25:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.2.ebuild,v 1.7 2008/01/14 19:32:19 opfer Exp $
 
 inherit eutils
 
@@ -67,7 +67,7 @@ src_install() {
 		doins ${i}/*
 	done
 
-	echo > ${S}/XEphem "XEphem.ShareDir: /usr/share/${PN}"
+	echo > "${S}/XEphem" "XEphem.ShareDir: /usr/share/${PN}"
 	insinto /usr/share/X11/app-defaults
 	has_version '<x11-base/xorg-x11-7.0' && \
 		insinto /etc/X11/app-defaults
