@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/ivtv
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.98 2007/12/19 15:23:07 cardoe Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.99 2008/01/14 22:04:09 cardoe Exp $
+
+*ivtv-1.0.3-r2 (14 Jan 2008)
+
+  14 Jan 2008; Doug Klima <cardoe@gentoo.org> +ivtv-1.0.3-r2.ebuild:
+  add perl scripts under USE=perl so it pulls in the perl depends
 
   19 Dec 2007; Doug Klima <cardoe@gentoo.org> ivtv-0.10.6.ebuild,
   ivtv-1.0.3-r1.ebuild:
