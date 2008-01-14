@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.12-r1.ebuild,v 1.1 2008/01/13 15:08:18 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.12-r1.ebuild,v 1.2 2008/01/14 07:49:41 calchan Exp $
 
 inherit eutils linux-info python
 
@@ -52,11 +52,6 @@ pkg_setup() {
 		ewarn "Installing hpijs driver only, make sure you know what you are doing."
 	else
 		use parport && linux-info_pkg_setup
-	fi
-
-	# avoid collisions with cups-1.2 compat symlinks
-	if [ -e "${ROOT}"/usr/lib/cups/backend/hp ] && [ -e "${ROOT}"/usr/libexec/cups/backend/hp ]; then
-		rm -f "${ROOT}"/usr/libexec/cups/backend/hp{,fax};
 	fi
 }
 
@@ -110,6 +105,11 @@ src_install() {
 }
 
 pkg_preinst() {
+	# avoid collisions with cups-1.2 compat symlinks
+	if [ -e "${ROOT}"/usr/lib/cups/backend/hp ] && [ -e "${ROOT}"/usr/libexec/cups/backend/hp ]; then
+		rm -f "${ROOT}"/usr/libexec/cups/backend/hp{,fax};
+	fi
+
 	# try to be very conservative as to when we screw around with config files
 	use minimal && return 0
 	use scanner || return 0

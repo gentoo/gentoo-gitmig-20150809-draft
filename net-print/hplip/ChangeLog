@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.94 2008/01/13 15:08:18 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.95 2008/01/14 07:49:41 calchan Exp $
+
+  14 Jan 2008; Denis Dupeyron <calchan@gentoo.org> hplip-2.7.10.ebuild,
+  hplip-2.7.12.ebuild, hplip-2.7.12-r1.ebuild:
+  Moved the part about avoiding collisions with cups-1.2 symlinks from
+  pkg_setup() to pkg_preinst() so that a compilation failure doesn't result in
+  changes to the filesystem. Thanks to Donnie Berkholz.
 
 *hplip-2.7.12-r1 (13 Jan 2008)
 
