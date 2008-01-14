@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/msmtp
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.68 2007/01/19 19:14:14 eroyf Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.69 2008/01/14 20:59:21 grobian Exp $
+
+  14 Jan 2008; Fabian Groffen <grobian@gentoo.org> msmtp-1.4.5.ebuild,
+  msmtp-1.4.7.ebuild, msmtp-1.4.9.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   19 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org> msmtp-1.4.7.ebuild:
   Stable on IA64; bug #151003
