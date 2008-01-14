@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.0.0.ebuild,v 1.4 2007/09/20 23:13:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.0.0.ebuild,v 1.5 2008/01/14 19:40:18 voyageur Exp $
 
 inherit autotools eutils multilib
 
@@ -38,7 +38,8 @@ RDEPEND="x11-libs/libXau
 
 DEPEND="${RDEPEND}
 		x11-misc/gccmakedep
-		x11-misc/imake"
+		x11-misc/imake
+		x11-proto/inputproto"
 
 S=${WORKDIR}/${PN}-X11
 

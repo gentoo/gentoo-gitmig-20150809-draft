@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nx
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.13 2007/12/14 14:25:53 voyageur Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.14 2008/01/14 19:40:18 voyageur Exp $
+
+  14 Jan 2008; Bernard Cafarelli <voyageur@gentoo.org> nx-3.0.0.ebuild,
+  nx-3.0.0-r1.ebuild, nx-3.1.0.ebuild:
+  Add missing inputproto DEPEND, bug #205427
 
 *nx-3.1.0 (14 Dec 2007)
 
