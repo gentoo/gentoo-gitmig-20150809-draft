@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/xye
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/ChangeLog,v 1.4 2006/11/18 23:34:26 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/ChangeLog,v 1.5 2008/01/14 21:47:37 mr_bones_ Exp $
+
+*xye-0.8.0 (14 Jan 2008)
+
+  14 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org> +xye-0.8.0.ebuild:
+  version bump
 
 *xye-0.7.6.2 (18 Nov 2006)
 
