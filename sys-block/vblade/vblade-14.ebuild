@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/vblade-14.ebuild,v 1.5 2007/04/22 13:52:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/vblade-14.ebuild,v 1.6 2008/01/14 02:14:49 robbat2 Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# messy tarball
 	make clean  || die "Failed to clean up source"
 	sed -i 's,^CFLAGS.*,CFLAGS += -Wall,' makefile || die "Failed to clean up makefile"
@@ -32,9 +32,9 @@ src_install() {
 	doman vblade.8
 	dodoc HACKING NEWS README
 	dosbin vblade
-	dosbin ${FILESDIR}/vbladed
-	newconfd ${FILESDIR}/conf.d-vblade vblade
-	newinitd ${FILESDIR}/init.d-vblade.vblade0-14 vblade.vblade0
+	dosbin "${FILESDIR}"/vbladed
+	newconfd "${FILESDIR}"/conf.d-vblade vblade
+	newinitd "${FILESDIR}"/init.d-vblade.vblade0-14 vblade.vblade0
 }
 
 pkg_postinst() {
