@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/endpoint/endpoint-0.1.0.ebuild,v 1.4 2007/12/29 06:40:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/endpoint/endpoint-0.1.0.ebuild,v 1.5 2008/01/14 02:30:27 robbat2 Exp $
 
 inherit eutils
 
@@ -12,6 +12,7 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 DEPEND="virtual/libc
+		dev-util/pkgconfig
 		>=sys-libs/libraw1394-0.9
 		>=dev-libs/glib-2"
 

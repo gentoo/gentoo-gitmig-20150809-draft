@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
-	<maintainer>
-		<email>robbat2@gentoo.org</email>
-	</maintainer>
+	<herd>base-system</herd>
 	<longdescription lang="en">
 		Endpoint turns a Linux machine with one or more firewire cards into an SBP-2
 		device. The advantage is that you can use any file or device the linux
