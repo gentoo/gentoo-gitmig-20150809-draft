@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ladcca-0.4.0-r1.ebuild,v 1.2 2007/02/03 23:17:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ladcca-0.4.0-r1.ebuild,v 1.3 2008/01/14 19:39:12 aballier Exp $
 
 inherit eutils
 
@@ -19,8 +19,9 @@ DEPEND="media-libs/alsa-lib
 	>=x11-libs/gtk+-2.0"
 
 src_unpack() {
-	unpack ${P}.tar.gz || die
-	epatch ${FILESDIR}/${P}-*.patch
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-deprecated_jackAPI.patch"
 }
 
 src_compile() {
@@ -29,14 +30,14 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	# Add to /etc/services
 	if ! grep -q ^ladcca /etc/services; then
 		dodir /etc
 		insinto /etc
 		doins /etc/services
-		echo -e "\nladcca\t\t14541/tcp\t\t\t# LADCCA client/server protocol" >> ${D}/etc/services
+		echo -e "\nladcca\t\t14541/tcp\t\t\t# LADCCA client/server protocol" >>	"${D}/etc/services"
 	fi
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
