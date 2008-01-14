@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ladcca
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ChangeLog,v 1.24 2007/05/30 15:43:24 cardoe Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ChangeLog,v 1.25 2008/01/14 19:35:31 aballier Exp $
+
+  14 Jan 2008; Alexis Ballier <aballier@gentoo.org> -ladcca-0.3.2.ebuild,
+  -ladcca-0.4.0.ebuild:
+  remove old
 
   30 May 2007; Doug Goldstein <cardoe@gentoo.org>
   +files/ladcca-0.4.0-deprecated_jackAPI.patch,
