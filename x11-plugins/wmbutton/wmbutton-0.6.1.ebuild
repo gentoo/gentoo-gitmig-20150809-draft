@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.6.1.ebuild,v 1.3 2008/01/13 15:17:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.6.1.ebuild,v 1.4 2008/01/14 13:23:56 opfer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,8 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXext"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
-	x11-proto/xproto"
+	x11-proto/xproto
+	dev-util/ctags"
 
 src_unpack() {
 	unpack ${P}.tar.gz
