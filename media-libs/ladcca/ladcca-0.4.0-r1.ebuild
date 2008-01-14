@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ladcca-0.4.0-r1.ebuild,v 1.3 2008/01/14 19:39:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ladcca-0.4.0-r1.ebuild,v 1.4 2008/01/14 19:41:35 aballier Exp $
 
 inherit eutils
 
@@ -14,9 +14,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 
-DEPEND="media-libs/alsa-lib
+RDEPEND="media-libs/alsa-lib
 	media-sound/jack-audio-connection-kit
 	>=x11-libs/gtk+-2.0"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
