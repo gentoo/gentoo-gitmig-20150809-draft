@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-pango/sdl-pango-0.1.2.ebuild,v 1.4 2007/08/08 19:17:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-pango/sdl-pango-0.1.2.ebuild,v 1.5 2008/01/14 09:19:14 mr_bones_ Exp $
 
 inherit eutils
 
@@ -14,8 +14,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE=""
 
-DEPEND="x11-libs/pango
+RDEPEND="x11-libs/pango
 	media-libs/libsdl"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/SDL_Pango-${PV}
 
