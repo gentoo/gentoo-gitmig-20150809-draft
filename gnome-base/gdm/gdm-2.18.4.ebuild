@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.4.ebuild,v 1.11 2007/10/18 23:10:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.4.ebuild,v 1.12 2008/01/14 07:44:04 compnerd Exp $
 
 inherit eutils pam gnome2
 
@@ -150,7 +150,7 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	elog "To make GDM start at boot, edit /etc/rc.conf"
+	elog "To make GDM start at boot, edit /etc/conf.d/xdm"
 	elog "and then execute 'rc-update add xdm default'."
 	elog
 	elog "GDM has changed the location of its configuration file.  Please"
