@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/freqtweak-0.7.0_pre20070214.ebuild,v 1.7 2007/06/20 20:43:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/freqtweak-0.7.0_pre20070214.ebuild,v 1.8 2008/01/14 17:14:37 chainsaw Exp $
 
 inherit eutils autotools wxwidgets flag-o-matic
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="=x11-libs/wxGTK-2.6*
+DEPEND="dev-util/pkgconfig
+	=x11-libs/wxGTK-2.6*
 	>=sci-libs/fftw-3.0
 	=dev-libs/libsigc++-1.2*
 	dev-libs/libxml2
@@ -36,7 +37,7 @@ src_compile() {
 	append-flags -fno-strict-aliasing
 
 	econf \
-		--with-wxconfig-path=${WX_CONFIG} || die "econf failed"
+		--with-wxconfig-path="${WX_CONFIG}" || die "econf failed"
 	emake || die "emake failed"
 }
 
