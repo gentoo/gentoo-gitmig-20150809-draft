@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r2.ebuild,v 1.10 2008/01/11 20:43:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r2.ebuild,v 1.11 2008/01/14 19:07:25 aballier Exp $
 
 inherit eutils kde-functions autotools multilib
 
@@ -23,7 +23,8 @@ RDEPEND="dev-libs/libxml2
 	ladspa? ( media-libs/liblrdf )"
 
 DEPEND="${RDEPEND}
-	doc? ( app-text/docbook-sgml-utils )"
+	doc? ( app-text/docbook-sgml-utils )
+	dev-util/pkgconfig"
 
 need-qt 3
 
