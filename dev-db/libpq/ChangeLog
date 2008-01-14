@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.132 2008/01/14 01:14:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.133 2008/01/14 02:10:47 mjolnir Exp $
+
+*libpq-8.1.11 (14 Jan 2008)
+
+  14 Jan 2008; Martin Jackson <mjolnir@gentoo.org>
+  +files/libpq-8.1.11-gentoo.patch, libpq-7.4.17.ebuild,
+  +libpq-8.1.11.ebuild:
+  Fix repoman warnings in 7.4.17 and 7.4.19 and fix 8.1.11 commit
 
   14 Jan 2008; Brent Baude <ranger@gentoo.org> libpq-7.3.21.ebuild:
   Marking libpq-7.3.21 ppc64 for bug 204760

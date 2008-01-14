@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-7.4.17.ebuild,v 1.9 2007/06/24 21:20:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-7.4.17.ebuild,v 1.10 2008/01/14 02:10:47 mjolnir Exp $
 
 inherit eutils gnuconfig flag-o-matic toolchain-funcs
 
@@ -33,8 +33,8 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_preinst() {
 	# removing wrong symlink which is created by previous ebuild.
-	if [ -L ${ROOT}/usr/include/libpq ]; then
-		rm ${ROOT}/usr/include/libpq
+	if [ -L "${ROOT}/usr/include/libpq" ]; then
+		rm "${ROOT}/usr/include/libpq"
 	fi
 }
 
@@ -72,34 +72,34 @@ src_compile() {
 		--enable-depend \
 		$myconf || die
 
-	cd ${S}/src/interfaces/libpq
+	cd "${S}/src/interfaces/libpq"
 	emake LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
 }
 
 src_install() {
-	cd ${S}/src/interfaces/libpq
-	make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install || die
+	cd "${S}/src/interfaces/libpq"
+	make DESTDIR="${D}" LIBDIR="${D}/usr/$(get_libdir)" install || die
 
-	cd ${S}/src/include
-	make DESTDIR=${D} install || die
+	cd "${S}/src/include"
+	make DESTDIR="${D}" install || die
 
-	cd ${S}
+	cd "${S}"
 	dodoc README HISTORY COPYRIGHT INSTALL
 
 	dosym libpq-${SLOT}.a /usr/$(get_libdir)/libpq.a
 
-	for f in ${D}/usr/include/postgresql/libpq-${SLOT}/*.h
+	for f in "${D}/usr/include/postgresql/libpq-${SLOT}/*.h"
 	do
 		dosym postgresql/libpq-${SLOT}/$(basename $f) /usr/include/
 	done
 
 	dodir /usr/include/libpq
-	for f in ${D}/usr/include/postgresql/libpq-${SLOT}/libpq/*.h
+	for f in "${D}/usr/include/postgresql/libpq-${SLOT}/libpq/*.h"
 	do
 		dosym ../postgresql/libpq-${SLOT}/libpq/$(basename $f) /usr/include/libpq/
 	done
 
-	cd ${D}/usr/include/postgresql/libpq-${SLOT}
+	cd "${D}/usr/include/postgresql/libpq-${SLOT}"
 	for f in $(find * -name '*.h' -print) ; do
 		destdir=$(dirname $f)
 		if [ ! -d "${D}/usr/include/postgresql/${destdir}" ]; then
