@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.5-r1.ebuild,v 1.1 2008/01/02 20:35:13 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.5-r1.ebuild,v 1.2 2008/01/14 20:10:02 kolmodin Exp $
 
 CABAL_FEATURES="bin lib profile haddock"
 CABAL_MIN_VERSION=1.2
@@ -19,6 +19,9 @@ DEPEND="dev-haskell/mtl
 	>=dev-haskell/x11-1.4
 	>=dev-lang/ghc-6.6"
 RDEPEND="${DEPEND}"
+
+SAMPLE_CONFIG="xmonad.hs"
+SAMPLE_CONFIG_LOC="man"
 
 src_unpack() {
 	unpack ${A}
@@ -40,5 +43,24 @@ src_install() {
 
 	doman man/xmonad.1
 
-	dodoc CONFIG README man/xmonad.hs
+	dodoc CONFIG README "${SAMPLE_CONFIG_LOC}/${SAMPLE_CONFIG}"
 }
+
+pkg_postinst() {
+	ghc-package_pkg_postinst
+
+	elog "A sample ${SAMPLE_CONFIG} configuration file can be found here:"
+	elog "    /usr/share/doc/${PF}/${SAMPLE_CONFIG}"
+	elog "The parameters in this file are the defaults used by xmonad."
+	elog "To customize xmonad, copy this file to:"
+	elog "    ~/.xmonad/${SAMPLE_CONFIG}"
+	elog "After editing, use 'mod-q' to dynamically restart xmonad "
+	elog "(where the 'mod' key defaults to 'Alt')."
+	elog ""
+	elog "Read the README or man page for more information, and to see "
+	elog "other possible configurations go to:"
+	elog "    http://haskell.org/haskellwiki/Xmonad/Config_archive"
+	elog "Please note that many of these configurations will require the "
+	elog "x11-wm/xmonad-contrib package to be installed."
+}
+
