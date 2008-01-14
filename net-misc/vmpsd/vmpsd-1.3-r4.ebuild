@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vmpsd/vmpsd-1.3-r4.ebuild,v 1.1 2008/01/14 02:57:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vmpsd/vmpsd-1.3-r4.ebuild,v 1.2 2008/01/14 02:59:46 robbat2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,7 +34,6 @@ src_compile() {
 }
 
 src_install() {
-	cd "${S}"
 	emake DESTDIR="${D}" install || die
 	dodoc README INSTALL AUTHORS doc/*txt
 	newdoc external/README README.external
