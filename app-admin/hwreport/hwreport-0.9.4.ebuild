@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/hwreport-0.9.4.ebuild,v 1.1 2008/01/13 22:54:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/hwreport-0.9.4.ebuild,v 1.2 2008/01/14 00:31:23 mr_bones_ Exp $
 
 DESCRIPTION="Collect system informations for the hardware4linux.info site"
 HOMEPAGE="http://hardware4linux.info/"
@@ -17,7 +17,6 @@ RDEPEND=">=sys-apps/dmidecode-2.8 >=sys-apps/pciutils-2.2.0"
 src_compile() {
 	cc -o scan-printers scan-printers.c
 }
-
 
 src_install() {
 	dobin hwreport
