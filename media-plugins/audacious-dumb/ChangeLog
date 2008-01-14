@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-dumb
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.18 2007/11/12 09:31:52 joker Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.19 2008/01/14 10:53:39 joker Exp $
+
+  14 Jan 2008; Christian Birchinger <joker@gentoo.org>
+  audacious-dumb-0.42.ebuild, audacious-dumb-0.56.ebuild:
+  Added dev-util/pkgconfig do DEPEND. Bug #205748
 
   12 Nov 2007; Christian Birchinger <joker@gentoo.org>
   -audacious-dumb-0.24.ebuild:
