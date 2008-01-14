@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.06.1.ebuild,v 1.2 2007/02/11 20:32:31 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.06.1.ebuild,v 1.3 2008/01/14 17:09:03 chainsaw Exp $
 
 inherit eutils python
 
@@ -26,12 +26,12 @@ src_compile() {
 src_install() {
 	make PREFIX="/usr" DESTDIR="${D}" install
 
-	use gnome || cd ${D} && find -iname trayicon.* | xargs rm
+	use gnome || cd "${D}" && find -iname trayicon.* | xargs rm
 
 	dodir /usr/share/pixmaps
 	insinto /usr/share/pixmaps
 
-	cd ${S}
+	cd "${S}"
 	newins src/glade/pixmaps/icon.png pympd.png
 	make_desktop_entry "pympd" "pympd" "pympd.png" "Audio"
 }

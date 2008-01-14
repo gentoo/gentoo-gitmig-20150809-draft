@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.08.1.ebuild,v 1.1 2007/05/26 21:23:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.08.1.ebuild,v 1.2 2008/01/14 17:09:03 chainsaw Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -16,6 +16,8 @@ IUSE=""
 RDEPEND=">=virtual/python-2.4
 	>=dev-python/pygtk-2.6
 	x11-themes/gnome-icon-theme"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	if ! built_with_use '=x11-libs/gtk+-2*' jpeg; then
