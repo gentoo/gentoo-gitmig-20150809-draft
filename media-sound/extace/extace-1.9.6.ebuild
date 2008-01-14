@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/extace-1.9.6.ebuild,v 1.1 2007/01/31 14:05:09 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/extace-1.9.6.ebuild,v 1.2 2008/01/14 17:12:05 chainsaw Exp $
 
 DESCRIPTION="eXtace is an ESD audio visualization application"
 HOMEPAGE="http://extace.sourceforge.net"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="media-sound/esound
+DEPEND="dev-util/pkgconfig
+	media-sound/esound
 	>=sci-libs/fftw-3
 	=x11-libs/gtk+-1.2*
 	media-libs/imlib"
