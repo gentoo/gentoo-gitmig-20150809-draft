@@ -5,7 +5,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-osgi.eclass,v 1.3 2008/01/14 16:42:26 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-osgi.eclass,v 1.4 2008/01/14 16:48:38 elvanor Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -147,7 +147,7 @@ java-osgi_dojar() {
 # It will call java-pkg_newjar at the end.
 #
 # @example
-#	java-osgi_newjar "dist/${PN}.jar" "com.jcraft.jsch" "com.jcraft.jsch, com.jcraft.jsch.jce;x-internal:=true" "JSch"
+#	java-osgi_newjar "dist/${PN}.jar" "com.jcraft.jsch" "JSch" "com.jcraft.jsch, com.jcraft.jsch.jce;x-internal:=true"
 #
 # @param $1 - name of jar to repackage with OSGi
 # @param $2 (optional) - name of the target jar. It will default to package name if not specified.
