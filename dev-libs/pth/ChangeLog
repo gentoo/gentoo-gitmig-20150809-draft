@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/pth
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.58 2008/01/14 14:17:02 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.59 2008/01/14 19:39:53 alonbl Exp $
+
+*pth-2.0.7-r1 (14 Jan 2008)
+
+  14 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> +pth-2.0.7-r1.ebuild:
+  --disable-debug actually removed shared libraries, bug#205875, thanks to drac
 
   14 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> pth-2.0.7.ebuild:
   Add debug USE flag
