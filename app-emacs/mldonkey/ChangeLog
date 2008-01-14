@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/mldonkey
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.15 2008/01/03 15:10:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.16 2008/01/14 19:57:44 dertobi123 Exp $
+
+  14 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  mldonkey-0.0.4b.ebuild:
+  ppc. stable
 
 *mldonkey-0.0.4b-r1 (03 Jan 2008)
 
