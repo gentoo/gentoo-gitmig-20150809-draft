@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.045.ebuild,v 1.3 2008/01/08 11:02:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.045.ebuild,v 1.4 2008/01/14 19:59:24 dertobi123 Exp $
 
 DESCRIPTION="demerge - revert to previous installation states"
 HOMEPAGE="http://download.mpsna.de/opensource/demerge/"
@@ -8,7 +8,7 @@ SRC_URI="http://download.mpsna.de/opensource/demerge/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ia64 ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
