@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-xosd/audacious-xosd-0.5.ebuild,v 1.5 2007/11/10 16:45:58 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-xosd/audacious-xosd-0.5.ebuild,v 1.6 2008/01/14 11:00:19 joker Exp $
 
 DESCRIPTION="Audacious plugin for overlaying text/glyphs in X-On-Screen-Display"
 HOMEPAGE="http://www.netswarm.net/"
@@ -12,7 +12,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/xosd-2.2.14
-	 <media-sound/audacious-1.4"
+	<media-sound/audacious-1.4
+	dev-util/pkgconfig"
 
 src_compile() {
 	emake PREFIX=/usr || die "emake failed"

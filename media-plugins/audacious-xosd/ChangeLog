@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-xosd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-xosd/ChangeLog,v 1.9 2007/11/10 16:45:58 joker Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-xosd/ChangeLog,v 1.10 2008/01/14 11:00:19 joker Exp $
+
+  14 Jan 2008; Christian Birchinger <joker@gentoo.org>
+  audacious-xosd-0.5.ebuild, audacious-xosd-0.9.ebuild:
+  Added dev-util/pkgconfig do DEPEND. Bug #205748
 
 *audacious-xosd-0.9 (10 Nov 2007)
 
