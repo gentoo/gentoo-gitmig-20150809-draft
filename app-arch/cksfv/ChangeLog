@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cksfv
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/ChangeLog,v 1.32 2007/12/17 16:56:48 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/ChangeLog,v 1.33 2008/01/14 19:54:02 dertobi123 Exp $
+
+  14 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org> cksfv-1.3.12.ebuild:
+  ppc. stable
 
   17 Dec 2007; Raúl Porcel <armin76@gentoo.org> cksfv-1.3.12.ebuild:
   Add ~ia64 and alpha/sparc/x86 stable
