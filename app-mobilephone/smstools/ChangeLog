@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/smstools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.10 2007/11/04 08:32:52 mrness Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.11 2008/01/14 16:13:37 chainsaw Exp $
+
+*smstools-2.2.20 (14 Jan 2008)
+
+  14 Jan 2008; Tony Vroon <chainsaw@gentoo.org> smstools-2.2.9.ebuild,
+  +smstools-2.2.20.ebuild:
+  Version bump. Incoming spool should be setgid, as pointed out by
+  tucksonjack@gmail.com in bug #196366. Also quote a few variables.
 
   04 Nov 2007; Alin Năstac <mrness@gentoo.org> smstools-2.2.9.ebuild,
   smstools-2.2.13.ebuild:

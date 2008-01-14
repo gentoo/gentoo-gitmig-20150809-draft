@@ -1,20 +1,22 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/smstools-2.2.9.ebuild,v 1.3 2008/01/14 16:13:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/smstools-2.2.20.ebuild,v 1.1 2008/01/14 16:13:37 chainsaw Exp $
 
 inherit eutils
 
 DESCRIPTION="Send and receive short messages through GSM modems"
 HOMEPAGE="http://smstools.meinemullemaus.de/"
-SRC_URI="http://www.meinemullemaus.de/software/${PN}/packages/${P}.tar.gz"
+SRC_URI="http://www.meinemullemaus.de/${PN}/packages/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="stats"
+
 RDEPEND="sys-process/procps
 	 stats? ( >=dev-libs/mm-1.4.0 )"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}"/${PN}
 
 pkg_setup() {
 	enewgroup sms
@@ -22,9 +24,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/2.2.1-skip-dirlock.patch"
+	epatch "${FILESDIR}"/2.2.1-skip-dirlock.patch
+	epatch "${FILESDIR}"/2.2.13-sendsms-chmod.patch
 	if use stats; then
 		sed -i -e "s:CFLAGS += -D NOSTATS:#CFLAGS += -D NOSTATS:" src/Makefile
 	fi
@@ -46,6 +49,7 @@ src_install() {
 	keepdir /var/spool/sms/outgoing
 	keepdir /var/spool/sms/checked
 	chown -R smsd:sms "${D}"/var/spool/sms
+	chmod g+s "${D}"/var/spool/sms/incoming
 
 	newinitd "${FILESDIR}"/smsd.initd smsd
 	insopts -o smsd -g sms -m0644
