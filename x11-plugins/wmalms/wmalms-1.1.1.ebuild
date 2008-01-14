@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/wmalms-1.1.1.ebuild,v 1.2 2008/01/13 05:35:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/wmalms-1.1.1.ebuild,v 1.3 2008/01/14 13:25:18 opfer Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.geocities.com/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXext

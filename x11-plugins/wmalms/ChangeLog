@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmalms
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/ChangeLog,v 1.11 2008/01/13 05:21:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/ChangeLog,v 1.12 2008/01/14 13:25:18 opfer Exp $
+
+  14 Jan 2008; Christian Faulhammer <opfer@gentoo.org> wmalms-1.1.1.ebuild:
+  stable x86, bug 129273
 
 *wmalms-1.1.1 (13 Jan 2008)
 
