@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/awesfx
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.21 2007/07/29 12:30:19 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.22 2008/01/14 15:02:25 drac Exp $
+
+  14 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  -files/awesfx-0.5.1-configure-noalsa.patch,
+  -files/awesfx-0.5.1-makefile-noalsa.patch, awesfx-0.5.1.ebuild:
+  Remove support for USE -alsa wrt #205690. amd64 stable wrt #186327.
 
 *awesfx-0.5.1 (29 Jul 2007)
 
