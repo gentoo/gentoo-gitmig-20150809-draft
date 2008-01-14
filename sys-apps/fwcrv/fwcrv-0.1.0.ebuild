@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwcrv/fwcrv-0.1.0.ebuild,v 1.4 2007/07/12 05:10:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwcrv/fwcrv-0.1.0.ebuild,v 1.5 2008/01/14 02:34:51 robbat2 Exp $
 
 inherit eutils
 
@@ -15,8 +15,8 @@ DEPEND="sys-libs/libraw1394"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-endian.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-endian.patch
 }
 
 src_compile() {
@@ -25,6 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS README src/testdata.txt TODO
 }
