@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.88 2008/01/13 20:54:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.89 2008/01/14 14:15:19 fmccor Exp $
+
+  14 Jan 2008; Ferris McCormick <fmccor@gentoo.org>
+  libcdio-0.78.2-r4.ebuild:
+  Sparc stable, security Bug #203777.
 
   13 Jan 2008; Markus Meier <maekke@gentoo.org> libcdio-0.78.2-r4.ebuild:
   x86 stable, security bug #203777
