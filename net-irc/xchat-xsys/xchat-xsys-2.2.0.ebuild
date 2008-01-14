@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.2.0.ebuild,v 1.1 2007/11/12 20:53:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.2.0.ebuild,v 1.2 2008/01/14 16:47:22 chainsaw Exp $
 
 inherit toolchain-funcs eutils
 
@@ -18,6 +18,7 @@ DEPEND="|| (
 		>=net-irc/xchat-2.4.0
 		>=net-irc/xchat-gnome-0.4
 	)
+	dev-util/pkgconfig
 	sys-apps/pciutils
 	>=media-sound/audacious-1.4.0"
 

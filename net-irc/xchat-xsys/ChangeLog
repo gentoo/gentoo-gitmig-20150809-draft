@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-xsys
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.60 2007/11/12 20:53:44 chainsaw Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.61 2008/01/14 16:47:22 chainsaw Exp $
+
+  14 Jan 2008; Tony Vroon <chainsaw@gentoo.org> xchat-xsys-2.2.0.ebuild:
+  Add pkgconfig dependency for the Evil Compile Person
+  <bugs@dev.gentooexperimental.org>, closes bug #205473.
 
 *xchat-xsys-2.2.0 (12 Nov 2007)
 
