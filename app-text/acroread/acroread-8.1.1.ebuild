@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.1.ebuild,v 1.3 2007/09/28 18:05:43 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.1.ebuild,v 1.4 2008/01/14 23:24:05 tgurr Exp $
 
 inherit eutils nsplugins
 
@@ -11,9 +11,7 @@ IUSE="cups ldap nsplugin"
 SRC_HEAD="http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/${PV}"
 SRC_FOOT="-${PV}-1.i486.tar.bz2"
 
-#LINGUA_LIST="en:enu de:deu fr:fra sv:sve es:esp pt:ptb nb:nor it:ita fi:suo nl:nld da:dan ja:jpn ko:kor zh_CN:chs zh_TW:cht"
-LINGUA_LIST="en:enu"
-SRC_URI=
+LINGUA_LIST="da:dan de:deu en:enu es:esp fi:suo fr:fra it:ita ja:jpn ko:kor nb:nor nl:nld pt:ptb sv:sve zh_CN:chs zh_TW:cht"
 DEFAULT_URI="${SRC_HEAD}/enu/AdobeReader_enu${SRC_FOOT}"
 for ll in ${LINGUA_LIST}; do
 	iuse_l="linguas_${ll/:*}"
@@ -56,7 +54,7 @@ QA_EXECSTACK="opt/Adobe/Adobe/Reader8/Reader/intellinux/plug_ins/Annots.api
 
 INSTALLDIR=/opt/Adobe
 
-S=${WORKDIR}/AdobeReader
+S="${WORKDIR}/AdobeReader"
 
 # Actually, ahv segfaults when run standalone so presumably
 # it isn't intended for direct use - so the only launcher is
@@ -91,9 +89,9 @@ src_unpack() {
 	# Unpack all into the same place; overwrite common files.
 	fl=""
 	for pkg in ${A}; do
-		cd ${WORKDIR}
+		cd "${WORKDIR}"
 		unpack ${pkg}
-		cd ${S}
+		cd "${S}"
 		if [[ ${pkg} =~ ^AdobeReader_ ]]; then
 			tar xf ILINXR.TAR ||
 				die "Failed to unpack ILINXR.TAR; is distfile corrupt?"
@@ -173,7 +171,7 @@ src_install() {
 
 	dodir /opt
 	chown -R --dereference -L root:0 Adobe
-	cp -dpR Adobe ${D}opt/
+	cp -dpR Adobe "${D}"opt/
 
 	# The Browser_Plugin_HowTo.txt is now in a subdirectory, which
 	# is named according to the language the user is using.
@@ -188,14 +186,14 @@ src_install() {
 	fi
 
 	if ! use ldap ; then
-		rm ${D}${INSTALLDIR}/Reader8/Reader/intellinux/plug_ins/PPKLite.api
+		rm "${D}"${INSTALLDIR}/Reader8/Reader/intellinux/plug_ins/PPKLite.api
 	fi
 
 	# libcups is needed for printing support (bug 118417)
 	if use x86 && ! use cups ; then
-		mv ${WORKDIR}/libcups.so-i386 ${WORKDIR}/libcups.so.2
+		mv "${WORKDIR}"/libcups.so-i386 "${WORKDIR}"/libcups.so.2
 		exeinto ${INSTALLDIR}/Reader8/Reader/intellinux/lib
-		doexe ${WORKDIR}/libcups.so.2
+		doexe "${WORKDIR}"/libcups.so.2
 		dosym libcups.so.2 ${INSTALLDIR}/Reader8/Reader/intellinux/lib/libcups.so
 	fi
 
@@ -218,8 +216,8 @@ pkg_postinst () {
 				cat > /etc/gre.d/gre.conf <<-EOF
 					GRE_PATH=${lib}
 				EOF
-				einfo "Acrobat Reader depends on libgtkembedmoz.so, which I've found"
-				einfo "on your system in ${lib}, and configured in /etc/gre.d/gre.conf"
+				elog "Acrobat Reader depends on libgtkembedmoz.so, which I've found"
+				elog "on your system in ${lib}, and configured in /etc/gre.d/gre.conf"
 				break # don't search any more libraries
 			fi
 		done
