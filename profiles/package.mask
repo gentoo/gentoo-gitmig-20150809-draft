@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8120 2008/01/13 21:23:30 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8121 2008/01/14 06:56:12 ingmar Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Ingmar Vanhassel <ingmar@gentoo.org> (14 Jan 2008)
+# Masked pending further testing.
+>=dev-util/cmake-2.4.8_rc12
 
 # Markus Ullmann <jokey@gentoo.org> (13 Jan 2008)
 # contrib modules need to be added back and needs general testing
