@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.2.ebuild,v 1.4 2008/01/04 13:25:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.2.ebuild,v 1.5 2008/01/14 20:10:28 dertobi123 Exp $
 
 NEED_PYTHON=2.3
 
@@ -12,7 +12,7 @@ SRC_URI="http://labix.org/download/python-dateutil/${P}.tar.bz2"
 
 LICENSE="PSF-2.3"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="amd64 ~ia64 ppc ~x86"
 IUSE=""
 
 DEPEND="!<=dev-python/matplotlib-0.82"

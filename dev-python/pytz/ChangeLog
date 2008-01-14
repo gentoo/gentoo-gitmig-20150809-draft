@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.11 2007/12/16 10:03:31 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.12 2008/01/14 20:11:21 dertobi123 Exp $
+
+  14 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org> pytz-2007f.ebuild:
+  ppc. stable
 
   16 Dec 2007; Samuli Suominen <drac@gentoo.org> pytz-2007f.ebuild:
   amd64 stable

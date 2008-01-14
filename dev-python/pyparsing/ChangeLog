@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyparsing
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.29 2007/11/12 16:13:02 drac Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.30 2008/01/14 20:09:39 dertobi123 Exp $
+
+  14 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  pyparsing-1.4.8.ebuild:
+  ppc. stable
 
   12 Nov 2007; Samuli Suominen <drac@gentoo.org> pyparsing-1.4.8.ebuild:
   amd64 stable
