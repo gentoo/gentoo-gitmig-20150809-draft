@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-0.9.11.ebuild,v 1.1 2007/05/11 08:59:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-0.9.11.ebuild,v 1.2 2008/01/14 02:21:08 robbat2 Exp $
 
 inherit base eutils toolchain-funcs
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PN}-0.9.11-make-jobs.patch
+	epatch "${FILESDIR}"/${PN}-0.9.11-make-jobs.patch
 }
 
 src_compile() {
@@ -38,7 +38,7 @@ src_install() {
 	dodoc README TODO CHANGES DESIGN
 	dodoc numademo.c memhog.c
 	dohtml html/*html
-	cd ${D}/usr/share/man/man3
+	cd "${D}"/usr/share/man/man3
 	# this list stolen from the Makefile
 	local MANLINKS="all_nodes alloc alloc_interleaved alloc_interleaved_subset
 	alloc_local alloc_onnode available bind error exit_on_error free
@@ -55,6 +55,6 @@ src_install() {
 src_test() {
 	einfo "The only generically safe test is regress2."
 	einfo "The other test cases require 2 NUMA nodes."
-	cd ${S}/test
+	cd "${S}"/test
 	./regress2 || die "regress2 failed!"
 }
