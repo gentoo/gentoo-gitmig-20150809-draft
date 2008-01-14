@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.865.12.ebuild,v 1.2 2007/08/29 07:11:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.865.12.ebuild,v 1.3 2008/01/14 01:29:00 robbat2 Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
-DESCRIPTION="Open-iSCSI project is a high performance, transport independent, multi-platform implementation of RFC3720."
+DESCRIPTION="Open-iSCSI is a high performance, transport independent, multi-platform implementation of RFC3720"
 HOMEPAGE="http://www.open-iscsi.org/"
 MY_PV="$(replace_version_separator 2 '-')"
 MY_SVN_R=865
@@ -40,7 +40,7 @@ src_unpack() {
 	fi
 
 	# clean up some junk
-	find ${S} -name '*~' -exec rm \{} \; >/dev/null 2>/dev/null
+	find "${S}" -name '*~' -exec rm \{} \; >/dev/null 2>/dev/null
 }
 
 src_compile() {
@@ -50,7 +50,7 @@ src_compile() {
 	export KSRC="${KERNEL_DIR}"
 	linux-mod_src_compile || die "failed to build modules"
 	einfo "Building userspace"
-	cd ${S}/usr && \
+	cd "${S}"/usr && \
 		CFLAGS="" emake OPTFLAGS="${CFLAGS}" \
 		|| die "emake failed"
 }
@@ -73,8 +73,8 @@ src_install() {
 	einfo "Installing configuration"
 	insinto /etc
 	doins etc/iscsid.conf
-	doins ${FILESDIR}/initiatorname.iscsi
-	newinitd ${FILESDIR}/iscsid-init.d iscsid
+	doins "${FILESDIR}"/initiatorname.iscsi
+	newinitd "${FILESDIR}"/iscsid-init.d iscsid
 
 	# This is for later
 	# dosbin usr/iscsi_id
@@ -89,6 +89,6 @@ src_install() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	[ -d ${ROOT}/var/db/iscsi ] && chmod 700 ${ROOT}/var/db/iscsi
-	[ -f ${ROOT}/etc/iscsid.conf ] && chmod 600 ${ROOT}/etc/iscsid.conf
+	[ -d "${ROOT}"/var/db/iscsi ] && chmod 700 "${ROOT}"/var/db/iscsi
+	[ -f "${ROOT}"/etc/iscsid.conf ] && chmod 600 "${ROOT}"/etc/iscsid.conf
 }
