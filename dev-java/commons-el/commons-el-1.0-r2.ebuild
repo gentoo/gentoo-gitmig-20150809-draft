@@ -1,30 +1,29 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0-r1.ebuild,v 1.9 2008/01/14 10:46:39 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0-r2.ebuild,v 1.1 2008/01/14 10:46:39 elvanor Exp $
 
 JAVA_PKG_IUSE="source"
 
-inherit java-pkg-2 java-ant-2
+inherit java-pkg-2 java-ant-2 java-osgi
 
 DESCRIPTION="EL is the JSP 2.0 Expression Language Interpreter from Apache."
 HOMEPAGE="http://jakarta.apache.org/commons/el/"
 SRC_URI="mirror://apache/jakarta/commons/el/source/${P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 COMMON_DEP="~dev-java/servletapi-2.4"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
-	${COMMON_DEP}
-	source? ( app-arch/zip )"
+	${COMMON_DEP}"
 
 S=${WORKDIR}/${P}-src
 
 src_unpack() {
-	unpack ${A}
+	unpack "${A}"
 	cd "${S}"
-	mv build.properties build.properties.old
+	mv "build.properties" "build.properties.old"
 
 	echo "servlet-api.jar=$(java-pkg_getjar servletapi-2.4 servlet-api.jar)" >> build.properties
 	echo "jsp-api.jar=$(java-pkg_getjar servletapi-2.4 jsp-api.jar)" >> build.properties
@@ -36,7 +35,9 @@ src_unpack() {
 }
 
 src_install() {
-	java-pkg_dojar dist/${PN}.jar || die "Unable to install"
+	java-osgi_dojar-fromfile "dist/${PN}.jar" "${FILESDIR}/${P}-manifest" \
+		"Apache Commons EL" || die "Unable to install"
+
 	dodoc LICENSE.txt RELEASE-NOTES.txt || die
 	dohtml STATUS.html PROPOSAL.html || die
 
