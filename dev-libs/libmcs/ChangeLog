@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.27 2007/12/05 07:07:49 kumba Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.28 2008/01/14 20:03:39 dertobi123 Exp $
+
+  14 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org> libmcs-0.5.0.ebuild:
+  ppc. stable
 
   05 Dec 2007; Joshua Kinard <kumba@gentoo.org> libmcs-0.6.0.ebuild:
   Marked unstable on mips.
