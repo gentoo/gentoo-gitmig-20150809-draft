@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r4.ebuild,v 1.5 2008/01/10 09:16:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r4.ebuild,v 1.6 2008/01/14 20:17:04 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -43,6 +43,7 @@ RDEPEND="sys-libs/zlib
 	)
 	!net-misc/tightvnc"
 DEPEND="${RDEPEND}
+	x11-proto/inputproto
 	x11-proto/xextproto
 	server?	(
 		x11-proto/bigreqsproto
@@ -50,7 +51,6 @@ DEPEND="${RDEPEND}
 		x11-proto/damageproto
 		x11-proto/fixesproto
 		x11-proto/fontsproto
-		x11-proto/inputproto
 		x11-proto/randrproto
 		x11-proto/resourceproto
 		x11-proto/scrnsaverproto
