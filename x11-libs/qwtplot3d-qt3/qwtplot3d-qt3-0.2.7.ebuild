@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d-qt3/qwtplot3d-qt3-0.2.7.ebuild,v 1.2 2007/12/03 10:17:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d-qt3/qwtplot3d-qt3-0.2.7.ebuild,v 1.3 2008/01/14 11:24:25 bicatali Exp $
 
 inherit eutils multilib qt3
 
@@ -19,9 +19,14 @@ RDEPEND="$(qt_min_version 3.3)"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-QT4_BUILT_WITH_USE_CHECK="opengl"
-
 S="${WORKDIR}/${MY_PN}"
+
+pkg_setup() {
+	if ! built_with_use =x11-libs/qt-3* opengl; then
+		eerror "You need to build x11-libs/qt with opengl use flag enabled."
+		die
+	fi
+}
 
 src_unpack () {
 	unpack ${A}
@@ -32,11 +37,12 @@ src_unpack () {
 }
 
 src_compile () {
-	echo >> ${MY_PN}.pro "target.path = /usr/$(get_libdir)"
-	echo >> ${MY_PN}.pro "headers.path = /usr/include/${PN}"
-	echo >> ${MY_PN}.pro "headers.files = \$\$HEADERS"
-	echo >> ${MY_PN}.pro "INSTALLS = target headers"
-
+	cat >> ${MY_PN}.pro <<-EOF
+		target.path = /usr/$(get_libdir)
+		headers.path = /usr/include/${PN}
+		headers.files = \$\$HEADERS
+		INSTALLS = target headers
+	EOF
 	eqmake3 ${MY_PN}.pro || die "eqmake3 failed"
 	emake || die "emake failed"
 	if use doc; then
