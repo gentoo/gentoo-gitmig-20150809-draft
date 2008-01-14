@@ -1,26 +1,28 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.0.2.ebuild,v 1.3 2008/01/11 14:42:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.2.ebuild,v 1.1 2008/01/14 11:40:02 markusle Exp $
 
 inherit elisp-common flag-o-matic toolchain-funcs bash-completion
 
-MY_PV="${PV/%.2/-2}"
-
 DESCRIPTION="2- and 3-D plotter for creating images (to be used in LaTeX)"
 HOMEPAGE="http://mathcs.holycross.edu/~ahwang/current/ePiX.html"
-SRC_URI="http://mathcs.holycross.edu/~ahwang/epix/${PN}-${MY_PV}_withpdf.tar.bz2"
+SRC_URI="http://mathcs.holycross.edu/~ahwang/epix/${P}_withpdf.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="emacs"
 
-DEPEND="virtual/tetex
+DEPEND="virtual/latex-base
+		|| ( ( dev-texlive/texlive-pstricks
+				dev-texlive/texlive-pictures
+				dev-texlive/texlive-latexextra
+				dev-tex/xcolor )
+			app-text/tetex
+			app-text/ptex )
 		emacs? ( virtual/emacs )"
 
 SITEFILE=50${PN}-gentoo.el
-
-S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_unpack() {
 	unpack ${A}
@@ -31,7 +33,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-nolisp || die "configure failed"
+	econf --disable-epix-el || die "configure failed"
 	emake || die "compile failed"
 }
 
