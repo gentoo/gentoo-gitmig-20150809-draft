@@ -1,11 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-070104.ebuild,v 1.3 2007/11/05 19:03:36 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-070104.ebuild,v 1.4 2008/01/14 15:46:33 nyhm Exp $
 
 inherit games
 
-DESCRIPTION="A massively-multiplayer online RPG based on the works of J.R.R.
-Tolkien. Client"
+DESCRIPTION="A MMORPG based on the works of J.R.R. Tolkien"
 HOMEPAGE="http://www.tomenet.net/"
 SRC_URI="http://angband.oook.cz/${PN}-nightly/${PN}-cvs-snapshot-${PV}.tar.bz2"
 
