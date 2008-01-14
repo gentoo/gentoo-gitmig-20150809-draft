@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.0.1.ebuild,v 1.1 2008/01/14 12:51:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.0.1.ebuild,v 1.2 2008/01/14 12:59:06 vapier Exp $
 
 # Note: video support in linphone relies on swscaler being disabled
 #       in ffmpeg.  this is because the video code in linphone is old
@@ -80,8 +80,7 @@ src_install () {
 
 	# don't install ortp includes, docs and pkgconfig files
 	# to avoid conflicts with net-libs/ortp
-	rm -rf "${D}"/usr/include/ortp
-	rm -rf "${D}"/usr/share/gtk-doc/html/ortp
-	rm -rf "${D}"/usr/$(get_libdir)/linphone/pkgconfig
-	rm -rf "${D}"/ortp
+	rm -r "${D}"/usr/include/ortp || die
+	rm -r "${D}"/usr/$(get_libdir)/linphone/pkgconfig/ortp.pc || die
+	rm -r "${D}"/usr/share/doc/ortp || die
 }
