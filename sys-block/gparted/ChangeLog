@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/gparted
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.41 2007/09/20 14:15:56 dang Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.42 2008/01/14 00:02:55 eva Exp $
+
+*gparted-0.3.3-r1 (13 Jan 2008)
+
+  13 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gparted-0.3.3-device-reload-crash.patch, +gparted-0.3.3-r1.ebuild:
+  fix crash on refreshing device (bug #201615)
 
   20 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> gparted-0.3.3.ebuild:
   fs utils are runtime-deps only; bug #178873
