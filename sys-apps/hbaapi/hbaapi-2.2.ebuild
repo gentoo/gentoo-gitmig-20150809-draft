@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hbaapi/hbaapi-2.2.ebuild,v 1.1 2006/09/09 21:35:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hbaapi/hbaapi-2.2.ebuild,v 1.2 2008/01/14 02:24:11 robbat2 Exp $
 
 DESCRIPTION="The Host Bus Adapter API for managing Fibre Channel Host Bus Adapters"
 HOMEPAGE="http://hbaapi.sourceforge.net/"
@@ -20,7 +20,7 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	mv ${WORKDIR}/${P}.Makefile ${S}/Makefile
+	mv "${WORKDIR}"/${P}.Makefile "${S}"/Makefile
 }
 
 src_compile() {
@@ -33,6 +33,6 @@ src_install() {
 	dolib.so libHBAAPI.so
 	dosbin hbaapitest
 	insinto /etc
-	doins ${FILESDIR}/hba.conf
+	doins "${FILESDIR}"/hba.conf
 	dodoc readme.txt
 }
