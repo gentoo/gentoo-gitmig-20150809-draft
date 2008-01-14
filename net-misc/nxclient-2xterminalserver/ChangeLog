@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxclient-2xterminalserver
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient-2xterminalserver/ChangeLog,v 1.3 2007/05/12 14:58:03 voyageur Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient-2xterminalserver/ChangeLog,v 1.4 2008/01/14 12:48:27 voyageur Exp $
+
+  13 Jan 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  nxclient-2xterminalserver-1.5.0.ebuild:
+  Missing depend, bug #205425. Also fix quoting
 
   12 May 2007; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
   Fixed maintainer in metadata.xml

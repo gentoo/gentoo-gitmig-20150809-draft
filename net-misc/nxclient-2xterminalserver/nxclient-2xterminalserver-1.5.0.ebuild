@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient-2xterminalserver/nxclient-2xterminalserver-1.5.0.ebuild,v 1.2 2007/04/30 13:34:53 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient-2xterminalserver/nxclient-2xterminalserver-1.5.0.ebuild,v 1.3 2008/01/14 12:48:27 voyageur Exp $
 
 inherit eutils qt3
 
@@ -16,6 +16,7 @@ IUSE=""
 
 DEPEND="
 	dev-libs/openssl
+	media-libs/audiofile
 	media-libs/jpeg
 	media-libs/libpng
 	net-print/cups
@@ -29,9 +30,9 @@ S="${WORKDIR}"
 src_unpack()
 {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/1.5.0/nxcomp-1.5.0-gcc4.patch
-	epatch ${FILESDIR}/1.5.0/nxcomp-1.5.0-pic.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/1.5.0/nxcomp-1.5.0-gcc4.patch
+	epatch "${FILESDIR}"/1.5.0/nxcomp-1.5.0-pic.patch
 
 	# Set correct product name
 	einfo "Setting official product name"
@@ -41,23 +42,23 @@ src_unpack()
 
 src_compile()
 {
-	cd ${S}/common/nxcomp
+	cd "${S}"/common/nxcomp
 	econf || die
 	emake || die
 
-	cd ${S}/common/nxssh
+	cd "${S}"/common/nxssh
 	econf || die
 	emake || die
 
-	cd ${S}/client/nxesd
+	cd "${S}"/client/nxesd
 	econf || die
 	emake || die
 
-	cd ${S}/client/nxclient
+	cd "${S}"/client/nxclient
 	econf || die
 	emake || die
 
-	cd ${S}/client/nxclient/nxprint
+	cd "${S}"/client/nxclient/nxprint
 	emake || die
 }
 
@@ -75,10 +76,10 @@ src_install() {
 	dobin common/nxssh/nxssh
 
 	dodir /usr/NX/lib
-	cp -P common/nxcomp/libXcomp.so* ${D}/usr/NX/lib || die
+	cp -P common/nxcomp/libXcomp.so* "${D}"/usr/NX/lib || die
 
 	dodir /usr/NX/share
-	cp -R client/nxclient/share ${D}/usr/NX || die
+	cp -R client/nxclient/share "${D}"/usr/NX || die
 
 	# Add icons/desktop entries
 	doicon client/nxclient/share/icons/*.png
