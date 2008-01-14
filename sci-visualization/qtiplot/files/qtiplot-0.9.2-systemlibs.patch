@@ -84,7 +84,7 @@
  
  #dynamically link against GSL installed system-wide
 -#unix:LIBS += -L /usr/lib$${libsuff} -lgsl -lgslcblas
-+unix:LIBS += -lgsl -lgslcblas
++unix:LIBS += $$(system pkg-config --libs gsl)
  
  target.path=/usr/lib$${libsuff}/qtiplot/plugins
  INSTALLS += target
@@ -103,7 +103,7 @@
  
  #dynamically link against GSL installed system-wide
 -#unix:LIBS += -L /usr/lib$${libsuff} -lgsl -lgslcblas
-+unix:LIBS += -lgsl -lgslcblas
++unix:LIBS += $$(system pkg-config --libs gsl)
  
  target.path=/usr/lib$${libsuff}/qtiplot/plugins
  INSTALLS += target

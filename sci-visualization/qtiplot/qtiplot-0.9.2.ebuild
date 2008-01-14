@@ -1,14 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.2.ebuild,v 1.1 2007/12/03 11:20:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.2.ebuild,v 1.2 2008/01/14 18:20:41 bicatali Exp $
 
 inherit eutils multilib qt4 python
 
 DESCRIPTION="Qt based clone of the Origin plotting package"
 HOMEPAGE="http://soft.proindependent.com/qtiplot.html"
 SRC_URI="http://soft.proindependent.com/src/${P}.tar.bz2
-	doc? ( http://soft.proindependent.com/doc/manual-en.tar.bz2
-		linguas_es? ( http://soft.proindependent.com/doc/manual-es.zip ) )"
+	doc? ( mirror://gentoo/${P}-manual-en.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,18 +26,14 @@ CDEPEND=">=x11-libs/qwt-5.0.2
 	>=sci-libs/gsl-1.10"
 
 DEPEND="${RDEPEND}
-	python? ( >=dev-python/sip-4.5.2 )
-	doc? ( linguas_es? ( app-arch/unzip ) )"
+	dev-util/pkgconfig
+	python? ( >=dev-python/sip-4.5.2 )"
 
 RDEPEND="${CDEPEND}
 	python? ( >=dev-lang/python-2.5
 		dev-python/PyQt4
 		dev-python/pygsl
 		sci-libs/scipy )"
-
-# manual-en.html never changes version
-# could also uses docbook2html, but the dep is quite heavy
-RESTRICT=" doc? ( mirror )"
 
 QT4_BUILT_WITH_USE_CHECK="qt3support"
 
@@ -75,7 +70,6 @@ src_install() {
 	if use doc; then
 		insinto "/usr/share/doc/${PF}"
 		doins -r "${WORKDIR}"/manual-en
-		use linguas_es && doins -r "${WORKDIR}"/manual-es
 	fi
 
 	for l in ${LANGUAGES}; do
