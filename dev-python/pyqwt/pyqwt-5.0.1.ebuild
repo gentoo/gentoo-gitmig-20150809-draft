@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.0.1.ebuild,v 1.3 2008/01/02 14:14:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.0.1.ebuild,v 1.4 2008/01/14 19:19:27 angelos Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://pyqwt.sourceforge.net/"
 
 SLOT="5"
 LICENSE="GPL-2"
-KEYWORDS="~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE="debug doc examples"
 
 DEPEND="virtual/python
