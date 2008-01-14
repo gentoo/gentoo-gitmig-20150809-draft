@@ -1,6 +1,16 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.86 2008/01/06 16:42:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.87 2008/01/14 19:57:38 wolf31o2 Exp $
+
+  14 Jan 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  -no-nptl/2.4/deprecated, -no-nptl/2.4/package.mask,
+  -no-nptl/2.4/package.use.mask, -no-nptl/2.4/parent,
+  -no-nptl/2.4/use.force, -no-nptl/2.4/use.mask, -no-nptl/2.4/virtuals:
+  <Mr_Bones_> any objection to wolf31o2 whacking the no-nptl/2.4 alpha profile
+  now that the x86 one has gone away?
+  <ferdy> Mr_Bones_: ditch it
+  
+  As such, I am removing the no-nptl/2.4 profile.
 
   06 Jan 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask ocamlopt, doesn't work fine
