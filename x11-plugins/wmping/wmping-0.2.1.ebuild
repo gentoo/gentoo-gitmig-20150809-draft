@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmping/wmping-0.2.1.ebuild,v 1.1 2008/01/14 18:27:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmping/wmping-0.2.1.ebuild,v 1.2 2008/01/14 18:34:31 drac Exp $
 
 DESCRIPTION="a simple host status monitoring dockapp."
 HOMEPAGE="http://sourceforge.net/projects/wmping"
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 
 src_install() {
 	if use suid; then
-		emake DESTDIR="${D}" install || die "emake failed."
+		emake DESTDIR="${D}" install || die "emake install failed."
 	else
 		dosbin ${PN}
 	fi
