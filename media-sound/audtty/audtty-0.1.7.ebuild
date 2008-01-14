@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.7.ebuild,v 1.1 2007/12/08 16:39:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.7.ebuild,v 1.2 2008/01/14 14:10:10 chainsaw Exp $
 
 IUSE=""
 
@@ -13,7 +13,8 @@ SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 
-DEPEND="sys-libs/ncurses
+DEPEND="dev-util/pkgconfig
+	sys-libs/ncurses
 	>=media-sound/audacious-1.4.4"
 
 src_install() {
