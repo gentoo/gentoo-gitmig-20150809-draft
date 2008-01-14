@@ -1,0 +1,11 @@
+--- configure
++++ configure
+@@ -22723,7 +22723,7 @@
+ 
+ 
+ 
+-	if test "$GSM_found" = "yes" ; then
++	if test "$GSM_found" = "yes" && test "$enable_gsm" != "no" ; then
+ 	   build_gsm=yes
+ 	fi
+ fi
