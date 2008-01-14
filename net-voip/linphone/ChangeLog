@@ -1,6 +1,14 @@
 # ChangeLog for net-voip/linphone
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.4 2007/08/20 20:22:42 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.5 2008/01/14 12:51:25 vapier Exp $
+
+*linphone-2.0.1 (14 Jan 2008)
+
+  14 Jan 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/linphone-1.99.0-core-amd64.patch,
+  +files/linphone-2.0.1-configure-gsm.patch,
+  +files/linphone-2.0.1-mediastreamer-deps.patch, +linphone-2.0.1.ebuild:
+  Version bump.
 
 *linphone-1.7.1-r1 (20 Aug 2007)
 

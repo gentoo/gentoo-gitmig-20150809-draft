@@ -1,0 +1,11 @@
+--- a/mediastreamer2/configure
++++ b/mediastreamer2/configure
+@@ -22174,7 +22174,7 @@
+ 
+ 
+ 
+-if test "$GSM_found" = "yes" ; then
++if test "$GSM_found" = "yes" && test "$enable_gsm" != "no" ; then
+ 	build_gsm=yes
+ fi
+ 
