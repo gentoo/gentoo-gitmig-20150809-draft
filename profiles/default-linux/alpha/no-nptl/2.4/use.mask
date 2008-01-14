@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/use.mask,v 1.5 2007/07/15 20:07:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/use.mask,v 1.6 2008/01/14 19:16:56 stefaan Exp $
 
 # All of these require 2.6 kernels/headers
 ggi
@@ -11,3 +11,7 @@ input_devices_evdev
 
 # Masked for Bug #136866 ; sys-block/unieject:pmount doesn't work with 2.4
 pmount
+
+# the new juju firewire stack is not supported on linux 2.6.18 or lower
+juju
+

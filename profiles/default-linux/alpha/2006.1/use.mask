@@ -1,0 +1,7 @@
+# Copyright 2008 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2006.1/use.mask,v 1.1 2008/01/14 19:16:55 stefaan Exp $
+
+# the new juju firewire stack is not supported on linux 2.6.18 or lower
+juju
+
