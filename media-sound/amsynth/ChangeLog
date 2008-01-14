@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amsynth
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/ChangeLog,v 1.24 2007/03/24 23:52:16 aballier Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/ChangeLog,v 1.25 2008/01/14 12:50:19 flameeyes Exp $
+
+  14 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> amsynth-1.2.0.ebuild:
+  Add missing pkg-config dependency. Thanks to Patrick in bug #205700.
 
   24 Mar 2007; Alexis Ballier <aballier@gentoo.org> amsynth-1.2.0.ebuild:
   install text doc files

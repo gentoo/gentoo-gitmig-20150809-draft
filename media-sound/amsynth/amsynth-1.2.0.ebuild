@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.0.ebuild,v 1.2 2007/03/24 23:52:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.0.ebuild,v 1.3 2008/01/14 12:50:19 flameeyes Exp $
 
 IUSE="debug alsa jack sndfile oss"
 
@@ -17,10 +17,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND=">=dev-cpp/gtkmm-2.4
+RDEPEND=">=dev-cpp/gtkmm-2.4
 	sndfile? ( >=media-libs/libsndfile-1.0 )
 	alsa? ( >=media-libs/alsa-lib-0.9 media-sound/alsa-utils )
 	jack? ( media-sound/jack-audio-connection-kit )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 
