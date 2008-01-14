@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.0-r2.ebuild,v 1.1 2008/01/13 17:54:13 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.0-r2.ebuild,v 1.2 2008/01/14 00:06:55 philantrop Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc examples"
-RESTRICT="mirror test"
+RESTRICT="test"
 
 DEPEND=">=x11-libs/qt-4.2.0:4"
 RDEPEND="${DEPEND}"
