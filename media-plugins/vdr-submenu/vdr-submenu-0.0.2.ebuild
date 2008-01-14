@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-submenu/vdr-submenu-0.0.2.ebuild,v 1.4 2007/01/05 16:57:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-submenu/vdr-submenu-0.0.2.ebuild,v 1.5 2008/01/14 21:47:16 zzam Exp $
 
 inherit vdr-plugin
 
 IUSE=""
 SLOT="0"
 
-DESCRIPTION="vdr Plugin: DVB Frontend Status Monitor (signal strengt/noise)"
+DESCRIPTION="vdr Plugin: Reads the menu structure out of a config-file"
 HOMEPAGE="http://www.freewebs.com/sadhome"
 SRC_URI="http://www.freewebs.com/sadhome/Plugin/Submenu/${P}.tar.gz"
 LICENSE="GPL-2"
