@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8121 2008/01/14 06:56:12 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8122 2008/01/14 23:20:29 eva Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -350,13 +350,6 @@ app-admin/grubconf
 >=dev-haskell/regex-base-0.90
 >=dev-haskell/regex-posix-0.90
 >=dev-haskell/regex-compat-0.90
-
-# Gilles Dartiguelongue <eva@gentoo.org> (14 Dec 2007)
-# gal is an über old library of gnome and deserves to die.
-# see bug #193496
-=gnome-extra/gtkhtml-3.0.10-r1
-app-editors/peacock
-gnome-extra/gal
 
 # Doug Klima <cardoe@gentoo.org> (13 Dec 2007)
 # older then current releases and should be removed
