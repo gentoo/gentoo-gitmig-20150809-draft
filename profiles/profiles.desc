@@ -11,7 +11,6 @@ alpha		default-linux/alpha/2006.1			stable
 alpha		default-linux/alpha/2006.1/desktop		stable
 #alpha		default-linux/alpha/2006.1/server		stable
 alpha		default-linux/alpha/no-nptl			dev
-alpha		default-linux/alpha/no-nptl/2.4			dev
 alpha		default-linux/alpha/2007.0			stable
 alpha		default-linux/alpha/2007.0/desktop		stable
 alpha		default-linux/alpha/2007.0/server		stable
