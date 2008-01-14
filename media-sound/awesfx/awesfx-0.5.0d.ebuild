@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.5.0d.ebuild,v 1.5 2007/01/05 17:23:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.5.0d.ebuild,v 1.6 2008/01/14 17:40:52 chainsaw Exp $
 
 IUSE="alsa"
 
@@ -21,22 +21,22 @@ BANK_LOC="/usr/share/sounds/sf2"
 src_compile() {
 	if ! use alsa; then
 		einfo "Removing ALSA support!"
-		epatch ${FILESDIR}/${PN}-0.5.0b-configure-noalsa.patch
-		econf --with-sfpath=${BANK_LOC} || die
-		epatch ${FILESDIR}/${PN}-0.5.0b-makefile-noalsa.patch
+		epatch "${FILESDIR}/${PN}-0.5.0b-configure-noalsa.patch"
+		econf --with-sfpath="${BANK_LOC}" || die
+		epatch "${FILESDIR}/${PN}-0.5.0b-makefile-noalsa.patch"
 		sed -i -e 's/'^LIBS.*-lasound.*$'/LIBS = -lm $(dlopen_lib) -lpthread/' Makefile
 	else
-		econf --with-sfpath=${BANK_LOC} || die
+		econf --with-sfpath="${BANK_LOC}" || die
 	fi
 
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README SBKtoSF2.txt
-	dodoc ${D}/usr/share/sounds/sf2/README-bank
-	rm ${D}/usr/share/sounds/sf2/README-bank
+	dodoc "${D}/usr/share/sounds/sf2/README-bank"
+	rm "${D}/usr/share/sounds/sf2/README-bank"
 }
 
 pkg_postinst() {
