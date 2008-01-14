@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-ossl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.1 2008/01/13 17:59:11 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.2 2008/01/14 00:29:10 philantrop Exp $
+
+  14 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  qca-ossl-2.0.0_beta3.ebuild:
+  Removed accidental RESTRICT=mirror.
 
   13 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
   +qca-ossl-2.0.0_beta3.ebuild:

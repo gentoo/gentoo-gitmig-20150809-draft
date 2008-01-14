@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/qca-ossl-2.0.0_beta3.ebuild,v 1.1 2008/01/13 17:59:11 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/qca-ossl-2.0.0_beta3.ebuild,v 1.2 2008/01/14 00:29:10 philantrop Exp $
 
 inherit eutils qt4
 
@@ -10,7 +10,6 @@ QCA_VER="${PV%.*}"
 DESCRIPTION="TLS, S/MIME, PKCS#12, crypto algorithms plugin for QCA"
 HOMEPAGE="http://delta.affinix.com/qca/"
 SRC_URI="http://delta.affinix.com/download/qca/${QCA_VER}/plugins/${MY_P}.tar.bz2"
-RESTRICT="mirror"
 
 LICENSE="LGPL-2"
 SLOT="2"
