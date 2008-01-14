@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.9.ebuild,v 1.6 2008/01/14 18:55:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.9.ebuild,v 1.7 2008/01/14 20:30:37 dertobi123 Exp $
 
 inherit autotools perl-app eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-imapd-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ppc64 sparc x86"
+KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 IUSE="ssl kerberos"
 
 RDEPEND=">=sys-libs/db-3.2
