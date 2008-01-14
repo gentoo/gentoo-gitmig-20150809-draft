@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmix
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/ChangeLog,v 1.16 2007/07/22 04:57:50 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/ChangeLog,v 1.17 2008/01/14 17:41:13 drac Exp $
+
+  14 Jan 2008; Samuli Suominen <drac@gentoo.org> wmix-3.1-r1.ebuild:
+  Respect CC and LDFLAGS flags.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wmix-3.1-r1.ebuild:
   Drop virtual/x11 references.
