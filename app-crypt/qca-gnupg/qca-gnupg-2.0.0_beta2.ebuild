@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/qca-gnupg-2.0.0_beta2.ebuild,v 1.1 2008/01/13 18:02:38 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/qca-gnupg-2.0.0_beta2.ebuild,v 1.2 2008/01/14 00:18:16 philantrop Exp $
 
 inherit eutils qt4
 
@@ -10,7 +10,6 @@ QCA_VER="${PV%.*}"
 DESCRIPTION="GnuPG plugin for QCA"
 HOMEPAGE="http://delta.affinix.com/qca/"
 SRC_URI="http://delta.affinix.com/download/qca/${QCA_VER}/plugins/${MY_P}.tar.bz2"
-RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="2"
