@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-pkcs11/qca-pkcs11-2.0.0_beta2.ebuild,v 1.1 2008/01/13 18:00:56 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-pkcs11/qca-pkcs11-2.0.0_beta2.ebuild,v 1.2 2008/01/14 00:34:34 philantrop Exp $
 
 inherit eutils qt4
 
@@ -10,7 +10,6 @@ QCA_VER="${PV%.*}"
 DESCRIPTION="PKCS#11 (smartcard) plugin for QCA"
 HOMEPAGE="http://delta.affinix.com/qca/"
 SRC_URI="http://delta.affinix.com/download/qca/${QCA_VER}/plugins/${MY_P}.tar.bz2"
-RESTRICT="mirror"
 
 LICENSE="LGPL-2"
 SLOT="2"
