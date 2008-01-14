@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jam
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.26 2007/11/24 16:13:04 grobian Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.27 2008/01/14 20:19:08 dertobi123 Exp $
+
+  14 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org> jam-2.5-r3.ebuild:
+  ppc. stable
 
   24 Nov 2007; Fabian Groffen <grobian@gentoo.org> jam-2.5.ebuild,
   jam-2.5-r3.ebuild:

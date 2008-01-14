@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.7.ebuild,v 1.4 2007/12/20 15:31:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.7.ebuild,v 1.5 2008/01/14 20:13:20 dertobi123 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/d/debootstrap/debootstrap_${PV}.tar.gz mirror
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="sys-devel/binutils
