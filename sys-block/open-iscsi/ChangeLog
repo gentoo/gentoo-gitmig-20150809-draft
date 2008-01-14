@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.14 2008/01/14 01:29:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.15 2008/01/14 02:09:44 robbat2 Exp $
+
+  14 Jan 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Add herd per email.
 
   14 Jan 2008; Robin H. Johnson <robbat2@gentoo.org>
   -files/r438-idbm-file-locking.diff, -files/backward-compile-2.6.13.patch,
