@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.1.ebuild,v 1.9 2007/07/11 19:30:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.1.ebuild,v 1.10 2008/01/14 17:02:18 chainsaw Exp $
 
 inherit kde-functions virtualx eutils toolchain-funcs
 
@@ -29,23 +29,23 @@ DEPEND="$(qt_min_version 3.2)
 	ladcca?		( >=media-libs/ladcca-0.4.0 )"
 
 src_compile() {
-	cd ${WORKDIR}/${MY_P}
+	cd "${WORKDIR}/${MY_P}"
 	local myconf
 	myconf="--disable-suid-build" # instead, use CONFIG_RTC and realtime-lsm
 	use ladcca		|| myconf="${myconf} --disable-ladcca"
 	use debug		&& myconf="${myconf} --enable-debug"
 
 	export LD="$(tc-getLD)"
-	Xeconf ${myconf} || die "configure failed"
+	Xeconf "${myconf}" || die "configure failed"
 
 	emake || die
 }
 
 src_install() {
-	cd ${WORKDIR}/${MY_P}
-	make DESTDIR=${D} install || die "install failed"
+	cd "${WORKDIR}/${MY_P}"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README SECURITY README.*
-	mv ${D}/usr/bin/muse ${D}/usr/bin/museseq
+	mv "${D}/usr/bin/muse" "${D}/usr/bin/museseq"
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.2_pre5.ebuild,v 1.5 2007/01/14 00:35:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.2_pre5.ebuild,v 1.6 2008/01/14 17:02:18 chainsaw Exp $
 
 inherit kde-functions virtualx eutils
 
@@ -31,12 +31,12 @@ DEPEND="$(qt_min_version 3.2)
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-rtctimerfix.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-rtctimerfix.patch"
 }
 
 src_compile() {
-	cd ${WORKDIR}/${MY_P}
+	cd "${WORKDIR}/${MY_P}"
 	local myconf
 	myconf="--disable-suid-build" # instead, use CONFIG_RTC and realtime-lsm
 	use ladcca		|| myconf="${myconf} --disable-ladcca"
@@ -47,10 +47,10 @@ src_compile() {
 }
 
 src_install() {
-	cd ${WORKDIR}/${MY_P}
-	make DESTDIR=${D} install || die "install failed"
+	cd "${WORKDIR}/${MY_P}"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README SECURITY README.*
-	mv ${D}/usr/bin/muse ${D}/usr/bin/museseq
+	mv "${D}/usr/bin/muse" "${D}/usr/bin/museseq"
 }
 
 pkg_postinst() {

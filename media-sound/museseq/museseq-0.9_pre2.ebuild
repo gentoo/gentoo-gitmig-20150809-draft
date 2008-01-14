@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.9_pre2.ebuild,v 1.3 2007/04/15 11:21:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.9_pre2.ebuild,v 1.4 2008/01/14 17:02:18 chainsaw Exp $
 
 inherit kde-functions virtualx eutils
 
@@ -27,6 +27,7 @@ RDEPEND="$(qt_min_version 3.2)
 	lash? ( media-sound/lash )"
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	doc? ( app-text/openjade
 		app-doc/doxygen
 		media-gfx/graphviz )"
