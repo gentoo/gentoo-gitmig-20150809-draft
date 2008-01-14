@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/fwdl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fwdl/ChangeLog,v 1.1 2007/02/06 07:28:39 robbat2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fwdl/ChangeLog,v 1.2 2008/01/14 02:26:20 robbat2 Exp $
+
+  14 Jan 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  update metadata.
 
 *fwdl-1.2.3 (06 Feb 2007)
 
