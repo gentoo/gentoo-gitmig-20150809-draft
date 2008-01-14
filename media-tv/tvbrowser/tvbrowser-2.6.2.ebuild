@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.6.2.ebuild,v 1.2 2008/01/13 19:48:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.6.2.ebuild,v 1.3 2008/01/14 00:31:45 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -145,8 +145,8 @@ src_compile() {
 	# second part: DesktopIndicator
 	cd "${S}/deployment/x11"
 
-	append-flags -fPIC	
-	econf || die "econf failed"	
+	append-flags -fPIC
+	econf || die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -217,4 +217,3 @@ src_install() {
 
 	make_desktop_entry ${PN} "TV Browser" /usr/share/tvbrowser/imgs/tvbrowser128.png
 }
-
