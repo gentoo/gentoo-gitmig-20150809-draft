@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.0.0.ebuild,v 1.1 2008/01/13 19:05:26 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.0.0.ebuild,v 1.2 2008/01/14 17:47:27 ingmar Exp $
 
 EAPI="1"
 inherit cmake-utils eutils flag-o-matic
@@ -41,6 +41,10 @@ src_compile() {
 		sed -e '/find_package(Doxygen)/s/^/#DONOTFIND /' \
 			-i "${S}/CMakeLists.txt" || die "Sed to disable api-docs failed."
 	fi
+
+	# Disable the optional Sesame storage backend until sesame is in portage.
+	sed -e '/find_package(JNI)/s/^/#DONOTFIND /' \
+		-i "${S}/CMakeLists.txt" || die "Sed for Java JNI automagic dependency failed."
 
 	sed -e '/add_subdirectory(test)/s/^/#NOTESTS /' \
 		-e '/enable_testing/s/^/#NOTESTS /' \

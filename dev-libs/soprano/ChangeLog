@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.1 2008/01/13 19:05:26 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.2 2008/01/14 17:47:27 ingmar Exp $
+
+  14 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  soprano-2.0.0.ebuild:
+  Disable the optional Sesame storage backend until sesame is in portage.
 
 *soprano-2.0.0 (13 Jan 2008)
 
