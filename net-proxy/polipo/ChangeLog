@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/polipo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.27 2008/01/07 20:17:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.28 2008/01/14 19:16:16 angelos Exp $
+
+  14 Jan 2008; Christoph Mende <angelos@gentoo.org> polipo-1.0.3.ebuild:
+  Stable on amd64 wrt bug #203753
 
   07 Jan 2008; Alin Năstac <mrness@gentoo.org> files/polipo.initd:
   Make init script compatible with POSIX shells, thanks to Fabrizio Montesi
