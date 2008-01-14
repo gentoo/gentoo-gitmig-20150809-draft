@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsi-initiator-core-tools/iscsi-initiator-core-tools-2.3.ebuild,v 1.1 2005/08/12 20:56:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsi-initiator-core-tools/iscsi-initiator-core-tools-2.3.ebuild,v 1.2 2008/01/14 01:21:54 robbat2 Exp $
 
 inherit flag-o-matic
 
@@ -15,15 +15,14 @@ DEPEND="virtual/libc"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	cd ${S}/ipyxd/
+	cd "${S}"/ipyxd/
 	append-flags -DLINUX -Iinclude/
 	emake all AUTHFLAGS="${CFLAGS}" DEBUGFLAGS="${CFLAGS}" || die "failed to compile"
 }
 
 src_install() {
-	cd ${S}
 	dodoc HOWTO INSTALL README RELEASE_NOTES
-	cd ${S}/ipyxd/
+	cd "${S}"/ipyxd/
 	into /
 	dosbin initiator_authd initiator_ctl initiator_iname
 	dosbin scripts/iscsi* scripts/proc.iscsi* scripts/sysfs.iscsi-*
