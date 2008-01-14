@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.4.46.ebuild,v 1.3 2007/12/24 13:41:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.4.46.ebuild,v 1.4 2008/01/14 19:05:22 angelos Exp $
 
 DESCRIPTION="The VLSI design CAD tool."
 HOMEPAGE="http://www.opencircuitdesign.com/magic/index.html"
@@ -9,7 +9,7 @@ SRC_URI="http://www.opencircuitdesign.com/magic/archive/${P}.tgz \
 
 LICENSE="as-is GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses
