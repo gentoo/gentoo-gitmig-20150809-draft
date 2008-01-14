@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/irqbalance
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.19 2007/08/25 18:06:58 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.20 2008/01/14 16:40:13 chainsaw Exp $
+
+  14 Jan 2008; Tony Vroon <chainsaw@gentoo.org> irqbalance-0.55.ebuild,
+  irqbalance-0.55-r1.ebuild:
+  Add pkgconfig dependency for the Evil Compile Person
+  <bugs@dev.gentooexperimental.org>, closes bug #204717.
 
 *irqbalance-0.55-r1 (25 Aug 2007)
 
