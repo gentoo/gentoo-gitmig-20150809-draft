@@ -1,6 +1,10 @@
 # ChangeLog for games-util/loki_patch
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.8 2007/02/08 22:44:30 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.9 2008/01/15 21:53:38 drac Exp $
+
+  15 Jan 2008; Samuli Suominen <drac@gentoo.org> loki_patch-20050324.ebuild,
+  loki_patch-20051209.ebuild:
+  change dev-util/xdelta dep. to =dev-util/xdelta-1*
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

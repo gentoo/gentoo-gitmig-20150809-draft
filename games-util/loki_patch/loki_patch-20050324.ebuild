@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/loki_patch-20050324.ebuild,v 1.3 2005/12/19 21:52:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/loki_patch-20050324.ebuild,v 1.4 2008/01/15 21:53:38 drac Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc amd64"
 IUSE=""
 
-DEPEND="dev-util/xdelta
+DEPEND="=dev-util/xdelta-1*
 	dev-libs/libxml"
 RDEPEND="games-util/loki_setupdb"
 
