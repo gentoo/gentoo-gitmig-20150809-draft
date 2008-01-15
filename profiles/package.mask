@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8129 2008/01/15 21:47:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8130 2008/01/15 21:48:26 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,6 +24,11 @@
 # Robin H. Johnson <robbat2@gentoo.org> (16 Dec 2007)
 # Masked for LOTS of testing
 =dev-db/mysql-5.0.54*
+
+# Michael Sterrett <mr_bones_@gentoo.org> (15 Jan 2008)
+# Security mask (bug #190835)
+# https://bugs.gentoo.org/show_bug.cgi?id=190835
+games-fps/doomsday
 
 # Michael Sterrett <mr_bones_@gentoo.org> (15 Jan 2008)
 # Beta version for package testing.
