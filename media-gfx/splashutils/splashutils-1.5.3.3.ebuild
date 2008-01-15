@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.3.3.ebuild,v 1.1 2008/01/06 15:13:11 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.3.3.ebuild,v 1.2 2008/01/15 15:50:00 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -65,7 +65,7 @@ src_unpack() {
 	rm "${S}/libs/zlib-${V_ZLIB}/Makefile"
 
 	cd "${S}"
-	ln -sf "${S}" "${WORKDIR}/core"
+	ln -sf "${S}/src" "${WORKDIR}/core"
 
 	if built_with_use sys-devel/gcc vanilla ; then
 		ewarn "Your GCC was built with the 'vanilla' flag set. If you can't compile"
