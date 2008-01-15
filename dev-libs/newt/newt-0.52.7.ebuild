@@ -1,9 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.7.ebuild,v 1.1 2008/01/15 16:13:35 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.7.ebuild,v 1.2 2008/01/15 18:13:23 mr_bones_ Exp $
 
 inherit python toolchain-funcs eutils rpm
-
 
 DESCRIPTION="Redhat's Newt windowing toolkit development files"
 HOMEPAGE="http://www.redhat.com/"
