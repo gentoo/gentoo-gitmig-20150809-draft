@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2-r1.ebuild,v 1.1 2008/01/15 12:09:45 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2-r1.ebuild,v 1.2 2008/01/15 17:40:07 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -66,7 +66,6 @@ src_unpack() {
 		# Gentoo Bubble Icons
 		unpack gentoo-bubble-icons-${BI_VER}.tar.gz
 		cd "${WORKDIR}"/${PN}-0.4.2/icons/gentoo
-
 
 		cp "${FILESDIR}"/index.theme .
 
