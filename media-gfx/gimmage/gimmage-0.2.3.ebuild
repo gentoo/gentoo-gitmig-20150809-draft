@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.1 2007/12/13 10:25:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.2 2008/01/15 00:38:51 maekke Exp $
 
 DESCRIPTION="A slim GTK-based image browser"
 HOMEPAGE="http://gimmage.berlios.de/"
@@ -13,6 +13,7 @@ IUSE="debug"
 
 DEPEND="dev-cpp/cairomm
 	>=dev-cpp/gtkmm-2.6.2
+	dev-util/pkgconfig
 	net-misc/curl
 	sys-apps/file
 	sys-devel/gettext"
