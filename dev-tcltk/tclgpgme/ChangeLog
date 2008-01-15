@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclgpgme
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.32 2008/01/14 19:29:24 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.33 2008/01/15 19:00:32 alonbl Exp $
+
+  15 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> tclgpgme-1.0-r3.ebuild:
+  Fix to ~app-crypt/gpgme-0.3.14
 
   14 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> -files/1.0-Makefile.in.diff,
   -files/1.0-configure.diff, -tclgpgme-1.0-r2.ebuild:

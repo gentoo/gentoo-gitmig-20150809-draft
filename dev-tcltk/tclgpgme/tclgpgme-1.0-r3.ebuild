@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/tclgpgme-1.0-r3.ebuild,v 1.6 2008/01/14 19:01:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/tclgpgme-1.0-r3.ebuild,v 1.7 2008/01/15 19:00:32 alonbl Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
-	=app-crypt/gpgme-0.3.14-r1"
+	~app-crypt/gpgme-0.3.14"
 
 src_unpack() {
 	unpack ${A}
