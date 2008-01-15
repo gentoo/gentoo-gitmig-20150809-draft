@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.4.3.ebuild,v 1.1 2007/11/22 00:21:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.4.3.ebuild,v 1.2 2008/01/15 09:42:35 nyhm Exp $
 
 MY_PN="alleggl"
 DESCRIPTION="A library to mix OpenGL graphics with Allegro routines"
@@ -12,9 +12,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-DEPEND=">=media-libs/allegro-4.2
+RDEPEND=">=media-libs/allegro-4.2
 	virtual/opengl
 	virtual/glu"
+DEPEND="${RDEPEND}
+	x11-proto/xf86vidmodeproto"
 
 S=${WORKDIR}/${MY_PN}
 
