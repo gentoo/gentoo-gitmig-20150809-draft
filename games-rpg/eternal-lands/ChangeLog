@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/eternal-lands
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.37 2007/12/29 03:52:47 rich0 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.38 2008/01/15 19:34:47 rich0 Exp $
+
+*eternal-lands-1.5.0-r1 (15 Jan 2008)
+
+  15 Jan 2008; Richard Freeman <rich0@gentoo.org>
+  +eternal-lands-1.5.0-r1.ebuild:
+  fixed conflict with FEATURES variable - thanks to Jetchko Jekov for spotting it
 
   29 Dec 2007; Richard Freeman <rich0@gentoo.org>
   eternal-lands-1.5.0.ebuild:
