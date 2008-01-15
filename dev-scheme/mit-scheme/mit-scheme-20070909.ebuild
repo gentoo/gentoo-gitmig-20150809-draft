@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/mit-scheme-20070909.ebuild,v 1.1 2007/11/06 15:43:51 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/mit-scheme-20070909.ebuild,v 1.2 2008/01/15 01:25:00 cla Exp $
 
 MY_SUF="ix86-gnu-linux"
 DESCRIPTION="GNU/MIT-Scheme Binary package"
@@ -16,7 +16,8 @@ RDEPEND="x11-libs/libXau
 		 x11-libs/libSM
 		 x11-libs/libXdmcp
 		 x11-libs/libX11
-		 x11-libs/libICE"
+		 x11-libs/libICE
+		 app-crypt/mhash"
 
 src_install() {
 	exeinto /opt/mit-scheme/bin/
