@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/allison
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.1 2008/01/15 22:22:55 rbrown Exp $
+
+*allison-2.0.2 (15 Jan 2008)
+
+  15 Jan 2008; Richard Brown <rbrown@gentoo.org> +allison-2.0.2.ebuild:
+  Initial import.
+
