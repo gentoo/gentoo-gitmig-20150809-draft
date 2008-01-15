@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/opcion
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opcion/ChangeLog,v 1.12 2007/10/24 06:48:35 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opcion/ChangeLog,v 1.13 2008/01/15 03:19:37 dirtyepic Exp $
+
+  15 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> opcion-1.1.1-r1.ebuild:
+  Add missing app-arch/unzip DEPEND for bug #205836.
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -opcion-1.1.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opcion/opcion-1.1.1-r1.ebuild,v 1.4 2007/08/24 19:00:08 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opcion/opcion-1.1.1-r1.ebuild,v 1.5 2008/01/15 03:19:37 dirtyepic Exp $
 
 inherit java-pkg-2
 
@@ -17,7 +17,8 @@ COMMON_DEP="=dev-java/jgoodies-looks-1.2*"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
-	${COMMON_DEP}"
+	${COMMON_DEP}
+	app-arch/unzip"
 
 S=${WORKDIR}
 
