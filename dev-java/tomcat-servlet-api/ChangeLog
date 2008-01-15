@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/tomcat-servlet-api
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.35 2007/11/03 02:01:25 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.36 2008/01/15 16:19:10 elvanor Exp $
+
+*tomcat-servlet-api-5.5.25-r1 (15 Jan 2008)
+
+  15 Jan 2008; Jean-Noël Rivasseau <elvanor@gentoo.org>
+  +files/jsp-api-2.0-manifest, +files/servlet-api-2.4-manifest,
+  +tomcat-servlet-api-5.5.25-r1.ebuild:
+  Minor change to produce OSGi usable jars.
 
 *tomcat-servlet-api-4.1.36 (03 Nov 2007)
 *tomcat-servlet-api-3 (03 Nov 2007)
