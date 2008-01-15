@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.2.ebuild,v 1.7 2008/01/14 19:32:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.2.ebuild,v 1.8 2008/01/15 16:52:54 ranger Exp $
 
 inherit eutils
 
 DESCRIPTION="Interactive tool for astronomical ephemeris and sky simulation"
 SRC_URI="http://www.clearskyinstitute.com/xephem/${P}.tar.gz"
 HOMEPAGE="http://www.clearskyinstitute.com/xephem"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 SLOT="0"
 LICENSE="as-is"
