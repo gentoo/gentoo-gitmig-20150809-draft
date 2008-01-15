@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.127 2008/01/15 01:07:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.128 2008/01/15 01:14:20 maekke Exp $
+
+  15 Jan 2008; Markus Meier <maekke@gentoo.org> files/blender.desktop:
+  fix .desktop entry
 
   15 Jan 2008; Markus Meier <maekke@gentoo.org> blender-2.43.ebuild,
   blender-2.45.ebuild:
