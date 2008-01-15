@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cellwriter/cellwriter-1.3.1.ebuild,v 1.1 2007/11/18 00:54:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cellwriter/cellwriter-1.3.1.ebuild,v 1.2 2008/01/15 00:53:19 maekke Exp $
 
 DESCRIPTION="Grid-entry natural handwriting input panel"
 HOMEPAGE="http://risujin.org/cellwriter/"
@@ -15,7 +15,8 @@ RDEPEND="x11-libs/libXtst
 	>=x11-libs/gtk+-2.10
 	gnome? ( gnome-base/libgnome )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	x11-proto/inputproto"
 
 src_compile() {
 	econf $(use_with gnome) || die "econf failed"
