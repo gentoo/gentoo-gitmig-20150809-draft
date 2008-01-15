@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/bzrtools-1.0.0.ebuild,v 1.1 2007/12/14 09:32:41 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/bzrtools-1.1.0.ebuild,v 1.1 2008/01/15 09:29:36 lucass Exp $
 
 NEED_PYTHON=2.4
 
