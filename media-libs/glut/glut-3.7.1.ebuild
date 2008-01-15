@@ -1,9 +1,7 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.32 2006/10/31 19:22:01 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.33 2008/01/15 09:04:50 nyhm Exp $
 
-WANT_AUTOMAKE=latest
-WANT_AUTOCONF=latest
 inherit autotools eutils multilib
 
 MESA_VER="5.0"
@@ -20,9 +18,10 @@ IUSE=""
 RDEPEND="virtual/opengl
 	virtual/glu
 	!media-libs/freeglut"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	x11-proto/inputproto"
 
-S="${WORKDIR}/Mesa-${MESA_VER}"
+S=${WORKDIR}/Mesa-${MESA_VER}
 
 src_unpack() {
 	unpack ${A}
@@ -44,19 +43,18 @@ src_compile() {
 	# --without-glut flag actually refers to whether mesa would build with or
 	# without *external* glut, in this case we want the internal one
 	econf --without-glut || die
-	cd "${S}"/src-glut
-	emake || die "emake failed"
+	emake -C src-glut || die "emake failed"
 }
 
 src_install() {
 	insinto /usr/$(get_libdir)
-	newins "${S}"/src-glut/.libs/libglut.lai libglut.la || die "libtools"
+	newins src-glut/.libs/libglut.lai libglut.la || die "libtools"
 
-	dolib.so "${S}"/src-glut/.libs/libglut.so.${PV}
+	dolib.so src-glut/.libs/libglut.so.${PV} || die "dolib.so"
 	dosym libglut.so.${PV} /usr/$(get_libdir)/libglut.so || die "libraries"
 	dosym libglut.so.${PV} /usr/$(get_libdir)/libglut.so.${PV//\.*/} \
 		|| die "libraries"
 
 	insinto /usr/include/GL
-	doins "${S}"/include/GL/glut* || die "headers"
+	doins include/GL/glut* || die "headers"
 }
