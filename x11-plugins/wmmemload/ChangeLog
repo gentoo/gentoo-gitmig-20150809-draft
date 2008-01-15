@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmemload
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.17 2007/07/22 04:53:18 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.18 2008/01/15 08:23:09 drac Exp $
+
+  15 Jan 2008; Samuli Suominen <drac@gentoo.org> wmmemload-0.1.6.ebuild:
+  Run eautoreconf to avoid configure script calling them at build time, fix
+  HOMEPAGE, fix SRC_URI and use DESTDIR.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmmemload-0.1.6.ebuild:
