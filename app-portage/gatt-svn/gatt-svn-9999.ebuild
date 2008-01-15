@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.19 2008/01/13 23:55:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.20 2008/01/15 12:46:51 opfer Exp $
 
 inherit subversion
 
@@ -40,14 +40,12 @@ src_compile() {
 	econf || die "econf failed"
 	emake || die "emake failed"
 	use doc && doxygen
-	cd doc
-	makeinfo gatt.texi -o gatt.info
 }
 src_install() {
 	emake DESTDIR="${D}" install || die "installing ${PF} failed"
 	dodoc README NEWS AUTHORS ChangeLog doc/TUTORIAL
 	newdoc .todo TODO
-	doinfo doc/gatt.info
+
 	if use doc; then
 		dohtml doc/html/*
 	fi
