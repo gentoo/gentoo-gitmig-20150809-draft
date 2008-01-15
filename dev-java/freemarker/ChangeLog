@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/freemarker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.15 2008/01/12 16:45:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.16 2008/01/15 08:42:43 nelchael Exp $
+
+*freemarker-2.3.11 (15 Jan 2008)
+
+  15 Jan 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/freemarker-2.3.10-gentoo.patch,
+  +files/freemarker-2.3.11-gentoo.patch, -freemarker-2.3.10.ebuild,
+  +freemarker-2.3.11.ebuild:
+  Version bump.
 
   12 Jan 2008; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
   Remove myself from <maintainer>.

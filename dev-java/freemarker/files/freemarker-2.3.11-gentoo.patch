@@ -1,0 +1,60 @@
+diff -Nru freemarker-2.3.11.vanilla/build.xml freemarker-2.3.11/build.xml
+--- freemarker-2.3.11.vanilla/build.xml	2008-01-15 09:38:19.000000000 +0100
++++ freemarker-2.3.11/build.xml	2008-01-15 09:39:30.000000000 +0100
+@@ -69,21 +69,25 @@
+         <pathelement path="${lib.log4j}"/>
+         <pathelement path="${lib.rhino}"/>
+         <pathelement path="${java.class.path}"/>
++        <fileset dir="lib" includes="*.jar"/>
+     </path>
+     
+     <path id="compile.classpath">
+         <path refid="compile.nojsp.classpath"/>
+         <pathelement path="${lib.jsp21}"/>
++        <fileset dir="lib" includes="*.jar"/>
+     </path>
+ 
+     <path id="compile.jsp1.classpath">
+         <path refid="compile.nojsp.classpath"/>
+         <pathelement path="${lib.jsp12}"/>
++        <fileset dir="lib" includes="*.jar"/>
+     </path>
+ 
+     <path id="compile.jsp2.classpath">
+ 	<path refid="compile.nojsp.classpath"/>
+ 	<pathelement path="${lib.jsp20}"/>
++        <fileset dir="lib" includes="*.jar"/>
+     </path>
+     
+     <path id="compile.classpath.testcases">
+@@ -92,6 +96,7 @@
+         <pathelement path="${lib.jdom}"/>
+         <pathelement path="${lib.servlet}"/>
+         <pathelement path="${lib.jsp20}"/>
++        <fileset dir="lib" includes="*.jar"/>
+     </path>
+ 
+     <path id="compile.classpath.javadoc">
+@@ -110,12 +115,14 @@
+         <pathelement path="${src.dir}"/>
+         <pathelement path="${build.javacc.dir}"/>
+         <pathelement path="${java.class.path}"/>
++        <fileset dir="lib" includes="*.jar"/>
+     </path>
+ 
+     <path id="compile.classpath.examples">
+         <pathelement path="${lib.servlet}"/>
+         <pathelement path="${lib.dir}/freemarker.jar"/>
+         <pathelement path="${lib.struts}"/>
++        <fileset dir="lib" includes="*.jar"/>
+     </path>
+     
+     <path id="full.classpath">
+@@ -131,6 +138,7 @@
+         <pathelement path="${lib.logkit}"/>
+         <pathelement path="${lib.log4j}"/>
+         <pathelement path="${java.class.path}"/>
++        <fileset dir="lib" includes="*.jar"/>
+     </path>
+     
+     

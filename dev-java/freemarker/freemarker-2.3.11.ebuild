@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.10.ebuild,v 1.2 2007/06/18 17:29:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.11.ebuild,v 1.1 2008/01/15 08:42:43 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-nodeps"
