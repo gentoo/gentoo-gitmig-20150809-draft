@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.7.4.ebuild,v 1.1 2007/12/09 16:15:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.7.6.ebuild,v 1.1 2008/01/15 17:16:00 armin76 Exp $
 
 inherit eutils fdo-mime
 
@@ -11,16 +11,16 @@ SRC_URI="mirror://sourceforge/${PN}/${P}_src.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome"
+IUSE="gnome nls"
 
 RDEPEND=">=x11-libs/gtk+-2.6"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-MAKEOPTS="${MAKEOPTS} -j1"
-
 # test doesn't work
 RESTRICT="test"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
@@ -35,6 +35,9 @@ src_unpack() {
 				-e 's/AUTODETECT_GNOME_VFS=1/#AUTODETECT_GNOME_VFS=1/g' \
 			 Makefile || die "gnome sed failed"
 	fi
+
+	! use nls && sed -i -e 's/notecase$(EXE) poinstall/notecase$(EXE)/g' \
+		Makefile || die "nls sed failed"
 }
 
 src_install() {
