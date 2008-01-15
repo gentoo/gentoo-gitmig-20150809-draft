@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libezV24
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libezV24/ChangeLog,v 1.8 2007/12/22 20:28:20 maekke Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libezV24/ChangeLog,v 1.9 2008/01/15 09:01:17 drac Exp $
+
+  15 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  files/libezV24-0.1.1-build.patch, libezV24-0.1.1.ebuild:
+  Fix patch to stop pre-stripping libraries, to support multilib and amd64
+  stable wrt #202668.
 
   22 Dec 2007; Markus Meier <maekke@gentoo.org> libezV24-0.1.1.ebuild:
   x86 stable, bug #202668
