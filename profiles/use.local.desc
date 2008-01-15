@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3299 2008/01/15 09:15:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3300 2008/01/15 12:07:40 cla Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2171,3 +2171,7 @@ xfce-base/xfce4-extras:cpufreq - Meta pulls in xfce4-cpu-freq dependency.
 xfce-base/xfdesktop:file-icons - Build support for application launchers using Thunar and libexo.
 xfce-base/xfdesktop:menu-plugin - Build Menu plug-in for panel.
 xfce-extra/thunar-thumbnailers:grace - Enable support for grace thumbnails.
+x11-themes/gentoo-artwork:icons - Install icons
+x11-themes/gentoo-artwork:pixmaps - Install pixmaps
+x11-themes/gentoo-artwork:grub - Install extra grub themes
+x11-themes/gentoo-artwork:lilo - Install extra lilo themes
