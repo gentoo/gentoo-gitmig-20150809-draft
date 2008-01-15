@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.45.ebuild,v 1.3 2007/12/30 23:40:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.45.ebuild,v 1.4 2008/01/15 01:07:08 maekke Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -32,6 +32,7 @@ RDEPEND=">=dev-libs/openssl-0.9.6
 
 DEPEND="dev-util/scons
 	x11-libs/libXt
+	x11-proto/inputproto
 	${RDEPEND}"
 
 blend_with() {
@@ -41,32 +42,32 @@ blend_with() {
 	fi
 	if useq $1; then
 		echo "WITH_BF_${UWORD}=1" | tr '[:lower:]' '[:upper:]' \
-			>> ${S}/user-config.py
+			>> "${S}"/user-config.py
 	else
 		echo "WITH_BF_${UWORD}=0" | tr '[:lower:]' '[:upper:]' \
-			>> ${S}/user-config.py
+			>> "${S}"/user-config.py
 	fi
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/release/plugins
+	cd "${S}"/release/plugins
 	chmod 755 bmake
-	cp -pPR ${S}/source/blender/blenpluginapi include
+	cp -pPR "${S}"/source/blender/blenpluginapi include
 
-	cd ${S}
-	epatch ${FILESDIR}/blender-2.37-dirs.patch
-	epatch ${FILESDIR}/blender-2.44-scriptsdir.patch
-	epatch ${FILESDIR}/blender-2.44-swscale.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/blender-2.37-dirs.patch
+	epatch "${FILESDIR}"/blender-2.44-scriptsdir.patch
+	epatch "${FILESDIR}"/blender-2.44-swscale.patch
 
 	if use ffmpeg ; then
-		cd ${S}/extern
+		cd "${S}"/extern
 		rm -rf ffmpeg
 	fi
 	# pass compiler flags to the scons build system
 	# and set python version to current version in use
 	python_version
-	cat <<- EOF >> ${S}/user-config.py
+	cat <<- EOF >> "${S}"/user-config.py
 		CFLAGS += '${CFLAGS}'
 		BF_PYTHON_VERSION="${PYVER}"
 		BF_PYTHON_INC="/usr/include/python${PYVER}"
@@ -93,43 +94,43 @@ src_compile() {
 	scons ${MAKEOPTS/-l[0-9]} || die \
 	"!!! Please add ${S}/scons.config when filing bugs reports to bugs.gentoo.org"
 
-	cd ${S}/release/plugins
+	cd "${S}"/release/plugins
 	emake || die
 }
 
 src_install() {
 	exeinto /usr/bin/
-	doexe ${WORKDIR}/install/linux2/blender
+	doexe "${WORKDIR}"/install/linux2/blender
 
 	dodir /usr/share/${PN}
 
 	exeinto /usr/$(get_libdir)/${PN}/textures
-	doexe ${S}/release/plugins/texture/*.so
+	doexe "${S}"/release/plugins/texture/*.so
 	exeinto /usr/$(get_libdir)/${PN}/sequences
-	doexe ${S}/release/plugins/sequence/*.so
+	doexe "${S}"/release/plugins/sequence/*.so
 	insinto /usr/include/${PN}
-	doins ${S}/release/plugins/include/*.h
+	doins "${S}"/release/plugins/include/*.h
 
 	if use nls ; then
-		mv ${WORKDIR}/install/linux2/.blender/{.Blanguages,.bfont.ttf} \
-			${D}/usr/share/${PN}
-		mv ${WORKDIR}/install/linux2/.blender/locale \
-			${D}/usr/share/locale
+		mv "${WORKDIR}"/install/linux2/.blender/{.Blanguages,.bfont.ttf} \
+			"${D}"/usr/share/${PN}
+		mv "${WORKDIR}"/install/linux2/.blender/locale \
+			"${D}"/usr/share/locale
 	fi
 
-	mv ${WORKDIR}/install/linux2/.blender/scripts ${D}/usr/share/${PN}
+	mv "${WORKDIR}"/install/linux2/.blender/scripts "${D}"/usr/share/${PN}
 
 	insinto /usr/share/pixmaps
-	doins ${FILESDIR}/${PN}.png
+	doins "${FILESDIR}"/${PN}.png
 	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop
+	doins "${FILESDIR}"/${PN}.desktop
 
-	dodoc COPYING INSTALL README
+	dodoc INSTALL README
 }
 
 pkg_preinst(){
 	if [ -h "${ROOT}/usr/$(get_libdir)/blender/plugins/include" ];
 	then
-		rm -f ${ROOT}/usr/$(get_libdir)/blender/plugins/include
+		rm -f "${ROOT}"/usr/$(get_libdir)/blender/plugins/include
 	fi
 }

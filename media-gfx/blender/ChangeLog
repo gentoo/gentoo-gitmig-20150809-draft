@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.126 2007/12/30 23:40:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.127 2008/01/15 01:07:08 maekke Exp $
+
+  15 Jan 2008; Markus Meier <maekke@gentoo.org> blender-2.43.ebuild,
+  blender-2.45.ebuild:
+  add x11-proto/inputproto dep (bug #205853) and quotes
+
+  15 Jan 2008; Markus Meier <maekke@gentoo.org> blender-2.43.ebuild,
+  blender-2.45.ebuild:
+  add x11-proto/inputproto dep, bug #205853
 
   10 Jan 2008; Luca Barbato <lu_zero@gentoo.org> blender-2.43.ebuild,
   blender-2.44-r1.ebuild, blender-2.45.ebuild:
