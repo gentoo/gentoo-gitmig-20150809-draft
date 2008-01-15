@@ -1,8 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.8.ebuild,v 1.9 2007/11/11 21:54:42 tupone Exp $
-
-WANT_AUTOMAKE="1.8"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.8.ebuild,v 1.10 2008/01/15 08:42:13 nyhm Exp $
 
 inherit autotools eutils
 
@@ -15,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.2
-	>=media-libs/sdl-image-1.2
+RDEPEND="media-libs/libsdl
+	media-libs/sdl-image
 	=dev-libs/libsigc++-1.2*
 	>=media-libs/freetype-2
 	media-libs/libpng
@@ -24,18 +22,20 @@ DEPEND=">=media-libs/libsdl-1.2
 	media-libs/jpeg
 	dev-libs/expat
 	sys-libs/zlib"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-header.patch
-	epatch "${FILESDIR}"/${P}-asneeded.patch
-
-	eautomake
+	epatch \
+		"${FILESDIR}"/${P}-header.patch \
+		"${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS README* doc/{RELEASENOTES,TODO}
 	newdoc TODO ROADMAP
 }
