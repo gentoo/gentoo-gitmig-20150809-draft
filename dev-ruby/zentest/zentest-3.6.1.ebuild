@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/zentest-3.6.1.ebuild,v 1.5 2007/10/14 05:49:24 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/zentest-3.6.1.ebuild,v 1.6 2008/01/15 04:38:00 nichoj Exp $
 
-inherit ruby gems
+inherit gems
 
 MY_P=${P/zentest/ZenTest}
 S=${WORKDIR}/${MY_P}
@@ -19,7 +19,4 @@ KEYWORDS="amd64 ia64 ~ppc ~ppc64 x86"
 SLOT="0"
 IUSE=""
 
-USE_RUBY="ruby18"
-DEPEND="virtual/ruby
-	>=dev-ruby/rubygems-0.9.1
-	>=dev-ruby/hoe-1.2.2"
+DEPEND=">=dev-ruby/hoe-1.2.2"
