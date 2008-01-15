@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/dboxfe-0.1.3.ebuild,v 1.2 2007/11/19 20:05:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/dboxfe-0.1.3.ebuild,v 1.3 2008/01/15 09:25:01 nyhm Exp $
 
-inherit qt4 games
+inherit eutils qt4 games
 
 DESCRIPTION="Creates and manages configuration files for DOSBox"
 HOMEPAGE="http://chmaster.freeforge.net/dboxfe-project.htm"
