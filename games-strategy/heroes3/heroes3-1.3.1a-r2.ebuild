@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.6 2007/07/23 18:27:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.7 2008/01/15 21:51:38 drac Exp $
 
 #	[x] Base Install Required (+4 MB)
 #	[x] Scenarios (+7 MB)
@@ -41,7 +41,7 @@ KEYWORDS="~ppc ~x86"
 RESTRICT="strip"
 
 DEPEND="virtual/libc
-	dev-util/xdelta
+	=dev-util/xdelta-1*
 	games-util/loki_patch"
 RDEPEND="!ppc? ( sys-libs/lib-compat-loki )"
 
