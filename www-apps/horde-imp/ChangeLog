@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-imp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.37 2008/01/13 22:42:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.38 2008/01/15 05:55:11 jer Exp $
+
+  15 Jan 2008; Jeroen Roovers <jer@gentoo.org> horde-imp-4.1.6.ebuild:
+  Stable for HPPA (bug #205377).
 
   13 Jan 2008; Markus Meier <maekke@gentoo.org> horde-imp-4.1.6.ebuild:
   x86 stable, security bug #205377
