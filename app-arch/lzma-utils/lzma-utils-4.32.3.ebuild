@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma-utils/lzma-utils-4.32.3.ebuild,v 1.5 2008/01/13 15:03:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma-utils/lzma-utils-4.32.3.ebuild,v 1.6 2008/01/15 15:42:33 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://tukaani.org/lzma/lzma-${PV/_}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 m68k ppc ppc64 s390 sh ~sparc x86"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 m68k ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="!app-arch/lzma"
