@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/rescan-scsi-bus-1.25-r1.ebuild,v 1.2 2008/01/15 10:18:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/rescan-scsi-bus-1.25-r1.ebuild,v 1.3 2008/01/15 16:23:26 ranger Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.garloff.de/kurt/linux/${SRC_NAME}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND=""
