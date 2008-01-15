@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.202 2008/01/15 15:51:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.203 2008/01/15 20:51:19 beandog Exp $
+
+  15 Jan 2008; Steve Dibb <beandog@gentoo.org> mythtv-0.21_pre15447.ebuild:
+  Add ivtv configuration flag
 
 *mythtv-0.21_pre15447 (15 Jan 2008)
 
