@@ -1,20 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.2.ebuild,v 1.5 2008/01/15 16:13:35 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.7.ebuild,v 1.1 2008/01/15 16:13:35 xmerlin Exp $
 
 inherit python toolchain-funcs eutils rpm
 
-# Revision of the RPM. Shouldn't affect us, as we're just grabbing the source
-# tarball out of it
-RPMREV="9"
 
 DESCRIPTION="Redhat's Newt windowing toolkit development files"
 HOMEPAGE="http://www.redhat.com/"
-SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.src.rpm"
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	http://dev.gentoo.org/~xmerlin/misc/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gpm tcl"
 
 RDEPEND="=sys-libs/slang-1*
@@ -34,19 +32,11 @@ src_unpack() {
 		sed -i -e 's:-lslang:-lslang -lncurses:g' ${S}/Makefile.in
 	fi
 
-	epatch "${FILESDIR}"/${P}-scrollbars.patch
-	epatch "${FILESDIR}"/${P}-pgupdown-crash.patch
-	epatch "${FILESDIR}"/${P}-screensize.patch
-	epatch "${FILESDIR}"/${P}-cbtpos.patch
-	epatch "${FILESDIR}"/${P}-focus.patch
-	epatch "${FILESDIR}"/${P}-cursor.patch
-	epatch "${FILESDIR}"/${P}-colors.patch
-	epatch "${FILESDIR}"/${P}-pyexample.patch
-	epatch "${FILESDIR}"/${P}-dwchar.patch
-
 	if ! use tcl; then
-		epatch "${FILESDIR}"/${P}-notcl.patch
+		epatch "${FILESDIR}"/${P}-notcl.patch || die
 	fi
+
+	epatch "${FILESDIR}"/${P}-DESTDIR.patch || die
 }
 
 src_compile() {
@@ -68,8 +58,9 @@ src_install () {
 	# if it fails, that means something in src_compile() didn't build properly
 	# not parallel safe
 	emake \
-		prefix="${D}/usr" \
-		libdir="${D}/usr/$(get_libdir)" \
+		DESTDIR="${D}" \
+		prefix="/usr" \
+		libdir="/usr/$(get_libdir)" \
 		PYTHONVERS="python${PYVER}" \
 		RPM_OPT_FLAGS="ERROR" \
 		install || die "make install failed"
