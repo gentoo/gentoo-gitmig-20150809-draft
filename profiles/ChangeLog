@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.998 2008/01/15 18:46:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.999 2008/01/15 18:50:24 alonbl Exp $
+
+  15 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
+  Fix gnupg-2.0.8 mask
 
   15 Jan 2008; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Replace amuled USE-flag with daemon
