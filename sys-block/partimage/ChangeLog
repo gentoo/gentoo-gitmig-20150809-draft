@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/partimage
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.30 2008/01/15 12:12:04 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.31 2008/01/15 12:22:20 xmerlin Exp $
+
+  15 Jan 2008; Christian Zoffoli <xmerlin@gentoo.org> files/partimaged.pam:
+  Recommit pam file.
 
   15 Jan 2008; Christian Zoffoli <xmerlin@gentoo.org> files/partimaged.init:
   Fixed init, closed bug #192421.

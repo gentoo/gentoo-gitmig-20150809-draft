@@ -1,12 +1,11 @@
 # PAM config file for Partimaged
 
-auth 	required	pam_unix.so
-auth	required	pam.warn.so
-auth	sufficient	pam_userdb.so \
-	db=/etc/partimaged/passwd
-auth 	required	pam_listfile.so \
+auth required pam_unix.so
+auth required pam_warn.so
+auth required pam_listfile.so \
 	onerr=fail item=user sense=allow \
 	file=/etc/partimaged/partimagedusers
 
-account	sufficient	pam_userdb.so \
-	debug db=/etc/partimaged/passwd
+account    include      system-auth
+session    include      system-auth
+
