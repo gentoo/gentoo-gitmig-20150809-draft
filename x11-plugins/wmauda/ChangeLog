@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmauda
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.10 2008/01/14 10:21:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.11 2008/01/15 17:58:26 opfer Exp $
+
+  15 Jan 2008; Christian Faulhammer <opfer@gentoo.org> wmauda-0.7.ebuild:
+  stable x86, bug 198820
 
   14 Jan 2008; Samuli Suominen <drac@gentoo.org> wmauda-0.7.ebuild:
   Check for use dbus in audacious, needed both compile and runtime. Depend on
