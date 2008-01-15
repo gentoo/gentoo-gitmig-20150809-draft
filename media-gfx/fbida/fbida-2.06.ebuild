@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.06.ebuild,v 1.3 2007/07/22 09:54:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.06.ebuild,v 1.4 2008/01/15 15:32:07 spock Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,10 +11,9 @@ SRC_URI="http://dl.bytesex.org/releases/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="png jpeg gif tiff curl lirc X fbcon pdf"
+IUSE="png gif tiff curl lirc X fbcon pdf"
 
-RDEPEND="jpeg? ( >=media-libs/jpeg-6b )
-	png? ( media-libs/libpng )
+RDEPEND="png? ( media-libs/libpng )
 	gif? ( media-libs/giflib )
 	pdf? ( virtual/ghostscript media-libs/tiff )
 	tiff? ( media-libs/tiff )
@@ -26,6 +25,7 @@ RDEPEND="jpeg? ( >=media-libs/jpeg-6b )
 		virtual/motif
 	)
 	!media-gfx/fbi
+	>=media-libs/jpeg-6b
 	media-libs/libexif
 	>=media-libs/freetype-2.0
 	>=media-libs/fontconfig-2.2
@@ -36,18 +36,18 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -e 's/DGifOpenFileName,ungif/DGifOpenFileName,gif/' \
-	    -e 's/-lungif/-lgif/' -i ${S}/GNUmakefile
+	    -e 's/-lungif/-lgif/' -i "${S}/GNUmakefile"
 
 	if [[ `gcc-major-version` -lt 4 ]]; then
-		sed	-e 's/-Wno-pointer-sign//' -i ${S}/GNUmakefile
+		sed	-e 's/-Wno-pointer-sign//' -i "${S}/GNUmakefile"
 	fi
 
 	# We don't want the binaries to be stripped automatically.
-	sed -i -e 's/$(INSTALL) -s/$(INSTALL)/' ${S}/mk/Variables.mk
+	sed -i -e 's/$(INSTALL) -s/$(INSTALL)/' "${S}/mk/Variables.mk"
 
-	epatch ${FILESDIR}/fbida-2.05-asmpage-fix.patch
+	epatch "${FILESDIR}/fbida-2.05-asmpage-fix.patch"
 }
 
 src_compile() {
@@ -64,7 +64,7 @@ src_compile() {
 			option="no"
 		fi
 
-		sed -e "s/${config}.*/${config} := ${option}/" -i ${S}/Make.config
+		sed -e "s/${config}.*/${config} := ${option}/" -i "${S}/Make.config"
 	}
 
 	set_feat fbcon 	HAVE_LINUX_FB_H
@@ -83,13 +83,13 @@ src_compile() {
 
 src_install() {
 	make \
-		DESTDIR=${D} \
+		DESTDIR="${D}" \
 		prefix=/usr \
 		install || die
 	dodoc README
 
 	if ! use pdf; then
-		rm -f ${D}/usr/bin/fbgs ${D}/usr/share/man/man1/fbgs.1
+		rm -f "${D}"/usr/bin/fbgs "${D}"/usr/share/man/man1/fbgs.1
 	fi
 
 	if use X ; then
