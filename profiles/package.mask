@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8125 2008/01/15 15:13:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8126 2008/01/15 15:48:02 robbat2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -656,10 +656,6 @@ x11-wm/kahakai
 #=app-emulation/vmware-player-1.0.2.29634
 #=app-emulation/vmware-player-1.0.3.34682-r1
 =app-emulation/vmware-player-2.0.0.45731
-
-# Robin H. Johnson <robbat2@gentoo.org> (20 Sep 2007)
-# last rites
-dev-util/bk_client
 
 # Daniel Black <dragonheart@gentoo.org> (14 Sep 2007)
 # Added for testing libssh2
