@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8128 2008/01/15 18:50:24 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8129 2008/01/15 21:47:06 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,6 +24,12 @@
 # Robin H. Johnson <robbat2@gentoo.org> (16 Dec 2007)
 # Masked for LOTS of testing
 =dev-db/mysql-5.0.54*
+
+# Michael Sterrett <mr_bones_@gentoo.org> (15 Jan 2008)
+# Beta version for package testing.
+# Don't even think about filing bugs in bugzilla about this version.
+# IRC and email comments welcome.
+>=games-strategy/wesnoth-1.3.14
 
 # Raúl Porcel <armin76@gentoo.org> (15 Jan 2008)
 # Pending removal 15 Feb 2008, upstream discontinued the software
