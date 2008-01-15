@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ketchup-0.9.8.ebuild,v 1.3 2007/04/20 21:05:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ketchup-0.9.8.ebuild,v 1.4 2008/01/15 15:28:02 fmccor Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc x86"
 IUSE="doc"
 
 S=${WORKDIR}
