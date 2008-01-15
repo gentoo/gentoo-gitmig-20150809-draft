@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/mythappearance
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythappearance/ChangeLog,v 1.1 2008/01/15 16:31:21 cardoe Exp $
+
+*mythappearance-0.21_pre15448 (15 Jan 2008)
+
+  15 Jan 2008; Doug Klima <cardoe@gentoo.org> +metadata.xml,
+  +mythappearance-0.21_pre15448.ebuild:
+  add trunk ebuild for mythappearance
+
