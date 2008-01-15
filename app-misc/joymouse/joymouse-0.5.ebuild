@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joymouse/joymouse-0.5.ebuild,v 1.2 2006/06/08 09:46:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joymouse/joymouse-0.5.ebuild,v 1.3 2008/01/15 09:57:41 nyhm Exp $
 
 DESCRIPTION="An application that translates joystick events to mouse events"
 HOMEPAGE="http://sourceforge.net/projects/joymouse-linux"
@@ -11,10 +11,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~x86"
 IUSE=""
 
-DEPEND="x11-proto/xextproto"
-RDEPEND="x11-libs/libX11 x11-libs/libXtst"
+DEPEND="x11-proto/xextproto
+	x11-proto/inputproto"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXtst"
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS README
 }
