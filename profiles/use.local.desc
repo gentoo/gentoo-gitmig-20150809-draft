@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3298 2008/01/14 17:57:53 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3299 2008/01/15 09:15:29 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1802,7 +1802,6 @@ sci-mathematics/maxima:clisp - adds clisp support to maxima
 sci-mathematics/maxima:cmucl - adds cmucl (lisp) support to maxima
 sci-mathematics/maxima:gcl - adds gcl (lisp) support to maxima
 sci-mathematics/maxima:sbcl - adds sbcl (lisp) support to maxima
-sci-mathematics/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
 sci-mathematics/nusmv:minisat - Enable support for MiniSat.
 sci-mathematics/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to sci-mathematics/octave (may be merged with hdf when opendx is completed)
 sci-mathematics/octave-forge:qhull - Adds media-libs/qhull (geometric extensions) support
