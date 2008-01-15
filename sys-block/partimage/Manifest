@@ -73,6 +73,46 @@ AUX partimage-0.6.4-xfs.patch 1022 RMD160 ea6c7649aa2afc40b4bf0279ebc017f8a8d97b
 MD5 fae3903b7b55d99152f68626bbd601e7 files/partimage-0.6.4-xfs.patch 1022
 RMD160 ea6c7649aa2afc40b4bf0279ebc017f8a8d97b3e files/partimage-0.6.4-xfs.patch 1022
 SHA256 77c7571f31bf6897ce8d0547150a5c48ce6cd56d8cabcb3b5617bf617566e823 files/partimage-0.6.4-xfs.patch 1022
+AUX partimage-0.6.6-andre-przywara_amd64.patch 35060 RMD160 cad56cec4a2926cc0b6de8628e505d145398f711 SHA1 1f42a1be139109d36d0a6b0aaca3b4a50fd7fce1 SHA256 23f07b7a41c7a5ad586be71ecbf081fd46fcb83335aa34f9a12fb4f04d904f86
+MD5 de4fae223c11be79f20363a250b3e60f files/partimage-0.6.6-andre-przywara_amd64.patch 35060
+RMD160 cad56cec4a2926cc0b6de8628e505d145398f711 files/partimage-0.6.6-andre-przywara_amd64.patch 35060
+SHA256 23f07b7a41c7a5ad586be71ecbf081fd46fcb83335aa34f9a12fb4f04d904f86 files/partimage-0.6.6-andre-przywara_amd64.patch 35060
+AUX partimage-0.6.6-andre-przywara_warnings.patch 1367 RMD160 0edfa68cef522a7697a32eb97d636122ce346fa7 SHA1 89f4825299758c803db8a84cb51b373a5f66cea3 SHA256 da0c5e224dbb5e308622277a3aa997ce8335fe9758886b1a9813b983660116ec
+MD5 5867a215eb71a8204ac53b2c3219ba2e files/partimage-0.6.6-andre-przywara_warnings.patch 1367
+RMD160 0edfa68cef522a7697a32eb97d636122ce346fa7 files/partimage-0.6.6-andre-przywara_warnings.patch 1367
+SHA256 da0c5e224dbb5e308622277a3aa997ce8335fe9758886b1a9813b983660116ec files/partimage-0.6.6-andre-przywara_warnings.patch 1367
+AUX partimage-0.6.6-chown.patch 1842 RMD160 9be712de0afa29c0065c093c7626b5695cd8aeb0 SHA1 211a052cbf243afd2d984ff6c889fd770a8dcf5c SHA256 18d84252ff9acb8b6c1f3aa16bad2a5fb27b6c1db0246732affadf4411bde878
+MD5 d67a48475b7b3d512c499a49adb0c4b3 files/partimage-0.6.6-chown.patch 1842
+RMD160 9be712de0afa29c0065c093c7626b5695cd8aeb0 files/partimage-0.6.6-chown.patch 1842
+SHA256 18d84252ff9acb8b6c1f3aa16bad2a5fb27b6c1db0246732affadf4411bde878 files/partimage-0.6.6-chown.patch 1842
+AUX partimage-0.6.6-clonezilla_ext3_blocks-per-group.patch 4265 RMD160 b78725fddb9a75598a672db1f880d5ff3d96ea43 SHA1 512b9736c61933587d54854fc70437f624eef2ec SHA256 93d320a7a8580228394ed851d945144d8ebc56d74e203e59fe86dfc2a7383223
+MD5 3558907477d223192bdbc183b71fc57d files/partimage-0.6.6-clonezilla_ext3_blocks-per-group.patch 4265
+RMD160 b78725fddb9a75598a672db1f880d5ff3d96ea43 files/partimage-0.6.6-clonezilla_ext3_blocks-per-group.patch 4265
+SHA256 93d320a7a8580228394ed851d945144d8ebc56d74e203e59fe86dfc2a7383223 files/partimage-0.6.6-clonezilla_ext3_blocks-per-group.patch 4265
+AUX partimage-0.6.6-datadir-path.patch 2842 RMD160 337fdc2186a2e31e1839968722e2c015b525312f SHA1 c44e6dfc10ab901c4711f740195c0dbfb7f2b290 SHA256 14a661b72d50fbb0f7d6d67dd2b79017210ea43962bcbb5054a58d83291be032
+MD5 8fc13d620f63a31ac440e8b5824bf383 files/partimage-0.6.6-datadir-path.patch 2842
+RMD160 337fdc2186a2e31e1839968722e2c015b525312f files/partimage-0.6.6-datadir-path.patch 2842
+SHA256 14a661b72d50fbb0f7d6d67dd2b79017210ea43962bcbb5054a58d83291be032 files/partimage-0.6.6-datadir-path.patch 2842
+AUX partimage-0.6.6-disable_header_check.patch 519 RMD160 9ea48aec2a89a7fffe0c097fd6030e7083bd3e1d SHA1 55c478e9ac44fc334a7682938876c180c8e7342a SHA256 3ba99325021238dbb7b7d2023a985b7a9eefa5640b6770b9701f9f20b471ec59
+MD5 bebfee82828f3156a28e7533b6600df2 files/partimage-0.6.6-disable_header_check.patch 519
+RMD160 9ea48aec2a89a7fffe0c097fd6030e7083bd3e1d files/partimage-0.6.6-disable_header_check.patch 519
+SHA256 3ba99325021238dbb7b7d2023a985b7a9eefa5640b6770b9701f9f20b471ec59 files/partimage-0.6.6-disable_header_check.patch 519
+AUX partimage-0.6.6-dont-discard-error-message-in-batch-mode.patch 2213 RMD160 81a777aed335cca4c1bfdfdef5937631ebcfbe79 SHA1 ead04881cf46eba0786dcd2ffff0780271be1799 SHA256 8d911225cd0549f89cd9be9aa9506784f9e2b49cf85bf988f49536c26198b2e0
+MD5 c6c5373f99d1bfde1a3b52a21ca1adb2 files/partimage-0.6.6-dont-discard-error-message-in-batch-mode.patch 2213
+RMD160 81a777aed335cca4c1bfdfdef5937631ebcfbe79 files/partimage-0.6.6-dont-discard-error-message-in-batch-mode.patch 2213
+SHA256 8d911225cd0549f89cd9be9aa9506784f9e2b49cf85bf988f49536c26198b2e0 files/partimage-0.6.6-dont-discard-error-message-in-batch-mode.patch 2213
+AUX partimage-0.6.6-gui.diff 1164 RMD160 b4252dd6e46612b11bf04f64c75c30c19e776c57 SHA1 b819b37f618bea057b3f121369b1afa2f35dc355 SHA256 816c324c8ea827a6c2508d0b6c4ef6605cc55b957edbca47c6dff8cf29d8a6a2
+MD5 4775c63aeeed98fbadda81e83b0c372d files/partimage-0.6.6-gui.diff 1164
+RMD160 b4252dd6e46612b11bf04f64c75c30c19e776c57 files/partimage-0.6.6-gui.diff 1164
+SHA256 816c324c8ea827a6c2508d0b6c4ef6605cc55b957edbca47c6dff8cf29d8a6a2 files/partimage-0.6.6-gui.diff 1164
+AUX partimage-0.6.6-not_install_info.patch 937 RMD160 2360cebf931845f6b5d08eb56e4be3df92826a74 SHA1 a6936e9715d88a9705d4238a489de3b2a70672a4 SHA256 ab21eec9e177ae799df0739cc6215cd5538dacaaad6e535376938d351db82002
+MD5 4a7abe11ae1c20ec87dee7e1b2d9c7e8 files/partimage-0.6.6-not_install_info.patch 937
+RMD160 2360cebf931845f6b5d08eb56e4be3df92826a74 files/partimage-0.6.6-not_install_info.patch 937
+SHA256 ab21eec9e177ae799df0739cc6215cd5538dacaaad6e535376938d351db82002 files/partimage-0.6.6-not_install_info.patch 937
+AUX partimage-0.6.6-thread-privilege-fix.patch 1301 RMD160 77ef2aa3202731205acebb8ea58faeccb930363a SHA1 2ae3782574f6dc57a7e7aa8e6b6cb55cf1c275fc SHA256 29c49a8ca43fcf3ad0f842d836cb353bf8e3f7420a7b9fbfd8a1b9885fd14daf
+MD5 14b4a07def8ef61db1a4bc410eb9e736 files/partimage-0.6.6-thread-privilege-fix.patch 1301
+RMD160 77ef2aa3202731205acebb8ea58faeccb930363a files/partimage-0.6.6-thread-privilege-fix.patch 1301
+SHA256 29c49a8ca43fcf3ad0f842d836cb353bf8e3f7420a7b9fbfd8a1b9885fd14daf files/partimage-0.6.6-thread-privilege-fix.patch 1301
 AUX partimaged.conf 424 RMD160 e1dbe5dd5a3eec01b3061cce992f1fbee4bec167 SHA1 f571f19bf872f43df9c086162aed96992a073db3 SHA256 f794f539051e0f2e5f3ce357c4683c4a22a9e87b31f1ae113fcf58cd8bda43cf
 MD5 724ac3895dc01f277b34dab251ec47bb files/partimaged.conf 424
 RMD160 e1dbe5dd5a3eec01b3061cce992f1fbee4bec167 files/partimaged.conf 424
@@ -95,18 +135,23 @@ RMD160 8786b07466c5330254eb96e1de6f754e8a68e77f files/servercert.cnf 1096
 SHA256 9a9cae8cd6c7bbc6f71cd619829b7a6a47d6aae34831cc44a6cc3bf3e7917953 files/servercert.cnf 1096
 DIST partimage-0.6.4-1.tar.bz2 706438 RMD160 cc452f064d7b26d10ffde7b196f6121ade2a619b SHA1 baf1b20a29d8f0977e16e4c559c2d8486357ab4c SHA256 180c443d85def5bbc02fe21fb31014799259d026c820633246c92c536397fba7
 DIST partimage-0.6.4.tar.bz2 654707 RMD160 9de0195c0bc2a83088b054be63102d6ac2350428 SHA1 3e451478a4ced960aa73048d3a19c2bd595ef890 SHA256 e4741d383edb59359b565f6623fc773c704735e65b85a5a378efc922205f14d3
-EBUILD partimage-0.6.4-r3.ebuild 4301 RMD160 4f422d70e841973bbbfc4a450427c481590e8b00 SHA1 a8d3697b66b22286e8755765760a7add125daf16 SHA256 f7b4438cfce4cf22302e61be43ce9e638339a52d22edeb967c79c48b4fbc1cc9
-MD5 c5501dc2852d9524fd7f2eecbed5e2a4 partimage-0.6.4-r3.ebuild 4301
-RMD160 4f422d70e841973bbbfc4a450427c481590e8b00 partimage-0.6.4-r3.ebuild 4301
-SHA256 f7b4438cfce4cf22302e61be43ce9e638339a52d22edeb967c79c48b4fbc1cc9 partimage-0.6.4-r3.ebuild 4301
-EBUILD partimage-0.6.4-r4.ebuild 5338 RMD160 0af5d72c6aeef608a4f9a8ee2eae75a1789b3eda SHA1 7cd0e70193f689e05cce6facf80b7c02e7ae0ce6 SHA256 ef1f954e602aca07837928d21e474502528f17d4c9bfbffe3acee76f9051c5cb
-MD5 4dde110745bf66a6aafbf440d0463bc5 partimage-0.6.4-r4.ebuild 5338
-RMD160 0af5d72c6aeef608a4f9a8ee2eae75a1789b3eda partimage-0.6.4-r4.ebuild 5338
-SHA256 ef1f954e602aca07837928d21e474502528f17d4c9bfbffe3acee76f9051c5cb partimage-0.6.4-r4.ebuild 5338
-MISC ChangeLog 9144 RMD160 a492029714dc9f84ed678385237d5cc7fc4afd75 SHA1 45328122019266afd01cb9fa07198b39e4f384ff SHA256 24c06541d03e321be6abd8e2f7acaa15a554f8c2ba16e55d75714d65c92c7102
-MD5 56ec9430332e103a07c87c7d8c4eac4d ChangeLog 9144
-RMD160 a492029714dc9f84ed678385237d5cc7fc4afd75 ChangeLog 9144
-SHA256 24c06541d03e321be6abd8e2f7acaa15a554f8c2ba16e55d75714d65c92c7102 ChangeLog 9144
+DIST partimage-0.6.6.tar.bz2 524695 RMD160 8bad0dd706d88dee27531766daf7611d95bb0a04 SHA1 691a5bfe1637fce3d1af3a48a37b63d603c09b7f SHA256 0bf5d720094777ae0aa258a00f30cee6988c026558eea20087aa20d46b81b2bd
+EBUILD partimage-0.6.4-r3.ebuild 4304 RMD160 48c119be2e4a61df6f23428f6fcb3495a5035638 SHA1 e6f32a4313509c14334c8fb90eb1fc092a8870ba SHA256 964673f17e4e72eab33a28cf5818f4e49a8dc6798b38d5a15ada73e60984beb1
+MD5 16076d87659346616da91ec05c647c58 partimage-0.6.4-r3.ebuild 4304
+RMD160 48c119be2e4a61df6f23428f6fcb3495a5035638 partimage-0.6.4-r3.ebuild 4304
+SHA256 964673f17e4e72eab33a28cf5818f4e49a8dc6798b38d5a15ada73e60984beb1 partimage-0.6.4-r3.ebuild 4304
+EBUILD partimage-0.6.4-r4.ebuild 5341 RMD160 4b8620146edaf80e15326859c3cda0b939c4569b SHA1 2ae7dcd72dee264d895097a0143811ab15be8e87 SHA256 8a3559e7bc642906f5801ac6e01dbe8d77a708ef8720dbf8aee9aad8d6a13179
+MD5 e3f1e004a42e402506b98a48d25226b4 partimage-0.6.4-r4.ebuild 5341
+RMD160 4b8620146edaf80e15326859c3cda0b939c4569b partimage-0.6.4-r4.ebuild 5341
+SHA256 8a3559e7bc642906f5801ac6e01dbe8d77a708ef8720dbf8aee9aad8d6a13179 partimage-0.6.4-r4.ebuild 5341
+EBUILD partimage-0.6.6.ebuild 5184 RMD160 4a555ec6ea4c0c57689d91e45f60eda72bd8815b SHA1 5f23962a0f07a2ca39139bd8914263b6d462abf8 SHA256 0aa4730cea6efbb1b3e617253752c0f77f13302c30307a62a84e2241d248931f
+MD5 f006f673c659388e017b439350575cc1 partimage-0.6.6.ebuild 5184
+RMD160 4a555ec6ea4c0c57689d91e45f60eda72bd8815b partimage-0.6.6.ebuild 5184
+SHA256 0aa4730cea6efbb1b3e617253752c0f77f13302c30307a62a84e2241d248931f partimage-0.6.6.ebuild 5184
+MISC ChangeLog 9842 RMD160 bdca7994bccc58136b4b65367fe12105e2d0dbd3 SHA1 4d8c064c2517d606f760c60564ed7a6d1592bac9 SHA256 33fa4ee610fa9b7260c0a36cfec79a15d9d92d605ad5d0a6758d8372b80ae959
+MD5 72227512121abbad9ad5cd0bffbd4e21 ChangeLog 9842
+RMD160 bdca7994bccc58136b4b65367fe12105e2d0dbd3 ChangeLog 9842
+SHA256 33fa4ee610fa9b7260c0a36cfec79a15d9d92d605ad5d0a6758d8372b80ae959 ChangeLog 9842
 MISC metadata.xml 300 RMD160 1b8d549b3e7475c26f605a1a36fcab59722f51ab SHA1 7a58ba664a8a3385b8c3a16d7f0168ed656aed67 SHA256 a7042ab513648c05514689f1c2b7c1e6cbf1d339ca3aaa1a45de08ea5cfb152c
 MD5 6b4c83400b7b7a44afb53e1a7ac388af metadata.xml 300
 RMD160 1b8d549b3e7475c26f605a1a36fcab59722f51ab metadata.xml 300
@@ -117,10 +162,13 @@ SHA256 a0f2fcdd9dc1fb168a7ac6df7b43e9ef0cf7e53bf649d1c9d904fc2159950cf0 files/di
 MD5 ed4863df9e68fc649231a53a1c50f1cc files/digest-partimage-0.6.4-r4 256
 RMD160 cb6567c9350bb74968dd46d64bf27575c37dff72 files/digest-partimage-0.6.4-r4 256
 SHA256 146cc2a404bd7b52e0a99bb3bd1bdbca10c3a139780cf2a2eb3cb7c8557b83d3 files/digest-partimage-0.6.4-r4 256
+MD5 102cac70259a6f1b2ca87e569fb74acc files/digest-partimage-0.6.6 250
+RMD160 4c03c9a0f5d628919bd92d3128d8c0186397a6c8 files/digest-partimage-0.6.6 250
+SHA256 6bebe0eca2be69476a7d7d2fa3d1e79a3d379fec7b8f55cfeba87fb60bcce4a1 files/digest-partimage-0.6.6 250
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFGM0fXV3J2n04EauwRAt1JAKCaY85k8emjsFH87V3wghUuqfge3wCdG+UY
-5xJ1dxd10yTaOKS5Z66QP7w=
-=8ZxA
+iD8DBQFHjKGKgMUyd/cdjWsRApKHAJ9z6wn5APgHG2CilR+f7Sm+zI07XgCeOZOQ
++w8TKYtTs9YxuC8XBf7lp/E=
+=BTNj
 -----END PGP SIGNATURE-----
