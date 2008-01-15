@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/aquafont-2.8.ebuild,v 1.7 2007/09/26 18:50:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/aquafont-2.8.ebuild,v 1.8 2008/01/15 17:14:29 grobian Exp $
 
 inherit font
 
@@ -12,7 +12,7 @@ SRC_URI="http://aquablue.milkcafe.to/tears/font/${MY_P}.zip"
 
 LICENSE="aquafont"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="X"
 
 S="${WORKDIR}/${MY_P}"
