@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-2.0.7-r1.ebuild,v 1.1 2008/01/14 19:39:53 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-2.0.7-r1.ebuild,v 1.2 2008/01/15 00:05:10 vapier Exp $
 
 inherit eutils fixheadtails libtool
 
@@ -18,9 +18,9 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-2.0.5-parallelfix.patch"
-	epatch "${FILESDIR}/${PN}-2.0.6-ldflags.patch"
-	epatch "${FILESDIR}/${PN}-2.0.6-sigstack.patch"
+	epatch "${FILESDIR}"/${PN}-2.0.5-parallelfix.patch
+	epatch "${FILESDIR}"/${PN}-2.0.6-ldflags.patch
+	epatch "${FILESDIR}"/${PN}-2.0.6-sigstack.patch
 
 	ht_fix_file aclocal.m4 configure
 
@@ -35,6 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	# install is not parallel safe (last checked 2.0.7-r1)
+	emake -j1 DESTDIR="${D}" install || die
 	dodoc ANNOUNCE AUTHORS ChangeLog NEWS README THANKS USERS
 }
