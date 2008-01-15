@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/nufw
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.25 2007/12/28 19:23:56 cedk Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.26 2008/01/15 08:07:16 opfer Exp $
+
+  15 Jan 2008; Christian Faulhammer <opfer@gentoo.org> nufw-2.2.8.ebuild:
+  stable x86, bug 203132
 
   28 Dec 2007; Cédric Krier <cedk@gentoo.org> nufw-2.2.8.ebuild,
   nufw-2.2.10.ebuild:

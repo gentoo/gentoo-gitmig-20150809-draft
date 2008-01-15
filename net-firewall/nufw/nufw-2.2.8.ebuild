@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.8.ebuild,v 1.4 2007/12/28 19:23:56 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.8.ebuild,v 1.5 2008/01/15 08:07:16 opfer Exp $
 
 inherit autotools ssl-cert eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.nufw.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="debug ldap mysql pam pam_nuauth plaintext postgres prelude \
 unicode nfqueue nfconntrack static syslog test"
 
