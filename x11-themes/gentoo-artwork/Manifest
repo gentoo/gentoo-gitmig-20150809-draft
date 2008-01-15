@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX index.theme 201 RMD160 91a8e0d3b66666ff49cbf4037b4410849dbda6e8 SHA1 d9e6ce17094c331cb6410c84aa2bf0c39db44f36 SHA256 834edf1bc83007b4791cf875cee3364b79b734d6cf9407f4e28221cdac21f39f
 MD5 bf7e8d2e29ad3dac6d1c584649d1a52f files/index.theme 201
 RMD160 91a8e0d3b66666ff49cbf4037b4410849dbda6e8 files/index.theme 201
@@ -19,6 +16,10 @@ EBUILD gentoo-artwork-0.4.1.ebuild 2109 RMD160 34939950eae8d6346c6d17bf6f0e8a827
 MD5 eba39a08349e3dcdd4843c8ec7bb1550 gentoo-artwork-0.4.1.ebuild 2109
 RMD160 34939950eae8d6346c6d17bf6f0e8a827ee65992 gentoo-artwork-0.4.1.ebuild 2109
 SHA256 8344d8c2c5b745fa84e675ad4baa32f5e1f1bf13fa8d83491bf60c252c676c0a gentoo-artwork-0.4.1.ebuild 2109
+EBUILD gentoo-artwork-0.4.2-r1.ebuild 4519 RMD160 5a15305dd8f8ee893ad7193940e5dabcc2977448 SHA1 3653edfba7cf5ad7f8b81f6b209172b2e833e762 SHA256 7676174cd7fcc3fe6c5e1022102186308f5319e8c5d38f2e5781bd18d2788334
+MD5 ccaff3207380f92798590a017fb79ebc gentoo-artwork-0.4.2-r1.ebuild 4519
+RMD160 5a15305dd8f8ee893ad7193940e5dabcc2977448 gentoo-artwork-0.4.2-r1.ebuild 4519
+SHA256 7676174cd7fcc3fe6c5e1022102186308f5319e8c5d38f2e5781bd18d2788334 gentoo-artwork-0.4.2-r1.ebuild 4519
 EBUILD gentoo-artwork-0.4.2.ebuild 3076 RMD160 d334f095a93a5e61c54cb898f2a8b7fb6f827771 SHA1 14704fc10a65a35cae118a38bc8a1a3444d9dc39 SHA256 effd323f129b543bce1b87d67a0ee58ff364510862b4f787cf7aaa2b289ae850
 MD5 6cd9a7cd100463475315e5fdb47fa9b3 gentoo-artwork-0.4.2.ebuild 3076
 RMD160 d334f095a93a5e61c54cb898f2a8b7fb6f827771 gentoo-artwork-0.4.2.ebuild 3076
@@ -37,10 +38,6 @@ SHA256 f247228ffa6135b1a3907c3044b141ab507d84a63229a7a86b41c5523b0fcc80 files/di
 MD5 077c903de4137a661df12bf5acdb9150 files/digest-gentoo-artwork-0.4.2 1614
 RMD160 18d2c8bf38ccd69bbcb744d767242e8e4d50b7b7 files/digest-gentoo-artwork-0.4.2 1614
 SHA256 9166f177655952f3ab34b59b690ad0447c33ef668c23e1f6f32e4dce35ae0b66 files/digest-gentoo-artwork-0.4.2 1614
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFHE7nRUPEOwClectkRAj2zAJ4/Pd+0Ubfb7qO8QvzTy/6BI+KEdwCfb82W
-/ONQLCkOwSCaOTSuv9f3368=
-=/sch
------END PGP SIGNATURE-----
+MD5 077c903de4137a661df12bf5acdb9150 files/digest-gentoo-artwork-0.4.2-r1 1614
+RMD160 18d2c8bf38ccd69bbcb744d767242e8e4d50b7b7 files/digest-gentoo-artwork-0.4.2-r1 1614
+SHA256 9166f177655952f3ab34b59b690ad0447c33ef668c23e1f6f32e4dce35ae0b66 files/digest-gentoo-artwork-0.4.2-r1 1614
