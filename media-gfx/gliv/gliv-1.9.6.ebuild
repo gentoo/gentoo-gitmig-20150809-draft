@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.9.6.ebuild,v 1.2 2007/03/24 18:59:41 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.9.6.ebuild,v 1.3 2008/01/15 00:48:23 maekke Exp $
 
 DESCRIPTION="An image viewer that uses OpenGL"
 HOMEPAGE="http://guichaz.free.fr/gliv/"
@@ -13,10 +13,10 @@ IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-2.6
 		>=sys-devel/bison-1.875
-		  virtual/opengl
-		  sys-devel/gettext
-		 >x11-libs/gtkglext-1.0.6
-		  nls? ( sys-devel/gettext )"
+		virtual/opengl
+		>x11-libs/gtkglext-1.0.6
+		dev-util/pkgconfig
+		nls? ( sys-devel/gettext )"
 
 src_compile() {
 	econf \
