@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8126 2008/01/15 15:48:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8127 2008/01/15 16:30:49 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -991,6 +991,7 @@ net-misc/xsupplicant
 # filed require a patch
 >media-tv/mythtv-0.20.9_p99999
 >x11-themes/mythtv-themes-0.20.9_p99999
+>media-plugins/mythappearance-0.20.9_p99999
 >media-plugins/mytharchive-0.20.9_p99999
 >media-plugins/mythbrowser-0.20.9_p99999
 >media-plugins/mythcontrols-0.20.9_p99999
