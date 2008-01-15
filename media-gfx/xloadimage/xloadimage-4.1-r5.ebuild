@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r5.ebuild,v 1.1 2007/05/14 17:29:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r5.ebuild,v 1.2 2008/01/15 18:37:57 grobian Exp $
 
 inherit alternatives eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.x.org/R5contrib/${MY_P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="tiff jpeg png"
 
 RDEPEND="x11-libs/libX11
@@ -43,12 +43,6 @@ src_unpack() {
 	# On MacOSX it would require malloc/malloc.h
 	# On other systems it's simply unneeded
 	sed -i -e 's,<malloc.h>,<stdlib.h>,' vicar.c
-
-	if use userland_Darwin ; then
-		for f in $(grep zopen * | cut -d':' -f1 | uniq);do
-			sed -i "s:zopen:zloadimage_zopen:g" $f
-		done
-	fi
 
 	epatch "${FILESDIR}"/${P}-unaligned-access.patch
 
@@ -87,9 +81,9 @@ update_alternatives() {
 }
 
 pkg_postinst() {
-	use ppc-macos || update_alternatives
+	update_alternatives
 }
 
 pkg_postrm() {
-	use ppc-macos || update_alternatives
+	update_alternatives
 }

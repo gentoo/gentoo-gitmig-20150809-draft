@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r3.ebuild,v 1.2 2007/07/12 04:08:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r3.ebuild,v 1.3 2008/01/15 18:33:24 grobian Exp $
 
 inherit alternatives eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://pantransit.reptiles.org/prog/xli/xli-${SNAPSHOT}.tar.gz"
 
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXext
@@ -29,12 +29,6 @@ S="${WORKDIR}"/${PN}-${SNAPSHOT}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	if use userland_Darwin ; then
-		for f in $(grep zopen * | cut -d':' -f1 | uniq); do
-			sed -i "s:zopen:xli_zopen:g" $f
-		done
-	fi
 
 	sed -i Imakefile \
 		-e "/^DEFINES =/s/$/ -DHAVE_GUNZIP -DHAVE_BUNZIP2 /" \
@@ -85,9 +79,9 @@ update_alternatives() {
 }
 
 pkg_postinst() {
-	use ppc-macos || update_alternatives
+	update_alternatives
 }
 
 pkg_postrm() {
-	use ppc-macos || update_alternatives
+	update_alternatives
 }
