@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20080101.ebuild,v 1.1 2008/01/01 15:43:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20080101.ebuild,v 1.2 2008/01/15 13:43:48 armin76 Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.hirnriss.net/files/cvs/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="amuled debug geoip gtk nls remote stats unicode"
+IUSE="daemon debug geoip gtk nls remote stats unicode"
 
 DEPEND="=x11-libs/wxGTK-2.8*
 		>=sys-libs/zlib-1.2.1
@@ -24,9 +24,9 @@ DEPEND="=x11-libs/wxGTK-2.8*
 		unicode? ( >=media-libs/gd-2.0.26 ) )"
 
 pkg_setup() {
-		if ! use gtk && ! use remote && ! use amuled; then
+		if ! use gtk && ! use remote && ! use daemon; then
 				eerror ""
-				eerror "You have to specify at least one of gtk, remote or amuled"
+				eerror "You have to specify at least one of gtk, remote or daemon"
 				eerror "USE flag to build amule."
 				eerror ""
 				die "Invalid USE flag set"
@@ -44,7 +44,7 @@ pkg_setup() {
 }
 
 pkg_preinst() {
-	if use amuled || use remote; then
+	if use daemon || use remote; then
 		enewgroup p2p
 		enewuser p2p -1 -1 /home/p2p p2p
 	fi
@@ -83,7 +83,7 @@ src_compile() {
 				--enable-amulecmd \
 				$(use_enable debug) \
 				$(use_enable !debug optimize) \
-				$(use_enable amuled amule-daemon) \
+				$(use_enable daemon amule-daemon) \
 				$(use_enable geoip) \
 				$(use_enable nls) \
 				$(use_enable remote webserver) \
@@ -100,7 +100,7 @@ src_compile() {
 src_install() {
 		emake DESTDIR="${D}" install || die
 
-		if use amuled; then
+		if use daemon; then
 				newconfd "${FILESDIR}"/amuled.confd amuled
 				newinitd "${FILESDIR}"/amuled.initd amuled
 		fi
