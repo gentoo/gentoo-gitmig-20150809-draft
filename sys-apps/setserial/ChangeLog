@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/setserial
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/ChangeLog,v 1.14 2007/06/13 07:51:51 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/ChangeLog,v 1.15 2008/01/15 08:42:34 robbat2 Exp $
+
+*setserial-2.17-r4 (15 Jan 2008)
+
+  15 Jan 2008; Robin H. Johnson <robbat2@gentoo.org> +files/serial-2.17-r4,
+  +setserial-2.17-r4.ebuild:
+  Implement stty keyword per bug #103423.
 
   13 Jun 2007; Mike Frysinger <vapier@gentoo.org> files/serial:
   Cleanup init.d script and throw out a lot of old stuff.
