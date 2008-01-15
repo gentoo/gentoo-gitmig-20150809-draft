@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/klibc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.53 2007/12/21 15:07:36 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.54 2008/01/15 08:16:05 robbat2 Exp $
+
+*klibc-1.5.8 (15 Jan 2008)
+
+  15 Jan 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/klibc-1.5.7-strip-fix-dash-s.patch, +klibc-1.5.8.ebuild:
+  Version bump, and fix bug 201006.
 
   21 Dec 2007; nixnut <nixnut@gentoo.org> klibc-1.5.7-r2.ebuild:
   Stable on ppc wrt bug 195443
