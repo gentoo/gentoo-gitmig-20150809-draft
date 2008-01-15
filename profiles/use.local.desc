@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3301 2008/01/15 13:45:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3302 2008/01/15 18:19:29 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1981,9 +1981,6 @@ sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.bu
 sys-libs/libuser:quotas - Enables support for user quotas
 sys-libs/ncurses:trace - Enable test trace() support in ncurses calls
 sys-libs/pam:audit - Enable support for sys-process/audit
-sys-libs/pam:pam_chroot - Builds the pam_chroot module (enables per-user chroots at login)
-sys-libs/pam:pam_timestamp - Builds the pam_timestamp module (enables recent successful attempt authentication)
-sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 sys-libs/uclibc:pregen - Use pregenerated locales
 sys-libs/uclibc:savedconfig - Adds support for user defined configs
 sys-libs/uclibc:uclibc-compat - build uclibc with backwards compatible options
