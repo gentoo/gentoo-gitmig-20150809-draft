@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.6.7.0.ebuild,v 1.1 2007/08/31 18:46:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.6.7.0.ebuild,v 1.2 2008/01/15 00:28:58 maekke Exp $
 
 inherit eutils
 
@@ -42,7 +42,8 @@ RDEPEND="${DEPEND}
 	x11-libs/libSM"
 
 DEPEND="${DEPEND}
-	media-libs/mesa"
+	media-libs/mesa
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
