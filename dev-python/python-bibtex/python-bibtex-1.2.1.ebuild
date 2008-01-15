@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/python-bibtex-1.2.1.ebuild,v 1.7 2006/07/12 16:08:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/python-bibtex-1.2.1.ebuild,v 1.8 2008/01/15 22:19:58 lucass Exp $
 
 inherit distutils
 
@@ -15,4 +15,5 @@ KEYWORDS="~amd64 ia64 ppc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/glib-2
-	>=app-text/recode-3.6-r1"
+	>=app-text/recode-3.6-r1
+	dev-util/pkgconfig"
