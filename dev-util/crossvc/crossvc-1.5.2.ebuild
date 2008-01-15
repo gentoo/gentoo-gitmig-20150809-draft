@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crossvc/crossvc-1.5.2.ebuild,v 1.1 2008/01/14 23:42:57 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crossvc/crossvc-1.5.2.ebuild,v 1.2 2008/01/15 08:16:41 mr_bones_ Exp $
 
 inherit kde-functions qt3
 
@@ -59,4 +59,3 @@ src_install() {
 	dodoc doc/{DNOTIFY-HOWTO.txt,EXPORT-CHANGE-IMPORT.txt,FAM-HOWTO.txt,FAQ.txt,INFO.txt,INSTALL,INSTALL.html,PROXY-HOWTO.txt,README,README.html,SSH-HOWTO.txt}
 	dodoc doc/translations/{de,it,ru}/*
 }
-
