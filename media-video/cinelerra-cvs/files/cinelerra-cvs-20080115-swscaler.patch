@@ -1,0 +1,159 @@
+Index: cinelerra-cvs/cinelerra/ffmpeg.C
+===================================================================
+--- cinelerra-cvs.orig/cinelerra/ffmpeg.C
++++ cinelerra-cvs/cinelerra/ffmpeg.C
+@@ -140,6 +140,11 @@ int FFMPEG::convert_cmodel(VFrame *frame
+ 	PixelFormat pix_fmt_out = 
+ 		color_model_to_pix_fmt(frame_out->get_color_model());
+ 
++#ifdef HAVE_SWSCALER
++	// We need a context for swscale
++	struct SwsContext *convert_ctx;
++#endif
++
+ 	// do conversion within libavcodec if possible
+ 	if (pix_fmt_in != PIX_FMT_NB && pix_fmt_out != PIX_FMT_NB) {
+ 		// set up a temporary pictures from frame_in and frame_out
+@@ -147,7 +152,9 @@ int FFMPEG::convert_cmodel(VFrame *frame
+ 		init_picture_from_frame(&picture_in, frame_in);
+ 		init_picture_from_frame(&picture_out, frame_out);
+ 
+-		int result = img_convert(&picture_out,
++		int result;
++#ifndef HAVE_SWSCALER
++		result = img_convert(&picture_out,
+ 					 pix_fmt_out,
+ 					 &picture_in,
+ 					 pix_fmt_in,
+@@ -156,6 +163,28 @@ int FFMPEG::convert_cmodel(VFrame *frame
+ 		if (result) {
+ 			printf("FFMPEG::convert_cmodel img_convert() failed\n");
+ 		}
++#else
++		convert_ctx = sws_getContext(frame_in->get_w(), frame_in->get_h(),pix_fmt_in,
++				frame_out->get_w(),frame_out->get_h(),pix_fmt_out,
++				SWS_BICUBIC, NULL, NULL, NULL);
++
++		if(convert_ctx == NULL){
++			printf("FFMPEG::convert_cmodel : swscale context initialization failed\n");
++			return 1;
++		}
++
++		result = sws_scale(convert_ctx, 
++				picture_in.data, picture_in.linesize,
++				0, 0,
++				picture_out.data, picture_out.linesize);
++
++	
++		sws_freeContext(convert_ctx);
++
++		if(result){
++			printf("FFMPEG::convert_cmodel sws_scale() failed\n");
++		}
++#endif
+ 		return result;
+ 	}
+ 
+@@ -203,13 +232,19 @@ int FFMPEG::convert_cmodel(AVPicture *pi
+ 
+ 	// set up a temporary picture_out from frame_out
+ 	AVPicture picture_out;
++#ifdef HAVE_SWSCALER
++	// We need a context for swscale
++	struct SwsContext *convert_ctx;
++#endif
+ 	init_picture_from_frame(&picture_out, frame_out);
+ 	int cmodel_out = frame_out->get_color_model();
+ 	PixelFormat pix_fmt_out = color_model_to_pix_fmt(cmodel_out);
+ 
+ 	// do conversion within libavcodec if possible
+ 	if (pix_fmt_out != PIX_FMT_NB) {
+-		int result = img_convert(&picture_out,
++		int result;
++#ifndef HAVE_SWSCALER
++		result = img_convert(&picture_out,
+ 					 pix_fmt_out,
+ 					 picture_in,
+ 					 pix_fmt_in,
+@@ -218,6 +253,28 @@ int FFMPEG::convert_cmodel(AVPicture *pi
+ 		if (result) {
+ 			printf("FFMPEG::convert_cmodel img_convert() failed\n");
+ 		}
++#else
++		convert_ctx = sws_getContext(width_in, height_in,pix_fmt_in,
++				frame_out->get_w(),frame_out->get_h(),pix_fmt_out,
++				SWS_BICUBIC, NULL, NULL, NULL);
++
++		if(convert_ctx == NULL){
++			printf("FFMPEG::convert_cmodel : swscale context initialization failed\n");
++			return 1;
++		}
++
++		result = sws_scale(convert_ctx, 
++				picture_in->data, picture_in->linesize,
++				0, 0,
++				picture_out.data, picture_out.linesize);
++
++	
++		sws_freeContext(convert_ctx);
++
++		if(result){
++			printf("FFMPEG::convert_cmodel sws_scale() failed\n");
++		}
++#endif
+ 		return result;
+ 	}
+ 	
+Index: cinelerra-cvs/cinelerra/ffmpeg.h
+===================================================================
+--- cinelerra-cvs.orig/cinelerra/ffmpeg.h
++++ cinelerra-cvs/cinelerra/ffmpeg.h
+@@ -3,6 +3,9 @@
+ 
+ extern "C" {
+ #include <avcodec.h>
++#ifdef HAVE_SWSCALER
++#include <swscale.h>
++#endif
+ };
+ 
+ #include "asset.h"
+Index: cinelerra-cvs/configure.in
+===================================================================
+--- cinelerra-cvs.orig/configure.in
++++ cinelerra-cvs/configure.in
+@@ -341,10 +341,33 @@ AC_SUBST(CPU_CFLAGS)
+ ############ external ffmpeg
+ AC_ARG_WITH([external-ffmpeg], AC_HELP_STRING([--with-external-ffmpeg], [use external ffmpeg library]))
+ 
++AH_TEMPLATE(HAVE_SWSCALER, [Define to 1 if swscaler is available in ffmpeg.])
++
+ if test "x$with_external_ffmpeg" = "xyes"; then
+-     PKG_CHECK_MODULES([FFMPEG], [libavcodec libpostproc])
++     PKG_CHECK_MODULES([FFMPEG_TEMP], [libavcodec libpostproc])
+      FFMPEG_FOLDER=""
+      FFMPEG_EXTERNALTEXT="External ffmpeg"
++     
++     dnl --------------------------------------------------------------
++     dnl check if libavcodec contains img_convert
++     dnl that means that libswscale is compiled in
++     
++     AC_MSG_CHECKING(for ffmpeg swscale support)
++     saved_LIBS="$LIBS"
++     LIBS="$saved_LIBS $FFMPEG_TEMP_LIBS"
++     AC_TRY_LINK([#include <ffmpeg/avcodec.h>],
++                 [img_convert(0, 0, 0,0,0,0)],
++                 enable_ffmpeg_swscale=no,enable_ffmpeg_swscale=yes)
++     LIBS="$saved_LIBS"
++     AC_MSG_RESULT($enable_ffmpeg_swscale)
++     
++     if test x"$enable_ffmpeg_swscale" == xyes; then
++                 AC_DEFINE(HAVE_SWSCALER)
++                 PKG_CHECK_MODULES([FFMPEG], [libavcodec libpostproc libswscale])
++     else
++                 PKG_CHECK_MODULES([FFMPEG], [libavcodec libpostproc])
++     fi
++
+ else
+      FFMPEG_FOLDER=ffmpeg
+      FFMPEG_CFLAGS="-I\$(top_srcdir)/quicktime/ffmpeg/libavcodec"
