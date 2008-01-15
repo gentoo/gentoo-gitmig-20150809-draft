@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8123 2008/01/15 09:15:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8124 2008/01/15 14:05:32 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Raúl Porcel <armin76@gentoo.org> (15 Jan 2008)
+# Pending removal 15 Feb 2008, upstream discontinued the software
+# Unstable, old
+net-libs/dclibc
 
 # Ingmar Vanhassel <ingmar@gentoo.org> (14 Jan 2008)
 # Masked pending further testing.
