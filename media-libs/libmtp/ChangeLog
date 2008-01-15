@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.36 2008/01/15 13:46:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.37 2008/01/15 14:45:06 jer Exp $
+
+  15 Jan 2008; Jeroen Roovers <jer@gentoo.org> libmtp-0.2.3.ebuild:
+  Stable for HPPA (bug #198820).
 
   15 Jan 2008; Tony Vroon <chainsaw@gentoo.org> libmtp-0.2.3.ebuild:
   Mark 0.2.3 stable on X86, tested with a Zen Sleek on 2.x firmware.
