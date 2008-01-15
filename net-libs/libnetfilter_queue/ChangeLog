@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_queue
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/ChangeLog,v 1.5 2007/08/19 12:08:58 cedk Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/ChangeLog,v 1.6 2008/01/15 07:58:29 opfer Exp $
+
+  15 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  libnetfilter_queue-0.0.15.ebuild:
+  added dev-util/pkgconfig to DEPEND
 
 *libnetfilter_queue-0.0.15 (19 Aug 2007)
 
