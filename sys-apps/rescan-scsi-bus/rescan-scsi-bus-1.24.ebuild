@@ -1,8 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/rescan-scsi-bus-1.24.ebuild,v 1.6 2007/08/24 03:19:04 metalgod Exp $
-
-inherit versionator
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/rescan-scsi-bus-1.24.ebuild,v 1.7 2008/01/15 09:10:41 robbat2 Exp $
 
 DESCRIPTION="Script to rescan the SCSI bus without rebooting"
 HOMEPAGE="http://www.garloff.de/kurt/linux/"
@@ -22,7 +20,7 @@ RDEPEND=">=sys-apps/sg3_utils-1.24
 S="${WORKDIR}"
 
 src_unpack() {
-	cp -f ${DISTDIR}/${A} ${WORKDIR}/${SCRIPT_NAME}
+	cp -f "${DISTDIR}"/${A} "${WORKDIR}"/${SCRIPT_NAME}
 }
 
 src_compile() {
