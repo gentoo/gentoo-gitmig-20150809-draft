@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/mechanize-0.7.0.ebuild,v 1.1 2008/01/15 08:23:04 agorf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/mechanize-0.7.0.ebuild,v 1.2 2008/01/15 17:57:40 agorf Exp $
 
 inherit ruby gems
 
@@ -14,4 +14,4 @@ IUSE=""
 
 DEPEND=">=dev-ruby/hpricot-0.5.0
 		>=dev-ruby/hoe-1.4.0
-		>=dev-lang/ruby-1.8.3"
+		>=dev-lang/ruby-1.8.4"
