@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/ds9
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.5 2007/11/02 12:43:54 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.6 2008/01/15 16:29:36 bicatali Exp $
+
+*ds9-5.1 (15 Jan 2008)
+
+  15 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/ds9-4.13-Makefile.patch, +files/ds9-5.1-Makefile.patch,
+  -ds9-4.13.ebuild, +ds9-5.1.ebuild:
+  Version bump
 
 *ds9-5.0 (02 Nov 2007)
 

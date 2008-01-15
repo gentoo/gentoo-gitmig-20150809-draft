@@ -1,0 +1,30 @@
+--- Makefile.orig	2008-01-15 15:19:48.367764731 +0000
++++ Makefile	2008-01-15 16:04:54.805517099 +0000
+@@ -235,23 +235,23 @@
+ tcl	: FORCE
+ 	@echo "Installing Tcl..."
+ 	cd $(TCLDIRDIR); CC='$(CC)' CFLAGS='$(OPTS) $(TCLOPTS)' LDFLAGS='$(LIBS)' ./configure $(TCLFLAGS) --disable-shared
+-	cd $(TCLDIRDIR); $(MAKE) install
++	cd $(TCLDIRDIR); $(MAKE) install-binaries install-libraries
+ 
+ tk	: FORCE
+ 	@echo "Installing Tk..."
+ 	cd $(TKDIRDIR); CC='$(CC)' CFLAGS='$(OPTS) $(TCLOPTS)' LDFLAGS='$(LIBS)' ./configure $(TCLFLAGS) --disable-shared
+-	cd $(TKDIRDIR); $(MAKE) install
++	cd $(TKDIRDIR); $(MAKE) install-binaries install-libraries
+ 	$(RM) -r lib/$(TKVER)/demos
+ 
+ tktable	: FORCE
+ 	@echo "Installing TkTable..."
+ 	cd $(TKTABLEDIR); CC='$(CC)' CFLAGS='$(OPTS)' LDFLAGS='$(LIBS)' ./configure $(TKTABLEFLAGS) --disable-shared
+-	cd $(TKTABLEDIR); $(MAKE); $(MAKE) install
++	cd $(TKTABLEDIR); $(MAKE); $(MAKE) install-binaries install-libraries
+ 
+ tcllib	: FORCE
+ 	@echo "Installing TCLLIB..."
+ 	cd $(TCLLIBDIR); ./configure $(TCLLIBFLAGS)
+-	cd $(TCLLIBDIR); $(MAKE) install
++	cd $(TCLLIBDIR); $(MAKE) install-libraries
+ 
+ ifeq ($(OS),macosx)
+ blt	: optincl

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-4.13.ebuild,v 1.5 2007/11/02 09:12:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.1.ebuild,v 1.1 2008/01/15 16:29:36 bicatali Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -18,9 +18,9 @@ DEPEND="${RDEPEND}
 	|| ( virtual/emacs virtual/xemacs )
 	app-arch/zip"
 
-RESTRICT="strip test"
+RESTRICT="strip test mirror"
 
-S=${WORKDIR}/sao${PN}
+S="${WORKDIR}/sao${PN}"
 
 src_unpack() {
 	unpack ${A}
