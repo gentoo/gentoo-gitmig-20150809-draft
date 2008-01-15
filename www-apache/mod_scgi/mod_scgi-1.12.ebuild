@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_scgi/mod_scgi-1.12.ebuild,v 1.2 2007/08/27 16:50:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_scgi/mod_scgi-1.12.ebuild,v 1.3 2008/01/15 23:21:39 gmsoft Exp $
 
 inherit apache-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://quixote.python.ca/releases/${P/mod_}.tar.gz"
 
 LICENSE="CNRI"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 hppa ~ppc ~x86"
 IUSE=""
 
 DEPEND="www-apps/scgi"
