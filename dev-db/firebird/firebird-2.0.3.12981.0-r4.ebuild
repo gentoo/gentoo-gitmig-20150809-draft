@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r4.ebuild,v 1.1 2007/12/04 23:59:54 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r4.ebuild,v 1.2 2008/01/16 06:50:10 wltjr Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://firebird.sourceforge.net/"
 SRC_URI="mirror://sourceforge/firebird/${MY_P}.tar.bz2
 	 doc? (	ftp://ftpc.inprise.com/pub/interbase/techpubs/ib_b60_doc.zip )"
 
-LICENSE="Interbase-1.0"
+LICENSE="IDPL Interbase-1.0"
 SLOT="0"
 KEYWORDS="~amd64 -ia64 ~x86"
 IUSE="doc xinetd examples debug"
