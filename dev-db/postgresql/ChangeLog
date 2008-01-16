@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.367 2008/01/15 20:58:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.368 2008/01/16 05:52:04 mjolnir Exp $
+
+  16 Jan 2008; Martin Jackson <mjolnir@gentoo.org> -postgresql-8.1.9.ebuild,
+  -postgresql-8.2.4-r1.ebuild:
+  Remove vulnerable non-stable targets for #204760
 
   15 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   postgresql-7.3.21.ebuild, postgresql-7.4.19.ebuild,
