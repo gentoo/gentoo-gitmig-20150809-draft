@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8135 2008/01/16 15:38:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8136 2008/01/16 15:45:22 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -94,6 +94,10 @@ www-apache/mod_auth_external
 # Alon Bar-Lev <alonbl@gentoo.org> (11 Jan 2008)
 # Does not really work, bug#204662
 >=app-crypt/gnupg-2.0.8
+# Raúl Porcel <armin76@gentoo.org>
+# Needs gnupg-2.0.8, remove this p.mask when gnupg
+# gets unmasked, please
+=x11-plugins/enigmail-0.95.6
 
 # Ryan Hill <dirtyepic@gentoo.org> (10 Jan 2008)
 # Duplicates functionality already in sys-devel/distcc
