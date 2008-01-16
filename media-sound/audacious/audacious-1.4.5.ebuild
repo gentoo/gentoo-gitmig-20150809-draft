@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.4.5.ebuild,v 1.5 2008/01/16 02:00:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.4.5.ebuild,v 1.6 2008/01/16 19:46:12 armin76 Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="chardet dbus nls libsamplerate"
 
 RDEPEND="dbus? ( >=dev-libs/dbus-glib-0.60 )
