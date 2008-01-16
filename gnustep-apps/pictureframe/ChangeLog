@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/pictureframe
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/pictureframe/ChangeLog,v 1.1 2008/01/16 23:58:19 voyageur Exp $
+
+*pictureframe-1.0.0 (16 Jan 2008)
+
+  16 Jan 2008; Bernard Cafarelli <voyageur@gentoo.org> +metadata.xml,
+  +pictureframe-1.0.0.ebuild:
+  Initial commit
+
