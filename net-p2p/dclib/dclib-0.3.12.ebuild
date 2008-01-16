@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.3.12.ebuild,v 1.2 2008/01/16 15:10:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.3.12.ebuild,v 1.3 2008/01/16 15:11:11 armin76 Exp $
 
 inherit eutils
 
@@ -16,6 +16,6 @@ DEPEND=">=app-arch/bzip2-1.0.2
 	>=dev-libs/libxml2-2.4.22"
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
