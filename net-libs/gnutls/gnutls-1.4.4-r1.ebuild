@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.4.4-r1.ebuild,v 1.13 2007/01/10 00:29:08 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.4.4-r1.ebuild,v 1.14 2008/01/16 20:52:48 grobian Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -13,7 +13,7 @@ SRC_URI="http://josefsson.org/gnutls/releases/${P}.tar.bz2"
 # GPL-2 for the gnutls-extras library and LGPL for the gnutls library.
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="zlib doc nls"
 
 RDEPEND=">=dev-libs/libgcrypt-1.2.2
