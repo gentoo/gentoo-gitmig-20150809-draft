@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.21.ebuild,v 1.6 2008/01/15 20:58:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.21.ebuild,v 1.7 2008/01/16 06:15:20 mjolnir Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs versionator
 
@@ -60,6 +60,9 @@ src_unpack() {
 	sed -i -e 's/^DIRS := libpq ecpg/DIRS := ecpg/' src/interfaces/Makefile
 	sed -i -e '/\W\+\$.MAKE. -C include \$/d' src/Makefile
 	sed -i -e '/^\W\+psql scripts pg_config pg_controldata/ s/pg_config //' src/bin/Makefile
+
+	# Fix multi-lib problem reported in #204760
+	sed -i -e "s/\/lib\/python/\/$(get_libdir)\/python/" configure
 
 	epatch "${FILESDIR}/${P}-cubeparse.patch"
 
