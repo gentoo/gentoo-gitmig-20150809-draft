@@ -1,9 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.1b.ebuild,v 1.6 2007/12/17 19:51:10 armin76 Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.3.ebuild,v 1.1 2008/01/16 15:01:59 armin76 Exp $
 
 inherit eutils autotools
 
@@ -15,13 +12,14 @@ SRC_URI="http://gnunet.org/download/GNUnet-${PV}.tar.bz2"
 RESTRICT="test"
 
 IUSE="ipv6 mysql sqlite ncurses nls gtk"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND=">=dev-libs/libgcrypt-1.2.0
-	>=media-libs/libextractor-0.5.13
+	>=media-libs/libextractor-0.5.18a
 	>=dev-libs/gmp-4.0.0
+	gnome-base/libglade
 	sys-libs/zlib
 	net-misc/curl
 	gtk? ( >=x11-libs/gtk+-2.6.10 )
@@ -109,10 +107,6 @@ pkg_postinst() {
 	einfo "To configure"
 	einfo "	 1) Add user(s) to the gnunetd group"
 	einfo "	 2) Run 'gnunet-setup' to generate your client config file"
-	einfo "	 3) Run gnunet-setup -d to generate a server config file"
-	einfo "	 4) Optionally copy the .gnunet/gnunetd.conf into /etc and"
-	einfo "\tuse as a global server config file:"
-	einfo "$ gnunet-setup -d"
-	einfo "# cp ~/.gnunet/gnunetd.conf /etc/"
+	einfo "	 3) Run gnunet-setup -d as root to generate a server config file"
 	einfo
 }

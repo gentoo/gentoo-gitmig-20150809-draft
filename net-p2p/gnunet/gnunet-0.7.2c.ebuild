@@ -1,9 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.2c.ebuild,v 1.1 2007/12/17 19:47:01 armin76 Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.2c.ebuild,v 1.2 2008/01/16 15:01:59 armin76 Exp $
 
 inherit eutils autotools
 
@@ -15,13 +12,14 @@ SRC_URI="http://gnunet.org/download/GNUnet-${PV}.tar.bz2"
 RESTRICT="test"
 
 IUSE="ipv6 mysql sqlite ncurses nls gtk"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND=">=dev-libs/libgcrypt-1.2.0
 	>=media-libs/libextractor-0.5.18a
 	>=dev-libs/gmp-4.0.0
+	gnome-base/libglade
 	sys-libs/zlib
 	net-misc/curl
 	gtk? ( >=x11-libs/gtk+-2.6.10 )
