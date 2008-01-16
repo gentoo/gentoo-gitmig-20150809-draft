@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-formatsextra
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-formatsextra/ChangeLog,v 1.7 2007/12/18 19:58:37 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-formatsextra/ChangeLog,v 1.8 2008/01/16 23:00:47 aballier Exp $
+
+  16 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  texlive-formatsextra-2007.ebuild:
+  add missing texlive-latex dep, thanks to Patrick, bug #206226
 
   18 Dec 2007; Jeroen Roovers <jer@gentoo.org>
   texlive-formatsextra-2007.ebuild:
