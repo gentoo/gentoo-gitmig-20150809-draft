@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3.2.ebuild,v 1.4 2007/08/15 21:29:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3.2.ebuild,v 1.5 2008/01/16 15:56:47 steev Exp $
 
 inherit linux-mod
 
@@ -32,31 +32,31 @@ MODULESD_ATH_PCI_DOCS="README"
 pkg_setup() {
 	linux-mod_pkg_setup
 
-	MODULE_NAMES="ath_hal(net:${S}/ath_hal)
-				wlan(net:${S}/net80211)
-				wlan_acl(net:${S}/net80211)
-				wlan_ccmp(net:${S}/net80211)
-				wlan_tkip(net:${S}/net80211)
-				wlan_wep(net:${S}/net80211)
-				wlan_xauth(net:${S}/net80211)
-				wlan_scan_sta(net:${S}/net80211)
-				wlan_scan_ap(net:${S}/net80211)
-				ath_rate_amrr(net:${S}/ath_rate/amrr)
-				ath_rate_onoe(net:${S}/ath_rate/onoe)
-				ath_rate_sample(net:${S}/ath_rate/sample)
-				ath_pci(net:${S}/ath)"
+	MODULE_NAMES="ath_hal(net:"${S}"/ath_hal)
+				wlan(net:"${S}"/net80211)
+				wlan_acl(net:"${S}"/net80211)
+				wlan_ccmp(net:"${S}"/net80211)
+				wlan_tkip(net:"${S}"/net80211)
+				wlan_wep(net:"${S}"/net80211)
+				wlan_xauth(net:"${S}"/net80211)
+				wlan_scan_sta(net:"${S}"/net80211)
+				wlan_scan_ap(net:"${S}"/net80211)
+				ath_rate_amrr(net:"${S}"/ath_rate/amrr)
+				ath_rate_onoe(net:"${S}"/ath_rate/onoe)
+				ath_rate_sample(net:"${S}"/ath_rate/sample)
+				ath_pci(net:"${S}"/ath)"
 
 	BUILD_PARAMS="KERNELPATH=${KV_OUT_DIR}"
 }
 
 src_unpack() {
-	unpack ${A}
+	unpack "${A}"
 
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.9.3-uudecode-gcda-fix.patch
-	if use injection; then epatch ${FILESDIR}/${PN}-r1886.patch; fi
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-0.9.3-uudecode-gcda-fix.patch"
+	if use injection; then epatch "${FILESDIR}/${PN}-r1886.patch"; fi
 	for dir in ath ath_hal net80211 ath_rate ath_rate/amrr ath_rate/onoe ath_rate/sample; do
-		convert_to_m ${S}/${dir}/Makefile
+		convert_to_m "${S}"/${dir}/Makefile
 	done
 }
 

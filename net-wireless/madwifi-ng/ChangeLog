@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/madwifi-ng
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.48 2007/10/26 13:56:08 beandog Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.49 2008/01/16 15:56:47 steev Exp $
+
+  16 Jan 2008; Steev Klimaszewski <steev@gentoo.org>
+  madwifi-ng-0.9.3.3.ebuild:
+  Add a check for CONFIG_KMOD and error if it is not set.  This should fix 
+  bug #174168.  Thanks to David Brigada <brigad@rpi.edu> for reporting, 
+  and Gordon Malm <bugs-gentoo-org-02@bumpin.org> for his work tracking it 
+  down.
 
   26 Oct 2007; Steve Dibb <beandog@gentoo.org> madwifi-ng-0.9.3.3.ebuild:
   amd64 stable, security bug 195705
