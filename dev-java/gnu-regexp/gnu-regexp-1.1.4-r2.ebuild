@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/gnu-regexp-1.1.4-r2.ebuild,v 1.6 2006/12/07 23:03:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/gnu-regexp-1.1.4-r2.ebuild,v 1.7 2008/01/16 19:59:53 caster Exp $
 
 inherit java-pkg-2 eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_compile() {
 	cd "${S}/src"
-	emake JAVAC="${JAVAC}" JAVAFLAGS="${JAVACFLAGS}" || die "emake failed"
+	emake -j1 JAVAC="${JAVAC}" JAVAFLAGS="${JAVACFLAGS}" || die "emake failed"
 	use doc && emake javadocs
 }
 
