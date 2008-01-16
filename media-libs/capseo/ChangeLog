@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/capseo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/ChangeLog,v 1.3 2007/12/25 17:59:52 trapni Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/ChangeLog,v 1.4 2008/01/16 07:38:53 trapni Exp $
+
+*capseo-0.3.0_pre200712251-r1 (16 Jan 2008)
+
+  16 Jan 2008; Christian Parpart <trapni@gentoo.org> +files/no-cpsplay.diff,
+  +capseo-0.3.0_pre200712251-r1.ebuild:
+  fixed cpsplay build inclusion as stated in bug #205830
 
 *capseo-0.3.0_pre200712251 (25 Dec 2007)
 
