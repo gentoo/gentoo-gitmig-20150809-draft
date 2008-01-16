@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.999 2008/01/15 18:50:24 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1000 2008/01/16 08:49:00 remi Exp $
+
+  16 Jan 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  Add anjuta-2.3* and its required deps to p.mask
 
   15 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
   Fix gnupg-2.0.8 mask
