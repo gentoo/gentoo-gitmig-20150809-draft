@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.7.ebuild,v 1.1 2008/01/13 14:54:44 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.7.ebuild,v 1.2 2008/01/16 21:53:11 drac Exp $
 
 inherit distutils fdo-mime multilib python
 
@@ -20,6 +20,11 @@ RDEPEND=">=x11-libs/gtk+-2
 	gnome-base/gconf"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_install() {
+	distutils_src_install
+	rm -rf "${D}"/usr/share/doc/${PN}
+}
 
 pkg_postinst() {
 	python_version
