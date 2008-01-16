@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/tucnak1
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak1/ChangeLog,v 1.6 2007/03/19 15:00:11 genone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak1/ChangeLog,v 1.7 2008/01/16 19:27:21 armin76 Exp $
+
+  16 Jan 2008; Raúl Porcel <armin76@gentoo.org> tucnak1-1.22.ebuild:
+  Add missing pkgconfig DEPEND, bug #205706
 
   19 Mar 2007; Marius Mauch <genone@gentoo.org> tucnak1-1.22.ebuild:
   Replacing einfo with elog
