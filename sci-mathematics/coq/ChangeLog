@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.24 2008/01/03 17:41:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.25 2008/01/16 12:31:16 aballier Exp $
+
+  16 Jan 2008; Alexis Ballier <aballier@gentoo.org> coq-8.1_p3.ebuild:
+  disable again parallel make... not safe in some rare cases, bug #197389
 
   03 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   +files/coq-8.1_p3-cmxa-install.dpatch, +files/coq-8.1_p3-noocamlopt.patch,

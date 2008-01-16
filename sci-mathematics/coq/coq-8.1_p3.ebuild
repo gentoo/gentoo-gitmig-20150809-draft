@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p3.ebuild,v 1.4 2008/01/03 19:44:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p3.ebuild,v 1.5 2008/01/16 12:31:16 aballier Exp $
 
 inherit eutils multilib
 
@@ -79,8 +79,7 @@ src_compile() {
 		sed -i -e "s|COQIDEFLAGS=.*|COQIDEFLAGS=-thread -I ${labldir}|" Makefile
 	fi
 
-	emake -j1 alldepend || die "make failed"
-	emake worldnodep || die "make failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
