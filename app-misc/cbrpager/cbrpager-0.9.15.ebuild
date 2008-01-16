@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cbrpager/cbrpager-0.9.15.ebuild,v 1.1 2008/01/16 11:04:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cbrpager/cbrpager-0.9.15.ebuild,v 1.2 2008/01/16 11:05:34 drac Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="|| ( app-arch/unrar app-arch/unrar-gpl )
+RDEPEND="|| ( app-arch/unrar app-arch/unrar-gpl app-arch/rar )
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libgnomecanvas-2"
 DEPEND="${RDEPEND}
