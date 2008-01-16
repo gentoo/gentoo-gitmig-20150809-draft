@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.37 2007/09/30 19:38:11 eva Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.38 2008/01/16 23:20:44 eva Exp $
+
+  16 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-pilot-2.0.15.ebuild:
+  add intltool dependency, fix bug #206004
 
   30 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
   -files/gnome-pilot-2.0.1-pisock.patch,

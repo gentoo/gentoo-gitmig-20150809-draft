@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.15.ebuild,v 1.6 2007/09/28 17:35:52 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.15.ebuild,v 1.7 2008/01/16 23:20:44 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -26,16 +26,20 @@ RDEPEND=">=gnome-base/libgnome-2.0.0
 		>=sys-apps/hal-0.5.4
 	)"
 
-DEPEND="sys-devel/gettext
-		>=dev-lang/perl-5.6.0
-		${RDEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/gettext
+	>=dev-lang/perl-5.6.0
+	dev-util/intltool"
 
 DOCS="AUTHORS COPYING* ChangeLog README NEWS"
 SCROLLKEEPER_UPDATE="0"
 
 pkg_setup() {
-	G2CONF="${G2CONF} --enable-usb --enable-network --enable-pilotlinktest \
-	$(use_with hal)"
+	G2CONF="${G2CONF}
+		--enable-usb
+		--enable-network
+		--enable-pilotlinktest
+		$(use_with hal)"
 }
 
 src_unpack() {
