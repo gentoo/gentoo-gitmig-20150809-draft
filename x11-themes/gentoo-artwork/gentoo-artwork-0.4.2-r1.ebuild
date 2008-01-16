@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2-r1.ebuild,v 1.2 2008/01/15 17:40:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2-r1.ebuild,v 1.3 2008/01/16 21:15:47 cla Exp $
 
 EAPI="1"
 
@@ -40,7 +40,7 @@ RESTRICT="binchecks strip"
 DEPEND=""
 
 src_unpack() {
-	mkdir -p "${WORKDIR}"/${PN}0.2
+	mkdir -p "${WORKDIR}"/${PN}-0.2
 	if use pixmaps || use icons || use kde || use grub; then
 		unpack ${PN}-0.2.tar.bz2
 	fi

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gentoo-artwork
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.24 2008/01/15 12:12:05 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.25 2008/01/16 21:15:47 cla Exp $
+
+  16 Jan 2008; Dawid Węgliński <cla@gentoo.org>
+  gentoo-artwork-0.4.2-r1.ebuild:
+  Fix typo, bug #203681
 
   15 Jan 2008; Dawid Węgliński <cla@gentoo.org> ChangeLog:
   Revrite ebuild and add few new flags so user can now decide what he wants to
