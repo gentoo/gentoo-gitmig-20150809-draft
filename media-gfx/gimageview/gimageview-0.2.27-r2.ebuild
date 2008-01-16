@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r2.ebuild,v 1.5 2007/04/30 21:48:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r2.ebuild,v 1.6 2008/01/16 20:32:29 maekke Exp $
 
 inherit eutils
 
@@ -28,9 +28,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-sort_fix.diff
-	epatch ${FILESDIR}/${P}-gtk12_fix.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-sort_fix.diff
+	epatch "${FILESDIR}"/${P}-gtk12_fix.diff
 }
 
 src_compile() {
@@ -49,7 +49,7 @@ src_compile() {
 
 src_install() {
 	# make DESTDIR=${D} install doesn't work
-	einstall desktopdir=${D}/usr/share/applications || die
+	einstall desktopdir="${D}"/usr/share/applications || die
 }
 
 pkg_postinst() {
