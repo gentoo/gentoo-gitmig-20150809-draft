@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.07.ebuild,v 1.3 2008/01/16 20:39:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.07.ebuild,v 1.4 2008/01/16 20:54:08 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -17,7 +17,7 @@ SRC_URI="x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/${PV}/${X86_NV_P
 LICENSE="NVIDIA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
-IUSE="acpi custom-cflags gtk multilib"
+IUSE="acpi custom-cflags gtk multilib kernel_linux"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
 
@@ -152,7 +152,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if kernel_linux && kernel_is lt 2 6 7; then
+	if use kernel_linux && kernel_is lt 2 6 7; then
 		echo
 		ewarn "Your kernel version is ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
 		ewarn "This is not officially supported for ${P}. It is likely you"
@@ -206,7 +206,7 @@ src_compile() {
 	cd "${NV_SRC}"
 	if use x86-fbsd; then
 		MAKE="$(get_bmake)" emake CC="$(tc-getCC)" LD="$(tc-getLD)" LDFLAGS="$(raw-ldflags)" || die
-	elif kernel_linux; then
+	elif use kernel_linux; then
 		linux-mod_src_compile
 	fi
 }
