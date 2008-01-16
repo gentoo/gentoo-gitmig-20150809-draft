@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.1.ebuild,v 1.3 2008/01/14 12:53:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.1.ebuild,v 1.4 2008/01/16 02:28:55 ranger Exp $
 
 inherit elisp-common flag-o-matic toolchain-funcs bash-completion
 
@@ -10,7 +10,7 @@ SRC_URI="http://mathcs.holycross.edu/~ahwang/epix/${P}_withpdf.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="emacs"
 
 DEPEND="virtual/latex-base
