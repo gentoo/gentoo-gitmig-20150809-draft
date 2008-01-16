@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.31 2008/01/16 01:57:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.32 2008/01/16 19:36:05 fmccor Exp $
+
+  16 Jan 2008; Ferris McCormick <fmccor@gentoo.org> libmcs-0.6.0.ebuild:
+  Sparc stable, part of Bug #198820.
 
   16 Jan 2008; Brent Baude <ranger@gentoo.org> libmcs-0.6.0.ebuild:
   Marking libmcs-0.6.0 ppc and ppc64 for bug 198820
