@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.571 2007/12/31 12:36:25 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.572 2008/01/16 22:46:12 vapier Exp $
+
+  16 Jan 2008; Mike Frysinger <vapier@gentoo.org> glibc-2.7-r1.ebuild:
+  Add some ~sparc love.
 
   31 Dec 2007; Jeroen Roovers <jer@gentoo.org> glibc-2.7-r1.ebuild:
   Stable for HPPA.
