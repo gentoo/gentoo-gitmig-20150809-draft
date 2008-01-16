@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.0.ebuild,v 1.2 2008/01/07 06:27:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.0.ebuild,v 1.3 2008/01/16 11:28:47 markusle Exp $
 
 inherit elisp-common eutils flag-o-matic toolchain-funcs autotools
 
@@ -33,7 +33,8 @@ pkg_setup() {
 
 	# boehm-gc currently is broken with USE='threads'
 	# (see bug #195335) causing Macaulay2 to fail
-	if built_with_use =dev-libs/boehm-gc-7* threads; then
+	if built_with_use "dev-libs/boehm-gc" "threads" \
+		&& has_version "=dev-libs/boehm-gc-7*"; then
 		echo
 		eerror "dev-libs/boehm-gc-7* with USE=\"threads\" is"
 		eerror "currently broken (see bug #195335) causing"
