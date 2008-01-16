@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b.ebuild,v 1.20 2007/02/04 18:01:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b.ebuild,v 1.21 2008/01/16 18:31:36 grobian Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 -mips ppc ppc64 sparc x86 ~ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 -mips ppc ppc64 sparc x86" 
 IUSE="debug nls esd"
 
 #	~media-libs/libmad-${PV}
