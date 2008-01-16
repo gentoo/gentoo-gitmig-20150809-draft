@@ -7,4 +7,4 @@ Terminal=false
 Type=Application
 StartupNotify=false
 Categories=GNOME;Application;Office;
-MimeType=application/x-lyx
+MimeType=application/x-lyx;
