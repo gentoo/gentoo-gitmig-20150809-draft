@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmcoincoin
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/ChangeLog,v 1.18 2006/10/27 08:25:42 s4t4n Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/ChangeLog,v 1.19 2008/01/16 17:49:10 drac Exp $
+
+*wmcoincoin-2.5.1f (16 Jan 2008)
+
+  16 Jan 2008; Samuli Suominen <drac@gentoo.org> +wmcoincoin-2.5.1f.ebuild:
+  Version bump.
 
   27 Oct 2006; Michele Noberasco <s4t4n@gentoo.org> wmcoincoin-2.5.0g.ebuild:
   Added missing pkgconfig dependancy. Closes bug #150649.
