@@ -1,6 +1,6 @@
-# Copyright 2005-2007 Gentoo Foundation
+# Copyright 2005-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/svninfo-0.6.ebuild,v 1.3 2007/08/11 03:30:41 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/svninfo-0.6.ebuild,v 1.4 2008/01/16 12:13:47 aballier Exp $
 
 inherit latex-package eutils
 
@@ -16,8 +16,8 @@ DOCS="README svninfo.pdf"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.5-latex-compile.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-0.5-latex-compile.patch"
 }
 
 src_compile() {
