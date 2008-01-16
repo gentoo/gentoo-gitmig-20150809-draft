@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.07.ebuild,v 1.5 2008/01/16 21:09:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.07.ebuild,v 1.6 2008/01/16 21:37:46 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -34,6 +34,14 @@ RDEPEND="${COMMON}
 	media-libs/mesa
 	acpi? ( sys-power/acpid )"
 PDEPEND="gtk? ( media-video/nvidia-settings )"
+
+QA_TEXTRELS_x86_fbsd="boot/modules/nvidia.ko
+	usr/lib/opengl/nvidia/lib/libGL.so.1
+	usr/lib/opengl/nvidia/lib/libGLcore.so.1
+	usr/lib/opengl/nvidia/lib/libnvidia-cfg.so.1
+	usr/lib/opengl/nvidia/no-tls/libnvidia-tls.so.1
+	usr/lib/opengl/nvidia/extensions/libglx.so
+	usr/lib/xorg/modules/drivers/nvidia_drv.so"
 
 QA_TEXTRELS_amd64="usr/lib32/opengl/nvidia/tls/libnvidia-tls.so.${PV}
 	usr/lib32/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}
@@ -174,7 +182,8 @@ src_compile() {
 
 	cd "${NV_SRC}"
 	if use x86-fbsd; then
-		MAKE="$(get_bmake)" emake CC="$(tc-getCC)" LD="$(tc-getLD)" LDFLAGS="$(raw-ldflags)" || die
+		MAKE="$(get_bmake)" emake CC="$(tc-getCC)" LD="$(tc-getLD)" \
+			LDFLAGS="$(raw-ldflags)" CFLAGS="-Wno-sign-compare"|| die
 	elif use kernel_linux; then
 		linux-mod_src_compile
 	fi
