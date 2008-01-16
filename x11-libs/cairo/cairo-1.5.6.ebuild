@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.5.4-r1.ebuild,v 1.1 2007/12/27 14:19:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.5.6.ebuild,v 1.1 2008/01/16 19:51:48 cardoe Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -49,9 +49,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	# SPARC alignment patch
-	epatch "${FILESDIR}"/${P}-sparc-alignment.patch
 
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
 	elibtoolize
