@@ -1,5 +1,6 @@
-/var/log/dspam/sql.errors /var/log/dspam/system.log /var/log/dspam/dspam.debug /var/log/dspam/dspam.messages {
+/var/log/dspam/sql.errors /var/log/dspam/dspam.log /var/log/dspam/dspam.debug /var/log/dspam/dspam.messages {
 	weekly
 	compress
+	missingok
 	create 0644 dspam dspam
 }
