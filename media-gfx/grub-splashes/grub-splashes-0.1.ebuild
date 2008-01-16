@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grub-splashes/grub-splashes-0.1.ebuild,v 1.4 2007/10/24 21:09:59 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grub-splashes/grub-splashes-0.1.ebuild,v 1.5 2008/01/16 22:29:38 maekke Exp $
 
 DESCRIPTION="Collection of grub splashes"
 HOMEPAGE="http://dev.gentoo.org/~welp/grub-splashes.xml"
@@ -15,8 +15,6 @@ DEPEND="|| ( sys-boot/grub sys-boot/grub-static )"
 RDEPEND="${RDEPEND}"
 
 src_install() {
-	cd "$S"
-
 	if [[ -d ${ROOT}/boot/grub ]]; then
 		insinto /boot/grub
 		doins *.xpm.gz
