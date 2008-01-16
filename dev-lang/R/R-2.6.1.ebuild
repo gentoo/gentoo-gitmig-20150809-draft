@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.1.ebuild,v 1.1 2007/11/26 23:02:37 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.1.ebuild,v 1.2 2008/01/16 16:26:19 bicatali Exp $
 
 inherit fortran flag-o-matic
 
-DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
+DESCRIPTION="Language and environment for statistical computing and graphics"
 HOMEPAGE="http://www.r-project.org/"
 SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz"
 
@@ -12,17 +12,17 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
-IUSE="blas doc java jpeg lapack minimal nls png readline tk X"
+IUSE="doc java jpeg lapack minimal nls png readline tk X"
 
 # common depends
 CDEPEND="dev-lang/perl
 	>=dev-libs/libpcre-7.3
 	app-arch/bzip2
+	virtual/blas
 	virtual/ghostscript
 	readline? ( sys-libs/readline )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
-	blas? ( virtual/blas )
 	lapack? ( virtual/lapack )
 	tk? ( dev-lang/tk )
 	X? ( x11-libs/libXmu x11-misc/xdg-utils )"
@@ -50,10 +50,6 @@ pkg_setup() {
 }
 
 src_compile() {
-
-	use blas && \
-		export BLAS_LIBS="$(pkg-config --libs blas)"
-
 	use lapack && \
 		export LAPACK_LIBS="$(pkg-config --libs lapack)"
 
@@ -70,9 +66,10 @@ src_compile() {
 		--with-system-zlib \
 		--with-system-bzlib \
 		--with-system-pcre \
+		--with-blas="$(pkg-config --libs blas)" \
+		--docdir=/usr/share/doc/${PF} \
 		rdocdir=/usr/share/doc/${PF} \
 		$(use_enable nls) \
-		$(use_with blas) \
 		$(use_with lapack) \
 		$(use_with tk tcltk) \
 		$(use_with jpeg jpeglib) \
