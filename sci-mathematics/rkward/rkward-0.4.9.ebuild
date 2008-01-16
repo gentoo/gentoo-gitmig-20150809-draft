@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.4.7a.ebuild,v 1.2 2007/10/17 15:47:07 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.4.9.ebuild,v 1.1 2008/01/16 17:35:15 bicatali Exp $
 
 ARTS_REQUIRED="never"
 
@@ -15,8 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="<dev-lang/R-2.6.0"
-RDEPEND="${DEPEND} dev-lang/php"
+DEPEND="dev-lang/R"
+RDEPEND="${DEPEND}
+	dev-lang/php"
 
 need-kde 3
 
@@ -29,3 +30,4 @@ src_install() {
 	# already provided by kdelibs
 	rm -f "${D}"/share/apps/katepart/syntax/r.xml
 }
+
