@@ -50,7 +50,7 @@ run_dspam_clean() {
 #
 check_for_tools() {
 	local myrc=0
-	for foo in awk cut sed getent
+	for foo in awk cut sed
 	do
 		if ! which ${foo} >/dev/null 2>&1
 		then
