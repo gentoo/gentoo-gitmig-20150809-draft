@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.6 2008/01/14 14:03:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.7 2008/01/16 02:24:48 vapier Exp $
+
+  16 Jan 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/linphone-2.0.1-speexdsp.patch, linphone-2.0.1-r1.ebuild:
+  Fix building with newer versions of speex #205893 by Chi-Thanh Christopher
+  Nguyen.
 
 *linphone-2.0.1-r1 (14 Jan 2008)
 

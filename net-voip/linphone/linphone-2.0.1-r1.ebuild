@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.0.1-r1.ebuild,v 1.1 2008/01/14 14:03:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.0.1-r1.ebuild,v 1.2 2008/01/16 02:24:48 vapier Exp $
 
 # Note: video support in linphone relies on swscaler being disabled
 #       in ffmpeg.  this is because the video code in linphone is old
@@ -51,6 +51,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/linphone-1.6.0-call.patch
 	epatch "${FILESDIR}"/linphone-1.99.0-core-amd64.patch
 	epatch "${FILESDIR}"/linphone-2.0.1-configure-gsm.patch
+	epatch "${FILESDIR}"/linphone-2.0.1-speexdsp.patch #205893
 	epatch "${FILESDIR}"/linphone-2.0.1-mediastreamer-deps.patch
 }
 
