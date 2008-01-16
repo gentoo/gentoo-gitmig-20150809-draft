@@ -1,6 +1,10 @@
 # ChangeLog for app-text/diction
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.27 2007/12/25 14:49:17 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.28 2008/01/16 10:26:18 drac Exp $
+
+  16 Jan 2008; Samuli Suominen <drac@gentoo.org> diction-1.11.ebuild:
+  Fix language iconv conversion to unicode and LICENSE to GPL-3 wrt Comment #5
+  in #170984, thanks to James Rowe.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing seemant from metadata.xml as per #202469. Assigning to
