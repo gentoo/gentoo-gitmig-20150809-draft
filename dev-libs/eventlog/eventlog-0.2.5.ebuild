@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/eventlog-0.2.5.ebuild,v 1.12 2007/12/21 17:39:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/eventlog-0.2.5.ebuild,v 1.13 2008/01/16 07:26:20 kumba Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.balabit.com/downloads/files/syslog-ng/sources/2.0/src/${P}.t
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
