@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmmsens
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsens/ChangeLog,v 1.10 2008/01/06 20:30:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsens/ChangeLog,v 1.11 2008/01/16 21:19:03 drac Exp $
+
+*wmmsens-0.29.8 (16 Jan 2008)
+
+  16 Jan 2008; Samuli Suominen <drac@gentoo.org> +wmmsens-0.29.8.ebuild:
+  Version bump.
 
   06 Jan 2008; Sven Wegener <swegener@gentoo.org> wmmsens-0.29.6.ebuild:
   Add cross-compile support.
