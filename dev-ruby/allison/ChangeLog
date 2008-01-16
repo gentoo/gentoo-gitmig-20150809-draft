@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/allison
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.2 2008/01/16 02:25:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.3 2008/01/16 12:54:35 fmccor Exp $
+
+  16 Jan 2008; Ferris McCormick <fmccor@gentoo.org> allison-2.0.2.ebuild:
+  ~sparc for testing & paludis --- Bug #206031 --- seems to work.
 
   16 Jan 2008; Brent Baude <ranger@gentoo.org> allison-2.0.2.ebuild:
   marking allison-2.0.2 ~ppc and ~ppc64
