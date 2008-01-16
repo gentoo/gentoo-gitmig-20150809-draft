@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ploticus
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ChangeLog,v 1.12 2007/08/28 21:45:54 dragonheart Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ChangeLog,v 1.13 2008/01/16 12:56:38 dragonheart Exp $
+
+  16 Jan 2008; Daniel Black <dragonheart@gentoo.org>
+  ploticus-2.33-r1.ebuild:
+  clean before make as per bug #191692 thanks to Thomas
 
 *ploticus-2.33-r1 (28 Aug 2007)
 

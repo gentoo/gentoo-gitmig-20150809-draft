@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.33-r1.ebuild,v 1.1 2007/08/28 21:45:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.33-r1.ebuild,v 1.2 2008/01/16 12:56:38 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
@@ -103,8 +103,9 @@ src_compile() {
 
 	einfo "Compiling C API library"
 
+	emake clean || die "Clean Failed!" 
 	emake "CC=$(tc-getCC)" \
-	-f Makefile_api || die "API make failed!"
+		-f Makefile_api || die "API make failed!"
 }
 
 src_test() {
