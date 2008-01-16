@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.9.ebuild,v 1.5 2008/01/13 09:03:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.9.ebuild,v 1.6 2008/01/16 19:15:37 fmccor Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.linuxpowertop.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ~sparc x86"
+KEYWORDS="amd64 arm ppc sparc x86"
 IUSE="unicode"
 
 DEPEND="sys-libs/ncurses"
