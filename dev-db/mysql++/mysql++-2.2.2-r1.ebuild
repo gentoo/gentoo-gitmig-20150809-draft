@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-2.2.2-r1.ebuild,v 1.6 2007/08/16 00:02:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-2.2.2-r1.ebuild,v 1.7 2008/01/16 05:36:20 robbat2 Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="C++ API interface to the MySQL database"
 # This is the download page but includes links to other places
