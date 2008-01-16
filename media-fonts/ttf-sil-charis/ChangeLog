@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ttf-sil-charis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-charis/ChangeLog,v 1.10 2008/01/16 00:13:00 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-charis/ChangeLog,v 1.11 2008/01/16 00:19:20 lu_zero Exp $
+
+  16 Jan 2008; Luca Barbato <lu_zero@gentoo.org>
+  ttf-sil-charis-4.100.ebuild:
+  Marked ~ppc and ~ppc64
 
   16 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> ttf-sil-charis-4.100.ebuild:
   Add missing app-arch/unzip DEPEND for bug #205857.
