@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.07.ebuild,v 1.2 2008/01/16 19:21:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.07.ebuild,v 1.3 2008/01/16 20:39:59 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -17,7 +17,7 @@ SRC_URI="x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/${PV}/${X86_NV_P
 LICENSE="NVIDIA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
-IUSE="acpi gtk multilib"
+IUSE="acpi custom-cflags gtk multilib"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
 
@@ -53,21 +53,21 @@ QA_TEXTRELS_x86_fbsd="boot/modules/nvidia.ko
 	usr/lib/opengl/nvidia/extensions/libglx.so
 	usr/lib/xorg/modules/drivers/nvidia_drv.so"
 
-QA_TEXTRELS_amd64="usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
-	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
-	usr/lib32/opengl/nvidia/lib/libnvidia-cfg.so.${PV}
-	usr/lib32/opengl/nvidia/tls/libnvidia-tls.so.${PV}
-	usr/lib32/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}"
+#QA_TEXTRELS_amd64="usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
+#	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
+#	usr/lib32/opengl/nvidia/lib/libnvidia-cfg.so.${PV}
+#	usr/lib32/opengl/nvidia/tls/libnvidia-tls.so.${PV}
+#	usr/lib32/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}"
 
 QA_WX_LOAD_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib/opengl/nvidia/extensions/libglx.so"
 
-QA_WX_LOAD_amd64="usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
-	usr/lib64/opengl/nvidia/lib/libGLcore.so.${PV}
-	usr/lib64/opengl/nvidia/extensions/libglx.so
-	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
-	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}"
+#QA_WX_LOAD_amd64="usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
+#	usr/lib64/opengl/nvidia/lib/libGLcore.so.${PV}
+#	usr/lib64/opengl/nvidia/extensions/libglx.so
+#	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
+#	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}"
 
 QA_EXECSTACK_x86="usr/lib/xorg/modules/drivers/nvidia_drv.so
 	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
@@ -76,13 +76,13 @@ QA_EXECSTACK_x86="usr/lib/xorg/modules/drivers/nvidia_drv.so
 	usr/lib/libXvMCNVIDIA.so.${PV}
 	usr/bin/nvidia-xconfig"
 
-QA_EXECSTACK_amd64="usr/lib64/xorg/modules/drivers/nvidia_drv.so
-	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
-	usr/lib64/opengl/nvidia/lib/libGLcore.so.${PV}
-	usr/lib64/opengl/nvidia/lib/libnvidia-cfg.so.${PV}
-	usr/lib64/opengl/nvidia/extensions/libglx.so
-	usr/lib64/libXvMCNVIDIA.so.${PV}
-	usr/bin/nvidia-xconfig"
+#QA_EXECSTACK_amd64="usr/lib64/xorg/modules/drivers/nvidia_drv.so
+#	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
+#	usr/lib64/opengl/nvidia/lib/libGLcore.so.${PV}
+#	usr/lib64/opengl/nvidia/lib/libnvidia-cfg.so.${PV}
+#	usr/lib64/opengl/nvidia/extensions/libglx.so
+#	usr/lib64/libXvMCNVIDIA.so.${PV}
+#	usr/bin/nvidia-xconfig"
 
 if use x86; then
 	PKG_V="-pkg0"
@@ -95,7 +95,7 @@ elif use x86-fbsd; then
 	NV_PACKAGE="${X86_FBSD_NV_PACKAGE}"
 fi
 
-S="${WORKDIR}/${NV_PACKAGE}${PKG_V}/usr/src/nv"
+S="${WORKDIR}/${NV_PACKAGE}${PKG_V}"
 
 mtrr_check() {
 	ebegin "Checking for MTRR support"
@@ -119,9 +119,9 @@ pkg_setup() {
 		die "Unexpected \${DEFAULT_ABI} = ${DEFAULT_ABI}"
 	fi
 
-	if kernel_linux; then
+	if use kernel_linux; then
 		linux-mod_pkg_setup
-		MODULE_NAMES="nvidia(video:${S})"
+		MODULE_NAMES="nvidia(video:${S}/usr/src/nv)"
 		BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} SYSOUT=${KV_OUT_DIR}"
 		mtrr_check
 	fi
@@ -141,17 +141,17 @@ pkg_setup() {
 	if use kernel_FreeBSD; then
 		NV_DOC="${S}/doc"
 		NV_EXEC="${S}/obj"
+		NV_SRC="${S}/src"
 	elif use kernel_linux; then
 		NV_DOC="${S}/usr/share/doc"
 		NV_EXEC="${S}/usr/bin"
+		NV_SRC="${S}/usr/src/nv"
 	else
 		die "Could not determine proper NVIDIA package"
 	fi
 }
 
 src_unpack() {
-	local NV_PATCH_PREFIX="${FILESDIR}/${PV}/NVIDIA-${PV}"
-
 	if kernel_linux && kernel_is lt 2 6 7; then
 		echo
 		ewarn "Your kernel version is ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
@@ -170,9 +170,9 @@ src_unpack() {
 	fi
 
 	# Patches go below here, add brief description
-	use x86-fbsd \
-		&& cd "${WORKDIR}/${NV_PACKAGE}${PKG_V}/doc" \
-		|| cd "${WORKDIR}/${NV_PACKAGE}${PKG_V}"
+	cd "${S}"
+	use x86-fbsd && cd doc
+
 	# Use the correct defines to make gtkglext build work
 	epatch "${FILESDIR}"/NVIDIA_glx-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
@@ -188,13 +188,13 @@ src_unpack() {
 		sed -i \
 			-e 's:-Wpointer-arith::g' \
 			-e 's:-Wsign-compare::g' \
-			"${S}"/Makefile.kbuild
+			"${NV_SRC}"/Makefile.kbuild
 
 		# If you set this then it's your own fault when stuff breaks :)
-		[[ -n ${USE_CRAZY_OPTS} ]] && sed -i "s:-O:${CFLAGS}:" Makefile.*
+		use custom-cflags && sed -i "s:-O:${CFLAGS}:" Makefile.*
 
 		# If greater than 2.6.5 use M= instead of SUBDIR=
-		cd "${S}"; convert_to_m Makefile.kbuild
+		convert_to_m "${NV_SRC}"/Makefile.kbuild
 	fi
 }
 
@@ -202,9 +202,9 @@ src_compile() {
 	# This is already the default on Linux, as there's no toplevel Makefile, but
 	# on FreeBSD there's one and triggers the kernel module build, as we install
 	# it by itself, pass this.
+
+	cd "${NV_SRC}"
 	if use x86-fbsd; then
-		cd "${WORKDIR}/${NV_PACKAGE}${PKG_V}/src"
-		echo LDFLAGS="$(raw-ldflags)"
 		MAKE="$(get_bmake)" emake CC="$(tc-getCC)" LD="$(tc-getLD)" LDFLAGS="$(raw-ldflags)" || die
 	elif kernel_linux; then
 		linux-mod_src_compile
@@ -214,7 +214,7 @@ src_compile() {
 src_install() {
 	local MLTEST=$(type dyn_unpack)
 
-	cd "${WORKDIR}"/${NV_PACKAGE}${PKG_V}
+	cd "${S}"
 
 	if use kernel_linux; then
 		linux-mod_src_install
@@ -234,10 +234,10 @@ src_install() {
 		doins "${WORKDIR}"/nvidia || die
 	elif use x86-fbsd; then
 		insinto /boot/modules
-		doins "${WORKDIR}/${X86_FBSD_NV_PACKAGE}/src/nvidia.kld" || die
+		doins "${WORKDIR}/${NV_PACKAGE}/src/nvidia.kld" || die
 
 		exeinto /boot/modules
-		doexe "${WORKDIR}/${X86_FBSD_NV_PACKAGE}/src/nvidia.ko" || die
+		doexe "${WORKDIR}/${NV_PACKAGE}/src/nvidia.ko" || die
 	fi
 
 	if [[ "${MLTEST/set_abi}" == "${MLTEST}" ]] && has_multilib_profile ; then
@@ -260,14 +260,14 @@ src_install() {
 	is_final_abi || return 0
 
 	# Documentation
-	dodoc ${NV_DOC}/{XF86Config.sample,Copyrights}
-	dohtml ${NV_DOC}/html/*
+	dodoc "${NV_DOC}"/{XF86Config.sample,Copyrights}
+	dohtml "${NV_DOC}"/html/*
 	if use x86-fbsd; then
-		dodoc doc/README
+		dodoc "${NV_DOC}/README"
 	else
 		# Docs
-		newdoc usr/share/doc/README.txt README
-		dodoc usr/share/doc/NVIDIA_Changelog
+		newdoc "${NV_DOC}/README.txt" README
+		dodoc "${NV_DOC}/NVIDIA_Changelog"
 	fi
 
 	# Helper Apps
