@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.49 2008/01/16 05:36:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.50 2008/01/16 05:37:58 robbat2 Exp $
+
+  16 Jan 2008; Robin H. Johnson <robbat2@gentoo.org>
+  -files/patch-1.7.34-typo_correction, -mysql++-1.7.26.ebuild,
+  -mysql++-1.7.34.ebuild, -mysql++-2.0.4.ebuild:
+  Trim old ebuilds to solve bug #160179.
 
   16 Jan 2008; Robin H. Johnson <robbat2@gentoo.org>
   mysql++-2.2.2-r1.ebuild, mysql++-2.3.2.ebuild:
