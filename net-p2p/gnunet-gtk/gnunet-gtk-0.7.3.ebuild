@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/gnunet-gtk-0.7.1b.ebuild,v 1.1 2007/03/23 17:04:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/gnunet-gtk-0.7.3.ebuild,v 1.1 2008/01/16 15:07:32 armin76 Exp $
 
 DESCRIPTION="Graphical front end for GNUnet."
 HOMEPAGE="http://gnunet.org/"
@@ -21,5 +21,5 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} install || die
+	make DESTDIR="${D}" -j1 install || die
 }
