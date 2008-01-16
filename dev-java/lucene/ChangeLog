@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/lucene
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.38 2007/08/29 13:55:44 betelgeuse Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.39 2008/01/16 12:50:53 elvanor Exp $
+
+*lucene-1.9.1 (16 Jan 2008)
+
+  16 Jan 2008; Jean-Noël Rivasseau <elvanor@gentoo.org>
+  +files/disable-contrib.patch, +files/lucene-manifest,
+  +lucene-1.9.1.ebuild:
+  Added 1.9.1 version, necessary for Eclipse. Initial ebuild written by
+  Serkan, clean up by myself (mostly to make tests run).
 
   29 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
   -lucene-1.4.3-r2.ebuild:
