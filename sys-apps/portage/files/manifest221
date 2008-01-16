@@ -1,0 +1,283 @@
+#!/usr/bin/env python
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/files/manifest221,v 1.1 2008/01/16 01:36:43 zmedico Exp $
+
+try:
+	from portage.exception import InvalidDependString
+	from portage import checksum as portage_checksum
+	from portage import dep as portage_dep
+except ImportError:
+	from portage_exception import InvalidDependString
+	import portage_checksum
+	import portage_dep
+import portage
+
+import os
+from os.path import join
+from os.path import sep
+import re
+import stat
+import sys
+import UserDict
+
+if portage.vercmp('2.1_pre0', portage.VERSION) < 0:
+	# these are supported by portage 2.0.x
+	hash_names = ['SHA1', 'MD5']
+else:
+	hash_names = [name for name in \
+		portage_checksum.get_valid_checksum_keys() if name != 'size']
+hash_names.sort()
+
+class DistfilesDict(UserDict.DictMixin):
+	def __init__(self, portdb, cp):
+		self.cp = cp
+		self.db = portdb
+	def __getitem__(self, cpv):
+		"""Returns the complete fetch list for a given package."""
+		try:
+			return self._getfetchlist(cpv)
+		except KeyError:
+			# aux_get error / corruption
+			return []
+	def __contains__(self, cpv):
+		return cpv in self.keys()
+	def has_key(self, cpv):
+		"""Returns true if the given package exists within pkgdir."""
+		return cpv in self
+	def keys(self):
+		"""Returns keys for all packages within pkgdir"""
+		return self.db.cp_list(self.cp)
+	def _getfetchlist(self, cpv):
+		"""
+		In old versions of portage portdbapi.getfetchlist() calls sys.exit()
+		if there is an aux_get() failure and this is triggered by ebuilds that
+		have multiple version suffixes. So, we have our own implementation.
+		"""
+		uris = self.db.aux_get(cpv, ["SRC_URI"])[0]
+		uris = portage_dep.paren_reduce(uris)
+		uris = portage_dep.use_reduce(uris, matchall=1)
+		uris = portage.flatten(uris)
+		files = []
+		for x in uris:
+			x = os.path.basename(x)
+			if not x in files:
+				files.append(x)
+		return files
+
+class Manifest:
+	_dist_re = re.compile(r'^DIST (\S+) (\d+)( \w+ \w+)* (%s) [\w]+( \w+ \w+)*$' % '|'.join(hash_names))
+
+	def __init__(self, filename):
+		self.filename = filename
+		self.digests = {}
+		self.lines = open(filename).readlines()
+		digests = self.digests
+		dist_re = self._dist_re
+		for line in self.lines:
+			match = dist_re.match(line)
+			if match is None:
+				continue
+			distfile = match.group(1)
+			size = match.group(2)
+			digest_dict = {'size':size}
+			digest_tokens = line[match.end(2):].split()
+			for i in xrange(len(digest_tokens)/2):
+				digest_dict[digest_tokens[2*i]] = digest_tokens[2*i+1]
+			digests[distfile] = digest_dict
+
+class DigestFile:
+	digest_re = re.compile(r'^(%s) (\w+) (\w+) (\d+)$' % '|'.join(hash_names))
+
+	def __init__(self, filename):
+		self.filename = filename
+		self.digests = {}
+		digests = self.digests
+		digest_re = self.digest_re
+		for line in open(filename):
+			match = digest_re.match(line)
+			if match is None:
+				continue
+			hash_name = match.group(1)
+			hash_value = match.group(2)
+			dist_file = match.group(3)
+			size = match.group(4)
+			dist_dict = digests.get(dist_file)
+			if dist_dict is None:
+				dist_dict = {}
+				digests[dist_file] = dist_dict
+			dist_dict['size'] = size
+			dist_dict[hash_name] = hash_value
+
+def write_atomic(file_path, content):
+	temp_filename = "%s.%d" % (file_path, os.getpid())
+	f = open(temp_filename, 'w')
+	try:
+		f.write(content)
+		f.close()
+		os.rename(temp_filename, file_path)
+	except EnvironmentError:
+		try:
+			os.unlink(temp_filename)
+		except EnvironmentError:
+			pass
+
+def manifest221(debug=False, pretend=False):
+	portdb = portage.portdb
+	settings = portage.settings
+	del portdb.porttrees[1:]
+
+	for cp in portdb.cp_all():
+		cat, pn = portage.catsplit(cp)
+		pkgdir = join(portdb.porttree_root, cp)
+		if not os.path.isdir(pkgdir):
+			# cp_all() returns invalid things like app-accessibility/metadata.xml
+			continue
+		distfiles_dict = DistfilesDict(portdb, cp)
+		manifest_filename = join(portdb.porttree_root, cp, 'Manifest')
+		manifest = Manifest(manifest_filename)
+		filesdir = join(pkgdir, 'files')
+		try:
+			filesdir_list = os.listdir(filesdir)
+		except OSError:
+			filesdir_list = []
+		digest_filename_re = re.compile(r'digest-%s-[\S]*' % re.escape(pn))
+		all_m1_digests = {}
+		for filename in filesdir_list:
+			if digest_filename_re.match(filename) is None:
+				continue
+			digest_file = DigestFile(join(filesdir, filename))
+			all_m1_digests.update(digest_file.digests)
+
+		written_files = []
+		for cpv, distfiles in distfiles_dict.iteritems():
+			distfiles.sort()
+			write = False
+			for distfile in distfiles:
+				m2_digests = manifest.digests.get(distfile)
+				if m2_digests is None:
+					continue
+				m1_digests = all_m1_digests.get(distfile)
+				for hash_name in hash_names:
+					if hash_name in m2_digests and \
+						(not m1_digests or hash_name not in m1_digests):
+						write = True
+						break
+			cat, pf = portage.catsplit(cpv)
+			digest_filename = join(filesdir, 'digest-%s' % pf)
+			if not os.path.exists(digest_filename):
+				# portage-2.0.x does not tolerate a missing digest file,
+				# even when the package has no distfiles
+				write = True
+			if write:
+				written_files.append(digest_filename)
+				if pretend:
+					if debug and not os.path.isdir(filesdir):
+						print 'os.mkdir("%s")' % filesdir
+					if debug:
+						print 'open("%s", "w")' % digest_filename
+				if not pretend:
+					try:
+						os.mkdir(filesdir)
+					except OSError:
+						pass
+					f = open(digest_filename, 'w')
+				for distfile in distfiles:
+					m2_digests = manifest.digests.get(distfile)
+					m1_digests = all_m1_digests.get(distfile)
+					combined_digests = {}
+					if m1_digests is not None:
+						combined_digests.update(m1_digests)
+					if m2_digests is not None:
+						combined_digests.update(m2_digests)
+					size = combined_digests.get('size')
+					if size is None:
+						continue
+					for hash_name in hash_names:
+						hash_value = combined_digests.get(hash_name)
+						if hash_value is None:
+							continue
+						tokens = [hash_name, hash_value, distfile, size]
+						if debug:
+							print 'f.write("%s")' % ' '.join(tokens)
+						if not pretend:
+							f.write(' '.join(tokens) + '\n')
+				if not pretend:
+					f.close()
+		if written_files:
+			digest_line_re = re.compile(
+				r'[\w]+ [\w]+ (files/digest-%s-[\S]*) [\d]+$' % re.escape(pn))
+			new_lines = [line for line in manifest.lines \
+				if digest_line_re.match(line) is None]
+
+			for cpv, distfiles in distfiles_dict.iteritems():
+				cat, pf = portage.catsplit(cpv)
+				relative_filename = join('files', 'digest-%s' % pf)
+				full_filename = join(pkgdir, relative_filename)
+				if not distfiles and not os.path.exists(full_filename):
+					# the file is allowed to be missing in this case
+					continue
+				for hash_name in hash_names:
+					hash_func = getattr(portage_checksum,
+						hash_name.lower() + 'hash', None)
+					if hash_func is None:
+						continue
+					try:
+						hash_value, size = portage_checksum.perform_checksum(
+							full_filename, hash_function=hash_func)
+					except TypeError:
+						# portage 2.0.x and 2.1.x are not api compatible here
+						hash_value, size = portage_checksum.perform_checksum(
+							full_filename, hashname=hash_name)
+					tokens = [hash_name, hash_value, relative_filename, str(size)]
+					new_lines.append(' '.join(tokens) + '\n')
+			if debug:
+				print "open('%s', 'w')" % manifest_filename
+			if not pretend:
+				write_atomic(manifest_filename, ''.join(new_lines))
+
+def main():
+	# optparse requires >=python-2.3 so parse the options manually.
+	usage = "usage: %s" % os.path.basename(sys.argv[0])
+	pretend = False
+	debug = False
+	quiet = False
+	help = False
+	for x in sys.argv[1:]:
+		if x in ("-p", "--pretend"):
+			pretend = True
+		elif x in ("-d", "--debug"):
+			debug = True
+		elif x in ("-q", "--quiet"):
+			quiet = True
+		elif x in ("-h", "--help"):
+			help = True
+
+	if help:
+		print usage
+		print
+		print "Convert the current portage tree from Manifest2"
+		print "format to Manifest1 format so that it is suitable"
+		print "for use by 2.0.x versions of portage. The resulting"
+		print "tree will have both Manifest2 and Manifest1."
+		return
+
+	if not quiet:
+		print
+		print "Note: It is normal to receive 'aux_get' error message for some"
+		print "      packages. These messages can be ignored as long as they do"
+		print "      not apply to packages that are needed to upgrade portage."
+		print
+		print "Converting Manifest2 to Manifest1. Please wait..."
+
+	manifest221(debug=debug, pretend=pretend)
+
+	if not quiet:
+		print "Done."
+
+if __name__ == '__main__':
+	try:
+		main()
+	except KeyboardInterrupt:
+		print "Interrupted."
+		sys.exit(1)
