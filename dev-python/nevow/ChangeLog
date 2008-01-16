@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nevow
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.18 2007/11/02 19:01:56 hawking Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.19 2008/01/16 08:06:23 opfer Exp $
+
+  16 Jan 2008; Christian Faulhammer <opfer@gentoo.org> nevow-0.9.18.ebuild:
+  stable x86, bug 206043
 
 *nevow-0.9.18 (02 Nov 2007)
 
