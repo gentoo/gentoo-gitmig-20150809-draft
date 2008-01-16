@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.33 2008/01/02 22:55:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.34 2008/01/16 22:48:54 eva Exp $
+
+  16 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org> goffice-0.6.1.ebuild:
+  remove libgnomeprint{,ui} dependencies (bug #206095)
 
   02 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org> goffice-0.4.3.ebuild,
   goffice-0.6.1.ebuild:

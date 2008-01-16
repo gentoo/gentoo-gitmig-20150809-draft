@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.6.1.ebuild,v 1.9 2008/01/10 19:41:36 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.6.1.ebuild,v 1.10 2008/01/16 22:48:54 eva Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -20,7 +20,6 @@ RDEPEND=">=dev-libs/glib-2.8.0
 	>=x11-libs/pango-1.8.1
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.6
-	>=gnome-base/libgnomeprint-2.8.2
 	>=media-libs/libart_lgpl-2.3.11
 	>=x11-libs/cairo-1.2
 	gnome? (
