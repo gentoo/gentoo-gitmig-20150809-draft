@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.27 2008/01/16 19:32:58 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.28 2008/01/16 19:43:03 armin76 Exp $
+
+  16 Jan 2008; Raúl Porcel <armin76@gentoo.org> libmowgli-0.5.0.ebuild:
+  alpha stable wrt #198820, thanks to Tobias Klausmann for testing
 
   16 Jan 2008; Ferris McCormick <fmccor@gentoo.org> libmowgli-0.5.0.ebuild:
   Sparc stable, part of Bug #198820.
