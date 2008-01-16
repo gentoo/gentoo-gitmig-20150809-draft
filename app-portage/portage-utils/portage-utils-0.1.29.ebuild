@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.23.ebuild,v 1.12 2007/02/11 09:52:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.29.ebuild,v 1.1 2008/01/16 16:42:59 solar Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="small and fast portage helper tools written in C"
 HOMEPAGE="http://www.gentoo.org/"
@@ -10,15 +10,18 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+}
+
 src_compile() {
 	tc-export CC
-	#use python && export PYTHON=1
-	unset PYTHON
 	emake || die
 }
 
