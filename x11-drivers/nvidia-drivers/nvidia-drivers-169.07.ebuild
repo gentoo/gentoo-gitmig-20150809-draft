@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.07.ebuild,v 1.1 2008/01/16 16:20:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.07.ebuild,v 1.2 2008/01/16 19:21:15 mr_bones_ Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -262,7 +262,7 @@ src_install() {
 	# Documentation
 	dodoc ${NV_DOC}/{XF86Config.sample,Copyrights}
 	dohtml ${NV_DOC}/html/*
-	if use x86-fbsd; then	
+	if use x86-fbsd; then
 		dodoc doc/README
 	else
 		# Docs
@@ -272,7 +272,7 @@ src_install() {
 
 	# Helper Apps
 	dobin ${NV_EXEC}/nvidia-xconfig || die
-	dobin ${NV_EXEC}/nvidia-bug-report.sh || die 
+	dobin ${NV_EXEC}/nvidia-bug-report.sh || die
 }
 
 # Install nvidia library:
