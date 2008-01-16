@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mxml2man
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mxml2man/ChangeLog,v 1.4 2007/05/14 20:13:36 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mxml2man/ChangeLog,v 1.5 2008/01/16 10:50:10 drac Exp $
+
+  16 Jan 2008; Samuli Suominen <drac@gentoo.org> mxml2man-8.5.9.1.ebuild:
+  Fix HOMEPAGE and missing pkg-config dep wrt #206025.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
