@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/tic98-1.01-r1.ebuild,v 1.5 2005/11/03 10:39:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/tic98-1.01-r1.ebuild,v 1.6 2008/01/16 23:59:59 maekke Exp $
 
 inherit eutils
 
@@ -31,5 +31,5 @@ src_compile() {
 
 src_install() {
 	dodir /usr/bin
-	make BIN=${D}usr/bin install || die
+	emake BIN="${D}"usr/bin install || die
 }
