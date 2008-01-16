@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1001 2008/01/16 13:16:22 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1002 2008/01/16 23:18:08 ulm Exp $
+
+  16 Jan 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Mask app-emacs/uboat for removal.
 
   16 Jan 2008; <nichoj@gentoo.org> package.mask:
   Unmasked rubygems.
