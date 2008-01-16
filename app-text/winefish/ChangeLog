@@ -1,6 +1,10 @@
 # ChangeLog for app-text/winefish
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/ChangeLog,v 1.7 2007/09/14 18:36:36 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/ChangeLog,v 1.8 2008/01/16 10:56:10 aballier Exp $
+
+  16 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/winefish-1.3.3-nostrip.patch, winefish-1.3.3.ebuild:
+  add missing pkgconfig dep, bug #206029, dont prestrip files, bug #199539
 
   14 Sep 2007; nixnut <nixnut@gentoo.org> winefish-1.3.3.ebuild:
   Added ~ppc wrt bug 192008

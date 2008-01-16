@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/winefish-1.3.3.ebuild,v 1.7 2007/09/14 18:36:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/winefish-1.3.3.ebuild,v 1.8 2008/01/16 10:56:10 aballier Exp $
 
 inherit eutils fdo-mime
 
@@ -15,19 +15,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="spell"
 
-DEPEND=">=x11-libs/gtk+-2.4
+RDEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/libpcre-6.3
 	spell? ( virtual/aspell-dict )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
-#S=${WORKDIR}/${PN}-${MY_PV}
-
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-nostrip.patch"
+}
 src_compile() {
 	econf --disable-update-databases || die
 	emake || die
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
+	emake install DESTDIR="${D}" || die "make install failed"
 
 	dodoc AUTHORS CHANGES README ROADMAP THANKS TODO
 }
