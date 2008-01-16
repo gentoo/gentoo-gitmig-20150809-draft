@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre15447.ebuild,v 1.3 2008/01/15 21:30:53 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre15447.ebuild,v 1.4 2008/01/16 03:58:53 mr_bones_ Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
 
@@ -152,7 +152,6 @@ src_compile() {
 	else
 		myconf="${myconf} --compile-type=release"
 	fi
-
 
 	## CFLAG cleaning so it compiles
 	MARCH=$(get-flag "march")
