@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmifinfo
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/ChangeLog,v 1.18 2007/07/22 05:02:19 dberkholz Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/ChangeLog,v 1.19 2008/01/16 15:24:09 drac Exp $
+
+  16 Jan 2008; Samuli Suominen <drac@gentoo.org> wmifinfo-0.09.ebuild:
+  Fixed build system to respect CC, LD and LDFLAGS and marked amd64 stable.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wmifinfo-0.09.ebuild:
   Drop virtual/x11 references.
