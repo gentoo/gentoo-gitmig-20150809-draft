@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.5.ebuild,v 1.5 2008/01/05 15:34:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.5.ebuild,v 1.6 2008/01/16 02:19:56 ranger Exp $
 
 DESCRIPTION="A small Jabber console client with various features, like MUC, SSL, PGP"
 HOMEPAGE="http://www.lilotux.net/~mikael/mcabber/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.lilotux.net/~mikael/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~mips ppc ~ppc64 sparc x86"
 
 IUSE="crypt otr spell ssl"
 
