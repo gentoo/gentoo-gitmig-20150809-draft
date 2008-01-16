@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p3.ebuild,v 1.5 2008/01/16 12:31:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p3.ebuild,v 1.6 2008/01/16 13:35:34 aballier Exp $
 
 inherit eutils multilib
 
@@ -8,7 +8,7 @@ EAPI="1"
 
 IUSE="norealanalysis ide debug +ocamlopt"
 
-RESTRICT="strip"
+RESTRICT="strip installsources"
 
 MY_PV="${PV/_p/pl}"
 MY_P="${PN}-${MY_PV}"
