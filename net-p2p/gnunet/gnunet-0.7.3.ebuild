@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.3.ebuild,v 1.1 2008/01/16 15:01:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.3.ebuild,v 1.2 2008/01/16 15:04:40 armin76 Exp $
 
 inherit eutils autotools
 
@@ -47,7 +47,7 @@ pkg_preinst() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# make mysql default sqstore if we do not compile sql support
 	# (bug #107330)
@@ -87,15 +87,15 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
-	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING INSTALL NEWS PLATFORMS README	README.fr UPDATING
+	emake DESTDIR="${D}" -j1 install || die "make install failed"
+	dodoc AUTHORS ChangeLog INSTALL NEWS PLATFORMS README README.fr UPDATING
 	insinto /etc
 	newins contrib/gnunet.root gnunet.conf
 	docinto contrib
 	dodoc contrib/*
-	newinitd ${FILESDIR}/${PN}-2 gnunet
+	newinitd "${FILESDIR}"/${PN}-2 gnunet
 	dodir /var/lib/gnunet
-	chown gnunetd:gnunetd ${D}/var/lib/gnunet
+	chown gnunetd:gnunetd "${D}"/var/lib/gnunet
 }
 
 pkg_postinst() {
