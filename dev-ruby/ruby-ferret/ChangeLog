@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-ferret
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ferret/ChangeLog,v 1.2 2008/01/09 09:29:25 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ferret/ChangeLog,v 1.3 2008/01/16 23:29:40 rbrown Exp $
+
+  16 Jan 2008; Richard Brown <rbrown@gentoo.org> ruby-ferret-0.11.4.ebuild:
+  Add missing rake dependency, fixing Bug #206209
 
   09 Jan 2008; Richard Brown <rbrown@gentoo.org> ruby-ferret-0.11.4.ebuild:
   Fix P / MY_P usage for bug #202624
