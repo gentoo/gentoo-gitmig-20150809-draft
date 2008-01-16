@@ -1,0 +1,22 @@
+--- gtk-doc.make	2007/12/20 12:52:02	540
++++ gtk-doc.make	2008/01/14 19:22:33	541
+@@ -128,7 +128,7 @@
+ 	cd $(srcdir) && rm -rf xml html
+ 
+ install-data-local:
+-	installfiles=`echo $(srcdir)/html/*`; \
++	-installfiles=`echo $(srcdir)/html/*`; \
+ 	if test "$$installfiles" = '$(srcdir)/html/*'; \
+ 	then echo '-- Nothing to install' ; \
+ 	else \
+--- docs/reference/Makefile.in.old	2008-01-15 13:46:33.000000000 +0100
++++ docs/reference/Makefile.in	2008-01-15 13:46:48.000000000 +0100
+@@ -562,7 +562,7 @@
+ 	cd $(srcdir) && rm -rf xml html
+ 
+ install-data-local:
+-	installfiles=`echo $(srcdir)/html/*`; \
++	-installfiles=`echo $(srcdir)/html/*`; \
+ 	if test "$$installfiles" = '$(srcdir)/html/*'; \
+ 	then echo '-- Nothing to install' ; \
+ 	else \
