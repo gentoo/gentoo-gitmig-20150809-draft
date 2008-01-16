@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.99.ebuild,v 1.3 2007/04/14 15:34:15 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.99.ebuild,v 1.4 2008/01/16 20:49:32 grobian Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.scrollz.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc ~ppc-macos x86"
+KEYWORDS="amd64 ia64 ~ppc x86"
 IUSE="ipv6 socks5 ssl"
 
 DEPEND="ssl? ( net-libs/gnutls )"
