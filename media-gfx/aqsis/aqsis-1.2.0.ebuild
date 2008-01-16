@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.2.0.ebuild,v 1.3 2007/07/12 04:08:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.2.0.ebuild,v 1.4 2008/01/16 20:24:17 maekke Exp $
 
 inherit versionator multilib
 
@@ -14,7 +14,6 @@ S="${WORKDIR}/${PN}-$(get_version_component_range 1-3 ${PV})"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-# TODO: test on ~x86
 IUSE="fltk openexr"
 
 RDEPEND="
@@ -56,7 +55,7 @@ src_compile() {
 		exr_flags="no_exr=yes"
 	fi
 
-	scons destdir=${D} \
+	scons destdir="${D}" \
 		install_prefix=/usr \
 		sysconfdir=/etc \
 		libdir="\$install_prefix/$(get_libdir)" \
@@ -72,7 +71,7 @@ src_compile() {
 
 src_install() {
 	scons install
-	dodoc AUTHORS COPYING INSTALL README ReleaseNotes
+	dodoc AUTHORS INSTALL README ReleaseNotes
 	# remove a few unwanted files from the std. aqsis install
-	rm $(find ${D}/usr/share/aqsis/content -name '*.bat')
+	rm $(find "${D}"/usr/share/aqsis/content -name '*.bat')
 }
