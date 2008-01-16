@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ttf-sil-charis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-charis/ChangeLog,v 1.14 2008/01/16 15:23:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-charis/ChangeLog,v 1.15 2008/01/16 19:18:34 armin76 Exp $
+
+  16 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  ttf-sil-charis-4.100.ebuild:
+  ia64 stable wrt #197220 and add ~alpha
 
   16 Jan 2008; Jeroen Roovers <jer@gentoo.org> ttf-sil-charis-4.100.ebuild:
   Stable for HPPA (bug #197220).
