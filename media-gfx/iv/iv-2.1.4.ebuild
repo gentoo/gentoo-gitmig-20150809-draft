@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-2.1.4.ebuild,v 1.2 2007/10/26 10:14:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-2.1.4.ebuild,v 1.3 2008/01/16 23:00:07 maekke Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE="gif imlib jpeg png xpm"
 
 DEPEND="=x11-libs/gtk+-1.2*
@@ -19,6 +19,14 @@ DEPEND="=x11-libs/gtk+-1.2*
 	jpeg? ( >=media-libs/jpeg-6b )
 	png? ( >=media-libs/libpng-1.2 )
 	xpm? ( x11-libs/libXpm )"
+
+src_unpack() {
+	unpack ${A}
+
+	# don't prestrip files
+	sed -i -e 's:-m 0755 -s:-m 0755:g' "${S}"/iv/Makefile.install.UNIX || die
+}
+
 
 src_compile() {
 	./configure Linux --prefix=/usr \
