@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.152 2008/01/11 13:08:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.153 2008/01/16 22:48:19 eva Exp $
+
+  16 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org> gnumeric-1.8.0.ebuild:
+  remove libgnomeprint{,ui} dependencies (bug #206095)
 
   11 Jan 2008; Jeroen Roovers <jer@gentoo.org> gnumeric-1.8.0.ebuild:
   Stable for HPPA (bug #198385).

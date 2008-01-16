@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.0.ebuild,v 1.8 2008/01/11 13:08:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.0.ebuild,v 1.9 2008/01/16 22:48:19 eva Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -27,8 +27,6 @@ RDEPEND="sys-libs/zlib
 
 	>=x11-libs/gtk+-2.10
 	>=gnome-base/libglade-2.3.6
-	>=gnome-base/libgnomeprint-2.8.2
-	>=gnome-base/libgnomeprintui-2.8.2
 	>=media-libs/libart_lgpl-2.3.11
 
 	gnome? (
