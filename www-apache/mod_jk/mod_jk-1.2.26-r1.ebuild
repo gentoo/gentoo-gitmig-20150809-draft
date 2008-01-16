@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.26.ebuild,v 1.1 2007/12/24 16:34:32 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.26-r1.ebuild,v 1.1 2008/01/16 21:07:37 wltjr Exp $
 
 inherit apache-module autotools
 
@@ -18,7 +18,7 @@ IUSE=""
 S="${WORKDIR}/${MY_P}/native"
 
 APACHE2_MOD_FILE="${S}/apache-2.0/${PN}.so"
-APACHE2_MOD_CONF="88_${PN}"
+APACHE2_MOD_CONF="new/88_${PN}"
 APACHE2_MOD_DEFINE="JK"
 
 DOCFILES="CHANGES"
@@ -43,7 +43,7 @@ src_compile() {
 src_install() {
 	# install the workers.properties file
 	insinto "${APACHE_CONFDIR}"
-	doins "${FILESDIR}/jk-workers.properties"
+	doins "${FILESDIR}/new/jk-workers.properties"
 
 	# call the nifty default src_install :-)
 	apache-module_src_install

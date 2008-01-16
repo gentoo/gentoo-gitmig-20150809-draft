@@ -1,6 +1,14 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.45 2008/01/11 19:41:56 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.46 2008/01/16 21:07:37 wltjr Exp $
+
+*mod_jk-1.2.26-r1 (16 Jan 2008)
+
+  16 Jan 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/new/88_mod_jk.conf, +files/new/jk-workers.properties,
+  -mod_jk-1.2.26.ebuild, +mod_jk-1.2.26-r1.ebuild:
+  Updated installed files for >=1.2.26, put them in dir called new, verses
+  versioning the dir name. Address new module conf options per bug #204815
 
   11 Jan 2008; William L. Thomson Jr. <wltjr@gentoo.org>
   mod_jk-1.2.25.ebuild:
