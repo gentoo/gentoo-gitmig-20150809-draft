@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/ogre
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.44 2007/11/17 16:05:06 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.45 2008/01/16 11:39:13 nyhm Exp $
+
+*ogre-1.4.6 (16 Jan 2008)
+
+  16 Jan 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/ogre-1.4.6-cegui.patch, +ogre-1.4.6.ebuild:
+  Version bump
 
   17 Nov 2007; Samuli Suominen <drac@gentoo.org> ogre-1.4.5.ebuild:
   Keyword ~amd64 wrt #138093.
