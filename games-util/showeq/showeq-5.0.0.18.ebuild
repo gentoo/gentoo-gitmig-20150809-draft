@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.0.0.18.ebuild,v 1.8 2006/12/06 21:16:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.0.0.18.ebuild,v 1.9 2008/01/17 23:28:56 tupone Exp $
 
 inherit kde games
 
@@ -19,7 +19,11 @@ DEPEND="x11-libs/libXt
 	$(qt_min_version 3.1)
 	>=sys-libs/gdbm-1.8.0"
 
-PATCHES="${FILESDIR}/${P}"-gcc4.patch
+src_unpack() {
+	mkdir "${WORKDIR}"/patches
+	cp "${FILESDIR}"/${P}-*.patch "${WORKDIR}"/patches
+	kde_src_unpack
+}
 
 src_compile() {
 	kde_src_compile nothing

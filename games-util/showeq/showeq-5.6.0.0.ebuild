@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.6.0.0.ebuild,v 1.1 2006/10/15 22:49:35 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.6.0.0.ebuild,v 1.2 2008/01/17 23:28:56 tupone Exp $
 
-inherit qt3 games
+inherit eutils qt3 games
 
 DESCRIPTION="An Everquest monitoring program"
 HOMEPAGE="http://www.showeq.net/"
@@ -16,6 +16,12 @@ IUSE=""
 DEPEND="virtual/libpcap
 	$(qt_min_version 3.3)
 	>=sys-libs/gdbm-1.8.0"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-UTS.patch
+}
 
 src_compile() {
 	egamesconf \
