@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ac-archive/ac-archive-2006.1017.ebuild,v 1.1 2007/11/17 23:13:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ac-archive/ac-archive-2006.1017.ebuild,v 1.2 2008/01/17 13:58:49 maekke Exp $
+
+inherit autotools
 
 DESCRIPTION="The Autoconf Macro Archive"
 HOMEPAGE="http://ac-archive.sourceforge.net/"
@@ -11,10 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND="dev-lang/perl
-	sys-devel/automake
-	sys-devel/autoconf"
+DEPEND="app-text/aspell"
+RDEPEND="dev-lang/perl"
 
 src_install() {
 	emake install DESTDIR="${D}" || die
