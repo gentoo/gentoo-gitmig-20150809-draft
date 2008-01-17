@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.1.ebuild,v 1.4 2007/12/18 22:23:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.1.ebuild,v 1.5 2008/01/17 21:11:06 aballier Exp $
 
 inherit qt4 eutils flag-o-matic font
 
@@ -34,6 +34,7 @@ RDEPEND="$(qt4_min_version 4.1.1)
 	cups? ( virtual/lpr )
 	app-text/sgmltools-lite
 	tetex? (
+		virtual/tetex
 		virtual/ghostscript
 		app-text/noweb
 		dev-tex/dvipost
@@ -55,7 +56,6 @@ DEPEND="${RDEPEND}
 	x11-libs/libXt
 	x11-libs/libXpm
 	x11-proto/xproto
-	tetex? ( virtual/tetex )
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus
 	>=dev-lang/python-2.3.4"

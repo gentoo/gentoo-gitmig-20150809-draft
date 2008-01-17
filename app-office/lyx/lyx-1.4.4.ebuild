@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.4.ebuild,v 1.4 2008/01/17 09:33:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.4.ebuild,v 1.5 2008/01/17 21:11:06 aballier Exp $
 
 inherit kde-functions fdo-mime eutils libtool flag-o-matic font
 
@@ -37,6 +37,7 @@ RDEPEND="x11-libs/libXi
 	app-text/sgmltools-lite
 	app-text/noweb
 	dev-tex/chktex
+	virtual/tetex
 	qt3? ( =x11-libs/qt-3* )
 	!qt3? (
 		gtk? (
@@ -53,7 +54,6 @@ RDEPEND="x11-libs/libXi
 # I'll look into it <obz@gentoo.org>
 DEPEND="${RDEPEND}
 	x11-proto/xproto
-	virtual/tetex
 	>=dev-lang/perl-5
 	nls? ( sys-devel/gettext )
 	>=dev-lang/python-2.2
