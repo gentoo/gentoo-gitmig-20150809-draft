@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.8.2.ebuild,v 1.5 2008/01/17 14:30:36 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.8.2.ebuild,v 1.6 2008/01/17 20:24:23 jer Exp $
 
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
@@ -87,6 +87,8 @@ src_unpack() {
 
 	# patches go here!
 	epatch "${FILESDIR}"/busybox-1.7.0-bb.patch
+	epatch "${FILESDIR}"/busybox-1.7.4-signal-hack.patch #201114
+	
 
 	# work around broken ass powerpc compilers
 	use ppc64 && append-flags -mminimal-toc
