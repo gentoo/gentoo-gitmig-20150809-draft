@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gtklp
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.30 2007/10/10 18:29:18 genstef Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.31 2008/01/17 16:28:50 flameeyes Exp $
+
+  17 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> gtklp-1.2.5.ebuild:
+  Add missing pkg-config dependency. Thanks Patrick in bug #204804.
 
 *gtklp-1.2.5 (10 Oct 2007)
 

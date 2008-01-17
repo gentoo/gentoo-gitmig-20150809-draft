@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.5.ebuild,v 1.1 2007/10/10 18:29:18 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.5.ebuild,v 1.2 2008/01/17 16:28:50 flameeyes Exp $
 
 DESCRIPTION="A GUI for cupsd"
 SRC_URI="mirror://sourceforge/gtklp/${P}.src.tar.gz"
@@ -11,10 +11,12 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 IUSE="nls ssl"
 
-DEPEND=">=x11-libs/gtk+-2
+RDEPEND=">=x11-libs/gtk+-2
 	>=net-print/cups-1.1.12
 	nls? ( sys-devel/gettext )
 	ssl? ( dev-libs/openssl )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf \
