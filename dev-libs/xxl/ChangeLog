@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xxl
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xxl/ChangeLog,v 1.7 2007/03/19 00:56:19 kloeri Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xxl/ChangeLog,v 1.8 2008/01/17 19:33:12 dirtyepic Exp $
+
+  17 Jan 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/xxl-1.0.1-nested-exception.patch, xxl-1.0.1.ebuild:
+  Add patch by Grigory Dorokhov fixing test failure and adding support for
+  more than two nested try blocks. Bug #165558.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
