@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.4.ebuild,v 1.3 2007/02/25 16:27:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.4.ebuild,v 1.4 2008/01/17 09:33:19 aballier Exp $
 
 inherit kde-functions fdo-mime eutils libtool flag-o-matic font
 
@@ -23,31 +23,20 @@ IUSE="cjk cups debug gtk nls qt3 gnome"
 RDEPEND="x11-libs/libXi
 	x11-libs/libXrandr
 	x11-libs/libXcursor
+	x11-libs/libX11
+	x11-libs/libXt
+	x11-libs/libXpm
 	x11-libs/libXft
 	virtual/ghostscript
 	virtual/aspell-dict
+	app-text/aiksaurus
 	dev-tex/latex2html
 	dev-tex/dvipost
 	media-gfx/imagemagick
 	cups? ( virtual/lpr )
 	app-text/sgmltools-lite
 	app-text/noweb
-	dev-tex/chktex"
-
-# these dependencies need looking at.
-# does lyx only need qt to compile but not run ?
-# I'll look into it <obz@gentoo.org>
-DEPEND="${RDEPEND}
-	x11-libs/libX11
-	x11-libs/libXt
-	x11-libs/libXpm
-	x11-proto/xproto
-	virtual/tetex
-	>=dev-lang/perl-5
-	nls? ( sys-devel/gettext )
-	app-text/aiksaurus
-	>=dev-lang/python-2.2
-	>=sys-devel/autoconf-2.58
+	dev-tex/chktex
 	qt3? ( =x11-libs/qt-3* )
 	!qt3? (
 		gtk? (
@@ -58,6 +47,18 @@ DEPEND="${RDEPEND}
 			=x11-libs/xforms-1*
 		)
 	)"
+
+# these dependencies need looking at.
+# does lyx only need qt to compile but not run ?
+# I'll look into it <obz@gentoo.org>
+DEPEND="${RDEPEND}
+	x11-proto/xproto
+	virtual/tetex
+	>=dev-lang/perl-5
+	nls? ( sys-devel/gettext )
+	>=dev-lang/python-2.2
+	>=sys-devel/autoconf-2.58
+	"
 
 src_unpack() {
 	unpack ${P}.tar.bz2 || die "unpacking lyx failed"
@@ -114,7 +115,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dodoc README* UPGRADING ChangeLog NEWS ANNOUNCE ABOUT-NLS "${DISTDIR}"/preferences
+	dodoc README* UPGRADING ChangeLog NEWS ANNOUNCE "${DISTDIR}"/preferences
 
 	insinto /usr/share/lyx/bind
 	doins "${DISTDIR}"/hebrew.bind
