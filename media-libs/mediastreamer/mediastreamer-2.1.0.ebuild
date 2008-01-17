@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.1.0.ebuild,v 1.1 2008/01/14 14:02:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.1.0.ebuild,v 1.2 2008/01/17 12:40:03 coldwind Exp $
 
 EAPI="1"
 
@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="library to make audio and video real-time streaming and processing"
 HOMEPAGE="http://www.linphone.org/"
-SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/stable/sources/${P}.tar.gz"
+SRC_URI="http://download.savannah.nongnu.org/releases/linphone/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
