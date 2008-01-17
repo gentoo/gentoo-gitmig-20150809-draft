@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/afternoonstalker
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/afternoonstalker/ChangeLog,v 1.6 2007/04/25 22:13:37 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/afternoonstalker/ChangeLog,v 1.7 2008/01/17 07:06:53 tupone Exp $
+
+  17 Jan 2008; Tupone Alfredo <tupone@gentoo.org>
+  afternoonstalker-1.1.1.ebuild:
+  Fix pkg-config dep. Bug #206257 by Evil Compile Person
 
   09 Apr 2007; Peter Weller <welp@gentoo.org> afternoonstalker-1.1.1.ebuild:
   Keyworded ~x86-fbsd wrt bug 173405
