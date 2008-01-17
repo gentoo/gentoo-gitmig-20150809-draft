@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/pauker-1.7.5.ebuild,v 1.2 2007/06/16 13:03:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/pauker-1.7.5.ebuild,v 1.3 2008/01/17 18:47:21 mr_bones_ Exp $
 
 inherit eutils java-pkg-2 games
 
@@ -18,6 +18,7 @@ RDEPEND="dev-java/browserlauncher2
 	dev-java/javahelp
 	dev-java/swing-layout"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	>=virtual/jdk-1.4"
 RDEPEND="${RDEPEND}
 	>=virtual/jre-1.4"
