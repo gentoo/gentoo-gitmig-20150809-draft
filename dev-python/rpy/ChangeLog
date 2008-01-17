@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/rpy
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.18 2007/10/14 06:33:41 genstef Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.19 2008/01/17 16:50:15 bicatali Exp $
+
+*rpy-1.0.1 (17 Jan 2008)
+
+  17 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/rpy-lapack.patch, +files/rpy-testfiles.patch, metadata.xml,
+  +rpy-1.0.1.ebuild:
+  Version bump, added a test function, doc flag. lapack is not needed anymore
+  because it links with the R module lapack, which always exists with R
+  (system libs or internal). Added sci as herd maintainers and a
+  longdescription
 
   13 Oct 2007; Dirkjan Ochtman (djc) <mail@manuzhai.nl> +files/90rpy,
   +files/rpy-0.99.2-version-detect.patch,
