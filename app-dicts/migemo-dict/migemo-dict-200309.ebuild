@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/migemo-dict/migemo-dict-200309.ebuild,v 1.15 2005/01/01 12:56:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/migemo-dict/migemo-dict-200309.ebuild,v 1.16 2008/01/17 17:20:22 grobian Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://openlab.ring.gr.jp/skk/dic.html"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha sparc ppc ia64 hppa amd64 ppc64 ppc-macos"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 SLOT="0"
 
 DEPEND=""
