@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmhdplop
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.12 2007/07/22 05:04:45 dberkholz Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.13 2008/01/17 00:13:25 drac Exp $
+
+*wmhdplop-0.9.9 (17 Jan 2008)
+
+  17 Jan 2008; Samuli Suominen <drac@gentoo.org> +wmhdplop-0.9.9.ebuild:
+  Version bump.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmhdplop-0.9.7-r1.ebuild:
