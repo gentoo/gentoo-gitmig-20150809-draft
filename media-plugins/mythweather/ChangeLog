@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythweather
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.44 2008/01/15 16:26:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.45 2008/01/17 15:33:11 cardoe Exp $
+
+  17 Jan 2008; Doug Klima <cardoe@gentoo.org>
+  mythweather-0.21_pre15448.ebuild:
+  fix bug #206135
 
 *mythweather-0.21_pre15448 (15 Jan 2008)
 
