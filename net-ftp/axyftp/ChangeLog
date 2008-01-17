@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/axyftp
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/axyftp/ChangeLog,v 1.6 2007/05/15 14:03:32 bangert Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/axyftp/ChangeLog,v 1.7 2008/01/17 13:59:12 drac Exp $
+
+*axyftp-0.5.1-r1 (17 Jan 2008)
+
+  17 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  +files/axyftp-0.5.1-built-in-function-exit.patch, -axyftp-0.5.1.ebuild,
+  +axyftp-0.5.1-r1.ebuild:
+  Switch from GTK+-1.2 depend to OpenMotif wrt #205511. Fix compilers
+  warnings. Install desktop entry with icon.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
