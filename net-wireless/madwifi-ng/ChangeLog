@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.49 2008/01/16 15:56:47 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.50 2008/01/17 04:07:53 steev Exp $
+
+  17 Jan 2008; Steev Klimaszewski <steev@gentoo.org>
+  madwifi-ng-0.9.3.3.ebuild:
+  Fix the KMOD check.  No need to specify CONFIG.
 
   16 Jan 2008; Steev Klimaszewski <steev@gentoo.org>
   madwifi-ng-0.9.3.3.ebuild:
