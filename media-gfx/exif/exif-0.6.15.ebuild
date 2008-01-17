@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/exif-0.6.15.ebuild,v 1.5 2008/01/16 21:53:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/exif-0.6.15.ebuild,v 1.6 2008/01/17 13:08:10 fmccor Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ DESCRIPTION="Small CLI util to show EXIF infos hidden in JPEG files"
 SRC_URI="mirror://sourceforge/libexif/${P}.tar.gz"
 HOMEPAGE="http://libexif.sf.net"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 
 RDEPEND="dev-libs/popt
