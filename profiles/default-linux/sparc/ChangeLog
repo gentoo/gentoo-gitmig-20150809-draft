@@ -1,6 +1,18 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.88 2008/01/10 01:45:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.89 2008/01/17 10:01:50 armin76 Exp $
+
+  17 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  -sparc32/2006.1/2.4/deprecated, -sparc32/2006.1/2.4/make.defaults,
+  -sparc32/2006.1/2.4/package.mask, -sparc32/2006.1/2.4/packages,
+  -sparc32/2006.1/2.4/parent, -sparc32/2006.1/2.4/use.force,
+  -sparc32/2006.1/2.4/use.mask, -sparc32/2006.1/2.4/virtuals,
+  -sparc64/2006.1/2.4/deprecated, -sparc64/2006.1/2.4/make.defaults,
+  -sparc64/2006.1/2.4/package.mask, -sparc64/2006.1/2.4/package.use.mask,
+  -sparc64/2006.1/2.4/packages, -sparc64/2006.1/2.4/parent,
+  -sparc64/2006.1/2.4/use.force, -sparc64/2006.1/2.4/use.mask,
+  -sparc64/2006.1/2.4/virtuals:
+  Remove 2.4 profiles, they've been marked as deprecated for 5 months
 
   10 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org> use.mask:
   Removed cern from use.mask (has been mark stable sparc,x86 and amd64)

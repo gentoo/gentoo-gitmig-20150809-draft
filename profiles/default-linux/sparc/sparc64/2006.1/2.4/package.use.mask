@@ -1,7 +1,0 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.1/2.4/package.use.mask,v 1.1 2007/04/29 15:06:06 dcoutts Exp $
-
-# This file requires >=portage-2.1.1
-
-# Duncan Coutts <dcoutts@gentoo.org> (29 Apr 2007)
-# gtk2hs optionally deps on librsvg which is masked in this profile
-dev-haskell/gtk2hs gnome
