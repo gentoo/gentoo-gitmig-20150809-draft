@@ -1,16 +1,17 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbluecpu/wmbluecpu-0.6.ebuild,v 1.6 2007/07/22 05:21:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbluecpu/wmbluecpu-0.6.ebuild,v 1.7 2008/01/17 16:15:14 drac Exp $
 
-IUSE=""
+inherit toolchain-funcs
 
-DESCRIPTION="A blue WMaker DockApp to see CPU usage."
-HOMEPAGE="http://sheepmakers.ath.cx/utils/wmbluecpu/"
-SRC_URI="http://litestep.boo.pl/files/${P}.tar.bz2"
+DESCRIPTION="a blue dockapp to monitor CPU usage."
+HOMEPAGE="http://misuceldestept.go.ro/wmbluecpu"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc ~sparc x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
+IUSE=""
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
@@ -19,14 +20,19 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto"
 
-src_compile()
-{
-	FLAGS=${CFLAGS} make -e || die "Compilation failed"
+src_unpack() {
+	unpack ${A}
+	sed -e 's:$(CC) -o:$(CC) $(LDFLAGS) -o:' -e 's:-L/usr/X11R6/lib::' \
+		-e 's:strip $(PROG)::' -i "${S}"/Makefile
 }
 
-src_install()
-{
-	dobin wmbluecpu
-	doman wmbluecpu.1
-	dodoc ChangeLog TODO README THANKS AUTHORS
+src_compile() {
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" \
+		|| die "emake failed."
+}
+
+src_install() {
+	dobin ${PN}
+	doman ${PN}.1
+	dodoc AUTHORS ChangeLog README THANKS
 }
