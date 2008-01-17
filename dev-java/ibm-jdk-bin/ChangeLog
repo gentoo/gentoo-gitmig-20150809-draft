@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.145 2007/12/24 20:08:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.146 2008/01/17 20:09:43 tgall Exp $
+
+  17 Jan 2008; Tom Gall <tgall@gentoo.org. ibm-jdk-bin-1.6.0.0.ebuild:
+  added ~ppc64, bug 166789
 
   24 Dec 2007; nixnut <nixnut@gentoo.org> ibm-jdk-bin-1.6.0.0.ebuild:
   Added ~ppc wrt bug 166789
