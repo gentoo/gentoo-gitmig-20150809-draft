@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.1.0.ebuild,v 1.1 2008/01/12 17:36:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.1.0.ebuild,v 1.2 2008/01/17 11:05:57 maekke Exp $
 
 inherit eutils qt4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/qtractor/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="debug libsamplerate mad vorbis sse"
 
