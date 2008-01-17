@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3306 2008/01/17 03:05:35 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3307 2008/01/17 03:49:09 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2119,6 +2119,7 @@ x11-misc/x11vnc:system-libvncserver - Build x11vnc against the system libvncserv
 x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
 x11-misc/xscreensaver:insecure-savers - Installs some screensaver modules as setuid root to enable cooler effects
 x11-misc/xscreensaver:new-login - Enables New Login button using gdmflexiserver (gnome-base/gdm)
+x11-plugins/bfm:gkrellm - Enable build of gkrellm module
 x11-plugins/gkrellm-plugins:audacious - Install the audacious plugin
 x11-plugins/gkrellmbups:nut - Enables monitoring Network-UPS (sys-power/nut)
 x11-plugins/purple-plugin_pack:talkfilters - Enable support for app-text/talkfilters
