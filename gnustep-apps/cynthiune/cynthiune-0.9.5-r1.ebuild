@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r1.ebuild,v 1.3 2008/01/04 13:01:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r1.ebuild,v 1.4 2008/01/17 23:30:12 voyageur Exp $
 
 inherit gnustep-2
 
@@ -21,7 +21,8 @@ DEPEND="media-libs/audiofile
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
 	flac? ( media-libs/flac )
-	mad? ( media-libs/libid3tag
+	mad? ( dev-util/pkgconfig
+		media-libs/libid3tag
 		media-libs/libmad )
 	musepack? ( media-libs/libmpcdec )
 	modplug? ( media-libs/libmodplug )
