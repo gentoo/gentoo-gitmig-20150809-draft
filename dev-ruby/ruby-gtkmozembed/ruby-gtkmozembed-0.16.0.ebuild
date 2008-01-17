@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ruby-gtkmozembed-0.16.0.ebuild,v 1.1 2006/12/30 17:12:56 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ruby-gtkmozembed-0.16.0.ebuild,v 1.2 2008/01/17 16:08:58 flameeyes Exp $
 
 inherit ruby ruby-gnome2
 
@@ -13,6 +13,9 @@ RDEPEND="${DEPEND}
 	>=dev-ruby/ruby-glib2-${PV}
 	>=dev-ruby/ruby-pango-${PV}
 	>=dev-ruby/ruby-gtk2-${PV}"
+DEPEND="${DEPEND}
+	dev-util/pkgconfig"
+
 src_unpack()
 {
 	ruby_src_unpack
