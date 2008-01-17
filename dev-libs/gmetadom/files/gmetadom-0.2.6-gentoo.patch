@@ -1,0 +1,35 @@
+diff -Naur gmetadom-0.2.6.orig/configure.ac gmetadom-0.2.6/configure.ac
+--- gmetadom-0.2.6.orig/configure.ac	2007-10-15 18:42:23.000000000 +0900
++++ gmetadom-0.2.6/configure.ac	2008-01-17 23:41:17.000000000 +0900
+@@ -312,7 +312,7 @@
+ 	HAVE_OCAMLC=no
+ else
+ 	HAVE_OCAMLC=yes
+-	OCAML_LIB=`$OCAMLC -v | tail -1 | cut -d ':' -f2 | tr -d ' '`
++	OCAML_LIB=`$OCAMLC -v | tail -n 1 | cut -d ':' -f2 | tr -d ' '`
+ 
+ 	if test $OCAML_INCLUDE_PREFIX = no; then
+ 		OCAML_CFLAGS=-I$OCAML_LIB
+diff -Naur gmetadom-0.2.6.orig/src/gdome_caml/Makefile.am gmetadom-0.2.6/src/gdome_caml/Makefile.am
+--- gmetadom-0.2.6.orig/src/gdome_caml/Makefile.am	2006-08-06 17:33:36.000000000 +0900
++++ gmetadom-0.2.6/src/gdome_caml/Makefile.am	2008-01-17 23:42:15.000000000 +0900
+@@ -83,7 +83,7 @@
+ 	if [ "x$(OCAMLFIND)" != "x" ]; then \
+ 		mv $(OCAMLINSTALLDIR) $(OCAMLINSTALLDIR).saved &&	\
+ 		$(mkinstalldirs) $(DESTDIR)$(OCAML_LIB_PREFIX)/ && \
+-		$(OCAMLFIND) install -destdir $(DESTDIR)$(OCAML_LIB_PREFIX)/ $(PKGNAME) META $(DLL) && \
++		$(OCAMLFIND) install -destdir $(DESTDIR)$(OCAML_LIB_PREFIX)/site-packages $(PKGNAME) META $(DLL) && \
+ 		$(INSTALL_DATA) $(OCAMLINSTALLDIR).saved/* $(OCAMLINSTALLDIR)/ &&	\
+ 		rm -rf $(OCAMLINSTALLDIR).saved/;	\
+ 	else	\
+diff -Naur gmetadom-0.2.6.orig/src/gdome_cpp_smart/test/Makefile.am gmetadom-0.2.6/src/gdome_cpp_smart/test/Makefile.am
+--- gmetadom-0.2.6.orig/src/gdome_cpp_smart/test/Makefile.am	2007-05-09 00:26:18.000000000 +0900
++++ gmetadom-0.2.6/src/gdome_cpp_smart/test/Makefile.am	2008-01-17 23:41:17.000000000 +0900
+@@ -7,7 +7,6 @@
+ 
+ LDADDS = \
+   $(GDOME_LIBS) \
+-  $(top_builddir)/src/gdome_cpp_smart/.libs/libgmetadom_gdome_cpp_smart.a \
+   $(top_builddir)/src/gdome_cpp_smart/libgmetadom_gdome_cpp_smart.la \
+   -lstdc++
+ 
