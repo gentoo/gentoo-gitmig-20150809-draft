@@ -1,5 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2005.1/ppc/G4/Pegasos/virtuals,v 1.1 2005/07/06 05:39:35 dostrow Exp $
-
-virtual/bootloader			sys-boot/bootcreator

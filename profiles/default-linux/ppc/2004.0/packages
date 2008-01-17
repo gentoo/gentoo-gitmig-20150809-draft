@@ -1,7 +1,0 @@
-# Copyright 2001-2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2004.0/packages,v 1.4 2005/07/06 05:16:48 dostrow Exp $
-
-*sys-fs/hfsutils
-*sys-fs/hfsplusutils
-*sys-fs/mac-fdisk

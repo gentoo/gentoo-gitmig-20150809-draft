@@ -1,6 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2005.1/ppc64/64bit-userland/power3/make.defaults,v 1.1 2005/07/06 05:39:35 dostrow Exp $
-
-CFLAGS="-O2 -pipe -mtune=power3 -mcpu=power3"
-CXXFLAGS=${CFLAGS}

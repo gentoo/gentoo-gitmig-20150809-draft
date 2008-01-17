@@ -1,7 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2005.0/virtuals,v 1.6 2006/07/06 10:28:06 nelchael Exp $
-
-virtual/bootloader		sys-boot/yaboot
-
-virtual/ooo				app-office/openoffice

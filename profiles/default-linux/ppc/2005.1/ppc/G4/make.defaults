@@ -1,8 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2005.1/ppc/G4/make.defaults,v 1.2 2005/07/25 14:47:26 dostrow Exp $
-
-CFLAGS="-O2 -mtune=G4 -mcpu=G4 -mabi=altivec -pipe"
-CXXFLAGS="${CFLAGS}"
-
-STAGE1_USE="altivec unicode"
