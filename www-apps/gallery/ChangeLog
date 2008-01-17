@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.129 2008/01/17 15:17:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.130 2008/01/17 17:04:34 ranger Exp $
+
+  17 Jan 2008; Brent Baude <ranger@gentoo.org> gallery-2.2.4.ebuild:
+  Marking gallery-2.2.4 ppc64 for bug 203217
 
   17 Jan 2008; Jeroen Roovers <jer@gentoo.org> gallery-2.2.4.ebuild:
   Stable for HPPA (bug #203217).
