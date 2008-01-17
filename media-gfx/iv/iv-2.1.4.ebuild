@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-2.1.4.ebuild,v 1.3 2008/01/16 23:00:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-2.1.4.ebuild,v 1.4 2008/01/17 17:12:31 mr_bones_ Exp $
 
 inherit eutils
 
@@ -26,7 +26,6 @@ src_unpack() {
 	# don't prestrip files
 	sed -i -e 's:-m 0755 -s:-m 0755:g' "${S}"/iv/Makefile.install.UNIX || die
 }
-
 
 src_compile() {
 	./configure Linux --prefix=/usr \
