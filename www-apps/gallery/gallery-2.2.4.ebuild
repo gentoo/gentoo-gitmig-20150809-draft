@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.2.4.ebuild,v 1.1 2008/01/17 08:33:34 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.2.4.ebuild,v 1.2 2008/01/17 08:49:45 wrobel Exp $
 
 inherit webapp eutils depend.php
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ffmpeg gd imagemagick mysql netpbm postgres raw unzip zip"
 
-RDEPEND="
+RDEPEND="virtual/httpd-cgi
 	media-libs/jpeg
 	raw? ( >=media-gfx/dcraw-8.03 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20051216 )
