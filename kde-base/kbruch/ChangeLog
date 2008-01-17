@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kbruch
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.67 2007/10/19 22:01:00 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.68 2008/01/17 23:34:47 philantrop Exp $
+
+*kbruch-4.0.0 (17 Jan 2008)
+
+  17 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> +kbruch-4.0.0.ebuild:
+  Added KDE 4.0.0's kbruch.
 
 *kbruch-3.5.8 (19 Oct 2007)
 
