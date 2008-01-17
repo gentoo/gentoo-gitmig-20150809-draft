@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r11.ebuild,v 1.14 2008/01/07 14:15:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r11.ebuild,v 1.15 2008/01/17 19:09:51 grobian Exp $
 
 inherit eutils toolchain-funcs
 
@@ -45,12 +45,6 @@ src_unpack() {
 	# Bug #87539; user CFLAGS are not respected on amd64
 	epatch "${FILESDIR}/${PN}-respectusercflags.patch"
 
-	if use ppc-macos;
-	then
-		einfo "Patching for OSX build"
-		epatch "${FILESDIR}/${PN}-osx.diff"
-	fi
-
 	sed -i "s:${PV}-mh4:${PVR}:" version.h
 
 	epatch "${FILESDIR}/${P}-gmake-3.81.patch"
@@ -78,15 +72,10 @@ src_compile() {
 			[[ -z "${styles}" ]] && styles="-ppc64"
 			;;
 		ppc)
-			if use ppc-macos; then
-				[ -z "${styles}" ] && styles="macos"
-				atype=""
-			else
-				use esd && styles="${styles} -ppc-esd"
-				use oss && styles="${styles} -ppc"
+			use esd && styles="${styles} -ppc-esd"
+			use oss && styles="${styles} -ppc"
 
-				[ -z "${styles}" ] && styles="-ppc"
-			fi
+			[ -z "${styles}" ] && styles="-ppc"
 			;;
 		x86)
 			use esd && styles="${styles} -esd"
