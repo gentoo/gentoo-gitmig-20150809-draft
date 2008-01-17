@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.18 2008/01/14 19:26:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.19 2008/01/17 19:37:14 maekke Exp $
+
+  17 Jan 2008; Markus Meier <maekke@gentoo.org> ufraw-0.13.ebuild:
+  add pkgconfig dep (bug #205834) and do some dep-ordering
 
   14 Jan 2008; Christoph Mende <angelos@gentoo.org> ufraw-0.13.ebuild:
   Stable on amd64 wrt bug #204455

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.13.ebuild,v 1.4 2008/01/14 19:26:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.13.ebuild,v 1.5 2008/01/17 19:37:14 maekke Exp $
 
 inherit eutils autotools fdo-mime gnome2-utils
 
@@ -13,14 +13,16 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="gimp exif gnome"
 
-DEPEND=">=x11-libs/gtk+-2.4.0
-	gimp? ( >=media-gfx/gimp-2.0 )
+RDEPEND="media-libs/jpeg
+	>=media-libs/lcms-1.13
+	media-libs/tiff
+	>=x11-libs/gtk+-2.4.0
 	exif? ( >=media-libs/libexif-0.6.13
 	        media-gfx/exiv2 )
-	gnome? ( gnome-base/gconf )
-	media-libs/jpeg
-	media-libs/tiff
-	>=media-libs/lcms-1.13"
+	gimp? ( >=media-gfx/gimp-2.0 )
+	gnome? ( gnome-base/gconf )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
