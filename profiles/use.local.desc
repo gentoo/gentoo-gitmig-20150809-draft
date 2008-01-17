@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3305 2008/01/16 21:18:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3306 2008/01/17 03:05:35 jsbronder Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1885,7 +1885,8 @@ sys-cluster/charm:smp - Enable direct SMP support using shared memory
 sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-cluster/heartbeat:management - Adds support for management GUI.
-sys-cluster/lam-mpi:pbs - Add support for PBS scheduling stuff
+sys-cluster/lam-mpi:pbs - Add support for the Portable Batch System (PBS)
+sys-cluster/lam-mpi:romio - Enable romio, a high-performance portable MPI-IO implementation
 sys-cluster/lam-mpi:xmpi - Build support for the external XMPI debugging GUI
 sys-cluster/mpich2:cxx - Add cxx headers
 sys-cluster/mpich2:fast - Enabling fast turns off error checking and timing collection
