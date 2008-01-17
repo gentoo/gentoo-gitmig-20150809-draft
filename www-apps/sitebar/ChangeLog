@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/sitebar
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.19 2007/10/18 17:13:14 wrobel Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.20 2008/01/17 09:50:35 wrobel Exp $
+
+*sitebar-3.3.9-r1 (17 Jan 2008)
+
+  17 Jan 2008; Gunnar Wrobel <wrobel@gentoo.org> +sitebar-3.3.9-r1.ebuild:
+  Fixed dependencies (#205846).
 
   18 Oct 2007; <wrobel@gentoo.org> -files/debian.patch,
   -sitebar-3.3.8-r1.ebuild:
