@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/pam_skey-1.1.5.ebuild,v 1.1 2008/01/17 12:24:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/pam_skey-1.1.5.ebuild,v 1.2 2008/01/17 16:53:25 ulm Exp $
 
 inherit eutils pam autotools multilib
 
@@ -30,7 +30,8 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --libdir="/$(get_libdir)" || die "econf failed"
+	econf --libdir="/$(get_libdir)" CFLAGS="${CFLAGS} -fPIC" \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
