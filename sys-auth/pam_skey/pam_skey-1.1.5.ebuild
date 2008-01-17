@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/pam_skey-1.1.4.ebuild,v 1.2 2008/01/17 12:24:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/pam_skey-1.1.5.ebuild,v 1.1 2008/01/17 12:24:52 ulm Exp $
 
-inherit eutils pam multilib
+inherit eutils pam autotools multilib
 
 DESCRIPTION="PAM interface for the S/Key authentication system"
 HOMEPAGE="http://freshmeat.net/projects/pam_skey/"
@@ -18,12 +18,15 @@ DEPEND=">=sys-libs/pam-0.78-r3
 	>=app-admin/skey-1.1.5-r4"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${PN}"
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}/${P}-gentoo.patch"
+
+	cd autoconf
+	eautoconf
+	eautoheader
+	mv configure defs.h.in .. || die "mv failed"
 }
 
 src_compile() {
