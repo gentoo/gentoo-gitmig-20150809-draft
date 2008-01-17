@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yablex/yablex-20030826.ebuild,v 1.5 2005/09/15 20:05:16 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yablex/yablex-20030826.ebuild,v 1.6 2008/01/17 00:03:33 maekke Exp $
 
 inherit eutils
 
@@ -23,8 +23,8 @@ S=${WORKDIR}
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 
 }
 
