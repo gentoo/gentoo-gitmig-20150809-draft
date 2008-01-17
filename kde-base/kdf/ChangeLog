@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdf
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.69 2007/10/19 22:48:45 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.70 2008/01/17 23:57:23 philantrop Exp $
+
+*kdf-4.0.0 (17 Jan 2008)
+
+  17 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> +kdf-4.0.0.ebuild:
+  Added KDE 4.0.0's kdf.
 
 *kdf-3.5.8 (19 Oct 2007)
 
