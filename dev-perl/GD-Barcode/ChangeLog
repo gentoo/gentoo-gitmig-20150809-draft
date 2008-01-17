@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD-Barcode
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Barcode/ChangeLog,v 1.1 2007/01/25 19:30:37 ian Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Barcode/ChangeLog,v 1.2 2008/01/17 14:31:43 maekke Exp $
+
+  17 Jan 2008; Markus Meier <maekke@gentoo.org> GD-Barcode-1.15.ebuild:
+  x86 stable, bug #206322
 
 *GD-Barcode-1.15 (25 Jan 2007)
 
