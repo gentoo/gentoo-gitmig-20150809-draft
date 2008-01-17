@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9_pre99.ebuild,v 1.2 2007/10/15 14:38:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9_pre99.ebuild,v 1.3 2008/01/17 18:58:41 grobian Exp $
 
 inherit eutils multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnump3d.org/"
 SRC_URI="http://savannah.gnu.org/download/${PN}/${PN}-2.9.9.9.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc-macos ppc64 sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ppc64 sparc ~x86"
 IUSE=""
 DEPEND="sys-apps/sed
 	dev-lang/perl"
