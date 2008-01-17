@@ -12,6 +12,7 @@ mono
 beagle
 rar
 multilib
+ocamlopt
 
 # dietlibc
 diet

@@ -13,6 +13,7 @@ beagle
 rar
 multilib
 networkmanager
+ocamlopt
 
 # dietlibc
 diet
