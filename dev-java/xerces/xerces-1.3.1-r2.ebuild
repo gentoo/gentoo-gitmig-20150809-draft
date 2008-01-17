@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-1.3.1-r2.ebuild,v 1.7 2007/10/18 12:47:38 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-1.3.1-r2.ebuild,v 1.8 2008/01/17 14:39:12 caster Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -13,31 +15,25 @@ LICENSE="Apache-1.1"
 SLOT="1.3"
 KEYWORDS="amd64 ppc x86"
 
-DEPEND=">=virtual/jdk-1.3
-	source? ( app-arch/zip )
-	dev-java/ant-core"
+DEPEND=">=virtual/jdk-1.3"
 RDEPEND=">=virtual/jre-1.3
 	>=dev-java/xalan-2.5.2"
-IUSE="doc source"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	cp ${FILESDIR}/${P}-build.xml build.xml
+	cp "${FILESDIR}/${P}-build.xml" build.xml || die
 }
 
-src_compile() {
-	local antflags="jar"
-	use doc && antflags="${antflags} docs"
-	eant ${antflags} || die "ant build failed"
-}
+EANT_DOC_TARGET="docs"
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
 
-	dodoc README STATUS
-	java-pkg_dohtml Readme.html
-	use doc && java-pkg_dohtml -r docs/*
-	use source && java-pkg_dosrc ${S}/src/org
+	dodoc README STATUS || die
+	dohtml Readme.html || die
+	use doc && java-pkg_dojavadoc docs
+	use source && java-pkg_dosrc "${S}/src/org"
 }

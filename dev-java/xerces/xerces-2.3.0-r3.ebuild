@@ -1,9 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0-r3.ebuild,v 1.5 2007/11/15 01:12:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0-r3.ebuild,v 1.6 2008/01/17 14:39:12 caster Exp $
 
-WANT_SPLIT_ANT=true
 JAVA_PKG_IUSE="doc examples source"
+
 inherit java-pkg-2 java-ant-2 eutils
 
 DESCRIPTION="The next generation of high performance, fully compliant XML parsers in the Apache Xerces family"
@@ -25,28 +25,25 @@ S=${WORKDIR}/xerces-${PV//./_}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 
-	mkdir ${S}/tools && cd ${S}/tools
+	mkdir tools && cd tools
 	java-pkg_jar-from xml-commons xml-apis.jar
 }
 
 src_compile() {
-	ANT_TASKS="xjavac-1" eant ${antflags} jar $(use_doc javadocs)
+	ANT_TASKS="xjavac-1" eant jar $(use_doc javadocs)
 }
 
 src_install() {
 	java-pkg_dojar build/xercesImpl.jar
 
-	dodoc TODO STATUS README ISSUES
-	dohtml Readme.html
+	dodoc TODO STATUS README ISSUES || die
+	dohtml Readme.html || die
 
-	use doc && java-pkg_dojavadoc build/docs/javadocs
-	if use examples; then
-		dodir /usr/share/doc/${PF}/examples
-		cp -a samples/* ${D}/usr/share/doc/${PF}
-	fi
-	use source && java-pkg_dosrc ${S}/src/org
+	use doc && java-pkg_dojavadoc build/docs/javadocs/xerces2
+	use examples && java-pkg_doexamples samples
+	use source && java-pkg_dosrc "${S}/src/org"
 }
