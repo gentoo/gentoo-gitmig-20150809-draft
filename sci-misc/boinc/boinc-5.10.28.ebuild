@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.5.6.ebuild,v 1.9 2007/07/29 17:09:48 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.10.28.ebuild,v 1.1 2008/01/17 03:21:39 tsunam Exp $
 
-inherit eutils wxwidgets
+inherit flag-o-matic wxwidgets
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="server X unicode"
 
 RDEPEND="sys-libs/zlib
-	>=net-misc/curl-7.15.0
+	>=net-misc/curl-7.15.5
 	>=dev-libs/openssl-0.9.7
 	X? ( =x11-libs/wxGTK-2.6* )
 	server? ( www-servers/apache
@@ -38,14 +38,13 @@ DEPEND=">=sys-devel/gcc-3.0.4
 	${RDEPEND}"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# point to a proper mouse device
-	sed -e "s:/dev/mouse:/dev/input/mice:g" -i client/hostinfo_unix.C || die
+	unpack "${A}"
+	cd ""${S}""
 }
 
 src_compile() {
+	append-flags -O3 -funroll-loops -fforce-addr -ffast-math
+
 	if use X; then
 		WX_GTK_VER=2.6
 		if use unicode; then
@@ -57,14 +56,15 @@ src_compile() {
 	fi
 
 	# Just run the necessary tools directly
-	einfo "Running necessary autotools..."
-	aclocal -I m4 || die "aclocal failed."
-	autoheader || die "autoheader failed."
-	automake || die "automake failed."
-	autoconf || die "autoconf failed."
+	#einfo "Running necessary autotools..."
+	#aclocal -I m4 || die "aclocal failed."
+	#autoheader || die "autoheader failed."
+	#automake || die "automake failed."
+	#autoconf || die "autoconf failed."
 	econf \
 		--enable-client \
 		--disable-static-client \
+		--with-ssl \
 		${wxconf} \
 		$(use_enable unicode) \
 		$(use_enable server) \
@@ -77,10 +77,12 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
-
-	newinitd ${FILESDIR}/boinc.init boinc
-	newconfd ${FILESDIR}/boinc.conf boinc
+	make install DESTDIR=""${D}"" || die "make install failed"
+	mkdir "${D}"/var "${D}"/var/lib "${D}"/var/lib/boinc/
+	cp "${S}"/ca-bundle.crt "${D}"/var/lib/boinc
+	chown boinc:boinc "${D}"/var/lib/boinc
+	newinitd "${FILESDIR}"/boinc.init boinc
+	newconfd "${FILESDIR}"/boinc.conf boinc
 
 	make_desktop_entry boinc_gui BOINC boinc Science /var/lib/boinc
 }
@@ -106,6 +108,7 @@ pkg_postinst() {
 	# Add warning about the new password for the client, bug 121896.
 	einfo "If you need to use the graphical client the password is in "
 	einfo "/var/lib/boinc/gui_rpc_auth.cfg which is randomly generated "
-	einfo "by BOINC. You can change this to something more memorable."
+	einfo "by BOINC upon successfully running the gui for the first time."
+	einfo "You can change this to something more memorable."
 	echo
 }

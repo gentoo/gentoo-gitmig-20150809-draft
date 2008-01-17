@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.8.15.ebuild,v 1.4 2007/07/29 17:09:48 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.8.15.ebuild,v 1.5 2008/01/17 03:21:39 tsunam Exp $
 
 inherit flag-o-matic wxwidgets
 
@@ -39,7 +39,7 @@ DEPEND=">=sys-devel/gcc-3.0.4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 }
 
 src_compile() {
@@ -77,12 +77,12 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
-	mkdir ${D}/var ${D}/var/lib ${D}/var/lib/boinc/
-	cp ${S}/ca-bundle.crt ${D}/var/lib/boinc
-	chown boinc:boinc ${D}/var/lib/boinc
-	newinitd ${FILESDIR}/boinc.init boinc
-	newconfd ${FILESDIR}/boinc.conf boinc
+	make install DESTDIR="${D}" || die "make install failed"
+	mkdir "${D}"/var "${D}"/var/lib "${D}"/var/lib/boinc/
+	cp "${S}"/ca-bundle.crt "${D}"/var/lib/boinc
+	chown boinc:boinc "${D}"/var/lib/boinc
+	newinitd "${FILESDIR}"/boinc.init boinc
+	newconfd "${FILESDIR}"/boinc.conf boinc
 
 	make_desktop_entry boinc_gui BOINC boinc Science /var/lib/boinc
 }
