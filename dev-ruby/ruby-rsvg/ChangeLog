@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-rsvg
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.4 2006/12/30 13:56:49 metalgod Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.5 2008/01/17 16:14:05 flameeyes Exp $
+
+  17 Jan 2008; Diego Pettenò <flameeyes@gentoo.org>
+  ruby-rsvg-0.16.0.ebuild:
+  Add missing pkg-config dependency. Thanks Patrick in bug #206219.
 
 *ruby-rsvg-0.16.0 (30 Dec 2006)
 
