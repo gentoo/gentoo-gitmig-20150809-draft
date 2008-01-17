@@ -1,6 +1,14 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.19 2008/01/10 00:08:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.20 2008/01/17 20:58:44 bicatali Exp $
+
+*root-5.18.00 (17 Jan 2008)
+
+  17 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/root-pic.patch, +files/root-xrootd-flags.patch,
+  +root-5.18.00.ebuild:
+  Version bump. Compiles with pic shared libs (via patches). Most earlier
+  patches and problems have been sent upstream.
 
   10 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/root-5.16.00-flags.patch, +files/root-5.16.00-postgres.patch,

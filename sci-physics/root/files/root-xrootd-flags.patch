@@ -1,0 +1,12 @@
+--- xrootd/Module.mk.orig	2008-01-17 17:16:53.152329508 +0000
++++ xrootd/Module.mk	2008-01-17 17:18:27.318594421 +0000
+@@ -77,6 +77,9 @@
+ 		   gunzip -c $(XROOTDVERS).src.tgz | tar xf -; \
+ 		   etag=`basename $(XROOTDETAG)` ; \
+ 		   touch $$etag ; \
++		   sed  -i \
++			-e 's:$$(CFOP):$$(CFOP) $$(OPTFLAGS):g' \
++			xrootd/config/GNUmake.env.in ; \
+ 		fi)
+ ifeq ($(PLATFORM),win32)
+ 		@(if [ -d $(XROOTDDIRD)/pthreads-win32 ]; then \
