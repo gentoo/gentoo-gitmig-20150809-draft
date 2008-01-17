@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6.ebuild,v 1.2 2007/01/05 16:06:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6.ebuild,v 1.3 2008/01/17 16:27:34 flameeyes Exp $
 
 inherit eutils gnome2
 
@@ -20,7 +20,8 @@ RDEPEND=">=gnome-base/libgnome-2.2
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.22
-	app-text/xmlto"
+	app-text/xmlto
+	dev-util/pkgconfig"
 
 DOCS="AUTHORS BUGS ChangeLog NEWS README TODO"
 

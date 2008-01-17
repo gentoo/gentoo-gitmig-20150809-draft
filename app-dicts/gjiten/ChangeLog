@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/gjiten
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.15 2007/01/05 16:06:08 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.16 2008/01/17 16:27:34 flameeyes Exp $
+
+  17 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> gjiten-2.6.ebuild:
+  Add missing pkg-config dependency. Thanks Patrick in bug #205029.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> gjiten-2.3.ebuild,
   gjiten-2.4.ebuild, gjiten-2.6.ebuild:
