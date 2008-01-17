@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.38 2007/10/30 18:56:07 fmccor Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.39 2008/01/17 03:09:31 jer Exp $
+
+  17 Jan 2008; Jeroen Roovers <jer@gentoo.org> pyxdg-0.15.ebuild:
+  Marked ~hppa (bug #204884).
 
   30 Oct 2007; Ferris McCormick <fmccor@gentoo.org> pyxdg-0.15.ebuild:
   Add ~sparc; needed for testing.
