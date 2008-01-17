@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r2.ebuild,v 1.6 2008/01/02 06:59:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r2.ebuild,v 1.7 2008/01/17 21:29:34 betelgeuse Exp $
+
+EAPI=1
 
 inherit eutils java-pkg-2 flag-o-matic check-reqs multilib
 
@@ -24,7 +26,7 @@ COMMON_DEP="
 	opengl? ( virtual/opengl )
 	>=dev-java/ant-1.7.0
 	=dev-java/junit-3*
-	=dev-java/lucene-1*"
+	dev-java/lucene:1"
 
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
