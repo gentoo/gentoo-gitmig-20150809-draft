@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdesdk
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.154 2007/10/21 10:53:16 carlo Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.155 2008/01/17 23:53:39 philantrop Exp $
+
+*kdesdk-4.0.0 (17 Jan 2008)
+
+  17 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> +kdesdk-4.0.0.ebuild:
+  Added KDE 4.0.0's kdesdk.
 
   21 Oct 2007; Carsten Lohrke <carlo@gentoo.org> kdesdk-3.5.8.ebuild:
   Unbreak for loop.
