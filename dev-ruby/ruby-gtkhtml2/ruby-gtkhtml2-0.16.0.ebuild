@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ruby-gtkhtml2-0.16.0.ebuild,v 1.1 2006/12/30 04:57:52 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ruby-gtkhtml2-0.16.0.ebuild,v 1.2 2008/01/17 16:08:03 flameeyes Exp $
 
 inherit ruby ruby-gnome2
 
@@ -10,6 +10,7 @@ IUSE=""
 USE_RUBY="ruby18 ruby19"
 DEPEND="=gnome-extra/gtkhtml-2*
 	>=dev-ruby/ruby-glib2-${PV}
-	>=dev-ruby/ruby-gtk2-${PV}"
+	>=dev-ruby/ruby-gtk2-${PV}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/ruby-gnome2-all-${PV}/gtkhtml2"
