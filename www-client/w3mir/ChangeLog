@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3mir
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/ChangeLog,v 1.13 2007/05/11 18:24:00 bangert Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/ChangeLog,v 1.14 2008/01/17 19:24:11 armin76 Exp $
+
+  17 Jan 2008; Raúl Porcel <armin76@gentoo.org> -w3mir-1.0.10.ebuild:
+  old
 
   11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
   add metadata.xml
