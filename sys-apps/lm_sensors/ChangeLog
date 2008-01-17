@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lm_sensors
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.79 2007/11/21 17:17:47 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.80 2008/01/17 20:43:49 fmccor Exp $
+
+  17 Jan 2008; Ferris McCormick <fmccor@gentoo.org>
+  lm_sensors-2.10.4.ebuild:
+  Add ~sparc at user (Christoph Brill) request, Bug #206344, to allow testing.
 
   21 Nov 2007; nixnut <nixnut@gentoo.org> lm_sensors-2.10.4.ebuild:
   Stable on ppc wrt bug 195220
