@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.1.3-r1.ebuild,v 1.1 2008/01/17 19:37:38 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.1.4.ebuild,v 1.1 2008/01/17 21:26:13 steev Exp $
 
 inherit eutils multilib autotools flag-o-matic
 
@@ -22,12 +22,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (	app-doc/doxygen
 		app-text/xmlto )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/dbus-inotify-fix-thoenig-01.patch"
-}
 
 src_compile() {
 	# so we can get backtraces from apps
