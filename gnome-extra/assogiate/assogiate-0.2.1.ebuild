@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/assogiate-0.2.1.ebuild,v 1.1 2007/11/21 11:59:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/assogiate-0.2.1.ebuild,v 1.2 2008/01/17 19:20:33 drac Exp $
 
 inherit gnome2
 
@@ -19,7 +19,8 @@ RDEPEND=">=dev-libs/glib-2.8
 	>=dev-cpp/libxmlpp-2.14
 	>=dev-cpp/gnome-vfsmm-2.6"
 DEPEND="${RDEPEND}
+	app-text/gnome-doc-utils
 	dev-util/pkgconfig
-	>=dev-util/intltool-0.35"
+	dev-util/intltool"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
