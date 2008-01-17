@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-svg
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ChangeLog,v 1.8 2007/03/06 00:37:21 rbrown Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ChangeLog,v 1.9 2008/01/17 16:11:47 flameeyes Exp $
+
+  17 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Add missing pkg-config dependency. Thanks Patrick in bug #206218.
 
 *ruby-svg-1.0.3-r1 (06 Mar 2007)
 
