@@ -1,0 +1,9 @@
+# ChangeLog for games-puzzle/wmpuzzle
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wmpuzzle/ChangeLog,v 1.1 2008/01/17 20:01:59 drac Exp $
+
+*wmpuzzle-0.5.0 (17 Jan 2008)
+
+  17 Jan 2008; Samuli Suominen <drac@gentoo.org> +wmpuzzle-0.5.0.ebuild:
+  Initial commit. Ebuild by Kenneth Prugh a.k.a. Ken69267
+
