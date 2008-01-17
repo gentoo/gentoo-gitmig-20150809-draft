@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ucl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.23 2007/08/25 17:38:50 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.24 2008/01/17 04:27:46 jer Exp $
+
+  17 Jan 2008; Jeroen Roovers <jer@gentoo.org> ucl-1.03.ebuild:
+  Stable for HPPA.
 
   25 Aug 2007; Steve Dibb <beandog@gentoo.org> ucl-1.02.ebuild:
   amd64 stable
