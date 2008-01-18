@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5.ebuild,v 1.7 2007/11/14 20:14:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5.ebuild,v 1.8 2008/01/18 16:18:38 matsuu Exp $
 
 inherit gnome2 eutils
 
@@ -20,9 +20,9 @@ DEPEND="dev-lang/perl
 	dev-perl/URI
 	>=sys-devel/autoconf-2.50
 	>=sys-devel/automake-1.7
+	dev-util/pkgconfig
 	${RDEPEND}"
-RDEPEND="virtual/libc
-	>=dev-libs/glib-2.4
+RDEPEND=">=dev-libs/glib-2.4
 	>=dev-libs/atk-1.6
 	>=x11-libs/gtk+-2.4
 	>=x11-libs/pango-1.2.1
