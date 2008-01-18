@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/knocker
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/ChangeLog,v 1.14 2008/01/06 13:32:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/ChangeLog,v 1.15 2008/01/18 18:47:12 armin76 Exp $
+
+  18 Jan 2008; Raúl Porcel <armin76@gentoo.org> knocker-0.7.1-r1.ebuild:
+  sparc/x86 stable
 
   06 Jan 2008; Markus Ullmann <jokey@gentoo.org> knocker-0.7.1-r1.ebuild:
   Add eutils wrt bug #185364
