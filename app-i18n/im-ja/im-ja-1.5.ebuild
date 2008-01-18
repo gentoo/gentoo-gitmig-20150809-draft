@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5.ebuild,v 1.8 2008/01/18 16:18:38 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5.ebuild,v 1.9 2008/01/18 16:23:48 matsuu Exp $
 
 inherit gnome2 eutils
 
@@ -16,12 +16,6 @@ IUSE="gnome canna freewnn skk anthy"
 # --enable-debug causes build failure with gtk+-2.4
 #IUSE="${IUSE} debug"
 
-DEPEND="dev-lang/perl
-	dev-perl/URI
-	>=sys-devel/autoconf-2.50
-	>=sys-devel/automake-1.7
-	dev-util/pkgconfig
-	${RDEPEND}"
 RDEPEND=">=dev-libs/glib-2.4
 	>=dev-libs/atk-1.6
 	>=x11-libs/gtk+-2.4
@@ -33,6 +27,12 @@ RDEPEND=">=dev-libs/glib-2.4
 	canna? ( app-i18n/canna )
 	skk? ( virtual/skkserv )
 	anthy? ( || ( app-i18n/anthy app-i18n/anthy-ss ) )"
+DEPEND="${RDEPEND}
+	dev-lang/perl
+	dev-perl/URI
+	>=sys-devel/autoconf-2.50
+	>=sys-devel/automake-1.7
+	dev-util/pkgconfig"
 
 DOCS="AUTHORS README ChangeLog TODO"
 
