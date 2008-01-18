@@ -38,10 +38,14 @@ EBUILD sane-backends-1.0.18-r4.ebuild 4179 RMD160 e9e7bb76c4dd362dc4fc4db9f384b7
 MD5 d0d7b6d0cb26742fe30b815c9633fab3 sane-backends-1.0.18-r4.ebuild 4179
 RMD160 e9e7bb76c4dd362dc4fc4db9f384b706f1d3f3ba sane-backends-1.0.18-r4.ebuild 4179
 SHA256 d40e025b2712f5cbf512479fd29820a0936a505b306b3eabfe36db2e2be20437 sane-backends-1.0.18-r4.ebuild 4179
-EBUILD sane-backends-1.0.18-r5.ebuild 4196 RMD160 08d61a509a3a7cb722b529a85c125bbf9ed57343 SHA1 0fa41e0997e4b4198855396ab7da72a90024cc6d SHA256 1c5999bfa7192bf75bda5ef092a8ec086796cf63ebe7ed8acedca0927d27ec9b
-MD5 728b5a513468d0b14b3f195fdb4cca78 sane-backends-1.0.18-r5.ebuild 4196
-RMD160 08d61a509a3a7cb722b529a85c125bbf9ed57343 sane-backends-1.0.18-r5.ebuild 4196
-SHA256 1c5999bfa7192bf75bda5ef092a8ec086796cf63ebe7ed8acedca0927d27ec9b sane-backends-1.0.18-r5.ebuild 4196
+EBUILD sane-backends-1.0.18-r5.ebuild 4200 RMD160 70ce6ea4a28421d2fa85ce641a44b71317c742a2 SHA1 0662aecdcadc70aa2472a8fdf41e5539d9524adc SHA256 f33e430d113799625991cd8b137e10bae46801c4cd9074c5eaf1cda29b063f23
+MD5 3aca79b03d02abae1156d2e3a9f43adf sane-backends-1.0.18-r5.ebuild 4200
+RMD160 70ce6ea4a28421d2fa85ce641a44b71317c742a2 sane-backends-1.0.18-r5.ebuild 4200
+SHA256 f33e430d113799625991cd8b137e10bae46801c4cd9074c5eaf1cda29b063f23 sane-backends-1.0.18-r5.ebuild 4200
+EBUILD sane-backends-1.0.18-r6.ebuild 4376 RMD160 6e8d86b795bc1d39847733e1578de3a4298aa6a4 SHA1 be371c01a4a4ef8ebaaa39509b9bfe2cc501cbb7 SHA256 05d5f3fa1e4be271d5dbaabfdb1f471b57de48417640a51147106a8e86aa01ff
+MD5 2b3b0d1ac231240ee74f70f3481150a7 sane-backends-1.0.18-r6.ebuild 4376
+RMD160 6e8d86b795bc1d39847733e1578de3a4298aa6a4 sane-backends-1.0.18-r6.ebuild 4376
+SHA256 05d5f3fa1e4be271d5dbaabfdb1f471b57de48417640a51147106a8e86aa01ff sane-backends-1.0.18-r6.ebuild 4376
 MISC ChangeLog 21529 RMD160 cc6894f8b42fc4371fb72ab72ccbcba1706860d3 SHA1 dd7ffac799095170b859f9703e01d493be4bbd74 SHA256 7f1fb75d9a97602bfad23465113cc3143538cd21715814b654d21216a29d1407
 MD5 e688606997d89e78c450574e6139b9d5 ChangeLog 21529
 RMD160 cc6894f8b42fc4371fb72ab72ccbcba1706860d3 ChangeLog 21529
@@ -65,3 +69,6 @@ SHA256 64854e40d74b4a1b27aea1b2f5b5accdd348b8a835e9d8898b6f3dc5904f19a8 files/di
 MD5 a5adbad07b9aed2a03f518664e2d94e6 files/digest-sane-backends-1.0.18-r5 545
 RMD160 b2327e4254ffcf2074c21f2b1c629014ab83ed14 files/digest-sane-backends-1.0.18-r5 545
 SHA256 64854e40d74b4a1b27aea1b2f5b5accdd348b8a835e9d8898b6f3dc5904f19a8 files/digest-sane-backends-1.0.18-r5 545
+MD5 a5adbad07b9aed2a03f518664e2d94e6 files/digest-sane-backends-1.0.18-r6 545
+RMD160 b2327e4254ffcf2074c21f2b1c629014ab83ed14 files/digest-sane-backends-1.0.18-r6 545
+SHA256 64854e40d74b4a1b27aea1b2f5b5accdd348b8a835e9d8898b6f3dc5904f19a8 files/digest-sane-backends-1.0.18-r6 545

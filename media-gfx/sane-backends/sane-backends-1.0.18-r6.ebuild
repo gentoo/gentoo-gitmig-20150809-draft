@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18-r5.ebuild,v 1.2 2008/01/18 14:24:56 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18-r6.ebuild,v 1.1 2008/01/18 14:24:56 phosphan Exp $
 
 inherit eutils
 
-IUSE="usb gphoto2 ipv6 v4l"
+IUSE="usb gphoto2 ipv6 v4l doc"
 
 DESCRIPTION="Scanner Access Now Easy - Backends"
 HOMEPAGE="http://www.sane-project.org/"
@@ -17,6 +17,14 @@ RDEPEND=">=media-libs/jpeg-6b
 	v4l? ( sys-kernel/linux-headers )"
 
 DEPEND="${RDEPEND}
+	doc? (
+		|| ( app-text/tetex
+				(
+					app-text/texlive
+					dev-texlive/texlive-latexextra
+				)
+			)
+	)
 	>=sys-apps/sed-4"
 
 # We now use new syntax construct (SUBSYSTEMS!="usb|usb_device)
@@ -88,6 +96,10 @@ src_unpack() {
 	sed -i -e 's:$(DVIPS) sane.dvi -o sane.ps:$(DVIPS) sane.dvi -M1 -o sane.ps:' \
 		doc/Makefile.in
 
+	if ! use doc; then
+		sed -i -e 's:@USE_LATEX@:no:' doc/Makefile.in
+	fi
+
 	if use usb; then
 		epatch "${WORKDIR}/${BROTHERMFCDRIVER}"
 		sed -e 's/bh canon/bh brother canon/' -i configure || \
@@ -137,7 +149,6 @@ src_install () {
 	insinto /etc/udev/rules.d
 	newins libsane.rules 70-libsane.rules
 	cd ../..
-
-	dodoc NEWS AUTHORS LICENSE ChangeLog* README README.linux
+	dodoc NEWS AUTHORS ChangeLog* README README.linux
 	echo "SANE_CONFIG_DIR=/etc/sane.d" >> "${D}"/etc/env.d/30sane
 }
