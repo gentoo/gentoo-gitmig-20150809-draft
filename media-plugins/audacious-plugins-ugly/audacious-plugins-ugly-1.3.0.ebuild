@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins-ugly/audacious-plugins-ugly-1.3.0.ebuild,v 1.1 2007/03/05 17:11:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins-ugly/audacious-plugins-ugly-1.3.0.ebuild,v 1.2 2008/01/18 11:54:26 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ IUSE="cube iris libnotify mplayer nls"
 
 RDEPEND="!<media-plugins/audacious-plugins-1.3.0
 	dev-libs/libxml2
-	>=media-sound/audacious-1.3.0-r1
+	=media-sound/audacious-1.3*
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.1
 	media-libs/taglib
