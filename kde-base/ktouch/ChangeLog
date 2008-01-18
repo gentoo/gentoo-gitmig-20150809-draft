@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktouch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.76 2008/01/18 01:04:29 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.77 2008/01/18 09:53:37 ingmar Exp $
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  files/digest-ktouch-4.0.0, Manifest:
+  Manifest
 
 *ktouch-4.0.0 (18 Jan 2008)
 
