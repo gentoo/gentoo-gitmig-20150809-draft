@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.188 2008/01/18 02:35:02 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.189 2008/01/18 13:46:03 ingmar Exp $
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> kde-4.0.0.ebuild:
+  Depend on a ~version:slot, instead of just the slot dependency, bug 206516.
 
 *kde-4.0.0 (18 Jan 2008)
 
