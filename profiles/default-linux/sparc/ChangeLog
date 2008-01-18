@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.89 2008/01/17 10:01:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.90 2008/01/18 18:16:12 armin76 Exp $
+
+  18 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  sparc64/2007.0/desktop/make.defaults:
+  Add qt3support to make.defaults on desktop profile
 
   17 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   -sparc32/2006.1/2.4/deprecated, -sparc32/2006.1/2.4/make.defaults,
