@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.2.0.ebuild,v 1.4 2008/01/16 20:52:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.2.1.ebuild,v 1.1 2008/01/18 18:17:40 alonbl Exp $
 
 inherit libtool autotools
 
@@ -31,9 +31,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	elibtoolize # for sane .so versioning on FreeBSD
-
-	epatch "${FILESDIR}/${P}-selflink.patch"
-	AT_M4DIR="m4 gl/m4 lgl/m4" eautoreconf
 }
 
 src_compile() {
