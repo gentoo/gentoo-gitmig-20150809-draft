@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.0.0.ebuild,v 1.2 2008/01/14 17:47:27 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.0.0.ebuild,v 1.3 2008/01/18 21:02:03 ingmar Exp $
 
 EAPI="1"
 inherit cmake-utils eutils flag-o-matic
@@ -17,6 +17,7 @@ RESTRICT="test"
 
 DEPEND="
 	>=dev-libs/redland-1.0.6
+	>=dev-libs/rasqal-0.9.15
 	>=media-libs/raptor-1.4.16
 	>=x11-libs/qt-4.2.0:4
 	clucene? ( >=dev-cpp/clucene-0.9.19 )
