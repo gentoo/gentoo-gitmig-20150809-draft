@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnudoku/gnudoku-0.93.ebuild,v 1.4 2007/07/01 23:21:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnudoku/gnudoku-0.93.ebuild,v 1.5 2008/01/18 02:53:10 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -16,7 +16,9 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 RESTRICT="test"
 
-DEPEND=">=dev-cpp/gtkmm-2.6"
+RDEPEND=">=dev-cpp/gtkmm-2.6"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
