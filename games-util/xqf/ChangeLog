@@ -1,6 +1,10 @@
 # ChangeLog for games-util/xqf
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.25 2006/11/04 19:10:01 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.26 2008/01/18 21:16:05 tupone Exp $
+
+  18 Jan 2008; Tupone Alfredo <tupone@gentoo.org> xqf-1.0.4-r1.ebuild,
+  xqf-1.0.5.ebuild:
+  Missing pkg-config dependency. Bug #206439 by Evil Compile Person
 
 *xqf-1.0.5 (04 Nov 2006)
 
@@ -132,7 +136,7 @@
   fix sourceforge mirroring.
 	  
   13 April 2002; Bart Verwilst <verwilst@gentoo.org>: just added a 
-  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.25 2006/11/04 19:10:01 nyhm Exp $
+  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.26 2008/01/18 21:16:05 tupone Exp $
 
 *xqf-0.9.8 (6 Apr 2002)
 

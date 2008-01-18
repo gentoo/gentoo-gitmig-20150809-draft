@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.4-r1.ebuild,v 1.4 2006/10/05 21:02:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.4-r1.ebuild,v 1.5 2008/01/18 21:16:05 tupone Exp $
 
 inherit eutils
 DESCRIPTION="A server browser for many FPS games (frontend for qstat)"
@@ -18,12 +18,13 @@ RDEPEND="=x11-libs/gtk+-2*
 	geoip? ( dev-libs/geoip )
 	bzip2? ( app-arch/bzip2 )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/gtk2.patch
+	epatch "${FILESDIR}"/gtk2.patch
 	# "splash.png" is pretty generic #55949
 	sed -i \
 		-e 's:splash\.png:xqfsplash.png:' \
