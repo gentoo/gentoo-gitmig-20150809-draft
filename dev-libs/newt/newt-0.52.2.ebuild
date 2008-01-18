@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.2.ebuild,v 1.6 2008/01/18 14:59:05 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.2.ebuild,v 1.7 2008/01/18 15:16:12 xmerlin Exp $
 
 inherit python toolchain-funcs eutils rpm
 
@@ -45,8 +45,10 @@ src_unpack() {
 
 	# bug 73850
 	if use elibc_uclibc; then
-		sed -i -e 's:-lslang:-lslang -lncurses:g' ${S}/Makefile.in
+		sed -i -e 's:-lslang:-lslang -lncurses:g' "${S}"/Makefile.in
 	fi
+
+	sed -i -e 's:0.52.1:0.52.2:g' "${S}"/configure || die
 }
 
 src_compile() {
@@ -77,5 +79,5 @@ src_install () {
 	doman whiptail.1
 
 	# Don't know if it's needed but it was here before so leaving /peper
-	dosym libnewt.so.0.52.1 /usr/$(get_libdir)/libnewt.so.0.52
+	dosym libnewt.so.0.52.2 /usr/$(get_libdir)/libnewt.so.0.52
 }
