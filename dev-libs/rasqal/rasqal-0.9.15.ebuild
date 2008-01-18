@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.15.ebuild,v 1.1 2008/01/18 20:45:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.15.ebuild,v 1.2 2008/01/18 23:03:09 drac Exp $
 
 inherit libtool
 
@@ -16,7 +16,8 @@ IUSE="gmp pcre xml"
 RDEPEND=">=media-libs/raptor-1.4.16
 	pcre? ( dev-libs/libpcre )
 	xml? ( dev-libs/libxml2 )
-	!gmp? ( dev-libs/mpfr )"
+	!gmp? ( dev-libs/mpfr )
+	gmp? ( dev-libs/gmp )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
