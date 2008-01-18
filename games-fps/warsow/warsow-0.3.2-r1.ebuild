@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.3.2-r1.ebuild,v 1.3 2007/11/29 08:10:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.3.2-r1.ebuild,v 1.4 2008/01/18 03:09:29 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs versionator games
 
@@ -29,6 +29,7 @@ RDEPEND="opengl? ( ${UIRDEPEND} )
 	!opengl? ( !dedicated? ( ${UIRDEPEND} ) )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
+	x11-proto/xf86dgaproto
 	x11-misc/makedepend"
 
 S=${WORKDIR}/${MY_P}/source
