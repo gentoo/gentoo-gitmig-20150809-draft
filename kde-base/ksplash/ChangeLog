@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/ksplash
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.1 2008/01/18 00:42:07 ingmar Exp $
+
+*ksplash-4.0.0 (18 Jan 2008)
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +metadata.xml,
+  +ksplash-4.0.0.ebuild:
+  Added KDE 4.0.0's ksplash.
+
