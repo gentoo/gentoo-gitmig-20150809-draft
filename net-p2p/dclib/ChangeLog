@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dclib
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.92 2008/01/16 18:20:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.93 2008/01/18 01:26:15 ranger Exp $
+
+  18 Jan 2008; Brent Baude <ranger@gentoo.org> dclib-0.3.12.ebuild:
+  Marking dclib-0.3.12 ppc64 for bug 202615
 
   16 Jan 2008; Jeroen Roovers <jer@gentoo.org> dclib-0.3.12.ebuild:
   Stable for HPPA (bug #202615).
