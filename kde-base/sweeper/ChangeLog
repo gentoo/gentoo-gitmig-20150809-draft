@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/sweeper
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.1 2008/01/18 02:05:01 ingmar Exp $
+
+*sweeper-4.0.0 (18 Jan 2008)
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +metadata.xml,
+  +sweeper-4.0.0.ebuild:
+  Added KDE 4.0.0's sweeper.
+
