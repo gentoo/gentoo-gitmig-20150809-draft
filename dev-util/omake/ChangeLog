@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/omake
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.16 2008/01/04 02:35:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.17 2008/01/18 08:21:55 aballier Exp $
+
+  18 Jan 2008; Alexis Ballier <aballier@gentoo.org> omake-0.9.8.5.ebuild:
+  restrict installsources, debugedit kills ocamlc -custom compiled executables
 
   04 Jan 2008; Alexis Ballier <aballier@gentoo.org> omake-0.9.8.5.ebuild:
   allow to build without ocamlopt
