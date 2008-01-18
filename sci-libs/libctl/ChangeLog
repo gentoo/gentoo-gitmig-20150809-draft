@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libctl
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/ChangeLog,v 1.9 2007/08/16 13:01:25 bicatali Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/ChangeLog,v 1.10 2008/01/18 14:15:40 markusle Exp $
+
+  18 Jan 2008; Markus Dittrich <markusle@gentoo.org> libctl-2.2.ebuild,
+  libctl-3.0.1.ebuild, libctl-3.0.2.ebuild:
+  Changed dependency on guile to allow newer versions (fixes bug #206500).
 
 *libctl-3.0.2 (16 Aug 2007)
 
