@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/aimsniff
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.26 2007/07/29 17:01:03 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.27 2008/01/18 18:13:55 armin76 Exp $
+
+  18 Jan 2008; Raúl Porcel <armin76@gentoo.org> aimsniff-0.9-r2.ebuild:
+  x86 stable
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> aimsniff-0.9-r1.ebuild,
   aimsniff-0.9-r2.ebuild:
