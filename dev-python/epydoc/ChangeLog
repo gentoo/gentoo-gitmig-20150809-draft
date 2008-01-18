@@ -1,22 +1,19 @@
 # ChangeLog for dev-python/epydoc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.31 2008/01/17 23:58:47 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.32 2008/01/18 00:29:43 pythonhead Exp $
 
-*epydoc-3.0_beta1 (17 Jan 2008)
-
-  17 Jan 2008; Rob Cakebread <pythonhead@gentoo.org> epydoc-2.1-r2.ebuild,
-  +epydoc-3.0_beta1.ebuild:
-  Version bump. Closes #151314 Thanks Rene 'Necoro' Neumann
-  <necoro@necoro.net>
+  18 Jan 2008; Rob Cakebread <pythonhead@gentoo.org>
+  epydoc-3.0_beta1.ebuild:
+  Version bump. Closes #151314 Thanks Rene 'Necoro' Neumann <necoro@necoro.net>
 
   17 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> -epydoc-1.1.ebuild,
   -epydoc-2.0.ebuild, -epydoc-2.1.ebuild, -epydoc-2.1-r1.ebuild:
   Dropped old versions.
 
-  16 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> epydoc-2.1-r2.ebuild:
+  16 Jul 2007; Raúl Porcel <armin76@gentoo.org> epydoc-2.1-r2.ebuild:
   alpha stable
 
-  12 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> epydoc-2.1-r2.ebuild:
+  12 Mar 2007; Raúl Porcel <armin76@gentoo.org> epydoc-2.1-r2.ebuild:
   x86 stable
 
   11 Feb 2007; Markus Rothe <corsair@gentoo.org> epydoc-2.1-r2.ebuild:
@@ -31,16 +28,16 @@
   09 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> epydoc-2.1-r2.ebuild:
   Stable on sparc
 
-  20 Jan 2007; Alexander H. FÃ¦rÃ¸y <eroyf@gentoo.org> epydoc-2.1-r2.ebuild:
+  20 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org> epydoc-2.1-r2.ebuild:
   Stable on MIPS.
 
-  07 Dec 2006; Alexander H. FÃ¦rÃ¸y <eroyf@gentoo.org> epydoc-2.1-r2.ebuild:
+  07 Dec 2006; Alexander H. Færøy <eroyf@gentoo.org> epydoc-2.1-r2.ebuild:
   Marked ~mips.
 
-  07 Dec 2006; Diego PettenÃ² <flameeyes@gentoo.org> epydoc-2.1-r2.ebuild:
+  07 Dec 2006; Diego Pettenò <flameeyes@gentoo.org> epydoc-2.1-r2.ebuild:
   Add ~sparc-fbsd keyword.
 
-  03 Dec 2006; Diego PettenÃ² <flameeyes@gentoo.org> epydoc-2.1-r2.ebuild:
+  03 Dec 2006; Diego Pettenò <flameeyes@gentoo.org> epydoc-2.1-r2.ebuild:
   Add ~x86-fbsd keyword.
 
   01 Dec 2006; Markus Rothe <corsair@gentoo.org> epydoc-2.1-r2.ebuild:
@@ -80,10 +77,10 @@
   03 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> +epydoc-2.1.ebuild:
   Version bump. bug
 
-  07 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> epydoc-1.1.ebuild:
+  07 May 2004; Bryan Østergaard <kloeri@gentoo.org> epydoc-1.1.ebuild:
   Add missing IUSE.
 
-  04 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> epydoc-2.0.ebuild:
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> epydoc-2.0.ebuild:
   Add missing IUSE.
 
 *epydoc-2.0 (17 Feb 2004)

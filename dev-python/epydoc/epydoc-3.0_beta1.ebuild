@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-3.0_beta1.ebuild,v 1.1 2008/01/17 23:58:47 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-3.0_beta1.ebuild,v 1.2 2008/01/18 00:29:43 pythonhead Exp $
 
 inherit distutils versionator
 
@@ -24,4 +24,3 @@ src_install() {
 	doman "${S}/man/*"
 	use doc && dohtml -r "${S}/doc/*"
 }
-
