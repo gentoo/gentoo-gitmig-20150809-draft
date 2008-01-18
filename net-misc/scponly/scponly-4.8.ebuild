@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8.ebuild,v 1.2 2008/01/17 08:33:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8.ebuild,v 1.3 2008/01/18 20:21:59 dertobi123 Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/scponly/${P}.tgz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~mips ppc ~sparc x86"
 IUSE="rsync subversion"
 
 DEPEND="virtual/libc
