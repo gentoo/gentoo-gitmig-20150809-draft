@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hwreport
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/ChangeLog,v 1.2 2008/01/14 15:37:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/ChangeLog,v 1.3 2008/01/18 14:57:41 fmccor Exp $
+
+  18 Jan 2008; Ferris McCormick <fmccor@gentoo.org> hwreport-0.9.4.ebuild:
+  Add ~sparc at user (Christoph Brill) request, Bug #206514. This does indeed
+  work.
 
   14 Jan 2008; Samuli Suominen <drac@gentoo.org> hwreport-0.9.4.ebuild:
   Keyword ~amd64 wrt #205788 and use tc-getCC.
