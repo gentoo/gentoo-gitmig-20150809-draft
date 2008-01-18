@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3312 2008/01/18 06:34:11 agorf Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3313 2008/01/18 11:47:52 agorf Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -294,6 +294,9 @@ app-text/texlive:pstricks - Adds pstricks packages
 app-text/texlive:publishers - Adds support for publishers
 app-text/texlive:science - Adds typesetting support for natural and computer sciences
 app-text/texlive:xetex - Adds support for XeTeX macros
+app-text/webgen:builder - Enable programmatic HTML/XML generation
+app-text/webgen:exif - Enable EXIF information in image galleries
+app-text/webgen:highlight - Enable syntax highlighting for certain plugins
 app-text/webgen:markdown - Markdown support
 app-text/webgen:textile - Textile support
 app-text/webgen:thumbnail - Thumbnail creation support using rmagick
