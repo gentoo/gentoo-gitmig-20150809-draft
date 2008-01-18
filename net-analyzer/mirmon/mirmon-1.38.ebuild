@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mirmon/mirmon-1.37.ebuild,v 1.2 2007/07/11 23:49:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mirmon/mirmon-1.38.ebuild,v 1.1 2008/01/18 18:56:43 armin76 Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cs.uu.nl/people/henkp/$PN/src/$P.tar.gz"
 
 LICENSE="GPL-2"
 
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=dev-lang/perl-5.8.5-r2"
 
@@ -21,7 +21,7 @@ src_install() {
 		dodoc ${file}
 		rm -f ${file}
 	done
-	cp -R . ${D}/${MY_HTDOCSDIR}
+	cp -R . "${D}"/${MY_HTDOCSDIR}
 
 	webapp_src_install
 }
