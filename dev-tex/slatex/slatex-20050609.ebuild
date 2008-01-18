@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/slatex/slatex-20050609.ebuild,v 1.1 2008/01/17 22:55:29 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/slatex/slatex-20050609.ebuild,v 1.2 2008/01/18 18:07:29 opfer Exp $
 
 # for updating the texmf database, id est latex-package_rehash
 inherit latex-package
@@ -16,7 +16,7 @@ LICENSE="as-is"
 
 SLOT="0"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
