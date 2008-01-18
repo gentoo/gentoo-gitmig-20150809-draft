@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-3.0.ebuild,v 1.1 2007/08/25 16:18:20 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-3.0.ebuild,v 1.2 2008/01/18 18:49:37 armin76 Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="VOSTROM"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc-macos x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap"
