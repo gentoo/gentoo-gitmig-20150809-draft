@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.2.1.ebuild,v 1.1 2008/01/18 18:17:40 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.2.1.ebuild,v 1.2 2008/01/18 23:08:15 alonbl Exp $
 
 inherit libtool autotools
 
@@ -12,7 +12,7 @@ SRC_URI="http://josefsson.org/gnutls/releases/${P}.tar.bz2"
 LICENSE="LGPL-2.1 GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="zlib lzo doc nls guile"
+IUSE="zlib lzo doc nls guile bindist"
 
 RDEPEND="dev-libs/libgpg-error
 	>=dev-libs/libgcrypt-1.2.4
@@ -26,6 +26,18 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	doc? ( dev-util/gtk-doc )
 	nls? ( sys-devel/gettext )"
+
+pkg_setup() {
+	if use guile && ! built_with_use dev-scheme/guile networking; then
+		eerror "You are trying to compile ${PN} package with USE=\"guile\""
+		eerror "while dev-scheme/guile does not have USE=\"networking\""
+		die
+	fi
+	if use lzo && use bindist; then
+		eerror "lzo is not allowed in binary distribution of gnutls"
+		die
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
