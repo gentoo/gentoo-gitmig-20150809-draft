@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.76 2008/01/11 21:43:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.77 2008/01/18 16:29:06 matsuu Exp $
+
+*ptex-3.1.10_p20080107 (18 Jan 2008)
+
+  18 Jan 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +ptex-3.1.10_p20080107.ebuild:
+  Version bumped.
+  Added app-arch/unzip to DEPEND, bug #206027.
 
   11 Jan 2008; Fabian Groffen <grobian@gentoo.org> ptex-3.1.5-r1.ebuild:
   Dropped ppc-macos keyword, see you in prefix
