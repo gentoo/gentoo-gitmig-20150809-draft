@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.2.ebuild,v 1.5 2008/01/15 16:13:35 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.2.ebuild,v 1.6 2008/01/18 14:59:05 xmerlin Exp $
 
 inherit python toolchain-funcs eutils rpm
 
@@ -29,11 +29,6 @@ src_unpack() {
 	rpm_src_unpack
 	cd "${S}"
 
-	# bug 73850
-	if use elibc_uclibc; then
-		sed -i -e 's:-lslang:-lslang -lncurses:g' ${S}/Makefile.in
-	fi
-
 	epatch "${FILESDIR}"/${P}-scrollbars.patch
 	epatch "${FILESDIR}"/${P}-pgupdown-crash.patch
 	epatch "${FILESDIR}"/${P}-screensize.patch
@@ -46,6 +41,11 @@ src_unpack() {
 
 	if ! use tcl; then
 		epatch "${FILESDIR}"/${P}-notcl.patch
+	fi
+
+	# bug 73850
+	if use elibc_uclibc; then
+		sed -i -e 's:-lslang:-lslang -lncurses:g' ${S}/Makefile.in
 	fi
 }
 

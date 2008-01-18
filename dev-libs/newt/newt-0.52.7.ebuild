@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.7.ebuild,v 1.2 2008/01/15 18:13:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.7.ebuild,v 1.3 2008/01/18 14:59:05 xmerlin Exp $
 
 inherit python toolchain-funcs eutils rpm
 
@@ -36,6 +36,11 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}"/${P}-DESTDIR.patch || die
+
+	# bug 73850
+	if use elibc_uclibc; then
+		sed -i -e 's:-lslang:-lslang -lncurses:g' ${S}/Makefile.in
+	fi
 }
 
 src_compile() {
