@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.5.1.ebuild,v 1.7 2007/10/06 09:04:13 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.5.1.ebuild,v 1.8 2008/01/18 12:40:10 remi Exp $
 
 inherit python gnome2 eutils
 
@@ -21,6 +21,7 @@ RDEPEND=">=dev-lang/python-2.3
 	gnome? ( dev-python/gnome-python-desktop )"
 
 DEPEND="${RDEPEND}
+	dev-util/intltool
 	app-text/scrollkeeper"
 
 DOCS="AUTHORS README.CVS changelog help/"

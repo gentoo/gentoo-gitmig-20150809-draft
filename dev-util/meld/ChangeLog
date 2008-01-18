@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.71 2007/10/06 09:04:13 tgall Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.72 2008/01/18 12:40:10 remi Exp $
+
+  18 Jan 2008; Rémi Cardona <remi@gentoo.org> meld-1.1.5.1.ebuild:
+  add intltool dep (fixes bug #206238)
 
   06 Oct 2007; Tom Gall <tgall@gentoo.org> meld-1.1.5.1.ebuild:
   added ~ppc64
