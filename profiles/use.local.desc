@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3315 2008/01/18 17:16:03 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3316 2008/01/18 19:27:06 ingmar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -787,7 +787,6 @@ kde-base/kalzium:solver - Enable the equation solver
 kde-base/kbugbuster:kcal - Support for kcal (calendar) format
 kde-base/kcontrol:logitech-mouse - Build the Control Center module to configure logitech mice
 kde-base/kdeaccessibility:ktts - Enable KDE Text To Speech modules
-kde-base/kdebase:accessibility - Compile the battery plasmoid
 kde-base/kdebase:captury - Enable the 'Capture'-plugin in kwin
 kde-base/kdebase:logitech-mouse - Build the Control Center module to configure logitech mice
 kde-base/kdebase:usb - Configure USB and logitech mice
@@ -798,12 +797,10 @@ kde-base/kdeedu:kig-scripting - Support Python scripting in kig
 kde-base/kdeedu:nova - Enable support for libnova
 kde-base/kdeedu:sbig - Enable support for SBIG
 kde-base/kdeedu:solver - Enable Kalzium ocaml equation solver
-kde-base/kdegames:ggz - Add support for the GGZ gaming zone
 kde-base/kdegraphics:chm - Enable Okular support for Microsoft Compiled HTML Help files
 kde-base/kdegraphics:djvu - Enable Okular support for DjVu files
-kde-base/kdegraphics:exiv2 - Enable support for images metadata trough the exiv2 package
-kde-base/kdegraphics-meta:povray - Install KPovModeler, which needs POV-Ray
 kde-base/kdegraphics:povray - Install KPovModeler, which needs POV-Ray
+kde-base/kdegraphics-meta:povray - Install KPovModeler, which needs POV-Ray
 kde-base/kdelibs:legacyssl - Support for some deprecated ciphers. Don't use this flag unless you really need it
 kde-base/kdelibs:pcre - Provide better regular expression support in K java script (KJS)
 kde-base/kdelibs:semantic-desktop - Semantic desktop allows for storage of digital information and its metadata to allow the user to express his personal mental models, making all information become intuitively accessible
@@ -814,7 +811,6 @@ kde-base/kdenetwork:addbookmarks - Builds Add Bookmarks plugin
 kde-base/kdenetwork:alias - Builds Alias plugin
 kde-base/kdenetwork:autoreplace - Builds Auto-Replace plugin
 kde-base/kdenetwork:contactnotes - Builds Contact Notes plugin
-kde-base/kdenetwork:decibel - Enable the Telepathy protocol plugin in Kopete
 kde-base/kdenetwork:gadu - Builds GaduGadu protocol handler
 kde-base/kdenetwork:groupwise - Enable the groupwise protocol plugin in Kopete
 kde-base/kdenetwork:highlight - Builds Highlight plugin
@@ -840,24 +836,20 @@ kde-base/kdeutils:tpctl - Enable sypport for Thinkpad system control
 kde-base/kdeutils:zip - Enable zip support through LibZip
 kde-base/kget:plasma - Build optional plasma widgets
 kde-base/kig:kig-scripting - Support Python scripting
-kde-base/kmail:nepomuk - Desktop-wide tagging support
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd
 kde-base/kopete:addbookmarks - Builds Add Bookmarks plugin
 kde-base/kopete:alias - Builds Alias plugin
 kde-base/kopete:autoreplace - Builds Auto-Replace plugin
 kde-base/kopete:connectionstatus - Builds Connection Status plugin
 kde-base/kopete:contactnotes - Builds Contact Notes plugin
-kde-base/kopete:decibel - Enable the Telepathy protocol plugin
 kde-base/kopete:gadu - Builds GaduGadu protocol handler
 kde-base/kopete:groupwise - Builds Novell GroupWise protocol handler
 kde-base/kopete:highlight - Builds Highlight plugin
 kde-base/kopete:history - Builds history plugin
 kde-base/kopete:irc - Builds IRC protocol handler
-kde-base/kopete:messenger - Enable the Windows LIVE!-Messenger protocol plugin
 kde-base/kopete:netmeeting - Builds netmeeting plugin (require gnomemeeting)
 kde-base/kopete:nowlistening - Builds Now Listening... plugin
 kde-base/kopete:privacy - plugin to selectively filter messages
-kde-base/kopete:qca - Enable the Qt Cryptographic Architecture
 kde-base/kopete:qq - enable support for the chinese network protocol
 kde-base/kopete:sametime - Enables support for the Sametime protocol for instant messaging
 kde-base/kopete:sms - Builds SMS protocol handler
@@ -868,7 +860,6 @@ kde-base/kopete:translator - Builds Translator plugin
 kde-base/kopete:urlpicpreview - plugin to allow users to send photos through URLs
 kde-base/kopete:webpresence - Builds Web Presence plugin
 kde-base/kopete:winpopup - Builds WinPopUp protocol handler
-kde-base/kopete:xslt - Enable xslt support
 kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
 kde-misc/knetworkmanager:cisco - Adds support for the Cisco VPN client (vpnc)
 kde-misc/knetworkmanager:dialup - Enables Dialup (PPP) support
@@ -883,7 +874,6 @@ kde-base/kwin:captury - Enable the 'Capture'-plugin in kwin
 kde-base/marble:designer-plugin - Enable designer plugin
 kde-base/okular:chm - Enable support for Microsoft Compiled HTML Help files
 kde-base/okular:djvu - Enable support for DjVu files
-kde-base/plasma:accessibility - Compile the battery plasmoid
 kde-base/systemsettings:usb - Configure USB and logitech mice
 kde-misc/ksensors:ibmacpi - Enable monitoring of ACPI sensor data on IBM Thinkpad notebooks
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
