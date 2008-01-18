@@ -1,11 +1,6 @@
 # ChangeLog for media-plugins/audacious-g15-spectrum
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-g15-spectrum/ChangeLog,v 1.6 2008/01/18 11:54:25 chainsaw Exp $
-
-  16 Jan 2008; Tony Vroon <chainsaw@gentoo.org>
-  audacious-g15-spectrum-2.5.2.ebuild:
-  Mark stable on X86 as Audacious 1.4 went stable. Tested on a revision 2 G15
-  keyboard.
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-g15-spectrum/ChangeLog,v 1.7 2008/01/18 11:56:42 chainsaw Exp $
 
   31 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   +files/audacious-g15-spectrum-2.5.2-audacious-1.4.patch,
