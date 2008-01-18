@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/guiloader-c++-2.10.1.ebuild,v 1.1 2007/09/01 13:46:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/guiloader-c++-2.10.1.ebuild,v 1.2 2008/01/18 14:09:40 pva Exp $
 
 DESCRIPTION="C++ binding to GuiLoader library"
 HOMEPAGE="http://crow-designer.sourceforge.net"
@@ -11,8 +11,10 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=">=dev-cpp/gtkmm-2.10.0
+RDEPEND=">=dev-cpp/gtkmm-2.10.0
 		>=dev-libs/guiloader-2.10.0"
+DEPEND="${RDEPEND}
+		dev-util/pkgconfig"
 
 src_compile() {
 	econf || die "configuration failed"
