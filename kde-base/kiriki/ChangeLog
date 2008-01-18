@@ -1,0 +1,9 @@
+# ChangeLog for kde-base/kiriki
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiriki/ChangeLog,v 1.1 2008/01/18 00:03:39 philantrop Exp $
+
+*kiriki-4.0.0 (17 Jan 2008)
+
+  17 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> +kiriki-4.0.0.ebuild:
+  Added KDE 4.0.0's kiriki.
+
