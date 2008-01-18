@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/files/serial-2.17-r4,v 1.1 2008/01/15 08:42:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/files/serial-2.17-r4,v 1.2 2008/01/18 22:54:44 robbat2 Exp $
 
 depend() {
 	need localmount
@@ -15,7 +15,7 @@ start() {
 		modprobe -q serial
 	fi
 
-	grep -v "^#\|^ \|^$|^stty" /etc/serial.conf | while read device args
+	grep -v "^#\|^ \|^$\|^stty" /etc/serial.conf | while read device args
 	do
 		ebegin "Setting ${device} to $args"
 		setserial -b ${device} ${args}
