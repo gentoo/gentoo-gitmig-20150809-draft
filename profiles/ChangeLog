@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1010 2008/01/17 22:41:13 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1011 2008/01/18 02:33:50 ingmar Exp $
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> package.mask:
+  Added >=kde-base/kde-4.0.0 to the KDE 4.0 mask.
 
   17 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> use.local.desc:
   Added local USE flags for KDE4.
