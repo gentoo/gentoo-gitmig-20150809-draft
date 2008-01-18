@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kstart
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.52 2007/10/19 23:35:38 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.53 2008/01/18 00:46:46 ingmar Exp $
+
+*kstart-4.0.0 (18 Jan 2008)
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kstart-4.0.0.ebuild:
+  Added KDE 4.0.0's kstart.
 
 *kstart-3.5.8 (19 Oct 2007)
 
