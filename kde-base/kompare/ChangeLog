@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kompare
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.68 2008/01/02 16:44:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.69 2008/01/18 00:07:49 ingmar Exp $
+
+*kompare-4.0.0 (18 Jan 2008)
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kompare-4.0.0.ebuild:
+  Added KDE 4.0.0's kompare.
 
   02 Jan 2008; Raúl Porcel <armin76@gentoo.org> kompare-3.5.7.ebuild,
   kompare-3.5.8.ebuild:
