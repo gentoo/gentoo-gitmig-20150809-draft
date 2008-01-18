@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1016 2008/01/18 12:02:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1017 2008/01/18 17:08:39 ingmar Exp $
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> use.local.desc:
+  Remove duplicate local USE flag descriptions. Thanks to maekke.
 
   18 Jan 2008; Tony Vroon <chainsaw@gentoo.org> package.mask:
   Remove mask entries for net-irc/audacious-show and
