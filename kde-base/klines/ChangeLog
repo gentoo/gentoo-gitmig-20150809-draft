@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/klines
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klines/ChangeLog,v 1.72 2007/10/20 00:53:25 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klines/ChangeLog,v 1.73 2008/01/18 02:22:48 ingmar Exp $
+
+*klines-4.0.0 (17 Jan 2008)
+
+  17 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +klines-4.0.0.ebuild:
+  Added KDE 4.0.0's klines.
 
   20 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
   files/digest-klines-3.5.6, Manifest:
