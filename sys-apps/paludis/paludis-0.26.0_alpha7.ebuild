@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_alpha6.ebuild,v 1.2 2008/01/18 13:52:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_alpha7.ebuild,v 1.1 2008/01/18 13:52:50 peper Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -32,7 +32,7 @@ DEPEND="${COMMON_DEPEND}
 		media-gfx/imagemagick
 	)
 	python? ( <dev-python/epydoc-3.0_beta1 dev-python/pygments )
-	ruby? ( dev-ruby/syntax )
+	ruby? ( doc? ( dev-ruby/syntax dev-ruby/allison ) )
 	dev-util/pkgconfig"
 
 RDEPEND="${COMMON_DEPEND}
@@ -77,6 +77,7 @@ src_compile() {
 		$(use_enable pink ) \
 		$(use_enable qa ) \
 		$(use_enable ruby ) \
+		$(useq ruby && useq doc && echo --enable-ruby-doc ) \
 		$(use_enable python ) \
 		$(use_enable glsa ) \
 		$(use_enable vim-syntax vim ) \

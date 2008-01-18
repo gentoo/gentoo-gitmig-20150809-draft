@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_alpha5.ebuild,v 1.1 2008/01/05 00:20:32 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_alpha5.ebuild,v 1.2 2008/01/18 13:52:50 peper Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -31,7 +31,7 @@ DEPEND="${COMMON_DEPEND}
 		|| ( >=app-doc/doxygen-1.5.3 <=app-doc/doxygen-1.5.1 )
 		media-gfx/imagemagick
 	)
-	python? ( dev-python/epydoc dev-python/pygments )
+	python? ( <dev-python/epydoc-3.0_beta1 dev-python/pygments )
 	ruby? ( dev-ruby/syntax )
 	dev-util/pkgconfig"
 
