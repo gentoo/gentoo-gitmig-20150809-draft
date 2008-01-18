@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.187 2007/12/30 13:44:27 keytoaster Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.188 2008/01/18 02:35:02 ingmar Exp $
+
+*kde-4.0.0 (18 Jan 2008)
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kde-4.0.0.ebuild:
+  Added KDE 4.0.0's kde.
 
   30 Dec 2007; Tobias Heinlein <keytoaster@gentoo.org> kde-3.5.6.ebuild,
   kde-3.5.7.ebuild, kde-3.5.8.ebuild:
