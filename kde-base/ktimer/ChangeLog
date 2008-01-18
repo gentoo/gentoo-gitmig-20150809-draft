@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ktimer
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimer/ChangeLog,v 1.71 2007/10/19 23:38:35 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimer/ChangeLog,v 1.72 2008/01/18 00:57:32 ingmar Exp $
+
+*ktimer-4.0.0 (18 Jan 2008)
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +ktimer-4.0.0.ebuild:
+  Added KDE 4.0.0's ktimer.
 
 *ktimer-3.5.8 (19 Oct 2007)
 
