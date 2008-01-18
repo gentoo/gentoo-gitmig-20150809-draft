@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1011 2008/01/18 02:33:50 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1012 2008/01/18 02:53:37 ingmar Exp $
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> package.mask:
+  Added kde-base/qimageblitz to package.mask.
 
   18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> package.mask:
   Added >=kde-base/kde-4.0.0 to the KDE 4.0 mask.

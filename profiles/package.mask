@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8144 2008/01/18 02:33:50 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8145 2008/01/18 02:53:37 ingmar Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -229,6 +229,7 @@ app-emacs/uboat
 >=kde-base/phonon-4.0.0
 >=kde-base/plasma-4.0.0
 >=kde-base/poxml-4.0.0
+>=kde-base/qimageblitz-0.0.4
 >=kde-base/secpolicy-4.0.0
 >=kde-base/solid-4.0.0
 >=kde-base/soliduiserver-4.0.0
