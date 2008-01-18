@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.27 2008/01/03 18:34:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.28 2008/01/18 08:54:54 aballier Exp $
+
+  18 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  ocamlnet-2.2.9-r1.ebuild:
+  restrict installsources, debugedit kills executables compiled with ocamlc
+  -custom
 
   03 Jan 2008; Alexis Ballier <aballier@gentoo.org> -ocamlnet-0.98.ebuild,
   -ocamlnet-2.2.9.ebuild:
