@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.14.ebuild,v 1.3 2007/11/28 09:41:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.14.ebuild,v 1.4 2008/01/18 12:45:44 flameeyes Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="library that handles Resource Description Framework (RDF)"
 HOMEPAGE="http://librdf.org/rasqal/"
@@ -19,6 +19,13 @@ RDEPEND="sys-devel/flex
 	>=media-libs/raptor-1.4.9"
 DEPEND="${RDEPEND}
 	sys-devel/bison"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	elibtoolize
+}
 
 src_compile() {
 	local regexlib
