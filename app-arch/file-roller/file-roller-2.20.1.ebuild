@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.20.1.ebuild,v 1.7 2007/11/29 05:57:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.20.1.ebuild,v 1.8 2008/01/18 11:14:41 remi Exp $
 
 inherit eutils gnome2
 
@@ -58,7 +58,17 @@ pkg_postinst() {
 	elog "and install the relevant package."
 	elog
 	elog "for example:"
-	elog "  rar   - app-arch/unrar"
-	elog "  lha   - app-arch/lha"
-	elog "  7-zip - app-arch/p7zip"
+	elog "  7-zip   - app-arch/p7zip"
+	elog "  ace     - app-arch/unace"
+	elog "  arj     - app-arch/arj"
+	elog "  lzma    - app-arch/lzma"
+	elog "  lzop    - app-arch/lzop"
+	elog "  cpio    - app-arch/cpio"
+	elog "  iso     - app-arch/cdrtools"
+	elog "  jar,zip - app-arch/zip and app-arch/unzip"
+	elog "  lha     - app-arch/lha"
+	elog "  rar     - app-arch/unrar"
+	elog "  rpm     - app-arch/rpm"
+	elog "  unstuff - app-arch/stuffit"
+	elog "  zoo     - app-arch/zoo"
 }

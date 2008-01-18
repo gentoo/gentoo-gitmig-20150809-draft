@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.224 2008/01/09 21:26:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.225 2008/01/18 11:14:41 remi Exp $
+
+  18 Jan 2008; Rémi Cardona <remi@gentoo.org> file-roller-2.20.1.ebuild,
+  file-roller-2.20.2.ebuild, file-roller-2.20.3.ebuild:
+  add more elog comments about archivers that file-roller can use (fixes bug
+  #206078)
 
 *file-roller-2.20.3 (09 Jan 2008)
 
