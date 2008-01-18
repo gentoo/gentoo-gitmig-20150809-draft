@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-2.008.ebuild,v 1.1 2007/12/24 20:08:28 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-2.008-r1.ebuild,v 1.1 2008/01/18 16:11:25 anant Exp $
 
 inherit eutils
 
@@ -26,11 +26,6 @@ RDEPEND="amd64? ( app-emulation/emul-linux-x86-compat )
 src_unpack() {
 	unpack "${A}"
 
-	# Remove unneccessary files
-	rm -r "${S}/dmd/lib"
-	rm -r "${S}/dm"
-	rm dmd/license.txt dmd/readme
-
 	# Cleanup line endings
 	cd "${S}/dmd"
 	edos2unix `find . -name '*.c' -type f`
@@ -46,11 +41,6 @@ src_unpack() {
 	fperms guo=r `find . -type f`
 	fperms guo=rx `find . -type d`
 	fperms guo=rx bin/dmd bin/dumpobj bin/obj2asm bin/rdmd
-	mv bin/{dmd,dumpobj,obj2asm,rdmd} .
-	rm -r bin/
-	mkdir bin
-	mkdir lib
-	mv ./{dmd,dumpobj,obj2asm,rdmd} bin/
 }
 
 src_compile() {
@@ -75,21 +65,30 @@ DFLAGS=-I/opt/dmd/src/phobos -L-L/opt/dmd/lib
 END
 	insinto /etc
 	doins bin/dmd.conf
-	rm bin/dmd.conf
 
 	# Man pages
 	doman man/man1/dmd.1
 	doman man/man1/dumpobj.1
 	doman man/man1/obj2asm.1
-	rm -r man
 
 	# Documentation
-	dohtml html/d/* html/d/phobos/*
-	rm -r html
+	dohtml "html/d/*" "html/d/phobos/*"
 
 	# Install
-	mkdir "${D}/opt"
-	mv "${S}/dmd" "${D}/opt/dmd"
+	exeinto /opt/dmd/bin
+	doexe bin/dmd
+	doexe bin/dumpobj
+	doexe bin/obj2asm
+	doexe bin/rdmd
+
+	insinto /opt/dmd/lib
+	doins lib/libphobos2.a
+
+	insinto /opt/dmd/samples
+	doins "samples/d/*"
+
+	# Phobos and DMD source
+	mv src "${D}/opt/dmd/"
 
 	# Set PATH
 	doenvd "${FILESDIR}/25dmd"
@@ -100,7 +99,7 @@ pkg_postinst () {
 	ewarn "env-update && source /etc/profile                "
 	ewarn "to be able to use the compiler immediately.      "
 	einfo "                                                 "
-	einfo "The bundled sources and samples may be found in  "
-	einfo "/opt/dmd/src and /opt/dmd/samples respectively.  "
+	einfo "The bundled samples and sources may be found in  "
+	einfo "/opt/dmd/samples and /opt/dmd/src respectively.  "
 	einfo "                                                 "
 }
