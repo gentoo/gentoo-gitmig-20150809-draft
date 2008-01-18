@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kgpg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.73 2008/01/06 19:41:29 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.74 2008/01/18 00:01:34 philantrop Exp $
+
+*kgpg-4.0.0 (17 Jan 2008)
+
+  17 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> +kgpg-4.0.0.ebuild:
+  Added KDE 4.0.0's kgpg.
 
   06 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> kgpg-3.5.7.ebuild,
   kgpg-3.5.8.ebuild:
