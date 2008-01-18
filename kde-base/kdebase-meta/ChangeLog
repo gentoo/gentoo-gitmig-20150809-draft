@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.81 2008/01/17 23:45:45 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.82 2008/01/18 00:48:28 ingmar Exp $
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  kdebase-meta-4.0.0.ebuild:
+  Make KDE 4.0.0's kdebase-meta block kdebase-{runtime,workspace}-meta.
 
 *kdebase-meta-4.0.0 (17 Jan 2008)
 
