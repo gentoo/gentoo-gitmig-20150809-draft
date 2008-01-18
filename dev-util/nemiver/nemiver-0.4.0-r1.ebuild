@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.4.0-r1.ebuild,v 1.2 2008/01/13 09:05:40 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.4.0-r1.ebuild,v 1.3 2008/01/18 10:47:51 remi Exp $
 
 inherit gnome2 eutils
 
@@ -17,6 +17,7 @@ RDEPEND="
 	>=dev-cpp/libglademm-2.6.0
 	>=dev-cpp/libgtksourceviewmm-0.3.0
 	>=gnome-base/libgtop-2.19.0
+	>=gnome-base/libgnome-2.0
 	>=x11-libs/vte-0.12.0
 	>=gnome-base/gconf-2.14.0
 	>=gnome-base/gnome-vfs-2.14.0
