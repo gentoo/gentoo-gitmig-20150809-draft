@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.3.22.ebuild,v 1.2 2008/01/04 07:19:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.3.22.ebuild,v 1.3 2008/01/18 10:31:24 eva Exp $
 
 inherit gnome2
 
@@ -21,8 +21,6 @@ RDEPEND=">=dev-libs/glib-2.0
 		 >=gnome-base/orbit-2
 		 >=gnome-base/libbonobo-2.0
 		   x11-themes/hicolor-icon-theme
-		   sys-devel/libtool
-		   sys-devel/gettext
 		   net-mail/mailbase
 		crypt? ( >=app-crypt/gpgme-1.0 )
 		>=gnome-base/libgnome-2.0
@@ -43,6 +41,7 @@ RDEPEND=">=dev-libs/glib-2.0
 DEPEND="${RDEPEND}
 		dev-util/intltool
 		dev-util/pkgconfig
+		sys-devel/gettext
 		>=app-text/scrollkeeper-0.1.4
 		doc? ( dev-util/gtk-doc )"
 
@@ -51,12 +50,6 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README TODO docs/*"
 pkg_setup() {
 	# threads are currently broken with gpgme
 	G2CONF="${G2CONF} --disable-threads"
-
-	if use xface ; then
-		G2CONF="${G2CONF} --with-compface"
-	else
-		G2CONF="${G2CONF} --without-compface"
-	fi
 
 	if use crypt ; then
 		G2CONF="${G2CONF} --with-gpgme=gpgme-config"
@@ -77,11 +70,13 @@ pkg_setup() {
 	fi
 
 	G2CONF="${G2CONF}
-		$(use_with rubrica)
 		$(use_with gtkspell)
 		$(use_with kerberos gss)
 		$(use_with ldap)
+		$(use_with libnotify)
 		$(use_enable pcre)
+		$(use_with rubrica)
 		$(use_with sqlite)
-		$(use_with ssl)"
+		$(use_with ssl)
+		$(use_with xface compface)"
 }
