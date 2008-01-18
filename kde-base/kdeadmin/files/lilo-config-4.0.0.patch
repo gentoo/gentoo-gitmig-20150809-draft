@@ -1,0 +1,23 @@
+diff -ur kdeadmin-3.96.0/doc/CMakeLists.txt /kdeadmin-3.96.0/doc/CMakeLists.txt
+--- kdeadmin-3.96.0/doc/CMakeLists.txt	2007-06-27 12:51:13.000000000 +0200
++++ /kdeadmin-3.96.0/doc/CMakeLists.txt	2007-11-22 11:34:12.000000000 +0100
+@@ -2,7 +2,7 @@
+ #add_subdirectory(kdat)
+ #add_subdirectory(ksysv)
+ 
+-FIND_PROGRAM(LILO_EXECUTABLE NAMES lilo LILO  PATHS /sbin /usr/sbin /usr/local/sbin /opt/lilo  )
++SET(LILO_EXECUTABLE ALWAYS_ON)
+ 
+ if ( UNIX )
+   add_subdirectory(kuser)
+diff -ur kdeadmin-3.96.0/lilo-config/CMakeLists.txt /kdeadmin-3.96.0/lilo-config/CMakeLists.txt
+--- kdeadmin-3.96.0/lilo-config/CMakeLists.txt	2006-10-26 04:22:38.000000000 +0200
++++ /kdeadmin-3.96.0/lilo-config/CMakeLists.txt	2007-11-22 11:34:08.000000000 +0100
+@@ -1,6 +1,6 @@
+ project(lilo-config)
+ 
+-FIND_PROGRAM(LILO_EXECUTABLE NAMES lilo LILO  PATHS /sbin /usr/sbin /usr/local/sbin /opt/lilo  )
++SET(LILO_EXECUTABLE ALWAYS_ON)
+ 
+ if(LILO_EXECUTABLE)
+ 	ADD_DEFINITIONS(-DUSE_KDE ) # added manually

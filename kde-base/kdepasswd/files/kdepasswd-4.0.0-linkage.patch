@@ -1,0 +1,13 @@
+diff --git a/kdebase/apps/kdepasswd/kcm/CMakeLists.txt b/kdebase/apps/kdepasswd/kcm/CMakeLists.txt
+index e34b684..a1fdcd1 100644
+--- a/kdebase/apps/kdepasswd/kcm/CMakeLists.txt
++++ b/kdebase/apps/kdepasswd/kcm/CMakeLists.txt
+@@ -13,7 +13,7 @@ kde4_add_kcfg_files(kcm_useraccount_PART_SRCS settings.kcfgc)
+ 
+ kde4_add_plugin(kcm_useraccount ${kcm_useraccount_PART_SRCS})
+ 
+-target_link_libraries(kcm_useraccount konq ${KDE4_KDESU_LIBS})
++target_link_libraries(kcm_useraccount konq ${KDE4_KPARTS_LIBS} ${KDE4_KDESU_LIBS})
+ 
+ install(TARGETS kcm_useraccount DESTINATION ${PLUGIN_INSTALL_DIR})
+ install(FILES kcm_useraccount.desktop DESTINATION  ${SERVICES_INSTALL_DIR})

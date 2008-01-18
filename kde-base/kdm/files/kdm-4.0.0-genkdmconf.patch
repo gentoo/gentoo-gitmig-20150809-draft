@@ -1,0 +1,49 @@
+Disable creating dirs in the live file system,
+and let the package manager handle it.
+diff -ur kdebase-workspace-3.97.0.orig/kdm/kfrontend/genkdmconf.c kdebase-workspace-3.97.0/kdm/kfrontend/genkdmconf.c
+--- kdebase-workspace-3.97.0.orig/kdm/kfrontend/genkdmconf.c	2007-12-09 06:56:49.000000000 +0100
++++ kdebase-workspace-3.97.0/kdm/kfrontend/genkdmconf.c	2007-12-09 10:28:05.000000000 +0100
+@@ -266,43 +266,12 @@
+ static int
+ mkpdirs( const char *name, const char *what )
+ {
+-	char *mfname = mstrdup( name );
+-	int i;
+-	struct stat st;
+-
+-	for (i = 1; mfname[i]; i++)
+-		if (mfname[i] == '/') {
+-			mfname[i] = 0;
+-			if (stat( mfname, &st )) {
+-				if (mkdir( mfname, 0755 )) {
+-					fprintf( stderr, "Cannot create parent %s of %s directory %s: %s\n",
+-					         mfname, what, name, strerror( errno ) );
+-					free( mfname );
+-					return False;
+-				}
+-				chmod( mfname, 0755 );
+-			}
+-			mfname[i] = '/';
+-		}
+-	free( mfname );
+ 	return True;
+ }
+ 
+ static int
+ mkdirp( const char *name, int mode, const char *what, int existok )
+ {
+-	struct stat st;
+-
+-	if (stat( name, &st )) {
+-		mkpdirs( name, what );
+-		if (mkdir( name, mode )) {
+-			fprintf( stderr, "Cannot create %s directory %s: %s\n",
+-			         what, name, strerror( errno ) );
+-			return False;
+-		}
+-		chmod( name, mode );
+-		return True;
+-	}
+ 	return existok;
+ }
+ 
