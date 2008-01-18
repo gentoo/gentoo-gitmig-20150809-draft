@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kttsd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.76 2007/10/19 23:40:40 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.77 2008/01/18 01:05:07 ingmar Exp $
+
+*kttsd-4.0.0 (18 Jan 2008)
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +kttsd-4.0.0.ebuild:
+  Added KDE 4.0.0's kttsd.
 
 *kttsd-3.5.8 (19 Oct 2007)
 
