@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-4.0.0.ebuild,v 1.2 2008/01/18 00:27:23 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-4.0.0.ebuild,v 1.3 2008/01/18 06:17:57 ingmar Exp $
 
 EAPI="1"
 
@@ -94,9 +94,6 @@ RDEPEND="${COMMONDEPEND}
 		|| ( >=sys-apps/eject-2.1.5
 			sys-block/unieject ) )
 "
-
-# FIXME: look at krunner and kwin deps again when X11 deps are fixed.
-
 #IUSE="xscreensaver"
 #
 #COMMONDEPEND="
@@ -106,14 +103,13 @@ RDEPEND="${COMMONDEPEND}
 #	x11-apps/setxkbmap
 #	|| ( x11-misc/xkeyboard-config
 #		x11-misc/xkbdata )
-#"
 #
 #DEPEND="${COMMONDEPEND}
 #	x11-apps/xhost
 #	xscreensaver? ( x11-proto/scrnsaverproto )"
 
 PATCHES="${FILESDIR}/gentoo-startkde.patch
-	${FILESDIR}/kdm-9999.4-genkdmconf.patch
+	${FILESDIR}/kdm-${PV}-genkdmconf.patch
 	${FILESDIR}/${P}-pam-optional.patch"
 
 pkg_setup() {

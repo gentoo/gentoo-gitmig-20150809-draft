@@ -1,0 +1,53 @@
+    Added a patch to KDE/kdebase/workspace/kdm/kfrontend/genkdmconf.c, to NOT create directories.
+---
+ kdebase/workspace/kdm/kfrontend/genkdmconf.c |   31 --------------------------
+ 1 files changed, 0 insertions(+), 31 deletions(-)
+
+diff --git a/kdebase/workspace/kdm/kfrontend/genkdmconf.c b/kdebase/workspace/kdm/kfrontend/genkdmconf.c
+index 2d8343d..20aaf8f 100644
+--- a/kdebase/workspace/kdm/kfrontend/genkdmconf.c
++++ b/kdebase/workspace/kdm/kfrontend/genkdmconf.c
+@@ -266,43 +266,12 @@ isTrue( const char *val )
+ static int
+ mkpdirs( const char *name, const char *what )
+ {
+-	char *mfname = mstrdup( name );
+-	int i;
+-	struct stat st;
+-
+-	for (i = 1; mfname[i]; i++)
+-		if (mfname[i] == '/') {
+-			mfname[i] = 0;
+-			if (stat( mfname, &st )) {
+-				if (mkdir( mfname, 0755 )) {
+-					fprintf( stderr, "Cannot create parent %s of %s directory %s: %s\n",
+-					         mfname, what, name, strerror( errno ) );
+-					free( mfname );
+-					return False;
+-				}
+-				chmod( mfname, 0755 );
+-			}
+-			mfname[i] = '/';
+-		}
+-	free( mfname );
+ 	return True;
+ }
+ 
+ static int
+ mkdirp( const char *name, int mode, const char *what, int existok )
+ {
+-	struct stat st;
+-
+-	if (stat( name, &st )) {
+-		mkpdirs( name, what );
+-		if (mkdir( name, mode )) {
+-			fprintf( stderr, "Cannot create %s directory %s: %s\n",
+-			         what, name, strerror( errno ) );
+-			return False;
+-		}
+-		chmod( name, mode );
+-		return True;
+-	}
+ 	return existok;
+ }
+ 
