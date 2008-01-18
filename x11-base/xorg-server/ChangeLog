@@ -1,6 +1,17 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.309 2008/01/17 21:31:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.310 2008/01/18 21:31:33 dberkholz Exp $
+
+*xorg-server-1.4.0.90-r2 (18 Jan 2008)
+*xorg-server-1.3.0.0-r4 (18 Jan 2008)
+
+  18 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.4-0007-CVE-2007-6429-Don-t-spuriously-reject-8bpp-shm-pix.patch,
+  -xorg-server-1.3.0.0-r3.ebuild, +xorg-server-1.3.0.0-r4.ebuild,
+  -xorg-server-1.4.0.90-r1.ebuild, +xorg-server-1.4.0.90-r2.ebuild:
+  (#206490, #204362) Fix major regression in the MIT-SHM patch of the security
+  bump that prevented many applications (but apparently none that any distro
+  developers use, since this slipped by every distro) from running.
 
   17 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/1.2.0-server-damage-version.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90-r1.ebuild,v 1.1 2008/01/17 20:52:28 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90-r2.ebuild,v 1.1 2008/01/18 21:31:33 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -290,6 +290,7 @@ PATCHES="
 	${FILESDIR}/1.4-0004-Fix-for-CVE-2007-6429-MIT-SHM-and-EVI-extensions-i.patch
 	${FILESDIR}/1.4-0005-Fix-for-CVE-2008-0006-PCF-Font-parser-buffer-overf.patch
 	${FILESDIR}/1.4-0006-Fix-for-CVE-2007-5958-File-existence-disclosure.patch
+	${FILESDIR}/1.4-0007-CVE-2007-6429-Don-t-spuriously-reject-8bpp-shm-pix.patch
 	"
 
 pkg_setup() {

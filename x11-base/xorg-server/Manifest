@@ -81,6 +81,10 @@ AUX 1.4-0006-Fix-for-CVE-2007-5958-File-existence-disclosure.patch 870 RMD160 ad
 MD5 33f2659b5e07be53f4b7fe9773b8277c files/1.4-0006-Fix-for-CVE-2007-5958-File-existence-disclosure.patch 870
 RMD160 adbc9a110c0e7aef884f5ea9c61148688ac441e5 files/1.4-0006-Fix-for-CVE-2007-5958-File-existence-disclosure.patch 870
 SHA256 d1545329c64f492acc9935df68b31d513d3f1ddcfc5f821224a33761cf4b5c81 files/1.4-0006-Fix-for-CVE-2007-5958-File-existence-disclosure.patch 870
+AUX 1.4-0007-CVE-2007-6429-Don-t-spuriously-reject-8bpp-shm-pix.patch 2594 RMD160 0197f2ef4e2734e3f82d94fb9aefd6b77b287c8a SHA1 d2d3666ac30bc5b541b8bf30fe5de157dbb79c9a SHA256 69c8eb09cbf978bbdaef1ae9537778bcf40c7c67bbfeab0b5753e5538147a4ce
+MD5 a77db456da8a57665be3e5d084826e5b files/1.4-0007-CVE-2007-6429-Don-t-spuriously-reject-8bpp-shm-pix.patch 2594
+RMD160 0197f2ef4e2734e3f82d94fb9aefd6b77b287c8a files/1.4-0007-CVE-2007-6429-Don-t-spuriously-reject-8bpp-shm-pix.patch 2594
+SHA256 69c8eb09cbf978bbdaef1ae9537778bcf40c7c67bbfeab0b5753e5538147a4ce files/1.4-0007-CVE-2007-6429-Don-t-spuriously-reject-8bpp-shm-pix.patch 2594
 AUX 1.4-document-new-font-catalogs.patch 4540 RMD160 92e450666e840fefb8604dc664ce0276e01c28d7 SHA1 6bf78fde99494b047658836adfa35b5d75224214 SHA256 8a73f0a01235c6cb1acefa09a726f68089fc10c1d68ffdf2e1b57091caafbbfd
 MD5 ae4098e2defa6ab7d07f52105f5784c7 files/1.4-document-new-font-catalogs.patch 4540
 RMD160 92e450666e840fefb8604dc664ce0276e01c28d7 files/1.4-document-new-font-catalogs.patch 4540
@@ -153,18 +157,18 @@ EBUILD xorg-server-1.3.0.0-r2.ebuild 17322 RMD160 d54594444e07b2756c5802731f4311
 MD5 72d9b71f7e15b9d0219af84c56b81107 xorg-server-1.3.0.0-r2.ebuild 17322
 RMD160 d54594444e07b2756c5802731f4311425da6b3c0 xorg-server-1.3.0.0-r2.ebuild 17322
 SHA256 4dbf0c4eadc24eecce16a4e3ab18c9440f1f8fa5d50e03dc1dcd5290f2d29c2a xorg-server-1.3.0.0-r2.ebuild 17322
-EBUILD xorg-server-1.3.0.0-r3.ebuild 17798 RMD160 6afad9130faa0208d8b48e5353d799c176f35118 SHA1 44e7898c9fc78088956c0c90c728462af6ec28ee SHA256 5f15710c559fe8a027c94d82fcaf1cf9e69b7b2a35ad5193786e4e7ca9bf2207
-MD5 0d163fecd6f2e77a8040861eef325c92 xorg-server-1.3.0.0-r3.ebuild 17798
-RMD160 6afad9130faa0208d8b48e5353d799c176f35118 xorg-server-1.3.0.0-r3.ebuild 17798
-SHA256 5f15710c559fe8a027c94d82fcaf1cf9e69b7b2a35ad5193786e4e7ca9bf2207 xorg-server-1.3.0.0-r3.ebuild 17798
-EBUILD xorg-server-1.4.0.90-r1.ebuild 19294 RMD160 3d2550daed2fb7efcdf122d8ec967a3c84d6ddd2 SHA1 dba198f697e8072f999d04d3fa531dbeede24250 SHA256 077912749016178ba6508b9283eaafbe4c421ed0159e0a5f7b3f44b99bbfafd0
-MD5 a1cccd16774b0036fe2bef6953e03d12 xorg-server-1.4.0.90-r1.ebuild 19294
-RMD160 3d2550daed2fb7efcdf122d8ec967a3c84d6ddd2 xorg-server-1.4.0.90-r1.ebuild 19294
-SHA256 077912749016178ba6508b9283eaafbe4c421ed0159e0a5f7b3f44b99bbfafd0 xorg-server-1.4.0.90-r1.ebuild 19294
-MISC ChangeLog 66804 RMD160 8993eb57c89072823acd1576ab9ce1865dee27e1 SHA1 ffa528ebc8d79598ec89b190f10aabf68139d93e SHA256 38ad1726e9401d266e1273df834b1128a198df1900eef7ea87adef321368200b
-MD5 f4f46293f80655a5f159e694bd6d0f78 ChangeLog 66804
-RMD160 8993eb57c89072823acd1576ab9ce1865dee27e1 ChangeLog 66804
-SHA256 38ad1726e9401d266e1273df834b1128a198df1900eef7ea87adef321368200b ChangeLog 66804
+EBUILD xorg-server-1.3.0.0-r4.ebuild 17885 RMD160 a06baf9a9271a1474e604b15a3b61ce7a5c6c337 SHA1 a23a7878571e4e9e89e611dd24dee1c9084198d0 SHA256 c69eb85e3ad94706d4993936c0ba635c85d9eb84adc1c4dfcebb074fe2804ffc
+MD5 99bb65b19030f3665f59fdace3a7a500 xorg-server-1.3.0.0-r4.ebuild 17885
+RMD160 a06baf9a9271a1474e604b15a3b61ce7a5c6c337 xorg-server-1.3.0.0-r4.ebuild 17885
+SHA256 c69eb85e3ad94706d4993936c0ba635c85d9eb84adc1c4dfcebb074fe2804ffc xorg-server-1.3.0.0-r4.ebuild 17885
+EBUILD xorg-server-1.4.0.90-r2.ebuild 19373 RMD160 32156d552ce1ef0728e8dec432faad78a07bc882 SHA1 a35f3d2d84618ddc300022672068a4de3f9be5b3 SHA256 807bcb8aa7411bf67b2b7eef2635c585e9740ed6bcee292613ad0395a7e5daab
+MD5 8944115952aa67f613d86f27a8d2334c xorg-server-1.4.0.90-r2.ebuild 19373
+RMD160 32156d552ce1ef0728e8dec432faad78a07bc882 xorg-server-1.4.0.90-r2.ebuild 19373
+SHA256 807bcb8aa7411bf67b2b7eef2635c585e9740ed6bcee292613ad0395a7e5daab xorg-server-1.4.0.90-r2.ebuild 19373
+MISC ChangeLog 67372 RMD160 b02fb0337b6c916154d002d5573067c565701e4b SHA1 79c2affaa055a2ca39909508f88628003f7e1e36 SHA256 c7a91372e0c20fb0b84928056dc3a2bb0eca92f66b2fef5e1c33b5bf4d4b6655
+MD5 9c76c2c4e534c7a51f4ac15cf9dc827c ChangeLog 67372
+RMD160 b02fb0337b6c916154d002d5573067c565701e4b ChangeLog 67372
+SHA256 c7a91372e0c20fb0b84928056dc3a2bb0eca92f66b2fef5e1c33b5bf4d4b6655 ChangeLog 67372
 MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
@@ -172,16 +176,16 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 f5088a38f31782713a97f0cf19bfbbd1 files/digest-xorg-server-1.3.0.0-r2 512
 RMD160 70dafff2a513850c2631793f877a2ffe294758c6 files/digest-xorg-server-1.3.0.0-r2 512
 SHA256 ae8d04a5e64f7aedd5cc910085a1db5ce1638012a3bfedeab142ce99b0d3968a files/digest-xorg-server-1.3.0.0-r2 512
-MD5 f5088a38f31782713a97f0cf19bfbbd1 files/digest-xorg-server-1.3.0.0-r3 512
-RMD160 70dafff2a513850c2631793f877a2ffe294758c6 files/digest-xorg-server-1.3.0.0-r3 512
-SHA256 ae8d04a5e64f7aedd5cc910085a1db5ce1638012a3bfedeab142ce99b0d3968a files/digest-xorg-server-1.3.0.0-r3 512
-MD5 97f2fd03e37a721ded2aca517f551a59 files/digest-xorg-server-1.4.0.90-r1 515
-RMD160 a47416603705906f4d28e4a15023e7113d0a4ca2 files/digest-xorg-server-1.4.0.90-r1 515
-SHA256 cfd82484bbdd7f3d392d1dc20eb970d329e049d4f2360eb8f6aca0875a5abc71 files/digest-xorg-server-1.4.0.90-r1 515
+MD5 f5088a38f31782713a97f0cf19bfbbd1 files/digest-xorg-server-1.3.0.0-r4 512
+RMD160 70dafff2a513850c2631793f877a2ffe294758c6 files/digest-xorg-server-1.3.0.0-r4 512
+SHA256 ae8d04a5e64f7aedd5cc910085a1db5ce1638012a3bfedeab142ce99b0d3968a files/digest-xorg-server-1.3.0.0-r4 512
+MD5 97f2fd03e37a721ded2aca517f551a59 files/digest-xorg-server-1.4.0.90-r2 515
+RMD160 a47416603705906f4d28e4a15023e7113d0a4ca2 files/digest-xorg-server-1.4.0.90-r2 515
+SHA256 cfd82484bbdd7f3d392d1dc20eb970d329e049d4f2360eb8f6aca0875a5abc71 files/digest-xorg-server-1.4.0.90-r2 515
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFHj8lDXVaO67S1rtsRAqVsAJ0Vrf08JiepraMm879a6CKJrlGL8gCgxreW
-4MQ8Tq5x1XyB3K/cXpJM3O4=
-=mfYt
+iD8DBQFHkRrFXVaO67S1rtsRAkh4AKCIVdF9U80RWNHrvRbbU25vn8hE5ACfbJ3D
+NUJoXPqsdjclQCIZHhdV8F8=
+=Gdyo
 -----END PGP SIGNATURE-----
