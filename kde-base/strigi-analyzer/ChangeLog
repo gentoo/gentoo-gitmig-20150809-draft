@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/strigi-analyzer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/strigi-analyzer/ChangeLog,v 1.1 2008/01/18 02:00:49 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/strigi-analyzer/ChangeLog,v 1.2 2008/01/18 19:56:09 ingmar Exp $
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  strigi-analyzer-4.0.0.ebuild:
+  Description, depend on app-misc/strigi.
 
 *strigi-analyzer-4.0.0 (18 Jan 2008)
 
