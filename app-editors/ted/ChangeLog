@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/ted
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.23 2007/02/21 21:23:06 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.24 2008/01/18 03:26:24 dirtyepic Exp $
+
+*ted-2.17-r1 (18 Jan 2008)
+
+  18 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> ted-2.12.ebuild,
+  -ted-2.17.ebuild, +ted-2.17-r1.ebuild:
+  Revision bump.
+  	- rewrote src_install to not blow away ${T} (Bug #154997)
+  	- backport fix for building with userpriv to stable ebuild (Bug #196939)
+  	- general ebuild cleanup and QA
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

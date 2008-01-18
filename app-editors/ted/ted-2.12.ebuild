@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.12.ebuild,v 1.12 2005/05/04 01:02:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.12.ebuild,v 1.13 2008/01/18 03:26:24 dirtyepic Exp $
 
 DESCRIPTION="X-based rich text editor."
 HOMEPAGE="http://www.nllgg.nl/Ted"
@@ -26,6 +26,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# This is a fix for userpriv &| usersandbox.
+	export RPM_BUILD_ROOT="${S}"
+
 	for dir in Ted tedPackage appFrame appUtil ind bitmap libreg; do
 		cd ${S}/${dir}
 		econf --cache-file=../config.cache || die "econf failed"
@@ -40,6 +43,9 @@ src_compile() {
 }
 
 src_install() {
+	# This is a fix for userpriv &| usersandbox.
+	export RPM_BUILD_ROOT="${S}"
+
 	mkdir ${T}/pkg
 	cd ${T}/pkg || die "Couldn't cd to package"
 	tar --use=gzip -xvf ${S}/tedPackage/Ted*.tar.gz || die "couldnt unpack tedPackage/Ted*.tar.gz"
@@ -53,6 +59,4 @@ src_install() {
 
 	dodir /usr/share/doc/${P}
 	cp -R ${T}/pkg/Ted ${D}/usr/share/doc/${P} || die "couldnt cp temp/pkg/Ted"
-
-	rm -rf ${T}
 }
