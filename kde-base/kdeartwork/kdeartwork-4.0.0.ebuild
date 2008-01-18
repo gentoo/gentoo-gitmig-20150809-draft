@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-4.0.0.ebuild,v 1.1 2008/01/17 23:40:35 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-4.0.0.ebuild,v 1.2 2008/01/18 03:05:58 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ DESCRIPTION="KDE artwork module"
 HOMEPAGE="http://www.kde.org/"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="debug htmlhandbook opengl xscreensaver" 
+IUSE="debug htmlhandbook opengl xscreensaver"
 LICENSE="GPL-2 LGPL-2"
 
 RESTRICT="binchecks strip"

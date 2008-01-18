@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma/plasma-4.0.0.ebuild,v 1.1 2008/01/18 01:53:27 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma/plasma-4.0.0.ebuild,v 1.2 2008/01/18 03:08:18 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -45,4 +45,3 @@ src_compile() {
 		$(cmake-utils_use_with xinerama X11_Xinerama)"
 	kde4-meta_src_compile
 }
-

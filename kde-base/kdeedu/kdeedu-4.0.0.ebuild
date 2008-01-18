@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-4.0.0.ebuild,v 1.1 2008/01/17 23:46:55 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-4.0.0.ebuild,v 1.2 2008/01/18 03:06:22 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.kde.org/"
 
 KEYWORDS="~amd64 ~x86"
 IUSE="debug htmlhandbook cviewer opengl readline solver kig-scripting fits
-nova sbig usb designer-plugin gps"  
+nova sbig usb designer-plugin gps"
 
 LICENSE="GPL-2 LGPL-2"
 
@@ -29,9 +29,9 @@ COMMONDEPEND="gps? ( sci-geosciences/gpsd )
 		opengl? ( virtual/opengl )
 		readline? ( sys-libs/readline )
 		kig-scripting? ( >=dev-libs/boost-1.32 )"
-		
+
 RDEPEND="${RDEPEND} ${COMMONDEPEND}
-	|| ( >=kde-base/kdebase-${PV}:${SLOT} 
+	|| ( >=kde-base/kdebase-${PV}:${SLOT}
 		( >=kde-base/knotify-${PV}:${SLOT} >=kde-base/phonon-${PV}:${SLOT} ) )"
 
 PATCHES="${FILESDIR}/kstars-4.0.0-destdir.patch
