@@ -1,17 +1,0 @@
-diff -ur cedet-1.0pre3.orig/semantic/semantic-idle.el cedet-1.0pre3/semantic/semantic-idle.el
---- cedet-1.0pre3.orig/semantic/semantic-idle.el	2005-06-29 22:08:03.000000000 -0500
-+++ cedet-1.0pre3/semantic/semantic-idle.el	2006-11-19 11:06:37.000000000 -0600
-@@ -286,12 +286,8 @@
-   (when (zerop (recursion-depth))
-     (unwind-protect
-         (semantic-safe "idle error: %S"
--          ;; Disable the auto parse timer while re-parsing
--          (semantic-idle-scheduler-kill-timer)
-           ;; Handle re-parsing and other scheduled services
--          (save-match-data (semantic-idle-core-handler)))
--      ;; Enable again the auto parse timer
--      (semantic-idle-scheduler-setup-timer))))
-+          (save-match-data (semantic-idle-core-handler))))))
- 
- ;;; REPARSING
- ;;
