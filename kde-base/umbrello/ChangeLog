@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/umbrello
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.73 2007/10/20 00:00:20 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.74 2008/01/18 02:07:58 ingmar Exp $
+
+*umbrello-4.0.0 (18 Jan 2008)
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +umbrello-4.0.0.ebuild:
+  Added KDE 4.0.0's umbrello.
 
 *umbrello-3.5.8 (19 Oct 2007)
 
