@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/prboom
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.26 2007/02/14 01:06:08 nyhm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.27 2008/01/18 03:13:14 mr_bones_ Exp $
+
+  18 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org> prboom-2.4.7.ebuild:
+  always use opengl (sidestep bug #206382)
 
   14 Feb 2007; Tristan Heaven <nyhm@gentoo.org> -files/prboom.png,
   prboom-2.4.7.ebuild:

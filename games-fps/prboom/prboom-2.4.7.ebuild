@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.4.7.ebuild,v 1.4 2007/02/14 01:06:08 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.4.7.ebuild,v 1.5 2008/01/18 03:13:14 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -12,16 +12,14 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
-IUSE="opengl"
+IUSE=""
 
 DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/sdl-net
 	!games-fps/lsdldoom
-	opengl? (
-		virtual/opengl
-		virtual/glu
-	)"
+	virtual/opengl
+	virtual/glu"
 
 src_unpack() {
 	unpack ${A}
@@ -47,17 +45,12 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	# configure.in should be fixed as
-	# --enable-gl and
-	# --disable-gl are treated the same
-	use opengl && myconf="--enable-gl"
 	# leave --disable-cpu-opt in otherwise the configure script
 	# will append -march=i686 and crap ... let the user's CFLAGS
 	# handle this ...
 	egamesconf \
 		--disable-dependency-tracking \
-		${myconf} \
+		--enable-gl \
 		$(use_enable x86 i386-asm) \
 		--disable-cpu-opt \
 		--with-waddir="${GAMES_DATADIR}/doom-data" \
