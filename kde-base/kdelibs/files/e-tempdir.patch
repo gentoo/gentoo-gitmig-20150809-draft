@@ -1,0 +1,27 @@
+The cmake command create_symlink doesn't work correctly with the sandbox,
+so we prefix the symlink's destination with ${E_TEMPDIR},
+and pass "-DE_TEMPDIR=${D}" to cmake during the configure step.
+
+--- a/cmake/modules/KDE4Macros.cmake.orig	2007-08-31 20:29:51.000000000 +0200
++++ b/cmake/modules/KDE4Macros.cmake	2007-08-31 20:30:01.000000000 +0200
+@@ -303,7 +303,7 @@
+       # TODO symlinks on non-unix platforms
+       if (UNIX)
+          # execute some cmake code on make install which creates the symlink
+-         install(CODE "execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink \"${_installDest}/common\"  \"${_installDest}/${dirname}/common\" )" )
++         install(CODE "execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink \"${_installDest}/common\"  \"$ENV{D}/${_installDest}/${dirname}/common\" )" )
+       endif (UNIX)
+    endif(_installDest)
+    
+--- a/kio/misc/CMakeLists.txt.orig	2007-10-03 12:49:42.000000000 +0200
++++ b/kio/misc/CMakeLists.txt	2007-10-19 18:35:43.000000000 +0200
+@@ -44,7 +44,7 @@
+ if (UNIX)
+    install(PROGRAMS fileshareset DESTINATION ${LIBEXEC_INSTALL_DIR} )
+    # write a cmake script file which creates the symlink
+-   file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/make_fileshare_symlink.cmake "exec_program(${CMAKE_COMMAND} ARGS -E create_symlink ${LIBEXEC_INSTALL_DIR}/fileshareset ${LIBEXEC_INSTALL_DIR}/filesharelist)\n")
++   file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/make_fileshare_symlink.cmake "exec_program(${CMAKE_COMMAND} ARGS -E create_symlink ${LIBEXEC_INSTALL_DIR}/fileshareset $ENV{D}/${LIBEXEC_INSTALL_DIR}/filesharelist)\n")
+    # and add it as post-install script to any of the installed targets, so it will be executed during "make install"
+    set_target_properties(ktelnetservice PROPERTIES POST_INSTALL_SCRIPT ${CMAKE_CURRENT_BINARY_DIR}/make_fileshare_symlink.cmake)
+ endif (UNIX)
+

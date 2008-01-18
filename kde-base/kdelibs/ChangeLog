@@ -1,6 +1,18 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.495 2008/01/11 20:32:37 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.496 2008/01/18 00:42:53 philantrop Exp $
+
+  18 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kdelibs-4.0.0-X11-optional.patch,
+  +files/kdelibs-4.0.0-alsa-optional.patch, +files/e-tempdir.patch,
+  +kdelibs-4.0.0.ebuild:
+  Added patches.
+
+*kdelibs-4.0.0 (17 Jan 2008)
+
+  17 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdelibs-4.0.0.ebuild:
+  Added KDE 4.0.0's kdelibs.
 
 *kdelibs-3.5.8-r3 (11 Jan 2008)
 
