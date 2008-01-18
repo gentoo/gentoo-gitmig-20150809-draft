@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.30-r3.ebuild,v 1.1 2008/01/04 20:55:23 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.30-r3.ebuild,v 1.2 2008/01/18 13:41:05 lack Exp $
 
 ROX_LIB_VER="2.0.4-r1"
 ROX_VER="2.7-r1"
@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=dev-python/dbus-python-0.71"
+RDEPEND=">=dev-python/dbus-python-0.71
+	x11-apps/xgamma
+	x11-apps/xset"
 
 MY_PN="ROX-Session"
 APPNAME=${MY_PN}
