@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.90.ebuild,v 1.1 2007/07/16 17:54:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.90.ebuild,v 1.2 2008/01/18 14:41:16 pva Exp $
 
 #WANT_AUTOCONF="latest"
 #WANT_AUTOMAKE="1.8"
@@ -25,6 +25,7 @@ RDEPEND="dev-lang/mono
 
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/monodoc-1.1.8 )
+	dev-util/pkgconfig
 	app-arch/rpm
 	>=dev-util/intltool-0.34.2"
 

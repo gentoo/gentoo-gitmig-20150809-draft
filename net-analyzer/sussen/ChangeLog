@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sussen
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.52 2007/07/16 17:54:06 pva Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.53 2008/01/18 14:41:16 pva Exp $
+
+  18 Jan 2008; <pva@gentoo.org> sussen-0.35.ebuild, sussen-0.90.ebuild:
+  Fixed missing dependency. Thank Evil Compile Person <bugs AT
+  dev.gentooexperimental.org> for report for report, bug 205540.
 
 *sussen-0.90 (16 Jul 2007)
 
