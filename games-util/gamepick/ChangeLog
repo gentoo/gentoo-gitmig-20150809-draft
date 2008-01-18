@@ -1,6 +1,10 @@
 # ChangeLog for games-util/gamepick
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/ChangeLog,v 1.7 2006/09/27 12:14:16 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/ChangeLog,v 1.8 2008/01/18 21:40:02 tupone Exp $
+
+  18 Jan 2008; Tupone Alfredo <tupone@gentoo.org> gamepick-0.30.ebuild,
+  gamepick-0.35.ebuild:
+  Missing pkg-config dependency. Bug #206436 by Evil Compile Person
 
   27 Sep 2006; Tristan Heaven <nyhm@gentoo.org> gamepick-0.35.ebuild:
   Fix ebuild and add KEYWORDS back

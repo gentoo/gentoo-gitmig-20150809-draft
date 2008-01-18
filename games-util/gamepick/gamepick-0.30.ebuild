@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/gamepick-0.30.ebuild,v 1.5 2005/09/30 18:45:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/gamepick-0.30.ebuild,v 1.6 2008/01/18 21:40:02 tupone Exp $
 
 inherit eutils games
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-2*"
+RDEPEND="=x11-libs/gtk+-2*"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
