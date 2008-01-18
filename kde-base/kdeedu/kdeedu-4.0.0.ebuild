@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-4.0.0.ebuild,v 1.2 2008/01/18 03:06:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-4.0.0.ebuild,v 1.3 2008/01/18 04:38:46 ingmar Exp $
 
 EAPI="1"
 
@@ -17,38 +17,50 @@ LICENSE="GPL-2 LGPL-2"
 
 RESTRICT="test"
 
-COMMONDEPEND="gps? ( sci-geosciences/gpsd )
-		fits? ( sci-libs/cfitsio )
-		nova? ( >=sci-libs/libnova-0.12.1 )
-		sbig? ( sci-libs/indilib
-			usb? ( dev-libs/libusb ) )
-		cviewer? ( >=dev-cpp/eigen-1.0.5
-			>=sci-chemistry/openbabel-2.1
-			virtual/opengl )
-		solver? ( dev-ml/facile )
-		opengl? ( virtual/opengl )
-		readline? ( sys-libs/readline )
-		kig-scripting? ( >=dev-libs/boost-1.32 )"
-
-RDEPEND="${RDEPEND} ${COMMONDEPEND}
-	|| ( >=kde-base/kdebase-${PV}:${SLOT}
-		( >=kde-base/knotify-${PV}:${SLOT} >=kde-base/phonon-${PV}:${SLOT} ) )"
+COMMONDEPEND="
+	gps? ( sci-geosciences/gpsd )
+	fits? ( sci-libs/cfitsio )
+	nova? ( >=sci-libs/libnova-0.12.1 )
+	sbig? ( sci-libs/indilib
+		usb? ( dev-libs/libusb ) )
+	cviewer? ( >=dev-cpp/eigen-1.0.5
+		>=sci-chemistry/openbabel-2.1
+		virtual/opengl )
+	solver? ( dev-ml/facile )
+	opengl? ( virtual/opengl )
+	readline? ( sys-libs/readline )
+	kig-scripting? ( >=dev-libs/boost-1.32 )"
+DEPEND="${COMMONDEPEND}"
+RDEPEND="${COMMONDEPEND}
+	|| ( ( >=kde-base/knotify-${PV}:${SLOT} >=kde-base/phonon-${PV}:${SLOT} )
+		>=kde-base/kdebase-${PV}:${SLOT} )"
 
 PATCHES="${FILESDIR}/kstars-4.0.0-destdir.patch
 		${FILESDIR}/marble-4.0.0-fix-tests.patch"
 
 pkg_setup() {
-	use cviewer && QT4_BUILT_WITH_USE_CHECK="${QT4_BUILT_WITH_USE_CHECK} opengl"
+	if use cviewer || use opengl; then
+		QT4_BUILT_WITH_USE_CHECK="${QT4_BUILT_WITH_USE_CHECK} opengl"
+	fi
 
 	kde4-base_pkg_setup
 }
 
 src_compile() {
-	mycmakeargs="$(cmake-utils_use_with readline Readline)
-		$(cmake-utils_use_with opengl OpenGL)
+	# Either of these needs OpenGL support, but using cmake-utils_use_with
+	# and appending that to $mycmakeargs would let them override each other.
+	if use cviewer || use opengl; then
+		mycmakeargs="${mycmakeargs}
+			-DWITH_OpenGL=ON"
+	else
+		mycmakeargs="${mycmakeargs}
+			-DWITH_OpenGL=OFF"
+	fi
+
+	mycmakeargs="${mycmakeargs}
+		$(cmake-utils_use_with readline Readline)
 		$(cmake-utils_use_with cviewer Eigen)
 		$(cmake-utils_use_with cviewer OpenBabel2)
-		$(cmake-utils_use_with cviewer OpenGL)
 		$(cmake-utils_use_with solver OCaml)
 		$(cmake-utils_use_with solver Libfacile)
 		$(cmake-utils_use_with kig-scripting BoostPython)
