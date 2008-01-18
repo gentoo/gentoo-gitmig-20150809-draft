@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgis
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.30 2007/10/17 13:30:36 djay Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.31 2008/01/18 17:58:40 cla Exp $
+
+  18 Jan 2008; Dawid Węgliński <cla@gentoo.org> postgis-1.3.1.ebuild:
+  Stable on x86 (bug #206529)
 
 *postgis-1.3.1 (19 Dec 2007)
 *postgis-1.2.1 (19 Dec 2007)
