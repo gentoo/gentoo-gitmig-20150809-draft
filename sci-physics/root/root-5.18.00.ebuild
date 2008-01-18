@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.18.00.ebuild,v 1.1 2008/01/17 20:58:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.18.00.ebuild,v 1.2 2008/01/18 19:37:56 bicatali Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 qt4 fortran
 
@@ -33,7 +33,7 @@ RDEPEND="sys-apps/shadow
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
 	qt3? ( !qt4? ( $(qt_min_version 3.3.4) ) )
-	qt4? ( $(qt_min_version 4.3) )
+	qt4? ( $(qt4_min_version 4.3) )
 	fftw? ( >=sci-libs/fftw-3 )
 	python? ( dev-lang/python )
 	ruby? ( dev-lang/ruby )
@@ -47,6 +47,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${PN}"
+
+QT4_BUILT_WITH_USE_CHECK="qt3support"
 
 pkg_setup() {
 	elog
@@ -62,6 +64,7 @@ pkg_setup() {
 		FORTRAN="gfortran g77 ifc"
 		fortran_pkg_setup
 	fi
+	use qt4 && qt4_pkg_setup
 }
 
 src_unpack() {
