@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/imgseek
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/ChangeLog,v 1.13 2007/09/09 15:02:11 coldwind Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/ChangeLog,v 1.14 2008/01/18 02:26:18 coldwind Exp $
+
+*imgseek-0.8.6-r1 (18 Jan 2008)
+
+  18 Jan 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +files/imgseek-0.8.6-ImageDB-name-change.patch, -imgseek-0.8.2.ebuild,
+  -imgseek-0.8.4.ebuild, -imgseek-0.8.5.ebuild, -imgseek-0.8.6.ebuild,
+  +imgseek-0.8.6-r1.ebuild:
+  Fix some bad imports, HOMEPAGE, misc QA and remove old.
 
 *imgseek-0.8.6 (09 Sep 2007)
 

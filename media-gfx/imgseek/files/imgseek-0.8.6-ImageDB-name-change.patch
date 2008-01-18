@@ -1,0 +1,48 @@
+http://sourceforge.net/tracker/index.php?func=detail&aid=1612443&group_id=70373&atid=527567
+--- imgSeek-0.8.6/imgSeekLib/sqlitedb.py	2006-01-25 02:56:20.000000000 +0100
++++ imgSeek-0.8.6.new/imgSeekLib/sqlitedb.py	2008-01-18 03:16:07.000000000 +0100
+@@ -2019,12 +2019,12 @@
+     def testConvert():
+         print "#################################### Test importing an old db"
+ 
+-        import ImgDB
++        import ImageDB
+         from Settings import Env
+         myNewDB = SqlDB(Env(), 'mysql',dbArgs={'user': 'tuma', 'passwd':'mp2gra5', 'db':'imgseek'}, dbFile='/home/tuma/.imgseek/img-db.iqd.img')
+         #myNewDB = SqlDB(Env(), 'postgres',dbArgs={'user': 'tuma', 'database':'imgseek'}, dbFile='/home/tuma/.imgseek/img-db.iqd.img')
+         #'/home/tuma/.imgseek/img-db.iqd.newdb'}, dbFile='/home/tuma/.imgseek/img-db.iqd.img')       myOldDB = ImgDB.ImgDB(Env())
+-        myOldDB = ImgDB.ImgDB(Env())
++        myOldDB = ImageDB.ImgDB(Env())
+         myOldDB.opendb('/home/tuma/.imgseek/img-db.iqd.olddb')
+ 
+         myNewDB.convert_old(myOldDB)
+diff -ur imgSeek-0.8.6/Tools/imgSeekCmd imgSeek-0.8.6.new/Tools/imgSeekCmd
+--- imgSeek-0.8.6/Tools/imgSeekCmd	2006-01-25 02:57:55.000000000 +0100
++++ imgSeek-0.8.6.new/Tools/imgSeekCmd	2008-01-18 03:15:05.000000000 +0100
+@@ -29,7 +29,7 @@
+ from os.path import isfile
+ 
+ try:
+-    from imgSeekLib import ImgDB,__version__
++    from imgSeekLib import ImageDB,__version__
+     from imgSeekLib.Settings import Env
+ except:
+     traceback.print_exc()
+@@ -151,7 +151,7 @@
+ 
+     print "Using database file:%s"%db
+     env=Env()
+-    curdb=ImgDB.ImgDB(env)
++    curdb=ImageDB.ImgDB(env)
+     try:
+         curdb.opendb(db)
+     except:
+@@ -165,7 +165,7 @@
+         s=None
+         m=0
+         r=None
+-        restr=ImgDB.AddFilter(env)
++        restr=ImageDB.AddFilter(env)
+         for o, a in opts:
+             try:
+                 if o in ["-h","--help"]: usage("add")
