@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.22 2007/12/23 10:31:16 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.23 2008/01/18 14:03:16 peper Exp $
 
 # Wolfram Schlich <wschlich@gentoo.org> (20 Nov 2007)
 # dependency can't be fulfilled at the moment
@@ -9,7 +9,7 @@ net-im/mcabber otr
 sys-apps/paludis python
 
 # Piotr Jaroszyński <peper@gentoo.org> (19 Nov 2007)
-# Mask ruby flag until mips keyword is added to dev-ruby/syntax, bug #198864.
+# Mask ruby flag until mips keyword is added to dev-ruby/syntax - #198864 and dev-ruby/allison - #206031.
 sys-apps/paludis ruby
 
 # Chris Gianelloni <cgianelloni@gentoo.org> (22 Sep 2007)
