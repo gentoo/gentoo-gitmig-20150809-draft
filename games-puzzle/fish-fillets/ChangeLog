@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/fish-fillets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.25 2008/01/02 23:29:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.26 2008/01/18 02:56:12 mr_bones_ Exp $
+
+  18 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  fish-fillets-0.8.0.ebuild:
+  add dev-util/pkgconfig dep (bug #206395)
 
 *fish-fillets-0.8.0 (02 Jan 2008)
 

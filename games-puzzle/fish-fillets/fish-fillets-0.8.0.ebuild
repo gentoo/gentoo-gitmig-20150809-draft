@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.8.0.ebuild,v 1.1 2008/01/02 23:29:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.8.0.ebuild,v 1.2 2008/01/18 02:56:12 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -15,12 +15,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X"
 
-DEPEND=">=media-libs/libsdl-1.2
+RDEPEND=">=media-libs/libsdl-1.2
 	>=media-libs/sdl-mixer-1.2.5
 	>=media-libs/sdl-image-1.2.2
 	X? ( x11-libs/libX11 )
 	media-libs/sdl-ttf
 	>=dev-lang/lua-5"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/fillets-ng-${PV}
 
