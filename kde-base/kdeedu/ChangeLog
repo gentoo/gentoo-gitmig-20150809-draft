@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.224 2008/01/18 04:38:46 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.225 2008/01/18 09:31:21 ingmar Exp $
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  files/digest-kdeedu-4.0.0, Manifest:
+  Manifest
 
   18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> kdeedu-4.0.0.ebuild:
   Both the cviewer and the opengl USE flags enable opengl support, fixed
