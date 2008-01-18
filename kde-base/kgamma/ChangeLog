@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kgamma
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.69 2007/10/19 22:54:31 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.70 2008/01/18 00:00:15 philantrop Exp $
+
+*kgamma-4.0.0 (17 Jan 2008)
+
+  17 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> +kgamma-4.0.0.ebuild:
+  Added KDE 4.0.0's kgamma.
 
 *kgamma-3.5.8 (19 Oct 2007)
 
