@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/fmirror
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fmirror/ChangeLog,v 1.9 2007/07/15 08:47:38 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fmirror/ChangeLog,v 1.10 2008/01/18 18:45:42 armin76 Exp $
+
+  18 Jan 2008; Raúl Porcel <armin76@gentoo.org> -fmirror-0.8.4.ebuild,
+  fmirror-0.8.4-r2.ebuild:
+  Remove old, x86 stable, fix HOMEPAGE/SRC_URI, bug #202463
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to m-needed, as beu is being retired (#66608).
