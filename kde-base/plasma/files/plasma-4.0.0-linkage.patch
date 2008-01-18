@@ -1,0 +1,86 @@
+Because we compile libplasma & plasma in seperate packages,
+need to list the libraries we link to explicitly.
+diff -ur kdebase-workspace-3.97.0.orig/plasma/animators/default/CMakeLists.txt kdebase-workspace-3.97.0/plasma/animators/default/CMakeLists.txt
+--- kdebase-workspace-3.97.0.orig/plasma/animators/default/CMakeLists.txt	2007-12-09 06:57:13.000000000 +0100
++++ kdebase-workspace-3.97.0/plasma/animators/default/CMakeLists.txt	2007-12-09 08:46:53.000000000 +0100
+@@ -3,7 +3,7 @@
+ )
+ 
+ kde4_add_plugin(plasma_animator_default ${default_animator_SRCS})
+-target_link_libraries(plasma_animator_default ${KDE4_KDECORE_LIBS} plasma)
++target_link_libraries(plasma_animator_default ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS} plasma)
+ 
+ install(TARGETS plasma_animator_default DESTINATION ${PLUGIN_INSTALL_DIR})
+ install(FILES plasma-animator-default.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+diff -ur kdebase-workspace-3.97.0.orig/plasma/dataengines/filebrowser/CMakeLists.txt kdebase-workspace-3.97.0/plasma/dataengines/filebrowser/CMakeLists.txt
+--- kdebase-workspace-3.97.0.orig/plasma/dataengines/filebrowser/CMakeLists.txt	2007-12-09 06:57:14.000000000 +0100
++++ kdebase-workspace-3.97.0/plasma/dataengines/filebrowser/CMakeLists.txt	2007-12-09 08:46:53.000000000 +0100
+@@ -3,7 +3,7 @@
+ )
+ 
+ kde4_add_plugin(plasma_engine_filebrowser ${filebrowser_engine_SRCS})
+-target_link_libraries(plasma_engine_filebrowser ${KDE4_KDECORE_LIBS} plasma)
++target_link_libraries(plasma_engine_filebrowser ${KDE4_KDECORE_LIBS} ${KDE4_KIO_LIBS} plasma)
+ 
+ install(TARGETS plasma_engine_filebrowser DESTINATION ${PLUGIN_INSTALL_DIR})
+ install(FILES plasma-dataengine-filebrowser.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+diff -ur kdebase-workspace-3.97.0.orig/plasma/runners/bookmarks/CMakeLists.txt kdebase-workspace-3.97.0/plasma/runners/bookmarks/CMakeLists.txt
+--- kdebase-workspace-3.97.0.orig/plasma/runners/bookmarks/CMakeLists.txt	2007-12-09 06:57:13.000000000 +0100
++++ kdebase-workspace-3.97.0/plasma/runners/bookmarks/CMakeLists.txt	2007-12-09 08:46:53.000000000 +0100
+@@ -6,7 +6,7 @@
+ )
+ 
+ kde4_add_plugin(krunner_bookmarksrunner ${krunner_bookmarksrunner_SRCS})
+-target_link_libraries(krunner_bookmarksrunner ${KDE4_KDECORE_LIBS} ${QT_QTSCRIPT_LIBRARY} plasma)
++target_link_libraries(krunner_bookmarksrunner ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KIO_LIBS} ${QT_QTSCRIPT_LIBRARY} plasma)
+ 
+ install(TARGETS krunner_bookmarksrunner DESTINATION ${PLUGIN_INSTALL_DIR} )
+ 
+diff -ur kdebase-workspace-3.97.0.orig/plasma/runners/calculator/CMakeLists.txt kdebase-workspace-3.97.0/plasma/runners/calculator/CMakeLists.txt
+--- kdebase-workspace-3.97.0.orig/plasma/runners/calculator/CMakeLists.txt	2007-12-09 06:57:13.000000000 +0100
++++ kdebase-workspace-3.97.0/plasma/runners/calculator/CMakeLists.txt	2007-12-09 08:46:53.000000000 +0100
+@@ -6,7 +6,7 @@
+ )
+ 
+ kde4_add_plugin(krunner_calculatorrunner ${krunner_calculatorrunner_SRCS})
+-target_link_libraries(krunner_calculatorrunner ${KDE4_KDECORE_LIBS} ${QT_QTSCRIPT_LIBRARY} plasma)
++target_link_libraries(krunner_calculatorrunner ${KDE4_KDECORE_LIBS} ${QT_QTSCRIPT_LIBRARY} ${KDE4_KDEUI_LIBS} plasma)
+ 
+ install(TARGETS krunner_calculatorrunner DESTINATION ${PLUGIN_INSTALL_DIR} )
+ 
+diff -ur kdebase-workspace-3.97.0.orig/plasma/runners/search/CMakeLists.txt kdebase-workspace-3.97.0/plasma/runners/search/CMakeLists.txt
+--- kdebase-workspace-3.97.0.orig/plasma/runners/search/CMakeLists.txt	2007-12-09 06:57:13.000000000 +0100
++++ kdebase-workspace-3.97.0/plasma/runners/search/CMakeLists.txt	2007-12-09 08:46:53.000000000 +0100
+@@ -14,7 +14,7 @@
+   set(krunner_searchrunner_SRCS searchrunner.cpp)
+   kde4_add_plugin(krunner_searchrunner ${krunner_searchrunner_SRCS})
+   include_directories(${STRIGI_INCLUDE_DIR})
+-  target_link_libraries(krunner_searchrunner ${KDE4_KDECORE_LIBS} plasma ${STRIGIQTDBUSCLIENT_LIBRARY})
++  target_link_libraries(krunner_searchrunner ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KIO_LIBS} plasma ${STRIGIQTDBUSCLIENT_LIBRARY})
+ 
+   install(TARGETS krunner_searchrunner DESTINATION ${PLUGIN_INSTALL_DIR} )
+ 
+diff -ur kdebase-workspace-3.97.0.orig/plasma/scriptengines/qscript/CMakeLists.txt kdebase-workspace-3.97.0/plasma/scriptengines/qscript/CMakeLists.txt
+--- kdebase-workspace-3.97.0.orig/plasma/scriptengines/qscript/CMakeLists.txt	2007-12-09 06:57:13.000000000 +0100
++++ kdebase-workspace-3.97.0/plasma/scriptengines/qscript/CMakeLists.txt	2007-12-09 08:46:53.000000000 +0100
+@@ -10,7 +10,7 @@
+ )
+ 
+ kde4_add_plugin(plasma_scriptengine_qscript ${qscript_engine_SRCS})
+-target_link_libraries(plasma_scriptengine_qscript ${KDE4_KDECORE_LIBS} plasma ${QT_QTSCRIPT_LIBRARY} ${QT_QTUITOOLS_LIBRARY})
++target_link_libraries(plasma_scriptengine_qscript ${KDE4_KDECORE_LIBS} plasma ${QT_QTSCRIPT_LIBRARY} ${QT_QTUITOOLS_LIBRARY} ${QT_QTGUI_LIBRARY})
+ 
+ install(TARGETS plasma_scriptengine_qscript DESTINATION ${PLUGIN_INSTALL_DIR})
+ install(FILES plasma-scriptengine-qscript.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+diff -ur kdebase-workspace-3.97.0.orig/plasma/tools/plasmoidviewer/CMakeLists.txt kdebase-workspace-3.97.0/plasma/tools/plasmoidviewer/CMakeLists.txt
+--- kdebase-workspace-3.97.0.orig/plasma/tools/plasmoidviewer/CMakeLists.txt	2007-12-09 06:57:15.000000000 +0100
++++ kdebase-workspace-3.97.0/plasma/tools/plasmoidviewer/CMakeLists.txt	2007-12-09 08:47:08.000000000 +0100
+@@ -5,7 +5,7 @@
+ 
+ kde4_add_executable(plasmoidviewer ${plasmoidviewer_SRCS})
+ 
+-target_link_libraries(plasmoidviewer plasma)
++target_link_libraries(plasmoidviewer ${KDE4_KDEUI_LIBS} ${KDE4_KIO_LIBS} plasma)
+ 
+ install(TARGETS plasmoidviewer DESTINATION ${BIN_INSTALL_DIR})
+ install(FILES checker.png DESTINATION ${DATA_INSTALL_DIR}/plasmoidviewer)
