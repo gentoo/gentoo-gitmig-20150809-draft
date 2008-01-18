@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.116 2008/01/18 00:15:13 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.117 2008/01/18 03:26:13 ingmar Exp $
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> kdm-4.0.0.ebuild:
+  RDEPEND on >=x11-apps/xinit-1.0.5-r2, which has a patch that allows users to
+  specify what version of kdm they want to start.
 
   18 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   +files/kdm-4.0.0-genkdmconf.patch,
