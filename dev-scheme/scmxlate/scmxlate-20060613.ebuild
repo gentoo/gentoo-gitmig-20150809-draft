@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scmxlate/scmxlate-20060613.ebuild,v 1.1 2008/01/17 22:48:44 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scmxlate/scmxlate-20060613.ebuild,v 1.2 2008/01/18 18:06:21 opfer Exp $
 
 DESCRIPTION="Scmxlate is a configuration tool for software packages written in Scheme."
 
@@ -13,7 +13,7 @@ LICENSE="as-is"
 
 SLOT="0"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
