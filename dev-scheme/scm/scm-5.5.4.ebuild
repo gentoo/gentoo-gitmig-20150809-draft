@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.4.ebuild,v 1.1 2008/01/18 13:25:50 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.4.ebuild,v 1.2 2008/01/18 18:10:09 opfer Exp $
 
 inherit versionator eutils
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://swiss.csail.mit.edu/~jaffer/SCM"
 
 SLOT="0"
 LICENSE="GPL-2-with-linking-exception"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 #unzip for unpacking
