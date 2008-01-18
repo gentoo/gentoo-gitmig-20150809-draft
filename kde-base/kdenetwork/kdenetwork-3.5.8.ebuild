@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.8.ebuild,v 1.2 2007/10/20 23:01:08 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.8.ebuild,v 1.3 2008/01/18 16:59:54 ingmar Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -20,7 +20,7 @@ BOTH_DEPEND="~kde-base/kdebase-${PV}
 	dev-libs/libxml2
 	net-dns/libidn
 	>=dev-libs/glib-2
-	app-crypt/qca
+	=app-crypt/qca-1.0*
 	sametime? ( =net-libs/meanwhile-1.0* )
 	jingle? (
 		>=media-libs/speex-1.1.6
@@ -38,7 +38,7 @@ RDEPEND="${BOTH_DEPEND}
 	rdesktop? ( >=net-misc/rdesktop-1.4.1 )
 	dev-lang/perl
 	ssl? ( dev-perl/IO-Socket-SSL
-		app-crypt/qca-tls )
+		=app-crypt/qca-tls-1.0* )
 	net-dialup/ppp
 	|| ( net-misc/netkit-talk net-misc/ytalk sys-freebsd/freebsd-ubin )"
 

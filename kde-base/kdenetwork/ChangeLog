@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.278 2008/01/17 23:52:03 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.279 2008/01/18 16:59:54 ingmar Exp $
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> kdenetwork-3.5.8.ebuild:
+  Made kdenetwork depend on qca-1.0* and qca-tls-1.0*. Fixes bug 180599.
 
 *kdenetwork-4.0.0 (17 Jan 2008)
 
