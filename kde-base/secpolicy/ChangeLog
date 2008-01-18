@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/secpolicy
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/secpolicy/ChangeLog,v 1.50 2007/10/19 23:59:25 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/secpolicy/ChangeLog,v 1.51 2008/01/18 01:56:07 ingmar Exp $
+
+*secpolicy-4.0.0 (18 Jan 2008)
+
+  18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +secpolicy-4.0.0.ebuild:
+  Added KDE 4.0.0's secpolicy.
 
 *secpolicy-3.5.8 (19 Oct 2007)
 
