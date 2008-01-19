@@ -1,0 +1,10 @@
+# ChangeLog for media-video/qt-faststart
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/qt-faststart/ChangeLog,v 1.1 2008/01/19 17:09:43 caleb Exp $
+
+*qt-faststart-0.1 (19 Jan 2008)
+
+  19 Jan 2008; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +qt-faststart-0.1.ebuild:
+  Initial import
+
