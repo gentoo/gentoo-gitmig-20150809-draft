@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/wop
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/wop/ChangeLog,v 1.5 2007/04/27 17:20:57 drizzt Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/wop/ChangeLog,v 1.6 2008/01/19 09:18:08 nyhm Exp $
+
+  19 Jan 2008; Tristan Heaven <nyhm@gentoo.org> wop-0.4.3-r1.ebuild:
+  Add makedepend dep, bug #206268
 
 *wop-0.4.3-r1 (27 Apr 2007)
 
