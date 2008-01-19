@@ -1,50 +1,47 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xwelltris/xwelltris-1.0.1.ebuild,v 1.13 2006/12/06 17:23:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xwelltris/xwelltris-1.0.1.ebuild,v 1.14 2008/01/19 04:51:43 nyhm Exp $
 
 inherit games
 
-DESCRIPTION="tetris like popular game"
+DESCRIPTION="2.5D tetris like game"
 HOMEPAGE="http://xnc.dubna.su/xwelltris/"
 SRC_URI="http://xnc.dubna.su/xwelltris/src/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="sdl"
+IUSE=""
 
-RDEPEND="x11-misc/xbitmaps
-	x11-libs/libX11
-	x11-libs/libXt
-	x11-libs/libXmu
-	x11-libs/libXaw
-	sdl? ( media-libs/libsdl media-libs/sdl-image )"
-DEPEND="${RDEPEND}
-	x11-proto/xproto"
+DEPEND="media-libs/libsdl
+	media-libs/sdl-image"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i '/INSTALL_PROGRAM/s/-s //' src/Make.common.in || die "sed failed"
+	sed -i \
+		-e '/INSTALL_PROGRAM/s/-s //' \
+		src/Make.common.in \
+		|| die "sed Make.common.in failed"
+	sed -i \
+		-e "/GLOBAL_SEARCH/s:\".*\":\"${GAMES_DATADIR}/${PN}\":" \
+		src/include/globals.h.in \
+		|| die "sed globals.h.in failed"
 }
 
 src_compile() {
 	# configure/build process is pretty messed up
-	egamesconf $(use_with sdl) || die "egamesconf failed"
-	sed -i \
-		-e "/GLOBAL_SEARCH/s:\".*\":\"${GAMES_DATADIR}/${PN}\":" \
-			src/include/globals.h \
-			|| die "sed src/include/globals.h failed"
-	emake || die "emake failed"
+	egamesconf --with-sdl || die
+	emake -C src || die "emake failed"
 }
 
 src_install() {
 	dodir "${GAMES_BINDIR}" "${GAMES_DATADIR}/${PN}" /usr/share/man
-	make install \
+	emake install \
 		INSTDIR="${D}/${GAMES_BINDIR}" \
 		INSTLIB="${D}/${GAMES_DATADIR}/${PN}" \
 		INSTMAN=/usr/share/man \
-		|| die "make install failed"
+		|| die "emake install failed"
 	dodoc AUTHORS Changelog README*
 	prepgamesdirs
 }
