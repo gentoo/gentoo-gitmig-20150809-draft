@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.3 2008/01/05 11:18:47 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.4 2008/01/19 11:21:15 markusle Exp $
 
-inherit distutils eutils flag-o-matic toolchain-funcs versionator python
+inherit distutils eutils flag-o-matic toolchain-funcs versionator python qt4
 
 MY_PV=3.2.1
 MY_MAJOR_PV=$(get_version_component_range 1-2)
@@ -20,7 +20,7 @@ RDEPEND="hdf5? ( sci-libs/hdf5 )
 	doc? ( app-doc/doxygen )
 	mpi? ( sys-cluster/mpich )
 	python? ( >=dev-lang/python-2.0 )
-	qt4? ( >=x11-libs/qt-4.3.0 )
+	qt4? ( $(qt4_min_version 4.3) )
 	dev-libs/libxml2
 	media-libs/libpng
 	media-libs/jpeg
@@ -39,6 +39,8 @@ PVLIBDIR="$(get_libdir)/${PN}-${MY_MAJOR_PV}"
 BUILDDIR="${WORKDIR}/build"
 S="${WORKDIR}"/ParaView${MY_PV}
 
+QT4_BUILT_WITH_USE_CHECK="qt3support"
+
 src_unpack() {
 	unpack ${A}
 	mkdir "${BUILDDIR}" || die "Failed to generate build directory"
@@ -49,14 +51,6 @@ src_unpack() {
 
 	# rename paraview's assistant wrapper
 	if use qt4; then
-
-		# make sure we have qt3 support
-		if ! built_with_use =x11-libs/qt-4* qt3support; then
-			echo
-			eerror 'Please emerge qt4 with USE="qt3support"!'
-			die "qt4 setup error"
-		fi
-
 		sed -e "s:\"assistant\":\"paraview-assistant\":" \
 			-i Applications/Client/MainWindow.cxx \
 			|| die "Failed to fix assistant wrapper call"
