@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/jsx-1.0.7.5-r1.ebuild,v 1.4 2008/01/05 12:49:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/jsx-1.0.7.5-r1.ebuild,v 1.5 2008/01/19 17:12:23 betelgeuse Exp $
 
 JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2
 
 DESCRIPTION="Java Serialization to XML (JSX) allows you to write and read any Java object graph as XML data with one line of code"
-HOMEPAGE="http://www.csse.monash.edu.au/~bren/JSX/"
+HOMEPAGE="http://jsx.org"
 SRC_URI="http://www.csse.monash.edu.au/~bren/JSX/freeJSX${PV}.jar"
 LICENSE="GPL-2"
 SLOT="0"
