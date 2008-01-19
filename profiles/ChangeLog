@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1019 2008/01/19 14:50:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1020 2008/01/19 14:54:02 angelos Exp $
+
+  19 Jan 2008; Christoph Mende <angelos@gentoo.org> use.local.desc:
+  Add twisted USE flag for dev-python/zsi
 
   19 Jan 2008; Stefan Schweizer <genstef@gentoo.org> package.mask:
   mask list for removal

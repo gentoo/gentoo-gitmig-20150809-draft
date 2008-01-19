@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3317 2008/01/19 04:59:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3318 2008/01/19 14:54:02 angelos Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -587,6 +587,7 @@ dev-python/soya:ode - include support for Open Dynamics Engine
 dev-python/twisted:serial - include serial port support
 dev-python/visual:numarray - enable support for numarray
 dev-python/visual:numeric - enable support for numeric
+dev-python/zsi:twisted - add support for dev-python/twisted
 dev-ruby/camping:mongrel - install Mongrel
 dev-ruby/nitro:lighttpd - install lighttpd
 dev-ruby/nitro:xslt - enable xslt support
