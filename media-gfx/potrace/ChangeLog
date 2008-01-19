@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/potrace
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.17 2007/12/31 03:07:15 dirtyepic Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.18 2008/01/19 19:06:02 dirtyepic Exp $
+
+  19 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> metadata.xml,
+  -potrace-1.5.ebuild, -potrace-1.6.ebuild:
+  Maintainer -> fonts.  Remove old.
 
 *potrace-1.8 (31 Dec 2007)
 
