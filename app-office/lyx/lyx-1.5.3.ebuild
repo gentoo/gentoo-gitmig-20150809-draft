@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.3.ebuild,v 1.2 2008/01/17 21:11:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.3.ebuild,v 1.3 2008/01/19 14:47:23 aballier Exp $
 
-inherit qt4 eutils flag-o-matic font
+inherit qt4 eutils flag-o-matic font toolchain-funcs
 
 MY_P="${P/_}"
 S="${WORKDIR}/${MY_P}"
@@ -74,6 +74,7 @@ src_unpack() {
 src_compile() {
 	append-flags "$(test-flags -fno-stack-protector -fno-stack-protector-all)"
 	replace-flags "-Os" "-O2"
+	tc-export CXX
 
 	unset LINGUAS
 	econf \
