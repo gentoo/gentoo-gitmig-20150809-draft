@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/pykde-3.5.8.ebuild,v 1.4 2007/10/30 06:02:14 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/pykde-3.5.8.ebuild,v 1.5 2008/01/19 02:13:20 ingmar Exp $
 
 KMNAME=kdebindings
 KMMODULE=python
@@ -18,10 +18,11 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug doc examples"
 
 DEPEND="~dev-python/sip-4.6
-		~dev-python/PyQt-3.17.2
-		kde-base/kdelibs
-		|| ( kde-base/kdebase kde-base/konsole )
-		!dev-python/pykde"
+	~dev-python/PyQt-3.17.2
+	=kde-base/kdelibs-3.5*
+	|| ( =kde-base/kdebase-3.5* =kde-base/konsole-3.5* )
+	!dev-python/pykde"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	kde-meta_src_unpack
@@ -44,7 +45,7 @@ src_compile() {
 	myconf="${myconf} -i"
 
 	python configure.py ${myconf} || die "configure failed"
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -56,8 +57,8 @@ src_install() {
 		sed -i -e '/strip $(DESTDIR).*/d' ${X}/Makefile
 	done
 
-	make DESTDIR="${D}" install || die
-	find "${D}/usr/share/sip" -not -type d -not -iname *.sip -exec rm '{}' \;
+	emake DESTDIR="${D}" install || die "emake install failed"
+	find "${D}/usr/share/sip" -not -type d -not -iname *.sip -delete
 
 	dodoc AUTHORS ChangeLog NEWS README THANKS
 	use doc && dohtml -r doc/*
