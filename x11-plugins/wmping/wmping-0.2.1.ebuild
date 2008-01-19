@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmping/wmping-0.2.1.ebuild,v 1.2 2008/01/14 18:34:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmping/wmping-0.2.1.ebuild,v 1.3 2008/01/19 21:18:58 drac Exp $
+
+EAPI=1
 
 DESCRIPTION="a simple host status monitoring dockapp."
 HOMEPAGE="http://sourceforge.net/projects/wmping"
@@ -9,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="suid"
+IUSE="+suid"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
@@ -32,5 +34,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	use suid || ewarn "warning, ${PN} needs to be executed root for functionality."
+	use suid || ewarn "warning, ${PN} needs to be executed as root."
 }
