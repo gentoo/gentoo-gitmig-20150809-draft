@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.26 2007/01/22 08:30:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.27 2008/01/19 15:00:07 grobian Exp $
 
 inherit flag-o-matic eutils toolchain-funcs libtool
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
@@ -20,13 +20,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}/${P}-debian.diff"
-
-	if use ppc-macos; then
-		epatch ${FILESDIR}/${P}-ppc-macos.diff
-		cp ${S}/lib/error.c ${S}/lib/xstrdup.c ${S}/src/ || die "file copy failed"
-		elibtoolize
-		LDFLAGS="${LDFLAGS} -lgettextlib"
-	fi
 }
 
 src_compile() {
@@ -42,6 +35,4 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS BACKLOG ChangeLog NEWS README THANKS TODO
-
-	use ppc-macos && rm ${D}/usr/lib/charset.alias
 }
