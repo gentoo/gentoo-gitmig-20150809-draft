@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/diction-1.11.ebuild,v 1.3 2008/01/16 10:26:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/diction-1.11.ebuild,v 1.4 2008/01/19 22:08:48 grobian Exp $
 
 DESCRIPTION="Diction and style checkers for english and german texts"
 HOMEPAGE="http://www.gnu.org/software/diction/diction.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.moria.de/~michael/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE="unicode"
 
 DEPEND="sys-devel/gettext

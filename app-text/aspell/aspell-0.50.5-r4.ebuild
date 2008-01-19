@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r4.ebuild,v 1.18 2007/03/04 07:27:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r4.ebuild,v 1.19 2008/01/19 22:09:17 grobian Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ "${ARCH}" == "ppc" ] || [ "${ARCH}" == "ppc-macos" ]; then
+	if [ "${ARCH}" == "ppc" ] ; then
 		append-flags -O2 -fsigned-char
 	fi
 	if [ "${ARCH}" == "alpha" ]; then
