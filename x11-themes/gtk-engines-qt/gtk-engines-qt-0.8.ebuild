@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.8.ebuild,v 1.7 2008/01/19 13:57:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.8.ebuild,v 1.8 2008/01/19 14:57:34 genstef Exp $
 
 ARTS_REQUIRED="never"
 
@@ -17,7 +17,6 @@ KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 DEPEND="${DEPEND}
 	$(qt_min_version 3.3.8)
 	>=x11-libs/gtk+-2.2
-	gnome-base/libbonoboui
 	dev-util/cmake"
 
 need-kde 3

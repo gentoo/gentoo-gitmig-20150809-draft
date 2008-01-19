@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.28 2008/01/19 13:57:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.29 2008/01/19 14:57:34 genstef Exp $
+
+  19 Jan 2008; Stefan Schweizer <genstef@gentoo.org>
+  gtk-engines-qt-0.8.ebuild:
+  libbonoboui is not always needed
 
   19 Jan 2008; Stefan Schweizer <genstef@gentoo.org>
   -gtk-engines-qt-0.7_p20070327-r2.ebuild, gtk-engines-qt-0.8.ebuild:
