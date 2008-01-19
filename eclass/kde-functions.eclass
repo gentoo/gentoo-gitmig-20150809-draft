@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.161 2008/01/19 14:20:16 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.162 2008/01/19 14:36:35 ingmar Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -665,9 +665,9 @@ need-kde() {
 		# but kde-base/kdelibs:kde-4 mustn't satisfy it.
 		min-kde-ver ${KDEVER}
 		DEPEND="${DEPEND}
-			>=kde-base/kdelibs-${selected_version} <kde-base/kdelibs-3.80"
+			>=kde-base/kdelibs-${selected_version} =kde-base/kdelibs-3.5*"
 		RDEPEND="${x_DEPEND}
-			>=kde-base/kdelibs-${selected_version} <kde-base/kdelibs-3.80"
+			>=kde-base/kdelibs-${selected_version} =kde-base/kdelibs-3.5*"
 	fi
 
 	qtver-from-kdever ${KDEVER}
