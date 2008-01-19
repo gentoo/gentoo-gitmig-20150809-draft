@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.6.ebuild,v 1.1 2007/10/22 11:56:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.8.ebuild,v 1.1 2008/01/19 15:09:06 armin76 Exp $
+
+inherit eutils
 
 DESCRIPTION="Debian/Ubuntu bootstrap scripts"
 HOMEPAGE="http://packages.qa.debian.org/d/debootstrap.html"
@@ -19,14 +21,14 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack debootstrap_${PV}.tar.gz
-	cp "${DISTDIR}"/devices.tar.gz "${S}"/devices-std.tar.gz || die
+	cp "${DISTDIR}"/devices.tar.gz "${S}"
 }
 
 src_compile() {
-	emake pkgdetails debootstrap-arch || die
+	return
 }
 
 src_install() {
-	make DESTDIR="${D}" install-allarch || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc TODO
 }
