@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/irssistats-0.72.ebuild,v 1.3 2007/03/17 18:12:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/irssistats-0.72.ebuild,v 1.4 2008/01/19 13:27:16 nixnut Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://royale.zerezo.com/irssistats/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 DEPEND=""
