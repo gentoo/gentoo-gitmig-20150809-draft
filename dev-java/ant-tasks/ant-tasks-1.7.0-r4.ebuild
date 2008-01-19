@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.7.0-r4.ebuild,v 1.2 2008/01/19 09:02:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.7.0-r4.ebuild,v 1.3 2008/01/19 13:43:19 nixnut Exp $
 
 EAPI="1"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ant.apache.org/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="X +antlr +bcel +bsf +commonslogging +commonsnet jai +javamail +jdepend jmf +jsch
 	+log4j +oro +regexp +resolver"
 
