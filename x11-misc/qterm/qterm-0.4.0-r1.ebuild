@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.4.0-r1.ebuild,v 1.2 2008/01/10 15:41:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.4.0-r1.ebuild,v 1.3 2008/01/19 00:38:33 matsuu Exp $
 
 inherit eutils qt3
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="arts esd ssl"
 
 DEPEND="dev-lang/python
+	$(qt3_min_version 3.1)
 	arts? ( kde-base/arts )
 	esd? ( >=media-sound/esound-0.2.22 )
 	ssl? ( dev-libs/openssl )"
@@ -46,6 +47,7 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die "install faled"
 	dodoc AUTHORS BUGS ChangeLog README* RELEASE_NOTES
+	# #176533
 	mv "${D}"/usr/bin/qterm "${D}"/usr/bin/QTerm || die
 }
 
