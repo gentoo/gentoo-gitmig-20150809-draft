@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/cdparanoia
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.66 2007/12/12 17:56:25 jer Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.67 2008/01/19 19:10:11 aballier Exp $
+
+  19 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  cdparanoia-3.10_pre0.ebuild:
+  Re-add fbsd port patch, adapted from the original port by Simon Schubert by
+  debian people, bug #196646
 
   12 Dec 2007; Jeroen Roovers <jer@gentoo.org> cdparanoia-3.10_pre0.ebuild:
   Stable for HPPA (bug #200102).
