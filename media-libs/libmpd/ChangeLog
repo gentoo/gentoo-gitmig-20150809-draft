@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.23 2008/01/19 14:07:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.24 2008/01/19 14:50:54 opfer Exp $
+
+  19 Jan 2008; Christian Faulhammer <opfer@gentoo.org> libmpd-0.14.0.ebuild:
+  stable x86, bug 206637
 
 *libmpd-0.15.0 (19 Jan 2008)
 
