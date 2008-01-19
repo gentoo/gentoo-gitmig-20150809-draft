@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/spacerider
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/ChangeLog,v 1.1 2007/02/18 11:10:36 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/ChangeLog,v 1.2 2008/01/19 05:57:19 nyhm Exp $
+
+  19 Jan 2008; Tristan Heaven <nyhm@gentoo.org>
+  files/spacerider-0.13-gentoo.patch, spacerider-0.13.ebuild:
+  Remove strip from makefile
 
 *spacerider-0.13 (18 Feb 2007)
 
