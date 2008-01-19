@@ -1,16 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.ebuild,v 1.7 2008/01/09 03:04:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2.ebuild,v 1.1 2008/01/19 13:00:52 markusle Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
 DESCRIPTION="Scientific software package for numerical computations (Matlab lookalike)"
 LICENSE="scilab"
-SRC_URI="http://scilabsoft.inria.fr/download/stable/${P}-src.tar.gz"
+SRC_URI="http://www.scilab.org/download/${PV}/${P}-src.tar.gz"
 HOMEPAGE="http://www.scilab.org/"
 
 SLOT="0"
-IUSE="ocaml tk gtk Xaw3d java"
+IUSE="ocaml gtk Xaw3d java"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="virtual/blas
@@ -25,8 +25,8 @@ RDEPEND="virtual/blas
 		x11-libs/vte
 		=gnome-extra/gtkhtml-2*
 	)
-	tk? ( >=dev-lang/tk-8.4
-		>=dev-lang/tcl-8.4 )
+	>=dev-lang/tk-8.4
+	>=dev-lang/tcl-8.4
 	Xaw3d? ( x11-libs/Xaw3d )
 	ocaml? ( dev-lang/ocaml )
 	java? ( >=virtual/jdk-1.4 )"
@@ -35,20 +35,6 @@ DEPEND="${RDEPEND}
 	app-text/sablotron"
 
 pkg_setup() {
-	if ! use gtk && ! use tk; then
-		echo
-		eerror 'scilab must be built with either USE="gtk" or USE="tk"'
-		die
-	fi
-
-	if use gtk && use tk; then
-		echo
-		ewarn "You have selected both gtk and tk support which"
-		ewarn "are mutually exclusive. In this case, the gtk "
-		ewarn "interface will be built."
-		epause 5
-	fi
-
 	java-pkg-opt-2_pkg_setup
 	need_fortran gfortran g77
 }
@@ -58,9 +44,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-4.0-makefile.patch
-	epatch "${FILESDIR}"/${P}-java-pic.patch
+	epatch "${FILESDIR}"/${PN}-4.1-java-pic.patch
 	epatch "${FILESDIR}"/${P}-header-fix.patch
-	epatch "${FILESDIR}"/${P}-examples.patch
+	epatch "${FILESDIR}"/${PN}-4.1-examples.patch
 
 	sed -e '/^ATLAS_LAPACKBLAS\>/s,=.*,= $(ATLASDIR)/liblapack.so $(ATLASDIR)/libblas.so $(ATLASDIR)/libcblas.so,' \
 		-e 's,$(SCIDIR)/libs/lapack.a,,' \
@@ -94,12 +80,14 @@ src_compile() {
 	local myopts
 	myopts="${myopts} --with-atlas-library=/usr/$(get_libdir)"
 
+	# the tk interface is the default
+	myopts="${myopts} --with-tk"
+
 	if [[ ${FORTRANC} == gfortran ]]; then
 		myopts="${myopts} --with-gfortran"
 	fi
 
-	econf $(use_with tk) \
-		$(use_with Xaw3d xaw3d) \
+	econf $(use_with Xaw3d xaw3d) \
 		$(use_with gtk gtk2 ) \
 		$(use_with ocaml) \
 		$(use_with java ) \
