@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-0.2.45-r1.ebuild,v 1.3 2006/08/12 18:44:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-0.2.45-r1.ebuild,v 1.4 2008/01/19 15:10:58 drac Exp $
 
 MY_PV=${PV}-0.2
 DESCRIPTION="Debian bootstrap scripts"
@@ -17,14 +17,14 @@ IUSE=""
 
 src_unpack() {
 	unpack debootstrap_${MY_PV}.tar.gz
-	cp ${DISTDIR}/devices.tar.gz ${S}
+	cp ${DISTDIR}/devices.tar.gz "${S}"
 }
 
 src_compile() {
 	sed -i -e "s/chown/#chown/" Makefile
-	make pkgdetails debootstrap-arch
+	make pkgdetails debootstrap-arch || die
 }
 
 src_install() {
-	make DESTDIR=${D} install
+	make DESTDIR="${D}" install || die
 }
