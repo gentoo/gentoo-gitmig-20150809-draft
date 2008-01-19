@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1.ebuild,v 1.7 2008/01/12 16:35:31 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1.ebuild,v 1.8 2008/01/19 03:16:46 halcy0n Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -301,10 +301,6 @@ src_compile() {
 	# Make sure gnome-users get gtk-support
 	export GTKFLAG="`use_enable gtk`" && use gnome && GTKFLAG="--enable-gtk"
 
-	# We have to disable mono-support for ppc, it's broken
-	export MYCONF="`use_enable mono`"
-	use ppc && MYCONF="--disable-mono" && ewarn "Mono support is currently broken on ppc, so disabling it"
-
 	cd ${S}
 	./configure ${MYCONF} \
 		--with-distro="Gentoo" \
@@ -317,6 +313,7 @@ src_compile() {
 		--with-installed-ooo-dirname="openoffice" \
 		--with-tag="OOG680_m9" \
 		"${GTKFLAG}" \
+		`use_enable mono` \
 		`use_enable kde` \
 		`use_enable cairo` \
 		`use_with cairo system-cairo` \
