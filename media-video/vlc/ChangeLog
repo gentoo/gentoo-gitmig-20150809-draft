@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.286 2008/01/19 16:01:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.287 2008/01/19 16:12:09 armin76 Exp $
+
+  19 Jan 2008; Raúl Porcel <armin76@gentoo.org> vlc-0.8.6d.ebuild:
+  alpha stable wrt security #203345, thanks to Tobias Klausmann for testing
 
   19 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   -vlc-0.9.0_alpha20071022.ebuild, -vlc-0.9.0_alpha20080110.ebuild:
@@ -16,9 +19,6 @@
   17 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   +vlc-0.9.0_alpha20080117.ebuild:
   add a new snapshot
-
-  16 Jan 2008; Raúl Porcel <armin76@gentoo.org> ChangeLog:
-  alpha stable wrt security #203345, thanks to Tobias Klausmann for testing
 
   12 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   vlc-0.9.0_alpha20080110.ebuild:
