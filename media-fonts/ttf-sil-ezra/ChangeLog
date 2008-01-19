@@ -1,6 +1,15 @@
-# ChangeLog for media-fonts/ezra-sil
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-ezra/ChangeLog,v 1.1 2008/01/19 22:31:59 dirtyepic Exp $
+# ChangeLog for media-fonts/ttf-sil-ezra
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-ezra/ChangeLog,v 1.2 2008/01/19 23:00:35 dirtyepic Exp $
+
+*ttf-sil-ezra-2.51 (19 Jan 2008)
+
+  19 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> -ttf-sil-ezra-2.0.ebuild,
+  +ttf-sil-ezra-2.51.ebuild:
+  Version bump.  Remove old.
+
+  19 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> ChangeLog:
+  Note: package moved from media-fonts/ezra-sil to media-fonts/ttf-sil-ezra.
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> ezra-sil-2.5.ebuild:
   Stable on ppc wrt bug 189977
