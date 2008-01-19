@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ocamlgraph-0.99b.ebuild,v 1.1 2008/01/04 01:27:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ocamlgraph-0.99b.ebuild,v 1.2 2008/01/19 01:36:07 aballier Exp $
 
 inherit findlib eutils
 
@@ -27,7 +27,7 @@ ocamlgraph_need_use() {
 pkg_setup() {
 	use ocamlopt && ocamlgraph_need_use 'dev-lang/ocaml' ocamlopt
 	use gtk && ocamlgraph_need_use 'dev-ml/lablgtk' gnomecanvas
-	use ocamlopt && use gtk && ocamlgraph_need_use 'dev-lang/lablgtk' ocamlopt
+	use ocamlopt && use gtk && ocamlgraph_need_use 'dev-ml/lablgtk' ocamlopt
 }
 
 src_unpack() {
