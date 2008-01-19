@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/ttf-sil-ezra
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-ezra/ChangeLog,v 1.2 2008/01/19 23:00:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-ezra/ChangeLog,v 1.3 2008/01/19 23:02:42 dirtyepic Exp $
+
+  19 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> ttf-sil-ezra-2.51.ebuild:
+  Add missing blocker.
 
 *ttf-sil-ezra-2.51 (19 Jan 2008)
 
