@@ -1,6 +1,9 @@
 # ChangeLog for games-board/ccgo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ChangeLog,v 1.4 2006/10/05 17:20:54 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ChangeLog,v 1.5 2008/01/19 08:52:39 nyhm Exp $
+
+  19 Jan 2008; Tristan Heaven <nyhm@gentoo.org> ccgo-0.3.6.2.ebuild:
+  Add pkgconfig dep, bug #206300
 
   05 Oct 2006; Tristan Heaven <nyhm@gentoo.org> ccgo-0.3.6.2.ebuild:
   Fix gettext dependency
