@@ -1,6 +1,11 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.53 2008/01/12 03:49:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.54 2008/01/19 17:20:15 genstef Exp $
+
+  19 Jan 2008; Stefan Schweizer <genstef@gentoo.org>
+  -files/gnash-0.8.0-ffmpeg.patch, -gnash-0.8.0.ebuild, -gnash-0.8.1.ebuild,
+  gnash-0.8.1-r1.ebuild:
+  remove old, dont offer fltk because we do not have fltk2, bug 205408
 
 *gnash-0.8.1-r1 (12 Jan 2008)
 
