@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.11.1.ebuild,v 1.1 2008/01/16 02:13:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.11.1.ebuild,v 1.2 2008/01/19 21:42:32 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -584,6 +584,9 @@ pkg_postinst() {
 		ewarn "Consult ${ROOT}/etc/conf.d/net.example for details about how"
 		ewarn "to apply dns/nis information to the loopback interface."
 	fi
+
+	elog "The default setting for wiping /tmp has been set to 'yes'."
+	elog "Consult /etc/conf.d/bootmisc for more information."
 }
 
 pkg_prerm() {
