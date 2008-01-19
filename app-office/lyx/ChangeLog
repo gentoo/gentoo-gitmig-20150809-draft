@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.109 2008/01/19 14:47:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.110 2008/01/19 15:05:01 aballier Exp $
+
+  19 Jan 2008; Alexis Ballier <aballier@gentoo.org> lyx-1.4.4.ebuild,
+  lyx-1.5.3.ebuild:
+  python is also needed at runtime, thanks to Pavel Sanda <ps@twin.jikos.cz>
 
   19 Jan 2008; Alexis Ballier <aballier@gentoo.org> lyx-1.5.3.ebuild:
   export CXX to call the correct one and not g++ directly, thanks again to
