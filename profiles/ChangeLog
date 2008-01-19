@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1020 2008/01/19 14:54:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1021 2008/01/19 16:15:57 aballier Exp $
+
+  19 Jan 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask ocaml 3.10.1 now that I've properly tested it
 
   19 Jan 2008; Christoph Mende <angelos@gentoo.org> use.local.desc:
   Add twisted USE flag for dev-python/zsi
