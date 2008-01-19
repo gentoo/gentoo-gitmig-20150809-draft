@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.164 2007/12/27 20:05:32 pva Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.165 2008/01/19 12:55:29 armin76 Exp $
+
+  19 Jan 2008; Raúl Porcel <armin76@gentoo.org> net-snmp-5.4.1-r3.ebuild:
+  alpha/ia64/sparc/x86 stable
 
 *net-snmp-5.4.1-r3 (27 Dec 2007)
 
