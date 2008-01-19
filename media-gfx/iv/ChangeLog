@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/iv
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/ChangeLog,v 1.19 2008/01/16 23:00:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/ChangeLog,v 1.20 2008/01/19 13:39:12 nixnut Exp $
+
+  19 Jan 2008; nixnut <nixnut@gentoo.org> iv-2.1.4.ebuild:
+  Stable on ppc wrt bug 206236
 
   16 Jan 2008; Markus Meier <maekke@gentoo.org> iv-2.1.4.ebuild:
   prevent pre-stripped files and x86 stable
