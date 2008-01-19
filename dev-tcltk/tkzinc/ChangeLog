@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkzinc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/ChangeLog,v 1.4 2007/04/28 00:12:47 matsuu Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/ChangeLog,v 1.5 2008/01/19 00:32:13 matsuu Exp $
+
+  19 Jan 2008; MATSUU Takuto <matsuu@gentoo.org> tkzinc-3.3.4.ebuild:
+  Removed opengl USE flag, bug #206225.
 
 *tkzinc-3.3.4 (28 Apr 2007)
 
