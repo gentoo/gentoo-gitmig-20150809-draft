@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1022 2008/01/19 17:15:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1023 2008/01/19 21:17:01 ingmar Exp $
+
+  19 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> package.mask:
+  Point to the KDE 4 guide in my KDE 4 mask message.
 
   19 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   package.mask dev-java/jsx
