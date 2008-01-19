@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/seahorse
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.83 2007/11/26 14:21:32 corsair Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.84 2008/01/19 23:01:11 eva Exp $
+
+*seahorse-2.20.3 (19 Jan 2008)
+
+  19 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/seahorse-0.8.2-gpg2.0.patch,
+  -files/seahorse-1.0.1-setuid-agent.patch, -seahorse-0.8.1.ebuild,
+  -seahorse-0.8.2-r1.ebuild, -seahorse-1.0.ebuild, -seahorse-1.0.1.ebuild,
+  -seahorse-2.20.0.ebuild, +seahorse-2.20.3.ebuild:
+  clean up old revisions, bump to 2.20.3 (translation updates)
 
   26 Nov 2007; Markus Rothe <corsair@gentoo.org> seahorse-2.20.1.ebuild:
   Stable on ppc64; bug #199740
