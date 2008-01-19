@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.9.2-r1.ebuild,v 1.1 2008/01/06 16:40:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.9.2-r1.ebuild,v 1.2 2008/01/19 16:13:45 aballier Exp $
 
 WANT_AUTOCONF=2.5
 
@@ -98,6 +98,7 @@ src_compile() {
 		$(use_enable gnutella gnutella2) \
 		$(use_enable gd) \
 		$(use_enable magic) \
+		--enable-ocamlver=3.10 \
 		${myconf} || die "econf failed"
 
 	export OCAMLRUNPARAM="l=256M"
