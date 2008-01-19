@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.1.ebuild,v 1.1 2007/11/30 15:11:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.14.1.ebuild,v 1.2 2008/01/19 19:34:15 george Exp $
 
-inherit eutils versionator toolchain-funcs kde-functions
+inherit base eutils versionator toolchain-funcs kde-functions
 
 My_PV=$(get_version_component_range 1-2)
 
@@ -20,6 +20,8 @@ DEPEND=">=dev-util/subversion-1.3
 		>=dev-util/cmake-2.4"
 
 need-kde 3.3
+
+PATCHES="${FILESDIR}/${P}-as-needed.patch"
 
 src_compile() {
 	local myconf

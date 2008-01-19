@@ -1,0 +1,25 @@
+diff -Naur kdesvn-0.14.1/src/svnqt/CMakeLists.txt kdesvn-0.14.1.new/src/svnqt/CMakeLists.txt
+--- kdesvn-0.14.1/src/svnqt/CMakeLists.txt	2007-08-31 16:24:28.000000000 +0200
++++ kdesvn-0.14.1.new/src/svnqt/CMakeLists.txt	2007-12-30 20:52:19.000000000 +0100
+@@ -132,7 +132,7 @@
+ SET(ALL_LINKFLAGS ${APR_EXTRA_LIBFLAGS})
+ SET(ALL_LINKFLAGS "${ALL_LINKFLAGS} ${APU_EXTRA_LIBFLAGS}")
+ SET_TARGET_PROPERTIES(${svnqt-name} PROPERTIES LINK_FLAGS "${ALL_LINKFLAGS} ${LINK_NO_UNDEFINED}")
+-TARGET_LINK_LIBRARIES(${svnqt-name} ${QT_LIBRARIES} ${SUBVERSION_ALL_LIBS})
++TARGET_LINK_LIBRARIES(${svnqt-name} ${QT_LIBRARIES} ${SUBVERSION_ALL_LIBS} ${APR_LIBS} ${APU_LIBS})
+ 
+ IF (WIN32)
+     TARGET_LINK_LIBRARIES( ${svnqt-name} wsock32.lib  )
+diff -Naur kdesvn-0.14.1/src/svnqt/cmakemodules/FindSubversion.cmake kdesvn-0.14.1.new/src/svnqt/cmakemodules/FindSubversion.cmake
+--- kdesvn-0.14.1/src/svnqt/cmakemodules/FindSubversion.cmake	2007-06-11 13:43:33.000000000 +0200
++++ kdesvn-0.14.1.new/src/svnqt/cmakemodules/FindSubversion.cmake	2007-12-30 20:52:00.000000000 +0100
+@@ -64,6 +64,9 @@
+   EXEC_PROGRAM(${APR_CONFIG} ARGS "--ldflags --libs --link-ld" OUTPUT_VARIABLE APR_EXTRA_LIBFLAGS)
+   EXEC_PROGRAM(${APU_CONFIG} ARGS "--ldflags --libs --link-ld" OUTPUT_VARIABLE APU_EXTRA_LIBFLAGS)
+ 
++  EXEC_PROGRAM(${APR_CONFIG} ARGS "--link-ld" OUTPUT_VARIABLE APR_LIBS)
++  EXEC_PROGRAM(${APU_CONFIG} ARGS "--link-ld" OUTPUT_VARIABLE APU_LIBS)
++
+ ENDIF (UNIX)
+ 
+ #search libaries for Windows

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdesvn
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.34 2007/11/30 15:11:18 george Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.35 2008/01/19 19:34:15 george Exp $
+
+  19 Jan 2008; George Shapovalov <george@gentoo.org>
+  +files/kdesvn-0.14.1-as-needed.patch, kdesvn-0.14.1.ebuild:
+  fixed --as-needed compile failure (another one). Thanks to Krzysztof Nowicki
+  for suggested fix (#187318)
 
 *kdesvn-0.14.1 (30 Nov 2007)
 
