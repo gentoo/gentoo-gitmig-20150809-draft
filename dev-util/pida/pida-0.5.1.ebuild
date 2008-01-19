@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.5.1.ebuild,v 1.2 2007/12/31 01:11:21 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.5.1.ebuild,v 1.3 2008/01/19 12:53:28 welp Exp $
 
 NEED_PYTHON=2.4
 
@@ -21,7 +21,8 @@ DEPEND=">=dev-python/pygtk-2.8
 	dev-python/gnome-python
 	gnome? ( >=dev-python/gnome-python-extras-2.14.0-r1 )
 	>=x11-libs/vte-0.11.11-r2
-	>=dev-python/kiwi-1.9.1"
+	>=dev-python/kiwi-1.9.1
+	>=dev-util/pkgconfig-0.22"
 RDEPEND="${DEPEND}
 	>=app-editors/gvim-6.3"
 S=${WORKDIR}/${MY_P}
