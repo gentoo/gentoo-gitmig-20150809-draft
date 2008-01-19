@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.8.ebuild,v 1.1 2007/08/23 14:01:26 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.8.ebuild,v 1.2 2008/01/19 09:03:28 nyhm Exp $
 
 inherit eutils games
 
@@ -13,8 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="mikmod"
 
-DEPEND="=dev-games/clanlib-0.8*
+RDEPEND="=dev-games/clanlib-0.8*
 	mikmod? ( media-libs/libmikmod )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
@@ -43,6 +45,6 @@ src_install() {
 	newicon docs/puff.gif ${PN}.gif
 	make_desktop_entry ${PN} "Super Methane Brothers" /usr/share/pixmaps/${PN}.gif
 	dodoc authors history readme todo
-	dohtml "${S}"/docs/*
+	dohtml docs/*
 	prepgamesdirs
 }
