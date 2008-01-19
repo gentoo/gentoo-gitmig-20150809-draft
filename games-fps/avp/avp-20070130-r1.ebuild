@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20070130-r1.ebuild,v 1.2 2007/09/10 19:37:43 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20070130-r1.ebuild,v 1.3 2008/01/19 05:05:52 nyhm Exp $
 
 inherit eutils games
 
@@ -13,10 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="x86? (
-		media-libs/openal
-		media-libs/libsdl
-	)
+DEPEND="virtual/opengl
+	media-libs/openal
+	media-libs/libsdl
 	amd64? ( app-emulation/emul-linux-x86-sdl )"
 
 S=${WORKDIR}/${PN}
@@ -41,6 +40,6 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	elog "please follow the instructions in"
-	elog "/usr/share/doc/${PF}/README.gz"
+	elog "/usr/share/doc/${PF}"
 	elog "to install the rest of the game"
 }
