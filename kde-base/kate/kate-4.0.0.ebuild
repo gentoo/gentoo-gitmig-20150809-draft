@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.0.0.ebuild,v 1.2 2008/01/19 14:14:37 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.0.0.ebuild,v 1.3 2008/01/19 14:58:10 ingmar Exp $
 
 EAPI="1"
 
@@ -19,6 +19,6 @@ RDEPEND="${DEPEND}
 	dev-libs/libxslt"
 
 src_unpack() {
-	use htmlhandbook && KMEXTRA="docs/kate-plugins"
+	use htmlhandbook && KMEXTRA="doc/kate-plugins"
 	kde4-meta_src_unpack
 }
