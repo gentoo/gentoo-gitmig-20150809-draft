@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kbfx
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.17 2007/05/22 19:01:12 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.18 2008/01/19 16:36:35 genstef Exp $
+
+  19 Jan 2008; Stefan Schweizer <genstef@gentoo.org>
+  kbfx-0.4.9.3.1-r1.ebuild:
+  make sure kdelibs is in depend, bug 205900
 
   22 May 2007; Wulf C. Krueger <philantrop@gentoo.org>
   kbfx-0.4.9.3.1-r1.ebuild:

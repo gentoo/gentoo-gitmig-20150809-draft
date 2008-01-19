@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/kbfx-0.4.9.3.1-r1.ebuild,v 1.7 2007/05/22 19:01:12 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/kbfx-0.4.9.3.1-r1.ebuild,v 1.8 2008/01/19 16:36:35 genstef Exp $
 
 inherit kde eutils
 
@@ -15,7 +15,8 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=dev-util/cmake-2.4.2"
+DEPEND="${DEPEND}
+	>=dev-util/cmake-2.4.2"
 RDEPEND="${DEPEND}"
 
 export DESTDIR=${D}
