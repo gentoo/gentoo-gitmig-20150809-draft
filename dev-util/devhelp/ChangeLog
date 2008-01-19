@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/devhelp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.67 2007/11/27 11:11:23 eva Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.68 2008/01/19 22:01:39 eva Exp $
+
+*devhelp-0.17 (19 Jan 2008)
+
+  19 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org> +devhelp-0.17.ebuild:
+  bump to 0.17
 
   27 Nov 2007; Gilles Dartiguelongue <eva@gentoo.org> -devhelp-0.14.ebuild,
   -devhelp-0.16.ebuild, devhelp-0.16.1.ebuild:
