@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.4.1.57486.ebuild,v 1.1 2007/12/22 13:47:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.4.2.58240.ebuild,v 1.1 2008/01/19 14:07:17 genstef Exp $
 
 inherit eutils qt4
 
