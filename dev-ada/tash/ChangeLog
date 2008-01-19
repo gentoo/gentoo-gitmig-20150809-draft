@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/tash
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/tash/ChangeLog,v 1.2 2007/04/07 04:02:54 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/tash/ChangeLog,v 1.3 2008/01/19 17:03:07 george Exp $
+
+  19 Jan 2008; George Shapovalov <george@gentoo.org> tash-8.4.1a.ebuild:
+  updated HOMEPAGE, now it seems there is a site to which it can be set
 
   07 Apr 2007; Mike Frysinger <vapier@gentoo.org> tash-8.4.1a.ebuild:
   Remove DOCDESTTREE reference since it isnt set anywhere and it defaults to "".

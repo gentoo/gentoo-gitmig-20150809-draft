@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/tash/tash-8.4.1a.ebuild,v 1.4 2007/04/07 04:02:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/tash/tash-8.4.1a.ebuild,v 1.5 2008/01/19 17:03:07 george Exp $
 
 inherit versionator gnat
 
 DESCRIPTION="Tash provides tcl Ada bindings"
-HOMEPAGE="http://www.tupone.it"
+HOMEPAGE="http://tcladashell.sourceforge.net/index.htm"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
