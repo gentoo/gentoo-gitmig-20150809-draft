@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.7-r2.ebuild,v 1.1 2007/12/23 23:41:36 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.7-r2.ebuild,v 1.2 2008/01/19 11:36:43 hollow Exp $
 
 inherit eutils webapp versionator depend.apache
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="cgi geoip"
+IUSE="geoip"
 
 RESTRICT="mirror"
 
@@ -24,15 +24,6 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	geoip? ( dev-perl/Geo-IP )"
 
 want_apache
-
-pkg_setup() {
-	if ! use cgi; then
-		ewarn "You have not enabled the cgi USE flag."
-		ewarn "This means you need to generate static"
-		ewarn "HTML statistics instead of using awstats.pl"
-	fi
-	webapp_pkg_setup
-}
 
 src_unpack() {
 	unpack ${A}
@@ -83,10 +74,8 @@ src_install() {
 	keepdir /var/lib/awstats
 
 	# Copy the app's main files
-	if use cgi; then
-		exeinto "${MY_CGIBINDIR}"
-		doexe "${S}"/wwwroot/cgi-bin/*.pl
-	fi
+	exeinto "${MY_CGIBINDIR}"
+	doexe "${S}"/wwwroot/cgi-bin/*.pl
 
 	exeinto "${MY_HTDOCSDIR}"/classes
 	doexe "${S}"/wwwroot/classes/*.jar

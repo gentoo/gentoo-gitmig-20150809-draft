@@ -1,6 +1,9 @@
 # ChangeLog for net-www/awstats
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.53 2007/12/23 23:41:35 cla Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.54 2008/01/19 11:36:43 hollow Exp $
+
+  19 Jan 2008; Benedikt Böhm <hollow@gentoo.org> awstats-6.7-r2.ebuild:
+  remove bogus USE=-cgi
 
 *awstats-6.7-r2 (23 Dec 2007)
 
