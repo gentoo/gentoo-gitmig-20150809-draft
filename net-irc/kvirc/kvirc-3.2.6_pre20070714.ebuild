@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.6_pre20070714.ebuild,v 1.6 2007/09/06 12:13:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.6_pre20070714.ebuild,v 1.7 2008/01/19 13:59:12 ingmar Exp $
 
 inherit autotools eutils kde-functions
 
@@ -16,7 +16,7 @@ IUSE="debug esd ipv6 kde oss ssl"
 RDEPEND="esd? ( media-sound/esound )
 	ssl? ( dev-libs/openssl )
 	oss? ( media-libs/audiofile )
-	kde? ( >=kde-base/kdelibs-3 )
+	kde? ( =kde-base/kdelibs-3.5* )
 	=x11-libs/qt-3*"
 
 DEPEND="${RDEPEND}
@@ -50,7 +50,7 @@ src_compile() {
 	use esd || myconf="${myconf} --without-esd-support"
 	use ssl || myconf="${myconf} --without-ssl-support"
 
-	[ "${ARCH}" == "x86" ] && myconf="${myconf} --with-ix86-asm"
+	[[ "${ARCH}" == "x86" ]] && myconf="${myconf} --with-ix86-asm"
 
 	econf ${myconf} || die "econf failed"
 	emake -j1 || die "econf failed"

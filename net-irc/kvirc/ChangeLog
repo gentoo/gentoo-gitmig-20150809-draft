@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.58 2007/11/16 08:23:01 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.59 2008/01/19 13:59:12 ingmar Exp $
+
+  19 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  kvirc-3.2.6_pre20070714.ebuild, kvirc-9999.ebuild:
+  Fix KDE dependencies wrt bug 206617.
 
   16 Nov 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog
   kvirc-9999.ebuild:
