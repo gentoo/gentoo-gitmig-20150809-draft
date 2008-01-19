@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.16.0-r1.ebuild,v 1.2 2007/11/30 18:14:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.16.0-r1.ebuild,v 1.3 2008/01/19 02:03:39 ingmar Exp $
 
 inherit eutils distutils
 
@@ -18,15 +18,15 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug doc examples"
 
-DEPEND="|| ( kde-base/kdebase kde-base/konsole )"
+DEPEND="|| ( =kde-base/kdebase-3.5* =kde-base/konsole-3.5* )"
 RDEPEND=">=dev-python/sip-4.7
-	>=dev-python/PyQt-3.16.0
-	kde-base/kdelibs
+	>=dev-python/PyQt-3.17.3
+	=kde-base/kdelibs-3.5*
 	!kde-base/pykde"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/PyKDE-3.16.0-sip-4.7.patch
+	epatch "${FILESDIR}"/PyKDE-3.16.0-sip-4.7.patch
 }
 
 src_compile() {
