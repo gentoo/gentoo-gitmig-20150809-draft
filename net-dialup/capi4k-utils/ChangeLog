@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capi4k-utils
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.59 2007/11/14 19:59:23 genstef Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.60 2008/01/20 11:48:51 sbriesen Exp $
+
+  20 Jan 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/capi20-types.diff, capi4k-utils-20050718-r3.ebuild:
+  added sys/types patch (needed for glibc-2.7, solves bug #201510)
 
   02 May 2007; Marius Mauch <genone@gentoo.org>
   capi4k-utils-20050718-r3.ebuild:

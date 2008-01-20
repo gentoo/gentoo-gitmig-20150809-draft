@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r3.ebuild,v 1.9 2007/11/14 19:59:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r3.ebuild,v 1.10 2008/01/20 11:48:51 sbriesen Exp $
 
 inherit eutils multilib linux-info
 
@@ -48,6 +48,9 @@ src_unpack() {
 
 	# apply msg2str-safety patch (see bug #170870)
 	epatch "${PATCHDIR}/msg2str-safety.diff"
+
+	# apply sys/types patch (needed for glibc-2.7)
+	epatch "${FILESDIR}/capi20-types.diff"
 
 	# set our config
 	cp -f "${FILESDIR}/config" .config
