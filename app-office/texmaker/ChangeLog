@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.35 2007/11/11 19:35:43 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.36 2008/01/20 16:57:35 ranger Exp $
+
+  20 Jan 2008; Brent Baude <ranger@gentoo.org> texmaker-1.60.ebuild:
+  Marking texmaker-1.60 ppc for bug 193181
 
 *texmaker-1.60 (11 Nov 2007)
 
