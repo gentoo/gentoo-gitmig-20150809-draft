@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/p0f
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.40 2007/12/01 11:50:58 nixnut Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.41 2008/01/20 15:21:25 armin76 Exp $
+
+  20 Jan 2008; Raúl Porcel <armin76@gentoo.org> -files/p0f.initd2,
+  -p0f-2.0.8.ebuild:
+  old
 
   01 Dec 2007; nixnut <nixnut@gentoo.org> p0f-2.0.8-r1.ebuild:
   Stable on ppc wrt bug 200415
