@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/strigiapplet
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/strigiapplet/ChangeLog,v 1.1 2008/01/20 21:10:53 philantrop Exp $
+
+*strigiapplet-0.5.7 (20 Jan 2008)
+
+  20 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +strigiapplet-0.5.7.ebuild:
+  Initial ebuild as per bug 205793.
+
