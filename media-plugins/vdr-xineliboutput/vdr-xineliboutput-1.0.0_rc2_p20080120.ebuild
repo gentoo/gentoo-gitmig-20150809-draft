@@ -1,21 +1,24 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2.ebuild,v 1.7 2008/01/20 22:55:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2_p20080120.ebuild,v 1.1 2008/01/20 22:55:39 zzam Exp $
 
 inherit vdr-plugin eutils multilib
 
-MY_PV=${PV/_/}
-MY_P=${PN}-${MY_PV}
-#TIMESTAMP=CVS-${PV##*_p}000000
-#MY_P=${PN}-${TIMESTAMP}
+#MY_PV=${PV/_/}
+#MY_P=${PN}-${MY_PV}
+MY_PV=${PV##*_p}
+MY_P=${PN}-cvs-${MY_PV}
+
+SO_VERSION="${PV%_p*}"
+SO_VERSION="${SO_VERSION/_/}"
 
 DESCRIPTION="Video Disk Recorder Xinelib PlugIn"
 HOMEPAGE="http://sourceforge.net/projects/xineliboutput/"
-SRC_URI="mirror://sourceforge/${PN#vdr-}/${MY_P}.tgz"
+SRC_URI="mirror://sourceforge/${PN#vdr-}/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="fbcon X"
 
 RDEPEND=">=media-video/vdr-1.3.42
@@ -35,13 +38,11 @@ DEPEND="${RDEPEND}
 			x11-libs/libXext
 		)"
 
-#MY_PV=${PV%_p*}
-#MY_PV=${MY_PV/_/}
-S=${WORKDIR}/xineliboutput-${MY_PV}
+S=${WORKDIR}/${MY_P#vdr-}
 
 VDR_CONFD_FILE=${FILESDIR}/confd-1.0.0_pre6
-PATCHES="${FILESDIR}/${P}-vdr-1.5.3.diff
-	${FILESDIR}/${P}-vdr-1.5.9.diff"
+#PATCHES="${FILESDIR}/${P}-vdr-1.5.3.diff
+#	${FILESDIR}/${P}-vdr-1.5.9.diff"
 
 NO_GETTEXT_HACK=1
 
@@ -78,7 +79,7 @@ src_install() {
 	dobin vdr-fbfe vdr-sxfe
 
 	insinto ${VDR_PLUGIN_DIR}
-	doins *.so.${MY_PV} || die "could not install sub-plugins"
+	doins *.so.${SO_VERSION} || die "could not install sub-plugins"
 
 	insinto /usr/$(get_libdir)/xine/plugins/${XINE_LIB_VERSION}
 	doins xineplug_inp_*.so
