@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20070420.ebuild,v 1.1 2007/05/31 14:47:41 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20070420.ebuild,v 1.2 2008/01/20 21:53:16 george Exp $
 
 IUSE="doc"
 
@@ -21,22 +21,21 @@ SLOT="0"
 RDEPEND="virtual/gnat"
 
 DEPEND="${RDEPEND}
-	doc? ( app-arch/unzip )"
+	app-arch/unzip"
 
 lib_compile() {
-	cd ${SL}/GNAT
+	cd "${SL}"/GNAT
 	make
 }
 
 lib_install() {
-	mkdir -p ${DL}/Debug
-	mv ${SL}/GNAT/*-Release/lib/* ${DL}
-	mv ${SL}/GNAT/*-Debug/lib/* ${DL}/Debug
-	chmod 0444 ${DL}/*.ali ${DL}/Debug/*.ali
+	mkdir -p "${DL}"/Debug
+	mv "${SL}"/GNAT/*-Release/lib/* "${DL}"
+	mv "${SL}"/GNAT/*-Debug/lib/* "${DL}"/Debug
+	chmod 0444 "${DL}"/*.ali "${DL}"/Debug/*.ali
 }
 
 src_install () {
-	cd ${S}
 	dodir "${AdalibSpecsDir}/${PN}"
 	insinto "${AdalibSpecsDir}/${PN}"
 	doins *.ad?
@@ -49,14 +48,14 @@ src_install () {
 	gnat_src_install
 
 	# Install documentation.
-	dodoc COPYING README
+	dodoc README
 	if use doc ; then
 		einfo "installing docs"
-		cd ${WORKDIR}
+		cd "${WORKDIR}"
 		dohtml *.html *.gif *.jpg
-		cp coldframe-hash.* x.ada ${D}/usr/share/doc/${PF}/html
+		cp coldframe-hash.* x.ada "${D}"/usr/share/doc/${PF}/html
 
-		cd ${S}
+		cd "${S}"
 		dodir /usr/share/doc/${PF}/demo
 		insinto /usr/share/doc/${PF}/demo
 		doins demo/*

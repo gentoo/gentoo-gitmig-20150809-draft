@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20051222-r1.ebuild,v 1.5 2007/06/26 01:44:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20051222-r1.ebuild,v 1.6 2008/01/20 21:53:16 george Exp $
 
 IUSE="doc"
 
@@ -22,7 +22,7 @@ RDEPEND="virtual/gnat
 	>=app-admin/eselect-gnat-0.7"
 
 DEPEND="${RDEPEND}
-	doc? ( app-arch/unzip )"
+	app-arch/unzip"
 
 lib_compile() {
 	cd ${SL}/GNAT
@@ -32,17 +32,17 @@ lib_compile() {
 lib_install() {
 	# new style booch components install Debug and Release versions, we only
 	# need the lib subdir of either
-	mkdir -p ${DL}/Debug
+	mkdir -p "${DL}"/Debug
 	# both $SL and $DL are under ${WORKDIR}, so no dodir, doins...
 	# (as lib_install is  called from src_compile it is not safe to have $DL
 	# under $D)
-	mv ${SL}/GNAT/*-Release/lib/* ${DL}
-	mv ${SL}/GNAT/*-Debug/lib/* ${DL}/Debug
+	mv "${SL}"/GNAT/*-Release/lib/* "${DL}"
+	mv "${SL}"/GNAT/*-Debug/lib/* "${DL}"/Debug
 }
 
 src_install () {
 	dodir "${AdalibSpecsDir}/${PN}"
-	cd ${S}
+	cd "${S}"
 	insinto "${AdalibSpecsDir}/${PN}"
 	doins *.ad?
 
@@ -54,14 +54,14 @@ src_install () {
 	gnat_src_install
 
 	# Install documentation.
-	dodoc COPYING README
+	dodoc README
 	if use doc ; then
 		einfo "installing docs"
-		cd ${WORKDIR}
+		cd "${WORKDIR}"
 		dohtml *.html *.gif *.jpg
-		cp coldframe-hash.* x.ada ${D}/usr/share/doc/${PF}/html
+		cp coldframe-hash.* x.ada "${D}"/usr/share/doc/${PF}/html
 
-		cd ${S}
+		cd "${S}"
 		dodir /usr/share/doc/${PF}/demo
 		insinto /usr/share/doc/${PF}/demo
 		doins demo/*
