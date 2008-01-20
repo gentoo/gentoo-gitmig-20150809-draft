@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.1-r1.ebuild,v 1.2 2008/01/19 17:20:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.1-r1.ebuild,v 1.3 2008/01/20 04:04:33 vapier Exp $
 
 inherit nsplugins kde-functions qt3 multilib
 set-kdedir eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="agg cairo fbcon ffmpeg gstreamer gtk kde mad nsplugin opengl qt sdl video_cards_i810"
+IUSE="agg cairo fbcon ffmpeg gstreamer gtk kde mad nsplugin opengl qt3 sdl video_cards_i810"
 
 RDEPEND="
 	agg? ( >=x11-libs/agg-2.5 )
@@ -29,9 +29,9 @@ RDEPEND="
 		dev-libs/atk
 	)
 	kde? ( kde-base/kdelibs )
-	qt? ( x11-libs/qt )
+	qt3? ( x11-libs/qt )
 	sdl? ( media-libs/libsdl )
-	!gtk? ( !kde? ( !qt? ( !sdl? ( ( !fbcon? (
+	!gtk? ( !kde? ( !qt3? ( !sdl? ( ( !fbcon? (
 		>x11-libs/gtk+-2
 		x11-libs/pango
 		dev-libs/glib
@@ -116,11 +116,11 @@ src_compile() {
 	#use fltk && gui="${gui},fltk"
 	use gtk && gui="${gui},gtk"
 	use kde && gui="${gui},kde"
-	use qt && gui="${gui},qt"
+	use qt3 && gui="${gui},qt"
 	use sdl && gui="${gui},sdl"
 	gui=${gui#,}
 	if [[ -z ${gui} ]] ; then
-		ewarn "You did not select a gui from: fbcon gtk kde qt sdl" #fltk
+		ewarn "You did not select a gui from: fbcon gtk kde qt3 sdl" #fltk
 		ewarn " - Default of gtk,kde has been selected for you"
 		gui="gtk,kde"
 	fi
