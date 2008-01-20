@@ -1,15 +1,15 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.12.ebuild,v 1.1 2007/10/14 15:35:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.12.ebuild,v 1.2 2008/01/20 16:40:34 drac Exp $
 
-DESCRIPTION="GTK+ based fast and lightweight IDE"
+DESCRIPTION="GTK+ based fast and lightweight IDE."
 HOMEPAGE="http://geany.uvena.de"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	http://files.uvena.de/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 Scintilla"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="doc minimal"
 
 RDEPEND=">=x11-libs/gtk+-2.6
@@ -20,6 +20,14 @@ DEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Fix test suite.
+	echo geany.desktop.in.in >> po/POTFILES.skip
+	echo geany.glade >> po/POTFILES.skip
+	echo plugins/demoplugin.c >> po/POTFILES.skip
+	echo geany.desktop.in.in >> po/POTFILES.skip
+	echo geany.glade >> po/POTFILES.skip
+	echo plugins/demoplugin.c >> po/POTFILES.skip
 
 	# Add syntax highlighting for Portage.
 	sed -i -e "s:*.sh;:*.sh;*.ebuild;*.eclass;:" data/filetype_extensions.conf

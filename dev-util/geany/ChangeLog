@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/geany
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.7 2007/10/14 15:35:18 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.8 2008/01/20 16:40:34 drac Exp $
+
+  20 Jan 2008; Samuli Suominen <drac@gentoo.org> geany-0.12.ebuild:
+  Fix test suite and mark amd64 stable wrt #206784.
 
 *geany-0.12 (14 Oct 2007)
 
