@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ncurses-ruby
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.26 2008/01/20 07:00:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.27 2008/01/20 16:32:04 ranger Exp $
+
+  20 Jan 2008; Brent Baude <ranger@gentoo.org> ncurses-ruby-1.1.ebuild:
+  Marking ncurses-ruby-1.1 ppc and ppc64 for bug 206737
 
   20 Jan 2008; Hans de Graaff <graaff@gentoo.org> ncurses-ruby-1.1.ebuild:
   Remove obsolete variable for #145222
