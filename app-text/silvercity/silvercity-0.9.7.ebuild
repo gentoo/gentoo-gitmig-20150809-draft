@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/silvercity-0.9.7.ebuild,v 1.5 2007/05/15 17:04:16 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/silvercity-0.9.7.ebuild,v 1.6 2008/01/20 15:45:24 grobian Exp $
 
 inherit distutils eutils python
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc-macos ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3"
