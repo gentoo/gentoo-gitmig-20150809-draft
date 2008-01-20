@@ -1,20 +1,20 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2.ebuild,v 1.4 2007/03/10 14:49:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2-r1.ebuild,v 1.1 2008/01/20 15:02:38 armin76 Exp $
 
-inherit bash-completion
+inherit bash-completion eutils
 
 TEST_DATA_PV="20051023"
 TEST_DATA_P="${PN}-test-data-${TEST_DATA_PV}"
 
-DESCRIPTION="A multi-purpose query tool capable of things such as displaying herd/developer information and displaying category/package metadata"
+DESCRIPTION="Query tool capable of displaying herd/developer information category/package metadata"
 HOMEPAGE="http://developer.berlios.de/projects/herdstat/"
 SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2
 	test? ( http://download.berlios.de/lib${PN}/${TEST_DATA_P}.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~mips ~ppc sparc x86"
 IUSE="debug doc ncurses test"
 
 RDEPEND="~dev-cpp/libherdstat-0.1.1"
@@ -23,9 +23,16 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( dev-python/docutils )"
 
+src_unpack () {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/1.1.2-herds-xml-location.patch
+}
+
 src_compile() {
 	econf \
-		--with-test-data=${WORKDIR}/${TEST_DATA_P} \
+		--with-test-data="${WORKDIR}"/${TEST_DATA_P} \
 		$(use_enable debug) \
 		$(use_with ncurses) \
 		|| die "econf failed"
@@ -49,13 +56,13 @@ src_install() {
 }
 
 pkg_preinst() {
-	chgrp portage ${D}/var/lib/herdstat
+	chgrp portage "${D}"/var/lib/herdstat
 }
 
 pkg_postinst() {
 	# remove any previous caches, as it's possible that the internal
 	# format has changed, and may cause bugs.
-	rm -f ${ROOT}/var/lib/herdstat/*cache*
+	rm -f "${ROOT}"/var/lib/herdstat/*cache*
 
 	elog
 	elog "You must be in the portage group to use herdstat."

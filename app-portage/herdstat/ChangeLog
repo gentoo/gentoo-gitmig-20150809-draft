@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.79 2008/01/20 02:00:58 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.80 2008/01/20 15:02:38 armin76 Exp $
+
+*herdstat-1.1.2-r1 (20 Jan 2008)
+
+  20 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  +files/1.1.2-herds-xml-location.patch, -herdstat-1.1.2.ebuild,
+  +herdstat-1.1.2-r1.ebuild:
+  alpha/sparc/x86 stable, add -r1 to fix bug #191688
 
   20 Jan 2008; Mark Loeser <halcy0n@gentoo.org>
   -files/herdstat-1.1.91-undefined-lhp.patch,

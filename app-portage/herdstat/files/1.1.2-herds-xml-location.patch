@@ -1,0 +1,24 @@
+diff -ur herdstat-1.1.2.orig/src/common.cc herdstat-1.1.2/src/common.cc
+--- herdstat-1.1.2.orig/src/common.cc	2008-01-20 15:51:01.000000000 +0100
++++ herdstat-1.1.2/src/common.cc	2008-01-20 15:51:53.000000000 +0100
+@@ -33,7 +33,7 @@
+ #include "options.hh"
+ #include "common.hh"
+ 
+-#define HERDSXML_REMOTE "http://www.gentoo.org/cgi-bin/viewcvs.cgi/misc/herds.xml?rev=HEAD;cvsroot=gentoo;content-type=text/plain"
++#define HERDSXML_REMOTE "http://sources.gentoo.org/viewcvs.py/*checkout*/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml?content-type=text/plain"
+ #define HERDSXML_LOCAL  LOCALSTATEDIR"/herds.xml"
+ #define DEVAWAYXML_REMOTE "http://dev.gentoo.org/devaway/xml/index.php"
+ #define DEVAWAYXML_LOCAL  LOCALSTATEDIR"/devaway.xml"
+diff -ur herdstat-1.1.2.orig/src/herdstat.cc herdstat-1.1.2/src/herdstat.cc
+--- herdstat-1.1.2.orig/src/herdstat.cc	2008-01-20 15:51:01.000000000 +0100
++++ herdstat-1.1.2/src/herdstat.cc	2008-01-20 15:52:40.000000000 +0100
+@@ -556,7 +556,7 @@
+ 
+ 	    /* only set if it wasnt specified on the command line */
+ 	    if (options::herdsxml().empty())
+-		options::set_herdsxml(gentoocvs+"/gentoo/misc/herds.xml");
++		options::set_herdsxml(gentoocvs+"/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml");
+ 	    if (options::userinfoxml().empty())
+ 		options::set_userinfoxml(gentoocvs+"/gentoo/xml/htdocs/proj/en/devrel/roll-call/userinfo.xml");
+ 	}
