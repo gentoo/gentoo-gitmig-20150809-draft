@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/lostirc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.47 2008/01/20 01:43:24 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.48 2008/01/20 11:56:35 armin76 Exp $
+
+  20 Jan 2008; Raúl Porcel <armin76@gentoo.org> lostirc-0.4.6-r1.ebuild:
+  sparc/x86 stable wrt #201269
 
 *lostirc-0.4.6-r1 (20 Jan 2008)
 
