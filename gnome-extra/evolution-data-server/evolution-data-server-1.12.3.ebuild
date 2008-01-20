@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.2.ebuild,v 1.12 2007/10/12 14:28:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.3.ebuild,v 1.1 2008/01/20 10:51:13 eva Exp $
 
 inherit db-use eutils flag-o-matic gnome2 autotools
 
@@ -9,28 +9,27 @@ HOMEPAGE="http://www.gnome.org/projects/evolution/"
 
 LICENSE="LGPL-2 Sleepycat"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc ipv6 kerberos keyring krb4 ldap ssl"
 
-RDEPEND=">=dev-libs/glib-2.10
-	>=gnome-base/libbonobo-2.4.2
+RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-base/orbit-2.9.8
-	>=gnome-base/libgnomeui-2
-	>=gnome-base/gnome-vfs-2
-	>=gnome-base/libgnome-2
-	>=gnome-base/gnome-common-2
-	keyring? ( gnome-base/gnome-keyring )
-	>=dev-libs/libxml2-2
+	>=gnome-base/gnome-vfs-2.4
+	>=gnome-base/libbonobo-2.4.2
 	>=gnome-base/gconf-2
-	>=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
-	>=net-libs/libsoup-2.2.90
-	sys-libs/zlib
-	=sys-libs/db-4*
-	ldap? ( >=net-nds/openldap-2.0 )
+	>=gnome-base/libgnome-2
+	>=dev-libs/libxml2-2
+	keyring? ( gnome-base/gnome-keyring )
 	ssl? (
 		>=dev-libs/nspr-4.4
 		>=dev-libs/nss-3.9 )
+	>=gnome-base/libgnomeui-2
+	>=net-libs/libsoup-2.2.91
+	>=gnome-base/gnome-common-2
+	sys-libs/zlib
+	=sys-libs/db-4*
+	ldap? ( >=net-nds/openldap-2.0 )
 	kerberos? ( virtual/krb5 )
 	krb4? ( virtual/krb5 )"
 
@@ -70,7 +69,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.2.0-gentoo_etc_services.patch
 
 	# Fix broken libdb build
-	epatch "${FILESDIR}"/${PN}-1.7.3-libdb.patch
+	epatch "${FILESDIR}"/${PN}-1.11.3-no-libdb.patch
 
 	# Resolve symbols at execution time for setgid binaries
 	epatch "${FILESDIR}"/${PN}-no_lazy_bindings.patch
@@ -78,10 +77,13 @@ src_unpack() {
 	# Rewind in camel-disco-diary to fix a crash
 	epatch "${FILESDIR}"/${PN}-1.8.0-camel-rewind.patch
 
+	# Don't assume that endian.h and byteswap.h exist on all non sun os's
+	epatch "${FILESDIR}"/${PN}-1.12.1-icaltz-util.patch
+
 #-------------Upstream GNOME look here -----------------#
 
 	# --as-needed fixes
-	epatch "${FILESDIR}"/${PN}-1.9.91-as-needed.patch
+	epatch "${FILESDIR}"/${PN}-1.11.3-as-needed.patch
 
 	# fix for dep ordering so we can add libedataserverui to libexchange-storage
 	# we need to do this or: undefined reference to `e_passwords_get_password'
@@ -89,28 +91,28 @@ src_unpack() {
 
 	# move the groupwise backend and provider for addressbook, camel, and
 	# calendar to its own folder called server.deps.
-	mkdir server.deps
-	mv addressbook/backends/groupwise server.deps/addressbook
-	mv camel/providers/groupwise server.deps/camel
-	mv calendar/backends/groupwise server.deps/calendar
+	mkdir server.deps || die "mkdir server.deps failed"
+	mv addressbook/backends/groupwise server.deps/addressbook || die "mv address/groupwise failed"
+	mv camel/providers/groupwise server.deps/camel || die "mv camel/groupwise failed"
+	mv calendar/backends/groupwise server.deps/calendar || die "mv calendar/groupwise failed"
 
 	# now fix the autotools foo for the new directory and the removed ones
-	echo "SUBDIRS = addressbook camel calendar" > server.deps/Makefile.am
+	echo "SUBDIRS = addressbook camel calendar" > server.deps/Makefile.am || die "echo failed"
 
 	# remove groupwise folder from Makefile's since they are in a diff location
-	sed -i -e 's: groupwise::' addressbook/backends/Makefile.am camel/providers/Makefile.am calendar/backends/Makefile.am
+	sed -i -e 's: groupwise::' addressbook/backends/Makefile.am camel/providers/Makefile.am calendar/backends/Makefile.am || die "sed 1 failed"
 
 	# fix configure.in location of the Makefile's
-	sed -i -e 's:addressbook/backends/groupwise:server.deps/addressbook:' configure.in
-	sed -i -e 's:camel/providers/groupwise:server.deps/camel:' configure.in
+	sed -i -e 's:addressbook/backends/groupwise:server.deps/addressbook:' configure.in || die "sed 2 failed"
+	sed -i -e 's:camel/providers/groupwise:server.deps/camel:' configure.in || die "sed 3 failed"
 	# tack on the server.deps Makefile on our last edit
-	sed -i -e 's:calendar/backends/groupwise:server.deps/calendar/Makefile\nserver.deps:' configure.in
+	sed -i -e 's:calendar/backends/groupwise:server.deps/calendar/Makefile\nserver.deps:' configure.in || die "sed 4 failed"
 
 	# fix file includes
-	sed -i -e 's:<backends/groupwise/e-book-backend-groupwise.h>:"server.deps/addressbook/e-book-backend-groupwise.h":' addressbook/libedata-book/e-data-book-factory.c
+	sed -i -e 's:<backends/groupwise/e-book-backend-groupwise.h>:"server.deps/addressbook/e-book-backend-groupwise.h":' addressbook/libedata-book/e-data-book-factory.c || die "sed 5 failed"
 
 	# Fix db version for FreeBSD users where -ldb is always db-1
-	sed -i -e "s:-ldb:-l$(db_libname):" configure.in
+	sed -i -e "s:-ldb:-l$(db_libname):" configure.in || die "sed 6 failed"
 
 #---------------Upstream GNOME stop here---------------
 	eautoreconf
