@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.222 2008/01/16 13:40:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.223 2008/01/20 11:54:06 vapier Exp $
+
+  20 Jan 2008; Mike Frysinger <vapier@gentoo.org>
+  util-linux-2.13.0.1.ebuild, util-linux-2.13.1.ebuild:
+  Document USE=crypt -> USE=loop-aes transition #206747 by Jan Schubert.
 
 *util-linux-2.13.1 (16 Jan 2008)
 
