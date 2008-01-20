@@ -1,0 +1,10 @@
+# ChangeLog for dev-cpp/cppcsp2
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppcsp2/ChangeLog,v 1.1 2008/01/20 09:56:50 dev-zero Exp $
+
+*cppcsp2-2.0.3 (20 Jan 2008)
+
+  20 Jan 2008; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
+  +cppcsp2-2.0.3.ebuild:
+  First commit, based on the ebuild provided by Allen Brooker (bug #206594).
+
