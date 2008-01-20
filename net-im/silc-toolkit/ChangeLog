@@ -1,6 +1,9 @@
 # ChangeLog for net-im/silc-toolkit
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.72 2007/12/24 12:17:55 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.73 2008/01/20 11:04:12 armin76 Exp $
+
+  20 Jan 2008; Raúl Porcel <armin76@gentoo.org> silc-toolkit-1.1.5.ebuild:
+  alpha/ia64/sparc/x86 stable
 
   24 Dec 2007; Raúl Porcel <armin76@gentoo.org> silc-toolkit-1.1.5.ebuild:
   sparc stable wrt #188383
