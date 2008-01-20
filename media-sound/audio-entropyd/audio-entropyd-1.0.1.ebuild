@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-1.0.1.ebuild,v 1.1 2007/12/15 12:48:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-1.0.1.ebuild,v 1.2 2008/01/20 05:47:37 angelos Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.vanheusden.com/aed/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="selinux"
 
 RDEPEND="selinux? ( sec-policy/selinux-audio-entropyd )"

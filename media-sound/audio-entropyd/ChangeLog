@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audio-entropyd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.20 2007/12/15 12:48:26 angelos Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.21 2008/01/20 05:47:37 angelos Exp $
+
+  20 Jan 2008; Christoph Mende <angelos@gentoo.org>
+  audio-entropyd-1.0.1.ebuild:
+  Stable on amd64 wrt bug #206736
 
 *audio-entropyd-1.0.1 (15 Dec 2007)
 
