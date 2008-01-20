@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/otpcalc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.30 2008/01/20 14:47:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.31 2008/01/20 21:09:34 armin76 Exp $
+
+  20 Jan 2008; Raúl Porcel <armin76@gentoo.org> otpcalc-0.97-r2.ebuild:
+  alpha/sparc/x86 stable wrt #206694
 
   20 Jan 2008; nixnut <nixnut@gentoo.org> otpcalc-0.97-r2.ebuild:
   Stable on ppc wrt bug 206694
