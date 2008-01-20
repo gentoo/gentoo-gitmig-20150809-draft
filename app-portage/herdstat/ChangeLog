@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/herdstat
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.78 2007/03/19 01:19:35 kloeri Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.79 2008/01/20 02:00:58 halcy0n Exp $
+
+  20 Jan 2008; Mark Loeser <halcy0n@gentoo.org>
+  -files/herdstat-1.1.91-undefined-lhp.patch,
+  -files/herds-xml-location-update.patch, -herdstat-1.1.91-r1.ebuild:
+  Upstream is basically dead, and this version has been broken for awhile.
+  Instead of just letting it sit in package.mask forever, I'm removing it (bug
+  #135523, bug #121662)
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
