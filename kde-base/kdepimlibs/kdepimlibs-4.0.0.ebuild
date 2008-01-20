@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.0.0.ebuild,v 1.2 2008/01/20 16:40:26 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.0.0.ebuild,v 1.3 2008/01/20 17:09:43 ingmar Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Common library for KDE PIM apps."
 HOMEPAGE="http://www.kde.org/"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="ldap sasl"
+IUSE="debug htmlhandbook ldap sasl test"
 LICENSE="GPL-2 LGPL-2"
 RESTRICT="test"
 
