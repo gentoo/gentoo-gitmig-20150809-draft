@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.27 2008/01/01 04:37:50 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.28 2008/01/20 02:32:19 williamh Exp $
+
+*espeak-1.31 (20 Jan 2008)
+
+  20 Jan 2008; William Hubbs <williamh@gentoo.org> +espeak-1.31.ebuild:
+  Version bump.
 
 *espeak-1.30 (01 Jan 2008)
 
