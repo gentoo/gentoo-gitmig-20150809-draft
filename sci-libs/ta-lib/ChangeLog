@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/ta-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ta-lib/ChangeLog,v 1.2 2008/01/20 10:07:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ta-lib/ChangeLog,v 1.3 2008/01/20 21:38:59 dirtyepic Exp $
+
+  20 Jan 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/ta-lib-0.4.0-asneeded.patch, ta-lib-0.4.0.ebuild:
+  Add patch to fix building with --as-needed for bug #206746.
+
+  20 Jan 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/ta-lib-0.4.0-asneeded.patch, ta-lib-0.4.0.ebuild:
+  Add patch to fix building with --as-needed for bug #206746.
 
   20 Jan 2008; Samuli Suominen <drac@gentoo.org> ta-lib-0.4.0.ebuild:
   Keyword ~amd64.

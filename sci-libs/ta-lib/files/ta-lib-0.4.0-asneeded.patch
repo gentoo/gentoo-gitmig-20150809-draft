@@ -1,0 +1,12 @@
+diff -Naur ta-lib-orig/src/Makefile.in ta-lib/src/Makefile.in
+--- ta-lib-orig/src/Makefile.in	2007-09-14 21:42:21.000000000 -0600
++++ ta-lib/src/Makefile.in	2008-01-20 15:11:33.000000000 -0600
+@@ -56,7 +56,7 @@
+ libta_lib_la_OBJECTS = $(am_libta_lib_la_OBJECTS)
+ libta_lib_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+-	$(libta_lib_la_LDFLAGS) $(LDFLAGS) -o $@
++	$(libta_lib_la_LDFLAGS) $(LDFLAGS) -lm -o $@
+ DEFAULT_INCLUDES = -I. -I$(top_builddir)/include@am__isrc@
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
