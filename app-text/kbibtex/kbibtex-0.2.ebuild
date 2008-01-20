@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.2.ebuild,v 1.1 2007/10/29 00:39:00 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.2.ebuild,v 1.2 2008/01/20 15:52:49 carlo Exp $
 
 inherit kde eutils
 
@@ -20,3 +20,5 @@ RDEPEND="${DEPEND}
 	>=dev-tex/bibtex2html-1.70"
 
 need-kde 3.5
+
+PATCHES="${FILESDIR}/kbibtex-0.2-desktop-entry.diff"
