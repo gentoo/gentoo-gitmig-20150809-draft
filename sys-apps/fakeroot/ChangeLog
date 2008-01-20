@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.36 2008/01/20 15:49:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.37 2008/01/20 21:23:33 armin76 Exp $
+
+  20 Jan 2008; Raúl Porcel <armin76@gentoo.org> fakeroot-1.8.1.ebuild:
+  alpha/sparc/x86 stable wrt #206711
 
   20 Jan 2008; nixnut <nixnut@gentoo.org> fakeroot-1.8.1.ebuild:
   Stable on ppc wrt bug 206711
