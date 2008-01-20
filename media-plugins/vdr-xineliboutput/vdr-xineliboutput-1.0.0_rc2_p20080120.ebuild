@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2_p20080120.ebuild,v 1.1 2008/01/20 22:55:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2_p20080120.ebuild,v 1.2 2008/01/20 23:00:15 zzam Exp $
 
 inherit vdr-plugin eutils multilib
 
@@ -14,7 +14,9 @@ SO_VERSION="${SO_VERSION/_/}"
 
 DESCRIPTION="Video Disk Recorder Xinelib PlugIn"
 HOMEPAGE="http://sourceforge.net/projects/xineliboutput/"
-SRC_URI="mirror://sourceforge/${PN#vdr-}/${MY_P}.tar.bz2"
+#SRC_URI="mirror://sourceforge/${PN#vdr-}/${MY_P}.tar.bz2"
+SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~zzam/distfiles/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
