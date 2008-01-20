@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/w32api
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/ChangeLog,v 1.6 2007/10/06 22:37:07 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/ChangeLog,v 1.7 2008/01/20 03:46:25 vapier Exp $
+
+*w32api-3.11 (20 Jan 2008)
+
+  20 Jan 2008; Mike Frysinger <vapier@gentoo.org> +w32api-3.11.ebuild:
+  Version bump #205991 by Dennis Schridde.
 
 *w32api-3.10 (06 Oct 2007)
 
