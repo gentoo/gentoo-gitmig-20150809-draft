@@ -1,14 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.13.ebuild,v 1.1 2007/10/21 15:00:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.13.ebuild,v 1.2 2008/01/20 13:49:25 drac Exp $
 
 inherit fdo-mime gnome2-utils versionator
 
 MY_PR="$(get_version_component_range 1-2 ${PV})"
 
 DESCRIPTION="Next generation Beep Media Player"
-HOMEPAGE="http://www.beep-media-player.org"
-SRC_URI="http://files.beep-media-player.org/releases/${MY_PR}/${P}.tar.bz2"
+HOMEPAGE="http://bmpx.backtrace.info/site/BMPx_Homepage"
+SRC_URI="http://files.backtrace.info/releases/${MY_PR}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
