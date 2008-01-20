@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.35.ebuild,v 1.1 2008/01/20 07:51:06 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.35.ebuild,v 1.2 2008/01/20 09:44:17 drac Exp $
 
 inherit qt3 eutils multilib
 
@@ -10,12 +10,12 @@ for i in ${LANGS}; do
 done
 
 DESCRIPTION="Commodity and stock market charting and technical analysis"
-HOMEPAGE="http://qtstalker.sourceforge.net/"
+HOMEPAGE="http://qtstalker.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="$(qt_min_version 3.3)
 	>=sci-libs/ta-lib-0.4.0
@@ -69,7 +69,7 @@ src_install() {
 	ebegin "Installing docs"
 	cd "${S}"/docs
 	dohtml *{html,png}
-	dodoc AUTHORS BUGS CHANGELOG-${PV} INSTALL TODO "${S}"/README
+	dodoc AUTHORS BUGS CHANGELOG-${PV} TODO "${S}"/README
 	eend
 
 	# install only needed langpacks

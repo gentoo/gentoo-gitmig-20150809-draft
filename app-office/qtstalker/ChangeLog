@@ -1,6 +1,9 @@
 # ChangeLog for app-office/qtstalker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/ChangeLog,v 1.5 2008/01/20 09:29:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/ChangeLog,v 1.6 2008/01/20 09:44:17 drac Exp $
+
+  20 Jan 2008; Samuli Suominen <drac@gentoo.org> qtstalker-0.35.ebuild:
+  Remove INSTALL from dodoc, it's only telling how to run make.
 
   20 Jan 2008; Samuli Suominen <drac@gentoo.org> files/qtstalker.desktop:
   Update desktop entry to spec.
