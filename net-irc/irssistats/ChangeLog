@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/irssistats
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.13 2008/01/19 13:27:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.14 2008/01/20 03:01:26 cla Exp $
+
+*irssistats-0.75 (20 Jan 2008)
+
+  20 Jan 2008; Dawid Węgliński <cla@gentoo.org> +irssistats-0.75.ebuild:
+  Version bump, use emake instead of make wrt #206048
 
   19 Jan 2008; nixnut <nixnut@gentoo.org> irssistats-0.72.ebuild:
   Stable on ppc wrt bug 206447
