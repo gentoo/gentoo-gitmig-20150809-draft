@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.4.6-r1.ebuild,v 1.2 2008/01/20 11:56:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.4.6-r1.ebuild,v 1.3 2008/01/20 14:31:41 nixnut Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://lostirc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 
 RDEPEND=">=dev-cpp/gtkmm-2.4
 	>=dev-cpp/glibmm-2.4.4
