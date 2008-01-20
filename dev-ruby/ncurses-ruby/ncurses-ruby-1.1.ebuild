@@ -1,8 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ncurses-ruby-1.1.ebuild,v 1.3 2007/07/17 05:52:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ncurses-ruby-1.1.ebuild,v 1.4 2008/01/20 07:00:51 graaff Exp $
 
-RUBY_BUG_145222=yes
 inherit ruby
 
 DESCRIPTION="Ruby wrappers of ncurses and PDCurses libs"
