@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.13.ebuild,v 1.2 2008/01/20 13:49:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.13.ebuild,v 1.3 2008/01/20 14:22:03 drac Exp $
 
-inherit fdo-mime gnome2-utils versionator
+inherit eutils fdo-mime gnome2-utils versionator
 
 MY_PR="$(get_version_component_range 1-2 ${PV})"
 
@@ -47,6 +47,12 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	>=x11-proto/xproto-7.0.10
 	doc? ( app-text/docbook-xsl-stylesheets	dev-libs/libxslt )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-const-gchar.patch
+}
 
 src_compile() {
 	econf --with-tr1 --enable-ld-workaround \
