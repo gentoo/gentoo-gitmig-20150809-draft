@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.0.0.ebuild,v 1.1 2008/01/17 23:53:20 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.0.0.ebuild,v 1.2 2008/01/20 16:40:26 ingmar Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2 LGPL-2"
 RESTRICT="test"
 
 DEPEND="
-	>=app-crypt/gpgme-0.4.5
+	>=app-crypt/gpgme-1.1.6
 	dev-libs/boost
 	dev-libs/libgpg-error
 	ldap? ( >=net-nds/openldap-2 )
