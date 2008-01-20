@@ -1,0 +1,16 @@
+--- src/k9copy.desktop.orig	2008-01-20 15:49:47.000000000 +0100
++++ src/k9copy.desktop	2008-01-20 15:50:02.000000000 +0100
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Type=Application
+ Name=k9copy
+ Exec=k9copy -caption "%c" %i %m  %u
+@@ -9,7 +8,6 @@
+ GenericName=Video DVD Backup
+ GenericName[fr]=Backup de DVD Video
+ GenericName[tr]=DVD Vidyo Yedekleme Aracı
+-MimeTypes=
+ Terminal=false
+ Icon=k9copy
+ X-DocPath=k9copy/index.html
