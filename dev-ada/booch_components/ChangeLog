@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/booch_components
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.16 2008/01/20 21:53:16 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.17 2008/01/20 22:16:16 george Exp $
+
+  20 Jan 2008; George Shapovalov <george@gentoo.org>
+  -booch_components-20051222.ebuild:
+  removed stale version
 
   20 Jan 2008; George Shapovalov <george@gentoo.org>
   booch_components-20051222-r1.ebuild, booch_components-20070420.ebuild:
