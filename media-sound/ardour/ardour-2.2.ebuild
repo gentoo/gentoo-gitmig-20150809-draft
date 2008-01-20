@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.2.ebuild,v 1.1 2008/01/15 22:34:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.2.ebuild,v 1.2 2008/01/20 22:52:17 aballier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -30,7 +30,7 @@ RDEPEND="media-libs/liblo
 	x11-themes/gtk-engines
 	>=dev-cpp/gtkmm-2.10
 	dev-cpp/glibmm
-	>=dev-cpp/libgnomecanvasmm-2.10.0
+	>=dev-cpp/libgnomecanvasmm-2.20.0
 	dev-cpp/cairomm
 	>=dev-libs/libsigc++-2.0
 	media-libs/libsoundtouch
