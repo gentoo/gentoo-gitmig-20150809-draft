@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.7 2008/01/16 02:24:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.8 2008/01/20 04:17:16 vapier Exp $
+
+  20 Jan 2008; Mike Frysinger <vapier@gentoo.org> linphone-2.0.1-r1.ebuild:
+  Change USE=novideo to USE=video and force newer gsm as the older one
+  installed broken libraries.
 
   16 Jan 2008; Mike Frysinger <vapier@gentoo.org>
   +files/linphone-2.0.1-speexdsp.patch, linphone-2.0.1-r1.ebuild:

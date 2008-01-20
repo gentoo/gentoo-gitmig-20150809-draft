@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.0.1-r1.ebuild,v 1.2 2008/01/16 02:24:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.0.1-r1.ebuild,v 1.3 2008/01/20 04:17:16 vapier Exp $
 
 # Note: video support in linphone relies on swscaler being disabled
 #       in ffmpeg.  this is because the video code in linphone is old
@@ -16,7 +16,10 @@ SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/stable/sources/${P}.
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa arts console gsm gtk ilbc ipv6 novideo xv"
+IUSE="alsa arts console gsm gtk ilbc ipv6 video xv"
+# XXX: Should "video" be split into ffmpeg/libsdl ?  They are two distinct
+#      things: libsdl is just for video display while ffmpeg is just for
+#      video capture ... but does anyone actually want a one-way linphone ?
 
 RDEPEND="dev-libs/glib
 	dev-perl/XML-Parser
@@ -24,7 +27,7 @@ RDEPEND="dev-libs/glib
 	>=net-libs/libosip-3.0.3
 	>=net-libs/libeXosip-3.0.3
 	>=media-libs/speex-1.1.12
-	gsm? ( >=media-sound/gsm-1.0.12 )
+	gsm? ( >=media-sound/gsm-1.0.12-r1 )
 	x86? ( xv? ( dev-lang/nasm ) )
 	gtk? (
 		>=x11-libs/gtk+-2
@@ -33,7 +36,7 @@ RDEPEND="dev-libs/glib
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	ilbc? ( dev-libs/ilbc-rfc3951 )
-	!novideo? (
+	video? (
 		>=media-libs/libsdl-1.2.9
 		media-video/ffmpeg
 		>=media-libs/libtheora-1.0_alpha7
@@ -67,7 +70,7 @@ src_compile() {
 		$(use_enable alsa) \
 		$(use_enable arts artsc) \
 		$(use_enable gsm) \
-		$(use_enable !novideo video) \
+		$(use_enable video) \
 		--disable-portaudio \
 		$(use_enable x86 truespeech) \
 		|| die "Unable to configure"
