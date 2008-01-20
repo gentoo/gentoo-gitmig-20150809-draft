@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r4.ebuild,v 1.5 2007/11/03 02:52:30 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r4.ebuild,v 1.6 2008/01/20 23:22:01 betelgeuse Exp $
+
+EAPI=1
 
 inherit java-pkg-2 eutils
 
@@ -17,7 +19,7 @@ KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="javamail noantlr nobcel nobeanutils nobsh nobsf nocommonsnet nocommonslogging nojdepend nojsch nojython nolog4j nooro noregexp norhino noxalan noxerces"
 
 CDEPEND="=dev-java/ant-core-${PV}*
-	>=dev-java/junit-3.8
+	dev-java/junit:0
 	!nolog4j? ( >=dev-java/log4j-1.2.8 )
 	!noxerces? ( >=dev-java/xerces-2.7.1 =dev-java/xml-commons-external-1.3* )
 	!noxalan? ( >=dev-java/xalan-2.5.2 )
