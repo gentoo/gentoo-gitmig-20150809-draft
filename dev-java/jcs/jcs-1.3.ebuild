@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.3.ebuild,v 1.4 2008/01/08 13:00:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.3.ebuild,v 1.5 2008/01/20 16:36:12 nixnut Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/jakarta/jcs/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="1.3"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="admin"
 
 RDEPEND=">=virtual/jre-1.4
