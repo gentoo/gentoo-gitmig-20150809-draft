@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070711-r1.ebuild,v 1.4 2007/11/21 09:58:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070711-r1.ebuild,v 1.5 2008/01/20 21:54:37 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -80,7 +80,7 @@ pkg_setup() {
 	# Check for ffmpeg relying on libtheora without pkg-config-file
 	# Bug #142250
 	if built_with_use media-video/ffmpeg theora	&& \
-		has_version "<media-libs/libtheora/libtheora-1.0_alpha4"; then
+		has_version "<media-libs/libtheora-1.0_alpha4"; then
 
 			eerror "This package will not work when using ffmpeg with"
 			eerror "USE=\"theora\" combined with media-libs/libtheora"
