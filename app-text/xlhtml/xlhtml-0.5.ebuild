@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.ebuild,v 1.14 2007/01/07 00:43:13 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.ebuild,v 1.15 2008/01/20 16:14:56 grobian Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/chicago/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ppc ~ppc-macos ~sparc x86"
+KEYWORDS="alpha ~amd64 ppc ~sparc x86"
 IUSE=""
 DEPEND=""
 
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed for ${P}"
+	make DESTDIR="${D}" install || die "make install failed for ${P}"
 	dodoc AUTHORS COPYING INSTALL README
 	docinto cole
 	dodoc cole/{AUTHORS,COPYING,NEWS,ChangeLog,THANKS,TODO}
@@ -35,5 +35,5 @@ src_install() {
 	docinto xlhtml
 	dodoc xlhtml/{ChangeLog,README,THANKS,TODO}
 	rm -rf xlhtml/contrib/CVS
-	cp -pPR xlhtml/contrib "${D}/usr/share/doc/${PF}/xlhtml"
+	cp -pPR xlhtml/contrib "${D}"/usr/share/doc/${PF}/xlhtml
 }
