@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libopenraw
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.15 2007/12/14 18:36:59 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.16 2008/01/20 14:52:15 drac Exp $
+
+*libopenraw-0.0.4 (20 Jan 2008)
+
+  20 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  -files/libopenraw-0.0.3-disable-ljpegtest.patch,
+  +files/libopenraw-0.0.4-disable-ljpegtest.patch, -libopenraw-0.0.3.ebuild,
+  +libopenraw-0.0.4.ebuild:
+  Version bump, should also close #205759 -- problem was missing ifdef in
+  demo/Makefile.am.
 
   14 Dec 2007; Samuli Suominen <drac@gentoo.org>
   +files/libopenraw-0.0.3-disable-ljpegtest.patch, libopenraw-0.0.3.ebuild:
