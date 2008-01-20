@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1024 2008/01/19 22:30:16 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1025 2008/01/20 02:04:25 halcy0n Exp $
+
+  20 Jan 2008; Mark Loeser <halcy0n@gentoo.org> package.mask:
+  herdstat-1.1.91 has been dropped from the tree
 
   19 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> package.mask:
   Point to the KDE 4 guide in my KDE 4 mask message.
