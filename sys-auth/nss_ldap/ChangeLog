@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/nss_ldap
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.52 2007/11/14 03:56:40 beandog Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.53 2008/01/20 00:58:20 robbat2 Exp $
+
+*nss_ldap-259 (20 Jan 2008)
+
+  20 Jan 2008; Robin H. Johnson <robbat2@gentoo.org> +nss_ldap-259.ebuild:
+  Version bump, fixes memory leaks.
 
   14 Nov 2007; Steve Dibb <beandog@gentoo.org> nss_ldap-258.ebuild:
   amd64 stable, bug 198390
