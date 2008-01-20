@@ -1,0 +1,16 @@
+diff -ur medit-0.9.2.orig/medit/medit.desktop.in medit-0.9.2/medit/medit.desktop.in
+--- medit-0.9.2.orig/medit/medit.desktop.in	2008-01-09 08:20:26.000000000 +0200
++++ medit-0.9.2/medit/medit.desktop.in	2008-01-20 18:03:57.000000000 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ _Name=medit
+ _Comment=Text editor
+ Exec=medit %F
+@@ -7,5 +6,5 @@
+ Type=Application
+ StartupNotify=true
+ MimeType=text/plain;
+-Icon=medit.png
++Icon=medit
+ Categories=Utility;TextEditor;
