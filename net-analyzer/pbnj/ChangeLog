@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pbnj
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pbnj/ChangeLog,v 1.5 2006/11/17 20:50:20 blubb Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pbnj/ChangeLog,v 1.6 2008/01/20 16:28:58 drac Exp $
+
+  20 Jan 2008; Samuli Suominen <drac@gentoo.org> pbnj-2.04.ebuild:
+  amd64 stable, thanks to Jarda for testing.
 
   17 Nov 2006; <blubb@gentoo.org> pbnj-2.02.ebuild:
   stable on amd64
