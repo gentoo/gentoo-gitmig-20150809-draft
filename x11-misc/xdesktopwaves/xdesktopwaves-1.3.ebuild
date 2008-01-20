@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdesktopwaves/xdesktopwaves-1.3.ebuild,v 1.3 2007/07/22 03:23:21 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdesktopwaves/xdesktopwaves-1.3.ebuild,v 1.4 2008/01/20 18:18:40 coldwind Exp $
 
 inherit eutils
 
@@ -29,11 +29,11 @@ src_install() {
 	insinto /usr/share/pixmaps
 	doins xdesktopwaves.xpm
 	make_desktop_entry xdesktopwaves "xdesktopwaves" xdesktopwaves.xpm
-	dodoc COPYING README
+	dodoc README
 }
 
 pkg_preinst() {
-	einfo "To see what xdesktopwaves is able to do, start it by running"
-	einfo "'xdesktopwaves' and then run 'xdwapidemo'. You should see the"
-	einfo "supported effects on your desktop"
+	elog "To see what xdesktopwaves is able to do, start it by running"
+	elog "'xdesktopwaves' and then run 'xdwapidemo'. You should see the"
+	elog "supported effects on your desktop"
 }
