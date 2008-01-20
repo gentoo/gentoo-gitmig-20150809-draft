@@ -1,6 +1,17 @@
 # ChangeLog for app-office/qtstalker
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/ChangeLog,v 1.3 2007/03/05 22:59:48 troll Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/ChangeLog,v 1.4 2008/01/20 07:51:06 dirtyepic Exp $
+
+*qtstalker-0.35 (20 Jan 2008)
+
+  20 Jan 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/qtstalker-0.35-nodocs.patch,
+  +files/qtstalker-0.35-parallel-make.patch, +qtstalker-0.35.ebuild:
+  Version bump.  Thanks to everyone on bug #195846.
+    - new dep on sci-libs/ta-lib
+    - don't prestrip plugin libraries
+    - fix multilib-strict / misc path issues
+    - misc QA (quoting, etc.)
 
 *qtstalker-0.33 (05 Mar 2007)
 
