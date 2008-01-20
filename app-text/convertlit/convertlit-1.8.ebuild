@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/convertlit-1.8.ebuild,v 1.8 2005/10/27 00:32:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/convertlit-1.8.ebuild,v 1.9 2008/01/20 12:35:48 grobian Exp $
 
 MY_P="clit${PV//./}"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.convertlit.com/${MY_P}src.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc-macos x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-libs/libtommath
