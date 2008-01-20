@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.17 2008/01/19 15:10:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.18 2008/01/20 14:37:01 ranger Exp $
+
+  20 Jan 2008; Brent Baude <ranger@gentoo.org> sonata-1.4.ebuild:
+  Marking sonata-1.4 ~ppc64 for bug 206649
 
 *sonata-1.4 (19 Jan 2008)
 
