@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.5.0-r1.ebuild,v 1.18 2007/07/06 06:17:47 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.5.0-r1.ebuild,v 1.19 2008/01/20 15:06:54 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa mips ppc s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ~ia64 mips ppc s390 sh sparc x86 ~x86-fbsd"
 IUSE="doc test"
 
 RDEPEND="dev-libs/libxml2
