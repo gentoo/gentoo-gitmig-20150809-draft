@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pmacct
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.50 2007/08/25 16:35:13 cedk Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.51 2008/01/20 19:17:36 armin76 Exp $
+
+  20 Jan 2008; Raúl Porcel <armin76@gentoo.org> pmacct-0.11.4.ebuild:
+  x86 stable
 
 *pmacct-0.11.4 (25 Aug 2007)
 
