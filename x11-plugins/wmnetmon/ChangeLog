@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnetmon
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetmon/ChangeLog,v 1.10 2008/01/19 21:12:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetmon/ChangeLog,v 1.11 2008/01/20 15:20:09 nixnut Exp $
+
+  20 Jan 2008; nixnut <nixnut@gentoo.org> wmnetmon-0.2_p5.ebuild:
+  Stable on ppc wrt bug 206705
 
 *wmnetmon-0.2_p5 (19 Jan 2008)
 
