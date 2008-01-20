@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.2.4.ebuild,v 1.1 2007/09/17 11:44:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.2.4.ebuild,v 1.2 2008/01/20 19:34:05 armin76 Exp $
 
 inherit perl-module eutils
 
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 sparc x86"
 
 DESCRIPTION="A powerful latency measurement tool."
 SRC_URI="http://oss.oetiker.ch/smokeping/pub/${P}.tar.gz"
