@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.80 2008/01/17 13:38:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.81 2008/01/20 15:26:39 chainsaw Exp $
+
+  20 Jan 2008; Tony Vroon <chainsaw@gentoo.org>
+  audacious-plugins-1.4.4.ebuild:
+  Depend on libsndfile 1.0.17-r1 or above as 1.0.11 is missing required
+  headers. Reported by Muradin <muradinbox@yahoo.it>, closes bug #206635.
 
   17 Jan 2008; Ferris McCormick <fmccor@gentoo.org>
   audacious-plugins-1.4.4.ebuild:
