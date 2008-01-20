@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-4.0.0.ebuild,v 1.1 2008/01/17 23:31:30 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-4.0.0.ebuild,v 1.2 2008/01/20 02:18:01 philantrop Exp $
 
 EAPI="1"
 
@@ -24,10 +24,32 @@ KMEXTRACTONLY="libkdeedu/kdeeduui libkdeedu/libscience"
 pkg_setup() {
 	use cviewer && QT4_BUILT_WITH_USE_CHECK="${QT4_BUILT_WITH_USE_CHECK} opengl"
 
+	if use solver && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "In order to build the solver for ${PN}, you first need"
+		eerror "to have dev-lang/ocaml built with the ocamlopt useflag"
+		eerror "in order to get a native code ocaml compiler"
+		die "Please install dev-lang/ocaml with ocamlopt support"
+	fi
+	if use solver && ! built_with_use --missing true dev-ml/facile ocamlopt; then
+		eerror "In order to build the solver for ${PN}, you first need"
+		eerror "to have dev-ml/facile built with the ocamlopt useflag"
+		eerror "in order to get the native code library"
+		die "Please install dev-ml/facile with ocamlopt support"
+	fi
+
 	kde4-meta_pkg_setup
 }
 
 src_compile() {
+	if use solver ; then
+		# Compile the solver on its own as the cmake-based build is
+		# currently broken. Fixes bug 206620.
+		cd "${S}/${PN}/src/solver"
+		emake || die "compiling the ocaml resolver failed"
+		mkdir -p "${WORKDIR}/${PN}_build/${PN}/src/"
+		cp * "${WORKDIR}/${PN}_build/${PN}/src/"
+	fi
+
 	mycmakeargs="${mycmakeargs}
 		$(cmake-utils_use_with cviewer Eigen)
 		$(cmake-utils_use_with cviewer OpenBabel2)
