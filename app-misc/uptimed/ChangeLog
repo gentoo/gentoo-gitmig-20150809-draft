@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.65 2008/01/19 13:33:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.66 2008/01/20 14:34:21 ranger Exp $
+
+  20 Jan 2008; Brent Baude <ranger@gentoo.org> uptimed-0.3.12.ebuild:
+  Marking uptimed-0.3.12 ppc64 for bug 206562
 
   19 Jan 2008; nixnut <nixnut@gentoo.org> uptimed-0.3.12.ebuild:
   Stable on ppc wrt bug 206562
