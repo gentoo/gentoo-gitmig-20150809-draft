@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/ttf-sil-arabicfonts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-arabicfonts/ChangeLog,v 1.9 2008/01/19 21:32:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-arabicfonts/ChangeLog,v 1.10 2008/01/20 13:58:24 nixnut Exp $
+
+  20 Jan 2008; nixnut <nixnut@gentoo.org> ttf-sil-arabicfonts-1.0.ebuild:
+  Stable on ppc wrt bug 206710
 
   19 Jan 2008; Ryan Hill <dirtyepic@gentoo.org>
   ttf-sil-arabicfonts-1.0.ebuild:
