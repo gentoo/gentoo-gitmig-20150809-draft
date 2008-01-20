@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ta-lib/ta-lib-0.4.0.ebuild,v 1.3 2008/01/20 21:38:59 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ta-lib/ta-lib-0.4.0.ebuild,v 1.4 2008/01/20 21:50:17 drac Exp $
+
+inherit eutils
 
 DESCRIPTION="Technical Analysis Library for analyzing financial markets trends"
 HOMEPAGE="http://www.ta-lib.org"
@@ -19,7 +21,6 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 }
 
