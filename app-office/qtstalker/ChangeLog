@@ -1,6 +1,9 @@
 # ChangeLog for app-office/qtstalker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/ChangeLog,v 1.4 2008/01/20 07:51:06 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/ChangeLog,v 1.5 2008/01/20 09:29:11 drac Exp $
+
+  20 Jan 2008; Samuli Suominen <drac@gentoo.org> files/qtstalker.desktop:
+  Update desktop entry to spec.
 
 *qtstalker-0.35 (20 Jan 2008)
 

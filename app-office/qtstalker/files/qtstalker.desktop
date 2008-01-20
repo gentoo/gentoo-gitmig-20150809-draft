@@ -1,7 +1,6 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Encoding=UTF-8
 Name=Qtstalker
 GenericName=Stock Charting
 GenericName[nl]=Koersgrafieken
@@ -10,7 +9,7 @@ Comment=Stock and commodity market charting and technical analysis
 Comment[nl]=Koersgrafieken en technische analyse
 Comment[pl]=Wykresy giełdowe i towarowe oraz analizy techniczne
 Exec=/usr/bin/qtstalker
-Icon=/usr/share/pixmaps/qtstalker.png
+Icon=qtstalker
 Terminal=false
-Categories=Application;Finance;Office;Qt;
+Categories=Finance;Office;Qt;
 
