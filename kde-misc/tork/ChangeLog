@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/tork
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.24 2007/12/16 23:20:38 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.25 2008/01/20 23:43:44 philantrop Exp $
+
+*tork-0.26 (20 Jan 2008)
+
+  20 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> +tork-0.26.ebuild:
+  Version bump as per bug 205770.
 
   16 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org> -tork-0.17.ebuild,
   -tork-0.20.ebuild, -tork-0.21.ebuild:
