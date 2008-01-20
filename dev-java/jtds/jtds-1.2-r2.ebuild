@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-1.2-r2.ebuild,v 1.6 2007/07/15 13:49:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-1.2-r2.ebuild,v 1.7 2008/01/20 23:19:48 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
+EAPI=1
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -14,7 +15,7 @@ SLOT="1.2"
 KEYWORDS="amd64 ppc ~ppc64 x86"
 COMMON_DEPEND="
 	=dev-java/jcifs-1*
-	>=dev-java/junit-3.8"
+	dev-java/junit:0"
 # does not like javax.sql in >=1.6
 DEPEND="
 	|| (

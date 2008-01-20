@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jtds
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.18 2007/07/16 00:00:18 betelgeuse Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.19 2008/01/20 23:19:48 betelgeuse Exp $
+
+  20 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> jtds-1.2-r2.ebuild:
+  Use EAPI=1 to match only slot 0 of junit.
 
   15 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> -jtds-0.9.1.ebuild,
   -jtds-1.0.3.ebuild:
