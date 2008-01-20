@@ -63,11 +63,12 @@ diff -Naur music-0.2.0.orig/music/data/webstreams.dat music-0.2.0/music/data/web
 -  * Genre Top 10 *?	  	: echo "/VDR/bin/shout2vdr.sh 'TopTen'" | at now;
 +  * Genre Top 10 *?	  	: echo "/usr/share/vdr/shoutcast2vdr/shoutcast2vdr 'TopTen'" | at now;
  #---- Electronic  ---------------------------------------------------------------------------- : echo
-   * Genre Dance *?	  	: echo "/VDR/bin/shout2vdr.sh 'Disco'" | at now;
+-  * Genre Dance *?	  	: echo "/VDR/bin/shout2vdr.sh 'Disco'" | at now;
 -  * Genre Club *?	  	: echo "/VDR/bin/shout2vdr.sh 'Club'" | at now;
 -  * Genre House *?	  	: echo "/VDR/bin/shout2vdr.sh 'House'" | at now;
 -  * Genre Trance *?	  	: echo "/VDR/bin/shout2vdr.sh 'Trance'" | at now;
 -  * Genre Techno *?	  	: echo "/VDR/bin/shout2vdr.sh 'Techno'" | at now;
++  * Genre Dance *?		: echo "/usr/share/vdr/shoutcast2vdr/shoutcast2vdr 'Disco' | at now;
 +  * Genre Club *?	  	: echo "/usr/share/vdr/shoutcast2vdr/shoutcast2vdr 'Club'" | at now;
 +  * Genre House *?	  	: echo "/usr/share/vdr/shoutcast2vdr/shoutcast2vdr 'House'" | at now;
 +  * Genre Trance *?	  	: echo "/usr/share/vdr/shoutcast2vdr/shoutcast2vdr 'Trance'" | at now;
