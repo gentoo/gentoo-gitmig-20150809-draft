@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/files/kexec.init,v 1.9 2007/03/13 07:33:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/files/kexec.init,v 1.10 2008/01/21 08:51:10 genstef Exp $
 
 depend() {
 	need localmount 
@@ -52,7 +52,7 @@ load_image() {
 		ROOTPART="$(sed -n '/^[^ ]* \/ / s,^\([^ ]*\).*,\1,p' /etc/mtab)"
 	fi
 	if [ -z "${KPARAM}" ] ; then
-		KPARAM="$(sed -r 's:root=[a-zA-Z0-9/]+\s*::g' /proc/cmdline)"
+		KPARAM="$(sed -e 's/ /\n/g' /proc/cmdline | grep -v -e "^root=" | tr '\n' ' ')"
 	fi
 
 	# Use the default initrd if it exists and none other given
