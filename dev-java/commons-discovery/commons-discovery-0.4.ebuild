@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.4.ebuild,v 1.5 2007/03/17 17:15:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.4.ebuild,v 1.6 2008/01/21 13:27:07 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -20,7 +20,7 @@ DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	dev-java/ant-core
 	source? ( app-arch/zip )
-	test? ( >=dev-java/junit-3.8 )"
+	test? ( =dev-java/junit-3* )"
 
 S="${WORKDIR}/${P}-src/"
 

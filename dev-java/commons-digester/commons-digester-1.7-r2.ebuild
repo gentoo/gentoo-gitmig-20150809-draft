@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.7-r2.ebuild,v 1.8 2007/03/09 20:27:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.7-r2.ebuild,v 1.9 2008/01/21 13:26:14 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -22,7 +22,7 @@ RDEPEND=">=virtual/jre-1.4
 	>=dev-java/commons-logging-1.0.2"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-core-1.4
-	test? ( >=dev-java/junit-3.7 )
+	test? ( =dev-java/junit-3* )
 	source? ( app-arch/zip )
 	${RDEPEND}"
 
