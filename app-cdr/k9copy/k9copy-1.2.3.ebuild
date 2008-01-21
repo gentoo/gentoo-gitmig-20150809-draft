@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.2.3.ebuild,v 1.1 2008/01/20 15:10:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.2.3.ebuild,v 1.2 2008/01/21 03:24:08 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -39,4 +39,3 @@ pkg_setup() {
 		die "Please follow the above error message."
 	fi
 }
-
