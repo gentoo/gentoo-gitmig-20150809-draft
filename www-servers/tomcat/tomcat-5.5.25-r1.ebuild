@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.25-r1.ebuild,v 1.3 2007/10/17 06:21:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.25-r1.ebuild,v 1.4 2008/01/21 13:28:57 caster Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -31,7 +31,7 @@ RDEPEND="=dev-java/eclipse-ecj-3.3*
 	>=dev-java/commons-logging-1.0.4
 	>=dev-java/commons-modeler-2.0
 	>=dev-java/commons-pool-1.2
-	>=dev-java/junit-3.8.1
+	=dev-java/junit-3*
 	>=dev-java/log4j-1.2.9
 	>=dev-java/saxpath-1.0
 	~dev-java/tomcat-servlet-api-${PV}
