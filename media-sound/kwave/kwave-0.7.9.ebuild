@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.9.ebuild,v 1.4 2007/11/18 21:56:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.9.ebuild,v 1.5 2008/01/21 15:03:53 zlin Exp $
 
+ARTS_REQUIRED=yes
 inherit kde flag-o-matic
 
 DESCRIPTION="Kwave is a sound editor for KDE."
@@ -23,19 +24,15 @@ RDEPEND="media-libs/alsa-lib
 	sci-libs/gsl"
 
 DEPEND="${RDEPEND}
-	kde-base/arts
-	|| ( kde-base/kdemultimedia-arts kde-base/kdemultimedia )
-	|| ( kde-base/kdesdk-misc kde-base/kdesdk )
+	|| ( kde-base/kdemultimedia-arts =kde-base/kdemultimedia-3.5* )
+	|| ( =kde-base/kdesdk-misc-3.5* =kde-base/kdesdk-3.5* )
 	app-text/recode
 	media-gfx/imagemagick"
 
 need-kde 3.4
 
 pkg_setup() {
-	if ! built_with_use kde-base/kdelibs arts ; then
-		eerror "KWave needs aRts, please rebuild kdelibs with arts use flag enabled."
-		die
-	fi
+	kde_pkg_setup
 
 	if ! built_with_use --missing true media-libs/flac cxx; then
 		eerror "To build ${PN} you need the C++ bindings for flac."

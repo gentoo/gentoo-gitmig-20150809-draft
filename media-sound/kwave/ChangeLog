@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kwave
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.3 2007/11/18 21:56:26 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.4 2008/01/21 15:03:53 zlin Exp $
+
+  21 Jan 2008; Bo Ørsted Andresen <bo.andresen@zlin.dk> kwave-0.7.9.ebuild:
+  Fix dependencies so KDE 4.x cannot be pulled in instead of KDE 3.5.x. Don't
+  have both optional and hard dependencies on arts.
 
   18 Nov 2007; Alexis Ballier <aballier@gentoo.org> kwave-0.7.9.ebuild:
   add a check for flac cxx use flag, FLAC++ is needed here
