@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/curlftpfs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/ChangeLog,v 1.7 2007/04/08 07:45:38 genstef Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/ChangeLog,v 1.8 2008/01/21 08:53:57 genstef Exp $
+
+  21 Jan 2008; Stefan Schweizer <genstef@gentoo.org> curlftpfs-0.9.1.ebuild:
+  fix depend because it crashes with old curl, bug 203230
 
 *curlftpfs-0.9.1 (08 Apr 2007)
 

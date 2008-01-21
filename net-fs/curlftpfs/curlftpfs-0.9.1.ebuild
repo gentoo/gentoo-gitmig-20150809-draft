@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/curlftpfs-0.9.1.ebuild,v 1.1 2007/04/08 07:45:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/curlftpfs-0.9.1.ebuild,v 1.2 2008/01/21 08:53:57 genstef Exp $
 
 DESCRIPTION="CurlFtpFS is a filesystem for acessing ftp hosts based on FUSE"
 HOMEPAGE="http://curlftpfs.sourceforge.net"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	>=net-misc/curl-7.16.1
+	>=net-misc/curl-7.17.0
 	>=sys-fs/fuse-2.2
 	>=dev-libs/glib-2.0"
 
