@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.4 2008/01/19 11:21:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.5 2008/01/21 11:21:56 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python qt4
 
@@ -97,7 +97,7 @@ src_compile() {
 	fi
 
 	if use mpi; then
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_MPI:BOOL=ON"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPARAVIEW_USE_MPI:BOOL=ON"
 	fi
 
 	if use python; then
