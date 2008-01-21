@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.1.2.ebuild,v 1.1 2008/01/21 06:34:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.1.2.ebuild,v 1.2 2008/01/21 07:27:04 tupone Exp $
 
 inherit eutils games
 
@@ -38,6 +38,7 @@ RDEPEND="readline? ( sys-libs/readline )
 				!sdl? ( x11-libs/libXaw )
 			)
 		)
+		media-libs/libpng
 		alsa? (
 			media-libs/alsa-lib
 			media-libs/audiofile
