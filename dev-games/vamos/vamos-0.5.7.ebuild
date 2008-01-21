@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.5.7.ebuild,v 1.1 2007/07/21 23:13:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.5.7.ebuild,v 1.2 2008/01/21 07:36:52 nyhm Exp $
 
 DESCRIPTION="an automotive simulation framework"
 HOMEPAGE="http://vamos.sourceforge.net/"
@@ -16,6 +16,7 @@ DEPEND="virtual/opengl
 	virtual/glut
 	media-libs/libpng
 	media-libs/libsdl
+	media-libs/sdl-ttf
 	media-libs/openal
 	media-libs/freealut
 	=dev-libs/libsigc++-1.2*"
