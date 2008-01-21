@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.71 2007/12/05 09:17:25 ulm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.72 2008/01/21 18:52:53 armin76 Exp $
+
+  21 Jan 2008; Raúl Porcel <armin76@gentoo.org> libidn-1.0-r1.ebuild:
+  alpha/ia64/sparc/x86 stable
 
 *libidn-1.0-r1 (05 Dec 2007)
 
