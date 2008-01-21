@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r2.ebuild,v 1.7 2008/01/17 21:29:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r2.ebuild,v 1.8 2008/01/21 12:15:55 elvanor Exp $
 
 EAPI=1
 
@@ -130,12 +130,12 @@ src_install() {
 
 	# TODO maybe there's a better way of installing than extracting the tar?
 	[[ -f result/linux-gtk-${eclipsearch}-sdk.tar.gz ]] || die "tar.gz bundle was not built properly!"
-	tar zxf result/linux-gtk-${eclipsearch}-sdk.tar.gz -C ${D}/usr/lib \
+	tar zxf "result/linux-gtk-${eclipsearch}-sdk.tar.gz" -C "${D}/usr/lib" \
 		|| die "Failed to extract the built package"
 
-	mv ${D}/usr/lib/eclipse ${D}/${ECLIPSE_DIR}
+	mv "${D}/usr/lib/eclipse" "${D}/${ECLIPSE_DIR}"
 	#insinto ${ECLIPSE_DIR}
-	echo "-Djava.library.path=/usr/lib" >> ${D}/${ECLIPSE_DIR}/eclipse.ini
+	echo "-Djava.library.path=/usr/lib" >> "${D}/${ECLIPSE_DIR}/eclipse.ini"
 
 	debug-print "Installing eclipse-gtk binary"
 	exeinto ${ECLIPSE_DIR}
@@ -143,7 +143,7 @@ src_install() {
 
 	# Install startup script
 	exeinto /usr/bin
-	doexe ${FILESDIR}/eclipse-${SLOT}
+	doexe "${FILESDIR}/eclipse-${SLOT}"
 
 	make_desktop_entry eclipse-${SLOT} "Eclipse ${PV}" "${ECLIPSE_DIR}/icon.xpm"
 }
@@ -162,24 +162,24 @@ apply-patchset() {
 	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=86848
 	# GNU XML issue identified by Michael Koch
 	# %patch2 -p0
-	epatch ${WORKDIR}/${P}-build.patch
+	epatch "${WORKDIR}/${P}-build.patch"
 	# %patch4 -p0
-	epatch ${WORKDIR}/${P}-libupdatebuild.patch
+	epatch "${WORKDIR}/${P}-libupdatebuild.patch"
 	# %patch5 -p0
-	epatch ${WORKDIR}/${P}-libupdatebuild2.patch
+	epatch "${WORKDIR}/${P}-libupdatebuild2.patch"
 	# Build swttools.jar
 	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=90364
 	pushd plugins/org.eclipse.swt.gtk.linux.x86_64 >/dev/null
 	# %patch18 -p0
-	epatch ${WORKDIR}/${P}-swttools.patch
+	epatch "${WORKDIR}/${P}-swttools.patch"
 	popd >/dev/null
 	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=90630
 	# %patch22 -p0
-	epatch ${WORKDIR}/${P}-updatehomedir.patch
+	epatch "${WORKDIR}/${P}-updatehomedir.patch"
 	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=90535
 	pushd plugins/org.eclipse.core.runtime >/dev/null
 	# %patch24 -p0
-	epatch ${WORKDIR}/${P}-fileinitializer.patch
+	epatch "${WORKDIR}/${P}-fileinitializer.patch"
 	popd >/dev/null
 
 	##
@@ -211,16 +211,16 @@ apply-patchset() {
 	# https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=162177
 	pushd plugins/org.eclipse.jdt.core >/dev/null
 	# %patch34 -p0
-	epatch ${WORKDIR}/${P}-bz162177.patch
+	epatch "${WORKDIR}/${P}-bz162177.patch"
 	# Use ecj for gcj
 	# %patch57 -p0
-	epatch ${WORKDIR}/${P}-ecj-gcj.patch
+	epatch "${WORKDIR}/${P}-ecj-gcj.patch"
 	popd >/dev/null
 	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=114001
 	# %patch38 -p0
-	epatch ${WORKDIR}/${P}-helpindexbuilder.patch
+	epatch "${WORKDIR}/${P}-helpindexbuilder.patch"
 	# %patch40 -p0
-	epatch ${WORKDIR}/${P}-usebuiltlauncher.patch
+	epatch "${WORKDIR}/${P}-usebuiltlauncher.patch"
 	# DO NOT APPLY %patch43
 	pushd plugins/org.eclipse.swt/Eclipse\ SWT\ Mozilla/common/library >/dev/null
 	# Build cairo native libs
@@ -235,7 +235,7 @@ apply-patchset() {
 	# https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=168726
 	pushd launchertmp >/dev/null
 	# %patch47 -p1
-	epatch ${WORKDIR}/${P}-launcher-link.patch
+	epatch "${WORKDIR}/${P}-launcher-link.patch"
 	zip -q -9 -r ../launchersrc.zip * >/dev/null || die "zip failed"
 	popd >/dev/null
 	mv launchersrc.zip plugins/org.eclipse.platform
@@ -243,12 +243,12 @@ apply-patchset() {
 
 	pushd features/org.eclipse.platform.launchers >/dev/null
 	# %patch47 -p1
-	epatch ${WORKDIR}/${P}-launcher-link.patch
+	epatch "${WORKDIR}/${P}-launcher-link.patch"
 	popd >/dev/null
 	# Link against our system-installed javadocs
 	# Don't attempt to link to Sun's javadocs
 	# %patch48 -p0
-	epatch ${WORKDIR}/${P}-javadoclinks.patch
+	epatch "${WORKDIR}/${P}-javadoclinks.patch"
 	sed --in-place "s:/usr/share/:%{_datadir}/:g"           \
 		plugins/org.eclipse.jdt.doc.isv/jdtOptions.txt  \
 		plugins/org.eclipse.pde.doc.user/pdeOptions.txt \
@@ -256,14 +256,14 @@ apply-patchset() {
 		plugins/org.eclipse.platform.doc.isv/platformOptions.txt
 	# Always generate debug info when building RPMs (Andrew Haley)
 	# %patch49 -p0
-	epatch ${WORKDIR}/${P}-ecj-rpmdebuginfo.patch
+	epatch "${WORKDIR}/${P}-ecj-rpmdebuginfo.patch"
 
 	# generic releng plugins that can be used to build plugins
 	# see this thread for deails:
 	# https://www.redhat.com/archives/fedora-devel-java-list/2006-April/msg00048.html
 	pushd plugins/org.eclipse.pde.build >/dev/null
 	# %patch53
-	epatch ${WORKDIR}/${P}-pde.build-add-package-build.patch
+	epatch "${WORKDIR}/${P}-pde.build-add-package-build.patch"
 	sed --in-place "s:@eclipse_base@:%{_datadir}/%{name}:" templates/package-build/build.properties
 	popd >/dev/null
 
@@ -271,12 +271,12 @@ apply-patchset() {
 	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=142861
 	pushd plugins/org.eclipse.swt/Eclipse\ SWT >/dev/null
 	# %patch54
-	epatch ${WORKDIR}/${P}-swt-rm-ON_TOP.patch
+	epatch "${WORKDIR}/${P}-swt-rm-ON_TOP.patch"
 	popd >/dev/null
 
 	# We need to disable junit4 and apt until GCJ can handle Java5 code
 	# %patch55 -p0
-	epatch ${WORKDIR}/${P}-disable-junit4-apt.patch
+	epatch "${WORKDIR}/${P}-disable-junit4-apt.patch"
 	rm plugins/org.junit4/junit-4.1.jar
 
 	##
@@ -310,16 +310,16 @@ apply-patchset() {
 	# FIXME check if this has been applied upstream
 	pushd plugins/org.eclipse.platform.doc.isv >/dev/null
 	# %patch100 -p0
-	epatch ${WORKDIR}/customBuildCallbacks.xml-add-pre.gather.bin.parts.patch
+	epatch "${WORKDIR}/customBuildCallbacks.xml-add-pre.gather.bin.parts.patch"
 	popd >/dev/null
 	pushd plugins/org.eclipse.platform.doc.user >/dev/null
 	# %patch100 -p0
-	epatch ${WORKDIR}/customBuildCallbacks.xml-add-pre.gather.bin.parts.patch
+	epatch "${WORKDIR}/customBuildCallbacks.xml-add-pre.gather.bin.parts.patch"
 	popd >/dev/null
 
 	if use branding; then
 		pushd plugins/org.eclipse.platform >/dev/null
-		cp ${WORKDIR}/splash.bmp .
+		cp "${WORKDIR}/splash.bmp" .
 		popd >/dev/null
 	fi
 
@@ -333,7 +333,7 @@ fix-swt-targets() {
 	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=71637
 	pushd plugins/org.eclipse.swt/Eclipse\ SWT\ PI/gtk/library >/dev/null
 	# %patch0 -p0
-	epatch ${WORKDIR}/${P}-gentoo-libswt-enableallandO2.patch
+	epatch "${WORKDIR}/${P}-gentoo-libswt-enableallandO2.patch"
 	popd >/dev/null
 
 	# Select the set of native libraries to compile
