@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.2.ebuild,v 1.2 2008/01/20 22:52:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.2.ebuild,v 1.3 2008/01/21 08:25:02 aballier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -21,7 +21,7 @@ RDEPEND="media-libs/liblo
 	x11-libs/pango
 	>=x11-libs/gtk+-2.8.8
 	media-libs/flac
-	media-libs/alsa-lib
+	>=media-libs/alsa-lib-1.0.14a-r1
 	>=media-libs/libsamplerate-0.1.1-r1
 	>=dev-libs/libxml2-2.6.0
 	dev-libs/libxslt
@@ -49,6 +49,12 @@ pkg_setup() {
 		eerror "dev-cpp/gtkmm needs to be built with use accessibility"
 		eerror "in order to build ${PN}"
 		die "gtkmm was not built with use accessibility"
+	fi
+	if ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror ""
+		eerror "To be able to build ${PN} you need"
+		eerror "to have built media-libs/alsa-lib with midi USE flag."
+		die "Missing midi USE flag on media-libs/alsa-lib"
 	fi
 }
 
