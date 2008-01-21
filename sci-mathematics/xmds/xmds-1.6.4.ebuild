@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/xmds-1.6.4.ebuild,v 1.1 2008/01/20 17:42:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/xmds-1.6.4.ebuild,v 1.2 2008/01/21 03:24:51 mr_bones_ Exp $
 
 doc_ver=20080110
 
@@ -47,4 +47,3 @@ src_install() {
 		doins examples/*
 	fi
 }
-
