@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.82 2007/12/15 19:02:00 dertobi123 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.83 2008/01/21 20:27:43 armin76 Exp $
+
+  21 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  nagios-plugins-1.4.11.ebuild:
+  sparc stable wrt #205335
 
 *nagios-plugins-1.4.11 (15 Dec 2007)
 
