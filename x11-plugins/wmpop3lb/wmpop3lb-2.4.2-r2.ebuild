@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/wmpop3lb-2.4.2-r2.ebuild,v 1.3 2007/07/22 04:37:20 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/wmpop3lb-2.4.2-r2.ebuild,v 1.4 2008/01/21 14:32:45 drac Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://lbj.free.fr/wmpop3/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="amd64 ~sparc x86"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}/wmpop3
+	unpack ${A} ; cd "${S}"/wmpop3
 
 	sed -i -e "s:-g2 -D_DEBUG:${CFLAGS}:" Makefile
 
@@ -32,7 +32,7 @@ src_unpack() {
 	#epatch ${FILESDIR}/${P}-socket-close.patch
 
 	#Fix bug #161530
-	epatch ${FILESDIR}/${P}-fix-RECV-and-try-STAT-if-LAST-wont-work.patch
+	epatch "${FILESDIR}"/${P}-fix-RECV-and-try-STAT-if-LAST-wont-work.patch
 }
 
 src_compile() {
