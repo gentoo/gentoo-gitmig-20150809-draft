@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.5.1-r1.ebuild,v 1.1 2007/12/12 16:43:48 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.5.1-r1.ebuild,v 1.2 2008/01/21 20:09:29 armin76 Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="Graphical FTP client using wxPython"
 SRC_URI="mirror://sourceforge/ftpcube/${MY_P}.tar.gz"
 HOMEPAGE="http://ftpcube.sourceforge.net/"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 SLOT="0"
 LICENSE="Artistic"
 IUSE="sftp"
