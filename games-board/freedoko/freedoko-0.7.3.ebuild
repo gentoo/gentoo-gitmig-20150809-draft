@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.3.ebuild,v 1.6 2007/11/07 04:11:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.3.ebuild,v 1.7 2008/01/21 07:43:49 nyhm Exp $
 
 inherit eutils games
 
@@ -22,9 +22,9 @@ IUSE="xskatcards kdecards altenburgcards pysolcards net doc"
 
 RDEPEND="net? ( net-libs/gnet )
 	dev-cpp/gtkmm"
-
 DEPEND="${RDEPEND}
 	app-arch/unzip
+	dev-util/pkgconfig
 	doc? ( virtual/tetex )"
 
 S=${WORKDIR}/FreeDoko_${PV}
@@ -63,7 +63,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export CPPFLAGS="${CPPFLAGS} -DPUBLIC_DATA_DIRECTORY_VALUE='\"${GAMES_DATADIR}/${PN}\"'"
+	export CPPFLAGS="-DPUBLIC_DATA_DIRECTORY_VALUE='\"${GAMES_DATADIR}/${PN}\"'"
 	export OSTYPE=Linux
 	emake release_directory || die "build failed"
 	emake release_data || die "build failed"
@@ -76,8 +76,8 @@ src_install() {
 	insinto "${GAMES_DATADIR}"/${PN}/
 	doins -r release/FreeDoko_${PV}/* || die "Installation failed"
 	dodoc README LIESMICH ChangeLog
-	doicon src/FreeDoko.png
-	make_desktop_entry freedoko FreeDoko FreeDoko.png
+	newicon src/FreeDoko.png ${PN}.png
+	make_desktop_entry ${PN} FreeDoko
 	prepgamesdirs
 }
 
