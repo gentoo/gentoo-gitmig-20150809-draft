@@ -2,7 +2,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-depend() { 
+depend() {
 	need net
 }
 
@@ -12,8 +12,7 @@ checkconfig() {
 		/bin/mkdir "${GIMPS_DIR}"
 	fi
 
-	/bin/chown ${USER}:${GROUP} ${GIMPS_DIR}
-	/bin/chown ${USER}:${GROUP} ${GIMPS_DIR}/*
+	/bin/chown -R ${USER}:${GROUP} ${GIMPS_DIR}
 }
 
 start() {

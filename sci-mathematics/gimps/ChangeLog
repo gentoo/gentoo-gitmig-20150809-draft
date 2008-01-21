@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/gimps
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.20 2007/11/14 17:55:56 spock Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.21 2008/01/21 16:44:05 spock Exp $
+
+  21 Jan 2008; Michał Januszewski <spock@gentoo.org>
+  files/gimps-24.14-init.d, gimps-24.14-r1.ebuild:
+  Really make gimps stable on amd64 this time. Fix the initscript so that
+  error messages are not displayed when it's first run.
 
   14 Nov 2007; Michał Januszewski <spock@gentoo.org> gimps-24.14-r1.ebuild:
   amd64 stable, bug #189861.
