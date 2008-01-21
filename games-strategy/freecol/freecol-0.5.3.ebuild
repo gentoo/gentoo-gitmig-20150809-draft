@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.5.3.ebuild,v 1.4 2007/05/25 21:08:28 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.5.3.ebuild,v 1.5 2008/01/21 21:58:37 caster Exp $
+
+WANT_ANT_TASKS="ant-nodeps"
 
 inherit eutils java-pkg-2 java-ant-2 games
 
@@ -14,8 +16,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.5"
-DEPEND=">=virtual/jdk-1.5
-	dev-java/ant"
+DEPEND=">=virtual/jdk-1.5"
 
 S=${WORKDIR}/${PN}
 
