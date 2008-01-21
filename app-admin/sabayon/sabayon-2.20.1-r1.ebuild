@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.20.1-r1.ebuild,v 1.1 2008/01/18 09:34:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.20.1-r1.ebuild,v 1.2 2008/01/21 15:02:14 jer Exp $
 
 inherit gnome2 eutils python multilib pam
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/sabayon/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 # Unfortunately the configure.ac is wildly insufficient, so dependencies have
