@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.2.1.ebuild,v 1.4 2007/07/22 06:47:42 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.2.1.ebuild,v 1.5 2008/01/21 14:24:20 markusle Exp $
 
 DESCRIPTION="scientific visualization tool"
 
@@ -22,9 +22,9 @@ DEPEND="${RDEPEND}
 	app-shells/tcsh"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-	patch -p1 < ${FILESDIR}/gentoo-${P}.diff
+	unpack "${A}"
+	cd "${S}"
+	patch -p1 < "${FILESDIR}"/gentoo-${P}.diff
 }
 
 src_compile() {
@@ -43,7 +43,7 @@ src_compile() {
 src_install() {
 	make install || die
 
-	dodoc BUGS CHANGELOG FAQ FORMATS INSTALL LICENSE README
+	dodoc BUGS CHANGELOG FAQ FORMATS INSTALL README
 	insinto /usr/share/doc/${PF}
 	doins Manuals/*
 
