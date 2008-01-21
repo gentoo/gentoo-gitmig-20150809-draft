@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-19c.ebuild,v 1.5 2007/02/03 17:55:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-19c.ebuild,v 1.6 2008/01/21 06:55:15 ulm Exp $
 
 inherit common-lisp-common-2 eutils toolchain-funcs
 
@@ -17,12 +17,11 @@ SRC_URI="mirror://gentoo/cmucl_${MY_PV}.orig.tar.gz
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="doc lesstif nosource"
+IUSE="doc nosource"
 
 DEPEND=">=dev-lisp/common-lisp-controller-4
 	doc? ( virtual/tetex )
-	lesstif? ( x11-libs/lesstif )
-	!lesstif? ( x11-libs/openmotif )
+	virtual/motif
 	sys-devel/bc"
 
 PROVIDE="virtual/commonlisp"
@@ -31,23 +30,15 @@ S=${WORKDIR}/cmucl-${MY_PV}.orig
 
 src_unpack() {
 	unpack ${A}
-	epatch cmucl_${MY_PV}-${DEB_PV}.diff || die
-	epatch ${FILESDIR}/${PV}/herald-save.lisp-gentoo.patch || die
+	epatch cmucl_${MY_PV}-${DEB_PV}.diff
+	epatch "${FILESDIR}/${PV}/herald-save.lisp-gentoo.patch"
 
-	find ${S} -type f \( -name \*.sh -o -name linux-nm \) \
+	find "${S}" -type f \( -name \*.sh -o -name linux-nm \) \
 		-exec chmod +x '{}' \;
 }
 
 src_compile() {
 	export SANDBOX_ON=0
-
-	# non-x86 maintainers, add to the the following and verify
-
-	if use lesstif || test -d /usr/X11R6/include/lesstif; then
-		sed -i -e 's,-I/usr/X11R6/include,-I/usr/X11R6/include/lesstif,g' \
-			-e 's,-L/usr/X11R6/lib,-L/usr/X11R6/lib/lesstif -L/usr/X11R6/lib,g' \
-			src/motif/server/Config.x86
-	fi
 
 	sed -i -e "s,CC = .*,CC = $(tc-getCC),g" \
 		src/lisp/Config.linux_gencgc
@@ -78,15 +69,15 @@ src_install() {
 	newexe own-work/cmucl-script.sh cmucl.sh
 
 	insinto /etc/common-lisp/cmucl
-	sed "s,@PF@,${PF},g" <${FILESDIR}/${PV}/site-init.lisp.in >site-init.lisp
+	sed "s,@PF@,${PF},g" <"${FILESDIR}/${PV}/site-init.lisp.in" >site-init.lisp
 	doins site-init.lisp
 	dosym /etc/common-lisp/cmucl/site-init.lisp /usr/lib/cmucl/site-init.lisp
 
 	dodir /etc/env.d
-	cat >${D}/etc/env.d/50cmucl <<EOF
+	cat >"${D}"/etc/env.d/50cmucl <<EOF
 # CMUCLLIB=/usr/lib/cmucl
 EOF
-	[ -f /etc/lisp-config.lisp ] || touch ${D}/etc/lisp-config.lisp
+	[ -f /etc/lisp-config.lisp ] || touch "${D}"/etc/lisp-config.lisp
 
 	insinto /usr/share/doc/${P}/html/Basic-tutorial
 	doins own-work/tutorials/Basic-tutorial/*
@@ -119,7 +110,7 @@ EOF
 	if ! use nosource; then
 		dodir /usr/share/common-lisp/source/cmucl
 		(cd src ; find . -name \*.lisp -and -type f | tar --create --file=- --files-from=- ) |\
-			tar --extract --file=- -C ${D}/usr/share/common-lisp/source/cmucl
+			tar --extract --file=- -C "${D}"/usr/share/common-lisp/source/cmucl
 		dodir /usr/share/common-lisp/systems
 	fi
 
@@ -136,7 +127,7 @@ EOF
 		src/hemlock/charmacs.lisp \
 		src/hemlock/key-event.lisp \
 		src/hemlock/keysym-defs.lisp \
-		${D}/usr/share/common-lisp/source/cmucl-clx
+		"${D}"/usr/share/common-lisp/source/cmucl-clx
 	insinto /usr/share/common-lisp/source/cmucl-clx/debug
 	doins src/clx/debug/*.lisp
 	insinto /usr/share/common-lisp/source/cmucl-clx/demo
