@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-2.11.ebuild,v 1.7 2006/10/11 12:02:57 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-2.11.ebuild,v 1.8 2008/01/21 19:22:30 drac Exp $
 
 DESCRIPTION="A GTK+ 2.0 based 'post-it' note system."
 HOMEPAGE="http://xpad.sourceforge.net/"
@@ -18,6 +18,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_install () {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }
