@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.1.1.ebuild,v 1.3 2007/12/30 18:18:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.1.1.ebuild,v 1.4 2008/01/21 06:06:28 vapier Exp $
 
 inherit eutils toolchain-funcs
 
-IUSE_VIDEO_CARDS="ati128 cle266 cyber5k i810 i830 mach64 matrox neomagic nsc nvidia radeon savage sis315 tdfx unichrome"
+IUSE_VIDEO_CARDS="ati128 cle266 cyber5k i810 i830 mach64 matrox neomagic none nsc nvidia radeon savage sis315 tdfx unichrome"
 IUSE_INPUT_DEVICES="dbox2remote elo-input gunze h3600_ts joystick keyboard dreamboxremote linuxinput lirc mutouch none permount ps2mouse serialmouse sonypijogdial wm97xx"
 
 DESCRIPTION="Thin library on top of the Linux framebuffer devices"
@@ -66,20 +66,28 @@ src_unpack() {
 
 src_compile() {
 	local vidcards card input inputdrivers
-	for card in ${VIDEO_CARDS} ; do
-		has ${card} ${IUSE_VIDEO_CARDS} && vidcards="${vidcards},${card}"
-		#use video_cards_${card} && vidcards="${vidcards},${card}"
-	done
-	[[ -z ${vidcards} ]] \
-		&& vidcards="all" \
-		|| vidcards=${vidcards:1}
-	for input in ${INPUT_DEVICES} ; do
-		has ${input} ${IUSE_INPUT_DEVICES} && inputdrivers="${inputdrivers},${input}"
-		#use input_devics_${input} && inputdrivers="${inputdrivers},${input}"
-	done
-	[[ -z ${inputdrivers} ]] \
-		&& inputdrivers="all" \
-		|| inputdrivers=${inputdrivers:1}
+	if [[ ${VIDEO_CARDS+set} == "set" ]] ; then
+		for card in ${VIDEO_CARDS} ; do
+			has ${card} ${IUSE_VIDEO_CARDS} && vidcards="${vidcards},${card}"
+			#use video_cards_${card} && vidcards="${vidcards},${card}"
+		done
+		[[ -z ${vidcards} ]] \
+			&& vidcards="none" \
+			|| vidcards=${vidcards:1}
+	else
+		vidcards="all"
+	fi
+	if [[ ${INPUT_DEVICES+set} == "set" ]] ; then
+		for input in ${INPUT_DEVICES} ; do
+			has ${input} ${IUSE_INPUT_DEVICES} && inputdrivers="${inputdrivers},${input}"
+			#use input_devics_${input} && inputdrivers="${inputdrivers},${input}"
+		done
+		[[ -z ${inputdrivers} ]] \
+			&& inputdrivers="none" \
+			|| inputdrivers=${inputdrivers:1}
+	else
+		inputdrivers="all"
+	fi
 
 	local sdlconf="--disable-sdl"
 	if use sdl ; then

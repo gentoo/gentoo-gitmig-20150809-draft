@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/DirectFB
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.68 2007/12/24 10:27:40 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.69 2008/01/21 06:06:28 vapier Exp $
+
+  21 Jan 2008; Mike Frysinger <vapier@gentoo.org> DirectFB-1.1.1.ebuild:
+  Handle the edge cases better with VIDEO_CARDS/INPUT_DEVICES. Not set implies
+  all, set but not matching any possibilities implies none. Fixes #206824 by
+  peter.
 
   24 Dec 2007; Mike Frysinger <vapier@gentoo.org> DirectFB-1.1.1.ebuild:
   Add support for USE=X #201970 by Alexis Ballier.
