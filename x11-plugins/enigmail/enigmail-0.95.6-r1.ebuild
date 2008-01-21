@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.5-r1.ebuild,v 1.7 2007/12/15 12:53:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.6-r1.ebuild,v 1.1 2008/01/21 20:39:58 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozcoreconf mozextension makeedit multilib autotools
 
 LANGS="de el es-ES nb-NO pt-BR zh-CN"
-NOSHORTLANGS="ca-AD cs-CZ es-ES fi-FI fr-FR hu-HU it-IT ja-JP nb-NO pl-PL pt-PT ru-RU sl-SI sv-SE tr-TR zh-TW"
+NOSHORTLANGS="ca-AD cs-CZ es-ES fi-FI fr-FR hu-HU it-IT ja-JP ko-KR nb-NO pl-PL pt-PT ro-RO ru-RU sl-SI sv-SE tr-TR zh-TW"
 
 EMVER=${PV}
 TBVER="2.0.0.9"
@@ -19,7 +19,7 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVE
 	mirror://gentoo/mozilla-thunderbird-${TBPATCH}.tar.bz2
 	http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz"
 
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2"
 IUSE=""
@@ -38,10 +38,10 @@ done
 
 DEPEND=">=mail-client/mozilla-thunderbird-${TBVER}"
 RDEPEND="${DEPEND}
-	>=app-crypt/gnupg-1.4.7
+	>=app-crypt/gnupg-1.4
 	>=www-client/mozilla-launcher-1.56"
 
-S=${WORKDIR}/mozilla
+S="${WORKDIR}/mozilla"
 
 # Needed by src_compile() and src_install().
 # Would do in pkg_setup but that loses the export attribute, they
@@ -64,7 +64,7 @@ linguas() {
 			continue
 		else
 			local SLANG
-			for SLANG in ${SHORTLANGS}; do
+			for SLANG in ${NOSHORTLANGS}; do
 				if [[ ${LANG} == ${SLANG%%-*} ]]; then
 					hasq ${SLANG} ${linguas} || \
 						linguas="${linguas:+"${linguas} "}${SLANG}"
