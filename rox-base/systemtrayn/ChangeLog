@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/systemtrayn
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/systemtrayn/ChangeLog,v 1.8 2007/11/15 20:20:14 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/systemtrayn/ChangeLog,v 1.9 2008/01/22 16:02:52 lack Exp $
+
+*systemtrayn-0.3.2 (22 Jan 2008)
+
+  22 Jan 2008; Jim Ramsay <lack@gentoo.org> +systemtrayn-0.3.2.ebuild:
+  Version bump (Bug #207053)
 
   15 Nov 2007; Samuli Suominen <drac@gentoo.org>
   systemtrayn-0.3.1-r1.ebuild:
