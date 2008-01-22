@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11.4.ebuild,v 1.1 2007/12/07 06:41:14 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11.4.ebuild,v 1.2 2008/01/22 17:24:06 welp Exp $
 
 inherit multilib python eutils
 
@@ -63,6 +63,12 @@ pkg_setup() {
 		eerror "Please rebuild python with USE=\"sqlite\""
 		die "USE=\"sqlite\" needed for python"
 	fi
+}
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-test_fix.patch"
 }
 
 src_compile() {
