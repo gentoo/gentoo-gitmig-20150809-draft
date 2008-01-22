@@ -11,10 +11,10 @@ EBUILD eselect-emacs-1.1.ebuild 719 RMD160 81ec1ca506f45cb5a68e1bedc3f103d7f2062
 MD5 54d54220255d829a52d5cb92c20bef10 eselect-emacs-1.1.ebuild 719
 RMD160 81ec1ca506f45cb5a68e1bedc3f103d7f20621e9 eselect-emacs-1.1.ebuild 719
 SHA256 1f1bb3d54a13573931e2e6c1aef395e63bbd7cc70ae739f6c5fa45edfb1628d0 eselect-emacs-1.1.ebuild 719
-EBUILD eselect-emacs-1.3-r2.ebuild 965 RMD160 0f8ef44758aebe0e6301af80150036f1495022a8 SHA1 a12f91ca299cc35502f63d64a27dffede9e27eaf SHA256 9d13d3f429efea6b2f233c0caa0ef4aeb78942cda484fe175020ed386c01d4e0
-MD5 8ce975ca03b34986492731a76f6e5398 eselect-emacs-1.3-r2.ebuild 965
-RMD160 0f8ef44758aebe0e6301af80150036f1495022a8 eselect-emacs-1.3-r2.ebuild 965
-SHA256 9d13d3f429efea6b2f233c0caa0ef4aeb78942cda484fe175020ed386c01d4e0 eselect-emacs-1.3-r2.ebuild 965
+EBUILD eselect-emacs-1.3-r2.ebuild 961 RMD160 2e65d574a4a25b8fc4bd9f8ec0598f2bb7616405 SHA1 58f422538dff2fc2049c72b826f30820e02da535 SHA256 d0daaa12e68cefbd43c4d1b920acdc1fe185d6e95b9abb60dd05f05097dcbd37
+MD5 2aa97931fda3effd7522f015e3995e5f eselect-emacs-1.3-r2.ebuild 961
+RMD160 2e65d574a4a25b8fc4bd9f8ec0598f2bb7616405 eselect-emacs-1.3-r2.ebuild 961
+SHA256 d0daaa12e68cefbd43c4d1b920acdc1fe185d6e95b9abb60dd05f05097dcbd37 eselect-emacs-1.3-r2.ebuild 961
 EBUILD eselect-emacs-1.3.ebuild 730 RMD160 4ba812da4daf3c08e294519e2528a95a51c09fd0 SHA1 1e7cae3a8c2377cd380598f66615c5a7c360e106 SHA256 e30349e48facc0f4d221f5b44a1489c3af8c227e98e23e1f6c1a2a338334e163
 MD5 f060831094bb381e9c532f83297f4691 eselect-emacs-1.3.ebuild 730
 RMD160 4ba812da4daf3c08e294519e2528a95a51c09fd0 eselect-emacs-1.3.ebuild 730
@@ -39,7 +39,7 @@ SHA256 6453d9d799af41c4988923369528bfbc046ca325625b85ebff99d9f953d6f207 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFHk5wRKhnDs22gwa8RAgoYAJ9Yk/sVV9UfYbaF6n2BoCMD7oezgQCeP3jv
-R9uMVgMxpXbAWPrXmN0yE9M=
-=j8jp
+iD8DBQFHlaYIj9hvisErhMIRArRFAJ4v/I1w86M/KbtBdt3s32h0+AfAtACeJf2W
+aOWG+KAhH+vKhmsze9u8E8Y=
+=zvOn
 -----END PGP SIGNATURE-----
