@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.130 2007/12/23 17:21:56 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.131 2008/01/22 15:46:33 armin76 Exp $
+
+  22 Jan 2008; Raúl Porcel <armin76@gentoo.org> usermin-1.320.ebuild:
+  alpha/sparc/x86 stable and add ~ia64
 
 *usermin-1.320 (23 Dec 2007)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.390.ebuild,v 1.1 2007/12/23 17:14:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.390.ebuild,v 1.2 2008/01/22 15:45:04 armin76 Exp $
 
 inherit eutils pam
 
@@ -15,7 +15,7 @@ SRC_URI="webmin-minimal? ( mirror://sourceforge/webadmin/${P}-minimal.tar.gz )
 LICENSE="BSD"
 SLOT="0"
 # ~mips removed because of broken deps. Bug #86085
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh sparc x86"
 IUSE="apache2 pam postgres ssl webmin-minimal"
 
 DEPEND="dev-lang/perl"
