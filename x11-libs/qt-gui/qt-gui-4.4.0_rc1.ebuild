@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_rc1.ebuild,v 1.7 2008/01/22 14:02:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.0_rc1.ebuild,v 1.8 2008/01/22 14:37:23 caleb Exp $
 
 inherit eutils qt4-build
 
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/inputproto"
 
-QT4_TARGET_DIRECTORIES="src/gui tools/designer tools/linguist"
+QT4_TARGET_DIRECTORIES="src/gui tools/designer tools/linguist src/plugins/imageformats src/plugins/designer"
 
 src_unpack() {
 	qt4-build_src_unpack
