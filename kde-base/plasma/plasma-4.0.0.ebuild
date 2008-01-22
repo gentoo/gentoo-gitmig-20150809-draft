@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma/plasma-4.0.0.ebuild,v 1.2 2008/01/18 03:08:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma/plasma-4.0.0.ebuild,v 1.3 2008/01/22 04:21:54 ingmar Exp $
 
 EAPI="1"
 
@@ -27,6 +27,9 @@ DEPEND="${COMMONDEPEND}
 	xinerama? ( x11-proto/xineramaproto )"
 RDEPEND="${COMMONDEPEND}
 	>=kde-base/kde-menu-icons-${PV}:${SLOT}"
+PDEPEND="
+	|| ( kde-base/kdeartwork-iconthemes:${SLOT}
+		kde-base/kdeartwork:${SLOT} )"
 
 KMEXTRACTONLY="
 	ksmserver/org.kde.KSMServerInterface.xml
