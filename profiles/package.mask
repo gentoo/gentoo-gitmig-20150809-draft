@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8156 2008/01/22 17:23:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8157 2008/01/22 21:26:16 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -261,12 +261,6 @@ app-emacs/uboat
 =kde-base/sweeper-4*
 =kde-base/systemsettings-4*
 =kde-base/umbrello-4*
-
-# Doug Klima <cardoe@gentoo.org> (16 Jan 2007)
-# Started to rewrite the ebuild when it came out
-# but have not had time to finish. Best to commit
-# it masked so at least some people can mess with it
-=x11-drivers/nvidia-drivers-169.07
 
 # Raúl Porcel <armin76@gentoo.org> (16 Jan 2007)
 # Doesn't work with stable bittorrent
