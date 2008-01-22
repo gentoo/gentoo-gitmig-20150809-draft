@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.7 2007/11/27 11:31:21 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.8 2008/01/22 15:47:36 hanno Exp $
 
 inherit eutils python multilib
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=">=dev-lang/python-2.3
 	virtual/mta
 	virtual/cron
-	|| ( www-servers/apache www-servers/lighttpd )"
+	virtual/httpd-cgi"
 
 pkg_setup() {
 	INSTALLDIR=${MAILMAN_PREFIX:-"/usr/$(get_libdir)/mailman"}
@@ -62,8 +62,10 @@ src_install () {
 	dosed "s:/usr/local/mailman/cgi-bin:${INSTALLDIR}/cgi-bin:g" /etc/apache2/modules.d/50_mailman.conf
 	dosed "s:/usr/local/mailman/archives:${VAR_PREFIX}/archives:g" /etc/apache2/modules.d/50_mailman.conf
 
-	dodoc "${FILESDIR}/README.gentoo" ACK* BUGS FAQ NEWS README* TODO UPGRADING INSTALL \
-		contrib/README.check_perms_grsecurity contrib/virtusertable contrib/mailman.mc || die "dodoc failed"
+	newdoc "${FILESDIR}/README.gentoo-r2" README.gentoo || die "newdoc failed"
+
+	dodoc ACK* BUGS FAQ NEWS README* TODO UPGRADING INSTALL contrib/mailman.mc \
+		contrib/README.check_perms_grsecurity contrib/virtusertable || die "dodoc failed"
 
 	exeinto ${INSTALLDIR}/bin
 	doexe build/contrib/*.py contrib/majordomo2mailman.pl contrib/auto \
@@ -131,6 +133,10 @@ pkg_postinst() {
 	ewarn "MAILMAN_MAILGID (default: 280)"
 	ewarn
 	ewarn "Config file is now symlinked in /etc/mailman, so etc-update works."
+	ewarn
+	ewarn "If you're upgrading from below 2.1.9-r2 or changed MAILMAN_PREFIX, you"
+	ewarn "MUST change the homedir of the mailman-user manually:"
+	ewarn "usermod -d ${INSTALLDIR} mailman"
 	ebeep
 }
 
