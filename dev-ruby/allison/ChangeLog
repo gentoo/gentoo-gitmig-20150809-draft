@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/allison
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.5 2008/01/17 03:07:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.6 2008/01/22 21:37:16 rbrown Exp $
+
+*allison-2.0.3 (22 Jan 2008)
+
+  22 Jan 2008; Richard Brown <rbrown@gentoo.org> +allison-2.0.3.ebuild:
+  Version bump.
 
   17 Jan 2008; Jeroen Roovers <jer@gentoo.org> allison-2.0.2.ebuild:
   Marked ~hppa (bug #206031).
