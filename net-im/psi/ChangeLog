@@ -1,6 +1,12 @@
 # ChangeLog for net-im/psi
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.122 2007/09/27 13:50:50 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.123 2008/01/22 10:11:25 alonbl Exp $
+
+*psi-0.10-r4 (22 Jan 2008)
+
+  22 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> -psi-0.10.ebuild,
+  -psi-0.10-r2.ebuild, +psi-0.10-r4.ebuild:
+  Support slotted qca, bug#129536, many QA issues.
 
   27 Sep 2007; Raúl Porcel <armin76@gentoo.org> psi-0.10-r3.ebuild:
   sparc stable wrt #188439
