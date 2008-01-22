@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/qmail-scanner
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.38 2008/01/04 22:45:16 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.39 2008/01/22 07:29:04 tupone Exp $
+
+*qmail-scanner-2.02 (22 Jan 2008)
+
+  22 Jan 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/qmail-scanner-2.02.logrotate, +qmail-scanner-2.02.ebuild:
+  Version bump to 2.02 Bug #203446 by toto
+  Using Mime unpacker from maildrop as ripmime seems to touch length of
+  attachments
 
 *qmail-scanner-2.01-r1 (03 Jan 2008)
 
