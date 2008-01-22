@@ -1,0 +1,16 @@
+# http://mail.gnome.org/archives/sawfish-list/2008-January/msg00064.html
+
+--- sawfish-1.3.2/src/events.c
++++ sawfish-1.3.2/src/events.c
+@@ -550,11 +550,6 @@
+ 	}
+     }
+   
+-  /* No point in updating the rest if we have the _NET ones. They won't
+-     be used anyways. */
+-  if (w->net_name != Qnil)
+-    return FALSE;
+-  
+   if (xproperty.atom == XA_WM_NAME)
+     {
+       if (str == Qnil)

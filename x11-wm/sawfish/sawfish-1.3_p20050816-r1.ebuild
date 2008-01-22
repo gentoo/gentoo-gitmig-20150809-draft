@@ -1,9 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20050816.ebuild,v 1.8 2006/06/15 20:32:59 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3_p20050816-r1.ebuild,v 1.1 2008/01/22 20:58:35 truedfx Exp $
 
-# detect cvs snapshots; fex. 1.3.20040120
-[[ $PV == *.[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
+# detect cvs snapshots; fex. 1.3_p20040120
+[[ $PV == *_p[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
 (( snapshot = !$? ))
 
 inherit eutils
@@ -11,15 +11,15 @@ inherit eutils
 DESCRIPTION="Extensible window manager using a Lisp-based scripting language"
 HOMEPAGE="http://sawmill.sourceforge.net/"
 if (( snapshot )); then
-	SRC_URI="mirror://gentoo/${P}.tar.bz2"
+	SRC_URI="mirror://gentoo/${P/_p/.}.tar.bz2"
 else
 	SRC_URI="mirror://sourceforge/sawmill/${P}.tar.gz"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ~ppc ~sparc ~x86"
-IUSE="gnome esd nls audiofile"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+IUSE="gnome esd nls audiofile pango"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=x11-libs/rep-gtk-0.17
@@ -41,6 +41,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/libtool.patch"
+	# Fix utf8 with xft #121772
+	epatch "${FILESDIR}/sawfish-xft-menu-utf8.patch"
 }
 
 src_compile() {
@@ -59,7 +61,8 @@ src_compile() {
 		--disable-themer \
 		--with-gdk-pixbuf \
 		$(use_with audiofile) \
-		$(use_with esd)
+		$(use_with esd) \
+		$(use_with pango)
 
 	if use gnome; then
 		set -- "$@" \

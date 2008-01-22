@@ -1,9 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20060816.ebuild,v 1.6 2007/11/07 19:55:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3_p20060816.ebuild,v 1.1 2008/01/22 20:58:35 truedfx Exp $
 
-# detect cvs snapshots; fex. 1.3.20040120
-[[ $PV == *.[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
+# detect cvs snapshots; fex. 1.3_p20040120
+[[ $PV == *_p[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
 (( snapshot = !$? ))
 
 if (( snapshot )); then
@@ -17,7 +17,7 @@ fi
 DESCRIPTION="Extensible window manager using a Lisp-based scripting language"
 HOMEPAGE="http://sawmill.sourceforge.net/"
 if (( snapshot )); then
-	SRC_URI="mirror://gentoo/${P}.tar.bz2"
+	SRC_URI="mirror://gentoo/${P/_p/.}.tar.bz2"
 else
 	SRC_URI="mirror://sourceforge/sawmill/${P}.tar.gz"
 fi

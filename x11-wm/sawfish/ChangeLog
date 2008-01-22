@@ -1,6 +1,19 @@
 # ChangeLog for x11-wm/sawfish
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.79 2007/11/07 19:55:28 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.80 2008/01/22 20:58:35 truedfx Exp $
+
+*sawfish-1.3.2 (22 Jan 2008)
+*sawfish-1.3_p20060816 (22 Jan 2008)
+*sawfish-1.3_p20050816-r1 (22 Jan 2008)
+
+  22 Jan 2008; Harald van Dĳk <truedfx@gentoo.org> -files/Sawfish.desktop,
+  +files/sawfish-wm_name.patch, +sawfish-1.3_p20050816-r1.ebuild,
+  +sawfish-1.3_p20060816.ebuild, +sawfish-1.3.2.ebuild,
+  -sawfish-1.3.20040120.ebuild, -sawfish-1.3.20040120-r1.ebuild,
+  -sawfish-1.3.20050816.ebuild, -sawfish-1.3.20050816-r1.ebuild,
+  -sawfish-1.3.20060816.ebuild:
+  Rename older ebuilds so that they don't show up as higher than 1.3.2, and
+  add 1.3.2
 
   07 Nov 2007; Raúl Porcel <armin76@gentoo.org>
   sawfish-1.3.20060816.ebuild:
