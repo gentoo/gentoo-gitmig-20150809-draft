@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.11.ebuild,v 1.1 2007/09/14 14:20:29 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.11.ebuild,v 1.2 2008/01/22 08:39:33 nyhm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator games
 
@@ -20,6 +20,7 @@ RDEPEND="media-libs/libsdl
 	media-libs/sdl-net
 	media-libs/sdl-ttf
 	media-libs/sdl-gfx
+	media-libs/libpng
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
@@ -29,7 +30,7 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	rm -f $(find -name SConscript)
+	rm -f $(find . -name SConscript)
 
 	epatch "${FILESDIR}"/${P}-build.patch
 
