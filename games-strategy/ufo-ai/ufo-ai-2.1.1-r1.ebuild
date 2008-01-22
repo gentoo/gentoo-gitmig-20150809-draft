@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.1.1-r1.ebuild,v 1.1 2007/09/27 23:58:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.1.1-r1.ebuild,v 1.2 2008/01/22 09:21:03 nyhm Exp $
 
 inherit eutils autotools games
 
@@ -25,6 +25,7 @@ RDEPEND="virtual/opengl
 	media-libs/libpng
 	media-libs/libogg
 	media-libs/libvorbis
+	x11-libs/libXxf86vm
 	virtual/libintl
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
@@ -32,7 +33,10 @@ RDEPEND="virtual/opengl
 	jack? ( media-sound/jack-audio-connection-kit )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	doc? ( app-doc/doxygen )"
+	x11-proto/xf86vidmodeproto
+	x11-proto/xproto
+	doc? ( app-doc/doxygen )
+	dga? ( x11-proto/xf86dgaproto )"
 
 S=${WORKDIR}/${MY_P}-source
 dir=${GAMES_DATADIR}/${PN}
