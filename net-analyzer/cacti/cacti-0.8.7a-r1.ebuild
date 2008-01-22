@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7-r1.ebuild,v 1.1 2007/11/03 18:53:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7a-r1.ebuild,v 1.1 2008/01/22 16:28:14 pva Exp $
 
 inherit eutils webapp depend.apache depend.php
 
@@ -13,9 +13,9 @@ HOMEPAGE="http://www.cacti.net/"
 SRC_URI="http://www.cacti.net/downloads/${MY_P}.tar.gz"
 
 # patches
-if [ $HAS_PATCHES == 1 ] ; then
-	UPSTREAM_PATCHES="graph_create_xml_warning
-					  sec_sql_injection-0.8.7"
+if [ "${HAS_PATCHES}" == "1" ] ; then
+	UPSTREAM_PATCHES="graph-issue-wrra-specs
+					cmd-php-non-unique-hosts"
 	for i in $UPSTREAM_PATCHES ; do
 		SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV/_p*}/${i}.patch"
 	done
@@ -39,7 +39,7 @@ RDEPEND="!apache2? ( www-servers/lighttpd )
 	virtual/cron"
 
 src_unpack() {
-	if [ $HAS_PATCHES == 1 ] ; then
+	if [ "${HAS_PATCHES}" == "1" ] ; then
 		unpack ${MY_P}.tar.gz
 		[ ! ${MY_P} == ${P} ] && mv ${MY_P} ${P}
 		# patches
