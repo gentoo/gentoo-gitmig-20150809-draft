@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.4.0_rc1.ebuild,v 1.4 2007/12/28 13:36:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.4.0_rc1.ebuild,v 1.5 2008/01/22 13:29:07 caleb Exp $
 
 inherit qt4-build
 
@@ -44,6 +44,12 @@ src_compile() {
 	./configure ${myconf} || die
 
 	build_target_directories
+}
+
+src_install() {
+	qt4-build_src_install
+	insinto /usr/share/applications
+	doins "${FILESDIR}"/Assistant.desktop
 }
 
 pkg_setup() {
