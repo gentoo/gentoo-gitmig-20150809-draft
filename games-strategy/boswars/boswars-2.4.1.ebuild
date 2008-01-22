@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.4.1.ebuild,v 1.1 2007/09/10 04:32:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.4.1.ebuild,v 1.2 2008/01/22 04:09:39 nyhm Exp $
 
 inherit eutils games
 
@@ -20,6 +20,7 @@ RDEPEND="dev-lang/lua
 	media-libs/libvorbis
 	media-libs/libtheora
 	media-libs/libogg
+	virtual/opengl
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	dev-util/scons"
@@ -29,8 +30,7 @@ S=${WORKDIR}/${P}-src
 src_unpack() {
 	unpack ${A/bos.png}
 	cd "${S}"
-	rm doc/README-SDL.txt
-	rm doc/guichan-copyright.txt
+	rm -f doc/{README-SDL.txt,guichan-copyright.txt}
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
@@ -44,14 +44,12 @@ src_compile() {
 
 src_install() {
 	dogamesbin ${PN} || die "dogamesbin failed"
-	dodoc CHANGELOG COPYRIGHT.txt README.txt
-	dohtml -r doc/*
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r campaigns graphics languages maps scripts sounds units video \
 		|| die "doins failed"
-
 	doicon "${DISTDIR}"/bos.png
 	make_desktop_entry ${PN} "Bos Wars"	bos.png
-
+	dodoc CHANGELOG COPYRIGHT.txt README.txt
+	dohtml -r doc/*
 	prepgamesdirs
 }
