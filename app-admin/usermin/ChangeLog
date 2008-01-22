@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.131 2008/01/22 15:46:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.132 2008/01/22 20:02:54 ranger Exp $
+
+  22 Jan 2008; Brent Baude <ranger@gentoo.org> usermin-1.320.ebuild:
+  Marking usermin-1.320 ppc64 for bug 207049
 
   22 Jan 2008; Raúl Porcel <armin76@gentoo.org> usermin-1.320.ebuild:
   alpha/sparc/x86 stable and add ~ia64
