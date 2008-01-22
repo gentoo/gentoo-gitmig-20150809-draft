@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ta-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ta-lib/ChangeLog,v 1.3 2008/01/20 21:38:59 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ta-lib/ChangeLog,v 1.4 2008/01/22 00:06:56 dirtyepic Exp $
+
+  22 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> ta-lib-0.4.0.ebuild:
+  Temporary workaround for parallel build problem. (bug #206745)
 
   20 Jan 2008; Ryan Hill <dirtyepic@gentoo.org>
   +files/ta-lib-0.4.0-asneeded.patch, ta-lib-0.4.0.ebuild:
