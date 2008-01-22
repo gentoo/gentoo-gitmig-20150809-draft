@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.159 2008/01/22 15:45:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.160 2008/01/22 20:02:07 ranger Exp $
+
+  22 Jan 2008; Brent Baude <ranger@gentoo.org> webmin-1.390.ebuild:
+  Marking webmin-1.390 ppc64 for bug 207049
 
   22 Jan 2008; Raúl Porcel <armin76@gentoo.org> webmin-1.390.ebuild:
   alpha/sparc/x86 stable and add ~ia64
