@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kaffeine
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.84 2007/12/19 21:02:03 tgurr Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.85 2008/01/22 06:23:19 tgurr Exp $
+
+*kaffeine-0.8.6 (22 Jan 2008)
+
+  22 Jan 2008; Timo Gurr <tgurr@gentoo.org> +kaffeine-0.8.6.ebuild:
+  Add kaffeine-0.8.6.ebuild, version bump.
 
 *kaffeine-0.8.5-r2 (19 Dec 2007)
 
