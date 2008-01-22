@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.02.ebuild,v 1.1 2008/01/22 07:29:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.02.ebuild,v 1.2 2008/01/22 22:35:08 tupone Exp $
 
 inherit fixheadtails toolchain-funcs eutils
 
@@ -130,21 +130,30 @@ src_install () {
 
 	docinto contrib
 	cd "${S}"/contrib
-	dodoc spamc-nice.eml
-	dodoc test-trophie.pl
-	dodoc logrotate.qmailscanner
-	dodoc sub-avpdaemon.pl
-	dodoc logging_first_80_chars.eml
-	dodoc spamc-nasty.eml
-	dodoc avpdeamon.init
-	dodoc test_installation.sh
-	dodoc test-sophie.pl
-	dodoc reformime-test.eml
-	dodoc sub-sender-cache.pl
-	dodoc rbl_scanner.txt
-	dodoc test-clamd.pl
-	dodoc qs2mrtg.pl
-	dodoc mrtg-qmail-scanner.cfg
+	dodoc spamc-nice.eml \
+		test-trophie.pl \
+		logrotate.qmail-scanner \
+		sub-avpdaemon.pl \
+		logging_first_80_chars.eml \
+		spamc-nasty.eml \
+		avpdeamon.init \
+		test_installation.sh \
+		test-sophie.pl \
+		reformime-test.eml \
+		sub-sender-cache.pl \
+		rbl_scanner.txt \
+		test-clamd.pl \
+		qs2mrtg.pl \
+		mrtg-qmail-scanner.cfg \
+		check_AV_daemons \
+		patch_for_nod32_single_user.eml \
+		qmail-delay \
+		qs-scanner-report.sh \
+		qs_config.sh \
+		qscan-spam-to-users.pl \
+		test-avgd.pl \
+		test_password.zip \
+		vpopmail-issues.eml
 }
 
 pkg_postinst () {
@@ -171,8 +180,8 @@ pkg_postinst () {
 	ewarn "or remove the user and emerge again this package"
 
 	ewarn "For an integration with clamav, clamav user should have access"
-	ewarn "to files in the qscand group."
-	ewarn "To allow that, add clamav user to the qscand group and"
+	ewarn "to files in the qscand and nofiles group."
+	ewarn "To allow that, add clamav user to the qscan and nofiles group and"
 	ewarn "comment-out in /etc/clamd.conf AllowSupplementaryGroups putting yes."
 	ewarn "After that, restart clamd with"
 	ewarn "/etc/init.d/clamd restart"
