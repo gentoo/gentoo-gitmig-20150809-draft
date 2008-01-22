@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/highline-4.2-r1.ebuild,v 1.3 2007/06/01 16:48:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/highline-4.2-r1.ebuild,v 1.4 2008/01/22 07:55:29 vapier Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ~s390 x86"
+KEYWORDS="amd64 ppc s390 x86"
 IUSE=""
 
 SITEFILE=51${PN}-gentoo.el
