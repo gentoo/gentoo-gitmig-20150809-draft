@@ -1,14 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/pyaim-t-0.8a.ebuild,v 1.1 2007/06/08 16:52:42 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/pyaim-t-0.8a.ebuild,v 1.2 2008/01/22 18:02:24 griffon26 Exp $
 
 NEED_PYTHON=2.3
 
 inherit eutils multilib python
 
 DESCRIPTION="Python based jabber transport for AIM"
-HOMEPAGE="http://pyaim-t.blathersource.org/"
-SRC_URI="http://www.blathersource.org/download.php/${PN}/${P}.tar.gz"
+HOMEPAGE="http://code.google.com/p/pyaimt/"
+SRC_URI="http://pyaimt.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -55,7 +55,7 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize ${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	python_mod_optimize "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/${PN}"
 
 	elog "A sample configuration file has been installed in /etc/jabber/${PN}.xml."
 	elog "Please edit it and the configuration of your Jabber server to match."
@@ -63,5 +63,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	python_version
-	python_mod_cleanup ${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	python_mod_cleanup "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/${PN}"
 }
