@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.99 2008/01/14 20:17:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.100 2008/01/22 08:21:13 jer Exp $
+
+  22 Jan 2008; Jeroen Roovers <jer@gentoo.org> vnc-4.1.2-r4.ebuild:
+  Stable for HPPA too. Fixed quoting issues.
 
   14 Jan 2008; Raúl Porcel <armin76@gentoo.org> vnc-4.1.2-r3.ebuild,
   vnc-4.1.2-r4.ebuild:

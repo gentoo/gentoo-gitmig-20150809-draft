@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r4.ebuild,v 1.6 2008/01/14 20:17:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r4.ebuild,v 1.7 2008/01/22 08:21:13 jer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,7 +19,7 @@ SRC_URI="http://ltsp.mirrors.tds.net/pub/ltsp/tarballs/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ia64 ~mips ~ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="server"
 
 RDEPEND="sys-libs/zlib
@@ -109,7 +109,7 @@ src_unpack() {
 	fi
 
 	cd "${S}"
-	epatch ${FILESDIR}/${P}-freebsd.patch
+	epatch "${FILESDIR}"/${P}-freebsd.patch
 }
 
 src_compile() {
@@ -154,7 +154,7 @@ src_install() {
 	cd ..
 	dodoc README
 
-	doicon ${FILESDIR}/vncviewer.png
+	doicon "${FILESDIR}"/vncviewer.png
 	make_desktop_entry vncviewer vncviewer vncviewer.png Network
 
 	if use server ; then
@@ -181,5 +181,5 @@ src_install() {
 		rm usr/bin/vncconfig
 	fi
 
-	rm ${D}/usr/$(get_libdir)/librfb.{a,la,so}
+	rm "${D}"/usr/$(get_libdir)/librfb.{a,la,so}
 }
