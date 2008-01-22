@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audio-entropyd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.23 2008/01/21 21:58:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.24 2008/01/22 12:22:44 angelos Exp $
+
+  22 Jan 2008; Christoph Mende <angelos@gentoo.org>
+  +files/audio-entropyd-1.0.1-uclibc.patch, audio-entropyd-1.0.1.ebuild:
+  Work around compilation failures on uclibc
 
   21 Jan 2008; Markus Meier <maekke@gentoo.org>
   -audio-entropyd-0.0.6.ebuild:
