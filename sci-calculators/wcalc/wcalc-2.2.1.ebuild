@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/wcalc/wcalc-2.2.1.ebuild,v 1.2 2007/02/04 16:22:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/wcalc/wcalc-2.2.1.ebuild,v 1.3 2008/01/22 00:47:44 beandog Exp $
 
 DESCRIPTION="A flexible command-line scientific calculator"
 HOMEPAGE="http://w-calc.sourceforge.net"
@@ -8,12 +8,12 @@ SRC_URI="mirror://sourceforge/w-calc/Wcalc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
+KEYWORDS="amd64 ~ppc ~ppc-macos ~x86"
 IUSE="readline"
 
 DEPEND="readline? ( >=sys-libs/readline-4.3-r4 )
-		>=dev-libs/mpfr-2.1
-		dev-libs/gmp"
+	>=dev-libs/mpfr-2.1
+	dev-libs/gmp"
 
 S="${WORKDIR}"/Wcalc-${PV}
 
@@ -23,7 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
 
 	# Wcalc icons
