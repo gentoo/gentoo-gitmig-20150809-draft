@@ -1,6 +1,11 @@
 # ChangeLog for media-video/camserv
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/ChangeLog,v 1.19 2007/11/27 11:58:01 zzam Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/ChangeLog,v 1.20 2008/01/22 13:57:39 drac Exp $
+
+  22 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  +files/camserv-0.5.1-libtool.patch, +files/camserv-0.5.1-memcpy.patch,
+  camserv-0.5.1-r2.ebuild:
+  Attempt to fix broken libtool handling wrt #188149.
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
   camserv-0.5.1-r2.ebuild:
