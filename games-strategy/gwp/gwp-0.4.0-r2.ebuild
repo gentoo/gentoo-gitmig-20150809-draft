@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/gwp-0.4.0-r2.ebuild,v 1.1 2007/07/02 01:24:59 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/gwp-0.4.0-r2.ebuild,v 1.2 2008/01/22 08:04:04 nyhm Exp $
 
 inherit eutils gnome2
 
@@ -22,6 +22,7 @@ RDEPEND="=x11-libs/gtk+-2*
 	opengl? ( =x11-libs/gtkglext-1* )
 	python? ( =dev-python/pygtk-2* )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
@@ -38,9 +39,9 @@ src_unpack() {
 
 src_compile() {
 	gnome2_src_compile \
-	$(use_enable nls) \
-	$(use_enable opengl gtkglext) \
-	$(use_enable python)
+		$(use_enable nls) \
+		$(use_enable opengl gtkglext) \
+		$(use_enable python)
 }
 
 src_install() {
