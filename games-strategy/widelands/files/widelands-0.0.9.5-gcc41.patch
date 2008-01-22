@@ -1,5 +1,0 @@
---- src/ui/ui_fs_menus/fullscreen_menu_options.h.orig	2006-01-23 21:12:33.000000000 +0100
-+++ src/ui/ui_fs_menus/fullscreen_menu_options.h	2006-01-23 21:22:31.000000000 +0100
-@@ -66 +66 @@
--	Options_Ctrl::Options_Struct Fullscreen_Menu_Options::get_values();
-+	Options_Ctrl::Options_Struct get_values();
