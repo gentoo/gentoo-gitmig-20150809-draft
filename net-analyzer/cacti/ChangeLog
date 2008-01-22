@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.120 2008/01/22 16:28:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.121 2008/01/22 23:43:13 ranger Exp $
+
+  22 Jan 2008; Brent Baude <ranger@gentoo.org> cacti-0.8.6j-r7.ebuild:
+  Marking cacti-0.8.6j-r7 ppc to make a happy tree
 
 *cacti-0.8.7a-r1 (22 Jan 2008)
 
