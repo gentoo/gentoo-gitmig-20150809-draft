@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.9 2008/01/22 04:32:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.10 2008/01/22 04:44:42 vapier Exp $
+
+  22 Jan 2008; Mike Frysinger <vapier@gentoo.org> linphone-2.0.1-r1.ebuild:
+  Force disable building of the manual and running doxygen to save time and
+  such #206109 by Marcel Unbehaun.
 
   22 Jan 2008; Mike Frysinger <vapier@gentoo.org>
   +files/linphone-2.0.1-no-alsa.patch, linphone-2.0.1-r1.ebuild:

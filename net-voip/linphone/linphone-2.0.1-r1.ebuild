@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.0.1-r1.ebuild,v 1.4 2008/01/22 04:32:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.0.1-r1.ebuild,v 1.5 2008/01/22 04:44:42 vapier Exp $
 
 # Note: video support in linphone relies on swscaler being disabled
 #       in ffmpeg.  this is because the video code in linphone is old
@@ -60,7 +60,9 @@ src_unpack() {
 }
 
 src_compile() {
+	export ac_cv_path_DOXYGEN=false
 	econf \
+		--disable-manual \
 		--disable-strict \
 		--libdir=/usr/$(get_libdir)/linphone \
 		--libexecdir=/usr/$(get_libdir)/linphone/exec \
@@ -88,6 +90,5 @@ src_install () {
 	# to avoid conflicts with net-libs/ortp
 	rm -r "${D}"/usr/include/{mediastreamer2,ortp} || die
 	rm -r "${D}"/usr/$(get_libdir)/linphone/pkgconfig/{mediastreamer,ortp}.pc || die
-	rm -r "${D}"/usr/share/doc/ortp || die
 	mv "${D}"/usr/$(get_libdir)/{linphone/,}pkgconfig || die
 }
