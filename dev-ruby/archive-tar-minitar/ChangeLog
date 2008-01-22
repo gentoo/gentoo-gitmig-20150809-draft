@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/archive-tar-minitar
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.1 2008/01/22 22:51:28 rbrown Exp $
+
+*archive-tar-minitar-0.5.1 (22 Jan 2008)
+
+  22 Jan 2008; Richard Brown <rbrown@gentoo.org> +metadata.xml,
+  +archive-tar-minitar-0.5.1.ebuild:
+  Initial commit, for dev-ruby/color
+
