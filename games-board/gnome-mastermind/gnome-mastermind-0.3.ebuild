@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/gnome-mastermind-0.3.ebuild,v 1.3 2007/09/02 13:01:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/gnome-mastermind-0.3.ebuild,v 1.4 2008/01/22 08:25:56 nyhm Exp $
 
 inherit eutils games gnome2
 
@@ -15,6 +15,7 @@ IUSE=""
 
 RDEPEND="gnome-base/gconf
 	gnome-base/orbit
+	app-text/gnome-doc-utils
 	dev-libs/atk
 	dev-libs/glib
 	x11-libs/pango
