@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.23 2008/01/19 00:38:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.24 2008/01/22 16:02:57 matsuu Exp $
+
+  22 Jan 2008; MATSUU Takuto <matsuu@gentoo.org> qterm-0.4.0-r1.ebuild:
+  Fixed typo, bug #206887.
 
   19 Jan 2008; MATSUU Takuto <matsuu@gentoo.org> qterm-0.4.0-r1.ebuild:
   Fixed dependency, bug #204959.
