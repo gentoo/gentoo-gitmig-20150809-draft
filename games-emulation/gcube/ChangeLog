@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/gcube
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/ChangeLog,v 1.5 2007/02/21 23:20:44 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/ChangeLog,v 1.6 2008/01/22 07:44:30 nyhm Exp $
+
+*gcube-0.4-r1 (22 Jan 2008)
+
+  22 Jan 2008; Tristan Heaven <nyhm@gentoo.org> +gcube-0.4-r1.ebuild:
+  Install gcube-thpview and depend on media-libs/jpeg, bug #206372
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
