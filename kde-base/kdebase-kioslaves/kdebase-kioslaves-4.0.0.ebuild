@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.0.0.ebuild,v 1.1 2008/01/17 23:45:23 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.0.0.ebuild,v 1.2 2008/01/22 04:17:58 ingmar Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="kioslave: the kde VFS framework - kioslave plugins present a filesystem-like view of arbitrary data"
 KEYWORDS="~amd64 ~x86"
-IUSE="bzip2 debug htmlhandbook openexr samba"
+IUSE="+bzip2 debug htmlhandbook openexr samba"
 RESTRICT="test"
 
 # Note that if you upgrade strigi, you have to rebuild this package.
