@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.79 2008/01/16 12:49:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.80 2008/01/22 02:07:08 ranger Exp $
+
+  22 Jan 2008; Brent Baude <ranger@gentoo.org> mgetty-1.1.36-r1.ebuild:
+  Marking mgetty-1.1.36-r1 ~ppc64 for bug 206826
 
   16 Jan 2008; Raúl Porcel <armin76@gentoo.org> mgetty-1.1.36-r1.ebuild:
   alpha/ia64/sparc stable wrt #204189
