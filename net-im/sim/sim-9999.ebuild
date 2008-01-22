@@ -1,12 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-9999.ebuild,v 1.1 2007/12/14 17:11:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-9999.ebuild,v 1.2 2008/01/22 13:38:27 pva Exp $
 
-inherit subversion kde-functions eutils flag-o-matic
+EAPI="1"
+
+inherit cmake-utils kde-functions eutils flag-o-matic subversion
 
 ESVN_REPO_URI="svn://svn.berlios.de/sim-im/trunk"
 ESVN_PROJECT="sim-im"
-ESVN_BOOTSTRAP="make -f ./admin/Makefile.common"
 
 DESCRIPTION="Simple Instant Messenger (with KDE support). ICQ/AIM/Jabber/MSN/Yahoo."
 HOMEPAGE="http://sim-im.org/"
@@ -14,28 +15,34 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug kde spell ssl"
+IUSE="debug gpg +jabber kde msn +oscar sms spell ssl weather yahoo livejournal"
+
+# It's possible to disable/enable pluging defining SIMCMAKEOPTS. E.g. put
+# SIMCMAKEOPTS="-DENABLE_PLUGIN_TRANSPARENT:BOOL=Off"
+# inside /etc/portage/env/net-im/sim to disable transparent plugin.
 
 # kdebase-data provides the icon "licq.png"
-RDEPEND="kde? ( kde-base/kdelibs
-				|| ( kde-base/kdebase-data kde-base/kdebase ) )
-		 !kde? ( $(qt_min_version 3)
-				 spell? ( app-text/aspell ) )
-		 ssl? ( dev-libs/openssl )
-		 dev-libs/libxml2
-		 dev-libs/libxslt
-		 sys-libs/zlib
-		 x11-libs/libXScrnSaver"
+DEPEND="kde? ( kde-base/kdelibs:3.5 )
+		!kde? ( spell? ( app-text/aspell ) )
+		x11-libs/qt:3
+		ssl? ( dev-libs/openssl )
+		dev-libs/libxml2
+		dev-libs/libxslt
+		sys-libs/zlib
+		media-libs/fontconfig
+		x11-libs/libXScrnSaver"
 
-DEPEND="${RDEPEND}
-	sys-devel/flex
-	app-arch/zip
-	x11-proto/scrnsaverproto"
+RDEPEND="${DEPEND}
+		kde? ( || ( kde-base/kdebase-data:3.5 kde-base/kdebase:3.5 ) )
+		gpg? ( app-crypt/gnupg )
+		sys-devel/flex
+		app-arch/zip
+		x11-proto/scrnsaverproto"
 
 pkg_setup() {
-	if use kde ; then
+	if use kde; then
 		if use spell; then
-			if ! built_with_use kde-base/kdelibs spell ; then
+			if ! built_with_use "kde-base/kdelibs:3.5" spell; then
 				ewarn "kde-base/kdelibs were merged without spell in USE."
 				ewarn "Thus spelling will not work in sim. Please, either"
 				ewarn "reemerge kde-base/kdelibs with spell in USE or emerge"
@@ -43,7 +50,7 @@ pkg_setup() {
 				ebeep
 			fi
 		else
-			if built_with_use kde-base/kdelibs spell ; then
+			if built_with_use "kde-base/kdelibs:3.5" spell; then
 				ewarn 'kde-base/kdelibs were merged with spell in USE.'
 				ewarn 'Thus spelling will work in sim. Please, either'
 				ewarn 'reemerge kde-base/kdelibs without spell in USE or emerge'
@@ -51,36 +58,39 @@ pkg_setup() {
 				ebeep
 			fi
 		fi
-		if ! built_with_use kde-base/kdelibs arts ; then
-			myconf="--without-arts"
-		fi
 	fi
-}
-
-src_unpack() {
-	subversion_src_unpack
-
-	if use kde ; then
-	set-kdedir 3
+	if ! use jabber && ! use livejournal && ! use msn && ! use oscar && ! use yahoo; then
+		eerror "Sim requires at least one instant messaging protocol to be"
+		eerror "activated. The available protocols are:"
+		eerror "\"jabber livejournal msn oscar yahoo\"."
+		die "No instant messaging protocol activated."
 	fi
 }
 
 src_compile() {
-	filter-flags -fstack-protector -fstack-protector-all
+	if use kde; then
+		set-kdedir 3
+	fi
+	mycmakeargs="${mycmakeargs}
+				$(cmake-utils_use_enable debug PLUGIN_LOGGER)
+				$(cmake-utils_use_enable gpg PLUGIN_GPG)
+				$(cmake-utils_use_enable jabber PLUGIN_JABBER)
+				$(cmake-utils_use_enable livejournal PLUGIN_LIVEJOURNAL)
+				$(cmake-utils_use_enable kde KDE3)
+				$(cmake-utils_use_enable msn PLUGIN_MSN)
+				$(cmake-utils_use_enable oscar PLUGIN_ICQ)
+				$(cmake-utils_use_enable sms PLUGIN_SMS)
+				$(cmake-utils_use_enable spell PLUGIN_SPELL)
+				$(cmake-utils_use_enable ssl OPENSSL)
+				$(cmake-utils_use_enable weather PLUGIN_WEATHER)
+				$(cmake-utils_use_enable yahoo PLUGIN_YAHOO)
+				-DENABLE_PLUGIN_UPDATE:BOOL=Off
+				${SIMCMAKEOPTS}"
 
-	# Workaround for bug #119906
-	append-flags -fno-stack-protector
-
-	use kde || use spell || export DO_NOT_COMPILE="$DO_NOT_COMPILE plugins/spell"
-
-	econf ${myconf} `use_enable kde` \
-		  `use_with ssl` \
-		  `use_enable debug` || die "econf failed"
-
-	emake || die "make failed"
+	cmake-utils_src_compile
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed."
-	dodoc TODO README AUTHORS.sim jisp-resources.txt ChangeLog
+	cmake-utils_src_install
+	dodoc TODO TODO.CMake README AUTHORS.sim jisp-resources.txt ChangeLog
 }
