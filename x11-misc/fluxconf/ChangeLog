@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fluxconf
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/ChangeLog,v 1.34 2007/07/20 12:14:03 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/ChangeLog,v 1.35 2008/01/22 17:14:50 lack Exp $
+
+  22 Jan 2008; Jim Ramsay <lack@gentoo.org> fluxconf-0.9.9.ebuild:
+  This should have been blocking >=x11-wm/fluxbox-1.0 (Bug #96631)
 
   20 Jul 2007; Samuli Suominen <drac@gentoo.org>
   +files/fluxconf-0.9.9-asneeded.patch, fluxconf-0.9.9.ebuild:
