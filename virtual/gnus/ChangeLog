@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gnus
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.9 2007/11/26 07:35:41 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.10 2008/01/22 10:25:07 ulm Exp $
+
+  22 Jan 2008; Ulrich Mueller <ulm@gentoo.org> gnus-5.10.ebuild:
+  Stable on arm/s390/sh, following stabilisation of virtual/emacs-22.
 
   26 Nov 2007; Ulrich Mueller <ulm@gentoo.org> gnus-5.10.ebuild:
   Stable on hppa and ia64, following stabilisation of virtual/emacs-22.
