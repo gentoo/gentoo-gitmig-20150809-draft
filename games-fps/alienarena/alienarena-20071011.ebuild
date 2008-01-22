@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20071011.ebuild,v 1.1 2007/11/23 06:33:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20071011.ebuild,v 1.2 2008/01/22 04:46:06 nyhm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs games
 
@@ -14,17 +14,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="dedicated opengl sdl"
 
-UIDEPEND="media-libs/jpeg
+UIRDEPEND="media-libs/jpeg
 	media-libs/libpng
 	virtual/glu
 	virtual/opengl
 	x11-libs/libXxf86dga
-	x11-libs/libXxf86vm"
-RDEPEND="!dedicated? ( ${UIDEPEND} )
-	opengl? ( ${UIDEPEND} )
-	sdl? ( ${UIDEPEND} media-libs/libsdl )
+	x11-libs/libXxf86vm
+	sdl? ( media-libs/libsdl )"
+RDEPEND="opengl? ( ${UIRDEPEND} )
+	!opengl? ( !dedicated? ( ${UIRDEPEND} ) )
 	net-misc/curl"
+UIDEPEND="x11-proto/xf86dgaproto
+	x11-proto/xf86vidmodeproto"
 DEPEND="${RDEPEND}
+	opengl? ( ${UIDEPEND} )
+	!opengl? ( !dedicated? ( ${UIDEPEND} ) )
 	app-arch/unzip"
 
 S=${WORKDIR}/${MY_PN}/source
@@ -68,13 +72,13 @@ src_install() {
 
 	if use opengl || ! use dedicated ; then
 		newgamesbin crx ${PN}-oss || die "newgamesbin crx failed"
-		make_desktop_entry ${PN}-oss "Alien Arena (OSS audio)" ${PN}.xpm
+		make_desktop_entry ${PN}-oss "Alien Arena (OSS audio)"
 		use sdl || dosym ${PN}-oss "${GAMES_BINDIR}"/${PN}
 	fi
 
 	if use sdl ; then
 		newgamesbin crx.sdl ${PN}-sdl || die "newgamesbin crx.sdl failed"
-		make_desktop_entry ${PN}-sdl "Alien Arena (SDL audio)" ${PN}.xpm
+		make_desktop_entry ${PN}-sdl "Alien Arena (SDL audio)"
 		dosym ${PN}-sdl "${GAMES_BINDIR}"/${PN}
 	fi
 
