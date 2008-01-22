@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/kajaani-kombat-0.7.ebuild,v 1.2 2007/04/24 14:46:41 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/kajaani-kombat-0.7.ebuild,v 1.3 2008/01/22 04:19:32 nyhm Exp $
 
 inherit eutils games
 
@@ -17,6 +17,7 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-net
 	media-libs/sdl-image
 	media-libs/sdl-ttf
+	media-libs/sdl-mixer
 	sys-libs/ncurses
 	sys-libs/readline"
 
@@ -32,7 +33,6 @@ src_unpack() {
 		-e 's/IMG_Load/img_load/' \
 		gui_screens.cpp \
 		|| die "sed failed"
-	chmod a-x *.{png,ttf,ogg}
 }
 
 src_install() {
