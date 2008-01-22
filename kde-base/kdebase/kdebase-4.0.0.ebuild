@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-4.0.0.ebuild,v 1.3 2008/01/18 06:17:57 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-4.0.0.ebuild,v 1.4 2008/01/22 04:16:08 ingmar Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ URI="${SRC_URI}"
 SRC_URI="${URI} ${URI/${PN}/${PN}-runtime} ${URI/${PN}/${PN}-workspace}"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="3dnow altivec bluetooth bzip2 captury debug ieee1394 htmlhandbook kerberos
+IUSE="3dnow altivec bluetooth +bzip2 captury debug ieee1394 htmlhandbook kerberos
 lm_sensors mmx networkmanager pam openexr opengl samba sse sse2
 ssl test +usb +xcb xcomposite +xine xinerama"
 
@@ -94,6 +94,11 @@ RDEPEND="${COMMONDEPEND}
 		|| ( >=sys-apps/eject-2.1.5
 			sys-block/unieject ) )
 "
+
+PDEPEND="
+	|| ( kde-base/kdeartwork-iconthemes:${SLOT}
+		kde-base/kdeartwork:${SLOT} )"
+
 #IUSE="xscreensaver"
 #
 #COMMONDEPEND="
