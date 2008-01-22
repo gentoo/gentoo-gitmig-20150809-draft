@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.62 2008/01/22 02:41:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.63 2008/01/22 19:43:16 armin76 Exp $
+
+  22 Jan 2008; Raúl Porcel <armin76@gentoo.org> itpp-4.0.1.ebuild:
+  sparc stable wrt #206850
 
   22 Jan 2008; Brent Baude <ranger@gentoo.org> itpp-4.0.1.ebuild:
   Marking itpp-4.0.1 ppc for bug 206850
