@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/devtray
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/devtray/ChangeLog,v 1.3 2007/11/29 16:05:29 lack Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/devtray/ChangeLog,v 1.4 2008/01/22 16:50:11 lack Exp $
+
+*devtray-0.3.3 (22 Jan 2008)
+
+  22 Jan 2008; Jim Ramsay <lack@gentoo.org> +devtray-0.3.3.ebuild:
+  Version bump (Bug #207055)
 
   29 Nov 2007; Jim Ramsay <lack@gentoo.org> -devtray-0.3.2.ebuild:
   Version cleanup
