@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.204 2008/01/15 21:30:53 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.205 2008/01/22 20:51:16 cardoe Exp $
+
+  22 Jan 2008; Doug Klima <cardoe@gentoo.org> mythtv-0.20.2_p15332.ebuild,
+  mythtv-0.21_pre15447.ebuild:
+  use eqmake3 function since it's not available
 
   15 Jan 2008; Steve Dibb <beandog@gentoo.org> mythtv-0.21_pre15447.ebuild:
   Fix perl bindings configuration
