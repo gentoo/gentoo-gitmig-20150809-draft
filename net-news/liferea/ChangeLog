@@ -1,6 +1,21 @@
 # ChangeLog for net-news/liferea
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.136 2007/12/23 16:03:29 dang Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.137 2008/01/22 03:17:22 dang Exp $
+
+*liferea-1.4.11 (22 Jan 2008)
+
+  22 Jan 2008; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.4.11.ebuild:
+  Bump to 1.4.11
+  	* Fixes SF #1795739: Unread count on systray icon
+  	  is wrong (reported by smglchatguru)
+  	* Fixes crash when selecting news bins.
+  	  (reported by Luis Rodrigo Gallardo Cruz)
+  	* Fixes SF #1870052: Crash upon hitting <enter> with no 
+  	  headline selected (reported by Justin Blanchard)
+  	* Fixes SF #1868054: _XOPEN_SOURCE defined incorrectly
+  	  (reported by Steve Bellovin)
+  	* Fixes SF #1868052: gmtime reentrancy problem
+  	  (reported by Steve Bellovin)
 
 *liferea-1.4.10 (23 Dec 2007)
 
