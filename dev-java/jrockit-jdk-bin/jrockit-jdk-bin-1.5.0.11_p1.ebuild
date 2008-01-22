@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.5.0.11_p1.ebuild,v 1.4 2007/09/01 10:28:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.5.0.11_p1.ebuild,v 1.5 2008/01/22 21:32:22 betelgeuse Exp $
 
 # WARNING: This is the default VM on ia64, so treat this ebuild
 # with proper care.
@@ -83,7 +83,7 @@ src_install() {
 	newdoc README.txt README || die
 	dodoc LICENSE || die
 
-	chmod +x ${D}/opt/${P}/bin/* ${D}/opt/${P}/jre/bin/* || die "Could not chmod"
+	chmod +x "${D}"/opt/${P}/bin/* "${D}"/opt/${P}/jre/bin/* || die "Could not chmod"
 	set_java_env
 }
 
