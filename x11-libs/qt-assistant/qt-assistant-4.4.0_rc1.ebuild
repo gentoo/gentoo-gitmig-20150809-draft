@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.4.0_rc1.ebuild,v 1.5 2008/01/22 13:29:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.4.0_rc1.ebuild,v 1.6 2008/01/22 14:11:44 caleb Exp $
 
 inherit qt4-build
 
@@ -22,7 +22,10 @@ RDEPEND="~x11-libs/qt-gui-${PV}
 
 DEPEND="${RDEPEND}"
 
-QT4_TARGET_DIRECTORIES="tools/assistant"
+# pixeltool isn't really assistant related, but it relies on
+# the assistant libraries, so we'll put it here for now
+
+QT4_TARGET_DIRECTORIES="tools/assistant tools/pixeltool"
 
 src_unpack() {
 	qt4-build_src_unpack
