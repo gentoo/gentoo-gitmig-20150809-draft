@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.31.ebuild,v 1.1 2005/10/02 20:00:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.31.ebuild,v 1.2 2008/01/22 21:32:11 grobian Exp $
 
 IUSE="zlib doc"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/lout/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="zlib? ( >=sys-libs/zlib-1.1.4 )"
 
