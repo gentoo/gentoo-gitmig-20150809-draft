@@ -4,11 +4,19 @@ Index: mediastreamer2/src/mssndcard.c
 ===================================================================
 RCS file: /sources/linphone/linphone/mediastreamer2/src/mssndcard.c,v
 retrieving revision 1.7
-retrieving revision 1.8
-diff -u -p -r1.7 -r1.8
+retrieving revision 1.9
+diff -u -p -r1.7 -r1.9
 --- mediastreamer2/src/mssndcard.c	12 Oct 2007 13:31:54 -0000	1.7
-+++ mediastreamer2/src/mssndcard.c	10 Dec 2007 17:12:40 -0000	1.8
-@@ -152,3 +152,10 @@ void ms_snd_card_destroy(MSSndCard *obj)
++++ mediastreamer2/src/mssndcard.c	11 Dec 2007 10:36:06 -0000	1.9
+@@ -18,6 +18,7 @@ Foundation, Inc., 59 Temple Place - Suit
+ */
+ 
+ #include "mediastreamer2/mssndcard.h"
++#include "mediastreamer-config.h"
+ 
+ static MSSndCardManager *scm=NULL;
+ 
+@@ -152,3 +153,10 @@ void ms_snd_card_destroy(MSSndCard *obj)
  	if (obj->id!=NULL)	ms_free(obj->id);
  	ms_free(obj);
  }
