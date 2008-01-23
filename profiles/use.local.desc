@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3324 2008/01/22 13:33:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3325 2008/01/23 22:04:29 alonbl Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1663,6 +1663,7 @@ net-misc/openswan:extra-algorithms - Include additional algorithms such as Blowf
 net-misc/openswan:weak-algorithms - Include weak algorithms such as DH1 and 1DES
 net-misc/openvpn:iproute2 - Enabled iproute2 support instead of net-tools
 net-misc/openvpn:passwordsave - Enables openvpn to save passwords
+net-misc/openvpn:pkcs11 - Enable PKCS#11 smartcard support
 net-misc/quagga:bgpas4 - Enable support for 32-bit AS numbers
 net-misc/quagga:bgpclassless - Enable classless prefixes for BGP
 net-misc/quagga:fix-connected-rt - Remove interface connected routes from kernel table on link loss so that no packets get routed to downed interface
