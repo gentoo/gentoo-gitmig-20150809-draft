@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.1.ebuild,v 1.1 2008/01/15 16:29:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.1.ebuild,v 1.2 2008/01/23 14:29:16 markusle Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -27,6 +27,11 @@ src_unpack() {
 	cd "${S}"
 	# patch to speed up compilation (no man pages generation)
 	epatch "${FILESDIR}"/${P}-Makefile.patch
+
+	# fix stack smashing on x86 with gcc-4.2
+	if [[ "${ARCH}" == "x86" ]]; then
+		epatch "${FILESDIR}"/${P}-gcc4.2-x86.patch
+	fi
 }
 
 src_compile() {
