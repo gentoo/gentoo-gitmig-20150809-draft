@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/pam_skey-1.1.5.ebuild,v 1.2 2008/01/17 16:53:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/pam_skey-1.1.5.ebuild,v 1.3 2008/01/23 15:55:50 beandog Exp $
 
 inherit eutils pam autotools multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://dkorunic.net/tarballs/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=sys-libs/pam-0.78-r3
