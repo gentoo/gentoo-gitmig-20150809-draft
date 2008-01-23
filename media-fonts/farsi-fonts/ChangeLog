@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/farsi-fonts
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/ChangeLog,v 1.5 2006/11/26 23:26:06 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/ChangeLog,v 1.6 2008/01/23 17:13:24 armin76 Exp $
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org> farsi-fonts-0.4.ebuild:
+  Add ~alpha/~sparc, x86 stable
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> farsi-fonts-0.4.ebuild:
   Add ~x86-fbsd keyword.
