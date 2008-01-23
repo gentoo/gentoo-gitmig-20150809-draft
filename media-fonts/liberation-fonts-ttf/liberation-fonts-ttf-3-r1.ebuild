@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/liberation-fonts-ttf-3-r1.ebuild,v 1.10 2008/01/08 17:32:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/liberation-fonts-ttf-3-r1.ebuild,v 1.11 2008/01/23 18:23:39 armin76 Exp $
 
 inherit font
 
@@ -9,7 +9,7 @@ MY_PV="0.2"
 DESCRIPTION="A GPL-2 Helvetica/Times/Courier replacement TrueType font set, courtesy of Red Hat"
 SRC_URI="https://www.redhat.com/f/fonts/${P}.tar.gz"
 HOMEPAGE="http://www.redhat.com/promo/fonts/"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="GPL-2-with-exceptions"
 IUSE="X"
