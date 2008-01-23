@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twill
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.1 2007/04/24 19:37:59 pythonhead Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.2 2008/01/23 15:58:26 beandog Exp $
+
+  23 Jan 2008; Steve Dibb <beandog@gentoo.org> twill-0.9_beta1.ebuild:
+  Add ~amd64, bug 202397
 
 *twill-0.9_beta1 (24 Apr 2007)
 
