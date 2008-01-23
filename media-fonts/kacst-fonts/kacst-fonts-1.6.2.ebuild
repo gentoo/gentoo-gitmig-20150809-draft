@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kacst-fonts/kacst-fonts-1.6.2.ebuild,v 1.9 2007/06/29 07:08:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kacst-fonts/kacst-fonts-1.6.2.ebuild,v 1.10 2008/01/23 18:20:56 armin76 Exp $
 
 inherit font
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/arabeyes/${P//-/_}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 arm ia64 ppc s390 sh x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ia64 ppc s390 sh ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 FONT_SUFFIX="ttf"
