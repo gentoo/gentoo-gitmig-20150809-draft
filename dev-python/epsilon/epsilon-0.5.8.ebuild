@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.5.0.ebuild,v 1.1 2007/01/13 23:34:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.5.8.ebuild,v 1.1 2008/01/23 00:42:56 hawking Exp $
 
 inherit distutils
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/Epsilon-${PV}"
 
-DOCS="README NAME.txt NEWS.txt"
+DOCS="NAME.txt NEWS.txt"
 
 src_unpack() {
 	unpack ${A}
@@ -29,7 +29,7 @@ src_unpack() {
 	mv bin/benchmark bin/epsilon-benchmark
 	sed -i \
 		-e "s#bin/benchmark#bin/epsilon-benchmark#" \
-		setup.py || die "sed faild"
+		setup.py || die "sed failed"
 }
 
 src_compile() {
@@ -38,5 +38,7 @@ src_compile() {
 }
 
 src_test() {
-	trial epsilon || die "tests failed"
+	# release tests needs DivmodCombinator
+	rm epsilon/test/test_release.py*
+	PYTHONPATH=. trial epsilon || die "tests failed"
 }
