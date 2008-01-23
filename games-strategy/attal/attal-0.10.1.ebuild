@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.10.1.ebuild,v 1.3 2007/02/03 01:58:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.10.1.ebuild,v 1.4 2008/01/23 18:26:18 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs qt4 games
 
@@ -19,6 +19,8 @@ DEPEND="$(qt4_min_version 4)
 	media-libs/sdl-mixer"
 
 S=${WORKDIR}/${MY_P}
+
+QT4_BUILT_WITH_USE_CHECK="qt3support"
 
 src_unpack() {
 	unpack ${A}
