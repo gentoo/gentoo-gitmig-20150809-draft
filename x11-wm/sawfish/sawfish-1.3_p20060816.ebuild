@@ -1,14 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3_p20060816.ebuild,v 1.1 2008/01/22 20:58:35 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3_p20060816.ebuild,v 1.2 2008/01/23 06:06:52 truedfx Exp $
 
 # detect cvs snapshots; fex. 1.3_p20040120
 [[ $PV == *_p[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
 (( snapshot = !$? ))
 
 if (( snapshot )); then
-	WANT_AUTOCONF=latest
-	WANT_AUTOMAKE=latest
 	inherit eutils autotools
 else
 	inherit eutils
@@ -53,8 +51,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/sawfish-kde-menus.patch
 
 	if (( snapshot )); then
-		eaclocal || die
-		eautoconf || die
+		eautoreconf
 	fi
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.80 2008/01/22 20:58:35 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.81 2008/01/23 06:06:52 truedfx Exp $
+
+  23 Jan 2008; Harald van Dĳk <truedfx@gentoo.org>
+  sawfish-1.3_p20060816.ebuild, sawfish-1.3.2.ebuild:
+  Use eautoreconf, drop redundant WANT_* variables (mentioned by vapier)
 
 *sawfish-1.3.2 (22 Jan 2008)
 *sawfish-1.3_p20060816 (22 Jan 2008)
