@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/fme
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fme/ChangeLog,v 1.1 2008/01/23 12:54:27 lack Exp $
+
+*fme-1.0.3 (23 Jan 2008)
+
+  23 Jan 2008; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +fme-1.0.3.ebuild:
+  New package - FME is a new graphical menu editor for Fluxbox (Bug #184023)
+
