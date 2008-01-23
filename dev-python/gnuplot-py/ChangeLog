@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnuplot-py
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.23 2008/01/23 20:55:12 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.24 2008/01/23 21:58:39 opfer Exp $
+
+  23 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  gnuplot-py-1.7-r2.ebuild:
+  stable x86, bug 207221
 
   23 Jan 2008; Ali Polatel <hawking@gentoo.org> gnuplot-py-1.7-r2.ebuild:
   Added PYTHON_MODNAME
