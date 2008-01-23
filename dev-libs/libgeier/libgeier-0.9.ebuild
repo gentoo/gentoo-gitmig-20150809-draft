@@ -1,13 +1,15 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.9_rc.ebuild,v 1.1 2008/01/23 10:44:59 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.9.ebuild,v 1.1 2008/01/23 20:49:18 wrobel Exp $
 
-MY_P=${P/_/-}
-MY_PV=${PV/_*/}
+inherit versionator
+
+MY_PVD=$(get_version_component_range 1-2)
+MY_PV=$(replace_version_separator 2 '-')
 
 DESCRIPTION="Libgeier provides a library to access the german digital tax project ELSTER."
 HOMEPAGE="http://www.taxbird.de/"
-SRC_URI="http://www.taxbird.de/tmp/${MY_P}.tar.gz"
+SRC_URI="http://www.taxbird.de/download/${PN}/${MY_PVD}/${PN}-${MY_PV}.tar.gz"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
