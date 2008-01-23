@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/moinmoin
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.35 2007/06/02 20:44:08 nixnut Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.36 2008/01/23 10:05:47 wrobel Exp $
+
+*moinmoin-1.6.0 (23 Jan 2008)
+
+  23 Jan 2008; Gunnar Wrobel <wrobel@gentoo.org> +moinmoin-1.6.0.ebuild:
+  Added moinmoin-1.6.0 (#206512).
 
   02 Jun 2007; nixnut <nixnut@gentoo.org> moinmoin-1.5.8.ebuild:
   Stable on ppc wrt bug 177604
