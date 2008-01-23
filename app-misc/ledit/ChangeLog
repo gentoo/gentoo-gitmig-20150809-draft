@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ledit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.18 2008/01/16 10:11:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.19 2008/01/23 18:54:49 aballier Exp $
+
+*ledit-2.00 (23 Jan 2008)
+
+  23 Jan 2008; Alexis Ballier <aballier@gentoo.org> +ledit-2.00.ebuild:
+  version bump
 
 *ledit-1.17 (16 Jan 2008)
 
