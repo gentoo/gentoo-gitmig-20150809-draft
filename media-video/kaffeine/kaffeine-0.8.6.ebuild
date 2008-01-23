@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.6.ebuild,v 1.1 2008/01/22 06:23:19 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.6.ebuild,v 1.2 2008/01/23 19:38:35 philantrop Exp $
 
 inherit eutils kde flag-o-matic
 
@@ -11,7 +11,8 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="dvb gstreamer xinerama vorbis encode kdehiddenvisibility xcb"
+IUSE="dvb gstreamer xinerama vorbis encode xcb"
+# kdehiddenvisibility removed due to bug 207002.
 
 RDEPEND=">=media-libs/xine-lib-1.1.9
 	xcb? ( >=x11-libs/libxcb-1.0 )

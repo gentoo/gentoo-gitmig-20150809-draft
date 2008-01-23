@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.85 2008/01/22 06:23:19 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.86 2008/01/23 19:38:35 philantrop Exp $
+
+  23 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  kaffeine-0.8.6.ebuild:
+  The kdehiddenvisibility USE flag was removed due to bug 207002.
 
 *kaffeine-0.8.6 (22 Jan 2008)
 
