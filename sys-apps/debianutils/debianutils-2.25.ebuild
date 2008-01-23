@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-2.25.ebuild,v 1.8 2007/12/21 19:06:06 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-2.25.ebuild,v 1.9 2008/01/23 08:13:27 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="static"
 
-PDEPEND="sys-apps/mktemp"
+PDEPEND="|| ( >=sys-apps/coreutils-6.10-r1 sys-apps/mktemp )"
 
 src_unpack() {
 	unpack ${A}
