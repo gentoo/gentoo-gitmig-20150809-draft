@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8159 2008/01/23 09:58:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8160 2008/01/23 16:32:00 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Markus Dittrich <markusle@gentoo.org> (23 Jan 2008)
+# mask new axiom version for some additional testing
+# see bug #185481
+=sci-mathematics/axiom-200711
 
 # Ulrich Mueller <ulm@gentoo.org> (23 Jan 2008)
 # Last release in 2001. Doesn't work with recent mpg321;
