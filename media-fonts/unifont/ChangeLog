@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/unifont
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.26 2007/08/04 06:07:57 dirtyepic Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.27 2008/01/23 18:35:44 armin76 Exp $
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org> unifont-1.0-r4.ebuild:
+  alpha/ia64/sparc/x86 stable
 
 *unifont-1.0-r4 (04 Aug 2007)
 

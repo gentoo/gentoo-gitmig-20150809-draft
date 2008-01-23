@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urw-fonts
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.25 2007/09/04 00:01:36 dirtyepic Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.26 2008/01/23 18:36:25 armin76 Exp $
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org> urw-fonts-2.3.6.ebuild:
+  alpha/ia64/sparc/x86 stable
 
   04 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> urw-fonts-2.3.6.ebuild:
   Fix SRC_URI and remove bogus RESTRICT.
