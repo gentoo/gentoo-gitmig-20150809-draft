@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-3.9-r1.ebuild,v 1.5 2007/07/22 06:57:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-3.9-r1.ebuild,v 1.6 2008/01/23 16:42:25 markusle Exp $
 
 inherit eutils
 
@@ -32,22 +32,22 @@ src_compile() {
 	sed -i -e 's/--enable-statsysbfd/--enable-locbfd --disable-statsysbfd/' Makefile.pamphlet || die 'Failed to patch the lsp Makefile!'
 
 	# Fix gcl so the "real" Axiom can compile code after we're out of the chroot
-	cp ${FILESDIR}/gcl-2.6.7.fix-out-of-build-root-compile.patch.input ${S}/zips/gcl-2.6.7.fix-out-of-build-root-compile.patch
-	cp ${FILESDIR}/gcl-2.6.7.fix-configure.in-gentoo.patch.input ${S}/zips/gcl-2.6.7.fix-configure.in-gentoo.patch
-	cp ${FILESDIR}/noweb-2.9-insecure-tmp-file.patch.input ${S}/zips/noweb-2.9-insecure-tmp-file.patch
-	epatch ${FILESDIR}/gcl-2.6.7.fix-out-of-build-root-compile.Makefile.patch || die 'Failed to patch the lsp pamphlet!'
-	epatch ${FILESDIR}/gcl-2.6.7.fix-configure.in-gentoo.Makefile.patch || die 'Failed to patch the lsp pamphlet!'
-	epatch ${FILESDIR}/noweb-2.9-insecure-tmp-file.Makefile.patch || die 'Failed to patch noweb security issue!'
+	cp "${FILESDIR}"/gcl-2.6.7.fix-out-of-build-root-compile.patch.input "${S}"/zips/gcl-2.6.7.fix-out-of-build-root-compile.patch
+	cp "${FILESDIR}"/gcl-2.6.7.fix-configure.in-gentoo.patch.input "${S}"/zips/gcl-2.6.7.fix-configure.in-gentoo.patch
+	cp "${FILESDIR}"/noweb-2.9-insecure-tmp-file.patch.input "${S}"/zips/noweb-2.9-insecure-tmp-file.patch
+	epatch "${FILESDIR}"/gcl-2.6.7.fix-out-of-build-root-compile.Makefile.patch || die 'Failed to patch the lsp pamphlet!'
+	epatch "${FILESDIR}"/gcl-2.6.7.fix-configure.in-gentoo.Makefile.patch || die 'Failed to patch the lsp pamphlet!'
+	epatch "${FILESDIR}"/noweb-2.9-insecure-tmp-file.Makefile.patch || die 'Failed to patch noweb security issue!'
 
 	# Sandbox happiness, fix noweb
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	mkdir noweb
 	cd noweb
-	tar zxf ${S}/zips/noweb-2.10a.tgz
-	sed -i -e 's/-texhash || echo "Program texhash not found or failed"//' src/Makefile* ${S}/zips/noweb.src.Makefile*
-	tar czf ${S}/zips/noweb-2.10a.tgz *
-	cd ${S}
-	rm ${WORKDIR}/noweb -rf
+	tar zxf "${S}"/zips/noweb-2.10a.tgz
+	sed -i -e 's/-texhash || echo "Program texhash not found or failed"//' src/Makefile* "${S}"/zips/noweb.src.Makefile*
+	tar czf "${S}"/zips/noweb-2.10a.tgz *
+	cd "${S}"
+	rm "${WORKDIR}"/noweb -rf
 
 	# Fix compile bugs (if sed fails, it's fixed; so we don't || die :-])
 	#	(plasmaroo; 20050116)
@@ -67,9 +67,9 @@ src_install() {
 	src_setenv
 
 	dodir /usr/bin
-	einstall INSTALL=${D}/opt/axiom COMMAND=${D}/usr/bin/axiom || die 'Failed to install Axiom!'
-	sed -e '2d;3i AXIOM=/opt/axiom' -i ${D}/usr/bin/axiom ${D}/opt/axiom/mnt/linux/bin/axiom || die 'Failed to patch axiom runscript!'
-	cat <<- EOF > ${D}/usr/bin/AXIOMsys
+	einstall INSTALL="${D}"/opt/axiom COMMAND="${D}"/usr/bin/axiom || die 'Failed to install Axiom!'
+	sed -e '2d;3i AXIOM=/opt/axiom' -i "${D}"/usr/bin/axiom "${D}"/opt/axiom/mnt/linux/bin/axiom || die 'Failed to patch axiom runscript!'
+	cat <<- EOF > "${D}"/usr/bin/AXIOMsys
 		#!/bin/sh -
 		AXIOM=/opt/axiom
 		export AXIOM
@@ -79,11 +79,11 @@ src_install() {
 	EOF
 
 	# Get rid of /mnt/linux
-	cd ${D}/opt/axiom
+	cd "${D}"/opt/axiom
 	mv mnt/linux/* .
 	rm -rf mnt
 
-	sed -e 's/AXIOMsys/sman/g' ${D}/usr/bin/axiom > ${D}/usr/bin/sman
-	chmod +x ${D}/usr/bin/sman
-	chmod +x ${D}/usr/bin/AXIOMsys
+	sed -e 's/AXIOMsys/sman/g' "${D}"/usr/bin/axiom > "${D}"/usr/bin/sman
+	chmod +x "${D}"/usr/bin/sman
+	chmod +x "${D}"/usr/bin/AXIOMsys
 }
