@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/xmlcopyeditor-1.1.0.4.ebuild,v 1.1 2008/01/03 15:34:54 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/xmlcopyeditor-1.1.0.6.ebuild,v 1.1 2008/01/23 00:23:37 yoswink Exp $
 
 WX_GTK_VER="2.8"
 
@@ -19,6 +19,7 @@ IUSE="guidexml"
 DEPEND="dev-libs/xerces-c \
 		dev-libs/boost    \
 		dev-libs/libpcre  \
+		app-text/aspell   \
 		=x11-libs/wxGTK-2.8*"
 
 src_install() {

@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/xmlcopyeditor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.2 2008/01/07 15:08:59 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.3 2008/01/23 00:23:37 yoswink Exp $
+
+*xmlcopyeditor-1.1.0.6 (23 Jan 2008)
+
+  23 Jan 2008; Jose Luis Rivero <yoswink@gentoo.org>
+  -xmlcopyeditor-1.1.0.4.ebuild, +xmlcopyeditor-1.1.0.6.ebuild:
+  Version bump. Full Aspell support and XML Schema-based element inspection.
+  Remove old ebuild.
 
 *xmlcopyeditor-1.1.0.5 (07 Jan 2008)
 
