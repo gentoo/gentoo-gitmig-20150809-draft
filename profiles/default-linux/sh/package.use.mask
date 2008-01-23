@@ -1,3 +1,7 @@
+# Alon Bar-Lev <alonbl@gentoo.org> (24 Jan 2007)
+# pkcs11-helper is not keyworded
+net-misc/openvpn pkcs11
+
 # Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
 # gdm depends on zenity which is not keyworded
 >=gnome-base/gdm-2.20 remote

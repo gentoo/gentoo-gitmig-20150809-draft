@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.13 2007/11/21 00:22:13 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.14 2008/01/23 22:11:12 alonbl Exp $
+
+  23 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> package.use.mask:
+  Add net-misc/openvpn pkcs11
 
   21 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> virtuals:
   Removed virtual/lapack, now new style
