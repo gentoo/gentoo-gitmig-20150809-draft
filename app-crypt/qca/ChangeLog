@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.32 2008/01/23 01:39:24 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.33 2008/01/23 12:46:37 ingmar Exp $
+
+  23 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> ChangeLog:
+  Fix blocker.
 
   23 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> qca-2.0.0-r2.ebuild:
   Block versions of app-crypt/qca:0 that don't slot properly.
