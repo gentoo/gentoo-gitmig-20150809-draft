@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.10-r5.ebuild,v 1.8 2008/01/01 18:27:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.10-r5.ebuild,v 1.9 2008/01/23 04:24:35 cardoe Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -23,7 +23,7 @@ IUSE="bootstrap build static unicode"
 # but may not be in users world file either. See bug #143885
 RDEPEND="virtual/init
 	!build? ( !bootstrap? (
-		sys-apps/mktemp
+		|| ( >=sys-apps/coreutils-6.10 sys-apps/mktemp )
 		>=sys-libs/readline-5.0-r1
 		>=app-shells/bash-3.1_p7
 		>=sys-apps/coreutils-5.2.1
