@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-pulse
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.2 2007/11/02 19:32:02 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.3 2008/01/23 14:04:38 lack Exp $
+
+*gst-plugins-pulse-0.9.7 (23 Jan 2008)
+
+  23 Jan 2008; Jim Ramsay <lack@gentoo.org> +gst-plugins-pulse-0.9.7.ebuild:
+  Version bump (Bug #206767)
 
 *gst-plugins-pulse-0.9.5 (02 Nov 2007)
 
