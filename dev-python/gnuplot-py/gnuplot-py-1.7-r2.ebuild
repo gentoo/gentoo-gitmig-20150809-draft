@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.7-r2.ebuild,v 1.2 2007/11/21 01:52:22 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.7-r2.ebuild,v 1.3 2008/01/23 20:55:12 hawking Exp $
 
 inherit distutils eutils
 
@@ -16,6 +16,8 @@ IUSE=""
 DEPEND="virtual/python
 	sci-visualization/gnuplot
 	dev-python/numpy"
+
+PYTHON_MODNAME="Gnuplot"
 
 src_unpack() {
 	unpack ${A}
