@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/wqy-bitmapfont
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-bitmapfont/ChangeLog,v 1.15 2008/01/08 17:19:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-bitmapfont/ChangeLog,v 1.16 2008/01/23 18:59:23 armin76 Exp $
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  wqy-bitmapfont-0.9.9_p0.ebuild:
+  Add ~alpha/~sparc, ia64/x86 stable
 
   08 Jan 2008; <pva@gentoo.org> wqy-bitmapfont-0.8.1-r1.ebuild,
   wqy-bitmapfont-0.9.9_p0.ebuild:
