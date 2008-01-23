@@ -6,6 +6,10 @@
 <email>beandog@gentoo.org</email>
 <name>Steve Dibb</name>
 </maintainer>
+<maintainer>
+<email>opfer@gentoo.org</email>
+<name>Christian Faulhammer</name>
+</maintainer>
 <longdescription lang="en">
 GRAMPS helps you track your family tree. It allows you to store, edit, and
 research genealogical data. GRAMPS attempts to provide all of the common
