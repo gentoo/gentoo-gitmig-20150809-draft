@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/vlgothic
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.23 2008/01/20 19:04:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.24 2008/01/23 18:38:13 armin76 Exp $
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org> vlgothic-20071215.ebuild:
+  Add ~alpha/~ia64/~sparc
 
   20 Jan 2008; Christoph Mende <angelos@gentoo.org>
   vlgothic-20071215.ebuild:
