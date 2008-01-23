@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.1.1.ebuild,v 1.6 2008/01/18 10:58:26 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.1.1.ebuild,v 1.7 2008/01/23 21:50:22 armin76 Exp $
 
 # Must be before x-modular eclass is inherited
 # Enable snapshot to get the man page in the right place
@@ -17,7 +17,7 @@ S="${WORKDIR}/xf86-video-intel-${PV}"
 
 DESCRIPTION="X.Org driver for Intel cards"
 
-KEYWORDS="amd64 arm ~ia64 ~sh x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ia64 ~sh x86 ~x86-fbsd"
 IUSE="dri"
 
 RDEPEND=">=x11-base/xorg-server-1.2
