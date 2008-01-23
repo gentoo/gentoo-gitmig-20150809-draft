@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.15.ebuild,v 1.1 2007/11/17 11:34:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.15.ebuild,v 1.2 2008/01/23 18:13:39 drac Exp $
 
 inherit libtool
 
@@ -23,7 +23,8 @@ RDEPEND=">=dev-libs/glib-2.8
 	test? ( >=dev-libs/check-0.9.2 )"
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.11.5 )
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	!<media-libs/gst-plugins-ugly-0.10.6"
 
 src_unpack() {
 	unpack ${A}
