@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/cssed
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/ChangeLog,v 1.15 2007/02/21 20:59:09 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/ChangeLog,v 1.16 2008/01/23 10:12:16 wrobel Exp $
+
+  23 Jan 2008; <wrobel@gentoo.org> cssed-0.4.0-r1.ebuild:
+  Added pkg-config dependency (#205034).
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
