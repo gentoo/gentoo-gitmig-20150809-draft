@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/axiom
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.13 2007/12/25 20:18:33 ranger Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.14 2008/01/23 01:16:05 hawking Exp $
+
+*axiom-0.5.27 (23 Jan 2008)
+
+  23 Jan 2008; Ali Polatel <hawking@gentoo.org>
+  +files/axiom-0.5.27-sqlite3.patch, -axiom-0.4.0.ebuild,
+  -axiom-0.5.0.ebuild, +axiom-0.5.27.ebuild:
+  Version bump. Drop old.
 
   25 Dec 2007; Brent Baude <ranger@gentoo.org> axiom-0.5.20.ebuild:
   Marked axiom-0.5.20 ~ppc64 for bug 144202
