@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-4.0.0.ebuild,v 1.1 2008/01/17 23:54:33 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-4.0.0.ebuild,v 1.2 2008/01/23 02:58:44 ingmar Exp $
 
 EAPI="1"
 
@@ -16,7 +16,7 @@ IUSE="debug"
 # currently broken:
 #	kdepalettes/
 # currently doesn't do anything: scheck and poxml
-KMEXTRA="kdeaccounts-plugin/
+KMEXTRA="
 	scheck/
 	poxml/
 	kprofilemethod/"

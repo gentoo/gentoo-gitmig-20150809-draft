@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.45 2008/01/17 23:54:33 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.46 2008/01/23 02:58:44 ingmar Exp $
+
+  23 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  kdesdk-misc-4.0.0.ebuild:
+  Fix collision with kde-base/kdeaccounts-plugin, bug 206987.
 
 *kdesdk-misc-4.0.0 (17 Jan 2008)
 
