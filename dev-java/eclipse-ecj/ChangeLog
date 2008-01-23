@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.32 2008/01/23 07:47:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.33 2008/01/23 15:48:09 armin76 Exp $
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  eclipse-ecj-3.3.0-r2.ebuild:
+  Re-add ~ia64 wrt #204484
 
   23 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   eclipse-ecj-3.3.0-r2.ebuild:
