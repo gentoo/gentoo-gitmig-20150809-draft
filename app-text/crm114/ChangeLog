@@ -1,6 +1,20 @@
 # ChangeLog for app-text/crm114
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.31 2007/05/06 04:55:41 dertobi123 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.32 2008/01/23 03:26:03 steev Exp $
+
+*crm114-20070810 (23 Jan 2008)
+
+  23 Jan 2008; Steev Klimaszewski <steev@gentoo.org>
+  -files/crm114-20040601-mailfilter.patch,
+  -files/crm114-20060118-fataltraptest.patch, -crm114-20040601.ebuild,
+  -crm114-20041110.ebuild, crm114-20041231.ebuild, -crm114-20050415.ebuild,
+  -crm114-20050518.ebuild, -crm114-20060118.ebuild, crm114-20060704a.ebuild,
+  +crm114-20070810.ebuild:
+  A bunch of cleanups... fixed quoting issues, removed old builds, 
+  unfortunately, amd64 doesn't have a recent copy stable, need to file a 
+  bug about that.  Add the latest release as well.  Hopefully we can get 
+  this stable in ~30 days.  This should fix bug #170127, as well as bug 
+  #190240
 
   06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   crm114-20060704a.ebuild:

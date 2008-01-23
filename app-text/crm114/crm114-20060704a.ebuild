@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20060704a.ebuild,v 1.4 2007/05/06 04:55:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20060704a.ebuild,v 1.5 2008/01/23 03:26:03 steev Exp $
 
 inherit eutils
 #http://crm114.sourceforge.net/crm114-20060704a-BlameRobert.src.tar.gz
@@ -28,9 +28,9 @@ DEPEND=">=sys-apps/sed-4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-fataltraptest.patch
+	epatch "${FILESDIR}"/${P}-fataltraptest.patch
 
 	sed -i "s#^CFLAGS.*#CFLAGS+=${CFLAGS}#" Makefile
 
@@ -55,14 +55,14 @@ src_unpack() {
 			mailfilter.cf
 	fi
 
-	cd ${S}/tre-${TREVERS}
+	cd "${S}"/tre-${TREVERS}
 	chmod +x configure
 }
 
 src_compile() {
 	# Build TRE library.
 	if use static ; then
-		cd ${S}/tre-${TREVERS}
+		cd "${S}"/tre-${TREVERS}
 		econf \
 			$(use_enable nls) \
 			$(use_enable static) \

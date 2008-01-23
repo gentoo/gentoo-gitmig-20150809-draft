@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20041231.ebuild,v 1.6 2007/03/04 07:32:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20041231.ebuild,v 1.7 2008/01/23 03:26:03 steev Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ DEPEND=">=sys-apps/sed-4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i "s#^CFLAGS.*#CFLAGS+=${CFLAGS} -I.#" Makefile
 
@@ -53,14 +53,14 @@ src_unpack() {
 			mailfilter.cf
 	fi
 
-	cd ${S}/tre-${TREVERS}
+	cd "${S}"/tre-${TREVERS}
 	chmod +x configure
 }
 
 src_compile() {
 	# Build TRE library.
 	if use static ; then
-		cd ${S}/tre-${TREVERS}
+		cd "${S}"/tre-${TREVERS}
 		econf \
 			$(use_enable nls) \
 			$(use_enable static) \
@@ -72,12 +72,11 @@ src_compile() {
 	fi
 
 	# Build crm114
-	cd ${S}
+	cd "${S}"
 	emake || die
 }
 
 src_install() {
-	cd ${S}
 	dobin crm114_tre cssutil cssdiff cssmerge
 	dobin osbf-util
 	dosym crm114_tre /usr/bin/crm114
