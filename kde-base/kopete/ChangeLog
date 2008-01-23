@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.128 2008/01/18 00:14:03 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.129 2008/01/23 01:17:24 ingmar Exp $
+
+*kopete-4.0.0-r1 (23 Jan 2008)
+
+  23 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> kopete-3.5.8.ebuild,
+  -kopete-4.0.0.ebuild, +kopete-4.0.0-r1.ebuild:
+  Translated Category fields cause protocols not appearing, bug 206877.
+  Thanks to Jorge Manuel B. S. Vicetto.
 
 *kopete-4.0.0 (18 Jan 2008)
 

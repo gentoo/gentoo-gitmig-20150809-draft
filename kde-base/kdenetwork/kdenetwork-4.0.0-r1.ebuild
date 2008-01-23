@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-4.0.0.ebuild,v 1.1 2008/01/17 23:52:03 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-4.0.0-r1.ebuild,v 1.1 2008/01/23 01:14:35 ingmar Exp $
 
 EAPI="1"
 
@@ -64,6 +64,10 @@ pkg_setup() {
 }
 
 src_compile() {
+	# Translated Category fields cause protocols not appearing, bug 206877.
+	sed -e '/X-KDE-PluginInfo-Category\[.*/d' \
+		-i "${S}"/kopete/protocols/*/kopete_*.desktop || die "Sed failed."
+
 	# kdenetwork looks for 'xmms' which isn't in the official portage tree.
 	# I've disabled this check to prevent linking to user-installed things.
 	mycmakeargs="${mycmakeargs}

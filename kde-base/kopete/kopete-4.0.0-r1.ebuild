@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.0.0.ebuild,v 1.1 2008/01/18 00:14:03 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.0.0-r1.ebuild,v 1.1 2008/01/23 01:17:24 ingmar Exp $
 
 EAPI="1"
 
@@ -44,6 +44,10 @@ DEPEND="${RDEPEND}
 	x11-proto/scrnsaverproto"
 
 src_compile() {
+	# Translated protocol causing bug 206877.
+	sed -e '/X-KDE-PluginInfo-Category\[.*/d' \
+		-i "${S}"/kopete/protocols/*/kopete_*.desktop || die "Sed failed."
+
 	# Xmms isn't in portage, thus forcefully disabled.
 	#	$(cmake-utils_use_with messenger)
 	mycmakeargs="${mycmakeargs}
