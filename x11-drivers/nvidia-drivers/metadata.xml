@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>x11-drivers</herd>
+<herd>none</herd>
 <maintainer>
-  <email>x11-drivers@gentoo.org</email>
+  <email>cardoe@gentoo.org</email>
+</maintainer>
+<maintainer>
+  <email>wolf31o2@gentoo.org</email>
 </maintainer>
 <longdescription>NVIDIA X11 driver and GLX libraries</longdescription>
 </pkgmetadata>
