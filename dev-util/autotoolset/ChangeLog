@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/autotoolset
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/autotoolset/ChangeLog,v 1.6 2007/02/09 03:01:11 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/autotoolset/ChangeLog,v 1.7 2008/01/23 12:00:37 opfer Exp $
+
+  23 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  autotoolset-0.11.4-r1.ebuild:
+  fix automagic dependency, see bug 202949
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
