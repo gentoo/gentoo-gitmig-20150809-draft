@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/adadoc-2.1.ebuild,v 1.4 2007/07/15 04:21:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/adadoc-2.1.ebuild,v 1.5 2008/01/23 22:00:17 george Exp $
 
 inherit eutils gnat
 
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~amd64"
 
 IUSE=""
 
-DEPEND="virtual/gnat
+DEPEND="virtual/ada
 	>=dev-ada/xmlada-1.0-r2"
 
 RDEPEND=""

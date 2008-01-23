@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.8.4.7.ebuild,v 1.3 2007/07/15 04:21:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.8.4.7.ebuild,v 1.4 2008/01/23 22:04:12 george Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.rfc1149.net/download/adasockets/${P}.tar.gz"
 HOMEPAGE="http://www.rfc1149.net/devel/adasockets/"
 LICENSE="GMGPL"
 
-DEPEND="virtual/gnat"
+DEPEND="virtual/ada"
 
 SLOT="0"
 IUSE=""
@@ -52,7 +52,7 @@ src_install() {
 	gnat_src_install
 
 	# and docs
-	dodoc AUTHORS COPYING INSTALL NEWS README doc/adasockets.ps
+	dodoc AUTHORS INSTALL NEWS README doc/adasockets.ps
 	doinfo doc/adasockets.info
 	insinto /usr/share/doc/${PF}
 	doins doc/adasockets.pdf
