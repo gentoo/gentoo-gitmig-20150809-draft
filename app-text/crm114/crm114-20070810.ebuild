@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20070810.ebuild,v 1.1 2008/01/23 03:26:03 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20070810.ebuild,v 1.2 2008/01/23 18:25:23 mr_bones_ Exp $
 
 inherit eutils
 IUSE="nls static normalizemime mew mimencode test"
@@ -28,7 +28,6 @@ DEPEND=">=sys-apps/sed-4
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 
 	sed -i "s#^CFLAGS.*#CFLAGS+=${CFLAGS}#" Makefile
 	sed -i "s#^LDFLAGS.*#LDFLAGS+=${LDFLAGS}#" Makefile
