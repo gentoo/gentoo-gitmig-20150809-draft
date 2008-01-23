@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.16 2008/01/23 11:07:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.17 2008/01/23 17:50:15 drac Exp $
+
+  23 Jan 2008; Samuli Suominen <drac@gentoo.org> libarchive-2.4.12.ebuild:
+  Needs uudecode from sharutils or freebsd-ubin.
 
 *libarchive-2.4.12 (23 Jan 2008)
 
