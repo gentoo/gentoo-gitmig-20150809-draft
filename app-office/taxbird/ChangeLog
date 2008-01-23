@@ -1,6 +1,12 @@
 # ChangeLog for app-office/taxbird
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/ChangeLog,v 1.13 2008/01/23 11:23:25 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/ChangeLog,v 1.14 2008/01/23 21:20:22 wrobel Exp $
+
+*taxbird-0.11 (23 Jan 2008)
+
+  23 Jan 2008; <wrobel@gentoo.org> -taxbird-0.11_rc.ebuild,
+  +taxbird-0.11.ebuild:
+  I was too quick. taxbird-11 got released today. Added 0.11, removed 0.11_rc.
 
 *taxbird-0.11_rc (23 Jan 2008)
 
