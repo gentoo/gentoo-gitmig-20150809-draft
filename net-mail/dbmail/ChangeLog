@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dbmail
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.18 2007/12/18 13:39:08 lordvan Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.19 2008/01/23 09:05:27 lordvan Exp $
+
+  23 Jan 2008; Thomas Raschbacher <lordvan@gentoo.org>
+  dbmail-2.2.8_rc1.ebuild:
+  fixed S= .. in 2.2.8_rc1 fixes bug #202512 Thanks to Alexander Kuznetsov
+  <fiw@mail.ru> for pointing this one out.
 
 *dbmail-2.2.8 (18 Dec 2007)
 
