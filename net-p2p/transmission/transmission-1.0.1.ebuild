@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.0.1.ebuild,v 1.1 2008/01/22 04:25:46 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.0.1.ebuild,v 1.2 2008/01/23 04:55:36 compnerd Exp $
 
 MY_PV="1.01"
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_compile() {
-	econf $(use_with gtk) || die "configure failed"
+	econf $(use_with gtk) --with-wx-config=no || die "configure failed"
 	emake || die "build failed"
 }
 
