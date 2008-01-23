@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/raw-thumbnailer-0.1.ebuild,v 1.14 2007/12/11 10:41:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/raw-thumbnailer-0.1.ebuild,v 1.15 2008/01/23 19:08:49 drac Exp $
 
 inherit eutils
 
@@ -16,12 +16,15 @@ IUSE=""
 RDEPEND="media-libs/libopenraw
 	>=x11-libs/gtk+-2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	!media-gfx/gnome-raw-thumbnailer"
 
 pkg_setup() {
+	local fail="Re-emerge media-libs/libopenraw with USE gtk."
+
 	if ! built_with_use media-libs/libopenraw gtk; then
-		eerror "media-libs/libopenraw has to be built with USE gtk"
-		die "re-emerge media-libs/libopenraw with USE gtk"
+		eerror "${fail}"
+		die "${fail}"
 	fi
 }
 

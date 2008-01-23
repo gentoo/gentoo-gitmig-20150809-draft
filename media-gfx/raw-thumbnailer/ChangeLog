@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/raw-thumbnailer
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/ChangeLog,v 1.13 2007/10/14 16:13:04 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/ChangeLog,v 1.14 2008/01/23 19:08:49 drac Exp $
+
+  23 Jan 2008; Samuli Suominen <drac@gentoo.org> raw-thumbnailer-0.1.ebuild:
+  Block gnome-raw-thumbnailer because both are providing same executable, main
+  difference is gconf and gnome-vfs usage.
 
   14 Oct 2007; Markus Rothe <corsair@gentoo.org> raw-thumbnailer-0.1.ebuild:
   Stable on ppc64; bug #195250
