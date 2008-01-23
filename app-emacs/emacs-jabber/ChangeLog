@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-jabber
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.15 2007/10/15 22:04:37 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.16 2008/01/23 10:58:41 ulm Exp $
+
+  23 Jan 2008; Ulrich Mueller <ulm@gentoo.org>
+  files/70emacs-jabber-gentoo.el, -emacs-jabber-0.7-r1.ebuild:
+  Change autoload for jabber-connect to fix void variable errors. Remove old.
 
   15 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   emacs-jabber-0.7.1.ebuild:
