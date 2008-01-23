@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-vfs-obexftp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-vfs-obexftp/ChangeLog,v 1.1 2007/11/23 16:08:43 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-vfs-obexftp/ChangeLog,v 1.2 2008/01/23 19:23:12 maekke Exp $
+
+  23 Jan 2008; Markus Meier <maekke@gentoo.org>
+  gnome-vfs-obexftp-0.4.ebuild:
+  add ~x86, bug #207149
 
 *gnome-vfs-obexftp-0.4 (23 Nov 2007)
 
