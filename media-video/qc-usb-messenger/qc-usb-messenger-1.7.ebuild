@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/qc-usb-messenger-1.7.ebuild,v 1.1 2007/10/21 12:48:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/qc-usb-messenger-1.7.ebuild,v 1.2 2008/01/23 19:54:58 drac Exp $
 
 inherit linux-mod
 
@@ -8,10 +8,10 @@ DESCRIPTION="Logitech USB Quickcam Express Messenger & Communicate Linux Driver 
 HOMEPAGE="http://home.mag.cx/messenger"
 SRC_URI="http://home.mag.cx/messenger/source/${P}.tar.gz"
 
-IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
+IUSE=""
 
 CONFIG_CHECK="USB VIDEO_DEV VIDEO_V4L1_COMPAT"
 MODULE_NAMES="quickcam(usb:)"
