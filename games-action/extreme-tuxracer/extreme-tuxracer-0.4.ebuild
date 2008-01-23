@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/extreme-tuxracer-0.35.ebuild,v 1.2 2007/10/05 01:33:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/extreme-tuxracer-0.4.ebuild,v 1.1 2008/01/23 23:07:14 tupone Exp $
 
 inherit eutils games
 
 DESCRIPTION="High speed arctic racing game based on Tux Racer"
 HOMEPAGE="http://www.extremetuxracer.com/"
-SRC_URI="mirror://sourceforge/${PN/-}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN/-}/${P/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,6 +23,8 @@ RDEPEND="virtual/opengl
 	x11-libs/libXi"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+S="${WORKDIR}"/${P/-}
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"

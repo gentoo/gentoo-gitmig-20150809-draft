@@ -1,6 +1,13 @@
 # ChangeLog for games-action/extreme-tuxracer
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.1 2007/10/04 22:21:36 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.2 2008/01/23 23:07:14 tupone Exp $
+
+*extreme-tuxracer-0.4 (23 Jan 2008)
+
+  23 Jan 2008; Tupone Alfredo <tupone@gentoo.org>
+  +extreme-tuxracer-0.4.ebuild, -extreme-tuxracer-0.35.ebuild:
+  Version bump to 0.4. Bug #207035 by Pacho Ramos
+  Old ebuild removed as file version numbering is incompatible
 
 *extreme-tuxracer-0.35 (04 Oct 2007)
 
