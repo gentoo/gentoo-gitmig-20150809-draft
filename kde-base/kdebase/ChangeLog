@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.416 2008/01/22 04:16:08 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.417 2008/01/23 20:30:34 philantrop Exp $
+
+  23 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  kdebase-3.5.7-r6.ebuild:
+  Marked stable on amd64 as per bug 207203.
 
   22 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> kdebase-4.0.0.ebuild:
   Pull in icons as post-dependency. Made the bzip USE flag a default USE
