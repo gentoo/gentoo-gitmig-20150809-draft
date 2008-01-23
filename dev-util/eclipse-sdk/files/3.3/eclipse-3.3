@@ -34,4 +34,4 @@ if [[ "${ECLIPSE_XMX}" ]]; then VM_ARGS="${VM_ARGS} -Xmx${ECLIPSE_XMX}"; fi
 if [[ "${ECLIPSE_PERMSIZE}" ]]; then VM_ARGS="${VM_ARGS} -XX:PermSize=${ECLIPSE_PERMSIZE}"; fi
 if [[ "${ECLIPSE_MAX_PERMSIZE}" ]]; then VM_ARGS="${VM_ARGS} -XX:MaxPermSize=${ECLIPSE_MAX_PERMSIZE}"; fi
 
-exec "${ECLIPSE_BIN}" "$@" -vmargs ${VM_ARGS}
+exec "${ECLIPSE_BIN}" "$@" -vmargs ${VM_ARGS} -Djava.library.path=/usr/lib
