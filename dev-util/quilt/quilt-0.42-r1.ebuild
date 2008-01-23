@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.42-r1.ebuild,v 1.3 2007/08/11 12:51:12 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.42-r1.ebuild,v 1.4 2008/01/23 04:32:20 cardoe Exp $
 
 inherit bash-completion eutils
 
@@ -16,7 +16,7 @@ IUSE="graphviz"
 RDEPEND="sys-apps/ed
 	dev-util/diffstat
 	graphviz? ( media-gfx/graphviz )
-	sys-apps/mktemp"
+	|| ( >=sys-apps/coreutils-6.10-r1 sys-apps/mktemp )"
 
 # The tests are somewhat broken while being run from within portage, work fine
 # if you run them manually
