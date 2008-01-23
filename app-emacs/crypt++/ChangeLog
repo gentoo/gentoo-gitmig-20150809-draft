@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/crypt++
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/crypt++/ChangeLog,v 1.15 2008/01/12 14:13:33 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/crypt++/ChangeLog,v 1.16 2008/01/23 08:00:35 opfer Exp $
+
+  23 Jan 2008; Christian Faulhammer <opfer@gentoo.org> crypt++-2.92.ebuild:
+  stable amd64, bug 205249
 
   12 Jan 2008; Dawid Węgliński <cla@gentoo.org> crypt++-2.92.ebuild:
   Stable on x86 (bug #205249)
