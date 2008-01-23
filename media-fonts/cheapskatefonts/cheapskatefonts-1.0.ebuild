@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cheapskatefonts/cheapskatefonts-1.0.ebuild,v 1.8 2006/11/26 23:23:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cheapskatefonts/cheapskatefonts-1.0.ebuild,v 1.9 2008/01/23 17:08:57 armin76 Exp $
 
 inherit font
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.dustismo.com/fonts/Domestic_Manners.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ~hppa ia64 ~ppc s390 sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~ppc s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="app-arch/unzip"
