@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.45.1-r1.ebuild,v 1.10 2008/01/14 19:27:06 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.45.1-r1.ebuild,v 1.11 2008/01/23 21:15:28 maekke Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="A SVG based generic vector-drawing program"
 HOMEPAGE="http://www.inkscape.org/"
@@ -59,6 +59,12 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.29"
 
 pkg_setup() {
+	# bug 207070
+	if use postscript && ! built_with_use media-gfx/pstoedit plotutils ; then
+		eerror "you need to emerge media-gfx/pstoedit with plotutils support."
+		die "remerge media-gfx/pstoedit with USE=\"plotutils\""
+	fi
+
 	G2CONF="${G2CONF} --with-xft"
 	G2CONF="${G2CONF} $(use_with spell gtkspell)"
 	G2CONF="${G2CONF} $(use_enable jabber inkboard)"
