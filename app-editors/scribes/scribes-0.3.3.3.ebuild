@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scribes/scribes-0.3.3.3.ebuild,v 1.2 2008/01/21 07:43:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scribes/scribes-0.3.3.3.ebuild,v 1.3 2008/01/23 14:22:51 drac Exp $
 
 NEED_PYTHON=2.5
 
@@ -26,10 +26,13 @@ DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	dev-util/pkgconfig
 	dev-util/intltool
-	sys-devel/gettext
-	app-text/rarian"
+	sys-devel/gettext"
 
 DOCS="AUTHORS ChangeLog CONTRIBUTORS NEWS README TODO TRANSLATORS"
+
+pkg_setup() {
+	G2CONF="${G2CONF} --disable-scrollkeeper"
+}
 
 src_unpack() {
 	gnome2_src_unpack

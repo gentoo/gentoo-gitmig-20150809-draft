@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scribes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scribes/ChangeLog,v 1.2 2008/01/21 07:43:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scribes/ChangeLog,v 1.3 2008/01/23 14:22:51 drac Exp $
+
+  23 Jan 2008; Samuli Suominen <drac@gentoo.org> scribes-0.3.3.3.ebuild:
+  Pass --disable-scrollkeeper in pkg_setup.
 
   21 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   scribes-0.3.3.3.ebuild:
