@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ttf-sil-doulos
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-doulos/ChangeLog,v 1.16 2008/01/19 21:48:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-doulos/ChangeLog,v 1.17 2008/01/23 18:33:42 armin76 Exp $
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  ttf-sil-doulos-4.100.0.ebuild:
+  Add ~alpha
 
   19 Jan 2008; Ryan Hill <dirtyepic@gentoo.org>
   ttf-sil-doulos-4.100.0.ebuild:

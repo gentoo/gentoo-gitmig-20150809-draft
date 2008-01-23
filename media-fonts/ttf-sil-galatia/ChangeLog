@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ttf-sil-galatia
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-galatia/ChangeLog,v 1.8 2007/03/25 21:52:29 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-galatia/ChangeLog,v 1.9 2008/01/23 18:35:00 armin76 Exp $
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  ttf-sil-galatia-2.01.ebuild:
+  Add ~alpha
 
   25 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   ttf-sil-galatia-2.01.ebuild:

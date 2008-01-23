@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/texcm-ttf
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/texcm-ttf/ChangeLog,v 1.9 2007/09/11 21:09:38 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/texcm-ttf/ChangeLog,v 1.10 2008/01/23 18:31:20 armin76 Exp $
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org> texcm-ttf-1.0.ebuild:
+  Add ~alpha
 
   11 Sep 2007; Christoph Mende <angelos@gentoo.org> texcm-ttf-1.0.ebuild:
   Stable on amd64 wrt bug #191927
