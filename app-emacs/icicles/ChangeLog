@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/icicles
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/icicles/ChangeLog,v 1.1 2008/01/23 10:13:13 ulm Exp $
+
+*icicles-20071205 (23 Jan 2008)
+
+  23 Jan 2008; Ulrich Mueller <ulm@gentoo.org> +files/50icicles-gentoo.el,
+  +files/icicles-byte-compile-without-x.patch, +metadata.xml,
+  +icicles-20071205.ebuild:
+  Initial import. Ebuild contributed by me.
+
