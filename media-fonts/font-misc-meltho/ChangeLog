@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-misc-meltho
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-meltho/ChangeLog,v 1.16 2007/12/19 23:39:23 cla Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-meltho/ChangeLog,v 1.17 2008/01/23 18:08:42 armin76 Exp $
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  font-misc-meltho-1.0.0.ebuild:
+  Add ~alpha, sparc stable
 
   19 Dec 2007; Dawid Węgliński <cla@gentoo.org>
   font-misc-meltho-1.0.0.ebuild:
