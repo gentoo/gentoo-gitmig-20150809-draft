@@ -1,6 +1,6 @@
 # Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.3.1.1.ebuild,v 1.1 2008/01/21 12:15:55 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.3.1.1.ebuild,v 1.2 2008/01/24 23:51:04 caster Exp $
 
 # Notes: This is a preliminary ebuild of Eclipse-3.3
 # It was based on the initial ebuild in the gcj-overlay, so much of the credit goes out to geki.
@@ -64,7 +64,7 @@ RDEPEND=">=virtual/jre-1.5
 
 DEPEND="=virtual/jdk-1.5*
 	sys-apps/findutils
-	dev-java/sun-j2me-bin
+	dev-java/cldc-api:1.1
 	app-arch/unzip
 	app-arch/zip
 	${CDEPEND}"
@@ -111,7 +111,7 @@ src_compile() {
 	# system_jars will be used when compiling (javac)
 	# gentoo_jars will be used when building JSPs and other ant tasks (not javac)
 
-	local systemJars="$(java-pkg_getjars swt-3,icu4j,ant-core,jsch,ant-nodeps,junit-4,tomcat-servlet-api-2.4,lucene-1.9):$(java-pkg_getjars --build-only sun-j2me-bin)"
+	local systemJars="$(java-pkg_getjars swt-3,icu4j,ant-core,jsch,ant-nodeps,junit-4,tomcat-servlet-api-2.4,lucene-1.9):$(java-pkg_getjars --build-only cldc-api-1.1)"
 	local gentooJars="$(java-pkg_getjars ant-core,icu4j,jsch,commons-logging,commons-el,tomcat-servlet-api-2.4)"
 	local options="-q -Dnobootstrap=true -Dlibsconfig=true -Dbootclasspath=${bootClassPath} -DinstallOs=linux \
 		-DinstallWs=gtk -DinstallArch=${eclipseArch} -Djava5.home=$(java-config --jdk-home)"

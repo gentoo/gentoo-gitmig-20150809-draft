@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.136 2008/01/23 12:28:33 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.137 2008/01/24 23:51:04 caster Exp $
+
+  24 Jan 2008; Vlastimil Babka <caster@gentoo.org>
+  eclipse-sdk-3.3.1.1.ebuild:
+  Replace sun-j2me-bin dependency with new opensource cldc-api package, bug
+  #207270.
 
   23 Jan 2008; Jean-Noël Rivasseau <elvanor@gentoo.org>
   files/3.3/eclipse-3.3:
