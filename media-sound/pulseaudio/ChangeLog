@@ -1,6 +1,22 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.92 2008/01/08 22:17:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.93 2008/01/24 02:07:11 flameeyes Exp $
+
+*pulseaudio-0.9.9-r2 (24 Jan 2008)
+*pulseaudio-0.9.9-r1 (24 Jan 2008)
+*pulseaudio-0.9.9 (24 Jan 2008)
+
+  24 Jan 2008; Diego Pettenò <flameeyes@gentoo.org>
+  -files/pulseaudio-0.9.5-CVE-2007-1804.patch,
+  -files/pulseaudio-0.9.5-esdcompat.patch,
+  -files/pulseaudio-0.9.5-fbsd.patch, -files/pulseaudio-0.9.5-noshm.patch,
+  metadata.xml, -pulseaudio-0.9.5-r6.ebuild, -pulseaudio-0.9.8-r4.ebuild,
+  -pulseaudio-0.9.8-r5.ebuild, +pulseaudio-0.9.9.ebuild,
+  +pulseaudio-0.9.9-r1.ebuild, +pulseaudio-0.9.9-r2.ebuild:
+  Version bump. This fixes the CVE-2008-0008 security issue reported as bug
+  #207214. Version -r1 also implements the request in bug #204754 (glib USE
+  flag, thanks to Matthijs Kooijman). All three revision also fixes bug
+  #204748 (broken default.pa with hal USE flag unset).
 
   08 Jan 2008; Jeroen Roovers <jer@gentoo.org> pulseaudio-0.9.8-r6.ebuild,
   pulseaudio-0.9.8-r7.ebuild:

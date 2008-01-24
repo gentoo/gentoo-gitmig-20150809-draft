@@ -22,5 +22,10 @@
     Use the PolicyKit framework (<pkg>sys-auth/policykit</pkg>) to
     acquire high-priority and real-time scheduling for the daemon.
   </flag>
+  <flag name="glib">
+    Add support to <pkg>dev-libs/glib</pkg>-based mainloop for the
+    libpulse client library, to allow using libpulse on glib-based
+    programs.
+  </flag>
 </use>
 </pkgmetadata>
