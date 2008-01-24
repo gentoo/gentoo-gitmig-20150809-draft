@@ -1,6 +1,15 @@
 # ChangeLog for sys-process/fcron
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.52 2007/11/20 04:26:18 kumba Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.53 2008/01/24 09:55:11 wschlich Exp $
+
+  24 Jan 2008; Wolfram Schlich <wschlich@gentoo.org>
+  -files/fcron-2.0.0-configure.diff,
+  -files/fcron-2.9.5.1-fix-mail-output.diff, -files/fcron.rc6,
+  -fcron-2.0.2.ebuild, -fcron-2.9.5.1.ebuild, -fcron-2.9.7.ebuild,
+  -fcron-3.0.0.ebuild, -fcron-3.0.1.ebuild, -fcron-3.0.1-r1.ebuild,
+  -fcron-3.0.1-r2.ebuild, -fcron-3.0.2.ebuild, -fcron-3.0.2-r1.ebuild,
+  -fcron-3.0.2-r2.ebuild, -fcron-3.0.3_rc1.ebuild:
+  removed old versions
 
   20 Nov 2007; Joshua Kinard <kumba@gentoo.org> fcron-3.0.4.ebuild:
   Marked unstable on mips.
