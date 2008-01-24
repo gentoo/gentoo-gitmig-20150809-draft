@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.489 2008/01/12 05:32:47 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.490 2008/01/24 09:49:01 zmedico Exp $
+
+  24 Jan 2008; Zac Medico <zmedico@gentoo.org> portage-2.1.4.ebuild:
+  Bug #206800 - Fix epydoc command to work with epydoc-3.0.
 
 *portage-2.1.4 (11 Jan 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4.ebuild,v 1.1 2008/01/12 03:30:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4.ebuild,v 1.2 2008/01/24 09:49:01 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -104,7 +104,7 @@ src_compile() {
 			| sed -e 's:/__init__.py$::' -e 's:\.py$::' -e "s:^${S}/pym/::" \
 			 -e 's:/:.:g')" || die "error listing modules"
 		PYTHONPATH="${S}/pym:${PYTHONPATH}" epydoc -o "${WORKDIR}"/api \
-			-qqqqq --ignore-param-mismatch --no-frames --show-imports \
+			-qqqqq --no-frames --show-imports \
 			--name "${PN}" --url "${HOMEPAGE}" \
 			${my_modules} || die "epydoc failed"
 	fi
