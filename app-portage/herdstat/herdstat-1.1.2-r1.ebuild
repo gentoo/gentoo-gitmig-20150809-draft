@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2-r1.ebuild,v 1.1 2008/01/20 15:02:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2-r1.ebuild,v 1.2 2008/01/24 20:28:30 angelos Exp $
 
 inherit bash-completion eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~mips ~ppc sparc x86"
+KEYWORDS="alpha amd64 ~hppa ~ia64 ~mips ~ppc sparc x86"
 IUSE="debug doc ncurses test"
 
 RDEPEND="~dev-cpp/libherdstat-0.1.1"
