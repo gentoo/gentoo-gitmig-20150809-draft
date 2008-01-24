@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.4.ebuild,v 1.4 2008/01/24 18:43:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.4.ebuild,v 1.5 2008/01/24 19:14:27 cla Exp $
 
 inherit cron pam eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://fcron.free.fr/"
 SRC_URI="http://fcron.free.fr/archives/${MY_P}.src.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~mips ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~mips ppc ~sparc x86 ~x86-fbsd"
 IUSE="debug doc pam selinux"
 
 DEPEND="doc? ( >=app-text/docbook-dsssl-stylesheets-1.77 )
@@ -223,22 +223,22 @@ pkg_postinst() {
 	ebeep 10
 	epause 10
 
-	if ls -1 ${ROOT}var/spool/cron/fcrontabs/* >&/dev/null; then
+	if ls -1 "${ROOT}"var/spool/cron/fcrontabs/* >&/dev/null; then
 		ewarn
 		ewarn "WARNING: fcron now uses a dedicated fcron-specific"
 		ewarn "spooldir ${ROOT}var/spool/fcron instead of the commonly"
 		ewarn "used ${ROOT}var/spool/cron for several reasons."
 		ewarn
 		ewarn "Copying over existing crontabs from ${ROOT}var/spool/cron/fcrontabs"
-		cp ${ROOT}var/spool/cron/fcrontabs/* ${ROOT}var/spool/fcron/ >&/dev/null \
+		cp "${ROOT}"var/spool/cron/fcrontabs/* "${ROOT}"var/spool/fcron/ >&/dev/null \
 			|| die "failed to migrate existing crontabs"
 		ewarn "You should now remove ${ROOT}var/spool/cron/fcrontabs!"
 		ewarn
 		ewarn "Fixing permissions and ownership of ${ROOT}var/spool/fcron"
-		chown root:root ${ROOT}var/spool/fcron/* >&/dev/null
-		chmod 0600 ${ROOT}var/spool/fcron/* >&/dev/null
-		chown fcron:fcron ${ROOT}var/spool/fcron/*.orig >&/dev/null
-		chmod 0640 ${ROOT}var/spool/fcron/*.orig >&/dev/null
+		chown root:root "${ROOT}"var/spool/fcron/* >&/dev/null
+		chmod 0600 "${ROOT}"var/spool/fcron/* >&/dev/null
+		chown fcron:fcron "${ROOT}"var/spool/fcron/*.orig >&/dev/null
+		chmod 0640 "${ROOT}"var/spool/fcron/*.orig >&/dev/null
 		ewarn
 		ewarn "*** YOU SHOULD IMMEDIATELY UPDATE THE"
 		ewarn "*** fcrontabs ENTRY IN ${ROOT}etc/fcron/fcron.conf"
