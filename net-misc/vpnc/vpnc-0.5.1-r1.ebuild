@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1-r1.ebuild,v 1.2 2008/01/07 08:12:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1-r1.ebuild,v 1.3 2008/01/24 07:08:11 opfer Exp $
 
 inherit linux-info
 
@@ -28,8 +28,6 @@ pkg_setup()	 {
 		ewarn "redistribute it in binary form.  This is not allowed due to linking"
 		ewarn "of OpenSSL."
 	fi
-	local CONFIG_CHECK="TUN"
-	check_extra_config
 }
 
 src_compile() {
@@ -55,4 +53,6 @@ pkg_postinst() {
 	elog "You can generate a configuration file from the original Cisco profiles of your"
 	elog "connection by using /usr/bin/pcf2vpnc to convert the .pcf file"
 	elog "A guide is to be found in http://www.gentoo.org/doc/en/vpnc-howto.xml"
+	echo
+	elog "Don't forget to turn on TUN support in the kernel."
 }
