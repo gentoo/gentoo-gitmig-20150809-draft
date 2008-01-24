@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/slmon
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/ChangeLog,v 1.10 2007/04/14 16:04:32 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/ChangeLog,v 1.11 2008/01/24 18:41:13 drac Exp $
+
+  24 Jan 2008; Samuli Suominen <drac@gentoo.org> slmon-0.5.13.ebuild:
+  Depend on =sys-libs/slang-1* and keyword for ~amd64.
 
   14 Apr 2007; Raúl Porcel <armin76@gentoo.org>
   +files/slmon-0.5.13-invalid-free.patch, slmon-0.5.13.ebuild:

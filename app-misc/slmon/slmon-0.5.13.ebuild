@@ -1,35 +1,37 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/slmon-0.5.13.ebuild,v 1.2 2007/04/14 16:04:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/slmon-0.5.13.ebuild,v 1.3 2008/01/24 18:41:13 drac Exp $
 
 inherit eutils
 
 DESCRIPTION="Colored text-based system performance monitor"
-HOMEPAGE="http://slmon.sourceforge.net/"
-SRC_URI="http://slmon.sourceforge.net/download/${P}.tar.gz"
+HOMEPAGE="http://slmon.sourceforge.net"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE="debug"
 
-DEPEND=">=dev-libs/glib-2.0"
-RDEPEND="sys-libs/slang
+RDEPEND=">=dev-libs/glib-2
+	=sys-libs/slang-1*
 	gnome-base/libgtop"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-invalid-free.patch # bug 151293
 }
 
 src_compile() {
-	econf $(use_enable debug) || die "econf failed"
-	emake || die "emake failed"
+	econf $(use_enable debug)
+	emake || die "emake failed."
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog INSTALL README TODO
+	emake DESTDIR="${D}" install || die "emake install failed."
+	dodoc AUTHORS ChangeLog README slmonrc TODO
+	dohtml *.html
 }
