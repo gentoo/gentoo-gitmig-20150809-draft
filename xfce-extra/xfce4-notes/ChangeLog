@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-notes
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.39 2007/12/17 18:50:30 jer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.40 2008/01/24 21:34:00 angelos Exp $
+
+*xfce4-notes-1.6.1 (24 Jan 2008)
+
+  24 Jan 2008; Christoph Mende <angelos@gentoo.org>
+  -files/notes_applet.c.patch, -xfce4-notes-1.4.1.ebuild,
+  +xfce4-notes-1.6.1.ebuild:
+  Version bump and remove old
 
   17 Dec 2007; Jeroen Roovers <jer@gentoo.org> xfce4-notes-1.6.0.ebuild:
   Stable for HPPA (bug #201747).
