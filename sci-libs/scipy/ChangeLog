@@ -1,6 +1,21 @@
 # ChangeLog for sci-libs/scipy
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.26 2007/12/17 12:28:19 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.27 2008/01/24 09:51:08 bicatali Exp $
+
+*scipy-0.6.0-r4 (24 Jan 2008)
+
+  24 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/scipy-0.5.2-bspline.patch, -files/scipy-0.5.2-cdf.patch,
+  -files/scipy-0.5.2-minpack.patch,
+  -files/scipy-0.5.2-montecarlo-test.patch,
+  -files/scipy-0.5.2-nonexisting.patch, -files/scipy-0.5.2-randomkit.patch,
+  -files/scipy-0.5.2-signals.patch, -files/scipy-0.5.2-viewer.patch,
+  +files/scipy-0.6.0-ndimage.patch, -files/enabled_packages.txt,
+  -scipy-0.5.2.1.ebuild, -scipy-0.6.0.ebuild, -scipy-0.6.0-r1.ebuild,
+  +scipy-0.6.0-r4.ebuild:
+  New patch to fix some undefined pointer (mainly on amd64). Trying to fix bug
+  #195619 by forcing a fixed numpy version and rewrite of site configuration
+  file. Removed some obsolete versions.
 
 *scipy-0.6.0-r3 (17 Dec 2007)
 

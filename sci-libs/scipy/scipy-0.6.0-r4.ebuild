@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.5.2.1.ebuild,v 1.4 2007/09/11 17:32:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.6.0-r4.ebuild,v 1.1 2008/01/24 09:51:08 bicatali Exp $
 
 NEED_PYTHON=2.3
 
-inherit eutils distutils fortran
+inherit eutils distutils fortran flag-o-matic
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 DESCRIPTION="Scientific algorithms library for Python"
@@ -17,15 +17,18 @@ IUSE="fftw umfpack sandbox"
 
 KEYWORDS="~amd64 ~ppc ~x86"
 
-RDEPEND=">=dev-python/numpy-1.0.3.1
-	virtual/blas
+CDEPEND=">=dev-python/numpy-1.0.4-r1
 	virtual/lapack
 	fftw? ( =sci-libs/fftw-2.1* )
 	umfpack? ( sci-libs/umfpack )
 	sandbox? ( >=sci-libs/netcdf-3.6 x11-libs/libX11 )"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
+	dev-util/pkgconfig
 	umfpack? ( dev-lang/swig )"
+
+RDEPEND="${CDEPEND}
+	dev-python/imaging"
 
 # test still buggy on lapack with 2 failures on check_syevr
 # (lapack float). check every version bump.
@@ -37,16 +40,16 @@ scipy_fortran_setup() {
 	FORTRAN="gfortran g77 ifc"
 	fortran_pkg_setup
 	local fc=
-	case "${FORTRANC}" in
-		gfortran) fc="gnu95" ;;
-		g77) fc="gnu" ;;
+	case ${FORTRANC} in
+		gfortran) fc=gnu95 ;;
+		g77) fc=gnu ;;
 		ifc|ifort)
 			if use ia64; then
-				fc="intele"
+				fc=intele
 			elif use amd64; then
-				fc="intelem"
+				fc=intelem
 			else
-				fc="intel"
+				fc=intel
 			fi
 			;;
 		*)	eerror "Unknown fortran compiler: ${FORTRANC}"
@@ -54,16 +57,15 @@ scipy_fortran_setup() {
 	esac
 
 	# when fortran flags are set, pic is removed.
-	use amd64 && [[ -n "${FFLAGS}" ]] && FFLAGS="${FFLAGS} -fPIC"
+	use amd64 && [[ -n ${FFLAGS} ]] && FFLAGS="${FFLAGS} -fPIC"
 	export SCIPY_FCONFIG="config_fc --fcompiler=${fc}"
 }
 
-# see numpy ebuild about unsetting LDFLAGS
-LDFLAGS_sav="${LDFLAGS}"
-unset LDFLAGS
+# whatever LDFLAGS set will break linking
+# see progress in http://projects.scipy.org/scipy/numpy/ticket/573
+[ -n "${LDFLAGS}" ] && append-ldflags -shared
 
 pkg_setup() {
-	[[ -n "${LDFLAGS_sav}" ]] && einfo "Ignoring LDFLAGS=${LDFLAGS_sav}"
 	if use umfpack && ! built_with_use dev-lang/swig python; then
 		eerror "With umfpack enabled you need"
 		eerror "dev-lang/swig with python enabled"
@@ -71,7 +73,7 @@ pkg_setup() {
 		die "needs swig with python"
 	fi
 	# scipy automatically detects libraries by default
-	export FFTW=None FFTW3=None UMFPACK=None DJBFFT=None
+	export {FFTW,FFTW3,UMFPACK}=None
 	use fftw && unset FFTW
 	use umfpack && unset UMFPACK
 	use sandbox && elog "Warning: using sandbox modules at your own risk!"
@@ -81,18 +83,27 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# most of these patches should be useless in versions >=0.5.3)
-	# various patches from scipy svn and to allow sandbox modules
-	local TP=${PN}-0.5.2
-	epatch "${FILESDIR}"/${TP}-signals.patch
-	epatch "${FILESDIR}"/${TP}-viewer.patch
-	epatch "${FILESDIR}"/${TP}-randomkit.patch
-	epatch "${FILESDIR}"/${TP}-montecarlo-test.patch
-	epatch "${FILESDIR}"/${TP}-minpack.patch
-	epatch "${FILESDIR}"/${TP}-bspline.patch
-	epatch "${FILESDIR}"/${TP}-nonexisting.patch
-	epatch "${FILESDIR}"/${TP}-cdf.patch
-	use sandbox && cp "${FILESDIR}"/enabled_packages.txt Lib/sandbox/
+	epatch "${FILESDIR}"/${P}-randomkit.patch
+	epatch "${FILESDIR}"/${P}-cdf.patch
+	epatch "${FILESDIR}"/${P}-fftw-fix.patch
+	epatch "${FILESDIR}"/${P}-ndimage.patch
+	cat > site.cfg <<-EOF
+		[DEFAULT]
+		library_dirs = /usr/$(get_libdir)
+		include_dirs = /usr/include
+		[atlas]
+		atlas_libs = $(pkg-config --libs-only-l lapack \
+				| sed -e 's/^-l//' -e 's/ -l/,/g')
+
+	EOF
+	if use sandbox; then
+		cd scipy/sandbox
+		ls -1 */__init__.py \
+			| sed -e 's:/__init__.py::' \
+			| grep -v exmplpackage \
+			> enabled_packages.txt \
+			|| die "sandbox listing failed"
+	fi
 }
 
 src_compile() {
@@ -106,8 +117,8 @@ src_test() {
 		${SCIPY_FCONFIG} || die "install test failed"
 	pushd "${S}"/test/lib*/python
 	PYTHONPATH=. "${python}" -c \
-		"import scipy as s;import sys;sys.exit(s.test(10,3))"  \
-		> test.log 2>&1
+		"import scipy as s;import sys;sys.exit(s.test(10,3))" \
+		 2>&1 | tee test.log
 	grep -q OK test.log || die "test failed"
 	popd
 	rm -rf test
