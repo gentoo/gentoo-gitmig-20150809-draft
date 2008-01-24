@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.8_pre1065.ebuild,v 1.1 2008/01/24 00:05:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.8_pre1065.ebuild,v 1.2 2008/01/24 04:54:51 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -49,4 +49,3 @@ src_install() {
 	dodir /var/log/sphinx
 	dodir /var/run/sphinx
 }
-
