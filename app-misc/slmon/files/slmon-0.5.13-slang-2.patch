@@ -1,0 +1,47 @@
+diff -ur slmon-0.5.13.orig/configure.in slmon-0.5.13/configure.in
+--- slmon-0.5.13.orig/configure.in	2004-08-10 20:47:30.000000000 +0300
++++ slmon-0.5.13/configure.in	2008-01-24 20:57:35.000000000 +0200
+@@ -73,21 +73,17 @@
+ 	AC_MSG_RESULT("found version 99")
+ fi
+ 
+-AC_CHECK_LIB(slang, SLang_init_tty, slang_found="yes")
+-if test x$slang_found = xyes
+-then
+-	AC_CHECK_HEADERS(slang.h, slang_h_found="yes")
+-fi
++AC_CHECK_LIB(slang-2, SLang_init_tty, slang_found="yes")
+ if test x$slang_h_found = xyes
+ then
+-	LIBS="$LIBS -lslang"
++	LIBS="$LIBS -lslang-2"
+ 	AC_DEFINE(HAVE_SLANG)
+ else
+-	AC_CHECK_HEADERS(slang/slang.h, slang_h_found="yes")
++	AC_CHECK_HEADERS(slang-2/slang.h, slang_h_found="yes")
+ 	if test x$slang_h_found = xyes
+ 	then
+ 		AC_DEFINE(HAVE_SLANG)
+-		LIBS="$LIBS -lslang"
++		LIBS="$LIBS -lslang-2"
+ 	else
+ 		AC_MSG_WARN("Slang not found")
+ 	fi
+diff -ur slmon-0.5.13.orig/defines.h slmon-0.5.13/defines.h
+--- slmon-0.5.13.orig/defines.h	2004-06-20 18:56:47.000000000 +0300
++++ slmon-0.5.13/defines.h	2008-01-24 20:59:52.000000000 +0200
+@@ -27,13 +27,7 @@
+ #include <utmp.h>
+ #include <getopt.h>
+ 
+-#ifdef HAVE_SLANG_H
+-#include <slang.h>
+-#endif				/* !HAVE_SLANG_H */
+-
+-#ifdef HAVE_SLANG_SLANG_H
+-#include<slang/slang.h>
+-#endif				/* !HAVE_SLANG_SLANG_H */
++#include <slang-2/slang.h>
+ 
+ #include <signal.h>
+ #include <sys/utsname.h>
