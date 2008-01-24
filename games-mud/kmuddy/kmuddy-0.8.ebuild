@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-0.8.ebuild,v 1.4 2007/10/14 22:07:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-0.8.ebuild,v 1.5 2008/01/24 05:50:25 mr_bones_ Exp $
 
 inherit eutils kde-functions
 
@@ -21,7 +21,9 @@ need-kde 3
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-nocrash.patch"
+	epatch \
+		"${FILESDIR}/${P}-nocrash.patch" \
+		"${FILESDIR}/${P}-idle-crash.patch"
 }
 
 src_compile() {
