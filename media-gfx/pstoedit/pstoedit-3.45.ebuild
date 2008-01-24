@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.1 2008/01/24 09:40:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.2 2008/01/24 17:34:51 genstef Exp $
 
 inherit autotools base eutils
 
@@ -23,8 +23,6 @@ DEPEND="media-libs/libpng
 		imagemagick? ( media-gfx/imagemagick )
 		plotutils? ( media-libs/plotutils )"
 #flash? ( >=media-libs/ming-0.3 )
-
-PATCHES="${FILESDIR}/3.44-as-needed.patch"
 
 pkg_setup() {
 	if use imagemagick && built_with_use media-gfx/imagemagick nocxx; then
