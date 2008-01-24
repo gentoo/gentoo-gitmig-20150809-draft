@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.33 2008/01/23 15:48:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.34 2008/01/24 17:59:38 nixnut Exp $
+
+  24 Jan 2008; nixnut <nixnut@gentoo.org> eclipse-ecj-3.3.0-r2.ebuild:
+  Stable on ppc wrt bug 204484
 
   23 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   eclipse-ecj-3.3.0-r2.ebuild:
