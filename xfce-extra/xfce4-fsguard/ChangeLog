@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-fsguard
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard/ChangeLog,v 1.27 2007/12/17 18:56:13 jer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard/ChangeLog,v 1.28 2008/01/24 21:25:17 angelos Exp $
+
+*xfce4-fsguard-0.4.1 (24 Jan 2008)
+
+  24 Jan 2008; Christoph Mende <angelos@gentoo.org>
+  -files/xfce4-fsguard-0.3.0-asneeded.patch, -xfce4-fsguard-0.3.0.ebuild,
+  +xfce4-fsguard-0.4.1.ebuild:
+  Version bump and remove old
 
   17 Dec 2007; Jeroen Roovers <jer@gentoo.org> xfce4-fsguard-0.4.0.ebuild:
   Stable for HPPA (bug #201747).
