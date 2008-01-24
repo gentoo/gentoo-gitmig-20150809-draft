@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-1.3.0_p20080114.ebuild,v 1.1 2008/01/24 11:44:54 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-1.3.0_p20080114.ebuild,v 1.2 2008/01/24 17:28:45 mr_bones_ Exp $
 
 inherit autotools
 
@@ -38,4 +38,3 @@ src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 }
-
