@@ -1,12 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.6 2007/07/13 05:09:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.7 2008/01/24 10:57:45 opfer Exp $
 
 inherit eutils
 
-DESCRIPTION="opensource 3D interface to the planet, based on NASA World Wind data"
-HOMEPAGE="http://gaia.serezhkin.com/
-	http://sourceforge.net/projects/gaia-clean"
+DESCRIPTION="Opensource 3D interface to the planet, based on NASA World Wind data"
+HOMEPAGE="http://sourceforge.net/projects/gaia-clean"
 SRC_URI="mirror://sourceforge/gaia-clean/${P}.tar.bz2"
 
 SLOT="0"
@@ -30,14 +29,14 @@ src_unpack() {
 	unpack ${A}
 
 	# the binary would fail with a wrong hard coded path for font.png
-	cd ${S}/programs/gaia/
+	cd "${S}/programs/gaia/"
 	epatch "${FILESDIR}/${P}-font_inclusion.patch"
 
 	# when linked with --as-needed it will fail checking the deps, so we just
 	# remove them, as we have our own dependency checks
-	cd ${S}/programs/gaia/
+	cd "${S}/programs/gaia/"
 	epatch "${FILESDIR}/${P}-remove_dep_checks_gaia.patch"
-	cd ${S}/lib/wwfetch/
+	cd "${S}/lib/wwfetch/"
 	epatch "${FILESDIR}/${P}-remove_dep_checks_wwfetch.patch"
 }
 
@@ -65,7 +64,7 @@ src_install() {
 
 	if use doc; then
 		insinto /usr/share/doc/${P}/html/
-		doins ${S}/doc/html/*
+		doins "${S}"/doc/html/*
 	fi
 
 	# prefix determines the target directory
