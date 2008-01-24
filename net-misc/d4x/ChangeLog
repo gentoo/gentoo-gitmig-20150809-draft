@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/d4x
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.51 2007/11/14 15:20:17 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.52 2008/01/24 14:02:21 armin76 Exp $
+
+  24 Jan 2008; Raúl Porcel <armin76@gentoo.org> metadata.xml:
+  Fix metadata.xml
 
   14 Nov 2007; Raúl Porcel <armin76@gentoo.org> d4x-2.5.7.1-r2.ebuild:
   sparc stable wrt #198845
