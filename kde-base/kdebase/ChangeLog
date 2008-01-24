@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.418 2008/01/24 13:50:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.419 2008/01/24 18:29:44 nixnut Exp $
+
+  24 Jan 2008; nixnut <nixnut@gentoo.org> kdebase-3.5.7-r6.ebuild:
+  Stable on ppc wrt bug 207203
 
   24 Jan 2008; Raúl Porcel <armin76@gentoo.org> kdebase-3.5.7-r6.ebuild:
   alpha/ia64/sparc/x86 stable wrt #207203
