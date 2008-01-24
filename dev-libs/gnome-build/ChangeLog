@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gnome-build
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.7 2008/01/16 09:00:19 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.8 2008/01/24 10:31:48 opfer Exp $
+
+  24 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  gnome-build-0.1.7.ebuild:
+  x86 stable, bug 204494
 
 *gnome-build-0.2.0 (16 Jan 2008)
 
