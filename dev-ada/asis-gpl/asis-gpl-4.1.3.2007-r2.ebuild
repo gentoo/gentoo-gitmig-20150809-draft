@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-4.1.3.2007-r2.ebuild,v 1.1 2007/09/14 13:23:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-4.1.3.2007-r2.ebuild,v 1.2 2008/01/24 21:30:06 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -53,7 +53,7 @@ pkg_setup() {
 # and change gcc to gnatgcc where appropriate
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	for fn in asis/a4g-gnat_int.adb gnat/snames.adb \
 		tools/tool_utils/asis_ul-common.adb \
 		tools/gnatmetric/metrics-compute.adb; do
@@ -84,13 +84,13 @@ src_compile() {
 
 src_install () {
 	# install the lib
-	mkdir -p ${D}${LIBPATH}/adalib
+	mkdir -p "${D}${LIBPATH}"/adalib
 	chmod 0755 obj/libasis-${ACT_Ver}.so
-	cp obj/libasis-${ACT_Ver}.so ${D}${LIBPATH}/adalib
+	cp obj/libasis-${ACT_Ver}.so "${D}${LIBPATH}"/adalib
 	insinto ${LIBPATH}/adalib
 	doins obj/*.ali lib/libasis.a
 	# make appropriate symlinks
-	pushd ${D}${LIBPATH}/adalib
+	pushd "${D}${LIBPATH}"/adalib
 	ln -s libasis-${ACT_Ver}.so libasis.so
 	popd
 	# sources
@@ -99,9 +99,9 @@ src_install () {
 	doins asis/*.ad[sb]
 
 	# tools
-	mkdir -p ${D}${BINPATH}
+	mkdir -p "${D}${BINPATH}"
 	for fn in tools/{asistant,gnat*}; do
-		cp ${fn}/${fn:6} ${D}${BINPATH}
+		cp ${fn}/${fn:6} "${D}${BINPATH}"
 	done
 
 	# docs and examples

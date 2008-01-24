@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-3.4.6.2006.ebuild,v 1.4 2007/07/15 04:21:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-3.4.6.2006.ebuild,v 1.5 2008/01/24 21:30:06 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
 ACT_Ver=$(get_version_component_range 4)
 Gnat_Name="gnat-gpl"
 
-DESCRIPTION="The Ada Semantic Interface Specification (semantic analysis and tools tied to compiler)"
+DESCRIPTION="The Ada Semantic Interface Specification (tools tied to compiler)"
 SRC_URI="mirror://gentoo/${PN}-${ACT_Ver}.tar.bz2"
 HOMEPAGE="https://libre.adacore.com/"
 LICENSE="GPL-2"
@@ -74,13 +74,13 @@ src_install () {
 	DATAPATH=${DATAPATH/${PN}/${Gnat_Name}}
 
 	# install the lib
-	mkdir -p ${D}${LIBPATH}/adalib
+	mkdir -p "${D}${LIBPATH}"/adalib
 	chmod 0755 obj/libasis-${ACT_Ver}.so
-	cp obj/libasis-${ACT_Ver}.so ${D}${LIBPATH}/adalib
+	cp obj/libasis-${ACT_Ver}.so "${D}${LIBPATH}"/adalib
 	insinto ${LIBPATH}/adalib
 	doins obj/*.ali lib/libasis.a
 	# make appropriate symlinks
-	pushd ${D}${LIBPATH}/adalib
+	pushd "${D}${LIBPATH}"/adalib
 	ln -s libasis-${ACT_Ver}.so libasis.so
 	popd
 	# sources
@@ -89,9 +89,9 @@ src_install () {
 	doins asis/*.ad[sb]
 
 	# tools
-	mkdir -p ${D}${BINPATH}
+	mkdir -p "${D}${BINPATH}"
 	for fn in tools/{asistant,gnat*}; do
-		cp ${fn}/${fn:6} ${D}${BINPATH}
+		cp ${fn}/${fn:6} "${D}${BINPATH}"
 	done
 
 	# docs and examples
