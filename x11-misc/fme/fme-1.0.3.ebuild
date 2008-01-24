@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fme/fme-1.0.3.ebuild,v 1.1 2008/01/23 12:54:27 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fme/fme-1.0.3.ebuild,v 1.2 2008/01/24 19:04:45 lack Exp $
+
+inherit eutils
 
 DESCRIPTION="Graphical menu editor for Fluxbox menus"
 HOMEPAGE="http://fme.rhymux.info/"
@@ -22,5 +24,9 @@ RDEPEND="${DEPEND}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
+
+	doicon glade/${PN}.png
+	make_desktop_entry ${PN} "Fluxbox Menu Editor" ${PN} "Settings;DesktopSettings"
+
 	dodoc AUTHORS ChangeLog README TODO
 }
