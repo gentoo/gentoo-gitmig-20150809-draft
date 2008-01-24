@@ -1,6 +1,6 @@
-# Copyright 2006-2007 Gentoo Foundation
+# Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conary-policy/conary-policy-1.0.11.ebuild,v 1.1 2007/03/13 19:06:41 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conary-policy/conary-policy-1.0.11.ebuild,v 1.2 2008/01/24 21:40:31 smithj Exp $
 
 DESCRIPTION="distribution policy for the conary package manager"
 HOMEPAGE="http://wiki.rpath.com/wiki/Conary"
@@ -19,5 +19,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install
+	make DESTDIR="${D}" install
 }
