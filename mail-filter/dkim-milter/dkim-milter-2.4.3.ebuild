@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.4.1.ebuild,v 1.1 2007/12/28 10:09:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.4.3.ebuild,v 1.1 2008/01/24 11:39:14 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -39,8 +39,7 @@ src_unpack() {
 		devtools/Site/site.config.m4
 	echo "APPENDDEF(\`confNO_MAN_BUILD', \` ')">>devtools/Site/site.config.m4
 
-	#use diffheaders && epatch "${FILESDIR}/${P}-diffheaders.patch"
-	use diffheaders && epatch "${FILESDIR}/${PN}-2.3.2-diffheaders.patch"
+	use diffheaders && epatch "${FILESDIR}/${PN}-diffheaders.patch"
 }
 
 src_compile() {
@@ -61,7 +60,7 @@ src_install() {
 	insinto /etc/mail/dkim-filter
 	newins dkim-filter/dkim-filter.conf.sample dkim-filter.conf
 
-	newinitd "${FILESDIR}/dkim-filter-2.4.1-init" dkim-filter \
+	newinitd "${FILESDIR}/dkim-filter.init" dkim-filter \
 		|| die "newinitd failed"
 
 	# prepare directory for .pid, .sock and .stats files
@@ -81,12 +80,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	pkg_setup # create milter user
-
 	elog "If you want to sign your mail messages, you will have to run"
-	elog "	emerge --config ${CATEGORY}/${PN}"
+	elog "  emerge --config ${CATEGORY}/${PN}"
 	elog "It will help you create your key and give you hints on how"
 	elog "to configure your DNS and MTA."
+
+	ewarn "Make sure your MTA has r/w access to the socket file."
+	ewarn "This can be done either by setting UMask to 002 and adding MTA's user"
+	ewarn "to milter group or you can simply set UMask to 000."
 }
 
 pkg_config() {
@@ -104,13 +105,11 @@ pkg_config() {
 		einfo "Select the size of private key:"
 		einfo "  [1] 512 bits"
 		einfo "  [2] 1024 bits"
-		einfo "  [3] 2048 bits - danger -may not fit in DNS packet"
-		while read -n 1 -s -p "  Press 1,2 or 3 on the keyboard to select the key size " keysize ; do
+		while read -n 1 -s -p "  Press 1 or 2 on the keyboard to select the key size " keysize ; do
 			[[ "${keysize}" == "1" || "${keysize}" == "2" ]] && echo && break
 		done
 		case ${keysize} in
 			1) keysize=512 ;;
-			3) keysize=2048 ;;
 			*) keysize=1024 ;;
 		esac
 
@@ -132,7 +131,7 @@ pkg_config() {
 	echo
 	einfo "If you are using Postfix, add following lines to your main.cf:"
 	einfo "  smtpd_milters     = unix:/var/run/dkim-filter/dkim-filter.sock"
-	einfo "  non_smtpd_milters = \$smtpd_milters"
+	einfo "  non_smtpd_milters = unix:/var/run/dkim-filter/dkim-filter.sock"
 
 	# DNS configuration
 	einfo "After you configured your MTA, publish your key by adding this TXT record to your domain:"

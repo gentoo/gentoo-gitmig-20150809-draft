@@ -1,6 +1,16 @@
 # ChangeLog for mail-filter/dkim-milter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/ChangeLog,v 1.15 2008/01/06 03:38:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/ChangeLog,v 1.16 2008/01/24 11:39:14 mrness Exp $
+
+*dkim-milter-2.4.3 (24 Jan 2008)
+
+  24 Jan 2008; Alin Năstac <mrness@gentoo.org>
+  -files/dkim-milter-2.3.2-diffheaders.patch,
+  -files/dkim-milter-2.3.2-gentoo.patch,
+  +files/dkim-milter-2.4.3-gentoo.patch, files/dkim-filter.init,
+  -dkim-milter-2.3.2.ebuild, -dkim-milter-2.4.1.ebuild,
+  +dkim-milter-2.4.3.ebuild:
+  Version bump. Remove stalled Unix socket before starting the service (#205097).
 
   06 Jan 2008; Alin Năstac <mrness@gentoo.org> dkim-milter-2.4.2.ebuild:
   Use dkim-genkey for generating the key as it was in previous version.
