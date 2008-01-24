@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/pyid3lib-0.5.1-r1.ebuild,v 1.2 2008/01/24 08:12:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/pyid3lib-0.5.1-r1.ebuild,v 1.3 2008/01/24 18:40:32 nixnut Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://pyid3lib.sourceforge.net/"
 IUSE=""
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ia64 ppc ~ppc64 ~sparc x86"
 DEPEND="virtual/python
 	media-libs/id3lib"
 
