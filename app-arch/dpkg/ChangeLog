@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.51 2007/12/24 15:01:56 ranger Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.52 2008/01/24 11:12:27 armin76 Exp $
+
+  24 Jan 2008; Raúl Porcel <armin76@gentoo.org> dpkg-1.14.12.ebuild:
+  alpha/ia64/sparc/x86 stable
 
   24 Dec 2007; Brent Baude <ranger@gentoo.org> dpkg-1.13.25.ebuild:
   Marking dpkg-1.13.25 ppc for bug 203220
