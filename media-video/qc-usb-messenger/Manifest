@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX qc-usb-messenger-2.6.19.patch 458 RMD160 b342699e447f88d488b2ae38399a19b5113927eb SHA1 67a5b14f409da9ffe9a69fa8c00243f4185d3fa9 SHA256 f34da6c0b67f5c269cf4e67663d9ef6e9673f2e0d6f343bb258573111c6937ea
 MD5 8a7bedadb97e673125d731cafd0546c6 files/qc-usb-messenger-2.6.19.patch 458
 RMD160 b342699e447f88d488b2ae38399a19b5113927eb files/qc-usb-messenger-2.6.19.patch 458
@@ -38,3 +41,10 @@ SHA256 703be191103f8500664c74db8e2e17d6cc2c6fb0188e9c9a7cbb6566410e56b0 files/di
 MD5 40ec55a7db7c3ca722bc5d498e900527 files/digest-qc-usb-messenger-1.7 262
 RMD160 9a2b2e59496849ad56197d8213c377950e6e44b8 files/digest-qc-usb-messenger-1.7 262
 SHA256 626022ede885eb024366689a5ac997f2b50587046036c66881ac34252040506d files/digest-qc-usb-messenger-1.7 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHmO+5V3J2n04EauwRAjxsAJ0WbtNysaYI5GK++TsItgz0xpPRtQCfYM00
+8bt43bVQmiiF4RqOb2fPl3s=
+=GVBe
+-----END PGP SIGNATURE-----
