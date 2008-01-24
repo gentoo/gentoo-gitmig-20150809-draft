@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre15447.ebuild,v 1.5 2008/01/22 20:51:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre15447.ebuild,v 1.6 2008/01/24 19:43:10 cardoe Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
 
@@ -181,7 +181,7 @@ src_compile() {
 	einfo "Running ./configure ${myconf}"
 	./configure ${myconf} || die "configure died"
 
-	eqmake3 -o "Makefile" mythtv.pro || die "qmake failed"
+	eqmake3 mythtv.pro -o "Makefile" || die "eqmake3 failed"
 	emake || die "emake failed"
 
 	# firewire support should build the tester
