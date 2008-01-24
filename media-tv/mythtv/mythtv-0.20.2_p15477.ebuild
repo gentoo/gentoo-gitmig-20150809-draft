@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre15362.ebuild,v 1.1 2008/01/07 20:18:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p15477.ebuild,v 1.1 2008/01/24 15:58:11 cardoe Exp $
 
-inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
+inherit mythtv flag-o-matic multilib eutils qt3 subversion toolchain-funcs
 
 DESCRIPTION="Homebrew PVR project"
 SLOT="0"
@@ -10,7 +10,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
 
-IUSE="alsa altivec autostart dbox2 debug directv dts dvb dvd hdhomerun ieee1394 iptv ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
+IUSE="alsa altivec autostart backendonly crciprec dbox2 debug directv dts dvb dvd freebox frontendonly hdhomerun ieee1394 ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -86,6 +86,14 @@ pkg_setup() {
 		rip=1
 	fi
 
+	if use autostart && use backendonly; then
+		echo
+		eerror "You can't have USE=autostart while having USE=backendonly."
+		eerror "USE=autostart is for mythfrontend"
+		echo
+		rip=1
+	fi
+
 	[[ $rip == 1 ]] && die "Please fix the above issues, before continuing."
 
 	echo
@@ -98,11 +106,6 @@ pkg_setup() {
 
 src_unpack() {
 	subversion_src_unpack
-
-	# As needed fix since they don't know how to write qmake let alone a real
-	# make system. And they won't accept this upstream since it comes from
-	# Gentoo
-	#epatch "${FILESDIR}"/${PN}-0.20-as-needed.patch
 
 	# upstream wants the revision number in their version.cpp
 	# since the subversion.eclass strips out the .svn directory
@@ -117,13 +120,14 @@ src_compile() {
 		--libdir-name=$(get_libdir)"
 	use alsa || myconf="${myconf} --disable-audio-alsa"
 	use jack || myconf="${myconf} --disable-audio-jack"
-	use dts && myconf="${myconf} --enable-libdts"
+	use dts || myconf="${myconf} --disable-dts"
+	use freebox || myconf="${myconf} --disable-freebox"
 	use dbox2 || myconf="${myconf} --disable-dbox2"
 	use hdhomerun || myconf="${myconf} --disable-hdhomerun"
+	use crciprec || myconf="${myconf} --disable-crciprec"
 	use altivec || myconf="${myconf} --disable-altivec"
 	use xvmc && myconf="${myconf} --enable-xvmc"
 	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc-pro"
-	use xvmc && ! use video_cards_nvidia && myconf="${myconf} --disable-xvmc-opengl"
 	use perl && myconf="${myconf} --with-bindings=perl"
 	myconf="${myconf}
 		--disable-audio-arts
@@ -133,7 +137,6 @@ src_compile() {
 		--dvb-path=/usr/include
 		$(use_enable opengl opengl-vsync)
 		$(use_enable ieee1394 firewire)
-		$(use_enable iptv)
 		--enable-xrandr
 		--enable-xv
 		--disable-directfb
@@ -174,13 +177,33 @@ src_compile() {
 	hasq distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
 	hasq ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
 
+	if use frontendonly; then
+		##Backend Removal
+		ewarn
+		ewarn "You are using the experimental feature for only installing the frontend."
+		ewarn "You will not get Gentoo support nor support from MythTV upstream for this."
+		ewarn "If this breaks, you own both pieces."
+		ewarn
+		myconf="${myconf} --disable-backend"
+	fi
+
+	if use backendonly; then
+		##Frontend Removal
+		ewarn
+		ewarn "You are using the experimental feature for only installing the backend."
+		ewarn "You will not get Gentoo support nor support from MythTV upstream for this."
+		ewarn "If this breaks, you own both pieces."
+		ewarn
+		myconf="${myconf} --disable-frontend"
+	fi
+
 	# let MythTV come up with our CFLAGS. Upstream will support this
 	CFLAGS=""
 	CXXFLAGS=""
 	einfo "Running ./configure ${myconf}"
 	./configure ${myconf} || die "configure died"
 
-	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake -o "Makefile" mythtv.pro || die "qmake failed"
+	eqmake3 -o "Makefile" mythtv.pro || die "qmake failed"
 	emake || die "emake failed"
 
 	# firewire support should build the tester
@@ -213,14 +236,16 @@ src_install() {
 		test -e "${doc}" && dodoc ${doc}
 	done
 
-	insinto /usr/share/mythtv/database
-	doins database/*
+	if ! use frontendonly; then
+		insinto /usr/share/mythtv/database
+		doins database/*
 
-	exeinto /usr/share/mythtv
-	doexe "${FILESDIR}/mythfilldatabase.cron"
+		exeinto /usr/share/mythtv
+		doexe "${FILESDIR}"/mythfilldatabase.cron
 
-	newinitd "${FILESDIR}"/mythbackend-0.18.2.rc mythbackend
-	newconfd "${FILESDIR}"/mythbackend-0.18.2.conf mythbackend
+		newinitd "${FILESDIR}"/mythbackend-0.18.2.rc mythbackend
+		newconfd "${FILESDIR}"/mythbackend-0.18.2.conf mythbackend
+	fi
 
 	dodoc keys.txt docs/*.{txt,pdf}
 	dohtml docs/*.html
@@ -239,15 +264,17 @@ src_install() {
 	insinto /usr/share/mythtv/configfiles
 	doins configfiles/*
 
-	dobin "${FILESDIR}"/runmythfe
+	if ! use backendonly; then
+		dobin "${FILESDIR}"/runmythfe
 
-	if use autostart; then
-		dodir /etc/env.d/
-		echo 'CONFIG_PROTECT="/home/mythtv/"' > "${D}"/etc/env.d/95mythtv
+		if use autostart; then
+			dodir /etc/env.d/
+			echo 'CONFIG_PROTECT="/home/mythtv/"' > "${D}"/etc/env.d/95mythtv
 
-		insinto /home/mythtv
-		newins "${FILESDIR}"/bash_profile .bash_profile
-		newins "${FILESDIR}"/xinitrc .xinitrc
+			insinto /home/mythtv
+			newins "${FILESDIR}"/bash_profile .bash_profile
+			newins "${FILESDIR}"/xinitrc .xinitrc
+		fi
 	fi
 
 	if use ieee1394; then
@@ -278,20 +305,24 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	echo
-	elog "Want mythfrontend to start automatically?"
-	elog "Set USE=autostart. Details can be found at:"
-	elog "http://dev.gentoo.org/~cardoe/mythtv/autostart.html"
+	if ! use backendonly; then
+		echo
+		elog "Want mythfrontend to start automatically?"
+		elog "Set USE=autostart. Details can be found at:"
+		elog "http://dev.gentoo.org/~cardoe/mythtv/autostart.html"
+	fi
 
-	echo
-	elog "To always have MythBackend running and available run the following:"
-	elog "rc-update add mythbackend default"
-	echo
-	ewarn "Your recordings folder must be owned by the user 'mythtv' now"
-	ewarn "chown -R mythtv /path/to/store"
+	if ! use frontendonly; then
+		elog
+		elog "To always have MythBackend running and available run the following:"
+		elog "rc-update add mythbackend default"
+		elog
+		ewarn "Your recordings folder must be owned by the user 'mythtv' now"
+		ewarn "chown -R mythtv /path/to/store"
+	fi
 
 	if use autostart; then
-		echo
+		elog
 		elog "Please add the following to your /etc/inittab file at the end of"
 		elog "the TERMINALS section"
 		elog "c8:2345:respawn:/sbin/mingetty --autologin mythtv tty8"
