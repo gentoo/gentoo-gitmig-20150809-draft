@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.3.ebuild,v 1.6 2008/01/23 08:47:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.3.ebuild,v 1.7 2008/01/24 18:14:16 nixnut Exp $
 
 inherit perl-app
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.daemon.de/files/mirror/ftp.daemon.de/scip/Apps/note/${P}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="crypt dbm general mysql text"
 
 # inherit perl-app cause depend on dev-lang/perl
