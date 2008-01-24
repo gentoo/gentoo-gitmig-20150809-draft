@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/gtkatlantic-0.4.2.ebuild,v 1.2 2006/03/09 23:09:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/gtkatlantic-0.4.2.ebuild,v 1.3 2008/01/24 07:57:28 nyhm Exp $
 
 inherit games
 
@@ -13,12 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-2*
-	>=dev-libs/libxml2-2.4.0
-	>=media-libs/libpng-1.0.12"
+RDEPEND="=x11-libs/gtk+-2*
+	dev-libs/libxml2
+	media-libs/libpng"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 	prepgamesdirs
 }
