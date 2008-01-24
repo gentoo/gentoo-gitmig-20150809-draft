@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/qc-usb-messenger-1.7.ebuild,v 1.2 2008/01/23 19:54:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/qc-usb-messenger-1.7.ebuild,v 1.3 2008/01/24 19:55:36 tove Exp $
 
 inherit linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="http://home.mag.cx/messenger/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 CONFIG_CHECK="USB VIDEO_DEV VIDEO_V4L1_COMPAT"
