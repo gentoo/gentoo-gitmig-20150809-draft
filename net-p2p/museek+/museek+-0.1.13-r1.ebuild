@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.13-r1.ebuild,v 1.2 2007/10/13 11:53:45 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.13-r1.ebuild,v 1.3 2008/01/24 22:07:05 coldwind Exp $
 
 inherit qt3 eutils distutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/museek-plus/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug fam gtk ncurses qsa qt3 trayicon vorbis"
 
 RDEPEND=">=dev-cpp/libxmlpp-1.0.2
@@ -85,6 +85,10 @@ src_install() {
 pkg_postinst() {
 	distutils_pkg_postinst
 
+	elog "Some tools require you to install extra software to run:"
+	elog "musetup-gtk: dev-python/pygtk"
+	elog "musetup-qt: dev-python/PyQt"
+	elog
 	elog "In order to configure ${PN} execute musetup, musetup-gtk,"
 	elog "or musetup-qt with your user."
 	elog "Then you can launch ${PN} daemon with 'museekd' and use"
