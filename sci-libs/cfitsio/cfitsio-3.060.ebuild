@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.060.ebuild,v 1.1 2007/09/10 20:27:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.060.ebuild,v 1.2 2008/01/24 15:18:58 bicatali Exp $
 
 inherit eutils fortran autotools
 
@@ -15,7 +15,7 @@ IUSE="doc fortran"
 
 DEPEND="fortran? ( dev-lang/cfortran )"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	if use fortran; then
@@ -27,11 +27,12 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# sed to avoid internal cfortran
+	# avoid internal cfortran
 	if use fortran; then
 		sed -i \
 			-e 's:"cfortran.h":<cfortran.h>:' \
 			f77_wrap.h || die "sed fortran failed"
+		mv cfortran.h cfortran.h.disabled
 	fi
 	epatch "${FILESDIR}"/${P}-autotools.patch
 	eautoreconf
@@ -58,8 +59,8 @@ src_test() {
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc changes.txt README License.txt cfitsio.doc || die "dodoc failed"
-	insinto /usr/share/doc/${PF}
-	doins cookbook.c || die "install cookbook failed"
+	insinto /usr/share/doc/${PF}/examples
+	doins cookbook.c testprog.c speed.c smem.c || die "install examples failed"
 	use doc && dodoc cfitsio.ps quick.ps
 	if use fortran; then
 		doins cookbook.f || die "install cookbook failed"

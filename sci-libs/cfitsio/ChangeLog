@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/cfitsio
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.12 2007/09/10 20:27:58 bicatali Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.13 2008/01/24 15:18:58 bicatali Exp $
+
+  24 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/cfitsio-3.060-autotools.patch, cfitsio-3.060.ebuild:
+  Moved smem binary to examples in doc directory (fixing bug #207023). Now
+  supports library versioning
 
 *cfitsio-3.060 (10 Sep 2007)
 
