@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/paprefs-0.9.6.ebuild,v 1.4 2008/01/24 01:20:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/paprefs-0.9.6.ebuild,v 1.5 2008/01/24 09:24:14 flameeyes Exp $
+
+inherit eutils
 
 DESCRIPTION="PulseAudio Preferences, configuration dialog for PulseAudio"
 HOMEPAGE="http://0pointer.de/lennart/projects/paprefs"
