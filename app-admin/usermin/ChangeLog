@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.132 2008/01/22 20:02:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.133 2008/01/24 05:38:54 jer Exp $
+
+  24 Jan 2008; Jeroen Roovers <jer@gentoo.org> usermin-1.320.ebuild:
+  Stable for HPPA (bug #207049).
 
   22 Jan 2008; Brent Baude <ranger@gentoo.org> usermin-1.320.ebuild:
   Marking usermin-1.320 ppc64 for bug 207049
