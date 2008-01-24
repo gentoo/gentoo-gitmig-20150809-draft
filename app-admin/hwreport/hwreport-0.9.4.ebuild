@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/hwreport-0.9.4.ebuild,v 1.4 2008/01/18 14:57:41 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hwreport/hwreport-0.9.4.ebuild,v 1.5 2008/01/24 10:54:49 opfer Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="Collect system informations for the hardware4linux.info site"
-HOMEPAGE="http://hardware4linux.info"
+HOMEPAGE="http://hardware4linux.info/"
 SRC_URI="http://hardware4linux.info/res/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -26,5 +26,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "You can now generate your reports and post them on $HOMEPAGE"
+	elog "You can now generate your reports and post them on ${HOMEPAGE}"
 }
