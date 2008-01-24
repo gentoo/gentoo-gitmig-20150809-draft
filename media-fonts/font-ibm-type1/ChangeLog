@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-ibm-type1
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-ibm-type1/ChangeLog,v 1.24 2008/01/23 18:05:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-ibm-type1/ChangeLog,v 1.25 2008/01/24 03:42:00 dirtyepic Exp $
+
+  24 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> font-ibm-type1-1.0.0.ebuild:
+  Add nls to IUSE to silence portage warning.  Thanks armin76.
 
   23 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   font-ibm-type1-1.0.0.ebuild:
