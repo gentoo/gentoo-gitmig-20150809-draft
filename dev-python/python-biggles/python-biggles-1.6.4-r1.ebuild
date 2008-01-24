@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/python-biggles-1.6.4-r1.ebuild,v 1.2 2007/08/24 23:12:49 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/python-biggles-1.6.4-r1.ebuild,v 1.3 2008/01/24 08:07:47 opfer Exp $
 
 inherit distutils eutils
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 x86"
 LICENSE="GPL-2"
 
 PYTHON_MODNAME=biggles
