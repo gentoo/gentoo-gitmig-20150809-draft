@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/python-biggles-1.6.4-r1.ebuild,v 1.3 2008/01/24 08:07:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/python-biggles-1.6.4-r1.ebuild,v 1.4 2008/01/24 08:09:33 opfer Exp $
 
 inherit distutils eutils
 
@@ -43,7 +43,7 @@ src_install() {
 	distutils_src_install
 
 	dodir /usr/share/doc/${PF}/examples
-	cp -r examples/* ${D}/usr/share/doc/${PF}/examples
+	cp -r examples/* "${D}/usr/share/doc/${PF}/examples"
 }
 
 pkg_postinst() {
