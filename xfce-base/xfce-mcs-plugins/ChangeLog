@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce-mcs-plugins
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/ChangeLog,v 1.115 2008/01/24 08:56:31 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/ChangeLog,v 1.116 2008/01/24 15:48:13 armin76 Exp $
+
+  24 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  xfce-mcs-plugins-4.4.2-r1.ebuild:
+  alpha/ia64/sparc stable wrt #202858
 
   24 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   xfce-mcs-plugins-4.4.2-r1.ebuild:
