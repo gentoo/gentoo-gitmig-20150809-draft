@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/rdist-6.1.5-r2.ebuild,v 1.1 2007/11/04 14:51:50 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/rdist-6.1.5-r2.ebuild,v 1.2 2008/01/24 14:21:54 armin76 Exp $
 
 DESCRIPTION="Remote software distribution system"
 HOMEPAGE="http://www.magnicomp.com/rdist/rdist.shtml"
@@ -8,7 +8,7 @@ SRC_URI="http://www.magnicomp.com/download/rdist/${P}.tar.gz"
 
 LICENSE="RDist"
 SLOT="1"
-KEYWORDS="~alpha ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ia64 ~ppc sparc x86"
 IUSE="crypt"
 
 DEPEND="sys-devel/bison"
