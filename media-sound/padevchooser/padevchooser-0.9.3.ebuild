@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/padevchooser-0.9.3.ebuild,v 1.7 2008/01/03 22:53:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/padevchooser-0.9.3.ebuild,v 1.8 2008/01/24 01:17:01 flameeyes Exp $
 
 inherit eutils
 
@@ -27,6 +27,11 @@ pkg_setup() {
 	if ! built_with_use media-sound/pulseaudio avahi; then
 		eerror "You need to build media-sound/pulseaudio with 'avahi' use flag enabled."
 		die "Missing avahi use flag on media-sound/pulseaudio."
+	fi
+
+	if ! built_with_use --missing true media-sound/pulseaudio glib; then
+		eerror "You need to build media-sound/pulseaudio with 'glib' use flag enabled."
+		die "Missing glib use flag on media-sound/pulseaudio."
 	fi
 }
 
