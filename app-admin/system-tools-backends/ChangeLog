@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/system-tools-backends
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.44 2007/05/27 22:34:30 leio Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.45 2008/01/24 22:41:26 eva Exp $
+
+*system-tools-backends-2.4.1-r1 (24 Jan 2008)
+
+  24 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/system-tools-backends-2.4.1-baselayout2.patch, +files/stb.rc,
+  +system-tools-backends-2.4.1-r1.ebuild:
+  bumping to 2.4.1 with a compatibility patch for baselayout-2
 
   27 May 2007; Mart Raudsepp <leio@gentoo.org>
   -system-tools-backends-1.4.2.ebuild:
