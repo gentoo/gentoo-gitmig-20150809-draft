@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.1.2-r1.ebuild,v 1.4 2007/07/15 04:21:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.1.2-r1.ebuild,v 1.5 2008/01/24 21:24:23 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
-DESCRIPTION="The Ada Semantic Interface Specification (semantic analysis and tools tied to compiler). GnuAda version"
+DESCRIPTION="The Ada Semantic Interface Specification (tools tied to compiler). GnuAda version"
 HOMEPAGE="http://gnuada.sourceforge.net/"
 LICENSE="GMGPL"
 
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~x86"
 
 Gnat_Name="gnat-gcc"
 My_PN="asis"
-SRC_URI="http://dev.gentoo.org/~george/src/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 IUSE="doc"
 RDEPEND="=dev-lang/gnat-gcc-${PV}*"
@@ -116,18 +116,18 @@ src_install () {
 	# install the lib
 	dodir ${My_LIBPATH}/adalib
 	# doins grossly screws permissions
-	cp -dpP lib/* ${D}${My_LIBPATH}/adalib
+	cp -dpP lib/* "${D}${My_LIBPATH}"/adalib
 	# sources
 	insinto ${My_LIBPATH}/adainclude
 	doins gnat/*.ad[sb]
 	doins asis/*.ad[sb]
 
 	# tools
-	mkdir -p ${D}${My_BINPATH}
+	mkdir -p "${D}${My_BINPATH}"
 	for fn in tools/{adabrowse,gnatelim,gnatstub,gnatpp,gnatmetric}; do
-		cp ${fn}/${fn:6} ${D}${My_BINPATH}
+		cp ${fn}/${fn:6} "${D}${My_BINPATH}"
 	done
-	cp tools/semtools/ada{dep,subst} ${D}${My_BINPATH}
+	cp tools/semtools/ada{dep,subst} "${D}${My_BINPATH}"
 
 	# docs and examples
 	if use doc ; then

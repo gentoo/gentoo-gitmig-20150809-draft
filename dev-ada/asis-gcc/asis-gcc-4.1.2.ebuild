@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.1.2.ebuild,v 1.3 2007/07/15 04:21:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.1.2.ebuild,v 1.4 2008/01/24 21:24:23 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
-DESCRIPTION="The Ada Semantic Interface Specification (semantic analysis and tools tied to compiler). GnuAda version"
+DESCRIPTION="The Ada Semantic Interface Specification (tools tied to compiler). GnuAda version"
 HOMEPAGE="http://gnuada.sourceforge.net/"
 LICENSE="GMGPL"
 
@@ -108,13 +108,13 @@ src_install () {
 	# install the lib
 	dodir ${LIBPATH}/adalib
 	chmod 0755 lib_dyn/libasis.so
-	cp lib_dyn/libasis.so ${D}${LIBPATH}/adalib/libasis-${SLOT}.so
+	cp lib_dyn/libasis.so "${D}${LIBPATH}"/adalib/libasis-${SLOT}.so
 	insinto ${LIBPATH}/adalib
 	doins obj/*.ali
-	chmod 0444 ${D}${LIBPATH}/adalib/*.ali
+	chmod 0444 "${D}${LIBPATH}"/adalib/*.ali
 	doins lib/libasis.a
 	# make appropriate symlinks
-	pushd ${D}${LIBPATH}/adalib
+	pushd "${D}${LIBPATH}"/adalib
 	ln -s libasis-${SLOT}.so libasis.so
 	popd
 	# sources
@@ -123,11 +123,11 @@ src_install () {
 	doins asis/*.ad[sb]
 
 	# tools
-	mkdir -p ${D}${BINPATH}
+	mkdir -p "${D}${BINPATH}"
 	for fn in tools/{adabrowse,gnatelim,gnatstub,gnatpp,gnatmetric}; do
-		cp ${fn}/${fn:6} ${D}${BINPATH}
+		cp ${fn}/${fn:6} "${D}${BINPATH}"
 	done
-	cp tools/semtools/ada{dep,subst} ${D}${BINPATH}
+	cp tools/semtools/ada{dep,subst} "${D}${BINPATH}"
 
 	# docs and examples
 	if use doc ; then
