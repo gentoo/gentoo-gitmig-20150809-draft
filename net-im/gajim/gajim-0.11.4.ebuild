@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11.4.ebuild,v 1.5 2008/01/23 15:16:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11.4.ebuild,v 1.6 2008/01/24 20:23:28 angelos Exp $
 
 inherit multilib python eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gajim.org/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="avahi dbus gnome idle libnotify nls spell srv trayicon X xhtml"
 
 DEPEND="|| (
