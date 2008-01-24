@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.7-r2.ebuild,v 1.4 2008/01/02 12:44:42 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.7-r2.ebuild,v 1.5 2008/01/24 20:08:10 lack Exp $
 
 EAPI=1
 inherit eutils multilib
@@ -42,6 +42,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-nostrip.patch
+	epatch "${FILESDIR}"/${P}-text_plain.patch
 }
 
 src_compile() {
