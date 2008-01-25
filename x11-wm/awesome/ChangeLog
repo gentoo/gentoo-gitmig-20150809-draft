@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.9 2008/01/21 15:59:40 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.10 2008/01/25 18:14:01 matsuu Exp $
+
+  23 Jan 2008; MATSUU Takuto <matsuu@gentoo.org> awesome-2.1.ebuild:
+  Added ~ppc and ~ppc64.
 
 *awesome-2.1 (21 Jan 2008)
 
