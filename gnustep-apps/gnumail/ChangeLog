@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/gnumail
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.27 2007/09/30 07:37:03 voyageur Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.28 2008/01/25 17:38:36 opfer Exp $
+
+  25 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  gnumail-1.2.0_pre3-r1.ebuild:
+  stable x86, bug 207381
 
   30 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
   -gnumail-1.2.0_pre3.ebuild, gnumail-1.2.0_pre3-r1.ebuild:

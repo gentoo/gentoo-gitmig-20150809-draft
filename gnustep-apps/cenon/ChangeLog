@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/cenon
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.4 2007/09/10 20:45:46 voyageur Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.5 2008/01/25 17:32:53 opfer Exp $
+
+  25 Jan 2008; Christian Faulhammer <opfer@gentoo.org> cenon-3.82.ebuild:
+  stable x86, bug 207381
 
 *cenon-3.82 (10 Sep 2007)
 

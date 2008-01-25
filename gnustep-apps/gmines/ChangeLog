@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gmines
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gmines/ChangeLog,v 1.8 2007/09/10 20:48:31 voyageur Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gmines/ChangeLog,v 1.9 2008/01/25 17:37:45 opfer Exp $
+
+  25 Jan 2008; Christian Faulhammer <opfer@gentoo.org> gmines-0.1-r2.ebuild:
+  stable x86, bug 207381
 
 *gmines-0.1-r2 (10 Sep 2007)
 
