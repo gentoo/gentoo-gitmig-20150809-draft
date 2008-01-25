@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.140 2008/01/24 18:17:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.141 2008/01/25 19:47:27 corsair Exp $
+
+  25 Jan 2008; Markus Rothe <corsair@gentoo.org> gtkhtml-2.11.1.ebuild:
+  Stable on ppc64; bug #207154
 
   24 Jan 2008; nixnut <nixnut@gentoo.org> gtkhtml-2.11.1.ebuild:
   Stable on ppc wrt bug 207154
