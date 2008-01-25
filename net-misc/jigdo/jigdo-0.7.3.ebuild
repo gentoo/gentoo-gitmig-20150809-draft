@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.3.ebuild,v 1.5 2006/09/15 23:50:38 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.3.ebuild,v 1.6 2008/01/25 21:15:27 armin76 Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 
 	# Patch the Makefile so that when jidgo is installed, jigdo-lite has
 	# the correct path to the debian mirrors file.
-	epatch ${FILESDIR}/makefile.patch
+	epatch "${FILESDIR}"/makefile.patch
 
 	emake || die
 }
