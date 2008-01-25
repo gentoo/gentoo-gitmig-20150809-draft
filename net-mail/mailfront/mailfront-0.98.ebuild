@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.98.ebuild,v 1.4 2007/02/22 15:56:41 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.98.ebuild,v 1.5 2008/01/25 21:10:17 bangert Exp $
 
 inherit toolchain-funcs
 
@@ -32,7 +32,7 @@ src_compile() {
 	echo "${D}/var/qmail/bin" > conf-bin
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) -s" > conf-ld
-	make || die
+	emake || die
 }
 
 src_install() {
@@ -40,18 +40,18 @@ src_install() {
 	emake install || die
 
 	exeinto /var/qmail/supervise/qmail-smtpd
-	newexe ${FILESDIR}/run-smtpfront run.mailfront
+	newexe "${FILESDIR}"/run-smtpfront run.mailfront
 	exeinto /var/qmail/supervise/qmail-pop3d
-	newexe ${FILESDIR}/run-pop3front run.mailfront
+	newexe "${FILESDIR}"/run-pop3front run.mailfront
 
-	dodoc ANNOUNCEMENT COPYING ChangeLog NEWS README VERSION
+	dodoc ANNOUNCEMENT ChangeLog NEWS README VERSION
 	dohtml *.html
 }
 
 pkg_config() {
-	cd /var/qmail/supervise/qmail-smtpd/
+	cd "${ROOT}"/var/qmail/supervise/qmail-smtpd/
 	cp run run.qmail-smtpd.`date +%Y%m%d%H%M%S` && cp run.mailfront run
-	cd /var/qmail/supervise/qmail-pop3d/
+	cd "${ROOT}"/var/qmail/supervise/qmail-pop3d/
 	cp run run.qmail-pop3d.`date +%Y%m%d%H%M%S` && cp run.mailfront run
 }
 
@@ -59,7 +59,7 @@ pkg_postinst() {
 	echo
 	elog "Run"
 	elog "emerge --config =${CATEGORY}/${PF}"
-	elgo "to update your run files (backups are created) in"
+	elog "to update your run files (backups are created) in"
 	elog "		/var/qmail/supervise/qmail-pop3d and"
 	elog "		/var/qmail/supervise/qmail-smtpd"
 	echo

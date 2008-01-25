@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.88.ebuild,v 1.11 2006/10/28 12:38:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.88.ebuild,v 1.12 2008/01/25 21:10:17 bangert Exp $
 
 inherit fixheadtails toolchain-funcs
 
@@ -23,7 +23,7 @@ RDEPEND="
 
 src_unpack() {
 	unpack ${A}
-	ht_fix_file ${S}/Makefile
+	ht_fix_file "${S}"/Makefile
 }
 
 src_compile() {
@@ -43,9 +43,9 @@ src_install() {
 
 	#install new run files for qmail-smtpd and qmail-pop3
 	exeinto /var/qmail/supervise/qmail-smtpd
-	newexe ${FILESDIR}/run-smtpfront run.mailfront
+	newexe "${FILESDIR}"/run-smtpfront run.mailfront
 	exeinto /var/qmail/supervise/qmail-pop3d
-	newexe ${FILESDIR}/run-pop3front run.mailfront
+	newexe "${FILESDIR}"/run-pop3front run.mailfront
 
 	dodoc ANNOUNCEMENT FILES NEWS README TARGETS TODO VERSION
 
@@ -62,9 +62,10 @@ pkg_config() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Run emerge --config =${CATEGORY}/${PF}"
-	einfo "to update you run files (backup are created) in"
-	einfo "		/var/qmail/supervise/qmail-pop3d and"
-	einfo "		/var/qmail/supervise/qmail-smtpd"
+	echo
+	elog "Run emerge --config =${CATEGORY}/${PF}"
+	elog "to update you run files (backup are created) in"
+	elog "		/var/qmail/supervise/qmail-pop3d and"
+	elog "		/var/qmail/supervise/qmail-smtpd"
+	echo
 }
