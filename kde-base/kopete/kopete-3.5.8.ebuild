@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.8.ebuild,v 1.4 2008/01/23 01:17:24 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.8.ebuild,v 1.5 2008/01/25 06:48:46 ingmar Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -105,9 +105,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# Use system QCA library
-	sed -e "/SUBDIRS/s/[[:space:]]qca//" -i "${S}"/kopete/protocols/jabber/libiris/Makefile.am
-
 	# External libgadu support - doesn't work, kopete requires a specific development snapshot of libgadu.
 	# Maybe we can enable it in the future.
 	local myconf="$(use_enable jingle)

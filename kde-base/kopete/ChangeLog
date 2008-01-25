@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.129 2008/01/23 01:17:24 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.130 2008/01/25 06:48:46 ingmar Exp $
+
+  25 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> kopete-3.5.8.ebuild:
+  Revert one line that wasn't supposed to be committed, bug 207335.
 
 *kopete-4.0.0-r1 (23 Jan 2008)
 
