@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/pvr-firmware
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/pvr-firmware/ChangeLog,v 1.11 2007/07/02 15:22:13 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/pvr-firmware/ChangeLog,v 1.12 2008/01/25 16:54:00 cardoe Exp $
+
+*pvr-firmware-20070217-r1 (25 Jan 2008)
+
+  25 Jan 2008; Doug Klima <cardoe@gentoo.org>
+  +pvr-firmware-20070217-r1.ebuild:
+  add cx18 (cx23418) firmware, for Hauuppauge HVR-1600 cards.
+  http://www.ivtvdriver.org/index.php/Cx18
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   pvr-firmware-20061007.ebuild, pvr-firmware-20070217.ebuild:
