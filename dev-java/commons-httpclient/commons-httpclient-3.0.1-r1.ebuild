@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.0.1-r1.ebuild,v 1.8 2007/08/14 05:22:17 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.0.1-r1.ebuild,v 1.9 2008/01/25 19:56:10 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 inherit java-pkg-2 java-ant-2
@@ -36,6 +36,7 @@ src_unpack() {
 
 	# don't do javadoc always
 	sed -i -e 's/depends="compile,doc"/depends="compile"/' build.xml || die
+	sed -i -e '/link/ d' build.xml || die
 	mkdir lib && cd lib
 	java-pkg_jar-from commons-logging
 	java-pkg_jar-from commons-codec

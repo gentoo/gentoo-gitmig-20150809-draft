@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0.2-r1.ebuild,v 1.10 2007/07/24 07:51:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0.2-r1.ebuild,v 1.11 2008/01/25 19:56:10 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -33,6 +33,9 @@ src_unpack() {
 	#fi
 
 	epatch "${FILESDIR}/gentoo.diff"
+
+	#Remove javadoc link tags, they phone home.
+	sed -e '/link/ d' -i build.xml || die
 	echo "commons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)" >> build.properties
 	java-pkg_filter-compiler jikes
 }
