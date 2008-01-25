@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.54.ebuild,v 1.2 2008/01/25 08:55:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.54.ebuild,v 1.3 2008/01/25 22:54:55 robbat2 Exp $
 
 MY_EXTRAS_VER="20080124"
 SERVER_URI="http://mirror.provenscaling.com/mysql/enterprise/source/5.0/${P}.tar.gz"
@@ -47,6 +47,12 @@ src_test() {
 			mysql_disable_test \
 				"read_only" \
 				"Broken in 5.0.54, output in wrong order"
+
+		[ "${PV}" == "5.0.54" ] && \
+			[ "${ARCH/x86}" != "${ARCH}" ] && \
+			mysql_disable_test \
+				"subselect" \
+				"Testcase needs tuning on x86 for oom condition"
 
 		# We run the test protocols seperately
 		make -j1 test-ns force=--force
