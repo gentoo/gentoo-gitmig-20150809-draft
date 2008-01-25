@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpeg3
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.63 2007/08/17 15:33:11 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.64 2008/01/25 23:56:14 aballier Exp $
+
+  25 Jan 2008; Alexis Ballier <aballier@gentoo.org> libmpeg3-1.7.ebuild:
+  run autotools during unpack, bug #207493
 
   17 Aug 2007; Samuli Suominen <drac@gentoo.org>
   +files/libmpeg3-1.7-memcpy.patch, libmpeg3-1.7.ebuild:

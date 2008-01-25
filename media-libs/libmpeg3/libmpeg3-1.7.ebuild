@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.7.ebuild,v 1.13 2007/08/19 02:18:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.7.ebuild,v 1.14 2008/01/25 23:56:14 aballier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -45,13 +45,13 @@ src_unpack() {
 
 	# warning: incompatible implicit declaration of built-in function memcpy
 	epatch "${FILESDIR}"/${P}-memcpy.patch
+
+	cp -rf "${WORKDIR}/${PV}"/* .
+	eautoreconf
+
 }
 
 src_compile() {
-
-	cp -rf ${WORKDIR}/${PV}/* .
-	eautoreconf
-
 	#disabling css since it's a fake one.
 	#One can find in the sources this message :
 	#  Stubs for deCSS which can't be distributed in source form
