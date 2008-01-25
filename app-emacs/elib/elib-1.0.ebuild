@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/elib-1.0.ebuild,v 1.14 2007/10/08 14:31:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/elib-1.0.ebuild,v 1.15 2008/01/25 12:10:09 opfer Exp $
 
 inherit elisp
 
 DESCRIPTION="The Emacs Lisp Library"
-HOMEPAGE="http://jdee.sunsite.dk/"
+HOMEPAGE="http://jdee.sourceforge.net"
 SRC_URI="http://jdee.sunsite.dk/${P}.tar.gz"
 
 LICENSE="GPL-2"
