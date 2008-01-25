@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.50.ebuild,v 1.5 2004/07/15 02:45:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.50.ebuild,v 1.6 2008/01/25 22:57:30 bangert Exp $
 
 inherit eutils
 
@@ -17,9 +17,10 @@ LICENSE="as-is"
 KEYWORDS="~x86 ~amd64"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-errno.patch
+	epatch "${FILESDIR}"/${P}-errno.patch
 
 	echo "gcc ${CFLAGS} -DTLS -I." > conf-cc
 	echo "/usr/" > conf-home
@@ -34,6 +35,5 @@ src_install() {
 	do
 		dobin $i
 	done
-
 	dodoc CHANGES FILES README SYSDEPS TARGETS TODO UCSPI-SSL VERSION
 }
