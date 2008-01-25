@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.5.ebuild,v 1.5 2007/12/16 17:05:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.5.ebuild,v 1.6 2008/01/25 07:46:37 nelchael Exp $
 
 inherit python
 
@@ -19,7 +19,7 @@ IUSE="doc spell"
 RDEPEND="dev-python/imaging
 	dev-python/pyxml
 	>=dev-python/pygtk-2.6.1
-	>=dev-python/pysqlite-2.0
+	=dev-python/pysqlite-2.3*
 	=dev-python/sqlalchemy-0.3*
 	>=dev-python/reportlab-1.19
 	spell? ( >=dev-python/gnome-python-extras-2.0 )"
