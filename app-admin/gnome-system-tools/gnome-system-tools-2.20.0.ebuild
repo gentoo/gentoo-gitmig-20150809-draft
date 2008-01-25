@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.20.0.ebuild,v 1.1 2008/01/24 22:44:02 eva Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.20.0.ebuild,v 1.2 2008/01/25 00:18:05 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -22,7 +22,6 @@ RDEPEND="
 	nfs? ( net-fs/nfs-utils )
 	samba? ( >=net-fs/samba-3 )"
 
-
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.3.2
@@ -36,4 +35,3 @@ pkg_setup() {
 		G2CONF="${G2CONF} --disable-shares"
 	fi
 }
-
