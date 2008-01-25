@@ -1,0 +1,11 @@
+--- cxx/ncvalues.cpp.orig	2008-01-25 09:15:53.766455735 +0000
++++ cxx/ncvalues.cpp	2008-01-25 09:16:07.888196889 +0000
+@@ -9,7 +9,7 @@
+ 
+ #include <config.h>
+ #include <iostream>
+-#include <string>
++#include <cstring>
+ 
+ #include "ncvalues.h"
+ 

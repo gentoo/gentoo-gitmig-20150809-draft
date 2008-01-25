@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.2.ebuild,v 1.13 2007/12/13 20:27:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.2.ebuild,v 1.14 2008/01/25 09:43:21 bicatali Exp $
 
 inherit fortran eutils toolchain-funcs flag-o-matic autotools
 
 DESCRIPTION="Scientific library and interface for array oriented data access"
 SRC_URI="ftp://ftp.unidata.ucar.edu/pub/netcdf/${P}.tar.gz"
-HOMEPAGE="http://my.unidata.ucar.edu/content/software/netcdf/index.html"
+HOMEPAGE="http://www.unidata.ucar.edu/software/netcdf/"
 
 LICENSE="UCAR-Unidata"
 SLOT="0"
@@ -29,6 +29,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-parallel-make.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	eautoreconf
 }
 

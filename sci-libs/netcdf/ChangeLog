@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.48 2007/12/13 20:27:25 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.49 2008/01/25 09:43:21 bicatali Exp $
+
+  25 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/netcdf-3.6.2-gcc43.patch, netcdf-3.6.2.ebuild:
+  Applied patch for gcc-4.3, closing bug #207346
 
   13 Dec 2007; Raúl Porcel <armin76@gentoo.org> netcdf-3.6.2.ebuild:
   ia64 stable wrt #201477
