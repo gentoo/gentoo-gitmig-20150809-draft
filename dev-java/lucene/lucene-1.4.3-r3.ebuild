@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3-r3.ebuild,v 1.5 2007/08/15 21:14:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3-r3.ebuild,v 1.6 2008/01/25 07:34:08 robbat2 Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="High-performance, full-featured text search engine written entirely in Java"
 HOMEPAGE="http://jakarta.apache.org/lucene"
-SRC_URI="mirror://apache/jakarta/lucene/source/${P}-src.tar.gz"
+SRC_URI="mirror://apache/lucene/java/archive/${P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="1"
 KEYWORDS="amd64 ~ia64 ppc x86 ~x86-fbsd"
