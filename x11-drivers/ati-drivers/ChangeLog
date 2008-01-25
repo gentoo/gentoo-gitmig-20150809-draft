@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/ati-drivers
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.103 2007/12/24 19:16:46 je_fro Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.104 2008/01/25 05:14:59 je_fro Exp $
+
+*ati-drivers-8.452 (25 Jan 2008)
+
+  25 Jan 2008; Jeff Gardner <je_fro@gentoo.org>
+  +files/8.452/ati-powermode-opt-path-2.patch, +ati-drivers-8.452.ebuild:
+  The latest and greatest from ATI, thanks to Jory Pratt.
 
   24 Dec 2007; Jeff Gardner <je_fro@gentoo.org>
   files/8.443.1/ati-powermode-opt-path-2.patch,
