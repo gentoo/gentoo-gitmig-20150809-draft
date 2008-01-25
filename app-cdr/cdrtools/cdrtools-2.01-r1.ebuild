@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r1.ebuild,v 1.7 2007/03/01 17:20:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r1.ebuild,v 1.8 2008/01/25 21:05:40 grobian Exp $
 
 inherit eutils toolchain-funcs gnuconfig
 
@@ -29,7 +29,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.01-scsi-remote.patch
 
 	cd ${S}/DEFAULTS
-	use ppc-macos && MYARCH="mac-os10" || MYARCH="linux"
+	local MYARCH="linux"
 	sed -i "s:/opt/schily:/usr:g" Defaults.${MYARCH}
 	sed -i "s:/usr/src/linux/include::g" Defaults.${MYARCH}
 
@@ -100,16 +100,6 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Note the special license on cdrecord/cdrecord.c starting from line 4648."
-	if use ppc-macos ; then
-		einfo
-		einfo "Darwin/OS X use the following device names:"
-		einfo
-		einfo "CD burners: (probably) ./cdrecord dev=IOCompactDiscServices"
-		einfo
-		einfo "DVD burners: (probably) ./cdrecord dev=IODVDServices"
-		einfo
-	else
 	echo
 	einfo "The command line option 'dev=ATAPI:' should be used for IDE CD writers."
-	fi
 }

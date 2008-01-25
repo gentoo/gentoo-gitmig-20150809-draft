@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha36-r1.ebuild,v 1.2 2008/01/11 03:59:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha36-r1.ebuild,v 1.3 2008/01/25 21:05:40 grobian Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -29,9 +29,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.01.01a03-warnings.patch
 	epatch "${FILESDIR}"/${PN}-2.01.01_alpha34-asneeded.patch
 
-	# ppc-macos support
 	cd "${S}"/DEFAULTS
-	use ppc-macos && MYARCH="mac-os10" || MYARCH="linux"
+	local MYARCH="linux"
 
 	sed -i "s:/opt/schily:/usr:g" Defaults.${MYARCH}
 	sed -i "s:/usr/src/linux/include::g" Defaults.${MYARCH}
@@ -120,18 +119,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use ppc-macos ; then
-		einfo
-		einfo "Darwin/OS X use the following device names:"
-		einfo
-		einfo "CD burners: (probably) ./cdrecord dev=IOCompactDiscServices"
-		einfo
-		einfo "DVD burners: (probably) ./cdrecord dev=IODVDServices"
-		einfo
-	else
 	echo
 	einfo "The command line option 'dev=/dev/hdX' (X is the name of your drive)"
 	einfo "should be used for IDE CD writers.  And make sure that the permissions"
 	einfo "on this device are set properly and your user is in the correct group."
-	fi
 }
