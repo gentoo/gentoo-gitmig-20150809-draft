@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/erc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.32 2007/10/23 12:17:23 ulm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.33 2008/01/25 23:05:53 opfer Exp $
+
+  25 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  -files/50erc-gentoo.el, -erc-5.1.4.ebuild, erc-5.2-r1.ebuild:
+  add new primary HOMEPAGE and clean up
 
   23 Oct 2007; Ulrich Mueller <ulm@gentoo.org> -erc-5.0.4.ebuild,
   -erc-5.2.ebuild:

@@ -1,11 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/erc-5.2-r1.ebuild,v 1.4 2007/10/23 09:40:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/erc-5.2-r1.ebuild,v 1.5 2008/01/25 23:05:53 opfer Exp $
 
 inherit elisp
 
 DESCRIPTION="The Emacs IRC Client"
-HOMEPAGE="http://emacswiki.org/cgi-bin/wiki.pl?EmacsIRCClient"
+HOMEPAGE="http://savannah.gnu.org/projects/erc/
+	http://emacswiki.org/cgi-bin/wiki.pl?EmacsIRCClient"
 SRC_URI="mirror://gnu/erc/${P}.tar.gz"
 
 LICENSE="GPL-2 FDL-1.2"
