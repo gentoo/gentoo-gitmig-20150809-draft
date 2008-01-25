@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.0.2.ebuild,v 1.1 2007/12/05 23:27:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.0.2.ebuild,v 1.2 2008/01/25 17:44:01 cardoe Exp $
 
 inherit gnome2 eutils autotools
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	doc? ( >=dev-util/gtk-doc-1 )"
 
-DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README TODO"
+DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README"
 
 pkg_setup() {
 	# Removes the gnome-vfs dep
