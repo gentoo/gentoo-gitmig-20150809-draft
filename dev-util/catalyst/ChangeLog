@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.177 2008/01/10 00:28:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.178 2008/01/25 17:38:22 wolf31o2 Exp $
+
+  25 Jan 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  -catalyst-1.1.10.10.ebuild, catalyst-2.0.5.ebuild:
+  Marking catalyst 2.0.5 stable and removing 1.1.10.10 so I never have to get
+  another stupid catalyst 1.x bug, again.
 
 *catalyst-2.0.5 (10 Jan 2008)
 
