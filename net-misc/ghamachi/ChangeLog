@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ghamachi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ghamachi/ChangeLog,v 1.5 2007/07/02 15:00:24 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ghamachi/ChangeLog,v 1.6 2008/01/25 19:10:24 caleb Exp $
+
+  25 Jan 2008; Caleb Tennis <caleb@gentoo.org> -ghamachi-0.7.3.ebuild:
+  remove old version
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> ghamachi-0.7.3.ebuild,
   ghamachi-0.8.1.ebuild:
