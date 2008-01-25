@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gnome-blog
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/ChangeLog,v 1.17 2006/08/05 23:02:17 chriswhite Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/ChangeLog,v 1.18 2008/01/25 20:14:11 armin76 Exp $
+
+  25 Jan 2008; Raúl Porcel <armin76@gentoo.org> gnome-blog-0.9.1.ebuild:
+  x86 stable
 
   05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   metadata.xml translation by Yoshino-san in bug #135160
