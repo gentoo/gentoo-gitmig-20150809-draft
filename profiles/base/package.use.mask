@@ -11,6 +11,7 @@ dev-lang/php java-external
 # Saleem Abdulrasool <compnerd@gentoo.org> (23 Nov 2007)
 # Unmask when we get HAL 0.5.10 straightened out
 media-sound/pulseaudio policykit
+=media-sound/pulseaudio-0.9.9 policykit
 
 # Donnie Berkholz <dberkholz@gentoo.org> (12 Nov 2007)
 # freedesktop.org bug #7459 committed fix breaks 3D apps
