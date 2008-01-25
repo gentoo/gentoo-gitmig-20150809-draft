@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-1.2.1.ebuild,v 1.2 2008/01/25 17:43:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-1.2.1.ebuild,v 1.3 2008/01/25 17:46:44 opfer Exp $
 
 inherit gnustep-2
 
@@ -14,11 +14,11 @@ SLOT="0"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i -e "/DOCUMENT_NAME =.*/a \Gorm_DOC_INSTALL_DIR=Developer/Gorm" \
 		-e "/DOCUMENT_TEXT_NAME =.*/a \ANNOUNCE_DOC_INSTALL_DIR=Developer/Gorm/ReleaseNotes" \
 		-e "/DOCUMENT_TEXT_NAME =.*/a \README_DOC_INSTALL_DIR=Developer/Gorm/ReleaseNotes" \
 		-e "/DOCUMENT_TEXT_NAME =.*/a \NEWS_DOC_INSTALL_DIR=Developer/Gorm/ReleaseNotes" \
 		-e "/DOCUMENT_TEXT_NAME =.*/a \INSTALL_DOC_INSTALL_DIR=Developer/Gorm/ReleaseNotes" \
-		${S}/Documentation/GNUmakefile
+		"${S}"/Documentation/GNUmakefile
 }
