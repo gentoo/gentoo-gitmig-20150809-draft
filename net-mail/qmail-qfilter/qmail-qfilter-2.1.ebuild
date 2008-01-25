@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-2.1.ebuild,v 1.7 2008/01/25 22:40:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-2.1.ebuild,v 1.8 2008/01/25 22:43:10 opfer Exp $
 
 inherit toolchain-funcs
 
@@ -20,7 +20,6 @@ RDEPEND="${DEPEND} virtual/qmail"
 QMAIL_BINDIR="/var/qmail/bin/"
 
 src_compile() {
-	cd ${S}
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "${D}${QMAIL_BINDIR}" > conf-bin
