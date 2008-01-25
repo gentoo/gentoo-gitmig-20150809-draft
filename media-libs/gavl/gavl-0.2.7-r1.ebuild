@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/gavl-0.2.7.ebuild,v 1.1 2008/01/21 20:44:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/gavl-0.2.7-r1.ebuild,v 1.1 2008/01/25 18:49:10 drac Exp $
+
+inherit autotools eutils
 
 DESCRIPTION="library for handling uncompressed audio and video data"
 HOMEPAGE="http://gmerlin.sourceforge.net"
@@ -16,12 +18,14 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e 's:-O3 -funroll-all-loops -fomit-frame-pointer -ffast-math::' \
-		"${S}"/configure || die "sed failed."
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-cflags-and-includedir.patch
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
-	econf --without-cpuflags --docdir=/usr/share/doc/${PF}/html
+	econf --disable-libpng --without-cpuflags \
+		--docdir=/usr/share/doc/${PF}/html
 	emake || die "emake failed."
 }
 
