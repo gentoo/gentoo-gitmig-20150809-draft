@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-timed
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.18 2007/04/28 16:58:55 swegener Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.19 2008/01/25 21:30:32 armin76 Exp $
+
+  25 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  netkit-timed-0.17-r8.ebuild:
+  sparc/x86 stable
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org>
   netkit-timed-0.17-r7.ebuild, netkit-timed-0.17-r8.ebuild:
