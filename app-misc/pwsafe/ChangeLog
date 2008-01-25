@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pwsafe
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pwsafe/ChangeLog,v 1.4 2007/12/25 15:40:40 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pwsafe/ChangeLog,v 1.5 2008/01/25 02:23:35 hawking Exp $
+
+  25 Jan 2008; Ali Polatel <hawking@gentoo.org> metadata.xml:
+  Added myself as maintainer. Added long description
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing taviso from metadata.xml as per #202471. Assigning to

@@ -3,6 +3,13 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>hawking@gentoo.org</email>
+		<name>Ali Polatel</name>
 	</maintainer>
+	<longdescription lang="en">
+	pwsafe is a commandline password database utility compatible with
+	Counterpane's Passwordsafe. It is compatible with Counterpane Passwordsafe
+	1.9.x and 2.0 databases. It can interact with X11 selection and clipboard. 
+	</longdescription>
 </pkgmetadata>
+
