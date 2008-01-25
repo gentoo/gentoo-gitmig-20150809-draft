@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.54.ebuild,v 1.1 2008/01/15 15:30:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.54.ebuild,v 1.2 2008/01/25 08:55:32 robbat2 Exp $
 
-MY_EXTRAS_VER="20080115"
+MY_EXTRAS_VER="20080124"
 SERVER_URI="http://mirror.provenscaling.com/mysql/enterprise/source/5.0/${P}.tar.gz"
 
 inherit toolchain-funcs mysql
@@ -38,9 +38,15 @@ src_test() {
 
 			5.0.44|5.0.45|5.0.46|5.0.48|5.0.50|5.0.52|5.0.54)
 			[ "$(tc-endian)" == "big" ] && \
-			mysql_disable_test "archive_gis" "Broken in 5.0.44-54 on big-endian boxes only" ;;
-
+			mysql_disable_test \
+				"archive_gis" \
+				"Broken in 5.0.44-54 on big-endian boxes only" ;;
 		esac
+
+		[ "${PV}" == "5.0.54" ] && \
+			mysql_disable_test \
+				"read_only" \
+				"Broken in 5.0.54, output in wrong order"
 
 		# We run the test protocols seperately
 		make -j1 test-ns force=--force
