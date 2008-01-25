@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/multilog-watch/multilog-watch-1.12.ebuild,v 1.1 2006/05/30 20:55:35 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/multilog-watch/multilog-watch-1.12.ebuild,v 1.2 2008/01/25 23:34:04 bangert Exp $
 
 inherit eutils
 DESCRIPTION="Watches a multilog file for irregularities"
@@ -18,13 +18,13 @@ RDEPEND="dev-lang/perl
 		virtual/qmail"
 
 src_unpack() {
-	mkdir ${S}
-	cp ${DISTDIR}/multilog-watch ${S}
-	cp ${DISTDIR}/sample.filter ${S}
+	mkdir "${S}"
+	cp "${DISTDIR}"/multilog-watch "${S}"
+	cp "${DISTDIR}"/sample.filter "${S}"
 }
 
 src_compile() {
-	cp multilog-watch multilog-watch.orig
+	mv multilog-watch multilog-watch.orig
 	sed -e 's/\/etc\/leland/\/etc\/multilog-watch/' multilog-watch.orig > multilog-watch
 	/usr/bin/pod2man -s 1 multilog-watch multilog-watch.1
 }
@@ -34,6 +34,6 @@ src_install() {
 	insinto /etc/multilog-watch
 	doins sample.filter
 
-	dobin multilog-watch
+	dobin multilog-watch || die 'install failed'
 	doman multilog-watch.1
 }
