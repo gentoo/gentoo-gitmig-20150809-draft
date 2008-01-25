@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.29 2008/01/07 19:59:59 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.30 2008/01/25 10:04:56 drac Exp $
+
+*tea-17.5.4 (25 Jan 2008)
+
+  25 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  +files/tea-17.5.4-forced-cflags-and-compiler-warnings.patch,
+  +tea-17.5.4.ebuild:
+  Version bump. Stop installing stripped binary. Include string.h where strlen
+  is used, was hidden by forced -w in CFLAGS.
 
 *tea-17.5.1 (07 Jan 2008)
 
