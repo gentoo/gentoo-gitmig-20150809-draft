@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/slidentd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/ChangeLog,v 1.17 2007/02/22 16:05:51 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/ChangeLog,v 1.18 2008/01/25 20:28:30 bangert Exp $
+
+  25 Jan 2008; Thilo Bangert <bangert@gentoo.org> slidentd-1.0.0.ebuild:
+  use emake
 
   22 Feb 2007; Thilo Bangert <bangert@gentoo.org> slidentd-1.0.0.ebuild:
   einfo -> elog
