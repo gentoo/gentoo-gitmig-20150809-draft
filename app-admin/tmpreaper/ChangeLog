@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/tmpreaper
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpreaper/ChangeLog,v 1.14 2007/06/07 15:05:30 genstef Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpreaper/ChangeLog,v 1.15 2008/01/25 02:13:51 hawking Exp $
+
+*tmpreaper-1.6.9 (25 Jan 2008)
+
+  25 Jan 2008; Ali Polatel <hawking@gentoo.org>
+  -files/tmpreaper-1.6.6-fix-protect.patch,
+  +files/tmpreaper-1.6.9-gentoo.patch, metadata.xml,
+  -tmpreaper-1.6.5.ebuild, -tmpreaper-1.6.6-r1.ebuild,
+  +tmpreaper-1.6.9.ebuild:
+  Version bump. Added myself to metadata.xml. Dropped old.
 
 *tmpreaper-1.6.7 (07 Jun 2007)
 
