@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.40 2008/01/23 08:33:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.41 2008/01/25 16:00:47 drac Exp $
+
+  25 Jan 2008; Samuli Suominen <drac@gentoo.org> fakeroot-1.8.1.ebuild:
+  amd64 stable wrt #206711
 
 *fakeroot-1.9.1 (23 Jan 2008)
 
