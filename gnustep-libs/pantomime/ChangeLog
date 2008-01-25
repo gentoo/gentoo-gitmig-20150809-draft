@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/pantomime
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.19 2008/01/25 17:24:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.20 2008/01/25 17:25:54 opfer Exp $
+
+  25 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  pantomime-1.2.0_pre3.ebuild:
+  quote variable
 
   25 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   pantomime-1.2.0_pre3.ebuild:

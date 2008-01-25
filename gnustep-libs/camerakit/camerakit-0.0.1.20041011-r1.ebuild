@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camerakit/camerakit-0.0.1.20041011-r1.ebuild,v 1.2 2008/01/25 17:20:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camerakit/camerakit-0.0.1.20041011-r1.ebuild,v 1.3 2008/01/25 17:21:12 opfer Exp $
 
 inherit gnustep-2
 
@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i "s#/gphoto2#/usr/include/gphoto2#" GNUmakefile || die "sed failed"
 }

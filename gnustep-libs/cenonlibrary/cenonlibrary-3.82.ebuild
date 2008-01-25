@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/cenonlibrary/cenonlibrary-3.82.ebuild,v 1.2 2008/01/25 17:20:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/cenonlibrary/cenonlibrary-3.82.ebuild,v 1.3 2008/01/25 17:22:25 opfer Exp $
 
 inherit gnustep-2
 
@@ -20,5 +20,5 @@ src_compile() {
 src_install() {
 	egnustep_env
 	dodir ${GNUSTEP_SYSTEM_LIBRARY}
-	cp -pPR ${S} ${D}${GNUSTEP_SYSTEM_LIBRARY}
+	cp -pPR "${S}" "${D}"${GNUSTEP_SYSTEM_LIBRARY}
 }

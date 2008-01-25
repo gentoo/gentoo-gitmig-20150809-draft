@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/pantomime-1.2.0_pre3.ebuild,v 1.2 2008/01/25 17:24:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/pantomime-1.2.0_pre3.ebuild,v 1.3 2008/01/25 17:25:54 opfer Exp $
 
 inherit gnustep-2
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 src_install() {
 	gnustep-base_src_install
 
-	dodoc ${S}/Documentation/*
+	dodoc "${S}"/Documentation/*
 	docinto rfc
-	dodoc ${S}/Documentation/RFC/*
+	dodoc "${S}"/Documentation/RFC/*
 }
