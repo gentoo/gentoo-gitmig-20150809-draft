@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/twoftpd-1.21.ebuild,v 1.4 2007/07/15 02:38:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/twoftpd-1.21.ebuild,v 1.5 2008/01/25 23:03:22 bangert Exp $
 
 inherit toolchain-funcs
 
@@ -25,15 +25,15 @@ src_compile() {
 	echo "/usr/share/man" > conf-man
 	echo "$(tc-getCC) ${CFLAGS} -I/usr/include/bglibs" > conf-cc
 	echo "$(tc-getCC) -s -L/usr/lib/bglibs" > conf-ld
-	make || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
 	dodir /usr/sbin
 	dodir /usr/share/man/man1
 
-	make install install_prefix="${D}" || die "install failed"
+	emake install install_prefix="${D}" || die "install failed"
 
-	dodoc ANNOUNCEMENT COPYING ChangeLog NEWS README TODO VERSION
+	dodoc ANNOUNCEMENT ChangeLog NEWS README TODO VERSION
 	dodoc twoftpd.run twoftpd-log.run
 }

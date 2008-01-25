@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/twoftpd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/ChangeLog,v 1.4 2007/03/02 19:36:19 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/ChangeLog,v 1.5 2008/01/25 23:03:22 bangert Exp $
+
+  25 Jan 2008; Thilo Bangert <bangert@gentoo.org> twoftpd-1.21.ebuild:
+  use emake - dont dodoc COPYING
 
   02 Mar 2007; Thilo Bangert <bangert@gentoo.org> twoftpd-1.21.ebuild:
   set build variables correctly
