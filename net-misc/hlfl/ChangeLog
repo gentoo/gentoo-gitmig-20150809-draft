@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/hlfl
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/ChangeLog,v 1.14 2007/05/14 19:45:44 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/ChangeLog,v 1.15 2008/01/25 20:20:21 armin76 Exp $
+
+  25 Jan 2008; Raúl Porcel <armin76@gentoo.org> -hlfl-0.60.0.ebuild,
+  hlfl-0.60.1.ebuild:
+  sparc/x86 stable
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
