@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.4 2007/07/13 06:07:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.5 2008/01/25 23:34:13 bangert Exp $
 
 inherit eutils toolchain-funcs
 
@@ -68,17 +68,17 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	cd /var/lib/supervise/klogd
+	cd "${ROOT}"var/lib/supervise/klogd
 	[ -e run ] && cp run klogd.run.`date +%Y%m%d%H%M%S`
 	cp klogd.run run
 	chmod u+x run
 
-	cd /var/lib/supervise/syslogd
+	cd "${ROOT}"var/lib/supervise/syslogd
 	[ -e run ] && cp run syslogread.run.`date +%Y%m%d%H%M%S`
 	cp syslogread.run run
 	chmod u+x run
 
-	cd /var/lib/supervise/syslogd/log
+	cd "${ROOT}"var/lib/supervise/syslogd/log
 	[ -e run ] && cp run syslogread-log.run.`date +%Y%m%d%H%M%S`
 	cp syslogread-log.run run
 	chmod u+x run

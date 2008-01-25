@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslogread
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.3 2007/01/24 15:02:03 genone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.4 2008/01/25 23:34:13 bangert Exp $
+
+  25 Jan 2008; Thilo Bangert <bangert@gentoo.org> syslogread-0.92.ebuild:
+  honour ROOT
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> syslogread-0.92.ebuild:
   Replacing einfo with elog
