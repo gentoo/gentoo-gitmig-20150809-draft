@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/talksoup/talksoup-1.0_alpha1-r1.ebuild,v 1.2 2008/01/25 17:58:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/talksoup/talksoup-1.0_alpha1-r1.ebuild,v 1.3 2008/01/25 17:59:41 opfer Exp $
 
 inherit gnustep-2
 
@@ -20,6 +20,6 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-make2_support.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-make2_support.patch"
 }
