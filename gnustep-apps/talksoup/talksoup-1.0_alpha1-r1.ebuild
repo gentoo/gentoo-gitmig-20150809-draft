@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/talksoup/talksoup-1.0_alpha1-r1.ebuild,v 1.1 2007/09/10 20:53:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/talksoup/talksoup-1.0_alpha1-r1.ebuild,v 1.2 2008/01/25 17:58:38 opfer Exp $
 
 inherit gnustep-2
 
@@ -11,7 +11,7 @@ DESCRIPTION="IRC client for GNUstep"
 HOMEPAGE="http://talksoup.aeruder.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
 LICENSE="GPL-1"
 

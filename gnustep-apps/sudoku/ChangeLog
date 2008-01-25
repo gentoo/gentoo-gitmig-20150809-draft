@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/sudoku
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/sudoku/ChangeLog,v 1.1 2007/09/10 21:19:05 voyageur Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/sudoku/ChangeLog,v 1.2 2008/01/25 17:57:11 opfer Exp $
+
+  25 Jan 2008; Christian Faulhammer <opfer@gentoo.org> sudoku-6.ebuild:
+  stable x86, bug 207381
 
 *sudoku-6 (10 Sep 2007)
 

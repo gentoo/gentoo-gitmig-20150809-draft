@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gorm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.21 2008/01/09 12:37:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.22 2008/01/25 17:43:54 opfer Exp $
+
+  25 Jan 2008; Christian Faulhammer <opfer@gentoo.org> gorm-1.2.1.ebuild:
+  stable x86, bug 207381
 
 *gorm-1.2.2 (09 Jan 2008)
 

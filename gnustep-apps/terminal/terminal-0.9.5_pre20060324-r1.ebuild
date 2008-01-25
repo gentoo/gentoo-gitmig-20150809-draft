@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/terminal-0.9.5_pre20060324-r1.ebuild,v 1.2 2007/12/10 10:03:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/terminal-0.9.5_pre20060324-r1.ebuild,v 1.3 2008/01/25 17:59:30 opfer Exp $
 
 inherit gnustep-2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.nongnu.org/terminal/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 SLOT="0"
 
 src_unpack() {
