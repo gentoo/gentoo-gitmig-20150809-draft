@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.26 2007/07/13 06:38:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.27 2008/01/25 23:23:49 opfer Exp $
 
 inherit flag-o-matic eutils
 
@@ -33,7 +33,7 @@ PDEPEND="perl? ( dev-perl/DBI dev-perl/DBD-mysql )"
 src_unpack() {
 	use innodb || ewarn "InnoDB support is not selected to be compiled in."
 	unpack ${A} || die
-	cd ${S} || die
+	cd "${S}" || die
 
 	local MY_PATCH_SOURCE="${WORKDIR}/mysql-extras"
 
@@ -49,7 +49,7 @@ src_unpack() {
 	#epatch ${MY_PATCH_SOURCE}/mysql-4.0.14-security-28394.patch
 	epatch ${MY_PATCH_SOURCE}/020_all_gentoo-nptl.patch || die
 	sed -e "s|res=.grep Linuxthreads|res=1 #\`grep Linuxthreads|" \
-	-i  ${S}/configure
+	-i  "${S}"/configure
 
 	# security fix from http://lists.mysql.com/internals/15185
 	# gentoo bug #60744
@@ -58,7 +58,7 @@ src_unpack() {
 
 	# upstream bug http://bugs.mysql.com/bug.php?id=7971
 	# names conflict with stuff in 2.6.10 kernel headers
-	echo ${S}/client/mysqltest.c ${S}/extra/replace.c | xargs -n1 \
+	echo "${S}"/client/mysqltest.c "${S}"/extra/replace.c | xargs -n1 \
 	sed -i \
 		-e "s/set_bit/my__set_bit/g" \
 		-e "s/clear_bit/my__clear_bit/g" \
@@ -124,13 +124,13 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} benchdir_root=/usr/share/mysql || die
+	make install DESTDIR="${D}" benchdir_root=/usr/share/mysql || die
 
 	# eeek, not sure whats going on here.. are these needed by anything?
 	#use innodb && insinto /usr/lib/mysql && doins ${WORKDIR}/../libs/*
 
 	# move client libs, install a couple of missing headers
-	mv ${D}/usr/lib/mysql/libmysqlclient*.so* ${D}/usr/lib
+	mv "${D}"/usr/lib/mysql/libmysqlclient*.so* "${D}"/usr/lib
 	dosym ../libmysqlclient.so /usr/lib/mysql/libmysqlclient.so
 	dosym ../libmysqlclient_r.so /usr/lib/mysql/libmysqlclient_r.so
 	insinto /usr/include/mysql ; doins include/{my_config.h,my_dir.h}
@@ -141,18 +141,18 @@ src_install() {
 	dosym /usr/bin/mysqlcheck /usr/bin/mysqloptimize
 
 	# various junk
-	rm -f ${D}/usr/share/mysql/binary-configure
-	rm -f ${D}/usr/share/mysql/mysql.server
-	rm -f ${D}/usr/share/mysql/make_binary_distribution
-	rm -f ${D}/usr/share/mysql/mi_test_all*
-	rm -f ${D}/usr/share/mysql/mysql-log-rotate
-	rm -f ${D}/usr/share/mysql/mysql*.spec
-	rm -f ${D}/usr/share/mysql/my-*.cnf
+	rm -f "${D}"/usr/share/mysql/binary-configure
+	rm -f "${D}"/usr/share/mysql/mysql.server
+	rm -f "${D}"/usr/share/mysql/make_binary_distribution
+	rm -f "${D}"/usr/share/mysql/mi_test_all*
+	rm -f "${D}"/usr/share/mysql/mysql-log-rotate
+	rm -f "${D}"/usr/share/mysql/mysql*.spec
+	rm -f "${D}"/usr/share/mysql/my-*.cnf
 
 	#hmm what about all the very nice benchmark/test scripts
 	#in /usr/share/mysql/sql-bench
 	if ! use perl; then
-		rm -f ${D}/usr/bin/mysql_setpermission
+		rm -f "${D}"/usr/bin/mysql_setpermission
 	fi
 
 	dodoc README MIRRORS Docs/{manual.ps,manual.txt}
@@ -161,16 +161,16 @@ src_install() {
 	dodoc support-files/my-*.cnf
 
 	insinto /etc/mysql
-	doins ${FILESDIR}/my.cnf scripts/mysqlaccess.conf
-	newinitd ${FILESDIR}/mysql.init mysql
+	doins "${FILESDIR}"/my.cnf scripts/mysqlaccess.conf
+	newinitd "${FILESDIR}"/mysql.init mysql
 }
 
 pkg_config() {
-	if [ ! -d ${ROOT}/var/lib/mysql/mysql ] ; then
+	if [ ! -d "${ROOT}"/var/lib/mysql/mysql ] ; then
 		einfo "Press ENTER to create the mysql database and set proper"
 		einfo "permissions on it, or Control-C to abort now..."
 		read
-		${ROOT}/usr/bin/mysql_install_db #>>/var/log/mysql/mysql.err 2>&1
+		"${ROOT}"/usr/bin/mysql_install_db #>>/var/log/mysql/mysql.err 2>&1
 	else
 		einfo "Hmm, it appears as though you already have the mysql"
 		einfo "database in place.  If you are having problems trying"
@@ -193,14 +193,14 @@ pkg_preinst() {
 
 pkg_postinst() {
 	# empty dirs...
-	install -d -m0755 -o mysql -g mysql ${ROOT}/var/lib/mysql
-	install -d -m0755 -o mysql -g mysql ${ROOT}/var/run/mysqld
-	install -d -m0755 -o mysql -g mysql ${ROOT}/var/log/mysql
+	install -d -m0755 -o mysql -g mysql "${ROOT}"/var/lib/mysql
+	install -d -m0755 -o mysql -g mysql "${ROOT}"/var/run/mysqld
+	install -d -m0755 -o mysql -g mysql "${ROOT}"/var/log/mysql
 
 	# secure the logfiles... does this bother anybody?
-	touch ${ROOT}/var/log/mysql/mysql.{log,err}
-	chown mysql:mysql ${ROOT}/var/log/mysql/mysql.{log,err}
-	chmod 0660 ${ROOT}/var/log/mysql/mysql.{log,err}
+	touch "${ROOT}"/var/log/mysql/mysql.{log,err}
+	chown mysql:mysql "${ROOT}"/var/log/mysql/mysql.{log,err}
+	chmod 0660 "${ROOT}"/var/log/mysql/mysql.{log,err}
 
 	# your friendly public service announcement...
 	elog
