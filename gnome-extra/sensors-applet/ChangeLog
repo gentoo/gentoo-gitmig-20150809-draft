@@ -1,6 +1,29 @@
 # ChangeLog for gnome-extra/sensors-applet
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.28 2007/12/02 18:29:33 dang Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.29 2008/01/25 18:50:24 dang Exp $
+
+*sensors-applet-2.2.1 (25 Jan 2008)
+
+  25 Jan 2008; Daniel Gryniewicz <dang@gentoo.org>
+  +sensors-applet-2.2.1.ebuild:
+  Bump to 2.2.1
+  	* Fixed bug in libsensors4 plugin [ 1858005 ] segfault on startup
+  	* Fixed crash when removing applet from panel, whilst the
+  	  preferences window is open - fixes Ubuntu bug #172991
+  	* Work around memory leak in libsensors3 code by manually freeing the
+  	  result of sensors_parse_chip_name()
+  	* Implemented a plugin system, so all interface specific code are
+  	  compiled into separated plugin modules, allowing them to be shipped
+  	  separately from the main GNOME Sensors Applet program, to fix Debian bug
+  	  #375179, and allow the NVIDIA plugin to be split into a separate package
+  	  if needed.
+  	* Use new GTK tooltip API when possible
+  	* Update GTK icon cache on uninstall to comply with GNOME bug
+  	  #362604
+  	* Use g_timeout_add_seconds() when possible to save power
+  	* GNOME Sensors Applet Version 2.0.0 Released
+  	* src/libsensors-sensors-interface.c: Added support for
+  	  libsensors4 API - to be shipped with upcoming Fedora 9 and Ubuntu 8.04
 
 *sensors-applet-1.8.2 (02 Dec 2007)
 
