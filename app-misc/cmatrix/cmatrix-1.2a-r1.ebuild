@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a-r1.ebuild,v 1.2 2008/01/25 08:26:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a-r1.ebuild,v 1.3 2008/01/25 12:34:37 opfer Exp $
 
 inherit autotools eutils
 
@@ -28,7 +28,9 @@ src_unpack() {
 src_install() {
 	dodir /usr/share/consolefonts || die 'dodir failed'
 	dodir /usr/lib/kbd/consolefonts || die 'dodir failed'
-	use X && dodir /usr/lib/X11/fonts/misc || die 'dodir failed'
+	if use X;then
+	   dodir /usr/lib/X11/fonts/misc || die 'dodir failed'
+	fi
 	emake DESTDIR="${D}" install || die 'emake install failed'
 }
 
