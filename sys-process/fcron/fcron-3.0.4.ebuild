@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.4.ebuild,v 1.5 2008/01/24 19:14:27 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.4.ebuild,v 1.6 2008/01/25 18:13:19 wschlich Exp $
 
 inherit cron pam eutils
 
@@ -201,12 +201,12 @@ pkg_postinst() {
 
 	ewarn
 	ewarn "Fixing permissions and ownership of ${ROOT}usr/bin/fcron{tab,dyn,sighup}"
-	chown fcron:fcron ${ROOT}usr/bin/fcron{tab,dyn} >&/dev/null
-	chown ${rootuser:-root}:fcron ${ROOT}usr/bin/fcronsighup >&/dev/null
-	chmod 6755 ${ROOT}usr/bin/fcron{tab,dyn,sighup} >&/dev/null
+	chown fcron:fcron "${ROOT}"usr/bin/fcron{tab,dyn} >&/dev/null
+	chown ${rootuser:-root}:fcron "${ROOT}"usr/bin/fcronsighup >&/dev/null
+	chmod 6755 "${ROOT}"usr/bin/fcron{tab,dyn,sighup} >&/dev/null
 	ewarn "Fixing permissions and ownership of ${ROOT}etc/{fcron,fcrontab,crontab}"
-	chown -R ${rootuser:-root}:fcron ${ROOT}etc/{fcron,fcrontab,crontab} >&/dev/null
-	chmod -R g+rX,o= ${ROOT}etc/fcron ${ROOT}etc/{fcron,fcrontab,crontab} >&/dev/null
+	chown -R ${rootuser:-root}:fcron "${ROOT}"etc/{fcron,fcrontab,crontab} >&/dev/null
+	chmod -R g+rX,o= "${ROOT}"etc/fcron "${ROOT}"etc/{fcron,fcrontab,crontab} >&/dev/null
 	ewarn
 
 	ewarn
