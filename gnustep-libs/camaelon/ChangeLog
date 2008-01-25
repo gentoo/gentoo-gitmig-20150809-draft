@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/camaelon
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/ChangeLog,v 1.9 2007/10/08 19:58:46 voyageur Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/ChangeLog,v 1.10 2008/01/25 17:18:07 opfer Exp $
+
+  25 Jan 2008; Christian Faulhammer <opfer@gentoo.org> camaelon-0.2.ebuild:
+  stable x86, bug 207381
 
 *camaelon-0.2 (08 Oct 2007)
 

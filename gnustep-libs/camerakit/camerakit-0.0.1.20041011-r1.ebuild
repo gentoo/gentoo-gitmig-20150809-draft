@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camerakit/camerakit-0.0.1.20041011-r1.ebuild,v 1.1 2007/09/11 19:39:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camerakit/camerakit-0.0.1.20041011-r1.ebuild,v 1.2 2008/01/25 17:20:00 opfer Exp $
 
 inherit gnustep-2
 
@@ -10,7 +10,7 @@ DESCRIPTION="A simple wrapper to libgphoto2 for GNUstep."
 HOMEPAGE="http://home.gna.org/gsimageapps/"
 SRC_URI="http://download.gna.org/gsimageapps/${PN/camerak/CameraK}-${PV/0.0.1.}.tar.bz2"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
 
 DEPEND=">=media-libs/libgphoto2-2.1.3-r1"

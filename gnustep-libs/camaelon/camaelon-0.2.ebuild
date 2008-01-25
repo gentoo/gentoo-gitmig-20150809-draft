@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/camaelon-0.2.ebuild,v 1.1 2007/10/08 19:58:46 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/camaelon-0.2.ebuild,v 1.2 2008/01/25 17:18:07 opfer Exp $
 
 inherit gnustep-2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Camaelon allows you to load theme bundles for GNUstep."
 
 HOMEPAGE="http://www.etoile-project.org"
 SRC_URI="http://download.gna.org/etoile/etoile-${PV}.tar.gz"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
