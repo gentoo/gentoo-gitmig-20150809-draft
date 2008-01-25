@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.36 2008/01/23 10:05:47 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.37 2008/01/25 08:16:45 wrobel Exp $
+
+  25 Jan 2008; Gunnar Wrobel <wrobel@gentoo.org> moinmoin-1.6.0.ebuild:
+  Fixed homepage in 1.6.0. (#207218).
 
 *moinmoin-1.6.0 (23 Jan 2008)
 
