@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jwhois
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.29 2007/09/29 13:49:25 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.30 2008/01/25 21:19:07 armin76 Exp $
+
+  25 Jan 2008; Raúl Porcel <armin76@gentoo.org> jwhois-4.0.ebuild:
+  alpha/ia64/sparc/x86 stable
 
 *jwhois-4.0 (29 Sep 2007)
 
