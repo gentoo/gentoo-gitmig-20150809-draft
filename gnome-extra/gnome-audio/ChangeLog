@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-audio
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-audio/ChangeLog,v 1.17 2007/11/21 22:32:09 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-audio/ChangeLog,v 1.18 2008/01/25 19:08:03 corsair Exp $
+
+  25 Jan 2008; Markus Rothe <corsair@gentoo.org> gnome-audio-2.0.0.ebuild:
+  Stable on ppc64; bug #207214
 
   21 Nov 2007; Markus Ullmann <jokey@gentoo.org> gnome-audio-2.0.0.ebuild:
   ARMed for Flameeyes with a cookie
