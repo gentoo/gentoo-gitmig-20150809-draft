@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-5.0.0.ebuild,v 1.1 2007/07/18 00:55:33 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-5.0.0.ebuild,v 1.2 2008/01/25 23:51:41 markusle Exp $
+
+inherit eutils
 
 DESCRIPTION="The European Molecular Biology Open Software Suite - A sequence analysis package"
 HOMEPAGE="http://emboss.sourceforge.net/"
@@ -32,6 +34,19 @@ PDEPEND="!minimal? (
 	)"
 
 S="${WORKDIR}/EMBOSS-${PV}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+
+	local link_string="-lX11";
+	if use png; then
+		link_string="${link_string} -lgd -lpng"
+	fi
+	sed -e "s:PATCH_PLPLOT:${link_string}:" -i plplot/Makefile.in \
+		|| die "Failed to patch ajax Makefile"
+}
 
 src_compile() {
 	EXTRA_CONF="--includedir=${D}/usr/include/emboss"

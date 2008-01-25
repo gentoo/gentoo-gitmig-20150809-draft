@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-4.0.0.ebuild,v 1.9 2007/07/22 07:32:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-4.0.0.ebuild,v 1.10 2008/01/25 23:51:41 markusle Exp $
 
 DESCRIPTION="The European Molecular Biology Open Software Suite - A sequence analysis package"
 HOMEPAGE="http://emboss.sourceforge.net/"
@@ -54,7 +54,7 @@ src_install() {
 			|| die "Failed to install documentation."
 
 	# Install env file for setting libplplot and acd files path.
-	doenvd ${FILESDIR}/22emboss || die "Failed to install environment file."
+	doenvd "${FILESDIR}"/22emboss || die "Failed to install environment file."
 
 	# Symlink preinstalled docs to /usr/share/doc.
 	dosym /usr/share/EMBOSS/doc/manuals /usr/share/doc/${PF}/manuals || die
