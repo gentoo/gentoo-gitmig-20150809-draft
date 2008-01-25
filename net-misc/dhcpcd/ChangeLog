@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.174 2008/01/09 19:44:57 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.175 2008/01/25 11:06:27 armin76 Exp $
+
+*dhcpcd-3.2.0 (25 Jan 2008)
+
+  25 Jan 2008; Raúl Porcel <armin76@gentoo.org> +dhcpcd-3.2.0.ebuild:
+  Version bump
 
   09 Jan 2008; <welp@gentoo.org> dhcpcd-3.1.9.ebuild:
   Replace all instances of ewarn and einfo with elog
