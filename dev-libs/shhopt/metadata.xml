@@ -3,10 +3,12 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>hawking@gentoo.org</email>
+		<name>Ali Polatel</name>
 	</maintainer>
-	<longdescription>
+	<longdescription lang="en">
 		C-functions for parsing command line options, both traditional
 		one-character options, and GNU'ish --long-options.
 	</longdescription>
 </pkgmetadata>
+

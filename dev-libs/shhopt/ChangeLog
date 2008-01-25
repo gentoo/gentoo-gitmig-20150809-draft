@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/shhopt
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.8 2007/12/25 12:54:39 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.9 2008/01/25 02:28:40 hawking Exp $
+
+  25 Jan 2008; Ali Polatel <hawking@gentoo.org> metadata.xml,
+  -shhopt-1.1.7-r1.ebuild:
+  Add myself as maintainer. Drop old.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing dholm from metadata.xml as per #24623. Assigning to maintainer-needed.
