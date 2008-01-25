@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/pen
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.9 2007/07/15 08:49:59 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.10 2008/01/25 21:33:51 armin76 Exp $
+
+  25 Jan 2008; Raúl Porcel <armin76@gentoo.org> -pen-0.12.1.ebuild,
+  -pen-0.15.0.ebuild, -pen-0.17.0.ebuild, pen-0.17.1.ebuild:
+  x86 stable, remove old
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to m-needed, as beu is being retired (#66608).

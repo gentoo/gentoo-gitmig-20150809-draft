@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/proxyper
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxyper/ChangeLog,v 1.8 2007/07/15 08:51:34 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxyper/ChangeLog,v 1.9 2008/01/25 21:35:00 armin76 Exp $
+
+  25 Jan 2008; Raúl Porcel <armin76@gentoo.org> -files/proxyper.ini,
+  -proxyper-333.ebuild, -proxyper-335.ebuild, proxyper-341a.ebuild:
+  x86 stable, remove old
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to m-needed, as beu is being retired (#66608).
