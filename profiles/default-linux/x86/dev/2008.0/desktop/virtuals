@@ -1,0 +1,6 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/dev/2008.0/desktop/virtuals,v 1.1 2008/01/25 03:42:55 wolf31o2 Exp $
+
+virtual/cdrtools						app-cdr/cdrkit
+virtual/fam								app-admin/gamin

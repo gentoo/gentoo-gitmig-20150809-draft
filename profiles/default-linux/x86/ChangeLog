@@ -1,6 +1,14 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.123 2008/01/12 18:10:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.124 2008/01/25 03:42:54 wolf31o2 Exp $
+
+  25 Jan 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  +dev/2008.0/desktop/make.defaults, +dev/2008.0/desktop/parent,
+  +dev/2008.0/desktop/virtuals, +dev/2008.0/make.defaults,
+  +dev/2008.0/packages, +dev/2008.0/parent,
+  +dev/2008.0/server/make.defaults, +dev/2008.0/server/parent,
+  +dev/2008.0/server/profile.bashrc:
+  Initial 2008.0 profile, copied from 2007.1's development profile.
 
   12 Jan 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   -no-nptl/2.4/deprecated, -no-nptl/2.4/package.mask,

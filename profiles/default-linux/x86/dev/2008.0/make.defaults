@@ -1,0 +1,10 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/dev/2008.0/make.defaults,v 1.1 2008/01/25 03:42:55 wolf31o2 Exp $
+
+# We build stage1 against this
+STAGE1_USE="nptl nptlonly unicode"
+
+# These USE flags are what is common between the various sub-profiles. Stages 2
+# and 3 are built against these, so be careful what you add.
+USE="acl cups gdbm gpm nptl nptlonly unicode"
