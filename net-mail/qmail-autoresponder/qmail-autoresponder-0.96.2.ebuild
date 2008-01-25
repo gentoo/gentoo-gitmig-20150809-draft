@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.2.ebuild,v 1.9 2007/07/26 20:36:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.2.ebuild,v 1.10 2008/01/25 20:54:00 bangert Exp $
 
 inherit toolchain-funcs
 
@@ -23,7 +23,6 @@ RDEPEND="
 "
 
 src_compile() {
-	cd ${S}
 	echo "/usr/include/bglibs" > conf-bgincs
 	echo "/usr/lib/bglibs" > conf-bglibs
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
@@ -37,10 +36,10 @@ src_compile() {
 }
 
 src_install () {
-	dobin qmail-autoresponder
+	dobin qmail-autoresponder || die
 	doman qmail-autoresponder.1
 	if use mysql; then
-		dobin qmail-autoresponder-mysql
+		dobin qmail-autoresponder-mysql || die
 		dodoc schema.mysql
 	fi
 
