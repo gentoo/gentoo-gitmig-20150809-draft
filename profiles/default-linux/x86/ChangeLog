@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.124 2008/01/25 03:42:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.125 2008/01/25 20:23:47 wolf31o2 Exp $
+
+  25 Jan 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  dev/2008.0/desktop/make.defaults:
+  Set -arts +usb for bug #201825 and bug #204447.
 
   25 Jan 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   +dev/2008.0/desktop/make.defaults, +dev/2008.0/desktop/parent,
