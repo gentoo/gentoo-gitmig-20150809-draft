@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/qsoapman
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qsoapman/ChangeLog,v 1.9 2007/02/22 02:24:30 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qsoapman/ChangeLog,v 1.10 2008/01/25 08:24:41 wrobel Exp $
+
+*qsoapman-0.4 (25 Jan 2008)
+
+  25 Jan 2008; <wrobel@gentoo.org> +qsoapman-0.4.ebuild:
+  Added qsoapman-0.4 (#201661).
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
