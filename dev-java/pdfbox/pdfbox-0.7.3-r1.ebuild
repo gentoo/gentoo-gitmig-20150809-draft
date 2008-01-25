@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3.ebuild,v 1.7 2008/01/25 21:22:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r1.ebuild,v 1.1 2008/01/25 21:22:59 robbat2 Exp $
 
+EAPI=1
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-nodeps"
 inherit java-pkg-2 java-ant-2
@@ -19,7 +20,7 @@ IUSE=""
 CDEPEND="dev-java/fontbox
 	>=dev-java/bcprov-1.32
 	>=dev-java/bcmail-1.32
-	=dev-java/lucene-2*
+	dev-java/lucene:2.1
 	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.4
 	${CDEPEND}"
@@ -43,7 +44,7 @@ src_unpack() {
 	java-pkg_jar-from fontbox
 	java-pkg_jar-from bcprov
 	java-pkg_jar-from bcmail
-	java-pkg_jar-from lucene-2
+	java-pkg_jar-from lucene-2.1
 	java-pkg_jar-from ant-core ant.jar
 }
 

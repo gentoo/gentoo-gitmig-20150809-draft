@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/pdfbox
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.6 2007/06/14 00:36:23 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.7 2008/01/25 21:22:59 robbat2 Exp $
+
+*pdfbox-0.7.3-r1 (25 Jan 2008)
+
+  25 Jan 2008; Robin H. Johnson <robbat2@gentoo.org> pdfbox-0.7.3.ebuild,
+  +pdfbox-0.7.3-r1.ebuild:
+  Revdump to handle the new lucene slots. Fix unquoted variables also.
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org> pdfbox-0.7.3.ebuild:
   Stable on amd64 wrt bug 181086
