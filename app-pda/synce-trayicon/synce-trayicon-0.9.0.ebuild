@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/synce-trayicon-0.9.0.ebuild,v 1.5 2006/03/16 18:23:13 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/synce-trayicon-0.9.0.ebuild,v 1.6 2008/01/25 23:47:29 philantrop Exp $
 
 DESCRIPTION="Synchronize Windows CE devices with computers running GNU/Linux, like MS ActiveSync."
 HOMEPAGE="http://sourceforge.net/projects/synce/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/libc
+DEPEND=">=dev-util/pkgconfig-0.22
 	>=app-pda/synce-librapi2-0.9.0
 	>=x11-libs/gtk+-2.0
 	>=gnome-base/libgtop-2
@@ -19,11 +19,6 @@ DEPEND="virtual/libc
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnomeui-2.0"
 
-src_compile() {
-	econf || die "econf failed"
-	emake || die
-}
-
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die "installation failed"
 }
