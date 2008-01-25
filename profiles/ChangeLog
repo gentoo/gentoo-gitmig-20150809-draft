@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1034 2008/01/24 22:24:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1035 2008/01/25 00:37:21 ulm Exp $
+
+  25 Jan 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Unmask app-emacs/uboat, licence issues are solved now.
 
   24 Jan 2008; Gilles Dartiguelongue <eva@gentoo.org> ChangeLog:
   adding masked gnome-sytem-tools-2.20 dependencies
