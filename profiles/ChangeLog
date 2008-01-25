@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1036 2008/01/25 09:28:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1037 2008/01/25 10:00:44 remi Exp $
+
+  25 Jan 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  add x11-themes/gtk-engines-mist to p.mask for removal (bug #204489)
 
   25 Jan 2008; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
   Mask sys-kernel/suspend2-sources and sys-apps/suspend2-userui.
