@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zssh
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.11 2007/05/11 18:00:14 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.12 2008/01/26 17:27:09 armin76 Exp $
+
+  26 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  -files/zssh-1.5a-gentoo-termcap.diff, -zssh-1.5a.ebuild, zssh-1.5c.ebuild:
+  sparc/x86 stable, remove old
 
   11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
   add metadata.xml
