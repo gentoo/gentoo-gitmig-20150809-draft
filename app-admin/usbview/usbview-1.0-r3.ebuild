@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-1.0-r3.ebuild,v 1.11 2008/01/11 22:13:52 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-1.0-r3.ebuild,v 1.12 2008/01/26 06:06:56 drac Exp $
 
 inherit autotools eutils
 
@@ -30,5 +30,5 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	doman usbview.8
 	doicon ${PN}_logo.xpm
-	make_desktop_entry ${PN} "USB Viewer" ${PN}_logo.xpm
+	make_desktop_entry ${PN} "USB Viewer" ${PN}_logo
 }
