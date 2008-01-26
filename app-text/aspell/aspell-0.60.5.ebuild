@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.5.ebuild,v 1.17 2007/12/28 23:35:20 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.5.ebuild,v 1.18 2008/01/26 18:49:16 philantrop Exp $
 
 # N.B. This is before inherit of autotools, as autotools.eclass adds the
 # relevant dependencies to DEPEND.
@@ -50,6 +50,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/aspell-0.60.3-templateinstantiations.patch
 	epatch "${FILESDIR}/${P}-nls.patch"
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
 
 	eautomake
 	elibtoolize --reverse-deps
@@ -87,7 +88,7 @@ src_install() {
 		cd examples
 		make clean || die
 		docinto examples
-		dodoc ${S}/examples/*
+		dodoc "${S}"/examples/*
 	fi
 }
 
