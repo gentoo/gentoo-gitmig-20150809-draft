@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/cowbell-0.2.7.1.ebuild,v 1.3 2006/05/15 21:08:51 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/cowbell-0.2.7.1.ebuild,v 1.4 2008/01/26 08:16:47 drac Exp $
 
 inherit autotools gnome2 mono
 
 DESCRIPTION="Elegantly tag and rename mp3/ogg/flac files"
-SRC_URI="http://more-cowbell.org/releases/${P}.tar.gz"
 HOMEPAGE="http://more-cowbell.org"
+SRC_URI="http://more-cowbell.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,16 +17,15 @@ RDEPEND="dev-lang/mono
 	>=dev-dotnet/gtk-sharp-2.6
 	>=dev-dotnet/glade-sharp-2.6
 	>=media-libs/taglib-1.4"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.34.2"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-src_compile() {
-	eautoreconf
+MAKEOPTS="${MAKEOPTS} -j1"
 
-	gnome2_src_configure
-	emake -j1 || die "make failed"
+src_unpack() {
+	gnome2_src_unpack
+	eautoreconf
 }
