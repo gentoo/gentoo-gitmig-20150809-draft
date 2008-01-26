@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/udpcast
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.10 2007/06/02 23:14:58 dragonheart Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.11 2008/01/26 17:07:15 armin76 Exp $
+
+  26 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  -files/udpcast-20070323-makefix.patch, -udpcast-20050226.ebuild,
+  -udpcast-20070323.ebuild, udpcast-20070602.ebuild:
+  x86 stable, remove old
 
 *udpcast-20070602 (02 Jun 2007)
 
