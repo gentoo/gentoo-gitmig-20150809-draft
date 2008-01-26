@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2.ebuild,v 1.2 2007/09/06 16:25:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2.ebuild,v 1.3 2008/01/26 10:36:52 pva Exp $
 
 inherit eutils
 
@@ -19,27 +19,29 @@ DEPEND="gnutls? ( >=net-libs/gnutls-1.0.17 )
 	postgres? ( dev-db/postgresql )
 	ldap? ( net-nds/openldap )"
 
-pkg_setup() {
-	# bug 141782 - conflicting USE flags - ssl and gnutls
-	if use ssl && use gnutls ; then
-		eerror "You cannot emerge net-analyzer/echoping with both"
-		eerror "ssl and gnutls USE flags set. Please choose one."
-		die "echoping cannot use both ssl and gnutls at once"
-	fi
-}
-
 src_compile() {
+	local my_ssl_conf
+	if use gnutls; then
+		if use ssl; then
+			ewarn "You've enabled both ssl and gnutls USE flags but ${PN} could"
+			ewarn "not be built with both, see bug #141782. Using gnutls only."
+		fi
+		my_ssl_conf="${myconf} $(use_with gnutls)"
+	elif use ssl; then
+		my_ssl_conf="${myconf} $(use_with ssl)"
+	fi
+
 	econf \
 		--config-cache \
 		--disable-ttcp \
-		$(use_with gnutls) \
+		${my_ssl_conf} \
 		$(use_enable http)  \
 		$(use_enable icp) \
 		$(use_with idn libidn) \
 		$(use_enable smtp) \
 		$(use_enable tos) \
 		$(use_enable priority) \
-		$(use_with ssl) || die "econf failed"
+		|| die "econf failed"
 
 	emake || die "emake failed"
 }
