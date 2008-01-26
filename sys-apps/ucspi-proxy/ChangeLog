@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-proxy
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.9 2008/01/16 18:41:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.10 2008/01/26 23:03:28 bangert Exp $
+
+  26 Jan 2008; Thilo Bangert <bangert@gentoo.org> -ucspi-proxy-0.95.ebuild,
+  -ucspi-proxy-0.96.ebuild:
+  remove old versions
 
   16 Jan 2008; Raúl Porcel <armin76@gentoo.org> ucspi-proxy-0.97.ebuild:
   x86 stable
