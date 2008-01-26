@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.149 2007/10/12 14:09:36 bangert Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.150 2008/01/26 14:46:06 bangert Exp $
+
+  26 Jan 2008; Thilo Bangert <bangert@gentoo.org> lighttpd-1.4.16.ebuild,
+  lighttpd-1.4.18.ebuild:
+  fix quoting
 
   12 Oct 2007; Thilo Bangert <bangert@gentoo.org>
   -files/1.4.13/03_all_lighttpd-1.4.11-errorlog-pipe.diff,

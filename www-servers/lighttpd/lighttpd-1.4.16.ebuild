@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.16.ebuild,v 1.10 2007/08/25 14:30:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.16.ebuild,v 1.11 2008/01/26 14:46:06 bangert Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -59,7 +59,7 @@ remove_non_essential() {
 	local libdir="${D}/usr/$(get_libdir)/${PN}"
 
 	# text docs
-	use doc || rm -fr ${D}/usr/share/doc/${PF}/txt
+	use doc || rm -fr "${D}"/usr/share/doc/${PF}/txt
 
 	# non-essential modules
 	rm -f \
@@ -73,8 +73,8 @@ remove_non_essential() {
 	use rrdtool || rm -f ${libdir}/mod_rrdtool.*
 
 	if ! use fastcgi ; then
-		rm -f ${libdir}/mod_fastcgi.* ${D}/usr/bin/spawn-fcgi \
-			${D}/usr/share/man/man1/spawn-fcgi.*
+		rm -f ${libdir}/mod_fastcgi.* "${D}"/usr/bin/spawn-fcgi \
+			"${D}"/usr/share/man/man1/spawn-fcgi.*
 	fi
 }
 
@@ -96,7 +96,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	EPATCH_SUFFIX="diff" EPATCH_OPTS="-l" epatch ${FILESDIR}/${PVR} || die "Patching failed!"
 
@@ -142,22 +142,22 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	# init script stuff
-	newinitd ${FILESDIR}/lighttpd.initd-1.4.13-r3 lighttpd || die
-	newconfd ${FILESDIR}/lighttpd.confd lighttpd || die
+	newinitd "${FILESDIR}"/lighttpd.initd-1.4.13-r3 lighttpd || die
+	newconfd "${FILESDIR}"/lighttpd.confd lighttpd || die
 	use fam && has_version app-admin/fam && \
 		sed -i 's/after famd/need famd/g' "${D}"/etc/init.d/lighttpd
 
 	if use php || use fastcgi ; then
-		newinitd ${FILESDIR}/spawn-fcgi.initd spawn-fcgi || die
-		newconfd ${FILESDIR}/spawn-fcgi.confd spawn-fcgi || die
+		newinitd "${FILESDIR}"/spawn-fcgi.initd spawn-fcgi || die
+		newconfd "${FILESDIR}"/spawn-fcgi.confd spawn-fcgi || die
 	fi
 
 	# configs
 	insinto /etc/lighttpd
-	doins ${FILESDIR}/conf/lighttpd.conf
-	doins ${FILESDIR}/conf/mime-types.conf
-	doins ${FILESDIR}/conf/mod_cgi.conf
-	newins ${FILESDIR}/conf/mod_fastcgi.conf-1.4.13-r2 mod_fastcgi.conf
+	doins "${FILESDIR}"/conf/lighttpd.conf
+	doins "${FILESDIR}"/conf/mime-types.conf
+	doins "${FILESDIR}"/conf/mod_cgi.conf
+	newins "${FILESDIR}"/conf/mod_fastcgi.conf-1.4.13-r2 mod_fastcgi.conf
 	# Secure directory for fastcgi sockets
 	keepdir /var/run/lighttpd/
 	fperms 0750 /var/run/lighttpd/
@@ -177,7 +177,7 @@ src_install() {
 
 	# logrotate
 	insinto /etc/logrotate.d
-	newins ${FILESDIR}/lighttpd.logrotate lighttpd || die
+	newins "${FILESDIR}"/lighttpd.logrotate lighttpd || die
 
 	keepdir /var/l{ib,og}/lighttpd /var/www/localhost/htdocs
 	fowners lighttpd:lighttpd /var/l{ib,og}/lighttpd
