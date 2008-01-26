@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-unix
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.14 2007/02/26 21:16:41 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.15 2008/01/26 22:56:10 bangert Exp $
+
+  26 Jan 2008; Thilo Bangert <bangert@gentoo.org> ucspi-unix-0.36-r2.ebuild:
+  fix quoting - remove ChangeLog from dodoc
 
   26 Feb 2007; Thilo Bangert <bangert@gentoo.org> ucspi-unix-0.36-r1.ebuild,
   ucspi-unix-0.36-r2.ebuild:

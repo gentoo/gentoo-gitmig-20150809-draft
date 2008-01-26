@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ucspi-unix-0.36-r2.ebuild,v 1.2 2007/02/26 21:16:41 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ucspi-unix-0.36-r2.ebuild,v 1.3 2008/01/26 22:56:10 bangert Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,8 +17,8 @@ DEPEND=">=dev-libs/bglibs-1.019-r1"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-gentoo-head.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-gentoo-head.patch
 }
 
 src_compile() {
@@ -31,5 +31,5 @@ src_compile() {
 src_install() {
 	dobin unixserver unixclient unixcat || die
 	doman unixserver.1 unixclient.1
-	dodoc ANNOUNCEMENT ChangeLog NEWS PROTOCOL README TODO
+	dodoc ANNOUNCEMENT NEWS PROTOCOL README TODO
 }
