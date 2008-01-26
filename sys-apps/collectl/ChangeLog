@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/collectl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.2 2008/01/20 11:36:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.3 2008/01/26 09:12:33 vapier Exp $
+
+  26 Jan 2008; Mike Frysinger <vapier@gentoo.org> collectl-2.4.1.ebuild:
+  Add alpha/ia64 love per feedback from Mark Seger.
 
 *collectl-2.4.1 (05 Jan 2008)
 
