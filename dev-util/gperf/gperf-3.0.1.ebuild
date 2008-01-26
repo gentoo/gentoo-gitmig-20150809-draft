@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/gperf-3.0.1.ebuild,v 1.20 2007/04/08 08:47:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/gperf-3.0.1.ebuild,v 1.21 2008/01/26 14:54:30 swegener Exp $
 
 inherit eutils
 
@@ -19,5 +19,6 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" htmldir=/usr/share/doc/${PF}/html install || die
+	dodoc AUTHORS ChangeLog NEWS README
 }
