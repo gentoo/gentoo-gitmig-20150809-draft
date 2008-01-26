@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.42 2008/01/24 17:34:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.43 2008/01/26 11:59:50 aballier Exp $
+
+  26 Jan 2008; Alexis Ballier <aballier@gentoo.org> pstoedit-3.45.ebuild:
+  now that we dont patch, we dont need to call eautoreconf, fixes bug #207452
+  as a side effect
 
   24 Jan 2008; Stefan Schweizer <genstef@gentoo.org> ChangeLog:
   remove as-needed patch, bug 207286

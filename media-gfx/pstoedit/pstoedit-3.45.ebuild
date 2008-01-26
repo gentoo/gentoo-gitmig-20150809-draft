@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.2 2008/01/24 17:34:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.3 2008/01/26 11:59:50 aballier Exp $
 
-inherit autotools base eutils
+inherit base eutils
 
 DESCRIPTION="translates PostScript and PDF graphics into other vector formats"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -35,7 +35,6 @@ pkg_setup() {
 }
 
 src_compile() {
-	eautoreconf
 	#$(use_with flash swf)
 	# --without-swf for bug https://bugs.gentoo.org/show_bug.cgi?id=137204
 	econf $(use_with emf) --without-swf $(use_with imagemagick magick) \
@@ -44,7 +43,7 @@ src_compile() {
 }
 
 src_install () {
-	emake DESTDIR=${D} install || die 'make install failed'
+	emake DESTDIR="${D}" install || die 'make install failed'
 	cd doc
 	dodoc readme.txt || die
 	dohtml *.htm || die
