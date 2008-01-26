@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/cbind-6.0.ebuild,v 1.5 2007/05/28 19:01:56 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/cbind-6.0.ebuild,v 1.6 2008/01/26 23:57:51 george Exp $
 
 # !NOTE!
 # this is a utility, no libs generated, no reason to do the gnat.eclass dance
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://www.rational.com/"
 LICENSE="GMGPL"
 
-DEPEND="virtual/gnat"
+DEPEND="virtual/ada"
 
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
@@ -22,6 +22,6 @@ src_compile() {
 }
 
 src_install () {
-	make PREFIX=${D}/usr/ install || die
+	make PREFIX="${D}"/usr/ install || die
 	dodoc README DOCS
 }
