@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.50.100.ebuild,v 1.1 2007/03/03 16:11:10 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.50.100.ebuild,v 1.2 2008/01/26 11:14:19 opfer Exp $
 
 inherit java-pkg-2
 
@@ -11,7 +11,7 @@ SRC_URI="http://${PN}.sourceforge.net/releases/${P}.tar.gz"
 IUSE="source"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 
 DEPEND=">=virtual/jdk-1.5"
 
