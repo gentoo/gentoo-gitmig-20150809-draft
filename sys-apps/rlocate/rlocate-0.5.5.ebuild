@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/rlocate-0.5.5.ebuild,v 1.3 2007/06/02 19:01:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/rlocate-0.5.5.ebuild,v 1.4 2008/01/26 18:29:42 vapier Exp $
 
 inherit eutils linux-mod
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		--with-kernel=${KV_DIR} \
+		--with-kernel=${KV_OUT_DIR} \
 		--with-rlocate-group=locate \
 		|| die
 	emake || die
