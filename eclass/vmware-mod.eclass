@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-mod.eclass,v 1.16 2008/01/26 01:13:05 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-mod.eclass,v 1.17 2008/01/26 13:11:23 ikelos Exp $
 
 
 # Ensure vmware comes before linux-mod since we want linux-mod's pkg_preinst and
@@ -10,11 +10,11 @@ inherit eutils vmware linux-mod
 DESCRIPTION="Modules for Vmware Programs"
 HOMEPAGE="http://www.vmware.com/"
 SRC_URI="http://platan.vc.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://platan.vc.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
+	http://platan.vc.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
-	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz"
+	http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz"
 LICENSE="vmware"
 SLOT="0"
 IUSE=""
