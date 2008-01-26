@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20080115.ebuild,v 1.1 2008/01/15 19:44:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20080115.ebuild,v 1.2 2008/01/26 00:03:04 aballier Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -66,10 +66,10 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-swscaler.patch"
 	epatch "${FILESDIR}/cinelerra-compilewarnings.diff"
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
-	AT_M4DIR="m4" eautoreconf
 	econf \
 	`use_enable static` \
 	`use_enable alsa` \
