@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freecdb
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.14 2007/04/24 17:39:43 chtekk Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.15 2008/01/26 19:02:58 grobian Exp $
+
+  26 Jan 2008; Fabian Groffen <grobian@gentoo.org> freecdb-0.62.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   24 Apr 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
   freecdb-0.62.ebuild:

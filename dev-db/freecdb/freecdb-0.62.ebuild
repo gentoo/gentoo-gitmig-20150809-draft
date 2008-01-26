@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/freecdb-0.62.ebuild,v 1.16 2007/04/24 17:39:43 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/freecdb-0.62.ebuild,v 1.17 2008/01/26 19:02:58 grobian Exp $
 
-KEYWORDS="alpha amd64 ppc ppc-macos sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 
 DESCRIPTION="A fast, reliable, simple package for creating and reading constant databases."
 SRC_URI="mirror://debian/pool/main/f/freecdb//${P/-/_}.tar.gz"
