@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-mod.eclass,v 1.15 2007/09/20 17:07:37 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-mod.eclass,v 1.16 2008/01/26 01:13:05 ikelos Exp $
 
 
 # Ensure vmware comes before linux-mod since we want linux-mod's pkg_preinst and
@@ -76,9 +76,11 @@ vmware-mod_src_unpack() {
 		cd "${S}"/${mod}-only
 		# Ensure it's not used
 		# rm getversion.pl
-		EPATCH_SUFFIX="patch"
-		epatch "${FILESDIR}"/patches
-		[[ -d "${FILESDIR}"/patches/${mod} ]] && epatch "${FILESDIR}"/patches/${mod}
+		if [[ "${VMWARE_MOD_DIR}" = "${ANY_ANY}" ]] ; then
+			EPATCH_SUFFIX="patch"
+			epatch "${FILESDIR}"/patches
+			[[ -d "${FILESDIR}"/patches/${mod} ]] && epatch "${FILESDIR}"/patches/${mod}
+		fi
 		convert_to_m "${S}"/${mod}-only/Makefile
 	done
 }
@@ -112,3 +114,6 @@ vmware-mod_src_install() {
 # 'VME_V55'		= .13
 # 'VME_S1B1'	= .14
 # 'VME_S1??'	= .15
+# 'VME_V6'      = .16
+# 'VME_V6'      = .17  (6.0.2)
+# 'VME_S2B1'    = .18
