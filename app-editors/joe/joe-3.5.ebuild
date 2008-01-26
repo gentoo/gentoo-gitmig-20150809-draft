@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.5.ebuild,v 1.12 2007/10/10 06:57:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.5.ebuild,v 1.13 2008/01/26 15:51:29 grobian Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm mips ppc ppc64 sparc x86"
 IUSE="xterm"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
-RDEPEND="!ppc-macos? ( xterm? ( >=x11-terms/xterm-215-r1 ) )"
+RDEPEND="xterm? ( >=x11-terms/xterm-215-r1 )"
 
 pkg_setup() {
 	if use xterm && ! built_with_use x11-terms/xterm paste64; then
