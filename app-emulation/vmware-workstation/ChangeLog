@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-workstation
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.170 2007/11/25 12:50:31 ikelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.171 2008/01/26 01:30:57 ikelos Exp $
+
+  26 Jan 2008; Mike Auty <ikelos@gentoo.org>
+  files/digest-vmware-workstation-4.5.3.19414-r7,
+  files/digest-vmware-workstation-5.5.5.56455,
+  files/digest-vmware-workstation-6.0.1.55017,
+  files/digest-vmware-workstation-6.0.2.59824, Manifest:
+  Redigest for any-any-update115.
 
 *vmware-workstation-6.0.2.59824 (25 Nov 2007)
 

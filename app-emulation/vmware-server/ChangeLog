@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-server
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.30 2007/11/25 13:08:59 ikelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.31 2008/01/26 01:36:46 ikelos Exp $
+
+  26 Jan 2008; Mike Auty <ikelos@gentoo.org>
+  files/digest-vmware-server-1.0.3.44356,
+  files/digest-vmware-server-1.0.4.56528, Manifest:
+  Redigest for any-any-update115.
 
   25 Nov 2007; Mike Auty <ikelos@gentoo.org>
   files/digest-vmware-server-1.0.3.44356,
