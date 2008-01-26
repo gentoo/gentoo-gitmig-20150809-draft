@@ -1,15 +1,10 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.45 2008/01/26 16:47:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.46 2008/01/26 16:59:39 armin76 Exp $
 
 *sitecopy-0.16.3-r1 (26 Jan 2008)
 
   26 Jan 2008; Raúl Porcel <armin76@gentoo.org>
-  +files/01_remote_dynamic_rc.dpatch, +files/02_french-po-fix.dpatch,
-  +files/03_wrong_memory_397155.dpatch,
-  +files/04_manpages_addition_fixes.dpatch,
-  +files/05_libneon27_transition.dpatch,
-  +files/06_sftpdriver.c_fix-for-new-openssh.dpatch,
   +sitecopy-0.16.3-r1.ebuild:
   Revision bump to add patches from Debian, and fix bug #197804
 

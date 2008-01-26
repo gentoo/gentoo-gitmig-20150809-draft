@@ -1,13 +1,15 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.3-r1.ebuild,v 1.1 2008/01/26 16:47:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.3-r1.ebuild,v 1.2 2008/01/26 16:59:39 armin76 Exp $
 
 inherit eutils autotools
 
 IUSE="expat nls rsh ssl webdav xml zlib"
 
+DEB_PL="14"
 DESCRIPTION="sitecopy is for easily maintaining remote web sites"
-SRC_URI="http://www.lyra.org/${PN}/${P}.tar.gz"
+SRC_URI="http://www.lyra.org/${PN}/${P}.tar.gz
+	mirror://debian/pool/main/s/${PN}/${P/-/_}-${DEB_PL}.diff.gz"
 HOMEPAGE="http://www.lyra.org/sitecopy/"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
@@ -37,10 +39,12 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
 
 	# Debian patches
-	epatch "${FILESDIR}"/*.dpatch
+	epatch ${P/-/_}-${DEB_PL}.diff
+	epatch "${S}"/debian/patches/*.dpatch
+
+	cd "${S}"
 
 	sed -i -e \
 		"s:docdir \= .*:docdir \= \$\(prefix\)\/share/doc\/${PF}:" \
