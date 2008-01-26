@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.2.0.ebuild,v 1.1 2008/01/25 11:06:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.2.0.ebuild,v 1.2 2008/01/26 17:04:49 flameeyes Exp $
 
 inherit toolchain-funcs
 
@@ -55,6 +55,12 @@ src_install() {
 }
 
 pkg_postinst() {
+	# Upgrade the duid file to the new format if needed
+	local duid="${ROOT}"/var/lib/dhcpcd/dhcpcd.duid
+	if [ -e "${duid}" ] && ! grep -q '..:..:..:..:..:..' "${duid}"; then
+		sed -i -e 's/\(..\)/\1:/g; s/:$//g' "${duid}"
+	fi
+
 	if use zeroconf; then
 		elog "You have installed dhcpcd with zeroconf support."
 		elog "This means that it will always obtain an IP address even if no"
