@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/inn
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.20 2008/01/25 22:05:29 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.21 2008/01/26 07:51:36 ulm Exp $
+
+  26 Jan 2008; Ulrich Mueller <ulm@gentoo.org> -files/2.4.1-berkdb.patch,
+  -inn-2.4.1.ebuild, -inn-2.4.3.ebuild:
+  Remove vulnerable versions wrt bug 201687.
 
   25 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> inn-2.4.3-r1.ebuild:
   Marked stable on amd64 as per bug 201687.
