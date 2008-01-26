@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.9_p1-r1.ebuild,v 1.10 2007/10/14 15:37:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.9_p1-r1.ebuild,v 1.11 2008/01/26 13:53:48 bangert Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i '/NTPD_USER/s:_ntp:ntp:' ntpd.h || die
-	epatch ${FILESDIR}/openntpd-3.9p1_reconnect_on_sendto_EINVAL.diff
+	epatch "${FILESDIR}"/openntpd-3.9p1_reconnect_on_sendto_EINVAL.diff
 }
 
 src_compile() {

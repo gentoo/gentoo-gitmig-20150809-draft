@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.38 2007/10/27 20:30:35 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.39 2008/01/26 13:53:48 bangert Exp $
+
+  26 Jan 2008; Thilo Bangert <bangert@gentoo.org> openntpd-3.9_p1-r1.ebuild:
+  fix quoting
 
   27 Oct 2007; Thilo Bangert <bangert@gentoo.org>
   -files/3.6.1_p1-ntpd.8.patch, -files/3.6.1_p1-pollerr.patch,
