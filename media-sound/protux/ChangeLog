@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/protux
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.27 2008/01/26 11:18:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.28 2008/01/26 11:27:04 opfer Exp $
+
+  26 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  protux-0.50.100.ebuild:
+  add app-arch/zip for source USE flag
 
   26 Jan 2008; Samuli Suominen <drac@gentoo.org> -files/protux-gentoo.patch,
   -protux-0.20.1.ebuild, -protux-0.20.2.ebuild:
