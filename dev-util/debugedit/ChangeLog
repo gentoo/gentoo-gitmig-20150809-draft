@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debugedit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.14 2007/11/22 16:47:14 cardoe Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.15 2008/01/26 17:44:10 armin76 Exp $
+
+  26 Jan 2008; Raúl Porcel <armin76@gentoo.org> debugedit-4.4.6-r1.ebuild:
+  Add ~sparc wrt #207573
 
   22 Nov 2007; Doug Klima <cardoe@gentoo.org> metadata.xml:
   Add DOCTYPE to metadata for validation
