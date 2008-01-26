@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/alex
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.34 2007/12/14 01:38:53 dcoutts Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.35 2008/01/26 20:24:10 dcoutts Exp $
+
+  26 Jan 2008; Duncan Coutts <dcoutts@gentoo.org> -alex-2.0.1-r1.ebuild,
+  alex-2.1.0.ebuild, alex-2.2.ebuild:
+  Fix qa bug #207490 and remove old version.
 
 *alex-2.2 (14 Dec 2007)
 
