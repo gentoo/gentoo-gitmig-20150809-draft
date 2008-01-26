@@ -12,7 +12,7 @@ diff -ur gavl-0.2.7.orig/configure.ac gavl-0.2.7/configure.ac
  dnl Check for SIMD
 diff -ur gavl-0.2.7.orig/include/Makefile.am gavl-0.2.7/include/Makefile.am
 --- gavl-0.2.7.orig/include/Makefile.am	2007-10-20 17:28:35.000000000 +0300
-+++ gavl-0.2.7/include/Makefile.am	2008-01-25 20:42:08.000000000 +0200
++++ gavl-0.2.7/include/Makefile.am	2008-01-26 08:13:56.000000000 +0200
 @@ -1,7 +1,5 @@
  SUBDIRS = gavl
  
@@ -21,12 +21,3 @@ diff -ur gavl-0.2.7.orig/include/Makefile.am gavl-0.2.7/include/Makefile.am
  private_headers = \
  accel.h \
  arith128.h \
-@@ -21,7 +19,7 @@
- video.h \
- volume.h
- 
--include_HEADERS = gavlconfig.h
-+pkginclude_HEADERS = gavlconfig.h
- 
- noinst_HEADERS =  $(private_headers)
- 
