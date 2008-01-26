@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6i-r1.ebuild,v 1.8 2007/07/19 13:27:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6i-r1.ebuild,v 1.9 2008/01/26 13:03:18 pva Exp $
 
 WANT_AUTOCONF="latest"
 inherit autotools
@@ -26,11 +26,12 @@ src_unpack() {
 	sed -i -e 's/^bin_PROGRAMS/sbin_PROGRAMS/' Makefile.am
 	sed -i -e 's/mysqlclient/mysqlclient_r/g' configure.ac
 	sed -i -e 's/wwwroot\/cacti\/log/var\/log/g' cactid.h
+
+	eaclocal
+	eautoconf
 }
 
 src_compile() {
-	eaclocal
-	eautoconf
 	econf || die "econf failed"
 	emake || die "emake failed"
 }

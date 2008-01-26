@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti-cactid
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/ChangeLog,v 1.36 2007/09/06 16:17:30 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/ChangeLog,v 1.37 2008/01/26 13:03:18 pva Exp $
+
+  26 Jan 2008; <pva@gentoo.org> cacti-cactid-0.8.6i-r1.ebuild:
+  Moved autotools stuff to src_unpack, bug #207459, thank Diego Pettenò
+  <flameeyes AT gentoo.org> for report.
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
   -cacti-cactid-0.8.6g.ebuild:
