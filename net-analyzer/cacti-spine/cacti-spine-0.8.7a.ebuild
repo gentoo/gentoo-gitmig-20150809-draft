@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/cacti-spine-0.8.7a.ebuild,v 1.1 2008/01/08 20:08:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/cacti-spine-0.8.7a.ebuild,v 1.2 2008/01/26 12:59:51 pva Exp $
 
 WANT_AUTOCONF="latest"
 inherit autotools
@@ -24,11 +24,11 @@ src_unpack() {
 	unpack ${A} ; cd "${S}"
 	sed -i -e 's/^bin_PROGRAMS/sbin_PROGRAMS/' Makefile.am
 	sed -i -e 's/wwwroot\/cacti\/log/var\/log/g' spine.h
+	eaclocal
+	eautoconf
 }
 
 src_compile() {
-	eaclocal
-	eautoconf
 	econf || die "econf failed"
 	emake || die "emake failed"
 }
