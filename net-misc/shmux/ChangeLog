@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/shmux
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.23 2007/08/27 10:00:30 swegener Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.24 2008/01/26 15:58:23 armin76 Exp $
+
+  26 Jan 2008; Raúl Porcel <armin76@gentoo.org> shmux-1.0.1.ebuild:
+  x86 stable
 
 *shmux-1.0.1 (27 Aug 2007)
 
