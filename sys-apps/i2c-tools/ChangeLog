@@ -1,6 +1,6 @@
-# ChangeLog for 
+# ChangeLog for sys-apps/i2c-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/ChangeLog,v 1.1 2008/01/23 15:59:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/ChangeLog,v 1.2 2008/01/26 11:53:52 swegener Exp $
 
 *i2c-tools-3.0.0 (23 Jan 2008)
 
