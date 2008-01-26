@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cinelerra-cvs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.37 2008/01/15 19:44:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.38 2008/01/26 00:00:10 aballier Exp $
+
+  25 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  -files/cinelerra-cvs-swscaler.patch, -files/recentffmpeg.patch,
+  -cinelerra-cvs-20070726.ebuild:
+  remove old
 
 *cinelerra-cvs-20080115 (15 Jan 2008)
 
