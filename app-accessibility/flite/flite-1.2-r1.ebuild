@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.2-r1.ebuild,v 1.11 2008/01/11 15:42:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.2-r1.ebuild,v 1.12 2008/01/26 20:34:29 williamh Exp $
 
 inherit eutils
 
@@ -24,9 +24,9 @@ src_unpack() {
 
 	# Move the update into ${S}
 	cd ${PN}
-	tar -cf - . | (cd ${S}; tar -xf -)
-	cd ${S}
-	epatch ${FILESDIR}/const.patch
+	tar -cf - . | (cd "${S}"; tar -xf -)
+	cd "${S}"
+	epatch "${FILESDIR}"/const.patch
 }
 
 src_compile() {
@@ -62,7 +62,7 @@ src_install() {
 	fi
 
 	insinto /usr/include/flite
-	cd ${S}/include
+	cd "${S}"/include
 	for file in *.h; do
 		doins ${file}
 		dosed 's:#include "\(.*\)":#include <flite/\1>:g' /usr/include/flite/${file}

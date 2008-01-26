@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/flite
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.22 2008/01/24 15:18:03 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.23 2008/01/26 20:34:29 williamh Exp $
+
+  26 Jan 2008; William Hubbs <williamh@gentoo.org> flite-1.3.ebuild:
+  Flite 1.3 is not paralell build safe, so I added -j1 to the call to emake in
+  src_compile for bug #201786.
+  Also fixed some quoting.
 
   24 Jan 2008; William Hubbs <williamh@gentoo.org> flite-1.3.ebuild:
   Added back ~hppa.

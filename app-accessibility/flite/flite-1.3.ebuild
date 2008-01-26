@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.3.ebuild,v 1.2 2008/01/24 15:18:03 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.3.ebuild,v 1.3 2008/01/26 20:34:29 williamh Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_compile() {
 	myconf="${myconf} --with-vox=cmu_us_kal16"
 
 	econf ${myconf} || die "Failed configuration"
-	emake || die "Failed compilation"
+	emake -j1 || die "Failed compilation"
 }
 
 src_install() {
