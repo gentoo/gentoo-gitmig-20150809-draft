@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wakeonlan
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.17 2007/04/17 20:10:14 welp Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.18 2008/01/26 17:16:38 armin76 Exp $
+
+  26 Jan 2008; Raúl Porcel <armin76@gentoo.org> -wakeonlan-0.40.ebuild:
+  old
 
   17 Apr 2007; <welp@gentoo.org> wakeonlan-0.41-r1.ebuild:
   Stable on amd64 wrt bug 171817
