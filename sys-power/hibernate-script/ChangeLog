@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.75 2008/01/07 09:04:40 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.76 2008/01/26 22:11:48 alonbl Exp $
+
+*hibernate-script-1.97-r5 (26 Jan 2008)
+
+  26 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org>
+  +hibernate-script-1.97-r5.ebuild:
+  Support openrc layout
 
   07 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org>
   -hibernate-script-1.95-r2.ebuild:
