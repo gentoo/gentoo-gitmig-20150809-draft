@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r1.ebuild,v 1.3 2006/09/24 22:25:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r1.ebuild,v 1.4 2008/01/26 17:27:08 bangert Exp $
 
 inherit flag-o-matic eutils
 
@@ -24,8 +24,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A} && cd ${S}
-	epatch ${FILESDIR}/${PN}-1.9-gentoo.diff
+	unpack ${A} && cd "${S}"
+	epatch "${FILESDIR}/${PN}"-1.9-gentoo.diff
 }
 
 src_compile() {
