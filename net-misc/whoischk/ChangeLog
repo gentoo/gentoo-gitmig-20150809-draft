@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whoischk
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/ChangeLog,v 1.6 2006/11/10 18:42:47 kang Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/ChangeLog,v 1.7 2008/01/26 17:18:54 armin76 Exp $
+
+  26 Jan 2008; Raúl Porcel <armin76@gentoo.org> whoischk-0.2.4-r1.ebuild:
+  ia64/x86 stable
 
   10 Nov 2006; Guillaume Destuynder <kang@gentoo.org>
   whoischk-0.2.4-r1.ebuild:
