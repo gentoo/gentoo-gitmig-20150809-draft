@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/charles/charles-20050913.ebuild,v 1.3 2007/05/28 19:03:44 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/charles/charles-20050913.ebuild,v 1.4 2008/01/26 23:59:51 george Exp $
 
 inherit gnat
 
@@ -8,13 +8,13 @@ IUSE=""
 
 DESCRIPTION="Posix bindings for Ada"
 HOMEPAGE="http://libre2.adacore.com/"
-SRC_URI="http://dev.gentoo.org/~george/src/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-DEPEND="virtual/gnat"
+DEPEND="virtual/ada"
 
 S="${WORKDIR}/${PN}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/charles
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/charles/ChangeLog,v 1.9 2007/04/22 09:17:06 george Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/charles/ChangeLog,v 1.10 2008/01/26 23:59:51 george Exp $
+
+  26 Jan 2008; George Shapovalov <george@gentoo.org>
+  charles-20050913.ebuild:
+  updated DEPEND to use new virtual/ada
 
   22 Apr 2007; George Shapovalov <george@gentoo.org>
   -charles-20030813.ebuild:
