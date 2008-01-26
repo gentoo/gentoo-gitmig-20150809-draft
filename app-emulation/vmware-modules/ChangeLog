@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/vmware-modules
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.26 2007/11/25 12:43:20 ikelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.27 2008/01/26 01:22:16 ikelos Exp $
+
+*vmware-modules-1.0.0.17-r1 (26 Jan 2008)
+
+  26 Jan 2008; Mike Auty <ikelos@gentoo.org>
+  +files/1.0.0.17-update115-nasty-hack.patch,
+  +files/patches/vmmon/030_all_fix-linux-headers.patch,
+  +files/patches/vmnet/021_all_wireless_fix.patch,
+  +vmware-modules-1.0.0.17-r1.ebuild:
+  Bump vmware-modules to any-any115, and apply fixes for wireless and 2.6.24.
 
   25 Nov 2007; Mike Auty <ikelos@gentoo.org>
   -files/1.0.0.16-kernel-2.6.22.patch, -vmware-modules-1.0.0.16.ebuild,
