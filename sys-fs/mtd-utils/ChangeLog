@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.8 2008/01/02 21:36:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.9 2008/01/26 08:45:07 vapier Exp $
+
+  26 Jan 2008; Mike Frysinger <vapier@gentoo.org> mtd-utils-20060907.ebuild:
+  Move to mips stable #203855.
 
 *mtd-utils-20080102 (02 Jan 2008)
 
