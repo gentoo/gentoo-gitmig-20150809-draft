@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyid3lib
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/ChangeLog,v 1.17 2008/01/25 19:46:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/ChangeLog,v 1.18 2008/01/26 06:53:38 drac Exp $
+
+  26 Jan 2008; Samuli Suominen <drac@gentoo.org> pyid3lib-0.5.1-r1.ebuild:
+  amd64 stable wrt #207255
 
   25 Jan 2008; Markus Rothe <corsair@gentoo.org> pyid3lib-0.5.1-r1.ebuild:
   Stable on ppc64; bug #207255
