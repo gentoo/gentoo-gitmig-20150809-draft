@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.3.ebuild,v 1.1 2007/04/11 17:34:00 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.3.ebuild,v 1.2 2008/01/26 14:28:50 bangert Exp $
 
 inherit flag-o-matic
 
@@ -31,18 +31,18 @@ src_compile() {
 
 src_install() {
 	dodir /usr/sbin
-	cp ${S}/pound ${D}/usr/sbin/
-	cp ${S}/poundctl ${D}/usr/sbin/
+	cp "${S}"/pound "${D}"/usr/sbin/
+	cp "${S}"/poundctl "${D}"/usr/sbin/
 
 	doman pound.8
 	doman poundctl.8
 	dodoc README FAQ
 
 	dodir /etc/init.d
-	newinitd ${FILESDIR}/pound.init-1.9 pound
+	newinitd "${FILESDIR}"/pound.init-1.9 pound
 
 	insinto /etc
-	newins ${FILESDIR}/pound-2.2.cfg pound.cfg
+	newins "${FILESDIR}"/pound-2.2.cfg pound.cfg
 }
 
 pkg_postinst() {

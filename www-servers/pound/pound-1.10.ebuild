@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.10.ebuild,v 1.4 2007/01/09 08:01:31 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.10.ebuild,v 1.5 2008/01/26 14:28:50 bangert Exp $
 
 inherit flag-o-matic
 
@@ -36,10 +36,10 @@ src_install() {
 
 	dodoc README FAQ
 
-	newinitd ${FILESDIR}/${PN}.init-1.9 ${PN}
+	newinitd "${FILESDIR}"/${PN}.init-1.9 ${PN}
 
 	insinto /etc
-	doins ${FILESDIR}/pound.cfg
+	doins "${FILESDIR}"/pound.cfg
 }
 
 pkg_postinst() {
