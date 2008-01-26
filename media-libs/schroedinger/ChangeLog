@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/schroedinger
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.7 2007/09/23 13:50:29 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.8 2008/01/26 08:35:04 drac Exp $
+
+*schroedinger-0.9.0 (26 Jan 2008)
+
+  26 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  -files/schroedinger-0.6.1-asneeded.patch,
+  +files/schroedinger-0.9.0-asneeded.patch, -schroedinger-0.6.1.ebuild,
+  +schroedinger-0.9.0.ebuild:
+  Version bump. Patch Makefile.in instead of Makefile.am to avoid the need for
+  .m4 macro from gtk-doc wrt #205755. Stop depending on gtk-doc, the
+  documentation has been prebuilt and is installed anyway.
 
 *schroedinger-0.6.1 (23 Sep 2007)
 
