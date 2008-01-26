@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fe3d
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/ChangeLog,v 1.7 2007/05/01 17:47:55 genone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/ChangeLog,v 1.8 2008/01/26 11:14:30 pva Exp $
+
+  26 Jan 2008; <pva@gentoo.org> fe3d-0.8.3.ebuild:
+  Fixed compilation problem, bug 205543, thank Compile Person <bugs AT
+  dev.gentooexperimental.org> for report.
 
   01 May 2007; Marius Mauch <genone@gentoo.org> fe3d-0.8.3.ebuild:
   Replacing einfo with elog

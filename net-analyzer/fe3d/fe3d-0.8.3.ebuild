@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.8.3.ebuild,v 1.7 2007/05/01 17:47:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.8.3.ebuild,v 1.8 2008/01/26 11:14:30 pva Exp $
 
-inherit versionator
+inherit versionator autotools
 
 MY_P="${PN}-$(replace_version_separator 2 '-')"
 
@@ -23,11 +23,17 @@ DEPEND="${RDEPEND}
 	app-arch/unzip
 	virtual/opengl"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	chmod +x "${S}"/configure || die "chmod failed"
+	cd "${S}"
+
+	# configure is not executable, remove it as autoreconf recreate it
+	rm configure
+	# autoreconf is required as in other case build system will call wrong
+	# automake utilities, bug 205543
+	eautoreconf
 }
 
 src_install() {
