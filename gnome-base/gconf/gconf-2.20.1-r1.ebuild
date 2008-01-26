@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.20.1-r1.ebuild,v 1.2 2008/01/02 07:06:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.20.1-r1.ebuild,v 1.3 2008/01/26 13:27:25 eva Exp $
 
 inherit gnome2 autotools
 
@@ -41,9 +41,9 @@ src_unpack() {
 
 	# fix bug #193442
 	epatch "${FILESDIR}/${P}-automagic-ldap.patch"
+	use doc || epatch "${FILESDIR}/${P}-drop-gtk-doc.patch"
 
-	cp aclocal.m4 old.m4
-	AT_M4DIR="." eautoreconf
+	eautoreconf
 }
 
 src_install() {
