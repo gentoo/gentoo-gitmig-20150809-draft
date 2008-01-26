@@ -1,20 +1,22 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/secpanel-0.41.ebuild,v 1.8 2005/04/19 12:16:26 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/secpanel-0.53.ebuild,v 1.1 2008/01/26 15:58:17 armin76 Exp $
 
 DESCRIPTION="Graphical frontend for managing and running SSH and SCP connections"
-HOMEPAGE="http://www.pingx.net/secpanel/"
+HOMEPAGE="http://themediahost.de/secpanel/"
 
-SRC_URI="http://www.pingx.net/secpanel/${P}.tar.gz"
+SRC_URI="http://themediahost.de/secpanel/data/${P/53/5.3}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 alpha"
+KEYWORDS="~x86 ~alpha ~sparc ~amd64"
 IUSE="gif"
 
 DEPEND="!gif? ( media-gfx/imagemagick )"
 
 RDEPEND="virtual/ssh dev-lang/tk"
+
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
@@ -22,14 +24,14 @@ src_unpack() {
 	# optionally remove gifs...
 	if ! use gif; then
 		ebegin "Setting secpanel to use PPM images"
-		sed -i 's/\.gif/\.ppm/g' ${S}/src/bin/secpanel
+		sed -i 's/\.gif/\.ppm/g' ${S}/usr/local/bin/secpanel
 		eend $?
 	fi
 }
 
 src_compile() {
 	if ! use gif; then
-		cd ${S}/src/lib/secpanel/images
+		cd ${S}/usr/local/lib/secpanel/images
 		einfo "Converting all GIF images to PPM format..."
 		for i in *.gif
 		do
@@ -45,21 +47,22 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${S}/src/bin/secpanel
+	dobin ${S}/usr/local/bin/secpanel
 	dodir /usr/lib/secpanel /usr/lib/secpanel/images
 
 	insinto /usr/lib/secpanel
-	doins ${S}/src/lib/secpanel/*.{tcl,config,profile,dist,wait}
+	doins ${S}/usr/local/lib/secpanel/*.{tcl,config,profile,dist,wait}
 
 	insinto /usr/lib/secpanel/images
 
 	if ! use gif; then
-		doins ${S}/src/lib/secpanel/images/*.ppm
+		doins ${S}/usr/local/lib/secpanel/images/*.ppm
 	else
-		doins ${S}/src/lib/secpanel/images/*.gif
+		doins ${S}/usr/local/lib/secpanel/images/*.gif
 	fi
 
 	fperms 755 /usr/lib/secpanel/{listserver.tcl,secpanel.dist,secpanel.wait}
 
-	dodoc CHANGES COPYING README
+	cd ${S}/usr/share/doc/${P/53/5.3/}
+	dodoc CHANGES README
 }
