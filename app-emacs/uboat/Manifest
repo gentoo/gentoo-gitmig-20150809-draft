@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 50uboat-gentoo.el 121 RMD160 d62635c5d1f3da59120ea9c1e07216043ce598c1 SHA1 a65dc60cab290523781d742c5a8d41b2b53932a0 SHA256 172a2357c7197ae1d8f1cd13157f8d63bba45ddc88b96adb9c9ee6aec26c8e04
 MD5 dc33bc5c585b6fed46c587b6012845f5 files/50uboat-gentoo.el 121
 RMD160 d62635c5d1f3da59120ea9c1e07216043ce598c1 files/50uboat-gentoo.el 121
@@ -18,3 +21,10 @@ SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab metadata
 MD5 a257bc21da012244e6decfebd126fcde files/digest-uboat-1.2 226
 RMD160 97c3875e3bdd515d572dbae2e0d26179cc9354fd files/digest-uboat-1.2 226
 SHA256 a28be1ded06f717f0e6510d6106f8b2977c5e8f68e1b2a885d4e8897f2abe656 files/digest-uboat-1.2 226
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.8 (GNU/Linux)
+
+iEYEARECAAYFAkebKNoACgkQOeoy/oIi7uwRdQCaAwsV/F2axUCiKVNx4hayKftI
+hZIAoImM6VH/whz3F/wehr3zH2gI6wly
+=medD
+-----END PGP SIGNATURE-----
