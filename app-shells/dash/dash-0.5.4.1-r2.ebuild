@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.4.1-r2.ebuild,v 1.1 2007/10/08 20:53:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.4.1-r2.ebuild,v 1.2 2008/01/26 20:14:31 vapier Exp $
 
 inherit autotools eutils flag-o-matic toolchain-funcs
 
@@ -9,11 +9,10 @@ DEB_PATCH=${PV##*.}
 DEB_PF="${PN}_${DEB_PV}-${DEB_PATCH}"
 MY_P="${PN}-${DEB_PV}"
 
-DESCRIPTION="DASH is a direct descendant of the NetBSD version of ash (the
-Almquist SHell) and is POSIX compliant"
+DESCRIPTION="DASH is a direct descendant of the NetBSD version of ash (the Almquist SHell) and is POSIX compliant"
 HOMEPAGE="http://gondor.apana.org.au/~herbert/dash/"
 SRC_URI="http://gondor.apana.org.au/~herbert/dash/files/${PN}-${DEB_PV}.tar.gz
-		mirror://debian/pool/main/d/dash/${DEB_PF}.diff.gz"
+	mirror://debian/pool/main/d/dash/${DEB_PF}.diff.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -63,8 +62,8 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /bin
-	newexe src/dash dash
-	newman src/dash.1 dash.1
-	dodoc COPYING ChangeLog
+	doman src/dash.1
+	dodoc ChangeLog
+	into /
+	dobin src/dash || die
 }

@@ -1,6 +1,8 @@
 # ChangeLog for app-shells/dash
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.48 2007/12/25 16:17:37 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  26 Jan 2008; Mike Frysinger <vapier@gentoo.org> dash-0.5.4.1-r2.ebuild:
+  Touchup install and make sure we error out if dash isnt found.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing uberlord from metadata.xml as per #199318.
