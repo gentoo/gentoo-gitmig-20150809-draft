@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2_p1772.ebuild,v 1.1 2008/01/26 12:50:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2_p1772.ebuild,v 1.2 2008/01/26 12:54:35 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -24,13 +24,15 @@ O_URI="http://snapshot.opera.com/unix/snapshot-${O_SUFF}/"
 
 SRC_URI="
 	amd64? ( ${O_URI}x86_64-linux/${PN}-${O_VER}.2-shared-qt.x86_64${O_LNG}-${O_SUFF}.tar.bz2 )
-	x86-fbsd? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.3-shared-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 )
 	qt-static? (
+		ppc? ( ${O_URI}ppc-linux/${PN}-${O_VER}.1-static-qt.ppc${O_LNG}-${O_SUFF}.tar.bz2 )
 		x86? ( ${O_URI}intel-linux/${PN}-${O_VER}.9-static-qt.i386${O_LNG}-${O_SUFF}.tar.bz2 )
+		x86-fbsd? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.5-static-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 )
 		)
 	!qt-static? (
 		ppc? ( ${O_URI}ppc-linux/${PN}-${O_VER}.6-shared-qt.ppc${O_LNG}-${O_SUFF}.tar.bz2 )
 		x86? ( ${O_URI}intel-linux/${PN}-${O_VER}.6-shared-qt.i386${O_LNG}-${O_SUFF}.tar.bz2 )
+		x86-fbsd? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.3-shared-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 )
 		)
 	"
 
@@ -51,8 +53,6 @@ RDEPEND="media-libs/libexif
 	x11-libs/libICE
 	!qt-static? ( =x11-libs/qt-3* )
 	amd64? ( =x11-libs/qt-3* )
-	ppc? ( =x11-libs/qt-3* )
-	x86-fbsd? ( =x11-libs/qt-3* )
 	spell? ( app-text/aspell )
 	x86-fbsd? ( =virtual/libstdc++-3* )"
 
