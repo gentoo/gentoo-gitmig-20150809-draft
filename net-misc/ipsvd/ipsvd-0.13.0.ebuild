@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ipsvd-0.13.0.ebuild,v 1.1 2007/10/27 22:25:25 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ipsvd-0.13.0.ebuild,v 1.2 2008/01/26 17:13:36 bangert Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -19,7 +19,7 @@ PROVIDE="virtual/inetd"
 S="${WORKDIR}/net/${P}"
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}"/src
 	if use static ; then
 		append-ldflags -static
 	fi
@@ -30,12 +30,10 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}
 	dobin src/{tcpsvd,udpsvd,ipsvd-cdb} || die "dobin"
 	dodoc package/{CHANGES,README}
 
 	dohtml doc/*.html
 	doman man/ipsvd-instruct.5 man/ipsvd.7 man/udpsvd.8 \
 		man/tcpsvd.8 man/ipsvd-cdb.8
-
 }
