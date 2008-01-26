@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/potamus
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/ChangeLog,v 1.3 2007/02/09 07:59:03 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/ChangeLog,v 1.4 2008/01/26 12:11:01 drac Exp $
+
+*potamus-0.9 (26 Jan 2008)
+
+  26 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  -files/potamus-Makefile.patch, +potamus-0.9.ebuild,
+  -potamus-20040414.ebuild:
+  Version bump and remove old snapshot, closing also #205613.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
