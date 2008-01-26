@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.7.ebuild,v 1.8 2007/12/30 16:30:48 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.7.ebuild,v 1.9 2008/01/26 19:57:12 dcoutts Exp $
 
 inherit base autotools eutils
 
@@ -52,11 +52,12 @@ src_unpack() {
 	# On ia64 we need to tone down the level of inlining so we don't break some
 	# of the low level ghc/gcc interaction gubbins.
 	use ia64 && sed -i 's/-funfolding-use-threshold20//' "${S}/GNUmakefile"
+
+	# Since we've patched the build system:
+	eautoreconf
 }
 
 src_compile() {
-	# Since we've patched the build system:
-	eautoreconf
 
 	econf $(use_with doc docs) \
 		|| die "configure failed"
