@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/cfv-1.18.1.ebuild,v 1.8 2007/06/17 13:19:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/cfv-1.18.1.ebuild,v 1.9 2008/01/26 18:39:26 grobian Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/cfv/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 ~hppa ppc ~ppc-macos ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~hppa ppc ~sparc x86 ~x86-fbsd"
 
 DEPEND=""
 RDEPEND="dev-lang/python

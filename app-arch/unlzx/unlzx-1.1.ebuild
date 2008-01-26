@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/unlzx-1.1.ebuild,v 1.24 2005/11/29 03:01:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/unlzx-1.1.ebuild,v 1.25 2008/01/26 18:43:52 grobian Exp $
 
 DESCRIPTION="Unarchiver for Amiga LZX archives"
 SRC_URI="ftp://us.aminet.net/pub/aminet/misc/unix/${PN}.c.gz ftp://us.aminet.net/pub/aminet/misc/unix/${PN}.c.gz.readme"
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://us.aminet.net/pub/aminet/misc/unix/${PN}.c.gz.readme"
 SLOT="0"
 LICENSE="freedist"
 IUSE=""
-KEYWORDS="alpha amd64 ~hppa ppc ~ppc-macos sparc x86"
+KEYWORDS="alpha amd64 ~hppa ppc sparc x86"
 
 src_unpack() {
 	mkdir ${S}
