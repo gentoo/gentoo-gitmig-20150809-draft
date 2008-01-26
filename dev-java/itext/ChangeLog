@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/itext
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.64 2007/12/09 14:00:26 nelchael Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.65 2008/01/26 18:32:37 wltjr Exp $
+
+*itext-2.0.8 (26 Jan 2008)
+
+  26 Jan 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/2.0.8-site_xml.patch, +itext-2.0.8.ebuild:
+  Bumped to latest release
 
   09 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org> itext-2.0.6.ebuild:
   Stable on ppc, bug #200748.
