@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/cook-2.24.ebuild,v 1.10 2007/01/23 18:28:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/cook-2.24.ebuild,v 1.11 2008/01/26 19:15:29 grobian Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.canb.auug.org.au/~millerp/cook/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc ~ppc-macos sparc x86"
+KEYWORDS="ppc sparc x86"
 IUSE=""
 
 DEPEND="sys-devel/bison"
