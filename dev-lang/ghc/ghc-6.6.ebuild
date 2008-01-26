@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.14 2007/12/13 15:58:31 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.15 2008/01/26 19:53:25 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -274,7 +274,7 @@ src_install() {
 			|| die "make install failed"
 
 		cd "${S}"
-		dodoc README ANNOUNCE LICENSE VERSION
+		dodoc README ANNOUNCE VERSION
 
 		dosbin "${FILESDIR}/ghc-updater"
 	fi
