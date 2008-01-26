@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-mod_jabber/portage-mod_jabber-0.0.2.ebuild,v 1.3 2008/01/26 15:49:26 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-mod_jabber/portage-mod_jabber-0.0.3.ebuild,v 1.1 2008/01/26 15:49:26 hanno Exp $
 
 DESCRIPTION="A notification module for the portage elog-system to notify via the XMPP (Jabber) protocoll"
 HOMEPAGE="http://usrportage.de/"
