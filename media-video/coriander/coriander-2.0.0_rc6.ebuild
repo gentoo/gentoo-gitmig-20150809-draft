@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation and Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0_rc6.ebuild,v 1.1 2008/01/24 11:52:47 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0_rc6.ebuild,v 1.2 2008/01/26 06:19:34 mr_bones_ Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE=""
+IUSE="ffmpeg"
 
 S=${WORKDIR}/${MY_P}
 
