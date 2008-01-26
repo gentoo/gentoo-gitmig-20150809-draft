@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r5.ebuild,v 1.4 2007/06/29 12:40:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r5.ebuild,v 1.5 2008/01/26 13:23:58 pva Exp $
 
 WANT_AUTOMAKE="1.6"
 WANT_AUTOCONF="latest"
@@ -43,7 +43,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-fix-configure.diff
 	epatch "${FILESDIR}"/${P}-fix-a-zillion-warnings-updated.diff
 	epatch "${FILESDIR}"/${P}-another-amd64-casting-fixes.patch
-	use debug || epatch ${FILESDIR}/${PN}-0.67-nodebug.patch
+	use debug || epatch "${FILESDIR}"/${PN}-0.67-nodebug.patch
 	epatch "${FILESDIR}"/${PN}-0.67-memleak.patch
 
 	sed -i "s|^[^#]\(^.*CFLAGS=\).*$|\1-Wall|g" \
@@ -52,12 +52,12 @@ src_unpack() {
 	# bug 122842, we have /usr/bin/python and not /usr/local/bin/python
 	sed -i -e "s:/usr/local/bin/python:/usr/bin/python:g" \
 		"${S}"/bin/flow-{rptfmt,rpt2rrd,log2rrd}
+
+	AM_OPTS="-f -i"
+	eautoreconf || die "autoreconf failed"
 }
 
 src_compile() {
-	AM_OPTS="-f -i"
-	eautoreconf || die "autoreconf failed"
-
 	use mysql && append-flags "-L/usr/lib/mysql -I/usr/include/mysql"
 	use postgres && append-flags "-L/usr/lib/postgres -I/usr/include/postgres"
 
