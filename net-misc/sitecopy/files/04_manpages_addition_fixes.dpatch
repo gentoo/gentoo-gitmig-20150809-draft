@@ -1,0 +1,78 @@
+#!/bin/sh /usr/share/dpatch/dpatch-run
+## 04_manpages_addition_fix.dpatch by Kartik Mistry <kartik.mistry@gmail.com>
+## French translations, Thanks to Jean-Luc Coulon <jean-luc.coulon@wanadoo.fr>
+## and Ludovic Rousseau <rousseau@debian.org>
+## DP: Add missing/wrong entries/translation in manpages (#405483, #439594)
+
+@DPATCH@
+diff -urNad sitecopy-0.16.3~/doc/sitecopy.1 sitecopy-0.16.3/doc/sitecopy.1
+--- sitecopy-0.16.3~/doc/sitecopy.1	2007-08-25 21:54:09.000000000 +0200
++++ sitecopy-0.16.3/doc/sitecopy.1	2007-08-25 21:56:31.000000000 +0200
+@@ -172,12 +172,20 @@
+ .IP "-v, --view"
+ .B View Mode
+ \- displays all the site definitions from the rcfile.
++.IP "-e, --verify"
++ Verify stored state of site matches real remote state
+ .IP "-h, --help"
+ Display help information.
+ .IP "-V, --version"
+ Display version information.
+ .SH OPTIONS
+ .IP "-y, --prompting"
++.IP "-g, --logfile=FILE"
++ Append debugging messages to FILE (else use stderr)
++.IP "-x, --create-remote"
++ Create root for remote site
++.IP "-n, --dry-run"
++ Display but do not carry out the operation
+ Applicable in
+ .B Update Mode
+ only, will prompt the user for confirmation for each update
+@@ -637,7 +645,7 @@
+ to exclude the 'foo/bar' and 'where/else' subdirectories of the site.
+ 
+ Exclude patterns are consulted when scanning the local directory, and
+-when scanning the remote site during a --fetch.  Any file which
++when scanning the remote site during a \-\-fetch.  Any file which
+ matches any exclude pattern is not added to the files list.  This
+ means that a file which has already been uploaded by sitecopy, and
+ subsequently matches an exclude pattern will be deleted from the
+diff -urNad sitecopy-0.16.3~/doc/sitecopy.fr.1 sitecopy-0.16.3/doc/sitecopy.fr.1
+--- sitecopy-0.16.3~/doc/sitecopy.fr.1	2007-08-25 21:56:31.000000000 +0200
++++ sitecopy-0.16.3/doc/sitecopy.fr.1	2007-08-25 21:56:51.000000000 +0200
+@@ -185,6 +185,8 @@
+ .B Mode Rendre identique
+ \- amène \fBsitecopy\fP à penser que les copies locale et distante du
+ site sont identiques.
++.IP "-e, --verify"
++Vérifier que l'état enregistré du site est conforme à l'état réel du site distant
+ .IP "-v, --view"
+ .B Mode Voir configuration
+ \- Affiche toutes les définitions de sites du fichier de configuration.
+@@ -198,6 +200,12 @@
+ .B Mode Mise à jour
+ , demande à l'utilisateur de confirmer chaque mise à jour (i.e.,
+ création d'un répertoire, remontée d'un fichier sur le site distant, etc.).
++.IP "-g, --logfile=FICHIER"
++Ajouter les messages de débogage au FICHIER (stderr est utilisée si cette option n'est pas indiquée)
++.IP "-x, --create-remote"
++Créer la racine du site distant
++.IP "-n, --dry-run"
++Afficher ce qui serait réalisé sans effectuer réellement l'action
+ .IP "-r FICHIER, --rcfile=FICHIER"
+ Spécifie un fichier de configuration alternatif pour l'exécution en cours.
+ .IP "-p RÉPERTOIRE, --storepath=RÉPERTOIRE"
+@@ -213,6 +221,12 @@
+ .B Mode Mise à jour
+ , affiche la progression (sous forme de pourcentage effectué) du
+ transfert de données.
++.IP "-g, --logfile=FICHIER"
++Ajouter les messages de débogage au FICHIER (stderr est utilisée si cette option n'est pas indiquée)
++.IP "-x, --create-remote"
++Créer la racine du site distant
++.IP "-n, --dry-run"
++Afficher ce qui serait réalisé sans effectuer réellement l'action
+ .IP "-k, --keep-going"
+ Passe outre les erreurs en
+ .B Mode Mise à jour
