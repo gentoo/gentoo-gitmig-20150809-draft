@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.76 2008/01/10 18:36:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.77 2008/01/26 15:52:12 pva Exp $
+
+*wireshark-0.99.7-r2 (27 Jan 2008)
+
+  27 Jan 2008; <pva@gentoo.org>
+  +files/wireshark-0.99.7-glib-1.2-compile-fix.patch,
+  +wireshark-0.99.7-r2.ebuild:
+  Enable lua support, bug 206151, thank you Jaroslaw Niec <zuljin AT go2.pl>.
 
 *wireshark-0.99.7-r1 (10 Jan 2008)
 
