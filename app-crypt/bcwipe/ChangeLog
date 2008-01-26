@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/bcwipe
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.24 2008/01/02 15:37:28 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.25 2008/01/26 12:30:25 alonbl Exp $
+
+*bcwipe-1.7_p2 (26 Jan 2008)
+
+  26 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> +bcwipe-1.7_p2.ebuild:
+  Version bump, bug#207541, thanks to wschlich
 
   02 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> -bcwipe-1.5_p3.ebuild,
   -bcwipe-1.6_p1.ebuild:
