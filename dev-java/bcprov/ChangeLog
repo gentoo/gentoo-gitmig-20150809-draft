@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcprov
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.26 2007/11/29 16:16:35 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.27 2008/01/27 15:35:24 ranger Exp $
+
+  27 Jan 2008; Brent Baude <ranger@gentoo.org> bcprov-1.38.ebuild:
+  Marking bcprov-1.38 ppc64 for bug 207590
 
 *bcprov-1.38 (29 Nov 2007)
 
