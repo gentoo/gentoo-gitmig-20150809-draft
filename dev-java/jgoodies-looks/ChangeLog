@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgoodies-looks
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.35 2007/12/09 15:02:27 nelchael Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.36 2008/01/27 19:18:17 betelgeuse Exp $
+
+  27 Jan 2008; Petteri Räty <betelgeuse@gentoo.org>
+  -jgoodies-looks-2.0.4-r1.ebuild, -jgoodies-looks-2.0.4-r2.ebuild:
+  Delete old ebuilds.
 
   09 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/jgoodies-looks-2.1.4-configureEditor.patch,
