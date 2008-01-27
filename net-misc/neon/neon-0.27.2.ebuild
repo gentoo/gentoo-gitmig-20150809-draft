@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.27.2.ebuild,v 1.1 2008/01/27 19:27:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.27.2.ebuild,v 1.2 2008/01/27 20:43:23 hollow Exp $
 
 inherit eutils libtool versionator autotools
 
@@ -24,7 +24,12 @@ DEPEND="expat? ( dev-libs/expat )
 
 src_unpack() {
 	unpack ${A}
-	elibtoolize
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-linguas.patch
+	sed -i -e "s/ALL_LINGUAS=.*/ALL_LINGUAS=\"${LINGUAS}\"/g" \
+		./configure.in
+	AT_M4DIR=./macros eautoreconf
 }
 
 src_compile() {
