@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/glade/glade-2006.0.ebuild,v 1.3 2007/09/25 13:11:41 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/glade/glade-2006.0.ebuild,v 1.4 2008/01/27 00:11:43 george Exp $
 
 inherit gnat
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-DEPEND="virtual/gnat"
+DEPEND="virtual/ada"
 
 # temporary install pool
 DN="${WORKDIR}/LocalD"
@@ -72,7 +72,7 @@ src_install ()
 
 	# move prepared stuff over
 	cp -rp "${DN}"/* "${D}"
-	dodoc COPYING README NEWS
+	dodoc README NEWS
 	insinto /usr/share/doc/${PF}
 	doins -r  Examples/
 }

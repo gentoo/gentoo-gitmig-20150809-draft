@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/polyorb/polyorb-2.1.0.ebuild,v 1.5 2007/07/15 04:21:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/polyorb/polyorb-2.1.0.ebuild,v 1.6 2008/01/27 00:15:45 george Exp $
 
 inherit gnat
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64"
 
 RDEPEND="ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
-	virtual/gnat"
+	virtual/ada"
 
 #lib_compile()
 lib_compile()
@@ -50,7 +50,7 @@ lib_install()
 
 src_install ()
 {
-	cd ${S}
+	cd "${S}"
 	# install sources
 	dodir ${AdalibSpecsDir}/${PN}
 	insinto ${AdalibSpecsDir}/${PN}
@@ -64,7 +64,7 @@ src_install ()
 
 	gnat_src_install
 
-	dodoc CHANGE_10049 COPYING FEATURES MANIFEST NEWS README
+	dodoc CHANGE_10049 FEATURES MANIFEST NEWS README
 	doinfo docs/*.info
 	if use doc; then
 		dohtml docs/polyorb_ug.html/*.html
