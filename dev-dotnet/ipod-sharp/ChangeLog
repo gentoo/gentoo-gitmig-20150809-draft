@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/ipod-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.16 2008/01/27 15:56:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.17 2008/01/27 23:11:34 opfer Exp $
+
+  27 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  ipod-sharp-0.8.0.ebuild:
+  keyworded ~x86, bug 205210
 
 *ipod-sharp-0.8.0 (27 Jan 2008)
 
