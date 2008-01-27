@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/diffball-0.6.5.ebuild,v 1.4 2006/07/24 01:42:31 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/diffball-0.6.5.ebuild,v 1.5 2008/01/27 10:25:37 grobian Exp $
 
 IUSE="debug"
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/diffball/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc alpha ~hppa ~mips ~amd64 ia64 ppc-macos"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ppc ~sparc x86"
 
 DEPEND=">=dev-libs/openssl-0.9.6j
 	>=sys-libs/zlib-1.1.4
