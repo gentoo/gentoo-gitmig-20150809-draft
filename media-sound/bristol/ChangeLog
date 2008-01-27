@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/bristol
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/ChangeLog,v 1.1 2008/01/27 09:50:22 aballier Exp $
+
+*bristol-0.20.1 (27 Jan 2008)
+
+  27 Jan 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +bristol-0.20.1.ebuild:
+  Initial import, thanks to Jouni Rinne <jouni.rinne@pp1.inet.fi>, bug #137019
+
