@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/claws-mail-pdf-viewer-0.6.ebuild,v 1.4 2007/11/10 19:56:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/claws-mail-pdf-viewer-0.6.ebuild,v 1.5 2008/01/27 14:35:36 ticho Exp $
 
 MY_P="${P#claws-mail-}"
 MY_P="${MY_P/-/_}"
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 DEPEND=">=mail-client/claws-mail-3.0.0
-		app-text/poppler-bindings"
+		app-text/poppler-bindings
+		virtual/ghostscript"
 
 S="${WORKDIR}/${MY_P}"
 
