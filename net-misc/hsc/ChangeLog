@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/hsc
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.11 2007/02/09 04:47:31 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.12 2008/01/27 16:46:21 aballier Exp $
+
+*hsc-1.0b (27 Jan 2008)
+
+  27 Jan 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/hsc-1.0b-cflags.patch, +files/hsc-1.0b-nostrip.patch,
+  +hsc-1.0b.ebuild:
+  version bump, bug #140242
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
