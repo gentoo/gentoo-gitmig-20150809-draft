@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ivritex
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.16 2007/12/18 20:34:34 jer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.17 2008/01/27 13:47:40 ranger Exp $
+
+  27 Jan 2008; Brent Baude <ranger@gentoo.org> ivritex-1.1.2.ebuild:
+  Adding ~ppc64 for dep on lyx
 
   18 Dec 2007; Jeroen Roovers <jer@gentoo.org> ivritex-1.1.2.ebuild:
   Marked ~hppa (bug #195815).
