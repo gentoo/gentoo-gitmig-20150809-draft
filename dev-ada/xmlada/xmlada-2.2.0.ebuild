@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0.ebuild,v 1.6 2007/07/15 04:21:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0.ebuild,v 1.7 2008/01/27 00:23:29 george Exp $
 
 inherit gnat versionator
 
@@ -28,22 +28,22 @@ lib_compile()
 
 # NOTE: we are using $1 - the passed gnat profile name
 lib_install() {
-	make PREFIX=${DL} install || die "install failed"
+	make PREFIX="${DL}" install || die "install failed"
 
 	# fix xmlada-config hardsets locations
 	sed -i -e "s:\${prefix}/include/xmlada:${AdalibSpecsDir}/${PN}:" \
 		-e "s:\${prefix}/lib/xmlada:${AdalibLibTop}/$1/${PN}/lib:" \
 		-e "s:\${prefix}/lib:${AdalibLibTop}/$1/${PN}/lib:g" \
-		${DL}/bin/xmlada-config
+		"${DL}"/bin/xmlada-config
 
 	# now move stuff to proper location and delete extras
-#	mv ${DL}/bin/xmlada-config ${DL}/lib/* ${DL}/include/${PN}/*.ali ${DL}
-	rm -rf ${DL}/include ${DL}/share
+#	mv "${DL}"/bin/xmlada-config "${DL}"/lib/* "${DL}"/include/${PN}/*.ali "${DL}"
+	rm -rf "${DL}"/include "${DL}"/share
 }
 
 src_install ()
 {
-	cd ${S}
+	cd "${S}"
 	dodir ${AdalibSpecsDir}/${PN}
 	insinto ${AdalibSpecsDir}/${PN}
 	doins dom/*.ad? input_sources/*.ad? sax/*.ad? unicode/*.ad? schema/*.ad?
@@ -56,11 +56,11 @@ src_install ()
 
 	gnat_src_install
 
-	dodoc AUTHORS COPYING README TODO features
+	dodoc AUTHORS README TODO features
 	dohtml docs/*.html
 	doinfo docs/*.info
 	# give a proper name to the info file
-	mv ${D}/usr/share/info/xml.info.gz ${D}/usr/share/info/${PN}.info.gz
+	mv "${D}"/usr/share/info/xml.info.gz "${D}"/usr/share/info/${PN}.info.gz
 	insinto /usr/share/doc/${PF}
 	doins docs/*.pdf distrib/xmlada_gps.py
 

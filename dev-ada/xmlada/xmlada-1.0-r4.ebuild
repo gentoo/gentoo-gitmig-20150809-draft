@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-1.0-r4.ebuild,v 1.7 2007/09/25 13:06:19 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-1.0-r4.ebuild,v 1.8 2008/01/27 00:23:29 george Exp $
 
 inherit gnat versionator
 
@@ -24,7 +24,7 @@ src_unpack()
 {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	#making .dvi docs is problemmatic. Skip that for now
 	sed -i -e "s/all: obj test docs/all: obj test/" Makefile.in
 	#increase stack size
@@ -60,21 +60,21 @@ lib_compile()
 
 # here we need to use the $1 - passed gnat profile name
 lib_install() {
-	make PREFIX=${DL} install || die "install failed"
+	make PREFIX="${DL}" install || die "install failed"
 
 	# fix xmlada-config hardsets locations
 	sed -i -e "s:\${prefix}/include/xmlada:${AdalibSpecsDir}/${PN}:" \
 		-e "s:\${prefix}/lib:${AdalibLibTop}/$1/${PN}:g" \
-		${DL}/bin/xmlada-config
+		"${DL}"/bin/xmlada-config
 
 	# now move stuff to proper location and delete extras
-	mv ${DL}/bin/xmlada-config ${DL}/lib/* ${DL}/include/${PN}/*.ali ${DL}
-	rm -rf ${DL}/bin ${DL}/include ${DL}/lib
+	mv "${DL}"/bin/xmlada-config "${DL}"/lib/* "${DL}"/include/${PN}/*.ali "${DL}"
+	rm -rf "${DL}"/bin "${DL}"/include "${DL}"/lib
 }
 
 src_install ()
 {
-	cd ${S}
+	cd "${S}"
 	dodir ${AdalibSpecsDir}/${PN}
 	insinto ${AdalibSpecsDir}/${PN}
 	doins dom/*.ad? input_sources/*.ad? sax/*.ad? unicode/*.ad?
@@ -87,11 +87,11 @@ src_install ()
 
 	gnat_src_install
 
-	dodoc AUTHORS COPYING README docs/xml.ps
+	dodoc AUTHORS README docs/xml.ps
 	dohtml docs/*.html
 	doinfo docs/*.info
 	#need to give a proper name to the info file
-	cd ${D}/usr/share/info
+	cd "${D}"/usr/share/info
 	mv xml.info.gz ${PN}.info.gz
 
 }

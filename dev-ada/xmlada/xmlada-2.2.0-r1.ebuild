@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0-r1.ebuild,v 1.2 2007/12/14 17:50:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0-r1.ebuild,v 1.3 2008/01/27 00:23:29 george Exp $
 
 inherit gnat versionator
 
@@ -90,7 +90,7 @@ src_install ()
 
 	gnat_src_install
 
-	dodoc AUTHORS COPYING README TODO features
+	dodoc AUTHORS README TODO features
 	dohtml docs/*.html
 	doinfo docs/*.info
 	insinto /usr/share/doc/${PF}
