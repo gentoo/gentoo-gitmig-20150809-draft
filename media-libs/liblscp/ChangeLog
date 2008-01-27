@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/liblscp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblscp/ChangeLog,v 1.8 2008/01/12 10:39:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblscp/ChangeLog,v 1.9 2008/01/27 10:23:59 aballier Exp $
+
+  27 Jan 2008; Alexis Ballier <aballier@gentoo.org> -liblscp-0.3.0.ebuild,
+  -liblscp-0.3.3.ebuild:
+  remove old
 
 *liblscp-0.5.5 (12 Jan 2008)
 
