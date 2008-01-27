@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>sound</herd>
 <maintainer>
-		<email>ticho@gentoo.org</email>
-		<name>Andrej Kacian</name>
+		<email>angelos@gentoo.org</email>
+		<name>Christoph Mende</name>
 </maintainer>
 <longdescription>The last.fm plugin can fetch artist images, from last.fm. This plugin doesn't scrobble your music, use a dedicated client like mpdscribble for this.</longdescription>
 </pkgmetadata>
