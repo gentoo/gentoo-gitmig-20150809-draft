@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/ipod-sharp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.14 2007/12/25 14:25:29 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.15 2008/01/27 12:13:02 drac Exp $
+
+  27 Jan 2008; Samuli Suominen <drac@gentoo.org> ipod-sharp-0.6.3.ebuild:
+  Change libipoddevice depend from 0.5.0 to 0.5.3 wrt #188936.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing metalgod from metadata.xml as per #99350.
