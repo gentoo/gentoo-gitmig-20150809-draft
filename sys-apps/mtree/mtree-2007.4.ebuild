@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtree/mtree-2007.4.ebuild,v 1.1 2008/01/26 21:57:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtree/mtree-2007.4.ebuild,v 1.2 2008/01/27 16:52:11 vapier Exp $
 
 inherit flag-o-matic
 
@@ -19,6 +19,8 @@ S=${WORKDIR}/pkgsrc/pkgtools
 src_compile() {
 	cd "${S}"/libnbcompat/files
 	econf || die "econf libnbcompat failed"
+	# workaround weak makefile dependencies
+	emake nbcompat/nbtypes.h || die "emake nbcompat/nbtypes.h failed"
 	emake || die "emake libnbcompat failed"
 	cd "${S}"/mtree/files
 	append-cppflags -I../../libnbcompat/files
