@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.11 2007/12/17 07:37:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.12 2008/01/27 10:16:10 opfer Exp $
 
 DESCRIPTION="Virtual for editor"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI=""
 
-LICENSE=""
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
@@ -17,6 +17,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="|| ( app-editors/nano
+	app-editors/bvi
 	app-editors/dav
 	app-editors/e3
 	app-editors/easyedit
