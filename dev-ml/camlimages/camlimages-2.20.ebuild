@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20.ebuild,v 1.5 2008/01/03 20:36:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20.ebuild,v 1.6 2008/01/27 14:07:32 aballier Exp $
 
 inherit findlib eutils
 
@@ -14,7 +14,16 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 x86 ppc"
 
-DEPEND=">=dev-lang/ocaml-3.08"
+DEPEND=">=dev-lang/ocaml-3.08
+	gtk? ( dev-ml/lablgtk )
+	opengl? ( dev-ml/lablgl )
+	media-libs/giflib
+	media-libs/libpng
+	media-libs/jpeg
+	media-libs/tiff
+	x11-libs/libXpm
+	>=media-libs/freetype-2
+	virtual/ghostscript"
 
 MY_S="${WORKDIR}/${P/20/2}"
 
@@ -32,7 +41,7 @@ src_unpack() {
 	cd ${MY_S}
 	if has_version ">=dev-lang/ocaml-3.09";
 	then
-		epatch ${FILESDIR}/${P}-ocaml-3.09.diff
+		epatch "${FILESDIR}/${P}-ocaml-3.09.diff"
 	fi
 }
 
@@ -67,14 +76,13 @@ src_install() {
 	# Use findlib to install properly, especially to avoid
 	# the shared library mess
 	findlib_src_preinst
-	mkdir ${D}/tmp
+	mkdir "${T}/tmp"
 	cd ${MY_S}
-	make CAMLDIR=${D}/tmp \
-		LIBDIR=${D}/tmp \
-		DESTDIR=${D}/tmp \
+	make CAMLDIR="${T}/tmp" \
+		LIBDIR="${T}/tmp" \
+		DESTDIR="${T}/tmp" \
 		install || die
-	sed -e "s/VERSION/${PV}/" ${FILESDIR}/META > ${D}/tmp/META
+	sed -e "s/VERSION/${PV}/" "${FILESDIR}/META" > "${T}/tmp/META"
 
-	ocamlfind install camlimages ${D}/tmp/*
-	rm -rf ${D}/tmp
+	ocamlfind install camlimages "${T}"/tmp/*
 }
