@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/filezilla
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.5 2007/12/29 15:38:44 welp Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.6 2008/01/27 19:01:33 armin76 Exp $
+
+  27 Jan 2008; Raúl Porcel <armin76@gentoo.org> filezilla-3.0.4.ebuild:
+  Add ~ia64/~sparc
 
   29 Dec 2007; <welp@gentoo.org> filezilla-3.0.4.ebuild:
   Keyworded ~amd64; bug 202996
