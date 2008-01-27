@@ -3,4 +3,12 @@
 <pkgmetadata>
 <herd>tex</herd>
 <herd>cjk</herd>
+	<maintainer>
+		<email>aballier@gentoo.org</email>
+		<name>Alexis Ballier</name>
+	</maintainer>
+	<maintainer>
+		<email>ps@twin.jikos.cz</email>
+		<name>Pavel Sanda</name>
+	</maintainer>
 </pkgmetadata>
