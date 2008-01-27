@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jax-ws
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws/ChangeLog,v 1.6 2007/08/19 19:15:09 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws/ChangeLog,v 1.7 2008/01/27 03:45:20 betelgeuse Exp $
+
+  27 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> jax-ws-2.0.1.ebuild:
+  Building fails with 1.6 so force 1.5 for now. Fixes bug #207633.
 
   19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   jax-ws-2.0.1.ebuild:
