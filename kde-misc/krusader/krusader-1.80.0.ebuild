@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.80.0.ebuild,v 1.1 2007/07/22 17:15:30 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.80.0.ebuild,v 1.2 2008/01/27 14:55:52 ingmar Exp $
 
 inherit kde
 
@@ -17,9 +17,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="javascript kde"
 
-DEPEND="kde? ( || ( ( kde-base/libkonq kde-base/kdebase-kioslaves )
-			kde-base/kdebase ) )
-	!sparc? ( javascript? ( kde-base/kjsembed ) )"
+DEPEND="kde? ( || ( ( =kde-base/libkonq-3.5* =kde-base/kdebase-kioslaves-3.5* )
+			=kde-base/kdebase-3.5* ) )
+	!sparc? ( javascript? ( =kde-base/kjsembed-3.5* ) )"
 
 RDEPEND="${DEPEND}"
 
