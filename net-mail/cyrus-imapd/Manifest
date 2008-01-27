@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX cyrus-imapd-2.2-libwrap.patch 390 RMD160 4ed2b14f549ccfab487cff66e5f2cb8ebdd39427 SHA1 0075421585a73f2673e3daff9a4c140d9cc5046e SHA256 2bddad2045130090ea23f5ad65d797cfa1f6083446bd00411cb1540cb56d4e0e
 MD5 88f50354abbcae1950a2d11c74db5fe5 files/cyrus-imapd-2.2-libwrap.patch 390
 RMD160 4ed2b14f549ccfab487cff66e5f2cb8ebdd39427 files/cyrus-imapd-2.2-libwrap.patch 390
@@ -68,3 +71,10 @@ SHA256 6278a994d0da763c4af48e3fd33d5583701402142470da44a1cd8fb786f63085 files/di
 MD5 c55df6df734f859e5f0ef9d3b9a9b969 files/digest-cyrus-imapd-2.3.9-r1 512
 RMD160 617c63af48df4adba02101a30db0f4e70b73508f files/digest-cyrus-imapd-2.3.9-r1 512
 SHA256 e03dc15ac8b730f5c4ca419fa764cc374d8821e67ceb147d4f0358ad6673913b files/digest-cyrus-imapd-2.3.9-r1 512
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHm8uY/ejvha5XGaMRAmBxAJ9CAY2DMgLsiq/Hz8n4jPOQZmXAGgCg6TVV
+uLmGhkiXMqcwu5bfUjt2rEE=
+=4eOt
+-----END PGP SIGNATURE-----
