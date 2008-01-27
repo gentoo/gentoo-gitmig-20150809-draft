@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.0.0.ebuild,v 1.1 2008/01/18 02:06:35 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.0.0.ebuild,v 1.2 2008/01/27 15:25:21 zlin Exp $
 
 EAPI="1"
 
@@ -44,6 +44,8 @@ KMEXTRACTONLY="
 	libs/
 	plasma/"
 
+PATCHES="${FILESDIR}/${P}-opengl.patch"
+
 # FIXME: is have_openglxvisual found without screensaver
 src_compile() {
 	# Old keyboard-detection code is unmaintained,
@@ -51,7 +53,7 @@ src_compile() {
 	mycmakeargs="${mycmakeargs}
 		-DUSE_XKLAVIER=ON -DWITH_LibXKlavier=ON
 		-DWITH_GLIB2=ON -DWITH_GObject=ON
-		$(cmake-utils_usr_with ieee1394 RAW1394)
+		$(cmake-utils_use_with ieee1394 RAW1394)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with ssl OpenSSL)
 		$(cmake-utils_use_with usb USB)
