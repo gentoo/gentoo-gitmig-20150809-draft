@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.0.12.ebuild,v 1.3 2008/01/27 18:05:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.1.7.ebuild,v 1.1 2008/01/27 18:05:18 hollow Exp $
 
 inherit apache-module autotools
 
@@ -11,9 +11,8 @@ SRC_URI="ftp://ftp.rexursive.com/pub/mod-spin/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="mysql postgres"
+IUSE=""
 
-APACHE2_MOD_FILE="${S}/spin/.libs/${PN}.so"
 APACHE2_MOD_CONF="80_${PN}"
 APACHE2_MOD_DEFINE="SPIN"
 
@@ -21,9 +20,7 @@ DOCFILES="AUTHORS ChangeLog INSTALL NEWS README"
 
 DEPEND=">=sys-libs/db-4.2
 	dev-libs/libxml2
-	www-apache/libapreq2
-	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )"
+	www-apache/libapreq2"
 
 need_apache2
 
@@ -35,15 +32,12 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-apxs=${APXS2} \
-		$(use_with mysql) \
-		$(use_with postgres pgsql) \
-		|| die "econf failed"
+	econf --with-apxs=${APXS2} || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	dolib spin/.libs/librxv_spin.so*
+	dolib src/.libs/librxv_spin.so*
 	apache-module_src_install
 	doman docs/man/man3/*.3
 	dohtml docs/html/*
