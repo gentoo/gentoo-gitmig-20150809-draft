@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/extlib-1.4.ebuild,v 1.1 2005/09/21 17:02:34 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/extlib-1.4.ebuild,v 1.2 2008/01/27 12:19:53 grobian Exp $
 
 inherit findlib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ocaml-lib/${P}.tgz"
 LICENSE="LGPL-2.1"
 DEPEND=">=dev-lang/ocaml-3.07"
 SLOT="0"
-KEYWORDS="x86 ppc ppc-macos amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE="doc"
 
 src_compile() {
