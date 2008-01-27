@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25.ebuild,v 1.4 2007/02/12 05:09:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25.ebuild,v 1.5 2008/01/27 10:48:03 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -27,17 +27,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	# Misc makefile clean ups
-	epatch "${FILESDIR}"/${PN}-1.9.25-gentoo.patch
-
-	# Get it to work with kernel 2.6
 	epatch "${FILESDIR}"/${PN}-1.9.25-linux2.6.patch
-
-	# -fPIC does work for lrmi, see bug #51698
-	epatch "${FILESDIR}"/${PN}-1.9.19-pic.patch
-
-	# Don't strip stuff, let portage do it
+	epatch "${FILESDIR}"/${PN}-1.9.19-pic.patch #51698
 	epatch "${FILESDIR}"/${PN}-1.9.25-build.patch
 }
 

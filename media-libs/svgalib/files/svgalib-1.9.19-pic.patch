@@ -1,3 +1,7 @@
+the -fPIC flag does work for lrmi
+
+http://bugs.gentoo.org/51698
+
 --- svgalib-1.9.19/src/Makefile.jj	2004-09-09 09:08:24.369399280 -0700
 +++ svgalib-1.9.19/src/Makefile	2004-09-09 09:08:32.340187536 -0700
 @@ -462,8 +462,8 @@
