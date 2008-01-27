@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mhonarc
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.12 2007/07/02 14:56:07 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.13 2008/01/27 06:05:16 kumba Exp $
+
+*mhonarc-2.6.16-r1 (27 Jan 2008)
+
+  27 Jan 2008; Joshua Kinard <kumba@gentoo.org>
+  +files/mhonarc-2.6.16-list-output-order.patch, -mhonarc-2.6.16.ebuild,
+  +mhonarc-2.6.16-r1.ebuild:
+  Add patch to fix issue reported in #161855.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> mhonarc-2.6.10.ebuild,
   mhonarc-2.6.11.ebuild, mhonarc-2.6.15.ebuild, mhonarc-2.6.16.ebuild:
