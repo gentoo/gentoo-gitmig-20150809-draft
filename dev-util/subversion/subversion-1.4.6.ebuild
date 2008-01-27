@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.6.ebuild,v 1.4 2008/01/27 18:24:14 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.6.ebuild,v 1.5 2008/01/27 21:10:49 hollow Exp $
 
 inherit bash-completion depend.apache flag-o-matic elisp-common eutils java-pkg-opt-2 libtool multilib perl-module python
 
@@ -84,8 +84,8 @@ src_unpack() {
 	sed -e 's/\(NEON_ALLOWED_LIST=.* 0.26.2\)"/\1 0.26.3 0.26.4"/' \
 		-i configure.in
 
-	sed -e "s:apr-config:$(apr_config):g" \
-		-e "s:apu-config:$(apu_config):g" \
+	sed -e "s:apr-config:apr-1-config:g" \
+		-e "s:apu-config:apu-1-config:g" \
 		-i build/ac-macros/{find_,}ap*
 
 	export WANT_AUTOCONF=2.5
@@ -116,11 +116,11 @@ src_compile() {
 		myconf="${myconf} --with-neon=/usr"
 	fi
 
-	append-flags $(/usr/bin/$(apr_config) --cppflags)
+	append-flags $(/usr/bin/apr-1-config --cppflags)
 
 	econf ${myconf} \
-		--with-apr=/usr/bin/$(apr_config) \
-		--with-apr-util=/usr/bin/$(apu_config) \
+		--with-apr=/usr/bin/apr-1-config \
+		--with-apr-util=/usr/bin/apu-1-config \
 		$(use_with apache2 apxs ${APXS2}) \
 		$(use_with berkdb berkeley-db) \
 		$(use_enable debug maintainer-mode) \
