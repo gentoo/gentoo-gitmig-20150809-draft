@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/kdegames-meta-4.0.0.ebuild,v 1.1 2008/01/17 23:47:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/kdegames-meta-4.0.0-r1.ebuild,v 1.1 2008/01/27 21:04:44 zlin Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="kde-4"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="opengl"
 
 RDEPEND="
 >=kde-base/bovo-${PV}:${SLOT}
@@ -36,7 +36,7 @@ RDEPEND="
 >=kde-base/kshisen-${PV}:${SLOT}
 >=kde-base/kspaceduel-${PV}:${SLOT}
 >=kde-base/ksquares-${PV}:${SLOT}
->=kde-base/ksudoku-${PV}:${SLOT}
 >=kde-base/ktuberling-${PV}:${SLOT}
 >=kde-base/lskat-${PV}:${SLOT}
+opengl? ( >=kde-base/ksudoku-${PV}:${SLOT} )
 "
