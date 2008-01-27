@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libotr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.24 2008/01/16 02:19:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.25 2008/01/27 15:59:55 angelos Exp $
+
+  27 Jan 2008; Christoph Mende <angelos@gentoo.org> libotr-3.1.0.ebuild:
+  Stable on amd64, bug #204427
 
   16 Jan 2008; Brent Baude <ranger@gentoo.org> libotr-3.1.0.ebuild:
   Marking libotr-3.1.0 ppc for bug 204287
