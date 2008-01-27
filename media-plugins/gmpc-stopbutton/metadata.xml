@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>sound</herd>
 <maintainer>
-		<email>ticho@gentoo.org</email>
-		<name>Andrej Kacian</name>
+		<email>angelos@gentoo.org</email>
+		<name>Christoph Mende</name>
 </maintainer>
 <longdescription>This is the simplest plugin of the lot, it adds a stop button to the controls in the main window. It's an easy solution to keep everybody happy.</longdescription>
 </pkgmetadata>

@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>sound</herd>
 <maintainer>
-		<email>ticho@gentoo.org</email>
-		<name>Andrej Kacian</name>
+		<email>angelos@gentoo.org</email>
+		<name>Christoph Mende</name>
 </maintainer>
 <longdescription>
 The magnatune plugin provides an interface to the www.magnatune.com website. The plugin allows you to browse, and preview available albums. (It uses the 128kbit mp3 version).

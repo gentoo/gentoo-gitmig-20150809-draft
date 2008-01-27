@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>sound</herd>
 <maintainer>
-		<email>ticho@gentoo.org</email>
-		<name>Andrej Kacian</name>
+		<email>angelos@gentoo.org</email>
+		<name>Christoph Mende</name>
 </maintainer>
 <longdescription>The plugin allows you to generate a playlist based on a set of rules, f.e. "Genre contains 'jazz' and artist doesn't contain 'Jones'".</longdescription>
 </pkgmetadata>
