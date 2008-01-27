@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.181 2008/01/27 15:18:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.182 2008/01/27 18:59:18 armin76 Exp $
+
+  27 Jan 2008; Raúl Porcel <armin76@gentoo.org> wxGTK-2.6.4.0-r3.ebuild,
+  wxGTK-2.8.7.1-r1.ebuild:
+  alpha/ia64/sparc stable wrt #207648
 
   27 Jan 2008; Brent Baude <ranger@gentoo.org> wxGTK-2.6.4.0-r3.ebuild:
   Marking wxGTK-2.6.4.0-r3 ppc64 for bug 207648
