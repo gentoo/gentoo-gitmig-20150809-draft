@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/stops
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stops/ChangeLog,v 1.1 2008/01/27 19:48:23 aballier Exp $
+
+*stops-0.3.0 (27 Jan 2008)
+
+  27 Jan 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +stops-0.3.0.ebuild:
+  Initial import, greatly based on the ebuild by Dominique Michel
+  <dominique.michel@citycable.ch>, bug #128964
+
