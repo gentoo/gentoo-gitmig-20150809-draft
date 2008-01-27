@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.2.2.ebuild,v 1.5 2007/05/13 17:16:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.2.2.ebuild,v 1.6 2008/01/27 19:13:31 cedk Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,7 @@ DEPEND=">=sys-libs/ncurses-5"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 }
 
 src_compile() {
