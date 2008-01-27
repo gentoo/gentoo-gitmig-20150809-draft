@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.60 2008/01/27 10:42:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.61 2008/01/27 12:21:10 philantrop Exp $
+
+  27 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> wgetpaste-2.8.ebuild:
+  Marked stable on amd64 as per bug 207640.
 
   27 Jan 2008; Markus Rothe <corsair@gentoo.org> wgetpaste-2.8.ebuild:
   Stable on ppc; bug #207640
