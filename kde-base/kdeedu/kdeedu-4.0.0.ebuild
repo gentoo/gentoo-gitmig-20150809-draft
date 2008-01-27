@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-4.0.0.ebuild,v 1.3 2008/01/18 04:38:46 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-4.0.0.ebuild,v 1.4 2008/01/27 23:02:56 zlin Exp $
 
 EAPI="1"
 
@@ -36,12 +36,11 @@ RDEPEND="${COMMONDEPEND}
 		>=kde-base/kdebase-${PV}:${SLOT} )"
 
 PATCHES="${FILESDIR}/kstars-4.0.0-destdir.patch
-		${FILESDIR}/marble-4.0.0-fix-tests.patch"
+		${FILESDIR}/marble-4.0.0-fix-tests.patch
+		${FILESDIR}/${P}-opengl.patch"
 
 pkg_setup() {
-	if use cviewer || use opengl; then
-		QT4_BUILT_WITH_USE_CHECK="${QT4_BUILT_WITH_USE_CHECK} opengl"
-	fi
+	use cviewer && QT4_BUILT_WITH_USE_CHECK="${QT4_BUILT_WITH_USE_CHECK} opengl"
 
 	kde4-base_pkg_setup
 }
