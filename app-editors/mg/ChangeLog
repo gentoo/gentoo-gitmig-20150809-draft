@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.4 2007/12/18 21:46:31 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.5 2008/01/27 10:21:11 opfer Exp $
+
+  27 Jan 2008; Christian Faulhammer <opfer@gentoo.org> mg-20070918.ebuild:
+  stable x86, bug 207608
 
   18 Dec 2007; Ulrich Mueller <ulm@gentoo.org> mg-20070918.ebuild:
   Add ~amd64 keyword, bug #202428.
