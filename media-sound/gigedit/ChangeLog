@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/gigedit
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gigedit/ChangeLog,v 1.1 2008/01/27 10:15:26 aballier Exp $
+
+*gigedit-0.1.1 (27 Jan 2008)
+
+  27 Jan 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +gigedit-0.1.1.ebuild:
+  Initial import, ebuild by me
+
