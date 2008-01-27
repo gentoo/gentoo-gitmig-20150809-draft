@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.4.ebuild,v 1.1 2007/12/11 16:27:22 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.5.ebuild,v 1.1 2008/01/27 14:55:05 drac Exp $
 
 DESCRIPTION="GTK+ utility for editing MP2, MP3, MP4, FLAC, Ogg and other media tags"
 HOMEPAGE="http://easytag.sourceforge.net"
@@ -31,8 +31,7 @@ src_compile() {
 		$(use_enable flac) \
 		$(use_enable aac mp4) \
 		$(use_enable wavpack) \
-		$(use_enable speex) \
-		--enable-shared
+		$(use_enable speex)
 	emake || die "emake failed."
 }
 
