@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/gmpc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.35 2007/09/26 18:51:09 lack Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.36 2008/01/27 13:28:54 angelos Exp $
+
+*gmpc-0.15.5.0 (27 Jan 2008)
+
+  27 Jan 2008; Christoph Mende <angelos@gentoo.org> metadata.xml,
+  -gmpc-0.15.0.ebuild, gmpc-0.15.1.ebuild, +gmpc-0.15.5.0.ebuild:
+  Taking over maintainership
+  gmpc-0.15.1 depends on libmpd-0.14.0 now (Bug #207047 by Mike Auty)
+  Version bump to 0.15.5 (Bug #202995 by Jesse Adelman)
+  Removed 0.15.0
 
   26 Sep 2007; Jim Ramsay <lack@gentoo.org> gmpc-0.14.0.ebuild,
   gmpc-0.15.0.ebuild, gmpc-0.15.1.ebuild:
