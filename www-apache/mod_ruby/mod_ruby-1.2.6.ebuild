@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/mod_ruby-1.2.6.ebuild,v 1.7 2008/01/25 17:49:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/mod_ruby-1.2.6.ebuild,v 1.8 2008/01/27 21:11:17 hollow Exp $
 
 inherit apache-module
 
@@ -23,12 +23,12 @@ APACHE2_MOD_FILE="${PN}.so"
 
 DOCFILES="ChangeLog COPYING README.*"
 
-need_apache
+need_apache2_2
 
 src_compile() {
 	./configure.rb \
 		--with-apxs=${APXS2} \
-		--with-apr-includes=$($(apr_config) --includedir)
+		--with-apr-includes=$(/usr/bin/apr-1-config --includedir)
 
 	emake || die "emake failed"
 
