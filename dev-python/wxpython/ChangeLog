@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.78 2008/01/27 14:21:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.79 2008/01/27 14:22:16 opfer Exp $
+
+  27 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  wxpython-2.8.7.1.ebuild:
+  stable x86, bug 207648
 
   27 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   wxpython-2.6.4.0-r1.ebuild:
