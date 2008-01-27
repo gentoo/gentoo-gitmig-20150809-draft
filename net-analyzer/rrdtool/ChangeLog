@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/rrdtool
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.132 2007/09/14 15:31:50 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.133 2008/01/27 19:58:17 pva Exp $
+
+*rrdtool-1.2.26 (27 Jan 2008)
+
+  27 Jan 2008; <pva@gentoo.org> rrdtool-1.0.49.ebuild,
+  +rrdtool-1.2.26.ebuild:
+  Version bump, thank Raúl Porcel <armin76 AT gentoo.org> for report, bug
+  206795. Also in this version bug #191060 is fixed. Quotation fixes.
 
   14 Sep 2007; Markus Ullmann <jokey@gentoo.org> rrdtool-1.0.49.ebuild:
   And re-add keywords

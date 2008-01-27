@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.49.ebuild,v 1.13 2007/09/14 15:31:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.49.ebuild,v 1.14 2008/01/27 19:58:17 pva Exp $
 
 inherit perl-module flag-o-matic eutils
 
@@ -28,7 +28,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -e 's/^LTCOMPILE = $(LIBTOOL) --mode=compile $(CC)/& -prefer-pic/' -i src/Makefile.in
 
 	if [[ ! $(grep '^LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) -prefer-pic' src/Makefile.in) ]]; then
@@ -73,11 +73,11 @@ src_install() {
 	dodoc doc/*.pod
 	dodoc doc/*.txt
 
-	rm -rf ${D}/usr/doc
-	rm -rf ${D}/usr/html
-	rm -rf ${D}/usr/man
-	rm -rf ${D}/usr/contrib
-	rm -rf ${D}/usr/examples
+	rm -rf "${D}"/usr/doc
+	rm -rf "${D}"/usr/html
+	rm -rf "${D}"/usr/man
+	rm -rf "${D}"/usr/contrib
+	rm -rf "${D}"/usr/examples
 
 	insinto /usr/share/doc/${PF}/examples
 	doins examples/*
@@ -90,7 +90,7 @@ src_install() {
 		perl-module_src_install || die
 
 		# remove duplicate installation into /usr/lib/perl
-		rm -Rf ${D}/usr/lib/perl
+		rm -Rf "${D}"/usr/lib/perl
 	fi
 
 	if use tcl ; then
@@ -98,7 +98,7 @@ src_install() {
 #		insinto /usr/lib/tcl${TCL_VER}/tclrrd${PV}
 #		doins ${S}/tcl/tclrrd${PV}.so
 		echo "package ifneeded Rrd ${PV} [list load [file join \$$dir .. tclrrd${PV}.so]]" \
-			>> ${D}/usr/lib/tcl${TCL_VER}/tclrrd${PV}/pkgIndex.tcl
+			>> "${D}"/usr/lib/tcl${TCL_VER}/tclrrd${PV}/pkgIndex.tcl
 	fi
 
 	dodoc COPY* CONTR* README TODO
