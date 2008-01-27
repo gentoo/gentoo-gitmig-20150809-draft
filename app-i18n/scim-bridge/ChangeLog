@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/scim-bridge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.16 2008/01/10 16:53:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.17 2008/01/27 16:35:05 matsuu Exp $
+
+*scim-bridge-0.4.14 (27 Jan 2008)
+
+  27 Jan 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/scim-bridge-0.4.14-qt4.patch, +scim-bridge-0.4.14.ebuild:
+  Version bumped, bug #206843.
+  Fixed path for qt4 plugins, bug #206846.
 
   10 Jan 2008; MATSUU Takuto <matsuu@gentoo.org> -scim-bridge-0.4.10.ebuild,
   -scim-bridge-0.4.12.ebuild, -scim-bridge-0.4.13.ebuild,
