@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.2-r3.ebuild,v 1.1 2007/09/20 06:35:31 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.2-r3.ebuild,v 1.2 2008/01/27 20:58:19 hollow Exp $
 
 inherit apache-module autotools eutils
 
@@ -23,7 +23,7 @@ APXS2_S="${S}/src/apache2"
 APACHE2_MOD_CONF="70_${PN}"
 APACHE2_MOD_DEFINE="SUPHP"
 
-need_apache2
+need_apache2_2
 
 pkg_setup() {
 	modecnt=0
@@ -68,7 +68,6 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-handler.patch
-
 	eautoreconf
 }
 
@@ -88,7 +87,7 @@ src_compile() {
 			--with-apache-user=${SUPHP_APACHEUSER} \
 			--with-logfile=${SUPHP_LOGFILE} \
 			--with-apxs=${APXS2} \
-			--with-apr=/usr/bin/$(apr_config)"
+			--with-apr=/usr/bin/apr-1-config"
 	econf ${myargs} || die "econf failed"
 
 	emake || die "make failed"
