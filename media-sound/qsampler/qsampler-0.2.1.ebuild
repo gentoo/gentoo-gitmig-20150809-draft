@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/qsampler-0.2.1.ebuild,v 1.1 2008/01/12 10:49:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/qsampler-0.2.1.ebuild,v 1.2 2008/01/27 11:01:01 aballier Exp $
 
 EAPI="1"
 
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}"
 src_compile() {
 	econf $(use_enable debug) \
 		$(use_enable libgig)
+	eqmake4 qsampler.pro -o qsampler.mak
 	emake || die "emake failed."
 }
 
