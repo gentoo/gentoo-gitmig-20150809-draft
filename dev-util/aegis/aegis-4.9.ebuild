@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.9.ebuild,v 1.12 2007/04/09 15:37:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.9.ebuild,v 1.13 2008/01/27 10:15:36 grobian Exp $
 
 IUSE="tk"
 
@@ -22,11 +22,10 @@ src_compile() {
 	# By default aegis configure puts shareable read/write files (locks etc)
 	# in ${prefix}/com/aegis but the FHS says /var/lib/aegis can be shared.
 
-	myconf="${myconf} --with-nlsdir=/usr/share/locale"
-
 	econf \
 		--sharedstatedir=/var/lib/aegis \
-		${myconf} || die "./configure failed"
+		--with-nlsdir=/usr/share/locale \
+		|| die "./configure failed"
 
 	# Second ebuild causes redefined/undefined function errors
 	make clean
@@ -36,23 +35,23 @@ src_compile() {
 }
 
 src_install () {
-	make RPM_BUILD_ROOT=${D} install || die
+	make RPM_BUILD_ROOT="${D}" install || die
 
 	# Alas gentoo appears to have no profile.d mechanism, so:
-	rm ${D}/etc/profile.d/aegis.sh
-	rm ${D}/etc/profile.d/aegis.csh
-	rmdir ${D}/etc/profile.d
-	rmdir ${D}/etc
+	rm "${D}"/etc/profile.d/aegis.sh
+	rm "${D}"/etc/profile.d/aegis.csh
+	rmdir "${D}"/etc/profile.d
+	rmdir "${D}"/etc
 
 	# OK so ${D}/var/lib/aegis gets UID=3, but for some
 	# reason so do the files under /usr/share, even though
 	# they are read-only.
-	chown -R root:root ${D}/usr/share
+	chown -R root:0 "${D}"/usr/share
 
 	# Remove duplicate documention etc.
-	rm -r ${D}/usr/share/aegis/en
-	rm -r ${D}/usr/share/aegis/de
-	rm -r ${D}/usr/share/aegis/man1
+	rm -r "${D}"/usr/share/aegis/en
+	rm -r "${D}"/usr/share/aegis/de
+	rm -r "${D}"/usr/share/aegis/man1
 
 	# Leaving out the .dvi versions and junk.
 	dodoc lib/en/*.txt
@@ -62,7 +61,7 @@ src_install () {
 	dosym /usr/share/aegis /usr/share/doc/${PF}/scripts
 
 	# Config file examples are documentation.
-	mv ${D}/usr/share/aegis/config.example ${D}/usr/share/doc/${PF}/
+	mv "${D}"/usr/share/aegis/config.example "${D}"/usr/share/doc/${PF}/
 
 	dodoc LICENSE BUILDING MANIFEST README
 }
