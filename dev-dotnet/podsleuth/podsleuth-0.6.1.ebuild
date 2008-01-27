@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/podsleuth-0.6.1.ebuild,v 1.1 2008/01/27 15:54:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/podsleuth-0.6.1.ebuild,v 1.2 2008/01/27 17:30:11 drac Exp $
 
 inherit mono
 
@@ -8,7 +8,7 @@ DESCRIPTION="a tool to discover detailed model information about an Apple (TM) i
 HOMEPAGE="http://banshee-project.org/PodSleuth"
 SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""

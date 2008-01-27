@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/mono-zeroconf-0.7.5.ebuild,v 1.1 2008/01/27 17:05:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/mono-zeroconf-0.7.5.ebuild,v 1.2 2008/01/27 17:27:37 drac Exp $
 
 inherit eutils mono
 
@@ -8,7 +8,7 @@ DESCRIPTION="a cross platform Zero Configuration Networking library for Mono and
 HOMEPAGE="http://www.mono-project.com/Mono.Zeroconf"
 SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="avahi"
