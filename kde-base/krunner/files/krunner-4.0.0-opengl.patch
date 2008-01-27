@@ -1,0 +1,23 @@
+--- workspace/CMakeLists.txt    (revision 767202)
++++ workspace/CMakeLists.txt    (working copy)
+@@ -16,8 +16,6 @@
+ include (MacroLibrary)
+ include (KDE4Defaults)
+
+-macro_optional_find_package(OpenGL)
+-
+ include(ConfigureChecks.cmake)
+ configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
+ configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h )
+--- workspace/krunner/lock/CMakeLists.txt       (revision 766878)
++++ workspace/krunner/lock/CMakeLists.txt       (working copy)
+@@ -5,7 +5,9 @@
+ ########### next target ###############
+
+ check_library_exists(Xxf86misc XF86MiscSetGrabKeysState "" HAVE_XF86MISCSETGRABKEYSSTATE)
++if(WITH_OpenGL)
+ check_library_exists(GL glXChooseVisual "" HAVE_GLXCHOOSEVISUAL)
++endif(WITH_OpenGL)
+
+ configure_file(config-krunner-lock.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krunner-lock.h)
+
