@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jcalendar
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/ChangeLog,v 1.13 2007/06/08 07:34:39 caster Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/ChangeLog,v 1.14 2008/01/27 19:24:10 betelgeuse Exp $
+
+*jcalendar-1.3.2-r1 (27 Jan 2008)
+
+  27 Jan 2008; Petteri Räty <betelgeuse@gentoo.org>
+  +jcalendar-1.3.2-r1.ebuild:
+  Use SLOT 2.0 of jgoodies-looks.
 
   08 Jun 2007; Vlastimil Babka <caster@gentoo.org> -jcalendar-1.2.2.ebuild,
   -jcalendar-1.2.2-r1.ebuild:
