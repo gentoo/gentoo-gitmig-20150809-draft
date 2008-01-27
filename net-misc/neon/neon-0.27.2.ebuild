@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.3.ebuild,v 1.9 2007/07/06 18:48:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.27.2.ebuild,v 1.1 2008/01/27 19:27:34 hollow Exp $
 
 inherit eutils libtool versionator autotools
 
@@ -10,52 +10,51 @@ SRC_URI="http://www.webdav.org/neon/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="expat nls socks5 ssl zlib"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+IUSE="expat kerberos nls socks5 ssl zlib"
 RESTRICT="test"
 
 DEPEND="expat? ( dev-libs/expat )
 	!expat? ( dev-libs/libxml2 )
+	kerberos? ( virtual/krb5 )
+	nls? ( virtual/libintl )
 	socks5? ( net-proxy/dante )
-	zlib? ( sys-libs/zlib )
 	ssl? ( >=dev-libs/openssl-0.9.6f )
-	nls? ( virtual/libintl )"
+	zlib? ( sys-libs/zlib )"
 
 src_unpack() {
 	unpack ${A}
-
 	elibtoolize
 }
 
 src_compile() {
-	local myconf=""
+	local myconf=
+
 	if has_version sys-libs/glibc; then
 		if built_with_use --missing true sys-libs/glibc nptlonly \
-		    || built_with_use --missing true sys-libs/glibc nptl; then
-		    einfo "Enabling SSL library thread-safety using POSIX threads..."
-		    myconf="${myconf} --enable-threadsafe-ssl=posix"
+			|| built_with_use --missing true sys-libs/glibc nptl; then
+			einfo "Enabling SSL library thread-safety using POSIX threads..."
+			myconf="${myconf} --enable-threadsafe-ssl=posix"
 		fi
 	fi
+
 	if use expat; then
-	    myconf="${myconf} --with-expat"
+		myconf="${myconf} --with-expat"
 	else
-	    myconf="${myconf} --with-libxml2"
+		myconf="${myconf} --with-libxml2"
 	fi
 
 	if use ssl; then
-	    myconf="${myconf} --with-ssl=openssl"
-	fi
-
-	if ! use nls; then
-	    myconf="${myconf} --disable-nls"
+		myconf="${myconf} --with-ssl=openssl"
 	fi
 
 	econf \
 		--enable-static \
 		--enable-shared \
-		--without-gssapi \
 		$(use_with zlib) \
+		$(use_with kerberos gssapi) \
 		$(use_enable socks5 socks) \
+		$(use_enable nls) \
 		${myconf} \
 		|| die "econf failed"
 	emake || die "emake failed"
@@ -77,7 +76,7 @@ pkg_postinst() {
 	ewarn "glibc."
 	ewarn
 	ewarn "Neon has a policy of breaking API across versions, this means"
-	ewarn "that any packages that link against neon will be broken after"
+	ewarn "that any packages that links against neon will be broken after"
 	ewarn "updating. They will remain broken until they are ported to the"
 	ewarn "new API. You can downgrade neon to the previous version by doing:"
 	ewarn
