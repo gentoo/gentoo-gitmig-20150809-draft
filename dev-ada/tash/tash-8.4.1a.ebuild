@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/tash/tash-8.4.1a.ebuild,v 1.5 2008/01/19 17:03:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/tash/tash-8.4.1a.ebuild,v 1.6 2008/01/27 00:20:34 george Exp $
 
 inherit versionator gnat
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="virtual/gnat
+DEPEND="virtual/ada
 	=dev-lang/tcl-8.4*
 	=dev-lang/tk-8.4*"
 
@@ -28,8 +28,8 @@ lib_compile() {
 }
 
 lib_install() {
-	mv ${SL}/lib/*.{ali,a,so*} ${DL}
-	chmod a-w ${DL}/*.ali
+	mv "${SL}"/lib/*.{ali,a,so*} "${DL}"
+	chmod a-w "${DL}"/*.ali
 }
 
 src_install() {
