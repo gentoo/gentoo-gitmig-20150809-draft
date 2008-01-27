@@ -1,8 +1,9 @@
 # ChangeLog for www-apache/mod_auth_pam
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pam/ChangeLog,v 1.2 2007/08/04 17:15:24 swegener Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pam/ChangeLog,v 1.3 2008/01/27 18:56:19 hollow Exp $
 
-*mod_auth_pam-1.1.1-r1 (29 Jul 2007)
+  27 Jan 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  update metadata; fix changelog
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> +files/apache2.pam,
   +files/mod_auth_pam-1.1.1-service_name.patch, +files/10_mod_auth_pam.conf,
@@ -90,10 +91,13 @@
 
   23 Jan 2005; Christian Parpart <trapni@gentoo.org>
   mod_auth_pam-1.1.1-r1.ebuild:
-  -m adding ~amd64 to keywords
+  adding ~amd64 to keywords
 
-  13 Oct 2004; Christian Parpart <trapni@gentoo.org> :
-  fixed bug, that prevented the modules to be installed; 
+*mod_auth_pam-1.1.1-r1 (10 Jan 2005)
+
+  10 Jan 2005; Christian Parpart <trapni@gentoo.org>
+  +mod_auth_pam-1.1.1-r1.ebuild, +files/mod_auth_pam-1.1.1-compile-fix.patch:
+  fixed bug, that prevented the modules to be installed;
   minor typo fix that caused apache2.pam not beeing installed
 
   04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
