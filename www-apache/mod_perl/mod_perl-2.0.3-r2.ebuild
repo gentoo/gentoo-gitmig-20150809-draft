@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3-r2.ebuild,v 1.1 2008/01/06 21:02:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3-r2.ebuild,v 1.2 2008/01/27 20:11:46 hollow Exp $
 
 inherit apache-module perl-module eutils multilib
 
@@ -29,10 +29,10 @@ DOCFILES="Changes INSTALL LICENSE README STATUS"
 need_apache2
 
 pkg_setup() {
-	if built_with_use dev-lang/perl ithreads; then
-		APACHE2_SAFE_MPMS="event worker"
-	else
-		APACHE2_SAFE_MPMS="prefork itk peruser"
+	if built_with_use www-servers/apache threads \
+			&& ! built_with_use dev-lang/perl ithreads; then
+		eerror "threaded MPMs require threaded perl"
+		die "emerge dev-lang/perl with USE=ithreads"
 	fi
 	apache-module_pkg_setup
 }
@@ -68,7 +68,9 @@ src_unpack() {
 
 	# Robert Coie <rac@gentoo.org> 2003.05.06
 
-	sed -i -e "s/sleep \$_/sleep \$_ << 2/" "${S}"/Apache-Test/lib/Apache/TestServer.pm || die "problem editing TestServer.pm"
+	sed -i -e "s/sleep \$_/sleep \$_ << 2/" \
+		"${S}"/Apache-Test/lib/Apache/TestServer.pm \
+		|| die "problem editing TestServer.pm"
 
 	# i wonder if this is the same sandbox issue, but TMPDIR is not
 	# getting through via SetEnv. sneak it through here. Bug 172676
