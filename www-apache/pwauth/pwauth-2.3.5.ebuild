@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/pwauth/pwauth-2.3.1-r4.ebuild,v 1.1 2007/07/29 21:34:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/pwauth/pwauth-2.3.5.ebuild,v 1.1 2008/01/27 18:08:47 hollow Exp $
 
 inherit eutils toolchain-funcs pam
 
