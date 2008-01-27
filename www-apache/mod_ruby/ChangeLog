@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_ruby
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.8 2008/01/25 17:49:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.9 2008/01/27 17:07:24 hollow Exp $
+
+  27 Jan 2008; Benedikt Böhm <hollow@gentoo.org> files/21_mod_ruby.conf,
+  -mod_ruby-1.2.4-r2.ebuild:
+  remove 1.2.4 wrt #203578; cleanup
 
   25 Jan 2008; Samuli Suominen <drac@gentoo.org> mod_ruby-1.2.6.ebuild:
   amd64 stable wrt #205518
