@@ -1,9 +1,8 @@
 # ChangeLog for www-apache/mod_auth_kerb
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.4 2008/01/27 16:52:16 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.5 2008/01/27 16:53:08 hollow Exp $
 
-  27 Jan 2008; Benedikt Böhm <hollow@gentoo.org>
-  files/11_mod_auth_kerb.conf, metadata.xml:
+  27 Jan 2008; Benedikt Böhm <hollow@gentoo.org> ChangeLog, Manifest:
   fix metadata; cleanup
 
   21 Sep 2007; Benedikt Böhm <hollow@gentoo.org> mod_auth_kerb-5.3.ebuild:
