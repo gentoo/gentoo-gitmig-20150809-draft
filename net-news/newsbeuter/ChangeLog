@@ -1,6 +1,13 @@
 # ChangeLog for net-news/newsbeuter
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.10 2007/12/27 12:55:38 ticho Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.11 2008/01/27 14:13:11 ticho Exp $
+
+*newsbeuter-0.7-r1 (27 Jan 2008)
+
+  27 Jan 2008; Andrej Kacian <ticho@gentoo.org> +files/0.7-sqlite-3.5.patch,
+  newsbeuter-0.7.ebuild, +newsbeuter-0.7-r1.ebuild:
+  Add patch to fix crash with >=sqlite-3.5. Bug #203878 by Tim Weber
+  <scy-bugs-gentoo at scytale name>.
 
   27 Dec 2007; Andrej Kacian <ticho@gentoo.org> -newsbeuter-0.6.ebuild,
   newsbeuter-0.7.ebuild:

@@ -1,0 +1,13 @@
+Index: src/cache.cpp
+===================================================================
+--- src/cache.cpp	(revision 1094)
++++ src/cache.cpp	(revision 1095)
+@@ -656,7 +656,7 @@
+ 	char * query = sqlite3_vmprintf(format, ap);
+ 	if (query) {
+ 		result = query;
+-		free(query);
++		sqlite3_free(query);
+ 	}
+ 	return result;
+ }
