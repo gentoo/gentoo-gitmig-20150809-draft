@@ -13,7 +13,7 @@
  
  
 -CLASS_SIMPLE := $(shell grep class_simple_create $(KDIR)/include/linux/device.h)
-+CLASS_SIMPLE := $(shell grep class_simple_create $(KDIR)/include/linux/device.h 2>/dev/null)
++CLASS_SIMPLE := $(shell grep -s class_simple_create $(KDIR)/include/linux/device.h)
  
  ifneq ($(CLASS_SIMPLE),)
    CLASS_CFLAGS = -DCLASS_SIMPLE=1
@@ -82,6 +82,14 @@
  }
  #endif
  
+@@ -167,3 +167,7 @@
+ #ifndef PCI_VENDOR_ID_RENDITION 
+ #define PCI_VENDOR_ID_RENDITION               0x1163
+ #endif
++
++#ifndef IRQF_SHARED
++# define IRQF_SHARED SA_SHIRQ
++#endif
 --- svgalib/kernel/svgalib_helper/main.c
 +++ svgalib/kernel/svgalib_helper/main.c
 @@ -1,5 +1,3 @@
@@ -122,6 +130,37 @@
  int num_devices=0;
  
  static char *sdev_id="svgalib_helper";
+@@ -103,7 +103,11 @@
+ static volatile int vsync=0;
+ static wait_queue_head_t vsync_wait;
+ 
+-static irqreturn_t vsync_interrupt(int irq, void *dev_id, struct pt_regs *regs)
++static irqreturn_t vsync_interrupt(int irq, void *dev_id
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,19)
++, struct pt_regs *regs
++#endif
++)
+ {
+     struct sh_pci_device *dev = (struct sh_pci_device *)dev_id;
+ 
+@@ -360,7 +364,7 @@
+                 vsync=1;
+                 i=0;
+                 while(irqs[i]!=-1)
+-                    request_irq(irqs[i++], vsync_interrupt, SA_SHIRQ, "svgalib_helper", sdev_id);
++                    request_irq(irqs[i++], vsync_interrupt, IRQF_SHARED, "svgalib_helper", sdev_id);
+                 vga_enable_vsync((void *)sdev_id);
+ 				wait_event_interruptible(vsync_wait, !vsync);
+                 i=0;
+@@ -448,7 +452,7 @@
+ 		int i=sh_pci_devs[minor]->dev->irq;
+ 		sh_pci_devs[minor]->opencount++;
+ 		if(sh_pci_devs[minor]->opencount==1 && i!=0 && i!=-1 && i!=255)
+-			request_irq(i, vsync_interrupt, SA_SHIRQ, "svgalib_helper", sh_pci_devs[minor]);
++			request_irq(i, vsync_interrupt, IRQF_SHARED, "svgalib_helper", sh_pci_devs[minor]);
+ 	}
+ 
+ #ifndef KERNEL_2_6
 @@ -770,10 +770,15 @@
  
  }
