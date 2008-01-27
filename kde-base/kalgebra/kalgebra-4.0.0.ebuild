@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/kalgebra-4.0.0.ebuild,v 1.1 2008/01/17 23:31:09 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/kalgebra-4.0.0.ebuild,v 1.2 2008/01/27 23:15:57 zlin Exp $
 
 EAPI="1"
 
@@ -11,15 +11,17 @@ DESCRIPTION="MathML-based graph calculator for KDE."
 KEYWORDS="~amd64 ~x86"
 IUSE="debug htmlhandbook opengl readline"
 
-COMMONDEPEND="opengl? ( virtual/opengl )
-	      readline? ( sys-libs/readline )"
-DEPEND="${DEPEND} ${COMMONDEPEND}"
-RDEPEND="${RDEPEND} ${COMMONDEPEND}"
+DEPEND="opengl? ( virtual/opengl )
+	readline? ( sys-libs/readline )"
+RDEPEND="${DEPEND}"
 
 KMEXTRACTONLY=libkdeedu/kdeeduui
 
+PATCHES="${FILESDIR}/${KMNAME}-${PV}-opengl.patch"
+
 src_compile() {
-	mycmakeargs="$(cmake-utils_use_with readline Readline)
+	mycmakeargs="${mycmakeargs}
+		$(cmake-utils_use_with readline Readline)
 		$(cmake-utils_use_with opengl OpenGL)"
 
 	kde4-meta_src_compile

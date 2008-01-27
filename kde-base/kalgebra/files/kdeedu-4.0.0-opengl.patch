@@ -1,0 +1,20 @@
+Index: kalgebra/src/CMakeLists.txt
+===================================================================
+--- kalgebra/src/CMakeLists.txt	(revision 767350)
++++ kalgebra/src/CMakeLists.txt	(working copy)
+@@ -24,7 +24,6 @@
+ 	functionedit.cpp
+ 	varedit.cpp
+ 	main.cpp
+-	graph3d.cpp
+ 	algebrahighlighter.cpp
+ 	expressionedit.cpp
+ 	graph2d.cpp
+@@ -45,6 +44,7 @@
+ target_link_libraries(kalgebra  ${KDE4_KHTML_LIBS} analitza)
+ 
+ if(OPENGL_FOUND)
++   set(kalgebra_SRCS ${kalgebra_SRCS} graph3d.cpp)
+    target_link_libraries(kalgebra  ${QT_QTOPENGL_LIBRARY} ${OPENGL_gl_LIBRARY} ${OPENGL_glu_LIBRARY})
+ endif(OPENGL_FOUND)
+ 
