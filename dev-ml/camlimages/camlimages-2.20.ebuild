@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20.ebuild,v 1.6 2008/01/27 14:07:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20.ebuild,v 1.7 2008/01/27 14:22:57 aballier Exp $
 
 inherit findlib eutils
 
@@ -49,7 +49,6 @@ src_compile() {
 	local myconf
 
 	cd ${MY_S}
-
 	if !(use gtk);
 	then
 		myconf="--with-lablgtk=/dev/null --with-lablgtk2=/dev/null"
@@ -57,10 +56,10 @@ src_compile() {
 
 	if !(use opengl);
 	then
-		myconf="--with-lablgl=/dev/null"
+		myconf="$myconf --with-lablgl=/dev/null"
 	fi
 
-	econf || die
+	econf ${myconf} || die
 	emake -j1 || die
 	emake -j1 opt || die
 }
