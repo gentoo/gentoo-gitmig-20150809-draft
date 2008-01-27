@@ -1,0 +1,10 @@
+# ChangeLog for dev-dotnet/mono-zeroconf
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/ChangeLog,v 1.1 2008/01/27 17:05:28 drac Exp $
+
+*mono-zeroconf-0.7.5 (27 Jan 2008)
+
+  27 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  +mono-zeroconf-0.7.5.ebuild:
+  Initial commit as part of #205210
+
