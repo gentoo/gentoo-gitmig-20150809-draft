@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.16.ebuild,v 1.9 2008/01/10 09:01:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.16.ebuild,v 1.10 2008/01/27 23:43:39 leio Exp $
 
 inherit eutils
 
@@ -13,9 +13,11 @@ SLOT="0"
 KEYWORDS="amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE="crypt hal"
 
-DEPEND="hal? ( >=sys-apps/dbus-0.33 >=sys-apps/hal-0.5.2 )
+RDEPEND="hal? ( >=sys-apps/dbus-0.33 >=sys-apps/hal-0.5.2 )
 	>=sys-fs/sysfsutils-1.3.0
 	crypt? ( || ( >=sys-fs/cryptsetup-1.0.5 sys-fs/cryptsetup-luks ) )"
+DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.21"
 
 pkg_setup() {
 	enewgroup plugdev
