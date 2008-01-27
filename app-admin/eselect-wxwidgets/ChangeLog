@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-wxwidgets
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.15 2007/12/23 04:48:26 dirtyepic Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.16 2008/01/27 14:17:18 opfer Exp $
+
+  27 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  eselect-wxwidgets-0.7-r1.ebuild:
+  stable x86, bug 207648
 
   23 Dec 2007; Ryan Hill <dirtyepic@gentoo.org> files/wxrc-0.7:
   Minor typo in error message.
