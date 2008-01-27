@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/mod_log_sql-1.101.ebuild,v 1.1 2007/07/29 14:41:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/mod_log_sql-1.101.ebuild,v 1.2 2008/01/27 23:09:00 hollow Exp $
 
 inherit apache-module
 
@@ -40,6 +40,6 @@ src_compile() {
 
 pkg_postinst() {
 	apache-module_pkg_postinst
-	einfo "See /usr/share/doc/${PF}/create_tables.sql.gz"
+	einfo "Refer to /usr/share/doc/${PF}/ for scripts"
 	einfo "on how to create logging tables."
 }
