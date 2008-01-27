@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.6.ebuild,v 1.3 2008/01/15 10:05:51 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.6.ebuild,v 1.4 2008/01/27 18:24:14 hollow Exp $
 
 inherit bash-completion depend.apache flag-o-matic elisp-common eutils java-pkg-opt-2 libtool multilib perl-module python
 
@@ -262,7 +262,7 @@ EOF
 	fi
 
 	# Install documentation
-	dodoc BUGS CHANGES COMMITTERS COPYING HACKING INSTALL README TRANSLATING
+	dodoc BUGS CHANGES COMMITTERS HACKING INSTALL README TRANSLATING
 	dodoc tools/xslt/svnindex.{css,xsl}
 	rm -fr tools/xslt
 
