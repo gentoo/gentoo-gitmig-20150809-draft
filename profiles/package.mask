@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8183 2008/01/28 19:38:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8184 2008/01/28 20:20:30 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -948,10 +948,6 @@ x11-wm/kahakai
 #=app-emulation/vmware-player-1.0.2.29634
 #=app-emulation/vmware-player-1.0.3.34682-r1
 =app-emulation/vmware-player-2.0.0.45731
-
-# Daniel Black <dragonheart@gentoo.org> (14 Sep 2007)
-# Added for testing libssh2
-=net-misc/curl-7.17.0-r1
 
 # Benedikt Boehm <hollow@gentoo.org> (08 Sep 2007)
 # breaks apr and openldap
