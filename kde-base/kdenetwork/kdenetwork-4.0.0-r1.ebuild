@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-4.0.0-r1.ebuild,v 1.1 2008/01/23 01:14:35 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-4.0.0-r1.ebuild,v 1.2 2008/01/28 09:49:39 ingmar Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ DESCRIPTION="KDE network applications: Kopete, KPPP, KGet,..."
 HOMEPAGE="http://www.kde.org/"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="+addbookmarks +alias +autoreplace +contactnotes debug gadu groupwise
+IUSE="+addbookmarks +alias +autoreplace bindist +contactnotes debug gadu groupwise
 +highlight +history htmlhandbook +jabber jpeg latex +msn +nowlistening oscar
 +plasma ppp +privacy qq slp sms ssl +statistics testbed +texteffect +translator
 +urlpicpreview vnc +webpresence winpopup yahoo zeroconf"
@@ -42,7 +42,7 @@ COMMONDEPEND="
 	statistics? ( dev-db/sqlite:3 )
 	vnc? ( >=net-libs/libvncserver-0.9 )
 	webpresence? ( dev-libs/libxml2 dev-libs/libxslt )
-	zeroconf? ( || ( net-dns/avahi net-misc/mDNSResponder ) )
+	zeroconf? ( || ( net-dns/avahi bindist? ( net-misc/mDNSResponder ) ) )
 "
 #	telepathy? ( net-libs/decibel )
 
@@ -67,6 +67,16 @@ src_compile() {
 	# Translated Category fields cause protocols not appearing, bug 206877.
 	sed -e '/X-KDE-PluginInfo-Category\[.*/d' \
 		-i "${S}"/kopete/protocols/*/kopete_*.desktop || die "Sed failed."
+
+	if use zeroconf; then
+		if has_version net-dns/avahi; then
+			mycmakeargs="${mycmakeargs} -DWITH_Avahi=ON -DWITH_DNSSD=OFF"
+		elif has_version net-misc/mDNSResponder; then
+			mycmakeargs="${mycmakeargs} -DWITH_Avahi=OFF -DWITH_DNSSD=ON"
+		else
+			die "USE=\"zeroconf\" enabled but neither net-dns/avahi nor net-misc/mDNSResponder were found."
+		fi
+	fi
 
 	# kdenetwork looks for 'xmms' which isn't in the official portage tree.
 	# I've disabled this check to prevent linking to user-installed things.
@@ -108,7 +118,6 @@ src_compile() {
 		$(cmake-utils_use_with webpresence)
 		$(cmake-utils_use_with winpopup)
 		$(cmake-utils_use_with yahoo)
-		$(cmake-utils_use_with zeroconf DNSSD)
 	"
 	#	$(cmake-utils_use_with messenger)
 	#	$(cmake-utils_use_with telepathy)
