@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1041 2008/01/28 19:33:35 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1042 2008/01/28 19:38:12 aballier Exp $
+
+  28 Jan 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask libcaca now that its fine
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   default-linux/amd64/2007.0/package.use.mask,
