@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/netcomics-cvs-0.14.1.ebuild,v 1.7 2006/05/13 04:44:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/netcomics-cvs-0.14.1.ebuild,v 1.8 2008/01/28 09:54:31 stefaan Exp $
 
-inherit cvs perl-app
+inherit perl-app cvs
 
 ECVS_SERVER="netcomics.cvs.sourceforge.net:/cvsroot/netcomics"
 ECVS_MODULE="netcomics"
@@ -37,6 +37,6 @@ src_install () {
 	# get rid of /var/tmp/portage references:
 	dosed $f
 		# files are installed in vendor_perl, not site_perl, change it too:
-		perl -pi -e "s/site_perl/vendor_perl/" ${D}${f}
+		perl -pi -e "s/site_perl/vendor_perl/" "${D}"${f}
 	done
 }
