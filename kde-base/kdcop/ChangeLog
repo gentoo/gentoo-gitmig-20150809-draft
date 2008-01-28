@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdcop
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.50 2007/10/19 22:05:10 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.51 2008/01/28 20:19:59 philantrop Exp $
+
+  28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> kdcop-3.5.8.ebuild:
+  Marked stable on amd64 as per bug 207634.
 
 *kdcop-3.5.8 (19 Oct 2007)
 
