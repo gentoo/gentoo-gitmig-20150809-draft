@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksim
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ChangeLog,v 1.81 2007/10/21 16:54:43 lavajoe Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ChangeLog,v 1.82 2008/01/28 22:05:31 philantrop Exp $
+
+  28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> ksim-3.5.8.ebuild:
+  Marked stable on amd64 as per bug 207634.
 
   21 Oct 2007; Joe Peterson <lavajoe@gentoo.org>
   +files/ksim-3.5.8-freebsd.patch, ksim-3.5.8.ebuild:

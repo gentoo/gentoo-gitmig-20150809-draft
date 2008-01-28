@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kbugbuster
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/ChangeLog,v 1.64 2008/01/17 23:35:06 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/ChangeLog,v 1.65 2008/01/28 22:48:05 philantrop Exp $
+
+  28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  kbugbuster-3.5.8.ebuild:
+  Marked stable on amd64 as per bug 207634.
 
 *kbugbuster-4.0.0 (17 Jan 2008)
 

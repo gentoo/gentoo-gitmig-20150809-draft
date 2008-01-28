@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kworldclock
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kworldclock/ChangeLog,v 1.3 2008/01/18 01:22:41 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kworldclock/ChangeLog,v 1.4 2008/01/28 22:23:46 philantrop Exp $
+
+  28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  kworldclock-3.5.8.ebuild:
+  Marked stable on amd64 as per bug 207634.
 
 *kworldclock-4.0.0 (18 Jan 2008)
 
