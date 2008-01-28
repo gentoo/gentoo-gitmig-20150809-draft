@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/nstx-1.1_beta6-r2.ebuild,v 1.2 2007/06/12 21:48:58 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/nstx-1.1_beta6-r2.ebuild,v 1.3 2008/01/28 00:12:54 robbat2 Exp $
 
 inherit versionator toolchain-funcs eutils
 
@@ -40,5 +40,5 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Please read the documentation provided in"
-	einfo "  /usr/share/doc/${PF}/README.gz"
+	einfo "  `find /usr/share/doc/${PF}/ -name 'README*'`"
 }
