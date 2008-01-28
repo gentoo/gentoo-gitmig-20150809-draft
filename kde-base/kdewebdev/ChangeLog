@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.142 2008/01/06 15:18:32 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.143 2008/01/28 17:04:45 jer Exp $
+
+  28 Jan 2008; Jeroen Roovers <jer@gentoo.org> kdewebdev-3.5.8-r1.ebuild:
+  Stable for HPPA (bug #207634).
 
 *kdewebdev-3.5.8-r1 (06 Jan 2008)
 

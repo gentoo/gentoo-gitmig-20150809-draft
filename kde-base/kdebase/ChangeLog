@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.421 2008/01/27 19:59:36 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.422 2008/01/28 16:42:02 jer Exp $
+
+  28 Jan 2008; Jeroen Roovers <jer@gentoo.org> kdebase-3.5.8-r6.ebuild:
+  Stable for HPPA (bug #207634).
 
   27 Jan 2008; Bo Ørsted Andresen <zlin@gentoo.org>
   +files/kdebase-4.0.0-opengl.patch, kdebase-4.0.0.ebuild:

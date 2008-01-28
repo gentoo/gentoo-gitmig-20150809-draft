@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.5.8.ebuild,v 1.3 2008/01/06 18:29:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.5.8.ebuild,v 1.4 2008/01/28 17:08:19 jer Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE educational apps"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="kig-scripting solver"
 
 DEPEND="kig-scripting? ( >=dev-libs/boost-1.32 )
