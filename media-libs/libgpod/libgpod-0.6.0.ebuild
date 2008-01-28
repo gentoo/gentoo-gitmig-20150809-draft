@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.4 2007/11/20 21:26:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.5 2008/01/28 01:11:26 tester Exp $
 
 inherit eutils
 
@@ -53,6 +53,6 @@ src_install() {
 
 pkg_postinst() {
 	einfo "If you use a newer Ipod like the Ipod classic, make sure to read"
-	einfo "the information in /usr/share/doc/${P}/README.SysInfo.bz2"
+	einfo "the information in README.SysInfo in /usr/share/doc/${P}"
 	einfo "This is no needed if HAL is installed and works correctly."
 }

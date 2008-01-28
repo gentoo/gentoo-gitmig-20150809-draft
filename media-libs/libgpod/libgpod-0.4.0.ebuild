@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.4.0.ebuild,v 1.13 2007/07/12 03:10:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.4.0.ebuild,v 1.14 2008/01/28 01:11:26 tester Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -28,8 +28,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
-	cd  ${S}
-	epatch ${FILESDIR}/libgpod-0.4.0-test-nogdk.patch
+	cd "${S}"
+	epatch "${FILESDIR}/libgpod-0.4.0-test-nogdk.patch"
 
 	AT_M4DIR="m4" eautoreconf
 }
@@ -44,6 +44,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc README
 }
