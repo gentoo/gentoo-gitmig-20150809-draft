@@ -14,6 +14,6 @@
 	<longdescription>
 		pyNotifier provides an implementation of a notifier/event
 		scheduler and is capable of wrapping other notifier
-		implementations of GTK+, Qt and wxWindows.
+		implementations of GTK+, Qt and wxWidgets.
 	</longdescription>
 </pkgmetadata>
