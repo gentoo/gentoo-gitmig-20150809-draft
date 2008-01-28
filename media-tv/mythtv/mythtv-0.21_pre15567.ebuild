@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre15567.ebuild,v 1.2 2008/01/24 19:43:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre15567.ebuild,v 1.3 2008/01/28 14:52:59 cardoe Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
 
@@ -236,9 +236,6 @@ src_install() {
 
 	insinto /usr/share/mythtv/contrib
 	doins -r contrib/*
-
-	insinto /usr/share/mythtv/configfiles
-	doins configfiles/*
 
 	dobin "${FILESDIR}"/runmythfe
 
