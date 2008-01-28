@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/opendict
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.14 2008/01/05 16:42:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.15 2008/01/28 16:01:45 armin76 Exp $
+
+  28 Jan 2008; Raúl Porcel <armin76@gentoo.org> metadata.xml:
+  Replace wxwindows with wxwidgets in metadata
 
   05 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> opendict-0.6.1.ebuild:
   Run python_mod_{optimise,cleanup} for bug #200286.
