@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pandodl/pandodl-0.9.2.0.ebuild,v 1.1 2007/12/28 13:36:21 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pandodl/pandodl-0.9.2.0.ebuild,v 1.2 2008/01/28 12:57:51 coldwind Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ RDEPEND="
 	x86? (
 		sys-libs/libstdc++-v3
 		>=x11-libs/gtk+-2.6
+		x11-libs/libXinerama
 		)
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
@@ -28,6 +29,7 @@ RDEPEND="
 		app-emulation/emul-linux-x86-xlibs
 		)"
 # >=dev-libs/expat-2.0.0: shipped with pandolibs tarball.
+# Probably pandolibs shouldn't depend on libXinerama, #207880
 
 S=${WORKDIR}/${PN}
 
