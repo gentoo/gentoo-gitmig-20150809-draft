@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2a.ebuild,v 1.3 2007/08/24 21:01:52 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2a.ebuild,v 1.4 2008/01/28 06:50:05 alonbl Exp $
 
 inherit linux-mod
 
@@ -20,7 +20,8 @@ DEPEND=""
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	if ! built_with_use sys-apps/util-linux crypt; then
+	if ! built_with_use sys-apps/util-linux crypt && \
+		! built_with_use sys-apps/util-linux loop-aes; then
 		eerror "loop-aes needs >=util-linux-2.12q-r1 compiled with crypt use-flag enabled!"
 		die "util-linux without crypt detected"
 	fi
@@ -51,7 +52,7 @@ pkg_postinst() {
 	linux-mod_pkg_postinst
 
 	einfo ""
-	einfo "For more instructions take a look at examples in"
-	einfo "/usr/share/doc/${PF}/README.gz"
+	einfo "For more instructions take a look at examples in README at:"
+	einfo "/usr/share/doc/${PF}"
 	einfo ""
 }

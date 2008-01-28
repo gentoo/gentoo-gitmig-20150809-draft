@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2b.ebuild,v 1.1 2008/01/17 18:15:01 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2b.ebuild,v 1.2 2008/01/28 06:50:05 alonbl Exp $
 
 inherit linux-mod
 
@@ -52,7 +52,7 @@ pkg_postinst() {
 	linux-mod_pkg_postinst
 
 	einfo ""
-	einfo "For more instructions take a look at examples in"
-	einfo "/usr/share/doc/${PF}/README.gz"
+	einfo "For more instructions take a look at examples in README at:"
+	einfo "/usr/share/doc/${PF}"
 	einfo ""
 }
