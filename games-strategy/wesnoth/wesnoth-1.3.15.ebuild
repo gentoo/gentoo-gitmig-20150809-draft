@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.3.14.ebuild,v 1.1 2008/01/15 22:26:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.3.15.ebuild,v 1.1 2008/01/28 06:34:52 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -56,6 +56,13 @@ src_unpack() {
 			-e "s/GAMES_USER_DED/${GAMES_USER_DED}/" \
 			-e "s/GAMES_GROUP/${GAMES_GROUP}/" "${FILESDIR}"/wesnothd.rc \
 			> "${T}"/wesnothd \
+			|| die "sed failed"
+	fi
+	if ! use nls ; then
+		cd "${S}"
+		sed -i \
+			-e '/^MAN_LANG/d' \
+			doc/man/Makefile.in \
 			|| die "sed failed"
 	fi
 }
