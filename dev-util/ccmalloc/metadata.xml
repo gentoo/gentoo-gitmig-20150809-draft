@@ -3,9 +3,10 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>hawking@gentoo.org</email>
+		<name>Ali Polatel</name>
 	</maintainer>
-	<longdescription>
+	<longdescription lang="en">
 		If you want to remove memory leaks from your C or C++ programs or you
 		experience strange bugs, probably due to pointer access to freed data,
 		then ccmalloc may be the right tool for you. In general it can help you
@@ -14,3 +15,4 @@
 		can not detect illegal memory reads, at least not all type of memory reads.
 	</longdescription>
 </pkgmetadata>
+

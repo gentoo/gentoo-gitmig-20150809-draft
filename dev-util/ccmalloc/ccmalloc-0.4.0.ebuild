@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccmalloc/ccmalloc-0.4.0.ebuild,v 1.1 2004/11/10 08:42:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccmalloc/ccmalloc-0.4.0.ebuild,v 1.2 2008/01/28 00:55:11 hawking Exp $
 
 inherit eutils
 
@@ -22,6 +22,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall PREFIX=${D}/usr || die "einstall failed"
+	einstall PREFIX="${D}"/usr || die "einstall failed"
 	dodoc BUGS FEATURES NEWS README TODO USAGE VERSION
 }
