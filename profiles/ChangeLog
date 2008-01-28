@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1043 2008/01/28 20:20:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1044 2008/01/28 21:09:10 aballier Exp $
+
+  28 Jan 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask dev-tex/koma-script for removal
 
   28 Jan 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask libcaca now that its fine
