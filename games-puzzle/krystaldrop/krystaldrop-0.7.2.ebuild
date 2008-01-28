@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.7 2007/03/13 23:20:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.8 2008/01/28 21:17:42 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -12,9 +12,9 @@ SRC_URI="mirror://sourceforge/krystaldrop/art_${PV}.tgz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="opengl"
+IUSE=""
 
-DEPEND="opengl? ( virtual/opengl )
+DEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer
@@ -42,19 +42,10 @@ src_unpack() {
 		-e "s:BINDIR:\"${GAMES_STATEDIR}/${PN}\":" \
 			Sources/KrystalDrop/Controller/HighScoresController.cpp \
 				|| die "sed HighScoresController.cpp failed"
-
-	if ! use opengl ; then
-		sed -i \
-			-e "/<opengl>.*<\/opengl>/ s|yes|no|" kdrop.xml \
-				|| die "sed kdrop.xml failed"
-		sed -i \
-			-e '/^USE_OPENGL/ s/yes/no/' Sources/Makefile \
-				|| die "sed Sources/Makefile failed"
-	fi
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodir "${GAMES_STATEDIR}/${PN}"
 	mv "${D}${GAMES_DATADIR}/${PN}/art/survival.sco" \
 		"${D}${GAMES_STATEDIR}/${PN}/" || die "mv failed"
@@ -62,7 +53,7 @@ src_install() {
 	dodoc CHANGES README
 	doman doc/kdrop.6
 	newicon art/drop.png ${PN}.png
-	make_desktop_entry kdrop "KrystalDrop" ${PN}.png
+	make_desktop_entry kdrop "KrystalDrop" ${PN}
 
 	prepgamesdirs
 }
