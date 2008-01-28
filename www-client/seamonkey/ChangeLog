@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.114 2008/01/23 19:37:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.115 2008/01/28 19:24:05 armin76 Exp $
+
+  28 Jan 2008; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.7.ebuild:
+  Bump patchset to make it compile with gcc-4.3, wrt #204703
 
   23 Jan 2008; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.7.ebuild:
   Bump patchset to fix building with nss-3.12
