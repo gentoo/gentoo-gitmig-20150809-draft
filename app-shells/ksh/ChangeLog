@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/ksh
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.32 2007/12/25 15:47:40 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.33 2008/01/28 21:35:25 armin76 Exp $
+
+*ksh-93.20071105 (28 Jan 2008)
+
+  28 Jan 2008; Raúl Porcel <armin76@gentoo.org> +ksh-93.20071105.ebuild:
+  Version bump, fix bug #145400
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing taviso from metadata.xml as per #202471. Assigning to
