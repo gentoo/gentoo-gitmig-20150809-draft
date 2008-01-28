@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/kwest/kwest-1.0.ebuild,v 1.10 2005/04/24 03:16:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/kwest/kwest-1.0.ebuild,v 1.11 2008/01/28 01:11:31 mr_bones_ Exp $
 
+ARTS_REQUIRED=yes #bug #207816
 inherit kde
 need-kde 3
 
