@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.13.2.ebuild,v 1.2 2008/01/27 23:13:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.13.2.ebuild,v 1.3 2008/01/28 11:09:04 drac Exp $
 
 GCONF_DEBUG=no
 
@@ -15,14 +15,13 @@ SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="aac doc daap encode ipod flac mad mtp njb vorbis"
+IUSE="aac encode ipod flac mad mtp njb vorbis zeroconf"
 
 RDEPEND=">=dev-lang/mono-1.2
 	>=dev-dotnet/gtk-sharp-2.10
 	>=dev-dotnet/gnomevfs-sharp-2.8
 	>=dev-dotnet/gconf-sharp-2.8
-	>=media-libs/gstreamer-${GVER}
-	>=media-libs/gst-plugins-base-${GVER}
+	>=media-libs/gst-plugins-bad-${GVER}
 	>=media-libs/gst-plugins-good-${GVER}
 	>=media-libs/gst-plugins-ugly-${GVER}
 	>=media-plugins/gst-plugins-alsa-${GVER}
@@ -38,8 +37,7 @@ RDEPEND=">=dev-lang/mono-1.2
 	>=media-plugins/gst-plugins-cdparanoia-${GVER}
 	=media-libs/musicbrainz-2*
 	njb? ( >=dev-dotnet/njb-sharp-0.3 )
-	daap? ( >=dev-dotnet/mono-zeroconf-0.7.2 )
-	>=dev-libs/glib-2
+	zeroconf? ( >=dev-dotnet/mono-zeroconf-0.7.2 )
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libbonobo-2
 	>=gnome-base/gnome-desktop-2
@@ -59,7 +57,7 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 pkg_setup() {
 	# --enable-daap also disables.
-	use daap || G2CONF="${G2CONF} --disable-daap"
+	use zeroconf || G2CONF="${G2CONF} --disable-daap"
 
 	# --disable-gstreamer-plugins-check because it breaks detecting 
 	# decodebin when portage temp directory is on NFS share.
