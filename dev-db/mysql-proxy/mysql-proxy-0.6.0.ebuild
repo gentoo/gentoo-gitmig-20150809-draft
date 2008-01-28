@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/mysql-proxy-0.6.0.ebuild,v 1.2 2007/10/03 19:50:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/mysql-proxy-0.6.0.ebuild,v 1.3 2008/01/28 01:08:04 rich0 Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://forge.mysql.com/wiki/MySQL_Proxy"
 SRC_URI="mirror://mysql/Downloads/MySQL-Proxy/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="lua examples"
 DEPEND=">=dev-libs/libevent-1.0
 	>=dev-libs/glib-2.0

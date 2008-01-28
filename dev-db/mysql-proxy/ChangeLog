@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql-proxy
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/ChangeLog,v 1.1 2007/10/03 15:36:22 wschlich Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/ChangeLog,v 1.2 2008/01/28 01:08:04 rich0 Exp $
+
+  28 Jan 2008; Richard Freeman <rich0@gentoo.org> mysql-proxy-0.6.0.ebuild:
+  marked ~amd64 - bug #195169
 
 *mysql-proxy-0.6.0 (03 Oct 2007)
 
