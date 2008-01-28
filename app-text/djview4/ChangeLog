@@ -1,6 +1,11 @@
 # ChangeLog for app-text/djview4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.5 2008/01/15 22:30:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.6 2008/01/28 20:35:29 aballier Exp $
+
+*djview4-4.3 (28 Jan 2008)
+
+  28 Jan 2008; Alexis Ballier <aballier@gentoo.org> +djview4-4.3.ebuild:
+  version bump, thanks to Petr Pisar <petr.pisar@atlas.cz>, bug #207959
 
   15 Jan 2008; Alexis Ballier <aballier@gentoo.org> djview4-4.2.3.ebuild:
   add missing pkgconfig dep, bug #206021
