@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX kdemultimedia-3.5.5+flac-1.1.3.patch 2456 RMD160 67dfbe88872adb5fc2064ad0cf545931a895500f SHA1 d6a5b9d518eb465b1174c127593f246fb44109e0 SHA256 bb337df8f696f49f1d121ca59113c95f7aef788bfd574ab20fdaf8c7e090021b
 MD5 72791ea8b5767cec50d02375322a2315 files/kdemultimedia-3.5.5+flac-1.1.3.patch 2456
 RMD160 67dfbe88872adb5fc2064ad0cf545931a895500f files/kdemultimedia-3.5.5+flac-1.1.3.patch 2456
@@ -6,6 +9,10 @@ AUX kdemultimedia-3.5.6-alsa-tests.patch 10263 RMD160 cf2099a97198c74bc3823d8111
 MD5 4ea49001004c3e6ea78c184653b5d987 files/kdemultimedia-3.5.6-alsa-tests.patch 10263
 RMD160 cf2099a97198c74bc3823d81114723028b34660c files/kdemultimedia-3.5.6-alsa-tests.patch 10263
 SHA256 18caf016dee9e68c2819aec8a223fcf6946a1e2cb861b6afa612af7fa81178ee files/kdemultimedia-3.5.6-alsa-tests.patch 10263
+AUX kdemultimedia-4.0.0-flac-1.1.3.patch 2258 RMD160 945736ab4699b1a56fb604321132a5c5eef6abac SHA1 241c5243aa5af133932135a4dcfbbe62f246bcf2 SHA256 3f9069a670bdab3f93d109719c213a2855c89a76aaffa7f2ef753f26046d5c67
+MD5 7521bd04569d46af148291621e0574e2 files/kdemultimedia-4.0.0-flac-1.1.3.patch 2258
+RMD160 945736ab4699b1a56fb604321132a5c5eef6abac files/kdemultimedia-4.0.0-flac-1.1.3.patch 2258
+SHA256 3f9069a670bdab3f93d109719c213a2855c89a76aaffa7f2ef753f26046d5c67 files/kdemultimedia-4.0.0-flac-1.1.3.patch 2258
 AUX kdemultimedia-kioslaves-3.5.8-freebsd.patch 894 RMD160 054c2d7b1e037ac1307281183f0a2ebc753ff26b SHA1 18afed5747e761444bda8788d30c98dd7838e27f SHA256 da6dbdf3939534e5efc6019244321113814de93f4e709f9831a51d57d8902abf
 MD5 d28b6a014b02549db3d74ff182a21d11 files/kdemultimedia-kioslaves-3.5.8-freebsd.patch 894
 RMD160 054c2d7b1e037ac1307281183f0a2ebc753ff26b files/kdemultimedia-kioslaves-3.5.8-freebsd.patch 894
@@ -39,14 +46,14 @@ EBUILD kdemultimedia-3.5.8.ebuild 2818 RMD160 3c8bdc5e960aeda12f423f51c7d54c9fb8
 MD5 ba288ca50f8555de3464bc354a847753 kdemultimedia-3.5.8.ebuild 2818
 RMD160 3c8bdc5e960aeda12f423f51c7d54c9fb8cc5325 kdemultimedia-3.5.8.ebuild 2818
 SHA256 0dafa2a8567cf38158972b4a85271115f8bdf36b506a432ffc3d205934d768b8 kdemultimedia-3.5.8.ebuild 2818
-EBUILD kdemultimedia-4.0.0.ebuild 1076 RMD160 06596b39c6bd101e903b8eb33dc9726a7b9c2da6 SHA1 9e4a9d6d6a28b33a79146fb865ced6d7efece420 SHA256 e822465271c6edca58aa4f8fe5cd512a43e42817a5a51fb1f0dbb06656a7820b
-MD5 709e6d9850d5f339d227fa319c6c1d20 kdemultimedia-4.0.0.ebuild 1076
-RMD160 06596b39c6bd101e903b8eb33dc9726a7b9c2da6 kdemultimedia-4.0.0.ebuild 1076
-SHA256 e822465271c6edca58aa4f8fe5cd512a43e42817a5a51fb1f0dbb06656a7820b kdemultimedia-4.0.0.ebuild 1076
-MISC ChangeLog 37289 RMD160 e298b712dacf1be578d80eea28beb6ebc5d85451 SHA1 d20f60f85f5368df69e32408866966edd53cccca SHA256 06cbbf42ca83463e5f5e3ff6df2dbf897a95ae96a7e695834d55465dba1d9e62
-MD5 ce6318de8906ad59b064663c53d07da5 ChangeLog 37289
-RMD160 e298b712dacf1be578d80eea28beb6ebc5d85451 ChangeLog 37289
-SHA256 06cbbf42ca83463e5f5e3ff6df2dbf897a95ae96a7e695834d55465dba1d9e62 ChangeLog 37289
+EBUILD kdemultimedia-4.0.0-r1.ebuild 1411 RMD160 ee2e43a342e5425a993302d712861a8e0cad025c SHA1 cdcf86e46dd1157b67a62de150c1d268723fb4b2 SHA256 c13ba8187fccf8bdb37031e2aa245422d890860a14754cfa697255f1fbfaaab7
+MD5 c1a2cf52144de72c8ed11c56947de1f8 kdemultimedia-4.0.0-r1.ebuild 1411
+RMD160 ee2e43a342e5425a993302d712861a8e0cad025c kdemultimedia-4.0.0-r1.ebuild 1411
+SHA256 c13ba8187fccf8bdb37031e2aa245422d890860a14754cfa697255f1fbfaaab7 kdemultimedia-4.0.0-r1.ebuild 1411
+MISC ChangeLog 37518 RMD160 69eba251e257bc9ebff377f1761062f9e329b212 SHA1 1d6933d07bdbd555b6e82de26ae8bc8cdc684e37 SHA256 e3daf7a508ef5e0dcb56e237554022e7917d27980057359352a3bb4902b0c7ca
+MD5 b3508be49ea5aa5bc14474a7801f92ca ChangeLog 37518
+RMD160 69eba251e257bc9ebff377f1761062f9e329b212 ChangeLog 37518
+SHA256 e3daf7a508ef5e0dcb56e237554022e7917d27980057359352a3bb4902b0c7ca ChangeLog 37518
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -66,6 +73,13 @@ SHA256 74fc4bdf05515e27c8df29337b0948e9e6c900e4b44010ce065eae5d7fa4ef6c files/di
 MD5 21457610efb171320a91b835e6828f86 files/digest-kdemultimedia-3.5.8-r1 265
 RMD160 4a266e50b00720b36702d36074f5a2e8a9ca2efb files/digest-kdemultimedia-3.5.8-r1 265
 SHA256 74fc4bdf05515e27c8df29337b0948e9e6c900e4b44010ce065eae5d7fa4ef6c files/digest-kdemultimedia-3.5.8-r1 265
-MD5 ef9a48b2f73cdaa0c74cb489972372ca files/digest-kdemultimedia-4.0.0 265
-RMD160 a469db9b76394764a2b13415d847271082bb274b files/digest-kdemultimedia-4.0.0 265
-SHA256 9734be39d215dfe85d190ac2352bbbae66c2d14239b80ec13632772c30dd0ed9 files/digest-kdemultimedia-4.0.0 265
+MD5 ef9a48b2f73cdaa0c74cb489972372ca files/digest-kdemultimedia-4.0.0-r1 265
+RMD160 a469db9b76394764a2b13415d847271082bb274b files/digest-kdemultimedia-4.0.0-r1 265
+SHA256 9734be39d215dfe85d190ac2352bbbae66c2d14239b80ec13632772c30dd0ed9 files/digest-kdemultimedia-4.0.0-r1 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHnTWGfxJ68Jl1NeERAg+wAKCuC7gz7mspJXc4fVQkzU8qCJoO5ACePTk+
+nUsp5jYvdtJLUiW6mAIThBo=
+=r0t/
+-----END PGP SIGNATURE-----
