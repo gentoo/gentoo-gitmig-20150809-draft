@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.90 2008/01/28 14:03:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.91 2008/01/28 17:36:04 pva Exp $
+
+  28 Jan 2008; <pva@gentoo.org> wget-1.10.2.ebuild, wget-1.11.ebuild:
+  License changed to GPL-3, thank you Winterheart for report, quotation fix.
 
 *wget-1.11 (28 Jan 2008)
 
