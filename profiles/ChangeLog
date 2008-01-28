@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1039 2008/01/25 21:11:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1040 2008/01/28 17:49:02 pva Exp $
+
+  28 Jan 2008; Peter Volkov <pva@gentoo.org> package.mask:
+  Masked >=app-arch/rpm-4.4.7-r3: net-snmp and sussen are broken with it,
+  bug #205280
 
   25 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> updates/1Q-2008:
   slot moves for java packages don't work very well
