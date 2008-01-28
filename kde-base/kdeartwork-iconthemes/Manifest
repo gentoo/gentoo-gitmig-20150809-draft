@@ -18,18 +18,18 @@ EBUILD kdeartwork-iconthemes-3.5.7.ebuild 508 RMD160 ef9a2fa170f510024bc0acbbd22
 MD5 854cef783a1ed5e30fd78398f8cdd3dc kdeartwork-iconthemes-3.5.7.ebuild 508
 RMD160 ef9a2fa170f510024bc0acbbd22288f4d7d45ab5 kdeartwork-iconthemes-3.5.7.ebuild 508
 SHA256 8efd872a777dcf3ec2d6f393049e2abb53cc5e23c915be07a49e066d04c13225 kdeartwork-iconthemes-3.5.7.ebuild 508
-EBUILD kdeartwork-iconthemes-3.5.8.ebuild 518 RMD160 ae343d35beb4c9fa2ebd289f9bf91261f94d101e SHA1 cb57aa211c5e5eb42fe279a57bb881f6beb3a873 SHA256 a1f57eb0ba355f3557a94f5f1b852a08b843954136bd92af90c50e9890ace84c
-MD5 2b135dcccaed71265d405fcbd9764b78 kdeartwork-iconthemes-3.5.8.ebuild 518
-RMD160 ae343d35beb4c9fa2ebd289f9bf91261f94d101e kdeartwork-iconthemes-3.5.8.ebuild 518
-SHA256 a1f57eb0ba355f3557a94f5f1b852a08b843954136bd92af90c50e9890ace84c kdeartwork-iconthemes-3.5.8.ebuild 518
+EBUILD kdeartwork-iconthemes-3.5.8.ebuild 517 RMD160 9bb57773868beee635bc7bf6a2497cf9dcc52490 SHA1 0c89aca57818c3b80ba8ab0980052b768edef2eb SHA256 d44db0981ab65eb65966d2bd9e228128dbbb63230fd1f2d1dc3bbe72e8a2b958
+MD5 25fac913a2375ec44e6a2acb7a6e68bb kdeartwork-iconthemes-3.5.8.ebuild 517
+RMD160 9bb57773868beee635bc7bf6a2497cf9dcc52490 kdeartwork-iconthemes-3.5.8.ebuild 517
+SHA256 d44db0981ab65eb65966d2bd9e228128dbbb63230fd1f2d1dc3bbe72e8a2b958 kdeartwork-iconthemes-3.5.8.ebuild 517
 EBUILD kdeartwork-iconthemes-4.0.0.ebuild 412 RMD160 de9b3f8c7fd10a7bd8d956b69b10f2873d8c57f8 SHA1 7da43248dc078194451a9c9219703667c268bd01 SHA256 d663ff1e3b2f83b78fdd6b2e613debabf8b8b6db9f9d41000f91ce4be6e8cd48
 MD5 a80850799fbbc8087bdd2b33ebca651c kdeartwork-iconthemes-4.0.0.ebuild 412
 RMD160 de9b3f8c7fd10a7bd8d956b69b10f2873d8c57f8 kdeartwork-iconthemes-4.0.0.ebuild 412
 SHA256 d663ff1e3b2f83b78fdd6b2e613debabf8b8b6db9f9d41000f91ce4be6e8cd48 kdeartwork-iconthemes-4.0.0.ebuild 412
-MISC ChangeLog 9964 RMD160 08d2b1751cebd660646f1b9cdfdf09cda60ea8e1 SHA1 80ecae0049ed13cf3679439efb35fc509170d527 SHA256 3f4539c1c019b78936cb8f6eecf16eb6b8dc05a064d1bd60184c1126f31641a5
-MD5 d6bbac3eace15020874a94e1dd0590d3 ChangeLog 9964
-RMD160 08d2b1751cebd660646f1b9cdfdf09cda60ea8e1 ChangeLog 9964
-SHA256 3f4539c1c019b78936cb8f6eecf16eb6b8dc05a064d1bd60184c1126f31641a5 ChangeLog 9964
+MISC ChangeLog 10102 RMD160 d4b22420103bc010ee4caaeb1518cff458ff9bab SHA1 bba158d1162a54cafd413ec62fec2302af055463 SHA256 2ff7c0c8978bac4e403197310b69ea8b1be3fd5c0f999c497b92e87a735c7323
+MD5 95c8fbd1bf8b0d57707deea897c91063 ChangeLog 10102
+RMD160 d4b22420103bc010ee4caaeb1518cff458ff9bab ChangeLog 10102
+SHA256 2ff7c0c8978bac4e403197310b69ea8b1be3fd5c0f999c497b92e87a735c7323 ChangeLog 10102
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -52,7 +52,7 @@ SHA256 ebc68d2dc03059c014e3dcb4718f54a575360fa240df5d678a6ca2df086dd4d1 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFHj+e2CkvF58q80IkRAilIAKCLiBp9jx4eWFv0ur54c9gSTpdo8QCfYWQT
-xXE213+RYkiMrlOQ/7O1DJI=
-=6Xep
+iD8DBQFHnjthCkvF58q80IkRAh3zAJ9xAskraJRhEYFBMqeE6kXNpjGBUwCgmogI
+rxe/ubzT+E25qTbzm583IXo=
+=HJVF
 -----END PGP SIGNATURE-----
