@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.7 2007/11/20 02:17:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.8 2008/01/28 01:22:18 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -64,7 +64,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd "${S}"
-	sed -i -e 's:BUILD_SOFTX:BUILD_X11:' Makefile
+	sed -i -e 's:BUILD_SOFTX:BUILD_X11:' Makefile || die
 	epatch "${FILESDIR}"/${P}-amd64.patch # make sure this is still needed in future versions
 	epatch "${FILESDIR}"/${P}-gentoo-paths.patch
 
@@ -88,8 +88,9 @@ src_unpack() {
 	fi
 	if use rogue ; then
 		cd "${S}"/src
-		epatch "${FILESDIR}"/0.16-rogue-nan.patch
-		epatch "${FILESDIR}"/0.16-rogue-armor.patch
+		epatch \
+			"${FILESDIR}"/0.16-rogue-nan.patch \
+			"${FILESDIR}"/0.16-rogue-armor.patch
 	fi
 }
 
@@ -172,18 +173,18 @@ src_install() {
 	# q2max files
 	if use qmax ; then
 		dodir "${q2maxdir}"
-		cp -rf my-rel-YES/* "${D}/${q2maxdir}"/
-		newgamesbin "${D}/${q2maxdir}"/quake2 quake2-qmax
-		newgamesbin "${D}/${q2maxdir}"/q2ded q2ded-qmax
+		cp -rf my-rel-YES/* "${D}/${q2maxdir}"/ || die
+		newgamesbin "${D}/${q2maxdir}"/quake2 quake2-qmax || die
+		newgamesbin "${D}/${q2maxdir}"/q2ded q2ded-qmax || die
 		rm "${D}/${q2maxdir}"/{quake2,q2ded}
 		use sdl \
 			&& newgamesbin "${D}/${q2maxdir}"/sdlquake2 sdlquake2-qmax \
 			&& rm "${D}/${q2maxdir}"/sdlquake2
 
 		insinto "${q2maxdir}"/baseq2
-		doins "${DISTDIR}"/maxpak.pak
+		doins "${DISTDIR}"/maxpak.pak || die
 
-		make_desktop_entry quake2-qmax Quake2-qmax quake2.xpm
+		make_desktop_entry quake2-qmax Quake2-qmax quake2
 	fi
 
 	prepgamesdirs
@@ -192,7 +193,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	elog "Go read /usr/share/doc/${PF}/README-postinstall.gz"
+	elog "Go read README-postinstall in /usr/share/doc/${PF}"
 	elog "right now! It's important - This install is just the engine, you still need"
 	elog "the data paks. Go read."
 
