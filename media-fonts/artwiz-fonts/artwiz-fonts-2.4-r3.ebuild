@@ -1,18 +1,18 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4-r3.ebuild,v 1.15 2007/10/02 01:44:58 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4-r3.ebuild,v 1.16 2008/01/28 14:47:45 vapier Exp $
 
 inherit font font-ebdftopcf
 
 MY_PN="xfonts-artwiz"
 S="${WORKDIR}/${MY_PN}-2.3"
 DESCRIPTION="Artwiz Fonts"
-SRC_URI="mirror://debian/pool/main/${MY_PN:0:1}/${MY_PN}/${MY_PN}_${PV}.tar.gz"
 HOMEPAGE="http://fluxbox.sourceforge.net/docs/artwiz-fonts.php"
+SRC_URI="mirror://debian/pool/main/${MY_PN:0:1}/${MY_PN}/${MY_PN}_${PV}.tar.gz"
 
-SLOT=0
 LICENSE="ZBL"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 FONT_PN="artwiz"
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	font_src_install
-	doins ${S}/debian/fonts.alias
+	doins "${S}"/debian/fonts.alias
 
 	if [ -f ${ROOT}/etc/X11/fs/config -a -z "$(grep artwiz /etc/X11/fs/config)" ]
 	then
