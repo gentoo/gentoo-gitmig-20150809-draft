@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libticables
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables/ChangeLog,v 1.6 2007/02/09 05:23:46 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables/ChangeLog,v 1.7 2008/01/28 14:28:03 markusle Exp $
+
+  28 Jan 2008; Markus Dittrich <markusle@gentoo.org>
+  libticables-3.8.6.ebuild, libticables-3.9.6.ebuild:
+  Fixed improper file description (see bug #207792).
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

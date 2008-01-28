@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables/libticables-3.9.6.ebuild,v 1.1 2006/03/15 04:39:07 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables/libticables-3.9.6.ebuild,v 1.2 2008/01/28 14:28:03 markusle Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D}
+	make install DESTDIR="${D}"
 	dobin ticables-config
 	dodoc AUTHORS LOGO NEWS README
 	doman ticables-config.1
@@ -37,7 +37,7 @@ pkg_postinst() {
 	einfo "To use \"${PN}\", you might need one of the following"
 	einfo "kernel modules: \"tipar\", \"tiser\" or \"tiusb\". If you install"
 	einfo "one of these modules, you might have to reinstall"
-	einfo "\"${PN}\". Please read the file:"
-	einfo "\"/usr/share/doc/${PF}/README.gz\" for more"
+	einfo "\"${PN}\". Please look at the README file in"
+	einfo "\"/usr/share/doc/${PF}\" for more"
 	einfo "details."
 }
