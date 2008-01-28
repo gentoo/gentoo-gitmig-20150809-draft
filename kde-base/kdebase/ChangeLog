@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.422 2008/01/28 16:42:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.423 2008/01/28 23:28:49 philantrop Exp $
+
+  28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  kdebase-3.5.8-r6.ebuild:
+  Marked stable on amd64 as per bug 207634.
 
   28 Jan 2008; Jeroen Roovers <jer@gentoo.org> kdebase-3.5.8-r6.ebuild:
   Stable for HPPA (bug #207634).
