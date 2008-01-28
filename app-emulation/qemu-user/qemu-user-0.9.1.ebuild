@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.9.1.ebuild,v 1.1 2008/01/27 10:01:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.9.1.ebuild,v 1.2 2008/01/28 09:56:06 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,25 +27,11 @@ QA_TEXTRELS="usr/bin/qemu-armeb
 	usr/bin/qemu-arm
 	usr/bin/qemu-ppc"
 
-#set_target_list() {
-#	TARGET_LIST="i386-user ppc-user mips-user"
-# arm broken
-#	TARGET_LIST="arm-user armeb-user i386-user ppc-user mips-user"
-#	export TARGET_LIST
-#}
-
-#pkg_setup() {
-#	if [ "$(gcc-major-version)" == "4" ]; then
-#		die "Qemu must build with GCC 3"
-#	fi
-#}
-
 #RUNTIME_PATH="/emul/gnemul/"
 src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}/qemu-0.7.0-ppc-linker.patch"
 
 	# Alter target makefiles to accept CFLAGS set via flag-o.
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
@@ -68,12 +54,8 @@ src_compile() {
 	filter-flags -fpie -fstack-protector
 
 	myconf="--disable-gcc-check"
-#	set_target_list
-#		--interp-prefix=${RUNTIME_PATH}/qemu-%M
 	./configure \
 		--prefix=/usr \
-		--enable-slirp \
-		--kernel-path=${KV_DIR} \
 		--enable-linux-user \
 		--disable-system \
 		${myconf} \
@@ -83,12 +65,7 @@ src_compile() {
 }
 
 src_install() {
-	make install \
-		prefix="${D}/usr" \
-		bindir="${D}/usr/bin" \
-		datadir="${D}/usr/share/qemu" \
-		docdir="${D}/usr/share/doc/${P}" \
-		mandir="${D}/usr/share/man" || die
+	einstall docdir="${D}/usr/share/doc/${P}" || die
 
 	rm -fR "${D}/usr/share/{man,qemu}"
 	rm -fR "${D}/usr/bin/qemu-img"
