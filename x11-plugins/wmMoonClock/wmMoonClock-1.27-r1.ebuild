@@ -1,8 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/wmMoonClock-1.27.ebuild,v 1.15 2008/01/28 13:43:13 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/wmMoonClock-1.27-r1.ebuild,v 1.1 2008/01/28 13:43:13 s4t4n Exp $
 
-IUSE=""
+inherit eutils multilib toolchain-funcs
+
 DESCRIPTION="dockapp that shows lunar ephemeris to a high accuracy."
 SRC_URI="http://nis-www.lanl.gov/~mgh/WindowMaker/${P}.tar.gz"
 HOMEPAGE="http://nis-www.lanl.gov/~mgh/WindowMaker/DockApps.shtml"
@@ -16,19 +17,22 @@ DEPEND="${RDEPEND}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~mips ppc ~sparc"
+KEYWORDS="~x86 ~amd64 ~mips ~ppc ~sparc"
+IUSE=""
+
+S="${WORKDIR}/${P}/Src"
 
 src_unpack() {
-	unpack "${A}" ; cd "${S}/Src"
-	sed -i -e "s:-O2:${CFLAGS}:" Makefile
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 src_compile() {
-	emake -C Src || die "parallel make failed"
+	emake CC="$(tc-getCC)" LIBDIR="/usr/$(get_libdir)" || die "parallel make failed"
 }
 
 src_install () {
-	dobin Src/wmMoonClock
-	doman Src/wmMoonClock.1
-	dodoc BUGS
+	emake DESTDIR="${D}" install || die "install failed"
+	dodoc ../BUGS
 }
