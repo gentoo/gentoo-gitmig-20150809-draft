@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.ebuild,v 1.1 2007/12/28 18:53:57 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.ebuild,v 1.2 2008/01/28 12:02:23 drac Exp $
 
 inherit cmake-utils eutils
 
@@ -37,7 +37,7 @@ RDEPEND="dev-libs/libxml2
 	truetype? ( media-libs/freetype )
 	gtk? ( >=x11-libs/gtk+-2
 		x11-libs/libX11 )
-	qt4? ( >=x11-libs/qt-4
+	qt4? ( >=x11-libs/qt-4.3
 		x11-libs/libX11 )
 	encode? (
 		aac? ( media-libs/faac )
