@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-clock
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-clock/ChangeLog,v 1.6 2007/07/29 15:49:53 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-clock/ChangeLog,v 1.7 2008/01/28 15:55:18 zzam Exp $
+
+*vdr-clock-0.0.10 (28 Jan 2008)
+
+  28 Jan 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-clock-0.0.10.ebuild:
+  Version bumped.
 
   29 Jul 2007; Matthias Schwarzott <zzam@gentoo.org> vdr-clock-0.0.6.ebuild:
   Marked stable on x86.
