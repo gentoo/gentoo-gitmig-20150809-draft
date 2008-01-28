@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre15635.ebuild,v 1.1 2008/01/28 16:02:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre15635.ebuild,v 1.2 2008/01/28 16:05:16 cardoe Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
 
@@ -134,7 +134,8 @@ src_compile() {
 		--enable-xv
 		--disable-directfb
 		--enable-x11
-		--enable-proc-opt"
+		--enable-proc-opt
+		--enable-gpl"
 
 	if use mmx || use amd64; then
 		myconf="${myconf} --enable-mmx"
