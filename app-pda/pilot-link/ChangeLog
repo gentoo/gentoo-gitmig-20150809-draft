@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/pilot-link
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.33 2007/12/22 14:49:18 philantrop Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.34 2008/01/28 19:34:49 philantrop Exp $
+
+  28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  pilot-link-0.12.3.ebuild:
+  Marked stable on amd64 as per bug 207634.
 
   22 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org>
   files/pilot-link-0.12.3-int_types.patch:
