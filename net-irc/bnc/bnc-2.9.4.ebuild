@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.9.4.ebuild,v 1.7 2007/06/14 20:34:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.9.4.ebuild,v 1.8 2008/01/28 06:13:11 vapier Exp $
 
 inherit eutils
 
@@ -32,12 +32,12 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die
 	mv "${D}"/usr/bin/{,bnc}mkpasswd || die
 	dodoc Changelog README example.conf motd
 }
 
 pkg_postinst() {
 	einfo "You can find an example motd/conf file here:"
-	einfo " /usr/share/doc/${PF}/{example.conf,motd}.gz"
+	einfo " /usr/share/doc/${PF}/"
 }
