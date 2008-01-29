@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/evms
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.78 2007/12/03 20:13:28 dev-zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.79 2008/01/29 08:53:53 dev-zero Exp $
+
+  29 Jan 2008; Tiziano Müller <dev-zero@gentoo.org> evms-2.5.5-r10.ebuild:
+  Added conditional pkg-config dependencies for USE-flags gtk and ncurses (bug
+  #204707)
 
 *evms-2.5.5-r10 (03 Dec 2007)
 

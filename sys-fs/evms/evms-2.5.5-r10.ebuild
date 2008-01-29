@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r10.ebuild,v 1.1 2007/12/03 20:13:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r10.ebuild,v 1.2 2008/01/29 08:53:53 dev-zero Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -22,11 +22,13 @@ RDEPEND="virtual/libc
 	sys-fs/device-mapper
 	>=sys-apps/baselayout-1.9.4-r6
 	gtk? ( =x11-libs/gtk+-1*
-		=dev-libs/glib-1* )
+		=dev-libs/glib-1*
+		dev-util/pkgconfig )
 	hb? ( !hb2? ( =sys-cluster/heartbeat-1* ) )
 	hb2? ( >=sys-cluster/heartbeat-2 )
 	ncurses? ( sys-libs/ncurses
-		>=dev-libs/glib-2.12.4-r1 )"
+		>=dev-libs/glib-2.12.4-r1
+		dev-util/pkgconfig )"
 DEPEND="${RDEPEND}"
 
 # While the test-concept holds, many of them fail due to unknown reasons.
