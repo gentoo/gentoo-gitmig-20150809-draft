@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.18.1.ebuild,v 1.9 2007/11/15 20:34:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.18.1.ebuild,v 1.10 2008/01/29 16:34:41 dang Exp $
+EAPI="1"
 
 inherit gnome2
 
@@ -24,7 +25,7 @@ RDEPEND=">=gnome-base/gconf-2
 	>=gnome-base/libgnomeui-2.5.92
 	>=gnome-base/libglade-2
 	>=dev-libs/libxml2-2.4.6
-	>=net-libs/libsoup-2.2.96
+	>=net-libs/libsoup-2.2.96:2.2
 	>=gnome-base/libgtop-2.13.3
 	gnome-extra/evolution-data-server
 	>=sys-devel/gdb-5.1"
