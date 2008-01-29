@@ -10,11 +10,14 @@ Index: kalgebra/src/CMakeLists.txt
  	algebrahighlighter.cpp
  	expressionedit.cpp
  	graph2d.cpp
-@@ -45,6 +44,7 @@
- target_link_libraries(kalgebra  ${KDE4_KHTML_LIBS} analitza)
+@@ -33,6 +32,10 @@
+ 	functionimpl.cpp
+ )
  
- if(OPENGL_FOUND)
++if(OPENGL_FOUND)
 +   set(kalgebra_SRCS ${kalgebra_SRCS} graph3d.cpp)
-    target_link_libraries(kalgebra  ${QT_QTOPENGL_LIBRARY} ${OPENGL_gl_LIBRARY} ${OPENGL_glu_LIBRARY})
- endif(OPENGL_FOUND)
++endif(OPENGL_FOUND)
++
+ kde4_add_library(analitza ${analitza_SRCS})
+ target_link_libraries(analitza ${QT_QTCORE_LIBRARY} ${QT_QTXML_LIBRARY} ${KDE4_KDECORE_LIBS})
  
