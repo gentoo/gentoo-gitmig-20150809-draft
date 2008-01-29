@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/ksh
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.33 2008/01/28 21:35:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.34 2008/01/29 13:39:21 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  -files/ksh-20050202-uname.patch, -files/ksh-20060124-syntax.patch,
+  -files/ksh-20060214-ed.patch, -ksh-93.20030724.ebuild,
+  -ksh-93.20050202.ebuild, -ksh-93.20060214.ebuild,
+  -ksh-93.20060214-r1.ebuild, -ksh-93.20070628.ebuild,
+  ksh-93.20071105.ebuild:
+  alpha/ia64/sparc/x86 stable, remove old
 
 *ksh-93.20071105 (28 Jan 2008)
 
