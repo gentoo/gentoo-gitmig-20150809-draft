@@ -1,17 +1,19 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20070505.ebuild,v 1.5 2007/10/28 13:51:04 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20080126.ebuild,v 1.1 2008/01/29 10:28:45 mrness Exp $
 
 inherit eutils linux-mod multilib
+
+UNGRAB_PV="20070505"
 
 DESCRIPTION="Driver for Smart Link modem"
 HOMEPAGE="http://linmodems.technion.ac.il/packages/smartlink/"
 SRC_URI="http://linmodems.technion.ac.il/packages/smartlink/${P/_pre/-}.tar.gz
-	http://linmodems.technion.ac.il/packages/smartlink/ungrab-winmodem-${PV/*_pre/}.tar.gz"
+	http://linmodems.technion.ac.il/packages/smartlink/ungrab-winmodem-${UNGRAB_PV}.tar.gz"
 
 LICENSE="Smart-Link"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="alsa usb"
 
 DEPEND="alsa? ( media-libs/alsa-lib )
@@ -27,7 +29,7 @@ S="${WORKDIR}"/${P/_pre/-}
 pkg_setup() {
 	use amd64 && multilib_toolchain_setup x86
 
-	MODULE_NAMES="ungrab-winmodem(:${WORKDIR}/ungrab-winmodem-${PV/*_pre/})"
+	MODULE_NAMES="ungrab-winmodem(:${WORKDIR}/ungrab-winmodem-${UNGRAB_PV})"
 	if ! use amd64; then
 		MODULE_NAMES="${MODULE_NAMES} slamr(net:${S}/drivers)"
 		if use usb; then
@@ -43,14 +45,15 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${WORKDIR}"
-	sed -i "s:SUBDIRS=\$(shell pwd):SUBDIRS=${WORKDIR}/ungrab-winmodem-${PV/*_pre/}:" \
-		ungrab-winmodem-${PV/*_pre/}/Makefile
-	convert_to_m ungrab-winmodem-${PV/*_pre/}/Makefile
+	sed -i "s:SUBDIRS=\$(shell pwd):SUBDIRS=${WORKDIR}/ungrab-winmodem-${UNGRAB_PV}:" \
+		ungrab-winmodem-${UNGRAB_PV}/Makefile
+	convert_to_m ungrab-winmodem-${UNGRAB_PV}/Makefile
 
 	epatch "${FILESDIR}"/${PN}-ungrab-winmodem-hp500.patch
 
 	cd "${S}"
 	epatch "${FILESDIR}/${P%%_*}-makefile.patch"
+	epatch "${FILESDIR}/${P%%_*}-kernel-2.6.24.patch"
 
 	cd "${S}"/drivers
 	sed -i "s:SUBDIRS=\$(shell pwd):SUBDIRS=${S}/drivers:" Makefile
@@ -92,7 +95,7 @@ src_install() {
 		sed -i "s/# MODULE=slamr/MODULE=slamr/" "${D}/etc/conf.d/slmodem"
 	fi
 
-	# Add module aliases and install hotplug script
+	# Add module aliases and install udev script
 	insinto /etc/modules.d/
 	newins "${FILESDIR}/slmodem-modules" ${PN}
 	if use usb; then
@@ -113,7 +116,7 @@ src_install() {
 	fi
 
 	dodoc Changes README
-	newdoc "${WORKDIR}"/ungrab-winmodem-${PV/*_pre}/Readme.txt README-ungrab-winmodem.txt
+	newdoc "${WORKDIR}"/ungrab-winmodem-${UNGRAB_PV}/Readme.txt README-ungrab-winmodem.txt
 }
 
 pkg_postinst() {

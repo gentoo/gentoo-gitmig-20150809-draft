@@ -1,0 +1,14 @@
+--- drivers/amrmo_init.c	2008-01-29 12:19:19.000000000 +0200
++++ drivers/amrmo_init.c	2008-01-29 12:24:05.000000000 +0200
+@@ -609,7 +609,11 @@
+ 		}
+ 	}
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,24)
+         ret = request_irq(amrmo->irq, &amrmo_pci_interrupt,SA_SHIRQ,
++#else
++        ret = request_irq(amrmo->irq, &amrmo_pci_interrupt,IRQF_SHARED,
++#endif
+ 			  amrmo->name,amrmo);
+ 	if(ret) {
+ 		printk(KERN_ERR "slamr: failed request_irq\n");
