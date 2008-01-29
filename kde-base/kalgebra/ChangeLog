@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kalgebra
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.2 2008/01/27 23:15:57 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.3 2008/01/29 01:26:18 zlin Exp $
+
+  28 Jan 2008; Bo Ørsted Andresen <zlin@gentoo.org>
+  files/kdeedu-4.0.0-opengl.patch:
+  Fix the patch for compilation with USE=-opengl so it doesn't break
+  USE=opengl (bug #207940).
 
   27 Jan 2008; Bo Ørsted Andresen <zlin@gentoo.org>
   +files/kdeedu-4.0.0-opengl.patch, kalgebra-4.0.0.ebuild:
