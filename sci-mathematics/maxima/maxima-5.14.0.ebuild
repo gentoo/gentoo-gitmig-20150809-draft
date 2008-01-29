@@ -1,7 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0-r1.ebuild,v 1.10 2008/01/29 16:50:38 bicatali Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.14.0.ebuild,v 1.1 2008/01/29 16:50:38 bicatali Exp $
 inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
@@ -10,43 +9,83 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 AECA"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
-IUSE="cmucl clisp sbcl gcl latex emacs tk nls unicode"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-# rlwrap is recommended for cmucl and sbcl
-# tetex>=3, so no use of virtual/latex-base (bug #203558)
-RDEPEND=">=sci-visualization/gnuplot-4.0
-	x11-misc/xdg-utils
-	latex? ( || ( dev-texlive/texlive-latexrecommended
-				>=app-text/tetex-3
-				app-text/ptex ) )
-	emacs? ( virtual/emacs
-		 latex? ( || ( app-emacs/auctex app-xemacs/auctex ) ) )
-	sbcl? ( <dev-lisp/sbcl-1.0.12 app-misc/rlwrap )
-	!sbcl? (
-		clisp? ( dev-lisp/clisp )
-		!clisp? (
-			cmucl? ( >=dev-lisp/cmucl-19a app-misc/rlwrap )
-			!cmucl? (
-				gcl? ( dev-lisp/gcl )
-				!gcl? ( <dev-lisp/sbcl-1.0.12 app-misc/rlwrap )
-			)
-		)
-	)
-	tk? ( dev-lang/tk )"
+# Supported lisps with readline
+SUPP_RL="gcl clisp"
+# Supported lisps without readline
+SUPP_NORL="cmucl sbcl"
+SUPP_LISPS="${SUPP_RL} ${SUPP_NORL}"
+# Default lisp if none selected
+DEF_LISP="sbcl"
 
-DEPEND="${RDEPEND}
-	sys-apps/texinfo"
+IUSE="latex emacs tk nls unicode X ${SUPP_LISPS} ${IUSE}"
 
+# Languages
 LANGS="es pt pt_BR"
 for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
 
-RESTRICT="clisp? ( strip )"
+# tetex>=3, so no use of virtual/latex-base (bug #203558)
+RDEPEND="X? ( x11-misc/xdg-utils
+			  sci-visualization/gnuplot
+			  tk? ( dev-lang/tk ) )
+	latex? ( || ( dev-texlive/texlive-latexrecommended
+				  >=app-text/tetex-3
+				  app-text/ptex ) )
+	emacs? ( virtual/emacs latex? ( app-emacs/auctex ) )
+	xemacs? ( virtual/xemacs latex? ( app-xemacs/auctex ) )"
+
+# create lisp dependencies
+for LISP in ${SUPP_LISPS}; do
+	RDEPEND="${RDEPEND} ${LISP}? ( dev-lisp/${LISP} )"
+	DEF_DEP="${DEF_DEP} !${LISP}? ( "
+done
+for LISP in ${SUPP_NORL}; do
+	RDEPEND="${RDEPEND} ${LISP}? ( app-misc/rlwrap )"
+	[[ ${LISP} = ${DEF_LISP} ]] && \
+		DEF_DEP="${DEF_DEP} app-misc/rlwrap"
+done
+for LISP in ${SUPP_LISPS}; do
+	DEF_DEP="${DEF_DEP} )"
+done
+
+# nasty hack for sbcl while bug #203748 is not fixed
+RDEPEND="${RDEPEND//dev-lisp\/sbcl/<dev-lisp/sbcl-1.0.12}"
+
+RDEPEND="${RDEPEND}
+	${DEF_DEP}"
+
+DEPEND="${RDEPEND}
+	sys-apps/texinfo"
 
 pkg_setup() {
-	# Don't install in the main tree, as this may cause file collisions
+	LISPS=""
+
+	for LISP in ${SUPP_LISPS}; do
+		use ${LISP} && LISPS="${LISPS} ${LISP}"
+	done
+
+	if [ -z "${LISPS}" ]; then
+		ewarn "No lisp specified in USE flags, choosing ${DEF_LISP} as default"
+		LISPS="${DEF_LISP}"
+	fi
+
+	RL=""
+
+	for LISP in ${SUPP_NORL}; do
+		use ${LISP} && RL="yes"
+	done
+
+	if use gcl; then
+		if ! built_with_use dev-lisp/gcl ansi; then
+			eerror "gcl must be emerged with the USE flag ansi"
+			die "This package needs gcl with USE=ansi"
+		fi
+	fi
+
+	# Calculating MAXIMA_TEXMFDIR
 	if use latex; then
 		local TEXMFPATH="$(kpsewhich -var-value=TEXMFSITE)"
 		local TEXMFCONFIGFILE="$(kpsewhich texmf.cnf)"
@@ -56,9 +95,12 @@ pkg_setup() {
 			eerror "Please do so in the file ${TEXMFCONFIGFILE:-/var/lib/texmf/web2c/texmf.cnf}"
 			die "Define TEXMFSITE in TeX configuration!"
 		else
-			# go through the colon separated list of directories (maybe only one) provided in the variable
-			# TEXMFPATH (generated from TEXMFSITE from TeX's config) and choose only the first entry.
-			# All entries are separated by colons, even when defined with semi-colons, kpsewhich changes
+			# go through the colon separated list of directories
+			# (maybe only one) provided in the variable
+			# TEXMFPATH (generated from TEXMFSITE from TeX's config)
+			# and choose only the first entry.
+			# All entries are separated by colons, even when defined
+			# with semi-colons, kpsewhich changes
 			# the output to a generic format, so IFS has to be redefined.
 			local IFS="${IFS}:"
 
@@ -69,7 +111,8 @@ pkg_setup() {
 				fi
 			done
 
-			# verify if an existing path was chosen to prevent from installing into the wrong directory
+			# verify if an existing path was chosen to prevent from
+			# installing into the wrong directory
 			if [ -z ${MAXIMA_TEXMFDIR} ]; then
 				eerror "TEXMFSITE does not contain any existing directory."
 				eerror "Please define an existing directory in your TeX config file"
@@ -79,34 +122,11 @@ pkg_setup() {
 		fi
 	fi
 
-	if ! built_with_use sci-visualization/gnuplot gd; then
+	if use X && ! built_with_use sci-visualization/gnuplot gd; then
 		elog "To benefit full plotting capability of maxima,"
-		elog "enable the gd USE flag enabled for sci-visualization/gnuplot"
+		elog "enable the gd USE flag for sci-visualization/gnuplot"
 		elog "Then re-emerge maxima"
 		epause 5
-	fi
-
-	# lisp priorities
-	if use sbcl; then
-		MAXIMA_LISP=sbcl
-	elif use clisp; then
-		MAXIMA_LISP=clisp
-	elif use cmucl; then
-		MAXIMA_LISP=cmucl
-	elif use gcl; then
-		MAXIMA_LISP=gcl
-	else
-		MAXIMA_LISP=sbcl
-	fi
-	einfo "Selected lisp: ${MAXIMA_LISP}"
-
-	if [[ ${MAXIMA_LISP} == gcl ]]; then
-		ewarn "Using gcl: if it breaks, recompile with another lisp or use default (sbcl)."
-		if ! built_with_use dev-lisp/gcl ansi; then
-			eerror "GCL must be installed with ANSI."
-			eerror "Try USE=\"ansi\" emerge gcl"
-			die "This package needs gcl with USE=ansi"
-		fi
 	fi
 }
 
@@ -115,7 +135,7 @@ src_unpack() {
 	# use xdg-open to view ps, pdf
 	epatch "${FILESDIR}"/${P}-xdg-utils.patch
 	# remove rmaxima if neither cmucl nor sbcl
-	if [[ ${MAXIMA_LISP} != cmucl ]] || [[ ${MAXIMA_LISP} != sbcl ]]; then
+	if [ -z "${RL}" ]; then
 		sed -i \
 			-e '/^@WIN32_FALSE@bin_SCRIPTS/s/rmaxima//' \
 			"${S}"/src/Makefile.in \
@@ -124,7 +144,11 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--enable-${MAXIMA_LISP}"
+	local myconf=""
+	for LISP in ${LISPS}; do
+		myconf="${myconf} --enable-${LISP}"
+	done
+
 	# remove xmaxima if no tk
 	if use tk; then
 		myconf="${myconf} --with-wish=wish"
@@ -167,7 +191,7 @@ src_install() {
 	# do not use dodoc because interfaces can't read compressed files
 	# read COPYING before attempt to remove it
 	insinto /usr/share/${PN}/${PV}/doc
-	doins AUTHORS COPYING ChangeLog-${PV} README README.lisps
+	doins AUTHORS COPYING README README.lisps || die
 	dodir /usr/share/doc
 	dosym /usr/share/${PN}/${PV}/doc /usr/share/doc/${PF}
 }

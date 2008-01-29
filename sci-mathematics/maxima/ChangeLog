@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.46 2008/01/08 01:23:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.47 2008/01/29 16:50:38 bicatali Exp $
+
+*maxima-5.14.0 (29 Jan 2008)
+
+  29 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/maxima-5.14.0-xdg-utils.patch, +maxima-5.14.0.ebuild:
+  Version bump.  Now supports again multiple lisp simultaneously.
+  Thanks much to Andrey Grozin <A.G.Grozin@inp.nsk.su> to 
+  update the ebuild and maintain it in the science overlay.
 
   08 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/maxima-emacs.patch, -maxima-5.9.1.ebuild, maxima-5.13.0-r1.ebuild:
