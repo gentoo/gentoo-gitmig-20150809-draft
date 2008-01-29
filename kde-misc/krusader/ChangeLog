@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.62 2008/01/27 16:26:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.63 2008/01/29 13:45:54 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org> krusader-1.80.0.ebuild:
+  sparc/x86 stable wrt #207684
 
   27 Jan 2008; Brent Baude <ranger@gentoo.org> krusader-1.80.0.ebuild:
   Marking krusader-1.80.0 ppc64 for bug 207684
