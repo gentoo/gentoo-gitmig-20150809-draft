@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.51 2007/12/11 11:07:00 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.52 2008/01/29 22:18:30 aballier Exp $
+
+  29 Jan 2008; Alexis Ballier <aballier@gentoo.org> gpac-0.4.4.ebuild:
+  bump patchset to fix a crash with MP4Client when no plugin exists or the
+  location is wrongly specified, reported by armin76
 
   11 Dec 2007; Raúl Porcel <armin76@gentoo.org> gpac-0.4.2-r1.ebuild:
   alpha stable
