@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.3.0.ebuild,v 1.1 2008/01/25 09:54:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.3.0.ebuild,v 1.2 2008/01/29 09:06:34 caster Exp $
 
 JAVA_PKG_IUSE="doc source test"
 JAVA_PKG_BSFIX_ALL="no"
@@ -10,7 +10,9 @@ inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="High-performance, full-featured text search engine written entirely in Java"
 HOMEPAGE="http://jakarta.apache.org/lucene"
-SRC_URI="mirror://apache/lucene/java/archive/${P}-src.tar.gz"
+# when doing version bump, SRC_URI of the previous version should most probably
+# be changed to java/archive/ !
+SRC_URI="mirror://apache/lucene/java/${P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="2.3"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
@@ -38,12 +40,12 @@ src_test() {
 }
 
 src_install() {
-	dodoc CHANGES.txt README.txt
+	dodoc CHANGES.txt README.txt || die
 	java-pkg_newjar build/${PN}-core-${PV}.jar ${PN}-core.jar
 	java-pkg_newjar build/${PN}-demos-${PV}.jar ${PN}-demos.jar
 
 	if use doc; then
-		dohtml -r docs/*
+		dohtml -r docs/* || die
 		java-pkg_dojavadoc build/docs/api
 	fi
 	use source && java-pkg_dosrc src/java/org
