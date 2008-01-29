@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/liberation-fonts-ttf-3-r1.ebuild,v 1.11 2008/01/23 18:23:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/liberation-fonts-ttf-3-r1.ebuild,v 1.12 2008/01/29 03:34:23 dirtyepic Exp $
 
 inherit font
 
@@ -28,6 +28,6 @@ pkg_postinst() {
 
 	echo
 	elog "To substitute Liberation fonts for Microsoft equivalents, use:"
-	elog "  cd /etc/fonts/conf.d/ && ln -sf ../conf.avail/60-liberation.conf ."
+	elog "   eselect fontconfig enable 60-liberation.conf"
 	echo
 }
