@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20080126.ebuild,v 1.1 2008/01/29 10:28:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20080126.ebuild,v 1.2 2008/01/29 13:02:49 mrness Exp $
 
 inherit eutils linux-mod multilib
 
-UNGRAB_PV="20070505"
+UNGRAB_PV="2.9.11-20080126"
 
 DESCRIPTION="Driver for Smart Link modem"
 HOMEPAGE="http://linmodems.technion.ac.il/packages/smartlink/"
@@ -49,6 +49,7 @@ src_unpack() {
 		ungrab-winmodem-${UNGRAB_PV}/Makefile
 	convert_to_m ungrab-winmodem-${UNGRAB_PV}/Makefile
 
+	cd "${WORKDIR}/ungrab-winmodem-${UNGRAB_PV}"
 	epatch "${FILESDIR}"/${PN}-ungrab-winmodem-hp500.patch
 
 	cd "${S}"
