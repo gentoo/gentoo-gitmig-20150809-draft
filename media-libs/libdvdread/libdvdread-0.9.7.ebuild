@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.7.ebuild,v 1.16 2007/08/28 05:55:51 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.7.ebuild,v 1.17 2008/01/29 21:43:22 grobian Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -27,7 +27,6 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	use ppc-macos && myconf="--with-libdvdcss=/usr"
 	econf ${myconf} || die "./configure failed"
 	emake || die "make failed"
 }
