@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/bcprov-1.38.ebuild,v 1.2 2008/01/27 15:35:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/bcprov-1.38.ebuild,v 1.3 2008/01/29 19:50:48 nixnut Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.bouncycastle.org/download/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ppc64 ~x86 ~x86-fbsd"
 
 # The src_unpack find needs a new find
 # https://bugs.gentoo.org/show_bug.cgi?id=182276
