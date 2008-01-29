@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.13.ebuild,v 1.3 2008/01/20 14:22:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.13.ebuild,v 1.4 2008/01/29 20:35:10 drac Exp $
+
+EAPI=1
 
 inherit eutils fdo-mime gnome2-utils versionator
 
@@ -15,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug doc hal modplug networkmanager sid startup-notification"
 
-RDEPEND=">=net-libs/libsoup-2.2.100
+RDEPEND="net-libs/libsoup:2.2
 	>=dev-db/sqlite-3.3.11
 	>=dev-libs/glib-2.10
 	>=dev-cpp/glibmm-2.12

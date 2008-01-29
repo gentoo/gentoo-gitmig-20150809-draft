@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.73 2008/01/20 14:22:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.74 2008/01/29 20:35:10 drac Exp $
+
+  29 Jan 2008; Samuli Suominen <drac@gentoo.org> bmpx-0.40.13.ebuild:
+  Slot dep on libsoup 2.2
 
   20 Jan 2008; Samuli Suominen <drac@gentoo.org>
   +files/bmpx-0.40.13-const-gchar.patch, bmpx-0.40.13.ebuild:
