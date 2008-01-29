@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.12.3.ebuild,v 1.11 2007/08/25 14:21:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.12.3.ebuild,v 1.12 2008/01/29 18:13:06 dang Exp $
+EAPI="1"
 
 inherit gnome2 eutils
 
@@ -19,7 +20,7 @@ RDEPEND=">=gnome-base/gail-1.1
 	>=gnome-base/libbonoboui-2.2.4
 	>=gnome-base/orbit-2
 	>=gnome-base/libbonobo-2
-	>=net-libs/libsoup-2.1.6
+	net-libs/libsoup:2.2
 	>=x11-libs/gtk+-2.4
 	>=x11-themes/gnome-icon-theme-1.2"
 
