@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.40 2008/01/26 21:22:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.41 2008/01/29 21:58:24 jer Exp $
+
+  29 Jan 2008; Jeroen Roovers <jer@gentoo.org> crypto++-5.5.2.ebuild:
+  Marked ~hppa (bug #207614).
 
   26 Jan 2008; Raúl Porcel <armin76@gentoo.org> crypto++-5.5.2.ebuild:
   Add ~alpha
