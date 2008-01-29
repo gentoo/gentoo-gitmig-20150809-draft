@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knetwalk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.3 2008/01/28 23:05:46 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.4 2008/01/29 17:15:26 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org> knetwalk-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   knetwalk-3.5.8.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/atlantikdesigner
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/atlantikdesigner/ChangeLog,v 1.71 2008/01/28 19:34:20 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/atlantikdesigner/ChangeLog,v 1.72 2008/01/29 17:15:01 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  atlantikdesigner-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   atlantikdesigner-3.5.8.ebuild:
