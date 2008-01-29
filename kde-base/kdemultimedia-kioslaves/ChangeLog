@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-kioslaves
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.82 2008/01/29 16:35:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.83 2008/01/29 19:46:57 zlin Exp $
+
+  29 Jan 2008; Bo Ørsted Andresen <zlin@gentoo.org>
+  kdemultimedia-kioslaves-4.0.0-r1.ebuild:
+  Add USE=encode. Make USE=flac depend on fixed kdelibs.
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   kdemultimedia-kioslaves-3.5.8.ebuild:
