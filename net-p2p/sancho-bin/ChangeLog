@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/sancho-bin
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.45 2007/12/31 03:44:32 mabi Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.46 2008/01/29 16:26:44 rich0 Exp $
+
+  29 Jan 2008; Richard Freeman <rich0@gentoo.org>
+  sancho-bin-0.9.4.58-r1.ebuild:
+  keyword ~amd64 - bug 198116
 
   31 Dec 2007; Matti Bickel <mabi@gentoo.org> sancho-bin-0.9.4.58-r1.ebuild:
   marked ~ppc on user request (bug #198116), be careful USE='-java' is

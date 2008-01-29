@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58-r1.ebuild,v 1.4 2007/12/31 03:44:32 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58-r1.ebuild,v 1.5 2008/01/29 16:26:44 rich0 Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ SRC_URI="
 RESTRICT="strip"
 
 # In order to keyword ~ppc, 'java' should be package.use.force'd
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="CPL-1.0 LGPL-2.1"
 IUSE="java"
