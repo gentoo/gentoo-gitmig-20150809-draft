@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4.ebuild,v 1.2 2008/01/13 14:32:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4.ebuild,v 1.3 2008/01/29 08:43:37 corsair Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.savannah.gnu.org/releases/lash/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ppc64 ~sparc ~x86"
 IUSE="alsa debug gtk python"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )

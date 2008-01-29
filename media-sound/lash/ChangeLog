@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lash
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.16 2008/01/13 14:32:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.17 2008/01/29 08:43:37 corsair Exp $
+
+  29 Jan 2008; Markus Rothe <corsair@gentoo.org> lash-0.5.4.ebuild:
+  Stable on ppc64; bug #199751
 
   13 Jan 2008; Alexis Ballier <aballier@gentoo.org> lash-0.5.1.ebuild,
   lash-0.5.4.ebuild:
