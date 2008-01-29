@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.9 2008/01/29 12:06:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.10 2008/01/29 12:10:51 opfer Exp $
 
 inherit multilib
 
@@ -19,7 +19,7 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i -e '/^fbmdir/s:$(prefix)/share/doc/ferite:/usr/share/doc/${PF}:' Makefile.in
 	sed -i -e 's:$(prefix)/share/doc/ferite:${D}/usr/share/doc/${PF}:' docs/Makefile.in
 	sed -i -e '/$(docsdir)/s:$(DESTDIR)::' docs/Makefile.in
@@ -38,10 +38,9 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}
-	cp tools/doc/feritedoc ${T}
-	sed -i -e '/^prefix/s:prefix:${T}' -e ${T}/feritedoc
-	sed -i -e '/^$prefix/s:$prefix/bin/ferite:{D}/usr/bin/ferite:' -e ${T}/feritedoc
+	cp tools/doc/feritedoc "${T}"
+	sed -i -e '/^prefix/s:prefix:${T}' -e "${T}"/feritedoc
+	sed -i -e '/^$prefix/s:$prefix/bin/ferite:{D}/usr/bin/ferite:' -e "${T}"/feritedoc
 	sed -i -e 's:build_c_api_docs.sh $(prefix)/bin/:build_c_api_docs.sh ${T}/:' docs/Makefile.in
-	make DESTDIR=${D} LIBDIR=/usr/$(get_libdir) install || die
+	make DESTDIR="${D}" LIBDIR=/usr/$(get_libdir) install || die
 }
