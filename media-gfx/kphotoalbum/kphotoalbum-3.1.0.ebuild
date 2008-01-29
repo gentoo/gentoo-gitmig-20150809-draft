@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.1.0.ebuild,v 1.1 2007/12/02 00:58:19 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.1.0.ebuild,v 1.2 2008/01/29 05:34:40 ingmar Exp $
 
 inherit kde
 
@@ -22,12 +22,12 @@ for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
 
-DEPEND="exif? ( >=media-gfx/exiv2-0.15 )
+DEPEND="arts? ( kde-base/arts )
+	exif? ( >=media-gfx/exiv2-0.15 )
 	raw? ( >=media-libs/libkdcraw-0.1.1 )
 	>=media-libs/jpeg-6b-r7
 	>=media-libs/libkipi-0.1
-	|| ( kde-base/kdegraphics kde-base/kdegraphics-kfile-plugins )
-	arts? ( kde-base/arts )"
+	|| ( =kde-base/kdegraphics-3.5* =kde-base/kdegraphics-kfile-plugins-3.5* )"
 
 need-kde 3.5
 
@@ -49,7 +49,7 @@ pkg_setup() {
 	slot_rebuild "media-libs/libkipi"
 	setupok=$?
 
-	if [ $setupok == 0 ] ; then
+	if [[ $setupok == 0 ]] ; then
 		die
 	fi
 }
