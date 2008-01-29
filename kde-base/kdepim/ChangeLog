@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.295 2008/01/29 15:17:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.296 2008/01/29 15:57:59 ranger Exp $
+
+  29 Jan 2008; Brent Baude <ranger@gentoo.org> kdepim-3.5.8.ebuild:
+  Marking kdepim-3.5.8 ppc64 for bug 207634
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org> kdepim-3.5.8.ebuild:
   alpha/ia64/sparc stable wrt #207634
