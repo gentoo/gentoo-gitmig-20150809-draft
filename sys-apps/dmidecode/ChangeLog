@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmidecode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.22 2008/01/18 14:55:46 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.23 2008/01/29 16:59:07 nixnut Exp $
+
+  29 Jan 2008; nixnut <nixnut@gentoo.org> dmidecode-2.9.ebuild:
+  Adding ~ppc
 
   18 Jan 2008; Ferris McCormick <fmccor@gentoo.org> dmidecode-2.9.ebuild:
   Add ~sparc, needed by Bug #206514.

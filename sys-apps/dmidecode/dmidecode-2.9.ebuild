@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.9.ebuild,v 1.6 2008/01/18 14:55:46 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.9.ebuild,v 1.7 2008/01/29 16:59:07 nixnut Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/dmidecode/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* amd64 ia64 ~sparc x86"
+KEYWORDS="-* amd64 ia64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=""
