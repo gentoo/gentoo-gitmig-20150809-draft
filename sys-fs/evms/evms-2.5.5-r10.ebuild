@@ -1,15 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r10.ebuild,v 1.2 2008/01/29 08:53:53 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r10.ebuild,v 1.3 2008/01/29 22:00:24 dev-zero Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
 
 inherit eutils flag-o-matic multilib toolchain-funcs autotools linux-info
 
+PATCHVER="${PV}-1"
+
 DESCRIPTION="Utilities for the IBM Enterprise Volume Management System"
 HOMEPAGE="http://www.sourceforge.net/projects/evms"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://gentoo/${PN}-patches-${PATCHVER}.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -54,26 +57,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch \
-		"${FILESDIR}/${PV}/md_super_fix.patch" \
-		"${FILESDIR}/${PV}/ntfs_unmkfs.patch" \
-		"${FILESDIR}/${PV}/raid5_degrade_fix_v2.patch" \
-		"${FILESDIR}/${PV}/raid5_remove_spare_fix.patch" \
-		"${FILESDIR}/${PV}/raid5_remove_spare_fix_2.patch" \
-		"${FILESDIR}/${PV}/raid5_algorithm.patch" \
-		"${FILESDIR}/${PV}/cli_reload_options.patch" \
-		"${FILESDIR}/${PV}/cli_query_segfault.patch" \
-		"${FILESDIR}/${PV}/get_geometry.patch" \
-		"${FILESDIR}/${PV}/BaseName.patch" \
-		"${FILESDIR}/${PV}/disk_cache.patch"
-
-	epatch \
-		"${FILESDIR}/${P}-as-needed.patch" \
-		"${FILESDIR}/${P}-glib_dep.patch" \
-		"${FILESDIR}/${P}-ocfs2.patch" \
-		"${FILESDIR}/${P}-use_disk_group.patch" \
-		"${FILESDIR}/${P}-pagesize.patch" \
-		"${FILESDIR}/${P}-snapshot.patch"
+	EPATCH_SOURCE="${WORKDIR}/patches"
+	EPATCH_SUFFIX="patch"
+	epatch
 
 	eautoreconf
 }
