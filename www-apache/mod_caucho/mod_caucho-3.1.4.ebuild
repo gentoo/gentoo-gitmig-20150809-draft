@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.1.4.ebuild,v 1.3 2007/12/14 16:11:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.1.4.ebuild,v 1.4 2008/01/29 16:25:35 hollow Exp $
 
 inherit eutils apache-module autotools
 
@@ -45,7 +45,7 @@ src_unpack() {
 
 src_compile() {
 
-	econf --with-apxs=${APXS2} || die "econf failed"
+	econf --with-apxs=${APXS} || die "econf failed"
 	emake -j1 -C "${S}/modules/c/src/apache2/" || die "emake failed"
 
 }
@@ -55,7 +55,7 @@ src_install() {
 	cd "${S}/modules/c/src/apache2"
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
-	insinto "${APACHE2_MODULES_CONFDIR}"
+	insinto "${APACHE_MODULES_CONFDIR}"
 	doins "${FILESDIR}/${APACHE2_MOD_CONF}.conf" \
 		|| die "internal ebuild error: ${APACHE2_MOD_CONF}.conf not found."
 
