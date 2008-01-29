@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.1.ebuild,v 1.17 2007/02/28 22:15:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.1.ebuild,v 1.18 2008/01/29 21:38:25 grobian Exp $
 
 inherit eutils
 
@@ -23,7 +23,6 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-use-fpic.patch
-	use ppc-macos && cp ${FILESDIR}/${PN}-Makefile.macos ${S}/Makefile || \
 	cp ${S}/Makefile.linux ${S}/Makefile
 }
 
@@ -33,12 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	if ! use ppc-macos
-	then
-		dolib pa_unix_oss/libportaudio.so
-	else
-		dolib pa_mac_core/libportaudio.dylib
-	fi
+	dolib pa_unix_oss/libportaudio.so
 
 	insinto /usr/include
 	doins pa_common/portaudio.h
