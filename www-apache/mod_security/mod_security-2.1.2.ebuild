@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.1.2.ebuild,v 1.6 2007/11/25 13:36:06 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.1.2.ebuild,v 1.7 2008/01/29 18:01:39 hollow Exp $
 
 inherit apache-module
 
@@ -44,6 +44,6 @@ src_install() {
 	done
 
 	# Install core ruleset
-	insinto ${APACHE2_MODULES_CONFDIR}/mod_security/
+	insinto ${APACHE_MODULES_CONFDIR}/mod_security/
 	doins "${S}"/rules/*.conf
 }

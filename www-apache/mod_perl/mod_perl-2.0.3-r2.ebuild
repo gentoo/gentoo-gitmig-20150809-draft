@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3-r2.ebuild,v 1.2 2008/01/27 20:11:46 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3-r2.ebuild,v 1.3 2008/01/29 17:59:31 hollow Exp $
 
 inherit apache-module perl-module eutils multilib
 
@@ -86,7 +86,7 @@ src_compile() {
 		MP_TRACE=1 \
 		MP_DEBUG=1 \
 		MP_USE_DSO=1 \
-		MP_APXS=${APXS2}  \
+		MP_APXS=${APXS}  \
 		INSTALLDIRS=vendor </dev/null || die
 
 	# reported that parallel make is broken in bug 30257
@@ -112,9 +112,9 @@ src_test() {
 src_install() {
 	apache-module_src_install
 
-	dodir "${APACHE2_MODULESDIR}"
+	dodir "${APACHE_MODULESDIR}"
 	make install \
-		MODPERL_AP_LIBEXECDIR="${D}${APACHE2_MODULESDIR}" \
+		MODPERL_AP_LIBEXECDIR="${D}${APACHE_MODULESDIR}" \
 		MODPERL_AP_INCLUDEDIR="${D}/usr/include/apache2" \
 		MP_INST_APACHE2=1 \
 		INSTALLDIRS=vendor || die
@@ -123,7 +123,7 @@ src_install() {
 	# it seems to me that this has been getting installed for ages
 	fixlocalpod
 
-	insinto "${APACHE2_MODULES_CONFDIR}"
+	insinto "${APACHE_MODULES_CONFDIR}"
 	doins "${FILESDIR}"/${PV}/apache2-mod_perl-startup.pl
 	cp -pPR docs "${D}"/usr/share/doc/${PF}
 	cp -pPR todo "${D}"/usr/share/doc/${PF}
