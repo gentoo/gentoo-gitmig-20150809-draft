@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/mod_vhost_ldap-1.0.0.ebuild,v 1.4 2008/01/29 18:15:51 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/mod_vhost_ldap-1.0.0-r1.ebuild,v 1.1 2008/01/29 18:15:51 hollow Exp $
 
 inherit eutils apache-module
 
@@ -32,8 +32,15 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-apache22.patch
+}
+
 src_compile() {
-	sed -i s/MOD_VHOST_LDAP_VERSION/\"`cat VERSION`\"/g mod_vhost_ldap.c
+	sed -i s/MOD_VHOST_LDAP_VERSION/\"$(cat VERSION)\"/g mod_vhost_ldap.c
 	apache-module_src_compile
 }
 
