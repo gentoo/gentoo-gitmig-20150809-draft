@@ -1,19 +1,24 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.2.12.ebuild,v 1.7 2008/01/14 17:20:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.2.12.ebuild,v 1.8 2008/01/29 20:55:42 drac Exp $
+
+EAPI=1
 
 DESCRIPTION="An MPD client that submits information to audioscrobbler."
 HOMEPAGE="http://www.frob.nl/scribble.html"
 SRC_URI="http://www.frob.nl/projects/scribble/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~hppa ~ppc sparc ~x86"
 IUSE=""
-DEPEND="dev-util/pkgconfig
-	>=net-libs/libsoup-2.2"
+
+RDEPEND="net-libs/libsoup:2.2"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake -j1 DESTDIR="${D}" install || die "emake install failed."
 
 	exeinto /usr/share/mpdscribble
 	doexe setup.sh
@@ -27,7 +32,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog ""
 	elog "Please run:"
 	elog "  /usr/share/mpdscribble/setup.sh"
 	elog "in order to configure mpdscribble. If you do this as root, a"
@@ -36,5 +40,4 @@ pkg_postinst() {
 	elog ""
 	elog "To start mpdscribble:"
 	elog "  /etc/init.d/mpdscribble start"
-	elog ""
 }
