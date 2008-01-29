@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.74 2008/01/06 22:44:24 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.75 2008/01/29 02:19:23 tgurr Exp $
+
+*ktorrent-2.2.5 (29 Jan 2008)
+
+  29 Jan 2008; Timo Gurr <tgurr@gentoo.org>
+  +files/ktorrent-2.2.5-avahi-check.patch, -ktorrent-2.2.2.ebuild,
+  +ktorrent-2.2.5.ebuild:
+  Add ktorrent-2.2.5.ebuild and clean out old.
 
   06 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   ktorrent-2.2.4.ebuild:

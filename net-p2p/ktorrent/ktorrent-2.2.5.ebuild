@@ -1,20 +1,18 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.2.ebuild,v 1.7 2007/11/17 14:02:30 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.5.ebuild,v 1.1 2008/01/29 02:19:23 tgurr Exp $
 
 inherit kde
 
 MY_P="${P/_/}"
 MY_PV="${PV/_/}"
-S="${WORKDIR}/${MY_P}"
-
 DESCRIPTION="A BitTorrent program for KDE."
 HOMEPAGE="http://ktorrent.org/"
-SRC_URI="http://ktorrent.org/downloads/${MY_PV}/${MY_P}.tar.gz"
+SRC_URI="http://ktorrent.org/downloads/${MY_PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="avahi geoip kdeenablefinal"
 
 DEPEND="dev-libs/gmp
@@ -22,6 +20,8 @@ DEPEND="dev-libs/gmp
 		geoip? ( >=dev-libs/geoip-1.4.0-r1 )"
 RDEPEND="${DEPEND}
 		|| ( kde-base/kdebase kde-base/kdebase-kioslaves )"
+
+S="${WORKDIR}/${MY_P}"
 
 need-kde 3.5
 
@@ -31,6 +31,19 @@ ms nb nds nl pa pl pt pt_BR ru rw sk sr sr@Latn sv tr uk zh_CN zh_TW"
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
+
+pkg_setup() {
+	if use avahi && ! built_with_use net-dns/avahi qt3 ; then
+		echo
+		eerror "In order to use ktorrents zeroconf plugin you need to have"
+		eerror "net-dns/avahi emerged with \"qt3\" in your USE flag. Please add"
+		eerror "that flag, re-emerge avahi, and then emerge ktorrent again."
+		echo
+		die "net-dns/avahi not built with \"qt3\" support."
+	fi
+
+	kde_pkg_setup
+}
 
 src_unpack() {
 	kde_src_unpack
@@ -44,8 +57,8 @@ src_unpack() {
 
 	cd "${S}"
 	# Fix automagic dependencies on avahi and geoip
-	epatch "${FILESDIR}/${P}-avahi-check.patch"
-	epatch "${FILESDIR}/${P}-geoip-check.patch"
+	epatch "${FILESDIR}/${PN}-2.2.5-avahi-check.patch"
+	epatch "${FILESDIR}/${PN}-2.2.2-geoip-check.patch"
 
 	rm -f "${S}/configure"
 }
