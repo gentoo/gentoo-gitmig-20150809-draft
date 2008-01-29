@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdcop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.51 2008/01/28 20:19:59 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.52 2008/01/29 18:37:01 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org> kdcop-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> kdcop-3.5.8.ebuild:
   Marked stable on amd64 as per bug 207634.

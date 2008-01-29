@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons-docs-konq-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-docs-konq-plugins/ChangeLog,v 1.59 2008/01/28 20:23:00 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-docs-konq-plugins/ChangeLog,v 1.60 2008/01/29 18:45:19 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  kdeaddons-docs-konq-plugins-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   kdeaddons-docs-konq-plugins-3.5.8.ebuild:
