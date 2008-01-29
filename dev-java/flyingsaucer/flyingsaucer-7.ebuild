@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/flyingsaucer/flyingsaucer-7.ebuild,v 1.1 2008/01/28 19:05:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/flyingsaucer/flyingsaucer-7.ebuild,v 1.2 2008/01/29 08:19:05 fordfrog Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -13,7 +13,7 @@ SRC_URI="http://www.pdoubleya.com/projects/${PN}/downloads/r${PV}/${PN}-R${PV}fi
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="minimal svg"
 

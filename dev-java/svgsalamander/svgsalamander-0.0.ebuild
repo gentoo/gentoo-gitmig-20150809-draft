@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/svgsalamander/svgsalamander-0.0.ebuild,v 1.1 2008/01/28 18:59:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/svgsalamander/svgsalamander-0.0.ebuild,v 1.2 2008/01/29 08:17:42 fordfrog Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source"
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
