@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.61 2008/01/14 16:47:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.62 2008/01/29 13:47:47 chainsaw Exp $
+
+  29 Jan 2008; Tony Vroon <chainsaw@gentoo.org> xchat-xsys-2.2.0.ebuild:
+  Mark stable on PPC & X86. Tested on a Powerbook 5,9 and a Centrino laptop,
+  respectively.
 
   14 Jan 2008; Tony Vroon <chainsaw@gentoo.org> xchat-xsys-2.2.0.ebuild:
   Add pkgconfig dependency for the Evil Compile Person
