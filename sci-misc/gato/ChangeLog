@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/gato
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.8 2008/01/29 13:34:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.9 2008/01/29 15:03:51 bicatali Exp $
+
+  29 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  -gato-0.98p.ebuild, gato-0.99c.ebuild:
+  Modernized ebuild, make it more portable. Fix for tkinter and libdirs.
 
 *gato-0.99c (29 Jan 2008)
 
