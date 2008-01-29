@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3335 2008/01/29 06:55:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3336 2008/01/29 16:56:03 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1874,10 +1874,10 @@ sci-mathematics/freemat:umfpack - Add sparse solving via umfpack
 sci-mathematics/geomview:avg - Enable experimental motion averaging technique
 sci-mathematics/geomview:netpbm - Add NetPBM support for external modules
 sci-mathematics/gretl:sourceview - Enable GtkSourceView support
-sci-mathematics/maxima:clisp - adds clisp support to maxima
-sci-mathematics/maxima:cmucl - adds cmucl (lisp) support to maxima
-sci-mathematics/maxima:gcl - adds gcl (lisp) support to maxima
-sci-mathematics/maxima:sbcl - adds sbcl (lisp) support to maxima
+sci-mathematics/maxima:clisp - Adds GNU ANSI Common Lisp support to maxima
+sci-mathematics/maxima:cmucl - Adds CMU Common Lisp support to maxima
+sci-mathematics/maxima:gcl - Adds GNU Common Lisp support to maxima
+sci-mathematics/maxima:sbcl - Adds Steel Bank Common Lisp support to maxima
 sci-mathematics/nusmv:minisat - Enable support for MiniSat.
 sci-mathematics/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to sci-mathematics/octave (may be merged with hdf when opendx is completed)
 sci-mathematics/octave-forge:qhull - Adds media-libs/qhull (geometric extensions) support
