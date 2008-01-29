@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.66 2008/01/27 15:37:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.67 2008/01/29 04:38:28 ali_bush Exp $
+
+  29 Jan 2008; Alistair Bush <ali_bush@gentoo.org> itext-2.0.8.ebuild:
+  Updated paths passed to java-pkg_dosrc.
 
   27 Jan 2008; Brent Baude <ranger@gentoo.org> itext-2.0.7.ebuild:
   Marking itext-2.0.7 ppc64 for bug 207590

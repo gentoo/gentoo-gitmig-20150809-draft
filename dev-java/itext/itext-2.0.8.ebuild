@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.8.ebuild,v 1.1 2008/01/26 18:32:37 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.8.ebuild,v 1.2 2008/01/29 04:38:28 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -57,6 +57,6 @@ src_install() {
 		java-pkg_dojar "${ASIANCMAPSJAR}"
 	fi
 
-	use source && java-pkg_dosrc src/com
+	use source && java-pkg_dosrc src/core/com src/rups/com
 	use doc && java-pkg_dojavadoc build/docs
 }
