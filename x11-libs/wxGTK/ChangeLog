@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.184 2008/01/28 18:31:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.185 2008/01/29 19:23:21 nixnut Exp $
+
+  29 Jan 2008; nixnut <nixnut@gentoo.org> wxGTK-2.6.4.0-r3.ebuild,
+  wxGTK-2.8.7.1-r1.ebuild:
+  Stable on ppc wrt bug 207648
 
   28 Jan 2008; Jeroen Roovers <jer@gentoo.org> wxGTK-2.6.4.0-r3.ebuild,
   wxGTK-2.8.7.1-r1.ebuild:
