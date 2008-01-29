@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1045 2008/01/28 22:17:54 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1046 2008/01/29 13:43:50 chainsaw Exp $
+
+  29 Jan 2008; Tony Vroon <chainsaw@gentoo.org> package.mask:
+  Mask audacious-plugins-ugly for removal in March 2008.
 
   28 Jan 2008; Mike Auty <ikelos@gentoo.org> package.mask:
   mask off open-vm-tools until a 2.6.24 patch fix can be made
