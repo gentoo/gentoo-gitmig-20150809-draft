@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.6.ebuild,v 1.7 2008/01/28 12:23:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.6.ebuild,v 1.8 2008/01/29 15:33:42 hollow Exp $
 
 inherit bash-completion depend.apache flag-o-matic elisp-common eutils java-pkg-opt-2 libtool multilib perl-module python
 
@@ -121,7 +121,7 @@ src_compile() {
 	econf ${myconf} \
 		--with-apr=/usr/bin/apr-1-config \
 		--with-apr-util=/usr/bin/apu-1-config \
-		$(use_with apache2 apxs ${APXS2}) \
+		$(use_with apache2 apxs ${APXS}) \
 		$(use_with berkdb berkeley-db) \
 		$(use_enable debug maintainer-mode) \
 		$(use_enable nls) \
@@ -208,9 +208,9 @@ src_install () {
 
 	# Install apache2 module config
 	if use apache2 ; then
-		MOD="${APACHE2_MODULESDIR/${APACHE2_BASEDIR}\//}"
-		dodir "${APACHE2_MODULES_CONFDIR}"
-		cat <<EOF >"${D}/${APACHE2_MODULES_CONFDIR}"/47_mod_dav_svn.conf
+		MOD="${APACHE_MODULESDIR/${APACHE_BASEDIR}\//}"
+		dodir "${APACHE_MODULES_CONFDIR}"
+		cat <<EOF >"${D}/${APACHE_MODULES_CONFDIR}"/47_mod_dav_svn.conf
 <IfDefine SVN>
 	<IfModule !mod_dav_svn.c>
 		LoadModule dav_svn_module	${MOD}/mod_dav_svn.so
