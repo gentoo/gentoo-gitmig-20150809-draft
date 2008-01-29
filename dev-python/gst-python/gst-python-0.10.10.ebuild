@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.10.ebuild,v 1.1 2008/01/29 23:32:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.10.ebuild,v 1.2 2008/01/29 23:39:23 drac Exp $
 
 NEED_PYTHON=2.4
 
@@ -36,8 +36,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	docinto examples
-	cp -pPR examples/* "${D}"/usr/share/doc/${PF}/examples
-	prepalldocs
+	dodoc examples/*
 }
 
 pkg_postinst() {
