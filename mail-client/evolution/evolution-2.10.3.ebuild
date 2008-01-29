@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.3.ebuild,v 1.9 2007/11/06 17:08:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.3.ebuild,v 1.10 2008/01/29 18:19:22 dang Exp $
+EAPI="1"
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -36,7 +37,7 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	>=gnome-base/libgnomeprintui-2.2.1
 	>=x11-libs/gtk+-2
 	>=gnome-base/libgnome-2
-	>=net-libs/libsoup-2.2.96
+	>=net-libs/libsoup-2.2.96:2.2
 	>=x11-libs/pango-1.8.1
 	x11-libs/libnotify
 	hal? ( >=sys-apps/hal-0.5.4 )

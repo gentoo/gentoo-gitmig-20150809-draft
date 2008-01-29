@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.218 2008/01/27 22:28:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.219 2008/01/29 18:19:22 dang Exp $
+
+  29 Jan 2008; Daniel Gryniewicz <dang@gentoo.org> evolution-2.10.3.ebuild,
+  evolution-2.12.1.ebuild, evolution-2.12.2.ebuild, evolution-2.12.3.ebuild:
+  Add a slot dep on libsoup to prepare for the new 2.4 slot
 
 *evolution-2.12.3 (27 Jan 2008)
 

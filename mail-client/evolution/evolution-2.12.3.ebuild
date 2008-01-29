@@ -1,6 +1,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.3.ebuild,v 1.1 2008/01/27 22:28:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.3.ebuild,v 1.2 2008/01/29 18:19:22 dang Exp $
+EAPI="1"
 
 inherit gnome2 flag-o-matic
 
@@ -39,7 +40,7 @@ RDEPEND="
 		>=dev-libs/nspr-4.6.1
 		>=dev-libs/nss-3.11 )
 	networkmanager? ( net-misc/networkmanager )
-	>=net-libs/libsoup-2.2.96
+	>=net-libs/libsoup-2.2.96:2.2
 	kerberos? ( virtual/krb5 )
 	krb4? ( virtual/krb5 )
 	>=dev-libs/glib-2.10
