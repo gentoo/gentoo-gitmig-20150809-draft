@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lisa/lisa-3.5.8.ebuild,v 1.2 2008/01/28 22:31:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lisa/lisa-3.5.8.ebuild,v 1.3 2008/01/29 16:17:31 armin76 Exp $
 
 KMNAME=kdenetwork
 KMMODULE=lanbrowsing
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdenetwork-3.5-patchset-01.tar.bz2"
 
 DESCRIPTION="KDE Lan Information Server - allows KDE desktops to share information over a network."
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
 KMEXTRA="doc/kcontrol/lanbrowser"
 

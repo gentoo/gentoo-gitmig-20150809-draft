@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdenetwork
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/ChangeLog,v 1.63 2008/01/28 22:26:57 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/ChangeLog,v 1.64 2008/01/29 16:08:57 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org> libkdenetwork-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   libkdenetwork-3.5.8.ebuild:

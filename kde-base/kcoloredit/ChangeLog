@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcoloredit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcoloredit/ChangeLog,v 1.67 2008/01/28 20:15:51 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcoloredit/ChangeLog,v 1.68 2008/01/29 16:49:28 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org> kcoloredit-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   kcoloredit-3.5.8.ebuild:

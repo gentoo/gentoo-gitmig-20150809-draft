@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/kdepim-wizards-3.5.8.ebuild,v 1.2 2008/01/28 22:57:46 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/kdepim-wizards-3.5.8.ebuild,v 1.3 2008/01/29 16:28:13 armin76 Exp $
 
 KMNAME=kdepim
 KMMODULE=wizards
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDEPIM wizards"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange $PV $MAXKDEVER kde-base/libkcal)

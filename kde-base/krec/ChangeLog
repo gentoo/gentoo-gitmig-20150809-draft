@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krec
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/ChangeLog,v 1.77 2008/01/28 22:01:30 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/ChangeLog,v 1.78 2008/01/29 16:35:33 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org> krec-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> krec-3.5.8.ebuild:
   Marked stable on amd64 as per bug 207634.

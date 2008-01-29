@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/kbounce-3.5.8.ebuild,v 1.2 2008/01/28 22:47:22 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/kbounce-3.5.8.ebuild,v 1.3 2008/01/29 17:04:49 armin76 Exp $
 
 KMNAME=kdegames
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE Bounce Ball Game"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdegames)"
 

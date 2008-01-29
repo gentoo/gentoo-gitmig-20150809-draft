@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility-iconthemes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-iconthemes/ChangeLog,v 1.70 2008/01/28 20:21:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-iconthemes/ChangeLog,v 1.71 2008/01/29 15:34:40 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  kdeaccessibility-iconthemes-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   kdeaccessibility-iconthemes-3.5.8.ebuild:

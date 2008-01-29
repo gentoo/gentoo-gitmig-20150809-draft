@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-kresources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.82 2008/01/28 22:57:01 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.83 2008/01/29 16:27:46 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  kdepim-kresources-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   kdepim-kresources-3.5.8.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeprint/kdeprint-3.5.8.ebuild,v 1.2 2008/01/28 22:58:06 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeprint/kdeprint-3.5.8.ebuild,v 1.3 2008/01/29 16:51:52 armin76 Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE printer queue/device manager"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="cups kde kdehiddenvisibility"
 
 # TODO Makefile reads ppd models from /usr/share/cups/model	 (hardcoded !!)
