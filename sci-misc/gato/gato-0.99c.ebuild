@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-0.99c.ebuild,v 1.2 2008/01/29 15:03:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-0.99c.ebuild,v 1.3 2008/01/29 15:08:52 bicatali Exp $
 
 inherit python eutils multilib
 
@@ -39,7 +39,7 @@ src_install() {
 
 	# install python code
 	python_version
-	local instdir=/usr/$(get_libdir)/${python}${PYVER}/${PN}
+	local instdir=/usr/$(get_libdir)/python${PYVER}/${PN}
 	insinto ${instdir}
 	doins *.py || die "Failed to install python files"
 	fperms 755 ${instdir}/{Gato,Gred}.py
