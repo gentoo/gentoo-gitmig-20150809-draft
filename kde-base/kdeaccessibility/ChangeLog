@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.146 2008/01/29 15:07:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.147 2008/01/29 16:24:00 ranger Exp $
+
+  29 Jan 2008; Brent Baude <ranger@gentoo.org>
+  kdeaccessibility-3.5.8.ebuild:
+  Marking kdeaccessibility-3.5.8 ppc64 for bug 207634
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   kdeaccessibility-3.5.8.ebuild:
