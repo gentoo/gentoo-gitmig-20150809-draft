@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.8.ebuild,v 1.4 2008/01/29 11:29:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.8.ebuild,v 1.5 2008/01/29 20:09:47 armin76 Exp $
 
 # latest gentoo apache files
 GENTOO_PATCHSTAMP="20080119"
@@ -79,7 +79,7 @@ HOMEPAGE="http://httpd.apache.org/"
 # some helper scripts are apache-1.1, thus both are here
 LICENSE="Apache-2.0 Apache-1.1"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ~ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="sni"
 
 DEPEND="${DEPEND}
