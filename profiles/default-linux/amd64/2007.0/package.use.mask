@@ -94,7 +94,3 @@ media-libs/mlt mmx
 # Mask x86-32 asm only flags
 # bug #178033
 media-video/cinelerra-cvs mmx 3dnow
-
-# 28 Jan 2008: Wulf Krueger <philantrop@gentoo.org>
-# Mask bluetooth for the KDE 3.5.8 stabilisation.
-app-pda/pilot-link bluetooth
