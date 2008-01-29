@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.8.3.ebuild,v 1.4 2007/06/02 02:53:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.8.3.ebuild,v 1.5 2008/01/29 17:36:14 dang Exp $
+EAPI="1"
 
 inherit gnome2 eutils autotools
 
@@ -14,7 +15,7 @@ IUSE="debug doc static"
 
 RDEPEND=">=mail-client/evolution-2.7
 	>=gnome-extra/evolution-data-server-1.7
-	>=net-libs/libsoup-2.2.96
+	>=net-libs/libsoup-2.2.96:2.2
 	>=gnome-base/libglade-2.0
 	>=gnome-base/libgnomeui-2.0
 	>=gnome-base/libgnomeprintui-2.0
