@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.40 2008/01/29 20:31:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.41 2008/01/29 20:38:59 nixnut Exp $
+
+  29 Jan 2008; nixnut <nixnut@gentoo.org> exiv2-0.15-r1.ebuild,
+  exiv2-0.16.ebuild:
+  stabling 0.15-r1 instead of the too new 0.16
 
   29 Jan 2008; nixnut <nixnut@gentoo.org> exiv2-0.16.ebuild:
   Stable on ppc wrt bug 205588
