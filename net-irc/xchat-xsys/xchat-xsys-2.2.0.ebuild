@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.2.0.ebuild,v 1.3 2008/01/29 13:47:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.2.0.ebuild,v 1.4 2008/01/29 14:03:07 drac Exp $
 
 inherit toolchain-funcs eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://dev.gentoo.org/~chainsaw/xsys/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc x86"
 
 DEPEND="|| (
 		>=net-irc/xchat-2.4.0
