@@ -1,6 +1,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.20.1.ebuild,v 1.9 2008/01/21 15:31:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.20.1.ebuild,v 1.10 2008/01/29 16:25:16 dang Exp $
+EAPI="1"
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -44,7 +45,7 @@ RDEPEND="
 	>=gnome-base/gnome-mime-data-2.18.0
 
 	>=gnome-base/gconf-2.20.1
-	>=net-libs/libsoup-2.2.102
+	net-libs/libsoup:2.2
 
 	>=gnome-base/libbonobo-2.20.1
 	>=gnome-base/libbonoboui-2.20.0
