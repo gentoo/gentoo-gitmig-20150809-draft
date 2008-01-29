@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8186 2008/01/28 22:17:54 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8187 2008/01/29 04:22:40 ali_bush Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -539,12 +539,6 @@ dev-ruby/http-access2
 # Extremely old themes not exhibiting Openbox's newer theming options.
 # Openbox will be moving to an XML-based theming engine in the future.
 x11-themes/openbox-themes
-
-# Alistair Bush <ali_bush@gentoo.org> (28 Dec 2007)
-# Completely outofdate. release no longer available upstream.
-# pending removal to java junkyard. Remove in 30 Days
-# https://bugs.gentoo.org/show_bug.cgi?id=115631
-dev-util/poseidonCE
 
 # Mart Raudsepp <leio@gentoo.org> (28 Dec 2007)
 # Live Subversion ebuild until pending first upstream release
