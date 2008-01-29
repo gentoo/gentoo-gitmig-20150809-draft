@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/privoxy
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.27 2007/11/14 05:14:55 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.28 2008/01/29 11:18:31 mrness Exp $
+
+*privoxy-3.0.8 (29 Jan 2008)
+
+  29 Jan 2008; Alin Năstac <mrness@gentoo.org> +privoxy-3.0.8.ebuild:
+  Version bump (#204182).
 
   14 Nov 2007; Alin Năstac <mrness@gentoo.org> files/privoxy.initd:
   Set PIDFILE and CONFFILE init script parameters to values based on service
