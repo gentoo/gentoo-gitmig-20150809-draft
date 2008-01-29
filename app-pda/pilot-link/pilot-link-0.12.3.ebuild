@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3.ebuild,v 1.3 2008/01/28 19:34:49 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3.ebuild,v 1.4 2008/01/29 12:01:36 ranger Exp $
 
 inherit perl-module java-pkg-opt-2 eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://pilot-link.org/source/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="perl java python png readline threads bluetooth usb debug"
 

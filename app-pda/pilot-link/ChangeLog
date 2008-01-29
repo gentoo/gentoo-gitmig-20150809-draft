@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.34 2008/01/28 19:34:49 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.35 2008/01/29 12:01:36 ranger Exp $
+
+  29 Jan 2008; Brent Baude <ranger@gentoo.org> pilot-link-0.12.3.ebuild:
+  Marking pilot-link-0.12.3 ~ppc64 for bug 207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   pilot-link-0.12.3.ebuild:
