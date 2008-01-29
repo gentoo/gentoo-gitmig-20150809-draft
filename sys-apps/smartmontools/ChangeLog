@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/smartmontools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.70 2007/12/28 23:49:25 gmsoft Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.71 2008/01/29 16:13:41 flameeyes Exp $
+
+  29 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> files/smartd.rc:
+  Fix init script dependencies to work without a boot runlevel.
 
   28 Dec 2007; Guy Martin <gmsoft@gentoo.org> smartmontools-5.37.ebuild:
   Added hppa to KEYWORDS.
