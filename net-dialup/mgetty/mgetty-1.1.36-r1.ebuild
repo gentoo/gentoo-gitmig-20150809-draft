@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r1.ebuild,v 1.6 2008/01/22 02:07:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r1.ebuild,v 1.7 2008/01/29 10:10:36 mrness Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -16,8 +16,7 @@ DEPEND="doc? ( virtual/tetex )
 	sys-apps/texinfo
 	fax? ( !net-misc/hylafax )"
 RDEPEND="${DEPEND}
-	media-libs/netpbm
-	virtual/ghostscript"
+	fax? ( media-libs/netpbm virtual/ghostscript )"
 
 SLOT="0"
 LICENSE="GPL-2"
