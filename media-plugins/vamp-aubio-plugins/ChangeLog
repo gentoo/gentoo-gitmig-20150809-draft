@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vamp-aubio-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/ChangeLog,v 1.4 2008/01/29 08:45:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/ChangeLog,v 1.5 2008/01/29 11:56:22 opfer Exp $
+
+  29 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  vamp-aubio-plugins-0.3.2b.ebuild:
+  stable x86, security bug 199751
 
   29 Jan 2008; Markus Rothe <corsair@gentoo.org>
   vamp-aubio-plugins-0.3.2b.ebuild:

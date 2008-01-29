@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/vamp-aubio-plugins-0.3.2b.ebuild,v 1.4 2008/01/29 08:45:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/vamp-aubio-plugins-0.3.2b.ebuild,v 1.5 2008/01/29 11:56:22 opfer Exp $
 
 inherit flag-o-matic toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/vamp/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 x86"
 IUSE=""
 
 DEPEND=">=media-libs/aubio-0.3.2

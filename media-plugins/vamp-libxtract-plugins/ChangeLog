@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vamp-libxtract-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-libxtract-plugins/ChangeLog,v 1.4 2008/01/29 08:48:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-libxtract-plugins/ChangeLog,v 1.5 2008/01/29 11:57:22 opfer Exp $
+
+  29 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  vamp-libxtract-plugins-0.4.2.20071019.ebuild:
+  stable x86, security bug 199751
 
   29 Jan 2008; Markus Rothe <corsair@gentoo.org>
   vamp-libxtract-plugins-0.4.2.20071019.ebuild:
