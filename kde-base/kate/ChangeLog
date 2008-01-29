@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.91 2008/01/28 19:59:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.92 2008/01/29 18:12:15 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org> kate-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> kate-3.5.8.ebuild:
   Marked stable on amd64 as per bug 207634.
