@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-0.2.14.ebuild,v 1.3 2007/11/04 08:45:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-0.2.14.ebuild,v 1.4 2008/01/29 18:35:06 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,9 +14,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl
-	>=sys-libs/db-3.2
-	|| ( mail-filter/libmilter mail-mta/sendmail )"
-DEPEND="${RDEPEND}"
+	>=sys-libs/db-3.2"
+DEPEND="${RDEPEND}
+	|| ( mail-filter/libmilter mail-mta/sendmail )" # libmilter is a static library
 
 pkg_setup() {
 	enewgroup milter

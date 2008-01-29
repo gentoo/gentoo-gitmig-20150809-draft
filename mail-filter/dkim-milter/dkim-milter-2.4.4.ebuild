@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.4.4.ebuild,v 1.1 2008/01/28 00:18:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.4.4.ebuild,v 1.2 2008/01/29 18:29:26 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,9 +15,9 @@ IUSE="ipv6 diffheaders"
 
 RDEPEND="dev-libs/openssl
 	>=sys-libs/db-3.2
-	|| ( mail-filter/libmilter mail-mta/sendmail )
 	diffheaders? ( dev-libs/tre )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	|| ( mail-filter/libmilter mail-mta/sendmail )" # libmilter is a static library
 
 pkg_setup() {
 	enewgroup milter
