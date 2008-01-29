@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ilmbase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.10 2008/01/28 18:41:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.11 2008/01/29 00:25:37 philantrop Exp $
+
+  29 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> ilmbase-1.0.1.ebuild:
+  Marked stable on amd64 as per bug 207663.
 
   28 Jan 2008; Jeroen Roovers <jer@gentoo.org> ilmbase-1.0.1.ebuild:
   Stable for HPPA (bug #207663).
