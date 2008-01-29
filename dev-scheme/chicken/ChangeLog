@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/chicken
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.17 2007/12/20 14:56:59 hkbst Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.18 2008/01/29 10:47:18 hkbst Exp $
+
+*chicken-3.0.0 (29 Jan 2008)
+
+  29 Jan 2008; Marijn Schouten <hkBst@gentoo.org> +chicken-3.0.0.ebuild:
+  bump per bug 207963. Now uses host libpcre.
 
   20 Dec 2007; Marijn Schouten <hkBst@gentoo.org> chicken-2.731.ebuild:
   fix bug 201220, thanks to José Romildo Malaquias <j.romildo@gmail.com> for
