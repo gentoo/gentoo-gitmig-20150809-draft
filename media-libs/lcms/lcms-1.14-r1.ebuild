@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.14-r1.ebuild,v 1.18 2007/03/27 09:34:12 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.14-r1.ebuild,v 1.19 2008/01/29 21:53:26 grobian Exp $
 
 inherit libtool eutils autotools
 
@@ -27,9 +27,8 @@ src_unpack() {
 	# fixes bug #98547
 	epatch "${FILESDIR}"/lcms.i.diff
 
-	# fix build on amd64, conditional for ppc-macos because it lacks the
-	# proper automake version (1.7)
-	use ppc-macos || eautoreconf || die "autoreconf failed"
+	# fix build on amd64
+	eautoreconf || die "autoreconf failed"
 
 	elibtoolize
 }

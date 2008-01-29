@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-image
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.41 2008/01/29 08:54:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.42 2008/01/29 21:55:55 grobian Exp $
+
+  29 Jan 2008; Fabian Groffen <grobian@gentoo.org>
+  sdl-image-1.2.6-r1.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
 *sdl-image-1.2.6-r1 (29 Jan 2008)
 
