@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/package.mask,v 1.7 2008/01/29 22:01:06 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/package.mask,v 1.8 2008/01/29 22:15:12 welp Exp $
 
 # Mask out the GNU versions of various packages.
 # We want BSD versions wherever possible
@@ -59,5 +59,5 @@ dev-cpp/libherdstat
 app-portage/herdstat
 
 # Peter Weller <welp@gentoo.org> (29 Jan 2008)
-# Mask >=app-shells/bash-3.2_p33 due to portage blockages
->=app-shells/bash-3.2_p33
+# Mask >=app-shells/bash-3.2_p25 due to portage blockages
+>=app-shells/bash-3.2_p25
