@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdnav
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.36 2007/11/02 02:13:46 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.37 2008/01/29 21:41:39 grobian Exp $
+
+  29 Jan 2008; Fabian Groffen <grobian@gentoo.org> libdvdnav-0.1.10.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
 *libdvdnav-4.1.1 (02 Nov 2007)
 
