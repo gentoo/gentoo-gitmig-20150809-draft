@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.13.ebuild,v 1.1 2007/11/18 15:39:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.13.ebuild,v 1.2 2008/01/29 22:18:01 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.ladspa.org/download/${MY_P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=""
