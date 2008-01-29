@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.6.0_beta0.ebuild,v 1.1 2007/12/11 20:12:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.6.0_beta2.ebuild,v 1.1 2008/01/29 10:37:43 mrness Exp $
 
 inherit distutils
 
@@ -41,7 +41,7 @@ src_install () {
 
 		# Create a default sshproxy.ini
 		dodir /etc/sshproxy
-		insopts -o sshproxy -g sshproxy -m0600
+		insopts -o root -g sshproxy -m0600
 		insinto /etc/sshproxy
 		doins "${FILESDIR}/sshproxy.ini"
 		local BLOWFISH_SECRET=$(printf "%04hX%04hX%04hX%04hX\n" ${RANDOM} ${RANDOM} ${RANDOM} ${RANDOM})
@@ -49,6 +49,7 @@ src_install () {
 			-e "s/%HOSTNAME%/${HOSTNAME}/" \
 			"${D}/etc/sshproxy/sshproxy.ini"
 
+		insopts -o sshproxy -g sshproxy -m0600
 		rm -rf "${D}/usr/lib/sshproxy/spexpect"
 		if use minimal; then
 			local p
@@ -69,6 +70,15 @@ src_install () {
 		newinitd "${FILESDIR}/sshproxyd.initd" sshproxyd
 		newconfd "${FILESDIR}/sshproxyd.confd" sshproxyd
 
+		# install manpages
+		doman doc/pscp.1
+		doman doc/pssh.1
+		if ! use client-only; then
+			doman doc/sshproxy.ini.5
+			doman doc/sshproxy-setup.8
+			doman doc/sshproxyd.8
+		fi
+
 		if use mysql; then
 			insinto /usr/share/sshproxy/mysql_db
 			doins misc/mysql_db.sql
@@ -82,14 +92,13 @@ src_install () {
 }
 
 pkg_postinst () {
-	if use client-only; then
-		echo
-		einfo "Don't forget to set the following environment variables"
-		einfo "   SSHPROXY_HOST (default to localhost)"
-		einfo "   SSHPROXY_PORT (default to 2242)"
-		einfo "   SSHPROXY_USER (default to \$USER)"
-		einfo "for each sshproxy user."
-	else
+	echo
+	einfo "Don't forget to set the following environment variables"
+	einfo "   SSHPROXY_HOST (default to localhost)"
+	einfo "   SSHPROXY_PORT (default to 2242)"
+	einfo "   SSHPROXY_USER (default to \$USER)"
+	einfo "for each sshproxy user."
+	if ! use client-only; then
 		distutils_pkg_postinst
 
 		echo
