@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.2-r2.ebuild,v 1.1 2007/09/18 08:14:28 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.2-r2.ebuild,v 1.2 2008/01/29 21:24:44 grobian Exp $
 
 inherit eutils portability versionator
 
@@ -48,12 +48,8 @@ src_compile() {
 	myflags=
 	# what to link to liblua
 	liblibs="-lm"
-	if use ppc-macos; then
-		mycflags="${mycflags} -DLUA_USE_MACOSX"
-	else # building for standard linux (and bsd too)
-		mycflags="${mycflags} -DLUA_USE_LINUX"
-		liblibs="${liblibs} $(dlopen_lib)"
-	fi
+	mycflags="${mycflags} -DLUA_USE_LINUX"
+	liblibs="${liblibs} $(dlopen_lib)"
 
 	# what to link to the executables
 	mylibs=

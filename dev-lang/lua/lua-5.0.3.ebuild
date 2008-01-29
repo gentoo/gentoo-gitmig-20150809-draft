@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.3.ebuild,v 1.7 2007/02/28 22:04:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.3.ebuild,v 1.8 2008/01/29 21:24:44 grobian Exp $
 
 inherit eutils portability
 
@@ -38,8 +38,6 @@ src_unpack() {
 
 	[[ ${ELIBC} != *BSD ]] && sed -i -e 's:^#\(DLLIB= -ldl\):\1:' config
 
-	use ppc-macos || sed -i -e 's:^#\(MYLDFLAGS= -Wl,-E\):\1:' config
-
 	sed -i -e 's:\(/README\)\("\):\1.gz\2:g' doc/readme.html
 
 	if use readline ; then
@@ -66,21 +64,13 @@ EOF
 
 src_compile() {
 	emake || die "emake failed"
-	if use ppc-macos; then
-		emake dylib || die "emake dylib failed"
-	else
-		emake so || die "emake so failed"
-	fi
+	emake so || die "emake so failed"
 	mv bin/lua test/lua.static
 	emake sobin || die "emake sobin failed"
 }
 
 src_install() {
-	if use ppc-macos; then
-		make DESTDIR="${D}" install dylibinstall || die "make install dylibinstall failed"
-	else
-		make DESTDIR="${D}" install soinstall || die "make install soinstall failed"
-	fi
+	make DESTDIR="${D}" install soinstall || die "make install soinstall failed"
 
 	dodoc HISTORY UPDATE
 	dohtml doc/*.html doc/*.gif

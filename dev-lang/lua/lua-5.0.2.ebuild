@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.25 2007/02/28 22:04:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.26 2008/01/29 21:24:44 grobian Exp $
 
 inherit eutils portability
 
@@ -21,30 +21,16 @@ src_unpack() {
 
 	epatch ${FILESDIR}/lua-${PV}-pic.patch
 	#epatch ${FILESDIR}/lua-${PV}-LDFLAGS_and_as-needed.patch
-	use ppc-macos && epatch ${FILESDIR}/lua-ppc-macos-Makefile.patch
 
 	cd ${S}
 
-	if ! use ppc-macos; then
-		sed -i config \
-			-e 's:^#\(LOADLIB= -DUSE_DLOPEN=1\):\1:' \
-			-e "s:^#\(DLLIB=\) -ldl:\1 $(dlopen_lib):" \
-			-e 's:^#\(MYLDFLAGS= -Wl,-E\):\1:' \
-			-e "s:^#\(LDFLAGS=\).*:\1 ${LDFLAGS}:" \
-			-e 's:^#\(POPEN= -DUSE_POPEN=1\)$:\1:' \
-			-e "s:^\(MYCFLAGS= \)-O2:\1${CFLAGS}:" \
-			-e 's:^\(INSTALL_ROOT= \)/usr/local:\1$(DESTDIR)/usr:' \
-			-e "s:^\(INSTALL_LIB= \$(INSTALL_ROOT)/\)lib:\1$(get_libdir):" \
-			-e 's:^\(INSTALL_MAN= $(INSTALL_ROOT)\)/man/man1:\1/share/man/man1:'
-	else
-		sed -i config \
-			-e 's:^#\(LOADLIB= -DUSE_DLOPEN=1\):\1:' \
-			-e 's:^#\(DLLIB= -ldl\):\1:' \
-			-e 's:^#\(POPEN= -DUSE_POPEN=1\)$:\1:' \
-			-e "s:^\(MYCFLAGS= \)-O2:\1${CFLAGS}:" \
-			-e 's:^\(INSTALL_ROOT= \)/usr/local:\1/usr:' \
-			-e 's:^\(INSTALL_MAN= $(INSTALL_ROOT)\)/man/man1:\1/share/man/man1:'
-	fi
+	sed -i config \
+		-e 's:^#\(LOADLIB= -DUSE_DLOPEN=1\):\1:' \
+		-e 's:^#\(DLLIB= -ldl\):\1:' \
+		-e 's:^#\(POPEN= -DUSE_POPEN=1\)$:\1:' \
+		-e "s:^\(MYCFLAGS= \)-O2:\1${CFLAGS}:" \
+		-e 's:^\(INSTALL_ROOT= \)/usr/local:\1/usr:' \
+		-e 's:^\(INSTALL_MAN= $(INSTALL_ROOT)\)/man/man1:\1/share/man/man1:'
 
 	sed -i doc/readme.html \
 		-e 's:\(/README\)\("\):\1.gz\2:g'
@@ -74,21 +60,11 @@ EOF
 src_compile() {
 	export PICFLAGS=-fPIC
 	emake || die "emake failed"
-	if use ppc-macos; then
-		# OSX does not have so files.
-		emake dylib dylibbin || die "emake dylib failed"
-	else
-		emake so || die "emake so failed"
-	fi
+	emake so || die "emake so failed"
 }
 
 src_install() {
-	if use ppc-macos; then
-		# OSX does not have so files.
-		make DESTDIR=${D} install dylibinstall || die "make install	dylibinstall failed"
-	else
-		make DESTDIR=${D} install soinstall || die "make install soinstall failed"
-	fi
+	make DESTDIR=${D} install soinstall || die "make install soinstall failed"
 
 	dodoc HISTORY UPDATE
 	dohtml doc/*.html doc/*.gif
