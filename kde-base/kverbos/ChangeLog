@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kverbos
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kverbos/ChangeLog,v 1.68 2008/01/28 22:18:36 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kverbos/ChangeLog,v 1.69 2008/01/29 17:28:42 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org> kverbos-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> kverbos-3.5.8.ebuild:
   Marked stable on amd64 as per bug 207634.

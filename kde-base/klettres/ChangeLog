@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klettres
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klettres/ChangeLog,v 1.74 2008/01/29 17:16:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klettres/ChangeLog,v 1.75 2008/01/29 17:20:25 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org> ChangeLog:
+  alpha/ia64/sparc stable wrt #207634
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org> klettres-3.5.8.ebuild:
   alpha/ia64/sparc stable wrt #207634

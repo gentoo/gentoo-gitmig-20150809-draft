@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.77 2008/01/29 17:15:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.78 2008/01/29 17:19:33 armin76 Exp $
+
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org> ChangeLog:
+  alpha/ia64/sparc stable wrt #207634
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   kdegames-meta-3.5.8-r1.ebuild:
