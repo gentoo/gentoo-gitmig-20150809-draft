@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.5.5.ebuild,v 1.1 2007/12/22 10:21:29 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.5.5.ebuild,v 1.2 2008/01/29 20:50:49 drac Exp $
+
+EAPI=1
 
 inherit eutils versionator confutils
 
@@ -20,7 +22,7 @@ RESTRICT="test"
 RDEPEND=">=dev-libs/glib-2.12
 	>=dev-libs/liboil-0.3.1
 	>=x11-libs/pango-1.16.4
-	soup? ( >=net-libs/libsoup-2.2.0 )
+	soup? ( net-libs/libsoup:2.2 )
 	>=x11-libs/cairo-1.2
 	>=x11-libs/gtk+-2.8.0
 	>=media-libs/alsa-lib-1.0.12
