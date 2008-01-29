@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/evolution-webcal-2.8.0.ebuild,v 1.9 2007/01/21 21:36:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/evolution-webcal-2.8.0.ebuild,v 1.10 2008/01/29 18:02:34 dang Exp $
+EAPI="1"
 
 inherit gnome2
 
@@ -13,7 +14,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/gconf-2
-	>=net-libs/libsoup-2.2
+	net-libs/libsoup:2.2
 	>=x11-libs/gtk+-2.4
 	>=gnome-base/libgnomeui-2
 	>=gnome-extra/evolution-data-server-1.2"
