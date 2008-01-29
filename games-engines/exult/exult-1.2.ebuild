@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.11 2007/10/01 00:25:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.12 2008/01/29 10:08:03 nyhm Exp $
 
 inherit eutils autotools games
 
@@ -83,5 +83,5 @@ pkg_postinst() {
 	games_pkg_postinst
 	elog "You *must* have the original Ultima7 The Black Gate and/or"
 	elog "The Serpent Isle installed."
-	elog "See /usr/share/doc/${PF}/README.gz for information!"
+	elog "See README in /usr/share/doc/${PF} for information."
 }
