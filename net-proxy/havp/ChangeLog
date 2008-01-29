@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/havp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.22 2007/11/04 08:11:42 mrness Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.23 2008/01/29 10:54:25 mrness Exp $
+
+*havp-0.87 (29 Jan 2008)
+
+  29 Jan 2008; Alin Năstac <mrness@gentoo.org> +havp-0.87.ebuild:
+  Version bump (#207870).
 
   04 Nov 2007; Alin Năstac <mrness@gentoo.org> havp-0.86.ebuild:
   Remove useless pkg_preinst function.
