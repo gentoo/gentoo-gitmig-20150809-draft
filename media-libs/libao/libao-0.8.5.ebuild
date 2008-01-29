@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.5.ebuild,v 1.21 2006/10/04 16:57:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.5.ebuild,v 1.22 2008/01/29 21:45:57 grobian Exp $
 
 inherit libtool eutils
 
@@ -21,7 +21,6 @@ DEPEND="alsa? ( media-libs/alsa-lib )
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use ppc-macos && epatch ${FILESDIR}/${P}-ppc-macos.patch
 	elibtoolize
 }
 
