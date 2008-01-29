@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ldap_userdir/mod_ldap_userdir-1.1.11.ebuild,v 1.2 2007/07/29 19:17:40 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ldap_userdir/mod_ldap_userdir-1.1.11.ebuild,v 1.3 2008/01/29 16:37:24 hollow Exp $
 
 inherit apache-module
 
@@ -35,5 +35,5 @@ src_compile() {
 
 src_install() {
 	apache-module_src_install
-	fperms 600 "${APACHE2_MODULES_CONFDIR}"/47_mod_ldap_userdir.conf
+	fperms 600 "${APACHE_MODULES_CONFDIR}"/47_mod_ldap_userdir.conf
 }
