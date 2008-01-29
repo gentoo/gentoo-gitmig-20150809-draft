@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/facile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.10 2008/01/28 19:22:34 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.11 2008/01/29 12:06:19 ranger Exp $
+
+  29 Jan 2008; Brent Baude <ranger@gentoo.org> facile-1.1.ebuild:
+  Marking facile-1.1 ppc64 for bug 207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> facile-1.1.ebuild:
   Marked stable on amd64 as per bug 207634.
