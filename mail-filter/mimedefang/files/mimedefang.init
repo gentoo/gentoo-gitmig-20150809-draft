@@ -14,6 +14,10 @@ MXPID="$SPOOLDIR/$prog-multiplexor.pid"
 SOCKET=${SOCKET:=$SPOOLDIR/$prog.sock}
 MX_SOCKET=${MX_SOCKET:=$SPOOLDIR/$prog-multiplexor.sock}
 
+depend() {
+	use antivirus
+}
+
 start() {
 	if test -r $PID ; then
 		if kill -0 `cat $PID` > /dev/null 2>&1 ; then
