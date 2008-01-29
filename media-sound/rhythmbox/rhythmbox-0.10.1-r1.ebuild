@@ -1,6 +1,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.10.1-r1.ebuild,v 1.7 2008/01/02 12:16:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.10.1-r1.ebuild,v 1.8 2008/01/29 18:22:35 dang Exp $
+EAPI="1"
 
 inherit gnome2 eutils
 
@@ -27,7 +28,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=media-plugins/gst-plugins-cdparanoia-0.10
 	keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
 	musicbrainz? ( >=media-libs/musicbrainz-2.1 )
-	>=net-libs/libsoup-2.2.99
+	>=net-libs/libsoup-2.2.99:2.2
 	lirc? ( app-misc/lirc )
 	hal? ( ipod? ( >=media-libs/libgpod-0.4 )
 			>=sys-apps/hal-0.5 )

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.115 2008/01/02 12:16:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.116 2008/01/29 18:22:35 dang Exp $
+
+  29 Jan 2008; Daniel Gryniewicz <dang@gentoo.org>
+  rhythmbox-0.10.1-r1.ebuild, rhythmbox-0.11.2-r1.ebuild:
+  Add a slot dep on libsoup to prepare for the new 2.4 slot
 
   02 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   rhythmbox-0.10.1-r1.ebuild, rhythmbox-0.11.2-r1.ebuild:
