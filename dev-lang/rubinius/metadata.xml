@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+<email>caleb@gentoo.org</email>
+<name>Caleb Tennis</name>
+</maintainer>
+<longdescription lang="en">
+Rubinius is an alternative Ruby interpreter, aiming to be compliant with MRI while providing
+a underlying VM and other nitfy features.
+</longdescription>
+</pkgmetadata>
+
