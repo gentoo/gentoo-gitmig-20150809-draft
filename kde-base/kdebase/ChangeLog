@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.425 2008/01/29 16:17:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.426 2008/01/30 08:42:57 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  kdebase-3.5.8-r6.ebuild:
+  stable x86, bug 207634
 
   29 Jan 2008; Brent Baude <ranger@gentoo.org> kdebase-3.5.8-r6.ebuild:
   Marking kdebase-3.5.8-r6 ppc64 for bug 207634

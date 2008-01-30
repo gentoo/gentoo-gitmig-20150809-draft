@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.51 2008/01/28 22:37:01 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.52 2008/01/30 11:45:25 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org> smoke-3.5.8.ebuild:
+  stable x86, bug 207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> smoke-3.5.8.ebuild:
   Marked stable on amd64 as per bug 207634.

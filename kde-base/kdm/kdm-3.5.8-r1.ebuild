@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.8-r1.ebuild,v 1.3 2008/01/29 18:34:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.8-r1.ebuild,v 1.4 2008/01/30 09:26:11 opfer Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5-patchset-04.tar.bz2"
 
 DESCRIPTION="KDE login manager, similar to xdm and gdm"
-KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="elibc_glibc kdehiddenvisibility pam"
 
 KMEXTRA="kdmlib/"

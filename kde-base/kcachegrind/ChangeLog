@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcachegrind
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.69 2008/01/28 20:10:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.70 2008/01/30 08:17:26 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  kcachegrind-3.5.8.ebuild:
+  stable x86, bug 207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   kcachegrind-3.5.8.ebuild:

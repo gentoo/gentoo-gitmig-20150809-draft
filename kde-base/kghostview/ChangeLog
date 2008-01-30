@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kghostview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/ChangeLog,v 1.79 2008/01/29 16:51:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/ChangeLog,v 1.80 2008/01/30 09:37:14 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  kghostview-3.5.8.ebuild:
+  stable x86, bug 207634
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org> kghostview-3.5.8.ebuild:
   alpha/ia64/sparc stable wrt #207634

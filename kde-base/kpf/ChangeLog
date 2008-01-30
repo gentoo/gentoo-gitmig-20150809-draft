@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpf/ChangeLog,v 1.71 2008/01/29 16:21:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpf/ChangeLog,v 1.72 2008/01/30 10:32:42 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org> kpf-3.5.8.ebuild:
+  stable x86, bug 207634
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org> kpf-3.5.8.ebuild:
   alpha/ia64/sparc stable wrt #207634

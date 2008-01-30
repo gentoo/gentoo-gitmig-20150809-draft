@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kspy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kspy/ChangeLog,v 1.46 2008/01/28 22:09:06 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kspy/ChangeLog,v 1.47 2008/01/30 10:54:07 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org> kspy-3.5.8.ebuild:
+  stable x86, bug 207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> kspy-3.5.8.ebuild:
   Marked stable on amd64 as per bug 207634.

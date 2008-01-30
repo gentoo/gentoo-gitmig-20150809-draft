@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.47 2008/01/28 21:11:36 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.48 2008/01/30 09:15:58 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  kdesdk-misc-3.5.8.ebuild:
+  stable x86, bug 207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   kdesdk-misc-3.5.8.ebuild:

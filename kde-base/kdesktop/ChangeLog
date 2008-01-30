@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesktop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.102 2008/01/29 18:34:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.103 2008/01/30 09:17:35 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  kdesktop-3.5.8.ebuild:
+  stable x86, bug 207634
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org> kdesktop-3.5.8.ebuild:
   alpha/ia64/sparc stable wrt #207634

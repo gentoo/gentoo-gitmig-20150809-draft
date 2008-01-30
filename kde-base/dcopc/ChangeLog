@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcopc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopc/ChangeLog,v 1.21 2008/01/28 19:38:40 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopc/ChangeLog,v 1.22 2008/01/30 07:49:22 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org> dcopc-3.5.8.ebuild:
+  stable x86, bug 207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> dcopc-3.5.8.ebuild:
   Marked stable on amd64 as per bug 207634.

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkholidays
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkholidays/ChangeLog,v 1.72 2008/01/29 16:05:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkholidays/ChangeLog,v 1.73 2008/01/30 11:26:43 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  libkholidays-3.5.8.ebuild:
+  stable x86, bug 207634
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org> libkholidays-3.5.8.ebuild:
   alpha/ia64/sparc stable wrt #207634

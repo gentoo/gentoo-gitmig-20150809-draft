@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksystraycmd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.60 2008/01/29 17:36:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.61 2008/01/30 10:58:53 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  ksystraycmd-3.5.8.ebuild:
+  stable x86, bug 207634
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org> ksystraycmd-3.5.8.ebuild:
   alpha/ia64/sparc stable wrt #207634

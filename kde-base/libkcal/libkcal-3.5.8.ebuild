@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/libkcal-3.5.8.ebuild,v 1.3 2008/01/29 16:10:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/libkcal-3.5.8.ebuild,v 1.4 2008/01/30 11:22:00 opfer Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdepim-3.5-patchset-04.tar.bz2"
 
 DESCRIPTION="KDE kcal library for KOrganizer etc"
-KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/ktnef)"

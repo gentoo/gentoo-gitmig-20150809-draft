@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kicker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.87 2008/01/29 18:11:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.88 2008/01/30 09:43:06 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org> kicker-3.5.8.ebuild:
+  stable x86, bug 207634
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org> kicker-3.5.8.ebuild:
   alpha/ia64/sparc stable wrt #207634

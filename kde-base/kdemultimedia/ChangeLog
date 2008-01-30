@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.264 2008/01/29 16:01:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.265 2008/01/30 08:59:30 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  kdemultimedia-3.5.8-r1.ebuild:
+  stable x86, bug 207634
 
   29 Jan 2008; Brent Baude <ranger@gentoo.org>
   kdemultimedia-3.5.8-r1.ebuild:

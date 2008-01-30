@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.202 2008/01/29 16:19:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.203 2008/01/30 08:33:58 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  kdeartwork-3.5.8.ebuild:
+  stable x86, bug 207634
 
   29 Jan 2008; Brent Baude <ranger@gentoo.org> kdeartwork-3.5.8.ebuild:
   Marking kdeartwork-3.5.8 ppc64 for bug 207634

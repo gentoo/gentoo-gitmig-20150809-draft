@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.145 2008/01/29 16:06:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.146 2008/01/30 08:55:11 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  kde-i18n-3.5.8.ebuild:
+  stable x86, bug 207634
 
   29 Jan 2008; Brent Baude <ranger@gentoo.org> kde-i18n-3.5.8.ebuild:
   Marking kde-i18n-3.5.8 ppc64 for bug 207634

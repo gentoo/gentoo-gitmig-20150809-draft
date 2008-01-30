@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kbattleship
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.75 2008/01/29 17:05:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.76 2008/01/30 08:12:42 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  kbattleship-3.5.8.ebuild:
+  stable x86, bug 207634
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org> kbattleship-3.5.8.ebuild:
   alpha/ia64/sparc stable wrt #207634

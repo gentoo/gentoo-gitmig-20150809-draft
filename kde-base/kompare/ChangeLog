@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kompare
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.70 2008/01/28 21:51:27 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.71 2008/01/30 10:16:52 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org> kompare-3.5.8.ebuild:
+  stable x86, bug 207634
 
   28 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> kompare-3.5.8.ebuild:
   Marked stable on amd64 as per bug 207634.
