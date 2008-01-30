@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20080101.ebuild,v 1.2 2008/01/15 13:43:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20080130.ebuild,v 1.1 2008/01/30 15:05:21 armin76 Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -17,6 +17,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="daemon debug geoip gtk nls remote stats unicode"
 
 DEPEND="=x11-libs/wxGTK-2.8*
+		dev-libs/crypto++
 		>=sys-libs/zlib-1.2.1
 		stats? ( >=media-libs/gd-2.0.26 )
 		geoip? ( dev-libs/geoip )
