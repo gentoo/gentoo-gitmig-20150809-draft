@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.125 2007/11/29 00:28:09 robbat2 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.126 2008/01/30 14:37:05 cardoe Exp $
+
+*lvm2-2.02.28-r5 (30 Jan 2008)
+
+  30 Jan 2008; Doug Klima <cardoe@gentoo.org>
+  +files/lvm2-stop.sh-2.02.28-r5, +lvm2-2.02.28-r5.ebuild:
+  ignore rootfs entries in mount and mtab during shutdown. Fixes issues with
+  shutting down in some cases.
 
 *lvm2-2.02.28-r4 (29 Nov 2007)
 
