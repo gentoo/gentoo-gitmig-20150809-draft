@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-2.0.1-r1.ebuild,v 1.2 2008/01/29 17:32:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-2.0.1-r1.ebuild,v 1.3 2008/01/30 00:35:01 cla Exp $
 
 inherit autotools eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~ppc-macos ~sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
