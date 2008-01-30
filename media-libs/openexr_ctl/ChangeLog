@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openexr_ctl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.9 2008/01/29 00:30:23 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.10 2008/01/30 07:32:37 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  openexr_ctl-1.0.1.ebuild:
+  stable x86, bug 207663
 
   29 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   openexr_ctl-1.0.1.ebuild:

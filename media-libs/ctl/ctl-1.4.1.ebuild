@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ctl/ctl-1.4.1.ebuild,v 1.4 2008/01/29 00:28:57 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ctl/ctl-1.4.1.ebuild,v 1.5 2008/01/30 07:31:30 opfer Exp $
 
 DESCRIPTION="AMPAS' Color Transformation Language"
 HOMEPAGE="http://sourceforge.net/projects/ampasctl"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/ampasctl/${P}.tar.gz"
 
 LICENSE="AMPAS"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="doc"
 
 RDEPEND="media-libs/ilmbase"
