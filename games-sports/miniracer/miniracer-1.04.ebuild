@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/miniracer-1.04.ebuild,v 1.4 2006/12/06 20:28:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/miniracer-1.04.ebuild,v 1.5 2008/01/30 17:10:40 nyhm Exp $
 
 inherit games
 
@@ -21,7 +21,6 @@ RDEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-mixer"
 DEPEND="${RDEPEND}
-	media-libs/mesa
 	x11-proto/xf86dgaproto
 	x11-proto/xf86vidmodeproto
 	x11-proto/xproto"
@@ -40,7 +39,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc TODO README ChangeLog
 	prepgamesdirs
 }
