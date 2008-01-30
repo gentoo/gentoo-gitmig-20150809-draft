@@ -2,10 +2,10 @@
 Hash: SHA1
 
 DIST fortune-mod-scriptures-1.1.0.tar.bz2 2621853 RMD160 9dd44d3a175a9881bb3490f50476c3740b7ed220 SHA1 6c5e058c118215e92fdb09b2d7e2047e37b3fb92 SHA256 79923f471ec22c83894ec2b9c6bb3a1e7c2291774e68029ab1bbe909697ee3ee
-EBUILD fortune-mod-scriptures-1.1.0.ebuild 658 RMD160 94c39da20bd974a456198b0589c53d0cf2580006 SHA1 5ed7b6ab70685322ccb192cd95d787754201ec38 SHA256 8742d8b747898c3c3339ad59cd03b95bdfefb2c0845eef04d1b25eba9ebcba3f
-MD5 790f9c176977d2799a992c63e0812c6e fortune-mod-scriptures-1.1.0.ebuild 658
-RMD160 94c39da20bd974a456198b0589c53d0cf2580006 fortune-mod-scriptures-1.1.0.ebuild 658
-SHA256 8742d8b747898c3c3339ad59cd03b95bdfefb2c0845eef04d1b25eba9ebcba3f fortune-mod-scriptures-1.1.0.ebuild 658
+EBUILD fortune-mod-scriptures-1.1.0.ebuild 656 RMD160 45ec991192232017c9dd3516b40befed1d86b3b0 SHA1 a231d12697017b33259132a37d6c9ea737b3fd6c SHA256 a11a6733940f47d3a7b5168ff1a13c851b77e0fdc2e5f88d49f022acf283b4fd
+MD5 83eabe5e59dee21cc984a65607cb8cc2 fortune-mod-scriptures-1.1.0.ebuild 656
+RMD160 45ec991192232017c9dd3516b40befed1d86b3b0 fortune-mod-scriptures-1.1.0.ebuild 656
+SHA256 a11a6733940f47d3a7b5168ff1a13c851b77e0fdc2e5f88d49f022acf283b4fd fortune-mod-scriptures-1.1.0.ebuild 656
 MISC ChangeLog 686 RMD160 2862fb539aafd341297a7691ff90d1dd73503892 SHA1 e99cb048e5e8760334b4ec1461cb5773d0854364 SHA256 d7bc26b7b699bf90042b1f4a4b4f778765c40815e548cf9ab3ee402f56d2c217
 MD5 828d0d8c690c8a4380796b8aebd4b551 ChangeLog 686
 RMD160 2862fb539aafd341297a7691ff90d1dd73503892 ChangeLog 686
@@ -18,9 +18,9 @@ MD5 ac195492a66373bdef67c7540e6e514f files/digest-fortune-mod-scriptures-1.1.0 2
 RMD160 ec758042087b1d7619e6692169e214f2fc9ccba6 files/digest-fortune-mod-scriptures-1.1.0 292
 SHA256 2cd34102528d5ebce36c41dbb9428b2bbe4ee7427152c0098c109efada03510f files/digest-fortune-mod-scriptures-1.1.0 292
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
+Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFGfuYNp/wUKkr7RBoRAlkUAKCj7Qtnd38Oqy3dqEbSy33lkG/tUACg2vBp
-UjAlXGEDI+ATQB+XRaOmJow=
-=z1B4
+iD8DBQFHoKf8dz7hIScOURERApShAKC5wDHmGQueQ9pqApFuR8eBRxWbmgCffspM
+Isfb5U3ui18Yi4ljrQTPA9s=
+=DS9m
 -----END PGP SIGNATURE-----
