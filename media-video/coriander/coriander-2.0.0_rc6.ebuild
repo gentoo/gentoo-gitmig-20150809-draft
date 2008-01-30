@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation and Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0_rc6.ebuild,v 1.2 2008/01/26 06:19:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0_rc6.ebuild,v 1.3 2008/01/30 18:02:39 stefaan Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="ffmpeg"
 
 S=${WORKDIR}/${MY_P}
 
-DEPEND=">=media-libs/libdc1394-2.0.0
+RDEPEND=">=media-libs/libdc1394-2.0.0
 	ffmpeg? ( media-video/ffmpeg )
 	media-libs/libsdl
 	gnome-base/libgnomeui
@@ -25,6 +25,8 @@ DEPEND=">=media-libs/libdc1394-2.0.0
 	gnome-base/libgnomecanvas
 	gnome-base/libgnome
 	gnome-base/orbit"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
