@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/projectcenter-0.4.3_p25340.ebuild,v 1.2 2008/01/25 17:51:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/projectcenter-0.4.3_p25340.ebuild,v 1.3 2008/01/30 01:36:25 ranger Exp $
 
 inherit gnustep-2
 
@@ -10,7 +10,7 @@ DESCRIPTION="An IDE for GNUstep."
 HOMEPAGE="http://www.gnustep.org/experience/ProjectCenter.html"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 SLOT="0"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/displaycalibrator/displaycalibrator-0.7.ebuild,v 1.2 2008/01/25 17:33:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/displaycalibrator/displaycalibrator-0.7.ebuild,v 1.3 2008/01/30 01:36:22 ranger Exp $
 
 inherit gnustep-2
 
@@ -10,6 +10,6 @@ SRC_URI="http://www.linuks.mine.nu/displaycalibrator/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 RDEPEND="x11-apps/xgamma"

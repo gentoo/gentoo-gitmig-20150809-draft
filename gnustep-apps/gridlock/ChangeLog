@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gridlock
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/ChangeLog,v 1.12 2008/01/25 17:45:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/ChangeLog,v 1.13 2008/01/30 01:36:32 ranger Exp $
+
+  30 Jan 2008; Brent Baude <ranger@gentoo.org> gridlock-1.10.ebuild:
+  Marking gridlock-1.10 ppc for bug 207381
 
   25 Jan 2008; Christian Faulhammer <opfer@gentoo.org> gridlock-1.10.ebuild:
   stable x86, bug 207381

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/preview-0.8.5-r1.ebuild,v 1.3 2008/01/25 17:49:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/preview-0.8.5-r1.ebuild,v 1.4 2008/01/30 01:36:26 ranger Exp $
 
 inherit gnustep-2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://home.gna.org/gsimageapps/"
 SRC_URI="http://download.gna.org/gsimageapps/${P/p/P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 src_unpack() {
 	unpack ${A}
