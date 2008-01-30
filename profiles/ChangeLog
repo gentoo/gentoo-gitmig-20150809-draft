@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1049 2008/01/30 17:19:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1050 2008/01/30 21:08:14 ulm Exp $
+
+  30 Jan 2008; Ulrich Mueller <ulm@gentoo.org> updates/1Q-2008:
+  Move dev-lisp/emacs-cl-cvs to dev-lisp/emacs-cl.
 
   30 Jan 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Remove masks for app-editors/emacs-cvs snapshots since they are gone.
