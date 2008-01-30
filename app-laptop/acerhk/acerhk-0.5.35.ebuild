@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.35.ebuild,v 1.4 2007/07/01 13:26:32 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.35.ebuild,v 1.5 2008/01/30 23:08:09 jurek Exp $
 
 inherit linux-mod
 
@@ -18,7 +18,14 @@ BUILD_TARGETS="all"
 src_unpack()
 {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+
+	if [[ ${KV_MINOR} -eq 6 ]] && [[ ${KV_PATCH} -ge 24 ]]; then
+		sed -i -e \
+			's#^CFLAGS#EXTRA_CFLAGS#g' \
+			Makefile \
+		|| die "sed failed"
+	fi
 }
 
 pkg_setup() {
@@ -28,7 +35,7 @@ pkg_setup() {
 
 src_install() {
 	linux-mod_src_install
-	dodoc README COPYING NEWS
+	dodoc README NEWS
 	docinto doc
 	dodoc doc/*
 }
