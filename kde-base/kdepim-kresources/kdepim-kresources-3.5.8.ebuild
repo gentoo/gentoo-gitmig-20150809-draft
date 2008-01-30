@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.5.8.ebuild,v 1.4 2008/01/30 09:09:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.5.8.ebuild,v 1.5 2008/01/30 17:23:27 ranger Exp $
 
 KMNAME=kdepim
 KMMODULE=kresources
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdepim-3.5-patchset-04.tar.bz2"
 
 DESCRIPTION="KDE PIM groupware plugin collection"
-KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcal)
 $(deprange $PV $MAXKDEVER kde-base/libkpimexchange)

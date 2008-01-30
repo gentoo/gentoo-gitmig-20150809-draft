@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.66 2008/01/30 10:27:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.67 2008/01/30 17:24:01 ranger Exp $
+
+  30 Jan 2008; Brent Baude <ranger@gentoo.org> korundum-3.5.8.ebuild:
+  Marking korundum-3.5.8 ppc64 for bug 207634
 
   30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   korundum-3.5.8.ebuild:

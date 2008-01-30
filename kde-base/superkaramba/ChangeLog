@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/superkaramba
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.59 2008/01/30 11:46:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.60 2008/01/30 17:22:19 ranger Exp $
+
+  30 Jan 2008; Brent Baude <ranger@gentoo.org> superkaramba-3.5.8.ebuild:
+  Marking superkaramba-3.5.8 ppc64 for bug 207634
 
   30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   superkaramba-3.5.8.ebuild:

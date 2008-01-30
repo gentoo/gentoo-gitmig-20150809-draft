@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.78 2008/01/30 08:06:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.79 2008/01/30 17:23:35 ranger Exp $
+
+  30 Jan 2008; Brent Baude <ranger@gentoo.org> karm-3.5.8.ebuild:
+  Marking karm-3.5.8 ppc64 for bug 207634
 
   30 Jan 2008; Christian Faulhammer <opfer@gentoo.org> karm-3.5.8.ebuild:
   stable x86, bug 207634

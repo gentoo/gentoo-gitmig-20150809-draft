@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/dcopjava-3.5.8.ebuild,v 1.3 2008/01/30 07:50:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/dcopjava-3.5.8.ebuild,v 1.4 2008/01/30 17:22:13 ranger Exp $
 
 # NOTE TODO install a jar file rather than a tree of class files, and use java-pkg.eclass,
 # in keeping with policy
@@ -15,7 +15,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Java bindings for DCOP"
-KEYWORDS="amd64 x86" # possibly broken according to upstream - 3.5.7 README
+KEYWORDS="amd64 ~ppc64 x86" # possibly broken according to upstream - 3.5.7 README
 IUSE=""
 DEPEND="virtual/jdk"
 RDEPEND="virtual/jre"

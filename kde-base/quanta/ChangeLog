@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/quanta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.80 2008/01/30 11:42:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.81 2008/01/30 17:25:05 ranger Exp $
+
+  30 Jan 2008; Brent Baude <ranger@gentoo.org> quanta-3.5.8-r1.ebuild:
+  Marking quanta-3.5.8-r1 ppc64 for bug 207634
 
   30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   quanta-3.5.8-r1.ebuild:

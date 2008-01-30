@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-kfile-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/ChangeLog,v 1.88 2008/01/30 08:53:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/ChangeLog,v 1.89 2008/01/30 17:22:49 ranger Exp $
+
+  30 Jan 2008; Brent Baude <ranger@gentoo.org>
+  kdegraphics-kfile-plugins-3.5.8.ebuild:
+  Marking kdegraphics-kfile-plugins-3.5.8 ppc64 for bug 207634
 
   30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   kdegraphics-kfile-plugins-3.5.8.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu-applnk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-applnk/ChangeLog,v 1.71 2008/01/30 08:49:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-applnk/ChangeLog,v 1.72 2008/01/30 17:23:30 ranger Exp $
+
+  30 Jan 2008; Brent Baude <ranger@gentoo.org> kdeedu-applnk-3.5.8.ebuild:
+  Marking kdeedu-applnk-3.5.8 ppc64 for bug 207634
 
   30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   kdeedu-applnk-3.5.8.ebuild:

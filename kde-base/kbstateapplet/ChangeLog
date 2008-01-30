@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbstateapplet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbstateapplet/ChangeLog,v 1.74 2008/01/30 08:15:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbstateapplet/ChangeLog,v 1.75 2008/01/30 17:22:14 ranger Exp $
+
+  30 Jan 2008; Brent Baude <ranger@gentoo.org> kbstateapplet-3.5.8.ebuild:
+  Marking kbstateapplet-3.5.8 ppc64 for bug 207634
 
   30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   kbstateapplet-3.5.8.ebuild:

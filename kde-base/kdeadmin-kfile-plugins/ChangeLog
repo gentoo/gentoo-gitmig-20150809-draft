@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeadmin-kfile-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-kfile-plugins/ChangeLog,v 1.69 2008/01/30 08:32:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-kfile-plugins/ChangeLog,v 1.70 2008/01/30 17:23:05 ranger Exp $
+
+  30 Jan 2008; Brent Baude <ranger@gentoo.org>
+  kdeadmin-kfile-plugins-3.5.8.ebuild:
+  Marking kdeadmin-kfile-plugins-3.5.8 ppc64 for bug 207634
 
   30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   kdeadmin-kfile-plugins-3.5.8.ebuild:
