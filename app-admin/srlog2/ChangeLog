@@ -1,0 +1,19 @@
+# ChangeLog for app-admin/srlog2
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/srlog2/ChangeLog,v 1.1 2008/01/30 23:06:23 bangert Exp $
+
+*srlog2-0.80 (30 Jan 2008)
+
+  30 Jan 2008; Thilo Bangert <bangert@gentoo.org>
+  +files/srlog2-0.80-fix-execstacks-curve25519.patch, +metadata.xml,
+  +srlog2-0.80.ebuild:
+  initial portage proper release - from the bangert overlay - credits for the
+  original ebuild go to dragonheart
+
+  26 Jan 2008; Thilo Bangert <bangert@gentoo.org> ChangeLog:
+  switch to dragonhearts version from bug #164763, version bump,
+  fix TEXTRELs
+
+  10 Jun 2007; Thilo Bangert <bangert@gentoo.org> ChangeLog:
+  initial import: a secure remote log transmission system
+

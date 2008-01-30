@@ -1,0 +1,77 @@
+Index: curve25519/curve25519_athlon_square.s
+===================================================================
+--- curve25519/curve25519_athlon_square.s	(revision 182)
++++ curve25519/curve25519_athlon_square.s	(working copy)
+@@ -296,3 +296,6 @@
+ fstpl 72(%ecx)
+ add %eax,%esp
+ ret
++#if defined(__linux__) && defined(__ELF__)
++.section .note.GNU-stack,"",%progbits
++#endif
+Index: curve25519/curve25519_athlon_init.s
+===================================================================
+--- curve25519/curve25519_athlon_init.s	(revision 182)
++++ curve25519/curve25519_athlon_init.s	(working copy)
+@@ -11,3 +11,6 @@
+ fldcw curve25519_athlon_rounding
+ add %eax,%esp
+ ret
++#if defined(__linux__) && defined(__ELF__)
++.section .note.GNU-stack,"",%progbits
++#endif
+Index: curve25519/curve25519_athlon_todouble.s
+===================================================================
+--- curve25519/curve25519_athlon_todouble.s	(revision 182)
++++ curve25519/curve25519_athlon_todouble.s	(working copy)
+@@ -142,3 +142,6 @@
+ fstpl 72(%ecx)
+ add %eax,%esp
+ ret
++#if defined(__linux__) && defined(__ELF__)
++.section .note.GNU-stack,"",%progbits
++#endif
+Index: curve25519/curve25519_athlon_mainloop.s
+===================================================================
+--- curve25519/curve25519_athlon_mainloop.s	(revision 182)
++++ curve25519/curve25519_athlon_mainloop.s	(working copy)
+@@ -3988,3 +3988,6 @@
+ movl 176(%ecx),%ebp
+ add %eax,%esp
+ ret
++#if defined(__linux__) && defined(__ELF__)
++.section .note.GNU-stack,"",%progbits
++#endif
+Index: curve25519/curve25519_athlon_mult.s
+===================================================================
+--- curve25519/curve25519_athlon_mult.s	(revision 182)
++++ curve25519/curve25519_athlon_mult.s	(working copy)
+@@ -408,3 +408,6 @@
+ movl 0(%esp),%ebp
+ add %eax,%esp
+ ret
++#if defined(__linux__) && defined(__ELF__)
++.section .note.GNU-stack,"",%progbits
++#endif
+Index: curve25519/curve25519_athlon_const.s
+===================================================================
+--- curve25519/curve25519_athlon_const.s	(revision 182)
++++ curve25519/curve25519_athlon_const.s	(working copy)
+@@ -112,3 +112,6 @@
+ curve25519_athlon_rounding:
+ 	.byte 0x7f
+ 	.byte 0x13
++#if defined(__linux__) && defined(__ELF__)
++	.section .note.GNU-stack,"",%progbits
++#endif
+Index: curve25519/curve25519_athlon_fromdouble.s
+===================================================================
+--- curve25519/curve25519_athlon_fromdouble.s	(revision 182)
++++ curve25519/curve25519_athlon_fromdouble.s	(working copy)
+@@ -193,3 +193,6 @@
+ movl 0(%esp),%ebp
+ add %eax,%esp
+ ret
++#if defined(__linux__) && defined(__ELF__)
++.section .note.GNU-stack,"",%progbits
++#endif
