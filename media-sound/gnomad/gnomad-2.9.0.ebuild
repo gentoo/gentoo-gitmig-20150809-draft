@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.9.0.ebuild,v 1.1 2007/10/26 11:58:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.9.0.ebuild,v 1.2 2008/01/30 22:21:08 ranger Exp $
 
 inherit flag-o-matic gnome2
 
@@ -17,7 +17,7 @@ SLOT="0"
 IUSE=""
 
 #-sparc: 2.4.4: Application crashes on startup (Gnome crash detection)
-KEYWORDS="~amd64 ~ppc -sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 -sparc ~x86"
 
 RDEPEND="dev-libs/dbus-glib
 	>=dev-libs/glib-2.6.0
