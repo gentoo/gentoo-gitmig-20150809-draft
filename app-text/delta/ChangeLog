@@ -1,6 +1,9 @@
 # ChangeLog for app-text/delta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/delta/ChangeLog,v 1.8 2008/01/29 23:51:10 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/delta/ChangeLog,v 1.9 2008/01/30 14:39:41 jer Exp $
+
+  30 Jan 2008; Jeroen Roovers <jer@gentoo.org> delta-20060803.ebuild:
+  Stable for HPPA (bug #208113).
 
   29 Jan 2008; Dawid Węgliński <cla@gentoo.org> delta-20060803.ebuild:
   Stable on x86 (bug #208113)
