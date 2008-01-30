@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.14.0.ebuild,v 1.1 2008/01/29 16:50:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.14.0.ebuild,v 1.2 2008/01/30 10:22:29 bicatali Exp $
 inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
@@ -19,7 +19,7 @@ SUPP_LISPS="${SUPP_RL} ${SUPP_NORL}"
 # Default lisp if none selected
 DEF_LISP="sbcl"
 
-IUSE="latex emacs tk nls unicode X ${SUPP_LISPS} ${IUSE}"
+IUSE="latex emacs tk nls unicode xemacs X ${SUPP_LISPS} ${IUSE}"
 
 # Languages
 LANGS="es pt pt_BR"
