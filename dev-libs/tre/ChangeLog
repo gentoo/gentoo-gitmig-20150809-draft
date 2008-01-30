@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tre
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.33 2008/01/30 10:13:31 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.34 2008/01/30 14:19:15 armin76 Exp $
+
+  30 Jan 2008; Raúl Porcel <armin76@gentoo.org> tre-0.7.5.ebuild:
+  alpha/sparc stable wrt #208142, add ~ia64
 
   30 Jan 2008; Dawid Węgliński <cla@gentoo.org> tre-0.7.5.ebuild:
   Stable on x86 (bug #208142)
