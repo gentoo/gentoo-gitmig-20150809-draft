@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.14 2007/07/02 17:28:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.15 2008/01/30 17:30:00 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -15,7 +15,6 @@ KEYWORDS="x86"
 IUSE="cdinstall"
 
 RDEPEND="virtual/opengl
-	media-libs/mesa
 	x11-libs/libXxf86dga
 	x11-libs/libXext
 	x11-libs/libX11
@@ -64,12 +63,12 @@ src_install() {
 	newgamesbin linux/release*/bin/industri.run industri || die
 	dogamesbin "${FILESDIR}"/industri.pretty || die
 	insinto /usr/share/icons
-	doins industri.ico quake.ico
+	doins industri.ico quake.ico || die
 	dodoc linux/README
-	cd "${WORKDIR}"/industri
-	dodoc *.txt && rm *.txt
-	insinto "${GAMES_DATADIR}"/quake1/industri
-	doins *
+	cd "${WORKDIR}"/${PN}
+	dodoc *.txt
+	insinto "${GAMES_DATADIR}"/quake1/${PN}
+	doins *.pak *.cfg || die
 	prepgamesdirs
 }
 
