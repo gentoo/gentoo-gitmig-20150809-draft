@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.63 2008/01/29 14:03:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.64 2008/01/30 12:09:52 chainsaw Exp $
+
+*xchat-xsys-2.2.0-r1 (30 Jan 2008)
+
+  30 Jan 2008; Tony Vroon <chainsaw@gentoo.org>
+  +files/2.2.0-no-audacious.patch, -xchat-xsys-2.1.0-r1.ebuild,
+  -xchat-xsys-2.1.0-r2.ebuild, +xchat-xsys-2.2.0-r1.ebuild:
+  Make audacious functionality optional, as requested by Arvid Norlander
+  <arvid.norlander@tele2.se>. Remove ebuilds that depend on obsolete Audacious
+  version.
 
   29 Jan 2008; Samuli Suominen <drac@gentoo.org> xchat-xsys-2.2.0.ebuild:
   amd64 stable
