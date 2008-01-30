@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20071121.64693-r1.ebuild,v 1.1 2008/01/28 17:59:29 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20080123.74039.ebuild,v 1.1 2008/01/30 14:08:32 ikelos Exp $
 
 inherit pam eutils linux-mod autotools versionator
 
@@ -67,12 +67,6 @@ pkg_setup() {
 
 	enewgroup vmware
 
-}
-
-src_unpack() {
-	unpack "${A}"
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-kernel_stdint-soren.patch"
 }
 
 src_compile() {
