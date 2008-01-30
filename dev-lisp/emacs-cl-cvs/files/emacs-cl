@@ -1,7 +1,0 @@
-#!/bin/sh
-
-exec emacs \
-    -batch \
-    -l /usr/share/emacs/site-lisp/emacs-cl/load-cl.el \
-    -l /usr/share/emacs/site-lisp/emacs-cl/batch.el \
-    -f batch-repl
