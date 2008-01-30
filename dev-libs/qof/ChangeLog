@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/qof
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.11 2008/01/10 21:38:07 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.12 2008/01/30 11:51:06 opfer Exp $
+
+*qof-0.7.4 (30 Jan 2008)
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  +files/qof-0.7.4-remove_spurious_CFLAGS.patch, +qof-0.7.4.ebuild:
+  version bump, add dependency on SQLite 2 versions
 
   10 Jan 2008; Ferris McCormick <fmccor@gentoo.org> qof-0.7.2.ebuild:
   Sparc stable, part of Bug #205242, all tests pass.
