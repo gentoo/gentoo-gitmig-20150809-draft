@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail-autoresponder
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.27 2008/01/25 20:54:00 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.28 2008/01/30 16:02:28 jer Exp $
+
+  30 Jan 2008; Jeroen Roovers <jer@gentoo.org>
+  qmail-autoresponder-0.96.2.ebuild:
+  Stable for HPPA (bug #207416).
 
   25 Jan 2008; Thilo Bangert <bangert@gentoo.org>
   qmail-autoresponder-0.96.1-r1.ebuild, qmail-autoresponder-0.96.2.ebuild:
