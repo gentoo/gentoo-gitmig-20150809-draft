@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r3.ebuild,v 1.17 2008/01/30 20:36:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r3.ebuild,v 1.18 2008/01/30 20:49:44 ulm Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -45,7 +45,7 @@ RDEPEND="!<app-editors/emacs-cvs-22.1
 
 DEPEND="${RDEPEND}
 	alsa? ( dev-util/pkgconfig )
-	gtk? ( dev-util/pkgconfig )
+	X? ( gtk? ( dev-util/pkgconfig ) )
 	gzip-el? ( app-arch/gzip )"
 
 # FULL_VERSION keeps the full version number, which is needed in order to
