@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.42.ebuild,v 1.6 2007/05/16 17:49:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.42.ebuild,v 1.7 2008/01/30 03:30:15 ribosome Exp $
 
 inherit distutils
 
@@ -29,5 +29,5 @@ src_install() {
 
 	dohtml Doc/install/*.html
 	dohtml Doc/*.html
-	cp -r Doc/examples/ Doc/*.pdf ${D}/usr/share/doc/${PF}/
+	cp -r Doc/examples/ Doc/*.pdf "${D}"/usr/share/doc/${PF}/
 }

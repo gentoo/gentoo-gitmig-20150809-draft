@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.44.ebuild,v 1.1 2008/01/30 02:53:58 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.44.ebuild,v 1.2 2008/01/30 03:30:15 ribosome Exp $
 
 inherit distutils eutils
 
@@ -39,6 +39,6 @@ src_install() {
 
 	dohtml Doc/install/*.html || die "Failed to install HTML install docs."
 	dohtml Doc/*.html || die "Failed to install HTML docs."
-	cp -r Doc/examples/ Doc/*.pdf ${D}/usr/share/doc/${PF}/ || \
+	cp -r Doc/examples/ Doc/*.pdf "${D}"/usr/share/doc/${PF}/ || \
 			die "Failed to install documentation."
 }
