@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-2.1.ebuild,v 1.8 2008/01/25 22:43:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-2.1.ebuild,v 1.9 2008/01/30 17:51:11 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://untroubled.org/qmail-qfilter/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
