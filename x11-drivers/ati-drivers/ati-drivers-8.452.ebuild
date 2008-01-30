@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.452.ebuild,v 1.1 2008/01/25 05:14:59 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.452.ebuild,v 1.2 2008/01/30 15:21:46 je_fro Exp $
 
 IUSE="acpi debug"
 
@@ -73,9 +73,9 @@ pkg_setup() {
 		die "Need a 2.6 kernel to compile against!"
 	fi
 
-	if kernel_is ge 2 6 24; then
-		CONFIG_CHECK="PCI_LEGACY"
-		ERROR_PCI_LEGACY="${P} requires support for pci_find_slot (CONFIG_PCI_LEGACY)."
+	if kernel_is ge 2 6 24 && ! linux_chkconfig_present PCI_LEGACY; then
+		eerror "${P} requires support for pci_find_slot."
+		die "${P} requires support for pci_find_slot."
 	fi
 
 	if ! linux_chkconfig_present MTRR; then
