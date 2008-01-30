@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.90 2008/01/29 13:02:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.91 2008/01/30 09:25:53 mrness Exp $
+
+  30 Jan 2008; Alin Năstac <mrness@gentoo.org>
+  slmodem-2.9.11_pre20080126.ebuild:
+  Check CONFIG_PCI_LEGACY when compiled on kernel 2.6.24 (#207555).
 
   29 Jan 2008; Alin Năstac <mrness@gentoo.org>
   slmodem-2.9.11_pre20080126.ebuild:

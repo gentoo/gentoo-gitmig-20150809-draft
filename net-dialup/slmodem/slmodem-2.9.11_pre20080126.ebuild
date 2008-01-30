@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20080126.ebuild,v 1.2 2008/01/29 13:02:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20080126.ebuild,v 1.3 2008/01/30 09:25:53 mrness Exp $
 
 inherit eutils linux-mod multilib
 
@@ -38,6 +38,9 @@ pkg_setup() {
 		fi
 	fi
 	BUILD_TARGETS="all"
+	if kernel_is ge 2 6 24; then
+		CONFIG_CHECK="PCI_LEGACY"
+	fi
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERNEL_DIR=${KV_OUT_DIR}"
 }
