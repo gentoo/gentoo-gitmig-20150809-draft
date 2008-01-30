@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.2.5.ebuild,v 1.9 2008/01/29 18:13:06 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.2.5.ebuild,v 1.10 2008/01/30 12:23:13 opfer Exp $
 EAPI="1"
 
 inherit gnome2 eutils
@@ -39,4 +39,6 @@ src_unpack() {
 	# bug 101970
 	epatch "${FILESDIR}/${PN}-3.0.10-no-extern-cluealigned.diff"
 	epatch "${FILESDIR}/${PN}-3.2-i18n.patch" || die "gettext fix"
+	# bug 193458
+	epatch "${FILESDIR}/${PN}-3.2-gi18n.patch" || die
 }
