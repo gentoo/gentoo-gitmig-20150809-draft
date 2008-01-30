@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-1.0.5.ebuild,v 1.1 2006/11/13 16:57:55 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-1.1.1-r1.ebuild,v 1.1 2008/01/30 17:13:14 pva Exp $
 
-inherit python multilib
+inherit eutils python multilib
 
 DESCRIPTION="A Python interactive packet manipulation program for mastering the network"
 HOMEPAGE="http://www.secdev.org/projects/scapy/"
@@ -22,6 +22,13 @@ RDEPEND="net-analyzer/tcpdump
 	imagemagick? ( media-gfx/imagemagick )
 	visual? ( dev-python/visual )"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-config-file.patch
+}
+
 src_install() {
 	exeinto /usr/bin
 	newexe scapy.py scapy
@@ -32,10 +39,10 @@ src_install() {
 	doins scapy.py
 
 	insinto /etc
-	doins ${FILESDIR}/ethertypes
-	dodoc AUTHORS COPYING README changelog.txt
-	doman scapy.1.*
-	}
+	doins "${FILESDIR}"/ethertypes
+	dodoc AUTHORS README changelog.txt
+	doman scapy.1
+}
 
 pkg_postinst() {
 	python_mod_optimize

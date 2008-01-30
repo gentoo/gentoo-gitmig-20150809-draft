@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-1.1.1.ebuild,v 1.1 2007/08/27 13:41:52 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-1.1.1.ebuild,v 1.2 2008/01/30 17:13:14 pva Exp $
 
 inherit python multilib
 
@@ -32,10 +32,10 @@ src_install() {
 	doins scapy.py
 
 	insinto /etc
-	doins ${FILESDIR}/ethertypes
-	dodoc AUTHORS COPYING README changelog.txt
-	doman scapy.1.*
-	}
+	doins "${FILESDIR}"/ethertypes
+	dodoc AUTHORS README changelog.txt
+	doman scapy.1
+}
 
 pkg_postinst() {
 	python_mod_optimize
