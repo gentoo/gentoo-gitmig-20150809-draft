@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/netstat-nat-1.4.7.ebuild,v 1.5 2007/02/04 18:08:56 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/netstat-nat-1.4.7.ebuild,v 1.6 2008/01/30 10:15:18 pva Exp $
 
 DESCRIPTION="Display NAT connections"
 HOMEPAGE="http://tweegy.demon.nl/projects/netstat-nat/index.html"
@@ -14,5 +14,5 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }
