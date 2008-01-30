@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation and Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0_rc6.ebuild,v 1.3 2008/01/30 18:02:39 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0_rc6.ebuild,v 1.4 2008/01/30 18:05:13 stefaan Exp $
 
 inherit eutils
 
@@ -13,12 +13,13 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="ffmpeg"
+IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
+# ffmpeg? ( media-video/ffmpeg ) left out, because ffmpeg support is in
+# development
 RDEPEND=">=media-libs/libdc1394-2.0.0
-	ffmpeg? ( media-video/ffmpeg )
 	media-libs/libsdl
 	gnome-base/libgnomeui
 	gnome-base/libbonoboui
