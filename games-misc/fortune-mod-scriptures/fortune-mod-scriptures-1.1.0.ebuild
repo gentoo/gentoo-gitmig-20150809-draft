@@ -1,6 +1,6 @@
-# Copyright 2006-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-scriptures/fortune-mod-scriptures-1.1.0.ebuild,v 1.4 2007/06/24 21:45:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-scriptures/fortune-mod-scriptures-1.1.0.ebuild,v 1.5 2008/01/30 16:38:14 nyhm Exp $
 
 DESCRIPTION="Fortune modules from the King James Bible scriptures"
 HOMEPAGE="http://scriptures.nephi.org/"
