@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.37 2008/01/29 19:16:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.38 2008/01/30 22:28:36 ranger Exp $
+
+  30 Jan 2008; Brent Baude <ranger@gentoo.org> commoncpp2-1.6.1.ebuild:
+  Marking commoncpp2-1.6.1 ppc64 for bug 207632
 
   29 Jan 2008; nixnut <nixnut@gentoo.org> commoncpp2-1.6.1.ebuild:
   Stable on ppc wrt bug 207632
