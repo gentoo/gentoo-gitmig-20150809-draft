@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.69 2008/01/29 00:27:36 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.70 2008/01/30 07:25:22 opfer Exp $
+
+  30 Jan 2008; Christian Faulhammer <opfer@gentoo.org> openexr-1.6.1.ebuild:
+  stable x86, bug 207663
 
   29 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> openexr-1.6.1.ebuild:
   Marked stable on amd64 as per bug 207663.
