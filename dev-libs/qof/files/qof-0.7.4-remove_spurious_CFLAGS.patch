@@ -1,6 +1,6 @@
---- configure.orig	2008-01-30 12:40:59.000000000 +0100
-+++ configure	2008-01-30 12:43:25.000000000 +0100
-@@ -26894,11 +26894,11 @@
+--- configure.orig	2008-01-30 13:06:35.000000000 +0100
++++ configure	2008-01-30 13:06:45.000000000 +0100
+@@ -26894,18 +26894,18 @@
  echo $ECHO_N "checking what extra warning flags to pass to the C compiler... $ECHO_C" >&6; }
  if test ${GCC}x = yesx; then
    warnFLAGS=
@@ -14,6 +14,14 @@
          no)  ;;
          *) { { echo "$as_me:$LINENO: error: bad value ${enableval} for --enable-error-on-warning" >&5
  echo "$as_me: error: bad value ${enableval} for --enable-error-on-warning" >&2;}
+    { (exit 1); exit 1; }; } ;;
+         esac
+ else
+-    warnFLAGS="${warnFLAGS} -Werror"
++    warnFLAGS="${warnFLAGS}"
+ fi
+ 
+   GCC_VERSION=`${CC} -dumpversion`
 @@ -26913,10 +26913,10 @@
       # This is gcc >= 3.x.x
       if test `echo ${GCC_VERSION} | cut -d. -f2` -ge 4; then

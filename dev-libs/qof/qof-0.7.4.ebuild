@@ -1,6 +1,6 @@
- # Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.4.ebuild,v 1.1 2008/01/30 11:51:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.4.ebuild,v 1.2 2008/01/30 12:09:51 opfer Exp $
 
 inherit eutils
 
@@ -13,20 +13,24 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 
-IUSE=""
+IUSE="doc nls sqlite"
 
+# Raise dependency to gnome-extra/libgda-3* once it is unmasked
 DEPEND="gnome-extra/libgda
-	=dev-db/sqlite-2*"
+	dev-libs/libxml2
+	sqlite? ( =dev-db/sqlite-2* )
+	doc? ( app-doc/doxygen )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	# Upstream not willing to remove those stupid flags...
 	epatch "${FILESDIR}/${P}-remove_spurious_CFLAGS.patch"
 }
 
 src_compile() {
-	econf || die
+	econf $(use_enable doc html-docs) --disable-error-on-warning $(use_enable nls) $(use_enable sqlite) $(use_enable doc doxygen) --disable-dot || die
 	emake -j1 || die
 }
 
