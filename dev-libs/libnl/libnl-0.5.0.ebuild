@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-0.5.0.ebuild,v 1.10 2007/01/14 11:07:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-0.5.0.ebuild,v 1.11 2008/01/30 08:16:45 pva Exp $
 
 inherit eutils multilib
 
@@ -14,7 +14,7 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-include.diff"
 	epatch "${FILESDIR}/${P}-libdir.patch"
 }
