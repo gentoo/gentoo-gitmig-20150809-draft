@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.10.0-r1.ebuild,v 1.3 2008/01/25 17:32:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.10.0-r1.ebuild,v 1.4 2008/01/30 01:40:29 ranger Exp $
 
 inherit gnustep-2
 
@@ -9,7 +9,7 @@ DESCRIPTION="StepTalk is the official GNUstep scripting framework."
 HOMEPAGE="http://www.gnustep.org/experience/StepTalk.html"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${MY_PN}-${PV}.tar.gz"
 
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 LICENSE="LGPL-2.1"
 SLOT="0"
 

@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/camaelon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/ChangeLog,v 1.11 2008/01/25 19:13:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/ChangeLog,v 1.12 2008/01/30 01:40:31 ranger Exp $
+
+  30 Jan 2008; Brent Baude <ranger@gentoo.org> camaelon-0.2.ebuild:
+  Marking camaelon-0.2 ppc for bug 207381
 
   25 Jan 2008; Raúl Porcel <armin76@gentoo.org> camaelon-0.2.ebuild:
   sparc stable wrt #207381
