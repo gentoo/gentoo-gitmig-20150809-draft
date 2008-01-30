@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.80 2008/01/30 09:44:29 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.81 2008/01/30 14:12:57 armin76 Exp $
+
+  30 Jan 2008; Raúl Porcel <armin76@gentoo.org> geoip-1.4.3.ebuild:
+  alpha/ia64/sparc stable wrt #208150
 
   30 Jan 2008; Dawid Węgliński <cla@gentoo.org> geoip-1.4.3.ebuild:
   Stable on x86 (bug #208150)
