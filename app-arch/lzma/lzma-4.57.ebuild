@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/lzma-4.57.ebuild,v 1.2 2008/01/26 18:45:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/lzma-4.57.ebuild,v 1.3 2008/01/30 16:03:43 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/sevenzip/${PN}457.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~x86"
+KEYWORDS="~amd64 ~ia64 ~mips ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND="!app-arch/lzma-utils"
