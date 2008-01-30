@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/biopython
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.19 2008/01/30 02:53:58 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.20 2008/01/30 02:56:32 ribosome Exp $
+
+  30 Jan 2008; Olivier Fisette <ribosome@gentoo.org> -biopython-1.43.ebuild:
+  Removed buggy version (see bug #202602).
 
 *biopython-1.44 (30 Jan 2008)
 
