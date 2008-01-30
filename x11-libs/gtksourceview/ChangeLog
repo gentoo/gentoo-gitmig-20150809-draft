@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.120 2008/01/25 17:44:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.121 2008/01/30 11:04:41 remi Exp $
+
+*gtksourceview-2.1.1 (30 Jan 2008)
+
+  30 Jan 2008; Rémi Cardona <remi@gentoo.org> +gtksourceview-2.1.1.ebuild:
+  bump to 2.1.1 (gtk-doc patch no longer needed)
 
   25 Jan 2008; Doug Klima <cardoe@gentoo.org> gtksourceview-2.0.2.ebuild:
   TODO doesn't exist in the tarball
