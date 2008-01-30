@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.7.5.ebuild,v 1.2 2007/12/12 16:26:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.7.5.ebuild,v 1.3 2008/01/30 10:13:31 cla Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ SRC_URI="http://laurikari.net/tre/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 DEPEND="sys-apps/gawk
 		sys-apps/grep
