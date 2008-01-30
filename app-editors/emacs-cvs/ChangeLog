@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.184 2008/01/30 17:15:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.185 2008/01/30 20:59:48 ulm Exp $
+
+  30 Jan 2008; Ulrich Mueller <ulm@gentoo.org> emacs-cvs-22.1.50-r2.ebuild,
+  emacs-cvs-23.0.50-r1.ebuild, emacs-cvs-23.0.60-r1.ebuild:
+  Add missing dependency on pkgconfig.
 
   30 Jan 2008; Ulrich Mueller <ulm@gentoo.org>
   -files/emacs-cvs-format-int.patch,
