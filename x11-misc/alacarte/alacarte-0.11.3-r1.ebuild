@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.3-r1.ebuild,v 1.11 2007/09/23 04:47:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.3-r1.ebuild,v 1.12 2008/01/30 20:52:37 dang Exp $
 
 inherit gnome2 python eutils autotools
 
@@ -36,4 +36,5 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-python-2.5.patch
 
 	eautoreconf
+	intltoolize --force
 }
