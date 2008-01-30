@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/md5deep
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.36 2008/01/30 00:35:01 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.37 2008/01/30 15:53:12 armin76 Exp $
+
+  30 Jan 2008; Raúl Porcel <armin76@gentoo.org> md5deep-2.0.1-r1.ebuild:
+  sparc stable wrt #208035
 
   30 Jan 2008; Dawid Węgliński <cla@gentoo.org> md5deep-2.0.1-r1.ebuild:
   Stable on x86 (bug #208035)
