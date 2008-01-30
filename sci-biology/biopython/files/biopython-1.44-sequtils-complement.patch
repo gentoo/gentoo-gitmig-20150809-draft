@@ -1,0 +1,32 @@
+--- biopython-1.44/Bio/SeqUtils/__init__.py.old	2007-09-14 09:38:35.000000000 -0400
++++ biopython-1.44/Bio/SeqUtils/__init__.py	2007-12-17 11:07:27.000000000 -0500
+@@ -7,8 +7,7 @@
+ # license.  Please see the LICENSE file that should have been included
+ # as part of this package.
+ 
+-import os, sys, getopt, re, time
+-from string import maketrans
++import re, time
+ from Bio import SeqIO
+ from Bio import Translate
+ from Bio.Seq import Seq
+@@ -277,8 +276,9 @@
+    nice looking 6 frame translation with GC content - code from xbbtools
+    similar to DNA Striders six-frame translation
+    """
+-   comp = complement(seq)
+-   anti = reverse(comp)
++   from Bio.Seq import reverse_complement
++   anti = reverse_complement(seq)
++   comp = anti[::-1]
+    length = len(seq)
+    frames = {}
+    for i in range(0,3):
+@@ -399,6 +399,7 @@
+ # {{{ 
+ 
+ if __name__ == '__main__':
++   import sys, getopt
+    # crude command line options to use most functions directly on a FASTA file
+    options = {'apply_on_multi_fasta':0,
+               'quick':0,

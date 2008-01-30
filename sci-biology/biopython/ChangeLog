@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/biopython
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.18 2007/05/17 18:47:30 ribosome Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.19 2008/01/30 02:53:58 ribosome Exp $
+
+*biopython-1.44 (30 Jan 2008)
+
+  30 Jan 2008; Olivier Fisette <ribosome@gentoo.org>
+  +files/biopython-1.44-sequtils-complement.patch, +biopython-1.44.ebuild:
+  Fixed six_frame_translations function. Thanks to JTRiley
+  <justin.t.riley@gmail.com> for his patch. (Fixes bug #202606.)
 
 *biopython-1.43 (17 May 2007)
 
