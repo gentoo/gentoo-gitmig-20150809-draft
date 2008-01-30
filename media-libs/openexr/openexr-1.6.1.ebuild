@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.6.1.ebuild,v 1.6 2008/01/30 07:25:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.6.1.ebuild,v 1.7 2008/01/30 14:22:17 armin76 Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/openexr/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
 RDEPEND="media-libs/ilmbase"
