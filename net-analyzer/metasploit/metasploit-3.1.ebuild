@@ -1,11 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.0-r1.ebuild,v 1.2 2008/01/30 15:39:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1.ebuild,v 1.1 2008/01/30 15:39:59 pva Exp $
 
-inherit eutils
-
-MY_P="${PN/metasploit/framework}-${PV}"
-S="${WORKDIR}/${MY_P}"
+MY_P=${PN/metasploit/framework}-${PV}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="The Metasploit Framework is an advanced open-source platform for developing, testing, and using vulnerability exploit code."
 HOMEPAGE="http://www.metasploit.org/"
@@ -36,17 +34,12 @@ pkg_nofetch() {
 }
 
 src_compile() {
-	epatch "${FILESDIR}"/${P}.patch
-
 	sed -i \
 		-e "s/RAILS_GEM_VERSION = '1.2.2'/RAILS_GEM_VERSION = '1.2'/" \
 		data/msfweb/config/environment.rb || die "sed failed"
 }
 
 src_install() {
-	dodir /usr/lib/
-	dodir /usr/bin/
-
 	# remove the subversion directories
 	find "${S}" -type d -name ".svn" | xargs rm -R
 
@@ -55,6 +48,11 @@ src_install() {
 	cp -R "${S}"/* "${D}"/usr/lib/metasploit${SLOT} || die "Copy files failed"
 	rm -Rf "${D}"/usr/lib/metasploit${SLOT}/documentation "${D}"/README
 
+	rm "${S}"/documentation/LICENSE
+	dodir /usr/share/doc/${PF}
+	cp -R "${S}"/{documentation,README} "${D}"/usr/share/doc/${PF}
+
+	dodir /usr/bin/
 	for file in `ls msf*`; do
 		dosym /usr/lib/metasploit${SLOT}/${file} /usr/bin/${file}${SLOT}
 	done

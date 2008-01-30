@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-2.7.ebuild,v 1.5 2007/02/07 20:44:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-2.7.ebuild,v 1.6 2008/01/30 15:39:59 pva Exp $
 
 MY_P="${P/metasploit/framework}"
 S="${WORKDIR}/${MY_P}"
@@ -23,15 +23,15 @@ src_install() {
 	dodir /usr/bin/
 
 	# should be as simple as copying everything into the target...
-	cp -pPR ${S} ${D}usr/lib/metasploit || die
+	cp -pPR "${S}" "${D}"usr/lib/metasploit || die
 
 	# and creating symlinks in the /usr/bin dir
-	cd ${D}/usr/bin
+	cd "${D}"/usr/bin
 	ln -s ../lib/metasploit/msf* ./ || die
-	chown -R root:0 ${D}
+	chown -R root:0 "${D}"
 
-	newinitd ${FILESDIR}/msfweb.initd msfweb || die "newinitd failed"
-	newconfd ${FILESDIR}/msfweb.confd msfweb || die "newconfd failed"
+	newinitd "${FILESDIR}"/msfweb.initd msfweb || die "newinitd failed"
+	newconfd "${FILESDIR}"/msfweb.confd msfweb || die "newconfd failed"
 }
 
 pkg_postinst() {
