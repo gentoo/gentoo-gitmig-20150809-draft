@@ -1,0 +1,5 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/dev/2008.0/no-multilib/make.defaults,v 1.1 2008/01/30 16:32:57 wolf31o2 Exp $
+
+MULTILIB_ABIS="amd64"
