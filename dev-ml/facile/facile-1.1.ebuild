@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/facile-1.1.ebuild,v 1.12 2008/01/29 14:53:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/facile-1.1.ebuild,v 1.13 2008/01/30 07:37:19 opfer Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ RESTRICT="mirror"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc x86"
 IUSE="+ocamlopt"
 
 RDEPEND=">=dev-lang/ocaml-3.09.3-r1"
