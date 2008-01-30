@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.248 2008/01/10 06:55:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.249 2008/01/30 15:42:10 chainsaw Exp $
+
+*alsa-lib-1.0.16_rc2 (30 Jan 2008)
+*alsa-lib-1.0.16_rc1 (30 Jan 2008)
+
+  30 Jan 2008; Tony Vroon <chainsaw@gentoo.org> +alsa-lib-1.0.16_rc1.ebuild,
+  +alsa-lib-1.0.16_rc2.ebuild:
+  Adding 1.0.16 release candidates, for bug #207427.
 
   10 Jan 2008; Mike Frysinger <vapier@gentoo.org> alsa-lib-1.0.15.ebuild:
   Since uclibc does not support symbol versioning, make sure to disable
