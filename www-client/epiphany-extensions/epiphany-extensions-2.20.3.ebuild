@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.20.3.ebuild,v 1.1 2008/01/09 22:57:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.20.3.ebuild,v 1.2 2008/01/30 14:58:14 eva Exp $
 
 WANT_AUTOMAKE="1.10"
 inherit eutils gnome2 autotools
@@ -42,8 +42,7 @@ src_unpack() {
 	echo "extensions/epilicious/progress.py" >> po/POTFILES.in
 	echo "extensions/sessionsaver/ephy-sessionsaver-extension.c" >> po/POTFILES.in
 
-	cp aclocal.m4 old_macros.m4
-	AT_M4DIR=". ${S}/m4" eautoreconf
+	AT_M4DIR="m4" eautoreconf
 }
 
 pkg_setup() {
