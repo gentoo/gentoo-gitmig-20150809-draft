@@ -1,45 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX link-grammar-4.2.4-tokenize.patch 3066 RMD160 964f1051ac5e5c9bbc9d09e481e1fc5c09b0ebba SHA1 3de415726604a2cebe096275182e558867da5d69 SHA256 cc21de0f149c9cfb0a8c7b9516c8ce4c8c60bfd661724551ae2dc54a62e1293e
-MD5 31b2bc6d86dae62cbb436ccd3dd0a72b files/link-grammar-4.2.4-tokenize.patch 3066
-RMD160 964f1051ac5e5c9bbc9d09e481e1fc5c09b0ebba files/link-grammar-4.2.4-tokenize.patch 3066
-SHA256 cc21de0f149c9cfb0a8c7b9516c8ce4c8c60bfd661724551ae2dc54a62e1293e files/link-grammar-4.2.4-tokenize.patch 3066
 DIST link-grammar-4.2.2.tar.gz 742163 RMD160 3295fce2266c7ec1ab89c87ea44677de5777e0dc SHA1 13b695fd1b6bc1b91142abdc97bc38c3ef0d0e14 SHA256 aa8a2ecf40445b2e47f41a2c98923cc94fe39af5ee80cbc47fc88709fa5dc87d
 DIST link-grammar-4.2.4.tar.gz 741007 RMD160 40cdb470201a3c935c53670534613e1fdddf7c3c SHA1 68a3308f8ebe02231094e542d509f46376ad299b SHA256 e28cf49636d83c8faf487718c913d8fc9d01a54c1c63dc9cd995f4e669a4a740
 EBUILD link-grammar-4.2.2.ebuild 775 RMD160 d9ee74158c012a122fe8f12d31e5f61a595c453a SHA1 3f7afc97e0a0ac2f8276ee44053e0f79f005abfd SHA256 0a50985081cf1f56bac20bf50ff5f2f1eb2e2808e5e8ce103b0da917a8c7c55b
-MD5 36a41baa713f4a55f8a7b545f8134ed6 link-grammar-4.2.2.ebuild 775
-RMD160 d9ee74158c012a122fe8f12d31e5f61a595c453a link-grammar-4.2.2.ebuild 775
-SHA256 0a50985081cf1f56bac20bf50ff5f2f1eb2e2808e5e8ce103b0da917a8c7c55b link-grammar-4.2.2.ebuild 775
 EBUILD link-grammar-4.2.4-r1.ebuild 892 RMD160 29aae9e95f7453e95bdbfd4ba6dad47b3b206e8e SHA1 2c1f22a2e270ae81376826b3ddcbddb4d815b1e1 SHA256 1bc88a4e8275d520d0a2f1ed725bfcfd3cb54c6fbbd560e3d29063705c03b2e5
-MD5 9fb2ca5b8d46a2bc205afc1465768c43 link-grammar-4.2.4-r1.ebuild 892
-RMD160 29aae9e95f7453e95bdbfd4ba6dad47b3b206e8e link-grammar-4.2.4-r1.ebuild 892
-SHA256 1bc88a4e8275d520d0a2f1ed725bfcfd3cb54c6fbbd560e3d29063705c03b2e5 link-grammar-4.2.4-r1.ebuild 892
 EBUILD link-grammar-4.2.4.ebuild 782 RMD160 d1a920b91ec3900f8beeb8525f1172123fd7a132 SHA1 6d008c510379127c34f478dbeca14fe83e00185a SHA256 46c42166c9635f20b80f41bbc6b9321c6e2f1b2cb0e5f1fff5df154ab96357e2
-MD5 932dd763073e17708fc86fe4a826a113 link-grammar-4.2.4.ebuild 782
-RMD160 d1a920b91ec3900f8beeb8525f1172123fd7a132 link-grammar-4.2.4.ebuild 782
-SHA256 46c42166c9635f20b80f41bbc6b9321c6e2f1b2cb0e5f1fff5df154ab96357e2 link-grammar-4.2.4.ebuild 782
 MISC ChangeLog 3646 RMD160 f2ebdb07345d0972407ee6f4cae88d266106c5d8 SHA1 a396843f2cf2e938e10c2b1c388f5bfe652f9026 SHA256 4f508bfbf338f7f74c596f5626602663771a14a3c0c1b860b4c94e36ec7ec285
-MD5 07ae588bff2987564f05c994053f7a53 ChangeLog 3646
-RMD160 f2ebdb07345d0972407ee6f4cae88d266106c5d8 ChangeLog 3646
-SHA256 4f508bfbf338f7f74c596f5626602663771a14a3c0c1b860b4c94e36ec7ec285 ChangeLog 3646
 MISC metadata.xml 418 RMD160 fe69262ad1be9ac510e287841b5030d7013bfb1a SHA1 84fefc8bd5937c47b71b93fa19573117ef07e487 SHA256 2d2e4426daee0ffffb952b26184a449349dfe54ee9c16a88214a531d56b5b319
-MD5 d83e882ac7f075b66d3a68cb4d7a74c0 metadata.xml 418
-RMD160 fe69262ad1be9ac510e287841b5030d7013bfb1a metadata.xml 418
-SHA256 2d2e4426daee0ffffb952b26184a449349dfe54ee9c16a88214a531d56b5b319 metadata.xml 418
-MD5 2f54e911dfc8c0d8255bba04824eedc1 files/digest-link-grammar-4.2.2 256
-RMD160 695b24bfc5114ec79ca37faca0f6cafd5d290c2c files/digest-link-grammar-4.2.2 256
-SHA256 5de8bf90d43da2acad33c2244e798e2d7fdd6f76e341eb6236e3ebb5c34126a2 files/digest-link-grammar-4.2.2 256
-MD5 b290c42cb4e906a07ee98a73a0665b83 files/digest-link-grammar-4.2.4 256
-RMD160 bf1a6d1cd3d4a30c5bb91eb9f3e4b1c7fbc50309 files/digest-link-grammar-4.2.4 256
-SHA256 91b59dc19bd0c14ffe9b86aa912d8ebc1d1c5bc95de02b11d9689da58d5f8af2 files/digest-link-grammar-4.2.4 256
-MD5 b290c42cb4e906a07ee98a73a0665b83 files/digest-link-grammar-4.2.4-r1 256
-RMD160 bf1a6d1cd3d4a30c5bb91eb9f3e4b1c7fbc50309 files/digest-link-grammar-4.2.4-r1 256
-SHA256 91b59dc19bd0c14ffe9b86aa912d8ebc1d1c5bc95de02b11d9689da58d5f8af2 files/digest-link-grammar-4.2.4-r1 256
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHcQTdyuNVb5qfaOYRAqbWAKCrYtb8iZlV73cQM6A7Um4YiTZcYACfQRG9
-XMyS3Mw+6Twcf2YjnB4nvJ8=
-=WWE1
------END PGP SIGNATURE-----

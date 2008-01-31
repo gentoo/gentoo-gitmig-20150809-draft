@@ -1,44 +1,11 @@
 AUX redland-bindings-1.0.0.2-DESTDIR.patch 421 RMD160 d131fcf9f5689a8622fa13596205318da16b227a SHA1 e063bf52bb3523f4cf1630fd8366687caa0384db SHA256 970346f0da066da80eb5e9e4ed260edae56f03078c941a405493dec9af8ca7f7
-MD5 0d01eb61aef3335fea495f4a8e23cb79 files/redland-bindings-1.0.0.2-DESTDIR.patch 421
-RMD160 d131fcf9f5689a8622fa13596205318da16b227a files/redland-bindings-1.0.0.2-DESTDIR.patch 421
-SHA256 970346f0da066da80eb5e9e4ed260edae56f03078c941a405493dec9af8ca7f7 files/redland-bindings-1.0.0.2-DESTDIR.patch 421
 AUX redland-bindings-1.0.0.2-configure.patch 287 RMD160 287ffb8bf03a74df3183fc0ff2bcfa9c14d93a54 SHA1 2e3060598b252c2df806b89362d45382ce86a71e SHA256 ed46830923adf8afd88ed4b3d479bd055a6497434647086e5b35ad886db15b41
-MD5 5e3b83c344a49513d7ab4194d905ccbd files/redland-bindings-1.0.0.2-configure.patch 287
-RMD160 287ffb8bf03a74df3183fc0ff2bcfa9c14d93a54 files/redland-bindings-1.0.0.2-configure.patch 287
-SHA256 ed46830923adf8afd88ed4b3d479bd055a6497434647086e5b35ad886db15b41 files/redland-bindings-1.0.0.2-configure.patch 287
 AUX redland-bindings-1.0.0.2-swig-update.patch 308 RMD160 ab83c39f6338f837245187f087fe73cb2ecab795 SHA1 4939f17c45ed415738d0a6303ab910416a48fca6 SHA256 4dea3bb134e5570a898bc3019b4f8127cbdcce73ea440af3e50044f490107c8a
-MD5 d5fa7c77bc2bf04a37cf23b801926245 files/redland-bindings-1.0.0.2-swig-update.patch 308
-RMD160 ab83c39f6338f837245187f087fe73cb2ecab795 files/redland-bindings-1.0.0.2-swig-update.patch 308
-SHA256 4dea3bb134e5570a898bc3019b4f8127cbdcce73ea440af3e50044f490107c8a files/redland-bindings-1.0.0.2-swig-update.patch 308
 DIST redland-bindings-1.0.4.1.tar.gz 868763 RMD160 878c9efbcb3de0c6673decc2ffe71756aac235bf SHA1 c2f958613eab9f2a35ae5a688fd4b1288d8f681a SHA256 780ffc5b594d343dc0b9386f51fc6dabf9a87a60bcebbc645a35f7073d3c8940
 DIST redland-bindings-1.0.5.1.tar.gz 877314 RMD160 ff4bff8b77d57119fbce37577a60f7a249064d3d SHA1 4fb753a46c58c6c9e6e42a262876edb1af7f0cc5 SHA256 f2683abb6679c01b7b7af33ecff45b8ab8b187addad019ed59572b26ed7400b8
 DIST redland-bindings-1.0.6.1.tar.gz 882885 RMD160 1ec3d19630f8d1bfa365fbc289035df94600d914 SHA1 70df1706a8c96ee79103bdd0425acdd3b45d3e1d SHA256 59b0494dec097079bf6ccceb03960ae79b30bd70b8a87d1d85f1e2018cc53662
 EBUILD redland-bindings-1.0.4.1.ebuild 1390 RMD160 64bed4d7e392dfb8c34209340b98f15e4b55b54a SHA1 4a279b6baa8a81a075600ba4dd45dd03bcb4a927 SHA256 856dbf58d5c8ed770a77a22644a036dca61261ba8e177de197f8053315337c32
-MD5 7c099f1d67919669070374aa1969ee58 redland-bindings-1.0.4.1.ebuild 1390
-RMD160 64bed4d7e392dfb8c34209340b98f15e4b55b54a redland-bindings-1.0.4.1.ebuild 1390
-SHA256 856dbf58d5c8ed770a77a22644a036dca61261ba8e177de197f8053315337c32 redland-bindings-1.0.4.1.ebuild 1390
 EBUILD redland-bindings-1.0.5.1.ebuild 1240 RMD160 14a97912a9a259b4af815bb64357658bbea39eb3 SHA1 0cfab85a03c7393d0d9f2216acde981f1b503809 SHA256 089d5ac6d1f97b799edaba0a0b57a5bf189609ae4bca470bcef0bcf495d2d456
-MD5 d942e8563bc36498d86a709d1f66a9ac redland-bindings-1.0.5.1.ebuild 1240
-RMD160 14a97912a9a259b4af815bb64357658bbea39eb3 redland-bindings-1.0.5.1.ebuild 1240
-SHA256 089d5ac6d1f97b799edaba0a0b57a5bf189609ae4bca470bcef0bcf495d2d456 redland-bindings-1.0.5.1.ebuild 1240
 EBUILD redland-bindings-1.0.6.1.ebuild 1240 RMD160 8914efcf4aabfe17c611882a31f844766038b6ba SHA1 26ab931142eda5c5e70248820824e4d37484954a SHA256 ac46bf3ff1949a81942ef76bf7edab9b645b5fc9ad718fbc471abfb9b2a10422
-MD5 abc4df91abb4a1074155d1969dca56b6 redland-bindings-1.0.6.1.ebuild 1240
-RMD160 8914efcf4aabfe17c611882a31f844766038b6ba redland-bindings-1.0.6.1.ebuild 1240
-SHA256 ac46bf3ff1949a81942ef76bf7edab9b645b5fc9ad718fbc471abfb9b2a10422 redland-bindings-1.0.6.1.ebuild 1240
 MISC ChangeLog 2143 RMD160 6ce73c907aa9276c265619d8420640fa355684c1 SHA1 1a928f97f1f18313503a032af9e772766ca7639e SHA256 2a35b8aaac2a6f183ab6a1b959b96575ff7747520b2a1a11a5a563fa0a4ce354
-MD5 34004081d2be1fec16cd0457e88ccea0 ChangeLog 2143
-RMD160 6ce73c907aa9276c265619d8420640fa355684c1 ChangeLog 2143
-SHA256 2a35b8aaac2a6f183ab6a1b959b96575ff7747520b2a1a11a5a563fa0a4ce354 ChangeLog 2143
 MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
-MD5 9f135fa1884954dde11ec6d8f4357d4d files/digest-redland-bindings-1.0.4.1 274
-RMD160 1f50dd8ff28853c1f70f9b23495050e013c7c1d8 files/digest-redland-bindings-1.0.4.1 274
-SHA256 61ed15f9cb660d84aa126c29d215fe587546b102bb6c68479201e4d090a62ad2 files/digest-redland-bindings-1.0.4.1 274
-MD5 a82a697202405ee0b7776e724e2374ad files/digest-redland-bindings-1.0.5.1 274
-RMD160 87cac7b7cf8423a08feb863aa4381dd568b2b8d5 files/digest-redland-bindings-1.0.5.1 274
-SHA256 017809f4fd7b9f1c0786aa24114e72eab5372284711f5ae6e2e33b58676df77e files/digest-redland-bindings-1.0.5.1 274
-MD5 fcedea4fa7c8dd4bc8ee08a2b9ef24b0 files/digest-redland-bindings-1.0.6.1 274
-RMD160 e9bb4e18c8db6e5b6e7a64dbfba850d341312c93 files/digest-redland-bindings-1.0.6.1 274
-SHA256 938214de8f14ba417147263725a5b78abb0b7ba13cf0a3f70f7c3181f98d15d4 files/digest-redland-bindings-1.0.6.1 274

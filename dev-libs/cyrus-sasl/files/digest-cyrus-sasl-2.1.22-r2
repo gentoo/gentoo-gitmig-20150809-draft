@@ -1,6 +1,0 @@
-MD5 2e039a5b53e8934a3ca7107808acd7e1 cyrus-sasl-2.1.22-ntlm_impl-spnego.patch.gz 7466
-RMD160 70e498d2ca27289bd729563793dcdabe650ffac4 cyrus-sasl-2.1.22-ntlm_impl-spnego.patch.gz 7466
-SHA256 a696dddc27d46ab1950b546fcf49efc1a03a8380ecc4537d085d8daacb88ccf0 cyrus-sasl-2.1.22-ntlm_impl-spnego.patch.gz 7466
-MD5 45dde9d19193ae9dd388eb68b2027bc9 cyrus-sasl-2.1.22.tar.gz 1609278
-RMD160 086e20d01588cb86decad001244b72a37223354c cyrus-sasl-2.1.22.tar.gz 1609278
-SHA256 c69e3853f35b14ee2c3f6e876e42d880927258ff4678aa052e5f0853db209962 cyrus-sasl-2.1.22.tar.gz 1609278
