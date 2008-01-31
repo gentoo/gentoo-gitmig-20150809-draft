@@ -1,24 +1,6 @@
 DIST stardict-cedict-gb-2.1.0.tar.bz2 515345 RMD160 e968d355e29e46bce7d8fe96487eae47348ce996 SHA1 8e7f1376c8be770b7b24bc4658e0050d5d96cbaa SHA256 a89c925c13d12a51253bbfb059481c6e98d5113c7df0a3316d75e45ee8637472
 DIST stardict-cedict-gb-2.4.2.tar.bz2 520907 RMD160 eb11536ac946f8e1c51d0f4a95e85aeda09b776a SHA1 a0fcc8316cbc48190f0eff1f4911da21c8eb7de8 SHA256 2d4d1604cc9f88b54c70deafc7ce4fb7a2d0bf192e48fd2c11513d315aafdf99
 EBUILD stardict-cedict-zh-en-gb-2.1.0.ebuild 423 RMD160 0c40e27143191351d19163eeb3992cd1789ddb6c SHA1 9ddff21079c59263db92d1c7f0333a5b8557c47a SHA256 9d602a5d2df222be6e5b9e92c46a0b064ab1cab6002ae695f1debdb112050888
-MD5 f6107f6c71655f1d54a32ecd846c8398 stardict-cedict-zh-en-gb-2.1.0.ebuild 423
-RMD160 0c40e27143191351d19163eeb3992cd1789ddb6c stardict-cedict-zh-en-gb-2.1.0.ebuild 423
-SHA256 9d602a5d2df222be6e5b9e92c46a0b064ab1cab6002ae695f1debdb112050888 stardict-cedict-zh-en-gb-2.1.0.ebuild 423
 EBUILD stardict-cedict-zh-en-gb-2.4.2.ebuild 514 RMD160 cbd63e6130e917a854f276a8c45ba5033574dfa6 SHA1 ebd81a94c3a6b51b5a4342e1a4251df7e9f66006 SHA256 b4e010d0dd8422136e43beb0fbc4e322f3c940f6482676b30878234cec02332a
-MD5 dbe73a5b500eae8f177c516a6bceba50 stardict-cedict-zh-en-gb-2.4.2.ebuild 514
-RMD160 cbd63e6130e917a854f276a8c45ba5033574dfa6 stardict-cedict-zh-en-gb-2.4.2.ebuild 514
-SHA256 b4e010d0dd8422136e43beb0fbc4e322f3c940f6482676b30878234cec02332a stardict-cedict-zh-en-gb-2.4.2.ebuild 514
 MISC ChangeLog 950 RMD160 9e1d0ba50f8bd87558218a44e33442b8daba2246 SHA1 65b702b0c5f7fea485544d95d9caa648663fb9d0 SHA256 f9336edb562362ac5ba57e0f91159adc51c4bbcd2e7f7f8c379ba396178bb7dc
-MD5 cdb125e34c7c9aae0dd255b82ab5a533 ChangeLog 950
-RMD160 9e1d0ba50f8bd87558218a44e33442b8daba2246 ChangeLog 950
-SHA256 f9336edb562362ac5ba57e0f91159adc51c4bbcd2e7f7f8c379ba396178bb7dc ChangeLog 950
 MISC metadata.xml 156 RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad SHA1 8ccc2b0f20743002b783b1f7b5162c71f7f54c2e SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad metadata.xml 156
-SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215 metadata.xml 156
-MD5 193f766a650144d87b6332b564f3ba1c files/digest-stardict-cedict-zh-en-gb-2.1.0 277
-RMD160 3115c6d23757848807ddbef636b49d54da8964d9 files/digest-stardict-cedict-zh-en-gb-2.1.0 277
-SHA256 7d03a4101f0266f1d443c3d84a67c3e3d965157110cd0889a89350835e8a5f87 files/digest-stardict-cedict-zh-en-gb-2.1.0 277
-MD5 b6f415aa77062f27b07c1ef442da9ea4 files/digest-stardict-cedict-zh-en-gb-2.4.2 277
-RMD160 bb510f692c503adf75a5cae9ac5a7a07eafa331c files/digest-stardict-cedict-zh-en-gb-2.4.2 277
-SHA256 d296192d14c93ffbea2a52d7f4262e07c6e96024f41b6b4e1e38cdb6f981e27e files/digest-stardict-cedict-zh-en-gb-2.4.2 277

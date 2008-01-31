@@ -1,24 +1,6 @@
 DIST stardict-oxford-gb-2.1.0.tar.bz2 7655878 RMD160 8386e7be393d118b3eb881f74e045f5900ff5f5a SHA1 74ac22f026cd5969f0bec4190a7ef7672cc883f4 SHA256 33ac34ae68e3d38e9f234267566b7633b0b8cbd73cb0ac1770d048f7851fc7b6
 DIST stardict-oxford-gb-2.4.2.tar.bz2 7673526 RMD160 83123b36c117d83c64cd9fef262b68f3a3ff3082 SHA1 f4e42fdacdc25a42ce0b3346d2fbc9200e64f13c SHA256 cf3714c0eda82f1d0b7426c2b6589dd75b5d15a1918fdbe9679077c00f9d43cd
 EBUILD stardict-oxford-en-zh-gb-2.1.0.ebuild 370 RMD160 23a646c32a9be0860005ef3e2e6e27b5c76f7f16 SHA1 7c68b82e2f109eae5379c895a6b00a0810d3d673 SHA256 271b16f38ccfc96b8def9efe7a8707e9de929d99c5dbee8d40ef990771f40353
-MD5 cbc7061123688f2f8163f4fbb5a4f120 stardict-oxford-en-zh-gb-2.1.0.ebuild 370
-RMD160 23a646c32a9be0860005ef3e2e6e27b5c76f7f16 stardict-oxford-en-zh-gb-2.1.0.ebuild 370
-SHA256 271b16f38ccfc96b8def9efe7a8707e9de929d99c5dbee8d40ef990771f40353 stardict-oxford-en-zh-gb-2.1.0.ebuild 370
 EBUILD stardict-oxford-en-zh-gb-2.4.2.ebuild 514 RMD160 276b5deea5f849d25744e13b4021a3145cf8ce6e SHA1 6b01573692e7450525a73aed559eba07662bfb5a SHA256 7c7a5e8a2e211193b7d8d8488254defff5a37fc0a15172fd7634fc5b76648d04
-MD5 c3e6139003752ff0d629b24766379695 stardict-oxford-en-zh-gb-2.4.2.ebuild 514
-RMD160 276b5deea5f849d25744e13b4021a3145cf8ce6e stardict-oxford-en-zh-gb-2.4.2.ebuild 514
-SHA256 7c7a5e8a2e211193b7d8d8488254defff5a37fc0a15172fd7634fc5b76648d04 stardict-oxford-en-zh-gb-2.4.2.ebuild 514
 MISC ChangeLog 950 RMD160 f5ace986dac4ad7ad67caab39e655cf61f98e03e SHA1 f8100325ad683b318d035753a86936f7a6c2c038 SHA256 48698cc702fd62b03ad4a582d0aa8eb39c7789159402af91ccb8a68f39ee8eb4
-MD5 d9bbac008737c2a15b33aba45379c3f0 ChangeLog 950
-RMD160 f5ace986dac4ad7ad67caab39e655cf61f98e03e ChangeLog 950
-SHA256 48698cc702fd62b03ad4a582d0aa8eb39c7789159402af91ccb8a68f39ee8eb4 ChangeLog 950
 MISC metadata.xml 156 RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad SHA1 8ccc2b0f20743002b783b1f7b5162c71f7f54c2e SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad metadata.xml 156
-SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215 metadata.xml 156
-MD5 898890ce9751c56296ea95c5bbb1517e files/digest-stardict-oxford-en-zh-gb-2.1.0 280
-RMD160 c541473b33f3a8d11d1bc7c0104212e9a4cf517d files/digest-stardict-oxford-en-zh-gb-2.1.0 280
-SHA256 a6a39971a78dadf33daf4927dbe770641881d84cb424591e627d346fadbf0a27 files/digest-stardict-oxford-en-zh-gb-2.1.0 280
-MD5 9e8f1d52c0b41a0a0c562a48dd7ed496 files/digest-stardict-oxford-en-zh-gb-2.4.2 280
-RMD160 0cb115938da33ec3aa5758c5612f4f758f1118a9 files/digest-stardict-oxford-en-zh-gb-2.4.2 280
-SHA256 8a89041dac7bc1cd8c4b3456167713895c2aa9b5dfc18c49ceb98ee736fbc0c8 files/digest-stardict-oxford-en-zh-gb-2.4.2 280

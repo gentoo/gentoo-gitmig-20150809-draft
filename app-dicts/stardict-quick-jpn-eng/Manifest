@@ -1,24 +1,6 @@
 DIST stardict-quick_jpn-eng-2.1.0.tar.bz2 841378 RMD160 046754fdb5acf8a1f8984934cdcdd205aa1051f8 SHA1 339acf0716561b832bea7d412c049925d8a2aee7 SHA256 cf20d13a5c2f446b1690337723da5bd01972eb5cd02ad0dcb62892ba4fbc3807
 DIST stardict-quick_jpn-eng-2.4.2.tar.bz2 842456 RMD160 9dd29b582aa202d1ed0a5055b6ab5740c56f0d8e SHA1 c35add3daabf1400febe479216697b1cd10cd80e SHA256 c3a4e00df2c9a3705e316bcb9ac7d2b76e2f2f13feeec0264a59730942bc6d7e
 EBUILD stardict-quick-jpn-eng-2.1.0.ebuild 340 RMD160 470fee095710241f28f17be3bab86d5090488c0c SHA1 16730c50623325508b66602445985fc489af1275 SHA256 d39bc5bb8e6331549486250be6ddd27bbfe9872d0e484b9096c3d9d2a1ad3181
-MD5 9a775f0995afcc514339cc58538dbde7 stardict-quick-jpn-eng-2.1.0.ebuild 340
-RMD160 470fee095710241f28f17be3bab86d5090488c0c stardict-quick-jpn-eng-2.1.0.ebuild 340
-SHA256 d39bc5bb8e6331549486250be6ddd27bbfe9872d0e484b9096c3d9d2a1ad3181 stardict-quick-jpn-eng-2.1.0.ebuild 340
 EBUILD stardict-quick-jpn-eng-2.4.2.ebuild 484 RMD160 cf0aae8f3ec0034e5d0594de1459a1e35ce66c27 SHA1 c4dba393267c8b2d24b4d53bdd310e36c1a6b8f1 SHA256 242127a48d1614b2d04535f575782f9ffe52b0da3200cc5f8455965bd6bd495f
-MD5 5cc9c449c1d30b19dd9e5957bb3625dc stardict-quick-jpn-eng-2.4.2.ebuild 484
-RMD160 cf0aae8f3ec0034e5d0594de1459a1e35ce66c27 stardict-quick-jpn-eng-2.4.2.ebuild 484
-SHA256 242127a48d1614b2d04535f575782f9ffe52b0da3200cc5f8455965bd6bd495f stardict-quick-jpn-eng-2.4.2.ebuild 484
 MISC ChangeLog 929 RMD160 cfcfd295ae869fd0bc584ca0a0e4bea154315b49 SHA1 5164db17e14064b705c42674ac199f728e0e546d SHA256 f24f71a5cc66efe5c1fe3cbc196c0d70f38062699eb41ea96a18d5b9d09b5c9c
-MD5 a89e7cdba5b95f0723e61da4f1e6a76f ChangeLog 929
-RMD160 cfcfd295ae869fd0bc584ca0a0e4bea154315b49 ChangeLog 929
-SHA256 f24f71a5cc66efe5c1fe3cbc196c0d70f38062699eb41ea96a18d5b9d09b5c9c ChangeLog 929
 MISC metadata.xml 156 RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad SHA1 8ccc2b0f20743002b783b1f7b5162c71f7f54c2e SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad metadata.xml 156
-SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215 metadata.xml 156
-MD5 0a8139e997e5a5f29f43ed1d56721203 files/digest-stardict-quick-jpn-eng-2.1.0 289
-RMD160 77226ba9e35ea2ddb88965a0e2d823ac6ad78e88 files/digest-stardict-quick-jpn-eng-2.1.0 289
-SHA256 23abe83d3e8d714108b2f0080ac3d4d238b54a0b5d1bc324366419e039c01373 files/digest-stardict-quick-jpn-eng-2.1.0 289
-MD5 188cd4fb76e67713db203da0c7e524a9 files/digest-stardict-quick-jpn-eng-2.4.2 289
-RMD160 a7841b3d43bb29a9b551ca3d8d9e1601de84b931 files/digest-stardict-quick-jpn-eng-2.4.2 289
-SHA256 ff47fe32e4b2eb82ff994c54460b71c3dc0ad4ce0752de0d9cc5d1df1b0504c4 files/digest-stardict-quick-jpn-eng-2.4.2 289
