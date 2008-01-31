@@ -1,47 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX irtrans-irserver-5.9.01-missing-include.diff 360 RMD160 00b6a769191c98d5066515dc51a3205da46616d3 SHA1 dd40cf4311fc2323624f7ef3435ebe938ca346cd SHA256 7bf9a7d9c516e6e303cda1c958e07b500484ae078f92a0086cd0fb95c4d18561
-MD5 3d7a316769e4088d71f2e8ff0682b56c files/irtrans-irserver-5.9.01-missing-include.diff 360
-RMD160 00b6a769191c98d5066515dc51a3205da46616d3 files/irtrans-irserver-5.9.01-missing-include.diff 360
-SHA256 7bf9a7d9c516e6e303cda1c958e07b500484ae078f92a0086cd0fb95c4d18561 files/irtrans-irserver-5.9.01-missing-include.diff 360
 AUX irtrans-server.confd 522 RMD160 e07dcfa2632225e01d0aa072324dcf786f033266 SHA1 f4caf652fdb06a771d56b8a06757e5589501d02a SHA256 70bf4c2eb2c7a2c81293ab33537f7520ee91a0f213c1c5d480e50cfc5456125c
-MD5 b8b6a554279e85f06e94212118e00774 files/irtrans-server.confd 522
-RMD160 e07dcfa2632225e01d0aa072324dcf786f033266 files/irtrans-server.confd 522
-SHA256 70bf4c2eb2c7a2c81293ab33537f7520ee91a0f213c1c5d480e50cfc5456125c files/irtrans-server.confd 522
 AUX irtrans-server.initd 693 RMD160 3e2e3c4c9befffaec4fe683217bdad1b22bace1a SHA1 bb13d8b68af60daf01eef9ec52fefc42b355d925 SHA256 76692e444ded32152bdcde4dce1c6e905d8d47b5cf6ac390b5ade48eed62f30d
-MD5 47de5d39aabecb3f01e215d361b686a5 files/irtrans-server.initd 693
-RMD160 3e2e3c4c9befffaec4fe683217bdad1b22bace1a files/irtrans-server.initd 693
-SHA256 76692e444ded32152bdcde4dce1c6e905d8d47b5cf6ac390b5ade48eed62f30d files/irtrans-server.initd 693
 DIST irserver-src-5.9.04.tar.gz 143574 RMD160 acea7223dea66d8be97e716d0a1aa2f128f98176 SHA1 d3f6687785bab24abb5cd5019ef5d6892ced7b1f SHA256 9f3877d6c8fcc67b5198bb05c2ffab24116121c09124f744eb9d795e925485a9
 DIST irserver-src-5.9.07.tar.gz 143809 RMD160 747eeb70f5f869f689517250bcfd75fe0af1d924 SHA1 49210d5adebba6852439cfb4e640434303b0a83f SHA256 2416be01cc7f2bc32fc71407d503c1c285987d32e0dab905921c639d2fd79702
 EBUILD irtrans-irserver-5.9.04.ebuild 1072 RMD160 bb00c451096276f15f0423d1be2d67e4ab9baef2 SHA1 9cc7dc62fc86c217accefeca3088907790971276 SHA256 cf9a2c57dbe8d13e592e6e3a6cc8dd17082d789faa6451cb8aba17cc2a73e1fd
-MD5 9fd0a2c21fc0dfd294ad2e8662dcf8b6 irtrans-irserver-5.9.04.ebuild 1072
-RMD160 bb00c451096276f15f0423d1be2d67e4ab9baef2 irtrans-irserver-5.9.04.ebuild 1072
-SHA256 cf9a2c57dbe8d13e592e6e3a6cc8dd17082d789faa6451cb8aba17cc2a73e1fd irtrans-irserver-5.9.04.ebuild 1072
 EBUILD irtrans-irserver-5.9.07.ebuild 1072 RMD160 c43d9d761dac2fbbf34b893a795984dd376ec789 SHA1 57f5a9ce8243192c6d67325248ac8fbff8b550c1 SHA256 1f4f0e7dad07430f022af4fd793a101f044ed49b44e4643e14ea79a5c997ca59
-MD5 800b74ab670fd3883e57c226494649f1 irtrans-irserver-5.9.07.ebuild 1072
-RMD160 c43d9d761dac2fbbf34b893a795984dd376ec789 irtrans-irserver-5.9.07.ebuild 1072
-SHA256 1f4f0e7dad07430f022af4fd793a101f044ed49b44e4643e14ea79a5c997ca59 irtrans-irserver-5.9.07.ebuild 1072
 MISC ChangeLog 1122 RMD160 8e4dacee599d0633bbbe8a117e9fc7e813161c0d SHA1 1eb0590c3d852c549e7934667cd9fe8d0d2ca474 SHA256 f2ad22617167444023e5731127f7b5fabc3fcff6aa93f059738c27ffe95524cb
-MD5 fae6290ddc5c0d64afe343348803479b ChangeLog 1122
-RMD160 8e4dacee599d0633bbbe8a117e9fc7e813161c0d ChangeLog 1122
-SHA256 f2ad22617167444023e5731127f7b5fabc3fcff6aa93f059738c27ffe95524cb ChangeLog 1122
 MISC metadata.xml 434 RMD160 f5c371b2dbc822ab770051681c5bcdf643188f9a SHA1 517ee2493df8d34d878b177bcfb1649640903de6 SHA256 9db7a61b2d24510fab1e37a5196171485af7d74862fc6f0888c41e1240c36ce1
-MD5 29467ae341f5a905560f63ba5facf376 metadata.xml 434
-RMD160 f5c371b2dbc822ab770051681c5bcdf643188f9a metadata.xml 434
-SHA256 9db7a61b2d24510fab1e37a5196171485af7d74862fc6f0888c41e1240c36ce1 metadata.xml 434
-MD5 a722f95fb39c5ad76216a78988420f17 files/digest-irtrans-irserver-5.9.04 259
-RMD160 89b1b649bad4061081d30c6f9103439bfb9397c3 files/digest-irtrans-irserver-5.9.04 259
-SHA256 999ec2a22b693063f50b857a3dcbc79dadd8ff0e2c731ff1853cf9b7e9ecbeb5 files/digest-irtrans-irserver-5.9.04 259
-MD5 95bface1a727f4b738920545824a3216 files/digest-irtrans-irserver-5.9.07 259
-RMD160 b49d95769284cc57cc6c847d2162aaca53b16735 files/digest-irtrans-irserver-5.9.07 259
-SHA256 94fd2fe1f3a81cd843f163a49a5af9941d0bb12a5cec11d86d22243fb335cd28 files/digest-irtrans-irserver-5.9.07 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-Comment: added by hd_brummy@gentoo.org
-
-iD8DBQFHWEjhdn07HTTCgIoRAov+AKCoAmyXcggiEbhrq1H4HNFgPWaY/wCfcXvG
-8LfYgDs/plpJKLe23p993x4=
-=v+Zx
------END PGP SIGNATURE-----
