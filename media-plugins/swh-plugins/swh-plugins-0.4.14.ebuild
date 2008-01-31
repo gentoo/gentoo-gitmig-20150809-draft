@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.14.ebuild,v 1.3 2006/11/10 01:08:11 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.14.ebuild,v 1.4 2008/01/31 21:05:04 grobian Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://plugin.org.uk/releases/${PV}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc-macos x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND="media-libs/ladspa-sdk
 	dev-util/pkgconfig
@@ -23,8 +23,6 @@ src_unpack() {
 
 	use amd64 && append-flags -fPIC
 	use ppc && append-flags -fPIC
-	use ppc-macos && append-flags -fPIC
-	use ppc-macos && append-ldflags -lintl -lsystem -lm
 
 	cd ${S}
 	sed -i '/MACHINE=/s/.*/MACHINE=""/' configure
@@ -32,7 +30,6 @@ src_unpack() {
 }
 
 src_compile() {
-	use ppc-macos && myconf="${myconf} --enable-darwin"
 	econf ${myconf} || die "configure failed"
 	make || die "make failed"
 }
