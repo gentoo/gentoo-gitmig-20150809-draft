@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/ess
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.26 2008/01/10 15:49:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.27 2008/01/31 08:32:35 ulm Exp $
+
+*ess-5.3.6-r1 (31 Jan 2008)
+
+  31 Jan 2008; Ulrich Mueller <ulm@gentoo.org> -ess-5.3.6.ebuild,
+  +ess-5.3.6-r1.ebuild:
+  Install elisp source files earlier, in order to suppress warnings at Emacs
+  startup, bug 205156 comment 3.
 
 *ess-5.3.6 (10 Jan 2008)
 
