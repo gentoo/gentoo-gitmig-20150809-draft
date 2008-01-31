@@ -3,38 +3,8 @@ DIST kdesdk-3.5.6.tar.bz2 5046602 RMD160 96e96a0ca87aadf8940ceb1dfead385503096a4
 DIST kdesdk-3.5.7.tar.bz2 5200751 RMD160 055d0ec884b289376fa5da6367811abbcf8787db SHA1 e9cd8a8416ff340e7dc46289efafd1b1b99c31ff SHA256 701c3ca8ecd699a513760fe4c492e102f6daa3a9db16e458435f1ac5af3dd021
 DIST kdesdk-3.5.8.tar.bz2 5241140 RMD160 5aaa6e844d725c4048b30e5917ad665d07b6d73f SHA1 d65cbad94aa1f552e94c610166a0860f9bc4dac7 SHA256 3ed120f3c9ca56224c79f286f2c71441fec2d988b94e2c90c7e96b1e813885df
 EBUILD kdesdk-kfile-plugins-3.5.5.ebuild 500 RMD160 d6a3afb616058c5dcbf789e93c5817fe3171ae0d SHA1 dd9f2b52a8146faebfa70c67e868d45966e59dac SHA256 d811557e77a2326026b19b83027b9b7c03fd32e4a1c3fa12518e0b7839998e07
-MD5 62b3bd0b9e4ac832d49f5c38cc50bc63 kdesdk-kfile-plugins-3.5.5.ebuild 500
-RMD160 d6a3afb616058c5dcbf789e93c5817fe3171ae0d kdesdk-kfile-plugins-3.5.5.ebuild 500
-SHA256 d811557e77a2326026b19b83027b9b7c03fd32e4a1c3fa12518e0b7839998e07 kdesdk-kfile-plugins-3.5.5.ebuild 500
 EBUILD kdesdk-kfile-plugins-3.5.6.ebuild 510 RMD160 3940b905af8cc51fa17aeeaa204b5d380414a2ca SHA1 a8ebbd3a06d86ba50b8a73ab707cb4c77717b271 SHA256 26932c3c1893472c5400baeb4a64e818c2331c0b580e9217cbbfd2b9dc68189b
-MD5 8428b3950bd4b52981d65040105b74ea kdesdk-kfile-plugins-3.5.6.ebuild 510
-RMD160 3940b905af8cc51fa17aeeaa204b5d380414a2ca kdesdk-kfile-plugins-3.5.6.ebuild 510
-SHA256 26932c3c1893472c5400baeb4a64e818c2331c0b580e9217cbbfd2b9dc68189b kdesdk-kfile-plugins-3.5.6.ebuild 510
 EBUILD kdesdk-kfile-plugins-3.5.7.ebuild 501 RMD160 9a42588a94a10464f130086f75a64e7fba57ef46 SHA1 476b396b805ca6cfbfe31659d4ac4a24d0a26dbb SHA256 eec99888b5050c3bf8b39ee7704bc85fbc885279d9562dff7ed1274d1c190d23
-MD5 f928f6a539c8f4dbe9bdeed612a05b3a kdesdk-kfile-plugins-3.5.7.ebuild 501
-RMD160 9a42588a94a10464f130086f75a64e7fba57ef46 kdesdk-kfile-plugins-3.5.7.ebuild 501
-SHA256 eec99888b5050c3bf8b39ee7704bc85fbc885279d9562dff7ed1274d1c190d23 kdesdk-kfile-plugins-3.5.7.ebuild 501
 EBUILD kdesdk-kfile-plugins-3.5.8.ebuild 504 RMD160 f9216dc5944369af8905a92244989bb1e396ed63 SHA1 7ad12c0e78bbf8c680f280afcc89404bb347e957 SHA256 b057e7fb57d2f0057a5528d4127f8401d2d9437c18e0f3f72a2e2e2783a917d4
-MD5 3427c9b0e0197c773970cc30f7c88822 kdesdk-kfile-plugins-3.5.8.ebuild 504
-RMD160 f9216dc5944369af8905a92244989bb1e396ed63 kdesdk-kfile-plugins-3.5.8.ebuild 504
-SHA256 b057e7fb57d2f0057a5528d4127f8401d2d9437c18e0f3f72a2e2e2783a917d4 kdesdk-kfile-plugins-3.5.8.ebuild 504
 MISC ChangeLog 7900 RMD160 47d7892fcf58650f6398930c1fbb4810454e80d3 SHA1 baefe549caef099d03e8f26b220c6fbbf9b4900e SHA256 eddce3d75607337b093aaefcd32eed080d9192b4851e66fcf59e7ab19267d5e5
-MD5 6a4a0ad5afd0ea9fc62d951350245a3b ChangeLog 7900
-RMD160 47d7892fcf58650f6398930c1fbb4810454e80d3 ChangeLog 7900
-SHA256 eddce3d75607337b093aaefcd32eed080d9192b4851e66fcf59e7ab19267d5e5 ChangeLog 7900
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 a144103dcef6a1909e8ae60fc6ec782a files/digest-kdesdk-kfile-plugins-3.5.5 244
-RMD160 b6e6682c30ba3dc4ec805cdd8dc08913c693a0da files/digest-kdesdk-kfile-plugins-3.5.5 244
-SHA256 c3589de6f3695aa67f01c94883d3e032fa317a84e263e44ac72754fce964cffb files/digest-kdesdk-kfile-plugins-3.5.5 244
-MD5 03dee6283bcdfcb198808ac3bca4e6ac files/digest-kdesdk-kfile-plugins-3.5.6 244
-RMD160 205bed8e8f34fea07c7af6ae4026b2c252109d56 files/digest-kdesdk-kfile-plugins-3.5.6 244
-SHA256 9130a817dd6d3b5c8d5ae8f926b4e65d8a35cfe930a1b613c06ce36aaeb17854 files/digest-kdesdk-kfile-plugins-3.5.6 244
-MD5 3b54c9dbb4055174b2f9afa78f3487b8 files/digest-kdesdk-kfile-plugins-3.5.7 244
-RMD160 73528337642609126c831aca0720b3f874fffdc8 files/digest-kdesdk-kfile-plugins-3.5.7 244
-SHA256 5b0c42c3810c369ebeba1f641664bcc632a83fdf3f50ea665a66383799c31dc2 files/digest-kdesdk-kfile-plugins-3.5.7 244
-MD5 79318e0e3d34d47c7a166dd851cdecd6 files/digest-kdesdk-kfile-plugins-3.5.8 244
-RMD160 9cd30ede3cc5481cba74e70114e219faec4010b0 files/digest-kdesdk-kfile-plugins-3.5.8 244
-SHA256 cf0ca727902fb50017549e0c9eba5210390217da6eae9306419075b8bea44e3f files/digest-kdesdk-kfile-plugins-3.5.8 244

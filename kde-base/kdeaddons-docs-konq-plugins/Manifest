@@ -2,31 +2,7 @@ DIST kdeaddons-3.5.4.tar.bz2 1653229 RMD160 59c0f608f93192291ae7ca37382896d5cea5
 DIST kdeaddons-3.5.7.tar.bz2 1735896 RMD160 f5326ff18a2529ab1046f1623b5cdab11267de5e SHA1 825c9a3e11d7ca6827406531d82d1509f633fbaf SHA256 b95d00802b0e34147a3540518dcdf6d6532ff1acaaf7bb165e0aee2a95effbcd
 DIST kdeaddons-3.5.8.tar.bz2 1726291 RMD160 0dfcf04c1074c28f0d75afe4f416b15c3897db17 SHA1 b298146a6435cdbcdda8bca10d75e12463ecc043 SHA256 e505a472ef2dd70e36992802fc33939a65be80bb8610a28bac6f639fa2ce2868
 EBUILD kdeaddons-docs-konq-plugins-3.5.4.ebuild 531 RMD160 b6abe1675b9d2f5bbc0c1156700bfb1f2f58739a SHA1 856100a1156b34217f70573427ac73254d677f66 SHA256 7ed1f63418cfae30778474625ef81c6783d71103860b62929d27e96dcca24bd0
-MD5 d52eed35e1018924e991fc859e1d4966 kdeaddons-docs-konq-plugins-3.5.4.ebuild 531
-RMD160 b6abe1675b9d2f5bbc0c1156700bfb1f2f58739a kdeaddons-docs-konq-plugins-3.5.4.ebuild 531
-SHA256 7ed1f63418cfae30778474625ef81c6783d71103860b62929d27e96dcca24bd0 kdeaddons-docs-konq-plugins-3.5.4.ebuild 531
 EBUILD kdeaddons-docs-konq-plugins-3.5.7.ebuild 526 RMD160 a27fd9ddd8cdf74dcbbd2153622739c4c7f11f98 SHA1 51b01dfe3b8bce781e1272cc540ed86b2a28d602 SHA256 7e01828226bc0329953a14d08cd9898fd7a46cd0d0163a61321a84076c081782
-MD5 10987eb0c6da01bd7de7e0d148f77468 kdeaddons-docs-konq-plugins-3.5.7.ebuild 526
-RMD160 a27fd9ddd8cdf74dcbbd2153622739c4c7f11f98 kdeaddons-docs-konq-plugins-3.5.7.ebuild 526
-SHA256 7e01828226bc0329953a14d08cd9898fd7a46cd0d0163a61321a84076c081782 kdeaddons-docs-konq-plugins-3.5.7.ebuild 526
 EBUILD kdeaddons-docs-konq-plugins-3.5.8.ebuild 526 RMD160 25f8941773bbb3db8e2c6e2d152d7d5fff571096 SHA1 0d67fc202c77a56efb0cf9b63d4cfd418c031a8d SHA256 28e25e40d11eff99176abc850703fb3b74a4dca4eab83d4de2d0ee7396176df5
-MD5 025a04ae6132563189ae7b534b0d0064 kdeaddons-docs-konq-plugins-3.5.8.ebuild 526
-RMD160 25f8941773bbb3db8e2c6e2d152d7d5fff571096 kdeaddons-docs-konq-plugins-3.5.8.ebuild 526
-SHA256 28e25e40d11eff99176abc850703fb3b74a4dca4eab83d4de2d0ee7396176df5 kdeaddons-docs-konq-plugins-3.5.8.ebuild 526
 MISC ChangeLog 8844 RMD160 34225ef4fe45a5fec62e6774549bfcd4d9f6930a SHA1 8399d0b6011cd6c24af661f60649a2f079090495 SHA256 f1ab82869ba1755d19183aa0bdf350bf0db92125709a55f89b4b865dc72d6766
-MD5 ed0527d65b7fe0af159df2bffa0acb30 ChangeLog 8844
-RMD160 34225ef4fe45a5fec62e6774549bfcd4d9f6930a ChangeLog 8844
-SHA256 f1ab82869ba1755d19183aa0bdf350bf0db92125709a55f89b4b865dc72d6766 ChangeLog 8844
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 ddb030b325d9ae183b03c0bf584e6246 files/digest-kdeaddons-docs-konq-plugins-3.5.4 253
-RMD160 164541f669efbb5ce8c9aff492a5af4aee4c9c16 files/digest-kdeaddons-docs-konq-plugins-3.5.4 253
-SHA256 5df449cd3a839cdacd0eaf590422aba818c5d5af82f91763f3e8f5efb41f5ef2 files/digest-kdeaddons-docs-konq-plugins-3.5.4 253
-MD5 1ae2354926bd343427797672dab02185 files/digest-kdeaddons-docs-konq-plugins-3.5.7 253
-RMD160 32ff30e62beba5ac26dd459ee01b69b7cea9e806 files/digest-kdeaddons-docs-konq-plugins-3.5.7 253
-SHA256 72071d5f234b9e233d2b9be9ff58491bb0523afbbbc0752b4ba6c3265c7d9c42 files/digest-kdeaddons-docs-konq-plugins-3.5.7 253
-MD5 ca00e17d5ffa9a80ac5531a95fde96ea files/digest-kdeaddons-docs-konq-plugins-3.5.8 253
-RMD160 0d53fa8cf69aff4dad98d69f338a1d5f57cb56fc files/digest-kdeaddons-docs-konq-plugins-3.5.8 253
-SHA256 63bde689352351d1f5a5691ea538c17a6f7e55f91d01fde4b082949e6f8f0d99 files/digest-kdeaddons-docs-konq-plugins-3.5.8 253

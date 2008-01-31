@@ -1,43 +1,7 @@
 EBUILD kdenetwork-meta-3.5.5.ebuild 1284 RMD160 046c054b83b73df44c154c5df2e31ffb056cf1f9 SHA1 5273ee690ef72debf84c7ed2caa1cc92e77ac907 SHA256 c31873d5ee49948b1d983aa4044cb4c9fca6dc0b1aaf06d459ef3904fab0e5e5
-MD5 e439b787356d928c3280920f8ae6cec3 kdenetwork-meta-3.5.5.ebuild 1284
-RMD160 046c054b83b73df44c154c5df2e31ffb056cf1f9 kdenetwork-meta-3.5.5.ebuild 1284
-SHA256 c31873d5ee49948b1d983aa4044cb4c9fca6dc0b1aaf06d459ef3904fab0e5e5 kdenetwork-meta-3.5.5.ebuild 1284
 EBUILD kdenetwork-meta-3.5.6.ebuild 1287 RMD160 2400b7e360d43c1f4328d6fbde8f69227e466c6e SHA1 d0ef9a9bce218271e6250ab362d7b4b1a9e027ae SHA256 9fbd52caaef794d99a6d5ef239ee82d9115e1838794dc3769efeaaacbeacae53
-MD5 1f8acce16c22c4bb215b4aeb6b9eedcf kdenetwork-meta-3.5.6.ebuild 1287
-RMD160 2400b7e360d43c1f4328d6fbde8f69227e466c6e kdenetwork-meta-3.5.6.ebuild 1287
-SHA256 9fbd52caaef794d99a6d5ef239ee82d9115e1838794dc3769efeaaacbeacae53 kdenetwork-meta-3.5.6.ebuild 1287
 EBUILD kdenetwork-meta-3.5.7.ebuild 1284 RMD160 5d037207a9cf97462d2ea830bf3d463de10b6100 SHA1 55faa5197b239ae81c3a2e62757e89a394af45a7 SHA256 78da54675874eba2379607e42d8e3343148a032d725f6a04bea848c9bee9c827
-MD5 3782b79189fb803c43374ca8a48f90e5 kdenetwork-meta-3.5.7.ebuild 1284
-RMD160 5d037207a9cf97462d2ea830bf3d463de10b6100 kdenetwork-meta-3.5.7.ebuild 1284
-SHA256 78da54675874eba2379607e42d8e3343148a032d725f6a04bea848c9bee9c827 kdenetwork-meta-3.5.7.ebuild 1284
 EBUILD kdenetwork-meta-3.5.8.ebuild 1282 RMD160 521effe1f502676dec98f03314e13a3ebe3cf1e0 SHA1 3ff76cc25016950d16cc88d01eaa4657c7484b51 SHA256 aa2140c29153b42cd37a18a3db754d4b22a11b03cc8c34eafd3e11ecb7b0f530
-MD5 7be622cf8e06b8a6b3e3d5366bea8ebc kdenetwork-meta-3.5.8.ebuild 1282
-RMD160 521effe1f502676dec98f03314e13a3ebe3cf1e0 kdenetwork-meta-3.5.8.ebuild 1282
-SHA256 aa2140c29153b42cd37a18a3db754d4b22a11b03cc8c34eafd3e11ecb7b0f530 kdenetwork-meta-3.5.8.ebuild 1282
 EBUILD kdenetwork-meta-4.0.0.ebuild 764 RMD160 8c0239edd5839cbc004deedb97139d741726d3fa SHA1 41ad090eda212ab8c2cce99d212c27c69a332bbc SHA256 ef7ce1dfd77a33ccf13216806646508320efb60c8caa1f3673cf8c881abc3335
-MD5 8600c125d63661fdf6d56e088a086af6 kdenetwork-meta-4.0.0.ebuild 764
-RMD160 8c0239edd5839cbc004deedb97139d741726d3fa kdenetwork-meta-4.0.0.ebuild 764
-SHA256 ef7ce1dfd77a33ccf13216806646508320efb60c8caa1f3673cf8c881abc3335 kdenetwork-meta-4.0.0.ebuild 764
 MISC ChangeLog 10931 RMD160 022609dfcc54368be53a77d1764af75c5fcc856a SHA1 71e4735cb629c11835b49b2f13c32e9a41084041 SHA256 a880d41209977d9babc9189766758addbb344cefc2ca6a7e794f43c37c6c0305
-MD5 6d0c031ab1d3eb778a1ec96eceb64a20 ChangeLog 10931
-RMD160 022609dfcc54368be53a77d1764af75c5fcc856a ChangeLog 10931
-SHA256 a880d41209977d9babc9189766758addbb344cefc2ca6a7e794f43c37c6c0305 ChangeLog 10931
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
-SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdenetwork-meta-3.5.5 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdenetwork-meta-3.5.5 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdenetwork-meta-3.5.5 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdenetwork-meta-3.5.6 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdenetwork-meta-3.5.6 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdenetwork-meta-3.5.6 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdenetwork-meta-3.5.7 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdenetwork-meta-3.5.7 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdenetwork-meta-3.5.7 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdenetwork-meta-3.5.8 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdenetwork-meta-3.5.8 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdenetwork-meta-3.5.8 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdenetwork-meta-4.0.0 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdenetwork-meta-4.0.0 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdenetwork-meta-4.0.0 0
