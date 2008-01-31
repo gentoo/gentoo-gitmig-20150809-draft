@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.50 2007/08/07 12:47:47 gustavoz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.51 2008/01/31 04:30:31 dberkholz Exp $
+
+  31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>; -libdrm-2.0.2.ebuild:
+  Clean up.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> libdrm-2.3.0.ebuild:
   Stable on sparc wrt #175465
