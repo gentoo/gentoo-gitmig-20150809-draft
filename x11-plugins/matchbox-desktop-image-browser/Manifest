@@ -1,30 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX matchbox-desktop-image-browser-0.2-include_fix.patch 412 RMD160 28469e4df76c97971f46ed226c92a3e7f2b1c746 SHA1 ada67c4caef0ec09b211b3a91eff2be807e1c0fc SHA256 e348f2c2796a640465b6e0648196141527af126c8a8bc8dd27067e1aa9e6a079
-MD5 955807df22a7d455892a9d3fe6ecad6d files/matchbox-desktop-image-browser-0.2-include_fix.patch 412
-RMD160 28469e4df76c97971f46ed226c92a3e7f2b1c746 files/matchbox-desktop-image-browser-0.2-include_fix.patch 412
-SHA256 e348f2c2796a640465b6e0648196141527af126c8a8bc8dd27067e1aa9e6a079 files/matchbox-desktop-image-browser-0.2-include_fix.patch 412
 DIST mb-desktop-image-browser-0.2.tar.bz2 209777 RMD160 5ecdad5c1cbd6ba2647bb3c375e74f78a1cdebd3 SHA1 5c9e2fde3aa60ee2e0c62f163ad78df145a786ef SHA256 48c2721048d3fa0bde425df1b40b1baa4ae67f6e42be78761ae81deb39ec746e
 EBUILD matchbox-desktop-image-browser-0.2.ebuild 1035 RMD160 45cfea878460bc10b3c6c450efc0bd0c3bf61f07 SHA1 165bfa939232d3e94ab8a9aeeb75c8ef817cc703 SHA256 106b9d5536c5236868dca54ce4ee6dd764afc86b2c9b05033cd6b195c06f35da
-MD5 2114f22a932b6d9f31b1a00ad0b81fbb matchbox-desktop-image-browser-0.2.ebuild 1035
-RMD160 45cfea878460bc10b3c6c450efc0bd0c3bf61f07 matchbox-desktop-image-browser-0.2.ebuild 1035
-SHA256 106b9d5536c5236868dca54ce4ee6dd764afc86b2c9b05033cd6b195c06f35da matchbox-desktop-image-browser-0.2.ebuild 1035
 MISC ChangeLog 490 RMD160 a9f776e2c4d75b078abbf34c467dadd71f871fed SHA1 7703ac9646562fc90bf5fcd063febf1128d4c445 SHA256 40304eae96fbcd874716fadac208499759406c0841fd33f927175ab00dc42043
-MD5 e875b8044716d17064f537add33cd260 ChangeLog 490
-RMD160 a9f776e2c4d75b078abbf34c467dadd71f871fed ChangeLog 490
-SHA256 40304eae96fbcd874716fadac208499759406c0841fd33f927175ab00dc42043 ChangeLog 490
 MISC metadata.xml 247 RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 SHA1 af1f5473be400926e7bf9a98a354866150c8b7a7 SHA256 09c798d19a28d8e2ee2b8494e011929f5fc1617190315d82bd03c32e911def55
-MD5 a80bc50cf196a9e5a2764d6f6081b56a metadata.xml 247
-RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 metadata.xml 247
-SHA256 09c798d19a28d8e2ee2b8494e011929f5fc1617190315d82bd03c32e911def55 metadata.xml 247
-MD5 9d3377971e50e6d6d14449a679ce6b70 files/digest-matchbox-desktop-image-browser-0.2 289
-RMD160 f0138c4d3580d16cf62bc6645b956aa4daef6cc8 files/digest-matchbox-desktop-image-browser-0.2 289
-SHA256 f3fda8c5624bb7a65368940fa161dc1e96b6c46113bf8f07d0656a21475a5e9f files/digest-matchbox-desktop-image-browser-0.2 289
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEg1WfyZl4piiTjjYRAmj6AJ9DE5V/b9jGL8Tsm98sZY+1veoFEwCgmW98
-NqJ60JT/DwBU6lnX5VKwupg=
-=taAo
------END PGP SIGNATURE-----
