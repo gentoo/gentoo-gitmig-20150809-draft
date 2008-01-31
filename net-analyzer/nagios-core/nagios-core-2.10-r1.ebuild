@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.10-r1.ebuild,v 1.4 2008/01/21 20:28:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.10-r1.ebuild,v 1.5 2008/01/31 19:55:36 hollow Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -137,7 +137,7 @@ src_install() {
 
 	# Apache Module
 	if use !noweb; then
-		insinto "${APACHE2_MODULES_CONFDIR}"
+		insinto "${APACHE_MODULES_CONFDIR}"
 		doins "${FILESDIR}"/99_nagios.conf
 
 		if use perl; then
