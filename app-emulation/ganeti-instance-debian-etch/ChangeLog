@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/ganeti-instance-debian-etch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-debian-etch/ChangeLog,v 1.4 2008/01/23 04:45:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-debian-etch/ChangeLog,v 1.5 2008/01/31 21:01:35 hansmi Exp $
+
+*ganeti-instance-debian-etch-0.4 (31 Jan 2008)
+
+  31 Jan 2008; Michael Hanselmann <hansmi@gentoo.org> metadata.xml,
+  -ganeti-instance-debian-etch-0.2.ebuild,
+  +ganeti-instance-debian-etch-0.4.ebuild:
+  Version bump according to bug 207583 and set KillerFox as maintainer.
 
   23 Jan 2008; Doug Klima <cardoe@gentoo.org>
   ganeti-instance-debian-etch-0.2.ebuild,
