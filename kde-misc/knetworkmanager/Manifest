@@ -1,34 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX knetworkmanager-0.2-pam_console-fix.patch 1290 RMD160 cab71463e5e73b0a05eceb7cc6e98f2f3e2ecdf0 SHA1 3962ebf997fc9e63fe001061f25c4b6c024eab1a SHA256 7b1c8f6dadc18c7809f7bdb988b0085ea1ff63cdc61d1d0044f55f0b7ef738cb
-MD5 eee5d95e3ab443968379a29cdbbf5f4a files/knetworkmanager-0.2-pam_console-fix.patch 1290
-RMD160 cab71463e5e73b0a05eceb7cc6e98f2f3e2ecdf0 files/knetworkmanager-0.2-pam_console-fix.patch 1290
-SHA256 7b1c8f6dadc18c7809f7bdb988b0085ea1ff63cdc61d1d0044f55f0b7ef738cb files/knetworkmanager-0.2-pam_console-fix.patch 1290
 AUX knetworkmanager-0.2.1-fixbuild_u64-hschaa-01.patch 992 RMD160 7f902644dd583fd4a8019da36f4098aa461e51b2 SHA1 f75bfb1562f6e19bb3953ea85aa0df03ce0bb1a4 SHA256 9a649791eda865f6c0e28c9c3235f338ba9932f08b421c60f7eccbe52ecd1b6a
-MD5 ba108eb11e5d4a700e9b768532fe0b85 files/knetworkmanager-0.2.1-fixbuild_u64-hschaa-01.patch 992
-RMD160 7f902644dd583fd4a8019da36f4098aa461e51b2 files/knetworkmanager-0.2.1-fixbuild_u64-hschaa-01.patch 992
-SHA256 9a649791eda865f6c0e28c9c3235f338ba9932f08b421c60f7eccbe52ecd1b6a files/knetworkmanager-0.2.1-fixbuild_u64-hschaa-01.patch 992
 DIST knetworkmanager-0.2.1r738551.tar.bz2 738965 RMD160 a06220eeff7b301ced61572c8a4c496efc509d9c SHA1 953634b19533a47b9367febde3e8be6955b2b454 SHA256 4b806cb79f8cd4a403a5e6d527c5ad46baf23108be6724282f61babda76623e0
 EBUILD knetworkmanager-0.2.1_pre20071119.ebuild 1942 RMD160 82ce61a04c880b8e35a01ee6af9881e3fa1922ef SHA1 8a19953745f084724c76591316fb113603a1f11c SHA256 a8a9b6a1a6cbb824851ca6f809f6420b867e332b0d6ba63d3e4d4555d6295c39
-MD5 c224a01213cc47f80bd1eecee07c0fb5 knetworkmanager-0.2.1_pre20071119.ebuild 1942
-RMD160 82ce61a04c880b8e35a01ee6af9881e3fa1922ef knetworkmanager-0.2.1_pre20071119.ebuild 1942
-SHA256 a8a9b6a1a6cbb824851ca6f809f6420b867e332b0d6ba63d3e4d4555d6295c39 knetworkmanager-0.2.1_pre20071119.ebuild 1942
 MISC ChangeLog 1854 RMD160 caeb8b2192abed0e6395edc7c173c610002c4076 SHA1 3c78671bffc46c601e45364089ded7e03f141d0f SHA256 222bd6fb686842e3c142b9af73287e7b517bad93786a1cf0e7e7b11a59ab195d
-MD5 1d2900177274ecd12224a0ae41da66c5 ChangeLog 1854
-RMD160 caeb8b2192abed0e6395edc7c173c610002c4076 ChangeLog 1854
-SHA256 222bd6fb686842e3c142b9af73287e7b517bad93786a1cf0e7e7b11a59ab195d ChangeLog 1854
 MISC metadata.xml 721 RMD160 c82db275287f8f19fba2aec79eddae4141cb0206 SHA1 3814452f446a42a691161a57f65f9c0fb7b736ab SHA256 e19b3ac6b63abff01173041bbe1fc7a958c756abe9d5ed966e1820f436a076b0
-MD5 49e2113c891d920546dcd5b454bab99e metadata.xml 721
-RMD160 c82db275287f8f19fba2aec79eddae4141cb0206 metadata.xml 721
-SHA256 e19b3ac6b63abff01173041bbe1fc7a958c756abe9d5ed966e1820f436a076b0 metadata.xml 721
-MD5 74ce7be2b23fdd6e2c808afb24555ae5 files/digest-knetworkmanager-0.2.1_pre20071119 289
-RMD160 3b4a62bb47fb788e7687c954ab9388de93d9e9c0 files/digest-knetworkmanager-0.2.1_pre20071119 289
-SHA256 8d60e9b64d0ddd5e19f41c31223de37df3381c2b85f0cc2f0fecef9b9292c2b9 files/digest-knetworkmanager-0.2.1_pre20071119 289
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.8 (GNU/Linux)
-
-iEUEARECAAYFAkd5bsUACgkQcsIHjyDViGQCHACWNemhoM+miDlnUZlcmwsDmnNg
-6ACfUAEA21H/tfBWkw0YsT8ChOWt/B8=
-=VYeM
------END PGP SIGNATURE-----
