@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/xf86-video-ivtv-0.10.6.ebuild,v 1.1 2008/01/31 06:24:51 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/xf86-video-ivtv-0.10.6.ebuild,v 1.2 2008/01/31 06:35:44 je_fro Exp $
 
 inherit eutils x-modular
 
@@ -28,7 +28,7 @@ DEPEND="x11-proto/xextproto
 src_unpack() {
 	unpack ${A}
 	epatch ${DISTDIR}/${PF}.patch.tar.bz2
-	cd ${S}
+	cd "${S}"
 	sed -i -e "/DependTarget/a USRLIBDIR=\/usr\/$(get_libdir)\/xorg" Imakefile
 
 }
