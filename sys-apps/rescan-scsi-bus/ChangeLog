@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rescan-scsi-bus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/ChangeLog,v 1.16 2008/01/16 20:51:54 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/ChangeLog,v 1.17 2008/01/31 18:10:55 nixnut Exp $
+
+  31 Jan 2008; nixnut <nixnut@gentoo.org> rescan-scsi-bus-1.25-r1.ebuild:
+  Stable on ppc wrt bug 205925
 
   16 Jan 2008; Ferris McCormick <fmccor@gentoo.org>
   rescan-scsi-bus-1.25-r1.ebuild:
