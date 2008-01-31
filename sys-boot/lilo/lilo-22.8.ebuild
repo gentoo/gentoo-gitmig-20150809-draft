@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.8.ebuild,v 1.4 2007/07/15 02:25:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.8.ebuild,v 1.5 2008/01/31 13:26:02 chainsaw Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -28,19 +28,19 @@ PROVIDE="virtual/bootloader"
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 
-	cd ${S}
+	cd "${S}"
 
 	# Correctly document commandline options -v and -V, bug #43554
-	epatch ${FILESDIR}/${P}-correct-usage-info.patch
+	epatch "${FILESDIR}/${P}-correct-usage-info.patch"
 	# Install manpages to correct location, do not rely on incorrect manpath output, bug #117135
 	# Do not strip the main binary, it upsets portage, bug #140210
 	# Do not install diag1.img, bug #149887
-	epatch ${FILESDIR}/${P}-makefile.patch
+	epatch "${FILESDIR}/${P}-makefile.patch"
 
 	# this patch is needed when booting PXE and the device you're using
 	# emulates vga console via serial console.
 	# IE..  B.B.o.o.o.o.t.t.i.i.n.n.g.g....l.l.i.i.n.n.u.u.x.x and stair stepping.
-	use pxeserial && epatch ${FILESDIR}/${P}-novga.patch
+	use pxeserial && epatch "${FILESDIR}/${P}-novga.patch"
 
 	unpack ${DOLILO_TAR}
 }
@@ -64,22 +64,22 @@ src_compile() {
 
 src_install() {
 	keepdir /boot
-	make ROOT=${D} install || die
+	make ROOT="${D}" install || die
 
 	if use !minimal; then
 		into /
-		dosbin ${S}/dolilo/dolilo
+		dosbin "${S}"/dolilo/dolilo
 
 		into /usr
 		dosbin keytab-lilo.pl
 
 		insinto /etc
-		newins ${FILESDIR}/lilo.conf lilo.conf.example
+		newins "${FILESDIR}"/lilo.conf lilo.conf.example
 
-		newconfd ${S}/dolilo/dolilo.conf.d dolilo.example
+		newconfd "${S}"/dolilo/dolilo.conf.d dolilo.example
 
 		doman manPages/*.[5-8]
-		dodoc CHANGES COPYING INCOMPAT README*
+		dodoc CHANGES INCOMPAT README*
 		docinto samples ; dodoc sample/*
 	fi
 }
@@ -142,10 +142,10 @@ lilocheck () {
 }
 
 pkg_postinst() {
-	if [ ! -e ${ROOT}/boot/boot.b -a ! -L ${ROOT}/boot/boot.b ]
+	if [ ! -e "${ROOT}"/boot/boot.b -a ! -L "${ROOT}"/boot/boot.b ]
 	then
 		[ -f "${ROOT}/boot/boot-menu.b" ] && \
-			ln -snf boot-menu.b ${ROOT}/boot/boot.b
+			ln -snf boot-menu.b "${ROOT}"/boot/boot.b
 	fi
 
 	if [ "${ROOT}" = "/" ] && use !minimal;

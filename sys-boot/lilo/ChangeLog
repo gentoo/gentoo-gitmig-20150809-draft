@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/lilo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.50 2007/04/28 22:03:26 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.51 2008/01/31 13:26:02 chainsaw Exp $
+
+*lilo-22.8-r2 (31 Jan 2008)
+
+  31 Jan 2008; Tony Vroon <chainsaw@gentoo.org> lilo-22.7.3-r1.ebuild,
+  lilo-22.8.ebuild, lilo-22.8-r1.ebuild, +lilo-22.8-r2.ebuild:
+  Deal with new coreutils, the new cut insists you start from 1, not 0. Also,
+  be a bit more intelligent about generating labels, do not prefix the backup
+  label with o if the name is unique already. Quote a few variables too.
 
 *lilo-22.8-r1 (28 Apr 2007)
 

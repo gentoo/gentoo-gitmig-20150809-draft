@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.8-r1.ebuild,v 1.4 2008/01/31 13:26:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.8-r2.ebuild,v 1.1 2008/01/31 13:26:02 chainsaw Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-DOLILO_V="0.4"
+DOLILO_V="0.5"
 IUSE="static minimal pxeserial device-mapper"
 
 DESCRIPTION="Standard Linux boot loader"
