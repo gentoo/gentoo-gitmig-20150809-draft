@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.08-r2.ebuild,v 1.7 2008/01/15 16:20:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.08-r2.ebuild,v 1.8 2008/01/31 16:31:48 hollow Exp $
 
 inherit apache-module perl-module multilib
 
@@ -41,7 +41,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		--with-apache2-apxs=${APXS2} \
+		--with-apache2-apxs=${APXS} \
 		$(use_enable perl perl-glue) \
 		|| die "econf failed"
 	emake || die "emake failed"
