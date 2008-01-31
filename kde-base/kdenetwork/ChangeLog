@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.286 2008/01/30 09:04:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.287 2008/01/31 02:26:59 ranger Exp $
+
+  31 Jan 2008; Brent Baude <ranger@gentoo.org> kdenetwork-3.5.8.ebuild:
+  Marking kdenetwork-3.5.8 ppc for bug 207634
 
   30 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   kdenetwork-3.5.8.ebuild:

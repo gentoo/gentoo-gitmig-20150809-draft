@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.8.ebuild,v 1.6 2008/01/30 08:28:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.8.ebuild,v 1.7 2008/01/31 02:26:47 ranger Exp $
 
 inherit db-use kde-dist
 
 DESCRIPTION="KDE addon modules: Plugins for Konqueror, Noatun,..."
 
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="arts berkdb sdl"
 
 DEPEND="~kde-base/kdepim-${PV}
