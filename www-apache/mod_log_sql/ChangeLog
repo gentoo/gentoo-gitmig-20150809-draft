@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_log_sql
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/ChangeLog,v 1.3 2008/01/27 23:09:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/ChangeLog,v 1.4 2008/01/31 19:09:26 hollow Exp $
+
+  31 Jan 2008; Benedikt Böhm <hollow@gentoo.org> files/42_mod_log_sql.conf,
+  mod_log_sql-1.100.ebuild, mod_log_sql-1.101.ebuild:
+  fix depend.apache usage wrt #208033
 
   27 Jan 2008; Benedikt Böhm <hollow@gentoo.org> files/42_mod_log_sql.conf,
   metadata.xml, mod_log_sql-1.100.ebuild, mod_log_sql-1.101.ebuild:

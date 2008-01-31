@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.23.ebuild,v 1.5 2007/07/27 21:04:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.23.ebuild,v 1.6 2008/01/31 19:05:28 hollow Exp $
 
 inherit apache-module autotools
 
@@ -34,7 +34,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		--with-apxs=${APXS2} \
+		--with-apxs=${APXS} \
 		--with-apr-config=/usr/bin/apr-config \
 		|| die "econf failed"
 	emake LIBTOOL="/bin/sh $(pwd)/libtool --silent" || die "emake failed"
