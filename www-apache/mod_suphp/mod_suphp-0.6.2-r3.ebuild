@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.2-r3.ebuild,v 1.2 2008/01/27 20:58:19 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.2-r3.ebuild,v 1.3 2008/01/31 19:19:57 hollow Exp $
 
 inherit apache-module autotools eutils
 
@@ -86,7 +86,7 @@ src_compile() {
 			--with-min-gid=${SUPHP_MINGID} \
 			--with-apache-user=${SUPHP_APACHEUSER} \
 			--with-logfile=${SUPHP_LOGFILE} \
-			--with-apxs=${APXS2} \
+			--with-apxs=${APXS} \
 			--with-apr=/usr/bin/apr-1-config"
 	econf ${myargs} || die "econf failed"
 
