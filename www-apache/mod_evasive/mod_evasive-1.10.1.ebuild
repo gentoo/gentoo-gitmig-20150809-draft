@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_evasive/mod_evasive-1.10.1.ebuild,v 1.1 2007/09/09 10:44:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_evasive/mod_evasive-1.10.1.ebuild,v 1.2 2008/01/31 18:48:36 hollow Exp $
 
 inherit apache-module eutils
 
 KEYWORDS="~amd64 ~x86"
 
-DESCRIPTION="mod_evasive is an evasive maneuvers module for Apache to provide evasive action in the event of an HTTP DoS or DDoS attack or brute force attack"
+DESCRIPTION="mod_evasive is an evasive maneuvers module to provide action in the event of an HTTP DoS"
 HOMEPAGE="http://www.zdziarski.com/projects/mod_evasive/"
 SRC_URI="http://www.zdziarski.com/projects/mod_evasive/${P/-/_}.tar.gz"
 
