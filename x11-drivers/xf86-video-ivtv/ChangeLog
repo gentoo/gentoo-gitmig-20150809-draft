@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-ivtvdev
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtvdev/ChangeLog,v 1.5 2007/01/17 05:59:17 je_fro Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/ChangeLog,v 1.1 2008/01/31 06:24:51 je_fro Exp $
+
+*xf86-video-ivtv-1.0.0 (31 Jan 2008)
+*xf86-video-ivtv-0.10.6 (31 Jan 2008)
+
+  31 Jan 2008; Jeff Gardner <je_fro@gentoo.org> +metadata.xml,
+  +xf86-video-ivtv-0.10.6.ebuild, +xf86-video-ivtv-1.0.0.ebuild:
+  Following upstream in moving xf86-video-ivtvdev to xf86-video-ivtv.
 
   17 Jan 2007; Jeff Gardner <je_fro@gentoo.org>
   xf86-video-ivtvdev-0.10.6.ebuild:
