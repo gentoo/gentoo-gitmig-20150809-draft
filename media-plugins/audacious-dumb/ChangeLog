@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-dumb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.21 2008/01/27 21:25:30 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.22 2008/01/31 17:58:39 joker Exp $
+
+  31 Jan 2008; Christian Birchinger <joker@gentoo.org>
+  -audacious-dumb-0.42.ebuild:
+  Removed old version which only works with Audacious 1.3
 
 *audacious-dumb-0.57 (27 Jan 2008)
 
