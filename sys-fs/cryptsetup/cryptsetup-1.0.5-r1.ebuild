@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.5-r1.ebuild,v 1.10 2007/12/11 23:54:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.5-r1.ebuild,v 1.11 2008/01/31 01:57:26 wolf31o2 Exp $
 
 inherit linux-info eutils flag-o-matic multilib
 
@@ -22,14 +22,14 @@ DEPEND=">=sys-fs/device-mapper-1.00.07-r1
 
 dm-crypt_check() {
 	local CONFIG_CHECK="~DM_CRYPT"
-	local WARNING_DM_CRYPT="CONFIG_DM_CRYPT:\tis not set (required for cryptsetup-luks)"
+	local WARNING_DM_CRYPT="CONFIG_DM_CRYPT:\tis not set (required for cryptsetup)"
 	check_extra_config
 	echo
 }
 
 crypto_check() {
 	local CONFIG_CHECK="~CRYPTO"
-	local WARNING_CRYPTO="CONFIG_CRYPTO:\tis not set (required for cryptsetup-luks)"
+	local WARNING_CRYPTO="CONFIG_CRYPTO:\tis not set (required for cryptsetup)"
 	check_extra_config
 	echo
 }
@@ -82,7 +82,7 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "This ebuild introduces a new set of scripts and configuration"
-	ewarn "then the last version. If you are currently using /etc/conf.d/cryptfs"
+	ewarn "than the last version. If you are currently using /etc/conf.d/cryptfs"
 	ewarn "then you *MUST* copy your old file to:"
 	ewarn "/etc/conf.d/dmcrypt"
 	ewarn "Or your encrypted partitions will *NOT* work."
