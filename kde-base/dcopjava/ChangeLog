@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcopjava
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.28 2008/01/30 17:22:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.29 2008/01/31 15:27:27 ranger Exp $
+
+  31 Jan 2008; Brent Baude <ranger@gentoo.org> dcopjava-3.5.8.ebuild:
+  Marking dcopjava-3.5.8 ~ppc for bug 207634
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org> dcopjava-3.5.8.ebuild:
   Marking dcopjava-3.5.8 ~ppc64 for bug 207634

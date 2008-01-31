@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-icewm-themes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/ChangeLog,v 1.64 2008/01/30 17:25:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/ChangeLog,v 1.65 2008/01/31 15:32:14 ranger Exp $
+
+  31 Jan 2008; Brent Baude <ranger@gentoo.org>
+  kdeartwork-icewm-themes-3.5.8.ebuild:
+  Marking kdeartwork-icewm-themes-3.5.8 ppc for bug 207634
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org>
   kdeartwork-icewm-themes-3.5.8.ebuild:

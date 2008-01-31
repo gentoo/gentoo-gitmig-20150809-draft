@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.53 2008/01/30 17:22:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.54 2008/01/31 15:27:39 ranger Exp $
+
+  31 Jan 2008; Brent Baude <ranger@gentoo.org> smoke-3.5.8.ebuild:
+  Marking smoke-3.5.8 ppc for bug 207634
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org> smoke-3.5.8.ebuild:
   Marking smoke-3.5.8 ppc64 for bug 207634

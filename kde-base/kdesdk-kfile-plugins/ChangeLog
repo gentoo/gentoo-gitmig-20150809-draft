@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-kfile-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kfile-plugins/ChangeLog,v 1.57 2008/01/30 17:22:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kfile-plugins/ChangeLog,v 1.58 2008/01/31 15:27:34 ranger Exp $
+
+  31 Jan 2008; Brent Baude <ranger@gentoo.org>
+  kdesdk-kfile-plugins-3.5.8.ebuild:
+  Marking kdesdk-kfile-plugins-3.5.8 ppc for bug 207634
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org>
   kdesdk-kfile-plugins-3.5.8.ebuild:

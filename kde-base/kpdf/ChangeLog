@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.151 2008/01/30 17:23:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.152 2008/01/31 15:30:33 ranger Exp $
+
+  31 Jan 2008; Brent Baude <ranger@gentoo.org> kpdf-3.5.8-r1.ebuild:
+  Marking kpdf-3.5.8-r1 ppc for bug 207634
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org> kpdf-3.5.8-r1.ebuild:
   Marking kpdf-3.5.8-r1 ppc64 for bug 207634

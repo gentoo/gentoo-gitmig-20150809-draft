@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.103 2008/01/30 17:23:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.104 2008/01/31 15:30:11 ranger Exp $
+
+  31 Jan 2008; Brent Baude <ranger@gentoo.org> kcontrol-3.5.8-r2.ebuild:
+  Marking kcontrol-3.5.8-r2 ppc for bug 207634
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org> kcontrol-3.5.8-r2.ebuild:
   Marking kcontrol-3.5.8-r2 ppc64 for bug 207634

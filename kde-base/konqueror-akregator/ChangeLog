@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konqueror-akregator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror-akregator/ChangeLog,v 1.74 2008/01/30 17:24:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror-akregator/ChangeLog,v 1.75 2008/01/31 15:31:46 ranger Exp $
+
+  31 Jan 2008; Brent Baude <ranger@gentoo.org>
+  konqueror-akregator-3.5.8.ebuild:
+  Marking konqueror-akregator-3.5.8 ppc for bug 207634
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org>
   konqueror-akregator-3.5.8.ebuild:

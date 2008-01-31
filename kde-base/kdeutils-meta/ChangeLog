@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.77 2008/01/30 17:22:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.78 2008/01/31 15:28:01 ranger Exp $
+
+  31 Jan 2008; Brent Baude <ranger@gentoo.org> kdeutils-meta-3.5.8.ebuild:
+  Marking kdeutils-meta-3.5.8 ppc for bug 207634
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org> kdeutils-meta-3.5.8.ebuild:
   Marking kdeutils-meta-3.5.8 ppc64 for bug 207634
