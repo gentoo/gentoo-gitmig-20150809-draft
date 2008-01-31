@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.35 2008/01/16 20:27:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.36 2008/01/31 13:28:28 pva Exp $
+
+*netperf-2.4.4 (31 Jan 2008)
+
+  31 Jan 2008; <pva@gentoo.org> -files/netperf-2.2alpha.diff,
+  +files/netperf-CVE-2007-1444.patch, files/netperf-fix-scripts.patch,
+  -netperf-2.2.4.ebuild, -netperf-2.3.ebuild, -netperf-2.4.2-r1.ebuild,
+  +netperf-2.4.4.ebuild:
+  Version bump. Fixed security issue (CVE-2007-1444), bug 170569, reported by
+  Pierre-Yves Rofes <py AT gentoo.org>. Patch for vulnerability taken from
+  bugs.debian.org/413658, thank you Nico Golde <nion AT debian.org> for the
+  fix! Removed old vulnerables ebuidls.
 
   16 Jan 2008; Fabian Groffen <grobian@gentoo.org> netperf-2.2.4.ebuild,
   netperf-2.3.ebuild, netperf-2.4.2-r1.ebuild:
