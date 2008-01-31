@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_watch/mod_watch-4.03-r3.ebuild,v 1.3 2008/01/30 00:09:51 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_watch/mod_watch-4.03-r3.ebuild,v 1.4 2008/01/31 16:46:26 nixnut Exp $
 
 inherit apache-module eutils
 
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 
 DESCRIPTION="Bandwidth graphing module for Apache2 with MRTG."
 HOMEPAGE="http://www.snert.com/Software/mod_watch/"
