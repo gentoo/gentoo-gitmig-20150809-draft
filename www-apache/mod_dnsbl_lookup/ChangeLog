@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_dnsbl_lookup
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_dnsbl_lookup/ChangeLog,v 1.2 2007/09/10 10:06:19 hollow Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_dnsbl_lookup/ChangeLog,v 1.3 2008/01/31 16:41:13 hollow Exp $
+
+  31 Jan 2008; Benedikt Böhm <hollow@gentoo.org>
+  files/09_mod_dnsbl_lookup.conf, metadata.xml,
+  mod_dnsbl_lookup-0.91.ebuild:
+  fix depend.apache usage wrt #208033; update metadata; cleanup
 
   10 Sep 2007; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   fix metadata
