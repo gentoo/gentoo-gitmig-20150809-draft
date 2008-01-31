@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.0.12.ebuild,v 1.3 2008/01/27 18:05:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.0.12.ebuild,v 1.4 2008/01/31 19:27:34 hollow Exp $
 
 inherit apache-module autotools
 
@@ -35,7 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-apxs=${APXS2} \
+	econf --with-apxs=${APXS} \
 		$(use_with mysql) \
 		$(use_with postgres pgsql) \
 		|| die "econf failed"

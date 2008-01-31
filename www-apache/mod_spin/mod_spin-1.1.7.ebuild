@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.1.7.ebuild,v 1.1 2008/01/27 18:05:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.1.7.ebuild,v 1.2 2008/01/31 19:27:34 hollow Exp $
 
 inherit apache-module autotools
 
@@ -32,7 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-apxs=${APXS2} || die "econf failed"
+	econf --with-apxs=${APXS} || die "econf failed"
 	emake || die "emake failed"
 }
 

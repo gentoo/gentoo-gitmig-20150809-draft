@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/mod_ruby-1.2.6.ebuild,v 1.8 2008/01/27 21:11:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/mod_ruby-1.2.6.ebuild,v 1.9 2008/01/31 19:31:06 hollow Exp $
 
 inherit apache-module
 
@@ -27,7 +27,7 @@ need_apache2_2
 
 src_compile() {
 	./configure.rb \
-		--with-apxs=${APXS2} \
+		--with-apxs=${APXS} \
 		--with-apr-includes=$(/usr/bin/apr-1-config --includedir)
 
 	emake || die "emake failed"
