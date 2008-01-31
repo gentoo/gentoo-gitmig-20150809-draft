@@ -1,34 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST portage-mod_jabber-0.0.2.tar.bz2 7671 RMD160 81ea81baf75cf0622c15278ca2ac5909cea7ffae SHA1 2a44f1ae5fed1e7cf8f70dd27647919fe0ca5241 SHA256 4d56ce43f4b0a4a0068f262571c780e4de7b3cc6b8f4dd12254c0ec8bf93a30f
 DIST portage-mod_jabber-0.0.3.tar.bz2 7767 RMD160 de49ade23eac5fca1c848b7c6bdbfbe49d1db9dc SHA1 8ce25790e6c4eda26a8c12618aceba5ccdd3ed21 SHA256 326d4adcafef25b5b8b701e6394ae4877da4a57b7395ee5d14a1e314dd49c008
 EBUILD portage-mod_jabber-0.0.2.ebuild 689 RMD160 f9e46085d6b7abecb24ec85a27eb1f11b0862edb SHA1 02f28cfb1c1edf61aa4dbf1b447f554ed6c4b28c SHA256 41dba1424b44818cd1d66b2b44375cc28b69ece421ea021d08436e7d1c7c30b7
-MD5 6b3b566c56490a14af7f6c4ae8ac27f8 portage-mod_jabber-0.0.2.ebuild 689
-RMD160 f9e46085d6b7abecb24ec85a27eb1f11b0862edb portage-mod_jabber-0.0.2.ebuild 689
-SHA256 41dba1424b44818cd1d66b2b44375cc28b69ece421ea021d08436e7d1c7c30b7 portage-mod_jabber-0.0.2.ebuild 689
 EBUILD portage-mod_jabber-0.0.3.ebuild 689 RMD160 d004d8364b2694c5d591243816f4893abccdbeaa SHA1 ddce40e24d5dc84ad92eefcfd5a8273a0ac34454 SHA256 328be05e15cdf080104aeaab2292f202c0690c60ef04f5bd3e2075bbba2dcb37
-MD5 e37108e8d2ce02427cbf4a98090bfe31 portage-mod_jabber-0.0.3.ebuild 689
-RMD160 d004d8364b2694c5d591243816f4893abccdbeaa portage-mod_jabber-0.0.3.ebuild 689
-SHA256 328be05e15cdf080104aeaab2292f202c0690c60ef04f5bd3e2075bbba2dcb37 portage-mod_jabber-0.0.3.ebuild 689
 MISC ChangeLog 546 RMD160 f9aee075e024eedf7b5168256377f571d62e9f0b SHA1 25f86eae1746c42f49c36d57ab1bda87f1f9cc48 SHA256 0a06d78c8875a8fb14ee274829651b86f10be480ed4a34de705b4b5344b0882b
-MD5 a3222d57c17e0d88d59cf79414641245 ChangeLog 546
-RMD160 f9aee075e024eedf7b5168256377f571d62e9f0b ChangeLog 546
-SHA256 0a06d78c8875a8fb14ee274829651b86f10be480ed4a34de705b4b5344b0882b ChangeLog 546
 MISC metadata.xml 217 RMD160 3b01d5dab901ee93217f72b711954d3cccbb1717 SHA1 e304788b60dd2cf214d360a21d267e8635474d98 SHA256 2f5dfc1eb79d2d9ee02663da6e1449f499c3a37b7f4cc2391e18d7789a314669
-MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
-RMD160 3b01d5dab901ee93217f72b711954d3cccbb1717 metadata.xml 217
-SHA256 2f5dfc1eb79d2d9ee02663da6e1449f499c3a37b7f4cc2391e18d7789a314669 metadata.xml 217
-MD5 66bec29bec19b3699b56cf1180887cf0 files/digest-portage-mod_jabber-0.0.2 271
-RMD160 b428bed8c310fe0247780350ec59ad069c7d4535 files/digest-portage-mod_jabber-0.0.2 271
-SHA256 d93d1b057e77ab74c4c08de9f31380a5f91967ef870438a580732f75de6c4e57 files/digest-portage-mod_jabber-0.0.2 271
-MD5 7ccfb08d53ab8d3a6daae0c311772d4c files/digest-portage-mod_jabber-0.0.3 271
-RMD160 d10faf7135730f4b5d2f9afddd873bdf70240553 files/digest-portage-mod_jabber-0.0.3 271
-SHA256 3a3a7f8e9c2abe33eae2013d67ef84d03636d9c017f2f64c2faf7d4898143a2b files/digest-portage-mod_jabber-0.0.3 271
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHm1aMr2QksT29OyARArcAAKCRm6/heOd91qTZBDy6UYf/Uv7H3gCgidNK
-ZTzwuZQ+zzr8CvtpXFGapCg=
-=9qJk
------END PGP SIGNATURE-----

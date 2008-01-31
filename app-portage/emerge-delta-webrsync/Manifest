@@ -1,60 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX 3.5.1-md5sum.patch 1191 RMD160 987459f6315c9bcab56893cc890293eec23fe871 SHA1 cbbdd6bf3816ec034b0dd827219fb9ebe45851cd SHA256 b7316dc972d890e396168844e372f97e05d6fb0e769d1b2c510d1a7d70c17d35
-MD5 c10ee300b24a82d13bb844e832d6b8ca files/3.5.1-md5sum.patch 1191
-RMD160 987459f6315c9bcab56893cc890293eec23fe871 files/3.5.1-md5sum.patch 1191
-SHA256 b7316dc972d890e396168844e372f97e05d6fb0e769d1b2c510d1a7d70c17d35 files/3.5.1-md5sum.patch 1191
 AUX 3.5.1-metadata.patch 1287 RMD160 649f7bf66b0ae5a5512f43a09d02cc707ce1a92f SHA1 e39480a88f0e865ffccfe31fea6715b459274ac9 SHA256 46b89bd6fa3aa53e1affb29061dc9bcdde3ba1f2987f206afd91a2e235b65ca6
-MD5 291863753983f98b357064b26aed5d1e files/3.5.1-metadata.patch 1287
-RMD160 649f7bf66b0ae5a5512f43a09d02cc707ce1a92f files/3.5.1-metadata.patch 1287
-SHA256 46b89bd6fa3aa53e1affb29061dc9bcdde3ba1f2987f206afd91a2e235b65ca6 files/3.5.1-metadata.patch 1287
 AUX 3.5.1-post_sync.patch 330 RMD160 44ca5416310253ffe6f7eb823f250025878efa75 SHA1 7ca8efb7813d4e796cdfd3441bd70f8d0568a20f SHA256 3908a6a8b885a830ab1c2bf69ecf7677cb493bb59873265af70758d4b1b8c71b
-MD5 2b63efe4e16d7181d51dd50a2d97e5ae files/3.5.1-post_sync.patch 330
-RMD160 44ca5416310253ffe6f7eb823f250025878efa75 files/3.5.1-post_sync.patch 330
-SHA256 3908a6a8b885a830ab1c2bf69ecf7677cb493bb59873265af70758d4b1b8c71b files/3.5.1-post_sync.patch 330
 DIST emerge-delta-webrsync-3.3 13030 RMD160 c8cc52bed02d101b4cc11199b9150297a2c6dbf1 SHA1 d59ff28e84c5186ed24b5d68bb5c6b46180d954f SHA256 dfc4e044103a24e3fb04f8b98b583ab12d5f98d4ee710fe4ad2d9fe0f4381888
 DIST emerge-delta-webrsync-3.5.1 13289 RMD160 02e7798183930fc8ef8d3b76f38c7393acf914b9 SHA1 b242519b6e585a3b39074e6dc62327786f56322e SHA256 663ce5e800dec988ba5e1bb283ca243205d1ebdc27e3d0c269e5c0bb198f7d4a
 EBUILD emerge-delta-webrsync-3.3.ebuild 1038 RMD160 b3590fb374507573bc11bfeb8690dae0c6a2aa7a SHA1 cbbe5f8b43cfb4a3ace05b43e2746c273ef911e7 SHA256 b526207d93b4f9544e8500fe1812ec965d8ef3f7ef7329ff46feb28f21e3a77d
-MD5 560a10513983b17f7535dd919ac1aafb emerge-delta-webrsync-3.3.ebuild 1038
-RMD160 b3590fb374507573bc11bfeb8690dae0c6a2aa7a emerge-delta-webrsync-3.3.ebuild 1038
-SHA256 b526207d93b4f9544e8500fe1812ec965d8ef3f7ef7329ff46feb28f21e3a77d emerge-delta-webrsync-3.3.ebuild 1038
 EBUILD emerge-delta-webrsync-3.5.1-r1.ebuild 1010 RMD160 be4be55d535553fe854d3de5cc4d1f3356d50f2e SHA1 034150e0dfef8466095f91893177b47f3b60f5d7 SHA256 7c74429d46d7db340cbc2c9c629c77eb3109710879c58a9e2291a40a81192297
-MD5 2ea2c4a4226dd00398fac2f1af58e5fe emerge-delta-webrsync-3.5.1-r1.ebuild 1010
-RMD160 be4be55d535553fe854d3de5cc4d1f3356d50f2e emerge-delta-webrsync-3.5.1-r1.ebuild 1010
-SHA256 7c74429d46d7db340cbc2c9c629c77eb3109710879c58a9e2291a40a81192297 emerge-delta-webrsync-3.5.1-r1.ebuild 1010
 EBUILD emerge-delta-webrsync-3.5.1-r2.ebuild 1053 RMD160 5fb732da70d69da8c1cbc0726090b2bd313d668e SHA1 97091738121d2cfcbc0d05ea1431cde5487900dc SHA256 7f350a971fcbcd05f8abf6033d60e87d0ac90c154d4d5a21810b8431d5389ed0
-MD5 66e3aead10d0ed85710c363e77575ac3 emerge-delta-webrsync-3.5.1-r2.ebuild 1053
-RMD160 5fb732da70d69da8c1cbc0726090b2bd313d668e emerge-delta-webrsync-3.5.1-r2.ebuild 1053
-SHA256 7f350a971fcbcd05f8abf6033d60e87d0ac90c154d4d5a21810b8431d5389ed0 emerge-delta-webrsync-3.5.1-r2.ebuild 1053
 EBUILD emerge-delta-webrsync-3.5.1.ebuild 947 RMD160 5f3c3dcbd1133c787b873666bfcfe3e3d09722a3 SHA1 4f6f555c75f68bcd103ab8a3fa11aff641a02d45 SHA256 a3cf55384f0b51d157b03e3c602f02c0c04f8fd0863cec6e4301ec47d10f95f6
-MD5 4b2e2084bbb7f791d91318e37587a85d emerge-delta-webrsync-3.5.1.ebuild 947
-RMD160 5f3c3dcbd1133c787b873666bfcfe3e3d09722a3 emerge-delta-webrsync-3.5.1.ebuild 947
-SHA256 a3cf55384f0b51d157b03e3c602f02c0c04f8fd0863cec6e4301ec47d10f95f6 emerge-delta-webrsync-3.5.1.ebuild 947
 MISC ChangeLog 5048 RMD160 aa95665f5f70c8e0dca37230dd10ce88c5b03aa2 SHA1 a73f241a816138069685fc7fd2f38366b595707a SHA256 8820c8a58c4c48b28cf135707f859b93e31c7880484b44b1b7c8ca984d7ee454
-MD5 0725f40e7bb9e2cd3693ae4237abd54a ChangeLog 5048
-RMD160 aa95665f5f70c8e0dca37230dd10ce88c5b03aa2 ChangeLog 5048
-SHA256 8820c8a58c4c48b28cf135707f859b93e31c7880484b44b1b7c8ca984d7ee454 ChangeLog 5048
 MISC metadata.xml 219 RMD160 613195ece366b33606e71ff1753be048f2507841 SHA1 d162fb909241ef50b95a3539bdfcde95429bdf81 SHA256 cbd3a20e5c89a48a842f7132fe705bf39959f02c1025052efce8aad8a8baa8dc
-MD5 74421bbd5bae342d72a7a30b98a69662 metadata.xml 219
-RMD160 613195ece366b33606e71ff1753be048f2507841 metadata.xml 219
-SHA256 cbd3a20e5c89a48a842f7132fe705bf39959f02c1025052efce8aad8a8baa8dc metadata.xml 219
-MD5 0c45d5346c9e3c41774e20fea02c278d files/digest-emerge-delta-webrsync-3.3 253
-RMD160 3fe8629d288f06c75c415c1c20ed2196b317a815 files/digest-emerge-delta-webrsync-3.3 253
-SHA256 0d135b0bd1b9402fd2c888920b946d3493ced261b63b13d34f0e2a338ceb8f72 files/digest-emerge-delta-webrsync-3.3 253
-MD5 1168d40dd5c23b92ac44543a6ffd2f20 files/digest-emerge-delta-webrsync-3.5.1 259
-RMD160 5f98c1fd78f3536b3035ae567903d7386dc147a2 files/digest-emerge-delta-webrsync-3.5.1 259
-SHA256 7f447c7de1602b55e56f33776b0874fc149ddf4e5ec6f2ca3fa022bfe7701bf8 files/digest-emerge-delta-webrsync-3.5.1 259
-MD5 1168d40dd5c23b92ac44543a6ffd2f20 files/digest-emerge-delta-webrsync-3.5.1-r1 259
-RMD160 5f98c1fd78f3536b3035ae567903d7386dc147a2 files/digest-emerge-delta-webrsync-3.5.1-r1 259
-SHA256 7f447c7de1602b55e56f33776b0874fc149ddf4e5ec6f2ca3fa022bfe7701bf8 files/digest-emerge-delta-webrsync-3.5.1-r1 259
-MD5 1168d40dd5c23b92ac44543a6ffd2f20 files/digest-emerge-delta-webrsync-3.5.1-r2 259
-RMD160 5f98c1fd78f3536b3035ae567903d7386dc147a2 files/digest-emerge-delta-webrsync-3.5.1-r2 259
-SHA256 7f447c7de1602b55e56f33776b0874fc149ddf4e5ec6f2ca3fa022bfe7701bf8 files/digest-emerge-delta-webrsync-3.5.1-r2 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.2 (GNU/Linux)
-
-iD8DBQFF8sYL8bi6rjpTunYRAqzMAJ9UiSUVd8zcIsY4LgQR6+OttdHV+gCfWvCN
-7ogokc20X/GKRUh3Tw6JhLo=
-=FB/x
------END PGP SIGNATURE-----
