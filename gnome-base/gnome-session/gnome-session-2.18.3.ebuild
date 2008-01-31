@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.18.3.ebuild,v 1.9 2007/09/23 05:31:51 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.18.3.ebuild,v 1.10 2008/01/31 23:53:00 leio Exp $
 
 inherit eutils gnome2
 
@@ -46,10 +46,10 @@ src_unpack() {
 	gnome2_src_unpack
 
 	# Patch for Gentoo Branding (bug #42687)
-	use branding && epatch ${FILESDIR}/${PN}-2.17.90.1-gentoo-branding.patch
+	use branding && epatch "${FILESDIR}/${PN}-2.17.90.1-gentoo-branding.patch"
 
 	# Get rid of random asserts in tons of programs due to development versions
-	epatch ${FILESDIR}/${PN}-2.17.90-no-asserts.patch
+	epatch "${FILESDIR}/${PN}-2.17.90-no-asserts.patch"
 }
 
 src_install() {
@@ -57,7 +57,7 @@ src_install() {
 
 	dodir /etc/X11/Sessions
 	exeinto /etc/X11/Sessions
-	doexe ${FILESDIR}/Gnome
+	doexe "${FILESDIR}/Gnome"
 
 	# Our own splash for world domination
 	if use branding ; then
