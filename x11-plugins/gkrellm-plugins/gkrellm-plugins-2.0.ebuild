@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-2.0.ebuild,v 1.4 2007/10/15 14:11:08 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-2.0.ebuild,v 1.5 2008/01/31 16:33:12 lack Exp $
 
 DESCRIPTION="emerge this package to install all of the gkrellm plugins"
 HOMEPAGE="http://www.gkrellm.net/"
@@ -11,7 +11,6 @@ KEYWORDS="~ppc sparc ~x86"
 IUSE="audacious wifi"
 
 RDEPEND="!<app-admin/gkrellm-2
-		>=x11-plugins/gkrellm-bfm-0.6.4
 		>=x11-plugins/gkrellaclock-0.3.2
 		x11-plugins/gkrellflynn
 		>=x11-plugins/gkrellkam-2.0.0
