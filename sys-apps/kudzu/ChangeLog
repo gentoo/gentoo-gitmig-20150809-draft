@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kudzu
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.26 2007/06/20 06:19:16 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.27 2008/01/31 06:29:25 dberkholz Exp $
+
+  31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/1.2.52-remove-pci-fill-class.patch,
+  -files/1.2.52-remove-sata-ata-storage-classes.patch, -kudzu-1.2.52.ebuild:
+  Clean up.
 
 *kudzu-1.2.71 (20 Jun 2007)
 
