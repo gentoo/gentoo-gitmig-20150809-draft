@@ -1,30 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX gtk-engines-qtpixmap-0.28-gtk_switches.patch 3612 RMD160 3ed554fe563033a490902b651a3a0a8fa96e09d2 SHA1 d645d9972f3055ec6b23404a49f61a24c91c2a51 SHA256 45e917ab0579264c4bd5b160877df3b9d28a3f8a397d2d25d85a44720359bd8d
-MD5 321ec9a96a2261d0c4243871045afa21 files/gtk-engines-qtpixmap-0.28-gtk_switches.patch 3612
-RMD160 3ed554fe563033a490902b651a3a0a8fa96e09d2 files/gtk-engines-qtpixmap-0.28-gtk_switches.patch 3612
-SHA256 45e917ab0579264c4bd5b160877df3b9d28a3f8a397d2d25d85a44720359bd8d files/gtk-engines-qtpixmap-0.28-gtk_switches.patch 3612
 DIST QtPixmap-0.28.tar.gz 429698 RMD160 e6f0c9e3de544a9765d57d235834adcf889a61a5 SHA1 fdbf2cc20c72e4280c1edda6efbd79d398fb44ca SHA256 514090d808db0c9ff04792663e24ac5ab663ae5b15ea4914cae8b76f4663a407
 EBUILD gtk-engines-qtpixmap-0.28-r2.ebuild 1148 RMD160 09e68cea7c1fafcf3f63132b59a485413f695d29 SHA1 891a5234c9af6749ee9ea4d70f0f8f42bc8323c5 SHA256 194219bfb1fb5cdd4478c584beb0b4e2148a26cbbab1c62b0bb048321313825e
-MD5 4b1e315f7732e148dde9579a9e65f9f8 gtk-engines-qtpixmap-0.28-r2.ebuild 1148
-RMD160 09e68cea7c1fafcf3f63132b59a485413f695d29 gtk-engines-qtpixmap-0.28-r2.ebuild 1148
-SHA256 194219bfb1fb5cdd4478c584beb0b4e2148a26cbbab1c62b0bb048321313825e gtk-engines-qtpixmap-0.28-r2.ebuild 1148
 MISC ChangeLog 3321 RMD160 c60cdcfccab3546b912cb1e727f5cb87c20f3ce6 SHA1 3c52ca6688aa069f8843c50df383de43ad6848c4 SHA256 cb0857e7ea85a32c434b5455910ec7509cc61cf2928e2bbde58fd4bda1efebef
-MD5 05c6862e3ac685b8db64a9ed863b3b07 ChangeLog 3321
-RMD160 c60cdcfccab3546b912cb1e727f5cb87c20f3ce6 ChangeLog 3321
-SHA256 cb0857e7ea85a32c434b5455910ec7509cc61cf2928e2bbde58fd4bda1efebef ChangeLog 3321
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 cd6d255e94bf86df02673a650c9f7574 files/digest-gtk-engines-qtpixmap-0.28-r2 241
-RMD160 ba15c46892ffc83df8097cb75eb13617933959cd files/digest-gtk-engines-qtpixmap-0.28-r2 241
-SHA256 5c8e1b939eb6f1f1b62115ec48f22013f07adf273a83d909782aefff34c50c7d files/digest-gtk-engines-qtpixmap-0.28-r2 241
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.5 (GNU/Linux)
-
-iD8DBQFGlEZckeYb6olFHJcRAvhMAJ9oxxGNC7YMVEVD5aTGdFtGDs1qLwCgklii
-kZltNtNEw6CUu/hFhospOVE=
-=e84Z
------END PGP SIGNATURE-----

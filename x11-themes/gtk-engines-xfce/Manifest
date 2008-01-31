@@ -1,24 +1,6 @@
 DIST gtk-xfce-engine-2.4.1.tar.bz2 271644 RMD160 0ccb8e72ed372007fcf1f63bd3bcac0ee87d3d2b SHA1 a28a59c704ba66aa30be2c8ed03ba1bf0eaf1ad9 SHA256 82993f1b011c355ae837e87b84a8314b28af61d325dacb59c0651fc8f67a03ef
 DIST gtk-xfce-engine-2.4.2.tar.bz2 264252 RMD160 a8801ac518665f0d9d832732a97b52a6726a96e0 SHA1 67fb4959ec0be46ec0ac472ab1af74361b7d9be5 SHA256 6fecdb590fa024db698de9027314c1be044f28feab9850f592aa60c3a79ede78
 EBUILD gtk-engines-xfce-2.4.1-r1.ebuild 725 RMD160 d3964a54993038aa800524a825e3a2ec67cdefd8 SHA1 82342df77a0276ff8e971e34921d426ed9131fdf SHA256 1f5a44fe37777c80bbf79a20ee10c7d4dc31dbcb1cc0932da845d4d4f0b37a12
-MD5 8dcbb57dce4dde74fb95f194d604fefd gtk-engines-xfce-2.4.1-r1.ebuild 725
-RMD160 d3964a54993038aa800524a825e3a2ec67cdefd8 gtk-engines-xfce-2.4.1-r1.ebuild 725
-SHA256 1f5a44fe37777c80bbf79a20ee10c7d4dc31dbcb1cc0932da845d4d4f0b37a12 gtk-engines-xfce-2.4.1-r1.ebuild 725
 EBUILD gtk-engines-xfce-2.4.2.ebuild 721 RMD160 432632c9c07f747e6e428a2471bc9ed0b7efdd2d SHA1 3d71f2ed4b2825aaa9bae0a0951aa0cdb57526ce SHA256 64a28ee148c1be6d653f188e86fc984539c045f11fb7b0f6664b1f8c0efe358b
-MD5 5f9f2f5b9d8fbe67870aee9a65b8a4ce gtk-engines-xfce-2.4.2.ebuild 721
-RMD160 432632c9c07f747e6e428a2471bc9ed0b7efdd2d gtk-engines-xfce-2.4.2.ebuild 721
-SHA256 64a28ee148c1be6d653f188e86fc984539c045f11fb7b0f6664b1f8c0efe358b gtk-engines-xfce-2.4.2.ebuild 721
 MISC ChangeLog 11601 RMD160 3dd317d64eb4c7ee6559fa3f24448d85f3acdceb SHA1 6ba10f7d9c3cb9ac60cc28443a4b4eb68e061578 SHA256 d582b3f6e40ec32007446c7531b6f9ac6fbbb0b071588d085f112a7ac0d97a90
-MD5 e3cfa884bce5904f2f0a59a6cc36685e ChangeLog 11601
-RMD160 3dd317d64eb4c7ee6559fa3f24448d85f3acdceb ChangeLog 11601
-SHA256 d582b3f6e40ec32007446c7531b6f9ac6fbbb0b071588d085f112a7ac0d97a90 ChangeLog 11601
 MISC metadata.xml 176 RMD160 2b998851ab257a5a873aad39832b746d9bf370f4 SHA1 3b080b4e166cc5c8ec3f4cd9f7a44145e1911a65 SHA256 f6dd1795e73603898daafc0183f4bcba1eb702db34b9cee2cc547e0c508f0afc
-MD5 1a485fd099494a423e0f4287746045f0 metadata.xml 176
-RMD160 2b998851ab257a5a873aad39832b746d9bf370f4 metadata.xml 176
-SHA256 f6dd1795e73603898daafc0183f4bcba1eb702db34b9cee2cc547e0c508f0afc metadata.xml 176
-MD5 e7a6d83a1515abd4931f9c84b42fea2a files/digest-gtk-engines-xfce-2.4.1-r1 268
-RMD160 896d80f92dd71195c7ce8fc30f2df7a325817fe8 files/digest-gtk-engines-xfce-2.4.1-r1 268
-SHA256 67248f60b228bff8bd0c701d68467871db442538558dce31a9a5f2a6498973e6 files/digest-gtk-engines-xfce-2.4.1-r1 268
-MD5 3c29062bac48d005ffb55b2fb5b1d2ca files/digest-gtk-engines-xfce-2.4.2 268
-RMD160 e6f4ce7f8ce004a52499bff3c968e5c1ee4dcb14 files/digest-gtk-engines-xfce-2.4.2 268
-SHA256 dac8c99d25b818c5a370b86be11bd15bb862de4f2d87c8d588e79e4552244e8a files/digest-gtk-engines-xfce-2.4.2 268
