@@ -1,53 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 EBUILD postgresql-libs-7.3.ebuild 499 RMD160 5561ee8ee2ddf802673db86100b33b0baad2a18f SHA1 d206b2a42495c379500707b40b389ff44cdf7f21 SHA256 dd383c764333edd0dc2bde053ccf9fdd2a29fe2b5074c99e3753e24d7633f4f1
-MD5 69c0cd3965894495118a50d8a3cd0ee6 postgresql-libs-7.3.ebuild 499
-RMD160 5561ee8ee2ddf802673db86100b33b0baad2a18f postgresql-libs-7.3.ebuild 499
-SHA256 dd383c764333edd0dc2bde053ccf9fdd2a29fe2b5074c99e3753e24d7633f4f1 postgresql-libs-7.3.ebuild 499
 EBUILD postgresql-libs-7.4.ebuild 499 RMD160 45833ab9bc19f9f1109debf34ffaee4832ba3476 SHA1 35af8a5d294238bc823fb16bdc5973d15d592489 SHA256 ff260dd63a350ccd751fd51ab133e16468844e912a26d342e62c3e65c3e675c7
-MD5 ed12e04b3319c428debb98375fb6e28b postgresql-libs-7.4.ebuild 499
-RMD160 45833ab9bc19f9f1109debf34ffaee4832ba3476 postgresql-libs-7.4.ebuild 499
-SHA256 ff260dd63a350ccd751fd51ab133e16468844e912a26d342e62c3e65c3e675c7 postgresql-libs-7.4.ebuild 499
 EBUILD postgresql-libs-8.0.ebuild 499 RMD160 860ff274299b86bb1f5c552265eb496a48aa4b5f SHA1 7ea977c593d382a1bd4a4f620527b7318c585d85 SHA256 d8563a034ee37310980b702d989dcbf2816c109f488d250c3d413f7f59f9e05e
-MD5 12221b30401e0365fcf045755b4a7f5c postgresql-libs-8.0.ebuild 499
-RMD160 860ff274299b86bb1f5c552265eb496a48aa4b5f postgresql-libs-8.0.ebuild 499
-SHA256 d8563a034ee37310980b702d989dcbf2816c109f488d250c3d413f7f59f9e05e postgresql-libs-8.0.ebuild 499
 EBUILD postgresql-libs-8.1.ebuild 499 RMD160 e6fc529a3c51a4adc4d58698c299926985b49526 SHA1 399412aa227d4f813d677685d02470469b4a61d2 SHA256 8cb217101c4f6331eae53674256d01f017b09dfba9b3f5ef4fd9439368c085be
-MD5 2721c54cf2998888cc8b43c042af7f0e postgresql-libs-8.1.ebuild 499
-RMD160 e6fc529a3c51a4adc4d58698c299926985b49526 postgresql-libs-8.1.ebuild 499
-SHA256 8cb217101c4f6331eae53674256d01f017b09dfba9b3f5ef4fd9439368c085be postgresql-libs-8.1.ebuild 499
 EBUILD postgresql-libs-8.2.ebuild 499 RMD160 f6f91c7fc92cacc6434d801788573b18aee36f3a SHA1 881a67efb6df87108ab2a14e6322a358cd14722e SHA256 83abceed3de679a763e578130ab28c4d100ab6ed54ff61a02eecd75a0ac11f3b
-MD5 e5bbc8129c5f9b4efed1be9f44e089c2 postgresql-libs-8.2.ebuild 499
-RMD160 f6f91c7fc92cacc6434d801788573b18aee36f3a postgresql-libs-8.2.ebuild 499
-SHA256 83abceed3de679a763e578130ab28c4d100ab6ed54ff61a02eecd75a0ac11f3b postgresql-libs-8.2.ebuild 499
 MISC ChangeLog 672 RMD160 a7e0b70caa784abd191b35080a9abe602dc0d52b SHA1 87e12e51486f1ebfefba530dd144daaa645ebef6 SHA256 40179fedf656b39f0420f99ded3aeb2ac2f56fcd9f86c043837bd1e818331e06
-MD5 a252df3f753e27afde8f970680584970 ChangeLog 672
-RMD160 a7e0b70caa784abd191b35080a9abe602dc0d52b ChangeLog 672
-SHA256 40179fedf656b39f0420f99ded3aeb2ac2f56fcd9f86c043837bd1e818331e06 ChangeLog 672
 MISC metadata.xml 164 RMD160 becfe652663bd65719dd11fa6ffb588b3d5b4ecc SHA1 f67b7ac1c5e6e65ef5a19a589d4759c84918f86c SHA256 7e8e8126bc8701c4a42c7dfed8bb755ac6040fe3d0e3f994d888f8b2b4fa7d8b
-MD5 6fe52df942ef15801d56449cd8299604 metadata.xml 164
-RMD160 becfe652663bd65719dd11fa6ffb588b3d5b4ecc metadata.xml 164
-SHA256 7e8e8126bc8701c4a42c7dfed8bb755ac6040fe3d0e3f994d888f8b2b4fa7d8b metadata.xml 164
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-postgresql-libs-7.3 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-postgresql-libs-7.3 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-postgresql-libs-7.3 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-postgresql-libs-7.4 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-postgresql-libs-7.4 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-postgresql-libs-7.4 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-postgresql-libs-8.0 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-postgresql-libs-8.0 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-postgresql-libs-8.0 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-postgresql-libs-8.1 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-postgresql-libs-8.1 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-postgresql-libs-8.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-postgresql-libs-8.2 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-postgresql-libs-8.2 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-postgresql-libs-8.2 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHA/YLI1lqEGTUzyQRArfQAJ41MaohkIf1C6cCWD1T8mmKShirQQCfSJ0F
-0+pwJg26y+6UBf6LkXO3vsE=
-=aF9c
------END PGP SIGNATURE-----
