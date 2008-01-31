@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alock
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/ChangeLog,v 1.10 2008/01/31 21:11:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/ChangeLog,v 1.11 2008/01/31 23:23:39 killerfox Exp $
+
+  31 Jan 2008; René Nussbaumer <killerfox@gentoo.org> metadata.xml:
+  Taking over maintainership
 
   31 Jan 2008; Michael Hanselmann <hansmi@gentoo.org> metadata.xml:
   Remove myself as maintainer.
