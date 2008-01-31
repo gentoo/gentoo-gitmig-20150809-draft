@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_depends/mod_depends-0.7.0_p200702041.ebuild,v 1.2 2007/09/23 16:00:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_depends/mod_depends-0.7.0_p200702041.ebuild,v 1.3 2008/01/31 17:28:02 hollow Exp $
 
 inherit eutils apache-module
 
@@ -19,12 +19,12 @@ APACHE2_MOD_DEFINE="DEPENDS"
 need_apache2
 
 src_compile() {
-	econf --with-apxs="${APXS2}" || die "configure failed"
+	econf --with-apxs="${APXS}" || die "configure failed"
 	emake || die "make failed"
 }
 
 src_install() {
-	AP_INCLUDEDIR=$(${APXS2} -q INCLUDEDIR)
+	AP_INCLUDEDIR=$(${APXS} -q INCLUDEDIR)
 
 	insinto ${AP_INCLUDEDIR}
 	doins include/mod_depends.h || die
