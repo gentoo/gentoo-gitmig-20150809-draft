@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/abinit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/ChangeLog,v 1.7 2007/05/09 06:47:17 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/ChangeLog,v 1.8 2008/01/31 06:27:36 dberkholz Exp $
+
+  31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/5.2.3-change-default-directories.patch, -abinit-5.2.3.ebuild:
+  Clean up.
 
 *abinit-5.3.4 (09 May 2007)
 
