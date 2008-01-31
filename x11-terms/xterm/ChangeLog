@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.224 2008/01/31 03:21:28 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.225 2008/01/31 03:23:38 dberkholz Exp $
+
+  31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/xterm-app-defaults-ref.patch, -xterm-225.ebuild, -xterm-228.ebuild,
+  -xterm-231.ebuild:
+  Clean up.
 
 *xterm-232 (31 Jan 2008)
 
