@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.57 2008/01/02 16:07:25 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.58 2008/01/31 06:49:32 dberkholz Exp $
+
+  31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>; -torque-2.2.1.ebuild,
+  -torque-2.2.1-r1.ebuild:
+  Clean up.
 
   02 Jan 2008; Justin Bronder <jsbronder@gentoo.org> torque-2.1.6.ebuild,
   torque-2.2.1.ebuild, torque-2.2.1-r1.ebuild, torque-2.2.1-r2.ebuild:

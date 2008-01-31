@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/mpich2
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.24 2007/12/24 17:32:54 nerdboy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.25 2008/01/31 06:55:35 dberkholz Exp $
+
+  31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/mpich2-1.0.5_p4-make.patch, -files/mpich2-1.0.5_p4-soname.patch,
+  -mpich2-1.0.5_p4.ebuild:
+  Clean up.
 
   24 Dec 2007; Steve Arnold <nerdboy@gentoo.org>
   +files/mpich2-1.0.6-no-pvfs2.patch, mpich2-1.0.6.ebuild:
