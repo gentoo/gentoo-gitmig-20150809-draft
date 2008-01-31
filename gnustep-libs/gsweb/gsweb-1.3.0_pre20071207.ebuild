@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/gsweb-1.3.0_pre20071207.ebuild,v 1.1 2007/12/08 19:51:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/gsweb-1.3.0_pre20071207.ebuild,v 1.2 2008/01/31 19:57:27 hollow Exp $
 
 inherit gnustep-2 apache-module
 
@@ -44,5 +44,5 @@ pkg_postinst() {
 	elog "To enable ${PN}, you need to edit your /etc/conf.d/apache2 file and"
 	elog "add \"-D GSWeb\" to APACHE2_OPTS"
 	elog "Configuration file was installed as"
-	elog "    ${APACHE2_MODULES_CONFDIR}/${APACHE2_MOD_CONF}"
+	elog "    ${APACHE_MODULES_CONFDIR}/${APACHE2_MOD_CONF}"
 }

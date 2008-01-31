@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/gsweb
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/ChangeLog,v 1.10 2007/12/08 19:51:56 voyageur Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/ChangeLog,v 1.11 2008/01/31 19:57:27 hollow Exp $
+
+  31 Jan 2008; Benedikt Böhm <hollow@gentoo.org>
+  gsweb-1.3.0_pre20071207.ebuild:
+  fix depend.apache usage wrt #208033
 
 *gsweb-1.3.0_pre20071207 (08 Dec 2007)
 
