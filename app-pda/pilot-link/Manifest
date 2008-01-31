@@ -1,115 +1,28 @@
 AUX pilot-link-0.11.8-java_compile_amd64.patch 579 RMD160 7dba17a59a303154acbd640e78f9028b54de0507 SHA1 6903a1624d566733c7336735b3ddbc92c8610e6f SHA256 e2e6ce08665b39c4f945eae58c2554ad9f2bdbf13c8f19cc3cbf01f8f319bf07
-MD5 bf74434daf1ebd09156aad1d90c93675 files/pilot-link-0.11.8-java_compile_amd64.patch 579
-RMD160 7dba17a59a303154acbd640e78f9028b54de0507 files/pilot-link-0.11.8-java_compile_amd64.patch 579
-SHA256 e2e6ce08665b39c4f945eae58c2554ad9f2bdbf13c8f19cc3cbf01f8f319bf07 files/pilot-link-0.11.8-java_compile_amd64.patch 579
 AUX pilot-link-0.11.8-java_fPIC_fix.patch 580 RMD160 e6baf868f3474ee35f9de7f655c337d881e025e5 SHA1 85884951133dc58baccb3a9c0bb3e33f12b5ea73 SHA256 b6ebf250b977fa0dc33ed7c72bf9f0624a36b388cd0078159ff6c88f62c7df45
-MD5 a90104dea453f1eed8b69ed821118caa files/pilot-link-0.11.8-java_fPIC_fix.patch 580
-RMD160 e6baf868f3474ee35f9de7f655c337d881e025e5 files/pilot-link-0.11.8-java_fPIC_fix.patch 580
-SHA256 b6ebf250b977fa0dc33ed7c72bf9f0624a36b388cd0078159ff6c88f62c7df45 files/pilot-link-0.11.8-java_fPIC_fix.patch 580
 AUX pilot-link-0.11.8-java_install_all.patch 562 RMD160 e9d7db2998f14a02ba95df1807ca43a25561492b SHA1 402be9f0e0956e6e51f42d1306bdde51e5084cb5 SHA256 c2b8dd22d337ce0411103101deccabd1d4421ae239234bd8aa410a97cf6d5a1a
-MD5 90560348093b5a7b47849896f35b4d54 files/pilot-link-0.11.8-java_install_all.patch 562
-RMD160 e9d7db2998f14a02ba95df1807ca43a25561492b files/pilot-link-0.11.8-java_install_all.patch 562
-SHA256 c2b8dd22d337ce0411103101deccabd1d4421ae239234bd8aa410a97cf6d5a1a files/pilot-link-0.11.8-java_install_all.patch 562
 AUX pilot-link-0.11.8-java_install_amd64.patch 390 RMD160 81ce9ff10740eeb3805ae0c6ef2f6d0d36c5cd9e SHA1 ff023b2cdd0eec19e0167486d1abd28b9679d572 SHA256 674165c22743a66378d75b6aedff427851259578ade68aa52ddc9e834cb8b840
-MD5 a664432d4308170abcc8201e3a1500bf files/pilot-link-0.11.8-java_install_amd64.patch 390
-RMD160 81ce9ff10740eeb3805ae0c6ef2f6d0d36c5cd9e files/pilot-link-0.11.8-java_install_amd64.patch 390
-SHA256 674165c22743a66378d75b6aedff427851259578ade68aa52ddc9e834cb8b840 files/pilot-link-0.11.8-java_install_amd64.patch 390
 AUX pilot-link-0.11.8-java_install_ppc.patch 560 RMD160 4861489cc16ccaa87fed571d89c1cf83b45b93c8 SHA1 e9f5a0391b7e0754f99318ecfd1c1477eb030264 SHA256 dd0f40f0e13cf86290e44d8891103d2d55eef04f3eeb9ac0edbd5ad9afeb76da
-MD5 73901859bb01a4c7aa0dbddf1d6e898a files/pilot-link-0.11.8-java_install_ppc.patch 560
-RMD160 4861489cc16ccaa87fed571d89c1cf83b45b93c8 files/pilot-link-0.11.8-java_install_ppc.patch 560
-SHA256 dd0f40f0e13cf86290e44d8891103d2d55eef04f3eeb9ac0edbd5ad9afeb76da files/pilot-link-0.11.8-java_install_ppc.patch 560
 AUX pilot-link-0.11.8-m4.patch 123 RMD160 7f7eead683cc8366139fedab512511b29c3a156a SHA1 5f1b708d9171ff3b4bcf35142a5b7dc9ac9f685c SHA256 cb23fecc34774bf84859658e93e248e15737783963c9f10f1b2a155b6079876f
-MD5 93ddce2c38bb25e99877e9f08414d740 files/pilot-link-0.11.8-m4.patch 123
-RMD160 7f7eead683cc8366139fedab512511b29c3a156a files/pilot-link-0.11.8-m4.patch 123
-SHA256 cb23fecc34774bf84859658e93e248e15737783963c9f10f1b2a155b6079876f files/pilot-link-0.11.8-m4.patch 123
 AUX pilot-link-0.11.8-missing-include.patch 271 RMD160 9c133a5cbd621e6bb864087a42e8150b19a2822f SHA1 bd42398a226cdfcbafc25918c3cbc18e95b281df SHA256 09675b56ac4482febdf35a15cd1303918c652a5b526a820851f1eaad2a1e25d8
-MD5 5c58daa68dadd432d892d8ec168bd4fd files/pilot-link-0.11.8-missing-include.patch 271
-RMD160 9c133a5cbd621e6bb864087a42e8150b19a2822f files/pilot-link-0.11.8-missing-include.patch 271
-SHA256 09675b56ac4482febdf35a15cd1303918c652a5b526a820851f1eaad2a1e25d8 files/pilot-link-0.11.8-missing-include.patch 271
 AUX pilot-link-0.11.8-netsync.patch 4371 RMD160 b5dc7a9fbce293551d0dd264b80ff98bade3dc5f SHA1 644a82de9a7bf899b7a46cc361de11b7c429c122 SHA256 5d64928b175e73c964b142c7a574d0e173633bb785f85b1468a83bf35d83ff5e
-MD5 cc5d291e67e5ebc1caa5cc3c401f3ced files/pilot-link-0.11.8-netsync.patch 4371
-RMD160 b5dc7a9fbce293551d0dd264b80ff98bade3dc5f files/pilot-link-0.11.8-netsync.patch 4371
-SHA256 5d64928b175e73c964b142c7a574d0e173633bb785f85b1468a83bf35d83ff5e files/pilot-link-0.11.8-netsync.patch 4371
 AUX pilot-link-0.12.2-bluez.patch 2081 RMD160 a1f04c12769099bc4c3a4523a01dd5b492e0f21e SHA1 a02d1fba5ce8da36f0770429ddfe716311589850 SHA256 78a06fe2dbac5b81bcb60e6d3145accde269513011a94c7568293b415fd0df2c
-MD5 0f75f042b017c77d03bae4ac2e3be0ac files/pilot-link-0.12.2-bluez.patch 2081
-RMD160 a1f04c12769099bc4c3a4523a01dd5b492e0f21e files/pilot-link-0.12.2-bluez.patch 2081
-SHA256 78a06fe2dbac5b81bcb60e6d3145accde269513011a94c7568293b415fd0df2c files/pilot-link-0.12.2-bluez.patch 2081
 AUX pilot-link-0.12.2-java-compile.patch 1040 RMD160 4a3139dfeb622dfc03c726506e7adc1c6db08da0 SHA1 d197569f3732e07ab42e7c7b5d43591ea7bd0630 SHA256 172f85b81309c752c08e4c61977a65720d63b71bff9c4b10a2f44f608e71c7dc
-MD5 7dd778f6a1c7540c0d895fcab5b30932 files/pilot-link-0.12.2-java-compile.patch 1040
-RMD160 4a3139dfeb622dfc03c726506e7adc1c6db08da0 files/pilot-link-0.12.2-java-compile.patch 1040
-SHA256 172f85b81309c752c08e4c61977a65720d63b71bff9c4b10a2f44f608e71c7dc files/pilot-link-0.12.2-java-compile.patch 1040
 AUX pilot-link-0.12.2-java-install.patch 829 RMD160 e79900b530838674679304d124417c906170e0ba SHA1 2bb68afa4c4cbdd9d810367fe2e6bba3a361bdc9 SHA256 4f8300bb195fed5b9ec7f567050ab6f2808bdfdd5898349e4bb494440dad3470
-MD5 62ef135fa2798b87870a98e735b05412 files/pilot-link-0.12.2-java-install.patch 829
-RMD160 e79900b530838674679304d124417c906170e0ba files/pilot-link-0.12.2-java-install.patch 829
-SHA256 4f8300bb195fed5b9ec7f567050ab6f2808bdfdd5898349e4bb494440dad3470 files/pilot-link-0.12.2-java-install.patch 829
 AUX pilot-link-0.12.2-m4.patch 249 RMD160 4ccd77fc9ab445e459a45bc542f9b06a88e4ae3a SHA1 48cf3e0e47a1680fc0593126c55f47b7840975b3 SHA256 34d9ce38e4bb9eaa748ecd24b34f58bafa1cb4c5f4f2603b350b25545e2f0f75
-MD5 96754dbac2a51e5c8a6273c6b565935b files/pilot-link-0.12.2-m4.patch 249
-RMD160 4ccd77fc9ab445e459a45bc542f9b06a88e4ae3a files/pilot-link-0.12.2-m4.patch 249
-SHA256 34d9ce38e4bb9eaa748ecd24b34f58bafa1cb4c5f4f2603b350b25545e2f0f75 files/pilot-link-0.12.2-m4.patch 249
 AUX pilot-link-0.12.2-png.patch 2315 RMD160 4b8eccad718d85941b0ec85cac52f8fca70d351b SHA1 6fe7a4b498b7dcdd24e2f0e87e9f0febf24d098c SHA256 603170b9c4fee59bc380c8ea5923bae3621562976ce74345b1eb80ec7d7aeea7
-MD5 514221a746e1e42e0c8dcfece1afaeb9 files/pilot-link-0.12.2-png.patch 2315
-RMD160 4b8eccad718d85941b0ec85cac52f8fca70d351b files/pilot-link-0.12.2-png.patch 2315
-SHA256 603170b9c4fee59bc380c8ea5923bae3621562976ce74345b1eb80ec7d7aeea7 files/pilot-link-0.12.2-png.patch 2315
 AUX pilot-link-0.12.2-readline.patch 1833 RMD160 f611873187e425064e1a26ce213e53a4ee194e5b SHA1 cf4094d418d3e4114156b0b73d13fafc56c2d551 SHA256 54e01146ed97e5c020454fae5bb8284f3127eaf10d7deb79b638880fddf28478
-MD5 10f765aefb688c80144b501578380e01 files/pilot-link-0.12.2-readline.patch 1833
-RMD160 f611873187e425064e1a26ce213e53a4ee194e5b files/pilot-link-0.12.2-readline.patch 1833
-SHA256 54e01146ed97e5c020454fae5bb8284f3127eaf10d7deb79b638880fddf28478 files/pilot-link-0.12.2-readline.patch 1833
 AUX pilot-link-0.12.2-threads.patch 711 RMD160 ec02e4300777b100ab51af6605028dee4b709db7 SHA1 3649f4955f18b2cf7e29651e3cb9140048601794 SHA256 985b15bdd25ee3a167048be62ddd43fe1d74482d6cb7802ffe04454d967ae293
-MD5 8c2f9288c633cfdda4820d7ccec428c4 files/pilot-link-0.12.2-threads.patch 711
-RMD160 ec02e4300777b100ab51af6605028dee4b709db7 files/pilot-link-0.12.2-threads.patch 711
-SHA256 985b15bdd25ee3a167048be62ddd43fe1d74482d6cb7802ffe04454d967ae293 files/pilot-link-0.12.2-threads.patch 711
 AUX pilot-link-0.12.2-werror_194921.patch 810 RMD160 4268bebfc8a40c45ed70d571cbfb220abbb8bc9b SHA1 e0a8dfe2abbd6749e6774dff246ea2a8011aff89 SHA256 7e5e472e0c62fcaf5fe883928bd83402c848ac81ac50e61a571e6f64e7f21503
-MD5 1885158df81fd520592e8d05d1e63e62 files/pilot-link-0.12.2-werror_194921.patch 810
-RMD160 4268bebfc8a40c45ed70d571cbfb220abbb8bc9b files/pilot-link-0.12.2-werror_194921.patch 810
-SHA256 7e5e472e0c62fcaf5fe883928bd83402c848ac81ac50e61a571e6f64e7f21503 files/pilot-link-0.12.2-werror_194921.patch 810
 AUX pilot-link-0.12.3-int_types.patch 547 RMD160 28381f51c8d200fc65bcc9382cf06e7b1277991c SHA1 85385f31dab548e5d4549f0ee7983bdf3bc75f50 SHA256 903efdb98552f44ac0006f58b11631111b8634e1084d3122f15131af8b4c09bf
-MD5 4ebd35e4ac13eafcf0677d650fb39cfb files/pilot-link-0.12.3-int_types.patch 547
-RMD160 28381f51c8d200fc65bcc9382cf06e7b1277991c files/pilot-link-0.12.3-int_types.patch 547
-SHA256 903efdb98552f44ac0006f58b11631111b8634e1084d3122f15131af8b4c09bf files/pilot-link-0.12.3-int_types.patch 547
 AUX pilot-link-0.12.3-java-install.patch 823 RMD160 e6999723dd9a71f95f56d704ba6a1f4f1de2e77c SHA1 4bb887091f18c44b3b344d309d673ef56f4096dd SHA256 60f6c9cd3a03adcef22e598f6d497f3095c1e702ac1d4fcac91e84affbc2fe8f
-MD5 ed3e3bd74be1ed9599fb840edb4d2120 files/pilot-link-0.12.3-java-install.patch 823
-RMD160 e6999723dd9a71f95f56d704ba6a1f4f1de2e77c files/pilot-link-0.12.3-java-install.patch 823
-SHA256 60f6c9cd3a03adcef22e598f6d497f3095c1e702ac1d4fcac91e84affbc2fe8f files/pilot-link-0.12.3-java-install.patch 823
 AUX pilot-link-0.12.3-png.patch 2166 RMD160 77fbe6b8923b37c7427d396e6b70a5fab702a1ea SHA1 05656782504d716f8bae485ef2dae3ad09f1ab15 SHA256 8f4781f1c88f374b03de28a2952eacdc0efd2d3f8d244b93b1c13cdf7293da42
-MD5 a08415fcbeec41c90bfcc41128824849 files/pilot-link-0.12.3-png.patch 2166
-RMD160 77fbe6b8923b37c7427d396e6b70a5fab702a1ea files/pilot-link-0.12.3-png.patch 2166
-SHA256 8f4781f1c88f374b03de28a2952eacdc0efd2d3f8d244b93b1c13cdf7293da42 files/pilot-link-0.12.3-png.patch 2166
 DIST pilot-link-0.11.8.tar.bz2 649034 RMD160 c51c069810edff6c2e38e4c81f2daa959c902ad4 SHA1 645d4bc49dd4dc4793d13b6e04dd61f24c2bf717 SHA256 952a97df5d13d926f0d5ce487e15268b1400fa0e7c43ea9303fba92818cce1cb
 DIST pilot-link-0.12.2.tar.bz2 964014 RMD160 3ae19f16b28c33cccb19fa218cdad4353d479875 SHA1 29a2b355ad8b0680e655c7e1ffa1ebef1b2ad5d9 SHA256 809df99a97aae215f93c1a0863644c0d3411462a5bac2d16d4d8941ce9c6d150
 DIST pilot-link-0.12.3.tar.bz2 960812 RMD160 938f367a38572d456b37e62ab0d309139b50403b SHA1 d459ec2626ee19367a5329e604e33b337ef37602 SHA256 f5ed3f1d70349ff5ef95e6d1aa5b2ea9ad4b4d720e7d83cacc1003a950d4c476
 EBUILD pilot-link-0.11.8-r1.ebuild 2300 RMD160 d37e39d4986f78c7a14f5473c428c3a1537832ef SHA1 b68beb86c6afc81fb8a4a2a1dc24da376b4482b2 SHA256 488353fd08d00801370fdf331c624ef24f6a8617f2f54483ed4e32a961b73dc0
-MD5 a01424c0d0964643183dc0f0f2d6d94a pilot-link-0.11.8-r1.ebuild 2300
-RMD160 d37e39d4986f78c7a14f5473c428c3a1537832ef pilot-link-0.11.8-r1.ebuild 2300
-SHA256 488353fd08d00801370fdf331c624ef24f6a8617f2f54483ed4e32a961b73dc0 pilot-link-0.11.8-r1.ebuild 2300
 EBUILD pilot-link-0.11.8.ebuild 1867 RMD160 31cf7b8def2b60392d80771f37ba26303e70734c SHA1 45a218ced9da9a023abb312daa4db6a8e3a3c1c1 SHA256 287da11ee65fc77931322152801fc67ac0c38df5626cfb2d538620bd98fad459
-MD5 a892c871097b20ccd5ffc41f6163c849 pilot-link-0.11.8.ebuild 1867
-RMD160 31cf7b8def2b60392d80771f37ba26303e70734c pilot-link-0.11.8.ebuild 1867
-SHA256 287da11ee65fc77931322152801fc67ac0c38df5626cfb2d538620bd98fad459 pilot-link-0.11.8.ebuild 1867
 EBUILD pilot-link-0.12.2.ebuild 2632 RMD160 e203ecbd99e0207c256a9dbfcb9c3e28eb77142c SHA1 e136a177d7a2127105f51bd234bfd0e9168a4b4b SHA256 87152d234ac44bb8d0542eed0d1243c5d755ad3feb4bb5aa897ee158c595fad0
-MD5 28737c5663e20aab4031346e82a76136 pilot-link-0.12.2.ebuild 2632
-RMD160 e203ecbd99e0207c256a9dbfcb9c3e28eb77142c pilot-link-0.12.2.ebuild 2632
-SHA256 87152d234ac44bb8d0542eed0d1243c5d755ad3feb4bb5aa897ee158c595fad0 pilot-link-0.12.2.ebuild 2632
 EBUILD pilot-link-0.12.3.ebuild 2749 RMD160 d497436e4b13e0162a1ba33c9783045f61ec53a8 SHA1 58568b7e6bbd8245ad6c805373e7c085dec6f6d2 SHA256 b10195f360fcd0c25ff6e484f79008de8859daee136944f78fd0c603e2bbfbc8
-MD5 44e7ede16ba429eb2d9b60e472e23a41 pilot-link-0.12.3.ebuild 2749
-RMD160 d497436e4b13e0162a1ba33c9783045f61ec53a8 pilot-link-0.12.3.ebuild 2749
-SHA256 b10195f360fcd0c25ff6e484f79008de8859daee136944f78fd0c603e2bbfbc8 pilot-link-0.12.3.ebuild 2749
 MISC ChangeLog 9705 RMD160 c994eb8573178c5373b1c6c877f2d86f94c0dbfc SHA1 8382cf13212da7edb0ce97453be1fde0f861dbb1 SHA256 291872f7d2aaee892712fdddd7ca6cb1fcb8222d0935eb785db6379e7cf7cd49
-MD5 45b76811c6f1f6602c554dc0040fcaa0 ChangeLog 9705
-RMD160 c994eb8573178c5373b1c6c877f2d86f94c0dbfc ChangeLog 9705
-SHA256 291872f7d2aaee892712fdddd7ca6cb1fcb8222d0935eb785db6379e7cf7cd49 ChangeLog 9705
 MISC metadata.xml 156 RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe SHA1 5b9cb277159d763c133920e483df8d3d587cf7e2 SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb
-MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
-SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
-MD5 f0b71efcfee6b2f485c997bb221df48c files/digest-pilot-link-0.11.8 256
-RMD160 38347f53c10bc8ae368fa3753865131a970b248b files/digest-pilot-link-0.11.8 256
-SHA256 b39f04cd4a26d67ed6c734711294ddea154d39f4c7a2c61827c7fa54f12d7e49 files/digest-pilot-link-0.11.8 256
-MD5 f0b71efcfee6b2f485c997bb221df48c files/digest-pilot-link-0.11.8-r1 256
-RMD160 38347f53c10bc8ae368fa3753865131a970b248b files/digest-pilot-link-0.11.8-r1 256
-SHA256 b39f04cd4a26d67ed6c734711294ddea154d39f4c7a2c61827c7fa54f12d7e49 files/digest-pilot-link-0.11.8-r1 256
-MD5 2d3563e047f94fe8adc2d327ff046b32 files/digest-pilot-link-0.12.2 256
-RMD160 1c7ca253534c3a18eba1c760b3bd71a143fafc23 files/digest-pilot-link-0.12.2 256
-SHA256 8e247afc68e1f741adcff994523248987e858ee23c07b3887ae03cb62d095ace files/digest-pilot-link-0.12.2 256
-MD5 c87184ebf2ee80d9f534af8b754d9438 files/digest-pilot-link-0.12.3 256
-RMD160 a7c0e9cdfc7196145334f98b071743a5f254c767 files/digest-pilot-link-0.12.3 256
-SHA256 0e7d7aa46c78b448e7ee9edd8087e8435a4148962d7ef0f3a6c85d48a9c10a71 files/digest-pilot-link-0.12.3 256
