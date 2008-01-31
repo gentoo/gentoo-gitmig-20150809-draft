@@ -1,134 +1,31 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX dhcp-3.0-ddns-example.patch 401 RMD160 0188ae91fb58fc6f8c0d1b5bcbed58582dfed099 SHA1 c9e0f4c9ccbf1ff89076ff1bec37fb6d1276b7f0 SHA256 cf136ce92ea8f3337b9ded9c6f4f019db9782a68c63a3e8b712d26a04c2c9584
-MD5 7e7e2dd0c327d198d954748433e83417 files/dhcp-3.0-ddns-example.patch 401
-RMD160 0188ae91fb58fc6f8c0d1b5bcbed58582dfed099 files/dhcp-3.0-ddns-example.patch 401
-SHA256 cf136ce92ea8f3337b9ded9c6f4f019db9782a68c63a3e8b712d26a04c2c9584 files/dhcp-3.0-ddns-example.patch 401
 AUX dhcp-3.0-fix-perms.patch 485 RMD160 3857270dffed5feee95609aeb37d0c9ef8844945 SHA1 1217265a8a7f1416b781e9f79e8dfb8304268e6c SHA256 a805a60b36e148886887aebb797e80f642386b3e55ef4a0b5132f96a2877e018
-MD5 d909d81a4d4ea39ddfc9898d33488c73 files/dhcp-3.0-fix-perms.patch 485
-RMD160 3857270dffed5feee95609aeb37d0c9ef8844945 files/dhcp-3.0-fix-perms.patch 485
-SHA256 a805a60b36e148886887aebb797e80f642386b3e55ef4a0b5132f96a2877e018 files/dhcp-3.0-fix-perms.patch 485
 AUX dhcp-3.0-paranoia.patch 5366 RMD160 7c64e3dac5b07ff3859fcaa7a8b0e52a0c50446c SHA1 a30103c138e480766f84644fffb1d0897709c27d SHA256 a8db9eb98397a9c1b3a0de07fc107c39dc4f6a4a331d404fc6fcc4a8dbc7aeae
-MD5 66becf9870e0293bbd35d1fba770751a files/dhcp-3.0-paranoia.patch 5366
-RMD160 7c64e3dac5b07ff3859fcaa7a8b0e52a0c50446c files/dhcp-3.0-paranoia.patch 5366
-SHA256 a8db9eb98397a9c1b3a0de07fc107c39dc4f6a4a331d404fc6fcc4a8dbc7aeae files/dhcp-3.0-paranoia.patch 5366
 AUX dhcp-3.0.2-gmake.patch 1872 RMD160 d2d41c0a7e002103d68605d2492bfe716bb2889e SHA1 f60c89233f06ca8554cd5cc9ed0301b597a724f7 SHA256 b2bbfc1d1f5b4d03ff3f53b3974ec32731e5f626de8f8d127328591e4c721215
-MD5 d0f61288e81ce020573f3f6965af8489 files/dhcp-3.0.2-gmake.patch 1872
-RMD160 d2d41c0a7e002103d68605d2492bfe716bb2889e files/dhcp-3.0.2-gmake.patch 1872
-SHA256 b2bbfc1d1f5b4d03ff3f53b3974ec32731e5f626de8f8d127328591e4c721215 files/dhcp-3.0.2-gmake.patch 1872
 AUX dhcp-3.0.3-dhclient-dbus.patch 2774 RMD160 250582d89894a58a297786c4a6884b54219c4b6f SHA1 74760ca00712ff529e6b97457408515098563f88 SHA256 d70292c5b61648ba5970ab436429ced33e807bd6f68ba06dcd2b9d4073b02ea4
-MD5 eef265cca1745a6efdfc8d4d1ca2c453 files/dhcp-3.0.3-dhclient-dbus.patch 2774
-RMD160 250582d89894a58a297786c4a6884b54219c4b6f files/dhcp-3.0.3-dhclient-dbus.patch 2774
-SHA256 d70292c5b61648ba5970ab436429ced33e807bd6f68ba06dcd2b9d4073b02ea4 files/dhcp-3.0.3-dhclient-dbus.patch 2774
 AUX dhcp-3.0.3-dhclient-hostname.patch 523 RMD160 38c20bcc417822ae858626eb5d0eaf7e669c1ca0 SHA1 5d2c3a1da74a1d151c9fbf08e01e4545e989078c SHA256 57c09edd2bf48cd65745e3b14499f7f3c26d529f60fd2ab122887ae968e26bbd
-MD5 8c4c668abfe5c8b78eb7066391686d30 files/dhcp-3.0.3-dhclient-hostname.patch 523
-RMD160 38c20bcc417822ae858626eb5d0eaf7e669c1ca0 files/dhcp-3.0.3-dhclient-hostname.patch 523
-SHA256 57c09edd2bf48cd65745e3b14499f7f3c26d529f60fd2ab122887ae968e26bbd files/dhcp-3.0.3-dhclient-hostname.patch 523
 AUX dhcp-3.0.3-dhclient-metric.patch 7270 RMD160 04187868f66e03a62dafd31b4cdcdd2029283ce5 SHA1 1d726d1526ae97adbdf1b259bb55e05145060375 SHA256 7e5ace014ed55d7d4e90a6cdac7dec4842ea9d178bb19bf6cdccf295eba9da7d
-MD5 f63ddf696f98bd5e300aae865cdbfdb9 files/dhcp-3.0.3-dhclient-metric.patch 7270
-RMD160 04187868f66e03a62dafd31b4cdcdd2029283ce5 files/dhcp-3.0.3-dhclient-metric.patch 7270
-SHA256 7e5ace014ed55d7d4e90a6cdac7dec4842ea9d178bb19bf6cdccf295eba9da7d files/dhcp-3.0.3-dhclient-metric.patch 7270
 AUX dhcp-3.0.3-dhclient-mtu.patch 6413 RMD160 2517c7fe58d7dca95bdbdc80e96b6260cc205e56 SHA1 da342800bafee86726570aa0a5e4e3c8bd5f1371 SHA256 0a4bff3c4c44252125f66a3a4423f677465592b84a8f7f500bad9ba4e3b5cb06
-MD5 3bcd2752845eff3da0231a6eccee762a files/dhcp-3.0.3-dhclient-mtu.patch 6413
-RMD160 2517c7fe58d7dca95bdbdc80e96b6260cc205e56 files/dhcp-3.0.3-dhclient-mtu.patch 6413
-SHA256 0a4bff3c4c44252125f66a3a4423f677465592b84a8f7f500bad9ba4e3b5cb06 files/dhcp-3.0.3-dhclient-mtu.patch 6413
 AUX dhcp-3.0.3-dhclient-no-down.patch 2332 RMD160 26d0c88534b71070e81c86c12b76a2b4ec7c9c2c SHA1 b2a00d46754414e937dc6c3d63a28b63b3b57ac9 SHA256 a5a67de79f6435d9bc4eeea416aff7a904ab567e5e8d75ecf34495bc9f2c5a44
-MD5 0579a1b0e12f48c466ba6893d76c5fff files/dhcp-3.0.3-dhclient-no-down.patch 2332
-RMD160 26d0c88534b71070e81c86c12b76a2b4ec7c9c2c files/dhcp-3.0.3-dhclient-no-down.patch 2332
-SHA256 a5a67de79f6435d9bc4eeea416aff7a904ab567e5e8d75ecf34495bc9f2c5a44 files/dhcp-3.0.3-dhclient-no-down.patch 2332
 AUX dhcp-3.0.3-dhclient-ntp.patch 5868 RMD160 41522438308fc8b82dc298752192d1c77b4c26aa SHA1 48b5dd346e714880f8b4af1d95f3ec2ce8074a66 SHA256 751fdfa0b36eab386f4029284d61c0c2b41b3135878738caa02e512999f2ca65
-MD5 3eab8a40f0a84d3b2d9d406fa4b687c0 files/dhcp-3.0.3-dhclient-ntp.patch 5868
-RMD160 41522438308fc8b82dc298752192d1c77b4c26aa files/dhcp-3.0.3-dhclient-ntp.patch 5868
-SHA256 751fdfa0b36eab386f4029284d61c0c2b41b3135878738caa02e512999f2ca65 files/dhcp-3.0.3-dhclient-ntp.patch 5868
 AUX dhcp-3.0.3-dhclient-resolvconf.patch 6671 RMD160 e4a4825df57fb2eed317a44d474f48edbef21fd7 SHA1 aaa15866035759fb4d39a7b00146995115b718ec SHA256 b27c5eeef6efdc8252e68f660424acdfdffaa1a308ec209773cfac78d9faf2a6
-MD5 7193ef2ec3466c4c82aae445e1e5d47d files/dhcp-3.0.3-dhclient-resolvconf.patch 6671
-RMD160 e4a4825df57fb2eed317a44d474f48edbef21fd7 files/dhcp-3.0.3-dhclient-resolvconf.patch 6671
-SHA256 b27c5eeef6efdc8252e68f660424acdfdffaa1a308ec209773cfac78d9faf2a6 files/dhcp-3.0.3-dhclient-resolvconf.patch 6671
 AUX dhcp-3.0.3-dhclient-stdin-conf.patch 1948 RMD160 42f32a5bbfe2a937827c2972ef84cfa78c2c401c SHA1 ac7afd5ecbde5348e9acea532dab1e01e3a58e8b SHA256 e1bfd26b7da10acc4bd718e35aae4235308abcacde78dedf39533b11ab18b3ae
-MD5 d81606fd8cdd2376018c6466fe9cf0ef files/dhcp-3.0.3-dhclient-stdin-conf.patch 1948
-RMD160 42f32a5bbfe2a937827c2972ef84cfa78c2c401c files/dhcp-3.0.3-dhclient-stdin-conf.patch 1948
-SHA256 e1bfd26b7da10acc4bd718e35aae4235308abcacde78dedf39533b11ab18b3ae files/dhcp-3.0.3-dhclient-stdin-conf.patch 1948
 AUX dhcp-3.0.3-libdst.patch 322 RMD160 5216c754a912cfcfc65683afcf44dbe1a7871212 SHA1 804bab67ae06269336c51183d5ff1e8ba45c20b5 SHA256 68e9a081739736980c0ad834dfa6197f940982f53d4d16054715c0346b5b9eca
-MD5 2bfa28477aff891d25c06a00677d261c files/dhcp-3.0.3-libdst.patch 322
-RMD160 5216c754a912cfcfc65683afcf44dbe1a7871212 files/dhcp-3.0.3-libdst.patch 322
-SHA256 68e9a081739736980c0ad834dfa6197f940982f53d4d16054715c0346b5b9eca files/dhcp-3.0.3-libdst.patch 322
 AUX dhcp-3.0.3-no_isc_blurb.patch 3002 RMD160 d70f89e1763bfeb23ce8f09399426983df01f7c8 SHA1 99a9fe69988226d29ccc6c2dc745ffab9b66817c SHA256 09c451cd9667fc8effcecd640f4cbe8629d41f6abacf9d1f2f923aab1f6e0bbb
-MD5 85a5d65a92d74e828c539b6642962463 files/dhcp-3.0.3-no_isc_blurb.patch 3002
-RMD160 d70f89e1763bfeb23ce8f09399426983df01f7c8 files/dhcp-3.0.3-no_isc_blurb.patch 3002
-SHA256 09c451cd9667fc8effcecd640f4cbe8629d41f6abacf9d1f2f923aab1f6e0bbb files/dhcp-3.0.3-no_isc_blurb.patch 3002
 AUX dhcp-3.0.3-tr.patch 377 RMD160 fe81fefb55796b4e06fa73ec180026dceef5599d SHA1 947a4002e7e2b21cd80fe0a3d0f6f044d5c6faff SHA256 05f81ad7c0e8cd2d2f3e81c0cd1aecc0f2a2787672037eca87e66a814150f5c8
-MD5 ce6d18eef914ac8a39b0cb1bc4d63de2 files/dhcp-3.0.3-tr.patch 377
-RMD160 fe81fefb55796b4e06fa73ec180026dceef5599d files/dhcp-3.0.3-tr.patch 377
-SHA256 05f81ad7c0e8cd2d2f3e81c0cd1aecc0f2a2787672037eca87e66a814150f5c8 files/dhcp-3.0.3-tr.patch 377
 AUX dhcp-3.0.3-x-option.patch 6478 RMD160 a0fa5b3c7caf2d303a76c3d6fc135783cfa2bbc6 SHA1 4c77474307f9e657e45618f93ba9120eafd83a9e SHA256 6628629a95ee7e711f9dbce6b7d527b15f98eaf7592a1d0855d7bf65961bc3f7
-MD5 1145d8fd3020b1997955cd84b9730702 files/dhcp-3.0.3-x-option.patch 6478
-RMD160 a0fa5b3c7caf2d303a76c3d6fc135783cfa2bbc6 files/dhcp-3.0.3-x-option.patch 6478
-SHA256 6628629a95ee7e711f9dbce6b7d527b15f98eaf7592a1d0855d7bf65961bc3f7 files/dhcp-3.0.3-x-option.patch 6478
 AUX dhcp-3.0.4-dhclient-stdin-conf.patch 2176 RMD160 fae08899f6b57da3ec7ab0068e288bbdf2fbf2ae SHA1 c10c35dcf4a94f45f4bc98147a70e9dcf3f01dd5 SHA256 80141fe71e52774f1c7b1a02f2cbd49bc646f19753ceefc1c3605104df0cae5f
-MD5 f47ef574359340021a78f5c2f67e4954 files/dhcp-3.0.4-dhclient-stdin-conf.patch 2176
-RMD160 fae08899f6b57da3ec7ab0068e288bbdf2fbf2ae files/dhcp-3.0.4-dhclient-stdin-conf.patch 2176
-SHA256 80141fe71e52774f1c7b1a02f2cbd49bc646f19753ceefc1c3605104df0cae5f files/dhcp-3.0.4-dhclient-stdin-conf.patch 2176
 AUX dhcp-3.0.5-bpf-nofallback.patch 1473 RMD160 1a5ece77cb481416935b0d2eea53e85dc4c4ee93 SHA1 d4cad638075a98606e07c633551c8a1d2f78f2e7 SHA256 b215c5ff4a282b475f28168250c05bbbc85e7c37e7af92616571d499b8c14da6
-MD5 223f1d74612d89f327d0afaaa08d34bb files/dhcp-3.0.5-bpf-nofallback.patch 1473
-RMD160 1a5ece77cb481416935b0d2eea53e85dc4c4ee93 files/dhcp-3.0.5-bpf-nofallback.patch 1473
-SHA256 b215c5ff4a282b475f28168250c05bbbc85e7c37e7af92616571d499b8c14da6 files/dhcp-3.0.5-bpf-nofallback.patch 1473
 AUX dhcp-3.1.0a1-dhclient-resolvconf.patch 10328 RMD160 672eb37b32486655a027b37b4c37d103c6e87c15 SHA1 a882cdc741637f921d15238d6761ff8e45ddb8f4 SHA256 f662f98eefe57a5c21cbbcefc6d092c7b60a239b59f10942fe13560ed684889c
-MD5 207562d42d2fc7ec3cb5e5b86f5ca41d files/dhcp-3.1.0a1-dhclient-resolvconf.patch 10328
-RMD160 672eb37b32486655a027b37b4c37d103c6e87c15 files/dhcp-3.1.0a1-dhclient-resolvconf.patch 10328
-SHA256 f662f98eefe57a5c21cbbcefc6d092c7b60a239b59f10942fe13560ed684889c files/dhcp-3.1.0a1-dhclient-resolvconf.patch 10328
 AUX dhcpd.conf 1092 RMD160 936bb112c7cdf8e669b695599252d1f6626be2f3 SHA1 cbabbcea73a0cbc9692462683b983c96d6f18b0c SHA256 b86d27e0560689057b01a352474582fceb3a398eaf3b17f901378ec56284c4d5
-MD5 3f165a207e98ea92deb7ebfbbf4c2cf7 files/dhcpd.conf 1092
-RMD160 936bb112c7cdf8e669b695599252d1f6626be2f3 files/dhcpd.conf 1092
-SHA256 b86d27e0560689057b01a352474582fceb3a398eaf3b17f901378ec56284c4d5 files/dhcpd.conf 1092
 AUX dhcpd.init 1989 RMD160 7f6b6858020100e47efa5d6a0809b2959e551249 SHA1 2c611adc6425fd095740aa56d09d8aafb4fea58a SHA256 916bfeb81dcb3423fd4239270ac2dce2e6dc105b28a06e03b352f6bf6b30ed1e
-MD5 076fd6d3c4bb4e92b09d1ab7cd99eb8a files/dhcpd.init 1989
-RMD160 7f6b6858020100e47efa5d6a0809b2959e551249 files/dhcpd.init 1989
-SHA256 916bfeb81dcb3423fd4239270ac2dce2e6dc105b28a06e03b352f6bf6b30ed1e files/dhcpd.init 1989
 AUX dhcrelay.conf 421 RMD160 456edbc9bcc8d3a44db5bb6dbf0c3003c3e7419c SHA1 78ecdb000382893fb49d0052ced063955b0ad9cf SHA256 409b895ed489e75c1a08f72961b45d641b93fd9357f528abc78b1fd036b7f730
-MD5 db84514fe15fd7d81136afbaae738f55 files/dhcrelay.conf 421
-RMD160 456edbc9bcc8d3a44db5bb6dbf0c3003c3e7419c files/dhcrelay.conf 421
-SHA256 409b895ed489e75c1a08f72961b45d641b93fd9357f528abc78b1fd036b7f730 files/dhcrelay.conf 421
 AUX dhcrelay.init 736 RMD160 04566b87bd6dbb8bb754b26409ca30b878ef3ca3 SHA1 72742b308314b2e1476b27e94212fbf4d179adc4 SHA256 cfdaff3a723be3935d06c14e171d4008f2ad3329bd05ac2e49c19bc0e14bc59c
-MD5 9f70b45b7b2247173dd7fe0f8672e294 files/dhcrelay.init 736
-RMD160 04566b87bd6dbb8bb754b26409ca30b878ef3ca3 files/dhcrelay.init 736
-SHA256 cfdaff3a723be3935d06c14e171d4008f2ad3329bd05ac2e49c19bc0e14bc59c files/dhcrelay.init 736
 DIST dhcp-3.0.3.tar.gz 870240 RMD160 bcbd1f8b49f17809a3473103a7b5e096c45855d7 SHA1 1e2e6c3ecdb8046a39aaabe1a36171e1d45d21e4 SHA256 c96bcd884dde06c22a709cfb9e84f7e32f6577dcd52aa7f12186aa22b5e63afe
 DIST dhcp-3.0.6.tar.gz 891513 RMD160 6b7dbad413f83f9bce4ed92a8abc60394a06c6ad SHA1 204e509580d57d0cfff23529274612ca8c710efb SHA256 9f77b0ebf975d71578e2d305a2e07b900a9462b7efaac41826facfb4d4f00f4d
 DIST dhcp-3.1.0.tar.gz 797100 RMD160 59ef8b695b66d3cb61437e25a179d9f17639017d SHA1 f33d017f055648e6571aa26cf314d37857491a2e SHA256 26d02217f53e40ab7c7140cf58d99b55a64979c8501481b28da9c432f0f92243
 EBUILD dhcp-3.0.3-r9.ebuild 7186 RMD160 e59315a08a6b382915ec7ded0a4c7cfa38c9a5de SHA1 6c11653e84a8f3e81913f3916dabb6d6a38aedb5 SHA256 eee8b146f259da6645b0f901038e63f6c9d4dec8ffd1627c997ad8fde76338b0
-MD5 165433f5c0a15eb7d8ac9044b0f1a871 dhcp-3.0.3-r9.ebuild 7186
-RMD160 e59315a08a6b382915ec7ded0a4c7cfa38c9a5de dhcp-3.0.3-r9.ebuild 7186
-SHA256 eee8b146f259da6645b0f901038e63f6c9d4dec8ffd1627c997ad8fde76338b0 dhcp-3.0.3-r9.ebuild 7186
 EBUILD dhcp-3.0.6.ebuild 7532 RMD160 8b67dd9acc7d1f392a6fd7d1d3a1e9ce8c00460b SHA1 c0b406cc528a97db2409324688e3a7ab93862677 SHA256 e550750c928525b090ff08087df2a9f63764805d663aee72b8991244a417e509
-MD5 b6659dbf28bdcee0fd5d544f1917f6e0 dhcp-3.0.6.ebuild 7532
-RMD160 8b67dd9acc7d1f392a6fd7d1d3a1e9ce8c00460b dhcp-3.0.6.ebuild 7532
-SHA256 e550750c928525b090ff08087df2a9f63764805d663aee72b8991244a417e509 dhcp-3.0.6.ebuild 7532
 EBUILD dhcp-3.1.0.ebuild 7431 RMD160 bd267b1ae0ee8568ae5b8fce5267a41258fb5d48 SHA1 b77e78900b054ee2fd06f1059fff84cc1db3499c SHA256 a2a75e7c2e1b60c84a49f66d59360571534c1ea5245e6a8a14d8c039c1115bfb
-MD5 546070ee5f59cbcac01fcaaef3c160a0 dhcp-3.1.0.ebuild 7431
-RMD160 bd267b1ae0ee8568ae5b8fce5267a41258fb5d48 dhcp-3.1.0.ebuild 7431
-SHA256 a2a75e7c2e1b60c84a49f66d59360571534c1ea5245e6a8a14d8c039c1115bfb dhcp-3.1.0.ebuild 7431
 MISC ChangeLog 23857 RMD160 1c16097b94270149640d60dd26f6841cf23d9a4e SHA1 1b701d8e14c1b8fcd713dc01c3e00b8216061d3b SHA256 4bd9fa8a442c9ddcdee2254a4f16d6297e83fa46fb660321eb7617edea53dee4
-MD5 861e5121e541a97eb81bdb661e340e88 ChangeLog 23857
-RMD160 1c16097b94270149640d60dd26f6841cf23d9a4e ChangeLog 23857
-SHA256 4bd9fa8a442c9ddcdee2254a4f16d6297e83fa46fb660321eb7617edea53dee4 ChangeLog 23857
 MISC metadata.xml 358 RMD160 97ecd4b6ee0a24352a71a66d5ad4fd82481156b4 SHA1 d80da2cf7c6892cdad6b681fda29e46472d68871 SHA256 8665f24cdfcc09576b595f8bd257333ff5f9ea7ee0ca2925ba6fb74d90e12415
-MD5 73e76d2f88d8b0f302763837fe520f86 metadata.xml 358
-RMD160 97ecd4b6ee0a24352a71a66d5ad4fd82481156b4 metadata.xml 358
-SHA256 8665f24cdfcc09576b595f8bd257333ff5f9ea7ee0ca2925ba6fb74d90e12415 metadata.xml 358
-MD5 414325430622f5011079cd7fd5517485 files/digest-dhcp-3.0.3-r9 232
-RMD160 a8cec86f840528ab049182c2d0f0768d7eaa03dc files/digest-dhcp-3.0.3-r9 232
-SHA256 cbcca1aed82577796a5287973fc78c3d4f5011a7279852b5fdf3e3e368067f14 files/digest-dhcp-3.0.3-r9 232
-MD5 644e90c92b9c5c796b59dbeb70837965 files/digest-dhcp-3.0.6 232
-RMD160 8af1da7915b74c087a9d2490133ab384ac836414 files/digest-dhcp-3.0.6 232
-SHA256 622e26ecac9d66a2552d0717c8b8b00c68210661721bbf8275e52aff8bf8ee22 files/digest-dhcp-3.0.6 232
-MD5 c339c000f6ca01fb67d23ab5e4c346ab files/digest-dhcp-3.1.0 232
-RMD160 bb9c27619af978c78ab8eee4cb046ef7f1ff9411 files/digest-dhcp-3.1.0 232
-SHA256 58d0ea4c6ddb2115338414ffe6295d4fdabf2ded6f62ba0c6beed052754ddede files/digest-dhcp-3.1.0 232
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.8 (GNU/Linux)
-
-iEYEARECAAYFAkeF4hcACgkQj9hvisErhMIg4QCfSZaHURPfa60oCZgs34DCzwdr
-V38AoMWtKdm/fv/2Lc7fhi2wFlRZwcFU
-=AYY6
------END PGP SIGNATURE-----
