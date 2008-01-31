@@ -1,42 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX traffic-vis-0.35-gentoo.patch 3759 RMD160 0517a3dc5c2bb69eeec299aa4ef2a1192783669d SHA1 29088d131c3f4844126e05a1561e3fc4d1759fca SHA256 c0c2463e8d75b41b7458af930c91f3af4a1d668b67d345bbe118e658bb2f4710
-MD5 4e1b8460642e4424a4db9e724c550f68 files/traffic-vis-0.35-gentoo.patch 3759
-RMD160 0517a3dc5c2bb69eeec299aa4ef2a1192783669d files/traffic-vis-0.35-gentoo.patch 3759
-SHA256 c0c2463e8d75b41b7458af930c91f3af4a1d668b67d345bbe118e658bb2f4710 files/traffic-vis-0.35-gentoo.patch 3759
 AUX traffic-vis-0.35-libpcap-header-fix.patch 280 RMD160 04e7d8534600aa935f3d0aaff1f13c4933baad43 SHA1 f6fed7649faf6f4b3d5c763bc1e0af9b2f4be0d7 SHA256 b63d12f2105b2d031635871397e72c6de09c12d7edd92bbf4758556082ebc4c0
-MD5 f3f89a74aafd87072c83981d568ad1d2 files/traffic-vis-0.35-libpcap-header-fix.patch 280
-RMD160 04e7d8534600aa935f3d0aaff1f13c4933baad43 files/traffic-vis-0.35-libpcap-header-fix.patch 280
-SHA256 b63d12f2105b2d031635871397e72c6de09c12d7edd92bbf4758556082ebc4c0 files/traffic-vis-0.35-libpcap-header-fix.patch 280
 AUX traffic-vis.conf.d 365 RMD160 affed99857725e3e5994c20e8860ffec9f2259ae SHA1 e6487b41df460497ebea6df94cb7382c24308d0f SHA256 fdaaef2191bd56f47a5ed3bfe078871b178ea310923a49d84e4eabadeeefce41
-MD5 a7bbcd2076e8850fd4f6d359c9dada26 files/traffic-vis.conf.d 365
-RMD160 affed99857725e3e5994c20e8860ffec9f2259ae files/traffic-vis.conf.d 365
-SHA256 fdaaef2191bd56f47a5ed3bfe078871b178ea310923a49d84e4eabadeeefce41 files/traffic-vis.conf.d 365
 AUX traffic-vis.init.d 744 RMD160 f654592da8969603ae67437bc208a5d52e92470a SHA1 76c307a171bc2c1df72d4e89eb979777ea0c653d SHA256 57d1281c8174a0262d927056a3760ac877c6817c2ce8befe25a0f5a8653cf3db
-MD5 d68a0880f31210ead13247ad3de0961d files/traffic-vis.init.d 744
-RMD160 f654592da8969603ae67437bc208a5d52e92470a files/traffic-vis.init.d 744
-SHA256 57d1281c8174a0262d927056a3760ac877c6817c2ce8befe25a0f5a8653cf3db files/traffic-vis.init.d 744
 DIST traffic-vis-0.35.tar.gz 41202 RMD160 763e0f4532628d68325e933a9963d8435ae95a6b SHA1 762c9d956bdd075fef567570ad10d54a393d7d2c SHA256 8a6d56a390df525c73ac35f7c4a2ac854072824ee36fb2053b35fdf14e933754
 EBUILD traffic-vis-0.35-r1.ebuild 1457 RMD160 69dd4feca243e071177adacdb8161fce331821db SHA1 4fbf19366cc3f80e482eed818274c075db44d050 SHA256 8a35b3ec7aebff6ce686c9b26dab13d856fe3a58fe635e8acdd9e4df796fdef8
-MD5 55207d396fa0a1a91e3152e15fb1ad2f traffic-vis-0.35-r1.ebuild 1457
-RMD160 69dd4feca243e071177adacdb8161fce331821db traffic-vis-0.35-r1.ebuild 1457
-SHA256 8a35b3ec7aebff6ce686c9b26dab13d856fe3a58fe635e8acdd9e4df796fdef8 traffic-vis-0.35-r1.ebuild 1457
 MISC ChangeLog 2229 RMD160 f52f55c20b01659697b7442f86f4e864f9bd7a56 SHA1 b3aaef5e389b29d34312860c6c4fd96f8b863cd6 SHA256 f83750bfaee77a80f90cbc8e8beee63c6b2cb119f1cced734bce0f1f7fd882a7
-MD5 9ab359d185d150d26083520a8fdd851e ChangeLog 2229
-RMD160 f52f55c20b01659697b7442f86f4e864f9bd7a56 ChangeLog 2229
-SHA256 f83750bfaee77a80f90cbc8e8beee63c6b2cb119f1cced734bce0f1f7fd882a7 ChangeLog 2229
 MISC metadata.xml 250 RMD160 8243f369f9fceba6f1e62bf8a17853094de6738e SHA1 3c65215346e5477e7bd5d37503890daa9f0e77c6 SHA256 8f64428f5a200994e8520ffe481dfb1fba11bee5da6a46ba8f283062fba4b2b0
-MD5 75e5dd9e5ff826e83948079bd120a0c9 metadata.xml 250
-RMD160 8243f369f9fceba6f1e62bf8a17853094de6738e metadata.xml 250
-SHA256 8f64428f5a200994e8520ffe481dfb1fba11bee5da6a46ba8f283062fba4b2b0 metadata.xml 250
-MD5 d6ab38f211e2a0c8c86a6be126b432b3 files/digest-traffic-vis-0.35-r1 247
-RMD160 effdc68d52dc81bc05acdca2c56543cc4cbad960 files/digest-traffic-vis-0.35-r1 247
-SHA256 810c59ea81d3734f73d0f19fa469ab4acb4f101c8198fd72ea973e12e8392d5f files/digest-traffic-vis-0.35-r1 247
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.6 (GNU/Linux)
-
-iD8DBQFG4Euaz974XjDVpbkRAl0nAKC7Y2XmGylqRn24AurccVsdqrrlKACgxI1V
-L61hZr5oSl8Rzg4vet+4QZI=
-=onno
------END PGP SIGNATURE-----
