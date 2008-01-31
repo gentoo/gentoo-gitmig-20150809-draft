@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8195 2008/01/31 16:37:14 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8196 2008/01/31 23:31:02 stkn Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1668,11 +1668,6 @@ sys-apps/gli
 # has security issues and will be removed from portage
 # due to upstream behaviour, see bug #106497
 app-backup/mondo-rescue
-
-# Stefan Knoblich <stkn@gentoo.org> (18 Nov 2005)
-# Asterisk-1.2.0 is up-to-date, mask packages that need testing
-# or aren't ready yet, e.g. Sangoma Wanpipe drivers.
->=net-misc/wanpipe-2.3.2_p4
 
 # Luis F. Araujo <araujo@gentoo.org> (24 Aug 2005)
 # This is a binary package version.

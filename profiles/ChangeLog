@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1054 2008/01/31 14:35:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1055 2008/01/31 23:31:02 stkn Exp $
+
+  31 Jan 2008; Stefan Knoblich <stkn@gentoo.org> package.mask:
+  Remove wanpipe mask, the package has been removed for now.
 
   31 Jan 2008; Peter Volkov <pva@gentoo.org> package.mask:
   Masked =dev-libs/libnl-1.1 as it breaks networkmanager, bug 208204
