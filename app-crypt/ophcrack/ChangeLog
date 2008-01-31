@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ophcrack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.16 2008/01/11 00:02:43 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.17 2008/01/31 14:24:00 ikelos Exp $
+
+  31 Jan 2008; Mike Auty <ikelos@gentoo.org> ChangeLog:
+  Resign digest-less manifest
 
   10 Jan 2008; Mike Auty <ikelos@gentoo.org>
   -files/ophcrack-2.3.3-linuxtools-install-path.patch,
