@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/mod_transform-0.7.0_pre20070204.ebuild,v 1.3 2007/11/25 13:38:56 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/mod_transform-0.7.0_pre20070204.ebuild,v 1.4 2008/01/31 19:14:10 hollow Exp $
 
 inherit apache-module
 
@@ -26,13 +26,13 @@ APACHE2_MOD_DEFINE="TRANSFORM"
 need_apache2
 
 src_compile() {
-	econf --with-apxs=${APXS2} || die "econf failed"
+	econf --with-apxs=${APXS} || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
 	# install header(s)
-	local AP_INCLUDEDIR=$(${APXS2} -q INCLUDEDIR)
+	local AP_INCLUDEDIR=$(${APXS} -q INCLUDEDIR)
 	insinto ${AP_INCLUDEDIR}
 	doins include/mod_transform.h || die
 
