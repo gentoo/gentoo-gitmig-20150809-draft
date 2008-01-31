@@ -1,46 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX linuxwacom-0.7.8-pDev.patch 483 RMD160 baae89684fe5abe060ffa358dc21fb48e18c7ab3 SHA1 d2e548febac0cfef42d5021f77bb51cb44842e6a SHA256 207516fdce407efc8d635b143a2774dd9ebbe53565e32e55af6e4a2f22f810dd
-MD5 0631d2b1188739cf767d08bc349f1217 files/linuxwacom-0.7.8-pDev.patch 483
-RMD160 baae89684fe5abe060ffa358dc21fb48e18c7ab3 files/linuxwacom-0.7.8-pDev.patch 483
-SHA256 207516fdce407efc8d635b143a2774dd9ebbe53565e32e55af6e4a2f22f810dd files/linuxwacom-0.7.8-pDev.patch 483
 AUX linuxwacom-xorg71.diff 274 RMD160 8c319899ac3f1d9a93d411eb8916bc01da9053ef SHA1 4c3551801e15875efc5d683889fb2323a49b5ec6 SHA256 616deaca0510ffa181b8f6bdf2a8f2d9704a53d9a1c14c5807bcf71836dc4f1c
-MD5 988f942444db6861e8be8bec11ac30c8 files/linuxwacom-xorg71.diff 274
-RMD160 8c319899ac3f1d9a93d411eb8916bc01da9053ef files/linuxwacom-xorg71.diff 274
-SHA256 616deaca0510ffa181b8f6bdf2a8f2d9704a53d9a1c14c5807bcf71836dc4f1c files/linuxwacom-xorg71.diff 274
 AUX xserver-xorg-input-wacom.udev 5716 RMD160 60d36d0bf0e4acf8d5caea34d76db74d8a946d8d SHA1 45f406b7c917a1e8af9994743d4b0626f5f6beb5 SHA256 226805c56b56e4141c33f105204c347b2b68eb6590dc9b5d59c043f49279feb1
-MD5 f8e728fa14724e8f038d8bb6cf4e460f files/xserver-xorg-input-wacom.udev 5716
-RMD160 60d36d0bf0e4acf8d5caea34d76db74d8a946d8d files/xserver-xorg-input-wacom.udev 5716
-SHA256 226805c56b56e4141c33f105204c347b2b68eb6590dc9b5d59c043f49279feb1 files/xserver-xorg-input-wacom.udev 5716
 DIST linuxwacom-0.7.4-3.tar.bz2 866312 RMD160 789789803a31eb5b9ff1d35ef760d7d11b5c24dc SHA1 c346485cdaf2bde7ee9d965aca231a4dd55f303e SHA256 0f99153ba1669255e08dd7a730cf33d9766dde43f5b56ec97e6bc8ec63b60260
 DIST linuxwacom-0.7.8-3.tar.bz2 1002452 RMD160 5b6b614dfd2b3de562457676013b4972de1bfa81 SHA1 6bd3d6aa0a4d43a9ea6d1da02c720aa7e694da6a SHA256 ac6a3ab94cf4b306e5823eca33fe84f9b4e8c743201e220a17a3ec4fe3bd3cac
 EBUILD linuxwacom-0.7.4_p3.ebuild 1392 RMD160 321a509fcabb52f220bd584372b7d3cea4594164 SHA1 da76d496bcbd721d71aac40eb03e3c82eff61a6d SHA256 758483d58ad3cfbbb4def09bd30ac0317b4dd7844b2d2edea95f4086b77d99e6
-MD5 924b4d6fd3e39d304cabb4615ff53103 linuxwacom-0.7.4_p3.ebuild 1392
-RMD160 321a509fcabb52f220bd584372b7d3cea4594164 linuxwacom-0.7.4_p3.ebuild 1392
-SHA256 758483d58ad3cfbbb4def09bd30ac0317b4dd7844b2d2edea95f4086b77d99e6 linuxwacom-0.7.4_p3.ebuild 1392
 EBUILD linuxwacom-0.7.8_p3.ebuild 1578 RMD160 2653c26bb312de938a5b174817eab2864f367271 SHA1 3d6dbdb3c463ad43d88829b1f1e49ce7af67e282 SHA256 732d45d2db9fc0acabb4066fe1d08ecfe76c62bdb38c2f8370928d0f3641f7eb
-MD5 012e4fa36f064b361d089112ce5bd880 linuxwacom-0.7.8_p3.ebuild 1578
-RMD160 2653c26bb312de938a5b174817eab2864f367271 linuxwacom-0.7.8_p3.ebuild 1578
-SHA256 732d45d2db9fc0acabb4066fe1d08ecfe76c62bdb38c2f8370928d0f3641f7eb linuxwacom-0.7.8_p3.ebuild 1578
 MISC ChangeLog 9336 RMD160 d3f52668b9ff8d2c0bee7af2bda0d7ad68a7bd93 SHA1 e5876f4a405335ddd618c5ab466e2267648ecfcb SHA256 d92485197598258f496a3fd1cafbe6c99ce8fb9f70c50921a61b38ddbf86d895
-MD5 2a1ffa0f14b99a34dec092ae953783d7 ChangeLog 9336
-RMD160 d3f52668b9ff8d2c0bee7af2bda0d7ad68a7bd93 ChangeLog 9336
-SHA256 d92485197598258f496a3fd1cafbe6c99ce8fb9f70c50921a61b38ddbf86d895 ChangeLog 9336
 MISC metadata.xml 465 RMD160 0ae8d1818fe7ed1efc78dc18ffd5717aecaebb30 SHA1 328430eab5579d773f8f59a61ce4b7a1b4ad2e73 SHA256 18e26262c4dc919d217a3bedd296dc6d1d2ac2a90338368fa3131c27464f439e
-MD5 94ef9a43acc5ebb25a4b47aea829fe23 metadata.xml 465
-RMD160 0ae8d1818fe7ed1efc78dc18ffd5717aecaebb30 metadata.xml 465
-SHA256 18e26262c4dc919d217a3bedd296dc6d1d2ac2a90338368fa3131c27464f439e metadata.xml 465
-MD5 a4952b197118f856078db03c06f8b77b files/digest-linuxwacom-0.7.4_p3 259
-RMD160 72bf511b0c7c398d4c3a9743bc048da4c11c9ae7 files/digest-linuxwacom-0.7.4_p3 259
-SHA256 f0ba1bee14a249725abc3316adc7bc023b572afb76447d0cdfe239514974fd1e files/digest-linuxwacom-0.7.4_p3 259
-MD5 6d0aa8e8706b7a89cd8e728aef375748 files/digest-linuxwacom-0.7.8_p3 262
-RMD160 73c4f066570ff7f6e7a8272158ddc691a803fab2 files/digest-linuxwacom-0.7.8_p3 262
-SHA256 0effec920c46056ff5632c2fbf5367fffee2a6fb17677869e3f0caa4f5361437 files/digest-linuxwacom-0.7.8_p3 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFHfrs+yZx3L/ph1soRAp2XAJ4++3tNtSXltiTlRLXR2vuJ7lMmSQCgrwK1
-CCTeCTJd6OZ3Ifnp4h5CB5I=
-=UvPR
------END PGP SIGNATURE-----
