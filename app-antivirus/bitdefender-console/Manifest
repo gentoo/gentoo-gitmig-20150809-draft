@@ -1,34 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST BitDefender-Console-Antivirus-7.0.1-3.linux-gcc3x.i586.run 2348482 RMD160 3cfe335bfb98cc4e4029252c2266a80b0c0540c2 SHA1 a858add82a491f29bd401de41979d8da08d08d53 SHA256 9043a752fb783dd02341859cd37b0c586e881d76fea19620f47bf230905a6cf9
 DIST BitDefender-Console-Antivirus-7.1-3.linux-gcc3x.i386.run 4387368 RMD160 e39354e778ee8e300f3979c85c1d14abf5b1d601 SHA1 25c2b7bde404feb6187c321eeae2c9a7d8a3ebc2 SHA256 c7cb158e95839faddb585875baa08e83d3f91d37e33367a95e0155627d11aefc
 EBUILD bitdefender-console-7.0.1-r1.ebuild 1867 RMD160 2434cdbeb4bcbdd5b976a285aa40f1d96a071c6a SHA1 4e477000ef5c742c991a605007bcfd872386424a SHA256 6b40a64b018d0aad11dd3e2a679c8d03776a969cfac3244585c5b0ff80210cda
-MD5 df8c0ecee11a0ed142e1823eb6e04e13 bitdefender-console-7.0.1-r1.ebuild 1867
-RMD160 2434cdbeb4bcbdd5b976a285aa40f1d96a071c6a bitdefender-console-7.0.1-r1.ebuild 1867
-SHA256 6b40a64b018d0aad11dd3e2a679c8d03776a969cfac3244585c5b0ff80210cda bitdefender-console-7.0.1-r1.ebuild 1867
 EBUILD bitdefender-console-7.1.ebuild 2261 RMD160 c9b483d6912a0a84a8e334c3cdcd0b0b0697a7a2 SHA1 c26412438ffc9c70d642a20e0da36a8c91c78ac8 SHA256 63b7c4fe2549aaa476f3af5eb2b6b57f6f140727bbcdf0ccaa8286a46b3e493c
-MD5 06982891e6e1c2dd1bcd6d4507cf0509 bitdefender-console-7.1.ebuild 2261
-RMD160 c9b483d6912a0a84a8e334c3cdcd0b0b0697a7a2 bitdefender-console-7.1.ebuild 2261
-SHA256 63b7c4fe2549aaa476f3af5eb2b6b57f6f140727bbcdf0ccaa8286a46b3e493c bitdefender-console-7.1.ebuild 2261
 MISC ChangeLog 3301 RMD160 c0d4e372233c9465c002032e6f0b2cf05360101d SHA1 e8edfb57802aaf12a8a7c291ab1e293813de5905 SHA256 e11bafd663b3cc0e132c51e17afcd2efa4b89e63507ae2cb6e2d856d1f6929cf
-MD5 fa4e1925745efb25608f09437e1e4771 ChangeLog 3301
-RMD160 c0d4e372233c9465c002032e6f0b2cf05360101d ChangeLog 3301
-SHA256 e11bafd663b3cc0e132c51e17afcd2efa4b89e63507ae2cb6e2d856d1f6929cf ChangeLog 3301
 MISC metadata.xml 376 RMD160 063d66096bd572de8d1806641024caf616842aca SHA1 a15457eabd47bcf1d9577cb0ab0e9160dbfa0e0c SHA256 087d5501fd34e6c27ce3830ce3efa420cdfd46cdc53b7f5970ec8daa7d6153b7
-MD5 b799e6d40bbe29a415e5c3f80faca25a metadata.xml 376
-RMD160 063d66096bd572de8d1806641024caf616842aca metadata.xml 376
-SHA256 087d5501fd34e6c27ce3830ce3efa420cdfd46cdc53b7f5970ec8daa7d6153b7 metadata.xml 376
-MD5 02fd8d1356b4ffedd2d5a1e1bc38f2d1 files/digest-bitdefender-console-7.0.1-r1 358
-RMD160 141d74f41192f278698aebc99fd98ab62ef4b711 files/digest-bitdefender-console-7.0.1-r1 358
-SHA256 b5ff2505bda598c476edbcbd91b431913bfb3de3785032a3d7395dfe6ba37656 files/digest-bitdefender-console-7.0.1-r1 358
-MD5 438a1bd403359219494ecdc69227e6e5 files/digest-bitdefender-console-7.1 352
-RMD160 38a9049bf9c10ae8a554fa1e8d9bf97cb2b4d93a files/digest-bitdefender-console-7.1 352
-SHA256 753cbcde0a4132b40022662d95475c82ff1431395cad0f2706a37eb4508df6dd files/digest-bitdefender-console-7.1 352
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
-
-iD8DBQFGNNUsyuNVb5qfaOYRAlddAKC0Z/YfDAm8bAXeUK0zvBte+SZj1gCdEcJ7
-665YUhIA1B6wk429nP/7rgU=
-=95WI
------END PGP SIGNATURE-----
