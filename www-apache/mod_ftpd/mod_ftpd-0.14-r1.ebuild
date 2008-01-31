@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ftpd/mod_ftpd-0.14-r1.ebuild,v 1.1 2007/09/21 20:35:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ftpd/mod_ftpd-0.14-r1.ebuild,v 1.2 2008/01/31 18:51:38 hollow Exp $
 
 inherit apache-module
 
@@ -32,7 +32,7 @@ src_compile() {
 	use gdbm && providers="dbm ${providers}"
 
 	econf \
-		--with-apxs=${APXS2} \
+		--with-apxs=${APXS} \
 		--enable-providers="${providers}" \
 		|| die "econf failed"
 	emake || die "emake failed"
