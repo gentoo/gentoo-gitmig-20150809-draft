@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gazpacho
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/ChangeLog,v 1.9 2007/08/05 21:52:10 ikelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/ChangeLog,v 1.10 2008/01/31 14:33:44 ikelos Exp $
+
+  31 Jan 2008; Mike Auty <ikelos@gentoo.org> ChangeLog:
+  Re-sign digestless manifest.
 
 *gazpacho-0.7.2 (05 Aug 2007)
 
