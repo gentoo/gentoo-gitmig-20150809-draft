@@ -1,0 +1,10 @@
+# ChangeLog for dev-cpp/sparsehash
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sparsehash/ChangeLog,v 1.1 2008/01/31 09:03:19 dev-zero Exp $
+
+*sparsehash-1.0 (31 Jan 2008)
+
+  31 Jan 2008; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
+  +sparsehash-1.0.ebuild:
+  Initial commit (bug #88638, ebuild rewritten from scratch by me).
+
