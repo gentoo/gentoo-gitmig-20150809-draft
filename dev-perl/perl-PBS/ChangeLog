@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perl-PBS
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-PBS/ChangeLog,v 1.6 2007/04/26 06:53:55 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-PBS/ChangeLog,v 1.7 2008/01/31 06:45:40 dberkholz Exp $
+
+  31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  -perl-PBS-0.23.ebuild:
+  Clean up.
 
   26 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update for cluster herd split to hp-cluster and ha-cluster.
