@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9.ebuild,v 1.10 2007/07/31 12:26:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9.ebuild,v 1.11 2008/01/31 20:29:02 hollow Exp $
 
 inherit eutils depend.apache
 IUSE="postfix sendmail qmail courier exim xmail"
@@ -77,7 +77,7 @@ src_install () {
 	keepdir ${INSTALLDIR}/lists
 	keepdir ${INSTALLDIR}/qfiles
 
-	insinto ${APACHE2_MODULES_CONFDIR}
+	insinto ${APACHE_MODULES_CONFDIR}
 	doins ${FILESDIR}/50_mailman.conf
 
 	dodoc ${FILESDIR}/README.gentoo
@@ -121,7 +121,7 @@ pkg_postinst() {
 	elog
 
 	elog "An example Mailman configuration file for Apache has been installed into:"
-	elog "  ${APACHE2_MODULES_CONFDIR}/50_mailman.conf"
+	elog "  ${APACHE_MODULES_CONFDIR}/50_mailman.conf"
 	elog
 	elog "To enable, you will need to add \"-D MAILMAN\" to"
 	elog "/etc/conf.d/apache2."

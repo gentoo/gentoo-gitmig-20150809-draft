@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.8 2008/01/22 15:47:36 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.9 2008/01/31 20:29:02 hollow Exp $
 
 inherit eutils python multilib
 
@@ -115,7 +115,7 @@ pkg_postinst() {
 	elog
 
 	elog "An example Mailman configuration file for Apache has been installed into:"
-	elog "  ${APACHE2_MODULES_CONFDIR}/50_mailman.conf"
+	elog "  ${APACHE_MODULES_CONFDIR}/50_mailman.conf"
 	elog
 	elog "To enable, you will need to add \"-D MAILMAN\" to"
 	elog "/etc/conf.d/apache2."
