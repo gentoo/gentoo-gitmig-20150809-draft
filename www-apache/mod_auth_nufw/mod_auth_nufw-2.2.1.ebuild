@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/mod_auth_nufw-2.2.1.ebuild,v 1.1 2008/01/27 17:17:24 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/mod_auth_nufw-2.2.1.ebuild,v 1.2 2008/01/31 17:05:33 hollow Exp $
 
 inherit eutils apache-module autotools
 
@@ -42,7 +42,7 @@ src_compile() {
 	CPPFLAGS="-I$(/usr/bin/apr-1-config --includedir) ${CPPFLAGS}" \
 	econf \
 		--with-apache22 \
-		--with-apxs=${APXS2} \
+		--with-apxs=${APXS} \
 		$(use_with mysql) \
 		|| die "econf failed"
 	emake || die "emake failed"
