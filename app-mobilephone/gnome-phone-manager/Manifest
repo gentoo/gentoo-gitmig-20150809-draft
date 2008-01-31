@@ -1,57 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX gnome-phone-manager-0.8-as-needed.patch 3067 RMD160 ba3abefb40e3ec60ccfe261bee12af89ac8f812e SHA1 3edcae492347ff1188e1710674bf14fe4d813d46 SHA256 4f809b63b64ecb7f01c2d1e9f5d9a52c6b23a220eddff2c4fb73d69a1708e596
-MD5 a5e59776dcc3f2a25f60a389eadc8e4f files/gnome-phone-manager-0.8-as-needed.patch 3067
-RMD160 ba3abefb40e3ec60ccfe261bee12af89ac8f812e files/gnome-phone-manager-0.8-as-needed.patch 3067
-SHA256 4f809b63b64ecb7f01c2d1e9f5d9a52c6b23a220eddff2c4fb73d69a1708e596 files/gnome-phone-manager-0.8-as-needed.patch 3067
 AUX gnome-phone-manager-0.8-pixmaps.patch 430 RMD160 6a3dc59295828bcc6f9aa847a0600014f7bf37af SHA1 2b8ca784162df9cc299b17cc66bd0a6faf64517d SHA256 5cc01797818af35569697d1d57273753f355e1da5ff52034c4f73d9569a445cd
-MD5 53b18a2fc29d2a385b0b33a888896045 files/gnome-phone-manager-0.8-pixmaps.patch 430
-RMD160 6a3dc59295828bcc6f9aa847a0600014f7bf37af files/gnome-phone-manager-0.8-pixmaps.patch 430
-SHA256 5cc01797818af35569697d1d57273753f355e1da5ff52034c4f73d9569a445cd files/gnome-phone-manager-0.8-pixmaps.patch 430
 DIST gnome-phone-manager-0.20.tar.bz2 459408 RMD160 4260a0d5e18983e2401872a2cceaf471d53b969a SHA1 fc01b4cdd3c6d8ca4ad1f266761cc9cdc55cd547 SHA256 aed3d70e82ea1c778f073d888eec511ba8cd8da2020b2b0f92f473fd6517f168
 DIST gnome-phone-manager-0.30.tar.bz2 460465 RMD160 5ad55393552aa097754d5985e3757e5bdb07f2e0 SHA1 82fb743c39b05593c5a8702cbb45c43c2ed7f0c8 SHA256 44c36a912baa96214dcca03f13233daa950dfee5bad3ac78566f0b1c808c39d6
 DIST gnome-phone-manager-0.8.tar.bz2 675868 RMD160 90aa1bb270bb85c18337557f115faa74efecd9ca SHA1 939760b9f642595a6385b294a36b3eda27ed7ed4 SHA256 23381eae0c4ecfae5b759e5169c72f8057bd234f21f9b2d074432cc8c08c9456
 EBUILD gnome-phone-manager-0.20.ebuild 1183 RMD160 3dfd3bc0864799e02bdac44476bc026b6564c045 SHA1 3bba31db7fa986e7d93cb9dae2bc89cbcfc66cfa SHA256 cce7e7f87d2677f10166685ffab97551c1fe4c278e06fc91a42349f325d32850
-MD5 9d97ca3e92b41a20cdb2e945f3384310 gnome-phone-manager-0.20.ebuild 1183
-RMD160 3dfd3bc0864799e02bdac44476bc026b6564c045 gnome-phone-manager-0.20.ebuild 1183
-SHA256 cce7e7f87d2677f10166685ffab97551c1fe4c278e06fc91a42349f325d32850 gnome-phone-manager-0.20.ebuild 1183
 EBUILD gnome-phone-manager-0.30.ebuild 1183 RMD160 338f2bc04e377701f6a638b2b42f683d055907c2 SHA1 5a9fbc4440da6e4397c070cb88b8c18736869a27 SHA256 38243217b221d43ec1b418b3569e11fce1fc74d895caac8adf65ffe2e9ebd37a
-MD5 c42db80622257b30ad94e6bd7785a22b gnome-phone-manager-0.30.ebuild 1183
-RMD160 338f2bc04e377701f6a638b2b42f683d055907c2 gnome-phone-manager-0.30.ebuild 1183
-SHA256 38243217b221d43ec1b418b3569e11fce1fc74d895caac8adf65ffe2e9ebd37a gnome-phone-manager-0.30.ebuild 1183
 EBUILD gnome-phone-manager-0.8-r1.ebuild 1492 RMD160 274fc1a119901653a735b7c69c4e81ef0977ab74 SHA1 ce1e6236d45a4b06bf6edd9c1677dbec4f6bc82e SHA256 8b46af5aba5d823845582c510c01fed3d05b689716d3020648d4f0d861d32121
-MD5 681cace93a75b904184daf824758620f gnome-phone-manager-0.8-r1.ebuild 1492
-RMD160 274fc1a119901653a735b7c69c4e81ef0977ab74 gnome-phone-manager-0.8-r1.ebuild 1492
-SHA256 8b46af5aba5d823845582c510c01fed3d05b689716d3020648d4f0d861d32121 gnome-phone-manager-0.8-r1.ebuild 1492
 EBUILD gnome-phone-manager-0.8.ebuild 1124 RMD160 18e75ceda0f8e259c45d9c074e5e7019b54c8bea SHA1 18e696fadb7366c4d50680fb8dd35323223e98b1 SHA256 8c1acf160ef02aafd719af570cbfa34fb5577b1e2aea165be4656f8a4a482f32
-MD5 0e5ed608ea97eacf248e64e4ec8adef2 gnome-phone-manager-0.8.ebuild 1124
-RMD160 18e75ceda0f8e259c45d9c074e5e7019b54c8bea gnome-phone-manager-0.8.ebuild 1124
-SHA256 8c1acf160ef02aafd719af570cbfa34fb5577b1e2aea165be4656f8a4a482f32 gnome-phone-manager-0.8.ebuild 1124
 MISC ChangeLog 3559 RMD160 f8915830245096837cd0f5aaf39ff312249b5810 SHA1 be9a0ca176a968ac4d928db68ebec7dc7e827cef SHA256 5f72b34822760b81c255f03f03bd1545271e9ecf8700913debee7ff420ae68f0
-MD5 133d3c642470a912bfea669965bc9095 ChangeLog 3559
-RMD160 f8915830245096837cd0f5aaf39ff312249b5810 ChangeLog 3559
-SHA256 5f72b34822760b81c255f03f03bd1545271e9ecf8700913debee7ff420ae68f0 ChangeLog 3559
 MISC metadata.xml 735 RMD160 c4a26d0a861a02a327f9adf71e1df9b4d9aedc38 SHA1 0484199b0fb459388f1bd7531a70208a80c8c62e SHA256 6432a2d6b381e076ef9aa857b86ee4d4d76a72b81307e17267cc5c33cfb81583
-MD5 8e68d11b191a36c6430cb32308a182c4 metadata.xml 735
-RMD160 c4a26d0a861a02a327f9adf71e1df9b4d9aedc38 metadata.xml 735
-SHA256 6432a2d6b381e076ef9aa857b86ee4d4d76a72b81307e17267cc5c33cfb81583 metadata.xml 735
-MD5 27aee661061109fbf69da3b9a26a1bb3 files/digest-gnome-phone-manager-0.20 277
-RMD160 9489e6ac5e3b408ec93c8a0760067bee986d4cf5 files/digest-gnome-phone-manager-0.20 277
-SHA256 76463c22c9147d81fab524d37e226db080856a3d2db575f9d0921fc3c192ca4b files/digest-gnome-phone-manager-0.20 277
-MD5 c7e1366ba28e89056f0ee4dd84fa3433 files/digest-gnome-phone-manager-0.30 277
-RMD160 1728d6326157606f2c26739f0e2a0e8f3e82222c files/digest-gnome-phone-manager-0.30 277
-SHA256 07f1d9946af428726c0bb7b74db5b0c22617cbd17fccd92705d6a591d3f4a9df files/digest-gnome-phone-manager-0.30 277
-MD5 cc4cc9547d557176609e9f22af5f848f files/digest-gnome-phone-manager-0.8 274
-RMD160 f7eb8a0fb8ed1272bc49c9068efda2b2a92caad9 files/digest-gnome-phone-manager-0.8 274
-SHA256 fb380ea91eca43fbea352355e49071cea2e8f563d59d7f5e336e6c042730b802 files/digest-gnome-phone-manager-0.8 274
-MD5 cc4cc9547d557176609e9f22af5f848f files/digest-gnome-phone-manager-0.8-r1 274
-RMD160 f7eb8a0fb8ed1272bc49c9068efda2b2a92caad9 files/digest-gnome-phone-manager-0.8-r1 274
-SHA256 fb380ea91eca43fbea352355e49071cea2e8f563d59d7f5e336e6c042730b802 files/digest-gnome-phone-manager-0.8-r1 274
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFHOVbJNQqtfCuFneMRAuCvAKCCJjlbNwRWVtORnzPrh6WpQnBIGQCgmyBK
-BVU5GZhd+BfULmYweaCLcnw=
-=UiE/
------END PGP SIGNATURE-----
