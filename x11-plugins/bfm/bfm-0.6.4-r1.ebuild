@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/bfm-0.6.4-r1.ebuild,v 1.3 2008/01/30 14:02:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/bfm-0.6.4-r1.ebuild,v 1.4 2008/01/31 15:22:45 nixnut Exp $
 
 inherit multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.jnrowe.ukfsn.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE="gkrellm"
 
 RDEPEND=">=x11-libs/gtk+-2
