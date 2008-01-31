@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.20.3.ebuild,v 1.2 2008/01/29 16:25:16 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.20.3.ebuild,v 1.3 2008/01/31 23:25:17 eva Exp $
 EAPI="1"
 
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -120,7 +120,7 @@ RDEPEND="
 	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.20.0 )
 
 	>=gnome-extra/gtkhtml-3.16.3
-	>=mail-client/evolution-2.12.3
+	>=mail-client/evolution-2.12.2
 	>=gnome-extra/evolution-data-server-1.12.3
 	>=gnome-extra/evolution-webcal-2.12.0
 
