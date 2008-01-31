@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/jpgraph
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.27 2007/12/24 14:45:33 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.28 2008/01/31 15:13:13 nixnut Exp $
+
+  31 Jan 2008; nixnut <nixnut@gentoo.org> jpgraph-2.3.ebuild:
+  Stable on ppc wrt bug 208284
 
 *jpgraph-2.3 (24 Dec 2007)
 
