@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/monopod
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/monopod/ChangeLog,v 1.7 2008/01/27 11:57:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/monopod/ChangeLog,v 1.8 2008/01/31 13:28:32 drac Exp $
+
+  31 Jan 2008; Samuli Suominen <drac@gentoo.org> monopod-0.6.ebuild:
+  Pass --disable-ipod to stop also autodetecting, this software is unable to
+  use up to date ipod-sharp.
 
   27 Jan 2008; Samuli Suominen <drac@gentoo.org> -monopod-0.3.ebuild,
   monopod-0.6.ebuild:
