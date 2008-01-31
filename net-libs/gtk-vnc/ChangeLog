@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.4 2008/01/13 03:06:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.5 2008/01/31 06:25:37 dberkholz Exp $
+
+  31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  -gtk-vnc-0.2.0.ebuild:
+  Clean up.
 
   13 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>; gtk-vnc-0.2.0.ebuild,
   gtk-vnc-0.3.2.ebuild:
