@@ -1,53 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX rc-addon-0.1.1_pre2-r1.sh 647 RMD160 4748df1afb928c7a0384a80aad80ca543b9e6ddb SHA1 8a08cb011826f21c0b2bff8f8915ee8cd2889e74 SHA256 e08f0f84bf4863a360f37f5a46503c47ed4aead3b2ee842b08fee80196e71865
-MD5 6e1e5cbcfac947c724a13a5f39a19ff6 files/rc-addon-0.1.1_pre2-r1.sh 647
-RMD160 4748df1afb928c7a0384a80aad80ca543b9e6ddb files/rc-addon-0.1.1_pre2-r1.sh 647
-SHA256 e08f0f84bf4863a360f37f5a46503c47ed4aead3b2ee842b08fee80196e71865 files/rc-addon-0.1.1_pre2-r1.sh 647
 AUX vdr-skinelchi-0.1.1_pre2-PatchCollection-FireFly.diff 5002 RMD160 a5dac8ec644c392e991afd09fcfba2c96c40ae90 SHA1 9436ce12d0782099683054fb81e784651d01d4ef SHA256 a8c779824e774c61e9838a4be40ad6e770668ceefbdefe507686d3bcc93919ec
-MD5 3f743e1447e1938939f8885bd5d344b4 files/vdr-skinelchi-0.1.1_pre2-PatchCollection-FireFly.diff 5002
-RMD160 a5dac8ec644c392e991afd09fcfba2c96c40ae90 files/vdr-skinelchi-0.1.1_pre2-PatchCollection-FireFly.diff 5002
-SHA256 a8c779824e774c61e9838a4be40ad6e770668ceefbdefe507686d3bcc93919ec files/vdr-skinelchi-0.1.1_pre2-PatchCollection-FireFly.diff 5002
 AUX vdr-skinelchi-0.1.1_pre2-vdr-1.5.5-getfont.diff 21021 RMD160 85f15e9b8b58fcf60c562c5fa875d5597a1880d5 SHA1 22e8d5e4040e79f40c975d15237d69f226d591f4 SHA256 4b8ff84011123dc69a452161d5c8a7d20fa082978f002f946b4a5965649afff5
-MD5 0cab38a9ce052ebf47d10b0e5739ee5c files/vdr-skinelchi-0.1.1_pre2-vdr-1.5.5-getfont.diff 21021
-RMD160 85f15e9b8b58fcf60c562c5fa875d5597a1880d5 files/vdr-skinelchi-0.1.1_pre2-vdr-1.5.5-getfont.diff 21021
-SHA256 4b8ff84011123dc69a452161d5c8a7d20fa082978f002f946b4a5965649afff5 files/vdr-skinelchi-0.1.1_pre2-vdr-1.5.5-getfont.diff 21021
 DIST vdr-skinelchi-0.1.1pre2.tgz 61489 RMD160 fd28310c2b2e03b58c818b72934d66443127e8f5 SHA1 80ce3b2e00e1c03f1ce674924c98290b2385c9d3 SHA256 8a1a79bde62ad26618a8d9cab19b41b1e65443c1ffa3d919f4a899d1557918b2
 EBUILD vdr-skinelchi-0.1.1_pre2-r1.ebuild 937 RMD160 57a06fd4f7af8dcac2cc25e1b86c6e0e610fec1c SHA1 115eee7b55a537685920372411a27224af990e52 SHA256 5d3c1164618c4e4162ded952e13032d419a98611c7cc7331a482db0da8cf3d70
-MD5 1faff83eda52171e8a4a15ded44f3f7e vdr-skinelchi-0.1.1_pre2-r1.ebuild 937
-RMD160 57a06fd4f7af8dcac2cc25e1b86c6e0e610fec1c vdr-skinelchi-0.1.1_pre2-r1.ebuild 937
-SHA256 5d3c1164618c4e4162ded952e13032d419a98611c7cc7331a482db0da8cf3d70 vdr-skinelchi-0.1.1_pre2-r1.ebuild 937
 EBUILD vdr-skinelchi-0.1.1_pre2-r2.ebuild 944 RMD160 25fd65bfc5ecb17e9842d0ae6556d903caa45225 SHA1 46a16fafb3c8f5946e09c2d89f24eb9b9088e9ce SHA256 0b5492220db2e1e0b1c9f28e6fa3475c4413ea8607402e439c46cd04cba08fe7
-MD5 228744bbb815128835267eef85c5401b vdr-skinelchi-0.1.1_pre2-r2.ebuild 944
-RMD160 25fd65bfc5ecb17e9842d0ae6556d903caa45225 vdr-skinelchi-0.1.1_pre2-r2.ebuild 944
-SHA256 0b5492220db2e1e0b1c9f28e6fa3475c4413ea8607402e439c46cd04cba08fe7 vdr-skinelchi-0.1.1_pre2-r2.ebuild 944
 EBUILD vdr-skinelchi-0.1.1_pre2-r3.ebuild 1154 RMD160 6645c62bddb920f9a11efd2ee5df407a0d107e0e SHA1 c18b76867cdad7c1ffdc72ee215044be29e81361 SHA256 1f01dd8ed4dfbde52308ab0c8445e7829f3e21fe32b292dfc5cfa4e33aa5cf6e
-MD5 cc83cd67e584758f148f231f77af5125 vdr-skinelchi-0.1.1_pre2-r3.ebuild 1154
-RMD160 6645c62bddb920f9a11efd2ee5df407a0d107e0e vdr-skinelchi-0.1.1_pre2-r3.ebuild 1154
-SHA256 1f01dd8ed4dfbde52308ab0c8445e7829f3e21fe32b292dfc5cfa4e33aa5cf6e vdr-skinelchi-0.1.1_pre2-r3.ebuild 1154
 MISC ChangeLog 3457 RMD160 f4e60f1e9c3f75ab00bb06333b6ea7677aa780fa SHA1 a29629be82752640c844f670d8c1cae6d5c249cd SHA256 6b222e1758df95739304169c6eabb38158c405a40e328cc56ba4f4e2383ab871
-MD5 27777d8a3af702fade1755186d79e765 ChangeLog 3457
-RMD160 f4e60f1e9c3f75ab00bb06333b6ea7677aa780fa ChangeLog 3457
-SHA256 6b222e1758df95739304169c6eabb38158c405a40e328cc56ba4f4e2383ab871 ChangeLog 3457
 MISC metadata.xml 335 RMD160 eb5fcf03c21510453d995cce8ee8f8a6324e6545 SHA1 e8105cf5fdbf0be508311933b8e34db224e9bc51 SHA256 f8790d655b9660f52dfddc7d5785248a334bae37ef607c6b87f50ed597e76573
-MD5 343b9bd95a96c7fa0ca6a4a71f530168 metadata.xml 335
-RMD160 eb5fcf03c21510453d995cce8ee8f8a6324e6545 metadata.xml 335
-SHA256 f8790d655b9660f52dfddc7d5785248a334bae37ef607c6b87f50ed597e76573 metadata.xml 335
-MD5 26855a8b69da9a867d2d10a2f155f16d files/digest-vdr-skinelchi-0.1.1_pre2-r1 259
-RMD160 a93f6a2c6666934c564c444ccbd5fb6c1f742a19 files/digest-vdr-skinelchi-0.1.1_pre2-r1 259
-SHA256 74cce77aa57c86fab3e9335c8c40fa0c10c9154f9d7a9928d5050d68a955b906 files/digest-vdr-skinelchi-0.1.1_pre2-r1 259
-MD5 26855a8b69da9a867d2d10a2f155f16d files/digest-vdr-skinelchi-0.1.1_pre2-r2 259
-RMD160 a93f6a2c6666934c564c444ccbd5fb6c1f742a19 files/digest-vdr-skinelchi-0.1.1_pre2-r2 259
-SHA256 74cce77aa57c86fab3e9335c8c40fa0c10c9154f9d7a9928d5050d68a955b906 files/digest-vdr-skinelchi-0.1.1_pre2-r2 259
-MD5 26855a8b69da9a867d2d10a2f155f16d files/digest-vdr-skinelchi-0.1.1_pre2-r3 259
-RMD160 a93f6a2c6666934c564c444ccbd5fb6c1f742a19 files/digest-vdr-skinelchi-0.1.1_pre2-r3 259
-SHA256 74cce77aa57c86fab3e9335c8c40fa0c10c9154f9d7a9928d5050d68a955b906 files/digest-vdr-skinelchi-0.1.1_pre2-r3 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-Comment: added by hd_brummy@gentoo.org
-
-iD8DBQFHPrj3dn07HTTCgIoRAmyaAKCDSFvdnLbodDQSQVW4YcLLzQsDdgCfUSLy
-DhCOgOiv9vCbs7dYIDqaGT8=
-=Ec1X
------END PGP SIGNATURE-----

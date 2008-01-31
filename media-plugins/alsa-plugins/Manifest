@@ -1,77 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX 1.0.14_rc3-gcd.h 1567 RMD160 23b2bd9c9d6cb35e60d5bc56a95a58e6de4c6935 SHA1 e06b6cf70e63d3600de36b6287dcbe85702f4764 SHA256 7a46d8751b1f6bfe0c44b1a62d68452d2c8f4283af00e56e4b97af77d0ce47a1
-MD5 57c33c0b6c18185b1413e9b95e3d6d30 files/1.0.14_rc3-gcd.h 1567
-RMD160 23b2bd9c9d6cb35e60d5bc56a95a58e6de4c6935 files/1.0.14_rc3-gcd.h 1567
-SHA256 7a46d8751b1f6bfe0c44b1a62d68452d2c8f4283af00e56e4b97af77d0ce47a1 files/1.0.14_rc3-gcd.h 1567
 AUX alsa-plugins-1.0.11-automagic.patch 2387 RMD160 7ba1283bd2ac8c94b690db18ed80f2154df4e755 SHA1 fd6242d06959e20ecf4f69dabefd0f29e2fe192c SHA256 ce8a8a7de749167dce31008283045548077fc8a29704ab7742071e7deff87d39
-MD5 11501a02f6428eb443cb507593790efd files/alsa-plugins-1.0.11-automagic.patch 2387
-RMD160 7ba1283bd2ac8c94b690db18ed80f2154df4e755 files/alsa-plugins-1.0.11-automagic.patch 2387
-SHA256 ce8a8a7de749167dce31008283045548077fc8a29704ab7742071e7deff87d39 files/alsa-plugins-1.0.11-automagic.patch 2387
 AUX alsa-plugins-1.0.12-automagic.patch 2414 RMD160 bef06a60e3a97d3a672df70314113e7d35a159fc SHA1 93a44aa404869de2f6966a18b0b9f614e56dfdd1 SHA256 95d0bf84d68d2c8452b926d9dba4bf7a0c35c107b850d05dc78df6e9d7de29e0
-MD5 de22c1807fab5042d487c2c8c23d8198 files/alsa-plugins-1.0.12-automagic.patch 2414
-RMD160 bef06a60e3a97d3a672df70314113e7d35a159fc files/alsa-plugins-1.0.12-automagic.patch 2414
-SHA256 95d0bf84d68d2c8452b926d9dba4bf7a0c35c107b850d05dc78df6e9d7de29e0 files/alsa-plugins-1.0.12-automagic.patch 2414
 AUX alsa-plugins-1.0.14_rc1-automagic.patch 2892 RMD160 46c8541aa738d7f1b78c07318bc26bb7739020f2 SHA1 ad5ff0d6c6eb807ce06d71d2dff2600877bc3ac6 SHA256 04a820b2c2a0ce7c518fceafa290965b9caec62a6293938b74c1c828080f2ce0
-MD5 903355c77eb3b9e47cdd95e4f6acdff2 files/alsa-plugins-1.0.14_rc1-automagic.patch 2892
-RMD160 46c8541aa738d7f1b78c07318bc26bb7739020f2 files/alsa-plugins-1.0.14_rc1-automagic.patch 2892
-SHA256 04a820b2c2a0ce7c518fceafa290965b9caec62a6293938b74c1c828080f2ce0 files/alsa-plugins-1.0.14_rc1-automagic.patch 2892
 AUX alsa-plugins-1.0.14_rc1-init-ffmpeg.patch 393 RMD160 2c39a3bc0860cebd86542f3afe60f061146b4efa SHA1 ac1839723063fcf3286d1ddf1bd291ba6c0b1220 SHA256 6dfabe2b373e702ebd617754e4a4a32d4fccd1e35c47b280136fe49c2faa8b1e
-MD5 c85ba95999a4ccdbcebb53163b5dc4a4 files/alsa-plugins-1.0.14_rc1-init-ffmpeg.patch 393
-RMD160 2c39a3bc0860cebd86542f3afe60f061146b4efa files/alsa-plugins-1.0.14_rc1-init-ffmpeg.patch 393
-SHA256 6dfabe2b373e702ebd617754e4a4a32d4fccd1e35c47b280136fe49c2faa8b1e files/alsa-plugins-1.0.14_rc1-init-ffmpeg.patch 393
 DIST alsa-plugins-1.0.13.tar.bz2 230257 RMD160 c13fef547fc29bb2f7fd60e3a962e4c299cf677a SHA1 5c8c36516fe234e93c858ac640a815c1b6dcd32a SHA256 9a1a68f13e00400a2f8b7fe77c33d715b4a048931908d7c8c082adaf55c207a0
 DIST alsa-plugins-1.0.14.tar.bz2 305631 RMD160 3e13375caf25909a08d8683ebff1025743c0ee03 SHA1 a983bc6b0398d0bbd6b8c474efb50d1f466d1acd SHA256 c897b1bdec8a392ce4420e5f35d9e559787011c84f2214a27dae43b74dad1638
 DIST alsa-plugins-1.0.14rc1a.tar.bz2 253102 RMD160 94c868b1e94159fae20f82d8a7e384370ca0c347 SHA1 9a23e8ba2e911bfb06a45cdd4989a1e4ef891e0f SHA256 b9109ec30746fa3532f674f0aeb7a9d2629650aad46bc7124d2b54533e8a322b
 DIST alsa-plugins-1.0.15.tar.bz2 306676 RMD160 8064f45f5ffeb24a0e70b0465ba1c15837744133 SHA1 513ce4035bd4bd95f1e2d125aab567be53160d72 SHA256 3fec2349a94254c82dd568a8f4f8b8ef9735aee7dc56a5cf93e80f5938df9e95
 EBUILD alsa-plugins-1.0.13.ebuild 1780 RMD160 f77c031d4e1620be5bd67f5b47d639cba76388d3 SHA1 2dbe5f5ae4303d974092ffafebf774453600ab8c SHA256 1643da5a7127eb348ccb9acae05feba76ab378011271ec7e822587bfd86f2011
-MD5 7a8e5076fec65d37ab2a858c8016464a alsa-plugins-1.0.13.ebuild 1780
-RMD160 f77c031d4e1620be5bd67f5b47d639cba76388d3 alsa-plugins-1.0.13.ebuild 1780
-SHA256 1643da5a7127eb348ccb9acae05feba76ab378011271ec7e822587bfd86f2011 alsa-plugins-1.0.13.ebuild 1780
 EBUILD alsa-plugins-1.0.14-r1.ebuild 2188 RMD160 f8278c8850e0e6fe33ebe54c7f3875f1e9a17466 SHA1 2baffffe9cf466ba85282e67c840dec037ba62c5 SHA256 15d97e8c821b63515de1cbcc86ed3b234385946b4e766ff90140ed3ef2d01a15
-MD5 fb07e62c347362e144ceaf3c6fa3202b alsa-plugins-1.0.14-r1.ebuild 2188
-RMD160 f8278c8850e0e6fe33ebe54c7f3875f1e9a17466 alsa-plugins-1.0.14-r1.ebuild 2188
-SHA256 15d97e8c821b63515de1cbcc86ed3b234385946b4e766ff90140ed3ef2d01a15 alsa-plugins-1.0.14-r1.ebuild 2188
 EBUILD alsa-plugins-1.0.14.ebuild 2128 RMD160 0d3ce9958b22dbea2f92dbb88b62472642c889bc SHA1 cee06efdf884d9985edc5c768686fb84ee20321f SHA256 a365cd87eed5e55835aed983cf1f47251d793024d3255afd5785d6ca6d62458d
-MD5 73290162d508e532412c2e5d0546d04c alsa-plugins-1.0.14.ebuild 2128
-RMD160 0d3ce9958b22dbea2f92dbb88b62472642c889bc alsa-plugins-1.0.14.ebuild 2128
-SHA256 a365cd87eed5e55835aed983cf1f47251d793024d3255afd5785d6ca6d62458d alsa-plugins-1.0.14.ebuild 2128
 EBUILD alsa-plugins-1.0.14_rc1-r1.ebuild 1974 RMD160 3d49e987e642b26cf763dd0a91832ab581e7d445 SHA1 708121f1015271938fe25b5d1eb8aa0cc2df80d9 SHA256 6935e80d6ccaaf04e12287905fb5f3017e5d9b77a5205f71add9737ef16eca6f
-MD5 c2fc676a7492b2123c269a9cf5de4931 alsa-plugins-1.0.14_rc1-r1.ebuild 1974
-RMD160 3d49e987e642b26cf763dd0a91832ab581e7d445 alsa-plugins-1.0.14_rc1-r1.ebuild 1974
-SHA256 6935e80d6ccaaf04e12287905fb5f3017e5d9b77a5205f71add9737ef16eca6f alsa-plugins-1.0.14_rc1-r1.ebuild 1974
 EBUILD alsa-plugins-1.0.15.ebuild 2185 RMD160 3389c1ebbad1bd2e2a5e9b25bd895c0ca885fc6b SHA1 814347e456cf4f923a7c4d717a4659aa5fcd672c SHA256 bbea051f98ae1f8078e51d728cce0fc0ee4a3d2e211c7a6cd97fd1edb573242a
-MD5 a2f953cd1e96d3d81c1d6bdbe9390f62 alsa-plugins-1.0.15.ebuild 2185
-RMD160 3389c1ebbad1bd2e2a5e9b25bd895c0ca885fc6b alsa-plugins-1.0.15.ebuild 2185
-SHA256 bbea051f98ae1f8078e51d728cce0fc0ee4a3d2e211c7a6cd97fd1edb573242a alsa-plugins-1.0.15.ebuild 2185
 MISC ChangeLog 10105 RMD160 49a4c639a264a1b20e49aebbd81dd70ca4ef0516 SHA1 7bd2ee196e097a254d210507f81ba8368d37c4e6 SHA256 4215fe627b1266606123ff43cac57ed39fed9117d8969fabff05789dfd0d95b6
-MD5 7b25e044a2d59f4fdf462c253a3bbcb8 ChangeLog 10105
-RMD160 49a4c639a264a1b20e49aebbd81dd70ca4ef0516 ChangeLog 10105
-SHA256 4215fe627b1266606123ff43cac57ed39fed9117d8969fabff05789dfd0d95b6 ChangeLog 10105
 MISC metadata.xml 220 RMD160 e49f8bb330d1798cd2c8ee5335cef1784f0d7ccb SHA1 1b895fe6cae4b8eab08ba1a6a1212baf4b4b4105 SHA256 8570ef11cd59b0d8edb71e78eecaec423616836b10eacb86bee0de941f0ae054
-MD5 7c52acc7d4fe40bac97d3198a43dcbd6 metadata.xml 220
-RMD160 e49f8bb330d1798cd2c8ee5335cef1784f0d7ccb metadata.xml 220
-SHA256 8570ef11cd59b0d8edb71e78eecaec423616836b10eacb86bee0de941f0ae054 metadata.xml 220
-MD5 391365eaa948436792d6f9fec10395df files/digest-alsa-plugins-1.0.13 262
-RMD160 d798b43243893bedf255fb2a01881a9acb856342 files/digest-alsa-plugins-1.0.13 262
-SHA256 2b594d9cf70f24ecde16e8490847dcfb6af2d0798118499a70ca8dd121d0e5da files/digest-alsa-plugins-1.0.13 262
-MD5 e59887ab0259a809cb1040cb0beee746 files/digest-alsa-plugins-1.0.14 262
-RMD160 208fe76b573fdae7e4cbba691db3e4ed5d9e8b14 files/digest-alsa-plugins-1.0.14 262
-SHA256 08f6ef53a91237386a5604d76cf53cc2217c6603b55227d14ad53e44bcc3a5db files/digest-alsa-plugins-1.0.14 262
-MD5 e59887ab0259a809cb1040cb0beee746 files/digest-alsa-plugins-1.0.14-r1 262
-RMD160 208fe76b573fdae7e4cbba691db3e4ed5d9e8b14 files/digest-alsa-plugins-1.0.14-r1 262
-SHA256 08f6ef53a91237386a5604d76cf53cc2217c6603b55227d14ad53e44bcc3a5db files/digest-alsa-plugins-1.0.14-r1 262
-MD5 b9da0eb6c825f1335da114643e86019e files/digest-alsa-plugins-1.0.14_rc1-r1 274
-RMD160 065fb23936a36039c9fea104769307ed86a5ee5c files/digest-alsa-plugins-1.0.14_rc1-r1 274
-SHA256 312aabedc10ebec429bc2e873989bbc3be013f3761a9f6cbb786a1f0ba5b42cd files/digest-alsa-plugins-1.0.14_rc1-r1 274
-MD5 3d4199a124e981c85291b75aea986068 files/digest-alsa-plugins-1.0.15 262
-RMD160 3ab9750da737725ad832247cd7aec73d428f887a files/digest-alsa-plugins-1.0.15 262
-SHA256 7e88b7f7501e3154017c4dd83836358528404d465f0c624251787c4ae1bf0af7 files/digest-alsa-plugins-1.0.15 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.8 (GNU/Linux)
-
-iEYEARECAAYFAkeF6qgACgkQj9hvisErhMJHugCguj6gpFHK9M/0F0m6N9lfZiEj
-8RMAoOy1Vscw8oKQnLzUoWrX9c3U1tl0
-=30z/
------END PGP SIGNATURE-----

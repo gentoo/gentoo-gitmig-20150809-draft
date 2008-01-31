@@ -1,42 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX audacious-g15-spectrum-1.0_pre-audacious-1.3.patch 975 RMD160 cb3dd26ea3ccaa3165a14078a8da9b97e1725bfe SHA1 6f09b42788818cb076d81d996c2eb7713ac360e0 SHA256 d1496ced831da91952881b3451f51370e65baf30eb0c94e41bf37dc034830c3b
-MD5 c00ed034e7cec6c88875993366c5a759 files/audacious-g15-spectrum-1.0_pre-audacious-1.3.patch 975
-RMD160 cb3dd26ea3ccaa3165a14078a8da9b97e1725bfe files/audacious-g15-spectrum-1.0_pre-audacious-1.3.patch 975
-SHA256 d1496ced831da91952881b3451f51370e65baf30eb0c94e41bf37dc034830c3b files/audacious-g15-spectrum-1.0_pre-audacious-1.3.patch 975
 AUX audacious-g15-spectrum-2.5.2-audacious-1.4.patch 6241 RMD160 ba585c930fa43d9608d21e3590b3cc5a47e47ef9 SHA1 7eb62e426e75d4bbf6d4b7c7d05f91fc10106d8c SHA256 af81edd6730764bcb9612f50e8790268692ba080aeda98ccd98d3a8732285878
-MD5 e529face8f58f753d4af1b8978c8a7c1 files/audacious-g15-spectrum-2.5.2-audacious-1.4.patch 6241
-RMD160 ba585c930fa43d9608d21e3590b3cc5a47e47ef9 files/audacious-g15-spectrum-2.5.2-audacious-1.4.patch 6241
-SHA256 af81edd6730764bcb9612f50e8790268692ba080aeda98ccd98d3a8732285878 files/audacious-g15-spectrum-2.5.2-audacious-1.4.patch 6241
 DIST g15daemon-audacious-2.5.2.tar.bz2 234010 RMD160 9effb50b03ed7e4652cdff46dd48a979fce1a1ee SHA1 6c2be4e7c70a30d8270ef8ed989dadd19c66e53e SHA256 be2065b2fded807632e1ca3f0b19de70d8beebf38bad8a88cd9b44e4e8a6f956
 DIST g15daemon_audacious_spectrum-1.0pre.tar.bz2 222311 RMD160 1b714dc3ccef503e1b66de12b8b03b0085e0e11d SHA1 b25b92bdf6c99c8984ae1569028c67d3f1405738 SHA256 738ee693da0b7dfdd9bbc337ffe4173a05fda2cac2b8bfde5cc7b098f461eb5b
 EBUILD audacious-g15-spectrum-1.0_pre.ebuild 1002 RMD160 78934b38c0f0c5e336004a0bb06e4cac36173e2d SHA1 149aaabae034d7e5053d48dfeabaf2b19c3b368e SHA256 bf99da937906d27e80849dd6626ae9fd4529709b5dcf5c07b5462816cd2f6420
-MD5 9482833c84a175f4028cf37f41423d72 audacious-g15-spectrum-1.0_pre.ebuild 1002
-RMD160 78934b38c0f0c5e336004a0bb06e4cac36173e2d audacious-g15-spectrum-1.0_pre.ebuild 1002
-SHA256 bf99da937906d27e80849dd6626ae9fd4529709b5dcf5c07b5462816cd2f6420 audacious-g15-spectrum-1.0_pre.ebuild 1002
 EBUILD audacious-g15-spectrum-2.5.2.ebuild 1004 RMD160 42d6970746b5045d02a09a8772552e64e27e1e75 SHA1 c1b82f057f96a09b7f2314560361252e02740354 SHA256 635c303fc0628667373efde132f1bc5c39b54c0f3c2a793a7af3383b8a3cc7d8
-MD5 901999e60b338851218d70d0571a7fba audacious-g15-spectrum-2.5.2.ebuild 1004
-RMD160 42d6970746b5045d02a09a8772552e64e27e1e75 audacious-g15-spectrum-2.5.2.ebuild 1004
-SHA256 635c303fc0628667373efde132f1bc5c39b54c0f3c2a793a7af3383b8a3cc7d8 audacious-g15-spectrum-2.5.2.ebuild 1004
 MISC ChangeLog 1145 RMD160 df42cf1dcaf979b0c40d49f51b022333ccedd75f SHA1 509a71dffd4cd05641990ce050d6866248c51bc4 SHA256 311eba0895e1eed01301d41cc0d0fefd80233380c96ee38375eb6e1c4f179c40
-MD5 9426380a3ce5d1c794514394caf2fe8e ChangeLog 1145
-RMD160 df42cf1dcaf979b0c40d49f51b022333ccedd75f ChangeLog 1145
-SHA256 311eba0895e1eed01301d41cc0d0fefd80233380c96ee38375eb6e1c4f179c40 ChangeLog 1145
 MISC metadata.xml 249 RMD160 f108edee61c95c42d98726b435b75d03cbbd4aac SHA1 48461481dfc5a9d1f5b4726a5e9882a2fb966ede SHA256 1dc990d64e5b42c9b17d7358c9f0af7d26702f575957482d93c8fd12a556cc11
-MD5 5c2a70625109d5bd093ae8d0588931f1 metadata.xml 249
-RMD160 f108edee61c95c42d98726b435b75d03cbbd4aac metadata.xml 249
-SHA256 1dc990d64e5b42c9b17d7358c9f0af7d26702f575957482d93c8fd12a556cc11 metadata.xml 249
-MD5 6b90f473d841dd94c0a7460d27a0d60e files/digest-audacious-g15-spectrum-1.0_pre 310
-RMD160 6e55083df0836ff4190e8e2a77d4322cf715790f files/digest-audacious-g15-spectrum-1.0_pre 310
-SHA256 8a0775ef97928517db681d0935e5cbc55fc7b2e23a44cbca6b7241a4bceb8ce2 files/digest-audacious-g15-spectrum-1.0_pre 310
-MD5 fe4b8f05fb9790f7c6dcda1a755137c9 files/digest-audacious-g15-spectrum-2.5.2 280
-RMD160 960202a4f6a0ad17633cbcf588b1dea09c23bf97 files/digest-audacious-g15-spectrum-2.5.2 280
-SHA256 f1a5465ab09f6532c425086a01f9681928cdfff43ae2ab9e5cdeee13f3c3b1f1 files/digest-audacious-g15-spectrum-2.5.2 280
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHkJQ/p5vW4rUFj5oRAtQAAKCuywXtYD7wHDRd6Zd0geZdrjTtQQCgsDkg
-7NTLWolKaDal4m3NhyEO9ZA=
-=ULdf
------END PGP SIGNATURE-----

@@ -1,93 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX confd 431 RMD160 14e9370497da9ff23e81a315dd92985e4fb861c3 SHA1 f58d4504300662d6a00324091c5d2e22f9f1feb2 SHA256 5a82e32365ff3c77dfdad50884be7ae6f7d5f54e249c69308fc041cdce61290e
-MD5 dacfaa95c10d3b9ae3c1e08ff04dcc65 files/confd 431
-RMD160 14e9370497da9ff23e81a315dd92985e4fb861c3 files/confd 431
-SHA256 5a82e32365ff3c77dfdad50884be7ae6f7d5f54e249c69308fc041cdce61290e files/confd 431
 AUX patches-0.4.0/new-ffmpeg-extern-c.diff 1526 RMD160 ff074327176d72b3e65b7f5f61c615c196d95d6d SHA1 0293a877b0c03012be2e246e1f91fd06c1cb17ec SHA256 4840b91d58672a9f98a04d84fa68e5e74baab9728f31907ab47a55cdfd9d06b0
-MD5 7bf1216f21e700d544bc8b10eba5fdc8 files/patches-0.4.0/new-ffmpeg-extern-c.diff 1526
-RMD160 ff074327176d72b3e65b7f5f61c615c196d95d6d files/patches-0.4.0/new-ffmpeg-extern-c.diff 1526
-SHA256 4840b91d58672a9f98a04d84fa68e5e74baab9728f31907ab47a55cdfd9d06b0 files/patches-0.4.0/new-ffmpeg-extern-c.diff 1526
 AUX patches-0.4.0/series 76 RMD160 01bec4d6bd0cb5f0d7b357cbd316ee7809b65162 SHA1 8b5e5e9bb9679308a4ecfeba1d4e2456d9c27758 SHA256 c3e0c3e9bd003abfea03fff629e339c95a9bd3a9ddeb1e29a6fbacd532c5b1ed
-MD5 6a027316719c2088e0e3abc16289c722 files/patches-0.4.0/series 76
-RMD160 01bec4d6bd0cb5f0d7b357cbd316ee7809b65162 files/patches-0.4.0/series 76
-SHA256 c3e0c3e9bd003abfea03fff629e339c95a9bd3a9ddeb1e29a6fbacd532c5b1ed files/patches-0.4.0/series 76
 AUX patches-0.4.0/shm-fullscreen-parameter.diff 737 RMD160 b09e27d40bc733b05ed2f01d3026e37671ef9bea SHA1 93da236176add5a323737ea845054f2964188451 SHA256 2665dd3d2e6059ec61ad8707af7f2b532485d49c8771f5875e0343a7325b48eb
-MD5 153b382d28f33fe46a3a6a52db33d89c files/patches-0.4.0/shm-fullscreen-parameter.diff 737
-RMD160 b09e27d40bc733b05ed2f01d3026e37671ef9bea files/patches-0.4.0/shm-fullscreen-parameter.diff 737
-SHA256 2665dd3d2e6059ec61ad8707af7f2b532485d49c8771f5875e0343a7325b48eb files/patches-0.4.0/shm-fullscreen-parameter.diff 737
 AUX patches-0.4.0/shm-init-setupStore.diff 1241 RMD160 887c2173a3ce9bae7fb50d0715f7934264dd7c68 SHA1 b11a9ed2e52bbc69c9213009a796f5694240c42f SHA256 228f11c303981d02e1ea31d4d1bc2d74245f7a361bb6c15e25f578e415fab385
-MD5 c6313688772a7da3c8075ed6efd92a2f files/patches-0.4.0/shm-init-setupStore.diff 1241
-RMD160 887c2173a3ce9bae7fb50d0715f7934264dd7c68 files/patches-0.4.0/shm-init-setupStore.diff 1241
-SHA256 228f11c303981d02e1ea31d4d1bc2d74245f7a361bb6c15e25f578e415fab385 files/patches-0.4.0/shm-init-setupStore.diff 1241
 AUX patches-0.4.0/stream-repacker.diff 2440 RMD160 0e0e7ffbf31f1b28918d623315f5a110a4025977 SHA1 2b4a7810b93240b5121c843d80d66572a7ff6d1b SHA256 2f2b86f7b0a1abcf3b8639a3b23fcf8450ca0b16928e9e069b3857004d1bff21
-MD5 247b27223732eb49da6138caba40af2a files/patches-0.4.0/stream-repacker.diff 2440
-RMD160 0e0e7ffbf31f1b28918d623315f5a110a4025977 files/patches-0.4.0/stream-repacker.diff 2440
-SHA256 2f2b86f7b0a1abcf3b8639a3b23fcf8450ca0b16928e9e069b3857004d1bff21 files/patches-0.4.0/stream-repacker.diff 2440
 AUX rc-addon.sh 321 RMD160 b236a3ce160d66fd4b25ad8fe4239cbbe5cb0843 SHA1 02c5f2efad7a8a3a687d79dee998a3fffb0018ea SHA256 d6eaa97c313fca31920f7bcc6d060c3dac9c4ee2624bfff4b0c59fa4ff91153d
-MD5 26cfa3f4b7bc6686fd5de981b896e7da files/rc-addon.sh 321
-RMD160 b236a3ce160d66fd4b25ad8fe4239cbbe5cb0843 files/rc-addon.sh 321
-SHA256 d6eaa97c313fca31920f7bcc6d060c3dac9c4ee2624bfff4b0c59fa4ff91153d files/rc-addon.sh 321
 AUX vdr-softdevice-0.2.3-shm-fullscreen.diff 826 RMD160 d1ad20ec5c3d4c8e9e20270f205f09cd984b71a9 SHA1 5caf77a611c3c451416aa7b039ba5d78d8cda261 SHA256 911c00fd9c088a3186059c2b757ea3620dcd27dc20ee842ce326d1970704dfd3
-MD5 d0ae5751f6fa561827220f66631f3c7b files/vdr-softdevice-0.2.3-shm-fullscreen.diff 826
-RMD160 d1ad20ec5c3d4c8e9e20270f205f09cd984b71a9 files/vdr-softdevice-0.2.3-shm-fullscreen.diff 826
-SHA256 911c00fd9c088a3186059c2b757ea3620dcd27dc20ee842ce326d1970704dfd3 files/vdr-softdevice-0.2.3-shm-fullscreen.diff 826
 AUX vdr-softdevice-0.3.1-osdmode-software-default.diff 537 RMD160 b6266883351086f04ff65ff8b3253b0d7c2d9bbf SHA1 c047edc3b3d4f65d9e3a47e2259ccbf2aba63d52 SHA256 e9203e71ca046db87c710a1f51ec4825032a3e0214cd91b2fa96ba6790beddaa
-MD5 01d453f0e9df9d4c45a0a5b00621f9ab files/vdr-softdevice-0.3.1-osdmode-software-default.diff 537
-RMD160 b6266883351086f04ff65ff8b3253b0d7c2d9bbf files/vdr-softdevice-0.3.1-osdmode-software-default.diff 537
-SHA256 e9203e71ca046db87c710a1f51ec4825032a3e0214cd91b2fa96ba6790beddaa files/vdr-softdevice-0.3.1-osdmode-software-default.diff 537
 AUX vdr-softdevice-0.4.0-xinerama-configure-opts.patch 787 RMD160 13bfd161b68372ccc3a5ea3b777d0d5e4a59da9f SHA1 ab65432f810ddd2fa3b9251f5a565c7937fc0be1 SHA256 541d3ff037d2c8ebcfca5873d551ff91e2618e8d551317a0497b6138c8b8af1d
-MD5 b42d231deef6ec5dc17e1a85e22f5b6e files/vdr-softdevice-0.4.0-xinerama-configure-opts.patch 787
-RMD160 13bfd161b68372ccc3a5ea3b777d0d5e4a59da9f files/vdr-softdevice-0.4.0-xinerama-configure-opts.patch 787
-SHA256 541d3ff037d2c8ebcfca5873d551ff91e2618e8d551317a0497b6138c8b8af1d files/vdr-softdevice-0.4.0-xinerama-configure-opts.patch 787
 AUX vdr-softdevice-20070711-vdr-1.5.9.diff 1902 RMD160 0f92a226eb7c176bd799bbbf933a657c5e3a1222 SHA1 0679b5738f3680f51f4081c5a4189a7753ae2d17 SHA256 d4380a425d79068f50b9acf81c7c1e187274b405e1c8f43cba3fafbb2d159027
-MD5 4d6ac67d7c43c1950c354c8fb2acab4f files/vdr-softdevice-20070711-vdr-1.5.9.diff 1902
-RMD160 0f92a226eb7c176bd799bbbf933a657c5e3a1222 files/vdr-softdevice-20070711-vdr-1.5.9.diff 1902
-SHA256 d4380a425d79068f50b9acf81c7c1e187274b405e1c8f43cba3fafbb2d159027 files/vdr-softdevice-20070711-vdr-1.5.9.diff 1902
 DIST vdr-softdevice-0.4.0.tgz 190505 RMD160 78c49568776b71d3b892de8cdc7406f31fd90115 SHA1 0949d6727011ebd0ed0947d9906d081bbe4d2162 SHA256 4a43426e03a36771bce272123d2b3a0a7dc5aac05b98277a985ba277e3c0b9c9
 DIST vdr-softdevice-cvs-20070711.tar.bz2 152000 RMD160 23be2f95bbb3e4d649a3ade799c443c579f80b84 SHA1 07ee85a8168bea9a9aace5018910f9672802dfb6 SHA256 6c869ae0c86fe42a24f767c40f538d07f70806474d7851643870b3a778b68c1a
 DIST vdr-softdevice-cvs-20080120.tar.bz2 154349 RMD160 0b9b69aafb5855757c199e04852ccde5a7c43529 SHA1 aff47780abc6e2ff3093e4c165ee525f10306e39 SHA256 267c7ded33944902f495012de04020ee6df209e661cba9e640a36460f6b6ca73
 EBUILD vdr-softdevice-0.4.0.20070711-r1.ebuild 3805 RMD160 c1a94052f9e6e8dcfb3cf4de4df7eec565ac9aed SHA1 368bba0b0fb3bf4309b72cb9d838f9e64d1316d6 SHA256 a005e52323aad477987a613d9b812508dda2903e8a71650fdd9f15e00b76cba2
-MD5 3faa16ea907790c656b3bebeb883c3e8 vdr-softdevice-0.4.0.20070711-r1.ebuild 3805
-RMD160 c1a94052f9e6e8dcfb3cf4de4df7eec565ac9aed vdr-softdevice-0.4.0.20070711-r1.ebuild 3805
-SHA256 a005e52323aad477987a613d9b812508dda2903e8a71650fdd9f15e00b76cba2 vdr-softdevice-0.4.0.20070711-r1.ebuild 3805
 EBUILD vdr-softdevice-0.4.0.20070711.ebuild 3550 RMD160 cf4ca212a829d960102777a3b35e790b67f5381a SHA1 13eaab21da3aaac4abb10c7e04f541341bed9c3e SHA256 7f60ef21394ca9e01801062ec6eb6a4f65928015f33af4b00e3e0ae8d2a1741a
-MD5 719058273634f40b56f5812db13954e2 vdr-softdevice-0.4.0.20070711.ebuild 3550
-RMD160 cf4ca212a829d960102777a3b35e790b67f5381a vdr-softdevice-0.4.0.20070711.ebuild 3550
-SHA256 7f60ef21394ca9e01801062ec6eb6a4f65928015f33af4b00e3e0ae8d2a1741a vdr-softdevice-0.4.0.20070711.ebuild 3550
 EBUILD vdr-softdevice-0.4.0.20080120.ebuild 3546 RMD160 81266266b38b032bf39b64ee708bafa4f5390503 SHA1 88bc411fa07ee43918cc161661801b9a4f933898 SHA256 5b8b1077ed16cfd166460a1de649937d911e7e98c174e6dd6b2de5352c99bfe7
-MD5 d5a65d387528d738d6a43a294d97b30a vdr-softdevice-0.4.0.20080120.ebuild 3546
-RMD160 81266266b38b032bf39b64ee708bafa4f5390503 vdr-softdevice-0.4.0.20080120.ebuild 3546
-SHA256 5b8b1077ed16cfd166460a1de649937d911e7e98c174e6dd6b2de5352c99bfe7 vdr-softdevice-0.4.0.20080120.ebuild 3546
 EBUILD vdr-softdevice-0.4.0.ebuild 3587 RMD160 e716fe032ba49013921428d2a6b6a749777c7f17 SHA1 76c3369ae123b27becd8a5604c60113fef8d3477 SHA256 05c2d060e19f0e10b9f8e0864a777a869936406a9e2eb8c0b094a5f1bbc749c0
-MD5 180a9eee9cc0b244d82a23144b4295dd vdr-softdevice-0.4.0.ebuild 3587
-RMD160 e716fe032ba49013921428d2a6b6a749777c7f17 vdr-softdevice-0.4.0.ebuild 3587
-SHA256 05c2d060e19f0e10b9f8e0864a777a869936406a9e2eb8c0b094a5f1bbc749c0 vdr-softdevice-0.4.0.ebuild 3587
 MISC ChangeLog 12772 RMD160 d2c435df3e11dd623814dd3e993f8a23bb9888db SHA1 cad1a502e3fd9c3b83536d8c8559ac0b6af83a34 SHA256 427b4e9e6ed7f7850bcd7570870c105900f1454c9f9618b838a5b225f0a2676d
-MD5 6f0a759e44c18251a08ae5a8d41f92e4 ChangeLog 12772
-RMD160 d2c435df3e11dd623814dd3e993f8a23bb9888db ChangeLog 12772
-SHA256 427b4e9e6ed7f7850bcd7570870c105900f1454c9f9618b838a5b225f0a2676d ChangeLog 12772
 MISC metadata.xml 298 RMD160 7e0a2f2a14c259d83aeca27b96f53bde893cc3cf SHA1 909d564739e5ee061ef40e6b09c6a48c6578269f SHA256 50a4a1a273a8415774ef522ac281cd664bd217c04bcbfa16e13b53649b9a9581
-MD5 e0c01eee6ee7e11d5d597aee9f9a2852 metadata.xml 298
-RMD160 7e0a2f2a14c259d83aeca27b96f53bde893cc3cf metadata.xml 298
-SHA256 50a4a1a273a8415774ef522ac281cd664bd217c04bcbfa16e13b53649b9a9581 metadata.xml 298
-MD5 64a03078951f99cedadb693eb15dd8df files/digest-vdr-softdevice-0.4.0 253
-RMD160 b18f87704da392d7903954f6388a2bfd93d0d418 files/digest-vdr-softdevice-0.4.0 253
-SHA256 b1ecc8de3b7507e2f708b8dedb8130374e2833fd5759595f8e169f342b4c6b31 files/digest-vdr-softdevice-0.4.0 253
-MD5 bfc7a5ccc03b0e1844b240f20f39eb00 files/digest-vdr-softdevice-0.4.0.20070711 286
-RMD160 14d95da8d015dab58c81f7f5cd669a7de0b82139 files/digest-vdr-softdevice-0.4.0.20070711 286
-SHA256 5fba935e9d93ff6239e7a1628013928d97c0c16dc912671c0cb9f14a7a9dfea9 files/digest-vdr-softdevice-0.4.0.20070711 286
-MD5 bfc7a5ccc03b0e1844b240f20f39eb00 files/digest-vdr-softdevice-0.4.0.20070711-r1 286
-RMD160 14d95da8d015dab58c81f7f5cd669a7de0b82139 files/digest-vdr-softdevice-0.4.0.20070711-r1 286
-SHA256 5fba935e9d93ff6239e7a1628013928d97c0c16dc912671c0cb9f14a7a9dfea9 files/digest-vdr-softdevice-0.4.0.20070711-r1 286
-MD5 0eaf920d3b5a9f1ad2fb6320ba5a7dfc files/digest-vdr-softdevice-0.4.0.20080120 286
-RMD160 151de7ffa4b0cfc2c9ac6b9f514878dd219465ee files/digest-vdr-softdevice-0.4.0.20080120 286
-SHA256 b567fbea2510190b90f17a33af3f5e0e4cc3caa4d56681e0b8118635f97ecb74 files/digest-vdr-softdevice-0.4.0.20080120 286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHk8Mlt2vP6XvVdOcRAqqBAJ9f0uiFm7MWzF4grdclWuOcHmoGpACdFEU8
-oX+ULb2TThpasuPC/cndNWk=
-=Sbt3
------END PGP SIGNATURE-----

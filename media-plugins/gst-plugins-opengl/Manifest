@@ -1,26 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST gst-plugins-bad-0.10.5.tar.bz2 1402345 RMD160 e34c6a4eabab1fcc0fb57fd5cff3ffb8bdf54980 SHA1 ad339ad401052e25e2dc2825c87b954857e53800 SHA256 9ac7eb27c9975d4cd24cd3da9b457e69790e4a8cbec75077f0f42fc8b0060eed
 EBUILD gst-plugins-opengl-0.10.5.ebuild 478 RMD160 03baf7cacf86c2ad4571bd92fdd9d11463705ba2 SHA1 28bff9b8f06dff237105866237ecc36c376a21c1 SHA256 e535fb783598ec1aad6108c616c853c7c9a1c61ed2f1ad8dc7effdea019e0a2a
-MD5 cd6ee63a854f36fb7bea4c9b57b4de17 gst-plugins-opengl-0.10.5.ebuild 478
-RMD160 03baf7cacf86c2ad4571bd92fdd9d11463705ba2 gst-plugins-opengl-0.10.5.ebuild 478
-SHA256 e535fb783598ec1aad6108c616c853c7c9a1c61ed2f1ad8dc7effdea019e0a2a gst-plugins-opengl-0.10.5.ebuild 478
 MISC ChangeLog 533 RMD160 a32c23b126e8a5790d195768b702cbbc5ae40ce7 SHA1 b21f016bea119adfee624e2a2e996cf3166f5100 SHA256 cab77200aaeaae9c8e6273b5ba4177015397c4f38a73b8db926e7c7af1a2ab54
-MD5 26e8e73b3ef2c9e2eb5a2dcae92d8032 ChangeLog 533
-RMD160 a32c23b126e8a5790d195768b702cbbc5ae40ce7 ChangeLog 533
-SHA256 cab77200aaeaae9c8e6273b5ba4177015397c4f38a73b8db926e7c7af1a2ab54 ChangeLog 533
 MISC metadata.xml 162 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 SHA1 f46f8ccd62374b17183b5aca523c4dcf60d718f9 SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1
-MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
-RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
-SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1 metadata.xml 162
-MD5 4642f6b12effe85fa00e6e6e60193e4a files/digest-gst-plugins-opengl-0.10.5 274
-RMD160 0240123211bdbc90d20fc605da5fa622712a5edf files/digest-gst-plugins-opengl-0.10.5 274
-SHA256 ee441d26859b843565aaacc1416eb25f2f92a2ae62b3d3c56b3b0b6fea51fbb7 files/digest-gst-plugins-opengl-0.10.5 274
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFG/YpNCkvF58q80IkRAssvAKCNgyeiNUKmRjbIyinJok4aPA1WCQCfbpv/
-byvFB5nR+GCwc7Ye16SNVzQ=
-=Gqg5
------END PGP SIGNATURE-----
