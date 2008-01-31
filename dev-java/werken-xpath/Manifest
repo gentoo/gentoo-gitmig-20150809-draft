@@ -1,42 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX werken-xpath-0.9.4_beta-gentoo.patch 1313 RMD160 887e882cf7a29c6acf4295380810a18446eb93eb SHA1 b5b6d4328d1be00226c6e3d0c57856f0c4803465 SHA256 588fef298eda7cddb53ec9a29bc996200e79887dd7024edbb72438a330fccea3
-MD5 4185b96fdb3a49d1eb6cdb93057e440b files/werken-xpath-0.9.4_beta-gentoo.patch 1313
-RMD160 887e882cf7a29c6acf4295380810a18446eb93eb files/werken-xpath-0.9.4_beta-gentoo.patch 1313
-SHA256 588fef298eda7cddb53ec9a29bc996200e79887dd7024edbb72438a330fccea3 files/werken-xpath-0.9.4_beta-gentoo.patch 1313
 AUX werken-xpath-0.9.4_beta-jpp-compile.patch 1189 RMD160 3205c19ce085985223e37714313dfe1d1d647fb8 SHA1 85c5a611e4a532a087c8ae32d08f3b30fbdef9df SHA256 8ccdde529f4b236ecd6793f3baf80e99d057eec4fad97bb130c9ba1ab3444d0b
-MD5 28584ccbd78d4037e8b242d825e03f33 files/werken-xpath-0.9.4_beta-jpp-compile.patch 1189
-RMD160 3205c19ce085985223e37714313dfe1d1d647fb8 files/werken-xpath-0.9.4_beta-jpp-compile.patch 1189
-SHA256 8ccdde529f4b236ecd6793f3baf80e99d057eec4fad97bb130c9ba1ab3444d0b files/werken-xpath-0.9.4_beta-jpp-compile.patch 1189
 AUX werken-xpath-0.9.4_beta-jpp-jdom.patch 3606 RMD160 6878d48ea08bac66b6e579eeb845f2c7fd62ff48 SHA1 5205bd95c3343ea20baad6180cdd19094eee7f2d SHA256 4c8301b7fa31a8c999b3021c46526045f12e178b8bad230fbcd3b00cc5cd98b7
-MD5 e2a3cd20c9fb62710b171d6b9e179061 files/werken-xpath-0.9.4_beta-jpp-jdom.patch 3606
-RMD160 6878d48ea08bac66b6e579eeb845f2c7fd62ff48 files/werken-xpath-0.9.4_beta-jpp-jdom.patch 3606
-SHA256 4c8301b7fa31a8c999b3021c46526045f12e178b8bad230fbcd3b00cc5cd98b7 files/werken-xpath-0.9.4_beta-jpp-jdom.patch 3606
 AUX werken-xpath-0.9.4_beta-jpp-tests.patch 353 RMD160 72f38c0930ada0363d206fa7b32db1f6d9f1d0d9 SHA1 dc4d41fca445c641c9f98c9cece98fe45bcf2ccb SHA256 79297e31ea4b45ecdaa67df4bb8816b8dd416bc577c1f5406008954cab5e327c
-MD5 72e762a216369d14fcf180a0229e03a5 files/werken-xpath-0.9.4_beta-jpp-tests.patch 353
-RMD160 72f38c0930ada0363d206fa7b32db1f6d9f1d0d9 files/werken-xpath-0.9.4_beta-jpp-tests.patch 353
-SHA256 79297e31ea4b45ecdaa67df4bb8816b8dd416bc577c1f5406008954cab5e327c files/werken-xpath-0.9.4_beta-jpp-tests.patch 353
 DIST werken.xpath-0.9.4-beta-src.tar.gz 1652916 RMD160 fe2476c538e9e0a54cc40959c534c9267a953623 SHA1 7a0d22073c62a15cf92a3aad45e3ac663cdc837f SHA256 e0d649230f3fa07f0860a355adde20e1ee08ba1a7809f00cb938b9b0dc3f76f3
 EBUILD werken-xpath-0.9.4_beta-r1.ebuild 1855 RMD160 0d05a3661cbcc7069a77a801c96657eff9251aee SHA1 dcb78ca160d62f71fc816fa520edd2f79fa106ca SHA256 3078379ea4aeb0dad00ad7c993eedfb29ec96377d2ae83893ccefe070808246e
-MD5 a6e0f8d4786e6f11f0d5c5ef62f5d6b7 werken-xpath-0.9.4_beta-r1.ebuild 1855
-RMD160 0d05a3661cbcc7069a77a801c96657eff9251aee werken-xpath-0.9.4_beta-r1.ebuild 1855
-SHA256 3078379ea4aeb0dad00ad7c993eedfb29ec96377d2ae83893ccefe070808246e werken-xpath-0.9.4_beta-r1.ebuild 1855
 MISC ChangeLog 2026 RMD160 51ccd843bd13d43b4ebca252ec670e09c7f1b2c0 SHA1 7c0caf5c32c931644e937242726c581807191216 SHA256 1b25d0666d7178424e6fe883e0c4cbf280ef358c6812a325955f3d9eda8d421b
-MD5 d616b1781da41580e74bdb2c571d4440 ChangeLog 2026
-RMD160 51ccd843bd13d43b4ebca252ec670e09c7f1b2c0 ChangeLog 2026
-SHA256 1b25d0666d7178424e6fe883e0c4cbf280ef358c6812a325955f3d9eda8d421b ChangeLog 2026
 MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
-SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
-MD5 e91fcdc732f1948b50267af96892a16c files/digest-werken-xpath-0.9.4_beta-r1 286
-RMD160 d65a0aaa16fa3b7d313dcbc9db6b56e885907ce6 files/digest-werken-xpath-0.9.4_beta-r1 286
-SHA256 b4722775395d1474595d0229054dba8adbd711c05d424e4fe00fe0b8128daa91 files/digest-werken-xpath-0.9.4_beta-r1 286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
-
-iD8DBQFGdsIdAiZjviIA2XgRAhGrAKCrhfA0+n+GltR7eIotOv8z/xnEfQCfaUZ1
-q5hngExlQS2sucm4xugMEXE=
-=tqqW
------END PGP SIGNATURE-----

@@ -1,30 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX jakarta-slide-webdavclient-2.1-gentoo.patch 3717 RMD160 fc9d5296e129c3a4e33efa4b9866477824e7d349 SHA1 4f00996372dbed27ce35325cb02b000f7894bdcb SHA256 128d568b55376a0979e497595c32f8396604ae3cbc02c79aa1edadcb57087992
-MD5 e3a02e14fa71493c6d109fcd3ed318e7 files/jakarta-slide-webdavclient-2.1-gentoo.patch 3717
-RMD160 fc9d5296e129c3a4e33efa4b9866477824e7d349 files/jakarta-slide-webdavclient-2.1-gentoo.patch 3717
-SHA256 128d568b55376a0979e497595c32f8396604ae3cbc02c79aa1edadcb57087992 files/jakarta-slide-webdavclient-2.1-gentoo.patch 3717
 DIST jakarta-slide-webdavclient-src-2.1.tar.gz 2123807 RMD160 722abd2860b3814b8878403a1ec41cfcb9c9e0ba SHA1 082a48d505a8612663619c0163a53b5b29cd06f0 SHA256 ab21b3c25534259993ae4e671bde0ffc8bd6bedae6ee888876cbab98f5e1d4a8
 EBUILD jakarta-slide-webdavclient-2.1-r2.ebuild 1491 RMD160 075076b8aa1ab39e2048b55b0679fef055212243 SHA1 50a12faa59e9d4674ab75f63380c18c7e0304cdf SHA256 6782f9ba968aa97708a3bf7924f1bab1ec0536dab681d975a3a534503d0ecb3e
-MD5 a1441fa3db6d598fd6ae2c79515c7f6b jakarta-slide-webdavclient-2.1-r2.ebuild 1491
-RMD160 075076b8aa1ab39e2048b55b0679fef055212243 jakarta-slide-webdavclient-2.1-r2.ebuild 1491
-SHA256 6782f9ba968aa97708a3bf7924f1bab1ec0536dab681d975a3a534503d0ecb3e jakarta-slide-webdavclient-2.1-r2.ebuild 1491
 MISC ChangeLog 1576 RMD160 b377a5b34695e0acf8bcac70bab30b1f431e5f8f SHA1 72743681972209e964403695cc5dbe993197f914 SHA256 75537cc7f6798250da2b73370fb322409c37576a91675e7dcd04ba38a3b5b27c
-MD5 8bb1ee4f3097b563f9686add09d616b1 ChangeLog 1576
-RMD160 b377a5b34695e0acf8bcac70bab30b1f431e5f8f ChangeLog 1576
-SHA256 75537cc7f6798250da2b73370fb322409c37576a91675e7dcd04ba38a3b5b27c ChangeLog 1576
 MISC metadata.xml 322 RMD160 03f00125b2ec7a18c6b8cef1229974c7237beb0c SHA1 f5a4250634e78ed5a91b4e4dd6bf133a1c8cc5bd SHA256 1fb3d217786e3789e2fb2e7c838fbcaa427c10fe4b14f74a052d153b83074c5e
-MD5 ee908376ec7e31331160aa2fc709a744 metadata.xml 322
-RMD160 03f00125b2ec7a18c6b8cef1229974c7237beb0c metadata.xml 322
-SHA256 1fb3d217786e3789e2fb2e7c838fbcaa427c10fe4b14f74a052d153b83074c5e metadata.xml 322
-MD5 b0c360ca263678a71a937abdbbaab7ca files/digest-jakarta-slide-webdavclient-2.1-r2 307
-RMD160 f270e155a6fa08ee6f3dd727ffb6e8b9a180707c files/digest-jakarta-slide-webdavclient-2.1-r2 307
-SHA256 748ee565c21fae9f765f564cd1e33f0a1fc7d9dd14813db0caa2a50e23733e46 files/digest-jakarta-slide-webdavclient-2.1-r2 307
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHKR/ScxLzpIGCsLQRAutBAKCMJpCC09BqLd98E9Mj19XjuSMJtgCdGqi/
-CTyi1gPBeR4yqOKgHIaYYEU=
-=ZZBd
------END PGP SIGNATURE-----

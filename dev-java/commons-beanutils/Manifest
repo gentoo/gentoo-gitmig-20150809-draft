@@ -1,34 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST commons-beanutils-1.6.1-src.tar.gz 148249 RMD160 ef18dd9abc81cdbe790318bfdaac6026d9a2570d SHA1 0545881bee6ee60248a3bbd2e2fdb87b88674751 SHA256 e35572613bd7141bcb64725e9f7c3f527ba5f11d4d12d5daff808f886e472bdd
 DIST commons-beanutils-1.7.0-src.tar.gz 258835 RMD160 1a9058a79cf6dfc8e5d384af2a5cdec3dcf3184b SHA1 3c1eceae87320fe7e0eec8573fd19b8ff283d1c5 SHA256 ffe3ff9208c3eb8a9c393ee244445fc1e70bb42213bee97dc86e71704fa40076
 EBUILD commons-beanutils-1.6.1-r3.ebuild 1157 RMD160 7184d43b63910f81f248474fd2b19469f7f9db52 SHA1 489bf187ece1bb54c9c16a0c35f02205aceaef2e SHA256 7d53ad92d304b4798d7d0bfefb1ce2d61f7f8f37ed11219c249c329f36cb4070
-MD5 d2ede02bc3bf0d30f058400fa6fed6c3 commons-beanutils-1.6.1-r3.ebuild 1157
-RMD160 7184d43b63910f81f248474fd2b19469f7f9db52 commons-beanutils-1.6.1-r3.ebuild 1157
-SHA256 7d53ad92d304b4798d7d0bfefb1ce2d61f7f8f37ed11219c249c329f36cb4070 commons-beanutils-1.6.1-r3.ebuild 1157
 EBUILD commons-beanutils-1.7.0-r2.ebuild 1283 RMD160 d0e57bebba4f7520eceeb62226bb20a20dcfc2e7 SHA1 d9737c7a11372c1610aaff7bef7358e16bf550a7 SHA256 e64139f9f8f358e9aba609951b91badad4d0357f0df9631d7d0f7193c0d86da8
-MD5 66343b0233cf07cc597e1f19a891991f commons-beanutils-1.7.0-r2.ebuild 1283
-RMD160 d0e57bebba4f7520eceeb62226bb20a20dcfc2e7 commons-beanutils-1.7.0-r2.ebuild 1283
-SHA256 e64139f9f8f358e9aba609951b91badad4d0357f0df9631d7d0f7193c0d86da8 commons-beanutils-1.7.0-r2.ebuild 1283
 MISC ChangeLog 5927 RMD160 ee1a3dc12ef0a7602a68382074913e6bea0d2850 SHA1 6bda755d660f71cdbae05d1cdcb04894cae05af7 SHA256 0d5b976d1247c1165c40a9012543dff2b380b7d022f403be254648c8dcb91e8e
-MD5 ff8b4569d77c7af9aa484093f858b7b2 ChangeLog 5927
-RMD160 ee1a3dc12ef0a7602a68382074913e6bea0d2850 ChangeLog 5927
-SHA256 0d5b976d1247c1165c40a9012543dff2b380b7d022f403be254648c8dcb91e8e ChangeLog 5927
 MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
-SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
-MD5 519682d64cb1874e74faef934bd4a3ef files/digest-commons-beanutils-1.6.1-r3 283
-RMD160 3a602123c8d69bed10cb23f38b200284265754d1 files/digest-commons-beanutils-1.6.1-r3 283
-SHA256 dc5e1bb45062f80031a8ed9386b2f96ed78cf396d6c370acc9511032a42a99cc files/digest-commons-beanutils-1.6.1-r3 283
-MD5 ed5c6ffa606a1a356f05ac30cdbae14f files/digest-commons-beanutils-1.7.0-r2 283
-RMD160 4b8d6880facc296ef1918717cbdf97d24610dd9b files/digest-commons-beanutils-1.7.0-r2 283
-SHA256 0dde4b4160450df0de3c3fe1f07a7fe1407dc7ef9a4a820564e223f380c5f743 files/digest-commons-beanutils-1.7.0-r2 283
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
-
-iD8DBQFGTMrycxLzpIGCsLQRAoTDAJ98elpohTqdfhirSmPGGtM441Z+dgCfTbmp
-19C8O7tn2vYTAgsNB9ktJvs=
-=6E+r
------END PGP SIGNATURE-----

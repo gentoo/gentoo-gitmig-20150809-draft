@@ -1,38 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX xml-commons-resolver-1.1-build.xml 1649 RMD160 8f50930044166f5866603c0415649667e9811a5f SHA1 df241856af145385aa905c6c877abee100fac5a6 SHA256 45499ce6355fd5f0ada4564054f3751ec88135c20fd3b75ad2a6db2f8cc9f663
-MD5 5124f36f583226aa536b7293a38f9f17 files/xml-commons-resolver-1.1-build.xml 1649
-RMD160 8f50930044166f5866603c0415649667e9811a5f files/xml-commons-resolver-1.1-build.xml 1649
-SHA256 45499ce6355fd5f0ada4564054f3751ec88135c20fd3b75ad2a6db2f8cc9f663 files/xml-commons-resolver-1.1-build.xml 1649
 DIST xml-commons-resolver-1.1.tar.gz 230870 RMD160 74c388eb7b80352edcf36e2e4eee0476c0cbeea1 SHA1 289cdb849e699e7551c30e996373c4ac24d6e3e0 SHA256 cea17d83d68fe6fd750a60052a0cd1b4ff3945598a6dd47532ca2aba0fad9574
 DIST xml-commons-resolver-1.2.tar.gz 262701 RMD160 b4e9ac205e62a5bb97d23424a3aedeb70aa1908a SHA1 21f0808fd19671a38dc568df8fa27738fa2ebb46 SHA256 55dbe7bd56452c175320ce9a97b752252c5537427221323c72e9b9c1ac221efe
 EBUILD xml-commons-resolver-1.1-r1.ebuild 924 RMD160 f0208c85025ee5e506a17b9a557979a99a42d493 SHA1 d23f4033338f5894e843607d9f22cf77d8f82a3e SHA256 819b8b54baa7d7cde86490f8a6cb0f129c0e0684f57e06aa63322a4d4d788947
-MD5 4679d5de5f337c5214db076b4d3fa5c5 xml-commons-resolver-1.1-r1.ebuild 924
-RMD160 f0208c85025ee5e506a17b9a557979a99a42d493 xml-commons-resolver-1.1-r1.ebuild 924
-SHA256 819b8b54baa7d7cde86490f8a6cb0f129c0e0684f57e06aa63322a4d4d788947 xml-commons-resolver-1.1-r1.ebuild 924
 EBUILD xml-commons-resolver-1.2.ebuild 1009 RMD160 e881d58581e3d798b7abcb4b1284d17e1bedf37f SHA1 131246ed225687791eb5a93fe393784797cdc414 SHA256 f3a33c6a2ac3062063ba503ec90edbfd373f6c65fea0d062ef6b87e069fc3476
-MD5 7632bd71513f4c2a3cc2e456b73332bf xml-commons-resolver-1.2.ebuild 1009
-RMD160 e881d58581e3d798b7abcb4b1284d17e1bedf37f xml-commons-resolver-1.2.ebuild 1009
-SHA256 f3a33c6a2ac3062063ba503ec90edbfd373f6c65fea0d062ef6b87e069fc3476 xml-commons-resolver-1.2.ebuild 1009
 MISC ChangeLog 4200 RMD160 93a4680b6ecb09cb122f9acf6c6429f457f8b56d SHA1 dca5d76b0c2b468869839213a45ee1d27cdedd36 SHA256 8027d53429c25e213ef8bc12578a7c312b93f0953b6caa5ace8b8b885951ba29
-MD5 ddd4112ac3eea3cdfc93541badac6fb8 ChangeLog 4200
-RMD160 93a4680b6ecb09cb122f9acf6c6429f457f8b56d ChangeLog 4200
-SHA256 8027d53429c25e213ef8bc12578a7c312b93f0953b6caa5ace8b8b885951ba29 ChangeLog 4200
 MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
-SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
-MD5 790909d8b2b4a0a5b950f75211aedc90 files/digest-xml-commons-resolver-1.1-r1 274
-RMD160 ae5830146b80d486710d170daa2cdfa477890f62 files/digest-xml-commons-resolver-1.1-r1 274
-SHA256 4e20d933c66b10813635bde08ddaa900865cc0fd5cc05bc7f5128ed12fc2039e files/digest-xml-commons-resolver-1.1-r1 274
-MD5 65e2b3c9bceb983a9e19f8f3e0bbe7eb files/digest-xml-commons-resolver-1.2 274
-RMD160 c7d3fa6c20ee48d888ef10e8b6ec91c86adaeb56 files/digest-xml-commons-resolver-1.2 274
-SHA256 cce1a7825bd37f851ecb26cf39eb615a29713b423077e8bb8b0a1f37c6641774 files/digest-xml-commons-resolver-1.2 274
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFGgWKh6IPkARlRZfQRAiWwAJ0XmD5CA1zjiSRp+smo/apJgMHHEgCfYCA/
-0j5I0Ca+ohgy4WRqnswz53M=
-=+nNn
------END PGP SIGNATURE-----
