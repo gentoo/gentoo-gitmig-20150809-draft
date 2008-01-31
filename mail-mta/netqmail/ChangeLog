@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/netqmail
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.42 2007/12/03 21:36:57 robbat2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.43 2008/01/31 21:11:39 hansmi Exp $
+
+  31 Jan 2008; Michael Hanselmann <hansmi@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
 
   03 Dec 2007; Robin H. Johnson <robbat2@gentoo.org>
   netqmail-1.05-r4.ebuild, netqmail-1.05-r8.ebuild:
