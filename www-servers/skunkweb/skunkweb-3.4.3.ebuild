@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.3.ebuild,v 1.5 2007/05/12 03:52:33 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.3.ebuild,v 1.6 2008/01/31 20:36:03 hollow Exp $
 
 inherit eutils apache-module
 
@@ -31,7 +31,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	local apxs="${APXS2}"
+	local apxs="${APXS}"
 
 	econf \
 		--with-user=skunkweb \
