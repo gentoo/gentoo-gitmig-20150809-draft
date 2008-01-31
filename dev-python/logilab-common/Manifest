@@ -1,74 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX logilab-common-0.14.0-remove-broken-modutils-test.patch 760 RMD160 5a3aa174592a14df5d8a2c1cb0c929a50279459d SHA1 2b79e7bedd04378df7d1462e296054a827ee2cc9 SHA256 de9210bea8acae9306d6ec3f60b297ca721c7db3f571dbfa9c2da87125ca4ae1
-MD5 bbf57c9fbfa420a2945ded153b5d4065 files/logilab-common-0.14.0-remove-broken-modutils-test.patch 760
-RMD160 5a3aa174592a14df5d8a2c1cb0c929a50279459d files/logilab-common-0.14.0-remove-broken-modutils-test.patch 760
-SHA256 de9210bea8acae9306d6ec3f60b297ca721c7db3f571dbfa9c2da87125ca4ae1 files/logilab-common-0.14.0-remove-broken-modutils-test.patch 760
 AUX logilab-common-0.21.2-disable-access-tests-as-root.patch 1235 RMD160 f0db83d132957637d0bc1042201d035369141e47 SHA1 2395c781bf5a6c56e49f6a249aec697db1a985ff SHA256 6b8185b71a72b4d4d24c8966f5c6c66957c4fbd95f03caf136853230a1ce766a
-MD5 59022b57c498bd61bedb57416283015b files/logilab-common-0.21.2-disable-access-tests-as-root.patch 1235
-RMD160 f0db83d132957637d0bc1042201d035369141e47 files/logilab-common-0.21.2-disable-access-tests-as-root.patch 1235
-SHA256 6b8185b71a72b4d4d24c8966f5c6c66957c4fbd95f03caf136853230a1ce766a files/logilab-common-0.21.2-disable-access-tests-as-root.patch 1235
 AUX logilab-common-0.21.2-remove-broken-tests.patch 916 RMD160 f0ec4be70ef6828ee8bbf1e1f356235f4dbf5d96 SHA1 38d62f07d30e3fffb6a946cc92d52e2500525812 SHA256 9272dc65490f7b9c82705b1b74f081a69fd01aea28ca278a592fd17a43de9333
-MD5 689ec7c9f586558a34eebd9f689d6144 files/logilab-common-0.21.2-remove-broken-tests.patch 916
-RMD160 f0ec4be70ef6828ee8bbf1e1f356235f4dbf5d96 files/logilab-common-0.21.2-remove-broken-tests.patch 916
-SHA256 9272dc65490f7b9c82705b1b74f081a69fd01aea28ca278a592fd17a43de9333 files/logilab-common-0.21.2-remove-broken-tests.patch 916
 AUX logilab-common-setup.py.patch 596 RMD160 dfcc88bd4adc347f6e9f675ed32642f62bdb7036 SHA1 7aa8124db4478c4982c9c33cc3961b28dcc0cd3c SHA256 e8fccb01d1199890b91a15f61ddf943a060cb9e68af277cead63d03a2516e6d7
-MD5 8ca540db591a30ee6966510ecc2bbcc7 files/logilab-common-setup.py.patch 596
-RMD160 dfcc88bd4adc347f6e9f675ed32642f62bdb7036 files/logilab-common-setup.py.patch 596
-SHA256 e8fccb01d1199890b91a15f61ddf943a060cb9e68af277cead63d03a2516e6d7 files/logilab-common-setup.py.patch 596
 DIST common-0.15.0.tar.gz 140909 RMD160 c03fc7c7da4700c2320a78922ade833824d285a5 SHA1 5cb6df46c5bf47b1078885af636807fdf99cebd1 SHA256 c8bb306ec5dc7dfb9e6f3d61cf089bbac62e5e5fc22824ff41cb770fc8e8c2de
 DIST common-0.19.2.tar.gz 122095 RMD160 625e78d8e89a4ea16065678febde701757138de1 SHA1 03fdfc5f8bc61fb2de293274c8d3d8e379c8a96a SHA256 dc2ac017128dbcbb75060dfcb6f27fb027a56054fbbe8dae7743eadc59cd13f1
 DIST common-0.9.3.tar.gz 156335 RMD160 cc26062a61f4d1dcd05feda9baa4ef22920b4aac SHA1 8bc58e8e2f6b211ca69175f512677552599628e4 SHA256 6794620f5663442246f6ae1bb6695fd120a1a6024c455da457ae4037b3ee6826
 DIST logilab-common-0.21.0.tar.gz 126170 RMD160 87eb6095a4198c036b82429f3fd6300e79aa33ae SHA1 2918986df24914469a9cd8881e0c7afd2ce9a318 SHA256 d9177b4f72ec589be8844dbe1a9cff150de28d9134acce3b6e2770fa6173d9cb
 DIST logilab-common-0.21.2.tar.gz 121708 RMD160 f16470bd3c7d729e5e1da155d35d28d89d69c62c SHA1 1ca4e822749400458619cc6890d4aeeba277520c SHA256 11fcb8a7096e73b1be72f17427377f1693244dc0e3b071ce067560f45980780b
 EBUILD logilab-common-0.15.0.ebuild 1584 RMD160 46d4570ccfb6661104bf442e3e113e04af747938 SHA1 8385c72b23c394ca66200bd566831581e659e464 SHA256 fb71db0dbd41190365cef7fa49c86bdee64f6292e53686dc364e5cccf21a21ea
-MD5 13663993dd33d078a5ce026956cb0304 logilab-common-0.15.0.ebuild 1584
-RMD160 46d4570ccfb6661104bf442e3e113e04af747938 logilab-common-0.15.0.ebuild 1584
-SHA256 fb71db0dbd41190365cef7fa49c86bdee64f6292e53686dc364e5cccf21a21ea logilab-common-0.15.0.ebuild 1584
 EBUILD logilab-common-0.19.2.ebuild 1300 RMD160 bf11446f190f13ffc621a6b88b70c6c778e5f3b5 SHA1 d5741bef8af2b37279f5e77ded1812404be75cbc SHA256 7943e8015dfed6c3fe1952b3e38ad0559c8f44d0165a73f85f65c33ae40bf7b3
-MD5 45b6c36da2d32dc9873d53d0e3233d7f logilab-common-0.19.2.ebuild 1300
-RMD160 bf11446f190f13ffc621a6b88b70c6c778e5f3b5 logilab-common-0.19.2.ebuild 1300
-SHA256 7943e8015dfed6c3fe1952b3e38ad0559c8f44d0165a73f85f65c33ae40bf7b3 logilab-common-0.19.2.ebuild 1300
 EBUILD logilab-common-0.21.0.ebuild 1199 RMD160 dc1796c428fdf33f1a4d4f7f5eae2eea1c276afd SHA1 189b29464a349ff0e673ffd9a923e50e3262d3ab SHA256 a78cc14f12dfe397f84b5f77f3153917a24619eedb68bc039400ecf2e6fbb743
-MD5 cd46d052a9c3e9aabb006938b3963995 logilab-common-0.21.0.ebuild 1199
-RMD160 dc1796c428fdf33f1a4d4f7f5eae2eea1c276afd logilab-common-0.21.0.ebuild 1199
-SHA256 a78cc14f12dfe397f84b5f77f3153917a24619eedb68bc039400ecf2e6fbb743 logilab-common-0.21.0.ebuild 1199
 EBUILD logilab-common-0.21.2.ebuild 1685 RMD160 5bd113fbff1a64008a6c1e052ab9d6a253e765b6 SHA1 d482a96b418bb98a71b735b7ee48fb51630a097e SHA256 ff210053f2d172d80b0fe038b120fbcdb801224e695905f0e47d8724b8099b15
-MD5 96165d13bc8461adb4b693d0b712589b logilab-common-0.21.2.ebuild 1685
-RMD160 5bd113fbff1a64008a6c1e052ab9d6a253e765b6 logilab-common-0.21.2.ebuild 1685
-SHA256 ff210053f2d172d80b0fe038b120fbcdb801224e695905f0e47d8724b8099b15 logilab-common-0.21.2.ebuild 1685
 EBUILD logilab-common-0.9.3.ebuild 807 RMD160 8ed2d828926ea08609391c3c33ccbac6f3280d8a SHA1 fe4e1eb341f6b34511a19061f274703b54fe0fc9 SHA256 f9f1b622987e3cdc166693822e6568c52d6133594ac2cab44422e4a0c526764e
-MD5 73f8ccc1541ec595ba6ba19efef21eee logilab-common-0.9.3.ebuild 807
-RMD160 8ed2d828926ea08609391c3c33ccbac6f3280d8a logilab-common-0.9.3.ebuild 807
-SHA256 f9f1b622987e3cdc166693822e6568c52d6133594ac2cab44422e4a0c526764e logilab-common-0.9.3.ebuild 807
 MISC ChangeLog 5994 RMD160 f0ba67c252b2a93546d1212ee3f9f43d8930b6d0 SHA1 4be575b0148da1f38463309f31da74f69f676ed1 SHA256 d1eab3230a9ce7030ddb9f08a1919b918d638c723e15c39dfe41847da5d6291b
-MD5 b05190c360d58cae5ea0dc4898a2840d ChangeLog 5994
-RMD160 f0ba67c252b2a93546d1212ee3f9f43d8930b6d0 ChangeLog 5994
-SHA256 d1eab3230a9ce7030ddb9f08a1919b918d638c723e15c39dfe41847da5d6291b ChangeLog 5994
 MISC metadata.xml 159 RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f SHA1 c8e604d56dae898258b5254d78cfeac0b981e288 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
-SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
-MD5 26951cda621519b1e1189fda17c81020 files/digest-logilab-common-0.15.0 241
-RMD160 ea2d900cac25f380cd8d6009a4f2dc645916bff4 files/digest-logilab-common-0.15.0 241
-SHA256 87ba593fe60b1c54120f4bba7c1a4636a10d0d4cc969288313b253e6a1fb8764 files/digest-logilab-common-0.15.0 241
-MD5 d3f88e176a15c8605a25c0c5cf7033fb files/digest-logilab-common-0.19.2 241
-RMD160 def45c93051527d1903e93ea8b5383cb740995a6 files/digest-logilab-common-0.19.2 241
-SHA256 90519e157b92122691bade3d888f1cd926df2e7628fa179ac2262da855f2c444 files/digest-logilab-common-0.19.2 241
-MD5 70f53e380a0642a246e60d914b50a658 files/digest-logilab-common-0.21.0 265
-RMD160 e5cc317a46ffbbf067a841b328045b3f44e505dc files/digest-logilab-common-0.21.0 265
-SHA256 83c7eb00b1c72ea74a63a66c14a1aaff1a4af418fba77b354d4d127c5d1784ce files/digest-logilab-common-0.21.0 265
-MD5 495f97c266822fa47466ea1844f4e510 files/digest-logilab-common-0.21.2 265
-RMD160 30d6c09e35212f0248df66d27cc5a12016ceda65 files/digest-logilab-common-0.21.2 265
-SHA256 130a4ecfa96ab3b45d0a01c9606de3868f7deea20af719498080841dc4e87b3b files/digest-logilab-common-0.21.2 265
-MD5 e2267579c2d4b9b2de4904840e9426a3 files/digest-logilab-common-0.9.3 238
-RMD160 8b0d8a67d51053dafb60b350a8d7fbc4d18603d0 files/digest-logilab-common-0.9.3 238
-SHA256 884bbd4d867f675457c45148373d28eb305c977e1c240e76a59bda75d9b7b1b1 files/digest-logilab-common-0.9.3 238
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.5 (GNU/Linux)
-
-iD8DBQFG0Df1p/wUKkr7RBoRAl9vAJ9SotCO/h8vIRrtMPMM20yKpGGHxwCfcMSC
-m5ToBqOq1wP6vLthStSjut0=
-=RjRp
------END PGP SIGNATURE-----
