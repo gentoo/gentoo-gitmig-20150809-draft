@@ -1,48 +1,12 @@
 AUX gcl-2.6.7.fix-configure.in-gentoo.Makefile.patch 1073 RMD160 960a81bb50ef0b62dbc49e08ada7b08e900934c3 SHA1 c04618a8fbc5b02a34c83878ea7275ae114436f0 SHA256 0324fdeb5dc9172e4c022bc7e99c9bc64ef991c617efacfa9d2cbff7b6c48d47
-MD5 d258cd9bae8894176e8b19f6062392f4 files/gcl-2.6.7.fix-configure.in-gentoo.Makefile.patch 1073
-RMD160 960a81bb50ef0b62dbc49e08ada7b08e900934c3 files/gcl-2.6.7.fix-configure.in-gentoo.Makefile.patch 1073
-SHA256 0324fdeb5dc9172e4c022bc7e99c9bc64ef991c617efacfa9d2cbff7b6c48d47 files/gcl-2.6.7.fix-configure.in-gentoo.Makefile.patch 1073
 AUX gcl-2.6.7.fix-configure.in-gentoo.patch.input 1227 RMD160 0ec6e8b0a207378b8c10a804d87e79009aa60b5e SHA1 60896b024222ea2380f4e40db1ec9e4f2ea75f16 SHA256 dadc568b55a805168043ca78b1c1974d74698c2e92e32e1c9dfdcee234984c3d
-MD5 e309d0438c4dbaf7883c48c5f12275b4 files/gcl-2.6.7.fix-configure.in-gentoo.patch.input 1227
-RMD160 0ec6e8b0a207378b8c10a804d87e79009aa60b5e files/gcl-2.6.7.fix-configure.in-gentoo.patch.input 1227
-SHA256 dadc568b55a805168043ca78b1c1974d74698c2e92e32e1c9dfdcee234984c3d files/gcl-2.6.7.fix-configure.in-gentoo.patch.input 1227
 AUX gcl-2.6.7.fix-out-of-build-root-compile.Makefile.patch 1422 RMD160 ea2e4f25456bab6c69e75d573362689b60de90e1 SHA1 2b024c16f747776ace2e6df8b5eabf161018167a SHA256 5a9388f09d6d380546f950ad17f9bc4b3977a192cd86a97e6416e6ad36f59a14
-MD5 84829d019c500de4d62b6f0e79fa9e0f files/gcl-2.6.7.fix-out-of-build-root-compile.Makefile.patch 1422
-RMD160 ea2e4f25456bab6c69e75d573362689b60de90e1 files/gcl-2.6.7.fix-out-of-build-root-compile.Makefile.patch 1422
-SHA256 5a9388f09d6d380546f950ad17f9bc4b3977a192cd86a97e6416e6ad36f59a14 files/gcl-2.6.7.fix-out-of-build-root-compile.Makefile.patch 1422
 AUX gcl-2.6.7.fix-out-of-build-root-compile.patch.input 843 RMD160 489ec75966dae4d7d2921fc93ab8a2655fee6e1e SHA1 d423bbcc6ae41f864a3e6caec07fea83be8065d3 SHA256 dfaae7ea24fb8fcb761ed9b540dc66eeb5b22b65e626e1e475c911eadeb8338e
-MD5 43fa5bf93354597104a9752dea29743f files/gcl-2.6.7.fix-out-of-build-root-compile.patch.input 843
-RMD160 489ec75966dae4d7d2921fc93ab8a2655fee6e1e files/gcl-2.6.7.fix-out-of-build-root-compile.patch.input 843
-SHA256 dfaae7ea24fb8fcb761ed9b540dc66eeb5b22b65e626e1e475c911eadeb8338e files/gcl-2.6.7.fix-out-of-build-root-compile.patch.input 843
 AUX noweb-2.9-insecure-tmp-file.Makefile.patch 439 RMD160 16cdc72fab65bab45c7728d374da60f7b4cccc65 SHA1 428d4380a17535939a59b5efd12556ab4cafde06 SHA256 3c4b5bea61620cb545e576d2e82dd8daa0478fc6c40ae0a93dbdac432aa9531d
-MD5 cdcb78ce8219c21d64ef050fb79e5aff files/noweb-2.9-insecure-tmp-file.Makefile.patch 439
-RMD160 16cdc72fab65bab45c7728d374da60f7b4cccc65 files/noweb-2.9-insecure-tmp-file.Makefile.patch 439
-SHA256 3c4b5bea61620cb545e576d2e82dd8daa0478fc6c40ae0a93dbdac432aa9531d files/noweb-2.9-insecure-tmp-file.Makefile.patch 439
 AUX noweb-2.9-insecure-tmp-file.patch.input 4819 RMD160 2afe80731bd3fcfa23e0ee799649886ce3fdd0af SHA1 23aff1cf0862618c7450704d0d47fcec2497de0b SHA256 68bf232fd91b94fc9d08373d079afcb890a6af6991373da81089560ce21889a9
-MD5 ff71bb7ac45cae40335ecbfa0b89412c files/noweb-2.9-insecure-tmp-file.patch.input 4819
-RMD160 2afe80731bd3fcfa23e0ee799649886ce3fdd0af files/noweb-2.9-insecure-tmp-file.patch.input 4819
-SHA256 68bf232fd91b94fc9d08373d079afcb890a6af6991373da81089560ce21889a9 files/noweb-2.9-insecure-tmp-file.patch.input 4819
 DIST axiom-Sept2005-src.tgz 41447064 RMD160 ae0a63e4dc7d772183001e688d5a5561d689f7d4 SHA1 ba30056ab5af30a579a285480ca5058b11bf8fa6 SHA256 750da2f7960686c7f50fa4c6c859f51300909e4b488fe6395d75fe4405a1d1f3
 DIST silver-nov2007-src.tgz 89646725 RMD160 b12d325030e3d9c047f763a46be713a00fd7ac18 SHA1 6a7b609a6b93781872bb239f93aef326185d97c0 SHA256 15389e631ceb1275aafdbceca47052352b6ae9c883fb232caf886c3c0bac90c8
 EBUILD axiom-200711.ebuild 1886 RMD160 7c28f572a1c3d06053d10b0446134fe5a56c6a4b SHA1 f83a16aba68a9da9ae4031be7c3e69dd16fc114f SHA256 5620b14cd700421275c6d749d434a784b82b914a05cb87ad7f98942ee1c512d1
-MD5 18e4228e054831bbe653ec3a1b6c1ad6 axiom-200711.ebuild 1886
-RMD160 7c28f572a1c3d06053d10b0446134fe5a56c6a4b axiom-200711.ebuild 1886
-SHA256 5620b14cd700421275c6d749d434a784b82b914a05cb87ad7f98942ee1c512d1 axiom-200711.ebuild 1886
 EBUILD axiom-3.9-r1.ebuild 3142 RMD160 7c311cd661a46028e0dea56acdb0750c71639453 SHA1 1d5647ae87258227179cec38edf78cc0c79011d2 SHA256 a346aec7c8ffaefa5bf93e62e6234093188f87f23eb66ece7daefd6672306cbd
-MD5 f2c3eb0df02b2944a1993f06074c33f7 axiom-3.9-r1.ebuild 3142
-RMD160 7c311cd661a46028e0dea56acdb0750c71639453 axiom-3.9-r1.ebuild 3142
-SHA256 a346aec7c8ffaefa5bf93e62e6234093188f87f23eb66ece7daefd6672306cbd axiom-3.9-r1.ebuild 3142
 MISC ChangeLog 2282 RMD160 38c27bf65ad95d28bf2f366eea41bb0b176338a3 SHA1 6da83f89ab22f7da45ad3a0dd0a42571afe458c0 SHA256 de6326131738d7b0e54c236f16dfbe403abc73f05070c0d9ed286ee81fbc05b9
-MD5 c20b2dcf1a545a1f075acc8b01021ff4 ChangeLog 2282
-RMD160 38c27bf65ad95d28bf2f366eea41bb0b176338a3 ChangeLog 2282
-SHA256 de6326131738d7b0e54c236f16dfbe403abc73f05070c0d9ed286ee81fbc05b9 ChangeLog 2282
 MISC metadata.xml 168 RMD160 d98790cf055dc0f820c63d65f485b9dcfa8950f4 SHA1 95c9e4f7368f82053d631bbcd469612c92ca13cb SHA256 c0cc8d6ab9385750af753ddc504299ed90a70b5c4c655f6c77d865917a8829c9
-MD5 30bc69a424d7634aae9c1e4203365d3d metadata.xml 168
-RMD160 d98790cf055dc0f820c63d65f485b9dcfa8950f4 metadata.xml 168
-SHA256 c0cc8d6ab9385750af753ddc504299ed90a70b5c4c655f6c77d865917a8829c9 metadata.xml 168
-MD5 24de0825191ebaa482295473e053e3c7 files/digest-axiom-200711 253
-RMD160 99eaf9acacf9088b3aca8201738505d442287466 files/digest-axiom-200711 253
-SHA256 63c644d9b5fcd125b4b9db78a66272b40197d9468bd62dd4112cf226e8712f42 files/digest-axiom-200711 253
-MD5 f5325403baf7987627d722d86541cf13 files/digest-axiom-3.9-r1 253
-RMD160 7163e15cb0087c7bd6221d1f760fb6e8b9970035 files/digest-axiom-3.9-r1 253
-SHA256 10e35fdd3f04a38fbba5651b96ec5a78d461eafbb720f1f2f5253ee9fd99a7c8 files/digest-axiom-3.9-r1 253
