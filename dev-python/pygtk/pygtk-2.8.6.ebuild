@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.8.6.ebuild,v 1.14 2007/03/18 00:41:58 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.8.6.ebuild,v 1.15 2008/01/31 23:36:17 leio Exp $
 
 inherit gnome.org python flag-o-matic
 
@@ -52,18 +52,18 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog INSTALL MAPPING NEWS README THREADS TODO
 	rm examples/Makefile*
-	cp -r examples ${D}/usr/share/doc/${PF}/
+	cp -r examples "${D}/usr/share/doc/${PF}/"
 
 	python_version
-	mv ${D}/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py \
-		${D}/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py-2.0
-	mv ${D}/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth \
-		${D}/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth-2.0
+	mv "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py \
+		"${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py-2.0
+	mv "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth \
+		"${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth-2.0
 
 	if use doc; then
 		cd "${S}"/../
 		dodir /usr/share/gtk-doc/html
-		cp -pPR pygtk2reference	${D}/usr/share/gtk-doc/html/
+		cp -pPR pygtk2reference	"${D}"/usr/share/gtk-doc/html/
 	fi
 }
 
@@ -84,7 +84,7 @@ pkg_postrm() {
 	python_version
 	python_mod_cleanup /usr/share/pygtk/2.0/codegen
 	python_mod_cleanup
-	rm -f ${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.{py,pth}
+	rm -f "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.{py,pth}
 	alternatives_auto_makesym /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py pygtk.py-[0-9].[0-9]
 	alternatives_auto_makesym /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth pygtk.pth-[0-9].[0-9]
 }
