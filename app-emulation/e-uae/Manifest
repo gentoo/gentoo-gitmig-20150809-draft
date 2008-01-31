@@ -1,62 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX e-uae-0.8.28-fix-JIT-cache-on-NX-cpu.patch 660 RMD160 7ec2b0f92dcbf39cdd9cd61dfb7990dce2f66c60 SHA1 40f61eadb99213ff9b6016c00083da98a0478778 SHA256 2563d4625dfa42ce7910cbfe4d7734f72796abed9b1d8a6c23bb74c2d33481aa
-MD5 781bdea3cdebd0d2b11de41508613ab5 files/e-uae-0.8.28-fix-JIT-cache-on-NX-cpu.patch 660
-RMD160 7ec2b0f92dcbf39cdd9cd61dfb7990dce2f66c60 files/e-uae-0.8.28-fix-JIT-cache-on-NX-cpu.patch 660
-SHA256 2563d4625dfa42ce7910cbfe4d7734f72796abed9b1d8a6c23bb74c2d33481aa files/e-uae-0.8.28-fix-JIT-cache-on-NX-cpu.patch 660
 AUX e-uae-0.8.28-fix-atoscroll-screen-support.patch 3178 RMD160 59dccba56de3bc63f4177afd350f5314a05beb32 SHA1 3b38f942de39dc805d8418fd66830afec21af4b1 SHA256 209d5c63306545e9b22e1eaf32723ca4e407a7ce6acf397f26ace971679b70c9
-MD5 9f2bf139b66d3a4c3e6c8405c428ae60 files/e-uae-0.8.28-fix-atoscroll-screen-support.patch 3178
-RMD160 59dccba56de3bc63f4177afd350f5314a05beb32 files/e-uae-0.8.28-fix-atoscroll-screen-support.patch 3178
-SHA256 209d5c63306545e9b22e1eaf32723ca4e407a7ce6acf397f26ace971679b70c9 files/e-uae-0.8.28-fix-atoscroll-screen-support.patch 3178
 AUX e-uae-0.8.28-fix-joystick-conflicts.patch 907 RMD160 9d4a75b46c43b07ccc34b6ae3d01a8407fe29d29 SHA1 da7c2c63671483fecc681062740bf4b55480d553 SHA256 9f8958d7777fc4ff62c00dcd287aa8cdceafa786d1afbd2dea68b5a56085a23c
-MD5 66a07fc56b355aa2bb8ce779b66e17d7 files/e-uae-0.8.28-fix-joystick-conflicts.patch 907
-RMD160 9d4a75b46c43b07ccc34b6ae3d01a8407fe29d29 files/e-uae-0.8.28-fix-joystick-conflicts.patch 907
-SHA256 9f8958d7777fc4ff62c00dcd287aa8cdceafa786d1afbd2dea68b5a56085a23c files/e-uae-0.8.28-fix-joystick-conflicts.patch 907
 AUX e-uae-0.8.28-gtkui_64bit_fix.diff 599 RMD160 87e1144e50b46210a67c8f0a8da21cd50084edb4 SHA1 629e541bd875ced3171f8ca6117c6bf57a7a83c2 SHA256 cc239b06724d3c694044da7d99e30d4ed6bbe216b3c64c9830cae9d91ece8f97
-MD5 6ef3f457410ab992aea3ffdbe9e2e6b6 files/e-uae-0.8.28-gtkui_64bit_fix.diff 599
-RMD160 87e1144e50b46210a67c8f0a8da21cd50084edb4 files/e-uae-0.8.28-gtkui_64bit_fix.diff 599
-SHA256 cc239b06724d3c694044da7d99e30d4ed6bbe216b3c64c9830cae9d91ece8f97 files/e-uae-0.8.28-gtkui_64bit_fix.diff 599
 AUX e-uae-0.8.28-shm-crash.patch 582 RMD160 a7a6c99ee6e9ea627bfc294fbe03d69a213f1810 SHA1 a00e04203994bfc9fa1b36e8d4c7f441f0626656 SHA256 58ea8ef7d95c65ccfea57a3eeb5c6695e2b2cbac687c6819ce9862eed0d8bda7
-MD5 774c0436b6e91dd8f18b0df23f10c75b files/e-uae-0.8.28-shm-crash.patch 582
-RMD160 a7a6c99ee6e9ea627bfc294fbe03d69a213f1810 files/e-uae-0.8.28-shm-crash.patch 582
-SHA256 58ea8ef7d95c65ccfea57a3eeb5c6695e2b2cbac687c6819ce9862eed0d8bda7 files/e-uae-0.8.28-shm-crash.patch 582
 AUX e-uae-0.8.28-themes_rendering_fix.diff 5832 RMD160 0fbcf0d77176f09ccad6b037b835002b47b9c084 SHA1 4476276f4c618504962823bfacc633e7bb8e66fa SHA256 164acc45e9353f2b8551c133e892237fa087aaeda66eaf2cd23820254f7a5eb2
-MD5 4c3572a4f40235e86bf1a769eba1e6f9 files/e-uae-0.8.28-themes_rendering_fix.diff 5832
-RMD160 0fbcf0d77176f09ccad6b037b835002b47b9c084 files/e-uae-0.8.28-themes_rendering_fix.diff 5832
-SHA256 164acc45e9353f2b8551c133e892237fa087aaeda66eaf2cd23820254f7a5eb2 files/e-uae-0.8.28-themes_rendering_fix.diff 5832
 AUX e-uae-0.8.29_rc4-high-cpu-usage.patch 395 RMD160 4e2df2996111580f8a4a571e3cb987a41a63ce4b SHA1 78e037989621e01bc130172658caaa213569c4a7 SHA256 4edff4299b93b98659249958bd656c460b985419a471cb18527007c956520379
-MD5 6f635fdf6f85af3ad134085ccf9a45c8 files/e-uae-0.8.29_rc4-high-cpu-usage.patch 395
-RMD160 4e2df2996111580f8a4a571e3cb987a41a63ce4b files/e-uae-0.8.29_rc4-high-cpu-usage.patch 395
-SHA256 4edff4299b93b98659249958bd656c460b985419a471cb18527007c956520379 files/e-uae-0.8.29_rc4-high-cpu-usage.patch 395
 DIST e-uae-0.8.28.tar.bz2 1148790 RMD160 7e9fa21fa14b0ca3a32a28ccb236b9d7628a7f69 SHA1 11e647ed64420f85893ac77c072e268b650ae183 SHA256 afc8b30fb9aa0819a4e53b3eb0db8e658e5a2b23d7dbf436f6b5a49b2269da86
 DIST e-uae-0.8.29-WIP4.tar.bz2 1122718 RMD160 823810cd4c41ee31c394fcea9302f4ca680f0567 SHA1 f8c78fef04e6bcd7be36921790d71fcc6e47d00b SHA256 9828cb0fca783160bcb33900d0254f4bdaade1c9a41256e5f298e973d0c07456
 EBUILD e-uae-0.8.28-r3.ebuild 3958 RMD160 9a20a6adda185933af85fdb3f3e2d3f67486ffbe SHA1 2ea77f8f8cef437d2f3ddf272fe0e9d14bd2c8e2 SHA256 ced94d18cecb7faf42cc637d2179d7709e5363f1136a3bc93fcea748c3f68353
-MD5 0cc9f7c7fbb701cceb4d8ee66a667841 e-uae-0.8.28-r3.ebuild 3958
-RMD160 9a20a6adda185933af85fdb3f3e2d3f67486ffbe e-uae-0.8.28-r3.ebuild 3958
-SHA256 ced94d18cecb7faf42cc637d2179d7709e5363f1136a3bc93fcea748c3f68353 e-uae-0.8.28-r3.ebuild 3958
 EBUILD e-uae-0.8.29_rc4-r1.ebuild 4418 RMD160 18bb8ae2f0e13159d4d6435e1cbe8c0c95a95561 SHA1 667302f8e985eb36eb26680e2a1f91a146de2a3a SHA256 ac86000ace762253609ef953923bfbbaacd4324cee9397b3f457e2e95c9b11a0
-MD5 6621b44f16921d27aef1e1c47784cbcf e-uae-0.8.29_rc4-r1.ebuild 4418
-RMD160 18bb8ae2f0e13159d4d6435e1cbe8c0c95a95561 e-uae-0.8.29_rc4-r1.ebuild 4418
-SHA256 ac86000ace762253609ef953923bfbbaacd4324cee9397b3f457e2e95c9b11a0 e-uae-0.8.29_rc4-r1.ebuild 4418
 MISC ChangeLog 7055 RMD160 a6ed05aa5c977580f8be2216f9d550605cd6b110 SHA1 bc0a54f5c11f772db1e0ed4e4adb25d0d7ba667b SHA256 ccd464e8c44669600d2071e97b369ce159717e9834b6ba817eeb0990b5c6ada2
-MD5 57657a65187481b8e05eb0886839358d ChangeLog 7055
-RMD160 a6ed05aa5c977580f8be2216f9d550605cd6b110 ChangeLog 7055
-SHA256 ccd464e8c44669600d2071e97b369ce159717e9834b6ba817eeb0990b5c6ada2 ChangeLog 7055
 MISC metadata.xml 390 RMD160 d46884a231a4515609be81ae6add0bf09716595b SHA1 e67f75fdbc58ebfaa6d5b6e545878b96ba35b770 SHA256 eca75a70625c6a65eb18690a284d93d2513fef0bb4cd3c9a26894dca70bd745b
-MD5 ce52e10841f3a87fd2d498b30ae1e626 metadata.xml 390
-RMD160 d46884a231a4515609be81ae6add0bf09716595b metadata.xml 390
-SHA256 eca75a70625c6a65eb18690a284d93d2513fef0bb4cd3c9a26894dca70bd745b metadata.xml 390
-MD5 188bf5165e1f85783a9ba7fa185f9fd3 files/digest-e-uae-0.8.28-r3 244
-RMD160 754a2776d6ff1b461b1278828ea678dd002b4e3c files/digest-e-uae-0.8.28-r3 244
-SHA256 82cc02576ec30a11aaafa85d5e55d9118795f73e0db80ed544cded39f1df25ac files/digest-e-uae-0.8.28-r3 244
-MD5 a00ed48c6f9a051d13e42c82a86fbae3 files/digest-e-uae-0.8.29_rc4-r1 259
-RMD160 bb784dd253bd5b4386f0d978b422904cde63606c files/digest-e-uae-0.8.29_rc4-r1 259
-SHA256 14d0cfccd6a35b27b32de57f1b7d8184d55286b8e553228e01d3a5777e7256ca files/digest-e-uae-0.8.29_rc4-r1 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHcPUnyuNVb5qfaOYRAkQUAJ9pO4pN+eayNnxaMnyz+bOnwSm/1ACg0Pv3
-PfZr67/TeaO6hkExVbkVXcY=
-=Soki
------END PGP SIGNATURE-----
