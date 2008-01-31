@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_UserAgent_Detect
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_UserAgent_Detect/ChangeLog,v 1.27 2007/12/06 00:43:46 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_UserAgent_Detect/ChangeLog,v 1.28 2008/01/31 20:13:31 jer Exp $
+
+  31 Jan 2008; Jeroen Roovers <jer@gentoo.org>
+  PEAR-Net_UserAgent_Detect-2.4.0.ebuild:
+  Stable for HPPA (bug #208313).
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   -PEAR-Net_UserAgent_Detect-2.1.0-r1.ebuild,
