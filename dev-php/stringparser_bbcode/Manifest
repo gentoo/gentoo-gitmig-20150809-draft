@@ -1,34 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST stringparser_bbcode-0.3.2a.tar.gz 334592 RMD160 6bc01ca6b69e368fdc4d13da20283206ba18c666 SHA1 759d88021947ede465d9e612cecd0a181141f648 SHA256 e59992bdee99228a4206cdf1bad86bf1bf207313bb4829e71295a981ed34c9f1
 DIST stringparser_bbcode-0.3.2b.tar.gz 334615 RMD160 8c95daf20c5a589e43558f84dfecd6bff2fad6eb SHA1 cdec930a92fabdb18750abf8294e20412f04b085 SHA256 dcd8559fcb6cef2a6cc77fe9d957e5cb7e1005149a4c9c0e00bcb08818bd822c
 EBUILD stringparser_bbcode-0.3.2a.ebuild 729 RMD160 90c255bac7a3d4d7213ba09d494b9b38e3217941 SHA1 eee8d8272f95c3524aedb62688f50ef8a7f05756 SHA256 f0930a32be64f7685e9e65aaee941ab847cc594b33648d2c413c819e6aaa5201
-MD5 01aafeaa2de734e3be8e3c63b6a3bd83 stringparser_bbcode-0.3.2a.ebuild 729
-RMD160 90c255bac7a3d4d7213ba09d494b9b38e3217941 stringparser_bbcode-0.3.2a.ebuild 729
-SHA256 f0930a32be64f7685e9e65aaee941ab847cc594b33648d2c413c819e6aaa5201 stringparser_bbcode-0.3.2a.ebuild 729
 EBUILD stringparser_bbcode-0.3.2b.ebuild 789 RMD160 9e1f082b27a82d934dad6e0cf9d4cd0efbf2a16b SHA1 165cbbfdbf35d8ef25ef359951f51b9246886830 SHA256 62f48ed89bccc8f4a417a9fa76ed59aed5fb9c01508c05be2ccc95cb7310567c
-MD5 392e50996d64368fef75594142e955e3 stringparser_bbcode-0.3.2b.ebuild 789
-RMD160 9e1f082b27a82d934dad6e0cf9d4cd0efbf2a16b stringparser_bbcode-0.3.2b.ebuild 789
-SHA256 62f48ed89bccc8f4a417a9fa76ed59aed5fb9c01508c05be2ccc95cb7310567c stringparser_bbcode-0.3.2b.ebuild 789
 MISC ChangeLog 1134 RMD160 e89b84b94a35e2e6e1f6f5ef3781d00c7f0637d6 SHA1 66dd535dbe95de9e74fe991b3e7814666ce5cee5 SHA256 2cd9a2d8a23a8d49da144e98b9c49c76bdcd1e48e6e8eeb0b97b22aa4f4ab851
-MD5 8ca458dd7cbe1c911c2faa69f9045ce1 ChangeLog 1134
-RMD160 e89b84b94a35e2e6e1f6f5ef3781d00c7f0637d6 ChangeLog 1134
-SHA256 2cd9a2d8a23a8d49da144e98b9c49c76bdcd1e48e6e8eeb0b97b22aa4f4ab851 ChangeLog 1134
 MISC metadata.xml 157 RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a SHA1 ddaa23cc35eb917bf8962b652442bebb1ce0f440 SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1
-MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
-SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
-MD5 f45138d48cdcf1ad104a059603aad564 files/digest-stringparser_bbcode-0.3.2a 280
-RMD160 5ad2f728738eafa4901069b3e31a1c54dfd62e23 files/digest-stringparser_bbcode-0.3.2a 280
-SHA256 40cfa9f68424ca00bec0fa630eba52f98d3bce54d299e1774e825958f7f2a142 files/digest-stringparser_bbcode-0.3.2a 280
-MD5 5fbf224c53a94b6e6e3bc162314c1bdb files/digest-stringparser_bbcode-0.3.2b 280
-RMD160 94b7bba3969a925245c76e328a73240c9ec32e54 files/digest-stringparser_bbcode-0.3.2b 280
-SHA256 5ce84e12d19e90cac879e26322958cde87b47573b8c115b83603ba5ca4b0d49f files/digest-stringparser_bbcode-0.3.2b 280
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.8 (GNU/Linux)
-
-iEYEARECAAYFAkd+MpIACgkQz974XjDVpbmvlgCgxiF7+7OxHYMBmaPFRAklRhpl
-Z/gAn0DaRYIRN8eUAujUYnS0SzfDR+f9
-=RIA2
------END PGP SIGNATURE-----
