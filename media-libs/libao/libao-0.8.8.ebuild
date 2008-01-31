@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.8.ebuild,v 1.5 2008/01/30 20:08:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.8.ebuild,v 1.6 2008/01/31 13:42:51 drac Exp $
 
 inherit eutils libtool
 
@@ -10,8 +10,8 @@ SRC_URI="http://downloads.xiph.org/releases/ao/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ~ppc ppc64 ~sh sparc x86 ~x86-fbsd"
-IUSE="alsa arts esd nas mmap pulseaudio doc"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ~ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+IUSE="alsa arts doc esd nas mmap pulseaudio"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
@@ -37,13 +37,11 @@ src_compile() {
 		$(use_enable esd) \
 		$(use_enable nas) \
 		$(use_enable pulseaudio pulse)
-
 	emake || die "emake failed."
 }
 
 src_install () {
 	emake -j1 DESTDIR="${D}" install || die "emake install failed."
-
 	rm -rf "${D}"/usr/share/doc/libao*
 	dodoc AUTHORS CHANGES README TODO
 	use doc && dohtml -A c doc/*.html
