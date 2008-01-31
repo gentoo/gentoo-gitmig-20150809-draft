@@ -13,5 +13,5 @@
 		AddType application/x-httpd-php-source .phps
 	</IfModule>
 
-	AddDirectoryIndex index.php index.phtml
+	DirectoryIndex index.php index.phtml
 </IfDefine>

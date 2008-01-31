@@ -10,5 +10,5 @@
 		AddType application/x-httpd-php4 .php4
 	</IfModule>
 
-	AddDirectoryIndex index.php index.phtml
+	DirectoryIndex index.php index.phtml
 </IfDefine>
