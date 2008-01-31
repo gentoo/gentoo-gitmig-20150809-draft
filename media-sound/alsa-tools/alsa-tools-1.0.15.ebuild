@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.15.ebuild,v 1.2 2007/10/22 20:32:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.15.ebuild,v 1.3 2008/01/31 16:51:04 chainsaw Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -105,7 +105,7 @@ src_compile() {
 	fi
 
 	# hdspmixer is missing depconf - copy from the hdsploader directory
-	cp ${S}/hdsploader/depcomp ${S}/hdspmixer/
+	cp "${S}/hdsploader/depcomp" "${S}/hdspmixer/"
 
 	local f
 	for f in ${ALSA_TOOLS}
