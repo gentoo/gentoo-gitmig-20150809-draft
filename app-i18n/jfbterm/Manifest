@@ -1,38 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX jfbterm-0.4.7-gentoo.patch 8279 RMD160 dbbce3af6c7f2c872b984bebe3bf1adbcbbde5fa SHA1 9c49502b86d06d23dfa17755f8f76fa8750b1749 SHA256 b6130c9a79c714229fa8764da012bed6835f1daf1c330b8bf27fb9e777c66b46
-MD5 e30ab17af50d0bfbbb4b8a80789adb39 files/jfbterm-0.4.7-gentoo.patch 8279
-RMD160 dbbce3af6c7f2c872b984bebe3bf1adbcbbde5fa files/jfbterm-0.4.7-gentoo.patch 8279
-SHA256 b6130c9a79c714229fa8764da012bed6835f1daf1c330b8bf27fb9e777c66b46 files/jfbterm-0.4.7-gentoo.patch 8279
 AUX jfbterm-0.4.7-no-kernel-headers.patch 522 RMD160 19cfe796736953d94bf4ed900576e957364f3980 SHA1 dcd164714f6d51dd69caa8fb0b64cbe6d593af47 SHA256 a87896ecfd73925a01bbd639e1b80c578dcb8e83fd006d5931308141c7bf33e8
-MD5 2ba0ed07a34d3df8971c0f22018521f2 files/jfbterm-0.4.7-no-kernel-headers.patch 522
-RMD160 19cfe796736953d94bf4ed900576e957364f3980 files/jfbterm-0.4.7-no-kernel-headers.patch 522
-SHA256 a87896ecfd73925a01bbd639e1b80c578dcb8e83fd006d5931308141c7bf33e8 files/jfbterm-0.4.7-no-kernel-headers.patch 522
 AUX jfbterm-0.4.7-sigchld-debian.patch 455 RMD160 4540ee6b7c70cd092ccf0bb2bb19a1489315e22b SHA1 af0648b88f5700445378f06f39e55a85b87ccc0d SHA256 5991961f4fbfa1b822f6c2ad949fea4efa315ec0e07ce890e0ef6a4b926df7fe
-MD5 40ea1157a11032f021009dea0f2f2d67 files/jfbterm-0.4.7-sigchld-debian.patch 455
-RMD160 4540ee6b7c70cd092ccf0bb2bb19a1489315e22b files/jfbterm-0.4.7-sigchld-debian.patch 455
-SHA256 5991961f4fbfa1b822f6c2ad949fea4efa315ec0e07ce890e0ef6a4b926df7fe files/jfbterm-0.4.7-sigchld-debian.patch 455
 DIST jfbterm-0.4.7.tar.gz 104592 RMD160 814c9c78fd7da8d8a4747b2644f8007554e6679f SHA1 9758c6c7571e95fc8a9c131a184dc2bd8ec7aaeb SHA256 a18446040cfaadd51c1ce77bb06ba6860372a70a04e36962e2635253a1f693a3
 EBUILD jfbterm-0.4.7-r4.ebuild 1271 RMD160 66a5c093f2720479435557d3428186b0d3c49fb7 SHA1 9ac610d9b4918e34dde45ac51bdab98720de0d1c SHA256 dbbb56a6bd67edf6595e04f2da8bb282dfb6d933a6e88a52e1932d23a56bc47e
-MD5 80ae2ea0f8354006b35cca706426920b jfbterm-0.4.7-r4.ebuild 1271
-RMD160 66a5c093f2720479435557d3428186b0d3c49fb7 jfbterm-0.4.7-r4.ebuild 1271
-SHA256 dbbb56a6bd67edf6595e04f2da8bb282dfb6d933a6e88a52e1932d23a56bc47e jfbterm-0.4.7-r4.ebuild 1271
 MISC ChangeLog 7558 RMD160 1dcc52be4be1d9ccd2cd5938d4d6ce6cfae2cf4e SHA1 435d43dbf0bba3f682735e34d5bf57a3342a21e2 SHA256 26061b3a7ec692676a7d6dd3e90dd742ac0ef025b97d135cdb6ec7f5ebc8a036
-MD5 7662d0e4fc9bedd3f5c51d712a5f0832 ChangeLog 7558
-RMD160 1dcc52be4be1d9ccd2cd5938d4d6ce6cfae2cf4e ChangeLog 7558
-SHA256 26061b3a7ec692676a7d6dd3e90dd742ac0ef025b97d135cdb6ec7f5ebc8a036 ChangeLog 7558
 MISC metadata.xml 499 RMD160 da21c26d7f74ba874da3bffe9473206f371da2c5 SHA1 a562f3aee3bd3adb31775305556126a44a241250 SHA256 29075da383422a659317c3b16557854babb93b42096cc3bd79eed810cd730437
-MD5 9fe05abea8c63723eecd2cd8b61e8eba metadata.xml 499
-RMD160 da21c26d7f74ba874da3bffe9473206f371da2c5 metadata.xml 499
-SHA256 29075da383422a659317c3b16557854babb93b42096cc3bd79eed810cd730437 metadata.xml 499
-MD5 76dbb76c755ba9238d830fcced31c6a1 files/digest-jfbterm-0.4.7-r4 241
-RMD160 e0be59d3c16da612e15b30a638cbc1e553e24a5f files/digest-jfbterm-0.4.7-r4 241
-SHA256 8ff7849bfad9a841f49afe0bb6bed60c999b1dca57cbd960ed5af628f7d61654 files/digest-jfbterm-0.4.7-r4 241
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHcTPbyuNVb5qfaOYRAkGCAJ9KpAaqamR7cpz1BctyN0Ahze7hiACgu9t3
-wvAxYH4GCE9DLxasGw3u/9w=
-=oHca
------END PGP SIGNATURE-----
