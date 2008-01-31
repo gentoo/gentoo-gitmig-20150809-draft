@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_layout
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_layout/ChangeLog,v 1.7 2008/01/27 15:51:15 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_layout/ChangeLog,v 1.8 2008/01/31 18:52:43 hollow Exp $
+
+  31 Jan 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  update metadata
 
 *mod_layout-5.1 (27 Jan 2008)
 
