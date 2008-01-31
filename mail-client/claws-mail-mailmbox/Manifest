@@ -1,58 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST mailmbox-1.12.3.tar.gz 394132 RMD160 931a65fce5f973be290465f9ce2b76ab596f2cae SHA1 b450649f1fb2c3b1ab3938d810b6a78c3f815783 SHA256 ecc70cf57312a740c6560feda70f9c9fff1e5d131354d55082658efee802c7db
 DIST mailmbox-1.12.4.tar.gz 394224 RMD160 830eec25f69af06b058f85e77bac6263bd217ae2 SHA1 983e2a5e62789878c0b82b3a4a3779ae681b05ab SHA256 f066c03bfe4c8efb0c6a7ca2971cb03fb723fda9591e0c57a7afeec05f606adc
 DIST mailmbox-1.13.1.tar.gz 396182 RMD160 2cc65b9c3e8e125b446f79ef3d4f1228171cb1a3 SHA1 d47e8de55bbf5e41e91f50b7907debfc9d713626 SHA256 57c32ef7b7fe40e11204073066fe31ea7849b701827c71b447e92432002dcb17
 DIST mailmbox-1.13.tar.gz 395808 RMD160 9033684950b671d2fc8d669b43cc3b3abac71700 SHA1 338a4b1fc937a5373b3ef6fa0b4380d09433b964 SHA256 e41470fbea5322aabdca21b3ee7ebc2b3ddb1638d25902ee96fcb10698b35dd4
 DIST mailmbox-1.14.tar.gz 403040 RMD160 804a3148d4cda280228cd24e52c75dc877936315 SHA1 5f1403c00f9c5ecd21a30fd2eaa30321ea33b044 SHA256 e59572e750baadad7d1baaf24b9e44d4fa5ab194ccf3faeb41c6061ca6b375a6
 EBUILD claws-mail-mailmbox-1.12.3.ebuild 747 RMD160 5de7c46dcf8ccf7d237ac193bd7091d064dd1dfa SHA1 297e40e089b21bd1dad534480369a0945e828f4c SHA256 92e311bd27305558f4a82aa56a95134fabed58aa51bf303a1ee8c572802accc2
-MD5 6ad5dd36e4233914deb2eb795373d0f1 claws-mail-mailmbox-1.12.3.ebuild 747
-RMD160 5de7c46dcf8ccf7d237ac193bd7091d064dd1dfa claws-mail-mailmbox-1.12.3.ebuild 747
-SHA256 92e311bd27305558f4a82aa56a95134fabed58aa51bf303a1ee8c572802accc2 claws-mail-mailmbox-1.12.3.ebuild 747
 EBUILD claws-mail-mailmbox-1.12.4.ebuild 745 RMD160 dc0eb29df8bb2f37bd196c89002b05b37a331a7b SHA1 589f70df8db2bb5f2909d581524538ed2adcb9e4 SHA256 10b33567781dbff0cc4515394de1a980b911268cc9e86ea91f0f8b53c2d5c38f
-MD5 93e33bead2785578908656bbd31b73eb claws-mail-mailmbox-1.12.4.ebuild 745
-RMD160 dc0eb29df8bb2f37bd196c89002b05b37a331a7b claws-mail-mailmbox-1.12.4.ebuild 745
-SHA256 10b33567781dbff0cc4515394de1a980b911268cc9e86ea91f0f8b53c2d5c38f claws-mail-mailmbox-1.12.4.ebuild 745
 EBUILD claws-mail-mailmbox-1.13.1.ebuild 749 RMD160 9dad5dfa5208e8d31ad27453f8ab93a3f50bef88 SHA1 0dfa966fb2ef81357f65a2234879670fa10be870 SHA256 da9232959295e3e9f37978ffdbd90f15c728731d63c31aa1b0eb3a5b2121eda0
-MD5 eebcab1b1fc9f0c2976dd4f46ee6f57e claws-mail-mailmbox-1.13.1.ebuild 749
-RMD160 9dad5dfa5208e8d31ad27453f8ab93a3f50bef88 claws-mail-mailmbox-1.13.1.ebuild 749
-SHA256 da9232959295e3e9f37978ffdbd90f15c728731d63c31aa1b0eb3a5b2121eda0 claws-mail-mailmbox-1.13.1.ebuild 749
 EBUILD claws-mail-mailmbox-1.13.ebuild 746 RMD160 b3ddd5c1f02a74d5fdcb0c34b04a796f2d7606d4 SHA1 561deab4650ed7a9f0e282c92ae28bfeb59f5a89 SHA256 67681a6f2124d92ede3fc107474e5e86b581ceef2ec4c6fe9a8a1d70174e925b
-MD5 804e35fbfee56af02c8d635b639c39be claws-mail-mailmbox-1.13.ebuild 746
-RMD160 b3ddd5c1f02a74d5fdcb0c34b04a796f2d7606d4 claws-mail-mailmbox-1.13.ebuild 746
-SHA256 67681a6f2124d92ede3fc107474e5e86b581ceef2ec4c6fe9a8a1d70174e925b claws-mail-mailmbox-1.13.ebuild 746
 EBUILD claws-mail-mailmbox-1.14.ebuild 746 RMD160 aad5d68f425db5fe5cb6084faf2b0b49b400b2d1 SHA1 d5d83c3017aaa81ce20a92d7df334f1fe71d710b SHA256 0b51b24b75e30c13aaab7b96db9201db688d359539014f9a18e9d00699f7243b
-MD5 45ea0af558428096ba3e0817b3f5297a claws-mail-mailmbox-1.14.ebuild 746
-RMD160 aad5d68f425db5fe5cb6084faf2b0b49b400b2d1 claws-mail-mailmbox-1.14.ebuild 746
-SHA256 0b51b24b75e30c13aaab7b96db9201db688d359539014f9a18e9d00699f7243b claws-mail-mailmbox-1.14.ebuild 746
 MISC ChangeLog 2561 RMD160 2c5ff1270b7a674bbc72ab06e8ab520087935003 SHA1 e3070503b0db9e780d150ac4fe39a7bf77a719ba SHA256 0ac6539e123b6e1e764d344e7a0c8b56ce86df8eb23302b27ba0971bb17dc3a8
-MD5 db17b85c4754e4d56313ac74e398f268 ChangeLog 2561
-RMD160 2c5ff1270b7a674bbc72ab06e8ab520087935003 ChangeLog 2561
-SHA256 0ac6539e123b6e1e764d344e7a0c8b56ce86df8eb23302b27ba0971bb17dc3a8 ChangeLog 2561
 MISC metadata.xml 221 RMD160 b29e2c5c114c7a788168ae4426d36d49e5cc1a79 SHA1 d3a7cecfe65aa997415d4f156adf755c0c75575e SHA256 b8629a245947a82059060bf9d9cc840483d11ae1ab8f80ec60bbf92e0ba7278b
-MD5 7907a854374f39d33ab23171a600df62 metadata.xml 221
-RMD160 b29e2c5c114c7a788168ae4426d36d49e5cc1a79 metadata.xml 221
-SHA256 b8629a245947a82059060bf9d9cc840483d11ae1ab8f80ec60bbf92e0ba7278b metadata.xml 221
-MD5 c9db9bd61a67bac2507acc0a40572aba files/digest-claws-mail-mailmbox-1.12.3 247
-RMD160 1aca97c0dde0abe92436436ae77065eb5eabe9c1 files/digest-claws-mail-mailmbox-1.12.3 247
-SHA256 a60a43ba44de5ac2be173dee5ee8ce0eb716e3985eea661f418a0ef9c8ce527b files/digest-claws-mail-mailmbox-1.12.3 247
-MD5 1ae182d7c7e9dc1d74563841d3cc03d7 files/digest-claws-mail-mailmbox-1.12.4 247
-RMD160 a722e72df900ecd469588c22231f2892cc2bfeb7 files/digest-claws-mail-mailmbox-1.12.4 247
-SHA256 7f1d63964468f55fcb027179313997f9def6033a7015b60b72dc021ff4fa303e files/digest-claws-mail-mailmbox-1.12.4 247
-MD5 743944f282773dbfd7a3319f2518193a files/digest-claws-mail-mailmbox-1.13 241
-RMD160 e67994a0339533ff094db192cc4d50d437a71d6e files/digest-claws-mail-mailmbox-1.13 241
-SHA256 d2fbd98b447a971eaa02464644e1de06fcbc7a42291fd74f4eed7b2f9621fadf files/digest-claws-mail-mailmbox-1.13 241
-MD5 59f2cd940294a04a571d6db93f60ba56 files/digest-claws-mail-mailmbox-1.13.1 247
-RMD160 18669236ae0a6e384468132b842376088c32234c files/digest-claws-mail-mailmbox-1.13.1 247
-SHA256 7f1d88c57a98f844264b5ea95394847944076528debd4ca5fe7c620156bbc6bb files/digest-claws-mail-mailmbox-1.13.1 247
-MD5 4fbb791cdd451b084f3c116fda7759aa files/digest-claws-mail-mailmbox-1.14 241
-RMD160 6060e405c95cb9b3791182ab09afee3ba893f3be files/digest-claws-mail-mailmbox-1.14 241
-SHA256 badeae8789c2c7f20a897a9b69d995a3dcef10f7bcd271ad0165559d18715ef6 files/digest-claws-mail-mailmbox-1.14 241
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHU/Hs6J2i8a8J4okRAoJjAJ4n3yoO3LssvgAeH4rJBrjJlga2VwCePSGW
-svQtyYPWWvyuqpOHeOejjqs=
-=Q3xS
------END PGP SIGNATURE-----

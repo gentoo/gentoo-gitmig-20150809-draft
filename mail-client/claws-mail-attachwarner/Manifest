@@ -1,42 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST attachwarner-0.2.10.tar.gz 391358 RMD160 55b5c56ffcb597c0d877c60c23d98f9b746ead40 SHA1 c7ab16e31da263addef67a7a39d6d353a22bab7d SHA256 6a1e804f31a379418ea3603787d747eb9de6b04a776aeb50ad661a935e67a000
 DIST attachwarner-0.2.8.tar.gz 387531 RMD160 3d22ae5dd8ce6ac3d4c9ea73f0546a4c87ddc861 SHA1 b3ce6f9e06e4acc407639f48bdd73b439c38e3f3 SHA256 93382d43956027e82e8f0047745b6d80fbba9a57ab85e74246598730cb7fe9ab
 DIST attachwarner-0.2.9.tar.gz 388461 RMD160 5c76dd432eceb43aa20ca17da45d797c35157aa3 SHA1 fe3157fc48d17adbd263db0dfdf56f8f74b75d43 SHA256 0ccc6ddcd7207343e0b19485a545c47025ef2655b968dd487e458c5ee904e76b
 EBUILD claws-mail-attachwarner-0.2.10.ebuild 965 RMD160 c3304e0bd19e745022c1df2417378562cf8c0a80 SHA1 54921f47f45b8265d79a9a28321bef4676345a4e SHA256 ce0a2317796208522aa86db9404ae48d5accddcd5c9af6db82f71d5e801ec1d3
-MD5 f92c7e552b708d7d472a515f9bc2ef44 claws-mail-attachwarner-0.2.10.ebuild 965
-RMD160 c3304e0bd19e745022c1df2417378562cf8c0a80 claws-mail-attachwarner-0.2.10.ebuild 965
-SHA256 ce0a2317796208522aa86db9404ae48d5accddcd5c9af6db82f71d5e801ec1d3 claws-mail-attachwarner-0.2.10.ebuild 965
 EBUILD claws-mail-attachwarner-0.2.8.ebuild 963 RMD160 36a0aa5f6875f3e72ca3ad0c7a4183f6c02c5301 SHA1 abc3ea048b4c6e38ec21472cd873c9ca7b478d3d SHA256 d8bb534fad9ee8897185033dc44785999b1cd811bf4c8e773ceba8a49c274e99
-MD5 4ee60eb97f7b7cd5d47f26d06ba89f15 claws-mail-attachwarner-0.2.8.ebuild 963
-RMD160 36a0aa5f6875f3e72ca3ad0c7a4183f6c02c5301 claws-mail-attachwarner-0.2.8.ebuild 963
-SHA256 d8bb534fad9ee8897185033dc44785999b1cd811bf4c8e773ceba8a49c274e99 claws-mail-attachwarner-0.2.8.ebuild 963
 EBUILD claws-mail-attachwarner-0.2.9.ebuild 964 RMD160 06a9a78e21fe5c6e2c9c69d8040e5f9f749de7e8 SHA1 37b245eb4e7a41298bae9a3836f73e2467e9fdf7 SHA256 99a706bf0ed3a22b808c178d0ccc40735345a657a057e1d87c46ca5810b6a051
-MD5 2c29104cc8f4b2fddf6c490ad0f34c5c claws-mail-attachwarner-0.2.9.ebuild 964
-RMD160 06a9a78e21fe5c6e2c9c69d8040e5f9f749de7e8 claws-mail-attachwarner-0.2.9.ebuild 964
-SHA256 99a706bf0ed3a22b808c178d0ccc40735345a657a057e1d87c46ca5810b6a051 claws-mail-attachwarner-0.2.9.ebuild 964
 MISC ChangeLog 2230 RMD160 752a2c2c6f44000b3e41336c4fb25b0f4b343577 SHA1 aed39e42736c7fa7e65b67024eb7edde329046fb SHA256 9cfea0654869b4d8a43368936377960b37e7e3c7f63846462d50b51d1ba861f9
-MD5 6f11b6be86b0db9e8f2da9be98d0140c ChangeLog 2230
-RMD160 752a2c2c6f44000b3e41336c4fb25b0f4b343577 ChangeLog 2230
-SHA256 9cfea0654869b4d8a43368936377960b37e7e3c7f63846462d50b51d1ba861f9 ChangeLog 2230
 MISC metadata.xml 221 RMD160 b29e2c5c114c7a788168ae4426d36d49e5cc1a79 SHA1 d3a7cecfe65aa997415d4f156adf755c0c75575e SHA256 b8629a245947a82059060bf9d9cc840483d11ae1ab8f80ec60bbf92e0ba7278b
-MD5 7907a854374f39d33ab23171a600df62 metadata.xml 221
-RMD160 b29e2c5c114c7a788168ae4426d36d49e5cc1a79 metadata.xml 221
-SHA256 b8629a245947a82059060bf9d9cc840483d11ae1ab8f80ec60bbf92e0ba7278b metadata.xml 221
-MD5 15cba2485714175e69552ccbbb7bb94a files/digest-claws-mail-attachwarner-0.2.10 259
-RMD160 fe0b73eee4e0d53b467b8064050ee5562fbf6f32 files/digest-claws-mail-attachwarner-0.2.10 259
-SHA256 816c51b96ed3aab23fd464191e96f868670caabe2022e51a1338430b7bef9d64 files/digest-claws-mail-attachwarner-0.2.10 259
-MD5 39e7383149f04dd12be29b8519a43660 files/digest-claws-mail-attachwarner-0.2.8 256
-RMD160 de1830f5b93732034fe966a4cf9dfeb7589ec470 files/digest-claws-mail-attachwarner-0.2.8 256
-SHA256 f317316f83bd06ec58684e4e368adb48ff9f7704d295f482095028bd25712677 files/digest-claws-mail-attachwarner-0.2.8 256
-MD5 d95bc11df98568938b3163f54150faad files/digest-claws-mail-attachwarner-0.2.9 256
-RMD160 67beb119b1e71bd4d8739fe0aafb6d2548adc770 files/digest-claws-mail-attachwarner-0.2.9 256
-SHA256 0f38f765f46d5a12e559bf08bc17b174ac07be452e150ecb08b7a65b638c7725 files/digest-claws-mail-attachwarner-0.2.9 256
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFHdOLUQlM6RnzZP+IRArg5AJ9SrD3Kc8mfE3dnQx3sr6GzajTlugCcDjeW
-k3XC2gDN9pPoL6DF1YQZjYo=
-=3uYX
------END PGP SIGNATURE-----

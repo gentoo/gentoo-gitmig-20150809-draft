@@ -1,50 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST notification_plugin-0.12.1.tar.gz 460042 RMD160 951afe5556cbaaa970381012339406a2a797fea8 SHA1 0637f6f0837ab6da535cb8343892c2d1af2a21dc SHA256 6494b36d57102b96c2e7fbc2ccfa07a36de8bca623ef1bba9b5f4088e841ecab
 DIST notification_plugin-0.12.tar.gz 460053 RMD160 20635e3ba21b5123f9a02282ef1d89d79a559004 SHA1 b9ccc4af024b14f3c56f071a7ba17b94af5a2a54 SHA256 4e1248edc19fa63a7568e3a6fb054fa399f01b86adedd7f2fc07d49a1deee1a0
 DIST notification_plugin-0.13.tar.gz 465495 RMD160 3f71e51f475cb21a3f9f2d860032bbe00725bf39 SHA1 fd41aeebbe3df08c3e7ad3da2ce5d4ebf6c10410 SHA256 acd7f016eb874b067cdebe57b8ea0a5c949d5a2df34c6926608d2ca8a5d8098d
 DIST notification_plugin-0.14.tar.gz 469072 RMD160 a93881e9ef842db1f54d3cc87d3ea624ec1e906c SHA1 62ab1830b8c74c4b603acc7f10fec77e332515cb SHA256 ced17de11a3ccb5d01093c4c7941ea586bc9cdc5722b700f41504edd6f8f4a44
 EBUILD claws-mail-notification-0.12.1.ebuild 785 RMD160 1f7b9616d51cc6720226c5758dcd9d6bf5a9143d SHA1 b072aedc1c6c5c3744cdb1c8fa25a4a2d272d65b SHA256 4da9310e10041ed084ef9c971601131897aaa78488cd581b87a0b3f4a13a963a
-MD5 f0e546016531200f42f7eb3a0c66bdb4 claws-mail-notification-0.12.1.ebuild 785
-RMD160 1f7b9616d51cc6720226c5758dcd9d6bf5a9143d claws-mail-notification-0.12.1.ebuild 785
-SHA256 4da9310e10041ed084ef9c971601131897aaa78488cd581b87a0b3f4a13a963a claws-mail-notification-0.12.1.ebuild 785
 EBUILD claws-mail-notification-0.12.ebuild 782 RMD160 9f792569e6f760e0426b2cae33d7a6fadefa829e SHA1 4a68e45258de84bf2e7fff6f90bc874f21dd9d7d SHA256 15e2120b19092a16eb07117e21a76d4be58bd50e9d8279c8081f5990e5e542cd
-MD5 d34d8b92b6cff3c6119997cfe96ab9cb claws-mail-notification-0.12.ebuild 782
-RMD160 9f792569e6f760e0426b2cae33d7a6fadefa829e claws-mail-notification-0.12.ebuild 782
-SHA256 15e2120b19092a16eb07117e21a76d4be58bd50e9d8279c8081f5990e5e542cd claws-mail-notification-0.12.ebuild 782
 EBUILD claws-mail-notification-0.13.ebuild 783 RMD160 aa985da599c9de82ea95baae6c049f01ed90f22b SHA1 1ce0787f648cb364ec9173b10399286075f9ed4d SHA256 ec1dd515c0ff5b3ece26b439f7343be2eadc085a19701e14dad2a9434d367d92
-MD5 8b134cfd21d68bd1670c2904f0dbb3d8 claws-mail-notification-0.13.ebuild 783
-RMD160 aa985da599c9de82ea95baae6c049f01ed90f22b claws-mail-notification-0.13.ebuild 783
-SHA256 ec1dd515c0ff5b3ece26b439f7343be2eadc085a19701e14dad2a9434d367d92 claws-mail-notification-0.13.ebuild 783
 EBUILD claws-mail-notification-0.14.ebuild 899 RMD160 649bed27921123a580da43635764fd0633b25f55 SHA1 fd3676fcb4845f76de5c47ae74ec359c0e920926 SHA256 648911f4f8d1a6f1e885bfbfc6f58c13909292abc9322cd9c29e3ce49aa474fe
-MD5 c737dcee5af3add612742daa3280cda7 claws-mail-notification-0.14.ebuild 899
-RMD160 649bed27921123a580da43635764fd0633b25f55 claws-mail-notification-0.14.ebuild 899
-SHA256 648911f4f8d1a6f1e885bfbfc6f58c13909292abc9322cd9c29e3ce49aa474fe claws-mail-notification-0.14.ebuild 899
 MISC ChangeLog 2328 RMD160 5576096d1e1bc8b44334e036bcea7c786cfeea36 SHA1 9a8abe0643e5c050e38392130bc4133ab851ad39 SHA256 e4838eb3c7c2724e9976dcaa61c90a099a9cfa6789599eaf33c2e25a06cbec64
-MD5 9cdbdacf64db8d0253565dce114a0d6c ChangeLog 2328
-RMD160 5576096d1e1bc8b44334e036bcea7c786cfeea36 ChangeLog 2328
-SHA256 e4838eb3c7c2724e9976dcaa61c90a099a9cfa6789599eaf33c2e25a06cbec64 ChangeLog 2328
 MISC metadata.xml 221 RMD160 b29e2c5c114c7a788168ae4426d36d49e5cc1a79 SHA1 d3a7cecfe65aa997415d4f156adf755c0c75575e SHA256 b8629a245947a82059060bf9d9cc840483d11ae1ab8f80ec60bbf92e0ba7278b
-MD5 7907a854374f39d33ab23171a600df62 metadata.xml 221
-RMD160 b29e2c5c114c7a788168ae4426d36d49e5cc1a79 metadata.xml 221
-SHA256 b8629a245947a82059060bf9d9cc840483d11ae1ab8f80ec60bbf92e0ba7278b metadata.xml 221
-MD5 5ec336a28693b73364a1bb0d20b4f5f5 files/digest-claws-mail-notification-0.12 274
-RMD160 226e737353c762afd1274a4e1ad1a8b0aec67375 files/digest-claws-mail-notification-0.12 274
-SHA256 f08e453c589ac069a021f39b45affd39190e00648213140d1b1061d583fd2d26 files/digest-claws-mail-notification-0.12 274
-MD5 2e2cd92efc51b381a5882492d58783d7 files/digest-claws-mail-notification-0.12.1 280
-RMD160 303a2eaaf058e6e7d789ed847e114dcfb5aa4b5e files/digest-claws-mail-notification-0.12.1 280
-SHA256 5ccf8771d8ee1472b9790c2a4622d39bcf8da418168693d7c2ca7a007265e31f files/digest-claws-mail-notification-0.12.1 280
-MD5 bf3eb5ae2149c31174087f4116f99c4a files/digest-claws-mail-notification-0.13 274
-RMD160 cbc000f995b001bd19eabd232b330987757a3114 files/digest-claws-mail-notification-0.13 274
-SHA256 07a46e2a8a578b5126e6d54e7bc744dd60464cf27ef228e58d8016a9478960bc files/digest-claws-mail-notification-0.13 274
-MD5 d97b2aba2de4092f2caa34997f0dd372 files/digest-claws-mail-notification-0.14 274
-RMD160 7b7a7ba0dff3dc8796b73410d747aa0b4c676eec files/digest-claws-mail-notification-0.14 274
-SHA256 8dffc4721458eae40091702dc1814b2df039b6880d72aab8fcfbadd4f993db08 files/digest-claws-mail-notification-0.14 274
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFHdOg8QlM6RnzZP+IRArhAAKC2eMBlNIW3FT9XeavqWEbJXTZ/RgCfXr17
-rOREgGFmAjftegZ7PR5MaNY=
-=6BFw
------END PGP SIGNATURE-----

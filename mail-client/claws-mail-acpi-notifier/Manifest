@@ -1,42 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST acpi_notifier-1.0.12.tar.gz 412624 RMD160 eba4a4cc68eb65eaaa9cf3e7c0923b7a35883c91 SHA1 9fcb6d59ba6ba4b25eaa6c1cdcf52927ee948614 SHA256 71ed07fe0d643b67a75c61c7abaedf7c218155c0614a01a543caf136da15d6d2
 DIST acpi_notifier-1.0.13.tar.gz 412555 RMD160 40659307123224279db8487e598beea911d937a7 SHA1 e3a04ec85b5fc9709ac56477be22249a3eba2839 SHA256 74403d434a8cbe1a19830bba65d6e7d7118e8e330d9bbee9f28fc01c6ccb6ea6
 DIST acpi_notifier-1.0.14.tar.gz 415549 RMD160 10d6176dd1c0bf0a24f8586d6b4a85af5ec9ea89 SHA1 61d98505e47bc1f34fcdf0a93ad8997125d51faf SHA256 6b2308a71829699dbd86248efd23da040a946fe2350231be349de30b11024c35
 EBUILD claws-mail-acpi-notifier-1.0.12.ebuild 1105 RMD160 f7d618b5a4d303996327933f4b9d9d6b08073533 SHA1 e17a314fe5fcce7bbf10b9f202144e4d549b1738 SHA256 1ed997df081cd4b97e4480b3f858d0dea87a543e82940fc42ed11aecf7e71fe0
-MD5 a486455aac7aeb4e6864e4837dd84c3b claws-mail-acpi-notifier-1.0.12.ebuild 1105
-RMD160 f7d618b5a4d303996327933f4b9d9d6b08073533 claws-mail-acpi-notifier-1.0.12.ebuild 1105
-SHA256 1ed997df081cd4b97e4480b3f858d0dea87a543e82940fc42ed11aecf7e71fe0 claws-mail-acpi-notifier-1.0.12.ebuild 1105
 EBUILD claws-mail-acpi-notifier-1.0.13.ebuild 1106 RMD160 2f1de1b54cf808c50544ca0978cd592a0c904e65 SHA1 738b32a35c87f509f05dcc1df91adafa1dbee120 SHA256 0454f7b9c000cbba5def56b64c744fa06604f0c69762a632565f48a80dd9a13a
-MD5 804cc6764e86b10eed3cf9d419747274 claws-mail-acpi-notifier-1.0.13.ebuild 1106
-RMD160 2f1de1b54cf808c50544ca0978cd592a0c904e65 claws-mail-acpi-notifier-1.0.13.ebuild 1106
-SHA256 0454f7b9c000cbba5def56b64c744fa06604f0c69762a632565f48a80dd9a13a claws-mail-acpi-notifier-1.0.13.ebuild 1106
 EBUILD claws-mail-acpi-notifier-1.0.14.ebuild 1106 RMD160 3d30c0c4dcfa08f60416bdb5d276fa281ead2cbc SHA1 61c3031b4f82ebcc3c17ae08d84182a7f3157bce SHA256 b833e5a26f85545a4422c122fb594cda5a6cad5a0f905253d8007b8e45ed2fa6
-MD5 bd77859fc9279117353a5a66b48837c0 claws-mail-acpi-notifier-1.0.14.ebuild 1106
-RMD160 3d30c0c4dcfa08f60416bdb5d276fa281ead2cbc claws-mail-acpi-notifier-1.0.14.ebuild 1106
-SHA256 b833e5a26f85545a4422c122fb594cda5a6cad5a0f905253d8007b8e45ed2fa6 claws-mail-acpi-notifier-1.0.14.ebuild 1106
 MISC ChangeLog 2453 RMD160 baf6c7a2b1bb727e3b3a2c7139f966b6401ee08d SHA1 907181ed13a7db4fac31a836b0712250391c07e1 SHA256 8f90b63d59f816d80b2aef65347150a0720b097389057595358d1ee170a144c1
-MD5 c5b244688f153ff9a9fdf32080756f02 ChangeLog 2453
-RMD160 baf6c7a2b1bb727e3b3a2c7139f966b6401ee08d ChangeLog 2453
-SHA256 8f90b63d59f816d80b2aef65347150a0720b097389057595358d1ee170a144c1 ChangeLog 2453
 MISC metadata.xml 221 RMD160 b29e2c5c114c7a788168ae4426d36d49e5cc1a79 SHA1 d3a7cecfe65aa997415d4f156adf755c0c75575e SHA256 b8629a245947a82059060bf9d9cc840483d11ae1ab8f80ec60bbf92e0ba7278b
-MD5 7907a854374f39d33ab23171a600df62 metadata.xml 221
-RMD160 b29e2c5c114c7a788168ae4426d36d49e5cc1a79 metadata.xml 221
-SHA256 b8629a245947a82059060bf9d9cc840483d11ae1ab8f80ec60bbf92e0ba7278b metadata.xml 221
-MD5 b5edd46b5d5d0f954dab98709e773a4e files/digest-claws-mail-acpi-notifier-1.0.12 262
-RMD160 fe24f12954167925628114cc23e99949acf9df56 files/digest-claws-mail-acpi-notifier-1.0.12 262
-SHA256 98135bc19bb27c8e6a9c94f74117aa307c9fe83fe9319891a42bd697ea7cf6b6 files/digest-claws-mail-acpi-notifier-1.0.12 262
-MD5 c9e6758ae11b3f0b9af469127bf9c53f files/digest-claws-mail-acpi-notifier-1.0.13 262
-RMD160 38673a29960f44686a6904b3662ca452f2779abc files/digest-claws-mail-acpi-notifier-1.0.13 262
-SHA256 a0cd800ffbcab89b9a254dcbb0090ba6406dff6470990bbdc66d9f1c95deb3df files/digest-claws-mail-acpi-notifier-1.0.13 262
-MD5 96af2d8b7c26c7923c2128536bcf62b2 files/digest-claws-mail-acpi-notifier-1.0.14 262
-RMD160 4d191bf3319be8696976b02a52553d09c187d1b1 files/digest-claws-mail-acpi-notifier-1.0.14 262
-SHA256 bff74de5729d162fdff176e180f4d9e246d9940c435532081399e7ae072c8e8b files/digest-claws-mail-acpi-notifier-1.0.14 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFHdOLGQlM6RnzZP+IRAkASAJ991fL8G5PcK6s2jtGs+rLkEabfdwCgqpiD
-2p916cKl+94shWrB0++uMac=
-=R6uh
------END PGP SIGNATURE-----
