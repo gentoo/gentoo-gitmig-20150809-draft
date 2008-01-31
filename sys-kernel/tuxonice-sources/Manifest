@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST genpatches-2.6.23-1.base.tar.bz2 3147 RMD160 555ed180e4e700f3ce913fe460f05eb8f71dfe46 SHA1 3d68154d4d956460aa66b6c6d30e857696d8c2f2 SHA256 773cbe243642b1c10a49cab1175fa1c54c0ca67d6471257ce66417a754d87578
 DIST genpatches-2.6.23-1.extras.tar.bz2 57252 RMD160 201fdd76ba5024f662da2c2d20e03093bcecc6d5 SHA1 196238c658d68d9046b70c98d1340a1305a102df SHA256 50bf8799ea7816d72b0db7c0fa4b886379b7b49f366fd647130318ad5de314b6
 DIST genpatches-2.6.23-2.base.tar.bz2 6134 RMD160 b4d459e06a1a482fb4cfe51e8b693f9c95a6254b SHA1 b851ef449ec34d4331aba47774fe915cc2408e13 SHA256 fa6c34455470c4d57df1d51829a444343f7cbfca44d726843382baeec5ccbaec
@@ -22,87 +19,14 @@ DIST tuxonice-3.0-rc3-for-2.6.23.9.patch.bz2 111146 RMD160 6a44034aa195e941483f6
 DIST tuxonice-3.0-rc4-for-2.6.23.14.patch.bz2 112446 RMD160 6377c5eab316ce885977817151d1223e607ee560 SHA1 9dfdb165db2b53bb305cda1e8ec56de36373fec8 SHA256 d9f3f88b1c4820a0661d34a6b58782e2d857762d2fc91223b7ce9432fdaceba4
 DIST tuxonice-3.0-rc5-for-2.6.23.14.patch.bz2 112636 RMD160 679e982c0c20f488a4b7447d6d7d9dcfc64b80b6 SHA1 ab3d5d7ceba68db8daf9c718ecd52250f9363e40 SHA256 2e5632332f8a0ff1a363a83455ac45cec11f3cafa96cbe0c0b3dd9d53348e1a0
 EBUILD tuxonice-sources-2.6.23-r1.ebuild 1263 RMD160 5b1a3ec6d6d397e8f2bab70d616f1479484b10ac SHA1 ba7a9b5b5751aefbc970f8c026347e7193cec02b SHA256 bdbfee47f54ac71103671a427970a78979ad922e921930678b9bb85929493a6c
-MD5 03c4250e016b340be58f23fb67adb0f7 tuxonice-sources-2.6.23-r1.ebuild 1263
-RMD160 5b1a3ec6d6d397e8f2bab70d616f1479484b10ac tuxonice-sources-2.6.23-r1.ebuild 1263
-SHA256 bdbfee47f54ac71103671a427970a78979ad922e921930678b9bb85929493a6c tuxonice-sources-2.6.23-r1.ebuild 1263
 EBUILD tuxonice-sources-2.6.23-r2.ebuild 1265 RMD160 e62bca066bcbcb2f5be89f2b24940a7651b2319a SHA1 242d31bd8d83441c2bef0abf4ca7f1ee87e32a01 SHA256 faf6a6cd387690f8bfb9dadce6054c2eb87ec2241455b790b8eb5c8a852e1eba
-MD5 e62ac9592eff6408ee2c8c910399575e tuxonice-sources-2.6.23-r2.ebuild 1265
-RMD160 e62bca066bcbcb2f5be89f2b24940a7651b2319a tuxonice-sources-2.6.23-r2.ebuild 1265
-SHA256 faf6a6cd387690f8bfb9dadce6054c2eb87ec2241455b790b8eb5c8a852e1eba tuxonice-sources-2.6.23-r2.ebuild 1265
 EBUILD tuxonice-sources-2.6.23-r3.ebuild 1265 RMD160 d9bb37371d40283b2bd6eb7905bacaf2f32bf7d7 SHA1 3e82b20f5c7a5c49e8aae760492f37c1c377e1ce SHA256 e2004e23fe71920f43c123b1a71893e2d8dffe38f620c346fd4950c2eb8aa9ae
-MD5 9d9b598b227198234017ca61d2065ce1 tuxonice-sources-2.6.23-r3.ebuild 1265
-RMD160 d9bb37371d40283b2bd6eb7905bacaf2f32bf7d7 tuxonice-sources-2.6.23-r3.ebuild 1265
-SHA256 e2004e23fe71920f43c123b1a71893e2d8dffe38f620c346fd4950c2eb8aa9ae tuxonice-sources-2.6.23-r3.ebuild 1265
 EBUILD tuxonice-sources-2.6.23-r4.ebuild 1265 RMD160 45f3973a002275a2384169f5ee1d590901cffebb SHA1 8cc1fb7113270fbf56de1eadd1941b9f6b9f59a4 SHA256 5b26b79e00bedf20096fc152971e9d4fc47db4048baa7142b058d67348d4d62b
-MD5 11a9a294c30d25bfb210154bb7385db7 tuxonice-sources-2.6.23-r4.ebuild 1265
-RMD160 45f3973a002275a2384169f5ee1d590901cffebb tuxonice-sources-2.6.23-r4.ebuild 1265
-SHA256 5b26b79e00bedf20096fc152971e9d4fc47db4048baa7142b058d67348d4d62b tuxonice-sources-2.6.23-r4.ebuild 1265
 EBUILD tuxonice-sources-2.6.23-r5.ebuild 1265 RMD160 6737fa1b6ba1af1722565775f550a31f800a7ae1 SHA1 afb2c832cf6031ccec44a39a2e6c357060672d4f SHA256 44e36afa218f629cf0a7db923971a1f71c7f70dba73706d04e9e3ef476d44a9d
-MD5 f23579e07097efe65bec43076314bff5 tuxonice-sources-2.6.23-r5.ebuild 1265
-RMD160 6737fa1b6ba1af1722565775f550a31f800a7ae1 tuxonice-sources-2.6.23-r5.ebuild 1265
-SHA256 44e36afa218f629cf0a7db923971a1f71c7f70dba73706d04e9e3ef476d44a9d tuxonice-sources-2.6.23-r5.ebuild 1265
 EBUILD tuxonice-sources-2.6.23-r6.ebuild 1262 RMD160 0b6f7da73a31482ee2c1d4900e4042c3cd89d46f SHA1 85021a03d12db146554bf9eca3167f97b5331ab2 SHA256 a9d7449409f0c100742351bd4f45b8a0cbbe846074fca28f53d859059976f891
-MD5 7788196522ed5ae5d4e9db829b9926ee tuxonice-sources-2.6.23-r6.ebuild 1262
-RMD160 0b6f7da73a31482ee2c1d4900e4042c3cd89d46f tuxonice-sources-2.6.23-r6.ebuild 1262
-SHA256 a9d7449409f0c100742351bd4f45b8a0cbbe846074fca28f53d859059976f891 tuxonice-sources-2.6.23-r6.ebuild 1262
 EBUILD tuxonice-sources-2.6.23-r7.ebuild 1265 RMD160 6cf1bb28ab8f715a83217b2a80d9920eacf20984 SHA1 7f3b850c4f2977f2b642a6bd55d56bf18def730a SHA256 9afcfa43b2bd82e1d785f6e085fb301a9724361aedb8617de0ef052d43a2b08a
-MD5 3d93e875e79f357d09400fa17a36d610 tuxonice-sources-2.6.23-r7.ebuild 1265
-RMD160 6cf1bb28ab8f715a83217b2a80d9920eacf20984 tuxonice-sources-2.6.23-r7.ebuild 1265
-SHA256 9afcfa43b2bd82e1d785f6e085fb301a9724361aedb8617de0ef052d43a2b08a tuxonice-sources-2.6.23-r7.ebuild 1265
 EBUILD tuxonice-sources-2.6.23-r8.ebuild 1266 RMD160 b3d4c049dea490b570d1ee5b99433be96e26cb8b SHA1 c342dc6d17459f304b450ba9c094bcb875c1e5c3 SHA256 099bb8d31a9cb51ba697bd8401e5cb185ad1d42111d273b88b82aa21ad69687b
-MD5 3636a7fdf4152b3d56fa63bfeef3e0f4 tuxonice-sources-2.6.23-r8.ebuild 1266
-RMD160 b3d4c049dea490b570d1ee5b99433be96e26cb8b tuxonice-sources-2.6.23-r8.ebuild 1266
-SHA256 099bb8d31a9cb51ba697bd8401e5cb185ad1d42111d273b88b82aa21ad69687b tuxonice-sources-2.6.23-r8.ebuild 1266
 EBUILD tuxonice-sources-2.6.23-r9.ebuild 1266 RMD160 3d1e0dec995da460476a9df387481f7a8403c414 SHA1 c2944eb11fb8b895049f170b012815c67b6d1e13 SHA256 e40ccbe0b3f7b48f1e274900909a5557b9b08147899365da17abbda5f88a2a97
-MD5 75448bb399b532ae383f47ac11b1425c tuxonice-sources-2.6.23-r9.ebuild 1266
-RMD160 3d1e0dec995da460476a9df387481f7a8403c414 tuxonice-sources-2.6.23-r9.ebuild 1266
-SHA256 e40ccbe0b3f7b48f1e274900909a5557b9b08147899365da17abbda5f88a2a97 tuxonice-sources-2.6.23-r9.ebuild 1266
 EBUILD tuxonice-sources-2.6.23.ebuild 1258 RMD160 a7aed0774ce805c37e98f829f826aff6d338e6c0 SHA1 3bdd01c5d41ef28f2310f67e9aad580b7af1c0c2 SHA256 680b1e637b411643e7707899a24d8d7f3cfb0ac5492eff370573d6c23f875e52
-MD5 bbc07505fc4c942881c3b7e8b55a05af tuxonice-sources-2.6.23.ebuild 1258
-RMD160 a7aed0774ce805c37e98f829f826aff6d338e6c0 tuxonice-sources-2.6.23.ebuild 1258
-SHA256 680b1e637b411643e7707899a24d8d7f3cfb0ac5492eff370573d6c23f875e52 tuxonice-sources-2.6.23.ebuild 1258
 MISC ChangeLog 26803 RMD160 209496ca386ab5f7b39a038b4fecfc771a8891a4 SHA1 f1720bd5993a489f04686003ae62a55efefe34a0 SHA256 15c77796ced1e5f318484e91a1bc87d1930d4a850ca1602a3d1bea44b7e17940
-MD5 dd3438e826d799c475cbe8df9c41c6dc ChangeLog 26803
-RMD160 209496ca386ab5f7b39a038b4fecfc771a8891a4 ChangeLog 26803
-SHA256 15c77796ced1e5f318484e91a1bc87d1930d4a850ca1602a3d1bea44b7e17940 ChangeLog 26803
 MISC metadata.xml 278 RMD160 ed11e2348ca2d8f2bd5d647afab7eedf49ed4fea SHA1 7fecfe735fd49536863c0045aa1548860ad89797 SHA256 17c4da4868f175afef2cf8bca329a88c874b117ed9c242ec2139864475606bbe
-MD5 f3434597e50f065a632568ec40da9c11 metadata.xml 278
-RMD160 ed11e2348ca2d8f2bd5d647afab7eedf49ed4fea metadata.xml 278
-SHA256 17c4da4868f175afef2cf8bca329a88c874b117ed9c242ec2139864475606bbe metadata.xml 278
-MD5 0b63baad35fd89f9a0768c39c92e3aaf files/digest-tuxonice-sources-2.6.23 1090
-RMD160 ffb371c21379c1637118d03e1a9178ec184e3f74 files/digest-tuxonice-sources-2.6.23 1090
-SHA256 be98f251cca8ee0f80f6a631001ef5abf1e3d82730755befb355a1e127576c44 files/digest-tuxonice-sources-2.6.23 1090
-MD5 6c29fb02668d67ccf253f4c892a95a25 files/digest-tuxonice-sources-2.6.23-r1 1099
-RMD160 2586584043af167cb3a202d4eaf91abf0cd424aa files/digest-tuxonice-sources-2.6.23-r1 1099
-SHA256 ab3178c236faa9e54b650aa47d2461c54a9bf0b81b9683a3fd33022d03939cb4 files/digest-tuxonice-sources-2.6.23-r1 1099
-MD5 b7cce31ec16cabe5672cf083fef74111 files/digest-tuxonice-sources-2.6.23-r2 1102
-RMD160 e609c7284c50416c3d14e929fa0bf337a44129e5 files/digest-tuxonice-sources-2.6.23-r2 1102
-SHA256 3a0622db4eebff85a1f53541ed09e270b5dfd7f97f10025057aad2569e236f22 files/digest-tuxonice-sources-2.6.23-r2 1102
-MD5 25c4dd4bec42f58648ac75496e6b0d3c files/digest-tuxonice-sources-2.6.23-r3 1102
-RMD160 61e4a342a0e62a9764035bec189f72edf1bf69f5 files/digest-tuxonice-sources-2.6.23-r3 1102
-SHA256 8eb0281acb82c1f78ca89883e8d705baa0c0191c4de0806f5a8bc670738546d8 files/digest-tuxonice-sources-2.6.23-r3 1102
-MD5 c29e3e22c9825166a08fc9332bfacac8 files/digest-tuxonice-sources-2.6.23-r4 1102
-RMD160 0e39c0e2522c7f40cf10c083ec9fb85d86e2f934 files/digest-tuxonice-sources-2.6.23-r4 1102
-SHA256 b40eb6204293a3c7e4a2be0c061ee1f59adb8e37033fa51879bcfa6da0f32103 files/digest-tuxonice-sources-2.6.23-r4 1102
-MD5 31d3abc2081d715528e65d0c070da31f files/digest-tuxonice-sources-2.6.23-r5 1102
-RMD160 3cf4b865798cb52903b56d004ab4f76cb95edba7 files/digest-tuxonice-sources-2.6.23-r5 1102
-SHA256 4c61586f67740a2054a5009512413c1030842991723a7c49dd4804b4ecabc1f4 files/digest-tuxonice-sources-2.6.23-r5 1102
-MD5 41418120c96ec9a148342db18f0d5b23 files/digest-tuxonice-sources-2.6.23-r6 1102
-RMD160 743247607212d641b4e5a59369bfea34b8b341a4 files/digest-tuxonice-sources-2.6.23-r6 1102
-SHA256 f94bfda62cba0e1b0fb178a046d677fbec65bd0ff05f26c48fd898bbca199290 files/digest-tuxonice-sources-2.6.23-r6 1102
-MD5 f72fcb3975e31e98be653d1580c39f77 files/digest-tuxonice-sources-2.6.23-r7 1102
-RMD160 319f494c6c8b0dc471cab5b9280e3318b1751273 files/digest-tuxonice-sources-2.6.23-r7 1102
-SHA256 7938b24fadeb43b57ea14bc3bf17a484d7e72ab4de770e3310593fd9062037d1 files/digest-tuxonice-sources-2.6.23-r7 1102
-MD5 db4e18a90a667649f4c779bf41dfa052 files/digest-tuxonice-sources-2.6.23-r8 1105
-RMD160 8ca26c8ecfb821301d04a68e28d6367f13a5188a files/digest-tuxonice-sources-2.6.23-r8 1105
-SHA256 7fb608094593e9db9097b6dce1192e6204801cbd1ba0925c7d8518df7e4e2ea7 files/digest-tuxonice-sources-2.6.23-r8 1105
-MD5 c382c0bafd84caa839ca12270d1eba29 files/digest-tuxonice-sources-2.6.23-r9 1105
-RMD160 bdaf5089d6e4f720df61586432cb58521d5a90d4 files/digest-tuxonice-sources-2.6.23-r9 1105
-SHA256 59792d96dd3242d386f9a8ff7e4b8de41ec8182ec84df76b0b05351083384a5c files/digest-tuxonice-sources-2.6.23-r9 1105
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHmZLHgo/w9rxVVVERArk4AJ9NYiVgGxvMCkIY5yAq9xF8WcU9+gCfWX3G
-uvvsNmSZogyXMHUr6vPLwlE=
-=BXTx
------END PGP SIGNATURE-----

@@ -1,30 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX linux-headers-2.4-arm-cris-ELF_DATA.patch 604 RMD160 e87aa9384fa404f0253e351217a54b5d19abcecf SHA1 cf84790092dca0407b581bdedcd2164185586cdb SHA256 883099ac26194b7eb18b150bbc2f120572e871decd7db4528ed1daa441e81b69
-MD5 1c81c4ed9c2867aa281bbabbf507e096 files/linux-headers-2.4-arm-cris-ELF_DATA.patch 604
-RMD160 e87aa9384fa404f0253e351217a54b5d19abcecf files/linux-headers-2.4-arm-cris-ELF_DATA.patch 604
-SHA256 883099ac26194b7eb18b150bbc2f120572e871decd7db4528ed1daa441e81b69 files/linux-headers-2.4-arm-cris-ELF_DATA.patch 604
 AUX linux-headers-2.4-armeb-stat.patch 1406 RMD160 0cb1fb012e4b766f6e1e9bfd350e440d36568c39 SHA1 64b2980b1ec3cd731c3728880a984f976a600434 SHA256 21889fddaac10342ebe61c88c09498f3a5f96737c3e173132beacb6f356c4d10
-MD5 76c239f03201f79b357eafb37e213bb6 files/linux-headers-2.4-armeb-stat.patch 1406
-RMD160 0cb1fb012e4b766f6e1e9bfd350e440d36568c39 files/linux-headers-2.4-armeb-stat.patch 1406
-SHA256 21889fddaac10342ebe61c88c09498f3a5f96737c3e173132beacb6f356c4d10 files/linux-headers-2.4-armeb-stat.patch 1406
 AUX linux-headers-2.4-errno-in-unistd.patch 226 RMD160 21ea3224da855f047c42972fa4926f4b4c6ddbe7 SHA1 b3a13d950496455a296d9d1cd87fd7d27996432e SHA256 3c0a03bfd9e8011cccff7b39870dde7912785704332f8a347df7a1cb6c017a0a
-MD5 76f2374cb41045ea36cae2fa0dcd063e files/linux-headers-2.4-errno-in-unistd.patch 226
-RMD160 21ea3224da855f047c42972fa4926f4b4c6ddbe7 files/linux-headers-2.4-errno-in-unistd.patch 226
-SHA256 3c0a03bfd9e8011cccff7b39870dde7912785704332f8a347df7a1cb6c017a0a files/linux-headers-2.4-errno-in-unistd.patch 226
 AUX linux-headers-soundcard-ppc64.patch 722 RMD160 34098233034fbff6a5a9e462d517b5a87000d33a SHA1 4b98b979e695c26cb2c1eac46821b2bc5b639b06 SHA256 c584d6dc683a2d6ce5b798df33f0f757c1227a2ad839cfd40b84dc559e2cb252
-MD5 14c583e9ea29b2a3fc88349685cce2f4 files/linux-headers-soundcard-ppc64.patch 722
-RMD160 34098233034fbff6a5a9e462d517b5a87000d33a files/linux-headers-soundcard-ppc64.patch 722
-SHA256 c584d6dc683a2d6ce5b798df33f0f757c1227a2ad839cfd40b84dc559e2cb252 files/linux-headers-soundcard-ppc64.patch 722
 AUX linux-headers-strict-ansi-fix.patch 1486 RMD160 f2ab9154810f7ec94fde147abfe3bed084733535 SHA1 ebc97d441411ad7167429e91d5e09f96c78a8cfa SHA256 b22d68d655ee65cdbbbe0750682fa7873d75fd19cd04cbe0a165d15a97b60afd
-MD5 459bc20c4015796630e3a9f3dc9125e6 files/linux-headers-strict-ansi-fix.patch 1486
-RMD160 f2ab9154810f7ec94fde147abfe3bed084733535 files/linux-headers-strict-ansi-fix.patch 1486
-SHA256 b22d68d655ee65cdbbbe0750682fa7873d75fd19cd04cbe0a165d15a97b60afd files/linux-headers-strict-ansi-fix.patch 1486
 AUX unistd.h-i386-pic.patch 4312 RMD160 fad74589ec159b556452b494a766a31cf23d8d1a SHA1 41096f044bb29ca882d8bc1a3d62da040aed98c3 SHA256 c9b9d8799eb09a42779dc39b626d269bcccea79e970fb84398d6a2e97c2d9bb5
-MD5 833edf786e2038e76bf5de8de80a3b7a files/unistd.h-i386-pic.patch 4312
-RMD160 fad74589ec159b556452b494a766a31cf23d8d1a files/unistd.h-i386-pic.patch 4312
-SHA256 c9b9d8799eb09a42779dc39b626d269bcccea79e970fb84398d6a2e97c2d9bb5 files/unistd.h-i386-pic.patch 4312
 DIST gentoo-headers-2.4.33-1.tar.bz2 11542 RMD160 bce638fe62012cf686f3e12432c363be578b5f57 SHA1 a0550e02081622aab01d0a9925bd5eb6ca61c15e SHA256 a1517b0ea6619f018d0dfbb7457be122a0f80b5e76b995fdedaa9423951fb37d
 DIST gentoo-headers-2.6.17-5.tar.bz2 24016 RMD160 1ad27d63cd2bfe588999e12b1bc3d99aaa696178 SHA1 d248c017bc1ff9f107d11c956d072730899285a7 SHA256 e4ec1a20c9d384f31bc845976beb333dc9fdbb234979baf127c4fff3359afdd4
 DIST gentoo-headers-2.6.22-3.tar.bz2 8161 RMD160 080072583b3af63c0e6d651b12d8250e3e0b7311 SHA1 80f7ccb945c0cde641969aeb3c9f369015bb3e8e SHA256 c5345102c6d93b25f0daf20a8f4206a13df107db5882b9e22292a21f896f12c2
@@ -44,94 +23,15 @@ DIST linux-2.6.17-m68k-headers.patch.bz2 18059 RMD160 9594404d1c3ac50a6baa49c390
 DIST linux-2.6.17.tar.bz2 41272919 RMD160 26aad30c9a6610665c6c7d62401d79bf56a6a699 SHA1 0605c975b9dead2af31a3decf09dd4138fadaf2b SHA256 ab0f647d52f124958439517df9e1ae0efda90cdb851f59f522fa1749f1d87d58
 DIST patch-2.4.33.3.bz2 6069 RMD160 dba22420a3c3445042f1193475718fdf4c5a6c3d SHA1 22f8493026ee1a191cae073cb94ee2b037ca575c SHA256 926223533c33791770a8ae134d731aa3f98b67a2b5676426ea74a1a888eb5a7b
 EBUILD linux-headers-2.0.40-r1.ebuild 354 RMD160 92879e694ce80282a31df8937fa128eb410164bf SHA1 61e3e9be9d6add171d0803a3047b3139f39f2b29 SHA256 070df25f911c6ccbaeab246ae931431744066f8b3ed98656dd2619f7b276e6f0
-MD5 4ee28474d24045304497c27d9881f731 linux-headers-2.0.40-r1.ebuild 354
-RMD160 92879e694ce80282a31df8937fa128eb410164bf linux-headers-2.0.40-r1.ebuild 354
-SHA256 070df25f911c6ccbaeab246ae931431744066f8b3ed98656dd2619f7b276e6f0 linux-headers-2.0.40-r1.ebuild 354
 EBUILD linux-headers-2.2.26-r1.ebuild 354 RMD160 a3073276358abb9f89e2ce9f6c36a6977d565aa0 SHA1 8a5b719f0d6ca42c704902e39b4d7aed505d6168 SHA256 64b184ab7fe7a50a59456348f83bf034bbded256908716d696d3dc968aa9caa0
-MD5 bebc0a2bb79dc84e937493b07671d660 linux-headers-2.2.26-r1.ebuild 354
-RMD160 a3073276358abb9f89e2ce9f6c36a6977d565aa0 linux-headers-2.2.26-r1.ebuild 354
-SHA256 64b184ab7fe7a50a59456348f83bf034bbded256908716d696d3dc968aa9caa0 linux-headers-2.2.26-r1.ebuild 354
 EBUILD linux-headers-2.4.26-r1.ebuild 742 RMD160 eb6ed305f28efa7ebc2a9fbec451e517fcf64acb SHA1 52a20b07e5b8fe871eb67db59d3ca0c82c284d00 SHA256 f74c62efec527303a1b3b7f52843e09ddd79fa2bd92314c5ace00b0ac5249144
-MD5 aed46d4e22fc5e938d15f2e3850d0a69 linux-headers-2.4.26-r1.ebuild 742
-RMD160 eb6ed305f28efa7ebc2a9fbec451e517fcf64acb linux-headers-2.4.26-r1.ebuild 742
-SHA256 f74c62efec527303a1b3b7f52843e09ddd79fa2bd92314c5ace00b0ac5249144 linux-headers-2.4.26-r1.ebuild 742
 EBUILD linux-headers-2.4.33.3.ebuild 610 RMD160 66c3c286b7327301fa8e96613f3259f367b17b4a SHA1 04baf4323e02a8f698daa356e28a17beafa4860d SHA256 09fb8861c614ff70086a6d5120b7118faece8b823ff101cce794bfaeb557be49
-MD5 4d4f1d05f2df0118a71171555961f1b6 linux-headers-2.4.33.3.ebuild 610
-RMD160 66c3c286b7327301fa8e96613f3259f367b17b4a linux-headers-2.4.33.3.ebuild 610
-SHA256 09fb8861c614ff70086a6d5120b7118faece8b823ff101cce794bfaeb557be49 linux-headers-2.4.33.3.ebuild 610
 EBUILD linux-headers-2.6.17-r2.ebuild 1178 RMD160 2ca04dc15bca98c4224d1b2f1abac61440a96803 SHA1 44c1c496145fa10aaf8336e6e647b85bbf5d838c SHA256 73c8c8a41354ea04368b6616825727cc749a03b355098767d14b78e941a325c5
-MD5 b88dde2a6e7fe76fe5022be4a096480d linux-headers-2.6.17-r2.ebuild 1178
-RMD160 2ca04dc15bca98c4224d1b2f1abac61440a96803 linux-headers-2.6.17-r2.ebuild 1178
-SHA256 73c8c8a41354ea04368b6616825727cc749a03b355098767d14b78e941a325c5 linux-headers-2.6.17-r2.ebuild 1178
 EBUILD linux-headers-2.6.22-r2.ebuild 1034 RMD160 297e78516b73616b71e8afc6ed9d10884d3ac746 SHA1 e854e53badba77d64bcc6d5214dd722d5dac091b SHA256 e894a41e8c36f6983e577b6ff3cf1c3b1bd9c7df873dcb85920f4aa61236ea68
-MD5 9d848892c275354872386bb338fe8d94 linux-headers-2.6.22-r2.ebuild 1034
-RMD160 297e78516b73616b71e8afc6ed9d10884d3ac746 linux-headers-2.6.22-r2.ebuild 1034
-SHA256 e894a41e8c36f6983e577b6ff3cf1c3b1bd9c7df873dcb85920f4aa61236ea68 linux-headers-2.6.22-r2.ebuild 1034
 EBUILD linux-headers-2.6.23-r1.ebuild 1051 RMD160 3822ed5e541ace5924f420568b1d6e09534b7a2c SHA1 ad1f0a73f34bfc1104a95466017a4676e162597f SHA256 31e112b5915af324f1bb8a5af5c802215bfc397e83c321acdbb5cd35988458c8
-MD5 d4324160280fdb81a130fffccb277681 linux-headers-2.6.23-r1.ebuild 1051
-RMD160 3822ed5e541ace5924f420568b1d6e09534b7a2c linux-headers-2.6.23-r1.ebuild 1051
-SHA256 31e112b5915af324f1bb8a5af5c802215bfc397e83c321acdbb5cd35988458c8 linux-headers-2.6.23-r1.ebuild 1051
 EBUILD linux-headers-2.6.23-r2.ebuild 1038 RMD160 49454279cdf3aa7069312caa9988c526676cfc16 SHA1 5231df8f2d6cbcf60e5a85a30bc470f2ec0e2fc0 SHA256 ccf8fc7b23e0d122060ee8eb1581f72355c9a75d278a8043b30fbd9b624c67c6
-MD5 02de94f0533f409a515f28fc1ec92894 linux-headers-2.6.23-r2.ebuild 1038
-RMD160 49454279cdf3aa7069312caa9988c526676cfc16 linux-headers-2.6.23-r2.ebuild 1038
-SHA256 ccf8fc7b23e0d122060ee8eb1581f72355c9a75d278a8043b30fbd9b624c67c6 linux-headers-2.6.23-r2.ebuild 1038
 EBUILD linux-headers-2.6.23-r3.ebuild 1082 RMD160 cdaade84c46000495b1a4919df41d9fbebfad984 SHA1 e1cc4de22fd33aaf45813917f1c5c8588125b503 SHA256 00ca1b2526644200957b436be24d489a34084a8b561edd304a692f1503e197f0
-MD5 2307907cde4596c858d0dae1d8312e7b linux-headers-2.6.23-r3.ebuild 1082
-RMD160 cdaade84c46000495b1a4919df41d9fbebfad984 linux-headers-2.6.23-r3.ebuild 1082
-SHA256 00ca1b2526644200957b436be24d489a34084a8b561edd304a692f1503e197f0 linux-headers-2.6.23-r3.ebuild 1082
 EBUILD linux-headers-2.6.23.ebuild 1048 RMD160 2ad269ad36b62815eeaac8a547b5246573ffd97b SHA1 f877c71cc4a97fc335fcf4fd735c93779d936d75 SHA256 d63ac1144aebfdf0eac2922f548b835c717a7e00ebc3824ba8fa06c2cc366618
-MD5 2a150ab3266823273893a199432b1026 linux-headers-2.6.23.ebuild 1048
-RMD160 2ad269ad36b62815eeaac8a547b5246573ffd97b linux-headers-2.6.23.ebuild 1048
-SHA256 d63ac1144aebfdf0eac2922f548b835c717a7e00ebc3824ba8fa06c2cc366618 linux-headers-2.6.23.ebuild 1048
 EBUILD linux-headers-2.6.24.ebuild 1091 RMD160 ac358cf6bf2d98105dd8b62d342a39763bb5d271 SHA1 89b9029d7b94b078b6130f3a11b490f8cdf6101e SHA256 1fd1583e2aa91bf540d0eaac05b2caab37ec5ca94825cc70686982f015a7fa0d
-MD5 58f179152a367d314d921b7ad7ae0a31 linux-headers-2.6.24.ebuild 1091
-RMD160 ac358cf6bf2d98105dd8b62d342a39763bb5d271 linux-headers-2.6.24.ebuild 1091
-SHA256 1fd1583e2aa91bf540d0eaac05b2caab37ec5ca94825cc70686982f015a7fa0d linux-headers-2.6.24.ebuild 1091
 MISC ChangeLog 45050 RMD160 a5f2701a9f0645969404fbc5d926fae6f11bc495 SHA1 92fc0bc8a274a14879469ccd75f3c9fc6b0185b1 SHA256 b5b8d0be91b9096a4adc8591f8660924dab97899de9de316accd77dcea835226
-MD5 7419454042e4589790fdb4195256153c ChangeLog 45050
-RMD160 a5f2701a9f0645969404fbc5d926fae6f11bc495 ChangeLog 45050
-SHA256 b5b8d0be91b9096a4adc8591f8660924dab97899de9de316accd77dcea835226 ChangeLog 45050
 MISC metadata.xml 162 RMD160 d002486a43522f2116b1d9d59828c484956d66e2 SHA1 d6b4923897f6ae673b4f93646f5b4ba61d5a2c3c SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a
-MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-RMD160 d002486a43522f2116b1d9d59828c484956d66e2 metadata.xml 162
-SHA256 65a915d44de1f01d4b7f72d313b4192c38374a9835d24988c00c1e73dca5805a metadata.xml 162
-MD5 48d0c5254ddf6fa867ffe50e1fccd6cb files/digest-linux-headers-2.0.40-r1 244
-RMD160 bab96890772574239e94380c91a5d14ef0c304c8 files/digest-linux-headers-2.0.40-r1 244
-SHA256 76065202894e78af7112acec880ba8d26cdc12cee0d74a9cc4ff2b509f593914 files/digest-linux-headers-2.0.40-r1 244
-MD5 dda7e5d73418e48ed5b1702f44d7fbf7 files/digest-linux-headers-2.2.26-r1 247
-RMD160 e0cafc0025dbe141b9d8203f3fc9c747c127f4d1 files/digest-linux-headers-2.2.26-r1 247
-SHA256 fbcd87968986be8964223517bf150b120cded7130753394c9c2bb06fde0a2232 files/digest-linux-headers-2.2.26-r1 247
-MD5 e833d07f043b20a8ceb2e3ecca79c4f5 files/digest-linux-headers-2.4.26-r1 247
-RMD160 f970d2cba1572818b45c30409ca0f139b7da8eb3 files/digest-linux-headers-2.4.26-r1 247
-SHA256 ed8ab276d48205f14e6f2531d4063d3a3cdf1ddb67be961ca990140a622eb857 files/digest-linux-headers-2.4.26-r1 247
-MD5 629c6d332e617161ca37f687d17c6ff5 files/digest-linux-headers-2.4.33.3 747
-RMD160 2b4dbc42e5da0b28207fb526d7f9021c12b22e05 files/digest-linux-headers-2.4.33.3 747
-SHA256 ed034baadfad2cf1098fc1ae687e4e620e59c4660455fefe562e3ac8a5004c90 files/digest-linux-headers-2.4.33.3 747
-MD5 6c77641c4761e2b7cef43ef5a15f1fa7 files/digest-linux-headers-2.6.17-r2 801
-RMD160 3001dab123159b291262367227bd3cc43469670f files/digest-linux-headers-2.6.17-r2 801
-SHA256 7b691fe785e084aa5f970c8e9121f325babf9acec1f9b7abf41f26132b9a0f20 files/digest-linux-headers-2.6.17-r2 801
-MD5 53270b96a916a2d24d0c28663ae57dbb files/digest-linux-headers-2.6.22-r2 554
-RMD160 21f756cbe78aa36db4b07dca04b77f4a028598a3 files/digest-linux-headers-2.6.22-r2 554
-SHA256 f87abd4c46d90baa1e4c8557d4fbedd95d4619597bb24013ab5dbc8cc79dfcbb files/digest-linux-headers-2.6.22-r2 554
-MD5 2f87178b37d5c8c7842e31e571ea769f files/digest-linux-headers-2.6.23 554
-RMD160 7cab56429ac95dbd7740571a2535832b29a436a6 files/digest-linux-headers-2.6.23 554
-SHA256 d75674dd41a05648f203ad56b2d80c8621fe2c3cfb45e7240b77cc6f6b5e9718 files/digest-linux-headers-2.6.23 554
-MD5 c28a4d3ac6395fd4f119548f164a8d67 files/digest-linux-headers-2.6.23-r1 554
-RMD160 278c0bcd43648d6684ae145f694261708ccd99f0 files/digest-linux-headers-2.6.23-r1 554
-SHA256 101b88887f676320a316bed22e3af46ce42ecf2f35ad0da051eb94b959cbcf9a files/digest-linux-headers-2.6.23-r1 554
-MD5 139399d6709e9dca16db801c46740eb0 files/digest-linux-headers-2.6.23-r2 554
-RMD160 7dbba11e4f0bdc6a8e0626bc3e30e48569bd96d1 files/digest-linux-headers-2.6.23-r2 554
-SHA256 3cef14edaf74dbd2b43a3825de8363464fc095d31bb571f979a503a7d5a6ba4f files/digest-linux-headers-2.6.23-r2 554
-MD5 f747cf1fe4dd6249772ea85aca291124 files/digest-linux-headers-2.6.23-r3 554
-RMD160 aa7cf2b223cf906f8bbcf0b4f74ead7475d6916f files/digest-linux-headers-2.6.23-r3 554
-SHA256 f569c376cf54cfaa20025eaf73bab8046446b732eea612bc61c3f2fe69a40345 files/digest-linux-headers-2.6.23-r3 554
-MD5 0a44e79645f1464a7f7d1878454051bf files/digest-linux-headers-2.6.24 554
-RMD160 f751ab7d8db914ccc1a6f9af22c36879cf521575 files/digest-linux-headers-2.6.24 554
-SHA256 27077c190d2b4b3f6de8e9dd9e3a4401ecf098d024e21da093214228af13ca67 files/digest-linux-headers-2.6.24 554
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHnKu9KhnDs22gwa8RAv+VAJ44MSBL4JixetbAc2ff6a+T0JKuJQCdHEK0
-j4HVp13mABdDaLqjndmBjtg=
-=2AHZ
------END PGP SIGNATURE-----
