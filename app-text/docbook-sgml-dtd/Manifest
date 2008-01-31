@@ -1,35 +1,11 @@
 AUX docbook-sgml-dtd-3.0-catalog.diff 2144 RMD160 aacaf66ace2044039cc3bcdc99cb9bd60b40bc4d SHA1 e7d286ccc28c1b3639d827998c6d47e2610d3bd6 SHA256 0e86312ea2e3495297c7e8d38013a39900539455a12a29fdeafd1ce60bc41304
-MD5 62d3c1df622a6bfc25b3c69754a625ac files/docbook-sgml-dtd-3.0-catalog.diff 2144
-RMD160 aacaf66ace2044039cc3bcdc99cb9bd60b40bc4d files/docbook-sgml-dtd-3.0-catalog.diff 2144
-SHA256 0e86312ea2e3495297c7e8d38013a39900539455a12a29fdeafd1ce60bc41304 files/docbook-sgml-dtd-3.0-catalog.diff 2144
 AUX docbook-sgml-dtd-3.1-catalog.diff 2125 RMD160 2eeda8886caf2e1e82c290f725119ad789e93a18 SHA1 41166b4b7783472c87e61e93e9f903d099ece274 SHA256 4e5f470aaa33edf75dc7b03bcb1dc9146ef4134509e115b6ed3deba27e56006d
-MD5 a8f3419d176358d518b9d9dc859a3fcc files/docbook-sgml-dtd-3.1-catalog.diff 2125
-RMD160 2eeda8886caf2e1e82c290f725119ad789e93a18 files/docbook-sgml-dtd-3.1-catalog.diff 2125
-SHA256 4e5f470aaa33edf75dc7b03bcb1dc9146ef4134509e115b6ed3deba27e56006d files/docbook-sgml-dtd-3.1-catalog.diff 2125
 AUX docbook-sgml-dtd-4.0-catalog.diff 2096 RMD160 e0ac924d181261464cf4ae1a8503ad079ed8a4a4 SHA1 d06daf2ccd17b060ce47e2129bcfea542241216e SHA256 689e3ea909241527aecc7f1c40699292cccdb10b33a2def97d3fb87aeb86ecdd
-MD5 f0e1ab2a23242f2e31d14386fb7c5dd8 files/docbook-sgml-dtd-4.0-catalog.diff 2096
-RMD160 e0ac924d181261464cf4ae1a8503ad079ed8a4a4 files/docbook-sgml-dtd-4.0-catalog.diff 2096
-SHA256 689e3ea909241527aecc7f1c40699292cccdb10b33a2def97d3fb87aeb86ecdd files/docbook-sgml-dtd-4.0-catalog.diff 2096
 AUX docbook-sgml-dtd-4.1-catalog.diff 2096 RMD160 204d204e3e6bb6f39094a73a8038acc78e9361bc SHA1 1f4b4751de71a881662782cbb944313958774242 SHA256 0450cf0fc0a00bd554bc848d1cf2d35d54aa769c40a82e70614292d9d7cff6d2
-MD5 7342752ff54af2d013d5d742850c8f3e files/docbook-sgml-dtd-4.1-catalog.diff 2096
-RMD160 204d204e3e6bb6f39094a73a8038acc78e9361bc files/docbook-sgml-dtd-4.1-catalog.diff 2096
-SHA256 0450cf0fc0a00bd554bc848d1cf2d35d54aa769c40a82e70614292d9d7cff6d2 files/docbook-sgml-dtd-4.1-catalog.diff 2096
 AUX docbook-sgml-dtd-4.2-catalog.diff 2528 RMD160 55305cd5ffb8b28dec1951bc5cf64ddafb8204e2 SHA1 782e62d575b28a3491c6410061d8b6d56c60b9f9 SHA256 261925809c97d6c65ec0d0d98a0b5f5f4bda1d01adafb59d76d63f52164021a6
-MD5 3bd41e2920a6a2d3618a4734e269480c files/docbook-sgml-dtd-4.2-catalog.diff 2528
-RMD160 55305cd5ffb8b28dec1951bc5cf64ddafb8204e2 files/docbook-sgml-dtd-4.2-catalog.diff 2528
-SHA256 261925809c97d6c65ec0d0d98a0b5f5f4bda1d01adafb59d76d63f52164021a6 files/docbook-sgml-dtd-4.2-catalog.diff 2528
 AUX docbook-sgml-dtd-4.3-catalog.diff 2471 RMD160 2a68d91ee50dbdb29d309f410ec898b73f50f670 SHA1 3a80cc114ada367b7c0bcc7f69499c3f7a7fd89c SHA256 87d7fd4d9ea0d8b4e0b457d517d504aef44f6a19ff36f7276ea7021f7116eba5
-MD5 aeb2b995c38dfadd675a4ba6c8ca5363 files/docbook-sgml-dtd-4.3-catalog.diff 2471
-RMD160 2a68d91ee50dbdb29d309f410ec898b73f50f670 files/docbook-sgml-dtd-4.3-catalog.diff 2471
-SHA256 87d7fd4d9ea0d8b4e0b457d517d504aef44f6a19ff36f7276ea7021f7116eba5 files/docbook-sgml-dtd-4.3-catalog.diff 2471
 AUX docbook-sgml-dtd-4.4-catalog.diff 2471 RMD160 ecedab244b3adfb0a18c7e524907d6f39266d62d SHA1 0a7b348f594e329a38002cd3b34e150df908efe7 SHA256 71183cdee2871d345437da0a6e53abd04c45acbe39747aad5fdafbd1b1b6b5a6
-MD5 83e29168ed88c8e03ba803fe3614b8d0 files/docbook-sgml-dtd-4.4-catalog.diff 2471
-RMD160 ecedab244b3adfb0a18c7e524907d6f39266d62d files/docbook-sgml-dtd-4.4-catalog.diff 2471
-SHA256 71183cdee2871d345437da0a6e53abd04c45acbe39747aad5fdafbd1b1b6b5a6 files/docbook-sgml-dtd-4.4-catalog.diff 2471
 AUX docbook-sgml-dtd-4.5-catalog.diff 2583 RMD160 19edd524fca84106f484b71771fd740ebfe5630f SHA1 b0347530d53a119b2aa2db444259b2cc5cfc4615 SHA256 071d740b48b6b3aa10675cac516827a8c76b99c9d6d937fdca7c3fe1441237df
-MD5 e492a592b8b77c19b36603b8762088b0 files/docbook-sgml-dtd-4.5-catalog.diff 2583
-RMD160 19edd524fca84106f484b71771fd740ebfe5630f files/docbook-sgml-dtd-4.5-catalog.diff 2583
-SHA256 071d740b48b6b3aa10675cac516827a8c76b99c9d6d937fdca7c3fe1441237df files/docbook-sgml-dtd-4.5-catalog.diff 2583
 DIST docbk30.zip 43441 RMD160 29f2360c0eeef0f167ceb02dd91ef7e12f004136 SHA1 83b22b248ed17e686df3a04494ac696b9710e5af SHA256 ecf71cbe8ddbad7494ff520d5b4edf73a428c0b159178cb0cb619cba685e61c6
 DIST docbk31.zip 55952 RMD160 840d2d47aee3ffd68dd3c84cb010ce10bbfec426 SHA1 75a5bb4f17b17ff0f7dd1cc2db7112bad0fb89e6 SHA256 20261d2771b9a052abfa3d8fab1aa62be05791a010281c566f9073bf0e644538
 DIST docbk40.zip 55742 RMD160 c479d08b1de3b8bab75fba9e89790a455973f7b2 SHA1 95f9c7d3d339d7d3889bd1f0dabaa6ca55445f26 SHA256 dfef22f109779e4cfaafa27b6d381d975ac05eaafb5b3d4407d7043e310817bb
@@ -39,66 +15,12 @@ DIST docbook-4.3.zip 66117 RMD160 3054a9ba8456c12b11ecb8e2804248e4db920794 SHA1 
 DIST docbook-4.4.zip 66879 RMD160 65a451c2783ea86ea471c180209e70444d30a5ab SHA1 9a7343709c1f5093f93b234d04f3d7f440a84dd0 SHA256 0ac7960409b032c8e517483523ecb92af4e59196a33b3e2c5617daa22b7a8a6c
 DIST docbook-4.5.zip 71252 RMD160 79c86bd52dbcb3ac5ebc965b5f7c12073fc1a87f SHA1 5efeb22936ea30cdaf88053337de7966dfda02bd SHA256 8043e514e80c6c19cb146b5d37937d1305bf3abf9b0097c36df7f70f611cdf43
 EBUILD docbook-sgml-dtd-3.0-r3.ebuild 1052 RMD160 c1def7946c9809d9fe1fb79942fbdc0ed8134d18 SHA1 31583afd63fd5ef9f9bae9def1c698bb76b2a795 SHA256 889696273dcdc311bbe8935e1dc950ab7dfe58da31e6906ce214915b5eb79b1b
-MD5 82cae057734156e9e87c8f534426494c docbook-sgml-dtd-3.0-r3.ebuild 1052
-RMD160 c1def7946c9809d9fe1fb79942fbdc0ed8134d18 docbook-sgml-dtd-3.0-r3.ebuild 1052
-SHA256 889696273dcdc311bbe8935e1dc950ab7dfe58da31e6906ce214915b5eb79b1b docbook-sgml-dtd-3.0-r3.ebuild 1052
 EBUILD docbook-sgml-dtd-3.1-r3.ebuild 1052 RMD160 7573582d8dd4c0f47566c2fae602ccc10e25914c SHA1 e4bfaa8c57da48f06a7f228a6b0bac58167f2eb3 SHA256 894222723f75302fa6d04119c2770e7c0a4d28ebeb3bd056dd70d0d407ad2e71
-MD5 be6e8671361645a89b093b21b7177343 docbook-sgml-dtd-3.1-r3.ebuild 1052
-RMD160 7573582d8dd4c0f47566c2fae602ccc10e25914c docbook-sgml-dtd-3.1-r3.ebuild 1052
-SHA256 894222723f75302fa6d04119c2770e7c0a4d28ebeb3bd056dd70d0d407ad2e71 docbook-sgml-dtd-3.1-r3.ebuild 1052
 EBUILD docbook-sgml-dtd-4.0-r3.ebuild 1051 RMD160 4b403f89f797f33e64abdfbfc625303bf1b3ac0f SHA1 92044cc205627ce8b88f98a95743d667ca686a38 SHA256 6b38617f6c3bb79cf78c04dd68c9e609c84fcf43f2f5f7af0b34ace64ddcac23
-MD5 5892d4e4750d514bedb3a31e66a1a629 docbook-sgml-dtd-4.0-r3.ebuild 1051
-RMD160 4b403f89f797f33e64abdfbfc625303bf1b3ac0f docbook-sgml-dtd-4.0-r3.ebuild 1051
-SHA256 6b38617f6c3bb79cf78c04dd68c9e609c84fcf43f2f5f7af0b34ace64ddcac23 docbook-sgml-dtd-4.0-r3.ebuild 1051
 EBUILD docbook-sgml-dtd-4.1-r3.ebuild 1051 RMD160 3a5c07887bb1bb412da412c721150b962c1d387e SHA1 0374d7da4abd39a7ad1b611dd3889351316c0574 SHA256 f9634c9642e357e17ffdb3cf5838980450ee02bf42b072730106116ab3871be4
-MD5 aec722e3c6e83619db8ebc9611e1f95f docbook-sgml-dtd-4.1-r3.ebuild 1051
-RMD160 3a5c07887bb1bb412da412c721150b962c1d387e docbook-sgml-dtd-4.1-r3.ebuild 1051
-SHA256 f9634c9642e357e17ffdb3cf5838980450ee02bf42b072730106116ab3871be4 docbook-sgml-dtd-4.1-r3.ebuild 1051
 EBUILD docbook-sgml-dtd-4.2-r2.ebuild 1053 RMD160 338cb6c762771cadb5035b05278b5292ed14e4bc SHA1 b0039ee7b0552e29bd284aea2b67a45b93e19146 SHA256 9f79eb7f94a27c9a9f02ae6fd3655859ef5913ff626d7f1afb1be75edfc779ee
-MD5 352aef4bca417b4821c881aecfb00f9a docbook-sgml-dtd-4.2-r2.ebuild 1053
-RMD160 338cb6c762771cadb5035b05278b5292ed14e4bc docbook-sgml-dtd-4.2-r2.ebuild 1053
-SHA256 9f79eb7f94a27c9a9f02ae6fd3655859ef5913ff626d7f1afb1be75edfc779ee docbook-sgml-dtd-4.2-r2.ebuild 1053
 EBUILD docbook-sgml-dtd-4.3-r2.ebuild 1036 RMD160 1bcd115616eb11271a08a16bc83fdca48c847d48 SHA1 ef323161a5b8304860c837634261030fbd7d9b25 SHA256 103b89f4e0af5c82a86da944bdd291ef6b364bed4263ec0be47a42fe9b7f5338
-MD5 0ee4636da218913aa0193e7e703b10db docbook-sgml-dtd-4.3-r2.ebuild 1036
-RMD160 1bcd115616eb11271a08a16bc83fdca48c847d48 docbook-sgml-dtd-4.3-r2.ebuild 1036
-SHA256 103b89f4e0af5c82a86da944bdd291ef6b364bed4263ec0be47a42fe9b7f5338 docbook-sgml-dtd-4.3-r2.ebuild 1036
 EBUILD docbook-sgml-dtd-4.4.ebuild 1043 RMD160 4e24755555aae668604d2421e434360fea9f7bfb SHA1 f9e6c8810c2b8cbcd4bb685cd19d95f30f56dda5 SHA256 e5eb2a9a4ea6b82c67561f795ca8be3853fdcb42daad003bbe8c34b7a847ec50
-MD5 2812dc693d997adb236af79d7911cfb3 docbook-sgml-dtd-4.4.ebuild 1043
-RMD160 4e24755555aae668604d2421e434360fea9f7bfb docbook-sgml-dtd-4.4.ebuild 1043
-SHA256 e5eb2a9a4ea6b82c67561f795ca8be3853fdcb42daad003bbe8c34b7a847ec50 docbook-sgml-dtd-4.4.ebuild 1043
 EBUILD docbook-sgml-dtd-4.5.ebuild 1048 RMD160 fc9df9326fdad1da2df6b9f2b1f7631946c716cc SHA1 e178be4149cf51d1c5a84dde29fbbc38197c93ba SHA256 efe8e4ecbd7a9bb06047796ba55a72460968f4d6796db845f014360cba57b18e
-MD5 14fa1ca675f25640f088162de0ca787a docbook-sgml-dtd-4.5.ebuild 1048
-RMD160 fc9df9326fdad1da2df6b9f2b1f7631946c716cc docbook-sgml-dtd-4.5.ebuild 1048
-SHA256 efe8e4ecbd7a9bb06047796ba55a72460968f4d6796db845f014360cba57b18e docbook-sgml-dtd-4.5.ebuild 1048
 MISC ChangeLog 9946 RMD160 396271f4379911329895b59014c8cfc0ebdf3b89 SHA1 ffd98c38c88783b7de5518584be410aafa70afab SHA256 657e4e05ce5c843075f2ec7a5740f16ab861c9b2da5867486b0c18bb40776695
-MD5 197ac91fd127cda4db05c2f504bdb458 ChangeLog 9946
-RMD160 396271f4379911329895b59014c8cfc0ebdf3b89 ChangeLog 9946
-SHA256 657e4e05ce5c843075f2ec7a5740f16ab861c9b2da5867486b0c18bb40776695 ChangeLog 9946
 MISC metadata.xml 159 RMD160 a94e7b2c191d1593b8bc416d266571e001c2f673 SHA1 3c1d0831d8acacef390234d20d7711cabded861a SHA256 52cf1b9dda72e2d61fef95515c8a124ac9f1196e5509e5636e269f396fcba8a3
-MD5 f6f50979d39d8d194c09b8f7833219aa metadata.xml 159
-RMD160 a94e7b2c191d1593b8bc416d266571e001c2f673 metadata.xml 159
-SHA256 52cf1b9dda72e2d61fef95515c8a124ac9f1196e5509e5636e269f396fcba8a3 metadata.xml 159
-MD5 79a181052858c9e10bbd9d60d5be18f9 files/digest-docbook-sgml-dtd-3.0-r3 211
-RMD160 7033ee417bbe3e1dcf575fb4d4177c81adce7388 files/digest-docbook-sgml-dtd-3.0-r3 211
-SHA256 5bbd97230c1cd8d19352643df6c86fc04953476d274537ea9117f22d55e1a91a files/digest-docbook-sgml-dtd-3.0-r3 211
-MD5 8c10edefc01d758b113348ff4420a358 files/digest-docbook-sgml-dtd-3.1-r3 211
-RMD160 33ca44a9359a91481f43dc0b6397bc4243af4c7f files/digest-docbook-sgml-dtd-3.1-r3 211
-SHA256 0240bc9e138894a89898ef3e7aa5f7fbf6d3765c3b8ac42f52aa425e035a6bb3 files/digest-docbook-sgml-dtd-3.1-r3 211
-MD5 1c8c1f4a113f9384bf957c3bd28b7da1 files/digest-docbook-sgml-dtd-4.0-r3 211
-RMD160 901906a9fafba8ded81b50f51d874af2eeb22d37 files/digest-docbook-sgml-dtd-4.0-r3 211
-SHA256 a6818f916f4546b6b7182a6d558d0eda1341e7bad9338d922825132e8dadd7a6 files/digest-docbook-sgml-dtd-4.0-r3 211
-MD5 66d735692cb22f57d7ab7edaf424221d files/digest-docbook-sgml-dtd-4.1-r3 211
-RMD160 b2618c40ed5462ae0385846a06af8f954a1e2113 files/digest-docbook-sgml-dtd-4.1-r3 211
-SHA256 6c0c3992fa8ca960e72b7a7814f3ad4fae3d02679fe53008be9d73b003a18976 files/digest-docbook-sgml-dtd-4.1-r3 211
-MD5 1b2066bdd42da7b562039c9fc3558720 files/digest-docbook-sgml-dtd-4.2-r2 223
-RMD160 ca037c09b2016757212b90dc553ebeda58d2fbf9 files/digest-docbook-sgml-dtd-4.2-r2 223
-SHA256 fe0ba378715c8945e4a153b27539f396e27d7770028ace3d1b9a0634e00ac984 files/digest-docbook-sgml-dtd-4.2-r2 223
-MD5 38b513c20dc68a201c2f7e96c0196615 files/digest-docbook-sgml-dtd-4.3-r2 223
-RMD160 f2b77a8654dd2b4aba2847bb60c55f429baa4087 files/digest-docbook-sgml-dtd-4.3-r2 223
-SHA256 ad58ae265cbcf999d414bec208d73b140f5cfd84a6848a66b4c5a5e4f92cec45 files/digest-docbook-sgml-dtd-4.3-r2 223
-MD5 d5751457b79fafa09bf5062484eb8bed files/digest-docbook-sgml-dtd-4.4 223
-RMD160 6221ea03beac7153fc0d7b025fb804f82c7f131a files/digest-docbook-sgml-dtd-4.4 223
-SHA256 4afca85e91e06cb323b40a721efe33fb1cb8c15db26b4e5a51ff39e19bb7d69b files/digest-docbook-sgml-dtd-4.4 223
-MD5 8c0ff56a1b65d6389fd2c6b1060ea0aa files/digest-docbook-sgml-dtd-4.5 223
-RMD160 be3750fe982582832cb5f262a2695b4b2fb6afa0 files/digest-docbook-sgml-dtd-4.5 223
-SHA256 86df38954506ce0e005b406fa7bcee600a35710b396096e69e43b25e738663f2 files/digest-docbook-sgml-dtd-4.5 223
