@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mhwaveedit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.29 2008/01/26 12:40:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.30 2008/01/31 19:29:28 opfer Exp $
+
+  31 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  mhwaveedit-1.4.14.ebuild:
+  stable x86, bug 207545
 
   26 Jan 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   Remove the sound cant take care of this package line in metadata, its ok here
