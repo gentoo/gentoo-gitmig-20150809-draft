@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/monopod/monopod-0.6.ebuild,v 1.5 2008/01/31 13:28:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/monopod/monopod-0.6.ebuild,v 1.6 2008/01/31 13:29:31 drac Exp $
 
 inherit gnome2 mono
 
@@ -30,6 +30,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
-#	G2CONF="$(use_enable ipod)"
-	G2CONF="--disable-ipod"
+#	G2CONF="${G2CONF} $(use_enable ipod)"
+	G2CONF="${G2CONF} --disable-ipod"
 }
