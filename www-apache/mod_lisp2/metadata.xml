@@ -3,7 +3,4 @@
 <pkgmetadata>
 	<herd>apache</herd>
 	<herd>common-lisp</herd>
-	<maintainer>
-  		<email>apache-bugs@gentoo.org</email>
-	</maintainer>
 </pkgmetadata>
