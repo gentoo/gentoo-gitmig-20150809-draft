@@ -1,10 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX splash-themes-livecd-2007.0-rounding.patch 756 RMD160 90e4e6584a1310b3e9693eeaad2677a94aebd583 SHA1 06fba00f09debb5044a131591fa026893651f570 SHA256 9116a464faecd2c3fa522ce9d218078a2734b8a5546cf8dad21e93ac446d5017
-MD5 a0c454841e80056f1f59a0f3624a7131 files/splash-themes-livecd-2007.0-rounding.patch 756
-RMD160 90e4e6584a1310b3e9693eeaad2677a94aebd583 files/splash-themes-livecd-2007.0-rounding.patch 756
-SHA256 9116a464faecd2c3fa522ce9d218078a2734b8a5546cf8dad21e93ac446d5017 files/splash-themes-livecd-2007.0-rounding.patch 756
 DIST gentoo-livecd-2005.0-0.9.1.tar.bz2 4887028 RMD160 da4c8666ac73a9fbe3cfb81ac09e27d0abd79606 SHA1 829dbba5443ada2095f3ffd849139405ab9db09b SHA256 433e9b2b1a4d3e03c000c56b91b01de9355b7fb8e3f3fcd1302c018a1001b424
 DIST gentoo-livecd-2005.1-0.9.2.tar.bz2 13000381 RMD160 e0dee974ac6eeba41814efa1fb5db34c26e931cd SHA1 13db5720ec016f2afdce83d8858236d7ed678eb3 SHA256 5b9c4c20af8efefa987608957bd57e1c8dd788360f7d7660e9394bd74a419234
 DIST gentoo-livecd-2006.0-0.9.3.tar.bz2 3207382 RMD160 1519b5de34f71220f64f296ee54f18a51484957f SHA1 f4077949500c152874ddaa11095834f17b0aa759 SHA256 f6cd2120a2c139a5a0607151efd7a62f71e9fb915c46d1abebc2b894b0adda5a
@@ -12,66 +6,11 @@ DIST gentoo-livecd-2006.1-0.9.4.tar.bz2 3447608 RMD160 58c107e9927c9ea7e7cc6116a
 DIST gentoo-livecd-2007.0-0.9.5.tar.bz2 4760038 RMD160 abba1801ede06a4a6d707f591a2525f641105c4d SHA1 dabf62298339a7d7946b5a6c78c03685b47eaa96 SHA256 58b6ef88458996dddd47567cbc6b1fb4ffe2c4cd5ff0f637b3b3155cd936ae4b
 DIST splash-themes-livecd-2004.3.tar.bz2 1790707 RMD160 e969fcdcc1a35dfba2552f1f709de0b6a881351e SHA1 ae9c25e36188fbe85b923c5aacced58dea236b2f SHA256 9b14e8c9a2124e3f1683fd6b3aa9a39ba9d090984c86ec7fcc3c7b1bf0e0b511
 EBUILD splash-themes-livecd-2004.3.ebuild 640 RMD160 2472e2246ca16494fa109e5590d605d839dc65e7 SHA1 e01c7a1582088acc699c96e8a6906fdf0eef2e52 SHA256 01bb1f7733ef28edb40543d488163c730f55372bee3b64a665e1f6426414acf7
-MD5 ea816a56305548983380ae3e24b01b4f splash-themes-livecd-2004.3.ebuild 640
-RMD160 2472e2246ca16494fa109e5590d605d839dc65e7 splash-themes-livecd-2004.3.ebuild 640
-SHA256 01bb1f7733ef28edb40543d488163c730f55372bee3b64a665e1f6426414acf7 splash-themes-livecd-2004.3.ebuild 640
 EBUILD splash-themes-livecd-2005.0.ebuild 841 RMD160 94a00c44cdb2e3dfd8dbada6e8cb767416f92f0a SHA1 ff2dedad17f3073660f4d9cad6330aca75c1f867 SHA256 8d415d0c502a212aef6bd52a1321d122efaf7e0b7d703d3ac4bfd36f10eda670
-MD5 af5b2e55337d9a85005e456506b22121 splash-themes-livecd-2005.0.ebuild 841
-RMD160 94a00c44cdb2e3dfd8dbada6e8cb767416f92f0a splash-themes-livecd-2005.0.ebuild 841
-SHA256 8d415d0c502a212aef6bd52a1321d122efaf7e0b7d703d3ac4bfd36f10eda670 splash-themes-livecd-2005.0.ebuild 841
 EBUILD splash-themes-livecd-2005.1.ebuild 937 RMD160 4a37ccfd609795dfdb98dca6db4f20ee7b595697 SHA1 25f0a87e7ee452aa285b04c42aaf5b63bbbc293e SHA256 1499df7c327edf33f24dedd9204b6af8e198460065d34d59820b50d8a104350b
-MD5 78e8a2b8f75fe87229530964aaaf2d07 splash-themes-livecd-2005.1.ebuild 937
-RMD160 4a37ccfd609795dfdb98dca6db4f20ee7b595697 splash-themes-livecd-2005.1.ebuild 937
-SHA256 1499df7c327edf33f24dedd9204b6af8e198460065d34d59820b50d8a104350b splash-themes-livecd-2005.1.ebuild 937
 EBUILD splash-themes-livecd-2006.0.ebuild 839 RMD160 d229c345ba99c77712a81cfaead9001e3bcccfdf SHA1 e420a6fa43ff9b1da7973ece8c34efdd9851d4fc SHA256 ba987e11bb8e79d4b1094e749e5c4127db97c7fba1fbf1dcbeb555ca6543b2b5
-MD5 d567ef925fa1c87cef0145165424d56a splash-themes-livecd-2006.0.ebuild 839
-RMD160 d229c345ba99c77712a81cfaead9001e3bcccfdf splash-themes-livecd-2006.0.ebuild 839
-SHA256 ba987e11bb8e79d4b1094e749e5c4127db97c7fba1fbf1dcbeb555ca6543b2b5 splash-themes-livecd-2006.0.ebuild 839
 EBUILD splash-themes-livecd-2006.1.ebuild 843 RMD160 b9c7577ba748d2a59cd5533737d4f9937e02c2d6 SHA1 65ccce4495b3defa7b4ebbb4e2450beccc8a63ad SHA256 923d434374123d042bd624f60daf5fa3d7218ae58e9a48458d9c553af85e942a
-MD5 71cdf0c76b5394485d985fbdb1592004 splash-themes-livecd-2006.1.ebuild 843
-RMD160 b9c7577ba748d2a59cd5533737d4f9937e02c2d6 splash-themes-livecd-2006.1.ebuild 843
-SHA256 923d434374123d042bd624f60daf5fa3d7218ae58e9a48458d9c553af85e942a splash-themes-livecd-2006.1.ebuild 843
 EBUILD splash-themes-livecd-2007.0-r1.ebuild 1099 RMD160 1dd1c470eff5515a248f3940c86736eff0768606 SHA1 fb3fa35451500577c9aee969bd999f860284c62d SHA256 f177e9740bfb4400d07cf61181c58ec7572898ed28b729aab74158f50eca2524
-MD5 7446a56f1a98c404604102663a2058e1 splash-themes-livecd-2007.0-r1.ebuild 1099
-RMD160 1dd1c470eff5515a248f3940c86736eff0768606 splash-themes-livecd-2007.0-r1.ebuild 1099
-SHA256 f177e9740bfb4400d07cf61181c58ec7572898ed28b729aab74158f50eca2524 splash-themes-livecd-2007.0-r1.ebuild 1099
 EBUILD splash-themes-livecd-2007.0.ebuild 1050 RMD160 85bf8d9200f414b3f57f5ec52dbc5bfa5dd92bad SHA1 4224083e8eb2bfa3ccc236cb4e92537d6eee0707 SHA256 d80ed3eaa0a409cb65f1436b29d77ae410f0bf350920c36db70633291e4b95a0
-MD5 8012f2a9b9cdba23fc3193154ae95824 splash-themes-livecd-2007.0.ebuild 1050
-RMD160 85bf8d9200f414b3f57f5ec52dbc5bfa5dd92bad splash-themes-livecd-2007.0.ebuild 1050
-SHA256 d80ed3eaa0a409cb65f1436b29d77ae410f0bf350920c36db70633291e4b95a0 splash-themes-livecd-2007.0.ebuild 1050
 MISC ChangeLog 3723 RMD160 e49acad32aa3fd3d93850e930b4a447e6058bd04 SHA1 9cfc5795ff2ac9d4a51e2a895ef6a55c4e0281a3 SHA256 75edce94d1285a486fe8edd98871a241ce35096e517c6443a3952371e506a169
-MD5 dc0b7385e03759d32fea6b65d599d54d ChangeLog 3723
-RMD160 e49acad32aa3fd3d93850e930b4a447e6058bd04 ChangeLog 3723
-SHA256 75edce94d1285a486fe8edd98871a241ce35096e517c6443a3952371e506a169 ChangeLog 3723
 MISC metadata.xml 159 RMD160 8db5ed254a6b9baf8f53368da9e71c5532a46073 SHA1 1e72098aafb1fa729eba6fc8357c7e732eb79dee SHA256 b6e17484225400d76c65d178bf5a10dc0a8da7f345993c2acc63d1093a77c90d
-MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
-RMD160 8db5ed254a6b9baf8f53368da9e71c5532a46073 metadata.xml 159
-SHA256 b6e17484225400d76c65d178bf5a10dc0a8da7f345993c2acc63d1093a77c90d metadata.xml 159
-MD5 942ef0bbe951469a26ded24e04953a81 files/digest-splash-themes-livecd-2004.3 289
-RMD160 ef19d621e4caec07b4c1f7036f91d03e4f48a9b9 files/digest-splash-themes-livecd-2004.3 289
-SHA256 c2601ffe3b00159bec1fb8b6ca7ff7295b1069f8a864fb07cc6ed4401324a6f7 files/digest-splash-themes-livecd-2004.3 289
-MD5 de27b19d4b3940a0185ff6765411f6e2 files/digest-splash-themes-livecd-2005.0 286
-RMD160 e5a63f54e042ee3125b78e47212c702f6c66ef0d files/digest-splash-themes-livecd-2005.0 286
-SHA256 3839b5989e99a2d73f24efb968dbe6fd05d16af6d0b2507a52c91d04804e5cd3 files/digest-splash-themes-livecd-2005.0 286
-MD5 caada0297615845a7cd25ba3356d06ed files/digest-splash-themes-livecd-2005.1 289
-RMD160 bcbc56d4be693483a7e0f3fecc4079cc6037e2e6 files/digest-splash-themes-livecd-2005.1 289
-SHA256 0c9b85caa8f810b3f27ad71a698c83a50ec78cbfd83007e49a8dbc4614c0bbed files/digest-splash-themes-livecd-2005.1 289
-MD5 2a0ab0be850992a53639b88e638fadc6 files/digest-splash-themes-livecd-2006.0 286
-RMD160 7affa60aa9d2ae69d4ad8f2dfe2baf91deebf0dd files/digest-splash-themes-livecd-2006.0 286
-SHA256 4fe39ceede5421d2c04c93e41e112086f1ac9c76d60c0c08145201d5f7866d56 files/digest-splash-themes-livecd-2006.0 286
-MD5 94d2ae07b60bfe12db13f3afe0af52f4 files/digest-splash-themes-livecd-2006.1 286
-RMD160 39d8a75043ff2c7c32672835cdd909d3239ea254 files/digest-splash-themes-livecd-2006.1 286
-SHA256 ba1fb25591ac8c7618b70df39e827cf8d8c819a85adbbab9a436a60e970875ab files/digest-splash-themes-livecd-2006.1 286
-MD5 a5ea0bf777495f1859f64a14d7ae9cf3 files/digest-splash-themes-livecd-2007.0 286
-RMD160 c5450fc1de08e30a9682ed3f8b269ff8237038b4 files/digest-splash-themes-livecd-2007.0 286
-SHA256 9da7e234c6ceab2011a564092768d7e8e70e0b7884fd0de7d504ac33aa77bce6 files/digest-splash-themes-livecd-2007.0 286
-MD5 a5ea0bf777495f1859f64a14d7ae9cf3 files/digest-splash-themes-livecd-2007.0-r1 286
-RMD160 c5450fc1de08e30a9682ed3f8b269ff8237038b4 files/digest-splash-themes-livecd-2007.0-r1 286
-SHA256 9da7e234c6ceab2011a564092768d7e8e70e0b7884fd0de7d504ac33aa77bce6 files/digest-splash-themes-livecd-2007.0-r1 286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHMQMZkT4lNIS36YERAj1DAKCIXhNZGIMuwgWrLvSabE1dFjcXsACgn5j1
-JYji+SfJuKutwKJ8H9PsIfA=
-=1Gui
------END PGP SIGNATURE-----

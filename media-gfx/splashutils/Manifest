@@ -1,22 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX splashutils-1.4.2-getcfg.patch 336 RMD160 73f1c0e85ea4cac92fa323447742fc08db0bb8bd SHA1 5330ed4437334cb479dfd9edfb78075f3fc2e349 SHA256 9073cd34faba8b41a66b9bad28cfadb71cb216c3288c20d852eb2aea3d035d70
-MD5 4a2e9913222523d5c0e3a0651a77323b files/splashutils-1.4.2-getcfg.patch 336
-RMD160 73f1c0e85ea4cac92fa323447742fc08db0bb8bd files/splashutils-1.4.2-getcfg.patch 336
-SHA256 9073cd34faba8b41a66b9bad28cfadb71cb216c3288c20d852eb2aea3d035d70 files/splashutils-1.4.2-getcfg.patch 336
 AUX splashutils-1.4.2-misc-strip.patch 419 RMD160 c95789d5725b54799ca28518a5df942ea28a76e7 SHA1 815d90caa7958bfb1d5ddb2bee6caf067ea84b17 SHA256 3c8568055088c610f55d9d03960a06bd3635f3b7da9bce78f05df0e82f92b84a
-MD5 ca8258345efc636d49c1cb96c0862b8b files/splashutils-1.4.2-misc-strip.patch 419
-RMD160 c95789d5725b54799ca28518a5df942ea28a76e7 files/splashutils-1.4.2-misc-strip.patch 419
-SHA256 3c8568055088c610f55d9d03960a06bd3635f3b7da9bce78f05df0e82f92b84a files/splashutils-1.4.2-misc-strip.patch 419
 AUX splashutils-1.4.2-rcabort.patch 1214 RMD160 d09a6cf2d329558d889370501a3ab512e45ea8fe SHA1 d2306bde95cc8beb84dd204e3cbb8fc6234a73be SHA256 61935fe7f392b6e80df958c789fa840a11ced7f51d662afd77a76ef4e490c8b3
-MD5 d4de491ea4a0ceb5cce09e1188ccb6cf files/splashutils-1.4.2-rcabort.patch 1214
-RMD160 d09a6cf2d329558d889370501a3ab512e45ea8fe files/splashutils-1.4.2-rcabort.patch 1214
-SHA256 61935fe7f392b6e80df958c789fa840a11ced7f51d662afd77a76ef4e490c8b3 files/splashutils-1.4.2-rcabort.patch 1214
 AUX splashutils-1.5.2.1-baselayout-rc5.patch 15339 RMD160 1f2b75a749ec41477d5e79a1599142140e33ae9e SHA1 05cc546e907c45f31690229516a10ac33919ecc5 SHA256 8365daf464a979e44a619c9f96aeb85af5bbc2c416a1d15be032f99261175f78
-MD5 aa51ae8f2fe6634b4717a6091ca25a92 files/splashutils-1.5.2.1-baselayout-rc5.patch 15339
-RMD160 1f2b75a749ec41477d5e79a1599142140e33ae9e files/splashutils-1.5.2.1-baselayout-rc5.patch 15339
-SHA256 8365daf464a979e44a619c9f96aeb85af5bbc2c416a1d15be032f99261175f78 files/splashutils-1.5.2.1-baselayout-rc5.patch 15339
 DIST freetype-2.1.9.tar.bz2 992394 RMD160 1dd8fb6fda8b159ef0d2ebedeca99a67ed65dc72 SHA1 a3c3a0c0d5f8f6e62c774e24817748a941016990 SHA256 4dabc3b38405f5c5f03b8f14d8902a9d506713182baf2baec9dea509515d4b6f
 DIST freetype-2.3.5.tar.bz2 1279861 RMD160 2a97cb1c3d93572c094d5d2890d12445ef2786d4 SHA1 45695d44c74be31944d807526a7e69a818e4afd2 SHA256 1b357a3a1106c78c80dfd25e3854c3faa9a3dfc7063a4a1e5404e70c241d677e
 DIST jpegsrc.v6b.tar.gz 613261 RMD160 18892206014fbb8cae2a44e281f4ed53feaf7882 SHA1 7079f0d6c42fad0cfba382cf6ad322add1ace8f9 SHA256 75c3ec241e9996504fe02a9ed4d12f16b74ade713972f3db9e65ce95cd27e35d
@@ -38,59 +23,10 @@ DIST splashutils-lite-1.5.3.3.tar.bz2 413745 RMD160 a5bcaf0e08b88b408c32a6f2a872
 DIST splashutils-lite-1.5.3.4.tar.bz2 414744 RMD160 a1d655786caa6a7bea84d5a17ea0a8c4bb3aae03 SHA1 c908216dd9549d276c561bb77109332c2c61f213 SHA256 4b2a14ed48cc7e18cbc94570f07e05c80f1eca2319ecaaae04f221463de70d97
 DIST zlib-1.2.3.tar.bz2 425209 RMD160 cfba9984b354dcc38da49331457e6bfc861c6f51 SHA1 967e280f284d02284b0cd8872a8e2e04bfdc7283 SHA256 e3b9950851a19904d642c4dec518623382cf4d2ac24f70a76510c944330d28ca
 EBUILD splashutils-1.4.2.1.ebuild 6678 RMD160 c2e879a65da76f4f6f6a987c5fc6ecba7ecacde4 SHA1 408918c1352c4a0e921f08ebd539efeca17c737f SHA256 34ed66a3f60c205333aeffb7b59b1fe61cd11d5a1c4b3e10f99ef39ab88d9eb1
-MD5 799a290c7f7039500bf7ef0eb46c9b36 splashutils-1.4.2.1.ebuild 6678
-RMD160 c2e879a65da76f4f6f6a987c5fc6ecba7ecacde4 splashutils-1.4.2.1.ebuild 6678
-SHA256 34ed66a3f60c205333aeffb7b59b1fe61cd11d5a1c4b3e10f99ef39ab88d9eb1 splashutils-1.4.2.1.ebuild 6678
 EBUILD splashutils-1.4.2.ebuild 6837 RMD160 fc93b9b3d2f3584cf1e98aee5b4f679a160a0922 SHA1 3d906405d4688d86571faf70fd46c07957f41014 SHA256 dc886049220bcd31d8005cff90436e95577b9c86d7b4aa58acb7ccf6b3b6bbc8
-MD5 dd7875311f8cfd9ca6afb2f30c83ab73 splashutils-1.4.2.ebuild 6837
-RMD160 fc93b9b3d2f3584cf1e98aee5b4f679a160a0922 splashutils-1.4.2.ebuild 6837
-SHA256 dc886049220bcd31d8005cff90436e95577b9c86d7b4aa58acb7ccf6b3b6bbc8 splashutils-1.4.2.ebuild 6837
 EBUILD splashutils-1.5.2.1.ebuild 7420 RMD160 aa0ced0d43d564d522dadf55a823c9bffcfb80b5 SHA1 1eddc1f44ed7b9384d8860cf84fe08c595a08095 SHA256 15c9cc4266f4ccb6beca3f105bf72fb8bb49b4f4ba9220aadd14fecaf7c99c1e
-MD5 c5cca943f01f7fdde4b9ea896341c9e6 splashutils-1.5.2.1.ebuild 7420
-RMD160 aa0ced0d43d564d522dadf55a823c9bffcfb80b5 splashutils-1.5.2.1.ebuild 7420
-SHA256 15c9cc4266f4ccb6beca3f105bf72fb8bb49b4f4ba9220aadd14fecaf7c99c1e splashutils-1.5.2.1.ebuild 7420
 EBUILD splashutils-1.5.3.2.ebuild 6581 RMD160 6fa6c4a00b79ff55f13e13ec6121e14cfa231249 SHA1 91df7d3f62af00ce1d8bca7c5e3a5daf3ea0b243 SHA256 ba092f168f1dc4c12d712dfd4562203316e7f42bef87a2bce5925fdfc4ebd9c9
-MD5 3148ef2a2b9f7046490a4142d2a6f312 splashutils-1.5.3.2.ebuild 6581
-RMD160 6fa6c4a00b79ff55f13e13ec6121e14cfa231249 splashutils-1.5.3.2.ebuild 6581
-SHA256 ba092f168f1dc4c12d712dfd4562203316e7f42bef87a2bce5925fdfc4ebd9c9 splashutils-1.5.3.2.ebuild 6581
 EBUILD splashutils-1.5.3.3.ebuild 6523 RMD160 ddaf5a8e08e0cf4e7608e574abe08856800824e9 SHA1 d1151952bdec4aea315ff92898a2a2373d1ec84c SHA256 831dc9720bd7377010c0d789d3963608f7c0bfe5b0f85461de81e249c8a11243
-MD5 3dd7253bdd5155933060b4cbba15adce splashutils-1.5.3.3.ebuild 6523
-RMD160 ddaf5a8e08e0cf4e7608e574abe08856800824e9 splashutils-1.5.3.3.ebuild 6523
-SHA256 831dc9720bd7377010c0d789d3963608f7c0bfe5b0f85461de81e249c8a11243 splashutils-1.5.3.3.ebuild 6523
 EBUILD splashutils-1.5.3.4.ebuild 6523 RMD160 9b956c19ec620faaa817b2811dae0a73493649b7 SHA1 80740a066ce8a4c9d6b4f9f28eb4ae1ac2f7ddca SHA256 7dfba1d0fd33366acbcc4f2d5ea0e30815893f151bda50e4515621119b3a8924
-MD5 97be83d73bf5867f072154f7ff3c01aa splashutils-1.5.3.4.ebuild 6523
-RMD160 9b956c19ec620faaa817b2811dae0a73493649b7 splashutils-1.5.3.4.ebuild 6523
-SHA256 7dfba1d0fd33366acbcc4f2d5ea0e30815893f151bda50e4515621119b3a8924 splashutils-1.5.3.4.ebuild 6523
 MISC ChangeLog 24054 RMD160 6d5837c22aee3480e51e6e32ce0d57e48b471681 SHA1 7c00b1cc7be4a6630d55c45ee4d63871061514c6 SHA256 775879e4556113e0cef85a2c1e579ad4427919e1d8acf14f837e41ab155509de
-MD5 0c228e83d9eebe2fecfe1dd71958ca95 ChangeLog 24054
-RMD160 6d5837c22aee3480e51e6e32ce0d57e48b471681 ChangeLog 24054
-SHA256 775879e4556113e0cef85a2c1e579ad4427919e1d8acf14f837e41ab155509de ChangeLog 24054
 MISC metadata.xml 220 RMD160 6bb03cb6947aadf2672a58c61c1fb7aa405eaf86 SHA1 7810907f03c5a3ee23eeaa4b42699ce17bc5c3a7 SHA256 969b4125e7620e2fe0d616cb3cabbe52bd79e6c4bdd725ce807d5f4c7c1ad75d
-MD5 87131e5c56922624f8a0c7fe61cd28da metadata.xml 220
-RMD160 6bb03cb6947aadf2672a58c61c1fb7aa405eaf86 metadata.xml 220
-SHA256 969b4125e7620e2fe0d616cb3cabbe52bd79e6c4bdd725ce807d5f4c7c1ad75d metadata.xml 220
-MD5 b65e977caceefe1adb7bc923f6caf11a files/digest-splashutils-1.4.2 1765
-RMD160 c22b71d9966b63c8005a1fa2a73526ef7b236363 files/digest-splashutils-1.4.2 1765
-SHA256 52f060e45eb1d3c37758360c39958a020af17fe0b4b176d52d4c7223c0f3132e files/digest-splashutils-1.4.2 1765
-MD5 e5866b8c416c219ce61efd72f174d261 files/digest-splashutils-1.4.2.1 1771
-RMD160 f1d2bb8144dfbeb1409f92a99847ad278e616d3f files/digest-splashutils-1.4.2.1 1771
-SHA256 771d0782d528692b9f3f9882699682534afe68099c53210652af3c593ef06c21 files/digest-splashutils-1.4.2.1 1771
-MD5 f22a9642b07593e92c4d4511a4c71a30 files/digest-splashutils-1.5.2.1 1777
-RMD160 b4b07fbaf85d17bed1b460408fb66cb675c4c52d files/digest-splashutils-1.5.2.1 1777
-SHA256 8a141571d01168378118e8f3a47a55c29350a7e6969ddecde05d3910ca6427e1 files/digest-splashutils-1.5.2.1 1777
-MD5 afa8f5d4d4ae191fbce697497ff7994b files/digest-splashutils-1.5.3.2 1783
-RMD160 c7f85eed0a74911690eed00df8da6a81aeae0fab files/digest-splashutils-1.5.3.2 1783
-SHA256 7c3c4226b3a74d42871c36d4cfddaadcd4eb03c2fd5dc5f0219a542d7a5f780c files/digest-splashutils-1.5.3.2 1783
-MD5 6c640e65bda7ec34a47bdf455ad79ac8 files/digest-splashutils-1.5.3.3 1783
-RMD160 449d0e09e497380bd07beffcb8b49b8c5514091e files/digest-splashutils-1.5.3.3 1783
-SHA256 1e8730b2b5295371ca3dc10ce0670262bc38be9ab017e34d06acd839caeef6e0 files/digest-splashutils-1.5.3.3 1783
-MD5 e006a94ec95edd71ace08c0254367e47 files/digest-splashutils-1.5.3.4 1783
-RMD160 35679f3dc874ee5cbe79c5b7a25012ddebc8affb files/digest-splashutils-1.5.3.4 1783
-SHA256 1a54d14d2346b70150540f86a2405c8703811e398fd7b6df9d094a5a9615c1b8 files/digest-splashutils-1.5.3.4 1783
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHnHXachej4aZK9/cRAnQvAJ9wA5yBJzGhkrbTDd8NCBlrCNJ4QACfUuIf
-puiN8LmpqaGOT1MAZ0eimb0=
-=jIwx
------END PGP SIGNATURE-----
