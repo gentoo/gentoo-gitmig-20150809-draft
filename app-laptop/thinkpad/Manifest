@@ -1,42 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX thinkpad 545 RMD160 6ac014699371fccc7387315fbaf09080e5368977 SHA1 aa90a5ae350609c3aa51ee9d94aa77aecfe89b71 SHA256 f33d6e2fd998bc4dad0f372c9f2ab139369b415ecff5489c41944fc35decb5ee
-MD5 26886c3a2e8b9c3b807371e643dd5c75 files/thinkpad 545
-RMD160 6ac014699371fccc7387315fbaf09080e5368977 files/thinkpad 545
-SHA256 f33d6e2fd998bc4dad0f372c9f2ab139369b415ecff5489c41944fc35decb5ee files/thinkpad 545
 AUX thinkpad-5.9-module-param.patch 992 RMD160 80bc42d8d92da4174e6e9d23f733f3658c9e1a7f SHA1 6cd5facfcb3d9745f769bc7422e917e8acd39014 SHA256 4bc08dae456cf96bcfcaf416967657c079982b38a1b89ec6d71b684f2a4688bf
-MD5 4ad05575956f8ff9619a3a2084dea724 files/thinkpad-5.9-module-param.patch 992
-RMD160 80bc42d8d92da4174e6e9d23f733f3658c9e1a7f files/thinkpad-5.9-module-param.patch 992
-SHA256 4bc08dae456cf96bcfcaf416967657c079982b38a1b89ec6d71b684f2a4688bf files/thinkpad-5.9-module-param.patch 992
 AUX thinkpad-5.9-remove-inter_module.patch 5974 RMD160 12ff7660f880fb2b731f5aa02d5a45861eb59e6f SHA1 f75ad677eb158c0b82fb005b530a94cc9b1b7dd5 SHA256 f75291cbc0aac1cbc5531be6788e343682684d80562d7a82ec6d4c6759925418
-MD5 59791b4b3c27736dee2bdc9c4a5520ec files/thinkpad-5.9-remove-inter_module.patch 5974
-RMD160 12ff7660f880fb2b731f5aa02d5a45861eb59e6f files/thinkpad-5.9-remove-inter_module.patch 5974
-SHA256 f75291cbc0aac1cbc5531be6788e343682684d80562d7a82ec6d4c6759925418 files/thinkpad-5.9-remove-inter_module.patch 5974
 AUX thinkpad-5.9-remove-thinkpadapm-argument.patch 1052 RMD160 e1c7831dea7ace73cb619005ade0652d6b0ab992 SHA1 527c9c690da0ab3ae5d42c0c0a0ec4a2534a589b SHA256 57fe17e7d1644f16815d8b052efd8a5cbd34564b5539247b57a23f27a05eb1c8
-MD5 000dd629c39dced23bd711480551c81c files/thinkpad-5.9-remove-thinkpadapm-argument.patch 1052
-RMD160 e1c7831dea7ace73cb619005ade0652d6b0ab992 files/thinkpad-5.9-remove-thinkpadapm-argument.patch 1052
-SHA256 57fe17e7d1644f16815d8b052efd8a5cbd34564b5539247b57a23f27a05eb1c8 files/thinkpad-5.9-remove-thinkpadapm-argument.patch 1052
 DIST thinkpad-5.9.tar.gz 74779 RMD160 93d3d8ff6d64191ff07252654489a9bc5d878457 SHA1 c3f88d36ed39f83e6d888c9d174de9bc80724ea6 SHA256 49d2eab42e57d71cb0f175a645c703fce458a852552842ea56e0c81547d8f715
 EBUILD thinkpad-5.9-r1.ebuild 1453 RMD160 57d5c44c90bf21b4b677a9b4c1c2a870fb9bf284 SHA1 bc646489af6bc2ae815db0dede4e9e99170a2fd0 SHA256 f8c955e7e5b5bdfa13f11ed37cb97e4449dd451aa96afe0584428839eb4d12b0
-MD5 660b581b33a3c2fc306df7e3bce26832 thinkpad-5.9-r1.ebuild 1453
-RMD160 57d5c44c90bf21b4b677a9b4c1c2a870fb9bf284 thinkpad-5.9-r1.ebuild 1453
-SHA256 f8c955e7e5b5bdfa13f11ed37cb97e4449dd451aa96afe0584428839eb4d12b0 thinkpad-5.9-r1.ebuild 1453
 MISC ChangeLog 5282 RMD160 655bc4be736492663b659b4e2de2542a67269ac2 SHA1 99ff193cd605f02f29ffe0465f206eef5cb09751 SHA256 68ec93b3f55c1c72d921946bc95e84b89dbc2ca645a18163595f57118976a6f7
-MD5 dca22256d1699a2aef4b087b419bfa70 ChangeLog 5282
-RMD160 655bc4be736492663b659b4e2de2542a67269ac2 ChangeLog 5282
-SHA256 68ec93b3f55c1c72d921946bc95e84b89dbc2ca645a18163595f57118976a6f7 ChangeLog 5282
 MISC metadata.xml 257 RMD160 7f24abacd3c499b06eb4314a0cbd618acc9b3b86 SHA1 5dcc7e2d25909c0340fcba06a149e0bc79162c2e SHA256 3870cf69413cacc58e43006c91b3e37453c57ee34f19a335eb40fb31fc6b4ffe
-MD5 9cb8c919fc98f51c73bb8e42f2057867 metadata.xml 257
-RMD160 7f24abacd3c499b06eb4314a0cbd618acc9b3b86 metadata.xml 257
-SHA256 3870cf69413cacc58e43006c91b3e37453c57ee34f19a335eb40fb31fc6b4ffe metadata.xml 257
-MD5 c35ad826276df3cf38204f217c633902 files/digest-thinkpad-5.9-r1 235
-RMD160 d5c3f521d5bc24abe05caa4e230afaaa13a806c5 files/digest-thinkpad-5.9-r1 235
-SHA256 8178715d1dd873c669ce74f5ff1a6a300dce69c2af42ec7bcca9fc457b579ecf files/digest-thinkpad-5.9-r1 235
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD4DBQFGVomUNQqtfCuFneMRAgpfAJjwV58BP9wNbA2aYIUxQajZbpRjAJ92lkNC
-nowqcR9frFNNMB3viOlaww==
-=WMc3
------END PGP SIGNATURE-----
