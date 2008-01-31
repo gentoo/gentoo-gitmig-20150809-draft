@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-0.2.5.ebuild,v 1.1 2008/01/29 12:58:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-0.2.5-r1.ebuild,v 1.1 2008/01/31 16:00:53 drac Exp $
 
 DESCRIPTION="An implementation of Microsoft's Media Transfer Protocol (MTP)."
 HOMEPAGE="http://libmtp.sourceforge.net"
@@ -21,6 +21,9 @@ src_install() {
 
 	insinto /etc/udev/rules.d
 	newins libmtp.rules 65-mtp.rules
+
+	insinto /usr/share/hal/fdi/information/20thirdparty
+	newins libmtp.fdi 10-libmtp.fdi
 
 	if use examples; then
 		docinto examples
