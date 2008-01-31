@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tidy/mod_tidy-0.5.5.ebuild,v 1.1 2007/09/08 18:13:16 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tidy/mod_tidy-0.5.5.ebuild,v 1.2 2008/01/31 19:25:34 hollow Exp $
 
 inherit eutils apache-module
 
-DESCRIPTION="mod_tidy is a TidyLib based DSO module for the Apache 2 to parse, clean-up and pretty-print the webservers' (X)HTML output."
+DESCRIPTION="a TidyLib based module to parse, clean-up and pretty-print the webservers' (X)HTML output"
 SRC_URI="http://mod-tidy.sourceforge.net/src/${P}.tar.gz"
 HOMEPAGE="http://mod-tidy.sourceforge.net/"
 
@@ -24,7 +24,7 @@ need_apache2
 DOCFILES="Changes INSTALL LICENSE README"
 
 src_compile() {
-	econf --with-apxs=${APXS2} || die "configure failed"
+	econf --with-apxs=${APXS} || die "configure failed"
 	emake || die "make failed"
 }
 
