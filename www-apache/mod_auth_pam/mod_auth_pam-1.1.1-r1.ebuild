@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.1 2007/07/29 16:15:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.2 2008/01/31 17:08:34 hollow Exp $
 
 inherit eutils apache-module
 
@@ -37,7 +37,7 @@ src_unpack() {
 
 src_compile() {
 	apache-module_src_compile
-	${APXS2} -c mod_auth_sys_group.c
+	${APXS} -c mod_auth_sys_group.c
 }
 
 src_install() {
