@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tre
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.35 2008/01/30 22:43:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.36 2008/01/31 04:56:47 jer Exp $
+
+  31 Jan 2008; Jeroen Roovers <jer@gentoo.org> tre-0.7.5.ebuild:
+  Stable for HPPA (bug #208142).
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org> tre-0.7.5.ebuild:
   Marking tre-0.7.5 ppc64 for bug 208142
