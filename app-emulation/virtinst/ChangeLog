@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtinst
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.2 2007/10/15 11:16:31 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.3 2008/01/31 06:18:25 dberkholz Exp $
+
+  31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/virtinst-0.103.0-accelerate.patch,
+  -files/virtinst-0.103.0-default-net.patch,
+  -files/virtinst-0.103.0-features-xml.patch,
+  -files/virtinst-0.103.0-rhel5-client.patch,
+  -files/virtinst-0.103.0-urlgrabber-import.patch, -virtinst-0.103.0.ebuild:
+  Clean up.
 
 *virtinst-0.300.1 (15 Oct 2007)
 
