@@ -1,26 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST compizconfig-backend-kconfig-0.6.0.tar.bz2 412600 RMD160 37691253ddf9fb5c3763b4a70ca881d66b5d7153 SHA1 d45c21297d0edfe25d41ffa1999ad5b7085b23d5 SHA256 cfbab0505420ff678eafc5f04edc927077e04bbc73dc8cc788651d6d2e8c178a
 EBUILD compizconfig-backend-kconfig-0.6.0.ebuild 565 RMD160 e16992b7cab6c296c5fa677bf8c98b654756ba51 SHA1 3cd20acfee08104ce5acdb84804028e7d29c3c36 SHA256 4ee8b45f3a12fbfcede7af25f09ce0f2d5d22fdaca03685cac99db86e984a02a
-MD5 9282021fd5821caa9cf09ca653e4d581 compizconfig-backend-kconfig-0.6.0.ebuild 565
-RMD160 e16992b7cab6c296c5fa677bf8c98b654756ba51 compizconfig-backend-kconfig-0.6.0.ebuild 565
-SHA256 4ee8b45f3a12fbfcede7af25f09ce0f2d5d22fdaca03685cac99db86e984a02a compizconfig-backend-kconfig-0.6.0.ebuild 565
 MISC ChangeLog 948 RMD160 05fbc42617e5a5abc2c32a482c57d736afe7218f SHA1 8d6da11f52c70d20e19b1225b7ab1ea6421dc389 SHA256 ac9352fed8e99709f98dcd7eb8210a76f686778365d1952281f5525494bc3a31
-MD5 f5b7bd822196d9de703fde76d3d4f5ba ChangeLog 948
-RMD160 05fbc42617e5a5abc2c32a482c57d736afe7218f ChangeLog 948
-SHA256 ac9352fed8e99709f98dcd7eb8210a76f686778365d1952281f5525494bc3a31 ChangeLog 948
 MISC metadata.xml 217 RMD160 3b01d5dab901ee93217f72b711954d3cccbb1717 SHA1 e304788b60dd2cf214d360a21d267e8635474d98 SHA256 2f5dfc1eb79d2d9ee02663da6e1449f499c3a37b7f4cc2391e18d7789a314669
-MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
-RMD160 3b01d5dab901ee93217f72b711954d3cccbb1717 metadata.xml 217
-SHA256 2f5dfc1eb79d2d9ee02663da6e1449f499c3a37b7f4cc2391e18d7789a314669 metadata.xml 217
-MD5 4650dd73a51ff4a19fc12b39a58af00d files/digest-compizconfig-backend-kconfig-0.6.0 307
-RMD160 d72b5ec1eb2aaa803882fa69edce9e4f729e4954 files/digest-compizconfig-backend-kconfig-0.6.0 307
-SHA256 2dfbbe05fb4c4a26f14667643d42f74169b233411d7177755cec1b5c1767bbe9 files/digest-compizconfig-backend-kconfig-0.6.0 307
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFHKSco+IXOQtHLm/gRAnO/AJ4kyerKwp/GBNKgQYzrZdvEDj4LKwCeNgtd
-pnG4QvMWZTrMDl4iaZwJDio=
-=ZNdi
------END PGP SIGNATURE-----
