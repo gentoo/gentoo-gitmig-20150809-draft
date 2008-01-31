@@ -1,58 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX taglib-sharp-fix-docdir.patch 1025 RMD160 ee1a14e5419173b7cb0b465e6e0df577b939b0d3 SHA1 b6af7cbe27493ee7818d1072dc6ed8dde3151333 SHA256 2bda04878ef41e774eade68ba8ada5956b4b6d7e8ff8c0371f2b31aa40e48b53
-MD5 b90d8ab349aaff1f34c4fe775f6595c8 files/taglib-sharp-fix-docdir.patch 1025
-RMD160 ee1a14e5419173b7cb0b465e6e0df577b939b0d3 files/taglib-sharp-fix-docdir.patch 1025
-SHA256 2bda04878ef41e774eade68ba8ada5956b4b6d7e8ff8c0371f2b31aa40e48b53 files/taglib-sharp-fix-docdir.patch 1025
 AUX taglib-sharp-fix-docs-test.patch 519 RMD160 a33ece9e4152dfd643a68d33ab24aebca85b9934 SHA1 bf108de861a1856d22dfd1b29b08484e5b85844a SHA256 b59eb6ab91f1bfdc6f500eb5416bac0e670047b5b8b1209cd7d8b6a96ee706c0
-MD5 965b9e0cafac6b80af8d9b2c7968dc14 files/taglib-sharp-fix-docs-test.patch 519
-RMD160 a33ece9e4152dfd643a68d33ab24aebca85b9934 files/taglib-sharp-fix-docs-test.patch 519
-SHA256 b59eb6ab91f1bfdc6f500eb5416bac0e670047b5b8b1209cd7d8b6a96ee706c0 files/taglib-sharp-fix-docs-test.patch 519
 AUX taglib-sharp-fix-sandbox-violation.patch 1596 RMD160 1c55bfc3e4f429632a5430bc78170a9c10903342 SHA1 fb9dcf33e3f37ec868de6503f46385e289c7845f SHA256 b45d5d6ad84d36ca73a9f509c2c5fa9135dde0aacf9900e0cf7b1c6162ab2e29
-MD5 34a00dfa55dfc8afb49f5541dceffb6f files/taglib-sharp-fix-sandbox-violation.patch 1596
-RMD160 1c55bfc3e4f429632a5430bc78170a9c10903342 files/taglib-sharp-fix-sandbox-violation.patch 1596
-SHA256 b45d5d6ad84d36ca73a9f509c2c5fa9135dde0aacf9900e0cf7b1c6162ab2e29 files/taglib-sharp-fix-sandbox-violation.patch 1596
 AUX taglib-sharp-gnome-sharp-toggle.patch 1022 RMD160 2c52b0c208ddc64e766bf67b326fce270d9a529a SHA1 e1ba5f8e8d5d348cf5a3c421e290a51764d9ed28 SHA256 c8eb784a4cd382d47cfff9b9bebf7fe902872c8da194578f327c7267d36a2290
-MD5 f8e623c1b75a5f708e77f65b9d4941fc files/taglib-sharp-gnome-sharp-toggle.patch 1022
-RMD160 2c52b0c208ddc64e766bf67b326fce270d9a529a files/taglib-sharp-gnome-sharp-toggle.patch 1022
-SHA256 c8eb784a4cd382d47cfff9b9bebf7fe902872c8da194578f327c7267d36a2290 files/taglib-sharp-gnome-sharp-toggle.patch 1022
 DIST taglib-sharp-1.1.73998.tar.gz 1795741 RMD160 e29b0543f7045d2d6449edd4d35b026d4c84f392 SHA1 4fc6f9655714c86448b313c3766515f36cc2fe50 SHA256 546531f3ec84cd17e697e6cb5d54145883120dae530347bd408536577e238bfc
 DIST taglib-sharp-1.9.75474.tar.gz 1802343 RMD160 20cccb90a8c7123f60206953d281d6a4b72dd35a SHA1 86f26a5be04b175c11aae40c4f7fe8f00feecffc SHA256 154bff41eec986aa20a151af143dc417fb9f394111ff54172b35f0ed75f8f154
 DIST taglib-sharp-2.0.2.0.tar.gz 312044 RMD160 d474c189d7904dfc7d3593f331951e72aab7e58c SHA1 bf496bc0bf48618b4a00f7eff732ee43e777e126 SHA256 00f3f233f7614cf1ae6366ce5d54d3c9088906d704c95e64a2adbf41e8f92b43
 EBUILD taglib-sharp-1.1.73998-r1.ebuild 1199 RMD160 e3aceaac035f4a0d0fdda70a63fb492c06698558 SHA1 e704847d203054fd88d3e4e010c8b0096179b1a6 SHA256 60fb09b9a21ac007ee68df6a2af5f8c98ae1b06189322bce8bd803b8a3d5ffbc
-MD5 868558ec9aecff69b739bcc567b4703b taglib-sharp-1.1.73998-r1.ebuild 1199
-RMD160 e3aceaac035f4a0d0fdda70a63fb492c06698558 taglib-sharp-1.1.73998-r1.ebuild 1199
-SHA256 60fb09b9a21ac007ee68df6a2af5f8c98ae1b06189322bce8bd803b8a3d5ffbc taglib-sharp-1.1.73998-r1.ebuild 1199
 EBUILD taglib-sharp-1.9.75474.ebuild 1196 RMD160 99b9739f223875f925b168d38cf5d449630c5f81 SHA1 13433e1ca45d7a5ff0aca0f90d031513e4e977a3 SHA256 ebc6443148314f6941b26bf5c370e7ea1eba829b9f67128af288d5987671dc66
-MD5 e16c343dc633ba664b6669aa08f429c8 taglib-sharp-1.9.75474.ebuild 1196
-RMD160 99b9739f223875f925b168d38cf5d449630c5f81 taglib-sharp-1.9.75474.ebuild 1196
-SHA256 ebc6443148314f6941b26bf5c370e7ea1eba829b9f67128af288d5987671dc66 taglib-sharp-1.9.75474.ebuild 1196
 EBUILD taglib-sharp-2.0.2.0.ebuild 1354 RMD160 8ed2252030486b6b66780c52e1af24a7255d5c8b SHA1 b01b1e16abc950583b064333df377efa80529dd5 SHA256 9f056b9a836e5103dab66729a1dc375bb8354c7f8698f85aec58f2797247d7d8
-MD5 3585ba670143ed4e16172861b49231f3 taglib-sharp-2.0.2.0.ebuild 1354
-RMD160 8ed2252030486b6b66780c52e1af24a7255d5c8b taglib-sharp-2.0.2.0.ebuild 1354
-SHA256 9f056b9a836e5103dab66729a1dc375bb8354c7f8698f85aec58f2797247d7d8 taglib-sharp-2.0.2.0.ebuild 1354
 MISC ChangeLog 1200 RMD160 b69ec9848abf5ef648b97c2bbeaf0b563100d6b0 SHA1 fd0b8a1b868591378608f2f71983b4a9741ecf6a SHA256 a39a0469050129770ee11e7006562ea2600556cf8282015c19c0d3ce43a08df4
-MD5 f2a38c92c66b94d487ca65aa7495213c ChangeLog 1200
-RMD160 b69ec9848abf5ef648b97c2bbeaf0b563100d6b0 ChangeLog 1200
-SHA256 a39a0469050129770ee11e7006562ea2600556cf8282015c19c0d3ce43a08df4 ChangeLog 1200
 MISC metadata.xml 220 RMD160 02a0e75a19dbc522889ba4c5a5c8aeecf2370236 SHA1 1a1a9cf7790b180fb458040115f612e9ce90e47a SHA256 36f3c7bb615fffeeb010ec9d9b5f56a38ac39a18390913dc6cd9a7b5eb083a5f
-MD5 13da18f1ab0c00992ea623781fd7d22a metadata.xml 220
-RMD160 02a0e75a19dbc522889ba4c5a5c8aeecf2370236 metadata.xml 220
-SHA256 36f3c7bb615fffeeb010ec9d9b5f56a38ac39a18390913dc6cd9a7b5eb083a5f metadata.xml 220
-MD5 f56b5408e0945b69bd654eb597c70d00 files/digest-taglib-sharp-1.1.73998-r1 271
-RMD160 89891e1b20ef090c77df551d86c617b1a38b2123 files/digest-taglib-sharp-1.1.73998-r1 271
-SHA256 111cd91dfec335be850846dc9050b6191b789c866e4817af05e1ed1f9b903623 files/digest-taglib-sharp-1.1.73998-r1 271
-MD5 646f918ff4af7a58baef2f477d918b0f files/digest-taglib-sharp-1.9.75474 271
-RMD160 ab82fbd8ee332ae2f20dbf38a359d8ac631ba091 files/digest-taglib-sharp-1.9.75474 271
-SHA256 b271dd53f7ba286093627534722f1c81a3728e0c7c7b7ae4fed08b2a7c7e4722 files/digest-taglib-sharp-1.9.75474 271
-MD5 6041ff1e9957521e55822e1da515ff82 files/digest-taglib-sharp-2.0.2.0 262
-RMD160 61f82ae1d38894b9fcf06d237fdbedefb014f1ba files/digest-taglib-sharp-2.0.2.0 262
-SHA256 9c1a8f1f2be65f1581770660a4216db28f8076016609dcf777b60e8612231116 files/digest-taglib-sharp-2.0.2.0 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHfV0EyOePD61SuWIRAjbbAJ9nC032hjriIW7ZnmOvaC+xj2Z9tgCeO3gL
-6GaPxiJu4GZXnoA6HrVCuq0=
-=aD8s
------END PGP SIGNATURE-----
