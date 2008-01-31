@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/l7-filter
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.54 2007/12/24 09:26:19 pva Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.55 2008/01/31 00:10:22 ranger Exp $
+
+  31 Jan 2008; Brent Baude <ranger@gentoo.org> l7-filter-2.17.ebuild:
+  Marking l7-filter-2.17 ppc64 for bug 208148
 
 *l7-filter-2.17 (24 Dec 2007)
 
