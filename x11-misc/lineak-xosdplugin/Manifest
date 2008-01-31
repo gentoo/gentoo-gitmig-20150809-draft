@@ -1,34 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST lineak-xosdplugin-0.9.tar.gz 802367 RMD160 1d9f7da41a9acf089d1fbbba14f1b5a0bf263322 SHA1 270bbc96cfcb0d240f2f8c67c0c40e024d090a72 SHA256 ba83d8e6abc2fd1ddbfb0c4837d9a9b2db82e5f3e9732db546147f520ba1c2af
 DIST lineak_xosdplugin-0.9.0-pre1.tar.gz 802455 RMD160 45b46f7c1d6937496e980764ec0f1db012e5c9a1 SHA1 25c9808d014089d535cd35afee472b0ca144a401 SHA256 7d286f1199752107afff18a09eb542c0d3c01d51f1f4a50ab32efa4db5a2318d
 EBUILD lineak-xosdplugin-0.9.0.ebuild 806 RMD160 4cb38d03cc080ee07fc65fbfa00e2bea841cffdd SHA1 c5c484e1de2d7e357475dd19f254b125b97194df SHA256 c922128499a2c45ef460fa3b656af88a338a54aad0d43ef485748f1517ee0d74
-MD5 4a2ba2fc54e88779fd957b0cf5f231b7 lineak-xosdplugin-0.9.0.ebuild 806
-RMD160 4cb38d03cc080ee07fc65fbfa00e2bea841cffdd lineak-xosdplugin-0.9.0.ebuild 806
-SHA256 c922128499a2c45ef460fa3b656af88a338a54aad0d43ef485748f1517ee0d74 lineak-xosdplugin-0.9.0.ebuild 806
 EBUILD lineak-xosdplugin-0.9.0_pre1.ebuild 809 RMD160 d0ed8d662d8c3100ab6ad370f2a16beb0615aa9c SHA1 3f700d4fea34f33f421ff75d5354abe3c5f16d85 SHA256 8c50d94e400ccd276be98e2d14c6d782610e2e451720aa66042f3a5f9097bae7
-MD5 728888acd021d84cb7731944ac5f8d74 lineak-xosdplugin-0.9.0_pre1.ebuild 809
-RMD160 d0ed8d662d8c3100ab6ad370f2a16beb0615aa9c lineak-xosdplugin-0.9.0_pre1.ebuild 809
-SHA256 8c50d94e400ccd276be98e2d14c6d782610e2e451720aa66042f3a5f9097bae7 lineak-xosdplugin-0.9.0_pre1.ebuild 809
 MISC ChangeLog 3537 RMD160 980acd80cf2018c30e132ea8dc9d7070492ec86e SHA1 ed54ee6a026d9e49ad9bde76d141faf29350b4c7 SHA256 4de25602459cf618e1345bae7f5621b88c513215f4b5add79048e493ecd0b5f8
-MD5 6a018b3cc513100785feb16b11e9ec8b ChangeLog 3537
-RMD160 980acd80cf2018c30e132ea8dc9d7070492ec86e ChangeLog 3537
-SHA256 4de25602459cf618e1345bae7f5621b88c513215f4b5add79048e493ecd0b5f8 ChangeLog 3537
 MISC metadata.xml 166 RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 SHA1 e6c6436c304a65b4a012a5b7be7ee264b228a645 SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 metadata.xml 166
-SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826 metadata.xml 166
-MD5 8c713c2c91b579851d614a9b669673a0 files/digest-lineak-xosdplugin-0.9.0 265
-RMD160 7078c20dcb4c5511f1f2ed905c084f8a49c9b52f files/digest-lineak-xosdplugin-0.9.0 265
-SHA256 f21d8104ba9ffd0330414aaa260a62c5739c28be14bfb32bd8fd75c958874d7b files/digest-lineak-xosdplugin-0.9.0 265
-MD5 74ba098e0b7dade30cb077da89ed2647 files/digest-lineak-xosdplugin-0.9.0_pre1 286
-RMD160 c5b6c2cea1339c9e2f47bf5abf22d7ab2aa572ad files/digest-lineak-xosdplugin-0.9.0_pre1 286
-SHA256 6b2ec4370d45823e66b44e9a4d82f580ce050110a7a0cace683f92bab9f597f1 files/digest-lineak-xosdplugin-0.9.0_pre1 286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.5 (GNU/Linux)
-
-iD8DBQFGq2zjKhnDs22gwa8RAiwrAJ9F1Kf0mqTlLImN8PzwMQb6JYuf3QCgn8Ou
-DdSRbpowtui5kF54xNLqrdQ=
-=NldY
------END PGP SIGNATURE-----
