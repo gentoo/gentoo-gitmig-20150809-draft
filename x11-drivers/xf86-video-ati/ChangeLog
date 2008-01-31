@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/xf86-video-ati
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.57 2007/12/24 18:45:00 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.58 2008/01/31 03:56:13 dberkholz Exp $
+
+  31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/6.7.196-fix_washed_color.patch, -xf86-video-ati-6.6.1.ebuild,
+  -xf86-video-ati-6.6.191.ebuild, -xf86-video-ati-6.6.192.ebuild,
+  -xf86-video-ati-6.6.193.ebuild, -xf86-video-ati-6.7.192.ebuild,
+  -xf86-video-ati-6.7.193.ebuild, -xf86-video-ati-6.7.194.ebuild,
+  -xf86-video-ati-6.7.195.ebuild, -xf86-video-ati-6.7.196.ebuild,
+  -xf86-video-ati-6.7.196-r1.ebuild:
+  Clean up.
 
 *xf86-video-ati-6.7.197 (24 Dec 2007)
 
