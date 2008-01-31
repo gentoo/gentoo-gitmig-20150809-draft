@@ -1,49 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX konversation-1.0.1-crash.patch 827 RMD160 6c80c566c74ccf72bf8f92d51ddc1b1a25ed3de8 SHA1 4ce634fa9bc57fdd230a4f9dd5c5eab5ff4994bc SHA256 0e9db29683914ae972ba10dc60a25f35f2e2a907ca29aae14282f4a160c5b351
-MD5 774e304ea1bc6c175e4911b794b5fd75 files/konversation-1.0.1-crash.patch 827
-RMD160 6c80c566c74ccf72bf8f92d51ddc1b1a25ed3de8 files/konversation-1.0.1-crash.patch 827
-SHA256 0e9db29683914ae972ba10dc60a25f35f2e2a907ca29aae14282f4a160c5b351 files/konversation-1.0.1-crash.patch 827
 AUX konversation-1.0.1-konsolepanel.patch 1586 RMD160 50be8366aa4276ad176206b5e559e37771094f35 SHA1 8036d5bf87ad370a0e6f9af42e7dda494c9337dd SHA256 20ce86652f7e2e4eb24e0a855e7c52dc12729a9139cf9f7ef29dffe35e49f56e
-MD5 282b693a31f6e76504c4dbc2ffb36708 files/konversation-1.0.1-konsolepanel.patch 1586
-RMD160 50be8366aa4276ad176206b5e559e37771094f35 files/konversation-1.0.1-konsolepanel.patch 1586
-SHA256 20ce86652f7e2e4eb24e0a855e7c52dc12729a9139cf9f7ef29dffe35e49f56e files/konversation-1.0.1-konsolepanel.patch 1586
 AUX konversation-1.0.1-media-script-vulnerability.patch 1963 RMD160 f7cc1a2dfe90ec33fab1c25b9a4895b4f87bcff3 SHA1 5b7d1ee37f3bb736d4aa2774b09ca6e55025853a SHA256 40b6250533293cb37fd86aed31ac814c875d025f4798a01fc51af9de7e0fed48
-MD5 4e7f4e0417fad74657ae3cf80648cf8a files/konversation-1.0.1-media-script-vulnerability.patch 1963
-RMD160 f7cc1a2dfe90ec33fab1c25b9a4895b4f87bcff3 files/konversation-1.0.1-media-script-vulnerability.patch 1963
-SHA256 40b6250533293cb37fd86aed31ac814c875d025f4798a01fc51af9de7e0fed48 files/konversation-1.0.1-media-script-vulnerability.patch 1963
 AUX konversation-1.0.1-serverlist-compiz-workaround.patch 1325 RMD160 c2ce401bd333f9c66c48b45c0120ce80275bf52d SHA1 dcd5e1a20fc49984375167c27279332715d2ce21 SHA256 2d382fd6a683c3b0f55d796225684f411ff177d849f29f77c6df2e65c98ac8c8
-MD5 41c059b2a4ce576d8ec90a63884c3d00 files/konversation-1.0.1-serverlist-compiz-workaround.patch 1325
-RMD160 c2ce401bd333f9c66c48b45c0120ce80275bf52d files/konversation-1.0.1-serverlist-compiz-workaround.patch 1325
-SHA256 2d382fd6a683c3b0f55d796225684f411ff177d849f29f77c6df2e65c98ac8c8 files/konversation-1.0.1-serverlist-compiz-workaround.patch 1325
 DIST konversation-1.0.1.tar.bz2 5848563 RMD160 1cf79a87f451aa2718560f00ddf987b68938310a SHA1 7e4b2356e942848fb83584db1bf2a1b6ef63234d SHA256 8be736289c52c21fe5ada7dd153767abd5155424a510ab9781b9d2f585cc00fd
 EBUILD konversation-1.0.1-r3.ebuild 1055 RMD160 8b20b7a7d4cba5824d61fcd6e79d962afba9c1c8 SHA1 d1da034d22cf84fdc129b21bb1af28fe6b841f0f SHA256 041894a743b0870bf13e435c97426f3757993828ad3759053297aa8440892c5e
-MD5 4076864cfde08fe76e6bc078365b17e1 konversation-1.0.1-r3.ebuild 1055
-RMD160 8b20b7a7d4cba5824d61fcd6e79d962afba9c1c8 konversation-1.0.1-r3.ebuild 1055
-SHA256 041894a743b0870bf13e435c97426f3757993828ad3759053297aa8440892c5e konversation-1.0.1-r3.ebuild 1055
 EBUILD konversation-1.0.1-r4.ebuild 1119 RMD160 388042cfef4c429714da2a39afa1975ae1a0ebc9 SHA1 fd287b9dc39dfc2b4f4e7ce7dd0c7bb3b9b96451 SHA256 d7aecceb35aa23e2c5bb5649616ab3bb670624b5c502028a8b40c8072347ba54
-MD5 b73a15f5a69a3dcd764a7389a8fcc8e7 konversation-1.0.1-r4.ebuild 1119
-RMD160 388042cfef4c429714da2a39afa1975ae1a0ebc9 konversation-1.0.1-r4.ebuild 1119
-SHA256 d7aecceb35aa23e2c5bb5649616ab3bb670624b5c502028a8b40c8072347ba54 konversation-1.0.1-r4.ebuild 1119
 MISC ChangeLog 8560 RMD160 461a900e61cd0ab2a5e34d580c7b703f965f12f9 SHA1 5a6a2d65beb88b02d3f720c69e65a578c480990b SHA256 fa81149e5656949207dd9607e89c4126fde32e21ad22ebff2e521498755b1622
-MD5 2455da8369a434ebd7a5b36d2ae9ca9f ChangeLog 8560
-RMD160 461a900e61cd0ab2a5e34d580c7b703f965f12f9 ChangeLog 8560
-SHA256 fa81149e5656949207dd9607e89c4126fde32e21ad22ebff2e521498755b1622 ChangeLog 8560
 MISC metadata.xml 177 RMD160 8850c5b17b8777a62f670a0ade3bab8144c2b2dc SHA1 500abb13eb9ab623336557bb1246056b39896046 SHA256 0d969af6afa28170dac4b321dd8489b27d322f49f40c39aa3f614953f85292ce
-MD5 71e1e6f08f072eec25aeb364865de8ef metadata.xml 177
-RMD160 8850c5b17b8777a62f670a0ade3bab8144c2b2dc metadata.xml 177
-SHA256 0d969af6afa28170dac4b321dd8489b27d322f49f40c39aa3f614953f85292ce metadata.xml 177
-MD5 7c7e86e03d533fc23d42a755deae605b files/digest-konversation-1.0.1-r3 262
-RMD160 ee7c62af8dabf95b5523d4e37bc502c9743c09f0 files/digest-konversation-1.0.1-r3 262
-SHA256 e905fba1709b730342f4e0cb8b2791f8434aadd38cc90c2804123bfc7e864680 files/digest-konversation-1.0.1-r3 262
-MD5 7c7e86e03d533fc23d42a755deae605b files/digest-konversation-1.0.1-r4 262
-RMD160 ee7c62af8dabf95b5523d4e37bc502c9743c09f0 files/digest-konversation-1.0.1-r4 262
-SHA256 e905fba1709b730342f4e0cb8b2791f8434aadd38cc90c2804123bfc7e864680 files/digest-konversation-1.0.1-r4 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHGlhMCkvF58q80IkRAiUGAKCD2dsEbEc1joBuUgjPCdoTZ8w8AACeMKql
-p9Ty51nmtFP8Tt0JiV0C2D4=
-=6Ls0
------END PGP SIGNATURE-----
