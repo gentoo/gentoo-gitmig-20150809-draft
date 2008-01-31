@@ -1,42 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST telepathy-stream-engine-0.3.23.tar.gz 379653 RMD160 23885aae498eb85a41c78f6d0291bfd79556d1b8 SHA1 b37b6598d2f0ed47115948cc52b86d693b1888a1 SHA256 7053caf1fcaf08eb2a7b7b20305f94f2891646e9541bd97923ddb0c3c2ba659f
 DIST telepathy-stream-engine-0.3.25.tar.gz 381876 RMD160 93c25668eac9d2cd7e9ea39641851ef41522f822 SHA1 131e661511e2f92d2fa691cb9dff0b00ba389d3f SHA256 fda1ae08ae42f57f926d168231a738ce84f3c3e759d824f467a9956f1be73d67
 DIST telepathy-stream-engine-0.4.0.tar.gz 382269 RMD160 c64027a4b37bebcc49c0783493033a32fbabd93f SHA1 317a5adde59f91aa90c109d2d4a44c354af0d2ff SHA256 fbaa35193f11adbfa262fec566938a4a921d9699be510322930e290d3312f649
 EBUILD telepathy-stream-engine-0.3.23.ebuild 922 RMD160 e8deeca2d9adf507500edf0a8de0849f6cadc2e4 SHA1 2fe30616e21b904166d327187d19affb31e4763c SHA256 7d6c97315a18ded7a41d3585bd417f313a8a7c77e0eb2b8fc7d4882035a35b60
-MD5 d35ed57093d307c5a0bcf50abfad83b5 telepathy-stream-engine-0.3.23.ebuild 922
-RMD160 e8deeca2d9adf507500edf0a8de0849f6cadc2e4 telepathy-stream-engine-0.3.23.ebuild 922
-SHA256 7d6c97315a18ded7a41d3585bd417f313a8a7c77e0eb2b8fc7d4882035a35b60 telepathy-stream-engine-0.3.23.ebuild 922
 EBUILD telepathy-stream-engine-0.3.25.ebuild 922 RMD160 d36526de6c090d11b9c64f6bc8fb0f1f7a660bfb SHA1 3b03ae10c880acaee8a3657054acd9ecbe26f0f2 SHA256 c07b0f7ede83a9797bef78320b1ec258f5c8e2ed81eca9e829b981f2d979c7f9
-MD5 c1200f469bf4b3c19d8a1d53e6178e48 telepathy-stream-engine-0.3.25.ebuild 922
-RMD160 d36526de6c090d11b9c64f6bc8fb0f1f7a660bfb telepathy-stream-engine-0.3.25.ebuild 922
-SHA256 c07b0f7ede83a9797bef78320b1ec258f5c8e2ed81eca9e829b981f2d979c7f9 telepathy-stream-engine-0.3.25.ebuild 922
 EBUILD telepathy-stream-engine-0.4.0.ebuild 921 RMD160 9d5e1a465de064a98e5269ed4b1d814b07e4502c SHA1 a8a0d8c6a2c497de5451574ffdc33412e9a4c5e7 SHA256 e9d7da4a4699fce5f8999ed566cc454d1b912bbe45f301cd3bed0948c49dc453
-MD5 07258439bfb099def8a9dafe22168276 telepathy-stream-engine-0.4.0.ebuild 921
-RMD160 9d5e1a465de064a98e5269ed4b1d814b07e4502c telepathy-stream-engine-0.4.0.ebuild 921
-SHA256 e9d7da4a4699fce5f8999ed566cc454d1b912bbe45f301cd3bed0948c49dc453 telepathy-stream-engine-0.4.0.ebuild 921
 MISC ChangeLog 3346 RMD160 b361ad4b5cabfa57a2f66ec7cee0925502022a77 SHA1 96cb25fda536102864bb11f953916af478ffd69b SHA256 e2b6272c983fcd1200803540f1bd5daf5fa154fbcd5daf79822ce3bb79e08f50
-MD5 c12e20731fe56fcf370d7c616b78544e ChangeLog 3346
-RMD160 b361ad4b5cabfa57a2f66ec7cee0925502022a77 ChangeLog 3346
-SHA256 e2b6272c983fcd1200803540f1bd5daf5fa154fbcd5daf79822ce3bb79e08f50 ChangeLog 3346
 MISC metadata.xml 305 RMD160 3cefb2764dc78feb295addb8303d83b7d71b1667 SHA1 16cd8bdf5dc735bf68dad2d62fe4132f08527087 SHA256 8067602a9c13faf07e0e9e40d41df3b348c6a6351e2787491c703288c44d1ff0
-MD5 bbeaba2a7fbf9117ecc86cfd6217a61e metadata.xml 305
-RMD160 3cefb2764dc78feb295addb8303d83b7d71b1667 metadata.xml 305
-SHA256 8067602a9c13faf07e0e9e40d41df3b348c6a6351e2787491c703288c44d1ff0 metadata.xml 305
-MD5 ddca3b0af0f579f89f7cf5a6ac87f450 files/digest-telepathy-stream-engine-0.3.23 292
-RMD160 0344dc332492aac3fd41857287004ca2d7bcc494 files/digest-telepathy-stream-engine-0.3.23 292
-SHA256 5ff32ed00c0ab50de58b363fc3f6fecad09741477f3939aa3c7cde0a54e894b9 files/digest-telepathy-stream-engine-0.3.23 292
-MD5 699832e8caa60fbe811b97e74c886e97 files/digest-telepathy-stream-engine-0.3.25 292
-RMD160 68ddb71f25c6825d6f607bc1ee0674da6a9cb0ba files/digest-telepathy-stream-engine-0.3.25 292
-SHA256 e679cc43cba0d1e2e20d98f88394852cea1226c310ba59314e5b11a4df85e139 files/digest-telepathy-stream-engine-0.3.25 292
-MD5 2a2ea16bb7037bc30ce2298bc1338534 files/digest-telepathy-stream-engine-0.4.0 289
-RMD160 dc53fbf23a5ca8560290e50658924f6e9fe4df42 files/digest-telepathy-stream-engine-0.4.0 289
-SHA256 c2a2911575c67410a5412aca41ef7042b57626afa881f1f18d338267619b520f files/digest-telepathy-stream-engine-0.4.0 289
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFG/UF5ppoStNGKGywRAkOgAJ9ann6A6u24GIw8pQ4lDQEUliIzMwCg1Lib
-tqv6UaqfhVwPa9Mlr62XqLw=
-=IM6H
------END PGP SIGNATURE-----
