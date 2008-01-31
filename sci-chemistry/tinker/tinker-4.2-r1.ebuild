@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-4.2-r1.ebuild,v 1.1 2006/06/21 14:17:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-4.2-r1.ebuild,v 1.2 2008/01/31 19:55:31 grobian Exp $
 
 inherit fortran toolchain-funcs
 
@@ -18,17 +18,13 @@ DEPEND="X? (
 			|| ( dev-java/blackdown-java3d-bin
 			dev-java/sun-java3d-bin )
 		)"
-S="${WORKDIR}/tinker/source"
+S=${WORKDIR}/tinker/source
 
 src_compile() {
 	if use X; then
 		COMPGUI="./compgui.make"
 		LINK="./linkgui.make"
-		if use ppc-macos; then
-			cp ../jar/macosx/sockets.c .
-		else
-			cp ../jar/linux/sockets.c .
-		fi
+		cp ../jar/linux/sockets.c .
 	else
 		LINK="./link.make"
 	fi
@@ -39,9 +35,7 @@ src_compile() {
 	# Need to make sure all of the appropriate config files are in place
 	# for the build.
 	# This should be easily customizable for other Fortran compilers, e.g. pg77.
-	if use ppc-macos; then
-		cp ../apple/gnu/* .
-	elif [ "${FORTRANC}" = "ifc" ]; then
+	if [[ ${FORTRANC} == "ifc" ]]; then
 		cp ../linux/intel/* .
 	else
 		cp ../linux/gnu/* .
@@ -90,11 +84,7 @@ src_install() {
 		${WORKDIR}/tinker/doc/*.pdf
 
 	if use X; then
-		if use ppc-macos; then
-			dolib.so ${WORKDIR}/tinker/jar/macosx/libffe.jnilib
-		else
-			dolib.so ${WORKDIR}/tinker/jar/linux/libffe.so
-		fi
+		dolib.so ${WORKDIR}/tinker/jar/linux/libffe.so
 	fi
 
 	dolib.a libtinker.a
