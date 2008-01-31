@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1052 2008/01/31 11:35:52 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1053 2008/01/31 13:33:27 pva Exp $
+
+  31 Jan 2008; Peter Volkov <pva@gentoo.org> package.mask:
+  Remove mask for netperf. New version includes security fixes.
 
   31 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> package.mask:
   Added =kde-misc/yakuake-2.9* to KDE 4 mask.
