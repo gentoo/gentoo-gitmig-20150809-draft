@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libherdstat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/ChangeLog,v 1.17 2008/01/30 14:58:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/ChangeLog,v 1.18 2008/02/01 03:50:20 jer Exp $
+
+  01 Feb 2008; Jeroen Roovers <jer@gentoo.org> libherdstat-0.1.1-r1.ebuild:
+  Stable for HPPA (bug #191688).
 
   30 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   -files/libherdstat-0.2.0-gcc.patch, -libherdstat-0.2.0.ebuild:
