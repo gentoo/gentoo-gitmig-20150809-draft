@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.20.3.ebuild,v 1.4 2008/02/01 12:48:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.20.3.ebuild,v 1.5 2008/02/01 15:36:23 eva Exp $
 EAPI="1"
 
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -60,8 +60,8 @@ RDEPEND="
 	>=gnome-base/eel-2.20.0
 	>=gnome-base/nautilus-2.20.0
 
-	>=media-libs/gstreamer-0.10.15
-	>=media-libs/gst-plugins-base-0.10.15
+	>=media-libs/gstreamer-0.10.14
+	>=media-libs/gst-plugins-base-0.10.14
 	>=media-libs/gst-plugins-good-0.10.6
 	>=gnome-extra/gnome-media-2.20.1
 	>=media-sound/sound-juicer-2.20.1
