@@ -1,5 +1,9 @@
 # This file requires >=portage-2.1.1
 
+# Tobias Scherbaum <dertobi123@gentoo.org> (1 Feb 2008)
+# Mask mono flag for gnome as tomboy is segfaulting.
+gnome-base/gnome mono
+
 # Piotr Jaroszyński <peper@gentoo.org> (19 Nov 2007)
 # Mask python flag until ppc keyword is added to dev-python/pygments, bug #198989.
 sys-apps/paludis python
