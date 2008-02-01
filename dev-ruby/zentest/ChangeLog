@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.26 2008/01/16 03:26:27 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.27 2008/02/01 05:45:53 nichoj Exp $
+
+*zentest-3.9.1 (01 Feb 2008)
+
+  01 Feb 2008; Joshua Nichols <nichoj@gentoo.org> +zentest-3.9.1.ebuild:
+  Version bump.
 
 *zentest-3.8.0 (09 Jan 2008)
 
