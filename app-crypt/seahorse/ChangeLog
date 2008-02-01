@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.86 2008/02/01 12:47:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.87 2008/02/01 15:49:14 opfer Exp $
+
+  01 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  seahorse-2.20.3.ebuild:
+  quote variable
 
   01 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   seahorse-2.20.3.ebuild:

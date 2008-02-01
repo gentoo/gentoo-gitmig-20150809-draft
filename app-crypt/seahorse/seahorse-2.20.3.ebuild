@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.20.3.ebuild,v 1.3 2008/02/01 12:47:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.20.3.ebuild,v 1.4 2008/02/01 15:49:14 opfer Exp $
 EAPI="1"
 
 inherit gnome2 eutils flag-o-matic
@@ -28,7 +28,7 @@ RDEPEND=">=gnome-base/libgnome-2.14
 				=app-crypt/gnupg-1.2*
 				=app-crypt/gnupg-1.4*
 				=app-crypt/gnupg-2.0*
-		 	)
+			)
 		 >=app-crypt/gpgme-1.0.0
 		   net-misc/openssh
 		   x11-misc/shared-mime-info
@@ -37,7 +37,7 @@ RDEPEND=">=gnome-base/libgnome-2.14
 		 dbus?	( ||	(
 							>=dev-libs/dbus-glib-0.72
 							( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 )
-		 				)
+						)
 				)
 		 gedit? ( >=app-editors/gedit-2.16 )
 		 keyring? ( gnome-base/gnome-keyring )
@@ -75,7 +75,7 @@ pkg_setup() {
 		--enable-ssh
 		--disable-update-mime-database
 		--enable-hkp --with-keyserver --enable-agent
-		--localstatedir=${D}/var/lib/scrollkeeper/
+		--localstatedir="${D}"/var/lib/scrollkeeper/
 		--disable-epiphany
 		$(use_enable applet)
 		$(use_enable avahi sharing)
