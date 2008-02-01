@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.9999.ebuild,v 1.1 2008/01/31 06:11:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.9999.ebuild,v 1.2 2008/02/01 14:59:36 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -24,7 +24,7 @@ IUSE="alsa gif gtk gzip-el hesiod jpeg kerberos motif png spell sound source tif
 RESTRICT="strip"
 
 RDEPEND="sys-libs/ncurses
-	>=app-admin/eselect-emacs-0.7-r1
+	>=app-admin/eselect-emacs-1.2
 	net-libs/liblockfile
 	hesiod? ( net-dns/hesiod )
 	kerberos? ( virtual/krb5 )
@@ -235,7 +235,7 @@ pkg_postinst() {
 
 	elisp-site-regen
 	emacs-infodir-rebuild
-	eselect emacs update --if-unset
+	eselect emacs update ifunset
 
 	if use X; then
 		elog "You need to install some fonts for Emacs. Under monolithic"
@@ -255,5 +255,5 @@ pkg_postinst() {
 pkg_postrm() {
 	elisp-site-regen
 	emacs-infodir-rebuild
-	eselect emacs update --if-unset
+	eselect emacs update ifunset
 }
