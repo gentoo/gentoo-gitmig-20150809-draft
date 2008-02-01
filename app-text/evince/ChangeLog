@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.129 2007/12/06 21:17:29 eva Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.130 2008/02/01 12:20:35 opfer Exp $
+
+  01 Feb 2008; Christian Faulhammer <opfer@gentoo.org> evince-2.20.2.ebuild:
+  stable x86, bug 208366
 
 *evince-2.20.2 (06 Dec 2007)
 
