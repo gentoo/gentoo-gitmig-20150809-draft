@@ -1,11 +1,11 @@
-# Copyright 2007-2007 Gentoo Foundation
+# Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vbindiff/vbindiff-3.0_beta1.ebuild,v 1.2 2007/10/10 10:55:14 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vbindiff/vbindiff-3.0_beta1.ebuild,v 1.3 2008/02/01 12:35:24 flameeyes Exp $
 
 DESCRIPTION="Visual binary diff utility"
 
 HOMEPAGE="http://www.cjmweb.net/vbindiff/"
-SRC_URI="http://www.cjmweb.net/vbindiff/vbindiff-${PV}.tar.gz"
+SRC_URI="http://www.cjmweb.net/vbindiff/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
