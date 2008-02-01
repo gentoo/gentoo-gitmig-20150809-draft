@@ -1,9 +1,9 @@
 # ChangeLog for media-sound/muse
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.21 2008/02/01 09:15:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.22 2008/02/01 10:38:54 drac Exp $
 
-  01 Feb 2008; Christian Faulhammer <opfer@gentoo.org> muse-0.9.2.ebuild:
-  quote variables
+  01 Feb 2008; Samuli Suominen <drac@gentoo.org> muse-0.9.2.ebuild:
+  amd64 stable wrt #205452
 
   31 Jan 2008; Christian Faulhammer <opfer@gentoo.org> muse-0.9.2.ebuild:
   stable x86, bug 205452
