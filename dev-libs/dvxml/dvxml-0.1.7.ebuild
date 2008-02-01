@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvxml/dvxml-0.1.5.ebuild,v 1.1 2008/01/04 08:37:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvxml/dvxml-0.1.7.ebuild,v 1.1 2008/02/01 04:49:00 halcy0n Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,8 +21,6 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-namespace_usage.patch"
 
 	sed -i 's/^\(SUBDIRS =.*\)doc\(.*\)$/\1\2/' Makefile.in || \
 		die "sed Makefile.in failed"

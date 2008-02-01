@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvxml/dvxml-0.1.4.ebuild,v 1.5 2004/07/02 04:39:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvxml/dvxml-0.1.4.ebuild,v 1.6 2008/02/01 04:49:00 halcy0n Exp $
 
 S=${WORKDIR}/dvxml-${PV}
 DESCRIPTION="dvxml provides some convenient stuff on top of the xmlwrapp package"
@@ -16,5 +16,5 @@ DEPEND="virtual/libc
 	dev-libs/xmlwrapp"
 
 src_install() {
-	make prefix=${D}/usr install
+	make prefix="${D}"/usr install
 }
