@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1058 2008/02/01 17:48:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1059 2008/02/01 18:26:42 ulm Exp $
+
+  01 Feb 2008; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
+  Add local libotf USE flag for app-editors/emacs-cvs.
 
   01 Feb 2008; Ulrich Mueller <ulm@gentoo.org> updates/3Q-2007,
   updates/1Q-2008, package.mask:
