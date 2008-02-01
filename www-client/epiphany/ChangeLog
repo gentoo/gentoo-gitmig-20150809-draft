@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.145 2008/02/01 12:15:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.146 2008/02/01 18:43:35 ranger Exp $
+
+  01 Feb 2008; Brent Baude <ranger@gentoo.org> epiphany-2.20.3.ebuild:
+  Marking epiphany-2.20.3 ppc64 and ppc stable for bug 208366
 
   01 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   epiphany-2.20.3.ebuild:
