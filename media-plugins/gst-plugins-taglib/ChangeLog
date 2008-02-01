@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-taglib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.12 2007/11/18 19:18:39 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.13 2008/02/01 12:53:29 drac Exp $
+
+  01 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  gst-plugins-taglib-0.10.6-r1.ebuild:
+  Update gstreamer depend to something it actually builds with.
 
 *gst-plugins-taglib-0.10.6-r1 (18 Nov 2007)
 
