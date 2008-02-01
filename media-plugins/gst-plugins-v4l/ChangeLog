@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-v4l
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/ChangeLog,v 1.27 2007/11/17 13:21:19 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/ChangeLog,v 1.28 2008/02/01 12:58:31 drac Exp $
+
+*gst-plugins-v4l-0.10.17 (01 Feb 2008)
+
+  01 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  -gst-plugins-v4l-0.10.14.ebuild, -gst-plugins-v4l-0.10.15.ebuild,
+  +gst-plugins-v4l-0.10.17.ebuild:
+  Version bump.
 
 *gst-plugins-v4l-0.10.15 (17 Nov 2007)
 
