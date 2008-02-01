@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.210 2008/01/29 14:50:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.211 2008/02/01 15:45:28 cardoe Exp $
+
+*mythtv-0.21_pre15718 (01 Feb 2008)
+
+  01 Feb 2008; Doug Klima <cardoe@gentoo.org> +mythtv-0.21_pre15718.ebuild:
+  newer trunk revision. using EAPI=1 now
 
 *mythtv-0.21_pre15666 (29 Jan 2008)
 
