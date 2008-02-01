@@ -1,0 +1,10 @@
+# ChangeLog for sys-block/lsiutil
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/lsiutil/ChangeLog,v 1.1 2008/02/01 19:07:32 wschlich Exp $
+
+*lsiutil-1.52 (01 Feb 2008)
+
+  01 Feb 2008; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
+  +lsiutil-1.52.ebuild:
+  initial import
+
