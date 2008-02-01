@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.17.ebuild,v 1.1 2007/12/31 10:51:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.17.ebuild,v 1.2 2008/02/01 11:14:59 eva Exp $
 
 JAVA_PKG_OPT_USE="freetts"
 
@@ -33,7 +33,7 @@ DEPEND="$COMMON_DEPEND
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	G2CONF="${G2CONF} --with-festival --with-speech-dispatcher"
+	G2CONF="${G2CONF} --with-festival --with-speech-dispatcher --without-espeak-dir"
 
 	if use freetts; then
 		java-pkg-opt-2_pkg_setup

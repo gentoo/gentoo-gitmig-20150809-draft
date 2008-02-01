@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gnome-speech
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.103 2007/12/31 10:51:02 eva Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.104 2008/02/01 11:14:59 eva Exp $
+
+  01 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-speech-0.4.17.ebuild:
+  fix automagic espeak dependency, bug #208387
 
 *gnome-speech-0.4.17 (22 Dec 2007)
 
