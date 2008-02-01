@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.7 2007/12/30 15:29:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.8 2008/02/01 10:01:33 armin76 Exp $
 
 inherit eutils distutils subversion flag-o-matic
 
-ESVN_REPO_URI="http://deluge-torrent.org/svn/trunk"
+ESVN_REPO_URI="http://svn.deluge-torrent.org/trunk/"
 ESVN_PROJECT="deluge"
 
 DESCRIPTION="BitTorrent client in Python and PyGTK."
