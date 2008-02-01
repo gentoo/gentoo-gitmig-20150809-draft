@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/iwl4965-ucode
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.5 2007/12/23 21:09:38 compnerd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.6 2008/02/01 17:23:56 opfer Exp $
+
+  01 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  iwl4965-ucode-4.44.1.20.ebuild:
+  stable x86/amd64, bug 208447
 
 *iwl4965-ucode-4.44.1.20 (23 Dec 2007)
 
