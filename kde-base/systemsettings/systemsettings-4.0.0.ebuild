@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.0.0.ebuild,v 1.2 2008/01/27 15:25:21 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.0.0.ebuild,v 1.3 2008/02/01 05:21:35 zlin Exp $
 
 EAPI="1"
 
@@ -33,7 +33,10 @@ DEPEND="${COMMONDEPEND}
 	x11-proto/xextproto
 	x11-proto/kbproto
 	xinerama? ( x11-proto/xineramaproto )"
-RDEPEND="${COMMONDEPEND}"
+RDEPEND="${COMMONDEPEND}
+	|| ( x11-misc/xkeyboard-config
+		x11-misc/xkbdata )
+	x11-apps/setxkbmap"
 
 KMEXTRA="kcontrol/"
 
@@ -58,5 +61,6 @@ src_compile() {
 		$(cmake-utils_use_with ssl OpenSSL)
 		$(cmake-utils_use_with usb USB)
 		$(cmake-utils_use_with xinerama X11_Xinerama)"
+
 	kde4-meta_src_compile
 }

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.2 2008/01/27 15:25:21 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.3 2008/02/01 05:21:35 zlin Exp $
+
+  01 Feb 2008; Bo Ørsted Andresen <zlin@gentoo.org>
+  systemsettings-4.0.0.ebuild:
+  Readd setxkbmap and xkeyboard-config to RDEPEND (bug #208049).
 
   27 Jan 2008; Bo Ørsted Andresen <zlin@gentoo.org>
   +files/systemsettings-4.0.0-opengl.patch, systemsettings-4.0.0.ebuild:
