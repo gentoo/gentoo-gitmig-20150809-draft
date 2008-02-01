@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.490 2008/01/24 09:49:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.491 2008/02/01 05:29:59 zmedico Exp $
+
+*portage-2.1.4.1 (01 Feb 2008)
+
+  01 Feb 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.4.1.ebuild:
+  2.1.4.1 bump. This fixes bugs #138159, #205718, #205966, #206772, and
+  #207104. Bug #200044 tracks all bugs fixed since 2.1.3.x. If you have
+  an overlay then you should remove **/files/digest-* files (Manifest1)
+  because they are no longer supported. If earlier versions of portage
+  will be used to generate manifests for your overlay then you should add
+  a file named manifest1_obsolete to the root of the repository in order
+  to disable generation of the Manifest1 digest files.
 
   24 Jan 2008; Zac Medico <zmedico@gentoo.org> portage-2.1.4.ebuild:
   Bug #206800 - Fix epydoc command to work with epydoc-3.0.
