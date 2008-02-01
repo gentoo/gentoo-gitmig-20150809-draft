@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/dev/2008.0/make.defaults,v 1.1 2008/01/30 16:32:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/dev/2008.0/make.defaults,v 1.2 2008/02/01 06:40:23 wolf31o2 Exp $
+
+ABI="amd64"
 
 # We build stage1 against this
 STAGE1_USE="nptl nptlonly unicode"
