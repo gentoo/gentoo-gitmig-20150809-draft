@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.4.1_beta1.ebuild,v 1.1 2008/02/01 06:56:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.4.1_beta1.ebuild,v 1.2 2008/02/01 07:08:55 jer Exp $
 
 inherit libtool
 
@@ -41,9 +41,9 @@ src_test() {
 	make test || die "failed to build tests"
 
 	einfo "Running tests"
-	./test.sh > ${T}/tests
-	cat ${T}/tests
-	grep FAILED ${T}/tests &>/dev/null && die "1 or more tests failed"
+	./test.sh > "${T}"/tests
+	cat "${T}"/tests
+	grep FAILED "${T}"/tests &>/dev/null && die "1 or more tests failed"
 }
 
 src_install() {
