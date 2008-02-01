@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnomeprint
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.142 2008/02/01 12:30:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.143 2008/02/01 18:53:51 ranger Exp $
+
+  01 Feb 2008; Brent Baude <ranger@gentoo.org> libgnomeprint-2.18.3.ebuild:
+  Marking libgnomeprint-2.18.3 ppc64 and ppc stable for bug 208366
 
   01 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   libgnomeprint-2.18.3.ebuild:
