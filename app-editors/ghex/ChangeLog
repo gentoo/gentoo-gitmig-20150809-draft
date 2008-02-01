@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.40 2008/02/01 16:58:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.41 2008/02/01 19:44:38 armin76 Exp $
+
+  01 Feb 2008; Raúl Porcel <armin76@gentoo.org> ghex-2.20.0.ebuild:
+  sparc stable wrt #208364
 
   01 Feb 2008; Markus Meier <maekke@gentoo.org> ghex-2.20.0.ebuild:
   x86 stable, bug #208364
