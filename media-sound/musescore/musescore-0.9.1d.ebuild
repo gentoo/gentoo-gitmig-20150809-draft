@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.9.1d.ebuild,v 1.1 2008/02/01 14:31:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.9.1d.ebuild,v 1.2 2008/02/01 20:10:54 drac Exp $
 
 inherit cmake-utils eutils font
 
@@ -27,15 +27,12 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P/d}/mscore
 
 FONT_SUFFIX="otf"
-FONT_S="${S}"/mscore/fonts
+FONT_S=${S}/mscore/fonts
 
 pkg_setup() {
-	local fail="Re-emerge x11-libs/qt with USE qt3support."
-
-	if ! built_with_use ">=x11-libs/qt-4.3" qt3support; then
-		eerror "${fail}"
-		die "${fail}"
-	fi
+	local fail="Re-emerge >=x11-libs/qt-4.3 with USE accessibility and qt3support."
+	built_with_use ">=x11-libs/qt-4.3" qt3support || die "${fail}"
+	built_with_use ">=x11-libs/qt-4.3" accessibility || die "${fail}"
 }
 
 src_unpack() {
