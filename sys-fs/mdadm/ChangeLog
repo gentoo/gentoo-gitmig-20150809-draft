@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mdadm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.85 2007/10/19 11:57:05 robbat2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.86 2008/02/01 12:42:12 flameeyes Exp $
+
+  01 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  files/mdraid.rc-2.6.3-r3, files/mdraid.rc-2.6.3-r4, files/mdraid.rc:
+  Update init script to work with current development version of OpenRC
+  (checkroot -> root; checkfs -> fsck).
 
 *mdadm-2.6.4 (19 Oct 2007)
 

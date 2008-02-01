@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/device-mapper
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.103 2007/11/19 16:11:17 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.104 2008/02/01 12:39:47 flameeyes Exp $
+
+  01 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  files/device-mapper.rc-1.02.22-r3, files/device-mapper.rc:
+  Update init script to work with current development version of OpenRC
+  (checkroot -> root; checkfs -> fsck).
 
   19 Nov 2007; Jeroen Roovers <jer@gentoo.org>
   device-mapper-1.02.22-r5.ebuild:

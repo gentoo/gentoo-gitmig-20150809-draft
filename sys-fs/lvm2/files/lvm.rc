@@ -1,13 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm.rc,v 1.1 2007/05/09 16:36:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm.rc,v 1.2 2008/02/01 12:40:42 flameeyes Exp $
 
 depend() {
 	if [ -e /lib/librc.so ]; then
 		# on baselayout-1 this causes
 		# dependency-cycles with checkroot (before *)
-		before checkroot
+		before checkroot root
 	fi
 }
 
