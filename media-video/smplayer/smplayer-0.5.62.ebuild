@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.5.62.ebuild,v 1.1 2008/01/26 11:01:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.5.62.ebuild,v 1.2 2008/02/01 09:03:04 opfer Exp $
 
 inherit eutils qt4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="$(qt4_min_version 4.2)"
