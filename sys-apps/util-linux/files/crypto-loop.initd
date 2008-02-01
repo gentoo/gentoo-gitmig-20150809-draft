@@ -1,11 +1,16 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/files/crypto-loop.initd,v 1.2 2007/10/05 23:26:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/files/crypto-loop.initd,v 1.3 2008/02/01 12:36:44 flameeyes Exp $
 
 depend() {
-	 need checkroot modules
-	 before localmount
+	if [ -x /etc/init.d/root ]; then
+		need root
+	else
+		need checkroot
+	fi
+	need modules
+	before localmount
 }
 
 start() {
