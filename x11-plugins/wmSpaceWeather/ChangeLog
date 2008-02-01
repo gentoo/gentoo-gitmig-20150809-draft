@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmSpaceWeather
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.12 2008/02/01 14:00:22 s4t4n Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.13 2008/02/01 17:12:38 opfer Exp $
+
+  01 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  wmSpaceWeather-1.04_p19.ebuild:
+  stable x86, bug 207888
 
 *wmSpaceWeather-1.04_p19 (08 Feb 2008)
 
