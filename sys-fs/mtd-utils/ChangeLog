@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.9 2008/01/26 08:45:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.10 2008/02/01 13:58:30 vapier Exp $
+
+  01 Feb 2008; Mike Frysinger <vapier@gentoo.org> mtd-utils-9999.ebuild,
+  -mtd-utils-20060606.ebuild, mtd-utils-20080102.ebuild:
+  Pull in lzo since we use it #208428 by Mart Raudsepp.
 
   26 Jan 2008; Mike Frysinger <vapier@gentoo.org> mtd-utils-20060907.ebuild:
   Move to mips stable #203855.
