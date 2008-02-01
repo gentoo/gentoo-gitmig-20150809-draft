@@ -1,6 +1,19 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.311 2008/01/18 21:32:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.312 2008/02/01 21:47:19 dberkholz Exp $
+
+*xorg-server-1.4.0.90-r3 (01 Feb 2008)
+*xorg-server-1.3.0.0-r5 (01 Feb 2008)
+
+  01 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.4-0008-CVE-2007-6429-Always-test-for-size-offset-wrapping.patch,
+  +files/1.4-0009-Don-t-break-grab-and-focus-state-for-a-window-when-r.patch
+  , +xorg-server-1.3.0.0-r5.ebuild, +xorg-server-1.4.0.90-r3.ebuild:
+  (#208343) Another security bump, with two fixes. CVE-2007-6429: The old fix
+  for the MIT_SHM patch failed to check for the security issue in all cases.
+  CVE-2007-3920: The second fix is primarily for compiz users. There was a
+  patch in compiz for this but it was again an incomplete fix, because it
+  assumed the problem could only be caused by a specifically named executable.
 
   18 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.3.0.0-r4.ebuild:
