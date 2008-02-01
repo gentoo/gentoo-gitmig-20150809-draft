@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/linuxwacom
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.15 2008/02/01 03:47:51 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.16 2008/02/01 17:19:01 opfer Exp $
+
+  01 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  linuxwacom-0.7.8_p3.ebuild:
+  stable x86, bug 208181
 
   31 Jan 2008; Robert Buchholz <rbu@gentoo.org> linuxwacom-0.7.8_p3.ebuild:
   amd64 stable (bug #208181)
