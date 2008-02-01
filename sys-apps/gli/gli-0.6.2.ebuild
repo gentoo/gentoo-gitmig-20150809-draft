@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.5.4.ebuild,v 1.2 2008/02/01 18:04:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.6.2.ebuild,v 1.1 2008/02/01 18:04:28 wolf31o2 Exp $
 
 inherit python eutils
 
