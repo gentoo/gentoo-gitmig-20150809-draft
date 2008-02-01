@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.368 2007/12/19 10:05:13 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.369 2008/02/01 14:52:43 zzam Exp $
+
+*udev-118-r1 (01 Feb 2008)
+
+  01 Feb 2008; Matthias Schwarzott <zzam@gentoo.org> +files/net-118-r1.sh,
+  +files/udev-start-118-r1.sh, +udev-118-r1.ebuild:
+  Do not start net-init-scripts if coldplug=no, Bug #206518. Do not log
+  missing init-script message, Bug #205687.
 
 *udev-118 (19 Dec 2007)
 
