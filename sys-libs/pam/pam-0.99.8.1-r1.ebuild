@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.8.1-r1.ebuild,v 1.13 2008/01/13 20:40:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.8.1-r1.ebuild,v 1.14 2008/02/01 07:37:43 robbat2 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -38,7 +38,7 @@ PROVIDE="virtual/pam"
 check_old_modules() {
 	local retval="0"
 
-	if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q pam_stack.so; then
+	if sed -e 's:#.*::' /etc/pam.d/* 2>/dev/null | fgrep -q pam_stack.so; then
 		eerror ""
 		eerror "Your current setup is using the pam_stack module."
 		eerror "This module is deprecated and no longer supported, and since version"
@@ -54,7 +54,7 @@ check_old_modules() {
 		retval=1
 	fi
 
-	if sed -e 's:#.*::' /etc/pam.d/* | egrep -q 'pam_(pwdb|radius|timestamp)'; then
+	if sed -e 's:#.*::' /etc/pam.d/* 2>/dev/null | egrep -q 'pam_(pwdb|radius|timestamp)'; then
 		eerror ""
 		eerror "Your current setup is using one or more of the following modules,"
 		eerror "that are not built or supported anymore:"
@@ -73,7 +73,7 @@ check_old_modules() {
 	# This works only for those modules that are moved to sys-auth/$module, or the
 	# message will be wrong.
 	for module in pam_chroot pam_console pam_userdb; do
-		if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q ${module}.so; then
+		if sed -e 's:#.*::' /etc/pam.d/* 2>/dev/null | fgrep -q ${module}.so; then
 			ewarn ""
 			ewarn "Your current setup is using the ${module} module."
 			ewarn "Since version 0.99, ${CATEGORY}/${PN} does not provide this module"
