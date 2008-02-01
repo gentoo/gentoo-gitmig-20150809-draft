@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.4 2008/01/31 14:48:02 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.5 2008/02/01 12:33:36 flameeyes Exp $
+
+  01 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> files/open-vm.initd:
+  Update init script to work with current development version of OpenRC
+  (checkroot -> root; checkfs -> fsck).
 
   31 Jan 2008; Mike Auty <ikelos@gentoo.org> ChangeLog:
   Re-sign digestless manifest.
