@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.23.ebuild,v 1.1 2008/01/28 06:27:16 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.23.ebuild,v 1.2 2008/02/01 10:46:12 opfer Exp $
 
 inherit toolchain-funcs eutils linux-mod flag-o-matic
 
@@ -25,7 +25,7 @@ S_BRI="${WORKDIR}/bristuff-${BRI_VERSION}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 RDEPEND="virtual/libc
 	dev-libs/libusb
