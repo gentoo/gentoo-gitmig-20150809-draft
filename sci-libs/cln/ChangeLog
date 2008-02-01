@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/cln
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.21 2007/04/24 21:44:23 markusle Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.22 2008/02/01 20:08:30 bicatali Exp $
+
+*cln-1.2.0 (01 Feb 2008)
+
+  01 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  +cln-1.2.0.ebuild:
+  Version bump
 
   24 Apr 2007; Markus Dittrich <markusle@gentoo.org> cln-1.1.13.ebuild:
   Filter -Os since it causes segmentation faults (see bug #174576).
