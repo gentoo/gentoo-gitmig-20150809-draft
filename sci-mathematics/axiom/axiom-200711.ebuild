@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-200711.ebuild,v 1.2 2008/01/23 18:25:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-200711.ebuild,v 1.3 2008/02/01 17:26:12 markusle Exp $
 
 inherit eutils multilib flag-o-matic
 
@@ -27,7 +27,11 @@ src_unpack() {
 	cd "${S}"
 
 	cp "${FILESDIR}"/noweb-2.9-insecure-tmp-file.patch.input \
-		"${S}"/zips/noweb-2.9-insecure-tmp-file.patch
+		"${S}"/zips/noweb-2.9-insecure-tmp-file.patch \
+		|| die "Failed to fix noweb"
+	cp "${FILESDIR}"/${P}-gcl-configure.patch \
+		"${S}"/zips/gcl-2.6.7.configure.in.patch \
+		|| die "Failed to fix gcl-2.6.7 configure"
 	epatch "${FILESDIR}"/noweb-2.9-insecure-tmp-file.Makefile.patch \
 		|| die "Failed to patch noweb security issue!"
 }

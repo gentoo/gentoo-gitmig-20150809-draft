@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/axiom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.15 2008/01/23 16:42:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.16 2008/02/01 17:26:12 markusle Exp $
+
+  01 Feb 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/axiom-200711-gcl-configure.patch, axiom-200711.ebuild:
+  Fixed broken gcl configure (see bug #208326). Thanks much to
+  Martin Väth <vaeth@mathematik.uni-wuerzburg.de> for this fix.
 
 *axiom-200711 (23 Jan 2008)
 
