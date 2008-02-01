@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.45 2008/01/25 14:47:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.46 2008/02/01 19:37:00 lu_zero Exp $
+
+  01 Feb 2008; Luca Barbato <lu_zero@gentoo.org>
+  -files/qemu-0.8.0-gcc4-hacks.patch, -files/qemu-0.8.0-gcc4-opts.patch,
+  -files/qemu-0.8.2-linux-headers.patch, -files/qemu-0.8.2-sparc-fp.patch,
+  -qemu-softmmu-0.8.0.ebuild, -qemu-softmmu-0.8.0.20060329.ebuild,
+  -qemu-softmmu-0.8.1.ebuild, -qemu-softmmu-0.8.1-r1.ebuild,
+  -qemu-softmmu-0.8.2.ebuild, -qemu-softmmu-0.8.2-r1.ebuild:
+  Remove qemu-0.8 series
 
 *qemu-softmmu-0.9.1 (25 Jan 2008)
 
