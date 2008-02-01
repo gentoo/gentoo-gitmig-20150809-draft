@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.81 2008/02/01 10:44:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.82 2008/02/01 13:02:23 flameeyes Exp $
+
+  01 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  files/evms.initd-2.5.5-r9, files/evms.initd:
+  Update init script to work with current development version of OpenRC
+  (checkroot -> root; checkfs -> fsck).
 
   01 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   evms-2.5.5-r10.ebuild:
