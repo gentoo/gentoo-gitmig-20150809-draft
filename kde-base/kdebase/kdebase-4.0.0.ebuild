@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-4.0.0.ebuild,v 1.5 2008/01/27 19:59:36 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-4.0.0.ebuild,v 1.6 2008/02/01 05:54:19 zlin Exp $
 
 EAPI="1"
 
@@ -82,13 +82,16 @@ RDEPEND="${COMMONDEPEND}
 	sys-apps/usbutils
 	sys-devel/gdb
 	>=www-misc/htdig-3.2.0_beta6-r1
+	x11-apps/mkfontdir
+	x11-apps/setxkbmap
 	>=x11-apps/xinit-1.0.5-r2
 	x11-apps/xmessage
-	x11-apps/mkfontdir
 	x11-apps/xprop
 	>=x11-apps/xrandr-1.2.1
 	x11-apps/xset
 	x11-apps/xsetroot
+	|| ( x11-misc/xkeyboard-config
+		x11-misc/xkbdata )
 	virtual/ssh
 	kernel_linux? (
 		|| ( >=sys-apps/eject-2.1.5
@@ -104,11 +107,6 @@ PDEPEND="
 #COMMONDEPEND="
 #	xscreensaver? ( x11-libs/libXScrnSaver )
 #"
-#RDEPEND="${COMMONDEPEND}
-#	x11-apps/setxkbmap
-#	|| ( x11-misc/xkeyboard-config
-#		x11-misc/xkbdata )
-#
 #DEPEND="${COMMONDEPEND}
 #	x11-apps/xhost
 #	xscreensaver? ( x11-proto/scrnsaverproto )"
