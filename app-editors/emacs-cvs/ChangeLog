@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.188 2008/02/01 16:50:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.189 2008/02/01 18:54:09 ulm Exp $
+
+*emacs-cvs-23.0.50_pre20080201 (01 Feb 2008)
+
+  01 Feb 2008; Ulrich Mueller <ulm@gentoo.org>
+  +emacs-cvs-23.0.50_pre20080201.ebuild, emacs-cvs-23.0.60-r2.ebuild:
+  Snapshot of CVS trunk, tagged "before-merge-unicode-to-trunk". Add libotf
+  local USE flag.
 
 *emacs-cvs-23.0.60-r2 (01 Feb 2008)
 

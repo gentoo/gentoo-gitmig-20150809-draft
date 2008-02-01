@@ -1,27 +1,20 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.60-r2.ebuild,v 1.2 2008/02/01 18:54:09 ulm Exp $
-
-ECVS_AUTH="pserver"
-ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
-ECVS_MODULE="emacs"
-ECVS_BRANCH="HEAD"
-ECVS_LOCALNAME="emacs"
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50_pre20080201.ebuild,v 1.1 2008/02/01 18:54:09 ulm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit autotools cvs elisp-common eutils flag-o-matic
+inherit autotools elisp-common eutils flag-o-matic
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-SRC_URI=""
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-3 FDL-1.2 BSD"
 SLOT="23"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-
-IUSE="alsa dbus gif gpm gtk gzip-el hesiod jpeg kerberos libotf motif png spell sound source svg tiff toolkit-scroll-bars X Xaw3d xft xpm"
+IUSE="alsa dbus gif gpm gtk gzip-el hesiod jpeg kerberos motif png spell sound source svg tiff toolkit-scroll-bars X Xaw3d xpm"
 RESTRICT="strip"
 
 RDEPEND="sys-libs/ncurses
@@ -44,11 +37,6 @@ RDEPEND="sys-libs/ncurses
 		png? ( media-libs/libpng )
 		svg? ( >=gnome-base/librsvg-2.0 )
 		xpm? ( x11-libs/libXpm )
-		xft? (
-			media-libs/fontconfig
-			virtual/xft
-			libotf? ( >=dev-libs/libotf-0.9.4 )
-		)
 		gtk? ( =x11-libs/gtk+-2* )
 		!gtk? (
 			Xaw3d? ( x11-libs/Xaw3d )
@@ -62,26 +50,16 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	gzip-el? ( app-arch/gzip )"
 
-S="${WORKDIR}/${ECVS_LOCALNAME}"
+S="${WORKDIR}/emacs"
 
+# FULL_VERSION keeps the full version number, which is needed in order to
+# determine some path information correctly for copy/move operations later on
+FULL_VERSION="${PV%%_*}"
 EMACS_SUFFIX="emacs-${SLOT}"
 
 src_unpack() {
-	cvs_src_unpack
-
+	unpack ${A}
 	cd "${S}"
-	# FULL_VERSION keeps the full version number, which is needed in
-	# order to determine some path information correctly for copy/move
-	# operations later on
-	FULL_VERSION=$(grep 'defconst[	 ]*emacs-version' lisp/version.el \
-		| sed -e 's/^[^"]*"\([^"]*\)".*$/\1/')
-	[ "${FULL_VERSION}" ] || die "Cannot determine current Emacs version"
-	echo
-	einfo "Emacs CVS branch: ${ECVS_BRANCH}"
-	einfo "Emacs version number: ${FULL_VERSION}"
-	[ "${FULL_VERSION}" = ${PV} ] \
-		|| die "Upstream version number changed to ${FULL_VERSION}"
-	echo
 
 	epatch "${FILESDIR}/${PN}-freebsd-sparc.patch"
 
@@ -128,9 +106,6 @@ src_compile() {
 	if use X; then
 		myconf="${myconf} --with-x"
 		myconf="${myconf} $(use_with toolkit-scroll-bars)"
-		myconf="${myconf} $(use_enable xft font-backend)"
-		myconf="${myconf} $(use_with xft freetype)"
-		myconf="${myconf} $(use_with xft) $(use_with libotf)"
 		myconf="${myconf} $(use_with jpeg) $(use_with tiff)"
 		myconf="${myconf} $(use_with gif) $(use_with png)"
 		myconf="${myconf} $(use_with xpm) $(use_with svg rsvg)"
@@ -217,7 +192,7 @@ src_install () {
 		elisp-site-file-install 10${PN}-${SLOT}-gentoo.el
 	fi
 
-	dodoc README README.unicode BUGS || die "dodoc failed"
+	dodoc README BUGS || die "dodoc failed"
 }
 
 emacs-infodir-rebuild() {
