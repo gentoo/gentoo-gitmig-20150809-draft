@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-VersionControl_SVN
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.23 2008/01/31 20:19:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.24 2008/02/01 00:38:45 ranger Exp $
+
+  01 Feb 2008; Brent Baude <ranger@gentoo.org>
+  PEAR-VersionControl_SVN-0.3.1.ebuild:
+  Marking PEAR-VersionControl_SVN-0.3.1 ppc64 for bug 208313
 
   31 Jan 2008; Jeroen Roovers <jer@gentoo.org>
   PEAR-VersionControl_SVN-0.3.1.ebuild:

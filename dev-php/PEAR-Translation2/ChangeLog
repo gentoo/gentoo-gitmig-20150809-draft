@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Translation2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Translation2/ChangeLog,v 1.18 2008/01/31 20:19:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Translation2/ChangeLog,v 1.19 2008/02/01 00:38:32 ranger Exp $
+
+  01 Feb 2008; Brent Baude <ranger@gentoo.org>
+  PEAR-Translation2-2.0.0_rc3.ebuild:
+  Marking PEAR-Translation2-2.0.0_rc3 ppc64 for bug 208313
 
   31 Jan 2008; Jeroen Roovers <jer@gentoo.org>
   PEAR-Translation2-2.0.0_rc3.ebuild:

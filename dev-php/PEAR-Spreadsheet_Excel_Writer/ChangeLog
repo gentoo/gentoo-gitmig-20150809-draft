@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Spreadsheet_Excel_Writer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Spreadsheet_Excel_Writer/ChangeLog,v 1.47 2008/01/31 20:17:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Spreadsheet_Excel_Writer/ChangeLog,v 1.48 2008/02/01 00:38:38 ranger Exp $
+
+  01 Feb 2008; Brent Baude <ranger@gentoo.org>
+  PEAR-Spreadsheet_Excel_Writer-0.9.1-r1.ebuild:
+  Marking PEAR-Spreadsheet_Excel_Writer-0.9.1-r1 ppc64 for bug 208313
 
   31 Jan 2008; Jeroen Roovers <jer@gentoo.org>
   PEAR-Spreadsheet_Excel_Writer-0.9.1-r1.ebuild:
