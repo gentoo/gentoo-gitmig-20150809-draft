@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmSpaceWeather
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.11 2007/07/22 05:32:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.12 2008/02/01 14:00:22 s4t4n Exp $
+
+*wmSpaceWeather-1.04_p19 (08 Feb 2008)
+
+  08 Feb 2008; Michele Noberasco <s4t4n@gentoo.org>
+  wmSpaceWeather-1.04_p19.ebuild :
+  Revision bump, with debian patchset, new SRC_URI and HOMEPAGE,
+  data locations. Now it also honour LDFLAGS, crosscompile, dependancies,
+  etc. Closes bug #207888.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmSpaceWeather-1.04.ebuild:
