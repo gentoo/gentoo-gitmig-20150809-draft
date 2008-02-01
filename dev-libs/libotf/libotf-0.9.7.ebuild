@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.7.ebuild,v 1.1 2008/01/10 15:57:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.7.ebuild,v 1.2 2008/02/01 18:00:12 armin76 Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -13,7 +13,7 @@ SRC_URI="http://www.m17n.org/libotf/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X"
 
 RDEPEND=">=media-libs/freetype-2.1
