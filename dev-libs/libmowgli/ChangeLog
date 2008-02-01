@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.30 2008/01/30 11:00:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.31 2008/02/01 16:26:17 chainsaw Exp $
+
+*libmowgli-0.6.1 (01 Feb 2008)
+
+  01 Feb 2008; Tony Vroon <chainsaw@gentoo.org> +libmowgli-0.6.1.ebuild:
+  Version bump, closes bug #208255.
 
 *libmowgli-0.6.0 (30 Jan 2008)
 
