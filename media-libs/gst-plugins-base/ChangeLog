@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.73 2008/02/01 18:41:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.74 2008/02/01 19:57:08 opfer Exp $
+
+  01 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  gst-plugins-base-0.10.15.ebuild:
+  revert stable x86
 
   01 Feb 2008; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking gst-plugins-base-0.10.14 ppc64 and ppc stable for bug 208366
