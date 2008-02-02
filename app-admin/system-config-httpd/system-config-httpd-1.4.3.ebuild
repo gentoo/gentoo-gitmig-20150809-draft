@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-httpd/system-config-httpd-1.4.3.ebuild,v 1.3 2007/10/15 09:22:20 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-httpd/system-config-httpd-1.4.3.ebuild,v 1.4 2008/02/02 15:09:16 hollow Exp $
 
-inherit python eutils rpm
+inherit depend.apache python eutils rpm
 
 # Tag for which Fedora Core version it's from
 FCVER="7"
@@ -21,12 +21,13 @@ RDEPEND="dev-libs/alchemist
 	=dev-python/pygtk-2*
 	dev-lang/python
 	=dev-python/gnome-python-2*
-	>=www-servers/apache-2.0.52-r3
 	sys-apps/usermode
 	dev-libs/libxslt"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/intltool"
+
+need_apache2
 
 pkg_setup() {
 	if ! built_with_use dev-libs/libxslt python; then
