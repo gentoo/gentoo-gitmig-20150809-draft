@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/dvthread-0.6.2.ebuild,v 1.1 2008/01/04 08:10:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/dvthread-0.7.0.ebuild,v 1.1 2008/02/02 05:08:26 halcy0n Exp $
 
 DESCRIPTION="Classes for threads and monitors, wrapped around the posix thread library"
 SRC_URI="http://tinf2.vub.ac.be/~dvermeir/software/dv/${PN}/download/${P}.tar.gz"
