@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tsclient
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/ChangeLog,v 1.26 2007/07/27 18:04:42 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/ChangeLog,v 1.27 2008/02/02 14:12:10 wolf31o2 Exp $
+
+*tsclient-0.150 (02 Feb 2008)
+
+  02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/tsclient-0.140-connect-path-builder.patch, -tsclient-0.132.ebuild,
+  -tsclient-0.140.ebuild, +tsclient-0.150.ebuild:
+  Version bump to 0.150 and closing bug #208263 and bug #208264.
 
   27 Jul 2007; Raúl Porcel <armin76@gentoo.org> tsclient-0.148.ebuild:
   alpha/ia64 stable
