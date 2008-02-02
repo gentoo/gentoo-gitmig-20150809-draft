@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.30 2008/02/01 19:00:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.31 2008/02/02 15:52:59 wolf31o2 Exp $
+
+  02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> orca-2.20.3.ebuild:
+  Stable on amd64 wrt bug #208366.
 
   01 Feb 2008; Brent Baude <ranger@gentoo.org> orca-2.20.3.ebuild:
   Marking orca-2.20.3 ppc64 and ppc stable for bug 208366
