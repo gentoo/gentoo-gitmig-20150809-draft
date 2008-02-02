@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.10 2008/02/02 07:17:20 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.11 2008/02/02 21:31:44 steev Exp $
+
+  02 Feb 2008; Steev Klimaszewski <steev@gentoo.org>
+  nm-applet-0.6.5_p20080131.ebuild:
+  Fix the RDEPEND USE flag (was notify, is now (correctly) libnotify) Thanks
+  to Mr_Bones_ for pointing it out.
 
 *nm-applet-0.6.5_p20080131 (02 Feb 2008)
 
