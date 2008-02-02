@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/elogv
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.25 2007/12/21 08:00:56 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.26 2008/02/02 16:22:47 opfer Exp $
+
+*elogv-0.6.1-r1 (02 Feb 2008)
+
+  02 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  +files/elogv-0.6.1-refresh_screen.patch,
+  -files/elogv-0.6-filename_read.patch, +elogv-0.6.1-r1.ebuild:
+  bug 195429 is fixed, reported by Michał Kiedrowicz <esqualante AT o2 DOT
+  pl>; fix bug 208524, reported by Massimo Burcheri <massimo DOT burcheri AT
+  gmx>
 
   21 Dec 2007; Christian Faulhammer <opfer@gentoo.org> -elogv-0.6-r1.ebuild,
   elogv-0.6.1.ebuild:
