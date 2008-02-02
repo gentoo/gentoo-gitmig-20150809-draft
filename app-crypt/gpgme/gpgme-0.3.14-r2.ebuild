@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r2.ebuild,v 1.1 2008/01/15 18:34:08 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r2.ebuild,v 1.2 2008/02/02 10:51:46 alonbl Exp $
 
 #
 # NOTE: This revision is used by direct dependency. DO NOT REMOVE!
@@ -19,7 +19,8 @@ SLOT="0.3"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-DEPEND=">=app-crypt/gnupg-1.2.0"
+DEPEND=">=app-crypt/gnupg-1.2.0 <app-crypt/gnupg-2.0.0"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
