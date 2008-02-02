@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.12.3.ebuild,v 1.7 2008/02/01 20:30:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.12.3.ebuild,v 1.8 2008/02/02 04:38:20 mr_bones_ Exp $
 
 DESCRIPTION="Audio Tag Tool Ogg/Mp3 Tagger"
 HOMEPAGE="http://pwp.netcabo.pt/paol/tagtool"
@@ -29,7 +29,7 @@ src_compile() {
 		einfo "One of USE flags is required, enabling vorbis for you."
 		myconf="--disable-mp3"
 	fi
-		
+
 	econf ${myconf}
 	emake || die "emake failed."
 }
