@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.47 2008/01/29 16:50:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.48 2008/02/02 15:39:31 bicatali Exp $
+
+  02 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org> maxima-5.14.0.ebuild:
+  Fixed default lisp dependency (bug #208515)
 
 *maxima-5.14.0 (29 Jan 2008)
 

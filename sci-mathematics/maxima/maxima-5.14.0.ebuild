@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.14.0.ebuild,v 1.2 2008/01/30 10:22:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.14.0.ebuild,v 1.3 2008/02/02 15:39:31 bicatali Exp $
 inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
@@ -42,6 +42,7 @@ for LISP in ${SUPP_LISPS}; do
 	RDEPEND="${RDEPEND} ${LISP}? ( dev-lisp/${LISP} )"
 	DEF_DEP="${DEF_DEP} !${LISP}? ( "
 done
+DEF_DEP="${DEF_DEP} dev-lisp/${DEF_LISP}"
 for LISP in ${SUPP_NORL}; do
 	RDEPEND="${RDEPEND} ${LISP}? ( app-misc/rlwrap )"
 	[[ ${LISP} = ${DEF_LISP} ]] && \
