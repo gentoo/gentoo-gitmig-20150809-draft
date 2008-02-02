@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.5.ebuild,v 1.1 2007/03/01 13:28:07 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.5.ebuild,v 1.2 2008/02/02 22:19:32 dirtyepic Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -27,9 +27,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	use X || sed -i -e '/^bin_PROGRAMS/s/otfview//' example/Makefile.am || die
-	eautoremake
+	eautomake
 }
 
 src_install() {

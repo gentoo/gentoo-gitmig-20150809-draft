@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.4.ebuild,v 1.2 2007/07/22 08:28:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.4.ebuild,v 1.3 2008/02/02 22:19:32 dirtyepic Exp $
 
 DESCRIPTION="Library for handling OpenType fonts (OTF)"
 HOMEPAGE="http://www.m17n.org/libotf/"
@@ -20,13 +20,13 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	use X || sed -i -e '/^bin_PROGRAMS/s/otfview//' example/Makefile.in || die
 }
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	dodoc AUTHORS INSTALL NEWS README ChangeLog
 }
