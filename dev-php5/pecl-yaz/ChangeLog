@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-yaz
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-yaz/ChangeLog,v 1.26 2007/12/24 14:46:30 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-yaz/ChangeLog,v 1.27 2008/02/02 14:20:44 ranger Exp $
+
+  02 Feb 2008; Brent Baude <ranger@gentoo.org> pecl-yaz-1.0.13.ebuild:
+  Marking pecl-yaz-1.0.13 ppc64 for bug 208545
 
 *pecl-yaz-1.0.13 (24 Dec 2007)
 
