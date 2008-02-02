@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mserv
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.23 2007/07/29 16:58:37 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.24 2008/02/02 15:31:53 hollow Exp $
+
+  02 Feb 2008; Benedikt Böhm <hollow@gentoo.org> mserv-0.35-r1.ebuild:
+  use depend.apache eclass wrt #208033
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> mserv-0.35-r1.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to

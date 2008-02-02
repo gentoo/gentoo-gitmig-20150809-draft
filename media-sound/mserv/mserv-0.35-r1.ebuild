@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.10 2007/07/29 16:58:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.11 2008/02/02 15:31:53 hollow Exp $
 
-inherit webapp eutils toolchain-funcs
+inherit depend.apache webapp eutils toolchain-funcs
 
 DESCRIPTION="Jukebox-style music server"
 HOMEPAGE="http://www.mserv.org"
@@ -18,8 +18,9 @@ SLOT="0"
 RDEPEND=">=dev-lang/perl-5.6.1
 	virtual/mpg123
 	media-sound/sox
-	www-servers/apache
 	vorbis? ( media-sound/vorbis-tools )"
+
+need_apache
 
 pkg_setup() {
 	webapp_pkg_setup
