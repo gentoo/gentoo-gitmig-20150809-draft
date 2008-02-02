@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5_p20080130.ebuild,v 1.1 2008/02/02 07:09:34 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5_p20080130.ebuild,v 1.2 2008/02/02 07:37:39 steev Exp $
 
 inherit gnome2 eutils
 
@@ -79,6 +79,7 @@ src_install() {
 	gnome2_src_install
 	# Need to keep the /var/run/NetworkManager directory
 	keepdir /var/run/NetworkManager
+	newinitd "${FILESDIR}/NetworkManagerDispatcher" NetworkManagerDispatcher
 }
 
 pkg_postinst() {

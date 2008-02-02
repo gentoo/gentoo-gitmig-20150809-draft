@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.24 2008/02/02 07:09:34 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.25 2008/02/02 07:37:39 steev Exp $
+
+  02 Feb 2008; Steev Klimaszewski <steev@gentoo.org>
+  +files/NetworkManagerDispatcher, networkmanager-0.6.5_p20080130.ebuild:
+  Add NetworkManagerDispatcher init script for the latest snapshot
 
 *networkmanager-0.6.5_p20080130 (02 Feb 2008)
 
