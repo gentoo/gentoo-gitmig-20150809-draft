@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.88 2008/02/01 19:01:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.89 2008/02/02 15:54:10 wolf31o2 Exp $
+
+  02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  seahorse-2.20.3.ebuild:
+  Stable on amd64 wrt bug #208366.
 
   01 Feb 2008; Brent Baude <ranger@gentoo.org> seahorse-2.20.3.ebuild:
   Marking seahorse-2.20.3 ppc64 and ppc stable for bug 208366
