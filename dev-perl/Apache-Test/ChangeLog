@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-Test
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.58 2007/07/29 16:52:14 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.59 2008/02/02 15:17:01 hollow Exp $
+
+  02 Feb 2008; Benedikt Böhm <hollow@gentoo.org> Apache-Test-1.29.ebuild:
+  use depend.apache eclass wrt #208033
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> Apache-Test-1.29.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to

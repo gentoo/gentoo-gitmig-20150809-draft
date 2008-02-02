@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JKFlow/JKFlow-3.4.2.ebuild,v 1.4 2007/07/29 16:50:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JKFlow/JKFlow-3.4.2.ebuild,v 1.5 2008/02/02 15:22:29 hollow Exp $
 
-inherit eutils
+inherit depend.apache eutils
 
 MY_PN="${PN/JKF/jkf}"
 MY_P="${MY_PN}-v${PV}"
@@ -19,9 +19,10 @@ IUSE=""
 RDEPEND="dev-lang/perl
 		net-analyzer/FlowScan
 		dev-perl/XML-Simple
-		dev-perl/Net-Patricia
-		www-servers/apache"
+		dev-perl/Net-Patricia"
 DEPEND=""
+
+need_apache
 
 S="${WORKDIR}/${PN}-v${PV}"
 

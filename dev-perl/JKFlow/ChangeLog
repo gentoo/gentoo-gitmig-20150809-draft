@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/JKFlow
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JKFlow/ChangeLog,v 1.6 2007/07/29 16:50:03 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JKFlow/ChangeLog,v 1.7 2008/02/02 15:22:29 hollow Exp $
+
+  02 Feb 2008; Benedikt Böhm <hollow@gentoo.org> JKFlow-3.4.2.ebuild:
+  use depend.apache eclass wrt #208033
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> JKFlow-3.4.2.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to

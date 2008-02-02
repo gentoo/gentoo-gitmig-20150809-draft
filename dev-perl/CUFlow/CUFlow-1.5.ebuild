@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CUFlow/CUFlow-1.5.ebuild,v 1.6 2007/07/29 16:53:13 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CUFlow/CUFlow-1.5.ebuild,v 1.7 2008/02/02 15:18:40 hollow Exp $
 
-inherit eutils
+inherit depend.apache eutils
 
 DESCRIPTION="Provides an API for reading and analysing raw flow files"
 HOMEPAGE="http://www.columbia.edu/acis/networks/advanced/CUFlow/CUFlow.html"
@@ -14,9 +14,10 @@ KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
-		net-analyzer/FlowScan
-		www-servers/apache"
+		net-analyzer/FlowScan"
 DEPEND=""
+
+need_apache
 
 src_unpack() {
 	unpack ${A}
@@ -27,7 +28,7 @@ src_unpack() {
 
 src_install() {
 	insinto /var/lib/flows/bin
-	doins ${FILESDIR}/CUFlow.cf
+	doins "${FILESDIR}"/CUFlow.cf
 	exeinto /var/lib/flows/bin
 	doexe CUFlow.pm
 	exeinto /var/www/localhost/cgi-bin
