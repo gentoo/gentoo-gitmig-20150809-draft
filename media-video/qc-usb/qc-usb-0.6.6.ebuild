@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.6.ebuild,v 1.5 2007/11/27 12:02:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.6.ebuild,v 1.6 2008/02/02 23:43:52 eva Exp $
 
 inherit linux-mod eutils multilib
 
@@ -30,7 +30,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	convert_to_m "${S}"/Makefile
-	epatch "${FILESDIR}"/${P}-koutput.patch
+	epatch "${FILESDIR}/${P}-koutput.patch"
+
+	# Fix compilation with 2.6.24
+	epatch "${FILESDIR}/${P}-kcompat-2.6.24.patch"
 }
 
 src_install() {
