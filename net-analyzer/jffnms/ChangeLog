@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/jffnms
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.10 2007/09/13 17:01:46 pva Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.11 2008/02/02 15:34:25 hollow Exp $
+
+  02 Feb 2008; Benedikt Böhm <hollow@gentoo.org> jffnms-0.8.3-r2.ebuild:
+  use depend.apache eclass wrt #208033
 
 *jffnms-0.8.3-r2 (13 Sep 2007)
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.3-r2.ebuild,v 1.1 2007/09/13 17:01:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.3-r2.ebuild,v 1.2 2008/02/02 15:34:25 hollow Exp $
 
-inherit eutils depend.php
+inherit depend.apache eutils depend.php
 
 DESCRIPTION="Network Management and Monitoring System."
 HOMEPAGE="http://www.jffnms.org/"
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="mysql postgres snmp"
 
-DEPEND="www-servers/apache
-	net-analyzer/rrdtool
+DEPEND="net-analyzer/rrdtool
 	media-libs/gd
 	dev-php/PEAR-PEAR
 	net-analyzer/net-snmp
@@ -26,6 +25,7 @@ RDEPEND="${DEPEND}
 	net-analyzer/nmap
 	net-analyzer/fping"
 
+need_apache
 need_php_cli
 
 pkg_setup() {
