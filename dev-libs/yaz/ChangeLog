@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yaz
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.40 2007/12/24 12:32:01 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.41 2008/02/02 14:19:04 ranger Exp $
+
+  02 Feb 2008; Brent Baude <ranger@gentoo.org> yaz-3.0.16.ebuild:
+  Marking yaz-3.0.16 ppc64 for bug 208545
 
 *yaz-3.0.16 (24 Dec 2007)
 
