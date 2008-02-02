@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.70 2008/02/02 14:10:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.71 2008/02/02 21:35:18 williamh Exp $
+
+  02 Feb 2008; William Hubbs <williamh@gentoo.org> brltty-3.9.ebuild:
+  Bug #208538 -- fixed java and ocaml support, thanks to Betelgeuse and Caster
 
   02 Feb 2008; Brent Baude <ranger@gentoo.org> brltty-3.9.ebuild:
   Marking brltty-3.9 ppc64 for bug 208536
