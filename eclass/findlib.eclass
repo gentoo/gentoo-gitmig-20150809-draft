@@ -1,9 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/findlib.eclass,v 1.6 2008/02/02 21:05:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/findlib.eclass,v 1.7 2008/02/02 21:10:16 betelgeuse Exp $
 #
-# Origianl author : Matthieu Sozeau <mattam@gentoo.org> (retired)
+# Original author : Matthieu Sozeau <mattam@gentoo.org> (retired)
 #
+# Changes: http://sources.gentoo.org/viewcvs.py/gentoo-x86/eclass/findlib.eclass?view=log
+# 
 # ocamlfind (a.k.a. findlib) eclass
 #
 
@@ -15,9 +17,9 @@ DEPEND=">=dev-ml/findlib-1.0.4-r1"
 check_ocamlfind() {
 	if [ ! -x /usr/bin/ocamlfind ]
 	then
-		ewarn "In findlib.eclass: could not find the ocamlfind executable"
-		ewarn "Please report this bug on gentoo's bugzilla, assigning to ml@gentoo.org"
-		exit 1
+		eerror "In findlib.eclass: could not find the ocamlfind executable"
+		eerror "Please report this bug on gentoo's bugzilla, assigning to ml@gentoo.org"
+		die "ocamlfind executabled not found"
 	fi
 }
 
