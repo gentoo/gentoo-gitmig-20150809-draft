@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1063 2008/02/02 17:07:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1064 2008/02/02 23:23:03 dirtyepic Exp $
+
+  02 Feb 2008; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Remask media-fonts/artwiz-fonts.
 
   02 Feb 2008; Vlastimil Babka <caster@gentoo.org> package.mask:
   Masking dev-java/javamake-bin for removal.
