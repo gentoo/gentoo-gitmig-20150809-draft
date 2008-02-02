@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50_pre20080201.ebuild,v 1.1 2008/02/01 18:54:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50_pre20080201.ebuild,v 1.2 2008/02/02 09:14:26 ulm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -207,6 +207,7 @@ emacs-infodir-rebuild() {
 		[[ ${f##*/} == *[0-9].info* ]] \
 			|| install-info --info-dir="${ROOT}"${infodir} "${f}" &>/dev/null
 	done
+	rmdir "${ROOT}"${infodir} 2>/dev/null # remove dir if it is empty
 	echo
 }
 
