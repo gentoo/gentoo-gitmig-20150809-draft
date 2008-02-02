@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/conky
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.57 2007/11/30 23:57:22 dragonheart Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.58 2008/02/02 19:00:45 opfer Exp $
+
+*conky-1.4.9-r1 (02 Feb 2008)
+
+  02 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  +conky-1.4.9-r1.ebuild:
+  add USE=nano-syntax (bug 200939, reported and patch by justin <justin AT
+  j-schmitz DOT net>); check for USE=dbus on audacious (bug 200930, reported
+  by same person)
 
 *conky-1.4.9 (30 Nov 2007)
 
