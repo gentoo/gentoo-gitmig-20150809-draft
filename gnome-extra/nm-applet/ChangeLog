@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/nm-applet
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.9 2007/12/25 14:26:40 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.10 2008/02/02 07:17:20 steev Exp $
+
+*nm-applet-0.6.5_p20080131 (02 Feb 2008)
+
+  02 Feb 2008; Steev Klimaszewski <steev@gentoo.org> nm-applet-0.6.5.ebuild,
+  +nm-applet-0.6.5_p20080131.ebuild:
+  Fix quoting issues in 0.6.5, add a bump to work with the new snapshot just
+  added for networkmanager. Includes a spiffy new wireless network editor so
+  you no longer have to putz around in gconf.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing metalgod from metadata.xml as per #99350.

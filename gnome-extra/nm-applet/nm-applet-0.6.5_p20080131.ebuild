@@ -1,30 +1,31 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.5.ebuild,v 1.8 2008/02/02 07:17:20 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.5_p20080131.ebuild,v 1.1 2008/02/02 07:17:20 steev Exp $
 
 inherit gnome2 eutils
 
 MY_PV=${PV/_*/}
 
 DESCRIPTION="Gnome applet for NetworkManager."
-HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
-SRC_URI="http://ftp.gnome.org/pub/gnome/sources/network-manager-applet/0.6/network-manager-applet-0.6.5.tar.gz"
+HOMEPAGE="http://people.redhat.com/dcbw/NetworkManager/"
+#SRC_URI="http://ftp.gnome.org/pub/gnome/sources/network-manager-applet/0.6/network-manager-applet-0.6.5.tar.gz"
+SRC_URI="http://steev.net/files/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug doc libnotify"
 
 RDEPEND=">=sys-apps/dbus-0.60
 	>=sys-apps/hal-0.5
 	sys-apps/iproute2
-	>=dev-libs/libnl-1.0_pre6
+	>=dev-libs/libnl-1.1
 	>=net-misc/dhcdbd-1.4
-	net-misc/networkmanager
+	>=net-misc/networkmanager-0.6.5_p20080130
 	>=net-wireless/wireless-tools-28_pre9
 	>=net-wireless/wpa_supplicant-0.4.8
 	>=dev-libs/glib-2.10
-	libnotify? ( >=x11-libs/libnotify-0.4.3 )
+	notify? ( >=x11-libs/libnotify-0.4.3 )
 	>=x11-libs/gtk+-2.10
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-keyring-0.4
