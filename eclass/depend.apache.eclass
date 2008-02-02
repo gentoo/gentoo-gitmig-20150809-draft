@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.35 2007/11/25 14:27:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.36 2008/02/02 12:53:52 hollow Exp $
 
 # @ECLASS: depend.apache.eclass
 # @MAINTAINER: apache-devs@gentoo.org
@@ -25,42 +25,34 @@ inherit multilib
 # @DESCRIPTION:
 # Stores the version of apache we are going to be ebuilding. This variable is
 # set by the need_apache functions.
-#APACHE_VERSION="2"
 
-# @ECLASS-VARIABLE: APXS2
+# @ECLASS-VARIABLE: APXS
 # @DESCRIPTION:
 # Paths to the apxs tool
-APXS2="/usr/sbin/apxs2"
 
-# @ECLASS-VARIABLE: APACHECTL2
+# @ECLASS-VARIABLE: APACHECTL
 # @DESCRIPTION:
 # Path to the apachectl tool
-APACHECTL2="/usr/sbin/apache2ctl"
 
-# @ECLASS-VARIABLE: APACHE2_BASEDIR
+# @ECLASS-VARIABLE: APACHE_BASEDIR
 # @DESCRIPTION:
 # Path to the server root directory
-APACHE2_BASEDIR="/usr/$(get_libdir)/apache2"
 
-# @ECLASS-VARIABLE: APACHE2_CONFDIR
+# @ECLASS-VARIABLE: APACHE_CONFDIR
 # @DESCRIPTION:
 # Path to the configuration file directory
-APACHE2_CONFDIR="/etc/apache2"
 
-# @ECLASS-VARIABLE: APACHE2_MODULES_CONFDIR
+# @ECLASS-VARIABLE: APACHE_MODULES_CONFDIR
 # @DESCRIPTION:
 # Path where module configuration files are kept
-APACHE2_MODULES_CONFDIR="${APACHE2_CONFDIR}/modules.d"
 
-# @ECLASS-VARIABLE: APACHE2_VHOSTDIR
+# @ECLASS-VARIABLE: APACHE_VHOSTS_CONFDIR
 # @DESCRIPTION:
 # Path where virtual host configuration files are kept
-APACHE2_VHOSTDIR="${APACHE2_CONFDIR}/vhosts.d"
 
-# @ECLASS-VARIABLE: APACHE2_MODULESDIR
+# @ECLASS-VARIABLE: APACHE_MODULESDIR
 # @DESCRIPTION:
 # Path where we install modules
-APACHE2_MODULESDIR="${APACHE2_BASEDIR}/modules"
 
 # @ECLASS-VARIABLE: APACHE2_DEPEND
 # @DESCRIPTION:
@@ -95,14 +87,13 @@ uses_apache2() {
 	# WARNING: Do not use these variables with anything that is put
 	# into the dependency cache (DEPEND/RDEPEND/etc)
 	APACHE_VERSION="2"
-	USE_APACHE="2"
-	APXS="${APXS2}"
-	APACHECTL="${APACHECTL2}"
-	APACHE_BASEDIR="${APACHE2_BASEDIR}"
-	APACHE_CONFDIR="${APACHE2_CONFDIR}"
-	APACHE_MODULES_CONFDIR="${APACHE2_MODULES_CONFDIR}"
-	APACHE_VHOSTSDIR="${APACHE2_VHOSTSDIR}"
-	APACHE_MODULESDIR="${APACHE2_MODULESDIR}"
+	APXS="/usr/sbin/apxs2"
+	APACHECTL="/usr/sbin/apache2ctl"
+	APACHE_BASEDIR="/usr/$(get_libdir)/apache2"
+	APACHE_CONFDIR="/etc/apache2"
+	APACHE_MODULES_CONFDIR="${APACHE_CONFDIR}/modules.d"
+	APACHE_VHOSTS_CONFDIR="${APACHE_CONFDIR}/vhosts.d"
+	APACHE_MODULESDIR="${APACHE_BASEDIR}/modules"
 }
 
 # @FUNCTION: doesnt_use_apache
@@ -180,56 +171,4 @@ need_apache2_2() {
 # Legacy alias for need_apache2
 need_apache() {
 	need_apache2
-}
-
-# @FUNCTION: apr_config
-# @DESCRIPTION:
-# Version magic to get the correct apr-config binary based on the (probably)
-# installed version of apache.  This is needed to get modules to link to the
-# same apr/apu as apache (i.e. link 0.9 for 2.0, 1.x for 2.2)
-apr_config() {
-	debug-print-function $FUNCNAME $*
-
-	local default="${1:-1}"
-	if [[ "${USE_APACHE}" == "2" ]]; then
-		if has_version ${APACHE2_0_DEPEND}; then
-			echo apr-config
-		else
-			echo apr-1-config
-		fi
-	else
-		if [[ "${default}" == "0" ]]; then
-			echo apr-config
-		elif [[ "${default}" == "1" ]]; then
-			echo apr-1-config
-		else
-			die "Unknown version specifier: ${default}"
-		fi
-	fi
-}
-
-# @FUNCTION: apu_config
-# @DESCRIPTION:
-# Version magic to get the correct apu-config binary based on the (probably)
-# installed version of apache.  This is needed to get modules to link to the
-# same apr/apu as apache (i.e. link 0.9 for 2.0, 1.x for 2.2)
-apu_config() {
-	debug-print-function $FUNCNAME $*
-
-	local default="${1:-1}"
-	if [[ "${USE_APACHE}" == "2" ]]; then
-		if has_version ${APACHE2_0_DEPEND}; then
-			echo apu-config
-		else
-			echo apu-1-config
-		fi
-	else
-		if [[ "${default}" == "0" ]]; then
-			echo apu-config
-		elif [[ "${default}" == "1" ]]; then
-			echo apu-1-config
-		else
-			die "Unknown version specifier: ${default}"
-		fi
-	fi
 }
