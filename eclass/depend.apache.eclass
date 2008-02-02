@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.36 2008/02/02 12:53:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.37 2008/02/02 14:31:42 hollow Exp $
 
 # @ECLASS: depend.apache.eclass
 # @MAINTAINER: apache-devs@gentoo.org
@@ -54,15 +54,15 @@ inherit multilib
 # @DESCRIPTION:
 # Path where we install modules
 
+# @ECLASS-VARIABLE: APACHE_DEPEND
+# @DESCRIPTION:
+# Dependencies for Apache
+APACHE_DEPEND="www-servers/apache"
+
 # @ECLASS-VARIABLE: APACHE2_DEPEND
 # @DESCRIPTION:
 # Dependencies for Apache 2.x
 APACHE2_DEPEND="=www-servers/apache-2*"
-
-# @ECLASS-VARIABLE: APACHE2_0_DEPEND
-# @DESCRIPTION:
-# Dependencies for Apache 2.0.x
-APACHE2_0_DEPEND="=www-servers/apache-2.0*"
 
 # @ECLASS-VARIABLE: APACHE2_2_DEPEND
 # @DESCRIPTION:
@@ -72,16 +72,23 @@ APACHE2_2_DEPEND="=www-servers/apache-2.2*"
 # @ECLASS-VARIABLE: WANT_APACHE_DEPEND
 # @DESCRIPTION:
 # Dependency magic based on useflag to use the right DEPEND
-WANT_APACHE_DEPEND="apache2? ( ${APACHE2_DEPEND} )"
+WANT_APACHE_DEPEND="apache2? ( ${APACHE_DEPEND} )"
+
+# @ECLASS-VARIABLE: WANT_APACHE2_DEPEND
+# @DESCRIPTION:
+# Dependency magic based on useflag to use the right DEPEND
+WANT_APACHE2_DEPEND="apache2? ( ${APACHE2_DEPEND} )"
+
+# @ECLASS-VARIABLE: WANT_APACHE2_2_DEPEND
+# @DESCRIPTION:
+# Dependency magic based on useflag to use the right DEPEND
+WANT_APACHE2_2_DEPEND="apache2? ( ${APACHE2_2_DEPEND} )"
 
 # ==============================================================================
 # INTERNAL FUNCTIONS
 # ==============================================================================
 
-# @FUNCTION: uses_apache2
-# @DESCRIPTION:
-# sets up all of the environment variables required for an apache2 module
-uses_apache2() {
+_init_apache2() {
 	debug-print-function $FUNCNAME $*
 
 	# WARNING: Do not use these variables with anything that is put
@@ -96,14 +103,9 @@ uses_apache2() {
 	APACHE_MODULESDIR="${APACHE_BASEDIR}/modules"
 }
 
-# @FUNCTION: doesnt_use_apache
-# @DESCRIPTION:
-# sets up all of the environment variables required for optional apache usage
-doesnt_use_apache() {
+_init_no_apache() {
 	debug-print-function $FUNCNAME $*
-
 	APACHE_VERSION="0"
-	USE_APACHE="0"
 }
 
 # ==============================================================================
@@ -114,61 +116,76 @@ doesnt_use_apache() {
 # @DESCRIPTION:
 # An ebuild calls this to get the dependency information for optional apache-2.x
 # support.
-want_apache() {
+want_apache2() {
 	debug-print-function $FUNCNAME $*
 
 	IUSE="${IUSE} apache2"
-	DEPEND="${DEPEND} ${WANT_APACHE_DEPEND}"
-	RDEPEND="${RDEPEND} ${WANT_APACHE_DEPEND}"
+	DEPEND="${DEPEND} ${WANT_APACHE2_DEPEND}"
+	RDEPEND="${RDEPEND} ${WANT_APACHE2_DEPEND}"
 
 	if use apache2 ; then
-		uses_apache2
+		_init_apache2
 	else
-		doesnt_use_apache
+		_init_no_apache
 	fi
+}
+
+# @FUNCTION: want_apache
+# @DESCRIPTION:
+# An ebuild calls this to get the dependency information for optional
+# apache-2.2.x support.
+want_apache2_2() {
+	debug-print-function $FUNCNAME $*
+
+	IUSE="${IUSE} apache2"
+	DEPEND="${DEPEND} ${WANT_APACHE2_2_DEPEND}"
+	RDEPEND="${RDEPEND} ${WANT_APACHE2_2_DEPEND}"
+
+	if use apache2 ; then
+		_init_apache2
+	else
+		_init_no_apache
+	fi
+}
+
+# @FUNCTION: want_apache
+# @DESCRIPTION:
+# An ebuild calls this to get the dependency information for optional apache
+# support.
+want_apache() {
+	want_apache2
 }
 
 # @FUNCTION: need_apache2
 # @DESCRIPTION:
-# An ebuild calls this to get the dependency information for apache-2.x. An
-# ebuild should use this in order for future changes to the build infrastructure
-# to happen seamlessly. All an ebuild needs to do is include the line
-# need_apache2 somewhere.
+# Works like need_apache, but its used by modules that only support
+# apache 2.x and do not work with other versions.
 need_apache2() {
 	debug-print-function $FUNCNAME $*
 
 	DEPEND="${DEPEND} ${APACHE2_DEPEND}"
 	RDEPEND="${RDEPEND} ${APACHE2_DEPEND}"
-	uses_apache2
-}
-
-# @FUNCTION: need_apache2_0
-# @DESCRIPTION:
-# Works like need_apache2 above, but its used by modules that only support
-# apache 2.0 and do not work with higher versions.
-need_apache2_0() {
-	debug-print-function $FUNCNAME $*
-
-	DEPEND="${DEPEND} ${APACHE2_0_DEPEND}"
-	RDEPEND="${RDEPEND} ${APACHE2_0_DEPEND}"
-	uses_apache2
+	_init_apache2
 }
 
 # @FUNCTION: need_apache2_2
 # @DESCRIPTION:
-# Works like need_apache2 above, but its used by modules that only support
-# apache 2.2 and do not work with lower versions.
+# Works like need_apache, but its used by modules that only support
+# apache 2.2.x and do not work with other versions.
 need_apache2_2() {
 	debug-print-function $FUNCNAME $*
 
 	DEPEND="${DEPEND} ${APACHE2_2_DEPEND}"
 	RDEPEND="${RDEPEND} ${APACHE2_2_DEPEND}"
-	uses_apache2
+	_init_apache2
 }
 
 # @FUNCTION: need_apache
 # @DESCRIPTION:
-# Legacy alias for need_apache2
+# An ebuild calls this to get the dependency information for apache. An
+# ebuild should use this in order for future changes to the build infrastructure
+# to happen seamlessly. All an ebuild needs to do is include the line
+# need_apache somewhere.
 need_apache() {
 	need_apache2
 }
