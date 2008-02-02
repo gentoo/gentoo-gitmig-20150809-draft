@@ -17,3 +17,6 @@ sys-apps/paludis python
 # Samuli Suominen <drac@gentoo.org> (30 Nov 2007)
 # media-libs/aften broken, and not keyworded.
 media-video/avidemux aften
+
+# app-misc/tomboy is missing ppc support
+gnome-base/gnome mono

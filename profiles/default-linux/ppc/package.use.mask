@@ -16,4 +16,5 @@ app-office/openoffice mono
 # app-misc/lcd4linux
 app-misc/lcd4linux lcd_devices_hd44780
 
-
+# app-misc/tomboy is missing ppc support
+gnome-base/gnome mono
