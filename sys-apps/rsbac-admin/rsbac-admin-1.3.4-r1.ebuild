@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.3.4-r1.ebuild,v 1.2 2007/07/24 09:41:34 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.3.4-r1.ebuild,v 1.3 2008/02/02 13:51:57 wolf31o2 Exp $
 
-inherit eutils libtool toolchain-funcs
+inherit eutils libtool multilib toolchain-funcs
 
 IUSE="pam"
 
@@ -54,9 +54,9 @@ src_install() {
 	dodir /var/log/rsbac
 	keepdir /var/log/rsbac
 	#FHS compliance
-	dodir /usr/lib
-	mv ${D}/lib/librsbac.la ${D}/lib/librsbac.a ${D}/usr/lib
-	mv ${D}/lib/libnss_rsbac.la ${D}/lib/libnss_rsbac.a ${D}/usr/lib
+	dodir /usr/$(get_libdir)
+	mv ${D}/$(get_libdir)/librsbac.{,l}a ${D}/usr/$(get_libdir)
+	mv ${D}/$(get_libdir)/libnss_rsbac.{,l}a ${D}/usr/$(get_libdir)
 	gen_usr_ldscript librsbac.so
 	gen_usr_ldscript libnss_rsbac.so
 }

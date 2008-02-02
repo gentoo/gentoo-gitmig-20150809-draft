@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.3.5-r1.ebuild,v 1.1 2007/07/27 15:03:02 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.3.5-r1.ebuild,v 1.2 2008/02/02 13:51:57 wolf31o2 Exp $
 
-inherit eutils libtool toolchain-funcs
+inherit eutils libtool multilib toolchain-funcs
 
 IUSE="pam"
 
@@ -36,7 +36,7 @@ src_compile() {
 	use pam && {
 		rsbacmakeargs="${makeargs} pam nss"
 	}
-	emake PREFIX=/usr LIBDIR=/lib ${rsbacmakeargs} || die "cannot build (${rsbacmakeargs})"
+	emake PREFIX=/usr LIBDIR=/$(get_libdir) ${rsbacmakeargs} || die "cannot build (${rsbacmakeargs})"
 }
 
 src_install() {
@@ -45,7 +45,7 @@ src_install() {
 	use pam && {
 		rsbacinstallargs="${rsbacinstallargs} pam-install nss-install"
 	}
-	make PREFIX=/usr LIBDIR=/lib DESTDIR=${D} ${rsbacinstallargs} || \
+	make PREFIX=/usr LIBDIR=/$(get_libdir) DESTDIR=${D} ${rsbacinstallargs} || \
 	die "cannot install (${rsbacinstallargs})"
 	insinto /etc
 	newins ${FILESDIR}/rsbac.conf rsbac.conf ${FILESDIR}/nsswitch.conf
@@ -54,9 +54,9 @@ src_install() {
 	dodir /var/log/rsbac
 	keepdir /var/log/rsbac
 	#FHS compliance
-	dodir /usr/lib
-	mv ${D}/lib/librsbac.la ${D}/lib/librsbac.a ${D}/usr/lib
-	mv ${D}/lib/libnss_rsbac.la ${D}/lib/libnss_rsbac.a ${D}/usr/lib
+	dodir /usr/$(get_libdir)
+	mv ${D}/$(get_libdir)/librsbac.{,l}a ${D}/usr/$(get_libdir)
+	mv ${D}/$(get_libdir)/libnss_rsbac.{,l}a ${D}/usr/$(get_libdir)
 	gen_usr_ldscript librsbac.so
 	gen_usr_ldscript libnss_rsbac.so
 }
