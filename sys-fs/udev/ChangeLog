@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.369 2008/02/01 14:52:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.370 2008/02/02 20:36:54 zzam Exp $
+
+*udev-118-r2 (02 Feb 2008)
+
+  02 Feb 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/shell-compat-118-r2.sh, +files/udev-start-118-r2.sh,
+  +files/udev-stop-118-r2.sh, +udev-118-r2.ebuild:
+  Add openrc capable start-scripts. Based on code by Uberlord, Bug #208245.
+  This removes mount-options from udev.conf, now they are taken from fstab.
 
 *udev-118-r1 (01 Feb 2008)
 
