@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.116 2008/01/23 20:18:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.117 2008/02/02 11:23:05 armin76 Exp $
+
+  02 Feb 2008; Raúl Porcel <armin76@gentoo.org> tightvnc-1.3.9.ebuild,
+  tightvnc-1.3.9-r1.ebuild:
+  Fix blocker, bug #207259
 
   23 Jan 2008; Raúl Porcel <armin76@gentoo.org> tightvnc-1.3.9-r1.ebuild:
   alpha/sparc/x86 stable
