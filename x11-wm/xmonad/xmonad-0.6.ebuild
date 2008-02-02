@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.6.ebuild,v 1.1 2008/02/02 19:06:13 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.6.ebuild,v 1.2 2008/02/02 21:30:25 mr_bones_ Exp $
 
 CABAL_FEATURES="bin lib profile haddock"
 
@@ -62,4 +62,3 @@ pkg_postinst() {
 	elog "Please note that many of these configurations will require the "
 	elog "x11-wm/xmonad-contrib package to be installed."
 }
-
