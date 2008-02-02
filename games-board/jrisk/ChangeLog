@@ -1,6 +1,9 @@
 # ChangeLog for games-board/jrisk
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/ChangeLog,v 1.22 2007/10/07 23:42:06 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/ChangeLog,v 1.23 2008/02/02 21:30:18 opfer Exp $
+
+  02 Feb 2008; Christian Faulhammer <opfer@gentoo.org> jrisk-1.0.9.3.ebuild:
+  stable x86, bug 208544
 
 *jrisk-1.0.9.3 (07 Oct 2007)
 

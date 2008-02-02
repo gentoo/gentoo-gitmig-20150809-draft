@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/jrisk-1.0.9.3.ebuild,v 1.1 2007/10/07 23:42:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/jrisk-1.0.9.3.ebuild,v 1.2 2008/02/02 21:30:18 opfer Exp $
 
 inherit eutils java-pkg-2 java-ant-2 games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/jrisk/backup_of_Risk_${PV}.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4"
