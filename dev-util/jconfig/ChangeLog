@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jconfig
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/ChangeLog,v 1.13 2007/11/05 14:36:27 opfer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/ChangeLog,v 1.14 2008/02/02 17:24:05 caster Exp $
+
+  02 Feb 2008; Vlastimil Babka <caster@gentoo.org> -jconfig-2.8-r1.ebuild:
+  Remove gen-1 version.
 
   05 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   jconfig-2.8-r2.ebuild:
