@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.363 2008/01/19 03:16:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.364 2008/02/02 18:28:41 suka Exp $
+
+*openoffice-2.3.1-r1 (02 Feb 2008)
+
+  02 Feb 2008; Andreas Proschofsky <suka@gentoo.org>
+  +files/2.3.1/gentoo-2.3.1-r1.diff, +openoffice-2.3.1-r1.ebuild:
+  Revision bump for bug #208001, uses external icu again.
 
   19 Jan 2008; Mark Loeser <halcy0n@gentoo.org> openoffice-2.3.1.ebuild:
   package.use.mask mono on ppc instead of disabling it in the ebuild (bug
