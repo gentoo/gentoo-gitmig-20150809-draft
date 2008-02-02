@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.132 2008/02/01 19:18:23 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.133 2008/02/02 15:43:14 wolf31o2 Exp $
+
+  02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> evince-2.20.2.ebuild:
+  Stable on amd64 wrt bug #208366.
 
   01 Feb 2008; Mart Raudsepp <leio@gentoo.org>
   -files/evince-0.5.3-links.patch, -files/evince-0.6.1-freebsd.patch,
