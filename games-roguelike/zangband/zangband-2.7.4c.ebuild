@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.4 2007/01/26 22:53:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.5 2008/02/02 21:39:50 mr_bones_ Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.sunet.se/pub/games/Angband/Variant/ZAngband/${P}.tar.gz"
 LICENSE="Moria"
 SLOT="0"
 KEYWORDS="~ppc ~x86 ~x86-fbsd"
-IUSE="gtk tk"
+IUSE="tk"
 
 # Dropping X use keyword:
 #  it had to be $(use_with X x11)
@@ -19,7 +19,6 @@ IUSE="gtk tk"
 RDEPEND="tk? (
 		dev-lang/tcl
 		dev-lang/tk )
-	gtk? ( =x11-libs/gtk+-1* )
 	x11-libs/libXaw"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto"
@@ -30,7 +29,7 @@ src_compile() {
 	egamesconf \
 		--datadir="${GAMES_DATADIR_BASE}" \
 		--with-setgid="${GAMES_GROUP}" \
-		$(use_with gtk) \
+		--without-gtk \
 		$(use_with tk tcltk) \
 		|| die
 	emake || die "emake failed"
