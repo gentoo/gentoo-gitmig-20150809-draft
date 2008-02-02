@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/gtk-engines-nimbus
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/ChangeLog,v 1.4 2007/12/19 19:36:58 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/ChangeLog,v 1.5 2008/02/02 18:10:45 flameeyes Exp $
+
+*gtk-engines-nimbus-0.0.11 (02 Feb 2008)
+
+  02 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  -files/nimbus-0.0.10-declarations.patch,
+  -gtk-engines-nimbus-0.0.10.ebuild, +gtk-engines-nimbus-0.0.11.ebuild:
+  Version bump, remove old version, and obsoleted patch.
 
   19 Dec 2007; Diego Pettenò <flameeyes@gentoo.org>
   +files/nimbus-0.0.10-declarations.patch, gtk-engines-nimbus-0.0.10.ebuild:

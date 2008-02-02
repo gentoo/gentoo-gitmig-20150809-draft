@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/gtk-engines-nimbus-0.0.10.ebuild,v 1.3 2007/12/19 19:36:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/gtk-engines-nimbus-0.0.11.ebuild,v 1.1 2008/02/02 18:10:45 flameeyes Exp $
 
 inherit libtool autotools gnome2-utils eutils
 
@@ -27,7 +27,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}/${MY_P}-declarations.patch"
 
 	intltoolize || die "intltoolize failed"
 
@@ -43,6 +42,8 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+
+	dodoc AUTHORS ChangeLog
 }
 
 pkg_postinst() {
