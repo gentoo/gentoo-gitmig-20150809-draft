@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-1.0.2.ebuild,v 1.4 2007/02/10 19:13:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-1.0.2.ebuild,v 1.5 2008/02/02 08:42:36 opfer Exp $
 
 inherit base
 
@@ -31,8 +31,8 @@ src_install() {
 
 	dodir ${MAVEN_BIN}
 	exeinto ${MAVEN_BIN}
-	doexe ${FILESDIR}/${MY_PN}
+	doexe "${FILESDIR}/${MY_PN}"
 
 	dodir /usr/bin
-	dosym ${MAVEN_BIN}/${MY_PN} /usr/bin/${MY_PN} || die sym failed
+	dosym ${MAVEN_BIN}/${MY_PN} /usr/bin/${MY_PN} || die "dosym failed"
 }
