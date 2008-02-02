@@ -1,0 +1,14 @@
+# ChangeLog for media-plugins/vdr-filebrowser
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-filebrowser/ChangeLog,v 1.1 2008/02/02 20:51:16 hd_brummy Exp $
+
+*vdr-filebrowser-0.0.6b (02 Feb 2008)
+
+  02 Feb 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-filebrowser-0.0.6b-typofix.diff,
+  +files/vdr-filebrowser-0.0.6b_vdr-1.5.diff, +files/commands.conf,
+  +files/order.conf, +files/othercommands.conf, +files/sources.conf,
+  +metadata.xml, +vdr-filebrowser-0.0.6b.ebuild:
+  initial ebuild, taken from vdr testing overlay; also thanks to E.O'Donnell
+  on bug 208210
+
