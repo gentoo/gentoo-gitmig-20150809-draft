@@ -1,0 +1,144 @@
+diff -Nur vpnclient/GenDefs.h vpnclient.new/GenDefs.h
+--- vpnclient/GenDefs.h	2007-08-22 21:30:31.000000000 +0200
++++ vpnclient.new/GenDefs.h	2008-01-25 08:56:46.000000000 +0100
+@@ -105,6 +105,12 @@
+ #define _INTPTR_T_DEFINED
+ #endif
+ 
++/* uintptr_t has been defined in include/linux/types.h in 2.6.24.
++ * No need to define it here again (will only lead to compile errors)
++ *
++ * by Alexander Griesser <work@tuxx-home.at>, 2008-01-11
++ */
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,24)
+ #ifndef _UINTPTR_T_DEFINED
+ #if defined(_LP64)
+ #warning 64 bit
+@@ -114,6 +120,7 @@
+ #endif
+ #define _UINTPTR_T_DEFINED
+ #endif
++#endif
+ 
+ 
+ typedef int 	BOOL;
+diff -Nur vpnclient/interceptor.c vpnclient.new/interceptor.c
+--- vpnclient/interceptor.c	2007-08-22 21:30:31.000000000 +0200
++++ vpnclient.new/interceptor.c	2008-01-25 09:50:52.000000000 +0100
+@@ -28,6 +28,10 @@
+ #include <linux/udp.h>
+ #include <net/protocol.h>
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
++#include <net/net_namespace.h>
++#endif
++
+ #include "linux_os.h"
+ 
+ #include "vpn_ioctl_linux.h"
+@@ -48,7 +52,7 @@
+ unsigned long rx_bytes;
+ 
+ /*methods of the cipsec network device*/
+-static int interceptor_init(struct net_device *);
++static void interceptor_init(struct net_device *);
+ static struct net_device_stats *interceptor_stats(struct net_device *dev);
+ static int interceptor_ioctl(struct net_device *dev, struct ifreq *ifr,
+                              int cmd);
+@@ -107,18 +111,27 @@
+ 
+ BINDING Bindings[MAX_INTERFACES];
+ 
++/* 2.6.24 handles net_devices a little bit different
++ *
++ * by Alexander Griesser <work@tuxx-home.at>, 2008-01-11
++ */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
++static struct net_device* interceptor_dev;
++#else
+ static struct net_device interceptor_dev = {
+     .name = interceptor_name,
+     .init = interceptor_init
+ };
++#endif
++
+ static struct notifier_block interceptor_notifier = {
+     .notifier_call = handle_netdev_event,
+ };
+ 
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+-static int
++static void
+ #else
+-static int __init
++static void __init
+ #endif
+ interceptor_init(struct net_device *dev)
+ {
+@@ -133,8 +146,6 @@
+     dev->flags |= IFF_NOARP;
+     dev->flags &= ~(IFF_BROADCAST | IFF_MULTICAST);
+     kernel_memset(dev->broadcast, 0xFF, ETH_ALEN);
+-
+-    return 0;
+ }
+ 
+ static struct net_device_stats *
+@@ -362,8 +373,13 @@
+ 
+     dp = NULL;
+     num_target_devices = 0;
++
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+-    for_each_netdev(dp)
++    for_each_netdev(
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
++                    &init_net,
++#endif
++                    dp)
+ #else
+     for (dp = dev_base; dp != NULL; dp = dp->next)
+ #endif
+@@ -919,15 +935,29 @@
+ 
+     rc = CniPluginLoad(&pcDeviceName, &PCNICallbackTable);
+ 
++/* 2.6.24 needs to allocate each netdevice before registering it, otherwise
++ * the kernel BUG()s.
++ *
++ * by Alexander Griesser <work@tuxx-home.at>, 2008-01-11
++ */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
++    if(! (interceptor_dev = alloc_netdev(sizeof(struct net_device), interceptor_name, interceptor_init)))
++      return 0;
++#endif
++
+     if (CNI_IS_SUCCESS(rc))
+     {
+ 
+         CNICallbackTable = *PCNICallbackTable;
+         CniPluginDeviceCreated();
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
++	if ((status = register_netdev(interceptor_dev)) != 0)
++#else
+         if ((status = register_netdev(&interceptor_dev)) != 0)
++#endif
+         {
+             printk(KERN_INFO "%s: error %d registering device \"%s\".\n",
+-                   LINUX_VPN_IFNAME, status, interceptor_dev.name);
++                   LINUX_VPN_IFNAME, status, interceptor_name);
+             CniPluginUnload();
+ 
+         }
+@@ -947,7 +977,11 @@
+     cleanup_frag_queue();
+     CniPluginUnload();
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
++    unregister_netdev(interceptor_dev);
++#else
+     unregister_netdev(&interceptor_dev);
++#endif
+     unregister_netdevice_notifier(&interceptor_notifier);
+ 
+     return;
