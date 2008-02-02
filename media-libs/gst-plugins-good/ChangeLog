@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gst-plugins-good
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.44 2007/11/01 13:57:27 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.45 2008/02/02 13:53:52 drac Exp $
+
+  02 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  -gst-plugins-good-0.10.2.ebuild, -gst-plugins-good-0.10.3.ebuild,
+  -gst-plugins-good-0.10.4.ebuild, -gst-plugins-good-0.10.5.ebuild:
+  Remove unused versions.
 
   01 Nov 2007; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-good-0.10.6.ebuild:
