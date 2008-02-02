@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.99 2008/02/02 14:13:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.100 2008/02/02 16:08:44 jer Exp $
+
+  02 Feb 2008; Jeroen Roovers <jer@gentoo.org> tiff-3.8.2-r3.ebuild:
+  Stable for HPPA (bug #208547).
 
   02 Feb 2008; Brent Baude <ranger@gentoo.org> tiff-3.8.2-r3.ebuild:
   Marking tiff-3.8.2-r3 ppc64 for bug 208547
