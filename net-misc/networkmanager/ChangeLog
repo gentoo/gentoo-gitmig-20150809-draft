@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/networkmanager
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.23 2007/12/25 14:30:07 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.24 2008/02/02 07:09:34 steev Exp $
+
+*networkmanager-0.6.5_p20080130 (02 Feb 2008)
+
+  02 Feb 2008; Steev Klimaszewski <steev@gentoo.org>
+  -files/networkmanager-0.6.4-Gentoo-checklo.patch,
+  -files/networkmanager-0.6.4-confchanges.patch,
+  -files/networkmanager-0.6.4-dbus-1.patch,
+  -files/networkmanager-0.6.4-gentooinitscript.patch,
+  -networkmanager-0.6.4_pre20061028.ebuild,
+  -networkmanager-0.6.4_pre20061028-r1.ebuild, -networkmanager-0.6.5.ebuild,
+  networkmanager-0.6.5_p20070823.ebuild,
+  +networkmanager-0.6.5_p20080130.ebuild:
+  Remove old versions of NetworkManager and add a bump that works with libnl 1.1
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing metalgod from metadata.xml as per #99350.

@@ -1,25 +1,29 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5.ebuild,v 1.7 2007/08/28 14:40:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5_p20080130.ebuild,v 1.1 2008/02/02 07:09:34 steev Exp $
 
 inherit gnome2 eutils
 
-MY_PN=NetworkManager
+# NetworkManager likes itself with capital letters
+MY_P=${P/networkmanager/NetworkManager}
 
-DESCRIPTION="Network configuration and management in an easy way. Desktop env independent"
+DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
-#http://ftp.gnome.org/pub/gnome/sources/NetworkManager/0.6/
-SRC_URI="http://ftp.gnome.org/pub/gnome/sources/NetworkManager/0.6/${MY_PN}-${PV}.tar.gz"
+# Snapshot from SVN, hosted by steev
+SRC_URI="http://steev.net/files/distfiles/${MY_P}.tar.gz
+	mirror://gentoo/${PN}-0.6.5_p20070823-updatedbackend.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="crypt doc gnome"
 
+# Yes, I know that configure will accept libnl 1.0-pre8, however we only have
+# 1.1 in the tree, therefore dep on it.
 RDEPEND=">=sys-apps/dbus-0.60
-	>=sys-apps/hal-0.5
+	>=sys-apps/hal-0.5.10
 	sys-apps/iproute2
-	>=dev-libs/libnl-1.0_pre6
+	>=dev-libs/libnl-1.1
 	>=net-misc/dhcdbd-1.4
 	>=net-wireless/wireless-tools-28_pre9
 	>=net-wireless/wpa_supplicant-0.4.8
@@ -37,7 +41,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 PDEPEND="gnome? ( >=gnome-extra/nm-applet-0.6.5 )"
 
-DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 USE_DESTDIR="1"
 
 G2CONF="${G2CONF} \
@@ -46,23 +50,29 @@ G2CONF="${G2CONF} \
 	--disable-more-warnings \
 	--localstatedir=/var \
 	--with-distro=gentoo \
-	--with-dbus-sys=/etc/dbus-1/system.d \
-	--enable-notification-icon"
+	--with-dbus-sys=/etc/dbus-1/system.d"
 
-S=${WORKDIR}/${MY_PN}-${PV}
+S=${WORKDIR}/NetworkManager-0.6.5
+
+pkg_setup() {
+	if built_with_use sys-apps/iproute2 minimal ; then
+		eerror "Please rebuild sys-apps/iproute2 without the minimal useflag."
+		die "Fix iproute2 first."
+	fi
+}
 
 src_unpack () {
-
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+
 	# Update to use our backend
-	epatch ${FILESDIR}/${PN}-updatedbackend.patch
+	epatch "${WORKDIR}/${PN}-0.6.5_p20070823-updatedbackend.patch"
 	# Use the kernel headers
-	epatch ${FILESDIR}/${PN}-use-kernel-headers.patch
+	epatch "${FILESDIR}/${PN}-use-kernel-headers.patch"
 	# Fix the resolv.conf permissions
-	epatch ${FILESDIR}/${PN}-resolvconf-perms.patch
+	epatch "${FILESDIR}/${PN}-resolvconf-perms.patch"
 	# Fix up the dbus conf file to use plugdev group
-	epatch ${FILESDIR}/${PN}-0.6.5-confchanges.patch
+	epatch "${FILESDIR}/${PN}-0.6.5-confchanges.patch"
 }
 
 src_install() {
@@ -70,6 +80,7 @@ src_install() {
 	# Need to keep the /var/run/NetworkManager directory
 	keepdir /var/run/NetworkManager
 }
+
 pkg_postinst() {
 	gnome2_icon_cache_update
 	elog "You need to be in the plugdev group in order to use NetworkManager"
