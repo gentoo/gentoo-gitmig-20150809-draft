@@ -1,15 +1,16 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/linkage-0.1.4.ebuild,v 1.2 2007/11/01 17:33:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/linkage-0.1.4.ebuild,v 1.3 2008/02/02 12:14:07 drac Exp $
 
-SCROLLKEEPER_UPDATE="no"
-GCONF_DEBUG="no"
+SCROLLKEEPER_UPDATE=no
+GCONF_DEBUG=no
 
 inherit gnome2
 
 DESCRIPTION="BitTorrent client written in C++ using gtkmm and libtorrent."
 HOMEPAGE="http://code.google.com/p/linkage"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz
+	http://code.google.com/p/${PN}/source/browse/tags/${P}/m4/sizeof.m4"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -32,7 +33,17 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
-GCONF2="${GCONF2} $(use_with curl) $(use_with gnome) \
-	$(use_with upnp gupnp) $(use_with xfce exo)"
+DOCS="README TODO"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
+pkg_setup() {
+	GCONF2="${GCONF2} $(use_with curl) $(use_with gnome) 
+		$(use_with upnp gupnp) $(use_with xfce exo)"
+}
+
+src_unpack() {
+	# Bug 208548, sizeof.m4 isn't included in default tarball.
+	unpack ${P}.tar.gz
+	cd "${S}"
+	mkdir m4
+	cp ${DISTDIR}/sizeof.m4 m4
+}
