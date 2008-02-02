@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/lucene
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.45 2008/01/29 09:06:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.46 2008/02/02 19:16:06 caster Exp $
+
+  02 Feb 2008; Vlastimil Babka <caster@gentoo.org> lucene-2.3.0.ebuild:
+  Fix building with USE=doc so it doesn't try to run tests anymore. Bug #208351.
 
   29 Jan 2008; Vlastimil Babka <caster@gentoo.org> lucene-2.3.0.ebuild:
   Fix SRC_URI, bug #207992.

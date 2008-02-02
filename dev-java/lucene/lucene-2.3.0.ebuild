@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.3.0.ebuild,v 1.2 2008/01/29 09:06:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.3.0.ebuild,v 1.3 2008/02/02 19:16:06 caster Exp $
 
 JAVA_PKG_IUSE="doc source test"
 JAVA_PKG_BSFIX_ALL="no"
@@ -30,7 +30,7 @@ src_compile() {
 	# it's useful not to have ignoresystemclasses=true...
 	ANT_TASKS="ant-nodeps javacc" eant \
 		-Djavacc.home=/usr/share/javacc/lib javacc
-	ANT_TASKS="none" eant -Dversion=${PV} jar-core jar-demo $(use_doc javadocs)
+	ANT_TASKS="none" eant -Dversion=${PV} jar-core jar-demo $(use_doc javadocs-core javadocs-demo)
 }
 
 src_test() {
@@ -46,7 +46,8 @@ src_install() {
 
 	if use doc; then
 		dohtml -r docs/* || die
-		java-pkg_dojavadoc build/docs/api
+		# for the core and demo subdirs
+		java-pkg_dohtml -r build/docs/api
 	fi
 	use source && java-pkg_dosrc src/java/org
 }
