@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.2.ebuild,v 1.2 2008/01/01 14:10:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.2.ebuild,v 1.3 2008/02/02 21:28:25 swegener Exp $
 
 WANT_AUTOMAKE="1.10"
 WANT_AUTOCONF="none"
@@ -26,8 +26,10 @@ DEPEND=">=sys-libs/ncurses-5.2
 	bidi? ( dev-libs/fribidi )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	jpeg? ( media-libs/jpeg )
-	otr? ( net-libs/libotr )
-	jabber? ( crypt? ( >=app-crypt/gpgme-1.0.2 ) )
+	jabber? (
+		otr? ( net-libs/libotr )
+		crypt? ( >=app-crypt/gpgme-1.0.2 )
+	)
 	msn? (
 		net-misc/curl
 		dev-libs/openssl
@@ -67,6 +69,14 @@ pkg_setup() {
 		eerror "re-emerge net-misc/curl."
 		eerror
 		die "net-misc/curl dependencie issue"
+	fi
+
+	if use otr && ! use jabber
+	then
+		eerror
+		eerror "Support for OTR is only supported with Jabber!"
+		eerror
+		die "Support for OTR is only supported with Jabber!"
 	fi
 
 	if use gadu && ! use jpeg
