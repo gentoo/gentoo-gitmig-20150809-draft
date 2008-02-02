@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r3.ebuild,v 1.18 2008/01/30 20:49:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r3.ebuild,v 1.19 2008/02/02 21:08:12 ulm Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -19,7 +19,7 @@ RESTRICT="strip"
 
 RDEPEND="!<app-editors/emacs-cvs-22.1
 	sys-libs/ncurses
-	>=app-admin/eselect-emacs-0.7-r1
+	>=app-admin/eselect-emacs-1.2
 	net-libs/liblockfile
 	hesiod? ( net-dns/hesiod )
 	spell? ( || ( app-text/ispell app-text/aspell ) )
@@ -215,6 +215,7 @@ emacs-infodir-rebuild() {
 		[[ ${f##*/} == *[0-9].info* ]] \
 			|| install-info --info-dir="${ROOT}"${infodir} "${f}" &>/dev/null
 	done
+	rmdir "${ROOT}"${infodir} 2>/dev/null # remove dir if it is empty
 	echo
 }
 
@@ -234,7 +235,7 @@ pkg_postinst() {
 		# transition from pre-eselect revision
 		eselect emacs set emacs-${SLOT}
 	else
-		eselect emacs update --if-unset
+		eselect emacs update ifunset
 	fi
 
 	if use X; then
@@ -255,5 +256,5 @@ pkg_postinst() {
 pkg_postrm() {
 	elisp-site-regen
 	emacs-infodir-rebuild
-	eselect emacs update --if-unset
+	eselect emacs update ifunset
 }

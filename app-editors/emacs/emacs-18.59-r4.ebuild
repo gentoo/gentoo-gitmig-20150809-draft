@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r4.ebuild,v 1.7 2007/12/02 20:00:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r4.ebuild,v 1.8 2008/02/02 21:08:12 ulm Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -16,7 +16,7 @@ KEYWORDS="x86"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses
-	>=app-admin/eselect-emacs-0.3
+	>=app-admin/eselect-emacs-1.2
 	X? ( x11-libs/libX11 )"
 DEPEND="${RDEPEND}"
 
@@ -85,9 +85,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	eselect emacs update --if-unset
+	eselect emacs update ifunset
 }
 
 pkg_postrm() {
-	eselect emacs update --if-unset
+	eselect emacs update ifunset
 }
