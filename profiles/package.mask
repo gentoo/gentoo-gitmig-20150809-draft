@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8200 2008/02/02 06:57:24 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8201 2008/02/02 12:16:56 caster Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Vlastimil Babka <caster@gentoo.org> (02 Feb 2008)
+# Still unmigrated, untouched since 2005, nothing
+# depends on it. Masked for removal in 30 days.
+# Unless someone shows interest in it, will be moved
+# to java junkyard.
+dev-java/jasmin-sable
 
 # Ulrich Mueller <ulm@gentoo.org> (01 Feb 2008)
 # Live CVS ebuild of Emacs 22 base branch
