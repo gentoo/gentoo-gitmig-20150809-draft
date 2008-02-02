@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.160 2008/02/01 18:52:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.161 2008/02/02 15:46:33 wolf31o2 Exp $
+
+  02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  gnome-terminal-2.18.4.ebuild:
+  Stable on amd64 wrt bug #208366.
 
   01 Feb 2008; Brent Baude <ranger@gentoo.org> gnome-terminal-2.18.4.ebuild:
   Marking gnome-terminal-2.18.4 ppc64 and ppc stable for bug 208366
