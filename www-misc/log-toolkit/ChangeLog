@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/log-toolkit
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/log-toolkit/ChangeLog,v 1.6 2007/07/29 17:44:00 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/log-toolkit/ChangeLog,v 1.7 2008/02/02 13:19:15 hollow Exp $
+
+  02 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  log-toolkit-0.9.6.ebuild:
+  use depend.apache wrt #208033
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> log-toolkit-0.9.6.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
