@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.51 2008/02/03 00:35:30 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.52 2008/02/03 01:47:55 marineam Exp $
+
+*xen-3.1.3 (03 Feb 2008)
+
+  03 Feb 2008; Michael Marineau <marineam@gentoo.org> +xen-3.1.3.ebuild:
+  Version bump to 3.1.3
 
   03 Feb 2008; Michael Marineau <marineam@gentoo.org> xen-3.1.2.ebuild:
   Filter -O3 from CFLAGS when using custom cflags.
