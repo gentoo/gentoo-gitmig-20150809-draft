@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/amap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amap/ChangeLog,v 1.2 2007/10/13 13:13:58 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amap/ChangeLog,v 1.3 2008/02/03 04:37:36 je_fro Exp $
+
+  15 Oct 2007; Jeff Gardner <je_fro@gentoo.org> amap-2.1.ebuild:
+  Adding ~amd64
 
 *amap-2.1 (13 Oct 2007)
 
