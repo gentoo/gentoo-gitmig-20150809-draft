@@ -1,0 +1,9 @@
+# ChangeLog for sys-block/cec
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/cec/ChangeLog,v 1.1 2008/02/03 20:21:33 caleb Exp $
+
+*cec-8 (03 Feb 2008)
+
+  03 Feb 2008; Caleb Tennis <caleb@gentoo.org> +cec-8.ebuild:
+  Initial import
+
