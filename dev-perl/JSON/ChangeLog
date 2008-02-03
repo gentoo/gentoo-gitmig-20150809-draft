@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/JSON
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.1 2007/11/11 13:40:22 hd_brummy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.2 2008/02/03 14:47:03 hd_brummy Exp $
+
+*JSON-2.04 (03 Feb 2008)
+
+  03 Feb 2008; Joerg Bornkessel <hd_brummy@gentoo.org> +JSON-2.04.ebuild:
+  version bump; thanks to M.Beltrame on bug 206958
 
 *JSON-1.14 (11 Nov 2007)
 
