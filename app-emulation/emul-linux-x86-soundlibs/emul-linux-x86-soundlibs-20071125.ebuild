@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20071125.ebuild,v 1.1 2007/11/25 23:02:43 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20071125.ebuild,v 1.2 2008/02/03 22:09:07 angelos Exp $
 
 inherit emul-linux-x86
 
 LICENSE="as-is BSD GPL-2 LGPL-2 LGPL-2.1"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 IUSE="arts esd alsa"
 
 RDEPEND=">=app-emulation/emul-linux-x86-baselibs-20071114
@@ -30,11 +30,11 @@ src_unpack() {
 
 	emul-linux-x86_src_unpack
 
-	mv -f ${S}/usr/bin/aoss{,32}
-	mv -f ${S}/usr/kde/3.5/bin/artsdsp{,32}
-	mv -f ${S}/usr/bin/esddsp{,32}
+	mv -f "${S}"/usr/bin/aoss{,32}
+	mv -f "${S}"/usr/kde/3.5/bin/artsdsp{,32}
+	mv -f "${S}"/usr/bin/esddsp{,32}
 
 	if ! use arts; then
-		rm -rf ${S}/usr/kde/
+		rm -rf "${S}"/usr/kde/
 	fi
 }
