@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.15.ebuild,v 1.7 2008/01/16 23:20:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.15.ebuild,v 1.8 2008/02/03 01:58:39 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -48,4 +48,5 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-as-needed.patch"
 
 	eautoreconf
+	intltoolize --force || die
 }
