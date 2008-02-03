@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.20.0.ebuild,v 1.14 2007/11/29 06:17:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.20.0.ebuild,v 1.15 2008/02/03 19:16:08 eva Exp $
 
 inherit gnome2
 
@@ -39,8 +39,21 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
+src_unpack() {
+	gnome2_src_unpack
+
+	# strip stupid options in configure, see bug #196621
+	sed -i 's|$AM_CFLAGS -pedantic -ansi|$AM_CFLAGS|' configure
+}
+
 pkg_setup() {
 	G2CONF="${G2CONF} --enable-man --enable-info"
+
+	if use beagle; then
+		G2CONF="${G2CONF} --with-search=beagle"
+	else
+		G2CONF="${G2CONF} --with-search=basic"
+	fi
 
 	if use xulrunner; then
 		G2CONF="${G2CONF} --with-gecko=xulrunner"
