@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.4.ebuild,v 1.1 2008/02/03 18:22:58 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.4.ebuild,v 1.2 2008/02/03 18:33:23 ferdy Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://kernel/software/scm/git/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="curl cgi doc emacs gtk iconv mozsha1 perl ppcsha1 tk webdav"
+IUSE="curl cgi doc emacs gtk iconv mozsha1 perl ppcsha1 tk threads webdav"
 
 DEPEND="
 	!app-misc/git
@@ -60,6 +60,7 @@ exportmakeopts() {
 
 	use iconv || myopts="${myopts} NO_ICONV=YesPlease"
 	use tk || myopts="${myopts} NO_TCLTK=YesPlease"
+	use threads && myopts="${myopts} THREADED_DELTA_SEARCH=YesPlease"
 
 	export MY_MAKEOPTS=${myopts}
 }
