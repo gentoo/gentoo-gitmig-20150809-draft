@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.55.1-r1.ebuild,v 1.3 2007/07/29 16:58:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.55.1-r1.ebuild,v 1.4 2008/02/03 10:51:33 hollow Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -29,7 +29,7 @@ DEPEND="
 	>=dev-libs/openssl-0.9.6
 	>=sys-libs/gdbm-1.8.0
 	dev-libs/libpcre
-	|| ( app-misc/mime-types www-servers/apache )
+	app-misc/mime-types
 	fax? ( >=media-libs/netpbm-9.12 virtual/ghostscript >=net-dialup/mgetty-1.1.28 )
 	pam? ( virtual/pam )
 	mysql? ( virtual/mysql )
@@ -79,12 +79,7 @@ src_compile() {
 	use ldap && myconf="${myconf} --with-ldapconfig=/etc/courier/maildropldap.conf"
 	use spell || myconf="${myconf} --without-ispell"
 
-	[ -e /etc/apache/conf/mime.types ] && \
-		myconf="${myconf} --enable-mimetypes=/etc/apache/conf/mime.types"
-	[ -e /etc/apache2/conf/mime.types ] && \
-		myconf="${myconf} --enable-mimetypes=/etc/apache2/conf/mime.types"
-	[ -e /etc/mime.types ] && \
-		myconf="${myconf} --enable-mimetypes=/etc/mime.types"
+	myconf="${myconf} --enable-mimetypes=/etc/mime.types"
 
 	myconf="${myconf} $(use_with fam)"
 
