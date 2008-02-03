@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/cec/cec-8.ebuild,v 1.2 2008/02/03 20:24:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/cec/cec-8.ebuild,v 1.3 2008/02/03 20:58:03 caleb Exp $
 
 DESCRIPTION="Coraid Ethernet Console client"
 HOMEPAGE="http://sf.net/projects/aoetools/"
@@ -25,6 +25,5 @@ src_install() {
 	dodir /usr/sbin
 	cp "${S}"/cec "${D}"/usr/sbin
 
-	dodir /usr/share/man/man8
-	cp "${S}"/cec.8 "${D}"/usr/share/man/man8
+	doman cec.8
 }
