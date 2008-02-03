@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1076 2008/02/03 08:58:08 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1077 2008/02/03 08:59:21 omp Exp $
+
+  03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
+  Remove =app-antivirus/clamav-0.92_rc2 mask.
 
   03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
   Remove a few vmware related masks.
