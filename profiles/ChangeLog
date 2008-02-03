@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1081 2008/02/03 09:06:43 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1082 2008/02/03 09:07:40 omp Exp $
+
+  03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
+  Remove =sys-apps/pkgcore-0.3.3 mask.
 
   03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
   Remove =net-misc/memcached-1.2.4_rc1 mask.
