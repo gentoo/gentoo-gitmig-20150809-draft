@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/xf86-video-ivtv-1.0.0.ebuild,v 1.1 2008/01/31 06:24:51 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/xf86-video-ivtv-1.0.0.ebuild,v 1.2 2008/02/03 07:03:36 je_fro Exp $
 
 inherit flag-o-matic x-modular
 DESCRIPTION="X.Org driver for TV-out on ivtvdev cards"
@@ -24,4 +24,10 @@ src_compile() {
 
 	append-flags "-I/usr/src/linux/include"
 	x-modular_src_compile
+}
+
+src_install() {
+
+	x-modular_src_install
+	dodoc README || die "Failed to install doc"
 }
