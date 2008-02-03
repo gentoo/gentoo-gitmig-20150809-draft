@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.02.ebuild,v 1.1 2008/02/03 18:06:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.02.ebuild,v 1.2 2008/02/03 18:12:53 drac Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="x11-libs/libX11
 	gtk? ( >=x11-libs/gtk+-2 )
 	gnome? ( gnome-base/gconf
 		gnome-base/gnome-panel )"
-DEPEND="sys-apps/sed
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	gtk? ( sys-devel/gettext media-gfx/imagemagick )"
 
