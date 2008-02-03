@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/gnopaste
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/ChangeLog,v 1.4 2007/07/29 17:27:15 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/ChangeLog,v 1.5 2008/02/03 16:59:41 hollow Exp $
+
+  03 Feb 2008; Benedikt Böhm <hollow@gentoo.org> gnopaste-0.5.5.ebuild:
+  merge from webapps overlay wrt #208584
+
+  02 Feb 2008; Jakub Moc <jakub@gentoo.org> gnopaste-0.5.5.ebuild:
+  Remove hard dependency on apache for Bug 208584; remove virtual/mysql
+  dependency and check for required PHP features instead. Do not install
+  subversion directories. General ebuild cleanup
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> gnopaste-0.5.5.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
