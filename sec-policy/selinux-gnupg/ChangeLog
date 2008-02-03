@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-gnupg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gnupg/ChangeLog,v 1.21 2007/11/27 02:45:29 pebenito Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gnupg/ChangeLog,v 1.22 2008/02/03 01:37:28 pebenito Exp $
+
+  03 Feb 2008; Chris PeBenito <pebenito@gentoo.org>
+  selinux-gnupg-20070928.ebuild:
+  Mark stable.
 
 *selinux-gnupg-20070928 (26 Nov 2007)
 

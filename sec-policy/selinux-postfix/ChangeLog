@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-postfix
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postfix/ChangeLog,v 1.23 2007/11/27 02:45:35 pebenito Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postfix/ChangeLog,v 1.24 2008/02/03 01:37:31 pebenito Exp $
+
+  03 Feb 2008; Chris PeBenito <pebenito@gentoo.org>
+  selinux-postfix-20070928.ebuild:
+  Mark stable.
 
 *selinux-postfix-20070928 (26 Nov 2007)
 
