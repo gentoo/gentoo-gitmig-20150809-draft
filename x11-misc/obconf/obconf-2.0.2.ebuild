@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.2.ebuild,v 1.7 2007/11/24 17:29:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.2.ebuild,v 1.8 2008/02/03 08:24:01 omp Exp $
 
 inherit fdo-mime
 
@@ -16,7 +16,7 @@ IUSE="nls"
 RDEPEND=">=gnome-base/libglade-2
 	>=x11-libs/gtk+-2
 	x11-libs/startup-notification
-	>=x11-wm/openbox-3.4.3
+	>=x11-wm/openbox-3.4.2
 	nls? ( sys-devel/gettext )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
