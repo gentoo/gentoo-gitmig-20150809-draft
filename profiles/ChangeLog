@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1077 2008/02/03 08:59:21 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1078 2008/02/03 09:01:14 omp Exp $
+
+  03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
+  Remove a few media-sound/pulseaudio masks.
 
   03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
   Remove =app-antivirus/clamav-0.92_rc2 mask.
