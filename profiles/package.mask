@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8213 2008/02/03 07:38:55 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8214 2008/02/03 08:31:53 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -568,12 +568,6 @@ dev-haskell/hs-plugins
 # Masked pending removal 31 Jan 2008
 # Superseded by dev-ruby/httpclient, drop-in replacement
 dev-ruby/http-access2
-
-# David Shakaryan <omp@gentoo.org> (30 Dec 2007)
-# Masked pending removal 30 Jan 2008.
-# Extremely old themes not exhibiting Openbox's newer theming options.
-# Openbox will be moving to an XML-based theming engine in the future.
-x11-themes/openbox-themes
 
 # Mart Raudsepp <leio@gentoo.org> (28 Dec 2007)
 # Live Subversion ebuild until pending first upstream release
