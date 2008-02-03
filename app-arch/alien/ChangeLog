@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/alien
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.20 2007/05/21 15:47:19 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.21 2008/02/03 11:20:03 drac Exp $
+
+*alien-8.69 (03 Feb 2008)
+
+  03 Feb 2008; Samuli Suominen <drac@gentoo.org> -alien-8.47.ebuild,
+  -alien-8.53.ebuild, -alien-8.65.ebuild, -alien-8.66.ebuild,
+  +alien-8.69.ebuild:
+  Version bump wrt #203662, thanks to Raúl Porcel for reporting.
 
   21 May 2007; Raúl Porcel <armin76@gentoo.org> alien-8.64.ebuild:
   alpha stable wrt #149666
