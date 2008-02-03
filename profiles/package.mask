@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8218 2008/02/03 08:49:48 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8219 2008/02/03 08:51:23 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -825,18 +825,6 @@ dev-db/monetdb
 # dev-lang/ghc-bin is going away, use dev-lang/ghc instead.
 # You can USE=binary with dev-lang/ghc to get the effect of ghc-bin.
 dev-lang/ghc-bin
-
-# Petteri Räty <betelgeuse@gentoo.org> (04 Nov 2007)
-# java-gnome is now a single package so you only need
-# =dev-java/java-gnome-4.0*
-dev-java/cairo-java
-dev-java/glib-java
-dev-java/libgconf-java
-dev-java/libglade-java
-dev-java/libgtk-java
-dev-java/libvte-java
-dev-java/libgnome-java
-=dev-java/java-gnome-2*
 
 # Steve Dibb <beandog@gentoo.org> (01 Nov 2007)
 # Forked version of libdvdnav provided by upstream MPlayer
