@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1085 2008/02/03 09:12:21 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1086 2008/02/03 10:14:30 caster Exp $
+
+  03 Feb 2008; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Last rites for dev-java/cryptix*
 
   03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
   Remove =sys-devel/gcc-config-2.0.0_rc1 and app-admin/eselect-compiler masks.
