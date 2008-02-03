@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8227 2008/02/03 09:05:00 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8228 2008/02/03 09:06:43 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -722,10 +722,6 @@ x11-themes/gaim-smileys
 # Mozilla stopped supporting 1.5 series in October 2007
 # Will be removed when mips stabilizes 2.0
 =mail-client/mozilla-thunderbird-1.5*
-
-# Robin H. Johnson <robbat2@gentoo.org> (26 Nov 2007)
-# For testing only
-=net-misc/memcached-1.2.4_rc1
 
 # Piotr Jaroszyński <peper@gentoo.org> (26 Nov 2007)
 # opensync svn ebuilds
