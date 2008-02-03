@@ -2,7 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>ppc</herd>
-<maintainer>
-  <email>dostrow@gentoo.org</email>
-</maintainer>
+<herd>ppc64</herd>
 </pkgmetadata>
