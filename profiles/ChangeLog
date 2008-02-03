@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1064 2008/02/02 23:23:03 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1065 2008/02/03 03:10:57 betelgeuse Exp $
+
+  03 Feb 2008; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Remove mask for dev-java/aterm-java as it was moved to junkyard.
 
   02 Feb 2008; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Remask media-fonts/artwiz-fonts.

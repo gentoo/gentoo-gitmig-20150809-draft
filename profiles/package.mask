@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8208 2008/02/03 02:39:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8209 2008/02/03 03:10:57 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1189,15 +1189,6 @@ games-rpg/openrpg
 # Benedikt Böhm <hollow@gentoo.org> (07 Apr 2007)
 # masked for testing
 >=sys-kernel/vserver-sources-2.3
-
-# Petteri Räty <betelgeuse@gentoo.org> (6 Apr 2007)
-# Upstream considers this Trash:
-# http://www.cwi.nl/htbin/sen1/twiki/bin/view/SEN1/ATermLibrary
-# Does not build:
-# https://bugs.gentoo.org/show_bug.cgi?id=168466#c9
-# Submit patches and get upstream going again and we will spare this.
-# This is a library that nothing uses so it's not of much value for us.
-dev-java/aterm-java
 
 # MATSUU Takuto <matsuu@gentoo.org> (5 Apr 2007)
 # to be tested, seems unstable
