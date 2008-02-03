@@ -1,0 +1,13 @@
+--- gst-plugins-bad-0.10.5.orig/ext/neon/gstneonhttpsrc.c	2007-09-08 21:12:24.000000000 +0100
++++ gst-plugins-bad-0.10.5/ext/neon/gstneonhttpsrc.c	2007-09-08 21:35:04.000000000 +0100
+@@ -799,6 +799,10 @@
+           ne_session_create (src->uri.scheme, src->uri.host, src->uri.port);
+     }
+ 
++#ifdef NEON_026_OR_LATER
++    ne_set_session_flag(session, NE_SESSFLAG_ICYPROTO, 1);
++#endif
++
+     request = ne_request_create (session, "GET", src->uri.path);
+ 
+     if (src->user_agent) {
