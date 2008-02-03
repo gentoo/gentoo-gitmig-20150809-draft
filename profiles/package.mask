@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8217 2008/02/03 08:48:01 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8218 2008/02/03 08:49:48 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1143,10 +1143,6 @@ app-shells/ash
 # Mike Frysinger <vapier@gentoo.org> (5 May 2007)
 # Unsupported upstream; doesnt build with current cm3
 dev-util/cvsup
-
-# Christian Parpart <trapni@gentoo.org> (01 May 2007)
-# Masked for testing.
-=www-apps/mediawiki-1.10.0_rc1
 
 # Ryan Hill <dirtyepic@gentoo.org> (29 Apr 2007)
 #  Has a hard dependency on wxGTK-2.4 (bug #121818)

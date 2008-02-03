@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1070 2008/02/03 08:48:01 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1071 2008/02/03 08:49:48 omp Exp $
+
+  03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
+  Remove =www-apps/mediawiki-1.10.0_rc1 mask.
 
   03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
   Remove <www-apps/wordpress-2.3 mask.
