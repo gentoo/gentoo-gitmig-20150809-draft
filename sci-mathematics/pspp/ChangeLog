@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/pspp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.4 2007/07/31 17:36:52 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.5 2008/02/03 12:03:23 markusle Exp $
+
+  03 Feb 2008; Markus Dittrich <markusle@gentoo.org> pspp-0.4.0.ebuild:
+  Added bindist USE flag to prevent linking against GPL-3d >=gsl-1.10 
+  if needed (see bug #199451).
 
   31 Jul 2007; Sébastien Fabbro <bicatali@gentoo.org>
   files/50pspp-gentoo.el:

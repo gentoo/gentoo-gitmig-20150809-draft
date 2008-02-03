@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.4.0.ebuild,v 1.3 2007/07/31 12:07:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.4.0.ebuild,v 1.4 2008/02/03 12:03:23 markusle Exp $
 
 inherit elisp-common
 
@@ -10,9 +10,10 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc ncurses emacs plotutils nls"
+IUSE="bindist doc ncurses emacs plotutils nls"
 
-DEPEND=">=sci-libs/gsl-1.6
+DEPEND="!bindist? ( sci-libs/gsl )
+	bindist? ( <sci-libs/gsl-1.10 )
 	sys-libs/readline
 	>=sys-devel/gettext-0.14.1
 	>=dev-lang/perl-5.6
@@ -42,7 +43,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dodoc ABOUT-NLS AUTHORS ChangeLog \
+	dodoc AUTHORS ChangeLog \
 		INSTALL NEWS ONEWS README THANKS TODO
 	docinto examples && dodoc examples/{ChangeLog,descript.stat}
 
