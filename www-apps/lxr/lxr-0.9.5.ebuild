@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.5.ebuild,v 1.4 2007/07/29 17:28:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.5.ebuild,v 1.5 2008/02/03 17:04:57 hollow Exp $
 
-inherit perl-module webapp multilib eutils
+inherit perl-module webapp multilib eutils depend.apache
 
 DESCRIPTION="general purpose source code indexer and cross-referener with a web-based frontend"
 HOMEPAGE="http://sourceforge.net/projects/lxr"
@@ -11,16 +11,23 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="cvs freetext mysql postgres"
+WEBAPP_MANUAL_SLOT="yes"
+SLOT="0"
 
 RDEPEND="dev-util/ctags
-	www-servers/apache
 	freetext? ( >=www-apps/swish-e-2.1 )
 	dev-lang/perl
 	dev-perl/DBI
 	dev-perl/File-MMagic
 	cvs? ( app-text/rcs )
-	postgres? ( dev-db/postgresql dev-perl/DBD-Pg )
+	postgres? ( dev-perl/DBD-Pg )
 	mysql? ( dev-perl/DBD-mysql )"
+
+need_apache2
+
+pkg_setup() {
+	webapp_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}
@@ -68,4 +75,12 @@ src_install() {
 	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 	webapp_hook_script "${FILESDIR}"/reconfig
 	webapp_src_install
+}
+
+pkg_postinst() {
+	webapp_pkg_postinst
+}
+
+pkg_prerm() {
+	webapp_pkg_prerm
 }

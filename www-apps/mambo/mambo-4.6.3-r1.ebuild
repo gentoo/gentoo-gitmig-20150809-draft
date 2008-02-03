@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.6.3-r1.ebuild,v 1.1 2008/01/27 20:41:44 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.6.3-r1.ebuild,v 1.2 2008/02/03 17:08:49 hollow Exp $
 
-inherit webapp depend.php
+inherit webapp depend.php depend.apache
 
 MY_PN="${PN/m/M}"
 DESCRIPTION="Mambo is a dynamic portal engine and content management system"
@@ -16,13 +16,15 @@ S=${WORKDIR}
 
 IUSE=""
 
-RDEPEND="
-	virtual/httpd-php
-	www-servers/apache"
+need_php
+need_apache
 
 pkg_setup () {
 	webapp_pkg_setup
-	require_php_with_use mysql zlib
+	if ! PHPCHECKNODIE="yes" require_php_with_use mysql zlib || \
+		! PHPCHECKNODIE="yes" require_php_with_any_use apache2 cgi ; then
+			die "Re-install ${PHP_PKG} with mysql zlib and at least one of apache2 or cgi USE flags."
+	fi
 }
 
 src_unpack() {
