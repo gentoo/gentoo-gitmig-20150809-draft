@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50_pre20080201.ebuild,v 1.2 2008/02/02 09:14:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50_pre20080201.ebuild,v 1.3 2008/02/03 10:27:00 ulm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -33,9 +33,9 @@ RDEPEND="sys-libs/ncurses
 		x11-misc/emacs-desktop
 		gif? ( media-libs/giflib )
 		jpeg? ( media-libs/jpeg )
-		tiff? ( media-libs/tiff )
 		png? ( media-libs/libpng )
 		svg? ( >=gnome-base/librsvg-2.0 )
+		tiff? ( media-libs/tiff )
 		xpm? ( x11-libs/libXpm )
 		gtk? ( =x11-libs/gtk+-2* )
 		!gtk? (
@@ -106,9 +106,9 @@ src_compile() {
 	if use X; then
 		myconf="${myconf} --with-x"
 		myconf="${myconf} $(use_with toolkit-scroll-bars)"
-		myconf="${myconf} $(use_with jpeg) $(use_with tiff)"
-		myconf="${myconf} $(use_with gif) $(use_with png)"
-		myconf="${myconf} $(use_with xpm) $(use_with svg rsvg)"
+		myconf="${myconf} $(use_with gif) $(use_with jpeg)"
+		myconf="${myconf} $(use_with png) $(use_with svg rsvg)"
+		myconf="${myconf} $(use_with tiff) $(use_with xpm)"
 
 		# GTK+ is the default toolkit if USE=gtk is chosen with other
 		# possibilities. Emacs upstream thinks this should be standard
