@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/howl
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.50 2007/07/11 04:02:48 compnerd Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.51 2008/02/03 15:51:36 grobian Exp $
+
+  03 Feb 2008; Fabian Groffen <grobian@gentoo.org> howl-0.9.8.ebuild,
+  howl-1.0.0.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   11 Jul 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   -howl-0.9.6-r2.ebuild:
