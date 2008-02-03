@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.31 2008/02/02 15:52:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.32 2008/02/03 11:44:40 armin76 Exp $
+
+  03 Feb 2008; Raúl Porcel <armin76@gentoo.org> orca-2.20.3.ebuild:
+  alpha/ia64/sparc stable wrt #208366
 
   02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> orca-2.20.3.ebuild:
   Stable on amd64 wrt bug #208366.
