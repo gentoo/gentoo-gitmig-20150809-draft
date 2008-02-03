@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.5-r1.ebuild,v 1.3 2008/01/05 21:19:46 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.5-r1.ebuild,v 1.4 2008/02/03 14:59:35 hd_brummy Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -16,8 +16,8 @@ IUSE="truetype unicode g15"
 
 DEPEND=""
 
-RDEPEND="truetype? ( media-libs/freetype
-		media-fonts/corefonts )
+RDEPEND="truetype? ( media-libs/freetype media-fonts/corefonts )
+		unicode? ( media-libs/freetype media-fonts/corefonts )
 		g15? ( app-misc/g15daemon )"
 
 src_unpack() {
