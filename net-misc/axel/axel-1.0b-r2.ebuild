@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0b-r2.ebuild,v 1.7 2007/12/26 10:30:33 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0b-r2.ebuild,v 1.8 2008/02/03 16:13:18 grobian Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://wilmer.gaast.net/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 hppa ppc ~ppc-macos ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug nls"
 
 RDEPEND="nls? ( virtual/libintl )"
