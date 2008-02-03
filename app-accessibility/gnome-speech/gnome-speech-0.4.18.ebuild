@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.18.ebuild,v 1.1 2008/02/03 20:37:27 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.18.ebuild,v 1.2 2008/02/03 20:40:35 leio Exp $
 
 JAVA_PKG_OPT_USE="freetts"
 
@@ -75,6 +75,6 @@ src_install() {
 pkg_postinst() {
 	elog
 	elog "Gnome Speech has been successfully installed. You may now use the"
-	elog "speech interface using app-accessibility/gnopernicus."
+	elog "speech interface using app-accessibility/orca."
 	elog
 }
