@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8207 2008/02/03 02:27:18 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8208 2008/02/03 02:39:02 robbat2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1638,16 +1638,6 @@ app-shells/csh
 # Alexandre Buisse <nattfodd@gentoo.org> (12 Jan 2006)
 # Masked for testing purposes
 dev-tex/mpm
-
-# <robbat2@gentoo.org> (26 Dec 2005)
-# Fails HMAC test on Pentium-M systems
-# HMAC-Test: Failed
-# Expecting: 0x750c783e6ab0b503eaa86e310a5db738
-# Got: 0x75 c783e6affffffb0ffffffb5 3ffffffeaffffffa86e31 a5dffffffb738
-# FAIL: hmac_test
-# Upstream bug filed:
-# http://sourceforge.net/tracker/index.php?func=detail&aid=1390988&group_id=4286&atid=104286
-=app-crypt/mhash-0.9.3*
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (19 Dec 2005)
 # This is the Gentoo Linux Installer.  This is currently masked because it will
