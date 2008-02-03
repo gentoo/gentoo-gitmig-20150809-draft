@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Translation2/PEAR-Translation2-2.0.0_rc3.ebuild,v 1.3 2008/02/01 00:38:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Translation2/PEAR-Translation2-2.0.0_rc3.ebuild,v 1.4 2008/02/03 11:00:31 maekke Exp $
 
 inherit php-pear-r1 depend.php eutils
 
 DESCRIPTION="Class for multilingual applications management."
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ppc64 ~sparc x86"
 IUSE="minimal"
 
 RDEPEND="!minimal? ( dev-php/PEAR-Cache_Lite

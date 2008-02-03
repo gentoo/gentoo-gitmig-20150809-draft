@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-OLE
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-OLE/ChangeLog,v 1.31 2008/02/01 00:38:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-OLE/ChangeLog,v 1.32 2008/02/03 11:11:14 maekke Exp $
+
+  03 Feb 2008; Markus Meier <maekke@gentoo.org> PEAR-OLE-0.6.1.ebuild:
+  x86 stable, bug #208313
 
   01 Feb 2008; Brent Baude <ranger@gentoo.org> PEAR-OLE-0.6.1.ebuild:
   Marking PEAR-OLE-0.6.1 ppc64 for bug 208313
