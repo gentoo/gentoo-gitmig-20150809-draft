@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.1.2.ebuild,v 1.1 2007/11/17 00:13:55 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.1.2.ebuild,v 1.2 2008/02/03 00:35:30 marineam Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -60,6 +60,7 @@ src_compile() {
 
 	if use custom-cflags; then
 		filter-flags -fPIE -fstack-protector
+		replace-flags -O3 -O2
 	else
 		unset CFLAGS
 	fi
