@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1075 2008/02/03 08:56:08 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1076 2008/02/03 08:58:08 omp Exp $
+
+  03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
+  Remove a few vmware related masks.
 
   03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
   Remove =net-www/netscape-flash-9.0.60.0_beta082207 mask.
