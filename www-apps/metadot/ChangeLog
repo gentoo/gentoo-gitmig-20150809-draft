@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/metadot
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/ChangeLog,v 1.29 2007/07/29 17:30:49 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/ChangeLog,v 1.30 2008/02/03 17:48:23 hollow Exp $
+
+  03 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadot-6.1.6.ebuild,
+  metadot-6.4.5.4.ebuild:
+  merge from webapps overlay wrt #208584
+
+  02 Feb 2008; Jakub Moc <jakub@gentoo.org>
+  metadot-6.1.6.ebuild, metadot-6.4.5.4.ebuild:
+  Remove useless apache dependency already implied by mod_perl wrt Bug 208584;
+  quoting
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> metadot-6.1.6.ebuild,
   metadot-6.4.5.4.ebuild:

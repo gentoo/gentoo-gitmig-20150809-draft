@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4.5.4.ebuild,v 1.7 2007/07/29 17:30:49 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4.5.4.ebuild,v 1.8 2008/02/03 17:48:23 hollow Exp $
 
 inherit webapp
 MY_P="Metadot${PV}"
@@ -17,7 +17,6 @@ KEYWORDS="~x86 ~ppc"
 DEPEND=""
 RDEPEND="
 	>=dev-lang/perl-5.6
-	=www-servers/apache-2*
 	=www-apache/mod_perl-2*
 	dev-perl/DBI
 	>=dev-perl/DBD-mysql-2.1027
@@ -57,16 +56,16 @@ src_install() {
 	webapp_src_preinst
 
 	dodoc CHANGELOG README
-	cp -R [[:lower:]][[:lower:]]* ${D}/${MY_HTDOCSDIR}
+	cp -R [[:lower:]][[:lower:]]* "${D}"/${MY_HTDOCSDIR}
 
-	cp ${FILESDIR}/${PN}.conf ${D}/${MY_HOSTROOTDIR}
+	cp "${FILESDIR}"/${PN}.conf "${D}"/${MY_HOSTROOTDIR}
 	sed -i "s|Apache::Registry|Modperl::Registry|" \
-		${D}/${MY_HOSTROOTDIR}/${PN}.conf
+		"${D}"/${MY_HOSTROOTDIR}/${PN}.conf
 
 	webapp_serverowned ${MY_HTDOCSDIR}
 	webapp_serverowned ${MY_HTDOCSDIR}/sitedata/public
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en-6.4_p3.txt
-	webapp_hook_script ${FILESDIR}/reconfig-6.4_p3
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en-6.4_p3.txt
+	webapp_hook_script "${FILESDIR}"/reconfig-6.4_p3
 	webapp_src_install
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.1.6.ebuild,v 1.15 2007/07/29 17:30:49 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.1.6.ebuild,v 1.16 2008/02/03 17:48:23 hollow Exp $
 
 inherit webapp
 MY_P=${P/-/}
@@ -15,7 +15,6 @@ SRC_URI="http://download.metadot.com/${MY_P}.tar.gz"
 KEYWORDS="~x86 ppc"
 
 RDEPEND="
-	>=www-servers/apache-2.0
 	>=dev-lang/perl-5.005
 	>=www-apache/mod_perl-2.0
 	dev-perl/DBI
@@ -51,8 +50,8 @@ src_install() {
 	dodir ${MY_HOSTROOTDIR}/${PN}
 
 	dodoc CHANGELOG README
-	cp -R [[:lower:]][[:lower:]]* ${D}/${MY_HTDOCSDIR}
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en-${PVR}.txt
-	webapp_hook_script ${FILESDIR}/reconfig-${PVR}
+	cp -R [[:lower:]][[:lower:]]* "${D}"/${MY_HTDOCSDIR}
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en-${PVR}.txt
+	webapp_hook_script "${FILESDIR}"/reconfig-${PVR}
 	webapp_src_install
 }
