@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1073 2008/02/03 08:53:31 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1074 2008/02/03 08:54:25 omp Exp $
+
+  03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
+  Remove <=net-im/skype-1.4.0.0 mask.
 
   03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
   Remove =net-wireless/fwlanusb-1.00.00_rc1 mask.
