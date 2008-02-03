@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-3.6-r2.ebuild,v 1.1 2008/02/02 22:22:38 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-3.6-r2.ebuild,v 1.2 2008/02/03 01:06:52 mr_bones_ Exp $
 
 inherit eutils
 
@@ -23,7 +23,6 @@ src_unpack() {
 	# Bug 208001
 	epatch "${FILESDIR}"/${PN}-3.6-regexp-CVE-2007-4770+4771.diff
 }
-
 
 src_compile() {
 	econf --enable-static $(use_enable debug) || die "econf failed"
