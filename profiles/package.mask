@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8225 2008/02/03 09:01:14 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8226 2008/02/03 09:03:02 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -814,7 +814,6 @@ sys-auth/pam_keyring
 x11-wm/heliodor
 x11-wm/aquamarine
 <=x11-wm/emerald-0.2.1
-<=x11-plugins/emerald-plugins-0.2.1
 <=x11-themes/emerald-themes-0.2.1
 
 # Fabian Groffen <grobian@gentoo.org> (06 Nov 2007)
