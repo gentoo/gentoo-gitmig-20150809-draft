@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8237 2008/02/03 14:59:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8238 2008/02/03 18:25:07 ferdy Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -675,10 +675,6 @@ dev-lang/entity
 # Masked pending removal - see bug #202391
 # Please switch to sys-kernel/gentoo-sources
 sys-kernel/hppa-sources
-
-# Robin H. Johnson <robbat2@gentoo.org> (16 Dec 2007)
-# For testing only
-=dev-util/git-1.5.4_rc*
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (13 Dec 2007)
 # Retired by upstream in favor of gnome-system-tools since 2005
