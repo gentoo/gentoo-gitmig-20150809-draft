@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.37 2008/02/02 14:31:42 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.38 2008/02/03 11:51:36 hollow Exp $
 
 # @ECLASS: depend.apache.eclass
 # @MAINTAINER: apache-devs@gentoo.org
@@ -95,7 +95,10 @@ _init_apache2() {
 	# into the dependency cache (DEPEND/RDEPEND/etc)
 	APACHE_VERSION="2"
 	APXS="/usr/sbin/apxs2"
-	APACHECTL="/usr/sbin/apache2ctl"
+	APACHE_BIN="/usr/sbin/apache2"
+	APACHE_CTL="/usr/sbin/apache2ctl"
+	# legacy alias
+	APACHECTL="${APACHE_CTL}"
 	APACHE_BASEDIR="/usr/$(get_libdir)/apache2"
 	APACHE_CONFDIR="/etc/apache2"
 	APACHE_MODULES_CONFDIR="${APACHE_CONFDIR}/modules.d"
