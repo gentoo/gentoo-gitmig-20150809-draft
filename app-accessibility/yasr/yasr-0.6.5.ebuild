@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.5.ebuild,v 1.13 2005/01/01 10:53:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.5.ebuild,v 1.14 2008/02/03 23:32:11 williamh Exp $
 
 DESCRIPTION="general-purpose console screen reader"
 HOMEPAGE="http://yasr.sourceforge.net/"
@@ -29,6 +29,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die
 	dodoc README ChangeLog AUTHORS BUGS CREDITS INSTALL
 }
