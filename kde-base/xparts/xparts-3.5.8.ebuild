@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.5.8.ebuild,v 1.1 2007/10/20 00:00:36 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.5.8.ebuild,v 1.2 2008/02/03 14:36:19 zlin Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="dcopc"
@@ -14,7 +14,9 @@ DESCRIPTION="Allows embedding of generic XParts as KDE KParts"
 KEYWORDS="~amd64 ~x86" # broken according to upstream - 3.4a1 README
 IUSE=""
 DEPEND="=dev-libs/glib-1.2*
-	=x11-libs/gtk+-1.2*"
+	=x11-libs/gtk+-1.2*
+	=kde-base/dcopc-3.5*"
+RDEPEND="${DEPEND}"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 src_unpack() {

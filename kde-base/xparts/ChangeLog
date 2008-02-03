@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/xparts
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/ChangeLog,v 1.23 2007/10/20 00:00:36 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/ChangeLog,v 1.24 2008/02/03 14:36:19 zlin Exp $
+
+  03 Feb 2008; Bo Ørsted Andresen <zlin@gentoo.org> xparts-3.5.0.ebuild,
+  xparts-3.5.8.ebuild:
+  Add missing dependency on dcopc.
 
 *xparts-3.5.8 (19 Oct 2007)
 
