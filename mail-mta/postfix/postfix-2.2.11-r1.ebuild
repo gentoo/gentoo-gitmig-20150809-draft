@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.11.ebuild,v 1.3 2007/10/21 11:15:08 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.11-r1.ebuild,v 1.1 2008/02/03 11:43:08 ulm Exp $
 
 inherit eutils ssl-cert toolchain-funcs flag-o-matic pam
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mailwrapper mbox nis vda selinux hardened cdb"
@@ -148,7 +148,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}
 	# added -Wl,-z,now wrt 62674.
 	# remove -ldl as it is not necessary, resolve bug #106446.
 	# -Wl,-z,now replaced by $(bindnow-flags)
@@ -199,7 +198,7 @@ src_compile() {
 		if has_version dev-db/tinycdb; then
 			einfo "build with dev-db/tinycdb"
 			# ugly hack because gentoo doesn't install cdb.h
-			cp /usr/include/tinycdb.h ${S}/src/util/cdb.h || die \
+			cp /usr/include/tinycdb.h "${S}"/src/util/cdb.h || die \
 				"failed to cp /usr/include/tinycdb.h to ${S}/util/cdb.h"
 			CDB_LIBS="-ltinycdb"
 		else
@@ -279,7 +278,7 @@ src_install () {
 	fperms 02711 /usr/sbin/post{drop,queue}
 
 	keepdir /etc/postfix
-	mv ${D}/usr/share/doc/${PF}/defaults/{*.cf,post*-*} ${D}/etc/postfix
+	mv "${D}"/usr/share/doc/${PF}/defaults/{*.cf,post*-*} "${D}"/etc/postfix
 	if use mbox ; then
 		mypostconf="mail_spool_directory=/var/spool/mail"
 	else
@@ -297,18 +296,10 @@ src_install () {
 		die "newinitd failed"
 
 	mv "${S}/examples" "${D}/usr/share/doc/${PF}/"
-	dodoc *README COMPATIBILITY HISTORY INSTALL LICENSE PORTING RELEASE_NOTES*
+	dodoc *README COMPATIBILITY HISTORY INSTALL PORTING RELEASE_NOTES*
 	dohtml html/*
 
 	pamd_mimic_system smtp auth account
-
-	# do not install server.{key,pem) if they are exist.
-	if use ssl && [[ ! -f /etc/ssl/postfix/server.key && ! -f /etc/ssl/postfix/server.pem ]]; then
-		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Postfix SMTP Server}"
-		insinto /etc/ssl/postfix
-		docert server
-		fowners postfix:mail /etc/ssl/postfix/server.{key,pem}
-	fi
 
 	if use sasl ; then
 		insinto /etc/sasl2
@@ -320,6 +311,14 @@ pkg_postinst() {
 
 	# add postfix, postdrop user/group. Bug #77565.
 	group_user_check || die "failed to check/add needed user/group"
+
+	# Do not install server.{key,pem) SSL certificates if they already exist
+	if use ssl && [[ ! -f "${ROOT}"/etc/ssl/postfix/server.key \
+		&& ! -f "${ROOT}"/etc/ssl/postfix/server.pem ]] ; then
+		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Postfix SMTP Server}"
+		install_cert /etc/ssl/postfix/server
+		chown postfix:mail "${ROOT}"/etc/ssl/postfix/server.{key,pem}
+	fi
 
 	ebegin "Fixing queue directories and permissions"
 	"${ROOT}/etc/postfix/post-install" upgrade-permissions
