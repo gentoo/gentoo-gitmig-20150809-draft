@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r3.ebuild,v 1.4 2008/01/14 19:50:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r3.ebuild,v 1.5 2008/02/03 23:31:36 jer Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.guzu.net/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="nls"
 
 DEPEND=""
@@ -21,12 +21,12 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-satacmds.patch
-	epatch ${FILESDIR}/${P}-byteswap.patch
-	epatch ${FILESDIR}/${P}-execinfo.patch
-	epatch ${FILESDIR}/${P}-nls.patch
-	epatch ${FILESDIR}/${P}-iconv.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-satacmds.patch
+	epatch "${FILESDIR}"/${P}-byteswap.patch
+	epatch "${FILESDIR}"/${P}-execinfo.patch
+	epatch "${FILESDIR}"/${P}-nls.patch
+	epatch "${FILESDIR}"/${P}-iconv.patch
 	AT_M4DIR="m4" eautoreconf
 }
 
@@ -41,16 +41,16 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc README TODO ChangeLog
 
 	insinto /usr/share/hddtemp
-	doins ${FILESDIR}/hddtemp.db
-	doins ${FILESDIR}/hddgentoo.db
+	doins "${FILESDIR}"/hddtemp.db
+	doins "${FILESDIR}"/hddgentoo.db
 
 	update_db "${D}/usr/share/hddtemp/hddgentoo.db" "${D}/usr/share/hddtemp/hddtemp.db"
-	newconfd ${FILESDIR}/hddtemp-conf.d hddtemp
-	newinitd ${FILESDIR}/hddtemp-init hddtemp
+	newconfd "${FILESDIR}"/hddtemp-conf.d hddtemp
+	newinitd "${FILESDIR}"/hddtemp-init hddtemp
 }
 
 pkg_postinst() {
@@ -74,7 +74,7 @@ update_db() {
 }
 
 pkg_config() {
-	cd ${ROOT}/usr/share/hddtemp
+	cd "${ROOT}"/usr/share/hddtemp
 
 	einfo "Trying to download the latest hddtemp.db file"
 	wget http://www.guzu.net/linux/hddtemp.db -O hddtemp.db \
