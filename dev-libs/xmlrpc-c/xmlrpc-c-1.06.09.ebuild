@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.09.ebuild,v 1.11 2008/01/20 22:13:27 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.09.ebuild,v 1.12 2008/02/03 14:55:29 philantrop Exp $
 
 inherit eutils
 
@@ -19,9 +19,6 @@ DEPEND="dev-libs/libxml2
 	curl? ( net-misc/curl )"
 
 pkg_setup() {
-	# parallel make doesn't work
-	MAKEOPTS="-j1"
-
 	if ! use curl && ! use libwww; then
 		ewarn "Neither CURL nor libwww support was selected"
 		ewarn "No client library will be be built"
@@ -47,11 +44,11 @@ src_compile() {
 		$(use_enable threads abyss-threads) \
 		$(use_enable curl curl-client) \
 		$(use_enable libwww libwww-client) || die "econf failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "installation failed"
+	emake -j1 DESTDIR="${D}" install || die "installation failed"
 
 	dodoc README doc/CREDITS doc/DEVELOPING doc/HISTORY doc/SECURITY doc/TESTING \
 		doc/TODO || die "installing docs failed"
