@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.3.ebuild,v 1.10 2008/01/29 18:19:22 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.3.ebuild,v 1.11 2008/02/03 01:12:01 eva Exp $
 EAPI="1"
 
 WANT_AUTOCONF="latest"
@@ -24,7 +24,7 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	>=gnome-extra/gtkhtml-3.14.0
 	>=dev-libs/glib-2.10
 	>=gnome-base/orbit-2.9.8
-	>=gnome-base/libbonobo-2
+	>=gnome-base/libbonobo-2.16
 	>=gnome-extra/evolution-data-server-1.10.2-r1
 	>=gnome-base/libbonoboui-2.4.2
 	>=gnome-base/gnome-vfs-2.4
