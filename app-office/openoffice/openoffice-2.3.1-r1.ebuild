@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1-r1.ebuild,v 1.1 2008/02/02 18:28:41 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1-r1.ebuild,v 1.2 2008/02/03 11:28:54 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -92,7 +92,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	>=app-text/hunspell-1.1.4-r1
 	>=app-admin/eselect-oodict-20060706
 	dev-libs/expat
-	>=dev-libs/icu-3.6
+	>=dev-libs/icu-3.8
 	>=sys-libs/db-4.3
 	>=app-text/libwpd-0.8.8
 	>=media-libs/libsvg-0.1.4
