@@ -1,9 +1,9 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/sharefonts-0.10-r1.ebuild,v 1.7 2007/07/15 05:13:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/sharefonts-0.10-r1.ebuild,v 1.8 2008/02/03 19:54:49 dirtyepic Exp $
 
 S=${WORKDIR}/sharefont
-DESCRIPTION="A Collection of True Type Fonts"
+DESCRIPTION="A Collection of Postscript Type1 Fonts"
 SRC_URI="mirror://gimp/fonts/${P}.tar.gz"
 HOMEPAGE="http://www.gimp.org/fonts.html"
 
@@ -15,8 +15,8 @@ LICENSE="public-domain"
 src_install () {
 
 	dodir /usr/X11R6/lib/X11/fonts/sharefont
-	cp -a * ${D}/usr/X11R6/lib/X11/fonts/sharefont
-	rm  ${D}/usr/X11R6/lib/X11/fonts/sharefont/README
+	cp -a * "${D}"/usr/X11R6/lib/X11/fonts/sharefont
+	rm  "${D}"/usr/X11R6/lib/X11/fonts/sharefont/README
 	dodoc README
 
 }
