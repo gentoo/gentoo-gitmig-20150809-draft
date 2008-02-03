@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-0.4.6.ebuild,v 1.1 2008/01/27 17:36:58 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-0.4.6.ebuild,v 1.2 2008/02/03 23:27:19 leio Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ IUSE="bluetooth +debug doc http +obex"
 RDEPEND=">=dev-libs/glib-2.0
 	>=dev-libs/libwbxml-0.9.2
 	dev-libs/libxml2
-	http? ( >=net-libs/libsoup-2.2.91 )
+	http? ( >=net-libs/libsoup-2.2.91:2.2 )
 	obex? ( >=dev-libs/openobex-1.1 )
 	bluetooth? ( net-wireless/bluez-libs )"
 DEPEND="${RDEPEND}
