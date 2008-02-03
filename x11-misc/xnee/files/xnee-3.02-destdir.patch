@@ -1,0 +1,14 @@
+diff -ur xnee-3.02.orig/doc/Makefile.in xnee-3.02/doc/Makefile.in
+--- xnee-3.02.orig/doc/Makefile.in	2007-10-30 10:56:57.000000000 +0200
++++ xnee-3.02/doc/Makefile.in	2008-02-03 19:48:14.000000000 +0200
+@@ -623,8 +623,8 @@
+ ${IMG_JPG}: ${IMG_EPS}
+ 
+ install: 
+-	mkdir -p $(docdir)
+-	cp $(MANUALS) $(GEN_IMAGES_TO_INSTALL)  $(docdir)/
++	mkdir -p $(DESTDIR)$(docdir)
++	cp $(MANUALS) $(GEN_IMAGES_TO_INSTALL) $(DESTDIR)$(docdir)/
+ 
+ api-doc: xnee.dox 
+ 	\rm -fr alldocs/
