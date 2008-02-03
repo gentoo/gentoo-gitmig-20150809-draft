@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/vqadmin
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/ChangeLog,v 1.7 2007/07/29 17:02:17 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/ChangeLog,v 1.8 2008/02/03 10:06:30 hollow Exp $
+
+*vqadmin-2.3.7 (03 Feb 2008)
+
+  03 Feb 2008; Benedikt Böhm <hollow@gentoo.org> +files/postinstall-en.txt,
+  vqadmin-2.3.6.ebuild, +vqadmin-2.3.7.ebuild:
+  version bump; convert to webapp; fixes #208584
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> vqadmin-2.3.6.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
