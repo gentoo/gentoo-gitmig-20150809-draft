@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.365 2008/02/03 11:17:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.366 2008/02/03 15:47:22 leio Exp $
+
+*gtk+-2.12.7 (03 Feb 2008)
+
+  03 Feb 2008; Mart Raudsepp <leio@gentoo.org> +gtk+-2.12.7.ebuild:
+  Version bump
 
   03 Feb 2008; Raúl Porcel <armin76@gentoo.org> gtk+-2.12.5-r1.ebuild:
   alpha/ia64/sparc stable wrt #208366
