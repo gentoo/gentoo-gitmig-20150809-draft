@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/jwm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.14 2007/12/09 17:59:21 coldwind Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.15 2008/02/03 17:51:08 coldwind Exp $
+
+  03 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> -jwm-0.21.ebuild,
+  -jwm-0.22.ebuild, -jwm-1.5.ebuild:
+  Remove old.
 
 *jwm-2.0.1 (09 Dec 2007)
 
