@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.4_rc2.ebuild,v 1.3 2008/02/01 10:46:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.4.ebuild,v 1.1 2008/02/03 18:22:58 ferdy Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -143,6 +143,7 @@ src_install() {
 
 	dodir /usr/share/${PN}/contrib
 	# The following are excluded:
+	# svnimport - use git-svn
 	# p4import - excluded because fast-import has a better one
 	# examples - these are stuff that is not used in Git anymore actually
 	# patches - stuff the Git guys made to go upstream to other places
@@ -203,10 +204,6 @@ pkg_postinst() {
 	echo
 	showpkgdeps git-archimport "dev-util/tla"
 	showpkgdeps git-cvsimport ">=dev-util/cvsps-2.1"
-	showpkgdeps git-svnimport \
-		"USE=perl" \
-		"dev-util/subversion(USE=perl)" \
-		"dev-perl/libwww-perl"
 	showpkgdeps git-svn \
 		"USE=perl" \
 		"dev-util/subversion(USE=perl)" \
