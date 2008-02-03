@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/tex4ht
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.16 2007/12/18 20:02:39 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.17 2008/02/03 17:06:22 opfer Exp $
+
+  03 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  tex4ht-20071024_p0140.ebuild:
+  stable x86, bug 208763
 
   18 Dec 2007; Jeroen Roovers <jer@gentoo.org> tex4ht-20071024_p0140.ebuild:
   Marked ~hppa (bug #195815).
