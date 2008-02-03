@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/yasr
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.16 2007/12/31 14:55:13 williamh Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.17 2008/02/03 20:36:09 williamh Exp $
+
+*yasr-0.6.9 (03 Feb 2008)
+
+  03 Feb 2008; William Hubbs <williamh@gentoo.org> +yasr-0.6.9.ebuild:
+  Version bump.
 
 *yasr-0.6.8 (31 Dec 2007)
 
