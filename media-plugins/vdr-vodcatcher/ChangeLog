@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-vodcatcher
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vodcatcher/ChangeLog,v 1.1 2008/02/03 22:06:17 hd_brummy Exp $
+
+*vdr-vodcatcher-0.1.1 (03 Feb 2008)
+
+  03 Feb 2008; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
+  +vdr-vodcatcher-0.1.1.ebuild:
+  initial ebuild; thanks to 'Hampelratte' on vdr-portal.de for ebuild basis
+
