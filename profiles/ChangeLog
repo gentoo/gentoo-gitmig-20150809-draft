@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1090 2008/02/03 18:25:07 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1091 2008/02/03 19:38:58 dirtyepic Exp $
+
+  03 Feb 2008; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Further cleanup of examples.
 
   03 Feb 2008; Fernando J. Pereda <ferdy@gentoo.org> package.mask:
   Remove mask for =dev-util/git-1.5.4_rc* since 1.5.4 is in the tree.
