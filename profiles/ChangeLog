@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1084 2008/02/03 09:11:07 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1085 2008/02/03 09:12:21 omp Exp $
+
+  03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
+  Remove =sys-devel/gcc-config-2.0.0_rc1 and app-admin/eselect-compiler masks.
 
   03 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
   Remove a few apache related masks.
