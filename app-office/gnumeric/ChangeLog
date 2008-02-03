@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.158 2008/02/02 15:16:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.159 2008/02/03 12:44:10 armin76 Exp $
+
+  03 Feb 2008; Raúl Porcel <armin76@gentoo.org> gnumeric-1.8.1.ebuild:
+  alpha/ia64/sparc stable wrt security #208356
 
   02 Feb 2008; Jeroen Roovers <jer@gentoo.org> gnumeric-1.8.1.ebuild:
   Stable for HPPA (bug #208356).
