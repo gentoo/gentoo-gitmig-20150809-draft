@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/ng-utils
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ng-utils/ChangeLog,v 1.1 2008/02/03 11:29:38 stefaan Exp $
+
+*ng-utils-0.6 (03 Feb 2008)
+
+  03 Feb 2008; Stefaan De Roeck <stefaan@gentoo.org> +ng-utils-0.6.ebuild:
+  Initial commit
+
