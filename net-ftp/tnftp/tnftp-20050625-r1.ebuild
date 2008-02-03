@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20050625-r1.ebuild,v 1.6 2008/01/01 19:20:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20050625-r1.ebuild,v 1.7 2008/02/03 14:20:41 grobian Exp $
 
 WANT_AUTOCONF="2.1"
 WANT_AUTOMAKE="none"
@@ -14,7 +14,7 @@ HOMEPAGE="ftp://ftp.netbsd.org/pub/NetBSD/misc/tnftp/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="alpha ~amd64 ppc ~ppc-macos sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="ipv6"
 
 DEPEND=">=sys-libs/ncurses-5.1"
