@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/udept
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/ChangeLog,v 1.10 2007/08/07 19:36:36 fuzzyray Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/ChangeLog,v 1.11 2008/02/03 07:13:03 dirtyepic Exp $
+
+  03 Feb 2008; Ryan Hill <dirtyepic@gentoo.org>
+  udept-0.5.99.0.2.95-r1.ebuild:
+  Keywording ~mips
 
   07 Aug 2007; Paul Varner <fuzzyray@gentoo.org>
   files/udept.default-use.patch:
