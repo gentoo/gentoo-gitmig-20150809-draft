@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.32.ebuild,v 1.16 2007/08/19 11:42:59 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.32.ebuild,v 1.17 2008/02/03 14:15:40 hollow Exp $
 
-inherit perl-module
+inherit depend.apache perl-module
 
 DESCRIPTION="A HTML development and delivery Perl Module"
 SRC_URI="mirror://cpan/authors/id/D/DR/DROLSKY/${P}.tar.gz"
@@ -16,7 +16,6 @@ SRC_TEST="do"
 
 DEPEND="!modperl? ( virtual/perl-CGI )
 	modperl? (
-		>=www-servers/apache-2
 		www-apache/libapreq2
 		>=www-apache/mod_perl-2
 	)
@@ -29,6 +28,8 @@ DEPEND="!modperl? ( virtual/perl-CGI )
 	>=dev-perl/Cache-Cache-1.01
 	dev-lang/perl"
 
+want_apache2 modperl
+
 mydoc="CREDITS UPGRADE"
 myconf="--noprompts"
 
@@ -40,7 +41,7 @@ perl-module_src_prep() {
 		sleep 5
 	fi
 	# rendhalver - needed to set an env var for the build script so it finds our apache.
-	APACHE="/usr/sbin/apache2" perl ${S}/Build.PL installdirs=vendor destdir=${D} ${myconf}
+	APACHE="${APACHE_BIN}" perl ${S}/Build.PL installdirs=vendor destdir=${D} ${myconf}
 }
 
 src_install () {

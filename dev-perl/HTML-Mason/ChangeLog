@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.77 2008/01/13 21:31:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.78 2008/02/03 14:15:40 hollow Exp $
+
+  03 Feb 2008; Benedikt Böhm <hollow@gentoo.org> HTML-Mason-1.32.ebuild,
+  HTML-Mason-1.33.ebuild, HTML-Mason-1.35.ebuild, HTML-Mason-1.36.ebuild,
+  HTML-Mason-1.37.ebuild:
+  use depend.apache eclass wrt #208033
 
   13 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   HTML-Mason-1.37.ebuild:
