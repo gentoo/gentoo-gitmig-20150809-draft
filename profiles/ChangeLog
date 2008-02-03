@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1087 2008/02/03 13:07:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1088 2008/02/03 14:47:54 aballier Exp $
+
+  03 Feb 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  dev-ml/equeue, netclient and rpc are now gone, remove unneeded mask
 
   03 Feb 2008; Vlastimil Babka <caster@gentoo.org> package.mask:
   Add best practices for last rites masking and an example, based on
