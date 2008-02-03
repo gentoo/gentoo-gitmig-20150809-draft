@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8229 2008/02/03 09:07:40 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8230 2008/02/03 09:09:39 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -583,11 +583,6 @@ dev-tcltk/Tk_Theme
 # broken (leads to random segfaults); masked until someone steps up to
 # maintain it or it will finally get removed
 dev-php5/php-java-bridge
-
-# Petteri Räty <betelgeuse@gentoo.org> (26 Dec 2007)
-# Has security issues.
-# https://bugs.gentoo.org/show_bug.cgi?id=203193
-=dev-java/jfreechart-0*
 
 # Raúl Porcel <armin76@gentoo.org> (24 Dec 2007)
 # Mask for removal on 24 Feb 2008 for treecleaners
