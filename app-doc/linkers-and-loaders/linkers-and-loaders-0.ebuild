@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linkers-and-loaders/linkers-and-loaders-0.ebuild,v 1.3 2007/07/02 13:43:08 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linkers-and-loaders/linkers-and-loaders-0.ebuild,v 1.4 2008/02/04 18:31:59 grobian Exp $
 
 CH="|00e |01e |02e |03e |04e |05e |06e |07e |08e |09e |10e |11e |12e"
 DESCRIPTION="the Linkers and Loaders book"
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI//|/${HOMEPAGE}linker}"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="doc"
 RESTRICT="mirror"
 
