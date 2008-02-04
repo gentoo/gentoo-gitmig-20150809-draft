@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.6.1-r1.ebuild,v 1.1 2008/02/02 16:22:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.6.1-r2.ebuild,v 1.1 2008/02/04 09:18:42 opfer Exp $
 
 inherit eutils
 
@@ -29,7 +29,12 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	# bug 195429
+	epatch "${FILESDIR}/${P}-segfault_delete.patch"
+	# bug 208524
 	epatch "${FILESDIR}/${P}-refresh_screen.patch"
+	# on user request
+	epatch "${FILESDIR}/${P}-vi_movement.patch"
 }
 src_compile() {
 	einfo "Nothing to compile"

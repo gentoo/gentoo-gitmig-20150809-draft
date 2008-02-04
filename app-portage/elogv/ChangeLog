@@ -1,6 +1,17 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.26 2008/02/02 16:22:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.27 2008/02/04 09:18:42 opfer Exp $
+
+*elogv-0.6.1-r2 (04 Feb 2008)
+
+  04 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  files/elogv-0.6.1-refresh_screen.patch,
+  +files/elogv-0.6.1-segfault_delete.patch,
+  +files/elogv-0.6.1-vi_movement.patch, -elogv-0.6.1-r1.ebuild,
+  +elogv-0.6.1-r2.ebuild:
+  rework fix for segfault, thanks Michał Kiedrowicz <esqualante AT o2 DOT pl>
+  for providing the better fix; split up fixes for two separate bugs in two
+  separate patches; add Vi like movement keys; clean old revision
 
 *elogv-0.6.1-r1 (02 Feb 2008)
 

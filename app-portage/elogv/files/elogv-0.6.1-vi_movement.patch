@@ -1,0 +1,30 @@
+--- elogv.py.orig	2008-02-04 09:56:41.000000000 +0100
++++ elogv.py	2008-02-04 10:03:16.000000000 +0100
+@@ -33,10 +33,10 @@
+ Elogv is a portage elog viewer based on curses and python,
+ you can use these keys to control the behavior of the program:
+ 
+- - Down arrow -> Scroll the list of files down by 1 unit
+- - Up arrow -> opposite of Down arrow
+- - Pag Down -> Scroll the list down by 10 unit
+- - Pag Up -> opposite of Pag Down
++ - Down arrow or k -> Scroll the list of files down by 1 unit
++ - Up arrow or j -> opposite of Down arrow
++ - PageDown -> Scroll the list down by 10 unit
++ - PageUp -> opposite of Pag Down
+  - End -> Go to the last file of the list
+  - Home -> Go to the first file of the list
+  - t -> order the list of files by date, most recent on top
+@@ -108,10 +108,10 @@
+                 sys.exit()
+             
+             ## Scrolling keys ##
+-            elif c == curses.KEY_DOWN:
++            elif c == curses.KEY_DOWN or c == ord("k"):
+                 self.change_usel(1)
+                 
+-            elif c == curses.KEY_UP:
++            elif c == curses.KEY_UP or c == ord("j"):
+                 self.change_usel(-1)
+ 
+             elif c == curses.KEY_NPAGE:
