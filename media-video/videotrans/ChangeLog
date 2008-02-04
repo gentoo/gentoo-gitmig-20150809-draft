@@ -1,6 +1,12 @@
 # ChangeLog for media-video/videotrans
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/ChangeLog,v 1.5 2007/09/07 12:12:28 sbriesen Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/ChangeLog,v 1.6 2008/02/04 00:58:17 sbriesen Exp $
+
+*videotrans-1.6.0 (04 Feb 2008)
+
+  04 Feb 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  +videotrans-1.6.0.ebuild:
+  version bump.
 
 *videotrans-1.5.3 (07 Sep 2007)
 
