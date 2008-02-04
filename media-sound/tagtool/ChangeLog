@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tagtool
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.27 2008/02/01 20:30:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.28 2008/02/04 21:39:25 drac Exp $
+
+  04 Feb 2008; Samuli Suominen <drac@gentoo.org> tagtool-0.12.3.ebuild:
+  Fix USE flag handling, again.
 
   01 Feb 2008; Samuli Suominen <drac@gentoo.org> tagtool-0.12.3.ebuild:
   If both USE flags are disabled, enable vorbis so emerge doesn't stop wrt
