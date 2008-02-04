@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/megamek-0.32.2.ebuild,v 1.1 2007/08/26 13:02:13 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/megamek-0.32.2.ebuild,v 1.2 2008/02/04 18:52:39 nyhm Exp $
 
 inherit java-pkg-2 java-ant-2 games
 
