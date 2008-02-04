@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/libqalculate
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.24 2007/10/19 20:14:56 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.25 2008/02/04 11:51:34 markusle Exp $
+
+*libqalculate-0.9.6-r1 (02 Feb 2008)
+
+  02 Feb 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/libqalculate-0.9.6-cl_abort.patch,
+  +files/libqalculate-0.9.6-cln-config.patch, +libqalculate-0.9.6-r1.ebuild:
+  Added patches to allow compilation against cln-1.2 (see bug #208527).
 
   19 Oct 2007; nixnut <nixnut@gentoo.org> libqalculate-0.9.6.ebuild:
   Stable on ppc wrt bug 193455
