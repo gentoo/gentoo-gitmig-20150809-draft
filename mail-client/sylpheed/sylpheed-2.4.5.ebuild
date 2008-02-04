@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.4.5.ebuild,v 1.8 2007/09/16 16:27:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.4.5.ebuild,v 1.9 2008/02/04 16:24:11 hattya Exp $
 
 inherit autotools eutils
 
@@ -14,15 +14,17 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 SLOT="0"
 
-DEPEND=">=x11-libs/gtk+-2.4
+COMMON_DEPEND=">=x11-libs/gtk+-2.4
 	nls? ( >=sys-devel/gettext-0.12.1 )
 	crypt? ( >=app-crypt/gpgme-0.4.5 )
 	ldap? ( >=net-nds/openldap-2.0.11 )
 	pda? ( app-pda/jpilot )
 	spell? ( app-text/gtkspell )
-	ssl? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl )"
+DEPEND="${COMMON_DEPEND}
+	dev-util/pkgconfig
 	xface? ( >=media-libs/compface-1.4 )"
-RDEPEND="${DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
 
