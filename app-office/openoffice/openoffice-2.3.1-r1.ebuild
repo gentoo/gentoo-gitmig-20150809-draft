@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1-r1.ebuild,v 1.3 2008/02/04 14:39:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1-r1.ebuild,v 1.4 2008/02/04 14:43:55 opfer Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -351,7 +351,7 @@ src_install() {
 	chown -R root:0 "${D}"
 
 	# record java libraries
-	use java && java-pkg_regjar ${D}/usr/$(get_libdir)/openoffice/program/classes/*.jar
+	use java && java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/program/classes/*.jar
 
 }
 
