@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.15.3.ebuild,v 1.14 2004/11/08 21:36:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.15.3.ebuild,v 1.15 2008/02/04 03:58:43 nerdboy Exp $
 
 inherit eutils
 
@@ -19,10 +19,10 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/cmd-line-fix.diff
+	epatch "${FILESDIR}"/cmd-line-fix.diff
 
 	#gcc-3.4 fix
-	epatch ${FILESDIR}/${PN}-gcc34.patch
+	epatch "${FILESDIR}"/${PN}-gcc34.patch
 }
 
 src_compile() {
