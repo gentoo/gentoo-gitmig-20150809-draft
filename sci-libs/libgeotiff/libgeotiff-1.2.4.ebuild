@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.4.ebuild,v 1.2 2007/09/01 20:10:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.4.ebuild,v 1.3 2008/02/04 16:44:05 nerdboy Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -20,11 +20,16 @@ DEPEND="virtual/libc
 
 WANT_AUTOCONF="latest"
 
-src_compile() {
-	epatch ${FILESDIR}/${P}-soname.patch || die "epatch failed"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-soname.patch || die "epatch failed"
 	filter-ldflags "-Wl,-O1"
 	eautoconf
+}
 
+src_compile() {
 	econf || die "econf failed"
 	emake -j1 || die "emake failed"
 
@@ -37,8 +42,8 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	exeinto /usr/bin
-	doexe bin/makegeo
-	use python && doexe csv/*.py
+	doexe bin/makegeo || die "doexe makegeo failed"
+	use python && doexe csv/*.py || die "doexe python failed"
 
 	dodoc README
 	newdoc csv/README README.csv

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libgeotiff
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.16 2007/09/01 20:10:31 nerdboy Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.17 2008/02/04 16:44:05 nerdboy Exp $
+
+  04 Feb 2008; Steve Arnold <nerdboy@gentoo.org> libgeotiff-1.2.4.ebuild:
+  Added src_unpack to make portage and Diego Petten <flameeyes@gentoo.org>
+  happy...
 
   01 Sep 2007; Steve Arnold <nerdboy@gentoo.org> libgeotiff-1.2.4.ebuild:
   updated use doc construct to fix borkage...
