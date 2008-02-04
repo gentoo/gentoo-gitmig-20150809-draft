@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libgeotiff
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.20 2008/02/04 17:37:44 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.21 2008/02/04 17:58:01 drac Exp $
+
+  04 Feb 2008; Samuli Suominen <drac@gentoo.org> libgeotiff-1.2.4.ebuild:
+  Fix installing with USE -python, was skipping straight to die. Replace
+  filter-ldflags -Wl,-O1 with append-ldflags -Wl,-O0.
 
   04 Feb 2008; Steve Arnold <nerdboy@gentoo.org>
   files/libgeotiff-1.2.4-soname.patch:
