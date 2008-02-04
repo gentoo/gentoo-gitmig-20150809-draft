@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/phpwiki
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/ChangeLog,v 1.23 2007/08/30 14:25:50 wrobel Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/ChangeLog,v 1.24 2008/02/04 08:30:59 hollow Exp $
+
+  04 Feb 2008; Benedikt Böhm <hollow@gentoo.org> phpwiki-1.3.14.ebuild:
+  merge from webapps overlay wrt #208584
+
+  02 Feb 2008; Jakub Moc <jakub@gentoo.org> phpwiki-1.3.14.ebuild:
+  Remove apache dependency wrt Bug 208584. Move php checks to pkg_setup where
+  they belong, and fix them up. Add use flags for databases. Fix quoting,
+  clean up the ebuild.
 
   30 Aug 2007; <wrobel@gentoo.org> -files/phpwiki-1.3.10-xmlrpc.patch,
   metadata.xml, -phpwiki-1.3.10-r3.ebuild, -phpwiki-1.3.13_rc1.ebuild:
