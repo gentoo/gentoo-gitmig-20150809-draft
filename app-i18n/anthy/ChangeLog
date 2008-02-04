@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.115 2008/02/04 16:47:39 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.116 2008/02/04 16:52:38 hattya Exp $
+
+*anthy-9100e (04 Feb 2008)
+
+  04 Feb 2008; Akinori Hattori <hattya@gentoo.org> +anthy-9100e.ebuild:
+  new upstream release.
 
   04 Feb 2008; Akinori Hattori <hattya@gentoo.org> -anthy-8700b.ebuild,
   -anthy-9100.ebuild, -anthy-9100b.ebuild, -anthy-9100c.ebuild:
