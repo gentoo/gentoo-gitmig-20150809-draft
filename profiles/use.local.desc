@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3344 2008/02/04 06:47:27 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3345 2008/02/04 19:35:02 calchan Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1822,6 +1822,7 @@ sci-chemistry/gromacs:double-precision - more precise calculations at the expens
 sci-chemistry/jmol:client-only - Install the viewer only, no applet files for httpd.
 sci-chemistry/shelx:dosformat - Use CR/LF to end lines; useful in mixed Linux/Windows environments
 sci-electronics/gerbv:unit-mm - Set default unit for coordinates in status bar to mm
+sci-electronics/pcb:xrender - Add support for xrender
 sci-geosciences/gmt:gmtfull - Full resolution bathymetry database
 sci-geosciences/gmt:gmthigh - Adds high resolution bathymetry database
 sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT
