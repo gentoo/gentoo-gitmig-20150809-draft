@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/diasce
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/ChangeLog,v 1.12 2007/06/28 19:54:00 eva Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/ChangeLog,v 1.13 2008/02/04 20:59:08 armin76 Exp $
+
+  04 Feb 2008; Raúl Porcel <armin76@gentoo.org> -diasce-1.2.ebuild,
+  diasce-1.4.ebuild:
+  x86 stable, remove old, add missing libgnomeprintui DEPEND
 
   28 Jun 2007; Gilles Dartiguelongue <eva@gentoo.org> diasce-1.4.ebuild:
   removing linc dependency since it's dead upstream and can be replaced by

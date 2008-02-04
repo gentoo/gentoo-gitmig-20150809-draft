@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.4.ebuild,v 1.12 2007/06/28 19:54:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.4.ebuild,v 1.13 2008/02/04 20:59:08 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/diasce/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="nls"
 
 RDEPEND=">=dev-libs/libxml2-2.4
@@ -25,7 +25,8 @@ RDEPEND=">=dev-libs/libxml2-2.4
 	>=gnome-base/libbonoboui-2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/gconf-1.2
-	>=gnome-base/libgnomecanvas-2"
+	>=gnome-base/libgnomecanvas-2
+	>=gnome-base/libgnomeprintui-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=gnome-base/orbit-2.8
@@ -33,8 +34,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-linc.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-linc.patch
 }
 
 src_compile() {
