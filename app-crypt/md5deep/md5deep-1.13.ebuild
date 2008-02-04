@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-1.13.ebuild,v 1.5 2007/09/28 21:48:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-1.13.ebuild,v 1.6 2008/02/04 20:22:20 grobian Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/md5deep/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc-macos sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 src_unpack() {
