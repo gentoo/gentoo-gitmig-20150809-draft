@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.110 2008/02/03 20:40:35 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.111 2008/02/04 03:49:06 jer Exp $
+
+  04 Feb 2008; Jeroen Roovers <jer@gentoo.org> gnome-speech-0.4.17.ebuild:
+  Stable for HPPA (bug #208366).
 
   03 Feb 2008; Mart Raudsepp <leio@gentoo.org> gnome-speech-0.4.18.ebuild:
   Advertise orca as a frontend instead of gnopernicus
