@@ -86,7 +86,7 @@
 +
 +const char program_name[] = "pcimodules";
 +
-+#define OPT_STRING "h"
++#define OPT_STRING "hcm"
 +static struct option long_options[] = {
 +	{"class",	required_argument,	NULL, 'c'},
 +	{"classmask",	required_argument,	NULL, 'm'},
