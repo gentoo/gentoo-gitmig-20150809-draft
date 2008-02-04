@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.16.ebuild,v 1.1 2007/12/22 03:54:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.17.ebuild,v 1.1 2008/02/04 16:27:38 matsuu Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -36,7 +36,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-multilib.patch
+	epatch "${FILESDIR}"/${PN}-8.4.16-multilib.patch
 
 	# Bug 125971
 	epatch "${FILESDIR}"/${PN}-8.4.15-tclm4-soname.patch
