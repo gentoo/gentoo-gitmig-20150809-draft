@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/xoops
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/ChangeLog,v 1.16 2007/07/29 17:42:53 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/ChangeLog,v 1.17 2008/02/04 08:38:19 hollow Exp $
+
+  04 Feb 2008; Benedikt Böhm <hollow@gentoo.org> xoops-2.2.4.ebuild:
+  merge from webapps overlay wrt #208584
+
+  02 Feb 2008; Jakub Moc <jakub@gentoo.org> xoops-2.2.4.ebuild:
+  Remove apache dependency wrt Bug 208584, check for required PHP features.
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> xoops-2.2.4.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
