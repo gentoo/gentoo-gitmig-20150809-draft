@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/Geo-IP-1.28.ebuild,v 1.5 2008/01/13 21:28:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/Geo-IP-1.28.ebuild,v 1.6 2008/02/04 02:51:46 jer Exp $
 
 inherit perl-module multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/T/TJ/TJMATHER/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-libs/geoip
