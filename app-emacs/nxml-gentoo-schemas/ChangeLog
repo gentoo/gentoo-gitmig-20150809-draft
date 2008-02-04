@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/nxml-gentoo-schemas
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.8 2007/12/01 15:56:18 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.9 2008/02/04 19:11:31 flameeyes Exp $
+
+*nxml-gentoo-schemas-20080204 (04 Feb 2008)
+
+  04 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  -nxml-gentoo-schemas-20071122-r1.ebuild,
+  +nxml-gentoo-schemas-20080204.ebuild:
+  Update schemas, and fix news items schema detection reported by Donnie.
 
   01 Dec 2007; Ulrich Mueller <ulm@gentoo.org>
   files/60nxml-gentoo-schemas-gentoo.el,
