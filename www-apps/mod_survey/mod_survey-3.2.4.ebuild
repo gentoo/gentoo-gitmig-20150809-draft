@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/mod_survey-3.2.4.ebuild,v 1.4 2008/02/04 08:24:04 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/mod_survey-3.2.4.ebuild,v 1.5 2008/02/04 09:05:30 hollow Exp $
 
 inherit webapp
 
@@ -81,6 +81,7 @@ src_install() {
 	dodoc README.txt docs/*
 
 	perl installer.pl < /dev/null > /dev/null 2>&1
+	dosed /usr/lib/mod_survey/survey.conf
 	dosed "s|/usr/lib/mod_survey/data/|/var/lib/mod_survey/data/|" /usr/lib/mod_survey/survey.conf
 
 	mv "${D}"/usr/lib/mod_survey/survey.conf "${D}"/${MY_HOSTROOTDIR}/${PN}
