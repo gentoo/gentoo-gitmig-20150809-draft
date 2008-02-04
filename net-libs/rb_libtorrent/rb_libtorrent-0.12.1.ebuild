@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.12.1.ebuild,v 1.1 2008/02/04 13:52:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.12.1.ebuild,v 1.2 2008/02/04 15:32:19 cla Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/libtorrent/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND="dev-libs/boost
