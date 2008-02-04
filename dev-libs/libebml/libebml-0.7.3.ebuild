@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.3.ebuild,v 1.12 2006/03/06 13:40:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.3.ebuild,v 1.13 2008/02/04 20:34:14 grobian Exp $
 
 IUSE=""
 
@@ -12,22 +12,13 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
 	epatch ${FILESDIR}/libebml-shared2.patch
-
-	if use ppc-macos; then
-		sed -i \
-			-e 's/\.so/\.dylib/g' \
-			-e 's/\.dylib.0/\.0.dylib/g' \
-			-e 's/$(CXX) -shared -Wl,-soname,$(LIBRARY_SO_VER)/$(LD)/' \
-			-e 's/LD=$(CXX)/LD=libtool/' ${S}/make/linux/Makefile \
-				|| die "sed Makefile failed"
-	fi
 }
 
 src_compile() {
