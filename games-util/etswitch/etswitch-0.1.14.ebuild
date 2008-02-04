@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/etswitch/etswitch-0.1.14.ebuild,v 1.1 2008/02/04 21:27:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/etswitch/etswitch-0.1.14.ebuild,v 1.2 2008/02/04 21:29:17 drac Exp $
 
 inherit eutils games
 
@@ -35,6 +35,7 @@ src_compile() {
 }
 
 src_install() {
+	prepgamesdirs
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 }
