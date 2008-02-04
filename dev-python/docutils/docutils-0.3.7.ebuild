@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.7.ebuild,v 1.18 2007/07/04 19:38:17 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.7.ebuild,v 1.19 2008/02/04 15:28:03 hawking Exp $
 
 inherit distutils eutils elisp-common multilib
 
@@ -23,7 +23,7 @@ GLEP_SRC=${WORKDIR}/glep-${PV}
 src_unpack() {
 	unpack ${A}
 	# simplified algorithm to select installing optparse and textwrap
-	epatch ${FILESDIR}/${P}-extramodules.patch
+	epatch "${FILESDIR}"/${P}-extramodules.patch
 }
 
 src_compile() {
@@ -45,22 +45,21 @@ install_txt_doc() {
 }
 
 src_test() {
-	cd ${S}/test
+	cd "${S}"/test
 	PYTHONPATH="${S}" ./alltests.py || die "alltests.py failed"
 }
 
 src_install() {
-	cd ${S}
 	DOCS="*.txt"
 	distutils_src_install
 	# Tools
-	cd ${S}/tools
+	cd "${S}"/tools
 	for tool in *.py
 	do
 		newbin ${tool} docutils-${tool}
 	done
 	# Docs
-	cd ${S}
+	cd "${S}"
 	dohtml -r docs spec tools
 	for doc in $(find docs spec tools -name '*.txt')
 	do
@@ -82,7 +81,7 @@ src_install() {
 
 	if use emacs; then
 		elisp-install ${PN} tools/editors/emacs/*.{elc,el}
-		elisp-site-file-install ${FILESDIR}/${SITEFILE}
+		elisp-site-file-install "${FILESDIR}"/${SITEFILE}
 	fi
 }
 
