@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.4.ebuild,v 1.3 2008/01/06 23:53:26 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.4.ebuild,v 1.4 2008/02/04 18:46:17 nyhm Exp $
 
 inherit autotools eutils games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/smclone/${MY_P}.tar.bz2
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-games/cegui-0.5
