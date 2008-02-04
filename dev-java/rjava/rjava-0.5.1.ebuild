@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rjava/rjava-0.5.1.ebuild,v 1.1 2007/10/01 04:42:43 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rjava/rjava-0.5.1.ebuild,v 1.2 2008/02/04 03:41:10 nerdboy Exp $
 
 JAVA_PKG_IUSE="examples"
 
@@ -50,7 +50,7 @@ src_compile() {
 	# use R's check command to test package (really needs to come before
 	# the src_compile section)
 	if has test ${FEATURES}; then
-	    cd ${WORKDIR}
+	    cd "${WORKDIR}"
 	    R CMD check ${MY_PN}
 	fi
 
@@ -58,16 +58,17 @@ src_compile() {
 	local my_conf="--enable-jri"
 	econf ${my_conf} || die "econf failed"
 	cd src/
+	# emake bombs here
 	make -f Makevars all || die "make failed"
 }
 
 src_install() {
 	export R_LIBS_SITE="${R_HOME}/site-library"
 	keepdir ${R_LIBS_SITE}
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	R CMD INSTALL --no-configure -l "${D}${R_LIBS_SITE}" ${MY_PN} \
 	    || die "install failed"
-	cd ${S}
+	cd "${S}"
 
 	local jri_dir="/usr/$(get_libdir)/jri"
 	java-pkg_jarinto ${jri_dir}
@@ -75,7 +76,7 @@ src_install() {
 
 	insinto ${jri_dir}
 	insopts -m0755
-	doins inst/jri/libjri.so
+	doins inst/jri/libjri.so || die "libjri install failed"
 	java-pkg_regso "${D}${jri_dir}/libjri.so"
 
 	echo "R_HOME=${R_HOME}">25rjava
@@ -97,7 +98,7 @@ setup-jvm-opts() {
 	# stolen from eclipse-sdk ebuild
 	local bp="$(java-config --jdk-home)/jre/lib"
 	local bootclasspath=$(java-config --runtime)
-	if [[ ! -z "`java-config --java-version | grep IBM`" ]] ; then
+	if java-config --java-version | grep -q IBM ; then
 		# IBM JDK
 		JAVA_LIB_DIR="$(java-config --jdk-home)/jre/bin"
 	else
