@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-3.9.10.ebuild,v 1.9 2007/01/31 04:48:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-3.9.10.ebuild,v 1.10 2008/02/04 22:22:28 vapier Exp $
 
 DESCRIPTION="utilities to access MS-DOS disks from Unix without mounting them"
 HOMEPAGE="http://mtools.linux.lu/"
@@ -11,11 +11,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
 IUSE="X"
 
-DEPEND="X? ( x11-libs/libICE
-	x11-libs/libXau
-	x11-libs/libSM
-	x11-libs/libX11
-	x11-libs/libXt )"
+DEPEND="
+	X? (
+		x11-libs/libICE
+		x11-libs/libXau
+		x11-libs/libSM
+		x11-libs/libX11
+		x11-libs/libXt
+	)"
 
 src_compile() {
 	econf \
@@ -28,6 +31,6 @@ src_compile() {
 src_install() {
 	einstall sysconfdir="${D}"/etc/mtools || die
 	insinto /etc/mtools
-	newins mtools.conf mtools.conf.example
+	doins mtools.conf || die
 	dodoc Changelog README* Release.notes
 }
