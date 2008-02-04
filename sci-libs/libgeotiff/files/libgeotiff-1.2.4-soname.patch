@@ -5,7 +5,7 @@
  	          GEOTIFF_IMP=libgeotiff.dll.a
                    LD_SHARED="gcc -shared -Wl,--export-all -Wl,--out-implib=\$(GEOTIFF_IMP)" ;;
 -    *) GEOTIFF_SO=libgeotiff.${SO_EXT}.$VERSION_MAJOR.$VERSION_MINOR.$VERSION_POINT ;;
-+    *) GEOTIFF_SO=libgeotiff.${SO_EXT}.$VERSION_MAJOR.$VERSION_MINOR.$VERSION_POINT
++    *) GEOTIFF_SO=libgeotiff.${SO_EXT}.$VERSION_MAJOR.$VERSION_MINOR
 +	LD_SHARED="gcc -shared -Wl,-soname -Wl,$GEOTIFF_SO" ;;
    esac
  fi
