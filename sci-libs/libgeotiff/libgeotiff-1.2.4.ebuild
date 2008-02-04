@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.4.ebuild,v 1.3 2008/02/04 16:44:05 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.4.ebuild,v 1.4 2008/02/04 16:58:56 nerdboy Exp $
+
+WANT_AUTOCONF="latest"
 
 inherit autotools eutils flag-o-matic
 
@@ -18,8 +20,6 @@ DEPEND="virtual/libc
 	sci-libs/proj
 	doc? ( app-doc/doxygen )"
 
-WANT_AUTOCONF="latest"
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -34,7 +34,7 @@ src_compile() {
 	emake -j1 || die "emake failed"
 
 	if use doc; then
-	    make dox || die "make dox failed"
+	    emake dox || die "emake dox failed"
 	fi
 }
 
