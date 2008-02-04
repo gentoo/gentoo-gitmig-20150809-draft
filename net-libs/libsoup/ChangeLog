@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.139 2008/02/03 11:19:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.140 2008/02/04 04:15:26 jer Exp $
+
+  04 Feb 2008; Jeroen Roovers <jer@gentoo.org> libsoup-2.2.104.ebuild:
+  Stable for HPPA (bug #208366).
 
   03 Feb 2008; Raúl Porcel <armin76@gentoo.org> libsoup-2.2.104.ebuild:
   alpha/ia64/sparc stable wrt #208366
