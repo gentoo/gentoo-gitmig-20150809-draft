@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8239 2008/02/03 19:38:58 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8240 2008/02/04 09:26:23 phosphan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1341,10 +1341,6 @@ app-crypt/cli-crypt
 ~net-dns/bind-tools-9.2.7
 ~net-dns/bind-9.3.3
 ~net-dns/bind-tools-9.3.3
-
-# Patrick Kursawe <phosphan@gentoo.org> (06 Dec 2006)
-# Only partially working, see bug #153667
-media-tv/nuppelvideo
 
 # Timothy Redaelli <drizzt@gentoo.org> (28 Nov 2006)
 # Masked for testing.
