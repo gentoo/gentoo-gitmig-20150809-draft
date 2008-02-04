@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.17 2007/07/12 02:25:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.18 2008/02/04 20:38:41 grobian Exp $
 
 inherit eutils distutils multilib python versionator check-reqs
 
@@ -59,15 +59,9 @@ pkg_setup() {
 		arch=${ARCH}
 	fi
 
-	if use ppc-macos ; then
-		BOOST_TOOLSET="darwin"
-		TOOLSET_NAME="darwin"
-		SOSUFFIX="dylib"
-	else
-		BOOST_TOOLSET="gcc"
-		TOOLSET_NAME="gcc"
-		SOSUFFIX="so"
-	fi
+	BOOST_TOOLSET="gcc"
+	TOOLSET_NAME="gcc"
+	SOSUFFIX="so"
 
 	BUILD="release <runtime-link>dynamic"
 
