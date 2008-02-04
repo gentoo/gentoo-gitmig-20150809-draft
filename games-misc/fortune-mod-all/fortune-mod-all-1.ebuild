@@ -1,14 +1,14 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/fortune-mod-all-1.ebuild,v 1.11 2006/08/19 22:29:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/fortune-mod-all-1.ebuild,v 1.12 2008/02/04 19:34:35 nyhm Exp $
 
-DESCRIPTION="Meta package for all fortune-mod packages."
+DESCRIPTION="Meta package for all fortune-mod packages"
 HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="offensive"
+IUSE="linguas_cs linguas_de linguas_it linguas_sk offensive"
 
 RDEPEND="games-misc/fortune-mod
 	linguas_cs? ( games-misc/fortune-mod-cs )
