@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.59 2008/01/19 13:59:12 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.60 2008/02/04 14:11:41 cla Exp $
+
+*kvirc-3.2.6_pre20080204 (04 Feb 2008)
+
+  04 Feb 2008; Dawid Węgliński <cla@gentoo.org>
+  +kvirc-3.2.6_pre20080204.ebuild:
+  Version bump. Thanks to Ivan Mironov <mironov.ivan@gmail.com> from bug #207359
 
   19 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   kvirc-3.2.6_pre20070714.ebuild, kvirc-9999.ebuild:
