@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20080130.ebuild,v 1.1 2008/01/30 15:05:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20080204.ebuild,v 1.1 2008/02/04 16:51:50 armin76 Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -109,5 +109,6 @@ src_install() {
 		if use remote; then
 				newconfd "${FILESDIR}"/amuleweb.confd amuleweb
 				newinitd "${FILESDIR}"/amuleweb.initd amuleweb
+				make_desktop_entry amulegui "aMule Remote" amule "Network;P2P"
 		fi
 }
