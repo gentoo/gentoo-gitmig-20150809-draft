@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/alephone
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.20 2007/08/31 16:09:32 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.21 2008/02/04 22:32:29 mr_bones_ Exp $
+
+*alephone-20071103 (04 Feb 2008)
+
+  04 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +alephone-20071103.ebuild:
+  version bump
 
 *alephone-20070819 (31 Aug 2007)
 
