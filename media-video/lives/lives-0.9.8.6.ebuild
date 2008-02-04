@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.8.6.ebuild,v 1.2 2007/11/27 14:14:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.8.6.ebuild,v 1.3 2008/02/04 01:07:20 lu_zero Exp $
 
 inherit flag-o-matic
 
@@ -33,7 +33,7 @@ DEPEND=">=media-video/mplayer-0.90-r2
 					media-libs/libmatroska )
 		ogg? ( media-sound/ogmtools )
 		>=media-video/mjpegtools-1.6.2
-		libvisual? ( =media-libs/libvisual-0.2* )
+		libvisual? ( media-libs/libvisual )
 		media-sound/jack-audio-connection-kit
 		sox? ( media-sound/sox )
 		sys-libs/libavc1394"
