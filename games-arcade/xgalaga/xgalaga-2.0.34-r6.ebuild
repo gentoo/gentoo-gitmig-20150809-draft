@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/xgalaga-2.0.34-r6.ebuild,v 1.4 2006/12/01 20:27:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/xgalaga-2.0.34-r6.ebuild,v 1.5 2008/02/04 15:16:21 nyhm Exp $
 
 inherit eutils games
 
 DEB_VER=30
-DESCRIPTION="Galaga game clone."
+DESCRIPTION="A Galaga clone with additional features"
 HOMEPAGE="http://rumsey.org/xgal.html"
 SRC_URI="http://http.us.debian.org/debian/pool/main/x/${PN}/${PN}_${PV}.orig.tar.gz
 	mirror://debian/pool/main/x/${PN}/${PN}_${PV}-${DEB_VER}.diff.gz"
@@ -15,16 +15,17 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="x11-libs/libX11
+RDEPEND="x11-libs/libX11
 	x11-libs/libXmu
 	x11-libs/libXpm
-	x11-proto/xproto
 	x11-libs/libXext
 	x11-libs/libXt"
+DEPEND="${RDEPEND}
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-xpaths.patch #79496
 	epatch "${WORKDIR}"/${PN}_${PV}-${DEB_VER}.diff
 	sed -i \
@@ -38,7 +39,7 @@ src_unpack() {
 
 src_compile() {
 	egamesconf || die
-	emake CPPFLAGS="-D__NO_STRING_INLINES" || die "compile problem"
+	emake CPPFLAGS="-D__NO_STRING_INLINES" || die "emake failed"
 }
 
 src_install() {
@@ -52,10 +53,8 @@ src_install() {
 	insinto "${GAMES_DATADIR}/${PN}/levels"
 	doins levels/*.xgl || die "doins failed"
 
-	insinto /usr/share/pixmaps
-	doins xgalaga-icon.xpm || die "doins failed"
-
-	make_desktop_entry xgalaga xgalaga xgalaga-icon.xpm
+	newicon xgalaga-icon.xpm ${PN}.xpm
+	make_desktop_entry ${PN} XGalaga
 
 	dodir "${GAMES_STATEDIR}/${PN}"
 	touch "${D}${GAMES_STATEDIR}/${PN}/scores"
