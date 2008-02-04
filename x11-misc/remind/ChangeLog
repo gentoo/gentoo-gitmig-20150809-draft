@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/remind
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.23 2007/10/17 15:25:03 tove Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.24 2008/02/04 13:07:51 tove Exp $
+
+*remind-03.01.04 (04 Feb 2008)
+
+  04 Feb 2008; Torsten Veller <tove@gentoo.org> +remind-03.01.04.ebuild:
+  Version bump.
 
 *remind-03.01.03 (17 Oct 2007)
 
