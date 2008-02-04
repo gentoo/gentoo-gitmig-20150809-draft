@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.162 2008/02/03 11:27:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.163 2008/02/04 04:22:36 jer Exp $
+
+  04 Feb 2008; Jeroen Roovers <jer@gentoo.org> gnome-terminal-2.18.4.ebuild:
+  Stable for HPPA (bug #208366).
 
   03 Feb 2008; Raúl Porcel <armin76@gentoo.org>
   gnome-terminal-2.18.4.ebuild:
