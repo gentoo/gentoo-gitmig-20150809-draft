@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.4.ebuild,v 1.9 2008/01/12 20:46:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.4.ebuild,v 1.10 2008/02/04 20:31:36 grobian Exp $
 
 inherit eutils autotools
 
@@ -13,11 +13,6 @@ KEYWORDS="amd64 ~hppa ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
-
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}"/${P}-ppc-macos.patch
-}
 
 src_compile() {
 	AT_M4DIR=m4 eautoreconf
