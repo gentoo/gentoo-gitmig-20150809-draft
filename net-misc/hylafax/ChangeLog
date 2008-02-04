@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/hylafax
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.78 2007/10/17 21:19:36 nerdboy Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.79 2008/02/04 09:49:06 opfer Exp $
+
+  04 Feb 2008; Christian Faulhammer <opfer@gentoo.org> hylafax-4.3.1.ebuild:
+  revamp logic to pkg_setup(); add another built_with_use check for USE=fax on
+  net-dialup/mgetty
 
   17 Oct 2007; Steve Arnold <nerdboy@gentoo.org> hylafax-4.2.5.ebuild,
   hylafax-4.3.0.ebuild, hylafax-4.3.1.ebuild:

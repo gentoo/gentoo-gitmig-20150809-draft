@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.1.ebuild,v 1.7 2007/10/17 21:19:36 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.1.ebuild,v 1.8 2008/02/04 09:49:06 opfer Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -29,12 +29,19 @@ RDEPEND="${DEPEND}
 
 export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc /usr/lib/fax"
 
-src_compile() {
+pkg_setup() {
 	if use faxonly; then
 		if use mgetty; then
-			eerror "You cannot set both faxonly and mgetty, please remove one." && die "invalid use flags"
+			eerror "You cannot set both faxonly and mgetty, please remove one."
+			die "invalid USE flags"
 		fi
 	fi
+
+	if built_with_use --missing true net-dialup/mgetty fax; then
+		eerror "net-dialup/mgetty must be installed without USE=fax"
+		die "merge net-dialup/mgetty without USE=fax"
+	fi
+
 	if use jbig; then
 		einfo       "Checking for tiff compiled with jbig support..."
 		if built_with_use media-libs/tiff jbig; then
@@ -45,7 +52,9 @@ src_compile() {
 			die "Tiff not merged with jbig USE flag"
 		fi
 	fi
+}
 
+src_compile() {
 	# Hylafax doesn't play nice with gcc-3.4 and SSP (bug #74457)
 	# so drop the flags until a better solution comes along
 	[ $(gcc-major-version) -eq 3 ] && [ $(gcc-minor-version) -ge 4 ] \
@@ -97,7 +106,7 @@ src_compile() {
 	fi
 
 	use faxonly && my_conf="${my_conf} --with-PATH_GETTY=/bin/false
-	                                  --with-PATH_VGETTY=/bin/false"
+									  --with-PATH_VGETTY=/bin/false"
 	#--enable-pam isn't valid
 	use pam || my_conf="${my_conf} $(use_enable pam)"
 
@@ -132,7 +141,7 @@ src_install() {
 	keepdir /var/spool/fax/{status,sendq,log,info,doneq,docq,dev}
 
 	dosed "s:hostname:hostname -f:g" \
-	    /var/spool/fax/bin/{faxrcvd,pollrcvd} || die "dosed failed"
+		/var/spool/fax/bin/{faxrcvd,pollrcvd} || die "dosed failed"
 
 	einfo "Adding env.d entry for Hylafax"
 	newenvd "${FILESDIR}/99hylafax-4.2" 99hylafax
