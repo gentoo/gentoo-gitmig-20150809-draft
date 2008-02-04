@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2.ebuild,v 1.15 2007/07/19 16:16:49 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2.ebuild,v 1.16 2008/02/04 18:47:56 grobian Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pax-utils
 
@@ -64,13 +64,6 @@ src_compile() {
 		emake ${OPTIONS} linux-sparc  || die "Make failed"
 	elif use amd64; then
 		emake ${OPTIONS} linux-x86-64  || die "Make failed"
-	elif use ppc-macos; then
-		if use altivec; then
-			emake ${OPTIONS} macosx-ppc32-altivec || die "Make failed"
-		else
-			emake ${OPTIONS} macosx-ppc32 || die "Make failed"
-		fi
-		# for Tiger this can be macosx-ppc64
 	elif use ppc64; then
 		if use altivec; then
 			emake ${OPTIONS} linux-ppc32-altivec  || die "Make failed"

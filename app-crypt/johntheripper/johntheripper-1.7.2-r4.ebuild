@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2-r4.ebuild,v 1.1 2008/01/11 07:10:26 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2-r4.ebuild,v 1.2 2008/02/04 18:47:56 grobian Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pax-utils
 
@@ -41,13 +41,6 @@ get_target() {
 		echo "linux-sparc"
 	elif use amd64; then
 		echo "linux-x86-64"
-	elif use ppc-macos; then
-		if use altivec; then
-			echo "macosx-ppc32-altivec"
-		else
-			echo "macosx-ppc32"
-		fi
-		# for Tiger this can be macosx-ppc64
 	elif use ppc64; then
 		if use altivec; then
 			echo "linux-ppc32-altivec"
