@@ -1,16 +1,15 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.0.ebuild,v 1.1 2007/12/22 03:58:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.17.ebuild,v 1.1 2008/02/04 16:28:02 matsuu Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
 
 inherit autotools eutils multilib toolchain-funcs
 
-MY_P="${PN}${PV/_beta/b}"
 DESCRIPTION="Tk Widget Set"
-HOMEPAGE="http://www.tcl.tk/"
-SRC_URI="mirror://sourceforge/tcl/${MY_P}-src.tar.gz"
+HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
+SRC_URI="mirror://sourceforge/tcl/${PN}${PV}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -23,7 +22,7 @@ DEPEND="${RDEPEND}
 	x11-libs/libXt
 	x11-proto/xproto"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${PN}${PV}
 
 pkg_setup() {
 	if use threads ; then
@@ -41,10 +40,22 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/remove-control-v-8.4.9.diff
+	epatch "${FILESDIR}"/${PN}-8.4.9-man.patch
 	epatch "${FILESDIR}"/${PN}-8.4.11-multilib.patch
 
 	# Bug 125971
-	epatch "${FILESDIR}"/${PN}-8.5_alpha6-tclm4-soname.patch
+	epatch "${FILESDIR}"/${PN}-8.4.15-tclm4-soname.patch
+
+	# Bug 208464
+	epatch "${FILESDIR}"/${PN}-CVE-2006-4484.patch
+
+	local d
+	for d in */configure ; do
+		cd "${S}"/${d%%/*}
+		EPATCH_SINGLE_MSG="Patching nls cruft in ${d}" \
+		epatch "${FILESDIR}"/tk-configure-LANG.patch
+	done
 
 	cd "${S}"/unix
 	eautoreconf
@@ -70,7 +81,7 @@ src_install() {
 	v1=${PV%.*}
 
 	cd "${S}"/unix
-	S= emake DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die
 
 	# fix the tkConfig.sh to eliminate refs to the build directory
 	local mylibdir=$(get_libdir) ; mylibdir=${mylibdir//\/}
@@ -94,11 +105,16 @@ src_install() {
 
 	# install symlink for libraries
 	#dosym libtk${v1}.a /usr/${mylibdir}/libtk.a
+	if use debug ; then
+		dosym libtk${v1}g.so /usr/${mylibdir}/libtk${v1}.so
+		dosym libtkstub${v1}g.a /usr/${mylibdir}/libtkstub${v1}.a
+		dosym ../tk${v1}g/pkgIndex.tcl /usr/${mylibdir}/tk${v1}/pkgIndex.tcl
+	fi
 	dosym libtk${v1}.so /usr/${mylibdir}/libtk.so
 	dosym libtkstub${v1}.a /usr/${mylibdir}/libtkstub.a
 
 	dosym wish${v1} /usr/bin/wish
 
 	cd "${S}"
-	dodoc ChangeLog* README changes
+	dodoc ChangeLog README changes license.terms
 }
