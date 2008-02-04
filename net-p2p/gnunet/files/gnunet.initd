@@ -1,6 +1,6 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License, v2
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 
 depend() {
 	need net
@@ -15,7 +15,7 @@ start() {
 	ebegin "Starting GNUnet"
 	# -u username, -c path to gnunet.conf file
 	start-stop-daemon --start --quiet --background --exec /usr/bin/gnunetd \
-		-- -u gnunet -c /etc/gnunetd.conf
+		-- -u gnunetd -c /etc/gnunetd.conf
 	eend $? "Failed to start GNUnet"
 }
 

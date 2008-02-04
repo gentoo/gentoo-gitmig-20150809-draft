@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.2c.ebuild,v 1.3 2008/01/16 15:04:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.3-r1.ebuild,v 1.1 2008/02/04 15:24:55 armin76 Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="http://gnunet.org/download/GNUnet-${PV}.tar.bz2"
 RESTRICT="test"
 
 IUSE="ipv6 mysql sqlite ncurses nls gtk"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -66,21 +66,13 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if use ipv6; then
-		if use amd64; then
-			ewarn "ipv6 in GNUnet does not currently work with amd64 and has been disabled"
-		else
-			myconf="${myconf} --enable-ipv6"
-		fi
-	fi
-
 	use mysql || myconf="${myconf} --without-mysql"
 
 	econf \
 		$(use_with sqlite) \
+		$(use_enable ipv6) \
 		$(use_enable nls) \
 		$(use_enable ncurses) \
-		$(use_enable guile) \
 		${myconf} || die "econf failed"
 
 	emake -j1 || die "emake failed"
@@ -93,14 +85,14 @@ src_install() {
 	newins contrib/gnunet.root gnunet.conf
 	docinto contrib
 	dodoc contrib/*
-	newinitd "${FILESDIR}"/${PN}-2 gnunet
+	newinitd "${FILESDIR}"/${PN}.initd gnunet
 	dodir /var/lib/gnunet
 	chown gnunetd:gnunetd "${D}"/var/lib/gnunet
 }
 
 pkg_postinst() {
 	# make sure permissions are ok
-	chown -R gnunetd:gnunetd /var/lib/gnunet
+	chown -R gnunetd:gnunetd "${ROOT}"/var/lib/gnunet
 
 	use ipv6 && ewarn "ipv6 support is -very- experimental and prone to bugs"
 	einfo
