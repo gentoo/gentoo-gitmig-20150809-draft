@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.3 2007/12/06 15:11:01 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.4 2008/02/04 07:58:32 nerdboy Exp $
 
-inherit eutils flag-o-matic fortran toolchain-funcs
+inherit eutils fixheadtails flag-o-matic fortran toolchain-funcs
 
 DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://hdf.ncsa.uiuc.edu/HDF5/"
@@ -12,7 +12,7 @@ LICENSE="NCSA-HDF"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 # need to update szip to get alpha, ia64, etc back in here,
-IUSE="cxx debug fortran mpi ssl szip threads zlib "
+IUSE="cxx debug fortran mpi ssl szip threads tools zlib "
 
 DEPEND="mpi? ( >=sys-cluster/mpich2-1.0.6
 		net-fs/nfs-utils )
@@ -33,25 +33,18 @@ pkg_setup() {
 	# compiler is installed if the user enables fortran support.  Feel
 	# free to improve it...
 	if use fortran ; then
-	    if [ $(gcc-major-version) -ge 4 ] \
-		&& built_with_use sys-devel/gcc fortran ; then
-	    	    FORTRAN="gfortran"
-		    fortran_pkg_setup
-		    export F9X="gfortran"
-		    einfo "Configuring for GNU gfortran..."
-	    elif
-		test -d /opt/intel/fortran90 ; then
-		    FORTRAN="ifc"
-		    fortran_pkg_setup
-		    export F9X="ifc"
-		    einfo "Configuring for Intel fortran..."
-	    else
-		einfo "No F90 compiler found; please install either gcc 4 with"
-		einfo "fortran support or some other Fortran 90 compiler such"
-		einfo "as ifc or pgf90 (or disable fortran support)."
-		die "No usable Fortran 90 compiler found."
-	    fi
+	    fortran_pkg_setup
+	    case "${FORTRANC}" in
+		gfortran|ifc|ifort|f95)
+		    export F9X="${FORTRANC}"
+		    ;;
+		g77|f77|f2c)
+		    export F9X=""
+		    ;;
+	    esac
 	fi
+
+	# if anyone knows of a better way to do this...
 	if use mpi && ! built_with_use sys-cluster/mpich2 pvfs2 ; then
 	    ewarn "Your MPI library needs parallel IO support for HDF5. You"
 	    ewarn "must re-emerge mpich2 with USE=pvfs2."
@@ -60,7 +53,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	if use mpi; then
@@ -68,14 +61,14 @@ src_unpack() {
 	    epatch "${FILESDIR}/${PN}-mpich2.patch" || die "mpich2 patch failed"
 	fi
 
-	sed -i -e "s/tail +/tail -n +/" "${S}"/bin/release \
-		"${S}"/tools/h5dump/testh5dump.sh.in
+	ht_fix_file "${S}"/bin/release "${S}"/tools/h5dump/testh5dump.sh.in
 
 }
 
 src_compile() {
-	local myconf="--with-pic --enable-shared"
+	local myconf
 
+	# a better way to do this would also be nice, but i can't think of one
 	if use cxx && ! use mpi ; then
 	    myconf="${myconf} --enable-cxx"
 	elif use cxx && use mpi ; then
@@ -92,7 +85,7 @@ src_compile() {
 
 	use threads && myconf="${myconf} --with-pthread --enable-threadsafe"
 
-	if use debug; then
+	if use debug ; then
 	    myconf="${myconf} --enable-debug=all"
 	else
 	    myconf="${myconf} --enable-production"
@@ -108,22 +101,30 @@ src_compile() {
 	if use mpi ; then
 	    export NPROCS=1
 	    export CC="mpicc"
-	    export F9X="mpif90"
-	    export LIBS="$(sh pvfs2-config --libs) -lmpich"
-	    if built_with_use sys-cluster/mpich2 mpe ; then
-		myconf="${myconf} --with-mpe=/usr/include,/usr/$(get_libdir)"
+	    if built_with_use sys-cluster/mpich2 fortran ; then
+		export F9X="mpif90"
 	    fi
+	    if built_with_use sys-cluster/mpich2 pvfs2 ; then
+		export LIBS="$(sh pvfs2-config --libs) -lmpich"
+	    else
+		export LIBS="-lmpich"
+	    fi
+#	    if built_with_use sys-cluster/mpich2 mpe ; then
+#		myconf="${myconf} --with-mpe=/usr/include,/usr/$(get_libdir)"
+#	    fi
 	    append-ldflags "${LIBS}"
 	fi
 
-	./configure --prefix=/usr ${myconf} \
+	econf --prefix=/usr \
 		$(use_enable zlib) \
 		$(use_with ssl) \
 		--enable-linux-lfs  \
 		--sysconfdir=/etc \
 		--infodir=/usr/share/info \
 		--libdir=/usr/$(get_libdir) \
-		--mandir=/usr/share/man || die "configure failed"
+		--mandir=/usr/share/man \
+		--enable-shared --with-pic \
+		"${myconf}" || die "configure failed"
 
 	# restore the ARCH environment variable
 	ARCH="${EBUILD_ARCH}"
@@ -147,6 +148,7 @@ src_test() {
 }
 
 src_install() {
+	# emake install and einstall cause sandbox violations here
 	make \
 		prefix="${D}"usr \
 		mandir="${D}"usr/share/man \
@@ -155,15 +157,30 @@ src_install() {
 		infodir="${D}usr"/share/info \
 		install || die "make install failed"
 
-	dolib.a "${S}"/tools/lib/.libs/libh5tools.a \
-	    "${S}"/test/.libs/libh5test.a || die "dolib.a failed"
-	insinto /usr/$(get_libdir)
-	doins "${S}"/tools/lib/libh5tools.la \
-	    "${S}"/test/libh5test.la || die "doins failed"
-	dolib.so "${S}"/test/.libs/lib*so* || die "dolib.so failed"
+	if use tools ; then
+	    dolib.a "${S}"/tools/lib/.libs/libh5tools.a \
+		"${S}"/test/.libs/libh5test.a || die "dolib.a failed"
+	    insinto /usr/$(get_libdir)
+	    doins "${S}"/tools/lib/libh5tools.la \
+		"${S}"/test/libh5test.la || die "doins failed"
+	    dolib.so "${S}"/test/.libs/libh5test.so.0.0.0 \
+		|| die "dolib.so failed"
+	    doins "${S}"/test/.libs/libh5test.so.0 \
+		"${S}"/test/.libs/libh5test.so || die "doins failed"
 
-	exeinto /usr/bin
-	newexe "${S}"/bin/iostats iostats.pl || die "newexe failed"
+	    exeinto /usr/bin
+	    newexe "${S}"/bin/iostats iostats.pl || die "newexe failed"
+
+	    exeinto /usr/share/"${PN}/test-tools"
+	    cd "${S}"/test
+	    doexe big bittests fillval lheap file_handle istore set_extent \
+		srb_append cache flush1 srb_read cmpd_dset flush2 srb_write \
+		dangle gass_append links stab dsets dtypes enum extend external \
+		gass_read mount gass_write getname gheap hyperslab mtime ntypes \
+		ohdr reserved stream_test testhdf5 ttsafe unlink
+	    cd "${S}"
+	    use mpi && doexe testpar/testphdf5 testpar/t_mpi
+	fi
 
 	dodoc README.txt MANIFEST
 	dohtml doc/html/*

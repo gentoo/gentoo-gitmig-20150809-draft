@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5-r1.ebuild,v 1.5 2007/12/05 14:45:21 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5-r1.ebuild,v 1.6 2008/02/04 07:58:32 nerdboy Exp $
 
 inherit fortran eutils toolchain-funcs
 
