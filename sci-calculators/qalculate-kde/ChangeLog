@@ -1,6 +1,13 @@
 # ChangeLog for sci-calculators/qalculate-kde
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/ChangeLog,v 1.20 2007/10/19 20:22:15 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/ChangeLog,v 1.21 2008/02/04 12:00:03 markusle Exp $
+
+*qalculate-kde-0.9.6-r1 (02 Feb 2008)
+
+  02 Feb 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/qalculate-kde-0.9.6-cln-config.patch,
+  +qalculate-kde-0.9.6-r1.ebuild:
+  Added patches to allow compilation against cln-1.2 (see bug #208527).
 
   19 Oct 2007; nixnut <nixnut@gentoo.org> qalculate-kde-0.9.6.ebuild:
   Added ~ppc wrt bug 193455
