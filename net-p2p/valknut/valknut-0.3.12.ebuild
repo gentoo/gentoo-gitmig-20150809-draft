@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.12.ebuild,v 1.6 2008/02/04 15:29:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.12.ebuild,v 1.7 2008/02/04 15:31:31 drac Exp $
 
 inherit qt3
 
@@ -30,6 +30,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
+	emake DESTDIR="${D}" install || die "emake install failed."
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
