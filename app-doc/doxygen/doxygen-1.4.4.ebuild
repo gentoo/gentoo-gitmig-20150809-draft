@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.4.ebuild,v 1.22 2007/07/12 19:20:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.4.ebuild,v 1.23 2008/02/04 18:39:52 grobian Exp $
 
 inherit eutils toolchain-funcs qt3
 
@@ -24,7 +24,7 @@ DEPEND=">=sys-apps/sed-4
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# use CFLAGS and CXXFLAGS (on linux and ppc-macos)
+	# use CFLAGS and CXXFLAGS (on linux and macosx)
 	sed -i.orig -e "s:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= ${CFLAGS}:" \
 		-e "s:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= ${CXXFLAGS}:" \
 		tmake/lib/{linux-g++,macosx-c++}/tmake.conf
