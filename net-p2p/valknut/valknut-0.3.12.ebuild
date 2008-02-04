@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.12.ebuild,v 1.5 2008/01/19 14:14:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.12.ebuild,v 1.6 2008/02/04 15:29:27 drac Exp $
 
-inherit qt3 eutils
+inherit qt3
 
 DESCRIPTION="Qt based client for DirectConnect"
 HOMEPAGE="http://sourceforge.net/projects/wxdcgui/"
@@ -10,14 +10,15 @@ SRC_URI="mirror://sourceforge/wxdcgui/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc ~ppc64 x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 x86"
 IUSE="ssl"
 
-DEPEND="$(qt_min_version 3)
-	dev-util/pkgconfig
+RDEPEND="$(qt_min_version 3)
 	>=dev-libs/libxml2-2.4.22
 	~net-p2p/dclib-${PV}
 	ssl? ( dev-libs/openssl )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf \

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/dclib
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.94 2008/01/19 14:13:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.95 2008/02/04 15:26:30 drac Exp $
+
+  04 Feb 2008; Samuli Suominen <drac@gentoo.org> -dclib-0.3.10.ebuild,
+  -dclib-0.3.11.ebuild, dclib-0.3.12.ebuild:
+  amd64 stable
 
   19 Jan 2008; nixnut <nixnut@gentoo.org> dclib-0.3.12.ebuild:
   Stable on ppc wrt bug 202615
