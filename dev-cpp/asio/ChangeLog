@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/asio
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.11 2007/12/24 07:42:09 dev-zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.12 2008/02/05 15:45:16 drac Exp $
+
+  05 Feb 2008; Samuli Suominen <drac@gentoo.org> asio-0.3.9.ebuild:
+  amd64 stable wrt #209002
 
 *asio-0.3.9 (24 Dec 2007)
 
