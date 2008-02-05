@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/g-brief-4.0.1.ebuild,v 1.10 2005/10/14 02:07:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/g-brief-4.0.1.ebuild,v 1.11 2008/02/05 20:29:27 grobian Exp $
 
 inherit latex-package
 
@@ -14,7 +14,7 @@ LICENSE="LPPL-1.2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~ppc-macos ~sparc x86"
+KEYWORDS="alpha amd64 ppc ~sparc x86"
 
 DEPEND="!>=app-text/tetex-2.96"
 
