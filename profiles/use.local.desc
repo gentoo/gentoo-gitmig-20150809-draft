@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3347 2008/02/05 18:23:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3348 2008/02/05 18:27:00 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1843,8 +1843,8 @@ sci-geosciences/mapserver:postgis - Enables postgis support
 sci-geosciences/mapserver:proj - Enables proj library support (geographic projections)
 sci-libs/acml:int64 - Install the 64 bits integer library.
 sci-libs/acml:openmp - Install the OpenMP parallel computing library as well (needs ifc or gfortran >= 4.2)
-sci-libs/cholmod/cholmod:metis - Enable the Partition module to cholmod using metis
-sci-libs/cholmod/cholmod:supernodal - Enable the Supernodal module (needs lapack)
+sci-libs/cholmod:metis - Enable the Partition module to cholmod using metis
+sci-libs/cholmod:supernodal - Enable the Supernodal module (needs lapack)
 sci-libs/fftw:float - Links default library to single precision instead of double (symlinks only)
 sci-libs/gdal:fits - Enables support for NASA's cfitsio library
 sci-libs/gdal:geos - Adds support for geometry engine
