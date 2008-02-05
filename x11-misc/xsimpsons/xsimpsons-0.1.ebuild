@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsimpsons/xsimpsons-0.1.ebuild,v 1.10 2006/10/21 22:05:25 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsimpsons/xsimpsons-0.1.ebuild,v 1.11 2008/02/05 17:11:43 coldwind Exp $
 
 DESCRIPTION="The Simpsons walking along the tops of your windows."
 HOMEPAGE="http://netzverschmutzer.net/~sbeyer/programming/projects/?dir=extensions#xpenguins"
@@ -8,7 +8,7 @@ SRC_URI="http://netzverschmutzer.net/~sbeyer/programming/projects/extensions/xpe
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11

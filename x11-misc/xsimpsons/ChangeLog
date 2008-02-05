@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsimpsons
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsimpsons/ChangeLog,v 1.13 2007/02/22 00:10:26 jokey Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsimpsons/ChangeLog,v 1.14 2008/02/05 17:11:43 coldwind Exp $
+
+  05 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> xsimpsons-0.1.ebuild:
+  Keyworded ~amd64.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
