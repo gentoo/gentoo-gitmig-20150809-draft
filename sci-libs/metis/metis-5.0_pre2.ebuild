@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-5.0_pre2.ebuild,v 1.1 2008/02/05 17:55:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-5.0_pre2.ebuild,v 1.2 2008/02/05 22:27:24 mr_bones_ Exp $
 
 inherit autotools eutils
 
@@ -55,7 +55,6 @@ src_compile() {
 		|| die "econf failed"
 	emake || die "emake failed"
 }
-
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
