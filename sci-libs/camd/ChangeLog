@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/camd
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.1 2008/02/05 18:06:35 bicatali Exp $
+
+*camd-2.2.0 (05 Feb 2008)
+
+  05 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/camd-2.2.0-autotools.patch, +metadata.xml, +camd-2.2.0.ebuild:
+  Initial import. Thanks to Justin Bronder for his work, see bug #173900
+
