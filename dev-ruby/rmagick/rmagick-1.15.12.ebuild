@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.15.12.ebuild,v 1.2 2008/02/05 09:08:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.15.12.ebuild,v 1.3 2008/02/05 15:16:38 fmccor Exp $
 
 inherit ruby
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://rmagick.rubyforge.org/"
 SRC_URI="http://rubyforge.org/frs/download.php/29786/RMagick-${PV}.tar.bz2"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE="examples doc"
 DEPEND="virtual/ruby
 	>=media-gfx/imagemagick-6.0"
