@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.0.9.ebuild,v 1.12 2007/09/13 20:08:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.0.9.ebuild,v 1.13 2008/02/05 10:43:50 hollow Exp $
 
 inherit perl-module eutils
 
@@ -17,7 +17,7 @@ DEPEND="dev-lang/perl
 		virtual/perl-libnet
 		>=net-analyzer/rrdtool-1.2
 		net-analyzer/fping
-		apache2? ( >=www-servers/apache-2.0.54-r30 >=www-apache/mod_perl-2.0.1 )"
+		apache2? ( >=www-apache/mod_perl-2.0.1 )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
