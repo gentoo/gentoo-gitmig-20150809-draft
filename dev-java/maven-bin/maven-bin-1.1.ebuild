@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-1.1.ebuild,v 1.1 2008/02/05 15:38:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-1.1.ebuild,v 1.2 2008/02/05 15:40:22 betelgeuse Exp $
 
 MY_PN=${PN/-bin}
 MY_PV=${PV/_/-}
@@ -11,8 +11,8 @@ HOMEPAGE="http://maven.apache.org/"
 LICENSE="Apache-2.0"
 SLOT="1.0"
 KEYWORDS="~amd64 ~ppc ~x86"
-DEPEND=">=virtual/jdk-1.3"
-RDEPEND=">=virtual/jdk-1.3"
+DEPEND=">=virtual/jdk-1.4"
+RDEPEND=">=virtual/jdk-1.4"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
