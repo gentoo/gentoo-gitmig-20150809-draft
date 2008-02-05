@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.42.ebuild,v 1.1 2008/01/27 21:51:33 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.42.ebuild,v 1.2 2008/02/05 22:09:53 tgurr Exp $
 
 inherit kde
 
@@ -26,13 +26,16 @@ PATCHES="${FILESDIR}/${PN}-0.41-cl_loaddbdir.patch"
 src_unpack(){
 	kde_src_unpack
 
-	# Disable updates from the GUI. We have package managers for that. cf. bug 171414
-	econf --with-disableupdates
-
 	# Assure a future version won't try to build this.
 	rm -rf "${WORKDIR}/${MY_P}/dazuko"* || die "We missed to eradicate some files"
 
 	rm -f "${S}"/configure
+}
+
+src_compile(){
+	# Disable updates from the GUI. We have package managers for that. cf. bug 171414
+	myconf="--with-disableupdates"
+	kde_src_compile
 }
 
 pkg_postinst(){
