@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.4.ebuild,v 1.1 2007/10/18 22:31:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.4.ebuild,v 1.2 2008/02/05 15:59:30 coldwind Exp $
 
 inherit eutils games
 
@@ -43,6 +43,7 @@ src_compile() {
 		--disable-doc-ps \
 		--disable-doc-pdf \
 		--disable-target-opt \
+		$(use_enable x86 asm) \
 		|| die
 	emake || die "emake failed"
 }
