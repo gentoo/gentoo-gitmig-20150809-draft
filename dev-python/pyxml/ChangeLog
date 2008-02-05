@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxml
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.39 2007/07/03 11:37:57 dev-zero Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.40 2008/02/05 17:16:50 opfer Exp $
+
+  05 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  pyxml-0.8.4-r1.ebuild:
+  stable x86, bug 208929
 
   03 Jul 2007; Tiziano Müller <dev-zero@gentoo.org> Manifest:
   Re-digest (bug #184073)
