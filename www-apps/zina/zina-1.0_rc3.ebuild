@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/zina/zina-1.0_rc3.ebuild,v 1.2 2007/10/13 08:00:13 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/zina/zina-1.0_rc3.ebuild,v 1.3 2008/02/05 14:09:06 hollow Exp $
 
-inherit webapp
+inherit webapp depend.apache
 
 MY_P=${P/_/}
 
@@ -14,8 +14,9 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="www-servers/apache
-	virtual/httpd-php"
+RDEPEND="virtual/httpd-php"
+
+need_apache
 
 S=${WORKDIR}/${MY_P}
 
