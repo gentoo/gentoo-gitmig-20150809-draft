@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2007.ebuild,v 1.4 2007/07/13 06:25:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2007.ebuild,v 1.5 2008/02/05 19:27:52 opfer Exp $
 
 inherit gnatbuild
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/gcc-branch-${GCCVER}.tar.bz2
 # only on $PV, so should be safe to use in DEPEND/SRC_URI
 #	mirror://gentoo/${PN}-gcc-3.4.6.1.diff.bz2
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 DEPEND="app-arch/unzip"
 RDEPEND=""
 

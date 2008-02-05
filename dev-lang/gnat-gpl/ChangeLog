@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnat-gpl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.19 2007/05/25 12:57:11 george Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.20 2008/02/05 19:27:52 opfer Exp $
+
+  05 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  gnat-gpl-4.1.3.2007.ebuild:
+  stable x86, bug 209001
 
   25 May 2007; user account for gentoo cvs access <portage-cvs@gentoo.org>
   -gnat-gpl-3.4.6.2006.ebuild:
