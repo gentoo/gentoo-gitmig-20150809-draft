@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r3.ebuild,v 1.11 2008/01/17 03:58:41 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r3.ebuild,v 1.12 2008/02/05 15:36:38 hollow Exp $
 
-inherit eutils wxwidgets
+inherit eutils wxwidgets depend.apache
 
 MY_PN="boinc_public-cvs"
 MY_PV="2005-08-13"
@@ -19,8 +19,7 @@ IUSE="server X"
 
 RDEPEND="sys-libs/zlib
 	X? ( =x11-libs/wxGTK-2.6* )
-	server? ( www-servers/apache
-		>=virtual/mysql-4.0
+	server? ( >=virtual/mysql-4.0
 		virtual/php
 		>=dev-lang/python-2.2.3
 		>=dev-python/mysql-python-0.9.2 )"
@@ -36,6 +35,8 @@ DEPEND=">=sys-devel/gcc-3.0.4
 		media-libs/jpeg )
 	server? ( virtual/imap-c-client )
 	${RDEPEND}"
+
+want_apache server
 
 src_unpack() {
 	unpack ${A}

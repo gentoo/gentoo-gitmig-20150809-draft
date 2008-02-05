@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.36 2008/01/17 03:58:41 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.37 2008/02/05 15:36:38 hollow Exp $
+
+  05 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
+  boinc-4.72.20050813-r3.ebuild, boinc-5.2.14.ebuild, boinc-5.4.11.ebuild,
+  boinc-5.5.6.ebuild, boinc-5.8.15.ebuild, boinc-5.10.28.ebuild:
+  fix depend.apache usage wrt #208584
 
   17 Jan 2008; Joshua Jackson <tsunam@gentoo.org>
   +boinc-4.72.20050813-r3.ebuild, +boinc-5.2.14.ebuild,
