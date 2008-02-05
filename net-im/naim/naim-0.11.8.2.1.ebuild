@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.8.2.1.ebuild,v 1.4 2007/07/12 05:34:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.8.2.1.ebuild,v 1.5 2008/02/05 21:13:31 grobian Exp $
 
 DESCRIPTION="An ncurses based AOL Instant Messenger"
 HOMEPAGE="http://naim.n.ml.org"
@@ -8,7 +8,7 @@ SRC_URI="http://naim.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug screen"
 
 # the tests dont work
