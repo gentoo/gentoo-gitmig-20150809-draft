@@ -1,21 +1,32 @@
---- elogv.py.orig	2008-02-04 10:14:58.000000000 +0100
-+++ elogv.py	2008-02-04 10:15:48.000000000 +0100
-@@ -129,12 +129,18 @@
+--- elogv.py.orig	2008-02-05 09:00:11.000000000 +0100
++++ elogv.py	2008-02-05 09:11:10.000000000 +0100
+@@ -129,12 +129,21 @@
              
              elif c == ord("a"):
                  self.sort_method[0] = "alphabetical"
-+                self.init_screen()
-+                self.show_log()
++                self.fill_file_pad()
++                self.refresh_file_pad()
++                self.show_log()                
                  
              elif c == ord("t"):
                  self.sort_method[0] = "date"
-+                self.init_screen()
++                self.fill_file_pad()
++                self.refresh_file_pad()
 +                self.show_log()
                  
              elif c == ord("r"):
                  self.sort_method[1] = not self.sort_method[1]
-+                self.init_screen()
++                self.fill_file_pad()
++                self.refresh_file_pad()
 +                self.show_log()
                  
              elif c == ord(" "):
                  # Now is used only for scrolling the text
+@@ -170,6 +179,7 @@
+                 if n:
+                     self.remove_file(n)
+                     self.file_pad.clear()
++                    self.refresh_file_pad()
+                     self.fill_file_pad()
+                     self.refresh_file_pad()
+                     self.show_log()

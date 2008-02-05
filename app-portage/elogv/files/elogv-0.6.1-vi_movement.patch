@@ -1,5 +1,5 @@
---- elogv.py.orig	2008-02-04 09:56:41.000000000 +0100
-+++ elogv.py	2008-02-04 10:03:16.000000000 +0100
+--- elogv.py.orig	2008-02-05 08:51:24.000000000 +0100
++++ elogv.py	2008-02-05 08:53:08.000000000 +0100
 @@ -33,10 +33,10 @@
  Elogv is a portage elog viewer based on curses and python,
  you can use these keys to control the behavior of the program:
@@ -8,8 +8,8 @@
 - - Up arrow -> opposite of Down arrow
 - - Pag Down -> Scroll the list down by 10 unit
 - - Pag Up -> opposite of Pag Down
-+ - Down arrow or k -> Scroll the list of files down by 1 unit
-+ - Up arrow or j -> opposite of Down arrow
++ - Down arrow or j -> Scroll the list of files down by 1 unit
++ - Up arrow or k -> opposite of Down arrow
 + - PageDown -> Scroll the list down by 10 unit
 + - PageUp -> opposite of Pag Down
   - End -> Go to the last file of the list
@@ -20,11 +20,35 @@
              
              ## Scrolling keys ##
 -            elif c == curses.KEY_DOWN:
-+            elif c == curses.KEY_DOWN or c == ord("k"):
++            elif c == curses.KEY_DOWN or c == ord("j"):
                  self.change_usel(1)
                  
 -            elif c == curses.KEY_UP:
-+            elif c == curses.KEY_UP or c == ord("j"):
++            elif c == curses.KEY_UP or c == ord("k"):
                  self.change_usel(-1)
  
              elif c == curses.KEY_NPAGE:
+
+--- elogv.1.orig	2008-02-05 09:13:59.000000000 +0100
++++ elogv.1	2008-02-05 09:14:37.000000000 +0100
+@@ -6,16 +6,16 @@
+ .SH USAGE
+ You can use these keys to control the behavior of the program:
+ .TP
+-.B "Down arrow"
++.B "Down arrow or j"
+ Scroll the list of files down by 1 unit
+ .TP
+-.B "Up arrow"
++.B "Up arrow or k"
+ opposite of Down arrow
+ .TP
+-.B "Pag Down"
++.B "PageDown"
+ Scroll the list down by 10 unit
+ .TP
+-.B "Pag Up"
++.B "PageUp"
+ opposite of Pag Down
+ .TP
+ .B End

@@ -1,5 +1,5 @@
---- elogv.py.orig	2008-02-04 10:10:40.000000000 +0100
-+++ elogv.py	2008-02-04 10:12:01.000000000 +0100
+--- elogv.py.orig	2008-02-05 08:59:43.000000000 +0100
++++ elogv.py	2008-02-05 08:59:47.000000000 +0100
 @@ -172,6 +172,7 @@
                      self.file_pad.clear()
                      self.fill_file_pad()
@@ -8,7 +8,7 @@
  
              elif c == ord("/"):
                  word = ""
-@@ -274,6 +275,11 @@
+@@ -274,6 +275,12 @@
          # so this will prevent a crash
          if self.usel >= len(self.file_list):
              self.usel = len(self.file_list)-1
@@ -17,6 +17,7 @@
 +                self.pposy = self.usel - 10
 +                if self.pposy < 0:
 +                    self.pposy = 0
++
  
          # Sort the list
          if self.sort_method[0] == "alphabetical":
