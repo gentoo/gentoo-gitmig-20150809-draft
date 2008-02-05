@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.22.3.ebuild,v 1.6 2007/09/04 18:19:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.22.3.ebuild,v 1.7 2008/02/05 15:20:39 hollow Exp $
 
-inherit webapp
+inherit webapp depend.apache
 
 DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
@@ -17,7 +17,6 @@ RDEPEND="
 	>=dev-lang/perl-5.6.1
 	postgres? ( >=dev-perl/DBD-Pg-1.45 )
 	mysql? ( >=dev-perl/DBD-mysql-3.0007 )
-	>=www-servers/apache-2.0
 	graphviz? ( media-gfx/graphviz )
 	>=dev-perl/AppConfig-1.52
 	>=virtual/perl-CGI-2.93
@@ -45,6 +44,8 @@ RDEPEND="
 	dev-perl/XML-Twig )
 "
 # dev-util/patchutils needed for interdiff
+
+need_apache2
 
 src_unpack() {
 	unpack ${A}

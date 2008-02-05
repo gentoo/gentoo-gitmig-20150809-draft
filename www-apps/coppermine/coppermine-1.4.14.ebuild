@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.14.ebuild,v 1.1 2007/12/02 14:54:18 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.14.ebuild,v 1.2 2008/02/05 15:16:37 hollow Exp $
 
-inherit webapp versionator depend.php
+inherit webapp versionator depend.php depend.apache
 
 MY_PV=$(delete_all_version_separators)
 DESCRIPTION="Feature rich web picture gallery script written in PHP using GD or ImageMagick lib with a MySQL backend."
@@ -15,9 +15,10 @@ IUSE="imagemagick"
 
 DEPEND="app-arch/unzip"
 
-RDEPEND=">=www-servers/apache-2.0
-	virtual/httpd-php
+RDEPEND="virtual/httpd-php
 	imagemagick? ( media-gfx/imagemagick )"
+
+need_apache2
 
 S=${WORKDIR}/cpg$(delete_all_version_separators)
 

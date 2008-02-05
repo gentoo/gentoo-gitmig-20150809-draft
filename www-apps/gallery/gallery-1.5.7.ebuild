@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.7.ebuild,v 1.1 2008/01/23 16:51:37 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.7.ebuild,v 1.2 2008/02/05 15:13:28 hollow Exp $
 
-inherit webapp
+inherit webapp depend.apache
 
 DESCRIPTION="Web based (PHP Script) photo album viewer/creator"
 HOMEPAGE="http://gallery.sourceforge.net/"
@@ -12,14 +12,15 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="imagemagick netpbm unzip zip"
 
-RDEPEND=">=www-servers/apache-2.0
-	virtual/httpd-cgi
+RDEPEND="virtual/httpd-cgi
 	virtual/php
 	media-libs/jpeg
 	netpbm? ( >=media-libs/netpbm-9.12 >=media-gfx/jhead-2.2 )
 	imagemagick? ( >=media-gfx/imagemagick-5.4.9.1-r1 )
 	unzip? ( app-arch/unzip )
 	zip? ( app-arch/zip )"
+
+need_apache2
 
 S=${WORKDIR}/${PN}
 

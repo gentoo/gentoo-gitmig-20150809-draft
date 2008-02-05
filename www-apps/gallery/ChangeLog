@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.133 2008/01/23 16:51:37 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.134 2008/02/05 15:13:28 hollow Exp $
+
+  05 Feb 2008; Benedikt Böhm <hollow@gentoo.org> gallery-1.5.3.ebuild,
+  gallery-1.5.5.ebuild, gallery-1.5.7.ebuild:
+  fix depend.apache usage wrt #208584
 
 *gallery-1.5.7 (23 Jan 2008)
 
