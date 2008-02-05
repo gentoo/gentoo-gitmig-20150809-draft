@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.68 2008/02/05 14:34:29 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.69 2008/02/05 16:15:37 opfer Exp $
+
+  05 Feb 2008; Christian Faulhammer <opfer@gentoo.org> allegro-4.2.2.ebuild:
+  stable x86, bug 208870
 
   05 Feb 2008; Tristan Heaven <nyhm@gentoo.org> allegro-4.2.2.ebuild:
   Statically link utility programs with liballeg

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2.ebuild,v 1.2 2008/02/05 14:34:29 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2.ebuild,v 1.3 2008/02/05 16:15:37 opfer Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 
 LICENSE="Allegro"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 -sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 -sparc x86"
 IUSE="X alsa arts esd fbcon jack oss svga vga"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
