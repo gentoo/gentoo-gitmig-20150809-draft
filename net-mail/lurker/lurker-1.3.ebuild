@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lurker/lurker-1.3.ebuild,v 1.5 2007/07/29 17:04:06 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lurker/lurker-1.3.ebuild,v 1.6 2008/02/05 10:51:18 hollow Exp $
 
-inherit eutils webapp
+inherit eutils webapp depend.apache
 
 DESCRIPTION="An e-mail list archive utility with an extensive web interface and multi-language support"
 SRC_URI="mirror://sourceforge/lurker/${P}.tar.gz mirror://sourceforge/lurker/mimelib-3.1.1.tar.gz"
@@ -14,8 +14,9 @@ IUSE=""
 
 DEPEND=">=sys-devel/gcc-2.95
 	dev-libs/libxslt
-	sys-libs/zlib
-	www-servers/apache"
+	sys-libs/zlib"
+
+need_apache
 
 INSTALLDIR="/usr/local/lurker"
 
