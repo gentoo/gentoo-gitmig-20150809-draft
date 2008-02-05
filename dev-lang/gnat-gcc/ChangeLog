@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.17 2008/02/05 13:34:51 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.18 2008/02/05 18:32:01 opfer Exp $
+
+  05 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  gnat-gcc-4.2.2.ebuild:
+  stable x86, bug 208997
 
 *gnat-gcc-4.2.3 (05 Feb 2008)
 
