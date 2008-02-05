@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2.ebuild,v 1.1 2007/07/22 12:10:02 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2.ebuild,v 1.2 2008/02/05 14:34:29 nyhm Exp $
 
 inherit autotools eutils
 
@@ -49,6 +49,7 @@ src_compile() {
 	econf \
 		--enable-linux \
 		--enable-static \
+		--enable-staticprog \
 		--disable-asm \
 		--disable-mmx \
 		--disable-sse \
@@ -96,4 +97,5 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "Please run \"revdep-rebuild --library liballeg.so.4.2\""
+	ewarn "if you are upgrading allegro from 4.2.0."
 }
