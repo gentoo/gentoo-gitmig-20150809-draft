@@ -1,9 +1,13 @@
 # ChangeLog for app-text/refbase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/ChangeLog,v 1.5 2008/02/02 15:14:30 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/ChangeLog,v 1.6 2008/02/05 08:34:24 hollow Exp $
+
+  05 Feb 2008; Benedikt Böhm <hollow@gentoo.org> refbase-0.8.0.ebuild:
+  merge from webapps overlay wrt #208584
 
   02 Feb 2008; Benedikt Böhm <hollow@gentoo.org> refbase-0.8.0.ebuild:
-  use depend.apache eclass wrt #208033
+  use depend.apache eclass wrt #208033. Do not depend on mysql in web
+  apps.
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> refbase-0.8.0.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
