@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>net-fs</herd>
 <maintainer>
-  <email>stefaan@gentoo.org</email>
+    <email>stefaan@gentoo.org</email>
+    <name>Stefaan De Roeck</name>
 </maintainer>
 </pkgmetadata>

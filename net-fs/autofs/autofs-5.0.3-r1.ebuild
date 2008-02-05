@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3-r1.ebuild,v 1.1 2008/02/01 09:07:18 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3-r1.ebuild,v 1.2 2008/02/05 12:32:19 stefaan Exp $
 
 inherit eutils multilib autotools
 
@@ -31,9 +31,20 @@ src_unpack() {
 
 	cd "${S}"
 	eautoconf || die "Autoconf failed"
+
+	# # use CC and CFLAGS from environment (bug #154797)
+	# write these values in Makefile.conf
+#	(echo "CC := @CC@"; echo "CFLAGS := @CFLAGS@") >> Makefile.conf.in
+	# make sure Makefile.conf is parsed after Makefile.rules
+#	sed -ni '/include Makefile.conf/{x; n; G}; p' Makefile
+
+	# do not include <nfs/nfs.h>, rather <linux/nfs.h>,
+	# as the former is a lame header for the latter (bug #157968)
+	sed -i 's@nfs/nfs.h@linux/nfs.h@' include/rpc_subs.h
 }
 
 src_compile() {
+	CFLAGS="${CFLAGS}" \
 	econf \
 		$(use_with ldap openldap) \
 		$(use_with sasl) \
@@ -46,7 +57,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	newinitd "${FILESDIR}"/autofs.rc14 autofs
+	newinitd "${FILESDIR}"/autofs5.rc1 autofs
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3.ebuild,v 1.1 2008/01/31 23:19:24 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3.ebuild,v 1.2 2008/02/05 12:32:19 stefaan Exp $
 
 inherit eutils multilib autotools
 
@@ -39,7 +39,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	newinitd "${FILESDIR}"/autofs.rc14 autofs
+	newinitd "${FILESDIR}"/autofs5.rc1 autofs
 }
 
 pkg_postinst() {
