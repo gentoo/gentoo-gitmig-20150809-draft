@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/vulture/vulture-1.97.ebuild,v 1.1 2007/08/21 19:46:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/vulture/vulture-1.97.ebuild,v 1.2 2008/02/05 11:00:34 hollow Exp $
 
-inherit eutils
+inherit eutils depend.apache
 
 DESCRIPTION="INTRINsec Reverse Proxy"
 HOMEPAGE="http://vulture.open-source.fr/"
@@ -31,8 +31,9 @@ DEPEND="dev-lang/perl
 
 RDEPEND="${DEPEND}
 	www-apache/mod_security
-	>=www-servers/apache-2.2.4
 	app-admin/sudo"
+
+need_apache2_2
 
 INTRINsec_HOME="/opt/INTRINsec"
 
