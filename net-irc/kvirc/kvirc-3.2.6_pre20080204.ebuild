@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.6_pre20080204.ebuild,v 1.1 2008/02/04 14:11:41 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.6_pre20080204.ebuild,v 1.2 2008/02/05 10:24:39 cla Exp $
 
 inherit autotools eutils kde-functions
 
@@ -27,7 +27,7 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	./autogen.sh
+	eautoreconf
 	epatch "${FILESDIR}"/${PN}-svn-kdedir-fix.patch
 	epatch "${FILESDIR}"/${PN}-gendoc.patch
 }
