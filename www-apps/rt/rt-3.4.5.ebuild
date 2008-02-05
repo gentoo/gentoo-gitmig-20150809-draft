@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.18 2007/08/19 11:38:42 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.19 2008/02/05 15:04:28 hollow Exp $
 
-inherit webapp eutils
+inherit webapp eutils depend.apache
 
 IUSE="mysql postgres fastcgi lighttpd"
 
@@ -79,7 +79,7 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	virtual/mta
-	!lighttpd? ( >=www-servers/apache-2 )
+	!lighttpd? ( ${APACHE2_DEPEND} )
 	lighttpd? ( >=www-servers/lighttpd-1.3.13 )
 "
 
