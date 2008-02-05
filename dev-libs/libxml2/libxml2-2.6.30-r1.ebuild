@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.30-r1.ebuild,v 1.1 2008/01/11 17:09:57 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.30-r1.ebuild,v 1.2 2008/02/05 03:16:30 wolf31o2 Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 LICENSE="MIT"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="debug doc ipv6 python readline test"
+IUSE="bootstrap build debug doc ipv6 python readline test"
 
 XSTS_HOME="http://www.w3.org/XML/2004/xml-schema-test-suite"
 XSTS_NAME_1="xmlschema2002-01-16"
@@ -97,15 +97,23 @@ src_install() {
 }
 
 pkg_postinst() {
-	# need an XML catalog, so no-one writes to a non-existent one
-	CATALOG="${ROOT}etc/xml/catalog"
+	# We don't want to do the xmlcatalog during stage1/stage2, as xmlcatalog
+	# will not be in / and stage1 builds to ROOT=/tmp/stage1root while stage2
+	# doesn't pull in this package.  This fixes bug #208887.
+	if use build || use bootstrap
+	then
+		elog "Skipping XML catalog creation for stage building (bug #208887)."
+	else
+		# need an XML catalog, so no-one writes to a non-existent one
+		CATALOG="${ROOT}etc/xml/catalog"
 
-	# we dont want to clobber an existing catalog though,
-	# only ensure that one is there
-	# <obz@gentoo.org>
-	if [ ! -e ${CATALOG} ]; then
-		[ -d "${ROOT}etc/xml" ] || mkdir -p "${ROOT}etc/xml"
-		/usr/bin/xmlcatalog --create > ${CATALOG}
-		einfo "Created XML catalog in ${CATALOG}"
+		# we dont want to clobber an existing catalog though,
+		# only ensure that one is there
+		# <obz@gentoo.org>
+		if [ ! -e ${CATALOG} ]; then
+			[ -d "${ROOT}etc/xml" ] || mkdir -p "${ROOT}etc/xml"
+			/usr/bin/xmlcatalog --create > ${CATALOG}
+			einfo "Created XML catalog in ${CATALOG}"
+		fi
 	fi
 }
