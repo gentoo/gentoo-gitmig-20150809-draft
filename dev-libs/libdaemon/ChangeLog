@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdaemon
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.45 2007/08/13 20:24:19 dertobi123 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.46 2008/02/05 16:31:40 opfer Exp $
+
+  05 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  libdaemon-0.12.ebuild:
+  stable x86, bug 208922
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   libdaemon-0.11-r1.ebuild:
