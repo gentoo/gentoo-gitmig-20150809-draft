@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/pyxml-0.8.4-r1.ebuild,v 1.3 2008/02/05 17:16:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/pyxml-0.8.4-r1.ebuild,v 1.4 2008/02/05 18:22:08 jer Exp $
 
 inherit python distutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="PYTHON"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
 DEPEND=">=dev-libs/expat-1.95.6"
@@ -41,7 +41,7 @@ src_install() {
 		dohtml -A api,web -r doc/*
 		insinto /usr/share/doc/${PF} && doins doc/*.tex
 	fi
-	use examples && cp -r demo ${D}/usr/share/doc/${PF}
+	use examples && cp -r demo "${D}"/usr/share/doc/${PF}
 }
 
 src_test() {
