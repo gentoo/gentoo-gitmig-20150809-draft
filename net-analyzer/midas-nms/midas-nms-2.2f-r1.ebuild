@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f-r1.ebuild,v 1.1 2007/09/06 12:00:53 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f-r1.ebuild,v 1.2 2008/02/05 10:33:38 hollow Exp $
 
-inherit webapp
+inherit webapp depend.apache
 
 DESCRIPTION="Monitoring, Intrusion Detection, Administration System"
 SRC_URI="mirror://sourceforge/midas-nms/MIDAS-${PV}.tar.gz"
@@ -14,8 +14,9 @@ KEYWORDS="~ppc ~x86"
 DEPEND="virtual/mysql
 	virtual/libpcap
 	media-libs/gd"
-RDEPEND="www-servers/apache
-	virtual/httpd-php"
+RDEPEND="virtual/httpd-php"
+
+need_apache
 
 S="${WORKDIR}/MIDAS-${PV}"
 
@@ -57,13 +58,12 @@ src_install () {
 	webapp_src_install
 
 	# Install documentation.
-	dodoc COPYING
 	dodoc docs/CHANGELOG
 	dodoc docs/INSTALL.txt
 
 	# Init files
-	newconfd ${FILESDIR}/midas-nms.conf midas-nms
-	newinitd ${FILESDIR}/midas-nms.init midas-nms
+	newconfd "${FILESDIR}"/midas-nms.conf midas-nms
+	newinitd "${FILESDIR}"/midas-nms.init midas-nms
 }
 
 pkg_postinst() {
