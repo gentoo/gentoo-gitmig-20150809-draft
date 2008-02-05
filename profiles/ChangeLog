@@ -1,6 +1,12 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1094 2008/02/04 23:23:29 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1095 2008/02/05 18:23:52 bicatali Exp $
+
+  05 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  Added local use flags for sci-libs/cholmod
+
+  05 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  added local use flags for sci-libs/metis
 
   04 Feb 2008; David Shakaryan <omp@gentoo.org> package.mask:
   Remove x11-wm/kahakai from tree. (bug #186440)
