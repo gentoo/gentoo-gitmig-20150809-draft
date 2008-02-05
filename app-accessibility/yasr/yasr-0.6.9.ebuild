@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.9.ebuild,v 1.2 2008/02/03 23:32:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.9.ebuild,v 1.3 2008/02/05 14:28:32 williamh Exp $
 
 DESCRIPTION="general-purpose console screen reader"
 HOMEPAGE="http://yasr.sourceforge.net/"
@@ -13,12 +13,6 @@ IUSE=""
 
 DEPEND=">=sys-devel/autoconf-2.58"
 
-src_unpack(){
-	unpack ${A}
-	cd "${S}"
-	sed -i '/^aclocaldir.*=/s:@aclocaldir@:$(destdir)/usr/share/aclocal:' "${S}"/m4/Makefile.*
-}
-
 src_compile() {
 	econf --datadir='/etc' || die "econf failed"
 	emake || die "emake failed"
@@ -27,7 +21,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc README ChangeLog AUTHORS BUGS CREDITS
-	rm -rf "${D}"/usr/share/aclocal
 	dosed \
 	's:^\(synthesizer=emacspeak server\):#\1:
 	s:^\(synthesizer port=|/usr/local/bin/eflite\):#\1:
