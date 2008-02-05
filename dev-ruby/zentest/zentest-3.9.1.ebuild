@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/zentest-3.9.1.ebuild,v 1.1 2008/02/01 05:45:53 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/zentest-3.9.1.ebuild,v 1.2 2008/02/05 09:44:36 graaff Exp $
 
 inherit gems
 
 MY_P=${P/zentest/ZenTest}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="Centralized Ruby extension management system"
+DESCRIPTION="ZenTest provides 4 different tools and 1 library: zentest, unit_diff, autotest, multiruby, and Test::Rails"
 HOMEPAGE="http://rubyforge.org/projects/zentest/"
 LICENSE="Ruby"
 
