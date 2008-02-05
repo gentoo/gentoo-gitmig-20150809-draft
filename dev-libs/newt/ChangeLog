@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.34 2008/01/18 15:16:12 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.35 2008/02/05 10:10:23 corsair Exp $
+
+  05 Feb 2008; Markus Rothe <corsair@gentoo.org> newt-0.52.2.ebuild:
+  Stable on ppc64
 
   18 Jan 2008; Christian Zoffoli <xmerlin@gentoo.org>
   -files/newt-0.52.7-DESTDIR.patch, newt-0.52.2.ebuild, newt-0.52.7.ebuild:
