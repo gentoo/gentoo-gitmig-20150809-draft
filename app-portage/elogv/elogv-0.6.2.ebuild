@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.6.1-r3.ebuild,v 1.1 2008/02/05 08:18:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.6.2.ebuild,v 1.1 2008/02/05 12:31:59 opfer Exp $
 
-inherit eutils
+inherit distutils eutils
 
 DESCRIPTION="Curses based utility to parse the contents of elogs created by Portage"
 HOMEPAGE="http://gechi-overlay.sourceforge.net/?page=elogv"
@@ -13,6 +13,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
+# remove this after the release of 2008.0
 RDEPEND=">=sys-apps/portage-2.1"
 
 pkg_setup() {
@@ -26,27 +27,13 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	# on user request, allow up/down movement with Vi bindings
-	epatch "${FILESDIR}/${P}-vi_movement.patch"
-	# bug 195429
-	epatch "${FILESDIR}/${P}-segfault_delete.patch"
-	# bug 208524
-	epatch "${FILESDIR}/${P}-refresh_screen.patch"
-}
 src_compile() {
 	einfo "Nothing to compile"
 }
 
 src_install() {
-	newbin elogv.py elogv || die "newbin failed"
-	doman elogv.1
-	dodoc README AUTHORS ChangeLog ChangeLog.old
-	# This will be used as soon as the Makefile is ready for BSD
-	# see bug 192514
-#	emake PREFIX=/usr DESTDIR="${D}" install || die "emake install failed"
+	distutils_src_install
+	dodoc README ChangeLog ChangeLog.old
 }
 
 pkg_postinst() {
