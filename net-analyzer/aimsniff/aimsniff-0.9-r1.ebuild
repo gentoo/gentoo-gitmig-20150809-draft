@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.16 2007/07/29 17:01:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.17 2008/02/05 10:30:08 hollow Exp $
 
-inherit eutils webapp
+inherit eutils webapp depend.apache
 
 MY_P="${P}d"
 WAS_VER="0.1.2b"
@@ -26,9 +26,10 @@ DEPEND="dev-lang/perl
 	dev-perl/DBI
 	dev-perl/Unix-Syslog
 	mysql? ( virtual/mysql dev-perl/DBD-mysql )
-	samba? ( net-fs/samba )
-	http? ( =www-servers/apache-2* )"
+	samba? ( net-fs/samba )"
 RDEPEND=${DEPEND}
+
+want_apache2 http
 
 RESTRICT="mirror"
 
