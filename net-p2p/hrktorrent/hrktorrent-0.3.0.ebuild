@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/hrktorrent/hrktorrent-0.3.0.ebuild,v 1.1 2007/12/25 17:35:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/hrktorrent/hrktorrent-0.3.0.ebuild,v 1.2 2008/02/05 15:51:02 drac Exp $
 
 inherit toolchain-funcs
 
@@ -10,10 +10,10 @@ SRC_URI="http://henrik.unit5.ca/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
-RDEPEND="=net-libs/rb_libtorrent-0.12*"
+RDEPEND=">=net-libs/rb_libtorrent-0.12"
 DEPEND="${RDEPEND}
 	dev-cpp/asio
 	dev-util/pkgconfig"
@@ -29,10 +29,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	local docsuffix=$(ecompress --suffix)
-
-	elog "A sample configuration file for ${PN} can be found in"
-	elog "/usr/share/doc/${PF}/hrktorrent.rc.example${docsuffix}"
-	elog "To use a config file, extract it, put it in your home directory"
-	elog "and name it \".hrktorrent.rc\""
+	elog "Extract ${PN}.rc.example from /usr/share/doc/${PF} to"
+	elog "your home directory as .${PN}.rc for example config."
 }
