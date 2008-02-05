@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r1.ebuild,v 1.4 2007/07/02 13:34:02 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r1.ebuild,v 1.5 2008/02/05 01:08:53 dirtyepic Exp $
 
 inherit eutils
 
@@ -8,12 +8,12 @@ DESCRIPTION="Macrovision FLEXlm license manager and utils"
 HOMEPAGE="http://www.macrovision.com/services/support/flexlm/lmgrd.shtml"
 SRC_URI="http://www.macrovision.com/services/support/flexlm/enduser.pdf
 	x86? (
-		ftp://ftp.globes.com/flexlm/unix/v${PV}/i86_s8/lmgrd.Z
-		ftp://ftp.globes.com/flexlm/unix/v${PV}/i86_s8/lmutil.Z
+		mirror://gentoo/lmgrd-x86.Z
+		mirror://gentoo/lmutil-x86.Z
 	)
 	amd64? (
-		ftp://ftp.globes.com/flexlm/unix/v${PV}/amd64_s8/lmgrd.Z
-		ftp://ftp.globes.com/flexlm/unix/v${PV}/amd64_s8/lmutil.Z
+		mirror://gentoo/lmgrd-amd64.Z
+		mirror://gentoo/lmutil-amd64.Z
 	)"
 
 LICENSE="as-is"
@@ -22,17 +22,15 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND="virtual/libc"
-
 S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
 
-	mv lmutil-${ARCH}-${PV} lmutil
-	mv lmgrd-${ARCH}-${PV} lmgrd
+	mv lmutil-${ARCH} lmutil
+	mv lmgrd-${ARCH} lmgrd
 
-	cp ${DISTDIR}/enduser.pdf ${S}
+	cp "${DISTDIR}"/enduser.pdf "${S}"
 }
 
 src_install () {
@@ -54,11 +52,11 @@ src_install () {
 	dodoc enduser.pdf
 
 	# init files
-	newinitd ${FILESDIR}/flexlm-init flexlm
-	newconfd ${FILESDIR}/flexlm-conf flexlm
+	newinitd "${FILESDIR}"/flexlm-init flexlm
+	newconfd "${FILESDIR}"/flexlm-conf flexlm
 
 	# environment
-	doenvd ${FILESDIR}/90flexlm
+	doenvd "${FILESDIR}"/90flexlm
 
 	# empty dir for licenses
 	keepdir /etc/flexlm

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/flexlm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.15 2007/07/02 13:34:02 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.16 2008/02/05 01:08:53 dirtyepic Exp $
+
+  05 Feb 2008; Ryan Hill <dirtyepic@gentoo.org> flexlm-9.5-r1.ebuild:
+  Mirror distfiles locally to prevent hash conflicts.  Bug #123920.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> flexlm-9.5-r1.ebuild:
   (QA) RESTRICT clean up.
