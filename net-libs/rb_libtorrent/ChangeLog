@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.40 2008/02/04 15:32:19 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.41 2008/02/05 15:47:53 drac Exp $
+
+  05 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  rb_libtorrent-0.12.1.ebuild:
+  amd64 stable wrt security #208854
 
   04 Feb 2008; Dawid Węgliński <cla@gentoo.org>
   rb_libtorrent-0.12.1.ebuild:
