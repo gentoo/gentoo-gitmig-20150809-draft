@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/csparse
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/csparse/ChangeLog,v 1.1 2008/02/05 18:44:59 bicatali Exp $
+
+*csparse-2.2.1 (05 Feb 2008)
+
+  05 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/csparse-2.2.1-autotools.patch, +metadata.xml,
+  +csparse-2.2.1.ebuild:
+  Initial import, part of the suitesparse
+

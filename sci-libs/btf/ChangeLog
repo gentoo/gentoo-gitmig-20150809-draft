@@ -1,0 +1,9 @@
+# ChangeLog for sci-libs/btf
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/btf/ChangeLog,v 1.1 2008/02/05 18:34:57 bicatali Exp $
+
+*btf-1.0.1 (05 Feb 2008)
+
+  05 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/btf-1.0.1-autotools.patch, +metadata.xml, +btf-1.0.1.ebuild:
+  Initial import, part of the suitesparse
