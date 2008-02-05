@@ -1,6 +1,13 @@
 # ChangeLog for net-print/splix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.10 2008/02/05 23:42:02 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.11 2008/02/05 23:53:52 wschlich Exp $
+
+  05 Feb 2008; Wolfram Schlich <wschlich@gentoo.org>
+  -files/splix-1.0.1_p1-fix-makefile.patch,
+  -files/splix-1.0.1_p1-fix-nocolor-segfault.patch,
+  -files/splix-1.0.1_p1-fix-ppd-parallel-build.patch, -splix-0.0.2.ebuild,
+  -splix-1.0.1.ebuild, -splix-1.0.1_p1.ebuild, -splix-1.0.2.ebuild:
+  removed old versions
 
 *splix-1.1.1 (05 Feb 2008)
 
