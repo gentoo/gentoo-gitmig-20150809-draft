@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/xkeyval
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/ChangeLog,v 1.13 2008/01/05 11:21:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/ChangeLog,v 1.14 2008/02/05 20:58:22 grobian Exp $
+
+  05 Feb 2008; Fabian Groffen <grobian@gentoo.org> xkeyval-2.4-r1.ebuild,
+  xkeyval-2.5f.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   05 Jan 2008; Alexis Ballier <aballier@gentoo.org> xkeyval-2.5f.ebuild:
   Add missing app-arch/unzip dep, bug #204390

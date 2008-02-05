@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/xkeyval-2.5f.ebuild,v 1.6 2008/01/05 11:21:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/xkeyval-2.5f.ebuild,v 1.7 2008/02/05 20:58:22 grobian Exp $
 
 inherit latex-package
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://tug.ctan.org/tex-archive/macros/latex/contrib/${PN}.zip"
 
 LICENSE="LPPL-1.2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc-macos x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 RDEPEND=">=app-text/tetex-3.0"
 DEPEND="${RDEPEND}
