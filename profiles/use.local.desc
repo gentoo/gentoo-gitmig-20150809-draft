@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3345 2008/02/04 19:35:02 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3346 2008/02/05 17:53:40 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1863,6 +1863,8 @@ sci-libs/libsvm:tools - install support tools
 sci-libs/mkl:fortran95 - Build static FORTRAN 95 BLAS/LAPACK interface
 sci-libs/mkl:int64 - Install the 64 bits integer library, double package size
 sci-libs/mkl:serial - Install the serial (as non-threaded) libraries as well, double package size
+sci-libs/metis:openmp - Build support for the OpenMP, needs openmp capable compiler
+sci-libs/metis:int64 - Build the 64 bits integer library (version >=5)
 sci-libs/plplot:itcl - Support for itcl bindings.
 sci-libs/plplot:octave - Support for Octave bindings.
 sci-libs/scipy:sandbox - Installs experimental scipy sandbox modules (pull some dependencies)
