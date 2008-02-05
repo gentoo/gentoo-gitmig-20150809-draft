@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.1.1.ebuild,v 1.1 2008/01/30 11:04:41 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.1.2.ebuild,v 1.1 2008/02/05 10:44:13 remi Exp $
 
 inherit gnome2 eutils
 
