@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/rt2570-1.1.0_beta1.ebuild,v 1.7 2007/08/29 19:00:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/rt2570-1.1.0_beta1.ebuild,v 1.8 2008/02/05 16:32:38 steev Exp $
 
 inherit eutils linux-mod
 
@@ -48,5 +48,5 @@ pkg_postinst() {
 
 	einfo "to set up the card you can use:"
 	einfo "- iwconfig from wireless-tools"
-	einfo "- iwpriv, like described in \"/usr/share/doc/${PF}/iwpriv_usage.txt.gz"\"
+	einfo "- iwpriv, like described in \"/usr/share/doc/${PF}"\"
 }

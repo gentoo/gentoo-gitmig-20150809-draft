@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/rt2570
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/ChangeLog,v 1.9 2007/08/29 19:00:26 genstef Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/ChangeLog,v 1.10 2008/02/05 16:32:38 steev Exp $
+
+  05 Feb 2008; Steev Klimaszewski <steev@gentoo.org>
+  rt2570-1.1.0_beta1.ebuild, rt2570-1.1.0_beta2.ebuild,
+  rt2570-20070209.ebuild:
+  Remove the filename since users are apparently retarded. Closes bug #207788.
+  Thanks Mark!
 
 *rt2570-20070209.ebuild (29 Aug 2007)
 *rt2570-1.1.0_beta2.ebuild (29 Aug 2007)
