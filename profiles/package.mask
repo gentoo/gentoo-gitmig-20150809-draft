@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8244 2008/02/05 11:10:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8245 2008/02/05 15:14:29 hollow Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -55,12 +55,6 @@ net-libs/libhttpd-persistent
 # distributions and thus collides with them.
 # Removal due: 03 Mar 2008
 dev-tex/dk-bib
-
-# Benedikt Böhm <hollow@gentoo.org> (03 Feb 2008)
-# Masked for removal in 30 days wrt #208584
-# Does not use webapp/depend.apache eclass correctly
-# Obsoleted by =www-apps/gallery-2*
-=www-apps/gallery-1*
 
 # Vlastimil Babka <caster@gentoo.org> (03 Feb 2008)
 # Still unmigrated, no release since 2005, some of the
