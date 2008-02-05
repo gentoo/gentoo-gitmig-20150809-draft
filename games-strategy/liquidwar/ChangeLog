@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/liquidwar
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/ChangeLog,v 1.20 2008/02/05 15:59:30 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/ChangeLog,v 1.21 2008/02/05 16:26:08 coldwind Exp $
+
+  05 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
+  liquidwar-5.6.4.ebuild:
+  amd64 stable
 
   05 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
   liquidwar-5.6.4.ebuild:

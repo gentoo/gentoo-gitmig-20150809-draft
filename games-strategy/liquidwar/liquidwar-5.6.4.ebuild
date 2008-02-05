@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.4.ebuild,v 1.2 2008/02/05 15:59:30 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.4.ebuild,v 1.3 2008/02/05 16:26:08 coldwind Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/liquidwar/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="nls"
 RESTRICT="test"
 
