@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.5.ebuild,v 1.5 2007/07/12 05:10:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.5.ebuild,v 1.6 2008/02/05 03:20:27 wolf31o2 Exp $
 
 inherit qt3 multilib autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/qtparted/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="jfs ntfs reiserfs xfs gnome kde" # kdeenablefinal"
 
 DEPEND="$(qt_min_version 3.1)
