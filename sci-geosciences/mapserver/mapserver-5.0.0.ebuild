@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0.ebuild,v 1.4 2007/10/24 06:58:02 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0.ebuild,v 1.5 2008/02/05 08:29:18 hollow Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -24,7 +24,6 @@ DEPEND="media-libs/libpng
 	media-libs/freetype
 	sys-libs/zlib
 	>=media-libs/gd-2.0.12
-	apache2? ( www-servers/apache )
 	unicode? ( virtual/libiconv )
 	agg? ( x11-libs/agg )
 	geos? ( sci-libs/geos )

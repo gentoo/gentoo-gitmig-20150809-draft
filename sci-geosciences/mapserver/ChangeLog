@@ -1,6 +1,18 @@
 # ChangeLog for sci-geosciences/mapserver
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.8 2007/10/24 06:58:02 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.9 2008/02/05 08:29:18 hollow Exp $
+
+*mapserver-5.0.0-r1 (05 Feb 2008)
+
+  05 Feb 2008; Benedikt Böhm <hollow@gentoo.org> mapserver-5.0.0.ebuild,
+  +mapserver-5.0.0-r1.ebuild:
+  merge from webapps overlay wrt #208584
+
+  03 Feb 2008; Jakub Moc <jakub@gentoo.org>
+  -files/mapserver-5.0.0_php.patch, -files/mapserver_php4.patch,
+  mapserver-5.0.0.ebuild:
+  Fix apache handling wrt Bug 208584. Drop support for PHP4. Sanitize the
+  ebuild. Fix perl handling for Bug 205076.
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -files/mapserver-4.10.0_php.patch, -files/mapserver-4.10.3_php.patch,
