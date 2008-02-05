@@ -1,22 +1,23 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-6.1.010.ebuild,v 1.3 2007/07/29 17:07:47 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-6.1.010.ebuild,v 1.4 2008/02/05 08:47:31 hollow Exp $
 
-inherit eutils webapp
+inherit eutils webapp depend.apache
 
 MY_SRC_PN="WebMO"
 MY_SRC_P="${MY_SRC_PN}.${PV}"
 DESCRIPTION="Web-based interface to computational chemistry packages"
 HOMEPAGE="http://webmo.net/"
 SRC_URI="${MY_SRC_P}.tar.gz"
+
 LICENSE="WebMO"
 SLOT="${PVR}"
 KEYWORDS="~x86"
 RESTRICT="fetch"
 IUSE=""
-RDEPEND="dev-lang/perl
-	www-servers/apache"
-DEPEND="${RDEPEND}"
+
+DEPEND="dev-lang/perl"
+need_apache2
 
 S="${WORKDIR}/${MY_SRC_PN}.install"
 
@@ -43,15 +44,15 @@ src_unpack() {
 	unpack ${A}
 
 	# Set up program locations to match where portage installs them
-	epatch ${FILESDIR}/gentoo-locations.patch
+	epatch "${FILESDIR}"/gentoo-locations.patch
 
 	# Add a data directory for gamess, because WebMO expects everything
 	# in one directory instead of FHS
 	# (Depends on gentoo-locations.patch)
-	epatch ${FILESDIR}/add-gamess-data-directory.patch
+	epatch "${FILESDIR}"/add-gamess-data-directory.patch
 
 	# Don't run diagnose.pl or ask about being root user
-	epatch ${FILESDIR}/dont-be-interactive-or-diagnose.patch
+	epatch "${FILESDIR}"/dont-be-interactive-or-diagnose.patch
 
 	# Make setup.conf
 	create_setup_conf
@@ -61,14 +62,14 @@ src_install() {
 	webapp_src_preinst
 
 	# Install everything
-	perl setup.pl || die "Check ${S}/diagnose.html for errors"
+	perl setup.pl || die "Check '${S}'/diagnose.html for errors"
 
 	# Get ${D} out of main config file
 	dosed "${MY_CGIBINDIR}/webmo/interfaces/globals.int"
 
-	webapp_hook_script ${FILESDIR}/reconfig
+	webapp_hook_script "${FILESDIR}"/reconfig
 
-	local files=$(find ${D}${MY_HOSTROOTDIR}/webmo ${D}${MY_CGIBINDIR}/webmo/interfaces)
+	local files=$(find "${D}"${MY_HOSTROOTDIR}/webmo "${D}"${MY_CGIBINDIR}/webmo/interfaces)
 	# Add the directories themselves
 	files="${files} ${MY_HOSTROOTDIR}/webmo ${MY_CGIBINDIR}/webmo/interfaces"
 	files=${files//${D}/}
@@ -88,12 +89,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Be sure that this line is uncommented in httpd.conf:"
-	einfo "AddHandle cgi-scripts .cgi"
-	einfo
-	einfo "The diagnose.pl script can be run if WebMO doesn't work properly."
-	einfo
+	elog
+	elog "Be sure that this line is uncommented in httpd.conf:"
+	elog "AddHandle cgi-scripts .cgi"
+	elog
+	elog "The diagnose.pl script can be run if WebMO doesn't work properly."
+	elog
 	ewarn "Be careful never to overwrite your user, group or job databases"
 	ewarn "when using etc-update after an upgrade."
 
