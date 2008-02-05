@@ -1,0 +1,12 @@
+diff -uNr ejabberd-1.1.4.ORIG/src/expat_erl.c ejabberd-1.1.4/src/expat_erl.c
+--- ejabberd-1.1.4.ORIG/src/expat_erl.c	2007-09-14 12:07:56.000000000 +0100
++++ ejabberd-1.1.4/src/expat_erl.c	2007-09-14 12:08:56.000000000 +0100
+@@ -14,6 +14,8 @@
+  * Workaround for EI encode_string bug
+  */
+ 
++int x_fix_buff(ei_x_buff* x, int szneeded);
++
+ #define put8(s,n) do { \
+   (s)[0] = (char)((n) & 0xff); \
+   (s) += 1; \
