@@ -37,3 +37,7 @@ net-dialup/mgetty fax
 # 2007/12/23 - Richard Brown <rbrown@gentoo.org>
 # It's better to install ruby with these than without
 dev-lang/ruby berkdb gdbm openssl
+
+# 2008/02/05 - Chris Gianelloni <wolf31o2@gentoo.org>
+# Starting with 2008.0, arts is no longer in default USE.
+app-emulation/emul-linux-x86-soundlibs arts
