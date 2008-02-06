@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tnt/tnt-2.6-r1.ebuild,v 1.3 2008/02/05 23:23:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tnt/tnt-2.6-r1.ebuild,v 1.4 2008/02/06 00:06:45 opfer Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tnt/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SITEFILE=51${PN}-gentoo.el
