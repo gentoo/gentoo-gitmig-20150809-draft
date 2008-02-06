@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.34 2008/01/29 13:39:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.35 2008/02/06 17:50:45 nixnut Exp $
+
+  06 Feb 2008; nixnut <nixnut@gentoo.org> ksh-93.20071105.ebuild:
+  stable on ppc wrt bug #140705
 
   29 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   -files/ksh-20050202-uname.patch, -files/ksh-20060124-syntax.patch,
