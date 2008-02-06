@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-0.16.ebuild,v 1.1 2008/02/06 20:17:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-0.16.ebuild,v 1.2 2008/02/06 21:08:55 betelgeuse Exp $
 
 inherit gnome2
 
@@ -30,3 +30,9 @@ G2CONF="--disable-desktop-update
 		--disable-mime-update"
 
 DOCS="AUTHORS README NEWS ChangeLog"
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	elog "Send file functionality doesn't work until obex-data-server is"
+	elog "packaged."
+}
