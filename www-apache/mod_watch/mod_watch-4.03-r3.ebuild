@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_watch/mod_watch-4.03-r3.ebuild,v 1.4 2008/01/31 16:46:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_watch/mod_watch-4.03-r3.ebuild,v 1.5 2008/02/06 21:10:16 hollow Exp $
 
 inherit apache-module eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 src_compile() {
 	sed -i \
 		-e "s:APXS=\\(.*\\):APXS=${APXS} # \\1:" \
-		-e "s:APACHECTL=\\(.*\\):APACHECTL=${APACHECTL} # \\1:" \
+		-e "s:APACHECTL=\\(.*\\):APACHECTL=${APACHE_CTL} # \\1:" \
 		Makefile.dso || die "Path fixing failed"
 
 	sed -i -e "s:/usr/local/sbin:/usr/sbin:" \
