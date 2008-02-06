@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.56 2008/02/06 21:22:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.57 2008/02/06 23:45:11 hollow Exp $
+
+  06 Feb 2008; Benedikt Böhm <hollow@gentoo.org> mod_perl-2.0.3-r2.ebuild:
+  rename check_apache_threads to has_apache_threads as suggested by dberkholz
 
   06 Feb 2008; Benedikt Böhm <hollow@gentoo.org> mod_perl-2.0.3-r2.ebuild:
   use new depend.apache functions to simplify ebuild logic
