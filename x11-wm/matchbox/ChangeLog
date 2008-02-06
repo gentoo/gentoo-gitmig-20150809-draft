@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/matchbox
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/ChangeLog,v 1.16 2007/09/26 04:06:56 jer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/ChangeLog,v 1.17 2008/02/06 20:09:50 yvasilev Exp $
+
+  06 Feb 2008; <yvasilev@gentoo.org> matchbox-0.7.1.ebuild:
+  Added -Wl,--no-as-needed to LDFLAGS to fix Bug #203150:
+  x11-wm/matchbox-0.7.1: undefined reference to XShm* w/ --as-needed
 
   26 Sep 2007; Jeroen Roovers <jer@gentoo.org> matchbox-1.0.ebuild:
   Marked ~hppa too.

@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.11 2007/07/22 06:04:45 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.12 2008/02/06 20:09:50 yvasilev Exp $
+
+inherit flag-o-matic
 
 IUSE="jpeg png nls debug"
 
@@ -39,6 +41,8 @@ src_compile() {
 	use jpeg && myconf="${myconf} --enable-jpg"
 	use png || myconf="${myconf} --disable-png"
 	use debug && myconf="${myconf} --enable-debug"
+
+	append-ldflags -Wl,--no-as-needed
 
 	econf ${myconf} || die "Configuration failed"
 	emake || die "Make feiled"
