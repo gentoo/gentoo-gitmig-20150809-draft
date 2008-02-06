@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.64 2008/02/06 02:10:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.65 2008/02/06 18:56:27 nixnut Exp $
+
+  06 Feb 2008; nixnut <nixnut@gentoo.org> vpnc-0.5.1-r1.ebuild:
+  stable on ppc wrt bug #209045
 
   06 Feb 2008; Brent Baude <ranger@gentoo.org> vpnc-0.5.1-r1.ebuild:
   stable ppc64, bug 209045
