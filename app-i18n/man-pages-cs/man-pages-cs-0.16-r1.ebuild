@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-cs/man-pages-cs-0.16-r1.ebuild,v 1.3 2008/02/06 00:10:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-cs/man-pages-cs-0.16-r1.ebuild,v 1.4 2008/02/06 00:49:36 opfer Exp $
 
 DESCRIPTION="A somewhat comprehensive collection of Linux czech man page translations"
 HOMEPAGE="http://www.win.tue.nl/~aeb/linux/man/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.win.tue.nl/pub/linux-local/manpages/translations/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="virtual/man"

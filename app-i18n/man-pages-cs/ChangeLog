@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-cs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-cs/ChangeLog,v 1.4 2008/02/06 00:10:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-cs/ChangeLog,v 1.5 2008/02/06 00:49:36 opfer Exp $
+
+  06 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  -man-pages-cs-0.16.ebuild, man-pages-cs-0.16-r1.ebuild:
+  stable love, for bug 166190 and clean up
 
   06 Feb 2008; Mark Loeser <halcy0n@gentoo.org> man-pages-cs-0.16-r1.ebuild:
   Remove the man manpage as well since its already provided by sys-apps/man;
