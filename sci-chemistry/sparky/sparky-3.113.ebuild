@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.113.ebuild,v 1.1 2007/06/06 00:06:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.113.ebuild,v 1.2 2008/02/06 09:21:26 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib python
 
@@ -51,14 +51,14 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/fix-install.patch
+	epatch "${FILESDIR}"/fix-install.patch
 
 	sed -i \
 		-e "s:^\(set PYTHON[[:space:]]*=\).*:\1 /usr/bin/python${PYVER}:g" \
 		-e "s:^\(setenv TCLTK_LIB[[:space:]]*\).*:\1 /usr/$(get_libdir):g" \
-		${S}/bin/sparky
+		"${S}"/bin/sparky
 }
 
 src_compile() {
