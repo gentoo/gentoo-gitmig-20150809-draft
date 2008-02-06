@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-0.9.6-r1.ebuild,v 1.2 2008/01/06 21:58:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-0.9.6-r1.ebuild,v 1.3 2008/02/06 14:16:09 angelos Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://berlios/${PN}/${P}-p1.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug doc event-callback gtk minimal ncurses session test upnp webinterface"
 
 RDEPEND="dev-libs/boost
