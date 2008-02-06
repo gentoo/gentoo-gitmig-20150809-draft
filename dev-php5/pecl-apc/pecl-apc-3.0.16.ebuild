@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.0.16.ebuild,v 1.4 2008/02/01 14:52:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.0.16.ebuild,v 1.5 2008/02/06 17:57:32 nixnut Exp $
 
 PHP_EXT_NAME="apc"
 PHP_EXT_PECL_PKG="APC"
@@ -10,7 +10,7 @@ DOCS="CHANGELOG INSTALL NOTICE TECHNOTES.txt TODO"
 
 inherit php-ext-pecl-r1 confutils eutils
 
-KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ppc ~ppc64 sparc x86"
 
 DESCRIPTION="A free, open, and robust framework for caching and optimizing PHP code."
 LICENSE="PHP-3.01"
