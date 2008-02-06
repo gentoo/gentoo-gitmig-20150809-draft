@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1099 2008/02/06 16:25:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1100 2008/02/06 17:26:34 nixnut Exp $
+
+  06 Feb 2008; nixnut <nixnut@gentoo.org>
+  default-linux/ppc/ppc32/package.use.mask:
+  Masking hb and hb2 USE flags as no suitable solution for evms exists
 
   06 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> base/package.use,
   base/packages, default-linux/packages.build:
