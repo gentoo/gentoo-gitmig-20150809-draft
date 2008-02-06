@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1100 2008/02/06 17:26:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1101 2008/02/06 18:22:46 remi Exp $
+
+  06 Feb 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  add to p.mask a git snapshot of xf86-video-i810
 
   06 Feb 2008; nixnut <nixnut@gentoo.org>
   default-linux/ppc/ppc32/package.use.mask:
