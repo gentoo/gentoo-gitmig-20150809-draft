@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/bochs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.73 2007/09/28 23:38:51 dirtyepic Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.74 2008/02/06 23:12:29 lu_zero Exp $
+
+*bochs-2.3.6 (06 Feb 2008)
+
+  06 Feb 2008; Luca Barbato <lu_zero@gentoo.org> +bochs-2.3.6.ebuild:
+  New version, ebuild kindly provided by Friedrich Oslage
+  <bluebird@porno-bullen.de> in bug #209183
 
   28 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> bochs-2.2.6.ebuild,
   bochs-2.3.ebuild, bochs-2.3.5.ebuild:
