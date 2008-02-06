@@ -1,12 +1,12 @@
-# Copyright 2006-2007 Gentoo Foundation
+# Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.13 2007/09/11 19:59:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.14 2008/02/06 19:44:19 coldwind Exp $
 
 inherit eutils
 
 DESCRIPTION="Open Fingerprint Architecture"
-HOMEPAGE="http://www.musicdns.org/"
-SRC_URI="http://www.musicdns.org/themes/musicdns_org/downloads/${P}.tar.gz"
+HOMEPAGE="http://code.google.com/p/musicip-libofa/"
+SRC_URI="http://musicip-libofa.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="|| ( APL-1.0 GPL-2 )"
 SLOT="0"
@@ -26,8 +26,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/libofa-0.9.3-gcc-4.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/libofa-0.9.3-gcc-4.patch
 }
 
 src_compile() {
