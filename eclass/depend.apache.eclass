@@ -1,19 +1,39 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.39 2008/02/03 14:12:44 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.40 2008/02/06 08:33:47 hollow Exp $
 
 # @ECLASS: depend.apache.eclass
 # @MAINTAINER: apache-devs@gentoo.org
 # @BLURB: Functions to allow ebuilds to depend on apache
 # @DESCRIPTION:
-# This eclass handles depending on apache in a sane way and providing
-# information about where certain interfaces are located.
+# This eclass handles depending on apache in a sane way and provides information
+# about where certain binaries and configuration files are located.
 #
-# @NOTE: If you use this, be sure you use the need_* call after you have defined
-# DEPEND and RDEPEND. Also note that you can not rely on the automatic
+# To make use of this eclass simply call one of the need/want_apache functions
+# described below. Make sure you use the need/want_apache call after you have
+# defined DEPEND and RDEPEND. Also note that you can not rely on the automatic
 # RDEPEND=DEPEND that portage does if you use this eclass.
 #
-# See bug 107127 for more information.
+# See Bug 107127 for more information.
+#
+# @EXAMPLE:
+#
+# Here is an example of an ebuild depending on apache:
+#
+# @CODE
+#   DEPEND="virtual/Perl-CGI"
+#   RDEPEND="${DEPEND}"
+#   need_apache2
+# @CODE
+#
+# Another example which demonstrates non-standard IUSE options for optional
+# apache support:
+#
+# @CODE
+#   DEPEND="server? ( virtual/Perl-CGI )"
+#   RDEPEND="${DEPEND}"
+#   want_apache2 server
+# @CODE
 
 inherit multilib
 
@@ -23,36 +43,48 @@ inherit multilib
 
 # @ECLASS-VARIABLE: APACHE_VERSION
 # @DESCRIPTION:
-# Stores the version of apache we are going to be ebuilding. This variable is
-# set by the need_apache functions.
+# Stores the version of apache we are going to be ebuilding.
+# This variable is set by the want/need_apache functions.
 
 # @ECLASS-VARIABLE: APXS
 # @DESCRIPTION:
-# Paths to the apxs tool
+# Paths to the apxs tool.
+# This variable is set by the want/need_apache functions.
 
-# @ECLASS-VARIABLE: APACHECTL
+# @ECLASS-VARIABLE: APACHE_BIN
 # @DESCRIPTION:
-# Path to the apachectl tool
+# Path to the apache binary.
+# This variable is set by the want/need_apache functions.
+
+# @ECLASS-VARIABLE: APACHE_CTL
+# @DESCRIPTION:
+# Path to the apachectl tool.
+# This variable is set by the want/need_apache functions.
 
 # @ECLASS-VARIABLE: APACHE_BASEDIR
 # @DESCRIPTION:
-# Path to the server root directory
+# Path to the server root directory.
+# This variable is set by the want/need_apache functions.
 
 # @ECLASS-VARIABLE: APACHE_CONFDIR
 # @DESCRIPTION:
-# Path to the configuration file directory
+# Path to the configuration file directory.
+# This variable is set by the want/need_apache functions.
 
 # @ECLASS-VARIABLE: APACHE_MODULES_CONFDIR
 # @DESCRIPTION:
-# Path where module configuration files are kept
+# Path where module configuration files are kept.
+# This variable is set by the want/need_apache functions.
 
 # @ECLASS-VARIABLE: APACHE_VHOSTS_CONFDIR
 # @DESCRIPTION:
-# Path where virtual host configuration files are kept
+# Path where virtual host configuration files are kept.
+# This variable is set by the want/need_apache functions.
 
 # @ECLASS-VARIABLE: APACHE_MODULESDIR
 # @DESCRIPTION:
-# Path where we install modules
+# Path where we install modules.
+# This variable is set by the want/need_apache functions.
 
 # @ECLASS-VARIABLE: APACHE_DEPEND
 # @DESCRIPTION:
@@ -101,9 +133,20 @@ _init_no_apache() {
 # ==============================================================================
 
 # @FUNCTION: want_apache
+# @USAGE: [myiuse]
+# @DESCRIPTION:
+# An ebuild calls this to get the dependency information for optional apache
+# support. If the myiuse parameter is not given it defaults to apache2.
+want_apache() {
+	debug-print-function $FUNCNAME $*
+	want_apache2 "$@"
+}
+
+# @FUNCTION: want_apache2
+# @USAGE: [myiuse]
 # @DESCRIPTION:
 # An ebuild calls this to get the dependency information for optional apache-2.x
-# support.
+# support. If the myiuse parameter is not given it defaults to apache2.
 want_apache2() {
 	debug-print-function $FUNCNAME $*
 
@@ -119,10 +162,12 @@ want_apache2() {
 	fi
 }
 
-# @FUNCTION: want_apache
+# @FUNCTION: want_apache2_2
+# @USAGE: [myiuse]
 # @DESCRIPTION:
 # An ebuild calls this to get the dependency information for optional
-# apache-2.2.x support.
+# apache-2.2.x support. If the myiuse parameter is not given it defaults to
+# apache2.
 want_apache2_2() {
 	debug-print-function $FUNCNAME $*
 
@@ -138,19 +183,17 @@ want_apache2_2() {
 	fi
 }
 
-# @FUNCTION: want_apache
+# @FUNCTION: need_apache
 # @DESCRIPTION:
-# An ebuild calls this to get the dependency information for optional apache
-# support.
-want_apache() {
+# An ebuild calls this to get the dependency information for apache.
+need_apache() {
 	debug-print-function $FUNCNAME $*
-	want_apache2 "$@"
+	need_apache2
 }
 
 # @FUNCTION: need_apache2
 # @DESCRIPTION:
-# Works like need_apache, but its used by modules that only support
-# apache 2.x and do not work with other versions.
+# An ebuild calls this to get the dependency information for apache-2.x.
 need_apache2() {
 	debug-print-function $FUNCNAME $*
 
@@ -161,23 +204,11 @@ need_apache2() {
 
 # @FUNCTION: need_apache2_2
 # @DESCRIPTION:
-# Works like need_apache, but its used by modules that only support
-# apache 2.2.x and do not work with other versions.
+# An ebuild calls this to get the dependency information for apache-2.2.x.
 need_apache2_2() {
 	debug-print-function $FUNCNAME $*
 
 	DEPEND="${DEPEND} ${APACHE2_2_DEPEND}"
 	RDEPEND="${RDEPEND} ${APACHE2_2_DEPEND}"
 	_init_apache2
-}
-
-# @FUNCTION: need_apache
-# @DESCRIPTION:
-# An ebuild calls this to get the dependency information for apache. An
-# ebuild should use this in order for future changes to the build infrastructure
-# to happen seamlessly. All an ebuild needs to do is include the line
-# need_apache somewhere.
-need_apache() {
-	debug-print-function $FUNCNAME $*
-	need_apache2
 }
