@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r2.ebuild,v 1.6 2008/02/05 10:00:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r2.ebuild,v 1.7 2008/02/06 11:54:14 armin76 Exp $
 
 #
 # NOTE: This revision is used by direct dependency. DO NOT REMOVE!
@@ -16,7 +16,7 @@ SRC_URI="mirror://gnupg/gpgme/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0.3"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ppc64 sparc x86"
 IUSE="doc"
 
 DEPEND=">=app-crypt/gnupg-1.2.0"
