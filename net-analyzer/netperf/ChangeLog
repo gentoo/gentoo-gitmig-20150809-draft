@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.38 2008/02/06 01:58:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.39 2008/02/06 20:40:20 nixnut Exp $
+
+  06 Feb 2008; nixnut <nixnut@gentoo.org> netperf-2.4.4.ebuild:
+  stable on ppc wrt bug #209035
 
   06 Feb 2008; Brent Baude <ranger@gentoo.org> netperf-2.4.4.ebuild:
   stable ppc64, bug 209035
