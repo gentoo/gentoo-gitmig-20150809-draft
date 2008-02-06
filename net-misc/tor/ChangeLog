@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.103 2008/02/02 00:16:28 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.104 2008/02/06 18:29:33 nixnut Exp $
+
+  06 Feb 2008; nixnut <nixnut@gentoo.org> tor-0.1.2.18.ebuild:
+  stable on ppc wrt bug #208336
 
   02 Feb 2008; Richard Freeman <rich0@gentoo.org> tor-0.1.2.18.ebuild:
   amd64 stable - #208336
