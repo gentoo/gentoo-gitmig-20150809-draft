@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.52 2008/01/12 04:47:00 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.53 2008/02/06 08:40:49 opfer Exp $
+
+  06 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  speech-tools-1.2.96_beta.ebuild:
+  stable x86 amd64, bug 209081
 
   12 Jan 2008; William Hubbs <williamh@gentoo.org>
   +files/speech-tools-1.2.96_beta-gcc43-include.patch,
