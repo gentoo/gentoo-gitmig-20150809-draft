@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/matchbox-applet-input-manager
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-input-manager/ChangeLog,v 1.4 2007/09/26 04:02:55 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-input-manager/ChangeLog,v 1.5 2008/02/06 20:24:46 yvasilev Exp $
+
+  06 Feb 2008; <yvasilev@gentoo.org>
+  +files/matchbox-applet-input-manager-0.6-sssh_debug.patch,
+  matchbox-applet-input-manager-0.6.ebuild:
+  Added a back ported patch to quieten -debug builds, Bug #95698
 
   26 Sep 2007; Jeroen Roovers <jer@gentoo.org>
   matchbox-applet-input-manager-0.6.ebuild:

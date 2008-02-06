@@ -1,8 +1,8 @@
-# Copyright 2006-2007 Gentoo Foundation
+# Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-input-manager/matchbox-applet-input-manager-0.6.ebuild,v 1.3 2007/09/26 04:02:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-input-manager/matchbox-applet-input-manager-0.6.ebuild,v 1.4 2008/02/06 20:24:46 yvasilev Exp $
 
-inherit versionator
+inherit versionator eutils
 
 MY_PN=${PN/matchbox/mb}
 MY_P=${MY_PN}-${PV}
@@ -23,6 +23,12 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+src_unpack() {
+	unpack ${A}; cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-sssh_debug.patch
+}
+
 src_compile() {
 	econf $(use_enable debug) || die "Configuration failed"
 
@@ -30,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Installation failed"
+	make DESTDIR="${D}" install || die "Installation failed"
 
 	dodoc AUTHORS Changelog INSTALL NEWS README
 }
