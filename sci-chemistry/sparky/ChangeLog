@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/sparky
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.9 2007/06/06 00:06:09 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.10 2008/02/06 09:20:31 dberkholz Exp $
+
+  06 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; -sparky-3.111.ebuild:
+  (#208859) Drop old version so python 2.3 can leave the tree.
 
 *sparky-3.113 (06 Jun 2007)
 
