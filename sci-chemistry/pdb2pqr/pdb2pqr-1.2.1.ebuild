@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.2.1.ebuild,v 1.3 2007/07/13 05:48:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.2.1.ebuild,v 1.4 2008/02/06 15:14:10 markusle Exp $
 
 inherit eutils fortran multilib flag-o-matic distutils
 
-DESCRIPTION="pdb2pqr is an automated pipeline for the setup, execution, and analysis of Poisson-Boltzmann electrostatics calculations"
+DESCRIPTION="pdb2pqr is an automated pipeline for performing Poisson-Boltzmann electrostatics calculations"
 LICENSE="GPL-2"
 HOMEPAGE="http://pdb2pqr.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -58,7 +58,7 @@ ${python} ${INPATH}/${PN}.py \$*
 EOF
 
 	exeinto /usr/bin
-	doexe ${T}/${PN} || die "Failed to install pdb2pqr wrapper."
+	doexe "${T}"/${PN} || die "Failed to install pdb2pqr wrapper."
 
 	dodoc ChangeLog NEWS README AUTHORS || \
 		die "Failed to install docs"

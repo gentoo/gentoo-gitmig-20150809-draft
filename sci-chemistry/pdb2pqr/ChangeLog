@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/pdb2pqr
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.10 2007/04/03 15:54:17 je_fro Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.11 2008/02/06 15:14:10 markusle Exp $
+
+*pdb2pqr-1.3.0 (06 Feb 2008)
+
+  06 Feb 2008; Markus Dittrich <markusle@gentoo.org> +pdb2pqr-1.3.0.ebuild:
+  Version bump (see bug #209007).
 
 *pdb2pqr-1.2.1 (03 Apr 2007)
 
