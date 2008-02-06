@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2.ebuild,v 1.1 2008/01/19 13:00:52 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2.ebuild,v 1.2 2008/02/06 17:02:20 markusle Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -112,6 +112,12 @@ src_install() {
 
 	insinto /usr/$(get_libdir)/${P}
 	doins Makefile.incl || die "failed to install Makefile.incl"
+
+	exeinto /usr/$(get_libdir)/${P}
+	doexe libtool || die "failed to install libtool"
+
+	insinto /usr/$(get_libdir)/${P}/config
+	doins config/Makeso.incl || die "failed to install Makeso.incl"
 
 	# The compile and install process causes the work folder
 	# to be registered as the runtime folder in many files.
