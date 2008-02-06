@@ -7,8 +7,10 @@ app-editors/emacs-cvs xpm
 
 # 2007/10/11 - Christian Heim <phreak@gentoo.org>
 # Nearly everything linking against dev-scheme/guile-1.8 needs USE=deprecated
-# for a sucessful build (see #163921)
-=dev-scheme/guile-1.8* deprecated
+# for a sucessful build (see #163921).
+# 3008/02/05 - Chris Gianelloni <wolf31o2@gentoo.org>
+# Added regex for gnucash for 2008.0's release.
+=dev-scheme/guile-1.8* deprecated regex
 
 # 2007/10/11 - Samuli Suominen <drac@gentoo.org>
 # Replaced noamazon USE flag with amazon for bug 134493, comment #1.

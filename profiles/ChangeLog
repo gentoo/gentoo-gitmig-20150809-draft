@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1095 2008/02/05 18:23:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1096 2008/02/06 00:12:55 wolf31o2 Exp $
+
+  06 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> base/package.use:
+  Adding USE=regex to the dev-scheme/guile package.use since it's required for
+  gnucash, among other things.
 
   05 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   Added local use flags for sci-libs/cholmod
