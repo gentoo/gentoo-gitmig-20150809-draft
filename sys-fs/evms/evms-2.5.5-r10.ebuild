@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r10.ebuild,v 1.5 2008/02/01 23:10:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r10.ebuild,v 1.6 2008/02/06 14:24:23 armin76 Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ia64 ~ppc ppc64 sparc x86"
 IUSE="debug gtk hb hb2 ncurses nls"
 
 #EVMS uses libuuid from e2fsprogs
