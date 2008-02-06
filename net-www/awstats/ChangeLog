@@ -1,6 +1,9 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.57 2008/02/05 09:51:09 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.58 2008/02/06 13:55:44 armin76 Exp $
+
+  06 Feb 2008; Raúl Porcel <armin76@gentoo.org> awstats-6.7-r2.ebuild:
+  alpha stable wrt #208615
 
   05 Feb 2008; Benedikt Böhm <hollow@gentoo.org> -awstats-6.7.ebuild,
   -awstats-6.7-r1.ebuild:
