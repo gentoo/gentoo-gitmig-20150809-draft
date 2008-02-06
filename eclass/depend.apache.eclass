@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.42 2008/02/06 21:20:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.43 2008/02/06 23:45:13 hollow Exp $
 
 # @ECLASS: depend.apache.eclass
 # @MAINTAINER: apache-devs@gentoo.org
@@ -212,13 +212,13 @@ need_apache2_2() {
 	_init_apache2
 }
 
-# @FUNCTION: check_apache_threads
+# @FUNCTION: has_apache_threads
 # @USAGE: [myflag]
 # @DESCRIPTION:
 # An ebuild calls this to make sure thread-safety is enabled if apache has been
 # built with a threaded MPM. If the myflag parameter is not given it defaults to
 # threads.
-check_apache_threads() {
+has_apache_threads() {
 	debug-print-function $FUNCNAME $*
 
 	if ! built_with_use www-servers/apache threads ; then
@@ -235,13 +235,13 @@ check_apache_threads() {
 	fi
 }
 
-# @FUNCTION: check_apache_threads_in
+# @FUNCTION: has_apache_threads_in
 # @USAGE: <myforeign> [myflag]
 # @DESCRIPTION:
 # An ebuild calls this to make sure thread-safety is enabled in a foreign
 # package if apache has been built with a threaded MPM. If the myflag parameter
 # is not given it defaults to threads.
-check_apache_threads_in() {
+has_apache_threads_in() {
 	debug-print-function $FUNCNAME $*
 
 	if ! built_with_use www-servers/apache threads ; then
