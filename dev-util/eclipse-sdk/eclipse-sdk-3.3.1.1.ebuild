@@ -1,6 +1,6 @@
 # Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.3.1.1.ebuild,v 1.2 2008/01/24 23:51:04 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.3.1.1.ebuild,v 1.3 2008/02/06 19:58:09 caster Exp $
 
 # Notes: This is a preliminary ebuild of Eclipse-3.3
 # It was based on the initial ebuild in the gcj-overlay, so much of the credit goes out to geki.
@@ -55,7 +55,7 @@ CDEPEND=">=dev-java/ant-eclipse-ecj-3.3
 	>=dev-java/jsch-0.1.36-r1
 	>=dev-java/icu4j-3.6.1
 	>=dev-java/commons-el-1.0-r2
-	>=dev-java/commons-logging-1.1-r4
+	>=dev-java/commons-logging-1.1-r6
 	>=dev-java/tomcat-servlet-api-5.5.25-r1:2.4
 	dev-java/lucene:1.9"
 
