@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.79 2008/02/06 14:00:20 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.80 2008/02/06 14:30:49 angelos Exp $
+
+  06 Feb 2008; Christoph Mende <angelos@gentoo.org> slocate-3.1-r1.ebuild:
+  Stable on amd64, bug #180360
 
   06 Feb 2008; Ferris McCormick <fmccor@gentoo.org> slocate-3.1-r1.ebuild:
   Sparc stable --- Bug #180360 --- can rebuild database and locate things.
