@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.130 2008/02/06 13:13:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.131 2008/02/06 13:23:52 fmccor Exp $
+
+  06 Feb 2008; Ferris McCormick <fmccor@gentoo.org> libpcre-7.6.ebuild:
+  Sparc stable --- security Bug #209067 --- tests good.
 
   06 Feb 2008; Ferris McCormick <fmccor@gentoo.org> libpcre-7.4-r1.ebuild:
   Sparc stable --- Bug #209060 --- all tests pass.
