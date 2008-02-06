@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.1.4.ebuild,v 1.3 2008/02/05 15:34:53 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.1.4.ebuild,v 1.4 2008/02/06 00:26:11 steev Exp $
 
 inherit eutils multilib autotools flag-o-matic
 
@@ -106,7 +106,7 @@ pkg_postinst() {
 	elog "you should add it to the default runlevel :"
 	elog "\`rc-update add dbus default\`"
 	elog
-	elog "Somme applications require a session bus in addition to the system"
+	elog "Some applications require a session bus in addition to the system"
 	elog "bus. Please see \`man dbus-launch\` for more information."
 	elog
 	ewarn
