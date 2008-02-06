@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.49 2008/02/06 14:45:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.50 2008/02/06 19:20:12 nixnut Exp $
+
+  06 Feb 2008; nixnut <nixnut@gentoo.org> libdaemon-0.12.ebuild:
+  stable on ppc wrt bug #208922
 
   06 Feb 2008; Christoph Mende <angelos@gentoo.org> libdaemon-0.12.ebuild:
   Stable on amd64, bug #208922
