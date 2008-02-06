@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/hanterm
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.22 2007/07/22 05:45:44 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.23 2008/02/06 21:56:14 grobian Exp $
+
+  06 Feb 2008; Fabian Groffen <grobian@gentoo.org> hanterm-3.1.6-r2.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   hanterm-3.1.6-r2.ebuild:
