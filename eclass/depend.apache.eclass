@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.41 2008/02/06 13:16:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.42 2008/02/06 21:20:41 hollow Exp $
 
 # @ECLASS: depend.apache.eclass
 # @MAINTAINER: apache-devs@gentoo.org
@@ -114,8 +114,7 @@ _init_apache2() {
 	APXS="/usr/sbin/apxs2"
 	APACHE_BIN="/usr/sbin/apache2"
 	APACHE_CTL="/usr/sbin/apache2ctl"
-	# legacy alias
-	APACHECTL="${APACHE_CTL}"
+	APACHE_INCLUDEDIR="/usr/include/apache2"
 	APACHE_BASEDIR="/usr/$(get_libdir)/apache2"
 	APACHE_CONFDIR="/etc/apache2"
 	APACHE_MODULES_CONFDIR="${APACHE_CONFDIR}/modules.d"
@@ -228,10 +227,35 @@ check_apache_threads() {
 
 	local myflag="${1:-threads}"
 
-	if ! use ${myflag}; then
+	if ! use ${myflag} ; then
 		echo
 		eerror "You need to enable USE flag '${myflag}' to build a thread-safe version"
 		eerror "of ${CATEGORY}/${PN} for use with www-servers/apache"
 		die "Need missing USE flag '${myflag}'"
+	fi
+}
+
+# @FUNCTION: check_apache_threads_in
+# @USAGE: <myforeign> [myflag]
+# @DESCRIPTION:
+# An ebuild calls this to make sure thread-safety is enabled in a foreign
+# package if apache has been built with a threaded MPM. If the myflag parameter
+# is not given it defaults to threads.
+check_apache_threads_in() {
+	debug-print-function $FUNCNAME $*
+
+	if ! built_with_use www-servers/apache threads ; then
+		return
+	fi
+
+	local myforeign="$1"
+	local myflag="${2:-threads}"
+
+	if ! built_with_use ${myforeign} ${myflag} ; then
+		echo
+		eerror "You need to enable USE flag '${myflag}' in ${myforeign} to"
+		eerror "build a thread-safe version of ${CATEGORY}/${PN} for use"
+		eerror "with www-servers/apache"
+		die "Need missing USE flag '${myflag}' in ${myforeign}"
 	fi
 }
