@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.40 2008/02/06 08:33:47 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.41 2008/02/06 13:16:17 hollow Exp $
 
 # @ECLASS: depend.apache.eclass
 # @MAINTAINER: apache-devs@gentoo.org
@@ -48,7 +48,7 @@ inherit multilib
 
 # @ECLASS-VARIABLE: APXS
 # @DESCRIPTION:
-# Paths to the apxs tool.
+# Path to the apxs tool.
 # This variable is set by the want/need_apache functions.
 
 # @ECLASS-VARIABLE: APACHE_BIN
@@ -211,4 +211,27 @@ need_apache2_2() {
 	DEPEND="${DEPEND} ${APACHE2_2_DEPEND}"
 	RDEPEND="${RDEPEND} ${APACHE2_2_DEPEND}"
 	_init_apache2
+}
+
+# @FUNCTION: check_apache_threads
+# @USAGE: [myflag]
+# @DESCRIPTION:
+# An ebuild calls this to make sure thread-safety is enabled if apache has been
+# built with a threaded MPM. If the myflag parameter is not given it defaults to
+# threads.
+check_apache_threads() {
+	debug-print-function $FUNCNAME $*
+
+	if ! built_with_use www-servers/apache threads ; then
+		return
+	fi
+
+	local myflag="${1:-threads}"
+
+	if ! use ${myflag}; then
+		echo
+		eerror "You need to enable USE flag '${myflag}' to build a thread-safe version"
+		eerror "of ${CATEGORY}/${PN} for use with www-servers/apache"
+		die "Need missing USE flag '${myflag}'"
+	fi
 }
