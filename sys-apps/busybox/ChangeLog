@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.178 2008/02/05 11:18:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.179 2008/02/06 15:36:37 vapier Exp $
+
+*busybox-1.9.0 (06 Feb 2008)
+
+  06 Feb 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/busybox-1.9.0-allno.patch, +files/busybox-1.9.0-fsck.patch,
+  +files/busybox-1.9.0-iproute.patch, +files/busybox-1.9.0-mkswap.patch,
+  +files/busybox-1.9.0-msh.patch, +files/busybox-1.9.0-nameif.patch,
+  +files/busybox-1.9.0-nohup.patch, +files/busybox-1.9.0-stty.patch,
+  +files/busybox-1.9.0-zcip.patch, +busybox-1.9.0.ebuild:
+  Version bump.
 
   05 Feb 2008; Markus Rothe <corsair@gentoo.org> busybox-1.8.2.ebuild:
   Stable on ppc64
