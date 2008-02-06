@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/xgraph-12.1-r1.ebuild,v 1.4 2007/07/22 06:45:51 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/xgraph-12.1-r1.ebuild,v 1.5 2008/02/06 21:43:31 grobian Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.isi.edu/nsnam/xgraph/"
 SRC_URI="http://www.isi.edu/nsnam/dist/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 IUSE=""
 DEPEND="x11-libs/libSM
 		x11-libs/libX11"
