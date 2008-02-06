@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-parse-number/cl-parse-number-1.0-r1.ebuild,v 1.8 2007/02/03 17:38:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-parse-number/cl-parse-number-1.0-r1.ebuild,v 1.9 2008/02/06 21:23:42 grobian Exp $
 
 inherit common-lisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mapcar.org/~mrd/utilities/
 SRC_URI="mirror://debian/pool/main/c/cl-parse-number/cl-parse-number_1.0.orig.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"

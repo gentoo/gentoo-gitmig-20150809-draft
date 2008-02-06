@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pipes/cl-pipes-1.2.1.ebuild,v 1.9 2007/02/03 17:39:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pipes/cl-pipes-1.2.1.ebuild,v 1.10 2008/02/06 21:25:53 grobian Exp $
 
 inherit common-lisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://packages.debian.org/unstable/devel/cl-pipes.html"
 SRC_URI="mirror://debian/pool/main/c/cl-pipes/${PN}_${PV}.orig.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
