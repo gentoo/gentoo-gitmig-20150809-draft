@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.128 2008/02/06 02:14:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.129 2008/02/06 05:17:22 jer Exp $
+
+  06 Feb 2008; Jeroen Roovers <jer@gentoo.org> libpcre-7.6.ebuild:
+  Stable for HPPA (bug #209067).
 
   06 Feb 2008; Brent Baude <ranger@gentoo.org> libpcre-7.6.ebuild:
   Marking libpcre-7.6 ppc64 for bug 209067
