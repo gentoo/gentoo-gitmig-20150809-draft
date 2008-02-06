@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.109 2008/02/06 14:28:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.110 2008/02/06 20:55:41 nixnut Exp $
+
+  06 Feb 2008; nixnut <nixnut@gentoo.org> libtorrent-0.11.9.ebuild:
+  stable on ppc wrt bug #209140
 
   06 Feb 2008; Christoph Mende <angelos@gentoo.org>
   libtorrent-0.11.9.ebuild:
