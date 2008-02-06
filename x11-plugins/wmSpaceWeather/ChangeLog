@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmSpaceWeather
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.14 2008/02/02 18:10:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.15 2008/02/06 18:25:22 nixnut Exp $
+
+  06 Feb 2008; nixnut <nixnut@gentoo.org> wmSpaceWeather-1.04_p19.ebuild:
+  stable on ppc wrt bug #207888
 
   02 Feb 2008; Jeroen Roovers <jer@gentoo.org>
   wmSpaceWeather-1.04_p19.ebuild:
