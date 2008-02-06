@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.63 2008/02/05 21:16:52 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.64 2008/02/06 14:34:20 angelos Exp $
+
+  06 Feb 2008; Christoph Mende <angelos@gentoo.org> conky-1.4.9-r1.ebuild:
+  Stable on amd64, bug #208620
 
   05 Feb 2008; Ferris McCormick <fmccor@gentoo.org> conky-1.4.9-r1.ebuild:
   Sparc stable, Bug #208620 --- thanks to Friedrich Oslage for testing.
