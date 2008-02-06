@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3-r2.ebuild,v 1.3 2008/01/29 17:59:31 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3-r2.ebuild,v 1.4 2008/02/06 21:22:02 hollow Exp $
 
 inherit apache-module perl-module eutils multilib
 
@@ -29,11 +29,7 @@ DOCFILES="Changes INSTALL LICENSE README STATUS"
 need_apache2
 
 pkg_setup() {
-	if built_with_use www-servers/apache threads \
-			&& ! built_with_use dev-lang/perl ithreads; then
-		eerror "threaded MPMs require threaded perl"
-		die "emerge dev-lang/perl with USE=ithreads"
-	fi
+	check_apache_threads_in dev-lang/perl ithreads
 	apache-module_pkg_setup
 }
 
@@ -115,7 +111,7 @@ src_install() {
 	dodir "${APACHE_MODULESDIR}"
 	make install \
 		MODPERL_AP_LIBEXECDIR="${D}${APACHE_MODULESDIR}" \
-		MODPERL_AP_INCLUDEDIR="${D}/usr/include/apache2" \
+		MODPERL_AP_INCLUDEDIR="${D}${APACHE_INCLUDEDIR}" \
 		MP_INST_APACHE2=1 \
 		INSTALLDIRS=vendor || die
 
