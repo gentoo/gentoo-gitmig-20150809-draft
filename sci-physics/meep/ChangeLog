@@ -1,0 +1,10 @@
+# ChangeLog for sci-physics/meep
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.1 2008/02/06 15:05:05 bicatali Exp $
+
+*meep-0.10.1 (06 Feb 2008)
+
+  06 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/meep-0.10.1-configure.ac.patch, +metadata.xml, +meep-0.10.1.ebuild:
+  Initial import. Ebuild first submitted by Ben Schwartz, see bug #170989
+
