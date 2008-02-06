@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.1.ebuild,v 1.1 2008/02/06 14:33:27 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.1.ebuild,v 1.2 2008/02/06 14:58:35 fordfrog Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 inherit java-pkg-2 java-ant-2
@@ -52,7 +52,10 @@ src_install() {
 	java-pkg_dojar dist/${PN}.jar
 
 	# contains both html docs and javadoc in correct subdir
-	use doc && java-pkg_dohtml -r dist/docs/*
+	if use doc ; then
+		java-pkg_dojavadoc dist/docs/api
+		java-pkg_dohtml -r dist/docs/*
+	fi
 	use source && java-pkg_dosrc src/java/*
 	use examples && java-pkg_doexamples src/examples
 }
