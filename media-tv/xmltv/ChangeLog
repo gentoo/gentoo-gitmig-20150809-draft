@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.76 2008/02/04 21:18:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.77 2008/02/06 18:20:00 nixnut Exp $
+
+  06 Feb 2008; nixnut <nixnut@gentoo.org> xmltv-0.5.50.ebuild:
+  stable on ppc wrt bug #205403
 
   04 Feb 2008; Markus Meier <maekke@gentoo.org> xmltv-0.5.50.ebuild:
   x86 stable, bug #205403
