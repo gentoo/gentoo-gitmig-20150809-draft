@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/argtable
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/ChangeLog,v 1.15 2008/02/02 20:14:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/ChangeLog,v 1.16 2008/02/06 18:33:03 nixnut Exp $
+
+  06 Feb 2008; nixnut <nixnut@gentoo.org> argtable-2.8.ebuild:
+  stable on ppc wrt bug #208427
 
   02 Feb 2008; Christoph Mende <angelos@gentoo.org>
   -files/argtable-2.4-fix-makefile.diff, -argtable-2.4.ebuild:

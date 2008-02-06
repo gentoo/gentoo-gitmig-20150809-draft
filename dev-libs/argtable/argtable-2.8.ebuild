@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/argtable-2.8.ebuild,v 1.3 2008/02/01 17:28:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/argtable-2.8.ebuild,v 1.4 2008/02/06 18:33:03 nixnut Exp $
 
 inherit versionator
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc debug examples"
 
 S="${WORKDIR}/${MY_P}"
