@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhs/mod_vhs-1.0.32.ebuild,v 1.2 2007/09/11 12:13:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhs/mod_vhs-1.0.32.ebuild,v 1.3 2008/02/06 21:49:27 hollow Exp $
 
 inherit apache-module depend.php eutils
 
@@ -24,8 +24,8 @@ S="${WORKDIR}/${PN}"
 
 need_apache2
 
-pkg_setup() {
-	myconf="-I/usr/include/home -lhome"
+src_compile() {
+	local myconf="-I/usr/include/home -lhome"
 
 	if use php; then
 		has_php
@@ -37,7 +37,7 @@ pkg_setup() {
 	use debug myconf="${myconf} -DVH_DEBUG"
 
 	APXS2_ARGS="-c ${myconf} ${PN}.c"
-	apache-module_pkg_setup
+	apache-module_src_compile
 }
 
 src_unpack() {
