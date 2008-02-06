@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ssldump-0.9.ebuild,v 1.15 2007/01/05 09:55:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ssldump-0.9.ebuild,v 1.16 2008/02/06 21:12:19 grobian Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.rtfm.com/ssldump/${MY_P}.tar.gz"
 HOMEPAGE="http://www.rtfm.com/ssldump/"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc-macos sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 LICENSE="GPL-2"
 
 DEPEND="net-libs/libpcap
