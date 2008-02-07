@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/tree-puzzle-5.2.ebuild,v 1.8 2007/06/01 12:33:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/tree-puzzle-5.2.ebuild,v 1.9 2008/02/07 14:41:06 grobian Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tree-puzzle.de/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="mpi"
 
 DEPEND="mpi? ( sys-cluster/lam-mpi )"
@@ -22,7 +22,6 @@ pkg_setup () {
 }
 
 src_compile() {
-	use ppc-macos && filter-flags -fast
 	econf || die
 	cd ${S}/src
 	if ! use mpi; then
