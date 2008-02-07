@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.30 2007/04/07 16:14:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.31 2008/02/07 14:58:41 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Password database"
-HOMEPAGE="http://packages.gentoo.org/ebuilds/?pwdb-${PVR}"
+HOMEPAGE="http://packages.gentoo.org/package/sys-libs/pwdb"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
