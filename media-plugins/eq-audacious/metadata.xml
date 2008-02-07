@@ -5,8 +5,4 @@
 <maintainer>
 <email>sound@gentoo.org</email>
 </maintainer>
-<maintainer>
-<email>nenolod@nenolod.org</email>
-<description>upstream</description>
-</maintainer>
 </pkgmetadata>
