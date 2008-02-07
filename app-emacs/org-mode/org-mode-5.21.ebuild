@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-5.20.ebuild,v 1.1 2008/02/06 21:02:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-5.21.ebuild,v 1.1 2008/02/07 17:44:32 ulm Exp $
 
 inherit elisp
 
