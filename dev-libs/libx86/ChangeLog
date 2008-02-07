@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libx86
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.4 2007/11/10 06:01:43 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.5 2008/02/07 21:49:32 robbat2 Exp $
+
+  07 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Fix metadata typo.
 
   10 Nov 2007; Samuli Suominen <drac@gentoo.org> libx86-0.99.ebuild:
   Keyword ~amd64 wrt #197687.
