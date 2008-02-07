@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.105 2008/02/07 11:32:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.106 2008/02/07 13:42:23 opfer Exp $
+
+  07 Feb 2008; Christian Faulhammer <opfer@gentoo.org> -files/tor.initd-r2,
+  -tor-0.1.2.17.ebuild:
+  clean up
 
   07 Feb 2008; Raúl Porcel <armin76@gentoo.org> tor-0.1.2.18.ebuild:
   sparc stable wrt #208336
