@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/nsplugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.103 2008/01/31 15:32:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.104 2008/02/07 00:12:50 philantrop Exp $
+
+*nsplugins-4.0.1 (06 Feb 2008)
+
+  06 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +nsplugins-4.0.1.ebuild:
+  Version bump to KDE 4.0.1.
 
   31 Jan 2008; Brent Baude <ranger@gentoo.org> nsplugins-3.5.8-r1.ebuild:
   Marking nsplugins-3.5.8-r1 ppc for bug 207634
