@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: gnat.eselect-1.3,v 1.1 2007/12/26 22:03:13 george Exp $
+# $Id: gnat.eselect-1.3,v 1.2 2008/02/07 17:58:34 george Exp $
 
 DESCRIPTION="Manage the installed gnat compilers"
 MAINTAINER="ada@gentoo.org"
-SVN_DATE='$Date: 2007/12/26 22:03:13 $'
+SVN_DATE='$Date: 2008/02/07 17:58:34 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
 
 # "inheriting" common stuff
-# this crude sourcing should be replaced by a call to function in
-# libs/package-manager.bash eventually
+# this crude sourcing has to stay the way it is, as common code 
+# cannot be part of some eclass (bug #192505)
 . /usr/share/gnat/lib/gnat-common.bash
 
 
