@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_scgi
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_scgi/ChangeLog,v 1.6 2008/01/31 19:30:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_scgi/ChangeLog,v 1.7 2008/02/07 22:08:08 hollow Exp $
+
+  07 Feb 2008; Benedikt Böhm <hollow@gentoo.org> -mod_scgi-1.10.ebuild:
+  remove outdated version
 
   31 Jan 2008; Benedikt Böhm <hollow@gentoo.org> files/20_mod_scgi.conf,
   metadata.xml:
