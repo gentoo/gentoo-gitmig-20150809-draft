@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.178 2008/02/05 19:40:04 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.179 2008/02/07 17:25:34 wltjr Exp $
+
+*tomcat-6.0.16 (07 Feb 2008)
+
+  07 Feb 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  +tomcat-6.0.16.ebuild:
+  Bumped 6.0 to latest release
 
 *tomcat-5.5.26 (05 Feb 2008)
 
