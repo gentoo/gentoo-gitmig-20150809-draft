@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.127 2008/02/01 12:40:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.128 2008/02/07 02:01:49 robbat2 Exp $
+
+*lvm2-2.02.33 (07 Feb 2008)
+
+  07 Feb 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lvm.conf-2.02.33.patch, +lvm2-2.02.33.ebuild:
+  Version bump, related to bug #207612.
 
   01 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
   files/lvm.rc-2.02.28-r1, files/lvm.rc-2.02.28-r2, files/lvm.rc:
