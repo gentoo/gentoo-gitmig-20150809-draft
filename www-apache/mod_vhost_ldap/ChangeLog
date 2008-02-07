@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_vhost_ldap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/ChangeLog,v 1.5 2008/01/29 18:15:51 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/ChangeLog,v 1.6 2008/02/07 22:22:16 hollow Exp $
+
+  07 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
+  -mod_vhost_ldap-1.0.0.ebuild, mod_vhost_ldap-1.0.0-r1.ebuild:
+  remove broken version; cleanup ebuild
 
 *mod_vhost_ldap-1.0.0-r1 (29 Jan 2008)
 
