@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.263 2007/11/20 18:12:34 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.264 2008/02/07 22:54:45 cla Exp $
+
+  07 Feb 2008; Dawid Węgliński <cla@gentoo.org>
+  +files/xchat-fix-uk_UA-locale.diff, xchat-2.8.4-r3.ebuild:
+  Fix uk_UA.UTF-8 locale (bug #196334)
 
 *xchat-2.8.4-r3 (20 Nov 2007)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.4-r3.ebuild,v 1.1 2007/11/20 18:12:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.4-r3.ebuild,v 1.2 2008/02/07 22:54:45 cla Exp $
 
 inherit eutils versionator gnome2
 
@@ -45,6 +45,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/xc284-scrollbmkdir.diff
 	epatch "${FILESDIR}"/xc284-improvescrollback.diff
 	epatch "${FILESDIR}"/xc284-fix-scrollbfdleak.diff
+	epatch "${FILESDIR}"/xchat-fix-uk_UA-locale.diff
 }
 
 src_compile() {
