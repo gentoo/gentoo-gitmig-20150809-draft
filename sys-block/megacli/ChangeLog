@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/megacli
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.1 2008/02/01 17:49:58 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.2 2008/02/07 19:41:20 wschlich Exp $
+
+  07 Feb 2008; Wolfram Schlich <wschlich@gentoo.org> megacli-1.01.40.ebuild:
+  added user hint
 
 *megacli-1.01.40 (01 Feb 2008)
 

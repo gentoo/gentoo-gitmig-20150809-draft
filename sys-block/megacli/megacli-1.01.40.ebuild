@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-1.01.40.ebuild,v 1.1 2008/02/01 17:49:58 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-1.01.40.ebuild,v 1.2 2008/02/07 19:41:20 wschlich Exp $
 
 inherit rpm
 
@@ -37,4 +37,12 @@ src_install() {
 	esac
 	doexe opt/MegaRAID/MegaCli/${MegaCli}
 	dosym /opt/MegaRAID/MegaCli/${MegaCli} /usr/sbin/MegaCli
+}
+
+pkg_postinst() {
+	einfo
+	einfo "As there's no dedicated manual, you might want to have"
+	einfo "a look at the following cheat sheet:"
+	einfo "http://tools.rapidsoft.de/perc/perc-cheat-sheet.pdf"
+	einfo
 }
