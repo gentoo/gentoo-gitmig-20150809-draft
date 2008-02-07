@@ -1,6 +1,6 @@
 # Copyright 2000-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/tinyscheme-1.38.ebuild,v 1.2 2008/02/07 12:42:18 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/tinyscheme-1.38-r1.ebuild,v 1.1 2008/02/07 12:46:55 hkbst Exp $
 
 MY_P=${PN}${PV}
 DESCRIPTION="Lightweight scheme interpreter"
