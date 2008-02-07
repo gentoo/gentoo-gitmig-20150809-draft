@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.48 2008/02/02 15:39:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.49 2008/02/07 13:22:45 bicatali Exp $
+
+  07 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/maxima-5.13.0-xdg-utils.patch,
+  -files/maxima-5.14.0-xdg-utils.patch, +files/maxima-no-init-files.patch,
+  +files/maxima-xdg-utils.patch, maxima-5.13.0-r1.ebuild,
+  maxima-5.14.0.ebuild:
+  Do not load host lisp init files, see bug #203748. Join xdg patches.
 
   02 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org> maxima-5.14.0.ebuild:
   Fixed default lisp dependency (bug #208515)

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0-r1.ebuild,v 1.10 2008/01/29 16:50:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0-r1.ebuild,v 1.11 2008/02/07 13:22:45 bicatali Exp $
 
 inherit eutils elisp-common
 
@@ -22,14 +22,14 @@ RDEPEND=">=sci-visualization/gnuplot-4.0
 				app-text/ptex ) )
 	emacs? ( virtual/emacs
 		 latex? ( || ( app-emacs/auctex app-xemacs/auctex ) ) )
-	sbcl? ( <dev-lisp/sbcl-1.0.12 app-misc/rlwrap )
+	sbcl? ( dev-lisp/sbcl app-misc/rlwrap )
 	!sbcl? (
 		clisp? ( dev-lisp/clisp )
 		!clisp? (
 			cmucl? ( >=dev-lisp/cmucl-19a app-misc/rlwrap )
 			!cmucl? (
 				gcl? ( dev-lisp/gcl )
-				!gcl? ( <dev-lisp/sbcl-1.0.12 app-misc/rlwrap )
+				!gcl? ( dev-lisp/sbcl app-misc/rlwrap )
 			)
 		)
 	)
@@ -112,13 +112,16 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	# use xdg-open to view ps, pdf
-	epatch "${FILESDIR}"/${P}-xdg-utils.patch
+	epatch "${FILESDIR}"/${PN}-xdg-utils.patch
+	# avoid bugs and warning at init (see bug #203748)
+	epatch "${FILESDIR}"/${PN}-no-init-files.patch
 	# remove rmaxima if neither cmucl nor sbcl
 	if [[ ${MAXIMA_LISP} != cmucl ]] || [[ ${MAXIMA_LISP} != sbcl ]]; then
 		sed -i \
 			-e '/^@WIN32_FALSE@bin_SCRIPTS/s/rmaxima//' \
-			"${S}"/src/Makefile.in \
+			src/Makefile.in \
 			|| die "sed for rmaxima failed"
 	fi
 }

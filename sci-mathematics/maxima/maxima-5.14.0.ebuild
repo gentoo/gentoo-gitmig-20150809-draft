@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.14.0.ebuild,v 1.3 2008/02/02 15:39:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.14.0.ebuild,v 1.4 2008/02/07 13:22:45 bicatali Exp $
 inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
@@ -51,9 +51,6 @@ done
 for LISP in ${SUPP_LISPS}; do
 	DEF_DEP="${DEF_DEP} )"
 done
-
-# nasty hack for sbcl while bug #203748 is not fixed
-RDEPEND="${RDEPEND//dev-lisp\/sbcl/<dev-lisp/sbcl-1.0.12}"
 
 RDEPEND="${RDEPEND}
 	${DEF_DEP}"
@@ -133,8 +130,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	# use xdg-open to view ps, pdf
-	epatch "${FILESDIR}"/${P}-xdg-utils.patch
+	epatch "${FILESDIR}"/${PN}-xdg-utils.patch
+	epatch "${FILESDIR}"/${PN}-no-init-files.patch
 	# remove rmaxima if neither cmucl nor sbcl
 	if [ -z "${RL}" ]; then
 		sed -i \
