@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.5.ebuild,v 1.8 2008/02/02 07:17:20 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.5.ebuild,v 1.9 2008/02/07 04:47:33 steev Exp $
 
 inherit gnome2 eutils
 
@@ -18,7 +18,6 @@ IUSE="debug doc libnotify"
 RDEPEND=">=sys-apps/dbus-0.60
 	>=sys-apps/hal-0.5
 	sys-apps/iproute2
-	>=dev-libs/libnl-1.0_pre6
 	>=net-misc/dhcdbd-1.4
 	net-misc/networkmanager
 	>=net-wireless/wireless-tools-28_pre9
