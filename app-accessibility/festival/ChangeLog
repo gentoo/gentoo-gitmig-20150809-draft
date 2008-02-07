@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.71 2008/02/06 08:42:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.72 2008/02/07 01:34:07 ranger Exp $
+
+  07 Feb 2008; Brent Baude <ranger@gentoo.org> festival-1.96_beta.ebuild:
+  stable ppc64, bug 209081
 
   06 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   festival-1.96_beta.ebuild:
