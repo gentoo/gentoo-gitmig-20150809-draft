@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.21 2008/02/06 21:08:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.22 2008/02/07 12:08:05 betelgeuse Exp $
+
+*bluez-gnome-0.17 (07 Feb 2008)
+
+  07 Feb 2008; Petteri Räty <betelgeuse@gentoo.org>
+  +bluez-gnome-0.17.ebuild:
+  Version bump. Dropped all but ~x86 until arches keyword
+  app-mobilephone/obex-data-server.
 
   06 Feb 2008; Petteri Räty <betelgeuse@gentoo.org>
   bluez-gnome-0.16.ebuild:
