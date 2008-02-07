@@ -1,0 +1,11 @@
+# ChangeLog for app-mobilephone/obex-data-server
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.1 2008/02/07 12:05:19 betelgeuse Exp $
+
+*obex-data-server-0.1 (07 Feb 2008)
+
+  07 Feb 2008; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +obex-data-server-0.1.ebuild:
+  Initial addition. Ebuild written by me. Needed for
+  >=net-wireless/bluez-gnome-0.16.
+
