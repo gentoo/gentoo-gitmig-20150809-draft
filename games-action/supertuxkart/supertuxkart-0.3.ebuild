@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.3.ebuild,v 1.1 2007/07/22 00:16:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.3.ebuild,v 1.2 2008/02/07 05:56:21 mr_bones_ Exp $
 
 inherit eutils games
 
 DESCRIPTION="A kart racing game starring Tux, the linux penguin (TuxKart fork)"
-HOMEPAGE="http://supertuxkart.berlios.de/"
+HOMEPAGE="http://supertuxkart.sourceforge.net/"
 SRC_URI="mirror://berlios/${PN}/${P}-src.tar.bz2
 	mirror://gentoo/${PN}.png"
 
