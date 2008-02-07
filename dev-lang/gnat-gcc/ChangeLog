@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.18 2008/02/05 18:32:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.19 2008/02/07 18:13:43 george Exp $
+
+  07 Feb 2008; George Shapovalov <george@gentoo.org> gnat-gcc-3.4.6.ebuild:
+  fixed autotools version mismatch issue (#209000)
 
   05 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   gnat-gcc-4.2.2.ebuild:
