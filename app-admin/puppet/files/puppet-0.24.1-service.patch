@@ -1,0 +1,14 @@
+diff -Naur puppet-0.24.1.orig/lib/puppet/provider/service/gentoo.rb puppet-0.24.1/lib/puppet/provider/service/gentoo.rb
+--- puppet-0.24.1.orig/lib/puppet/provider/service/gentoo.rb	2007-11-01 04:44:27.000000000 +0900
++++ puppet-0.24.1/lib/puppet/provider/service/gentoo.rb	2008-02-08 01:41:22.000000000 +0900
+@@ -8,6 +8,10 @@
+ 
+     defaultfor :operatingsystem => :gentoo
+ 
++    def self.defpath
++       superclass.defpath
++    end
++
+     def disable
+         begin
+             output = update :del, @resource[:name], :default
