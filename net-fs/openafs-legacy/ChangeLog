@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs-legacy
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/ChangeLog,v 1.6 2007/12/25 15:16:31 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/ChangeLog,v 1.7 2008/02/07 23:55:44 stefaan Exp $
+
+  07 Feb 2008; Stefaan De Roeck <stefaan@gentoo.org> metadata.xml:
+  Correct maintainer email (proxy maintenance has since long ended)
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing seemant from metadata.xml as per #202469.
