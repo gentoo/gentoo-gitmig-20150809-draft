@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/acx-0.3.37_p20080112.ebuild,v 1.1 2008/02/07 20:58:41 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/acx-0.3.37_p20080112.ebuild,v 1.2 2008/02/07 21:03:52 spb Exp $
 
 inherit linux-mod
 
@@ -39,6 +39,8 @@ src_unpack() {
 	if ! use debug; then
 		sed -i '/^#define ACX_DEBUG/s/2/0/' acx_config.h || die "Failed to disable debug support"
 	fi
+
+	epatch "${FILESDIR}/${P}.patch"
 }
 
 src_install() {
