@@ -1,6 +1,6 @@
 # Copyright 2000-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/tinyscheme-1.38-r1.ebuild,v 1.1 2008/02/07 12:46:55 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/tinyscheme-1.38-r1.ebuild,v 1.2 2008/02/07 20:12:18 opfer Exp $
 
 MY_P=${PN}${PV}
 DESCRIPTION="Lightweight scheme interpreter"
@@ -9,7 +9,7 @@ SRC_URI="http://tinyscheme.sourceforge.net/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""

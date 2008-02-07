@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/tinyscheme
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/ChangeLog,v 1.5 2008/02/07 12:46:55 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/ChangeLog,v 1.6 2008/02/07 20:12:18 opfer Exp $
+
+  07 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  tinyscheme-1.38-r1.ebuild:
+  keyworded ~x86, bug 209164
 
 *tinyscheme-1.38-r1 (07 Feb 2008)
 
