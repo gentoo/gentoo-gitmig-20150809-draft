@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/weka
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.24 2007/12/07 19:03:17 betelgeuse Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.25 2008/02/07 19:34:04 betelgeuse Exp $
+
+*weka-3.5.7 (07 Feb 2008)
+
+  07 Feb 2008; Petteri Räty <betelgeuse@gentoo.org> +weka-3.5.7.ebuild:
+  Version bump. Fixes bug #209289.
 
 *weka-3.5.6 (07 Dec 2007)
 
