@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1104 2008/02/07 12:58:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1105 2008/02/07 18:07:32 wolf31o2 Exp $
+
+  07 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
+  Unmasking catalyst now that it's no longer broken.
 
   07 Feb 2008; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Last rites for x11-misc/ASFiles
