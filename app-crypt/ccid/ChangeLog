@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.26 2008/02/07 13:23:04 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.27 2008/02/07 14:03:00 alonbl Exp $
+
+  07 Feb 2008; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/ccid-1.3.3-udev.patch, ccid-1.3.3.ebuild:
+  Upstream added more udev fix
 
 *ccid-1.3.3 (07 Feb 2008)
 

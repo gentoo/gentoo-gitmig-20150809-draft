@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.3.ebuild,v 1.1 2008/02/07 13:23:04 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.3.ebuild,v 1.2 2008/02/07 14:03:00 alonbl Exp $
 
 inherit eutils
 
@@ -14,6 +14,12 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="twinserial nousb"
 RDEPEND=">=sys-apps/pcsc-lite-1.3.3
 	>=dev-libs/libusb-0.1.4"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-udev.patch"
+}
 
 src_compile() {
 	local myconf
