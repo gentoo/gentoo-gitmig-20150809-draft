@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-12.2.1.ebuild,v 1.1 2008/02/07 14:42:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-12.2.1.ebuild,v 1.2 2008/02/07 19:41:39 opfer Exp $
 
 inherit elisp-common eutils flag-o-matic multilib versionator
 
@@ -67,7 +67,7 @@ src_compile() {
 		--enable-threads \
 		$(use_enable hipe) \
 		$(use_with ssl) \
-		$(use_enable kpoll kernell-poll) \
+		$(use_enable kpoll kernel-poll) \
 		$(use_enable smp smp-support) \
 		|| die "econf failed"
 	emake -j1 || die "emake failed"
