@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/katapult
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katapult/ChangeLog,v 1.15 2007/07/02 05:21:52 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katapult/ChangeLog,v 1.16 2008/02/07 22:32:00 philantrop Exp $
+
+  07 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  katapult-0.3.2.1.ebuild:
+  Marked stable on amd64 as per bug 209108.
 
 *katapult-0.3.2.1 (02 Jul 2007)
 
