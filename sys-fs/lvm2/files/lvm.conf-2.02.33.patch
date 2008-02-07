@@ -1,6 +1,6 @@
-diff -Nuar --exclude '*.rej' --exclude '*.orig' /dev/shm/portage/sys-fs/lvm2-2.02.33/work/LVM2.2.02.33.orig/doc/example.conf /dev/shm/portage/sys-fs/lvm2-2.02.33/work/LVM2.2.02.33/doc/example.conf
---- /dev/shm/portage/sys-fs/lvm2-2.02.33/work/LVM2.2.02.33.orig/doc/example.conf	2008-01-09 07:32:19.000000000 -0800
-+++ /dev/shm/portage/sys-fs/lvm2-2.02.33/work/LVM2.2.02.33/doc/example.conf	2008-02-06 17:39:20.439958042 -0800
+diff -Nuar --exclude '*.rej' --exclude '*.orig' LVM2.2.02.33.orig/doc/example.conf LVM2.2.02.33/doc/example.conf
+--- LVM2.2.02.33.orig/doc/example.conf	2008-01-09 07:32:19.000000000 -0800
++++ LVM2.2.02.33/doc/example.conf	2008-02-06 17:39:20.439958042 -0800
 @@ -49,7 +49,9 @@
  
  

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.128 2008/02/07 02:01:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.129 2008/02/07 03:01:38 robbat2 Exp $
+
+  07 Feb 2008; Robin H. Johnson <robbat2@gentoo.org>
+  files/lvm.conf-2.02.33.patch:
+  Use relative paths in patch.
 
 *lvm2-2.02.33 (07 Feb 2008)
 
