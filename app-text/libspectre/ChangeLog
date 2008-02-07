@@ -1,6 +1,11 @@
 # ChangeLog for app-text/libspectre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.1 2008/02/06 00:44:16 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.2 2008/02/07 20:49:41 philantrop Exp $
+
+  07 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  libspectre-0.2.0.ebuild:
+  Corrected the dependency on virtual/ghostscript to ghostscript-gpl as the
+  alternative implementations in tree are too old. Fixes bug 209251.
 
 *libspectre-0.2.0 (06 Feb 2008)
 

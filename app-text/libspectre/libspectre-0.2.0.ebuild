@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.0.ebuild,v 1.1 2008/02/06 00:44:16 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.0.ebuild,v 1.2 2008/02/07 20:49:41 philantrop Exp $
 
 inherit libtool
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="debug doc test"
 
-RDEPEND="virtual/ghostscript"
+RDEPEND=">=app-text/ghostscript-gpl-8.61-r1"
 DEPEND="doc? ( app-doc/doxygen )
 	test? ( x11-libs/cairo
 		dev-util/pkgconfig )"
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install
 
-	dodoc NEWS README TODO
+	dodoc NEWS README TODO || die "installing docs failed"
 	if use doc; then
 		dohtml -r "${S}"/doc/html/*
 	fi
