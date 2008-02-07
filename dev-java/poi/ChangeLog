@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/poi
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.42 2008/02/06 18:23:27 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.43 2008/02/07 12:02:40 fordfrog Exp $
+
+*poi-3.0.2-r1 (07 Feb 2008)
+
+  07 Feb 2008; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/poi-3.0.2-isADateFormat.patch, -poi-3.0.2.ebuild,
+  +poi-3.0.2-r1.ebuild:
+  Added patch that fixes detection of custom dates and datetimes in
+  HSSFDateUtil.isADateFormat() method
 
 *poi-3.0.2 (06 Feb 2008)
 
