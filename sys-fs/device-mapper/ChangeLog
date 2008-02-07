@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.104 2008/02/01 12:39:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.105 2008/02/07 01:54:05 robbat2 Exp $
+
+*device-mapper-1.02.24 (07 Feb 2008)
+
+  07 Feb 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/device-mapper-1.02.24-export-format.diff,
+  +device-mapper-1.02.24.ebuild:
+  Version bump, related to bug #207612.
 
   01 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
   files/device-mapper.rc-1.02.22-r3, files/device-mapper.rc:
