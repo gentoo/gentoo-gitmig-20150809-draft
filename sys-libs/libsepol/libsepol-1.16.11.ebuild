@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-1.16.10.ebuild,v 1.1 2008/01/29 15:10:36 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-1.16.11.ebuild,v 1.1 2008/02/07 15:07:27 pebenito Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	[ ! -z "$BUGFIX_PATCH" ] && epatch "${BUGFIX_PATCH}"
 
