@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6_pre1.ebuild,v 1.1 2008/02/07 03:02:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6_pre1.ebuild,v 1.2 2008/02/07 04:16:13 wolf31o2 Exp $
 
 inherit eutils multilib
 
@@ -48,7 +48,7 @@ src_install() {
 		exeinto /usr/$(get_libdir)/${PN}/$x
 		doexe $x/* || die "copying ${x}"
 	done
-	make_wrapper catalyst ./catalyst /usr/$(get_libdir)/${PN}
+	make_wrapper catalyst /usr/$(get_libdir)/${PN}/catalyst
 	insinto /etc/catalyst
 	doins files/catalyst.conf files/catalystrc || die "copying configuration"
 	insinto /usr/share/doc/${PF}/examples
