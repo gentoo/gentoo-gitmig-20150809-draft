@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.1.4.ebuild,v 1.4 2008/02/06 00:26:11 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.1.4.ebuild,v 1.5 2008/02/07 00:56:52 steev Exp $
 
 inherit eutils multilib autotools flag-o-matic
 
@@ -27,7 +27,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	# Patch that *should* fix dbus-launch hanging around after exiting X
-	epatch "${FILESDIR}/${PN}-1.1.4-xdisplay_null.patch"
+	if use X ; then 
+		epatch "${FILESDIR}/${PN}-1.1.4-xdisplay_null.patch"
+	fi
 }
 
 src_compile() {
