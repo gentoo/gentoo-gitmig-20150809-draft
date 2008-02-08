@@ -1,10 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.3.ebuild,v 1.2 2008/02/07 14:03:00 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.4.ebuild,v 1.1 2008/02/08 16:23:54 alonbl Exp $
 
-inherit eutils
-
-STUPID_NUM="2312"
+STUPID_NUM="2315"
 DESCRIPTION="CCID free software driver"
 HOMEPAGE="http://pcsclite.alioth.debian.org/ccid.html"
 SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${P}.tar.gz"
@@ -14,12 +12,6 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="twinserial nousb"
 RDEPEND=">=sys-apps/pcsc-lite-1.3.3
 	>=dev-libs/libusb-0.1.4"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-udev.patch"
-}
 
 src_compile() {
 	local myconf
