@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.6.0.1.ebuild,v 1.1 2008/02/08 19:00:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.6.0.1.ebuild,v 1.2 2008/02/08 21:53:18 mr_bones_ Exp $
 
 inherit eutils kde multilib
 
@@ -96,7 +96,6 @@ src_compile() {
 
 	kde_src_compile
 }
-
 
 src_install() {
 	kde_src_install
