@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/picard
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.5 2007/12/23 22:13:02 coldwind Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.6 2008/02/08 18:49:50 coldwind Exp $
+
+  08 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
+  -picard-0.9.0_beta1.ebuild:
+  Remove old.
 
 *picard-0.9.0 (23 Dec 2007)
 
