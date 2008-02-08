@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/racer-bin-0.5.0-r1.ebuild,v 1.8 2007/10/17 18:02:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/racer-bin-0.5.0-r1.ebuild,v 1.9 2008/02/08 08:07:47 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A car simulation game focusing on realism, in the style of Grand Prix Legends"
 HOMEPAGE="http://www.racer.nl/"
@@ -54,5 +54,6 @@ src_install() {
 		fperms 660 "${dir}"/${f} || die "fperms ${f} failed"
 	done
 
+	make_desktop_entry racer Racer
 	prepgamesdirs
 }
