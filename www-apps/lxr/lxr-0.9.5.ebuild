@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.5.ebuild,v 1.5 2008/02/03 17:04:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.5.ebuild,v 1.6 2008/02/08 10:20:38 dertobi123 Exp $
 
 inherit perl-module webapp multilib eutils depend.apache
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/lxr"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="cvs freetext mysql postgres"
 WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
