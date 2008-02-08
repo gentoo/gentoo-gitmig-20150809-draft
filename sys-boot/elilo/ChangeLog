@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/elilo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.19 2007/02/22 00:57:10 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.20 2008/02/08 17:41:11 armin76 Exp $
+
+*elilo-3.8 (08 Feb 2008)
+
+  08 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  -files/elilo-3.3a-devscheme.patch, -files/elilo.8-3.4,
+  -files/eliloalt.8-3.4, -files/elilo-3.4-makefile.patch,
+  -files/elilo-3.4-proc-sigsetjmp.patch, -elilo-3.4-r3.ebuild,
+  -elilo-3.6.ebuild, +elilo-3.8.ebuild:
+  Version bump wrt #208639, thanks to plasmaroo for testing
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
