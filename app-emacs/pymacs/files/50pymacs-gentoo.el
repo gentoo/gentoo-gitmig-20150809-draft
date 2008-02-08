@@ -1,5 +1,5 @@
 
-;;; emacs site-lisp configuration for pymacs
+;;; pymacs site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
 

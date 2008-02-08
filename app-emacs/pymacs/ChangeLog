@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/pymacs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.21 2007/07/26 18:30:21 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.22 2008/02/08 14:01:22 ulm Exp $
+
+*pymacs-0.23_beta5 (08 Feb 2008)
+
+  08 Feb 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/0.23_beta5-fix-pytest-nonascii.patch, files/50pymacs-gentoo.el,
+  +pymacs-0.23_beta5.ebuild:
+  Version bump. Beta release without manual and doesn't install contribs.
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> pymacs-0.22-r1.ebuild:
   Added ~ppc64; bug #186188
