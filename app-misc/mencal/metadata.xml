@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-	<email>brainstorm@menta.net</email>
-	<name>Roman Valls</name>
-	<description>Indirectly maintaining through seemant@gentoo.org</description>
-</maintainer>
 </pkgmetadata>

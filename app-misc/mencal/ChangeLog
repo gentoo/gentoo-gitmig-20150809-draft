@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mencal
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mencal/ChangeLog,v 1.10 2007/02/08 22:40:10 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mencal/ChangeLog,v 1.11 2008/02/08 00:12:44 robbat2 Exp $
+
+  08 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Mail to original proxy maint bounces. Need new maintainers.
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
