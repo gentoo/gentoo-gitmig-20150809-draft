@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/slock-0.6.ebuild,v 1.3 2007/10/31 07:23:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/slock-0.6.ebuild,v 1.4 2008/02/08 14:35:30 coldwind Exp $
 
 inherit toolchain-funcs flag-o-matic
 
