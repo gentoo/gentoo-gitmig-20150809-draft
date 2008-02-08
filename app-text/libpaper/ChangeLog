@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.35 2008/02/08 14:06:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.36 2008/02/08 20:14:38 maekke Exp $
+
+  08 Feb 2008; Markus Meier <maekke@gentoo.org> libpaper-1.1.23.ebuild:
+  x86 stable, bug #209048
 
   08 Feb 2008; Jeroen Roovers <jer@gentoo.org> libpaper-1.1.23.ebuild:
   Stable for HPPA (bug #209048).
