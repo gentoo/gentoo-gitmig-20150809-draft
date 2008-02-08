@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-1.01.40.ebuild,v 1.2 2008/02/07 19:41:20 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-1.01.40.ebuild,v 1.3 2008/02/08 21:09:02 wschlich Exp $
 
 inherit rpm
 
@@ -14,6 +14,8 @@ SLOT="0"
 # can remove the distfiles from their mirror anytime.
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+DEPEND="app-arch/unzip"
 
 RESTRICT="strip mirror test"
 
