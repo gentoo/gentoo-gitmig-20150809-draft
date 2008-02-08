@@ -1,26 +1,21 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0a.ebuild,v 1.8 2005/01/23 11:33:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0e.ebuild,v 1.1 2008/02/08 17:36:43 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Library for build EFI Applications"
 HOMEPAGE="http://developer.intel.com/technology/efi"
-SRC_URI="ftp://ftp.hpl.hp.com/pub/linux-ia64/gnu-efi-3.0a.tar.gz"
+SRC_URI="mirror://sourceforge/gnu-efi/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ia64 x86"
+KEYWORDS="~ia64 ~x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	sys-apps/pciutils"
+DEPEND="sys-apps/pciutils"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/gnu-efi-3.0a-lds.patch
-}
+S="${WORKDIR}"/${PN}-3.0
 
 src_compile() {
 	local iarch
@@ -33,6 +28,6 @@ src_compile() {
 }
 
 src_install() {
-	make install INSTALLROOT=${D}/usr || die "einstall failed"
+	make install INSTALLROOT="${D}"/usr || die "install failed"
 	dodoc README* ChangeLog
 }
