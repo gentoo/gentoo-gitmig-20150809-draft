@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.4.ebuild,v 1.2 2008/01/30 12:09:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5.ebuild,v 1.1 2008/02/08 19:33:03 opfer Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	# Upstream not willing to remove those stupid flags...
-	epatch "${FILESDIR}/${P}-remove_spurious_CFLAGS.patch"
+	epatch "${FILESDIR}/${PN}-0.7.4-remove_spurious_CFLAGS.patch"
 }
 
 src_compile() {
