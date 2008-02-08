@@ -1,21 +1,3 @@
-diff -Naur wxPython-src-2.6.4.0-orig/build/bakefiles/wxpresets/presets/wx.bkl wxPython-src-2.6.4.0/build/bakefiles/wxpresets/presets/wx.bkl
---- wxPython-src-2.6.4.0-orig/build/bakefiles/wxpresets/presets/wx.bkl	2005-01-27 16:47:16.000000000 -0600
-+++ wxPython-src-2.6.4.0/build/bakefiles/wxpresets/presets/wx.bkl	2007-12-17 19:39:44.000000000 -0600
-@@ -15,12 +15,12 @@
-     <set var="__wx_included_impl">0</set>
- 
-     <if cond="FORMAT in ['autoconf','gnu']">
--        <include file="wx_unix.bkl"/>
-+        <include file="wx26_unix.bkl"/>
-         <set var="__wx_included_impl">1</set>
-     </if>
- 
-     <if cond="FORMAT!='autoconf' and PLATFORM_WIN32=='1'">
--        <include file="wx_win32.bkl"/>
-+        <include file="wx26_win32.bkl"/>
-         <set var="__wx_included_impl">1</set>
-     </if>
- 
 diff -Naur wxPython-src-2.6.4.0-orig/Makefile.in wxPython-src-2.6.4.0/Makefile.in
 --- wxPython-src-2.6.4.0-orig/Makefile.in	2007-12-17 19:38:16.000000000 -0600
 +++ wxPython-src-2.6.4.0/Makefile.in	2007-12-17 19:41:49.000000000 -0600

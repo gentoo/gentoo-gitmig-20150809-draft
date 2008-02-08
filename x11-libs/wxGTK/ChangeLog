@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.185 2008/01/29 19:23:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.186 2008/02/08 00:58:48 dirtyepic Exp $
+
+  08 Feb 2008; Ryan Hill <dirtyepic@gentoo.org>
+  files/wxGTK-2.6.4-collision.patch, files/wxGTK-2.8.4-collision.patch:
+  Drop the bakefile hunks of the collision patches that don't work as
+  expected. Now handled by eselect-wxwidgets.
 
   29 Jan 2008; nixnut <nixnut@gentoo.org> wxGTK-2.6.4.0-r3.ebuild,
   wxGTK-2.8.7.1-r1.ebuild:
