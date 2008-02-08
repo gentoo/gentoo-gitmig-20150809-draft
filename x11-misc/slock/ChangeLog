@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/slock
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.9 2007/12/09 12:59:59 coldwind Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.10 2008/02/08 14:20:48 cedk Exp $
+
+  08 Feb 2008; Cédric Krier <cedk@gentoo.org> metadata.xml:
+  Add desktop-misc as backup herd
 
   09 Dec 2007; Santiago M. Mola <coldwind@gentoo.org> slock-0.7.ebuild:
   Keyworded ~amd64
