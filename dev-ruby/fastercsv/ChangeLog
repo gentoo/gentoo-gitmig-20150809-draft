@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/fastercsv
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastercsv/ChangeLog,v 1.1 2008/02/08 14:31:48 nichoj Exp $
+
+*fastercsv-1.2.3 (08 Feb 2008)
+
+  08 Feb 2008; Joshua Nichols <nichoj@gentoo.org> +fastercsv-1.2.3.ebuild:
+  Initial version, see bug #209319. Contributed by Sergio D. Rodriguez Inclan
+  <srinclan@gmail.com>.
+
