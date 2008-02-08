@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1-r1.ebuild,v 1.10 2007/11/23 06:43:51 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1-r1.ebuild,v 1.11 2008/02/08 20:11:00 wolf31o2 Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -50,56 +50,44 @@ PDEPEND="app-misc/hal-info"
 HALDAEMON_GROUPS_LINUX="haldaemon,plugdev,disk,cdrom,cdrw,floppy,usb"
 HALDAEMON_GROUPS_FREEBSD="haldaemon,plugdev,operator"
 
-function notify_uevent() {
-	ewarn
-	ewarn "You must enable Kernel Userspace Events in your kernel."
-	ewarn "For this you need to enable 'Hotplug' under 'General Setup' and"
-	ewarn "basic networking.  They are marked CONFIG_HOTPLUG and CONFIG_NET"
-	ewarn "in the config file."
-	ewarn
-	ebeep 5
+function check_hotplug_net() {
+	local CONFIG_CHECK="~HOTPLUG ~NET"
+	local WARNING_HOTPLUG="CONFIG_HOTPLUG:\tis not set (required for HAL)"
+	local WARNING_NET="CONFIG_NET:\tis not set (required for HAL)"
+	check_extra_config
+	echo
 }
 
-function notify_procfs() {
-	ewarn
-	ewarn "You must enable the proc filesystem in your kernel."
-	ewarn "For this you need to enable '/proc file system support' under"
-	ewarn "'Pseudo filesystems' in 'File systems'.  It is marked"
-	ewarn "CONFIG_PROC_FS in the config file."
-	ewarn
-	ebeep 5
+function check_inotify() {
+	local CONFIG_CHECK="~INOTIFY_USER"
+	local WARNING_INOTIFY_USER="CONFIG_INOTIFY_USER:\tis not set (required for HAL)"
+	check_extra_config
+	echo
 }
 
-function notify_inotify() {
-	ewarn
-	ewarn "You must enable the Inotify system in your kernel."
-	ewarn "For this you need to enable 'Inotify support for userspace'"
-	ewarn "in 'File systems'. It is marked CONFIG_INOTIFY_USER in the config file."
-	ewarn
-	ebeep 5
+function check_procfs() {
+	local CONFIG_CHECK="~PROC_FS"
+	local WARNING_PROC_FS="CONFIG_PROC_FS:\tis not set (required for HAL)"
+	check_extra_config
+	echo
 }
 
 pkg_setup() {
-	if ! built_with_use --missing false sys-apps/pciutils hal ; then
+	if ! built_with_use --missing true sys-apps/pciutils hal ; then
 		if built_with_use --missing false sys-apps/pciutils zlib ; then
-			eerror "You MUST build sys-apps/pciutils without the zlib USE flag"
 			die "You MUST build sys-apps/pciutils without the zlib USE flag"
 		fi
 	fi
 
-	if use kernel_linux; then
-		kernel_is ge 2 6 17 || ewarn "HAL requires a kernel version 2.6.17 or newer"
-
-		if ! ( linux_chkconfig_present HOTPLUG && linux_chkconfig_present NET )
-		then
-			notify_uevent
+	if use kernel_linux ; then
+		if [ -e ${ROOT}/usr/src/linux/.config ] ; then
+			kernel_is ge 2 6 17 || \
+				ewarn "HAL requires a kernel version 2.6.17 or newer"
 		fi
 
-		linux_chkconfig_present INOTIFY_USER || notify_inotify
-
-		if use acpi ; then
-			linux_chkconfig_present PROC_FS || notify_procfs
-		fi
+		check_hotplug_net
+		check_inotify
+		use acpi && check_procfs
 	fi
 
 	if [[ -d ${ROOT}/etc/hal/device.d ]]; then

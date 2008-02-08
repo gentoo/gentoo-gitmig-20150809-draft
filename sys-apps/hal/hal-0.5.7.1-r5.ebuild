@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.16 2007/11/23 06:43:51 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.17 2008/02/08 20:11:00 wolf31o2 Exp $
 
 inherit eutils linux-info
 
@@ -34,54 +34,46 @@ DEPEND="${RDEPEND}
 ## HAL Daemon drops privledges so we need group access to read disks
 HALDAEMON_GROUPS="haldaemon,plugdev,disk,cdrom,cdrw,floppy,usb"
 
-function notify_uevent() {
-	ewarn
-	ewarn "You must enable Kernel Userspace Events in your kernel."
-	ewarn "This can be set under 'General Setup'.  It is marked as"
-	ewarn "CONFIG_KOBJECT_UEVENT in the config file."
-	ewarn
-	ebeep 5
+function check_uevent() {
+	local CONFIG_CHECK="~KOBJECT_UEVENT"
+	local WARNING_KOBJECT_UEVENT="CONFIG_KOBJECT_UEVENT:\tis not set (required for HAL)"
+	check_extra_config
+	echo
 }
 
-function notify_uevent_2_6_16() {
-	ewarn
-	ewarn "You must enable Kernel Userspace Events in your kernel."
-	ewarn "For this you need to enable 'Hotplug' under 'General Setup' and"
-	ewarn "basic networking.  They are marked CONFIG_HOTPLUG and CONFIG_NET"
-	ewarn "in the config file."
-	ewarn
-	ebeep 5
+function check_hotplug_net() {
+	local CONFIG_CHECK="~HOTPLUG ~NET"
+	local WARNING_HOTPLUG="CONFIG_HOTPLUG:\tis not set (required for HAL)"
+	local WARNING_NET="CONFIG_NET:\tis not set (required for HAL)"
+	check_extra_config
+	echo
 }
 
-function notify_procfs() {
-	ewarn
-	ewarn "You must enable the proc filesystem in your kernel."
-	ewarn "For this you need to enable '/proc file system support' under"
-	ewarn "'Pseudo filesystems' in 'File systems'.  It is marked"
-	ewarn "CONFIG_PROC_FS in the config file."
-	ewarn
-	ebeep 5
+function check_procfs() {
+	local CONFIG_CHECK="~PROC_FS"
+	local WARNING_PROC_FS="CONFIG_PROC_FS:\tis not set (required for HAL)"
+	check_extra_config
+	echo
 }
 
 pkg_setup() {
-	if has_version =sys-apps/pciutils-2.2.4* ; then
-		if built_with_use --missing true =sys-apps/pciutils-2.2.4* zlib ; then
-			die "You MUST build pciutils without the zlib USE flag"
+	if ! built_with_use --missing true sys-apps/pciutils hal ; then
+		if built_with_use --missing false sys-apps/pciutils zlib ; then
+			die "You MUST build sys-apps/pciutils without the zlib USE flag"
 		fi
 	fi
 
-	kernel_is ge 2 6 15 || ewarn "HAL requires a kernel version 2.6.15 or newer"
-
-	if kernel_is lt 2 6 16 ; then
-		linux_chkconfig_present KOBJECT_UEVENT || notify_uevent
-	else
-		(linux_chkconfig_present HOTPLUG && linux_chkconfig_present NET) \
-			|| notify_uevent_2_6_16
+	if [ -e ${ROOT}/usr/src/linux/.config ] ; then
+		if kernel_is ge 2 6 16 ; then
+			check_hotplug_net
+		elif kernel_is eq 2 6 15 ; then
+			check_uevent
+		else
+			ewarn "HAL requires a kernel version 2.6.15 or newer"
+		fi
 	fi
 
-	if use acpi ; then
-		linux_chkconfig_present PROC_FS || notify_procfs
-	fi
+	use acpi && check_procfs
 
 	if [ -d "${ROOT}/etc/hal/device.d" ]; then
 		eerror "HAL 0.5.x will not run with the HAL 0.4.x series of"
