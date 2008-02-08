@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.33.ebuild,v 1.1 2008/02/07 02:01:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.33.ebuild,v 1.2 2008/02/08 20:37:34 cardoe Exp $
 
 inherit eutils multilib
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="readline static clvm cman gulm lvm1 selinux"
 
-DEPEND=">=sys-fs/device-mapper-1.02.22-r5
+DEPEND=">=sys-fs/device-mapper-1.02.24
 		clvm? ( >=sys-cluster/dlm-1.01.00
 			cman? ( >=sys-cluster/cman-1.01.00 )
 			gulm? ( >=sys-cluster/gulm-1.00.00 ) )"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.129 2008/02/07 03:01:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.130 2008/02/08 20:37:34 cardoe Exp $
+
+  08 Feb 2008; Doug Klima <cardoe@gentoo.org> lvm2-2.02.33.ebuild:
+  depend on newer device-mapper for DM_READ_AHEAD_AUTO define. bug #209381
 
   07 Feb 2008; Robin H. Johnson <robbat2@gentoo.org>
   files/lvm.conf-2.02.33.patch:
