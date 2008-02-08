@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.370 2008/02/02 20:36:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.371 2008/02/08 10:39:24 zzam Exp $
+
+*udev-118-r3 (08 Feb 2008)
+
+  08 Feb 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/shell-compat-118-r3.sh, +udev-118-r3.ebuild:
+  Fix mounting tmpfs on baselayout-1, when RC_USE_FSTAB=yes is set, but no
+  entry for /dev exists in /etc/fstab.
 
 *udev-118-r2 (02 Feb 2008)
 
