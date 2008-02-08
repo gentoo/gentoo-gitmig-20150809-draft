@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/emerald-themes
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/emerald-themes/ChangeLog,v 1.11 2007/10/24 10:46:17 hanno Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/emerald-themes/ChangeLog,v 1.12 2008/02/08 00:13:55 robbat2 Exp $
+
+  08 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Maintainer email was non-existent in bugzilla.
 
   24 Oct 2007; Hanno Boeck <hanno@gentoo.org> emerald-themes-0.5.2.ebuild:
   QA fixes.
