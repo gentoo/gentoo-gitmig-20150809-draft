@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jss
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.16 2008/02/08 00:23:41 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.17 2008/02/08 00:31:27 wltjr Exp $
+
+  08 Feb 2008; William L. Thomson Jr. <wltjr@gentoo.org> jss-3.4-r1.ebuild:
+  Quoted vars
 
   08 Feb 2008; William L. Thomson Jr. <wltjr@gentoo.org> jss-4.2.ebuild:
   Added fix for amd64 thanks to Gergan Penkov, added back ~amd64 keyword per
