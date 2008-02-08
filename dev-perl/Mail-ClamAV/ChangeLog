@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-ClamAV
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.20 2008/01/24 13:09:24 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.21 2008/02/08 18:27:37 ticho Exp $
+
+  08 Feb 2008; Andrej Kacian <ticho@gentoo.org> Mail-ClamAV-0.20.ebuild,
+  Mail-ClamAV-0.21.ebuild:
+  Restrict clamav dependency to <0.92 for version 0.20 and to >=0.92 for 0.21.
 
 *Mail-ClamAV-0.21 (24 Jan 2008)
 

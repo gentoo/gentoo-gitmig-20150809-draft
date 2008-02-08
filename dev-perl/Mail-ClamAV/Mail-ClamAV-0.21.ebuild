@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/Mail-ClamAV-0.21.ebuild,v 1.1 2008/01/24 13:09:24 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/Mail-ClamAV-0.21.ebuild,v 1.2 2008/02/08 18:27:37 ticho Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
 
 IUSE=""
 
-DEPEND=">=app-antivirus/clamav-0.90
+DEPEND=">=app-antivirus/clamav-0.92
 	dev-perl/Inline
 	dev-lang/perl"
 
