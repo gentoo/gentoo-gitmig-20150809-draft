@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.6-r1.ebuild,v 1.1 2007/11/28 23:34:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.6-r1.ebuild,v 1.2 2008/02/08 19:00:49 bicatali Exp $
 
 inherit eutils kde
 
@@ -20,11 +20,13 @@ LICENSE="GPL-2"
 
 KEYWORDS="~x86 ~amd64"
 SLOT="0"
-IUSE="cdf fftw imagemagick jpeg2k kexi opengl tiff"
+IUSE="bindist cdf fftw imagemagick jpeg2k kexi opengl tiff"
 
-DEPEND="sci-libs/gsl
+DEPEND="bindist? ( <sci-libs/gsl-1.10 )
+	!bindist? ( sci-libs/gsl )
 	media-gfx/pstoedit
 	sci-libs/netcdf
+	sci-libs/liborigin
 	virtual/ghostscript
 	x11-libs/qwtplot3d-qt3
 	media-libs/audiofile
@@ -44,13 +46,14 @@ need-kde 3.5
 
 src_unpack() {
 	kde_src_unpack
+
 	# let's make sure we don't use included libs
 	echo "# Using shared libs!" >| netcdf/netcdf.h
 	echo "# Using shared libs!" >| qwtplot3d/qwt3d_plot.h
 	echo "# Using shared libs!" >| audiofile/audiofile.h
 
 	# sed for qwtplot3d, qt3 version (gentoo-specific)
-	# (gone in versions > 1.6.0, with qt4)
+	# (gone in versions > 2.0, with qt4)
 	sed -i \
 		-e 's:-lqwtplot3d:-lqwtplot3d-qt3:g' \
 		-e 's:include/qwtplot3d:include/qwtplot3d-qt3:g' \
@@ -78,15 +81,4 @@ src_compile() {
 		$(use_enable opengl) \
 		$(use_enable cdf)"
 	kde_src_compile
-}
-
-src_install() {
-	kde_src_install
-	mv "${D}"/usr/bin/opj2dat "${D}"/usr/bin/LabPlot-opj2dat
-}
-
-pkg_postinst() {
-	kde_pkg_postinst
-	elog "Please notice that /usr/bin/opj2dat conflicts with the one installed by"
-	elog "sci-libs/liborigin and has therefore be renamed to LabPlot-opj2dat."
 }
