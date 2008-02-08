@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/files/wxwidgets.eselect-0.8,v 1.1 2008/02/08 00:43:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/files/wxwidgets.eselect-0.8,v 1.2 2008/02/08 01:08:07 dirtyepic Exp $
 
 inherit config
 
@@ -52,7 +52,7 @@ set_config() {
 		IFS=${OIFS}
 	fi
 
-	# symlink bakelite presets to current slot (Bug #209150)
+	# symlink bakefile presets to current slot (Bug #209150)
 	local f
 	pushd /usr/share/bakefile/presets/ &> /dev/null
 	for f in .bkl _unix.bkl _win32.bkl; do
