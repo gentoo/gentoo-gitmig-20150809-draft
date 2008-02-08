@@ -1,6 +1,10 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.33 2008/02/07 23:57:32 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.34 2008/02/08 10:15:30 dertobi123 Exp $
+
+  08 Feb 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  libpaper-1.1.23.ebuild:
+  ppc stable, bug #209048
 
   07 Feb 2008; Ferris McCormick <fmccor@gentoo.org> libpaper-1.1.23.ebuild:
   Sparc stable --- Bug #209048 --- works fine and is useful too.
