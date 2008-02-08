@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/slock-0.7.ebuild,v 1.4 2008/02/08 15:00:52 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/slock-0.7.ebuild,v 1.5 2008/02/08 15:55:38 jer Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://suckless.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~hppa x86"
+KEYWORDS="amd64 hppa x86"
 IUSE=""
 
 DEPEND="x11-libs/libX11"
