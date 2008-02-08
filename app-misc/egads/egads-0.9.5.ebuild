@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/egads/egads-0.9.5.ebuild,v 1.7 2008/02/08 02:04:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/egads/egads-0.9.5.ebuild,v 1.8 2008/02/08 02:05:08 robbat2 Exp $
 
 DESCRIPTION="Entropy Gathering And Distribution System"
 HOMEPAGE="http://www.securesoftware.com/download_${PN}.htm"
@@ -16,12 +16,12 @@ DEPEND="virtual/libc"
 egadsdatadir=/var/run/egads
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	sed -i \
 		-e '/^BINDIR/d' \
 		-e '/^LIBDIR/d' \
 		-e '/^INCLUDEDIR/d' \
-		${S}/Makefile.in || die "Failed to fix Makefile.in"
+		"${S}"/Makefile.in || die "Failed to fix Makefile.in"
 }
 
 src_compile() {
