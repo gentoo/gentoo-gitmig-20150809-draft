@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-3.1.4.ebuild,v 1.2 2007/07/12 14:24:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-3.1.4.ebuild,v 1.3 2008/02/08 17:52:49 vapier Exp $
 
 HORDE_PHP_FEATURES="session xml"
 
@@ -29,10 +29,8 @@ src_unpack() {
 
 pkg_postinst() {
 	horde_pkg_postinst
-	echo
 	elog "Horde requires PHP to have:"
 	elog "    ==> 'short_open_tag enabled = On'"
 	elog "    ==> 'magic_quotes_runtime set = Off'"
 	elog "    ==> 'file_uploads enabled = On'"
-	elog "Please edit /etc/php/apache2-php4/php.ini"
 }
