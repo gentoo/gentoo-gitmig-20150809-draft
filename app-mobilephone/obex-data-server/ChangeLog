@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obex-data-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.1 2008/02/07 12:05:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.2 2008/02/08 12:37:47 armin76 Exp $
+
+  08 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  obex-data-server-0.1.ebuild:
+  Add ~sparc wrt #209224
 
 *obex-data-server-0.1 (07 Feb 2008)
 
