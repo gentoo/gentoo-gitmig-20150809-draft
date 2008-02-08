@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/lightning-0.7.ebuild,v 1.2 2008/01/28 19:40:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/lightning-0.7.ebuild,v 1.3 2008/02/08 15:56:51 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozcoreconf mozextension makeedit multilib autotools
 
-SBPATCH="mozilla-sunbird-${PV}-patches-0.4"
+SBPATCH="mozilla-sunbird-${PV}-patches-0.5"
 
 DESCRIPTION="Calendar extension for Mozilla Thunderbird."
 HOMEPAGE="http://www.mozilla.org/projects/calendar/lightning/"
