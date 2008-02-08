@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-vompserver
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/ChangeLog,v 1.9 2007/12/30 16:47:09 hd_brummy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/ChangeLog,v 1.10 2008/02/08 14:52:15 hd_brummy Exp $
+
+  08 Feb 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-vompserver-0.2.7.ebuild:
+  stabel x86; thanks to P.Frank on bug 208223
 
 *vdr-vompserver-0.2.7 (30 Dec 2007)
 
