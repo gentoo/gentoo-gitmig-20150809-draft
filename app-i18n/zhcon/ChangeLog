@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/zhcon
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.10 2006/10/24 08:49:30 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.11 2008/02/08 14:45:51 robbat2 Exp $
+
+  08 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Fix metadata.
 
   24 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/zhcon-0.2.3-CAN-2005-0072.patch,
