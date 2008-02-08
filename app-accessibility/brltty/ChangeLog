@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.74 2008/02/06 17:33:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.75 2008/02/08 12:45:25 coldwind Exp $
+
+  08 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> brltty-3.9.ebuild:
+  amd64 stable wrt #208536
 
   06 Feb 2008; nixnut <nixnut@gentoo.org> brltty-3.9.ebuild:
   stable on ppc wrt bug #208536
