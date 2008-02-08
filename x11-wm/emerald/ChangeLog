@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/emerald
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.14 2007/11/26 16:52:11 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.15 2008/02/08 00:15:12 robbat2 Exp $
+
+  08 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Maintainer email was non-existent in bugzilla.
 
   26 Nov 2007; Markus Rothe <corsair@gentoo.org> emerald-0.5.2.ebuild:
   Added ~ppc64
