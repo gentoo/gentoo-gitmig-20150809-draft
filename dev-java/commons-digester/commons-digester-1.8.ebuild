@@ -1,6 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.8.ebuild,v 1.2 2008/01/21 13:26:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.8.ebuild,v 1.3 2008/02/08 15:10:52 betelgeuse Exp $
+
+EAPI=1
+JAVA_PKG_IUSE="doc examples source test"
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -12,18 +15,16 @@ SRC_URI="mirror://apache/jakarta/commons/digester/source/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="doc examples source test"
+IUSE=""
 
 # 1.3 support might be possible by adding an additional depend on
 # xml-commons[-external, but 1.3 is gone anyway
 RDEPEND=">=virtual/jre-1.4
-	=dev-java/commons-beanutils-1.6*
+	dev-java/commons-beanutils:1.6
 	>=dev-java/commons-collections-2.1
 	>=dev-java/commons-logging-1.0.2"
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-core-1.4
-	test? ( =dev-java/junit-3* )
-	source? ( app-arch/zip )
+	test? ( dev-java/junit:0 )
 	${RDEPEND}"
 
 S="${WORKDIR}/${P}-src"
@@ -46,10 +47,6 @@ src_unpack() {
 		commons-logging.jar)" >> build.properties
 }
 
-src_compile() {
-	eant jar $(use_doc)
-}
-
 src_test() {
 	eant -Djunit.jar="$(java-pkg_getjar --build-only junit junit.jar)" test
 }
@@ -57,12 +54,9 @@ src_test() {
 src_install() {
 	java-pkg_dojar "dist/${PN}.jar"
 
-	dodoc NOTICE.txt RELEASE-NOTES.txt
+	dodoc NOTICE.txt RELEASE-NOTES.txt || die
 
-	use doc && dohtml -r dist/docs/api
+	use doc && java-pkg_dojavadoc dist/docs/api
 	use source && java-pkg_dosrc src/java/org
-	if use examples; then
-		dodir "/usr/share/doc/${PF}/examples"
-		cp -r src/examples/* "${D}/usr/share/doc/${PF}/examples"
-	fi
+	use examples && java-pkg_doexamples src/examples
 }
