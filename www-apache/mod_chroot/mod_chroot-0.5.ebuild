@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_chroot/mod_chroot-0.5.ebuild,v 1.5 2008/02/03 08:01:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_chroot/mod_chroot-0.5.ebuild,v 1.6 2008/02/08 10:44:19 dertobi123 Exp $
 
 inherit apache-module
 
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 DESCRIPTION="mod_chroot allows you to run Apache in a chroot jail with no additional files."
 HOMEPAGE="http://core.segfault.pl/~hobbit/mod_chroot/"
