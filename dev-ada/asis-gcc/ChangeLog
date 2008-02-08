@@ -1,6 +1,13 @@
 # ChangeLog for dev-ada/asis-gcc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/ChangeLog,v 1.7 2007/02/27 12:27:14 george Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/ChangeLog,v 1.8 2008/02/08 14:33:08 george Exp $
+
+*asis-gcc-4.2.2 (08 Feb 2008)
+
+  08 Feb 2008; George Shapovalov <george@gentoo.org> +asis-gcc-4.2.2.ebuild:
+  added (finally) an asis version for gnat-gcc-4.2 series. Only one per major
+  version seems sufficient now, as Ada stuff in gcc is kept stable between
+  major releases. Adjusted DEPEND correspondingly.
 
   27 Feb 2007; George Shapovalov <george@gentoo.org> asis-gcc-4.1.1.ebuild, asis-gcc-3.4.6.ebuild:
   backported gnatmake related fix from 4.1.2
