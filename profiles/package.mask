@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8256 2008/02/08 02:57:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8257 2008/02/08 15:18:17 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
+
+# Ulrich Mueller <ulm@gentoo.org> (08 Feb 2008)
+# Pymacs beta release, needs testing.
+=app-emacs/pymacs-0.23_beta*
 
 # Petteri Räty <betelgeuse@gentoo.org> (08 Feb 2008)
 # Masked for removal to java junkyard in 30 days.
