@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbugbuster
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/ChangeLog,v 1.69 2008/02/07 00:10:44 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/ChangeLog,v 1.70 2008/02/09 12:12:46 armin76 Exp $
+
+  09 Feb 2008; Raúl Porcel <armin76@gentoo.org> kbugbuster-3.5.8.ebuild:
+  alpha/sparc stable
 
 *kbugbuster-4.0.1 (06 Feb 2008)
 
