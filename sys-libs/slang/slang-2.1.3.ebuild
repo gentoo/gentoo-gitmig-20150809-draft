@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.1.3.ebuild,v 1.3 2008/02/09 14:33:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.1.3.ebuild,v 1.4 2008/02/09 14:52:44 drac Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="pcre png"
 
-RDEPEND=">=sys-libs/ncurses-5.2-r2
-	pcre? ( dev-libs/libpcre )
+RDEPEND="pcre? ( dev-libs/libpcre )
 	png? ( media-libs/libpng )"
 DEPEND="${RDEPEND}
 	!=sys-libs/slang-2.1.2"
