@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.23 2008/02/08 14:26:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.24 2008/02/09 10:08:11 ulm Exp $
+
+*pymacs-0.23_beta6 (09 Feb 2008)
+
+  09 Feb 2008; Ulrich Mueller <ulm@gentoo.org>
+  -files/0.23_beta5-fix-pytest-nonascii.patch, -pymacs-0.23_beta5.ebuild,
+  +pymacs-0.23_beta6.ebuild:
+  New beta version.
 
 *pymacs-0.23_beta5 (08 Feb 2008)
 
