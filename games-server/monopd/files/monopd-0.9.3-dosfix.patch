@@ -1,5 +1,5 @@
 --- monopd-0.9.3/src/server.cpp	Sat Jul 17 14:45:47 2004
-+++ server.cpp	Fri Mar  3 10:29:06 2006
++++ server.cpp	Fri Mar 17 14:19:06 2006
 @@ -791,7 +791,7 @@
  			switch(data[1])
  			{
@@ -14,14 +14,14 @@
  	{
  	case 'n':
 -		setPlayerName(pInput, std::string(data+1));
-+		setPlayerName(pInput, data2.substr(2, 16));
++		setPlayerName(pInput, data2.substr(1, 16));
  		return;
  	case 'p':
  		switch(data[1])
  		{
  			case 'i':
 -				pInput->setProperty("image", data+2, this);
-+				pInput->setProperty("image", data2.substr(3, 32), this);
++				pInput->setProperty("image", data2.substr(2, 32), this);
  				return;
  		}
  		break;
