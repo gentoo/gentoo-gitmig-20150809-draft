@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-0.9.ebuild,v 1.4 2007/07/05 18:12:49 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-0.9.2.ebuild,v 1.1 2008/02/09 16:32:48 alonbl Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.aircrack-ng.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ~ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
 IUSE="wifi"
 
 DEPEND="wifi? ( net-libs/libpcap )"
