@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta13.ebuild,v 1.4 2008/01/08 12:00:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta13.ebuild,v 1.5 2008/02/09 06:11:52 drac Exp $
 
 inherit eutils autotools libtool mono
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE="doc imlib mono ncurses nocxx opengl ruby slang X"
 
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
-	slang? ( =sys-libs/slang-1.4* )
+	slang? ( >=sys-libs/slang-1.4 )
 	imlib? ( media-libs/imlib2 )
 	X? ( x11-libs/libX11 x11-libs/libXt )
 	opengl? ( virtual/opengl virtual/glut )
