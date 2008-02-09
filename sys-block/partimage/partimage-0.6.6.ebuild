@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.6.ebuild,v 1.1 2008/01/15 12:05:20 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.6.ebuild,v 1.2 2008/02/09 13:03:26 drac Exp $
 
 WANT_AUTOMAKE="1.10"
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/newt-0.51.6
 	app-arch/bzip2
-	=sys-libs/slang-1*
+	>=sys-libs/slang-1.4
 	nls? ( sys-devel/gettext )
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
@@ -27,7 +27,7 @@ RDEPEND="!static? ( virtual/libc
 		>=dev-libs/lzo-1.08
 		>=dev-libs/newt-0.51.6
 		app-arch/bzip2
-		=sys-libs/slang-1*
+		>=sys-libs/slang-1.4
 		nls? ( sys-devel/gettext )		ssl? ( >=dev-libs/openssl-0.9.6g )
 		pam? ( virtual/pam )
 	)"
