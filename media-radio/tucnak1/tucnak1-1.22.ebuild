@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak1/tucnak1-1.22.ebuild,v 1.7 2008/01/16 19:27:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak1/tucnak1-1.22.ebuild,v 1.8 2008/02/09 06:24:00 drac Exp $
 
 DESCRIPTION="Amateur Radio VHF Contest Logbook"
 HOMEPAGE="http://tucnak.nagano.cz/tucnak1en.html"
@@ -16,7 +16,7 @@ RDEPEND="dev-util/pkgconfig
 	sdl? ( media-libs/libpng
 		media-libs/libsdl
 		media-radio/tucnak1-data
-		=sys-libs/slang-1*
+		>=sys-libs/slang-1
 		sys-libs/zlib )"
 
 src_compile() {
