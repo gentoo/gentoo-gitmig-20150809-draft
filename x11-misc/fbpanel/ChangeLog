@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbpanel
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.33 2008/02/09 00:59:59 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.34 2008/02/09 01:02:12 coldwind Exp $
+
+  09 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> -fbpanel-4.9.ebuild:
+  Remove unused version.
 
   09 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
   +files/fbpanel-4.12-nostrip.patch, fbpanel-4.12.ebuild:
