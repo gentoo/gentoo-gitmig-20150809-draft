@@ -1,6 +1,14 @@
 # ChangeLog for games-emulation/snes9x
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.29 2007/10/09 14:40:41 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.30 2008/02/09 06:18:35 mr_bones_ Exp $
+
+*snes9x-1.51 (09 Feb 2008)
+
+  09 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/snes9x-1.51-build.patch, +files/snes9x-1.51-config.patch,
+  +files/snes9x-1.51-opengl.patch, +files/snes9x-1.51-x11.patch,
+  -snes9x-1.43-r1.ebuild, +snes9x-1.51.ebuild:
+  version bump (bug #139347) with lots of patch work from Justin Blanchard
 
   09 Oct 2007; Christoph Mende <angelos@gentoo.org> snes9x-1.43-r2.ebuild:
   Stable on amd64 wrt bug #193120

@@ -1,26 +1,26 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.11 2006/11/01 22:50:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.51.ebuild,v 1.1 2008/02/09 06:18:35 mr_bones_ Exp $
 
 # 3dfx support (glide) is disabled because it requires
 # glide-v2 while we only provide glide-v3 in portage
 # http://bugs.gentoo.org/show_bug.cgi?id=93097
 
-WANT_AUTOCONF=latest
 inherit autotools eutils flag-o-matic multilib games
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="http://www.snes9x.com/"
-SRC_URI="http://www.lysator.liu.se/snes9x/${PV}/snes9x-${PV}-src.tar.gz"
+SRC_URI="http://files.ipherswipsite.com/snes9x/${P}-src.tar.bz2
+	http://vincent.grigorieff.free.fr/snes9x/${P}-src.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
-IUSE="debug dga joystick opengl zlib"
+KEYWORDS="~amd64 ~ppc64 ~x86"
+IUSE="debug dga joystick netplay opengl zlib"
 
 RDEPEND="x11-libs/libXext
 	dga? ( x11-libs/libXxf86dga
-	   x11-libs/libXxf86vm )
+		x11-libs/libXxf86vm )
 	media-libs/libpng
 	amd64? ( app-emulation/emul-linux-x86-xlibs )
 	opengl? ( virtual/opengl
@@ -34,52 +34,49 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}-src
 
+pkg_setup() {
+	use amd64 && [[ -z ${NATIVE_AMD64_BUILD_PLZ} ]] && has_multilib_profile && ABI=x86
+	games_pkg_setup
+}
+
 src_unpack() {
 	unpack ${A}
-	cd "${S}"/snes9x
-	rm offsets # stupid prebuilt file
+	cd "${S}"
 	sed -i \
 		-e 's:-lXext -lX11::' Makefile.in \
 		|| die "sed failed"
 	epatch \
-		"${FILESDIR}"/nojoy.patch \
-		"${FILESDIR}"/${P}-porting.patch \
-		"${FILESDIR}"/${P}-key-bindings-fix.patch \
 		"${FILESDIR}"/${P}-build.patch \
-		"${FILESDIR}"/${P}-config.patch
-
-	sed -i \
-		-e 's:png_jmpbuf:png_write_info:g' \
-		-e '/X_LDFLAGS=/d' \
-		configure.in || die "sed failed"
+		"${FILESDIR}"/${P}-config.patch \
+		"${FILESDIR}"/${P}-opengl.patch \
+		"${FILESDIR}"/${P}-x11.patch
 
 	eautoconf
 }
 
 src_compile() {
-	[[ -z ${NATIVE_AMD64_BUILD_PLZ} ]] && use amd64 && multilib_toolchain_setup x86
-
-	local vidconf=
-	local target=
-	local vid=
+	local vidconf
+	local target
+	local vid
+	local nooffset
 
 	append-ldflags -Wl,-z,noexecstack
 
-	mkdir mybins
+	mkdir "${WORKDIR}"/mybins
 	for vid in opengl fallback ; do
 		if [[ ${vid} != "fallback" ]] ; then
 			use ${vid} || continue
 		fi
-		cd "${S}"/snes9x
+		cd "${S}"
 		case ${vid} in
 #			3dfx)
-#				vidconf="--with-glide --without-opengl --without-x"
+#				vidconf="--with-glide --without-opengl"
 #				target=gsnes9x;;
 			opengl)
-				vidconf="--with-opengl --without-glide --without-x"
+				vidconf="--with-opengl --without-glide"
 				target=osnes9x;;
 			fallback)
-				vidconf="--with-x --without-glide --without-opengl"
+				vidconf="--without-glide --without-opengl"
 				target=snes9x;;
 		esac
 		# this stuff is ugly but hey the build process sucks ;)
@@ -89,21 +86,23 @@ src_compile() {
 			$(use_with joystick) \
 			$(use_with debug debugger) \
 			$(use_with zlib) \
-			--with-screenshot \
 			$(use_with dga extensions) \
+			$(use_with netplay) \
 			|| die
-		# Makefile doesnt quite support parallel builds
-		emake -j1 offsets || die "making offsets"
+		# Makefile doesn't quite support parallel builds
 		emake ${target} || die "making ${target}"
-		mv ${target} "${S}"/mybins/
+		mv ${target} "${WORKDIR}"/mybins/
 		cd "${WORKDIR}"
-		rm -r "${S}"/snes9x
+		rm -r "${S}"
 		src_unpack
 	done
 }
 
 src_install() {
-	dogamesbin mybins/* || die "dogamesbin failed"
-	dodoc faqs.txt readme.txt readme.unix snes9x/*.txt
+	dogamesbin "${WORKDIR}"/mybins/* || die "dogamesbin failed"
+	dodoc doc/* unix/docs/*
 	prepgamesdirs
+	elog "Starting with version 1.50, snes9x's behavior is determined by a"
+	elog "configuration file. See readme_unix.txt and snes9x.conf.default"
+	elog "in /usr/share/doc/${PF} for details."
 }
