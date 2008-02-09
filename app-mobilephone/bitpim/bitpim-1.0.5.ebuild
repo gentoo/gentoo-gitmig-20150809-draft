@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.13.ebuild,v 1.6 2008/02/09 22:06:07 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.5.ebuild,v 1.1 2008/02/09 22:06:07 nerdboy Exp $
 
-inherit distutils multilib
+inherit distutils fdo-mime multilib
 
 DESCRIPTION="Program to view and manipulate data on LG VX4400/VX6000 and many Sanyo Sprint mobile phones"
 HOMEPAGE="http://www.bitpim.org/"
@@ -11,30 +11,36 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="crypt usb evo"
+# this needs fixing
+#KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+IUSE="crypt evo sqlite usb"
 
-DEPEND="=dev-python/wxpython-2.6*
-	>=dev-python/apsw-3.3.10.1
+DEPEND="=dev-python/wxpython-2.8.7.1*
 	>=dev-python/python-dsv-1.4.0
-	>=dev-python/pyserial-2.0
-	crypt? ( >=dev-python/paramiko-1.5.4 )
+	>=dev-python/pyserial-2.2
+	sqlite? ( >=dev-db/sqlite-3.3.10
+		>=dev-python/apsw-3.3.13.1 )
+	crypt? ( >=dev-python/paramiko-1.7.1
+		>=dev-python/pycrypto-2.0.1 )
 	usb? ( >=dev-lang/swig-1.3.21 >=dev-libs/libusb-0.1.10a )"
+
 RDEPEND="${DEPEND}
 	media-video/ffmpeg
-	media-libs/netpbm"
+	media-libs/netpbm
+	>=dev-lang/python-2.5"
 
 #For Gentoo devs only: uncomment this line when you want to make the tarball
 #then COMMENT IT BACK!
-#pkg_setup() { maketarball; }
+#pkg_setup() { maketarball; } 
 maketarball() { #For building the tarball. To be used only by ebuild maintainers
 	local x svnrev
-	svnrev=$(svn log -q --limit 1 https://bitpim.svn.sourceforge.net/svnroot/${PN}/releases/${PV} | sed -r '/^[^r]/d;s/^r([0-9]+) .*$/\1/')
+	svnrev=$(svn log -q --limit 1 https://${PN}.svn.sourceforge.net/svnroot/${PN}/releases/${PV} | sed -r '/^[^r]/d;s/^r([0-9]+) .*$/\1/')
 	[ $? = 0 ] || return 1
 
 	#Fetch the source (only those directories that are needed)
-	cd "${DISTDIR}" && mkdir ${P} || return 1
+	cd "${DISTDIR}" && mkdir -p ${P} || return 1
 	for x in resources packaging src ; do
-		svn export https://bitpim.svn.sourceforge.net/svnroot/${PN}/releases/${PV}/${x} ${P}/${x} || return 1
+		svn export https://${PN}.svn.sourceforge.net/svnroot/${PN}/releases/${PV}/${x} ${P}/${x} || return 1
 	done
 
 	#Remove unneeded stuff
@@ -52,16 +58,17 @@ maketarball() { #For building the tarball. To be used only by ebuild maintainers
 
 src_unpack() {
 	unpack ${A}
-
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gentoo.patch" || die "gentoo patch failed"
+	epatch "${FILESDIR}/${P}-ffmpeg_quality.patch" || die "ffmpeg patch failed"
 	sed -i "s/python2.3/${python}/" "${S}/src/native/usb/build.sh"
 }
 
 src_compile() {
 	# USB stuff
 	if use usb; then
-		cd "${S}/src/native/usb" || die "compilation of native/usb failed"
-		sh ./build.sh
+	    cd "${S}/src/native/usb"
+	    sh ./build.sh || die "compilation of native/usb failed"
 	fi
 
 	# strings
@@ -77,9 +84,9 @@ src_install() {
 
 	# Install files into right place
 	#
-	# BitPim is a self-contained app, so jamming it into
+	# BitPim is a self-contained app, so jamming it into 
 	# Python's site-packages might not be worthwhile.  We'll
-	# Put it in its own home, and add the PYTHONPATH in the
+	# Put it in its own home, and add the PYTHONPATH in the 
 	# wrapper executables below.
 	distutils_python_version
 	local RLOC=/usr/$(get_libdir)/${P}
@@ -108,7 +115,9 @@ src_install() {
 
 	# strings
 	cd "${S}/src/native/strings"
-	${python} setup.py install --root="${D}" --no-compile "$@" || die "install of native/strings failed"
+	${python} setup.py install --root="${D}" --no-compile "$@" \
+	    || die "install of native/strings failed"
+
 	cd "${S}"
 	insinto $RLOC/native/strings
 	doins src/native/strings/__init__.py src/native/strings/jarowpy.py
@@ -136,11 +145,11 @@ src_install() {
 
 	# Creating scripts
 	echo '#!/bin/sh' > "${T}/bitpim"
-	echo "exec python ${RLOC}/bp.py \"\$@\"" >> "${T}/bitpim"
+	echo "exec ${python} ${RLOC}/bp.py \"\$@\"" >> "${T}/bitpim"
 	dobin "${T}/bitpim"
 	if use crypt; then
 		echo '#!/bin/sh' > "${T}/bitfling"
-		echo "exec python ${RLOC}/bp.py \"\$@\" bitfling" >> "${T}/bitfling"
+		echo "exec ${python} ${RLOC}/bp.py \"\$@\" bitfling" >> "${T}/bitfling"
 		dobin "${T}/bitfling"
 	fi
 
@@ -154,9 +163,11 @@ src_install() {
 pkg_postinst() {
 	# Optimize in installed directory
 	python_mod_optimize "${ROOT}usr/$(get_libdir)/${P}"
+	fdo-mime_desktop_database_update
 }
 
 pkg_postrm() {
 	python_version
 	python_mod_cleanup "${ROOT}usr/$(get_libdir)/${P}"
+	fdo-mime_desktop_database_update
 }

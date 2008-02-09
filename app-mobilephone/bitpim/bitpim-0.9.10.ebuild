@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.10.ebuild,v 1.4 2007/10/03 05:01:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.10.ebuild,v 1.5 2008/02/09 22:06:07 nerdboy Exp $
 
 inherit distutils multilib
 
-DESCRIPTION="This program allows you to view and manipulate data on LG VX4400/VX6000 and many Sanyo Sprint mobile phones"
+DESCRIPTION="Program to view and manipulate data on LG VX4400/VX6000 and many Sanyo Sprint mobile phones"
 HOMEPAGE="http://www.bitpim.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
@@ -74,7 +74,6 @@ src_compile() {
 }
 
 src_install() {
-	cd "${S}"
 
 	# Install files into right place
 	#

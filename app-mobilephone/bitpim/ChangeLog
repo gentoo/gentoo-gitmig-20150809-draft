@@ -1,6 +1,16 @@
 # ChangeLog for app-mobilephone/bitpim
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.22 2007/10/03 05:01:05 dirtyepic Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.23 2008/02/09 22:06:07 nerdboy Exp $
+
+*bitpim-1.0.5 (09 Feb 2008)
+
+  09 Feb 2008; Steve Arnold <nerdboy@gentoo.org>
+  +files/bitpim-1.0.5-ffmpeg_quality.patch,
+  +files/bitpim-1.0.5-gentoo.patch, +bitpim-1.0.5.ebuild:
+  Updated to latest development release to go with latest wxPython; will
+  probably also add the official stable 1.0.0 release, which still works
+  with slightly older deps (the new one may have better exception support).
+  Needs some python deps updated for ppc arches.
 
   03 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> bitpim-0.9.10.ebuild,
   bitpim-0.9.13.ebuild:
