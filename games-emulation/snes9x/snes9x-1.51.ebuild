@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.51.ebuild,v 1.1 2008/02/09 06:18:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.51.ebuild,v 1.2 2008/02/09 06:22:47 mr_bones_ Exp $
 
 # 3dfx support (glide) is disabled because it requires
 # glide-v2 while we only provide glide-v3 in portage
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.snes9x.com/"
 SRC_URI="http://files.ipherswipsite.com/snes9x/${P}-src.tar.bz2
 	http://vincent.grigorieff.free.fr/snes9x/${P}-src.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="as-is GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="debug dga joystick netplay opengl zlib"

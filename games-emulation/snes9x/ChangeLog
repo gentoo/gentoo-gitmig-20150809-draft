@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.30 2008/02/09 06:18:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.31 2008/02/09 06:22:47 mr_bones_ Exp $
+
+  09 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org> snes9x-1.51.ebuild:
+  enhance license
 
 *snes9x-1.51 (09 Feb 2008)
 
