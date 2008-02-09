@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.86 2008/02/08 22:29:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.87 2008/02/09 13:16:54 jer Exp $
+
+  09 Feb 2008; Jeroen Roovers <jer@gentoo.org> xulrunner-1.8.1.12.ebuild:
+  Stable for HPPA (bug #208128).
 
   08 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   xulrunner-1.8.1.12.ebuild:
