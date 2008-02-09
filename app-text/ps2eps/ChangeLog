@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ps2eps
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ps2eps/ChangeLog,v 1.7 2008/02/09 21:52:12 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ps2eps/ChangeLog,v 1.8 2008/02/09 22:46:43 ranger Exp $
+
+  09 Feb 2008; Brent Baude <ranger@gentoo.org> ps2eps-1.64.ebuild:
+  stable ppc64, bug 209463
 
   09 Feb 2008; Ferris McCormick <fmccor@gentoo.org> ps2eps-1.64.ebuild:
   Sparc stable --- Bug #209463 --- needed for texlive and has been good for 3
