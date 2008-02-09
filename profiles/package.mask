@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8261 2008/02/09 13:31:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8262 2008/02/09 21:47:54 philantrop Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,13 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
+
+# Wulf C. Krueger <philantrop@gentoo.org> (09 Feb 2008)
+# Masked for removal in 30 days. 
+# nvemftp's last release was in 2003, we've already had
+# to patch it to even compile and now it doesn't even
+# work anymore. Upstream is dead. cf. bug 209412.
+net-ftp/nvemftp
 
 # Marius Mauch <genone@gentoo.org> (09 Feb 2008)
 # First public test releases of portage-2.2
