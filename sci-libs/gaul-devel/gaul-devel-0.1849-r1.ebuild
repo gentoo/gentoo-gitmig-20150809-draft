@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/gaul-devel-0.1849-r1.ebuild,v 1.2 2008/02/09 16:06:01 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/gaul-devel-0.1849-r1.ebuild,v 1.3 2008/02/09 16:29:09 drac Exp $
 
 inherit autotools
 
@@ -17,16 +17,14 @@ IUSE="debug slang"
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4
-	slang? ( =sys-libs/slang-2* )"
+	slang? ( >=sys-libs/slang-2.1.3 )"
 
-S="${WORKDIR}/${P}-0"
+S=${WORKDIR}/${P}-0
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-slang2-config.patch
 	epatch "${FILESDIR}"/${P}-slang2-error.patch
-	eautoreconf
 }
 
 src_compile() {
