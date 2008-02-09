@@ -1,6 +1,10 @@
 # ChangeLog for app-text/kbibtex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.22 2008/01/20 15:52:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.23 2008/02/09 15:49:24 carlo Exp $
+
+  09 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
+  +files/kbibtex-0.2-desktop-entry.diff:
+  Missing patch...
 
   20 Jan 2008; Carsten Lohrke <carlo@gentoo.org> kbibtex-0.2.ebuild:
   Fix desktop entry.
