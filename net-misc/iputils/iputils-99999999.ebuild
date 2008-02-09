@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-9999.ebuild,v 1.1 2007/04/30 20:34:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-99999999.ebuild,v 1.1 2008/02/09 20:37:40 vapier Exp $
 
 EGIT_REPO_URI="git://www.linux-ipv6.org/gitroot/iputils"
 inherit flag-o-matic eutils toolchain-funcs git
