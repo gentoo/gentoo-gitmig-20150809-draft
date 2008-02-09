@@ -1,6 +1,11 @@
 # ChangeLog for app-office/taskcoach
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.1 2008/01/02 18:57:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.2 2008/02/09 22:44:08 caster Exp $
+
+*taskcoach-0.69.0 (09 Feb 2008)
+
+  09 Feb 2008; Vlastimil Babka <caster@gentoo.org> +taskcoach-0.69.0.ebuild:
+  Version bump.
 
 *taskcoach-0.68.0 (02 Jan 2008)
 
