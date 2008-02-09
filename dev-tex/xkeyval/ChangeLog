@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/xkeyval
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/ChangeLog,v 1.14 2008/02/05 20:58:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/ChangeLog,v 1.15 2008/02/09 22:20:36 aballier Exp $
+
+  09 Feb 2008; Alexis Ballier <aballier@gentoo.org> -xkeyval-1.4-r1.ebuild,
+  -xkeyval-2.4-r1.ebuild:
+  remove old
 
   05 Feb 2008; Fabian Groffen <grobian@gentoo.org> xkeyval-2.4-r1.ebuild,
   xkeyval-2.5f.ebuild:
