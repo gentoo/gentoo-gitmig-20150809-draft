@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.29 2008/02/08 18:42:12 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.30 2008/02/09 20:42:26 alonbl Exp $
+
+  09 Feb 2008; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/truecrypt-5.0-64bit.patch, truecrypt-5.0.ebuild:
+  Fix 64bit issues, bug#209449, thanks to Aron for testing
 
 *truecrypt-5.0 (08 Feb 2008)
 

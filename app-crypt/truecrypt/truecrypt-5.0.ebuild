@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-5.0.ebuild,v 1.1 2008/02/08 18:42:12 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-5.0.ebuild,v 1.2 2008/02/09 20:42:26 alonbl Exp $
 
 #
 # NOTES:
@@ -40,6 +40,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-build.patch"
+	epatch "${FILESDIR}/${P}-64bit.patch"
 }
 
 src_compile() {
