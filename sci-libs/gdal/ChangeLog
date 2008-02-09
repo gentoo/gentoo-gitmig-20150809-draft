@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.35 2008/02/03 23:00:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.36 2008/02/09 18:39:06 nerdboy Exp $
+
+  09 Feb 2008; Steve Arnold <nerdboy@gentoo.org>
+  files/gdal-1.5.0-python-install.patch, gdal-1.5.0.ebuild:
+  Updated python patch, deps, and use flags (the first should fix the install
+  bug reported in #206608).  The rest picks up new features/depends in 1.5.0.
 
 *gdal-1.5.0 (03 Feb 2008)
 

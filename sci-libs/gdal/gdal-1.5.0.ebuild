@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.5.0.ebuild,v 1.1 2008/02/03 23:00:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.5.0.ebuild,v 1.2 2008/02/09 18:39:06 nerdboy Exp $
 
 inherit autotools distutils eutils perl-module toolchain-funcs
 
-IUSE="debug doc fits geos gif gml hdf hdf5 jpeg jpeg2k mysql netcdf \
-	odbc png ogdi perl postgres python ruby sqlite"
+IUSE="curl debug doc fits geos gif gml hdf hdf5 jpeg jpeg2k mysql netcdf \
+	odbc png ogdi perl postgres python ruby sqlite threads"
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats (includes OGR support)"
 HOMEPAGE="http://www.gdal.org/"
@@ -20,6 +20,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 DEPEND=">=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7.0
 	sci-libs/libgeotiff
+	curl? ( net-misc/curl )
 	jpeg? ( media-libs/jpeg )
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
@@ -78,11 +79,11 @@ src_compile() {
 		--with-libgrass=no --without-libtool $(use_enable debug)"
 
 	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) \
-	    $(use_with perl) $(use_with python) $(use_with ruby) \
-	    $(use_with postgres pg) $(use_with fits cfitsio) \
+	    $(use_with postgres pg) $(use_with python) $(use_with ruby) \
+	    $(use_with threads) $(use_with fits cfitsio) $(use_with perl) \
 	    $(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
 	    $(use_with sqlite) $(use_with jpeg2k jasper) $(use_with odbc) \
-	    $(use_with gml xerces) $(use_with hdf5)"
+	    $(use_with gml xerces) $(use_with hdf5) $(use_with curl)"
 
 	# It can't find this
 	if useq ogdi ; then
@@ -134,7 +135,7 @@ src_compile() {
 
 src_install() {
 
-	if useq perl; then
+	if useq perl ; then
 	    cd "${S}"/swig/perl
 	    perl-module_src_install
 	    sed -i -e "s:BINDINGS        =       python ruby perl:BINDINGS        =       python ruby:g" \
