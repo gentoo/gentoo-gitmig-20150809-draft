@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-3.4.6.ebuild,v 1.7 2008/01/24 21:24:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-3.4.6.ebuild,v 1.8 2008/02/09 00:29:18 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -20,14 +20,15 @@ IUSE="doc"
 RDEPEND="=dev-lang/gnat-gcc-${PV}*"
 DEPEND="${RDEPEND}
 	doc? ( virtual/tetex
-	app-text/texi2html )"
+	app-text/texi2html
+	app-text/ghostscript-gpl )"
 
 S="${WORKDIR}/${My_PN}-${My_PV}"
 
 # Execstack is not nearly as dangerous in Ada as in C and would require a lot of
 # work to work around. See bug #141315.
-QA_EXECSTACK="usr/lib/gnat-gcc/*/${SLOT}/adalib/libasis-${SLOT}.so
-	usr/lib/gnat-gcc/*/${SLOT}/adalib/libasis.a
+QA_EXECSTACK="usr/$(get_libdir)/gnat-gcc/*/${SLOT}/adalib/libasis-${SLOT}.so
+	usr/$(get_libdir)/gnat-gcc/*/${SLOT}/adalib/libasis.a
 	usr/*/gnat-gcc-bin/${SLOT}/*"
 
 # it may be even better to force plain -O2 -pipe -ftracer here
@@ -120,6 +121,8 @@ src_install () {
 	insinto ${My_LIBPATH}/adainclude
 	doins gnat/*.ad[sb]
 	doins asis/*.ad[sb]
+	# two files are already part of gnat, removing to avoid collision
+	rm "${D}${My_LIBPATH}"/adainclude/g-string.ad?
 
 	# tools
 	mkdir -p "${D}${My_BINPATH}"
@@ -132,13 +135,15 @@ src_install () {
 		# docs and examples
 		dodoc documentation/*.{txt,ps}
 		dohtml documentation/*.html
+		insinto /usr/share/doc/${PF}
+		doins -r documentation/*.pdf
 		# info's should go into gnat-gpl dirs
 		insinto ${My_DATAPATH}/info/
 		doins documentation/*.info
 	fi
 
 	insinto /usr/share/doc/${PF}
-	doins -r documentation/*.pdf examples/ tutorial/ templates/
+	doins -r examples/ tutorial/ templates/
 }
 
 pkg_postinst() {
