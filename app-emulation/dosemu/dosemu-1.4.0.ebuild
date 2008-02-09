@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.0.ebuild,v 1.3 2007/07/22 09:15:42 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.0.ebuild,v 1.4 2008/02/09 13:00:29 drac Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -35,7 +35,6 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/dosemu-1.3.4-shm.diff
-	epatch ${FILESDIR}/dosemu-1.3.5-slang2.diff
 
 	eautoreconf || die "autoconf failed"
 }
