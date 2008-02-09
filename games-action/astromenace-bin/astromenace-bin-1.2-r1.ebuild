@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/astromenace-bin/astromenace-bin-1.2-r1.ebuild,v 1.2 2008/02/09 03:08:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/astromenace-bin/astromenace-bin-1.2-r1.ebuild,v 1.3 2008/02/09 03:14:12 mr_bones_ Exp $
 
 inherit eutils versionator games
 
@@ -18,7 +18,7 @@ SRC_URI="linguas_de? ( ${DL}/${MY_P}_de.tar.bz2 )
 LICENSE="astromenace"
 SLOT="0"
 KEYWORDS="~amd64 x86"
-IUSE=""
+IUSE="linguas_de linguas_ru"
 RESTRICT="strip"
 
 RDEPEND="
