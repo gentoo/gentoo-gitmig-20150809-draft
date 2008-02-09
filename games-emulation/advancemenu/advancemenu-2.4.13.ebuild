@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.13.ebuild,v 1.5 2007/03/13 01:27:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.13.ebuild,v 1.6 2008/02/09 12:31:06 drac Exp $
 
 inherit eutils games
 
@@ -17,7 +17,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	expat? ( dev-libs/expat )
 	ncurses? ( sys-libs/ncurses )
 	sdl? ( media-libs/libsdl )
-	slang? ( =sys-libs/slang-1* )
+	slang? ( >=sys-libs/slang-1.4 )
 	svga? ( >=media-libs/svgalib-1.9 )
 	truetype? ( >=media-libs/freetype-2 )
 	zlib? ( sys-libs/zlib )"
