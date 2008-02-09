@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.10.2-r1.ebuild,v 1.10 2007/07/03 17:44:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.10.2-r1.ebuild,v 1.11 2008/02/09 10:54:42 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,13 +17,13 @@ IUSE=""
 # directories for each arch. -- ciaranm, 27 June 2004
 KEYWORDS="alpha amd64 mips ppc sparc x86"
 
-DEPEND="=sys-libs/slang-1.4*
+DEPEND=">=sys-libs/slang-1.4
 	>=sys-libs/ncurses-5.2-r2"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-fix-goto-line.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-fix-goto-line.diff
 }
 
 src_install() {
@@ -54,7 +54,7 @@ src_install() {
 
 	doman most.1
 
-	dodoc COPYING COPYRIGHT README changes.txt
+	dodoc README changes.txt
 	docinto txt
 	dodoc most.rc lesskeys.rc most-fun.txt
 }
