@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/chktex
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.22 2007/12/18 19:09:04 jer Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.23 2008/02/09 22:15:02 fmccor Exp $
+
+  09 Feb 2008; Ferris McCormick <fmccor@gentoo.org> chktex-1.6.4.ebuild:
+  Sparc stable --- Bug #209468 --- tests clean.
 
   18 Dec 2007; Jeroen Roovers <jer@gentoo.org> chktex-1.6.3-r1.ebuild:
   Marked ~hppa (bug #195815).
