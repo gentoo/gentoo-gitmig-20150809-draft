@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8260 2008/02/09 13:09:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8261 2008/02/09 13:31:15 drac Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -32,13 +32,6 @@
 # Marius Mauch <genone@gentoo.org> (09 Feb 2008)
 # First public test releases of portage-2.2
 >=sys-apps/portage-2.2_alpha
-
-# Samuli Suominen <drac@gentoo.org> (09 Feb 2008)
-# Ebuilds need to be tested with 2.1.3 before
-# unmasking wrt #209416.
-=sys-libs/slang-2*
-=app-editors/jed-0.99.18*
->=app-editors/lpe-1.2.6.13
 
 # Raúl Porcel <armin76@gentoo.org> (08 Feb 2008)
 # Removal for treecleaners in 60 days
