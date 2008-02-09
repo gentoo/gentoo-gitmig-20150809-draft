@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.6.2.ebuild,v 1.8 2008/02/09 11:05:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.6.2.ebuild,v 1.9 2008/02/09 11:08:40 drac Exp $
 
 inherit flag-o-matic
 
-DESCRIPTION="A multiplatform portable viewer of binary files with built-in editor in binary, hexadecimal and disassembler modes."
+DESCRIPTION="A portable viewer of binary files, hexadecimal and disassembler modes."
 HOMEPAGE="http://biew.sourceforge.net"
 SRC_URI="mirror://sourceforge/biew/${PN}${PV//./}.tar.bz2"
 
@@ -34,8 +34,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}
-
 	local scrnlib
 
 	if use ncurses ; then
