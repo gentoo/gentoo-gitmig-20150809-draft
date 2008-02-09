@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-5.2.3.ebuild,v 1.7 2007/12/29 20:26:36 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-5.2.3.ebuild,v 1.8 2008/02/09 12:09:26 drac Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE="slang"
 
 DEPEND="net-libs/libpcap
 	sys-libs/ncurses
-	slang? ( =sys-libs/slang-1* )"
+	slang? ( >=sys-libs/slang-1.4 )"
 
 src_unpack() {
 	unpack ${A}; cd "${S}"
