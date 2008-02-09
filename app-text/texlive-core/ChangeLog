@@ -1,6 +1,13 @@
 # ChangeLog for app-text/texlive-core
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.41 2007/12/18 19:21:15 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.42 2008/02/09 11:31:41 aballier Exp $
+
+*texlive-core-2007-r12 (09 Feb 2008)
+
+  09 Feb 2008; Alexis Ballier <aballier@gentoo.org>
+  -texlive-core-2007-r11.ebuild, +texlive-core-2007-r12.ebuild:
+  add a patch for icu security fix, it is unclear whether this affects xetex
+  or not but better safe than sorry
 
   18 Dec 2007; Jeroen Roovers <jer@gentoo.org> texlive-core-2007-r11.ebuild:
   Marked ~hppa (bug #195815).
