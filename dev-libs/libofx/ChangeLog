@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.38 2008/02/05 16:32:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.39 2008/02/09 12:32:44 armin76 Exp $
+
+  09 Feb 2008; Raúl Porcel <armin76@gentoo.org> libofx-0.8.3.ebuild:
+  alpha/ia64 stable
 
   05 Feb 2008; Markus Rothe <corsair@gentoo.org> libofx-0.8.3.ebuild:
   Added ~ppc64; fix dependencies for app-office/kmymoney2
