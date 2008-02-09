@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/nettop-0.2.3-r1.ebuild,v 1.2 2007/04/18 13:00:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/nettop-0.2.3-r1.ebuild,v 1.3 2008/02/09 12:05:15 drac Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="BSD"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="=sys-libs/slang-1*
+DEPEND=">=sys-libs/slang-1.4
 	net-libs/libpcap"
 
 pkg_setup() {
