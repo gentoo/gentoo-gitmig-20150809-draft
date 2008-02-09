@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.18.ebuild,v 1.5 2008/02/09 09:16:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.18.ebuild,v 1.6 2008/02/09 09:30:24 ulm Exp $
 
 inherit versionator
 
@@ -15,9 +15,8 @@ KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="X gpm truetype"
 
 RDEPEND=">=sys-libs/slang-2
-	X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXrender )
-	X? ( truetype? ( || ( x11-libs/libXft virtual/xft )
-					>=media-libs/freetype-2.0 ) )
+	X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXrender
+		truetype? ( virtual/xft	>=media-libs/freetype-2.0 ) )
 	gpm? ( sys-libs/gpm )"
 DEPEND="${RDEPEND}"
 
