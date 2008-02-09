@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.7-r2.ebuild,v 1.9 2008/02/08 10:01:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.7-r2.ebuild,v 1.10 2008/02/09 16:20:56 alonbl Exp $
 
 inherit eutils multilib
 
@@ -35,7 +35,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-pam.patch"

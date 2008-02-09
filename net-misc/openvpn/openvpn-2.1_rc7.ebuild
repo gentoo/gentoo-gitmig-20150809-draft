@@ -1,18 +1,17 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_rc4-r2.ebuild,v 1.2 2007/09/15 07:30:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_rc7.ebuild,v 1.1 2008/02/09 16:20:56 alonbl Exp $
 
-inherit autotools eutils multilib
+inherit eutils multilib
 
 DESCRIPTION="OpenVPN is a robust and highly flexible tunneling application compatible with many OSes."
-SRC_URI="http://openvpn.net/release/${P}.tar.gz
-		ipv6? ( mirror://gentoo/${PN}-2.1-udp6.patch.bz2 )"
+SRC_URI="http://openvpn.net/release/${P}.tar.gz"
 HOMEPAGE="http://openvpn.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="examples iproute2 ipv6 minimal pam passwordsave selinux ssl static threads userland_BSD"
+IUSE="examples iproute2 minimal pam passwordsave selinux ssl static pkcs11 threads userland_BSD"
 
 DEPEND=">=dev-libs/lzo-1.07
 	kernel_linux? (
@@ -20,7 +19,8 @@ DEPEND=">=dev-libs/lzo-1.07
 	)
 	!minimal? ( pam? ( virtual/pam ) )
 	selinux? ( sec-policy/selinux-openvpn )
-	ssl? ( >=dev-libs/openssl-0.9.6 )"
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	pkcs11? ( >=dev-libs/pkcs11-helper-1.05 )"
 
 pkg_setup() {
 	if use iproute2 ; then
@@ -35,28 +35,25 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/${P}"-ip6-mss.patch
-	use ipv6 && epatch "${WORKDIR}/${PN}"-2.1-udp6.patch
-	eautoreconf
+	epatch "${FILESDIR}/${P}-tap.patch"
 }
 
 src_compile() {
 	local myconf=""
-	# We cannot use use_enable with iproute2 as the Makefile stupidly
-	# enables it with --disable-iproute2
-	use iproute2 && myconf="${myconf} --enable-iproute2"
+
 	if use minimal ; then
 		myconf="${myconf} --disable-plugins"
 		myconf="${myconf} --disable-pkcs11"
+	else
+		myconf="$(use_enable pkcs11)"
 	fi
 
 	econf ${myconf} \
-		$(use_enable ipv6) \
 		$(use_enable passwordsave password-save) \
 		$(use_enable ssl) \
 		$(use_enable ssl crypto) \
 		$(use_enable threads pthread) \
+		$(use_enable iproute2) \
 		|| die "configure failed"
 
 	use static && sed -i -e '/^LIBS/s/LIBS = /LIBS = -static /' Makefile
@@ -141,7 +138,7 @@ pkg_postinst() {
 	einfo "You can then treat openvpn.foo as any other service, so you can"
 	einfo "stop one vpn and start another if you need to."
 
-	if grep -Eq "^[ \t]*(up|down)[ \t].*" ${ROOT}/etc/openvpn/*.conf 2>/dev/null ; then
+	if grep -Eq "^[ \t]*(up|down)[ \t].*" "${ROOT}/etc/openvpn"/*.conf 2>/dev/null ; then
 		ewarn ""
 		ewarn "WARNING: If you use the remote keyword then you are deemed to be"
 		ewarn "a client by our init script and as such we force up,down scripts."
