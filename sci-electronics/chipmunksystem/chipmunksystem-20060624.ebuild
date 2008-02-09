@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/chipmunksystem-20060624.ebuild,v 1.3 2007/07/22 07:17:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/chipmunksystem-20060624.ebuild,v 1.4 2008/02/09 11:11:27 calchan Exp $
 
 inherit toolchain-funcs
 
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 	local COMPILING_ERROR
 	COMPILING_ERROR="Compiling of ${P} FAILED"
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 
 	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CHIPMUNKFLAGS.*:CHIPMUNKFLAGS = -DBSD -Dlinux -DF_OK=0 -DFONTLIB=\\"/usr/lib\\" -DPSLIB=\\"/usr/lib\\":' \
@@ -109,9 +109,10 @@ src_compile() {
 }
 
 src_install () {
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 
 	# Renaming executables with a too generic name in order to avoid collisions
+	mv bin/analog bin/chipmunk-analog
 	mv bin/sf bin/chipmunk-sf
 	mv bin/ss bin/chipmunk-ss
 	mv bin/vc bin/chipmunk-vc
@@ -120,16 +121,16 @@ src_install () {
 	dolib wolcomp/wolcomp.a
 
 	dodir /usr/share/${P}/lib
-	cp -pPR log/lib/* ${D}/usr/share/${P}/lib
-	cp -pPR view/lib/* ${D}/usr/share/${P}/lib
+	cp -pPR log/lib/* "${D}"/usr/share/${P}/lib
+	cp -pPR view/lib/* "${D}"/usr/share/${P}/lib
 	dodir /usr/share/${P}/until/designrules
-	cp -pPR until/designrules/* ${D}/usr/share/${P}/until/designrules
-	cp until/V1.2/*.ff ${D}/usr/share/${P}/until
+	cp -pPR until/designrules/* "${D}"/usr/share/${P}/until/designrules
+	cp until/V1.2/*.ff "${D}"/usr/share/${P}/until
 	dodir /usr/share/${P}/netcmp
-	cp netcmp/*.ntk ${D}/usr/share/${P}/netcmp
+	cp netcmp/*.ntk "${D}"/usr/share/${P}/netcmp
 	dodir /usr/share/doc/${P}/html
-	cp -pPR webdoc/* ${D}/usr/share/doc/${P}/html
-	cp -pPR example ${D}/usr/share/${P}
+	cp -pPR webdoc/* "${D}"/usr/share/doc/${P}/html
+	cp -pPR example "${D}"/usr/share/${P}
 
 	newdoc ${P}-readme README
 	dodoc log/src/LNOTES util/sctomat/doc/scope_to_mat.ps
@@ -150,9 +151,9 @@ src_install () {
 }
 
 pkg_postinst() {
-	elog "Please note that the sf, ss and vc executables have been renamed"
-	elog "respectively chipmunk-sf, chipmunk-ss and chipmunk-vc in order to"
-	elog "avoid collisions with other packages."
+	elog "Please note that the analog, sf, ss and vc executables have been"
+	elog "renamed respectively chipmunk-analog, chipmunk-sf, chipmunk-ss and"
+	elog "chipmunk-vc in order to avoid collisions with other packages."
 	elog "You may want to emerge xcircuit which integrates well with the"
 	elog "Chipmunk tools."
 }
