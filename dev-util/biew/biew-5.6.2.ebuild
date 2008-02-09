@@ -1,26 +1,27 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.6.2.ebuild,v 1.7 2007/04/11 18:56:13 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.6.2.ebuild,v 1.8 2008/02/09 11:05:31 drac Exp $
 
 inherit flag-o-matic
-IUSE="slang ncurses"
 
 DESCRIPTION="A multiplatform portable viewer of binary files with built-in editor in binary, hexadecimal and disassembler modes."
-HOMEPAGE="http://biew.sourceforge.net/"
+HOMEPAGE="http://biew.sourceforge.net"
 SRC_URI="mirror://sourceforge/biew/${PN}${PV//./}.tar.bz2"
 
-SLOT="0"
-KEYWORDS="~amd64 x86"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="amd64 x86"
+IUSE="slang ncurses"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
-	slang? ( <sys-libs/slang-2.0.0 )"
-S="${WORKDIR}/${PN}-${PV//./}"
+	slang? ( >=sys-libs/slang-1.4 )"
+
+S=${WORKDIR}/${PN}-${PV//./}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/biew-562-lvalue-casts.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/biew-562-lvalue-casts.patch
 
 	sed -i "s/USE_MOUSE=.*/USE_MOUSE=y/" makefile
 	sed -i 's:/usr/local:/usr:' biewlib/sysdep/generic/unix/os_dep.c
