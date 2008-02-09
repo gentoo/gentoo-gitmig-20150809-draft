@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/cairo-clock
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.5 2007/12/08 09:46:14 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.6 2008/02/09 01:20:23 coldwind Exp $
+
+  09 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
+  -cairo-clock-0.3.2.ebuild:
+  Remove unused versions
 
   08 Dec 2007; Samuli Suominen <drac@gentoo.org> cairo-clock-0.3.3.ebuild:
   amd64 stable
