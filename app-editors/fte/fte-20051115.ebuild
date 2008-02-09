@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20051115.ebuild,v 1.7 2007/07/22 08:45:36 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20051115.ebuild,v 1.8 2008/02/09 11:52:30 drac Exp $
 
 inherit eutils
 
@@ -38,10 +38,11 @@ src_unpack() {
 	unpack ${P}-src.zip
 	unpack ${P}-common.zip
 
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/fte-gcc34
-	epatch ${FILESDIR}/${PN}-new_keyword.patch
+	epatch "${FILESDIR}"/fte-gcc34
+	epatch "${FILESDIR}"/${PN}-new_keyword.patch
+	epatch "${FILESDIR}"/${PN}-slang.patch
 
 	set_targets
 	sed \
