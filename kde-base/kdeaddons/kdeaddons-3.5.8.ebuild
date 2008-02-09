@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.8.ebuild,v 1.7 2008/01/31 02:26:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.8.ebuild,v 1.8 2008/02/09 22:49:17 philantrop Exp $
 
 inherit db-use kde-dist
 
@@ -46,6 +46,9 @@ src_compile() {
 	else
 		myconf="${myconf} --without-berkeley-db"
 	fi
+
+	# Parallel make breaks this package.
+	MAKEOPTS="${MAKEOPTS} -j1"
 
 	kde_src_compile
 }
