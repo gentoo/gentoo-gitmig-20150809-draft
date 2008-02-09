@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.24 2008/02/08 12:41:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.25 2008/02/09 20:03:48 betelgeuse Exp $
+
+  09 Feb 2008; Petteri Räty <betelgeuse@gentoo.org>
+  bluez-gnome-0.15-r1.ebuild, bluez-gnome-0.16.ebuild,
+  bluez-gnome-0.17.ebuild:
+  Remove x11-proto/xproto from RDEPEND. Fixes bug #209451.
 
   08 Feb 2008; Raúl Porcel <armin76@gentoo.org> bluez-gnome-0.17.ebuild:
   Re-add ~sparc wrt #209224
