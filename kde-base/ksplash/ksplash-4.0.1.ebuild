@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ksplash-4.0.1.ebuild,v 1.1 2008/02/07 00:11:35 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ksplash-4.0.1.ebuild,v 1.2 2008/02/09 15:19:27 zlin Exp $
 
 EAPI="1"
 
@@ -24,6 +24,6 @@ src_compile() {
 		$(cmake-utils_has mmx X86_MMX)
 		$(cmake-utils_has sse X86_SSE)
 		$(cmake-utils_has sse2 X86_SSE2)
-		$(cmake-utils_with xinerama X11_Xinerama)"
+		$(cmake-utils_use_with xinerama X11_Xinerama)"
 	kde4-meta_src_compile
 }
