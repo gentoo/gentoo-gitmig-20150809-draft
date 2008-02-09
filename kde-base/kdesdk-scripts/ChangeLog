@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-scripts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.64 2008/02/07 00:11:36 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.65 2008/02/09 12:18:07 armin76 Exp $
+
+  09 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  kdesdk-scripts-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #208366
 
 *kdesdk-scripts-4.0.1 (06 Feb 2008)
 

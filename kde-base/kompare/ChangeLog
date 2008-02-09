@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kompare
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.74 2008/02/07 00:12:35 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.75 2008/02/09 12:22:45 armin76 Exp $
+
+  09 Feb 2008; Raúl Porcel <armin76@gentoo.org> kompare-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #208366
 
 *kompare-4.0.1 (06 Feb 2008)
 

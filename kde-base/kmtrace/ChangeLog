@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmtrace
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmtrace/ChangeLog,v 1.54 2008/01/31 15:31:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmtrace/ChangeLog,v 1.55 2008/02/09 12:22:19 armin76 Exp $
+
+  09 Feb 2008; Raúl Porcel <armin76@gentoo.org> kmtrace-3.5.8.ebuild:
+  alpha/ia64/sparc stable wrt #208366
 
   31 Jan 2008; Brent Baude <ranger@gentoo.org> kmtrace-3.5.8.ebuild:
   Marking kmtrace-3.5.8 ppc for bug 207634
