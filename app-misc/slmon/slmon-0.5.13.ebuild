@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/slmon-0.5.13.ebuild,v 1.3 2008/01/24 18:41:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/slmon-0.5.13.ebuild,v 1.4 2008/02/09 05:46:39 drac Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 x86"
 IUSE="debug"
 
 RDEPEND=">=dev-libs/glib-2
-	=sys-libs/slang-1*
+	sys-libs/slang
 	gnome-base/libgtop"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
