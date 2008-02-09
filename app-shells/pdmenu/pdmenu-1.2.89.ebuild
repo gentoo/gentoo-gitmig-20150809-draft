@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/pdmenu-1.2.89.ebuild,v 1.10 2007/10/08 03:53:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/pdmenu-1.2.89.ebuild,v 1.11 2008/02/09 11:37:14 drac Exp $
 
 DESCRIPTION="A simple console menu program"
 HOMEPAGE="http://www.kitenet.net/programs/pdmenu/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://debian/pool/main/p/pdmenu/pdmenu_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ia64 mips x86"
+KEYWORDS="alpha ~amd64 ia64 mips x86"
 IUSE="nls gpm examples"
 
 DEPEND="sys-libs/slang
@@ -40,7 +40,6 @@ src_install() {
 	mv doc/pdmenurc.man doc/pdmenurc.5
 	doman doc/pdmenu.1 doc/pdmenurc.5
 
-	into /
 	dobin pdmenu
 }
 
@@ -49,5 +48,4 @@ pkg_postinst() {
 	ewarn "that uses the 'edit' flag will be a security hole. The user need"
 	ewarn "only to enter text with a ';' in it, and they can run an"
 	ewarn "arbitrary command after the semicolon!"
-	ebeep 5
 }
