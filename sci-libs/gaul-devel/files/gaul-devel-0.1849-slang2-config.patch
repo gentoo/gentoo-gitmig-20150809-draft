@@ -1,0 +1,18 @@
+diff -Naur gaul-devel-0.1849-0/configure.in gaul-devel-0.1849-0.new/configure.in
+--- gaul-devel-0.1849-0/configure.in	2005-04-20 12:09:15.000000000 -0400
++++ gaul-devel-0.1849-0.new/configure.in	2008-02-09 09:59:13.000000000 -0500
+@@ -397,10 +397,10 @@
+   AC_MSG_RESULT(yes)
+   WILL_USE_SLANG="yes"
+   HAVE_SLANG=1
+-  LIBS="$LIBS -lslang -lm"
+-  INCLUDES="$INCLUDES -I/usr/include/slang/"	# FIXME: Need to detect slang.h location properly.
+-  AC_CHECK_LIB(slang, SLang_init_slang,
+-    [LIBS="$LIBS -lslang"],
++  LIBS="$LIBS -lslang-2 -lm"
++  INCLUDES="$INCLUDES -I/usr/include/slang-2/"	# FIXME: Need to detect slang.h location properly.
++  AC_CHECK_LIB(slang-2, SLang_init_slang,
++    [LIBS="$LIBS -lslang-2"],
+     [AC_MSG_ERROR(GAUL requires the S-Lang library for full functionality.  see http://space.mit.edu/pub/davis/slang/  Or configure with '--enable-slang=no' for reduced version.)])
+   result=1
+ else

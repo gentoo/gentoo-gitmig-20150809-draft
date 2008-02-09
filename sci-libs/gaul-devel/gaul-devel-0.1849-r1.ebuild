@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/gaul-devel-0.1849-r1.ebuild,v 1.1 2008/02/09 13:24:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/gaul-devel-0.1849-r1.ebuild,v 1.2 2008/02/09 16:06:01 markusle Exp $
+
+inherit autotools
 
 DESCRIPTION="Genetic Algorithm Utility Library"
 HOMEPAGE="http://GAUL.sourceforge.net/"
@@ -11,15 +13,25 @@ SLOT="0"
 
 KEYWORDS="~x86 ~amd64"
 
-IUSE="debug"
+IUSE="debug slang"
 
 DEPEND="virtual/libc
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	slang? ( =sys-libs/slang-2* )"
 
 S="${WORKDIR}/${P}-0"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-slang2-config.patch
+	epatch "${FILESDIR}"/${P}-slang2-error.patch
+	eautoreconf
+}
+
 src_compile() {
-	local myconf="--enable-slang=no"
+	local myconf
+	use slang || myconf="--enable-slang=no"
 	if use debug ; then
 		myconf="${myconf} --enable-debug=yes --enable-memory-debug=yes"
 	else
