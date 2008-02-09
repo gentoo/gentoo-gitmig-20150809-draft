@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.26.ebuild,v 1.3 2007/12/31 21:27:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.26.ebuild,v 1.4 2008/02/09 19:00:26 calchan Exp $
 
 inherit multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://ghdl.free.fr/${P}.tar.bz2
 	mirror://gnu/gcc/releases/gcc-${GCC_VERSION}/gcc-core-${GCC_VERSION}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND=">=sys-apps/portage-2.1.2.10
 	virtual/gnat"
@@ -37,6 +37,18 @@ src_unpack() {
 	# Fix atan2 bug in math_complex-body.vhdl
 	sed -i -e 's/atan2(z.re,z.im)/atan2(z.im,z.re)/' \
 		gcc/vhdl/libraries/ieee/math_complex-body.vhdl || die "sed failed"
+
+	# For multilib profile arch, see bug #203721
+	if (has_multilib_profile || use multilib ) ; then
+		for T_LINUX64 in `find "${S}/gcc/config" -name t-linux64` ;
+		do
+			einfo "sed for ${T_LINUX64} for multilib. :)"
+			sed -i \
+				-e "s:\(MULTILIB_OSDIRNAMES = \).*:\1../lib64 ../lib32:" \
+				"${T_LINUX64}" \
+			|| die "sed for ${T_LINUX64} failed. :("
+		done
+	fi
 }
 
 src_compile() {
