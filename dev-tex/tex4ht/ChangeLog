@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.21 2008/02/08 10:26:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.22 2008/02/09 22:42:00 ranger Exp $
+
+  09 Feb 2008; Brent Baude <ranger@gentoo.org> tex4ht-20071024_p0140.ebuild:
+  Marking tex4ht-20071024_p0140 ppc64 for bug 208763
 
   08 Feb 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   tex4ht-20071024_p0140.ebuild:
