@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.1.3.ebuild,v 1.2 2008/02/09 12:43:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.1.3.ebuild,v 1.3 2008/02/09 14:33:16 drac Exp $
 
 inherit eutils
 
-DESCRIPTION="Console display library used by most text viewer"
+DESCRIPTION="a portable programmer's library designed to allow a developer to create robust portable software."
 HOMEPAGE="http://www.s-lang.org"
 SRC_URI="ftp://ftp.fu-berlin.de/pub/unix/misc/slang/v${PV%.*}/${P}.tar.bz2
 	ftp://space.mit.edu/pub/davis/slang/v${PV%.*}/${P}.tar.bz2"
