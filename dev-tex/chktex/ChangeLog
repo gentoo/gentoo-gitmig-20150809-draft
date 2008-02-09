@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.23 2008/02/09 22:15:02 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.24 2008/02/09 23:03:29 ranger Exp $
+
+  09 Feb 2008; Brent Baude <ranger@gentoo.org> chktex-1.6.4.ebuild:
+  stable ppc64, bug 209468
 
   09 Feb 2008; Ferris McCormick <fmccor@gentoo.org> chktex-1.6.4.ebuild:
   Sparc stable --- Bug #209468 --- tests clean.
