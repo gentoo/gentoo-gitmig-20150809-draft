@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-4.12.ebuild,v 1.1 2007/08/25 03:05:49 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-4.12.ebuild,v 1.2 2008/02/09 00:59:59 coldwind Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
-DESCRIPTION="fbpanel is a light-weight X11 desktop panel"
+DESCRIPTION="light-weight X11 desktop panel"
 HOMEPAGE="http://fbpanel.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
@@ -16,6 +16,12 @@ IUSE=""
 RDEPEND=">=x11-libs/gtk+-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-nostrip.patch
+}
 
 src_compile() {
 	# econf does not work.
