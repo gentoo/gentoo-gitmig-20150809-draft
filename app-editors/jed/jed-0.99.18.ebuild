@@ -1,69 +1,49 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.18.ebuild,v 1.4 2007/11/16 16:53:53 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.18.ebuild,v 1.5 2008/02/09 09:16:05 ulm Exp $
 
-inherit eutils versionator
+inherit versionator
 
-MY_PV=$(replace_version_separator 2 '-')
-MY_P=${PN}-${MY_PV}
-S=${WORKDIR}/${MY_P}
+MY_P=${PN}-$(replace_version_separator 2 '-')
 DESCRIPTION="Console S-Lang-based editor"
 HOMEPAGE="http://www.jedsoft.org/jed/"
 SRC_URI="ftp://space.mit.edu/pub/davis/jed/v0.99/${MY_P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="X gpm truetype"
 
-RDEPEND="=sys-libs/slang-2*
+RDEPEND=">=sys-libs/slang-2
 	X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXrender )
 	X? ( truetype? ( || ( x11-libs/libXft virtual/xft )
 					>=media-libs/freetype-2.0 ) )
 	gpm? ( sys-libs/gpm )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-
-	# Gennto slotted slang-2
-	cd "${S}"
-	sed -e 's:-lslang:-lslang-2:g' -i src/Makefile.in
-	sed -e 's:libslang:libslang-2:g' -i configure
-
-	#cd ${S}; epatch ${FILESDIR}/${P}-jed.info.patch
-	#use userland_Darwin && epatch ${FILESDIR}/${P}-darwin.patch
-}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	export JED_ROOT=/usr/share/jed
 
-	./configure	--host=${CHOST} \
-		--prefix=$JED_ROOT \
-		--bindir=/usr/bin \
-		--mandir=/usr/share/man \
-		--with-slanginc=/usr/include/slang-2 || die
+	econf --prefix=${JED_ROOT} \
+		--bindir=/usr/bin || die
 
 	if use gpm ; then
-		cd src
 		sed -i	-e 's/#MOUSEFLAGS/MOUSEFLAGS/' \
 			-e 's/#MOUSELIB/MOUSELIB/' \
 			-e 's/#GPMMOUSEO/GPMMOUSEO/' \
 			-e 's/#OBJGPMMOUSEO/OBJGPMMOUSEO/' \
-			Makefile
-		cd "${S}"
+			src/Makefile
 	fi
 
 	if use X && use truetype ; then
-	   cd src
-	   sed -i -e 's/#XRENDERFONTLIBS/XRENDERFONTLIBS/' Makefile
-	   sed -i -e 's/^CONFIG_H = config.h/xterm_C_FLAGS = `freetype-config --cflags`\nCONFIG_H = config.h/' Makefile
-	   sed -i -e 's/#define XJED_HAS_XRENDERFONT 0/#define XJED_HAS_XRENDERFONT 1/' jed-feat.h
-	   cd "${S}"
+	   sed -i -e 's/#XRENDERFONTLIBS/XRENDERFONTLIBS/' src/Makefile
+	   sed -i -e 's/^CONFIG_H = config.h/xterm_C_FLAGS = `freetype-config --cflags`\nCONFIG_H = config.h/' src/Makefile
+	   sed -i -e 's/#define XJED_HAS_XRENDERFONT 0/#define XJED_HAS_XRENDERFONT 1/' src/jed-feat.h
 	fi
 
 	make clean || die
-
 	emake || die
 
 	if use X ; then
@@ -77,27 +57,19 @@ src_install() {
 	cd "${S}/src"
 	make DESTDIR="${D}" install || die
 
-	cd "${S}/doc"
-	cp README AUTHORS
-
 	cd "${S}"
-	dodoc INSTALL INSTALL.unx README doc/AUTHORS doc/manual/jed.tex
+	dodoc INSTALL INSTALL.unx README changes.txt doc/manual/jed.tex
+	newdoc doc/README AUTHORS
 
-	cd "${S}/info"
-	rm info.info
-	#epatch ${FILESDIR}/jed.info.diff
-	cd "${S}"
-
-	insinto /usr/share/info
-	doins info/*
+	doinfo info/jed*
 
 	insinto /etc
 	doins lib/jed.conf
 
 	# replace IDE mode with EMACS mode
-	sed -i -e 's/\(_Jed_Default_Emulation = \).*/\1"emacs";/' "${D}/etc/jed.conf" || die "patching jed.conf failed"
+	sed -i -e 's/\(_Jed_Default_Emulation = \).*/\1"emacs";/' \
+		"${D}"/etc/jed.conf || die "patching jed.conf failed"
 
-	cd "${D}"
-	rm -rf usr/share/jed/info
+	rm -rf "${D}"/usr/share/jed/info
 	# can't rm usr/share/jed/doc -- used internally by jed/xjed
 }
