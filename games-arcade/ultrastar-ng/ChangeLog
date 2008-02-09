@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/ultrastar-ng
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ChangeLog,v 1.4 2007/12/03 22:03:13 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ChangeLog,v 1.5 2008/02/09 21:43:14 mr_bones_ Exp $
+
+  09 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  -ultrastar-ng-0.1.4.ebuild, -ultrastar-ng-0.2.1.ebuild,
+  ultrastar-ng-0.2.1-r1.ebuild:
+  increase boost dep to avoid missing boost_thread library (bug #209357)
 
 *ultrastar-ng-0.2.1-r1 (03 Dec 2007)
 

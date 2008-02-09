@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1-r1.ebuild,v 1.4 2007/12/04 00:04:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1-r1.ebuild,v 1.5 2008/02/09 21:43:14 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -24,7 +24,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="novideo opengl xine debug alsa gstreamer portaudio songs"
 
 RDEPEND="gnome-base/librsvg
-	dev-libs/boost
+	>=dev-libs/boost-1.34
 	x11-libs/pango
 	media-libs/sdl-image
 	media-libs/sdl-gfx
@@ -47,9 +47,6 @@ pkg_setup() {
 	games_pkg_setup
 	if use opengl && ! built_with_use media-libs/libsdl opengl ; then
 		eerror "opengl flag set, but libsdl wasn't build with opengl support"
-	fi
-	if ! built_with_use --missing true dev-libs/boost threads ; then
-		eerror "Please emerge dev-libs/boost with USE=threads"
 	fi
 }
 
