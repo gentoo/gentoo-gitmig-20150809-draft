@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20070525.ebuild,v 1.7 2007/12/12 11:08:52 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20070525.ebuild,v 1.8 2008/02/09 12:09:49 calchan Exp $
 
-inherit wxwidgets
+inherit wxwidgets multilib
 
 UPSTREAM_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
 DESCRIPTION="Electronic schematic and PCB design tools."
@@ -56,33 +56,33 @@ src_compile() {
 
 src_install() {
 	# kicad doesn't use the autotools yet
-	exeinto /usr/lib/${PN}/linux
+	exeinto /usr/$(get_libdir)/${PN}/linux
 	doexe eeschema/eeschema || die "Installation failed"
 	doexe pcbnew/pcbnew || die "Installation failed"
 	doexe cvpcb/cvpcb || die "Installation failed"
 	doexe kicad/kicad || die "Installation failed"
 	doexe kicad/minizip/minizip || die "Installation failed"
 	doexe gerbview/gerbview || die "Installation failed"
-	exeinto /usr/lib/${PN}/linux/plugins
+	exeinto /usr/$(get_libdir)/${PN}/linux/plugins
 	doexe eeschema/plugins/netlist_form_pads-pcb || die "Installation failed"
 	newicon kicad_icon.png kicad.png
-	make_wrapper kicad "/usr/lib/${PN}/linux/kicad"
+	make_wrapper kicad "/usr/$(get_libdir)/${PN}/linux/kicad"
 	make_desktop_entry kicad Kicad kicad.png "Application;Engineering;Electronics"
 
 	# kicad requires everything to be in the same place
-	cp -pPR library "${D}"/usr/lib/${PN}
-	cp -pPR internat "${D}"/usr/lib/${PN}
-	cp -pPR template "${D}"/usr/lib/${PN}
-	cp -pPR help "${D}"/usr/lib/${PN}
+	cp -pPR library "${D}"/usr/$(get_libdir)/${PN}
+	cp -pPR internat "${D}"/usr/$(get_libdir)/${PN}
+	cp -pPR template "${D}"/usr/$(get_libdir)/${PN}
+	cp -pPR help "${D}"/usr/$(get_libdir)/${PN}
 	if ! use minimal ; then
-		cp -pPR "${WORKDIR}"/kicad/library "${D}"/usr/lib/${PN}
-		cp -pPR "${WORKDIR}"/kicad/modules "${D}"/usr/lib/${PN}
-		cp -pPR "${WORKDIR}"/kicad/template "${D}"/usr/lib/${PN}
+		cp -pPR "${WORKDIR}"/kicad/library "${D}"/usr/$(get_libdir)/${PN}
+		cp -pPR "${WORKDIR}"/kicad/modules "${D}"/usr/$(get_libdir)/${PN}
+		cp -pPR "${WORKDIR}"/kicad/template "${D}"/usr/$(get_libdir)/${PN}
 		if use doc ; then
-			cp -pPR "${WORKDIR}"/kicad/help "${D}"/usr/lib/${PN}
+			cp -pPR "${WORKDIR}"/kicad/help "${D}"/usr/$(get_libdir)/${PN}
 		fi
 		if use examples ; then
-			cp -pPR "${WORKDIR}"/kicad/demos "${D}"/usr/lib/${PN}
+			cp -pPR "${WORKDIR}"/kicad/demos "${D}"/usr/$(get_libdir)/${PN}
 		fi
 	fi
 	dodoc author.txt copyright.txt news.txt contrib.txt version.txt

@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/kicad
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.29 2007/12/12 11:08:52 leio Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.30 2008/02/09 12:09:49 calchan Exp $
+
+  09 Feb 2008; Denis Dupeyron <calchan@gentoo.org> kicad-20070115.ebuild,
+  kicad-20070525.ebuild, kicad-20070702.ebuild:
+  Fixed multilib handling, bug #205454.
 
   12 Dec 2007; Mart Raudsepp <leio@gentoo.org> kicad-20070115.ebuild,
   kicad-20070525.ebuild, kicad-20070702.ebuild:
