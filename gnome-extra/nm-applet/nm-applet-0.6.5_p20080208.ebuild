@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.5_p20080131.ebuild,v 1.4 2008/02/07 14:54:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.5_p20080208.ebuild,v 1.1 2008/02/10 01:07:18 steev Exp $
 
 inherit gnome2 eutils
 
