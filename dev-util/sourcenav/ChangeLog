@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/sourcenav
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.19 2007/07/22 07:18:14 graaff Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.20 2008/02/10 22:39:36 nerdboy Exp $
+
+  10 Feb 2008; Steve Arnold <nerdboy@gentoo.org>
+  +files/sourcenav-5.2_beta2-tk-size.patch, sourcenav-5.2_beta2.ebuild,
+  sourcenav-5.1.4.ebuild:
+  Updated for Tk vulnerability and QA fixes (see bug #208464), added
+  desktop entry for latest version.
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> sourcenav-5.1.4.ebuild,
   sourcenav-5.2_beta2.ebuild:
