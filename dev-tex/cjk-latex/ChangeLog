@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/cjk-latex
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.18 2007/12/18 19:10:45 jer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.19 2008/02/10 16:49:54 aballier Exp $
+
+  10 Feb 2008; Alexis Ballier <aballier@gentoo.org> cjk-latex-4.7.0.ebuild:
+  keyword ~x86-fbsd
 
   18 Dec 2007; Jeroen Roovers <jer@gentoo.org> cjk-latex-4.7.0.ebuild:
   Marked ~hppa (bug #195815).

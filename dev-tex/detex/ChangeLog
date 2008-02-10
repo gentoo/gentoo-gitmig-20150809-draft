@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/detex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.19 2008/02/09 22:11:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.20 2008/02/10 16:51:32 aballier Exp $
+
+  10 Feb 2008; Alexis Ballier <aballier@gentoo.org> detex-2.8.ebuild:
+  keyword ~x86-fbsd
 
 *detex-2.8 (09 Feb 2008)
 
