@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.22 2008/02/09 22:42:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.23 2008/02/10 12:09:00 aballier Exp $
+
+  10 Feb 2008; Alexis Ballier <aballier@gentoo.org>
+  -tex4ht-20050406_p1623-r1.ebuild, -tex4ht-20050701_p1825.ebuild:
+  remove old
 
   09 Feb 2008; Brent Baude <ranger@gentoo.org> tex4ht-20071024_p0140.ebuild:
   Marking tex4ht-20071024_p0140 ppc64 for bug 208763
