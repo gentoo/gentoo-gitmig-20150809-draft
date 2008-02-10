@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.37 2007/07/02 14:24:27 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.38 2008/02/10 14:47:14 eva Exp $
 
 # IMPORTANT:
 # This eclass is deprecated and should not be used in new ebuilds.
@@ -154,7 +154,7 @@ gtk-engines_src_unpack() {
 	unpack ${A}
 
 	[ -f "${FILESDIR}/${P}-gentoo.diff" ] && \
-		patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+		patch -p0 < "${FILESDIR}/${P}-gentoo.diff"
 
 	MY_DIR=`ls -t ${WORKDIR} | head -n 1`
 
@@ -196,36 +196,36 @@ gtk-engines_src_install() {
 	then
 		if [ "$SLOT" -eq "2" ]
 		then
-			rm -rf ${D}/usr/$(get_libdir)/gtk ${D}/usr/share/themes/Mist/gtk
+			rm -rf "${D}/usr/$(get_libdir)/gtk" "${D}/usr/share/themes/Mist/gtk"
 		else
 			rm -rf ${D}/usr/$(get_libdir)/gtk-2.0 ${D}/usr/share/themes/Mist/gtk-2.0
 		fi
 
-		rm -rf ${D}/usr/share/themes/Mist/metacity-1
+		rm -rf "${D}/usr/share/themes/Mist/metacity-1"
 
 	elif [ "X${ENGINE}" = "Xgeramik" ]
 	then
 		if [ "$SLOT" -eq "2" ]
 		then
-			mv ${D}/usr/share/themes/Geramik/gtk/*png \
-				${D}/usr/share/themes/Geramik/gtk-2.0
-			mv ${D}/usr/share/themes/Geramik/gtk-2.0/gtkrc-2.0 \
-				${D}/usr/share/themes/Geramik/gtk-2.0/gtkrc
+			mv "${D}/usr/share/themes/Geramik/gtk/*png" \
+				"${D}/usr/share/themes/Geramik/gtk-2.0"
+			mv "${D}/usr/share/themes/Geramik/gtk-2.0/gtkrc-2.0" \
+				"${D}/usr/share/themes/Geramik/gtk-2.0/gtkrc"
 
-			rm -rf ${D}/usr/$(get_libdir)/gtk ${D}/usr/share/themes/Geramik/gtk
+			rm -rf "${D}/usr/$(get_libdir)/gtk" "${D}/usr/share/themes/Geramik/gtk"
 		else
-			rm -rf ${D}/usr/$(get_libdir)/gtk-2.0 ${D}/usr/share/themes/Geramik/gtk-2.0
+			rm -rf "${D}/usr/$(get_libdir)/gtk-2.0" "${D}/usr/share/themes/Geramik/gtk-2.0"
 		fi
 
 	elif [ "X${ENGINE}" = "Xlighthouseblue" ]
 	then
 		if [ "$SLOT" -eq "2" ]
 		then
-			rm -rf ${D}/usr/$(get_libdir)/gtk ${D}/usr/share/themes/LighthouseBlue/gtk
+			rm -rf "${D}/usr/$(get_libdir)/gtk" "${D}/usr/share/themes/LighthouseBlue/gtk"
 		else
 			rm -rf \
-				${D}/usr/$(get_libdir)/gtk-2.0 \
-				${D}/usr/share/themes/LighthouseBlue/gtk-2.0
+				"${D}/usr/$(get_libdir)/gtk-2.0" \
+				"${D}/usr/share/themes/LighthouseBlue/gtk-2.0"
 		fi
 	fi
 
