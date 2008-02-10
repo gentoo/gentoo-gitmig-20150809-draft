@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/knetworkconf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetworkconf/ChangeLog,v 1.2 2008/02/07 00:11:03 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetworkconf/ChangeLog,v 1.3 2008/02/10 00:35:18 philantrop Exp $
+
+*knetworkconf-3.5.8 (10 Feb 2008)
+
+  10 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +knetworkconf-3.5.8.ebuild:
+  Added a split ebuild as requested on bug 207977.
 
 *knetworkconf-4.0.1 (06 Feb 2008)
 
