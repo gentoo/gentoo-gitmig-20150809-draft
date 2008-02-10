@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r12.ebuild,v 1.2 2008/02/09 20:13:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r12.ebuild,v 1.3 2008/02/10 12:05:55 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -264,4 +264,8 @@ pkg_postinst() {
 	elog "If you have configuration files in /etc/texmf to merge,"
 	elog "please update them and run /usr/sbin/texmf-update."
 	elog
+	ewarn "If you are migrating from an older TeX distribution"
+	ewarn "Please make sure you have read:"
+	ewarn "http://www.gentoo.org/proj/en/tex/texlive-migration-guide.xml"
+	ewarn "in order to avoid possible problems"
 }
