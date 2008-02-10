@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/synce-gnomevfs
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/ChangeLog,v 1.13 2007/02/21 22:59:08 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/ChangeLog,v 1.14 2008/02/10 16:25:42 philantrop Exp $
+
+  10 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  synce-gnomevfs-0.9.0.ebuild:
+  Made the package respect the user's CFLAGS and got rid of Werror to fix bug
+  206014. Further QA fixes.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
