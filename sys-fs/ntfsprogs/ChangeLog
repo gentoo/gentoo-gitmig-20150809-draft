@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfsprogs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.54 2007/10/14 15:25:10 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.55 2008/02/10 14:15:25 maekke Exp $
+
+  10 Feb 2008; Markus Meier <maekke@gentoo.org> ntfsprogs-2.0.0.ebuild:
+  x86 stable, bug #208918
 
   14 Oct 2007; Markus Rothe <corsair@gentoo.org> ntfsprogs-1.13.1-r1.ebuild:
   Stable on ppc64; bug #194171
