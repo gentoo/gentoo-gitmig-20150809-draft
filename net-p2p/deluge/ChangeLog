@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.54 2008/02/01 10:01:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.55 2008/02/10 20:31:20 tester Exp $
+
+  10 Feb 2008; Olivier Crête <tester@gentoo.org> deluge-0.5.8.3.ebuild:
+  stable on amd64, security bug #208162
 
   01 Feb 2008; Raúl Porcel <armin76@gentoo.org> deluge-9999.ebuild:
   Fix SVN repo URL
