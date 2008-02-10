@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gwenview
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.56 2008/02/09 23:42:32 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.57 2008/02/10 09:14:22 dertobi123 Exp $
+
+  10 Feb 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  gwenview-1.4.2.ebuild:
+  ppc stable, bug #208048
 
   09 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
   gwenview-1.4.2.ebuild:
