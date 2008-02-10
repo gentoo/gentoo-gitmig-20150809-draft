@@ -1,0 +1,10 @@
+# ChangeLog for sys-block/megactl
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megactl/ChangeLog,v 1.1 2008/02/10 20:35:58 wschlich Exp $
+
+*megactl-0.4.1 (10 Feb 2008)
+
+  10 Feb 2008; Wolfram Schlich <wschlich@gentoo.org>
+  +files/megactl-0.4.1.patch, +metadata.xml, +megactl-0.4.1.ebuild:
+  initial import
+
