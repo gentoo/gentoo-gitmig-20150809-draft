@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.41.0.ebuild,v 1.1 2008/02/09 23:16:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.41.0.ebuild,v 1.2 2008/02/10 21:49:45 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -126,19 +126,18 @@ src_compile() {
 }
 
 src_install() {
-	make package pkgdir="${D}"/usr || die "make package failed"
+	emake -j1 package pkgdir="${D}"/usr || die "make package failed"
 
 	[[ $(get_libdir) != "lib" ]] && mv "${D}"/usr/lib "${D}"/usr/$(get_libdir)
 
 	# Remove cruft that we don't need, and move around stuff we want
-	rm "${D}"/usr/include/shhopt.h
-	rm -f "${D}"/usr/bin/{doc.url,manweb}
-	rm -rf "${D}"/usr/man/web
-	rm -rf "${D}"/usr/link
-	rm -f "${D}"/usr/{README,VERSION,config_template,pkginfo}
+	rm -f "${D}"/usr/bin/{doc.url,manweb} || die
+	rm -r "${D}"/usr/man/web || die
+	rm -r "${D}"/usr/link || die
+	rm -f "${D}"/usr/{README,VERSION,config_template,pkginfo} || die
 	dodir /usr/share
-	mv "${D}"/usr/man "${D}"/usr/share/
-	mv "${D}"/usr/misc "${D}"/usr/share/netpbm
+	mv "${D}"/usr/man "${D}"/usr/share/ || die
+	mv "${D}"/usr/misc "${D}"/usr/share/netpbm || die
 
 	dodoc README
 	cd doc
