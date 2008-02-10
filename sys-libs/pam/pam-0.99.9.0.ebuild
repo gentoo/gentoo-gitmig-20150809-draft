@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.9.0.ebuild,v 1.15 2008/02/01 07:37:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.9.0.ebuild,v 1.16 2008/02/10 17:59:34 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -23,7 +23,6 @@ IUSE="cracklib nls elibc_FreeBSD selinux vim-syntax audit test elibc_glibc"
 RDEPEND="nls? ( virtual/libintl )
 	cracklib? ( >=sys-libs/cracklib-2.8.3 )
 	audit? ( sys-process/audit )
-	sys-libs/pwdb
 	selinux? ( >=sys-libs/libselinux-1.28 )"
 DEPEND="${RDEPEND}
 	sys-devel/flex

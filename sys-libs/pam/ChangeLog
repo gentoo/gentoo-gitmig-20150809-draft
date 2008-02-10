@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.193 2008/02/01 07:37:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.194 2008/02/10 17:59:34 flameeyes Exp $
+
+  10 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> pam-0.99.8.1-r1.ebuild,
+  pam-0.99.9.0.ebuild:
+  Remove dependency over pwdb, pam_pwdb is no more present in PAM 0.99, so the
+  dependency was bogus.
 
   01 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> pam-0.99.8.1-r1.ebuild,
   pam-0.99.9.0.ebuild:
