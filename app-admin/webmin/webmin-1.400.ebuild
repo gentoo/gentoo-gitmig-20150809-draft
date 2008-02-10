@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.400.ebuild,v 1.1 2008/02/09 20:07:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.400.ebuild,v 1.2 2008/02/10 16:10:02 maekke Exp $
 
 inherit eutils pam
 
@@ -15,7 +15,7 @@ SRC_URI="webmin-minimal? ( mirror://sourceforge/webadmin/${P}-minimal.tar.gz )
 LICENSE="BSD"
 SLOT="0"
 # ~mips removed because of broken deps. Bug #86085
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="apache2 pam postgres ssl webmin-minimal"
 
 DEPEND="dev-lang/perl"
@@ -41,8 +41,8 @@ src_unpack() {
 		# Correct ldapness
 		epatch "${FILESDIR}"/${PN}-1.270-ldap-useradmin.patch
 
-		mv ${WORKDIR}/virtual-server-${VM_V}.gpl.wbm ${T}/vs.tar
-		tar -xf ${T}/vs.tar
+		mv "${WORKDIR}"/virtual-server-${VM_V}.gpl.wbm "${T}"/vs.tar
+		tar -xf "${T}"/vs.tar
 
 		# Don't create ${HOME}/cgi-bin on new accounts
 		epatch "${FILESDIR}"/virtual-server-3.23-nocgibin.patch
@@ -66,27 +66,27 @@ src_install() {
 	dodir /usr/libexec/webmin
 	dodir /var
 
-	cp -rp * ${D}/usr/libexec/webmin
+	cp -rp * "${D}"/usr/libexec/webmin
 
 	# in webmin-minimal openslp is not present
 	if [ ! -f "${D}/usr/libexec/webmin/openslp/config-gentoo-linux" ] ; then
-		cp ${D}/usr/libexec/webmin/openslp/config \
-			${D}/usr/libexec/webmin/openslp/config-gentoo-linux
+		cp "${D}"/usr/libexec/webmin/openslp/config \
+			"${D}"/usr/libexec/webmin/openslp/config-gentoo-linux
 	fi
 
 	newinitd "${FILESDIR}"/init.d.webmin webmin
 
 	newpamd "${FILESDIR}"/webmin-pam webmin
-	echo gentoo > ${D}/usr/libexec/webmin/install-type
+	echo gentoo > "${D}"/usr/libexec/webmin/install-type
 
 	# Fix ownership
-	chown -R root:0 ${D}
+	chown -R root:0 "${D}"
 
 	dodir /etc/webmin
 	dodir /var/log/webmin
 
-	config_dir=${D}/etc/webmin
-	var_dir=${D}/var/log/webmin
+	config_dir="${D}"/etc/webmin
+	var_dir="${D}"/var/log/webmin
 	perl=/usr/bin/perl
 	autoos=1
 	port=10000
@@ -102,23 +102,23 @@ src_install() {
 	noperlpath=1
 	tempdir="${T}"
 	export config_dir var_dir perl autoos port login crypt host ssl atboot nostart nochown autothird nouninstall noperlpath tempdir
-	${D}/usr/libexec/webmin/setup.sh > ${T}/webmin-setup.out 2>&1 || die "Failed to create initial webmin configuration."
+	"${D}"/usr/libexec/webmin/setup.sh > "${T}"/webmin-setup.out 2>&1 || die "Failed to create initial webmin configuration."
 
 	# Fixup the config files to use their real locations
-	sed -i -e "s:^pidfile=.*$:pidfile=/var/run/webmin.pid:" ${D}/etc/webmin/miniserv.conf
-	find ${D}/etc/webmin -type f | xargs sed -i -e "s:${D}:/:g"
+	sed -i -e "s:^pidfile=.*$:pidfile=/var/run/webmin.pid:" "${D}"/etc/webmin/miniserv.conf
+	find "${D}"/etc/webmin -type f | xargs sed -i -e "s:${D}:/:g"
 
 	# Cleanup from the config script
-	rm -rf ${D}/var/log/webmin
+	rm -rf "${D}"/var/log/webmin
 	keepdir /var/log/webmin/
 
 	# Get rid of this crap...
-	rm -rf ${D}/usr/libexec/webmin/acl/Authen-SolarisRBAC-0.1
-	rm -f ${D}/usr/libexec/webmin/acl/Authen-SolarisRBAC-0.1.tar.gz
+	rm -rf "${D}"/usr/libexec/webmin/acl/Authen-SolarisRBAC-0.1
+	rm -f "${D}"/usr/libexec/webmin/acl/Authen-SolarisRBAC-0.1.tar.gz
 }
 
 pkg_postinst() {
-	local crypt=$(grep "^root:" ${ROOT}/etc/shadow | cut -f 2 -d :)
+	local crypt=$(grep "^root:" "${ROOT}"/etc/shadow | cut -f 2 -d :)
 	crypt=${crypt//\\/\\\\}
 	crypt=${crypt//\//\\\/}
 	sed -i -e "s/root:XXX/root:${crypt}/" "${ROOT}/etc/webmin/miniserv.users"
