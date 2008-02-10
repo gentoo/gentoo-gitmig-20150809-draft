@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-vfs-obexftp/gnome-vfs-obexftp-0.4.ebuild,v 1.4 2008/02/08 12:41:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-vfs-obexftp/gnome-vfs-obexftp-0.4.ebuild,v 1.5 2008/02/10 15:25:27 drac Exp $
 
 GCONF_DEBUG=no
 
@@ -23,5 +23,8 @@ RDEPEND=">=gnome-base/gnome-vfs-2.12.0.1
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-G2CONF="${G2CONF} --enable-nautilus-workaround"
 DOCS="AUTHORS ChangeLog NEWS README* docs/*.txt"
+
+pkg_setup() {
+	G2CONF="${G2CONF} --enable-nautilus-workaround"
+}
