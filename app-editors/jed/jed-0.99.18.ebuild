@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.18.ebuild,v 1.8 2008/02/10 09:46:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.18.ebuild,v 1.9 2008/02/10 11:17:07 ulm Exp $
 
 inherit versionator
 
@@ -15,8 +15,11 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X gpm truetype"
 
 RDEPEND=">=sys-libs/slang-2
-	X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXrender
-		truetype? ( virtual/xft	>=media-libs/freetype-2.0 ) )
+	X? ( x11-libs/libX11
+		truetype? ( x11-libs/libXext
+			x11-libs/libXrender
+			virtual/xft
+			>=media-libs/freetype-2.0 ) )
 	gpm? ( sys-libs/gpm )"
 DEPEND="${RDEPEND}"
 
@@ -29,17 +32,14 @@ src_compile() {
 		--bindir=/usr/bin || die
 
 	if use gpm ; then
-		sed -i	-e 's/#MOUSEFLAGS/MOUSEFLAGS/' \
-			-e 's/#MOUSELIB/MOUSELIB/' \
-			-e 's/#GPMMOUSEO/GPMMOUSEO/' \
-			-e 's/#OBJGPMMOUSEO/OBJGPMMOUSEO/' \
-			src/Makefile
+		sed -i -e '/^#[A-Z]*MOUSE/s/#//' src/Makefile
 	fi
 
 	if use X && use truetype ; then
-	   sed -i -e 's/#XRENDERFONTLIBS/XRENDERFONTLIBS/' src/Makefile
-	   sed -i -e 's/^CONFIG_H = config.h/xterm_C_FLAGS = `freetype-config --cflags`\nCONFIG_H = config.h/' src/Makefile
-	   sed -i -e 's/#define XJED_HAS_XRENDERFONT 0/#define XJED_HAS_XRENDERFONT 1/' src/jed-feat.h
+		sed -i -e '/^#XRENDERFONTLIBS/s/#//' \
+			-e '/^ALL_CFLAGS/i\' \
+			-e 'xterm_C_FLAGS = -DXJED_HAS_XRENDERFONT `freetype-config --cflags`' \
+			src/Makefile
 	fi
 
 	make clean || die
