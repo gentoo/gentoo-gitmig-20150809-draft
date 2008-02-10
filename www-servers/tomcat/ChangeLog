@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.179 2008/02/07 17:25:34 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.180 2008/02/10 15:44:26 maekke Exp $
+
+  10 Feb 2008; Markus Meier <maekke@gentoo.org> tomcat-5.5.26.ebuild,
+  tomcat-6.0.16.ebuild:
+  x86 stable, security bug #196066
 
 *tomcat-6.0.16 (07 Feb 2008)
 
