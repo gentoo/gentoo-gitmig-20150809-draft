@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/gaul-devel-0.1849-r1.ebuild,v 1.3 2008/02/09 16:29:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/gaul-devel-0.1849-r1.ebuild,v 1.4 2008/02/10 09:23:18 drac Exp $
 
-inherit autotools
+inherit eutils
 
 DESCRIPTION="Genetic Algorithm Utility Library"
 HOMEPAGE="http://GAUL.sourceforge.net/"
