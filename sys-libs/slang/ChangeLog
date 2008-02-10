@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.69 2008/02/10 09:43:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.70 2008/02/10 12:27:23 armin76 Exp $
+
+  10 Feb 2008; Raúl Porcel <armin76@gentoo.org> slang-2.1.3.ebuild:
+  Re-add ~alpha/~ia64 wrt #209422
 
   10 Feb 2008; Tobias Scherbaum <dertobi123@gentoo.org> slang-2.1.3.ebuild:
   Added ~ppc, bug #209422
