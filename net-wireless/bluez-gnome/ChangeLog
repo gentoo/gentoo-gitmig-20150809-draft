@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.25 2008/02/09 20:03:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.26 2008/02/10 14:00:14 betelgeuse Exp $
+
+  10 Feb 2008; Petteri Räty <betelgeuse@gentoo.org>
+  bluez-gnome-0.17.ebuild:
+  Move gnome-vfs-obexftp to PDEPEND to avoid circular deps.
 
   09 Feb 2008; Petteri Räty <betelgeuse@gentoo.org>
   bluez-gnome-0.15-r1.ebuild, bluez-gnome-0.16.ebuild,
