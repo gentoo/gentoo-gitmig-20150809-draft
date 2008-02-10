@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r10.ebuild,v 1.1 2008/01/08 11:18:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r10.ebuild,v 1.2 2008/02/10 18:34:15 hd_brummy Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -52,8 +52,24 @@ CAP_FILE="${S}"/capabilities.sh
 CAPS="# Capabilities of the vdr-executable for use by startscript etc."
 
 pkg_setup() {
+	check_menu_flags
+
 	use debug && append-flags -g
 	PLUGIN_LIBDIR="/usr/$(get_libdir)/vdr/plugins"
+}
+
+check_menu_flags () {
+
+	for flag in menuorg setup submenu; do
+		use $flag && count=$((count+1))
+	done
+
+	if [ $count -gt 1 ] ; then
+		echo
+		eerror "Please use only one of this USE-Flags"
+		eerror "submenu setup menuorg"
+		die "multiple menu manipulation"
+	fi
 }
 
 add_cap() {

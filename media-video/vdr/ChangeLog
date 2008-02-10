@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.101 2008/01/08 11:18:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.102 2008/02/10 18:34:15 hd_brummy Exp $
+
+  10 Feb 2008; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.4.7-r10.ebuild:
+  added test for multiple menu manipulation ; bug 201601
 
 *vdr-1.4.7-r10 (08 Jan 2008)
 
