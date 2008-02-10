@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/PEAR-HTTP-1.4.0-r1.ebuild,v 1.4 2008/02/03 11:41:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/PEAR-HTTP-1.4.0-r1.ebuild,v 1.5 2008/02/10 13:58:16 nixnut Exp $
 
 inherit php-pear-r1 depend.php eutils
 
 DESCRIPTION="Miscellaneous HTTP utilities."
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 pkg_setup() {

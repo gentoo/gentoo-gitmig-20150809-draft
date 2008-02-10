@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-File_Gettext
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Gettext/ChangeLog,v 1.17 2008/02/03 11:45:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Gettext/ChangeLog,v 1.18 2008/02/10 13:53:54 nixnut Exp $
+
+  10 Feb 2008; nixnut <nixnut@gentoo.org> PEAR-File_Gettext-0.4.1.ebuild:
+  stable on ppc wrt bug #208313
 
   03 Feb 2008; Markus Meier <maekke@gentoo.org>
   PEAR-File_Gettext-0.4.1.ebuild:
