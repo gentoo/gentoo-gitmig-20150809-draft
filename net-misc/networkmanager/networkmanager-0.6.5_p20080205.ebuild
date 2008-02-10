@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5_p20080130.ebuild,v 1.2 2008/02/02 07:37:39 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5_p20080205.ebuild,v 1.1 2008/02/10 01:07:55 steev Exp $
 
 inherit gnome2 eutils
 
