@@ -1,6 +1,9 @@
 # ChangeLog for app-text/t1utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.29 2008/02/10 16:41:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.30 2008/02/10 16:43:02 aballier Exp $
+
+  10 Feb 2008; Alexis Ballier <aballier@gentoo.org> t1utils-1.33.ebuild:
+  keyword ~x86-fbsd
 
 *t1utils-1.33 (10 Feb 2008)
 
