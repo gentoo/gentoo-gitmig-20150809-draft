@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.41 2008/02/09 22:56:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.42 2008/02/10 09:56:32 dertobi123 Exp $
+
+  10 Feb 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  latex-beamer-3.07.ebuild:
+  ppc stable, bug #209465
 
   09 Feb 2008; Brent Baude <ranger@gentoo.org> latex-beamer-3.07.ebuild:
   Marking latex-beamer-3.07 ppc64 for bug 209465
