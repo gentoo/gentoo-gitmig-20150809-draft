@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.20.3.ebuild,v 1.8 2008/02/04 04:28:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.20.3.ebuild,v 1.9 2008/02/10 22:36:05 eva Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
-inherit games eutils gnome2 autotools virtualx
+inherit games eutils gnome2 python autotools virtualx
 
 DESCRIPTION="Collection of games for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -64,6 +64,10 @@ src_unpack() {
 	# Resolve symbols at execution time in setgid binaries
 	epatch "${FILESDIR}/${PN}-2.14.0-no_lazy_bindings.patch"
 
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+
 	AT_M4DIR="m4" eautoreconf
 }
 
@@ -95,3 +99,17 @@ pkg_preinst() {
 		fi
 	done
 }
+
+pkg_postinst() {
+	games_pkg_postinst
+	gnome2_pkg_postinst
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	python_version
+	python_mod_cleanup
+}
+
