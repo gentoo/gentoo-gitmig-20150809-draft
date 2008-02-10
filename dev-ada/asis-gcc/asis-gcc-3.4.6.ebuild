@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-3.4.6.ebuild,v 1.8 2008/02/09 00:29:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-3.4.6.ebuild,v 1.9 2008/02/10 21:12:55 maekke Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -8,7 +8,7 @@ DESCRIPTION="The Ada Semantic Interface Specification (tools tied to compiler). 
 HOMEPAGE="http://gnuada.sourceforge.net/"
 LICENSE="GMGPL"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 Gnat_Name="gnat-gcc"
 My_PN="asis"
