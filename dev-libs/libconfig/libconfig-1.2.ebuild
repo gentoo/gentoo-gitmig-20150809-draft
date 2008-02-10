@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.2.ebuild,v 1.1 2007/10/18 21:02:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.2.ebuild,v 1.2 2008/02/10 14:13:45 maekke Exp $
 
 inherit autotools
 
@@ -10,14 +10,14 @@ SRC_URI="http://www.hyperrealm.com/libconfig/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="sys-devel/libtool"
 RDEPEND=""
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	sed -i -e 's#^SUBDIRS = . samples doc$#SUBDIRS = . doc#' Makefile.am
