@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.20.3.ebuild,v 1.8 2008/02/10 22:49:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.20.3.ebuild,v 1.9 2008/02/10 23:54:47 mr_bones_ Exp $
 
 inherit gnome2 eutils autotools python
 
@@ -62,10 +62,8 @@ pkg_postinst() {
 	epause 5
 }
 
-
 pkg_postrm() {
 	gnome2_pkg_postrm
 	python_version
 	python_mod_cleanup
 }
-

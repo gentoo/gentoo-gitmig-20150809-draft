@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.20.3.ebuild,v 1.9 2008/02/10 22:36:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.20.3.ebuild,v 1.10 2008/02/10 23:55:09 mr_bones_ Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
@@ -112,4 +112,3 @@ pkg_postrm() {
 	python_version
 	python_mod_cleanup
 }
-
