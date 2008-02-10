@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.470 2008/02/10 00:33:15 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.471 2008/02/10 00:36:29 dsd Exp $
+
+*gentoo-sources-2.6.24-r1 (10 Feb 2008)
+
+  10 Feb 2008; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.24-r1.ebuild:
+  Update to Linux 2.6.24.1, includes important vmsplice() security fix.
+  fbcondecor ioctl/sysctl fix. Fix SCSI CDROM implementation of
+  CDROM_DRIVE_STATUS ioctl. Echo ^C on console when process is terminated with
+  Ctrl+C. Fix XFS readdir crash.
 
 *gentoo-sources-2.6.23-r7 (10 Feb 2008)
 
