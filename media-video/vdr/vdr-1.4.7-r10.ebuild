@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r10.ebuild,v 1.2 2008/02/10 18:34:15 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r10.ebuild,v 1.3 2008/02/10 21:18:08 hd_brummy Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -27,7 +27,7 @@ SRC_URI="ftp://ftp.cadsoft.de/vdr/${P}.tar.bz2
 
 #http://dev.gentoo.org/~zzam/extensions-patch/${EXT_P}.tar.bz2"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -60,13 +60,15 @@ pkg_setup() {
 
 check_menu_flags () {
 
+	count=0
+
 	for flag in menuorg setup submenu; do
 		use $flag && count=$((count+1))
 	done
 
 	if [ $count -gt 1 ] ; then
 		echo
-		eerror "Please use only one of this USE-Flags"
+		eerror "Please use only one of these USE-Flags"
 		eerror "submenu setup menuorg"
 		die "multiple menu manipulation"
 	fi
