@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/PEAR-Log-1.9.14.ebuild,v 1.5 2008/02/10 14:01:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/PEAR-Log-1.9.14.ebuild,v 1.6 2008/02/10 14:39:50 armin76 Exp $
 
 inherit php-pear-r1 depend.php eutils
 
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86"
 
 DESCRIPTION="The Log framework provides an abstracted logging system.
 It supports logging to console, file, syslog, SQL, Sqlite, mail, and mcal targets."
