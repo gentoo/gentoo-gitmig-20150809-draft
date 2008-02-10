@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4.ebuild,v 1.2 2008/01/24 09:49:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4.2.ebuild,v 1.1 2008/02/10 07:43:56 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -44,7 +44,7 @@ SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
 	${SRC_ARCHIVES}/${PN}-man-pl-${PV_PL}.tar.bz2 )"
 
-PATCHVER=""
+PATCHVER="${PV}"
 if [ -n "${PATCHVER}" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
 	${SRC_ARCHIVES}/${PN}-${PATCHVER}.patch.bz2"
@@ -235,6 +235,13 @@ pkg_postinst() {
 	# Compile all source files recursively. Any orphans
 	# will be identified and removed in postrm.
 	compile_all_python_bytecodes "${ROOT}usr/$(get_libdir)/portage/pym"
+
+	echo "If you have an overlay then you should remove **/files/digest-*" \
+	"files (Manifest1) because they are no longer supported. If earlier" \
+	"versions of portage will be used to generate manifests for your overlay" \
+	"then you should add a file named manifest1_obsolete to the root of the" \
+	"repository in order to disable generation of the" \
+	"Manifest1 digest files." | fmt -w 75 | while read x ; do elog "$x" ; done
 
 	portage_docs
 }
