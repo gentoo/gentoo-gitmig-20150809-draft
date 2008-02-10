@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.9.ebuild,v 1.1 2007/09/17 05:38:36 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.9.ebuild,v 1.2 2008/02/10 13:01:40 philantrop Exp $
 
 inherit eutils multilib
 
@@ -10,13 +10,14 @@ SRC_URI="http://jpilot.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="nls"
 
 DEPEND=">=app-pda/pilot-link-0.11.8
 		>=x11-libs/gtk+-2.6.10-r1
 		nls? ( sys-devel/gettext )
-		>=dev-perl/XML-Parser-2.34"
+		>=dev-perl/XML-Parser-2.34
+		>=dev-util/pkgconfig-0.22"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
@@ -42,7 +43,7 @@ src_install() {
 		icondir=/usr/share/pixmaps \
 		desktopdir=/usr/share/applications || die "install failed"
 
-	dodoc ABOUT-NLS AUTHORS BUGS ChangeLog INSTALL NEWS README TODO || die "installing docs failed"
+	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README TODO || die "installing docs failed"
 	doman docs/*.1
 
 	dodir /usr/share/${PN}
