@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.23 2008/02/10 12:09:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.24 2008/02/10 12:35:01 aballier Exp $
+
+*tex4ht-20080125_p0949 (10 Feb 2008)
+
+  10 Feb 2008; Alexis Ballier <aballier@gentoo.org>
+  +tex4ht-20080125_p0949.ebuild:
+  version bump and keyword ~x86-fbsd
 
   10 Feb 2008; Alexis Ballier <aballier@gentoo.org>
   -tex4ht-20050406_p1623-r1.ebuild, -tex4ht-20050701_p1825.ebuild:
