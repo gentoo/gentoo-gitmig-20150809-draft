@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.20.3.ebuild,v 1.7 2008/02/04 04:26:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.20.3.ebuild,v 1.8 2008/02/10 22:49:29 eva Exp $
 
 inherit gnome2 eutils autotools python
 
@@ -41,11 +41,19 @@ src_unpack() {
 	# Fix installing libs into pythondir
 	epatch "${FILESDIR}"/${PN}-2.19.5-multilib.patch
 
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+
 	AT_M4DIR="m4" eautoreconf
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
+
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/deskbar
+	python_mod_optimize /usr/$(get_libdir)/deskbar-applet/modules-2.20-compatible
 
 	ebeep 5
 	ewarn "The dictionary plugin in deskbar-applet uses the dictionary from "
@@ -53,3 +61,11 @@ pkg_postinst() {
 	ewarn "fail silently."
 	epause 5
 }
+
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	python_version
+	python_mod_cleanup
+}
+
