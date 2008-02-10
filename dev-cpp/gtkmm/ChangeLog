@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gtkmm
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.139 2007/12/20 23:30:35 eva Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.140 2008/02/10 20:46:03 eva Exp $
+
+*gtkmm-2.12.4 (10 Feb 2008)
+
+  10 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org> +gtkmm-2.12.4.ebuild:
+  bump to 2.12.4, gcc 4.3 fixes and implement Gtk::RecentAction
 
 *gtkmm-2.12.3 (16 Dec 2007)
 
