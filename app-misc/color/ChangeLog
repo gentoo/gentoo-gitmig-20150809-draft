@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/color
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/color/ChangeLog,v 1.16 2007/12/25 15:38:27 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/color/ChangeLog,v 1.17 2008/02/10 14:00:41 swegener Exp $
+
+  10 Feb 2008; Sven Wegener <swegener@gentoo.org> color-1.1.ebuild,
+  color-1.2.ebuild:
+  Fix compilation error, bug #202704.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing taviso from metadata.xml as per #202471.

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.18 2007/12/17 21:10:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.19 2008/02/10 14:00:41 swegener Exp $
 
 inherit toolchain-funcs
 
@@ -13,21 +13,16 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa mips ppc ppc64 sparc x86"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# Use correct compiler and respect CFLAGS
-	sed -i -e "s/cc/$(tc-getCC)/g" \
-		-e "s/-W -Wall -O2 -g/${CFLAGS}/g" Makefile
+src_compile() {
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	dobin color
+	dobin color || die "dobin failed"
 	dodoc CHANGELOG README
 
 	# symlink for british users.
-	dosym /usr/bin/color /usr/bin/colour
+	dosym color /usr/bin/colour
 }
 
 pkg_postinst() {
