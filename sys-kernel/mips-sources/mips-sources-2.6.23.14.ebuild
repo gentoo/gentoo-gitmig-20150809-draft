@@ -1,10 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.22.6.ebuild,v 1.3 2008/02/10 01:42:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.23.14.ebuild,v 1.1 2008/02/10 01:42:35 kumba Exp $
+
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org GIT snapshot diff from 02 Sep 2007
+# 2) linux-mips.org GIT snapshot diff from 08 Oct 2007
 # 3) Generic Fixes
 # 4) Patch for IP30 Support			(http://www.linux-mips.org/~skylark/)
 # 5) Patch for IP28 Support			(http://home.alphastar.de/fuerst/download.html)
@@ -12,12 +13,15 @@
 # 7) Patch for Remaining Cobalt Bits		(http://www.colonel-panic.org/cobalt-mips/)
 # 8) Experimental patches (IP27 hacks, et al)
 
+
 #//------------------------------------------------------------------------------
+
+
 
 # Version Data
 OKV=${PV/_/-}
-GITDATE="20070902"			# Date of diff between kernel.org and lmo GIT
-GENPATCHVER="1.30"			# Tarball version for generic patches
+GITDATE="20080206"			# Date of diff between kernel.org and lmo GIT
+GENPATCHVER="1.31"			# Tarball version for generic patches
 EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
 F_KV="${OKV}"				# Fetch KV, used to know what mipsgit diff to grab.
@@ -36,9 +40,10 @@ inherit kernel eutils versionator
 HOMEPAGE="http://www.linux-mips.org/ http://www.gentoo.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources virtual/alsa"
-KEYWORDS="-* mips"
+KEYWORDS="-* ~mips"
 IUSE="cobalt ip27 ip28 ip30 ip32r10k"
 DEPEND=">=sys-devel/gcc-4.1.1"
+
 
 # Version Control Variables
 USE_RC="no"				# If set to "yes", then attempt to use an RC kernel
@@ -54,11 +59,12 @@ DO_CBLT="test"				# 		   Cobalt Support	(Cobalt Microsystems)
 
 # Machine Stable Version Variables
 SV_IP22=""				# If set && DO_IP22 == "no", indicates last "good" IP22 version
-SV_IP27="2.6.20.18"			# 	    DO_IP27 == "no", 			   IP27
+SV_IP27="2.6.22.6"				# 	    DO_IP27 == "no", 			   IP27
 SV_IP28="2.6.20.18"			# 	    DO_IP28 == "no", 			   IP28
 SV_IP30=""				# 	    DO_IP30 == "no", 			   IP30
 SV_IP32=""				# 	    DO_IP32 == "no", 			   IP32
 SV_CBLT=""				# 	    DO_CBLT == "no", 			   Cobalt
+
 
 # If USE_RC == "yes", use a release candidate kernel (2.6.X-rcY)
 if [ "${USE_RC}" = "yes" ]; then
@@ -83,13 +89,18 @@ if [ "${USE_PNT}" = "yes" ]; then
 	USE_RC="no"
 fi
 
+
 DESCRIPTION="Linux-Mips GIT sources for MIPS-based machines, dated ${GITDATE}"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${STABLEVER}.tar.bz2
 		mirror://gentoo/mipsgit-${F_KV}-${GITDATE}.diff.bz2
 		mirror://gentoo/${PN}-generic_patches-${GENPATCHVER}.tar.bz2
 		${PATCHVER}"
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 # Error/Warning messages
 err_only_one_mach_allowed() {
@@ -137,7 +148,11 @@ err_disabled_mach() {
 	return 0
 }
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 # Machine Information Messages
 #
@@ -264,7 +279,11 @@ show_cobalt_info() {
 	echo -e ""
 }
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 # Check our USE flags for machine-specific flags and give appropriate warnings/errors.
 # Hope the user isn't crazy enough to try using combinations of these flags.
@@ -337,7 +356,11 @@ pkg_setup() {
 	fi
 }
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 # Generic Patches - Safe to use globally
 do_generic_patches() {
@@ -349,17 +372,19 @@ do_generic_patches() {
 
 		# IP32 Patches
 		epatch ${MIPS_PATCHES}/misc-2.6.11-ip32-mace-is-always-eth0.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.23-ip32-fix-breakage.patch
 
 		# Cobalt Patches
-		epatch ${MIPS_PATCHES}/misc-2.6.22-cobalt-bits.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.23-cobalt-bits.patch
 
 		# Generic
 		epatch ${MIPS_PATCHES}/misc-2.6.17-ths-mips-tweaks.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.12-seccomp-no-default.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.23-seccomp-no-default.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.11-add-byteorder-to-proc.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.22-squashfs-3.2-r2.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.23-squashfs-3.2-r2.patch
 	eend
 }
+
 
 # NOT safe for production systems
 # Use at own risk, do _not_ file bugs on effects of these patches
@@ -379,7 +404,11 @@ do_sekrit_patches() {
 	# /* EXPERIMENTAL - DO NOT USE IN PRODUCTION KERNELS */
 }
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 # Exclusive Machine Patchsets
 
@@ -387,7 +416,7 @@ do_sekrit_patches() {
 do_ip27_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Origin 200/2000 (IP27) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.22-ioc3-metadriver-r27.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.23-ioc3-metadriver-r27.patch
 	epatch ${MIPS_PATCHES}/misc-2.6.17-ip27-horrible-hacks_may-eat-kittens.patch
 	epatch ${MIPS_PATCHES}/misc-2.6.17-ip27-rev-pci-tweak.patch
 	epatch ${MIPS_PATCHES}/misc-2.6.19-ip27-hack-attack.patch
@@ -398,19 +427,25 @@ do_ip27_support() {
 do_ip28_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Indigo2 Impact R10000 (IP28) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.20-ip28-i2_impact-support-r2.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.23-ip28-sgiseeq-backport-from-2624.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.23-ip28-i2_impact-support.patch
 }
+
 
 # SGI Octane 'Speedracer' (IP30)
 do_ip30_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Octane (IP30) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.22-ioc3-metadriver-r27.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.22-ip30-octane-support-r28.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.23-ioc3-metadriver-r27.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.23-ip30-octane-support-r28.patch
 	epatch ${MIPS_PATCHES}/misc-2.6.22-ioc3-revert_commit_691cd0c.patch
 }
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 # Renames source trees for the few machines that we have separate patches for
 rename_source_tree() {
@@ -422,7 +457,11 @@ rename_source_tree() {
 	fi
 }
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 src_unpack() {
 	local x
@@ -430,6 +469,7 @@ src_unpack() {
 	unpack ${A}
 	mv ${WORKDIR}/linux-${STABLEVER} ${WORKDIR}/linux-${OKV}-${GITDATE}
 	cd ${S}
+
 
 	# If USE_RC == "yes", use a release candidate kernel (2.6.x-rcy)
 	# OR
@@ -439,6 +479,7 @@ src_unpack() {
 		einfo ">>> linux-${STABLEVER} --> linux-${OKV} ..."
 		epatch ${WORKDIR}/patch-${OKV}
 	fi
+
 
 	# Update the vanilla sources with linux-mips GIT changes
 	echo -e ""
@@ -456,9 +497,11 @@ src_unpack() {
 	# Patches for experimental use
 	do_sekrit_patches
 
+
 	# All done, resume normal portage work
 	kernel_universal_unpack
 }
+
 
 src_install() {
 	# Rename the source trees for exclusive machines
@@ -482,5 +525,6 @@ pkg_postinst() {
 		ln -sf ${my_ksrc} ${ROOT}/usr/src/linux
 	fi
 }
+
 
 #//------------------------------------------------------------------------------
