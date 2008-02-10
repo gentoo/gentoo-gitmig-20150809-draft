@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/oniguruma-5.9.1.ebuild,v 1.1 2008/02/10 18:45:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/oniguruma-5.9.1.ebuild,v 1.2 2008/02/10 19:03:29 drac Exp $
 
 MY_P=onig-${PV}
 
-DESCRIPTION="a regular expression library for different character encodings."
-HOMEPAGE="http://www.geocities.jp/kosako3/oniguruma/"
+DESCRIPTION="a regular expression library for different character encodings"
+HOMEPAGE="http://www.geocities.jp/kosako3/oniguruma"
 SRC_URI="http://www.geocities.jp/kosako3/oniguruma/archive/${MY_P}.tar.gz"
 
 LICENSE="BSD-2"
