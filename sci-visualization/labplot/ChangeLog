@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/labplot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.16 2008/02/08 19:00:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.17 2008/02/10 12:00:44 markusle Exp $
+
+  10 Feb 2008; Markus Dittrich <markusle@gentoo.org> Manifest:
+  Fixed bad manifest and added new use flags to use.local.desc
+  (see bug #209445).
 
 *labplot-1.6.0.1 (08 Feb 2008)
 

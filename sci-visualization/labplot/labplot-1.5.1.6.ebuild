@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.6.ebuild,v 1.3 2007/11/28 23:34:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.6.ebuild,v 1.4 2008/02/10 12:00:44 markusle Exp $
 
 inherit eutils kde
 
@@ -79,7 +79,7 @@ src_compile() {
 
 src_install() {
 	kde_src_install
-	mv ${D}/usr/bin/opj2dat ${D}/usr/bin/LabPlot-opj2dat
+	mv "${D}"/usr/bin/opj2dat "${D}"/usr/bin/LabPlot-opj2dat
 }
 
 pkg_postinst() {
