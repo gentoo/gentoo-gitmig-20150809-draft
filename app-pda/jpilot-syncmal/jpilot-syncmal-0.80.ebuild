@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/jpilot-syncmal-0.80.ebuild,v 1.1 2007/09/18 05:18:43 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/jpilot-syncmal-0.80.ebuild,v 1.2 2008/02/10 14:56:24 philantrop Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -21,15 +21,20 @@ DEPEND="${RDEPEND}
 		>=x11-libs/gtk+-2.6.10-r1
 		>=dev-libs/libmal-0.44"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
 	sed -i -e "s:/lib/jpilot/plugins:/$(get_libdir)/jpilot/plugins:" \
 		"${S}/Makefile.am" || die "sed'ing Makefile.am failed"
 
+	cd "${S}"
 	eautomake
 	econf --libdir="/usr/$(get_libdir)" || die "configure failed"
+}
+
+src_compile() {
 	emake -j1 || die "make failed"
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "installation failed"
+	emake install DESTDIR="${D}" || die "installation failed"
 }

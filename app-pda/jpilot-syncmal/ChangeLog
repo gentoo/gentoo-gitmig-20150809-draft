@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/jpilot-syncmal
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/ChangeLog,v 1.6 2007/09/18 05:18:43 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/ChangeLog,v 1.7 2008/02/10 14:56:24 philantrop Exp $
+
+  10 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  -jpilot-syncmal-0.72.1.ebuild, jpilot-syncmal-0.80.ebuild:
+  Removed an obsolete version and changed the ebuild according to bug 207488.
 
 *jpilot-syncmal-0.80 (18 Sep 2007)
 
