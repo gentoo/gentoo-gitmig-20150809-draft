@@ -1,16 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-5.0.ebuild,v 1.2 2008/02/09 20:42:26 alonbl Exp $
-
-#
-# NOTES:
-# - Upstream overwrite CFLAGS, and does not wish us to mess with them.
-# - Upstream insist on hiding the Makefile commands... Don't wish to patch it
-#   again.
-# - Some issues with parallel make of user mode library.
-# - Upstream is not responsive, even new kernel versions are not supported
-#   by upstream, but by other users.
-#
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-5.0.ebuild,v 1.3 2008/02/10 20:55:10 alonbl Exp $
 
 inherit eutils toolchain-funcs multilib wxwidgets
 
@@ -41,6 +31,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-build.patch"
 	epatch "${FILESDIR}/${P}-64bit.patch"
+	epatch "${FILESDIR}/${P}-bool.patch"
 }
 
 src_compile() {

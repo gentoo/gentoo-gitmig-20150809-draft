@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.30 2008/02/09 20:42:26 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.31 2008/02/10 20:55:10 alonbl Exp $
+
+  10 Feb 2008; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/truecrypt-5.0-bool.patch, truecrypt-5.0.ebuild:
+  Workaround wxGTK with odbc USE flag, bug#209467
 
   09 Feb 2008; Alon Bar-Lev <alonbl@gentoo.org>
   +files/truecrypt-5.0-64bit.patch, truecrypt-5.0.ebuild:
