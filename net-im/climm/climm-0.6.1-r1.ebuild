@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.6.1-r1.ebuild,v 1.4 2008/01/08 17:38:53 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.6.1-r1.ebuild,v 1.5 2008/02/10 18:56:06 jokey Exp $
 
 DESCRIPTION="ICQ text-mode client with many features"
 HOMEPAGE="http://www.climm.org/"
@@ -31,13 +31,13 @@ src_compile() {
 	if use ssl ; then
 		if ! use gnutls ; then
 			elog "Using openSSL"
-			myconf = "--enable-ssl=openssl"
+			myconf="--enable-ssl=openssl"
 		else
 			elog "Using gnutls"
-			myconf = "--enable-ssl=gnutls"
+			myconf="--enable-ssl=gnutls"
 		fi
 	else
-		myconf = "--disable-ssl"
+		myconf="--disable-ssl"
 	fi
 
 	econf \
