@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.28 2008/02/10 14:08:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.29 2008/02/10 14:17:26 maekke Exp $
+
+  10 Feb 2008; Markus Meier <maekke@gentoo.org> testdisk-6.8-r1.ebuild:
+  x86 stable, bug #208918
 
 *testdisk-6.8-r1 (10 Feb 2008)
 
