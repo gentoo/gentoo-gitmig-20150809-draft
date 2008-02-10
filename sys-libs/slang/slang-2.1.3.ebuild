@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.1.3.ebuild,v 1.6 2008/02/09 22:59:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.1.3.ebuild,v 1.7 2008/02/10 09:22:06 drac Exp $
 
 inherit eutils
 
@@ -32,17 +32,10 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install install-static || die "emake install failed."
+	emake -j1 DESTDIR="${D}" install install-static || die "emake install failed."
 
 	rm -rf "${D}"/usr/share/doc/{slang,slsh}
 
 	dodoc NEWS README *.txt doc/{,internal,text}/*.txt
 	dohtml doc/slangdoc.html slsh/doc/html/*.html
-}
-
-pkg_postinst() {
-	elog
-	elog "You can run \"qdepends -Q slang\" from portage-utils package"
-	elog "to get a list for rebuilding if apps start to misbehave."
-	elog
 }

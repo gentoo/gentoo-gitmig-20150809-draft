@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.67 2008/02/09 22:59:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.68 2008/02/10 09:22:06 drac Exp $
+
+  10 Feb 2008; Samuli Suominen <drac@gentoo.org> slang-2.1.3.ebuild:
+  Force -j1 for installing.
 
   09 Feb 2008; Brent Baude <ranger@gentoo.org> slang-2.1.3.ebuild:
   keyworded ~arch for ppc64, bug 209434
