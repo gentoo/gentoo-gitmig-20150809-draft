@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.108 2007/11/29 05:30:21 jer Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.109 2008/02/10 23:50:24 eva Exp $
+
+  10 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-python-2.20.0.ebuild, gnome-python-2.20.1.ebuild:
+  use get_libdir where needed
 
   29 Nov 2007; Jeroen Roovers <jer@gentoo.org> gnome-python-2.20.0.ebuild:
   Stable for HPPA (bug #199740).
