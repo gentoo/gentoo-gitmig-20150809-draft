@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xalan
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.79 2007/12/10 20:53:38 betelgeuse Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.80 2008/02/10 17:16:04 betelgeuse Exp $
+
+  10 Feb 2008; Petteri Räty <betelgeuse@gentoo.org> xalan-2.7.0-r4.ebuild:
+  Fix bug #209542.
 
   10 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> -xalan-2.7.0-r3.ebuild:
   Remove old ebuild.

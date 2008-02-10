@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r4.ebuild,v 1.6 2007/11/25 14:45:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r4.ebuild,v 1.7 2008/02/10 17:16:04 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -65,7 +65,7 @@ src_unpack() {
 # When version bumping Xalan make sure that the installed jar
 # does not bunled .class files from dependencies
 src_compile() {
-	eant jar
+	eant jar \
 		-Dxsltc.bcel_jar.not_needed=true \
 		-Dxsltc.runtime_jar.not_needed=true \
 		-Dxsltc.regexp_jar.not_needed=true
