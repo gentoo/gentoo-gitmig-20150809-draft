@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.20.0.ebuild,v 1.8 2008/01/10 09:45:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.20.0.ebuild,v 1.9 2008/02/10 22:04:04 eva Exp $
 
 inherit gnome2 python virtualx
 
@@ -38,8 +38,16 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog INSTALL MAINTAINERS NEWS README"
 
+src_unpack() {
+	gnome2_src_unpack
+
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+}
+
 src_test() {
-	Xmake check || die "tests failed"
+	Xemake check || die "tests failed"
 }
 
 src_install() {
