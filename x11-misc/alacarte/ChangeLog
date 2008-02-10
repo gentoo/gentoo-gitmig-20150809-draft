@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.43 2008/01/30 20:52:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.44 2008/02/10 22:18:58 eva Exp $
+
+  10 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  alacarte-0.11.3-r1.ebuild:
+  fix tests and fix python eclass use, bug #207667
 
   30 Jan 2008; Daniel Gryniewicz <dang@gentoo.org>
   alacarte-0.11.3-r1.ebuild:

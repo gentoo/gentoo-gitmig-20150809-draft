@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.3-r1.ebuild,v 1.12 2008/01/30 20:52:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.3-r1.ebuild,v 1.13 2008/02/10 22:18:58 eva Exp $
 
 inherit gnome2 python eutils autotools
 
@@ -35,6 +35,26 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-python-2.5.patch
 
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+
+	# fix tests
+	echo "alacarte.desktop.in" >> po/POTFILES.in
+
 	eautoreconf
 	intltoolize --force
 }
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/Alacarte
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	python_version
+	python_mod_cleanup
+}
+
