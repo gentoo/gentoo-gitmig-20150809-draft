@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/magickwand
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/ChangeLog,v 1.4 2007/10/05 23:43:40 anant Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/ChangeLog,v 1.5 2008/02/11 21:22:27 armin76 Exp $
+
+*magickwand-1.0.6 (11 Feb 2008)
+
+  11 Feb 2008; Raúl Porcel <armin76@gentoo.org> +magickwand-1.0.6.ebuild:
+  Version bump, from the php overlay
 
 *magickwand-1.0.5 (06 Oct 2007)
 

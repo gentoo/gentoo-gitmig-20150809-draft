@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-imagick/pecl-imagick-2.1.0_rc3.ebuild,v 1.1 2008/01/13 15:23:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-imagick/pecl-imagick-2.1.0.ebuild,v 1.1 2008/02/11 21:24:58 armin76 Exp $
 
 PHP_EXT_NAME="imagick"
 PHP_EXT_INI="yes"
@@ -21,5 +21,3 @@ RDEPEND="${DEPEND}"
 
 need_php_by_category
 my_conf="--with-imagick=/usr"
-
-S="${WORKDIR}/${PECL_PKG_V/rc/RC}"

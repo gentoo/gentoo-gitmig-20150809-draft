@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/php-qt-0.9.ebuild,v 1.1 2007/12/30 14:33:14 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-qt/php-qt-0.9.ebuild,v 1.2 2008/02/11 21:28:12 armin76 Exp $
 
 PHP_EXT_NAME="php_qt"
 PHP_EXT_INI="yes"
@@ -39,6 +39,13 @@ pkg_setup() {
 		eerror  "x11-libs/qscintilla must be compiled with qt4 support."
 		die "Recompile x11-libs/qscintilla with USE=\"qt4\" and try again."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# Bug 208301
+	epatch "${FILESDIR}"/${P}-no-qwt.patch
 }
 
 src_compile() {
