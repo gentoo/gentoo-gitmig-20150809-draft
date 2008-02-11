@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.121 2008/02/09 13:15:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.122 2008/02/11 02:03:11 tester Exp $
+
+  11 Feb 2008; Olivier Crête <tester@gentoo.org> seamonkey-1.1.8.ebuild:
+  Stable on amd64, security bug #208128
 
   09 Feb 2008; Jeroen Roovers <jer@gentoo.org> seamonkey-1.1.8.ebuild:
   Stable for HPPA (bug #208128).
