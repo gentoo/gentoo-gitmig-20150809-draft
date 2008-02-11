@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.139 2008/02/11 16:27:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.140 2008/02/11 17:36:18 jer Exp $
+
+  11 Feb 2008; Jeroen Roovers <jer@gentoo.org> usermin-1.330.ebuild:
+  Stable for HPPA (bug #209453).
 
   11 Feb 2008; Raúl Porcel <armin76@gentoo.org> usermin-1.330.ebuild:
   alpha/sparc stable wrt security #209453
