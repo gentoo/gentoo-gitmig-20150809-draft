@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.2 2008/01/17 12:40:03 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.3 2008/02/11 17:54:19 vapier Exp $
+
+  11 Feb 2008; Mike Frysinger <vapier@gentoo.org>
+  mediastreamer-2.1.0.ebuild:
+  Add some ppc love and make sure we depend on newer net-libs/ortp.
 
   17 Jan 2008; Santiago M. Mola <coldwind@gentoo.org>
   mediastreamer-2.1.0.ebuild:

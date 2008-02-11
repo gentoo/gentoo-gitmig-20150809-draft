@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.1.0.ebuild,v 1.2 2008/01/17 12:40:03 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.1.0.ebuild,v 1.3 2008/02/11 17:54:19 vapier Exp $
 
 EAPI="1"
 
@@ -12,10 +12,11 @@ SRC_URI="http://download.savannah.nongnu.org/releases/linphone/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="alsa arts gsm ipv6 portaudio +video"
 
-DEPEND="alsa? ( media-libs/alsa-lib )
+DEPEND=">=net-libs/ortp-0.13
+	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	portaudio? ( media-libs/portaudio )
 	gsm? ( media-sound/gsm )
