@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.40 2008/02/06 20:58:03 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.41 2008/02/11 14:01:50 armin76 Exp $
+
+  11 Feb 2008; Raúl Porcel <armin76@gentoo.org> netperf-2.4.4.ebuild:
+  alpha/ia64 stable wrt #209035
 
   06 Feb 2008; Ferris McCormick <fmccor@gentoo.org> netperf-2.4.4.ebuild:
   Sparc stable, Bug #209035 --- appears to work.
