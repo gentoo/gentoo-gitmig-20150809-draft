@@ -1,6 +1,9 @@
 # ChangeLog for games-util/qjoypad
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/ChangeLog,v 1.11 2007/12/22 16:18:09 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/ChangeLog,v 1.12 2008/02/11 18:16:25 coldwind Exp $
+
+  11 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> qjoypad-3.4.1.ebuild:
+  amd64 stable wrt bug #201405
 
   22 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   qjoypad-3.4.1.ebuild:
