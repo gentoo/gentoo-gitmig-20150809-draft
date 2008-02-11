@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8264 2008/02/10 10:38:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8265 2008/02/11 12:17:47 armin76 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -762,7 +762,6 @@ app-admin/grubconf
 
 # Raúl Porcel <armin76@gentoo.org> (12 Dec 2007)
 # P.mask snapshots
-=dev-libs/nspr-4.7.0_pre*
 =dev-libs/nss-3.12_alpha*
 =dev-libs/nss-3.12_beta*
 
