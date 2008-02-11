@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.375 2008/02/09 13:17:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.376 2008/02/11 00:17:30 tester Exp $
+
+  11 Feb 2008; Olivier Crête <tester@gentoo.org>
+  mozilla-firefox-2.0.0.12.ebuild:
+  Stable on amd64, security bug #208128
 
   09 Feb 2008; Jeroen Roovers <jer@gentoo.org>
   mozilla-firefox-2.0.0.12.ebuild:
