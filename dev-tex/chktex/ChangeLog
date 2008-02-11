@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.26 2008/02/10 16:52:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.27 2008/02/11 08:45:39 opfer Exp $
+
+  11 Feb 2008; Christian Faulhammer <opfer@gentoo.org> chktex-1.6.4.ebuild:
+  stable x86, bug 209468
 
   10 Feb 2008; Alexis Ballier <aballier@gentoo.org> chktex-1.6.4.ebuild:
   keyword ~x86-fbsd
