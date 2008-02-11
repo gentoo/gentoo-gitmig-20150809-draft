@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.11.5.ebuild,v 1.2 2007/11/22 15:13:05 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.12.1.ebuild,v 1.1 2008/02/11 21:41:05 dev-zero Exp $
+
+inherit eutils
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
@@ -12,9 +14,6 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="ares bittorrent gnutls metalink nls ssl test"
-
-# Tests are broken again on amd64
-RESTRICT="test"
 
 CDEPEND="ssl? (
 		gnutls? ( net-libs/gnutls )
@@ -29,6 +28,12 @@ RDEPEND="${CDEPEND}
 	nls? ( virtual/libiconv virtual/libintl )"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	ewarn "This version can NOT resume downloads started/stopped with prior versions,"
+	ewarn "you'll have to finish them using the old version."
+	ebeep 5
+}
 
 src_compile() {
 	use ssl && \
