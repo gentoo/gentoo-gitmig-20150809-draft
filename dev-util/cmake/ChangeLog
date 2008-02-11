@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.69 2008/02/09 21:13:58 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.70 2008/02/11 19:41:38 flameeyes Exp $
+
+  11 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> cmake-2.4.7-r2.ebuild,
+  cmake-2.4.8_rc12.ebuild, cmake-2.4.8.ebuild:
+  Remove --no-as-needed, xmlrpc-c caused the bug and is now fixed. If you want
+  to build cmake with --as-needed rebuild your xmlrpc-c.
 
 *cmake-2.4.8 (09 Feb 2008)
 
