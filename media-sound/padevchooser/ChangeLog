@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/padevchooser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.10 2008/01/25 14:20:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.11 2008/02/11 04:02:40 tester Exp $
+
+  11 Feb 2008; Olivier Crête <tester@gentoo.org> padevchooser-0.9.3.ebuild:
+  Stable on amd64, bug #204219
 
   25 Jan 2008; Raúl Porcel <armin76@gentoo.org> padevchooser-0.9.3.ebuild:
   Add ~sparc wrt #207369

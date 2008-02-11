@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-0.9.5.ebuild,v 1.5 2008/01/25 14:19:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-0.9.5.ebuild,v 1.6 2008/02/11 04:00:35 tester Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
 IUSE=""
 
