@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.16.3.ebuild,v 1.7 2007/11/27 03:37:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.16.3.ebuild,v 1.8 2008/02/11 22:10:30 eva Exp $
 
 inherit gnome2 multilib python
 
@@ -23,9 +23,17 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README TODO"
 
+src_unpack() {
+	gnome2_src_unpack
+
+	# disable pyc compiling
+	mv "${S}"/py-compile "${S}"/py-compile.orig
+	ln -s $(type -P true) "${S}"/py-compile
+}
+
 pkg_postinst() {
 	python_version
-	python_mod_optimize "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/Pessulus
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/Pessulus
 }
 
 pkg_postrm() {

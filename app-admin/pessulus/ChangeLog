@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pessulus
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.44 2007/11/27 03:37:39 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.45 2008/02/11 22:10:30 eva Exp $
+
+  10 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  pessulus-2.16.3.ebuild:
+  fix python eclass use, bug #207667
 
   27 Nov 2007; Jeroen Roovers <jer@gentoo.org> pessulus-2.16.3.ebuild:
   Stable for HPPA (bug #199322).
