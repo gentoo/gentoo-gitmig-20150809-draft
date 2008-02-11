@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.72 2008/01/18 12:40:10 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.73 2008/02/11 22:40:50 eva Exp $
+
+*meld-1.1.5.1-r1 (11 Feb 2008)
+
+  11 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +meld-1.1.5.1-r1.ebuild:
+  fix python eclass use, bug #207667
 
   18 Jan 2008; Rémi Cardona <remi@gentoo.org> meld-1.1.5.1.ebuild:
   add intltool dep (fixes bug #206238)
