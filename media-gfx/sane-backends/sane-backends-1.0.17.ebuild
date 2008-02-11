@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.13 2007/06/26 02:11:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.14 2008/02/11 10:33:11 phosphan Exp $
 
 inherit eutils
 
@@ -76,7 +76,7 @@ src_unpack() {
 		unpack ${BROTHERMFCDRIVER}.bz2
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	#only generate the .ps and not the fonts
 	sed -i -e 's:$(DVIPS) sane.dvi -o sane.ps:$(DVIPS) sane.dvi -M1 -o sane.ps:' \
@@ -86,7 +86,7 @@ src_unpack() {
 		|| die "function_name fix failed"
 
 	if use usb; then
-		epatch ${WORKDIR}/${BROTHERMFCDRIVER}
+		epatch "${WORKDIR}/${BROTHERMFCDRIVER}"
 		sed -e 's/bh canon/bh brother canon/' -i configure || \
 			die "could not add 'brother' to backend list"
 	fi
@@ -112,7 +112,7 @@ src_compile() {
 }
 
 src_install () {
-	einstall docdir=${D}/usr/share/doc/${PF}
+	einstall docdir="${D}/usr/share/doc/${PF}"
 	keepdir /var/lib/lock/sane
 	fowners root:scanner /var/lib/lock/sane
 	fperms g+w /var/lib/lock/sane
@@ -126,7 +126,7 @@ src_install () {
 		cd ../..
 	fi
 
-	dodoc NEWS AUTHORS LICENSE ChangeLog* README README.linux
+	dodoc NEWS AUTHORS ChangeLog* README README.linux
 
 	echo "SANE_CONFIG_DIR=/etc/sane.d" > 30sane
 	doenvd 30sane
