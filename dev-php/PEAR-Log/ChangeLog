@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Log
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.80 2008/02/10 14:39:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.81 2008/02/11 20:56:40 armin76 Exp $
+
+*PEAR-Log-1.10.0 (11 Feb 2008)
+
+  11 Feb 2008; Raúl Porcel <armin76@gentoo.org> +PEAR-Log-1.10.0.ebuild:
+  Version bump, from the php overlay
 
   10 Feb 2008; Raúl Porcel <armin76@gentoo.org> PEAR-Log-1.9.14.ebuild:
   alpha/ia64/sparc stable wrt #208313

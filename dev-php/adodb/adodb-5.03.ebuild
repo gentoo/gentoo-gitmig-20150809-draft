@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-5.01_beta.ebuild,v 1.1 2007/08/31 09:08:14 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-5.03.ebuild,v 1.1 2008/02/11 21:05:51 armin76 Exp $
 
 inherit php-lib-r1 versionator
 
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-S="${WORKDIR}/${PN}$(get_major_version)"
+S=${WORKDIR}/${PN}$(get_major_version)
 
 need_php5
 
@@ -33,6 +33,6 @@ src_install() {
 	php-lib-r1_src_install . xsl/*.xsl
 
 	# install documentation
-	dohtml docs/*.htm
-	dodoc *.txt xmlschema.dtd session/adodb-sess.txt pear/readme.Auth.txt
+	dodoc-php *.txt xmlschema.dtd session/adodb-sess.txt pear/readme.Auth.txt
+	dohtml-php docs/*.htm
 }
