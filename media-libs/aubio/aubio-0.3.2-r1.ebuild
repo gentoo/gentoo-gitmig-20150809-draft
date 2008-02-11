@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r1.ebuild,v 1.1 2008/02/11 00:02:25 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r1.ebuild,v 1.2 2008/02/11 15:21:47 tester Exp $
+
+WANT_AUTOMAKE=1.8
 
 inherit eutils autotools
 
@@ -30,8 +32,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/aubio-0.3.2-multilib.patch
+	cd "${S}"
+	epatch "${FILESDIR}/aubio-0.3.2-multilib.patch"
 
 	eautomake
 }
