@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8266 2008/02/11 14:50:59 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8267 2008/02/11 15:44:24 lack Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
+
+# Jim Ramsay <lack@gentoo.org> (11 Feb 2008)
+# Masked for testing purposes, will soon be unmasked: bug #207954
+=net-wireless/ipw3945-1.2.2-r1
 
 # Christian Hoffmann <hoffie@gentoo.o> (11 Feb 2008)
 # Masked because of random (maybe MySQL-related) segfaults, bug #209606
