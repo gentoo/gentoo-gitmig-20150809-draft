@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50_pre20080201.ebuild,v 1.4 2008/02/09 06:04:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50_pre20080201.ebuild,v 1.5 2008/02/11 20:36:16 ulm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -88,7 +88,7 @@ src_compile() {
 	export SANDBOX_ON=0			# for the unbelievers, see Bug #131505
 	ALLOWED_FLAGS=""
 	strip-flags
-	unset LDFLAGS
+	#unset LDFLAGS
 	replace-flags -O[3-9] -O2
 
 	local myconf
