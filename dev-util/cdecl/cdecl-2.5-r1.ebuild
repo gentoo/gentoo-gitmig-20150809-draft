@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/cdecl-2.5-r1.ebuild,v 1.12 2007/07/12 01:05:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/cdecl-2.5-r1.ebuild,v 1.13 2008/02/11 11:20:02 phosphan Exp $
 
 inherit eutils
 
@@ -12,18 +12,24 @@ KEYWORDS="~amd64 ~mips ~ppc sparc x86"
 LICENSE="public-domain"
 SLOT="0"
 
-DEPEND=">=sys-apps/sed-4
-		dev-util/yacc
-		readline? ( sys-libs/ncurses
-		sys-libs/readline )
+RDEPEND="readline? (
+			sys-libs/ncurses
+			sys-libs/readline
+			)"
+
+DEPEND="${RDEPEND}
+		|| (
+			dev-util/yacc
+			sys-devel/bison
+			)
 		!<dev-util/cutils-1.6-r2"
 
 IUSE="readline"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}.patch"
 }
 
 src_compile() {
