@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.20.1.ebuild,v 1.7 2008/02/04 04:50:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.20.1.ebuild,v 1.8 2008/02/11 22:57:56 eva Exp $
 
-inherit eutils gnome2 autotools
+inherit eutils gnome2 autotools python
 
 DESCRIPTION="Applets for the GNOME Desktop and Panel"
 HOMEPAGE="http://www.gnome.org/"
@@ -62,13 +62,22 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
+# to double check on next release
 MAKEOPTS="${MAKEOPTS} -j1"
 
+src_unpack() {
+	gnome2_src_unpack
+
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+}
+
 pkg_setup() {
-	G2CONF="--disable-scrollkeeper --enable-flags \
+	G2CONF="${G2CONF}
+		--disable-scrollkeeper --enable-flags
 		$(use_with hal)
-		$(use_enable ipv6)
-		$(use_enable doc gtk-doc)"
+		$(use_enable ipv6)"
 
 	if use gstreamer; then
 		G2CONF="${G2CONF} --with-gstreamer=0.10"
@@ -107,4 +116,14 @@ pkg_postinst() {
 		elog "battstat applet to prevent any issues with other applications "
 		elog "trying to read acpi information."
 	fi
+
+	# check for new python modules on bumps
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/invest
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	python_version
+	python_mod_cleanup
 }
