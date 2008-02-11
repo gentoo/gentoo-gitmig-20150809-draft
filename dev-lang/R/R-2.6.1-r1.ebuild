@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.1-r1.ebuild,v 1.1 2008/01/17 11:47:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.1-r1.ebuild,v 1.2 2008/02/11 01:18:16 bicatali Exp $
 
 inherit fortran flag-o-matic bash-completion
 
@@ -113,8 +113,11 @@ src_install() {
 		DESTDIR="${D}" install \
 		|| die "emake install math library failed"
 
-	# env files
-	echo "LDPATH=\"${R_HOME}/lib\"" > 99R
+	# env file
+	cat > 99R <<-EOF
+		LDPATH=${R_HOME}/lib
+		R_HOME=${R_HOME}
+	EOF
 	doenvd 99R || die "doenvd failed"
 
 	# avoid copying licenses but link then because of html docs
