@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.166 2008/02/11 03:01:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.167 2008/02/11 16:27:00 armin76 Exp $
+
+  11 Feb 2008; Raúl Porcel <armin76@gentoo.org> webmin-1.400.ebuild:
+  alpha/sparc stable wrt security #209453
 
   11 Feb 2008; Brent Baude <ranger@gentoo.org> webmin-1.400.ebuild:
   Marking webmin-1.400 ppc64 for bug 209453
