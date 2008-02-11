@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.1.3-r1.ebuild,v 1.3 2008/02/11 03:08:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.1.3-r1.ebuild,v 1.4 2008/02/11 14:18:21 drac Exp $
 
 inherit eutils
 
@@ -28,9 +28,9 @@ src_unpack() {
 src_compile() {
 	econf $(use_with pcre) $(use_with png) \
 		$(use_with cjk onig)
-	emake elf static || die "emake elf static failed."
+	emake -j1 elf static || die "emake elf static failed."
 	cd slsh
-	emake slsh || die "emake slsh failed."
+	emake -j1 slsh || die "emake slsh failed."
 }
 
 src_install() {
