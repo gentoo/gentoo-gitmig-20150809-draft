@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/ezc-Base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Base/ChangeLog,v 1.15 2008/01/13 15:59:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Base/ChangeLog,v 1.16 2008/02/11 21:08:07 armin76 Exp $
+
+*ezc-Base-1.4.1 (11 Feb 2008)
+
+  11 Feb 2008; Raúl Porcel <armin76@gentoo.org> +ezc-Base-1.4.1.ebuild:
+  Version bump, from the php overlay
 
 *ezc-Base-1.4 (13 Jan 2008)
 
