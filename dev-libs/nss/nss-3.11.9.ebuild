@@ -1,14 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12_alpha2_p2-r1.ebuild,v 1.1 2007/12/23 12:11:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.9.ebuild,v 1.1 2008/02/11 12:16:28 armin76 Exp $
 
 inherit eutils flag-o-matic multilib
 
-NSPR_VER="4.7.0_pre20071016"
+NSPR_VER="4.6.8"
 RTM_NAME="NSS_${PV//./_}_RTM"
 DESCRIPTION="Mozilla's Network Security Services library that implements PKI support"
 HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}/src/${P}.tar.gz"
 
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 SLOT="0"
@@ -16,8 +16,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 IUSE="utils"
 
 DEPEND=">=dev-libs/nspr-${NSPR_VER}"
-
-S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
@@ -55,7 +53,7 @@ src_compile() {
 }
 
 src_install () {
-	MINOR_VERSION=12
+	MINOR_VERSION=11
 	cd "${S}"/mozilla/security/dist
 
 	# put all *.a files in /usr/lib/nss (because some have conflicting names
