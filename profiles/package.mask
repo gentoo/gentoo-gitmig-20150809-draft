@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8265 2008/02/11 12:17:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8266 2008/02/11 14:50:59 hoffie Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
+
+# Christian Hoffmann <hoffie@gentoo.o> (11 Feb 2008)
+# Masked because of random (maybe MySQL-related) segfaults, bug #209606
+=dev-lang/php-5.2.5_p20080206
 
 # Samuli Suominen <drac@gentoo.org> (10 Feb 2008)
 # Broken wrt bugs #167638 and #209416. Upstream
