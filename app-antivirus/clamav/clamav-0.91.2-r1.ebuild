@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.91.2-r1.ebuild,v 1.7 2007/12/26 15:51:23 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.91.2-r1.ebuild,v 1.8 2008/02/11 22:58:32 ticho Exp $
 
 inherit autotools eutils flag-o-matic fixheadtails
 
@@ -40,7 +40,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.90-compat.patch
 	epatch "${FILESDIR}"/${PN}-0.90-nls.patch
