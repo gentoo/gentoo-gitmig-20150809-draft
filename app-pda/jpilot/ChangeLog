@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/jpilot
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.33 2008/02/10 13:01:40 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.34 2008/02/11 08:44:06 opfer Exp $
+
+  11 Feb 2008; Christian Faulhammer <opfer@gentoo.org> jpilot-0.99.9.ebuild:
+  stable x86, bug 209068
 
   10 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> jpilot-0.99.9.ebuild:
   Added a dependency on pkg-config. Fixes bug 206007. Marked stable on amd64
