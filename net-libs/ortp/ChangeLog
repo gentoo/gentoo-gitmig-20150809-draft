@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.27 2007/08/10 05:20:30 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.28 2008/02/11 17:52:22 vapier Exp $
+
+  11 Feb 2008; Mike Frysinger <vapier@gentoo.org> ortp-0.13.1.ebuild:
+  Forward port all KEYWORDS from older versions.
 
   10 Aug 2007; Jeroen Roovers <jer@gentoo.org> ortp-0.7.1-r1.ebuild:
   Stable for HPPA (bug #176297).
