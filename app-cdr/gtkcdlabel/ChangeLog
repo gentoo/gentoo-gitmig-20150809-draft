@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/gtkcdlabel
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.30 2007/02/21 20:15:51 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.31 2008/02/12 18:56:55 opfer Exp $
+
+  12 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  -gtkcdlabel-1.0_pre6.ebuild, -gtkcdlabel-1.0_pre7-r1.ebuild,
+  gtkcdlabel-1.0_pre8.ebuild:
+  clean up; quote variable; use emake instead of plain make
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
