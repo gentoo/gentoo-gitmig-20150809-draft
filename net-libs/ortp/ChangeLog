@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.28 2008/02/11 17:52:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.29 2008/02/12 21:39:09 vapier Exp $
+
+  12 Feb 2008; Mike Frysinger <vapier@gentoo.org> ortp-0.13.1.ebuild:
+  Build with --disable-strict so we dont error out on warnings #209819 by Diego.
 
   11 Feb 2008; Mike Frysinger <vapier@gentoo.org> ortp-0.13.1.ebuild:
   Forward port all KEYWORDS from older versions.
