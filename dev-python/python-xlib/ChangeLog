@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-xlib
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.23 2007/07/17 06:11:46 corsair Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.24 2008/02/12 19:59:38 opfer Exp $
+
+  12 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  python-xlib-0.13.ebuild:
+  adjust DEPEND for correct LaTeX virtual, fixes bug 205326 reported by Howard
+  B. Golden <howard_b_golden AT yahoo DOT com>
 
   17 Jul 2007; Markus Rothe <corsair@gentoo.org> python-xlib-0.13.ebuild:
   Added ~ppc64
