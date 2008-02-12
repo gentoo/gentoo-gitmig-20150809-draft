@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p12-r1.ebuild,v 1.14 2007/05/17 12:41:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p12-r1.ebuild,v 1.15 2008/02/12 10:29:46 flameeyes Exp $
 
 inherit eutils pam flag-o-matic
 
@@ -27,16 +27,16 @@ DEPEND="${RDEPEND} sys-devel/bison"
 S=${WORKDIR}/${P/_/}
 
 src_unpack() {
-	unpack ${A}; cd ${S}
+	unpack ${A}; cd "${S}"
 
 	# ldap failover patch
-	epatch ${FILESDIR}/${PN}-ldap_timelimit.diff
+	epatch "${FILESDIR}"/${PN}-ldap_timelimit.diff
 
 	# compatability fix.
-	epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
+	epatch "${FILESDIR}"/${PN}-skeychallengeargs.diff
 
 	# make tls_cacert synonymous with tls_cacertfile.
-	epatch ${FILESDIR}/${PN}-1.6.8_p8-ldap-tls_cacert.diff
+	epatch "${FILESDIR}"/${PN}-1.6.8_p8-ldap-tls_cacert.diff
 
 	# additional variables to disallow, should user disable env_reset.
 
@@ -134,25 +134,25 @@ src_install() {
 		dodoc README.LDAP
 		dosbin sudoers2ldif
 
-		printf "# See ldap.conf(5) and README.LDAP for details\n" 					> ${T}/ldap.conf.sudo
-		printf "# This file should only be readable by root\n\n" 					>> ${T}/ldap.conf.sudo
-		printf "# supported directives: host, port, ssl, ldap_version\n" 			>> ${T}/ldap.conf.sudo
-		printf "# uri, binddn, bindpw, sudoers_base, sudoers_debug\n" 				>> ${T}/ldap.conf.sudo
-		printf "# tls_{checkpeer,cacertfile,cacertdir,randfile,ciphers,cert,key}\n"	>> ${T}/ldap.conf.sudo
+		printf "# See ldap.conf(5) and README.LDAP for details\n" 					> "${T}"/ldap.conf.sudo
+		printf "# This file should only be readable by root\n\n" 					>> "${T}"/ldap.conf.sudo
+		printf "# supported directives: host, port, ssl, ldap_version\n" 			>> "${T}"/ldap.conf.sudo
+		printf "# uri, binddn, bindpw, sudoers_base, sudoers_debug\n" 				>> "${T}"/ldap.conf.sudo
+		printf "# tls_{checkpeer,cacertfile,cacertdir,randfile,ciphers,cert,key}\n"	>> "${T}"/ldap.conf.sudo
 
 		insinto /etc
-		doins ${T}/ldap.conf.sudo
+		doins "${T}"/ldap.conf.sudo
 		fperms 0440 /etc/ldap.conf.sudo
 	fi
 
 	if has_version virtual/pam; then
 		pamd_mimic_system sudo auth account password session
 	else
-		dopamd ${FILESDIR}/sudo
+		dopamd "${FILESDIR}"/sudo
 	fi
 
 	insinto /etc
-	doins ${FILESDIR}/sudoers
+	doins "${FILESDIR}"/sudoers
 	fperms 0440 /etc/sudoers
 }
 
@@ -175,7 +175,7 @@ sudo_bad_var() {
 	local target='env.c' marker='\*initial_badenv_table\[\]'
 
 	ebegin "	$1"
-		sed -i 's#\(^.*'${marker}'.*$\)#\1\n\t"'${1}'",#' ${S}/${target}
+		sed -i 's#\(^.*'${marker}'.*$\)#\1\n\t"'${1}'",#' "${S}"/${target}
 	eend $?
 }
 
