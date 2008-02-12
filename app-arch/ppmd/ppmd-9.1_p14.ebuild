@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ppmd-9.1_p10.ebuild,v 1.8 2008/02/12 21:17:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ppmd-9.1_p14.ebuild,v 1.1 2008/02/12 21:17:07 armin76 Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ SRC_URI="http://http.us.debian.org/debian/pool/main/p/ppmd/${MY_P}.orig.tar.gz
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="-alpha ~amd64 hppa -ia64 ~mips ppc sparc x86"
+KEYWORDS="-alpha ~amd64 ~hppa -ia64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4
@@ -31,20 +31,18 @@ src_unpack() {
 	cd ${S}
 	epatch "${WORKDIR}/${MY_P}-${PATCHV}.diff"
 	epatch "${S}/${MY_P/_/-}/debian/patches"/*.patch
-	mv "${S}/${MY_P/_/-}/Makefile" "${S}" || die "no makefile found"
-	epatch "${FILESDIR}/${PN}-p${PATCHV}-makefile.patch"
+	mv "${S}/b/Makefile" "${S}" || die "no makefile found"
+	epatch "${FILESDIR}/${PN}-p10-makefile.patch"
 }
 
 src_compile() {
-#	replace-flags "-O3" "-O2"
-#	see bug #44529 if this starts producing goofy executables
-#	if it pops up again, re-enable replace-flags.
+	replace-flags "-O3" "-O2"
 	append-flags "-fno-inline-functions -fno-exceptions -fno-rtti"
 	emake || die
 }
 
 src_install() {
 	make install DESTDIR="${D}" || die "failed installing"
-	doman "${S}/${MY_P/_/-}/debian/PPMd.1" || die "failed installing manpage"
+	doman "${S}/${MY_P/_/-}/debian/ppmd.1" || die "failed installing manpage"
 	dodoc "${S}/read_me.txt" || die "failed installed readme"
 }
