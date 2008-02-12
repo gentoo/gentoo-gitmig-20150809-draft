@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/tintin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.56 2008/02/02 06:37:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.57 2008/02/12 19:44:45 mr_bones_ Exp $
+
+  12 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  -tintin-1.97.9.ebuild:
+  remove unstable, security-broken version (bug #209903)
 
 *tintin-1.97.9 (02 Feb 2008)
 
