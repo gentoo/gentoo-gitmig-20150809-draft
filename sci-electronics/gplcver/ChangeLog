@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gplcver
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gplcver/ChangeLog,v 1.8 2007/09/16 15:37:15 calchan Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gplcver/ChangeLog,v 1.9 2008/02/12 22:31:50 calchan Exp $
+
+  12 Feb 2008; Denis Dupeyron <calchan@gentoo.org> gplcver-2.12a.ebuild:
+  Fixed typos, thanks to Triffid Hunter (bug #209923).
 
 *gplcver-2.12a (16 Sep 2007)
 

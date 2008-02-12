@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gplcver/gplcver-2.12a.ebuild,v 1.1 2007/09/16 15:37:15 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gplcver/gplcver-2.12a.ebuild,v 1.2 2008/02/12 22:31:50 calchan Exp $
 
 MY_PN=gpl-cver
 
@@ -15,22 +15,22 @@ S=${WORKDIR}/${P}.src
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s/^CFLAGS/#CFLAGS/" \
 		-e "s/(CFLAGS)/(INCS) \$(CFLAGS)/" \
 		-e "s/(LFLAGS)/(LFLAGS) \$(LDFLAGS)/" \
-		src/makefile.* | die "sed failed"
+		src/makefile.* || die "sed failed"
 	sed -i \
 		-e "s/^CFLAGS/#CFLAGS/" \
 		-e "s/(OPTFLGS) vcddiff.o/(LDFLAGS) vcddiff.o/" \
-		vcddiff.dir/src/makefile.* | die "sed failed"
+		vcddiff.dir/src/makefile.* || die "sed failed"
 }
 
 src_compile(){
-	cd ${S}/src
+	cd "${S}"/src
 	emake -f makefile.lnx || die "emake failed"
-	cd ${S}/vcddiff.dir/src
+	cd "${S}"/vcddiff.dir/src
 	emake -f makefile.lnx || die "emake failed"
 }
 
@@ -46,7 +46,7 @@ src_install() {
 
 src_test() {
 	# fixme: make tests die if something fails
-	cd ${S}/tests_and_examples/
+	cd "${S}"/tests_and_examples/
 	# first verify install
 	cd install.tst
 	./inst_tst.sh
