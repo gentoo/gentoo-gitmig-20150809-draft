@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3353 2008/02/12 17:55:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3354 2008/02/12 22:26:32 ikelos Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2179,6 +2179,7 @@ x11-base/kdrive:type1 - Enables Type1 font support
 x11-base/xorg-server:dmx - Build the Distributed Multiheaded X server
 x11-base/xorg-server:kdrive - Build the kdrive X servers
 x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
+x11-drivers/linuxwacom:module - Build kernel module for linuxwacom 
 x11-drivers/nvidia-drivers:custom-cflags - Build with CFLAGS from /etc/make.conf (unsupported)
 x11-libs/cairo:glitz - Build with glitz support
 x11-libs/cairo:opengl - When used along with USE=glitz, enables glitz-glx usage. Requires hardware opengl support

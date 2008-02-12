@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1113 2008/02/12 22:18:57 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1114 2008/02/12 22:26:32 ikelos Exp $
+
+  12 Feb 2008; Mike Auty <ikelos@gentoo.org> use.local.desc:
+  Add a local USE flag for module building in linuxwacom.
 
   12 Feb 2008; Mike Auty <ikelos@gentoo.org> package.mask:
   Add linuxwacom mask for testing version.
