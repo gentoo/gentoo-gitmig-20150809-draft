@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kcdlabel
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdlabel/ChangeLog,v 1.21 2007/12/14 22:09:22 philantrop Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdlabel/ChangeLog,v 1.22 2008/02/12 18:30:14 philantrop Exp $
+
+  12 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> kcdlabel-2.13.ebuild:
+  Marked stable on amd64 as per bug 209880.
 
 *kcdlabel-2.13 (14 Dec 2007)
 
