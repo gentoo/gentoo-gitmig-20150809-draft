@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/seekwatcher
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/ChangeLog,v 1.5 2007/12/16 10:31:17 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/ChangeLog,v 1.6 2008/02/12 17:33:12 robbat2 Exp $
+
+  12 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> seekwatcher-0.6.ebuild,
+  seekwatcher-0.9.ebuild:
+  Add a postinst note that generating movies needs mencoder or png2theora per
+  bug #209779.
 
   16 Dec 2007; Samuli Suominen <drac@gentoo.org> seekwatcher-0.6.ebuild:
   amd64 stable wrt #202250
