@@ -1,0 +1,22 @@
+--- src/net/sf/freecol/common/logging/DefaultHandler.java
++++ src/net/sf/freecol/common/logging/DefaultHandler.java
+@@ -22,7 +22,7 @@
+ 
+     public static final String REVISION = "$Revision: 1.1 $";
+ 
+-    private static final String fileName = new String("FreeCol.log");
++    private static final String fileName = new String(System.getProperty("user.home") + "/.freecol/FreeCol.log");
+ 
+     private FileWriter fileWriter;
+ 
+--- src/net/sf/freecol/FreeCol.java
++++ src/net/sf/freecol/FreeCol.java
+@@ -314,7 +314,7 @@
+     private static void createAndSetDirectories() {
+         // TODO: The location of the save directory should be determined by the installer.;
+         
+-        File mainUserDirectory = new File(System.getProperty("user.home"), "freecol");
++        File mainUserDirectory = new File(System.getProperty("user.home"), ".freecol");
+         if (mainUserDirectory.exists() && mainUserDirectory.isFile()) {
+             logger.warning("Could not create .freecol under "
+                     + System.getProperty("user.home") + " because there "
