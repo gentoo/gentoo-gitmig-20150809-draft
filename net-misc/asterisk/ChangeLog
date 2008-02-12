@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.174 2008/01/06 08:36:26 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.175 2008/02/12 12:43:14 fmccor Exp $
+
+  12 Feb 2008; Ferris McCormick <fmccor@gentoo.org>
+  asterisk-1.2.17-r1.ebuild, asterisk-1.2.21.1-r1.ebuild:
+  Sparc stable, Security Bug #185713.
 
   06 Jan 2008; Rajiv Aaron Manglani <rajiv@gentoo.org>
   -files/1.0.0/asterisk-1.0.5-astcfg-0.0.2.diff,
