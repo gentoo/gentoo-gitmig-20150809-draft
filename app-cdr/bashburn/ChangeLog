@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/bashburn
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.30 2007/12/16 20:55:54 pylon Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.31 2008/02/12 17:22:39 armin76 Exp $
+
+  12 Feb 2008; Raúl Porcel <armin76@gentoo.org> bashburn-2.1.2.ebuild:
+  sparc/x86 stable
 
   16 Dec 2007; Lars Weiler <pylon@gentoo.org> -bashburn-1.8.5.ebuild,
   -bashburn-2.0-r1.ebuild:
