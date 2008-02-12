@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.3.2.ebuild,v 1.1 2008/02/12 10:19:41 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.3.2.ebuild,v 1.2 2008/02/12 16:31:10 mr_bones_ Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.dbmail.org/download/2.3/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-#unstable version hard mask for now. 
+#unstable version hard mask for now.
 KEYWORDS="-amd64 -x86"
 IUSE="ldap mysql postgres sieve sqlite3 ssl static"
 
@@ -28,7 +28,7 @@ DEPEND="ssl? ( dev-libs/openssl )
 	>=dev-libs/gmime-2.1.18
 	>=dev-libs/glib-2.8
 	>=app-crypt/mhash-0.9.9-r1"
-#only tested with that version of mhash 
+#only tested with that version of mhash
 
 S=${WORKDIR}/${P/_/-}
 
