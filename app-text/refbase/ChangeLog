@@ -1,6 +1,12 @@
 # ChangeLog for app-text/refbase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/ChangeLog,v 1.6 2008/02/05 08:34:24 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/ChangeLog,v 1.7 2008/02/12 19:22:36 markusle Exp $
+
+*refbase-0.9.0 (12 Feb 2008)
+
+  12 Feb 2008; Markus Dittrich <markusle@gentoo.org> refbase-0.8.0.ebuild,
+  +refbase-0.9.0.ebuild:
+  Version bump and added check for php USE flags (see bug #151857).
 
   05 Feb 2008; Benedikt Böhm <hollow@gentoo.org> refbase-0.8.0.ebuild:
   merge from webapps overlay wrt #208584
