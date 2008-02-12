@@ -1,0 +1,11 @@
+# ChangeLog for app-emulation/systemsim-cell
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/systemsim-cell/ChangeLog,v 1.1 2008/02/12 18:19:40 corsair Exp $
+
+*systemsim-cell-3.0 (12 Feb 2008)
+
+  12 Feb 2008; Markus Rothe <corsair@gentoo.org>
+  +files/systemsim-cell-3.0-cowdiskname.patch, +files/09systemsim-cell,
+  +systemsim-cell-3.0.ebuild:
+  Initial commit. Ebuild modified from lu_zero's.
+
