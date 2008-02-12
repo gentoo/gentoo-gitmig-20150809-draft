@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.21 2008/01/05 16:11:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.22 2008/02/12 14:46:01 drac Exp $
+
+*ffmpeg2theora-9999 (12 Feb 2008)
+
+  12 Feb 2008; Samuli Suominen <drac@gentoo.org> +ffmpeg2theora-9999.ebuild:
+  Subversion ebuild, mostly because current ffmpeg2theora release 0.20 doesn't
+  seem to work with our hardmasked ffmpeg snapshot.
 
   05 Jan 2008; Samuli Suominen <drac@gentoo.org> ffmpeg2theora-0.20.ebuild:
   Fail. Kino 1.2.0 installs ffmpeg2theora.sh by itself wrt #204424, stop
