@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.7.2.ebuild,v 1.1 2008/02/12 08:13:04 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.7.2.ebuild,v 1.2 2008/02/12 08:19:38 sbriesen Exp $
 
 inherit eutils linux-mod
 
@@ -201,7 +201,7 @@ pkg_postinst() {
 
 	# restore old config, in case portage removed it
 	if [ -e "${ROOT}etc/misdn-init.conf.pkginst" ]; then
-	    if [ -e "${ROOT}etc/misdn-init.conf" ]; then
+		if [ -e "${ROOT}etc/misdn-init.conf" ]; then
 			rm -f "${ROOT}etc/misdn-init.conf.pkginst"
 		else
 			mv -f "${ROOT}etc/misdn-init.conf.pkginst" "${ROOT}etc/misdn-init.conf"
