@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.227 2008/02/08 15:35:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.228 2008/02/12 16:46:19 hoffie Exp $
+
+*php-5.2.5_p20080206-r2 (12 Feb 2008)
+
+  12 Feb 2008; Christian Hoffmann <hoffie@gentoo.org>
+  +php-5.2.5_p20080206-r2.ebuild:
+  revbump to fix a pretty severe crash problem: fixes bug #209606 and maybe
+  bug #209501; also reworking src_test so that it works more reliable
+  (hopefully)
 
   08 Feb 2008; Raúl Porcel <armin76@gentoo.org> php-5.2.5_p20080206.ebuild:
   alpha/ia64/sparc stable wrt security #209148
