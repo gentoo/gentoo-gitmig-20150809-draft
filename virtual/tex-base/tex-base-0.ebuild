@@ -1,9 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/tex-base/tex-base-0.ebuild,v 1.1 2007/11/24 23:18:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/tex-base/tex-base-0.ebuild,v 1.2 2008/02/12 20:03:17 opfer Exp $
 
-DESCRIPTION="Virtual for basic tex binaries (tex, kpathsea)"
-HOMEPAGE="http://www.ctan.org"
+DESCRIPTION="Virtual for basic TeX binaries (tex, kpathsea)"
+HOMEPAGE="http://www.ctan.org/"
 SRC_URI=""
 
 LICENSE="GPL-2"
