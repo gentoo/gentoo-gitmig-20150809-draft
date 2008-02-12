@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.15 2008/02/11 12:29:54 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.16 2008/02/12 07:50:56 nelchael Exp $
+
+*tuxonice-sources-2.6.24-r2 (12 Feb 2008)
+
+  12 Feb 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/2.6.24-3.0-rc5-userui-fix.patch,
+  -tuxonice-sources-2.6.23-r10.ebuild, +tuxonice-sources-2.6.24-r2.ebuild:
+  Remove 2.6.23-r10 as tuxonice requires resync for >2.6.23.14 (bug #209755),
+  add 2.6.24-r2 with a patch to correctly support userui (bug #209775).
 
 *tuxonice-sources-2.6.23-r10 (11 Feb 2008)
 
