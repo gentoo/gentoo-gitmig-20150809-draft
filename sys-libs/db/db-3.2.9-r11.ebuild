@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.14 2007/10/25 07:03:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.15 2008/02/12 09:59:54 pauldv Exp $
 
-inherit gnuconfig libtool eutils db java-pkg-opt-2
+inherit gnuconfig libtool eutils db
 
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
 HOMEPAGE="http://www.sleepycat.com/"
@@ -13,13 +13,12 @@ SLOT="3"
 # This ebuild is to be the compatibility ebuild for when db4 is put
 # in the tree.
 KEYWORDS="~alpha amd64 arm ~hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="doc java"
+IUSE="doc"
 
 DEPEND="${RDEPEND}
 	=sys-libs/db-1.85*
 	sys-devel/libtool
-	sys-devel/m4
-	java? ( >=virtual/jre-1.4 )"
+	sys-devel/m4"
 # We need m4 too else build fails without config.guess
 
 # This doesn't build without exceptions
@@ -27,9 +26,6 @@ export CXXFLAGS="${CXXFLAGS/-fno-exceptions/-fexceptions}"
 
 src_unpack() {
 	unpack ${A}
-
-	use java && export JAVACABS=${JAVAC}
-	use java && export JAVACFLAGS=$(java-pkg_javac-args)
 
 	chmod -R ug+w *
 
@@ -58,8 +54,6 @@ src_unpack() {
 	sed -i "s,\(-D_GNU_SOURCE\),\1 ${CFLAGS}," configure
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-jarlocation.patch
-	epatch "${FILESDIR}"/db-3.2.9-java15.patch
 	gnuconfig_update
 }
 
@@ -80,7 +74,6 @@ src_compile() {
 	# Robin H. Johnson <robbat2@gentoo.org> (18 Oct 2003)
 
 	conf_shared="${conf_shared}
-		`use_enable java`
 		--enable-dynamic"
 
 	# TCL support is also broken
