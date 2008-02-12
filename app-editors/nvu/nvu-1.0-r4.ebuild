@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r4.ebuild,v 1.10 2007/03/02 09:22:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r4.ebuild,v 1.11 2008/02/12 16:14:52 armin76 Exp $
 
 inherit eutils mozconfig flag-o-matic multilib
 
@@ -84,6 +84,9 @@ src_install() {
 	sed -e "s:/usr/lib/nvu:/usr/$(get_libdir)/nvu:" \
 		${FILESDIR}/1.0/nvu.desktop > ${T}/nvu.desktop
 	doins ${T}/nvu.desktop
+
+	# Remove useless file which collides with nspr
+	rm ${D}/usr/share/aclocal/nspr.m4
 }
 
 pkg_postinst() {

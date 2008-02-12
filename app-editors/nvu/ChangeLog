@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvu
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.27 2007/03/02 09:22:52 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.28 2008/02/12 16:14:52 armin76 Exp $
+
+  12 Feb 2008; Raúl Porcel <armin76@gentoo.org> nvu-1.0-r4.ebuild:
+  Remove useless file, bug #209807
 
   02 Mar 2007; Raúl Porcel <armin76@gentoo.org> nvu-1.0-r4.ebuild:
   Fix has_version syntax, bug 168892
