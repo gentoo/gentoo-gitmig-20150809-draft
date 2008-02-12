@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/bibutils-3.27.ebuild,v 1.4 2008/02/12 16:25:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/bibutils-3.27.ebuild,v 1.5 2008/02/12 22:53:28 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	# The custom configure script sucks, so we'll just do its job 
+	# The custom configure script sucks, so we'll just do its job
 	# ourselves
 	sed \
 		-e "s:REPLACE_CC:CC=\"$(tc-getCC) ${CFLAGS}\":g" \

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/bibutils-3.40.ebuild,v 1.1 2008/02/12 16:25:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/bibutils-3.40.ebuild,v 1.2 2008/02/12 22:53:28 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	# The custom configure script sucks, so we'll just do its 
+	# The custom configure script sucks, so we'll just do its
 	# job ourselves
 	rm -f Makefile || die "Failed to purge old Makefile"
 	sed \
