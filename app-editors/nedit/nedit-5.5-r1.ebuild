@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.1 2008/02/12 20:49:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.2 2008/02/12 22:00:15 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,14 +24,13 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-argbvisuals.patch"
 	epatch "${FILESDIR}/${P}-motif23.patch"
+	sed -i -e "s:-Wl,-Bstatic::" makefiles/Makefile.linux
+	sed -i -e "s:CFLAGS=-O:CFLAGS=${CFLAGS}:" makefiles/Makefile.linux
+	sed -i -e 's:"/bin/csh":"/bin/sh":' source/preferences.c
 }
 
 src_compile() {
-	sed -i -e "s:-Wl,-Bstatic::" makefiles/Makefile.linux
-	sed -i -e "s:0.93.0:0.94.0:" util/check_lin_tif.c
-	sed -i -e "s:CFLAGS=-O:CFLAGS=${CFLAGS}:" makefiles/Makefile.linux
-	sed -i -e 's:"/bin/csh":"/bin/sh":' source/preferences.c
-	make CC="$(tc-getCC)" linux || die
+	emake CC="$(tc-getCC)" linux || die
 }
 
 src_install() {
