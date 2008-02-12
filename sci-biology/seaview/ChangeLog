@@ -1,6 +1,16 @@
 # ChangeLog for sci-biology/seaview
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.23 2007/12/31 15:37:40 je_fro Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.24 2008/02/12 19:08:50 ribosome Exp $
+
+*seaview-20071113 (12 Feb 2008)
+
+  12 Feb 2008; Olivier Fisette <ribosome@gentoo.org> -seaview-2.2.ebuild,
+  +seaview-20071113.ebuild:
+  Reverting to date-based version scheme. We cannot use upstream's versions
+  since they keep modifying the package whilst keeping the same version.
+  PDFlib is no longer needed as recent versions include PDFlib lite (fixes
+  bug #208334). Commiting straight to stable as this is the same as 2.2,
+  which was stable.
 
   31 Dec 2007; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
   Fixing my email addy in the Changelog

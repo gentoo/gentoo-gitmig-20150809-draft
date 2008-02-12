@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-2.2.ebuild,v 1.5 2007/12/26 10:26:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20071113.ebuild,v 1.1 2008/02/12 19:08:50 ribosome Exp $
 
 inherit toolchain-funcs multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="A graphical multiple sequence alignment editor"
 HOMEPAGE="http://pbil.univ-lyon1.fr/software/seaview.html"
 
 MY_PF=${PF/-/_}
-SRC_URI="ftp://pbil.univ-lyon1.fr/pub/mol_phylogeny/seaview/archive/${MY_PF}.tar.gz"
+SRC_URI="mirror://gentoo.org/${P}.tar.gz"
 
 LICENSE="public-domain"
 
@@ -17,7 +17,6 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="x11-libs/fltk
-	=media-libs/pdflib-6.0*
 	sci-biology/clustalw
 	sci-biology/muscle"
 
