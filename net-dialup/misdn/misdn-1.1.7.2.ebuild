@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.7.2.ebuild,v 1.2 2008/02/12 08:19:38 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.7.2.ebuild,v 1.3 2008/02/12 16:30:47 mr_bones_ Exp $
 
 inherit eutils linux-mod
 
@@ -32,7 +32,6 @@ for i in ${MISDN_MODULES[@]}; do IUSE="${IUSE} misdn_cards_${i}"; done
 
 MY_S="${WORKDIR}/${MY_P}"
 S="${MY_S}/drivers/isdn/hardware/mISDN"
-
 
 ### Begin: Helper functions
 
@@ -67,7 +66,7 @@ dsp_disable() {
 #CONFIG_MISDN_MEMDEBUG -> memdbg
 #CONFIG_MISDN_NETDEV -> netdev
 
-# def SYSFS_SUPPORT 
+# def SYSFS_SUPPORT
 
 pkg_setup() {
 	local USERCARD CARD EC NUM=0
