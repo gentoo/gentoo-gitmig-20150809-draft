@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/nedit
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.46 2007/07/05 20:36:32 uberlord Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.47 2008/02/12 20:49:50 ulm Exp $
+
+*nedit-5.5-r1 (12 Feb 2008)
+
+  12 Feb 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/nedit-5.5-argbvisuals.patch, +files/nedit-5.5-motif23.patch,
+  +nedit-5.5-r1.ebuild:
+  Fix Motif version detection and disable ARGB visuals, bugs 200628 and 181952.
+  Both patches provided by Ioan Marius Curelariu <icurelariu@gmail.com>.
 
   05 Jul 2007; Roy Marples <uberlord@gentoo.org> nedit-5.5.ebuild:
   Keyworded ~x86-fbsd, #184298 thanks to Sascha Lucas.
