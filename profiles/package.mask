@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8270 2008/02/12 14:49:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8271 2008/02/12 20:58:57 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
+
+# Michael Sterrett <mr_bones_@gentoo.org> (12 Feb 2008)
+# Security mask (bug #209903)
+# https://bugs.gentoo.org/show_bug.cgi?id=209903
+games-mud/tintin
 
 # Samuli Suominen <drac@gentoo.org> (12 Feb 2008)
 # If 0.20 fails with hardmasked ffmpeg snapshot,
