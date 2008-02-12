@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.4_p3.ebuild,v 1.10 2007/12/30 16:09:28 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.4_p3.ebuild,v 1.11 2008/02/12 22:29:19 ikelos Exp $
 
 IUSE="gtk tcl tk usb"
 
