@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-6.0.ebuild,v 1.13 2008/01/10 09:37:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-6.0.ebuild,v 1.14 2008/02/12 04:27:50 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -28,6 +28,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-tcpd.patch #178242
 
+	# Once HPPA gets PIE's fixed, this can go away
 	use hppa && sed -e '/LDFLAGS/s/^/#/' -i "${S}/Makefile" #190458
 }
 
