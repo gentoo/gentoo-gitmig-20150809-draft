@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.51 2008/02/07 10:53:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.52 2008/02/12 13:09:03 flameeyes Exp $
+
+  12 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> libdaemon-0.12.ebuild:
+  Run elibtoolize.
 
   07 Feb 2008; Raúl Porcel <armin76@gentoo.org> libdaemon-0.12.ebuild:
   alpha/ia64/sparc stable wrt #208922
