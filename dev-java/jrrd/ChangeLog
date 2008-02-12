@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jrrd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrrd/ChangeLog,v 1.4 2008/02/12 23:58:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrrd/ChangeLog,v 1.5 2008/02/12 23:59:16 betelgeuse Exp $
+
+  12 Feb 2008; Petteri Räty <betelgeuse@gentoo.org> -jrrd-1.0.1.ebuild:
+  Delete old ebuild.
 
   12 Feb 2008; Petteri Räty <betelgeuse@gentoo.org> jrrd-1.0.1-r1.ebuild:
   Move eautomake to src_unpack to fix bug #207438.
