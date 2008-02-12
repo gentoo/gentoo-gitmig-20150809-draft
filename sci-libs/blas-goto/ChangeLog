@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/blas-goto
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.14 2008/01/24 10:24:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.15 2008/02/12 17:56:31 bicatali Exp $
+
+*blas-goto-1.22-r1 (12 Feb 2008)
+
+  12 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/blas-goto-1.22-sharedlibs.patch, metadata.xml,
+  +blas-goto-1.22-r1.ebuild:
+  Various fixes including shared libs patch (now works with as-needed), seds
+  for the Makefile.rule adpapted to newer version, removed user's cflags,
+  since upstream seems to do a better job with preprocessing flags, forced gcc
+  as a C compiler for inline assembler, added a int64 use flag, some cleanup.
 
 *blas-goto-1.22 (24 Jan 2008)
 
