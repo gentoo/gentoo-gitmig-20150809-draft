@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmCalClock
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/ChangeLog,v 1.15 2007/07/22 05:35:48 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/ChangeLog,v 1.16 2008/02/12 16:24:03 s4t4n Exp $
+
+*wmCalClock-1.25-r2 (12 Feb 2008)
+
+  12 Feb 2008; Michele Noberasco <s4t4n@gentoo.org> wmCalClock-1.25-r2.ebuild:
+  Revision bump. See bug #207758.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmCalClock-1.25-r1.ebuild:
