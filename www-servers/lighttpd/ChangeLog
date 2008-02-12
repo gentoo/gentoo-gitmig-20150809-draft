@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.150 2008/01/26 14:46:06 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.151 2008/02/12 23:18:40 bangert Exp $
+
+  12 Feb 2008; Thilo Bangert <bangert@gentoo.org>
+  -files/lighttpd-1.3.10.initd, -files/lighttpd-1.3.11-gentoo.diff,
+  -files/lighttpd-1.3.13-ldap-binddn.diff,
+  -files/lighttpd-1.3.13-no-mysql-means-no-mysql.diff,
+  -files/lighttpd-1.3.13-php.diff, -lighttpd-1.3.16.ebuild:
+  remove insecure version - bug #189786
 
   26 Jan 2008; Thilo Bangert <bangert@gentoo.org> lighttpd-1.4.16.ebuild,
   lighttpd-1.4.18.ebuild:
