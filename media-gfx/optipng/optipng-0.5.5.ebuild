@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.5.5.ebuild,v 1.3 2008/02/13 08:31:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.5.5.ebuild,v 1.4 2008/02/13 13:10:24 nyhm Exp $
 
 DESCRIPTION="Compress PNG files without affecting image quality"
 HOMEPAGE="http://optipng.sourceforge.net/"
@@ -15,8 +15,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i \
-		-e "s:-O2:${CFLAGS}:" \
-		-e "s:-s:${LDFLAGS}:" \
+		-e "/^C/s: -O2.*: ${CFLAGS} -Wall:" \
+		-e "/^LD/s: -s$: ${LDFLAGS}:" \
 		src/scripts/gcc.mak \
 		lib/libpng/scripts/makefile.gcc \
 		lib/pngxtern/scripts/gcc.mak \

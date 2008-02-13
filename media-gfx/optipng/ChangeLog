@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.35 2008/02/13 08:31:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.36 2008/02/13 13:10:24 nyhm Exp $
+
+  13 Feb 2008; Tristan Heaven <nyhm@gentoo.org> optipng-0.5.5.ebuild:
+  Fix possible sed problem, bug #209990
 
   13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> optipng-0.5.5.ebuild:
   stable x86, bug 209941
