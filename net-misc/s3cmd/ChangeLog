@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/s3cmd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.1 2007/09/23 00:07:05 jmglov Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.2 2008/02/13 07:44:08 opfer Exp $
+
+  13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  add no-herd
 
 *s3cmd-0.9.4 (23 Sep 2007)
 

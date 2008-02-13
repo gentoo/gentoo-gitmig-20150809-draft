@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/goog-sitemapgen
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/ChangeLog,v 1.2 2007/09/20 18:45:30 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/ChangeLog,v 1.3 2008/02/13 07:42:49 opfer Exp $
+
+  13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  add no-herd
 
   20 Sep 2007; Christoph Mende <angelos@gentoo.org>
   goog-sitemapgen-1.4.ebuild:

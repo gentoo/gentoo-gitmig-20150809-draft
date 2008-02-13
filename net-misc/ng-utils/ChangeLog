@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ng-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ng-utils/ChangeLog,v 1.1 2008/02/03 11:29:38 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ng-utils/ChangeLog,v 1.2 2008/02/13 07:43:26 opfer Exp $
+
+  13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  add no-herd
 
 *ng-utils-0.6 (03 Feb 2008)
 
