@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.236 2008/02/13 14:30:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.237 2008/02/13 14:33:39 cardoe Exp $
 
   13 Feb 2008; Petteri Räty <betelgeuse@gentoo.org> -db-3.2.9-r10.ebuild:
   Remove generation 1 ebuild.
@@ -11,7 +11,7 @@
   13 Feb 2008; Jeroen Roovers <jer@gentoo.org> db-3.2.9-r11.ebuild:
   Stable for HPPA (bug #209942).
 
-  12 Feb 2008; <paul@gentoo.org> db-3.2.9-r11.ebuild:
+  12 Feb 2008; <pauldv@gentoo.org> db-3.2.9-r11.ebuild:
   The java useflag actually fails because of db's way to find the headers (bug
   #207164). As the lack of reports indicates that people don't use it. The
   useflag is disabled for now on this old version of db.
