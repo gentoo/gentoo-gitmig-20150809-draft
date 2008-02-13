@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.96 2008/02/07 10:57:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.97 2008/02/13 00:46:58 coldwind Exp $
+
+  13 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
+  rmagick-1.15.12.ebuild:
+  amd64 stable wrt bug #208971
 
   07 Feb 2008; Raúl Porcel <armin76@gentoo.org> rmagick-1.15.12.ebuild:
   alpha/ia64 stable wrt #208971
