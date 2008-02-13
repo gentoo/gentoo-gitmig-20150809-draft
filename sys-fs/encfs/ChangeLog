@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/encfs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.28 2007/11/09 09:39:20 alonbl Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.29 2008/02/13 07:46:00 opfer Exp $
+
+  13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  add no-herd
 
   09 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml:
   Remove crypto
