@@ -1,4 +1,0 @@
-# USB pwcx-i386  kernel modules configuration file
-
-post-install pwc /sbin/insmod --force /lib/modules/usb/pwcx-i386.o >& /dev/null 2>&1  || :
-
