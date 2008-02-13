@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.20.ebuild,v 1.1 2007/12/04 14:24:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.22.ebuild,v 1.1 2008/02/13 14:48:46 mrness Exp $
 
 inherit eutils
 
@@ -14,8 +14,9 @@ LICENSE="as-is"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2" # make sure gtk+ is installed before built_with_use test
-RDEPEND="${DEPEND}
+DEPEND=""
+RDEPEND=">=x11-libs/gtk+-2
+	x11-libs/libXinerama
 	>=media-libs/libpng-1.2
 	media-libs/jpeg
 	>=media-libs/tiff-3"
@@ -33,11 +34,4 @@ src_install() {
 	dosym /opt/dialogblocks/dialogblocks32x32.xpm /usr/share/pixmaps/dialogblocks.xpm
 	dosym /opt/dialogblocks/dialogblocks.desktop /usr/share/applications/dialogblocks.desktop
 	newbin "${FILESDIR}/dialogblocks.sh" dialogblocks
-}
-
-pkg_postinst() {
-	if ! built_with_use ">=x11-libs/gtk+-2" xinerama ; then
-		eerror "In order to emerge this package, you need to re-emerge"
-		eerror "x11-libs/gtk+ with xinerama USE flag enabled."
-	fi
 }
