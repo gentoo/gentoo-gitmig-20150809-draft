@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/capseo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/ChangeLog,v 1.4 2008/01/16 07:38:53 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/ChangeLog,v 1.5 2008/02/13 07:36:11 opfer Exp $
+
+  13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  add no-herd
 
 *capseo-0.3.0_pre200712251-r1 (16 Jan 2008)
 
