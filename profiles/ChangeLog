@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1114 2008/02/12 22:26:32 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1115 2008/02/13 13:59:28 bicatali Exp $
+
+  13 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  Added server local use flage to dev-python/dap
 
   12 Feb 2008; Mike Auty <ikelos@gentoo.org> use.local.desc:
   Add a local USE flag for module building in linuxwacom.
