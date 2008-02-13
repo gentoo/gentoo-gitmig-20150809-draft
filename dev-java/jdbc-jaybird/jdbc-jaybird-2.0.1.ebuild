@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.0.1.ebuild,v 1.15 2008/01/10 22:34:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.0.1.ebuild,v 1.16 2008/02/13 20:11:50 wltjr Exp $
 
 inherit eutils java-pkg-2
 
@@ -47,9 +47,9 @@ src_unpack() {
 
 	cd "${S}/src/lib/"
 	# the build.xml unpacks this and uses stuff
-	mv mini-j2ee.jar ${T} || die "Failed to move mini-j2ee.jar to ${T}"
+	mv mini-j2ee.jar "${T}" || die "Failed to move mini-j2ee.jar to ${T}"
 	rm -v *.jar *.zip
-	mv ${T}/mini-j2ee.jar . || die "Failed to move mini-j2ee.jar back from ${T}"
+	mv "${T}"/mini-j2ee.jar . || die "Failed to move mini-j2ee.jar back from ${T}"
 
 	java-pkg_jar-from log4j log4j.jar log4j-core.jar
 }

@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.0.ebuild,v 1.14 2008/02/13 20:11:50 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.2.ebuild,v 1.1 2008/02/13 20:11:50 wltjr Exp $
 
-inherit eutils java-pkg-2
+JAVA_PKG_IUSE="doc source examples test"
+
+inherit eutils java-pkg-2 java-ant-2
 
 At="Jaybird-${PV/_/}-src"
 DESCRIPTION="JDBC Type 2 and 4 drivers for Firebird SQL server"
@@ -10,21 +12,23 @@ HOMEPAGE="http://jaybirdwiki.firebirdsql.org/"
 SRC_URI="mirror://sourceforge/firebird/${At}.zip"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
-IUSE="doc examples source test"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="jni java5 java6"
 
-COMMON_DEPEND="dev-java/log4j"
-RDEPEND=">=virtual/jre-1.4
-	${COMMON_DEPEND}"
-DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
+RDEPEND="java6? ( =virtual/jre-1.6* )
+	java5? ( =virtual/jre-1.5* )
+	!java6? ( !java5? ( =virtual/jre-1.4* ) )
+	dev-java/log4j"
+DEPEND="java6? ( =virtual/jdk-1.6* )
+	java5? ( =virtual/jdk-1.5* )
+	!java6? ( !java5? ( =virtual/jdk-1.4* ) )
 	app-arch/unzip
-	dev-java/cpptasks
+	dev-java/log4j
+	jni? ( dev-java/cpptasks )
 	test? (
 		=dev-java/junit-3.8*
-		dev-java/ant
-	)
-	source? ( app-arch/zip )
-	${COMMON_DEPEND}"
+		dev-java/ant-junit
+	)"
 
 S="${WORKDIR}/client-java"
 
@@ -34,8 +38,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/archive-xml-${PV}.patch"
-	epatch "${FILESDIR}/compile-xml-${PV}.patch"
+	epatch "${FILESDIR}/archive-xml-2.1.0.patch"
+	epatch "${FILESDIR}/compile_xml-${PV}.patch"
 
 	cd "${S}/lib/"
 	rm -v *.jar
@@ -52,7 +56,8 @@ src_unpack() {
 
 src_compile() {
 	java-pkg_filter-compiler jikes
-	eant $(use test && echo "-Dtests=true") jars compile-native \
+	eant $(use test && echo "-Dtests=true") jars \
+		$(use jni && echo "compile-native") \
 		$(use_doc javadocs)
 }
 
@@ -67,9 +72,12 @@ src_install() {
 		java-pkg_newjar ${MY_PN}-test-${PV}.jar ${MY_PN}-${jar}.jar || die "java-pkg_newjar ${MY_PN}-${jar}.jar failed"
 	fi
 
-	cd "${S}/output/native"
-	sodest="/usr/lib/"
-	java-pkg_doso libjaybird21.so || die "java-pkg_doso ${sodest}libjaybird21.so failed"
+	if use jni; then
+		cd "${S}/output/native"
+		sodest="/usr/lib/"
+		java-pkg_doso libjaybird21.so || die \
+			"java-pkg_doso ${sodest}libjaybird21.so failed"
+	fi
 
 	cd "${S}"
 
@@ -94,5 +102,5 @@ src_test() {
 	ewarn "without Firebird installed and running locally. The tests will"
 	ewarn "complete without Firebird, but network timeouts prolong the"
 	ewarn "testing phase considerably."
-	eant all-tests-pure-java
+	ANT_TASKS="ant-junit" eant all-tests-pure-java
 }
