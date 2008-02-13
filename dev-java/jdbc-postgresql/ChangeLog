@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.18 2008/02/06 18:19:48 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.19 2008/02/13 20:15:51 fordfrog Exp $
+
+*jdbc-postgresql-8.3_p603-r1 (13 Feb 2008)
+
+  13 Feb 2008; Miroslav Šulc <fordfrog@gentoo.org>
+  +jdbc-postgresql-8.3_p603-r1.ebuild:
+  Added 'java6' USE flag and dropped ~x86-fbsd keyword because there is no
+  such keyword in virtual/jdk-1.6
 
   06 Feb 2008; Miroslav Šulc <fordfrog@gentoo.org>
   -jdbc-postgresql-8.0_p320.ebuild, -jdbc-postgresql-8.1_p410.ebuild:
