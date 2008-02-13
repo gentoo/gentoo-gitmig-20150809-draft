@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nsvs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nsvs/ChangeLog,v 1.1 2007/12/30 02:51:09 chtekk Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nsvs/ChangeLog,v 1.2 2008/02/13 07:44:57 opfer Exp $
+
+  13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  add no-herd
 
 *nsvs-20070407 (30 Dec 2007)
 
