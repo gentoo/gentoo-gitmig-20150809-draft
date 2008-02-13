@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.5_p20080206-r3.ebuild,v 1.1 2008/02/12 21:58:56 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.5_p20080206-r3.ebuild,v 1.2 2008/02/13 15:53:26 hoffie Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -501,7 +501,7 @@ src_test() {
 	if [[ -x "${S}"/php-cgi ]]; then
 		export TEST_PHP_CGI_EXECUTABLE="${S}"/php-cgi
 	fi
-	REPORT_EXIT_STATUS=1 "${S}"/sapi/cli/php -n "${S}"/run-tests.php -n
+	REPORT_EXIT_STATUS=1 "${S}"/php-cli -n "${S}"/run-tests.php -n
 
 	if [[ $? != 0 ]] ; then
 		eerror "Not all tests were successful!"
