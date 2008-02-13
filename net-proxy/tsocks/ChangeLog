@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/tsocks
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.21 2007/06/17 16:03:03 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.22 2008/02/13 16:17:49 mrness Exp $
+
+*tsocks-1.8_beta5-r3 (13 Feb 2008)
+
+  13 Feb 2008; Alin Năstac <mrness@gentoo.org>
+  +files/tsocks-1.8_beta5-gentoo-r1.patch, +tsocks-1.8_beta5-r3.ebuild:
+  Link programs using user selected LDFLAGS (#209703). Fix library path in
+  tsocks script.
 
   17 Jun 2007; Alin Năstac <mrness@gentoo.org> -tsocks-1.8_beta5.ebuild,
   -tsocks-1.8_beta5-r1.ebuild:
