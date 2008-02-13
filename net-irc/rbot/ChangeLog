@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/rbot
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.27 2007/12/28 14:08:10 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.28 2008/02/13 17:32:29 flameeyes Exp $
+
+*rbot-9999-r8 (13 Feb 2008)
+
+  13 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> -rbot-9999-r7.ebuild,
+  +rbot-9999-r8.ebuild:
+  Revision bump, rbot moved to GIT now rather than Subversion. Drop the
+  snapshot USE flag as there is no more a progressive number to be used.
 
   28 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> rbot-9999-r7.ebuild:
   Properly disable the time plugin if timezone USE flag is disabled.

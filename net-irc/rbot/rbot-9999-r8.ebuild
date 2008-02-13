@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r7.ebuild,v 1.2 2007/12/28 14:08:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r8.ebuild,v 1.1 2008/02/13 17:32:29 flameeyes Exp $
 
 inherit ruby gems eutils
 
-[[ ${PV} == "9999" ]] && inherit subversion
+[[ ${PV} == "9999" ]] && inherit git
 
 DESCRIPTION="rbot is a ruby IRC bot"
-HOMEPAGE="http://www.linuxbrit.co.uk/rbot/"
+HOMEPAGE="http://ruby-rbot.org/"
 
 LICENSE="as-is"
 SLOT="0"
@@ -34,7 +34,7 @@ DEPEND=""
 
 if [[ ${PV} == "9999" ]]; then
 	SRC_URI=""
-	ESVN_REPO_URI="svn://linuxbrit.co.uk/giblet/rbot/trunk"
+	EGIT_REPO_URI="git://ruby-rbot.org/rbot.git"
 
 	DEPEND="${DEPEND}
 		dev-ruby/rake
@@ -50,20 +50,14 @@ pkg_setup() {
 	enewuser rbot -1 -1 /var/lib/rbot nobody
 }
 
-svn_gem_version() {
-	use snapshot && \
-		echo 9998.${ESVN_WC_REVISION} || \
-		echo 9999
-}
-
 src_unpack() {
 	[[ ${PV} == "9999" ]] || return 0
-	subversion_src_unpack
+	git_src_unpack
 
 	cd "${S}"
-	sed -i -e "/s.version =/s:'.\+':'$(svn_gem_version)':" Rakefile \
+	sed -i -e "/s.version =/s:'.\+':'9999':" Rakefile \
 		|| die  "Unable to fix Rakefile version."
-	sed -i -e '/\$version=/s:".\+":"'$(svn_gem_version)'":' bin/rbot \
+	sed -i -e '/\$version=/s:".\+":"'9999'":' bin/rbot \
 		|| die "Unable to fix rbot script version."
 }
 
@@ -75,8 +69,8 @@ src_compile() {
 
 src_install() {
 	if [[ ${PV} == "9999" ]]; then
-		GEM_SRC="${S}/pkg/rbot-$(svn_gem_version).gem"
-		MY_P="${PN}-$(svn_gem_version)"
+		GEM_SRC="${S}/pkg/rbot-9999.gem"
+		MY_P="${PN}-9999"
 	else
 		MY_P="${P}"
 	fi
