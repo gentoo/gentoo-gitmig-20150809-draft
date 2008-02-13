@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.7.7.ebuild,v 1.3 2007/11/28 23:28:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.7.7.ebuild,v 1.4 2008/02/13 14:33:59 markusle Exp $
 
 inherit eutils multilib qt3
 
@@ -11,12 +11,13 @@ SRC_URI="http://soft.proindependent.com/src/${P}.zip"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE=""
+IUSE="bindist"
 
 RDEPEND="$(qt_min_version 3.3)
 	>=x11-libs/qwt-4.2.0
 	<x11-libs/qwtplot3d-0.2.7
-	>=sci-libs/gsl-1.6"
+	!bindist? ( sci-libs/gsl )
+	bindist? ( <sci-libs/gsl-1.10 )"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
@@ -24,8 +25,8 @@ S=${WORKDIR}/${P}/${P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-qmake.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-qmake.patch
 	sed -i -e "s|_LIBDIR_|/usr/$(get_libdir)|" ${P}.pro || die "sed failed."
 }
 

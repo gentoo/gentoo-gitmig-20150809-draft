@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.2-r1.ebuild,v 1.1 2008/02/12 11:41:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.2-r1.ebuild,v 1.2 2008/02/13 14:33:59 markusle Exp $
 
 inherit eutils multilib qt4 python
 
@@ -12,7 +12,7 @@ SRC_URI="http://soft.proindependent.com/src/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="python doc"
+IUSE="python doc bindist"
 
 LANGS="de es fr ja ru sv"
 for l in ${LANGS}; do
@@ -23,7 +23,8 @@ CDEPEND=">=x11-libs/qwt-5.0.2
 	>=x11-libs/qwtplot3d-0.2.7
 	>=dev-cpp/muParser-1.28
 	>=sci-libs/liborigin-20071119
-	>=sci-libs/gsl-1.10"
+	!bindist? ( sci-libs/gsl )
+	bindist? ( <sci-libs/gsl-1.10 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

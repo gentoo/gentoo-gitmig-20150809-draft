@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.15 2008/02/12 11:41:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.16 2008/02/13 14:33:59 markusle Exp $
+
+  13 Feb 2008; Markus Dittrich <markusle@gentoo.org> qtiplot-0.7.7.ebuild,
+  qtiplot-0.8.5.ebuild, qtiplot-0.9.2.ebuild, qtiplot-0.9.2-r1.ebuild:
+  Fixed QA issues and added bindist for >=gsl-1.10 (see bug #199451).
 
 *qtiplot-0.9.2-r1 (12 Feb 2008)
 
