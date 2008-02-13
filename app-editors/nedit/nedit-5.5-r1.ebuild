@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.2 2008/02/12 22:00:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.3 2008/02/13 07:24:07 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -41,7 +41,7 @@ src_install() {
 	newman doc/nedit.man nedit.1
 	newman doc/nc.man neditc.1
 
-	dodoc README ReleaseNotes ChangeLog COPYRIGHT
+	dodoc README ReleaseNotes ChangeLog
 	cd doc
 	dodoc *.txt nedit.doc README.FAQ NEdit.ad
 	dohtml *.{dtd,xsl,xml,html,awk}
