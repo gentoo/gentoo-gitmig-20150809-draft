@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-20061023.042702-r1.ebuild,v 1.8 2007/11/27 11:40:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-20061023.042702-r1.ebuild,v 1.9 2008/02/13 09:29:55 phosphan Exp $
 
 inherit linux-mod eutils
 
@@ -28,14 +28,6 @@ ERROR_VIDEO_V4L1_COMPAT="{$P} requires support for the Video For Linux API 1 com
 
 S=${WORKDIR}/pwc-v4l2-${MY_PV}
 
-pkg_setup() {
-	if kernel_is 2 6; then
-		if [ "${KV_PATCH}" -ge 18 ] ; then
-			die "In kernel ${KV_FULL} this module is deprecated by the builtin driver."
-		fi
-	fi
-}
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -44,10 +36,19 @@ src_unpack() {
 
 pkg_setup() {
 	linux-mod_pkg_setup
+	local msg
 
 	if kernel_is 2 4; then
-		eerror "${P} does not support building against kernel 2.4.x"
-		die "${P} does not support building against kernel 2.4.x"
+		msg="${P} does not support building against kernel 2.4.x"
+		eerror $msg
+		die $msg
+	fi
+	if kernel_is 2 6; then
+		if [ "${KV_PATCH}" -ge 18 ] ; then
+			msg="In kernel ${KV_FULL} this module is deprected by the builtin driver."
+			eerror $msg
+			die $msg
+		fi
 	fi
 }
 
