@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.85 2008/01/16 06:50:10 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.86 2008/02/13 18:34:31 wltjr Exp $
+
+*firebird-2.1.0.17735_rc1 (13 Feb 2008)
+
+  13 Feb 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/firebird-2.1.0.16780_beta2-deps-flags-libs.patch,
+  +files/firebird-2.1.0.17735_rc1-deps-flags-libs.patch,
+  -firebird-2.1.0.16780_beta2-r3.ebuild, +firebird-2.1.0.17735_rc1.ebuild:
+  Bumped 2.1.x to rc1, removed beta version. No change wrt to bug #197664. 2.1
+  fix for security bug #208034, have to patch 2.0, till 2.0.4 is released.
 
   16 Jan 2008; William L. Thomson Jr. <wltjr@gentoo.org>
   firebird-2.0.3.12981.0-r2.ebuild, firebird-2.0.3.12981.0-r4.ebuild,
