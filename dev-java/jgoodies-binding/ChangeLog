@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jgoodies-binding
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-binding/ChangeLog,v 1.6 2007/10/06 20:32:25 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-binding/ChangeLog,v 1.7 2008/02/13 03:53:55 ali_bush Exp $
+
+  13 Feb 2008; Alistair Bush <ali_bush@gentoo.org>
+  jgoodies-binding-1.1.2.ebuild:
+  Replacing direct execution of xml-rewrite.py with a call to
+  java-ant_xml-rewrite
 
   06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   jgoodies-binding-1.1.2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-binding/jgoodies-binding-1.1.2.ebuild,v 1.5 2007/10/06 20:32:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-binding/jgoodies-binding-1.1.2.ebuild,v 1.6 2008/02/13 03:53:55 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -32,8 +32,8 @@ src_unpack() {
 
 	# Copy the Gentoo'ized build.xml
 	# cp ${FILESDIR}/build-${PV}.xml ${S}
-	xml-rewrite.py -f build.xml -d -e javac -a bootclasspath \
-		|| die "Failed to fix bootclasspath"
+	java-ant_xml-rewrite -f build.xml -d -e javac -a bootclasspath
+	#	|| die "Failed to fix bootclasspath"
 	java-pkg_filter-compiler jikes
 }
 
