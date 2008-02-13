@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.7.ebuild,v 1.1 2007/09/01 16:21:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.8.ebuild,v 1.1 2008/02/13 13:24:23 dev-zero Exp $
 
 inherit bash-completion
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 src_install () {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dobashcompletion "${FILESDIR}/${PN}-2.5.bash-completion"
+	dobashcompletion "${FILESDIR}/${PN}-2.8.bash-completion"
 
 	# That's not how we want it
 	rm -fr "${D}/usr/share/doc"
