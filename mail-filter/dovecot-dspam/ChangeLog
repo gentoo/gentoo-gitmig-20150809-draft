@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dovecot-dspam
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-dspam/ChangeLog,v 1.2 2007/06/27 20:33:59 swegener Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-dspam/ChangeLog,v 1.3 2008/02/13 07:34:54 opfer Exp $
+
+  13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  add no-herd
 
 *dovecot-dspam-0_beta7 (18 Jun 2007)
 
