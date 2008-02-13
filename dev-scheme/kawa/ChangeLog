@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/kawa
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/ChangeLog,v 1.6 2008/02/13 13:24:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/ChangeLog,v 1.7 2008/02/13 13:25:58 betelgeuse Exp $
+
+  13 Feb 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Add java herd as additional maintainer.
 
 *kawa-1.9.1 (13 Feb 2008)
 
