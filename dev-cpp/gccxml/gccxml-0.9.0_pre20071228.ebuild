@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/gccxml-0.9.0_pre20071228.ebuild,v 1.1 2008/02/13 13:58:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/gccxml-0.9.0_pre20071228.ebuild,v 1.2 2008/02/13 14:00:00 dev-zero Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,7 +29,7 @@ src_unpack() {
 	# patch below taken from Debian
 	sed -i \
 		-e 's/xatexit.c//' \
-		${S}/GCC/libiberty/CMakeLists.txt
+		"${S}/GCC/libiberty/CMakeLists.txt" || die "sed failed"
 }
 src_compile() {
 	cd "${MYBUILDDIR}"
