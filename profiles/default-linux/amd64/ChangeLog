@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.131 2008/02/02 06:11:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.132 2008/02/13 18:40:47 zmedico Exp $
+
+  13 Feb 2008; Zac Medico <zmedico@gentoo.org> profile.bashrc:
+  Bug #209759 - Remove ABI=amd64 from profile.bashrc sinces it appears to be
+  misplaced. It is already defined in make.defaults and overriding it via
+  profile.bashrc breaks some ebuilds.
 
   02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   dev/2008.0/make.defaults, make.defaults:

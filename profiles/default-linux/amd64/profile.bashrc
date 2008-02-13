@@ -1,5 +1,3 @@
-# In case anybody forgets this in a profile, again...
-ABI="amd64"
 
 BAD_FLAGS=( "-fvisibility=hidden" "-fvisibility-hidden" "-fvisibility-inlines-hidden" "-fPIC" "-fpic" "-m32" "-m64" "-g3" "-ggdb3" "-ffast-math" )
 
