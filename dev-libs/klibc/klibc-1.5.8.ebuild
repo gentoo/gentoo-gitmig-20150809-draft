@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.8.ebuild,v 1.1 2008/01/15 08:16:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.8.ebuild,v 1.2 2008/02/13 21:00:56 cla Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -32,7 +32,7 @@ SRC_URI="
 	${KERNEL_URI}"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
-KEYWORDS="~amd64 -mips ~ppc ~x86 ~sparc"
+KEYWORDS="~amd64 -mips ~ppc ~sparc x86"
 SLOT="0"
 IUSE="debug n32"
 

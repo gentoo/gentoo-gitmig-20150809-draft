@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.54 2008/01/15 08:16:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.55 2008/02/13 21:00:56 cla Exp $
+
+  13 Feb 2008; Dawid Węgliński <cla@gentoo.org> klibc-1.5.8.ebuild:
+  Stable on x86 (bug #208131)
 
 *klibc-1.5.8 (15 Jan 2008)
 
