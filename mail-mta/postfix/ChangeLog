@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.146 2008/02/13 10:17:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.147 2008/02/13 21:01:06 maekke Exp $
+
+  13 Feb 2008; Markus Meier <maekke@gentoo.org> postfix-2.2.11-r1.ebuild,
+  postfix-2.3.8-r1.ebuild, postfix-2.4.6-r2.ebuild:
+  x86 stable, bug #201671 and quotes in 2.3.8-r1
 
   13 Feb 2008; Jeroen Roovers <jer@gentoo.org> postfix-2.2.11-r1.ebuild,
   postfix-2.3.8-r1.ebuild, postfix-2.4.6-r2.ebuild:
