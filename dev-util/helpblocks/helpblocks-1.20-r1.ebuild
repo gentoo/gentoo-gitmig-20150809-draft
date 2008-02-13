@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/helpblocks-1.20.ebuild,v 1.1 2007/12/04 14:32:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/helpblocks-1.20-r1.ebuild,v 1.1 2008/02/13 14:53:06 mrness Exp $
 
 DESCRIPTION="HTML Help Editor for wxWidgets"
 HOMEPAGE="http://www.helpblocks.com/"
@@ -14,6 +14,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=">=x11-libs/gtk+-2
+	x11-libs/libXinerama
 	>=media-libs/libpng-1.2
 	media-libs/jpeg
 	>=media-libs/tiff-3"
