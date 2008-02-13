@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.12.ebuild,v 1.4 2007/11/29 22:53:57 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.12.ebuild,v 1.5 2008/02/13 20:52:57 ticho Exp $
 
 MY_P="${PN#claws-mail-}_plugin-${PV}"
 
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 DEPEND=">=mail-client/claws-mail-3.0.0
-		>=x11-libs/gtk+-2.10"
+		>=x11-libs/gtk+-2.10
+		dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

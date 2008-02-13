@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.12.1.ebuild,v 1.3 2008/02/13 20:52:57 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.15.ebuild,v 1.1 2008/02/13 20:52:57 ticho Exp $
 
 MY_P="${PN#claws-mail-}_plugin-${PV}"
 
@@ -10,12 +10,18 @@ SRC_URI="http://www.claws-mail.org/downloads/plugins/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
-DEPEND=">=mail-client/claws-mail-3.0.0
+IUSE="libnotify"
+DEPEND=">=mail-client/claws-mail-3.3.0
 		>=x11-libs/gtk+-2.10
+		libnotify? ( x11-libs/libnotify )
 		dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
+
+src_compile() {
+	econf $(use_enable libnotify) || die
+	emake || die
+}
 
 src_install() {
 	make DESTDIR="${D}" install
