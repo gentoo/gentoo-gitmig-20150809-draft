@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/wxmud/wxmud-9999.ebuild,v 1.2 2007/12/28 03:14:12 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/wxmud/wxmud-9999.ebuild,v 1.3 2008/02/13 13:43:04 leio Exp $
 
 WX_GTK_VER=2.8
 inherit flag-o-matic subversion wxwidgets autotools games
@@ -12,7 +12,7 @@ ESVN_REPO_URI="https://wxmud.svn.sourceforge.net/svnroot/wxmud/trunk"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="python"
 
 RDEPEND="=x11-libs/wxGTK-2.8*
