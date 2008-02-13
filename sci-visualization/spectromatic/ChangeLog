@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/spectromatic
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/ChangeLog,v 1.3 2007/02/22 01:12:06 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/ChangeLog,v 1.4 2008/02/13 15:01:21 markusle Exp $
+
+  13 Feb 2008; Markus Dittrich <markusle@gentoo.org>
+  spectromatic-1.0.ebuild:
+  Fixed QA issues and added bindist for >=gsl-1.10 (see bug #199451).
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
