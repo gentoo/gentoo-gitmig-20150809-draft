@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.02.ebuild,v 1.2 2008/01/22 22:35:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.02-r1.ebuild,v 1.1 2008/02/13 06:03:51 tupone Exp $
 
 inherit fixheadtails toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://qmail-scanner.sourceforge.net/"
 SRC_URI="mirror://sourceforge/qmail-scanner/${P}.tgz
 		http://toribio.apollinare.org/qmail-scanner/download/q-s-${PV}st-${Q_S_DATE}.patch.gz"
 
-IUSE="spamassassin"
+IUSE="clamav spamassassin"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,11 +26,13 @@ DEPEND=">=dev-lang/perl-5.6.1-r1
 	>=app-arch/unzip-5.42-r1
 	sys-process/daemontools
 	virtual/antivirus
+	clamav? ( app-antivirus/clamav )
 	spamassassin? ( >=mail-filter/spamassassin-2.64 )"
 
 pkg_setup() {
 	enewgroup qscand 210
 	enewuser qscand 210 -1 /var/spool/qscan qscand
+	use clamav && usermod -a -G qscand,nofiles clamav
 }
 
 pkg_preinst() {
@@ -179,10 +181,10 @@ pkg_postinst () {
 	ewarn "user is changed. Please update it manually to /var/spool/qscan"
 	ewarn "or remove the user and emerge again this package"
 
-	ewarn "For an integration with clamav, clamav user should have access"
-	ewarn "to files in the qscand and nofiles group."
-	ewarn "To allow that, add clamav user to the qscan and nofiles group and"
-	ewarn "comment-out in /etc/clamd.conf AllowSupplementaryGroups putting yes."
-	ewarn "After that, restart clamd with"
-	ewarn "/etc/init.d/clamd restart"
+	if use clamav; then
+		ewarn "To allow clamav integration comment-out in /etc/clamd.conf:"
+		ewarn "AllowSupplementaryGroups putting yes."
+		ewarn "After that, restart clamd with"
+		ewarn "/etc/init.d/clamd restart"
+	fi
 }
