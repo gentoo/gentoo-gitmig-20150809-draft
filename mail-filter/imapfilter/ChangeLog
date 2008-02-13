@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/imapfilter
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.23 2007/09/30 14:48:45 ticho Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.24 2008/02/13 07:08:50 opfer Exp $
+
+*imapfilter-2.0.9 (13 Feb 2008)
+
+  13 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  +imapfilter-2.0.9.ebuild:
+  version bump for bug 209242 from Holger Hoffstätte <holger@wizards.de> and
+  added libpcre dependency, reported in bug 205858 by Patrick Lauer
 
 *imapfilter-2.0.4 (30 Sep 2007)
 
