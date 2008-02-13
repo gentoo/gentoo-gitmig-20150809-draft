@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/lockrun
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lockrun/ChangeLog,v 1.1 2008/02/05 18:22:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lockrun/ChangeLog,v 1.2 2008/02/13 17:39:19 jer Exp $
+
+  13 Feb 2008; Jeroen Roovers <jer@gentoo.org> lockrun-2.ebuild:
+  Marked ~hppa too.
 
 *lockrun-2 (05 Feb 2008)
 
