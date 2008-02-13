@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.84 2008/02/13 08:41:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.85 2008/02/13 20:29:54 pva Exp $
+
+*openvz-sources-2.6.18.028.053-r2 (13 Feb 2008)
+
+  13 Feb 2008; <pva@gentoo.org> openvz-sources-2.6.18.028.053.ebuild,
+  -openvz-sources-2.6.18.028.053-r1.ebuild,
+  +openvz-sources-2.6.18.028.053-r2.ebuild:
+  Fixed ebuild to even better naming, now revisions are taking into account
+  properly.
 
 *openvz-sources-2.6.18.028.053-r1 (13 Feb 2008)
 
