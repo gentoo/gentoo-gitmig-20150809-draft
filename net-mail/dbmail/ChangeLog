@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dbmail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.20 2008/02/12 10:19:41 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.21 2008/02/13 07:50:33 lordvan Exp $
+
+  13 Feb 2008; Thomas Raschbacher <lordvan@gentoo.org> -dbmail-2.2.5.ebuild,
+  -dbmail-2.2.7_rc2.ebuild, -dbmail-2.2.7_rc3.ebuild,
+  -dbmail-2.2.7_rc4.ebuild, dbmail-2.2.7.ebuild, -dbmail-2.2.8_rc1.ebuild,
+  dbmail-2.2.8.ebuild, dbmail-2.2.9.ebuild, dbmail-2.3.2.ebuild:
+  cleanout of old rcX ebuilds and fixes bug 205448 (thanks to Evil Compile
+  Person <bugs@dev.gentooexperimental.org> for pointing this out)
 
 *dbmail-2.3.2 (12 Feb 2008)
 *dbmail-2.2.9 (12 Feb 2008)

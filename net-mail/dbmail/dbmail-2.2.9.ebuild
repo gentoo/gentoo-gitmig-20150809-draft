@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.9.ebuild,v 1.1 2008/02/12 10:19:41 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.9.ebuild,v 1.2 2008/02/13 07:50:33 lordvan Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ DEPEND="ssl? ( dev-libs/openssl )
 	postgres? ( >=dev-db/postgresql-7.4 )
 	mysql? ( >=virtual/mysql-4.1 )
 	sqlite3? ( >=dev-db/sqlite-3.0 )
+	!mysql? ( !postgres? ( !sqlite? ( >=dev-db/sqlite-3.0 ) ) )
 	sieve? ( >=mail-filter/libsieve-2.2.1 )
 	ldap? ( >=net-nds/openldap-2.3.33 )
 	app-text/asciidoc
@@ -84,6 +85,11 @@ pkg_postinst() {
 	elog "for remaining instructions on setting up dbmail users and "
 	elog "for finishing configuration to connect to your MTA and "
 	elog "to connect to your db."
+	echo
+	elog "DBMail requires either SQLite3, PostgreSQL or MySQL."
+	elog "If none of the use-flags are specified SQLite3 is"
+	elog "used as default. To use another database please"
+	elog "specify the appropriate use-flag and re-emerge dbmail."
 	echo
 	elog "Database schemes can be found in /usr/share/doc/${PF}/"
 	elog "You will also want to follow the installation instructions"
