@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-5.0.ebuild,v 1.3 2008/02/10 20:55:10 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-5.0a.ebuild,v 1.1 2008/02/13 18:14:49 alonbl Exp $
 
 inherit eutils toolchain-funcs multilib wxwidgets
 
@@ -29,15 +29,18 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-build.patch"
-	epatch "${FILESDIR}/${P}-64bit.patch"
-	epatch "${FILESDIR}/${P}-bool.patch"
+	epatch "${FILESDIR}/${PN}-5.0-build.patch"
+	epatch "${FILESDIR}/${PN}-5.0-64bit.patch"
+	epatch "${FILESDIR}/${PN}-5.0-bool.patch"
 }
 
 src_compile() {
+	local EXTRA
 	WX_GTK_VER="2.8"
 	need-wxwidgets unicode
+	use amd64 && EXTRA="${EXTRA} USE64BIT=1"
 	emake \
+		${EXTRA} \
 		NOSTRIP=1 \
 		VERBOSE=1 \
 		CC="$(tc-getCC)" \
@@ -52,10 +55,9 @@ src_compile() {
 		|| die
 }
 
-# Requires DISPLAY anyway...
-#src_test() {
-#	"${S}/Main/truecrypt" --text --test
-#}
+src_test() {
+	"${S}/Main/truecrypt" --text --test
+}
 
 src_install() {
 	dobin Main/truecrypt
