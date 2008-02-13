@@ -1,15 +1,15 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-1.0b_beta3.ebuild,v 1.5 2008/02/13 10:41:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-20061112.ebuild,v 1.1 2008/02/13 10:41:11 phosphan Exp $
 
 inherit eutils kde
 
-MY_PV="1.0beta3b"
+MY_PV="snapshot-2006-11-12-r497"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="kradio is a radio tuner application for KDE"
 HOMEPAGE="http://kradio.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -23,13 +23,10 @@ DEPEND="lirc? ( app-misc/lirc )
 	ogg? ( media-libs/libogg )
 	arts? ( kde-base/arts )"
 
-need-kde 3.2
+need-kde 3.5
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PV}-includehints.patch"
-}
+UNSERMAKE="/usr/kde/unsermake"
+set-kdedir
 
 src_compile() {
 	if ! use vorbis; then
@@ -47,6 +44,6 @@ src_compile() {
 	if ! use lirc; then
 		sed -e 's/lirc//' -i kradio3/plugins/Makefile.in
 	fi
-	econf $(use_with arts) || die "configure failed"
-	emake || die "emake failed"
+
+	kde_src_compile || die "make failed"
 }
