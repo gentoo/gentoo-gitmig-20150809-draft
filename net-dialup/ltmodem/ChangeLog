@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ltmodem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.38 2008/01/03 13:41:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.39 2008/02/13 15:27:13 mrness Exp $
+
+  13 Feb 2008; Alin Năstac <mrness@gentoo.org>
+  +files/ltmodem-2.6.9-kernel-2.6.24.patch, ltmodem-2.6.9.ebuild:
+  Fix compilation issues on kernel 2.6.24 (#209472).
 
   03 Jan 2008; Alin Năstac <mrness@gentoo.org>
   -files/ltmodem-2.6-alk-8-kernel-changes.patch, -files/ltmodem_devfs,

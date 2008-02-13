@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-2.6.9.ebuild,v 1.2 2007/12/28 11:13:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-2.6.9.ebuild,v 1.3 2008/02/13 15:27:13 mrness Exp $
 
-inherit linux-mod
+inherit linux-mod eutils
 
 MY_ALK_VER="${PV%.*}-alk-${PV##*.}"
 
@@ -40,6 +40,12 @@ pkg_setup() {
 
 	BUILD_TARGETS="module"
 	BUILD_PARAMS="KERNEL_DIR='${KV_DIR}'"
+}
+
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-kernel-2.6.24.patch
 }
 
 src_install() {
