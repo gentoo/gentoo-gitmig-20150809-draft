@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-dspam/dovecot-dspam-0_beta7.ebuild,v 1.1 2007/06/18 12:26:07 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-dspam/dovecot-dspam-0_beta7.ebuild,v 1.2 2008/02/13 08:20:29 opfer Exp $
 
 inherit eutils autotools flag-o-matic multilib
 
@@ -24,11 +24,11 @@ top_builddir() {
 }
 
 src_unpack() {
-	cp ${DISTDIR}/${P}.c ${WORKDIR}/${P}.c || die "could not copy source"
+	cp "${DISTDIR}"/${P}.c "${WORKDIR}"/${P}.c || die "could not copy source"
 }
 
 src_compile() {
-	source ${ROOT}/usr/lib/dovecot/dovecot-config || \
+	source "${ROOT}"/usr/lib/dovecot/dovecot-config || \
 	die "cannot find dovecot-config"
 
 	$(tc-getCC) ${CFLAGS} -fPIC -shared \
@@ -42,14 +42,14 @@ src_compile() {
 	-DHAVE_CONFIG_H \
 	-DDSPAM=\"/usr/bin/dspam\" \
 	-DSPAMFOLDER=\"Spam\" \
-	-o ${WORKDIR}/lib99_dspam.so \
-	${DISTDIR}/${P}.c || die "compilation failed"
+	-o "${WORKDIR}"/lib99_dspam.so \
+	"${DISTDIR}"/${P}.c || die "compilation failed"
 }
 
 src_install () {
-	source ${ROOT}/usr/lib/dovecot/dovecot-config || \
+	source "${ROOT}"/usr/lib/dovecot/dovecot-config || \
 	die "cannot find dovecot-config"
 
 	insinto ${moduledir}/imap
-	doins ${WORKDIR}/lib99_dspam.so
+	doins "${WORKDIR}"/lib99_dspam.so
 }
