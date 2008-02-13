@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksync
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksync/ChangeLog,v 1.73 2008/02/09 12:24:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksync/ChangeLog,v 1.74 2008/02/13 18:10:54 philantrop Exp $
+
+  13 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> -ksync-3.5.8.ebuild:
+  Removed obsolete ebuild. ksync isn't included in KDE 3.5.8 anymore. cf. bug
+  209854.
 
   09 Feb 2008; Raúl Porcel <armin76@gentoo.org> ksync-3.5.8.ebuild:
   alpha/ia64/sparc stable wrt #208366
