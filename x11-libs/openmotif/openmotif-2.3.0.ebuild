@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0.ebuild,v 1.8 2008/01/05 21:07:43 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0.ebuild,v 1.9 2008/02/13 08:23:12 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.6"
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.ics.com/openmotif/2.3/${PV}/${P}.tar.gz
 
 LICENSE="MOTIF"
 SLOT="2.3"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 mips ~ppc ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 mips ~ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="doc xft jpeg png examples"
 
 RDEPEND="
