@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7a-r1.ebuild,v 1.1 2008/01/22 16:28:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6j-r8.ebuild,v 1.1 2008/02/13 13:00:08 pva Exp $
 
 inherit eutils webapp depend.apache depend.php
 
@@ -13,9 +13,14 @@ HOMEPAGE="http://www.cacti.net/"
 SRC_URI="http://www.cacti.net/downloads/${MY_P}.tar.gz"
 
 # patches
-if [ "${HAS_PATCHES}" == "1" ] ; then
-	UPSTREAM_PATCHES="graph-issue-wrra-specs
-					cmd-php-non-unique-hosts"
+if [ $HAS_PATCHES == 1 ] ; then
+	UPSTREAM_PATCHES="ping_php_version4_snmpgetnext
+					  tree_console_missing_hosts
+					  thumbnail_graphs_not_working
+					  graph_debug_lockup_fix
+					  snmpwalk_fix
+					  sec_sql_injection-0.8.6j
+					  multiple_vulnerabilities-0.8.6j"
 	for i in $UPSTREAM_PATCHES ; do
 		SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV/_p*}/${i}.patch"
 	done
@@ -39,7 +44,7 @@ RDEPEND="!apache2? ( www-servers/lighttpd )
 	virtual/cron"
 
 src_unpack() {
-	if [ "${HAS_PATCHES}" == "1" ] ; then
+	if [ $HAS_PATCHES == 1 ] ; then
 		unpack ${MY_P}.tar.gz
 		[ ! ${MY_P} == ${P} ] && mv ${MY_P} ${P}
 		# patches
@@ -50,9 +55,11 @@ src_unpack() {
 		unpack ${MY_P}.tar.gz
 	fi
 
+	epatch "${FILESDIR}/${P}"-dos-large-values.patch
+
 	use bundled-adodb || sed -i -e \
 	's:$config\["library_path"\] . "/adodb/adodb.inc.php":"adodb/adodb.inc.php":' \
-	"${S}"/include/global.php
+	"${S}"/include/config.php
 }
 
 pkg_setup() {

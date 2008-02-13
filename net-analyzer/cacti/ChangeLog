@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.122 2008/02/05 10:53:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.123 2008/02/13 13:00:08 pva Exp $
+
+*cacti-0.8.7b (13 Feb 2008)
+*cacti-0.8.7a-r2 (13 Feb 2008)
+*cacti-0.8.6j-r8 (13 Feb 2008)
+
+  13 Feb 2008; <pva@gentoo.org> files/postinstall-en.txt, metadata.xml,
+  +cacti-0.8.6j-r8.ebuild, -cacti-0.8.7a.ebuild, -cacti-0.8.7a-r1.ebuild,
+  +cacti-0.8.7a-r2.ebuild, +cacti-0.8.7b.ebuild:
+  Version bump. Cleaned a bit postinstall. Security fixes for bug 209918.
+  Thank you Pierre-Yves Rofes <py AT gentoo.org> for report! Cleaned unstable
+  vulnerable versions.
 
   05 Feb 2008; Markus Rothe <corsair@gentoo.org> cacti-0.8.7a.ebuild:
   Stable on ppc64

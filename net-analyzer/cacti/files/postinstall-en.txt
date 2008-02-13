@@ -4,7 +4,7 @@ New Install
 1. Create the new cacti database
    shell> mysqladmin -p --user=root create cacti
 2. Import the default cacti database:
-   shell> mysql -p cacti < ${MY_INSTALLDIR}/cacti.sql
+   shell> mysql -p --user=root cacti < ${MY_INSTALLDIR}/cacti.sql
 3. Create a MySQL username and password for cacti.
    shell> mysql -p --user=root mysql
    mysql> GRANT ALL ON cacti.* TO cactiuser@localhost IDENTIFIED BY 'somepassword';
@@ -16,9 +16,9 @@ New Install
 	\$database_default = "cacti";
 	\$database_hostname = "localhost";
 	\$database_username = "cactiuser";
-	\$database_password = "cacti";
+	\$database_password = "somepassword";
 
-5. Point your web browser to:  http://your-server/cacti/
+5. Point your web browser to:  http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/
    Make sure to fill in all of the path variables carefully and
     correctly on the following screen.
 6. After you've gone through the setup wizard, go back to the main cacti page
@@ -39,9 +39,9 @@ Upgrading
         \$database_default = "cacti";
         \$database_hostname = "localhost";
         \$database_username = "cactiuser";
-        \$database_password = "cacti";
-4. Point your web browser to: http://your-server/cacti/
-   Select "Upgrade:.
+        \$database_password = "somepassword";
+4. Point your web browser to: http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/
+   Select "Upgrade".
    Make sure to fill in all of the path variables carefully and
    correctly on the following screen.
 

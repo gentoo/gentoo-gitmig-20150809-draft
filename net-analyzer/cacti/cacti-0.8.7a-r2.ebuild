@@ -1,27 +1,29 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7a.ebuild,v 1.3 2008/02/05 10:53:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7a-r2.ebuild,v 1.1 2008/02/13 13:00:08 pva Exp $
 
 inherit eutils webapp depend.apache depend.php
 
 # Support for _p* in version.
 MY_P=${P/_p*/}
-HAS_PATCHES=0
+HAS_PATCHES=1
 
 DESCRIPTION="Cacti is a complete frontend to rrdtool"
 HOMEPAGE="http://www.cacti.net/"
 SRC_URI="http://www.cacti.net/downloads/${MY_P}.tar.gz"
 
 # patches
-if [ $HAS_PATCHES == 1 ] ; then
-	UPSTREAM_PATCHES=""
+if [ "${HAS_PATCHES}" == "1" ] ; then
+	UPSTREAM_PATCHES="graph-issue-wrra-specs
+					cmd-php-non-unique-hosts
+					multiple_vulnerabilities-0.8.7a"
 	for i in $UPSTREAM_PATCHES ; do
 		SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV/_p*}/${i}.patch"
 	done
 fi
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 hppa ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="snmp bundled-adodb"
 
 DEPEND=""
@@ -38,7 +40,7 @@ RDEPEND="!apache2? ( www-servers/lighttpd )
 	virtual/cron"
 
 src_unpack() {
-	if [ $HAS_PATCHES == 1 ] ; then
+	if [ "${HAS_PATCHES}" == "1" ] ; then
 		unpack ${MY_P}.tar.gz
 		[ ! ${MY_P} == ${P} ] && mv ${MY_P} ${P}
 		# patches
