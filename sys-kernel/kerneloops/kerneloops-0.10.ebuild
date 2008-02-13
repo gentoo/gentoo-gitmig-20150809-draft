@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/kerneloops-0.10.ebuild,v 1.1 2008/01/11 16:40:09 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/kerneloops-0.10.ebuild,v 1.2 2008/02/13 07:54:48 opfer Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd "${WORKDIR}"
-	epatch ${FILESDIR}/makefile-standalone-0.10.patch
+	epatch "${FILESDIR}"/makefile-standalone-0.10.patch
 }
 
 src_compile() {
