@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/dap
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/ChangeLog,v 1.1 2008/02/13 14:03:14 bicatali Exp $
+
+*dap-2.2.6.3 (13 Feb 2008)
+
+  13 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +dap-2.2.6.3.ebuild:
+  Initial import. Closing bug #54161. Thanks Tim Cera <timcera@earthlink.net>
+  for his hard work
+
