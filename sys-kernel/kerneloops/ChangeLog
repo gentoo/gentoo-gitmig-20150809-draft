@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/kerneloops
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/ChangeLog,v 1.6 2008/01/11 16:40:09 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/ChangeLog,v 1.7 2008/02/13 07:53:11 opfer Exp $
+
+  13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  add no-herd
 
 *kerneloops-0.10 (11 Jan 2008)
 
