@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-acpi-notifier/claws-mail-acpi-notifier-1.0.14.ebuild,v 1.1 2007/12/28 11:49:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-acpi-notifier/claws-mail-acpi-notifier-1.0.14.ebuild,v 1.2 2008/02/13 20:31:47 ticho Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-DEPEND=">=mail-client/claws-mail-3.2.0"
+DEPEND=">=mail-client/claws-mail-3.2.0
+		dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 
