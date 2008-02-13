@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.10-r2.ebuild,v 1.3 2008/02/13 09:58:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.10-r2.ebuild,v 1.4 2008/02/13 12:13:03 armin76 Exp $
 
 inherit multilib
 
@@ -73,4 +73,11 @@ pkg_preinst() {
 			rm -rf "${ROOT}"${i}
 		fi
 	done
+}
+
+pkg_postinst() {
+	# when emerged after openmotif, then we need to set to a valid
+	# profile since we nuked the symlinks in pkg_preinst (Bug 209982)
+	# this sucky stuff can go away once openmotif is moved to SLOT=0
+	has_version x11-libs/openmotif && motif-config -s
 }
