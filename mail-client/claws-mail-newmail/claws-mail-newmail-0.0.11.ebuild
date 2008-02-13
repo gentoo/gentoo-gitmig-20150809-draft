@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-newmail/claws-mail-newmail-0.0.11.ebuild,v 1.2 2007/09/13 18:41:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-newmail/claws-mail-newmail-0.0.11.ebuild,v 1.3 2008/02/13 20:55:50 ticho Exp $
 
 MY_P="${P#claws-mail-}"
 
@@ -11,7 +11,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
-DEPEND=">=mail-client/claws-mail-3.0.0"
+DEPEND=">=mail-client/claws-mail-3.0.0
+		dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -20,5 +21,5 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README
 
 	# kill useless files
-	rm -f ${D}/usr/lib*/claws-mail/plugins/*.{a,la}
+	rm -f "${D}"/usr/lib*/claws-mail/plugins/*.{a,la}
 }

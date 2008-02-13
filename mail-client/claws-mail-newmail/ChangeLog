@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-newmail
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-newmail/ChangeLog,v 1.7 2007/09/13 18:41:06 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-newmail/ChangeLog,v 1.8 2008/02/13 20:55:50 ticho Exp $
+
+  13 Feb 2008; Andrej Kacian <ticho@gentoo.org>
+  -claws-mail-newmail-0.0.8.ebuild, -claws-mail-newmail-0.0.9.ebuild,
+  -claws-mail-newmail-0.0.10.ebuild, claws-mail-newmail-0.0.11.ebuild:
+  Depend on pkgconfig (bug #205864). Removed old versions.
 
   13 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   claws-mail-newmail-0.0.11.ebuild:
