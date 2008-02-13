@@ -1,10 +1,6 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.180 2008/02/13 01:05:31 solar Exp $
-
-  13 Feb 2008; <solar@gentoo.org> busybox-1.9.0.ebuild:
-  - QA Violation. Remove keywords. EAPI=1 is not even a proper draft. We must
-  not use it in packages people depend on.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.181 2008/02/13 03:27:00 vapier Exp $
 
 *busybox-1.9.0 (06 Feb 2008)
 
