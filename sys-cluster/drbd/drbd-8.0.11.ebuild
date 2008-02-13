@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.8.ebuild,v 1.3 2008/02/13 18:17:05 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.11.ebuild,v 1.1 2008/02/13 18:17:05 xmerlin Exp $
 
 inherit eutils versionator
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 MY_PV="${PV/_/}"
 MY_MAJ_PV="$(get_version_component_range 1-2 ${PV})"
@@ -22,13 +22,6 @@ PDEPEND="~sys-cluster/drbd-kernel-${PV}"
 SLOT="0"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${P}-missing-include.patch || die
-}
 
 src_compile() {
 	emake -j1 tools || die "compile problem"
