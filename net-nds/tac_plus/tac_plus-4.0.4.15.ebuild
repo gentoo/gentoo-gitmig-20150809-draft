@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/tac_plus-4.0.4.14.ebuild,v 1.2 2008/02/13 12:55:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/tac_plus-4.0.4.15.ebuild,v 1.1 2008/02/13 12:55:45 chainsaw Exp $
 
 MY_P="tacacs+-F${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.shrubbery.net/pub/tac_plus/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="debug finger tcpd skey"
 
 DEPEND="skey? ( >=app-admin/skey-1.1.5-r1 )

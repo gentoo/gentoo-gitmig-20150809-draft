@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/tac_plus
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.1 2007/01/03 13:09:37 chainsaw Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.2 2008/02/13 12:55:45 chainsaw Exp $
+
+*tac_plus-4.0.4.15 (13 Feb 2008)
+
+  13 Feb 2008; Tony Vroon <chainsaw@gentoo.org> tac_plus-4.0.4.14.ebuild,
+  +tac_plus-4.0.4.15.ebuild:
+  Version bump. Mark 4.0.4.14 stable on X86. Add ~AMD64 & ~PPC keywords,
+  tested on a quad-core Opteron and a PowerBook 5,9 respectively.
 
 *tac_plus-4.0.4.14 (03 Jan 2007)
 
