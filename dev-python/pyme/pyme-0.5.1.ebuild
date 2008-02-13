@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.5.1.ebuild,v 1.15 2007/07/04 21:02:36 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.5.1.ebuild,v 1.16 2008/02/13 20:13:52 coldwind Exp $
 
 inherit distutils
 
@@ -12,9 +12,9 @@ SLOT="0"
 KEYWORDS="x86 ~sparc ppc"
 LICENSE="GPL-2"
 IUSE=""
-DEPEND="=app-crypt/gpgme-0.3.14-r1
+DEPEND="~app-crypt/gpgme-0.3.14
 	>=sys-apps/sed-4"
-RDEPEND="=app-crypt/gpgme-0.3.14-r1
+RDEPEND="~app-crypt/gpgme-0.3.14
 	dev-lang/swig"
 
 src_unpack() {
