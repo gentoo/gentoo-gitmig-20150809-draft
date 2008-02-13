@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/python-fuse/python-fuse-2.5.ebuild,v 1.2 2007/09/30 15:28:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/python-fuse/python-fuse-2.5.ebuild,v 1.3 2008/02/13 08:05:14 opfer Exp $
 
 inherit distutils
 
@@ -25,5 +25,5 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
-	cp -r example ${D}/usr/share/doc/${PF}/
+	cp -r example "${D}"/usr/share/doc/${PF}/
 }
