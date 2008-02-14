@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0_beta15.ebuild,v 1.2 2007/12/11 14:40:48 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0_beta15.ebuild,v 1.3 2008/02/14 19:02:04 lu_zero Exp $
 
 # will handle rewriting myself
 JAVA_PKG_BSFIX="off"
@@ -14,7 +14,7 @@ HOMEPAGE="http://${PN}.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${MY_PV}_icon_butterfly.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 COMMON_DEP="dev-java/jgoodies-forms
 	dev-java/jibx
