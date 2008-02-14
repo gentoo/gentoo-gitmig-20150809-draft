@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/usermode-utilities-20070815.ebuild,v 1.1 2007/12/22 15:52:46 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/usermode-utilities-20070815.ebuild,v 1.2 2008/02/14 03:28:06 dang Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-20060216-unlazy.patch
 	epatch ${FILESDIR}/${P}-nostrip.patch
+	sed -i -e 's:-o \$(BIN):$(LDFLAGS) -o $(BIN):' "${S}"/*/Makefile || die "LDFLAGS sed failed"
 }
 
 src_compile() {

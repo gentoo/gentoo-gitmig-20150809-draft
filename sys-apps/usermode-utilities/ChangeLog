@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usermode-utilities
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.23 2007/12/22 15:52:46 dang Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.24 2008/02/14 03:28:06 dang Exp $
+
+  14 Feb 2008; Daniel Gryniewicz <dang@gentoo.org>
+  usermode-utilities-20070815.ebuild:
+  respect LDFLAGS; bug #209724
 
 *usermode-utilities-20070815 (22 Dec 2007)
 
