@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r1.ebuild,v 1.3 2008/02/14 17:41:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r1.ebuild,v 1.4 2008/02/14 22:01:55 ulm Exp $
 
 inherit flag-o-matic multilib autotools
 
@@ -18,7 +18,7 @@ IUSE="doc examples jpeg png xft"
 # since the slotting is finally gone now
 RDEPEND="!x11-libs/motif-config
 	!x11-libs/lesstif
-	!<x11-libs/openmotif-2.3.0
+	!<=x11-libs/openmotif-2.3.0
 	x11-libs/libXmu
 	x11-libs/libXaw
 	x11-libs/libXp
@@ -30,6 +30,41 @@ DEPEND="${RDEPEND}
 	x11-proto/printproto"
 
 PROVIDE="virtual/motif"
+
+pkg_setup() {
+	# clean up orphaned cruft left over by motif-config
+	local i count=0
+	local stalesyms="usr/bin/mwm \
+				usr/bin/uil \
+				usr/bin/xmbind \
+				usr/include/Xm \
+				usr/include/uil \
+				usr/include/Mrm"
+
+	for i in ${stalesyms} ; do
+		if [[ -L "${ROOT}"${i} ]] ; then
+			einfo "Cleaning up orphaned ${ROOT}${i} symlink ..."
+			rm -f "${ROOT}"${i}
+		fi
+	done
+
+	for i in "${ROOT}"usr/$(get_libdir)/lib{Xm,Uil,Mrm}.*; do
+		if [[ -L "${i}" && $(readlink "${i}") =~ (openmo|less)tif- ]]; then
+			einfo "Cleaning up orphaned ${i} symlink ..."
+			rm -f "${i}"
+		fi
+	done
+
+	cd "${ROOT}"usr/share/man
+	for i in $(find . -type l); do
+		if [[ $(readlink "${i}") =~ -(openmo|less)tif- ]]; then
+			(( count++ ))
+			rm -f "${i}"
+		fi
+	done
+	[[ ${count} -ne 0 ]] && \
+		einfo "Cleaned up ${count} orphaned symlinks in ${ROOT}usr/share/man"
+}
 
 src_unpack() {
 	unpack ${A}
@@ -58,41 +93,6 @@ src_compile() {
 		$(use_enable png)
 
 	emake -j1 || die "emake failed"
-}
-
-pkg_preinst() {
-	# clean up orphaned cruft left over by motif-config
-	local i count=0
-	local stalesyms="usr/bin/mwm \
-				usr/bin/uil \
-				usr/bin/xmbind \
-				usr/include/Xm \
-				usr/include/uil \
-				usr/include/Mrm"
-
-	for i in ${stalesyms} ; do
-		if [[ -L "${ROOT}"${i} ]] ; then
-			einfo "Cleaning up orphaned ${ROOT}${i} symlink ..."
-			rm -f "${ROOT}"${i}
-		fi
-	done
-
-	for i in "${ROOT}"usr/$(get_libdir)/lib{Xm,Uil,Mrm}.*; do
-		if [[ -L "${i}" && $(readlink "${i}") =~ (openmo|less)tif- ]]; then
-			einfo "Cleaning up orphaned ${i} symlink ..."
-			rm -f "${i}"
-		fi
-	done
-
-	cd "${ROOT}"usr/share/man
-	find . -type l | while read i; do
-		if [[ $(readlink "${i}") =~ -(openmo|less)tif- ]]; then
-			((count++))
-			rm -f "${i}"
-		fi
-	done
-	[[ ${count} -ne 0 ]] && \
-		einfo "Cleaned up ${count} orphaned symlinks in ${ROOT}usr/share/man"
 }
 
 src_install() {
