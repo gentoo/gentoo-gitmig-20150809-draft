@@ -1,30 +1,47 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.9.ebuild,v 1.3 2008/02/14 04:33:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.1 2008/02/14 04:33:25 wolf31o2 Exp $
 
-inherit bash-completion eutils
+# genkernel-9999		-> latest SVN
+# genkernel-9999.REV	-> use SVN REV
+# genkernel-VERSION		-> normal genkernel release
 
 VERSION_DMAP='1.02.22'
 VERSION_DMRAID='1.0.0.rc14'
 VERSION_E2FSPROGS='1.39'
 VERSION_LVM='2.02.28'
 VERSION_PKG='3.4-r3'
-VERSION_UNIONFS='1.5pre-cvs200701042308'
+
+MY_HOME="http://dev.gentoo.org/~wolf31o2"
+RH_HOME="ftp://sources.redhat.com/pub"
+DM_HOME="http://people.redhat.com/~heinzm/sw/dmraid/src"
+
+COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
+		${DM_HOME}/old/dmraid-${VERSION_DMRAID}.tar.bz2
+		${RH_HOME}/lvm2/LVM2.${VERSION_LVM}.tgz
+		${RH_HOME}/lvm2/old/LVM2.${VERSION_LVM}.tgz
+		${RH_HOME}/dm/device-mapper.${VERSION_DMAP}.tgz
+		${RH_HOME}/dm/old/device-mapper.${VERSION_DMAP}.tgz
+		mirror://sourceforge/e2fsprogs/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz"
+
+if [[ ${PV} == 9999* ]]
+then
+	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
+	ESVN_REPO_URI="svn://anonsvn.gentoo.org/genkernel/trunk"
+	inherit subversion bash-completion eutils
+	S=${WORKDIR}/trunk
+	SRC_URI="${COMMON_URI}"
+else
+	inherit bash-completion eutils
+	SRC_URI="mirror://gentoo/${P}.tar.bz2
+		mirror://gentoo/${PN}-pkg-${VERSION_PKG}.tar.bz2
+		${MY_HOME}/${P}.tar.bz2
+		${MY_HOME}/sources/${PN}/${PN}-pkg-${VERSION_PKG}.tar.bz2
+		${COMMON_URI}"
+fi
 
 DESCRIPTION="Gentoo automatic kernel building scripts"
 HOMEPAGE="http://www.gentoo.org"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-	mirror://gentoo/${PN}-pkg-${VERSION_PKG}.tar.bz2
-	http://dev.gentoo.org/~wolf31o2/sources/${PN}/${P}.tar.bz2
-	http://dev.gentoo.org/~wolf31o2/sources/${PN}/${PN}-pkg-${VERSION_PKG}.tar.bz2
-	http://people.redhat.com/~heinzm/sw/dmraid/src/dmraid-${VERSION_DMRAID}.tar.bz2
-	http://people.redhat.com/~heinzm/sw/dmraid/src/old/dmraid-${VERSION_DMRAID}.tar.bz2
-	ftp://sources.redhat.com/pub/lvm2/LVM2.${VERSION_LVM}.tgz
-	ftp://sources.redhat.com/pub/lvm2/old/LVM2.${VERSION_LVM}.tgz
-	ftp://sources.redhat.com/pub/dm/device-mapper.${VERSION_DMAP}.tgz
-	ftp://sources.redhat.com/pub/dm/old/device-mapper.${VERSION_DMAP}.tgz
-	ftp://ftp.fsl.cs.sunysb.edu/pub/unionfs/unionfs-1.x/snapshots/unionfs-${VERSION_UNIONFS}.tar.gz
-	mirror://sourceforge/e2fsprogs/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -32,7 +49,8 @@ RESTRICT=""
 # Please don't touch individual KEYWORDS.  Since this is maintained/tested by
 # Release Engineering, it's easier for us to deal with all arches at once.
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+#KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS=""
 IUSE="ibm selinux"
 
 DEPEND="sys-fs/e2fsprogs
@@ -40,43 +58,45 @@ DEPEND="sys-fs/e2fsprogs
 RDEPEND="${DEPEND} app-arch/cpio"
 
 src_unpack() {
-	unpack ${P}.tar.bz2
-	cd "${S}"
-	unpack ${PN}-pkg-${VERSION_PKG}.tar.bz2
+	if [[ ${PV} == 9999* ]] ; then
+		subversion_src_unpack
+	else
+		unpack ${P}.tar.bz2
+		cd "${S}"
+		unpack ${PN}-pkg-${VERSION_PKG}.tar.bz2
+	fi
 	use selinux && sed -i 's/###//g' gen_compile.sh
 }
 
 src_install() {
-	dodir /etc
-	cp "${S}"/genkernel.conf "${D}"/etc
 	# This block updates genkernel.conf
-	sed -i -e "s:VERSION_DMAP:$VERSION_DMAP:" \
+	sed -e "s:VERSION_DMAP:$VERSION_DMAP:" \
 		-e "s:VERSION_DMRAID:$VERSION_DMRAID:" \
 		-e "s:VERSION_E2FSPROGS:$VERSION_E2FSPROGS:" \
 		-e "s:VERSION_LVM:$VERSION_LVM:" \
-		-e "s:VERSION_UNIONFS:$VERSION_UNIONFS:" \
-		"${D}"/etc/genkernel.conf || die "Could not adjust versions"
+		"${S}"/genkernel.conf > "${T}"/genkernel.conf \
+		|| die "Could not adjust versions"
+	insinto /etc
+	doins "${T}"/genkernel.conf || die "doins genkernel.conf"
 
-	dodir /usr/share/genkernel
+	doman genkernel.8 || die "doman"
+	dodoc ChangeLog README TODO || die "dodoc"
+
+	rm -f genkernel.8 ChangeLog README TODO genkernel.conf
+
+	insinto /usr/share/genkernel
+	doins -r "${S}"/* || die "doins"
 	use ibm && cp "${S}"/ppc64/kernel-2.6-pSeries "${S}"/ppc64/kernel-2.6 || \
 		cp "${S}"/ppc64/kernel-2.6.g5 "${S}"/ppc64/kernel-2.6
-	cp -Rp "${S}"/* "${D}"/usr/share/genkernel
 
 	dodir /usr/bin
 	dosym /usr/share/genkernel/genkernel /usr/bin/genkernel
 
-	rm -f "${D}"/usr/share/genkernel/genkernel.conf
-	dodoc README
-
-	doman genkernel.8
-	rm genkernel.8
-
-	cp "${DISTDIR}"/dmraid-${VERSION_DMRAID}.tar.bz2 \
+	cp -f "${DISTDIR}"/dmraid-${VERSION_DMRAID}.tar.bz2 \
 	"${DISTDIR}"/LVM2.${VERSION_LVM}.tgz \
 	"${DISTDIR}"/device-mapper.${VERSION_DMAP}.tgz \
-	"${DISTDIR}"/unionfs-${VERSION_UNIONFS}.tar.gz \
 	"${DISTDIR}"/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz \
-	"${D}"/usr/share/genkernel/pkg
+	"${D}"/usr/share/genkernel/pkg || die "copying pkg"
 
 	dobashcompletion "${FILESDIR}"/genkernel.bash
 }
