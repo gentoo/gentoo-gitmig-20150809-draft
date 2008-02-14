@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/candycrisis
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/candycrisis/ChangeLog,v 1.2 2007/12/13 00:06:02 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/candycrisis/ChangeLog,v 1.3 2008/02/14 21:21:15 nyhm Exp $
+
+*candycrisis-1.0-r1 (14 Feb 2008)
+
+  14 Feb 2008; Tristan Heaven <nyhm@gentoo.org>
+  files/candycrisis-1.0-gentoo.patch, -candycrisis-1.0.ebuild,
+  +candycrisis-1.0-r1.ebuild:
+  Respect CXXFLAGS; Save prefs to HOME
 
   13 Dec 2007; Tupone Alfredo <tupone@gentoo.org> candycrisis-1.0.ebuild:
   Adding dependency. Bug #202054 by Marcel Unbehaun
