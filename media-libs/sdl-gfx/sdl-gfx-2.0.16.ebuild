@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.16.ebuild,v 1.3 2008/02/14 14:58:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.16.ebuild,v 1.4 2008/02/14 15:16:28 nyhm Exp $
 
-inherit eutils flag-o-matic libtool
+inherit autotools eutils flag-o-matic libtool
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="Graphics drawing primitives library for SDL"
@@ -20,7 +20,9 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-
+	cd "${S}"
+	rm -f acinclude.m4 # bug #210137
+	eautoreconf
 	elibtoolize
 }
 
