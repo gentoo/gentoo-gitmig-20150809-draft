@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23_beta6.ebuild,v 1.1 2008/02/09 10:08:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23_beta9.ebuild,v 1.1 2008/02/14 18:05:41 ulm Exp $
 
 inherit distutils elisp versionator
 
