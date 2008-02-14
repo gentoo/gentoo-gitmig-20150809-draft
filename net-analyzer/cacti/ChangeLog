@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.123 2008/02/13 13:00:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.124 2008/02/14 07:45:38 opfer Exp $
+
+  14 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  cacti-0.8.6j-r8.ebuild:
+  stable x86, security bug 209918
 
 *cacti-0.8.7b (13 Feb 2008)
 *cacti-0.8.7a-r2 (13 Feb 2008)
