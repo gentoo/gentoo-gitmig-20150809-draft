@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20040716.ebuild,v 1.5 2007/03/12 14:49:51 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20040716.ebuild,v 1.6 2008/02/14 23:18:15 nyhm Exp $
 
 inherit games
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
+RDEPEND=""
 DEPEND="app-arch/unzip"
 
 S=${WORKDIR}
