@@ -1,7 +1,6 @@
 virtual/alsa			media-sound/alsa-driver
 virtual/antivirus		app-antivirus/clamav
 virtual/aspell-dict		app-dicts/aspell-en
-virtual/bittorrent		net-p2p/bittorrent
 virtual/blackbox		x11-wm/blackbox
 virtual/bootloader		sys-boot/grub
 virtual/cron			sys-process/dcron
