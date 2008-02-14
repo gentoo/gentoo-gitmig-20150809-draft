@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/pyxf86config-0.3.34-r1.ebuild,v 1.1 2008/01/13 02:00:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/pyxf86config-0.3.34-r1.ebuild,v 1.2 2008/02/14 02:50:22 robbat2 Exp $
 
 inherit eutils python rpm
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://fedora-dev/development/source/SRPMS/${P}-${RPMREV}.fc${FCVER}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~x86 ~amd64"
 IUSE=""
 
 RDEPEND="=dev-libs/glib-2*
