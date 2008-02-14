@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/tkdvd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.15 2007/12/16 14:50:00 pylon Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.16 2008/02/14 21:48:39 maekke Exp $
+
+  14 Feb 2008; Markus Meier <maekke@gentoo.org> tkdvd-4.0.7.ebuild:
+  x86 stable, bug #209882
 
 *tkdvd-4.0.7 (16 Dec 2007)
 
