@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.38 2008/02/10 19:18:53 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.39 2008/02/14 14:06:17 spock Exp $
+
+  14 Feb 2008; Michał Januszewski <spock@gentoo.org>
+  files/memtest86+-2.00-hardcoded_cc.patch:
+  Fix bug #210019.
 
 *memtest86+-2.00 (10 Feb 2008)
 
