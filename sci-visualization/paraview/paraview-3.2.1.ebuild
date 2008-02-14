@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.5 2008/01/21 11:21:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.6 2008/02/14 15:49:31 markusle Exp $
+
+EAPI="1"
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python qt4
 
@@ -40,6 +42,10 @@ BUILDDIR="${WORKDIR}/build"
 S="${WORKDIR}"/ParaView${MY_PV}
 
 QT4_BUILT_WITH_USE_CHECK="qt3support"
+
+pkg_setup() {
+	use qt4 && qt4_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}
