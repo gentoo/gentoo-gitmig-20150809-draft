@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r1.ebuild,v 1.1 2008/02/14 10:09:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r1.ebuild,v 1.2 2008/02/14 11:44:29 ulm Exp $
 
 inherit flag-o-matic multilib autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.motifzone.org/"
 SRC_URI="ftp://ftp.ics.com/openmotif/2.3/${PV}/${P}.tar.gz
 	doc? ( http://www.motifzone.net/files/documents/${P}-manual.pdf.tgz )"
 
-LICENSE="MOTIF"
+LICENSE="MOTIF doc? ( OPL )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc examples jpeg png xft"
@@ -30,6 +30,14 @@ DEPEND="${RDEPEND}
 	x11-proto/printproto"
 
 PROVIDE="virtual/motif"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# disable compilation of demo binaries
+	sed -i -e 's/^[ \t]*demos//' Makefile.in
+}
 
 src_compile() {
 	# get around some LANG problems in make (#15119)
@@ -88,11 +96,6 @@ src_install() {
 	dodir /etc/X11/mwm
 	mv -f "${D}"/usr/$(get_libdir)/X11/system.mwmrc "${D}"/etc/X11/mwm
 	dosym /etc/X11/mwm/system.mwmrc /usr/$(get_libdir)/X11/
-
-	# cleanup
-	einfo "Removing demo applications ..."
-	find "${D}"/usr/bin/ -type f ! -name motif-config ! -name mwm \
-		! -name uil ! -name xmbind | xargs rm -f
 
 	if use examples ; then
 		dodir /usr/share/doc/${PF}/demos
