@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.2.ebuild,v 1.2 2006/04/15 11:19:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.2.ebuild,v 1.3 2008/02/14 05:49:49 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-games/neoengine-${PV}"
 S="${WORKDIR}/neotools"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	cd "${S}"
 	sed -i \
@@ -29,7 +29,7 @@ src_unpack() {
 		-e 's/ -Werror//' \
 		configure.in
 
-	epatch ${FILESDIR}/${P}-errno.patch
+	epatch "${FILESDIR}"/${P}-errno.patch
 
 	eautoreconf || die "eautoreconf failed"
 }
