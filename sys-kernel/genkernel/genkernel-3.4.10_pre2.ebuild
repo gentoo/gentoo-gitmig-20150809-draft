@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.2 2008/02/14 06:57:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.10_pre2.ebuild,v 1.1 2008/02/14 06:57:17 wolf31o2 Exp $
 
 # genkernel-9999		-> latest SVN
 # genkernel-9999.REV	-> use SVN REV
@@ -48,9 +48,9 @@ SLOT="0"
 RESTRICT=""
 # Please don't touch individual KEYWORDS.  Since this is maintained/tested by
 # Release Engineering, it's easier for us to deal with all arches at once.
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 #KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
-KEYWORDS=""
+#KEYWORDS=""
 IUSE="ibm selinux"
 
 DEPEND="sys-fs/e2fsprogs
