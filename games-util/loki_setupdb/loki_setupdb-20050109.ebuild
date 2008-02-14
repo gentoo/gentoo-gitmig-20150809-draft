@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_setupdb/loki_setupdb-20050109.ebuild,v 1.4 2006/02/22 07:24:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_setupdb/loki_setupdb-20050109.ebuild,v 1.5 2008/02/14 05:57:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="dev-libs/libxml"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-amd64.patch
+	epatch "${FILESDIR}"/${P}-amd64.patch
 }
 
 src_compile() {
@@ -38,7 +38,6 @@ src_install() {
 	doins ${ARCH}/{libsetupdb.a,arch.o,md5.o,setupdb.o} \
 		|| die "doins failed."
 
-	dodir /usr/bin
 	exeinto /usr/bin
 	doexe setupdb || die "doexe failed."
 	dodoc CHANGES README || die "dodoc failed."

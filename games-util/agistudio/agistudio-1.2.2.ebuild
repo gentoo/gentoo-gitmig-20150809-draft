@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/agistudio-1.2.2.ebuild,v 1.3 2007/02/19 17:35:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/agistudio-1.2.2.ebuild,v 1.4 2008/02/14 05:57:17 mr_bones_ Exp $
 
 inherit toolchain-funcs qt3
 
@@ -18,7 +18,7 @@ DEPEND="$(qt_min_version 3.3)"
 S=${WORKDIR}/${P}/src
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	sed -i \
 		-e "s#^QTDIR.*#QTDIR = ${QTDIR}#" \
