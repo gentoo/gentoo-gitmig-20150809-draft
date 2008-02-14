@@ -1,6 +1,6 @@
-# Copyright 2006-2007 Gentoo Foundation
-# Distributed under the terms of the GNU Lesser General Public License v2.1
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdexter/libdexter-0.1.4.ebuild,v 1.2 2007/04/23 19:39:53 swegener Exp $
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdexter/libdexter-0.1.4.ebuild,v 1.3 2008/02/14 05:38:01 mr_bones_ Exp $
 
 inherit flag-o-matic
 
