@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.5.3.ebuild,v 1.4 2007/08/14 21:26:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.5.3.ebuild,v 1.5 2008/02/14 15:08:22 opfer Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://linux.dell.com/efibootmgr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ia64"
+KEYWORDS="ia64 ~x86"
 IUSE="zlib"
 
 DEPEND="virtual/libc
