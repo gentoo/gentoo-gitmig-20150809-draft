@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv.eclass,v 1.7 2007/08/06 19:11:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv.eclass,v 1.8 2008/02/14 20:36:32 cardoe Exp $
 #
 # @ECLASS: mythtv.eclass
 # @MAINTAINER: Doug Goldstein <cardoe@gentoo.org>
@@ -26,7 +26,7 @@ if [[ ${MY_PV} != ${PV} ]]; then
 	if [[ $PV = *_pre* ]]; then
 		SVNREV="${PV##*_pre}"
 		ESVN_REPO_URI="http://svn.mythtv.org/svn/trunk/${MY_PN}"
-	elif [[ $PV = *_p* ]]; then
+	elif [[ $PV = *_p* || $PV = *_beta* ]]; then
 		PATCHREV="${PV##*_p}"
 # as of 0.20_p13783, we're using svn always
 		if [[ $PATCHREV -gt 13783 ]]; then
