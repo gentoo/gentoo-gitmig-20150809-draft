@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0.ebuild,v 1.15 2008/02/14 11:44:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0.ebuild,v 1.16 2008/02/14 17:41:41 ulm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.6"
@@ -69,18 +69,18 @@ src_install() {
 	done
 
 	einfo "Fixing binaries"
-	dodir /usr/$(get_libdir)/openmotif-${SLOT}
+	dodir /usr/$(get_libdir)/openmotif-2.3
 	for file in `ls "${D}"/usr/bin`
 	do
-		mv "${D}"/usr/bin/${file} "${D}"/usr/$(get_libdir)/openmotif-${SLOT}/${file}
+		mv "${D}"/usr/bin/${file} "${D}"/usr/$(get_libdir)/openmotif-2.3/${file}
 	done
 
 	einfo "Fixing libraries"
-	mv "${D}"/usr/$(get_libdir)/* "${D}"/usr/$(get_libdir)/openmotif-${SLOT}/
+	mv "${D}"/usr/$(get_libdir)/* "${D}"/usr/$(get_libdir)/openmotif-2.3/
 
 	einfo "Fixing includes"
-	dodir /usr/include/openmotif-${SLOT}/
-	mv "${D}"/usr/include/* "${D}"/usr/include/openmotif-${SLOT}
+	dodir /usr/include/openmotif-2.3/
+	mv "${D}"/usr/include/* "${D}"/usr/include/openmotif-2.3
 
 	einfo "Fixing man pages"
 	mans="1 3 4 5"
@@ -89,7 +89,7 @@ src_install() {
 		for file in `ls "${D}"/usr/share/man/man${man}`
 		do
 			file=${file/.${man}/}
-			mv "${D}"/usr/share/man/man$man/${file}.${man} "${D}"/usr/share/man/man${man}/${file}-openmotif-${SLOT}.${man}
+			mv "${D}"/usr/share/man/man$man/${file}.${man} "${D}"/usr/share/man/man${man}/${file}-openmotif-2.3.${man}
 		done
 	done
 
@@ -108,9 +108,9 @@ src_install() {
 
 	# profile stuff
 	dodir /etc/env.d
-	echo "LDPATH=/usr/$(get_libdir)/openmotif-${SLOT}" > "${D}"/etc/env.d/15openmotif-${SLOT}
+	echo "LDPATH=/usr/$(get_libdir)/openmotif-2.3" > "${D}"/etc/env.d/15openmotif-2.3
 	dodir /usr/$(get_libdir)/motif
-	echo "PROFILE=openmotif-${SLOT}" > "${D}"/usr/$(get_libdir)/motif/openmotif-${SLOT}
+	echo "PROFILE=openmotif-2.3" > "${D}"/usr/$(get_libdir)/motif/openmotif-2.3
 }
 
 pkg_postinst() {

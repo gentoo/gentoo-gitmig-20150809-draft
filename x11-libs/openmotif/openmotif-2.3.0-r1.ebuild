@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r1.ebuild,v 1.2 2008/02/14 11:44:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r1.ebuild,v 1.3 2008/02/14 17:41:41 ulm Exp $
 
 inherit flag-o-matic multilib autotools
 
@@ -62,7 +62,7 @@ src_compile() {
 
 pkg_preinst() {
 	# clean up orphaned cruft left over by motif-config
-	local i
+	local i count=0
 	local stalesyms="usr/bin/mwm \
 				usr/bin/uil \
 				usr/bin/xmbind \
@@ -76,6 +76,23 @@ pkg_preinst() {
 			rm -f "${ROOT}"${i}
 		fi
 	done
+
+	for i in "${ROOT}"usr/$(get_libdir)/lib{Xm,Uil,Mrm}.*; do
+		if [[ -L "${i}" && $(readlink "${i}") =~ (openmo|less)tif- ]]; then
+			einfo "Cleaning up orphaned ${i} symlink ..."
+			rm -f "${i}"
+		fi
+	done
+
+	cd "${ROOT}"usr/share/man
+	find . -type l | while read i; do
+		if [[ $(readlink "${i}") =~ -(openmo|less)tif- ]]; then
+			((count++))
+			rm -f "${i}"
+		fi
+	done
+	[[ ${count} -ne 0 ]] && \
+		einfo "Cleaned up ${count} orphaned symlinks in ${ROOT}usr/share/man"
 }
 
 src_install() {
