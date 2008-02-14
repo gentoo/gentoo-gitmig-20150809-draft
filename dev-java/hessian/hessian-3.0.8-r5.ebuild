@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.8-r4.ebuild,v 1.2 2007/01/16 17:17:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.8-r5.ebuild,v 1.1 2008/02/14 01:16:18 wltjr Exp $
+
+EAPI=1
 
 inherit java-pkg-2 java-ant-2
 
@@ -13,7 +15,7 @@ SLOT="3.0.8"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc source"
 
-COMMON_DEP="=dev-java/servletapi-2.3*
+COMMON_DEP="java-virtuals/servlet-api:2.3
 		~dev-java/caucho-services-${PV}"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
@@ -40,7 +42,7 @@ src_unpack() {
 	cp ${FILESDIR}/build-${PV}.xml build.xml
 
 	# Populate classpath
-	echo "classpath=$(java-pkg_getjars servletapi-2.3):$(java-pkg_getjars caucho-services-3.0)" >> build.properties
+	echo "classpath=$(java-pkg_getjars servlet-api-2.3):$(java-pkg_getjars caucho-services-3.0)" >> build.properties
 }
 
 src_compile() {
