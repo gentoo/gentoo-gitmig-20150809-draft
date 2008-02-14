@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/descent2-demodata-1.0.ebuild,v 1.5 2007/09/06 22:03:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/descent2-demodata-1.0.ebuild,v 1.6 2008/02/14 22:21:38 nyhm Exp $
 
 inherit eutils games
 
@@ -25,8 +25,8 @@ IUSE=""
 #RDEPEND="|| (
 #	games-action/d2x-rebirth
 #	>=games-action/d2x-0.2.5-r3 )"
-DEPEND="!<games-action/d2x-0.2.5-r3
-	app-arch/unzip
+RDEPEND="!<games-action/d2x-0.2.5-r3"
+DEPEND="app-arch/unzip
 	app-arch/unarj"
 
 S=${WORKDIR}

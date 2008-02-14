@@ -1,6 +1,10 @@
 # ChangeLog for games-action/descent2-demodata
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/ChangeLog,v 1.3 2007/09/06 22:03:37 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/ChangeLog,v 1.4 2008/02/14 22:21:38 nyhm Exp $
+
+  14 Feb 2008; Tristan Heaven <nyhm@gentoo.org>
+  descent2-demodata-1.0.ebuild:
+  Fix RDEPEND to not include unzip and unarj
 
   06 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   descent2-demodata-1.0.ebuild:
