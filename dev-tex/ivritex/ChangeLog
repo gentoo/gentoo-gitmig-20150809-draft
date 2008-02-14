@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ivritex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.18 2008/02/14 13:35:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.19 2008/02/14 14:04:41 armin76 Exp $
+
+  14 Feb 2008; Raúl Porcel <armin76@gentoo.org> ivritex-1.1.2.ebuild:
+  alpha/ia64 stable wrt #209465
 
   14 Feb 2008; Jeroen Roovers <jer@gentoo.org> ivritex-1.1.2.ebuild:
   Stable for HPPA (bug #209465).

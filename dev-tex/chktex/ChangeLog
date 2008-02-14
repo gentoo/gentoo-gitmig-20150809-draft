@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.28 2008/02/14 13:20:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.29 2008/02/14 14:06:34 armin76 Exp $
+
+  14 Feb 2008; Raúl Porcel <armin76@gentoo.org> chktex-1.6.4.ebuild:
+  alpha/ia64 stable wrt #209465
 
   14 Feb 2008; Jeroen Roovers <jer@gentoo.org> chktex-1.6.4.ebuild:
   Stable for HPPA (bug #209468).
