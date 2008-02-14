@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/css-mode/css-mode-0.11.ebuild,v 1.9 2007/10/29 14:13:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/css-mode/css-mode-0.11.ebuild,v 1.10 2008/02/14 10:07:30 ulm Exp $
 
 inherit elisp
 
@@ -19,7 +19,7 @@ RDEPEND=""
 SITEFILE="50${PN}-gentoo.el"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	# Fix documentation
 	sed -i -e 's,HREF="/visuals/standard.css",HREF="standard.css",' \
