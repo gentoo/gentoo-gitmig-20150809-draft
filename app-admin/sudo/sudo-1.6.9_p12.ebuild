@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.9_p12.ebuild,v 1.1 2008/02/12 10:14:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.9_p12.ebuild,v 1.2 2008/02/14 14:55:06 flameeyes Exp $
 
-inherit eutils pam flag-o-matic
+inherit eutils pam flag-o-matic confutils
 
 DESCRIPTION="Allows users or groups to run commands as other users"
 HOMEPAGE="http://www.sudo.ws/"
@@ -23,6 +23,10 @@ RDEPEND="selinux? ( sec-policy/selinux-sudo )
 DEPEND="${RDEPEND} sys-devel/bison"
 
 S=${WORKDIR}/${P/_/}
+
+pkg_setup() {
+	confutils_use_conflict skey pam
+}
 
 src_unpack() {
 	unpack ${A}; cd "${S}"
@@ -180,12 +184,6 @@ rmpath() {
 }
 
 pkg_postinst() {
-	use skey && use pam && {
-		ewarn "sudo will not use skey authentication when compiled with"
-		ewarn "pam support."
-		ewarn "To allow users to authenticate with one time passwords,"
-		ewarn "you should unset the pam USE flag for sudo."
-	}
 	use ldap && {
 		ewarn "sudo uses the /etc/ldap.conf.sudo file for ldap configuration."
 	}
