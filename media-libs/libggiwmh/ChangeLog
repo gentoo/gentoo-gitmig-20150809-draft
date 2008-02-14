@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libggiwmh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.6 2008/01/26 18:06:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.7 2008/02/14 20:26:01 opfer Exp $
+
+  14 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  libggiwmh-0.3.2.ebuild:
+  stable x86, security bug 208566
 
   26 Jan 2008; Alexis Ballier <aballier@gentoo.org> libggiwmh-0.3.2.ebuild:
   keyword ~x86-fbsd too
