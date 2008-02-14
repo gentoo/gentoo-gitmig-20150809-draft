@@ -1,9 +1,9 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.14 2008/02/14 15:49:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.15 2008/02/14 16:42:16 markusle Exp $
 
   14 Feb 2008; Markus Dittrich <markusle@gentoo.org> paraview-3.2.1.ebuild:
-  Added pkg_config logic and EAPI=1 in response to updated qt4.eclass 
+  Added pkg_setup logic and EAPI=1 in response to updated qt4.eclass 
   (see bug #210062). Thanks much to Jakub Moc <jakub@gentoo.org> for
   the fix.
 
