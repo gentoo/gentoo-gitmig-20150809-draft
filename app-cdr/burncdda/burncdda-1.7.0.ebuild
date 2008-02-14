@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/burncdda-1.7.0.ebuild,v 1.1 2007/12/16 20:22:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/burncdda-1.7.0.ebuild,v 1.2 2008/02/14 18:42:48 nixnut Exp $
 
 DESCRIPTION="Console app for copying burning audio cds"
 SLOT="0"
@@ -8,7 +8,7 @@ SRC_URI="http://www.thenktor.homepage.t-online.de/burncdda/download/${P}.tar.gz"
 LICENSE="GPL-2"
 HOMEPAGE="http://www.thenktor.homepage.t-online.de/burncdda/index.html"
 IUSE="flac mp3 vorbis"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 
 DEPEND="dev-util/dialog
 	app-cdr/cdrdao
