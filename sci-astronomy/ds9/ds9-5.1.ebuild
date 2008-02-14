@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.1.ebuild,v 1.2 2008/01/23 14:29:16 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.1.ebuild,v 1.3 2008/02/14 23:32:16 bicatali Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -32,6 +32,8 @@ src_unpack() {
 	if [[ "${ARCH}" == "x86" ]]; then
 		epatch "${FILESDIR}"/${P}-gcc4.2-x86.patch
 	fi
+	# security fix in embedded tk (bug #208464)
+	epatch "${FILESDIR}"/${P}-tk-gif.patch
 }
 
 src_compile() {
