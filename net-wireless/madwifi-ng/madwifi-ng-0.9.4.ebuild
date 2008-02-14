@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3.3.ebuild,v 1.7 2008/02/14 05:25:13 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.ebuild,v 1.1 2008/02/14 05:25:13 steev Exp $
 
 inherit linux-mod
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/madwifi/madwifi-${PV}.tar.bz2"
 LICENSE="atheros-hal
 	|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="injection"
 
 DEPEND="app-arch/sharutils"
@@ -45,6 +45,7 @@ pkg_setup() {
 				ath_rate_amrr(net:"${S}"/ath_rate/amrr)
 				ath_rate_onoe(net:"${S}"/ath_rate/onoe)
 				ath_rate_sample(net:"${S}"/ath_rate/sample)
+				ath_rate_minstrel(net:"${S}"/ath_rate/minstrel)
 				ath_pci(net:"${S}"/ath)'
 
 	BUILD_PARAMS="KERNELPATH=${KV_OUT_DIR}"
@@ -56,7 +57,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.9.3-uudecode-gcda-fix.patch
 	if use injection; then epatch "${FILESDIR}"/${PN}-r1886.patch; fi
-	for dir in ath ath_hal net80211 ath_rate ath_rate/amrr ath_rate/onoe ath_rate/sample; do
+	for dir in ath ath_hal net80211 ath_rate ath_rate/amrr ath_rate/minstrel ath_rate/onoe ath_rate/sample; do
 		convert_to_m "${S}"/${dir}/Makefile
 	done
 }
@@ -82,4 +83,11 @@ pkg_postinst() {
 	einfo "As of net-wireless/madwifi-ng-0.9.3 rate control module selection is done at"
 	einfo "module load time via the 'ratectl' module parameter. USE flags amrr and onoe"
 	einfo "no longer serve any purpose."
+
+	elog "Please note: This release is based off of 0.9.3.3 and NOT trunk."
+	elog "# No AR5007 support in this release; experimental support is available
+	for i386 (32bit) in #1679"
+	elog "# No AR5008 support in this release; support is available in trunk "
+	elog "No, we will not apply the patch from 1679, if you must, please do so
+	in an overlay on your system. That is upstreams ticket 1679, not Gentoo's."
 }
