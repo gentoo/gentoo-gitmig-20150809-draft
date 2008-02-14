@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.497 2008/02/14 12:09:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.498 2008/02/14 13:00:14 jer Exp $
+
+  14 Feb 2008; Jeroen Roovers <jer@gentoo.org> portage-2.1.4.4.ebuild:
+  Stable for HPPA (bug #210031).
 
   14 Feb 2008; Raúl Porcel <armin76@gentoo.org> portage-2.1.4.4.ebuild:
   alpha/ia64/sparc stable wrt #210031
