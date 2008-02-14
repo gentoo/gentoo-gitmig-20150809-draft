@@ -1,6 +1,9 @@
 # ChangeLog for app-text/noweb
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.26 2008/02/10 18:29:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.27 2008/02/14 13:39:33 jer Exp $
+
+  14 Feb 2008; Jeroen Roovers <jer@gentoo.org> noweb-2.9-r6.ebuild:
+  Stable for HPPA (bug #209465).
 
 *noweb-2.11b (10 Feb 2008)
 
