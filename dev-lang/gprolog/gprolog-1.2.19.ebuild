@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.2.19.ebuild,v 1.8 2007/02/27 13:02:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.2.19.ebuild,v 1.9 2008/02/14 05:50:35 keri Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -26,11 +26,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/"${P}"-noexecstack.patch
 	epatch "${FILESDIR}"/"${P}"-test.patch
 	sed -i -e "s:TXT_FILES      = @TXT_FILES@:TXT_FILES=:" Makefile.in
+	eautoconf
 }
 
 src_compile() {
-	eautoconf
-
 	CFLAGS_MACHINE="`get-flag -march`"
 	CFLAGS_MACHINE="${CFLAGS_MACHINE} `get-flag -mcpu`"
 	CFLAGS_MACHINE="${CFLAGS_MACHINE} `get-flag -mtune`"
@@ -67,6 +66,6 @@ src_install() {
 		make install-examples || die "make install-examples failed"
 	fi
 
-	cd ${S}/..
+	cd "${S}"/..
 	dodoc ChangeLog NEWS PROBLEMS README VERSION
 }
