@@ -42,9 +42,7 @@
    </target>
 
    <target name="javadoc" depends="compile">
-      <javadoc destdir="${dist}/doc/api">
-      	<fileset dir="${src}"/>
-      </javadoc>
+	   <javadoc destdir="${dist}/doc/api" sourcepath="${src}"/>
    </target>
 
    <target name="clean">
