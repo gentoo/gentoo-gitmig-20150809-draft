@@ -1,0 +1,13 @@
+# ChangeLog for sys-cluster/openais
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/ChangeLog,v 1.1 2008/02/14 18:37:41 wschlich Exp $
+
+*openais-0.82 (14 Feb 2008)
+
+  14 Feb 2008; Wolfram Schlich <wschlich@gentoo.org>
+  +files/Makefile.inc-FLAGS.patch, +files/Makefile-ARCH.patch,
+  +files/Makefile-LIBDIR.patch, +files/Makefile-install.patch,
+  +files/ais.initd, +files/openais.conf, +metadata.xml,
+  +openais-0.82.ebuild:
+  initial import
+
