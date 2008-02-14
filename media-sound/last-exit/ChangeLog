@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/last-exit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.14 2007/09/02 14:48:52 steev Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.15 2008/02/14 05:41:21 steev Exp $
+
+  14 Feb 2008; Steev Klimaszewski <steev@gentoo.org> last-exit-4.0.ebuild,
+  last-exit-5.0.ebuild:
+  Add dbus-sharp and dbus-glib-sharp to dependency list. Should close bug
+  #207399.
 
   02 Sep 2007; Steev Klimaszewski <steev@gentoo.org> last-exit-5.0.ebuild:
   Add libsexy dependency to last-exit 5.0, thanks to Magnus

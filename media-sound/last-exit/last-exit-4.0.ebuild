@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-4.0.ebuild,v 1.6 2007/07/01 10:26:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-4.0.ebuild,v 1.7 2008/02/14 05:41:21 steev Exp $
 
 inherit mono gnome2 eutils autotools
 
@@ -25,7 +25,9 @@ RDEPEND=">=gnome-base/gconf-2.0
 		>=dev-dotnet/gnome-sharp-1.9.2
 		>=dev-dotnet/glade-sharp-1.9.2
 		>=dev-dotnet/gconf-sharp-1.9.2
-		>=dev-libs/dbus-glib-0.71"
+		>=dev-libs/dbus-glib-0.71
+		>=dev-dotnet/dbus-sharp-0.6.0
+		>=dev-dotnet/dbus-glib-sharp-0.4.1"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${PN}-4
