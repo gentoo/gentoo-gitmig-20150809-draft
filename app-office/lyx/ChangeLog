@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.116 2008/01/27 13:39:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.117 2008/02/14 13:41:20 jer Exp $
+
+  14 Feb 2008; Jeroen Roovers <jer@gentoo.org> lyx-1.5.3.ebuild:
+  Stable for HPPA (bug #209465).
 
   27 Jan 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   Add Pavel and me as his proxy to metadata
