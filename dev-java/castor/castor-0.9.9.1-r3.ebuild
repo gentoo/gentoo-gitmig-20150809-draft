@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.9.1-r1.ebuild,v 1.6 2007/05/19 17:01:57 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.9.1-r3.ebuild,v 1.1 2008/02/14 02:36:40 wltjr Exp $
 
+EAPI=1
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
 
@@ -9,22 +10,20 @@ DESCRIPTION="Data binding framework for Java"
 SRC_URI="http://dist.codehaus.org/${PN}/${PV}/${P}-src.tgz"
 HOMEPAGE="http://www.castor.org"
 LICENSE="Exolab"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0.9"
-IUSE="doc examples postgres source"
+IUSE="doc examples"
 
 COMMON_DEP="
-	>=dev-java/adaptx-0.9.5.3
+	dev-java/adaptx:0.9
 	>=dev-java/commons-logging-1.0.4
-	=dev-java/jakarta-oro-2.0*
-	=dev-java/jakarta-regexp-1.3*
-	>=dev-java/ldapsdk-4.1.7
-	=dev-java/servletapi-2.3*
-	=dev-java/xerces-1.3*
-	=dev-java/cglib-2.0*
-	postgres? ( =dev-java/jdbc2-postgresql-7.3* )"
+	dev-java/jakarta-oro:2.0
+	dev-java/jakarta-regexp:1.3
+	dev-java/ldapsdk:4.1
+	java-virtuals/servlet-api:2.3
+	dev-java/xerces:1.3
+	dev-java/cglib:2"
 RDEPEND=">=virtual/jre-1.4
-	dev-java/ant-core
 	${COMMON_DEP}"
 # Does not like Java 1.6's JDBC API
 DEPEND="|| (
@@ -42,16 +41,15 @@ src_unpack() {
 
 	cd "${S}/lib"
 	rm -f *.jar
-	java-pkg_jar-from ant-core ant.jar
+	java-pkg_jar-from --build-only ant-core ant.jar
 	java-pkg_jar-from adaptx-0.9
 	java-pkg_jar-from commons-logging
 	java-pkg_jar-from cglib-2
 	java-pkg_jar-from jakarta-oro-2.0 jakarta-oro.jar oro.jar
 	java-pkg_jar-from jakarta-regexp-1.3 jakarta-regexp.jar regexp.jar
-	java-pkg_jar-from servletapi-2.3
+	java-pkg_jar-from --virtual servlet-api-2.3
 	java-pkg_jar-from xerces-1.3
 	java-pkg_jar-from ldapsdk-4.1 ldapjdk.jar
-	use postgres && java-pkg_jar-from jdbc2-postgresql-5
 }
 
 src_compile() {
