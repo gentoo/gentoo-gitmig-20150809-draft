@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.34.1.ebuild,v 1.11 2008/02/13 14:03:16 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.34.1.ebuild,v 1.12 2008/02/14 03:22:45 halcy0n Exp $
 
 inherit flag-o-matic toolchain-funcs versionator
 
@@ -60,7 +60,13 @@ src_compile() {
 	#    and link targets to make it use the LDFLAGS var, or
 	# b) a simple dirty workaround by injecting the LDFLAGS in the LIBS env var
 	#    (which should not be set by us).
-	LIBS="${LDFLAGS}" CC=$(tc-getCC) ./build.sh ${toolset} $(use_with python) || die "building bjam failed"
+	if [[ -z "${LDFLAGS}" ]] ; then
+		CC=$(tc-getCC) ./build.sh ${toolset} $(use_with python) \
+			|| die "building bjam failed"
+	else
+		LIBS="${LDFLAGS}" CC=$(tc-getCC) ./build.sh ${toolset} \
+			$(use_with python) || die "building bjam failed"
+	fi
 }
 
 src_install() {
