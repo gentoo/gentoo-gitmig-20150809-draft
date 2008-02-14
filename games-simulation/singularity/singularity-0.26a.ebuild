@@ -1,15 +1,15 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/singularity-0.26a.ebuild,v 1.3 2008/02/14 02:04:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/singularity-0.26a.ebuild,v 1.4 2008/02/14 03:58:08 mr_bones_ Exp $
 
 inherit eutils games
 
-MUSIC=endgame-${PN}-music-001
+MUSIC=endgame-${PN}-music-005
 
 DESCRIPTION="A simulation of a true AI. Go from computer to computer, pursued by the entire world. Keep hidden, and you might have a chance."
 HOMEPAGE="http://www.emhsoft.com/singularity/"
 SRC_URI="http://www.emhsoft.com/singularity/${PN}_${PV}.tar.gz
-	music? ( http://www.emhsoft.com/singularity/${MUSIC}.zip )"
+	music? ( http://endgame-singularity.googlecode.com/files/${MUSIC}.zip )"
 
 LICENSE="GPL-2 CCPL-Attribution-ShareAlike-2.5"
 SLOT="0"
