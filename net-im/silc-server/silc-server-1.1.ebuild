@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-1.1.ebuild,v 1.2 2008/01/20 10:50:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-1.1.ebuild,v 1.3 2008/02/14 21:52:02 coldwind Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://silcnet.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE="ipv6 debug"
 
 RDEPEND="!<=net-im/silc-toolkit-0.9.12-r1
