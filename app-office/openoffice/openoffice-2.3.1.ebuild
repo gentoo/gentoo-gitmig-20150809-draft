@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1.ebuild,v 1.8 2008/01/19 03:16:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1.ebuild,v 1.9 2008/02/14 21:22:49 wolf31o2 Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -196,20 +196,20 @@ src_unpack() {
 	unpack ooo-build-${MY_PV}.tar.gz
 
 	# Hackish workaround for overlong path problem, see bug #130837
-	mv ${S_OLD} ${S} || die
+	mv "${S_OLD}" "${S}" || die
 
 	#Some fixes for our patchset
-	cd ${S}
-	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
-	epatch ${FILESDIR}/${PV}/ooo-env_log.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}/gentoo-${PV}-r1.diff"
+	epatch "${FILESDIR}/${PV}/ooo-env_log.diff"
 
 	if use ppc ; then
-		cp -f ${FILESDIR}/${PV}/disable-regcomp-java.diff ${S}/patches/src680 || die
-		cp -f ${FILESDIR}/${PV}/disable-regcomp-python.diff ${S}/patches/src680 || die
-		epatch ${FILESDIR}/${PV}/regcompapply.diff
+		cp -f "${FILESDIR}/${PV}/disable-regcomp-java.diff" "${S}/patches/src680" || die
+		cp -f "${FILESDIR}/${PV}/disable-regcomp-python.diff" "${S}/patches/src680" || die
+		epatch "${FILESDIR}/${PV}/regcompapply.diff"
 		#Fix for internal STLport
-		cp -f ${FILESDIR}/${PV}/stlport-ppc-buildfix.diff ${S}/patches/src680 || die
-		epatch ${FILESDIR}/${PV}/stlport-ppc-buildfix-apply.diff
+		cp -f "${FILESDIR}/${PV}/stlport-ppc-buildfix.diff" "${S}/patches/src680" || die
+		epatch "${FILESDIR}/${PV}/stlport-ppc-buildfix-apply.diff"
 	fi
 
 	#Use flag checks
@@ -301,8 +301,8 @@ src_compile() {
 	# Make sure gnome-users get gtk-support
 	export GTKFLAG="`use_enable gtk`" && use gnome && GTKFLAG="--enable-gtk"
 
-	cd ${S}
-	./configure ${MYCONF} \
+	cd "${S}"
+	./configure "${MYCONF}" \
 		--with-distro="Gentoo" \
 		--with-arch="${ARCH}" \
 		--host="${CHOST}" \
@@ -344,13 +344,13 @@ src_install() {
 	export PYTHONPATH=""
 
 	einfo "Preparing Installation"
-	make DESTDIR=${D} install || die "Installation failed!"
+	make DESTDIR="${D}" install || die "Installation failed!"
 
 	# Fix the permissions for security reasons
-	chown -R root:0 ${D}
+	chown -R root:0 "${D}"
 
 	# record java libraries
-	use java && java-pkg_regjar ${D}/usr/$(get_libdir)/openoffice/program/classes/*.jar
+	use java && java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/program/classes/*.jar
 
 }
 
