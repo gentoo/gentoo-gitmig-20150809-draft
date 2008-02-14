@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/gigabase
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.31 2007/12/19 19:37:33 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.32 2008/02/14 21:17:33 pva Exp $
+
+*gigabase-3.62 (14 Feb 2008)
+
+  14 Feb 2008; <pva@gentoo.org> +gigabase-3.62.ebuild:
+  Version bump.
 
   19 Dec 2007; Samuli Suominen <drac@gentoo.org> gigabase-3.61.ebuild:
   amd64 stable wrt #201840, run eautoreconf to fix libtool & asneeded issues.
