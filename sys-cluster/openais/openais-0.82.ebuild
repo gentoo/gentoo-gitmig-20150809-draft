@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-0.82.ebuild,v 1.1 2008/02/14 18:37:41 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-0.82.ebuild,v 1.2 2008/02/14 19:04:19 wschlich Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -37,6 +37,9 @@ src_compile() {
 src_install() {
 	emake LIBDIR="/usr/$(get_libdir)/openais" \
 		DESTDIR="${D}" install || die "make install failed"
+
+	insinto /etc/ais
+	doins "${FILESDIR}"/openais.conf
 
 	# http://bugs.gentoo.org/show_bug.cgi?id=160847#c16
 	dosym /usr/sbin/aisexec /sbin/aisexec
