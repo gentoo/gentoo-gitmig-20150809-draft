@@ -1,0 +1,12 @@
+Index: po/POTFILES.in
+===================================================================
+--- po/POTFILES.in	(Revision 525)
++++ po/POTFILES.in	(Arbeitskopie)
+@@ -11,6 +11,7 @@
+ src/menu-items.c
+ src/nm-gconf-wso.c
+ src/nm-gconf-wso-wpa-eap.c
++src/nm-wired-dialog.c
+ src/other-network-dialog.c
+ src/passphrase-dialog.c
+ src/vpn-password-dialog.c
