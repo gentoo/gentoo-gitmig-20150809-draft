@@ -1,6 +1,16 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.77 2008/01/18 16:29:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.78 2008/02/14 16:05:47 matsuu Exp $
+
+*ptex-3.1.10_p20080128 (14 Feb 2008)
+
+  14 Feb 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/ptex-3.1.10_p20080128-gentoo.patch, ptex-3.1.5-r1.ebuild,
+  ptex-3.1.10_p20071203.ebuild, ptex-3.1.10_p20071214.ebuild,
+  ptex-3.1.10_p20080107.ebuild, +ptex-3.1.10_p20080128.ebuild:
+  Version bumped.
+  Removed lesstif USE flag, bug #209859.
+  Clean up ebuild.
 
 *ptex-3.1.10_p20080107 (18 Jan 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071214.ebuild,v 1.2 2008/02/14 16:05:47 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20080128.ebuild,v 1.1 2008/02/14 16:05:47 matsuu Exp $
 
 TETEX_PV=3.0_p1
 
@@ -35,7 +35,7 @@ BUILD_DIR="${WORKDIR}/build/usr"
 LICENSE="GPL-2 BSD"
 IUSE="X motif Xaw3d neXt iconv unicode"
 
-DEPEND="!app-text/tetex
+RDEPEND="!app-text/tetex
 	!<app-text/ptetex-3.1.9
 	!app-text/dvipdfmx
 	!app-text/xdvik
@@ -51,6 +51,8 @@ DEPEND="!app-text/tetex
 			media-fonts/kochi-substitute
 		)
 	)"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}/${PTETEX}"
 
@@ -74,7 +76,7 @@ src_unpack() {
 
 	# Gentoo box reserves variable ${P}!!
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-3.1.10_p20071203-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 
 	cat <<EOF > "${S}"/my_option
 SRC_DIR="${WORKDIR}"
@@ -266,6 +268,8 @@ src_install() {
 	dosbin "${FILESDIR}"/texmf-update
 	#einfo "Making ls-R files ..."
 	#TEXMF="${D}"/usr/share/texmf "${D}"/usr/bin/mktexlsr || die
+
+	dodoc ChangeLog* README*
 }
 
 pkg_postinst() {

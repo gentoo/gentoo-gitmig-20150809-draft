@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071203.ebuild,v 1.8 2007/12/29 11:42:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071203.ebuild,v 1.9 2008/02/14 16:05:47 matsuu Exp $
 
 TETEX_PV=3.0_p1
 
@@ -33,7 +33,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 BUILD_DIR="${WORKDIR}/build/usr"
 
 LICENSE="GPL-2 BSD"
-IUSE="X motif lesstif Xaw3d neXt iconv unicode"
+IUSE="X motif Xaw3d neXt iconv unicode"
 
 DEPEND="!app-text/tetex
 	!<app-text/ptetex-3.1.9
