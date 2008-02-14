@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.2.ebuild,v 1.5 2007/09/23 16:03:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.2.ebuild,v 1.6 2008/02/14 03:59:39 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -41,11 +41,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${P}-source.tar.bz2
 	if use scenarios ; then
-		cd ${S}/scenario/
+		cd "${S}"/scenario/
 		unpack ${SCENARIOS_048}
 		unpack ${SCENARIOS_050}
 	fi
-	cd ${S}
+	cd "${S}"
 	# Don't pre-strip binaries (bug #137822)
 	sed -i -e '/+= -s$/s/-s//' Makefile || die "sed failed"
 	# Don't install into prefixed DATA_DIR
