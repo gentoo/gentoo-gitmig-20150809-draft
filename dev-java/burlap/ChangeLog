@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/burlap
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/ChangeLog,v 1.16 2007/06/10 13:56:15 betelgeuse Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/ChangeLog,v 1.17 2008/02/14 01:27:28 wltjr Exp $
+
+*burlap-3.0.8-r3 (14 Feb 2008)
+
+  14 Feb 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  +burlap-3.0.8-r3.ebuild:
+  Switched to java-virtuals/servlet-api and set EAPI=1. Fixed slot on hessian
+  3.0 -> 3.0.8.
 
   10 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
   -burlap-3.0.8-r1.ebuild:
