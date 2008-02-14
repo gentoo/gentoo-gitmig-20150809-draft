@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.28 2008/02/14 05:35:29 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.29 2008/02/14 07:08:29 steev Exp $
+
+*networkmanager-0.6.5.98 (14 Feb 2008)
+
+  14 Feb 2008; Steev Klimaszewski <steev@gentoo.org>
+  +files/NM-po-linguas.patch, +networkmanager-0.6.5.98.ebuild:
+  Add 0.6.5.98 (aka 0.6.6rc1) to the tree, include patch from Debian to use
+  po/LINGUAS.
 
   14 Feb 2008; Steev Klimaszewski <steev@gentoo.org>
   networkmanager-0.6.5_p20070823.ebuild,
