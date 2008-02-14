@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.12.ebuild,v 1.5 2008/02/11 14:10:18 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.12.ebuild,v 1.6 2008/02/14 13:12:49 jer Exp $
 
 inherit toolchain-funcs multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/cracklib/${MY_P}.tar.gz"
 
 LICENSE="CRACKLIB"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="nls python"
 
 DEPEND="python? ( dev-lang/python )"
