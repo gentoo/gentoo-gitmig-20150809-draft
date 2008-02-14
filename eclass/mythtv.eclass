@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv.eclass,v 1.8 2008/02/14 20:36:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv.eclass,v 1.9 2008/02/14 20:37:45 cardoe Exp $
 #
 # @ECLASS: mythtv.eclass
 # @MAINTAINER: Doug Goldstein <cardoe@gentoo.org>
@@ -54,6 +54,6 @@ fi
 
 mythtv-fixes_patch() {
 	if [[ -n ${PATCHREV} ]]; then
-		epatch ${WORKDIR}/${MY_PN}-${MY_PV}_svn${PATCHREV}.patch
+		epatch "${WORKDIR}/${MY_PN}-${MY_PV}_svn${PATCHREV}.patch"
 	fi
 }
