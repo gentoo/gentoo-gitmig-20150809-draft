@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopsspu/psemu-peopsspu-1.0.9.ebuild,v 1.3 2007/04/09 17:26:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopsspu/psemu-peopsspu-1.0.9.ebuild,v 1.4 2008/02/14 22:59:29 nyhm Exp $
 
 inherit autotools eutils games
 
@@ -10,14 +10,11 @@ SRC_URI="mirror://sourceforge/peops/PeopsSpu${PV//./}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~ppc x86"
 IUSE="alsa oss"
 
-RDEPEND="alsa? ( media-libs/alsa-lib )
-	app-arch/unzip
+DEPEND="alsa? ( media-libs/alsa-lib )
 	=x11-libs/gtk+-1*"
-DEPEND="${RDEPEND}
-	sys-devel/automake"
 
 S=${WORKDIR}
 
