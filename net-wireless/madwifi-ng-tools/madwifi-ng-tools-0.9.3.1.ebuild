@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/madwifi-ng-tools-0.9.3.1.ebuild,v 1.1 2007/05/23 16:02:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/madwifi-ng-tools-0.9.3.1.ebuild,v 1.2 2008/02/14 05:21:38 steev Exp $
 
 inherit toolchain-funcs
 
@@ -35,7 +35,7 @@ einfo "PV=$PV"
 		-e "s:CC =.*:CC = $(tc-getCC):" \
 		-e "s:CFLAGS=:CFLAGS+=:" \
 		-e "s:LDFLAGS=:LDFLAGS+=:" \
-		${S}/Makefile || die
+		"${S}"/Makefile || die
 }
 
 src_compile() {
@@ -51,7 +51,7 @@ src_install() {
 
 	# install headers for use by
 	# net-wireless/wpa_supplicant and net-wireless/hostapd
-	cd ${S}/..
+	cd "${S}"/..
 	insinto /usr/include/madwifi/include/
 	doins include/*.h
 	insinto /usr/include/madwifi/net80211

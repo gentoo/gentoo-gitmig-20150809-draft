@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/madwifi-ng-tools-0.9.3.ebuild,v 1.5 2008/02/14 05:21:38 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/madwifi-ng-tools-0.9.4.ebuild,v 1.1 2008/02/14 05:21:38 steev Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/madwifi/madwifi-${PV}.tar.bz2"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 DEPEND="virtual/libc"
@@ -48,6 +48,14 @@ src_install() {
 
 	dodir /sbin
 	mv "${D}"/usr/bin/wlanconfig "${D}"/sbin
+
+	# install headers for use by
+	# net-wireless/wpa_supplicant and net-wireless/hostapd
+	cd "${S}"/..
+	insinto /usr/include/madwifi/include/
+	doins include/*.h
+	insinto /usr/include/madwifi/net80211
+	doins net80211/*.h
 }
 
 pkg_postinst() {
@@ -59,4 +67,9 @@ pkg_postinst() {
 		ewarn "and either run 'udevstart' or reboot for the changes to take effect."
 		ewarn
 	fi
+	einfo
+	einfo "If you use net-wireless/wpa_supplicant or net-wireless/hostapd with
+madwifi"
+	einfo "you should remerge them now."
+	einfo
 }
