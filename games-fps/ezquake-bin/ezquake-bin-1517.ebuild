@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1517.ebuild,v 1.7 2007/12/25 22:17:21 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1517.ebuild,v 1.8 2008/02/15 00:57:53 wolf31o2 Exp $
 
 inherit games
 
-DESCRIPTION="Quakeworld client under active development, forked from fuhquake, including long-wanted mqwcl functionality and many more features."
+DESCRIPTION="Quakeworld client with mqwcl functionality and many more features."
 HOMEPAGE="http://ezquake.sf.net/"
 SRC_URI="http://wit.edu.pl/~rzadzinp/ezquake/releases/${PV}/${P}.tar.gz"
 
