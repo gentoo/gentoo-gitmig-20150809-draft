@@ -1,6 +1,16 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.28 2008/02/15 01:16:05 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.29 2008/02/15 03:10:53 williamh Exp $
+
+  15 Feb 2008; William Hubbs <williamh@gentoo.org>
+  -files/speech-dispatcher-0.3-gentoo.patch,
+  -files/speech-dispatcher-0.6.2-espeak.patch,
+  -files/speech-dispatcher-0.6.2-python.patch,
+  -speech-dispatcher-0.3.ebuild, -speech-dispatcher-0.5.ebuild,
+  -speech-dispatcher-0.6.ebuild, -speech-dispatcher-0.6.1.ebuild,
+  -speech-dispatcher-0.6.2.ebuild, -speech-dispatcher-0.6.2-r2.ebuild,
+  -speech-dispatcher-0.6.4.ebuild:
+  Removed old versions.
 
 *speech-dispatcher-0.6.6 (15 Feb 2008)
 
