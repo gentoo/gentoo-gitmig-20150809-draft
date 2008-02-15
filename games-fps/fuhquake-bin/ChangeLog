@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/fuhquake-bin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/ChangeLog,v 1.6 2007/12/25 22:18:34 solar Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/ChangeLog,v 1.7 2008/02/15 00:47:43 wolf31o2 Exp $
+
+  15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  fuhquake-bin-0.31.ebuild:
+  Fix RDEPEND.
 
   25 Dec 2007; <solar@gentoo.org> fuhquake-bin-0.31.ebuild:
   - binary packages that are linked with libc.so.6 need to use sys-libs/glibc

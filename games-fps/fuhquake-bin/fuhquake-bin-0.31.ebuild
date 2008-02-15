@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/fuhquake-bin-0.31.ebuild,v 1.7 2007/12/25 22:18:34 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/fuhquake-bin-0.31.ebuild,v 1.8 2008/02/15 00:47:43 wolf31o2 Exp $
 
 inherit games
 
@@ -20,10 +20,10 @@ RDEPEND="!svga? (
 	x11-libs/libXext )
 	sys-libs/glibc
 	svga? ( media-libs/svgalib )
-	amd64? ( app-emulation/emul-linux-x86-xlibs )
 	opengl? (
 		virtual/opengl
-	    x11-libs/libXext )"
+		x86? ( x11-libs/libXext )
+		amd64? ( app-emulation/emul-linux-x86-xlibs ) )"
 DEPEND="${RDEPEND}
 		app-arch/unzip"
 
