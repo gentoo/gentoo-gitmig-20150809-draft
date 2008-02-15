@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.551 2008/02/15 17:32:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.552 2008/02/15 18:54:36 drac Exp $
+
+  15 Feb 2008; Samuli Suominen <drac@gentoo.org> -files/mplayer-dpms.patch,
+  -files/mplayer-xshape.patch, -mplayer-1.0_rc1_p20070824.ebuild,
+  mplayer-1.0_rc2_p24929-r1.ebuild, mplayer-1.0_rc2_p24929-r2.ebuild,
+  -mplayer-1.0_rc2_p24929-r3.ebuild, mplayer-1.0_rc2_p25993.ebuild:
+  Remove libdts references, unused ebuilds and patches.
 
   15 Feb 2008; Jeroen Roovers <jer@gentoo.org>
   mplayer-1.0_rc2_p25993.ebuild:
