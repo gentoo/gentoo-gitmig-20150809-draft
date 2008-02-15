@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/l7-filter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.57 2008/02/01 10:50:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.58 2008/02/15 13:07:31 fmccor Exp $
+
+  15 Feb 2008; Ferris McCormick <fmccor@gentoo.org> l7-filter-2.17.ebuild:
+  Sparc stable, Bug #208148 --- it does patch the kernel source.
 
   01 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   l7-filter-2.17.ebuild:
