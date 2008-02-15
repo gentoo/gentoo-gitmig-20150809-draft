@@ -1,6 +1,17 @@
 # ChangeLog for www-apps/mediawiki
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.92 2007/11/26 12:00:23 tchiwam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.93 2008/02/15 11:04:09 wrobel Exp $
+
+*mediawiki-1.11.1 (15 Feb 2008)
+
+  15 Feb 2008; Gunnar Wrobel <wrobel@gentoo.org>
+  -files/jobindexlength-mysql5.patch, +files/postinstall-1.11-en.txt,
+  -files/jobindexlength-mysql4.patch, -files/postinstall-en.txt,
+  -mediawiki-1.6.10.ebuild, -mediawiki-1.9.4.ebuild,
+  -mediawiki-1.10.2.ebuild, -mediawiki-1.11.0.ebuild,
+  +mediawiki-1.11.1.ebuild:
+  Added mediawiki-1.11.1 to the tree. Removed the other branches (sec issue
+  #207757)
 
   26 Nov 2007; <tchiwam@gentoo.org> files/postinstall-1.5-en.txt,
   mediawiki-1.6.10.ebuild, mediawiki-1.8.5.ebuild, mediawiki-1.9.4.ebuild,

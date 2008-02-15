@@ -1,49 +1,46 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.10.2.ebuild,v 1.2 2007/11/26 12:00:23 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.1.ebuild,v 1.1 2008/02/15 11:04:09 wrobel Exp $
 
-inherit webapp depend.php versionator
+EAPI="1"
+inherit webapp depend.php versionator eutils
 
 MY_BRANCH=$(get_version_component_range 1-2)
 
 DESCRIPTION="The MediaWiki wiki web application (as used on wikipedia.org)"
 HOMEPAGE="http://www.mediawiki.org"
-SRC_URI="http://download.wikimedia.org/mediawiki/${MY_BRANCH}/${P/.0_/}.tar.gz"
-#SRC_URI="mirror://sourceforge/wikipedia/${P/_/}.tar.gz"
-RESTRICT="mirror"
+SRC_URI="http://download.wikimedia.org/mediawiki/${MY_BRANCH}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="imagemagick math mysql postgres restrict"
-
-S="${WORKDIR}/${P/_/}"
-#S="${WORKDIR}/${P/.0_/}"
+IUSE="imagemagick math mysql postgres restrict +ocamlopt"
 
 DEPEND="math? ( >=dev-lang/ocaml-3.0.6 )"
+RDEPEND="${DEPEND}
+	math? ( virtual/tetex
+		virtual/ghostscript
+		media-gfx/imagemagick )
+	imagemagick? ( media-gfx/imagemagick )"
 
-RDEPEND="
-		>=dev-lang/php-5.1.4-r6
-		math? (
-			virtual/tetex
-			virtual/ghostscript
-			media-gfx/imagemagick
-		)
-		imagemagick? (
-			media-gfx/imagemagick
-		)
-"
-
-need_php
+need_php5
 
 pkg_setup() {
 	webapp_pkg_setup
-	require_php_with_use pcre session
-	if use mysql ; then
-		require_php_with_use mysql
+	local flags="pcre session xml"
+	use mysql && flags="${flags} mysql"
+	use postgres && flags="${flags} postgres"
+	if ! PHPCHECKNODIE="yes" require_php_with_use ${flags} || \
+		! PHPCHECKNODIE="yes" require_php_with_any_use gd gd-external ; then
+			die "Re-install ${PHP_PKG} with ${flags} and either gd or gd-external"
 	fi
-	if use postgres ; then
-		require_php_with_use postgres
+
+	# see Bug 204812
+	if use ocamlopt && use math && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
+		eerror "In order to build ${PN} with native code support from ocaml"
+		eerror "You first need to have a native code ocaml compiler."
+		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
+		die "Please install ocaml with ocamlopt useflag"
 	fi
-	require_gd
 }
 
 src_unpack() {
@@ -62,6 +59,11 @@ src_compile() {
 	if use math; then
 		einfo "Compiling math support"
 		cd math || die
+		if ! use ocamlopt; then
+			sed -i -e "s/ocamlopt/ocamlc/" Makefile
+			sed -i -e "s/cmxa/cma/" Makefile
+			sed -i -e "s/cmx/cmo/g" Makefile
+		fi
 		emake || die
 	else
 		einfo "No math support enabled. Skipping."
@@ -82,6 +84,7 @@ src_install() {
 		"includes"
 		"includes/api"
 		"includes/cbt"
+		"includes/filerepo"
 		"includes/media"
 		"includes/normal"
 		"includes/templates"
@@ -110,32 +113,19 @@ src_install() {
 		"skins/myskin"
 		"skins/simple"
 	)
+
 	insinto ${MY_HTDOCSDIR}
 	doins *.php *.inc *.phtml
 	for DIR in ${DIRS[*]}; do
-		dodir ${MY_HTDOCSDIR}/${DIR}
 		insinto ${MY_HTDOCSDIR}/${DIR}
 		doins ${DIR}/*
-		test -f ${DIR}/.htaccess && doins ${DIR}/.htaccess
+		[[ -f ${DIR}/.htaccess ]] && doins ${DIR}/.htaccess
 	done
 
 	# installing some docs
-	local DOCS=(
-		"AdminSettings.sample"
-		"COPYING"
-		"FAQ"
-		"HISTORY"
-		"INSTALL"
-		"README"
-		"RELEASE-NOTES"
-		"UPGRADE"
-	)
-	for DOC in ${DOCS[*]}; do
-		dodoc "${DOC}"
-		rm -f "${DOC}"
-	done
-	dodoc docs/*.txt
-	rm -f docs/*.txt
+	local DOCS="AdminSettings.sample FAQ HISTORY INSTALL README RELEASE-NOTES UPGRADE"
+	dodoc ${DOCS} docs/*.txt
+	rm -f ${DOCS} COPYING docs/*.txt
 
 	docinto php-memcached
 	dodoc docs/php-memcached/*
@@ -152,13 +142,12 @@ src_install() {
 	# install instructions guide the user to enable the feature.
 	if use math; then
 		einfo "Installing math support"
-		dodir ${MY_HTDOCSDIR}/math
 		exeinto ${MY_HTDOCSDIR}/math
 		doexe math/texvc
 
 		# Docs
 		docinto math
-		dodoc math/README math/TODO
+		dodoc math/{README,TODO}
 
 		# Working directories.  Server writeable.
 		dodir ${MY_HTDOCSDIR}/images/math
@@ -167,6 +156,6 @@ src_install() {
 		webapp_serverowned ${MY_HTDOCSDIR}/images/tmp
 	fi
 
-	webapp_postinst_txt en "${FILESDIR}/postinstall-1.5-en.txt"
+	webapp_postinst_txt en "${FILESDIR}/postinstall-1.11-en.txt"
 	webapp_src_install
 }
