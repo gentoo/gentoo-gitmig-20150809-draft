@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2003-data
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ChangeLog,v 1.7 2006/10/24 23:04:38 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ChangeLog,v 1.8 2008/02/15 01:32:55 wolf31o2 Exp $
+
+  15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-data-2107.ebuild:
+  Fix quoting and some minor cleanups.
 
   24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2003-data-2107.ebuild:
