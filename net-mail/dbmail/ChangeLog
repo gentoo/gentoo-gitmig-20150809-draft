@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dbmail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.22 2008/02/14 07:49:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.23 2008/02/15 19:30:16 mr_bones_ Exp $
+
+  15 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org> dbmail-2.2.7.ebuild,
+  dbmail-2.2.8.ebuild, dbmail-2.2.9.ebuild, dbmail-2.3.2.ebuild:
+  correct sqlite->sqlite3 in deps
 
   14 Feb 2008; Christian Faulhammer <opfer@gentoo.org> dbmail-2.2.8.ebuild:
   stable x86, bug 209964
