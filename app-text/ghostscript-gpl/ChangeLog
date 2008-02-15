@@ -1,6 +1,29 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.41 2008/02/15 15:03:52 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.42 2008/02/15 16:05:55 tgurr Exp $
+
+  15 Feb 2008; Timo Gurr <tgurr@gentoo.org>
+  -files/ghostscript-esp-8.15.2-FAPIcidfmap.cjk,
+  -files/ghostscript-esp-8.15.2-cidfmap.cjk,
+  -files/ghostscript-afpl-8.54-big-cmap-post.patch,
+  -files/ghostscript-afpl-8.54-cups-destdir.diff,
+  -files/ghostscript-afpl-8.54-cups-lib.patch,
+  -files/ghostscript-afpl-8.54-destdir.diff,
+  -files/ghostscript-afpl-8.54-gtk2.patch,
+  -files/ghostscript-afpl-8.54-ps2epsi-afpl.diff,
+  -files/ghostscript-afpl-8.54-rinkj.patch,
+  -files/ghostscript-afpl-8.54-segfault.patch,
+  -files/ghostscript-afpl-8.57-cups-lib.patch,
+  -files/ghostscript-8.60-fPIC.patch,
+  -files/ghostscript-8.60-ijs-krgb.patch,
+  -files/ghostscript-8.60-include.patch,
+  -files/ghostscript-8.60-multilib.patch,
+  -files/ghostscript-8.60-noopt.patch,
+  -files/ghostscript-8.60-scripts.patch, -files/djvu-gs-gpl-8.60.patch,
+  -files/ghostscript-CVE-2007-2721.patch, -files/djvu-gs-gpl.patch,
+  -files/gdevcups.patch, -files/gdevhl12-hl1250.mak:
+  Clean out old ghostscript-gpl patches, everything has been moved into a
+  patch tarball.
 
 *ghostscript-gpl-8.61-r2 (15 Feb 2008)
 
