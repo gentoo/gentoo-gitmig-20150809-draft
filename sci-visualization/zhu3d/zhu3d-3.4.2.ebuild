@@ -1,7 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-3.4.2.ebuild,v 1.2 2008/02/15 10:03:22 bicatali Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-3.4.2.ebuild,v 1.3 2008/02/15 17:17:18 mr_bones_ Exp $
 
 EAPI=1
 
