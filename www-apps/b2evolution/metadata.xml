@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>web-apps</herd>
-<maintainer>
-	<email>dsd@gentoo.org</email>
-	<name>Daniel Drake</name>
-</maintainer>
 </pkgmetadata>
 
