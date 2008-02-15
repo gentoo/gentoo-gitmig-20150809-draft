@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.122 2008/01/28 12:02:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.123 2008/02/15 15:39:00 drac Exp $
+
+  15 Feb 2008; Samuli Suominen <drac@gentoo.org> avidemux-2.4.ebuild:
+  Move fontconfig behind truetype flag to match other ebuilds in tree.
 
   28 Jan 2008; Samuli Suominen <drac@gentoo.org> avidemux-2.4.ebuild:
   Change qt dep to >=4.3 wrt #207743.

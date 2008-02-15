@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.ebuild,v 1.2 2008/01/28 12:02:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.ebuild,v 1.3 2008/02/15 15:39:00 drac Exp $
 
 inherit cmake-utils eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="aac aften alsa amrnb arts dts encode esd fontconfig jack libsamplerate
+IUSE="aac aften alsa amrnb arts dts encode esd jack libsamplerate
 x264 xv xvid vorbis truetype gtk qt4"
 
 RDEPEND="dev-libs/libxml2
@@ -21,7 +21,6 @@ RDEPEND="dev-libs/libxml2
 	media-libs/libsdl
 	>=dev-libs/glib-2
 	alsa? ( media-libs/alsa-lib )
-	fontconfig? ( media-libs/fontconfig )
 	xv? ( x11-libs/libXv )
 	esd? ( media-sound/esound )
 	jack? ( media-sound/jack-audio-connection-kit )
@@ -34,7 +33,8 @@ RDEPEND="dev-libs/libxml2
 	aac? ( media-libs/faad2 )
 	vorbis? ( media-libs/libvorbis )
 	arts? ( kde-base/arts )
-	truetype? ( media-libs/freetype )
+	truetype? ( media-libs/freetype
+		media-libs/fontconfig )
 	gtk? ( >=x11-libs/gtk+-2
 		x11-libs/libX11 )
 	qt4? ( >=x11-libs/qt-4.3
@@ -72,7 +72,7 @@ src_compile() {
 	#use sdl || mycmakeargs="${mycmakeargs} -DNO_SDL=1"
 
 	# ConfigureChecks.cmake -> ADM_CHECK_HL -> cmake/adm_checkHeaderLib.cmake
-	use fontconfig || mycmakeargs="${mycmakeargs} -DNO_FontConfig=1"
+	use truetype || mycmakeargs="${mycmakeargs} -DNO_FontConfig=1"
 	use xv || mycmakeargs="${mycmakeargs} -DNO_Xvideo=1"
 	use esd || mycmakeargs="${mycmakeargs} -DNO_Esd=1"
 	use jack || mycmakeargs="${mycmakeargs} -DNO_Jack=1"
