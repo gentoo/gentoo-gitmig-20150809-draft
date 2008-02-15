@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.21 2008/02/10 21:10:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.22 2008/02/15 21:47:52 george Exp $
+
+*gnat-gcc-4.3_pre20080208 (15 Feb 2008)
+
+  15 Feb 2008; George Shapovalov <george@gentoo.org>
+  +gnat-gcc-4.3_pre20080208.ebuild:
+  added the 4.3 snapshot in preparison for release
 
   10 Feb 2008; Markus Meier <maekke@gentoo.org> gnat-gcc-3.4.6.ebuild:
   x86 stable, bug #209000
