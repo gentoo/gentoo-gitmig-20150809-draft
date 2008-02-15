@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/libnjb-2.2.5.ebuild,v 1.6 2007/08/13 21:05:15 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/libnjb-2.2.5.ebuild,v 1.7 2008/02/15 13:06:50 drac Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libnjb/${P}.tar.gz"
 IUSE=""
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 ~x86 ~x86-fbsd"
 
 DEPEND=">=dev-libs/libusb-0.1.7"
 
