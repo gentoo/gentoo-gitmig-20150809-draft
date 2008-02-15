@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.11-r1.ebuild,v 1.7 2007/07/25 20:39:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.11-r1.ebuild,v 1.8 2008/02/15 09:31:36 alonbl Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -21,7 +21,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-0.6.11-ifdhandlerv2.patch"
 	rm "src/pcsc/ifdhandler.h"
