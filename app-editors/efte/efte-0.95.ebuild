@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/efte-0.95.ebuild,v 1.1 2008/02/15 06:42:24 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/efte-0.95.ebuild,v 1.2 2008/02/15 07:12:54 omp Exp $
 
 DESCRIPTION="A fast text editor supporting folding, syntax highlighting, etc."
 HOMEPAGE="http://efte.sourceforge.net"
@@ -22,7 +22,7 @@ src_compile() {
 	cmake \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DBUILD_GPM=$(use gpm && echo ON || echo OFF) \
+		-DUSE_GPM=$(use gpm && echo ON || echo OFF) \
 		-DBUILD_X=$(use X && echo ON || echo OFF) \
 		./
 	emake || die "emake failed"
