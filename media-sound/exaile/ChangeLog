@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/exaile
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.36 2007/12/22 14:30:31 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.37 2008/02/15 19:01:39 drac Exp $
+
+  15 Feb 2008; Samuli Suominen <drac@gentoo.org> metadata.xml:
+  Reassign to sound herd.
 
   22 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   exaile-0.2.11.1.ebuild:
