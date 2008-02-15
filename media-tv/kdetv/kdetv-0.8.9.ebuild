@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9.ebuild,v 1.8 2007/11/27 10:20:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9.ebuild,v 1.9 2008/02/15 16:57:14 zlin Exp $
 
 LANGS="bg ca br da de cs cy el es et fi ga fr gl hu is it lt nb mt nl pa pl pt ro ru rw ta sr sv tr en_GB pt_BR zh_CN sr@Latn"
 LANGS_DOC="da et fr it nl pt ru sv"
@@ -33,6 +33,7 @@ RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 	x11-libs/libXrender"
 
 DEPEND="${RDEPEND}
+	x11-proto/xf86dgaproto
 	x11-proto/videoproto
 	virtual/os-headers"
 

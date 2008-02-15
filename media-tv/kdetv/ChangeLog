@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/kdetv
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.35 2007/11/27 10:20:15 zzam Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.36 2008/02/15 16:57:14 zlin Exp $
+
+  15 Feb 2008; Bo Ørsted Andresen <zlin@gentoo.org> kdetv-0.8.9.ebuild:
+  Add dependency on x11-proto/xf86dgaproto (bug #205589).
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> kdetv-0.8.9.ebuild:
   Fixed quoting.
