@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-tls
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.47 2008/01/18 16:47:09 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.48 2008/02/15 09:04:35 alonbl Exp $
+
+  15 Feb 2008; Alon Bar-Lev <alonbl@gentoo.org> -qca-tls-1.0.ebuild,
+  -qca-tls-1.0-r2.ebuild, qca-tls-1.0-r3.ebuild, qca-tls-1.0-r4.ebuild:
+  Fix URI, bug#210171, thanks to  Thomas Wouters, cleanups
 
 *qca-tls-1.0-r4 (18 Jan 2008)
 

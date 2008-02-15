@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0-r4.ebuild,v 1.1 2008/01/18 16:47:09 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0-r4.ebuild,v 1.2 2008/02/15 09:04:35 alonbl Exp $
 
 inherit eutils
 
-DESCRIPTION="plugin to provide SSL/TLS capability to programs that utilize the Qt Cryptographic Architecture (QCA)"
+DESCRIPTION="plugin to provide SSL/TLS capability to programs that utilize QCA"
 HOMEPAGE="http://delta.affinix.com/qca/"
-SRC_URI="http://delta.affinix.com/qca/${P}.tar.bz2"
+SRC_URI="http://delta.affinix.com/download/${PN%-*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
