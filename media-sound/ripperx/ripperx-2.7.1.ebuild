@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.1.ebuild,v 1.2 2008/01/19 21:47:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.1.ebuild,v 1.3 2008/02/15 20:40:25 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -44,6 +44,5 @@ src_install() {
 
 pkg_postinst() {
 	elog "Original ${MY_PN} can be found from http://ripperx.sf.net, this is a"
-	elog "unofficial patch release adding GTK+-2 support. Continue reading.."
-	elog "And as of now, 20080119, in portage as ~media-sound/${PN}-2.7.0."
+	elog "unofficial patch release adding GTK+-2 support."
 }
