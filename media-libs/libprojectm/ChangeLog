@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libprojectm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.19 2007/11/12 04:31:43 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.20 2008/02/15 16:10:32 drac Exp $
+
+  15 Feb 2008; Samuli Suominen <drac@gentoo.org> -libprojectm-0.99.ebuild,
+  -libprojectm-1.01.ebuild:
+  Remove old.
 
   12 Nov 2007; Samuli Suominen <drac@gentoo.org> libprojectm-1.01-r1.ebuild:
   Multilib issues wrt #198260, thanks to Jorge Manuel B. S. Vicetto.

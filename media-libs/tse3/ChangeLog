@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tse3
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.26 2008/01/10 19:44:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.27 2008/02/15 16:13:02 drac Exp $
+
+  15 Feb 2008; Samuli Suominen <drac@gentoo.org> -tse3-0.3.1.ebuild:
+  Remove old.
 
   10 Jan 2008; nixnut <nixnut@gentoo.org> tse3-0.3.1-r1.ebuild:
   Stable on ppc wrt bug 205101
