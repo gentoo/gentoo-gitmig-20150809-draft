@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.111 2008/02/15 16:47:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.112 2008/02/15 20:53:00 nixnut Exp $
+
+  15 Feb 2008; nixnut <nixnut@gentoo.org> R-2.6.1-r1.ebuild:
+  Stable on ppc wrt bug 210229
 
   15 Feb 2008; Jeroen Roovers <jer@gentoo.org> R-2.6.1-r1.ebuild:
   Stable for HPPA (bug #210229).
