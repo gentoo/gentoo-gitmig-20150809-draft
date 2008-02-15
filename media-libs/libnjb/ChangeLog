@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.39 2008/02/15 13:06:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.40 2008/02/15 13:16:38 drac Exp $
+
+  15 Feb 2008; Samuli Suominen <drac@gentoo.org> +libnjb-2.2.4.ebuild:
+  Restore last x86 stable ebuild, sorry.
 
 *libnjb-2.2.6 (15 Feb 2008)
 
