@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.175 2008/02/13 17:28:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.176 2008/02/15 20:45:24 armin76 Exp $
+
+*git-sources-2.6.25_rc1-r4 (15 Feb 2008)
+
+  15 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  git-sources-2.6.25_rc1-r2.ebuild, +git-sources-2.6.25_rc1-r4.ebuild:
+  Version bump, mark -r2 -alpha because it doesn't work
 
 *git-sources-2.6.25_rc1-r2 (13 Feb 2008)
 
