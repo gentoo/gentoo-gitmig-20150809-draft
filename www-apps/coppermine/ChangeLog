@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/coppermine
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.21 2008/02/05 15:16:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.22 2008/02/15 10:18:40 wrobel Exp $
+
+*coppermine-1.4.16 (15 Feb 2008)
+
+  15 Feb 2008; Gunnar Wrobel <wrobel@gentoo.org> -coppermine-1.4.14.ebuild,
+  +coppermine-1.4.16.ebuild:
+  Added coppermine-1.4.16 to the tree (sec issue #208349).
 
   05 Feb 2008; Benedikt Böhm <hollow@gentoo.org> coppermine-1.4.14.ebuild:
   fix depend.apache usage wrt #208584

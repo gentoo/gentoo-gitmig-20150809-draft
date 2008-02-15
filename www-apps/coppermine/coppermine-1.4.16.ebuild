@@ -1,13 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.14.ebuild,v 1.2 2008/02/05 15:16:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.16.ebuild,v 1.1 2008/02/15 10:18:40 wrobel Exp $
 
-inherit webapp versionator depend.php depend.apache
+inherit webapp versionator depend.php
 
-MY_PV=$(delete_all_version_separators)
 DESCRIPTION="Feature rich web picture gallery script written in PHP using GD or ImageMagick lib with a MySQL backend."
 HOMEPAGE="http://coppermine.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/cpg${MY_PV}.zip"
+SRC_URI="mirror://sourceforge/${PN}/cpg${PV}.zip"
 
 LICENSE="GPL-2"
 KEYWORDS="~sparc ~x86 ~amd64"
@@ -15,12 +14,12 @@ IUSE="imagemagick"
 
 DEPEND="app-arch/unzip"
 
-RDEPEND="virtual/httpd-php
+RDEPEND="virtual/httpd-cgi
 	imagemagick? ( media-gfx/imagemagick )"
 
-need_apache2
-
 S=${WORKDIR}/cpg$(delete_all_version_separators)
+
+need_php
 
 pkg_setup() {
 	webapp_pkg_setup
