@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.98 2008/02/09 13:21:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.99 2008/02/15 20:28:17 drac Exp $
+
+  15 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  timidity++-2.13.2-r5.ebuild:
+  Allow slang-2.
 
   09 Feb 2008; Samuli Suominen <drac@gentoo.org>
   timidity++-2.13.2-r6.ebuild:
