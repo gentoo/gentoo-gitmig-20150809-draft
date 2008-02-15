@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.55 2008/02/09 06:11:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.56 2008/02/15 20:23:28 drac Exp $
+
+  15 Feb 2008; Samuli Suominen <drac@gentoo.org> libcaca-0.99_beta11.ebuild,
+  libcaca-0.99_beta12.ebuild:
+  Tested with slang-2 so allow it in depends.
 
   09 Feb 2008; Samuli Suominen <drac@gentoo.org> libcaca-0.99_beta13.ebuild:
   Fix libcaca to work with slang 2.1.3.
