@@ -10,7 +10,8 @@ app-editors/emacs-cvs xpm
 # for a sucessful build (see #163921).
 # 3008/02/05 - Chris Gianelloni <wolf31o2@gentoo.org>
 # Added regex for gnucash for 2008.0's release.
-=dev-scheme/guile-1.8* deprecated regex
+# Added threads for autogen/anjuta for 2008.0's release.
+=dev-scheme/guile-1.8* deprecated regex threads
 
 # 2007/10/11 - Samuli Suominen <drac@gentoo.org>
 # Replaced noamazon USE flag with amazon for bug 134493, comment #1.
