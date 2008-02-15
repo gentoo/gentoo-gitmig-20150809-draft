@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/stgit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.25 2008/02/13 16:58:18 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.26 2008/02/15 07:23:16 gregkh Exp $
+
+*stgit-0.14.1 (15 Feb 2008)
+
+  15 Feb 2008; Greg Kroah-Hartman <gregkh@gentoo.org> +stgit-0.14.1.ebuild:
+  0.14.1 release
 
 *stgit-0.14 (13 Feb 2008)
 
