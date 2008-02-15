@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggiwmh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.9 2008/02/15 17:27:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.10 2008/02/15 19:57:50 ranger Exp $
+
+  15 Feb 2008; Brent Baude <ranger@gentoo.org> libggiwmh-0.3.2.ebuild:
+  libgg gets ppc64 love for mplayer dep
 
   15 Feb 2008; Jeroen Roovers <jer@gentoo.org> libggiwmh-0.3.2.ebuild:
   Stable for HPPA (bug #208566).
