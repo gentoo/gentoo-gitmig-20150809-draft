@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-2.6.2.ebuild,v 1.2 2007/12/14 19:59:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-2.6.2.ebuild,v 1.3 2008/02/15 11:14:25 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python
 
@@ -45,6 +45,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-2.6.0-hdf5-zlib.patch
 	epatch "${FILESDIR}"/${PN}-2.6.0-include.patch
+	epatch "${FILESDIR}"/${P}-tkImgGIF.patch
 }
 
 src_compile() {
