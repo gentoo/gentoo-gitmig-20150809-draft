@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggiwmh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.10 2008/02/15 19:57:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.11 2008/02/15 20:29:31 armin76 Exp $
+
+  15 Feb 2008; Raúl Porcel <armin76@gentoo.org> libggiwmh-0.3.2.ebuild:
+  alpha/ia64 stable wrt security #208566
 
   15 Feb 2008; Brent Baude <ranger@gentoo.org> libggiwmh-0.3.2.ebuild:
   libgg gets ppc64 love for mplayer dep
