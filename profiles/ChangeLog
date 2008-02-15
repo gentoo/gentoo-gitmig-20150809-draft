@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1117 2008/02/14 10:09:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1118 2008/02/15 09:43:18 wrobel Exp $
+
+  14 Feb 2008; Gunnar Wrobel <wrobel@gentoo.org> package.mask:
+  Masked www-apps/wordpress for security reasons.
 
   14 Feb 2008; Ulrich Mueller <ulm@gentoo.org> updates/1Q-2008,
   package.mask:
