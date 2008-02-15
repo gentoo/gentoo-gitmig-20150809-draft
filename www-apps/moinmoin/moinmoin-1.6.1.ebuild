@@ -1,19 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.6.0.ebuild,v 1.2 2008/01/25 08:16:45 wrobel Exp $
-
-inherit webapp
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.6.1.ebuild,v 1.1 2008/02/15 14:26:30 wrobel Exp $
 
 MY_PN="moin"
-S=${WORKDIR}/${MY_PN}-${PV}
+PYTHON_MODNAME="MoinMoin"
+inherit webapp distutils
 
 DESCRIPTION="Python WikiClone"
-SRC_URI="mirror://sourceforge/${MY_PN}/${MY_PN}-${PV}.tar.gz"
+SRC_URI="http://static.moinmo.in/files/${MY_PN}-${PV}.tar.gz"
 HOMEPAGE="http://moinmo.in/"
+
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 IUSE="rss"
-
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
 
@@ -22,17 +21,14 @@ RDEPEND="${DEPEND}
 	virtual/httpd-cgi
 	>=dev-python/docutils-0.4
 	rss? ( >=dev-python/pyxml-0.8.4 )"
-
-src_compile() {
-	python setup.py build || die "python build failed"
-}
+S=${WORKDIR}/${MY_PN}-${PV}
 
 src_install () {
 	webapp_src_preinst
 
-	python setup.py install --root="${D}" --prefix=/usr install || die "python install failed"
+	distutils_src_install
 
-	dodoc ChangeLog README docs/CHANGES* docs/HACKS docs/README.migration
+	dodoc README docs/CHANGES* docs/HACKS docs/README.migration
 	dohtml docs/INSTALL.html
 	dodir "${MY_HOSTROOTDIR}/${PF}"
 
@@ -58,7 +54,9 @@ src_install () {
 
 pkg_postinst() {
 	ewarn "If you are upgrading from 1.3.x, please read"
-	ewarn "/usr/share/doc/${PF}/README.migration.gz"
+	ewarn "README.migration in /usr/share/doc/${PF}"
 	ewarn "and http://moinmoin.wikiwikiweb.de/HelpOnUpdating"
+
+	distutils_pkg_postinst
 	webapp_pkg_postinst
 }
