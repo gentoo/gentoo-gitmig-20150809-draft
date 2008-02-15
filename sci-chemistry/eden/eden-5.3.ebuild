@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3.ebuild,v 1.4 2007/04/28 16:42:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3.ebuild,v 1.5 2008/02/15 11:46:17 markusle Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -11,9 +11,11 @@ SRC_URI="http://www.edencrystallography.org/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="double-precision"
+IUSE="double-precision bindist"
 RDEPEND="=sci-libs/fftw-2*
-	sci-libs/gsl"
+		!bindist? ( sci-libs/gsl )
+		bindist? ( <sci-libs/gsl-1.10 )"
+
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}"
 SRC="${S}/source"
@@ -21,7 +23,7 @@ SRC="${S}/source"
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/makefile-fixes.patch
+	epatch "${FILESDIR}"/makefile-fixes.patch
 
 	sed -i \
 		-e "s:^\(FFTW.*=\).*:\1 /usr:g" \
@@ -50,7 +52,7 @@ src_install() {
 	dodir /usr/bin
 	make install || die "install failed"
 
-	cd ${S}
+	cd "${S}"
 	exeinto ${EDENHOME}/python
 	doexe python/*
 
@@ -62,19 +64,19 @@ src_install() {
 
 	dodoc manual/UserManual.pdf
 
-cat << EOF > ${T}/eden
+cat << EOF > "${T}"/eden
 #!/bin/bash
 export EDENHOME="${EDENHOME}"
 ${EXE} \$*
 EOF
 
-	dobin ${T}/eden
+	dobin "${T}"/eden
 
-cat << EOF > ${T}/ieden
+cat << EOF > "${T}"/ieden
 #!/bin/bash
 export EDENHOME="${EDENHOME}"
 \${EDENHOME}/python/eden.py
 EOF
 
-	dobin ${T}/ieden
+	dobin "${T}"/ieden
 }

@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/eden
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/ChangeLog,v 1.8 2007/04/28 16:42:41 swegener Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/ChangeLog,v 1.9 2008/02/15 11:46:17 markusle Exp $
+
+  15 Feb 2008; Markus Dittrich <markusle@gentoo.org> eden-5.3.ebuild:
+  Fixed QA issues and added bindist for >=gsl-1.10 (see bug #199451).
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> eden-5.3.ebuild:
   Drop dodir from dodir/*into combination.
