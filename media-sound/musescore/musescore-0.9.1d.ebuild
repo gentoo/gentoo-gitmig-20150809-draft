@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.9.1d.ebuild,v 1.2 2008/02/01 20:10:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.9.1d.ebuild,v 1.3 2008/02/15 12:36:18 drac Exp $
 
 inherit cmake-utils eutils font
 
@@ -13,12 +13,12 @@ SRC_URI="mirror://sourceforge/mscore/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
-IUSE="doc jack"
+IUSE="doc"
 
 RDEPEND=">=x11-libs/qt-4.3
 	media-sound/fluidsynth
 	media-libs/alsa-lib
-	jack? ( media-sound/jack-audio-connection-kit )"
+	media-sound/jack-audio-connection-kit"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.6
 	dev-util/pkgconfig
