@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.108 2008/02/14 14:00:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.109 2008/02/15 11:53:03 fmccor Exp $
+
+  15 Feb 2008; Ferris McCormick <fmccor@gentoo.org> R-2.6.1-r1.ebuild:
+  Sparc stable, Bug #210229.  Working since 18 January.
 
 *R-2.6.2 (13 Feb 2008)
 
