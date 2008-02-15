@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.190 2008/02/14 06:57:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.191 2008/02/15 00:16:37 wolf31o2 Exp $
+
+  15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  -genkernel-3.4.10_pre1.ebuild, genkernel-3.4.10_pre2.ebuild,
+  genkernel-9999.ebuild:
+  I've modified the ebuilds to use dobin for installing the main genkernel
+  script and to install AUTHORS via dodoc. Removing the 3.4.10_pre1 ebuild,
+  since I don't really want anyone using that version.
 
 *genkernel-3.4.10_pre2 (14 Feb 2008)
 

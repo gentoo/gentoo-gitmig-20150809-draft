@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.10_pre2.ebuild,v 1.1 2008/02/14 06:57:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.10_pre2.ebuild,v 1.2 2008/02/15 00:16:37 wolf31o2 Exp $
 
 # genkernel-9999		-> latest SVN
 # genkernel-9999.REV	-> use SVN REV
@@ -80,17 +80,16 @@ src_install() {
 	doins "${T}"/genkernel.conf || die "doins genkernel.conf"
 
 	doman genkernel.8 || die "doman"
-	dodoc ChangeLog README TODO || die "dodoc"
+	dodoc AUTHORS ChangeLog README TODO || die "dodoc"
 
-	rm -f genkernel.8 ChangeLog README TODO genkernel.conf
+	dobin genkernel || die "dobin genkernel"
+
+	rm -f genkernel genkernel.8 AUTHORS ChangeLog README TODO genkernel.conf
 
 	insinto /usr/share/genkernel
 	doins -r "${S}"/* || die "doins"
 	use ibm && cp "${S}"/ppc64/kernel-2.6-pSeries "${S}"/ppc64/kernel-2.6 || \
 		cp "${S}"/ppc64/kernel-2.6.g5 "${S}"/ppc64/kernel-2.6
-
-	dodir /usr/bin
-	dosym /usr/share/genkernel/genkernel /usr/bin/genkernel
 
 	cp -f "${DISTDIR}"/dmraid-${VERSION_DMRAID}.tar.bz2 \
 	"${DISTDIR}"/LVM2.${VERSION_LVM}.tgz \
