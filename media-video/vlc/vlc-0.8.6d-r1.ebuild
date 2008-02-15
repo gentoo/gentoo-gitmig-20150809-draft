@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6d-r1.ebuild,v 1.5 2008/02/01 15:50:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6d-r1.ebuild,v 1.6 2008/02/15 18:41:39 drac Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -56,7 +56,7 @@ RDEPEND="
 			>=media-libs/libmatroska-0.8.0 )
 		mp3? ( media-libs/libmad )
 		a52? ( >=media-libs/a52dec-0.7.4-r3 )
-		dts? ( || ( media-libs/libdca >=media-libs/libdts-0.0.2-r3 ) )
+		dts? ( media-libs/libdca )
 		flac? ( media-libs/libogg
 			>=media-libs/flac-1.1.2 )
 		mpeg? ( >=media-libs/libmpeg2-0.3.2 )

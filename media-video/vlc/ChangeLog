@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.294 2008/02/01 15:50:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.295 2008/02/15 18:41:39 drac Exp $
+
+  15 Feb 2008; Samuli Suominen <drac@gentoo.org> vlc-0.8.6d.ebuild,
+  vlc-0.8.6d-r1.ebuild:
+  Remove libdts references.
 
   01 Feb 2008; Raúl Porcel <armin76@gentoo.org> vlc-0.8.6d-r1.ebuild:
   alpha/sparc stable wrt security #205299
