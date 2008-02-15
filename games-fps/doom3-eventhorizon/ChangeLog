@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/doom3-eventhorizon
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-eventhorizon/ChangeLog,v 1.1 2006/11/01 21:48:58 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-eventhorizon/ChangeLog,v 1.2 2008/02/15 00:35:59 wolf31o2 Exp $
+
+  15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  doom3-eventhorizon-1.2.ebuild:
+  Marking stable on amd64/x86 as there's no code differences, just ebuild
+  differences, and this has been in the tree for a long time with no bugs
+  filed.
 
 *doom3-eventhorizon-1.2 (01 Nov 2006)
 

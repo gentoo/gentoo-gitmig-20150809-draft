@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-phantasm/doom3-phantasm-1.2.ebuild,v 1.1 2006/11/15 20:00:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-phantasm/doom3-phantasm-1.2.ebuild,v 1.2 2008/02/15 00:41:21 wolf31o2 Exp $
 
 MOD_DESC="single-player short mod based on the Phantasm horror movies"
 MOD_NAME="Phantasm"
@@ -15,7 +15,6 @@ SRC_URI="mirror://filefront/Doom_III/Mods/Addons/phantasm_d3_${PV}.zip
 	ftp://files.mhgaming.com/doom3/mods/phantasm_d3_${PV}.zip"
 
 LICENSE="as-is"
-KEYWORDS="~amd64 ~x86"
 
 RDEPEND="games-fps/doom3"
 

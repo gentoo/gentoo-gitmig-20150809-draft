@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-hellcampaign/doom3-hellcampaign-1-r1.ebuild,v 1.1 2006/10/30 22:39:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-hellcampaign/doom3-hellcampaign-1-r1.ebuild,v 1.2 2008/02/15 00:36:44 wolf31o2 Exp $
 
 MOD_DESC="map pack for Doom 3"
 MOD_NAME="Hell Campaign"
@@ -14,8 +14,6 @@ SRC_URI="mirror://filefront/Doom_III/Maps/Map_Packs/sp_hc_final.zip
 	mirror://filefront/Doom_III/Maps/Map_Packs/hardcorehellcampaign_patch.zip"
 
 LICENSE="as-is"
-
-KEYWORDS="~amd64 ~x86"
 
 RDEPEND="games-fps/doom3"
 

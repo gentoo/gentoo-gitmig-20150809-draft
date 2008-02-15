@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/doom3-lms
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/ChangeLog,v 1.7 2006/10/30 23:42:14 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/ChangeLog,v 1.8 2008/02/15 00:38:34 wolf31o2 Exp $
+
+  15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> -doom3-lms-3.ebuild,
+  doom3-lms-3-r1.ebuild:
+  Marking stable on amd64/x86 as there's no code differences, just ebuild
+  differences, and this has been in the tree for a long time with no bugs
+  filed.
 
 *doom3-lms-3-r1 (30 Oct 2006)
 

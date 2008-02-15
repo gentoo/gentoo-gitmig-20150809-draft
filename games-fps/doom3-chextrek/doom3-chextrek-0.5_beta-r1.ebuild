@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/doom3-chextrek-0.5_beta-r1.ebuild,v 1.2 2007/03/12 14:29:13 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/doom3-chextrek-0.5_beta-r1.ebuild,v 1.3 2008/02/15 00:32:04 wolf31o2 Exp $
 
 MOD_DESC="Green slimeballs mod for kids"
 MOD_NAME="Chex Trek: Beyond the Quest"
@@ -17,8 +17,6 @@ HOMEPAGE="http://www.chextrek.xv15mods.com/"
 SRC_URI="mirror://filefront/Doom_III/Supported_Mods/Beta_Releases/Chex_Trek_Beyond_the_Quest/${MY_P}.zip"
 
 LICENSE="as-is"
-
-KEYWORDS="~amd64 ~x86"
 
 RDEPEND="games-fps/doom3"
 

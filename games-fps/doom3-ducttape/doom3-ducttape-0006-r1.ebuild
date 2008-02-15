@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-ducttape/doom3-ducttape-0006-r1.ebuild,v 1.1 2006/10/30 21:13:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-ducttape/doom3-ducttape-0006-r1.ebuild,v 1.2 2008/02/15 00:33:29 wolf31o2 Exp $
 
 MOD_DESC="sticks flashlights to your machinegun and shotgun"
 MOD_NAME="Duct Tape"
@@ -12,8 +12,6 @@ HOMEPAGE="http://ducttape.glenmurphy.com/"
 SRC_URI="http://ducttape.glenmurphy.com/ducttape${PV}.zip"
 
 LICENSE="as-is"
-
-KEYWORDS="-* ~amd64 ~x86"
 
 RDEPEND="games-fps/doom3"
 

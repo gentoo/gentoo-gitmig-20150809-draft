@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-cdoom/doom3-cdoom-1-r1.ebuild,v 1.2 2008/02/15 00:24:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-cdoom/doom3-cdoom-1-r1.ebuild,v 1.3 2008/02/15 00:28:48 wolf31o2 Exp $
 
 MOD_DESC="Doom 1 conversion for Doom 3"
 MOD_NAME="Classic Doom"
@@ -15,8 +15,6 @@ SRC_URI="mirror://filefront/Doom_III/Hosted_Mods/Final_Releases/classic_doom3_ve
 	mirror://gentoo/${PN}.png"
 
 LICENSE="as-is"
-
-KEYWORDS="~amd64 ~x86"
 
 src_unpack() {
 	games-mods_src_unpack
