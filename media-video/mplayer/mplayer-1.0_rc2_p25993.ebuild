@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p25993.ebuild,v 1.4 2008/02/15 01:55:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p25993.ebuild,v 1.5 2008/02/15 17:32:40 jer Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -132,7 +132,7 @@ DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc64 sparc x86 ~x86-fbsd"
 
 pkg_setup() {
 
