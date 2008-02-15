@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8279 2008/02/15 12:52:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8280 2008/02/15 14:35:13 wrobel Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,16 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
+
+# Gunnar Wrobel <wrobel@gentoo.org> (14 Feb 2008)
+# Outdated package. See
+# https://bugs.gentoo.org/show_bug.cgi?id=209030
+www-apps/disc-cover
+
+# Gunnar Wrobel <wrobel@gentoo.org> (14 Feb 2008)
+# Broken and outdated package. See
+# https://bugs.gentoo.org/show_bug.cgi?id=209029
+www-apps/bugs-bug-genie
 
 # Gunnar Wrobel <wrobel@gentoo.org> (14 Feb 2008)
 # Masked due to constant security bugs.
