@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/webmo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.14 2008/02/05 08:47:31 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.15 2008/02/15 08:53:27 dberkholz Exp $
+
+*webmo-8.0.010 (15 Feb 2008)
+
+  15 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/8.0.010-add-gamess-data-directory.patch,
+  +files/8.0.010-gentoo-locations.patch, +webmo-8.0.010.ebuild:
+  Bump.
 
   05 Feb 2008; Benedikt Böhm <hollow@gentoo.org> webmo-6.1.010.ebuild,
   webmo-7.0.003.ebuild:
