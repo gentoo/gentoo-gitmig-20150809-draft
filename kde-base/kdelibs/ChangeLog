@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.508 2008/02/07 00:12:40 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.509 2008/02/15 23:49:33 zlin Exp $
+
+*kdelibs-4.0.1-r1 (15 Feb 2008)
+
+  15 Feb 2008; Bo Ørsted Andresen <zlin@gentoo.org> +files/FindXine.cmake,
+  +kdelibs-4.0.1-r1.ebuild:
+  Some external applications need FindXine.cmake. Therefore upstream moved it
+  to kdelibs in trunk. Doing the same for :kde-4 (bug #209701).
 
 *kdelibs-4.0.1 (06 Feb 2008)
 
