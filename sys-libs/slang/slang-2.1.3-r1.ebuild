@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.1.3-r1.ebuild,v 1.6 2008/02/11 15:46:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.1.3-r1.ebuild,v 1.7 2008/02/15 19:24:50 drac Exp $
 
 inherit eutils
 
@@ -13,11 +13,20 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cjk pcre png"
 
-RDEPEND="pcre? ( dev-libs/libpcre )
+RDEPEND="sys-libs/ncurses
+	pcre? ( dev-libs/libpcre )
 	png? ( media-libs/libpng )
 	cjk? ( dev-libs/oniguruma )"
 DEPEND="${RDEPEND}
 	!=sys-libs/slang-2.1.2"
+
+pkg_setup() {
+	local fail="Re-emerge sys-libs/ncurses with USE -minimal."
+	if built_with_use sys-libs/ncurses minimal; then
+		eerror "${fail}"
+		die "${fail}"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
