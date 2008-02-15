@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.32 2008/02/13 18:14:49 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.33 2008/02/15 08:40:37 alonbl Exp $
+
+  15 Feb 2008; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/truecrypt-5.0-nogui.patch, truecrypt-5.0a.ebuild:
+  Add X USE flag, based on http://home.att.net/~Tom.Horsley/tah-tc-5.0.tar.gz,
+  bug#210175, thanks for Quosek for the reference
 
 *truecrypt-5.0a (13 Feb 2008)
 

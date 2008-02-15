@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-5.0a.ebuild,v 1.1 2008/02/13 18:14:49 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-5.0a.ebuild,v 1.2 2008/02/15 08:40:37 alonbl Exp $
 
 inherit eutils toolchain-funcs multilib wxwidgets
 
@@ -11,7 +11,7 @@ SRC_URI="${P}.tar.gz"
 LICENSE="truecrypt-collective-1.3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="X"
 RESTRICT="fetch"
 
 RDEPEND="sys-fs/fuse
@@ -26,19 +26,28 @@ pkg_nofetch() {
 	einfo "Then put the file in ${DISTDIR}/${P}.tar.gz"
 }
 
+pkg_setup() {
+	WX_GTK_VER="2.8"
+	if use X; then
+		need-wxwidgets unicode
+	else
+		need-wxwidgets base-unicode
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-5.0-build.patch"
 	epatch "${FILESDIR}/${PN}-5.0-64bit.patch"
 	epatch "${FILESDIR}/${PN}-5.0-bool.patch"
+	epatch "${FILESDIR}/${PN}-5.0-nogui.patch"
 }
 
 src_compile() {
 	local EXTRA
-	WX_GTK_VER="2.8"
-	need-wxwidgets unicode
 	use amd64 && EXTRA="${EXTRA} USE64BIT=1"
+	use X || EXTRA="${EXTRA} NOGUI=1"
 	emake \
 		${EXTRA} \
 		NOSTRIP=1 \
