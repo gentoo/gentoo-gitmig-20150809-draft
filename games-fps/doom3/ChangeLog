@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/ChangeLog,v 1.31 2007/07/31 14:32:50 cardoe Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/ChangeLog,v 1.32 2008/02/15 00:22:43 wolf31o2 Exp $
+
+  15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  doom3-1.3.1302-r2.ebuild:
+  Fixing quoting.
 
   31 Jul 2007; Doug Goldstein <cardoe@gentoo.org> doom3-1.3.1302-r2.ebuild:
   nvidia-legacy-drivers has merged with nvidia-drivers

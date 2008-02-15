@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302-r2.ebuild,v 1.8 2007/07/31 14:32:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302-r2.ebuild,v 1.9 2008/02/15 00:22:43 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -69,7 +69,7 @@ src_install() {
 		games_make_wrapper doom3-ded ./doomded.x86 "${dir}" "${dir}"
 	fi
 
-	doicon ${DISTDIR}/doom3.png || die "Copying icon"
+	doicon "${DISTDIR}"/doom3.png || die "Copying icon"
 
 	prepgamesdirs
 	make_desktop_entry doom3 "Doom III" doom3.png
