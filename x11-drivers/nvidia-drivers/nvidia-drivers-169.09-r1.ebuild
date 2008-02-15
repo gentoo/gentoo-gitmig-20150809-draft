@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.09-r1.ebuild,v 1.1 2008/02/15 17:17:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.09-r1.ebuild,v 1.2 2008/02/15 17:20:50 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -188,7 +188,7 @@ src_unpack() {
 
 	if ! use x86-fbsd; then
 		cd "${WORKDIR}"
-		bash ${DISTDIR}/${NV_PACKAGE}${PKG_V}.run --extract-only
+		bash "${DISTDIR}"/${NV_PACKAGE}${PKG_V}.run --extract-only
 	else
 		unpack ${A}
 	fi
@@ -448,7 +448,7 @@ pkg_postinst() {
 	# Switch to the nvidia implementation
 	eselect opengl set --use-old nvidia
 
-	echo 
+	echo
 	elog "You must be in the video group to use the NVIDIA device"
 	elog "For more info, read the docs at"
 	elog "http://www.gentoo.org/doc/en/nvidia-guide.xml#doc_chap3_sect6"
