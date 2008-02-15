@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.51 2008/01/31 13:26:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.52 2008/02/15 15:03:42 chainsaw Exp $
+
+  15 Feb 2008; Tony Vroon <chainsaw@gentoo.org> lilo-22.8-r2.ebuild:
+  Mark 22.8-r2 stable on AMD64 & X86. Need to make sure we are ahead of
+  coreutils to avoid dolilo breakage.
 
 *lilo-22.8-r2 (31 Jan 2008)
 
