@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.33 2008/01/23 12:46:37 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.34 2008/02/15 08:59:07 alonbl Exp $
+
+  15 Feb 2008; Alon Bar-Lev <alonbl@gentoo.org> qca-1.0-r2.ebuild,
+  qca-1.0-r3.ebuild, qca-2.0.0-r2.ebuild:
+  Fix URI, bug#210171, thanks to  Thomas Wouters
 
   23 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> ChangeLog:
   Fix blocker.

@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0-r3.ebuild,v 1.1 2008/01/18 16:44:57 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0-r3.ebuild,v 1.2 2008/02/15 08:59:07 alonbl Exp $
 
 inherit eutils qt3
 
 DESCRIPTION="Qt Cryptographic Architecture (QCA)"
 HOMEPAGE="http://delta.affinix.com/qca/"
-SRC_URI="http://delta.affinix.com/${PN}/${P}.tar.bz2"
+SRC_URI="http://delta.affinix.com/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
