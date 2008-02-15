@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.14 2007/03/12 15:30:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.15 2008/02/15 01:24:16 wolf31o2 Exp $
 
 inherit games
 
@@ -25,25 +25,24 @@ dir=${GAMES_PREFIX_OPT}/ut2003
 Ddir=${D}/${dir}
 
 src_unpack() {
-	unzip ${DISTDIR}/${A} || die "unpacking"
+	unzip -qq "${DISTDIR}"/${A} || die "unpacking"
 	# This is done since the files are the same
-	rm ${S}/Textures/LastManStanding.utx
+	rm -f "${S}"/Textures/LastManStanding.utx
 }
 
 src_install() {
-	dodir ${dir}
-	insinto ${dir}/Help
-	newins ${S}/Help/BonusPackReadme.txt EpicBonusPack.README || die "README"
+	insinto "${dir}"/Help
+	newins "${S}"/Help/BonusPackReadme.txt EpicBonusPack.README || die "README"
 
-	exeinto ${dir}
-	doexe ${FILESDIR}/epic-installer
-	dodir ${dir}/System
+	exeinto "${dir}"
+	doexe "${FILESDIR}"/epic-installer
+	dodir "${dir}"/System
 
-	cp -r ${S}/{Maps,Sounds,StaticMeshes,Textures} ${Ddir} \
+	cp -r "${S}"/{Maps,Sounds,StaticMeshes,Textures} "${Ddir}" \
 		|| die "Copying Maps/Sounds/Textures"
-	cp ${S}/System/{*.{det,est,frt,int,itt,kot,tmt,u},User.ini} ${Ddir}/System \
-		|| die "Copying System files"
-	cp -v ${S}/System/Manifest.ini ${Ddir}/System/Manifest.ini.epic \
+	cp "${S}"/System/{*.{det,est,frt,int,itt,kot,tmt,u},User.ini} \
+		"${Ddir}"/System || die "Copying System files"
+	cp -v "${S}"/System/Manifest.ini "${Ddir}"/System/Manifest.ini.epic \
 		|| die "Copying Manifest"
 
 	prepgamesdirs

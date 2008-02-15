@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/lsdldoom-1.4.4.4.ebuild,v 1.14 2007/01/27 00:50:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/lsdldoom-1.4.4.4.ebuild,v 1.15 2008/02/15 01:04:11 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -20,8 +20,8 @@ DEPEND="media-libs/libsdl
 
 src_unpack() {
 	unpack ${A}
-	cp -r ${S}{,.orig}
-	cd ${S}
+	cp -r "${S}"{,.orig}
+	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-gentoo-paths.patch \
 		"${FILESDIR}/${P}"-gcc41.patch
 	epatch "${FILESDIR}"/${PV}-gcc34.patch #77846

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-matrix/quake3-matrix-2.4_beta-r1.ebuild,v 1.1 2006/10/23 22:58:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-matrix/quake3-matrix-2.4_beta-r1.ebuild,v 1.2 2008/02/15 01:11:05 wolf31o2 Exp $
 
 MOD_DESC="Matrix conversion mod"
 MOD_NAME="matrix"
@@ -32,6 +32,6 @@ pkg_nofetch() {
 
 src_unpack() {
 	games-mods_src_unpack
-	mkdir -p ${S}/matrix
+	mkdir -p "${S}"/matrix
 	mv *.pk3 *.txt matrix
 }

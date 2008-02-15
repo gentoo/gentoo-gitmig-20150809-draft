@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.12 2007/03/12 15:28:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.13 2008/02/15 01:17:36 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -32,13 +32,14 @@ src_unpack() {
 }
 
 src_install() {
-	insinto ${dir}
+	insinto "${dir}"
 
 	games_make_wrapper ut2003 ./ut2003 "${dir}" "${dir}"
 	make_desktop_entry ut2003 "Unreal Tournament 2003" ut2003.xpm
 
+	# TODO: change this to use doexe/doins
 	# this brings our install up to the newest version
-	cp -r ${S}/ut2003-lnx-2225/* ${Ddir} || die
+	cp -r "${S}"/ut2003-lnx-2225/* "${Ddir}" || die
 
 	prepgamesdirs
 }
@@ -48,7 +49,7 @@ pkg_postinst() {
 
 	# here is where we check for the existence of a cdkey...
 	# if we don't find one, we ask the user for it
-	if [[ -f ${dir}/System/cdkey ]] ; then
+	if [[ -f "${dir}"/System/cdkey ]] ; then
 		elog "A cdkey file is already present in ${dir}/System"
 	else
 		ewarn "You MUST run this before playing the game:"
@@ -88,7 +89,7 @@ pkg_config() {
 			if [[ "${CDKEY1}" == "${CDKEY2}" ]] ; then
 				echo "${CDKEY1}" | tr a-z A-Z > ${dir}/System/cdkey
 				einfo "Thank you!"
-				chown games:games ${dir}/System/cdkey
+				chown games:games "${dir}"/System/cdkey
 				break
 			else
 				eerror "Your CD key entries do not match.  Try again."

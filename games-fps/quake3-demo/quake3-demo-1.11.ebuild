@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.23 2007/07/31 14:36:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.24 2008/02/15 01:09:40 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -36,6 +36,9 @@ RDEPEND="sys-libs/glibc
 
 S=${WORKDIR}
 
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
+
 GAMES_CHECK_LICENSE="yes"
 
 src_unpack() {
@@ -43,26 +46,25 @@ src_unpack() {
 }
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
-	dodir ${dir}
+	dodir "${dir}"
 
-	cp -rf Help ${D}/${dir}/
-	cp -rf demoq3 ${D}/${dir}/
+	cp -rf Help "${Ddir}"
+	cp -rf demoq3 "${Ddir}"
 
-	exeinto ${dir}
+	exeinto "${dir}"
 	newexe bin/x86/glibc-2.0/q3ded q3ded.x86
 	newexe bin/x86/glibc-2.0/q3demo q3demo.x86
 	use 3dfx && doexe bin/x86/glibc-2.0/libMesaVoodooGL.so*
-	#use opengl && dosym /usr/lib/libGL.so ${dir}/libGL.so
+	#use opengl && dosym /usr/lib/libGL.so "${dir}"/libGL.so
 
-	doexe ${FILESDIR}/{q3demo,q3demo-ded}
-	dodir ${GAMES_BINDIR}
-	dosym ${dir}/q3demo ${GAMES_BINDIR}/q3demo
-	dosym ${dir}/q3demo-ded ${GAMES_BINDIR}/q3demo-ded
-	dosed "s:GENTOO_DIR:${dir}:" ${dir}/q3demo
-	dosed "s:GENTOO_DIR:${dir}:" ${dir}/q3demo-ded
+	doexe "${FILESDIR}"/{q3demo,q3demo-ded}
+	dodir "${GAMES_BINDIR}"
+	dosym "${dir}"/q3demo "${GAMES_BINDIR}"/q3demo
+	dosym "${dir}"/q3demo-ded "${GAMES_BINDIR}"/q3demo-ded
+	dosed "s:GENTOO_DIR:${dir}:" "${dir}"/q3demo
+	dosed "s:GENTOO_DIR:${dir}:" "${dir}"/q3demo-ded
 
-	insinto ${dir}
+	insinto "${dir}"
 	doins README icon.*
 
 	make_desktop_entry q3demo "Quake III (Demo)"

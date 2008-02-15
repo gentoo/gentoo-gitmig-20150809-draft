@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.10 2007/11/06 21:03:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.11 2008/02/15 01:01:55 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -69,11 +69,11 @@ src_install() {
 	if use dedicated ; then
 		doexe "Enemy Territory 2.60b"/linux/etded.x86 || die "doexe failed"
 		games_make_wrapper et-ded ./etded.x86 ${dir}
-		newinitd ${S}/et-ded.rc et-ded || die "newinitd failed"
+		newinitd "${S}"/et-ded.rc et-ded || die "newinitd failed"
 		dosed "s:GAMES_USER_DED:${GAMES_USER_DED}:" /etc/init.d/et-ded
 		dosed "s:GENTOO_DIR:${GAMES_BINDIR}:" /etc/init.d/et-ded
-		newconfd ${S}/et-ded.conf.d et-ded || die "newconfd failed"
-#		newenvd ${S}/et-ded.env.d et-ded || die "newenvd failed"
+		newconfd "${S}"/et-ded.conf.d et-ded || die "newconfd failed"
+#		newenvd "${S}"/et-ded.env.d et-ded || die "newenvd failed"
 		# TODO: move this to /var/ perhaps ?
 		dodir "${dir}/etwolf-homedir"
 		keepdir "${dir}/etwolf-homedir"

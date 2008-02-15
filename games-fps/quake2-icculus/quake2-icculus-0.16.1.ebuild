@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.20 2007/11/20 02:17:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.21 2008/02/15 01:06:36 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -59,7 +59,7 @@ src_unpack() {
 			-e 's:^read ans:ans=yes :' ${shar} \
 			|| die "sed ${shar} failed"
 		echo ">>> Unpacking ${shar} to ${PWD}"
-		env PATH=${T}:${PATH} unshar ${shar} || die "unpacking ${shar} failed"
+		env PATH="${T}:${PATH}" unshar ${shar} || die "unpacking ${shar} failed"
 		rm ${shar}
 	done
 	if use xatrix ; then

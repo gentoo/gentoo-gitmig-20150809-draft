@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-matrix
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-matrix/ChangeLog,v 1.3 2006/10/23 22:58:23 wolf31o2 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-matrix/ChangeLog,v 1.4 2008/02/15 01:11:05 wolf31o2 Exp $
+
+  15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake3-matrix-2.4_beta-r1.ebuild:
+  Fix quoting.
 
 *quake3-matrix-2.4_beta-r1 (23 Oct 2006)
 

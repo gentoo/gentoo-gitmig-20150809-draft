@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2003
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.44 2007/03/12 15:28:47 genone Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.45 2008/02/15 01:17:36 wolf31o2 Exp $
+
+  15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225-r4.ebuild:
+  Fix quoting.
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> ut2003-2225-r4.ebuild:
   Replacing einfo with elog

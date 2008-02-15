@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.22 2007/03/12 15:19:54 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.23 2008/02/15 01:15:31 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -45,33 +45,32 @@ pkg_setup() {
 src_unpack() {
 	cdrom_get_cds sof.xpm
 	unpack_makeself
-	tar xzf ${CDROM_ROOT}/paks.tar.gz -C ${T} \
+	tar xzf "${CDROM_ROOT}"/paks.tar.gz -C "${T}" \
 		|| die "uncompressing data"
-	tar xzf ${CDROM_ROOT}/binaries.tar.gz -C ${T} \
+	tar xzf "${CDROM_ROOT}"/binaries.tar.gz -C "${T}" \
 		|| die "uncompressing binaries"
 }
 
 src_install() {
-	dodir ${dir}
 	einfo "Copying files... this may take a while..."
-	exeinto ${dir}
-	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/sof || die "doexe"
-	insinto ${dir}
-	doins -r ${T}/* || die "doins data"
-	doins ${CDROM_ROOT}/{README,kver.pub,sof.xpm} || die "doins"
+	exeinto "${dir}"
+	doexe "${CDROM_ROOT}"/bin/x86/glibc-2.1/sof || die "doexe"
+	insinto "${dir}"
+	doins -r "${T}"/* || die "doins data"
+	doins "${CDROM_ROOT}"/{README,kver.pub,sof.xpm} || die "doins"
 
-	cd ${S}
+	cd "${S}"
 	export _POSIX2_VERSION=199209
 	loki_patch --verify patch.dat
-	loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
+	loki_patch patch.dat "${Ddir}" >& /dev/null || die "patching"
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
-	find ${Ddir} -exec touch '{}' \;
+	find "${Ddir}" -exec touch '{}' \;
 
 	games_make_wrapper sof ./sof "${dir}" "${dir}"
-	doicon ${CDROM_ROOT}/sof.xpm
+	doicon "${CDROM_ROOT}"/sof.xpm
 	make_desktop_entry sof "Soldier of Fortune" sof.xpm
 
 	prepgamesdirs

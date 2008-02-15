@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-cm/ut2003-bonuspack-cm-1.ebuild,v 1.3 2006/03/31 21:22:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-cm/ut2003-bonuspack-cm-1.ebuild,v 1.4 2008/02/15 01:20:41 wolf31o2 Exp $
 
 inherit games
 
@@ -25,13 +25,15 @@ dir=${GAMES_PREFIX_OPT}/ut2003
 Ddir=${D}/${dir}
 
 src_unpack() {
-	unzip ${DISTDIR}/${A} || die "unpacking"
+	unzip -qq "${DISTDIR}"/${A} || die "unpacking"
 }
 
 src_install() {
-	mkdir -p ${Ddir}/System ${Ddir}/Maps ${Ddir}/StaticMeshes ${Ddir}/Textures \
-		${Ddir}/Music ${Ddir}/Help ${Ddir}/Animations
+	for i in Animations Help Music Maps StaticMeshes Textures System
+	do
+		mkdir -p "${Ddir}"/${i}
+	done
 	games_umod_unpack CBP2003.ut2mod
-	rm ${Ddir}/Readme.txt "${Ddir}/cbp installer logo1.bmp"
+	rm "${Ddir}/Readme.txt" "${Ddir}/cbp installer logo1.bmp"
 	prepgamesdirs
 }

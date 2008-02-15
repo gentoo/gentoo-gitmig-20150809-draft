@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-de/ut2003-bonuspack-de-1.ebuild,v 1.6 2006/03/31 21:22:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-de/ut2003-bonuspack-de-1.ebuild,v 1.7 2008/02/15 01:21:48 wolf31o2 Exp $
 
 inherit games
 
@@ -19,17 +19,17 @@ RESTRICT="mirror strip"
 DEPEND="app-arch/unzip"
 RDEPEND="games-fps/ut2003"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
-dir="${GAMES_PREFIX_OPT}/ut2003"
-Ddir="${D}/${dir}"
+dir=${GAMES_PREFIX_OPT}/ut2003
+Ddir=${D}/${dir}
 
 src_unpack() {
-	unzip ${DISTDIR}/${A} || die "unpacking"
+	unzip -qq "${DISTDIR}"/${A} || die "unpacking"
 }
 
 src_install() {
-	mkdir -p ${Ddir}/{System,Maps,StaticMeshes,Textures,Music,Help}
+	mkdir -p "${Ddir}"/{System,Maps,StaticMeshes,Textures,Music,Help}
 	games_umod_unpack DEBonus.ut2mod
 	prepgamesdirs
 }
