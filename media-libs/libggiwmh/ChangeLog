@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggiwmh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.8 2008/02/14 21:43:01 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.9 2008/02/15 17:27:13 jer Exp $
+
+  15 Feb 2008; Jeroen Roovers <jer@gentoo.org> libggiwmh-0.3.2.ebuild:
+  Stable for HPPA (bug #208566).
 
   14 Feb 2008; Ferris McCormick <fmccor@gentoo.org> libggiwmh-0.3.2.ebuild:
   Sparc stable, required for security Bug #208566.
