@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.10.1.ebuild,v 1.6 2008/02/12 22:32:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.10.1.ebuild,v 1.7 2008/02/15 18:39:23 drac Exp $
 
 EAPI=1
 
@@ -56,7 +56,7 @@ RDEPEND="X? ( x11-libs/libXext
 	a52? ( >=media-libs/a52dec-0.7.4-r5 )
 	mad? ( media-libs/libmad )
 	imagemagick? ( media-gfx/imagemagick )
-	dts? ( || ( media-libs/libdca media-libs/libdts ) )
+	dts? ( media-libs/libdca )
 	>=media-video/ffmpeg-0.4.9_p20070129
 	modplug? ( media-libs/libmodplug )
 	nls? ( virtual/libintl )
