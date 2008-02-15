@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.93.ebuild,v 1.5 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.93.ebuild,v 1.6 2008/02/15 20:56:02 wolf31o2 Exp $
 
 inherit autotools eutils flag-o-matic multilib
 
@@ -40,6 +40,8 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 				www-client/mozilla-firefox
 				net-libs/xulrunner
 				www-client/seamonkey
+				www-client/seamonkey-bin
+				www-client/mozilla-firefox-bin
 			)
 		)
 		xml? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )"
