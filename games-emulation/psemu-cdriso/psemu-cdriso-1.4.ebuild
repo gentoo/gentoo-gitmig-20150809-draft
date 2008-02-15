@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdriso/psemu-cdriso-1.4.ebuild,v 1.10 2007/04/09 16:31:59 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdriso/psemu-cdriso-1.4.ebuild,v 1.11 2008/02/15 00:37:44 nyhm Exp $
 
 inherit eutils games
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-1.2*
+RDEPEND="=x11-libs/gtk+-1.2*"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/cdriso
