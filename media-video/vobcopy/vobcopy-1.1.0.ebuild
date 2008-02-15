@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/vobcopy-1.1.0.ebuild,v 1.2 2008/02/14 20:00:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/vobcopy-1.1.0.ebuild,v 1.3 2008/02/15 01:50:55 ranger Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://lpn.rnbhq.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 
 DEPEND=">=media-libs/libdvdread-0.9.4"
 
