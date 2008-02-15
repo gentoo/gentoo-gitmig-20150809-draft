@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.20.3.ebuild,v 1.9 2008/02/10 23:54:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.20.3.ebuild,v 1.10 2008/02/15 14:49:56 dang Exp $
 
 inherit gnome2 eutils autotools python
 
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 		sys-devel/gettext
 		>=dev-util/intltool-0.35
 		>=sys-devel/autoconf-2.60
+		 app-text/gnome-doc-utils
 		dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
