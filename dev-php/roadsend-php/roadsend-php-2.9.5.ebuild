@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/roadsend-php-2.9.2.ebuild,v 1.1 2007/08/20 10:18:28 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/roadsend-php-2.9.5.ebuild,v 1.1 2008/02/15 18:04:24 hkbst Exp $
 
 MY_PVL=${PV/_p/-r}
 MY_PV=${PV%%_p[0-9]}
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2.1"
 
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="dev-scheme/bigloo
+DEPEND=">=dev-scheme/bigloo-3.0c
 		>=net-misc/curl-7.15.1-r1
 		mysql? ( dev-db/mysql )
 		sqlite3? ( >=dev-db/sqlite-3.3.12 )
@@ -35,9 +35,9 @@ src_compile() {
 	econf $(use_with pcre) $(use_with fastcgi fcgi) $(use_with xml) $(use_with mysql) $(use_with sqlite3) $(use_with odbc)
 
 	if use debug; then
-		emake -j1 || die "make debug failed"
+		emake -j1 debug || die "make debug failed"
 	else
-		emake -j1 unsafe || die "make failed"
+		emake -j1 || die "make failed"
 	fi
 }
 
@@ -46,5 +46,5 @@ src_test() {
 }
 
 src_install() {
-	emake -j1 DESTDIR=${D} install || die "make install failed"
+	emake -j1 DESTDIR="${D}" install || die "make install failed"
 }
