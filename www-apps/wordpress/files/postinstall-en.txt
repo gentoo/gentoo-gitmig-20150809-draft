@@ -1,17 +1,6 @@
 ------------------------------------------------------------------------
 INSTALLATION
 
-Please make sure you have register_globals = off set in your
-
-/etc/apache2/php.ini
-
-file.
-
-If this is not an option for your web server and you NEED it set to
-on, then insert the following in your WordPress .htaccess file:
-
-php_flag register_globals off
-
 You will need to create a table for your WordPress database.  This
 assumes you have some knowledge of MySQL, and already have it
 installed and configured.  If not, please refer to the Gentoo MySQL
@@ -19,14 +8,13 @@ guide at the following URL:
 
 http://www.gentoo.org/doc/en/mysql-howto.xml 
 
-Log in to MySQL, and create a new database called 'wordpress'. From
-this point, you will need to edit your 
+Log in to MySQL, and create a new database as well as a user with full
+access to this database. After that you will need to provide the details
+of this database and the associated user within the file
 
 ${MY_INSTALLDIR}/wp-config.php 
 
-file.
-
-Once this is done, you can log in to WordPress at
+Finally you should be able to log in to WordPress at
 
 http://${VHOST_HOSTNAME}/${VHOST_APPDIR}
                                                             
@@ -37,13 +25,14 @@ Wordpress has had a history of serious security flaws. Any application
 with less widespread use but the same amount of security issues would
 have been removed from the tree.
 
-We decided to keep the application in the unstable portage tree so that
-it get's some level of attention from our security team. Currently
-you can expect us to react within 40 days of a reported security
-problem.
+After a short period of being in the unstable tree we once again decided
+that we hard mask the package.
 
-This still means that you might open up your installation to hackers for
-about a month after an issue has been made public. This is a severe
-risk and you should keep a close eye on the common security trackers so
+THIS MEANS THAT THERE IS NO GUARANTEE WHATSOEVER THAT THE PACKAGE WILL
+GET UPGRADED WITHIN A REASONABLE AMOUNT OF TIME EVEN IN THE CASE OF
+SEVERE SECURITY ISSUES.
+
+We consider installing this package a severe risk to your system and 
+you should keep a close eye on the common security trackers so
 that you are able to fix problems with your installation yourself if
 required.
