@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/orpie-1.4.3-r1.ebuild,v 1.2 2007/01/08 15:35:23 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/orpie-1.4.3-r1.ebuild,v 1.3 2008/02/15 11:35:33 markusle Exp $
 
 inherit flag-o-matic
 
@@ -11,11 +11,12 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="bindist"
 
 DEPEND="dev-lang/ocaml
-	sci-libs/gsl
-	sys-libs/ncurses"
+	sys-libs/ncurses
+	!bindist? ( sci-libs/gsl )
+	bindist? ( <sci-libs/gsl-1.10 )"
 
 src_unpack() {
 	unpack ${A}
@@ -25,7 +26,7 @@ src_unpack() {
 }
 
 src_install() {
-	make install DESTDIR=${D}
+	make install DESTDIR="${D}"
 	dodoc ChangeLog
 	dodoc doc/TODO
 	insinto /usr/share/doc/${PF}

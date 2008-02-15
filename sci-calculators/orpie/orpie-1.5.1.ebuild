@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/orpie-1.5.1.ebuild,v 1.1 2008/01/05 16:28:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/orpie-1.5.1.ebuild,v 1.2 2008/02/15 11:35:33 markusle Exp $
 
 DESCRIPTION="A fullscreen RPN calculator for the console"
 HOMEPAGE="http://www.eecs.umich.edu/~pelzlpj/orpie/"
@@ -9,11 +9,12 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="bindist"
 
 DEPEND="dev-lang/ocaml
-	sci-libs/gsl
-	sys-libs/ncurses"
+	sys-libs/ncurses
+	!bindist? ( sci-libs/gsl )
+	bindist? ( <sci-libs/gsl-1.10 )"
 
 src_install() {
 	emake  DESTDIR="${D}" install || die "emake install failed"

@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/orpie
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.8 2008/01/05 16:28:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.9 2008/02/15 11:35:33 markusle Exp $
+
+  15 Feb 2008; Markus Dittrich <markusle@gentoo.org> orpie-1.4.3-r1.ebuild,
+  orpie-1.5.1.ebuild:
+  Fixed QA issues and added bindist for >=gsl-1.10 (see bug #199451).
 
 *orpie-1.5.1 (05 Jan 2008)
 
