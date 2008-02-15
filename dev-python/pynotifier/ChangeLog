@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pynotifier
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.4 2008/02/15 19:39:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.5 2008/02/15 23:36:16 cla Exp $
+
+  15 Feb 2008; Dawid Węgliński <cla@gentoo.org>
+  pynotifier-0.5.8-r1.ebuild:
+  Stable on x86 (bug #201474)
 
   15 Feb 2008; nixnut <nixnut@gentoo.org> pynotifier-0.5.8-r1.ebuild:
   Stable on ppc wrt bug 201474
