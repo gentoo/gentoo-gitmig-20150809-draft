@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r1.ebuild,v 1.2 2008/02/13 08:27:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r2.ebuild,v 1.1 2008/02/16 17:11:53 opfer Exp $
 
 inherit eutils multilib rpm
 
@@ -102,7 +102,7 @@ src_install() {
 	doenvd "${FILESDIR}"/10ICAClient
 
 	insinto /usr/$(get_libdir)/nsbrowser/plugins
-	dosym /opt/ICAClient/npica.so /usr/$(get_libdir)/nsbrowser/plugins/npica.so
+	dosym /usr/$(get_libdir)/libXm.so.4 /opt/ICAClient/libXm.so.3
 
 	dosym /usr/$(get_libdir)/libXm.so /usr/$(get_libdir)/libXm.so.3
 
@@ -110,6 +110,6 @@ src_install() {
 	# one.  The program gives errors and has slowdowns if the locale is not
 	# English, so strip it since it has no translations anyway
 	doicon lib/ICAClient/icons/*
-	make_wrapper wfcmgr 'env LC_ALL="" LANG="" /opt/ICAClient/wfcmgr'
+	make_wrapper wfcmgr 'env LC_ALL="" LANG="" /opt/ICAClient/wfcmgr' . /opt/ICAClient
 	make_desktop_entry wfcmgr 'Citrix ICA Client' manager.xpm
 }
