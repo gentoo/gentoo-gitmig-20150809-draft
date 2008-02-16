@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.6.3.ebuild,v 1.9 2007/04/28 16:51:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.6.3-r1.ebuild,v 1.1 2008/02/16 07:11:25 mrness Exp $
 
 DESCRIPTION="A lightweight HTTP/SSL proxy"
 HOMEPAGE="http://tinyproxy.sourceforge.net/"
@@ -36,7 +36,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	mv "${D}/usr/share/tinyproxy" "${D}/usr/share/doc/${PF}/html"
 
-	newinitd "${FILESDIR}/tinyproxy.rc" tinyproxy
+	newinitd "${FILESDIR}/tinyproxy.initd" tinyproxy
 }
 
 pkg_postinst() {
