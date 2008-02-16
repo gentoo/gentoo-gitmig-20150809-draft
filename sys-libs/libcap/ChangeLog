@@ -1,6 +1,17 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.57 2008/02/14 18:15:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.58 2008/02/16 22:02:28 vapier Exp $
+
+*libcap-2.06 (16 Feb 2008)
+
+  16 Feb 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/2.06/0001-set-FAKEROOT-to-DESTDIR-by-default.patch,
+  +files/2.06/0002-do-not-use-the-s-flag-with-install.patch,
+  +files/2.06/0003-Add-.gitignore-files.patch,
+  +files/2.06/0004-Do-not-run-ldconfig-for-FAKEROOT-installs.patch,
+  +files/2.06/0005-Do-not-hard-code-toolchain-binaries.patch,
+  +files/2.06/0006-cleanup-build-system.patch, +libcap-2.06.ebuild:
+  Version bump #209905 by Arfrever Frehtes Taifersar Arahesis.
 
   14 Feb 2008; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 200512
