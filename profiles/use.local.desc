@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3361 2008/02/16 16:23:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3362 2008/02/16 23:44:06 betelgeuse Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -391,10 +391,8 @@ dev-java/ant-tasks:regexp - Enable Apache Regexp Ant tasks
 dev-java/ant-tasks:resolver - Enable Apache Resolver Ant tasks
 dev-java/antlr:nojava - Disable support for Java code backend
 dev-java/antlr:script - Install a script to run antlr
-dev-java/aspectwerkz:java5 - Enable Java 5 specific features
 dev-java/avalon-logkit:javamail - Enable support for javamail
 dev-java/avalon-logkit:jms - Enable support for JMS (Java Message Service)
-dev-java/backport-util-concurrent:java5 - Enable also the 1.6 > 1.5 backport.
 dev-java/bsh:bsf - Enable support for Apache Bean Scripting Framework
 dev-java/commons-collections:test-framework - Install the test framework
 dev-java/commons-logging:avalon-framework - Add optional support for avalon-framework
@@ -418,8 +416,6 @@ dev-java/jdbc-mysql:c3p0 - Enable c3p0 support
 dev-java/jdbc-mysql:log4j - Enable log4 support
 dev-java/jdbc-oracle-bin:dms - Enable support for the Oracle Dynamic Monitoring Service
 dev-java/jdbc-oracle-bin:ons - Enable support for the Oracle Notification Services (ONS) deamon
-dev-java/jdbc-postgresql:java5 - Use Java 1.5 source/target for compilation (JDBC version 3)
-dev-java/jdbc-postgresql:java6 - Use Java 1.6 source/target for compilation (JDBC version 4)
 dev-java/jruby:bsf - Enable support for Apache Bean Scripting Framework
 dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
@@ -434,8 +430,6 @@ dev-java/quartz:struts - Enable struts support
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sun-jaxp-bin:dom4j - Enable dom4j
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
-dev-java/tomcat-servlet-api:java5 - Use Java 1.5 source/target for compilation
-dev-java/xstream:java5 - Enable Java 5 specific features
 dev-lang/erlang:hipe - HIgh Performance Erlang extension
 dev-lang/erlang:kpoll - Enable kernel polling support
 dev-lang/erlang:smp - Enable support for multiprocessors
@@ -2173,7 +2167,6 @@ www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to
 www-servers/resin:admin - Enable Resin admin webapp
 www-servers/shttpd:dmalloc - Enable debugging with the dmalloc library
 www-servers/tomcat:admin - Enable Tomcat admin webapp
-www-servers/tomcat:java5 - Use Java 1.5 source/target for compilation
 x11-apps/xdpyinfo:dmx - Builds support for Distributed Multiheaded X
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:font-server - Enables font server support
