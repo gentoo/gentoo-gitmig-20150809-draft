@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.74 2007/08/25 17:09:26 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.75 2008/02/16 22:05:39 vapier Exp $
+
+*grub-1.96 (16 Feb 2008)
+
+  16 Feb 2008; Mike Frysinger <vapier@gentoo.org> +grub-1.96.ebuild:
+  Version bump #210403 by Leonardo Valeri Manera.
 
   25 Aug 2007; Mike Frysinger <vapier@gentoo.org>
   +files/grub-1.95-build.patch, grub-1.95.ebuild:
