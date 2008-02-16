@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ut2003-data-2107.ebuild,v 1.8 2008/02/15 01:32:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ut2003-data-2107.ebuild,v 1.9 2008/02/16 00:15:52 nyhm Exp $
 
 inherit eutils games
 
@@ -14,8 +14,8 @@ KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND="virtual/libc
-	app-arch/unzip
+RDEPEND=""
+DEPEND="app-arch/unzip
 	games-util/uz2unpack"
 
 S=${WORKDIR}
