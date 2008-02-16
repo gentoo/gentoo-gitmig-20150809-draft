@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/krunner-4.0.1.ebuild,v 1.1 2008/02/07 00:12:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/krunner-4.0.1-r1.ebuild,v 1.1 2008/02/16 11:10:42 ingmar Exp $
 
 EAPI="1"
 
@@ -19,7 +19,8 @@ COMMONDEPEND="
 	>=kde-base/plasma-${PV}:${SLOT}
 	x11-libs/libXxf86misc
 	opengl? ( virtual/opengl )
-	xcomposite? ( x11-libs/libXcomposite )"
+	xcomposite? ( x11-libs/libXcomposite )
+	xscreensaver? ( x11-libs/libXScrnSaver )"
 DEPEND="${COMMONDEPEND}
 	x11-proto/xf86miscproto
 	xcomposite? ( x11-proto/compositeproto )"
@@ -41,7 +42,8 @@ PATCHES="${FILESDIR}/${P}-linkage.patch
 src_compile() {
 	mycmakeargs="${mycmakeargs}
 		$(cmake-utils_use_with opengl OpenGL)
-		$(cmake-utils_use_with xcomposite X11_Xcomposite)"
+		$(cmake-utils_use_with xcomposite X11_Xcomposite)
+		$(cmake-utils_use_with xscreensaver X11_Xscreensaver)"
 
 	kde4-meta_src_compile
 }
