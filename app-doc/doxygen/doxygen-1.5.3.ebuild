@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.3.ebuild,v 1.4 2007/11/21 06:17:24 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.3.ebuild,v 1.5 2008/02/16 20:24:36 nerdboy Exp $
 
 inherit eutils flag-o-matic toolchain-funcs qt3 fdo-mime
 
@@ -43,6 +43,13 @@ src_unpack() {
 	# Consolidate patches, apply FreeBSD configure patch, codepage patch,
 	# qtools stuff, and patches for bugs 129142, 121770, and 129560.
 	epatch "${FILESDIR}/${PN}-1.5-legacy-patches.diff"
+
+	# remove internal libpng - see bug #210237
+	epatch "${FILESDIR}/${PN}-1.5-system-libpng.patch"
+
+	if [ $(get_libdir) == "lib64" ] ; then
+	    epatch "${FILESDIR}/${PN}-1.5-qtlibdir.patch"
+	fi
 
 	if is-flagq "-O3" ; then
 	    echo
