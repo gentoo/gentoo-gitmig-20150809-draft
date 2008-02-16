@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/linux-logo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.54 2007/11/19 01:33:19 kumba Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.55 2008/02/16 17:10:17 spock Exp $
+
+*linux-logo-5.03 (16 Feb 2008)
+
+  16 Feb 2008; Michał Januszewski <spock@gentoo.org>
+  +linux-logo-5.03.ebuild:
+  Version bump (bug #210274).
 
   19 Nov 2007; Joshua Kinard <kumba@gentoo.org> linux-logo-5.02.ebuild:
   Stable on mips, per #197394.
