@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1123 2008/02/16 15:10:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1124 2008/02/16 18:01:34 opfer Exp $
+
+  16 Feb 2008; Christian Faulhammer <opfer@gentoo.org> package.mask:
+  remove mask for dev-tex/mpm
 
   16 Feb 2008; Ulrich Mueller <ulm@gentoo.org> default-linux/arm/use.mask,
   default-linux/s390/use.mask, default-linux/sh/use.mask, use.desc:
