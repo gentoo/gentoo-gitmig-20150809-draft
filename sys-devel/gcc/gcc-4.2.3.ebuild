@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.2.3.ebuild,v 1.1 2008/02/16 22:26:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.2.3.ebuild,v 1.2 2008/02/16 22:53:29 vapier Exp $
 
 PATCH_VER="1.0"
 UCLIBC_VER="1.0"
@@ -37,6 +37,8 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 				x11-libs/pango
 			)
 			>=media-libs/libart_lgpl-2.1
+			app-arch/zip
+			app-arch/unzip
 		)
 		>=sys-libs/ncurses-5.2-r2
 		nls? ( sys-devel/gettext )
