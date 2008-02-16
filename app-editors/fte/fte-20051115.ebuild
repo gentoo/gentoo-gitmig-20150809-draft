@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20051115.ebuild,v 1.8 2008/02/09 11:52:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20051115.ebuild,v 1.9 2008/02/16 08:59:59 drac Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	)
 	gpm? ( >=sys-libs/gpm-1.20 )"
 DEPEND="${RDEPEND}
-	slang? ( sys-libs/slang )
+	slang? ( =sys-libs/slang-1* )
 	app-arch/unzip"
 
 set_targets() {
@@ -42,7 +42,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/fte-gcc34
 	epatch "${FILESDIR}"/${PN}-new_keyword.patch
-	epatch "${FILESDIR}"/${PN}-slang.patch
 
 	set_targets
 	sed \
@@ -90,7 +89,7 @@ src_install() {
 		dobin src/$i ;
 	done
 
-	dobin ${FILESDIR}/fte
+	dobin "${FILESDIR}"/fte
 
 	dodoc Artistic CHANGES BUGS HISTORY README TODO
 	dohtml doc/*
@@ -99,7 +98,7 @@ src_install() {
 	insinto /usr/share/fte
 	doins -r config/*
 
-	rm -rf ${D}/usr/share/fte/CVS
+	rm -rf "${D}"/usr/share/fte/CVS
 }
 
 pkg_postinst() {

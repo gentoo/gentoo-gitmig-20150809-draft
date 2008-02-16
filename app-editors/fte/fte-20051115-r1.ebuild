@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20050108-r3.ebuild,v 1.6 2007/07/22 08:45:36 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20051115-r1.ebuild,v 1.1 2008/02/16 08:59:59 drac Exp $
 
 inherit eutils
 
@@ -11,17 +11,19 @@ SRC_URI="mirror://sourceforge/fte/${P}-src.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc -sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc -sparc ~x86"
 IUSE="gpm slang X"
 S=${WORKDIR}/${PN}
 
-RDEPEND="x11-libs/libXdmcp
-	x11-libs/libXau
-	x11-libs/libX11
-	>=sys-libs/ncurses-5.2
+RDEPEND=">=sys-libs/ncurses-5.2
+	X? (
+		x11-libs/libXdmcp
+		x11-libs/libXau
+		x11-libs/libX11
+	)
 	gpm? ( >=sys-libs/gpm-1.20 )"
 DEPEND="${RDEPEND}
-	slang? ( sys-libs/slang )
+	slang? ( >=sys-libs/slang-2.1.3 )
 	app-arch/unzip"
 
 set_targets() {
@@ -36,10 +38,11 @@ src_unpack() {
 	unpack ${P}-src.zip
 	unpack ${P}-common.zip
 
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/fte-gcc34
-	epatch ${FILESDIR}/${PN}-new_keyword.patch
+	epatch "${FILESDIR}"/fte-gcc34
+	epatch "${FILESDIR}"/${PN}-new_keyword.patch
+	epatch "${FILESDIR}"/${PN}-slang.patch
 
 	set_targets
 	sed \
@@ -75,32 +78,33 @@ src_compile() {
 
 src_install() {
 	local files
+
+	keepdir /etc/fte
+
 	into /usr
 
 	set_targets
-	files="${TARGETS} cfte compkeys"
+	files="${TARGETS} cfte"
 
 	for i in ${files} ; do
 		dobin src/$i ;
 	done
 
-	dobin ${FILESDIR}/fte
+	dobin "${FILESDIR}"/fte
 
 	dodoc Artistic CHANGES BUGS HISTORY README TODO
-
-	keepdir etc/fte
-
-	dodir usr/share/doc/${P}/html
-	cp doc/INDEX doc/*.html ${D}/usr/share/doc/${P}/html
+	dohtml doc/*
 
 	dodir usr/share/fte
-	cp -R config/* ${D}/usr/share/fte
-	rm -rf ${D}/usr/share/fte/CVS
+	insinto /usr/share/fte
+	doins -r config/*
+
+	rm -rf "${D}"/usr/share/fte/CVS
 }
 
 pkg_postinst() {
 	ebegin "Compiling configuration"
-	cd /usr/share/fte
+	cd /usr/share/fte || die "missing configuration dir"
 	/usr/bin/cfte main.fte /etc/fte/system.fterc
 	eend $?
 }
