@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.3.1.ebuild,v 1.1 2007/12/10 16:26:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.3.1.ebuild,v 1.2 2008/02/16 19:59:20 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
@@ -41,7 +41,6 @@ RDEPEND="
 	tcl? ( dev-lang/tcl )
 	tk? ( dev-lang/tk )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
-	doc? ( app-doc/doxygen )
 	dev-libs/libxml2
 	networkmanager? ( net-misc/networkmanager )
 	prediction? ( =dev-db/sqlite-3* )"
@@ -51,12 +50,13 @@ DEPEND="$RDEPEND
 	dev-lang/perl
 	dev-perl/XML-Parser
 	dev-util/pkgconfig
+	doc? ( app-doc/doxygen )
 	nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}/${MY_PV}"
 
 # Enable Default protocols
-DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn,myspace"
+DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
 
 # List of plugins
 #   app-accessibility/pidgin-festival
@@ -75,9 +75,7 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn,myspace"
 print_pidgin_warning() {
 	ewarn
 	ewarn "If you experience problems with pidgin, file them as bugs with"
-	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org.  DO NOT report them"
-	ewarn "as bugs with pidgin's bug tracker, and by all means DO NOT"
-	ewarn "seek help in #pidgin."
+	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org"
 	ewarn
 	ewarn "Be sure to USE=\"debug\" and include a backtrace for any seg"
 	ewarn "faults, see http://developer.pidgin.im/wiki/GetABacktrace for details on"
