@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.23 2008/02/16 12:59:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.24 2008/02/16 13:02:08 swegener Exp $
 
-inherit linux-info
+inherit linux-info toolchain-funcs
 
 DESCRIPTION="utility to administer the IP virtual server services offered by the Linux kernel"
 HOMEPAGE="http://linuxvirtualserver.org/"
@@ -29,6 +29,7 @@ src_compile() {
 		-j1 \
 		INCLUDE="-I${KV_DIR}/include -I.. -I." \
 		CFLAGS="${CFLAGS}" \
+		CC="$(tc-getCC)" \
 		 || die "error compiling source"
 }
 
