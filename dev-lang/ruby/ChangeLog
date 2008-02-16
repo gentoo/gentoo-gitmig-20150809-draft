@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.320 2008/02/15 23:25:00 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.321 2008/02/16 00:41:38 fmccor Exp $
+
+  16 Feb 2008; Ferris McCormick <fmccor@gentoo.org>
+  ruby-1.8.6_p111-r1.ebuild:
+  Sparc stable --- Bug #208916 --- working well for about 6 weeks.
 
   15 Feb 2008; Richard Brown <rbrown@gentoo.org>
   -files/ruby-1.8.6-exit-status.patch,
