@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r2.ebuild,v 1.4 2008/02/16 23:10:01 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r3.ebuild,v 1.1 2008/02/16 23:10:01 calchan Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ HOU_NAME=_linuxclient${MY_PV}_xp2.tar.gz
 
 DESCRIPTION="role-playing game set in a huge medieval fantasy world of Dungeons and Dragons"
 HOMEPAGE="http://nwn.bioware.com/downloads/linuxclient.html"
-SRC_URI="http://dev.gentoo.org/~calchan/distfiles/nwn-libsdl-1.2.12-r1.tar.bz2
+SRC_URI="http://dev.gentoo.org/~calchan/distfiles/nwn-libsdl-1.2.13.tar.bz2
 	linguas_fr? (
 		!sou? ( !hou? ( ${PATCH_URL_BASE}/French${PACKAGE_NAME} ) )
 		sou? ( ${PATCH_URL_BASE}/French${SOU_NAME} )
@@ -51,7 +51,7 @@ IUSE="sou hou ${LANGUAGES}"
 # nowin USE flag not used anymore by pkg_setup()
 RESTRICT="mirror strip"
 
-RDEPEND=">=games-rpg/nwn-data-1.29-r2
+RDEPEND=">=games-rpg/nwn-data-1.29-r3
 	virtual/opengl
 	>=media-libs/libsdl-1.2.5
 	x86? (
@@ -241,13 +241,13 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "The included custom libSDL is patched to enable the following key sequences:"
-	einfo "  * Left-Alt & Enter - Iconify Window"
-	einfo "  * Right-Alt & Enter - Toggle between FullScreen/Windowed"
-	einfo "  * Left-Control & G - Disable the mouse grab that keeps the cursor inside the NWN window"
-	einfo "  * Right-Control & G - Re-enable the mouse grab to keep the cursor inside the NWN window"
-	einfo
-	einfo "The NWN linux client is now installed."
-	einfo "Proceed with the following step in order to get it working:"
-	einfo "Run ${dir}/fixinstall as root"
+	elog "The included custom libSDL is patched to enable the following key sequences:"
+	elog "  * Left-Alt & Enter - Iconify Window"
+	elog "  * Right-Alt & Enter - Toggle between FullScreen/Windowed"
+	elog "  * Left-Control & G - Disable the mouse grab that keeps the cursor inside the NWN window"
+	elog "  * Right-Control & G - Re-enable the mouse grab to keep the cursor inside the NWN window"
+	elog
+	elog "The NWN linux client is now installed."
+	elog "Proceed with the following step in order to get it working:"
+	elog "Run ${dir}/fixinstall as root"
 }
