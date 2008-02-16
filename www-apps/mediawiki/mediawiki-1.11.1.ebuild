@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.1.ebuild,v 1.1 2008/02/15 11:04:09 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.1.ebuild,v 1.2 2008/02/16 09:00:27 maekke Exp $
 
 EAPI="1"
 inherit webapp depend.php versionator eutils
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.mediawiki.org"
 SRC_URI="http://download.wikimedia.org/mediawiki/${MY_BRANCH}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="imagemagick math mysql postgres restrict +ocamlopt"
 
 DEPEND="math? ( >=dev-lang/ocaml-3.0.6 )"
@@ -21,6 +21,8 @@ RDEPEND="${DEPEND}
 		virtual/ghostscript
 		media-gfx/imagemagick )
 	imagemagick? ( media-gfx/imagemagick )"
+
+RESTRICT="test"
 
 need_php5
 
