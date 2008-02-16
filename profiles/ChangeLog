@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1120 2008/02/15 20:00:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1121 2008/02/16 08:35:19 alonbl Exp $
+
+  16 Feb 2008; Alon Bar-Lev <alonbl@gentoo.org> use.local.desc:
+  Add app-crypt/gpgme:pth
 
   15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> base/package.use:
   Added threads to guile's package.use for 2008.0's release.
