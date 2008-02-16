@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1126 2008/02/16 22:57:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1127 2008/02/16 23:37:33 calchan Exp $
+
+  16 Feb 2008; Denis Dupeyron <calchan@gentoo.org> package.mask:
+  Unmasked all new nwn-data and nwn ebuilds.
 
   16 Feb 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
   app-emacs/pymacs beta versions removed.

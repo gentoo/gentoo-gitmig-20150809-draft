@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8291 2008/02/16 22:57:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8292 2008/02/16 23:37:33 calchan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,11 +28,6 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
-
-# Denis Dupeyron <calchan@gentoo.org> (16 Feb 2008)
-# Extending mask on new ebuilds while I commit and check the whole thing
->=games-rpg/nwn-data-1.29-r2
->=games-rpg/nwn-1.68-r2
 
 # Gunnar Wrobel <wrobel@gentoo.org> (14 Feb 2008)
 # Outdated package. See
