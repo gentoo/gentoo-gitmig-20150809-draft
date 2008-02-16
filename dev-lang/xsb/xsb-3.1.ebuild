@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.1.ebuild,v 1.1 2007/11/25 05:09:31 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.1.ebuild,v 1.2 2008/02/16 17:39:50 keri Exp $
 
 MY_PN="XSB"
 MY_P="${MY_PN}-unix"
@@ -43,11 +43,13 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-mysql.patch
 	epatch "${FILESDIR}"/${P}-odbc.patch
 	epatch "${FILESDIR}"/${P}-xpath.patch
+
+	cd "${S}"/build
+	eautoconf
 }
 
 src_compile() {
 	cd "${S}"/build
-	eautoconf
 
 	einfo "Building xsb compiler"
 	econf \
