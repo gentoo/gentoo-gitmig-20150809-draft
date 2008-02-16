@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vobcopy
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.34 2008/02/15 16:05:56 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.35 2008/02/16 18:44:08 dertobi123 Exp $
+
+  16 Feb 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  vobcopy-1.1.0.ebuild:
+  ppc stable, bug #197578
 
   15 Feb 2008; Ferris McCormick <fmccor@gentoo.org> vobcopy-1.1.0.ebuild:
   Sparc stable, security Bug #197578.
