@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/rsbac-admin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.36 2008/02/15 17:46:42 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.37 2008/02/16 16:46:06 kang Exp $
+
+  16 Feb 2008; Guillaume Destuynder <kang@gentoo.org>
+  rsbac-admin-1.3.7.ebuild:
+  Quoting variables to make repoman happy actually end up breaking more things
+  than it solves. Reverting.
 
 *rsbac-admin-1.3.7 (15 Feb 2008)
 
