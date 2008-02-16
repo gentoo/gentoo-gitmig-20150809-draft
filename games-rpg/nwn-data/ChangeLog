@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/nwn-data
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.32 2007/09/19 12:49:33 calchan Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.33 2008/02/16 23:00:00 calchan Exp $
+
+*nwn-data-1.29-r3 (16 Feb 2008)
+
+  16 Feb 2008; Denis Dupeyron <calchan@gentoo.org> +nwn-data-1.29-r3.ebuild:
+  Fixed or consolidated fixes for bugs #170644, #203360 and 203400. Thanks to
+  Kai Krakow and Julien Allanos.
 
   19 Sep 2007; Denis Dupeyron <calchan@gentoo.org> nwn-data-1.29-r2.ebuild:
   Fixed sound in nwmovies.

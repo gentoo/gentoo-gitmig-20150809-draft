@@ -1,9 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r2.ebuild,v 1.4 2008/02/16 23:00:00 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r3.ebuild,v 1.1 2008/02/16 23:00:00 calchan Exp $
 
 inherit eutils games
 
+# 3-in-1 DVD - NWN, SoU, HotU (1 disk)
 # Diamond DVD - NWN, SoU, HotU (1 disk)
 # Platinum CD/DVD - NWN, SoU, HotU (4 disks/1 disk)
 # Deluxe CD - NWN, SoU, HotU (5 disks)
@@ -74,7 +75,11 @@ get_nwn_set() {
 	# this will make our lives so much easier.
 	if [[ -n "${CD_ROOT}" ]]
 	then
-		if [[ -f "${CD_ROOT}"/KingmakerSetup.exe ]]
+		if [[ -f "${CD_ROOT}"/data5.cab ]]
+		then
+			NWN_SET="3in1_dvd"
+			einfo "Neverwinter Nights 3-in-1 DVD found..."
+		elif [[ -f "${CD_ROOT}"/KingmakerSetup.exe ]]
 		then
 			NWN_SET="diamond_dvd"
 			einfo "Neverwinter Nights Diamond DVD found..."
@@ -95,7 +100,11 @@ get_nwn_set() {
 	# set, or even a DVD set.
 	elif [[ -n "${CD_ROOT_1}" ]]
 	then
-		if [[ -f "${CD_ROOT_1}"/KingmakerSetup.exe ]]
+		if [[ -f "${CD_ROOT_1}"/data5.cab ]]
+		then
+			NWN_SET="3in1_dvd"
+			einfo "Neverwinter Nights 3-in-1 DVD found..."
+		elif [[ -f "${CD_ROOT_1}"/KingmakerSetup.exe ]]
 		then
 			NWN_SET="diamond_dvd"
 			einfo "Neverwinter Nights Diamond DVD found..."
@@ -116,9 +125,13 @@ get_nwn_set() {
 	# to figure out what we have to work from.
 	else
 		local mline=
-		for mline in $(mount | egrep -e '(iso|cdrom)' | awk '{print $3}')
+		for mline in $(mount | egrep -e '(iso|cdrom|udf)' | awk '{print $3}')
 		do
-			if [[ -f "${mline}"/KingmakerSetup.exe ]]
+			if [[ -f "${mline}"/data5.cab ]]
+			then
+				NWN_SET="3in1_dvd"
+				einfo "Neverwinter Nights 3-in-1 DVD found..."
+			elif [[ -f "${mline}"/KingmakerSetup.exe ]]
 			then
 				NWN_SET="diamond_dvd"
 				einfo "Neverwinter Nights Diamond DVD found..."
@@ -150,6 +163,14 @@ get_cd_set() {
 	# Here is where we start our CD/DVD detection for changing disks.
 	export CDROM_NAME_1="CD1" CDROM_NAME_2="CD2" CDROM_NAME_3="CD3"
 	case "${NWN_SET}" in
+	3in1_dvd)
+		einfo "Both Shadows of Undrentide and Hordes of the Underdark will"
+		einfo "be installed from your DVD along with Neverwinter Nights."
+		touch .metadata/sou || die "touch sou"
+		touch .metadata/hou || die "touch hou"
+		touch .metadata/orig || die "touch orig"
+		cdrom_get_cds data5.cab
+		;;
 	diamond_dvd)
 		einfo "Both Shadows of Undrentide and Hordes of the Underdark will"
 		einfo "be installed from your DVD along with Neverwinter Nights."
@@ -235,6 +256,32 @@ src_unpack() {
 		get_cd_set
 
 		case ${NWN_SET} in
+		3in1_dvd)
+			mkdir -p "${S}"
+			cd "${S}"
+			einfo "Unpacking files..."
+			# We don't give the user the option to install SoU/HotU.  While some
+			# people might complain about this, most newer NWN stuff requires
+			# them both anyway, so it makes no sense not to install them.
+			unshield x "${CDROM_ROOT}"/data1.hdr || die "unpacking"
+			# We have to adjust the files after unpacking the cab file.
+			rm -rf _*
+			mkdir -p ambient/
+			mkdir -p data/
+			mv -f App_Executables/ambient/*.wav ambient/
+			mv -f App_Executables/{modules,texturepacks} .
+			mv -f App_Executables/{dm,local}vault .
+			mv -f App_Executables/data/xp*.bif data/
+			mv -f App_Executables/*.key .
+			mv -f App_Executables/nwm .
+			if use videos
+			then
+				mv -f App_Executables/movies .
+			fi
+			mkdir -p utils/nwupdateskins/
+			mv -f App_Executables/utils/nwupdateskins/*.bmp utils/nwupdateskins/
+			rm -rf App_Executables/
+			;;
 		diamond_dvd)
 			# This is probably the simplest NWN to install.
 			mkdir -p "${S}"
@@ -433,6 +480,7 @@ src_unpack() {
 			mkdir -p $currentlocale
 			cd ${currentlocale}
 			unpack ${a} || die "unpacking ${a}"
+			cd ..
 		fi
 	done
 	if use linguas_en
@@ -446,7 +494,7 @@ src_unpack() {
 	mv nwn.ini nwn.ini.default
 
 	sed -i -e 's,/bin/sh,/bin/bash,g' -e '\:^./nwmain .*:i \
-'"dir='${dir}';LINGUAS='${LINGUAS}'"' \
+'"dir='${dir}';LINGUAS='${LINGUAS}'"';LANG="${LANG/_*}" \
 die() { \
 	echo "$*" 1>&2 \
 	exit 1 \
@@ -474,7 +522,7 @@ fi \
 mkdir -p "${p}" \
 find "${p}" -type l -delete \
 for i in * ; do \
-	if [[ ! -f ".metadata/linguas_${i}" ]] \
+	if [[ ! -f ".metadata/linguas_${i}" && ${i: -4} != ".ini" ]] \
 	then \
 		cp -rfs ${dir}/${i} ${p}/. || die "copy ${i}" \
 	fi \
@@ -487,9 +535,6 @@ then \
 	done \
 fi \
 cd "${p}" || die "cd ${p}" \
-if [[ ! -a nwn.ini ]]; then \
-	cp nwn.ini.default nwn.ini \
-fi \
 if [[ -r ./nwmovies.so ]]; then \
 	export LD_PRELOAD=./nwmovies.so:$LD_PRELOAD \
 	export SDL_AUDIODRIVER=alsa \
@@ -505,7 +550,7 @@ fi \
 src_install() {
 	dodir "${dir}"
 	mkdir -p "${S}"/dmvault "${S}"/hak "${S}"/portraits "${S}"/localvault
-	rm -rf "${S}"/dialog.tlk "${S}"/dialog.TLK "${S}"/dialogf.tlk \
+	rm -rf "${S}"/dialog*.{tlk,TLK} "${S}"/*/dialog*.{tlk,TLK} \
 		"${S}"/dmclient "${S}"/nwmain "${S}"/nwserver  "${S}"/nwm/* \
 		"${S}"/SDL-1.2.5 "${S}"/fixinstall
 	# Remove the softlink to the built-in SDL library so that we don't have to re-install
