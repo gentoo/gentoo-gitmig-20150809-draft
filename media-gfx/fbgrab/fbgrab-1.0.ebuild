@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/fbgrab-1.0.ebuild,v 1.9 2005/07/07 19:30:47 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/fbgrab-1.0.ebuild,v 1.10 2008/02/16 17:30:44 spock Exp $
 
 DESCRIPTION="Framebuffer screenshot utility"
 HOMEPAGE="http://hem.bredband.net/gmogmo/fbgrab/"
@@ -17,10 +17,10 @@ S=${WORKDIR}/${PN}-1.0
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s:splint:#splint:" \
-		-e "s:-Wall:-Wall ${CFLAGS}:" \
+		-e "s:-Wall:-Wall ${CPPFLAGS} ${CFLAGS} ${LDFLAGS}:" \
 		Makefile
 }
 
