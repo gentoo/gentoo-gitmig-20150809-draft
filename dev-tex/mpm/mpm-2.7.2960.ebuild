@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/mpm-2.5.2398_beta14-r1.ebuild,v 1.1 2007/05/21 05:58:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/mpm-2.7.2960.ebuild,v 1.1 2008/02/16 17:57:13 opfer Exp $
 
-inherit eutils
+inherit eutils cmake-utils
 
 MY_PV=${PV/_beta/-beta-}
 DESCRIPTION="MiKTeX Tools -- package manager for a TeX distribution"
 HOMEPAGE="http://www.miktex.org/unx/"
-SRC_URI="mirror://sourceforge/miktex/miktex-tools-${MY_PV}.tar.gz"
+SRC_URI="mirror://sourceforge/miktex/miktex-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,17 +16,16 @@ IUSE=""
 
 DEPEND="net-misc/curl
 		dev-libs/pth
-		virtual/tetex"
+		www-client/lynx
+		virtual/latex-base"
 
-S="${WORKDIR}/miktex-tools-${MY_PV}"
+S="${WORKDIR}/miktex-${MY_PV}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-multipleroots.patch"
-}
-src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+
+	epatch "${FILESDIR}/${PN}-2.7.2817-multipleroots.patch"
 }
 
 pkg_postinst() {
