@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.1.ebuild,v 1.11 2007/02/03 23:03:23 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.1.ebuild,v 1.12 2008/02/16 17:34:52 keri Exp $
 
 inherit autotools eutils java-pkg-opt-2
 
@@ -39,10 +39,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-tabling.patch
 	epatch "${FILESDIR}"/${P}-jpl.patch
 	epatch "${FILESDIR}"/${P}-tkyap.patch
+
+	eautoconf
 }
 
 src_compile() {
-	eautoconf
 	econf \
 		--libdir=/usr/$(get_libdir) \
 		--enable-low-level-tracer \
