@@ -44,7 +44,6 @@ qt4
 arts
 kde
 afs
-lesstif
 mono
 pike
 lirc

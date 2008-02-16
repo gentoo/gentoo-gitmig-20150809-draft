@@ -25,7 +25,6 @@ kde
 diet
 lirc
 afs
-lesstif
 mono
 lm_sensors
 qdbm
