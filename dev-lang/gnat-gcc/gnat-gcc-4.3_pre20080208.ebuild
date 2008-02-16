@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3_pre20080208.ebuild,v 1.1 2008/02/15 21:47:52 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3_pre20080208.ebuild,v 1.2 2008/02/16 08:36:08 mr_bones_ Exp $
 
 inherit versionator
 
@@ -46,11 +46,11 @@ src_unpack() {
 	sed -i -e 's:and Nam is "gnatgcc":and Nam is "gcc":' osint.ads ||
 		die	"reversing [gnat]gcc substitution in comments failed"
 
-	# All snapshots seem to have a problem compiling with all the 
+	# All snapshots seem to have a problem compiling with all the
 	# extra versioning declarations. Cleanup some vars..
 	sed -i -e "/-DREVISION/d" -e "/-DDEVPHASE/d" \
 		-e "s: -DDATESTAMP=\$(DATESTAMP_s)::" "${S}"/gcc/Makefile.in
-#		-e "s:-DBUGURL=\$(BUGURL_s) ::" 
+#		-e "s:-DBUGURL=\$(BUGURL_s) ::"
 	sed -i -e "s: DATESTAMP DEVPHASE REVISION::" \
 		-e "s:PKGVERSION:\"4.3.0\":" "${S}"/gcc/version.c
 }
@@ -60,7 +60,6 @@ src_compile() {
 	# bootstrap
 	gnatbuild_src_compile configure make-tools bootstrap
 }
-
 
 src_install() {
 #	echo "contents of ${LIBEXECPATH}/gcc/${CTARGET}/${GCCRELEASE} :"
