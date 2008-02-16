@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.12.1.ebuild,v 1.1 2008/02/11 21:41:05 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.12.1_p1.ebuild,v 1.1 2008/02/16 23:01:13 dev-zero Exp $
 
 inherit eutils
 
