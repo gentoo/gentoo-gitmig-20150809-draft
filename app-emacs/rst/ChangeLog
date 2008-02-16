@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/rst
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.13 2008/01/14 18:08:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.14 2008/02/16 15:24:46 opfer Exp $
+
+  16 Feb 2008; Christian Faulhammer <opfer@gentoo.org> rst-0.4-r1.ebuild:
+  stable x86/amd64, bug 210331
 
 *rst-0.4-r1 (14 Jan 2008)
 
