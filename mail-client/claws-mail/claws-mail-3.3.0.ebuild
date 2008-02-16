@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.3.0.ebuild,v 1.1 2008/02/13 20:25:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.3.0.ebuild,v 1.2 2008/02/16 10:30:02 ticho Exp $
 
 IUSE="bogofilter crypt dillo doc gnome gnutls imap ipv6 kde ldap nntp pda session spamassassin spell ssl startup-notification xface"
 
@@ -47,7 +47,7 @@ RDEPEND="${COMMONDEPEND}
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
 
-PLUGIN_NAMES="acpi-notifier att-remover attachwarner cachesaver clamav etpan-privacy fetchinfo gtkhtml maildir mailmbox newmail notification pdf-viewer perl rssyl smime synce vcalendar"
+PLUGIN_NAMES="acpi-notifier att-remover attachwarner cachesaver etpan-privacy fetchinfo gtkhtml maildir mailmbox newmail notification pdf-viewer perl rssyl smime synce vcalendar"
 
 src_unpack() {
 	unpack ${A}
