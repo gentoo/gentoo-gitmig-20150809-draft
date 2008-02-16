@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wireless-tools
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.126 2007/12/28 11:57:33 gmsoft Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.127 2008/02/16 14:33:03 armin76 Exp $
+
+  16 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  -wireless-tools-27-r1.ebuild, -wireless-tools-28.ebuild,
+  -wireless-tools-29_pre10.ebuild, -wireless-tools-29_pre14.ebuild,
+  -wireless-tools-29_pre17.ebuild, -wireless-tools-29_pre20.ebuild,
+  -wireless-tools-29_pre21.ebuild, -wireless-tools-29_pre22.ebuild:
+  old
 
   28 Dec 2007; Guy Martin <gmsoft@gentoo.org> wireless-tools-29.ebuild:
   Added hppa to KEYWORDS.
