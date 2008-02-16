@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gecko-mediaplayer/gecko-mediaplayer-0.5.2.ebuild,v 1.1 2007/11/05 20:15:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gecko-mediaplayer/gecko-mediaplayer-0.6.0.ebuild,v 1.1 2008/02/16 07:26:05 drac Exp $
 
 inherit multilib
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-libs/dbus-glib
-	>=media-video/gnome-mplayer-0.5.2
+RDEPEND=">=dev-libs/dbus-glib-0.7
+	>=media-video/gnome-mplayer-0.6
 	|| ( net-libs/xulrunner
 		www-client/mozilla-firefox
 		www-client/seamonkey
