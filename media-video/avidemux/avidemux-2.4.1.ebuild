@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.1.ebuild,v 1.1 2008/02/17 16:10:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.1.ebuild,v 1.2 2008/02/17 18:45:53 drac Exp $
 
 inherit cmake-utils eutils flag-o-matic
 
@@ -108,7 +108,7 @@ src_install() {
 	doicon avidemux_icon.png
 
 	use gtk && make_desktop_entry avidemux2_gtk "Avidemux GTK" \
-		avidemux_icon "AudioVideo;GTK;"
+		avidemux_icon "AudioVideo;GTK"
 	use qt4 && make_desktop_entry avidemux2_qt4 "Avidemux Qt" \
-		avidemux_icon "AudioVideo;Qt;"
+		avidemux_icon "AudioVideo;Qt"
 }
