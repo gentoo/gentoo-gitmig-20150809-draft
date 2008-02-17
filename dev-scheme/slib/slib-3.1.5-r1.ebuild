@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.5-r1.ebuild,v 1.3 2008/02/17 16:31:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.5-r1.ebuild,v 1.4 2008/02/17 17:04:50 nixnut Exp $
 
 inherit versionator eutils
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://swiss.csail.mit.edu/~jaffer/SLIB"
 
 SLOT="0"
 LICENSE="public-domain BSD"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~sparc x86"
 IUSE="" #test"
 
 #unzip for unpacking
