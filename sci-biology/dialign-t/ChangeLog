@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/dialign-t
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/dialign-t/ChangeLog,v 1.7 2008/02/17 08:10:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/dialign-t/ChangeLog,v 1.8 2008/02/17 08:16:54 opfer Exp $
+
+  17 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  dialign-t-0.2.2.ebuild:
+  quote variables
 
   17 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   dialign-t-0.2.2.ebuild:

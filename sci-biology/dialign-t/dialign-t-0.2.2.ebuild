@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/dialign-t/dialign-t-0.2.2.ebuild,v 1.2 2008/02/17 08:10:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/dialign-t/dialign-t-0.2.2.ebuild,v 1.3 2008/02/17 08:16:54 opfer Exp $
 
 inherit multilib toolchain-funcs
 
@@ -17,7 +17,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	cd ${S}/source
+	cd "${S}"/source
 	emake clean
 	emake \
 		CPPFLAGS="${CFLAGS}" \
@@ -25,11 +25,11 @@ src_compile() {
 }
 
 src_install() {
-	DESTTREE="/usr" dobin ${S}/source/dialign-t
-	dohtml ${S}/doc/html/*
-	dodoc ${S}/doc/user_guide*
+	DESTTREE="/usr" dobin "${S}"/source/dialign-t
+	dohtml "${S}"/doc/html/*
+	dodoc "${S}"/doc/user_guide*
 	insinto /usr/$(get_libdir)/${PN}/conf
-	doins ${S}/conf/*
+	doins "${S}"/conf/*
 }
 
 pkg_postinst() {
