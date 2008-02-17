@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.5.0.ebuild,v 1.2 2007/04/14 19:29:13 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.5.0.ebuild,v 1.3 2008/02/17 12:15:28 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,6 @@ IUSE="gtk"
 DEPEND="gtk? ( =x11-libs/gtk+-2* )"
 
 src_compile() {
-	cd "${S}"
 	emake OS=linux CC=$(tc-getCC) build_all || die "emake failed"
 
 	if use gtk ; then
