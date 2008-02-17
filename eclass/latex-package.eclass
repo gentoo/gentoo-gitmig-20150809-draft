@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.32 2008/02/17 19:01:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.33 2008/02/17 19:03:07 aballier Exp $
 
 # @ECLASS: latex-package.eclass
 # @MAINTAINER:
-# text-markup team <text-markup@gentoo.org>
+# TeX team <tex@gentoo.org>
 # 
 # Author Matthew Turk <satai@gentoo.org>
 # Martin Ehmsen <ehmsen@gentoo.org>
