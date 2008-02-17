@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.8.ebuild,v 1.6 2008/01/31 02:26:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.8.ebuild,v 1.7 2008/02/17 03:15:25 ingmar Exp $
 
 inherit kde eutils
 
@@ -24,7 +24,7 @@ for X in ${LANGS} ; do
 done
 
 src_unpack() {
-	if [[ -z "${LINGUAS}" ]] || [[ -z "${A}" &&	 "${LINGUAS}" != "en" ]]; then
+	if [[ -z ${LINGUAS} ]] || [[ -z ${A} && ${LINGUAS} != en ]]; then
 		echo
 		ewarn "You either have the LINGUAS environment variable unset or it"
 		ewarn "contains languages not supported by kde-base/kde-i18n."
