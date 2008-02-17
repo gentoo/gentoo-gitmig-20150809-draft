@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/libmilter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.7 2008/01/04 11:25:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.8 2008/02/17 15:21:33 mrness Exp $
+
+  17 Feb 2008; Alin Năstac <mrness@gentoo.org> -libmilter-8.14.1-r1.ebuild,
+  libmilter-8.14.2.ebuild:
+  Stable on x86.
 
 *libmilter-8.14.2 (04 Jan 2008)
 
