@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.39 2008/02/17 15:11:02 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.40 2008/02/17 16:30:27 opfer Exp $
+
+  17 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  guile-1.8.3-r2.ebuild:
+  stable x86, bug 210465
 
   17 Feb 2008; nixnut <nixnut@gentoo.org> guile-1.8.3-r2.ebuild:
   Stable on ppc wrt bug 210465
