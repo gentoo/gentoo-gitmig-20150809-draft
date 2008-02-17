@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-7.0.ebuild,v 1.13 2007/11/12 06:52:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-7.0.ebuild,v 1.14 2008/02/17 07:18:00 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,16 +13,15 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE=""
 
-DEPEND="virtual/cdrtools"
+RDEPEND="virtual/cdrtools"
+DEPEND="${RDEPEND}
+	sys-devel/m4"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	sed -i \
-		-e "s:^CFLAGS=\$(WARN).*:CFLAGS=${CFLAGS}:" \
-		-e "s:^CXXFLAGS=\$(WARN).*:CXXFLAGS=${CXXFLAGS} -fno-exceptions:" \
-		Makefile.m4 || die
+	# Linux compiler flags only include -O2 and are incremental
+	sed -i '/FLAGS/s:-O2::' Makefile.m4
 }
 
 src_compile() {
