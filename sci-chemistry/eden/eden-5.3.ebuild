@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3.ebuild,v 1.5 2008/02/15 11:46:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3.ebuild,v 1.6 2008/02/17 11:26:58 markusle Exp $
 
 inherit eutils multilib toolchain-funcs
 
 MY_P="${PN}_V${PV}"
 DESCRIPTION="A crystallographic real-space electron-density refinement and optimization program"
-HOMEPAGE="http://www.edencrystallography.org/"
-SRC_URI="http://www.edencrystallography.org/${MY_P}.tar.gz"
+HOMEPAGE="http://www.gromacs.org/pipermail/eden-users"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"

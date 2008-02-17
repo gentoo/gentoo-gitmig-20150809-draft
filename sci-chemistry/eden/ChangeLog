@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/eden
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/ChangeLog,v 1.9 2008/02/15 11:46:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/ChangeLog,v 1.10 2008/02/17 11:26:58 markusle Exp $
+
+  17 Feb 2008; Markus Dittrich <markusle@gentoo.org> eden-5.3.ebuild:
+  Corrected out of date HOMEPAGE and switched SRC_URI to Gentoo mirrors.
 
   15 Feb 2008; Markus Dittrich <markusle@gentoo.org> eden-5.3.ebuild:
   Fixed QA issues and added bindist for >=gsl-1.10 (see bug #199451).
