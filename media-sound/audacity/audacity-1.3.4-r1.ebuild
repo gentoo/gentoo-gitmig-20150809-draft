@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.4-r1.ebuild,v 1.6 2008/02/11 00:12:18 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.4-r1.ebuild,v 1.7 2008/02/17 19:32:13 aballier Exp $
 
 inherit eutils wxwidgets
 
@@ -20,6 +20,7 @@ COMMON_DEPEND="=x11-libs/wxGTK-2.6*
 	>=app-arch/zip-2.3
 	dev-libs/expat
 	>=media-libs/libsndfile-1.0.0
+	>=media-sound/jack-audio-connection-kit-0.103.0
 	soundtouch? ( >=media-libs/libsoundtouch-1.3.1 )
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	mp3? ( >=media-libs/libmad-0.14.2b )

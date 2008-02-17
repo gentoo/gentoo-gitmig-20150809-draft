@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.85 2008/02/17 19:24:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.86 2008/02/17 19:32:13 aballier Exp $
+
+  17 Feb 2008; Alexis Ballier <aballier@gentoo.org>
+  audacity-1.3.4-r1.ebuild:
+  Add missing jack dependency, thanks to jovie1024@yahoo.com for reporting in
+  bug #210415. This is not entirely mandatory but otherwise it is automagic...
 
   17 Feb 2008; Alexis Ballier <aballier@gentoo.org>
   -files/audacity-1.3.2+flac-1.1.3.patch,
