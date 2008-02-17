@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/gnucash-docs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.2 2008/02/17 16:34:33 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.3 2008/02/17 16:48:33 opfer Exp $
+
+  17 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  gnucash-docs-2.2.0.ebuild:
+  stable x86, bug 210471
 
   17 Feb 2008; Ferris McCormick <fmccor@gentoo.org>
   gnucash-docs-2.2.0.ebuild:
