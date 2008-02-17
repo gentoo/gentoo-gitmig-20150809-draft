@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>video</herd>
 <maintainer>
-  <email>media-video@gentoo.org</email>
+  <email>yngwin@gentoo.org</email>
+  <name>Ben de Groot</name>
 </maintainer>
 </pkgmetadata>
