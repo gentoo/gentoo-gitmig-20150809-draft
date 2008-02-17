@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.3-r1.ebuild,v 1.1 2008/02/17 16:48:40 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.3-r1.ebuild,v 1.2 2008/02/17 19:29:52 mabi Exp $
 
 inherit eutils portability versionator
 
@@ -31,7 +31,7 @@ src_unpack() {
 	sed -i -e 's:\(/README\)\("\):\1.gz\2:g' doc/readme.html
 
 	if ! use deprecated ; then
-		epatch "${FILESDIR}"/${P}-no-deprecated.patch
+		epatch "${FILESDIR}"/${P}-deprecated.patch
 	fi
 
 	if ! use readline ; then

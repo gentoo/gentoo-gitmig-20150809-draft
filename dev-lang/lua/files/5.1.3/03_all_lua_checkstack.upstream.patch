@@ -4,7 +4,7 @@ diff -rdu lua-5.1.3.orig/src/lapi.c lua-5.1.3/src/lapi.c
 @@ -93,15 +93,14 @@
 
 
-LUA_API int lua_checkstack (lua_State *L, int size) {
+ LUA_API int lua_checkstack (lua_State *L, int size) {
 -  int res;
 +  int res = 1;
    lua_lock(L);
