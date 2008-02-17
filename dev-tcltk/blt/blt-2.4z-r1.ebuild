@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r1.ebuild,v 1.8 2007/12/10 17:33:57 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r1.ebuild,v 1.9 2008/02/17 04:19:39 tgall Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ DEPEND=">=dev-lang/tk-8.0"
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 
 S="${WORKDIR}/${PN}${PV}"
 
