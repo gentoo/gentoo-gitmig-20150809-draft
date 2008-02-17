@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/oniguruma-5.9.1.ebuild,v 1.6 2008/02/11 15:23:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/oniguruma-5.9.1.ebuild,v 1.7 2008/02/17 22:49:16 aballier Exp $
+
+inherit libtool
 
 MY_P=onig-${PV}
 
@@ -10,10 +12,17 @@ SRC_URI="http://www.geocities.jp/kosako3/oniguruma/archive/${MY_P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# Needed for a sane .so versionning on fbsd, please dont drop
+	elibtoolize
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
