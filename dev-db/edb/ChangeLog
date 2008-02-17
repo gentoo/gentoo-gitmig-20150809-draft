@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/edb
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.21 2006/07/16 04:56:16 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.22 2008/02/17 04:03:46 halcy0n Exp $
+
+  17 Feb 2008; Mark Loeser <halcy0n@gentoo.org> edb-1.0.5.007.ebuild:
+  Move keywords into the ebuild; bug #204075
 
   03 May 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   Japanese metadata.xml translation thanks to Yoshino in bug #132099.
