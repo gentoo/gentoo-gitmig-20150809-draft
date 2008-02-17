@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.10 2007/12/15 17:46:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.11 2008/02/17 17:21:36 betelgeuse Exp $
+
+  17 Feb 2008; Petteri Räty <betelgeuse@gentoo.org> jubler-3.4.1.ebuild:
+  Filter ecj-3.2 as it fails. Reported in bug #210484.
 
   15 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> jubler-3.4.1.ebuild:
   should not be inheriting java-utils-2 directly
