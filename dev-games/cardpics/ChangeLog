@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/cardpics
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cardpics/ChangeLog,v 1.5 2007/02/08 20:43:36 wolf31o2 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cardpics/ChangeLog,v 1.6 2008/02/17 13:03:37 drac Exp $
+
+  17 Feb 2008; Samuli Suominen <drac@gentoo.org> cardpics-0.4.ebuild:
+  Keyword and stabilize for amd64 wrt #210454, thanks to Markus Schwab for
+  reporting.
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
