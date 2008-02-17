@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.112 2008/02/14 17:46:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.113 2008/02/17 13:00:38 opfer Exp $
+
+  17 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  sysstat-8.0.4-r1.ebuild:
+  stable amd64, bug 209847
 
   14 Feb 2008; nixnut <nixnut@gentoo.org> sysstat-8.0.4-r1.ebuild:
   Stable on ppc wrt bug 209847
