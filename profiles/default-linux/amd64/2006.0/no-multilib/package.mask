@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.62 2007/11/20 22:06:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.63 2008/02/17 01:17:39 calchan Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -145,6 +145,7 @@ games-fps/vendetta-online-bin
 games-puzzle/hoh-bin
 games-roguelike/adom
 games-rpg/nwmouse
+games-rpg/nwmovies
 games-rpg/nwn
 games-rpg/nwn-cep
 games-rpg/nwn-data
