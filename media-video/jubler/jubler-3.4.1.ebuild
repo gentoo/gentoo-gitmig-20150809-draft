@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.4.1.ebuild,v 1.2 2007/12/15 17:46:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.4.1.ebuild,v 1.3 2008/02/17 17:20:11 betelgeuse Exp $
 
 inherit gnome2 eutils java-pkg-2 java-ant-2 toolchain-funcs
 
@@ -46,6 +46,7 @@ src_unpack() {
 }
 
 src_compile() {
+	java-pkg_filter-compiler ecj-3.2
 	eant $(use nls && echo i18n) jar faq || die "eant failed"
 	cp -v dist/help/jubler-faq.html build/classes/help || die "cp failed"
 	cd resources/ffdecode || die
