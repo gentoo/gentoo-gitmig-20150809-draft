@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/gnucash-docs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.1 2007/10/24 08:52:53 tove Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.2 2008/02/17 16:34:33 fmccor Exp $
+
+  17 Feb 2008; Ferris McCormick <fmccor@gentoo.org>
+  gnucash-docs-2.2.0.ebuild:
+  Sparc stable, part of Bug #210471
 
 *gnucash-docs-2.2.0 (24 Oct 2007)
 
