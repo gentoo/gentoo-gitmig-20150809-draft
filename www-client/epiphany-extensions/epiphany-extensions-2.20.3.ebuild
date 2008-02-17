@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.20.3.ebuild,v 1.2 2008/01/30 14:58:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.20.3.ebuild,v 1.3 2008/02/17 23:17:49 eva Exp $
 
 WANT_AUTOMAKE="1.10"
-inherit eutils gnome2 autotools
+inherit eutils gnome2 autotools python versionator
 
 DESCRIPTION="Extensions for the Epiphany web browser"
 HOMEPAGE="http://www.gnome.org/projects/epiphany/extensions.html"
@@ -33,6 +33,8 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
+MY_MAJORV=$(get_version_component_range 1-2)
+
 src_unpack() {
 	gnome2_src_unpack
 
@@ -41,6 +43,10 @@ src_unpack() {
 
 	echo "extensions/epilicious/progress.py" >> po/POTFILES.in
 	echo "extensions/sessionsaver/ephy-sessionsaver-extension.c" >> po/POTFILES.in
+
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
 
 	AT_M4DIR="m4" eautoreconf
 }
@@ -68,5 +74,21 @@ pkg_setup() {
 		G2CONF="${G2CONF} --with-gecko=xulrunner"
 	else
 		G2CONF="${G2CONF} --with-gecko=firefox"
+	fi
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	if use python; then
+		python_version
+		python_mod_optimize	/usr/$(get_libdir)/epiphany/${MY_MAJORV}/extensions
+	fi
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	if use python; then
+		python_version
+		python_mod_cleanup /usr/$(get_libdir)/epiphany/${MY_MAJORV}/extensions
 	fi
 }
