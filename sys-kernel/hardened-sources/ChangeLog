@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.208 2008/02/15 19:08:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.209 2008/02/17 23:47:07 solar Exp $
+
+  17 Feb 2008; <solar@gentoo.org> metadata.xml,
+  -hardened-sources-2.4.33.4.ebuild, -hardened-sources-2.6.20-r6.ebuild,
+  -hardened-sources-2.6.20-r10.ebuild, -hardened-sources-2.6.23-r4.ebuild,
+  -hardened-sources-2.6.23-r6.ebuild, hardened-sources-2.6.23-r7.ebuild:
+  - stable on x86 and remove old ebuilds
 
   15 Feb 2008; <solar@gentoo.org> hardened-sources-2.6.23-r7.ebuild:
   - stable on amd64 per request of amd64 lead
