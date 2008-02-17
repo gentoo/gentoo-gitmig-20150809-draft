@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2_p20080120.ebuild,v 1.2 2008/01/20 23:00:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2_p20080120.ebuild,v 1.3 2008/02/17 21:37:51 zzam Exp $
 
 inherit vdr-plugin eutils multilib
 
@@ -48,11 +48,18 @@ VDR_CONFD_FILE=${FILESDIR}/confd-1.0.0_pre6
 
 NO_GETTEXT_HACK=1
 
-enable_in_makefile() {
-	local opt
-	for opt; do
-		sed -i "/^#${opt}.*= 1/s-^#--" Makefile
-	done
+set_var_in_makefile() {
+	local opt="XINELIBOUTPUT_$1"
+	local value="$2" 
+	sed -i "s-^#${opt}.*= 1-${opt} = ${value}-" Makefile
+}
+
+apply_useflag() {
+	local opt="$1"
+	local flag="$2"
+	local value=0
+	use $flag && value=1
+	set_var_in_makefile "$opt" "$value"
 }
 
 src_unpack() {
@@ -62,9 +69,10 @@ src_unpack() {
 
 	XINE_LIB_VERSION=$(awk -F'"' '/XINE_VERSION/ {print $2}' /usr/include/xine.h)
 
-	enable_in_makefile XINELIBOUTPUT_VDRPLUGIN XINELIBOUTPUT_XINEPLUGIN
-	use fbcon && enable_in_makefile XINELIBOUTPUT_FB
-	use X && enable_in_makefile XINELIBOUTPUT_X11
+	set_var_in_makefile VDRPLUGIN 1
+	set_var_in_makefile XINEPLUGIN 1
+	apply_useflag FB fbcon
+	apply_useflag X11 X
 
 	# patching makefile to work with this
 	# $ rm ${outdir}/file; cp file ${outdir}/file
@@ -78,7 +86,8 @@ src_unpack() {
 src_install() {
 	vdr-plugin_src_install
 
-	dobin vdr-fbfe vdr-sxfe
+	use fbcon && dobin vdr-fbfe
+	use X && dobin vdr-sxfe
 
 	insinto ${VDR_PLUGIN_DIR}
 	doins *.so.${SO_VERSION} || die "could not install sub-plugins"
