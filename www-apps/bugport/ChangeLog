@@ -1,6 +1,16 @@
 # ChangeLog for www-apps/bugport
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugport/ChangeLog,v 1.6 2007/12/25 14:38:22 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugport/ChangeLog,v 1.7 2008/02/17 21:00:56 hollow Exp $
+
+*bugport-1.147 (17 Feb 2008)
+
+  17 Feb 2008; Benedikt Böhm <hollow@gentoo.org> bugport-1.146.ebuild,
+  +bugport-1.147.ebuild:
+  merge from webapp overlay
+
+  05 Feb 2008; Jakub Moc <jakub@gentoo.org> +bugport-1.147.ebuild:
+  Version bump. Fix dependencies, add mysql USE flag and check for required
+  PHP features accordingly. Quoting, ebuild cleanup.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing pyrania from metadata.xml as per #26352. Assigning to

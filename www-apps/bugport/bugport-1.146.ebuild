@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugport/bugport-1.146.ebuild,v 1.2 2007/08/05 01:21:27 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugport/bugport-1.146.ebuild,v 1.3 2008/02/17 21:00:56 hollow Exp $
 
 inherit webapp
 
@@ -54,7 +54,7 @@ src_install() {
 	  conf/config.php
 
 	# Install
-	cp -R . ${D}${MY_HTDOCSDIR}
+	cp -R . "${D}"${MY_HTDOCSDIR}
 
 	# Identify the configuration files that this app uses
 	webapp_configfile ${MY_HTDOCSDIR}/conf/config.php
