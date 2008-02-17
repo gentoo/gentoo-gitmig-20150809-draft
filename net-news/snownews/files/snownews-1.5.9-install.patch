@@ -1,0 +1,11 @@
+diff -ru snownews-1.5.9~/Makefile snownews-1.5.9/Makefile
+--- snownews-1.5.9~/Makefile	2008-02-17 12:31:35.000000000 +0100
++++ snownews-1.5.9/Makefile	2008-02-17 12:31:52.000000000 +0100
+@@ -66,7 +66,6 @@
+ 		(cd $(DESTDIR)$(PREFIX)/bin && \
+ 		 ln -sf opml2snow snow2opml ); \
+ 	fi;
+-	$(INSTALL) snowsync $(DESTDIR)$(PREFIX)/bin
+ 
+ install-locales: locales
+ 	for L in $(LOCALES); do \
