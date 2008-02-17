@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.89 2008/02/17 16:54:20 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.90 2008/02/17 18:04:34 mabi Exp $
+
+  17 Feb 2008; Matti Bickel <mabi@gentoo.org> files/lua-5.1-make.patch:
+  fix bug #204308
 
   17 Feb 2008; Matti Bickel <mabi@gentoo.org>
   -files/lua-5.0.2-LDFLAGS_and_as-needed.patch, -files/lua-5.0.2-pic.patch,
