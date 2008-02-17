@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.3.5.ebuild,v 1.5 2008/02/17 19:25:48 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.3.5.ebuild,v 1.6 2008/02/17 23:00:21 hollow Exp $
 
 inherit webapp depend.php
 
@@ -15,7 +15,7 @@ IUSE=""
 RDEPEND=""
 DEPEND=""
 
-need_php
+need_php_httpd
 
 pkg_setup() {
 	webapp_pkg_setup
