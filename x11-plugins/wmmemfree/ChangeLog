@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmemfree
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemfree/ChangeLog,v 1.13 2008/02/16 09:22:01 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemfree/ChangeLog,v 1.14 2008/02/17 17:22:50 nixnut Exp $
+
+  17 Feb 2008; nixnut <nixnut@gentoo.org> ChangeLog:
+  Stable on ppc wrt bug 210300
 
 *wmmemfree-0.7-r2 (16 Feb 2008)
 
