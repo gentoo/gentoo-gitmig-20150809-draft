@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fxscintilla
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.38 2007/06/03 11:39:49 corsair Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.39 2008/02/17 21:37:12 mabi Exp $
+
+  17 Feb 2008; Matti Bickel <mabi@gentoo.org> fxscintilla-1.71-r1.ebuild:
+  add missing inherit autotools (bug #204606)
 
   03 Jun 2007; Markus Rothe <corsair@gentoo.org> fxscintilla-1.71-r1.ebuild:
   Stable on ppc64; bug #108628

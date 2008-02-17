@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71-r1.ebuild,v 1.7 2007/06/03 11:39:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71-r1.ebuild,v 1.8 2008/02/17 21:37:12 mabi Exp $
 
-inherit eutils multilib
+inherit autotools eutils multilib
 
 DESCRIPTION="A free source code editing component for the FOX-Toolkit"
 HOMEPAGE="http://www.nongnu.org/fxscintilla/"
