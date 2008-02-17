@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/csharp-mode-0.7.0.ebuild,v 1.3 2007/12/07 14:04:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/csharp-mode-0.7.0.ebuild,v 1.4 2008/02/17 14:53:57 opfer Exp $
 
 inherit elisp versionator
 
@@ -10,7 +10,7 @@ SRC_URI="http://mfgames.com/linux/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 NEED_CCMODE=5.30
