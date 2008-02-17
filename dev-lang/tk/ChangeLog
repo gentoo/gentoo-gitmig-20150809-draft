@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.104 2008/02/16 16:06:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.105 2008/02/17 11:29:06 nixnut Exp $
+
+  17 Feb 2008; nixnut <nixnut@gentoo.org> tk-8.4.18.ebuild:
+  Stable on ppc wrt bug 210326
 
   16 Feb 2008; Christian Faulhammer <opfer@gentoo.org> tk-8.4.18.ebuild:
   stable x86, bug 210326
