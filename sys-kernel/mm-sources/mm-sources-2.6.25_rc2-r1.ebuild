@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.24_rc4-r1.ebuild,v 1.1 2007/12/06 14:34:34 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.25_rc2-r1.ebuild,v 1.1 2008/02/17 16:11:21 voxus Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
