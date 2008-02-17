@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/nut
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.49 2007/10/09 00:54:54 robbat2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.50 2008/02/17 05:23:45 dragonheart Exp $
+
+  17 Feb 2008; Daniel Black <dragonheart@gentoo.org> nut-2.2.0.ebuild:
+  added check for gd with png support as per patch bug RB in bug #208872
 
   09 Oct 2007; Robin H. Johnson <robbat2@gentoo.org>
   -files/upsstats-upsset-link-2.0.4.patch, -files/upsdrv.rc6,

@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.0.ebuild,v 1.2 2007/10/12 16:30:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.0.ebuild,v 1.3 2008/02/17 05:23:45 dragonheart Exp $
 
-inherit eutils fixheadtails
+inherit eutils fixheadtails autotools
 
 MY_P="${P/_/-}"
 
@@ -34,6 +34,11 @@ NUT_PUBLIC_FILES="/etc/nut/{{hosts,upsset,ups,upssched}.conf,upsstats{,-single}.
 NUT_PRIVATE_FILES="/etc/nut/{upsd.conf,upsd.users,upsmon.conf}"
 
 pkg_setup() {
+	if use cgi && ! built_with_use media-libs/gd png ; then
+		eerror "CGI support requested, bug GD not built with PNG support"
+		eerror "Please rebuild gd with 'USE=png'"
+		die
+	fi
 	enewgroup nut 84
 	enewuser nut 84 -1 /var/lib/nut nut,uucp
 	# As of udev-104, NUT must be in uucp and NOT in tty.
@@ -59,7 +64,7 @@ src_unpack() {
 		-i configure.in || die "sed failed"
 
 	ebegin "Recreating configure"
-	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
+	WANT_AUTOCONF=2.5 eautoconf || die "autoconf failed"
 	eend $?
 
 	sed -e "s:52_nut-usbups.rules:70-nut-usbups.rules:" \
