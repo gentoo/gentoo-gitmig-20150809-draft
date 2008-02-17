@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/avant-window-navigator
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.2 2007/11/10 16:27:27 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.3 2008/02/17 23:35:40 eva Exp $
+
+  17 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  avant-window-navigator-0.2.1-r1.ebuild:
+  fix python eclass use, bug #207667
 
 *avant-window-navigator-0.2.1-r1 (10 Nov 2007)
 
