@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.3-r2.ebuild,v 1.2 2008/02/17 14:20:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.3-r2.ebuild,v 1.3 2008/02/17 15:11:02 hkbst Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -64,7 +64,7 @@ src_install() {
 	echo "GUILE_LOAD_PATH=\"/usr/share/guile/${MAJOR}\"" > "${D}"/etc/env.d/50guile
 
 	# necessary for registering slib, see bug 206896
-	dodir /usr/share/guile/site
+	keepdir /usr/share/guile/site
 }
 
 pkg_postinst() {
