@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.67 2008/02/09 12:26:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.68 2008/02/17 02:58:54 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kuiviewer-3.5.5.ebuild,
+  -kuiviewer-3.5.6.ebuild, -kuiviewer-3.5.7.ebuild, -kuiviewer-4.0.0.ebuild:
+  Spring cleaning
 
   09 Feb 2008; Raúl Porcel <armin76@gentoo.org> kuiviewer-3.5.8.ebuild:
   alpha/ia64/sparc stable wrt #208366

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebugdialog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebugdialog/ChangeLog,v 1.60 2008/02/07 00:12:01 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebugdialog/ChangeLog,v 1.61 2008/02/17 03:25:16 ingmar Exp $
+
+  17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -kdebugdialog-3.5.0.ebuild, -kdebugdialog-3.5.6.ebuild,
+  -kdebugdialog-4.0.0.ebuild:
+  Spring cleaning
 
 *kdebugdialog-4.0.1 (06 Feb 2008)
 

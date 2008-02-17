@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.86 2008/02/07 00:12:06 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.87 2008/02/17 02:28:17 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -khelpcenter-3.5.5.ebuild, -khelpcenter-3.5.6.ebuild,
+  -khelpcenter-3.5.6-r1.ebuild, -khelpcenter-3.5.7.ebuild,
+  -khelpcenter-4.0.0.ebuild:
+  Spring cleaning
 
 *khelpcenter-4.0.1 (06 Feb 2008)
 

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim-kioslaves
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.95 2008/01/31 15:29:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.96 2008/02/17 03:22:52 ingmar Exp $
+
+  17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -kdepim-kioslaves-3.5.5.ebuild, -kdepim-kioslaves-3.5.5-r1.ebuild,
+  -kdepim-kioslaves-3.5.6.ebuild, -kdepim-kioslaves-3.5.6-r1.ebuild,
+  -kdepim-kioslaves-3.5.7.ebuild, -kdepim-kioslaves-3.5.7-r1.ebuild:
+  Spring cleaning
 
   31 Jan 2008; Brent Baude <ranger@gentoo.org>
   kdepim-kioslaves-3.5.8.ebuild:

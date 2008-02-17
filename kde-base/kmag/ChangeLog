@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmag
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.76 2008/02/07 00:12:36 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.77 2008/02/17 02:40:27 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kmag-3.5.5.ebuild,
+  -kmag-3.5.6.ebuild, -kmag-3.5.7.ebuild, -kmag-4.0.0.ebuild:
+  Spring cleaning
 
 *kmag-4.0.1 (06 Feb 2008)
 

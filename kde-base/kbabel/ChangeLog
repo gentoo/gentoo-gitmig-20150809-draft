@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kbabel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.69 2008/02/09 12:11:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.70 2008/02/17 02:29:44 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kbabel-3.5.5.ebuild,
+  -kbabel-3.5.6.ebuild, -kbabel-3.5.7.ebuild:
+  Spring cleaning
 
   09 Feb 2008; Raúl Porcel <armin76@gentoo.org> kbabel-3.5.8.ebuild:
   alpha/sparc stable

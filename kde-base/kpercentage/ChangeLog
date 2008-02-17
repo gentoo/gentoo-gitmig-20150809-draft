@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kpercentage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpercentage/ChangeLog,v 1.76 2008/02/07 00:12:04 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpercentage/ChangeLog,v 1.77 2008/02/17 02:43:01 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -kpercentage-3.5.5.ebuild, -kpercentage-3.5.6.ebuild,
+  -kpercentage-3.5.7.ebuild, -kpercentage-4.0.0.ebuild:
+  Spring cleaning
 
 *kpercentage-4.0.1 (06 Feb 2008)
 

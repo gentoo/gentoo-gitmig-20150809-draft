@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksquares
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksquares/ChangeLog,v 1.2 2008/02/07 00:12:51 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksquares/ChangeLog,v 1.3 2008/02/17 03:04:01 ingmar Exp $
+
+  17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -ksquares-4.0.0.ebuild:
+  Spring cleaning
 
 *ksquares-4.0.1 (06 Feb 2008)
 

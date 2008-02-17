@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kreadconfig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.57 2008/02/07 00:11:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.58 2008/02/17 02:22:33 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -kreadconfig-3.5.0.ebuild, -kreadconfig-3.5.6.ebuild,
+  -kreadconfig-4.0.0.ebuild:
+  Spring cleaning
 
 *kreadconfig-4.0.1 (06 Feb 2008)
 

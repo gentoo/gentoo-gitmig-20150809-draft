@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim-wizards
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.77 2008/01/31 15:30:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.78 2008/02/17 03:24:41 ingmar Exp $
+
+  17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -kdepim-wizards-3.5.5.ebuild, -kdepim-wizards-3.5.6.ebuild,
+  -kdepim-wizards-3.5.7.ebuild:
+  Spring cleaning
 
   31 Jan 2008; Brent Baude <ranger@gentoo.org> kdepim-wizards-3.5.8.ebuild:
   Marking kdepim-wizards-3.5.8 ppc for bug 207634

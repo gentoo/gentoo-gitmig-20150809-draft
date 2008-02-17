@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.88 2008/02/07 00:12:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.89 2008/02/17 01:51:44 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -kdebase-meta-3.5.5.ebuild, -kdebase-meta-3.5.6.ebuild,
+  -kdebase-meta-3.5.7.ebuild, -kdebase-meta-4.0.0.ebuild:
+  Spring cleaning
 
 *kdebase-meta-4.0.1 (06 Feb 2008)
 

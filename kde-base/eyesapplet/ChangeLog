@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/eyesapplet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/eyesapplet/ChangeLog,v 1.69 2008/01/31 15:31:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/eyesapplet/ChangeLog,v 1.70 2008/02/17 01:56:12 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -eyesapplet-3.5.5.ebuild, -eyesapplet-3.5.6.ebuild,
+  -eyesapplet-3.5.7.ebuild:
+  Spring cleaning
 
   31 Jan 2008; Brent Baude <ranger@gentoo.org> eyesapplet-3.5.8.ebuild:
   Marking eyesapplet-3.5.8 ppc for bug 207634

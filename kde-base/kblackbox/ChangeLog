@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kblackbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kblackbox/ChangeLog,v 1.78 2008/02/07 00:11:02 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kblackbox/ChangeLog,v 1.79 2008/02/17 03:26:50 ingmar Exp $
+
+  17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kblackbox-3.5.5.ebuild,
+  -kblackbox-3.5.6.ebuild, -kblackbox-3.5.7.ebuild, -kblackbox-4.0.0.ebuild:
+  Spring cleaning
 
 *kblackbox-4.0.1 (06 Feb 2008)
 

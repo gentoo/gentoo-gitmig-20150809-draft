@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.105 2008/02/07 00:11:15 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.106 2008/02/17 02:47:24 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -files/kcontrol-3.5.7-screensaver-path.patch, -kcontrol-3.5.5.ebuild,
+  -kcontrol-3.5.6.ebuild, -kcontrol-3.5.6-r1.ebuild, -kcontrol-3.5.7.ebuild,
+  -kcontrol-3.5.7-r1.ebuild, -kcontrol-3.5.8.ebuild,
+  -kcontrol-3.5.8-r1.ebuild, -kcontrol-4.0.0.ebuild:
+  Spring cleaning
 
 *kcontrol-4.0.1 (06 Feb 2008)
 

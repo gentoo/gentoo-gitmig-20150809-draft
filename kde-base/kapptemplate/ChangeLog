@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kapptemplate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.59 2008/02/09 12:10:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.60 2008/02/17 01:57:40 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -kapptemplate-3.5.5.ebuild, -kapptemplate-3.5.6.ebuild,
+  -kapptemplate-4.0.0.ebuild:
+  Spring cleaning
 
   09 Feb 2008; Raúl Porcel <armin76@gentoo.org> kapptemplate-3.5.8.ebuild:
   alpha/sparc stable

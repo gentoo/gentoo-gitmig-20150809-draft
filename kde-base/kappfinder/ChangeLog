@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kappfinder
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.80 2008/02/07 00:11:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.81 2008/02/17 01:52:03 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -kappfinder-3.5.5.ebuild, -kappfinder-3.5.6.ebuild,
+  -kappfinder-3.5.7.ebuild, -kappfinder-4.0.0.ebuild:
+  Spring cleaning
 
 *kappfinder-4.0.1 (06 Feb 2008)
 

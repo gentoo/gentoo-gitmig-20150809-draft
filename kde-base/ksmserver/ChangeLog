@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.76 2008/02/07 00:11:51 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.77 2008/02/17 03:05:08 ingmar Exp $
+
+  17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -ksmserver-3.5.5.ebuild,
+  -ksmserver-3.5.6.ebuild, -ksmserver-3.5.7.ebuild, -ksmserver-3.5.8.ebuild,
+  -ksmserver-4.0.0.ebuild:
+  Spring cleaning
 
 *ksmserver-4.0.1 (06 Feb 2008)
 

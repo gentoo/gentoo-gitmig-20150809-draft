@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artsplugin-mpg123
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpg123/ChangeLog,v 1.49 2008/02/09 12:08:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpg123/ChangeLog,v 1.50 2008/02/17 02:36:34 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -artsplugin-mpg123-3.5.0.ebuild, -artsplugin-mpg123-3.5.6.ebuild:
+  Spring cleaning
 
   09 Feb 2008; Raúl Porcel <armin76@gentoo.org>
   artsplugin-mpg123-3.5.8.ebuild:

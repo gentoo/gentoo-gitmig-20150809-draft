@@ -1,6 +1,16 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.103 2008/02/07 00:12:20 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.104 2008/02/17 01:43:02 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -files/konqueror-3.5.7-185603-spoofing.diff,
+  -files/konqueror-3.5.7-location.patch,
+  -files/konqueror-4.0.0-linkage.patch, -konqueror-3.5.5.ebuild,
+  -konqueror-3.5.6.ebuild, -konqueror-3.5.6-r1.ebuild,
+  -konqueror-3.5.7.ebuild, -konqueror-3.5.7-r1.ebuild,
+  -konqueror-3.5.7-r2.ebuild, -konqueror-3.5.7-r3.ebuild,
+  -konqueror-4.0.0.ebuild:
+  Spring cleaning
 
 *konqueror-4.0.1 (06 Feb 2008)
 

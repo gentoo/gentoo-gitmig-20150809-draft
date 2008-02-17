@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.4 2008/02/07 00:11:37 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.5 2008/02/17 02:03:48 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -files/systemsettings-4.0.0-opengl.patch, -systemsettings-4.0.0.ebuild:
+  Spring cleaning
 
 *systemsettings-4.0.1 (06 Feb 2008)
 

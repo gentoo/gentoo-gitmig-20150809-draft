@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.110 2008/02/07 00:12:43 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.111 2008/02/17 02:15:16 ingmar Exp $
+
+  16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -files/kwin-3.5.5-input-shape.patch, -kwin-3.5.5-r1.ebuild,
+  -kwin-3.5.5-r2.ebuild, -kwin-3.5.6.ebuild, -kwin-3.5.6-r1.ebuild,
+  -kwin-3.5.7.ebuild, -kwin-4.0.0.ebuild:
+  Spring cleaning
 
 *kwin-4.0.1 (06 Feb 2008)
 
