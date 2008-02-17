@@ -1,19 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.0.2.ebuild,v 1.8 2008/02/17 22:37:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.0.3.ebuild,v 1.1 2008/02/17 22:37:41 hollow Exp $
 
 inherit webapp depend.apache versionator eutils
 
-GZ_PV="3.0.1"
 MY_PB=$(get_version_component_range 1-2)
 
 DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz
-	linguas_de? ( http://ganderbay.net/dl/germzilla-${GZ_PV}-1.utf-8.tar.gz )"
+	linguas_de? ( http://ganderbay.net/dl/germzilla-${PV}-1.utf-8.tar.gz )"
 HOMEPAGE="http://www.bugzilla.org"
 
 LICENSE="MPL-1.1 NPL-1.1"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="modperl extras graphviz mysql postgres linguas_de"
 

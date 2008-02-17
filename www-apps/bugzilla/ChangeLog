@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.106 2008/02/05 15:20:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.107 2008/02/17 22:37:41 hollow Exp $
+
+*bugzilla-3.0.3 (17 Feb 2008)
+
+  17 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
+  +files/3.0/bugzilla.cron.daily, +files/3.0/bugzilla.cron.tab,
+  -files/bugzilla.cron.daily, -files/bugzilla.cron.tab,
+  bugzilla-2.20.5.ebuild, bugzilla-2.22.3.ebuild, bugzilla-3.0.2.ebuild,
+  +bugzilla-3.0.3.ebuild:
+  version bump; major ebuild cleanup wrt #208584
 
   05 Feb 2008; Benedikt Böhm <hollow@gentoo.org> bugzilla-2.20.5.ebuild,
   bugzilla-2.22.3.ebuild:

@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.5.ebuild,v 1.8 2008/02/05 15:20:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.5.ebuild,v 1.9 2008/02/17 22:37:41 hollow Exp $
 
-inherit webapp depend.apache
+inherit webapp depend.apache versionator
+
+MY_PB=$(get_version_component_range 1-2)
 
 DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
@@ -14,55 +16,58 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="graphviz mysql postgres"
 
 RDEPEND="
+	virtual/httpd-cgi
+	virtual/mta
 	>=dev-lang/perl-5.6.1
-	postgres? ( >=dev-perl/DBD-Pg-1.43 )
-	mysql? ( <=dev-perl/DBD-mysql-3.0002 )
-	graphviz? ( media-gfx/graphviz )
+
 	>=dev-perl/AppConfig-1.52
-	>=virtual/perl-CGI-2.93
-	>=dev-perl/TimeDate-1.16
-	>=dev-perl/DBI-1.38
-	>=virtual/perl-File-Spec-0.84
-	virtual/perl-File-Temp
-	>=dev-perl/Template-Toolkit-2.08
-	>=dev-perl/Text-Tabs+Wrap-2001.0131
-	>=dev-perl/MailTools-1.67
-	virtual/perl-Storable
-	>=dev-perl/GD-1.20
 	>=dev-perl/Chart-2.3
+	>=dev-perl/DBI-1.38
+	>=dev-perl/GD-1.20
 	dev-perl/GDGraph
 	dev-perl/GDTextUtil
-	dev-perl/XML-Parser
-	>=dev-perl/PatchReader-0.9.4
+	>=dev-perl/MailTools-1.67
 	dev-perl/MIME-tools
+	>=dev-perl/PatchReader-0.9.4
 	dev-perl/perl-ldap
-	virtual/mta
+	>=dev-perl/Template-Toolkit-2.08
+	>=dev-perl/Text-Tabs+Wrap-2001.0131
+	>=dev-perl/TimeDate-1.16
+	dev-perl/XML-Parser
+	>=virtual/perl-CGI-2.93
+	>=virtual/perl-File-Spec-0.84
+	virtual/perl-File-Temp
+	virtual/perl-Storable
+
+	graphviz? ( media-gfx/graphviz )
+	mysql? ( <=dev-perl/DBD-mysql-3.0002 )
+	postgres? ( >=dev-perl/DBD-Pg-1.43 )
 "
 
 need_apache2
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# remove CVS directories
-	find . -type d -name 'CVS' -print | xargs rm -rf
+	find . -type d -name 'CVS' -prune -exec rm -rf {} \;
 }
 
 src_install () {
 	webapp_src_preinst
 
-	cp -r ${S}/* ${D}/${MY_HTDOCSDIR} || die
-	for file in `find -type d -printf "%p/* "`; do
-		webapp_serverowned "${MY_HTDOCSDIR}/${file}"
+	insinto ${MY_HTDOCSDIR}
+	doins -r *
+	newins "${FILESDIR}"/${MY_PB}/apache.htaccess .htaccess
+	for f in bugzilla.cron.daily bugzilla.cron.tab; do
+		doins "${FILESDIR}"/${MY_PB}/${f}
 	done
 
-	cp ${FILESDIR}/2.20/apache.htaccess ${D}/${MY_HTDOCSDIR}/.htaccess
+	for f in $(find -type d -printf "%p/* "); do
+		webapp_serverowned ${MY_HTDOCSDIR}/${f}
+	done
 
-	local FILE="bugzilla.cron.daily bugzilla.cron.tab"
-	cd ${FILESDIR}/2.20
-	cp ${FILE} ${D}/${MY_HTDOCSDIR}
-
-	webapp_hook_script ${FILESDIR}/2.20/reconfig
-	webapp_postinst_txt en ${FILESDIR}/2.20/postinstall-en.txt
+	webapp_hook_script "${FILESDIR}"/${MY_PB}/reconfig
+	webapp_postinst_txt en "${FILESDIR}"/${MY_PB}/postinstall-en.txt
 	webapp_src_install
 }
