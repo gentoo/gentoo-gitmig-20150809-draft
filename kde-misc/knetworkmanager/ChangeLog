@@ -1,6 +1,15 @@
 # ChangeLog for kde-misc/knetworkmanager
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.6 2007/12/31 22:35:43 josejx Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.7 2008/02/17 15:58:33 rbu Exp $
+
+*knetworkmanager-0.2.1_p20071228 (17 Feb 2008)
+
+  17 Feb 2008; Robert Buchholz <rbu@gentoo.org>
+  +files/knetworkmanager-0.2.1-autostart.patch,
+  +knetworkmanager-0.2.1_p20071228.ebuild:
+  Bump to newer svn snapshot to fix icon display. Additionally,
+   - Depend on straight KDE 3.5 components (bug #206528)
+   - Install proper autostart entry
 
   31 Dec 2007; Joseph Jezak <josejx@gentoo.org>
   knetworkmanager-0.2.1_pre20071119.ebuild:
