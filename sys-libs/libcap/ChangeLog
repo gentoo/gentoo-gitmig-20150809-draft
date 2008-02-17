@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.58 2008/02/16 22:02:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.59 2008/02/17 06:31:17 vapier Exp $
+
+  17 Feb 2008; Mike Frysinger <vapier@gentoo.org> libcap-2.06.ebuild:
+  Depend on attr and make sure we disable gperf #210424.
 
 *libcap-2.06 (16 Feb 2008)
 

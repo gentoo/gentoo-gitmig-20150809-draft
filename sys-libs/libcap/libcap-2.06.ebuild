@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.06.ebuild,v 1.1 2008/02/16 22:02:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.06.ebuild,v 1.2 2008/02/17 06:31:17 vapier Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -13,13 +13,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="pam"
 
-DEPEND="sys-kernel/linux-headers"
-RDEPEND=""
+RDEPEND="sys-apps/attr"
+DEPEND="${RDEPEND}
+	sys-kernel/linux-headers"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}/*.patch
+	sed -i 's:gperf:false:' libcap/Makefile #210424
 }
 
 src_compile() {
