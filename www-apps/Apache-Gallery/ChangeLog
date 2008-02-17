@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/Apache-Gallery
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.32 2008/02/17 18:49:14 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.33 2008/02/17 23:33:19 hollow Exp $
+
+  17 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  remove redundant metadata
 
   17 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
   -files/76_apache-gallery.conf, -files/76_apache1-gallery.conf,
