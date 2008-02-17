@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.ebuild,v 1.5 2005/08/04 08:05:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.ebuild,v 1.6 2008/02/17 22:33:25 eva Exp $
 
 inherit gnome2
 
@@ -24,7 +24,7 @@ DOCS="AUTHORS ChangeLog README TODO"
 
 src_unpack () {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Let this file be re-created so the path in the <oaf_server> element is
 	# correct. See bug #93612.

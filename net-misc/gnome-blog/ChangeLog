@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gnome-blog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/ChangeLog,v 1.18 2008/01/25 20:14:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/ChangeLog,v 1.19 2008/02/17 22:33:25 eva Exp $
+
+  17 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org> gnome-blog-0.9.ebuild,
+  gnome-blog-0.9.1.ebuild:
+  fix python eclass use, bug #207667
+  fix quoting
 
   25 Jan 2008; Raúl Porcel <armin76@gentoo.org> gnome-blog-0.9.1.ebuild:
   x86 stable

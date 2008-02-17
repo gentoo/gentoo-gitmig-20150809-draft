@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.1.ebuild,v 1.3 2008/01/25 20:14:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.1.ebuild,v 1.4 2008/02/17 22:33:25 eva Exp $
 
-inherit gnome2
+inherit gnome2 python
 
 DESCRIPTION="Post entries to your blog right from the Gnome panel"
 HOMEPAGE="http://www.gnome.org/~seth/gnome-blog/"
@@ -28,4 +28,20 @@ src_unpack () {
 	# Let this file be re-created so the path in the <oaf_server> element is
 	# correct. See bug #93612.
 	rm -f GNOME_BlogApplet.server.in
+
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/gnomeblog
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	python_version
+	python_mod_cleanup
 }
