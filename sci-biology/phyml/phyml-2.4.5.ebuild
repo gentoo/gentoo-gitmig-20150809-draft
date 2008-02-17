@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phyml/phyml-2.4.5.ebuild,v 1.1 2006/08/18 19:27:04 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phyml/phyml-2.4.5.ebuild,v 1.2 2008/02/17 11:24:21 opfer Exp $
 
 DESCRIPTION="A simple, fast, and accurate algorithm to estimate large phylogenies by maximum likelihood."
 HOMEPAGE="http://atgc.lirmm.fr/phyml/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.lirmm.fr/~guindon/${PN}_v${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
