@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/NaturalDocs-1.35.ebuild,v 1.5 2008/02/16 18:28:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/NaturalDocs-1.35.ebuild,v 1.6 2008/02/17 08:18:31 opfer Exp $
 
 DESCRIPTION="Extensible, multi-language source code documentation generator"
 HOMEPAGE="http://www.naturaldocs.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/naturaldocs/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE=""
 
