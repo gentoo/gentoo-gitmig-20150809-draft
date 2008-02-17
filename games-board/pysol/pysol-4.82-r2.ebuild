@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r2.ebuild,v 1.2 2007/04/05 01:20:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r2.ebuild,v 1.3 2008/02/17 22:10:09 nyhm Exp $
 
 inherit eutils python games
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pysol.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://www.pysol.org/download/pysol/${P}-src.tar.bz2
 	extra-cardsets? (
-		http://ftp.debian.org/debian/pool/main/p/${PNX}/${PNX}_${PVX}.orig.tar.gz
+		mirror://debian/pool/main/p/${PNX}/${PNX}_${PVX}.orig.tar.gz
 	)"
 
 LICENSE="GPL-2"
