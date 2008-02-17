@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p25993.ebuild,v 1.9 2008/02/17 14:10:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p25993.ebuild,v 1.10 2008/02/17 14:18:02 drac Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -192,7 +192,7 @@ src_unpack() {
 	fi
 
 	# Fix polish spelling errors
-	[[ -n ${LINGUAS} ]] && sed -e 's:ZarzÄdano:ZaÅ¼Ädano:' -i help/help_mp-pl.h
+	[[ -n ${LINGUAS} ]] && sed -e 's:Zarządano:Zażądano:' -i help/help_mp-pl.h
 }
 
 src_compile() {
