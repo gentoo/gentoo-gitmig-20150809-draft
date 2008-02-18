@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/superkaramba
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.64 2008/02/17 02:38:09 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.65 2008/02/18 17:06:03 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +files/superkaramba-4.0.1-as-needed.patch, superkaramba-4.0.1.ebuild:
+  Fix compilation with LDFLAGS="-Wl,--as-needed", thanks to Steffen Hau in bug
+  209274.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -superkaramba-3.5.5.ebuild, -superkaramba-3.5.6.ebuild,
