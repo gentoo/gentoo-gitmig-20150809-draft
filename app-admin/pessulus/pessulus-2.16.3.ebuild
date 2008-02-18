@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.16.3.ebuild,v 1.8 2008/02/11 22:10:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.16.3.ebuild,v 1.9 2008/02/18 23:10:24 eva Exp $
 
 inherit gnome2 multilib python
 
@@ -29,6 +29,9 @@ src_unpack() {
 	# disable pyc compiling
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
+
+	# fix LINGUAS handling, bug #183086
+	intltoolize --force || die "intltoolize failed"
 }
 
 pkg_postinst() {
