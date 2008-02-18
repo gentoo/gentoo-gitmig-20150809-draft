@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3364 2008/02/17 16:32:15 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3365 2008/02/18 11:08:12 s4t4n Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -143,6 +143,7 @@ app-emulation/virtualbox-bin:chm - Install help files and add chm reader depende
 app-emulation/virtualbox-bin:sdk - Enable building of SDK
 app-emulation/virtualbox:additions - Install Guest System Tools ISO
 app-emulation/virtualbox:sdk - Enable building of SDK
+app-emulation/vov:gprof - build vov with profiling support
 app-emulation/wine:gecko - Add support for the Gecko engine when using iexplore
 app-emulation/xen-tools:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS (not supported)
 app-emulation/xen-tools:hvm - Enable support for hardware based virtualization (VT-x, AMD-v)
