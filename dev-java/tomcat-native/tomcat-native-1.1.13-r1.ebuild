@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/tomcat-native-1.1.13-r1.ebuild,v 1.1 2008/02/18 00:20:13 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/tomcat-native-1.1.13-r1.ebuild,v 1.2 2008/02/18 02:38:42 wltjr Exp $
 
 inherit eutils java-pkg-2
 
@@ -36,7 +36,7 @@ src_compile(){
 
 src_install() {
 	cd "${S}"/jni/native
-	make DESTDIR="${D}" install || die "Could not install libtcnative-1.so"
+	emake DESTDIR="${D}" install || die "Could not install libtcnative-1.so"
 }
 
 pkg_postinst() {
