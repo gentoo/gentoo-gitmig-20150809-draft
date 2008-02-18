@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.23.ebuild,v 1.4 2007/12/16 14:40:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.23.ebuild,v 1.5 2008/02/18 22:56:39 ingmar Exp $
 
 inherit kde multilib
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="dev-libs/openssl
 	>=dev-libs/geoip-1.4.0
-	|| ( kde-base/kdebase kde-base/libkonq )"
+	|| ( =kde-base/kdebase-3.5* =kde-base/libkonq-3.5* )"
 
 RDEPEND="${DEPEND}
 	>=net-misc/tor-0.1.2.14
