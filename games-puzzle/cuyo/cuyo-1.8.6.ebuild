@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-1.8.6.ebuild,v 1.3 2008/02/17 22:06:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-1.8.6.ebuild,v 1.4 2008/02/18 17:08:26 coldwind Exp $
 
 inherit toolchain-funcs eutils qt3 games
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/cuyo/${P//_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="$(qt_min_version 3.3)"
