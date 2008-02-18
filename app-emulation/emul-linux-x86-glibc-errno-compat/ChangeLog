@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/emul-linux-x86-glibc-errno-compat
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc-errno-compat/ChangeLog,v 1.1 2008/02/18 23:50:45 vapier Exp $
+
+*emul-linux-x86-glibc-errno-compat-2.5 (18 Feb 2008)
+
+  18 Feb 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/glibc-errno-wrapper, +metadata.xml,
+  +emul-linux-x86-glibc-errno-compat-2.5.ebuild:
+  Initial package #208161.
