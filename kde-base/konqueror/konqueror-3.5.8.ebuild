@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.8.ebuild,v 1.7 2008/01/31 15:31:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.8.ebuild,v 1.8 2008/02/18 13:30:04 ingmar Exp $
 
 KMNAME=kdebase
 # Note: we need >=kdelibs-3.3.2-r1, but we don't want 3.3.3!
@@ -42,7 +42,7 @@ src_install() {
 	if use branding ; then
 		dodir "${PREFIX}"/share/services/searchproviders
 		insinto "${PREFIX}"/share/services/searchproviders
-		doins "${WORKDIR}"/patches/*.desktop
+		doins "${WORKDIR}"/patches/Gentoo_{Bugzilla,Forums}.desktop
 	fi
 }
 

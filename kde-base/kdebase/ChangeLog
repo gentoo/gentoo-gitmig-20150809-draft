@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.429 2008/02/18 13:12:25 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.430 2008/02/18 13:30:36 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -files/Gentoo_Packages.desktop:
+  Don't install a web shortcut for packages.gentoo.org, as it doesn't have
+  search functionality yet, bug 209856.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -kdebase-3.5.5-r1.ebuild, -kdebase-3.5.5-r3.ebuild,

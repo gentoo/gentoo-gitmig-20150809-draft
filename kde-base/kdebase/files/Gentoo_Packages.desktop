@@ -1,8 +1,0 @@
-[Desktop Entry]
-Charset=
-Hidden=false
-Keys=gp
-Name=Gentoo Packages
-Query=http://packages.gentoo.org/search/?sstring=\\{@}
-ServiceTypes=SearchProvider
-Type=Service
