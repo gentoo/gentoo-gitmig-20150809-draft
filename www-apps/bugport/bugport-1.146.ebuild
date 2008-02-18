@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugport/bugport-1.146.ebuild,v 1.4 2008/02/18 11:23:48 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugport/bugport-1.146.ebuild,v 1.5 2008/02/18 11:27:43 hollow Exp $
 
 inherit webapp depend.php
 
@@ -31,6 +31,8 @@ src_install() {
 	sed -i -e "s|create_tables.sql|${MY_SQLSCRIPTSDIR}/mysql/${PV}_create.sql|" \
 		INSTALL.txt || die "sed failed in INSTALL.txt"
 
+	webapp_postinst_txt en INSTALL.txt
+
 	webapp_sqlscript mysql create_tables.sql
 	rm -f *.sql
 
@@ -49,6 +51,5 @@ src_install() {
 	webapp_configfile ${MY_HTDOCSDIR}/conf/config.php
 	webapp_configfile ${MY_HTDOCSDIR}/conf/configuration.php
 
-	webapp_postinst_txt en INSTALL.txt
 	webapp_src_install
 }
