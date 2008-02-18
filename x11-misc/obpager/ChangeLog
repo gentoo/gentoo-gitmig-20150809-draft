@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/obpager
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/ChangeLog,v 1.9 2007/11/27 21:21:50 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/ChangeLog,v 1.10 2008/02/18 00:29:58 omp Exp $
+
+  18 Feb 2008; David Shakaryan <omp@gentoo.org>
+  +files/obpager-1.8-as-needed.patch, obpager-1.8.ebuild:
+  Fix flags; thanks to Arfrever Frehtes Taifersar Arahesis. (bug #210506)
 
   27 Nov 2007; Christoph Mende <angelos@gentoo.org> obpager-1.8.ebuild:
   Added ~amd64
