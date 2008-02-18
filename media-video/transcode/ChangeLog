@@ -1,6 +1,13 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.202 2008/02/15 23:21:09 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.203 2008/02/18 19:28:00 beandog Exp $
+
+*transcode-1.0.6_rc1-r1 (18 Feb 2008)
+*transcode-1.0.5-r2 (18 Feb 2008)
+
+  18 Feb 2008; Steve Dibb <beandog@gentoo.org> +transcode-1.0.5-r2.ebuild,
+  +transcode-1.0.6_rc1-r1.ebuild:
+  Add nuv use flag, with lzo dep, bug 210352
 
 *transcode-1.0.6_rc1 (15 Feb 2008)
 
