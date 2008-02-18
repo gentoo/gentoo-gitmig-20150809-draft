@@ -1,6 +1,19 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.428 2008/02/01 05:54:19 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.429 2008/02/18 13:12:25 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -kdebase-3.5.5-r1.ebuild, -kdebase-3.5.5-r3.ebuild,
+  -kdebase-3.5.5-r4.ebuild, -kdebase-3.5.6-r1.ebuild,
+  -kdebase-3.5.6-r2.ebuild, -kdebase-3.5.6-r3.ebuild,
+  -kdebase-3.5.6-r4.ebuild, -kdebase-3.5.7.ebuild, -kdebase-3.5.7-r1.ebuild,
+  -kdebase-3.5.7-r2.ebuild, -kdebase-3.5.7-r3.ebuild,
+  -kdebase-3.5.7-r4.ebuild, -kdebase-3.5.7-r5.ebuild,
+  -kdebase-3.5.7-r6.ebuild, -kdebase-3.5.8.ebuild, -kdebase-3.5.8-r1.ebuild,
+  -kdebase-3.5.8-r2.ebuild, -kdebase-3.5.8-r3.ebuild,
+  -kdebase-3.5.8-r4.ebuild, -kdebase-3.5.8-r5.ebuild,
+  kdebase-3.5.8-r6.ebuild:
+  Spring cleaning.
 
   01 Feb 2008; Bo Ørsted Andresen <zlin@gentoo.org> kdebase-4.0.0.ebuild:
   Readd setxkbmap and xkeyboard-config to RDEPEND (bug #208049).

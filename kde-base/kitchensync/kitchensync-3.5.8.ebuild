@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.8.ebuild,v 1.6 2008/01/31 15:27:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.8.ebuild,v 1.7 2008/02/18 13:22:24 ingmar Exp $
 
 KMNAME=kdepim
-MAXKDEVER=$PV
+MAXKDEVER=3.5.8
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 

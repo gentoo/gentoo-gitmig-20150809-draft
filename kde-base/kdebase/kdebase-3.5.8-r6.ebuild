@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.8-r6.ebuild,v 1.7 2008/01/31 02:26:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.8-r6.ebuild,v 1.8 2008/02/18 13:12:25 ingmar Exp $
 
 inherit multilib kde-dist eutils flag-o-matic
 
@@ -173,7 +173,7 @@ src_install() {
 	doexe "${WORKDIR}/patches/agent-shutdown.sh"
 
 	# freedesktop environment variables
-	cat <<EOF > "${T}/xdg.sh"
+	cat <<-EOF > "${T}/xdg.sh"
 export XDG_CONFIG_DIRS="${KDEDIR}/etc/xdg"
 EOF
 	insinto "${KDEDIR}/env"
@@ -202,7 +202,7 @@ EOF
 	if use branding ; then
 		dodir "${PREFIX}"/share/services/searchproviders
 		insinto "${PREFIX}"/share/services/searchproviders
-		doins "${WORKDIR}"/patches/*.desktop
+		doins "${WORKDIR}"/patches/Gentoo_{Bugzilla,Forums}.desktop
 	fi
 }
 

@@ -1,9 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksync/ksync-3.5.5.ebuild,v 1.8 2006/12/11 13:30:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksync/ksync-3.5.5.ebuild,v 1.9 2008/02/18 13:22:08 ingmar Exp $
 
 KMNAME=kdepim
-MAXKDEVER=$PV
+MAXKDEVER=3.5.8
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
