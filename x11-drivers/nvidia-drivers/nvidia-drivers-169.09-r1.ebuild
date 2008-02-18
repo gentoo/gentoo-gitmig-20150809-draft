@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.09-r1.ebuild,v 1.2 2008/02/15 17:20:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-169.09-r1.ebuild,v 1.3 2008/02/18 16:28:35 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -407,7 +407,7 @@ src_install-libs() {
 
 	exeinto ${NV_ROOT}/extensions
 	[[ -f ${libdir}/modules/libnvidia-wfb.so.${sover} ]] && \
-		doexe ${libdir}/modules/libnvidia-wfb.so.${sover}
+		newexe ${libdir}/modules/libnvidia-wfb.so.${sover} libwfb.so
 	[[ -f ${extdir}/libglx.so.${sover} ]] && \
 		newexe ${extdir}/libglx.so.${sover} libglx.so
 
