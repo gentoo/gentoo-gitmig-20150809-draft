@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.1.0.ebuild,v 1.1 2007/12/14 12:12:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.1.0.ebuild,v 1.2 2008/02/18 17:56:55 opfer Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="amd64? ( http://64.34.161.181/download/${PV}/Linux/FE/nxserver-${MY_PV}
 
 LICENSE="nomachine"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
