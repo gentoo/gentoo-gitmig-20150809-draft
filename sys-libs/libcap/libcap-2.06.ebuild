@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.06.ebuild,v 1.2 2008/02/17 06:31:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.06.ebuild,v 1.3 2008/02/18 05:22:28 vapier Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -37,4 +37,7 @@ src_install() {
 	gen_usr_ldscript libcap.so
 
 	dodoc CHANGELOG README doc/capability.notes
+
+	# let man-pages handle these, especially since theirs are better
+	rm "${D}"/usr/share/man/man2/cap{g,s}et.2 || die
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.60 2008/02/17 12:40:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.61 2008/02/18 05:22:28 vapier Exp $
+
+  18 Feb 2008; Mike Frysinger <vapier@gentoo.org> libcap-2.06.ebuild:
+  Dont install the capget(2)/capset(2) man pages since the man-pages package
+  installs better ones #210443.
 
   17 Feb 2008; Christoph Mende <angelos@gentoo.org> libcap-1.10-r11.ebuild:
   Stable on amd64, bug #200512
