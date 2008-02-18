@@ -1,17 +1,26 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/kcachegrind-3.5.8.ebuild,v 1.6 2008/02/09 12:13:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/kcachegrind-3.5.8.ebuild,v 1.7 2008/02/18 22:40:47 zlin Exp $
 
 KMNAME=kdesdk
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
-inherit kde-meta eutils
+inherit kde-meta
 
 DESCRIPTION="KDE Frontend for Cachegrind"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
 
-DEPEND="!alpha? ( !sparc? ( !x86-fbsd? ( >=dev-util/valgrind-3.2.0 ) ) )"
+#DEPEND="!alpha? ( !sparc? ( !x86-fbsd? ( >=dev-util/valgrind-3.2.0 ) ) )"
 
 RDEPEND="${DEPEND}
 	media-gfx/graphviz"
+
+pkg_postinst() {
+	kde_pkg_postinst
+
+	echo
+	elog "To make full use of ${PN} you should emerge >=dev-util/valgrind-3.2.0 and/or"
+	elog "dev-util/oprofile."
+	echo
+}
