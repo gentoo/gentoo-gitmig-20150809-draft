@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-wxwidgets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.23 2008/02/08 01:08:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.24 2008/02/18 01:28:57 dirtyepic Exp $
+
+  18 Feb 2008; Ryan Hill <dirtyepic@gentoo.org>
+  eselect-wxwidgets-0.8.ebuild:
+  Add ~mips.
 
   08 Feb 2008; Ryan Hill <dirtyepic@gentoo.org> files/wxwidgets.eselect-0.8:
   Fix tyop.
