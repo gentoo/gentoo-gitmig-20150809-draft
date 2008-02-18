@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-30_pre6.ebuild,v 1.1 2008/02/18 11:51:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-30_pre6.ebuild,v 1.2 2008/02/18 19:14:31 armin76 Exp $
 
 inherit toolchain-funcs multilib
 
@@ -29,8 +29,8 @@ src_unpack() {
 		-e "s:^\(RANLIB\) = ranlib:\1 = $(tc-getRANLIB):" \
 		-e "s:^\(CFLAGS=-Os\):#\1:" \
 		-e "s:\(@\$(LDCONFIG).*\):#\1:" \
-		-e "s:^\(INSTALL_MAN= \$(PREFIX)\)/man/:\1/share/man:" \
-		-e "s:^\(INSTALL_LIB= \$(PREFIX)\)/lib/:\1/$(get_libdir)/:" \
+		-e "s:^\(INSTALL_MAN= \$(PREFIX)\)/man:\1/share/man:" \
+		-e "s:^\(INSTALL_LIB= \$(PREFIX)\)/lib:\1/$(get_libdir)/:" \
 		-e "s:^\(BUILD_STATIC = y\):#\1:" \
 		"${S}"/Makefile || die
 }
