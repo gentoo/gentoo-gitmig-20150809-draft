@@ -1,21 +1,21 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.2.1.ebuild,v 1.2 2007/04/10 21:53:39 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.2.1.ebuild,v 1.3 2008/02/18 22:37:51 ingmar Exp $
 
 inherit kde
 
 DESCRIPTION="Kerry Beagle is a KDE frontend for the Beagle desktop search daemon"
 HOMEPAGE="http://en.opensuse.org/Kerry"
+SRC_URI="http://developer.kde.org/~binner/${PN}/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
-
-SRC_URI="http://developer.kde.org/~binner/kerry/${P}.tar.bz2"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 RDEPEND=">=app-misc/beagle-0.2.5"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	|| ( kde-base/libkonq kde-base/kdebase )"
+	|| ( =kde-base/kdebase-3.5* =kde-base/libkonq-3.5* )"
 
 need-kde 3.4

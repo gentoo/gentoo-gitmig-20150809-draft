@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/kblogger-0.6.5.ebuild,v 1.1 2007/03/27 10:09:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/kblogger-0.6.5.ebuild,v 1.2 2008/02/18 22:34:46 ingmar Exp $
 
-inherit kde
+inherit kde versionator
 
 MY_P="${P/_beta/beta}"
 S="${WORKDIR}/${MY_P}"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="|| ( kde-base/kicker kde-base/kdebase )"
+DEPEND="|| ( =kde-base/kicker-3.5* =kde-base/kdebase-3.5* )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {

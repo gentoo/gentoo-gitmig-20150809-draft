@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/kblogger-0.7_beta2.ebuild,v 1.1 2007/11/04 14:53:16 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/kblogger-0.7_beta2.ebuild,v 1.2 2008/02/18 22:34:46 ingmar Exp $
 
-inherit kde
+inherit kde versionator
 
-MY_P="${P/_/-}"
+MY_P=${PN}-$(replace_version_separator 2 -)
 
 DESCRIPTION="Blogging applet for KDE"
 HOMEPAGE="http://kblogger.pwsp.net/"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="|| ( kde-base/kdebase kde-base/kicker )"
+DEPEND="|| ( =kde-base/kdebase-3.5* =kde-base/kicker-3.5* )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P/_/}"
