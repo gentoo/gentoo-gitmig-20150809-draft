@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.0.1-r1.ebuild,v 1.1 2008/02/18 18:24:10 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.0.1-r1.ebuild,v 1.2 2008/02/18 18:32:53 ingmar Exp $
 
 EAPI="1"
 NEED_KDE="none"
@@ -11,7 +11,7 @@ inherit kde4-meta
 
 DESCRIPTION="KDE: generic geographical map widget"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug designer-plugin htmlhandbook gps test"
+IUSE="debug designer-plugin htmlhandbook kde gps test"
 
 # FIXME: undefined reference when building tests. RESTRICTed for now.
 RESTRICT="test"
