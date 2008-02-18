@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.121 2008/02/16 22:43:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.122 2008/02/18 18:20:47 swegener Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -614,7 +614,7 @@ raw-ldflags() {
 # @DESCRIPTION:
 # DEPRECATED - Gets the flags needed for "NOW" binding
 bindnow-flags() {
-	ewarn "QA: stop using the bindnow-flags function ... simply drop it from your ebuild"
+	ewarn "QA: stop using the bindnow-flags function ... simply drop it from your ebuild" >&2
 
 	case $($(tc-getLD) -v 2>&1 </dev/null) in
 	*GNU* | *'with BFD'*) # GNU ld
