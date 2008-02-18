@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.0.1.ebuild,v 1.3 2008/02/18 18:01:12 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.0.1-r1.ebuild,v 1.1 2008/02/18 18:24:10 ingmar Exp $
 
 EAPI="1"
 NEED_KDE="none"

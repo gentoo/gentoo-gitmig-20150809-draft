@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.6 2008/02/18 18:01:12 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.7 2008/02/18 18:24:10 ingmar Exp $
+
+*marble-4.0.1-r1 (18 Feb 2008)
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -marble-4.0.1.ebuild,
+  +marble-4.0.1-r1.ebuild:
+  Revision bump.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> marble-4.0.1.ebuild:
   Set KDEDIR.
