@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-2.17.0-r1.ebuild,v 1.7 2008/02/04 04:44:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-2.17.0-r1.ebuild,v 1.8 2008/02/18 23:16:34 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -51,6 +51,9 @@ src_unpack() {
 
 	# Fix default totem command.  Bug #200999
 	epatch "${FILESDIR}"/${P}-totem-dvd.patch
+
+	# fix LINGUAS handling, bug #183086
+	intltoolize --force || die "intltoolize failed"
 }
 
 pkg_postinst() {
