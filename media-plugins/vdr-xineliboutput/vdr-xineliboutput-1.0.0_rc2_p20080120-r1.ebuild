@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2_p20080120-r1.ebuild,v 1.2 2008/02/18 00:40:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2_p20080120-r1.ebuild,v 1.3 2008/02/18 13:33:58 zzam Exp $
 
 inherit vdr-plugin eutils multilib versionator
 
@@ -67,9 +67,11 @@ src_unpack() {
 
 	cd "${S}"
 
-	XINE_LIB_VERSION=$(awk -F'"' '/XINE_VERSION/ {print $2}' /usr/include/xine.h)
-	XINE_LIB_VERSION=$(get_version_component_range 1-3 "${XINE_LIB_VERSION}")
-	einfo "Compiling against xine-lib version ${XINE_LIB_VERSION}"
+	XINE_PLUGIN_DIR=$(xine-config --plugindir)
+	if [[ ${XINE_PLUGIN_DIR} = "" ]]; then
+		eerror "Could not find xine plugin dir"
+		die "Could not find xine plugin dir"
+	fi
 
 	set_var_in_makefile VDRPLUGIN 1
 	set_var_in_makefile XINEPLUGIN 1
@@ -94,9 +96,9 @@ src_install() {
 	insinto ${VDR_PLUGIN_DIR}
 	doins *.so.${SO_VERSION} || die "could not install sub-plugins"
 
-	insinto /usr/$(get_libdir)/xine/plugins/${XINE_LIB_VERSION}
+	insinto "${XINE_PLUGIN_DIR}"
 	doins xineplug_inp_*.so
 
-	insinto /usr/$(get_libdir)/xine/plugins/${XINE_LIB_VERSION}/post
+	insinto "${XINE_PLUGIN_DIR}"/post
 	doins xineplug_post_*.so
 }
