@@ -1,6 +1,16 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.299 2008/02/17 02:12:01 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.300 2008/02/18 23:46:31 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -files/libkcal-3.5.2-fixes.diff, -files/kmail-3.5.5-dimap-mail-loss.patch,
+  -files/kmail-3.5.6-kde-bug-140660.patch,
+  -files/kmail-3.5.6-templates.patch,
+  -files/akregator-3.5.7-customcolors.diff, -files/kmail-utf8.diff,
+  -files/korganizer-3.5.5-desktop.patch, -files/kmail-3.5.7-filters.patch,
+  -files/libkcal-3.5.7-recurring_194371.patch, -kdepim-3.5.5-r2.ebuild,
+  -kdepim-3.5.5-r4.ebuild, -kdepim-3.5.6-r3.ebuild:
+  Clean old versions.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kdepim-3.5.5-r3.ebuild,
   -kdepim-3.5.6-r1.ebuild, -kdepim-3.5.6-r2.ebuild, -kdepim-3.5.7.ebuild,
