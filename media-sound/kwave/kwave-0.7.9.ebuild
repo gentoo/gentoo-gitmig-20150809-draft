@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.9.ebuild,v 1.5 2008/01/21 15:03:53 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.9.ebuild,v 1.6 2008/02/18 12:10:26 ingmar Exp $
 
 ARTS_REQUIRED=yes
 inherit kde flag-o-matic
@@ -46,10 +46,10 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}_flac-v1.1.3_and_v1.1.4-support.diff"
 	epatch "${FILESDIR}/${P}-debian-431199.diff"
+	eautoreconf
 }
 
 src_compile() {
-	eautoreconf
 	local myconf="--without-builtin-libaudiofile"
 
 	myconf="$(use_enable doc)"
