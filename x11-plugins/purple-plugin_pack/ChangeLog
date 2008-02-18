@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/purple-plugin_pack
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.10 2007/11/10 23:59:08 tester Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.11 2008/02/18 15:55:31 jer Exp $
+
+  18 Feb 2008; Jeroen Roovers <jer@gentoo.org>
+  purple-plugin_pack-2.1.1.ebuild, purple-plugin_pack-2.2.0.ebuild:
+  Marked ~hppa (bug #210402).
 
 *purple-plugin_pack-2.2.0 (10 Nov 2007)
 
