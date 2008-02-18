@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/konverter-0.93.ebuild,v 1.2 2007/11/27 14:15:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/konverter-0.93.ebuild,v 1.3 2008/02/18 23:17:46 ingmar Exp $
 
 inherit qt3 eutils
 
@@ -18,9 +18,8 @@ S="${WORKDIR}/${PN}"
 
 DEPEND="media-libs/xine-lib
 	media-video/mplayer
-	kde-base/kdelibs
-	|| ( kde-base/kdebase-kioslaves
-		kde-base/kdebase )"
+	|| ( =kde-base/kdebase-kioslaves-3.5*
+		=kde-base/kdebase-3.5* )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
