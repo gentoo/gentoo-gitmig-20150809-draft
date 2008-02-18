@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.20.1.ebuild,v 1.7 2007/11/29 05:33:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.20.1.ebuild,v 1.8 2008/02/18 23:36:38 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -48,6 +48,9 @@ src_unpack() {
 	gnome2_src_unpack
 
 	epatch "${FILESDIR}"/${PN}-2.18.0-noesd.patch
+
+	# fix LINGUAS handling, bug #183086
+	intltoolize --force || die "intltoolize failed"
 }
 
 src_compile() {
