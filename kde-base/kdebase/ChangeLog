@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.430 2008/02/18 13:30:36 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.431 2008/02/18 15:47:11 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kdebase-3.5.8-r6.ebuild:
+  Don't use bindnow-flags. Bug 210583.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/Gentoo_Packages.desktop:

@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.8.ebuild,v 1.9 2008/01/31 02:26:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.8.ebuild,v 1.10 2008/02/18 15:46:07 ingmar Exp $
 
-inherit kde-dist eutils flag-o-matic
+inherit kde-dist eutils
 
 DESCRIPTION="KDE network applications: Kopete, KPPP, KGet,..."
 
@@ -62,8 +62,6 @@ pkg_setup() {
 }
 
 src_compile() {
-	export BINDNOW_FLAGS="$(bindnow-flags)"
-
 	local myconf="--with-libidn
 					$(use_enable sametime sametime-plugin)
 					$(use_enable slp) $(use_with wifi) $(use_enable jingle)

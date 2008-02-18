@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.8-r6.ebuild,v 1.8 2008/02/18 13:12:25 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.8-r6.ebuild,v 1.9 2008/02/18 15:47:11 ingmar Exp $
 
-inherit multilib kde-dist eutils flag-o-matic
+inherit multilib kde-dist eutils
 
 SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5-patchset-10.tar.bz2"
@@ -155,8 +155,6 @@ src_compile() {
 	# useless. All that's needed for java applets to work is
 	# to have the 'java' executable in PATH.
 	myconf="${myconf} --without-java"
-
-	export BINDNOW_FLAGS="$(bindnow-flags)"
 
 	kde_src_compile
 }

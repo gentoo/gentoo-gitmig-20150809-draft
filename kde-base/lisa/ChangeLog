@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/lisa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lisa/ChangeLog,v 1.81 2008/02/17 01:39:26 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lisa/ChangeLog,v 1.82 2008/02/18 15:39:00 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> lisa-3.5.8.ebuild:
+  Don't use bindnow-flags. Bug 210583.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -lisa-3.5.5.ebuild,
   -lisa-3.5.6.ebuild, -lisa-3.5.7.ebuild:
