@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.20.3.ebuild,v 1.7 2008/02/04 04:59:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.20.3.ebuild,v 1.8 2008/02/18 10:54:01 eva Exp $
 
-inherit gnome2
+inherit gnome2 python
 
 DESCRIPTION="Extensible screen reader that provides access to the desktop"
 HOMEPAGE="http://www.gnome.org/projects/orca/"
@@ -27,3 +27,23 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO"
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/orca
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	python_version
+	python_mod_cleanup
+}
