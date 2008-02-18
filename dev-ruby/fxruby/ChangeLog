@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.63 2008/02/18 17:47:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.64 2008/02/18 18:24:57 opfer Exp $
+
+  18 Feb 2008; Christian Faulhammer <opfer@gentoo.org> fxruby-1.6.13.ebuild:
+  stable x86, bug 210181
 
   18 Feb 2008; Brent Baude <ranger@gentoo.org> fxruby-1.6.13.ebuild:
   stable ppc64, bug 210181
