@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/nero
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.34 2007/12/16 11:45:07 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.35 2008/02/18 23:19:50 rbu Exp $
+
+*nero-3.1.1.0 (18 Feb 2008)
+
+  18 Feb 2008; Robert Buchholz <rbu@gentoo.org> +nero-3.1.1.0.ebuild:
+  Non-maintainer version bump (bug #210395)
 
 *nero-3.0.2.1 (16 Dec 2007)
 
