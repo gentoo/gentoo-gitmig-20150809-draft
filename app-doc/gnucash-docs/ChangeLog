@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gnucash-docs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.4 2008/02/17 17:06:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.5 2008/02/18 20:07:06 armin76 Exp $
+
+  18 Feb 2008; Raúl Porcel <armin76@gentoo.org> gnucash-docs-2.2.0.ebuild:
+  alpha stable wrt #210471
 
   17 Feb 2008; nixnut <nixnut@gentoo.org> gnucash-docs-2.2.0.ebuild:
   Stable on ppc wrt bug 210471
