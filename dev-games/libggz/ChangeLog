@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/libggz
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.18 2007/11/15 19:04:54 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.19 2008/02/18 16:02:40 nyhm Exp $
+
+*libggz-0.0.14.1 (18 Feb 2008)
+
+  18 Feb 2008; Tristan Heaven <nyhm@gentoo.org> +libggz-0.0.14.1.ebuild:
+  Version bump
 
   15 Nov 2007; Samuli Suominen <drac@gentoo.org> libggz-0.0.14.ebuild:
   Keyword ~amd64.
