@@ -1,6 +1,12 @@
 # ChangeLog for games-board/ggz-sdl-games
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ChangeLog,v 1.11 2007/02/22 14:28:04 nyhm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ChangeLog,v 1.12 2008/02/18 18:34:32 nyhm Exp $
+
+*ggz-sdl-games-0.0.14.1 (18 Feb 2008)
+
+  18 Feb 2008; Tristan Heaven <nyhm@gentoo.org>
+  +ggz-sdl-games-0.0.14.1.ebuild:
+  Version bump
 
 *ggz-sdl-games-0.0.14 (22 Feb 2007)
 
