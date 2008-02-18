@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-4.0.0.ebuild,v 1.1 2008/01/17 23:53:39 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-4.0.0.ebuild,v 1.2 2008/02/18 22:53:47 zlin Exp $
 
 EAPI="1"
 
@@ -13,8 +13,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug htmlhandbook subversion"
 LICENSE="GPL-2 LGPL-2"
 
-DEPEND="
-	dev-libs/libxml2
+DEPEND="dev-libs/libxml2
 	dev-libs/libxslt
 	|| ( >=kde-base/plasma-${PV}:${SLOT}
 		>=kde-base/kdebase-${PV}:${SLOT} )
@@ -55,4 +54,13 @@ src_compile() {
 	fi
 
 	kde4-base_src_compile
+}
+
+pkg_postinst() {
+	kde4-base_pkg_postinst
+
+	echo
+	elog "To make full use of ${PN} you should emerge >=dev-util/valgrind-3.2.0 and/or"
+	elog "dev-util/oprofile."
+	echo
 }

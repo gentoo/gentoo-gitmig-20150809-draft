@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.8.ebuild,v 1.7 2008/01/31 02:26:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.8.ebuild,v 1.8 2008/02/18 22:53:47 zlin Exp $
 
 inherit db-use kde-dist
 
@@ -11,8 +11,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/kdesdk-3.5-patchset-01.tar.bz2"
 KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE="berkdb kdehiddenvisibility subversion"
 
-DEPEND="!alpha? ( !sparc? ( !ia64? ( >=dev-util/valgrind-3.2.0 ) ) )
-	subversion? ( dev-util/subversion )
+DEPEND="subversion? ( dev-util/subversion )
 	berkdb? ( =sys-libs/db-4* )"
 
 RDEPEND="${DEPEND}
@@ -69,4 +68,13 @@ src_install() {
 	for f in ${KDEDIR}/share/apps/kapptemplate/admin/{bcheck,conf.change,config,detect-autoconf}.pl ; do
 		fperms 755 ${f}
 	done
+}
+
+pkg_postinst() {
+	kde_pkg_postinst
+
+	echo
+	elog "To make full use of ${PN} you should emerge >=dev-util/valgrind-3.2.0 and/or"
+	elog "dev-util/oprofile."
+	echo
 }
