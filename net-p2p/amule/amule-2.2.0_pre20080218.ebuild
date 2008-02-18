@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20080204.ebuild,v 1.1 2008/02/04 16:51:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20080218.ebuild,v 1.1 2008/02/18 19:57:26 armin76 Exp $
 
-inherit eutils flag-o-matic wxwidgets
+inherit eutils flag-o-matic wxwidgets autotools
 
 MY_P=${PN/m/M}-CVS-${PV/2.2.0_pre/}
 S="${WORKDIR}/${PN}-cvs"
@@ -49,6 +49,14 @@ pkg_preinst() {
 		enewgroup p2p
 		enewuser p2p -1 -1 /home/p2p p2p
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/2.2.0-geoip-asneeded.patch
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
