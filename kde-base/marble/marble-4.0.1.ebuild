@@ -1,10 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.0.1.ebuild,v 1.1 2008/02/07 00:10:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.0.1.ebuild,v 1.2 2008/02/18 16:28:22 ingmar Exp $
 
 EAPI="1"
-
+NEED_KDE="none"
 KMNAME=kdeedu
+SLOT="kde-4" # Goes in the ebuild because of NEED_KDE=none
 inherit kde4-meta
 
 DESCRIPTION="KDE: generic geographical map widget"
@@ -13,11 +14,13 @@ IUSE="debug designer-plugin htmlhandbook gps test"
 
 # FIXME: undefined reference when building tests. RESTRICTed for now.
 RESTRICT="test"
-# FIXME: marble can install without kdelibs. there should be USE=kde for this..
 
-COMMONDEPEND="gps? ( sci-geosciences/gpsd )"
-DEPEND="${DEPEND} ${COMMONDEPEND}"
-RDEPEND="${RDEPEND} ${COMMONDEPEND}"
+COMMONDEPEND="
+	gps? ( sci-geosciences/gpsd )
+	kde? ( >=kde-base/kdelibs-${PV}:${SLOT}
+		>=kde-base/kdepimlibs-${PV}:${SLOT} )"
+DEPEND="${COMMONDEPEND}"
+RDEPEND="${COMMONDEPEND}"
 
 src_compile() {
 	epatch "${FILESDIR}/${PN}-4.0.0-fix-tests.patch"
@@ -30,6 +33,10 @@ src_compile() {
 	else
 		sed -i -e 's:FIND_LIBRARY(libgps_LIBRARIES gps):# LIBGPS DISABLED &:' \
 			marble/Findlibgps.cmake || die "sed to disable gpsd failed."
+	fi
+
+	if ! use kde; then
+		mycmakeargs="${mycmakeargs} -DQTONLY:BOOL=ON"
 	fi
 
 	kde4-meta_src_compile
