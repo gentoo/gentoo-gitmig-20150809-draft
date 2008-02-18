@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-ktts/kopete-ktts-1.3.0.ebuild,v 1.1 2007/06/19 17:02:30 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-ktts/kopete-ktts-1.3.0.ebuild,v 1.2 2008/02/18 22:47:02 ingmar Exp $
 
 inherit kde
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="|| ( kde-base/kttsd kde-base/kdeaccessibility )
-		|| ( kde-base/kopete kde-base/kdenetwork )"
+DEPEND="|| ( =kde-base/kdeaccessibility-3.5* =kde-base/kttsd-3.5* )
+		|| ( =kde-base/kdenetwork-3.5* =kde-base/kopete-3.5* )"
 RDEPEND="${DEPEND}"
 
 need-kde 3

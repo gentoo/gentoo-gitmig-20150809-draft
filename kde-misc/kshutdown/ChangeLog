@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kshutdown
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.11 2007/05/23 19:30:14 genstef Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.12 2008/02/18 22:51:47 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kshutdown-1.0.ebuild:
+  Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206571.
 
 *kshutdown-1.0 (23 May 2007)
 

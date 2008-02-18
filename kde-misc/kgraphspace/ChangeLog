@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kgraphspace
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgraphspace/ChangeLog,v 1.8 2007/04/28 15:33:13 carlo Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgraphspace/ChangeLog,v 1.9 2008/02/18 22:43:30 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  kgraphspace-0.3.0_pre1.ebuild:
+  Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206571.
 
   28 Apr 2007; Carsten Lohrke <carlo@gentoo.org>
   kgraphspace-0.3.0_pre1.ebuild:
