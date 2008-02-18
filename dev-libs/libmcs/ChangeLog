@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libmcs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.34 2008/01/29 12:35:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.35 2008/02/18 14:54:15 chainsaw Exp $
+
+*libmcs-0.7.0 (18 Feb 2008)
+
+  18 Feb 2008; Tony Vroon <chainsaw@gentoo.org> -libmcs-0.4.1.ebuild,
+  -libmcs-0.5.0.ebuild, +libmcs-0.7.0.ebuild:
+  Version bump. Remove old ebuilds, MIPS broke 0.4.1 wrt KDE dependencies.
 
   29 Jan 2008; Samuli Suominen <drac@gentoo.org> libmcs-0.6.0.ebuild:
   amd64 stable wrt #198820
