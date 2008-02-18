@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1131 2008/02/18 11:08:12 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1132 2008/02/18 23:14:44 rbu Exp $
+
+  18 Feb 2008; Robert Buchholz <rbu@gentoo.org> thirdpartymirrors:
+  Fixed typo in nero's FTP addresses, use->usw. Thanks Paul Philippov for the
+  help (bug #210314)
 
   18 Feb 2008; Michele Noberasco <s4t4n@gentoo.org> use.local.desc:
   Add gprof local USE flag for upcoming package app-emulation/vov.
