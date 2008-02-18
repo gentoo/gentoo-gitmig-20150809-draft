@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.83 2008/02/18 09:35:06 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.84 2008/02/18 13:58:56 rbrown Exp $
+
+  18 Feb 2008; Richard Brown <rbrown@gentoo.org>
+  files/paludis-0.26.0_alpha9-echo-functions.patch:
+  Include fix for news test failure
 
 *paludis-0.26.0_alpha9-r1 (18 Feb 2008)
 
