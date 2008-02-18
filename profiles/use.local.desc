@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3365 2008/02/18 11:08:12 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3366 2008/02/18 23:24:40 voyageur Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -766,7 +766,7 @@ gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-cairo:glitz - Build with glitz support
 gnustep-base/gnustep-back-cairo:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
-gnustep-base/gnustep-base:gcc-libffi - Offers a migration path away from the ill fated dev-libs/libffi; gcc-3.* will generally have to be compiled with 'gcj' on, >=gcc-3.4.3-r1 can be used with only 'objc' turned on (this will reduce compile time).
+gnustep-base/gnustep-base:gcc-libffi - Use libffi (from gcc) instead of ffcall library. Requires sys-libs/gcc built with USE=libffi
 kde-base/akonadi:nepomuk - Build Nepomuk feeder
 kde-base/ark:archive - Enable support for a variety of archive formats through libarchive
 kde-base/ark:zip - Enable zip support through LibZip
