@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugport/bugport-1.146.ebuild,v 1.3 2008/02/17 21:00:56 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugport/bugport-1.146.ebuild,v 1.4 2008/02/18 11:23:48 hollow Exp $
 
-inherit webapp
+inherit webapp depend.php
 
 DESCRIPTION="Web-based system for managing tasks and defects throughout the software development process"
 HOMEPAGE="http://www.incogen.com/index.php?type=General&param=bugport"
@@ -10,56 +10,45 @@ SRC_URI="http://www.incogen.com/downloads/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="BSD"
 KEYWORDS="x86 ~ppc"
-
 IUSE=""
-RDEPEND=">=virtual/php-4.3
-	dev-php/adodb"
-DEPEND=""
+
+DEPEND="dev-php/adodb"
+
+need_php_httpd
 
 S=${WORKDIR}/${PN}_${PV}
 
-src_compile() {
-	einfo "Nothing to compile"
+pkg_setup() {
+	webapp_pkg_setup
+	has_php
+	require_php_with_use mysql
 }
 
 src_install() {
-	# prepare ${D} for our arrival
 	webapp_src_preinst
 
-	# Fix INSTALL.txt to let the user know where the SQL scripts live
-	sed -i \
-	  -e "s|create_tables.sql|${MY_SQLSCRIPTSDIR}/mysql/${PV}_create.sql|" \
-	  INSTALL.txt
+	# fix INSTALL.txt to let the user know where the SQL scripts live
+	sed -i -e "s|create_tables.sql|${MY_SQLSCRIPTSDIR}/mysql/${PV}_create.sql|" \
+		INSTALL.txt || die "sed failed in INSTALL.txt"
 
-	# Add the post-installation instructions
-	webapp_postinst_txt en INSTALL.txt
+	webapp_sqlscript mysql create_tables.sql
+	rm -f *.sql
 
-	# Install documents
 	dodoc *.txt
-	rm *.txt
 	docinto devel-docs
 	dodoc devel-docs/*
-	rm -rf devel-docs
-	rm -rf install-gentoo-unsupported
+	rm -rf *.txt devel-docs install-gentoo-unsupported
 
-	# Install SQL scripts
-	#webapp_sqlscript mysql add_indices.sql
-	#webapp_sqlscript mysql alter_user_table.sql
-	#webapp_sqlscript mysql create_config_table.sql
-	webapp_sqlscript mysql create_tables.sql
+	# fix config file to know where to find adodb
+	sed -i -e 's|^\(# \+\)\?\$adoDir.\+$|$adoDir = "/usr/lib/php/adodb/"; # DO NOT CHANGE!|' \
+		conf/config.php || die "failed to fix adodb location in config.php."
 
-	# Fix config file to know where to find adodb
-	sed -i \
-	  -e 's|^\(# \+\)\?\$adoDir.\+$|$adoDir = "/usr/lib/php/adodb/"; # DO NOT CHANGE!|' \
-	  conf/config.php
+	insinto ${MY_HTDOCSDIR}
+	doins -r .
 
-	# Install
-	cp -R . "${D}"${MY_HTDOCSDIR}
-
-	# Identify the configuration files that this app uses
 	webapp_configfile ${MY_HTDOCSDIR}/conf/config.php
 	webapp_configfile ${MY_HTDOCSDIR}/conf/configuration.php
 
-	# Let webapp.eclass do the rest
+	webapp_postinst_txt en INSTALL.txt
 	webapp_src_install
 }
