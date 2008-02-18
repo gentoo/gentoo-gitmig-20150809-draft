@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libdvdnav
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.38 2008/02/15 16:15:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.39 2008/02/18 21:07:54 beandog Exp $
+
+*libdvdnav-4.1.1_p997-r1 (18 Feb 2008)
+
+  18 Feb 2008; Steve Dibb <beandog@gentoo.org> -libdvdnav-4.1.1_p997.ebuild,
+  +libdvdnav-4.1.1_p997-r1.ebuild:
+  Temporary fix for parallel make
 
 *libdvdnav-4.1.1_p997 (15 Feb 2008)
 
