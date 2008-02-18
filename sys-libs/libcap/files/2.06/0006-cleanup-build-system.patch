@@ -148,7 +148,7 @@ index 3b3d266..e20d059 100644
  topdir=$(shell pwd)/..
  include ../Make.Rules
  
-+LDLIBS += -lcap
++LDLIBS += -lcap -lpam
 +CFLAGS += -fPIC
 +
  all: pam_cap.so
