@@ -1,11 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.0.1.ebuild,v 1.2 2008/02/18 16:28:22 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.0.1.ebuild,v 1.3 2008/02/18 18:01:12 ingmar Exp $
 
 EAPI="1"
 NEED_KDE="none"
 KMNAME=kdeedu
 SLOT="kde-4" # Goes in the ebuild because of NEED_KDE=none
+KDEDIR="/usr/kde/4.0"
 inherit kde4-meta
 
 DESCRIPTION="KDE: generic geographical map widget"
