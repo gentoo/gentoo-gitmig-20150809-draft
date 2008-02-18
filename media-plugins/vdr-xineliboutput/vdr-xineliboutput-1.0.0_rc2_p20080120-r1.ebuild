@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2_p20080120-r1.ebuild,v 1.1 2008/02/17 21:52:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2_p20080120-r1.ebuild,v 1.2 2008/02/18 00:40:05 mr_bones_ Exp $
 
 inherit vdr-plugin eutils multilib versionator
 
@@ -50,7 +50,7 @@ NO_GETTEXT_HACK=1
 
 set_var_in_makefile() {
 	local opt="XINELIBOUTPUT_$1"
-	local value="$2" 
+	local value="$2"
 	sed -i "s-^#${opt}.*= 1-${opt} = ${value}-" Makefile
 }
 
