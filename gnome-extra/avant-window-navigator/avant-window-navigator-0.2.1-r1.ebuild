@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.1-r1.ebuild,v 1.2 2008/02/17 23:35:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.1-r1.ebuild,v 1.3 2008/02/18 00:39:42 mr_bones_ Exp $
 
 inherit gnome2 python
 
@@ -38,4 +38,3 @@ pkg_postrm() {
 	python_version
 	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/awn
 }
-
