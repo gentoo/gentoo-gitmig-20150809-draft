@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/youtube-servicemenu
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/youtube-servicemenu/ChangeLog,v 1.1 2007/11/20 14:11:07 hanno Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/youtube-servicemenu/ChangeLog,v 1.2 2008/02/18 23:10:38 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  youtube-servicemenu-1.3f.ebuild:
+  Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.
 
 *youtube-servicemenu-1.3f (20 Nov 2007)
 
