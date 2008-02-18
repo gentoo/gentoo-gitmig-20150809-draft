@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gquilt
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.13 2007/04/05 06:14:20 nerdboy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.14 2008/02/18 00:02:41 eva Exp $
+
+  17 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org> gquilt-0.20.ebuild:
+  fix python eclass use, bug #207667
 
 *gquilt-0.19 (05 Apr 2007)
 *gquilt-0.18 (05 Apr 2007)

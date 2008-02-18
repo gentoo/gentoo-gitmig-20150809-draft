@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/gquilt-0.20.ebuild,v 1.1 2007/04/05 06:14:20 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/gquilt-0.20.ebuild,v 1.2 2008/02/18 00:02:41 eva Exp $
+
+inherit python
 
 DESCRIPTION="A Python/GTK wrapper for quilt"
 HOMEPAGE="http://users.bigpond.net.au/Peter-Williams/"
@@ -14,7 +16,28 @@ IUSE=""
 RDEPEND="dev-util/quilt
 	>=dev-python/pygtk-2"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -i "s/MODULES_BIN=.*/MODULES_BIN=/;
+		s/MODULES_OPT=.*/MODULES_OPT=/" Makefile
+	sed -i -e '/install -m 0644 $(MODULES_OPT)/s/\t/&#/g' Makefile
+	sed -i -e '/install -m 0644 $(MODULES_BIN)/s/\t/&#/g' Makefile
+}
+
 src_install() {
-	make DESTDIR="${D}" PREFIX="/usr" install || die "make install failed"
+	emake DESTDIR="${D}" PREFIX="/usr" install || die "make install failed"
 	dodoc ChangeLog
+}
+
+pkg_postinst() {
+	python_version
+	python_mod_optimize /usr/share/gquilt
+}
+
+
+pkg_prerm() {
+	python_version
+	python_mod_cleanup /usr/share/gquilt
 }
