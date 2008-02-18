@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/nxml-gentoo-schemas-20080204.ebuild,v 1.1 2008/02/04 19:11:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/nxml-gentoo-schemas-20080204.ebuild,v 1.2 2008/02/18 00:45:23 flameeyes Exp $
 
 inherit elisp
 
 DESCRIPTION="Extension for nxml-mode with Gentoo-specific schemas"
-HOMEPAGE="http://farragut.flameeyes.is-a-geek.org/"
-SRC_URI="http://flameeyes.is-a-geek.org/files/${P}.tar.bz2"
+HOMEPAGE="http://blog.flameeyes.eu/"
+SRC_URI="http://www.flameeyes.eu/files/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"

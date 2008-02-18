@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/nxml-gentoo-schemas
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.9 2008/02/04 19:11:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.10 2008/02/18 00:45:23 flameeyes Exp $
+
+  18 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  nxml-gentoo-schemas-20080204.ebuild:
+  Update HOMEPAGE/SRC_URI.
 
 *nxml-gentoo-schemas-20080204 (04 Feb 2008)
 
