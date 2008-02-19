@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bwm-ng
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.11 2008/02/19 21:20:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.12 2008/02/19 22:14:18 opfer Exp $
+
+  19 Feb 2008; Christian Faulhammer <opfer@gentoo.org> bwm-ng-0.6.ebuild:
+  stable x86, bug 210629
 
   19 Feb 2008; Christoph Mende <angelos@gentoo.org> bwm-ng-0.6.ebuild:
   Stable on amd64, bug #210629
