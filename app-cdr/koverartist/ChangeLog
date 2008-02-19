@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/koverartist
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.25 2007/12/22 11:32:30 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.26 2008/02/19 01:08:41 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  koverartist-0.4.4.ebuild, koverartist-0.5.ebuild:
+  Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.
 
   22 Dec 2007; Raúl Porcel <armin76@gentoo.org> koverartist-0.5.ebuild:
   sparc stable wrt #202645
