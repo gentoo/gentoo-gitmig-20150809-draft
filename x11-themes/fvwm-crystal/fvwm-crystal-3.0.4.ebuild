@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.4.ebuild,v 1.7 2007/03/04 08:58:05 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.4.ebuild,v 1.8 2008/02/19 19:55:43 lucass Exp $
 
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency."
 HOMEPAGE="http://fvwm-crystal.org/"
@@ -21,11 +21,11 @@ src_compile() {
 src_install() {
 	einstall || die "einstall failed"
 
-	dodoc AUTHORS COPYING README INSTALL NEWS ChangeLog doc/*
-	cp -r addons ${D}/usr/share/doc/${PF}/
+	dodoc AUTHORS README INSTALL NEWS ChangeLog doc/*
+	cp -r addons "${D}/usr/share/doc/${PF}/"
 
 	exeinto /etc/X11/Sessions
-	doexe ${FILESDIR}/fvwm-crystal
+	doexe "${FILESDIR}/fvwm-crystal"
 
 	insinto /usr/share/xsessions
 	doins addons/fvwm-crystal.desktop

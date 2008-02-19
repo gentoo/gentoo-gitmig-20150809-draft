@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/fvwm-crystal
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.48 2007/06/09 20:11:01 lucass Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.49 2008/02/19 19:55:43 lucass Exp $
+
+*fvwm-crystal-3.0.5-r1 (19 Feb 2008)
+
+  19 Feb 2008; Lukasz Strzygowski <lucass@gentoo.org>
+  +fvwm-crystal-3.0.5-r1.ebuild:
+  Added patch to fix names of env vars (bug #210580). Minor cleanup.
 
   09 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org>
   fvwm-crystal-3.0.5.ebuild:
