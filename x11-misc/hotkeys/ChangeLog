@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/hotkeys
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.32 2008/02/19 17:57:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.33 2008/02/19 23:19:33 opfer Exp $
+
+  19 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  hotkeys-0.5.7.4.0.1.ebuild:
+  stable x86, bug 210670
 
   19 Feb 2008; nixnut <nixnut@gentoo.org> hotkeys-0.5.7.4.0.1.ebuild:
   Stable on ppc wrt bug 210670
