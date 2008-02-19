@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.61 2008/02/04 15:24:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.62 2008/02/19 02:57:40 ranger Exp $
+
+  19 Feb 2008; Brent Baude <ranger@gentoo.org> gnunet-0.7.3-r1.ebuild:
+  Marking gnunet-0.7.3-r1 ~ppc64 for bug 209851
 
 *gnunet-0.7.3-r1 (04 Feb 2008)
 *gnunet-0.7.2c-r1 (04 Feb 2008)

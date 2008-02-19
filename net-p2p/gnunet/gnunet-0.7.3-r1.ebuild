@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.3-r1.ebuild,v 1.1 2008/02/04 15:24:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.3-r1.ebuild,v 1.2 2008/02/19 02:57:40 ranger Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="http://gnunet.org/download/GNUnet-${PV}.tar.bz2"
 RESTRICT="test"
 
 IUSE="ipv6 mysql sqlite ncurses nls gtk"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
