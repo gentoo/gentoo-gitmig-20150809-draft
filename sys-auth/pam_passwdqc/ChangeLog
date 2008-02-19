@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/pam_passwdqc
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.7 2007/07/11 12:37:52 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.8 2008/02/19 12:53:37 flameeyes Exp $
+
+*pam_passwdqc-1.0.5 (19 Feb 2008)
+
+  19 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pam_passwdqc-1.0.5-makefile.patch, +pam_passwdqc-1.0.5.ebuild:
+  Version bump, new patch, the pre-stripped files were fixed already upstream,
+  so it's just to respect LDFLAGS now.
 
 *pam_passwdqc-1.0.4 (11 Jul 2007)
 
