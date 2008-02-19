@@ -1,6 +1,17 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.58 2008/01/31 03:56:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.59 2008/02/19 08:22:44 dberkholz Exp $
+
+*xf86-video-ati-6.8.0 (19 Feb 2008)
+
+  19 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-ati-6.8.0.ebuild:
+  Bump, only a year and a half since the last non-release-candidate release.
+  Tons of changes since the last release candidate, 6.7.197. New hardware
+  support: r5xx, rs6xx, r6xx; the 'ati' driver wrapper was restructured; the
+  xinerama (multi-monitor) zaphod mode returned; initial support for RENDER
+  acceleration on r3xx/r4xx; Xv fixes, BIOS fixes, other bug fixes. It's
+  staying masked because EXA doesn't work for me on r2xx or r3xx.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/6.7.196-fix_washed_color.patch, -xf86-video-ati-6.6.1.ebuild,
