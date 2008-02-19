@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.34 2008/02/19 12:04:08 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.35 2008/02/19 12:05:18 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -knutclient-0.9.ebuild,
+  -knutclient-0.9.1.ebuild:
+  Old.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> knutclient-0.9.ebuild,
   knutclient-0.9.1.ebuild, knutclient-0.9.3.ebuild:
