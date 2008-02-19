@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.5-r1.ebuild,v 1.1 2008/02/19 16:09:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.5-r1.ebuild,v 1.2 2008/02/19 18:45:59 mr_bones_ Exp $
 
 inherit kde eutils versionator
 
@@ -26,7 +26,6 @@ for X in ${LANGS}; do
 done
 
 need-kde 3.4
-
 
 pkg_setup() {
 	if ! built_with_use app-text/sword curl; then
