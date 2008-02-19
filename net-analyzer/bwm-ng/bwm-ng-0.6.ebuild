@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/bwm-ng-0.6.ebuild,v 1.4 2008/02/19 22:14:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/bwm-ng-0.6.ebuild,v 1.5 2008/02/19 22:50:19 opfer Exp $
 
-DESCRIPTION="Bandwidth Monitor NG is a small and simple console-based bandwidth monitor for Linux, BSD, and Mac OS X"
+DESCRIPTION="Bandwidth Monitor NG is a small and simple console-based bandwidth monitor"
 SRC_URI="http://www.gropp.org/bwm-ng/${P}.tar.gz"
 HOMEPAGE="http://www.gropp.org/"
 
@@ -24,6 +24,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README THANKS
+	emake DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS
 }
