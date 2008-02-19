@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/konqburn
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.15 2007/04/04 23:31:46 carlo Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.16 2008/02/19 01:06:32 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> konqburn-1.0.ebuild:
+  Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.
 
   04 Apr 2007; Carsten Lohrke <carlo@gentoo.org> -konqburn-0.8.ebuild,
   -konqburn-0.9.ebuild, konqburn-1.0.ebuild:

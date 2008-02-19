@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/konqburn-1.0.ebuild,v 1.5 2007/04/04 23:31:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/konqburn-1.0.ebuild,v 1.6 2008/02/19 01:06:32 ingmar Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="dvdr"
 
-DEPEND="|| ( kde-base/konqueror kde-base/kdebase )
+DEPEND="|| ( =kde-base/konqueror-3.5* =kde-base/kdebase-3.5* )
 	media-libs/taglib
 	<app-cdr/k3b-1.0" # uses libk3b for burner detection; configure uses it if it's detected
 RDEPEND="$DEPEND
