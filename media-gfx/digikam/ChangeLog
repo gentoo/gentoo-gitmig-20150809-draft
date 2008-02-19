@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.107 2007/12/31 00:20:30 keytoaster Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.108 2008/02/19 01:46:45 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -digikam-0.9.1.ebuild,
+  -digikam-0.9.3_beta2.ebuild, -digikam-0.9.3_rc1.ebuild:
+  Old.
 
   31 Dec 2007; Tobias Heinlein <keytoaster@gentoo.org> digikam-0.9.3.ebuild:
   Use the old -doc tarball again to support non-english languages.
