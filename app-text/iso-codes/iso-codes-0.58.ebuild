@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.58.ebuild,v 1.11 2007/01/20 12:03:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.58.ebuild,v 1.12 2008/02/19 00:11:18 eva Exp $
 
 WANT_AUTOMAKE="latest"
 inherit eutils autotools
@@ -14,12 +14,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
+RDEPEND=""
 DEPEND="sys-devel/gettext
 	>=dev-lang/python-2.3
 	>=sys-devel/automake-1.9"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# fix install location for multilib machines
