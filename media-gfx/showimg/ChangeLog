@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/showimg
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.39 2007/07/21 22:27:40 philantrop Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.40 2008/02/19 01:41:17 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> showimg-0.9.4.1.ebuild,
+  showimg-0.9.5.ebuild:
+  Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.
 
   21 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org> showimg-0.9.5.ebuild:
   Corrected the USE flag handling. Fixes bug 185958.

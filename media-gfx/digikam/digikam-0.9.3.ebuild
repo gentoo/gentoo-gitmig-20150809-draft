@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.3.ebuild,v 1.2 2007/12/31 00:20:30 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.3.ebuild,v 1.3 2008/02/19 01:49:57 ingmar Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -34,7 +34,8 @@ DEPEND=">=media-libs/libgphoto2-2.2
 	!media-plugins/digikamimageplugins"
 
 RDEPEND="${DEPEND}
-	|| ( ( kde-base/kgamma kde-base/kamera ) kde-base/kdegraphics )"
+	|| ( ( =kde-base/kgamma-3.5* =kde-base/kamera-3.5* )
+		=kde-base/kdegraphics-3.5* )"
 
 need-kde 3.5
 

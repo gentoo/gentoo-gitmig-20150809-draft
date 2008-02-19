@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.1.0.ebuild,v 1.5 2008/02/10 01:18:18 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.1.0.ebuild,v 1.6 2008/02/19 01:45:58 ingmar Exp $
 
 inherit kde
 
@@ -22,7 +22,7 @@ for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
 
-DEPEND="arts? ( kde-base/arts )
+DEPEND="arts? ( =kde-base/arts-3.5* )
 	exif? ( >=media-gfx/exiv2-0.15 )
 	raw? ( >=media-libs/libkdcraw-0.1.1 )
 	>=media-libs/jpeg-6b-r7

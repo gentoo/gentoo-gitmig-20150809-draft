@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.4.1.ebuild,v 1.6 2007/07/12 04:08:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.4.1.ebuild,v 1.7 2008/02/19 01:41:17 ingmar Exp $
 
 inherit kde
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc ~ppc amd64"
 IUSE=""
 
-DEPEND="|| ( kde-base/libkonq kde-base/kdebase )
+DEPEND="|| ( =kde-base/libkonq-3.5* =kde-base/kdebase-3.5* )
 	media-libs/libkexif
 	media-plugins/kipi-plugins"
 need-kde 3.1
