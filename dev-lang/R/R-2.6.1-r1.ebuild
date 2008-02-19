@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.1-r1.ebuild,v 1.8 2008/02/17 14:22:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.1-r1.ebuild,v 1.9 2008/02/19 11:10:46 markusle Exp $
 
 inherit fortran flag-o-matic bash-completion
 
@@ -52,6 +52,9 @@ pkg_setup() {
 	# this is needed to properly compile additional R packages
 	# (see bug #152379)
 	append-flags -std=gnu99
+
+	# this is needed for linking on ppc64 (see bug #210229)
+	use ppc64 && append-flags -mminimal-toc
 }
 
 src_compile() {
