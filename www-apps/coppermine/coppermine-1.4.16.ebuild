@@ -1,55 +1,43 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.16.ebuild,v 1.1 2008/02/15 10:18:40 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.16.ebuild,v 1.2 2008/02/19 11:45:24 hollow Exp $
 
 inherit webapp versionator depend.php
 
-DESCRIPTION="Feature rich web picture gallery script written in PHP using GD or ImageMagick lib with a MySQL backend."
+DESCRIPTION="Web picture gallery written in PHP with a MySQL backend"
 HOMEPAGE="http://coppermine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/cpg${PV}.zip"
 
 LICENSE="GPL-2"
-KEYWORDS="~sparc ~x86 ~amd64"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="imagemagick"
 
 DEPEND="app-arch/unzip"
+RDEPEND="imagemagick? ( media-gfx/imagemagick )"
 
-RDEPEND="virtual/httpd-cgi
-	imagemagick? ( media-gfx/imagemagick )"
+S="${WORKDIR}"/cpg$(delete_all_version_separators)
 
-S=${WORKDIR}/cpg$(delete_all_version_separators)
-
-need_php
+need_php_httpd
 
 pkg_setup() {
 	webapp_pkg_setup
-	if ! PHPCHECKNODIE="yes" require_php_with_use mysql ; then
-		eerror
-		eerror "${PHP_PKG} needs to be re-installed with mysql USE-flag"
-		eerror
-		die "Re-install ${PHP_PKG}"
-	fi
+	require_php_with_use mysql
 }
 
 src_install() {
 	webapp_src_preinst
 
-	local docs="CHANGELOG COPYING"
-	dodoc ${docs}
+	dodoc CHANGELOG README.txt
+	dohtml docs/*
+	rm -rf CHANGELOG README.txt COPYING docs/
 
-	einfo "Installing main files"
-	cp -r * "${D}${MY_HTDOCSDIR}"
-	einfo "Done"
+	insinto "${MY_HTDOCSDIR}"
+	doins -r .
 
-	# owned files
-	dodir "${MY_HTDOCSDIR}"/albums
-	webapp_serverowned "${MY_HTDOCSDIR}"/albums
-	webapp_serverowned "${MY_HTDOCSDIR}"/albums/userpics
-	webapp_serverowned "${MY_HTDOCSDIR}"/albums/edit
+	dodir "${MY_HTDOCSDIR}"/albums/{userpics,edit}
+	webapp_serverowned "${MY_HTDOCSDIR}"/albums{,/userpics,/edit}
 	webapp_serverowned "${MY_HTDOCSDIR}"/include
 
-	dohtml docs/*
 	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
-
 	webapp_src_install
 }
