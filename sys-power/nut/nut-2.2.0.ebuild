@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.0.ebuild,v 1.3 2008/02/17 05:23:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.0.ebuild,v 1.4 2008/02/19 03:17:22 ranger Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="cgi snmp usb ssl hal"
 
 RDEPEND="cgi? ( >=media-libs/gd-2 )
