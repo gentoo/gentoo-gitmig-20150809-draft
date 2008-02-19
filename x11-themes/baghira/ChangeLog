@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/baghira
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.52 2007/06/04 21:24:02 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.53 2008/02/19 02:07:03 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -baghira-0.6e-r1.ebuild:
+  Old.
 
   04 Jun 2007; Raúl Porcel <armin76@gentoo.org> baghira-0.7.ebuild:
   alpha stable wrt #141454
