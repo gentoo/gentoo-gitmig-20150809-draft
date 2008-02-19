@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksudoku
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.5 2008/02/19 10:57:09 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.6 2008/02/19 10:58:11 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> ksudoku-4.0.1.ebuild:
+  Whitespace.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> ksudoku-4.0.1.ebuild:
   kde-base/ksudoku needs x11-libs/qt[opengl], bug 210477.
