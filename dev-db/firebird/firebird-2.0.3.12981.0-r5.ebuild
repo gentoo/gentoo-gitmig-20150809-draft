@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r4.ebuild,v 1.2 2008/01/16 06:50:10 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r5.ebuild,v 1.1 2008/02/19 16:10:21 wltjr Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -58,6 +58,8 @@ src_unpack() {
 
 	cd "${S}"
 
+	epatch "${FILESDIR}/${P}-CVE-2008-0387.patch"
+	epatch "${FILESDIR}/${P}-CVE-2008-0467.patch"
 	epatch "${FILESDIR}/${P}-external-libs.patch"
 	epatch "${FILESDIR}/${P}-flags.patch"
 	epatch "${FILESDIR}/${P}-make-deps.patch"

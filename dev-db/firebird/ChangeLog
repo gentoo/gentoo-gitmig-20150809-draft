@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.86 2008/02/13 18:34:31 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.87 2008/02/19 16:10:21 wltjr Exp $
+
+*firebird-2.0.3.12981.0-r5 (18 Feb 2008)
+
+  18 Feb 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/firebird-2.0.3.12981.0-CVE-2008-0387.patch,
+  +files/firebird-2.0.3.12981.0-CVE-2008-0467.patch,
+  -firebird-2.0.3.12981.0-r4.ebuild, +firebird-2.0.3.12981.0-r5.ebuild:
+  Added patches to 2.0.3 per bug #208034 and CVE-2008-0387, CVE-2008-0467.
+  Removed unstable version as this one replaces it.
 
 *firebird-2.1.0.17735_rc1 (13 Feb 2008)
 
