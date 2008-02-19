@@ -1,9 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.6-r2.ebuild,v 1.1 2007/05/17 10:47:34 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.6-r2.ebuild,v 1.2 2008/02/19 04:25:16 ingmar Exp $
 
 KMNAME=kdenetwork
-MAXKDEVER=$PV
+MAXKDEVER=3.5.8
 KM_DEPRANGE="3.5.0 $MAXKDEVER"
 inherit kde-meta eutils
 
