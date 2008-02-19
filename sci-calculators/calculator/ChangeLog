@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/calculator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.16 2008/02/18 08:04:28 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.17 2008/02/19 13:11:03 fmccor Exp $
+
+  19 Feb 2008; Ferris McCormick <fmccor@gentoo.org>
+  calculator-1.6.30.ebuild:
+  Sparc stable, Bug 210538.
 
 *calculator-1.6.31 (18 Feb 2008)
 
