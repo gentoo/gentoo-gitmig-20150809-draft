@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libgksu
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.49 2007/11/09 22:30:20 nixnut Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.50 2008/02/19 00:44:49 dang Exp $
+
+  19 Feb 2008; Daniel Gryniewicz <dang@gentoo.org> libgksu-2.0.5.ebuild:
+  Reorganize depends; bug #210510
 
   09 Nov 2007; nixnut <nixnut@gentoo.org> libgksu-2.0.5.ebuild:
   Stable on ppc wrt bug 193339
