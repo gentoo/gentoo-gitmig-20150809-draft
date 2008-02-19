@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbpanel
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.35 2008/02/19 17:13:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.36 2008/02/19 23:14:45 opfer Exp $
+
+  19 Feb 2008; Christian Faulhammer <opfer@gentoo.org> fbpanel-4.12.ebuild:
+  stable x86, bug 210497
 
   19 Feb 2008; nixnut <nixnut@gentoo.org> fbpanel-4.12.ebuild:
   Stable on ppc wrt bug 210497
