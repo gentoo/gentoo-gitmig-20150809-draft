@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.51 2008/02/19 12:04:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.52 2008/02/19 22:38:02 flameeyes Exp $
+
+*freebsd-ubin-6.2-r2 (19 Feb 2008)
+
+  19 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> files/login.1.pamd,
+  -freebsd-ubin-6.2-r1.ebuild, +freebsd-ubin-6.2-r2.ebuild:
+  Use system-local-login rather than system-login, and depend on the new
+  version of pambase.
 
 *freebsd-ubin-6.2-r1 (19 Feb 2008)
 
