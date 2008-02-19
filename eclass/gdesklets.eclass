@@ -1,6 +1,6 @@
 # Copyright 2004-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.15 2007/10/16 22:46:31 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.16 2008/02/19 01:51:00 nixphoeni Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -65,10 +65,10 @@ gdesklets_src_install() {
 		for SENS in ${SENSOR_NAME[@]}; do
 			einfo "Installing Sensor ${SENS}"
 			/usr/bin/python "Install_${SENS}_Sensor.bin" \
-					--nomsg ${D}${GDESKLETS_INST_DIR}/Sensors || \
+					--nomsg "${D}${GDESKLETS_INST_DIR}/Sensors" || \
 					die "Couldn't Install Sensor"
 
-			chown -R root:0 ${D}${GDESKLETS_INST_DIR}/Sensors/${SENSOR_NAME}
+			chown -R root:0 "${D}${GDESKLETS_INST_DIR}/Sensors/${SENSOR_NAME}"
 		done # for in ${SENSOR_NAME}
 	fi # if -n "${SENSOR_NAME}"
 
@@ -100,7 +100,7 @@ gdesklets_src_install() {
 			debug-print "Installing ${DSP} into ${DESKLET_INSDIR}"
 			DSP=`basename ${DSP}`
 			insinto "${DESKLET_INSDIR}"
-			doins ${DSP}
+			doins "${DSP}"
 
 			SCRIPTS=$(grep "script .*uri" ${DSP} | \
 				sed -e 's:.*<script .*uri=": :g' -e 's:"/>.*: :g')
@@ -160,7 +160,7 @@ gdesklets_src_install() {
 		for CTRL in ${CONTROL_INITS[@]}; do
 
 			cd `dirname ${CTRL}`
-			CTRL_NAME=$( ${GDESKLETS_INST_DIR}/gdesklets-control-getid `pwd` )
+			CTRL_NAME=$( "${GDESKLETS_INST_DIR}/gdesklets-control-getid" `pwd` )
 			einfo "Installing Control ${CTRL_NAME}"
 			# This creates the subdirectory of ${CTRL_NAME}
 			# in the global Controls directory
