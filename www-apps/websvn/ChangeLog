@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/websvn
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.21 2007/12/26 21:44:02 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.22 2008/02/19 16:54:58 hollow Exp $
+
+  19 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  websvn-2.0.ebuild:
+  ebuild cleanup wrt #208584
 
   26 Dec 2007; Christian Heim <phreak@gentoo.org> websvn-2.0.ebuild:
   Adjusting RESTRICT=nomirror to be RESTRICT=mirror.
