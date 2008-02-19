@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.29 2008/02/15 01:06:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.30 2008/02/19 01:36:46 vapier Exp $
+
+  19 Feb 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/quake2-icculus-0.16.1-no-asm-io.patch,
+  quake2-icculus-0.16.1-r1.ebuild:
+  Fix building with sanitized kernel headers #193107.
 
   15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   quake2-icculus-0.16.1.ebuild, quake2-icculus-0.16.1-r1.ebuild:

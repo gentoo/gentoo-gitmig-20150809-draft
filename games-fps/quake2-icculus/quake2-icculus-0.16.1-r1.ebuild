@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.9 2008/02/15 01:06:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.10 2008/02/19 01:36:46 vapier Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -67,6 +67,7 @@ src_unpack() {
 	sed -i -e 's:BUILD_SOFTX:BUILD_X11:' Makefile || die
 	epatch "${FILESDIR}"/${P}-amd64.patch # make sure this is still needed in future versions
 	epatch "${FILESDIR}"/${P}-gentoo-paths.patch
+	epatch "${FILESDIR}"/${P}-no-asm-io.patch #193107
 
 	# Now we deal with the silly rogue / xatrix addons ... this is ugly :/
 	ln -s $(type -P echo) "${T}"/more
