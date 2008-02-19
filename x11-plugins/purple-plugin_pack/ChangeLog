@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/purple-plugin_pack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.12 2008/02/19 18:14:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.13 2008/02/19 22:45:24 opfer Exp $
+
+  19 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  purple-plugin_pack-2.2.0.ebuild:
+  stable x86, bug 210642
 
   19 Feb 2008; nixnut <nixnut@gentoo.org> purple-plugin_pack-2.2.0.ebuild:
   Added ~ppc wrt bug 210670
