@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/qpxtool
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/ChangeLog,v 1.12 2007/10/08 20:22:39 coldwind Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/ChangeLog,v 1.13 2008/02/19 02:59:54 vapier Exp $
+
+*qpxtool-0.6.1-r1 (19 Feb 2008)
+
+  19 Feb 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/qpxtool-0.6.1-libata.patch, +qpxtool-0.6.1-r1.ebuild:
+  Fix from upstream for newer libata versions #210391 by Slava Gorbunov.
 
   08 Oct 2007; Santiago M. Mola <coldwind@gentoo.org> qpxtool-0.6.1.ebuild:
   Add menu entry (#188584).
