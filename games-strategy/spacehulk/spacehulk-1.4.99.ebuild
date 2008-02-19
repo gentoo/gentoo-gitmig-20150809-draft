@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/spacehulk/spacehulk-1.4.99.ebuild,v 1.8 2007/02/03 14:29:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/spacehulk/spacehulk-1.4.99.ebuild,v 1.9 2008/02/19 18:43:52 nyhm Exp $
 
 inherit qt3 games
 
@@ -10,8 +10,8 @@ SRC_URI="http://freesoftware.fsf.org/download/spacehulk/main.pkg/${PV}/${P}.tar.
 	http://freesoftware.fsf.org/download/spacehulk/themespack.pkg/1.0/spacehulk-themespack-1.0.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
 SLOT="0"
+KEYWORDS="~ppc x86"
 IUSE="xinerama"
 
 DEPEND="$(qt_min_version 3.3)
