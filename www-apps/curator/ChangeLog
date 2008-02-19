@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/curator
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/ChangeLog,v 1.7 2007/02/22 00:29:11 jokey Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/ChangeLog,v 1.8 2008/02/19 11:57:36 hollow Exp $
+
+  19 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  curator-2.0.ebuild, curator-2.1.ebuild:
+  ebuild cleanup wrt #208584
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
