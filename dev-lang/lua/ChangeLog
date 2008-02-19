@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.95 2008/02/19 17:24:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.96 2008/02/19 17:58:11 coldwind Exp $
+
+  19 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> lua-5.1.2-r2.ebuild:
+  amd64 stable wrt bug #210517
 
   19 Feb 2008; Raúl Porcel <armin76@gentoo.org> lua-5.1.2-r2.ebuild:
   alpha/ia64/sparc stable wrt #210517
