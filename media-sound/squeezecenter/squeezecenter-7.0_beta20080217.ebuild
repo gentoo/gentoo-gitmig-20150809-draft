@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.0_beta20080126.ebuild,v 1.1 2008/01/27 18:58:11 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.0_beta20080217.ebuild,v 1.1 2008/02/19 03:43:15 lavajoe Exp $
 
 inherit eutils
 
-SVN_VER="16779"
+SVN_VER="17600"
 MAJOR_VER="${PV:0:3}"
 MY_SRC_DIR="SqueezeCenter_${MAJOR_VER}_v${PV:8:4}-${PV:12:2}-${PV:14:2}"
 MY_P="squeezecenter-${MAJOR_VER}-${SVN_VER}-noCPAN"
@@ -161,8 +161,8 @@ pkg_postinst() {
 	if ! use flac; then
 		ewarn "'flac' USE flag is not set.  Although not essential, FLAC is required"
 		ewarn "for playing lossless WAV and FLAC (for Squeezebox 1), and for"
-		ewarn "playing other less common file types (if you have a Squeezebox 2, 3"
-		ewarn "or Transporter)."
+		ewarn "playing other less common file types (if you have a Squeezebox 2, 3,"
+		ewarn "Receiver or Transporter)."
 		ewarn "For maximum flexibility you are recommended to set the 'flac' USE flag".
 		ewarn ""
 	fi
@@ -256,7 +256,7 @@ pkg_config() {
 		read -p "MySQL root password: " ROOT_PASSWD; echo
 		stty echo
 		trap ":" EXIT
-		mysql --user=root --password="${ROOT_PASSWD}" </dev/null >/dev/null 2>&1 && DONE=1
+		echo quit | mysql --user=root --password="${ROOT_PASSWD}" >/dev/null 2>&1 && DONE=1
 		if [ $DONE -eq 0 ]; then
 			eerror "Incorrect MySQL root password, or MySQL is not running"
 		fi
