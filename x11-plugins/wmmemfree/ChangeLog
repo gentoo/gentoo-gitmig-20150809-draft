@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmemfree
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemfree/ChangeLog,v 1.14 2008/02/17 17:22:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemfree/ChangeLog,v 1.15 2008/02/19 00:43:06 s4t4n Exp $
+
+  19 Feb 2008; Michele Noberasco <s4t4n@gentoo.org>
+  wmmemfree-0.7-fix-crash-when-there-is-no-swap.patch:
+  Fixed typo in patch.
 
   17 Feb 2008; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 210300

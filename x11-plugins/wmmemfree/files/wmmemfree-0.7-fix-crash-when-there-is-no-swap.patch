@@ -5,7 +5,7 @@
    else
     XCopyArea(display, off, buffer, gc, 0, 0, 2, 11, 7 + n * 2, 27);
 -  if(n < (swp * 25 / swp_total))
-+  if(n < (swp_total) ? (swp * 25 / swp_total) : 0)
++  if(n < ((swp_total) ? (swp * 25 / swp_total) : 0))
     XCopyArea(display, on, buffer, gc, 0, 0, 2, 11, 7 + n * 2, 47);
    else
     XCopyArea(display, off, buffer, gc, 0, 0, 2, 11, 7 + n * 2, 47);
