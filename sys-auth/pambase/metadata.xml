@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>pam</herd>
+  <maintainer>
+    <email>pam-bugs@gentoo.org</email>
+  </maintainer>
+  <use>
+    <flag name="cracklib">
+      Enable pam_cracklib module on system authentication stack. This
+      produces warnings when changing password to something easily
+      crackable. It requires the same USE flag to be enabled on
+      <pkg>sys-libs/pam</pkg> or system login might be impossible.
+    </flag>
+    <flag name="debug">
+      Enable debug information logging on syslog(3) for all the
+      modules supporting this in the system authentication and system
+      login stacks.
+    </flag>
+  </use>
+</pkgmetadata>
