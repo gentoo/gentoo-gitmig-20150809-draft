@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.7-r2.ebuild,v 1.7 2007/11/23 13:55:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.7-r2.ebuild,v 1.8 2008/02/19 01:52:19 ingmar Exp $
 
 LANGS="af ar az be bg bn br ca cs cy da de el en_GB eo es et eu fa fi
 fr ga gl he hi hu id is it ja km ko ku lo lt mk ms nb nds ne nl nn pa pl
@@ -40,7 +40,7 @@ visualization ipod ifp real njb mtp musicbrainz daap
 python"
 # kde: enables compilation of the konqueror sidebar plugin
 
-RDEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
+RDEPEND="kde? ( || ( =kde-base/konqueror-3.5* =kde-base/kdebase-3.5* ) )
 	>=media-libs/xine-lib-1.1.2_pre20060328-r8
 	>=media-libs/taglib-1.4
 	mysql? ( >=virtual/mysql-4.0 )

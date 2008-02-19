@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.3.ebuild,v 1.4 2007/05/04 18:19:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.3.ebuild,v 1.5 2008/02/19 01:53:09 ingmar Exp $
 
 ARTS_REQUIRED="yes"
 inherit kde
@@ -18,7 +18,7 @@ IUSE="cdr encode kde vorbis"
 DEPEND=">=media-libs/taglib-1.3"
 
 RDEPEND="${DEPEND}
-	kde? ( || ( kde-base/noatun kde-base/kdemultimedia ) )
+	kde? ( || ( =kde-base/noatun-3.5* =kde-base/kdemultimedia-3.5* ) )
 	media-sound/sox
 	virtual/mpg123
 	vorbis? ( media-sound/vorbis-tools )

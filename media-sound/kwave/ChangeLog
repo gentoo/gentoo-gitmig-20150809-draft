@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kwave
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.5 2008/02/18 12:10:26 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.6 2008/02/19 01:52:12 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kwave-0.7.9.ebuild:
+  Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kwave-0.7.9.ebuild:
   Don't run autotools during src_compile(), bug 207457.

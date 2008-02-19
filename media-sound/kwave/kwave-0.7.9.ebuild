@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.9.ebuild,v 1.6 2008/02/18 12:10:26 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.9.ebuild,v 1.7 2008/02/19 01:52:12 ingmar Exp $
 
 ARTS_REQUIRED=yes
 inherit kde flag-o-matic
@@ -24,7 +24,7 @@ RDEPEND="media-libs/alsa-lib
 	sci-libs/gsl"
 
 DEPEND="${RDEPEND}
-	|| ( kde-base/kdemultimedia-arts =kde-base/kdemultimedia-3.5* )
+	|| ( =kde-base/kdemultimedia-arts-3.5* =kde-base/kdemultimedia-3.5* )
 	|| ( =kde-base/kdesdk-misc-3.5* =kde-base/kdesdk-3.5* )
 	app-text/recode
 	media-gfx/imagemagick"
