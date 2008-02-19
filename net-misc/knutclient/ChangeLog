@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knutclient
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.33 2007/07/28 09:18:56 philantrop Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.34 2008/02/19 12:04:08 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> knutclient-0.9.ebuild,
+  knutclient-0.9.1.ebuild, knutclient-0.9.3.ebuild:
+  Fix .desktop entry, thanks to Thomas Anderson in bug 210057.
 
   28 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
   -files/knutclient-0.8.5-arts-configure.patch, -knutclient-0.8.6.ebuild,
