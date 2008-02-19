@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.194 2008/02/19 00:00:46 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.195 2008/02/19 02:33:18 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kdetoys-3.5.5.ebuild:
+  Old.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kdetoys-4.0.0.ebuild:
   Remove monolithic KDE 4.0, bug 209586.
