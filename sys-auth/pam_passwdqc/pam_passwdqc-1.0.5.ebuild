@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/pam_passwdqc-1.0.5.ebuild,v 1.1 2008/02/19 12:53:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/pam_passwdqc-1.0.5.ebuild,v 1.2 2008/02/19 12:54:35 flameeyes Exp $
 
 inherit pam eutils toolchain-funcs
 
@@ -33,7 +33,7 @@ src_install() {
 	dopammod pam_passwdqc.so
 
 	doman pam_passwdqc.8
-	dodoc README PLATFORMS INTERNALS LICENSE
+	dodoc README PLATFORMS INTERNALS
 }
 
 pkg_postinst() {
