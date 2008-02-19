@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/koffice-i18n
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.99 2007/07/26 16:58:31 corsair Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.100 2008/02/19 01:21:17 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  koffice-i18n-1.6.1.ebuild, koffice-i18n-1.6.3.ebuild:
+  Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> koffice-i18n-1.6.3.ebuild:
   Stable on ppc64; bug #178697
