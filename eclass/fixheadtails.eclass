@@ -1,20 +1,17 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fixheadtails.eclass,v 1.10 2005/12/20 01:31:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fixheadtails.eclass,v 1.11 2008/02/19 05:27:25 vapier Exp $
 #
-# Author John Mylchreest <johnm@gentoo.org>
+# Original author John Mylchreest <johnm@gentoo.org>
+
+# @ECLASS: fixheadtails.eclass
+# @MAINTAINER:
+# base-system@gentoo.org
+# @BLURB: functions to replace obsolete head/tail with POSIX compliant ones
 
 DEPEND=">=sys-apps/sed-4"
 
-# ht_fix_all
-# This fixes all files within the current directory.
-# Do be used in src_unpack ; cd ${S}; ht_fix_all
-
-# ht_fix_file <param> [<param>] [<param>]..
-# This fixes the files passed by PARAM
-# to be used for specific files. ie: ht_fix_file "${FILESDIR}/mypatch.patch"
-
-do_sed_fix() {
+__do_sed_fix() {
 	einfo " - fixed $1"
 	sed -i \
 		-e 's/head \+-\([0-9]\)/head -n \1/g' \
@@ -23,16 +20,21 @@ do_sed_fix() {
 			die "sed ${1} failed"
 }
 
+# @FUNCTION: ht_fix_file
+# @USAGE: <files>
+# @DESCRIPTION:
+# Fix all the specified files.
 ht_fix_file() {
 	local i
-
 	einfo "Replacing obsolete head/tail with POSIX compliant ones"
-	for i in "${@}"
-	do
-		do_sed_fix ${i}
+	for i in "$@" ; do
+		__do_sed_fix "$i"
 	done
 }
 
+# @FUNCTION: ht_fix_all
+# @DESCRIPTION:
+# Find and fix all files in the current directory as needed.
 ht_fix_all() {
 	local MATCHES
 	MATCHES=$(grep -l -s -i -R -e "head -[ 0-9]" -e "tail [+-][ 0-9]" * | sort -u)
