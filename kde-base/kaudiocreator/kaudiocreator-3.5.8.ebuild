@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/kaudiocreator-3.5.8.ebuild,v 1.6 2008/01/31 15:29:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/kaudiocreator-3.5.8.ebuild,v 1.7 2008/02/19 04:46:51 ingmar Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -28,12 +28,12 @@ PATCHES="${FILESDIR}/kaudiocreator-3.5.6-arts.patch"
 
 src_compile () {
 	DO_NOT_COMPILE=libkcddb kde-meta_src_compile myconf configure
-	cd $S/libkcddb && make configbase.h cdinfodialogbase.h
+	cd "${S}"/libkcddb && make configbase.h cdinfodialogbase.h
 
 	# Library deps seems not to be built as they should :/
-	cd $S/kscd/libwm/audio && make libworkmanaudio.la && \
-	cd $S/kscd/libwm && make libworkman.la && \
-	cd $S/kscd && make libkcompactdisc.la || \
+	cd "${S}"/kscd/libwm/audio && make libworkmanaudio.la && \
+	cd "${S}"/kscd/libwm && make libworkman.la && \
+	cd "${S}"/kscd && make libkcompactdisc.la || \
 		die "failed to make prerequisite libraries."
 
 	DO_NOT_COMPILE=libkcddb kde-meta_src_compile make

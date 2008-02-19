@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/konsolekalendar-3.5.8.ebuild,v 1.6 2008/01/31 15:28:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/konsolekalendar-3.5.8.ebuild,v 1.7 2008/02/19 04:44:54 ingmar Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -23,6 +23,6 @@ KMCOMPILEONLY="libkcal"
 src_compile() {
 	export DO_NOT_COMPILE="libkcal"
 	kde-meta_src_compile myconf configure
-	cd $S/libkcal; make htmlexportsettings.h
+	cd "${S}"/libkcal; make htmlexportsettings.h
 	kde-meta_src_compile make
 }

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kscd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.84 2008/02/17 02:46:14 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.85 2008/02/19 04:44:35 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kscd-3.5.8.ebuild:
+  Quotes
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kscd-3.5.5.ebuild,
   -kscd-3.5.6-r1.ebuild, -kscd-3.5.7.ebuild, -kscd-4.0.0.ebuild:

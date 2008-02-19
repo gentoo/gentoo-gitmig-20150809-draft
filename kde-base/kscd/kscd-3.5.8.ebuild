@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/kscd-3.5.8.ebuild,v 1.6 2008/01/31 15:30:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/kscd-3.5.8.ebuild,v 1.7 2008/02/19 04:44:35 ingmar Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -26,7 +26,7 @@ PATCHES="${FILESDIR}/kscd-3.5.6-alsa-tests.patch
 
 src_compile() {
 	DO_NOT_COMPILE=libkcddb kde-meta_src_compile myconf configure
-	cd $S/libkcddb && make configbase.h
-	cd $S/libkcddb && make cdinfodialogbase.h
+	cd "${S}"/libkcddb && make configbase.h
+	cd "${S}"/libkcddb && make cdinfodialogbase.h
 	DO_NOT_COMPILE=libkcddb kde-meta_src_compile make
 }
