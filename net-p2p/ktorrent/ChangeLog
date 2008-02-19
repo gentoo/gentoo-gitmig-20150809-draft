@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.76 2008/02/15 19:33:47 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.77 2008/02/19 02:01:44 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -ktorrent-2.2.5.ebuild:
+  Old.
 
 *ktorrent-2.2.5-r1 (15 Feb 2008)
 
