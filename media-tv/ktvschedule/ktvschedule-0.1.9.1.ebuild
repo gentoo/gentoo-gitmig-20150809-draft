@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ktvschedule/ktvschedule-0.1.9.1.ebuild,v 1.2 2007/06/12 11:37:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ktvschedule/ktvschedule-0.1.9.1.ebuild,v 1.3 2008/02/19 01:53:33 ingmar Exp $
 
 inherit kde
 DESCRIPTION="KDE frontend for TV listings guide grabbers xmltv and nxtvpeg"
@@ -12,8 +12,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 RDEPEND=""
-DEPEND="|| ( media-tv/nxtvepg media-tv/xmltv )
-		|| ( kde-base/kdepim kde-base/korganizer kde-base/kalarm )"
+DEPEND="
+	|| ( media-tv/nxtvepg media-tv/xmltv )
+	|| ( =kde-base/kdepim-3.5* =kde-base/korganizer-3.5* =kde-base/kalarm-3.5* )"
 
 need-kde 3
 
