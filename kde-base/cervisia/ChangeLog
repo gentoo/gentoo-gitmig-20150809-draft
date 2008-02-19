@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.76 2008/02/17 02:50:02 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.77 2008/02/19 01:41:58 jer Exp $
+
+  19 Feb 2008; Jeroen Roovers <jer@gentoo.org> cervisia-3.5.8.ebuild:
+  Stable for HPPA (bug #209443).
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -cervisia-3.5.6.ebuild,
   -cervisia-3.5.7.ebuild, -cervisia-4.0.0.ebuild:
