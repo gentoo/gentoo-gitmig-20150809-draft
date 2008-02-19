@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/ksplash-engine-moodin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplash-engine-moodin/ChangeLog,v 1.9 2008/02/18 22:53:20 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplash-engine-moodin/ChangeLog,v 1.10 2008/02/19 18:13:46 ingmar Exp $
+
+*ksplash-engine-moodin-0.4.2 (19 Feb 2008)
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +ksplash-engine-moodin-0.4.2.ebuild:
+  Oops.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -ksplash-engine-moodin-0.4.2.ebuild:
