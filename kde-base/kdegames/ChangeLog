@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.202 2008/02/18 13:10:45 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.203 2008/02/18 23:56:23 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -files/lskat-4.0.0-link.patch, -kdegames-4.0.0.ebuild:
+  Remove monolithic KDE 4.0, bug 209586.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kdegames-3.5.5.ebuild,
   -kdegames-3.5.6.ebuild, -kdegames-3.5.7.ebuild:

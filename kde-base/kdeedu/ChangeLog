@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.234 2008/02/18 13:10:26 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.235 2008/02/18 23:56:05 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -files/kstars-4.0.0-destdir.patch, -files/marble-4.0.0-fix-tests.patch,
+  -files/kdeedu-4.0.0-opengl.patch, -kdeedu-4.0.0.ebuild:
+  Remove monolithic KDE 4.0, bug 209586.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kdeedu-3.5.5.ebuild,
   -kdeedu-3.5.6.ebuild, -kdeedu-3.5.7.ebuild:

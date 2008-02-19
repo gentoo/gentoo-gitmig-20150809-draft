@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.267 2008/02/18 13:11:26 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.268 2008/02/18 23:57:27 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -files/kdemultimedia-4.0.0-flac-1.1.3.patch,
+  -kdemultimedia-4.0.0-r1.ebuild:
+  Remove monolithic KDE 4.0, bug 209586.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -kdemultimedia-3.5.5.ebuild, -kdemultimedia-3.5.6.ebuild,

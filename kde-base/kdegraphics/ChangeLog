@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.335 2008/02/18 13:11:06 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.336 2008/02/18 23:57:29 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -kdegraphics-4.0.0.ebuild:
+  Remove monolithic KDE 4.0, bug 209586.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -kdegraphics-3.5.5.ebuild, -kdegraphics-3.5.5-r1.ebuild,

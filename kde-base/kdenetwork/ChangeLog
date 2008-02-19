@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.289 2008/02/18 15:46:07 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.290 2008/02/18 23:58:35 ingmar Exp $
+
+  18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -kdenetwork-4.0.0-r1.ebuild:
+  Remove monolithic KDE 4.0, bug 209586.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kdenetwork-3.5.8.ebuild:
   Don't use bindnow-flags. Bug 210583.
