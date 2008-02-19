@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080219.ebuild,v 1.1 2008/02/19 11:40:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080219.ebuild,v 1.2 2008/02/19 16:27:10 flameeyes Exp $
 
 inherit eutils
 
@@ -13,10 +13,16 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug cracklib selinux"
 
-RDEPEND="virtual/pam
+RDEPEND="
+	|| (
+		>=sys-libs/pam-0.99.9.0-r1
+		( sys-auth/openpam
+		  || ( sys-freebsd/freebsd-pam-modules sys-netbsd/netbsd-pam-modules )
+		)
+	)
 	cracklib? ( >=sys-libs/pam-0.99 )
 	selinux? ( >=sys-libs/pam-0.99 )
-	!sys-auth/openpam
+	!<sys-freebsd/freebsd-pam-modules-6.2-r1
 	!<sys-libs/pam-0.99.9.0-r1"
 
 RESTRICT="binchecks"

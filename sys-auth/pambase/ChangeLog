@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.1 2008/02/19 11:40:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.2 2008/02/19 16:27:10 flameeyes Exp $
+
+  19 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  pambase-20080219.ebuild:
+  Also accept openpam and freebsd/netbsd-pam-modules, and block older
+  freebsd-pam-modules.
 
 *pambase-20080219 (19 Feb 2008)
 
