@@ -1,29 +1,31 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.9.3.ebuild,v 1.8 2007/11/21 19:33:34 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.9.3.ebuild,v 1.9 2008/02/19 01:12:19 ingmar Exp $
 
 inherit kde
 
 MY_P="${P/_rc/rc}"
-S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A Latex Editor and TeX shell for kde"
 HOMEPAGE="http://kile.sourceforge.net/"
-SRC_URI="mirror://sourceforge/kile/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT=0
 KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 IUSE="kde"
 
-RDEPEND="dev-lang/perl
-	virtual/tetex
+RDEPEND="
+	dev-lang/perl
 	dev-tex/latex2html
-	kde? ( || ( ( kde-base/kpdf
-	              kde-base/kghostview
-	              kde-base/kdvi
-	              kde-base/kviewshell )
-	            kde-base/kdegraphics ) )"
+	virtual/tetex
+	kde? (
+		|| ( ( =kde-base/kpdf-3.5*
+			=kde-base/kghostview-3.5*
+			=kde-base/kdvi-3.5*
+			=kde-base/kviewshell-3.5* )
+			=kde-base/kdegraphics-3.5* )
+		)"
 
 need-kde 3.2
 
@@ -32,6 +34,8 @@ nl nn pa pl pt pt_BR ro ru rw sk sr sr@Latn sv ta tr zh_CN"
 for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
+
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	kde_src_unpack

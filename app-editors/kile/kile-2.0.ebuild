@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.0.ebuild,v 1.8 2008/01/21 17:37:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.0.ebuild,v 1.9 2008/02/19 01:12:19 ingmar Exp $
 
 inherit kde
 
 DESCRIPTION="A LaTeX Editor and TeX shell for kde"
 HOMEPAGE="http://kile.sourceforge.net/"
-SRC_URI="mirror://sourceforge/kile/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -16,11 +16,13 @@ IUSE="kde"
 RDEPEND="dev-lang/perl
 	virtual/latex-base
 	dev-tex/latex2html
-	kde? ( || ( (	kde-base/kpdf
-					kde-base/kghostview
-					kde-base/kdvi
-					kde-base/kviewshell )
-				kde-base/kdegraphics ) )"
+	kde? (
+		|| ( ( =kde-base/kpdf-3.5*
+			=kde-base/kghostview-3.5*
+			=kde-base/kdvi-3.5*
+			=kde-base/kviewshell-3.5* )
+			=kde-base/kdegraphics-3.5* )
+		)"
 
 need-kde 3.5
 
