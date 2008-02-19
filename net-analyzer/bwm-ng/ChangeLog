@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bwm-ng
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.9 2007/10/21 12:14:13 hollow Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.10 2008/02/19 17:19:36 nixnut Exp $
+
+  19 Feb 2008; nixnut <nixnut@gentoo.org> bwm-ng-0.6.ebuild:
+  Stable on ppc wrt bug 210629
 
 *bwm-ng-0.6 (21 Oct 2007)
 
