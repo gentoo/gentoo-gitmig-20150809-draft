@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/ridge
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ridge/ChangeLog,v 1.7 2006/11/28 00:34:45 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ridge/ChangeLog,v 1.8 2008/02/19 02:14:44 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> ridge-0.3.2.ebuild:
+  Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.
 
   28 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> ridge-0.3.2.ebuild:
   Remove arts useflag.

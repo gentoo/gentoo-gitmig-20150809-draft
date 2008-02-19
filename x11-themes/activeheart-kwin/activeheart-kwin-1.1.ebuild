@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart-kwin/activeheart-kwin-1.1.ebuild,v 1.9 2006/09/24 21:02:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart-kwin/activeheart-kwin-1.1.ebuild,v 1.10 2008/02/19 02:05:41 ingmar Exp $
 
 inherit kde
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="|| ( kde-base/kwin kde-base/kdebase )"
+DEPEND="|| ( =kde-base/kwin-3.5* =kde-base/kdebase-3.5* )"
 RDEPEND="${DEPEND}"
 
 need-kde 3.2

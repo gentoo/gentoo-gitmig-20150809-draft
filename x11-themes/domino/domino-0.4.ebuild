@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/domino/domino-0.4.ebuild,v 1.6 2008/01/07 08:37:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/domino/domino-0.4.ebuild,v 1.7 2008/02/19 02:07:56 ingmar Exp $
 
 ARTS_REQUIRED="never"
 inherit kde
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="|| ( kde-base/kwin kde-base/kdebase )"
+RDEPEND="|| ( =kde-base/kwin-3.5* =kde-base/kdebase-3.5* )"
 need-kde 3.4
 
 PATCHES="${FILESDIR}/${P}-fbsd.patch"

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/thinkeramik-3.2.1.ebuild,v 1.16 2007/07/12 07:35:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/thinkeramik-3.2.1.ebuild,v 1.17 2008/02/19 02:15:29 ingmar Exp $
 
 ARTS_REQUIRED="never"
 
@@ -17,8 +17,7 @@ IUSE=""
 
 KEYWORDS="~amd64 ppc ~sparc x86 ~x86-fbsd"
 
-DEPEND="|| ( kde-base/kwin kde-base/kdebase )"
-
+DEPEND="|| ( =kde-base/kwin-3.5* =kde-base/kdebase-3.5* )"
 RDEPEND="${DEPEND}"
 
 need-kde 3.2
