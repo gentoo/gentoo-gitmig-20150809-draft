@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/zina/zina-1.0_rc3.ebuild,v 1.3 2008/02/05 14:09:06 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/zina/zina-1.0_rc3.ebuild,v 1.4 2008/02/19 13:46:04 hollow Exp $
 
-inherit webapp depend.apache
+inherit webapp depend.php
 
 MY_P=${P/_/}
 
@@ -14,24 +14,26 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="virtual/httpd-php"
+DEPEND=""
+RDEPEND=""
 
-need_apache
+need_php_httpd
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 src_install() {
 	webapp_src_preinst
 
-	touch "${S}"/zina.ini.php
+	touch zina.ini.php
 
-	cp -R . "${D}"${MY_HTDOCSDIR}
+	insinto "${MY_HTDOCSDIR}"
+	doins -r .
 
-	webapp_configfile ${MY_HTDOCSDIR}/zina.ini.php
-	webapp_serverowned ${MY_HTDOCSDIR}/zina.ini.php
+	webapp_configfile "${MY_HTDOCSDIR}"/zina.ini.php
+	webapp_serverowned "${MY_HTDOCSDIR}"/zina.ini.php
 
-	keepdir ${MY_HTDOCSDIR}/_zina/cache
-	webapp_serverowned ${MY_HTDOCSDIR}/_zina/cache
+	keepdir "${MY_HTDOCSDIR}"/_zina/cache
+	webapp_serverowned "${MY_HTDOCSDIR}"/_zina/cache
 
 	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 	webapp_src_install
