@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/kmobiletools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.20 2007/10/25 20:48:26 mrness Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.21 2008/02/19 01:17:22 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  kmobiletools-0.5.0_beta3.ebuild:
+  Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.
 
   25 Oct 2007; Alin Năstac <mrness@gentoo.org>
   -kmobiletools-0.5_beta1.ebuild, -kmobiletools-0.5.0_beta2.ebuild:

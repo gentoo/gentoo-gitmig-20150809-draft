@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/kmobiletools-0.5.0_beta3.ebuild,v 1.4 2007/07/13 22:53:50 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/kmobiletools-0.5.0_beta3.ebuild,v 1.5 2008/02/19 01:17:22 ingmar Exp $
 
 inherit kde eutils
 
@@ -13,26 +13,31 @@ LICENSE="GPL-2"
 IUSE="bluetooth gammu kde obex"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-DEPEND="kde? ( || ( ( kde-base/libkcal kde-base/kontact ) kde-base/kdepim ) )
-		bluetooth? ( >=net-wireless/kdebluetooth-1.0_beta2 )
-		gammu? ( ~app-mobilephone/gammu-1.11.0 net-wireless/bluez-libs )
-		obex? ( >=app-mobilephone/obexftp-0.21 net-wireless/bluez-libs )"
+DEPEND="
+	kde? (
+		|| ( ( =kde-base/libkcal-3.5* =kde-base/kontact-3.5* )
+			=kde-base/kdepim-3.5* )
+		)
+	bluetooth? ( >=net-wireless/kdebluetooth-1.0_beta2 )
+	gammu? ( ~app-mobilephone/gammu-1.11.0 net-wireless/bluez-libs )
+	obex? ( >=app-mobilephone/obexftp-0.21 net-wireless/bluez-libs )"
+RDEPEND=""
 
 need-kde 3.4
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 src_unpack() {
 	kde_src_unpack
 
-	epatch ${FILESDIR}/${P}-no-automagic-deps.patch
+	epatch "${FILESDIR}"/${P}-no-automagic-deps.patch
 
 	# Fixing file collision between kmobiletools and kdebluetooth when
 	# USE="obex" is set, see bug 183245
-	epatch ${FILESDIR}/${P}-obexftp-file-collision-fix.patch
+	epatch "${FILESDIR}"/${P}-obexftp-file-collision-fix.patch
 
 	# remove configure script to trigger it's rebuild during kde_src_compile
-	rm -f ${S}/configure
+	rm -f "${S}"/configure || die "Failed to remove ./configure"
 }
 
 src_compile() {
