@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.26 2008/01/04 14:47:42 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.27 2008/02/19 10:06:36 calchan Exp $
+
+*f-spot-0.4.2 (19 Feb 2008)
+
+  19 Feb 2008; Denis Dupeyron <calchan@gentoo.org>
+  +files/f-spot-0.4.2-color-adjust.patch, +f-spot-0.4.2.ebuild:
+  Version bump.
 
   04 Jan 2008; Denis Dupeyron <calchan@gentoo.org> f-spot-0.4.1.ebuild:
   Disabled tests, thanks to Dustin Surawicz (see bug #203566).
