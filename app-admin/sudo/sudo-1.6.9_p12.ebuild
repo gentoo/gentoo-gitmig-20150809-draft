@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.9_p12.ebuild,v 1.2 2008/02/14 14:55:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.9_p12.ebuild,v 1.3 2008/02/19 14:01:17 flameeyes Exp $
 
-inherit eutils pam flag-o-matic confutils
+inherit eutils pam confutils
 
 DESCRIPTION="Allows users or groups to run commands as other users"
 HOMEPAGE="http://www.sudo.ws/"
@@ -102,9 +102,6 @@ src_compile() {
 		rmpath ROOTPATH '*/gcc-bin/*'
 
 	einfo "...done."
-
-	# disallow lazy bindings
-	append-ldflags $(bindnow-flags)
 
 	# XXX: --disable-path-info closes an info leak, but may be confusing.
 	# XXX: /bin/vi may not be available, make nano visudo's default.

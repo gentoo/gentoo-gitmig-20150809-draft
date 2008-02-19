@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p12-r1.ebuild,v 1.15 2008/02/12 10:29:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p12-r1.ebuild,v 1.16 2008/02/19 14:01:17 flameeyes Exp $
 
-inherit eutils pam flag-o-matic
+inherit eutils pam
 
 # TODO: Fix support for krb4 and krb5
 
@@ -121,8 +121,7 @@ src_compile() {
 		$(use_with ldap ldap_conf_file /etc/ldap.conf.sudo) \
 		$(use_with ldap) || die
 
-	# disallow lazy bindings
-	emake SUDO_LDFLAGS="$(bindnow-flags)" || die
+	emake || die
 }
 
 src_install() {
