@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/kuroo-0.81_rc1.ebuild,v 1.1 2007/08/31 18:34:49 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/kuroo-0.81_rc1.ebuild,v 1.2 2008/02/19 01:31:11 ingmar Exp $
 
 inherit kde eutils
 
@@ -16,6 +16,6 @@ IUSE=""
 RDEPEND=">=app-portage/gentoolkit-0.2.3-r1
 		>=kde-misc/kdiff3-0.9.92
 		>=dev-db/sqlite-2.8.16-r4
-	|| ( kde-base/kdesu kde-base/kdebase )"
+	|| ( =kde-base/kdesu-3.5* =kde-base/kdebase-3.5* )"
 
 need-kde 3.5
