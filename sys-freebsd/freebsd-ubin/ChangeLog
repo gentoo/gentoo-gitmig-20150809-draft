@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.52 2008/02/19 22:38:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.53 2008/02/19 22:38:54 flameeyes Exp $
+
+  19 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-ubin-6.2-r2.ebuild:
+  Drop keywords as pambase is not keyworded.
 
 *freebsd-ubin-6.2-r2 (19 Feb 2008)
 
