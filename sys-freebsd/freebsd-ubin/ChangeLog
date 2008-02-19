@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.50 2007/11/02 23:28:04 uberlord Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.51 2008/02/19 12:04:05 flameeyes Exp $
+
+*freebsd-ubin-6.2-r1 (19 Feb 2008)
+
+  19 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> +files/login.1.pamd,
+  +files/passwd.1.pamd, +files/su.1.pamd, +freebsd-ubin-6.2-r1.ebuild:
+  Update to use the new pambase system-login and system-auth rather than the
+  old system stack.
 
   02 Nov 2007; Roy Marples <uberlord@gentoo.org> freebsd-ubin-6.2.ebuild:
   Don't build hesinfo, use the hesiod ebuild, #197275.
