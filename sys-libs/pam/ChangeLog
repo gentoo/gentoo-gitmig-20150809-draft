@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.194 2008/02/10 17:59:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.195 2008/02/19 11:43:37 flameeyes Exp $
+
+*pam-0.99.9.0-r1 (19 Feb 2008)
+
+  19 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +pam-0.99.9.0-r1.ebuild:
+  New revision that works with the new sys-auth/pambase (and requires it).
 
   10 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> pam-0.99.8.1-r1.ebuild,
   pam-0.99.9.0.ebuild:
