@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kletterwizard
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.24 2007/05/21 12:38:58 philantrop Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.25 2008/02/19 01:25:35 ingmar Exp $
+
+  19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  kletterwizard-0.9.7.ebuild, kletterwizard-0.9.8.ebuild:
+  Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.
 
   21 May 2007; Wulf C. Krueger <philantrop@gentoo.org> Manifest:
   Fixed Manifest.
