@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/qtjava-3.5.8.ebuild,v 1.5 2008/01/31 15:30:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/qtjava-3.5.8.ebuild,v 1.6 2008/02/19 15:53:22 caster Exp $
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1
@@ -15,15 +15,16 @@ KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
+# libhpi for bug #208631
 PATCHES="${FILESDIR}/no-gtk-glib-check.diff
-		${FILESDIR}/${PN}-${SLOT}-javacflags.patch"
+		${FILESDIR}/${PN}-${SLOT}-javacflags.patch
+		${FILESDIR}/no-libhpi.so-check.patch"
 
 pkg_setup() {
 	if ! built_with_use =x11-libs/qt-3* opengl ; then
 		eerror "${CATEGORY}/${PN} needs Qt 3 built with OpenGL support."
 		die "Please reemerge =x11-libs/qt-3* with USE=\"opengl\"."
 	fi
-
 	kde_pkg_setup
 	java-pkg-2_pkg_setup
 }

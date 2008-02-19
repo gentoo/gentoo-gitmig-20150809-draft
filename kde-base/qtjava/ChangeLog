@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/qtjava
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/ChangeLog,v 1.59 2008/02/17 02:30:16 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/ChangeLog,v 1.60 2008/02/19 15:53:22 caster Exp $
+
+  19 Feb 2008; Vlastimil Babka <caster@gentoo.org>
+  +files/no-libhpi.so-check.patch, qtjava-3.5.8.ebuild:
+  Fix building with IBM jdk's. Patch by Alex V. Fansky <damwihu@gmail.com> bug
+  #208631.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -qtjava-3.5.2.ebuild,
   -qtjava-3.5.2-r1.ebuild, -qtjava-3.5.6-r1.ebuild, -qtjava-3.5.7.ebuild:
