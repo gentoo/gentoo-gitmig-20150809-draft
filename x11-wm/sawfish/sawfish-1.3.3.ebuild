@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.2.ebuild,v 1.2 2008/01/23 06:06:52 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.3.ebuild,v 1.1 2008/02/19 18:52:21 truedfx Exp $
 
 # detect cvs snapshots; fex. 1.3_p20040120
 [[ $PV == *_p[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
@@ -15,16 +15,14 @@ fi
 DESCRIPTION="Extensible window manager using a Lisp-based scripting language"
 HOMEPAGE="http://sawmill.sourceforge.net/"
 if (( snapshot )); then
-	SRC_URI="mirror://gentoo/${P}.tar.bz2"
+	SRC_URI="mirror://gentoo/${P/_p/.}.tar.bz2"
 else
 	SRC_URI="mirror://sourceforge/sawmill/${P}.tar.gz"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
-# Will remain masked until a report of a segfault on the mailing list
-# is resolved
-KEYWORDS="" # ~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gnome esd nls audiofile pango"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
@@ -44,7 +42,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/libtool.patch
-	epatch "${FILESDIR}"/${PN}-wm_name.patch
 
 	if (( snapshot )); then
 		eautoreconf
@@ -94,8 +91,6 @@ src_compile() {
 	# (see bug 18294)
 	sed -i -e 's:REP_CFLAGS=:REP_CFLAGS=-I/usr/include/freetype2 :' Makedefs
 
-	# Parallel build didn't work, but appears to work now. This needs
-	# extra checking before this version is unmasked.
 	emake || die "make failed"
 }
 
