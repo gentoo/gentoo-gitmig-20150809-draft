@@ -1,6 +1,12 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.4 2008/02/17 11:40:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.5 2008/02/19 00:23:43 yngwin Exp $
+
+  19 Feb 2008; Ben de Groot <yngwin@gentoo.org>
+  -smplayer-0.5.62.ebuild, -smplayer-0.6.0_rc1.ebuild,
+  smplayer-0.6.0_rc2.ebuild:
+  Removing old versions. Updating current ebuild with warning about 
+  mplayer png support, fixes #209521.
 
 *smplayer-0.6.0_rc2 (17 Feb 2008)
 

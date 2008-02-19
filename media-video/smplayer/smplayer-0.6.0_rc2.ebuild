@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.0_rc2.ebuild,v 1.1 2008/02/17 11:40:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.0_rc2.ebuild,v 1.2 2008/02/19 00:23:43 yngwin Exp $
 
 inherit eutils qt4
 
@@ -79,4 +79,15 @@ src_install() {
 
 	emake DESTDIR="${D}" install || die "emake install failed"
 	prepalldocs
+}
+
+pkg_postinst() {
+	if ! built_with_use media-video/mplayer png; then
+		echo
+		ewarn "SMplayer needs the media-video/mplayer package built with USE=png."
+		ewarn "To prevent crashes, please rebuild mplayer with png support, or"
+		ewarn "alternatively, clear the Folder for storing screenshots field in"
+		ewarn "the Preferences dialog."
+		echo
+	fi
 }
