@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/dragonflycms
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.16 2007/08/15 06:45:13 wrobel Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.17 2008/02/19 13:13:56 hollow Exp $
+
+  19 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  dragonflycms-9.1.2.1.ebuild:
+  ebuild cleanup wrt #208584
 
 *dragonflycms-9.1.2.1 (15 Aug 2007)
 
