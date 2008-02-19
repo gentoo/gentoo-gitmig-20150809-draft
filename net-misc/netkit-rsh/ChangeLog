@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.48 2008/02/19 17:00:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.49 2008/02/19 22:59:45 flameeyes Exp $
+
+*netkit-rsh-0.17-r9 (19 Feb 2008)
+
+  19 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/rexec.pamd-pambase, +files/rlogin.pamd-pambase,
+  +files/rsh.pamd-pambase, +netkit-rsh-0.17-r9.ebuild:
+  Add a new revision with pambase's system-remote-login as base stack.
 
   19 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> -files/rexec.pamd,
   -files/rlogin.pamd, -files/rsh.pamd:
