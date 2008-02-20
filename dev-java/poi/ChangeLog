@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/poi
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.43 2008/02/07 12:02:40 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.44 2008/02/20 19:22:49 fordfrog Exp $
+
+  20 Feb 2008; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/poi-3.0.2-isADateFormatTest.patch, poi-3.0.2-r1.ebuild:
+  Fixed error in tests caused by applying patch that fixes determination of
+  date/time formats in cells
 
 *poi-3.0.2-r1 (07 Feb 2008)
 

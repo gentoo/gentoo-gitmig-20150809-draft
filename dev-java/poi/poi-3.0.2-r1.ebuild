@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.0.2-r1.ebuild,v 1.1 2008/02/07 12:02:40 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.0.2-r1.ebuild,v 1.2 2008/02/20 19:22:49 fordfrog Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source"
@@ -32,9 +32,10 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	# Patch that adds unofficial fix for detection of custom date/time formats
+	# Patch that adds official fix for detection of custom date/time formats
 	# See bug: http://issues.apache.org/bugzilla/show_bug.cgi?id=44373
 	epatch "${FILESDIR}/${P}-isADateFormat.patch"
+	use test && epatch "${FILESDIR}/${P}-isADateFormatTest.patch"
 
 	find -name "*.jar" | xargs rm -v
 
