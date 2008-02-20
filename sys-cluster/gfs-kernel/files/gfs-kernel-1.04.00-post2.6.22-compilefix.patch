@@ -1,0 +1,51 @@
+--- cluster-1.04.00/gfs-kernel/src/gfs/diaper.c	2007-09-11 13:20:51.000000000 +0300
++++ cluster-1.04.00/gfs-kernel/src/gfs/diaper.c	2007-09-11 13:20:59.000000000 +0300
+@@ -397,7 +397,7 @@
+  fail_bdput:
+ 	mutex_lock(&diaper->bd_mutex);
+ 	if (!--diaper->bd_openers) {
+-		invalidate_bdev(diaper, 1);
++		invalidate_bdev(diaper);
+ 		diaper->bd_contains = NULL;
+ 		diaper->bd_disk = NULL;
+ 	} else
+@@ -440,7 +440,7 @@
+ 
+ 	mutex_lock(&diaper->bd_mutex);
+ 	if (!--diaper->bd_openers) {
+-		invalidate_bdev(diaper, 1);
++		invalidate_bdev(diaper);
+ 		diaper->bd_contains = NULL;
+ 		diaper->bd_disk = NULL;
+ 	} else
+--- cluster-1.04.00/gfs-kernel/src/gfs/ops_fstype.c	2007-02-23 22:57:29.000000000 +0200
++++ cluster-1.04.00/gfs-kernel/src/gfs/ops_fstype.c	2007-09-11 13:50:46.000000000 +0300
+@@ -726,13 +726,6 @@
+ 			goto error;
+ 		}
+ 		sb->s_flags |= MS_ACTIVE;
+-		/* Equivilant of bdev_uevent(bdev, KOBJ_MOUNT): */
+-		if (real->bd_disk) {
+-			if (real->bd_part)
+-				kobject_uevent(&real->bd_part->kobj, KOBJ_MOUNT);
+-			else
+-				kobject_uevent(&real->bd_disk->kobj, KOBJ_MOUNT);
+-		}
+ 	}
+ 
+ 	return simple_set_mnt(mnt, sb);
+@@ -761,13 +754,6 @@
+ 	struct block_device *real = gfs_diaper_2real(diaper);
+ 	unsigned long bsize = block_size(real);
+ 
+-	/* Equivalent of bdev_uevent(bdev, KOBJ_UMOUNT); */
+-	if (real->bd_disk) {
+-		if (real->bd_part)
+-			kobject_uevent(&real->bd_part->kobj, KOBJ_UMOUNT);
+-		else
+-			kobject_uevent(&real->bd_disk->kobj, KOBJ_UMOUNT);
+-	}
+ 	generic_shutdown_super(sb);
+ 	set_blocksize(diaper, bsize);
+ 	set_blocksize(real, bsize);
+
