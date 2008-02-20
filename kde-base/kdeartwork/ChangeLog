@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.206 2008/02/18 23:55:06 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.207 2008/02/20 22:44:12 philantrop Exp $
+
+*kdeartwork-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdeartwork-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -kdeartwork-4.0.0.ebuild:

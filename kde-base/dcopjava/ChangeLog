@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/dcopjava
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.30 2008/02/17 02:38:59 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.31 2008/02/20 22:32:00 philantrop Exp $
+
+*dcopjava-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +dcopjava-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -dcopjava-3.5.3.ebuild:
   Spring cleaning

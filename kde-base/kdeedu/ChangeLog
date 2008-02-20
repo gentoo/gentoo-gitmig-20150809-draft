@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.235 2008/02/18 23:56:05 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.236 2008/02/20 22:48:30 philantrop Exp $
+
+*kdeedu-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> +kdeedu-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/kstars-4.0.0-destdir.patch, -files/marble-4.0.0-fix-tests.patch,

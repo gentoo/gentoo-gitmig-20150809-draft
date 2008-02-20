@@ -1,0 +1,11 @@
+--- dcoppython/shell/marshaller.cpp	2005/07/26 18:54:59	438982
++++ dcoppython/shell/marshaller.cpp	2006/10/03 15:28:22	592000
+@@ -124,7 +124,7 @@
+     if (!PyDict_Check(obj)) return false;
+ 
+ 
+-    int c=0;
++    ssize_t c=0;
+     PyObject *key, *val;
+     while (PyDict_Next(obj, &c, &key, &val)==1)
+       if (!key_type.isMarshallable(key) ||

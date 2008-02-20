@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.432 2008/02/19 00:02:00 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.433 2008/02/20 22:46:48 philantrop Exp $
+
+*kdebase-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdebase-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/kdm-4.0.0-genkdmconf.patch, -files/kdebase-4.0.0-opengl.patch,

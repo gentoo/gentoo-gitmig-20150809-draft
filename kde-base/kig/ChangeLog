@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.85 2008/02/17 03:08:47 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.86 2008/02/20 23:02:59 philantrop Exp $
+
+*kig-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> +kig-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kig-3.5.5.ebuild,
   -kig-3.5.6.ebuild, -kig-3.5.7.ebuild, -kig-4.0.0.ebuild:

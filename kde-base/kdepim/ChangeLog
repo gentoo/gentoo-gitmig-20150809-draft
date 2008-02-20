@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.300 2008/02/18 23:46:31 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.301 2008/02/20 22:52:54 philantrop Exp $
+
+*kdepim-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> +kdepim-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/libkcal-3.5.2-fixes.diff, -files/kmail-3.5.5-dimap-mail-loss.patch,

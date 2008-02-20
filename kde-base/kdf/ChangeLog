@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.77 2008/02/17 03:04:18 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.78 2008/02/20 22:56:59 philantrop Exp $
+
+*kdf-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> +kdf-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kdf-3.5.5.ebuild,
   -kdf-3.5.6.ebuild, -kdf-3.5.7.ebuild, -kdf-4.0.0.ebuild:

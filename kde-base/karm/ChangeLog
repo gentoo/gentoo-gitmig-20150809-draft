@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.81 2008/02/17 03:27:37 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.82 2008/02/20 22:36:05 philantrop Exp $
+
+*karm-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> +karm-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -karm-3.5.5.ebuild,
   -karm-3.5.6.ebuild, -karm-3.5.7.ebuild:

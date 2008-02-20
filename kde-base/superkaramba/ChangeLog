@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/superkaramba
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.65 2008/02/18 17:06:03 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.66 2008/02/20 23:36:23 philantrop Exp $
+
+*superkaramba-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +superkaramba-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   +files/superkaramba-4.0.1-as-needed.patch, superkaramba-4.0.1.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/renamedlg-images
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-images/ChangeLog,v 1.65 2008/02/17 02:46:47 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-images/ChangeLog,v 1.66 2008/02/20 23:35:48 philantrop Exp $
+
+*renamedlg-images-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +renamedlg-images-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -renamedlg-images-3.5.5.ebuild, -renamedlg-images-3.5.6.ebuild,

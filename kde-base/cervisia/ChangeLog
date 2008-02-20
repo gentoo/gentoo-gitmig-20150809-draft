@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.78 2008/02/19 02:31:30 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.79 2008/02/20 22:31:37 philantrop Exp $
+
+*cervisia-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +cervisia-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -cervisia-3.5.5.ebuild:
   Old.

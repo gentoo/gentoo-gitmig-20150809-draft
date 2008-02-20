@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksim
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ChangeLog,v 1.87 2008/02/17 03:14:11 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ChangeLog,v 1.88 2008/02/20 23:19:56 philantrop Exp $
+
+*ksim-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> +ksim-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -ksim-3.5.5.ebuild,
   -ksim-3.5.6.ebuild, -ksim-3.5.7.ebuild:

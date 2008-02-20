@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesktop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.106 2008/02/17 01:59:23 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.107 2008/02/20 22:55:20 philantrop Exp $
+
+*kdesktop-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdesktop-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/kdesktop-3.5.5-seli-xinerama.patch, -kdesktop-3.5.5.ebuild,

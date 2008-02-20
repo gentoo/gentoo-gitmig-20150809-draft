@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/amor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.79 2008/02/17 03:15:14 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.80 2008/02/20 22:29:05 philantrop Exp $
+
+*amor-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> +amor-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -amor-3.5.5.ebuild,
   -amor-3.5.6.ebuild, -amor-3.5.7.ebuild, -amor-4.0.0.ebuild:

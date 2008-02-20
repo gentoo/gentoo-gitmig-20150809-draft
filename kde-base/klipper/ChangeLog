@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/klipper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.81 2008/02/17 03:26:32 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.82 2008/02/20 23:05:54 philantrop Exp $
+
+*klipper-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +klipper-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -klipper-3.5.5.ebuild,
   -klipper-3.5.6.ebuild, -klipper-3.5.7.ebuild, -klipper-4.0.0.ebuild:

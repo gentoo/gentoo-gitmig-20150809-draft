@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdewebdev-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.77 2008/02/17 01:42:28 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.78 2008/02/20 22:56:48 philantrop Exp $
+
+*kdewebdev-meta-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdewebdev-meta-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -kdewebdev-meta-3.5.5.ebuild, -kdewebdev-meta-3.5.6.ebuild,

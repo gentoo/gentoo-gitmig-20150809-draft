@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/qtjava
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/ChangeLog,v 1.60 2008/02/19 15:53:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/ChangeLog,v 1.61 2008/02/20 23:34:49 philantrop Exp $
+
+*qtjava-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> +qtjava-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   19 Feb 2008; Vlastimil Babka <caster@gentoo.org>
   +files/no-libhpi.so-check.patch, qtjava-3.5.8.ebuild:

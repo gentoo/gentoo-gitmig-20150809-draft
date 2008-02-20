@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/dcoppython
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.66 2008/02/17 02:44:51 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.67 2008/02/20 22:32:24 philantrop Exp $
+
+*dcoppython-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/dcoppython-3.5.5-python-2.5-compat.diff,
+  +files/dcoppython-3.5.6-python-2.4.patch, +dcoppython-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/dcoppython-3.5.5-python-2.5-compat.diff,

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/eyesapplet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/eyesapplet/ChangeLog,v 1.70 2008/02/17 01:56:12 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/eyesapplet/ChangeLog,v 1.71 2008/02/20 22:33:06 philantrop Exp $
+
+*eyesapplet-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +eyesapplet-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -eyesapplet-3.5.5.ebuild, -eyesapplet-3.5.6.ebuild,

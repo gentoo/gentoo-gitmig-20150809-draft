@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.90 2008/02/17 03:24:58 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.91 2008/02/20 22:28:53 philantrop Exp $
+
+*akregator-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +akregator-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/akregator-3.5.7-customcolors.diff, -akregator-3.5.5.ebuild,

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdcop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.56 2008/02/17 02:12:07 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.57 2008/02/20 22:41:05 philantrop Exp $
+
+*kdcop-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> +kdcop-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kdcop-3.5.1.ebuild,
   -kdcop-3.5.6.ebuild, -kdcop-3.5.7.ebuild:

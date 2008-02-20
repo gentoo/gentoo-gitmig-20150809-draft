@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.87 2008/02/17 01:52:35 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.88 2008/02/20 23:14:07 philantrop Exp $
+
+*korganizer-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +korganizer-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/korganizer-3.5.5-desktop.patch, -korganizer-3.5.5-r1.ebuild,

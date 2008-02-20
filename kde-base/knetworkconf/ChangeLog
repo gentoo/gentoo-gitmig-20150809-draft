@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/knetworkconf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetworkconf/ChangeLog,v 1.4 2008/02/17 03:28:11 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetworkconf/ChangeLog,v 1.5 2008/02/20 23:09:45 philantrop Exp $
+
+*knetworkconf-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +knetworkconf-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -knetworkconf-4.0.0.ebuild:

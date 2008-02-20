@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.60 2008/02/17 02:10:28 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.61 2008/02/20 23:22:34 philantrop Exp $
+
+*kstart-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> +kstart-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kstart-3.5.0.ebuild,
   -kstart-3.5.6.ebuild, -kstart-4.0.0.ebuild:

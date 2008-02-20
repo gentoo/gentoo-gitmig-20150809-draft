@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kpersonalizer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpersonalizer/ChangeLog,v 1.80 2008/02/17 02:00:30 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpersonalizer/ChangeLog,v 1.81 2008/02/20 23:15:52 philantrop Exp $
+
+*kpersonalizer-3.5.9 (20 Feb 2008)
+
+  20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kpersonalizer-3.5.9.ebuild:
+  Version bump to KDE 3.5.9.
 
   16 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -kpersonalizer-3.5.5.ebuild, -kpersonalizer-3.5.6.ebuild,
