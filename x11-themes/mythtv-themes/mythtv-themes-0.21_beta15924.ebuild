@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.21_pre15323.ebuild,v 1.1 2008/01/07 20:20:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.21_beta15924.ebuild,v 1.1 2008/02/20 20:35:45 cardoe Exp $
 
 inherit qt3 mythtv subversion
 
