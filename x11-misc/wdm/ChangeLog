@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/wdm
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.29 2007/07/04 18:11:32 angelos Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.30 2008/02/20 02:07:20 omp Exp $
+
+*wdm-1.28-r2 (20 Feb 2008)
+
+  20 Feb 2008; David Shakaryan <omp@gentoo.org> +wdm-1.28-r2.ebuild:
+  Utilise pambase and general cleanup.
 
   04 Jul 2007; Christoph Mende <angelos@gentoo.org> wdm-1.28-r1.ebuild:
   Stable on amd64 wrt bug #183961
