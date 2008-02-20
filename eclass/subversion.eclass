@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.50 2008/02/20 20:36:30 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.51 2008/02/20 22:28:49 zlin Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -13,8 +13,6 @@
 # @DESCRIPTION:
 # The subversion eclass provides functions to fetch, patch and bootstrap
 # software sources from subversion repositories.
-#
-# You must define the ESVN_REPO_URI variable before inheriting this eclass.
 
 inherit eutils
 
@@ -152,6 +150,10 @@ subversion_fetch() {
 	local repo_uri="$(subversion__get_repository_uri "${1:-${ESVN_REPO_URI}}")"
 	local revision="$(subversion__get_peg_revision "${1:-${ESVN_REPO_URI}}")"
 	local S_dest="${2}"
+
+	if [[ -z ${repo_uri} ]]; then
+		die "${ESVN}: ESVN_REPO_URI (or specified URI) is empty."
+	fi
 
 	[[ -n "${ESVN_REVISION}" ]] && revision="${ESVN_REVISION}"
 
