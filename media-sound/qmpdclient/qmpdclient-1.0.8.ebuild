@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.8.ebuild,v 1.7 2008/02/20 07:36:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.8.ebuild,v 1.8 2008/02/20 07:38:11 opfer Exp $
 
 inherit eutils multilib qt4 toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="$(qt4_min_version 4.2)"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# Fix a crasher for am64 and possibly others. Bug #183593.
