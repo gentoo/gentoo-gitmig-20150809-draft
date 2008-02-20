@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.327 2007/12/18 18:57:34 dev-zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.328 2008/02/20 20:02:53 dev-zero Exp $
+
+  20 Feb 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/3.0.28-fix_broken_readdir_detection.patch,
+  +files/3.0.28-inotify_include.patch, +files/3.0.28-libcap_detection.patch,
+  samba-3.0.28.ebuild:
+  Added patches to fix bugs #210527 and #210662 and the broken-readdir detection.
 
   18 Dec 2007; Tiziano Müller <dev-zero@gentoo.org>
   -files/3.0.25c-CVE-2007-4138.patch, -files/3.0.25c-lazyldflags.patch,

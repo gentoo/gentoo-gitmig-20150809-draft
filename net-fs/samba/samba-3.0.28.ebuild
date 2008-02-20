@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.28.ebuild,v 1.3 2007/12/29 10:27:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.28.ebuild,v 1.4 2008/02/20 20:02:53 dev-zero Exp $
 
-inherit eutils pam python multilib versionator confutils
+inherit autotools eutils pam python multilib versionator confutils
 
 MY_P=${PN}-${PV/_/}
 
@@ -53,6 +53,12 @@ src_unpack() {
 	# Bug #196015 (upstream: #5021)
 	epatch "${FILESDIR}/3.0.26a-invalid-free-fix.patch"
 
+	epatch "${FILESDIR}/${PV}-libcap_detection.patch" \
+		"${FILESDIR}/${PV}-inotify_include.patch" \
+		"${FILESDIR}/${PV}-fix_broken_readdir_detection.patch"
+
+	eautoconf -I. -Ilib/replace
+
 	# Ok, agreed, this is ugly. But it avoids a patch we
 	# need for every samba version and we don't need autotools
 	sed -i \
@@ -61,6 +67,7 @@ src_unpack() {
 		configure || die "sed failed"
 
 	rm "${S}/docs/manpages"/{mount,umount}.cifs.8
+
 }
 
 src_compile() {
