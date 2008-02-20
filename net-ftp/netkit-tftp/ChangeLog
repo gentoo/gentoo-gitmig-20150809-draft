@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/netkit-tftp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.8 2008/02/05 11:05:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.9 2008/02/20 09:19:05 pva Exp $
+
+*netkit-tftp-0.17-r5 (20 Feb 2008)
+
+  20 Feb 2008; <pva@gentoo.org> netkit-tftp-0.17-r3.ebuild,
+  netkit-tftp-0.17-r4.ebuild, +netkit-tftp-0.17-r5.ebuild:
+  Fixed filtering out of LDFLAGS, bug 209740, thank you Diego Pettenò!
+  Compiler is now set correctly.
 
   05 Feb 2008; Markus Rothe <corsair@gentoo.org> netkit-tftp-0.17-r4.ebuild:
   Stable on ppc64

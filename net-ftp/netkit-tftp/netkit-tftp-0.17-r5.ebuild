@@ -1,14 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/netkit-tftp-0.17-r4.ebuild,v 1.4 2008/02/20 09:19:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/netkit-tftp-0.17-r5.ebuild,v 1.1 2008/02/20 09:19:05 pva Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="the tftp server included in netkit"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-tftp-0.17.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 
-KEYWORDS="~amd64 ~mips ~ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 LICENSE="BSD"
 SLOT="0"
@@ -22,10 +22,11 @@ src_unpack() {
 	cd "${S}"
 
 	# Change default man directory
-	sed -ie 's:MANDIR="$PREFIX/man":MANDIR="$PREFIX/share/man":' configure
+	sed -i -e 's:MANDIR="$PREFIX/man":MANDIR="$PREFIX/share/man":' \
+			-e 's:^LDFLAGS=::' configure
 
 	# don't prestrip binaries
-	find -name Makefile -exec sed -ie 's,install -s,install,' \{\} \;
+	find -name Makefile -exec sed -i -e 's,install -s,install,' \{\} \;
 
 	# Solve QA warning by including string.h
 	epatch "${FILESDIR}"/memset.patch
@@ -35,7 +36,8 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure --prefix=/usr --installroot="${D}" || die
+	./configure --prefix=/usr --installroot="${D}" \
+				--with-c-compiler="$(tc-getCC)" || die
 	emake || die
 }
 
