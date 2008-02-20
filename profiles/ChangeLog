@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1136 2008/02/20 09:53:53 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1137 2008/02/20 17:07:17 wolf31o2 Exp $
+
+  20 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
+  Masking livecd-tools, hwsetup, and mkxf86config in hopes that people quit
+  using these on their live systems.
 
   20 Feb 2008; Rémi Cardona <remi@gentoo.org> package.mask:
   remove mask on i810 driver snapshots as they are no longer in tree
