@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.48 2008/02/20 19:18:53 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.49 2008/02/20 20:32:00 zlin Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -124,6 +124,13 @@ ESVN_PATCHES="${ESVN_PATCHES:-}"
 #     don't export the working copy to S.
 ESVN_RESTRICT="${ESVN_RESTRICT:-}"
 
+# @ECLASS-VARIABLE: ESVN_OFFLINE
+# @DESCRIPTION:
+# Set this variable to a non-empty value to disable the automatic updating of
+# an svn source tree. This is intended to be set outside the subversion source
+# tree by users.
+ESVN_OFFLINE="${ESVN_OFFLINE:-${ESCM_OFFLINE}}"
+
 # @FUNCTION: subversion_fetch
 # @USAGE: [repo_uri] [destination]
 # @DESCRIPTION:
@@ -195,6 +202,12 @@ subversion_fetch() {
 		cd "${ESVN_PROJECT}" || die "${ESVN}: can't chdir to ${ESVN_PROJECT}"
 		${ESVN_FETCH_CMD} ${options} "${repo_uri}" || die "${ESVN}: can't fetch from ${repo_uri}."
 
+	elif [[ -n ${ESVN_OFFLINE} ]]; then
+		subversion_wc_info "${repo_uri}" || die "${ESVN}: unknown problem occurred while accessing working copy."
+		if [[ -n ${ESVN_REVISION} && ${ESVN_REVISION} != ${ESVN_WC_REVISION} ]]; then
+			die "${ESVN}: You requested off-line updating and revision ${ESVN_REVISION} but only revision ${ESVN_WC_REVISION} is available locally."
+		fi
+		einfo "Fetching disabled: Using existing repository copy"
 	else
 		subversion_wc_info "${repo_uri}" || die "${ESVN}: unknown problem occurred while accessing working copy."
 
@@ -380,7 +393,7 @@ subversion__get_peg_revision() {
 	if [[ ${repo_uri} != *@* ]]; then
 		debug-print "${FUNCNAME}: repo_uri does not have a peg revision."
 	fi
-	
+
 	local peg_rev=
 	[[ ${repo_uri} = *@* ]] &&  peg_rev="${repo_uri##*@}"
 
