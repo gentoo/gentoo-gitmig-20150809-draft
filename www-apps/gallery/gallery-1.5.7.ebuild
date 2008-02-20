@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.7.ebuild,v 1.2 2008/02/05 15:13:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.7.ebuild,v 1.3 2008/02/20 18:07:42 hollow Exp $
 
-inherit webapp depend.apache
+inherit webapp depend.php confutils
 
 DESCRIPTION="Web based (PHP Script) photo album viewer/creator"
 HOMEPAGE="http://gallery.sourceforge.net/"
@@ -12,29 +12,38 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="imagemagick netpbm unzip zip"
 
-RDEPEND="virtual/httpd-cgi
-	virtual/php
-	media-libs/jpeg
-	netpbm? ( >=media-libs/netpbm-9.12 >=media-gfx/jhead-2.2 )
+RDEPEND="media-libs/jpeg
 	imagemagick? ( >=media-gfx/imagemagick-5.4.9.1-r1 )
+	netpbm? ( >=media-libs/netpbm-9.12 >=media-gfx/jhead-2.2 )
 	unzip? ( app-arch/unzip )
 	zip? ( app-arch/zip )"
 
-need_apache2
+need_php_httpd
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}"/${PN}
+
+pkg_setup() {
+	webapp_pkg_setup
+	confutils_require_any imagemagick netpbm
+	require_php_with_use pcre session
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	gunzip ChangeLog.archive.gz
+}
 
 src_install() {
 	webapp_src_preinst
 
-	cp -R * "${D}/${MY_HTDOCSDIR}"
-	for file in AUTHORS ChangeLog README ChangeLog.archive.gz; do
-		dodoc ${file}
-		rm -f "${D}/${MY_HTDOCSDIR}/${file}"
-	done
+	dodoc AUTHORS ChangeLog ChangeLog.archive README
 	dohtml docs/*
+	rm -rf AUTHORS ChangeLog ChangeLog.archive README LICENSE.txt docs/
 
-	webapp_postinst_txt en "${FILESDIR}/postinstall-en.txt"
+	insinto "${MY_HTDOCSDIR}"
+	doins -r .
 
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 	webapp_src_install
 }

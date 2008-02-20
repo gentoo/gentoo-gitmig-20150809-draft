@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.2.4.ebuild,v 1.8 2008/01/23 16:02:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.2.4.ebuild,v 1.9 2008/02/20 18:07:42 hollow Exp $
 
-inherit webapp eutils depend.php
+inherit webapp eutils depend.php confutils
 
 DESCRIPTION="Web based (PHP Script) photo album viewer/creator"
 HOMEPAGE="http://gallery.sourceforge.net/"
@@ -12,61 +12,47 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="ffmpeg gd imagemagick mysql netpbm postgres raw unzip zip"
 
-RDEPEND="virtual/httpd-cgi
-	media-libs/jpeg
+RDEPEND="media-libs/jpeg
 	raw? ( >=media-gfx/dcraw-8.03 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20051216 )
-	gd? ( >=media-libs/gd-2 )
 	imagemagick? ( >=media-gfx/imagemagick-5.4.9.1-r1 )
 	netpbm? ( >=media-libs/netpbm-9.12 >=media-gfx/jhead-2.2 )
 	unzip? ( app-arch/unzip )
-	zip? ( app-arch/zip )
-"
+	zip? ( app-arch/zip )"
 
-S=${WORKDIR}/${PN}2
+S="${WORKDIR}"/${PN}2
 
-need_php
+need_php_httpd
 
 pkg_setup() {
 	webapp_pkg_setup
+	confutils_require_any gd imagemagick netpbm
+	confutils_require_any mysql postgres
 
 	local php_flags="pcre session"
-	local DIE=
-
 	use mysql && php_flags="${php_flags} mysql"
 	use postgres && php_flags="${php_flags} postgres"
 
-	if ! PHPCHECKNODIE="yes" require_php_with_use ${php_flags}; then
-		DIE="yes"
-	fi
-	if use gd; then
-		if ! PHPCHECKNODIE="yes" require_php_with_any_use gd gd-external ; then
-			DIE="yes"
-		fi
-	fi
-
-	if [[ ${DIE} == "yes" ]]; then
+	if ! PHPCHECKNODIE="yes" require_php_with_use ${php_flags} || \
+			( use gd && ! PHPCHECKNODIE="yes" require_php_with_any_use gd gd-external ) ; then
 		eerror
-		eerror "${PHP_PKG} needs to be re-installed with all of the following"
-		eerror "USE flags enabled:"
+		eerror "${PHP_PKG} needs to be re-installed with all of the following USE flags enabled:"
 		eerror
 		eerror "${php_flags}"
 		eerror
-		if use gd; then
-			eerror "as well as any of the following USE flags enabled:"
-			eerror
-			eerror "gd gd-external"
-			eerror
-		fi
-		die "Re-install ${PHP_PKG}"
+		use gd && eerror "as well as with either gd or gd-external USE flag enabled."
+		die "Re-install ${PHP_PKG}."
 	fi
 }
 
 src_install() {
 	webapp_src_preinst
 
-	cp -R * "${D}/${MY_HTDOCSDIR}"
 	dohtml README.html
+	rm README.html LICENSE MANIFEST
+
+	insinto "${MY_HTDOCSDIR}"
+	doins -r .
 
 	webapp_postinst_txt en "${FILESDIR}"/postinstall-en2.txt
 	webapp_src_install

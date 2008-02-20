@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.134 2008/02/05 15:13:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.135 2008/02/20 18:07:42 hollow Exp $
+
+  20 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  gallery-1.5.3.ebuild, -gallery-1.5.5.ebuild, gallery-1.5.7.ebuild,
+  gallery-2.2.4.ebuild:
+  merge from webapp overlay + further cleanup and checks wrt #208584
+
+  05 Feb 2008; Jakub Moc <jakub@gentoo.org> gallery-2.2.4.ebuild:
+  Remove bogus media-libs/gd dependency, simplify PHP check, clean-up.
 
   05 Feb 2008; Benedikt Böhm <hollow@gentoo.org> gallery-1.5.3.ebuild,
   gallery-1.5.5.ebuild, gallery-1.5.7.ebuild:
