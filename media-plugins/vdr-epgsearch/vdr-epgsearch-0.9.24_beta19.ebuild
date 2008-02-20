@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.24_beta19.ebuild,v 1.1 2008/02/20 15:32:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.24_beta19.ebuild,v 1.2 2008/02/20 16:40:33 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -14,7 +14,6 @@ if [[ ${P/beta/} != ${P} ]]; then
 else
 	SRC_URI="http://winni.vdr-developer.org/epgsearch/downloads/${P}.tgz"
 fi
-
 
 LICENSE="GPL-2"
 SLOT="0"
