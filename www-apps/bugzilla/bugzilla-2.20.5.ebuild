@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.5.ebuild,v 1.9 2008/02/17 22:37:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.5.ebuild,v 1.10 2008/02/20 12:58:23 hollow Exp $
 
-inherit webapp depend.apache versionator
+inherit webapp depend.apache versionator eutils
 
 MY_PB=$(get_version_component_range 1-2)
 
@@ -49,22 +49,21 @@ need_apache2
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# remove CVS directories
-	find . -type d -name 'CVS' -prune -exec rm -rf {} \;
+	ecvs_clean
 }
 
 src_install () {
 	webapp_src_preinst
 
-	insinto ${MY_HTDOCSDIR}
-	doins -r *
+	insinto "${MY_HTDOCSDIR}"
+	doins -r .
 	newins "${FILESDIR}"/${MY_PB}/apache.htaccess .htaccess
 	for f in bugzilla.cron.daily bugzilla.cron.tab; do
 		doins "${FILESDIR}"/${MY_PB}/${f}
 	done
 
 	for f in $(find -type d -printf "%p/* "); do
-		webapp_serverowned ${MY_HTDOCSDIR}/${f}
+		webapp_serverowned "${MY_HTDOCSDIR}"/${f}
 	done
 
 	webapp_hook_script "${FILESDIR}"/${MY_PB}/reconfig

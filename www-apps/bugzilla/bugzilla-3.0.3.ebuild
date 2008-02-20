@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.0.3.ebuild,v 1.1 2008/02/17 22:37:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.0.3.ebuild,v 1.2 2008/02/20 12:58:23 hollow Exp $
 
 inherit webapp depend.apache versionator eutils
 
@@ -69,15 +69,12 @@ pkg_setup() {
 			elog "to convert BMP attachments to PNG"
 		fi
 	fi
-
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	# remove CVS directories
-	find . -type d -name 'CVS' -prune -exec rm -rf {} \;
+	ecvs_clean
 
 	if use linguas_de ; then
 		mv ../de template/
@@ -90,8 +87,8 @@ src_unpack() {
 src_install () {
 	webapp_src_preinst
 
-	insinto ${MY_HTDOCSDIR}
-	doins -r *
+	insinto "${MY_HTDOCSDIR}"
+	doins -r .
 	for f in bugzilla.cron.daily bugzilla.cron.tab; do
 		doins "${FILESDIR}"/${MY_PB}/${f}
 	done
@@ -101,5 +98,5 @@ src_install () {
 	webapp_src_install
 
 	# bug #124282
-	chmod +x "${D}"${MY_HTDOCSDIR}/*.cgi
+	chmod +x "${D}${MY_HTDOCSDIR}"/*.cgi
 }
