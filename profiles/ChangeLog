@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1134 2008/02/20 06:04:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1135 2008/02/20 07:58:22 ulm Exp $
+
+  20 Feb 2008; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
+  Remove nomotif flag from app-arch/pdv.
 
   20 Feb 2008; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
   Remove ftp.scarlet.be from opera mirrors list as it apparently does not work.
