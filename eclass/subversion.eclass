@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.47 2008/02/20 17:55:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.48 2008/02/20 19:18:53 cardoe Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -41,6 +41,11 @@ ESVN_FETCH_CMD="svn checkout"
 # @DESCRIPTION:
 # subversion update command
 ESVN_UPDATE_CMD="svn update"
+
+# @ECLASS-VARIABLE: ESVN_SWITCH_CMD
+# @DESCRIPTION:
+# subversion switch command
+ESVN_SWITCH_CMD="svn switch"
 
 # @ECLASS-VARIABLE: ESVN_OPTIONS
 # @DESCRIPTION:
@@ -194,17 +199,24 @@ subversion_fetch() {
 		subversion_wc_info "${repo_uri}" || die "${ESVN}: unknown problem occurred while accessing working copy."
 
 		if [[ ${ESVN_WC_URL} != $(subversion__get_repository_uri "${repo_uri}") ]]; then
-			die "${ESVN}: ESVN_REPO_URI (or specified URI) and working copy's URL are not matched."
+			einfo "suversion switch start -->"
+			einfo "     old repository: ${ESVN_WC_URL}@${ESVN_WC_REVISION}"
+			einfo "     new repository: ${repo_uri}${revision:+@}${revision}"
+
+			debug-print "${FUNCNAME}: ${ESVN_SWITCH_CMD} ${options} ${repo_uri}"
+
+			cd "${wc_path}" || die "${ESVN}: can't chdir to ${wc_path}"
+			${ESVN_SWITCH_CMD} ${options} ${repo_uri} || die "${ESVN}: can't update from ${repo_uri}"
+		else
+			# update working copy
+			einfo "subversion update start -->"
+			einfo "     repository: ${repo_uri}${revision:+@}${revision}"
+
+			debug-print "${FUNCNAME}: ${ESVN_UPDATE_CMD} ${options}"
+
+			cd "${wc_path}" || die "${ESVN}: can't chdir to ${wc_path}"
+			${ESVN_UPDATE_CMD} ${options} || die "${ESVN}: can't update from ${repo_uri}."
 		fi
-
-		# update working copy
-		einfo "subversion update start -->"
-		einfo "     repository: ${repo_uri}${revision:+@}${revision}"
-
-		debug-print "${FUNCNAME}: ${ESVN_UPDATE_CMD} ${options}"
-
-		cd "${wc_path}" || die "${ESVN}: can't chdir to ${wc_path}"
-		${ESVN_UPDATE_CMD} ${options} || die "${ESVN}: can't update from ${repo_uri}."
 
 	fi
 
