@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.98 2008/02/20 20:12:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.99 2008/02/20 20:17:28 graaff Exp $
+
+*rmagick-2.2.2 (20 Feb 2008)
+
+  20 Feb 2008; Hans de Graaff <graaff@gentoo.org> +rmagick-2.2.2.ebuild:
+  Version bump: Fix bug #18016, check for InitializeMagick in libMagickCore.
 
 *rmagick-1.15.13 (20 Feb 2008)
 
