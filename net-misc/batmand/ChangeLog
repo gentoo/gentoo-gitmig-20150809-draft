@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/batmand
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batmand/ChangeLog,v 1.2 2007/06/23 12:49:02 cedk Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batmand/ChangeLog,v 1.3 2008/02/20 10:53:27 cedk Exp $
+
+  20 Feb 2008; Cédric Krier <cedk@gentoo.org> batmand-0.2.0_rc2.ebuild,
+  batmand-0.2.0.ebuild:
+  Add ~amd64 thanks to Patrick Grimm
 
 *batmand-0.2.0 (23 Jun 2007)
 
