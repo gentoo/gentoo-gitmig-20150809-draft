@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.6 2008/02/14 15:49:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.2.1.ebuild,v 1.7 2008/02/20 23:35:51 markusle Exp $
 
 EAPI="1"
 
@@ -20,7 +20,9 @@ SLOT="0"
 IUSE="mpi python hdf5 doc examples threads qt4"
 RDEPEND="hdf5? ( sci-libs/hdf5 )
 	doc? ( app-doc/doxygen )
-	mpi? ( sys-cluster/mpich )
+	mpi? ( || (
+				sys-cluster/openmpi
+				sys-cluster/mpich2 ) )
 	python? ( >=dev-lang/python-2.0 )
 	qt4? ( $(qt4_min_version 4.3) )
 	dev-libs/libxml2
@@ -45,6 +47,11 @@ QT4_BUILT_WITH_USE_CHECK="qt3support"
 
 pkg_setup() {
 	use qt4 && qt4_pkg_setup
+	if use mpi && has_version sys-cluster/mpich2; then
+		if ! built_with_use sys-cluster/mpich2 cxx; then
+			die "Please re-emerge sys-cluster/mpich2 with USE=\"cxx\""
+		fi
+	fi
 }
 
 src_unpack() {
@@ -54,6 +61,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-${MY_MAJOR_PV}-support-qt4.3.patch
 	epatch "${FILESDIR}"/${PN}-${MY_MAJOR_PV}-libxml2-fix.patch
 	epatch "${DISTDIR}"/${P}-OpenFOAM.patch.bz2
+	epatch "${FILESDIR}"/${P}-openmpi.patch
 
 	# rename paraview's assistant wrapper
 	if use qt4; then

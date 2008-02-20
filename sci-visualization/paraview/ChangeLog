@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.16 2008/02/15 11:14:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.17 2008/02/20 23:35:51 markusle Exp $
+
+  20 Feb 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/paraview-3.2.1-openmpi.patch, paraview-3.2.1.ebuild:
+  Enabled support for openmpi and mpich2 (see bug #210639).
 
   15 Feb 2008; Markus Dittrich <markusle@gentoo.org>
   +files/paraview-2.6.2-tkImgGIF.patch, paraview-2.6.2.ebuild:
