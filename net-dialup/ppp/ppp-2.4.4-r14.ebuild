@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r13.ebuild,v 1.11 2008/01/13 08:42:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r14.ebuild,v 1.1 2008/02/20 05:57:32 mrness Exp $
 
-inherit eutils flag-o-matic toolchain-funcs linux-info
+inherit eutils toolchain-funcs linux-info pam
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
@@ -118,7 +118,6 @@ src_unpack() {
 src_compile() {
 	export CC="$(tc-getCC)"
 	export AR="$(tc-getAR)"
-	append-ldflags $(bindnow-flags)
 	econf || die "configuration failed"
 	emake COPTS="${CFLAGS} -D_GNU_SOURCE" || die "compile failed"
 
@@ -172,10 +171,7 @@ src_install() {
 		doins "${WORKDIR}/scripts/${i}.d"/*
 	done
 
-	if use pam; then
-		insinto /etc/pam.d
-		newins pppd/ppp.pam ppp || die "not found ppp.pam"
-	fi
+	pamd_mimic_system ppp auth account session
 
 	local PLUGINS_DIR=/usr/$(get_libdir)/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 	#closing " for syntax coloring
