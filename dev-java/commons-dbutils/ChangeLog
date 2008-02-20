@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-dbutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbutils/ChangeLog,v 1.3 2008/02/13 22:00:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbutils/ChangeLog,v 1.4 2008/02/20 20:17:16 betelgeuse Exp $
+
+  20 Feb 2008; Petteri Räty <betelgeuse@gentoo.org>
+  commons-dbutils-1.1.ebuild:
+  Remove Jakarta from DESCRIPTION.
 
 *commons-dbutils-1.1 (13 Feb 2008)
 
