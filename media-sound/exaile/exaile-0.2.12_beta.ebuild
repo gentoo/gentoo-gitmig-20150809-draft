@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.12_beta.ebuild,v 1.1 2008/02/16 17:45:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.12_beta.ebuild,v 1.2 2008/02/20 18:52:48 drac Exp $
 
 EAPI=1
 
@@ -85,6 +85,8 @@ pkg_postinst() {
 	python_mod_optimize "${ROOT}"usr/$(get_libdir)/${PN}
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
+	elog "Streaming support is behind USE gnome, or you can just"
+	elog "emerge media-plugins/gst-plugins-gnomevfs."
 }
 
 pkg_postrm() {
