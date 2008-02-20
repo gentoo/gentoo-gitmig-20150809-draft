@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.22 2008/01/30 08:16:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.23 2008/02/20 08:59:15 pva Exp $
+
+*libnl-1.1-r1 (20 Feb 2008)
+
+  20 Feb 2008; <pva@gentoo.org> +files/libnl-1.1-minor-leaks.patch,
+  +files/libnl-1.1-vlan-header.patch, +libnl-1.1-r1.ebuild:
+  Fixed compilation problem repoted by Andrew Cowie <andrew AT
+  operationaldynamics.com>, bug 210208. Also backported fix from upstream to
+  fix memory leak.
 
 *libnl-1.1 (30 Jan 2008)
 
