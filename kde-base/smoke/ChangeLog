@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.55 2008/02/18 13:17:57 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.56 2008/02/20 18:51:22 armin76 Exp $
+
+  20 Feb 2008; Raúl Porcel <armin76@gentoo.org> smoke-3.5.8.ebuild:
+  sparc stable wrt #210666
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/parallel-make.diff, -smoke-3.5.2.ebuild, -smoke-3.5.6.ebuild:
