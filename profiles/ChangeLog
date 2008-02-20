@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1133 2008/02/18 23:24:40 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1134 2008/02/20 06:04:51 jer Exp $
+
+  20 Feb 2008; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
+  Remove ftp.scarlet.be from opera mirrors list as it apparently does not work.
 
   18 Feb 2008; Bernard Cafarelli <voyageur@gentoo.org> use.local.desc:
   Update gcc-libffi USE flag description for gnustep-base
