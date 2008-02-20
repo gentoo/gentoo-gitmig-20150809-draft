@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/nwmouse
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/ChangeLog,v 1.6 2007/08/27 20:24:38 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/ChangeLog,v 1.7 2008/02/20 11:39:39 calchan Exp $
+
+*nwmouse-0.1-r1 (20 Feb 2008)
+
+  20 Feb 2008; Denis Dupeyron <calchan@gentoo.org> +nwmouse-0.1-r1.ebuild:
+  Fixed bug #210562, thanks to Anton Romanov.
 
   27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> nwmouse-0.1.ebuild:
   Stable on amd64/x86 for bug #190150.

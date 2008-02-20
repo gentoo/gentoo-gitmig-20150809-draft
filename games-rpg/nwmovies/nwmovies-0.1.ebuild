@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmovies/nwmovies-0.1.ebuild,v 1.1 2008/02/17 00:55:47 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmovies/nwmovies-0.1.ebuild,v 1.2 2008/02/20 11:41:59 calchan Exp $
 
 inherit games
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=">=games-rpg/nwn-data-1.29-r3"
 RDEPEND="${DEPEND}
-	>=games-rpg/nwn-1.68-r3
+	>=games-rpg/nwn-1.68-r4
 	media-video/binkplayer"
 
 S="${WORKDIR}"
