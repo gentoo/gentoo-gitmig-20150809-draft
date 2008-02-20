@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.67.ebuild,v 1.2 2006/07/16 16:18:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.67.ebuild,v 1.3 2008/02/20 07:35:16 calchan Exp $
 
 inherit games
 
 #http://files.bioware.com/neverwinternights/updates/linux/167/linuxdedserver167.tar.gz
 
-DIALOG_URL_BASE=http://nwdownloads.bioware.com/neverwinternights/patch/dialog/
+DIALOG_URL_BASE=http://files.bioware.com/neverwinternights/dialog/
 
 DESCRIPTION="Neverwinter Nights Dedicated server"
 HOMEPAGE="http://nwn.bioware.com/downloads/standaloneserver.html"
