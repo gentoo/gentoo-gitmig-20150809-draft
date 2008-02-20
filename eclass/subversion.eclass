@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.51 2008/02/20 22:28:49 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.52 2008/02/20 22:35:40 zlin Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -129,6 +129,13 @@ ESVN_RESTRICT="${ESVN_RESTRICT:-}"
 # tree by users.
 ESVN_OFFLINE="${ESVN_OFFLINE:-${ESCM_OFFLINE}}"
 
+# @ECLASS-VARIABLE: ESVN_UP_FREQ
+# @DESCRIPTION:
+# Set the minimum number of hours between svn up'ing in any given svn module. This is particularly
+# useful for split KDE ebuilds where we want to ensure that all submodules are compiled for the same
+# revision. It should also be kept user overrideable.
+ESVN_UP_FREQ="${ESVN_UP_FREQ:=}"
+
 # @ECLASS-VARIABLE: ESCM_LOGDIR
 # @DESCRIPTION:
 # User configuration variable. If set to a path such as e.g. /var/log/scm any
@@ -221,26 +228,37 @@ subversion_fetch() {
 	else
 		subversion_wc_info "${repo_uri}" || die "${ESVN}: unknown problem occurred while accessing working copy."
 
-		if [[ ${ESVN_WC_URL} != $(subversion__get_repository_uri "${repo_uri}") ]]; then
-			einfo "suversion switch start -->"
-			einfo "     old repository: ${ESVN_WC_URL}@${ESVN_WC_REVISION}"
-			einfo "     new repository: ${repo_uri}${revision:+@}${revision}"
-
-			debug-print "${FUNCNAME}: ${ESVN_SWITCH_CMD} ${options} ${repo_uri}"
-
-			cd "${wc_path}" || die "${ESVN}: can't chdir to ${wc_path}"
-			${ESVN_SWITCH_CMD} ${options} ${repo_uri} || die "${ESVN}: can't update from ${repo_uri}"
-		else
-			# update working copy
-			einfo "subversion update start -->"
-			einfo "     repository: ${repo_uri}${revision:+@}${revision}"
-
-			debug-print "${FUNCNAME}: ${ESVN_UPDATE_CMD} ${options}"
-
-			cd "${wc_path}" || die "${ESVN}: can't chdir to ${wc_path}"
-			${ESVN_UPDATE_CMD} ${options} || die "${ESVN}: can't update from ${repo_uri}."
+		local esvn_up_freq=
+		if [[ -n ${ESVN_UP_FREQ} ]]; then
+			if [[ -n ${ESVN_UP_FREQ//[[:digit:]]} ]]; then
+				die "${ESVN}: ESVN_UP_FREQ must be an integer value corresponding to the minimum number of hours between svn up."
+			elif [[ -z $(find "${wc_path}/.svn/entries" -mmin "+$((ESVN_UP_FREQ*60))") ]]; then
+				einfo "Fetching disabled since ${ESVN_UP_FREQ} hours hasn't passed since last update."
+				esvn_up_freq=no_update
+			fi
 		fi
 
+		if [[ -z ${esvn_up_freq} ]]; then
+			if [[ ${ESVN_WC_URL} != $(subversion__get_repository_uri "${repo_uri}") ]]; then
+				einfo "suversion switch start -->"
+				einfo "     old repository: ${ESVN_WC_URL}@${ESVN_WC_REVISION}"
+				einfo "     new repository: ${repo_uri}${revision:+@}${revision}"
+
+				debug-print "${FUNCNAME}: ${ESVN_SWITCH_CMD} ${options} ${repo_uri}"
+
+				cd "${wc_path}" || die "${ESVN}: can't chdir to ${wc_path}"
+				${ESVN_SWITCH_CMD} ${options} ${repo_uri} || die "${ESVN}: can't update from ${repo_uri}"
+			else
+				# update working copy
+				einfo "subversion update start -->"
+				einfo "     repository: ${repo_uri}${revision:+@}${revision}"
+
+				debug-print "${FUNCNAME}: ${ESVN_UPDATE_CMD} ${options}"
+
+				cd "${wc_path}" || die "${ESVN}: can't chdir to ${wc_path}"
+				${ESVN_UPDATE_CMD} ${options} || die "${ESVN}: can't update from ${repo_uri}."
+			fi
+		fi
 	fi
 
 	einfo "   working copy: ${wc_path}"
