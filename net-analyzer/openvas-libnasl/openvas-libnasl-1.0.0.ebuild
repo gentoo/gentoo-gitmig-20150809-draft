@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libnasl/openvas-libnasl-1.0.0.ebuild,v 1.1 2008/02/08 13:02:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libnasl/openvas-libnasl-1.0.0.ebuild,v 1.2 2008/02/20 14:59:12 hanno Exp $
 
 inherit eutils
 
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="net-analyzer/openvas-libraries"
+DEPEND="net-analyzer/openvas-libraries
+	app-crypt/gpgme"
 
 src_unpack() {
 	unpack ${A}
