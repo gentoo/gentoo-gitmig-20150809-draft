@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gts
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.6 2007/02/22 01:20:21 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.7 2008/02/20 14:23:12 markusle Exp $
+
+  20 Feb 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/gts-0.7.6-include-fix.patch, gts-0.7.6.ebuild:
+  Added fix so make finds netpbm includes (see bug #210861).
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-0.7.6.ebuild,v 1.3 2007/07/13 06:57:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-0.7.6.ebuild,v 1.4 2008/02/20 14:23:12 markusle Exp $
+
+inherit eutils
 
 DESCRIPTION="GNU Triangulated Surface Library"
 LICENSE="LGPL-2"
@@ -15,6 +17,12 @@ DEPEND=">=dev-libs/glib-2.4.0
 		sys-apps/gawk
 		sys-devel/libtool
 		dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-include-fix.patch
+}
 
 src_compile() {
 	econf || die "Configure failed"
