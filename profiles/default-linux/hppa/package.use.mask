@@ -1,6 +1,10 @@
 # DON'T TOUCH THIS FILE. INSTEAD, FILE A BUG AND ASSIGN IT TO hppa@gentoo.org
 
 # Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
+# build fails (bug #210880):
+sys-devel/gcc libffi
+
+# Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
 # This pulls in dev-scheme/drscheme which needs the (yet unported) libffi to
 # build or dev-lisp/clisp which has similar build issues.
 # dev-scheme/chicken appears to be a horrible mess while compiling and not only
