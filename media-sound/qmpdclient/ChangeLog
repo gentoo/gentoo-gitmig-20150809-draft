@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.21 2008/02/19 17:16:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.22 2008/02/20 07:36:01 opfer Exp $
+
+  20 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  qmpdclient-1.0.8.ebuild:
+  stable x86, bug 210526
 
   19 Feb 2008; nixnut <nixnut@gentoo.org> qmpdclient-1.0.8.ebuild:
   Stable on ppc wrt bug 210526
