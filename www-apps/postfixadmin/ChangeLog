@@ -1,6 +1,18 @@
 # ChangeLog for www-apps/postfixadmin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.9 2008/02/05 15:10:24 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.10 2008/02/20 16:12:33 hollow Exp $
+
+*postfixadmin-2.1.0-r1 (20 Feb 2008)
+
+  20 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
+  +files/postinstall-en-mysql.txt, +files/postinstall-en-postgres.txt,
+  metadata.xml, +postfixadmin-2.1.0-r1.ebuild:
+  merge from webapp overlay wrt #172138; cleanup wrt #208584
+
+  05 Feb 2008; Jakub Moc <jakub@gentoo.org>
+  postfixadmin-2.1.0-r1.ebuild:
+  Add postgres support. Nuke nonsensical RDEPEND on grep, sed and findutils,
+  fix enewuser/enewgroup usage. Quoting, clean up tons of redundant comments.
 
   05 Feb 2008; Benedikt Böhm <hollow@gentoo.org> postfixadmin-2.1.0.ebuild:
   fix depend.apache usage wrt #208584
