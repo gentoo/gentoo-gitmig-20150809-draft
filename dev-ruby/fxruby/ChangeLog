@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.65 2008/02/19 14:19:39 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.66 2008/02/20 11:42:30 armin76 Exp $
+
+  20 Feb 2008; Raúl Porcel <armin76@gentoo.org> fxruby-1.6.13.ebuild:
+  alpha stable wrt #210181
 
   19 Feb 2008; Ferris McCormick <fmccor@gentoo.org> fxruby-1.6.13.ebuild:
   Sparc stable, Bug #210181 --- running since November.
