@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/rsbac-sources
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.58 2008/02/15 17:16:43 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.59 2008/02/20 17:34:13 kang Exp $
+
+*rsbac-sources-2.6.23-r1 (20 Feb 2008)
+
+  20 Feb 2008; Guillaume Destuynder <kang@gentoo.org>
+  +rsbac-sources-2.6.23-r1.ebuild:
+  Fix #210022 (pax vm), split previous CVE patches from RSBAC to be able to
+  use gentoo's patch instead.
 
 *rsbac-sources-2.6.23 (15 Feb 2008)
 
