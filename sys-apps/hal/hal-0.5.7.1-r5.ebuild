@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.17 2008/02/08 20:11:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.18 2008/02/20 02:49:13 wolf31o2 Exp $
 
 inherit eutils linux-info
 
@@ -36,24 +36,25 @@ HALDAEMON_GROUPS="haldaemon,plugdev,disk,cdrom,cdrw,floppy,usb"
 
 function check_uevent() {
 	local CONFIG_CHECK="~KOBJECT_UEVENT"
-	local WARNING_KOBJECT_UEVENT="CONFIG_KOBJECT_UEVENT:\tis not set (required for HAL)"
+	local WARNING_KOBJECT_UEVENT="CONFIG_KOBJECT_UEVENT:\tis not set (required for HAL)
+"
 	check_extra_config
-	echo
 }
 
 function check_hotplug_net() {
 	local CONFIG_CHECK="~HOTPLUG ~NET"
-	local WARNING_HOTPLUG="CONFIG_HOTPLUG:\tis not set (required for HAL)"
-	local WARNING_NET="CONFIG_NET:\tis not set (required for HAL)"
+	local WARNING_HOTPLUG="CONFIG_HOTPLUG:\tis not set (required for HAL)
+"
+	local WARNING_NET="CONFIG_NET:\tis not set (required for HAL)
+"
 	check_extra_config
-	echo
 }
 
 function check_procfs() {
 	local CONFIG_CHECK="~PROC_FS"
-	local WARNING_PROC_FS="CONFIG_PROC_FS:\tis not set (required for HAL)"
+	local WARNING_PROC_FS="CONFIG_PROC_FS:\tis not set (required for HAL)
+"
 	check_extra_config
-	echo
 }
 
 pkg_setup() {

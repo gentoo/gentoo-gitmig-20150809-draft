@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1-r2.ebuild,v 1.4 2008/02/08 20:11:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1-r2.ebuild,v 1.5 2008/02/20 02:49:13 wolf31o2 Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -53,24 +53,25 @@ HALDAEMON_GROUPS_FREEBSD="haldaemon,plugdev,operator"
 
 function check_hotplug_net() {
 	local CONFIG_CHECK="~HOTPLUG ~NET"
-	local WARNING_HOTPLUG="CONFIG_HOTPLUG:\tis not set (required for HAL)"
-	local WARNING_NET="CONFIG_NET:\tis not set (required for HAL)"
+	local WARNING_HOTPLUG="CONFIG_HOTPLUG:\tis not set (required for HAL)
+"
+	local WARNING_NET="CONFIG_NET:\tis not set (required for HAL)
+"
 	check_extra_config
-	echo
 }
 
 function check_inotify() {
 	local CONFIG_CHECK="~INOTIFY_USER"
-	local WARNING_INOTIFY_USER="CONFIG_INOTIFY_USER:\tis not set (required for HAL)"
+	local WARNING_INOTIFY_USER="CONFIG_INOTIFY_USER:\tis not set (required for HAL)
+"
 	check_extra_config
-	echo
 }
 
 function check_procfs() {
 	local CONFIG_CHECK="~PROC_FS"
-	local WARNING_PROC_FS="CONFIG_PROC_FS:\tis not set (required for HAL)"
+	local WARNING_PROC_FS="CONFIG_PROC_FS:\tis not set (required for HAL)
+"
 	check_extra_config
-	echo
 }
 
 pkg_setup() {
