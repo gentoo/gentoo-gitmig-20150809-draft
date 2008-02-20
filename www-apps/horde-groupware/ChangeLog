@@ -1,0 +1,10 @@
+# ChangeLog for www-apps/horde-groupware
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-groupware/ChangeLog,v 1.1 2008/02/20 20:30:28 vapier Exp $
+
+*horde-groupware-1.0.4 (20 Feb 2008)
+
+  20 Feb 2008; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +horde-groupware-1.0.4.ebuild:
+  Initial package #187384 by Toffanin [WiredTEK].
+
