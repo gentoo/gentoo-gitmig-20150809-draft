@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jibx/jibx-1.1.5.ebuild,v 1.1 2008/02/20 00:04:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jibx/jibx-1.1.5.ebuild,v 1.2 2008/02/20 00:26:36 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -49,7 +49,7 @@ EANT_BUILD_XML="build/build.xml"
 EANT_BUILD_TARGET="small-jars"
 
 src_install() {
-	java-pkg_dojar "${S}"/lib/*.jar
+	java-pkg_dojar "${S}"/lib/${PN}*.jar
 
 	dodoc changes.txt docs/binding.dtd docs/binding.xsd || die
 	dohtml readme.html || die
