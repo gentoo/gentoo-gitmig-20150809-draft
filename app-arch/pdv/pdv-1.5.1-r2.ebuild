@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1-r2.ebuild,v 1.5 2007/07/22 08:30:55 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1-r2.ebuild,v 1.6 2008/02/20 07:51:46 ulm Exp $
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.4
@@ -14,9 +14,9 @@ SRC_URI="mirror://sourceforge/pdv/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~hppa ppc x86"
-IUSE="nomotif"
+IUSE="X"
 
-DEPEND="!nomotif? ( x11-libs/openmotif
+DEPEND="X? ( x11-libs/openmotif
 	>=x11-libs/libX11-1.0.0
 	>=x11-libs/libXt-1.0.0
 	>=x11-libs/libXext-1.0.0
@@ -43,7 +43,7 @@ src_compile() {
 
 	cd "${S}"
 	local myconf=""
-	use nomotif && myconf="--without-x" # configure script is broken, cant use use_with
+	use X || myconf="--without-x" # configure script is broken, cant use use_with
 	econf ${myconf} || die
 	emake || die
 }
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
 	dobin pdv pdvmkpkg || die
 	doman pdv.1 pdvmkpkg.1
-	if ! use nomotif ; then
+	if use X ; then
 		dobin X11/xmpdvmkpkg || die
 		doman xmpdvmkpkg.1 || die
 	fi
