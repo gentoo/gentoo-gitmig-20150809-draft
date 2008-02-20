@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.49 2008/02/20 20:32:00 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.50 2008/02/20 20:36:30 zlin Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -20,7 +20,7 @@ inherit eutils
 
 ESVN="${ECLASS}"
 
-EXPORT_FUNCTIONS src_unpack
+EXPORT_FUNCTIONS src_unpack pkg_preinst
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -130,6 +130,14 @@ ESVN_RESTRICT="${ESVN_RESTRICT:-}"
 # an svn source tree. This is intended to be set outside the subversion source
 # tree by users.
 ESVN_OFFLINE="${ESVN_OFFLINE:-${ESCM_OFFLINE}}"
+
+# @ECLASS-VARIABLE: ESCM_LOGDIR
+# @DESCRIPTION:
+# User configuration variable. If set to a path such as e.g. /var/log/scm any
+# package inheriting from subversion.eclass will record svn revision to
+# ${CATEGORY}/${PN}.log in that path in pkg_preinst. This is not supposed to be
+# set by ebuilds/eclasses. It defaults to empty so users need to opt in.
+ESCM_LOGDIR="${ESCM_LOGDIR:=}"
 
 # @FUNCTION: subversion_fetch
 # @USAGE: [repo_uri] [destination]
@@ -400,4 +408,27 @@ subversion__get_peg_revision() {
 	debug-print "${FUNCNAME}: peg_rev = ${peg_rev}"
 
 	echo "${peg_rev}"
+}
+
+# @FUNCTION: subversion_pkg_preinst
+# @DESCRIPTION:
+# Log the svn revision of source code. Doing this in pkg_preinst because we
+# want the logs to stick around if packages are uninstalled without messing with
+# config protection.
+subversion_pkg_preinst() {
+	local pkgdate=$(date "+%Y%m%d %H:%M:%S")
+	subversion_wc_info
+	if [[ -n ${ESCM_LOGDIR} ]]; then
+		local dir="${ROOT}/${ESCM_LOGDIR}/${CATEGORY}"
+		if [[ ! -d ${dir} ]]; then
+			mkdir -p "${dir}" || \
+				eerror "Failed to create '${dir}' for logging svn revision to '${PORTDIR_SCM}'"
+		fi
+		local logmessage="svn: ${pkgdate} - ${PF}:${SLOT} was merged at revision ${ESVN_WC_REVISION}"
+		if [[ -d ${dir} ]]; then
+			echo "${logmessage}" >> "${dir}/${PN}.log"
+		else
+			eerror "Could not log the message '${logmessage}' to '${dir}/${PN}.log'"
+		fi
+	fi
 }
