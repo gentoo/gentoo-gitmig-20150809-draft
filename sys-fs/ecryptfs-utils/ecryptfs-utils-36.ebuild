@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-36.ebuild,v 1.2 2008/01/09 21:17:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-36.ebuild,v 1.3 2008/02/20 01:47:53 flameeyes Exp $
+
+inherit pam
 
 DESCRIPTION="eCryptfs userspace utilities"
 HOMEPAGE="http://www.ecryptfs.org/"
@@ -29,6 +31,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
+		--with-pamdir=$(getpam_mod_dir) \
 		$(use_enable pam) \
 		$(use_enable openssl) \
 		$(use_enable pkcs11 pkcs11-helper) \
