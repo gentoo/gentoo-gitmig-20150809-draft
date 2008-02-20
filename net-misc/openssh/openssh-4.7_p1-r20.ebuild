@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.7_p1-r20.ebuild,v 1.1 2008/02/19 22:52:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.7_p1-r20.ebuild,v 1.2 2008/02/20 00:09:03 flameeyes Exp $
 
 inherit eutils flag-o-matic ccc multilib autotools pam
 
@@ -24,7 +24,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="static pam tcpd kerberos skey selinux chroot X509 ldap smartcard hpn libedit X"
 
-RDEPEND="pam? ( >=sys-auth/pambase-20080219.1 )
+RDEPEND="pam? ( virtual/pam )
 	kerberos? ( virtual/krb5 )
 	selinux? ( >=sys-libs/libselinux-1.28 )
 	skey? ( >=app-admin/skey-1.1.5-r1 )
@@ -40,6 +40,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	virtual/os-headers
 	sys-devel/autoconf"
+RDEPEND="${RDEPEND}
+	pam? ( >=sys-auth/pambase-20080219.1 )"
 PROVIDE="virtual/ssh"
 
 S=${WORKDIR}/${PARCH}

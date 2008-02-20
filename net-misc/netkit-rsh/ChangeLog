@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.49 2008/02/19 22:59:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.50 2008/02/20 00:10:16 flameeyes Exp $
+
+  20 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Fix dependencies for pambase/pam.
 
 *netkit-rsh-0.17-r9 (19 Feb 2008)
 
