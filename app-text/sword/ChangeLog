@@ -1,6 +1,14 @@
 # ChangeLog for app-text/sword
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.36 2008/01/07 03:19:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.37 2008/02/20 04:04:09 beandog Exp $
+
+*sword-1.5.10-r2 (20 Feb 2008)
+*sword-1.5.9-r2 (20 Feb 2008)
+*sword-1.5.8-r2 (20 Feb 2008)
+
+  20 Feb 2008; Steve Dibb <beandog@gentoo.org> +files/escape_range.patch,
+  +sword-1.5.8-r2.ebuild, +sword-1.5.9-r2.ebuild, +sword-1.5.10-r2.ebuild:
+  Add escape range patch, security bug 210754
 
 *sword-1.5.10-r1 (07 Jan 2008)
 *sword-1.5.9-r1 (07 Jan 2008)
