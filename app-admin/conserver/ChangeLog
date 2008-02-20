@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/conserver
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.69 2007/12/27 14:52:38 ulm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.70 2008/02/20 00:33:26 flameeyes Exp $
+
+*conserver-8.1.16-r1 (20 Feb 2008)
+
+  20 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/conserver.pam-pambase, +conserver-8.1.16-r1.ebuild:
+  Add new revision that uses pambase framework.
 
   27 Dec 2007; Ulrich Mueller <ulm@gentoo.org> -files/conserver.pam-include,
   -conserver-8.1.14.ebuild, -conserver-8.1.14-r1.ebuild:
