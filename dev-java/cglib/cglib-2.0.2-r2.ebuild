@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.0.2-r2.ebuild,v 1.10 2007/04/26 20:12:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.0.2-r2.ebuild,v 1.11 2008/02/20 00:26:20 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
@@ -23,7 +23,7 @@ IUSE=""
 S=${WORKDIR}
 
 src_unpack() {
-	jar xf ${DISTDIR}/${A} || die "failed to unpack"
+	unpack ${A}
 
 	epatch "${FILESDIR}/${P}-asm-1.4.3.patch"
 
@@ -34,8 +34,11 @@ src_unpack() {
 	java-pkg_jar-from ant-core ant.jar
 }
 
+#Investigate why this fails
+EANT_FILTER_COMPILER="ecj-3.3"
+
 src_install() {
-	java-pkg_newjar dist/${PN}-${PV}.jar
+	java-pkg_newjar dist/${P}.jar
 	java-pkg_newjar dist/${PN}-full-${PV}.jar ${PN}-full.jar
 
 	dodoc NOTICE README || die

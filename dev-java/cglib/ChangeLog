@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.36 2008/02/17 16:44:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.37 2008/02/20 00:26:20 betelgeuse Exp $
+
+  20 Feb 2008; Petteri Räty <betelgeuse@gentoo.org> cglib-2.0.2-r2.ebuild:
+  Filter ecj-3.3 as emerging fails with it.
 
 *cglib-2.2_beta1-r1 (17 Feb 2008)
 
