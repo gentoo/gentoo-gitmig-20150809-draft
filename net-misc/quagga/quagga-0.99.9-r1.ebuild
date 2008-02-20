@@ -1,77 +1,80 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r3.ebuild,v 1.9 2008/01/10 08:41:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.9-r1.ebuild,v 1.1 2008/02/20 05:19:32 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
 
-inherit eutils multilib autotools
+inherit eutils multilib autotools linux-info
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20070912.tar.gz"
+	mirror://gentoo/${P}-patches-20070913.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ppc s390 sparc x86"
-IUSE="ipv6 snmp pam tcpmd5 bgpclassless ospfapi realms fix-connected-rt multipath tcp-zebra"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
+IUSE="caps ipv6 snmp pam tcpmd5 bgpas4 bgpclassless ospfapi realms multipath tcp-zebra"
 RESTRICT="userpriv"
 
-DEPEND=">=sys-libs/libcap-1.10-r5
+DEPEND="caps? ( >=sys-libs/libcap-1.10-r9 )
 	snmp? ( net-analyzer/net-snmp )
 	pam? ( sys-libs/pam )"
 RDEPEND="${DEPEND}
 	sys-apps/iproute2"
 
+pkg_setup() {
+	if use tcpmd5 ; then
+		get_version || get_running_version
+	fi
+	return 0
+}
+
 src_unpack() {
 	unpack ${A}
 
 	cd "${S}" || die "source dir not found"
-	# Fix security quagga bug 355
-	epatch "${WORKDIR}/patch/bgpd-bug-355.diff"
-	#Patch to fix RIP authentication problem in 0.98.6 (#132353)
-	#DO NOT USE IT IN ANY OTHER VERSIONS!
-	epatch "${WORKDIR}/patch/ripd-show-ifaces.diff"
+	epatch "${WORKDIR}/patch/${P}-link-libcap.patch"
 
-	# TCP MD5 for BGP patch for Linux (RFC 2385) - http://hasso.linux.ee/doku.php/english:network:rfc2385
-	use tcpmd5 && epatch "${WORKDIR}/patch/ht-20050321-0.98.2-bgp-md5.patch"
+	# AS4 support (original found at http://quagga.ncc.eurodata.de)
+	use bgpas4 && epatch "${WORKDIR}/patch/quagga-cvs20070909-as4-v09.patch"
+
+	if use tcpmd5 ; then
+		if kernel_is lt 2 6 20 ; then
+			# TCP MD5 for BGP patch for Linux (RFC 2385)
+			# original found at http://hasso.linux.ee/doku.php/english:network:rfc2385
+			epatch "${WORKDIR}/patch/ht-20050321-${PV}-bgp-md5_adapted.patch"
+		else
+			# TCP MD5 in-kernel support for kernels >=2.6.20 (by Leigh Brown)
+			# original found at http://www.solinno.co.uk/md5sig/quagga_linux-2.6.20_md5sig.diff
+			epatch "${WORKDIR}/patch/quagga_linux-2.6.20_md5sig_adapted.diff"
+		fi
+	fi
 
 	# Classless prefixes for BGP - http://hasso.linux.ee/doku.php/english:network:quagga
-	use bgpclassless && epatch "${WORKDIR}/patch/ht-20040304-classless-bgp.patch"
-
-	# Connected route fix (Amir Guindehi) - http://voidptr.sboost.org/quagga/amir-connected-route.patch.bz2
-	# Dependant on the use flag 'fix-connected-rt' because it seems that more peoples have troubles
-	# with this than having a benefit.
-	# This patch fixes a bad behavior of the Linux kernel routing packets to interfaces which are
-	# down. Folks with PtP interfaces and VLans report troubles with this patch. Enable it again
-	# if you get a problem because your kernel routes packets to a downed interface.
-	use fix-connected-rt && epatch "${WORKDIR}/patch/amir-connected-route.patch"
+	use bgpclassless && epatch "${WORKDIR}/patch/ht-20040304-classless-bgp_adapted.patch"
 
 	# Realms support (Calin Velea) - http://vcalinus.gemenii.ro/quaggarealms.html
 	use realms && epatch "${WORKDIR}/patch/${P}-realms.diff"
 
-	# Security patches
-	epatch "${WORKDIR}/patch/${P}-backports.patch"
-
-	# regenerate configure and co if we touch .ac or .am files
 	eautoreconf
 }
 
 src_compile() {
-	local myconf="--disable-static --enable-dynamic"
-
+	local myconf="--disable-static \
+		$(use_enable caps capabilities) \
+		$(use_enable snmp) \
+		$(use_with pam libpam) \
+		$(use_enable tcpmd5 tcp-md5) \
+		$(use_enable tcp-zebra)"
 	use ipv6 \
 			&& myconf="${myconf} --enable-ipv6 --enable-ripng --enable-ospf6d --enable-rtadv" \
 			|| myconf="${myconf} --disable-ipv6 --disable-ripngd --disable-ospf6d"
 	use ospfapi \
 			&& myconf="${myconf} --enable-opaque-lsa --enable-ospf-te --enable-ospfclient"
-	use snmp && myconf="${myconf} --enable-snmp"
-	use pam && myconf="${myconf} --with-libpam"
-	use tcpmd5 && myconf="${myconf} --enable-tcp-md5"
 	use realms && myconf="${myconf} --enable-realms"
 	use multipath && myconf="${myconf} --enable-multipath=0"
-	use tcp-zebra && myconf="${myconf} --enable-tcp-zebra"
 
 	econf \
 		--enable-nssa \
@@ -130,16 +133,14 @@ pkg_postinst() {
 
 	if use tcpmd5; then
 		echo
-		ewarn "TCP MD5 for BGP needs a patched kernel!"
-		einfo "See http://hasso.linux.ee/doku.php/english:network:rfc2385 for more info."
-	fi
+		if kernel_is lt 2 6 20; then
+			ewarn "TCP MD5 for BGP needs a patched kernel!"
+			ewarn "See http://hasso.linux.ee/doku.php/english:network:rfc2385 for more info."
+		else
+			CONFIG_CHECK="~TCP_MD5SIG"
+			local ERROR_TCP_MD5SIG="CONFIG_TCP_MD5SIG:\t missing TCP MD5 signature support (RFC2385)"
 
-	if use ipv6; then
-		echo
-		ewarn "This version of quagga contains a netlink race condition fix that triggered a kernel bug"
-		ewarn "which affects IPv6 users who have a kernel version < 2.6.13-rc6."
-		einfo "See following links for more info:"
-		einfo "   http://lists.quagga.net/pipermail/quagga-dev/2005-June/003507.html"
-		einfo "   http://bugzilla.quagga.net/show_bug.cgi?id=196"
+			check_extra_config
+		fi
 	fi
 }
