@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.54 2008/02/19 01:03:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.55 2008/02/20 17:32:41 nixnut Exp $
+
+  20 Feb 2008; nixnut <nixnut@gentoo.org> ntfs3g-1.2129.ebuild:
+  Added ~ppc wrt bug 207120
 
 *ntfs3g-1.2216 (19 Feb 2008)
 
