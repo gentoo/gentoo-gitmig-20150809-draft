@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.46 2008/02/20 17:11:34 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.47 2008/02/20 17:55:27 cardoe Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -63,6 +63,16 @@ ESVN_OPTIONS="${ESVN_OPTIONS:-}"
 # to peg to a specific revision, append @REV to the repo's uri
 ESVN_REPO_URI="${ESVN_REPO_URI:-}"
 
+# @ECLASS-VARIABLE: ESVN_REVISION
+# @DESCRIPTION:
+# User configurable revision checkout or update to from the repository
+#
+# Useful for live svn or trunk svn ebuilds allowing the user to peg
+# to a specific revision
+#
+# Note: This should never be set in an ebuild!
+ESVN_REVISION="${ESVN_REVISION:-}"
+
 # @ECLASS-VARIABLE: ESVN_PROJECT
 # @DESCRIPTION:
 # project name of your ebuild (= name space)
@@ -119,8 +129,11 @@ ESVN_RESTRICT="${ESVN_RESTRICT:-}"
 #   repo_uri    - a repository URI. default is ESVN_REPO_URI.
 #   destination - a check out path in S.
 subversion_fetch() {
-	local repo_uri="$(subversion__get_repository_uri "${1}")"
+	local repo_uri="$(subversion__get_repository_uri "${1:-${ESVN_REPO_URI}}")"
+	local revision="$(subversion__get_peg_revision "${1:-${ESVN_REPO_URI}}")"
 	local S_dest="${2}"
+
+	[[ -n "${ESVN_REVISION}" ]] && revision="${ESVN_REVISION}"
 
 	# check for the protocol
 	local protocol="${repo_uri%%:*}"
@@ -155,6 +168,13 @@ subversion_fetch() {
 	local wc_path="$(subversion__get_wc_path "${repo_uri}")"
 	local options="${ESVN_OPTIONS} --config-dir ${ESVN_STORE_DIR}/.subversion"
 
+	[[ -n "${revision}" ]] && options="${options} -r ${revision}"
+
+	if [[ "${ESVN_OPTIONS}" = *-r* ]]; then
+		ewarn "\${ESVN_OPTIONS} contains -r, this usage is unsupported. Please"
+		ewarn "see \${ESVN_REPO_URI}"
+	fi
+
 	debug-print "${FUNCNAME}: wc_path = \"${wc_path}\""
 	debug-print "${FUNCNAME}: ESVN_OPTIONS = \"${ESVN_OPTIONS}\""
 	debug-print "${FUNCNAME}: options = \"${options}\""
@@ -162,7 +182,7 @@ subversion_fetch() {
 	if [[ ! -d ${wc_path}/.svn ]]; then
 		# first check out
 		einfo "subversion check out start -->"
-		einfo "     repository: ${repo_uri}"
+		einfo "     repository: ${repo_uri}${revision:+@}${revision}"
 
 		debug-print "${FUNCNAME}: ${ESVN_FETCH_CMD} ${options} ${repo_uri}"
 
@@ -173,13 +193,13 @@ subversion_fetch() {
 	else
 		subversion_wc_info "${repo_uri}" || die "${ESVN}: unknown problem occurred while accessing working copy."
 
-		if [[ ${ESVN_WC_URL} != $(subversion__get_repository_uri "${repo_uri}" 1) ]]; then
+		if [[ ${ESVN_WC_URL} != $(subversion__get_repository_uri "${repo_uri}") ]]; then
 			die "${ESVN}: ESVN_REPO_URI (or specified URI) and working copy's URL are not matched."
 		fi
 
 		# update working copy
 		einfo "subversion update start -->"
-		einfo "     repository: ${repo_uri}"
+		einfo "     repository: ${repo_uri}${revision:+@}${revision}"
 
 		debug-print "${FUNCNAME}: ${ESVN_UPDATE_CMD} ${options}"
 
@@ -265,7 +285,7 @@ subversion_src_unpack() {
 
 # @FUNCTION: subversion_wc_info
 # @USAGE: [repo_uri]
-# @RETURN: ESVN_WC_URL, ESVN_WC_REVISION and ESVN_WC_PATH
+# @RETURN: ESVN_WC_URL, ESVN_WC_ROOT, ESVN_WC_UUID, ESVN_WC_REVISION and ESVN_WC_PATH
 # @DESCRIPTION:
 # Get svn info for the specified repo_uri. The default repo_uri is ESVN_REPO_URI.
 #
@@ -282,12 +302,10 @@ subversion_wc_info() {
 		return 1
 	fi
 
-	local k
-
-	for k in url revision; do
-		export ESVN_WC_$(subversion__to_upper_case "${k}")="$(subversion__svn_info "${wc_path}" "${k}")"
-	done
-
+	export ESVN_WC_URL="$(subversion__svn_info "${wc_path}" "URL")"
+	export ESVN_WC_ROOT="$(subversion__svn_info "${wc_path}" "Repository Root")"
+	export ESVN_WC_UUID="$(subversion__svn_info "${wc_path}" "Repository UUID")"
+	export ESVN_WC_REVISION="$(subversion__svn_info "${wc_path}" "Revision")"
 	export ESVN_WC_PATH="${wc_path}"
 }
 
@@ -308,14 +326,10 @@ subversion__svn_info() {
 ## -- subversion__get_repository_uri() --------------------------------------- #
 #
 # param $1 - a repository URI.
-# param $2 - a peg revision is deleted from a return value if this is
-#             specified.
 subversion__get_repository_uri() {
-	local repo_uri="${1:-${ESVN_REPO_URI}}"
-	local remove_peg_revision="${2}"
+	local repo_uri="${1}"
 
 	debug-print "${FUNCNAME}: repo_uri = ${repo_uri}"
-	debug-print "${FUNCNAME}: remove_peg_revision = ${remove_peg_revision}"
 
 	if [[ -z ${repo_uri} ]]; then
 		die "${ESVN}: ESVN_REPO_URI (or specified URI) is empty."
@@ -326,14 +340,7 @@ subversion__get_repository_uri() {
 		repo_uri="${repo_uri%/}"
 	fi
 
-	if [[ -n ${remove_peg_revision} ]]; then
-		if subversion__has_peg_revision "${repo_uri}"; then
-			repo_uri="${repo_uri%@*}"
-
-			debug-print "${FUNCNAME}: repo_uri has a peg revision"
-			debug-print "${FUNCNAME}: repo_uri = ${repo_uri}"
-		fi
-	fi
+	repo_uri="${repo_uri%@*}"
 
 	echo "${repo_uri}"
 }
@@ -342,17 +349,17 @@ subversion__get_repository_uri() {
 #
 # param $1 - a repository URI.
 subversion__get_wc_path() {
-	local repo_uri="$(subversion__get_repository_uri "${1}" 1)"
+	local repo_uri="$(subversion__get_repository_uri "${1}")"
 
 	debug-print "${FUNCNAME}: repo_uri = ${repo_uri}"
 
 	echo "${ESVN_STORE_DIR}/${ESVN_PROJECT}/${repo_uri##*/}"
 }
 
-## -- subversion__has_peg_revision() ----------------------------------------- #
+## -- subversion__get_peg_revision() ----------------------------------------- #
 #
 # param $1 - a repository URI.
-subversion__has_peg_revision() {
+subversion__get_peg_revision() {
 	local repo_uri="${1}"
 
 	debug-print "${FUNCNAME}: repo_uri = ${repo_uri}"
@@ -360,34 +367,12 @@ subversion__has_peg_revision() {
 	# repo_uri has peg revision ?
 	if [[ ${repo_uri} != *@* ]]; then
 		debug-print "${FUNCNAME}: repo_uri does not have a peg revision."
-		return 1
 	fi
-
-	local peg_rev="${repo_uri##*@}"
-
-	case "$(subversion__to_upper_case "${peg_rev}")" in
-		[[:digit:]]*)
-			# NUMBER
-			;;
-		HEAD|BASE|COMMITED|PREV)
-			;;
-		{[^}]*})
-			# DATE
-			;;
-		*)
-			debug-print "${FUNCNAME}: repo_uri does not have a peg revision."
-			return 1
-			;;
-	esac
+	
+	local peg_rev=
+	[[ ${repo_uri} = *@* ]] &&  peg_rev="${repo_uri##*@}"
 
 	debug-print "${FUNCNAME}: peg_rev = ${peg_rev}"
 
-	return 0
-}
-
-## -- subversion__to_upper_case() ----------------------------------------- #
-#
-# param $@ - the strings to upper case.
-subversion__to_upper_case() {
-	echo "${@}" | tr "[:lower:]" "[:upper:]"
+	echo "${peg_rev}"
 }
