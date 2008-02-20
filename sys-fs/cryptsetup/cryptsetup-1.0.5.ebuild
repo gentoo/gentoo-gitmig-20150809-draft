@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.5.ebuild,v 1.3 2007/10/06 13:56:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.5.ebuild,v 1.4 2008/02/20 02:52:26 wolf31o2 Exp $
 
 inherit linux-info eutils flag-o-matic multilib
 
@@ -22,23 +22,20 @@ DEPEND=">=sys-fs/device-mapper-1.00.07-r1
 
 dm-crypt_check() {
 	local CONFIG_CHECK="~DM_CRYPT"
-	local WARNING_DM_CRYPT="CONFIG_DM_CRYPT:\tis not set (required for cryptsetup-luks)"
+	local WARNING_DM_CRYPT="CONFIG_DM_CRYPT:\tis not set (required for cryptsetup)\n"
 	check_extra_config
-	echo
 }
 
 crypto_check() {
 	local CONFIG_CHECK="~CRYPTO"
-	local WARNING_CRYPTO="CONFIG_CRYPTO:\tis not set (required for cryptsetup-luks)"
+	local WARNING_CRYPTO="CONFIG_CRYPTO:\tis not set (required for cryptsetup)\n"
 	check_extra_config
-	echo
 }
 
 cbc_check() {
 	local CONFIG_CHECK="~CRYPTO_CBC"
-	local WARNING_CRYPTO_CBC="CONFIG_CRYPTO_CBC:\tis not set (required for Kernel 2.6.19)"
+	local WARNING_CRYPTO_CBC="CONFIG_CRYPTO_CBC:\tis not set (required for kernel 2.6.19)\n"
 	check_extra_config
-	echo
 }
 
 src_unpack() {

@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.53 2008/02/01 12:38:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.54 2008/02/20 02:52:26 wolf31o2 Exp $
+
+  20 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  cryptsetup-1.0.5.ebuild, cryptsetup-1.0.5-r1.ebuild:
+  I hate blank spaces in output for no reason, so switching from using echo to
+  using an extra \n at the end of the line.
 
   01 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> files/1.0.5-dmcrypt.rc:
   Update init script to work with current development version of OpenRC
