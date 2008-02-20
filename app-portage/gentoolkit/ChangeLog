@@ -1,6 +1,16 @@
 # ChangeLog for app-portage/gentoolkit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.124 2007/10/22 21:11:37 fuzzyray Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.125 2008/02/20 23:04:10 fuzzyray Exp $
+
+*gentoolkit-0.2.4_rc2 (20 Feb 2008)
+
+  20 Feb 2008; Paul Varner <fuzzyray@gentoo.org> gentoolkit-0.2.3-r1.ebuild,
+  -gentoolkit-0.2.4_pre6.ebuild, gentoolkit-0.2.4_pre7.ebuild,
+  -gentoolkit-0.2.4_rc1.ebuild, +gentoolkit-0.2.4_rc2.ebuild:
+  gentoolkit-0.2.4_rc2 version bump. This fixes bugs #106278, #119806,
+  #134440, #162493, #189257, #193979, #194234, #194993, #196460, #205132, and
+  #205227. Bug #170220 tracks all fixes made for the gentoolkit-0.2.4 release.
+  Removed older ebuilds. Fixed date and quoting problems in all ebuilds.
 
 *gentoolkit-0.2.4_pre8 (22 Oct 2007)
 *gentoolkit-0.2.3.1 (22 Oct 2007)
