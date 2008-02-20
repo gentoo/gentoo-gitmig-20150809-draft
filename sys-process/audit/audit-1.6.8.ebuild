@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.6.8.ebuild,v 1.3 2008/02/20 22:42:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.6.8.ebuild,v 1.4 2008/02/20 22:48:10 robbat2 Exp $
 
 inherit autotools multilib toolchain-funcs python
 
@@ -12,6 +12,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ldap"
+# Testcases are pretty useless as they are built for RedHat users/groups and
+# kernels.
+RESTRICT="test"
 
 RDEPEND=">=dev-lang/python-2.4
 		ldap? ( net-nds/openldap )"
