@@ -1,59 +1,60 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xrms/xrms-1.99.2.ebuild,v 1.2 2007/05/26 22:44:54 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xrms/xrms-1.99.2.ebuild,v 1.3 2008/02/20 12:40:40 hollow Exp $
 
-inherit webapp depend.php
+inherit webapp depend.php eutils
 
 MY_DATE="2006-07-25"
-DESCRIPTION="XRMS is a fully-integrated suite of web-based tools for Customer Relationship Management (CRM), Sales Force Automation (SFA), and Business Intelligence (BI) tools."
+
+DESCRIPTION="Advanced Customer Relationship Management (CRM) and Sales Force Automation (SFA) suite"
 HOMEPAGE="http://xrms.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_DATE}-v${PV}-.tar.gz"
 
 LICENSE="OSL-2.0"
-KEYWORDS="~x86"
-S="${WORKDIR}/${PN}"
-
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="
-	>=virtual/php-4.3.0
-	dev-php/PEAR-PEAR
-"
+DEPEND=""
+RDEPEND="dev-php/PEAR-PEAR"
+
+need_php_httpd
+
+S="${WORKDIR}"/${PN}
 
 pkg_setup() {
 	webapp_pkg_setup
-	local php_flags="mysql"
-	require_php_with_use ${php_flags}
+	require_php_with_use mysql
 }
 
 src_unpack() {
-	unpack ${A}; cd ${S}
-	# Remove .cvs* files and CVS directories
-	find -name .cvs\* -or \( -type d -name CVS -prune \) | xargs rm -rf
+	unpack ${A}
+	cd "${S}"
+	ecvs_clean
 }
 
 src_install () {
 	webapp_src_preinst
 
-	dodir "${MY_HOSTROOTDIR}/${PF}"
-	dodoc CHANGELOG README LICENSE install/INSTALL
+	dodoc CHANGELOG README install/INSTALL
+	rm -f CHANGELOG README install/INSTALL LICENSE
 
-	cp -R . "${D}/${MY_HTDOCSDIR}"
-	mv "${D}/${MY_HTDOCSDIR}/include" "${D}/${MY_HOSTROOTDIR}/${PF}"
+	insinto "${MY_HOSTROOTDIR}"/${PF}/include
+	doins -r include/
+	rm -rf include/
 
-	local files="export storage tmp"
-	for file in ${files}; do
-		webapp_serverowned "${MY_HTDOCSDIR}/${file}"
-	done
+	insinto "${MY_HTDOCSDIR}"
+	doins -r .
 
-	webapp_configfile "${MY_HOSTROOTDIR}/${PF}/include/vars.php"
-	webapp_configfile "${MY_HTDOCSDIR}/include-locations.inc"
-	webapp_configfile "${MY_HOSTROOTDIR}/${PF}/include/plugin-cfg.php"
-	webapp_configfile "${MY_HOSTROOTDIR}/${PF}/include/classes/SMTPs/SMTPs.ini.php"
+	webapp_serverowned "${MY_HTDOCSDIR}"/{export,storage,tmp}
 
-	webapp_postinst_txt en "${FILESDIR}/postinstall-en.txt"
-	webapp_postupgrade_txt en "${FILESDIR}/postupgrade-en.txt"
-	webapp_hook_script "${FILESDIR}/reconfig"
+	webapp_configfile "${MY_HTDOCSDIR}"/include-locations.inc
+	webapp_configfile "${MY_HOSTROOTDIR}"/${PF}/include/vars.php
+	webapp_configfile "${MY_HOSTROOTDIR}"/${PF}/include/plugin-cfg.php
+	webapp_configfile "${MY_HOSTROOTDIR}"/${PF}/include/classes/SMTPs/SMTPs.ini.php
+
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
+	webapp_postupgrade_txt en "${FILESDIR}"/postupgrade-en.txt
+	webapp_hook_script "${FILESDIR}"/reconfig
 
 	webapp_src_install
 }
