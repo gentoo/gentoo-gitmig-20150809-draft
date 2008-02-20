@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.94 2007/12/23 16:11:49 calchan Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.95 2008/02/20 13:18:00 calchan Exp $
+
+  20 Feb 2008; Denis Dupeyron <calchan@gentoo.org> kino-1.2.0.ebuild:
+  Partially fixed bug #206759. Stable kino will have to wait.
 
 *kino-1.2.0 (23 Dec 2007)
 
