@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/rssh
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.16 2007/02/21 23:12:10 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.17 2008/02/20 12:55:07 caleb Exp $
+
+  20 Feb 2008; Caleb Tennis <caleb@gentoo.org> rssh-2.3.2.ebuild:
+  stabilizing amd64, I think it was missed long ago in bug #142399
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
