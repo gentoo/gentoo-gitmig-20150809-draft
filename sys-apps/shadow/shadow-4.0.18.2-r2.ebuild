@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.2-r2.ebuild,v 1.1 2008/02/19 22:38:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.2-r2.ebuild,v 1.2 2008/02/20 00:04:08 flameeyes Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS=""
 IUSE="nls pam selinux skey nousuid cracklib"
 
+# Does not work with OpenPAM (yet?)
 RDEPEND="cracklib? ( >=sys-libs/cracklib-2.7-r3 )
-	pam? ( >=sys-auth/pambase-20080219.1 )
+	pam? ( >=sys-libs/pam-0.99 )
 	!sys-apps/pam-login
 	!app-admin/nologin
 	skey? ( app-admin/skey )
@@ -22,6 +23,8 @@ RDEPEND="cracklib? ( >=sys-libs/cracklib-2.7-r3 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+RDEPEND="${RDEPEND}
+	pam? ( >=sys-auth/pambase-20080219.1 )"
 
 src_unpack() {
 	unpack ${A}
