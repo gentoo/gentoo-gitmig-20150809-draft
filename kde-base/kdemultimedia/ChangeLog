@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.268 2008/02/18 23:57:27 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.269 2008/02/20 20:06:29 ingmar Exp $
+
+  20 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +files/kdemultimedia-3.5.8-xine-lib-1.1.10.1.patch,
+  kdemultimedia-3.5.8-r1.ebuild:
+  Added a patch to work with >media-lib/xine-lib-1.1.10.1, bug 209849.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/kdemultimedia-4.0.0-flac-1.1.3.patch,
