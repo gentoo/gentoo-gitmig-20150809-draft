@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.212 2008/02/15 18:54:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.213 2008/02/20 20:33:35 cardoe Exp $
+
+*mythtv-0.21_beta16171 (20 Feb 2008)
+
+  20 Feb 2008; Doug Klima <cardoe@gentoo.org>
+  -files/mythtv-trunk-mcpu-march-2.patch,
+  -files/mythtv-trunk-mcpu-march.patch, +mythtv-0.21_beta16171.ebuild,
+  -mythtv-0.21_pre15635.ebuild, -mythtv-0.21_pre15666.ebuild,
+  -mythtv-0.21_pre15718.ebuild:
+  MythTV 0.21 beta build. Remove previous trunk builds
 
   15 Feb 2008; Samuli Suominen <drac@gentoo.org>
   mythtv-0.20.2_p14814.ebuild, mythtv-0.20.2_p14972.ebuild,

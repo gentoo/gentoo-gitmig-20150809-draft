@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre15635.ebuild,v 1.3 2008/02/15 18:54:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_beta16171.ebuild,v 1.1 2008/02/20 20:33:35 cardoe Exp $
 
+EAPI=1
 inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
 
 DESCRIPTION="Homebrew PVR project"
@@ -10,7 +11,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
 
-IUSE="alsa altivec autostart dbox2 debug directv dts dvb dvd hdhomerun ieee1394 iptv ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
+IUSE="alsa altivec autostart dbox2 debug directv dvb dvd hdhomerun ieee1394 iptv ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -26,13 +27,12 @@ RDEPEND=">=media-libs/freetype-2.0
 		video_cards_via? ( x11-drivers/xf86-video-via )
 		video_cards_i810? ( x11-drivers/xf86-video-i810 )
 	)
-	$(qt_min_version 3.3)
+	>=x11-libs/qt-3.3:3
 	virtual/mysql
 	virtual/opengl
 	virtual/glu
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
-	dts? ( media-libs/libdca )
 	dvd? ( 	media-libs/libdvdnav )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
 	directv? ( virtual/perl-Time-HiRes )
@@ -112,7 +112,6 @@ src_compile() {
 		--libdir-name=$(get_libdir)"
 	use alsa || myconf="${myconf} --disable-audio-alsa"
 	use jack || myconf="${myconf} --disable-audio-jack"
-	use dts && myconf="${myconf} --enable-libdts"
 	use dbox2 || myconf="${myconf} --disable-dbox2"
 	use hdhomerun || myconf="${myconf} --disable-hdhomerun"
 	use altivec || myconf="${myconf} --disable-altivec"
@@ -134,7 +133,6 @@ src_compile() {
 		--enable-xv
 		--disable-directfb
 		--enable-x11
-		--enable-proc-opt
 		--enable-gpl"
 
 	if use mmx || use amd64; then
@@ -146,25 +144,21 @@ src_compile() {
 	if use debug; then
 		myconf="${myconf} --compile-type=debug"
 	else
-		myconf="${myconf} --compile-type=release"
+		myconf="${myconf} --compile-type=profile"
 	fi
 
 	## CFLAG cleaning so it compiles
 	MARCH=$(get-flag "march")
 	MTUNE=$(get-flag "mtune")
-	MCPU=$(get-flag "mcpu")
 	strip-flags
 	filter-flags "-march=*" "-mtune=*" "-mcpu=*"
 	filter-flags "-O" "-O?"
 
 	if [[ -n "${MARCH}" ]]; then
-		myconf="${myconf} --arch=${MARCH}"
+		myconf="${myconf} --cpu=${MARCH}"
 	fi
 	if [[ -n "${MTUNE}" ]]; then
 		myconf="${myconf} --tune=${MTUNE}"
-	fi
-	if [[ -n "${MCPU}" ]]; then
-		myconf="${myconf} --cpu=${MCPU}"
 	fi
 
 #	myconf="${myconf} --extra-cxxflags=\"${CXXFLAGS}\" --extra-cflags=\"${CFLAGS}\""
