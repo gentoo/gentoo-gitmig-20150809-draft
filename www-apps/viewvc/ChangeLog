@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/viewvc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.15 2007/10/26 16:13:20 wrobel Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.16 2008/02/20 13:04:17 hollow Exp $
+
+*viewvc-1.0.4-r1 (20 Feb 2008)
+
+  20 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  -viewvc-1.0.3.ebuild, viewvc-1.0.4.ebuild, +viewvc-1.0.4-r1.ebuild:
+  webappify viewvc, #182093
 
   26 Oct 2007; wrobel@gentoo.org viewvc-1.0.4.ebuild:
   Fixed message on installing the ebuild (see #179612).

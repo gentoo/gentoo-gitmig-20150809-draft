@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.4.ebuild,v 1.9 2007/10/26 16:13:20 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.4.ebuild,v 1.10 2008/02/20 13:04:17 hollow Exp $
 
 inherit python eutils
 
@@ -42,7 +42,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}" && cd "${S}"
+	unpack ${A} && cd "${S}"
 
 	python_version
 	local LIB_DIR="/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}"
