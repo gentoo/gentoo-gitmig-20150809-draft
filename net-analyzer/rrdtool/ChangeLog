@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.133 2008/01/27 19:58:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.134 2008/02/20 10:05:56 pva Exp $
+
+*rrdtool-1.2.27 (20 Feb 2008)
+
+  20 Feb 2008; <pva@gentoo.org> +rrdtool-1.2.27.ebuild:
+  Version bump. Droped tclbindings.patch as upstream did too.
 
 *rrdtool-1.2.26 (27 Jan 2008)
 
