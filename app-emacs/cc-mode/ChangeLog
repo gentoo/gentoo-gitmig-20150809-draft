@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/cc-mode
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cc-mode/ChangeLog,v 1.4 2007/07/03 09:30:48 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cc-mode/ChangeLog,v 1.5 2008/02/20 08:14:02 opfer Exp $
+
+  20 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  cc-mode-5.31.3.ebuild:
+  stable x86/amd64
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   cc-mode-5.31.3.ebuild:
