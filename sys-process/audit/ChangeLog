@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.37 2008/02/19 23:12:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.38 2008/02/20 15:30:58 jer Exp $
+
+  20 Feb 2008; Jeroen Roovers <jer@gentoo.org> audit-1.6.8.ebuild:
+  Marked ~hppa (bug #184563).
 
   19 Feb 2008; Robin H. Johnson <robbat2@gentoo.org>
   -files/audit.h-2.6.18-rc4, -files/elf-em.h-2.6.18-rc4:
