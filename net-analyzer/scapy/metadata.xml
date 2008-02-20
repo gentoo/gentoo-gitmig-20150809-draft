@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <maintainer>
-<email>lcars@gentoo.org</email>
-<name>Andrea Barisani</name>
+<email>ikelos@gentoo.org</email>
+<name>Mike Auty</name>
 </maintainer>
 <longdescription lang="en">
 Scapy is a powerful interactive packet manipulation program.
