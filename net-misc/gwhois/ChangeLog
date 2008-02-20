@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gwhois
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.28 2008/02/09 10:33:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.29 2008/02/20 10:00:39 wschlich Exp $
+
+*gwhois-20080219 (19 Feb 2008)
+
+  19 Feb 2008; Wolfram Schlich <wschlich@gentoo.org>
+  -gwhois-20070822.ebuild, -gwhois-20070905.ebuild, -gwhois-20070926.ebuild,
+  +gwhois-20080219.ebuild:
+  version bump, removed old versions
 
   09 Feb 2008; Raúl Porcel <armin76@gentoo.org> gwhois-20071030.ebuild:
   alpha/sparc/x86 stable
