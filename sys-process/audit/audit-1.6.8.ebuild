@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.6.8.ebuild,v 1.2 2008/02/20 15:30:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.6.8.ebuild,v 1.3 2008/02/20 22:42:21 robbat2 Exp $
 
 inherit autotools multilib toolchain-funcs python
 
@@ -11,9 +11,10 @@ SRC_URI="http://people.redhat.com/sgrubb/audit/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="ldap"
 
-RDEPEND=">=dev-lang/python-2.4"
+RDEPEND=">=dev-lang/python-2.4
+		ldap? ( net-nds/openldap )"
 DEPEND="${RDEPEND}
 	dev-lang/swig
 	>=sys-kernel/linux-headers-2.6.22-r2"
@@ -30,9 +31,26 @@ src_unpack() {
 	#EPATCH_OPTS="-p1 -d${S}" epatch "${FILESDIR}"/${PN}-1.5.4-swig-gcc-attribute.patch
 
 	# Do not build GUI tools
-	sed -i -e '/AC_CONFIG_SUBDIRS.*system-config-audit/d' "${S}"/configure.ac
-	sed -i -e 's,system-config-audit,,g' -e '/^SUBDIRS/s,\\$,,g' "${S}"/Makefile.am
+	sed -i \
+		-e '/AC_CONFIG_SUBDIRS.*system-config-audit/d' \
+		"${S}"/configure.ac
+	sed -i \
+		-e 's,system-config-audit,,g' \
+		-e '/^SUBDIRS/s,\\$,,g' \
+		"${S}"/Makefile.am
 	rm -rf "${S}"/system-config-audit
+
+	# Probably goes away in 1.6.9
+	EPATCH_OPTS="-p1 -d${S}" epatch "${FILESDIR}"/audit-1.6.8-subdirs-fix.patch
+
+	if ! use ldap; then
+		sed -i \
+			-e '/^AC_OUTPUT/s,audisp/plugins/zos-remote/Makefile,,g' \
+			"${S}"/configure.ac
+		sed -i \
+			-e '/^SUBDIRS/s,zos-remote,,g' \
+			"${S}"/audisp/plugins/Makefile.am
+	fi
 
 	# Regenerate autotooling
 	eautoreconf
@@ -40,13 +58,17 @@ src_unpack() {
 
 src_compile() {
 	#append-flags -D'__attribute__(x)='
-	econf --sbindir=/sbin || die
+	econf --sbindir=/sbin --without-prelude || die
 	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README* THANKS TODO contrib/*
+	dodoc AUTHORS ChangeLog README* THANKS TODO
+	docinto contrib
+	dodoc contrib/*
+	docinto contrib/plugin
+	dodoc contrib/plugin/*
 
 	newinitd "${FILESDIR}"/auditd-init.d-1.2.3 auditd
 	newconfd "${FILESDIR}"/auditd-conf.d-1.2.3 auditd
