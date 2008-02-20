@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.153 2008/02/19 19:58:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.154 2008/02/20 12:26:52 tove Exp $
+
+  20 Feb 2008; Torsten Veller <tove@gentoo.org> -gnucash-2.0.5.ebuild,
+  -gnucash-2.2.2-r1.ebuild, gnucash-2.2.3.ebuild:
+  Remove old ebuilds. Fixed guile and slib dependencies.
 
   19 Feb 2008; Christoph Mende <angelos@gentoo.org> gnucash-2.2.3.ebuild:
   Stable on amd64, bug #210471

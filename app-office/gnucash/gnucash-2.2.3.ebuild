@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.3.ebuild,v 1.6 2008/02/19 19:58:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.3.ebuild,v 1.7 2008/02/20 12:26:52 tove Exp $
 
 inherit autotools eutils gnome2
 
@@ -17,8 +17,8 @@ KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="ofx hbci chipcard debug quotes"
 
 RDEPEND=">=dev-libs/glib-2.6.3
-	|| ( ( >=dev-scheme/guile-1.8.3 >=dev-scheme/slib-3.1.4  )
-	     (  <dev-scheme/guile-1.8.3  =dev-scheme/slib-3.1.1* ) )
+	>=dev-scheme/guile-1.8.3
+	>=dev-scheme/slib-3.1.4
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/popt-1.5
 	>=x11-libs/gtk+-2.10
