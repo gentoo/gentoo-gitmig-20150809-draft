@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libgeotiff
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.21 2008/02/04 17:58:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.22 2008/02/21 14:20:26 armin76 Exp $
+
+  21 Feb 2008; Raúl Porcel <armin76@gentoo.org> libgeotiff-1.2.4.ebuild:
+  alpha/sparc/x86 stable
 
   04 Feb 2008; Samuli Suominen <drac@gentoo.org> libgeotiff-1.2.4.ebuild:
   Fix installing with USE -python, was skipping straight to die. Replace
