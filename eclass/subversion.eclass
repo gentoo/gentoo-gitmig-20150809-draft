@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.53 2008/02/21 13:38:36 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.54 2008/02/21 16:01:53 zlin Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -154,7 +154,7 @@ ESCM_LOGDIR="${ESCM_LOGDIR:=}"
 #   repo_uri    - a repository URI. default is ESVN_REPO_URI.
 #   destination - a check out path in S.
 subversion_fetch() {
-	local repo_uri="$(subversion__get_repository_uri "${1}")"
+	local repo_uri="$(subversion__get_repository_uri "${1:-${ESVN_REPO_URI}}")"
 	local revision="$(subversion__get_peg_revision "${1:-${ESVN_REPO_URI}}")"
 	local S_dest="${2}"
 
@@ -348,7 +348,7 @@ subversion_src_unpack() {
 # The working copy information on the specified repository URI are set to
 # ESVN_WC_* variables.
 subversion_wc_info() {
-	local repo_uri="$(subversion__get_repository_uri "${1}")"
+	local repo_uri="$(subversion__get_repository_uri "${1:-${ESVN_REPO_URI}}")"
 	local wc_path="$(subversion__get_wc_path "${repo_uri}")"
 
 	debug-print "${FUNCNAME}: repo_uri = ${repo_uri}"
@@ -383,7 +383,7 @@ subversion__svn_info() {
 #
 # param $1 - a repository URI.
 subversion__get_repository_uri() {
-	 local repo_uri="${1:-${ESVN_REPO_URI}}"
+	 local repo_uri="${1}"
 
 	debug-print "${FUNCNAME}: repo_uri = ${repo_uri}"
 
