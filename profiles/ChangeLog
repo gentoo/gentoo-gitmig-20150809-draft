@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1139 2008/02/21 03:44:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1140 2008/02/21 17:32:13 ulm Exp $
+
+  21 Feb 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Remove mask for x11-libs/openmotif-2.3.0-r1.
 
   21 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> base/package.use:
   Adding slang to package.use for app-misc/mc since we ship with USE=unicode

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8304 2008/02/21 15:58:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8305 2008/02/21 17:32:13 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -82,10 +82,6 @@ www-apps/bugs-bug-genie
 # Masked due to constant security bugs.
 # https://bugs.gentoo.org/show_bug.cgi?id=168529
 www-apps/wordpress
-
-# Ulrich Mueller <ulm@gentoo.org> (14 Feb 2008)
-# Unslotted openmotif, needs testing.
-=x11-libs/openmotif-2.3.0-r1
 
 # Mike Auty <ikelos@gentoo.org> (12 Feb 2008)
 # Masked for testing
