@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.0.ebuild,v 1.2 2007/10/17 14:09:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.0.ebuild,v 1.3 2008/02/21 15:52:00 markusle Exp $
 
 inherit fortran flag-o-matic
 
-DESCRIPTION="IT++ is a C++ library of mathematical, signal processing, speech processing, and communications classes and functions"
+DESCRIPTION="C++ library of mathematical, signal/speech processing, and communications classes and functions"
 LICENSE="GPL-2"
 HOMEPAGE="http://itpp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
