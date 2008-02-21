@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ucl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.25 2008/02/05 10:11:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.26 2008/02/21 13:58:00 armin76 Exp $
+
+  21 Feb 2008; Raúl Porcel <armin76@gentoo.org> ucl-1.03.ebuild:
+  alpha/ia64/sparc/x86 stable
 
   05 Feb 2008; Markus Rothe <corsair@gentoo.org> ucl-1.03.ebuild:
   Stable on ppc64
