@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libiec61883
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.23 2008/01/30 15:41:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.24 2008/02/21 10:49:34 armin76 Exp $
+
+  21 Feb 2008; Raúl Porcel <armin76@gentoo.org> libiec61883-1.1.0.ebuild:
+  sparc stable
 
   30 Jan 2008; Raúl Porcel <armin76@gentoo.org> libiec61883-1.1.0.ebuild:
   Add ~sparc wrt #206759

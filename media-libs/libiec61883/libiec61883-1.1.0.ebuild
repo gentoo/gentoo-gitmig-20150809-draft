@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/libiec61883-1.1.0.ebuild,v 1.10 2008/01/30 15:41:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/libiec61883-1.1.0.ebuild,v 1.11 2008/02/21 10:49:34 armin76 Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -14,7 +14,7 @@ SRC_URI="http://www.linux1394.org/dl/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="examples"
 
 RDEPEND=">=sys-libs/libraw1394-1.2.1"
