@@ -1,5 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evtouch/xf86-input-evtouch-0.8.7.ebuild,v 1.2 2008/02/21 20:52:32 cardoe Exp $
 
 inherit x-modular autotools
 
@@ -12,10 +13,10 @@ KEYWORDS="~amd64 ~arm ~x86"
 
 RDEPEND="<x11-base/xorg-server-1.4"
 DEPEND="${RDEPEND}
-		|| ( >=sys-kernel/linux-headers-2.6 >=sys-kernel/mips-headers-2.6 )
-        x11-proto/inputproto
-        x11-proto/randrproto
-        x11-proto/xproto"
+	|| ( >=sys-kernel/linux-headers-2.6 >=sys-kernel/mips-headers-2.6 )
+	x11-proto/inputproto
+	x11-proto/randrproto
+	x11-proto/xproto"
 
 # necessary to prevent x-modular.eclass' version from running
 src_unpack() {
