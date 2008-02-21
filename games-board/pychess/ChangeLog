@@ -1,0 +1,10 @@
+# ChangeLog for games-board/pychess
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.1 2008/02/21 05:55:03 mr_bones_ Exp $
+
+*pychess-0.8 (21 Feb 2008)
+
+  21 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +pychess-0.8.ebuild:
+  initial commit - ebuild submitted by Tim Harder via bug #161494
+
