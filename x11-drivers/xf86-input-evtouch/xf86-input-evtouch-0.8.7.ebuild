@@ -1,6 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evtouch/xf86-input-evtouch-0.8.7.ebuild,v 1.2 2008/02/21 20:52:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evtouch/xf86-input-evtouch-0.8.7.ebuild,v 1.3 2008/02/21 22:52:41 cardoe Exp $
+
+SNAPSHOT="yes"
+XDPVER=-1
 
 inherit x-modular autotools
 
@@ -18,26 +21,9 @@ DEPEND="${RDEPEND}
 	x11-proto/randrproto
 	x11-proto/xproto"
 
-# necessary to prevent x-modular.eclass' version from running
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${PN}-evcalibrate-path.patch
-
-	eautoreconf
-}
-
-src_compile() {
-	econf --enable-evcalibrate \
-		--enable-udevinstall || die "configure failed"
-	emake || die "emake failed"
-}
-
-src_install() {
-	x-modular_src_install
-	dodoc README README.calibration TODO
-}
+PATCHES="${FILESDIR}/${PN}-evcalibrate-path.patch"
+CONFIGURE_OPTIONS="--enable-evcalibrate --enable-udevinstall"
+DOCS="README README.calibration TODO"
 
 pkg_postinst() {
 	einfo
