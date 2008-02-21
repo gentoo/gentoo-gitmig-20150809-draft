@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.3-r2.ebuild,v 1.8 2008/02/19 19:53:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.3-r2.ebuild,v 1.9 2008/02/21 13:02:57 hkbst Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -79,6 +79,6 @@ pkg_config() {
 	fi
 }
 
-pkg_prerm() {
+_pkg_prerm() {
 	rm -f "${ROOT}"/usr/share/guile/site/slibcat
 }
