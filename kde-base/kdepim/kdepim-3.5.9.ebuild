@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.9.ebuild,v 1.1 2008/02/20 22:52:54 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.9.ebuild,v 1.2 2008/02/21 17:16:10 ingmar Exp $
 
 EAPI="1"
 inherit kde-dist
@@ -32,6 +32,8 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	x11-proto/scrnsaverproto
 	x11-apps/xhost"
+
+PATCHES="${FILESDIR}/certmanager-${PV}-fix-kdeenablefinal.patch"
 
 src_unpack() {
 	kde_src_unpack

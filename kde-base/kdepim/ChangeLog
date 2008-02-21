@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.301 2008/02/20 22:52:54 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.302 2008/02/21 17:16:10 ingmar Exp $
+
+  21 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +files/certmanager-3.5.9-fix-kdeenablefinal.patch, kdepim-3.5.9.ebuild:
+  Fix compilation with USE="kdeenablefinal", bug 210954.
 
 *kdepim-3.5.9 (20 Feb 2008)
 
