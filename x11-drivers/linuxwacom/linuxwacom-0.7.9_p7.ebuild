@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.9_p7.ebuild,v 1.1 2008/02/12 22:29:19 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.9_p7.ebuild,v 1.2 2008/02/21 12:57:38 rbu Exp $
 
 inherit eutils autotools toolchain-funcs linux-mod
 
@@ -14,9 +14,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-RDEPEND="|| ( ( x11-proto/inputproto
-		x11-base/xorg-server )
-		  virtual/x11 )
+RDEPEND="x11-proto/inputproto
+	x11-base/xorg-server
 	media-libs/libpixman
 	gtk? ( >=x11-libs/gtk+-2 )
 	tcl? ( dev-lang/tcl )
