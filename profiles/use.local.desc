@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3368 2008/02/20 07:58:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3369 2008/02/21 11:33:40 fordfrog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -415,6 +415,7 @@ dev-java/jruby:bsf - Enable support for Apache Bean Scripting Framework
 dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
 dev-java/log4j:jmx - Build org.apace.log4j.jmx
+dev-java/proguard:j2me - Adds support for J2ME Wireless Toolkit
 dev-java/quartz:dbcp - Enable dbcp support
 dev-java/quartz:jboss - Enable JBoss support
 dev-java/quartz:jmx - Enable jmx support
