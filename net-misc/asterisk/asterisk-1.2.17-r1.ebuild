@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.17-r1.ebuild,v 1.4 2008/02/12 12:43:14 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.17-r1.ebuild,v 1.5 2008/02/21 18:14:20 welp Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -33,7 +33,7 @@ S_BRI="${WORKDIR}/bristuff-${BRI_VERSION}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc sparc x86"
 
 RDEPEND="dev-libs/newt
 	media-sound/sox
