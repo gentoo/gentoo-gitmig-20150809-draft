@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.84 2008/02/02 17:56:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.85 2008/02/21 16:16:17 chainsaw Exp $
+
+  21 Feb 2008; Tony Vroon <chainsaw@gentoo.org>
+  audacious-plugins-1.4.4.ebuild, audacious-plugins-1.4.5.ebuild:
+  Add missing libflac dependency, as pointed out by Laurent Bardin
+  <laurent.bardin@gmail.com> in bug #208250.
 
 *audacious-plugins-1.4.5 (02 Feb 2008)
 

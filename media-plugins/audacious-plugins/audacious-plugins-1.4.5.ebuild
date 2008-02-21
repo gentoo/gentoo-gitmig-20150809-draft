@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.4.5.ebuild,v 1.1 2008/02/02 17:56:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.4.5.ebuild,v 1.2 2008/02/21 16:16:17 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -28,7 +28,8 @@ RDEPEND="app-arch/unzip
 	arts? ( kde-base/arts )
 	dbus? ( >=dev-libs/dbus-glib-0.60 )
 	esd? ( >=media-sound/esound-0.2.30 )
-	flac? ( >=media-libs/libvorbis-1.0 )
+	flac? ( >=media-libs/libvorbis-1.0
+		>=media-libs/flac-1.2.1-r1 )
 	jack? ( >=media-libs/bio2jack-0.4
 		media-sound/jack-audio-connection-kit )
 	lirc? ( app-misc/lirc )
