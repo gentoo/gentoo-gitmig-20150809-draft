@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/systemsim-cell/systemsim-cell-3.0.ebuild,v 1.1 2008/02/12 18:19:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/systemsim-cell/systemsim-cell-3.0-r1.ebuild,v 1.1 2008/02/21 20:30:03 corsair Exp $
 
 inherit rpm eutils
 
@@ -31,14 +31,11 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	rpm_unpack $DISTDIR/${A}
+	rpm_unpack "$DISTDIR"/${A}
 
 	# fix the path to the images. we don't want them in /opt
 	sed -i -e "s:\${SYSTEMSIM_TOP}/images:${IMAGE_PATH}:" \
 		"${WORKDIR}"/"${SYSTEMSIM_DIR}"/bin/systemsim || die "sed error"
-
-	# fix the path to the file that 'overlaps' the image
-	epatch "${FILESDIR}/${P}-cowdiskname.patch"
 }
 
 src_compile() {
@@ -60,6 +57,4 @@ src_install() {
 pkg_postinst() {
 	elog "The provided systemsim doesn't have kernel and system images, please"
 	elog "install them in ${IMAGE_PATH}/cell"
-	elog "Use the COWDISKNAME environment variable to change the file"
-	elog "'overlapping' the image. Default (not set) is \$HOME/sysroot_disk.cow"
 }
