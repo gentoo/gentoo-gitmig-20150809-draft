@@ -1,6 +1,12 @@
 # ChangeLog for games-server/nwn-ded
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/ChangeLog,v 1.17 2008/02/20 07:35:16 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/ChangeLog,v 1.18 2008/02/21 18:37:51 calchan Exp $
+
+*nwn-ded-1.68-r1 (21 Feb 2008)
+
+  21 Feb 2008; Denis Dupeyron <calchan@gentoo.org> +nwn-ded-1.68-r1.ebuild:
+  Rewrote the ebuild. Multi-language installs are now possible. Added
+  Japanese. Bug #191763 got fixed on the way.
 
   20 Feb 2008; Denis Dupeyron <calchan@gentoo.org> nwn-ded-1.66.ebuild,
   nwn-ded-1.67.ebuild, nwn-ded-1.68.ebuild:
