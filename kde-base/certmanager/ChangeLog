@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/certmanager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.95 2008/02/20 22:31:25 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.96 2008/02/21 15:55:08 ingmar Exp $
+
+  21 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +files/certmanager-3.5.9-no-kdeenablefinal.patch,
+  certmanager-3.5.9.ebuild:
+  Fix compilation with USE="kdeenablefinal", bug 210954.
 
 *certmanager-3.5.9 (20 Feb 2008)
 
