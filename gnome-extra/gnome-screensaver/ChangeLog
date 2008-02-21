@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-screensaver
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.62 2007/12/12 03:03:34 leio Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.63 2008/02/21 14:04:25 leio Exp $
+
+*gnome-screensaver-2.20.0-r1 (21 Feb 2008)
+
+  21 Feb 2008; Mart Raudsepp <leio@gentoo.org>
+  +files/gnome-screensaver-2.20.0-fix-gamma.patch,
+  +gnome-screensaver-2.20.0-r1.ebuild:
+  Improve gamma restoring, bug 201019. Thanks to Pacho Ramos
 
   12 Dec 2007; Mart Raudsepp <leio@gentoo.org>
   gnome-screensaver-2.20.0.ebuild:
