@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.54 2008/02/21 16:01:53 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.55 2008/02/21 16:33:09 zlin Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -434,13 +434,14 @@ subversion__get_peg_revision() {
 }
 
 # @FUNCTION: subversion_pkg_preinst
+# @USAGE: [repo_uri]
 # @DESCRIPTION:
 # Log the svn revision of source code. Doing this in pkg_preinst because we
 # want the logs to stick around if packages are uninstalled without messing with
 # config protection.
 subversion_pkg_preinst() {
 	local pkgdate=$(date "+%Y%m%d %H:%M:%S")
-	subversion_wc_info
+	subversion_wc_info "${1:-${ESVN_REPO_URI}}"
 	if [[ -n ${ESCM_LOGDIR} ]]; then
 		local dir="${ROOT}/${ESCM_LOGDIR}/${CATEGORY}"
 		if [[ ! -d ${dir} ]]; then
