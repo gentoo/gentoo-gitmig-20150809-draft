@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.29 2008/01/16 10:44:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.30 2008/02/21 15:18:19 armin76 Exp $
+
+  21 Feb 2008; Raúl Porcel <armin76@gentoo.org> arc-5.21o.ebuild:
+  alpha/sparc/x86 stable
 
 *arc-5.21o (16 Jan 2008)
 
