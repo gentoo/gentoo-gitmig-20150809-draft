@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-neon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.8 2008/02/21 14:44:28 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.9 2008/02/21 16:31:04 drac Exp $
+
+  21 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  -gst-plugins-neon-0.10.5.4.ebuild:
+  Remove unused version, it used a weird version number.
 
 *gst-plugins-neon-0.10.6 (21 Feb 2008)
 
