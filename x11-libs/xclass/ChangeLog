@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xclass
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.20 2007/12/31 18:45:55 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.21 2008/02/21 14:23:53 armin76 Exp $
+
+  21 Feb 2008; Raúl Porcel <armin76@gentoo.org> xclass-0.8.2-r2.ebuild:
+  alpha/sparc stable
 
   31 Dec 2007; Raúl Porcel <armin76@gentoo.org> xclass-0.8.2-r2.ebuild:
   Re-add dropped keywords for no reason
