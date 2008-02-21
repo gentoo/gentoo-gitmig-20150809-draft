@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.31 2008/02/01 16:26:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.32 2008/02/21 16:02:46 chainsaw Exp $
+
+  21 Feb 2008; Tony Vroon <chainsaw@gentoo.org> -libmowgli-0.1.5.ebuild,
+  -libmowgli-0.2.0.ebuild, -libmowgli-0.3.0.ebuild, -libmowgli-0.3.1.ebuild,
+  -libmowgli-0.4.0.ebuild, libmowgli-0.5.0.ebuild, libmowgli-0.6.0.ebuild,
+  libmowgli-0.6.1.ebuild:
+  Change atheme-project.org back to atheme.org now that the matters with
+  Network Solutions have been resolved. Closes bug #207522 by Stian Skjelstad
+  <stian@nixia.no>. Clean up old ebuilds.
 
 *libmowgli-0.6.1 (01 Feb 2008)
 

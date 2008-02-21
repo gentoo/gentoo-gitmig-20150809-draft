@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/libmowgli-0.6.1.ebuild,v 1.1 2008/02/01 16:26:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/libmowgli-0.6.1.ebuild,v 1.2 2008/02/21 16:02:46 chainsaw Exp $
 
 DESCRIPTION="High-performance C development framework. Can be used stand-alone or as a supplement to GLib."
-HOMEPAGE="http://www.atheme-project.org/projects/mowgli.shtml"
+HOMEPAGE="http://www.atheme.org/projects/mowgli.shtml"
 SRC_URI="http://distfiles.atheme.org/${P}.tgz"
 IUSE="examples"
 
