@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.3 2008/02/15 00:16:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.4 2008/02/21 04:10:34 wolf31o2 Exp $
 
-# genkernel-9999		-> latest SVN
-# genkernel-9999.REV	-> use SVN REV
-# genkernel-VERSION		-> normal genkernel release
+# genkernel-9999        -> latest SVN
+# genkernel-9999.REV    -> use SVN REV
+# genkernel-VERSION     -> normal genkernel release
 
 VERSION_DMAP='1.02.22'
 VERSION_DMRAID='1.0.0.rc14'
