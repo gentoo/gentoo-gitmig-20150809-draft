@@ -1,14 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ibm-powerpc-utils-papr-1.0.4.ebuild,v 1.1 2008/01/05 20:48:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ibm-powerpc-utils-papr-1.0.4.ebuild,v 1.2 2008/02/21 18:34:51 ranger Exp $
 
 inherit eutils
 
 MY_P="powerpc-utils-papr-${PV}"
 
-DESCRIPTION="The powerpc-utils-papr package provides the utilities listed below
-which are intended for the maintenance of IBM powerpc platforms that follow the
-POWER Architecture Platform Reference"
+DESCRIPTION="This package provides the utilities which are intended for the maintenance of IBM powerpc platforms."
 SRC_URI="http://powerpc-utils.ozlabs.org/releases/powerpc-utils-papr-${PV}.tar.gz"
 HOMEPAGE="http://powerpc-utils.ozlabs.org/"
 
@@ -24,8 +22,8 @@ RDEPEND=">=sys-apps/ibm-powerpc-utils-1.0.3
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/ibm-powerpc-utils-papr-1.0.4-remove-doc.patch
-	epatch ${FILESDIR}/ibm-powerpc-utils-papr-1.0.4-removeinitandvscsis.patch
+	epatch "${FILESDIR}"/ibm-powerpc-utils-papr-1.0.4-remove-doc.patch
+	epatch "${FILESDIR}"/ibm-powerpc-utils-papr-1.0.4-removeinitandvscsis.patch
 }
 
 src_install() {
