@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.6 2008/02/14 19:26:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.7 2008/02/21 15:11:21 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nedit/${P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~mips ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~mips ppc sparc x86 ~x86-fbsd"
 IUSE="spell"
 
 RDEPEND="spell? ( virtual/aspell-dict )

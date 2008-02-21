@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nedit
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.51 2008/02/14 19:26:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.52 2008/02/21 15:11:21 ulm Exp $
+
+  21 Feb 2008; Ulrich Mueller <ulm@gentoo.org> -nedit-5.5.ebuild,
+  nedit-5.5-r1.ebuild:
+  Stable on amd64, bug 209925. Remove old revision.
 
   14 Feb 2008; nixnut <nixnut@gentoo.org> nedit-5.5-r1.ebuild:
   Stable on ppc wrt bug 209925
