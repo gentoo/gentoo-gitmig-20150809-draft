@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.0.0-r1.ebuild,v 1.1 2008/01/21 09:25:05 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.0.0-r1.ebuild,v 1.2 2008/02/21 18:23:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -15,8 +15,7 @@ IUSE="X juju"
 
 DEPEND=">=sys-libs/libraw1394-1.2.0
 		juju? ( >=sys-kernel/linux-headers-2.6.23-r3 )
-		X? ( || ( ( x11-libs/libSM x11-libs/libXv )
-				  virtual/x11 ) )"
+		X? ( x11-libs/libSM x11-libs/libXv )"
 
 src_compile() {
 	local myconf=""
