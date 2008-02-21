@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.160 2008/01/16 19:51:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.161 2008/02/21 14:34:54 cardoe Exp $
+
+*cairo-1.5.8 (21 Feb 2008)
+
+  21 Feb 2008; Doug Klima <cardoe@gentoo.org> +cairo-1.5.8.ebuild:
+  appears I forgot to commit 1.5.8
 
 *cairo-1.5.6 (16 Jan 2008)
 *cairo-1.4.14 (16 Jan 2008)
