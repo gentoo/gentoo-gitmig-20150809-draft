@@ -1,14 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ibm-powerpc-utils-1.0.0.ebuild,v 1.3 2006/04/19 01:14:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ibm-powerpc-utils-1.0.0.ebuild,v 1.4 2008/02/21 18:29:43 ranger Exp $
 
 inherit eutils
 
 MY_P="powerpc-utils-${PV}"
 
-DESCRIPTION="The powerpc-utils package provides utilities for the maintainance
-of the IBM and Apple powerpc platforms.  It includes nvram, bootlist,
-ofpathname, and snap."
+DESCRIPTION="This package provides utilities for the maintainance
+of the IBM and Apple powerpc platforms. "
 SRC_URI="http://powerpc-utils.ozlabs.org/releases/${MY_P}.tar.gz"
 HOMEPAGE="http://powerpc-utils.ozlabs.org/"
 
@@ -24,7 +23,7 @@ RDEPEND="!sys-apps/ppc64-utils"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/ibm-powerpc-utils-1.0.0-remove-doc.patch
+	epatch "${FILESDIR}"/ibm-powerpc-utils-1.0.0-remove-doc.patch
 }
 
 src_install() {
