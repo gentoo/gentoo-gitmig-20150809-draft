@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.57 2008/01/23 15:37:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.58 2008/02/21 17:16:51 tester Exp $
+
+  21 Feb 2008; <tester@gentoo.org> mpeg4ip-1.5.0.1-r4.ebuild:
+  Add build-time dep on gtk/alsalib/glib to be able to rebuild aclocal.m4
 
   23 Jan 2008; Olivier Crête <tester@gentoo.org> mpeg4ip-1.5.0.1-r1.ebuild,
   mpeg4ip-1.5.0.1-r3.ebuild, mpeg4ip-1.5.0.1-r4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r4.ebuild,v 1.2 2008/01/23 15:37:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r4.ebuild,v 1.3 2008/02/21 17:16:51 tester Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -38,6 +38,10 @@ RDEPEND=" media-libs/libsdl
 	!<media-libs/faad2-2.0-r9 "
 
 DEPEND="${RDEPEND}
+	>=x11-libs/gtk+-2
+	media-libs/alsa-lib
+	>=dev-libs/glib-2
+	dev-util/pkgconfig
 	player? ( mmx? ( >=dev-lang/nasm-0.98.19 ) )"
 
 pkg_setup() {
