@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.5-r1.ebuild,v 1.4 2008/02/03 14:59:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.5-r1.ebuild,v 1.5 2008/02/21 23:54:54 robbat2 Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://graphlcd.berlios.de/"
 SRC_URI="http://download.berlios.de/graphlcd/${P}.tgz
 		mirror://vdrfiles/${PN}/${P}_utf8.diff.tgz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="truetype unicode g15"

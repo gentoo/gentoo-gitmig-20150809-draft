@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/glcdprocdriver
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/ChangeLog,v 1.8 2007/04/17 23:28:46 rbu Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/ChangeLog,v 1.9 2008/02/21 23:54:30 robbat2 Exp $
+
+  21 Feb 2008; Robin H. Johnson <robbat2@gentoo.org>
+  glcdprocdriver-0.0.4.ebuild:
+  Add ~ppc.
 
 *glcdprocdriver-0.0.4 (17 Apr 2007)
 
