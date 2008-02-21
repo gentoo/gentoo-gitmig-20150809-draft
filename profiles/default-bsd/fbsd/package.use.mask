@@ -77,3 +77,9 @@ www-client/epiphany spell
 # The following new swig USE flags are not supported (yet):
 dev-lang/swig clisp
 dev-lang/swig chicken
+
+# Diego Pettenò <flameeyes@gentoo.org> (21 Feb 2008)
+# ConsoleKit's PAM module only works on Linux right now.
+# pam_cracklib is only provided by Linux-PAM which is not usable on
+# Gentoo/FreeBSD.
+sys-auth/pambase consolekit cracklib

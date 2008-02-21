@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.17 2008/01/29 22:15:12 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.18 2008/02/21 21:09:10 flameeyes Exp $
+
+  21 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> fbsd/package.use.mask:
+  Mask consolekit and cracklib USE flags for pambase.
 
   29 Jan 2008; Peter Weller <welp@gentoo.org> package.mask:
   package.mask >=app-shells/bash-3.2_p25 due to portage blockages
