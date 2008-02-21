@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.40.ebuild,v 1.7 2008/02/17 08:38:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.40.ebuild,v 1.8 2008/02/21 15:54:02 chutzpah Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -24,7 +24,7 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# dnsmasq on FreeBSD wants the config file in a silly location, this fixes
 	epatch "${FILESDIR}/${PN}-fbsd-config.patch"
@@ -58,6 +58,6 @@ src_install() {
 
 	if use resolvconf ; then
 		exeinto /etc/resolvconf/update.d
-		newexe ${FILESDIR}/resolvconf.dnsmasq dnsmasq
+		newexe "${FILESDIR}"/resolvconf.dnsmasq dnsmasq
 	fi
 }
