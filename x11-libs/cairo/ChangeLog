@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.162 2008/02/21 14:37:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.163 2008/02/21 14:43:19 cardoe Exp $
+
+  21 Feb 2008; Doug Klima <cardoe@gentoo.org>
+  -files/cairo-1.5.4-fix-private.patch:
+  remove stale patch
 
 *cairo-1.5.10 (21 Feb 2008)
 
