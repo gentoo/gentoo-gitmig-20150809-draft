@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/g15composer
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/ChangeLog,v 1.16 2007/05/01 10:14:03 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/ChangeLog,v 1.17 2008/02/21 17:14:13 chainsaw Exp $
+
+*g15composer-3.2 (21 Feb 2008)
+
+  21 Feb 2008; Tony Vroon <chainsaw@gentoo.org>
+  +files/g15composer-3.2.confd, +files/g15composer-3.2.initd, metadata.xml,
+  +g15composer-3.2.ebuild:
+  Version bump as requested by Efimov Vadim <evadim@evadim.ru>, closes bug
+  #208775.
 
   01 May 2007; Markus Rothe <corsair@gentoo.org> g15composer-3.1.ebuild:
   Added ~ppc64; bug #175120
