@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080219.1.ebuild,v 1.2 2008/02/20 00:06:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080221.ebuild,v 1.1 2008/02/21 20:35:00 flameeyes Exp $
 
 inherit eutils
 
@@ -21,6 +21,8 @@ RDEPEND="
 		)
 	)
 	cracklib? ( >=sys-libs/pam-0.99 )
+	consolekit? ( sys-auth/consolekit )
+	gnome? ( >=gnome-base/gnome-keyring-2.20 )
 	selinux? ( >=sys-libs/pam-0.99 )
 	!<sys-freebsd/freebsd-pam-modules-6.2-r1
 	!<sys-libs/pam-0.99.9.0-r1"
@@ -42,6 +44,20 @@ pkg_setup() {
 		eerror "first."
 		die "Missing pam_selinux"
 	fi
+
+	if use consolekit && ! built_with_use sys-auth/consolekit pam; then
+		eerror "To enable ConsoleKit support in the main PAM configuration"
+		eerror "you need to enable pam USE flag on sys-auth/consolekit"
+		eerror "first."
+		die "Missing pam_ck_connector"
+	fi
+
+	if use gnome && ! built_with_use gnome-base/gnome-keyring pam; then
+		eerror "To enable GNOME Keyring support in the main PAM configuration"
+		eerror "you need to enable pam USE flag on gnome-base/gnome-keyring"
+		eerror "first."
+		die "Missing pam_gnome_keyring"
+	fi
 }
 
 src_compile() {
@@ -51,6 +67,8 @@ src_compile() {
 	emake \
 		DEBUG=$(use debug && echo yes || echo no) \
 		CRACKLIB=$(use cracklib && echo yes || echo no) \
+		CONSOLEKIT=$(use consolekit && echo yes || echo no) \
+		GNOME_KEYRING=$(use gnome && echo yes || echo no) \
 		SELINUX=$(use selinux && echo yes || echo no) \
 		IMPLEMENTATION=${implementation} \
 		|| die "emake failed"

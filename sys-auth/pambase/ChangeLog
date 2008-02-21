@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.4 2008/02/20 00:06:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.5 2008/02/21 20:35:00 flameeyes Exp $
+
+*pambase-20080221 (21 Feb 2008)
+
+  21 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  -pambase-20080219.1.ebuild, +pambase-20080221.ebuild:
+  Bump pambase, now it supports gnome and consolekit USE flags that allows it
+  to enable by default GNOME keyring (all sessions) and ConsoleKit (local
+  sessions).
 
   20 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
   pambase-20080219.1.ebuild:
