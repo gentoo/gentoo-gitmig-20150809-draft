@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.31 2008/02/21 16:49:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.32 2008/02/21 19:14:53 coldwind Exp $
+
+  21 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> arc-5.21o.ebuild:
+  amd64 stable wrt bug #210983
 
   21 Feb 2008; nixnut <nixnut@gentoo.org> arc-5.21o.ebuild:
   Stable on ppc wrt bug 210983
