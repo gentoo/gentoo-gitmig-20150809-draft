@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.5 2008/02/21 20:35:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.6 2008/02/21 20:51:08 flameeyes Exp $
+
+  21 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  pambase-20080221.ebuild:
+  Forgot to add flags to IUSE.
 
 *pambase-20080221 (21 Feb 2008)
 
