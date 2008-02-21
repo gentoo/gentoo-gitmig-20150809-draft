@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ddd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.49 2007/11/14 05:54:56 robbat2 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.50 2008/02/21 19:54:49 ulm Exp $
+
+  21 Feb 2008; Ulrich Mueller <ulm@gentoo.org> ddd-3.3.11.ebuild:
+  Explicitely depend on x11-libs/openmotif wrt bug 193505.
 
   14 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> ddd-3.3.11.ebuild:
   ddd had some parallel-compile blips. Build in two passes, with headers
