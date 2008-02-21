@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2004g.ebuild,v 1.12 2008/02/21 23:28:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2004g.ebuild,v 1.13 2008/02/21 23:32:05 robbat2 Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -27,13 +27,13 @@ src_unpack() {
 	unpack ${A}
 
 	# Tarball packed with bad file perms
-	chmod -R ug+w ${S}
+	chmod -R ug+w "${S}"
 
 	# lots of things need -fPIC, including various platforms, and this library
 	# generally should be built with it anyway.
 	append-flags -fPIC
 
-	cd ${S}
+	cd "${S}"
 
 	# Modifications so we can build it optimally and correctly
 	sed \
@@ -47,11 +47,11 @@ src_unpack() {
 		-i src/osdep/unix/Makefile || die "Makefile sex fixing failed for FreeBSD"
 
 	# Apply a patch to only build the stuff we need for c-client
-	epatch ${FILESDIR}/2002d-Makefile.patch || die "epatch failed"
+	epatch "${FILESDIR}"/2002d-Makefile.patch || die "epatch failed"
 
 	# Apply patch to add the compilation of a .so for PHP
 	# This was previously conditional, but is more widely useful.
-	epatch ${FILESDIR}/${PN}-2004a-amd64-so-fix.patch
+	epatch "${FILESDIR}"/${PN}-2004a-amd64-so-fix.patch
 
 	# Remove the pesky checks about SSL stuff
 	sed -e '/read.*exit/d' -i Makefile
@@ -67,7 +67,7 @@ src_compile() {
 		target=bsf
 	fi
 	# no parallel builds supported!
-	make $target SSLTYPE=${ssltype} EXTRACFLAGS="${CFLAGS}" || die "make failed"
+	emake -j1 $target SSLTYPE=${ssltype} EXTRACFLAGS="${CFLAGS}" || die "make failed"
 }
 
 src_install() {
