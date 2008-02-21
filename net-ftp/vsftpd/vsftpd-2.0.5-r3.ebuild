@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.5-r3.ebuild,v 1.2 2007/07/09 12:40:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.5-r3.ebuild,v 1.3 2008/02/21 17:28:50 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,7 +31,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-2.0.3-gentoo.patch"
 
 	# Fix building without the libcap
-	epatch "${FILESDIR}/${P}-caps.patch"
+	! use caps && epatch "${FILESDIR}/${P}-caps.patch"
 
 	# Fix anon umask uploads, #183213.
 	epatch "${FILESDIR}/${P}-anon-upload-umask.patch"
