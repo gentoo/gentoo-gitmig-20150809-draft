@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.89 2007/11/13 22:50:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.90 2008/02/21 22:50:51 cardoe Exp $
 #
 # Author: Donnie Berkholz <dberkholz@gentoo.org>
 #
@@ -367,6 +367,7 @@ x-modular_src_install() {
 	if [[ -e ${S}/ChangeLog ]]; then
 		dodoc ${S}/ChangeLog
 	fi
+	[[ -n $DOCS ]] && dodoc $DOCS
 
 	# Make sure docs get compressed
 	prepalldocs
