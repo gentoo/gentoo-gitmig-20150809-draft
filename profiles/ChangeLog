@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1141 2008/02/21 20:36:35 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1142 2008/02/21 21:02:21 flameeyes Exp $
+
+  21 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
+  Add consolekit USE flag for pambase.
 
   21 Feb 2008; <tester@gentoo.org> package.mask:
   Remove sys-auth/pam_keyring, its out of the tree
