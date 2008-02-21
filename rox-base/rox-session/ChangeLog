@@ -1,6 +1,12 @@
 # ChangeLog for rox-base/rox-session
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.33 2008/01/18 13:41:05 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.34 2008/02/21 13:51:26 lack Exp $
+
+*rox-session-0.30-r4 (21 Feb 2008)
+
+  21 Feb 2008; Jim Ramsay <lack@gentoo.org>
+  +files/rox-session-0.30-logging.patch, +rox-session-0.30-r4.ebuild:
+  Added patch from upstream which fixes bug #202797
 
   18 Jan 2008; Jim Ramsay <lack@gentoo.org> rox-session-0.30-r3.ebuild:
   rox-session expects to be able to use xgamma and xset (Bug #202797)
