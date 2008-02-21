@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-0.4.9.ebuild,v 1.4 2007/11/11 06:57:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-0.4.9.ebuild,v 1.5 2008/02/21 23:51:35 robbat2 Exp $
 
 DESCRIPTION="A collection of several tools related to OpenPGP"
 HOMEPAGE="http://pgp-tools.alioth.debian.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://debian/pool/main/s/signing-party/signing-party_${PV}.orig.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~ppc"
 IUSE="iconv recode"
 
 DEPEND=""
