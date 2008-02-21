@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kedit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kedit/ChangeLog,v 1.77 2008/02/20 22:58:21 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kedit/ChangeLog,v 1.78 2008/02/21 00:39:29 zlin Exp $
+
+  21 Feb 2008; Bo Ørsted Andresen <zlin@gentoo.org> kedit-3.5.9.ebuild:
+  Because Ingmar fails at sed the desktop entry was still invalid.
 
 *kedit-3.5.9 (20 Feb 2008)
 

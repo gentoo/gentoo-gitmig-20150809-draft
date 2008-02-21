@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kedit/kedit-3.5.9.ebuild,v 1.1 2008/02/20 22:58:21 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kedit/kedit-3.5.9.ebuild,v 1.2 2008/02/21 00:39:29 zlin Exp $
 
 KMNAME=kdeutils
 EAPI="1"
@@ -12,7 +12,7 @@ IUSE="kdehiddenvisibility"
 
 src_compile() {
 	kde-meta_src_compile
-	sed -e "/^Categories/s/=.*$/Qt;KDE;Utility;TextEditor;/" \
+	sed -e "/^Categories/s/=.*$/=Qt;KDE;Utility;TextEditor;/" \
 		-e "/Mimetype/s/$/;/" -i "${S}"/${PN}/KEdit.desktop \
 		|| die "Sed to fix .desktop entry failed."
 }
