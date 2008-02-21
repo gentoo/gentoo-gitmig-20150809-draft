@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.8_rc1.ebuild,v 1.1 2008/02/20 07:56:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.8_rc1.ebuild,v 1.2 2008/02/21 20:44:13 pva Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
@@ -67,6 +67,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.99.7-asneeded.patch
+	epatch "${FILESDIR}"/${PN}-0.99.8-as-needed.patch
 
 	cd "${S}"/epan
 	epatch "${FILESDIR}"/wireshark-except-double-free.diff

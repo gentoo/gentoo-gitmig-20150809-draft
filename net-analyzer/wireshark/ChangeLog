@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.78 2008/02/20 07:56:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.79 2008/02/21 20:44:13 pva Exp $
+
+  21 Feb 2008; <pva@gentoo.org> +files/wireshark-0.99.8-as-needed.patch,
+  wireshark-0.99.8_rc1.ebuild:
+  Fixed regression: compilation failure with --as-needed, bug 210998, reported
+  by Mike Auty and Hanno Böck.
 
 *wireshark-0.99.8_rc1 (20 Feb 2008)
 
