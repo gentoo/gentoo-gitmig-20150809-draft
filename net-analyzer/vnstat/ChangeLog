@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.29 2008/02/05 11:02:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.30 2008/02/21 18:06:49 nixnut Exp $
+
+  21 Feb 2008; nixnut <nixnut@gentoo.org> vnstat-1.6.ebuild:
+  Stable on ppc wrt bug 210843
 
   05 Feb 2008; Markus Rothe <corsair@gentoo.org> vnstat-1.6.ebuild:
   Stable on ppc64
