@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.9.ebuild,v 1.1 2008/02/20 22:27:35 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.9.ebuild,v 1.2 2008/02/21 17:42:17 ingmar Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils multilib
@@ -57,8 +57,7 @@ RDEPEND="${RDEPEND}
 	x11-apps/iceauth"
 
 PDEPEND="avahi? ( kde-misc/kdnssd-avahi )
-	bindist? ( kde-misc/kdnssd-avahi )
-	|| ( kde-base/kdebase:${SLOT} kde-base/konqueror:${SLOT} )"
+	bindist? ( kde-misc/kdnssd-avahi )"
 
 # Testing code is rather broken and merely for developer purposes, so disable it.
 RESTRICT="test"
