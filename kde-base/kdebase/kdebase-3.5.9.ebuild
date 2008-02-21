@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.9.ebuild,v 1.1 2008/02/20 22:46:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.9.ebuild,v 1.2 2008/02/21 13:22:01 ingmar Exp $
 
 EAPI="1"
 inherit multilib kde-dist eutils flag-o-matic
@@ -68,6 +68,8 @@ need-kde 3.5.8
 
 EPATCH_EXCLUDE="ksmserver-3.5.8-ksmserver_suspend.diff
 				ksmserver-3.5.8-suspend_configure.diff"
+
+PATCHES="${FILESDIR}/kdm-${PV}-respect-cflags.patch"
 
 pkg_setup() {
 	kde_pkg_setup

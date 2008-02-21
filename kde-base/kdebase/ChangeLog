@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.433 2008/02/20 22:46:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.434 2008/02/21 13:22:01 ingmar Exp $
+
+  21 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +files/kdm-3.5.9-respect-cflags.patch, kdebase-3.5.9.ebuild:
+  Added a patch for bug 181441, thanks to Arfrever Frehtes Taifersar Arahesis.
 
 *kdebase-3.5.9 (20 Feb 2008)
 
