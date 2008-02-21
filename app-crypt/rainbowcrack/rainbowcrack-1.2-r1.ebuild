@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.2-r1.ebuild,v 1.3 2007/11/11 07:00:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.2-r1.ebuild,v 1.4 2008/02/21 23:49:20 robbat2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,8 @@ SRC_URI="http://www.antsight.com/zsl/rainbowcrack/${P}-src.zip
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 x86"
+# contains ix86 ASM
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl"
@@ -40,7 +41,7 @@ src_test() {
 	einfo "sorting tables"
 	./rtsort *.rt
 	einfo "attempting crack of 7 character random sha1 lowercase passwords"
-	./rcrack ./*.rt -l random_sha1_loweralpha#1-7.hash
+	./rcrack ./*.rt -l 'random_sha1_loweralpha#1-7.hash'
 	einfo "I haven't rigged this so it finds anything yet. Submissions welcome bugs.gentoo.org"
 }
 
