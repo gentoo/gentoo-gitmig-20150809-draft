@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.52 2008/02/20 22:35:40 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.53 2008/02/21 13:38:36 zlin Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -154,7 +154,7 @@ ESCM_LOGDIR="${ESCM_LOGDIR:=}"
 #   repo_uri    - a repository URI. default is ESVN_REPO_URI.
 #   destination - a check out path in S.
 subversion_fetch() {
-	local repo_uri="$(subversion__get_repository_uri "${1:-${ESVN_REPO_URI}}")"
+	local repo_uri="$(subversion__get_repository_uri "${1}")"
 	local revision="$(subversion__get_peg_revision "${1:-${ESVN_REPO_URI}}")"
 	local S_dest="${2}"
 
@@ -209,6 +209,9 @@ subversion_fetch() {
 	debug-print "${FUNCNAME}: options = \"${options}\""
 
 	if [[ ! -d ${wc_path}/.svn ]]; then
+		if [[ -n ${ESVN_OFFLINE} ]]; then
+			ewarn "ESVN_OFFLINE cannot be used when the there is no existing checkout."
+		fi
 		# first check out
 		einfo "subversion check out start -->"
 		einfo "     repository: ${repo_uri}${revision:+@}${revision}"
@@ -380,7 +383,7 @@ subversion__svn_info() {
 #
 # param $1 - a repository URI.
 subversion__get_repository_uri() {
-	local repo_uri="${1}"
+	 local repo_uri="${1:-${ESVN_REPO_URI}}"
 
 	debug-print "${FUNCNAME}: repo_uri = ${repo_uri}"
 
