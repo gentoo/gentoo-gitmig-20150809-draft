@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_LDAP
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP/ChangeLog,v 1.4 2008/02/11 20:57:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP/ChangeLog,v 1.5 2008/02/21 07:47:05 opfer Exp $
+
+  21 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  PEAR-Net_LDAP-1.0.0.ebuild:
+  stable x86, security bug 209960
 
 *PEAR-Net_LDAP-1.1.0_alpha2 (11 Feb 2008)
 
