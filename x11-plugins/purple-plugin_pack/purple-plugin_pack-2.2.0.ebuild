@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.2.0.ebuild,v 1.5 2008/02/19 22:45:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.2.0.ebuild,v 1.6 2008/02/21 20:29:57 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.guifications.org/plugins/Plugin%20Pack/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc x86"
+KEYWORDS="~amd64 hppa ~ppc x86"
 IUSE="talkfilters debug gtk ncurses"
 
 DEPEND="net-im/pidgin
