@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/putty
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.36 2007/12/27 12:35:29 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.37 2008/02/21 17:51:08 nixnut Exp $
+
+  21 Feb 2008; nixnut <nixnut@gentoo.org> putty-0.60.ebuild:
+  Stable on ppc wrt bug 211007
 
 *putty-0.60 (27 Dec 2007)
 
