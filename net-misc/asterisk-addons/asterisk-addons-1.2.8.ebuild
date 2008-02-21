@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.2.5.ebuild,v 1.1 2007/01/17 18:55:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.2.8.ebuild,v 1.1 2008/02/21 04:07:47 rajiv Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -14,14 +14,14 @@ MY_P="${P/_/-}"
 
 DESCRIPTION="Additional Plugins for Asterisk"
 HOMEPAGE="http://www.asterisk.org/"
-SRC_URI="http://ftp.digium.com/pub/asterisk/${MY_P}.tar.gz
+SRC_URI="http://downloads.digium.com/pub/asterisk/old-releases/${MY_P}.tar.gz
 	 sqlite? ( http://www.sqlite.org/sqlite-${SQLITE_PV}.tar.gz )"
 
 S=${WORKDIR}/${MY_P}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 DEPEND=">=net-misc/asterisk-1.2.0
 	mysql? ( virtual/mysql )"
@@ -69,9 +69,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1.2.3-gentoo-ooh323c.diff
 
 	# patch from jaervosz for uclibc
-	use elibc_uclibc && \
+	if use elibc_uclibc; then
 		epatch ${FILESDIR}/${PN}-1.2.2-uclibc.diff
-
+		epatch ${FILESDIR}/${PN}-1.2.4-uclibc.diff
+	fi
 	# patch sqlite
 	if use sqlite; then
 		cd ${WORKDIR}/sqlite-${SQLITE_PV}
@@ -141,7 +142,7 @@ src_install() {
 	if use h323; then
 		cd ${S}/asterisk-ooh323c
 		docinto chan_ooh323c
-		dodoc AUTHORS INSTALL NEWS README COPYING ChangeLog
+		dodoc AUTHORS INSTALL NEWS README ChangeLog
 		dodoc h323.conf.sample extensions.conf.sample
 
 		insinto /etc/asterisk
@@ -156,19 +157,15 @@ src_install() {
 		newins configs/res_mysql.conf.sample res_mysql.conf
 	fi
 
-	einfo "Fixing permissions"
-	chown -R root:asterisk ${D}etc/asterisk
-	chmod -R u=rwX,g=rX,o= ${D}etc/asterisk
-
-#	chown -R asterisk:asterisk ${D}var/lib/asterisk
-#	chmod -R u=rwX,g=rX,o=     ${D}var/lib/asterisk
+	if use h323 || use mysql; then
+		einfo "Fixing permissions"
+		chown -R root:asterisk ${D}etc/asterisk
+		chmod -R u=rwX,g=rX,o= ${D}etc/asterisk
+	fi
 }
 
 pkg_postinst() {
-	#
-	# Announcements, warnings, reminders...
-	#
-	einfo "********* Some notes from the asterisk-addons-1.2.5 readme: **********"
+	einfo "********* Some notes from the asterisk-addons readme: **********"
 	echo
 	ewarn "\"Using res_config_mysql at the same time as res_config_odbc can create"
 	ewarn "system instability on some systems.  Please load only one or the other.\""
