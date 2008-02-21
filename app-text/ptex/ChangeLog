@@ -1,6 +1,21 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.78 2008/02/14 16:05:47 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.79 2008/02/21 16:27:08 matsuu Exp $
+
+  21 Feb 2008; MATSUU Takuto <matsuu@gentoo.org>
+  -files/xpdf-2.02pl1-CAN-2005-3191-3.patch,
+  -files/xpdf-3.00pl2-CAN-2004-1125.patch,
+  -files/xpdf-3.00pl3-CAN-2005-0064.patch, -files/20fmtutil-platex.cnf,
+  -files/xdvi-xorg-7.0.patch, -files/20updmap-ja.cfg,
+  -files/ptex-3.1.5-dvi-draw-conflicting-types.patch,
+  -files/ptex-3.1.5-flex-unput.patch,
+  -files/xpdf-CESA-2004-007-xpdf2-newer.diff, -files/20texmf-cmap.cnf,
+  -files/10texmf-ptex.cnf, -files/ptex-xdvi-vfontmap-ja-ipafonts,
+  -files/ptex-xdvi-vfontmap-kochi-substitute, -files/xdvizilla.patch,
+  -files/xpdf-goo-sizet.patch, -files/xpdf2-underflow.patch,
+  -ptex-3.1.5-r1.ebuild, -ptex-3.1.10_p20071214.ebuild,
+  -ptex-3.1.10_p20080107.ebuild:
+  Removed old versions.
 
 *ptex-3.1.10_p20080128 (14 Feb 2008)
 
