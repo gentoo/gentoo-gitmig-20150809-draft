@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usermode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/ChangeLog,v 1.6 2008/01/31 06:30:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/ChangeLog,v 1.7 2008/02/21 21:03:51 flameeyes Exp $
+
+  21 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> usermode-1.93.ebuild:
+  Add dependency over sys-apps/shadow and check if it was built with pam USE
+  flag enabled. Closes bug #210859.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -usermode-1.86.ebuild, -usermode-1.87.ebuild, -usermode-1.92.ebuild:

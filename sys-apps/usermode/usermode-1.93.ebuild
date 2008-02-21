@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/usermode-1.93.ebuild,v 1.1 2007/10/15 10:38:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/usermode-1.93.ebuild,v 1.2 2008/02/21 21:03:51 flameeyes Exp $
 
-inherit flag-o-matic rpm autotools
+inherit flag-o-matic rpm autotools eutils
 
 # Tag for which Fedora Core version it's from
 FCVER="8"
@@ -25,10 +25,22 @@ RDEPEND="=dev-libs/glib-2*
 	dev-util/desktop-file-utils
 	sys-libs/system-config-base
 	>=sys-libs/pam-0.75
+	sys-apps/shadow
 	dev-perl/XML-Parser
 	sys-libs/libuser"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
+
+pkg_setup() {
+	if ! built_with_use sys-apps/shadow pam; then
+		eerror "${CATEGORY}/${PN} depends on the chfn and passwd PAM service"
+		eerror "configuration files installed by sys-apps/shadow with PAM"
+		eerror "enabled."
+		eerror "Please re-install sys-apps/shadow with the pam USE flag"
+		eerror "enabled."
+		die "sys-apps/shadow was built without PAM support."
+	fi
+}
 
 src_unpack() {
 	rpm_src_unpack
