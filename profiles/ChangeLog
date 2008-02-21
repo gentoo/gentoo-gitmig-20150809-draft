@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1138 2008/02/20 20:26:40 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1139 2008/02/21 03:44:17 wolf31o2 Exp $
+
+  21 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> base/package.use:
+  Adding slang to package.use for app-misc/mc since we ship with USE=unicode
+  almost universally.
 
   20 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org> package.mask:
   Masked qtruby and korundum because both are currently broken.
