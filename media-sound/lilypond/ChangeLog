@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.73 2007/12/16 13:46:33 hkbst Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.74 2008/02/21 14:11:49 armin76 Exp $
+
+  21 Feb 2008; Raúl Porcel <armin76@gentoo.org> lilypond-2.10.33.ebuild:
+  alpha/sparc/x86 stable
 
   16 Dec 2007; Marijn Schouten <hkBst@gentoo.org> ChangeLog:
   remove crufty versions
