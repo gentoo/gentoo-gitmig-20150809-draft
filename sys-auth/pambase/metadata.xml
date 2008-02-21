@@ -12,6 +12,17 @@
       crackable. It requires the same USE flag to be enabled on
       <pkg>sys-libs/pam</pkg> or system login might be impossible.
     </flag>
+    <flag name="consolekit">
+      Enable pam_ck_connector module on local system logins. This
+      allows for console logins to make use of ConsoleKit
+      authorization.
+    </flag>
+    <flag name="gnome">
+      Enable pam_gnome_keyring module on system login stack. This
+      enables proper Gnome Keyring access to logins, whether they are
+      done with the login shell, a Desktop Manager or a remote login
+      systems such as SSH.
+    </flag>
     <flag name="debug">
       Enable debug information logging on syslog(3) for all the
       modules supporting this in the system authentication and system
