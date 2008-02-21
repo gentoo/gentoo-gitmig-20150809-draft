@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.45.ebuild,v 1.6 2008/01/06 22:34:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.45.ebuild,v 1.7 2008/02/21 18:16:36 mr_bones_ Exp $
 
 inherit eutils multilib
 
@@ -22,11 +22,8 @@ DEPEND="
 				www-client/epiphany
 				net-libs/xulrunner
 		)
-		|| ( ( x11-libs/libXpm
-				x11-proto/xextproto
-			)
-			virtual/x11
-		)
+		x11-libs/libXpm
+		x11-proto/xextproto
 		gtk? (
 			>=x11-libs/gtk+-2.2.0
 			dev-libs/atk
