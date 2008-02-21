@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-3.1.0.ebuild,v 1.1 2008/02/18 21:28:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-3.1.0.ebuild,v 1.2 2008/02/21 07:40:08 vapier Exp $
 
 MY_PV=${PV%.?}-${PV##*.}
 MY_PV=${PV}
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 #		josua? ( >=net-libs/ortp-0.7.1 )"
-DEPEND=">=net-libs/libosip-3.0.3"
+DEPEND=">=net-libs/libosip-3.1.0"
 
 S=${WORKDIR}/${MY_P}
 
