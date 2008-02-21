@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2004g.ebuild,v 1.11 2007/08/25 14:32:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2004g.ebuild,v 1.12 2008/02/21 23:28:53 robbat2 Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -20,7 +20,7 @@ IUSE="ssl pam kernel_linux kernel_FreeBSD"
 RDEPEND="ssl? ( dev-libs/openssl )
 	!virtual/imap-c-client"
 DEPEND="${RDEPEND}
-	pam? ( >=sys-libs/pam-0.72 )"
+	kernel_linux? ( pam? ( >=sys-libs/pam-0.72 ) )"
 PROVIDE="virtual/imap-c-client"
 
 src_unpack() {
