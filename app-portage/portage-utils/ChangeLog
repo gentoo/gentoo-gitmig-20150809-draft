@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.93 2008/02/22 15:22:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.94 2008/02/22 15:58:25 solar Exp $
+
+  22 Feb 2008; <solar@gentoo.org> portage-utils-0.1.29.ebuild:
+  - stable amd64
 
   22 Feb 2008; Raúl Porcel <armin76@gentoo.org>
   portage-utils-0.1.29.ebuild:
