@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.42 2008/02/16 17:11:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.43 2008/02/22 07:32:03 opfer Exp $
+
+  22 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  icaclient-10.6-r2.ebuild:
+  remove blocker on x11-libs/openmotif versions less than 2.3.0 and remove an
+  unnecessary line
 
 *icaclient-10.6-r2 (16 Feb 2008)
 

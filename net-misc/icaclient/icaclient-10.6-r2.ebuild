@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r2.ebuild,v 1.1 2008/02/16 17:11:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r2.ebuild,v 1.2 2008/02/22 07:32:03 opfer Exp $
 
 inherit eutils multilib rpm
 
@@ -33,7 +33,6 @@ RDEPEND="virtual/libc
 		x11-libs/libSM
 		x11-libs/libICE )
 	>=x11-libs/openmotif-2.3.0
-	!<x11-libs/openmotif-2.3.0
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 DEPEND="${RDEPEND}"
 
@@ -103,8 +102,6 @@ src_install() {
 
 	insinto /usr/$(get_libdir)/nsbrowser/plugins
 	dosym /usr/$(get_libdir)/libXm.so.4 /opt/ICAClient/libXm.so.3
-
-	dosym /usr/$(get_libdir)/libXm.so /usr/$(get_libdir)/libXm.so.3
 
 	# The .desktop file included in the rpm links to /usr/lib, so we make a new
 	# one.  The program gives errors and has slowdowns if the locale is not
