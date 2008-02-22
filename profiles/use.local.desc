@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3372 2008/02/22 16:40:39 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3373 2008/02/22 18:10:22 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -779,55 +779,19 @@ kde-base/kalzium:cviewer - Enable Kalzium compound viewer
 kde-base/kalzium:solver - Enable the equation solver
 kde-base/kbugbuster:kcal - Support for kcal (calendar) format
 kde-base/kcontrol:logitech-mouse - Build the Control Center module to configure logitech mice
-kde-base/kdeaccessibility:ktts - Enable KDE Text To Speech modules
 kde-base/kdeadmin-meta:lilo - Install lilo-config, a frontend for the lilo boot loader
-kde-base/kdeadmin:lilo - Install lilo-config, a frontend for the lilo boot loader
-kde-base/kdebase:captury - Enable the 'Capture'-plugin in kwin
 kde-base/kdebase:logitech-mouse - Build the Control Center module to configure logitech mice
-kde-base/kdebase:usb - Configure USB and logitech mice
-kde-base/kdeedu:cviewer - Enable Kalzium compound viewer
-kde-base/kdeedu:designer-plugin - Enable designer plugin
-kde-base/kdeedu:fits - Enable support for the FITS image format through cfitsio
 kde-base/kdeedu:kig-scripting - Support Python scripting in kig
-kde-base/kdeedu:nova - Enable support for libnova
-kde-base/kdeedu:sbig - Enable support for SBIG
 kde-base/kdeedu:solver - Enable Kalzium ocaml equation solver
 kde-base/kdegraphics-meta:povray - Install KPovModeler, which needs POV-Ray
-kde-base/kdegraphics:chm - Enable Okular support for Microsoft Compiled HTML Help files
 kde-base/kdegraphics:povray - Install KPovModeler, which needs POV-Ray
 kde-base/kdelibs:legacyssl - Support for some deprecated ciphers. Don't use this flag unless you really need it
-kde-base/kdelibs:pcre - Provide better regular expression support in K java script (KJS)
 kde-base/kdelibs:semantic-desktop - Semantic desktop allows for storage of digital information and its metadata to allow the user to express his personal mental models, making all information become intuitively accessible
 kde-base/kdelibs:utempter - Records user logins. Useful on multi-user systems
 kde-base/kdemultimedia:akode - Support for the aKode audio-decoding frame-work
-kde-base/kdemultimedia:tunepimp - Provide MusicBrainz tagging in Juk
-kde-base/kdenetwork:addbookmarks - Builds Add Bookmarks plugin
-kde-base/kdenetwork:alias - Builds Alias plugin
-kde-base/kdenetwork:autoreplace - Builds Auto-Replace plugin
-kde-base/kdenetwork:contactnotes - Builds Contact Notes plugin
-kde-base/kdenetwork:gadu - Builds GaduGadu protocol handler
-kde-base/kdenetwork:groupwise - Enable the groupwise protocol plugin in Kopete
-kde-base/kdenetwork:highlight - Builds Highlight plugin
-kde-base/kdenetwork:history - Builds history plugin
-kde-base/kdenetwork:nowlistening - Builds Now Listening... plugin
-kde-base/kdenetwork:plasma - Build optional plasma widgets
-kde-base/kdenetwork:ppp - Builds kppp, a dialer and front-end to pppd
-kde-base/kdenetwork:privacy - plugin to selectively filter messages
-kde-base/kdenetwork:qq - enable support for the chinese network protocol
 kde-base/kdenetwork:sametime - Support for the Sametime protocol for instant messaging
-kde-base/kdenetwork:sms - Enable the sms protocol plugin in Kopete
-kde-base/kdenetwork:statistics - Builds statistics plugin
-kde-base/kdenetwork:testbed - Enable the testbed protocol plugin
-kde-base/kdenetwork:texteffect - Builds Text Effect plugin
-kde-base/kdenetwork:translator - Builds Translator plugin
-kde-base/kdenetwork:urlpicpreview - plugin to allow users to send photos through URLs
-kde-base/kdenetwork:webpresence - Builds Web Presence plugin
-kde-base/kdenetwork:winpopup - Builds WinPopUp protocol handler
 kde-base/kdepim:gnokii - Address synchronization with mobile phones via Gnokii
-kde-base/kdeutils:archive - Enable support for a variety of archive formats through libarchive
 kde-base/kdeutils:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd
-kde-base/kdeutils:tpctl - Enable support for Thinkpad system control
-kde-base/kdeutils:zip - Enable zip support through LibZip
 kde-base/kget:plasma - Build optional plasma widgets
 kde-base/kig:kig-scripting - Support Python scripting
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd
@@ -1888,10 +1852,10 @@ sci-physics/root:pch - Enable precompiled header support for faster compilation 
 sci-visualization/hippodraw:fits - Add FITS format support to hippodraw, via cfitsio
 sci-visualization/hippodraw:numarray - Add numarray python array support
 sci-visualization/hippodraw:root - Add root i/o, and minuit support
+sci-visualization/labplot:R - Enable R support
 sci-visualization/labplot:cdf - Adds cdf data exchange format support
 sci-visualization/labplot:kexi - Import and export data from/to MySQL, PostgreSQL etc. via Kexi (app-office/kexi).
 sci-visualization/labplot:qhull - Adds media-libs/qhull (geometric extensions) support
-sci-visualization/labplot:R - Enable R support
 sci-visualization/opendx:cdf - Adds cdf data exchange format support
 sci-visualization/opendx:hdf - Adds support for the Hierarchical Data Format
 sci-visualization/veusz:fits - Adds FITS format format, via pyfits
