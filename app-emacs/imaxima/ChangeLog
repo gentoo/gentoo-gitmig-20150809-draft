@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/imaxima
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.15 2007/11/23 07:21:37 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.16 2008/02/22 14:06:56 ulm Exp $
+
+*imaxima-0.99 (22 Feb 2008)
+
+  22 Feb 2008; Ulrich Mueller <ulm@gentoo.org> -imaxima-0.97a.ebuild,
+  imaxima-0.98-r1.ebuild, +imaxima-0.99.ebuild:
+  Version bump. Change TeX dependency to virtual/latex-base. Remove old.
 
 *imaxima-0.98-r1 (23 Nov 2007)
 
