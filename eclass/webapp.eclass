@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.55 2008/02/22 14:33:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.56 2008/02/22 14:44:16 hollow Exp $
 #
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -448,22 +448,32 @@ webapp_pkg_prerm() {
 
 	local x
 	if ! use vhosts; then
-
-		for x in ${my_output}; do
-			[[ -f ${x}/.webapp ]] && . ${x}/.webapp || ewarn "Cannot find file ${x}/.webapp"
-			if [[ -n "${WEB_HOSTNAME}" && -n "${WEB_INSTALLDIR}" ]]; then
-				${WEBAPP_CONFIG} -C -h ${WEB_HOSTNAME} -d ${WEB_INSTALLDIR}
+		echo "${my_output}" | while read x; do
+			if [[ -f "${x}"/.webapp ]]; then
+				. "${x}"/.webapp
+				if [[ -n "${WEB_HOSTNAME}" && -n "${WEB_INSTALLDIR}" ]]; then
+					${WEBAPP_CONFIG} -C -h ${WEB_HOSTNAME} -d ${WEB_INSTALLDIR}
+				fi
+			else
+				ewarn "Cannot find file ${x}/.webapp"
 			fi
 		done
-	else
-
+	elif [[ "${my_output}" != "" ]]; then
+		echo
+		ewarn
 		ewarn "Don't forget to use webapp-config to remove any copies of"
 		ewarn "${PN}-${PVR} installed in"
 		ewarn
 
-		for x in ${my_output}; do
-			[[ -f ${x}/.webapp ]] && . ${x}/.webapp || ewarn "Cannot find file ${x}/.webapp"
-			ewarn "    ${x}"
+		echo "${my_output}" | while read x; do
+			if [[ -f "${x}"/.webapp ]]; then
+				ewarn "    ${x}"
+			else
+				ewarn "Cannot find file ${x}/.webapp"
+			fi
 		done
+
+		ewarn
+		echo
 	fi
 }
