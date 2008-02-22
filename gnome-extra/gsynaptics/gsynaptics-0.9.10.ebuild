@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/gsynaptics-0.9.10.ebuild,v 1.4 2007/12/23 22:10:27 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/gsynaptics-0.9.10.ebuild,v 1.5 2008/02/22 05:06:37 compnerd Exp $
 
 inherit gnome2
 
@@ -13,10 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2.6.0
-		>=gnome-base/libglade-2
-		>=gnome-base/libgnomeui-2"
-RDEPEND="${DEPEND}
+RDEPEND=">=x11-libs/gtk+-2.6.0
+		 >=gnome-base/libglade-2
+		 >=gnome-base/libgnomeui-2"
+DEPEND="${DEPEND}
 		 >=dev-util/pkgconfig-0.19
 		 sys-devel/gettext"
 

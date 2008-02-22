@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gsynaptics
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/ChangeLog,v 1.11 2008/01/06 03:28:54 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/ChangeLog,v 1.12 2008/02/22 05:06:37 compnerd Exp $
+
+  22 Feb 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  gsynaptics-0.9.10.ebuild, gsynaptics-0.9.13-r1.ebuild:
+  Fix depends (bug #204923)
 
 *gsynaptics-0.9.13-r1 (06 Jan 2008)
 
