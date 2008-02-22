@@ -1,9 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.17-r1.ebuild,v 1.11 2008/02/15 17:16:55 mr_bones_ Exp $
-
-WANT_AUTOCONF=2.5
-WANT_AUTOMAKE=1.9
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.17-r1.ebuild,v 1.12 2008/02/22 13:27:43 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -32,6 +29,8 @@ src_unpack() {
 	epatch "${WORKDIR}/${P}+flac-1.1.3.patch"
 	epatch "${FILESDIR}/${P}-ogg.patch"
 	epatch "${FILESDIR}/${P}-flac-buffer-overflow.patch"
+	epatch "${FILESDIR}/${P}-dontbuild-tests-examples.patch"
+	epatch "${FILESDIR}/${P}-regtests-need-sqlite.patch"
 	eautoreconf
 	epunt_cxx
 }
@@ -49,7 +48,4 @@ src_compile() {
 src_install() {
 	emake -j1 DESTDIR="${D}" htmldocdir="/usr/share/doc/${PF}/html" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README TODO
-	# Only prints following message: "This program was not compiled
-	# with libsqlite3 and hence doesn't work." wrt bug #210161.
-	use sqlite || rm -f "${D}"/usr/bin/sndfile-regtest
 }
