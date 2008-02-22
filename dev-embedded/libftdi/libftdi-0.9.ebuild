@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.9.ebuild,v 1.1 2007/04/11 21:18:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.9.ebuild,v 1.2 2008/02/22 22:03:32 maekke Exp $
 
 DESCRIPTION="Userspace access to FTDI USB interface chips"
 HOMEPAGE="http://www.intra2net.com/opensource/ftdi/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.intra2net.com/opensource/ftdi/TGZ/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND=">=dev-libs/libusb-0.1.7
@@ -16,7 +16,7 @@ DEPEND=">=dev-libs/libusb-0.1.7
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e "s/^SUBDIRS = src examples doc/SUBDIRS = src doc/" ${S}/Makefile.in
+	sed -i -e "s/^SUBDIRS = src examples doc/SUBDIRS = src doc/" "${S}"/Makefile.in
 }
 
 src_install() {

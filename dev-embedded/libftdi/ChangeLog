@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/libftdi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.15 2008/02/22 19:53:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.16 2008/02/22 22:03:32 maekke Exp $
+
+  22 Feb 2008; Markus Meier <maekke@gentoo.org> libftdi-0.9.ebuild:
+  x86 stable, bug #211127, add quotes
 
 *libftdi-0.10 (22 Feb 2008)
 
