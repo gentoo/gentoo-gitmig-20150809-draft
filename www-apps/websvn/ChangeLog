@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.22 2008/02/19 16:54:58 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.23 2008/02/22 16:07:36 hollow Exp $
+
+  22 Feb 2008; Benedikt Böhm <hollow@gentoo.org> websvn-2.0.ebuild:
+  add need_httpd_cgi wrt #208584
 
   19 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
   websvn-2.0.ebuild:
