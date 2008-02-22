@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.51 2008/02/22 13:44:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.52 2008/02/22 13:53:38 hollow Exp $
 #
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -48,9 +48,7 @@ webapp_read_config() {
 webapp_checkfileexists() {
 	debug-print-function $FUNCNAME $*
 
-	local my_prefix
-
-	[ -n "${2}" ] && my_prefix="${2}/" || my_prefix=
+	local my_prefix=${2:+${2}/}
 
 	if [ ! -e "${my_prefix}${1}" ]; then
 		msg="ebuild fault: file '${1}' not found"
@@ -67,17 +65,17 @@ webapp_check_installedat() {
 
 webapp_strip_appdir() {
 	debug-print-function $FUNCNAME $*
-	echo "${1}" | sed -e "s|${MY_APPDIR}/||g;"
+	echo "${1#${MY_APPDIR}/}"
 }
 
 webapp_strip_d() {
 	debug-print-function $FUNCNAME $*
-	echo "${1}" | sed -e "s|${D}||g;"
+	echo "${1#${D}}"
 }
 
 webapp_strip_cwd() {
 	debug-print-function $FUNCNAME $*
-	echo "${1}" | sed -e 's|/./|/|g;'
+	echo "${1/#.\///}"
 }
 
 webapp_getinstalltype() {
@@ -231,12 +229,7 @@ webapp_server_configfile() {
 	# do NOT change the naming convention used here without changing all
 	# the other scripts that also rely upon these names
 
-	local my_file
-	if [ -z "${3}" ]; then
-		my_file="${1}-$(basename "${2}")"
-	else
-		my_file="${1}-${3}"
-	fi
+	local my_file="${1}-${3:-$(basename "${2}")}"
 
 	elog "(${1}) config file '${my_file}'"
 	cp "${2}" "${D}/${MY_SERVERCONFIGDIR}/${my_file}"
