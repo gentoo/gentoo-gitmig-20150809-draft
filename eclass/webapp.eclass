@@ -1,26 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.48 2007/01/03 20:16:39 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.49 2008/02/22 09:33:45 hollow Exp $
 #
-# eclass/webapp.eclass
-#				Eclass for installing applications to run under a web server
-#
-#				Part of the implementation of GLEP #11
-#
-# Author(s)		Stuart Herbert
-#				Renat Lumpau <rl03@gentoo.org>
-#				Gunnar Wrobel <wrobel@gentoo.org>
-#
-# ------------------------------------------------------------------------
-#
-# The master copy of this eclass is held in our subversion repository.
-# http://svn.gnqs.org/projects/vhost-tools/browser/
-#
-# If you make changes to this file and don't tell us, chances are that
-# your changes will be overwritten the next time we release a new version
-# of webapp-config.
-#
-# ------------------------------------------------------------------------
+# @ECLASS: webapp.eclass
+# @MAINTAINER:
+# web-apps@gentoo.org
+# @BLURB: functions for installing applications to run under a web server
+# @DESCRIPTION:
+# The webapp eclass contains functions to handle web applications with
+# webapp-config. Part of the implementation of GLEP #11
 
 SLOT="${PVR}"
 IUSE="vhosts"
@@ -39,17 +27,13 @@ ETC_CONFIG="${ROOT}/etc/vhosts/webapp-config"
 WEBAPP_CONFIG="${ROOT}/usr/sbin/webapp-config"
 WEBAPP_CLEANER="${ROOT}/usr/sbin/webapp-cleaner"
 
-# ------------------------------------------------------------------------
-# INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
-#
-# Load the config file /etc/vhosts/webapp-config
-#
-# Supports both the old bash version, and the new python version
-#
-# ------------------------------------------------------------------------
+# ==============================================================================
+# INTERNAL FUNCTIONS
+# ==============================================================================
 
-function webapp_read_config ()
-{
+# Load the config file /etc/vhosts/webapp-config
+# Supports both the old bash version, and the new python version
+webapp_read_config() {
 	if has_version '>=app-admin/webapp-config-1.50'; then
 		ENVVAR=$(${WEBAPP_CONFIG} --query ${PN} ${PVR}) || die "Could not read settings from webapp-config!"
 		eval ${ENVVAR}
@@ -58,19 +42,9 @@ function webapp_read_config ()
 	fi
 }
 
-# ------------------------------------------------------------------------
-# INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
-#
-# Check whether a specified file exists within the image/ directory
+# Check whether a specified file exists in the given directory (`.' by default)
 # or not.
-#
-# @param 	$1 - file to look for
-# @param	$2 - prefix directory to use
-# @return	0 on success, never returns on an error
-# ------------------------------------------------------------------------
-
-function webapp_checkfileexists ()
-{
+webapp_checkfileexists() {
 	local my_prefix
 
 	[ -n "${2}" ] && my_prefix="${2}/" || my_prefix=
@@ -83,49 +57,33 @@ function webapp_checkfileexists ()
 	fi
 }
 
-# ------------------------------------------------------------------------
-# INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
-# ------------------------------------------------------------------------
-
-function webapp_check_installedat
-{
-	local my_output
-
+webapp_check_installedat() {
 	${WEBAPP_CONFIG} --show-installed -h localhost -d "${INSTALL_DIR}" 2> /dev/null
 }
 
-# ------------------------------------------------------------------------
-# INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
-#
-# ------------------------------------------------------------------------
-
-function webapp_strip_appdir ()
-{
+webapp_strip_appdir() {
 	local my_stripped="${1}"
 	echo "${1}" | sed -e "s|${MY_APPDIR}/||g;"
 }
 
-function webapp_strip_d ()
-{
+webapp_strip_d() {
 	echo "${1}" | sed -e "s|${D}||g;"
 }
 
-function webapp_strip_cwd ()
-{
+webapp_strip_cwd() {
 	local my_stripped="${1}"
 	echo "${1}" | sed -e 's|/./|/|g;'
 }
 
-# ------------------------------------------------------------------------
-# EXPORTED FUNCTION - FOR USE IN EBUILDS
-#
-# Identify a config file for a web-based application.
-#
-# @param	$1 - config file
-# ------------------------------------------------------------------------
+# ==============================================================================
+# PUBLIC FUNCTIONS
+# ==============================================================================
 
-function webapp_configfile ()
-{
+# @FUNCTION: webapp_configfile
+# @USAGE: <file> [more files ...]
+# @DESCRIPTION:
+# Mark a file config-protected for a web-based application.
+webapp_configfile() {
 	local m=""
 	for m in "$@" ; do
 		webapp_checkfileexists "${m}" "${D}"
@@ -138,17 +96,12 @@ function webapp_configfile ()
 	done
 }
 
-# ------------------------------------------------------------------------
-# EXPORTED FUNCTION - FOR USE IN EBUILDS
-#
+# @FUNCTION: webapp_hook_script
+# @USAGE: <file>
+# @DESCRIPTION:
 # Install a script that will run after a virtual copy is created, and
-# before a virtual copy has been removed
-#
-# @param	$1 - the script to run
-# ------------------------------------------------------------------------
-
-function webapp_hook_script ()
-{
+# before a virtual copy has been removed.
+webapp_hook_script() {
 	webapp_checkfileexists "${1}"
 
 	elog "(hook) ${1}"
@@ -156,55 +109,35 @@ function webapp_hook_script ()
 	chmod 555 "${D}/${MY_HOOKSCRIPTSDIR}/$(basename "${1}")"
 }
 
-# ------------------------------------------------------------------------
-# EXPORTED FUNCTION - FOR USE IN EBUILDS
-#
+# @FUNCTION: webapp_postinst_txt
+# @USAGE: <lang> <file>
+# @DESCRIPTION:
 # Install a text file containing post-installation instructions.
-#
-# @param	$1 - language code (use 'en' for now)
-# @param	$2 - the file to install
-# ------------------------------------------------------------------------
-
-function webapp_postinst_txt ()
-{
+webapp_postinst_txt() {
 	webapp_checkfileexists "${2}"
 
 	elog "(info) ${2} (lang: ${1})"
 	cp "${2}" "${D}/${MY_APPDIR}/postinst-${1}.txt"
 }
 
-# ------------------------------------------------------------------------
-# EXPORTED FUNCTION - FOR USE IN EBUILDS
-#
+# @FUNCTION: webapp_postupgrade_txt
+# @USAGE: <lang> <file>
+# @DESCRIPTION:
 # Install a text file containing post-upgrade instructions.
-#
-# @param	$1 - language code (use 'en' for now)
-# @param	$2 - the file to install
-# ------------------------------------------------------------------------
-
-function webapp_postupgrade_txt ()
-{
+webapp_postupgrade_txt() {
 	webapp_checkfileexists "${2}"
 
 	elog "(info) ${2} (lang: ${1})"
 	cp "${2}" "${D}/${MY_APPDIR}/postupgrade-${1}.txt"
 }
 
-# ------------------------------------------------------------------------
-# EXPORTED FUNCTION - FOR USE IN EBUILDS
-#
-# Identify a file which must be owned by the webserver's user:group
-# settings.
-#
-# The ownership of the file is NOT set until the application is installed
-# using the webapp-config tool.
-#
-# @param	$1 - file to be owned by the webserver user:group combo
-#
-# ------------------------------------------------------------------------
-
-function webapp_serverowned ()
-{
+# @FUNCTION: webapp_serverowned
+# @USAGE: [-R] <file> [more files ...]
+# @DESCRIPTION:
+# Identify a file which must be owned by the webserver's user:group settings.
+# The ownership of the file is NOT set until the application is installed using
+# the webapp-config tool. If -R is given directories are handled recursively.
+webapp_serverowned() {
 	local a=""
 	local m=""
 	if [ "${1}" = "-R" ]; then
@@ -232,22 +165,14 @@ function webapp_serverowned ()
 	fi
 }
 
-# ------------------------------------------------------------------------
-# EXPORTED FUNCTION - FOR USE IN EBUILDS
-#
-# @param	$1 - the webserver to install the config file for
-#			     (one of apache1, apache2, cherokee)
-# @param	$2 - the config file to install
-# @param	$3 - new name for the config file (default is `basename $2`)
-#				 this is an optional parameter
-#
-# NOTE:
-#	this function will automagically prepend $1 to the front of your
-#	config file's name
-# ------------------------------------------------------------------------
-
-function webapp_server_configfile ()
-{
+# @FUNCTION: webapp_server_configfile
+# @USAGE: <server> <file> [new name]
+# @DESCRIPTION:
+# Install a configuration file for the webserver.  You need to specify a
+# webapp-config supported <server>.  if no new name is given `basename $2' is
+# used by default. Note: this function will automagically prepend $1 to the
+# front of your config file's name.
+webapp_server_configfile() {
 	webapp_checkfileexists "${2}"
 
 	# sort out what the name will be of the config file
@@ -269,20 +194,14 @@ function webapp_server_configfile ()
 	cp "${2}" "${D}/${MY_SERVERCONFIGDIR}/${my_file}"
 }
 
-# ------------------------------------------------------------------------
-# EXPORTED FUNCTION - FOR USE IN EBUILDS
-#
-# @param	$1 - the db engine that the script is for
-#				 (one of: mysql|postgres)
-# @param	$2 - the sql script to be installed
-# @param	$3 - the older version of the app that this db script
-#				 will upgrade from
-#				 (do not pass this option if your SQL script only creates
-#				  a new db from scratch)
-# ------------------------------------------------------------------------
-
-function webapp_sqlscript ()
-{
+# @FUNCTION: webapp_sqlscript
+# @USAGE: <db> <file> [version]
+# @DESCRIPTION:
+# Install a SQL script that creates/upgrades a database schema for the web
+# application. Currently supported database engines are mysql and postgres.
+# If a version is given the script should upgrade the database schema from
+# the given version to $PVR.
+webapp_sqlscript() {
 	webapp_checkfileexists "${2}"
 
 	# create the directory where this script will go
@@ -313,16 +232,16 @@ function webapp_sqlscript ()
 	fi
 }
 
-# ------------------------------------------------------------------------
-# EXPORTED FUNCTION - call from inside your ebuild's src_install AFTER
-# everything else has run
-#
-# For now, we just make sure that root owns everything, and that there
-# are no setuid files.
-# ------------------------------------------------------------------------
+# ==============================================================================
+# EXPORTED FUNCTIONS
+# ==============================================================================
 
-function webapp_src_install ()
-{
+# @FUNCTION: webapp_src_install
+# @DESCRIPTION:
+# You need to call this function in src_install() AFTER everything else has run.
+# For now, we just make sure that root owns everything, and that there are no
+# setuid files.
+webapp_src_install() {
 	chown -R "${VHOST_DEFAULT_UID}:${VHOST_DEFAULT_GID}" "${D}/"
 	chmod -R u-s "${D}/"
 	chmod -R g-s "${D}/"
@@ -341,16 +260,11 @@ function webapp_src_install ()
 	touch "${D}/${MY_APPDIR}/${INSTALL_CHECK_FILE}"
 }
 
-# ------------------------------------------------------------------------
-# EXPORTED FUNCTION - call from inside your ebuild's pkg_config AFTER
-# everything else has run
-#
-# If 'vhosts' USE flag is not set, auto-install this app
-#
-# ------------------------------------------------------------------------
-
-function webapp_pkg_setup ()
-{
+# @FUNCTION: webapp_pkg_setup
+# @DESCRIPTION:
+# You need to call this function in pkg_config() AFTER everything else has run.
+# If 'vhosts' USE flag is not set, auto-install this app.
+webapp_pkg_setup() {
 	# add sanity checks here
 
 	# special case - some ebuilds *do* need to overwride the SLOT
@@ -391,8 +305,7 @@ function webapp_pkg_setup ()
 	fi
 }
 
-function webapp_getinstalltype ()
-{
+webapp_getinstalltype() {
 	# or are we upgrading?
 
 	if ! use vhosts ; then
@@ -429,8 +342,7 @@ function webapp_getinstalltype ()
 	fi
 }
 
-function webapp_src_preinst ()
-{
+webapp_src_preinst() {
 	# create the directories that we need
 
 	dodir "${MY_HTDOCSDIR}"
@@ -443,8 +355,7 @@ function webapp_src_preinst ()
 	dodir "${MY_SERVERCONFIGDIR}"
 }
 
-function webapp_pkg_postinst ()
-{
+webapp_pkg_postinst() {
 	webapp_read_config
 
 	# sanity checks, to catch bugs in the ebuild
@@ -514,8 +425,7 @@ function webapp_pkg_postinst ()
 	return 0
 }
 
-function webapp_pkg_prerm ()
-{
+webapp_pkg_prerm() {
 	# remove any virtual installs that there are
 
 	local my_output
