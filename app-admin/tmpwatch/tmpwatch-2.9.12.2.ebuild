@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.12.2.ebuild,v 1.2 2008/02/22 06:46:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.12.2.ebuild,v 1.3 2008/02/22 06:52:11 opfer Exp $
 
 inherit rpm versionator
 
 RPM_P="${PN}-$(replace_version_separator 3 '-')"
 MY_P="${RPM_P%-*}"
 
-DESCRIPTION="Utility recursively searches through specified directories and removes files which have not been accessed in a specified period of time"
+DESCRIPTION="Files which haven't been accessed in a given period of time are removed from specified directories"
 HOMEPAGE="http://download.fedora.redhat.com/pub/fedora/linux/development/source/SRPMS/"
 SRC_URI="http://download.fedora.redhat.com/pub/fedora/linux/development/source/SRPMS/${RPM_P}.src.rpm"
 
