@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.57 2008/02/22 14:59:07 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.58 2008/02/22 15:33:32 hollow Exp $
 #
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -114,6 +114,33 @@ webapp_getinstalltype() {
 # ==============================================================================
 # PUBLIC FUNCTIONS
 # ==============================================================================
+
+# @FUNCTION: need_httpd
+# @DESCRIPTION:
+# Call this function AFTER your ebuild's DEPEND line if any of the available
+# webservers are able to run this application.
+need_httpd() {
+	DEPEND="${DEPEND}
+		|| ( virtual/httpd-basic virtual/httpd-cgi virtual/httpd-fastcgi )"
+}
+
+# @FUNCTION: need_httpd_cgi
+# @DESCRIPTION:
+# Call this function AFTER your ebuild's DEPEND line if any of the available
+# CGI-capable webservers are able to run this application.
+need_httpd_cgi() {
+	DEPEND="${DEPEND}
+		|| ( virtual/httpd-cgi virtual/httpd-fastcgi )"
+}
+
+# @FUNCTION: need_httpd_fastcgi
+# @DESCRIPTION:
+# Call this function AFTER your ebuild's DEPEND line if any of the available
+# FastCGI-capabale webservers are able to run this application.
+need_httpd_fastcgi() {
+	DEPEND="${DEPEND}
+		virtual/httpd-fastcgi"
+}
 
 # @FUNCTION: webapp_configfile
 # @USAGE: <file> [more files ...]
