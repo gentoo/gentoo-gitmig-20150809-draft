@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-1.1.4.ebuild,v 1.1 2007/09/14 11:38:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-1.1.4.ebuild,v 1.2 2008/02/22 14:58:22 caleb Exp $
 
 inherit eutils multilib
 
@@ -108,7 +108,7 @@ EOF
 	dobin "${T}/ejabberd"
 
 	newinitd "${FILESDIR}/${P}.initd" ${PN}
-	newconfd "${FILESDIR}/ejabberd-1.1.3.confd" ${PN}
+	newconfd "${FILESDIR}/ejabberd-1.1.4.confd" ${PN}
 
 	insinto ${JABBER_ETC}
 	doins "${FILESDIR}/inetrc"
