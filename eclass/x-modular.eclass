@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.91 2008/02/22 05:09:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.92 2008/02/22 05:10:03 dberkholz Exp $
 #
 # @ECLASS: x-modular.eclass
 # @MAINTAINER:
@@ -437,7 +437,7 @@ x-modular_src_install() {
 # @VARIABLE: DOCS
 # @DESCRIPTION:
 # Any documentation to install
-	[[ -n $DOCS ]] && dodoc $DOCS
+	[[ -n ${DOCS} ]] && dodoc ${DOCS}
 
 	# Make sure docs get compressed
 	prepalldocs
