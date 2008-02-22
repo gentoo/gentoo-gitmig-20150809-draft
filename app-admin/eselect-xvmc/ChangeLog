@@ -1,10 +1,11 @@
 # ChangeLog for app-admin/eselect-xvmc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.1 2008/02/22 05:28:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.2 2008/02/22 14:44:40 cardoe Exp $
 
 *eselect-xvmc-0.1 (22 Feb 2008)
 
-  22 Feb 2008; Doug Klima <cardoe@gentoo.org> +files/xvmc-0.1.eselect,
-  +metadata.xml, +eselect-xvmc-0.1.ebuild:
+  22 Feb 2008; Doug Klima <cardoe@gentoo.org>
+  +files/eselect-xvmc-0.1.eselect, +metadata.xml,
+  +eselect-xvmc-0.1.ebuild:
   Decided to write an eselect module for XvMCWrapper. First version.
 

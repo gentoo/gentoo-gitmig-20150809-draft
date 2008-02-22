@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: xvmc-0.1.eselect,v 1.1 2008/02/22 05:28:38 cardoe Exp $
+# $Id: eselect-xvmc-0.1.eselect,v 1.1 2008/02/22 14:44:40 cardoe Exp $
 
 DESCRIPTION="Manage the XvMC implementation used by your system"
 MAINTAINER="cardoe@gentoo.org"
-SVN_DATE='$Date: 2008/02/22 05:28:38 $'
+SVN_DATE='$Date: 2008/02/22 14:44:40 $'
 VERSION=$(svn_date_to_version "${SVN_DATE}" )
 
 XVMCLIBS=(
