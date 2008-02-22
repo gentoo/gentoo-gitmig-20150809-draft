@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.10-r1.ebuild,v 1.12 2007/08/07 11:59:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.10-r1.ebuild,v 1.13 2008/02/22 18:13:58 tgurr Exp $
 
 WANT_AUTOMAKE=latest
 
@@ -60,7 +60,7 @@ PROVIDE="virtual/lpr"
 # we just leave it out, even if FEATURES=test
 RESTRICT="test"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	enewgroup lp
@@ -71,10 +71,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# upstream does not acknowledge bindnow as a solution
-	epatch ${FILESDIR}/cups-1.2.0-bindnow.patch
+	epatch "${FILESDIR}"/cups-1.2.0-bindnow.patch
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
@@ -117,29 +117,29 @@ src_compile() {
 }
 
 src_install() {
-	emake BUILDROOT=${D} install || die "emake install failed"
+	emake BUILDROOT="${D}" install || die "emake install failed"
 	dodoc {CHANGES{,-1.{0,1}},CREDITS,LICENSE,README}.txt
 
 	# clean out cups init scripts
-	rm -rf ${D}/etc/{init.d/cups,rc*,pam.d/cups}
+	rm -rf "${D}"/etc/{init.d/cups,rc*,pam.d/cups}
 	# install our init scripts
-	newinitd ${FILESDIR}/cupsd.init cupsd
+	newinitd "${FILESDIR}"/cupsd.init cupsd
 	# install our pam script
 	pamd_mimic_system cups auth account
 
 	# correct path
-	sed -i -e "s:server = .*:server = /usr/libexec/cups/daemon/cups-lpd:" ${D}/etc/xinetd.d/cups-lpd
+	sed -i -e "s:server = .*:server = /usr/libexec/cups/daemon/cups-lpd:" "${D}"/etc/xinetd.d/cups-lpd
 	# it is safer to disable this by default, bug 137130
-	grep -w 'disable' ${D}/etc/xinetd.d/cups-lpd || \
-		sed -i -e "s:}:\tdisable = yes\n}:" ${D}/etc/xinetd.d/cups-lpd
+	grep -w 'disable' "${D}"/etc/xinetd.d/cups-lpd || \
+		sed -i -e "s:}:\tdisable = yes\n}:" "${D}"/etc/xinetd.d/cups-lpd
 
 	# install pdftops filter
 	exeinto /usr/libexec/cups/filter/
-	newexe ${FILESDIR}/pdftops.pl pdftops
+	newexe "${FILESDIR}"/pdftops.pl pdftops
 
 	# only for gs-esp this is correct, see bug 163897
 	if has_version app-text/ghostscript-gpl || has_version app-text/ghostscript-gnu; then
-		sed -i -e "s:#application/vnd.cups-postscript:application/vnd.cups-postscript:" ${D}/etc/cups/mime.convs
+		sed -i -e "s:#application/vnd.cups-postscript:application/vnd.cups-postscript:" "${D}"/etc/cups/mime.convs
 	fi
 
 	keepdir /usr/share/cups/profiles /usr/libexec/cups/driver /var/log/cups \
@@ -147,9 +147,9 @@ src_install() {
 
 	# .desktop handling. X useflag. xdg-open from freedesktop is preferred
 	if use X; then
-		sed -i -e "s:htmlview:xdg-open:" ${D}/usr/share/applications/cups.desktop
+		sed -i -e "s:htmlview:xdg-open:" "${D}"/usr/share/applications/cups.desktop
 	else
-		rm -r ${D}/usr/share/applications
+		rm -r "${D}"/usr/share/applications
 	fi
 
 	# Fix a symlink collision, see bug #172341
@@ -159,7 +159,7 @@ src_install() {
 
 pkg_preinst() {
 	# cleanups
-	[ -n "${PN}" ] && rm -fR ${ROOT}/usr/share/doc/${PN}-*
+	[ -n "${PN}" ] && rm -fR "${ROOT}"/usr/share/doc/"${PN}"-*
 }
 
 pkg_postinst() {
@@ -191,7 +191,7 @@ pkg_postinst() {
 		ewarn
 		ewarn "You need to rebuild kdelibs for kdeprinter to work with cups-1.2"
 	fi
-	if [ -e ${ROOT}/usr/lib/cups ]; then
+	if [ -e "${ROOT}"/usr/lib/cups ]; then
 		ewarn
 		ewarn "/usr/lib/cups exists - You need to remerge every ebuild that"
 		ewarn "installed into /usr/lib/cups and /etc/cups, qfile is in portage-utils:"
@@ -202,7 +202,7 @@ pkg_postinst() {
 		ewarn "You should also run revdep-rebuild"
 
 		# place symlinks to make the update smoothless
-		for i in ${ROOT}/usr/lib/cups/{backend,filter}/*; do
+		for i in "${ROOT}"/usr/lib/cups/{backend,filter}/*; do
 			if [ "${i/\*}" == "${i}" ] && ! [ -e ${i/lib/libexec} ]; then
 				ln -s ${i} ${i/lib/libexec}
 			fi
