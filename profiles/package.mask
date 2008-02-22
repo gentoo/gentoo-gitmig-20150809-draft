@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8311 2008/02/22 20:30:34 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8312 2008/02/22 23:33:03 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
+
+# Ulrich Mueller <ulm@gentoo.org> (22 Feb 2008)
+# lesstif is not installable, can mask it as well.
+x11-libs/lesstif
 
 # Timo Gurr <tgurr@gentoo.org> (22 Feb 2008)
 # Mask KDE4 versions of ktorrent as long as KDE4 is masked.
