@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.52 2008/02/22 13:53:38 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.53 2008/02/22 14:06:05 hollow Exp $
 #
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -50,7 +50,7 @@ webapp_checkfileexists() {
 
 	local my_prefix=${2:+${2}/}
 
-	if [ ! -e "${my_prefix}${1}" ]; then
+	if [[ ! -e "${my_prefix}${1}" ]]; then
 		msg="ebuild fault: file '${1}' not found"
 		eerror "$msg"
 		eerror "Please report this as a bug at http://bugs.gentoo.org/"
@@ -81,12 +81,12 @@ webapp_strip_cwd() {
 webapp_getinstalltype() {
 	debug-print-function $FUNCNAME $*
 
-	if ! use vhosts ; then
+	if ! use vhosts; then
 		local my_output
 
 		my_output="$(webapp_check_installedat)"
 
-		if [ "${?}" = "0" ] ; then
+		if [[ $? -eq 0 ]]; then
 			# something is already installed there
 			# make sure it isn't the same version
 
@@ -95,8 +95,8 @@ webapp_getinstalltype() {
 
 			REMOVE_PKG="${my_pn}-${my_pvr}"
 
-			if [ "${my_pn}" == "${PN}" ]; then
-				if [ "${my_pvr}" != "${PVR}" ]; then
+			if [[ "${my_pn}" == "${PN}" ]]; then
+				if [[ "${my_pvr}" != "${PVR}" ]]; then
 					elog "This is an upgrade"
 					IS_UPGRADE=1
 				else
@@ -124,7 +124,7 @@ webapp_configfile() {
 	debug-print-function $FUNCNAME $*
 
 	local m=""
-	for m in "$@" ; do
+	for m in "$@"; do
 		webapp_checkfileexists "${m}" "${D}"
 
 		local MY_FILE="$(webapp_strip_appdir "${m}")"
@@ -187,9 +187,9 @@ webapp_serverowned() {
 
 	local a=""
 	local m=""
-	if [ "${1}" = "-R" ]; then
+	if [[ "${1}" == "-R" ]]; then
 		shift
-		for m in "$@" ; do
+		for m in "$@"; do
 			for a in $(find ${D}/${m}); do
 				a=${a/${D}\/\///}
 				webapp_checkfileexists "${a}" "$D"
@@ -201,7 +201,7 @@ webapp_serverowned() {
 			done
 		done
 	else
-		for m in "$@" ; do
+		for m in "$@"; do
 			webapp_checkfileexists "${m}" "$D"
 			local MY_FILE="$(webapp_strip_appdir "${m}")"
 			MY_FILE="$(webapp_strip_cwd "${MY_FILE}")"
@@ -247,7 +247,7 @@ webapp_sqlscript() {
 
 	webapp_checkfileexists "${2}"
 
-	if [ ! -d "${D}/${MY_SQLSCRIPTSDIR}/${1}" ]; then
+	if [[ ! -d "${D}/${MY_SQLSCRIPTSDIR}/${1}" ]]; then
 		mkdir -p "${D}/${MY_SQLSCRIPTSDIR}/${1}" || die "unable to create directory ${D}/${MY_SQLSCRIPTSDIR}/${1}"
 	fi
 
@@ -256,8 +256,8 @@ webapp_sqlscript() {
 	# do NOT change the naming convention used here without changing all
 	# the other scripts that also rely upon these names
 
-	if [ -n "${3}" ]; then
-		elog "(${1}) upgrade script from ${PN}-${PVR} to ${3}"
+	if [[ -n "${3}" ]]; then
+		elog "(${1}) upgrade script for ${PN}-${3} to ${PVR}"
 		cp "${2}" "${D}${MY_SQLSCRIPTSDIR}/${1}/${3}_to_${PVR}.sql"
 		chmod 600 "${D}${MY_SQLSCRIPTSDIR}/${1}/${3}_to_${PVR}.sql"
 	else
@@ -338,14 +338,14 @@ webapp_pkg_setup() {
 
 	# are we installing a webapp-config solution over the top of a
 	# non-webapp-config solution?
-	if ! use vhosts ; then
+	if ! use vhosts; then
 		local my_dir="${ROOT}${VHOST_ROOT}/${MY_HTDOCSBASE}/${PN}"
 		local my_output
 
-		if [ -d "${my_dir}" ] ; then
+		if [[ -d "${my_dir}" ]]; then
 			my_output="$(webapp_check_installedat)"
 
-			if [ "$?" != "0" ]; then
+			if [[ $? -ne 0 ]]; then
 				# okay, whatever is there, it isn't webapp-config-compatible
 				ewarn "You already have something installed in ${my_dir}"
 				ewarn
@@ -354,7 +354,7 @@ webapp_pkg_setup() {
 				ewarn
 				ewarn "This ebuild may be overwriting important files."
 				ewarn
-			elif [ "$(echo ${my_output} | awk '{ print $1 }')" != "${PN}" ]; then
+			elif [[ "$(echo ${my_output} | awk '{ print $1 }')" != "${PN}" ]]; then
 				eerror "${my_dir} contains ${my_output}"
 				eerror "I cannot upgrade that"
 				die "Cannot upgrade contents of ${my_dir}"
@@ -377,7 +377,7 @@ webapp_pkg_postinst() {
 	webapp_read_config
 
 	# sanity checks, to catch bugs in the ebuild
-	if [ ! -f "${ROOT}${MY_APPDIR}/${INSTALL_CHECK_FILE}" ]; then
+	if [[ ! -f "${ROOT}${MY_APPDIR}/${INSTALL_CHECK_FILE}" ]]; then
 		eerror
 		eerror "This ebuild did not call webapp_src_install() at the end"
 		eerror "of the src_install() function"
@@ -390,7 +390,7 @@ webapp_pkg_postinst() {
 		die "Ebuild did not call webapp_src_install() - report to http://bugs.gentoo.org"
 	fi
 
-	if ! use vhosts ; then
+	if ! use vhosts; then
 		echo
 		elog "vhosts USE flag not set - auto-installing using webapp-config"
 
@@ -400,10 +400,10 @@ webapp_pkg_postinst() {
 		local my_mode=-I
 		webapp_read_config
 
-		if [ "${IS_REPLACE}" = "1" ]; then
+		if [[ "${IS_REPLACE}" == "1" ]]; then
 			elog "${PN}-${PVR} is already installed - replacing"
 			my_mode=-I
-		elif [ "${IS_UPGRADE}" = "1" ]; then
+		elif [[ "${IS_UPGRADE}" == "1" ]]; then
 			elog "${REMOVE_PKG} is already installed - upgrading"
 			my_mode=-U
 		else
@@ -430,8 +430,6 @@ webapp_pkg_postinst() {
 		elog
 		elog "For more details, see the webapp-config(8) man page"
 	fi
-
-	return 0
 }
 
 # @FUNCTION: webapp_pkg_prerm
@@ -442,20 +440,16 @@ webapp_pkg_postinst() {
 webapp_pkg_prerm() {
 	debug-print-function $FUNCNAME $*
 
-	local my_output
-	local x
-
+	local my_output=
 	my_output="$(${WEBAPP_CONFIG} --list-installs ${PN} ${PVR})"
+	[[ $? -ne 0 ]] && return
 
-	if [ "${?}" != "0" ]; then
-		return
-	fi
+	local x
+	if ! use vhosts; then
 
-	if ! use vhosts ; then
-
-		for x in ${my_output} ; do
-			[ -f ${x}/.webapp ] && . ${x}/.webapp || ewarn "Cannot find file ${x}/.webapp"
-			if [ "${WEB_HOSTNAME}" -a "${WEB_INSTALLDIR}" ]; then
+		for x in ${my_output}; do
+			[[ -f ${x}/.webapp ]] && . ${x}/.webapp || ewarn "Cannot find file ${x}/.webapp"
+			if [[ -n "${WEB_HOSTNAME}" && -n "${WEB_INSTALLDIR}" ]]; then
 				${WEBAPP_CONFIG} -C -h ${WEB_HOSTNAME} -d ${WEB_INSTALLDIR}
 			fi
 		done
@@ -465,8 +459,8 @@ webapp_pkg_prerm() {
 		ewarn "${PN}-${PVR} installed in"
 		ewarn
 
-		for x in ${my_output} ; do
-			[ -f ${x}/.webapp ] && . ${x}/.webapp || ewarn "Cannot find file ${x}/.webapp"
+		for x in ${my_output}; do
+			[[ -f ${x}/.webapp ]] && . ${x}/.webapp || ewarn "Cannot find file ${x}/.webapp"
 			ewarn "    ${x}"
 		done
 	fi
