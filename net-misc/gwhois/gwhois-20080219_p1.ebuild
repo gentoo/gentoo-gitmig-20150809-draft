@@ -1,12 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20080219.ebuild,v 1.1 2008/02/20 10:00:39 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20080219_p1.ebuild,v 1.1 2008/02/22 08:41:54 wschlich Exp $
 
 inherit eutils
 
+MY_P=${P/_p/.}
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="generic whois"
 HOMEPAGE="http://gwhois.de/"
-SRC_URI="http://gwhois.de/gwhois/${P/-/_}.tar.gz"
+SRC_URI="http://gwhois.de/gwhois/${MY_P/-/_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
