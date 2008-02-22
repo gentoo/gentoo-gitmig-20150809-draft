@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60.ebuild,v 1.2 2008/02/21 17:51:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60.ebuild,v 1.3 2008/02/22 14:25:36 armin76 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://the.earth.li/~sgtatham/putty/${PV}/${P}.tar.gz"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ppc sparc x86"
 IUSE="doc gtk ipv6"
 
 RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )"
@@ -42,7 +42,7 @@ src_install() {
 	dobin puttygen plink pscp psftp
 
 	cd "${S}"
-	dodoc README README.txt CHECKLST.txt LATEST.VER
+	dodoc README CHECKLST.txt LATEST.VER
 
 	# install desktop file provided by Gustav Schaffter in #49577
 	use gtk && {
