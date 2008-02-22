@@ -1,15 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.44 2008/02/22 07:18:16 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.45 2008/02/22 07:20:51 wrobel Exp $
 
-  22 Feb 2008; Gunnar Wrobel <wrobel@gentoo.org>
-  +files/c-client-2004g_KOLAB_Annotations.patch,
-  +files/c-client-2006k_GENTOO_Makefile.patch,
-  +files/c-client-2006k_GENTOO_amd64-so-fix.patch,
-  +files/c-client-2006k_KOLAB_Annotations.patch, metadata.xml,
-  c-client-2004g.ebuild, +c-client-2004g-r1.ebuild, +c-client-2006k.ebuild:
-  Added c-client-2004g-r1 and c-client-2006k, both with support for the Kolab
-  groupware server.
+  22 Feb 2008; Gunnar Wrobel <wrobel@gentoo.org> ChangeLog, Manifest:
+  Clean up changelog.
 
 *c-client-2006k (22 Feb 2008)
 *c-client-2004g-r1 (22 Feb 2008)
