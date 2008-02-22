@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.88 2008/02/20 23:14:07 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.89 2008/02/22 13:32:44 ingmar Exp $
+
+  22 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> korganizer-3.5.8.ebuild,
+  korganizer-3.5.9.ebuild:
+  Missing dependency on kde-base/libkmime, bug 211103.
 
 *korganizer-3.5.9 (20 Feb 2008)
 

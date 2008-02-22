@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.9.ebuild,v 1.1 2008/02/20 23:14:07 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.9.ebuild,v 1.2 2008/02/22 13:32:44 ingmar Exp $
 
 KMNAME=kdepim
 EAPI="1"
@@ -19,7 +19,8 @@ DEPEND=">=kde-base/libkpimexchange-${PV}:${SLOT}
 >=kde-base/ktnef-${PV}:${SLOT}
 >=kde-base/kdepim-kresources-${PV}:${SLOT}
 >=kde-base/kontact-${PV}:${SLOT}
->=kde-base/libkholidays-${PV}:${SLOT}"
+>=kde-base/libkholidays-${PV}:${SLOT}
+>=kde-base/libkmime-${PV}:${SLOT}"
 RDEPEND="${DEPEND}"
 
 KMCOPYLIB="
