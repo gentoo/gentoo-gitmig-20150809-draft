@@ -1,16 +1,6 @@
-
-Disable requirement for X.
-
-Based on:
-http://home.att.net/~Tom.Horsley/tah-tc-5.0.tar.gz
-
-Don't use internal wxUSE_GUI but force the state.
-
----
-
-diff -urNp truecrypt-5.0a-source.base1/Main/Application.cpp truecrypt-5.0a-source.new1/Main/Application.cpp
---- truecrypt-5.0a-source.base1/Main/Application.cpp	2008-02-04 13:14:16.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Main/Application.cpp	2008-02-15 09:42:18.000000000 +0200
+diff -urNp truecrypt-5.0a-source/Main/Application.cpp truecrypt-5.0a-source.new/Main/Application.cpp
+--- truecrypt-5.0a-source/Main/Application.cpp	2008-02-04 13:14:16.000000000 +0200
++++ truecrypt-5.0a-source.new/Main/Application.cpp	2008-02-23 00:18:40.000000000 +0200
 @@ -22,11 +22,13 @@ namespace TrueCrypt
  		return mUserInterface;
  	} 
@@ -39,9 +29,9 @@ diff -urNp truecrypt-5.0a-source.base1/Main/Application.cpp truecrypt-5.0a-sourc
  
  		default:
  			throw ParameterIncorrect (SRC_POS);
-diff -urNp truecrypt-5.0a-source.base1/Main/FatalErrorHandler.cpp truecrypt-5.0a-source.new1/Main/FatalErrorHandler.cpp
---- truecrypt-5.0a-source.base1/Main/FatalErrorHandler.cpp	2008-02-04 13:14:16.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Main/FatalErrorHandler.cpp	2008-02-15 09:42:18.000000000 +0200
+diff -urNp truecrypt-5.0a-source/Main/FatalErrorHandler.cpp truecrypt-5.0a-source.new/Main/FatalErrorHandler.cpp
+--- truecrypt-5.0a-source/Main/FatalErrorHandler.cpp	2008-02-04 13:14:16.000000000 +0200
++++ truecrypt-5.0a-source.new/Main/FatalErrorHandler.cpp	2008-02-23 00:18:40.000000000 +0200
 @@ -90,6 +90,7 @@ namespace TrueCrypt
  
  #endif // wxUSE_STACKWALKER
@@ -87,9 +77,9 @@ diff -urNp truecrypt-5.0a-source.base1/Main/FatalErrorHandler.cpp truecrypt-5.0a
  		}
  
  		_exit (1);
-diff -urNp truecrypt-5.0a-source.base1/Main/GraphicUserInterface.cpp truecrypt-5.0a-source.new1/Main/GraphicUserInterface.cpp
---- truecrypt-5.0a-source.base1/Main/GraphicUserInterface.cpp	2008-02-07 17:48:16.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Main/GraphicUserInterface.cpp	2008-02-15 09:42:18.000000000 +0200
+diff -urNp truecrypt-5.0a-source/Main/GraphicUserInterface.cpp truecrypt-5.0a-source.new/Main/GraphicUserInterface.cpp
+--- truecrypt-5.0a-source/Main/GraphicUserInterface.cpp	2008-02-07 17:48:16.000000000 +0200
++++ truecrypt-5.0a-source.new/Main/GraphicUserInterface.cpp	2008-02-23 00:18:40.000000000 +0200
 @@ -19,6 +19,9 @@
  #include "Application.h"
  #include "GraphicUserInterface.h"
@@ -105,9 +95,9 @@ diff -urNp truecrypt-5.0a-source.base1/Main/GraphicUserInterface.cpp truecrypt-5
  	GraphicUserInterface *Gui = nullptr;
  }
 +#endif
-diff -urNp truecrypt-5.0a-source.base1/Main/GraphicUserInterface.h truecrypt-5.0a-source.new1/Main/GraphicUserInterface.h
---- truecrypt-5.0a-source.base1/Main/GraphicUserInterface.h	2008-02-05 19:56:46.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Main/GraphicUserInterface.h	2008-02-15 09:42:18.000000000 +0200
+diff -urNp truecrypt-5.0a-source/Main/GraphicUserInterface.h truecrypt-5.0a-source.new/Main/GraphicUserInterface.h
+--- truecrypt-5.0a-source/Main/GraphicUserInterface.h	2008-02-05 19:56:46.000000000 +0200
++++ truecrypt-5.0a-source.new/Main/GraphicUserInterface.h	2008-02-23 00:18:40.000000000 +0200
 @@ -14,6 +14,7 @@
  #include "Main.h"
  #include "UserInterface.h"
@@ -123,9 +113,9 @@ diff -urNp truecrypt-5.0a-source.base1/Main/GraphicUserInterface.h truecrypt-5.0
 +#endif
  
  #endif // TC_HEADER_Main_GraphicUserInterface
-diff -urNp truecrypt-5.0a-source.base1/Main/Main.make truecrypt-5.0a-source.new1/Main/Main.make
---- truecrypt-5.0a-source.base1/Main/Main.make	2008-02-15 09:25:30.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Main/Main.make	2008-02-15 09:42:18.000000000 +0200
+diff -urNp truecrypt-5.0a-source/Main/Main.make truecrypt-5.0a-source.new/Main/Main.make
+--- truecrypt-5.0a-source/Main/Main.make	2008-02-22 19:05:05.000000000 +0200
++++ truecrypt-5.0a-source.new/Main/Main.make	2008-02-23 00:19:04.000000000 +0200
 @@ -21,6 +21,7 @@ OBJS += UserPreferences.o
  OBJS += VolumeHistory.o
  OBJS += Xml.o
@@ -142,33 +132,24 @@ diff -urNp truecrypt-5.0a-source.base1/Main/Main.make truecrypt-5.0a-source.new1
  OBJS += Resources.o
  
  PCH := SystemPrecompiled.h.gch
-@@ -67,15 +69,21 @@ WX_CONFIG_EXTRA ?= --static
- 
- #------ wxWidgets configuration ------
- 
-+ifeq "$(TC_BUILD_GUI)" "True"
-+WX_ASK_LIBS=adv,core,base
-+else
-+WX_ASK_LIBS=core,base
-+endif
-+ 
+@@ -70,12 +72,12 @@ WX_CONFIG_EXTRA ?= --static
  ifeq "$(TC_BUILD_CONFIG)" "Release"
  
  CXXFLAGS += $(shell $(WX_CONFIG) $(WX_CONFIG_EXTRA) --cxxflags)
 -WX_LIBS = $(shell $(WX_CONFIG) $(WX_CONFIG_EXTRA) --libs adv,core,base)
-+WX_LIBS = $(shell $(WX_CONFIG) $(WX_CONFIG_EXTRA) --libs $(WX_ASK_LIBS))
++WX_LIBS = $(shell $(WX_CONFIG) $(WX_CONFIG_EXTRA) --libs)
  
  else
  
  CXXFLAGS += $(shell $(WX_CONFIG) $(WX_CONFIG_EXTRA) --debug --cxxflags)
 -WX_LIBS = $(shell $(WX_CONFIG) $(WX_CONFIG_EXTRA) --debug --libs adv,core,base)
-+WX_LIBS = $(shell $(WX_CONFIG) $(WX_CONFIG_EXTRA) --debug --libs $(WX_ASK_LIBS))
++WX_LIBS = $(shell $(WX_CONFIG) $(WX_CONFIG_EXTRA) --debug --libs)
  
  endif
  
-diff -urNp truecrypt-5.0a-source.base1/Main/Resources.cpp truecrypt-5.0a-source.new1/Main/Resources.cpp
---- truecrypt-5.0a-source.base1/Main/Resources.cpp	2008-02-04 13:14:16.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Main/Resources.cpp	2008-02-15 09:42:18.000000000 +0200
+diff -urNp truecrypt-5.0a-source/Main/Resources.cpp truecrypt-5.0a-source.new/Main/Resources.cpp
+--- truecrypt-5.0a-source/Main/Resources.cpp	2008-02-04 13:14:16.000000000 +0200
++++ truecrypt-5.0a-source.new/Main/Resources.cpp	2008-02-23 00:18:40.000000000 +0200
 @@ -35,6 +35,7 @@ namespace TrueCrypt
  	}
  #endif // TC_WINDOWS
@@ -199,9 +180,9 @@ diff -urNp truecrypt-5.0a-source.base1/Main/Resources.cpp truecrypt-5.0a-source.
  	}
 +#endif
  }
-diff -urNp truecrypt-5.0a-source.base1/Main/Resources.h truecrypt-5.0a-source.new1/Main/Resources.h
---- truecrypt-5.0a-source.base1/Main/Resources.h	2008-02-04 13:14:14.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Main/Resources.h	2008-02-15 09:42:18.000000000 +0200
+diff -urNp truecrypt-5.0a-source/Main/Resources.h truecrypt-5.0a-source.new/Main/Resources.h
+--- truecrypt-5.0a-source/Main/Resources.h	2008-02-04 13:14:14.000000000 +0200
++++ truecrypt-5.0a-source.new/Main/Resources.h	2008-02-23 00:18:40.000000000 +0200
 @@ -17,14 +17,18 @@ namespace TrueCrypt
  	class Resources
  	{
@@ -221,22 +202,37 @@ diff -urNp truecrypt-5.0a-source.base1/Main/Resources.h truecrypt-5.0a-source.ne
  
  	protected:
  	};
-diff -urNp truecrypt-5.0a-source.base1/Main/SystemPrecompiled.h truecrypt-5.0a-source.new1/Main/SystemPrecompiled.h
---- truecrypt-5.0a-source.base1/Main/SystemPrecompiled.h	2008-02-04 13:22:08.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Main/SystemPrecompiled.h	2008-02-15 09:42:18.000000000 +0200
-@@ -9,7 +9,9 @@
+diff -urNp truecrypt-5.0a-source/Main/SystemPrecompiled.h truecrypt-5.0a-source.new/Main/SystemPrecompiled.h
+--- truecrypt-5.0a-source/Main/SystemPrecompiled.h	2008-02-04 13:22:08.000000000 +0200
++++ truecrypt-5.0a-source.new/Main/SystemPrecompiled.h	2008-02-23 00:18:40.000000000 +0200
+@@ -7,16 +7,24 @@
+ */
+ 
  #include <wx/wx.h>
++#ifdef ENABLE_wxGUI
  #include <wx/dnd.h>
++#endif
  #include <wx/filename.h>
 +#ifdef ENABLE_wxGUI
  #include <wx/imaglist.h>
-+#endif
  #include <wx/listctrl.h>
++#endif
  #include <wx/mstream.h>
  #include <wx/power.h>
-diff -urNp truecrypt-5.0a-source.base1/Main/TextUserInterface.cpp truecrypt-5.0a-source.new1/Main/TextUserInterface.cpp
---- truecrypt-5.0a-source.base1/Main/TextUserInterface.cpp	2008-02-04 18:38:04.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Main/TextUserInterface.cpp	2008-02-15 09:42:18.000000000 +0200
+ #include <wx/snglinst.h>
++#ifdef ENABLE_wxGUI
+ #include <wx/taskbar.h>
++#endif
+ #include <wx/txtstrm.h>
++#ifdef ENABLE_wxGUI
+ #include <wx/valgen.h>
++#endif
+ #include <wx/wfstream.h>
+ 
+ #include <iostream>
+diff -urNp truecrypt-5.0a-source/Main/TextUserInterface.cpp truecrypt-5.0a-source.new/Main/TextUserInterface.cpp
+--- truecrypt-5.0a-source/Main/TextUserInterface.cpp	2008-02-04 18:38:04.000000000 +0200
++++ truecrypt-5.0a-source.new/Main/TextUserInterface.cpp	2008-02-23 00:18:40.000000000 +0200
 @@ -423,8 +423,9 @@ namespace TrueCrypt
  
  			InterfaceType = UserInterfaceType::Text;
@@ -248,9 +244,9 @@ diff -urNp truecrypt-5.0a-source.base1/Main/TextUserInterface.cpp truecrypt-5.0a
  		}
  		catch (exception &e)
  		{
-diff -urNp truecrypt-5.0a-source.base1/Main/Unix/Main.cpp truecrypt-5.0a-source.new1/Main/Unix/Main.cpp
---- truecrypt-5.0a-source.base1/Main/Unix/Main.cpp	2008-02-12 22:21:58.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Main/Unix/Main.cpp	2008-02-15 09:42:18.000000000 +0200
+diff -urNp truecrypt-5.0a-source/Main/Unix/Main.cpp truecrypt-5.0a-source.new/Main/Unix/Main.cpp
+--- truecrypt-5.0a-source/Main/Unix/Main.cpp	2008-02-12 22:21:58.000000000 +0200
++++ truecrypt-5.0a-source.new/Main/Unix/Main.cpp	2008-02-23 00:18:40.000000000 +0200
 @@ -59,6 +59,9 @@ int main (int argc, char **argv)
  		if (!getenv ("DISPLAY"))
  			forceTextUI = true;
@@ -261,9 +257,9 @@ diff -urNp truecrypt-5.0a-source.base1/Main/Unix/Main.cpp truecrypt-5.0a-source.
  
  		// Set user interface type
  		if (forceTextUI || (argc > 1 && (strcmp (argv[1], "-t") == 0 || strcmp (argv[1], "--text") == 0)))
-diff -urNp truecrypt-5.0a-source.base1/Main/UserInterface.cpp truecrypt-5.0a-source.new1/Main/UserInterface.cpp
---- truecrypt-5.0a-source.base1/Main/UserInterface.cpp	2008-02-12 22:28:34.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Main/UserInterface.cpp	2008-02-15 09:42:18.000000000 +0200
+diff -urNp truecrypt-5.0a-source/Main/UserInterface.cpp truecrypt-5.0a-source.new/Main/UserInterface.cpp
+--- truecrypt-5.0a-source/Main/UserInterface.cpp	2008-02-12 22:28:34.000000000 +0200
++++ truecrypt-5.0a-source.new/Main/UserInterface.cpp	2008-02-23 00:18:40.000000000 +0200
 @@ -302,8 +302,10 @@ namespace TrueCrypt
  		{
  			wxString message = ExceptionTypeToString (typeid (ex));
@@ -275,9 +271,9 @@ diff -urNp truecrypt-5.0a-source.base1/Main/UserInterface.cpp truecrypt-5.0a-sou
  
  			return message;
  		}
-diff -urNp truecrypt-5.0a-source.base1/Main/VolumeHistory.cpp truecrypt-5.0a-source.new1/Main/VolumeHistory.cpp
---- truecrypt-5.0a-source.base1/Main/VolumeHistory.cpp	2008-02-04 13:14:16.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Main/VolumeHistory.cpp	2008-02-15 09:42:18.000000000 +0200
+diff -urNp truecrypt-5.0a-source/Main/VolumeHistory.cpp truecrypt-5.0a-source.new/Main/VolumeHistory.cpp
+--- truecrypt-5.0a-source/Main/VolumeHistory.cpp	2008-02-04 13:14:16.000000000 +0200
++++ truecrypt-5.0a-source.new/Main/VolumeHistory.cpp	2008-02-23 00:18:40.000000000 +0200
 @@ -10,6 +10,9 @@
  #include "Application.h"
  #include "GraphicUserInterface.h"
@@ -294,9 +290,9 @@ diff -urNp truecrypt-5.0a-source.base1/Main/VolumeHistory.cpp truecrypt-5.0a-sou
  }
 +
 +#endif
-diff -urNp truecrypt-5.0a-source.base1/Makefile truecrypt-5.0a-source.new1/Makefile
---- truecrypt-5.0a-source.base1/Makefile	2008-02-04 20:19:02.000000000 +0200
-+++ truecrypt-5.0a-source.new1/Makefile	2008-02-15 09:47:23.000000000 +0200
+diff -urNp truecrypt-5.0a-source/Makefile truecrypt-5.0a-source.new/Makefile
+--- truecrypt-5.0a-source/Makefile	2008-02-22 19:05:05.000000000 +0200
++++ truecrypt-5.0a-source.new/Makefile	2008-02-23 00:18:40.000000000 +0200
 @@ -11,6 +11,7 @@
  # DEBUGGER:		Enable debugging information for use by debuggers
  # NOSTRIP:		Do not strip release binaries
@@ -317,7 +313,7 @@ diff -urNp truecrypt-5.0a-source.base1/Makefile truecrypt-5.0a-source.new1/Makef
  
  #------ Build configuration ------
  
-@@ -145,6 +151,9 @@ C_CXX_FLAGS += -DTC_UNIX -DTC_BSD -DTC_F
+@@ -150,6 +156,9 @@ C_CXX_FLAGS += -DTC_UNIX -DTC_BSD -DTC_F
  
  endif
  
@@ -327,7 +323,7 @@ diff -urNp truecrypt-5.0a-source.base1/Makefile truecrypt-5.0a-source.new1/Makef
  
  CFLAGS := $(C_CXX_FLAGS) $(CFLAGS) $(EXTRA_CFLAGS)
  CXXFLAGS := $(C_CXX_FLAGS) $(CXXFLAGS) $(EXTRA_CXXFLAGS)
-@@ -189,6 +198,12 @@ CXXFLAGS :=
+@@ -194,6 +203,12 @@ CXXFLAGS :=
  LFLAGS :=
  endif
  
@@ -340,7 +336,7 @@ diff -urNp truecrypt-5.0a-source.base1/Makefile truecrypt-5.0a-source.new1/Makef
  wxbuild:
  
  ifneq "$(shell test -f $(WX_ROOT)/configure || test -f $(WX_BUILD_DIR)/../configure && echo 1)" "1"
-@@ -198,7 +213,7 @@ endif
+@@ -203,7 +218,7 @@ endif
  
  	mkdir -p $(WX_BUILD_DIR)
  	@echo Configuring wxWidgets library...
