@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1147 2008/02/22 19:54:36 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1148 2008/02/22 20:30:34 ingmar Exp $
+
+  22 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> package.mask:
+  Unmask =dev-util/cmake-2.4.8.
 
   22 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> package.mask:
   Unmask kde-base/{korundum,qtruby}, works fine.
