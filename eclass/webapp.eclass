@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.53 2008/02/22 14:06:05 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.54 2008/02/22 14:27:17 hollow Exp $
 #
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -80,35 +80,33 @@ webapp_strip_cwd() {
 
 webapp_getinstalltype() {
 	debug-print-function $FUNCNAME $*
+	use vhosts && return
 
-	if ! use vhosts; then
-		local my_output
+	local my_output
+	my_output="$(webapp_check_installedat)"
 
-		my_output="$(webapp_check_installedat)"
+	if [[ $? -eq 0 ]]; then
+		# something is already installed there
+		# make sure it isn't the same version
 
-		if [[ $? -eq 0 ]]; then
-			# something is already installed there
-			# make sure it isn't the same version
+		local my_pn="$(echo ${my_output} | awk '{ print $1 }')"
+		local my_pvr="$(echo ${my_output} | awk '{ print $2 }')"
 
-			local my_pn="$(echo ${my_output} | awk '{ print $1 }')"
-			local my_pvr="$(echo ${my_output} | awk '{ print $2 }')"
+		REMOVE_PKG="${my_pn}-${my_pvr}"
 
-			REMOVE_PKG="${my_pn}-${my_pvr}"
-
-			if [[ "${my_pn}" == "${PN}" ]]; then
-				if [[ "${my_pvr}" != "${PVR}" ]]; then
-					elog "This is an upgrade"
-					IS_UPGRADE=1
-				else
-					elog "This is a re-installation"
-					IS_REPLACE=1
-				fi
+		if [[ "${my_pn}" == "${PN}" ]]; then
+			if [[ "${my_pvr}" != "${PVR}" ]]; then
+				elog "This is an upgrade"
+				IS_UPGRADE=1
 			else
-				elog "${my_output} is installed there"
+				elog "This is a re-installation"
+				IS_REPLACE=1
 			fi
 		else
-			elog "This is an installation"
+			elog "${my_output} is installed there"
 		fi
+	else
+		elog "This is an installation"
 	fi
 }
 
@@ -123,15 +121,15 @@ webapp_getinstalltype() {
 webapp_configfile() {
 	debug-print-function $FUNCNAME $*
 
-	local m=""
+	local m
 	for m in "$@"; do
 		webapp_checkfileexists "${m}" "${D}"
 
-		local MY_FILE="$(webapp_strip_appdir "${m}")"
-		MY_FILE="$(webapp_strip_cwd "${MY_FILE}")"
+		local my_file="$(webapp_strip_appdir "${m}")"
+		my_file="$(webapp_strip_cwd "${my_file}")"
 
-		elog "(config) ${MY_FILE}"
-		echo "${MY_FILE}" >> ${D}/${WA_CONFIGLIST}
+		elog "(config) ${my_file}"
+		echo "${my_file}" >> ${D}/${WA_CONFIGLIST}
 	done
 }
 
@@ -185,29 +183,28 @@ webapp_postupgrade_txt() {
 webapp_serverowned() {
 	debug-print-function $FUNCNAME $*
 
-	local a=""
-	local m=""
+	local a m
 	if [[ "${1}" == "-R" ]]; then
 		shift
 		for m in "$@"; do
 			for a in $(find ${D}/${m}); do
 				a=${a/${D}\/\///}
 				webapp_checkfileexists "${a}" "$D"
-				local MY_FILE="$(webapp_strip_appdir "${a}")"
-				MY_FILE="$(webapp_strip_cwd "${MY_FILE}")"
+				local my_file="$(webapp_strip_appdir "${a}")"
+				my_file="$(webapp_strip_cwd "${my_file}")"
 
-				elog "(server owned) ${MY_FILE}"
-				echo "${MY_FILE}" >> "${D}/${WA_SOLIST}"
+				elog "(server owned) ${my_file}"
+				echo "${my_file}" >> "${D}/${WA_SOLIST}"
 			done
 		done
 	else
 		for m in "$@"; do
 			webapp_checkfileexists "${m}" "$D"
-			local MY_FILE="$(webapp_strip_appdir "${m}")"
-			MY_FILE="$(webapp_strip_cwd "${MY_FILE}")"
+			local my_file="$(webapp_strip_appdir "${m}")"
+			my_file="$(webapp_strip_cwd "${my_file}")"
 
-			elog "(server owned) ${MY_FILE}"
-			echo "${MY_FILE}" >> "${D}/${WA_SOLIST}"
+			elog "(server owned) ${my_file}"
+			echo "${my_file}" >> "${D}/${WA_SOLIST}"
 		done
 	fi
 }
@@ -247,9 +244,7 @@ webapp_sqlscript() {
 
 	webapp_checkfileexists "${2}"
 
-	if [[ ! -d "${D}/${MY_SQLSCRIPTSDIR}/${1}" ]]; then
-		mkdir -p "${D}/${MY_SQLSCRIPTSDIR}/${1}" || die "unable to create directory ${D}/${MY_SQLSCRIPTSDIR}/${1}"
-	fi
+	dodir "${MY_SQLSCRIPTSDIR}/${1}"
 
 	# WARNING:
 	#
@@ -336,30 +331,27 @@ webapp_pkg_setup() {
 	G_HOSTNAME="localhost"
 	webapp_read_config
 
-	# are we installing a webapp-config solution over the top of a
-	# non-webapp-config solution?
-	if ! use vhosts; then
-		local my_dir="${ROOT}${VHOST_ROOT}/${MY_HTDOCSBASE}/${PN}"
-		local my_output
+	local my_dir="${ROOT}${VHOST_ROOT}/${MY_HTDOCSBASE}/${PN}"
 
-		if [[ -d "${my_dir}" ]]; then
-			my_output="$(webapp_check_installedat)"
+	# if USE=vhosts is enabled OR no application is installed we're done here
+	use vhosts || [[ ! -d "${my_dir}" ]] && return
 
-			if [[ $? -ne 0 ]]; then
-				# okay, whatever is there, it isn't webapp-config-compatible
-				ewarn "You already have something installed in ${my_dir}"
-				ewarn
-				ewarn "Whatever is in ${my_dir}, it's not"
-				ewarn "compatible with webapp-config."
-				ewarn
-				ewarn "This ebuild may be overwriting important files."
-				ewarn
-			elif [[ "$(echo ${my_output} | awk '{ print $1 }')" != "${PN}" ]]; then
-				eerror "${my_dir} contains ${my_output}"
-				eerror "I cannot upgrade that"
-				die "Cannot upgrade contents of ${my_dir}"
-			fi
-		fi
+	local my_output
+	my_output="$(webapp_check_installedat)"
+
+	if [[ $? -ne 0 ]]; then
+		# okay, whatever is there, it isn't webapp-config-compatible
+		ewarn "You already have something installed in ${my_dir}"
+		ewarn
+		ewarn "Whatever is in ${my_dir}, it's not"
+		ewarn "compatible with webapp-config."
+		ewarn
+		ewarn "This ebuild may be overwriting important files."
+		ewarn
+	elif [[ "$(echo ${my_output} | awk '{ print $1 }')" != "${PN}" ]]; then
+		eerror "${my_dir} contains ${my_output}"
+		eerror "I cannot upgrade that"
+		die "Cannot upgrade contents of ${my_dir}"
 	fi
 }
 
