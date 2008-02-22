@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3371 2008/02/21 21:02:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3372 2008/02/22 16:40:39 tgurr Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1710,6 +1710,15 @@ net-p2p/gift:ares - pull in Ares plugin
 net-p2p/gift:fasttrack - pull in FastTrack plugin
 net-p2p/gift:gnutella - pull in Gnutella plugin
 net-p2p/gift:openft - pull in OpenFT plugin
+net-p2p/ktorrent:bwscheduler - Enable the bwscheduler plugin
+net-p2p/ktorrent:infowidget - Enable the infowidget plugin
+net-p2p/ktorrent:ipfilter - Enable the ipfilter plugin
+net-p2p/ktorrent:logviewer - Enable the logviewer plugin
+net-p2p/ktorrent:scanfolder - Enable the scanfolder plugin
+net-p2p/ktorrent:search - Enable the search plugin
+net-p2p/ktorrent:stats - Enable the statistics plugin
+net-p2p/ktorrent:upnp - Enable the uphp plugin
+net-p2p/ktorrent:webinterface - Enable the webinterface plugin
 net-p2p/linkage:upnp - Enables support for Intel UPnP stack.
 net-p2p/linkage:xfce - Adds Xfce4 support
 net-p2p/mldonkey:fasttrack - enable fasttrack support
