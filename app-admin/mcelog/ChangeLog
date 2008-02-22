@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mcelog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.16 2008/02/22 19:35:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.17 2008/02/22 19:36:43 robbat2 Exp $
+
+  22 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> mcelog-0.8_pre1.ebuild:
+  Commit to test patch for portage bug #211067.
 
   22 Feb 2008; Robin H. Johnson <robbat2@gentoo.org>
   +files/mcelog-0.8_pre1-timestamp-mcelog.patch, mcelog-0.8_pre1.ebuild:

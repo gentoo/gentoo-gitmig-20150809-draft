@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/mcelog-0.8_pre1.ebuild,v 1.6 2008/02/22 19:35:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/mcelog-0.8_pre1.ebuild,v 1.7 2008/02/22 19:36:43 robbat2 Exp $
 
 MY_PV="${PV/_pre1/pre}"
 MY_P="${PN}-${MY_PV}"
@@ -23,7 +23,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/${PN}-0.8_pre1-timestamp-mcelog.patch
+	epatch "${FILESDIR}"/${P}-timestamp-mcelog.patch
 }
 
 src_install() {
