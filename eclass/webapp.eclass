@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.50 2008/02/22 10:03:55 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.51 2008/02/22 13:44:41 hollow Exp $
 #
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -23,9 +23,9 @@ IS_REPLACE=0
 
 INSTALL_CHECK_FILE="installed_by_webapp_eclass"
 
-ETC_CONFIG="${ROOT}/etc/vhosts/webapp-config"
-WEBAPP_CONFIG="${ROOT}/usr/sbin/webapp-config"
-WEBAPP_CLEANER="${ROOT}/usr/sbin/webapp-cleaner"
+ETC_CONFIG="${ROOT}etc/vhosts/webapp-config"
+WEBAPP_CONFIG="${ROOT}usr/sbin/webapp-config"
+WEBAPP_CLEANER="${ROOT}usr/sbin/webapp-cleaner"
 
 # ==============================================================================
 # INTERNAL FUNCTIONS
@@ -34,6 +34,8 @@ WEBAPP_CLEANER="${ROOT}/usr/sbin/webapp-cleaner"
 # Load the config file /etc/vhosts/webapp-config
 # Supports both the old bash version, and the new python version
 webapp_read_config() {
+	debug-print-function $FUNCNAME $*
+
 	if has_version '>=app-admin/webapp-config-1.50'; then
 		ENVVAR=$(${WEBAPP_CONFIG} --query ${PN} ${PVR}) || die "Could not read settings from webapp-config!"
 		eval ${ENVVAR}
@@ -44,6 +46,8 @@ webapp_read_config() {
 
 # Check whether a specified file exists in the given directory (`.' by default)
 webapp_checkfileexists() {
+	debug-print-function $FUNCNAME $*
+
 	local my_prefix
 
 	[ -n "${2}" ] && my_prefix="${2}/" || my_prefix=
@@ -57,36 +61,35 @@ webapp_checkfileexists() {
 }
 
 webapp_check_installedat() {
+	debug-print-function $FUNCNAME $*
 	${WEBAPP_CONFIG} --show-installed -h localhost -d "${INSTALL_DIR}" 2> /dev/null
 }
 
 webapp_strip_appdir() {
-	local my_stripped="${1}"
+	debug-print-function $FUNCNAME $*
 	echo "${1}" | sed -e "s|${MY_APPDIR}/||g;"
 }
 
 webapp_strip_d() {
+	debug-print-function $FUNCNAME $*
 	echo "${1}" | sed -e "s|${D}||g;"
 }
 
 webapp_strip_cwd() {
-	local my_stripped="${1}"
+	debug-print-function $FUNCNAME $*
 	echo "${1}" | sed -e 's|/./|/|g;'
 }
 
 webapp_getinstalltype() {
-	# or are we upgrading?
+	debug-print-function $FUNCNAME $*
 
 	if ! use vhosts ; then
-		# we only run webapp-config if vhosts USE flag is not set
-
 		local my_output
 
 		my_output="$(webapp_check_installedat)"
 
 		if [ "${?}" = "0" ] ; then
 			# something is already installed there
-			#
 			# make sure it isn't the same version
 
 			local my_pn="$(echo ${my_output} | awk '{ print $1 }')"
@@ -120,6 +123,8 @@ webapp_getinstalltype() {
 # @DESCRIPTION:
 # Mark a file config-protected for a web-based application.
 webapp_configfile() {
+	debug-print-function $FUNCNAME $*
+
 	local m=""
 	for m in "$@" ; do
 		webapp_checkfileexists "${m}" "${D}"
@@ -138,6 +143,8 @@ webapp_configfile() {
 # Install a script that will run after a virtual copy is created, and
 # before a virtual copy has been removed.
 webapp_hook_script() {
+	debug-print-function $FUNCNAME $*
+
 	webapp_checkfileexists "${1}"
 
 	elog "(hook) ${1}"
@@ -150,6 +157,8 @@ webapp_hook_script() {
 # @DESCRIPTION:
 # Install a text file containing post-installation instructions.
 webapp_postinst_txt() {
+	debug-print-function $FUNCNAME $*
+
 	webapp_checkfileexists "${2}"
 
 	elog "(info) ${2} (lang: ${1})"
@@ -161,6 +170,8 @@ webapp_postinst_txt() {
 # @DESCRIPTION:
 # Install a text file containing post-upgrade instructions.
 webapp_postupgrade_txt() {
+	debug-print-function $FUNCNAME $*
+
 	webapp_checkfileexists "${2}"
 
 	elog "(info) ${2} (lang: ${1})"
@@ -174,6 +185,8 @@ webapp_postupgrade_txt() {
 # The ownership of the file is NOT set until the application is installed using
 # the webapp-config tool. If -R is given directories are handled recursively.
 webapp_serverowned() {
+	debug-print-function $FUNCNAME $*
+
 	local a=""
 	local m=""
 	if [ "${1}" = "-R" ]; then
@@ -209,22 +222,21 @@ webapp_serverowned() {
 # used by default. Note: this function will automagically prepend $1 to the
 # front of your config file's name.
 webapp_server_configfile() {
+	debug-print-function $FUNCNAME $*
+
 	webapp_checkfileexists "${2}"
 
-	# sort out what the name will be of the config file
+	# WARNING:
+	#
+	# do NOT change the naming convention used here without changing all
+	# the other scripts that also rely upon these names
 
 	local my_file
-
 	if [ -z "${3}" ]; then
 		my_file="${1}-$(basename "${2}")"
 	else
 		my_file="${1}-${3}"
 	fi
-
-	# warning:
-	#
-	# do NOT change the naming convention used here without changing all
-	# the other scripts that also rely upon these names
 
 	elog "(${1}) config file '${my_file}'"
 	cp "${2}" "${D}/${MY_SERVERCONFIGDIR}/${my_file}"
@@ -238,30 +250,24 @@ webapp_server_configfile() {
 # If a version is given the script should upgrade the database schema from
 # the given version to $PVR.
 webapp_sqlscript() {
-	webapp_checkfileexists "${2}"
+	debug-print-function $FUNCNAME $*
 
-	# create the directory where this script will go
-	#
-	# scripts for specific database engines go into their own subdirectory
-	# just to keep things readable on the filesystem
+	webapp_checkfileexists "${2}"
 
 	if [ ! -d "${D}/${MY_SQLSCRIPTSDIR}/${1}" ]; then
 		mkdir -p "${D}/${MY_SQLSCRIPTSDIR}/${1}" || die "unable to create directory ${D}/${MY_SQLSCRIPTSDIR}/${1}"
 	fi
 
-	# warning:
+	# WARNING:
 	#
 	# do NOT change the naming convention used here without changing all
 	# the other scripts that also rely upon these names
 
-	# are we dealing with an 'upgrade'-type script?
 	if [ -n "${3}" ]; then
-		# yes we are
 		elog "(${1}) upgrade script from ${PN}-${PVR} to ${3}"
 		cp "${2}" "${D}${MY_SQLSCRIPTSDIR}/${1}/${3}_to_${PVR}.sql"
 		chmod 600 "${D}${MY_SQLSCRIPTSDIR}/${1}/${3}_to_${PVR}.sql"
 	else
-		# no, we are not
 		elog "(${1}) create script for ${PN}-${PVR}"
 		cp "${2}" "${D}/${MY_SQLSCRIPTSDIR}/${1}/${PVR}_create.sql"
 		chmod 600 "${D}/${MY_SQLSCRIPTSDIR}/${1}/${PVR}_create.sql"
@@ -273,6 +279,8 @@ webapp_sqlscript() {
 # You need to call this function in src_install() BEFORE anything else has run.
 # For now we just create required webapp-config directories.
 webapp_src_preinst() {
+	debug-print-function $FUNCNAME $*
+
 	dodir "${MY_HTDOCSDIR}"
 	dodir "${MY_HOSTROOTDIR}"
 	dodir "${MY_CGIBINDIR}"
@@ -295,6 +303,8 @@ webapp_src_preinst() {
 # You need to call this function AFTER everything else has run in your custom
 # src_install().
 webapp_src_install() {
+	debug-print-function $FUNCNAME $*
+
 	chown -R "${VHOST_DEFAULT_UID}:${VHOST_DEFAULT_GID}" "${D}/"
 	chmod -R u-s "${D}/"
 	chmod -R g-s "${D}/"
@@ -322,7 +332,7 @@ webapp_src_install() {
 # You need to call this function BEFORE anything else has run in your custom
 # pkg_setup().
 webapp_pkg_setup() {
-	# add sanity checks here
+	debug-print-function $FUNCNAME $*
 
 	# special case - some ebuilds *do* need to overwride the SLOT
 	if [[ "${SLOT}+" != "${PVR}+" && "${WEBAPP_MANUAL_SLOT}" != "yes" ]]; then
@@ -330,13 +340,11 @@ webapp_pkg_setup() {
 	fi
 
 	# pull in the shared configuration file
-
 	G_HOSTNAME="localhost"
 	webapp_read_config
 
 	# are we installing a webapp-config solution over the top of a
 	# non-webapp-config solution?
-
 	if ! use vhosts ; then
 		local my_dir="${ROOT}${VHOST_ROOT}/${MY_HTDOCSBASE}/${PN}"
 		local my_output
@@ -371,10 +379,11 @@ webapp_pkg_setup() {
 # You need to call this function AFTER everything else has run in your custom
 # pkg_postinst().
 webapp_pkg_postinst() {
+	debug-print-function $FUNCNAME $*
+
 	webapp_read_config
 
 	# sanity checks, to catch bugs in the ebuild
-
 	if [ ! -f "${ROOT}${MY_APPDIR}/${INSTALL_CHECK_FILE}" ]; then
 		eerror
 		eerror "This ebuild did not call webapp_src_install() at the end"
@@ -387,9 +396,6 @@ webapp_pkg_postinst() {
 		eerror
 		die "Ebuild did not call webapp_src_install() - report to http://bugs.gentoo.org"
 	fi
-
-	# if 'vhosts' is not set in your USE flags, we install a copy of
-	# this application in ${ROOT}/var/www/localhost/htdocs/${PN}/ for you
 
 	if ! use vhosts ; then
 		echo
@@ -415,16 +421,11 @@ webapp_pkg_postinst() {
 		elog "Running ${my_cmd}"
 		${my_cmd}
 
-		# run webapp-cleaner instead of emerge
 		echo
 		local cleaner="${WEBAPP_CLEANER} -p -C ${PN}"
 		einfo "Running ${cleaner}"
 		${cleaner}
 	else
-		# vhosts flag is on
-		#
-		# let's tell the administrator what to do next
-
 		elog
 		elog "The 'vhosts' USE flag is switched ON"
 		elog "This means that Portage will not automatically run webapp-config to"
@@ -444,9 +445,9 @@ webapp_pkg_postinst() {
 # @DESCRIPTION:
 # This is the default pkg_prerm() for this eclass. If USE=vhosts is not set
 # remove all installed copies of this web application. Otherwise instruct the
-# user to manually remove those copies.
+# user to manually remove those copies. See bug #136959.
 webapp_pkg_prerm() {
-	# remove any virtual installs that there are
+	debug-print-function $FUNCNAME $*
 
 	local my_output
 	local x
@@ -457,7 +458,7 @@ webapp_pkg_prerm() {
 		return
 	fi
 
-	if ! use vhosts ; then # remove any installed copies
+	if ! use vhosts ; then
 
 		for x in ${my_output} ; do
 			[ -f ${x}/.webapp ] && . ${x}/.webapp || ewarn "Cannot find file ${x}/.webapp"
@@ -465,7 +466,7 @@ webapp_pkg_prerm() {
 				${WEBAPP_CONFIG} -C -h ${WEB_HOSTNAME} -d ${WEB_INSTALLDIR}
 			fi
 		done
-	else # don't remove anything, but warn user. bug #136959
+	else
 
 		ewarn "Don't forget to use webapp-config to remove any copies of"
 		ewarn "${PN}-${PVR} installed in"
