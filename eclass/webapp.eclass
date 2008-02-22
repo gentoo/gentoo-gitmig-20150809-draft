@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.49 2008/02/22 09:33:45 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.50 2008/02/22 10:03:55 hollow Exp $
 #
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -43,7 +43,6 @@ webapp_read_config() {
 }
 
 # Check whether a specified file exists in the given directory (`.' by default)
-# or not.
 webapp_checkfileexists() {
 	local my_prefix
 
@@ -73,6 +72,43 @@ webapp_strip_d() {
 webapp_strip_cwd() {
 	local my_stripped="${1}"
 	echo "${1}" | sed -e 's|/./|/|g;'
+}
+
+webapp_getinstalltype() {
+	# or are we upgrading?
+
+	if ! use vhosts ; then
+		# we only run webapp-config if vhosts USE flag is not set
+
+		local my_output
+
+		my_output="$(webapp_check_installedat)"
+
+		if [ "${?}" = "0" ] ; then
+			# something is already installed there
+			#
+			# make sure it isn't the same version
+
+			local my_pn="$(echo ${my_output} | awk '{ print $1 }')"
+			local my_pvr="$(echo ${my_output} | awk '{ print $2 }')"
+
+			REMOVE_PKG="${my_pn}-${my_pvr}"
+
+			if [ "${my_pn}" == "${PN}" ]; then
+				if [ "${my_pvr}" != "${PVR}" ]; then
+					elog "This is an upgrade"
+					IS_UPGRADE=1
+				else
+					elog "This is a re-installation"
+					IS_REPLACE=1
+				fi
+			else
+				elog "${my_output} is installed there"
+			fi
+		else
+			elog "This is an installation"
+		fi
+	fi
 }
 
 # ==============================================================================
@@ -232,15 +268,32 @@ webapp_sqlscript() {
 	fi
 }
 
+# @FUNCTION: webapp_src_preinst
+# @DESCRIPTION:
+# You need to call this function in src_install() BEFORE anything else has run.
+# For now we just create required webapp-config directories.
+webapp_src_preinst() {
+	dodir "${MY_HTDOCSDIR}"
+	dodir "${MY_HOSTROOTDIR}"
+	dodir "${MY_CGIBINDIR}"
+	dodir "${MY_ICONSDIR}"
+	dodir "${MY_ERRORSDIR}"
+	dodir "${MY_SQLSCRIPTSDIR}"
+	dodir "${MY_HOOKSCRIPTSDIR}"
+	dodir "${MY_SERVERCONFIGDIR}"
+}
+
 # ==============================================================================
 # EXPORTED FUNCTIONS
 # ==============================================================================
 
 # @FUNCTION: webapp_src_install
 # @DESCRIPTION:
-# You need to call this function in src_install() AFTER everything else has run.
-# For now, we just make sure that root owns everything, and that there are no
-# setuid files.
+# This is the default src_install(). For now, we just make sure that root owns
+# everything, and that there are no setuid files.
+#
+# You need to call this function AFTER everything else has run in your custom
+# src_install().
 webapp_src_install() {
 	chown -R "${VHOST_DEFAULT_UID}:${VHOST_DEFAULT_GID}" "${D}/"
 	chmod -R u-s "${D}/"
@@ -262,8 +315,12 @@ webapp_src_install() {
 
 # @FUNCTION: webapp_pkg_setup
 # @DESCRIPTION:
-# You need to call this function in pkg_config() AFTER everything else has run.
-# If 'vhosts' USE flag is not set, auto-install this app.
+# The default pkg_setup() for this eclass. This will gather required variables
+# from webapp-config and check if there is an application installed to
+# `${ROOT}/var/www/localhost/htdocs/${PN}/' if USE=vhosts is not set.
+#
+# You need to call this function BEFORE anything else has run in your custom
+# pkg_setup().
 webapp_pkg_setup() {
 	# add sanity checks here
 
@@ -305,56 +362,14 @@ webapp_pkg_setup() {
 	fi
 }
 
-webapp_getinstalltype() {
-	# or are we upgrading?
-
-	if ! use vhosts ; then
-		# we only run webapp-config if vhosts USE flag is not set
-
-		local my_output
-
-		my_output="$(webapp_check_installedat)"
-
-		if [ "${?}" = "0" ] ; then
-			# something is already installed there
-			#
-			# make sure it isn't the same version
-
-			local my_pn="$(echo ${my_output} | awk '{ print $1 }')"
-			local my_pvr="$(echo ${my_output} | awk '{ print $2 }')"
-
-			REMOVE_PKG="${my_pn}-${my_pvr}"
-
-			if [ "${my_pn}" == "${PN}" ]; then
-				if [ "${my_pvr}" != "${PVR}" ]; then
-					elog "This is an upgrade"
-					IS_UPGRADE=1
-				else
-					elog "This is a re-installation"
-					IS_REPLACE=1
-				fi
-			else
-				elog "${my_output} is installed there"
-			fi
-		else
-			elog "This is an installation"
-		fi
-	fi
-}
-
-webapp_src_preinst() {
-	# create the directories that we need
-
-	dodir "${MY_HTDOCSDIR}"
-	dodir "${MY_HOSTROOTDIR}"
-	dodir "${MY_CGIBINDIR}"
-	dodir "${MY_ICONSDIR}"
-	dodir "${MY_ERRORSDIR}"
-	dodir "${MY_SQLSCRIPTSDIR}"
-	dodir "${MY_HOOKSCRIPTSDIR}"
-	dodir "${MY_SERVERCONFIGDIR}"
-}
-
+# @FUNCTION: webapp_pkg_postinst
+# @DESCRIPTION:
+# The default pkg_postinst() for this eclass. This installs the web application to
+# `${ROOT}/var/www/localhost/htdocs/${PN}/' if USE=vhosts is not set. Otherwise
+# display a short notice how to install this application with webapp-config.
+#
+# You need to call this function AFTER everything else has run in your custom
+# pkg_postinst().
 webapp_pkg_postinst() {
 	webapp_read_config
 
@@ -425,6 +440,11 @@ webapp_pkg_postinst() {
 	return 0
 }
 
+# @FUNCTION: webapp_pkg_prerm
+# @DESCRIPTION:
+# This is the default pkg_prerm() for this eclass. If USE=vhosts is not set
+# remove all installed copies of this web application. Otherwise instruct the
+# user to manually remove those copies.
 webapp_pkg_prerm() {
 	# remove any virtual installs that there are
 
