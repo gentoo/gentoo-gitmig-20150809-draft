@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.54 2008/02/22 14:27:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.55 2008/02/22 14:33:35 hollow Exp $
 #
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -174,6 +174,18 @@ webapp_postupgrade_txt() {
 	cp "${2}" "${D}/${MY_APPDIR}/postupgrade-${1}.txt"
 }
 
+# helper for webapp_serverowned()
+_webapp_serverowned() {
+	debug-print-function $FUNCNAME $*
+
+	webapp_checkfileexists "${1}" "${D}"
+	local my_file="$(webapp_strip_appdir "${1}")"
+	my_file="$(webapp_strip_cwd "${my_file}")"
+
+	elog "(server owned) ${my_file}"
+	echo "${my_file}" >> "${D}/${WA_SOLIST}"
+}
+
 # @FUNCTION: webapp_serverowned
 # @USAGE: [-R] <file> [more files ...]
 # @DESCRIPTION:
@@ -187,24 +199,14 @@ webapp_serverowned() {
 	if [[ "${1}" == "-R" ]]; then
 		shift
 		for m in "$@"; do
-			for a in $(find ${D}/${m}); do
-				a=${a/${D}\/\///}
-				webapp_checkfileexists "${a}" "$D"
-				local my_file="$(webapp_strip_appdir "${a}")"
-				my_file="$(webapp_strip_cwd "${my_file}")"
-
-				elog "(server owned) ${my_file}"
-				echo "${my_file}" >> "${D}/${WA_SOLIST}"
+			find "${D}${m}" | while read a; do
+				a=$(webapp_strip_d "${a}")
+				_webapp_serverowned "${a}"
 			done
 		done
 	else
 		for m in "$@"; do
-			webapp_checkfileexists "${m}" "$D"
-			local my_file="$(webapp_strip_appdir "${m}")"
-			my_file="$(webapp_strip_cwd "${my_file}")"
-
-			elog "(server owned) ${my_file}"
-			echo "${my_file}" >> "${D}/${WA_SOLIST}"
+			_webapp_serverowned "${m}"
 		done
 	fi
 }
@@ -341,6 +343,8 @@ webapp_pkg_setup() {
 
 	if [[ $? -ne 0 ]]; then
 		# okay, whatever is there, it isn't webapp-config-compatible
+		echo
+		ewarn
 		ewarn "You already have something installed in ${my_dir}"
 		ewarn
 		ewarn "Whatever is in ${my_dir}, it's not"
@@ -348,9 +352,15 @@ webapp_pkg_setup() {
 		ewarn
 		ewarn "This ebuild may be overwriting important files."
 		ewarn
+		echo
+		ebeep 10
 	elif [[ "$(echo ${my_output} | awk '{ print $1 }')" != "${PN}" ]]; then
-		eerror "${my_dir} contains ${my_output}"
-		eerror "I cannot upgrade that"
+		echo
+		eerror "You already have ${my_output} installed in ${my_dir}"
+		eerror
+		eerror "I cannot upgrade a different application"
+		eerror
+		echo
 		die "Cannot upgrade contents of ${my_dir}"
 	fi
 }
@@ -386,11 +396,11 @@ webapp_pkg_postinst() {
 		echo
 		elog "vhosts USE flag not set - auto-installing using webapp-config"
 
-		webapp_getinstalltype
-
 		G_HOSTNAME="localhost"
-		local my_mode=-I
 		webapp_read_config
+
+		local my_mode=-I
+		webapp_getinstalltype
 
 		if [[ "${IS_REPLACE}" == "1" ]]; then
 			elog "${PN}-${PVR} is already installed - replacing"
