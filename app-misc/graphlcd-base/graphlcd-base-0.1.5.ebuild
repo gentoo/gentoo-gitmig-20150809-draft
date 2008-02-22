@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.5.ebuild,v 1.4 2008/01/01 11:49:47 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.5.ebuild,v 1.5 2008/02/22 05:53:56 robbat2 Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -21,7 +21,7 @@ RDEPEND="truetype? ( media-libs/freetype
 
 src_unpack() {
 
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	sed -i Make.config -e "s:usr\/local:usr:" -e "s:FLAGS *=:FLAGS ?=:"
