@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.23 2008/02/07 17:44:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.24 2008/02/22 14:32:51 ulm Exp $
+
+*org-mode-5.22a (22 Feb 2008)
+
+  22 Feb 2008; Ulrich Mueller <ulm@gentoo.org> +org-mode-5.22a.ebuild:
+  Version bump.
 
 *org-mode-5.21 (07 Feb 2008)
 
