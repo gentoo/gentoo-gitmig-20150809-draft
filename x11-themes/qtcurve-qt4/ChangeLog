@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.6 2008/02/17 17:11:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.7 2008/02/22 21:27:29 yngwin Exp $
+
+  22 Feb 2008; Ben de Groot <yngwin@gentoo.org> qtcurve-qt4-0.55.3.ebuild:
+  Replace cmake-utils_src_install with insinto, until we find out why it fails
+  on ~amd64.
 
 *qtcurve-qt4-0.55.3 (17 Feb 2008)
 
