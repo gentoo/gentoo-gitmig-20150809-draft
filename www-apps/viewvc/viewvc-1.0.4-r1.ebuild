@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.4-r1.ebuild,v 1.1 2008/02/20 13:04:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.4-r1.ebuild,v 1.2 2008/02/22 08:55:41 hollow Exp $
 
 inherit confutils webapp python eutils
 
@@ -70,14 +70,14 @@ src_install() {
 	dohtml -r viewvc.org/*
 
 	insinto "${MOD_PATH}"
-	doins -r lib/
+	doins -r lib/*
 
-	insinto "${MY_APPDIR}"/templates
+	insinto "${MY_APPDIR}"
 	doins -r templates/
 
 	if use mysql; then
-		insinto "${MY_HOSTROOTDIR}"/bin
-		dobin bin/{*dbadmin,make-database,loginfo-handler}
+		exeinto "${MY_HOSTROOTDIR}"/bin
+		doexe bin/{*dbadmin,make-database,loginfo-handler}
 	fi
 
 	insinto "${MY_HOSTROOTDIR}"/conf
