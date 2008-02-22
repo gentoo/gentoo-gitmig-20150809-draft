@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.71 2008/02/20 23:35:01 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.72 2008/02/22 19:51:30 ingmar Exp $
+
+  22 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> qtruby-3.5.8.ebuild,
+  qtruby-3.5.9.ebuild:
+  Missing dependency on dev-ruby/rubygems.
 
 *qtruby-3.5.9 (20 Feb 2008)
 
