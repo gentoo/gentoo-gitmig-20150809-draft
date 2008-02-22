@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libsexymm/libsexymm-0.1.9.ebuild,v 1.3 2007/10/06 13:51:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libsexymm/libsexymm-0.1.9.ebuild,v 1.4 2008/02/22 03:59:40 compnerd Exp $
 
 inherit gnome2
 
 DESCRIPTION="C++ Bindings for libsexy"
-HOMEPAGE="http://www.chipx86.com/wiki/Libsexy/"
+HOMEPAGE="http://www.chipx86.com/wiki/Libsexy"
 SRC_URI="http://releases.chipx86.com/libsexy/libsexymm/${P}.tar.gz"
 
 LICENSE="LGPL-2"
