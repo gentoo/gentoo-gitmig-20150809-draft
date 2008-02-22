@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/wyrd-1.4.2.ebuild,v 1.1 2007/05/26 10:58:39 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/wyrd-1.4.4.ebuild,v 1.1 2008/02/22 09:10:20 tove Exp $
 
 inherit eutils
 
 DESCRIPTION="Text-based front-end to Remind"
-HOMEPAGE="http://www.eecs.umich.edu/~pelzlpj/wyrd/"
-SRC_URI="http://www.eecs.umich.edu/~pelzlpj/wyrd/${P}.tar.gz"
+HOMEPAGE="http://pessimization.com/software/wyrd/"
+SRC_URI="http://pessimization.com/software/wyrd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,7 +15,8 @@ IUSE="unicode"
 
 DEPEND=">=dev-lang/ocaml-3.08
 	sys-libs/ncurses
-	>=x11-misc/remind-03.00.24"
+	>=x11-misc/remind-03.01"
+RDEPEND=${DEPEND}
 
 pkg_setup() {
 	use unicode || return 0
