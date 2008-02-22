@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/dssi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.14 2007/07/02 15:52:52 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.15 2008/02/22 13:47:54 flameeyes Exp $
+
+*dssi-0.9.1-r1 (22 Feb 2008)
+
+  22 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/dssi-0.9.1-constants.patch, +dssi-0.9.1-r1.ebuild:
+  Add a new revision to reduce copy-on-write pages, also fix the sed for the
+  pkgconfig file, and disable dependency tracking.
 
   02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Hand to newly-born proaudio herd.
