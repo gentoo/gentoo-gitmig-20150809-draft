@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2004g.ebuild,v 1.14 2008/02/22 07:18:16 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2004g-r1.ebuild,v 1.1 2008/02/22 07:18:16 wrobel Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -14,8 +14,8 @@ SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="ssl pam kernel_linux kernel_FreeBSD"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="kernel_linux kernel_FreeBSD kolab pam ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	!virtual/imap-c-client"
@@ -44,7 +44,7 @@ src_unpack() {
 
 	# Targets should use the Gentoo (ie linux) fs
 	sed -e '/^bsf:/,/^$/ s:ACTIVEFILE=.*:ACTIVEFILE=/var/lib/news/active:g' \
-		-i src/osdep/unix/Makefile || die "Makefile sed fixing failed for FreeBSD"
+		-i src/osdep/unix/Makefile || die "Makefile sex fixing failed for FreeBSD"
 
 	# Apply a patch to only build the stuff we need for c-client
 	epatch "${FILESDIR}"/2002d-Makefile.patch || die "epatch failed"
@@ -52,6 +52,12 @@ src_unpack() {
 	# Apply patch to add the compilation of a .so for PHP
 	# This was previously conditional, but is more widely useful.
 	epatch "${FILESDIR}"/${PN}-2004a-amd64-so-fix.patch
+
+	# Add kolab support.
+	# http://kolab.org/cgi-bin/viewcvs-kolab.cgi/server/patches/imap/
+	if use kolab ; then
+		epatch "${FILESDIR}/${P}_KOLAB_Annotations.patch" || die "epatch failed"
+	fi
 
 	# Remove the pesky checks about SSL stuff
 	sed -e '/read.*exit/d' -i Makefile
