@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/mcelog-0.8_pre1.ebuild,v 1.7 2008/02/22 19:36:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/mcelog-0.8_pre1.ebuild,v 1.8 2008/02/22 19:41:55 robbat2 Exp $
+
+inherit eutils
 
 MY_PV="${PV/_pre1/pre}"
 MY_P="${PN}-${MY_PV}"
