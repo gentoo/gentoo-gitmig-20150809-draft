@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.15-r1.ebuild,v 1.2 2007/11/06 07:07:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.15-r1.ebuild,v 1.3 2008/02/22 03:38:50 vapier Exp $
 
 inherit linux-mod eutils
 
@@ -15,23 +15,25 @@ IUSE=""
 
 RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}
-		virtual/linux-sources"
+	virtual/linux-sources"
+
 MODULE_NAMES="iscsi_trgt(kernel/iscsi:${S}/kernel)"
 CONFIG_CHECK="CRYPTO_CRC32C"
 ERROR_CFG="iscsitarget needs support for CRC32C in your kernel."
 
 src_unpack() {
 	unpack ${A}
-	EPATCH_OPTS="-d ${S} -p0" \
-	epatch ${FILESDIR}/${PN}-0.4.13-usrbuildfix.patch
-	convert_to_m ${S}/Makefile
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-0.4.15-isns-set-scn-flag.patch #180619
+	epatch "${FILESDIR}"/${PN}-0.4.15-build.patch
+	epatch "${FILESDIR}"/${PN}-0.4.15-kmem.patch
+	epatch "${FILESDIR}"/${PN}-0.4.15-scatter.patch
+	convert_to_m "${S}"/Makefile
 }
 
 src_compile() {
-	einfo "Building userspace"
-	CFLAGS="" emake usr OPTFLAGS="${CFLAGS}" || die "failed to build userspace"
+	emake usr || die "failed to build userspace"
 
-	einfo "Building kernel modules"
 	unset ARCH
 	emake KSRC="${KERNEL_DIR}" kernel || die "failed to build module"
 }

@@ -1,6 +1,15 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.8 2008/01/14 01:58:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.9 2008/02/22 03:38:50 vapier Exp $
+
+  22 Feb 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/iscsitarget-0.4.15-build.patch,
+  +files/iscsitarget-0.4.15-isns-set-scn-flag.patch,
+  +files/iscsitarget-0.4.15-kmem.patch,
+  +files/iscsitarget-0.4.15-scatter.patch, files/ietd-init.d,
+  iscsitarget-0.4.15-r1.ebuild:
+  Respect user LDFLAGS. Fix building with gcc-3.4/-O0 #180619 by Natanael
+  Copa. Add some kernel updates from upstream #191313.
 
   14 Jan 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Change herd.

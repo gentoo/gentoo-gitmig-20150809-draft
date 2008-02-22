@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Technologies, Inc.
+# Copyright 1999-2008 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/files/ietd-init.d,v 1.1 2006/02/20 08:33:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/files/ietd-init.d,v 1.2 2008/02/22 03:38:51 vapier Exp $
 
 MEM_SIZE=1048576
 DAEMON=/usr/sbin/ietd
@@ -79,7 +79,7 @@ stop() {
     # ugly, but ietadm does not allways provides correct exit values
 	RETURN="$(ietadm --op delete 2>&1)"
 	RETVAL=$?
-	if [ $RETVAL == "0" ] && [[ $RETURN != "something wrong" ]]; then
+	if [ $RETVAL -eq 0 ] && [ "$RETURN" != "something wrong" ] ; then
 		eend 0
 	else
 		eend 1
