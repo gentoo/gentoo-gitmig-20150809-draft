@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8308 2008/02/22 09:20:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8309 2008/02/22 16:29:05 tgurr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
+
+# Timo Gurr <tgurr@gentoo.org> (22 Feb 2008)
+# Mask KDE4 versions of ktorrent as long as KDE4 is masked.
+>=net-p2p/ktorrent-3.0.0
 
 # Diego Pettenò <flameeyes@gentoo.org> (21 Feb 2008)
 # New pambase framework for PAM configuration. See Tracker bug #210767.

@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1144 2008/02/22 09:20:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1145 2008/02/22 16:29:05 tgurr Exp $
+
+  22 Feb 2008; Timo Gurr <tgurr@gentoo.org> package.mask:
+  Mask KDE4 versions of ktorrent as long as KDE4 is masked.
 
   22 Feb 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
   app-emacs/cdrw removed, bug 207133.
