@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/simscan/simscan-1.3.1.ebuild,v 1.1 2007/06/17 11:46:24 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/simscan/simscan-1.3.1.ebuild,v 1.2 2008/02/22 23:34:12 tupone Exp $
 
 inherit autotools toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -29,19 +29,21 @@ pkg_setup() {
 	enewgroup simscan
 	enewuser simscan -1 -1 /dev/null simscan
 
-	use clamav && usermod -G simscan,nofiles clamav
+	use clamav && usermod -a -G simscan,nofiles clamav
 }
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-destdir.patch
-	epatch ${FILESDIR}/${P}-printf.patch
+	epatch "${FILESDIR}"/${P}-destdir.patch \
+		"${FILESDIR}"/${P}-printf.patch
 
-	sed -i "s:daily.cvd:main.cvd:g" configure
-	sed -i "s:daily.cvd:main.cvd:g" configure.in
-	sed -i "s:daily.cvd:main.cvd:g" simscanmk.c
+	sed -i \
+		-e "s:daily.cvd:main.cvd:g" \
+		configure.in \
+		simscanmk.c \
+		|| die "sed failed"
 
 	eautoreconf
 }
@@ -50,6 +52,7 @@ src_compile() {
 	econf \
 		--enable-user=simscan \
 		--enable-qmaildir=/var/qmail \
+		--enable-qmail-queue=/var/qmail/bin/qmail-queue \
 		$(use_enable attachment attach) \
 		$(use_enable clamav) \
 		$(use_enable clamav clamdscan /usr/bin/clamdscan) \
@@ -69,7 +72,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS README TODO
+	dodoc AUTHORS ChangeLog README TODO
 
 	keepdir /var/qmail/control
 	keepdir /var/qmail/simscan
