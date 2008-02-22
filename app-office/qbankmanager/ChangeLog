@@ -1,6 +1,10 @@
 # ChangeLog for app-office/qbankmanager
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/ChangeLog,v 1.29 2007/10/28 04:19:32 fmccor Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/ChangeLog,v 1.30 2008/02/22 21:02:01 hanno Exp $
+
+  22 Feb 2008; Hanno Boeck <hanno@gentoo.org> -qbankmanager-0.9.38.ebuild,
+  qbankmanager-0.9.39.ebuild:
+  Fix small repoman issue (dodoc COPYING) and remove old ebuild.
 
   28 Oct 2007; Ferris McCormick <fmccor@gentoo.org>
   qbankmanager-0.9.39.ebuild:

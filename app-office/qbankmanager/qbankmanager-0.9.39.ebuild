@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/qbankmanager-0.9.39.ebuild,v 1.5 2007/10/28 04:19:32 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/qbankmanager-0.9.39.ebuild,v 1.6 2008/02/22 21:02:01 hanno Exp $
 
 inherit eutils qt3
 
@@ -33,5 +33,5 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS README TODO README COPYING NEWS
+	dodoc AUTHORS README TODO README NEWS || die
 }
