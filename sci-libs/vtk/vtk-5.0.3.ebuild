@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.10 2007/08/19 03:50:36 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.11 2008/02/22 13:35:13 markusle Exp $
 
-inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3
+EAPI="1"
+
+inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4
 
 # Short package version
 SPV="$(get_version_component_range 1-2)"
@@ -16,13 +18,16 @@ LICENSE="BSD LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="doc examples mpi patented python tcl tk threads qt3 qt4"
-RDEPEND="mpi? ( virtual/mpi )
+RDEPEND="mpi? ( || (
+					sys-cluster/openmpi
+					sys-cluster/lam-mpi
+					sys-cluster/mpich2 ) )
 	python? ( >=dev-lang/python-2.0 )
 	tcl? ( >=dev-lang/tcl-8.2.3 )
 	tk? ( >=dev-lang/tk-8.2.3 )
 	java? ( >=virtual/jre-1.5 )
 	qt3? ( $(qt_min_version 3.3.4) )
-	qt4? ( >=x11-libs/qt-4.1.0 )
+	qt4? ( $(qt4_min_version 4.1) )
 	dev-libs/expat
 	media-libs/freetype
 	media-libs/jpeg
@@ -53,12 +58,21 @@ pkg_setup() {
 			eerror 'build the examples under qt4!'
 			die "qt4 setup error"
 		fi
+
+	if use mpi && has_version sys-cluster/mpich2; then
+		append-flags -DMPICH_IGNORE_CXX_SEEK
+		if ! built_with_use sys-cluster/mpich2 cxx; then
+			die "Please re-emerge sys-cluster/mpich2 with USE=\"cxx\""
+		fi
+	fi
+
+	use qt4 && qt4_pkg_setup
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-lammpi.patch
+	epatch "${FILESDIR}"/${P}-mpi.patch
 }
 
 src_compile() {
@@ -73,13 +87,14 @@ src_compile() {
 
 	# Fix Examples cmake file
 	sed -e "s/MAKEPROGRAM/CMAKE_MAKE_PROGRAM/g" \
-		-i ${S}/Examples/CMakeLists.txt || \
+		-i "${S}"/Examples/CMakeLists.txt || \
 		die "Failed to fix examples CMakeList.txt"
 
 	# build list of config variable define's to pass to cmake
 	local CMAKE_VARIABLES=""
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_SKIP_RPATH:BOOL=YES"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_DIR:PATH=${S}"
+	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_LIB_DIR:PATH=/usr/$(get_libdir)/"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_INSTALL_PREFIX:PATH=/usr"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DBUILD_SHARED_LIBS:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_FREETYPE:BOOL=ON"
@@ -182,7 +197,7 @@ src_install() {
 		-i "${S}"/Utilities/InstallOnly/*.cmake || \
 		die "Failed to fix cmake files"
 
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	# install docs
 	dohtml "${S}"/README.html || die "Failed to install docs"
@@ -206,34 +221,34 @@ src_install() {
 	if use examples; then
 		dodir /usr/share/${PN} || \
 			die "Failed to create examples directory"
-		cp -pPR ${S}/Examples ${D}/usr/share/${PN}/examples || \
+		cp -pPR "${S}"/Examples "${D}"/usr/share/${PN}/examples || \
 			die "Failed to copy example files"
 
 		# fix example's permissions
-		find ${D}/usr/share/${PN}/examples -type d -exec \
+		find "${D}"/usr/share/${PN}/examples -type d -exec \
 			chmod 0755 {} \; || \
 			die "Failed to fix example directories permissions"
-		find ${D}/usr/share/${PN}/examples -type f -exec \
+		find "${D}"/usr/share/${PN}/examples -type f -exec \
 			chmod 0644 {} \; || \
 			die "Failed to fix example files permissions"
 
-		cp -pPR ${WORKDIR}/VTKData ${D}/usr/share/${PN}/data || \
+		cp -pPR "${WORKDIR}"/VTKData "${D}"/usr/share/${PN}/data || \
 			die "Failed to copy data files"
 
 		# fix data's permissions
-		find ${D}/usr/share/${PN}/data -type d -exec \
+		find "${D}"/usr/share/${PN}/data -type d -exec \
 			chmod 0755 {} \; || \
 			die "Failed to fix data directories permissions"
-		find ${D}/usr/share/${PN}/data -type f -exec \
+		find "${D}"/usr/share/${PN}/data -type f -exec \
 			chmod 0644 {} \; || \
 			die "Failed to fix data files permissions"
 	fi
 
 	# environment
-	echo "VTK_DATA_ROOT=/usr/share/${PN}/data" >> ${T}/40${PN}
-	echo "VTK_DIR=/usr/lib/${PN}-${SPV}" >> ${T}/40${PN}
-	echo "VTKHOME=/usr" >> ${T}/40${PN}
-	doenvd ${T}/40${PN}
+	echo "VTK_DATA_ROOT=/usr/share/${PN}/data" >> "${T}"/40${PN}
+	echo "VTK_DIR=/usr/lib/${PN}-${SPV}" >> "${T}"/40${PN}
+	echo "VTKHOME=/usr" >> "${T}"/40${PN}
+	doenvd "${T}"/40${PN}
 }
 
 pkg_postinst() {
