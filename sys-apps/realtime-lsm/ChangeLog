@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/realtime-lsm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.19 2007/12/22 17:38:58 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.20 2008/02/22 10:34:27 flameeyes Exp $
+
+  22 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  -realtime-lsm-0.8.5-r1.ebuild, realtime-lsm-0.8.5-r2.ebuild:
+  Remove old version, add an error message when using a Linux kernel equal or
+  after 2.6.24. Closes bug #207561.
 
   22 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   realtime-lsm-0.8.5-r2.ebuild:

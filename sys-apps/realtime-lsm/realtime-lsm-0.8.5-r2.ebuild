@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.5-r2.ebuild,v 1.7 2007/12/22 17:38:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.5-r2.ebuild,v 1.8 2008/02/22 10:34:27 flameeyes Exp $
 
 inherit linux-mod eutils
 
@@ -25,6 +25,15 @@ pkg_setup() {
 }
 
 src_unpack() {
+	if kernel_is ge 2 6 24; then
+		eerror "Since version 2.6.24 of the Linux kernel, security capabilities can't be"
+		eerror "made into a module, and external security modules can't be compiled any"
+		eerror "longer."
+		eerror "Please refer to the Realtime Guide to set up a PAM-based realtime group."
+		eerror "http://www.gentoo.org/proj/en/desktop/sound/realtime.xml"
+		die "Unsupported kernel version."
+	fi
+
 	if ! kernel_is 2 6; then
 		die "A Linux kernel of version 2.6 is required."
 	fi
