@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DCOP-Amarok
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DCOP-Amarok/ChangeLog,v 1.4 2007/05/01 10:12:08 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DCOP-Amarok/ChangeLog,v 1.5 2008/02/22 05:48:56 robbat2 Exp $
+
+  22 Feb 2008; Robin H. Johnson <robbat2@gentoo.org>
+  DCOP-Amarok-0.035.ebuild:
+  Add ~ppc.
 
   01 May 2007; Markus Rothe <corsair@gentoo.org> DCOP-Amarok-0.035.ebuild:
   Added ~ppc64

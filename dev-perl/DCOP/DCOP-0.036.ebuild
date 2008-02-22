@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DCOP/DCOP-0.036.ebuild,v 1.4 2007/05/01 10:11:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DCOP/DCOP-0.036.ebuild,v 1.5 2008/02/22 05:47:55 robbat2 Exp $
 
 inherit perl-module
 
@@ -14,6 +14,6 @@ IUSE=""
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="amd64 ~ppc64 x86"
+KEYWORDS="amd64 ~ppc64 x86 ~ppc"
 
 SRC_TEST="do"
