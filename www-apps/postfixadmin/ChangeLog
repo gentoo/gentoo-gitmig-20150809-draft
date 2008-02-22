@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/postfixadmin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.10 2008/02/20 16:12:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.11 2008/02/22 15:56:28 hollow Exp $
+
+  22 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
+  postfixadmin-2.1.0-r1.ebuild:
+  add need_httpd_cgi wrt #208584
 
 *postfixadmin-2.1.0-r1 (20 Feb 2008)
 

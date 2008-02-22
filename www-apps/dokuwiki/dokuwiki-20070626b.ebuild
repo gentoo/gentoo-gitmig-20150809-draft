@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20070626b.ebuild,v 1.4 2008/02/19 12:37:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20070626b.ebuild,v 1.5 2008/02/22 15:48:20 hollow Exp $
 
 inherit webapp depend.php
 
@@ -18,6 +18,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
+need_httpd_cgi
 need_php_httpd
 
 pkg_setup() {

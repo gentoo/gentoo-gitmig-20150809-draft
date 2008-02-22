@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/dragonflycms
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.17 2008/02/19 13:13:56 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.18 2008/02/22 15:49:28 hollow Exp $
+
+  22 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
+  dragonflycms-9.1.2.1.ebuild:
+  add need_httpd_cgi wrt #208584
 
   19 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
   dragonflycms-9.1.2.1.ebuild:

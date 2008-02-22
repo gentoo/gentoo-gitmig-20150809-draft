@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.1.0-r1.ebuild,v 1.1 2008/02/20 16:12:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.1.0-r1.ebuild,v 1.2 2008/02/22 15:56:28 hollow Exp $
 
 inherit eutils webapp depend.php confutils
 
@@ -19,6 +19,7 @@ DEPEND=">=mail-mta/postfix-2.0.0
 	postgres? ( dev-perl/DBD-Pg )"
 RDEPEND="${DEPEND}"
 
+need_httpd_cgi
 need_php_httpd
 
 pkg_setup() {

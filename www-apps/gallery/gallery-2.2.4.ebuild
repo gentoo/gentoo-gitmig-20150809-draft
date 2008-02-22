@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.2.4.ebuild,v 1.9 2008/02/20 18:07:42 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.2.4.ebuild,v 1.10 2008/02/22 15:50:50 hollow Exp $
 
 inherit webapp eutils depend.php confutils
 
@@ -22,6 +22,7 @@ RDEPEND="media-libs/jpeg
 
 S="${WORKDIR}"/${PN}2
 
+need_httpd_cgi
 need_php_httpd
 
 pkg_setup() {

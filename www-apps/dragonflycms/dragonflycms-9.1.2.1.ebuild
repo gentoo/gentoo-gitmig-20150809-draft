@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.1.2.1.ebuild,v 1.2 2008/02/19 13:13:56 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.1.2.1.ebuild,v 1.3 2008/02/22 15:49:28 hollow Exp $
 
 inherit webapp depend.php
 
@@ -16,6 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~x86"
 IUSE=""
 
+need_httpd_cgi
 need_php_httpd
 
 S="${WORKDIR}"

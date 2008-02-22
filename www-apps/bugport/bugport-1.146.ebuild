@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugport/bugport-1.146.ebuild,v 1.5 2008/02/18 11:27:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugport/bugport-1.146.ebuild,v 1.6 2008/02/22 15:46:04 hollow Exp $
 
 inherit webapp depend.php
 
@@ -14,9 +14,10 @@ IUSE=""
 
 DEPEND="dev-php/adodb"
 
+need_httpd_cgi
 need_php_httpd
 
-S=${WORKDIR}/${PN}_${PV}
+S="${WORKDIR}"/${PN}_${PV}
 
 pkg_setup() {
 	webapp_pkg_setup
@@ -45,11 +46,11 @@ src_install() {
 	sed -i -e 's|^\(# \+\)\?\$adoDir.\+$|$adoDir = "/usr/lib/php/adodb/"; # DO NOT CHANGE!|' \
 		conf/config.php || die "failed to fix adodb location in config.php."
 
-	insinto ${MY_HTDOCSDIR}
+	insinto "${MY_HTDOCSDIR}"
 	doins -r .
 
-	webapp_configfile ${MY_HTDOCSDIR}/conf/config.php
-	webapp_configfile ${MY_HTDOCSDIR}/conf/configuration.php
+	webapp_configfile "${MY_HTDOCSDIR}"/conf/config.php
+	webapp_configfile "${MY_HTDOCSDIR}"/conf/configuration.php
 
 	webapp_src_install
 }

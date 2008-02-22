@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.135 2008/02/20 18:07:42 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.136 2008/02/22 15:50:50 hollow Exp $
+
+  22 Feb 2008; Benedikt Böhm <hollow@gentoo.org> gallery-1.5.3.ebuild,
+  gallery-1.5.7.ebuild, gallery-2.2.4.ebuild:
+  add need_httpd_cgi wrt #208584
 
   20 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
   gallery-1.5.3.ebuild, -gallery-1.5.5.ebuild, gallery-1.5.7.ebuild,

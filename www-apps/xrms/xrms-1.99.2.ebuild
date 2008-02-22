@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xrms/xrms-1.99.2.ebuild,v 1.3 2008/02/20 12:40:40 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xrms/xrms-1.99.2.ebuild,v 1.4 2008/02/22 15:58:41 hollow Exp $
 
 inherit webapp depend.php eutils
 
@@ -17,6 +17,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="dev-php/PEAR-PEAR"
 
+need_httpd_cgi
 need_php_httpd
 
 S="${WORKDIR}"/${PN}

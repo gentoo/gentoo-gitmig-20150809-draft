@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/b2evolution
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.28 2008/02/17 23:28:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.29 2008/02/22 15:43:08 hollow Exp $
+
+  22 Feb 2008; Benedikt Böhm <hollow@gentoo.org> b2evolution-1.10.2.ebuild,
+  b2evolution-1.10.3.ebuild, b2evolution-2.4.0_rc2.ebuild:
+  add need_httpd_cgi wrt #208584
 
   17 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
   b2evolution-1.10.2.ebuild, b2evolution-1.10.3.ebuild,

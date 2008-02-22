@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-1.10.3.ebuild,v 1.2 2008/02/17 23:28:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-1.10.3.ebuild,v 1.3 2008/02/22 15:43:08 hollow Exp $
 
 inherit webapp eutils depend.php
 
@@ -19,6 +19,7 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
+need_httpd_cgi
 need_php_httpd
 
 S="${WORKDIR}/${PN}"
@@ -36,15 +37,15 @@ pkg_setup() {
 src_install() {
 	webapp_src_preinst
 
-	insinto ${MY_HTDOCSDIR}
+	insinto "${MY_HTDOCSDIR}"
 	doins -r blogs/*
 
 	rm doc/*.*-*.html doc/*.src.html
 	dohtml doc/*.html
 
-	webapp_serverowned ${MY_HTDOCSDIR}
-	webapp_serverowned ${MY_HTDOCSDIR}/conf/_basic_config.php
-	webapp_configfile ${MY_HTDOCSDIR}/conf/_{basic_config,advanced,locales,formatting,admin,stats,application}.php
+	webapp_serverowned "${MY_HTDOCSDIR}"
+	webapp_serverowned "${MY_HTDOCSDIR}"/conf/_basic_config.php
+	webapp_configfile "${MY_HTDOCSDIR}"/conf/_{basic_config,advanced,locales,formatting,admin,stats,application}.php
 
 	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 

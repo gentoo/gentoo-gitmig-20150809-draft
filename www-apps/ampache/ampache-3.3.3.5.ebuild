@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.3.5.ebuild,v 1.6 2008/02/17 23:00:21 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.3.5.ebuild,v 1.7 2008/02/22 15:40:39 hollow Exp $
 
 inherit webapp depend.php
 
@@ -15,6 +15,7 @@ IUSE=""
 RDEPEND=""
 DEPEND=""
 
+need_httpd_cgi
 need_php_httpd
 
 pkg_setup() {
@@ -28,7 +29,8 @@ src_install() {
 	dodoc docs/*
 	rm -rf docs/
 
-	cp -R . "${D}"${MY_HTDOCSDIR}
+	insinto "${MY_HTDOCSDIR}"
+	doins -r .
 
 	webapp_postinst_txt en "${FILESDIR}"/installdoc.txt
 	webapp_src_install
