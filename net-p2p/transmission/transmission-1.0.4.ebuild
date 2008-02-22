@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.0.4.ebuild,v 1.1 2008/02/08 03:35:44 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.0.4.ebuild,v 1.2 2008/02/22 03:57:40 compnerd Exp $
 
-MY_PV="1.01"
+MY_PV="${PV%.*}${PV##*.}"
 
 DESCRIPTION="Simple BitTorrent client"
 HOMEPAGE="http://www.transmissionbt.com/"
