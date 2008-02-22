@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.56 2008/02/22 14:44:16 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.57 2008/02/22 14:59:07 hollow Exp $
 #
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -22,6 +22,7 @@ IS_UPGRADE=0
 IS_REPLACE=0
 
 INSTALL_CHECK_FILE="installed_by_webapp_eclass"
+SETUP_CHECK_FILE="setup_by_webapp_eclass"
 
 ETC_CONFIG="${ROOT}etc/vhosts/webapp-config"
 WEBAPP_CONFIG="${ROOT}usr/sbin/webapp-config"
@@ -285,34 +286,6 @@ webapp_src_preinst() {
 # EXPORTED FUNCTIONS
 # ==============================================================================
 
-# @FUNCTION: webapp_src_install
-# @DESCRIPTION:
-# This is the default src_install(). For now, we just make sure that root owns
-# everything, and that there are no setuid files.
-#
-# You need to call this function AFTER everything else has run in your custom
-# src_install().
-webapp_src_install() {
-	debug-print-function $FUNCNAME $*
-
-	chown -R "${VHOST_DEFAULT_UID}:${VHOST_DEFAULT_GID}" "${D}/"
-	chmod -R u-s "${D}/"
-	chmod -R g-s "${D}/"
-
-	keepdir "${MY_PERSISTDIR}"
-	fowners "root:0" "${MY_PERSISTDIR}"
-	fperms 755 "${MY_PERSISTDIR}"
-
-	# to test whether or not the ebuild has correctly called this function
-	# we add an empty file to the filesystem
-	#
-	# we used to just set a variable in the shell script, but we can
-	# no longer rely on Portage calling both webapp_src_install() and
-	# webapp_pkg_postinst() within the same shell process
-
-	touch "${D}/${MY_APPDIR}/${INSTALL_CHECK_FILE}"
-}
-
 # @FUNCTION: webapp_pkg_setup
 # @DESCRIPTION:
 # The default pkg_setup() for this eclass. This will gather required variables
@@ -323,6 +296,14 @@ webapp_src_install() {
 # pkg_setup().
 webapp_pkg_setup() {
 	debug-print-function $FUNCNAME $*
+
+	# to test whether or not the ebuild has correctly called this function
+	# we add an empty file to the filesystem
+	#
+	# we used to just set a variable in the shell script, but we can
+	# no longer rely on Portage calling both webapp_pkg_setup() and
+	# webapp_src_install() within the same shell process
+	touch "${T}/${SETUP_CHECK_FILE}"
 
 	# special case - some ebuilds *do* need to overwride the SLOT
 	if [[ "${SLOT}+" != "${PVR}+" && "${WEBAPP_MANUAL_SLOT}" != "yes" ]]; then
@@ -363,6 +344,48 @@ webapp_pkg_setup() {
 		echo
 		die "Cannot upgrade contents of ${my_dir}"
 	fi
+
+}
+
+# @FUNCTION: webapp_src_install
+# @DESCRIPTION:
+# This is the default src_install(). For now, we just make sure that root owns
+# everything, and that there are no setuid files.
+#
+# You need to call this function AFTER everything else has run in your custom
+# src_install().
+webapp_src_install() {
+	debug-print-function $FUNCNAME $*
+
+	# to test whether or not the ebuild has correctly called this function
+	# we add an empty file to the filesystem
+	#
+	# we used to just set a variable in the shell script, but we can
+	# no longer rely on Portage calling both webapp_src_install() and
+	# webapp_pkg_postinst() within the same shell process
+	touch "${D}/${MY_APPDIR}/${INSTALL_CHECK_FILE}"
+
+	# sanity checks, to catch bugs in the ebuild
+	if [[ ! -f "${T}/${SETUP_CHECK_FILE}" ]]; then
+		eerror
+		eerror "This ebuild did not call webapp_pkg_setup() at the beginning"
+		eerror "of the pkg_setup() function"
+		eerror
+		eerror "Please log a bug on http://bugs.gentoo.org"
+		eerror
+		eerror "You should use emerge -C to remove this package, as the"
+		eerror "installation is incomplete"
+		eerror
+		die "Ebuild did not call webapp_pkg_setup() - report to http://bugs.gentoo.org"
+	fi
+
+	chown -R "${VHOST_DEFAULT_UID}:${VHOST_DEFAULT_GID}" "${D}/"
+	chmod -R u-s "${D}/"
+	chmod -R g-s "${D}/"
+
+	keepdir "${MY_PERSISTDIR}"
+	fowners "root:0" "${MY_PERSISTDIR}"
+	fperms 755 "${MY_PERSISTDIR}"
 }
 
 # @FUNCTION: webapp_pkg_postinst
