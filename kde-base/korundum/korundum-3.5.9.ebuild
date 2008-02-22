@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-3.5.9.ebuild,v 1.2 2008/02/22 21:02:53 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-3.5.9.ebuild,v 1.3 2008/02/22 21:10:43 ingmar Exp $
 
 KMNAME=kdebindings
 KMCOPYLIB="libsmokeqt smoke/qt libsmokekde smoke/kde"
@@ -16,7 +16,7 @@ IUSE=""
 
 # NOTE: qtruby isn't slotted
 DEPEND=">=virtual/ruby-1.8
->=kde-base/qtruby-${PV}
+~kde-base/qtruby-${PV}
 >=kde-base/smoke-${PV}:${SLOT}"
 RDEPEND="${DEPEND}"
 
