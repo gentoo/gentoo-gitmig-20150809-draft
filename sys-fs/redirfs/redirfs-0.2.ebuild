@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/redirfs/redirfs-0.2.ebuild,v 1.2 2008/02/23 16:23:35 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/redirfs/redirfs-0.2.ebuild,v 1.3 2008/02/23 20:23:18 mr_bones_ Exp $
 
 inherit linux-mod
 
@@ -23,7 +23,7 @@ pkg_setup() {
 	BUILD_PARAMS="
 		KERN_SRC=${KERNEL_DIR}
 		KERN_VER=${KV_MAJOR}.${KV_MINOR}"
-	
+
 	eerror "This package is EXPERIMENTAL use it at your own risk"
 	sleep 5
 }
