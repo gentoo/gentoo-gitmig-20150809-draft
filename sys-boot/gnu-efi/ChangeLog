@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/gnu-efi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.13 2008/02/10 00:10:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.14 2008/02/23 02:05:41 robbat2 Exp $
+
+  23 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> gnu-efi-3.0e.ebuild:
+  This builds on amd64 too! Add ~amd64.
 
 *gnu-efi-3.0e (08 Feb 2008)
 
