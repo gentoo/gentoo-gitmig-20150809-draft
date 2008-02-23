@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numarray
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.30 2008/01/04 14:26:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.31 2008/02/23 13:16:44 dev-zero Exp $
+
+  23 Feb 2008; Tiziano Müller <dev-zero@gentoo.org>
+  numarray-1.5.2-r1.ebuild:
+  Added ~ppc keyword since it builds and tests run fine.
 
   04 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -numarray-1.4.1.ebuild, -numarray-1.5.0.ebuild:
