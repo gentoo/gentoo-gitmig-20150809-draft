@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.54 2008/02/16 01:13:52 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.55 2008/02/23 00:31:56 marineam Exp $
+
+*xen-sources-2.6.21 (23 Feb 2008)
+*xen-sources-2.6.20-r7 (23 Feb 2008)
+*xen-sources-2.6.18-r10 (23 Feb 2008)
+
+  23 Feb 2008; Michael Marineau <marineam@gentoo.org>
+  -xen-sources-2.6.18-r6.ebuild, -xen-sources-2.6.18-r7.ebuild,
+  -xen-sources-2.6.18-r8.ebuild, -xen-sources-2.6.18-r9.ebuild,
+  +xen-sources-2.6.18-r10.ebuild, -xen-sources-2.6.20-r5.ebuild,
+  -xen-sources-2.6.20-r6.ebuild, +xen-sources-2.6.20-r7.ebuild,
+  +xen-sources-2.6.21.ebuild:
+  Add 2.6.21 based kernel and some security bumps all around. Everything has
+  CVE 2008-0600 fixed now. Clean out older kernels.
 
 *xen-sources-2.6.18-r9 (16 Feb 2008)
 
