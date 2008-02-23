@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8313 2008/02/23 10:22:57 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8314 2008/02/23 11:50:46 hollow Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,14 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
+
+# Benedikt Böhm <hollow@gentoo.org> (23 Feb 2008)
+# Masked due to constant security bugs.
+# https://bugs.gentoo.org/show_bug.cgi?id=211166
+www-apps/joomla
+www-apps/phpBB
+www-apps/wordpress
+www-apps/xoops
 
 # Alon Bar-Lev <alonbl@gentoo.org> (23 Feb 2008)
 # These are not yet stable.
@@ -99,11 +107,6 @@ www-apps/disc-cover
 # Broken and outdated package. See
 # https://bugs.gentoo.org/show_bug.cgi?id=209029
 www-apps/bugs-bug-genie
-
-# Gunnar Wrobel <wrobel@gentoo.org> (14 Feb 2008)
-# Masked due to constant security bugs.
-# https://bugs.gentoo.org/show_bug.cgi?id=168529
-www-apps/wordpress
 
 # Mike Auty <ikelos@gentoo.org> (12 Feb 2008)
 # Masked for testing
@@ -1012,14 +1015,6 @@ net-misc/networkmanager-pptp
 # to force an upgrade.
 =sys-libs/librtas-2.0.0
 
-# Gunnar Wrobel <wrobel@gentoo.org> (15 Aug 2007) 
-# Has open security bugs
-# http://bugs.gentoo.org/show_bug.cgi?id=172525
-# and upstream seems to be unable to deliver a useful 
-# up/downgrade path (will be unmasked with xoops-2.3)
-# http://www.xoops.org/modules/news/article.php?storyid=2905
-www-apps/xoops
-
 # Carsten Lohrke <carlo@gentoo.org> (11 Aug 2007)
 # Masked since KDE 3.5.7 doesn't come with KSync anymore.
 app-pda/syncekonnector
@@ -1565,10 +1560,6 @@ dev-lisp/cl-blog
 # all version contains a static copy of zlib-1.2.1.1 which has security
 # issues
 net-misc/zsync
-
-# Aaron Walker <ka0ttic@gentoo.org> (30 Jun 2005)
-# Masked due to constant security bugs.
-www-apps/phpBB
 
 # David Holm <dholm@gentoo.org> (11 Jun 2005)
 # Masked since it is known to create broken partition
