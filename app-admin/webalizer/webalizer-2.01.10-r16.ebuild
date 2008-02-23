@@ -1,52 +1,47 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r13.ebuild,v 1.4 2006/07/09 20:26:47 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r16.ebuild,v 1.1 2008/02/23 16:52:34 hollow Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
-inherit eutils webapp db-use autotools
+inherit confutils eutils webapp db-use autotools
 
-SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
 
 MY_PV=${PV/.10/-10}
 MY_P=${PN}-${MY_PV}
-S=${WORKDIR}/${MY_P}
+
+XTENDED_VER="RB21"
+XTENDED_URL="rb21"
+GEOLIZER_VER="20070115"
+
 DESCRIPTION="Webserver log file analyzer"
 HOMEPAGE="http://www.mrunix.net/webalizer/"
 SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2
-	geoip? ( http://sysd.org/proj/geolizer_${MY_PV}-patch.20050520.tar.bz2 )
-	xtended? ( http://www.irc.unizh.ch/users/pfrei/webalizer/rb07/${PN}-${MY_PV}-RB07-patch.tar.gz )
-	mirror://gentoo/${PN}-search.patch.gz
-	mirror://gentoo/${PN}.conf.gz
-"
+	geoip? (
+	http://sysd.org/stas/files/active/0/geolizer_${MY_PV}-patch.${GEOLIZER_VER}.tar.gz )
+	xtended? ( http://patrickfrei.ch/webalizer/${XTENDED_URL}/${PN}-${MY_PV}-${XTENDED_VER}-patch.tar.gz )
+	mirror://gentoo/${PN}.conf.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="apache2 geoip nls search xtended"
+IUSE="geoip nls xtended"
+SLOT="0"
 
-DEPEND="!geoip? ( >=sys-libs/db-4.2 )
+DEPEND=">=sys-libs/db-4.2
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2
 	>=media-libs/gd-1.8.3
 	geoip? ( dev-libs/geoip )"
 
+S="${WORKDIR}"/${MY_P}
+
 pkg_setup() {
 	webapp_pkg_setup
-
-	if use search && ! use geoip; then
-		elog "Please enable the geoip USE flag if you wish to use search"
-	fi
-
-	# prevents "undefined reference" errors... see bug #65163
-	if ! built_with_use media-libs/gd png; then
-		ewarn "media-libs/gd must be built with png for this package"
-		ewarn "to function."
-		die "recompile gd with USE=\"png\""
-	fi
+	confutils_require_built_with_all media-libs/gd png
 
 	# USE=nls has no real meaning if LINGUAS isn't set
-	if use nls && [ -z "${LINGUAS}" ]; then
+	if use nls && [[ -z "${LINGUAS}" ]]; then
 		ewarn "you must set LINGUAS in /etc/make.conf"
 		ewarn "if you want to USE=nls"
 		die "please either set LINGUAS or do not use nls"
@@ -54,69 +49,61 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A}
+	cd "${S}"
 
-	if use geoip; then
-		epatch ${WORKDIR}/geolizer_${MY_PV}-patch/geolizer.patch || die
-		if use search; then
-			epatch ${WORKDIR}/${PN}-search.patch || die
-		fi
-		use xtended && elog "Xtended doesn't work with geolizer, skipping"
+	if use geoip && ! use xtended; then
+		epatch "${WORKDIR}"/geolizer_${MY_PV}-patch/geolizer.patch
 	else
-		epatch ${FILESDIR}/${PN}-db4.2.patch || die
-		epatch ${FILESDIR}/${PN}-readability.patch || die
+		epatch "${FILESDIR}"/${PN}-db4.2.patch
 		if use xtended; then
-			epatch ${WORKDIR}/${PN}-${MY_PV}-RB07-patch || die
+			epatch "${WORKDIR}"/${PN}-${MY_PV}-${XTENDED_VER}-patch
+		else
+			epatch "${FILESDIR}"/${PN}-storage-size.patch
 		fi
 	fi
 
-	# bugzy 121816: prevent truncated useragent fields
-	sed -i -e 's:^#define MAXAGENT 64:#define MAXAGENT 128:' webalizer.h
+	eautoreconf
 }
 
 src_compile() {
-	local myconf=" --enable-dns \
-		--with-db=$(db_includedir) \
-		--with-dblib=$(db_libname)"
-	use geoip && myconf="${myconf} --enable-geoip"
-
 	# really dirty hack; necessary due to a really gross ./configure
 	# basically, it just sets the natural language the program uses
 	# unfortunatly, this program only allows for one lang, so only the first
 	# entry in LINGUAS is used
 	if use nls; then
-		local longlang
-		longlang="$(grep ^${LINGUAS:0:2} ${FILESDIR}/webalizer-language-list.txt)"
-		myconf="${myconf} --with-language=${longlang:3}"
+		local longlang="$(grep ^${LINGUAS:0:2} "${FILESDIR}"/webalizer-language-list.txt)"
+		local myconf="${myconf} --with-language=${longlang:3}"
 	else
-		myconf="${myconf} --with-language=english"
+		local myconf="${myconf} --with-language=english"
 	fi
 
-	# stupid broken configuration file
-	eautoreconf
-
-	econf ${myconf} || die "econf failed"
-
+	econf --enable-dns \
+		--with-db=$(db_includedir) \
+		--with-dblib=$(db_libname) \
+		$(use_enable geoip) \
+		${myconf} \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
 	webapp_src_preinst
 
-	into /usr
 	dobin webalizer
 	dosym webalizer /usr/bin/webazolver
 	doman webalizer.1
 
 	insinto /etc
-	doins ${WORKDIR}/${PN}.conf
-	use apache2 && sed -i -e "s/apache/apache2/g" ${D}/etc/webalizer.conf
+	doins "${WORKDIR}"/${PN}.conf
+	dosed "s/apache/apache2/g" /etc/webalizer.conf
 
-	dodoc *README* CHANGES Copyright sample.conf ${FILESDIR}/apache.webalizer
+	dodoc CHANGES *README* INSTALL sample.conf "${FILESDIR}"/apache.webalizer
+
 	webapp_src_install
 }
 
-pkg_postinst(){
+pkg_postinst() {
 	elog
 	elog "It is suggested that you restart apache before using webalizer"
 	elog "You may want to review /etc/webalizer.conf and ensure that"
@@ -131,7 +118,7 @@ pkg_postinst(){
 	elog "Please edit and install it as necessary"
 	elog
 
-	if [ ${#LINGUAS} -gt 2 ] && use nls; then
+	if [[ ${#LINGUAS} -gt 2 ]] && use nls; then
 		ewarn
 		ewarn "You have more than one language in LINGUAS"
 		ewarn "Due to the limitations of this packge, it was built"
@@ -142,7 +129,7 @@ pkg_postinst(){
 	fi
 
 	if use xtended; then
-		elog "Read http://www.irc.unizh.ch/users/pfrei/webalizer/rb07/INSTALL"
+		elog "Read http://patrickfrei.ch/webalizer/${XTENDED_URL}/INSTALL"
 		elog "if you are switching from stock webalizer to xtended"
 	fi
 

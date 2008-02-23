@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/webalizer
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.68 2007/07/10 20:53:03 gustavoz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.69 2008/02/23 16:52:34 hollow Exp $
+
+*webalizer-2.01.10-r16 (23 Feb 2008)
+
+  23 Feb 2008; Benedikt Böhm <hollow@gentoo.org> files/apache.webalizer,
+  -files/webalizer-readability.patch, +files/webalizer-storage-size.patch,
+  metadata.xml, -webalizer-2.01.10-r12.ebuild,
+  -webalizer-2.01.10-r13.ebuild, -webalizer-2.01.10-r14.ebuild,
+  +webalizer-2.01.10-r16.ebuild:
+  ebuild cleanup wrt #208584; fixes #156785, #200855 and maybe #184732; bumps
+  geolizer and xtended to current versions
 
   10 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   webalizer-2.01.10-r15.ebuild:
