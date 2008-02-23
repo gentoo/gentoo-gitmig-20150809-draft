@@ -1,6 +1,14 @@
 # ChangeLog for www-misc/zoneminder
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.23 2008/02/23 13:56:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.24 2008/02/23 14:39:39 hollow Exp $
+
+*zoneminder-1.23.1 (23 Feb 2008)
+
+  23 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
+  +files/1.23.1/Makefile.am.patch, +files/1.23.1/zm_create.sql.in.patch,
+  +files/1.23.1/zm_mpeg_ofc.patch, +files/1.23.1/zm_remote_camera.patch,
+  metadata.xml, +zoneminder-1.23.1.ebuild:
+  version bump #204297, fixes #197621
 
   23 Feb 2008; Benedikt Böhm <hollow@gentoo.org> zoneminder-1.22.3.ebuild:
   ebuild cleanup wrt #208584, also fixes #207481
