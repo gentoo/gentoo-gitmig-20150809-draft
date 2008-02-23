@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r8.ebuild,v 1.28 2007/11/10 08:49:05 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r8.ebuild,v 1.29 2008/02/23 15:42:39 ingmar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -16,29 +16,30 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 
 SLOT="3"
-KEYWORDS="amd64 mips x86"
+KEYWORDS="amd64 ~mips x86"
 IUSE="cups debug doc examples firebird gif ipv6 mysql nas odbc opengl postgres sqlite xinerama immqt immqt-bc"
 
-DEPEND="x11-libs/libXcursor
+RDEPEND="x11-libs/libXcursor
 	x11-libs/libXi
 	x11-libs/libXrandr
 	x11-libs/libSM
-	x11-proto/inputproto
-	x11-proto/xextproto
-	xinerama? ( x11-proto/xineramaproto x11-libs/libXinerama )
+	xinerama? ( x11-libs/libXinerama )
 	virtual/xft
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/libmng
 	=media-libs/freetype-2.1*
 	nas? ( >=media-libs/nas-1.5 )
+	opengl? ( virtual/opengl virtual/glu )
 	mysql? ( virtual/mysql )
 	firebird? ( dev-db/firebird )
-	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( dev-db/postgresql )
 	cups? ( net-print/cups )"
-#	zlib? ( sys-libs/zlib )"
-PDEPEND="odbc? ( ~dev-db/qt-unixODBC-$PV )"
+DEPEND="${RDEPEND}
+	x11-proto/inputproto
+	x11-proto/xextproto
+	xinerama? ( x11-proto/xineramaproto )"
+PDEPEND="odbc? ( ~dev-db/qt-unixODBC-${PV} )"
 
 S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 
