@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.0.2.ebuild,v 1.1 2008/02/23 13:21:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.0.2.ebuild,v 1.2 2008/02/23 20:22:58 mr_bones_ Exp $
 
 EAPI="1"
 NEED_PYTHON="2.2"
@@ -20,7 +20,6 @@ DEPEND="sci-libs/hdf5
 	dev-libs/lzo:2
 	app-arch/bzip2"
 RDEPEND="${DEPEND}"
-
 
 src_install() {
 	DOCS="ANNOUNCE.txt MIGRATING_TO_2.x.txt RELEASE_NOTES.txt THANKS TODO.txt VERSION"

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-4.2-r1.ebuild,v 1.4 2008/02/23 15:45:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-4.2-r1.ebuild,v 1.5 2008/02/23 20:22:35 mr_bones_ Exp $
 
 NEED_PYTHON="2.3"
 
@@ -17,7 +17,6 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE="debug"
-
 
 RDEPEND="~x11-libs/qwt-4.2.0
 	>=dev-python/PyQt-3.14
