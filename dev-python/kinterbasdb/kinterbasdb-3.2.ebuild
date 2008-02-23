@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.2.ebuild,v 1.5 2007/07/02 23:36:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.2.ebuild,v 1.6 2008/02/23 17:57:04 dev-zero Exp $
 
 inherit distutils eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 	# firebird headers are in /opt/firebird/include
 	# don't byte-compile .py files
 	sed -i \
-		-e 's:^#\(database_include_dir=\).*:\1/opt/firebird/include:' \
+		-e 's:^#\(database_include_dir=\).*:\1/usr/include:' \
 		-e 's:\(compile=\)1:\10:' \
 		-e 's:\(optimize=\)1:\10:' \
 		setup.cfg || die "sed in setup.cfg failed"
