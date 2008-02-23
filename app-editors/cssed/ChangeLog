@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/cssed
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/ChangeLog,v 1.16 2008/01/23 10:12:16 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/ChangeLog,v 1.17 2008/02/23 21:22:39 hollow Exp $
+
+  23 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  cssed-0.4.0-r1.ebuild:
+  rename IUSE=plugin to plugins wrt #178128
 
   23 Jan 2008; <wrobel@gentoo.org> cssed-0.4.0-r1.ebuild:
   Added pkg-config dependency (#205034).
