@@ -1,6 +1,15 @@
 # ChangeLog for sci-geosciences/gpsd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.28 2007/07/22 07:10:12 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.29 2008/02/23 20:03:58 nerdboy Exp $
+
+*gpsd-2.36 (23 Feb 2008)
+
+  23 Feb 2008; Steve Arnold <nerdboy@gentoo.org> +files/99-gpsd-usb.rules,
+  files/gpsd.conf, +gpsd-2.36.ebuild:
+  Updated to latest version and new udev rules (closes bug #210079). Note
+  the new rules supercede the older ones (but the older ones were not
+  installed by default anyway).  The gpsd script is still installed
+  under /etc/hotplug but it only depends on udev now.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; gpsd-2.32.ebuild,
   gpsd-2.33-r1.ebuild, gpsd-2.34-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.33-r1.ebuild,v 1.3 2007/07/22 07:10:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.33-r1.ebuild,v 1.4 2008/02/23 20:03:58 nerdboy Exp $
 
 inherit eutils libtool distutils
 
@@ -41,10 +41,11 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_unpack() {
+
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-duplicate-device-add-hang.patch
-	epatch ${FILESDIR}/${P}-hotplug-background-fix.patch
-	cd ${S}
+	epatch "${FILESDIR}"/${P}-duplicate-device-add-hang.patch
+	epatch "${FILESDIR}"/${P}-hotplug-background-fix.patch
+	cd "${S}"
 	elibtoolize
 }
 
@@ -70,8 +71,7 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}
-	make DESTDIR=${D} install
+	make DESTDIR="${D}" install
 
 	if use usb ; then
 	    sed -i -e "s/gpsd.hotplug/gpsd/g" gpsd.hotplug gpsd.usermap
@@ -81,8 +81,8 @@ src_install() {
 	    newexe gpsd.hotplug gpsd
 		keepdir /var/run/usb # needed for REMOVER
 	else
-	    newconfd ${FILESDIR}/gpsd.conf gpsd
-	    newinitd ${FILESDIR}/gpsd.init gpsd
+	    newconfd "${FILESDIR}"/gpsd.conf gpsd
+	    newinitd "${FILESDIR}"/gpsd.init gpsd
 	fi
 	if use X ; then
 	    insinto /etc/X11/app-defaults
@@ -93,7 +93,7 @@ src_install() {
 	diropts "-m0644"
 	exeinto /usr/$(get_libdir)/python${PYVER}/site-packages
 	doexe gps.py gpsfake.py
-	dodoc AUTHORS HACKING INSTALL README TODO ${FILESDIR}/40-usb-serial.rules
+	dodoc AUTHORS HACKING INSTALL README TODO "${FILESDIR}"/40-usb-serial.rules
 }
 
 pkg_postinst() {

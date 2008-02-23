@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.32.ebuild,v 1.4 2007/08/25 14:28:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.32.ebuild,v 1.5 2008/02/23 20:03:58 nerdboy Exp $
 
 inherit eutils libtool distutils
 
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	elibtoolize
 }
 
@@ -55,8 +55,8 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}
-	make DESTDIR=${D} install
+
+	make DESTDIR="${D}" install
 
 	if use usb ; then
 	    sed -i -e "s/gpsd.hotplug/gpsd/g" gpsd.hotplug gpsd.usermap
@@ -65,8 +65,8 @@ src_install() {
 	    exeinto /etc/hotplug/usb
 	    newexe gpsd.hotplug gpsd
 	else
-	    newconfd ${FILESDIR}/gpsd.conf gpsd
-	    newinitd ${FILESDIR}/gpsd.init gpsd
+	    newconfd "${FILESDIR}"/gpsd.conf gpsd
+	    newinitd "${FILESDIR}"/gpsd.init gpsd
 	fi
 	if use X ; then
 	    insinto /etc/X11/app-defaults
@@ -77,7 +77,7 @@ src_install() {
 	diropts "-m0644"
 	exeinto /usr/$(get_libdir)/python${PYVER}/site-packages
 	doexe gps.py gpsfake.py
-	dodoc AUTHORS HACKING INSTALL README TODO ${FILESDIR}/40-usb-serial.rules
+	dodoc AUTHORS HACKING INSTALL README TODO "${FILESDIR}"/40-usb-serial.rules
 }
 
 pkg_postinst() {

@@ -1,0 +1,9 @@
+# udev rules for the gpsd USB hotplugging (without hotplug)
+
+SUBSYSTEM!="tty", GOTO="gpsd-usb_rules_end"
+ACTION!="add", GOTO="gpsd-usb_rules_end"
+
+KERNEL=="ttyUSB[0-9]*", SYMLINK="gps%n", RUN+="/etc/hotplug/usb/gpsd.hotplug add $root/%k"
+
+LABEL="gpsd-usb_rules_end"
+
