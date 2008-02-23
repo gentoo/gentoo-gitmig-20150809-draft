@@ -1,6 +1,25 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.204 2008/02/23 01:48:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.205 2008/02/23 04:52:34 vapier Exp $
+
+  23 Feb 2008; Mike Frysinger <vapier@gentoo.org> wine-0.9.9.ebuild,
+  wine-0.9.10.ebuild, wine-0.9.11.ebuild, wine-0.9.12.ebuild,
+  wine-0.9.13.ebuild, wine-0.9.14.ebuild, wine-0.9.15.ebuild,
+  wine-0.9.16.ebuild, wine-0.9.17.ebuild, wine-0.9.18.ebuild,
+  wine-0.9.19.ebuild, wine-0.9.20.ebuild, wine-0.9.21.ebuild,
+  wine-0.9.22.ebuild, wine-0.9.23.ebuild, wine-0.9.24.ebuild,
+  wine-0.9.25.ebuild, wine-0.9.26.ebuild, wine-0.9.27.ebuild,
+  wine-0.9.28.ebuild, wine-0.9.29.ebuild, wine-0.9.30.ebuild,
+  wine-0.9.31.ebuild, wine-0.9.32.ebuild, wine-0.9.33.ebuild,
+  wine-0.9.34.ebuild, wine-0.9.35.ebuild, wine-0.9.36.ebuild,
+  wine-0.9.37.ebuild, wine-0.9.38.ebuild, wine-0.9.39.ebuild,
+  wine-0.9.40.ebuild, wine-0.9.41.ebuild, wine-0.9.42.ebuild,
+  wine-0.9.43.ebuild, wine-0.9.44.ebuild, wine-0.9.45.ebuild,
+  wine-0.9.46.ebuild, wine-0.9.47.ebuild, wine-0.9.48.ebuild,
+  wine-0.9.49.ebuild, wine-0.9.50.ebuild, wine-0.9.51.ebuild,
+  wine-0.9.52.ebuild, wine-0.9.53.ebuild, wine-0.9.54.ebuild,
+  wine-0.9.55.ebuild, wine-0.9.56.ebuild, wine-9999.ebuild:
+  Move fontforge from RDEPEND to DEPEND as pointed out by Diego.
 
 *wine-0.9.56 (23 Feb 2008)
 
