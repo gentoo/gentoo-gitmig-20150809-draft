@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/PHP-Serialization
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PHP-Serialization/ChangeLog,v 1.1 2008/02/23 14:07:38 hollow Exp $
+
+*PHP-Serialization-0.27 (23 Feb 2008)
+
+  23 Feb 2008; Benedikt Böhm <hollow@gentoo.org> +metadata.xml,
+  +PHP-Serialization-0.27.ebuild:
+  initial ebuild, #204307
+
