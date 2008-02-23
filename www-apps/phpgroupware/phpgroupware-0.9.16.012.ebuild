@@ -1,35 +1,37 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/phpgroupware-0.9.16.012.ebuild,v 1.4 2007/09/07 17:55:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/phpgroupware-0.9.16.012.ebuild,v 1.5 2008/02/23 21:15:05 hollow Exp $
 
-inherit webapp
-
-S=${WORKDIR}/${PN}
+inherit webapp eutils depend.php
 
 DESCRIPTION="intranet/groupware tool and application framework"
 HOMEPAGE="http://www.phpgroupware.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+
 IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ~hppa ppc ~sparc ~x86"
 
-RDEPEND="virtual/httpd-php"
+need_httpd_cgi
+need_php_httpd
+
+S="${WORKDIR}"/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	# remove CVS directories
-	find . -type d -name 'CVS' -print | xargs rm -rf
+	cd "${S}"
+	ecvs_clean
 }
 
 src_install() {
 	webapp_src_preinst
 
-	cp -R . ${D}/${MY_HTDOCSDIR}
+	insinto "${MY_HTDOCSDIR}"
+	doins -r .
 	dohtml ${PN}/doc/en_US/html/admin/*.html
 
-	webapp_serverowned ${MY_HTDOCSDIR}/fudforum
+	webapp_serverowned "${MY_HTDOCSDIR}"/fudforum
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 	webapp_src_install
 }

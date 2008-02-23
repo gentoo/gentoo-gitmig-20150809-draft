@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpgroupware
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.34 2007/09/10 04:56:00 wrobel Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.35 2008/02/23 21:15:05 hollow Exp $
+
+  23 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  phpgroupware-0.9.16.012.ebuild:
+  ebuild cleanup wrt #208584
 
   10 Sep 2007; <wrobel@gentoo.org> -phpgroupware-0.9.16.008.ebuild,
   -phpgroupware-0.9.16.010.ebuild, -phpgroupware-0.9.16.011.ebuild:
