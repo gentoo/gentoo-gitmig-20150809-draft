@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.88 2007/12/11 23:16:07 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.89 2008/02/23 16:29:53 zzam Exp $
+
+*gentoo-vdr-scripts-0.4.3 (23 Feb 2008)
+
+  23 Feb 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +gentoo-vdr-scripts-0.4.3.ebuild:
+  Version bumped. Most visible change is support of new kernel rtc interface
+  for wakeup and a general cleanup of the wakeup code. Should now also work
+  with baselayout-2/openrc.
 
   11 Dec 2007; Matthias Schwarzott <zzam@gentoo.org>
   gentoo-vdr-scripts-0.4.2.ebuild:
