@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.20.2_p15488.ebuild,v 1.1 2008/01/24 16:04:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.20.2_p15488.ebuild,v 1.2 2008/02/23 22:21:01 hollow Exp $
 
 ESVN_PROJECT="mythplugins"
 
@@ -11,8 +11,9 @@ IUSE=""
 KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="dev-perl/DBI
-		dev-perl/DBD-mysql"
+	dev-perl/DBD-mysql"
 
+need_httpd_cgi
 need_php5_httpd
 
 pkg_setup() {
@@ -31,12 +32,13 @@ src_compile() {
 src_install() {
 	webapp_src_preinst
 
-	cd "${S}/mythweb"
+	cd "${S}"/mythweb
 	dodoc README TODO
 
 	dodir "${MY_HTDOCSDIR}"/data
 
-	cp -R [[:lower:]]* .htaccess "${D}"${MY_HTDOCSDIR}
+	insinto "${MY_HTDOCSDIR}"
+	doins -r [[:lower:]]* .htaccess
 
 	webapp_serverowned "${MY_HTDOCSDIR}"/data
 	webapp_serverowned "${MY_HTDOCSDIR}"/.htaccess
