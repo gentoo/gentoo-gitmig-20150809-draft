@@ -1,22 +1,24 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpmp/phpmp-0.11.0.ebuild,v 1.7 2007/07/13 06:13:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpmp/phpmp-0.11.0.ebuild,v 1.8 2008/02/23 21:48:05 hollow Exp $
 
 inherit webapp depend.php
 
 MY_PN="phpMp"
 MY_P="${MY_PN}-${PV}"
-S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="phpMp is a client program for Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org/"
 SRC_URI="mirror://sourceforge/musicpd/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ~ppc sparc x86 ~x86-fbsd"
-
 IUSE=""
 
-need_php
+need_httpd_cgi
+need_php_httpd
+
+S="${WORKDIR}"/${MY_P}
 
 pkg_setup() {
 	webapp_pkg_setup
@@ -26,18 +28,14 @@ pkg_setup() {
 src_install() {
 	webapp_src_preinst
 
-	local docs="COPYING ChangeLog INSTALL README TODO"
+	dodoc ChangeLog README TODO
+	rm -f ChangeLog COPYING INSTALL README TODO
 
-	dodoc ${docs}
-	for doc in ${docs} INSTALL; do
-			rm -f ${doc}
-	done
+	insinto "${MY_HTDOCSDIR}"
+	doins -r .
 
-	cp -r . ${D}${MY_HTDOCSDIR}
+	webapp_configfile "${MY_HTDOCSDIR}"/config.php
 
-	webapp_configfile ${MY_HTDOCSDIR}/config.php
-
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
-
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 	webapp_src_install
 }
