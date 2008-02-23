@@ -1,28 +1,24 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/gnopaste-0.5.5.ebuild,v 1.4 2008/02/03 16:59:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/gnopaste-0.5.5.ebuild,v 1.5 2008/02/23 22:28:20 hollow Exp $
 
-inherit webapp depend.php
+inherit webapp depend.php eutils
 
-DESCRIPTION="It presents a free nopaste system like http://nopaste.info"
+DESCRIPTION="gnopaste is a nopaste script based on PHP with MySQL"
 HOMEPAGE="http://gnopaste.sf.net/"
-LICENSE="GPL-2"
-
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
-WEBAPP_MANUAL_SLOT="yes"
-SLOT="0"
-
+LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND="virtual/httpd-cgi
-	dev-lang/php"
+need_httpd_cgi
+need_php_httpd
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	find . -type d -name '.svn' | xargs rm -rf {} \;
+	esvn_clean
 }
 
 pkg_setup() {
@@ -31,18 +27,17 @@ pkg_setup() {
 }
 
 src_install() {
-	# call the eclass, to initialise the image directory for us
 	webapp_src_preinst
 
-	elog "Installing main files"
-	cp -r . "${D}/${MY_HTDOCSDIR}"
+	insinto "${MY_HTDOCSDIR}"
+	doins -r .
 
-	webapp_configfile "${MY_HTDOCSDIR}/config.php"
+	webapp_configfile "${MY_HTDOCSDIR}"/config.php
 
-	webapp_serverowned "${MY_HTDOCSDIR}/config.php"
-	webapp_serverowned "${MY_HTDOCSDIR}/install.php"
+	webapp_serverowned "${MY_HTDOCSDIR}"/config.php
+	webapp_serverowned "${MY_HTDOCSDIR}"/install.php
 
-	webapp_postinst_txt en "${FILESDIR}/postinstall-en-${PV}.txt"
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en-${PV}.txt
 
 	webapp_src_install
 }

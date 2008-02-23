@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/gnopaste
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/ChangeLog,v 1.5 2008/02/03 16:59:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/ChangeLog,v 1.6 2008/02/23 22:28:20 hollow Exp $
+
+  23 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  gnopaste-0.5.5.ebuild:
+  ebuild cleanup wrt #208584
 
   03 Feb 2008; Benedikt Böhm <hollow@gentoo.org> gnopaste-0.5.5.ebuild:
   merge from webapps overlay wrt #208584
