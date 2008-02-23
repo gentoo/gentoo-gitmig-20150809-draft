@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11.ebuild,v 1.15 2007/11/21 00:43:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11.ebuild,v 1.16 2008/02/23 11:13:41 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -105,7 +105,6 @@ atlas_fail() {
 }
 
 src_compile() {
-	cd "${S}"
 	if [ -n "${interactive}" ]; then
 		echo "${interactive}"
 		make config CC="$(tc-getCC) -DUSE_LIBTOOL -DINTERACTIVE" || die
