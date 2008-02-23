@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1150 2008/02/23 10:22:57 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1151 2008/02/23 18:10:14 dev-zero Exp $
+
+  23 Feb 2008; Tiziano Müller <dev-zero@gentoo.org> package.mask:
+  Removed twisted-web2 since upstream never released a stable API and it never
+  left p.mask (bug #208687).
 
   23 Feb 2008; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
   Mask dazuko pre-release
