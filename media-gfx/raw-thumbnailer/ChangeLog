@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/raw-thumbnailer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/ChangeLog,v 1.14 2008/01/23 19:08:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/ChangeLog,v 1.15 2008/02/23 15:02:03 angelos Exp $
+
+*raw-thumbnailer-0.2 (23 Feb 2008)
+
+  23 Feb 2008; Christoph Mende <angelos@gentoo.org>
+  +raw-thumbnailer-0.2.ebuild:
+  Version bump
 
   23 Jan 2008; Samuli Suominen <drac@gentoo.org> raw-thumbnailer-0.1.ebuild:
   Block gnome-raw-thumbnailer because both are providing same executable, main
