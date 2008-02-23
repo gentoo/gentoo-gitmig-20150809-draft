@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.21_pre15448.ebuild,v 1.1 2008/01/15 16:16:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.21_beta16215.ebuild,v 1.1 2008/02/23 23:31:13 cardoe Exp $
 
 inherit mythtv-plugins flag-o-matic toolchain-funcs eutils subversion
 
 DESCRIPTION="Music player module for MythTV."
-IUSE="aac cdr fftw libvisual sdl"
+IUSE="aac cdr fftw libvisual opengl sdl"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND=">=media-sound/cdparanoia-3.9.8
@@ -16,6 +16,7 @@ RDEPEND=">=media-sound/cdparanoia-3.9.8
 	>=media-libs/taglib-1.4
 	aac? ( >=media-libs/faad2-2.0-r7 )
 	fftw? ( sci-libs/fftw )
+	opegnl? ( virtual/opengl )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
 	cdr? ( virtual/cdrtools )
 	libvisual? ( =media-libs/libvisual-0.4* )"
@@ -29,13 +30,5 @@ pkg_config() {
 	fi
 }
 
-src_unpack() {
-	if [[ $(gcc-version) = "3.2" || $(gcc-version) == "3.3" ]]; then
-		replace-cpu-flags pentium4 pentium3
-	fi
-
-	subversion_src_unpack
-	mythtv-plugins_src_unpack_patch || die "unpack failed"
-}
-
-MTVCONF="$(use_enable aac) $(use_enable fftw) $(use_enable sdl)"
+MTVCONF="$(use_enable aac) $(use_enable fftw) $(use_enable sdl) \
+	$(use_enable opengl)"
