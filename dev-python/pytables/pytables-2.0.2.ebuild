@@ -1,25 +1,29 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-1.4.ebuild,v 1.3 2008/02/23 13:21:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.0.2.ebuild,v 1.1 2008/02/23 13:21:09 dev-zero Exp $
 
+EAPI="1"
 NEED_PYTHON="2.2"
 
-inherit distutils
+inherit distutils multilib
 
-DESCRIPTION="Module for Python that use HDF5"
-SRC_URI="mirror://sourceforge/pytables/${P}.tar.gz"
-HOMEPAGE="http://pytables.sourceforge.net/"
+DESCRIPTION="A package for managing hierarchical datasets built on top of the HDF5 library."
+SRC_URI="http://www.pytables.org/download/stable/${P}.tar.gz"
+HOMEPAGE="http://www.pytables.org/"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 LICENSE="BSD"
 IUSE="doc examples"
 
 DEPEND="sci-libs/hdf5
-	>=dev-python/numarray-1.5.2"
+	>=dev-python/numpy-1.0.3
+	dev-libs/lzo:2
+	app-arch/bzip2"
 RDEPEND="${DEPEND}"
 
+
 src_install() {
-	DOCS="ANNOUNCE.txt RELEASE-NOTES.txt THANKS TODO.txt VERSION"
+	DOCS="ANNOUNCE.txt MIGRATING_TO_2.x.txt RELEASE_NOTES.txt THANKS TODO.txt VERSION"
 
 	distutils_src_install
 

@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pytables
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.24 2007/05/05 08:53:44 lucass Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.25 2008/02/23 13:21:09 dev-zero Exp $
+
+*pytables-2.0.2 (23 Feb 2008)
+
+  23 Feb 2008; Tiziano Müller <dev-zero@gentoo.org> pytables-1.4.ebuild,
+  +pytables-2.0.2.ebuild:
+  Version bump (bug #196062). Fixed dependency in 1.4 (bug #211106, thanks to
+  Chris Kerr). Added tests for both. Note: 1.4 is deprecated and 3 tests fail
+  on x86_64 ant won't be fixed. Since 1.4 and 2.x are not compatible, 1.4
+  hasn't been dropped for now. Fixed wrong license.
 
   05 May 2007; Lukasz Strzygowski <lucass@gentoo.org>
   -pytables-0.7.2.ebuild, -pytables-0.8.1.ebuild, -pytables-0.9.1.ebuild,
