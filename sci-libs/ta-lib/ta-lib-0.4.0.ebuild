@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ta-lib/ta-lib-0.4.0.ebuild,v 1.5 2008/01/22 00:06:56 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ta-lib/ta-lib-0.4.0.ebuild,v 1.6 2008/02/23 09:11:23 swegener Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}"/${PN}
 
 src_unpack() {
 	unpack ${A}
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	econf || die "econf failed."
-	emake ${MAKEOPTS} -j1 || die "emake failed."
+	emake -j1 || die "emake failed."
 }
 
 src_test() {

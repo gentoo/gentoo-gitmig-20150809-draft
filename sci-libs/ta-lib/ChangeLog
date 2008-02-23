@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ta-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ta-lib/ChangeLog,v 1.4 2008/01/22 00:06:56 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ta-lib/ChangeLog,v 1.5 2008/02/23 09:11:23 swegener Exp $
+
+  23 Feb 2008; Sven Wegener <swegener@gentoo.org> ta-lib-0.4.0.ebuild:
+  There's no need to pass MAKEOPTS to emake.
 
   22 Jan 2008; Ryan Hill <dirtyepic@gentoo.org> ta-lib-0.4.0.ebuild:
   Temporary workaround for parallel build problem. (bug #206745)
