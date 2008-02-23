@@ -1,24 +1,24 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/gitweb-1.5.1.6.ebuild,v 1.1 2007/05/20 17:11:45 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/gitweb-1.5.4.2.ebuild,v 1.1 2008/02/23 22:40:38 hollow Exp $
 
 inherit webapp
 
-GIT_VERSION="${PV}"
-
 DESCRIPTION="Web interface to GIT repositories"
 HOMEPAGE="http://git.or.cz/"
-SRC_URI="mirror://kernel/software/scm/git/git-${GIT_VERSION}.tar.bz2"
+SRC_URI="mirror://kernel/software/scm/git/git-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
 RDEPEND="dev-lang/perl
->=dev-util/git-${PV}"
+	>=dev-util/git-${PV}"
 
-S="${WORKDIR}"/git-${GIT_VERSION}/gitweb
+need_httpd_cgi
+
+S="${WORKDIR}"/git-${PV}/gitweb
 
 src_compile() {
 	sed -i \
@@ -31,11 +31,12 @@ src_compile() {
 
 src_install() {
 	webapp_src_preinst
-	dodoc README "${FILESDIR}"/README.gentoo
-	rm -f README
 
-	cp gitweb.{cgi,css} git-{favicon,logo}.png "${D}/${MY_HTDOCSDIR}"
-	cp "${FILESDIR}"/apache.htaccess "${D}/${MY_HTDOCSDIR}"/.htaccess
+	dodoc README "${FILESDIR}"/README.gentoo
+
+	insinto "${MY_HTDOCSDIR}"
+	doins gitweb.{cgi,css} git-{favicon,logo}.png
+	newins "${FILESDIR}"/apache.htaccess .htaccess
 
 	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 	webapp_src_install

@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/gitweb
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/ChangeLog,v 1.25 2007/10/14 19:05:45 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/ChangeLog,v 1.26 2008/02/23 22:40:38 hollow Exp $
+
+*gitweb-1.5.4.2 (23 Feb 2008)
+
+  23 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  -gitweb-1.5.0.7.ebuild, -gitweb-1.5.1.6.ebuild, gitweb-1.5.2.ebuild,
+  +gitweb-1.5.4.2.ebuild:
+  version bump; ebuild cleanup wrt #208584; fix metadata
 
   14 Oct 2007; Markus Ullmann <jokey@gentoo.org> gitweb-1.5.2.ebuild:
   Keyword ~sparc for bug #195881
