@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.0.1.ebuild,v 1.1 2008/02/07 00:10:39 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.0.1.ebuild,v 1.2 2008/02/23 17:36:25 ingmar Exp $
 
 EAPI="1"
 
@@ -12,8 +12,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug htmlhandbook"
 
 DEPEND="${DEPEND}
-	|| ( >=kde-base/plasma-${PV}:${SLOT}
-		>=kde-base/kdebase-${PV}:${SLOT} )"
+	>=kde-base/plasma-${PV}:${SLOT}"
 RDEPEND="${DEPEND}
 	dev-libs/libxml2
 	dev-libs/libxslt"

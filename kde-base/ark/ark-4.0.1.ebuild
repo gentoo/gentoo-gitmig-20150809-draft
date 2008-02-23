@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ark-4.0.1.ebuild,v 1.1 2008/02/07 00:11:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ark-4.0.1.ebuild,v 1.2 2008/02/23 17:35:18 ingmar Exp $
 
 EAPI="1"
 
@@ -11,10 +11,9 @@ DESCRIPTION="KDE Archiving tool"
 KEYWORDS="~amd64 ~x86"
 IUSE="archive debug htmlhandbook zip"
 
-COMMONDEPEND="archive? ( app-arch/libarchive )
+DEPEND="archive? ( app-arch/libarchive )
 	zip? ( >=dev-libs/libzip-0.8 )"
-DEPEND="${DEPEND} ${COMMONDEPEND}"
-RDEPEND="${RDEPEND} ${COMMONDEPEND}"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	mycmakeargs="${mycmakeargs}

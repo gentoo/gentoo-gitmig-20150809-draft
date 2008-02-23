@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.0.1.ebuild,v 1.1 2008/02/07 00:12:47 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.0.1.ebuild,v 1.2 2008/02/23 17:40:41 ingmar Exp $
 
 EAPI="1"
 
@@ -13,10 +13,7 @@ IUSE="debug htmlhandbook +plasma"
 
 DEPEND="
 	dev-libs/libpcre
-	plasma? (
-		|| ( >=kde-base/plasma-${PV}:${SLOT} >=kde-base/kdebase-${PV}:${SLOT} )
-		)"
-
+	plasma? ( >=kde-base/plasma-${PV}:${SLOT} )"
 RDEPEND="${DEPEND}"
 
 src_compile() {

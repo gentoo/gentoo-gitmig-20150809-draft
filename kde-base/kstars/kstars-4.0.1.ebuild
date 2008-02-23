@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/kstars-4.0.1.ebuild,v 1.1 2008/02/07 00:11:17 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/kstars-4.0.1.ebuild,v 1.2 2008/02/23 17:43:24 ingmar Exp $
 
 EAPI="1"
 
@@ -11,13 +11,12 @@ DESCRIPTION="KDE Desktop Planetarium"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug fits htmlhandbook nova sbig usb"
 
-COMMONDEPEND=">=kde-base/libkdeedu-${PV}:${SLOT}
+DEPEND=">=kde-base/libkdeedu-${PV}:${SLOT}
 		fits? ( sci-libs/cfitsio )
 		nova? ( >=sci-libs/libnova-0.12.1 )
 		sbig? ( sci-libs/indilib
 			usb? ( dev-libs/libusb ) )"
-DEPEND="${DEPEND} ${COMMONDEPEND}"
-RDEPEND="${RDEPEND} ${COMMONDEPEND}"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	epatch "${FILESDIR}/${PN}-4.0.0-destdir.patch"

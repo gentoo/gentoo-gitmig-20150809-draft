@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-kioslaves
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.76 2008/02/20 22:54:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.77 2008/02/23 17:40:08 ingmar Exp $
+
+  23 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  kdesdk-kioslaves-4.0.1.ebuild:
+  Remove traces of monolithic KDE 4.
 
 *kdesdk-kioslaves-3.5.9 (20 Feb 2008)
 

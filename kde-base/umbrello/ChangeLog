@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/umbrello
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.82 2008/02/20 23:36:35 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.83 2008/02/23 17:47:01 ingmar Exp $
+
+  23 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> umbrello-4.0.1.ebuild:
+  Remove traces of monolithic KDE 4.
 
 *umbrello-3.5.9 (20 Feb 2008)
 

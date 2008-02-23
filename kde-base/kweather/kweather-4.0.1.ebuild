@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/kweather-4.0.1.ebuild,v 1.1 2008/02/07 00:11:10 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/kweather-4.0.1.ebuild,v 1.2 2008/02/23 17:45:21 ingmar Exp $
 
 EAPI="1"
 
@@ -11,10 +11,8 @@ DESCRIPTION="KDE weather status display"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug htmlhandbook"
 
-COMMON_DEPEND="|| ( >=kde-base/plasma-${PV}:${SLOT}
-		    >=kde-base/kdebase-${PV}:${SLOT} )"
-DEPEND="${DEPEND} ${COMMON_DEPEND}"
-RDEPEND="${RDEPEND} ${COMMON_DEPEND}"
+DEPEND=">=kde-base/plasma-${PV}:${SLOT}"
+RDEPEND="${DEPEND}"
 
 # More broken tests...
 RESTRICT="test"

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcron
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcron/ChangeLog,v 1.76 2008/02/20 22:40:40 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcron/ChangeLog,v 1.77 2008/02/23 17:37:21 ingmar Exp $
+
+  23 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kcron-4.0.1.ebuild:
+  Remove traces of monolithic KDE 4.
 
 *kcron-3.5.9 (20 Feb 2008)
 

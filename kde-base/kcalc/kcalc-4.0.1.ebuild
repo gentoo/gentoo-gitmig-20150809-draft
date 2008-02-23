@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/kcalc-4.0.1.ebuild,v 1.1 2008/02/07 00:11:19 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/kcalc-4.0.1.ebuild,v 1.2 2008/02/23 17:36:42 ingmar Exp $
 
 EAPI="1"
 
@@ -11,9 +11,8 @@ DESCRIPTION="KDE calculator"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug htmlhandbook test"
 
-COMMONDEPEND="dev-libs/gmp"
-DEPEND="${DEPEND} ${COMMONDEPEND}"
-RDEPEND="${RDEPEND} ${COMMONDEPEND}"
+DEPEND="dev-libs/gmp"
+RDEPEND="${DEPEND}"
 
 src_test() {
 	pushd "${WORKDIR}"/${PN}_build/kcalc/knumber/tests > /dev/null

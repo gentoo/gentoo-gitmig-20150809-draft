@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.0.1.ebuild,v 1.1 2008/02/07 00:12:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.0.1.ebuild,v 1.2 2008/02/23 17:38:49 ingmar Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="!kde-base/kdebase-runtime-meta
-!kde-base/kdebase-workspace-meta"
+	!kde-base/kdebase-workspace-meta"
 RDEPEND="${DEPEND}
 	>=kde-base/dolphin-${PV}:${SLOT}
 	>=kde-base/drkonqi-${PV}:${SLOT}

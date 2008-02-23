@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.98 2008/02/20 22:36:30 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.99 2008/02/23 17:36:25 ingmar Exp $
+
+  23 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kate-4.0.1.ebuild:
+  Remove traces of monolithic KDE 4.
 
 *kate-3.5.9 (20 Feb 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-4.0.1.ebuild,v 1.1 2008/02/07 00:11:12 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-4.0.1.ebuild,v 1.2 2008/02/23 17:44:08 ingmar Exp $
 
 EAPI="1"
 
@@ -12,9 +12,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="alsa debug htmlhandbook ktts"
 
 COMMONDEPEND="ktts? ( alsa? ( >=media-libs/alsa-lib-1.0.14a ) )
-	|| ( ( >=kde-base/kcmshell-${PV}:${SLOT}
-		>=kde-base/knotify-${PV}:${SLOT} )
-		>=kde-base/kdebase-${PV}:${SLOT} )"
+	>=kde-base/kcmshell-${PV}:${SLOT}
+	>=kde-base/knotify-${PV}:${SLOT}"
 DEPEND="${DEPEND} ${COMMONDEPEND}"
 RDEPEND="${RDEPEND} ${COMMONDEPEND}
 	ktts? ( app-accessibility/festival
