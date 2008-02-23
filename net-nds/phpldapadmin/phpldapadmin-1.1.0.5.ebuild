@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-1.1.0.5.ebuild,v 1.1 2008/02/22 12:47:03 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-1.1.0.5.ebuild,v 1.2 2008/02/23 11:15:32 wrobel Exp $
 
 inherit webapp depend.php
 
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
+need_httpd_cgi
 need_php_httpd
 
 pkg_setup() {
