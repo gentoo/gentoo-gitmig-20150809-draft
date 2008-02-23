@@ -1,6 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.199 2008/02/22 14:01:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.200 2008/02/23 05:18:06 jer Exp $
+
+*opera-9.50_beta2_p1823 (23 Feb 2008)
+
+  23 Feb 2008; Jeroen Roovers <jer@gentoo.org>
+  +opera-9.50_beta2_p1823.ebuild:
+  Version bump
+  <http://my.opera.com/desktopteam/blog/2008/02/22/plugin-milestone-build-part
+  -ii>.
 
   22 Feb 2008; Tobias Scherbaum <dertobi123@gentoo.org> opera-9.26.ebuild:
   ppc stable, bug #210260
