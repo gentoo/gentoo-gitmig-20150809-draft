@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.7.3.ebuild,v 1.3 2008/02/21 14:27:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.7.3.ebuild,v 1.4 2008/02/23 16:50:12 dev-zero Exp $
 
 NEED_PYTHON=2.3
 
@@ -28,14 +28,14 @@ src_compile(){
 	local myconf
 	use debug && myconf="${myconf} -u"
 
-	python configure.py \
+	"${python}" configure.py \
 		-b "/usr/bin" \
 		-d "/usr/$(get_libdir)/python${PYVER}/site-packages" \
 		-e "/usr/include/python${PYVER}" \
 		-v "/usr/share/sip" \
 		${myconf} \
-		CXXFLAGS_RELEASE="" CFLAGS_RELEASE="" \
-		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
+		CXXFLAGS_RELEASE="" CFLAGS_RELEASE="" LFLAGS="${LDFLAGS}" \
+		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" LFLAGS="${LDFLAGS}" \
 		CC=$(tc-getCC) CXX=$(tc-getCXX) \
 		LINK=$(tc-getCXX) LINK_SHLIB=$(tc-getCXX) \
 		STRIP="/bin/true" || die "configure failed"
