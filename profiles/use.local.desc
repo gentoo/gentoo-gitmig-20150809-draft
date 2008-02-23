@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3376 2008/02/23 13:19:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3377 2008/02/23 14:36:28 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2095,6 +2095,7 @@ www-client/seamonkey:xforms - XForms is a standard to split up XHTML into XForms
 www-client/w3m:async - Enables asynchronous fetch
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/nsxml:xslt - Enables xslt support
+www-misc/zoneminder:X10 - Enable support for X10 devices
 www-servers/apache:sni - Enable TLS Server Name Indication (SNI) - EXPERIMENTAL!
 www-servers/apache:suexec - Install suexec with apache
 www-servers/cherokee:coverpage - Installs the default cherokee coverpage
