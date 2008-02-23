@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.152 2008/02/20 22:41:41 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.153 2008/02/23 23:04:14 philantrop Exp $
+
+  23 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kde-i18n-3.5.9-russian.patch, kde-i18n-3.5.9.ebuild:
+  Added a patch to fix Russian translations. Fixes bugs 211050 and 211069 (the
+  latter being fixed by a change in kde.eclass).
 
 *kde-i18n-3.5.9 (20 Feb 2008)
 

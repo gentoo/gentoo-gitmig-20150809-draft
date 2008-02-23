@@ -1,9 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.9.ebuild,v 1.1 2008/02/20 22:41:41 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.9.ebuild,v 1.2 2008/02/23 23:04:14 philantrop Exp $
 
 EAPI="1"
-inherit kde eutils
+WANT_AUTOMAKE="1.10.1"
+
+inherit kde eutils autotools
 
 DESCRIPTION="KDE internationalization package"
 HOMEPAGE="http://www.kde.org/"
@@ -25,7 +27,7 @@ for X in ${LANGS} ; do
 done
 
 src_unpack() {
-	if [[ -z "${LINGUAS}" ]] || [[ -z "${A}" &&	 "${LINGUAS}" != "en" ]]; then
+	if [[ -z ${LINGUAS} ]] || [[ -z ${A} && "${LINGUAS}" != "en" ]]; then
 		echo
 		ewarn "You either have the LINGUAS environment variable unset or it"
 		ewarn "contains languages not supported by kde-base/kde-i18n."
@@ -49,6 +51,8 @@ src_unpack() {
 		sed -e "s:\$(KDE_LANG)/${lang}/:\$(KDE_LANG)/:g" \
 			-i "${WORKDIR}/${dir}/docs/common/Makefile.in" || die "Failed to fix ${lang}."
 	done
+
+	use linguas_ru && epatch "${FILESDIR}/${P}-russian.patch"
 }
 
 src_compile() {
