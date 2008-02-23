@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/attr
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.100 2007/11/19 06:36:02 kumba Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.101 2008/02/23 03:57:01 vapier Exp $
+
+*attr-2.4.41 (23 Feb 2008)
+
+  23 Feb 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/attr-2.4.39-linguas.patch, attr-2.4.39.ebuild, +attr-2.4.41.ebuild:
+  Make sure we respect LINGUAS #205952 by Arvid Norlander and version bump
+  #211113.
 
   19 Nov 2007; Joshua Kinard <kumba@gentoo.org> attr-2.4.39.ebuild:
   Stable on mips, per #197204.
