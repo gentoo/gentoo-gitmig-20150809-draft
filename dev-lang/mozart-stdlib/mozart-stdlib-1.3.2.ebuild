@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart-stdlib/mozart-stdlib-1.3.2.ebuild,v 1.7 2007/11/16 19:50:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart-stdlib/mozart-stdlib-1.3.2.ebuild,v 1.8 2008/02/23 06:56:47 keri Exp $
 
 inherit eutils
 
@@ -28,8 +28,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd "${S}"
-
 	econf || die "econf failed"
 	emake || die "emake failed"
 }
