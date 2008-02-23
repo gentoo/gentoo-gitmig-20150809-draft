@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.6.ebuild,v 1.8 2006/12/10 08:48:36 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.6.ebuild,v 1.9 2008/02/23 20:26:07 hollow Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A realtime Apache log analyzer"
 HOMEPAGE="http://www.webta.org/projects/apachetop"
@@ -11,7 +11,7 @@ SRC_URI="http://www.webta.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 hppa ~mips ppc sparc x86"
-IUSE="apache2 fam pcre adns"
+IUSE="fam pcre adns"
 
 DEPEND="fam? ( virtual/fam )
 	pcre? ( dev-libs/libpcre )
@@ -19,19 +19,22 @@ DEPEND="fam? ( virtual/fam )
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc41.patch
+	epatch "${FILESDIR}"/${P}-configure.patch
+	eautoreconf
 }
 
 src_compile() {
-	useq apache2 && logfile="/var/log/apache2/access_log"
-	useq apache2 || logfile="/var/log/apache/access_log"
-	econf --with-logfile="${logfile}" `use_with fam` `use_with pcre` `use_with adns` || die "econf failed"
+	econf --with-logfile=/var/log/apache2/access_log \
+		$(use_with fam) \
+		$(use_with pcre) \
+		$(use_with adns) \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
