@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/emacs-w3m
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.56 2007/12/02 23:44:18 opfer Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.57 2008/02/23 09:20:48 ulm Exp $
+
+*emacs-w3m-1.4.4_p20080214 (22 Feb 2008)
+
+  22 Feb 2008; Ulrich Mueller <ulm@gentoo.org>
+  +emacs-w3m-1.4.4_p20080214.ebuild:
+  New CVS snapshot.
 
   02 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   emacs-w3m-1.4.4-r2.ebuild:
