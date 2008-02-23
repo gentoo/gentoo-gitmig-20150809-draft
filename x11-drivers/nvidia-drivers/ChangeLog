@@ -1,6 +1,6 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.83 2008/02/18 16:28:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.84 2008/02/23 20:42:52 vapier Exp $
 
   18 Feb 2008; Doug Klima <cardoe@gentoo.org>
   nvidia-drivers-169.09-r1.ebuild:
@@ -10,7 +10,7 @@
 
   15 Feb 2008; Doug Klima <cardoe@gentoo.org>
   +nvidia-drivers-169.09-r1.ebuild:
-  new ebuild that should fix bug #207298, #20799, #167413, #184593, #188552,
+  new ebuild that should fix bug #207298, #207299, #167413, #184593, #188552,
   and #187149. and #202978, depending on the results of the discussion and
   added work around for bug #137000
 
