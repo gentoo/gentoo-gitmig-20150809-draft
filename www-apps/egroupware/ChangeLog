@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/egroupware
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.85 2007/10/11 08:58:28 wrobel Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.86 2008/02/23 21:06:25 hollow Exp $
+
+  23 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  egroupware-1.4.002.ebuild:
+  merge from webapp overlay wrt #208584
+
+  05 Feb 2008; Jakub Moc <jakub@gentoo.org> egroupware-1.4.002.ebuild:
+  Add missing dev-php/PEAR-PEAR and virtual/cron dependencies. Remove bogus gd
+  USE flag and dependency on media-libs/gd, add mssql USE flag. Fix PHP checks.
+  Fix quoting, ebuild clean-up.
 
   11 Oct 2007; <wrobel@gentoo.org> -egroupware-1.4.001.ebuild:
   Removed insecure package from the tree (sec issue #193960).
