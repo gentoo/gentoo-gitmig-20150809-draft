@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-4.2-r1.ebuild,v 1.3 2008/02/23 15:44:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-4.2-r1.ebuild,v 1.4 2008/02/23 15:45:20 dev-zero Exp $
 
 NEED_PYTHON="2.3"
 
@@ -42,7 +42,6 @@ src_compile() {
 }
 
 src_install() {
-	cd "${S}"
 	sed -i s/2,4,9/2,5,9/ setup.py
 
 	python_version
