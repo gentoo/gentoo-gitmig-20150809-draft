@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/isync-1.0.2.ebuild,v 1.4 2008/02/23 12:26:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/isync-1.0.4.ebuild,v 1.1 2008/02/23 12:26:27 ticho Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/isync/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ssl"
 
 DEPEND="virtual/libc
@@ -28,5 +28,6 @@ src_compile () {
 src_install()
 {
 	einstall || die 'Error installing'
-	dodoc README AUTHORS ChangeLog NEWS TODO
+	dodir /usr/share/doc/${PF}
+	mv "${D}"/usr/share/doc/${PN}/* "${D}"/usr/share/doc/${PF}
 }

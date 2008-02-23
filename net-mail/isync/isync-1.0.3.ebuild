@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/isync-1.0.3.ebuild,v 1.1 2007/04/01 18:22:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/isync-1.0.3.ebuild,v 1.2 2008/02/23 12:26:27 ticho Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 src_compile () {
-	econf --with-prefix=${D} \
+	econf --with-prefix="${D}" \
 		$(use_with ssl) \
 		|| die 'Configure failed'
 
@@ -28,5 +28,5 @@ src_compile () {
 src_install()
 {
 	einstall || die 'Error installing'
-	dodoc README COPYING AUTHORS ChangeLog NEWS TODO
+	dodoc README AUTHORS ChangeLog NEWS TODO
 }
