@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-pam
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pam/ChangeLog,v 1.3 2007/12/06 01:19:37 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pam/ChangeLog,v 1.4 2008/02/23 18:13:48 swegener Exp $
+
+  23 Feb 2008; Sven Wegener <swegener@gentoo.org> pecl-pam-1.0.2.ebuild:
+  Add ~amd64 keyword.
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org> -pecl-pam-1.0.1.ebuild,
   pecl-pam-1.0.2.ebuild:
