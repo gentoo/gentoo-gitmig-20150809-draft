@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.58 2008/02/22 15:33:32 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.59 2008/02/23 23:54:40 hollow Exp $
 #
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -10,8 +10,14 @@
 # The webapp eclass contains functions to handle web applications with
 # webapp-config. Part of the implementation of GLEP #11
 
+# @ECLASS-VARIABLE: WEBAPP_NO_AUTO_INSTALL
+# @DESCRIPTION:
+# An ebuild sets this to `yes' if an automatic installation and/or upgrade is
+# not possible. The ebuild should overwrite pkg_postinst() and explain the
+# reason for this BEFORE calling webapp_pkg_postinst().
+[[ "${WEBAPP_NO_AUTO_INSTALL}" == "yes" ]] || IUSE="vhosts"
+
 SLOT="${PVR}"
-IUSE="vhosts"
 DEPEND=">=app-admin/webapp-config-1.50.15"
 RDEPEND="${DEPEND}"
 
@@ -81,7 +87,10 @@ webapp_strip_cwd() {
 
 webapp_getinstalltype() {
 	debug-print-function $FUNCNAME $*
-	use vhosts && return
+
+	if ! has vhosts ${IUSE} || use vhosts; then
+		return
+	fi
 
 	local my_output
 	my_output="$(webapp_check_installedat)"
@@ -344,7 +353,9 @@ webapp_pkg_setup() {
 	local my_dir="${ROOT}${VHOST_ROOT}/${MY_HTDOCSBASE}/${PN}"
 
 	# if USE=vhosts is enabled OR no application is installed we're done here
-	use vhosts || [[ ! -d "${my_dir}" ]] && return
+	if ! has vhosts ${IUSE} || use vhosts || [[ ! -d "${my_dir}" ]]; then
+		return
+	fi
 
 	local my_output
 	my_output="$(webapp_check_installedat)"
@@ -442,37 +453,50 @@ webapp_pkg_postinst() {
 		die "Ebuild did not call webapp_src_install() - report to http://bugs.gentoo.org"
 	fi
 
-	if ! use vhosts; then
-		echo
-		elog "vhosts USE flag not set - auto-installing using webapp-config"
+	if has vhosts ${IUSE}; then
+		if ! use vhosts; then
+			echo
+			elog "vhosts USE flag not set - auto-installing using webapp-config"
 
-		G_HOSTNAME="localhost"
-		webapp_read_config
+			G_HOSTNAME="localhost"
+			webapp_read_config
 
-		local my_mode=-I
-		webapp_getinstalltype
+			local my_mode=-I
+			webapp_getinstalltype
 
-		if [[ "${IS_REPLACE}" == "1" ]]; then
-			elog "${PN}-${PVR} is already installed - replacing"
-			my_mode=-I
-		elif [[ "${IS_UPGRADE}" == "1" ]]; then
-			elog "${REMOVE_PKG} is already installed - upgrading"
-			my_mode=-U
+			if [[ "${IS_REPLACE}" == "1" ]]; then
+				elog "${PN}-${PVR} is already installed - replacing"
+				my_mode=-I
+			elif [[ "${IS_UPGRADE}" == "1" ]]; then
+				elog "${REMOVE_PKG} is already installed - upgrading"
+				my_mode=-U
+			else
+				elog "${PN}-${PVR} is not installed - using install mode"
+			fi
+
+			my_cmd="${WEBAPP_CONFIG} ${my_mode} -h localhost -u root -d ${INSTALL_DIR} ${PN} ${PVR}"
+			elog "Running ${my_cmd}"
+			${my_cmd}
+
+			echo
+			local cleaner="${WEBAPP_CLEANER} -p -C ${PN}"
+			einfo "Running ${cleaner}"
+			${cleaner}
 		else
-			elog "${PN}-${PVR} is not installed - using install mode"
+			elog
+			elog "The 'vhosts' USE flag is switched ON"
+			elog "This means that Portage will not automatically run webapp-config to"
+			elog "complete the installation."
+			elog
+			elog "To install ${PN}-${PVR} into a virtual host, run the following command:"
+			elog
+			elog "    webapp-config -I -h <host> -d ${PN} ${PN} ${PVR}"
+			elog
+			elog "For more details, see the webapp-config(8) man page"
 		fi
-
-		my_cmd="${WEBAPP_CONFIG} ${my_mode} -h localhost -u root -d ${INSTALL_DIR} ${PN} ${PVR}"
-		elog "Running ${my_cmd}"
-		${my_cmd}
-
-		echo
-		local cleaner="${WEBAPP_CLEANER} -p -C ${PN}"
-		einfo "Running ${cleaner}"
-		${cleaner}
 	else
 		elog
-		elog "The 'vhosts' USE flag is switched ON"
+		elog "This ebuild does not support the 'vhosts' USE flag."
 		elog "This means that Portage will not automatically run webapp-config to"
 		elog "complete the installation."
 		elog
@@ -497,7 +521,7 @@ webapp_pkg_prerm() {
 	[[ $? -ne 0 ]] && return
 
 	local x
-	if ! use vhosts; then
+	if has vhosts ${IUSE} && ! use vhosts; then
 		echo "${my_output}" | while read x; do
 			if [[ -f "${x}"/.webapp ]]; then
 				. "${x}"/.webapp
