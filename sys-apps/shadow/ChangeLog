@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.182 2008/02/20 00:04:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.183 2008/02/24 11:02:08 vapier Exp $
+
+  24 Feb 2008; Mike Frysinger <vapier@gentoo.org>
+  files/shadow-4.0.17-login.defs.patch, shadow-4.0.18.1-r1.ebuild,
+  shadow-4.0.18.2.ebuild, shadow-4.0.18.2-r2.ebuild:
+  Make sure we respect libdir for path to cracklib dicts.
 
   20 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
   shadow-4.0.18.2-r2.ebuild:

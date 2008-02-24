@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1-r1.ebuild,v 1.11 2007/09/27 14:02:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1-r1.ebuild,v 1.12 2008/02/24 11:02:08 vapier Exp $
 
-inherit eutils libtool toolchain-funcs autotools pam
+inherit eutils libtool toolchain-funcs autotools pam multilib
 
 DESCRIPTION="Utilities to deal with user accounts"
 HOMEPAGE="http://shadow.pld.org.pl/"
@@ -37,6 +37,7 @@ src_unpack() {
 
 	# tweak the default login.defs
 	epatch "${FILESDIR}"/${PN}-4.0.17-login.defs.patch
+	sed -i "s:@LIBDIR@:$(get_libdir):" etc/login.defs || die
 
 	# Make user/group names more flexible #3485 / #22920
 	epatch "${FILESDIR}"/${PN}-4.0.13-dots-in-usernames.patch

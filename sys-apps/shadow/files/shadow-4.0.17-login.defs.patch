@@ -8,7 +8,7 @@
 +SU_WHEEL_ONLY	yes
 @@ -210 +210 @@
 -CRACKLIB_DICTPATH	/var/cache/cracklib/cracklib_dict
-+CRACKLIB_DICTPATH	/usr/lib/cracklib_dict
++CRACKLIB_DICTPATH	/usr/@LIBDIR@/cracklib_dict
 @@ -227 +227 @@
 -LOGIN_RETRIES		5
 +LOGIN_RETRIES		3
