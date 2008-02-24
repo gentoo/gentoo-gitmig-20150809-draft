@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.141 2008/02/11 22:07:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.142 2008/02/24 12:28:17 leio Exp $
+
+*libsoup-2.2.105-r1 (24 Feb 2008)
+
+  24 Feb 2008; Mart Raudsepp <leio@gentoo.org>
+  +files/libsoup-2.2.105-fix-devhelp-docs.patch, -libsoup-2.2.3-r1.ebuild,
+  -libsoup-2.2.105.ebuild, +libsoup-2.2.105-r1.ebuild:
+  Fix gtk-docs not showing up in devhelp
 
 *libsoup-2.2.105 (11 Feb 2008)
 
