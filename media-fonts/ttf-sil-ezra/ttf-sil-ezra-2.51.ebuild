@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-ezra/ttf-sil-ezra-2.51.ebuild,v 1.3 2008/01/23 18:34:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-ezra/ttf-sil-ezra-2.51.ebuild,v 1.4 2008/02/24 12:22:46 armin76 Exp $
 
 inherit font
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${MY_P}.zip"
 
 LICENSE="MIT OFL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ia64 ~ppc ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND="app-arch/unzip
