@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.27 2008/02/19 10:06:36 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.28 2008/02/24 16:46:17 calchan Exp $
+
+  24 Feb 2008; Denis Dupeyron <calchan@gentoo.org> f-spot-0.4.2.ebuild:
+  Fixed bug #211005.
 
 *f-spot-0.4.2 (19 Feb 2008)
 
