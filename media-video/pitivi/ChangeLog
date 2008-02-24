@@ -1,6 +1,9 @@
 # ChangeLog for media-video/pitivi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.10 2007/12/01 16:57:50 hanno Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.11 2008/02/24 21:10:09 eva Exp $
+
+  24 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org> pitivi-0.11.1.ebuild:
+  fix python eclass use, bug #207667
 
 *pitivi-0.11.1 (01 Dec 2007)
 

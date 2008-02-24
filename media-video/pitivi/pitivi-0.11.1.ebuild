@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.11.1.ebuild,v 1.1 2007/12/01 16:57:50 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.11.1.ebuild,v 1.2 2008/02/24 21:10:09 eva Exp $
 
-inherit gnome2
+inherit gnome2 python
 
 DESCRIPTION="A non-linear video editor using the GStreamer multimedia framework"
 HOMEPAGE="http://www.pitivi.org"
@@ -30,9 +30,27 @@ RDEPEND="${DEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS RELEASE"
 
+src_unpack() {
+	gnome2_src_unpack
+
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+}
+
 src_compile() {
 	addpredict $(unset HOME; echo ~)/.gconf
 	addpredict $(unset HOME; echo ~)/.gconfd
 	addpredict $(unset HOME; echo ~)/.gstreamer-0.10
 	gnome2_src_compile
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	python_mod_optimize "/usr/$(get_libdir)/${PN}/python/${PN}"
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	python_mod_cleanup "/usr/$(get_libdir)/${PN}/python/${PN}"
 }
