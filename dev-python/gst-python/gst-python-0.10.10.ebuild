@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.10.ebuild,v 1.2 2008/01/29 23:39:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.10.ebuild,v 1.3 2008/02/24 19:45:32 eva Exp $
 
 NEED_PYTHON=2.4
 
@@ -13,7 +13,7 @@ SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0.10"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="examples"
 
 RDEPEND=">=dev-python/pygtk-2.6.3
 	>=dev-libs/glib-2.8
@@ -29,14 +29,22 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.10.9-lazy.patch
+
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+
 	AT_M4DIR="common/m4" eautoreconf
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README TODO
-	docinto examples
-	dodoc examples/*
+
+	if use examples; then
+		docinto examples
+		dodoc examples/*
+	fi
 }
 
 pkg_postinst() {
