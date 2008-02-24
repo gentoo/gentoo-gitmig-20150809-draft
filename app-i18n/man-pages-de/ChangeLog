@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/man-pages-de
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.5 2007/04/18 20:53:03 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.6 2008/02/24 16:40:16 ulm Exp $
+
+*man-pages-de-0.5-r1 (24 Feb 2008)
+
+  24 Feb 2008; Ulrich Mueller <ulm@gentoo.org> +man-pages-de-0.5-r1.ebuild:
+  Remove su manpage since it collides with sys-apps/shadow, bug 211269.
 
   18 Apr 2007; Raúl Porcel <armin76@gentoo.org> -man-pages-de-0.4.ebuild:
   old
