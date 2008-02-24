@@ -1,9 +1,6 @@
 # Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.3.1.1.ebuild,v 1.3 2008/02/06 19:58:09 caster Exp $
-
-# Notes: This is a preliminary ebuild of Eclipse-3.3
-# It was based on the initial ebuild in the gcj-overlay, so much of the credit goes out to geki.
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.3.1.1.ebuild,v 1.4 2008/02/24 18:45:49 elvanor Exp $
 
 # Tomcat is almost no longer needed in 3.3 and removed in 3.4.
 # See bug: https://bugs.eclipse.org/bugs/show_bug.cgi?id=173692
@@ -62,7 +59,7 @@ CDEPEND=">=dev-java/ant-eclipse-ecj-3.3
 RDEPEND=">=virtual/jre-1.5
 	${CDEPEND}"
 
-DEPEND="=virtual/jdk-1.5*
+DEPEND=">=virtual/jdk-1.5
 	sys-apps/findutils
 	dev-java/cldc-api:1.1
 	app-arch/unzip
@@ -82,7 +79,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	patch-apply
 	remove-bundled-stuff
 
