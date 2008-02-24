@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.03.ebuild,v 1.3 2008/01/12 19:13:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.03-r1.ebuild,v 1.1 2008/02/24 16:24:28 aballier Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -65,7 +65,7 @@ src_compile() {
 	fi
 
 	emake -j1 lib || die "failed to build the library"
-	if useocamlopt; then
+	if use ocamlopt; then
 		emake -j1 libopt || die "failed to build native code library"
 	fi
 
