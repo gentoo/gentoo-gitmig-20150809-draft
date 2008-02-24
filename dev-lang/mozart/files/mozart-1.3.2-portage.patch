@@ -13,6 +13,23 @@ diff -ur mozart-1.3.2.20060615.orig/Makefile.in mozart-1.3.2.20060615/Makefile.i
 diff -ur mozart-1.3.2.20060615.orig/platform/emulator/Makefile.in mozart-1.3.2.20060615/platform/emulator/Makefile.in
 --- mozart-1.3.2.20060615.orig/platform/emulator/Makefile.in	2004-01-12 23:03:44.000000000 +1300
 +++ mozart-1.3.2.20060615/platform/emulator/Makefile.in	2007-02-18 09:31:31.000000000 +1300
+@@ -226,10 +226,15 @@
+ .PHONY:	all first install install-bin install-inc \
+ 	install-dir depend tags clean cleaner distclean veryclean
+ 
+-all: $(TARGETS) $(DYNAMIC_MODULETARGETS)
++all: $(TARGETS) dynamic_modules
+ 
+ bootstrap:: all
+ 
++dynamic_modules: $(TARGETS)
++	for dynamic_module in $(DYNAMIC_MODULETARGETS); do \
++	  $(MAKE) $$dynamic_module; \
++	done
++
+ $(MODINTERS): bidecl.perl
+ 
+ .PHONY: libDPB.a DPB.so-$(PLATFORM)
 @@ -400,7 +400,7 @@
  $(NEWCACHEDIR):
  	$(INSTALL_DIR) $@
@@ -22,6 +39,27 @@ diff -ur mozart-1.3.2.20060615.orig/platform/emulator/Makefile.in mozart-1.3.2.2
  	$(INSTALL_FILE) $< $@
  
  install-inc: $(INCDIR)
+diff -ur mozart-1.3.2.20060615.orig/platform/emulator/libdp/Makefile.in mozart-1.3.2.20060615/platform/emulator/libdp/Makefile.in
+--- mozart-1.3.2.20060615.orig/platform/emulator/libdp/Makefile.in	2002-08-03 08:20:44.000000000 +1200
++++ mozart-1.3.2.20060615/platform/emulator/libdp/Makefile.in	2008-02-23 14:53:00.000000000 +1300
+@@ -88,7 +88,7 @@
+ 	$(AR) -rc $@ $< && $(RANLIB) $@
+ 
+ #
+-dpMiscModule.lo: ../modDPMisc-if.cc
++dpMiscModule.lo: ../modDPMisc-if.cc $(CREATEDFILES)
+ 
+ ../DPMisc.so-$(PLATFORM): dpMiscModule.lo 
+ 	$(DYNLD) -o $@ $<
+@@ -146,6 +146,8 @@
+ msgContainer_marshal.cc: msgContainer_marshal.m4cc msgFormat.m4
+ msgContainer.o: msgContainer_marshal.m4cc msgFormat.m4
+ 
++$(REALCORESRCS): $(CREATEDCOREFILES)
++
+ BUILDDIR=$(shell pwd)
+ tags:	$(CREATEDFILES)
+ 	etags \
 diff -ur mozart-1.3.2.20060615.orig/platform/tools/gump/Makefile.in mozart-1.3.2.20060615/platform/tools/gump/Makefile.in
 --- mozart-1.3.2.20060615.orig/platform/tools/gump/Makefile.in	2003-01-08 02:40:10.000000000 +1300
 +++ mozart-1.3.2.20060615/platform/tools/gump/Makefile.in	2007-02-18 09:31:31.000000000 +1300
@@ -68,11 +106,18 @@ diff -ur mozart-1.3.2.20060615.orig/share/bin/Makefile.in mozart-1.3.2.20060615/
 diff -ur mozart-1.3.2.20060615.orig/share/demo/Makefile.in mozart-1.3.2.20060615/share/demo/Makefile.in
 --- mozart-1.3.2.20060615.orig/share/demo/Makefile.in	2001-10-16 23:10:03.000000000 +1300
 +++ mozart-1.3.2.20060615/share/demo/Makefile.in	2007-02-18 09:31:31.000000000 +1300
-@@ -86,13 +86,13 @@
- $(OZDEMO) $(SYSTEMDOC) $(SYSTEMOZF):
+@@ -83,16 +83,19 @@
+ install:: $(OZDEMO) $(DEMOAPPLETS) \
+ 	$(SYSTEMDOC) $(SYSTEMOZF) $(SYSTEMOZF)/MT10.ozf $(SYSTEMDOC)/MT10.oz
+ 
+-$(OZDEMO) $(SYSTEMDOC) $(SYSTEMOZF):
++$(OZDEMO) $(SYSTEMOZF):
  	$(INSTALL_DIR) $@
  
 -$(OZDEMO)/%.oza: %.oza
++$(SYSTEMDOC): $(OZDEMO)
++	$(INSTALL_DIR) $@
++
 +$(OZDEMO)/%.oza: %.oza $(OZDEMO)
  	$(INSTALL_FILE) $< $@
  
@@ -85,9 +130,14 @@ diff -ur mozart-1.3.2.20060615.orig/share/demo/Makefile.in mozart-1.3.2.20060615
  	$(INSTALL_FILE) $< $@
  
  #
-@@ -281,17 +281,17 @@
+@@ -279,19 +282,21 @@
  
- $(OZIMGDIRS):
+ install:: $(OZIMGDIRS) $(OZIMAGES)
+ 
+-$(OZIMGDIRS):
++$(OZIMG): $(SYSTEMOZF)
++	$(INSTALL_DIR) $@
++$(OZIMGDIRS): $(OZIMG)
  	$(INSTALL_DIR) $@
 -$(OZIMG)/animated-queens/%.xbm: images/animated-queens/%.xbm
 +$(OZIMG)/animated-queens/%.xbm: images/animated-queens/%.xbm $(OZIMGDIRS)
@@ -128,7 +178,28 @@ diff -ur mozart-1.3.2.20060615.orig/share/elisp/Makefile.in mozart-1.3.2.2006061
 diff -ur mozart-1.3.2.20060615.orig/share/examples/Makefile.in mozart-1.3.2.20060615/share/examples/Makefile.in
 --- mozart-1.3.2.20060615.orig/share/examples/Makefile.in	2003-04-23 21:49:55.000000000 +1200
 +++ mozart-1.3.2.20060615/share/examples/Makefile.in	2007-02-18 09:31:31.000000000 +1300
-@@ -96,19 +96,19 @@
+@@ -63,15 +63,17 @@
+ 	$(FUNCTORS:%=$(OZEX)/fd/graphics/%)
+ 
+ EXDIRS = \
+-	sampler sampler/constraints \
+-	fd grammar grammar/shieber \
++	sampler/constraints \
++	grammar/shieber \
+ 	fd/graphics
+ 
+ 
+ OZEXDIRS = $(EXDIRS:%=$(OZEX)/%)
+ 
+ 
+-$(OZEX) $(OZEXDIRS):
++$(OZEX):
++	$(INSTALL_DIR) $@
++$(OZEXDIRS): $(OZEX)
+ 	$(INSTALL_DIR) $@
+ 
+ FD = \
+@@ -96,19 +98,19 @@
  	constraints/scheduling-compiler constraints oz
  SAMPLER = $(SAMPLER0:%=$(OZEX)/sampler/%.oz)
  
