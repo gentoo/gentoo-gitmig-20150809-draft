@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkarte/qlandkarte-0.7.1.ebuild,v 1.1 2008/02/19 23:24:50 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkarte/qlandkarte-0.7.1.ebuild,v 1.2 2008/02/24 12:02:33 hanno Exp $
 
 DESCRIPTION="View and upload map files, track and waypoint data to your Garmin GPS."
 HOMEPAGE="http://qlandkarte.sourceforge.net/"
@@ -14,6 +14,7 @@ DEPEND=">=x11-libs/qt-4.2.1
 	dev-libs/libusb"
 
 S="${WORKDIR}/QLandkarte-${PV}"
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_compile() {
 	econf || die "configure failed"
