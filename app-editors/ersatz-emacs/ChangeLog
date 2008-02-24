@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/ersatz-emacs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ChangeLog,v 1.4 2007/12/18 21:45:45 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ChangeLog,v 1.5 2008/02/24 17:21:37 opfer Exp $
+
+  24 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  ersatz-emacs-20060515.ebuild:
+  stable x86/amd64
 
   18 Dec 2007; Ulrich Mueller <ulm@gentoo.org> ersatz-emacs-20060515.ebuild:
   Add ~amd64 keyword, bug #202428.
