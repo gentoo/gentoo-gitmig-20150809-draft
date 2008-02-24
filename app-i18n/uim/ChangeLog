@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.171 2007/12/25 16:48:12 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.172 2008/02/24 16:28:09 matsuu Exp $
+
+*uim-1.4.2 (24 Feb 2008)
+
+  24 Feb 2008; MATSUU Takuto <matsuu@gentoo.org> +uim-1.4.2.ebuild:
+  Version bumped.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing usata from metadata.xml as per #22931.
