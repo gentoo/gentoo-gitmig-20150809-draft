@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/freefont-ttf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefont-ttf/ChangeLog,v 1.4 2008/01/23 18:15:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefont-ttf/ChangeLog,v 1.5 2008/02/24 12:13:22 armin76 Exp $
+
+  24 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  freefont-ttf-20060126.ebuild:
+  alpha/ia64/sparc stable
 
   23 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   freefont-ttf-20060126.ebuild:

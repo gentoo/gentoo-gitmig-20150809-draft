@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefont-ttf/freefont-ttf-20060126.ebuild,v 1.4 2008/01/23 18:15:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefont-ttf/freefont-ttf-20060126.ebuild,v 1.5 2008/02/24 12:13:22 armin76 Exp $
 
 inherit font
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/freefont/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc ~ppc64 sparc x86"
 
 FONT_SUFFIX="ttf"
 S="${WORKDIR}/freefont-${PV}"
