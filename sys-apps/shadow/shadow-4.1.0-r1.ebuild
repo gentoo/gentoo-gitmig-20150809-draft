@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.2-r2.ebuild,v 1.3 2008/02/24 11:02:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.0-r1.ebuild,v 1.1 2008/02/24 14:37:39 flameeyes Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/s/shadow/shadow_${PV}.orig.tar.gz"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="nls pam selinux skey nousuid cracklib"
+IUSE="nls pam selinux skey cracklib"
 
 # Does not work with OpenPAM (yet?)
 RDEPEND="cracklib? ( >=sys-libs/cracklib-2.7-r3 )
@@ -30,9 +30,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# uclibc support, corrects NIS usage
-	epatch "${FILESDIR}"/${PN}-4.0.13-nonis.patch
-
 	# If su should not simulate a login shell, use '/bin/sh' as shell to enable
 	# running of commands as user with /bin/false as shell, closing bug #15015.
 	# *** This one could be a security hole; disable for now ***
@@ -45,19 +42,7 @@ src_unpack() {
 	# Make user/group names more flexible #3485 / #22920
 	epatch "${FILESDIR}"/${PN}-4.0.13-dots-in-usernames.patch
 	epatch "${FILESDIR}"/${PN}-4.0.13-long-groupnames.patch
-
-	# Fix compiling with gcc-2.95.x
-	epatch "${FILESDIR}"/${PN}-4.0.12-gcc2.patch
-
-	# lock down setuid perms #47208
-	epatch "${FILESDIR}"/${PN}-4.0.11.1-perms.patch
-
-	epatch "${FILESDIR}"/${PN}-4.0.15-uclibc-missing-l64a.patch
-	epatch "${FILESDIR}"/${PN}-4.0.16-fix-useradd-usergroups.patch #128715
-	epatch "${FILESDIR}"/${PN}-4.0.18.2-useradd.patch
-
-	# Needed by the UCLIBC patches
-	eautoconf || die
+	epatch "${FILESDIR}"/${PN}-4.1.0-fix-useradd-usergroups.patch #128715
 
 	elibtoolize
 	epunt_cxx
@@ -80,9 +65,7 @@ src_compile() {
 }
 
 src_install() {
-	local perms=4711
-	use nousuid && perms=711
-	make DESTDIR="${D}" suiduperms=${perms} install || die "install problem"
+	emake DESTDIR="${D}" suidperms=4711 install || die "install problem"
 	dosym useradd /usr/sbin/adduser
 
 	# Remove libshadow and libmisc; see bug 37725 and the following
@@ -128,7 +111,7 @@ src_install() {
 	if use pam ; then
 		dopamd "${FILESDIR}/pam.d-include/"{su,passwd,shadow}
 
-		newpamd "${FILESDIR}/login.pamd.3" login
+		newpamd "${FILESDIR}/login.pamd.2" login
 
 		for x in chage chsh chfn chpasswd newusers \
 				 user{add,del,mod} group{add,del,mod} ; do
