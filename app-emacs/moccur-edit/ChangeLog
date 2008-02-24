@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/moccur-edit
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/moccur-edit/ChangeLog,v 1.1 2008/02/24 13:29:03 ulm Exp $
+
+*moccur-edit-2.9 (24 Feb 2008)
+
+  24 Feb 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/60moccur-edit-gentoo.el, +metadata.xml, +moccur-edit-2.9.ebuild:
+  Initial import. Ebuild contributed by MATSUYAMA Tomohiro
+  <matsuyama@ariel-networks.com>, bug 207189.
+
