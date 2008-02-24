@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1152 2008/02/24 10:13:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1153 2008/02/24 16:37:53 aballier Exp $
+
+  24 Feb 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask ocaml release candidate
 
   24 Feb 2008; Fabian Groffen <grobian@gentoo.org> arch.list,
   -default-darwin/macos/10.4/make.defaults,
