@@ -1,11 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.2-r1.ebuild,v 1.4 2008/01/29 18:22:35 dang Exp $
-EAPI="1"
-
-inherit gnome2 eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.2-r1.ebuild,v 1.5 2008/02/24 21:02:40 eva Exp $
 
 EAPI="1"
+
+inherit gnome2 eutils python
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
@@ -67,29 +66,36 @@ pkg_setup() {
 		G2CONF="${G2CONF} --disable-daap"
 	fi
 
-	G2CONF="${G2CONF} \
-	$(use_enable tagwriting tag-writing) \
-	$(use_with ipod) \
-	$(use_enable ipod ipod-writing) \
-	$(use_enable musicbrainz) \
-	$(use_with dbus) \
-	$(use_enable python) \
-	$(use_enable libnotify) \
-	$(use_enable lirc) \
-	$(use_with keyring gnome-keyring)
-	--with-playback=gstreamer-0-10 \
-	--with-cd-burning
-	--enable-mmkeys \
-	--enable-audioscrobbler \
-	--enable-track-transfer \
-	--with-metadata-helper \
-	--disable-schemas-install"
+	G2CONF="${G2CONF}
+		$(use_enable tagwriting tag-writing)
+		$(use_with ipod)
+		$(use_enable ipod ipod-writing)
+		$(use_enable musicbrainz)
+		$(use_with dbus)
+		$(use_enable python)
+		$(use_enable libnotify)
+		$(use_enable lirc)
+		$(use_with keyring gnome-keyring)
+		--with-playback=gstreamer-0-10
+		--with-cd-burning
+		--enable-mmkeys
+		--enable-audioscrobbler
+		--enable-track-transfer
+		--with-metadata-helper
+		--disable-schemas-install"
 
 DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
 	  MAINTAINERS NEWS README README.iPod THANKS TODO"
 
 export GST_INSPECT=/bin/true
-USE_DESTDIR=1
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
 }
 
 src_compile() {
@@ -100,8 +106,15 @@ src_compile() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
+	use python && python_mod_optimize /usr/$(get_libdir)/rhythmbox/plugins
+
 	elog "The aac flag has been removed from rhythmbox."
 	elog "This is due to stabilization issues with any gst-bad plugins."
 	elog "Please emerge gst-plugins-bad and gst-plugins-faad to be able to play m4a files"
 	elog "See bug #159538 for more information"
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	use python && python_mod_cleanup /usr/$(get_libdir)/rhythmbox/plugins
 }
