@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libtimidity
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.11 2007/12/05 15:45:55 fmccor Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.12 2008/02/24 18:43:11 drac Exp $
+
+*libtimidity-0.1.0-r1 (24 Feb 2008)
+
+  24 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  +files/libtimidity-0.1.0-newlen-overflow.patch,
+  +libtimidity-0.1.0-r1.ebuild:
+  Fix for overflow bug in size calculation by Hendrik Iben wrt #211289.
 
   05 Dec 2007; Ferris McCormick <fmccor@gentoo.org>
   libtimidity-0.1.0.ebuild:
