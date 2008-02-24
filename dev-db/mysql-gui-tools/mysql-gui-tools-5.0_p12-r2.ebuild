@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p12-r2.ebuild,v 1.1 2007/11/28 20:11:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p12-r2.ebuild,v 1.2 2008/02/24 16:16:59 swegener Exp $
 
 GCONF_DEBUG="no"
 
@@ -31,7 +31,10 @@ RDEPEND=">=x11-libs/gtk+-2.6
 		=dev-lang/lua-5.0*
 		virtual/opengl
 	)
-	query-browser? ( gnome-extra/gtkhtml:3.14 )"
+	query-browser? (
+		gnome-extra/gtkhtml:3.14
+		gnome-base/libgnomeprint:2.2
+	)"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15
 	>=app-text/scrollkeeper-0.3.11"
