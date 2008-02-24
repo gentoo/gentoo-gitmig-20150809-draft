@@ -1,2 +1,0 @@
-# this version of nano can't save files on Mac OS X - see bug 89040
-=app-editors/nano-1.3.4
