@@ -1,9 +1,9 @@
 # ChangeLog for media-fonts/sgi-fonts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sgi-fonts/ChangeLog,v 1.9 2008/02/24 12:22:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sgi-fonts/ChangeLog,v 1.10 2008/02/24 12:23:21 armin76 Exp $
 
   24 Feb 2008; Raúl Porcel <armin76@gentoo.org> sgi-fonts-1.0.ebuild:
-  alpha/sparc stable
+  sparc stable
 
   23 Jan 2008; Raúl Porcel <armin76@gentoo.org> sgi-fonts-1.0.ebuild:
   Add ~sparc
