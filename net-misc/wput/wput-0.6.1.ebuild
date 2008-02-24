@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/wput-0.6.1.ebuild,v 1.1 2008/02/24 16:11:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/wput-0.6.1.ebuild,v 1.2 2008/02/24 17:12:30 mr_bones_ Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ IUSE="debug nls ssl"
 RDEPEND="ssl? ( net-libs/gnutls )"
 DEPEND="${RDEPEND}
 		nls? ( sys-devel/gettext )"
-
 
 src_unpack() {
 	unpack "${A}"
