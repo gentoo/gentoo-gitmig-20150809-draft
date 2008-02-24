@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/notify-python-0.1.1.ebuild,v 1.6 2007/12/22 14:00:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/notify-python-0.1.1.ebuild,v 1.7 2008/02/24 14:54:42 eva Exp $
 
 NEED_PYTHON=2.3.5
 
@@ -20,7 +20,26 @@ RDEPEND=">=dev-python/pygtk-2.4.0
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+}
+
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README
+}
+
+pkg_postinst() {
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0/pynotify
+}
+
+pkg_postrm() {
+	python_version
+	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0/pynotify
 }
