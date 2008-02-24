@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Linux-Inotify2
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-Inotify2/ChangeLog,v 1.1 2008/02/24 18:50:27 hd_brummy Exp $
+
+*Linux-Inotify2-1.1 (24 Feb 2008)
+
+  24 Feb 2008; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
+  +Linux-Inotify2-1.1.ebuild:
+  intial ebuild
+
