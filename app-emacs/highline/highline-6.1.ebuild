@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/highline-6.1.ebuild,v 1.1 2008/01/22 08:10:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/highline-6.1.ebuild,v 1.2 2008/02/24 17:14:44 opfer Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.el.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~s390 ~x86"
+KEYWORDS="amd64 ~ppc ~s390 x86"
 IUSE=""
 
 SIMPLE_ELISP=t
