@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.77 2008/02/06 18:20:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.78 2008/02/24 17:56:08 mattepiu Exp $
+
+  24 Feb 2008; Matteo Azzali <mattepiu@gentoo.org> xmltv-0.5.50.ebuild:
+  Added two deps fo na_dtv, as for bug #205403 , sorry.
 
   06 Feb 2008; nixnut <nixnut@gentoo.org> xmltv-0.5.50.ebuild:
   stable on ppc wrt bug #205403

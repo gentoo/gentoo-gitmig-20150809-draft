@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.50.ebuild,v 1.4 2008/02/06 18:20:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.50.ebuild,v 1.5 2008/02/24 17:56:08 mattepiu Exp $
 
 inherit eutils perl-module
 
@@ -70,7 +70,7 @@ DEPEND="${RDEPEND}
 	tv_combiner? ( dev-perl/XML-LibXML )
 	tv_check? ( dev-perl/perl-tk dev-perl/Tk-TableMatrix )
 	tv_pick_cgi? ( virtual/perl-CGI dev-perl/Lingua-EN-Numbers-Ordinate )
-	na_dtv? ( >=dev-perl/WWW-Mechanize-1.02 dev-perl/TimeDate )
+	na_dtv? ( >=dev-perl/WWW-Mechanize-1.02 dev-perl/TimeDate dev-perl/IO-stringy dev-perl/XML-LibXML )
 	"
 
 make_config() {
