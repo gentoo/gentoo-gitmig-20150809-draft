@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/certmanager-3.5.9.ebuild,v 1.2 2008/02/21 15:55:08 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/certmanager-3.5.9.ebuild,v 1.3 2008/02/24 13:26:43 philantrop Exp $
 
 KMNAME=kdepim
 EAPI="1"
@@ -26,7 +26,8 @@ KMEXTRACTONLY="libkdenetwork/
 KMEXTRA="doc/kleopatra
 	doc/kwatchgnupg"
 
-PATCHES="${FILESDIR}/${P}-no-kdeenablefinal.patch"
+PATCHES="${FILESDIR}/${P}-no-kdeenablefinal.patch
+	${FILESDIR}/${P}-gcc-4.3-testsuite.patch"
 
 src_compile() {
 	myconf="--with-gpg=/usr/bin/gpg"
