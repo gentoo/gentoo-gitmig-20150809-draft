@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8316 2008/02/24 16:37:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8317 2008/02/24 18:33:32 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -59,7 +59,7 @@ x11-libs/lesstif
 # New pambase framework for PAM configuration. See Tracker bug #210767.
 sys-auth/pambase
 =sys-libs/pam-0.99.9.0-r1
-=sys-apps/shadow-4.0.18.2-r2
+=sys-apps/shadow-4.1.0-r1
 =sys-freebsd/freebsd-pam-modules-6.2-r1
 =sys-freessd/freebsd-ubin-6.2-r2
 =net-misc/openssh-4.7_p1-r20
