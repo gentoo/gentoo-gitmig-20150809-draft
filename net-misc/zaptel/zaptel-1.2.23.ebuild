@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.23.ebuild,v 1.2 2008/02/01 10:46:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.23.ebuild,v 1.3 2008/02/24 18:25:48 rajiv Exp $
 
 inherit toolchain-funcs eutils linux-mod flag-o-matic
 
@@ -54,21 +54,21 @@ select_echo_cancel() {
 }
 
 zconfig_disable() {
-	if grep -q "${1}" ${S}/zconfig.h; then
+	if grep -q "${1}" "${S}"/zconfig.h; then
 		# match a little more than ${1} so we can use zconfig_disable
 		# to disable all echo cancellers in zconfig.h w/o calling it several times
 		sed -i -e "s:^[ \t]*#define[ \t]\+\(${1}[a-zA-Z0-9_-]*\).*:#undef \1:" \
-			${S}/zconfig.h
+			"${S}"/zconfig.h
 	fi
 
 	return $?
 }
 
 zconfig_enable() {
-	if grep -q "${1}" ${S}/zconfig.h; then
+	if grep -q "${1}" "${S}"/zconfig.h; then
 		sed -i  -e "s:^/\*[ \t]*#define[ \t]\+\(${1}\).*:#define \1:" \
 			-e "s:^[ \t]*#undef[ \t]\+\(${1}\).*:#define \1:" \
-			${S}/zconfig.h
+			"${S}"/zconfig.h
 	fi
 
 	return $?
@@ -169,9 +169,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/zaptel-1.2.9.1-ar.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.diff
+	epatch "${FILESDIR}"/zaptel-1.2.9.1-ar.patch
 
 	# try to apply bristuff patch
 	if use bri; then
@@ -185,7 +185,7 @@ src_unpack() {
 
 		if use florz; then
 			einfo "Patching zaptel with florz (${FLORZ_VERSION}) for zaphfc"
-			epatch ${WORKDIR}/zaphfc_${FLORZ_VERSION}.diff
+			epatch "${WORKDIR}"/zaphfc_${FLORZ_VERSION}.diff
 		fi
 
 		# patch includes
@@ -205,7 +205,7 @@ src_unpack() {
 		sed -i  -e "s:^\(CFLAGS+=-I. \).*:\1 \$(ZAP):" \
 			zaphfc/Makefile
 
-		cd ${S}
+		cd "${S}"
 	fi
 
 ### Configuration changes
@@ -249,7 +249,7 @@ src_compile() {
 	     KSRC=${KV_DIR} ARCH=$(tc-arch-kernel) || die
 
 	if use astribank; then
-		cd ${S}/xpp/utils
+		cd "${S}"/xpp/utils
 		make || die "make xpp utils failed"
 	fi
 
@@ -267,10 +267,10 @@ src_compile() {
 
 src_install() {
 	# Create firmware directory
-	mkdir -p ${D}/lib/firmware/
+	mkdir -p "${D}"/lib/firmware/
 
-	kernel_is 2 4 && cp /etc/modules.conf ${D}/etc
-	make DESTDIR=${D} ARCH=$(tc-arch-kernel) \
+	kernel_is 2 4 && cp /etc/modules.conf "${D}"/etc
+	make DESTDIR="${D}" ARCH=$(tc-arch-kernel) \
 	KVERS=${KV_FULL} KSRC=/usr/src/linux devices firmware \
 	install-modules install-programs || die
 
@@ -317,21 +317,21 @@ src_install() {
 		docinto bristuff/cwain
 		dodoc cwain/TODO
 
-		cd ${S}
+		cd "${S}"
 	fi
 
 	# install init script
-	newinitd ${FILESDIR}/zaptel.rc6 zaptel
-	newconfd ${FILESDIR}/zaptel.confd zaptel
+	newinitd "${FILESDIR}"/zaptel.rc6 zaptel
+	newconfd "${FILESDIR}"/zaptel.confd zaptel
 
 	# install udev rule file
 	insinto /etc/udev/rules.d
-	newins ${FILESDIR}/zaptel.udevd 10-zaptel.rules
+	newins "${FILESDIR}"/zaptel.udevd 10-zaptel.rules
 
 	if use astribank; then
-		cd ${S}/xpp/utils
+		cd "${S}"/xpp/utils
 		eval `perl '-V:installarchlib'`
-		make DESTDIR=${D} PERLLIBDIR=${installarchlib} install || die "failed xpp utils install"
+		make DESTDIR="${D}" PERLLIBDIR=${installarchlib} install || die "failed xpp utils install"
 		dosbin zt_registration xpp_sync lszaptel
 	fi
 }
