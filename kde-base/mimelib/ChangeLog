@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/mimelib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.75 2008/02/20 23:33:23 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.76 2008/02/24 13:38:29 philantrop Exp $
+
+  24 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/mimelib-3.5.9-gcc-4.3-testsuite.patch, mimelib-3.5.9.ebuild:
+  Added a patch for gcc 4.3 compatibility as kindly provided by Ryan Hill on
+  bug 211216.
 
 *mimelib-3.5.9 (20 Feb 2008)
 
