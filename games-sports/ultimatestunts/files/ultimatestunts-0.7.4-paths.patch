@@ -1,0 +1,33 @@
+--- configure.ac
++++ configure.ac
+@@ -222,9 +222,9 @@
+ dnl ------------------
+ dnl The directory locations
+ dnl ------------------
+-usdatadir="${prefix}/share/ultimatestunts/"
++usdatadir="${datadir}/ultimatestunts/"
+ 
+-AC_DEFINE_UNQUOTED([PREFIXDIR], ["$prefix"], [Prefix dir])
++AC_DEFINE_UNQUOTED([PREFIXDIR], ["$sysconfdir"], [Prefix dir])
+ 
+ AC_SUBST(netlibs)
+ AC_SUBST(soundlibs)
+--- data/Makefile.am
++++ data/Makefile.am
+@@ -1,4 +1,4 @@
+-usdatadir=@usdatadir@
++usdatadir=$(DESTDIR)/@usdatadir@
+ 
+ install:
+ 	$(mkinstalldirs) ${usdatadir}
+--- shared/usmisc.cpp
++++ shared/usmisc.cpp
+@@ -42,7 +42,7 @@
+ 	printf("prefix = %s\n", prefixdir.c_str());
+ 
+ 	std::vector<CString> locations;
+-	locations.push_back(prefixdir + "/etc/ultimatestunts.conf");
++	locations.push_back(prefixdir + "/ultimatestunts.conf");
+ 	locations.push_back("/etc/ultimatestunts.conf");
+ 	locations.push_back("/usr/local/etc/ultimatestunts.conf");
+ 	locations.push_back("./ultimatestunts.conf");
