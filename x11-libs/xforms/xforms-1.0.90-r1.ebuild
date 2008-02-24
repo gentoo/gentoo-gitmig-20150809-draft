@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.90-r1.ebuild,v 1.12 2007/07/22 03:09:49 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.90-r1.ebuild,v 1.13 2008/02/24 17:38:57 ranger Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/xforms/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ~ppc64 sh sparc x86"
+KEYWORDS="amd64 arm ppc ppc64 sh sparc x86"
 IUSE="opengl"
 
 DEPEND="
