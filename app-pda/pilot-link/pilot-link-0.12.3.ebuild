@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3.ebuild,v 1.7 2008/01/31 01:59:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3.ebuild,v 1.8 2008/02/24 22:03:16 eva Exp $
 
-inherit perl-module java-pkg-opt-2 eutils autotools
+inherit perl-module java-pkg-opt-2 eutils autotools distutils
 
 DESCRIPTION="suite of tools for moving data between a Palm device and a desktop"
 HOMEPAGE="http://www.pilot-link.org/"
@@ -49,6 +49,10 @@ src_unpack() {
 	# their installation here.
 	use java && epatch "${FILESDIR}/${P}-java-install.patch"
 
+	# We install the Python bindings using the eclass functions so we disable
+	# their makefile.am rules here
+	use python && epatch  "${FILESDIR}/${P}-distutils.patch"
+
 	# Upstream patch to fix 64-bit issues.
 	epatch "${FILESDIR}/${P}-int_types.patch"
 
@@ -81,6 +85,11 @@ src_compile() {
 		perl-module_src_prep
 		perl-module_src_compile
 	fi
+
+	if use python; then
+		cd "${S}/bindings/Python"
+		distutils_src_compile
+	fi
 }
 
 src_install() {
@@ -98,4 +107,20 @@ src_install() {
 		cd "${S}/bindings/Perl"
 		perl-module_src_install
 	fi
+
+	if use python; then
+		cd "${S}/bindings/Python"
+		distutils_src_install
+	fi
+}
+
+pkg_postinst() {
+	if use python; then
+		python_version
+		python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
+	fi
+}
+
+pkg_postrm() {
+	use python && distutils_pkg_postrm
 }

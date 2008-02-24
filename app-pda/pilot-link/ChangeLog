@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.38 2008/01/31 01:59:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.39 2008/02/24 22:03:16 eva Exp $
+
+  17 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/pilot-link-0.12.3-distutils.patch, pilot-link-0.12.3.ebuild:
+  fix python/distutils eclass use, bug #207667
 
   31 Jan 2008; Brent Baude <ranger@gentoo.org> pilot-link-0.12.3.ebuild:
   Marking pilot-link-0.12.3 ppc for bug 207634
