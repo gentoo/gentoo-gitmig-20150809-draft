@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/himerge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/ChangeLog,v 1.12 2008/02/10 05:03:49 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/ChangeLog,v 1.13 2008/02/24 04:32:13 araujo Exp $
+
+*himerge-0.17.3 (24 Feb 2008)
+
+  24 Feb 2008; Luis F. Araujo <araujo@gentoo.org> +himerge-0.17.3.ebuild:
+  Added new version 0.17.3
 
 *himerge-0.17 (10 Feb 2008)
 
