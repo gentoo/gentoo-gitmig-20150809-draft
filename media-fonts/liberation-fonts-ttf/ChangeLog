@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/liberation-fonts-ttf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/ChangeLog,v 1.24 2008/01/29 03:34:23 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/ChangeLog,v 1.25 2008/02/24 12:28:55 armin76 Exp $
+
+  24 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  liberation-fonts-ttf-3-r1.ebuild:
+  alpha/sparc stable
 
   29 Jan 2008; Ryan Hill <dirtyepic@gentoo.org>
   liberation-fonts-ttf-3-r1.ebuild:
