@@ -1,6 +1,11 @@
 # ChangeLog for games-board/eboard
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.18 2007/05/29 14:26:49 nyhm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.19 2008/02/24 05:40:43 mr_bones_ Exp $
+
+*eboard-1.1.1 (24 Feb 2008)
+
+  24 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org> +eboard-1.1.1.ebuild:
+  version bump
 
 *eboard-1.0.4 (29 May 2007)
 
