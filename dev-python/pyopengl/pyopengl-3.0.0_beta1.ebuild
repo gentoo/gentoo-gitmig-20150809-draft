@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-3.0.0_beta1.ebuild,v 1.1 2008/02/24 08:22:08 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-3.0.0_beta1.ebuild,v 1.2 2008/02/24 17:20:17 dev-zero Exp $
 
 EAPI="1"
 NEED_PYTHON="2.4"
@@ -23,14 +23,15 @@ RDEPEND="virtual/glut
 	virtual/opengl
 	|| ( dev-lang/python:2.5
 		( dev-lang/python:2.4 dev-python/ctypes ) )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-python/setuptools"
 
 PYTHON_MODNAME="OpenGL"
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	if use tk && !built_with_use dev-lang/python tk; then
+	if use tk && ! built_with_use dev-lang/python tk; then
 		# Note: This isn't really fatal since the files get installed anyway
 		#       The only thing where it matters is the generated API-documentation.
 		#       Mainly to avoid bugs from people who don't read warnings and then ask
