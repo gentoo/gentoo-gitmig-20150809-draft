@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti-spine
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.4 2008/02/22 01:21:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.5 2008/02/24 11:37:12 maekke Exp $
+
+  24 Feb 2008; Markus Meier <maekke@gentoo.org> cacti-spine-0.8.7a.ebuild:
+  x86 stable, bug #210840
 
   22 Feb 2008; Brent Baude <ranger@gentoo.org> cacti-spine-0.8.7a.ebuild:
   Marking cacti-spine-0.8.7a ppc64 for bug 210840
