@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.0.ebuild,v 1.4 2008/02/09 13:00:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.0.ebuild,v 1.5 2008/02/24 09:46:44 maekke Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/dosemu/${P_FD}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE="X svga gpm debug"
 
 RDEPEND="X? ( x11-libs/libXxf86vm
@@ -32,9 +32,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${P}.tgz
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/dosemu-1.3.4-shm.diff
+	epatch "${FILESDIR}"/dosemu-1.3.4-shm.diff
 
 	eautoreconf || die "autoconf failed"
 }
@@ -52,7 +52,7 @@ src_compile() {
 		`use_enable svga svgalib` \
 		`use_enable debug` \
 		`use_with gpm` \
-		--with-fdtarball=${DISTDIR}/${P_FD}.tgz \
+		--with-fdtarball="${DISTDIR}"/${P_FD}.tgz \
 		--sysconfdir=/etc/dosemu/ \
 		--with-docdir=/usr/share/doc/${PF} || die
 
@@ -60,7 +60,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	# Don't remove COPYING, see bug #137286
 	dodoc BUGS ChangeLog COPYING NEWS README THANKS || die
 }
