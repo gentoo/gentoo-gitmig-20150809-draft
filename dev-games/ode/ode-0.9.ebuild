@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.9.ebuild,v 1.1 2007/10/19 17:07:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.9.ebuild,v 1.2 2008/02/24 09:45:27 vapier Exp $
 
 inherit eutils autotools
 
@@ -30,6 +30,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-flags.patch
+	epatch "${FILESDIR}"/${P}-x-flags.patch
 	eautoreconf
 
 	sed -i \

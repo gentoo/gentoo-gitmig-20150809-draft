@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ode
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.45 2007/10/19 17:07:18 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.46 2008/02/24 09:45:27 vapier Exp $
+
+  24 Feb 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/ode-0.9-x-flags.patch, ode-0.9.ebuild:
+  Dont add empty -I/-L flags for X #152408.
 
 *ode-0.9 (19 Oct 2007)
 
