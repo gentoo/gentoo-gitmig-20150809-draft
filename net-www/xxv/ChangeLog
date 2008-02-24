@@ -1,6 +1,11 @@
 # ChangeLog for net-www/xxv
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/ChangeLog,v 1.5 2007/12/05 20:44:05 hd_brummy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/ChangeLog,v 1.6 2008/02/24 18:57:53 hd_brummy Exp $
+
+*xxv-1.2 (24 Feb 2008)
+
+  24 Feb 2008; Joerg Bornkessel <hd_brummy@gentoo.org> +xxv-1.2.ebuild:
+  version bump
 
 *xxv-1.0.1-r1 (05 Dec 2007)
 
