@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-fbdev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.42 2008/01/31 03:57:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.43 2008/02/24 02:30:13 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-fbdev-0.3.0.ebuild:
@@ -71,7 +74,7 @@
   xf86-video-fbdev-0.3.0.ebuild:
   Mark 0.3.0 stable on ia64
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-fbdev-0.3.0.ebuild:
   ppc/sparc/mips/alpha/arm/sh stable
 
@@ -87,7 +90,7 @@
   xf86-video-fbdev-0.1.0.5.ebuild:
   Stable on ppc64
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-fbdev-0.1.0.5.ebuild:
   x86 stable.
 
@@ -97,7 +100,7 @@
 
 *xf86-video-fbdev-0.3.0 (20 May 2006)
 
-  20 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  20 May 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-fbdev-0.2.0.ebuild, +xf86-video-fbdev-0.3.0.ebuild:
   Bump. Fix ShadowFB support to work with recent changes in the server, and
   fix a ShadowFB crasher.
@@ -148,7 +151,7 @@
   files/digest-xf86-video-fbdev-0.1.0.3, Manifest:
   Update digest to match patch introduced by x-modular.eclass changes.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-fbdev-0.1.0.ebuild, -xf86-video-fbdev-0.1.0.1.ebuild,
   -xf86-video-fbdev-0.1.0.2.ebuild:
   Pull old versions.
@@ -171,7 +174,7 @@
   +xf86-video-fbdev-0.1.0.1.ebuild:
   Bump for 7.0 RC1.
 
-  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  09 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
   Add metadata.
 
   20 Aug 2005; Luca Barbato <lu_zero@gentoo.org>
@@ -184,7 +187,7 @@
 
 *xf86-video-fbdev-0.1.0 (08 Aug 2005)
 
-  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xf86-video-fbdev-0.1.0.ebuild:
   Initial commit for modular X.
 

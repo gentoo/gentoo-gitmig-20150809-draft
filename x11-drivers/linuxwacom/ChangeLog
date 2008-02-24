@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/linuxwacom
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.20 2008/02/21 12:57:38 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.21 2008/02/24 02:52:17 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
   21 Feb 2008; Robert Buchholz <rbu@gentoo.org> linuxwacom-0.7.8_p3.ebuild,
   linuxwacom-0.7.8_p3-r1.ebuild, linuxwacom-0.7.9_p7.ebuild:
@@ -77,34 +80,34 @@
   28 Aug 2006; Hanno Boeck <hanno@gentoo.org> linuxwacom-0.7.4_p3.ebuild:
   Remove gtk1 and fix multilib.
 
-  02 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  02 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   linuxwacom-0.6.7.ebuild, linuxwacom-0.6.8.ebuild, linuxwacom-0.6.9.ebuild,
   linuxwacom-0.7.2.ebuild:
   (#138641) Quote the token for has_version because it contains > (Rodrigo
   Severo).
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   linuxwacom-0.6.7.ebuild, linuxwacom-0.6.8.ebuild, linuxwacom-0.6.9.ebuild,
   linuxwacom-0.7.2.ebuild:
   Apparently the boolean logic was broken for detecting 2.6 headers on 2.4
   kernels. Reported by wa1ter@myrealbox.com.
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   linuxwacom-0.7.2.ebuild:
   ppc/ppc64 stable.
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   linuxwacom-0.6.7.ebuild, linuxwacom-0.6.8.ebuild, linuxwacom-0.6.9.ebuild,
   linuxwacom-0.7.2.ebuild:
   Only do 2.4 kernel workaround if people are actually not using a 2.6 kernel.
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   linuxwacom-0.6.7.ebuild, linuxwacom-0.6.8.ebuild, linuxwacom-0.6.9.ebuild,
   linuxwacom-0.7.2.ebuild:
   Work around 2.4 kernels by changing from a dep to checking for 2.4
   linux-headers and USE=usb.
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   linuxwacom-0.7.2.ebuild:
   x86 stable (Second attempt).
 
@@ -158,7 +161,7 @@
   +linuxwacom-0.6.8.ebuild:
   Version bump to 0.6.8. Marked 0.6.7 x86 stable. Closes bug #94912.
 
-  25 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  25 Apr 2005; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update herd to x11-drivers.
 
   19 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
@@ -205,12 +208,12 @@
   24 Oct 2004; Bryan Stine <battousai@gentoo.org> +linuxwacom-0.6.4.ebuild:
   Version bump to 0.6.4. Closes bug #67035.
 
-  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  03 Oct 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:
   Update logic to consider that the sdk USE flag may be set without xfree or
   xorg-x11 installed.
 
-  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  03 Oct 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:
   Update dep from temporary hack to virtual/x11.
 
@@ -222,7 +225,7 @@
   linuxwacom-0.6.3.ebuild:
   QA - fix use invocation
 
-  11 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  11 Jun 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:
   xfree -r6 became -r7.
 
@@ -253,11 +256,11 @@
   10 May 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.2.ebuild:
   Version bump, fixes bug 49862.
 
-  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  07 Apr 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   linuxwacom-0.6.0.ebuild:
   Missing space in DEPEND.
 
-  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  07 Apr 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   linuxwacom-0.6.0.ebuild:
   Add xorg-x11 to possible.
 

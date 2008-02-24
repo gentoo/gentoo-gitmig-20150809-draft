@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.59 2008/02/19 08:22:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.60 2008/02/24 02:27:48 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
 *xf86-video-ati-6.8.0 (19 Feb 2008)
 
@@ -163,7 +166,7 @@
   xf86-video-ati-6.6.1.ebuild:
   Mark 6.6.1 stable on ia64
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-ati-6.6.1.ebuild:
   stable on ppc sparc alpha arm sh
 
@@ -179,13 +182,13 @@
   xf86-video-ati-6.5.8.0.ebuild:
   Stable on ppc64
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-ati-6.5.8.0.ebuild:
   x86 stable.
 
 *xf86-video-ati-6.6.1 (16 Jun 2006)
 
-  16 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  16 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +xf86-video-ati-6.6.1.ebuild:
   Bump. Fixes PCIE suspend/resume, lots of EXA fixes, interrupt handling, and
   more.
@@ -244,7 +247,7 @@
   files/digest-xf86-video-ati-6.5.7.1, Manifest:
   Update digest to match patch introduced by x-modular.eclass changes.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-ati-6.5.6.1.ebuild, -xf86-video-ati-6.5.7.ebuild:
   Pull old versions.
 
@@ -264,7 +267,7 @@
   +xf86-video-ati-6.5.7.ebuild:
   Bump for 7.0RC2.
 
-  31 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  31 Oct 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-ati-6.5.6_p20050903.ebuild:
   Pull old versions.
 
@@ -277,7 +280,7 @@
   14 Oct 2005; <dang@gentoo.org> xf86-video-ati-6.5.6_p20050903.ebuild:
   Marked ~amd64
 
-  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  09 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
   Add metadata.
 
   08 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org> ChangeLog:
@@ -304,7 +307,7 @@
 
 *xf86-video-ati-6.5.6-r1 (16 Aug 2005)
 
-  16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  16 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/detect-dga-cpio-etc-per-platform.patch,
   +xf86-video-ati-6.5.6-r1.ebuild:
   Add detect-dga-cpio-etc-per-platform.patch, which should make things work
@@ -316,7 +319,7 @@
 
 *xf86-video-ati-6.5.6 (08 Aug 2005)
 
-  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xf86-video-ati-6.5.6.ebuild:
   Initial commit for modular X.
 

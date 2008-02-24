@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.78 2008/02/20 09:52:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.79 2008/02/24 02:51:47 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
   20 Feb 2008; Rémi Cardona <remi@gentoo.org>
   -files/1.7.0-fix_vt_switch.patch, -files/fix_965_xv.patch,
@@ -275,7 +278,7 @@
   xf86-video-i810-1.6.0.ebuild:
   Mark 1.6.0 stable on ia64
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-i810-1.6.0.ebuild:
   stable on sh
 
@@ -283,11 +286,11 @@
   xf86-video-i810-1.4.1.3.ebuild:
   Stable on amd64.
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-i810-1.4.1.3.ebuild:
   x86 stable.
 
-  17 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  17 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-i810-1.6.0.ebuild:
   ~x86-fbsd keyworded the lower version but not this.
 
@@ -305,7 +308,7 @@
   +xf86-video-i810-1.6.0.ebuild:
   Bump for 7.1 RC1.
 
-  07 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  07 Apr 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-i810-1.5.1.0.ebuild:
   (#129072) Change xorg-server dep to minimum 1.0.2 for randrstr.h. Fix by
   Alberto Bertogli.
@@ -340,7 +343,7 @@
   files/digest-xf86-video-i810-1.4.1.1, Manifest:
   Update digest to match patch introduced by x-modular.eclass changes.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-i810-1.4.0-r3.ebuild, -xf86-video-i810-1.4.0.1.ebuild,
   -xf86-video-i810-1.4.1.ebuild:
   Pull old versions.
@@ -363,7 +366,7 @@
   +xf86-video-i810-1.4.0.1.ebuild:
   Bump for 7.0 RC1.
 
-  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  09 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
   Add metadata.
 
   06 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
@@ -383,23 +386,23 @@
   snapshot includes both prior patches.  Also added the x11-libs/XvMC dep as
   XvMC support has been added as required for the time being.
 
-  23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-i810-1.4.0.ebuild, -xf86-video-i810-1.4.0-r1.ebuild:
   Pull old versions.
 
 *xf86-video-i810-1.4.0-r2 (23 Aug 2005)
 
-  23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  23 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/1.4.0-i810-unresolved-symbols.patch,
   +xf86-video-i810-1.4.0-r2.ebuild:
   (fd.o #4066) Add 1.4.0-i810-unresolved-symbols.patch to make i810 driver work.
 
-  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; -files/dri.patch:
+  12 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>; -files/dri.patch:
   Pull unused patch.
 
 *xf86-video-i810-1.4.0-r1 (12 Aug 2005)
 
-  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  12 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xf86-video-i810-1.4.0-add-i830-shadow.patch,
   +xf86-video-i810-1.4.0-r1.ebuild:
   Bump to link in i830_shadow.c. This should allow X to start properly.
@@ -407,6 +410,6 @@
 
 *xf86-video-i810-1.4.0 (08 Aug 2005)
 
-  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +files/dri.patch,
+  08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>; +files/dri.patch,
   +xf86-video-i810-1.4.0.ebuild:
   Initial commit for modular X.

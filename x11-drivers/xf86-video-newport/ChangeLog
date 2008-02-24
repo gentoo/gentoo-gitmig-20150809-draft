@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-newport
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-newport/ChangeLog,v 1.20 2008/01/31 03:59:14 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-newport/ChangeLog,v 1.21 2008/02/24 02:34:14 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-newport-0.2.0.ebuild:
@@ -24,7 +27,7 @@
   xf86-video-newport-0.1.4.1.ebuild, xf86-video-newport-0.2.0.ebuild:
   Update description to be less generic.
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-newport-0.2.0.ebuild:
   stable on mips
 
@@ -34,7 +37,7 @@
   +xf86-video-newport-0.2.0.ebuild:
   Bump for 7.1 RC1.
 
-  21 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  21 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-newport-0.1.4.1.ebuild:
   (##127028) Driver is mips-only, remove bogus keywords, update DESCRIPTION.
 
@@ -67,7 +70,7 @@
   This package was created from an old util-macros, so enable autoreconf so that
   the man page patch applied to util-macros takes effect.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-newport-0.1.3.ebuild, -xf86-video-newport-0.1.3.1.ebuild:
   Pull old versions.
 
@@ -86,12 +89,12 @@
   +xf86-video-newport-0.1.3.1.ebuild:
   Bump for 7.0 RC1.
 
-  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  09 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
   Add metadata.
 
 *xf86-video-newport-0.1.3 (08 Aug 2005)
 
-  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xf86-video-newport-0.1.3.ebuild:
   Initial commit for modular X.
 

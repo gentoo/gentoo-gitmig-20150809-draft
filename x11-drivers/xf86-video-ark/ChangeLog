@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-ark
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ark/ChangeLog,v 1.22 2007/01/24 06:56:20 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ark/ChangeLog,v 1.23 2008/02/24 02:27:17 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
   24 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-ark-0.5.0.5.ebuild:
@@ -17,7 +20,7 @@
   xf86-video-ark-0.6.0.ebuild:
   Mark 0.6.0 stable on ia64
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-ark-0.6.0.ebuild:
   stable on sh
 
@@ -25,11 +28,11 @@
   xf86-video-ark-0.5.0.5.ebuild:
   Stable on amd64.
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-ark-0.5.0.5.ebuild:
   x86 stable.
 
-  17 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  17 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-ark-0.6.0.ebuild:
   ~x86-fbsd keyworded the lower version but not this.
 
@@ -72,7 +75,7 @@
   files/digest-xf86-video-ark-0.5.0.3, Manifest:
   Update digest to match patch introduced by x-modular.eclass changes.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-ark-0.5.0.ebuild, -xf86-video-ark-0.5.0.1.ebuild,
   -xf86-video-ark-0.5.0.2.ebuild:
   Pull old versions.
@@ -95,12 +98,12 @@
   +xf86-video-ark-0.5.0.1.ebuild:
   Bump for 7.0 RC1.
 
-  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  09 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
   Add metadata.
 
 *xf86-video-ark-0.5.0 (08 Aug 2005)
 
-  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xf86-video-ark-0.5.0.ebuild:
   Initial commit for modular X.
 

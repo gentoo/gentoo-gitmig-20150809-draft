@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-nsc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nsc/ChangeLog,v 1.25 2007/09/08 08:16:41 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nsc/ChangeLog,v 1.26 2008/02/24 02:34:38 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
 *xf86-video-nsc-2.8.3 (08 Sep 2007)
 
@@ -36,7 +39,7 @@
   05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; +files/nsc.xinf:
   Add hwdata files for system-config-display.
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-nsc-2.8.1.ebuild:
   stable on sh
 
@@ -44,7 +47,7 @@
   xf86-video-nsc-2.7.6.5.ebuild:
   Stable on amd64.
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-nsc-2.7.6.5.ebuild:
   x86 stable.
 
@@ -86,7 +89,7 @@
   files/digest-xf86-video-nsc-2.7.6.3, Manifest:
   Update digest to match patch introduced by x-modular.eclass changes.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-nsc-2.7.6.ebuild, -xf86-video-nsc-2.7.6.1.ebuild,
   -xf86-video-nsc-2.7.6.2.ebuild:
   Pull old versions.
@@ -109,12 +112,12 @@
   +xf86-video-nsc-2.7.6.1.ebuild:
   Bump for 7.0 RC1.
 
-  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  09 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
   Add metadata.
 
 *xf86-video-nsc-2.7.6 (08 Aug 2005)
 
-  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xf86-video-nsc-2.7.6.ebuild:
   Initial commit for modular X.
 

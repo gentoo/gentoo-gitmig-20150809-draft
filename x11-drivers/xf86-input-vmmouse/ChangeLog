@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-vmmouse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-vmmouse/ChangeLog,v 1.21 2008/01/31 03:52:42 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-vmmouse/ChangeLog,v 1.22 2008/02/24 02:45:33 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-input-vmmouse-12.4.0.ebuild, -xf86-input-vmmouse-12.4.2.ebuild:
@@ -56,7 +59,7 @@
   xf86-input-vmmouse-12.3.1.0.ebuild:
   Stable on amd64.
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-input-vmmouse-12.3.2.0.ebuild:
   x86 stable.
 
@@ -76,7 +79,7 @@
   xf86-input-vmmouse-12.3.1.0.ebuild:
   Add ~x86-fbsd keyword.
 
-  15 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  15 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-input-vmmouse-12.3.1.0.ebuild:
   No longer need SRC_URI, eclass handles it.
 

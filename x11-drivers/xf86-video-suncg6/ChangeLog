@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-suncg6
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-suncg6/ChangeLog,v 1.16 2007/01/24 07:08:55 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-suncg6/ChangeLog,v 1.17 2008/02/24 02:39:08 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
   24 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-suncg6-1.0.0.5.ebuild:
@@ -10,7 +13,7 @@
   xf86-video-suncg6-1.0.0.5.ebuild, xf86-video-suncg6-1.1.0.ebuild:
   Update description to be less generic.
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-suncg6-1.1.0.ebuild:
   stable on sparc
 
@@ -20,7 +23,7 @@
   +xf86-video-suncg6-1.1.0.ebuild:
   Bump for 7.1 RC1.
 
-  21 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  21 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-suncg6-1.0.0.5.ebuild:
   Driver is sparc-only, remove bogus keywords, update DESCRIPTION.
 
@@ -44,7 +47,7 @@
   files/digest-xf86-video-suncg6-1.0.0.3, Manifest:
   Update digest to match patch introduced by x-modular.eclass changes.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-suncg6-1.0.0.ebuild, -xf86-video-suncg6-1.0.0.1.ebuild,
   -xf86-video-suncg6-1.0.0.2.ebuild:
   Pull old versions.
@@ -67,7 +70,7 @@
   +xf86-video-suncg6-1.0.0.1.ebuild:
   Bump for 7.0 RC1.
 
-  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  09 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
   Add metadata.
 
   08 Aug 2005; Ferris McCormick <fmccor@gentoo.org>
@@ -76,7 +79,7 @@
 
 *xf86-video-suncg6-1.0.0 (08 Aug 2005)
 
-  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xf86-video-suncg6-1.0.0.ebuild:
   Initial commit for modular X.
 

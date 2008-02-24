@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.31 2008/01/11 22:12:11 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.32 2008/02/24 02:45:10 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
   11 Jan 2008; René Nussbaumer <killerfox@gentoo.org>
   synaptics-0.14.6-r1.ebuild:
@@ -93,7 +96,7 @@
   Version bump -- now with two finger scrolling goodness. Thanks to fuoco for
   his patience and his resilience, and his help. Closes bug #135512
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   synaptics-0.14.4-r2.ebuild:
   ppc stable.
 
@@ -104,7 +107,7 @@
   30 Jun 2006; Markus Rothe <corsair@gentoo.org> synaptics-0.14.4-r2.ebuild:
   Stable on ppc64
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   synaptics-0.14.4-r2.ebuild:
   x86 stable.
 
@@ -218,7 +221,7 @@
   19 May 2005; Bryan Stine <battousai@gentoo.org> +synaptics-0.14.2.ebuild:
   Bump to 0.14.2. Thanks to Benjamin Smee for reporting. Closes bug #93092.
 
-  25 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  25 Apr 2005; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update herd to x11-drivers.
 
 *synaptics-0.14.1 (14 Mar 2005)
@@ -249,21 +252,21 @@
   Makefile substitution. The new logic fixes bug #67687. The version bump
   should fix bug #56850 (broken ALPS patch). Thanks to Ben Taitelbaum
   <btaitelb@cs.oberlin.edu> for feedback on the ALPS patch. Thanks to Donnie
-  Berkholz <spyderous@gentoo.org> for the new gcc-config stuff.
+  Berkholz <dberkholz@gentoo.org> for the new gcc-config stuff.
 
-  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  03 Oct 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   synaptics-0.13.4.ebuild, synaptics-0.13.5.ebuild:
   Update dep from temporary hack to virtual/x11.
 
-  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  03 Oct 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/synaptics-0.13.3-amd64.patch:
   Remove stale file.
 
-  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  03 Oct 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   -synaptics-0.13.2.ebuild, -synaptics-0.13.3.ebuild:
   Drop old versions.
 
-  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  03 Oct 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   synaptics-0.13.5.ebuild:
   x86.
 
@@ -308,7 +311,7 @@
   synaptics-0.12.5.ebuild, synaptics-0.13.2.ebuild:
   Reverting DEPEND change back to xfree -r6 as xfree -r7 is still masked.
 
-  11 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  11 Jun 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   synaptics-0.12.4.ebuild, synaptics-0.12.5.ebuild, synaptics-0.13.2.ebuild:
   xfree -r6 became -r7.
 
@@ -326,11 +329,11 @@
   Version bump. Upstream made quite a few cleanups, some bug fixes and a few new
   features.
 
-  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  07 Apr 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   synaptics-0.12.5.ebuild:
   Missing space in DEPEND.
 
-  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  07 Apr 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   synaptics-0.12.5.ebuild:
   Add xorg-x11 to possible.
 
@@ -349,42 +352,42 @@
   DESTDIR compliance and ability to detect and build against XFree86 SDK
   headers.
 
-  15 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  15 Feb 2004; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Removing myself as primary maintainer, this is now a herd thing.
 
-  15 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; files/rc.init:
+  15 Dec 2003; Donnie Berkholz <dberkholz@gentoo.org>; files/rc.init:
   Fix typo.
 
-  15 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; files/rc.conf,
+  15 Dec 2003; Donnie Berkholz <dberkholz@gentoo.org>; files/rc.conf,
   files/rc.init:
   Somehow I forgot to add the init.d and conf.d scripts for syndaemon, and
   nobody even noticed.
 
-  23 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; synaptics-0.12.0.ebuild:
+  23 Nov 2003; Donnie Berkholz <dberkholz@gentoo.org>; synaptics-0.12.0.ebuild:
   Re-marking as testing, it's not allowed to depend on something unstable.
 
-  23 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; synaptics-0.12.0.ebuild:
+  23 Nov 2003; Donnie Berkholz <dberkholz@gentoo.org>; synaptics-0.12.0.ebuild:
   Stable on x86.
 
 *synaptics-0.12.1 (23 Nov 2003)
 
-  23 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; synaptics-0.12.1.ebuild:
+  23 Nov 2003; Donnie Berkholz <dberkholz@gentoo.org>; synaptics-0.12.1.ebuild:
   Bump. New daemon, seems a little broken though.
 
-  09 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; synaptics-0.11.8.ebuild,
+  09 Nov 2003; Donnie Berkholz <dberkholz@gentoo.org>; synaptics-0.11.8.ebuild,
   synaptics-0.12.0.ebuild:
   Pulling 0.11.8. Force >=xfree-4.3.0-r4, so it doesn't overwrite files xfree
   provides.
 
 *synaptics-0.12.0 (27 Oct 2003)
 
-  27 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  27 Oct 2003; Donnie Berkholz <dberkholz@gentoo.org>;
   synaptics-0.12.0.ebuild:
   Version bump.
 
 *synaptics-0.11.8 (13 Oct 2003)
 
-  13 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml,
+  13 Oct 2003; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml,
   synaptics-0.11.8.ebuild, files/synaptics-0.11.8-makefile-fixup.patch:
   Initial commit of standalone Synaptics touchpad driver, to be used in future
   XFree revisions.

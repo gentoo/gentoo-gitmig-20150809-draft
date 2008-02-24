@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-via
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/ChangeLog,v 1.34 2007/05/05 18:33:51 dang Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/ChangeLog,v 1.35 2008/02/24 02:43:14 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
   05 May 2007; Daniel Gryniewicz <dang@gentoo.org>
   xf86-video-via-0.2.2.ebuild:
@@ -43,7 +46,7 @@
   xf86-video-via-0.2.1-r1.ebuild:
   Mark 0.2.1-r1 stable on ia64
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-via-0.2.1-r1.ebuild:
   stable on sh
 
@@ -51,7 +54,7 @@
   xf86-video-via-0.1.33.2.ebuild:
   Stable on amd64.
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-via-0.1.33.2.ebuild:
   x86 stable.
 
@@ -100,11 +103,11 @@
   files/digest-xf86-video-via-0.1.33, Manifest:
   Update digest to match patch introduced by x-modular.eclass changes.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/VIAVidAdjustFrame_fix.patch, -files/xf86xvpriv.patch:
   Unused file.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-via-0.1.31.ebuild, -xf86-video-via-0.1.31.1.ebuild,
   -xf86-video-via-0.1.31.1-r1.ebuild, -xf86-video-via-0.1.32.ebuild,
   -xf86-video-via-0.1.32_p20051115.ebuild:
@@ -128,7 +131,7 @@
   +xf86-video-via-0.1.32.ebuild:
   Bump for 7.0RC2.
 
-  05 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  05 Nov 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-via-0.1.31.1-r1.ebuild:
   Add >=x11-libs/libdrm-1.0.5 to DEPEND. Reported 20051104 by Michał Pytasz
   on the dri-devel list.
@@ -150,12 +153,12 @@
   +xf86-video-via-0.1.31.1.ebuild:
   Bump for 7.0 RC1.
 
-  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  09 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
   Add metadata.
 
 *xf86-video-via-0.1.31 (08 Aug 2005)
 
-  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/xf86xvpriv.patch, +xf86-video-via-0.1.31.ebuild:
   Initial commit for modular X.
 

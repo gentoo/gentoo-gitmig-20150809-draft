@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-palmax
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-palmax/ChangeLog,v 1.30 2007/01/24 06:51:47 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-palmax/ChangeLog,v 1.31 2008/02/24 02:22:30 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
   24 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-input-palmax-1.0.0.5.ebuild:
@@ -26,7 +29,7 @@
   xf86-input-palmax-1.1.0.ebuild:
   Mark 1.1.0 stable on ia64
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-input-palmax-1.1.0.ebuild:
   ppc/sparc/alpha/arm/sh stable
 
@@ -42,7 +45,7 @@
   xf86-input-palmax-1.0.0.5.ebuild:
   Stable on ppc64
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-input-palmax-1.0.0.5.ebuild:
   x86 stable.
 
@@ -76,7 +79,7 @@
   xf86-input-palmax-1.0.0.5.ebuild:
   Added ~ppc64
 
-  05 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  05 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-input-palmax-1.0.0.5.ebuild:
   Keyword needed drivers ~ppc.
 
@@ -104,7 +107,7 @@
   files/digest-xf86-input-palmax-1.0.0.3, Manifest:
   Update digest to match patch introduced by x-modular.eclass changes.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-input-palmax-1.0.0.ebuild, -xf86-input-palmax-1.0.0.1.ebuild,
   -xf86-input-palmax-1.0.0.2.ebuild:
   Pull old versions.
@@ -127,12 +130,12 @@
   +xf86-input-palmax-1.0.0.1.ebuild:
   Bump for 7.0 RC1.
 
-  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  09 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
   Add metadata.
 
 *xf86-input-palmax-1.0.0 (08 Aug 2005)
 
-  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xf86-input-palmax-1.0.0.ebuild:
   Initial commit for modular X.
 

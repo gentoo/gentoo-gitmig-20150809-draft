@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-s3
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-s3/ChangeLog,v 1.30 2008/01/31 04:03:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-s3/ChangeLog,v 1.31 2008/02/24 02:35:32 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-s3-0.4.1.ebuild:
@@ -43,7 +46,7 @@
   xf86-video-s3-0.4.1.ebuild:
   Mark 0.4.1 stable on ia64
 
-  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-s3-0.4.1.ebuild:
   stable on ppc alpha arm sh
 
@@ -51,7 +54,7 @@
   xf86-video-s3-0.3.5.5.ebuild:
   Stable on amd64.
 
-  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  30 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-s3-0.3.5.5.ebuild:
   x86 stable.
 
@@ -73,7 +76,7 @@
   xf86-video-s3-0.3.5.5.ebuild:
   Marked ~alpha (bug #122726)
 
-  05 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  05 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-s3-0.3.5.5.ebuild:
   Keyword needed drivers ~ppc.
 
@@ -101,7 +104,7 @@
   files/digest-xf86-video-s3-0.3.5.3, Manifest:
   Update digest to match patch introduced by x-modular.eclass changes.
 
-  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Dec 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-s3-0.3.5.ebuild, -xf86-video-s3-0.3.5.1.ebuild,
   -xf86-video-s3-0.3.5.2.ebuild:
   Pull old versions.
@@ -124,12 +127,12 @@
   +xf86-video-s3-0.3.5.1.ebuild:
   Bump for 7.0 RC1.
 
-  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  09 Sep 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
   Add metadata.
 
 *xf86-video-s3-0.3.5 (08 Aug 2005)
 
-  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xf86-video-s3-0.3.5.ebuild:
   Initial commit for modular X.
 

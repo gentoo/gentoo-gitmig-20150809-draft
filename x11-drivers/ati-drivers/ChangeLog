@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.109 2008/02/19 17:27:05 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.110 2008/02/24 02:51:12 dberkholz Exp $
+
+  24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update my email.
 
 *ati-drivers-8.455.2-r1 (19 Feb 2008)
 
@@ -766,7 +769,7 @@
   Make sure we have a valid opengl implementation when uninstalling. Closes
   bug #55142.
 
-  25 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  25 Apr 2005; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update herd to x11-drivers.
 
   18 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
@@ -957,7 +960,7 @@
   09 Aug 2004; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-3.11.1.ebuild:
   New version
 
-  26 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  26 Jul 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   ati-drivers-2.9.13-r1.ebuild, ati-drivers-3.2.0.ebuild,
   ati-drivers-3.2.4.ebuild, ati-drivers-3.2.5-r1.ebuild,
   ati-drivers-3.2.5.ebuild, ati-drivers-3.2.8-r1.ebuild,
@@ -1008,25 +1011,25 @@
   +files/fglrx-2.6-get-page.patch, ati-drivers-3.7.6-r1.ebuild:
   Fix for 2.6.7 kernel
 
-  02 May 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  02 May 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   ati-drivers-3.7.6-r1.ebuild:
   Remove needless call to portageq.
 
-  25 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  25 Apr 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   ati-drivers-3.7.6-r1.ebuild:
   Provide virtual/opengl (#30107).
 
-  09 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  09 Apr 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   ati-drivers-3.7.6-r1.ebuild:
   Fix X11_IMPLEM. Fix from merkaba@quantumfish.com (#47282).
 
 *ati-drivers-3.7.6-r1 (08 Apr 2004)
 
-  08 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  08 Apr 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   ati-drivers-3.7.6-r1.ebuild:
   Update for xorg-x11 compatibility.
 
-  01 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  01 Apr 2004; Donnie Berkholz <dberkholz@gentoo.org>;
   ati-drivers-2.5.1-r1.ebuild, ati-drivers-2.5.1.ebuild, files/ati-2.5.1.diff:
   These only work with xfree 4.2 or lower. Since that's not around anymore,
   these shouldn't be either. Reported by Michael Sterrett
