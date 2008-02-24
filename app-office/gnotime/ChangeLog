@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnotime
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.33 2008/01/10 21:46:40 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.34 2008/02/24 23:47:12 eva Exp $
+
+*gnotime-2.3.0 (24 Feb 2008)
+
+  24 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org> +gnotime-2.3.0.ebuild:
+  bump to 2.3.0
 
   10 Jan 2008; Ferris McCormick <fmccor@gentoo.org> gnotime-2.2.3.ebuild:
   Sparc stable --- Bug #205242 --- appears to work as advertized.
