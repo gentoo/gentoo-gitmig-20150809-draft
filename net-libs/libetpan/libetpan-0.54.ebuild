@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-0.54.ebuild,v 1.1 2008/02/23 10:24:33 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-0.54.ebuild,v 1.2 2008/02/24 18:14:39 ticho Exp $
 
 DESCRIPTION="A portable, efficient middleware for different kinds of mail access."
 HOMEPAGE="http://libetpan.sourceforge.net"
@@ -55,7 +55,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	ewarn "The soname for libetpan has changed after libetpan-0.48."
+	ewarn "The soname for libetpan has changed after libetpan-0.53."
 	ewarn "If you have upgraded from that or earlier version, it is recommended to run"
 	ewarn "revdep-rebuild to fix any linking errors caused by this change."
 	echo
