@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-server-console
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/ChangeLog,v 1.22 2008/01/31 14:57:22 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/ChangeLog,v 1.23 2008/02/24 09:36:03 opfer Exp $
+
+  24 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  vmware-server-console-1.0.4.56528.ebuild:
+  stable x86, bug 211023
 
   31 Jan 2008; Mike Auty <ikelos@gentoo.org> ChangeLog:
   Re-sign digestless manifest.
