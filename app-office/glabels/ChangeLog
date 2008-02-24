@@ -1,6 +1,17 @@
 # ChangeLog for app-office/glabels
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.27 2007/12/31 12:46:56 eva Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.28 2008/02/24 11:03:57 eva Exp $
+
+*glabels-2.2.1 (24 Feb 2008)
+
+  24 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/glabels-2.2.1-drop-gtk-doc.patch,
+  +files/glabels-2.2.1-pkg-config-macro.patch, -glabels-2.2.0.ebuild,
+  +glabels-2.2.1.ebuild:
+  bump to 2.2.1 and remove broken 2.2.0
+   * fixes rotated labels clipping
+   * add missing pkg-config macro, fix bug #204276
+   * add ewarn about file format change, fix part of bug #206055
 
 *glabels-2.2.0 (31 Dec 2007)
 
