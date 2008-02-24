@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vmaid
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vmaid/ChangeLog,v 1.6 2007/05/29 10:43:01 matsuu Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vmaid/ChangeLog,v 1.7 2008/02/24 16:07:47 matsuu Exp $
+
+*vmaid-2.1.7 (24 Feb 2008)
+
+  24 Feb 2008; MATSUU Takuto <matsuu@gentoo.org> +vmaid-2.1.7.ebuild:
+  Version bumped, bug #202062.
 
 *vmaid-2.1.2 (29 May 2007)
 
