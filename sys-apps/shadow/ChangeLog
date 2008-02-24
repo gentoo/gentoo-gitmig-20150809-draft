@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.185 2008/02/24 14:37:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.186 2008/02/24 16:06:18 ranger Exp $
+
+  24 Feb 2008; Brent Baude <ranger@gentoo.org> shadow-4.0.18.2.ebuild:
+  Marking shadow-4.0.18.2 ppc and ppc64 for bug 211252
 
 *shadow-4.1.0-r1 (24 Feb 2008)
 
