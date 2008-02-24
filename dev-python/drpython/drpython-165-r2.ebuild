@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-165-r1.ebuild,v 1.1 2007/12/04 07:51:55 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-165-r2.ebuild,v 1.1 2008/02/24 17:53:32 dev-zero Exp $
+
+EAPI="1"
 
 inherit distutils eutils multilib
 
@@ -12,29 +14,31 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="=dev-python/wxpython-2.6*"
+RDEPEND="dev-python/wxpython:2.6"
 DEPEND="app-arch/unzip"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	distutils_src_unpack
-	epatch "${FILESDIR}"/${P}-wxversion.patch
+	epatch \
+		"${FILESDIR}/${P}-wxversion.patch" \
+		"${FILESDIR}/${P}-tabswitch.patch"
 }
 
 src_install() {
 	distutils_python_version
 
-	local destdir="/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/"
+	local destdir="/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}"
 	dodir  ${destdir}/bitmaps/{16,24}
-	cp -R bitmaps "${D}"/${destdir} || die "Failed to cp bitmaps"
+	cp -R bitmaps "${D}/${destdir}/" || die "failed to cp bitmaps"
 
 	distutils_src_install
 
-	#Windows-only setup script:
-	rm "${D}"/usr/bin/postinst.py
+	# Windows-only setup script:
+	rm "${D}/usr/bin/postinst.py"
 
-	make_wrapper drpython "python ${destdir}drpython_wx26.py"
+	make_wrapper drpython "python ${destdir}/drpython_wx26.py"
 }
 
 pkg_postinst() {

@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/drpython
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.15 2007/12/04 07:51:55 hawking Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.16 2008/02/24 17:53:32 dev-zero Exp $
+
+*drpython-165-r2 (24 Feb 2008)
+
+  24 Feb 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/drpython-165-tabswitch.patch, -drpython-165-r1.ebuild,
+  +drpython-165-r2.ebuild:
+  Added patch to fix broken copy/paste when switching tabs using the keyboard
+  shortcut (bug #210298, thanks to Jon White).
 
 *drpython-165-r1 (04 Dec 2007)
 
