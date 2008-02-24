@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyopengl
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.19 2007/07/22 07:45:06 graaff Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.20 2008/02/24 08:22:08 dev-zero Exp $
+
+*pyopengl-3.0.0_beta1 (24 Feb 2008)
+
+  24 Feb 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +pyopengl-3.0.0_beta1.ebuild:
+  Version bump (fixes bugs #199961, #137872, #133602 since ctype is being used
+  instead of swig and bug #202921).
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> pyopengl-2.0.0.44.ebuild,
   pyopengl-2.0.1.09.ebuild, pyopengl-2.0.1.09-r1.ebuild:
