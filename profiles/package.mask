@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8317 2008/02/24 18:33:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8318 2008/02/24 18:50:50 ikelos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -112,10 +112,6 @@ www-apps/disc-cover
 # Broken and outdated package. See
 # https://bugs.gentoo.org/show_bug.cgi?id=209029
 www-apps/bugs-bug-genie
-
-# Mike Auty <ikelos@gentoo.org> (12 Feb 2008)
-# Masked for testing
-=x11-drivers/linuxwacom-0.7.9_p7
 
 # Michael Sterrett <mr_bones_@gentoo.org> (12 Feb 2008)
 # Security mask (bug #209903)
