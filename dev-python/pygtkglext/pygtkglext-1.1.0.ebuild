@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.1.0.ebuild,v 1.17 2007/08/25 14:08:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.1.0.ebuild,v 1.18 2008/02/24 21:12:02 eva Exp $
 
 NEED_PYTHON="2.3"
 
@@ -21,6 +21,15 @@ DEPEND=">=dev-python/pygtk-2.8
 	dev-python/pyopengl
 	virtual/opengl
 	virtual/glu"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

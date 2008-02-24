@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtkglext
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.35 2007/08/15 04:17:51 jer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.36 2008/02/24 21:12:02 eva Exp $
+
+  10 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  pygtkglext-1.1.0.ebuild:
+  fix python eclass use, bug #207667
 
   15 Aug 2007; Jeroen Roovers <jer@gentoo.org> pygtkglext-1.1.0.ebuild:
   Stable for HPPA (bug #187656).
