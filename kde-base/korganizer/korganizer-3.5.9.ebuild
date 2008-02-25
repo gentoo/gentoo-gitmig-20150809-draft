@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.9.ebuild,v 1.2 2008/02/22 13:32:44 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.9.ebuild,v 1.3 2008/02/25 09:42:02 ingmar Exp $
 
 KMNAME=kdepim
 EAPI="1"
@@ -55,9 +55,16 @@ KMEXTRA="
 	kdgantt
 	kontact/plugins/korganizer/" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of korganizer deps.
 
+PATCHES="${FILESDIR}/${P}-kdeenablefinal.patch"
+
 src_unpack() {
 	kde-meta_src_unpack
 
 	# Broken test
 	sed -e "s:check_PROGRAMS = testalarmdlg:check_PROGRAMS =:" -i korganizer/korgac/Makefile.am || die "sed failed"
+}
+
+src_compile() {
+	filter-flags -fvisibility-inlines-hidden
+	kde_src_compile
 }
