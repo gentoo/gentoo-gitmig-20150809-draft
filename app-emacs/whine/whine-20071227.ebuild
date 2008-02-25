@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/whine/whine-20071227.ebuild,v 1.1 2008/01/26 14:47:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/whine/whine-20071227.ebuild,v 1.2 2008/02/25 20:43:46 opfer Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SITEFILE=50${PN}-gentoo.el
