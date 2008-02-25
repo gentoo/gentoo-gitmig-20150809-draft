@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10-r4.ebuild,v 1.1 2008/01/22 10:11:25 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10-r4.ebuild,v 1.2 2008/02/25 17:10:35 welp Exp $
 
 inherit eutils qt3
 
@@ -243,8 +243,8 @@ src_compile() {
 
 	./configure \
 		--prefix=/usr \
-		--with-qca-inc=/usr/include/qca1 \
-		--with-qca-lib=/usr/lib/qca1 \
+		--with-qca-inc=/usr/include \
+		--with-qca-lib=/usr/lib \
 		${myconf} \
 		|| die "Configure failed"
 
