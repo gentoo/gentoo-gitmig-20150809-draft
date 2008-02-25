@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-0.55.3.ebuild,v 1.1 2008/02/17 17:11:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-0.55.3.ebuild,v 1.2 2008/02/25 16:34:48 yngwin Exp $
 
-inherit cmake-utils eutils
+inherit eutils cmake-utils
 
 MY_P=${P/gtk-engines-qtcurve/QtCurve-Gtk2}
 
@@ -21,14 +21,10 @@ DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4"
 
 S=${WORKDIR}/${MY_P}
+DOCS="ChangeLog README TODO"
 
 src_compile() {
 	local mycmakeargs="-DQTC_ADD_EVENT_FILTER=true"
 	use mozilla && mycmakeargs="-DQTC_MODIFY_MOZILLA=true"
 	cmake-utils_src_compile
-}
-
-src_install() {
-	cmake-utils_src_install
-	dodoc AUTHORS ChangeLog README TODO
 }

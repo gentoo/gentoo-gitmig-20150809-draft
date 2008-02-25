@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.55.3.ebuild,v 1.1 2008/02/17 17:11:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.55.3.ebuild,v 1.2 2008/02/25 16:28:01 yngwin Exp $
 
 # Order is important, so we get src_compile from cmake-utils.
 inherit kde-functions qt3 cmake-utils
@@ -22,11 +22,7 @@ DEPEND=">=dev-util/cmake-2.4
 need-kde 3.5
 
 S="${WORKDIR}/${MY_P}"
-
-src_install() {
-	cmake-utils_src_install
-	dodoc ChangeLog README TODO
-}
+DOCS="ChangeLog README TODO"
 
 pkg_postinst() {
 	buildsycoca

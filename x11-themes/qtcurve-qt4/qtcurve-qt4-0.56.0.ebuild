@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.56.0.ebuild,v 1.1 2008/02/25 12:07:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.56.0.ebuild,v 1.2 2008/02/25 16:30:57 yngwin Exp $
 
 inherit qt4 cmake-utils
 
@@ -16,12 +16,4 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="$(qt4_min_version 4.0)"
 
 S="${WORKDIR}/${MY_P}"
-
-src_install () {
-	# because cmake-utils_src_install fails on ~amd64
-	dodir /usr/$(get_libdir)/qt4/plugins/styles/
-	insinto /usr/$(get_libdir)/qt4/plugins/styles/
-	insopts -m755
-	doins "${WORKDIR}"/${PN}_build/style/qtcurve.so || die "make install failed"
-	dodoc ChangeLog README TODO
-}
+DOCS="ChangeLog README TODO"
