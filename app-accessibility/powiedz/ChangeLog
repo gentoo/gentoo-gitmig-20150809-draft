@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/powiedz
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/ChangeLog,v 1.12 2007/02/03 23:20:20 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/ChangeLog,v 1.13 2008/02/25 22:26:55 wolf31o2 Exp $
+
+  25 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> powiedz-1.0.ebuild:
+  QA Cleanup: quotes variables, changed doexe to dobin, changed doins to domenu
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

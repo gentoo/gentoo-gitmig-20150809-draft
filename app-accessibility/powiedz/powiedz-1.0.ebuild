@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/powiedz-1.0.ebuild,v 1.13 2005/09/19 10:08:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/powiedz-1.0.ebuild,v 1.14 2008/02/25 22:26:55 wolf31o2 Exp $
 
 inherit eutils
 
@@ -38,18 +38,13 @@ src_compile() {
 		cflags="${cflags} `artsc-config --cflags`"
 	fi
 
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PN}-dsp-handle-fix.patch
+	epatch "${FILESDIR}"/${PN}-dsp-handle-fix.patch
 	emake -f Makefile_plain LDLIBS="${ldlibs}" CFLAGS="${cflags}" DEFS="${defs}" || die "make failed"
 }
 
 src_install() {
-	cd ${S}
-
-	exeinto /usr/bin
-	doexe powiedz
-
-	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop
+	dobin powiedz
+	domenu "${FILESDIR}"/${PN}.desktop
 }
