@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8322 2008/02/25 10:45:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8323 2008/02/25 14:11:37 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
+
+# Diego Pettenò <flameeyes@gentoo.org> (25 Feb 2008)
+# Beta version, masked for testing.
+=app-admin/sudo-1.7_beta*
 
 # Mart Raudsepp <leio@gentoo.org> (25 Feb 2008)
 # Masked until the portage tree is sanitized to work correctly with
