@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.155 2008/02/24 19:57:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.156 2008/02/25 14:56:18 jer Exp $
+
+  25 Feb 2008; Jeroen Roovers <jer@gentoo.org> shorewall-3.4.7.ebuild:
+  Stable for HPPA (bug #210902).
 
   24 Feb 2008; Brent Baude <ranger@gentoo.org> shorewall-3.4.7.ebuild:
   Marking shorewall-3.4.7 ppc64 for bug 210902
