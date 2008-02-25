@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.9_p12.ebuild,v 1.4 2008/02/20 00:35:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.9_p12.ebuild,v 1.5 2008/02/25 13:28:05 flameeyes Exp $
 
 inherit eutils pam confutils
 
@@ -124,7 +124,7 @@ src_install() {
 		TROUBLESHOOTING UPGRADE sample.*
 
 	if use ldap; then
-		dodoc README.LDAP
+		dodoc README.LDAP schema.OpenLDAP
 		dosbin sudoers2ldif
 
 		cat - > "${T}"/ldap.conf.sudo <<EOF
