@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3382 2008/02/25 14:47:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3383 2008/02/25 18:28:27 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1201,14 +1201,12 @@ media-video/mplayer:color-console - Enable color console output (UNSUPPORTED)
 media-video/mplayer:cpudetection - Enables runtime cpudetection
 media-video/mplayer:custom-cflags - Enables custom cflags (not supported)
 media-video/mplayer:enca - Enables support for charset discovery and conversion
-media-video/mplayer:ivtv - Enable IVTV TV-Out video output
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:md5sum - Enables md5sum video output
 media-video/mplayer:mmxext - Enables mmx2 support
 media-video/mplayer:mp2 - Enables support for twolame, an MP2 audio library
 media-video/mplayer:nemesi - Enable Nemesi Streaming Media support
 media-video/mplayer:pnm - Add PNM video output option, to create PPM/PGM/PGMYUV images
-media-video/mplayer:pvr - Video4Linux2 MPEG PVR support
 media-video/mplayer:radio - Enable V4L2 radio interface and support
 media-video/mplayer:rar - Enable Unique RAR File Library
 media-video/mplayer:real - Adds real video support
