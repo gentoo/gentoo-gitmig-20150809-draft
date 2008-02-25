@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe/circe-0_pre20070805.ebuild,v 1.1 2007/11/07 09:31:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe/circe-0_pre20070805.ebuild,v 1.2 2008/02/25 07:21:33 opfer Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 S="${WORKDIR}/${PN}"

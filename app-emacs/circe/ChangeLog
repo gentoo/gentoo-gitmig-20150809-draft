@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/circe
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe/ChangeLog,v 1.2 2007/11/07 19:55:48 swegener Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe/ChangeLog,v 1.3 2008/02/25 07:21:33 opfer Exp $
+
+  25 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  circe-0_pre20070805.ebuild:
+  stable x86/amd64
 
 *circe-0_pre20070805 (07 Nov 2007)
 
