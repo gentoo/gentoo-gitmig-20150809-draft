@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1.ebuild,v 1.2 2008/02/25 16:10:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1.ebuild,v 1.3 2008/02/25 20:13:58 pva Exp $
 
 MY_P=${PN/metasploit/framework}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -29,7 +29,7 @@ DEPEND=""
 pkg_nofetch() {
 	# Fetch restricted due to license acceptation
 	einfo "Please download the framework from:"
-	einfo "http://metasploit.com/projects/Framework/msf3/download.html?Release=${MY_P}.tar.gz"
+	einfo "http://metasploit.com/framework/downloader/?id=${MY_P}.tar.gz"
 	einfo "and move it to ${DISTDIR}"
 }
 
