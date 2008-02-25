@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r2.ebuild,v 1.10 2006/11/27 00:35:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r2.ebuild,v 1.11 2008/02/25 02:08:22 robbat2 Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -123,11 +123,11 @@ src_install() {
 setup_boot_dir() {
 	local dir="${1}"
 
-	[[ ! -e ${dir} ]] && die "${dir} does not exist!"
-	[[ ! -e ${dir}/grub ]] && mkdir "${dir}/grub"
+	[[ ! -e "${dir}" ]] && die "${dir} does not exist!"
+	[[ ! -e "${dir}"/grub ]] && mkdir "${dir}/grub"
 
 	# change menu.lst to grub.conf
-	if [[ ! -e ${dir}/grub/grub.conf ]] && [[ -e ${dir}/grub/menu.lst ]] ; then
+	if [[ ! -e "${dir}"/grub/grub.conf ]] && [[ -e "${dir}"/grub/menu.lst ]] ; then
 		mv -f "${dir}"/grub/menu.lst "${dir}"/grub/grub.conf
 		ewarn
 		ewarn "*** IMPORTANT NOTE: menu.lst has been renamed to grub.conf"
@@ -143,7 +143,7 @@ setup_boot_dir() {
 
 	einfo "Copying files from /lib/grub and /usr/lib/grub to "${dir}""
 	for x in /lib*/grub/*/* /usr/lib*/grub/*/* ; do
-		[[ -f ${x} ]] && cp -p ${x} "${dir}"/grub/
+		[[ -f "${x}" ]] && cp -p "${x}" "${dir}"/grub/
 	done
 
 	if [[ -e "${dir}"/grub/grub.conf ]] ; then
@@ -155,7 +155,7 @@ setup_boot_dir() {
 }
 
 pkg_postinst() {
-	[[ ${ROOT} != "/" ]] && return 0
+	[[ "${ROOT}" != "/" ]] && return 0
 	setup_boot_dir /boot
 	einfo "To install grub files to another device (like a usb stick), just run:"
 	einfo "   emerge --config =${PF}"
@@ -165,5 +165,5 @@ pkg_config() {
 	local dir
 	einfo "Enter the directory where you want to setup grub:"
 	read dir
-	setup_boot_dir ${dir}
+	setup_boot_dir "${dir}"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.92-r1.ebuild,v 1.13 2005/07/28 17:53:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.92-r1.ebuild,v 1.14 2008/02/25 02:08:22 robbat2 Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -21,18 +21,18 @@ IUSE=""
 DEPEND=">=sys-libs/ncurses-5.2-r5"
 PROVIDE="virtual/bootloader"
 
-PATCHDIR=${WORKDIR}/gentoo
+PATCHDIR="${WORKDIR}/gentoo"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A} ; cd "${S}"
 
 	EPATCH_SUFFIX="patch"
 
-	epatch ${PATCHDIR}
+	epatch "${PATCHDIR}"
 
 	if [ "`gcc-version`" = "3.3" ]
 	then
-		epatch ${PATCHDIR}/gcc-3.3
+		epatch "${PATCHDIR}"/gcc-3.3
 	fi
 }
 
@@ -61,15 +61,15 @@ src_compile() {
 
 src_install() {
 	make \
-		prefix=${D}/usr \
-		sbindir=${D}/sbin \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
+		prefix="${D}"/usr \
+		sbindir="${D}"/sbin \
+		mandir="${D}"/usr/share/man \
+		infodir="${D}"/usr/share/info \
 		install || die "Installation failed."
 
 	insinto /boot/grub
-	doins ${DISTDIR}/splash.xpm.gz
-	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO
+	doins "${DISTDIR}"/splash.xpm.gz
+	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r1.ebuild,v 1.15 2005/08/21 02:24:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r1.ebuild,v 1.16 2008/02/25 02:08:22 robbat2 Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -46,7 +46,7 @@ src_unpack() {
 	unpack ${A} ; cd "${S}"
 
 	EPATCH_SUFFIX="patch"
-	epatch ${PATCHDIR}
+	epatch "${PATCHDIR}"
 
 	# a bunch of patches apply to raw autotool files
 	autoconf || die "autoconf failed"
@@ -117,18 +117,18 @@ src_install() {
 	use netboot && doexe nbgrub pxegrub stage2/stage2.netboot
 
 	insinto /boot/grub
-	doins ${DISTDIR}/splash.xpm.gz
+	doins "${DISTDIR}"/splash.xpm.gz
 	newins docs/menu.lst grub.conf.sample
 
-	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 	newdoc docs/menu.lst grub.conf.sample
 
 	docinto gentoo
-	dodoc ${PATCHDIR}/README.Gentoo.patches
+	dodoc "${PATCHDIR}"/README.Gentoo.patches
 }
 
 pkg_postinst() {
-	[[ ${ROOT} != "/" ]] && return 0
+	[[ "${ROOT}" != "/" ]] && return 0
 
 	# change menu.lst to grub.conf
 	if [[ ! -e /boot/grub/grub.conf && -e /boot/grub/menu.lst ]] ; then
@@ -144,7 +144,7 @@ pkg_postinst() {
 
 	einfo "Copying files from /lib/grub and /usr/lib/grub to /boot"
 	for x in /lib/grub/*/* /usr/lib/grub/*/* ; do
-		[[ -f ${x} ]] && cp -p ${x} /boot/grub
+		[[ -f "${x}" ]] && cp -p "${x}" /boot/grub
 	done
 
 	# hardened voodoo

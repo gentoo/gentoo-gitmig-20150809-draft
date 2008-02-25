@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97.ebuild,v 1.2 2005/08/21 02:24:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97.ebuild,v 1.3 2008/02/25 02:08:22 robbat2 Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -125,11 +125,11 @@ src_install() {
 	newdoc docs/menu.lst grub.conf.sample
 
 	docinto gentoo
-	dodoc ${PATCHDIR}/README*
+	dodoc "${PATCHDIR}"/README*
 }
 
 pkg_postinst() {
-	[[ ${ROOT} != "/" ]] && return 0
+	[[ "${ROOT}" != "/" ]] && return 0
 
 	# change menu.lst to grub.conf
 	if [[ ! -e /boot/grub/grub.conf && -e /boot/grub/menu.lst ]] ; then
@@ -145,7 +145,7 @@ pkg_postinst() {
 
 	einfo "Copying files from /lib/grub and /usr/lib/grub to /boot"
 	for x in /lib/grub/*/* /usr/lib/grub/*/* ; do
-		[[ -f ${x} ]] && cp -p ${x} /boot/grub
+		[[ -f "${x}" ]] && cp -p "${x}" /boot/grub
 	done
 
 	[[ -e /boot/grub/grub.conf ]] \

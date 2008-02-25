@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.24 2005/08/21 02:24:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.25 2008/02/25 02:08:22 robbat2 Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -36,11 +36,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}; cd ${S}
+	unpack ${A}; cd "${S}"
 
 	EPATCH_SUFFIX="patch"
 
-	epatch ${PATCHDIR}
+	epatch "${PATCHDIR}"
 }
 
 src_compile() {
@@ -75,7 +75,7 @@ src_compile() {
 
 	emake w89c840_o_CFLAGS="-O" || die "making netboot stuff"
 
-	mv stage2/{nbgrub,pxegrub} ${S}
+	mv stage2/{nbgrub,pxegrub} "${S}"
 	mv stage2/stage2 stage2/stage2.netboot
 
 	make clean || die
@@ -91,19 +91,19 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	exeinto /usr/lib/grub/${CHOST}
 	doexe nbgrub pxegrub stage2/stage2 stage2/stage2.netboot
 
 	insinto /boot/grub
-	doins ${DISTDIR}/splash.xpm.gz
+	doins "${DISTDIR}"/splash.xpm.gz
 	newins docs/menu.lst grub.conf.sample
 
-	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 	newdoc docs/menu.lst grub.conf.sample
 
 	docinto gentoo
-	dodoc ${PATCHDIR}/README*
+	dodoc "${PATCHDIR}"/README*
 }
 
 pkg_postinst() {
