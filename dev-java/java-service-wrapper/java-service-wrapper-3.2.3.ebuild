@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.2.3.ebuild,v 1.1 2008/02/25 05:28:42 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.2.3.ebuild,v 1.2 2008/02/25 06:15:05 mr_bones_ Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 JAVA_PKG_IUSE="doc source test"
@@ -39,7 +39,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# TODO file upstream	
+	# TODO file upstream
 	epatch "${FILESDIR}/${P}-build.xml.patch"
 
 	use x86 && sed -i -e 's|gcc -O3 -Wall --pedantic|$(CC) $(CFLAGS) -fPIC|g' \
