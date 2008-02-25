@@ -1,8 +1,8 @@
---- configure.old	2007-10-25 14:53:10.000000000 +0200
-+++ configure	2007-10-25 14:54:06.000000000 +0200
-@@ -7564,12 +7564,6 @@
-    fi
+--- configure.orig	2008-02-25 15:28:29.000000000 +0100
++++ configure	2008-02-25 15:28:52.000000000 +0100
+@@ -4926,12 +4926,6 @@
  fi
+ 
  
 -if test ! -d $HOME/.dbhub; then
 -   echo "creating config directory: $HOME/.dbhub"
@@ -10,22 +10,6 @@
 -   chmod 700 $HOME/.dbhub;
 -fi
 -
- # Check whether --enable-lang was given.
- if test "${enable_lang+set}" = set; then
-   enableval=$enable_lang; if test "$enableval" = "no"; then
-@@ -7650,15 +7644,6 @@
-        perl_flags=`perl -MExtUtils::Embed -e ccopts`
+ ac_config_files="$ac_config_files Makefile src/Makefile"
  
-        perl_libs=`perl -MExtUtils::Embed -e ldopts`
--
--                     if test ! -d $HOME/.dbhub/scripts; then
--       	  echo "creating script directory: $HOME/.dbhub/scripts"
--       	  mkdir $HOME/.dbhub/scripts
--	  chmod 700 $HOME/.dbhub/scripts;
--	  for i in Samplescripts/*; do
--	      cp $i $HOME/.dbhub/scripts;
--	  done
--       fi
-    fi
- else
-     echo "Perl script support is disabled."
+ cat >confcache <<\_ACEOF
