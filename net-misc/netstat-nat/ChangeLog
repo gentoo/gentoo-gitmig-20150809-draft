@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netstat-nat
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.28 2008/01/31 18:23:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.29 2008/02/25 21:11:26 opfer Exp $
+
+  25 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  netstat-nat-1.4.9.ebuild:
+  stable x86/amd64, bug 210973
 
   31 Jan 2008; nixnut <nixnut@gentoo.org> netstat-nat-1.4.8.ebuild:
   Stable on ppc wrt bug 196790
