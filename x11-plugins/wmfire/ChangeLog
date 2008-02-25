@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfire
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/ChangeLog,v 1.10 2008/01/12 11:39:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/ChangeLog,v 1.11 2008/02/25 17:24:57 drac Exp $
+
+  25 Feb 2008; Samuli Suominen <drac@gentoo.org> wmfire-1.2.3.ebuild:
+  USE flag session for libSM and libICE, amd64 stable.
 
 *wmfire-1.2.3 (12 Jan 2008)
 

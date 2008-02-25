@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-1.2.3.ebuild,v 1.1 2008/01/12 11:39:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-1.2.3.ebuild,v 1.2 2008/02/25 17:24:57 drac Exp $
 
 inherit eutils
 
@@ -10,15 +10,15 @@ SRC_URI="http://www.swanson.ukfsn.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE=""
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
+IUSE="session"
 
 RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libgtop-2
-	x11-libs/libSM
-	x11-libs/libICE
 	x11-libs/libX11
-	x11-libs/libXext"
+	x11-libs/libXext
+	session? ( x11-libs/libSM
+		x11-libs/libICE )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --enable-session
+	econf $(use_enable session)
 	emake || die "emake failed."
 }
 
