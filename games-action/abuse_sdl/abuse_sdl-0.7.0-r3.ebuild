@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r3.ebuild,v 1.2 2007/05/19 11:24:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r3.ebuild,v 1.3 2008/02/25 23:04:10 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -20,15 +20,15 @@ DEPEND="${RDEPEND}
 	x11-libs/libXt
 	virtual/opengl"
 
-DATA="${WORKDIR}/datafiles"
+DATA=${WORKDIR}/datafiles
 
 src_unpack() {
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	unpack ${P}.tar.bz2
 	unpack ${P}-patch_debian.tar.bz2
 
-	mkdir ${DATA}
-	cd ${DATA}
+	mkdir "${DATA}"
+	cd "${DATA}"
 	unpack abuse_datafiles.tar.gz
 
 	cd "${S}"
@@ -48,19 +48,19 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO
 
-	cd ${DATA}
-	dodir ${GAMES_DATADIR}/abuse
-	cp -R * ${D}/${GAMES_DATADIR}/abuse
+	cd "${DATA}"
+	dodir "${GAMES_DATADIR}/abuse"
+	cp -R * "${D}/${GAMES_DATADIR}/abuse"
 
 	#fix for #10573 + #11475 ... stupid hippy bug
-	cd ${D}/${GAMES_DATADIR}/abuse
-	epatch ${FILESDIR}/stupid-fix.patch
+	cd "${D}/${GAMES_DATADIR}/abuse"
+	epatch "${FILESDIR}"/stupid-fix.patch
 
 	newicon abuse.png ${PN}.png
-	make_desktop_entry abuse.sdl "Abuse SDL" ${PN}.png
+	make_desktop_entry abuse.sdl "Abuse SDL" ${PN}
 
 	prepgamesdirs
 }
