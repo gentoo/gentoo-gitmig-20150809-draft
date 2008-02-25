@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screenie
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.10 2007/07/15 19:34:15 hawking Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.11 2008/02/25 13:43:20 jer Exp $
+
+  25 Feb 2008; Jeroen Roovers <jer@gentoo.org> screenie-1.30.0.ebuild:
+  Stable for HPPA too.
 
   15 Jul 2007; Ali Polatel <hawking@gentoo.org> metadata.xml:
   Changed maintainer to hawking
