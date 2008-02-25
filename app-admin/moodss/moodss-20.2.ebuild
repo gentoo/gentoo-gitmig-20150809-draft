@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/moodss-20.2.ebuild,v 1.2 2005/07/10 10:37:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/moodss-20.2.ebuild,v 1.3 2008/02/25 22:36:09 wolf31o2 Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	sed -i -e 's:%_datadir:/usr/share:' \
 		-e 's:%_bindir:/usr/bin:' ${PN}.desktop || die
 }
@@ -53,7 +53,7 @@ src_compile() {
 
 src_install() {
 	make \
-		ROOTDIR=${D} \
+		ROOTDIR="${D}" \
 		MOODSSDOCDIR=/usr/share/doc/${PF} \
 		install || die
 
