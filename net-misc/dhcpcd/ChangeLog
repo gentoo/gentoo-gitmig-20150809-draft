@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.178 2008/02/20 20:48:51 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.179 2008/02/25 08:44:01 welp Exp $
+
+*dhcpcd-3.2.3 (25 Feb 2008)
+
+  25 Feb 2008; <welp@gentoo.org> +dhcpcd-3.2.3.ebuild:
+  Bump
 
 *dhcpcd-3.2.2 (20 Feb 2008)
 
