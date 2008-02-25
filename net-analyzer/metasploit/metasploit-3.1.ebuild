@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1.ebuild,v 1.1 2008/01/30 15:39:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1.ebuild,v 1.2 2008/02/25 16:10:32 pva Exp $
 
 MY_P=${PN/metasploit/framework}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -46,7 +46,7 @@ src_install() {
 	# should be as simple as copying everything into the target...
 	dodir /usr/lib/metasploit${SLOT}
 	cp -R "${S}"/* "${D}"/usr/lib/metasploit${SLOT} || die "Copy files failed"
-	rm -Rf "${D}"/usr/lib/metasploit${SLOT}/documentation "${D}"/README
+	rm -Rf "${D}"/usr/lib/metasploit${SLOT}/documentation "${D}"/usr/lib/metasploit${SLOT}/README
 
 	rm "${S}"/documentation/LICENSE
 	dodir /usr/share/doc/${PF}
