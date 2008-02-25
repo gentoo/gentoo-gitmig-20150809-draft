@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.33.ebuild,v 1.2 2008/02/08 20:37:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.33.ebuild,v 1.3 2008/02/25 00:55:47 robbat2 Exp $
 
 inherit eutils multilib
 
@@ -137,4 +137,9 @@ pkg_postinst() {
 	elog "lvm volumes are no longer automatically created for"
 	elog "baselayout-2 users. If you are using baselayout-2, be sure to"
 	elog "run: # rc-update add lvm boot"
+}
+
+src_test() {
+	einfo 'Testcases disabled because of device-node mucking'
+	einfo 'If you want them, compile the package and see ${S}/tests'
 }
