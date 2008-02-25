@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/conspire
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/ChangeLog,v 1.1 2008/02/01 13:19:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/ChangeLog,v 1.2 2008/02/25 22:04:36 chainsaw Exp $
+
+  25 Feb 2008; Tony Vroon <chainsaw@gentoo.org> conspire-0.12.0.ebuild:
+  Add ~AMD64 keyword. Tested on a Core 2 Duo T7700.
 
 *conspire-0.12.0 (01 Feb 2008)
 
