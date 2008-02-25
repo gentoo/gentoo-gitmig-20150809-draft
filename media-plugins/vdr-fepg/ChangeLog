@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-fepg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-fepg/ChangeLog,v 1.7 2007/12/13 12:16:52 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-fepg/ChangeLog,v 1.8 2008/02/25 10:35:31 zzam Exp $
+
+*vdr-fepg-0.4.0 (25 Feb 2008)
+
+  25 Feb 2008; Matthias Schwarzott <zzam@gentoo.org> +vdr-fepg-0.4.0.ebuild:
+  Version bumped.
 
 *vdr-fepg-0.3.1 (13 Dec 2007)
 
