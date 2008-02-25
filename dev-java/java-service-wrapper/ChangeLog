@@ -1,0 +1,12 @@
+# ChangeLog for dev-java/java-service-wrapper
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/ChangeLog,v 1.1 2008/02/25 05:28:42 ali_bush Exp $
+
+*java-service-wrapper-3.2.3 (25 Feb 2008)
+
+  25 Feb 2008; Alistair Bush <ali_bush@gentoo.org>
+  +files/java-service-wrapper-3.2.3-build.xml.patch, +metadata.xml,
+  +java-service-wrapper-3.2.3.ebuild:
+  Initial ebuild in tree, based on work done by caster and Betelgeuse in java
+  overlays.
+
