@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/dmraid
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.12 2007/11/09 07:45:41 genstef Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.13 2008/02/25 23:39:55 wolf31o2 Exp $
+
+  25 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  dmraid-1.0.0_rc14.ebuild:
+  Marking stable on amd64/x86 for 2008.0's release. We have been using this
+  (via genkernel) for quite some time and there are no older stable versions,
+  so no regressions.
 
   09 Nov 2007; Ian Stakenvicius (_AxS_) <ian@syndicated-productions.com>
   dmraid-1.0.0_rc14.ebuild:
