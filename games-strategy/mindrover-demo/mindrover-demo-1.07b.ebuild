@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.3 2006/03/31 22:11:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.4 2008/02/25 22:39:56 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -24,26 +24,26 @@ dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 src_unpack() {
-	unpack_makeself ${DISTDIR}/${MY_P} || die "unpacking game"
+	unpack_makeself "${DISTDIR}"/${MY_P} || die "unpacking game"
 }
 
 src_install() {
 	einfo "This will take a while ... go get a pizza or something"
 
-	dodir ${dir}
+	dodir "${dir}"
 
-	tar -zxf data.tar.gz -C ${Ddir}/ || die "armyops untar failed"
-	tar -zxf music.tar.gz -C ${Ddir}/ || die "binaries untar failed"
+	tar -zxf data.tar.gz -C "${Ddir}"/ || die "untar failed"
+	tar -zxf music.tar.gz -C "${Ddir}"/ || die "untar failed"
 
 	dodoc README
 	newicon icon.xpm ${PN}.xpm || die "doins failed"
-	exeinto ${dir}
+	exeinto "${dir}"
 	doexe bin/Linux/x86/glibc-2.1/mindrover_demo \
 		bin/Linux/x86/glibc-2.1/lib/libopenal.so.0.0.6 || die "doexe failed"
-	dosym ${dir}/libopenal.so.0.0.6 ${dir}/libopenal.so.0
+	dosym "${dir}"/libopenal.so.0.0.6 "${dir}"/libopenal.so.0
 
 	games_make_wrapper ${PN} ./mindrover_demo "${dir}" "${dir}"
 
 	prepgamesdirs
-	make_desktop_entry ${PN} "Mindrover: Europa Project (Demo)" ${PN}.xpm
+	make_desktop_entry ${PN} "Mindrover: Europa Project (Demo)" ${PN}
 }
