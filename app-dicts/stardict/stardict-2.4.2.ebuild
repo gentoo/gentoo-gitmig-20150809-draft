@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.2.ebuild,v 1.16 2007/07/11 05:41:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.2.ebuild,v 1.17 2008/02/25 14:45:56 pva Exp $
 
 inherit gnome2 eutils
 
@@ -37,14 +37,14 @@ src_unpack() {
 	gnome2_omf_fix
 
 	# Fix gtk-2.4 deprecation issues
-	epatch ${FILESDIR}/stardict-gtk24.patch
+	epatch "${FILESDIR}"/stardict-gtk24.patch
 }
 
 src_install() {
 	gnome2_src_install
 	# dictionary index generation files
 	exeinto /usr/share/stardict/tools
-	doexe ${S}/src/tools/{dictd2dic,directory2dict,olddic2newdic,oxford2dic,pydict2dict,wquick2dict,stardict_dict_update}
+	doexe "${S}"/src/tools/{dictd2dic,directory2dict,olddic2newdic,oxford2dic,pydict2dict,wquick2dict,stardict_dict_update}
 }
 
 pkg_postinst() {

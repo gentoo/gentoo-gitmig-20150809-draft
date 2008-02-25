@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.8.ebuild,v 1.4 2007/07/11 05:41:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.8-r1.ebuild,v 1.1 2008/02/25 14:45:56 pva Exp $
 
 inherit gnome2 eutils
 
@@ -35,6 +35,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+
+	cd "${S}"/src
+	epatch "${FILESDIR}"/${P}-ClipboardReceivedCallback.patch
+	epatch "${FILESDIR}"/${P}-floatwin-disappear.patch
 	gnome2_omf_fix
 }
 

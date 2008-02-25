@@ -1,6 +1,20 @@
 # ChangeLog for app-dicts/stardict
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.35 2007/08/30 12:22:44 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.36 2008/02/25 14:45:56 pva Exp $
+
+*stardict-3.0.1 (25 Feb 2008)
+*stardict-2.4.8-r1 (25 Feb 2008)
+
+  25 Feb 2008; <pva@gentoo.org>
+  +files/stardict-2.4.8-ClipboardReceivedCallback.patch,
+  +files/stardict-2.4.8-floatwin-disappear.patch, metadata.xml,
+  stardict-2.4.2.ebuild, -stardict-2.4.8.ebuild, +stardict-2.4.8-r1.ebuild,
+  +stardict-3.0.1.ebuild:
+  Version bump, finally startdict-3.0.1 is in the tree. Thank you Zhang Le,
+  jjmmma, Pro and others for work in bug #188684! Fixed compile problem and
+  popup window "jumping away" problem, bug #188827 and #195882, thank Ed
+  Catmur, Evgeniy Dushistov and other people for help, fix and investigations
+  of these bugs.
 
   30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing liquidx from metadata due to his retirement (see #171155 for
