@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/amlc/amlc-0.5.1.ebuild,v 1.5 2008/02/25 16:35:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/amlc/amlc-0.5.1.ebuild,v 1.6 2008/02/25 16:36:36 drac Exp $
 
 inherit toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 S=${WORKDIR}
 
 src_unpack() {
-	cp ${DISTDIR}/${P}.cpp "${S}"
+	cp "${DISTDIR}"/${P}.cpp "${S}"
 }
 
 src_compile() {
