@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/nis-utils/nis-utils-1.4.1-r3.ebuild,v 1.1 2008/01/16 02:38:43 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/nis-utils/nis-utils-1.4.1-r3.ebuild,v 1.2 2008/02/25 01:35:44 antarus Exp $
 
 inherit eutils versionator
 
@@ -23,7 +23,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-gmp-fixes.patch"
 
 	# nisping.c calls internal glibc functions, patch it if glibc is > 2.5
-	has_version '>=sys-apps/glibc-2.6' && \
+	has_version '>=sys-libs/glibc-2.6' && \
 		epatch "${FILESDIR}/${PN}-glibc-internal-fix.patch"
 }
 
