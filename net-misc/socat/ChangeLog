@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.33 2008/02/25 16:07:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.34 2008/02/25 17:13:39 jer Exp $
+
+  25 Feb 2008; Jeroen Roovers <jer@gentoo.org> socat-1.6.0.0.ebuild:
+  Stable for HPPA (bug #210328).
 
 *socat-1.6.0.1 (25 Feb 2008)
 
