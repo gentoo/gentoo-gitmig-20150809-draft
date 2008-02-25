@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.78 2008/02/25 18:50:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.79 2008/02/25 19:17:58 beandog Exp $
+
+  25 Feb 2008; Steve Dibb <beandog@gentoo.org> grub-0.97-r4.ebuild:
+  amd64 stable, bug 211419
 
   25 Feb 2008; Christian Faulhammer <opfer@gentoo.org> grub-0.97-r4.ebuild:
   stable x86, bug 211419
