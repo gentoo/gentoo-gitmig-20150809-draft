@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ircd-hybrid
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ChangeLog,v 1.27 2007/12/25 12:30:31 cla Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ChangeLog,v 1.28 2008/02/25 15:30:06 armin76 Exp $
+
+  25 Feb 2008; Raúl Porcel <armin76@gentoo.org> -ircd-hybrid-7.2.2.ebuild,
+  ircd-hybrid-7.2.3.ebuild:
+  Re-add ~amd64 dropped keyword, bad cla, remove old
 
 *ircd-hybrid-7.2.3 (25 Dec 2007)
 

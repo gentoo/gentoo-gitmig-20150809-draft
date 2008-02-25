@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.2.3.ebuild,v 1.1 2007/12/25 12:30:31 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.2.3.ebuild,v 1.2 2008/02/25 15:30:06 armin76 Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://ircd-hybrid.com/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 
 RDEPEND="
 	zlib? ( >=sys-libs/zlib-1.1.4-r2 )
