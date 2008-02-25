@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.88 2008/02/21 08:20:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.89 2008/02/25 15:49:26 beandog Exp $
+
+  25 Feb 2008; Steve Dibb <beandog@gentoo.org>
+  firebird-2.0.3.12981.0-r5.ebuild:
+  Fix multilib issues, amd64 stable, security bug 208034
 
   21 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   firebird-2.0.3.12981.0-r5.ebuild:

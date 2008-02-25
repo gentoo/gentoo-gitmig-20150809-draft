@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r5.ebuild,v 1.2 2008/02/21 08:20:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r5.ebuild,v 1.3 2008/02/25 15:49:26 beandog Exp $
 
-inherit flag-o-matic eutils autotools versionator
+inherit flag-o-matic eutils autotools versionator multilib
 
 MY_P=Firebird-$(replace_version_separator 4 -)
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/firebird/${MY_P}.tar.bz2
 
 LICENSE="IDPL Interbase-1.0"
 SLOT="0"
-KEYWORDS="~amd64 -ia64 x86"
+KEYWORDS="amd64 -ia64 x86"
 IUSE="doc xinetd examples debug"
 RESTRICT="userpriv"
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	enewgroup firebird 450
-	enewuser firebird 450 /bin/bash /usr/lib/firebird firebird
+	enewuser firebird 450 /bin/bash /usr/$(get_libdir)/firebird firebird
 }
 
 function check_sed() {
@@ -123,7 +123,7 @@ src_compile() {
 	filter-flags -fprefetch-loop-arrays
 	filter-mfpmath sse
 
-	econf --prefix=/usr/lib/firebird --with-editline \
+	econf --prefix=/usr/$(get_libdir)/firebird --with-editline \
 		$(use_enable !xinetd superserver) \
 		$(use_enable debug) \
 		${myconf} || die "econf failed"
@@ -147,14 +147,14 @@ src_install() {
 	insinto /usr/include
 	doins include/*
 
-	insinto /usr/lib
+	insinto /usr/$(get_libdir)
 	dolib.so lib/*.so*
 	dolib.a lib/*.a*
 
-	insinto /usr/lib/firebird
+	insinto /usr/$(get_libdir)/firebird
 	doins *.msg
 
-	insinto /usr/lib/firebird/help
+	insinto /usr/$(get_libdir)/firebird/help
 	doins help/help.fdb
 
 	insinto /usr/share/firebird/upgrade
@@ -167,13 +167,13 @@ src_install() {
 	insopts -m0660 -o firebird -g firebird
 	doins security2.fdb
 
-	exeinto /usr/lib/firebird/UDF
+	exeinto /usr/$(get_libdir)/firebird/UDF
 	doexe UDF/*.so
 
-	exeinto /usr/lib/firebird/intl
+	exeinto /usr/$(get_libdir)/firebird/intl
 	newexe intl/libfbintl.so fbintl.so
 
-	insinto /usr/lib/firebird/intl
+	insinto /usr/$(get_libdir)/firebird/intl
 	doins ../install/misc/fbintl.conf
 
 	diropts -m 755 -o firebird -g firebird
@@ -183,7 +183,7 @@ src_install() {
 	keepdir /var/run/firebird
 
 	# create links for backwards compatibility
-	cd "${D}/usr/lib"
+	cd "${D}/usr/$(get_libdir)"
 	ln -s libfbclient.so libgds.so
 	ln -s libfbclient.so libgds.so.0
 	ln -s libfbclient.so libfbclient.so.1
@@ -209,7 +209,8 @@ src_install() {
 
 pkg_postinst() {
 	# Hack to fix ownership/perms
-	chown -fR firebird:firebird "${ROOT}/etc/firebird" "${ROOT}/usr/lib/firebird"
+	chown -fR firebird:firebird "${ROOT}/etc/firebird" \
+		"${ROOT}/usr/$(get_libdir)/firebird"
 	chmod 750 "${ROOT}/etc/firebird"
 
 	elog
