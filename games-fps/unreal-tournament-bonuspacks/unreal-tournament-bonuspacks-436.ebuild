@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-bonuspacks/unreal-tournament-bonuspacks-436.ebuild,v 1.8 2006/01/06 16:16:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-bonuspacks/unreal-tournament-bonuspacks-436.ebuild,v 1.9 2008/02/25 22:56:54 mr_bones_ Exp $
 
 inherit games
 
@@ -32,7 +32,7 @@ S=${WORKDIR}
 
 src_install() {
 	# unpack the UTBonusPack4 umod
-	umod -v -b `pwd` -x UTBonusPack4.umod || die "could not unpack UTBonusPack4.umod"
+	umod -v -b "$(pwd)" -x UTBonusPack4.umod || die "could not unpack UTBonusPack4.umod"
 
 	# move stuff around
 	rm UTBonusPack4.umod
@@ -41,8 +41,8 @@ src_install() {
 
 	# install it all
 	local dir=${GAMES_PREFIX_OPT}/unreal-tournament
-	dodir ${dir}
-	mv * ${D}/${dir}/
+	dodir "${dir}"
+	mv * "${D}/${dir}/"
 
 	prepgamesdirs
 }

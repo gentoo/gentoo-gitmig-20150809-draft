@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.16 2007/02/17 08:54:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.17 2008/02/25 23:01:06 mr_bones_ Exp $
 
 # To use system libraries, uncomment the following line and comment the one
 # below it.
@@ -77,7 +77,7 @@ src_install() {
 
 	# Creating .manifest files
 	sed -e "s:GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" "${FILESDIR}"/${PN}.xml > \
-		${T}/${PN}.xml || die "sed failed"
+		"${T}"/${PN}.xml || die "sed failed"
 	insinto "${dir}"/.manifest
 	doins "${T}"/${PN}.xml
 
