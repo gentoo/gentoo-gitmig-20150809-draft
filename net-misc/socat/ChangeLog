@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/socat
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.32 2007/07/26 13:07:19 falco Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.33 2008/02/25 16:07:11 pva Exp $
+
+*socat-1.6.0.1 (25 Feb 2008)
+
+  25 Feb 2008; <pva@gentoo.org> +socat-1.6.0.1.ebuild:
+  Version bump, thank Aron Griffis <agriffis AT n01se.net> for report, bug
+  #210328.
 
 *socat-2.0.0_beta1 (26 Jul 2007)
 
