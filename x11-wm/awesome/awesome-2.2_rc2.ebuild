@@ -1,19 +1,21 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-1.3.ebuild,v 1.1 2007/10/05 16:16:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-2.2_rc2.ebuild,v 1.1 2008/02/25 16:51:52 matsuu Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
+MY_P="${P/_rc/-rc}"
 DESCRIPTION="awesome is a window manager initialy based on a dwm code rewriting"
 HOMEPAGE="http://awesome.naquadah.org/"
-SRC_URI="http://awesome.naquadah.org/download/${P}.tar.gz"
+SRC_URI="http://awesome.naquadah.org/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND="dev-libs/libconfig
+RDEPEND=">=dev-libs/confuse-2.6
+	x11-libs/cairo
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXft
@@ -21,20 +23,17 @@ RDEPEND="dev-libs/libconfig
 	x11-libs/libXinerama"
 
 DEPEND="${RDEPEND}
+	app-text/asciidoc
+	app-text/xmlto
+	app-doc/doxygen
 	dev-util/pkgconfig
 	x11-proto/xineramaproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+S="${WORKDIR}/${MY_P}"
 
-	sed -i \
-		-e "/^CFLAGS/s:=.*-O3:= ${CFLAGS}:" \
-		-e "/^LDFLAGS/s:-ggdb3:${LDFLAGS}:" \
-		-e "/^CC/s:cc:$(tc-getCC):" \
-		-e "s:/usr/lib:/usr/$(get_libdir):" \
-		-e "s:/usr/local:/usr:" \
-		config.mk || die "sed failed"
+src_compile() {
+	econf --docdir="/usr/share/doc/${PF}" || die
+	emake || die
 }
 
 src_install() {
@@ -46,5 +45,8 @@ src_install() {
 	insinto /usr/share/xsessions
 	doins "${FILESDIR}"/${PN}.desktop
 
-	dodoc AUTHORS README awesomerc
+	insinto /usr/share/awesome/icons/layouts
+	doins icons/layouts/*
+
+	prepalldocs
 }
