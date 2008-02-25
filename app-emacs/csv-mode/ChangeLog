@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/csv-mode
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/csv-mode/ChangeLog,v 1.3 2007/07/04 05:08:38 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/csv-mode/ChangeLog,v 1.4 2008/02/25 07:36:35 opfer Exp $
+
+  25 Feb 2008; Christian Faulhammer <opfer@gentoo.org> csv-mode-1.50.ebuild:
+  stable x86/amd64
 
   04 Jul 2007; Ulrich Mueller <ulm@gentoo.org> csv-mode-1.50.ebuild:
   Remove redundant src_install.
