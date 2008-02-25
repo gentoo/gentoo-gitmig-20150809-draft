@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gdm-themes
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.29 2008/02/24 11:46:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.30 2008/02/25 02:20:59 ranger Exp $
+
+  25 Feb 2008; Brent Baude <ranger@gentoo.org> gdm-themes-20070811.ebuild:
+  stable ppc, bug 211204
 
   24 Feb 2008; Markus Meier <maekke@gentoo.org> gdm-themes-20070811.ebuild:
   x86 stable, bug #211204
