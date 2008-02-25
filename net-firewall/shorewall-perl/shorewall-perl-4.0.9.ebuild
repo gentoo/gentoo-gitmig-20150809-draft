@@ -1,22 +1,22 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/shorewall-perl-4.0.9.ebuild,v 1.1 2008/02/24 18:49:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/shorewall-perl-4.0.9.ebuild,v 1.2 2008/02/25 18:10:27 pva Exp $
 
-# Choose between experimental, stable and beta:
-#MY_P_TREE="development/4.0"  # experimental and beta
-MY_P_TREE="4.0"             # stable
-#MY_P_BETA="-Beta7"           # only beta
-MY_P_BETA=""                # stable or experimental
+# Select version (stable, RC, Beta, upstream patched):
+MY_P_TREE="4.0"   # stable/devel (eg. "4.0" or "development/4.0")
+MY_P_BETA=""      # stable or experimental (eg. "-RC1" or "-Beta4")
+MY_P_PATCH=""   # upstream patch (eg. ".2")
 
 MY_P="shorewall-${PV}"
 
 DESCRIPTION="Shoreline Firewall Perl-based compiler that allows faster compilation and execution."
 HOMEPAGE="http://www.shorewall.net/"
-SRC_URI="http://www1.shorewall.net/pub/shorewall/${MY_P_TREE}/${MY_P}${MY_P_BETA}/${P}${MY_P_BETA}.tar.bz2"
+SRC_URI="http://www1.shorewall.net/pub/shorewall/${MY_P_TREE}/${MY_P}${MY_P_BETA}/${P}${MY_P_PATCH}${MY_P_BETA}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+
 IUSE=""
 
 DEPEND="net-firewall/iptables
@@ -31,7 +31,7 @@ src_compile() {
 }
 
 src_install() {
-	cd "${WORKDIR}/${P}${MY_P_BETA}"
+	cd "${WORKDIR}/${P}${MY_P_PATCH}${MY_P_BETA}"
 	PREFIX="${D}" ./install.sh || die "install.sh failed"
 
 	dodoc releasenotes.txt
@@ -41,9 +41,9 @@ pkg_postinst() {
 	einfo
 	einfo "Documentation is available at http://www.shorewall.net"
 	einfo
-	einfo "In order to use the Perl compiler you need to add"
-	einfo "SHOREWALL_COMPILER=perl"
-	einfo "to shorewall.conf"
+	elog "In order to use the Perl compiler you need to add"
+	elog "SHOREWALL_COMPILER=perl"
+	elog "to shorewall.conf unless you did not install the Shell compiler."
 	einfo
 	einfo "Please read the included release notes for more information."
 	einfo

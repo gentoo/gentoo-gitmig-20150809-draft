@@ -1,14 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/shorewall-common-4.0.9.ebuild,v 1.1 2008/02/24 18:46:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/shorewall-common-4.0.9.ebuild,v 1.2 2008/02/25 18:06:26 pva Exp $
 
 inherit eutils
 
-# Choose between experimental, stable and beta:
-#MY_P_TREE="development/4.0"  # experimental and beta
-MY_P_TREE="4.0"             # stable
-#MY_P_BETA="-RC1"             # only beta and RC
-MY_P_BETA=""                # stable or experimental
+# Select version (stable, RC, Beta, upstream patched):
+MY_P_TREE="4.0"   # stable/devel (eg. "4.0" or "development/4.0")
+MY_P_BETA=""      # stable or experimental (eg. "-RC1" or "-Beta4")
+MY_P_PATCH=""     # upstream patch (eg. ".2")
 
 MY_P="${P/-common/}${MY_P_BETA}"
 MY_PN="${PN/-common/}"
@@ -17,7 +16,7 @@ MY_P_DOCS="${MY_P/${MY_PN}/${MY_PN}-docs-html}"
 
 DESCRIPTION="Shoreline Firewall is an iptables-based firewall for Linux."
 HOMEPAGE="http://www.shorewall.net/"
-SRC_URI="http://www1.shorewall.net/pub/${MY_PN}/${MY_P_TREE}/${MY_P}/${P}${MY_P_BETA}.tar.bz2
+SRC_URI="http://www1.shorewall.net/pub/${MY_PN}/${MY_P_TREE}/${MY_P}/${P}${MY_P_PATCH}${MY_P_BETA}.tar.bz2
 	doc? ( http://www1.shorewall.net/pub/${MY_PN}/${MY_P_TREE}/${MY_P}/${MY_P_DOCS}.tar.bz2 )"
 
 LICENSE="GPL-2"
@@ -27,7 +26,6 @@ IUSE="doc"
 
 DEPEND=">=net-firewall/iptables-1.2.4
 	sys-apps/iproute2
-	~net-firewall/shorewall-shell-${PV}
 	!<net-firewall/shorewall-4.0"
 
 pkg_setup() {
@@ -43,7 +41,7 @@ src_compile() {
 src_install() {
 	keepdir /var/lib/shorewall
 
-	cd "${WORKDIR}/${P}${MY_P_BETA}"
+	cd "${WORKDIR}/${P}${MY_P_PATCH}${MY_P_BETA}"
 	PREFIX="${D}" ./install.sh || die "install.sh failed"
 	newinitd "${FILESDIR}"/shorewall.initd shorewall || die "doinitd failed"
 
@@ -54,7 +52,7 @@ src_install() {
 		dohtml -r *
 		## dosym Documentation_Index.html "/usr/share/doc/${PF}/html/index.htm"
 		# install samples
-		cp -pR "${S}${MY_P_BETA}/Samples" "${D}/usr/share/doc/${PF}"
+		cp -pR "${S}${MY_P_PATCH}${MY_P_BETA}/Samples" "${D}/usr/share/doc/${PF}"
 	fi
 }
 
@@ -97,5 +95,4 @@ pkg_postinst() {
 	elog
 	elog "${PN} requires a compiler."
 	elog "You can choose to emerge shorewall-shell and/or shorewall-perl."
-	elog "As of ${PV} shorewall-shell is mandatory."
 }
