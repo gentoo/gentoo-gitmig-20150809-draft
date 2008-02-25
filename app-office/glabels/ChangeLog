@@ -1,6 +1,11 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.28 2008/02/24 11:03:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.29 2008/02/25 19:18:47 eva Exp $
+
+*glabels-2.2.2 (25 Feb 2008)
+
+  25 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org> +glabels-2.2.2.ebuild:
+  bump to 2.2.2, fix crashers and rendering problems
 
 *glabels-2.2.1 (24 Feb 2008)
 
