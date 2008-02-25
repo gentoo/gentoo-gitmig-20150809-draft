@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.34 2008/01/13 21:17:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.35 2008/02/25 21:58:48 flameeyes Exp $
+
+*virtualbox-1.5.6 (25 Feb 2008)
+
+  25 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +virtualbox-1.5.6.ebuild:
+  Version bump, as requested by the proxy-maintainer Alessio Cassibba.
 
   13 Jan 2008; Markus Ullmann <jokey@gentoo.org> virtualbox-9999.ebuild:
   Drop keywords in live ebuild
