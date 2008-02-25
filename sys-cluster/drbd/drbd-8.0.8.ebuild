@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.8.ebuild,v 1.3 2008/02/13 18:17:05 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.8.ebuild,v 1.4 2008/02/25 14:37:30 xmerlin Exp $
 
 inherit eutils versionator
 
@@ -41,7 +41,7 @@ src_install() {
 	newinitd "${FILESDIR}"/${PN}-8.0.rc ${PN} || die
 
 	# docs
-	dodoc README ChangeLog COPYING ROADMAP INSTALL
+	dodoc README ChangeLog ROADMAP INSTALL
 
 	# we put drbd.conf into docs
 	# it doesnt make sense to install a default conf in /etc

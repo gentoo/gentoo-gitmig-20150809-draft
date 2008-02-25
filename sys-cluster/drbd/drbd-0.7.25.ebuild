@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.25.ebuild,v 1.1 2007/10/25 09:27:45 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.25.ebuild,v 1.2 2008/02/25 14:37:30 xmerlin Exp $
 
 inherit eutils versionator
 
@@ -37,7 +37,7 @@ src_install() {
 	#keepdir /var/lib/drbd
 
 	# docs
-	dodoc README ChangeLog COPYING
+	dodoc README ChangeLog
 	dodoc documentation/NFS-Server-README.txt
 
 	# we put drbd.conf into docs
