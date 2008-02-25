@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/simscan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/simscan/ChangeLog,v 1.5 2008/02/23 12:08:01 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/simscan/ChangeLog,v 1.6 2008/02/25 17:21:50 jer Exp $
+
+  25 Feb 2008; Jeroen Roovers <jer@gentoo.org> simscan-1.4.0.ebuild:
+  Fix patch names (thanks to Tobias Schlitt on IRC).
 
 *simscan-1.4.0 (23 Feb 2008)
 
