@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.61 2007/07/11 20:33:15 uberlord Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.62 2008/02/25 00:30:47 jer Exp $
+
+  25 Feb 2008; Jeroen Roovers <jer@gentoo.org> jpeg-6b-r8.ebuild:
+  Stable for HPPA (bug #208941).
 
   11 Jul 2007; Roy Marples <uberlord@gentoo.org> jpeg-6b-r8.ebuild:
   Keyworded ~sparc-fbsd.
