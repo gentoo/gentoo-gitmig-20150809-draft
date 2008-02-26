@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13.1.ebuild,v 1.2 2008/01/20 11:54:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13.1.ebuild,v 1.3 2008/02/26 23:03:17 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils
@@ -43,6 +43,7 @@ src_unpack() {
 		cd "${S}"
 		epatch "${FILESDIR}"/${PN}-2.13-uclibc.patch #203711
 		use loop-aes && epatch "${WORKDIR}"/loop-AES-*/util-linux-ng-2.13.0.1.diff
+		epatch "${FILESDIR}"/${PN}-2.13-ioprio-syscalls.patch #190613
 	fi
 }
 
