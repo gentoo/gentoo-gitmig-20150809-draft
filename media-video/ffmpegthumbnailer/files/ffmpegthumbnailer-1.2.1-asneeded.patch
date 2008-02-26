@@ -1,0 +1,8 @@
+diff -ur ffmpegthumbnailer-1.2.1.orig/src/libffmpegthumbnailer/Makefile.am ffmpegthumbnailer-1.2.1/src/libffmpegthumbnailer/Makefile.am
+--- ffmpegthumbnailer-1.2.1.orig/src/libffmpegthumbnailer/Makefile.am	2008-02-26 13:40:33.000000000 +0200
++++ ffmpegthumbnailer-1.2.1/src/libffmpegthumbnailer/Makefile.am	2008-02-26 18:01:22.000000000 +0200
+@@ -11,3 +11,4 @@
+ 
+ libffmpegthumbnailer_includedir         = $(includedir)/libffmpegthumbnailer
+ libffmpegthumbnailer_la_LDFLAGS         = -version-info 2:0:0
++libffmpegthumbnailer_la_LIBADD          = $(FFMPEG_LIBS) $(PNG_LIBS) -ljpeg
