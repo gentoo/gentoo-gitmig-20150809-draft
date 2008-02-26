@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-0.45.ebuild,v 1.8 2007/03/12 13:58:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-0.45.ebuild,v 1.9 2008/02/26 06:30:47 mr_bones_ Exp $
 
 inherit games
 
@@ -19,7 +19,7 @@ RDEPEND="games-emulation/emutos
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i \
 		-e "/^CFLAGS/ s:-O3.*:${CFLAGS}:" \
