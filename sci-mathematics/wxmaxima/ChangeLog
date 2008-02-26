@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/wxmaxima
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.11 2008/01/29 16:48:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.12 2008/02/26 17:34:25 bicatali Exp $
+
+  26 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  wxmaxima-0.7.3a.ebuild, wxmaxima-0.7.4.ebuild:
+  Duplicate license file (see bug #211534)
 
 *wxmaxima-0.7.4 (29 Jan 2008)
 
@@ -54,4 +58,3 @@
   <lucas.chiesa@gmail.com> for his help in the gentooscience overlay, 
   Andreas Volz <linux@brachttal.net>, and Yosef Meller <yosefm@gmail.com>
   for their initial help.
-

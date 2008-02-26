@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.3a.ebuild,v 1.6 2007/12/22 13:47:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.3a.ebuild,v 1.7 2008/02/26 17:34:25 bicatali Exp $
 
 WX_GTK_VER="2.6"
 inherit eutils autotools wxwidgets fdo-mime
@@ -35,7 +35,6 @@ src_compile () {
 
 	# consistent package names
 	sed -i \
-		-e 's:COPYING::' \
 		-e "s:${datadir}/wxMaxima:${datadir}/${PN}:g" \
 		Makefile.in data/Makefile.in || die "sed failed"
 
@@ -56,10 +55,7 @@ src_compile () {
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	newicon maxima-new.png wxmaxima.png
-	make_desktop_entry wxmaxima "wxMaxima ${PV}" wxmaxima \
-		"Science;Math;Education"
-
-	dosym "${PORTDIR}"/licenses/${LICENSE} /usr/share/${PN}/COPYING
+	make_desktop_entry wxmaxima wxMaxima wxmaxima
 	dodir /usr/share/doc/${PF}
 	dosym /usr/share/${PN}/README /usr/share/doc/${PF}/README
 	dodoc AUTHORS
