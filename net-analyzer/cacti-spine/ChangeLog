@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti-spine
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.5 2008/02/24 11:37:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.6 2008/02/26 14:43:44 armin76 Exp $
+
+  26 Feb 2008; Raúl Porcel <armin76@gentoo.org> cacti-spine-0.8.7a.ebuild:
+  sparc stable wrt #210840
 
   24 Feb 2008; Markus Meier <maekke@gentoo.org> cacti-spine-0.8.7a.ebuild:
   x86 stable, bug #210840
