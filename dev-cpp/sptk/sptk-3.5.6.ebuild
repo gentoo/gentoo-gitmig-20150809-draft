@@ -1,6 +1,6 @@
-# Copyright 2006-2007 Gentoo Foundation
+# Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.6.ebuild,v 1.2 2007/11/17 18:50:16 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.6.ebuild,v 1.3 2008/02/26 13:09:58 iluxa Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -31,7 +31,7 @@ check_use() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	check_use examples EXAMPLES

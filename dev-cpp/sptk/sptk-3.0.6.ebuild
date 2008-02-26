@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.0.6.ebuild,v 1.2 2006/01/14 12:38:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.0.6.ebuild,v 1.3 2008/02/26 13:09:58 iluxa Exp $
 
 inherit autotools
 
@@ -19,7 +19,7 @@ DEPEND="fltk? ( x11-libs/fltk )
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	# This fixes double ./configure run
 	eautoreconf
@@ -51,15 +51,15 @@ src_compile() {
 
 src_install () {
 
-	make DESTDIR=${D} install || die "Installation failed"
+	make DESTDIR="${D}" install || die "Installation failed"
 
 	dodoc README AUTHORS
 
 	dodir /usr/share/doc/${PF}
-	cp -r ${S}/docs/* ${D}/usr/share/doc/${PF}
+	cp -r "${S}"/docs/* "${D}/usr/share/doc/${PF}"
 	if use doc; then
-		rm -fr ${D}/usr/share/doc/${PF}/latex
-		cp -r ${S}/pictures ${D}/usr/share/doc/${PF}
+		rm -fr "${D}/usr/share/doc/${PF}/latex"
+		cp -r "${S}/pictures" "${D}/usr/share/doc/${PF}"
 	fi
 
 }

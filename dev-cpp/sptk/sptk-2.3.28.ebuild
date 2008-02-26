@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-2.3.28.ebuild,v 1.4 2005/11/10 19:49:14 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-2.3.28.ebuild,v 1.5 2008/02/26 13:09:58 iluxa Exp $
 
 IUSE="fltk odbc"
 
@@ -33,12 +33,12 @@ src_compile() {
 src_install () {
 
 	einstall \
-		includedir=${D}/usr/include/sptk \
-		libdir=${D}/usr/lib || die "Installation Failed"
+		includedir="${D}"/usr/include/sptk \
+		libdir="${D}"/usr/lib || die "Installation Failed"
 
 	dodoc CHANGES README
 
-	dodir /usr/share/doc/${PF}/html
-	mv ${D}/usr/share/doc/sptk/* ${D}/usr/share/doc/${PF}/html
-	rmdir ${D}/usr/share/doc/sptk
+	dodir /usr/share/doc/"${PF}"/html
+	mv "${D}"/usr/share/doc/sptk/* "${D}"/usr/share/doc/"${PF}"/html
+	rmdir "${D}"/usr/share/doc/sptk
 }
