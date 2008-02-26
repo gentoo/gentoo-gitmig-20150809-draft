@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/xoops
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/ChangeLog,v 1.17 2008/02/04 08:38:19 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/ChangeLog,v 1.18 2008/02/26 14:32:53 wrobel Exp $
+
+  26 Feb 2008; Gunnar Wrobel <wrobel@gentoo.org> xoops-2.2.4.ebuild:
+  Fix wrt #208584
 
   04 Feb 2008; Benedikt Böhm <hollow@gentoo.org> xoops-2.2.4.ebuild:
   merge from webapps overlay wrt #208584

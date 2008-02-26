@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.2.4.ebuild,v 1.6 2008/02/04 08:38:19 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.2.4.ebuild,v 1.7 2008/02/26 14:32:53 wrobel Exp $
 
 inherit webapp depend.php
 
@@ -16,8 +16,8 @@ S=${WORKDIR}
 
 IUSE=""
 
-RDEPEND="virtual/httpd-cgi"
-need_php
+need_httpd_cgi
+need_php_httpd
 
 pkg_setup() {
 	if ! PHPCHECKNODIE="yes" require_php_with_use mysql || \
