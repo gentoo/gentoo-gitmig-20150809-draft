@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.481 2008/02/26 16:17:25 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.482 2008/02/26 17:09:05 dsd Exp $
+
+*gentoo-sources-2.6.24-r3 (26 Feb 2008)
+
+  26 Feb 2008; Daniel Drake <dsd@gentoo.org>
+  gentoo-sources-2.6.24-r2.ebuild, +gentoo-sources-2.6.24-r3.ebuild:
+  Update to Linux 2.6.24.3. Fix e1000e bridging issue. Fix arcmsr+archttp
+  warning flood. Fix boot hang on Intel Q35 chipset. Fix MAC address in sis190
+  driver.
 
 *gentoo-sources-2.6.23-r9 (26 Feb 2008)
 
