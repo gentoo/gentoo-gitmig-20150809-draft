@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.0.ebuild,v 1.5 2008/01/17 20:09:43 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.0.ebuild,v 1.6 2008/02/26 16:24:01 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -73,19 +73,20 @@ KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="fetch"
 IUSE="X alsa doc examples javacomm nsplugin odbc"
 
-RDEPEND="x86? ( net-libs/libnet )
-		X? (
-			x11-libs/libXext
-			x11-libs/libXft
-			x11-libs/libXi
-			x11-libs/libXp
-			x11-libs/libXtst
-			x11-libs/libX11
-			amd64? ( x11-libs/libXt )
-		)
-		alsa? ( media-libs/alsa-lib )
-		doc? ( =dev-java/java-sdk-docs-1.6.0* )
-		odbc? ( dev-db/unixODBC )"
+RDEPEND="
+	X? (
+		x11-libs/libXext
+		x11-libs/libXft
+		x11-libs/libXi
+		x11-libs/libXp
+		x11-libs/libXtst
+		x11-libs/libX11
+		amd64? ( x11-libs/libXt )
+	)
+	alsa? ( media-libs/alsa-lib )
+	doc? ( =dev-java/java-sdk-docs-1.6.0* )
+	odbc? ( dev-db/unixODBC )"
+
 DEPEND=""
 
 QA_TEXTRELS_x86="opt/${P}/jre/lib/i386/libj9jvmti24.so

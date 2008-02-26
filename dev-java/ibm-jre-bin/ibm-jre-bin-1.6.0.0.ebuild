@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.0.ebuild,v 1.4 2008/01/17 20:12:18 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.0.ebuild,v 1.5 2008/02/26 16:28:59 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -52,7 +52,7 @@ KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="fetch"
 IUSE="X alsa nsplugin odbc"
 
-RDEPEND="x86? ( net-libs/libnet )
+RDEPEND="
 		X? (
 			x11-libs/libXext
 			x11-libs/libXft

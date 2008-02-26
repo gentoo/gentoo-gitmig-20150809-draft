@@ -1,6 +1,18 @@
 # ChangeLog for dev-java/ibm-jdk-bin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.146 2008/01/17 20:09:43 tgall Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.147 2008/02/26 16:24:01 caster Exp $
+
+  26 Feb 2008; Vlastimil Babka <caster@gentoo.org>
+  +ibm-jdk-bin-1.4.2.10.ebuild, ibm-jdk-bin-1.5.0.6-r1.ebuild,
+  ibm-jdk-bin-1.6.0.0.ebuild:
+  Version bump, security bug #198644; remove unneeded libnet deps.
+
+*ibm-jdk-bin-1.4.2.10 (26 Feb 2008)
+
+  26 Feb 2008; Vlastimil Babka <caster@gentoo.org>
+  +ibm-jdk-bin-1.4.2.10.ebuild, ibm-jdk-bin-1.5.0.6-r1.ebuild,
+  ibm-jdk-bin-1.6.0.0.ebuild:
+  Version bump, security bug #198644; remove unneeded libnet deps.
 
   17 Jan 2008; Tom Gall <tgall@gentoo.org. ibm-jdk-bin-1.6.0.0.ebuild:
   added ~ppc64, bug 166789

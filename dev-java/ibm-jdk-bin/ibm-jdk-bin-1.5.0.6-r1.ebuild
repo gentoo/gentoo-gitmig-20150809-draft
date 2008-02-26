@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.6-r1.ebuild,v 1.2 2007/12/16 19:52:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.6-r1.ebuild,v 1.3 2008/02/26 16:24:01 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -70,25 +70,25 @@ KEYWORDS="-* amd64 ppc ppc64 x86"
 RESTRICT="fetch"
 IUSE="X alsa doc examples javacomm nsplugin odbc"
 
-RDEPEND="x86? ( net-libs/libnet )
-		=virtual/libstdc++-3.3
-		X? (
-			x11-libs/libXext
-			x11-libs/libXft
-			x11-libs/libXi
-			x11-libs/libXmu
-			x11-libs/libXp
-			x11-libs/libXtst
-			x11-libs/libXt
-			x11-libs/libX11
-		)
-		alsa? ( media-libs/alsa-lib )
-		doc? ( =dev-java/java-sdk-docs-1.5.0* )
-		nsplugin? (
-			x86? ( =x11-libs/gtk+-2* =x11-libs/gtk+-1* )
-			ppc? ( =x11-libs/gtk+-1* )
-		)
-		odbc? ( dev-db/unixODBC )"
+RDEPEND="=virtual/libstdc++-3.3
+	X? (
+		x11-libs/libXext
+		x11-libs/libXft
+		x11-libs/libXi
+		x11-libs/libXmu
+		x11-libs/libXp
+		x11-libs/libXtst
+		x11-libs/libXt
+		x11-libs/libX11
+	)
+	alsa? ( media-libs/alsa-lib )
+	doc? ( =dev-java/java-sdk-docs-1.5.0* )
+	nsplugin? (
+		x86? ( =x11-libs/gtk+-2* =x11-libs/gtk+-1* )
+		ppc? ( =x11-libs/gtk+-1* )
+	)
+	odbc? ( dev-db/unixODBC )"
+
 DEPEND=""
 
 QA_EXECSTACK_amd64="opt/${P}/jre/bin/libjclscar_23.so
