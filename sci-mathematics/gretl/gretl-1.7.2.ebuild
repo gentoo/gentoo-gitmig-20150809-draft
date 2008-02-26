@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.7.0.ebuild,v 1.3 2007/12/06 11:37:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.7.2.ebuild,v 1.1 2008/02/26 09:49:14 bicatali Exp $
 
 USE_EINSTALL=true
 
