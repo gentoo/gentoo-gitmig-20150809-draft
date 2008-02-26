@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/rubberband-1.0.1.ebuild,v 1.1 2008/02/26 22:37:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/rubberband-1.0.1.ebuild,v 1.2 2008/02/26 22:43:21 aballier Exp $
 
 inherit multilib
 
@@ -13,12 +13,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="media-libs/vamp-plugin-sdk
+RDEPEND="media-libs/vamp-plugin-sdk
 	media-libs/libsamplerate
 	media-libs/libsndfile
 	media-libs/ladspa-sdk
 	=sci-libs/fftw-3*"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
