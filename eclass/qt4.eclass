@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.35 2008/02/25 17:07:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.36 2008/02/26 01:11:13 flameeyes Exp $
 
 # @ECLASS: qt4.eclass
 # @MAINTAINER:
@@ -201,7 +201,7 @@ eqmake4() {
 		QMAKE_LFLAGS_RELEASE="${LDFLAGS}" \
 		QMAKE_LFLAGS_DEBUG="${LDFLAGS}" \
 		QMAKE_RPATH= \
-		${@} >> ${LOGFILE} 2>&1
+		"${@}" >> ${LOGFILE} 2>&1
 
 	local result=$?
 	eend ${result}
