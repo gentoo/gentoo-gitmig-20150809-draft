@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.132 2008/02/25 19:24:32 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.133 2008/02/26 14:40:22 armin76 Exp $
+
+  26 Feb 2008; Raúl Porcel <armin76@gentoo.org> cacti-0.8.7b.ebuild:
+  alpha/sparc stable wrt #210840
 
   25 Feb 2008; Steve Dibb <beandog@gentoo.org> cacti-0.8.6j-r8.ebuild:
   amd64 stable, security bug 209918
