@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/marbleblastgold-demo-1.4.1.ebuild,v 1.4 2006/09/19 18:57:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/marbleblastgold-demo-1.4.1.ebuild,v 1.5 2008/02/26 22:38:05 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -25,15 +25,15 @@ src_unpack() {
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
-	dodir ${dir} ${GAMES_BINDIR}
+	dodir "${dir}" "${GAMES_BINDIR}"
 
-	tar -zxf MarbleBlast.tar.gz -C ${D}/${dir} || die "extracting MarbleBlast.tar.gz"
+	tar -zxf MarbleBlast.tar.gz -C "${D}/${dir}" || die "extracting MarbleBlast.tar.gz"
 
-	exeinto ${dir}
+	exeinto "${dir}"
 	doexe bin/Linux/x86/marbleblastgolddemo
-	dosym ${dir}/marbleblastgolddemo ${GAMES_BINDIR}/marbleblastgold-demo
+	dosym "${dir}"/marbleblastgolddemo "${GAMES_BINDIR}"/marbleblastgold-demo
 
-	insinto ${dir}
+	insinto "${dir}"
 	doins MarbleBlast.xpm
 
 	dodoc README.txt
