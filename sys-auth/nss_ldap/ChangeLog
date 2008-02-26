@@ -1,6 +1,6 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.53 2008/01/20 00:58:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.54 2008/02/26 13:24:58 opfer Exp $
 
 *nss_ldap-259 (20 Jan 2008)
 
@@ -85,7 +85,7 @@
   30 Dec 2006; Bryan Østergaard <kloeri@gentoo.org> nss_ldap-253.ebuild:
   Stable on Alpha, bug 158254.
 
-  29 Dec 2006; <fauli@gentoo.org> nss_ldap-253.ebuild:
+  29 Dec 2006; Christian Faulhammer <opfer@gentoo.org> nss_ldap-253.ebuild:
   stable on x86, bug #158254
 
   28 Dec 2006; Gustavo Zacarias <gustavoz@gentoo.org> nss_ldap-253.ebuild:
