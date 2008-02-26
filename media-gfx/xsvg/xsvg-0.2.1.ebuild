@@ -1,17 +1,19 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/xsvg-0.2.1.ebuild,v 1.8 2007/03/16 18:48:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/xsvg-0.2.1.ebuild,v 1.9 2008/02/26 19:40:51 drac Exp $
 
 inherit autotools eutils
 
-DESCRIPTION="Command line usable X11 SVG viewer"
+DESCRIPTION="a command line viewer for SVG files"
 HOMEPAGE="http://cairographics.org"
 SRC_URI="http://cairographics.org/snapshots/${P}.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
-RDEPEND=">=x11-libs/libsvg-cairo-0.1.6"
+
+RDEPEND="x11-libs/libsvg-cairo"
 DEPEND="${RDEPEND}
 	x11-libs/libXt
 	x11-libs/libXcursor"
