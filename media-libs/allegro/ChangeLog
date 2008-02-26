@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.73 2008/02/21 13:37:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.74 2008/02/26 15:51:44 fmccor Exp $
+
+  26 Feb 2008; Ferris McCormick <fmccor@gentoo.org> allegro-4.2.2.ebuild:
+  Add ~sparc for testing --- Bug #210519.
 
   21 Feb 2008; Raúl Porcel <armin76@gentoo.org> allegro-4.2.2.ebuild:
   alpha/ia64 stable wrt #208870
