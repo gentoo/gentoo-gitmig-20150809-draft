@@ -1,6 +1,16 @@
 # ChangeLog for dev-php/PEAR-Pager
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.30 2007/12/06 00:49:24 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.31 2008/02/26 16:32:56 armin76 Exp $
+
+*PEAR-Pager-2.4.5 (26 Feb 2008)
+
+  26 Feb 2008; Raúl Porcel <armin76@gentoo.org> +PEAR-Pager-2.4.5.ebuild:
+  Version bump, import from the php overlay
+
+  23 Feb 2008; Jakub Moc <jakub@gentoo.org>
+  +PEAR-Pager-2.4.5.ebuild:
+  Version bump - bugfix release fixing PEAR bugs #12257, #12934, #12267,
+  #12306, #12531, #12267, #12796, #12797 and #12837
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org> -PEAR-Pager-2.3.4.ebuild,
   PEAR-Pager-2.4.4.ebuild:

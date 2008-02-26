@@ -1,6 +1,16 @@
 # ChangeLog for dev-php/PEAR-PHP_CompatInfo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_CompatInfo/ChangeLog,v 1.4 2007/12/06 00:49:00 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_CompatInfo/ChangeLog,v 1.5 2008/02/26 16:33:41 armin76 Exp $
+
+*PEAR-PHP_CompatInfo-1.6.1 (26 Feb 2008)
+
+  26 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  +PEAR-PHP_CompatInfo-1.6.1.ebuild:
+  Version bump, import from the php overlay
+
+  16 Feb 2008; Jakub Moc <jakub@gentoo.org>
+  PEAR-PHP_CompatInfo-1.6.1.ebuild:
+  Version bump
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   -PEAR-PHP_CompatInfo-1.5.0.ebuild, PEAR-PHP_CompatInfo-1.5.1.ebuild:
