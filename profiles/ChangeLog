@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1155 2008/02/25 14:47:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1156 2008/02/26 10:06:42 ali_bush Exp $
+
+  26 Feb 2008; Alistair Bush <ali_bush@gentoo.org> use.local.desc:
+  Adding dev-java/jython:servletapi description.
 
   25 Feb 2008; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Add switch_user USE-flag for net-p2p/dbhub
