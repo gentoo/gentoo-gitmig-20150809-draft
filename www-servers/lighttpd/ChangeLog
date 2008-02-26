@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.155 2008/02/26 11:22:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.156 2008/02/26 15:15:37 armin76 Exp $
+
+  26 Feb 2008; Raúl Porcel <armin76@gentoo.org> lighttpd-1.4.18-r1.ebuild:
+  alpha/ia64/sparc stable wrt #211230
 
   26 Feb 2008; Markus Rothe <corsair@gentoo.org> lighttpd-1.4.18-r1.ebuild:
   Stable on ppc64; bug #211230
