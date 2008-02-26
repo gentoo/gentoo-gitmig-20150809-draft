@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/phpunit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.14 2008/02/11 21:29:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.15 2008/02/26 16:38:21 armin76 Exp $
+
+*phpunit-3.2.13 (26 Feb 2008)
+
+  26 Feb 2008; Raúl Porcel <armin76@gentoo.org> +phpunit-3.2.13.ebuild:
+  Version bump, import from the php overlay
+
+  19 Feb 2008; Jakub Moc <jakub@gentoo.org> +phpunit-3.2.13.ebuild:
+  Version bump
 
 *phpunit-3.2.10 (11 Feb 2008)
 

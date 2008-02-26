@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/pecl-yaz
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-yaz/ChangeLog,v 1.31 2008/02/09 18:30:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-yaz/ChangeLog,v 1.32 2008/02/26 16:37:22 armin76 Exp $
+
+*pecl-yaz-1.0.14 (26 Feb 2008)
+
+  26 Feb 2008; Raúl Porcel <armin76@gentoo.org> +pecl-yaz-1.0.14.ebuild:
+  Version bump, import from the php overlay
+
+  20 Feb 2008; Jakub Moc <jakub@gentoo.org> +pecl-yaz-1.0.14.ebuild:
+  Version bump
 
   09 Feb 2008; Raúl Porcel <armin76@gentoo.org> pecl-yaz-1.0.13.ebuild:
   alpha/ia64/sparc stable wrt #208545
