@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.6_p20080222.ebuild,v 1.2 2008/02/26 07:23:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.6_p20080222.ebuild,v 1.3 2008/02/26 07:25:01 opfer Exp $
 
 inherit flag-o-matic eutils toolchain-funcs versionator pam
 
@@ -37,7 +37,7 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 
 	# patch up to the specified cvs version
-	epatch ${DISTDIR}/${MY_P}-cvs${MY_PV_DATE}.patch.bz2
+	epatch "${DISTDIR}"/${MY_P}-cvs${MY_PV_DATE}.patch.bz2
 
 	# enable UCONTEXT on alpha
 	epatch "${FILESDIR}"/openafs-alpha-ucontext.patch
