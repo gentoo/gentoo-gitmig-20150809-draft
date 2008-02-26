@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/chillispot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.18 2008/01/03 12:07:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.19 2008/02/26 19:16:29 armin76 Exp $
+
+  26 Feb 2008; Raúl Porcel <armin76@gentoo.org> chillispot-0.99.ebuild,
+  chillispot-1.0.ebuild, chillispot-1.1.0.ebuild:
+  Fix HOMEPAGE, bug #196699
 
   03 Jan 2008; Raúl Porcel <armin76@gentoo.org> chillispot-1.0.ebuild:
   Drop ia64 stable keyword, no hardware to test
