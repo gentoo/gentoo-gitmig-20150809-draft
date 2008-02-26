@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.5.6.ebuild,v 1.1 2008/02/25 21:58:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.5.6.ebuild,v 1.2 2008/02/26 00:38:37 flameeyes Exp $
 
 inherit eutils fdo-mime flag-o-matic qt3 toolchain-funcs
 
@@ -54,10 +54,10 @@ src_unpack() {
 	cd "${S}"
 
 	# Don't build things unused or splitted into separate ebuilds (eg: additions)
-	epatch "${FILESDIR}/${P}-remove-unused.patch"
+	epatch "${FILESDIR}/${PN}-1.5.4-remove-unused.patch"
 	# Don't build the Alsa audio driver and remove Alsa checks in configure
 	# when Alsa is not selected (bug #167739)
-	use alsa || epatch "${FILESDIR}/${P}-remove-alsa.patch"
+	use alsa || epatch "${FILESDIR}/${PN}-1.5.4-remove-alsa.patch"
 }
 
 src_compile() {
