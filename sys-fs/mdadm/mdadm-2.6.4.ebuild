@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-2.6.4.ebuild,v 1.6 2008/02/25 12:50:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-2.6.4.ebuild,v 1.7 2008/02/26 19:47:43 rich0 Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/raid/mdadm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ppc64 ~sparc x86"
 IUSE="static"
 
 src_unpack() {
