@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.2.0_alpha1.ebuild,v 1.1 2008/02/26 01:24:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.2.0_alpha1.ebuild,v 1.2 2008/02/26 01:25:17 flameeyes Exp $
 
 EAPI=1
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64"
 
 SLOT="0"
 
-IUSE="X debug"
+IUSE="+X debug"
 
 RDEPEND="$(qt4_min_version 4.0)"
 DEPEND="${RDEPEND}"
