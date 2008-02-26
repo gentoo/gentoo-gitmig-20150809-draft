@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-ja
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.26 2007/05/23 16:38:17 matsuu Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.27 2008/02/26 18:35:21 armin76 Exp $
+
+  26 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  -man-pages-ja-20060415-r2.ebuild, man-pages-ja-20070515.ebuild:
+  All stable, remove old
 
 *man-pages-ja-20070515 (23 May 2007)
 
