@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/microba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/microba/ChangeLog,v 1.11 2007/11/25 14:40:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/microba/ChangeLog,v 1.12 2008/02/26 13:30:30 opfer Exp $
 
   25 Nov 2007; Brent Baude <ranger@gentoo.org> microba-0.4.4.ebuild:
   Marking microba-0.4.4 ppc for bug 199257
@@ -29,7 +29,7 @@
   microba-0.4.3.ebuild:
   Added ~amd64 keyword
 
-  29 Dec 2006; <fauli@gentoo.org> microba-0.4.3.ebuild:
+  29 Dec 2006; Christian Faulhammer <opfer@gentoo.org> microba-0.4.3.ebuild:
   stable on x86, bug #154336
 
   27 Dec 2006; Petteri Räty <betelgeuse@gentoo.org> microba-0.4.3.ebuild:

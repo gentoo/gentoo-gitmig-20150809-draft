@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/glazedlists
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.11 2007/08/03 15:36:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.12 2008/02/26 13:31:37 opfer Exp $
 
   03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
   glazedlists-1.5.0.ebuild:
@@ -24,7 +24,7 @@
   glazedlists-1.5.0.ebuild:
   Added ~amd64 keyword
 
-  29 Dec 2006; <fauli@gentoo.org> glazedlists-1.5.0.ebuild:
+  29 Dec 2006; Christian Faulhammer <opfer@gentoo.org> glazedlists-1.5.0.ebuild:
   stable on x86, bug #154336
 
   29 Nov 2006; Vlastimil Babka <caster@gentoo.org>
