@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/highline
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.20 2008/02/24 17:14:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.21 2008/02/26 18:44:10 nixnut Exp $
+
+  26 Feb 2008; nixnut <nixnut@gentoo.org> highline-6.1.ebuild:
+  Stable on ppc wrt bug 211278
 
   24 Feb 2008; Christian Faulhammer <opfer@gentoo.org> highline-6.1.ebuild:
   stable x86/amd64, bug 211278
