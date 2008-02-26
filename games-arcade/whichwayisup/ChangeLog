@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/whichwayisup
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/ChangeLog,v 1.6 2008/02/20 18:42:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/ChangeLog,v 1.7 2008/02/26 22:21:52 coldwind Exp $
+
+*whichwayisup-0.7.9 (26 Feb 2008)
+
+  26 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +whichwayisup-0.7.9.ebuild:
+  Version bump, closes bug #209986
 
   20 Feb 2008; nixnut <nixnut@gentoo.org> whichwayisup-0.7.0.ebuild:
   Added ~ppc wrt bug 207910
