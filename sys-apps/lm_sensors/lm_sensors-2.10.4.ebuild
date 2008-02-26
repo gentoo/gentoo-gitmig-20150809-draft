@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.4.ebuild,v 1.6 2008/01/17 20:43:49 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.4.ebuild,v 1.7 2008/02/26 08:29:32 zlin Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -124,24 +124,24 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Please run \`/usr/sbin/sensors-detect' in order to setup"
-	einfo "/etc/conf.d/lm_sensors."
-	einfo
-	einfo "/etc/conf.d/lm_sensors is vital to the init-script."
-	einfo "Please make sure you also add lm_sensors to the desired"
-	einfo "runlevel. Otherwise your I2C modules won't get loaded"
-	einfo "on the next startup."
-	einfo
-	einfo "You will also need to run the above command if you're upgrading from"
-	einfo "<=${PN}-2.9.0, as the needed entries in /etc/conf.d/lm_sensors has"
-	einfo "changed."
-	einfo
-	einfo "Be warned, the probing of hardware in your system performed by"
-	einfo "sensors-detect could freeze your system. Also make sure you read"
-	einfo "the documentation before running lm_sensors on IBM ThinkPads."
-	einfo
-	einfo "Please refer to the lm_sensors documentation for more information."
-	einfo "(http://www.lm-sensors.org/wiki/Documentation)"
-	einfo
+	elog
+	elog "Please run \`/usr/sbin/sensors-detect' in order to setup"
+	elog "/etc/conf.d/lm_sensors."
+	elog
+	elog "/etc/conf.d/lm_sensors is vital to the init-script."
+	elog "Please make sure you also add lm_sensors to the desired"
+	elog "runlevel. Otherwise your I2C modules won't get loaded"
+	elog "on the next startup."
+	elog
+	elog "You will also need to run the above command if you're upgrading from"
+	elog "<=${PN}-2.9.0, as the needed entries in /etc/conf.d/lm_sensors has"
+	elog "changed."
+	elog
+	elog "Be warned, the probing of hardware in your system performed by"
+	elog "sensors-detect could freeze your system. Also make sure you read"
+	elog "the documentation before running lm_sensors on IBM ThinkPads."
+	elog
+	elog "Please refer to the lm_sensors documentation for more information."
+	elog "(http://www.lm-sensors.org/wiki/Documentation)"
+	elog
 }
