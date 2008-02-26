@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.2.1-r1.ebuild,v 1.1 2008/02/26 10:30:51 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.2.1-r1.ebuild,v 1.2 2008/02/26 16:29:17 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="readline source doc servletapi mysql postgres examples oracle"
-#jdnc 
+#jdnc
 
 EAPI=1
 
@@ -78,7 +78,6 @@ src_unpack() {
 	fi
 }
 
-
 src_compile() {
 	local antflags="-Dbase.path=src/java -Dsource.dir=src/java/src"
 	local pylib="Python-${PYVER}/Lib"
@@ -93,7 +92,6 @@ src_test() {
 	antflags="${antflags} -Dpython.lib=${pylib}"
 	eant ${antflags} bugtest
 }
-
 
 src_install() {
 	java-pkg_dojar "dist/${PN}.jar"
