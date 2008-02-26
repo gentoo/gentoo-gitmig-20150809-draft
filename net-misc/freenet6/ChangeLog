@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/freenet6
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.25 2007/06/16 03:13:45 angelos Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.26 2008/02/26 19:40:43 voyageur Exp $
+
+*freenet6-5.1 (26 Feb 2008)
+
+  26 Feb 2008; Bernard Cafarelli <voyageur@gentoo.org> files/gw6c.rc,
+  freenet6-5.0.ebuild, +freenet6-5.1.ebuild:
+  Make initscript depend on bootmisc, as the daemon writes in /tmp.
+  Thanks jakub in bug #211358
+  Also version bump to 5.1, and fix quoting
 
   16 Jun 2007; Christoph Mende <angelos@gentoo.org> freenet6-4.2.2.ebuild:
   Stable on amd64 wrt bug 180450

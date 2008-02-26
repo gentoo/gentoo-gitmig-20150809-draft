@@ -3,7 +3,8 @@
 FREENET6_CLIENT="/usr/sbin/gw6c"
 
 depend() {
-	need net
+	need net localmount
+	after bootmisc
 	use dns logger
 }
 
