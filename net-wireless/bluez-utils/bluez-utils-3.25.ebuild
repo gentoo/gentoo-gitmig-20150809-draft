@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.25.ebuild,v 1.1 2008/02/03 22:45:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.25.ebuild,v 1.2 2008/02/26 15:55:52 betelgeuse Exp $
 
 inherit autotools multilib eutils
 
@@ -150,4 +150,7 @@ pkg_postinst() {
 		elog "The bluetooth service should be started automatically by udev"
 		elog "when the required hardware is inserted next time."
 	fi
+	elog
+	ewarn "On first install you need to run /etc/init.d/dbus reload or hcid"
+	ewarn "will fail to start."
 }
