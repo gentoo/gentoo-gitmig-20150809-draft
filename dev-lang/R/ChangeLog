@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.116 2008/02/19 14:20:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.117 2008/02/26 17:32:40 bicatali Exp $
+
+  26 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org> -R-2.2.1-r1.ebuild,
+  -R-2.6.1.ebuild, R-2.6.1-r1.ebuild, R-2.6.2.ebuild:
+  Removed older versions, and duplicate license files (see bug #211534)
 
   19 Feb 2008; Brent Baude <ranger@gentoo.org> R-2.6.1-r1.ebuild:
   stable ppc64, bug 210229

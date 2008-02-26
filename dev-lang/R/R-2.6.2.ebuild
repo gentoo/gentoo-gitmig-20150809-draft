@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.2.ebuild,v 1.1 2008/02/14 14:00:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.2.ebuild,v 1.2 2008/02/26 17:32:40 bicatali Exp $
 
 inherit fortran flag-o-matic bash-completion
 
@@ -119,13 +119,6 @@ src_install() {
 		R_HOME=${R_HOME}
 	EOF
 	doenvd 99R || die "doenvd failed"
-
-	# avoid copying licenses but link then because of html docs
-	rm -f "${D}"usr/share/doc/${PF}/{COPYING,COPYING.LIB} \
-		"${D}"${R_HOME}/COPYING
-	dosym "${PORTDIR}"/licenses/GPL-2 /usr/share/doc/${PF}/COPYING
-	dosym "${PORTDIR}"/licenses/LGPL-2.1 /usr/share/doc/${PF}/COPYING.LIB
-	dosym "${PORTDIR}"/licenses/GPL-2 ${R_HOME}/COPYING
 
 	dobashcompletion "${WORKDIR}"/R.bash_completion
 }
