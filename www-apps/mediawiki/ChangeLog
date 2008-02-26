@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.97 2008/02/25 15:09:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.98 2008/02/26 07:11:16 wrobel Exp $
+
+  26 Feb 2008; Gunnar Wrobel <wrobel@gentoo.org>
+  -files/postinstall-1.5-en.txt, -mediawiki-1.8.5.ebuild,
+  mediawiki-1.11.1.ebuild:
+  Remove vulnerable version (sec issue #207757) and fix dependencies (#208584).
 
   25 Feb 2008; Steve Dibb <beandog@gentoo.org> mediawiki-1.11.1.ebuild:
   amd64 stable, security bug 207757

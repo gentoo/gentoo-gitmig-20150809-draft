@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.1.ebuild,v 1.5 2008/02/25 15:09:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.1.ebuild,v 1.6 2008/02/26 07:11:16 wrobel Exp $
 
 EAPI="1"
 inherit webapp depend.php versionator eutils
@@ -24,7 +24,8 @@ RDEPEND="${DEPEND}
 
 RESTRICT="test"
 
-need_php5
+need_httpd_cgi
+need_php_httpd
 
 pkg_setup() {
 	webapp_pkg_setup
