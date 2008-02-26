@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1-r2.ebuild,v 1.9 2008/01/08 14:24:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1-r2.ebuild,v 1.10 2008/02/26 17:33:31 bicatali Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -153,5 +153,4 @@ src_install() {
 	fi
 	dodoc AUTHORS README TODO NEWS TRANSLATORS *.txt || die
 	dohtml coding-standards.html || die
-	dosym "${PORTDIR}"/licenses/GPL-2 /usr/share/${PN}/COPYING
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.37 2008/01/08 14:24:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.38 2008/02/26 17:33:31 bicatali Exp $
+
+  26 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/celestia-1.4.1-kde-datadir.patch, celestia-1.4.1-r2.ebuild:
+  Duplicate license file (see bug #211534)
 
   08 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
   celestia-1.4.1-r2.ebuild:
