@@ -1,6 +1,15 @@
 # ChangeLog for media-video/ffmpegthumbnailer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.31 2008/02/26 16:07:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.32 2008/02/26 18:32:55 drac Exp $
+
+*ffmpegthumbnailer-1.2.2 (26 Feb 2008)
+
+  26 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  -files/ffmpegthumbnailer-1.2.1-asneeded.patch,
+  -ffmpegthumbnailer-1.1.5.ebuild, -ffmpegthumbnailer-1.2.1.ebuild,
+  +ffmpegthumbnailer-1.2.2.ebuild:
+  Version bump, only change from 1.2.1 is that upstream applied our
+  -Wl,--as-needed patch so we can avoid running eautomake.
 
 *ffmpegthumbnailer-1.2.1 (26 Feb 2008)
 
