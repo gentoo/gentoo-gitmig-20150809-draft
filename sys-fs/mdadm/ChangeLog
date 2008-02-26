@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.90 2008/02/25 12:50:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.91 2008/02/26 07:18:41 vapier Exp $
+
+*mdadm-2.6.4-r1 (26 Feb 2008)
+
+  26 Feb 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/raid-start.sh-2.6.4, +mdadm-2.6.4-r1.ebuild:
+  Fix extra /dev prefixes being added #211167.
 
   25 Feb 2008; Jeroen Roovers <jer@gentoo.org> mdadm-2.6.4.ebuild:
   Stable for HPPA (bug #210946).
