@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.27 2008/02/10 15:49:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.28 2008/02/26 16:06:18 betelgeuse Exp $
+
+*bluez-gnome-0.23 (26 Feb 2008)
+
+  26 Feb 2008; Petteri Räty <betelgeuse@gentoo.org>
+  bluez-gnome-0.17.ebuild, bluez-gnome-0.18.ebuild,
+  +bluez-gnome-0.23.ebuild:
+  Version bump. Restrict older versions to ~obex-data-server-0.1 because of
+  API changes.
 
 *bluez-gnome-0.18 (10 Feb 2008)
 

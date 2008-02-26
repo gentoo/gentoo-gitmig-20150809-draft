@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-0.18.ebuild,v 1.2 2008/02/26 16:06:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-0.23.ebuild,v 1.1 2008/02/26 16:06:18 betelgeuse Exp $
 
 inherit gnome2
 
@@ -27,13 +27,14 @@ DEPEND="
 
 RDEPEND="=net-wireless/bluez-utils-3*
 	gnome? ( gnome-base/nautilus )
-	~app-mobilephone/obex-data-server-0.1
+	>=app-mobilephone/obex-data-server-0.3
 	${COMMON_DEPEND}"
 
 PDEPEND="gnome? ( gnome-extra/gnome-vfs-obexftp )"
 
 G2CONF="--disable-desktop-update
-		--disable-mime-update"
+		--disable-mime-update
+		--disable-icon-update"
 
 DOCS="AUTHORS README NEWS ChangeLog"
 
