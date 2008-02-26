@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.34 2008/02/26 11:49:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.35 2008/02/26 13:55:50 jer Exp $
+
+  26 Feb 2008; Jeroen Roovers <jer@gentoo.org> libmowgli-0.6.1.ebuild:
+  Stable for HPPA (maybe bug #208255).
 
   26 Feb 2008; Tony Vroon <chainsaw@gentoo.org> libmowgli-0.6.1.ebuild:
   Early stable on same 3 architectures, for bug #208255.
