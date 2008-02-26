@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/ChangeLog,v 1.1 2008/02/13 14:03:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/ChangeLog,v 1.2 2008/02/26 21:20:27 bicatali Exp $
+
+  26 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org> dap-2.2.6.3.ebuild:
+  removing namespaces in order to avoid annoying warning
 
 *dap-2.2.6.3 (13 Feb 2008)
 

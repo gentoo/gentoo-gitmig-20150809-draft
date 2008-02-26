@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/dap-2.2.6.3.ebuild,v 1.2 2008/02/13 20:30:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/dap-2.2.6.3.ebuild,v 1.3 2008/02/26 21:20:27 bicatali Exp $
 
 inherit distutils
 
@@ -15,7 +15,6 @@ IUSE="server"
 
 RDEPEND="dev-python/httplib2
 	server? ( dev-python/paste
-			  dev-python/paste
 			  dev-python/pastedeploy
 			  dev-python/pastescript
 			  dev-python/cheetah )"
@@ -24,3 +23,10 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
 DOCS="docs/bugs docs/Changelog docs/history"
+
+src_unpack() {
+	distutils_src_unpack
+	cd "${S}"
+	# removing namespaces in order to avoid annoying warning
+	sed -i -e '/namespace_packages/d' setup.py
+}
