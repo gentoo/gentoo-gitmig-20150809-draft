@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.16 2008/01/15 12:05:20 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.17 2008/02/26 19:08:06 xmerlin Exp $
 
 WANT_AUTOMAKE="1.8"
 
 inherit eutils flag-o-matic pam autotools
 
 MY_P="${PN}-${PV}-1"
-DESCRIPTION="Console-based application to efficiently save raw partition data to an image file. Optional encryption/compression support."
+DESCRIPTION="Console-based application to efficiently save raw partition data to an image file."
 HOMEPAGE="http://www.partimage.org/"
 SRC_URI="mirror://sourceforge/partimage/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
@@ -113,7 +113,7 @@ src_install() {
 	newconfd "${FILESDIR}"/${PN}d.conf ${PN}d || die
 
 	doman debian/partimage.1 debian/partimaged.8 "${FILESDIR}"/partimagedusers.5 || die
-	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL README* TODO partimage.lsm
+	dodoc AUTHORS BUGS ChangeLog INSTALL README* TODO partimage.lsm
 
 	# pam
 	if use pam

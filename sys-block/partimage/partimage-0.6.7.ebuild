@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.6.ebuild,v 1.3 2008/02/26 19:08:06 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.7.ebuild,v 1.1 2008/02/26 19:08:06 xmerlin Exp $
 
 WANT_AUTOMAKE="1.10"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.partimage.org/"
 SRC_URI="mirror://sourceforge/partimage/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="ssl nologin nls pam static"
 
 DEPEND="virtual/libc
@@ -50,21 +50,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# we can do better security ourselves
-	epatch "${FILESDIR}"/${P}-datadir-path.patch || die
-	epatch "${FILESDIR}"/${P}-dont-discard-error-message-in-batch-mode.patch || die
 	epatch "${FILESDIR}"/${PN}-0.6.4-save_file_and_rest_file_actions.patch || die
-	epatch "${FILESDIR}"/${PN}-0.6.4-varargs.patch || die
-	epatch "${FILESDIR}"/${PN}-0.6.4-empty-salt.patch || die
-	epatch "${FILESDIR}"/${PN}-0.6.4-port.patch || die
-	epatch "${FILESDIR}"/${P}-andre-przywara_amd64.patch || die
-	epatch "${FILESDIR}"/${P}-andre-przywara_warnings.patch || die
-	epatch "${FILESDIR}"/${P}-clonezilla_ext3_blocks-per-group.patch || die
-	epatch "${FILESDIR}"/${P}-not_install_info.patch || die
+	#epatch "${FILESDIR}"/${PN}-0.6.6-not_install_info.patch || die
 	epatch "${FILESDIR}"/${P}-chown.patch || die
-	epatch "${FILESDIR}"/${P}-gui.diff || die
-	epatch "${FILESDIR}"/${P}-disable_header_check.patch || die
-	epatch "${FILESDIR}"/${P}-thread-privilege-fix.patch || die
+	epatch "${FILESDIR}"/${PN}-0.6.6-disable_header_check.patch || die
+	epatch "${FILESDIR}"/${P}-datadir-path.patch || die
 }
 
 src_compile() {
