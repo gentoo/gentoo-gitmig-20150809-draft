@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-3.5.9.ebuild,v 1.1 2008/02/20 23:30:42 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-3.5.9.ebuild,v 1.2 2008/02/26 06:59:34 zlin Exp $
 
 KMNAME=kdepim
 EAPI="1"
@@ -34,7 +34,7 @@ src_unpack() {
 	# Call Qt 3 designer
 	sed -i -e "s:\"designer\":\"${QTDIR}/bin/designer\":g" "${S}/libkdepim/kcmdesignerfields.cpp" || die "sed failed"
 
-	if ! [[ $(xhost >> /dev/null 2>/dev/null) ]] ; then
+	if ! xhost >> /dev/null 2>/dev/null; then
 		einfo "User ${USER} has no X access, disabling tests."
 		sed -e "s:tests::" -i libkdepim/Makefile.am || die "sed failed"
 	fi
