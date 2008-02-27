@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/cvm
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/ChangeLog,v 1.18 2006/11/23 20:01:22 vivo Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/ChangeLog,v 1.19 2008/02/27 03:55:08 robbat2 Exp $
+
+  27 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> +cvm-0.82.ebuild:
+  Version bump, go manual install since the upstream one sucks so much.
+
+*cvm-0.82 (27 Feb 2008)
+
+  27 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> +cvm-0.82.ebuild:
+  Version bump.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> cvm-0.32-r1.ebuild,
   cvm-0.76.ebuild:
