@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/proofgeneral
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.18 2007/10/16 06:27:25 opfer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.19 2008/02/27 21:26:46 ulm Exp $
+
+*proofgeneral-3.7 (27 Feb 2008)
+
+  27 Feb 2008; Ulrich Mueller <ulm@gentoo.org>
+  files/50proofgeneral-gentoo.el, +proofgeneral-3.7.ebuild:
+  Version bump. Use our own site file and install it in the proper location,
+  fixes bug 211658. Some cleanup of the ebuild.
 
   16 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   proofgeneral-3.5-r1.ebuild:

@@ -1,4 +1,5 @@
 
-;;; Proof General site-lisp configuration
+;;; proofgeneral site-lisp configuration
 
-(add-to-list 'load-path "@SITELISP@/generic/proof-site.el")
+(add-to-list 'load-path "@SITELISP@/generic")
+(require 'proof-site)
