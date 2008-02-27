@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.90 2008/02/25 13:32:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.91 2008/02/27 15:18:35 armin76 Exp $
+
+  27 Feb 2008; Raúl Porcel <armin76@gentoo.org> xfsprogs-2.9.5.ebuild:
+  alpha/ia64/sparc stable wrt #211152
 
   25 Feb 2008; Jeroen Roovers <jer@gentoo.org> xfsprogs-2.9.5.ebuild:
   Stable for HPPA (bug #211152).
