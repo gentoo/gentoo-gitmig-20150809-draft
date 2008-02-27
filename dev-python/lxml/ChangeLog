@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/lxml
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.25 2007/12/15 10:06:15 lucass Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.26 2008/02/27 23:13:33 dev-zero Exp $
+
+*lxml-2.0.2 (27 Feb 2008)
+
+  27 Feb 2008; Tiziano Müller <dev-zero@gentoo.org> +lxml-2.0.2.ebuild:
+  Version bump (bug #208807, thanks to Torsten Rehn).
 
 *lxml-1.3.6 (15 Dec 2007)
 
