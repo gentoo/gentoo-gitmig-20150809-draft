@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.1.ebuild,v 1.3 2007/10/24 12:08:44 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.1.ebuild,v 1.4 2008/02/27 20:34:37 cedk Exp $
 
 inherit distutils
 
@@ -28,7 +28,7 @@ src_install() {
 	# Use INSTALL_MASK  if you do not want to touch /etc/logrotate.d.
 	# See http://thread.gmane.org/gmane.linux.gentoo.devel/35675
 	insinto /etc/logrotate.d
-	newins ${FILESDIR}/${PN}-logrotate ${PN} || die
+	newins "${FILESDIR}"/${PN}-logrotate ${PN} || die
 }
 
 pkg_postinst() {
