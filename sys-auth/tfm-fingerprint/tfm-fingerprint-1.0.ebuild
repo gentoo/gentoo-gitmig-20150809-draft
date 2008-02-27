@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/tfm-fingerprint-1.0.ebuild,v 1.2 2008/02/27 10:40:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/tfm-fingerprint-1.0.ebuild,v 1.3 2008/02/27 10:59:24 vapier Exp $
 
 inherit multilib
 
@@ -35,6 +35,9 @@ pkg_postinst() {
 	elog "Note: You have to be in the group usb to access the fingerprint device."
 }
 
-pkg_prerm() {
-	doit_with_ewarn mod_install -fu /usr/$(get_libdir)/libtfmessbsp.so
+pkg_postrm() {
+	# only do this if uninstalling
+	if ! has_version ${CATEGORY}/${PN} ; then
+		doit_with_ewarn mod_install -fu libtfmessbsp.so
+	fi
 }
