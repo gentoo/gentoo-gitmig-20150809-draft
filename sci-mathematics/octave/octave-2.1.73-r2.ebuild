@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r2.ebuild,v 1.5 2007/12/25 01:46:56 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r2.ebuild,v 1.6 2008/02/27 20:30:08 markusle Exp $
 
 inherit flag-o-matic fortran autotools xemacs-elisp-common
 
@@ -63,21 +63,20 @@ src_compile() {
 	# octave links agains -lmpi by default
 	# mpich needs -lmpich instead
 	if use mpi ; then
-	    if built_with_use sys-cluster/mpich2 cxx ; then
-		elog "mpich2 must be built without C++ support!"
-		die "please rebuild mpich2 with USE=-cxx..."
-	    else
 		CC="mpicc"
 		if has_version 'sys-cluster/mpich' ; then
-		    CXX="mpiCC"
-		    myconf="${myconf} --with-mpi=mpich"
+				CXX="mpiCC"
+				myconf="${myconf} --with-mpi=mpich"
 		elif has_version 'sys-cluster/mpich2' ; then
+			if built_with_use sys-cluster/mpich2 cxx ; then
+				elog "mpich2 must be built without C++ support!"
+				die "please rebuild mpich2 with USE=-cxx..."
+			fi
 		    F77="mpif77"
 		    myconf="${myconf} --with-mpi=mpich"
 		else
 		    myconf="${myconf} --with-mpi=mpi"
 		fi
-	    fi
 	else
 	    CC="$(tc-getCC)"
 	    CXX="$(tc-getCXX)"
