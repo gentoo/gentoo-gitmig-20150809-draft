@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.42 2008/02/20 20:35:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.43 2008/02/27 15:38:55 cardoe Exp $
+
+*mythtv-themes-0.21_beta15931 (27 Feb 2008)
+
+  27 Feb 2008; Doug Klima <cardoe@gentoo.org>
+  -mythtv-themes-0.21_beta15924.ebuild,
+  +mythtv-themes-0.21_beta15931.ebuild:
+  rename for bug #211648
 
 *mythtv-themes-0.21_beta15924 (20 Feb 2008)
 
