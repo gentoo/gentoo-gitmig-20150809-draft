@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1158 2008/02/27 17:19:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1159 2008/02/27 18:29:56 bicatali Exp $
+
+  27 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  Added pch local flag for sci-astronomy/celestia
 
   27 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
   Masking dev-util/catalyst pre-release versions so people will quit filing
