@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.35-r1.ebuild,v 1.11 2007/07/22 07:56:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.35-r1.ebuild,v 1.12 2008/02/27 20:18:19 cardoe Exp $
 
 inherit eutils perl-module
 
 DESCRIPTION="interface to Thomas Boutell's gd library"
-HOMEPAGE="http://www.cpan.org/modules/by-module/GD/${P}.readme"
+HOMEPAGE="http://www.cpan.org/modules/by-module/GD/"
 SRC_URI="mirror://cpan/authors/id/L/LD/LDS/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -20,6 +20,40 @@ DEPEND=">=media-libs/gd-2.0.33
 	xpm? ( x11-libs/libXpm )
 	gif? ( media-libs/giflib )
 	dev-lang/perl"
+
+pkg_setup() {
+	local i_can_has_die=0
+
+	if use jpeg && ! built_with_use media-libs/gd jpeg; then
+		echo
+		eerror "If you want to compile dev-perl/GD with USE=jpeg, you must first"
+		eerror "compile media-libs/gd with USE=jpeg"
+		i_can_has_die=1
+	fi
+
+	if use truetype && ! built_with_use media-libs/gd truetype; then
+		echo
+		eerror "If you want to compile dev-perl/GD with USE=truetype, you must first"
+		eerror "compile media-libs/gd with USE=truetype"
+		i_can_has_die=1
+	fi
+
+	if use png && ! built_with_use media-libs/gd png; then
+		echo
+		eerror "If you want to compile dev-perl/GD with USE=png, you must first"
+		eerror "compile media-libs/gd with USE=png"
+		i_can_has_die=1
+	fi
+
+	if use xpm && ! built_with_use media-libs/gd xpm; then
+		echo
+		eerror "If you want to compile dev-perl/GD with USE=xpm, you must first"
+		eerror "compile media-libs/gd with USE=xpm"
+		i_can_has_die=1
+	fi
+
+	[[ ${i_can_has_die} -ne 0 ]] && die "Please fix the errors above before continuing"
+}
 
 src_compile() {
 	myconf=""
