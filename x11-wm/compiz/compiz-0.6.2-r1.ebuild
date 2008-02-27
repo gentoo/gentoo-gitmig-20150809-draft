@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.6.2-r1.ebuild,v 1.2 2007/11/26 16:51:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.6.2-r1.ebuild,v 1.3 2008/02/27 19:26:14 cardoe Exp $
 
 inherit gnome2 eutils
 
@@ -28,7 +28,8 @@ DEPEND=">=media-libs/mesa-6.5.1-r1
 	dev-libs/libxslt
 	gnome? ( >=gnome-base/control-center-2.16.1 )
 	svg? ( gnome-base/librsvg )
-	dbus? ( >=sys-apps/dbus-1.0 )
+	dbus? ( >=sys-apps/dbus-1.0
+			dev-libs/dbus-glib )
 	kde? (
 		|| ( kde-base/kdebase kde-base/kwin )
 		dev-libs/dbus-qt3-old )"
@@ -37,7 +38,7 @@ RDEPEND="${DEPEND}
 	x11-apps/mesa-progs"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/compiz-0.6.2-CVE-2007-3920.patch"
 }
