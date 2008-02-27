@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.214 2008/02/23 23:30:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.215 2008/02/27 21:03:46 cardoe Exp $
+
+*mythtv-0.21_beta16309 (27 Feb 2008)
+
+  27 Feb 2008; Doug Klima <cardoe@gentoo.org> mythtv-0.21_beta16210.ebuild,
+  +mythtv-0.21_beta16309.ebuild:
+  Add new opengl-video and opengl-xvmc USE flags. Support python bindings.
+  Clean up configure command line construction and alphabetize for ease. Bump
+  to latest 0.21 version
 
 *mythtv-0.21_beta16210 (23 Feb 2008)
 
