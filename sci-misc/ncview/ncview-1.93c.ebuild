@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-1.93c.ebuild,v 1.2 2008/01/11 09:51:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-1.93c.ebuild,v 1.3 2008/02/27 10:18:52 bicatali Exp $
 
 inherit multilib
 
@@ -21,7 +21,8 @@ DEPEND="sci-libs/netcdf
 src_compile() {
 	# force netpbm (could be a use flag, but worth it?)
 	econf \
-		--with-x \
+		--x-libraries=/usr/$(get_libdir) \
+		--x-include=/usr/include \
 		--with-libppm \
 		$(use_with udunits) \
 		|| die "econf failed"
@@ -45,5 +46,5 @@ src_install() {
 		install || "emake install failed"
 	insinto /usr/share/${PN}
 	doins *.ncmap nc_overlay* || die "doins failed"
-	dodoc README README_WISH_LIST RELEASE_NOTES
+	dodoc README README_WISH_LIST RELEASE_NOTES || die
 }
