@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/dovecot-antispam-20071019.ebuild,v 1.3 2008/02/27 09:54:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/dovecot-antispam-20080227.ebuild,v 1.1 2008/02/27 09:54:22 hollow Exp $
 
 inherit confutils eutils autotools flag-o-matic multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug dspam crm114 mailtrain signature-log"
+IUSE="debug dspam crm114 mailtrain signature-log syslog"
 
 DEPEND="net-mail/dovecot
 	dspam? ( mail-filter/dspam )
@@ -27,6 +27,7 @@ top_builddir() {
 
 pkg_setup() {
 	confutils_require_one dspam signature-log mailtrain crm114
+	confutils_use_depend_all syslog debug
 }
 
 src_unpack() {
@@ -49,14 +50,20 @@ src_compile() {
 	use mailtrain && echo BACKEND=mailtrain >> .config
 	use crm114 && echo BACKEND=crm114-exec >> .config
 
-	use debug && echo DEBUG=stderr >> .config
+	if use debug; then
+		if use syslog; then
+			echo DEBUG=syslog >> .config
+		else
+			echo DEBUG=stderr >> .config
+		fi
+	fi
 
 	emake || die "make failed"
 }
 
 src_install () {
 	source "${ROOT}"/usr/lib/dovecot/dovecot-config || \
-	die "cannot find dovecot-config"
+		die "cannot find dovecot-config"
 
 	dodir "${moduledir}"/imap/
 	make DESTDIR="${D}" install || die "make install failed"
