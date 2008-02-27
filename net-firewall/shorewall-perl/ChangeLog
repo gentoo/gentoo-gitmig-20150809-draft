@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/shorewall-perl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.12 2008/02/25 18:10:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.13 2008/02/27 15:40:07 pva Exp $
+
+*shorewall-perl-4.0.9-r1 (27 Feb 2008)
+
+  27 Feb 2008; <pva@gentoo.org> +shorewall-perl-4.0.9-r1.ebuild:
+  Updating patch level to fix bridging issues, bug #211585, reported Stefan
+  Wimmer, fixed by Vieri.
 
   25 Feb 2008; <pva@gentoo.org> shorewall-perl-4.0.9.ebuild:
   Don't depend on shorewall-shell by default, bug #211321, thank you Stefan
