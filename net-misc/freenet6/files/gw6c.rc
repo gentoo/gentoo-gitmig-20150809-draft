@@ -8,7 +8,22 @@ depend() {
 	use dns logger
 }
 
+checkconfig() {
+	if [ $(uname -s) = "Linux" ] ; then
+		if [ ! -e /dev/net/tun ]; then
+			if ! modprobe tun ; then
+				eerror "TUN/TAP support is not available" \
+					"in this kernel"
+				return 1
+			fi
+		fi
+	fi
+	return 0
+}
+
 start() {
+	checkconfig || return 1
+
 	ebegin "Starting Freenet6 IPv6 Client"
 	start-stop-daemon --start --quiet \
 		--exec $FREENET6_CLIENT -- -f /etc/freenet6/gw6c.conf
