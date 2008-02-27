@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.19 2008/02/27 20:11:10 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.20 2008/02/27 22:38:38 maekke Exp $
+
+  27 Feb 2008; Markus Meier <maekke@gentoo.org> pommed-1.14.ebuild:
+  x86 stable, bug #206680
 
   27 Feb 2008; Cédric Krier <cedk@gentoo.org> pommed-1.5.ebuild,
   pommed-1.12.ebuild, pommed-1.14.ebuild:
