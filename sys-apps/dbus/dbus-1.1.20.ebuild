@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.1.20.ebuild,v 1.1 2008/02/27 20:48:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.1.20.ebuild,v 1.2 2008/02/27 20:50:58 cardoe Exp $
 
 inherit eutils multilib autotools flag-o-matic
 
@@ -104,12 +104,15 @@ pkg_postinst() {
 	elog "Some applications require a session bus in addition to the system"
 	elog "bus. Please see \`man dbus-launch\` for more information."
 	elog
-	ewarn
+	elog
 	ewarn "You MUST run 'revdep-rebuild' after emerging this package"
-	elog  "If you notice any issues, please rebuild sys-apps/hal"
-	ewarn
+	elog
 	ewarn "If you are currently running X with the hal useflag enabled"
 	ewarn "restarting the dbus service WILL restart X as well"
 	ebeep 5
-	ewarn
+	elog
+	ewarn "You must restart D-Bus \`/etc/init.d/dbus restart\` to run"
+	ewarn "the new version of the daemon. For many people, this means"
+	ewarn "exiting X as well."
+
 }
