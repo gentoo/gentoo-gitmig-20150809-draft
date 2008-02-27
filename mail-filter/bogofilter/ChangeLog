@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.98 2008/02/26 20:10:50 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.99 2008/02/27 15:10:19 armin76 Exp $
+
+  27 Feb 2008; Raúl Porcel <armin76@gentoo.org> bogofilter-1.1.6.ebuild:
+  alpha/ia64 stable wrt #211412
 
   26 Feb 2008; Ferris McCormick <fmccor@gentoo.org> bogofilter-1.1.6.ebuild:
   Sparc stable --- Bug #211412 --- tests good.
