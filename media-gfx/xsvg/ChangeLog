@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsvg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/ChangeLog,v 1.19 2008/02/26 19:40:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/ChangeLog,v 1.20 2008/02/27 04:23:12 jer Exp $
+
+  27 Feb 2008; Jeroen Roovers <jer@gentoo.org> xsvg-0.2.1.ebuild:
+  Stable for HPPA too.
 
   26 Feb 2008; Samuli Suominen <drac@gentoo.org> xsvg-0.2.1.ebuild:
   amd64 stable, been using it a half year.
