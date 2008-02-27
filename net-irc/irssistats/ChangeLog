@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssistats
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.17 2008/02/26 18:38:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.18 2008/02/27 11:15:00 coldwind Exp $
+
+  27 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
+  irssistats-0.75.ebuild:
+  amd64 stable wrt bug #206447
 
   26 Feb 2008; nixnut <nixnut@gentoo.org> irssistats-0.75.ebuild:
   Stable on ppc wrt bug 211384
