@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/tw_cli
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.23 2008/02/27 00:39:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.24 2008/02/27 01:21:51 robbat2 Exp $
+
+  27 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> tw_cli-9.4.0.ebuild,
+  tw_cli-9.4.0.1.ebuild, tw_cli-9.4.1.2.ebuild, tw_cli-9.4.2.ebuild,
+  tw_cli-9.5.0.ebuild:
+  Clean up links to the release notes for each of the recent versions, and
+  also make preperations for the FreeBSD version of the tool.
 
   27 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> tw_cli-9.4.2.ebuild,
   tw_cli-9.5.0.ebuild:

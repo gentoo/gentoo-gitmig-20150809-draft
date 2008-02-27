@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.4.0.ebuild,v 1.4 2007/07/02 15:29:58 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.4.0.ebuild,v 1.5 2008/02/27 01:21:51 robbat2 Exp $
 
 DESCRIPTION="3ware SATA+PATA RAID controller Command Line Interface tool"
 HOMEPAGE="http://www.3ware.com/"
@@ -40,6 +40,9 @@ supportedcards() {
 	einfo "PATA: 6xxx, 72xx, 74xx, 78xx, 7000, 7500, 7506"
 	einfo "SATA: 8006, 8500, 8506, 9500S, 9550SX, 9590SE"
 	einfo "      9550SXU, 9650SE"
+	einfo ""
+	einfo "Release notes for this version are available at:"
+	einfo "${SRC_URI_BASE}/${PV}_Release_Notes_Web.pdf"
 }
 
 pkg_setup() {

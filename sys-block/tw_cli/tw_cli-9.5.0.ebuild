@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.5.0.ebuild,v 1.2 2008/02/27 00:39:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.5.0.ebuild,v 1.3 2008/02/27 01:21:51 robbat2 Exp $
 
 DESCRIPTION="3ware SATA+PATA RAID controller Command Line Interface tool"
 HOMEPAGE="http://www.3ware.com/kb/article.aspx?id=14847"
@@ -14,7 +14,20 @@ RESTRICT="fetch strip mirror"
 # binary packages
 DEPEND=""
 RDEPEND="virtual/libc"
-MY_P="${PN}-linux-${ARCH/amd64/x86_64}-${PV}"
+
+# Upstream has _FUN_ naming these
+# We are mostly prepared for the FreeBSD binaries at this point
+# They just aren't yet enabled here
+PN_KERNEL="${ARCH/*fbsd-*/freebsd}"
+[ "${PN_KERNEL}" != 'freebsd' ] && PN_KERNEL='linux'
+PN_ARCH="${ARCH/*-}"
+PN_ARCH="${PN_ARCH/amd64/x86_64}"
+
+if [ "${PN_KERNEL}" == 'freebsd' ]; then
+	MY_P="${PN}-${PN_ARCH}-${PN_KERNEL}-${PV}"
+else
+	MY_P="${PN}-${PN_KERNEL}-${PN_ARCH}-${PV}"
+fi
 # Upstream actually only releases newer versions for new hardware
 # and doesn't release new major versions for old hardware
 # however their backwards compatibility is excellent.
@@ -25,11 +38,17 @@ MY_P="${PN}-linux-${ARCH/amd64/x86_64}-${PV}"
 HW_VARIANT="Escalade9690SA-Series" # for versions 9.5.0*
 # package has different tarballs for x86 and amd64
 SRC_URI_BASE="http://www.3ware.com/download/${HW_VARIANT}/${PV}"
-for i in x86 amd64 ; do
-	SRC_URI="${SRC_URI} ${i}? ( ${SRC_URI_BASE}/${PN}-linux-${i/amd64/x86_64}-${PV}.tgz )"
-done
+SRC_URI_x86="${SRC_URI_BASE}/${PN}-linux-x86-${PV}.tgz"
+SRC_URI_amd64="${SRC_URI_BASE}/${PN}-linux-x86_64-${PV}.tgz"
+#SRC_URI_x86_fbsd="${SRC_URI_BASE}/${PN}-x86-freebsd-${PV}.tgz"
+#SRC_URI_amd64_fbsd="${SRC_URI_BASE}/${PN}-x86_64-freebsd-${PV}.tgz"
+SRC_URI="x86?   ( ${SRC_URI_x86} )
+		 amd64? ( ${SRC_URI_amd64} )"
+		#x86-fbsd? ( ${SRC_URI_x86_fbsd} )
+		#amd64-fbsd? ( ${SRC_URI_amd64_fbsd} )
 LICENSE_URL="http://www.3ware.com/support/windows_agree.asp?path=/download/${HW_VARIANT}/${PV}/${MY_P}.tgz"
-S="${WORKDIR}/${PN}-linux-${ARCH/amd64/x86_64}-${PV}"
+
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${MY_P}.tgz
@@ -44,7 +63,8 @@ supportedcards() {
 	elog "      9550SXU, 9650SE, 9650SE-{24M8,4LPME},"
 	elog "      9690SA"
 	elog ""
-	elog "Release notes for this version are available at http://3ware.com/support/release${PV}_highlights.asp"
+	elog "Release notes for this version are available at:"
+	elog "${SRC_URI_BASE}/${PV}_Release_Notes_Web.pdf"
 }
 
 pkg_setup() {
@@ -61,6 +81,8 @@ pkg_nofetch() {
 	einfo ""
 	einfo "x86 - ${SRC_URI_x86}"
 	einfo "amd64 - ${SRC_URI_amd64}"
+	#einfo "x86-fbsd - ${SRC_URI_x86_fbsd}"
+	#einfo "amd64-fbsd - ${SRC_URI_amd64_fbsd}"
 	einfo ""
 	supportedcards
 }
