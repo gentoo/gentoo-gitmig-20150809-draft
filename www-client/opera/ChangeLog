@@ -1,6 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.202 2008/02/26 04:22:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.203 2008/02/27 04:12:19 jer Exp $
+
+  27 Feb 2008; Jeroen Roovers <jer@gentoo.org> -opera-9.50_beta1.ebuild,
+  -opera-9.50_beta2_p1652.ebuild, -opera-9.50_beta2_p1662.ebuild,
+  -opera-9.50_beta2_p1669.ebuild, -opera-9.50_beta2_p1678.ebuild,
+  -opera-9.50_beta2_p1709.ebuild, -opera-9.50_beta2_p1719.ebuild,
+  -opera-9.50_beta2_p1729.ebuild, -opera-9.50_beta2_p1737.ebuild,
+  -opera-9.50_beta2_p1754.ebuild:
+  Remove some old versions.
 
   26 Feb 2008; Jeroen Roovers <jer@gentoo.org> -opera-9.25.ebuild:
   Remove vulnerable version.
