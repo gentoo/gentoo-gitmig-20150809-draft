@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/freenet6
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.26 2008/02/26 19:40:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.27 2008/02/27 10:07:38 voyageur Exp $
+
+  27 Feb 2008; Bernard Cafarelli <voyageur@gentoo.org> freenet6-5.1.ebuild:
+  Honor C[XX]FLAGS+LDFLAGS, many thanks to jakub in bug #211581
 
 *freenet6-5.1 (26 Feb 2008)
 

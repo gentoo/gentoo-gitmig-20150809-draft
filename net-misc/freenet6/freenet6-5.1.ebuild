@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-5.1.ebuild,v 1.1 2008/02/26 19:40:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-5.1.ebuild,v 1.2 2008/02/27 10:07:38 voyageur Exp $
 
-inherit eutils versionator
+inherit eutils versionator toolchain-funcs
 
 MY_PV=$(replace_all_version_separators "_")
 DESCRIPTION="Client to configure an IPv6 tunnel to freenet6"
@@ -19,6 +19,32 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/tspc-advanced"
 
+src_unpack() {
+	unpack ${A}
+	cd "${WORKDIR}"
+	for i in gw6c-config gw6c-messaging ; do
+		sed -i -e "/ARCHIVER=/s:ar:$(tc-getAR):" \
+			-e "/COMPILER=/s:g++:$(tc-getCXX):" \
+			-e "/C_COMPILER=/s:gcc:$(tc-getCC):" \
+			-e "/CPP_FLAGS=/s:-I.:${CXXFLAGS} -I.:" \
+			-e "/C_FLAGS=/s:-I.:${CFLAGS} -I.:" \
+			-e "/C_LINKER=/s:gcc:$(tc-getCC):" \
+			-e "/LD_FLAGS=/s:-O2::" \
+			-e "/LD_FLAGS=/s:-L:${LDFLAGS} -L:" \
+			-e "/LINKER=/s:g++:$(tc-getCXX):" \
+			-e "/RANLIB=/s:ranlib:$(tc-getRANLIB):" \
+			${i}/Makefile || die "sed failed in ${i}"
+	done
+
+	cd "${S}"
+	for i in platform/linux platform/unix-common src/lib src/net src/tsp src/xml ; do
+		sed -i -e "/CC=/s:gcc:$(tc-getCC):" \
+			-e "/CFLAGS=/s:-O2:${CFLAGS}:" \
+			-e "/LDFLAGS=/s:-L..:${LDFLAGS} -L..:" \
+			${i}/Makefile || die "sed failed in ${i}"
+	done
+}
+
 src_compile() {
 	emake all configdir=/etc/freenet6 target=linux || die "Build Failed"
 	sed -i "s#tsp-#/tmp/tsp-#" bin/gw6c.conf.sample
@@ -31,7 +57,7 @@ src_install() {
 	insinto /etc/freenet6
 	newins bin/gw6c.conf.sample gw6c.conf
 	exeinto /etc/freenet6/template
-	doexe template/{linux,checktunnel}.sh
+	doexe template/linux.sh
 
 	newinitd "${FILESDIR}"/gw6c.rc gw6c
 
