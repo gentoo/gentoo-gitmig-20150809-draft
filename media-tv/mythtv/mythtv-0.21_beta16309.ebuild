@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_beta16309.ebuild,v 1.1 2008/02/27 21:03:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_beta16309.ebuild,v 1.2 2008/02/27 21:11:37 cardoe Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python
@@ -43,6 +43,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	lirc? ( app-misc/lirc )
 	perl? ( dev-perl/DBD-mysql )
 	python? ( dev-python/mysql-python )
+	opengl-xvmc? ( >=x11-drivers/nvidia-drivers-100 )
 	xvmc? ( x11-libs/libXvMC
 		app-admin/eselect-xvmc )"
 
