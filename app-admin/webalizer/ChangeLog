@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.69 2008/02/23 16:52:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.70 2008/02/27 10:34:42 hollow Exp $
+
+  27 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
+  files/webalizer-db4.2.patch, files/webalizer-storage-size.patch:
+  fix #211604
 
 *webalizer-2.01.10-r16 (23 Feb 2008)
 
