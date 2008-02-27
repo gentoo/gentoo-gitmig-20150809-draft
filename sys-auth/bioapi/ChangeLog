@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/bioapi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/ChangeLog,v 1.6 2007/12/31 00:52:23 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/ChangeLog,v 1.7 2008/02/27 10:24:02 vapier Exp $
+
+  27 Feb 2008; Mike Frysinger <vapier@gentoo.org> bioapi-1.2.3.ebuild:
+  Add missing eutils inherit for enewgroup as pointed out by Shufeng Zheng.
 
 *bioapi-1.2.3 (31 Dec 2007)
 
