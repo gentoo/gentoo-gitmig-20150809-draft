@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.82.4.ebuild,v 1.2 2008/01/05 17:55:06 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.82.4.ebuild,v 1.3 2008/02/27 21:43:29 leio Exp $
 
 inherit python multilib
 
@@ -10,7 +10,7 @@ http://dbus.freedesktop.org/doc/dbus-python/"
 SRC_URI="http://dbus.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 SLOT="0"
-LICENSE="|| ( GPL-2 AFL-2.1 )"
+LICENSE="MIT"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="test"
 
