@@ -1,29 +1,30 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.4.ebuild,v 1.6 2007/09/17 10:30:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.6.ebuild,v 1.1 2008/02/27 12:39:38 dev-zero Exp $
+
+NEED_PYTHON="2.3"
 
 inherit distutils eutils
 
-DESCRIPTION="A Python system to automate the compile/test cycle to validate code changes. Similar to Tinderbox, but simpler."
+DESCRIPTION="A Python system to automate the compile/test cycle to validate code changes (similar to Tinderbox, but simpler)"
 HOMEPAGE="http://buildbot.net/"
 SRC_URI="mirror://sourceforge/buildbot/${P}.tar.gz"
-
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="doc irc mail test web"
 
-commondepend=">=dev-lang/python-2.3
-	>=dev-python/twisted-2.0.1"
-RDEPEND="${commondepend}
+CDEPEND=">=dev-python/twisted-2.0.1"
+RDEPEND="${CDEPEND}
 	mail? ( dev-python/twisted-mail )
 	irc? ( dev-python/twisted-words )
 	web? ( dev-python/twisted-web )"
-DEPEND="${commondepend}
-	test? ( dev-python/twisted-web )
+DEPEND="${CDEPEND}
+	test? ( dev-python/twisted-web
+		dev-python/twisted-mail )
 	doc? ( dev-python/epydoc )"
 
-pkg_setup(){
+pkg_setup() {
 	enewuser buildbot
 }
 
@@ -31,7 +32,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-svn-1.4.patch"
+	epatch "${FILESDIR}/${PN}-0.7.5-root-skip-tests.patch"
 }
 
 src_compile() {
@@ -58,14 +59,18 @@ src_install() {
 	insinto /usr/share/doc/${PF}
 	doins -r docs/examples
 
-	if use doc; then
-		doins -r docs/reference
-	fi
+	use doc && doins -r docs/reference
 
 	newconfd "${FILESDIR}/buildslave.confd" buildslave
 	newinitd "${FILESDIR}/buildbot.initd" buildslave
 	newconfd "${FILESDIR}/buildmaster.confd" buildmaster
 	newinitd "${FILESDIR}/buildbot.initd" buildmaster
+
+	# Make it print the right names when you start/stop the script.
+	sed -i -e '/ebegin/s/Starting buildbot/Starting buildslave/' \
+		"${D}/etc/init.d/buildslave" || die "buildslave sed failed"
+	sed -i -e '/ebegin/s/Starting buildbot/Starting buildmaster/' \
+		"${D}/etc/init.d/buildmaster" || die "buildmaster sed failed"
 }
 
 pkg_postinst() {
@@ -78,4 +83,10 @@ pkg_postinst() {
 	elog "at the right location.  The scripts can run as a different user"
 	elog "if desired.  If you need to run more than one master or slave"
 	elog "just copy the scripts."
+	elog ""
+	elog "Upstream recommands the following when upgrading:"
+	elog "Each time you install a new version of Buildbot, you should run the new"
+	elog "'buildbot upgrade-master' command on each of your pre-existing buildmasters."
+	elog "This will add files and fix (or at least detect) incompatibilities between"
+	elog "your old config and the new code."
 }
