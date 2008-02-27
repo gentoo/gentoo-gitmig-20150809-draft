@@ -1,11 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.5.ebuild,v 1.5 2007/11/18 21:55:19 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.5.ebuild,v 1.6 2008/02/27 20:11:10 cedk Exp $
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Daemon managing special features such as screen and keyboard \
-backlight on Apple MacBook Pro/PowerBook laptops"
+DESCRIPTION="Manage special features such as screen and keyboard backlight on Apple MacBook Pro/PowerBook"
 HOMEPAGE="http://technologeek.org/projects/pommed/index.html"
 ALIOTH_NUMBER="1976"
 SRC_URI="http://alioth.debian.org/frs/download.php/${ALIOTH_NUMBER}/${P}.tar.gz"
@@ -23,11 +22,12 @@ DEPEND="media-libs/alsa-lib
 	dev-libs/confuse
 	sys-apps/dbus
 	sys-libs/zlib
+	media-libs/audiofile
 	gtk? ( >=x11-libs/gtk+-2
-		>=gnome-base/libglade-2
-		media-libs/audiofile )
+		>=gnome-base/libglade-2 )
 	X? ( x11-libs/libX11 )"
 RDEPEND="${DEPEND}
+	media-sound/alsa-utils
 	virtual/eject"
 
 src_unpack() {
