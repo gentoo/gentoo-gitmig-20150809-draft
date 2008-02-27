@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.4.2.ebuild,v 1.1 2008/02/26 20:03:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.4.2.ebuild,v 1.2 2008/02/27 00:39:51 robbat2 Exp $
 
 DESCRIPTION="3ware SATA+PATA RAID controller Command Line Interface tool"
 HOMEPAGE="http://www.3ware.com/kb/article.aspx?id=14847"
@@ -24,12 +24,12 @@ MY_P="${PN}-linux-${ARCH/amd64/x86_64}-${PV}"
 HW_VARIANT="Escalade9650SE-Series" # for versions 9.4.0*
 # package has different tarballs for x86 and amd64
 SRC_URI_BASE="http://www.3ware.com/download/${HW_VARIANT}/${PV}"
-SRC_URI_x86="${SRC_URI_BASE}/${PN}-linux-x86-${PV}.tgz"
-SRC_URI_amd64="${SRC_URI_BASE}/${PN}-linux-x86_64-${PV}.tgz"
-SRC_URI="x86? ( ${SRC_URI_x86} )
-		 amd64? ( ${SRC_URI_amd64} )"
+SRC_URI=""
+for i in x86 amd64 ; do
+	SRC_URI="${SRC_URI} ${i}? ( ${SRC_URI_BASE}/${PN}-linux-${i/amd64/x86_64}-${PV}.tgz )"
+done
 LICENSE_URL="http://www.3ware.com/support/windows_agree.asp?path=/download/${HW_VARIANT}/${PV}/${MY_P}.tgz"
-S="${WORKDIR}"
+S="${WORKDIR}/${PN}-linux-${ARCH/amd64/x86_64}-${PV}"
 
 src_unpack() {
 	unpack ${MY_P}.tgz
