@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.76.ebuild,v 1.11 2006/11/23 20:01:22 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.76.ebuild,v 1.12 2008/02/27 04:04:13 robbat2 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	# disable this test, as it breaks under Portage
 	# and there is no easy fix
-	sed -i.orig -e '/qmail-lookup-nodomain/,/^END_OF_TEST_RESULTS/d' ${S}/tests.sh || die "sed failed"
+	sed -i.orig -e '/qmail-lookup-nodomain/,/^END_OF_TEST_RESULTS/d' "${S}"/tests.sh || die "sed failed"
 }
 
 src_compile() {
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
 	einstall || die
 
-	dodoc ANNOUNCEMENT COPYING NEWS NEWS.sql NEWS.vmailmgr README README.vchkpw
+	dodoc ANNOUNCEMENT NEWS NEWS.sql NEWS.vmailmgr README README.vchkpw
 	dodoc README.vmailmgr TODO VERSION
 	dohtml *.html
 }
