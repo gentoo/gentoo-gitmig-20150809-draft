@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.2.3.ebuild,v 1.2 2008/02/25 06:15:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.2.3.ebuild,v 1.3 2008/02/27 09:36:13 ali_bush Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 JAVA_PKG_IUSE="doc source test"
@@ -42,7 +42,7 @@ src_unpack() {
 	# TODO file upstream
 	epatch "${FILESDIR}/${P}-build.xml.patch"
 
-	use x86 && sed -i -e 's|gcc -O3 -Wall --pedantic|$(CC) $(CFLAGS) -fPIC|g' \
+	use x86 && sed -i -e 's|gcc -O3 -Wall --pedantic|$(CC) $(CFLAGS) -fPIC -lm|g' \
 		"src/c/Makefile-linux-x86-${BITS}"
 	use amd64 && sed -i -e 's|gcc -O3 -fPIC -Wall --pedantic|$(CC) $(CFLAGS) -fPIC|g' \
 		"src/c/Makefile-linux-x86-${BITS}"
@@ -57,6 +57,7 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-getCC
 	eant -Dbits=${BITS} jar compile-c $(use_doc -Djdoc.dir=api jdoc)
 }
 
