@@ -1,12 +1,12 @@
-# Copyright 2006-2007 Gentoo Foundation
+# Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.8.ebuild,v 1.5 2007/07/22 03:13:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.8.ebuild,v 1.6 2008/02/27 16:55:02 yvasilev Exp $
 
 inherit eutils libtool
 
 DESCRIPTION="The Matchbox Library."
-HOMEPAGE="http://projects.o-hand.com/matchbox/"
-SRC_URI="http://projects.o-hand.com/matchbox/sources/${PN}/${PV}/${P}.tar.bz2"
+HOMEPAGE="http://matchbox-project.org/"
+SRC_URI="http://matchbox-project.org/sources/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -36,7 +36,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	elibtoolize
 }
