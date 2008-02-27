@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.12 2008/02/06 20:09:50 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.13 2008/02/27 17:26:40 yvasilev Exp $
 
 inherit flag-o-matic
 
 IUSE="jpeg png nls debug"
 
 DESCRIPTION="Light weight WM designed for use on PDA computers"
-HOMEPAGE="http://projects.o-hand.com/matchbox/"
+HOMEPAGE="http://matchbox-project.org/"
 SRC_URI="http://handhelds.org/~mallum/downloadables/${P}.tar.gz"
 
 SLOT="0"

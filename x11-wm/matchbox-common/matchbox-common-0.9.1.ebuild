@@ -1,12 +1,12 @@
-# Copyright 2006-2006 Gentoo Foundation
+# Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-common/matchbox-common-0.9.1.ebuild,v 1.2 2006/10/16 21:33:09 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-common/matchbox-common-0.9.1.ebuild,v 1.3 2008/02/27 17:23:35 yvasilev Exp $
 
 inherit versionator
 
 DESCRIPTION="Common files used by matchbox-panel and matchbox-desktop packages"
-HOMEPAGE="http://projects.o-hand.com/matchbox/"
-SRC_URI="http://projects.o-hand.com/matchbox/sources/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
+HOMEPAGE="http://matchbox-project.org/"
+SRC_URI="http://matchbox-project.org/sources/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -27,12 +27,12 @@ src_install() {
 
 	# Insert our Xsession
 	dodir /etc/X11/Sessions
-	echo "matchbox-session" > ${D}/etc/X11/Sessions/matchbox
+	echo "matchbox-session" > "${D}"/etc/X11/Sessions/matchbox
 	exeinto /etc/X11/Sessions
 	doexe /etc/X11/Sessions/matchbox
 
 	insinto /usr/share/xsessions
-	doins ${FILESDIR}/MatchBox.desktop
+	doins "${FILESDIR}"/MatchBox.desktop
 
 	dodoc AUTHORS Changelog INSTALL NEWS README
 }

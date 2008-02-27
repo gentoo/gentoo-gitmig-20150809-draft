@@ -1,12 +1,12 @@
-# Copyright 2006-2007 Gentoo Foundation
+# Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-panel/matchbox-panel-0.9.3.ebuild,v 1.4 2007/09/26 04:01:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-panel/matchbox-panel-0.9.3.ebuild,v 1.5 2008/02/27 17:19:58 yvasilev Exp $
 
 inherit eutils versionator
 
 DESCRIPTION="The Matchbox Panel"
-HOMEPAGE="http://projects.o-hand.com/matchbox/"
-SRC_URI="http://projects.o-hand.com/matchbox/sources/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
+HOMEPAGE="http://matchbox-project.org/"
+SRC_URI="http://matchbox-project.org/sources/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -22,9 +22,9 @@ RDEPEND="${DEPEND}
 
 src_unpack () {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-gcc4-no-nested-functions.patch"
+	epatch "${FILESDIR}/"${P}-gcc4-no-nested-functions.patch
 }
 
 src_compile() {
@@ -40,7 +40,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Installation failed"
+	make DESTDIR="${D}" install || die "Installation failed"
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
