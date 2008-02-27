@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.79 2008/02/20 22:31:37 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.80 2008/02/27 15:35:44 jer Exp $
+
+  27 Feb 2008; Jeroen Roovers <jer@gentoo.org> cervisia-3.5.9.ebuild:
+  Marked ~hppa.
 
 *cervisia-3.5.9 (20 Feb 2008)
 
