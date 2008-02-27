@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.110 2008/01/31 19:55:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.111 2008/02/27 20:30:12 dertobi123 Exp $
+
+*nagios-core-2.10-r2 (27 Feb 2008)
+
+  27 Feb 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  +nagios-core-2.10-r2.ebuild:
+  Fix apache eclass handling, patch by Jakub Moc in #209655
 
   31 Jan 2008; Benedikt Böhm <hollow@gentoo.org> nagios-core-1.4.1.ebuild,
   nagios-core-1.4.1-r1.ebuild, nagios-core-2.10-r1.ebuild:
