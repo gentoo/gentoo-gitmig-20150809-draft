@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/teamspeak2-server-bin
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.32 2007/09/16 19:35:48 mjolnir Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.33 2008/02/27 01:27:11 mjolnir Exp $
+
+  27 Feb 2008; Martin Jackson <mjolnir@gentoo.org>
+  files/teamspeak2-server-ng.rc6,
+  +teamspeak2-server-bin-2.0.24.01-r1.ebuild:
+  Fix typo in init script
+
+*teamspeak2-server-bin-2.0.24.01-r1 (26 Feb 2008)
 
   16 Sep 2007; Martin Jackson <mjolnir@gentoo.org>
   -teamspeak2-server-bin-2.0.23.22-r1.ebuild:
