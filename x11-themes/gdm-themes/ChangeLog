@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gdm-themes
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.32 2008/02/25 14:06:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.33 2008/02/27 10:43:31 coldwind Exp $
+
+  27 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
+  gdm-themes-20070811.ebuild:
+  amd64 stable wrt bug #211204
 
   25 Feb 2008; Raúl Porcel <armin76@gentoo.org> gdm-themes-20070811.ebuild:
   sparc stable wrt #211204

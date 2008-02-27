@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-20070811.ebuild,v 1.6 2008/02/25 14:06:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-20070811.ebuild,v 1.7 2008/02/27 10:43:31 coldwind Exp $
 
 DESCRIPTION="Some nice themes for the GDM Greeter"
 S=${WORKDIR}
@@ -70,7 +70,7 @@ DEPEND="app-arch/unzip"
 SLOT="0"
 LICENSE="CCPL-Attribution-NonCommercial-NoDerivs-2.0 CCPL-Attribution-2.0 GPL-2
 LGPL-2.1 public-domain"
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
 src_unpack() {
