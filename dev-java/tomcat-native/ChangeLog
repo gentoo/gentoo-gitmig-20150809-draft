@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-native
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.15 2008/02/18 02:38:42 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.16 2008/02/27 09:17:39 opfer Exp $
+
+  27 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  tomcat-native-1.1.13-r1.ebuild:
+  stable x86, security bug 209410
 
   18 Feb 2008; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-native-1.1.12.ebuild, tomcat-native-1.1.13-r1.ebuild:
