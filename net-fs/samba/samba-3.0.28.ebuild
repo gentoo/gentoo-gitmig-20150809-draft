@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.28.ebuild,v 1.4 2008/02/20 20:02:53 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.28.ebuild,v 1.5 2008/02/27 19:19:48 dev-zero Exp $
 
 inherit autotools eutils pam python multilib versionator confutils
 
@@ -109,6 +109,7 @@ src_compile() {
 		--localstatedir=/var \
 		--with-configdir=/etc/samba \
 		--with-libdir=/usr/$(get_libdir)/samba \
+		--with-pammodulesdir=$(getpam_mod_dir) \
 		--with-swatdir=/usr/share/doc/${PF}/swat \
 		--with-piddir=/var/run/samba \
 		--with-lockdir=/var/cache/samba \
@@ -169,11 +170,6 @@ src_install() {
 		dosym libnss_wins.so /usr/$(get_libdir)/libnss_wins.so.2
 		dolib.so nsswitch/libnss_winbind.so
 		dosym libnss_winbind.so /usr/$(get_libdir)/libnss_winbind.so.2
-	fi
-
-	if use pam ; then
-		dopammod bin/pam_smbpass.so
-		use winbind && dopammod bin/pam_winbind.so
 	fi
 
 	if use kernel_linux ; then

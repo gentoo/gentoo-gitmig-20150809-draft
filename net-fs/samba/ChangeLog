@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.328 2008/02/20 20:02:53 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.329 2008/02/27 19:19:48 dev-zero Exp $
+
+  27 Feb 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/3.0.24-heap_overflow_v2.patch,
+  -files/3.0.24-sid2name_elevation_v2.patch,
+  -files/3.0.24-shell_escape.patch, -samba-3.0.24-r3.ebuild,
+  samba-3.0.28.ebuild:
+  Fixed double pam_*.so installation (bug #207021, thanks to flameeyes).
+  Dropped old version and patches.
 
   20 Feb 2008; Tiziano Müller <dev-zero@gentoo.org>
   +files/3.0.28-fix_broken_readdir_detection.patch,
