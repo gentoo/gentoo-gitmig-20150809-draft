@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/bglibs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.45 2007/08/25 17:04:09 beandog Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.46 2008/02/27 03:51:01 robbat2 Exp $
+
+  27 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> bglibs-1.041.ebuild:
+  Add ~ppc64.
 
   25 Aug 2007; Steve Dibb <beandog@gentoo.org> bglibs-1.041.ebuild:
   amd64 stable
