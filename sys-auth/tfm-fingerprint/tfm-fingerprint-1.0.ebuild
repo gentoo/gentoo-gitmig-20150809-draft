@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/tfm-fingerprint-1.0.ebuild,v 1.1 2006/10/05 13:45:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/tfm-fingerprint-1.0.ebuild,v 1.2 2008/02/27 10:40:13 vapier Exp $
+
+inherit multilib
 
 DESCRIPTION="TouchChip TFM/ESS FingerPrint BSP"
 HOMEPAGE="http://www.upek.com/support/dl_linux_bsp.asp"
@@ -14,21 +16,25 @@ IUSE=""
 
 DEPEND="sys-auth/bioapi"
 
+S=${WORKDIR}
+
 src_install() {
-	insinto /usr/lib
-	doins ${WORKDIR}/libtfmessbsp.so
+	# this is a binary blob, so it probably shouldnt live in /usr/lib
+	dolib.so libtfmessbsp.so || die
 	insinto /etc
-	doins ${FILESDIR}/tfmessbsp.cfg
+	doins "${FILESDIR}"/tfmessbsp.cfg || die
+}
+
+doit_with_ewarn() {
+	"$@" || ewarn "FAILURE: $*"
 }
 
 pkg_postinst() {
-	einfo "Running Module Directory Services (MDS) ..."
-	/opt/bioapi/bin/mod_install -fi /usr/lib/libtfmessbsp.so || die " mds libtfmessbsp failed"
+	doit_with_ewarn mod_install -fi /usr/$(get_libdir)/libtfmessbsp.so
 
-	einfo "Note: You have to be in the group usb to access the fingerprint device."
+	elog "Note: You have to be in the group usb to access the fingerprint device."
 }
 
 pkg_prerm() {
-	einfo "Running Module Directory Services (MDS) ..."
-	/opt/bioapi/bin/mod_install -fu /usr/lib/libtfmessbsp.so
+	doit_with_ewarn mod_install -fu /usr/$(get_libdir)/libtfmessbsp.so
 }
