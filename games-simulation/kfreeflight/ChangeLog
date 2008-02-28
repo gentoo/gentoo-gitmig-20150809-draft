@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/kfreeflight
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/kfreeflight/ChangeLog,v 1.4 2006/11/17 12:51:52 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/kfreeflight/ChangeLog,v 1.5 2008/02/28 20:50:42 mr_bones_ Exp $
+
+  28 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  kfreeflight-0.2.1_rc1.ebuild:
+  autotools love (bug #206412)
 
   17 Nov 2006; Tristan Heaven <nyhm@gentoo.org>
   kfreeflight-0.2.1_rc1.ebuild:

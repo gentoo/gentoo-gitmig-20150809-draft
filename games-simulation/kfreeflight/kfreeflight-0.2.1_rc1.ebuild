@@ -1,8 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/kfreeflight/kfreeflight-0.2.1_rc1.ebuild,v 1.4 2006/11/17 12:51:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/kfreeflight/kfreeflight-0.2.1_rc1.ebuild,v 1.5 2008/02/28 20:50:42 mr_bones_ Exp $
 
-inherit eutils kde-functions games
+WANT_AUTOMAKE=1.9 # bug #206412
+inherit autotools eutils kde-functions games
 
 MY_P=${P//_/}
 
