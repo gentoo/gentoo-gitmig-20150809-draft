@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.211 2008/02/28 00:26:12 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.212 2008/02/28 04:26:06 beandog Exp $
+
+  28 Feb 2008; Steve Dibb <beandog@gentoo.org> dbus-1.1.20.ebuild:
+  amd64 stable, sec bug 211451
 
   28 Feb 2008; Steev Klimaszewski <steev@gentoo.org>
   +files/dbus-1.1.20-fix-build.patch, dbus-1.1.20.ebuild:
