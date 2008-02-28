@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.235 2008/02/24 19:56:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.236 2008/02/28 04:30:04 beandog Exp $
+
+  28 Feb 2008; Steve Dibb <beandog@gentoo.org>
+  php-5.2.5_p20080206-r3.ebuild:
+  amd64 stable, bug 209148
 
   24 Feb 2008; Brent Baude <ranger@gentoo.org>
   php-5.2.5_p20080206-r3.ebuild:
