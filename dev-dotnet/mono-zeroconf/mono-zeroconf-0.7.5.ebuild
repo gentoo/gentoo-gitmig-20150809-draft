@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/mono-zeroconf-0.7.5.ebuild,v 1.3 2008/01/27 23:08:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/mono-zeroconf-0.7.5.ebuild,v 1.4 2008/02/28 14:32:48 drac Exp $
+
+EAPI=1
 
 inherit eutils mono
 
@@ -11,7 +13,7 @@ SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="avahi"
+IUSE="+avahi"
 
 RDEPEND=">=dev-lang/mono-1.1.10
 	avahi? ( >=net-dns/avahi-0.6 )
