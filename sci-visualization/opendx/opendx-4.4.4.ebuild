@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4.ebuild,v 1.1 2008/01/21 16:24:23 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4.ebuild,v 1.2 2008/02/28 15:53:25 markusle Exp $
 
 # Set SMP="no" to force disable of SMP compilation.
 # Set SMP="yes" to force enable of SMP compilation.
@@ -123,4 +123,8 @@ src_install() {
 
 	echo "MANPATH=/usr/dx/man" > 50opendx
 	doenvd 50opendx
+
+	# inform revdep-rebuild about binary locations
+	insinto /etc/revdep-rebuild
+	doins "${FILESDIR}"/20-${PN}-revdep
 }

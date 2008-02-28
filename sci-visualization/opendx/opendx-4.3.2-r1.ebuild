@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.3.2-r1.ebuild,v 1.5 2007/07/22 06:50:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.3.2-r1.ebuild,v 1.6 2008/02/28 15:53:25 markusle Exp $
 
 # Set SMP="no" to force disable of SMP compilation.
 # Set SMP="yes" to force enable of SMP compilation.
@@ -57,7 +57,7 @@ smp_check() {
 src_compile() {
 
 	if has_version '>=sys-kernel/linux-headers-2.6.19' ; then
-		epatch ${FILESDIR}/${P}-sys.h.patch || die "Failed to apply sys.h patch."
+		epatch "${FILESDIR}"/${P}-sys.h.patch || die "Failed to apply sys.h patch."
 	fi
 
 	eautoreconf || die "Failed running eautoreconf."
@@ -112,5 +112,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }
