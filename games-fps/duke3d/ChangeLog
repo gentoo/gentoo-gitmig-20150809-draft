@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/duke3d
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.28 2008/01/04 20:59:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.29 2008/02/28 03:24:23 mr_bones_ Exp $
+
+  28 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/duke3d-20040817-as-needed.patch, duke3d-20040817-r2.ebuild:
+  add patch for --as-needed support from Harald van Dijk (bug #211679)
 
   04 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org>
   duke3d-20040817-r2.ebuild:

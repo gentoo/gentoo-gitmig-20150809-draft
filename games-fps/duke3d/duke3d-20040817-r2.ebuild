@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r2.ebuild,v 1.4 2008/01/04 20:59:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r2.ebuild,v 1.5 2008/02/28 03:24:23 mr_bones_ Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -77,11 +77,13 @@ src_unpack() {
 
 	# configure duke3d
 	cd "${S}/source"
-	epatch "${FILESDIR}/${PV}-credits.patch"
 	# need to sync features with build engine
-	epatch "${FILESDIR}/${PV}-duke3d-makefile-opts.patch"
-	epatch "${FILESDIR}/${PV}-gcc34.patch" # compile fixes for GCC 3.4
-	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch \
+		"${FILESDIR}/${PV}-credits.patch" \
+		"${FILESDIR}/${PV}-duke3d-makefile-opts.patch" \
+		"${FILESDIR}/${PV}-gcc34.patch" \
+		"${FILESDIR}"/${P}-gcc4.patch \
+		"${FILESDIR}"/${P}-as-needed.patch
 	sed -i \
 		-e "/^use_opengl := / s:=.*:= $(use_tf opengl):" \
 		-e "/^use_physfs := / s:=.*:= false:" \
