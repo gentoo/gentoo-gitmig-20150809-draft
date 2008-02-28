@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.21_beta16215.ebuild,v 1.2 2008/02/24 05:32:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.21_beta16297.ebuild,v 1.1 2008/02/28 16:03:13 cardoe Exp $
 
 inherit mythtv-plugins flag-o-matic toolchain-funcs eutils subversion
 

@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.69 2008/02/24 05:32:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.70 2008/02/28 16:03:13 cardoe Exp $
+
+*mythmusic-0.21_beta16297 (28 Feb 2008)
+
+  28 Feb 2008; Doug Klima <cardoe@gentoo.org>
+  -mythmusic-0.21_beta16215.ebuild, +mythmusic-0.21_beta16297.ebuild:
+  beta revision bump
 
   24 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
   mythmusic-0.21_beta16215.ebuild:
