@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.21_pre15710.ebuild,v 1.2 2008/02/23 22:21:01 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.21_beta16297.ebuild,v 1.1 2008/02/28 21:26:08 cardoe Exp $
 
 ESVN_PROJECT="mythplugins"
 
