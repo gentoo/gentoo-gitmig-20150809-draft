@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.100 2008/02/18 19:57:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.101 2008/02/28 19:10:42 armin76 Exp $
+
+*amule-2.2.0_pre20080228 (28 Feb 2008)
+
+  28 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  -files/2.2.0-geoip-asneeded.patch, -amule-2.2.0_pre20080218.ebuild,
+  +amule-2.2.0_pre20080228.ebuild:
+  New snapshot
 
 *amule-2.2.0_pre20080218 (18 Feb 2008)
 
