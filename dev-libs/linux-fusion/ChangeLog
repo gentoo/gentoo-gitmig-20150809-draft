@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/linux-fusion
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.9 2007/10/07 17:11:08 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.10 2008/02/28 18:30:30 vapier Exp $
+
+  28 Feb 2008; Mike Frysinger <vapier@gentoo.org> linux-fusion-7.0.1.ebuild:
+  Use linux-mod eclass to compile things #206161.
 
   07 Oct 2007; Mike Frysinger <vapier@gentoo.org> linux-fusion-7.0.1.ebuild:
   Dont bother defining pkg_setup as the eclass will do it for us as noted by

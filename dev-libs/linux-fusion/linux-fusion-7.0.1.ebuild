@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/linux-fusion-7.0.1.ebuild,v 1.2 2007/10/07 17:11:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/linux-fusion-7.0.1.ebuild,v 1.3 2008/02/28 18:30:30 vapier Exp $
 
 inherit eutils linux-mod
 
@@ -13,14 +13,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE=""
 
-MODULE_NAMES="fusion(drivers/char:${S}:${S}/linux/drivers/char/fusion)"
-BUILD_TARGETS="all"
+MODULE_NAMES="fusion(drivers/char:${S}/linux/drivers/char/fusion)"
+BUILD_TARGETS="modules"
+BUILD_PARAMS="-C ${KV_DIR} SUBDIRS=${S}/linux/drivers/char/fusion CONFIG_FUSION_DEVICE=m EXTRA_CFLAGS=-I${S}/linux/include"
 MODULESD_REALTIME_DOCS="AUTHORS ChangeLog README"
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-	convert_to_m Makefile
+	cd "${S}"/linux/drivers/char/fusion
+	ln -s Makefile-2.6 Makefile
 }
 
 src_install() {
