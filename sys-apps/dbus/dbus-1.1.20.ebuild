@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.1.20.ebuild,v 1.2 2008/02/27 20:50:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.1.20.ebuild,v 1.3 2008/02/28 00:26:12 steev Exp $
 
 inherit eutils multilib autotools flag-o-matic
 
@@ -22,6 +22,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (	app-doc/doxygen
 		app-text/xmlto )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# Patch to fix building without X useflag
+	epatch "${FILESDIR}/${P}-fix-build.patch"
+}
 
 src_compile() {
 	# so we can get backtraces from apps

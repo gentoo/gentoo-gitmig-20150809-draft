@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.210 2008/02/27 20:48:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.211 2008/02/28 00:26:12 steev Exp $
+
+  28 Feb 2008; Steev Klimaszewski <steev@gentoo.org>
+  +files/dbus-1.1.20-fix-build.patch, dbus-1.1.20.ebuild:
+  Add patch so dbus 1.1.20 builds without X
 
 *dbus-1.1.20 (27 Feb 2008)
 
