@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pflogsumm/pflogsumm-1.1.0-r2.ebuild,v 1.1 2007/03/03 12:26:37 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pflogsumm/pflogsumm-1.1.0-r2.ebuild,v 1.2 2008/02/28 15:08:17 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 IUSE=""
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 ~sparc x86"
 DEPEND="dev-lang/perl
 	dev-perl/Date-Calc"
 
