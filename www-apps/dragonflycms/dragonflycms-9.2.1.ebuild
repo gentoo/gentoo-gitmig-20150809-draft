@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.1.2.1.ebuild,v 1.3 2008/02/22 15:49:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.2.1.ebuild,v 1.1 2008/02/28 07:06:41 wrobel Exp $
 
 inherit webapp depend.php
 
@@ -23,7 +23,7 @@ S="${WORKDIR}"
 
 pkg_nofetch() {
 	einfo "Please download ${MY_P}.tar.bz2 from:"
-	einfo "http://dragonflycms.org/Downloads/get=263.html"
+	einfo "http://dragonflycms.org/Downloads/get=28.html"
 	einfo "and move it to ${DISTDIR}"
 }
 
@@ -33,7 +33,7 @@ src_install() {
 	dodoc documentation/{BACKUP,IMPORTANT_NOTES,INSTALL,README,UPGRADE}.txt
 
 	insinto "${MY_HTDOCSDIR}"
-	doins -r public_html/
+	doins -r public_html/*
 
 	webapp_configfile "${MY_HTDOCSDIR}"/install/config.php
 

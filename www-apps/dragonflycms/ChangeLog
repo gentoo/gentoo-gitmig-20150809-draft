@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/dragonflycms
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.18 2008/02/22 15:49:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.19 2008/02/28 07:06:41 wrobel Exp $
+
+*dragonflycms-9.2.1 (28 Feb 2008)
+
+  28 Feb 2008; Gunnar Wrobel <wrobel@gentoo.org> files/postinstall-en.txt,
+  -dragonflycms-9.1.2.1.ebuild, +dragonflycms-9.2.1.ebuild:
+  Fixed broken installation routine, bump to 9.2.1 and updated postinstall
+  instructions.
 
   22 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
   dragonflycms-9.1.2.1.ebuild:

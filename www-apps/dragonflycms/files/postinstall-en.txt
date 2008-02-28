@@ -1,25 +1,24 @@
-To complete your installation, you must
+You will need to provide a database for your ${PN} installation.
 
-1) Create a new database, for example, 'dragonfly': mysqladmin create dragonfly
-   OR add a database through your web control panel.
-   
-2) Edit the file "config.php". Change all the fields until you are happy with
-   the changes and they fit the need of your web site. Give special attention
-   to the database configuration section. When you have finished editing
-   config.php, save it.
-	 
-3) install by going to http://localhost/dragonflycms/install.php
+This assumes you have some knowledge of MySQL, and already have it
+installed and configured. If not, please refer to the Gentoo MySQL
+guide at the following URL:
 
-4) IMPORTANT: certain directories have been chmodded 755 if you don't have
-no-suexec in your useflags! if however you don't use suexec please change the
-permissions on following dirs to 777
-	- cache
-	- modules/coppermine/albums
-	- modules/coppermine/albums/userpics
-	- uploads/avatars
-	- uploads/forums
+http://www.gentoo.org/doc/en/mysql-howto.xml
 
+Once you have a database ready all you need to do is to go to this 
+location
 
-Enjoy DragonFly!!!
+http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/install.php
 
+and provide the credentials required for the database access.
 
+Note the credentials of the administration user you will generate
+during the installation procedure.
+
+For your own security you will need to remove the installation tools
+by running
+
+rm -rf ${MY_INSTALLDIR}/install*
+
+Enjoy ${PN}!
