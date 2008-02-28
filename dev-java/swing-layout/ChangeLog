@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/swing-layout
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.11 2007/08/19 19:42:47 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.12 2008/02/28 10:33:23 ali_bush Exp $
+
+*swing-layout-1.0.3 (28 Feb 2008)
+
+  28 Feb 2008; Alistair Bush <ali_bush@gentoo.org>
+  +swing-layout-1.0.3.ebuild:
+  Bump to new version. Thanks to Alex V. Fansky <damwihu@gmail.com>
 
   19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   swing-layout-1.0.1-r1.ebuild:
