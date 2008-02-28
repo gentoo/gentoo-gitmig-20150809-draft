@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.10-r1.ebuild,v 1.13 2008/02/22 18:13:58 tgurr Exp $
-
-WANT_AUTOMAKE=latest
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.12-r5.ebuild,v 1.1 2008/02/28 20:24:49 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -10,12 +8,11 @@ MY_P=${P/_}
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org/"
-SRC_URI="http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2"
-#ESVN_REPO_URI="http://svn.easysw.com/public/cups/trunk"
+SRC_URI="mirror://sourceforge/cups/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="ldap ssl slp pam php samba nls dbus tiff png ppds jpeg X"
 
 DEP="pam? ( virtual/pam )
@@ -60,9 +57,18 @@ PROVIDE="virtual/lpr"
 # we just leave it out, even if FEATURES=test
 RESTRICT="test"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
+	if use x86 && [ -d "/usr/lib64" ]
+	then
+		eerror "You are running an x86 system, but /usr/lib64 exists, cups will install all library objects into this directory!"
+		eerror "You should remove /usr/lib64, but before you do, you should check for existing objects, and re-compile all affected packages."
+		eerror "You can use qfile (emerge portage-utils to install qfile) to get a list of the affected ebuilds:"
+		eerror "# qfile -qC /usr/lib64"
+		die "lib64 on x86 detected"
+	fi
+
 	enewgroup lp
 	enewuser lp -1 -1 -1 lp
 
@@ -73,8 +79,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# upstream does not acknowledge bindnow as a solution
-	epatch "${FILESDIR}"/cups-1.2.0-bindnow.patch
+	# CVE-2007-4045 security patch, bug #199195
+	epatch "${FILESDIR}"/${PN}-1.2.12-CVE-2007-4045.patch
+	# CVE-2007-4351 security patch, bug #196736
+	epatch "${FILESDIR}"/${PN}-1.2.12-CVE-2007-4351.patch
+	# CVE-2007-5849 security patch, bug #201570
+	epatch "${FILESDIR}"/${PN}-1.2.12-CVE-2007-5849.patch
+	# CVE-2008-0882 security patch, bug #211449
+	epatch "${FILESDIR}"/${PN}-1.2.12-CVE-2008-0882.patch
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
@@ -83,13 +95,17 @@ src_unpack() {
 
 src_compile() {
 	export DSOFLAGS="${LDFLAGS}"
+
+	if use ldap; then
+		append-flags -DLDAP_DEPRECATED
+	fi
+
 	econf \
 		--with-cups-user=lp \
 		--with-cups-group=lp \
 		--with-system-groups=lpadmin \
 		--localstatedir=/var \
 		--with-docdir=/usr/share/cups/html \
-		--with-bindnow=$(bindnow-flags) \
 		$(use_enable pam) \
 		$(use_enable ssl) \
 		--enable-gnutls \
@@ -135,7 +151,7 @@ src_install() {
 
 	# install pdftops filter
 	exeinto /usr/libexec/cups/filter/
-	newexe "${FILESDIR}"/pdftops.pl pdftops
+	newexe "${FILESDIR}"/pdftops-1.20.gentoo pdftops
 
 	# only for gs-esp this is correct, see bug 163897
 	if has_version app-text/ghostscript-gpl || has_version app-text/ghostscript-gnu; then
@@ -159,18 +175,20 @@ src_install() {
 
 pkg_preinst() {
 	# cleanups
-	[ -n "${PN}" ] && rm -fR "${ROOT}"/usr/share/doc/"${PN}"-*
+	[ -n "${PN}" ] && rm -fR "${ROOT}"/usr/share/doc/${PN}-*
 }
 
 pkg_postinst() {
-	einfo "Remote printing: change "
-	einfo "Listen localhost:631"
-	einfo "to"
-	einfo "Listen *:631"
-	einfo "in /etc/cups/cupsd.conf"
-	einfo
-	einfo "For more information about installing a printer take a look at:"
-	einfo "http://www.gentoo.org/doc/en/printing-howto.xml."
+	echo
+	elog "Remote printing: change "
+	elog "Listen localhost:631"
+	elog "to"
+	elog "Listen *:631"
+	elog "in /etc/cups/cupsd.conf"
+	echo
+	elog "For more information about installing a printer take a look at:"
+	elog "http://www.gentoo.org/doc/en/printing-howto.xml."
+	echo
 
 	local good_gs=false
 	for x in app-text/ghostscript-gpl app-text/ghostscript-gnu app-text/ghostscript-esp; do

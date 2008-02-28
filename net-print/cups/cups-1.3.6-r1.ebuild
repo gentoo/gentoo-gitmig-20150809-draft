@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.6.ebuild,v 1.1 2008/02/22 18:13:58 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.6-r1.ebuild,v 1.1 2008/02/28 20:24:49 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -94,11 +94,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# disable configure automagic for acl/attr
+	# disable configure automagic for acl/attr, upstream bug STR #2723.
 	epatch "${FILESDIR}/${PN}-1.3.0-configure.patch"
-
-	# CVE-2007-4045 security patch, bug #199195
-	epatch "${FILESDIR}/${PN}-1.3.4-CVE-2007-4045.patch"
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
@@ -205,7 +202,7 @@ src_install() {
 	keepdir /usr/share/cups/profiles /usr/libexec/cups/driver /var/log/cups \
 		/var/run/cups/certs /var/cache/cups /var/spool/cups/tmp /etc/cups/ssl
 
-	# .desktop handling. X useflag. xdg-open from freedesktop is preferred
+	# .desktop handling. X useflag. xdg-open from freedesktop is preferred, upstream bug STR #2724.
 	if use X ; then
 		sed -i -e "s:htmlview:xdg-open:" "${D}"/usr/share/applications/cups.desktop
 	else
