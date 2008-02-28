@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r1.ebuild,v 1.8 2008/02/28 15:50:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r1.ebuild,v 1.9 2008/02/28 17:18:57 jer Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.ics.com/openmotif/2.3/${PV}/${P}.tar.gz
 
 LICENSE="MOTIF doc? ( OPL )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc examples jpeg png xft"
 
 # make people unmerge motif-config and all previous slots
