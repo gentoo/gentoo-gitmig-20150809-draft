@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/auctex
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/auctex/ChangeLog,v 1.14 2007/10/21 12:58:50 graaff Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/auctex/ChangeLog,v 1.15 2008/02/28 13:24:42 armin76 Exp $
+
+  28 Feb 2008; Raúl Porcel <armin76@gentoo.org> auctex-1.47.ebuild:
+  Re-add ~ppc64, removed by mistake
 
   21 Oct 2007; Hans de Graaff <graaff@gentoo.org> -auctex-1.33.ebuild:
   Remove old version

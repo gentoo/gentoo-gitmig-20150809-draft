@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/viper
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/viper/ChangeLog,v 1.14 2007/10/25 15:12:37 graaff Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/viper/ChangeLog,v 1.15 2008/02/28 13:28:47 armin76 Exp $
+
+  28 Feb 2008; Raúl Porcel <armin76@gentoo.org> viper-1.55.ebuild:
+  Re-add ~ppc64, removed by mistake
 
   25 Oct 2007; Hans de Graaff <graaff@gentoo.org> -viper-1.35.ebuild:
   Remove old version
