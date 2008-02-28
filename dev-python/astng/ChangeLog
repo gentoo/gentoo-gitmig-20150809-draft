@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/astng
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.20 2007/06/24 20:35:14 dev-zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.21 2008/02/28 20:37:47 dev-zero Exp $
+
+*astng-0.17.2 (28 Feb 2008)
+
+  28 Feb 2008; Tiziano Müller <dev-zero@gentoo.org> +astng-0.17.2.ebuild:
+  Version bump (bug #209920).
 
   24 Jun 2007; Tiziano Müller <dev-zero@gentoo.org>
   -files/astng-0.16.0-revert-test.patch, -astng-0.16.0.ebuild,
