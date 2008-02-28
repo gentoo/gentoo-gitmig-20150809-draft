@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.106.ebuild,v 1.7 2007/04/09 17:34:26 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.106.ebuild,v 1.8 2008/02/28 19:05:57 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -167,8 +167,7 @@ src_compile() {
 }
 
 src_install() {
-	local disp=0, f
-	local utils="chdman imgtool dat2html romcmp xml2info"
+	local disp=0 f utils="chdman imgtool dat2html romcmp xml2info"
 
 	sed -i \
 		-e "s:^PREFIX.*:PREFIX=${D}/usr:" \
