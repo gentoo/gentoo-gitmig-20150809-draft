@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.1.008.ebuild,v 1.2 2007/12/05 20:37:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.1.012.ebuild,v 1.1 2008/02/28 10:43:06 bicatali Exp $
 
 inherit rpm elisp-common
 
-IFC_PID=862
-ICC_PID=861
+ICC_PID=952
+IFC_PID=955
 xPV=p_${PV}
 
 DESCRIPTION="Intel C/C++/FORTRAN debugger for Linux"
@@ -26,7 +26,7 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="Intel-SDP"
 SLOT="0"
 
-RESTRICT="test strip mirror"
+RESTRICT="strip mirror"
 IUSE="emacs icc ifc"
 
 DEPEND=""
@@ -62,23 +62,25 @@ src_install() {
 		"${S}"/${instdir}/* \
 		"${D}"/${instdir}/ \
 		|| die "copying debugger failed"
-	local env_file=06idb
-	echo "PATH=${instdir}/bin" > ${env_file}
-	echo "ROOTPATH=${instdir}/bin" >> ${env_file}
-	echo "MANPATH=${instdir}/man" >> ${env_file}
-	doenvd ${env_file} || die "doenvd ${env_file} failed"
+	cat > 06idb <<-EOF
+		PATH=${instdir}/bin
+		ROOTPATH=${instdir}/bin
+		MANPATH=${instdir}/man
+	EOF
+	doenvd 06idb || die "installing env file failed"
 	use emacs && \
 		elisp-site-file-install "${S}"${instdir}/bin/*.el
 }
 
 pkg_postinst () {
 	rm -f "${ROOT}"/opt/intel/{intel_sdp_products.db,.*.log} || die
-	elog "Make sure you have recieved the restrictive"
-	elog "non-commercial license ${PN} by registering at:"
-	elog "http://www.intel.com/cd/software/products/asmo-na/eng/download/download/219771.htm"
-	elog "You cannot run ${PN} without this license file."
-	elog "Read the website for more information on this license."
-	elog "To use ${PN} now, issue first \n\tsource /etc/profile"
+	elog "Make sure you have recieved the a license for ${PN},"
+	elog "you cannot run ${PN} without a license file."
+	elog "To receive a non-commercial license, you need to register."
+	elog "Read the website for more information on this license:"
+	elog "${HOMEPAGE}"
+	elog "Then put the license file into ${ROOT}/opt/intel/licenses."
+	elog "\nTo use ${PN} issue first \n\tsource /etc/profile"
 	use emacs && elisp-site-regen
 }
 
