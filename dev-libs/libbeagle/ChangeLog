@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libbeagle
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/ChangeLog,v 1.1 2008/02/28 18:32:35 cedk Exp $
+
+*libbeagle-0.3.0 (28 Feb 2008)
+
+  28 Feb 2008; Cédric Krier <cedk@gentoo.org> +metadata.xml,
+  +libbeagle-0.3.0.ebuild:
+  New ebuild for bug #201093
+
