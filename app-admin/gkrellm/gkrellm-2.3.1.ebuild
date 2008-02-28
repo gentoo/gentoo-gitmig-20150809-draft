@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.3.0.ebuild,v 1.9 2008/02/28 15:17:03 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.3.1.ebuild,v 1.1 2008/02/28 15:17:03 lack Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://members.dslextreme.com/users/billw/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="hddtemp gnutls lm_sensors nls ssl X kernel_FreeBSD"
 
 RDEPEND=">=dev-libs/glib-2
@@ -62,11 +62,11 @@ src_compile() {
 			|| die "emake failed"
 	else
 		cd server
-		emake ${TARGET} \
+			emake ${TARGET} \
 			CC="$(tc-getCC)" \
 			$(use lm_sensors || echo without-libsensors=yes) \
 			|| die "emake failed"
-	fi
+			fi
 }
 
 src_install() {
@@ -79,11 +79,11 @@ src_install() {
 			PKGCONFIGDIR="${D}"/usr/$(get_libdir)/pkgconfig \
 			MANDIR="${D}"/usr/share/man/man1 \
 			|| die "emake install failed"
-		dosym gkrellm /usr/bin/gkrellm2
+			dosym gkrellm /usr/bin/gkrellm2
 
-		dohtml *.html
+			dohtml *.html
 
-		newicon src/icon.xpm ${PN}.xpm
+			newicon src/icon.xpm ${PN}.xpm
 		make_desktop_entry ${PN} GKrellM ${PN}.xpm
 	else
 		dobin server/gkrellmd || die "dobin failed"
@@ -93,6 +93,7 @@ src_install() {
 	fi
 
 	doinitd "${FILESDIR}"/gkrellmd || die "doinitd failed"
+	doconfd "${FILESDIR}"/gkrellmd.conf || die "doconfd failed"
 
 	insinto /etc
 	doins server/gkrellmd.conf || die "doins failed"
