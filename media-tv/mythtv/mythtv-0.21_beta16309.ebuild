@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_beta16309.ebuild,v 1.2 2008/02/27 21:11:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_beta16309.ebuild,v 1.3 2008/02/28 15:47:42 cardoe Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python
@@ -120,7 +120,7 @@ src_compile() {
 	use jack || myconf="${myconf} --disable-audio-jack"
 	use opengl-video && myconf="${myconf} --enable-opengl-video"
 	use xvmc && ! use video_cards_via  ! use opengl-xvmc && myconf="${myconf} --enable-xvmc --xvmc-lib=XvMCW"
-	use xvmc && use video_cards_via && myconf="${myconf} --enable-xmvc --enable-xvmc-pro"
+	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc --enable-xvmc-pro"
 	use xvmc && use video_cards_nvidia && use opengl-xvmc && myconf="${myconf} --enable-xvmc --enable-xvmc-opengl"
 	myconf="${myconf}
 		$(use_enable dvb)
