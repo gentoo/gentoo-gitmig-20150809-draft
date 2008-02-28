@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r1.ebuild,v 1.4 2007/12/04 05:08:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r1.ebuild,v 1.5 2008/02/28 07:43:24 mr_bones_ Exp $
 
 inherit eutils autotools flag-o-matic toolchain-funcs games
 
@@ -67,6 +67,7 @@ src_compile() {
 		--enable-release \
 		${myconf} \
 		|| die
+	emake makefile.dep || die "emake failed"
 	emake || die "emake failed"
 }
 
