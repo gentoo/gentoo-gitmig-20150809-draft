@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.10-r2.ebuild,v 1.1 2008/02/27 20:30:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.10-r2.ebuild,v 1.2 2008/02/28 00:56:10 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -204,7 +204,7 @@ pkg_postinst() {
 		elog "Note that the user your webserver is running at needs"
 		elog "read-access to /etc/nagios."
 		elog
-		
+
 		if use apache2 ; then
 			elog "There are several possible solutions to accomplish this,"
 			elog "choose the one you are most comfortable with:"
