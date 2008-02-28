@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/systemconfigurator
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/systemconfigurator/ChangeLog,v 1.13 2007/02/21 19:48:05 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/systemconfigurator/ChangeLog,v 1.14 2008/02/28 15:31:05 nixnut Exp $
+
+  28 Feb 2008; nixnut <nixnut@gentoo.org> systemconfigurator-2.2.2.ebuild:
+  Added ~ppc wrt bug 211718
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
