@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.22.ebuild,v 1.10 2007/12/11 10:01:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.22.ebuild,v 1.11 2008/02/28 22:55:51 eva Exp $
 
 inherit libtool eutils python
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="crypt debug python"
+IUSE="crypt debug examples python"
 
 DEPEND=">=dev-libs/libxml2-2.6.27
 	crypt?  ( >=dev-libs/libgcrypt-1.1.92 )
@@ -19,7 +19,7 @@ DEPEND=">=dev-libs/libxml2-2.6.27
 SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# we still require the 1.1.8 patch for the .m4 file, to add
@@ -61,7 +61,11 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 
 	dodoc AUTHORS ChangeLog Copyright FEATURES NEWS README TODO
+
+	if ! use examples; then
+		rm -rf "${D}/usr/share/doc/${PN}-python-${PV}/examples"
+	fi
 }
