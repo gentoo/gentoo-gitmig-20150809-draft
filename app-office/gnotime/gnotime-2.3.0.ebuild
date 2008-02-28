@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.3.0.ebuild,v 1.1 2008/02/24 23:47:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.3.0.ebuild,v 1.2 2008/02/28 08:04:14 opfer Exp $
 
 EAPI="1"
 
@@ -39,16 +39,6 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
-# Fix for bug #109047, don't parallel build with libqofsql
-# Should be fixed, to be tested
-#MAKEOPTS="${MAKEOPTS} -j1"
-
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-schemas-install"
-
-	# upstream knows about the fix and has promised to incorporate it
-	if ! built_with_use --missing true dev-scheme/guile deprecated;then
-		   eerror "rebuild dev-scheme/guile with USE=deprecated"
-		   die
-	fi
 }
