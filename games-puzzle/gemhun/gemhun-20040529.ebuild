@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/gemhun-20040529.ebuild,v 1.5 2007/10/01 00:43:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/gemhun-20040529.ebuild,v 1.6 2008/02/29 19:34:20 carlo Exp $
 
 inherit eutils autotools games
 
@@ -46,6 +46,6 @@ src_install() {
 	insinto "${GAMES_DATADIR}/GemHunters/pax/"
 	doins -r ../fairylands ../stars_in_the_night || die "doins failed"
 	doicon pixmaps/${PN}.png
-	make_desktop_entry ${PN} "GemHunter" ${PN}.xpm
+	make_desktop_entry ${PN} "GemHunter" ${PN}
 	prepgamesdirs
 }

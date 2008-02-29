@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.17 2007/12/26 12:24:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.18 2008/02/29 19:35:24 carlo Exp $
 
 inherit eutils games
 
@@ -58,7 +58,7 @@ src_install() {
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins ${PN}.res
 	doicon images/${PN}.xpm
-	make_desktop_entry ${PN} "Quadra" ${PN}.xpm
+	make_desktop_entry ${PN} "Quadra" ${PN}
 
 	dodoc ChangeLog NEWS README
 	dohtml help/*

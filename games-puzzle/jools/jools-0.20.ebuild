@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20.ebuild,v 1.1 2007/01/14 03:02:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20.ebuild,v 1.2 2008/02/29 19:30:56 carlo Exp $
 
 inherit eutils python games
 
@@ -42,7 +42,7 @@ src_install() {
 	dohtml doc/manual.html
 
 	newicon ${PN}/images/ruby/0001.png ${PN}.png
-	make_desktop_entry ${PN} "Jools" ${PN}.png
+	make_desktop_entry ${PN} "Jools" ${PN}
 
 	prepgamesdirs
 }

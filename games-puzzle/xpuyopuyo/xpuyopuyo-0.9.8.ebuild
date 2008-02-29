@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpuyopuyo/xpuyopuyo-0.9.8.ebuild,v 1.2 2007/03/15 12:03:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpuyopuyo/xpuyopuyo-0.9.8.ebuild,v 1.3 2008/02/29 19:33:43 carlo Exp $
 
 inherit eutils games
 
@@ -30,6 +30,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO
 	doicon ${PN}.xpm
-	make_desktop_entry ${PN} ${PN} ${PN}.xpm
+	make_desktop_entry ${PN} ${PN} ${PN}
 	prepgamesdirs
 }

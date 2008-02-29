@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.4.0.ebuild,v 1.5 2008/01/19 10:07:08 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.4.0.ebuild,v 1.6 2008/02/29 19:36:29 carlo Exp $
 
 inherit eutils games
 
@@ -46,8 +46,8 @@ src_install() {
 	dodoc CHANGES README
 
 	doicon icon/*.png
-	make_desktop_entry neverball Neverball neverball.png
-	make_desktop_entry neverputt Neverputt neverputt.png
+	make_desktop_entry neverball Neverball neverball
+	make_desktop_entry neverputt Neverputt neverputt
 
 	prepgamesdirs
 }

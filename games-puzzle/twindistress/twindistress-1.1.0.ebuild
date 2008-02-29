@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.1.0.ebuild,v 1.2 2008/02/04 15:23:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.1.0.ebuild,v 1.3 2008/02/29 19:30:17 carlo Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -38,7 +38,7 @@ src_install() {
 	doins -r graphics music sound || die "doins failed"
 
 	doicon graphics/twind.png
-	make_desktop_entry twind "Twin Distress" twind.png
+	make_desktop_entry twind "Twin Distress" twind
 
 	dodoc AUTHORS ChangeLog CREDITS NEWS README TODO
 

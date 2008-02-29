@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.7.4.ebuild,v 1.1 2006/12/22 08:25:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.7.4.ebuild,v 1.2 2008/02/29 19:32:16 carlo Exp $
 
 inherit eutils games
 
@@ -40,6 +40,6 @@ src_install() {
 	rm -f COPYING
 	doins -r * || die "doins failed"
 	newicon images/icon.png fillets.png
-	make_desktop_entry fillets FishFillets fillets.png
+	make_desktop_entry fillets FishFillets fillets
 	prepgamesdirs
 }

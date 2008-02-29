@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/quadra
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/ChangeLog,v 1.17 2007/12/26 12:24:24 tupone Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/ChangeLog,v 1.18 2008/02/29 19:35:24 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> quadra-1.1.8.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   26 Dec 2007; Tupone Alfredo <tupone@gentoo.org>
   +files/quadra-1.1.8-asneeded.patch, quadra-1.1.8.ebuild:

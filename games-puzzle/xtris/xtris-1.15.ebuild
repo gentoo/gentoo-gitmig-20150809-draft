@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xtris/xtris-1.15.ebuild,v 1.7 2006/10/31 19:08:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xtris/xtris-1.15.ebuild,v 1.8 2008/02/29 19:33:05 carlo Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -30,7 +30,7 @@ src_compile() {
 src_install() {
 	dogamesbin xtris xtserv xtbot || die "dogamesbin failed"
 	doicon "${FILESDIR}"/${PN}.xpm
-	make_desktop_entry ${PN} xtris ${PN}.xpm
+	make_desktop_entry ${PN} xtris ${PN}
 	doman xtris.6 xtserv.6 xtbot.6
 	dodoc ChangeLog PROTOCOL README
 	prepgamesdirs

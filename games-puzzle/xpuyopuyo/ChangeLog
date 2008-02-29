@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/xpuyopuyo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpuyopuyo/ChangeLog,v 1.1 2007/03/04 01:33:22 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpuyopuyo/ChangeLog,v 1.2 2008/02/29 19:33:43 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> xpuyopuyo-0.9.8.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *xpuyopuyo-0.9.8 (04 Mar 2007)
 

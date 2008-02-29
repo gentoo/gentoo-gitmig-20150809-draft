@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3-r1.ebuild,v 1.6 2007/08/08 19:01:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3-r1.ebuild,v 1.7 2008/02/29 19:37:46 carlo Exp $
 
 inherit eutils games
 
@@ -61,7 +61,7 @@ src_install() {
 	use doc && dohtml -r html/*
 
 	doicon ${PN}.xpm
-	make_desktop_entry ${PN} Pathological ${PN}.xpm
+	make_desktop_entry ${PN} Pathological ${PN}
 
 	# remove some unneeded resource files
 	rm -f "${D}/${GAMES_DATADIR}"/${PN}/graphics/*.xcf

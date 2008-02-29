@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/fbg
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/ChangeLog,v 1.8 2007/01/08 14:42:49 nyhm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/ChangeLog,v 1.9 2008/02/29 19:28:25 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> ChangeLog:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   08 Jan 2007; Tristan Heaven <nyhm@gentoo.org> fbg-0.9-r1.ebuild:
   HOMEPAGE update and install menu entry, bug #160209

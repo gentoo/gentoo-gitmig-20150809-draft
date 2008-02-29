@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/tong-1.0.ebuild,v 1.4 2006/08/15 15:05:05 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/tong-1.0.ebuild,v 1.5 2008/02/29 19:29:34 carlo Exp $
 
 inherit eutils games
 
@@ -35,7 +35,7 @@ src_install() {
 	cp -r media/ "${D}/${GAMES_DATADIR}/${PN}" || die "cp failed"
 	dodoc CHANGELOG README making-of.txt CREDITS
 
-	make_desktop_entry tong TONG ${PN}.png
+	make_desktop_entry tong TONG ${PN}
 	doicon "${T}/${PN}.png"
 	prepgamesdirs
 }
