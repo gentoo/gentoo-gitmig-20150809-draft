@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.69.0.ebuild,v 1.1 2008/02/09 22:44:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.69.0.ebuild,v 1.2 2008/02/29 17:47:23 carlo Exp $
 
 inherit distutils eutils
 
@@ -30,5 +30,5 @@ src_install() {
 	rm "${D}/usr/bin/taskcoach.pyw" || die
 
 	doicon "${WORKDIR}/${PN}-icon/${PN}.png" || die
-	make_desktop_entry ${PN} "Task Coach" ${PN}.png Office || die
+	make_desktop_entry ${PN} "Task Coach" ${PN} Office || die
 }
