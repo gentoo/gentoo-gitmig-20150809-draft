@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.8 2007/03/18 23:35:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.9 2008/02/29 17:58:40 carlo Exp $
 
 inherit eutils multilib flag-o-matic libtool
 
@@ -85,5 +85,5 @@ src_install() {
 	dosym "/usr/share/doc/${PF}" "/usr/share/plt/doc"
 
 	newicon "${WORKDIR}/plt-${PV}/collects/icons/PLT-206.png" drscheme.png
-	make_desktop_entry drscheme "DrScheme" drscheme.png "Development"
+	make_desktop_entry drscheme "DrScheme" drscheme "Development"
 }

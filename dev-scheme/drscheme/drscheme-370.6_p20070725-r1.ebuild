@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-370.6_p20070725-r1.ebuild,v 1.1 2007/08/02 10:20:04 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-370.6_p20070725-r1.ebuild,v 1.2 2008/02/29 17:58:40 carlo Exp $
 
 inherit eutils
 
@@ -72,6 +72,6 @@ src_install() {
 
 	if use X; then
 		newicon ../collects/icons/PLT-206.png drscheme.png
-		make_desktop_entry drscheme "DrScheme" drscheme.png "Development"
+		make_desktop_entry drscheme "DrScheme" drscheme "Development"
 	fi
 }
