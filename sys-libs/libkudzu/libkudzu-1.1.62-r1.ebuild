@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.1.62-r1.ebuild,v 1.19 2007/08/14 21:27:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.1.62-r1.ebuild,v 1.20 2008/02/29 01:34:03 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -41,7 +41,7 @@ src_compile() {
 	# Fix the modules directory to match Gentoo layout.
 	perl -pi -e 's|/etc/modutils/kudzu|/etc/modules.d/kudzu|g' *.*
 
-	if [ $(tc-arch-kernel) == "powerpc" ]; then
+	if use ppc && [ "$(tc-arch-kernel)" != "ppc" ]; then
 		emake libkudzu.a ARCH="ppc" RPM_OPT_FLAGS="${CFLAGS}" || die
 	else
 		emake libkudzu.a ARCH=$(tc-arch-kernel) RPM_OPT_FLAGS="${CFLAGS}" || die
