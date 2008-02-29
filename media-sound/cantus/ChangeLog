@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cantus
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.23 2007/08/12 10:29:35 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.24 2008/02/29 20:04:33 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> cantus-3.0.2.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *cantus-3.0.2 (12 Aug 2007)
 

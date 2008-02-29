@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mumble
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.9 2008/01/06 20:55:23 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.10 2008/02/29 20:05:55 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> mumble-0.9.4.ebuild,
+  mumble-1.1.1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   06 Jan 2008; Timothy Redaelli <drizzt@gentoo.org> mumble-1.1.1.ebuild:
   Fix for speex 1.2_beta3.

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-0.9.4.ebuild,v 1.7 2007/05/05 19:13:10 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-0.9.4.ebuild,v 1.8 2008/02/29 20:05:55 carlo Exp $
 
 inherit eutils toolchain-funcs
 
@@ -56,6 +56,6 @@ src_install() {
 	insinto /usr/share/pixmaps
 	newins mumble.png.0 mumble.png \
 		|| die "installing icon failed"
-	make_desktop_entry mumble "Mumble" mumble.png "KDE;Qt;AudioVideo" \
+	make_desktop_entry mumble "Mumble" mumble "KDE;Qt;AudioVideo" \
 		|| die "installing desktop entry failed"
 }

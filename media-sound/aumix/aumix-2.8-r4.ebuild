@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r4.ebuild,v 1.11 2007/05/23 07:28:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r4.ebuild,v 1.12 2008/02/29 19:58:37 carlo Exp $
 
 inherit eutils
 
@@ -65,6 +65,6 @@ src_install() {
 
 	if use gtk; then
 		doicon data/aumix.xpm
-		make_desktop_entry aumix Aumix aumix.xpm
+		make_desktop_entry aumix Aumix aumix
 	fi
 }

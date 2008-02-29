@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.0.ebuild,v 1.5 2007/07/25 21:11:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.0.ebuild,v 1.6 2008/02/29 20:01:31 carlo Exp $
 
 inherit eutils toolchain-funcs
 
@@ -45,5 +45,5 @@ src_install() {
 	plugins/ripperX_plugin-flac plugins/ripperX_plugin-toolame
 
 	doicon src/xpms/ripperX-icon.xpm
-	make_desktop_entry ripperX "${PN}" ripperX-icon.xpm
+	make_desktop_entry ripperX "${PN}" ripperX-icon
 }

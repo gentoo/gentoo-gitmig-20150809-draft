@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/gtick-0.4.1.ebuild,v 1.4 2007/11/22 17:44:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/gtick-0.4.1.ebuild,v 1.5 2008/02/29 19:59:56 carlo Exp $
 
 inherit eutils
 
@@ -35,5 +35,5 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	newicon src/icon32x32.xpm gtick.xpm
-	make_desktop_entry ${PN} "GTick" ${PN}.xpm
+	make_desktop_entry ${PN} "GTick" ${PN}
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.7.ebuild,v 1.4 2007/05/26 02:17:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.7.ebuild,v 1.5 2008/02/29 20:06:46 carlo Exp $
 
 inherit eutils
 
@@ -26,5 +26,5 @@ src_install() {
 	doins icons/qmpdclient{16,22,32,64,128}.png
 	dobin qmpdclient
 
-	make_desktop_entry qmpdclient "QMPDClient" qmpdclient64.png "KDE;Qt;AudioVideo"
+	make_desktop_entry qmpdclient "QMPDClient" qmpdclient64 "KDE;Qt;AudioVideo"
 }

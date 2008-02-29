@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/glurp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.22 2007/02/22 01:00:27 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.23 2008/02/29 19:59:14 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> glurp-0.11.6-r1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

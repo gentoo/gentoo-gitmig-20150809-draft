@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/gtkguitune-0.7-r1.ebuild,v 1.2 2007/08/19 15:30:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/gtkguitune-0.7-r1.ebuild,v 1.3 2008/02/29 20:08:44 carlo Exp $
 
 inherit eutils
 
@@ -21,5 +21,5 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc README AUTHORS
 	doicon *.xpm
-	make_desktop_entry ${PN} "Guitune" guitune_logo.xpm
+	make_desktop_entry ${PN} "Guitune" guitune_logo
 }

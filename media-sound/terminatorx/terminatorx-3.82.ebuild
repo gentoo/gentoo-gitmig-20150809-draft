@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.9 2008/01/13 13:38:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.10 2008/02/29 20:02:02 carlo Exp $
 
 inherit gnome2 eutils
 
@@ -56,5 +56,5 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	newicon gnome-support/terminatorX-app.png terminatorX.png
-	make_desktop_entry terminatorX terminatorX terminatorX.png AudioVideo
+	make_desktop_entry terminatorX terminatorX terminatorX AudioVideo
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.8.ebuild,v 1.5 2007/08/26 01:22:45 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.8.ebuild,v 1.6 2008/02/29 20:07:24 carlo Exp $
 
 IUSE="alsa esd jack nls oss sdl"
 
@@ -69,5 +69,5 @@ src_install () {
 	dohtml -r doc
 
 	doicon soundtracker_splash.png
-	make_desktop_entry soundtracker SoundTracker soundtracker_splash.png
+	make_desktop_entry soundtracker SoundTracker soundtracker_splash
 }

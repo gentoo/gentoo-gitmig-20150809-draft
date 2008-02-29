@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.4.14.ebuild,v 1.5 2008/02/06 14:52:55 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.4.14.ebuild,v 1.6 2008/02/29 20:08:01 carlo Exp $
 
 inherit eutils
 
@@ -49,5 +49,5 @@ src_install() {
 	dodoc AUTHORS BUGS ChangeLog HACKING NEWS README TODO
 
 	newicon src/icon.xpm ${PN}.xpm
-	make_desktop_entry mhwaveedit mhWaveEdit ${PN}.xpm AudioVideo
+	make_desktop_entry mhwaveedit mhWaveEdit ${PN} AudioVideo
 }

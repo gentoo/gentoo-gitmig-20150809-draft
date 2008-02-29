@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r4.ebuild,v 1.11 2007/02/11 18:08:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r4.ebuild,v 1.12 2008/02/29 19:57:54 carlo Exp $
 
 IUSE=""
 
@@ -41,5 +41,5 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc README AUTHORS ChangeLog
 	newicon src/images/alsalogo.xpm ${PN}.xpm
-	make_desktop_entry alsamixergui "Alsa Mixer GUI" ${PN}.xpm
+	make_desktop_entry alsamixergui "Alsa Mixer GUI" ${PN}
 }

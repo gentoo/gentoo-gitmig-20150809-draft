@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.0.3.ebuild,v 1.3 2007/07/27 15:44:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.0.3.ebuild,v 1.4 2008/02/29 20:03:47 carlo Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -95,7 +95,7 @@ src_install() {
 	dodoc DOCUMENTATION/*
 
 	doicon "${S}/icons/icon/ardour_icon_mac.png"
-	make_desktop_entry ardour2 Ardour2 ardour_icon_mac.png AudioVideo
+	make_desktop_entry ardour2 Ardour2 ardour_icon_mac AudioVideo
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/playspc_gtk/playspc_gtk-0.2.7.8.ebuild,v 1.1 2007/07/24 15:35:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playspc_gtk/playspc_gtk-0.2.7.8.ebuild,v 1.2 2008/02/29 20:09:22 carlo Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,5 +29,5 @@ src_install() {
 	dobin ${PN} spccore
 	dodoc CHANGELOG README TODO
 	doicon playspc-icon.png
-	make_desktop_entry ${PN} ${PN} playspc-icon.png
+	make_desktop_entry ${PN} ${PN} playspc-icon
 }

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/soundtracker
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.26 2007/08/26 01:22:45 philantrop Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.27 2008/02/29 20:07:24 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> soundtracker-0.6.8.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   26 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
   soundtracker-0.6.8.ebuild:

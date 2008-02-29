@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-3.0.2.ebuild,v 1.2 2007/08/12 10:31:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-3.0.2.ebuild,v 1.3 2008/02/29 20:04:33 carlo Exp $
 
 inherit autotools eutils
 
@@ -39,5 +39,5 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	newicon dist/pixmaps/${PN}_tag.png ${PN}.png
-	make_desktop_entry ${PN} Cantus ${PN}.png
+	make_desktop_entry ${PN} Cantus ${PN}
 }

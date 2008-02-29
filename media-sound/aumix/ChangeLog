@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aumix
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.63 2007/05/23 07:28:25 eradicator Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.64 2008/02/29 19:58:37 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> aumix-2.8-r4.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   23 May 2007; Jeremy Huddleston <eradicator@gentoo.org>
   aumix-2.8-r4.ebuild:

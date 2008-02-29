@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/freebirth-0.3.2-r1.ebuild,v 1.7 2007/09/04 14:06:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/freebirth-0.3.2-r1.ebuild,v 1.8 2008/02/29 20:05:11 carlo Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,5 +33,5 @@ src_install() {
 	doins raw/*.raw
 	dodoc CHANGES NEXT_VERSION README
 	doicon xpm/${PN}.xpm
-	make_desktop_entry ${PN} ${PN} ${PN}.xpm
+	make_desktop_entry ${PN} ${PN} ${PN}
 }

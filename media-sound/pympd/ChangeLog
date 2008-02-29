@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pympd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.17 2008/01/14 17:09:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.18 2008/02/29 20:00:48 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> pympd-0.06.ebuild,
+  pympd-0.06.1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   14 Jan 2008; Tony Vroon <chainsaw@gentoo.org> pympd-0.06.ebuild,
   pympd-0.06.1.ebuild, pympd-0.08.1.ebuild:

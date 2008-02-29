@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gtkguitune
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/ChangeLog,v 1.14 2007/08/19 15:30:09 drac Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/ChangeLog,v 1.15 2008/02/29 20:08:44 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> gtkguitune-0.7-r1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   19 Aug 2007; Samuli Suominen <drac@gentoo.org> gtkguitune-0.7-r1.ebuild:
   amd64/x86/sparc stable.

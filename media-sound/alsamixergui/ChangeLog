@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsamixergui
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.26 2007/02/11 18:08:33 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.27 2008/02/29 19:57:54 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
+  alsamixergui-0.9.0.1.2-r4.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   alsamixergui-0.9.0.1.2-r4.ebuild:
