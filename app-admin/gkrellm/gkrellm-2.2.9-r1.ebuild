@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.2.9-r1.ebuild,v 1.10 2007/02/04 16:33:02 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.2.9-r1.ebuild,v 1.11 2008/02/29 17:40:13 carlo Exp $
 
 inherit eutils toolchain-funcs
 
@@ -76,7 +76,7 @@ src_install() {
 		newman ${PN}.1 gkrellm2.1
 
 		newicon src/icon.xpm ${PN}.xpm
-		make_desktop_entry gkrellm2 GKrellM ${PN}.xpm
+		make_desktop_entry gkrellm2 GKrellM ${PN}
 	else
 		dobin server/gkrellmd || die "dobin failed"
 
