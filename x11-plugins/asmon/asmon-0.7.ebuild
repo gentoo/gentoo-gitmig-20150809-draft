@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/asmon-0.7.ebuild,v 1.7 2007/07/22 05:39:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/asmon-0.7.ebuild,v 1.8 2008/02/29 20:48:28 carlo Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,6 +33,6 @@ src_compile() {
 src_install() {
 	dodoc Changelog
 	newicon ${PN}.icon.xpm ${PN}.xpm
-	make_desktop_entry ${PN} ${PN} ${PN}.xpm "System;Monitor"
+	make_desktop_entry ${PN} ${PN} ${PN} "System;Monitor"
 	dobin asmon/${PN}
 }
