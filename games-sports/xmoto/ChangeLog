@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/xmoto
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.20 2007/10/21 21:30:42 genstef Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.21 2008/02/29 19:39:28 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> xmoto-0.2.0.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *xmoto-0.3.4 (21 Oct 2007)
 
