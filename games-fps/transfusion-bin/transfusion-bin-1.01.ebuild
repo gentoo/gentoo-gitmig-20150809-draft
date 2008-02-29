@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/transfusion-bin/transfusion-bin-1.01.ebuild,v 1.15 2007/12/25 22:20:16 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/transfusion-bin/transfusion-bin-1.01.ebuild,v 1.16 2008/02/29 19:24:24 carlo Exp $
 
 inherit eutils games
 
@@ -43,7 +43,7 @@ src_install() {
 
 	doicon "${DISTDIR}"/${MY_PN}.png
 	games_make_wrapper ${MY_PN} ./${MY_PN}-glx "${dir}" "${dir}"
-	make_desktop_entry ${MY_PN} "Transfusion" ${MY_PN}.png
+	make_desktop_entry ${MY_PN} "Transfusion" ${MY_PN}
 
 	prepgamesdirs
 }

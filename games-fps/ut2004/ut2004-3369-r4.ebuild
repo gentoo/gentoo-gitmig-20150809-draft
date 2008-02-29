@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.17 2008/02/25 23:01:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.18 2008/02/29 19:23:40 carlo Exp $
 
 # To use system libraries, uncomment the following line and comment the one
 # below it.
@@ -88,7 +88,7 @@ src_install() {
 	games_make_wrapper ut2004 ./ut2004 "${dir}" "${dir}"
 
 	prepgamesdirs
-	make_desktop_entry ut2004 "Unreal Tournament 2004" ut2004.xpm
+	make_desktop_entry ut2004 "Unreal Tournament 2004" ut2004
 }
 
 pkg_postinst() {

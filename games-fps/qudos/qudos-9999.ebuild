@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-9999.ebuild,v 1.8 2007/11/20 02:14:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-9999.ebuild,v 1.9 2008/02/29 19:14:34 carlo Exp $
 
 inherit eutils subversion toolchain-funcs games
 
@@ -156,7 +156,7 @@ src_install() {
 			|| die "newgamesbin QuDos failed"
 		# This icon is not available in the 0.40.1 tarball
 		newicon src/unix/Q2.png ${PN}.png
-		make_desktop_entry ${PN} "QuDos" ${PN}.png
+		make_desktop_entry ${PN} "QuDos" ${PN}
 	fi
 
 	if use dedicated ; then

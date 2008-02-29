@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.7 2007/04/28 18:07:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.8 2008/02/29 19:09:05 carlo Exp $
 
 inherit eutils games
 
@@ -64,8 +64,8 @@ src_install() {
 	doicon WolfMP.xpm WolfSP.xpm
 
 	prepgamesdirs
-	make_desktop_entry rtcwmp "Return to Castle Wolfenstein (MP)" WolfMP.xpm
-	make_desktop_entry rtcwsp "Return to Castle Wolfenstein (SP)" WolfSP.xpm
+	make_desktop_entry rtcwmp "Return to Castle Wolfenstein (MP)" WolfMP
+	make_desktop_entry rtcwsp "Return to Castle Wolfenstein (SP)" WolfSP
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.17 2007/12/25 22:50:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.18 2008/02/29 19:19:40 carlo Exp $
 
 inherit eutils games
 
@@ -65,7 +65,7 @@ src_install() {
 
 	newicon ${CDROM_ROOT}/icon.xpm tribes2.xpm
 	games_make_wrapper t2launch ./t2launch "${dir}" "${dir}"
-	make_desktop_entry t2launch "Tribes 2" tribes2.xpm
+	make_desktop_entry t2launch "Tribes 2" tribes2
 
 	prepgamesdirs
 }

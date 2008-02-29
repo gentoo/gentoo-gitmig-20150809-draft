@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0.ebuild,v 1.5 2007/06/13 21:14:13 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0.ebuild,v 1.6 2008/02/29 19:22:46 carlo Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -80,7 +80,7 @@ src_install() {
 		newgamesbin ${bindir}/${PN}.${ARCH} ${PN} \
 			|| die "newgamesbin client failed"
 		doicon misc/${PN}.xpm
-		make_desktop_entry ${PN} Tremulous ${PN}.xpm
+		make_desktop_entry ${PN} Tremulous ${PN}
 	fi
 
 	if use dedicated ; then

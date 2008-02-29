@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.21 2006/11/14 18:27:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.22 2008/02/29 19:12:18 carlo Exp $
 
 inherit eutils games
 
@@ -103,7 +103,7 @@ EOT
 	doins DemoLicense.int README.linux
 	doexe ucc ut2003_demo
 	newicon Unreal.xpm ut2003-demo.xpm
-	make_desktop_entry ut2003-demo "Unreal Tournament 2003 (Demo)" ${PN}.xpm
+	make_desktop_entry ut2003-demo "Unreal Tournament 2003 (Demo)" ${PN}
 
 	prepgamesdirs
 }

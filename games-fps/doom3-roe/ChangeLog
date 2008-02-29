@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doom3-roe
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/ChangeLog,v 1.8 2007/03/12 14:35:47 genone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/ChangeLog,v 1.9 2008/02/29 19:26:53 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> doom3-roe-1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> doom3-roe-1.ebuild:
   Replacing einfo with elog

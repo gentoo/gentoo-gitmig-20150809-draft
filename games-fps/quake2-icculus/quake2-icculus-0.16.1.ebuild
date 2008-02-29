@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.21 2008/02/15 01:06:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.22 2008/02/29 19:22:02 carlo Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -143,7 +143,7 @@ src_install() {
 		&& rm "${D}/${q2dir}"/sdlquake2
 
 	doicon "${FILESDIR}"/quake2.xpm
-	make_desktop_entry quake2 Quake2 quake2.xpm
+	make_desktop_entry quake2 Quake2 quake2
 
 	# q2max files
 	if ! use noqmax ; then
@@ -159,7 +159,7 @@ src_install() {
 		insinto "${q2maxdir}"/baseq2
 		doins "${DISTDIR}"/maxpak.pak
 
-		make_desktop_entry quake2-qmax Quake2-qmax quake2.xpm
+		make_desktop_entry quake2-qmax Quake2-qmax quake2
 	fi
 
 	prepgamesdirs

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.7.1.ebuild,v 1.3 2008/01/15 09:31:15 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.7.1.ebuild,v 1.4 2008/02/29 19:17:41 carlo Exp $
 
 inherit eutils versionator games
 
@@ -56,7 +56,7 @@ src_install() {
 
 	games_make_wrapper ${PN} "./${exe}.${arch}" "${dir}"
 	doicon "${FILESDIR}"/openarena.xpm
-	make_desktop_entry ${PN} "Open Arena" openarena.xpm
+	make_desktop_entry ${PN} "Open Arena" openarena
 
 	prepgamesdirs
 }

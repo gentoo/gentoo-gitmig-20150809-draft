@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/doom3-mitm-20060328.ebuild,v 1.3 2008/02/15 00:40:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/doom3-mitm-20060328.ebuild,v 1.4 2008/02/29 19:16:57 carlo Exp $
 
 MOD_DESC="single-player map trilogy"
 MOD_NAME="Make it to Morning"
@@ -42,12 +42,12 @@ src_install() {
 	games-mods_src_install
 	games_make_wrapper ${PN} \
 		"doom3 +set fs_game ${MOD_DIR} +set fs_game_base d3xp +map mitm"
-	make_desktop_entry ${PN} "Doom III - Make it to Morning (1)" doom3.png
+	make_desktop_entry ${PN} "Doom III - Make it to Morning (1)" doom3
 	local n
 	for n in {2,3} ; do
 		games_make_wrapper ${PN}${n} \
 			"doom3 +set fs_game ${MOD_DIR} +set fs_game_base d3xp +map mitm${n}"
 		make_desktop_entry ${PN}${n} \
-			"Doom III - Make it to Morning (${n})" doom3.png
+			"Doom III - Make it to Morning (${n})" doom3
 	done
 }

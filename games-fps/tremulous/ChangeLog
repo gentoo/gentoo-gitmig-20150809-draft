@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/tremulous
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.6 2007/06/13 21:14:13 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.7 2008/02/29 19:22:46 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> tremulous-1.1.0.ebuild,
+  tremulous-1.1.0-r1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   13 Jun 2007; Tristan Heaven <nyhm@gentoo.org>
   +files/tremulous-1.1.0-gcc42.patch, tremulous-1.1.0-r1.ebuild:

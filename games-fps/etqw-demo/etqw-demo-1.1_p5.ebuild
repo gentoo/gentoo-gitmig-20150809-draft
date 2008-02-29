@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-demo/etqw-demo-1.1_p5.ebuild,v 1.1 2008/02/27 18:05:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-demo/etqw-demo-1.1_p5.ebuild,v 1.2 2008/02/29 19:11:16 carlo Exp $
 
 inherit eutils games
 
@@ -67,7 +67,7 @@ src_install() {
 
 	games_make_wrapper ${PN} ./etqw.x86 "${dir}"/data "${dir}"/data
 	# Matches with desktop entry for enemy-territory-truecombat
-	make_desktop_entry ${PN} "Enemy Territory: Quake Wars (Demo)" ${PN}.png
+	make_desktop_entry ${PN} "Enemy Territory: Quake Wars (Demo)" ${PN}
 
 	games_make_wrapper ${PN}-ded ./etqwded.x86 "${dir}"/data "${dir}"/data
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.17 2007/06/21 23:57:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.18 2008/02/29 19:13:05 carlo Exp $
 
 inherit eutils games
 
@@ -61,7 +61,7 @@ src_install() {
 
 	dodir
 	games_make_wrapper ut2004-demo ./ut2004-demo "${dir}" "${dir}"
-	make_desktop_entry ut2004-demo "Unreal Tournament 2004 (Demo)" ut2004-demo.xpm
+	make_desktop_entry ut2004-demo "Unreal Tournament 2004 (Demo)" ut2004-demo
 
 	prepgamesdirs
 }

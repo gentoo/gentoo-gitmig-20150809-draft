@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous-bin/tremulous-bin-1.1.0.ebuild,v 1.4 2007/12/25 22:15:36 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous-bin/tremulous-bin-1.1.0.ebuild,v 1.5 2008/02/29 19:19:05 carlo Exp $
 
 inherit eutils games
 
@@ -65,7 +65,7 @@ src_install() {
 			|| die "newexe ${MY_PN}.x86 failed"
 		doicon ${MY_PN}.xpm || die "doicon failed"
 		games_make_wrapper ${MY_PN} ./${MY_PN}.bin "${dir}"
-		make_desktop_entry ${MY_PN} "Tremulous" ${MY_PN}.xpm
+		make_desktop_entry ${MY_PN} "Tremulous" ${MY_PN}
 	fi
 
 	if use dedicated ; then

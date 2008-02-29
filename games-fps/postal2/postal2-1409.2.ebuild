@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/postal2-1409.2.ebuild,v 1.4 2007/04/17 15:57:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/postal2-1409.2.ebuild,v 1.5 2008/02/29 19:25:32 carlo Exp $
 
 inherit eutils games
 
@@ -57,7 +57,7 @@ src_install() {
 
 	games_make_wrapper ${PN} ./${PN}-bin "${dir}"/System .
 	doicon "${CDROM_ROOT}"/.installation_data/${PN}.xpm
-	make_desktop_entry ${PN} "Postal 2: Share The Pain" ${PN}.xpm
+	make_desktop_entry ${PN} "Postal 2: Share The Pain" ${PN}
 
 	prepgamesdirs
 }

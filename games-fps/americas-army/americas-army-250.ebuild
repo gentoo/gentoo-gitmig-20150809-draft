@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.17 2007/08/20 22:34:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.18 2008/02/29 19:25:06 carlo Exp $
 
 inherit eutils games
 
@@ -80,7 +80,7 @@ src_install() {
 
 	if use opengl || ! use dedicated ; then
 		games_make_wrapper armyops ./armyops "${dir}" "${dir}"
-		make_desktop_entry armyops "America's Army" armyops.xpm
+		make_desktop_entry armyops "America's Army" armyops
 	fi
 
 	prepgamesdirs

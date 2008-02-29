@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.11 2008/02/15 01:01:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.12 2008/02/29 19:27:30 carlo Exp $
 
 inherit eutils games
 
@@ -81,7 +81,7 @@ src_install() {
 		dosym "${dir}/etwolf-homedir" "${GAMES_PREFIX}/.etwolf"
 	fi
 
-	make_desktop_entry et "Enemy Territory" ET.xpm
+	make_desktop_entry et "Enemy Territory" ET
 
 	prepgamesdirs
 	chmod g+rw "${Ddir}" "${Ddir}/etmain"

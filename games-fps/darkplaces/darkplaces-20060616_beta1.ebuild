@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20060616_beta1.ebuild,v 1.4 2007/02/19 20:12:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20060616_beta1.ebuild,v 1.5 2008/02/29 19:10:55 carlo Exp $
 
 inherit eutils flag-o-matic versionator games
 
@@ -174,30 +174,30 @@ src_install() {
 	if default_client ; then
 		newgamesbin ${PN}-glx ${PN} || die "dogamesbin glx failed"
 		if use cdinstall ; then
-			make_desktop_entry ${PN} "Dark Places" ${PN}.png
+			make_desktop_entry ${PN} "Dark Places" ${PN}
 		fi
 		if use dpmod ; then
 			games_make_wrapper ${PN}-dpmod "${PN} -game dpmod"
-			make_desktop_entry ${PN}-dpmod "Dark Places (mod)" ${PN}.png
+			make_desktop_entry ${PN}-dpmod "Dark Places (mod)" ${PN}
 		fi
 		if use demo ; then
 			games_make_wrapper ${PN}-demo "${PN} -game demo"
-			make_desktop_entry ${PN}-demo "Dark Places (demo)" ${PN}.png
+			make_desktop_entry ${PN}-demo "Dark Places (demo)" ${PN}
 		fi
 	fi
 
 	if use sdl ; then
 		dogamesbin ${PN}-sdl || die "dogamesbin sdl failed"
 		if use cdinstall ; then
-			make_desktop_entry ${PN}-sdl "Dark Places (SDL)" ${PN}.png
+			make_desktop_entry ${PN}-sdl "Dark Places (SDL)" ${PN}
 		fi
 		if use dpmod ; then
 			games_make_wrapper ${PN}-sdl-dpmod "${PN}-sdl -game dpmod"
-			make_desktop_entry ${PN}-sdl-dpmod "Dark Places (SDL mod)" ${PN}.png
+			make_desktop_entry ${PN}-sdl-dpmod "Dark Places (SDL mod)" ${PN}
 		fi
 		if use demo ; then
 			games_make_wrapper ${PN}-sdl-demo "${PN}-sdl -game demo"
-			make_desktop_entry ${PN}-sdl-demo "Dark Places (SDL demo)" ${PN}.png
+			make_desktop_entry ${PN}-sdl-demo "Dark Places (SDL demo)" ${PN}
 		fi
 	fi
 

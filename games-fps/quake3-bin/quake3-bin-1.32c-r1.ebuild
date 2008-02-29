@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r1.ebuild,v 1.5 2007/07/31 14:35:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r1.ebuild,v 1.6 2008/02/29 19:15:24 carlo Exp $
 
 inherit eutils games
 
@@ -100,7 +100,7 @@ src_install() {
 			games_make_wrapper ${PN}-teamarena \
 				"./quake3.x86 +set fs_game missionpack" "${dir}" "${dir}"
 			make_desktop_entry ${PN}-teamarena \
-				"Quake III Team Arena (binary)" quake3-bin.xpm
+				"Quake III Team Arena (binary)" quake3-bin
 		fi
 	fi
 	if use dedicated

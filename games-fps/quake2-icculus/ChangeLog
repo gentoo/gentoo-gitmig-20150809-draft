@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.30 2008/02/19 01:36:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.31 2008/02/29 19:22:02 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
+  quake2-icculus-0.16.1.ebuild, quake2-icculus-0.16.1-r1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   19 Feb 2008; Mike Frysinger <vapier@gentoo.org>
   +files/quake2-icculus-0.16.1-no-asm-io.patch,

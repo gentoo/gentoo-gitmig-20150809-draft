@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.17 2007/03/12 15:25:29 genone Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.18 2008/02/29 19:20:21 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
+  unreal-tournament-451.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org>
   unreal-tournament-436.ebuild, unreal-tournament-451.ebuild:

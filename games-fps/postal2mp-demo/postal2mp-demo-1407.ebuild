@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1407.ebuild,v 1.9 2007/12/25 22:33:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1407.ebuild,v 1.10 2008/02/29 19:18:21 carlo Exp $
 
 inherit eutils games
 
@@ -46,7 +46,7 @@ src_install() {
 	games_make_wrapper ${PN} ./postal2-bin "${dir}"/System
 
 	newicon postal2mpdemo.xpm ${PN}.xpm
-	make_desktop_entry ${PN} "Postal 2: Share the Pain (Demo)" ${PN}.xpm
+	make_desktop_entry ${PN} "Postal 2: Share the Pain (Demo)" ${PN}
 
 	fperms 750 "${dir}"/System/{postal2,ucc}-bin
 	prepgamesdirs
