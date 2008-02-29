@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.1.ebuild,v 1.2 2008/02/28 15:41:38 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.1.ebuild,v 1.3 2008/02/29 07:23:41 tupone Exp $
 
-inherit eutils
+inherit eutils autotools
 
 MY_PN="Atlas-C++"
 MY_P=${MY_PN}-${PV}
@@ -20,6 +20,13 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-strict-aliasing.patch
+	eautoreconf
+}
 
 src_compile() {
 	econf \

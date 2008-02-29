@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/atlas-c++
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.22 2008/02/28 15:41:38 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.23 2008/02/29 07:23:41 tupone Exp $
+
+  29 Feb 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/atlas-c++-0.6.1-strict-aliasing.patch, atlas-c++-0.4.5.ebuild,
+  atlas-c++-0.5.92.ebuild, atlas-c++-0.6.1.ebuild:
+  Making test compile. Bug #211773 by Raúl Porcel.
+  Fixing DESCRIPTION on old ebuild to clean repoman warnings
 
   28 Feb 2008; Ferris McCormick <fmccor@gentoo.org> atlas-c++-0.6.1.ebuild:
   Restore ~sparc keyword --- Bug #211773 --- note that one test won't build,
