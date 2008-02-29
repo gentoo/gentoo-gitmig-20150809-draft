@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.6.1.ebuild,v 1.3 2007/10/08 20:22:39 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.6.1.ebuild,v 1.4 2008/02/29 17:42:01 carlo Exp $
 
 inherit kde-functions qt3 multilib eutils
 
@@ -27,6 +27,6 @@ src_unpack() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 	newicon qpxtool-gui/img/q.xpm ${PN}.xpm
-	make_desktop_entry ${PN} Qpxtool ${PN}.xpm "Utility;Qt;DiscBurning"
+	make_desktop_entry ${PN} Qpxtool ${PN} "Utility;Qt;DiscBurning"
 	dodoc AUTHORS ChangeLog README TODO
 }

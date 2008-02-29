@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.10 2007/01/24 02:19:17 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.11 2008/02/29 17:41:03 carlo Exp $
 
 inherit eutils flag-o-matic
 
@@ -73,7 +73,7 @@ src_install() {
 	# clean up the docs installed with make install
 	rm -rf "${D}/usr/share/doc/${PN}"
 	if use gtk ; then
-		make_desktop_entry cdw CDW cdw.png
+		make_desktop_entry cdw CDW cdw
 		doicon pixmaps/cdw.png
 	fi
 }
