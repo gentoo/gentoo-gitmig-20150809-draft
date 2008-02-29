@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/oneko-1.2-r1.ebuild,v 1.1 2007/10/15 07:59:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/oneko-1.2-r1.ebuild,v 1.2 2008/02/29 17:45:07 carlo Exp $
 
 inherit eutils
 
@@ -45,8 +45,8 @@ src_install() {
 	dodoc README README-NEW README-SUPP
 	newicon "${DISTDIR}/${P}-cat.png" "cat.png"
 	newicon "${DISTDIR}/${P}-dog.png" "dog.png"
-	make_desktop_entry "oneko" "oneko (cat)" "cat.png" "Game;Amusement"
-	make_desktop_entry "oneko -dog" "oneko (dog)" "dog.png" "Game;Amusement"
+	make_desktop_entry "oneko" "oneko (cat)" "cat" "Game;Amusement"
+	make_desktop_entry "oneko -dog" "oneko (dog)" "dog" "Game;Amusement"
 	make_desktop_entry "killall -TERM oneko" "oneko kill" "" "Game;Amusement"
 }
 

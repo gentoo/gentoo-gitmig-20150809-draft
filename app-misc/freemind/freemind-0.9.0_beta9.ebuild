@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0_beta9.ebuild,v 1.4 2007/05/26 17:40:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0_beta9.ebuild,v 1.5 2008/02/29 17:46:35 carlo Exp $
 
 # will handle rewriting myself
 JAVA_PKG_BSFIX="off"
@@ -71,5 +71,5 @@ src_install() {
 
 	newicon ${S}/images/FreeMindWindowIcon.png freemind.png
 
-	make_desktop_entry freemind Freemind freemind.png Utility
+	make_desktop_entry freemind Freemind freemind Utility
 }

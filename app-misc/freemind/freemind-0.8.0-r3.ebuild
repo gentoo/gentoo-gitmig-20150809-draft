@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0-r3.ebuild,v 1.5 2007/05/20 15:31:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0-r3.ebuild,v 1.6 2008/02/29 17:46:35 carlo Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -53,5 +53,5 @@ src_install() {
 	mv ${S}/images/FreeMindWindowIcon.png ${S}/images/freemind.png
 	doicon ${S}/images/freemind.png
 
-	make_desktop_entry freemind Freemind freemind.png Utility
+	make_desktop_entry freemind Freemind freemind Utility
 }
