@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/openglad
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/ChangeLog,v 1.6 2005/05/09 13:54:50 dholm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/ChangeLog,v 1.7 2008/02/29 19:35:54 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> ChangeLog:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   09 May 2005; David Holm <dholm@gentoo.org> openglad-0.98.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.4.ebuild,v 1.6 2006/11/02 23:44:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.4.ebuild,v 1.7 2008/02/29 19:34:55 carlo Exp $
 
 inherit eutils games
 
@@ -35,6 +35,6 @@ src_install(){
 	emake DESTDIR="${D}" pixmapdir=/usr/share/pixmaps install \
 		|| die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS PLAYING README
-	make_desktop_entry adonthell-wastesedge "Waste's Edge" wastesedge_32x32.xpm
+	make_desktop_entry adonthell-wastesedge "Waste's Edge" wastesedge_32x32
 	prepgamesdirs
 }

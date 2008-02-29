@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/openglad-0.98.ebuild,v 1.8 2005/05/09 13:54:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/openglad-0.98.ebuild,v 1.9 2008/02/29 19:35:54 carlo Exp $
 
 inherit eutils games
 
@@ -42,5 +42,5 @@ src_install() {
 	prepgamesdirs
 
 	doicon ${DISTDIR}/${PN}.png
-	make_desktop_entry openglad "OpenGladiator" ${PN}.png
+	make_desktop_entry openglad "OpenGladiator" ${PN}
 }
