@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r3.ebuild,v 1.1 2008/02/16 23:00:00 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r3.ebuild,v 1.2 2008/02/29 19:32:58 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -190,7 +190,7 @@ get_cd_set() {
 			disk2.zip disk3.zip disk4.zip
 		;;
 	gold_cd)
-		einfo "Shadow of Undrentide will be installed from your CDS along"
+		einfo "Shadow of Undrentide will be installed from your CDs along"
 		einfo "with the original Neverwinter Nights. If you have the"
 		einfo "Hordes of the Underdark expansion, it will be installed after."
 		touch .metadata/orig || die "touch orig"
@@ -198,7 +198,7 @@ get_cd_set() {
 		export CDROM_NAME_4="CD4"
 		if use hou
 		then
-			einfo "You will also need the HoU CDs for this installation."
+			einfo "You will also need the HoU CD for this installation."
 			export CDROM_NAME_5="HoU"
 			cdrom_get_cds ArcadeInstallNWNXP1_12d.EXE disk2.zip \
 				disk3.zip disk4.zip ArcadeInstallNWNXP213f.EXE
@@ -582,17 +582,7 @@ src_install() {
 			done )
 		fi
 	done
-	if ! use sou && ! use hou && use nowin
-	then
-		if [[ -f data/patch.bif ]]
-		then
-			chmod a-x data/patch.bif
-		fi
-		if [[ -f patch.key ]]
-		then
-			chmod a-x patch.key
-		fi
-	fi
+
 	doicon "${DISTDIR}"/nwn.png
 
 	prepgamesdirs
