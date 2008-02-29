@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r1.ebuild,v 1.5 2008/02/28 07:43:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r1.ebuild,v 1.6 2008/02/29 19:08:22 carlo Exp $
 
 inherit eutils autotools flag-o-matic toolchain-funcs games
 
@@ -77,7 +77,7 @@ src_install() {
 	dodoc ../docs/{readme.1st,*.txt,README.LINUX}
 	dodoc ../docs/readme.txt/*
 	dohtml -r ../docs/readme.htm/*
-	make_desktop_entry zsnes ZSNES zsnes.png
+	make_desktop_entry zsnes ZSNES zsnes
 	newicon icons/48x48x32.png ${PN}.png
 	prepgamesdirs
 }

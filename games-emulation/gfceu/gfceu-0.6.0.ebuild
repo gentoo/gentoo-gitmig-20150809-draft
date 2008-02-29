@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceu/gfceu-0.6.0.ebuild,v 1.2 2008/01/15 09:27:00 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceu/gfceu-0.6.0.ebuild,v 1.3 2008/02/29 19:03:59 carlo Exp $
 
 inherit eutils games
 
@@ -34,6 +34,6 @@ src_install() {
 	dodoc ChangeLog TODO
 	doman ${PN}.1
 	doicon ${PN}.png
-	make_desktop_entry ${PN} "GFCE Ultra" ${PN}.png
+	make_desktop_entry ${PN} "GFCE Ultra" ${PN}
 	prepgamesdirs
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.8.1.ebuild,v 1.9 2007/07/30 23:04:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.8.1.ebuild,v 1.10 2008/02/29 19:04:47 carlo Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -58,6 +58,6 @@ src_install() {
 		|| die "sed failed"
 	dodoc Docs/*.txt
 	doicon "${FILESDIR}"/pcsx2.png
-	make_desktop_entry pcsx2 PCSX2 pcsx2.png
+	make_desktop_entry pcsx2 PCSX2 pcsx2
 	prepgamesdirs
 }

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/stella
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.25 2007/11/02 22:43:19 tupone Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.26 2008/02/29 19:05:53 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> stella-2.2.ebuild,
+  stella-2.4.2.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *stella-2.4.2 (02 Nov 2007)
 
