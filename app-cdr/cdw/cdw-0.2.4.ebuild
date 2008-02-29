@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.11 2008/02/29 17:41:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.12 2008/02/29 17:44:00 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -88,7 +88,7 @@ pkg_postinst() {
 		elog "The directory /usr/share/${PF}/"
 		elog "contains a cdw.sql file. You must install this to your system"
 		elog "for using the Disk Catalog. The installation process is very"
-		elog "simple, you can find the instructions in"
-		elog "/usr/share/doc/${PF}/README.gz"
+		elog "simple, you can find the instructions in the README file in"
+		elog "/usr/share/doc/${PF}."
 	fi
 }
