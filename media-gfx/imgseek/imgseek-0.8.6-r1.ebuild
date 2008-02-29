@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/imgseek-0.8.6-r1.ebuild,v 1.1 2008/01/18 02:26:18 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/imgseek-0.8.6-r1.ebuild,v 1.2 2008/02/29 19:54:04 carlo Exp $
 
 NEED_PYTHON=2.2
 
@@ -35,5 +35,5 @@ src_install() {
 	distutils_src_install
 	insinto /usr/share/${MY_PN}
 	doicon ${MY_PN}.png
-	make_desktop_entry "${MY_PN} %F" ${MY_PN} ${MY_PN}.png "Graphics;Qt"
+	make_desktop_entry "${MY_PN} %F" ${MY_PN} ${MY_PN} "Qt;Graphics;"
 }
