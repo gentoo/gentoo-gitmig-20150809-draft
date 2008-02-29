@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.13.2.ebuild,v 1.4 2008/01/28 16:19:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.13.2.ebuild,v 1.5 2008/02/29 12:58:57 drac Exp $
 
 GCONF_DEBUG=no
 
@@ -69,6 +69,14 @@ pkg_setup() {
 		$(use_enable ipod) $(use_enable njb)
 		$(use_enable mtp)"
 	# TODO. missing USE karma, needs sharp-karma.
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# Fix test suite.
+	echo src/Plugins/Banshee.Plugins.LastFM/Resources/lastfm.glade >> po/POTFILES.skip
+	echo src/Plugins/Banshee.Plugins.LastFM/banshee-plugin-lastfm.schemas.in >> po/POTFILES.skip
 }
 
 src_compile() {
