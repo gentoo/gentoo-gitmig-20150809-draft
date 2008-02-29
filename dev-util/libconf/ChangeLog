@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/libconf
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.46 2007/02/09 22:35:27 dams Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.47 2008/02/29 03:16:10 ranger Exp $
+
+  29 Feb 2008; Brent Baude <ranger@gentoo.org> libconf-0.42.10-r1.ebuild:
+  keyworded ~arch for ppc64, bug 211757
 
   09 Feb 2007; Damien Krotkine <dams@gentoo.org> libconf-0.42.10-r1.ebuild:
   corrected homepage. bug #166128
