@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.4-r2.ebuild,v 1.5 2008/02/29 17:58:53 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.4-r2.ebuild,v 1.6 2008/02/29 18:05:02 armin76 Exp $
 
 NEED_PYTHON=2.3
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 
 IUSE="lapack"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 LICENSE="BSD"
 
 S="${WORKDIR}/${MY_P}"
