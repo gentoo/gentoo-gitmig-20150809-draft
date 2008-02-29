@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.75 2008/02/29 10:06:33 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.76 2008/02/29 14:21:52 caster Exp $
+
+*libidn-1.5-r1 (29 Feb 2008)
+
+  29 Feb 2008; Vlastimil Babka <caster@gentoo.org> +libidn-1.5-r1.ebuild:
+  Fix USE=java - remove the bundled jar file. Has 1.5 bytecode, breaking build
+  with 1.4 JDK, besides others. Revbump so that everyone installs the same
+  file.
 
   29 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> libidn-1.0-r1.ebuild:
   amd64 stable wrt bug #211857
