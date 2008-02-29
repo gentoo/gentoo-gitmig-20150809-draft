@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.20 2008/02/28 22:21:16 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.21 2008/02/29 03:45:01 ranger Exp $
+
+  29 Feb 2008; Brent Baude <ranger@gentoo.org> youtube-dl-2008.01.24.ebuild:
+  stable ppc64, bug 211843
 
   28 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
   youtube-dl-2008.01.24.ebuild:
