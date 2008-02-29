@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/kload-0.9.4.ebuild,v 1.3 2006/09/29 13:29:24 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/kload-0.9.4.ebuild,v 1.4 2008/02/29 19:52:33 carlo Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_install() {
 	newconfd "${FILESDIR}/kloadd.confd" kloadd
 	if ! use minimal; then
 		dobin kload
-		make_desktop_entry kload "Performace Monitor" ksysguard.png
+		make_desktop_entry kload "Performace Monitor" ksysguard
 	fi
 	dodoc ChangeLog README
 }

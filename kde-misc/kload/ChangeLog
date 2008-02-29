@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kload
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/ChangeLog,v 1.4 2006/09/29 13:29:24 deathwing00 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/ChangeLog,v 1.5 2008/02/29 19:52:33 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> kload-0.9.4.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   29 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   kload-0.9.4.ebuild:
