@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.1.2.ebuild,v 1.4 2007/01/10 19:43:17 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.1.2.ebuild,v 1.5 2008/02/29 18:08:34 carlo Exp $
 
 inherit eutils games
 
@@ -53,6 +53,6 @@ src_install() {
 	doins "${WORKDIR}"/tb_*.ogg || die "doins failed"
 	dodoc AUTHORS ChangeLog README* NEWS
 	doicon share/icons/*png || die "doicon failed"
-	make_desktop_entry trackballs "Trackballs" trackballs-48x48.png
+	make_desktop_entry trackballs "Trackballs" trackballs-48x48
 	prepgamesdirs
 }

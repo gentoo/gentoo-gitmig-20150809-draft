@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c.ebuild,v 1.2 2006/10/24 22:08:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c.ebuild,v 1.3 2008/02/29 18:04:06 carlo Exp $
 
 inherit eutils games
 
@@ -49,7 +49,7 @@ src_install() {
 
 	games_make_wrapper ${PN} ./${PN} "${dir}" "${dir}"
 	newicon icon.xpm ${PN}.xpm
-	make_desktop_entry ${PN} "Heretic II" ${PN}.xpm
+	make_desktop_entry ${PN} "Heretic II" ${PN}
 
 	cd "${Ddir}"
 	ln -s "${CDROM_ROOT}"/*.gz .

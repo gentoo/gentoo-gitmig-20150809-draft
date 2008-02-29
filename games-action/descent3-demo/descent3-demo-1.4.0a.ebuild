@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3-demo/descent3-demo-1.4.0a.ebuild,v 1.9 2007/03/12 13:17:28 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3-demo/descent3-demo-1.4.0a.ebuild,v 1.10 2008/02/29 18:05:31 carlo Exp $
 
 inherit eutils games
 
@@ -54,7 +54,7 @@ src_install() {
 
 	games_make_wrapper ${PN} "./${exe}" "${dir}"
 	newicon "${demo}"/launch/box.png ${PN}.png || die "newicon failed"
-	make_desktop_entry ${PN} "Descent 3 (Demo)" ${PN}.png
+	make_desktop_entry ${PN} "Descent 3 (Demo)" ${PN}
 
 	prepgamesdirs
 }

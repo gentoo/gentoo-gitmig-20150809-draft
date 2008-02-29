@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.6 2008/01/15 21:49:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.7 2008/02/29 18:03:20 carlo Exp $
 
 inherit eutils games
 
@@ -136,7 +136,7 @@ src_install() {
 		${Ddir}/System/libSDL-1.2.so.0.backup
 
 	games_make_wrapper rune ./rune "${dir}" "${dir}"
-	make_desktop_entry rune "Rune" rune.xpm "Game;ActionGame"
+	make_desktop_entry rune "Rune" rune "Game;ActionGame"
 	find ${Ddir} -exec touch '{}' \;
 	prepgamesdirs
 }

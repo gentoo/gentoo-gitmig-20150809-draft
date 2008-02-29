@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripper-demo/spacetripper-demo-1.ebuild,v 1.10 2006/11/07 19:43:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripper-demo/spacetripper-demo-1.ebuild,v 1.11 2008/02/29 18:09:18 carlo Exp $
 
 inherit eutils games
 
@@ -51,7 +51,7 @@ src_install() {
 	newicon icon.xpm spacetripper-demo.png
 
 	games_make_wrapper spacetripper-demo ./spacetripperdemo "${dir}" "${dir}"
-	make_desktop_entry spacetripper-demo spacetripper-demo spacetripper-demo.png
+	make_desktop_entry spacetripper-demo spacetripper-demo spacetripper-demo
 
 	prepgamesdirs
 }

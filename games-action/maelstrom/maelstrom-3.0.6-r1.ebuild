@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6-r1.ebuild,v 1.9 2006/10/25 20:54:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6-r1.ebuild,v 1.10 2008/02/29 18:07:44 carlo Exp $
 
 inherit eutils games
 
@@ -47,7 +47,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc Changelog README* Docs/{Maelstrom-Announce,*FAQ,MaelstromGPL_press_release,*.Paper,Technical_Notes*}
 	newicon "${D}${GAMES_DATADIR}"/Maelstrom/icon.xpm maelstrom.xpm
-	make_desktop_entry Maelstrom "Maelstrom" maelstrom.xpm
+	make_desktop_entry Maelstrom "Maelstrom" maelstrom
 
 	# Put the high scores file in the right place
 	insinto "${GAMES_STATEDIR}"
