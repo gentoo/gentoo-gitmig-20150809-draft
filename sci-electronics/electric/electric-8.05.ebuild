@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-8.05.ebuild,v 1.3 2007/12/31 18:36:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-8.05.ebuild,v 1.4 2008/02/29 20:37:28 carlo Exp $
 
 inherit eutils java-pkg-2
 
@@ -20,5 +20,5 @@ src_install() {
 	java-pkg_newjar ${DISTDIR}/${PN}Binary-${PV}.jar
 	newicon com/sun/electric/tool/user/help/helphtml/iconplug.png electric.png
 	java-pkg_dolauncher ${PN}
-	make_desktop_entry electric "Electric VLSI Design System" electric.png "Application;Engineering;Electronics"
+	make_desktop_entry electric "Electric VLSI Design System" electric "Application;Engineering;Electronics"
 }

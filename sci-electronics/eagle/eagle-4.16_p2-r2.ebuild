@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p2-r2.ebuild,v 1.1 2008/01/13 20:55:51 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p2-r2.ebuild,v 1.2 2008/02/29 20:38:42 carlo Exp $
 
 inherit eutils
 
@@ -81,7 +81,7 @@ src_install() {
 
 	# Create desktop entry
 	doicon bin/${PN}.xpm
-	make_desktop_entry ${PN} ${PN} ${PN}.xpm "Graphics;Electronics"
+	make_desktop_entry ${PN} ${PN} ${PN} "Graphics;Electronics"
 
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/electric
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.26 2007/12/31 18:36:41 josejx Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.27 2008/02/29 20:37:28 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> electric-8.04.ebuild,
+  electric-8.05.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   31 Dec 2007; Joseph Jezak <josejx@gentoo.org> electric-8.05.ebuild:
   Marked ~ppc for bug #187019.
