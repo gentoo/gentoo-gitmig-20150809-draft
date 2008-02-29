@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.7 2007/03/12 18:02:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.8 2008/02/29 19:47:05 carlo Exp $
 
 inherit eutils games
 
@@ -88,7 +88,7 @@ src_install() {
 	find "${D}" -exec touch '{}' \;
 
 	games_make_wrapper dominions2 ./dom2 "${dir}" "${dir}"
-	make_desktop_entry dominions2 "Dominions II" dominions2.png
+	make_desktop_entry dominions2 "Dominions II" dominions2
 
 	prepgamesdirs
 }

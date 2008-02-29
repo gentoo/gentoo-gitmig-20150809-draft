@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1.ebuild,v 1.3 2007/03/12 18:07:20 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1.ebuild,v 1.4 2008/02/29 19:46:36 carlo Exp $
 
 inherit eutils versionator games
 
@@ -67,7 +67,7 @@ src_install() {
 
 	games_make_wrapper ${PN} ./${MY_PN}_demo "${dir}" "${dir}"
 	newicon icon.xpm ${PN}.xpm
-	make_desktop_entry ${PN} "Gorky 17 (Demo)" ${PN}.xpm
+	make_desktop_entry ${PN} "Gorky 17 (Demo)" ${PN}
 
 	prepgamesdirs
 }

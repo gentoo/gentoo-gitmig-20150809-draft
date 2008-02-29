@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2-demo/x2-demo-1.4.05.ebuild,v 1.1 2007/09/15 01:32:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2-demo/x2-demo-1.4.05.ebuild,v 1.2 2008/02/29 19:43:35 carlo Exp $
 
 inherit eutils games
 
@@ -60,7 +60,7 @@ src_install() {
 	# We don't support the dynamic version, even though we install it.
 	games_make_wrapper ${PN} ./x2_demo "${dir}" "${dir}"
 	newicon icon.xpm ${PN}.xpm || die "newicon failed"
-	make_desktop_entry ${PN} "X2 - The Threat (Demo)" ${PN}.xpm
+	make_desktop_entry ${PN} "X2 - The Threat (Demo)" ${PN}
 
 	prepgamesdirs
 }

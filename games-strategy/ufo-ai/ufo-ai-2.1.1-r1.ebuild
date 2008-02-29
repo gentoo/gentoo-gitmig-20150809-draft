@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.1.1-r1.ebuild,v 1.2 2008/01/22 09:21:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.1.1-r1.ebuild,v 1.3 2008/02/29 19:49:07 carlo Exp $
 
 inherit eutils autotools games
 
@@ -112,7 +112,7 @@ src_install() {
 	# Might as well standardize on the ebuild name, for minimum confusion.
 	newgamesbin ufo ${PN} || die
 	newicon src/ports/linux/installer/data/ufo.xpm ${PN}.xpm || die
-	make_desktop_entry ${PN} "UFO: Alien Invasion" ${PN}.xpm
+	make_desktop_entry ${PN} "UFO: Alien Invasion" ${PN}
 
 	if use dedicated ; then
 		dogamesbin ufoded || die

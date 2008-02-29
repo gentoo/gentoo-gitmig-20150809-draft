@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.7.3.ebuild,v 1.7 2007/01/04 23:46:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.7.3.ebuild,v 1.8 2008/02/29 19:49:37 carlo Exp $
 
 inherit eutils games
 
@@ -52,6 +52,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog
 	newicon data/wormux-32.xpm wormux.xpm
-	make_desktop_entry wormux Wormux wormux.xpm
+	make_desktop_entry wormux Wormux wormux
 	prepgamesdirs
 }

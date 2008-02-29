@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.7.1.ebuild,v 1.3 2007/10/27 14:01:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.7.1.ebuild,v 1.4 2008/02/29 19:45:56 carlo Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -71,6 +71,6 @@ src_install () {
 
 	dodoc README
 	doicon ${PN}.xpm
-	make_desktop_entry ${PN} FreeCol ${PN}.xpm
+	make_desktop_entry ${PN} FreeCol ${PN}
 	prepgamesdirs
 }

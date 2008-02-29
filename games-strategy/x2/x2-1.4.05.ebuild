@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2/x2-1.4.05.ebuild,v 1.1 2007/09/15 01:28:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2/x2-1.4.05.ebuild,v 1.2 2008/02/29 19:40:07 carlo Exp $
 
 inherit eutils games
 
@@ -104,7 +104,7 @@ src_install() {
 
 	games_make_wrapper ${PN} "./${PN}${dyn}" "${dir}"
 	newicon "${CDROM_ROOT}"/icon.xpm ${PN}.xpm || die "newicon"
-	make_desktop_entry ${PN} "X2 - The Threat" ${PN}.xpm
+	make_desktop_entry ${PN} "X2 - The Threat" ${PN}
 
 	prepgamesdirs
 }

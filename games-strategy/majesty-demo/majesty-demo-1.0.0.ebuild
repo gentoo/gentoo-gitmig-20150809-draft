@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/majesty-demo-1.0.0.ebuild,v 1.10 2007/11/11 07:44:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/majesty-demo-1.0.0.ebuild,v 1.11 2008/02/29 19:44:40 carlo Exp $
 
 inherit eutils games
 
@@ -54,5 +54,5 @@ src_install() {
 	fi
 	games_make_wrapper maj_demo ./maj_demo "${dir}" "${dir}"
 	prepgamesdirs
-	make_desktop_entry maj_demo "Majesty (Demo)" ${PN}.xpm
+	make_desktop_entry maj_demo "Majesty (Demo)" ${PN}
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.4.1.ebuild,v 1.2 2008/01/22 04:09:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.4.1.ebuild,v 1.3 2008/02/29 19:50:18 carlo Exp $
 
 inherit eutils games
 
@@ -48,7 +48,7 @@ src_install() {
 	doins -r campaigns graphics languages maps scripts sounds units video \
 		|| die "doins failed"
 	doicon "${DISTDIR}"/bos.png
-	make_desktop_entry ${PN} "Bos Wars"	bos.png
+	make_desktop_entry ${PN} "Bos Wars"	bos
 	dodoc CHANGELOG COPYRIGHT.txt README.txt
 	dohtml -r doc/*
 	prepgamesdirs

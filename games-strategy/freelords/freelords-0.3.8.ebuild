@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.8.ebuild,v 1.2 2007/05/29 17:00:02 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.8.ebuild,v 1.3 2008/02/29 19:45:27 carlo Exp $
 
 inherit eutils games
 
@@ -61,7 +61,7 @@ src_install() {
 	make_desktop_entry ${PN} FreeLords
 	if use editor ; then
 		doicon dat/various/${PN}_editor.png
-		make_desktop_entry ${PN}_editor "FreeLords Editor" ${PN}_editor.png
+		make_desktop_entry ${PN}_editor "FreeLords Editor" ${PN}_editor
 	fi
 	dodoc AUTHORS ChangeLog HACKER NEWS README TODO doc/*.pdf
 	prepgamesdirs

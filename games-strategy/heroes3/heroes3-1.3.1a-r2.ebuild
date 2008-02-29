@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.7 2008/01/15 21:51:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.8 2008/02/29 19:47:53 carlo Exp $
 
 #	[x] Base Install Required (+4 MB)
 #	[x] Scenarios (+7 MB)
@@ -180,7 +180,7 @@ src_install() {
 	newicon ${CDROM_ROOT}/icon.xpm heroes3.xpm
 
 	prepgamesdirs
-	make_desktop_entry heroes3 "Heroes of Might and Magic III" "heroes3.xpm"
+	make_desktop_entry heroes3 "Heroes of Might and Magic III" "heroes3"
 
 	if ! use ppc
 	then

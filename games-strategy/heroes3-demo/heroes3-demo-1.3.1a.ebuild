@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/heroes3-demo-1.3.1a.ebuild,v 1.1 2006/10/05 20:51:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/heroes3-demo-1.3.1a.ebuild,v 1.2 2008/02/29 19:42:28 carlo Exp $
 
 inherit eutils games
 
@@ -60,7 +60,7 @@ src_install() {
 
 	games_make_wrapper ${PN} "./${exe}" "${dir}"
 	newicon "${demo}/icon.xpm" ${PN}.png || die "newicon icon.xpm failed"
-	make_desktop_entry ${PN} "Heroes of Might and Magic III (Demo)" ${PN}.png
+	make_desktop_entry ${PN} "Heroes of Might and Magic III (Demo)" ${PN}
 
 	prepgamesdirs
 }

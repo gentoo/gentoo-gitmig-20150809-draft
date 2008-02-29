@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.14 2007/12/12 06:36:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.15 2008/02/29 19:40:51 carlo Exp $
 
 inherit eutils games
 
@@ -73,9 +73,8 @@ src_install() {
 
 	games_make_wrapper ${PN} ./${PN} "${dir}" "${dir}"
 	games_make_wrapper ${PN}x ./${PN}x "${dir}" "${dir}"
-	make_desktop_entry smac "Sid Meier's Alpha Centauri" smac.xpm
-	make_desktop_entry smacx "Sid Meier's Alpha Centauri - Alien Crossfire" \
-		smac.xpm
+	make_desktop_entry smac "Sid Meier's Alpha Centauri" smac
+	make_desktop_entry smacx "Sid Meier's Alpha Centauri - Alien Crossfire" smac
 	prepgamesdirs
 
 	einfo "Linking libs provided by 'sys-libs/lib-compat-loki' to '${dir}'."

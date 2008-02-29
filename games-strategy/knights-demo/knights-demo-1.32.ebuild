@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/knights-demo/knights-demo-1.32.ebuild,v 1.1 2007/04/27 04:47:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/knights-demo/knights-demo-1.32.ebuild,v 1.2 2008/02/29 19:50:52 carlo Exp $
 
 inherit eutils games
 
@@ -46,6 +46,6 @@ src_install() {
 	# We don't support the dynamic version, even though we install it.
 	games_make_wrapper ${PN} ./${PN} "${dir}" "${dir}"
 	newicon icon.xpm ${PN}.xpm || die "newicon failed"
-	make_desktop_entry ${PN} "Knights and Merchants (Demo)" ${PN}.xpm
+	make_desktop_entry ${PN} "Knights and Merchants (Demo)" ${PN}
 	prepgamesdirs
 }

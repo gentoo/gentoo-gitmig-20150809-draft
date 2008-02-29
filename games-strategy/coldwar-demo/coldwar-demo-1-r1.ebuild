@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar-demo/coldwar-demo-1-r1.ebuild,v 1.1 2006/09/28 15:15:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar-demo/coldwar-demo-1-r1.ebuild,v 1.2 2008/02/29 19:43:01 carlo Exp $
 
 inherit eutils games
 
@@ -59,7 +59,7 @@ src_install() {
 
 	games_make_wrapper ${PN} ./${MY_PN}_demo "${dir}" "${dir}"
 	newicon icon.xpm ${PN}.xpm || die "newicon failed"
-	make_desktop_entry ${PN} "Cold War (Demo)" ${PN}.xpm
+	make_desktop_entry ${PN} "Cold War (Demo)" ${PN}
 
 	prepgamesdirs
 }

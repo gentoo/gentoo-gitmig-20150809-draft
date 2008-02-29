@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freelords
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/ChangeLog,v 1.27 2007/05/29 17:00:02 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/ChangeLog,v 1.28 2008/02/29 19:45:27 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> freelords-0.3.8.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   29 May 2007; Tristan Heaven <nyhm@gentoo.org> freelords-0.3.8.ebuild:
   Fix locale.alias collision, bug #180099

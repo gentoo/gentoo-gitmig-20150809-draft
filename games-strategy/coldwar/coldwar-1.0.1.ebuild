@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/coldwar-1.0.1.ebuild,v 1.1 2007/02/06 23:31:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/coldwar-1.0.1.ebuild,v 1.2 2008/02/29 19:41:25 carlo Exp $
 
 inherit eutils versionator games
 
@@ -71,7 +71,7 @@ src_install() {
 
 	games_make_wrapper ${PN} ./${PN} "${dir}"
 	newicon "${CDROM_ROOT}"/icon.xpm ${PN}.xpm || die "newicon failed"
-	make_desktop_entry ${PN} "Cold War" ${PN}.xpm
+	make_desktop_entry ${PN} "Cold War" ${PN}
 
 	prepgamesdirs
 }

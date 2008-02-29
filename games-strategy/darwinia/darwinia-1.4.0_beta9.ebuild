@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.2 2006/10/24 23:07:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.3 2008/02/29 19:42:00 carlo Exp $
 
 inherit eutils games
 
@@ -49,7 +49,7 @@ src_install() {
 	newicon darwinian.png darwinia.png
 
 	games_make_wrapper darwinia ./darwinia "${dir}" "${dir}"
-	make_desktop_entry darwinia "Darwinia" darwinia.png
+	make_desktop_entry darwinia "Darwinia" darwinia
 	prepgamesdirs
 }
 

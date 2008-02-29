@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freecol
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.28 2008/02/12 20:09:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.29 2008/02/29 19:45:56 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> ChangeLog:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *freecol-0.7.3 (12 Feb 2008)
 

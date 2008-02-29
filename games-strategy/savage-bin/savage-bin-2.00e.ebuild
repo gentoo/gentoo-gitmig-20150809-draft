@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e.ebuild,v 1.1 2006/10/13 14:23:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e.ebuild,v 1.2 2008/02/29 19:48:29 carlo Exp $
 
 inherit eutils games
 
@@ -63,13 +63,13 @@ src_install() {
 
 	newicon icon.xpm savage.xpm
 	games_make_wrapper savage "./silverback.bin set mod game" ${dir} ${dir}/libs
-	make_desktop_entry savage "Savage: Battle For Newerth" savage.xpm
+	make_desktop_entry savage "Savage: Battle For Newerth" savage
 
 	games_make_wrapper savage-editor "./silverback.bin set mod editor" ${dir} ${dir}/libs
-	make_desktop_entry savage-editor "Savage Editor" savage.xpm
+	make_desktop_entry savage-editor "Savage Editor" savage
 
 	games_make_wrapper savage-graveyard "./silverback.bin set mod graveyard" ${dir} ${dir}/libs
-	make_desktop_entry savage-graveyard "Savage: Graveyard Mod" savage.xpm
+	make_desktop_entry savage-graveyard "Savage: Graveyard Mod" savage
 
 	prepgamesdirs
 }
