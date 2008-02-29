@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.14-r1.ebuild,v 1.3 2006/11/08 05:56:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.14-r1.ebuild,v 1.4 2008/02/29 18:56:30 carlo Exp $
 
 inherit eutils games
 
@@ -38,6 +38,6 @@ src_install() {
 	dodoc AUTHORS ChangeLog README
 	dohtml -A xpm doc/*
 	doicon data/crack-attack.xpm
-	make_desktop_entry crack-attack Crack-attack crack-attack.xpm
+	make_desktop_entry crack-attack Crack-attack crack-attack
 	prepgamesdirs
 }

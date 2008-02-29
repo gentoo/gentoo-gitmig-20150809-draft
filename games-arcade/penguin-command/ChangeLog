@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/penguin-command
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.15 2007/04/23 23:05:31 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.16 2008/02/29 18:47:20 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
+  penguin-command-1.6.11.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *penguin-command-1.6.11 (23 Apr 2007)
 

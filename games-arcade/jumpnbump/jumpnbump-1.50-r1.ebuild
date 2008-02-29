@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.8 2006/11/05 00:45:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.9 2008/02/29 18:56:06 carlo Exp $
 
 inherit eutils games
 
@@ -45,6 +45,6 @@ src_install() {
 	use svga || rm -f "${D}${GAMES_BINDIR}/jumpnbump.svgalib"
 	use tk || rm -f "${D}${GAMES_BINDIR}/jnbmenu.tcl"
 	newicon sdl/jumpnbump64.xpm ${PN}.xpm
-	make_desktop_entry jumpnbump "Jump n Bump" ${PN}.xpm
+	make_desktop_entry jumpnbump "Jump n Bump" ${PN}
 	prepgamesdirs
 }

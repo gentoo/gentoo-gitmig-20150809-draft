@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/briquolo/briquolo-0.5.6.ebuild,v 1.1 2007/04/19 04:15:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/briquolo/briquolo-0.5.6.ebuild,v 1.2 2008/02/29 18:49:15 carlo Exp $
 
 inherit eutils games
 
@@ -47,6 +47,6 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog README
 	doicon desktop/briquolo.svg
-	make_desktop_entry briquolo Briquolo briquolo.svg
+	make_desktop_entry briquolo Briquolo briquolo
 	prepgamesdirs
 }

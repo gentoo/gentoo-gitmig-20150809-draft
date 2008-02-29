@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlroids/sdlroids-1.3.4-r3.ebuild,v 1.11 2007/04/24 15:08:42 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlroids/sdlroids-1.3.4-r3.ebuild,v 1.12 2008/02/29 18:52:45 carlo Exp $
 
 inherit eutils games
 
@@ -29,7 +29,7 @@ src_unpack() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	newicon icons/sdlroids-48x48.xpm ${PN}.xpm
-	make_desktop_entry ${PN} SDLRoids ${PN}.xpm
+	make_desktop_entry ${PN} SDLRoids ${PN}
 	dodoc ChangeLog README.* TODO
 	prepgamesdirs
 }

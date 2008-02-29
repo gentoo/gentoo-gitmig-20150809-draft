@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/circuslinux-1.0.3.ebuild,v 1.15 2007/03/12 20:43:01 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/circuslinux-1.0.3.ebuild,v 1.16 2008/02/29 18:54:41 carlo Exp $
 
 inherit eutils games
 
@@ -33,7 +33,7 @@ src_unpack() {
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	newicon data/images/${PN}-icon.xpm ${PN}.xpm
-	make_desktop_entry ${PN} "Circus Linux!" ${PN}.xpm
+	make_desktop_entry ${PN} "Circus Linux!" ${PN}
 	dodoc *.txt
 	prepgamesdirs
 }

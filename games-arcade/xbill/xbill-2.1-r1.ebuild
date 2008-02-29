@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/xbill-2.1-r1.ebuild,v 1.9 2007/08/07 23:45:32 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/xbill-2.1-r1.ebuild,v 1.10 2008/02/29 18:48:42 carlo Exp $
 
 inherit eutils games
 
@@ -28,7 +28,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	newicon pixmaps/icon.xpm ${PN}.xpm
-	make_desktop_entry ${PN} XBill ${PN}.xpm
+	make_desktop_entry ${PN} XBill ${PN}
 	dodoc ChangeLog README
 	prepgamesdirs
 }

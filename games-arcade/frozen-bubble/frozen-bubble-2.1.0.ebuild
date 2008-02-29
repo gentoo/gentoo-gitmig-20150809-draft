@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.1.0.ebuild,v 1.4 2007/08/08 19:18:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.1.0.ebuild,v 1.5 2008/02/29 18:46:39 carlo Exp $
 
 inherit eutils multilib perl-module games
 
@@ -55,7 +55,7 @@ src_install() {
 	dosed /usr/games/bin/frozen-bubble
 	dodoc AUTHORS NEWS README TIPS
 	newicon icons/frozen-bubble-icon-48x48.png ${PN}.png
-	make_desktop_entry ${PN} ${PN} ${PN}.png
+	make_desktop_entry ${PN} ${PN} ${PN}
 
 	fixlocalpod
 	prepgamesdirs

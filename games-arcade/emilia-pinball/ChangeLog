@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/emilia-pinball
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.14 2006/12/01 20:44:26 wolf31o2 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.15 2008/02/29 18:55:23 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
+  emilia-pinball-0.3.1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   01 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   emilia-pinball-0.3.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9.ebuild,v 1.1 2008/02/26 22:21:52 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9.ebuild,v 1.2 2008/02/29 18:52:02 carlo Exp $
 
 NEED_PYTHON="2.4"
 
@@ -45,7 +45,7 @@ src_install() {
 	doins -r data/* || die "doins data failed"
 
 	doicon "${FILESDIR}"/${PN}-32.xpm
-	make_desktop_entry ${PN} "Which Way Is Up?" ${PN}-32.xpm
+	make_desktop_entry ${PN} "Which Way Is Up?" ${PN}-32
 	prepgamesdirs
 }
 

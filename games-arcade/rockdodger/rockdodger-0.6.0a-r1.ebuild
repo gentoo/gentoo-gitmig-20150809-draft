@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.7 2007/04/24 15:07:42 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.8 2008/02/29 18:51:18 carlo Exp $
 
 inherit eutils games
 
@@ -46,7 +46,7 @@ src_install() {
 	doins data/* || die "doins failed"
 
 	newicon spacerocks.xpm ${PN}.xpm
-	make_desktop_entry ${PN} "Rock Dodger" ${PN}.xpm
+	make_desktop_entry ${PN} "Rock Dodger" ${PN}
 
 	dodir "${GAMES_STATEDIR}"
 	touch "${D}/${GAMES_STATEDIR}"/${PN}.scores

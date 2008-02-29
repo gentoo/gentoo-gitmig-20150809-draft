@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ri-li/ri-li-2.0.0.ebuild,v 1.2 2006/10/26 21:45:17 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ri-li/ri-li-2.0.0.ebuild,v 1.3 2008/02/29 18:47:42 carlo Exp $
 
 inherit eutils games
 
@@ -23,6 +23,6 @@ src_install() {
 	rm -f "${D}${GAMES_DATADIR}/Ri-li/"*ebuild
 	doicon "${D}${GAMES_DATADIR}/Ri-li/"*png
 	dodoc AUTHORS ChangeLog NEWS README
-	make_desktop_entry Ri_li Ri-li Ri-li-icon-48x48.png
+	make_desktop_entry Ri_li Ri-li Ri-li-icon-48x48
 	prepgamesdirs
 }

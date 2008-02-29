@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/rockdodger
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/ChangeLog,v 1.10 2007/04/24 15:07:42 drizzt Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/ChangeLog,v 1.11 2008/02/29 18:51:18 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
+  rockdodger-0.6.0a-r1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org>
   rockdodger-0.6.0a-r1.ebuild:
