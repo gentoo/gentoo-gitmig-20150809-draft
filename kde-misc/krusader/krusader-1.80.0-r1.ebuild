@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.80.0-r1.ebuild,v 1.1 2008/02/29 13:33:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.80.0-r1.ebuild,v 1.2 2008/02/29 16:32:38 mr_bones_ Exp $
 
 inherit kde
 
