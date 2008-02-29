@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.149 2008/02/28 08:26:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.150 2008/02/29 02:14:51 ranger Exp $
+
+  29 Feb 2008; Brent Baude <ranger@gentoo.org> ibm-jdk-bin-1.4.2.10.ebuild:
+  Marking ibm-jdk-bin-1.4.2.10 ppc64 for bug 198644
 
   28 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   ibm-jdk-bin-1.4.2.10.ebuild:
