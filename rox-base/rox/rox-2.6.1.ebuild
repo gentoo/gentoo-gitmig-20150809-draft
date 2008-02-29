@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.6.1.ebuild,v 1.8 2008/01/02 12:44:42 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.6.1.ebuild,v 1.9 2008/02/29 20:32:30 carlo Exp $
 
 inherit eutils multilib
 
@@ -113,7 +113,7 @@ EOF
 	insinto /usr/share/pixmaps
 	newins ${APPNAME}/.DirIcon ${APPNAME}.png
 
-	make_desktop_entry ${WRAPPERNAME} ${APPNAME} ${APPNAME}.png "System;Utility;Core;ROX"
+	make_desktop_entry ${WRAPPERNAME} ${APPNAME} ${APPNAME} "System;Utility;Core;ROX"
 }
 
 pkg_postinst() {
