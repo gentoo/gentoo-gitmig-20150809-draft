@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080228.ebuild,v 1.1 2008/02/28 09:11:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080228.ebuild,v 1.2 2008/02/29 10:55:24 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -46,7 +46,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="3dfx a52 aac aalib alsa altivec arts avahi bidi cdda cddb cdio daap dbus dc1394
 	debug directfb dts dvb dvd esd fbcon fluidsynth ffmpeg flac ggi gnome gnutls hal httpd
-	id3tag jack libcaca libgcrypt libnotify lirc live lua matroska mmx modplug mp3 mpeg
+	id3tag jack libcaca libnotify lirc live lua matroska mmx modplug mp3 mpeg
 	musepack musicbrainz ncurses nsplugin ogg opengl optimisememory oss png pulseaudio pvr qt4
 	rtsp samba sdl sdl-image seamonkey shout skins speex sse stream svg svga taglib
 	theora truetype twolame upnp v4l v4l2 vcd vcdx vlm vorbis win32codecs wxwindows
@@ -90,7 +90,6 @@ RDEPEND="
 			sys-libs/zlib )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
 		libcaca? ( media-libs/libcaca )
-		libgcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
 		libnotify? ( x11-libs/libnotify )
 		lirc? ( app-misc/lirc )
 		live? ( >=media-plugins/live-2007.02.20 )
@@ -172,7 +171,6 @@ pkg_setup() {
 	vlc_use_needs skins wxwindows
 	vlc_use_needs cdda cdio
 	vlc_use_needs vcdx cdio
-	vlc_use_needs libgcrypt gnutls
 	vlc_use_needs bidi truetype
 }
 
@@ -248,7 +246,7 @@ src_compile () {
 		$(use_enable id3tag) \
 		$(use_enable jack) \
 		$(use_enable libcaca caca) \
-		$(use_enable libgcrypt) \
+		$(use_enable gnutls libgcrypt) \
 		$(use_enable libnotify notify) \
 		--disable-libtar \
 		$(use_enable lirc) \
