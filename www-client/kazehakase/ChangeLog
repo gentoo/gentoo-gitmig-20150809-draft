@@ -1,6 +1,13 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.55 2008/02/24 15:54:16 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.56 2008/02/29 15:43:21 matsuu Exp $
+
+*kazehakase-0.5.3 (29 Feb 2008)
+
+  29 Feb 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/kazehakase-0.5.3-gcc43.patch, +kazehakase-0.5.3.ebuild:
+  Version bumped.
+  Fixed gcc 4.3 issue, bug #211840.
 
 *kazehakase-0.5.2 (24 Feb 2008)
 
