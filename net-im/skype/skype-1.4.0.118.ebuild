@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.118.ebuild,v 1.5 2007/12/05 19:16:56 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.118.ebuild,v 1.6 2008/02/29 20:13:52 carlo Exp $
 
 inherit eutils qt4 pax-utils
 
@@ -106,7 +106,7 @@ src_install() {
 
 	# insinto /usr/share/applications/
 	# doins skype.desktop
-	make_desktop_entry ${PN} "Skype VoIP" ${PN}.png "Network;InstantMessaging;Telephony"
+	make_desktop_entry ${PN} "Skype VoIP" ${PN} "Network;InstantMessaging;Telephony"
 
 	# AMD64 team does not provide this so we add it:
 	if use amd64; then

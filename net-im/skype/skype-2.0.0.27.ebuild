@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.0.0.27.ebuild,v 1.1 2007/12/05 19:16:56 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.0.0.27.ebuild,v 1.2 2008/02/29 20:13:52 carlo Exp $
 
 inherit eutils qt4 pax-utils
 
@@ -101,7 +101,7 @@ src_install() {
 
 	# insinto /usr/share/applications/
 	# doins skype.desktop
-	make_desktop_entry ${PN} "Skype VoIP" ${PN}.png "Network;InstantMessaging;Telephony"
+	make_desktop_entry ${PN} "Skype VoIP" ${PN} "Network;InstantMessaging;Telephony"
 
 	#Fix for no sound notifications
 	dosym /opt/${PN} /usr/share/${PN}
