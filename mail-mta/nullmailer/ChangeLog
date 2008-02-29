@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.28 2008/02/28 07:50:09 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.29 2008/02/29 20:40:37 bangert Exp $
+
+  28 Feb 2008; Thilo Bangert <bangert@gentoo.org> ChangeLog,
+  nullmailer-1.04.ebuild:
+  fix utf-8 borkage in ChangeLog - dont inherit mailer eclass
 
 *nullmailer-1.04 (28 Feb 2008)
 
@@ -29,7 +33,7 @@
   nullmailer-1.02-r1.ebuild, nullmailer-1.02-r2.ebuild:
   Replacing einfo with elog
 
-  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
@@ -59,16 +63,16 @@
   Bug #112163 - Version bump. Bug #118043 - init.d script. Bug #118826 -
   ~amd64 keyword.
 
-  31 Dec 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   nullmailer-1.00_rc7.ebuild, nullmailer-1.00_rc7-r1.ebuild,
   nullmailer-1.00_rc7-r2.ebuild, nullmailer-1.00_rc7-r4.ebuild,
   nullmailer-1.00_rc7-r5.ebuild, nullmailer-1.00.ebuild:
   Use -1 instead of /bin/false as default shell.
 
-  25 Dec 2005; Diego PettenÃ² <flameeyes@gentoo.org> nullmailer-1.00.ebuild:
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> nullmailer-1.00.ebuild:
   Actually change last version, not the one before.
 
-  25 Dec 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   nullmailer-1.00_rc7-r5.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.
 

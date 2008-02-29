@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.04.ebuild,v 1.1 2008/02/28 07:50:09 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.04.ebuild,v 1.2 2008/02/29 20:40:37 bangert Exp $
 
-inherit eutils flag-o-matic mailer
+inherit eutils flag-o-matic
 
 MY_P="${P/_rc/RC}"
 S=${WORKDIR}/${MY_P}
