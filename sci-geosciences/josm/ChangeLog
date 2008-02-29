@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/josm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.8 2008/02/20 00:25:16 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.9 2008/02/29 20:40:41 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> josm-1.5_p493.ebuild,
+  josm-1.5_p549.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *josm-1.5_p549 (20 Feb 2008)
 

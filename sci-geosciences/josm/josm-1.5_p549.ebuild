@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/josm-1.5_p549.ebuild,v 1.1 2008/02/20 00:25:16 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/josm-1.5_p549.ebuild,v 1.2 2008/02/29 20:40:41 carlo Exp $
 
 inherit eutils
 
@@ -42,5 +42,5 @@ src_install() {
 	use linguas_ro && newins "${DISTDIR}/lang-ro-20080207.jar" lang-ro.jar
 
 	doicon "${FILESDIR}/josm.png" || die
-	make_desktop_entry "${PN}" "Java OpenStreetMap Editor" josm.png "Application"
+	make_desktop_entry "${PN}" "Java OpenStreetMap Editor" josm "Application"
 }
