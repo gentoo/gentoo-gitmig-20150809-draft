@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/calcoo-1.3.18.ebuild,v 1.2 2008/01/08 14:46:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/calcoo-1.3.18.ebuild,v 1.3 2008/02/29 20:34:27 carlo Exp $
 
 inherit eutils
 
@@ -26,5 +26,5 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README
 	newicon src/pixmaps/main.xpm ${PN}.xpm
-	make_desktop_entry ${PN} Calcoo ${PN}.xpm "Education;Math"
+	make_desktop_entry ${PN} Calcoo ${PN} "Education;Math"
 }
