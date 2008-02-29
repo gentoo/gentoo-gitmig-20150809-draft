@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a.ebuild,v 1.2 2007/08/27 16:44:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a.ebuild,v 1.3 2008/02/29 17:53:31 carlo Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ src_install () {
 	fowners uucp:uucp /var/lock/uucp
 	fperms 755 /var/lock/uucp
 	doicon ponyprog.png
-	make_desktop_entry ponyprog2000 PonyProg2000 ponyprog.png
+	make_desktop_entry ponyprog2000 PonyProg2000 ponyprog
 }
 
 pkg_postinst() {

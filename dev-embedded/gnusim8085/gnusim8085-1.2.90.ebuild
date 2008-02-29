@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/gnusim8085-1.2.90.ebuild,v 1.2 2006/09/20 16:24:35 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/gnusim8085-1.2.90.ebuild,v 1.3 2008/02/29 17:52:43 carlo Exp $
 
 inherit eutils
 
@@ -48,5 +48,5 @@ src_install() {
 	doins doc/examples/*.asm
 
 	newicon pixmaps/gnusim8085_icon.png gnusim8085.png
-	make_desktop_entry gnusim8085 GNUSim8085 gnusim8085.png Development
+	make_desktop_entry gnusim8085 GNUSim8085 gnusim8085 Development
 }
