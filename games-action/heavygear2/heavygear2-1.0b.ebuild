@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.17 2008/01/21 13:38:17 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.18 2008/02/29 18:45:24 carlo Exp $
 
 inherit eutils games
 
@@ -66,7 +66,7 @@ src_install() {
 
 	newicon "${CDROM_ROOT}"/icon.xpm hg2.xpm
 	games_make_wrapper hg2 ./hg2 "${dir}" "${dir}"
-	make_desktop_entry hg2 "Heavy Gear II" hg2.xpm
+	make_desktop_entry hg2 "Heavy Gear II" hg2
 
 	prepgamesdirs
 }
