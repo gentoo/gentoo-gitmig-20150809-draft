@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.12 2008/02/17 17:42:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.13 2008/02/29 20:11:57 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> jubler-3.3.0-r1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   17 Feb 2008; Christian Faulhammer <opfer@gentoo.org> jubler-3.4.1.ebuild:
   stable x86, bug 210484

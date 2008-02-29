@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/pymp-1.0.ebuild,v 1.2 2007/07/08 14:05:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/pymp-1.0.ebuild,v 1.3 2008/02/29 20:09:58 carlo Exp $
 
 inherit eutils
 
@@ -25,5 +25,5 @@ src_compile() {
 src_install() {
 	emake PREFIX="/usr" DESTDIR="${D}" install || die "emake install failed."
 	dodoc CHANGELOG README
-	make_desktop_entry ${PN} "${PN}" ${PN}.png
+	make_desktop_entry ${PN} "${PN}" ${PN}
 }

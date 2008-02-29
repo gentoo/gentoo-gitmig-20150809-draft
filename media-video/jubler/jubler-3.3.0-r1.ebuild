@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.3.0-r1.ebuild,v 1.3 2007/11/25 12:31:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.3.0-r1.ebuild,v 1.4 2008/02/29 20:11:57 carlo Exp $
 
 inherit eutils java-pkg-2 java-utils-2 java-ant-2 toolchain-funcs
 
@@ -61,7 +61,7 @@ src_install() {
 	doicon resources/installers/linux/jubler.png
 	newicon resources/installers/linux/subtitle-32.png subtitle.png
 	java-pkg_dolauncher jubler --main com.panayotis.jubler.Main
-	make_desktop_entry ${PN} "Jubler" ${PN}.png
+	make_desktop_entry ${PN} "Jubler" ${PN}
 	doman resources/installers/linux/jubler.1
 	insinto /usr/share/jubler/help
 	doins dist/help/*

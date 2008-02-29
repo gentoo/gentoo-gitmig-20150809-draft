@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qvamps
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/ChangeLog,v 1.7 2007/05/16 06:42:44 sbriesen Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/ChangeLog,v 1.8 2008/02/29 20:12:34 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> qvamps-0.98.ebuild,
+  qvamps-0.98-r1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *qvamps-0.98-r1 (16 May 2007)
 

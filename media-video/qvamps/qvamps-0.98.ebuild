@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/qvamps-0.98.ebuild,v 1.1 2006/09/14 22:24:12 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/qvamps-0.98.ebuild,v 1.2 2008/02/29 20:12:34 carlo Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -49,5 +49,5 @@ src_install() {
 	dodoc ChangeLog README INSTALL
 
 	newicon images/icon.png qvamps.png
-	make_desktop_entry qvamps qVamps qvamps.png
+	make_desktop_entry qvamps qVamps qvamps
 }
