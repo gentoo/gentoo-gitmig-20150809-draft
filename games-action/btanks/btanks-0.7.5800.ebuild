@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.7.5800.ebuild,v 1.2 2008/01/17 06:57:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.7.5800.ebuild,v 1.3 2008/02/29 18:20:33 carlo Exp $
 
 inherit eutils games
 
@@ -53,7 +53,7 @@ src_install() {
 	dodoc ChangeLog *.txt
 
 	newicon src/bt.xpm ${PN}.xpm || die "newicon"
-	make_desktop_entry ${PN} "Battle Tanks" ${PN}.xpm
+	make_desktop_entry ${PN} "Battle Tanks" ${PN}
 
 	prepgamesdirs
 }
