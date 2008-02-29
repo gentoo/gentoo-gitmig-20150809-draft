@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/live
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.80 2007/10/25 23:09:22 beandog Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.81 2008/02/29 20:19:52 aballier Exp $
+
+*live-2008.02.08 (29 Feb 2008)
+
+  29 Feb 2008; Alexis Ballier <aballier@gentoo.org> +live-2008.02.08.ebuild:
+  version bump for bug #204065, respect ldflags for bug #209728, give it a
+  loosy manual ABI handling, do not build pic programs as they will not be
+  installed
 
 *live-2007.08.03a (25 Oct 2007)
 
