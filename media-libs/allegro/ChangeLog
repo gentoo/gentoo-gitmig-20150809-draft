@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.74 2008/02/26 15:51:44 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.75 2008/02/29 19:55:00 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> allegro-4.2.2.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   26 Feb 2008; Ferris McCormick <fmccor@gentoo.org> allegro-4.2.2.ebuild:
   Add ~sparc for testing --- Bug #210519.
