@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.11 2008/02/22 13:35:13 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.12 2008/02/29 14:47:41 markusle Exp $
 
 EAPI="1"
 
@@ -94,7 +94,7 @@ src_compile() {
 	local CMAKE_VARIABLES=""
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_SKIP_RPATH:BOOL=YES"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_DIR:PATH=${S}"
-	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_LIB_DIR:PATH=/usr/$(get_libdir)/"
+	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_LIB_DIR:PATH=/$(get_libdir)/"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_INSTALL_PREFIX:PATH=/usr"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DBUILD_SHARED_LIBS:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_FREETYPE:BOOL=ON"
