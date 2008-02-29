@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.13.ebuild,v 1.3 2007/05/08 23:03:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.13.ebuild,v 1.4 2008/02/29 16:27:27 jer Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch "${FILESDIR}"/${P}-gentoo.diff
 }
 
 src_compile() {
@@ -37,7 +37,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} localstatedir=/etc/bincimap prefix=/usr install || die
+	make DESTDIR="${D}" localstatedir=/etc/bincimap prefix=/usr install || die
 	keepdir /var/log/bincimap || die
 	if use ssl; then
 		keepdir /var/log/bincimap-ssl || die

@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/bincimap
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.44 2007/05/08 23:03:35 genone Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.45 2008/02/29 16:27:27 jer Exp $
+
+  29 Feb 2008; Jeroen Roovers <jer@gentoo.org> bincimap-1.2.11.ebuild,
+  bincimap-1.2.12.ebuild, bincimap-1.2.13.ebuild, bincimap-1.3.3.ebuild,
+  bincimap-1.3.4.ebuild:
+  Marked ~hppa (bug #211778). Fixed quoting issues.
 
   08 May 2007; Marius Mauch <genone@gentoo.org> bincimap-1.2.11.ebuild,
   bincimap-1.2.12.ebuild, bincimap-1.2.13.ebuild, bincimap-1.3.3.ebuild,

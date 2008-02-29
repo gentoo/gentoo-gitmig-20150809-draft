@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.3.4.ebuild,v 1.3 2007/05/08 23:03:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.3.4.ebuild,v 1.4 2008/02/29 16:27:27 jer Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.bincimap.org/dl/tarballs/1.3/${P}.tar.bz2"
 HOMEPAGE="http://www.bincimap.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="ssl"
 
 DEPEND="virtual/libc
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch "${FILESDIR}"/${P}-gentoo.diff
 }
 
 src_compile() {
@@ -37,7 +37,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} prefix=/usr install || die
+	make DESTDIR="${D}" prefix=/usr install || die
 	keepdir /var/log/bincimap || die
 	if use ssl; then
 		keepdir /var/log/bincimap-ssl || die
@@ -48,8 +48,8 @@ src_install () {
 	dosym /etc/bincimap/service/bincimaps /etc/bincimap/service/imaps
 
 	# rename
-	mv ${D}/etc/xinetd.d/{xinetd-bincimap,bincimap}
-	mv ${D}/etc/xinetd.d/{xinetd-bincimaps,bincimaps}
+	mv "${D}"/etc/xinetd.d/{xinetd-bincimap,bincimap}
+	mv "${D}"/etc/xinetd.d/{xinetd-bincimaps,bincimaps}
 }
 
 pkg_postinst() {
