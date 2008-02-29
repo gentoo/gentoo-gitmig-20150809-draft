@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/stickers/stickers-0.1.3-r2.ebuild,v 1.2 2008/02/22 08:30:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/stickers/stickers-0.1.3-r2.ebuild,v 1.3 2008/02/29 19:28:54 carlo Exp $
 
 inherit eutils
 
@@ -51,5 +51,5 @@ src_install () {
 		mandir="${D}/usr/share/man" install \
 		|| die "make install failed"
 	newicon scenes/Aquarium.scene.xpm ${PN}.xpm
-	make_desktop_entry ${PN} Stickers ${PN}.xpm
+	make_desktop_entry ${PN} Stickers ${PN}
 }

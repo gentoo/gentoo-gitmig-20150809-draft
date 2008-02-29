@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/memonix-bin/memonix-bin-1.6.ebuild,v 1.2 2007/06/12 13:03:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/memonix-bin/memonix-bin-1.6.ebuild,v 1.3 2008/02/29 19:27:56 carlo Exp $
 
 inherit eutils games
 
@@ -30,6 +30,6 @@ src_install() {
 
 	games_make_wrapper ${MY_PN} "./Memonix" "${GAMES_PREFIX_OPT}/${MY_PN}"
 	newicon icon48.png ${MY_PN}.png || die "newicon failed"
-	make_desktop_entry ${MY_PN} "Memonix" ${MY_PN}.png
+	make_desktop_entry ${MY_PN} "Memonix" ${MY_PN}
 	prepgamesdirs
 }
