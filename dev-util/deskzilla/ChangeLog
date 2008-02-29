@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/deskzilla
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.9 2007/11/23 23:10:56 caster Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.10 2008/02/29 18:00:57 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> deskzilla-1.4.1.ebuild,
+  deskzilla-1.5.1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *deskzilla-1.5.1 (23 Nov 2007)
 

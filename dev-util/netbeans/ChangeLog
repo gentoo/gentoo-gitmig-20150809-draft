@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.76 2008/01/11 01:41:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.77 2008/02/29 18:02:32 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> netbeans-5.5-r6.ebuild,
+  netbeans-5.5.1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   11 Jan 2008; Vlastimil Babka <caster@gentoo.org> netbeans-5.5-r6.ebuild,
   netbeans-5.5.1.ebuild:

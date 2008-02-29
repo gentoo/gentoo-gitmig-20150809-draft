@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.5.1.ebuild,v 1.1 2007/11/23 23:10:56 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.5.1.ebuild,v 1.2 2008/02/29 18:00:57 carlo Exp $
 
 inherit java-pkg-2 versionator
 
@@ -67,7 +67,7 @@ src_install () {
 	newdoc RELEASE.txt RELEASE || die
 
 	doicon deskzilla.png
-	make_desktop_entry deskzilla "Deskzilla" deskzilla.png "Development"
+	make_desktop_entry deskzilla "Deskzilla" deskzilla "Development"
 }
 
 pkg_postinst() {

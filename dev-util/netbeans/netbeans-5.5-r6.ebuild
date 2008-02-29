@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.12 2008/01/11 01:41:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.13 2008/02/29 18:02:32 carlo Exp $
 
 WANT_ANT_TASKS="ant-nodeps ant-trax"
 
@@ -210,7 +210,7 @@ src_install() {
 	dodir /usr/share/icons/hicolor/32x32/apps
 	dosym ${DESTINATION}/nb5.5/netbeans.png /usr/share/icons/hicolor/32x32/apps/netbeans-${SLOT}.png
 
-	make_desktop_entry netbeans-${SLOT} "Netbeans ${SLOT}" netbeans-${SLOT}.png Development
+	make_desktop_entry netbeans-${SLOT} "Netbeans ${SLOT}" netbeans-${SLOT} Development
 }
 
 pkg_postinst () {

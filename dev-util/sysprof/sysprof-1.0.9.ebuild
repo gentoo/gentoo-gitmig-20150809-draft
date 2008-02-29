@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.0.9.ebuild,v 1.1 2007/11/23 10:15:01 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.0.9.ebuild,v 1.2 2008/02/29 18:00:10 carlo Exp $
 
 inherit eutils linux-mod
 
@@ -37,5 +37,5 @@ src_install() {
 	make install DESTDIR="${D}" || die
 	linux-mod_src_install
 	dodoc AUTHORS ChangeLog NEWS README TODO
-	make_desktop_entry sysprof Sysprof sysprof-icon.png
+	make_desktop_entry sysprof Sysprof sysprof-icon
 }
