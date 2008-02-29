@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.8 2007/12/07 15:06:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.9 2008/02/29 20:29:56 carlo Exp $
 
 inherit cvs eutils
 
@@ -46,7 +46,7 @@ src_install() {
 
 	doicon pixmaps/${PN}.png
 
-	make_desktop_entry ${PN} "${PN}" ${PN}.png
+	make_desktop_entry ${PN} "${PN}" ${PN}
 }
 
 pkg_postinst() {

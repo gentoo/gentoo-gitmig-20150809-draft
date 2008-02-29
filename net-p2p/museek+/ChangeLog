@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/museek+
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.10 2008/02/16 14:33:07 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.11 2008/02/29 20:27:17 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> museek+-0.1.12.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *museek+-0.1.13-r2 (16 Feb 2008)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.12.ebuild,v 1.2 2007/02/14 10:46:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.12.ebuild,v 1.3 2008/02/29 20:27:17 carlo Exp $
 
 inherit qt3 eutils
 
@@ -80,7 +80,7 @@ src_install() {
 
 	if use qt3 ; then
 		doicon "icons/museeq-circle2.png"
-		make_desktop_entry museeq "Museeq" museeq-circle2.png "Qt;Network;P2P"
+		make_desktop_entry museeq "Museeq" museeq-circle2 "Qt;Network;P2P"
 	fi
 }
 

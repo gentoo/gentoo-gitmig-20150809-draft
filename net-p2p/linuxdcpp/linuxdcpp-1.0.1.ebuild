@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.1.ebuild,v 1.3 2008/02/27 01:35:17 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.1.ebuild,v 1.4 2008/02/29 20:29:56 carlo Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_install() {
 
 	doicon pixmaps/${PN}.png
 
-	make_desktop_entry ${PN} "${PN}" ${PN}.png
+	make_desktop_entry ${PN} "${PN}" ${PN}
 }
 
 pkg_postinst() {

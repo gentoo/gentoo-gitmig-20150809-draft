@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/linuxdcpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.23 2008/02/27 01:35:17 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.24 2008/02/29 20:29:56 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> linuxdcpp-1.0.1.ebuild,
+  linuxdcpp-9999.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   27 Feb 2008; Robert Buchholz <rbu@gentoo.org> linuxdcpp-1.0.1.ebuild:
   amd64 stable (bug #209758)
