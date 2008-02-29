@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/odsclient/odsclient-1.03.ebuild,v 1.1 2008/01/21 19:15:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/odsclient/odsclient-1.03.ebuild,v 1.2 2008/02/29 21:53:50 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ods.org/dl/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 src_unpack() {
