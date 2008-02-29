@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-36.ebuild,v 1.3 2008/02/20 01:47:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-40.ebuild,v 1.1 2008/02/29 20:57:40 alonbl Exp $
 
 inherit pam
 
