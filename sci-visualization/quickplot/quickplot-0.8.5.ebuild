@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/quickplot-0.8.5.ebuild,v 1.1 2006/01/29 20:16:16 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/quickplot-0.8.5.ebuild,v 1.2 2008/02/29 20:41:36 carlo Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_install () {
 	rm COPYING quickplot_icon.png ChangeLog
 	mv ${D}/usr/share/pixmaps/quickplot_icon.png \
 		${D}/usr/share/pixmaps/quickplot.png
-	make_desktop_entry 'quickplot --no-pipe' Quickplot quickplot.png Graphics
+	make_desktop_entry 'quickplot --no-pipe' Quickplot quickplot Graphics
 	mv ${D}/usr/share/applications/quickplot\ --no-pipe.desktop \
 		${D}/usr/share/applications/quickplot.desktop
 }

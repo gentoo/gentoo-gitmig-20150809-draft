@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/quickplot
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.4 2007/06/11 08:39:33 cryos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.5 2008/02/29 20:41:36 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> quickplot-0.8.5.ebuild,
+  quickplot-0.8.13.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   11 Jun 2007; Marcus D. Hanwell <cryos@gentoo.org> quickplot-0.8.13.ebuild:
   Marked stable on amd64.
