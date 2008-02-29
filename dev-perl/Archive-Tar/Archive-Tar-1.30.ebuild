@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/Archive-Tar-1.30.ebuild,v 1.8 2007/05/12 04:02:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/Archive-Tar-1.30.ebuild,v 1.9 2008/02/29 19:55:32 ian Exp $
 
 inherit perl-module
 
 DESCRIPTION="A Perl module for creation and manipulation of tar files"
-HOMEPAGE="http://search.cpan.org/~kane/Archive-Tar-1.26/"
+HOMEPAGE="http://search.cpan.org/~kane/Archive-Tar/"
 SRC_URI="mirror://cpan/authors/id/K/KA/KANE/${P}.tar.gz"
 
 LICENSE="Artistic"
