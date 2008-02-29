@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.65 2008/02/18 22:49:55 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.66 2008/02/29 13:33:15 carlo Exp $
+
+*krusader-1.80.0-r1 (29 Feb 2008)
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> +files/external-tools,
+  +krusader-1.80.0-r1.ebuild:
+  Revise the post install notice and put the information into an external
+  file, instead spamming the log. Remove the !sparc from JavasScript support.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> -krusader-1.70.1.ebuild:
   Old.
