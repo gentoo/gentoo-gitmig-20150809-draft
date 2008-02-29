@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tracker
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.36 2007/12/13 20:23:27 compnerd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.37 2008/02/29 03:10:51 ranger Exp $
+
+  29 Feb 2008; Brent Baude <ranger@gentoo.org> tracker-0.6.4.ebuild:
+  keyworded ~arch for ppc64, bug 211733
 
   14 Dec 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   tracker-0.6.3.ebuild:
