@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/dangerdeep
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/ChangeLog,v 1.6 2007/10/20 01:49:25 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/ChangeLog,v 1.7 2008/02/29 19:37:06 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> dangerdeep-0.3.0.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   20 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
   dangerdeep-0.3.0.ebuild:

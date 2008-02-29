@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.3.0.ebuild,v 1.2 2007/10/20 01:49:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.3.0.ebuild,v 1.3 2008/02/29 19:37:06 carlo Exp $
 
 inherit eutils games
 
@@ -56,7 +56,7 @@ src_install() {
 	doins -r ../data/* || die "doins failed"
 
 	newicon logo.xpm ${PN}.xpm
-	make_desktop_entry ${PN} "Danger from the Deep" ${PN}.xpm
+	make_desktop_entry ${PN} "Danger from the Deep" ${PN}
 
 	dodoc ChangeLog CREDITS README
 	doman doc/man/${PN}.6
