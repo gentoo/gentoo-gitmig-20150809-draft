@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/omegat-1.7.2.ebuild,v 1.1 2007/09/24 02:20:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/omegat-1.7.2.ebuild,v 1.2 2008/02/29 17:51:58 carlo Exp $
 
 JAVA_PKG_BSFIX_NAME="build.xml build-impl.xml profiler-build-impl.xml"
 inherit eutils java-pkg-2 java-ant-2
@@ -35,5 +35,5 @@ src_install() {
 	docinto lib; dodoc lib/*.txt
 
 	doicon images/OmegaT.png
-	make_desktop_entry ${PN} "OmegaT" "OmegaT.png" "Application;Office"
+	make_desktop_entry ${PN} "OmegaT" "OmegaT" "Application;Office"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/yudit-2.8.1.ebuild,v 1.2 2007/07/22 10:20:20 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/yudit-2.8.1.ebuild,v 1.3 2008/02/29 17:49:42 carlo Exp $
 
 inherit eutils
 
@@ -31,5 +31,5 @@ src_compile() {
 src_install() {
 	emake DESTDIR=${D} install || die
 	doicon icons/SS_Yudit_XPM.xpm
-	make_desktop_entry ${PN} "Unicode Text Editor Yudit" SS_Yudit_XPM.xpm Utility
+	make_desktop_entry ${PN} "Unicode Text Editor Yudit" SS_Yudit_XPM Utility
 }

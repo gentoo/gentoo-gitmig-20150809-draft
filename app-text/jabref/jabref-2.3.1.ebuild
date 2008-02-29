@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.3.1.ebuild,v 1.1 2008/01/10 21:20:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.3.1.ebuild,v 1.2 2008/02/29 17:51:16 carlo Exp $
 
 JAVA_PKG_IUSE="doc"
 inherit eutils java-pkg-2 java-ant-2
@@ -68,5 +68,5 @@ src_install() {
 		--main net.sf.jabref.JabRef
 
 	newicon src/images/JabRef-icon-48.png JabRef-icon.png || die
-	make_desktop_entry jabref JabRef JabRef-icon.png Office
+	make_desktop_entry jabref JabRef JabRef-icon Office
 }

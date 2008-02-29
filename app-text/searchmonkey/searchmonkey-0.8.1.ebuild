@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/searchmonkey/searchmonkey-0.8.1.ebuild,v 1.2 2007/03/07 14:03:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/searchmonkey/searchmonkey-0.8.1.ebuild,v 1.3 2008/02/29 17:50:22 carlo Exp $
 
 inherit eutils
 
@@ -20,5 +20,5 @@ DEPEND="${RDEPEND}
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
-	make_desktop_entry ${PN} ${PN} ${PN}.png "Utility;GTK"
+	make_desktop_entry ${PN} ${PN} ${PN} "Utility;GTK"
 }

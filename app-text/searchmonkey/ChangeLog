@@ -1,6 +1,9 @@
 # ChangeLog for app-text/searchmonkey
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/searchmonkey/ChangeLog,v 1.3 2007/03/07 14:03:14 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/searchmonkey/ChangeLog,v 1.4 2008/02/29 17:50:22 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> searchmonkey-0.8.1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   07 Mar 2007; Raúl Porcel <armin76@gentoo.org> -searchmonkey-0.8.0.ebuild,
   searchmonkey-0.8.1.ebuild:
