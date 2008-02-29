@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r5.ebuild,v 1.2 2007/12/31 19:24:55 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r5.ebuild,v 1.3 2008/02/29 20:42:08 carlo Exp $
 
 inherit kde-functions eutils
 
@@ -79,7 +79,7 @@ src_install () {
 	dodir /usr/share/${P}
 	cp -pPR patterns examples fonts qm "${D}"/usr/share/${P}
 	doicon src/xpm/${PN}.xpm
-	make_desktop_entry ${PN} QCad ${PN}.xpm Office
+	make_desktop_entry ${PN} QCad ${PN} Office
 	cd ..
 	dodoc README
 	if use doc; then
