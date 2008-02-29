@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.42.3.ebuild,v 1.2 2007/11/20 22:41:09 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.42.3.ebuild,v 1.3 2008/02/29 20:46:46 carlo Exp $
 
 IUSE="acpi multilib"
 
@@ -318,7 +318,7 @@ src_install() {
 	insinto /usr/share/pixmaps
 	doins common/usr/share/icons/ccc_{large,small}.xpm
 	make_desktop_entry amdcccle 'ATI Catalyst Control Center' \
-		ccc_large.xpm System
+		ccc_large System
 
 	# doc.
 	dohtml -r common/usr/share/doc/fglrx

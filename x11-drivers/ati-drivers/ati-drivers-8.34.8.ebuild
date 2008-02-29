@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.34.8.ebuild,v 1.5 2007/07/01 22:50:47 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.34.8.ebuild,v 1.6 2008/02/29 20:46:46 carlo Exp $
 
 IUSE="acpi qt3"
 
@@ -319,7 +319,7 @@ src_install() {
 
 	if use qt3; then
 		dobin panel/fireglcontrol
-		make_desktop_entry fireglcontrol 'ATI Control' ati.xpm System
+		make_desktop_entry fireglcontrol 'ATI Control' ati System
 		insinto /usr/share/pixmaps
 		doins common/usr/share/icons/ati.xpm
 	fi
