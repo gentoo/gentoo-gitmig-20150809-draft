@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/glossaries
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.2 2007/09/07 12:08:42 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.3 2008/02/29 08:57:16 aballier Exp $
+
+  29 Feb 2008; Alexis Ballier <aballier@gentoo.org> glossaries-1.02.ebuild:
+  Adapt deps for texlive, thanks to Boris in bug #210469
 
   07 Sep 2007; Christoph Mende <angelos@gentoo.org> glossaries-1.02.ebuild:
   Added ~amd64 wrt bug #191469
