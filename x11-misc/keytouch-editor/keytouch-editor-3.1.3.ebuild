@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch-editor/keytouch-editor-3.1.3.ebuild,v 1.1 2007/09/05 19:38:27 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch-editor/keytouch-editor-3.1.3.ebuild,v 1.2 2008/02/29 20:49:02 carlo Exp $
 
 inherit eutils linux-info
 
@@ -27,7 +27,7 @@ RDEPEND="${RDEPEND}
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	make_desktop_entry ${PN} "keyTouch editor" ${PN}.png System
+	make_desktop_entry ${PN} "keyTouch editor" ${PN} System
 	newicon pixmaps/icon.png ${PN}.png
 
 	dodoc AUTHORS ChangeLog

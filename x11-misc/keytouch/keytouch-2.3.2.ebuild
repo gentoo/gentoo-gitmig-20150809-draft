@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.3.2.ebuild,v 1.4 2008/01/06 16:37:05 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.3.2.ebuild,v 1.5 2008/02/29 20:49:48 carlo Exp $
 
 inherit eutils versionator linux-info
 
@@ -52,7 +52,7 @@ src_install() {
 	fi
 
 	newicon keytouch-keyboard/pixmaps/icon.png ${PN}.png
-	make_desktop_entry ${PN} keyTouch ${PN}.png System
+	make_desktop_entry ${PN} keyTouch ${PN} System
 
 	dodoc AUTHORS ChangeLog
 

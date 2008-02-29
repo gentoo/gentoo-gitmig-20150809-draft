@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xnee
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.3 2008/02/03 18:06:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.4 2008/02/29 20:47:44 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> xnee-3.01.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *xnee-3.02 (03 Feb 2008)
 
