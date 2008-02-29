@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/realbasic/realbasic-2007.3.ebuild,v 1.1 2007/08/22 16:10:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/realbasic/realbasic-2007.3.ebuild,v 1.2 2008/02/29 17:55:30 carlo Exp $
 
 inherit eutils portability
 
@@ -23,5 +23,5 @@ src_install() {
 	treecopy . "${D}"/opt/REALbasic || die
 	dosym /opt/REALbasic/REALbasic2007 /opt/bin/REALbasic
 	newicon RBCube.xpm REALbasic.xpm || die
-	make_desktop_entry REALbasic REALbasic REALbasic.xpm
+	make_desktop_entry REALbasic REALbasic REALbasic
 }

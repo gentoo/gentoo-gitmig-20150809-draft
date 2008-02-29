@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.24.ebuild,v 1.2 2007/12/09 08:37:46 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.24.ebuild,v 1.3 2008/02/29 17:57:18 carlo Exp $
 
 inherit eutils
 
@@ -80,5 +80,5 @@ src_install() {
 	dosym ../share/lazarus/startlazarus /usr/bin/startlazarus
 	dosym ../lazarus/images/mainicon.xpm /usr/share/pixmaps/lazarus.xpm
 
-	make_desktop_entry startlazarus "Lazarus IDE" "lazarus.xpm" || die "Failed making desktop entry!"
+	make_desktop_entry startlazarus "Lazarus IDE" "lazarus" || die "Failed making desktop entry!"
 }
