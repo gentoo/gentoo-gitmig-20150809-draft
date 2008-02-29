@@ -1,6 +1,10 @@
 # ChangeLog for games-board/eboard
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.19 2008/02/24 05:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.20 2008/02/29 19:01:07 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> eboard-1.0.3.ebuild,
+  eboard-1.0.4.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *eboard-1.1.1 (24 Feb 2008)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.ebuild,v 1.7 2007/07/06 15:48:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.ebuild,v 1.8 2008/02/29 18:59:02 carlo Exp $
 
 inherit eutils games
 
@@ -26,7 +26,7 @@ src_unpack() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	newicon images/board_N_2.xpm ${PN}.xpm
-	make_desktop_entry ${PN} Hexxagon ${PN}.xpm
+	make_desktop_entry ${PN} Hexxagon ${PN}
 	dodoc README
 	prepgamesdirs
 }

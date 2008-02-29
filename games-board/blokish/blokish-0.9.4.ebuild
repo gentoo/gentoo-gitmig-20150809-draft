@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4.ebuild,v 1.1 2007/10/29 23:19:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4.ebuild,v 1.2 2008/02/29 19:03:06 carlo Exp $
 
 inherit eutils wxwidgets games
 
@@ -38,7 +38,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	doicon src/${PN}.xpm
-	make_desktop_entry ${PN} Blokish ${PN}.xpm
+	make_desktop_entry ${PN} Blokish ${PN}
 
 	dodoc AUTHORS ChangeLog README
 	dohtml docs/*

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.0.4.ebuild,v 1.1 2007/05/29 14:26:49 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.0.4.ebuild,v 1.2 2008/02/29 19:01:07 carlo Exp $
 
 inherit eutils games
 
@@ -50,7 +50,7 @@ src_install() {
 	dodoc README AUTHORS ChangeLog TODO Documentation/*.txt
 
 	newicon k18.xpm ${PN}.xpm
-	make_desktop_entry ${PN} ${PN} ${PN}.xpm
+	make_desktop_entry ${PN} ${PN} ${PN}
 
 	cd "${WORKDIR}"/${EXTRAS1}
 	insinto "${GAMES_DATADIR}"/${PN}

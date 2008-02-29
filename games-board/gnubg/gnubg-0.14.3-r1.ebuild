@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3-r1.ebuild,v 1.10 2007/11/13 05:13:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3-r1.ebuild,v 1.11 2008/02/29 18:58:00 carlo Exp $
 
 inherit flag-o-matic eutils games
 
@@ -109,6 +109,6 @@ src_install() {
 	doins ${PN}.weights *bd || die "doins failed"
 	dodoc AUTHORS README NEWS
 	newicon xpm/gnubg-big.xpm gnubg.xpm
-	make_desktop_entry "gnubg -w" "GNU Backgammon" gnubg.xpm
+	make_desktop_entry "gnubg -w" "GNU Backgammon" gnubg
 	prepgamesdirs
 }

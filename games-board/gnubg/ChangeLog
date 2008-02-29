@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnubg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.37 2007/11/12 21:10:28 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.38 2008/02/29 18:58:00 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> gnubg-0.14.3-r1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   12 Nov 2007; Mike Frysinger <vapier@gentoo.org>
   files/gnubg-0.14.3-as-needed.patch, gnubg-0.14.3-r1.ebuild:

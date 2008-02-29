@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.2 2007/11/25 11:35:14 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.3 2008/02/29 18:57:14 carlo Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -67,7 +67,7 @@ src_install() {
 	dodoc ChangeLog README
 
 	doicon data/icons/${MY_PN}.png
-	make_desktop_entry ${MY_PN} ${MY_PN} ${MY_PN}.png "KDE;Qt;Game;BoardGame"
+	make_desktop_entry ${MY_PN} ${MY_PN} ${MY_PN} "KDE;Qt;Game;BoardGame"
 
 	prepgamesdirs
 }

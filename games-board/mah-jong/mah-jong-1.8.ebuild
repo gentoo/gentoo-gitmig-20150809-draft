@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/mah-jong-1.8.ebuild,v 1.1 2007/10/30 21:31:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/mah-jong-1.8.ebuild,v 1.2 2008/02/29 19:00:23 carlo Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -46,7 +46,7 @@ src_install() {
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r fallbacktiles/ tiles-numbered/ tiles-small/ || die "doins failed"
 	newicon tiles-v1/tongE.xpm ${PN}.xpm
-	make_desktop_entry xmj Mah-Jong ${PN}.xpm
+	make_desktop_entry xmj Mah-Jong ${PN}
 	dodoc CHANGES ChangeLog *.txt
 	prepgamesdirs
 }

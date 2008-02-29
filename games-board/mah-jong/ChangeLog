@@ -1,6 +1,10 @@
 # ChangeLog for games-board/mah-jong
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/ChangeLog,v 1.10 2007/10/30 21:31:45 tupone Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/ChangeLog,v 1.11 2008/02/29 19:00:23 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> mah-jong-1.7.ebuild,
+  mah-jong-1.8.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *mah-jong-1.8 (30 Oct 2007)
 

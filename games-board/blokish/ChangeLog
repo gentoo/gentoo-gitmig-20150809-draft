@@ -1,6 +1,10 @@
 # ChangeLog for games-board/blokish
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/ChangeLog,v 1.4 2007/10/29 23:19:00 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/ChangeLog,v 1.5 2008/02/29 19:03:06 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> blokish-0.9.3.ebuild,
+  blokish-0.9.4.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *blokish-0.9.4 (29 Oct 2007)
 

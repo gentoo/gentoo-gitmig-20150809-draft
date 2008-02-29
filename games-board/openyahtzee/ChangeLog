@@ -1,6 +1,10 @@
 # ChangeLog for games-board/openyahtzee
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.4 2007/10/31 06:52:51 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.5 2008/02/29 19:01:35 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> openyahtzee-1.7.ebuild,
+  openyahtzee-1.8.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *openyahtzee-1.8 (31 Oct 2007)
 
