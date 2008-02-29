@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/jpilot-backup
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.11 2008/02/27 19:27:59 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.12 2008/02/29 08:53:21 opfer Exp $
+
+  29 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
+  jpilot-backup-0.53.ebuild:
+  stable x86, bug 209574
 
   27 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
   jpilot-backup-0.53.ebuild:
