@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/glbsp-2.20.ebuild,v 1.1 2006/10/11 20:11:32 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/glbsp-2.20.ebuild,v 1.2 2008/02/29 19:51:49 carlo Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -48,7 +48,7 @@ src_install() {
 	if use fltk ; then
 		newbin glBSPX glbspx || die "newbin failed"
 		newicon fltk/icon.xpm glbspx.xpm
-		make_desktop_entry glbspx glBSPX glbspx.xpm
+		make_desktop_entry glbspx glBSPX glbspx
 	fi
 
 	doman glbsp.1
