@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxclient-2xterminalserver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient-2xterminalserver/ChangeLog,v 1.4 2008/01/14 12:48:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient-2xterminalserver/ChangeLog,v 1.5 2008/02/29 20:26:25 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
+  nxclient-2xterminalserver-1.5.0.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   13 Jan 2008; Bernard Cafarelli <voyageur@gentoo.org>
   nxclient-2xterminalserver-1.5.0.ebuild:

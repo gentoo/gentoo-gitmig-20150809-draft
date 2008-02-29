@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient-2xterminalserver/nxclient-2xterminalserver-1.5.0.ebuild,v 1.3 2008/01/14 12:48:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient-2xterminalserver/nxclient-2xterminalserver-1.5.0.ebuild,v 1.4 2008/02/29 20:26:25 carlo Exp $
 
 inherit eutils qt3
 
@@ -83,7 +83,7 @@ src_install() {
 
 	# Add icons/desktop entries
 	doicon client/nxclient/share/icons/*.png
-	make_desktop_entry "nxclient" "NX Client" nx-desktop.png
-	make_desktop_entry "nxclient -admin" "NX Session Administrator" nxclient-admin.png
-	make_desktop_entry "nxclient -wizard" "NX Connection Wizard" nxclient-wizard.png
+	make_desktop_entry "nxclient" "NX Client" nx-desktop
+	make_desktop_entry "nxclient -admin" "NX Session Administrator" nxclient-admin
+	make_desktop_entry "nxclient -wizard" "NX Connection Wizard" nxclient-wizard
 }
