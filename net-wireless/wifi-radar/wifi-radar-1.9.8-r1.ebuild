@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.8-r1.ebuild,v 1.3 2007/07/28 16:16:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.8-r1.ebuild,v 1.4 2008/02/29 20:33:46 carlo Exp $
 
 inherit eutils
 
@@ -34,10 +34,10 @@ src_install ()
 	insinto /etc/wifi-radar; doins wifi-radar.conf
 	if use svg; then
 		doicon pixmaps/wifi-radar.svg
-		make_desktop_entry wifi-radar.sh "WiFi Radar" wifi-radar.svg Network
+		make_desktop_entry wifi-radar.sh "WiFi Radar" wifi-radar Network
 	else
 		doicon pixmaps/wifi-radar.png
-		make_desktop_entry wifi-radar.sh "WiFi Radar" wifi-radar.png Network
+		make_desktop_entry wifi-radar.sh "WiFi Radar" wifi-radar Network
 	fi
 	doman wifi-radar.1 wifi-radar.conf.5
 	dodoc AUTHORS ChangeLog README TODO

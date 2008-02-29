@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2400/rt2400-1.2.2_beta3.ebuild,v 1.5 2007/07/15 03:28:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2400/rt2400-1.2.2_beta3.ebuild,v 1.6 2008/02/29 20:27:56 carlo Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -53,7 +53,7 @@ src_install() {
 	if use qt3; then
 		dobin ${S}/Utility/RaConfig2400
 		doicon Utility/ico/raconfig.xpm
-		make_desktop_entry RaConfig2400 "RaLink RT2400 Config" raconfig.xpm
+		make_desktop_entry RaConfig2400 "RaLink RT2400 Config" raconfig
 	fi
 
 	dodoc Module/TESTING THANKS FAQ CHANGELOG

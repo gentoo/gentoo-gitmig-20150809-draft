@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_pre2007020911.ebuild,v 1.6 2007/05/09 16:44:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_pre2007020911.ebuild,v 1.7 2008/02/29 20:31:12 carlo Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -53,7 +53,7 @@ src_install() {
 	if use qt3; then
 		dobin ${S}/Utilitys/RaConfig2500
 		doicon Utilitys/ico/RaConfig2500.xpm
-		make_desktop_entry RaConfig2500 "RaLink RT2500 Config" RaConfig2500.xpm
+		make_desktop_entry RaConfig2500 "RaLink RT2500 Config" RaConfig2500
 		insinto /etc/Wireless/RT2500STA
 		doins Module/RT2500STA.dat
 	fi
