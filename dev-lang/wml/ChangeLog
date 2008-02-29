@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/wml
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.37 2007/12/23 13:14:16 graaff Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.38 2008/02/29 15:31:49 graaff Exp $
+
+*wml-2.0.11-r3 (29 Feb 2008)
+
+  29 Feb 2008; Hans de Graaff <graaff@gentoo.org>
+  +files/wml-2.0.11-tmpfile.patch, +wml-2.0.11-r3.ebuild:
+  Fix insecure temporary file usage (CVE-2008-0665, CVE-2008-0666), Gentoo bug
+  #209927, based on a patch by Debian.
 
 *wml-2.0.11-r2 (23 Dec 2007)
 
