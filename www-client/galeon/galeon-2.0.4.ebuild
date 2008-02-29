@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.4.ebuild,v 1.5 2008/02/21 10:45:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.4.ebuild,v 1.6 2008/02/29 11:37:49 coldwind Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/galeon/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 IUSE="seamonkey xulrunner"
-KEYWORDS="~amd64 ia64 ppc sparc x86"
+KEYWORDS="amd64 ia64 ppc sparc x86"
 SLOT="0"
 RDEPEND="xulrunner? ( >=net-libs/xulrunner-1.8 )
 	!xulrunner? (
