@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x-lite/x-lite-2.0.1105d.ebuild,v 1.1 2007/04/07 16:14:01 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x-lite/x-lite-2.0.1105d.ebuild,v 1.2 2008/02/29 20:17:28 carlo Exp $
 
 inherit eutils
 
@@ -48,7 +48,7 @@ src_install() {
 	dosym ${dir}/xtensoftphone /opt/bin/xtensoftphone
 
 	doicon "${FILESDIR}/x-lite.png"
-	make_desktop_entry xtensoftphone X-Lite ${PN}.png "Network;Telephony"
+	make_desktop_entry xtensoftphone X-Lite ${PN} "Network;Telephony"
 
 	dodoc README
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r4.ebuild,v 1.8 2008/02/22 14:52:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r4.ebuild,v 1.9 2008/02/29 20:15:27 carlo Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -156,7 +156,7 @@ src_install() {
 	dodoc README
 
 	doicon "${FILESDIR}"/vncviewer.png
-	make_desktop_entry vncviewer vncviewer vncviewer.png Network
+	make_desktop_entry vncviewer vncviewer vncviewer Network
 
 	if use server ; then
 		cd unix

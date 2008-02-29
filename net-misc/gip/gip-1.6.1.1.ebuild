@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.4 2007/08/18 15:18:16 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.5 2008/02/29 20:14:22 carlo Exp $
 
 inherit versionator distutils
 
@@ -31,5 +31,5 @@ src_install() {
 	sed -i -e 's@INST_PIXMAPDIR=\"/usr/lib/$EXECUTABLE\"@INST_PIXMAPDIR=\"$INST_PREFIX/lib/$EXECUTABLE\"@g' build.sh
 	# Crazy build system...
 	./build.sh --install --prefix "${D}/usr" || die "./build --install failed"
-	make_desktop_entry gip "GIP IP Address Calculator" gnome-calc3.png Network
+	make_desktop_entry gip "GIP IP Address Calculator" gnome-calc3 Network
 }

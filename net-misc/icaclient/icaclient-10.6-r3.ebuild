@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r3.ebuild,v 1.1 2008/02/25 12:23:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r3.ebuild,v 1.2 2008/02/29 20:16:44 carlo Exp $
 
 inherit eutils multilib rpm
 
@@ -109,5 +109,5 @@ src_install() {
 	# English, so strip it since it has no translations anyway
 	doicon lib/ICAClient/icons/*
 	make_wrapper wfcmgr 'env LC_ALL="" LANG="" /opt/ICAClient/wfcmgr' . /opt/ICAClient
-	make_desktop_entry wfcmgr 'Citrix ICA Client' manager.xpm
+	make_desktop_entry wfcmgr 'Citrix ICA Client' manager
 }

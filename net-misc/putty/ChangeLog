@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/putty
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.38 2008/02/22 14:25:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.39 2008/02/29 20:16:01 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> putty-0.60.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
   22 Feb 2008; Raúl Porcel <armin76@gentoo.org> putty-0.60.ebuild:
   alpha/sparc/x86 stable

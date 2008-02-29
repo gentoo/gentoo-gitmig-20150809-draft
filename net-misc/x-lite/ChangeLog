@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/x-lite
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x-lite/ChangeLog,v 1.1 2007/04/07 16:14:01 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x-lite/ChangeLog,v 1.2 2008/02/29 20:17:28 carlo Exp $
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> x-lite-2.0.1105d.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *x-lite-2.0.1105d (07 Apr 2007)
 
