@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.7.3.ebuild,v 1.1 2008/02/28 21:25:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.7.3.ebuild,v 1.2 2008/02/29 07:25:59 leio Exp $
 
 DESCRIPTION="GLib binding for the Telepathy D-Bus protocol."
 HOMEPAGE="http://telepathy.freedesktop.org"
@@ -38,5 +38,5 @@ src_test() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc AUTHORS ChangeLog
+	dodoc AUTHORS ChangeLog NEWS README
 }
