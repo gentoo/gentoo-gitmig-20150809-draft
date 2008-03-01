@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.85 2008/02/13 20:29:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.86 2008/03/01 19:45:12 pva Exp $
+
+*openvz-sources-2.6.24.002.2 (01 Mar 2008)
+
+  01 Mar 2008; <pva@gentoo.org> -openvz-sources-2.6.18.028.053.ebuild,
+  -openvz-sources-2.6.22.005.ebuild, +openvz-sources-2.6.24.002.2.ebuild:
+  New release, still unstable thus hardmasked. Removed vulnerable versions.
 
 *openvz-sources-2.6.18.028.053-r2 (13 Feb 2008)
 

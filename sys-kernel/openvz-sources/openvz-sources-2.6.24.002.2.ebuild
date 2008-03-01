@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.22.005.ebuild,v 1.1 2008/01/06 16:55:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.24.002.2.ebuild,v 1.1 2008/03/01 19:45:12 pva Exp $
 
 inherit versionator
 
@@ -9,7 +9,7 @@ CKV=$(get_version_component_range 1-3)
 OKV=${OKV:-${CKV}}
 KV_FULL=${CKV}-${PN/-*}-$(get_version_component_range 4)
 OVZ_KERNEL="ovz$(get_version_component_range 4)"
-OVZ_REV="1"
+OVZ_REV="$(get_version_component_range 5)"
 EXTRAVERSION=-${OVZ_KERNEL}
 KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 
