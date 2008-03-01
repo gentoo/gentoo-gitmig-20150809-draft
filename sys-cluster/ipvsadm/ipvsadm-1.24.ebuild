@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.24 2008/02/16 13:02:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.25 2008/03/01 18:31:44 angelos Exp $
 
 inherit linux-info toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.linuxvirtualserver.org/software/kernel-2.5/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ~ppc64 s390 sparc x86"
+KEYWORDS="amd64 ia64 ~ppc64 s390 sparc x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2"
