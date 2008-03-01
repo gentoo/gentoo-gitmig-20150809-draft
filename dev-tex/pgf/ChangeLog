@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.39 2008/03/01 11:46:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.40 2008/03/01 11:49:15 aballier Exp $
+
+  01 Mar 2008; Alexis Ballier <aballier@gentoo.org> -pgf-0.65-r1.ebuild,
+  -pgf-1.01.ebuild:
+  remove old
 
 *pgf-2.00 (01 Mar 2008)
 
