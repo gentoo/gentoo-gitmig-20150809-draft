@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.150 2008/01/29 18:03:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.151 2008/03/01 11:43:34 armin76 Exp $
+
+  01 Mar 2008; Raúl Porcel <armin76@gentoo.org> ghc-6.6.1.ebuild,
+  ghc-6.8.2.ebuild:
+  Add ~alpha
 
   29 Jan 2008; Jeroen Roovers <jer@gentoo.org> ghc-6.8.2.ebuild:
   Marked ~hppa (bug #206643).
