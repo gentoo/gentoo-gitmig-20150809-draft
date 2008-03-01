@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.27 2008/02/25 20:13:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.28 2008/03/01 17:00:00 pva Exp $
+
+*metasploit-3.1_p5422 (01 Mar 2008)
+
+  01 Mar 2008; <pva@gentoo.org> metasploit-2.7.ebuild,
+  metasploit-3.1.ebuild, +metasploit-3.1_p5422.ebuild:
+  Hopefully fixed update problem, bug #195924. Now we use subversion eclass
+  with it's features to allow users upgrade metasploit even if new revision is
+  not available in portage ATM. Thank Erwin Paternotte, Jakub Moc, Anton
+  Bolshakov, H D Moore, and Doug Klima for their input and help in fixing this
+  bug.
 
   25 Feb 2008; <pva@gentoo.org> -metasploit-3.0-r1.ebuild,
   metasploit-3.1.ebuild:
