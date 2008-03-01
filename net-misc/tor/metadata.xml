@@ -5,4 +5,8 @@
 <maintainer>
   <email>humpback@gentoo.org</email>
 </maintainer>
+<maintainer>
+  <email>opfer@gentoo.org</email>
+  <name>Christian Faulhammer</name>
+</maintainer>
 </pkgmetadata>
