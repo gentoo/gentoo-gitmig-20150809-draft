@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1163 2008/02/29 16:48:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1164 2008/03/01 16:04:50 coldwind Exp $
+
+  01 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> package.mask:
+  Unmask rb_libtorrent svn snapshot, for use in net-p2p/lince.
 
   29 Feb 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
   remove ocaml mask now that its released
