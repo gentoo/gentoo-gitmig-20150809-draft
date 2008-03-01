@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.1.6.ebuild,v 1.1 2008/01/16 15:50:02 drac Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.2.0.ebuild,v 1.1 2008/03/01 11:19:59 drac Exp $
 
 DESCRIPTION="a personal organizer which includes calendar, task manager and address book."
 HOMEPAGE="http://clay.ll.pl/osmo"
@@ -15,13 +13,22 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.10
 	dev-libs/libxml2
-	dev-libs/libical"
+	>=dev-libs/libical-0.27
+	dev-libs/libgringotts"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	sed -i -e 's:Management:Management;:' "${S}"/osmo.desktop
+}
+
+src_compile() {
+	econf --disable-dependency-tracking
+	emake || die "emake failed."
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog README TRANSLATORS
-	make_desktop_entry ${PN} "${PN} - a personal organizer" ${PN} \
-		"Office;Calendar;GTK"
 }
