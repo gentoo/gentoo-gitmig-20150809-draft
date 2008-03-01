@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.9a.ebuild,v 1.4 2007/07/22 09:53:17 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.9a.ebuild,v 1.5 2008/03/01 13:04:21 nixnut Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://xvnkb.sourceforge.net/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 RDEPEND="x11-libs/libX11
 	truetype? ( virtual/xft )"
 DEPEND="${RDEPEND}
