@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/xxv-1.0.1-r1.ebuild,v 1.1 2007/12/05 20:44:05 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/xxv-1.0.1-r1.ebuild,v 1.2 2008/03/01 22:57:35 hd_brummy Exp $
 
 inherit eutils
 
@@ -17,11 +17,11 @@ RDEPEND=">=media-video/vdr-1.2.6
 	media-video/vdr2jpeg
 	media-fonts/ttf-bitstream-vera
 	dev-db/mysql
-	perl-core/CGI
-	perl-core/Digest-MD5
-	perl-core/Getopt-Long
-	perl-core/MIME-Base64
-	perl-core/Time-HiRes
+	virtual/perl-CGI
+	virtual/perl-Digest-MD5
+	virtual/perl-Getopt-Long
+	virtual/perl-MIME-Base64
+	virtual/perl-Time-HiRes
 	dev-perl/Compress-Zlib
 	dev-perl/Config-Tiny
 	dev-perl/Digest-HMAC
@@ -151,7 +151,9 @@ pkg_postinst() {
 			einfo "will update your XXV Database"
 		fi
 	else
-		einfo "You have to create a empty DB for XXV"
+		einfo "If this is a new install"
+		einfo "you have to create a empty DB for XXV"
+		echo
 		einfo "do this by:"
 		einfo "cd ${SHAREDIR}/contrib"
 		eerror "read the README"
