@@ -1,18 +1,17 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.0.ebuild,v 1.6 2008/02/29 20:01:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.0.ebuild,v 1.7 2008/03/01 15:13:07 drac Exp $
 
 inherit eutils toolchain-funcs
 
-MY_P="${P/x/X}"
-S="${WORKDIR}/${MY_P}"
+MY_P=${P/x/X}
 
 DESCRIPTION="RipperX is a program to rip CD and encode mp3s"
 HOMEPAGE="http://ripperx.sf.net/"
 SRC_URI="mirror://sourceforge/ripperx/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
@@ -22,6 +21,8 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	media-libs/id3lib
 	media-libs/flac"
 DEPEND="${RDEPEND}"
+
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
