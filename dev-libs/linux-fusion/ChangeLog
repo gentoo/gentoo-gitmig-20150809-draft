@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/linux-fusion
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.10 2008/02/28 18:30:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.11 2008/03/01 20:53:25 vapier Exp $
+
+  01 Mar 2008; Mike Frysinger <vapier@gentoo.org> linux-fusion-7.0.1.ebuild:
+  Delay BUILD_PARAMS setup until src_compile since it uses $KV_DIR #211924 by
+  Michael Cramer.
 
   28 Feb 2008; Mike Frysinger <vapier@gentoo.org> linux-fusion-7.0.1.ebuild:
   Use linux-mod eclass to compile things #206161.
