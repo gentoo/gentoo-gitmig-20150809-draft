@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/usermode-sources
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.87 2007/05/25 03:23:50 dang Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.88 2008/03/01 20:04:34 zlin Exp $
+
+  01 Mar 2008; Bo Ørsted Andresen <zlin@gentoo.org>
+  usermode-sources-2.6.18-r2.ebuild:
+  Use K_EXTRAELOG instead of K_EXTRAEINFO (bug #199464).
 
 *usermode-sources-2.6.18-r2 (25 May 2007)
 
