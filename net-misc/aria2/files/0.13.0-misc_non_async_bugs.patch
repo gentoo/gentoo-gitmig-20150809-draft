@@ -1,0 +1,46 @@
+diff -Naur aria2c-0.13.0.orig/src/NameResolver.cc aria2c-0.13.0/src/NameResolver.cc
+--- aria2c-0.13.0.orig/src/NameResolver.cc	2008-02-13 16:17:08.000000000 +0100
++++ aria2c-0.13.0/src/NameResolver.cc	2008-03-01 10:52:16.000000000 +0100
+@@ -35,10 +35,10 @@
+ #include "NameResolver.h"
+ #include <cstring>
+ 
+-namespace aria2 {
+-
+ #ifdef ENABLE_ASYNC_DNS
+ 
++namespace aria2 {
++
+ #ifdef HAVE_LIBCARES1_5
+ void callback(void* arg, int status, int timeouts, struct hostent* host)
+ #else
+@@ -97,6 +97,8 @@
+ #include "DlAbortEx.h"
+ #include "message.h"
+ 
++namespace aria2 {
++
+ void NameResolver::resolve(const std::string& hostname)
+ {
+   memset(&_addr, 0, sizeof(in_addr));
+@@ -109,7 +111,7 @@
+   struct addrinfo* res;
+   int ec;
+   if((ec = getaddrinfo(hostname.c_str(), 0, &ai, &res)) != 0) {
+-    throw new DlAbortEx(EX_RESOLVE_HOSTNAME,
++    throw DlAbortEx(EX_RESOLVE_HOSTNAME,
+ 			hostname.c_str(), gai_strerror(ec));
+   }
+   _addr = ((struct sockaddr_in*)res->ai_addr)->sin_addr;
+diff -Naur aria2c-0.13.0.orig/src/NameResolver.h aria2c-0.13.0/src/NameResolver.h
+--- aria2c-0.13.0.orig/src/NameResolver.h	2008-02-13 16:17:08.000000000 +0100
++++ aria2c-0.13.0/src/NameResolver.h	2008-03-01 10:46:40.000000000 +0100
+@@ -124,6 +124,8 @@
+ 
+ #else // ENABLE_ASYNC_DNS
+ 
++namespace aria2 {
++
+ class NameResolver {
+ private:
+   struct in_addr _addr;
