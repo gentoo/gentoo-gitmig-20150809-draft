@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.361 2008/02/17 16:11:21 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.362 2008/03/01 19:27:18 zlin Exp $
+
+  01 Mar 2008; Bo Ørsted Andresen <zlin@gentoo.org>
+  mm-sources-2.6.25_rc2-r1.ebuild:
+  Use K_EXTRAELOG instead of K_EXTRAEINFO (bug #199464).
 
 *mm-sources-2.6.25_rc2-r1 (17 Feb 2008)
 
