@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1_p5422.ebuild,v 1.1 2008/03/01 17:00:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1_p5422.ebuild,v 1.2 2008/03/01 17:34:45 pva Exp $
 
 MY_P=${PN/metasploit/framework}-${PV}
 
@@ -84,6 +84,16 @@ pkg_postinst() {
 		elog "next time you reemerge ${PN}. To make update permanent either"
 		elog "create ebuild with specific revision number inside your overlay"
 		elog "or report revision bump bug at http://bugs.gentoo.org ."
+		elog
+		elog "In case you use portage it's also possible to create"
+		elog "/etc/portage/env/${CATEGORY}/${PN} file with ESVN_REVISION=<rev>"
+		elog "content. Then each time you run emerge ${PN} you'll have said"
+		elog "<rev> installed. For example, if you run"
+		elog " # mkdir /etc/portage/env/${CATEGORY}"
+		elog ' # echo "ESVN_REVISION=HEAD" >> /etc/portage/env/${CATEGORY}/${PN}'
+		elog "each time you reemerge ${PN} it'll be updated to get all possible"
+		elog "updates for framework-${PV%_p*} branch."
+		elog "You can do similar things in paludis using /etc/paludis/bashrc."
 	else
 		ewarn "${PN} version you installed is for testing purposes only"
 		ewarn "as it's impossible to update it. For day by day work use"
