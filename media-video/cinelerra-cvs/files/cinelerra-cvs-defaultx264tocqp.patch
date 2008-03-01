@@ -1,0 +1,12 @@
+Index: cinelerra-cvs/quicktime/qth264.c
+===================================================================
+--- cinelerra-cvs.orig/quicktime/qth264.c
++++ cinelerra-cvs/quicktime/qth264.c
+@@ -506,6 +506,7 @@ static quicktime_h264_codec_t* init_comm
+ 
+ 	codec = (quicktime_h264_codec_t*)codec_base->priv;
+ 	x264_param_default(&codec->param);
++	codec->param.rc.i_rc_method = X264_RC_CQP;
+ 
+ 
+ 	return codec;
