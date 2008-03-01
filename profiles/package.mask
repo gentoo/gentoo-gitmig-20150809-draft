@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8331 2008/02/29 16:48:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8332 2008/03/01 14:39:33 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -77,20 +77,6 @@ x11-libs/lesstif
 # Timo Gurr <tgurr@gentoo.org> (22 Feb 2008)
 # Mask KDE4 versions of ktorrent as long as KDE4 is masked.
 >=net-p2p/ktorrent-3.0.0
-
-# Diego Pettenò <flameeyes@gentoo.org> (21 Feb 2008)
-# New pambase framework for PAM configuration. See Tracker bug #210767.
-sys-auth/pambase
-=sys-libs/pam-0.99.9.0-r1
-=sys-apps/shadow-4.1.0-r1
-=sys-freebsd/freebsd-pam-modules-6.2-r1
-=sys-freessd/freebsd-ubin-6.2-r2
-=net-misc/openssh-4.7_p1-r20
-=net-misc/netkit-rsh-0.17-r9
-=net-misc/dropbear-0.50-r1
-=app-admin/conserver-8.1.16-r1
-=x11-misc/wdm-1.28-r2
-=x11-apps/xdm-1.1.6-r1
 
 # Mike Frysinger <vapier@gentoo.org> (20 Feb 2008)
 # Use a generic package like dev-util/devel-chroots. #193566
