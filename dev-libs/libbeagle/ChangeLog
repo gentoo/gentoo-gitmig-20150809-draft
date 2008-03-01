@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libbeagle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/ChangeLog,v 1.1 2008/02/28 18:32:35 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/ChangeLog,v 1.2 2008/03/01 12:30:55 cedk Exp $
+
+  01 Mar 2008; Cédric Krier <cedk@gentoo.org> libbeagle-0.3.0.ebuild:
+  Add blocker dependency
 
 *libbeagle-0.3.0 (28 Feb 2008)
 
