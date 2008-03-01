@@ -12,7 +12,7 @@
  Icon=celestia.png
  MimeType=application/x-celestia-script
  Type=Application
-+Categories=Science;Astronomy;Qt
++Categories=Education;Science;Astronomy;Qt
 +GenericName=Space Simulator
 --- src/celestia/gtk/data/celestia.desktop.orig	2008-02-27 15:19:58.000000000 +0000
 +++ src/celestia/gtk/data/celestia.desktop	2008-02-27 15:44:26.000000000 +0000
@@ -36,7 +36,7 @@
 +Icon=celestia.png
 +MimeType=application/x-celestia-script
 +Type=Application
-+Categories=Science;Astronomy;GTK
++Categories=Education;Science;Astronomy;GTK
 +GenericName=Space Simulator
 --- celestia.desktop 	1970-01-01 01:00:00.000000000 +0100
 +++ celestia.desktop	2008-02-27 15:22:31.000000000 +0000
@@ -48,7 +48,7 @@
 +GenericName=Space Simulator
 +Comment=Explore the Universe in this detailed space simulation
 +Type=Application
-+Categories=Science;Astronomy
++Categories=Education;Science;Astronomy
 +Exec=celestia %f
 +Terminal=false
 +Icon=celestia.png
