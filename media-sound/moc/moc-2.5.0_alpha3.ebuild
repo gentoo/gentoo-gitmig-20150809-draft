@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha2.ebuild,v 1.10 2008/03/01 10:21:00 drac Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3.ebuild,v 1.1 2008/03/01 10:21:00 drac Exp $
 
 MY_P=${P/_/-}
 
@@ -12,12 +10,12 @@ SRC_URI="ftp://ftp.daper.net/pub/soft/${PN}/unstable/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa jack mad musepack vorbis flac wavpack sndfile modplug timidity sid ffmpeg speex libsamplerate curl debug"
 
+# USE aac for faad2 is missing because it doesn't work with faad2-2.6.1
 RDEPEND="media-libs/libao
-	sys-libs/ncurses
-	alsa? ( >=media-libs/alsa-lib-0.9 )
+	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	mad? ( media-libs/libmad sys-libs/zlib media-libs/libid3tag )
 	musepack? ( media-libs/libmpcdec >=media-libs/taglib-1.3 )
@@ -36,14 +34,9 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-endianess.patch
-}
-
 src_compile() {
 	econf --without-rcc \
+		--without-aac \
 		$(use_with jack) \
 		$(use_with mad mp3) \
 		$(use_with musepack) \
