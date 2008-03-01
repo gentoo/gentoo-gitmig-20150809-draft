@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pypgsql
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.14 2007/02/22 00:42:31 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.15 2008/03/01 16:29:20 dev-zero Exp $
+
+*pypgsql-2.5.1 (01 Mar 2008)
+
+  01 Mar 2008; Tiziano Müller <dev-zero@gentoo.org> -pypgsql-2.3.ebuild,
+  -pypgsql-2.5.ebuild, +pypgsql-2.5.1.ebuild:
+  Version bump. Dropped old versions.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
