@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.7 2008/02/21 10:47:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.8 2008/03/01 11:39:48 drizzt Exp $
+
+*openjpeg-1.3 (01 Mar 2008)
+
+  01 Mar 2008; Timothy Redaelli <drizzt@gentoo.org>
+  +files/openjpeg-1.3-codec-Makefile.patch, +openjpeg-1.3.ebuild:
+  Version bump and install image_to_j2k and j2k_to_image tools
+  Thanks to Alexander Grahn wrt bug #211704
 
   21 Feb 2008; Raúl Porcel <armin76@gentoo.org> openjpeg-1.2.ebuild:
   alpha/sparc stable
