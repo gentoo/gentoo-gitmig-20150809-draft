@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/nxml-gentoo-schemas-20080301.ebuild,v 1.1 2008/03/01 00:22:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/nxml-gentoo-schemas-20080301.ebuild,v 1.2 2008/03/01 14:13:54 ulm Exp $
 
 inherit elisp
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=app-emacs/nxml-mode-20041004-r3"
+RDEPEND="|| ( >=app-emacs/nxml-mode-20041004-r3 >=virtual/emacs-23 )"
 
 SITEFILE=60${PN}-gentoo.el
 
@@ -24,4 +24,14 @@ src_install() {
 	doins schemas.xml *.rnc || die "install failed"
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 	dodoc DONATING
+}
+
+pkg_postinst () {
+	elisp-site-regen
+
+	if [ $(emacs -batch -q --eval "(princ (fboundp 'nxml-mode))") = nil ]; then
+		ewarn "This package needs nxml-mode. You should either install"
+		ewarn "app-emacs/nxml-mode, or use \"eselect emacs\" to select"
+		ewarn "an Emacs version >= 23."
+	fi
 }

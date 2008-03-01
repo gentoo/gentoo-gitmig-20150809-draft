@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/nxml-gentoo-schemas
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.13 2008/03/01 01:03:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.14 2008/03/01 14:13:54 ulm Exp $
+
+  01 Mar 2008; Ulrich Mueller <ulm@gentoo.org>
+  nxml-gentoo-schemas-20080301.ebuild:
+  Allow for emacs-23 providing nxml-mode, and add a message to pkg_postinst.
 
   01 Mar 2008; Ulrich Mueller <ulm@gentoo.org>
   files/60nxml-gentoo-schemas-gentoo.el:
