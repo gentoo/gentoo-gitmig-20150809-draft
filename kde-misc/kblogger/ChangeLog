@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kblogger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.12 2008/02/18 22:34:46 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.13 2008/03/01 14:39:10 ingmar Exp $
+
+*kblogger-0.7_beta3 (01 Mar 2008)
+
+  01 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +kblogger-0.7_beta3.ebuild:
+  Added kblogger-0.7_beta3.ebuild.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kblogger-0.6.5.ebuild,
   kblogger-0.7_beta2.ebuild:
