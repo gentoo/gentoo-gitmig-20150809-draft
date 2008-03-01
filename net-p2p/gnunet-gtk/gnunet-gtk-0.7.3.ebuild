@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/gnunet-gtk-0.7.3.ebuild,v 1.2 2008/02/19 02:58:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/gnunet-gtk-0.7.3.ebuild,v 1.3 2008/03/01 19:59:00 armin76 Exp $
 
 DESCRIPTION="Graphical front end for GNUnet."
 HOMEPAGE="http://gnunet.org/"
@@ -17,9 +17,9 @@ DEPEND=">=x11-libs/gtk+-2.6.0
 
 src_compile() {
 	econf --with-gnunet=/usr || die "econf failed"
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" -j1 install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 }
