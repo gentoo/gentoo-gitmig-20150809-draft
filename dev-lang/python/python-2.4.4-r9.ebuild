@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r9.ebuild,v 1.1 2008/02/16 16:27:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4-r9.ebuild,v 1.2 2008/03/01 13:38:51 dev-zero Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -225,6 +225,9 @@ src_install() {
 		mkdir -p "${D}"/usr/share/doc/${P}/examples
 		cp -r "${S}"/Tools "${D}"/usr/share/doc/${P}/examples
 	fi
+
+	newinitd "${FILESDIR}/pydoc.init" pydoc
+	newconfd "${FILESDIR}/pydoc.conf" pydoc
 }
 
 pkg_postrm() {
