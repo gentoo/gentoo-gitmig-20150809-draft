@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/ocsigen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ChangeLog,v 1.16 2008/01/18 09:01:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ChangeLog,v 1.17 2008/03/01 20:49:52 aballier Exp $
+
+  01 Mar 2008; Alexis Ballier <aballier@gentoo.org>
+  -files/ocsigen-0.99.3-lwt-gentoo.patch, -ocsigen-0.99.4.ebuild:
+  remove old
 
 *ocsigen-0.99.5 (18 Jan 2008)
 
