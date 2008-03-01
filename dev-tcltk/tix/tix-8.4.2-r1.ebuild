@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.4.2-r1.ebuild,v 1.1 2007/12/06 14:47:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.4.2-r1.ebuild,v 1.2 2008/03/01 15:09:04 fmccor Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tix/${MY_P}-src.tar.gz"
 IUSE=""
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 
 RESTRICT="test"
 
