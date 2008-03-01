@@ -1,6 +1,16 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.158 2008/02/26 21:12:16 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.159 2008/03/01 17:34:41 bangert Exp $
+
+*lighttpd-1.4.18-r2 (01 Mar 2008)
+
+  01 Mar 2008; Thilo Bangert <bangert@gentoo.org>
+  +files/1.4.18-r2/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  +files/1.4.18-r2/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  +files/1.4.18-r2/06_all_lighttpd-1.4.18-mod_cgi_source_disclosure-changese
+  t-211956.diff, +files/1.4.18-r2/05_all_lighttpd-fix-DoS.diff,
+  +lighttpd-1.4.18-r2.ebuild:
+  version bump - fix source disclosure - bug #211956
 
   26 Feb 2008; <welp@gentoo.org> lighttpd-1.4.18-r1.ebuild:
   Stable on amd64; bug 211230
