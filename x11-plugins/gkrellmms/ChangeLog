@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/gkrellmms
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.53 2007/02/05 15:54:39 gustavoz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.54 2008/03/01 23:09:57 coldwind Exp $
+
+  01 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  -files/gkrellmms-2.1.22-audacious.patch, gkrellmms-2.1.22-r1.ebuild:
+  audacious patch updated and eerror added to check if audacious is built with
+  dbus support, fixes bugs #199620 (thanks to Sascha Hlusiak <bugs at
+  saschahlusiak dot de>) and #212016 (thanks to Federico Moro <zayer at frikis
+  dot org>).
 
   05 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gkrellmms-2.1.22-r1.ebuild:
