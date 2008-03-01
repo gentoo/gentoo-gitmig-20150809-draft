@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/erc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.34 2008/01/27 10:18:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.35 2008/03/01 13:17:54 opfer Exp $
+
+  01 Mar 2008; Christian Faulhammer <opfer@gentoo.org> erc-5.3.ebuild:
+  stable x86/amd64, bug 211923
 
 *erc-5.3 (27 Jan 2008)
 
