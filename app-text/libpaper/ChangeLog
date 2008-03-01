@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.37 2008/02/21 10:39:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.38 2008/03/01 14:10:32 angelos Exp $
+
+  01 Mar 2008; Christoph Mende <angelos@gentoo.org> libpaper-1.1.23.ebuild:
+  Stable on amd64, bug #209048
 
   21 Feb 2008; Raúl Porcel <armin76@gentoo.org> libpaper-1.1.23.ebuild:
   alpha/ia64 stable wrt #209048
