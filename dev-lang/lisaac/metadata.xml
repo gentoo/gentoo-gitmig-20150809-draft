@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>kernelsensei@gentoo.org</email>
+		<name>Boris Fersing</name>
+		<description>Boris is the maintainer-by-proxy for this package.
+			Bug-wranglers: please be sure to cc him on every bug report about it.
+		</description>
+	</maintainer>
+	<maintainer>
+		<email>philantrop@gentoo.org</email>
+		<name>Wulf C. Krueger</name>
+		<description>Just proxy-maintaining for Boris.</description>
+	</maintainer>
+</pkgmetadata>
