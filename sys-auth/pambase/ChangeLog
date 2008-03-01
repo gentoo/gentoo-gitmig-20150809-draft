@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.8 2008/02/24 14:45:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.9 2008/03/01 14:02:21 flameeyes Exp $
+
+*pambase-20080301 (01 Mar 2008)
+
+  01 Mar 2008; Diego Pettenò <flameeyes@gentoo.org>
+  -pambase-20080224.ebuild, +pambase-20080301.ebuild:
+  Version bump, should fix su(1) problems under FreeBSD. See bug #211895.
 
 *pambase-20080224 (24 Feb 2008)
 
