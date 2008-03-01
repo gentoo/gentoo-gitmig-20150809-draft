@@ -1,9 +1,8 @@
 
 ;;; nxml-gentoo-schemas site-lisp configuration
 
-;; This must come after the nxml-mode site initialisation,
-;; because rng-schema-locating-files-default is set there.
-;; "eval-after-load" so that it works with builtin nxml-mode in Emacs 23.
+;; This must be executed after rng-schema-locating-files
+;; is set in rng-loc (which is part of nxml-mode).
 (eval-after-load "rng-loc"
-  '(add-to-list 'rng-schema-locating-files-default
+  '(add-to-list 'rng-schema-locating-files
 		"@SITEETC@/schemas.xml"))
