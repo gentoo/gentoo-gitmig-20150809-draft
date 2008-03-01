@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/heap-buddy/heap-buddy-0.1.ebuild,v 1.3 2006/03/19 15:50:25 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/heap-buddy/heap-buddy-0.1.ebuild,v 1.4 2008/03/01 23:20:01 compnerd Exp $
 
 inherit mono
 
@@ -15,9 +15,10 @@ IUSE=""
 
 RDEPEND=">=dev-lang/mono-1.1.10
 	>=dev-libs/glib-2.0"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.20"
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS NEWS README
 }

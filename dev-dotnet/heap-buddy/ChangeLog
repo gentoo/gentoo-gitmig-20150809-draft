@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/heap-buddy
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/heap-buddy/ChangeLog,v 1.5 2007/02/21 23:08:54 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/heap-buddy/ChangeLog,v 1.6 2008/03/01 23:20:01 compnerd Exp $
+
+  01 Mar 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  heap-buddy-0.1.ebuild, heap-buddy-0.2.ebuild:
+  Fix quoting and add dep on pkgconfig (bug #206099)
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
