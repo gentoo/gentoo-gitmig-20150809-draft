@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/cadaver
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.22 2008/02/03 19:04:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.23 2008/03/01 08:28:47 graaff Exp $
+
+*cadaver-0.22.5-r1 (01 Mar 2008)
+
+  01 Mar 2008; Hans de Graaff <graaff@gentoo.org> +cadaver-0.22.5-r1.ebuild:
+  Use built_with_use to ensure that proper SSL support is available if requested
+  instead of solving this with warning that is easily overlooked. Thanks to
+  Opfer for the suggestion.
 
   03 Feb 2008; Brent Baude <ranger@gentoo.org> cadaver-0.22.5.ebuild:
   Marking cadaver-0.22.5 ppc64 for bug 208697
