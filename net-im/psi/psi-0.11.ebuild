@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11.ebuild,v 1.2 2008/02/29 15:09:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11.ebuild,v 1.3 2008/03/01 13:49:31 welp Exp $
 
 inherit eutils qt4 multilib
 
@@ -12,6 +12,7 @@ IUSE="crypt doc kernel_linux spell ssl xscreensaver"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+RESTRICT="test"
 
 COMMON_DEPEND="$(qt4_min_version 4.2.3)
 	=app-crypt/qca-2*

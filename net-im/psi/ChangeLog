@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.127 2008/02/29 15:09:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.128 2008/03/01 13:49:31 welp Exp $
+
+  01 Mar 2008; <welp@gentoo.org> psi-0.11.ebuild:
+  Restrict tests
 
   29 Feb 2008; Jeroen Roovers <jer@gentoo.org> psi-0.11.ebuild:
   Readded dropped keywords (bug #211667).
