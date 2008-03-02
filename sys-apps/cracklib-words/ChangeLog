@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/cracklib-words
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cracklib-words/ChangeLog,v 1.6 2008/03/01 20:50:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cracklib-words/ChangeLog,v 1.7 2008/03/02 12:45:10 pylon Exp $
+
+  02 Mar 2008; Lars Weiler <pylon@gentoo.org>
+  cracklib-words-20080203.ebuild:
+  stable ppc, bug 212017
 
 *cracklib-words-20080301 (01 Mar 2008)
 
