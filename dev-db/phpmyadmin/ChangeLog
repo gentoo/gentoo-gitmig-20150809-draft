@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.288 2008/02/19 13:35:21 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.289 2008/03/02 08:37:01 hollow Exp $
+
+*phpmyadmin-2.11.5 (02 Mar 2008)
+
+  02 Mar 2008; Benedikt Böhm <hollow@gentoo.org> +phpmyadmin-2.11.5.ebuild:
+  version bump wrt security #212000
 
 *phpmyadmin-2.11.4 (19 Feb 2008)
 
