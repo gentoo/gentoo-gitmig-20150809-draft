@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.4.ebuild,v 1.7 2008/02/21 14:20:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.4.ebuild,v 1.8 2008/03/02 00:13:06 nerdboy Exp $
 
 inherit autotools eutils flag-o-matic
 
 DESCRIPTION="Library for reading TIFF files with embedded tags for geographic (cartographic) information"
-HOMEPAGE="http://remotesensing.org/geotiff/geotiff.html"
+HOMEPAGE="http://www.remotesensing.org/geotiff/geotiff.html"
 SRC_URI="ftp://ftp.remotesensing.org/pub/geotiff/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -16,6 +16,7 @@ IUSE="doc python"
 RDEPEND=">=media-libs/tiff-3.7
 	media-libs/jpeg
 	sci-libs/proj"
+
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
