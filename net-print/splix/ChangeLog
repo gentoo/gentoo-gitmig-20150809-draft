@@ -1,6 +1,9 @@
 # ChangeLog for net-print/splix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.12 2008/02/16 08:01:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.13 2008/03/02 15:11:28 philantrop Exp $
+
+  02 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> splix-1.1.1.ebuild:
+  Marked stable on amd64 as per bug 198691.
 
   16 Feb 2008; Markus Meier <maekke@gentoo.org> splix-1.1.1.ebuild:
   x86 stable, bug #198691
