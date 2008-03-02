@@ -1,6 +1,11 @@
 # ChangeLog for dev-texlive/texlive-htmlxml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/ChangeLog,v 1.15 2008/02/10 15:15:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/ChangeLog,v 1.16 2008/03/02 11:45:37 aballier Exp $
+
+  02 Mar 2008; Alexis Ballier <aballier@gentoo.org>
+  texlive-htmlxml-2007-r2.ebuild:
+  no need to depend on jadetex nor tex4ht from here now that we depend on them
+  from the meta texlive ebuild
 
   10 Feb 2008; Alexis Ballier <aballier@gentoo.org>
   texlive-htmlxml-2007-r2.ebuild:
