@@ -1,0 +1,17 @@
+# ChangeLog for sys-auth/pam_blue
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_blue/ChangeLog,v 1.1 2008/03/02 15:09:21 hawking Exp $
+
+*pam_blue-0.9.0 (02 Mar 2008)
+
+  02 Mar 2008; Ali Polatel <hawking@gentoo.org> +metadata.xml,
+  +pam_blue-0.9.0.ebuild:
+  Imported from sunrise.
+
+  11 Jul 2007; Jakub Moc <jakub@gentoo.org> pam_blue-0.9.0.ebuild:
+  Use pam.eclass for libdir
+
+  25 May 2007; Jakub Moc <jakub@gentoo.org> +pam_blue-0.9.0.ebuild,
+  +metadata.xml:
+  New ebuild for KingTaco. Bug 180325.
+
