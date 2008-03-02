@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2006k.ebuild,v 1.1 2008/02/22 07:18:16 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2006k.ebuild,v 1.2 2008/03/02 20:07:55 robbat2 Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -31,7 +31,7 @@ src_unpack() {
 	unpack ${A}
 
 	# Tarball packed with bad file perms
-	chmod -R ug+w "${S}"
+	chmod -R u+rwX,go-w "${S}"
 
 	# lots of things need -fPIC, including various platforms, and this library
 	# generally should be built with it anyway.
