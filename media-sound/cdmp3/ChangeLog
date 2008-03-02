@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdmp3
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdmp3/ChangeLog,v 1.11 2007/02/22 00:52:01 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdmp3/ChangeLog,v 1.12 2008/03/02 12:15:55 aballier Exp $
+
+  02 Mar 2008; Alexis Ballier <aballier@gentoo.org> cdmp3-0.4.1.ebuild,
+  cdmp3-0.5.0.ebuild:
+  fix homepage, thanks to Leonid Evdokimov <gentoo@darkk.net.ru>, bug #212038
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

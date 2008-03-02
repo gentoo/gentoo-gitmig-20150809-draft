@@ -1,9 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdmp3/cdmp3-0.4.1.ebuild,v 1.8 2005/05/14 22:01:53 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdmp3/cdmp3-0.4.1.ebuild,v 1.9 2008/03/02 12:15:55 aballier Exp $
 
 DESCRIPTION="Conveniently rip audio CDs to MP3 or OGG files."
-HOMEPAGE="http://www.roland-riegel.de/cdmp3/index_en.html"
+HOMEPAGE="http://www.roland-riegel.de/cdmp3/index.html"
 SRC_URI="http://www.roland-riegel.de/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
