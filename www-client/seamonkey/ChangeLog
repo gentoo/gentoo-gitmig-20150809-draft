@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.122 2008/02/11 02:03:11 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.123 2008/03/02 10:27:01 pylon Exp $
+
+  02 Mar 2008; Lars Weiler <pylon@gentoo.org> ChangeLog:
+  stable ppc, security bug 208128
 
   11 Feb 2008; Olivier Crête <tester@gentoo.org> seamonkey-1.1.8.ebuild:
   Stable on amd64, security bug #208128
