@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.1.3-r1.ebuild,v 1.2 2008/03/01 21:12:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.1.3-r1.ebuild,v 1.3 2008/03/02 14:35:44 nixnut Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ppc ~ppc64 ~sparc ~x86"
 IUSE="daemon debug geoip gtk nls remote stats unicode"
 
 DEPEND="=x11-libs/wxGTK-2.8*
