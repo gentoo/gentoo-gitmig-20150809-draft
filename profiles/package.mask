@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8335 2008/03/02 02:03:49 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8336 2008/03/02 12:21:22 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -259,12 +259,6 @@ x11-plugins/gkrellm-bfm
 # the now obsolete 1.3 branch of Audacious.
 # Removal: March 2008
 media-plugins/audacious-plugins-ugly
-
-# Alexis Ballier <aballier@gentoo.org> (28 Jan 2008)
-# Provided by all our TeX distributions and thus
-# collides with them. Bug #153168
-# Masked for removal, due some day after 28 Feb 2008
-dev-tex/koma-script
 
 # Peter Volkov <pva@gentoo.org> (28 Jan 2008)
 # net-snmp and sussen are broken with it, bug #205280
