@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.159 2008/03/01 17:34:41 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.160 2008/03/02 20:47:34 corsair Exp $
+
+  02 Mar 2008; Markus Rothe <corsair@gentoo.org> lighttpd-1.4.18-r2.ebuild:
+  Stable on ppc64; bug #211956
 
 *lighttpd-1.4.18-r2 (01 Mar 2008)
 
