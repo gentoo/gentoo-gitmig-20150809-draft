@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.70.4.ebuild,v 1.2 2008/03/01 15:26:30 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.70.4.ebuild,v 1.3 2008/03/02 14:29:28 rbu Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://dvdisaster.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 SLOT="0"
 IUSE_LINGUAS="linguas_cs linguas_de linguas_it linguas_sv"
 IUSE="${IUSE_LINGUAS} gnome nls"
@@ -23,7 +23,6 @@ RDEPEND=">=x11-libs/gtk+-2.2
 S=${WORKDIR}/${P/.1/}
 
 src_compile() {
-	cd ${S}
 	local myconf
 	# use_with won't work
 	if use nls ; then
@@ -58,7 +57,7 @@ src_install() {
 		newins contrib/${PN}${res}.png ${PN}.png
 	done
 
-	sed -i -e "s:48::" ${S}/contrib/${PN}.desktop || die "sed failed"
+	sed -i -e "s:48::" "${S}"/contrib/${PN}.desktop || die "sed failed"
 	insinto /usr/share/applications
 	doins contrib/${PN}.desktop
 
@@ -68,7 +67,7 @@ src_install() {
 		use linguas_${lang} || rm -rf ${docdir}/${lang} ${mandir}/${lang} ${localedir}/${lang}
 		use linguas_${lang} || rm -f ${docdir}/CREDITS.${lang}
 	done
-	rm -f ${D}/usr/bin/*.sh
+	rm -f "${D}"/usr/bin/*.sh
 }
 
 pkg_postinst() {

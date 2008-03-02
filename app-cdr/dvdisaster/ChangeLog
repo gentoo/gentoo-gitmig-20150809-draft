@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/dvdisaster
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.7 2008/03/01 15:26:30 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.8 2008/03/02 14:29:28 rbu Exp $
+
+  02 Mar 2008; Robert Buchholz <rbu@gentoo.org> dvdisaster-0.70.4.ebuild:
+  stable amd64, bug 209875
+  Fix quoting
 
   01 Mar 2008; Lars Weiler <pylon@gentoo.org> dvdisaster-0.70.4.ebuild:
   stable ppc, bug #209875
