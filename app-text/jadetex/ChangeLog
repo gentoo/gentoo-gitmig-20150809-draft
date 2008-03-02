@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jadetex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.35 2008/03/02 18:40:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.36 2008/03/02 18:45:20 opfer Exp $
+
+  02 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
+  jadetex-3.13-r2.ebuild:
+  revert to ~x86
 
   02 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
   jadetex-3.13-r2.ebuild:
