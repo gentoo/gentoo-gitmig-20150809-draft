@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-1.0.ebuild,v 1.13 2006/10/27 15:36:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-1.0.ebuild,v 1.14 2008/03/02 15:54:52 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,11 +22,11 @@ src_unpack() {
 	unpack ${A}
 
 	# They have incorrect DESTDIR usage
-	sed -i '/\$(srcdir)\/tutorial/s/\$(prefix)/\$(docdir)/' ${S}/Makefile.am
-	sed -i '/\$(srcdir)\/tutorial/s/\$(prefix)/\$(docdir)/' ${S}/Makefile.in
+	sed -i '/\$(srcdir)\/tutorial/s/\$(prefix)/\$(docdir)/' "${S}"/Makefile.am
+	sed -i '/\$(srcdir)\/tutorial/s/\$(prefix)/\$(docdir)/' "${S}"/Makefile.in
 
 	# Stop them from unsetting our CFLAGS
-	sed -i '/^CFLAGS=$/d' ${S}/configure || die
+	sed -i '/^CFLAGS=$/d' "${S}"/configure || die
 }
 
 src_compile() {
@@ -52,10 +52,10 @@ src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
 
 	rm -rf \
-		${D}/etc/${PN}/silcd.conf \
-		${D}/usr/share/man \
-		${D}/usr/share/doc/${PF}/examples \
-		${D}/usr/share/silc-toolkit \
-		${D}/var/log/silc-toolkit \
-		${D}/etc/silc
+		"${D}"/etc/${PN}/silcd.conf \
+		"${D}"/usr/share/man \
+		"${D}"/usr/share/doc/${PF}/examples \
+		"${D}"/usr/share/silc-toolkit \
+		"${D}"/var/log/silc-toolkit \
+		"${D}"/etc/silc
 }
