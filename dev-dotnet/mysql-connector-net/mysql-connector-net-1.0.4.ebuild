@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/mysql-connector-net-1.0.4.ebuild,v 1.8 2007/06/25 23:58:22 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/mysql-connector-net-1.0.4.ebuild,v 1.9 2008/03/02 09:12:46 compnerd Exp $
 
 inherit eutils multilib mono
 
@@ -16,13 +16,14 @@ IUSE="doc"
 RDEPEND=">=dev-lang/mono-1.0
 		dev-dotnet/nant"
 DEPEND="${RDEPEND}
-		app-arch/unzip"
+		app-arch/unzip
+		>=dev-util/pkgconfig-0.20"
 
 src_unpack() {
-	mkdir ${WORKDIR}/${P}; cd ${WORKDIR}/${P};
-	unpack ${A}; cd ${S}
-	epatch ${FILESDIR}/mysql-connector-net-1.0.4-fixes.patch \
-	${FILESDIR}/mysql-connector-net-1.0.4-assembly.patch || die
+	mkdir "${WORKDIR}/${P}"; cd "${WORKDIR}/${P}";
+	unpack ${A}; cd "${S}"
+	epatch "${FILESDIR}/mysql-connector-net-1.0.4-fixes.patch" \
+	"${FILESDIR}/mysql-connector-net-1.0.4-assembly.patch" || die
 	sed -i 's:AssemblyKeyFile.*:AssemblyKeyFile(\@\"'${S}'\/\'${PN}'.key")]:' mysqlclient/AssemblyInfo.cs
 }
 
@@ -39,11 +40,11 @@ src_install() {
 	dodir /usr/$(get_libdir)/pkgconfig
 	sed -e "s:@VERSION@:${PV}:" \
 		-e "s:@LIBDIR@:$(get_libdir):" \
-		${FILESDIR}/${PN}.pc.in > ${D}/usr/$(get_libdir)/pkgconfig/${PN}.pc
+		"${FILESDIR}/${PN}.pc.in" > "${D}/usr/$(get_libdir)/pkgconfig/${PN}.pc"
 
 	# Install dll into the GAC
 	ebegin "Installing dlls into the GAC"
-	gacutil -i bin/mono-1.0/release/MySql.Data.dll -root ${D}/usr/$(get_libdir) \
+	gacutil -i bin/mono-1.0/release/MySql.Data.dll -root "${D}/usr/$(get_libdir)" \
 		-gacdir /usr/$(get_libdir) -package ${PN} > /dev/null
 	eend
 
@@ -51,7 +52,7 @@ src_install() {
 
 	if use doc; then
 		dodir /usr/share/doc/${PF}/samples
-		cp -pPR Samples/* ${D}/usr/share/doc/${PF}/samples/
+		cp -pPR Samples/* "${D}/usr/share/doc/${PF}/samples/"
 	fi
 }
 
