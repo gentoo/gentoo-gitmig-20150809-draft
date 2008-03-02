@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3401 2008/03/02 11:41:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3402 2008/03/02 21:22:03 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1497,6 +1497,7 @@ net-irc/ezbounce:boost - Compile against boost libraries
 net-irc/inspircd:openssl - Build OpenSSL module
 net-irc/ircd-hybrid:contrib - Build contrib modules (eg. cloaking)
 net-irc/ngircd:ident - Enables support for libident
+net-irc/quassel:server - Build the server part of Quassel.
 net-irc/rbot:aspell - Use aspell rather than ispell for the spell plugin.
 net-irc/rbot:dict - Enable the dict (RFC 2229) client plugin which deps on dev-ruby/ruby-dict.
 net-irc/rbot:shorturl - Enable the shortenurl plugin which deps on dev-ruby/shorturl.
