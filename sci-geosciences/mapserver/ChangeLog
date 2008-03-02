@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.10 2008/02/06 21:12:25 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.11 2008/03/02 08:26:44 hollow Exp $
+
+  02 Mar 2008; Benedikt Böhm <hollow@gentoo.org>
+  +files/mapserver_tcl.patch-r1, metadata.xml:
+  add missing tcl patch
 
   06 Feb 2008; Benedikt Böhm <hollow@gentoo.org> mapserver-5.0.0.ebuild:
   use APACHE_BIN instead of broken APACHECTL logic
