@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.3.4.ebuild,v 1.4 2007/12/08 20:36:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.3.6.ebuild,v 1.1 2008/03/02 12:24:55 swegener Exp $
 
 inherit flag-o-matic
 
