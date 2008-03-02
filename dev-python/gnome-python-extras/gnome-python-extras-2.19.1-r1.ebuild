@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.19.1-r1.ebuild,v 1.4 2008/02/10 22:08:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.19.1-r1.ebuild,v 1.5 2008/03/02 17:18:24 leio Exp $
 
 inherit eutils gnome2 python virtualx autotools
 
@@ -20,8 +20,14 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	xulrunner? ( net-libs/xulrunner )
 	!xulrunner? ( firefox? ( >=www-client/mozilla-firefox-1.0 ) )
 	!xulrunner? ( !firefox? ( seamonkey? ( >=www-client/seamonkey-1.0 ) ) )
-	=gnome-extra/libgda-1*
 	>=app-text/gtkspell-2"
+	# =gnome-extra/libgda-3*
+	# This used to be wrongly libgda-1*, but as configure is automagic,
+	# it just didn't build libgda bindings before as libgda-3 is p.masked.
+	# Leaving it automagic and dep lacking as there are no notable users of
+	# these bindings as testified by the lack of bug reports for this
+	# breakage. Should be fixed after libgda-3 gets unmasked or this ebuild
+	# is split into many per bug 108479
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
