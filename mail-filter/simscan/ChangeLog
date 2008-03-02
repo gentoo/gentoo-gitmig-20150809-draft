@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/simscan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/simscan/ChangeLog,v 1.6 2008/02/25 17:21:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/simscan/ChangeLog,v 1.7 2008/03/02 22:38:04 tupone Exp $
+
+*simscan-1.4.0-r1 (02 Mar 2008)
+
+  02 Mar 2008; Tupone Alfredo <tupone@gentoo.org> +simscan-1.4.0-r1.ebuild:
+  Adding USE flags for spamc-user, spam-auth-user and custom-smtp-reject
 
   25 Feb 2008; Jeroen Roovers <jer@gentoo.org> simscan-1.4.0.ebuild:
   Fix patch names (thanks to Tobias Schlitt on IRC).
