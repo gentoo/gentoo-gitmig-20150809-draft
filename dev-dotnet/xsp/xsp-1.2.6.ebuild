@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.2.6.ebuild,v 1.2 2007/12/15 02:28:56 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.2.6.ebuild,v 1.3 2008/03/02 07:51:55 compnerd Exp $
 
 inherit mono multilib autotools eutils
 
@@ -14,8 +14,10 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
-DEPEND=">=dev-lang/mono-${PV}
-		=dev-db/sqlite-3*"
+RDEPEND=">=dev-lang/mono-${PV}
+		  =dev-db/sqlite-3*"
+DEPEND="${RDEPEND}
+		>=dev-util/pkgconfig-0.20"
 
 pkg_preinst() {
 	enewgroup aspnet
@@ -27,9 +29,10 @@ pkg_preinst() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	sed -i -e "s:mkinstalldirs) \$(data:mkinstalldirs) \$(DESTDIR)\$(data:" \
-		-e "s:gif \$(data:gif \$(DESTDIR)\$(data:" \
-		"${S}"/test/2.0/treeview/Makefile.am
+		   -e "s:gif \$(data:gif \$(DESTDIR)\$(data:" \
+	"${S}"/test/2.0/treeview/Makefile.am
 	eautoreconf
 }
 
