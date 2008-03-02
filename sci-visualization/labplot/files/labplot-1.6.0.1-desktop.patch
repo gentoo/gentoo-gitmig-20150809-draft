@@ -5,7 +5,7 @@
  Comment[de]=Ein Programm zum Plotten von Daten und Funktionen
  Comment[pl]=Program do wykreślania funkcji oraz manipulacji na danych
 -Terminal=yes
-+Terminal=true
++Terminal=false
  Name=LabPlot
  MimeType=application/x-LabPlot-plot;
  #Protocols=file;ftp

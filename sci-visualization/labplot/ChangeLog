@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/labplot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.17 2008/02/10 12:00:44 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.18 2008/03/02 10:16:43 bicatali Exp $
+
+  02 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/labplot-1.6.0.1-desktop.patch:
+  Fixed desktop file to not open a terminal
 
   10 Feb 2008; Markus Dittrich <markusle@gentoo.org> Manifest:
   Fixed bad manifest and added new use flags to use.local.desc
