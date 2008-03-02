@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ltsp
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.22 2007/05/24 21:02:12 opfer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.23 2008/03/02 00:03:25 opfer Exp $
+
+  02 Mar 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  remove myself as maintainer
 
   24 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
   corrected ChangeLog, so it conforms to our standards
