@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3402 2008/03/02 21:22:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3403 2008/03/02 22:35:45 tupone Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -867,6 +867,7 @@ mail-filter/libmilter:poll - Use poll instead of select
 mail-filter/maildrop:authlib - Add courier-authlib suport
 mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
 mail-filter/simscan:attachment - Enable attachment scanning
+mail-filter/simscan:custom-smtp-reject - Return smtp reject message with virus name.
 mail-filter/simscan:dropmsg - Drop messages in case of virus/spam
 mail-filter/simscan:passthru - Passthru messages in case of virus/spam
 mail-filter/simscan:per-domain - Enable support for per-domain settings
@@ -874,6 +875,8 @@ mail-filter/simscan:quarantine - Enable quarantine support
 mail-filter/simscan:received - Add Received: line to mail headers
 mail-filter/simscan:regex - Enable regular expression matching
 mail-filter/simscan:spamassassin - Use spamassassin for spam checking
+mail-filter/simscan:spamc-user - Set user option to spamc.
+mail-filter/simscan:spam-auth-user - Turn on spam scanning for authenticated users
 mail-filter/spamassassin-fuzzyocr:amavis - Enable support for amavis
 mail-filter/spamassassin-fuzzyocr:gocr - Enable support for the gocr OCR engine
 mail-filter/spamassassin-fuzzyocr:logrotate - Install support files for logrotate
