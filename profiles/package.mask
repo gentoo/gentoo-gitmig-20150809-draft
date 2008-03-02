@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8334 2008/03/01 20:35:41 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8335 2008/03/02 02:03:49 zlin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -457,6 +457,7 @@ sys-apps/list
 =kde-base/khelpcenter-4*
 =kde-base/khotkeys-4*
 =kde-base/kig-4*
+=kde-base/kinfocenter-4*
 =kde-base/kioclient-4*
 =kde-base/kiriki-4*
 =kde-base/kiten-4*
