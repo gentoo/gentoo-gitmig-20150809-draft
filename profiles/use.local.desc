@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3400 2008/03/01 18:17:18 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3401 2008/03/02 11:41:49 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -287,11 +287,13 @@ app-text/texlive:extra - Adds support for extra TeXLive packages
 app-text/texlive:games - Adds typesetting support for games (chess, etc.)
 app-text/texlive:graphics - Adds support for several graphics packages (pgf,tikz,...)
 app-text/texlive:humanities - Adds LaTeX support for the humanities
+app-text/texlive:jadetex - Adds jadetex support (for processing tex files produced by the TeX backend of Jade)
 app-text/texlive:music - Adds support for music typesetting
 app-text/texlive:omega - Adds omega packages
 app-text/texlive:pstricks - Adds pstricks packages
 app-text/texlive:publishers - Adds support for publishers
 app-text/texlive:science - Adds typesetting support for natural and computer sciences
+app-text/texlive:tex4ht - Adds support for tex4ht (for converting (La)TeX to (X)HTML, XML and OO.org)
 app-text/texlive:xetex - Adds support for XeTeX macros
 app-text/webgen:builder - Enable programmatic HTML/XML generation
 app-text/webgen:exif - Enable EXIF information in image galleries
