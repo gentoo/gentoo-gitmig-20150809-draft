@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-mdcover
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.7 2008/01/27 13:39:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.8 2008/03/02 15:36:20 angelos Exp $
+
+  02 Mar 2008; Christoph Mende <angelos@gentoo.org>
+  gmpc-mdcover-0.15.5.0.ebuild:
+  Stable on amd64, bug #212077
 
 *gmpc-mdcover-0.15.5.0 (27 Jan 2008)
 
