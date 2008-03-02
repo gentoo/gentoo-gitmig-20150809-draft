@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/fvwm-crystal
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.49 2008/02/19 19:55:43 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.50 2008/03/02 11:53:42 pylon Exp $
+
+  02 Mar 2008; Lars Weiler <pylon@gentoo.org> fvwm-crystal-3.0.5-r1.ebuild:
+  stable ppc, bug 212025
 
 *fvwm-crystal-3.0.5-r1 (19 Feb 2008)
 
