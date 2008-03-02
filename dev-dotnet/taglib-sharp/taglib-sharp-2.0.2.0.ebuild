@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.2.0.ebuild,v 1.1 2008/01/03 22:08:48 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.2.0.ebuild,v 1.2 2008/03/02 08:04:03 compnerd Exp $
 
 EAPI=1
 
@@ -15,14 +15,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc gnome"
 
-RDEPEND="${DEPEND}"
-DEPEND="dev-lang/mono
-		gnome? ( >=dev-dotnet/gnome-sharp-2.0 )
-		doc? ( dev-util/monodoc )"
+RDEPEND="dev-lang/mono
+		 gnome? ( >=dev-dotnet/gnome-sharp-2.0 )
+		 doc? ( dev-util/monodoc )"
+DEPEND="${RDEPEND}
+		>=dev-util/pkgconfig-0.20"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
+
 	# Cleaning up docdir mess (bug #184149)
 	epatch "${FILESDIR}"/${PN}-fix-docdir.patch
 	# taglib-sharp configure script is a bit messed up

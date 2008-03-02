@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-1.1.73998-r1.ebuild,v 1.1 2007/07/04 21:04:21 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-1.1.73998-r1.ebuild,v 1.2 2008/03/02 08:04:03 compnerd Exp $
 
 inherit mono eutils
 
@@ -13,11 +13,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-RDEPEND=">=dev-lang/mono-1.1"
-DEPEND="${RDEPEND}
+RDEPEND=">=dev-lang/mono-1.1
 		doc? ( >=dev-util/monodoc-1.1.9
 				app-arch/unzip )
 		media-libs/taglib"
+DEPEND="${RDEPEND}
+		>=dev-util/pkgconfig-0.20"
 
 src_compile() {
 	# taglib-sharp configure script is a bit messed up

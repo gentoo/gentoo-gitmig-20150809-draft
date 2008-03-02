@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/taglib-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.4 2008/01/03 22:08:48 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.5 2008/03/02 08:04:03 compnerd Exp $
+
+  02 Mar 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  taglib-sharp-1.1.73998-r1.ebuild, taglib-sharp-1.9.75474.ebuild,
+  taglib-sharp-2.0.2.0.ebuild:
+  add pkgconfig dep (bug #206125)
 
 *taglib-sharp-2.0.2.0 (03 Jan 2008)
 
