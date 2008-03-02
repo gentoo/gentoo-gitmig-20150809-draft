@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.2-r1.ebuild,v 1.3 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.2-r1.ebuild,v 1.4 2008/03/02 00:06:18 opfer Exp $
 
 inherit eutils
 
@@ -154,7 +154,6 @@ src_install() {
 	echo "LTSP_DIR=/opt/ltsp-${PV}" > "${D}/etc/ltsp.conf"
 	dosbin ltspinfo
 	dosbin ltspadmin
-	dodoc COPYING
 	cd ..
 
 	# several other stuff
