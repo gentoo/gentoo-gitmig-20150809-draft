@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mg4j
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/ChangeLog,v 1.14 2007/12/26 10:46:35 maekke Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/ChangeLog,v 1.15 2008/03/02 14:36:10 philantrop Exp $
+
+  02 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> mg4j-0.9.1-r1.ebuild:
+  Marked stable on amd64 as per bug 196952.
 
   26 Dec 2007; Markus Meier <maekke@gentoo.org> mg4j-0.9.1-r1.ebuild:
   x86 stable, bug #196952

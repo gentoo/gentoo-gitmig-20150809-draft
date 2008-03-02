@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1-r1.ebuild,v 1.3 2007/12/26 10:46:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1-r1.ebuild,v 1.4 2008/03/02 14:36:10 philantrop Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -11,7 +11,7 @@ SRC_URI="http://mg4j.dsi.unimi.it/${P}-src.tar.gz"
 HOMEPAGE="http://mg4j.dsi.unimi.it"
 LICENSE="LGPL-2.1"
 SLOT="0.9"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 COMMON_DEP="=dev-java/fastutil-4.3*
