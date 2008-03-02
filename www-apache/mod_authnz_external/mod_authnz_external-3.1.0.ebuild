@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authnz_external/mod_authnz_external-3.1.0.ebuild,v 1.2 2008/01/13 12:07:06 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authnz_external/mod_authnz_external-3.1.0.ebuild,v 1.3 2008/03/02 14:10:50 rbu Exp $
 
 inherit eutils apache-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.unixpapa.com/software/${P}.tar.gz"
 
 DEPEND=""
 LICENSE="Apache-1.1"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 SLOT="2"
 
