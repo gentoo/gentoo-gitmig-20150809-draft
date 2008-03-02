@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.2.ebuild,v 1.1 2008/03/01 15:13:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.2.ebuild,v 1.2 2008/03/02 05:27:07 drac Exp $
 
 inherit eutils
 
@@ -25,6 +25,12 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-ldflags.patch
+}
 
 src_compile() {
 	econf --disable-dependency-tracking $(use_enable nls)
