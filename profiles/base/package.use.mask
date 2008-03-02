@@ -1,5 +1,10 @@
 # This file requires >=portage-2.1.1
 
+# 03 Mar 2008: Christian Faulhammer <opfer@gentoo.org>
+# This feature is experimental and should be used by people willing to
+# test it
+app-portage/gatt-svn libpaludis
+
 # These versions need a version of audacious
 # which has been removed from the tree.
 <app-admin/conky-1.4.9 audacious
