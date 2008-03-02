@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.32 2008/02/27 15:21:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.33 2008/03/02 13:02:04 pva Exp $
+
+*shorewall-lite-3.4.8 (02 Mar 2008)
+
+  02 Mar 2008; <pva@gentoo.org> +shorewall-lite-3.4.8.ebuild:
+  Version bump, bug #212067. Thank Vieri for report.
 
   27 Feb 2008; Raúl Porcel <armin76@gentoo.org>
   shorewall-lite-3.4.7.ebuild:
