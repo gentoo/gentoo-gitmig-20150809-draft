@@ -7,10 +7,16 @@
   </maintainer>
   <use>
     <flag name="X">
-      Also build the Qt 4 GUI client for quassel. If this USE flag is
-      disabled, only the core (server) binary is built. You might want
-      to disable this on the server, but you need it enabled on the
-      client.
+      Build the Qt 4 GUI client for quassel. If this USE flag is
+      disabled, the GUI is not built, and cannot be used. You might
+      want to disable this on the server, but you need it enabled on
+      the client.
+    </flag>
+    <flag name="server">
+      Build the server binary. If this USE flag is disabled, the
+      'core' server binary for quassel is not built, and cannot be
+      used. You need this enabled on the server, but you might want to
+      disable it on the client.
     </flag>
   </use>
 </pkgmetadata>
