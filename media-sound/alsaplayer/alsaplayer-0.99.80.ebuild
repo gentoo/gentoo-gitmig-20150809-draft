@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80.ebuild,v 1.1 2008/03/01 12:01:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80.ebuild,v 1.2 2008/03/02 07:14:13 mr_bones_ Exp $
 
 inherit autotools eutils
 
@@ -38,7 +38,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}_rc3-flags.patch
 	eautoreconf
 }
-
 
 src_compile() {
 	use xosd || export ac_cv_lib_xosd_xosd_create="no"
