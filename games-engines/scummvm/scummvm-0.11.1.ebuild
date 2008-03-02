@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.11.0.ebuild,v 1.1 2008/01/16 17:17:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.11.1.ebuild,v 1.1 2008/03/02 21:54:28 mr_bones_ Exp $
 
 inherit eutils games
 
