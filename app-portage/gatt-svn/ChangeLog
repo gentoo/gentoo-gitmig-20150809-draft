@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gatt-svn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/ChangeLog,v 1.22 2008/02/02 09:51:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/ChangeLog,v 1.23 2008/03/02 03:39:52 dirtyepic Exp $
+
+  02 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> gatt-svn-9999.ebuild:
+  Add ~mips.
 
   02 Feb 2008; Christian Faulhammer <opfer@gentoo.org> gatt-svn-9999.ebuild:
   correct HOMEPAGE
