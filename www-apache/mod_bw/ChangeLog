@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_bw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_bw/ChangeLog,v 1.6 2008/02/08 10:45:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_bw/ChangeLog,v 1.7 2008/03/02 14:56:34 rbu Exp $
+
+  02 Mar 2008; Robert Buchholz <rbu@gentoo.org> mod_bw-0.8.ebuild:
+  stable amd64, bug 208552
 
   08 Feb 2008; Tobias Scherbaum <dertobi123@gentoo.org> mod_bw-0.8.ebuild:
   ppc stable, bug #208552
