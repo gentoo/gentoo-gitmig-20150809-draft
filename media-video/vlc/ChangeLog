@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.301 2008/02/29 16:15:30 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.302 2008/03/02 14:45:33 armin76 Exp $
+
+  02 Mar 2008; Raúl Porcel <armin76@gentoo.org> vlc-0.8.6e.ebuild:
+  alpha stable wrt security #211575, thanks to Tobias Klausmann for testing
 
   29 Feb 2008; Ferris McCormick <fmccor@gentoo.org> vlc-0.8.6e.ebuild:
   Sparc stable, security Bug #211575.
