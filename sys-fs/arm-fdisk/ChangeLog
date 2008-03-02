@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/arm-fdisk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/ChangeLog,v 1.6 2008/02/20 19:10:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/ChangeLog,v 1.7 2008/03/02 13:26:59 philantrop Exp $
+
+  02 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  arm-fdisk-3.0.6.ebuild:
+  Marked stable on amd64 as per bug 191241.
 
   20 Feb 2008; Raúl Porcel <armin76@gentoo.org> arm-fdisk-3.0.6.ebuild:
   alpha/ia64/sparc stable
