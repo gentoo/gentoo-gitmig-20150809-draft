@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.289 2008/03/02 08:37:01 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.290 2008/03/02 14:48:35 rich0 Exp $
+
+  02 Mar 2008; Richard Freeman <rich0@gentoo.org> phpmyadmin-2.11.5.ebuild:
+  amd64 stable - 212000
 
 *phpmyadmin-2.11.5 (02 Mar 2008)
 
