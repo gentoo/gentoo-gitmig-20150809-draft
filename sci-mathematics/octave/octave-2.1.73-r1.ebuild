@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r1.ebuild,v 1.7 2007/12/25 01:46:56 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r1.ebuild,v 1.8 2008/03/02 13:46:24 markusle Exp $
 
 inherit flag-o-matic fortran autotools
 
@@ -91,6 +91,9 @@ src_compile() {
 }
 
 src_install() {
+	# needed to avoid possible sandbox violations by latex
+	export VARTEXFONTS="${T}/fonts"
+
 	make install DESTDIR="${D}" || die "make install failed"
 	if use doc; then
 		octave-install-doc || die "Octave doc install failed"
