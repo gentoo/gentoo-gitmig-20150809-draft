@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.16.1.ebuild,v 1.7 2007/07/02 02:31:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.16.1.ebuild,v 1.8 2008/03/02 19:34:27 compnerd Exp $
 
 inherit eutils mono flag-o-matic multilib autotools
 
@@ -31,25 +31,25 @@ RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix munging of Unix paths
-	epatch ${FILESDIR}/${PN}-1.1.13-pathfix.diff
+	epatch "${FILESDIR}/${PN}-1.1.13-pathfix.diff"
 
 	# Install all our .dlls under $(libdir), not $(prefix)/lib
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e 's:$(prefix)/lib:$(libdir):' \
 			-e 's:$(exec_prefix)/lib:$(libdir):' \
 			-e "s:'mono_libdir=\${exec_prefix}/lib':\"mono_libdir=\$libdir\":" \
-			${S}/{scripts,mono/metadata}/Makefile.am \
-			${S}/configure.in || die "sed failed"
+			"${S}"/{scripts,mono/metadata}/Makefile.am \
+			"${S}"/configure.in || die "sed failed"
 		sed -i -e 's:^libdir.*:libdir=@libdir@:' \
 			-e 's:${prefix}/lib/:${libdir}/:g' \
-			${S}/{scripts,}/*.pc.in || die "sed failed"
+			"${S}"/{scripts,}/*.pc.in || die "sed failed"
 	fi
 
 	# Remove the dummy ltconfig and leave to libtoolize handling it
-	rm -f ${S}/libgc/ltconfig
+	rm -f "${S}/libgc/ltconfig"
 
 	eautoreconf
 }
@@ -74,7 +74,7 @@ src_compile() {
 
 	# Force the use of the monolite mcs, to prevent us from trying to build
 	# with old buggy classlibs/mcs versions. See bug #118062
-	touch ${S}/mcs/build/deps/use-monolite
+	touch "${S}/mcs/build/deps/use-monolite"
 
 	econf ${myconf} || die
 	emake EXTERNAL_MCS=false EXTERNAL_MONO=false
@@ -89,7 +89,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog NEWS README
 	docinto docs

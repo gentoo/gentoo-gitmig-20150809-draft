@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.12 2007/09/10 19:10:11 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.13 2008/03/02 19:34:27 compnerd Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -37,25 +37,25 @@ function get-memory-total() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix the install path, install into $(libdir)
 	sed -i -e 's:$(prefix)/lib:$(libdir):'                                    \
 		-i -e 's:$(exec_prefix)/lib:$(libdir):'                               \
 		-i -e "s:'mono_libdir=\${exec_prefix}/lib':\"mono_libdir=\$libdir\":" \
-		${S}/{scripts,mono/metadata}/Makefile.am ${S}/configure.in            \
+		"${S}"/{scripts,mono/metadata}/Makefile.am "${S}/configure.in"        \
 	|| die "sed failed"
 
 	sed -i -e 's:^libdir.*:libdir=@libdir@:'                                  \
 		-i -e 's:${prefix}/lib/:${libdir}/:g'                                 \
-		${S}/{scripts,}/*.pc.in                                               \
+		"${S}"/{scripts,}/*.pc.in                                               \
 	|| die "sed failed"
 
-	epatch ${FILESDIR}/${P}-make-check.patch || die "patch failed"
-	epatch ${FILESDIR}/${P}-pic.patch || die "patch failed"
+	epatch "${FILESDIR}/${P}-make-check.patch" || die "patch failed"
+	epatch "${FILESDIR}/${P}-pic.patch" || die "patch failed"
 
 	# Remove dummy ltconfig and let libtool handle it
-	rm -f ${S}/libgc/ltconfig
+	rm -f "${S}/libgc/ltconfig"
 
 	einfo "Regenerating the build files, this will take some time..."
 	eautoreconf
@@ -82,7 +82,7 @@ src_compile() {
 	fi
 
 	# Force the use of monolite mcs to prevent issues with classlibs (bug #118062)
-	touch ${S}/mcs/build/deps/use-monolite
+	touch "${S}/mcs/build/deps/use-monolite"
 
 	econf ${myconf} || die "configure failed"
 	emake EXTERNAL_MCS=false EXTERNAL_MONO=false

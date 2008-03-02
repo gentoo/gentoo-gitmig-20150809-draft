@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.5.1-r1.ebuild,v 1.4 2007/11/06 22:52:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.5.1-r1.ebuild,v 1.5 2008/03/02 19:34:27 compnerd Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -37,26 +37,26 @@ function get-memory-total() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix the install path, install into $(libdir)
 	sed -i -e 's:$(prefix)/lib:$(libdir):'                                    \
 		-i -e 's:$(exec_prefix)/lib:$(libdir):'                               \
 		-i -e "s:'mono_libdir=\${exec_prefix}/lib':\"mono_libdir=\$libdir\":" \
-		${S}/{scripts,mono/metadata}/Makefile.am ${S}/configure.in            \
+		"${S}"/{scripts,mono/metadata}/Makefile.am "${S}/configure.in"        \
 	|| die "sed failed"
 
 	sed -i -e 's:^libdir.*:libdir=@libdir@:'                                  \
 		-i -e 's:${prefix}/lib/:${libdir}/:g'                                 \
-		${S}/{scripts,}/*.pc.in                                               \
+		"${S}"/{scripts,}/*.pc.in                                             \
 	|| die "sed failed"
 
-	epatch ${FILESDIR}/${PN}-1.2.4-pic.patch || die "patch failed"
+	epatch "${FILESDIR}/${PN}-1.2.4-pic.patch" || die "patch failed"
 
 	# Remove dummy ltconfig and let libtool handle it
-	rm -f ${S}/libgc/ltconfig
+	rm -f "${S}/libgc/ltconfig"
 
-	epatch ${FILESDIR}/mono-biginteger_overflow.diff
+	epatch "${FILESDIR}/mono-biginteger_overflow.diff"
 
 	einfo "Regenerating the build files, this will take some time..."
 	eautoreconf
@@ -83,7 +83,7 @@ src_compile() {
 	fi
 
 	# Force the use of monolite mcs to prevent issues with classlibs (bug #118062)
-	touch ${S}/mcs/build/deps/use-monolite
+	touch "${S}/mcs/build/deps/use-monolite"
 
 	econf ${myconf} || die "configure failed"
 	emake EXTERNAL_MCS=false EXTERNAL_MONO=false
