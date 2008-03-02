@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.05.ebuild,v 1.1 2008/03/02 14:45:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.05.ebuild,v 1.2 2008/03/02 14:47:14 drac Exp $
 
 inherit eutils flag-o-matic multilib pam
 
@@ -35,8 +35,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool
-	xinerama? ( x11-proto/xineramaproto )
-	!x11-misc/fireflies"
+	xinerama? ( x11-proto/xineramaproto )"
 
 src_unpack() {
 	unpack ${A}
