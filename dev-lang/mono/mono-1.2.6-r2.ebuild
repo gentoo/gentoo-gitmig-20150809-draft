@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.6-r2.ebuild,v 1.1 2008/03/02 06:57:23 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.6-r2.ebuild,v 1.2 2008/03/02 19:19:49 compnerd Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -62,7 +62,7 @@ src_unpack() {
 
 	# Fixes bug #210429, see
 	# https://bugzilla.novell.com/show_bug.cgi?id=347359
-	epatch "${FILESDIR}/${P}-bug-210429.patch"
+	epatch "${FILESDIR}/${P}-bug-347359.patch"
 
 	einfo "Regenerating the build files, this will take some time..."
 	eautoreconf

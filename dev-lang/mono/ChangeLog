@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.134 2008/03/02 06:57:23 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.135 2008/03/02 19:19:49 compnerd Exp $
+
+  02 Mar 2008; Saleem Abdulrasool <compnerd@gentoo.org>
+  mono-1.2.6-r2.ebuild:
+  Fix patch naming issue (bug #212083)
 
 *mono-1.2.6-r2 (02 Mar 2008)
 
