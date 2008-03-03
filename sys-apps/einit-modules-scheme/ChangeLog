@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/einit-modules-scheme
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit-modules-scheme/ChangeLog,v 1.1 2008/03/03 21:32:49 opfer Exp $
+
+*einit-modules-scheme-1.0.0.2 (03 Mar 2008)
+
+  03 Mar 2008; Christian Faulhammer <opfer@gentoo.org> +metadata.xml,
+  +einit-modules-scheme-1.0.0.2.ebuild:
+  initial commit
+
