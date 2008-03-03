@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.29 2007/12/20 09:53:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.30 2008/03/03 20:22:22 mr_bones_ Exp $
 
 multilib
 
@@ -45,11 +45,6 @@ video_cards_nsc
 emf
 
 asm
-
-# 2005/06/04 - Simon Stelling <blubb@gentoo.org>
-# dev-util/xdelta doesn't work as expected by this use flag, it can only use
-# xdelta-files made on a 64bit system
-kdexdeltas
 
 # WON'T BUILD - SECTION
 
