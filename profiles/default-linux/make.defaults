@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.28 2007/07/14 19:51:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.29 2008/03/03 23:30:12 wolf31o2 Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -10,11 +10,8 @@
 # has a conditional dependency on java (which it does,) then a JDK will be 
 # pulled in during *emerge system*!
 
-# build X in an expected way
-USE="bitmap-fonts truetype-fonts type1-fonts"
-
 # make sure toolchain has sane defaults <tooclhain@gentoo.org>
-USE="${USE} mudflap fortran openmp"
+USE="fortran mudflap openmp"
 
 # 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: Support direct rendering by default
