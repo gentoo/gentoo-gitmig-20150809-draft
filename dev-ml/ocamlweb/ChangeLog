@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/ocamlweb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.8 2008/03/03 22:51:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.9 2008/03/03 23:00:02 aballier Exp $
+
+  03 Mar 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/ocamlweb-1.37-tests.patch, ocamlweb-1.37.ebuild:
+  specify extension of the tex file so that latex doesnt try to compile the
+  ELF file during tests... inherit latex-package to have better TeX database
+  handling in pkg phases
 
   03 Mar 2008; Alexis Ballier <aballier@gentoo.org> ocamlweb-1.37.ebuild:
   switch to latex-base

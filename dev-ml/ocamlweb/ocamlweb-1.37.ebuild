@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ocamlweb-1.37.ebuild,v 1.3 2008/03/03 22:51:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ocamlweb-1.37.ebuild,v 1.4 2008/03/03 23:00:02 aballier Exp $
+
+inherit latex-package eutils
 
 DESCRIPTION="O'Caml literate programming tool"
 HOMEPAGE="http://www.lri.fr/~filliatr/ocamlweb/"
@@ -19,6 +21,14 @@ DEPEND=">=dev-lang/ocaml-3.09
 		app-text/ptex
 	)"
 
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-tests.patch"
+}
+
+
 src_compile() {
 	econf || die
 	emake || die
@@ -27,18 +37,4 @@ src_compile() {
 src_install() {
 	emake UPDATETEX="" prefix="${D}/usr" MANDIR="${D}/usr/share/man" install || die
 	dodoc README CHANGES
-}
-
-tex_regen() {
-	einfo "Regenerating TeX database..."
-	/usr/bin/mktexlsr /usr/share/texmf /var/spool/texmf > /dev/null
-	eend $?
-}
-
-pkg_postinst() {
-	tex_regen
-}
-
-pkg_postrm() {
-	tex_regen
 }
