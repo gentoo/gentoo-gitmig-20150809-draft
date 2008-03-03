@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.10 2008/03/01 14:41:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.11 2008/03/03 05:02:18 jer Exp $
+
+  03 Mar 2008; Jeroen Roovers <jer@gentoo.org> pambase-20080301.ebuild:
+  Marked ~hppa (bug #210770).
 
   01 Mar 2008; Diego Pettenò <flameeyes@gentoo.org>
   pambase-20080301.ebuild:
