@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.21.5.2.ebuild,v 1.1 2008/01/16 22:11:15 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.21.5.2.ebuild,v 1.2 2008/03/03 22:57:39 coldwind Exp $
 
 inherit gnome2 eutils versionator
 
 MAJOR_V="$(get_version_component_range 1-2)"
 
-DESCRIPTION="Empathy Telepathy client"
+DESCRIPTION="Telepathy client and library using GTK+"
 HOMEPAGE="http://live.gnome.org/Empathy"
 SRC_URI="http://ftp.gnome.org/pub/GNOME/sources/${PN}/${MAJOR_V}/${P}.tar.bz2"
 

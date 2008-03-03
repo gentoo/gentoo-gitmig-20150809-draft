@@ -1,19 +1,19 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.21.4.ebuild,v 1.1 2007/12/18 12:51:27 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.21.91.ebuild,v 1.1 2008/03/03 22:57:39 coldwind Exp $
 
 inherit gnome2 eutils versionator
 
 MAJOR_V="$(get_version_component_range 1-2)"
 
-DESCRIPTION="Empathy Telepathy client"
+DESCRIPTION="Telepathy client and library using GTK+"
 HOMEPAGE="http://live.gnome.org/Empathy"
 SRC_URI="http://ftp.gnome.org/pub/GNOME/sources/${PN}/${MAJOR_V}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="python spell"
+IUSE="python spell test"
 
 RDEPEND=">=dev-libs/dbus-glib-0.51
 	>=dev-libs/glib-2.14.0
@@ -22,8 +22,8 @@ RDEPEND=">=dev-libs/dbus-glib-0.51
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-panel-2.10
 	>=net-libs/libtelepathy-0.3.1
-	>=net-libs/telepathy-glib-0.7.0
-	>=net-im/telepathy-mission-control-4.37
+	>=net-libs/telepathy-glib-0.7.3
+	>=net-im/telepathy-mission-control-4.55
 	dev-libs/libxml2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-extra/evolution-data-server-1.2
@@ -35,7 +35,9 @@ RDEPEND=">=dev-libs/dbus-glib-0.51
 		>=dev-python/pygtk-2 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
-	>=dev-util/pkgconfig-0.16"
+	>=dev-util/pkgconfig-0.16
+	test? ( >=dev-libs/check-0.9.4 )
+	dev-libs/libxslt"
 
 DOCS="CONTRIBUTORS AUTHORS README"
 
@@ -43,7 +45,7 @@ pkg_setup() {
 	# NotHere is too broken to be included by default
 	G2CONF="$(use_enable spell aspell)
 		$(use_enable python)
-		--enable-voip=no
+		--enable-voip=yes
 		--enable-megaphone
 		--disable-nothere
 		--disable-gtk-doc"

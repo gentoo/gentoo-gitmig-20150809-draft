@@ -1,6 +1,14 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.15 2008/02/10 01:19:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.16 2008/03/03 22:57:39 coldwind Exp $
+
+*empathy-0.21.91 (03 Mar 2008)
+
+  03 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  -empathy-0.21.4.ebuild, empathy-0.21.5.2.ebuild, empathy-0.21.90.ebuild,
+  +empathy-0.21.91.ebuild:
+  Version bump, DESCRIPTION improved, enabled voip for testing (don't expect
+  great results).
 
 *empathy-0.21.90 (10 Feb 2008)
 
