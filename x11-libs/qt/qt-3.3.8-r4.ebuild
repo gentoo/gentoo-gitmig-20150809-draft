@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r4.ebuild,v 1.4 2008/02/23 15:42:39 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r4.ebuild,v 1.5 2008/03/03 20:17:51 ingmar Exp $
 
 # *** Please remember to update qt3.eclass when revbumping this ***
 
@@ -146,6 +146,10 @@ src_unpack() {
 
 	if use ppc-macos ; then
 		epatch "${FILESDIR}/${PN}-3.3.5-macos.patch"
+	fi
+
+	if use mips; then
+		epatch "${FILESDIR}"/${P}-mips.patch
 	fi
 
 	# known working flags wrt #77623
