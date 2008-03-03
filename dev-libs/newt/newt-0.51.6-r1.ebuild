@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6-r1.ebuild,v 1.6 2008/01/15 16:13:35 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6-r1.ebuild,v 1.7 2008/03/03 09:11:33 xmerlin Exp $
 
 inherit python toolchain-funcs eutils flag-o-matic
 
@@ -22,27 +22,27 @@ DEPEND="=sys-libs/slang-1*
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/newt-gpm-fix.diff || die
-	epatch ${FILESDIR}/newt-0.51.4-fix-wstrlen-for-non-utf8-strings.patch || die
-	epatch ${FILESDIR}/${PN}-${PV}-newttextbox-memoryleak.patch || die
+	epatch "${FILESDIR}"/newt-gpm-fix.diff || die
+	epatch "${FILESDIR}"/newt-0.51.4-fix-wstrlen-for-non-utf8-strings.patch || die
+	epatch "${FILESDIR}"/${PN}-${PV}-newttextbox-memoryleak.patch || die
 
 	# bug 73850
 	if use elibc_uclibc; then
-		sed -i -e 's:-lslang:-lslang -lncurses:g' ${S}/Makefile.in
+		sed -i -e 's:-lslang:-lslang -lncurses:g' "${S}"/Makefile.in
 	fi
 
 	# use the correct compiler...
 	sed -i \
 		-e 's:gcc:$(CC):g' \
 		-e "s:\(libdir =\).*:\1 \$(prefix)/$(get_libdir):g" \
-		${S}/Makefile.in || die "sed failed"
+		"${S}"/Makefile.in || die "sed failed"
 
 	# avoid make cleaning up some intermediate files
 	# as it would rebuild them during install :-(
-	echo >>${S}/Makefile.in
-	echo '$(LIBNEWT): $(LIBOBJS)' >>${S}/Makefile.in
+	echo >>"${S}"/Makefile.in
+	echo '$(LIBNEWT): $(LIBOBJS)' >>"${S}"/Makefile.in
 }
 
 src_compile() {
@@ -62,6 +62,6 @@ src_install () {
 	# if it fails, that means something in src_compile() didn't build properly
 	# not parallel safe
 	emake -j1 prefix="${D}/usr" PYTHONVERS="python${PYVER}" RPM_OPT_FLAGS="ERROR" install || die "make install failed"
-	dodoc CHANGES COPYING peanuts.py popcorn.py tutorial.sgml
+	dodoc CHANGES peanuts.py popcorn.py tutorial.sgml
 	dosym libnewt.so.${PV} /usr/$(get_libdir)/libnewt.so.0.51
 }

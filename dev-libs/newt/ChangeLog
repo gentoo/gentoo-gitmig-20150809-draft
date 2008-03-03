@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/newt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.40 2008/02/15 20:26:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.41 2008/03/03 09:11:33 xmerlin Exp $
+
+  03 Mar 2008; Christian Zoffoli <xmerlin@gentoo.org> newt-0.52.2.ebuild,
+  newt-0.52.7.ebuild:
+  Fixed bug #212135, thanks to Chris Slycord <cslycord@gmail.com>.
 
   15 Feb 2008; Samuli Suominen <drac@gentoo.org> newt-0.52.2.ebuild:
   Tested with slang-2.
