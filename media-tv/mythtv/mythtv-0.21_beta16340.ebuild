@@ -1,17 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_beta16171.ebuild,v 1.1 2008/02/20 20:33:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_beta16340.ebuild,v 1.1 2008/03/03 15:38:58 cardoe Exp $
 
 EAPI=1
-inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
+inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python
 
 DESCRIPTION="Homebrew PVR project"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
-
-IUSE="alsa altivec autostart dbox2 debug directv dvb dvd hdhomerun ieee1394 iptv ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
+IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via"
+IUSE="alsa altivec autostart dbox2 debug directv dvb dvd hdhomerun ieee1394 iptv \
+ivtv jack joystick lcd lirc mmx opengl opengl-video opengl-xvmc perl python \
+vorbis xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -21,33 +22,30 @@ RDEPEND=">=media-libs/freetype-2.0
 	x11-libs/libXv
 	x11-libs/libXrandr
 	x11-libs/libXxf86vm
-	xvmc? (
-		x11-libs/libXvMC
-		video_cards_nvidia? ( x11-drivers/nvidia-drivers )
-		video_cards_via? ( x11-drivers/xf86-video-via )
-		video_cards_i810? ( x11-drivers/xf86-video-i810 )
-	)
 	>=x11-libs/qt-3.3:3
 	virtual/mysql
 	virtual/opengl
 	virtual/glu
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
-	dvd? ( 	media-libs/libdvdnav )
-	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
+	autostart? ( net-dialup/mingetty
+				x11-wm/evilwm
+				x11-apps/xset )
 	directv? ( virtual/perl-Time-HiRes )
+	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
+	dvd? ( 	media-libs/libdvdnav )
+	ieee1394? (	>=sys-libs/libraw1394-1.2.0
+			>=sys-libs/libavc1394-0.5.0
+			>=media-libs/libiec61883-1.0.0 )
 	ivtv? ( media-tv/ivtv )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
 	perl? ( dev-perl/DBD-mysql )
-	vorbis? ( media-libs/libvorbis )
-	ieee1394? (	>=sys-libs/libraw1394-1.2.0
-			>=sys-libs/libavc1394-0.5.0
-			>=media-libs/libiec61883-1.0.0 )
-	autostart? ( net-dialup/mingetty
-				x11-wm/evilwm
-				x11-apps/xset )"
+	python? ( dev-python/mysql-python )
+	opengl-xvmc? ( >=x11-drivers/nvidia-drivers-100 )
+	xvmc? ( x11-libs/libXvMC
+		app-admin/eselect-xvmc )"
 
 DEPEND="${RDEPEND}
 	x11-proto/xineramaproto
@@ -62,31 +60,13 @@ MYTHTV_GROUPS="video,audio,tty,uucp"
 
 pkg_setup() {
 
-	local rip=0
 	if ! built_with_use -a =x11-libs/qt-3* mysql opengl ; then
 		echo
 		eerror "MythTV requires Qt to be built with mysql and opengl use flags enabled."
 		eerror "Please re-emerge =x11-libs/qt-3*, after having the use flags set."
 		echo
-		rip=1
+		die "Please fix the above issues, before continuing."
 	fi
-
-	if use xvmc && use video_cards_nvidia; then
-		echo
-		ewarn "You enabled the 'xvmc' USE flag, you must have a GeForce 4 or"
-		ewarn "greater to use this. Otherwise, you'll have crashes with MythTV"
-		echo
-	fi
-
-	if use xvmc && ! ( use video_cards_i810 || use video_cards_nvidia || use video_cards_via ); then
-		echo
-		eerror "You enabled the XvMC USE flag but did not configure VIDEO_CARDS with either"
-		eerror "an nVidia, Intel i810, or VIA video card."
-		echo
-		rip=1
-	fi
-
-	[[ $rip == 1 ]] && die "Please fix the above issues, before continuing."
 
 	echo
 	einfo "This ebuild now uses a heavily stripped down version of your CFLAGS"
@@ -94,6 +74,24 @@ pkg_setup() {
 	einfo "Only additional CFLAG issues that will be addressed are for binary"
 	einfo "package building."
 	echo
+
+	if use xvmc && use opengl-xvmc ; then
+		einfo "Enabling USE=opengl-xvmc results in an experimental OpenGL"
+		einfo "& XvMC renderer that only works on NVIDIA GeForce 4,5,6, & 7"
+		einfo "series of cards. It is typically slower then stock XVideo"
+		einfo "support that is the default in MythTV."
+		echo
+	fi
+
+	if use opengl-video ; then
+		einfo "Enabling USE=opengl-video results in an experimental OpenGL"
+		einfo "renderer that is typically slower then the default XVideo"
+		einfo "renderer. Enable at your own risk."
+		echo
+	fi
+
+	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS} || die "Problem adding mythtv user"
+	usermod -a -G ${MYTHTV_GROUPS} mythtv
 }
 
 src_unpack() {
@@ -102,8 +100,12 @@ src_unpack() {
 	# upstream wants the revision number in their version.cpp
 	# since the subversion.eclass strips out the .svn directory
 	# svnversion in MythTV's build doesn't work
-	sed -e "s:\`(svnversion \$\${SVNTREEDIR} 2>\/dev\/null) || echo Unknown\`:${SVNREV}:" \
+	sed -e "s:\`(svnversion \$\${SVNTREEDIR} 2>\/dev\/null) || echo Unknown\`:${MYTHTV_REV}:" \
 		-i "${S}"/version.pro || die "svnversion sed failed"
+
+	# Perl bits need to go into vender_perl and not site_perl
+	sed -e "s:pure_install:pure_install INSTALLDIRS=vendor:" \
+		-i "${S}"/bindings/perl/perl.pro
 }
 
 src_compile() {
@@ -111,27 +113,27 @@ src_compile() {
 		--mandir=/usr/share/man
 		--libdir-name=$(get_libdir)"
 	use alsa || myconf="${myconf} --disable-audio-alsa"
-	use jack || myconf="${myconf} --disable-audio-jack"
+	use altivec || myconf="${myconf} --disable-altivec"
 	use dbox2 || myconf="${myconf} --disable-dbox2"
 	use hdhomerun || myconf="${myconf} --disable-hdhomerun"
-	use altivec || myconf="${myconf} --disable-altivec"
 	use ivtv || myconf="${myconf} --disable-ivtv"
-	use perl || myconf="${myconf} --without-bindings=perl"
-	use xvmc && myconf="${myconf} --enable-xvmc"
-	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc-pro"
-	use xvmc && ! use video_cards_nvidia && myconf="${myconf} --disable-xvmc-opengl"
+	use jack || myconf="${myconf} --disable-audio-jack"
+	use opengl-video && myconf="${myconf} --enable-opengl-video"
+	use xvmc && ! use video_cards_via  ! use opengl-xvmc && myconf="${myconf} --enable-xvmc --xvmc-lib=XvMCW"
+	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc --enable-xvmc-pro"
+	use xvmc && use video_cards_nvidia && use opengl-xvmc && myconf="${myconf} --enable-xvmc --enable-xvmc-opengl"
 	myconf="${myconf}
-		--disable-audio-arts
-		$(use_enable lirc)
-		$(use_enable joystick joystick-menu)
 		$(use_enable dvb)
-		--dvb-path=/usr/include
-		$(use_enable opengl opengl-vsync)
 		$(use_enable ieee1394 firewire)
 		$(use_enable iptv)
+		$(use_enable joystick joystick-menu)
+		$(use_enable lirc)
+		--disable-audio-arts
+		--disable-directfb
+		--dvb-path=/usr/include
+		--enable-opengl-vsync
 		--enable-xrandr
 		--enable-xv
-		--disable-directfb
 		--enable-x11
 		--enable-gpl"
 
@@ -139,6 +141,16 @@ src_compile() {
 		myconf="${myconf} --enable-mmx"
 	else
 		myconf="${myconf} --disable-mmx"
+	fi
+
+	if use perl && use python; then
+		myconf="${myconf} --with-bindings=perl,python"
+	elif use perl; then
+		myconf="${myconf} --with-bindings=perl"
+	elif use python; then
+		myconf="${myconf} --with-bindings=python"
+	else
+		myconf="${myconf} --without-bindings=perl,python"
 	fi
 
 	if use debug; then
@@ -188,8 +200,6 @@ src_compile() {
 		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../sa3250ch sa3250ch.c \
 			${LDFLAGS} -lrom1394 -lavc1394 -lraw1394 || \
 			die "failed to compile sa3250ch"
-#		LDLIBS="-liec61883 -lraw1394" CC=$(tc-getCC) emake firewire_tester || \
-#			die	"failed to compile firewire_tester"
 	fi
 
 	cd "${S}"/contrib/channel_changers
@@ -200,9 +210,7 @@ src_compile() {
 src_install() {
 
 	einstall INSTALL_ROOT="${D}" || die "install failed"
-	for doc in AUTHORS FAQ UPGRADING ChangeLog README; do
-		test -e "${doc}" && dodoc ${doc}
-	done
+	dodoc AUTHORS FAQ UPGRADING  README
 
 	insinto /usr/share/mythtv/database
 	doins database/*
@@ -259,13 +267,13 @@ src_install() {
 }
 
 pkg_preinst() {
-	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS} || die "Problem adding mythtv user"
-	usermod -a -G ${MYTHTV_GROUPS} mythtv
-
 	export CONFIG_PROTECT="${CONFIG_PROTECT} ${ROOT}/home/mythtv/"
 }
 
 pkg_postinst() {
+	python_version
+	python_mod_optimize "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/MythTV"
+
 	echo
 	elog "Want mythfrontend to start automatically?"
 	elog "Set USE=autostart. Details can be found at:"
@@ -278,6 +286,11 @@ pkg_postinst() {
 	ewarn "Your recordings folder must be owned by the user 'mythtv' now"
 	ewarn "chown -R mythtv /path/to/store"
 
+	if use xvmc; then
+		echo
+		elog "Please set the proper XvMC provider with eselect xvmc"
+	fi
+
 	if use autostart; then
 		echo
 		elog "Please add the following to your /etc/inittab file at the end of"
@@ -287,12 +300,18 @@ pkg_postinst() {
 
 }
 
+pkg_postrm()
+{
+	python_version
+	python_mod_cleanup "/usr/$(get_libdir)/python${PYVER}/site-packages/MythTV"
+}
+
 pkg_info() {
-	/usr/bin/mythfrontend --version
+	"${ROOT}"/usr/bin/mythfrontend --version
 }
 
 pkg_config() {
 	echo "Creating mythtv MySQL user and mythconverg database if it does not"
 	echo "already exist. You will be prompted for your MySQL root password."
-	/usr/bin/mysql -u root -p < /usr/share/mythtv/database/mc.sql
+	"${ROOT}"/usr/bin/mysql -u root -p < "${ROOT}"/usr/share/mythtv/database/mc.sql
 }
