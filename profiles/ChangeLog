@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1172 2008/03/03 08:23:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1173 2008/03/03 17:27:35 betelgeuse Exp $
+
+  03 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
+  Add libffi use flag for dev-java/jamvm to unify the naming between gcc and
+  jamvm.
 
   03 Mar 2008; Vlastimil Babka <caster@gentoo.org> use.local.desc:
   Remove all no* flags for dev-java/ant-tasks, bug #177362.
