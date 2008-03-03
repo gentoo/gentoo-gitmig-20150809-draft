@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.8.0_rc4.ebuild,v 1.1 2008/03/03 13:44:25 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.8.0_rc4.ebuild,v 1.2 2008/03/03 13:56:20 dev-zero Exp $
 
-inherit distutils
+inherit distutils multilib eutils
 
 MY_P="${PN}-${PV/_}"
 
@@ -26,11 +26,19 @@ DEPEND="${DEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
+	if ! built_with_use media-libs/libsdl X ; then
+		eerror "Please re-emerge media-libs/libsdl with the X USE-flag set."
+		die "Missing USE-flag for media-libs/libsdl"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
 	# Search correct libdir for existing sdl libs
-	sed -i -e "s:/lib:/$(get_libdir):" ${S}/config_unix.py || die
+	sed -i \
+		-e "s:/lib:/$(get_libdir):" \
+		"${S}/config_unix.py" || die "sed failed"
 }
 
 src_compile() {
@@ -46,10 +54,9 @@ src_install() {
 
 	if use doc; then
 		dohtml -r docs/*
-		insinto /usr/share/doc/${PF}/examples
-		doins ${S}/examples/*
-		insinto /usr/share/doc/${PF}/examples/data
-		doins ${S}/examples/data/*
+
+		insinto /usr/share/doc/${PF}
+		doins -r "${S}/examples"
 	fi
 }
 
