@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/mytharchive-0.21_pre15448.ebuild,v 1.1 2008/01/15 15:55:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/mytharchive-0.21_beta16297.ebuild,v 1.1 2008/03/03 22:08:30 cardoe Exp $
 
 inherit mythtv-plugins subversion
 
@@ -28,9 +28,4 @@ pkg_setup()
 		eerror "You MUST build media-video/mjpegtools with the png USE flag"
 		die "You MUST build media-video/mjpegtools with the png USE flag"
 	fi
-}
-
-src_unpack() {
-	subversion_src_unpack
-	mythtv-plugins_src_unpack_patch || die "mythplugins patch failed"
 }
