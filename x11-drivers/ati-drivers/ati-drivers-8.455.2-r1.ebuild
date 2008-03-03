@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.455.2-r1.ebuild,v 1.2 2008/02/29 20:46:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.455.2-r1.ebuild,v 1.3 2008/03/03 20:53:35 je_fro Exp $
 
 IUSE="acpi debug"
 
@@ -31,7 +31,8 @@ RDEPEND="x11-base/xorg-server
 
 DEPEND="${RDEPEND}
 	x11-proto/xf86miscproto
-	x11-proto/xf86vidmodeproto"
+	x11-proto/xf86vidmodeproto
+	x11-proto/inputproto"
 
 EMULTILIB_PKG="true"
 
