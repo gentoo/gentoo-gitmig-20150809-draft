@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1173 2008/03/03 17:27:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1174 2008/03/03 20:49:00 graaff Exp $
+
+  03 Mar 2008; Hans de Graaff <graaff@gentoo.org> use.local.desc:
+  Add amarok use flag for gnome-extra/gnome-do-plugins to control
+  building of the amarok plugin.
 
   03 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Add libffi use flag for dev-java/jamvm to unify the naming between gcc and
