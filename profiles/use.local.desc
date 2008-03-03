@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3411 2008/03/03 21:36:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3412 2008/03/03 22:00:37 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -902,7 +902,6 @@ media-gfx/blender:verse - Adds verse clustering features to blender
 media-gfx/comix:rar - Pulls app-arch/unrar for rar file support
 media-gfx/digikam:nfs - Create sqlite db within ~/.kde, instead in the albums base directory.
 media-gfx/exiv2:xmp - Adds support for Adobe XMP
-media-gfx/gimp:gimpprint - Enable gimp-print printing support
 media-gfx/gimp:smp - Enable support for multiprocessors
 media-gfx/graphviz:pango - Enables the rendering of the graphs using pango & cairo (with antialiasing support)
 media-gfx/gthumb:iptc - Add support for IPTC metadata
