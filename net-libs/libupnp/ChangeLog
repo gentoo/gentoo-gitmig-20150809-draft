@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.11 2008/01/22 14:55:49 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.12 2008/03/03 03:27:36 jer Exp $
+
+  03 Mar 2008; Jeroen Roovers <jer@gentoo.org> libupnp-1.6.3.ebuild:
+  Marked ~hppa (bug #212002).
 
 *libupnp-1.6.3 (22 Jan 2008)
 
