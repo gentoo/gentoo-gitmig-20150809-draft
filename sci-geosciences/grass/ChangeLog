@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.45 2007/09/02 11:03:33 angelos Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.46 2008/03/03 16:37:26 fmccor Exp $
+
+  03 Mar 2008; Ferris McCormick <fmccor@gentoo.org> grass-6.2.1.ebuild:
+  Sparc stable, Bug #212033, I really wish this came with some demo files, but
+  it doesn't seem to.
 
   02 Sep 2007; Christoph Mende <angelos@gentoo.org> grass-6.2.0-r1.ebuild:
   Stable on amd64
