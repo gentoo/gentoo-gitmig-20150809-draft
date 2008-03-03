@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.133 2008/02/26 14:40:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.134 2008/03/03 18:50:54 pva Exp $
+
+*cacti-0.8.7b-r1 (03 Mar 2008)
+
+  03 Mar 2008; <pva@gentoo.org> -cacti-0.8.6j-r7.ebuild,
+  -cacti-0.8.7a-r2.ebuild, +cacti-0.8.7b-r1.ebuild:
+  Added official upstream patch. Cleaned out php4 stuff. Removed bundled-adodb
+  USE flag, thank Donnie Berkholz for kind review. Removed old and unused
+  ebuilds.
 
   26 Feb 2008; Raúl Porcel <armin76@gentoo.org> cacti-0.8.7b.ebuild:
   alpha/sparc stable wrt #210840
