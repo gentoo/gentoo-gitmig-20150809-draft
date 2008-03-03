@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.23 2008/03/02 03:46:16 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.24 2008/03/03 01:01:29 opfer Exp $
 
-inherit subversion
+inherit eutils subversion
 
 ESVN_REPO_URI="svn://80.108.115.144/gatt/trunk"
 ESVN_PROJECT="Gatt"
@@ -18,11 +18,12 @@ SRC_URI=""
 LICENSE="GPL-2 GPL-3 FDL-1.2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc"
+IUSE="doc libpaludis"
 
 RDEPEND=">=dev-libs/boost-1.33.1
 	>=dev-cpp/libthrowable-1.1.0
-	www-client/pybugz"
+	www-client/pybugz
+	libpaludis? ( >=sys-apps/paludis-0.26.0_alpha9 )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
@@ -34,10 +35,14 @@ pkg_setup() {
 	elog
 	elog "There are several files that explain usage of Gatt: README, TUTORIAL,"
 	elog "and gatt.info (best read in that order)"
+	if use libpaludis && ! built_with_use sys-apps/paludis portage; then
+		ewarn "You either have to emerge Paludis with USE=portage enabled or configure"
+		ewarn "it properly before using Gatt with it"
+	fi
 }
 
 src_compile() {
-	econf || die "econf failed"
+	econf $(use_enable libpaludis) || die "econf failed"
 	emake || die "emake failed"
 	use doc && doxygen
 }
