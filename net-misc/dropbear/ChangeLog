@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.56 2008/02/20 00:14:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.57 2008/03/03 16:20:18 jer Exp $
+
+  03 Mar 2008; Jeroen Roovers <jer@gentoo.org> dropbear-0.50-r1.ebuild:
+  Marked ~hppa (bug #210795).
 
 *dropbear-0.50-r1 (20 Feb 2008)
 

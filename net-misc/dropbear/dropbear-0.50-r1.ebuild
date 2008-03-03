@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.50-r1.ebuild,v 1.1 2008/02/20 00:14:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.50-r1.ebuild,v 1.2 2008/03/03 16:20:18 jer Exp $
 
 inherit eutils savedconfig pam
 
@@ -11,7 +11,7 @@ SRC_URI="http://matt.ucc.asn.au/dropbear/releases/${P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~hppa"
 IUSE="bsdpty minimal multicall pam static syslog zlib"
 
 DEPEND="zlib? ( sys-libs/zlib )
