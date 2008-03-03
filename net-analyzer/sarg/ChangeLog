@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/sarg
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.34 2007/02/20 00:28:25 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.35 2008/03/03 16:25:05 pva Exp $
+
+*sarg-2.2.4 (03 Mar 2008)
+
+  03 Mar 2008; <pva@gentoo.org> -files/sarg-2.1-datafile.patch,
+  -files/sarg-2.1-laslog.patch, -files/sarg-2.1-sort-options.patch,
+  +files/sarg-2.2.3.1-rewind.patch, -sarg-2.1-r1.ebuild, -sarg-2.2.1.ebuild,
+  sarg-2.2.2.ebuild, +sarg-2.2.4.ebuild:
+  Version bump, fixes security issue, bug #212208.
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
