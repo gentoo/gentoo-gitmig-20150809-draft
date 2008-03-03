@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r4.ebuild,v 1.5 2008/03/03 20:17:51 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r4.ebuild,v 1.6 2008/03/03 20:24:38 ingmar Exp $
 
 # *** Please remember to update qt3.eclass when revbumping this ***
 
@@ -142,10 +142,6 @@ src_unpack() {
 	if use immqt || use immqt-bc ; then
 		epatch ../${IMMQT_P}.diff
 		sh make-symlinks.sh || die "make symlinks failed"
-	fi
-
-	if use ppc-macos ; then
-		epatch "${FILESDIR}/${PN}-3.3.5-macos.patch"
 	fi
 
 	if use mips; then

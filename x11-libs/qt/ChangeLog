@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.516 2008/03/03 20:17:51 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.517 2008/03/03 20:24:38 ingmar Exp $
+
+  03 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> qt-3.3.8-r4.ebuild:
+  Drop ppc-macos patches, they're patiently awaiting you in prefix.
 
   03 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   +files/qt-3.3.8-mips.patch, qt-3.3.8-r4.ebuild:
