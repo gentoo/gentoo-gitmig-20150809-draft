@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-avahi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-avahi/ChangeLog,v 1.3 2008/03/02 15:33:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-avahi/ChangeLog,v 1.4 2008/03/03 00:42:29 cla Exp $
+
+  03 Mar 2008; <cla@gentoo.org> gmpc-avahi-0.15.5.0.ebuild:
+  Stable on x86 (bug #212077)
 
   02 Mar 2008; Christoph Mende <angelos@gentoo.org>
   gmpc-avahi-0.15.5.0.ebuild:

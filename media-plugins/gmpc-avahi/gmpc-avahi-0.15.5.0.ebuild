@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-avahi/gmpc-avahi-0.15.5.0.ebuild,v 1.3 2008/03/02 15:33:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-avahi/gmpc-avahi-0.15.5.0.ebuild,v 1.4 2008/03/03 00:42:29 cla Exp $
 
 DESCRIPTION="This plugin discovers avahi enabled mpd servers"
 HOMEPAGE="http://sarine.nl/gmpc-plugins"
@@ -8,7 +8,7 @@ SRC_URI="http://download.sarine.nl/gmpc-0.15.5/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=media-sound/gmpc-${PV}
