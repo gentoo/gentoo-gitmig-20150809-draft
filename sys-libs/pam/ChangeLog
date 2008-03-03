@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.196 2008/03/01 14:28:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.197 2008/03/03 05:01:52 jer Exp $
+
+  03 Mar 2008; Jeroen Roovers <jer@gentoo.org> pam-0.99.9.0-r1.ebuild:
+  Marked ~hppa (bug #210770).
 
 *pam-0.99.10.0 (01 Mar 2008)
 
