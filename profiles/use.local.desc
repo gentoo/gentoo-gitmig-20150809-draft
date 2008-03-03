@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3404 2008/03/02 23:55:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3405 2008/03/03 08:23:19 caster Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -364,25 +364,6 @@ dev-java/ant-tasks:jdepend - Enable Jdepend Ant tasks
 dev-java/ant-tasks:jmf - Enable JMF (Java Media Framework) Ant tasks
 dev-java/ant-tasks:jsch - Disable Jsch (ssh, scp and related) Ant tasks
 dev-java/ant-tasks:log4j - Enable Apache log4j Ant tasks
-dev-java/ant-tasks:noantlr - Disable ANTLR Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nobcel - Disable bcel Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nobeanutils - Disable beanutils Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nobsf - Disable bsf Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nobsh - Disable bsh Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nocommonslogging - Disable commons-logging Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nocommonsnet - Disable commons-net Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nojdepend - Disable Jdepend Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nojmf - Disable JMF (Java Media Framework) Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nojsch - Disable Jsch Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nojython - Disable Jython Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nolog4j - Disable Apache log4j Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nooro - Disable Oro Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:noregexp - Disable Apache Regexp Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:noresolver - Disable Apache Resolver Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:norhino - Disable Rhino Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:noswing - Disable Swing Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:noxalan - Disable Xalan Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:noxerces - Disable Xerces Ant task -- Warning: Enabling this could break some of the Java packages!!
 dev-java/ant-tasks:oro - Enable Apache Oro Ant tasks
 dev-java/ant-tasks:regexp - Enable Apache Regexp Ant tasks
 dev-java/ant-tasks:resolver - Enable Apache Resolver Ant tasks

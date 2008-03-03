@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1171 2008/03/03 03:35:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1172 2008/03/03 08:23:19 caster Exp $
+
+  03 Mar 2008; Vlastimil Babka <caster@gentoo.org> use.local.desc:
+  Remove all no* flags for dev-java/ant-tasks, bug #177362.
 
   02 Mar 2008; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
   USE=libpaludis for app-portage/gatt-svn
