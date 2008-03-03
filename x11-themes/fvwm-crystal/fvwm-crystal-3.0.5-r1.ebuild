@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.5-r1.ebuild,v 1.2 2008/03/02 11:53:42 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.5-r1.ebuild,v 1.3 2008/03/03 09:11:19 opfer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.gna.org/${PN}/${PV}/${P}.tar.gz
 	mirror://gentoo/${P}-envfix.patch.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~ppc64 ~sparc x86"
 IUSE=""
 RDEPEND=">=x11-wm/fvwm-2.5.13
 	media-gfx/imagemagick
