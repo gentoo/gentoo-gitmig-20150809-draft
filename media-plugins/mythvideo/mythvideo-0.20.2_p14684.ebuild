@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.20.2_p14684.ebuild,v 1.2 2008/01/07 20:08:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.20.2_p14684.ebuild,v 1.3 2008/03/03 20:05:52 cardoe Exp $
 
 inherit mythtv-plugins subversion
 
@@ -20,7 +20,7 @@ pkg_postinst() {
 	elog "MythVideo can use any media player to playback files, since"
 	elog "it's a setting in the setup menu."
 	elog
-	elog "MythTv also has an 'Internal' player you can use, though"
+	elog "MythTV also has an 'Internal' player you can use, though"
 	elog "it will not support as many formats.  If you want to use it,"
 	elog "set the player to 'Internal' (note spelling & caps)."
 }
