@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.79 2008/03/03 00:55:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.80 2008/03/03 08:16:45 caster Exp $
+
+  03 Mar 2008; Vlastimil Babka <caster@gentoo.org>
+  -ant-tasks-1.6.5-r4.ebuild:
+  Remove ant 1.6.5. Java packages already depend on 1.7.0.
 
   03 Mar 2008; William L. Thomson Jr. <wltjr@gentoo.org>
   -ant-tasks-1.7.0-r2.ebuild, -ant-tasks-1.7.0-r3.ebuild,
