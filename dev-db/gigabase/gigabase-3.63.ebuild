@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.59.ebuild,v 1.1 2007/08/31 09:49:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.63.ebuild,v 1.1 2008/03/03 19:28:32 pva Exp $
 
-inherit eutils libtool multilib
+inherit autotools eutils multilib
 
 DESCRIPTION="OO-DBMS with interfaces for C/C++/Java/PHP/Perl"
 HOMEPAGE="http://www.garret.ru/~knizhnik/gigabase.html"
@@ -13,7 +13,16 @@ KEYWORDS="~amd64 ~s390 ~x86"
 IUSE="doc"
 DEPEND=""
 
-S="${WORKDIR}"/gigabase
+S=${WORKDIR}/gigabase
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Fix testsuite. Should be fixed in next release.
+	sed -i -e 's:testperf.dbs:testidx2.dbs:' testidx2.cpp
+	eautoreconf
+}
 
 src_compile() {
 	mf="${S}/Makefile"
