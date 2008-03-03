@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3409 2008/03/03 18:20:32 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3410 2008/03/03 20:45:13 graaff Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -726,6 +726,7 @@ gnome-base/gnome-mount:nautilus - Enable the nautilus plugin
 gnome-base/nautilus:beagle - Enable support for beagle searching
 gnome-base/nautilus:tracker - Enable support for tracker searching
 gnome-extra/evolution-data-server:keyring - Enable gnome-keyring support for storing passwords
+gnome-extra/gnome-do-plugins:amarok - Build the plugin for Amarok
 gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 gnome-extra/libgda:xbase - Enable support for xbase databases (dBase, FoxPro, etc)
