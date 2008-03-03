@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.56 2008/02/29 17:58:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.57 2008/03/03 09:29:23 hkbst Exp $
+
+*drscheme-372 (03 Mar 2008)
+
+  03 Mar 2008; Marijn Schouten <hkBst@gentoo.org> +drscheme-372.ebuild:
+  bump, bug 212130
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> drscheme-360-r1.ebuild,
   drscheme-360-r2.ebuild, drscheme-360-r3.ebuild,
