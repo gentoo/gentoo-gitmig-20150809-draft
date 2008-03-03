@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/gnome-pilot-conduits
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.27 2008/02/03 02:20:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.28 2008/03/03 23:16:01 eva Exp $
+
+*gnome-pilot-conduits-2.0.16 (03 Mar 2008)
+
+  03 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-pilot-conduits-2.0.16.ebuild:
+  bump to 2.0.16
 
   03 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
   -files/gnome-pilot-conduits-2.0.10-invalid-linguas.patch,
