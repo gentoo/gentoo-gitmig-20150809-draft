@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.97 2008/02/27 16:56:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.98 2008/03/03 23:23:16 wolf31o2 Exp $
+
+*livecd-tools-1.0.40_pre1 (03 Mar 2008)
+
+  03 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  +livecd-tools-1.0.40_pre1.ebuild, -livecd-tools-1.0.40.ebuild:
+  I accidentally added the incorrect version to the tree. Reverting back to
+  1.0.40_pre1, which is what I was supposed to have added. This resolves bug
+  #211906.
 
   27 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   livecd-tools-1.0.40.ebuild:
