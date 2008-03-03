@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.301 2008/03/01 13:38:51 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.302 2008/03/03 03:06:52 jer Exp $
+
+  03 Mar 2008; Jeroen Roovers <jer@gentoo.org> python-2.4.4-r9.ebuild:
+  Stable for HPPA (bug #211281).
 
   01 Mar 2008; Tiziano Müller <dev-zero@gentoo.org> +files/pydoc.conf,
   +files/pydoc.init, python-2.4.4-r9.ebuild, python-2.5.1-r5.ebuild:
