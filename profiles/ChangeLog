@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1174 2008/03/03 20:49:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1175 2008/03/03 21:36:57 opfer Exp $
+
+  03 Mar 2008; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
+  add USE=relaxng for sys-apps/einit
 
   03 Mar 2008; Hans de Graaff <graaff@gentoo.org> use.local.desc:
   Add amarok use flag for gnome-extra/gnome-do-plugins to control
