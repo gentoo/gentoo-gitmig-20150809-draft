@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.98 2008/02/26 07:11:16 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.99 2008/03/03 13:27:49 hollow Exp $
+
+*mediawiki-1.11.2 (03 Mar 2008)
+
+  03 Mar 2008; Benedikt Böhm <hollow@gentoo.org> +mediawiki-1.11.2.ebuild:
+  version bump wrt security #212170
 
   26 Feb 2008; Gunnar Wrobel <wrobel@gentoo.org>
   -files/postinstall-1.5-en.txt, -mediawiki-1.8.5.ebuild,
