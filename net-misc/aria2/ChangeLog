@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.21 2008/03/01 10:19:18 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.22 2008/03/03 13:01:43 dev-zero Exp $
+
+  03 Mar 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/0.13.0-misc_non_async_bugs.patch, aria2-0.13.0.ebuild:
+  Upstream fixed the bugs without version bump.
 
 *aria2-0.13.0 (01 Mar 2008)
 
