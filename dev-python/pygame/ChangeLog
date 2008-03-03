@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygame
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.43 2007/07/07 19:14:21 lucass Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.44 2008/03/03 13:44:25 dev-zero Exp $
+
+*pygame-1.8.0_rc4 (03 Mar 2008)
+
+  03 Mar 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +pygame-1.8.0_rc4.ebuild:
+  Version bump (bug #212179).
 
   07 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> -pygame-1.6.2.ebuild:
   Dropped old version.
