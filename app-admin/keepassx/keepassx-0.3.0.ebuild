@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.3.0.ebuild,v 1.1 2008/03/04 10:29:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.3.0.ebuild,v 1.2 2008/03/04 10:31:33 opfer Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ pkg_setup() {
 
 src_compile() {
 	use debug || myconf="DEBUG=1"
-	/usr/bin/qmake PREFIX="${D}/usr" ${myconf} || die "qmake failed" 
+	/usr/bin/qmake PREFIX="${D}/usr" ${myconf} || die "qmake failed"
 	emake || die "emake failed"
 }
 
