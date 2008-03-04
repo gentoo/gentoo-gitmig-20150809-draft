@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.3.2.1.ebuild,v 1.1 2008/03/03 20:27:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.3.2.1.ebuild,v 1.2 2008/03/04 19:18:44 graaff Exp $
 
-inherit gnome2
+inherit gnome2 mono
 
 DESCRIPTION="GNOME Do allows you to search for and perform actions on items in your desktop environment"
 HOMEPAGE="http://do.davebsd.com/"
-SRC_URI="https://launchpad.net/gc/trunk/${PV}/+download/${P}.tar.gz"
+SRC_URI="https://launchpad.net/do/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
