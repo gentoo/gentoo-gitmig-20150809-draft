@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.60 2008/03/04 18:41:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.61 2008/03/04 18:44:01 hollow Exp $
 #
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -15,13 +15,14 @@
 # An ebuild sets this to `yes' if an automatic installation and/or upgrade is
 # not possible. The ebuild should overwrite pkg_postinst() and explain the
 # reason for this BEFORE calling webapp_pkg_postinst().
-[[ "${WEBAPP_NO_AUTO_INSTALL}" == "yes" ]] || IUSE="vhosts"
 
 # @ECLASS-VARIABLE: WEBAPP_OPTIONAL
 # @DESCRIPTION:
 # An ebuild sets this to `yes' to make webapp support optional, in which case
 # you also need to take care of USE-flags and dependencies.
+
 if [[ "${WEBAPP_OPTIONAL}" != "yes" ]]; then
+	[[ "${WEBAPP_NO_AUTO_INSTALL}" == "yes" ]] || IUSE="vhosts"
 	SLOT="${PVR}"
 	DEPEND=">=app-admin/webapp-config-1.50.15"
 	RDEPEND="${DEPEND}"
