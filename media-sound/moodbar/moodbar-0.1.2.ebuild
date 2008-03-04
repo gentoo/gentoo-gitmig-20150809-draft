@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/moodbar-0.1.2.ebuild,v 1.5 2008/02/19 20:03:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/moodbar-0.1.2.ebuild,v 1.6 2008/03/04 21:05:25 hanno Exp $
 
 DESCRIPTION="The moodbar tool and gstreamer plugin for Amarok"
 HOMEPAGE="http://amarok.kde.org/wiki/Moodbar"
@@ -11,8 +11,8 @@ KEYWORDS="amd64 ppc x86"
 IUSE="mp3 ogg vorbis flac"
 
 DEPEND=">=media-libs/gst-plugins-base-0.10
-	>=sci-libs/fftw-3.0"
-RDEPEND="${DEPEND}
+	dev-util/pkgconfig"
+RDEPEND=">=sci-libs/fftw-3.0
 	>=media-libs/gst-plugins-good-0.10
 	mp3? ( >=media-plugins/gst-plugins-mad-0.10 )
 	ogg? ( >=media-plugins/gst-plugins-ogg-0.10 )

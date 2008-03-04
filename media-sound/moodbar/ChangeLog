@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moodbar
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/ChangeLog,v 1.7 2008/02/19 20:03:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/ChangeLog,v 1.8 2008/03/04 21:05:25 hanno Exp $
+
+  04 Mar 2008; Hanno Boeck <hanno@gentoo.org> -moodbar-0.1.1.ebuild,
+  moodbar-0.1.2.ebuild:
+  Add pkgconfig to deps.
 
   19 Feb 2008; Christoph Mende <angelos@gentoo.org> moodbar-0.1.2.ebuild:
   Stable on amd64, bug #204203
