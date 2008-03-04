@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kuser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.80 2008/02/23 17:45:05 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.81 2008/03/04 04:15:28 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kuser-3.5.8.ebuild,
+  kuser-3.5.9.ebuild, kuser-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
   23 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kuser-4.0.1.ebuild:
   Remove traces of monolithic KDE 4.

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeartwork-styles
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/ChangeLog,v 1.79 2008/02/20 22:46:17 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/ChangeLog,v 1.80 2008/03/04 04:24:05 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org>
+  kdeartwork-styles-3.5.8.ebuild, kdeartwork-styles-3.5.9.ebuild,
+  kdeartwork-styles-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kdeartwork-styles-3.5.9 (20 Feb 2008)
 

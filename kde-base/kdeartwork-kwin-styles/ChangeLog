@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-kwin-styles
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kwin-styles/ChangeLog,v 1.78 2008/02/20 22:45:23 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kwin-styles/ChangeLog,v 1.79 2008/03/04 04:22:26 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org>
+  kdeartwork-kwin-styles-3.5.8.ebuild, kdeartwork-kwin-styles-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kdeartwork-kwin-styles-3.5.9 (20 Feb 2008)
 
