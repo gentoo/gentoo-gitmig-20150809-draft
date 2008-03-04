@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.4.ebuild,v 1.1 2008/01/05 17:53:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.4.ebuild,v 1.2 2008/03/04 21:05:24 jokey Exp $
 
 inherit eutils fdo-mime qt3 pax-utils
 
@@ -13,7 +13,7 @@ SRC_URI="amd64? ( http://www.virtualbox.org/download/${PV}/VirtualBox_${PV}_Linu
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="additions chm sdk"
 
 RDEPEND="!app-emulation/virtualbox
