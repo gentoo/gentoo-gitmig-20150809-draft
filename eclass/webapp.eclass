@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.61 2008/03/04 18:44:01 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.62 2008/03/04 18:54:41 hollow Exp $
 #
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -9,6 +9,12 @@
 # @DESCRIPTION:
 # The webapp eclass contains functions to handle web applications with
 # webapp-config. Part of the implementation of GLEP #11
+
+# @ECLASS-VARIABLE: WEBAPP_DEPEND
+# @DESCRIPTION:
+# An ebuild should use WEBAPP_DEPEND if a custom DEPEND needs to be build, most
+# notably in combination with WEBAPP_OPTIONAL.
+WEBAPP_DEPEND=">=app-admin/webapp-config-1.50.15"
 
 # @ECLASS-VARIABLE: WEBAPP_NO_AUTO_INSTALL
 # @DESCRIPTION:
@@ -24,7 +30,7 @@
 if [[ "${WEBAPP_OPTIONAL}" != "yes" ]]; then
 	[[ "${WEBAPP_NO_AUTO_INSTALL}" == "yes" ]] || IUSE="vhosts"
 	SLOT="${PVR}"
-	DEPEND=">=app-admin/webapp-config-1.50.15"
+	DEPEND="${WEBAPP_DEPEND}"
 	RDEPEND="${DEPEND}"
 fi
 
