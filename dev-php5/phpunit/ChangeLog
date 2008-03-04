@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/phpunit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.16 2008/03/04 19:43:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.17 2008/03/04 19:49:54 jokey Exp $
+
+  04 Mar 2008; Markus Ullmann <jokey@gentoo.org> -phpunit-2.3.6.ebuild,
+  -phpunit-3.0.6.ebuild, -phpunit-3.1.9.ebuild, -phpunit-3.2.0.ebuild,
+  -phpunit-3.2.5.ebuild, -phpunit-3.2.10.ebuild:
+  Cleanup
 
 *phpunit-3.2.15 (04 Mar 2008)
 
