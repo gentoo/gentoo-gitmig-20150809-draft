@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/kdesdk-kioslaves-4.0.1.ebuild,v 1.2 2008/02/23 17:40:08 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/kdesdk-kioslaves-4.0.1.ebuild,v 1.3 2008/03/04 01:32:15 jer Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ KMMODULE=kioslave
 inherit kde4-meta
 
 DESCRIPTION="kioslaves from kdesdk package: the subversion kioslave"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="debug"
 
 DEPEND="dev-libs/apr

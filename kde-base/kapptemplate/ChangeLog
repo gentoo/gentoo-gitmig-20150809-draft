@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kapptemplate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.61 2008/02/20 22:35:53 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.62 2008/03/04 01:39:11 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kapptemplate-3.5.8.ebuild,
+  kapptemplate-3.5.9.ebuild, kapptemplate-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kapptemplate-3.5.9 (20 Feb 2008)
 

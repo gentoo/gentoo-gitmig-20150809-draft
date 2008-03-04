@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.54 2008/02/20 22:54:55 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.55 2008/03/04 01:36:21 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kdesdk-misc-3.5.8.ebuild,
+  kdesdk-misc-3.5.9.ebuild, kdesdk-misc-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kdesdk-misc-3.5.9 (20 Feb 2008)
 
