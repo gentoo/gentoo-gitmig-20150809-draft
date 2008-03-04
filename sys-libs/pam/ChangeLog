@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.199 2008/03/04 10:20:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.200 2008/03/04 22:58:52 ranger Exp $
+
+  04 Mar 2008; Brent Baude <ranger@gentoo.org> pam-0.99.10.0.ebuild:
+  keyworded ~arch for ppc64, bug 210770
 
   04 Mar 2008; Christian Faulhammer <opfer@gentoo.org> pam-0.99.10.0.ebuild:
   keyword ~x86 for bug 210770
