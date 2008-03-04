@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.4-r3.ebuild,v 1.1 2008/03/04 19:16:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.4-r3.ebuild,v 1.2 2008/03/04 21:03:05 aballier Exp $
 
 inherit eutils wxwidgets autotools
 
@@ -74,7 +74,7 @@ src_compile() {
 
 	econf \
 		--with-libexpat=system \
-		$(use_enable unicode) \
+		--enable-unicode \
 		$(use_with ladspa) \
 		$(use_with vorbis) \
 		$(use_with mp3 libmad) \
