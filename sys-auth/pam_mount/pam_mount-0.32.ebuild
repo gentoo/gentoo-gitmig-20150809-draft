@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-0.32.ebuild,v 1.1 2007/12/15 00:59:52 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-0.32.ebuild,v 1.2 2008/03/04 21:10:07 hanno Exp $
 
 inherit multilib
 
@@ -16,9 +16,13 @@ IUSE="crypt"
 DEPEND=">=sys-libs/pam-0.72
 	dev-libs/openssl
 	>=sys-libs/libhx-1.10.2
-	dev-libs/libxml2"
-RDEPEND="$DEPEND
-	crypt? ( || ( >=sys-fs/cryptsetup-1.0.5 sys-fs/cryptsetup-luks ) )
+	dev-libs/libxml2
+	dev-util/pkgconfig"
+RDEPEND=">=sys-libs/pam-0.72
+	dev-libs/openssl
+	>=sys-libs/libhx-1.10.2
+	dev-libs/libxml2
+	>=sys-fs/cryptsetup-1.0.5
 	sys-process/lsof"
 
 src_compile() {
