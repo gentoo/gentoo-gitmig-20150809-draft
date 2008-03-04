@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/xbae-4.60.4.ebuild,v 1.3 2008/03/04 13:02:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/xbae-4.60.4.ebuild,v 1.4 2008/03/04 14:42:07 armin76 Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://xbae.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE="doc examples"
 
