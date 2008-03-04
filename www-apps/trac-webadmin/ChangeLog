@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/trac-webadmin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/ChangeLog,v 1.6 2007/02/13 20:39:33 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/ChangeLog,v 1.7 2008/03/04 10:25:07 hollow Exp $
+
+*trac-webadmin-0.1.2-r1 (04 Mar 2008)
+
+  04 Mar 2008; Benedikt Böhm <hollow@gentoo.org>
+  +files/trac-webadmin-0.1.2-page_order.patch,
+  +files/trac-webadmin-0.1.2-template.patch, metadata.xml,
+  trac-webadmin-0.1.1.ebuild, trac-webadmin-0.1.2.ebuild,
+  +trac-webadmin-0.1.2-r1.ebuild:
+  fix templates and page order (backported from trunk)
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> trac-webadmin-0.1.2.ebuild:
   Added ~ppc64; bug #166675

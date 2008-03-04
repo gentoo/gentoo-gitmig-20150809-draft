@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/trac-webadmin-0.1.1.ebuild,v 1.3 2007/01/07 19:44:38 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/trac-webadmin-0.1.1.ebuild,v 1.4 2008/03/04 10:25:07 hollow Exp $
 
 inherit distutils
 
@@ -19,7 +19,7 @@ DEPEND=">=www-apps/trac-0.9.3
 
 # from marienz's setuptools.eclass:
 src_install() {
-	${python} setup.py install --root=${D} --no-compile \
+	"${python}" setup.py install --root="${D}" --no-compile \
 		--single-version-externally-managed "$@" || die
 
 	DDOCS="CHANGELOG COPYRIGHT KNOWN_BUGS MAINTAINERS PKG-INFO"
