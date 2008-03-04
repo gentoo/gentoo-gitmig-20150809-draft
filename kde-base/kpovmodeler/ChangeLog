@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpovmodeler
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpovmodeler/ChangeLog,v 1.79 2008/02/20 23:16:42 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpovmodeler/ChangeLog,v 1.80 2008/03/04 05:10:46 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kpovmodeler-3.5.8.ebuild,
+  kpovmodeler-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kpovmodeler-3.5.9 (20 Feb 2008)
 

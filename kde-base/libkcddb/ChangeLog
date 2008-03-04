@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkcddb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/ChangeLog,v 1.80 2008/02/20 23:29:47 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/ChangeLog,v 1.81 2008/03/04 05:24:58 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> libkcddb-3.5.8.ebuild,
+  libkcddb-3.5.9.ebuild, libkcddb-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *libkcddb-3.5.9 (20 Feb 2008)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.78 2008/02/20 23:00:01 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.79 2008/03/04 05:07:00 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kgamma-3.5.8.ebuild,
+  kgamma-3.5.9.ebuild, kgamma-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kgamma-3.5.9 (20 Feb 2008)
 

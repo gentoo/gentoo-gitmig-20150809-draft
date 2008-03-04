@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdict
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdict/ChangeLog,v 1.76 2008/02/20 22:57:28 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdict/ChangeLog,v 1.77 2008/03/04 05:41:38 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kdict-3.5.8.ebuild,
+  kdict-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kdict-3.5.9 (20 Feb 2008)
 

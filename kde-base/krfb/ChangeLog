@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.81 2008/02/20 23:18:14 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.82 2008/03/04 05:45:14 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> krfb-3.5.8.ebuild,
+  krfb-3.5.9.ebuild, krfb-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *krfb-3.5.9 (20 Feb 2008)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kviewshell
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kviewshell/ChangeLog,v 1.83 2008/02/20 23:27:11 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kviewshell/ChangeLog,v 1.84 2008/03/04 05:08:20 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kviewshell-3.5.8.ebuild,
+  kviewshell-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kviewshell-3.5.9 (20 Feb 2008)
 

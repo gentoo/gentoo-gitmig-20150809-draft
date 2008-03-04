@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knewsticker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker/ChangeLog,v 1.83 2008/02/23 17:43:04 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker/ChangeLog,v 1.84 2008/03/04 05:43:09 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> knewsticker-3.5.8.ebuild,
+  knewsticker-3.5.9.ebuild, knewsticker-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
   23 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   knewsticker-4.0.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmid/ChangeLog,v 1.77 2008/02/20 23:07:11 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmid/ChangeLog,v 1.78 2008/03/04 05:27:13 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kmid-3.5.8.ebuild,
+  kmid-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kmid-3.5.9 (20 Feb 2008)
 

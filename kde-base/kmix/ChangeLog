@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.84 2008/02/20 23:07:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.85 2008/03/04 05:27:21 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kmix-3.5.8-r1.ebuild,
+  kmix-3.5.9.ebuild, kmix-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kmix-3.5.9 (20 Feb 2008)
 

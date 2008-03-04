@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpf/ChangeLog,v 1.76 2008/02/20 23:16:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpf/ChangeLog,v 1.77 2008/03/04 05:44:10 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kpf-3.5.8.ebuild,
+  kpf-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kpf-3.5.9 (20 Feb 2008)
 

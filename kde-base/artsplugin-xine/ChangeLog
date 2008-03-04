@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artsplugin-xine
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-xine/ChangeLog,v 1.72 2008/02/20 22:30:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-xine/ChangeLog,v 1.73 2008/03/04 05:20:29 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> artsplugin-xine-3.5.8.ebuild,
+  artsplugin-xine-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *artsplugin-xine-3.5.9 (20 Feb 2008)
 

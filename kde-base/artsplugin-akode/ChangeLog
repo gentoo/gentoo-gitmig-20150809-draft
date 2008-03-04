@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artsplugin-akode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-akode/ChangeLog,v 1.61 2008/02/20 22:29:41 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-akode/ChangeLog,v 1.62 2008/03/04 05:19:33 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org>
+  artsplugin-akode-3.5.8.ebuild, artsplugin-akode-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *artsplugin-akode-3.5.9 (20 Feb 2008)
 
