@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dstat
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.22 2007/12/13 20:13:23 cardoe Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.23 2008/03/04 23:15:26 wschlich Exp $
+
+*dstat-0.6.7 (04 Mar 2008)
+
+  04 Mar 2008; Wolfram Schlich <wschlich@gentoo.org> +dstat-0.6.7.ebuild:
+  version bump
 
   13 Dec 2007; Doug Klima <cardoe@gentoo.org> -dstat-0.6.0-r1.ebuild,
   -dstat-0.6.1.ebuild, -dstat-0.6.3.ebuild, -dstat-0.6.4.ebuild:
