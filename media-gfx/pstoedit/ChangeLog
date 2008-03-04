@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.48 2008/02/28 15:00:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.49 2008/03/04 13:07:27 ranger Exp $
+
+  04 Mar 2008; Brent Baude <ranger@gentoo.org> pstoedit-3.45.ebuild:
+  stable ppc64, bug 208509
 
   28 Feb 2008; nixnut <nixnut@gentoo.org> pstoedit-3.45.ebuild:
   Stable on ppc wrt bug 208509
