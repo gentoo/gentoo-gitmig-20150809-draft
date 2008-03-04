@@ -1,6 +1,11 @@
 # ChangeLog for media-video/undvd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/undvd/ChangeLog,v 1.4 2008/02/23 00:40:39 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/undvd/ChangeLog,v 1.5 2008/03/04 21:42:56 gregkh Exp $
+
+*undvd-0.4.0 (04 Mar 2008)
+
+  04 Mar 2008; Greg Kroah-Hartman <gregkh@gentoo.org> +undvd-0.4.0.ebuild:
+  0.4.0 bump
 
 *undvd-0.3.2 (23 Feb 2008)
 
