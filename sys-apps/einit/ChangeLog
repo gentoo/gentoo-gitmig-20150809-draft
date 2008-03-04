@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/einit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/ChangeLog,v 1.8 2008/03/03 21:37:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/ChangeLog,v 1.9 2008/03/04 07:11:42 opfer Exp $
+
+  04 Mar 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  add the real maintainers
 
 *einit-0.40.0 (03 Mar 2008)
 
