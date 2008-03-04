@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.2.1.ebuild,v 1.8 2008/03/04 02:03:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.2.1.ebuild,v 1.9 2008/03/04 12:57:00 armin76 Exp $
 
 inherit multilib eutils
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.ocaml-programming.de/packages/${P}.tar.gz"
 LICENSE="MIT X11"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 sparc x86"
 
 DEPEND=">=dev-lang/ocaml-3.07"
 
