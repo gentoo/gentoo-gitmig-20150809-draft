@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.99 2008/02/20 23:23:02 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.100 2008/03/04 03:10:06 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> ksysguard-3.5.8.ebuild,
+  ksysguard-3.5.9.ebuild, ksysguard-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *ksysguard-3.5.9 (20 Feb 2008)
 

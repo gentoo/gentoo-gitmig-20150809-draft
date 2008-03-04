@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kappfinder
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.82 2008/02/20 22:35:40 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.83 2008/03/04 02:30:09 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kappfinder-3.5.8.ebuild,
+  kappfinder-3.5.9.ebuild, kappfinder-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kappfinder-3.5.9 (20 Feb 2008)
 

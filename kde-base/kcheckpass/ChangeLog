@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.83 2008/02/23 17:37:01 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.84 2008/03/04 02:25:43 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kcheckpass-3.5.8.ebuild,
+  kcheckpass-3.5.9.ebuild, kcheckpass-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
   23 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kcheckpass-4.0.1.ebuild:
   Remove traces of monolithic KDE 4.

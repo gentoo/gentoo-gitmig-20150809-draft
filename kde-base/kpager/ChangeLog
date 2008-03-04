@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpager/ChangeLog,v 1.79 2008/02/20 23:14:57 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpager/ChangeLog,v 1.80 2008/03/04 03:06:57 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kpager-3.5.8.ebuild,
+  kpager-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kpager-3.5.9 (20 Feb 2008)
 

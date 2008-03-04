@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.111 2008/02/20 22:47:19 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.112 2008/03/04 02:36:33 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org>
+  kdebase-kioslaves-3.5.8.ebuild, kdebase-kioslaves-3.5.9.ebuild,
+  kdebase-kioslaves-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kdebase-kioslaves-3.5.9 (20 Feb 2008)
 

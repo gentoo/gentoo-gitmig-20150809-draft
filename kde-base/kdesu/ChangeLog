@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.79 2008/02/20 22:55:35 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.80 2008/03/04 02:38:03 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kdesu-3.5.8.ebuild,
+  kdesu-3.5.9.ebuild, kdesu-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kdesu-3.5.9 (20 Feb 2008)
 

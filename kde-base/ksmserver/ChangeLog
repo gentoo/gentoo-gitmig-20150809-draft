@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.78 2008/02/20 23:20:47 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.79 2008/03/04 02:56:21 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> ksmserver-3.5.8-r1.ebuild,
+  ksmserver-3.5.9.ebuild, ksmserver-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *ksmserver-3.5.9 (20 Feb 2008)
 

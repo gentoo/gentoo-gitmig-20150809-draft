@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.88 2008/02/20 23:01:37 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.89 2008/03/04 02:38:03 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> khelpcenter-3.5.8.ebuild,
+  khelpcenter-3.5.9.ebuild, khelpcenter-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *khelpcenter-3.5.9 (20 Feb 2008)
 

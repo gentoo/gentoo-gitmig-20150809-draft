@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepasswd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.87 2008/02/20 22:52:40 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.88 2008/03/04 02:53:31 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kdepasswd-3.5.8.ebuild,
+  kdepasswd-3.5.9.ebuild, kdepasswd-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kdepasswd-3.5.9 (20 Feb 2008)
 

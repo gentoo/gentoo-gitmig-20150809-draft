@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kreadconfig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.59 2008/02/20 23:17:22 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.60 2008/03/04 02:41:10 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kreadconfig-3.5.8.ebuild,
+  kreadconfig-3.5.9.ebuild, kreadconfig-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kreadconfig-3.5.9 (20 Feb 2008)
 

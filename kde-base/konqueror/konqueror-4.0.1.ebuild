@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.0.1.ebuild,v 1.1 2008/02/07 00:12:20 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.0.1.ebuild,v 1.2 2008/03/04 02:50:31 jer Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ RESTRICT="test"
 
 DESCRIPTION="KDE: Web browser, file manager, ..."
 IUSE="debug htmlhandbook"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 
 DEPEND=">=kde-base/libkonq-${PV}:${SLOT}"
 RDEPEND="${DEPEND}
