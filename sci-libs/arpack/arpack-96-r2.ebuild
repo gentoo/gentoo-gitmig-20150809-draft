@@ -1,15 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.1 2007/11/02 13:14:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.2 2008/03/04 10:38:38 bicatali Exp $
 
 inherit eutils autotools fortran
 
 DESCRIPTION="Arnoldi package library to solve large scale eigenvalue problems."
 HOMEPAGE="http://www.caam.rice.edu/software/ARPACK"
 SRC_URI="http://www.caam.rice.edu/software/ARPACK/SRC/${PN}${PV}.tar.gz
-	http://www.caam.rice.edu/software/ARPACK/SRC/patch.tar.gz
 	http://www.caam.rice.edu/software/ARPACK/SRC/p${PN}${PV}.tar.gz
-	http://www.caam.rice.edu/software/ARPACK/SRC/ppatch.tar.gz
+	mirror://gentoo/${P}-patches.tar.bz2
 	doc? ( http://www.caam.rice.edu/software/ARPACK/SRC/ug.ps.gz
 		http://www.caam.rice.edu/software/ARPACK/DOCS/tutorial.ps.gz )"
 
@@ -18,21 +17,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="mpi doc examples"
 
-DEPEND="virtual/blas
-	dev-util/pkgconfig
+RDEPEND="virtual/blas
 	mpi? ( virtual/mpi )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/ARPACK"
 
 FORTRAN="gfortran ifc g77"
 
-RESTRICT="mirror"
-
 src_unpack() {
 	unpack ${A}
+	unpack ./*patch.tar.gz
+	epatch "${WORKDIR}"/${PN}-arscnd.patch
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-autotools.patch
-	epatch "${FILESDIR}"/${PN}-arscnd.patch
+	epatch "${WORKDIR}"/${PN}-autotools.patch
 
 	BLAS_LIBS="$(pkg-config --libs blas)"
 	# fix examples library paths
@@ -45,10 +44,10 @@ src_unpack() {
 
 	sed -i \
 		-e '/^include/d' \
-		-e "s/\$(PLIBS)/-larpack -lparpack ${BLAS_LIBS} -lmpi/g" \
+		-e "s/\$(PLIBS)/-larpack -lparpack ${BLAS_LIBS}/g" \
 		-e 's/_$(PLAT)//g' \
 		-e 's/$(PFC)/mpif77/g' \
-		-e 's/$(PFFLAGS)/$(FFLAGS) $(LDFLAGS)/g' \
+		-e 's/$(PFFLAGS)/$(FFLAGS) $(LDFLAGS) $(EXTOBJS)/g' \
 		PARPACK/EXAMPLES/MPI/makefile || die "sed failed"
 
 	eautoreconf
@@ -63,24 +62,34 @@ src_compile() {
 }
 
 src_test() {
-	cd "${S}"/EXAMPLES/SIMPLE
+
+	pushd EXAMPLES/SIMPLE
 	emake simple FC=${FORTRANC} LDFLAGS="-L${S}/.libs"
 	local prog=
 	for p in ss ds sn dn cn zn; do
 		prog=${p}simp
-		LD_LIBRARY_PATH="${S}/.libs" ./${prog} || die "${prog} test failed"
-		rm -f ${prog}
+		LD_LIBRARY_PATH="${S}/.libs" ./${prog} \
+			|| die "${prog} test failed"
+		rm -f ${prog} *.o
 	done
+	popd
+
 	if use mpi; then
-		cd "${S}"/PARPACK/EXAMPLES/MPI
-		${FORTRANC} ${FFLAGS} -c ../../../LAPACK/dpttrf.f dpttrf.o || die "compiling dpttrf failed"
-		${FORTRANC} ${FFLAGS} -c ../../../LAPACK/dpttrs.f dpttrs.o || die "compiling dpttrs failed"
-		emake pdndrv FC=mpif77 LDFLAGS="-L${S}/.libs -L${S}/PARPACK/.libs dpttrf.o dpttrs.o"
+		pushd PARPACK/EXAMPLES/MPI
+		${FORTRANC} ${FFLAGS} -c ../../../LAPACK/dpttr{f,s}.f \
+			|| die "compiling dpttrf,s failed"
+		emake \
+			FC=mpif77 \
+			EXTOBJS="dpttr{f,s}.o" \
+			LDFLAGS="-L${S}/.libs -L${S}/PARPACK/.libs" \
+			pdndrv || die "emake pdndrv failed"
 		for p in 1 3; do
 			prog=pdndrv${p}
-			LD_LIBRARY_PATH="${S}/.libs:${S}/PARPACK/.libs" ./${prog} || die "${prog} test failed"
-			rm -f ${prog}
+			LD_LIBRARY_PATH="${S}/.libs:${S}/PARPACK/.libs" \
+				./${prog} || die "${prog} test failed"
+			rm -f ${prog} *.o
 		done
+		popd
 	fi
 }
 
