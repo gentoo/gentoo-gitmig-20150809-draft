@@ -1,0 +1,18 @@
+http://bugzilla.gnome.org/show_bug.cgi?id=512166
+https://bugs.gentoo.org/show_bug.cgi?id=210944
+
+Fixed in gnucash-2.2.4
+
+Index: src/engine/SplitP.h
+===================================================================
+--- src/engine/SplitP.h	(revision 16884)
++++ src/engine/SplitP.h	(revision 16885)
+@@ -149,7 +149,7 @@
+ Split * xaccSplitClone (const Split *s);
+ 
+ Split *xaccDupeSplit (const Split *s);
+-G_INLINE_FUNC void mark_split (Split *s);
++void mark_split (Split *s);
+ 
+ void xaccSplitVoid(Split *split);
+ void xaccSplitUnvoid(Split *split);

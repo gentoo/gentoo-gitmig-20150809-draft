@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.3.ebuild,v 1.7 2008/02/20 12:26:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.3.ebuild,v 1.8 2008/03/04 10:35:38 tove Exp $
 
 inherit autotools eutils gnome2
 
@@ -69,6 +69,12 @@ pkg_setup() {
 	if ${will_die} ; then
 		die "Please rebuild the packages with the use flags above."
 	fi
+}
+
+src_unpack(){
+	gnome2_src_unpack
+	cd "${S}"
+	epatch "${FILESDIR}"/SplitP.h.patch
 }
 
 src_compile() {
