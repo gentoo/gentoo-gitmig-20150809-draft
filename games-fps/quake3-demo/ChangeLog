@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-demo
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/ChangeLog,v 1.20 2008/02/15 01:09:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/ChangeLog,v 1.21 2008/03/04 01:18:09 wolf31o2 Exp $
+
+  04 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> -files/q3demo,
+  -files/q3demo-ded, quake3-demo-1.11.ebuild:
+  Change to use more built-in functions and to be a little cleaner.
 
   15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   quake3-demo-1.11.ebuild:

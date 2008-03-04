@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.24 2008/02/15 01:09:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.25 2008/03/04 01:18:09 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -46,26 +46,16 @@ src_unpack() {
 }
 
 src_install() {
-	dodir "${dir}"
-
-	cp -rf Help "${Ddir}"
-	cp -rf demoq3 "${Ddir}"
+	insinto "${dir}"
+	doins -r Help demoq3
+	doins README icon.*
 
 	exeinto "${dir}"
 	newexe bin/x86/glibc-2.0/q3ded q3ded.x86
 	newexe bin/x86/glibc-2.0/q3demo q3demo.x86
 	use 3dfx && doexe bin/x86/glibc-2.0/libMesaVoodooGL.so*
-	#use opengl && dosym /usr/lib/libGL.so "${dir}"/libGL.so
 
-	doexe "${FILESDIR}"/{q3demo,q3demo-ded}
-	dodir "${GAMES_BINDIR}"
-	dosym "${dir}"/q3demo "${GAMES_BINDIR}"/q3demo
-	dosym "${dir}"/q3demo-ded "${GAMES_BINDIR}"/q3demo-ded
-	dosed "s:GENTOO_DIR:${dir}:" "${dir}"/q3demo
-	dosed "s:GENTOO_DIR:${dir}:" "${dir}"/q3demo-ded
-
-	insinto "${dir}"
-	doins README icon.*
+	games_make_wrapper q3demo ./q3demo.x86 "${dir}" "${dir}"
 
 	make_desktop_entry q3demo "Quake III (Demo)"
 
