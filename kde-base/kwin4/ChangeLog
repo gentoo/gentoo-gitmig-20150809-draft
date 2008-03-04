@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwin4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin4/ChangeLog,v 1.79 2008/02/20 23:28:29 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin4/ChangeLog,v 1.80 2008/03/04 04:58:19 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kwin4-3.5.8.ebuild,
+  kwin4-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kwin4-3.5.9 (20 Feb 2008)
 

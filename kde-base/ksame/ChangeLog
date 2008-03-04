@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksame
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksame/ChangeLog,v 1.81 2008/02/20 23:18:39 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksame/ChangeLog,v 1.82 2008/03/04 04:54:18 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> ksame-3.5.8.ebuild,
+  ksame-3.5.9.ebuild, ksame-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *ksame-3.5.9 (20 Feb 2008)
 
