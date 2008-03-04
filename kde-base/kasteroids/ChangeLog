@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kasteroids
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kasteroids/ChangeLog,v 1.83 2008/02/20 22:36:17 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kasteroids/ChangeLog,v 1.84 2008/03/04 04:34:54 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kasteroids-3.5.8.ebuild,
+  kasteroids-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kasteroids-3.5.9 (20 Feb 2008)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmines
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmines/ChangeLog,v 1.82 2008/02/20 23:07:36 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmines/ChangeLog,v 1.83 2008/03/04 04:43:25 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kmines-3.5.8.ebuild,
+  kmines-3.5.9.ebuild, kmines-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kmines-3.5.9 (20 Feb 2008)
 
