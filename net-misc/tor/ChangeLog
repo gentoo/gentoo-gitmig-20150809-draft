@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.111 2008/03/04 02:02:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.112 2008/03/04 22:31:40 rich0 Exp $
+
+  04 Mar 2008; Richard Freeman <rich0@gentoo.org> tor-0.1.2.19.ebuild:
+  amd64 stable - 211021
 
   04 Mar 2008; Brent Baude <ranger@gentoo.org> tor-0.1.2.19.ebuild:
   stable ppc64, bug 211021
