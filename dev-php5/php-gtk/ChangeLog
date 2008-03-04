@@ -1,6 +1,15 @@
 # ChangeLog for dev-php5/php-gtk
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.10 2007/12/06 01:23:39 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.11 2008/03/04 19:39:43 jokey Exp $
+
+*php-gtk-2.0.0 (04 Mar 2008)
+
+  04 Mar 2008; Markus Ullmann <jokey@gentoo.org> +php-gtk-2.0.0.ebuild:
+  Version bump from project overlay
+
+  03 Mar 2008; Jakub Moc <jakub@gentoo.org>
+  +files/php-gtk-2.0.0-no-cli-check.patch, +php-gtk-2.0.0.ebuild:
+  Version bump
 
 *php-gtk-2.0.0_beta-r1 (06 Dec 2007)
 
