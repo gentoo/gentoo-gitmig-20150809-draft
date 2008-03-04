@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.191 2008/03/04 10:23:24 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.192 2008/03/04 23:14:17 ranger Exp $
+
+  04 Mar 2008; Brent Baude <ranger@gentoo.org> shadow-4.1.0-r1.ebuild:
+  keyworded ~arch for ppc64, bug 210769
 
   04 Mar 2008; <cla@gentoo.org> shadow-4.1.0-r1.ebuild:
   Marked ~x86 (bug #210769). Thanks to Michał Wołonkiewicz <volon@vp.pl> for
