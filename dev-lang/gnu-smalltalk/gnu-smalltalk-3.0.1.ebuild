@@ -1,19 +1,20 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.3.6.ebuild,v 1.3 2008/03/04 14:11:44 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-3.0.1.ebuild,v 1.1 2008/03/04 14:11:44 araujo Exp $
 
-inherit multilib elisp-common flag-o-matic eutils toolchain-funcs
+inherit elisp-common flag-o-matic eutils
 
 DESCRIPTION="GNU Smalltalk"
 HOMEPAGE="http://smalltalk.gnu.org"
 SRC_URI="http://ftp.gnu.org/gnu/smalltalk/smalltalk-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="tk readline emacs gtk gmp"
 
 DEPEND="sys-libs/gdbm
 	sys-apps/debianutils
+	!dev-libs/libsigsegv
 	emacs? ( virtual/emacs )
 	readline? ( sys-libs/readline )
 	tk? ( dev-lang/tk )
@@ -24,14 +25,6 @@ RDEPEND=""
 S="${WORKDIR}/smalltalk-${PV}"
 
 SITEFILE=50gnu-smalltalk-gentoo.el
-
-src_unpack() {
-	unpack ${A}
-	# stack patch
-	epatch "${FILESDIR}/gst-stack-${PV}.patch"
-	sed -i "s:\$(DESTDIR)\$(bindir)/gst \$\$srcdir/Finish.st \-VisqS \-a\"\$(DESTDIR)\" \$(MODULES): :" "${S}/Makefile.am"
-	sed -i "s:\$(DESTDIR)\$(bindir)/gst \$\$srcdir/Finish.st \-VisqS \-a\"\$(DESTDIR)\" \$(MODULES): :" "${S}/Makefile.in"
-}
 
 src_compile() {
 	replace-flags '-O3' '-O2'
@@ -48,15 +41,11 @@ src_compile() {
 }
 
 src_install() {
-	make prefix="${D}/usr mandir=${D}/usr/share/man"
+	make prefix="${D}/usr" mandir="${D}/usr/share/man" \
 		infodir="${D}/usr/share/info" \
 		lispdir="${D}/usr/share/emacs/site-lisp/gnu-smalltalk" \
 		libdir="${D}/usr/lib" install || die
-	rm -rf "${D}/usr/include/sigsegv.h" \
-		"${D}/usr/include/snprintfv" \
-		"${D}/usr/share/aclocal/snprintfv.m4"
 	dodoc AUTHORS COPYING* ChangeLog NEWS README THANKS TODO
-	rm -rf "${D}/var"
 	if use emacs; then
 		elisp-install "${PN}" *.el *.elc
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
@@ -65,9 +54,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "We generate a GNU SmallTalk Image with the right kernel image path."
-	cd /usr/share/smalltalk/
-	/usr/bin/gst -iQ /dev/null
 	use emacs && elisp-site-regen
 }
 

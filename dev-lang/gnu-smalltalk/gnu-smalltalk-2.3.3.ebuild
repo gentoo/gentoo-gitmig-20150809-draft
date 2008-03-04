@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.3.3.ebuild,v 1.4 2008/01/13 23:25:33 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.3.3.ebuild,v 1.5 2008/03/04 14:11:44 araujo Exp $
 
 inherit multilib elisp-common flag-o-matic eutils toolchain-funcs
 
@@ -26,7 +26,7 @@ S="${WORKDIR}/smalltalk-${PV}"
 SITEFILE=50gnu-smalltalk-gentoo.el
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	epatch "${FILESDIR}/gst-stack-${PV}.patch"
 	sed -i "s:\$(DESTDIR)\$(bindir)/gst \$\$srcdir/Finish.st \-VisqS \-a\"\$(DESTDIR)\" \$(MODULES): :" "${S}/Makefile.am"
 	sed -i "s:\$(DESTDIR)\$(bindir)/gst \$\$srcdir/Finish.st \-VisqS\-a\"\$(DESTDIR)\" \$(MODULES): :" "${S}/Makefile.in"
