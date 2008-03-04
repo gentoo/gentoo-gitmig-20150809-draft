@@ -5,5 +5,11 @@
     <email>opfer@gentoo.org</email>
     <name>Christian Faulhammer</name>
   </maintainer>
+  <maintainer>
+    <email>l.valerimanera@gmail.com</email>
+  </maintainer>
+  <maintainer>
+    <email>dma05@web.de</email>
+  </maintainer>
   <herd>no-herd</herd>
 </pkgmetadata>
