@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/cobex/cobex-0.2.13.ebuild,v 1.1 2007/06/22 09:59:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/cobex/cobex-0.2.13.ebuild,v 1.2 2008/03/04 07:30:41 opfer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cobex/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-libs/libezV24
