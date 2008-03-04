@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsmi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.11 2008/03/03 03:27:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.12 2008/03/04 12:52:41 armin76 Exp $
+
+  04 Mar 2008; Raúl Porcel <armin76@gentoo.org> libsmi-0.4.7.ebuild:
+  Add ~alpha wrt #212075
 
   03 Mar 2008; Jeroen Roovers <jer@gentoo.org> libsmi-0.4.7.ebuild:
   Marked ~hppa (bug #212075).
