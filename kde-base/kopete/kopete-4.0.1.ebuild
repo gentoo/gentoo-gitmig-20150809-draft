@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.0.1.ebuild,v 1.1 2008/02/07 00:10:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.0.1.ebuild,v 1.2 2008/03/04 05:59:09 jer Exp $
 
 EAPI="1"
 
@@ -8,7 +8,7 @@ KMNAME=kdenetwork
 inherit kde4-meta
 
 DESCRIPTION="KDE multi-protocol IM client"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="+addbookmarks +alias +autoreplace +contactnotes debug gadu groupwise
 +highlight +history htmlhandbook +jabber latex +msn +nowlistening oscar
 +privacy qq sms +statistics testbed +texteffect +translator

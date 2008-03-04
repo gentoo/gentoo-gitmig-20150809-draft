@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.139 2008/02/20 23:13:54 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.140 2008/03/04 05:59:09 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kopete-3.5.8.ebuild,
+  kopete-3.5.9.ebuild, kopete-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kopete-3.5.9 (20 Feb 2008)
 
