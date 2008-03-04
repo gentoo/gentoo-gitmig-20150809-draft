@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.6.ebuild,v 1.5 2008/02/05 11:32:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.6.ebuild,v 1.6 2008/03/04 15:47:40 jer Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -44,8 +44,8 @@ pkg_setup() {
 src_install() {
 	x-modular_src_install
 	exeinto /usr/$(get_libdir)/X11/xdm
-	doexe ${FILESDIR}/Xsession
-	newpamd ${FILESDIR}/xdm.pamd xdm
+	doexe "${FILESDIR}"/Xsession
+	newpamd "${FILESDIR}"/xdm.pamd xdm
 }
 
 pkg_preinst() {
