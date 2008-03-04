@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/mkxf86config
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.35 2007/08/21 17:36:14 wolf31o2 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.36 2008/03/04 02:32:02 wolf31o2 Exp $
+
+  04 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  mkxf86config-0.9.9.ebuild:
+  Stable on ia64 since we've been using it for releases and we want to use it
+  on 2008.0's release.
 
   21 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -mkxf86config-0.9.8.ebuild, mkxf86config-0.9.9.ebuild:
