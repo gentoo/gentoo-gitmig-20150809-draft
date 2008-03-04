@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.6-r1.ebuild,v 1.1 2008/02/21 19:08:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.6-r1.ebuild,v 1.2 2008/03/04 10:36:01 cla Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -11,7 +11,7 @@ DEFAULTVT="vt7"
 
 DESCRIPTION="X.Org xdm application"
 
-KEYWORDS=""
+KEYWORDS="~x86"
 IUSE="xprint ipv6 pam"
 
 RDEPEND="x11-libs/libXdmcp
@@ -48,7 +48,7 @@ pkg_setup() {
 src_install() {
 	x-modular_src_install
 	exeinto /usr/$(get_libdir)/X11/xdm
-	doexe ${FILESDIR}/Xsession
+	doexe "${FILESDIR}"/Xsession
 	pamd_mimic system-local-login xdm auth account session
 }
 
