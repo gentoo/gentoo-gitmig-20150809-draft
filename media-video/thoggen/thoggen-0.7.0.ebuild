@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/thoggen-0.6.0.ebuild,v 1.4 2008/03/04 20:50:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/thoggen-0.7.0.ebuild,v 1.1 2008/03/04 20:50:40 hanno Exp $
 
 inherit gnome2
 
@@ -13,15 +13,15 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=gnome-base/libglade-2.4.0
-	>=media-libs/gst-plugins-base-0.10.10
-	>=media-libs/gst-plugins-good-0.10.4
-	>=media-libs/gst-plugins-ugly-0.10.4
-	>=media-plugins/gst-plugins-mpeg2dec-0.10.4
-	>=media-plugins/gst-plugins-a52dec-0.10.4-r1
-	>=media-plugins/gst-plugins-dvdread-0.10.4
-	>=media-plugins/gst-plugins-theora-0.10.10
-	>=media-plugins/gst-plugins-vorbis-0.10.10
-	>=media-plugins/gst-plugins-ogg-0.10.10
+	>=media-libs/gst-plugins-base-0.10.17
+	>=media-libs/gst-plugins-good-0.10.7
+	>=media-libs/gst-plugins-ugly-0.10.7
+	>=media-plugins/gst-plugins-mpeg2dec-0.10.7
+	>=media-plugins/gst-plugins-a52dec-0.10.7
+	>=media-plugins/gst-plugins-dvdread-0.10.7
+	>=media-plugins/gst-plugins-theora-0.10.17
+	>=media-plugins/gst-plugins-vorbis-0.10.17
+	>=media-plugins/gst-plugins-ogg-0.10.17
 	>=sys-apps/hal-0.4
 	dev-libs/dbus-glib
 	>=media-libs/libdvdread-0.9.4"
