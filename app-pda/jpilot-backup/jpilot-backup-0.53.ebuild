@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/jpilot-backup-0.53.ebuild,v 1.3 2008/02/29 08:53:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/jpilot-backup-0.53.ebuild,v 1.4 2008/03/04 12:22:51 armin76 Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://jasonday.home.att.net/code/backup/backup.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~ppc x86"
+KEYWORDS="alpha amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.6.10-r1
