@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmousetool
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmousetool/ChangeLog,v 1.79 2008/02/23 17:42:23 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmousetool/ChangeLog,v 1.80 2008/03/04 04:00:41 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kmousetool-3.5.8.ebuild,
+  kmousetool-3.5.9.ebuild, kmousetool-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
   23 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kmousetool-4.0.1.ebuild:
   Remove traces of monolithic KDE 4.

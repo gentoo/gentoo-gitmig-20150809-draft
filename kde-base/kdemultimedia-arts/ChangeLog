@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-arts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/ChangeLog,v 1.74 2008/02/20 22:50:49 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/ChangeLog,v 1.75 2008/03/04 04:05:30 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org>
+  kdemultimedia-arts-3.5.8.ebuild, kdemultimedia-arts-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kdemultimedia-arts-3.5.9 (20 Feb 2008)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kweather
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.84 2008/02/24 20:20:10 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.85 2008/03/04 03:54:58 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kweather-3.5.8.ebuild,
+  kweather-3.5.9.ebuild, kweather-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
   24 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   +files/kweather-3.5.9-gcc-4.3.patch, kweather-3.5.9.ebuild:

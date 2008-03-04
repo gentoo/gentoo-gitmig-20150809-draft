@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kanagram
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.56 2008/02/23 17:36:01 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.57 2008/03/04 03:30:20 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kanagram-3.5.8.ebuild,
+  kanagram-3.5.9.ebuild, kanagram-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
   23 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kanagram-4.0.1.ebuild:
   Remove traces of monolithic KDE 4.

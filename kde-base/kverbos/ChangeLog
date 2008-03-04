@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kverbos
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kverbos/ChangeLog,v 1.74 2008/02/20 23:26:46 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kverbos/ChangeLog,v 1.75 2008/03/04 03:41:48 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kverbos-3.5.8.ebuild,
+  kverbos-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kverbos-3.5.9 (20 Feb 2008)
 

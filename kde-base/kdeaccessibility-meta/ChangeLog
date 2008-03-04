@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeaccessibility-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.82 2008/02/20 22:42:37 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.83 2008/03/04 04:08:10 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org>
+  kdeaccessibility-meta-3.5.8.ebuild, kdeaccessibility-meta-3.5.9.ebuild,
+  kdeaccessibility-meta-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kdeaccessibility-meta-3.5.9 (20 Feb 2008)
 
