@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.4-r2.ebuild,v 1.9 2007/01/28 05:43:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.4-r2.ebuild,v 1.10 2008/03/04 03:07:51 jer Exp $
 
 inherit eutils
 
@@ -20,11 +20,11 @@ RDEPEND="nls? ( virtual/libintl )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/enscript-1.6.3-security.patch
-	epatch ${FILESDIR}/enscript-1.6.3-language.patch
-	epatch ${FILESDIR}/enscript-catmur.patch
-	epatch ${FILESDIR}/enscript-1.6.4-ebuild.st.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/enscript-1.6.3-security.patch
+	epatch "${FILESDIR}"/enscript-1.6.3-language.patch
+	epatch "${FILESDIR}"/enscript-catmur.patch
+	epatch "${FILESDIR}"/enscript-1.6.4-ebuild.st.patch
 }
 
 src_compile() {
@@ -37,7 +37,7 @@ src_install() {
 	einstall || die
 	dodoc AUTHORS ChangeLog FAQ.html NEWS README* THANKS TODO
 	insinto /usr/share/enscript/hl
-	doins ${FILESDIR}/ebuild.st
+	doins "${FILESDIR}"/ebuild.st
 }
 
 pkg_postinst() {
