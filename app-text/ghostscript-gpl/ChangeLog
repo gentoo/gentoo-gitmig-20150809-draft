@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.44 2008/03/01 20:21:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.45 2008/03/04 21:02:22 tgurr Exp $
+
+*ghostscript-gpl-8.62 (04 Mar 2008)
+
+  04 Mar 2008; Timo Gurr <tgurr@gentoo.org> +ghostscript-gpl-8.62.ebuild:
+  Add ghostscript-gpl-8.62.ebuild, remove patches which got fixed upstream.
+  Reintroduce jasper dependency and make ghostscript use the system jasper,
+  thanks for the patch goes to Fedora.
 
   01 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   ghostscript-gpl-8.61-r3.ebuild:
