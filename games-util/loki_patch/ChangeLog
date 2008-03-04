@@ -1,6 +1,10 @@
 # ChangeLog for games-util/loki_patch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.9 2008/01/15 21:53:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.10 2008/03/04 15:53:30 wolf31o2 Exp $
+
+  04 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  -loki_patch-20051209.ebuild:
+  Removing 20051209 version for bug #133407.
 
   15 Jan 2008; Samuli Suominen <drac@gentoo.org> loki_patch-20050324.ebuild,
   loki_patch-20051209.ebuild:
