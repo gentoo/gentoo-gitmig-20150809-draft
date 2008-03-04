@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeaddons-kfile-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/ChangeLog,v 1.58 2008/02/20 22:43:13 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/ChangeLog,v 1.59 2008/03/04 06:58:43 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org>
+  kdeaddons-kfile-plugins-3.5.8.ebuild,
+  kdeaddons-kfile-plugins-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kdeaddons-kfile-plugins-3.5.9 (20 Feb 2008)
 

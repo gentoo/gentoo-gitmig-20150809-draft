@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksig/ChangeLog,v 1.67 2008/02/20 23:19:44 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksig/ChangeLog,v 1.68 2008/03/04 06:53:26 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> ksig-3.5.8.ebuild,
+  ksig-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *ksig-3.5.9 (20 Feb 2008)
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/karm-3.5.9.ebuild,v 1.1 2008/02/20 22:36:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/karm-3.5.9.ebuild,v 1.2 2008/03/04 06:28:24 jer Exp $
 
 KMNAME=kdepim
 EAPI="1"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE Time tracker tool"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 RDEPEND=">=kde-base/libkcal-${PV}:${SLOT}
 	>=kde-base/kdepim-kresources-${PV}:${SLOT}

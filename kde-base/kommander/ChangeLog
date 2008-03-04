@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kommander
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kommander/ChangeLog,v 1.83 2008/02/21 16:28:07 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kommander/ChangeLog,v 1.84 2008/03/04 06:46:11 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kommander-3.5.8.ebuild,
+  kommander-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
   21 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> kommander-3.5.9.ebuild:
   Removed the kdehiddenvisibility USE-flag as it breaks compilation, bug

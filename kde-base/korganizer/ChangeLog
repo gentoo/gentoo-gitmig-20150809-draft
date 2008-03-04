@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.90 2008/02/25 09:42:02 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.91 2008/03/04 06:35:24 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> korganizer-3.5.8.ebuild,
+  korganizer-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
   25 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   +files/korganizer-3.5.9-kdeenablefinal.patch, korganizer-3.5.9.ebuild:

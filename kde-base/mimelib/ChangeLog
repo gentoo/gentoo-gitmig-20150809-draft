@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/mimelib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.76 2008/02/24 13:38:29 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.77 2008/03/04 06:30:59 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> mimelib-3.5.8.ebuild,
+  mimelib-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
   24 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
   +files/mimelib-3.5.9-gcc-4.3-testsuite.patch, mimelib-3.5.9.ebuild:

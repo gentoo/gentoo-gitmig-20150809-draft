@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.8.ebuild,v 1.7 2008/02/18 13:22:24 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.8.ebuild,v 1.8 2008/03/04 06:36:03 jer Exp $
 
 KMNAME=kdepim
 MAXKDEVER=3.5.8
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="Synchronize Data with KDE"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 DEPEND="app-pda/libopensync
 	$(deprange $PV $MAXKDEVER kde-base/kontact)

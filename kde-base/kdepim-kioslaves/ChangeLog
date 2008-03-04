@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-kioslaves
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.97 2008/02/20 22:53:06 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.98 2008/03/04 06:25:51 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org>
+  kdepim-kioslaves-3.5.8.ebuild, kdepim-kioslaves-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kdepim-kioslaves-3.5.9 (20 Feb 2008)
 

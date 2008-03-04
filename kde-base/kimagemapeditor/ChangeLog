@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kimagemapeditor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.75 2008/02/20 23:03:13 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.76 2008/03/04 06:47:33 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kimagemapeditor-3.5.8.ebuild,
+  kimagemapeditor-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kimagemapeditor-3.5.9 (20 Feb 2008)
 

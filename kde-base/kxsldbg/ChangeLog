@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kxsldbg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.89 2008/02/20 23:29:23 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.90 2008/03/04 06:47:09 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kxsldbg-3.5.8.ebuild,
+  kxsldbg-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *kxsldbg-3.5.9 (20 Feb 2008)
 

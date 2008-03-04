@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.93 2008/02/26 06:59:34 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.94 2008/03/04 06:13:06 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> libkdepim-3.5.8.ebuild,
+  libkdepim-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
   26 Feb 2008; Bo Ørsted Andresen <zlin@gentoo.org> libkdepim-3.5.8.ebuild,
   libkdepim-3.5.9.ebuild:

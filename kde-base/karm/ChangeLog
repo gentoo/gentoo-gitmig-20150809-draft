@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.82 2008/02/20 22:36:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.83 2008/03/04 06:28:24 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> karm-3.5.8.ebuild,
+  karm-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> karm-3.5.8.ebuild,
+  karm-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *karm-3.5.9 (20 Feb 2008)
 

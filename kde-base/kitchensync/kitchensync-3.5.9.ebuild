@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.9.ebuild,v 1.1 2008/02/20 23:03:26 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.9.ebuild,v 1.2 2008/03/04 06:36:03 jer Exp $
 
 KMNAME=kdepim
 EAPI="1"
 inherit kde-meta eutils
 
 DESCRIPTION="Synchronize Data with KDE"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND="app-pda/libopensync
 	>=kde-base/kontact-${PV}:${SLOT}
