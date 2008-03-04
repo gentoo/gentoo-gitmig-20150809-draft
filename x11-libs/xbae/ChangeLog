@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xbae
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.1 2007/08/24 15:57:24 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.2 2008/03/04 13:02:38 ranger Exp $
+
+  04 Mar 2008; Brent Baude <ranger@gentoo.org> xbae-4.60.4.ebuild:
+  keyworded ~arch for ppc64, bug 212198
 
 *xbae-4.60.4 (24 Aug 2007)
 
