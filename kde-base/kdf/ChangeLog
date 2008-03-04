@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.78 2008/02/20 22:56:59 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.79 2008/03/04 01:53:19 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kdf-3.5.8.ebuild,
+  kdf-3.5.9.ebuild, kdf-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kdf-3.5.9 (20 Feb 2008)
 

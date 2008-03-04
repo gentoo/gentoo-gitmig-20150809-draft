@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.81 2008/02/23 17:35:18 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.82 2008/03/04 01:51:36 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> ark-3.5.8.ebuild,
+  ark-3.5.9.ebuild, ark-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
   23 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> ark-4.0.1.ebuild:
   Remove traces of monolithic KDE 4.

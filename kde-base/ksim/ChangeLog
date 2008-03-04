@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksim
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ChangeLog,v 1.88 2008/02/20 23:19:56 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ChangeLog,v 1.89 2008/03/04 02:00:12 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> ksim-3.5.8.ebuild,
+  ksim-3.5.9.ebuild:
+  Keyword split KDE for HPPA.
 
 *ksim-3.5.9 (20 Feb 2008)
 
