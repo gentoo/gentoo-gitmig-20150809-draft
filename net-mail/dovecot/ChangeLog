@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.145 2008/03/03 19:10:04 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.146 2008/03/04 13:24:05 wschlich Exp $
+
+*dovecot-1.0.11 (04 Mar 2008)
+
+  04 Mar 2008; Wolfram Schlich <wschlich@gentoo.org> +dovecot-1.0.11.ebuild:
+  version bump
 
 *dovecot-1.1_rc1-r1 (03 Mar 2008)
 
