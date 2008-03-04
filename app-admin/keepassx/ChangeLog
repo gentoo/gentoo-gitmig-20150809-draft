@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.20 2008/03/04 10:31:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.21 2008/03/04 18:41:21 opfer Exp $
+
+*keepassx-0.3.0a-r20 (04 Mar 2008)
+*keepassx-0.3.0a (04 Mar 2008)
+
+  04 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
+  -keepassx-0.3.0.ebuild, -keepassx-0.3.0-r20.ebuild,
+  +keepassx-0.3.0a.ebuild, +keepassx-0.3.0a-r20.ebuild:
+  version bump with some fixes for translations, provided by Timo Gurr <tgurr
+  AT gentoo DOT org> in bug 212278
 
   04 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
   keepassx-0.3.0.ebuild:
