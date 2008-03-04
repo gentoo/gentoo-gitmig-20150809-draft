@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.40 2008/02/17 12:46:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.41 2008/03/04 07:31:37 dev-zero Exp $
+
+  04 Mar 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/1.5.7-as-needed.patch, -files/1.5.7-ssl_config.patch,
+  -files/1.5.1-ssl_config.patch, -files/ccext2-as-needed.diff,
+  -files/ccgnu2-as-needed.diff, -commoncpp2-1.3.1.ebuild,
+  -commoncpp2-1.5.1-r1.ebuild, -commoncpp2-1.5.7.ebuild:
+  Dropped old versions (including patches).
 
   17 Feb 2008; Christoph Mende <angelos@gentoo.org> commoncpp2-1.6.1.ebuild:
   Stable on amd64, bug #207632
