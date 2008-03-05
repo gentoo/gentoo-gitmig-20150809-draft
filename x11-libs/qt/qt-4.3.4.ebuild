@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.4.ebuild,v 1.1 2008/02/25 14:24:44 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.4.ebuild,v 1.2 2008/03/05 16:40:05 ingmar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -23,6 +23,7 @@ RDEPEND="x11-libs/libXrandr
 	x11-libs/libXcursor
 	x11-libs/libXfont
 	x11-libs/libSM
+	!x11-libs/qt-core
 	xinerama? ( x11-libs/libXinerama )
 	media-libs/fontconfig
 	>=media-libs/freetype-2
