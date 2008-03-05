@@ -1,6 +1,13 @@
 # ChangeLog for www-client/ochusha
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.25 2007/02/13 10:33:25 corsair Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.26 2008/03/05 17:04:02 matsuu Exp $
+
+*ochusha-0.5.8.2-r3 (05 Mar 2008)
+
+  05 Mar 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/ochusha-0.5.8.2-glibc2.diff, +files/ochusha-0.5.8.2-gtk-2.12.diff,
+  +files/ochusha-0.5.8.2-type-punning.diff, +ochusha-0.5.8.2-r3.ebuild:
+  Fixed to work with gtk+-2.12.1, bug #199495.
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> ochusha-0.5.8.2-r2.ebuild:
   Stable on ppc64; bug #165415
