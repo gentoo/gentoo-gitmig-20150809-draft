@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-qt3support
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.1 2007/12/20 13:01:44 caleb Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.2 2008/03/05 23:10:41 ingmar Exp $
+
+*qt-qt3support-4.4.0_beta1 (05 Mar 2008)
+
+  05 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +qt-qt3support-4.4.0_beta1.ebuild:
+  Added Qt-4.4.0_beta, note that the RC1 is an accidentally mislabelled
+  `technical preview`, so this will appear as a downgrade if you installed
+  that version.
 
 *qt-qt3support-4.4.0_rc1 (20 Dec 2007)
 
