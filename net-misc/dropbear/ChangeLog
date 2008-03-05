@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.58 2008/03/04 10:28:52 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.59 2008/03/05 00:32:46 ranger Exp $
+
+  05 Mar 2008; Brent Baude <ranger@gentoo.org> dropbear-0.50-r1.ebuild:
+  keyworded ~arch for ppc64, bug 210795
 
   04 Mar 2008; <cla@gentoo.org> dropbear-0.50-r1.ebuild:
   Marked ~x86 (bug #210795). Thanks to Michał Wołonkiewicz <volon@vp.pl> for
