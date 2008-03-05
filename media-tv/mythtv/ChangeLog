@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.219 2008/03/03 21:59:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.220 2008/03/05 19:34:28 cardoe Exp $
+
+*mythtv-0.21_beta16401 (05 Mar 2008)
+
+  05 Mar 2008; Doug Klima <cardoe@gentoo.org> +mythtv-0.21_beta16401.ebuild:
+  newer 0.21 beta ebuild
 
   03 Mar 2008; Doug Klima <cardoe@gentoo.org> -mythtv-0.20.2_p14814.ebuild,
   -mythtv-0.20.2_p15332.ebuild, -mythtv-0.20.2_p15477.ebuild,
