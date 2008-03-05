@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.91 2008/02/20 22:42:01 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.92 2008/03/05 19:20:17 jer Exp $
+
+  04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kde-meta-3.5.8.ebuild,
+  kde-meta-3.5.9.ebuild, kde-meta-4.0.1.ebuild:
+  Keyword split KDE for HPPA.
 
 *kde-meta-3.5.9 (20 Feb 2008)
 
