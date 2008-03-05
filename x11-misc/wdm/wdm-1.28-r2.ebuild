@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28-r2.ebuild,v 1.2 2008/03/04 10:33:50 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28-r2.ebuild,v 1.3 2008/03/05 00:36:41 ranger Exp $
 
 inherit pam
 
@@ -10,7 +10,7 @@ SRC_URI="http://voins.program.ru/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc64 ~x86"
 IUSE="truetype pam selinux"
 
 RDEPEND=">=x11-wm/windowmaker-0.70.0
