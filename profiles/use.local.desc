@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3414 2008/03/04 12:17:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3415 2008/03/05 21:56:03 ingmar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2101,6 +2101,10 @@ x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings manage
 x11-libs/openmotif:xft - Build OpenMotif with support for XFT font renderer
 x11-libs/qt-core:glib - Enable glib eventloop support
 x11-libs/qt-core:qt3support - Enable the Qt3Support libraries for Qt4
+x11-libs/qt-gui:glib - Enable glib eventloop support
+x11-libs/qt-gui:qt3support - Enable the Qt3Support libraries for Qt4
+x11-libs/qt-opengl:qt3support - Enable the Qt3Support libraries for Qt4
+x11-libs/qt-sql:qt3support - Enable the Qt3Support libraries for Qt4
 x11-libs/qt:glib - Enable glib eventloop support
 x11-libs/qt:immqt - Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
