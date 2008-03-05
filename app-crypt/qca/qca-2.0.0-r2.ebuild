@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.0-r2.ebuild,v 1.6 2008/03/01 04:58:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.0-r2.ebuild,v 1.7 2008/03/05 23:50:47 ingmar Exp $
 
 EAPI="1"
 
@@ -18,20 +18,21 @@ RESTRICT="test"
 
 DEPEND="
 	!<app-crypt/qca-1.0-r3
-	>=x11-libs/qt-4.2.0:4"
+	|| ( x11-libs/qt-core:4
+		>=x11-libs/qt-4.2.0:4 )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	if use debug && ! built_with_use x11-libs/qt:4 debug; then
-		echo
-		eerror "You are trying to compile ${PN} package with USE=\"debug\""
-		eerror "while qt4 is built without this particular flag."
-		echo
-		eerror "Possible solutions to this problem are:"
-		eerror "a) install package ${PN} without debug USE flag"
-		eerror "b) re-emerge qt4 with debug USE flag"
-		echo
-		die "can't emerge ${PN} with debug USE flag"
+	if use debug; then
+		if has_version "<x11-libs/qt-4.4.0_alpha1:4" && ! built_with_use x11-libs/qt:4 debug; then
+			eerror "You are trying to compile ${PN} with USE=\"debug\""
+			eerror "while x11-libs/qt:4 is built without this particular flag."
+			die "Rebuild x11-libs/qt:4 with USE=\"debug\"."
+		elif has_version "x11-libs/qt-core:4" && ! built_with_use x11-libs/qt-core:4 debug; then
+			eerror "You are trying to compile ${PN} with USE=\"debug\""
+			eerror "while x11-libs/qt-core:4 is built without this particular flag."
+			die "Rebuild x11-libs/qt-core:4 with USE=\"debug\"."
+		fi
 	fi
 }
 
