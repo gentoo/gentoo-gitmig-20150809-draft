@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/pidgin-festival-2.2.ebuild,v 1.5 2008/01/09 15:32:12 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/pidgin-festival-2.2.ebuild,v 1.6 2008/03/05 19:34:03 tester Exp $
+
+inherit eutils
 
 DESCRIPTION="A plugin for pidgin which enables text-to-speech output of conversations using festival."
 HOMEPAGE="http://pidgin.festival.sourceforge.net"
