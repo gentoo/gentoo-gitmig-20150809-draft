@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.200 2008/03/04 22:58:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.201 2008/03/05 17:55:59 fmccor Exp $
+
+  05 Mar 2008; Ferris McCormick <fmccor@gentoo.org> pam-0.99.9.0-r1.ebuild:
+  ~sparc for testing --- Bug #210770 --- pam still works for me.
 
   04 Mar 2008; Brent Baude <ranger@gentoo.org> pam-0.99.10.0.ebuild:
   keyworded ~arch for ppc64, bug 210770
