@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.242 2008/03/04 20:37:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.243 2008/03/05 19:11:13 hoffie Exp $
+
+*php-5.2.6_rc1-r1 (05 Mar 2008)
+
+  05 Mar 2008; Christian Hoffmann <hoffie@gentoo.org>
+  +php-5.2.6_rc1-r1.ebuild:
+  revbump to -r1 to include new patchset which fixes a mysql_(p)connect crash
+  (introduced in >5.2.5-r1), several memory corruption issues, a crash in the
+  soap extension and several test failures
 
   04 Mar 2008; Markus Rothe <corsair@gentoo.org> php-5.2.6_rc1.ebuild:
   Stable on ppc64; bug #212211
