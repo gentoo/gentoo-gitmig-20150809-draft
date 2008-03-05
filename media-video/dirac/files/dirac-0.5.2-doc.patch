@@ -15,11 +15,6 @@ diff -x '*~' -ur dirac-0.5.2/configure.ac dirac-0.5.2-doc/configure.ac
 -AC_CHECK_PROG(HAVE_DOT, dot, true, false)
 -	if test $HAVE_DOT = "false"; then
 -		AC_MSG_WARN([*** dot not found, inheritance diagrams will not be generated in code documentation])
-+HAVE_DOXYGEN=false
-+HAVE_DOT=false
-+HAVE_LATEX=false
-+HAVE_DVIPDFM=false
-+
 +if test "x$enabledoc" != "xno"; then
 +	AC_CHECK_PROG(HAVE_DOXYGEN, doxygen, true, false)
 +		if test $HAVE_DOXYGEN = "false"; then
@@ -40,6 +35,11 @@ diff -x '*~' -ur dirac-0.5.2/configure.ac dirac-0.5.2-doc/configure.ac
 +		if test $HAVE_DVIPDFM = "false"; then
 +		AC_MSG_WARN([*** dvipdfm not found, programmer documentation will not be built])
  	fi
++else
++HAVE_DOXYGEN=false
++HAVE_DOT=false
++HAVE_LATEX=false
++HAVE_DVIPDFM=false
 +fi
 +AM_CONDITIONAL(HAVE_DOXYGEN, $HAVE_DOXYGEN)
  AM_CONDITIONAL(HAVE_DOT, $HAVE_DOT)
