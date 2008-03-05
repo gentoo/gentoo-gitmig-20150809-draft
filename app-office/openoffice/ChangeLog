@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.369 2008/02/14 21:22:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.370 2008/03/05 15:36:01 pva Exp $
+
+  05 Mar 2008; <pva@gentoo.org> openoffice-2.3.1-r1.ebuild:
+  amd64 stable, bug #206889.
 
   14 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   openoffice-2.3.1.ebuild:
