@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.326 2008/03/05 14:04:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.327 2008/03/05 14:10:49 fmccor Exp $
+
+  05 Mar 2008; Ferris McCormick <fmccor@gentoo.org> ruby-1.8.6_p114.ebuild:
+  Sparc stable, Security Bug #212264, builds and installs, initial tests run
+  as expected.
 
   05 Mar 2008; Brent Baude <ranger@gentoo.org> ruby-1.8.6_p114.ebuild:
   Marking ruby-1.8.6_p114 ppc64 for bug 212264
