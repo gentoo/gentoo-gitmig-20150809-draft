@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.12.3.ebuild,v 1.12 2008/01/29 18:13:06 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.12.3.ebuild,v 1.13 2008/03/05 00:59:56 dang Exp $
 EAPI="1"
 
 inherit gnome2 eutils
@@ -41,4 +41,6 @@ src_unpack() {
 	# Fix tests. Upstream has fix in gnome 2.19 only at this time
 	echo "components/html-editor/GNOME_GtkHTML_Editor-emacs.xml" >> "${S}/po/POTFILES.skip"
 	echo "components/html-editor/GNOME_GtkHTML_Editor.xml" >> "${S}/po/POTFILES.skip"
+	# Don't set G_DISABLE_DEPRECATED; it breaks builds
+	epatch "${FILESDIR}"/${P}-allow-deprecated.patch
 }
