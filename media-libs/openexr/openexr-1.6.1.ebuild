@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.6.1.ebuild,v 1.8 2008/01/31 18:48:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.6.1.ebuild,v 1.9 2008/03/05 22:50:58 aballier Exp $
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="ILM's OpenEXR high dynamic-range image file format libraries"
 HOMEPAGE="http://openexr.com/"
@@ -23,6 +23,8 @@ src_unpack() {
 
 	# Replace the temporary directory used for tests.
 	sed -i -e 's:"/var/tmp/":"'${T}'":' "IlmImfTest/tmpDir.h"
+
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
 
 	# Sane versioning on FreeBSD - please don't remove elibtoolize
 	elibtoolize
