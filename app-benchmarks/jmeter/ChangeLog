@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/jmeter
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.32 2008/01/10 21:58:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.33 2008/03/05 10:30:56 ali_bush Exp $
+
+*jmeter-2.0.1-r4 (05 Mar 2008)
+
+  05 Mar 2008; Alistair Bush <ali_bush@gentoo.org> +jmeter-2.0.1-r4.ebuild:
+  Fixed invalid vm parameters in start script. see Bug #211953.
 
   10 Jan 2008; Vlastimil Babka <caster@gentoo.org> jmeter-2.0.1-r2.ebuild,
   jmeter-2.0.1-r3.ebuild:
@@ -8,7 +13,7 @@
 
 *jmeter-2.0.1-r3 (20 Nov 2007)
 
-  20 Nov 2007; <alistair@gentoo.org> +jmeter-2.0.1-r3.ebuild:
+  20 Nov 2007; <ali_bush@gentoo.org> +jmeter-2.0.1-r3.ebuild:
   Bumping to support javamail virtual.
 
   29 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> -jmeter-1.9.1.ebuild:
