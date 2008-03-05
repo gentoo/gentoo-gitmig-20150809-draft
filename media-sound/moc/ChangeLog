@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.47 2008/03/01 10:21:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.48 2008/03/05 19:04:57 drac Exp $
+
+*moc-2.5.0_alpha3-r1 (05 Mar 2008)
+
+  05 Mar 2008; Samuli Suominen <drac@gentoo.org>
+  +files/moc-2.5.0_alpha3-faad2.patch, +moc-2.5.0_alpha3-r1.ebuild:
+  aac USE for media-libs/faad2 by Hendrik Iben, bug 211805.
 
 *moc-2.5.0_alpha3 (01 Mar 2008)
 
