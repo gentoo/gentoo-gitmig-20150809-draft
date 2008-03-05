@@ -1,16 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2006.1/64bit-userland/package.mask,v 1.5 2008/03/04 23:14:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2006.1/64bit-userland/package.mask,v 1.6 2008/03/05 00:22:38 ranger Exp $
 
 # Mask multilib ppc64 things
 # Maintained by Yuta Satoh <nigoro@gentoo.org>
 
 
-# Masking newer versions of pam on this profile because pam
-# requires new versions of the toolchain that are unsupported
-# on this profile.
-
->=sys-libs/pam-0.99.8.1-r1
-#>=sys-libs/pam-0.78
->=sys-auth/pambase-20080301
->=sys-apps/shadow-4.0.18.1

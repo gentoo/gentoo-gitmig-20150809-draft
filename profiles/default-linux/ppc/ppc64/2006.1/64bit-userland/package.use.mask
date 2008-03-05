@@ -3,3 +3,6 @@
 sys-fs/evms hb hb2
 =sys-power/nut-2.2.0 hal
 
+# Masking the test USE for pam because it requires
+# glibc-2.4 or newer which is not available for 2006.1
+>=sys-libs/pam-0.99.8 test
