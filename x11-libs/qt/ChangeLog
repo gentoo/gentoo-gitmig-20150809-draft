@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.520 2008/03/05 19:10:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.521 2008/03/05 23:32:09 ingmar Exp $
+
+  05 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -qt-4.4.0_rc1.ebuild:
+  Old.
 
   05 Mar 2008; Jeroen Roovers <jer@gentoo.org> qt-4.4.0_rc1.ebuild:
   Remove ~hppa again.
