@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.0.9-r1.ebuild,v 1.2 2008/02/15 19:02:12 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.0.9-r1.ebuild,v 1.3 2008/03/05 20:16:50 betelgeuse Exp $
 
 EAPI=1
-JAVA_PKG_IUSE="doc source"
+JAVA_PKG_IUSE="doc source test"
 inherit eutils versionator java-pkg-2 java-ant-2
 
 MY_PV=$(replace_all_version_separators _ )
@@ -23,6 +23,7 @@ CDEPEND="java-virtuals/servlet-api:2.3"
 RDEPEND=">=virtual/jre-1.4
 	${CDEPEND}"
 DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
+	test? ( dev-java/junit:0 )
 	${CDEPEND}"
 
 S="${WORKDIR}/${PN}"
@@ -67,6 +68,16 @@ src_unpack() {
 EANT_BUILD_XML="build/build.xml"
 EANT_BUILD_TARGET="jar jarclient jarsqltool jarutil"
 EANT_DOC_TARGET="javadocdev"
+
+src_test() {
+	java-pkg_jar-from --into lib junit
+	eant -f ${EANT_BUILD_XML} jartest
+	cd testrun/hsqldb || die
+	./runTest.sh TestSelf || die "hsqldb tests failed"
+	# TODO. These fail. Investigate why.
+	#cd "${S}/testrun/sqltool" || die
+	#CLASSPATH="${S}/lib/hsqldb.jar" ./runtests.bash || die "sqltool test failed"
+}
 
 src_install() {
 	java-pkg_dojar lib/hsql*.jar
