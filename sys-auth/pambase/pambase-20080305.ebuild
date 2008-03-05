@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080301.ebuild,v 1.5 2008/03/04 23:03:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080305.ebuild,v 1.1 2008/03/05 17:06:15 flameeyes Exp $
 
 inherit eutils
 
@@ -65,6 +65,7 @@ src_compile() {
 	has_version sys-auth/openpam && implementation="openpam"
 
 	emake \
+		GIT=true \
 		DEBUG=$(use debug && echo yes || echo no) \
 		CRACKLIB=$(use cracklib && echo yes || echo no) \
 		CONSOLEKIT=$(use consolekit && echo yes || echo no) \
@@ -75,5 +76,5 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake GIT=true DESTDIR="${D}" install || die "emake install failed"
 }
