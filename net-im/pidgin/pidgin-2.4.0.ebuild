@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.2.2.ebuild,v 1.2 2007/11/30 16:42:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.4.0.ebuild,v 1.1 2008/03/05 19:32:29 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
@@ -41,7 +41,6 @@ RDEPEND="
 	tcl? ( dev-lang/tcl )
 	tk? ( dev-lang/tk )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
-	doc? ( app-doc/doxygen )
 	dev-libs/libxml2
 	networkmanager? ( net-misc/networkmanager )
 	prediction? ( =dev-db/sqlite-3* )"
@@ -51,30 +50,13 @@ DEPEND="$RDEPEND
 	dev-lang/perl
 	dev-perl/XML-Parser
 	dev-util/pkgconfig
+	doc? ( app-doc/doxygen )
 	nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}/${MY_PV}"
 
 # Enable Default protocols
-DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn,myspace"
-
-# List of plugins yet to be ported (will be removed at some point)
-#   net-im/gaim-bnet
-#   x11-plugins/autoprofile
-#   x11-plugins/gaim-xfire
-#   x11-plugins/gaim-galago
-
-# Abandonned
-#   x11-plugins/gaim-assistant
-# Last release in 2004
-#   net-im/gaim-blogger
-#   x11-plugins/gaimosd
-# Merged into something else
-#   net-im/gaim-meanwhile (integrated in gaim)
-#   net-im/gaim-snpp (merged into the plugin pack)
-#   x11-plugins/gaim-slashexec (integrated into plugin pack)
-#   x11-plugins/ignorance (into plugin pack)
-#   x11-plugins/bangexec (into slashexec into plugin pack)
+DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
 
 # List of plugins
 #   app-accessibility/pidgin-festival
@@ -92,16 +74,8 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn,myspace"
 
 print_pidgin_warning() {
 	ewarn
-	ewarn "We strongly recommend that you backup your ~/.gaim directory"
-	ewarn "before running Pidgin for the first time. Things you should be"
-	ewarn "on the lookout for include problems with preferences being lost"
-	ewarn "or forgotten, buddy icons not working as you expect, plugins or"
-	ewarn "other external files not properly being found."
-	ewarn
 	ewarn "If you experience problems with pidgin, file them as bugs with"
-	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org.  DO NOT report them"
-	ewarn "as bugs with pidgin's bug tracker, and by all means DO NOT"
-	ewarn "seek help in #pidgin."
+	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org"
 	ewarn
 	ewarn "Be sure to USE=\"debug\" and include a backtrace for any seg"
 	ewarn "faults, see http://developer.pidgin.im/wiki/GetABacktrace for details on"
@@ -132,8 +106,8 @@ pkg_setup() {
 
 	if ! use gtk && ! use ncurses ; then
 		einfo
-		elog "As you did not pick gtk or ncurses use flag, building"
-		elog "console only."
+		elog "You did not pick the ncurses or gtk use flags, only libpurple"
+		elog "will be built."
 		einfo
 	fi
 
@@ -197,15 +171,11 @@ src_compile() {
 		myconf="${myconf} --enable-gnutls=no --enable-nss=yes"
 	fi
 
-	if ! use ncurses && ! use gtk; then
-		myconf="${myconf} --enable-consoleui --disable-gtkui"
-	else
-		myconf="${myconf} $(use_enable ncurses consoleui) $(use_enable gtk gtkui)"
-	fi
-
 	econf \
+		$(use_enable ncurses consoleui) \
 		$(use_enable nls) \
 		$(use_enable perl) \
+		$(use_enable gtk gtkui) \
 		$(use_enable gtk startup-notification) \
 		$(use_enable gtk screensaver) \
 		$(use_enable gtk sm) \
@@ -234,7 +204,10 @@ src_compile() {
 src_install() {
 	gnome2_src_install
 	use perl && fixlocalpod
-	dodoc AUTHORS COPYING HACKING INSTALL NEWS README ChangeLog
+	dodoc AUTHORS HACKING INSTALL NEWS README ChangeLog
+
+	# Remove superfluous desktop file
+	use gtk || rm -rf "${D}/usr/share/applications"
 }
 
 pkg_postinst() {
