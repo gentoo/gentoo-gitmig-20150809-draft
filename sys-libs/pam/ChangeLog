@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.201 2008/03/05 17:55:59 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.202 2008/03/05 18:47:08 fmccor Exp $
+
+  05 Mar 2008; Ferris McCormick <fmccor@gentoo.org> pam-0.99.10.0.ebuild:
+  Add ~sparc for testing --- Bug #210770 (correct version this time).
 
   05 Mar 2008; Ferris McCormick <fmccor@gentoo.org> pam-0.99.9.0-r1.ebuild:
   ~sparc for testing --- Bug #210770 --- pam still works for me.
