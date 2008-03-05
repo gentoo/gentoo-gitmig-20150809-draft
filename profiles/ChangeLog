@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1181 2008/03/05 21:56:02 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1182 2008/03/05 23:04:45 flameeyes Exp $
+
+  05 Mar 2008; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
+  Add passwdqc USE flag for pambase.
 
   05 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> use.local.desc:
   Added local USE descriptions for Qt-4.4.0_beta1.
