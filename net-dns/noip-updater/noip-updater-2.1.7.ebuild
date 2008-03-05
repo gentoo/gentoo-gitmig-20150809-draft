@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.1.7.ebuild,v 1.5 2008/01/12 16:44:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.1.7.ebuild,v 1.6 2008/03/05 19:37:16 coldwind Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.no-ip.com/client/linux/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=""
