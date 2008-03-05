@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.225 2008/02/04 04:09:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.226 2008/03/05 09:04:29 leio Exp $
+
+*evolution-2.12.3-r1 (05 Mar 2008)
+
+  05 Mar 2008; Mart Raudsepp <leio@gentoo.org>
+  +files/evolution-CVE-2008-0072.patch, +evolution-2.12.3-r1.ebuild:
+  Security fix for "Encrypted Message Version Format String Vulnerability".
+  Stable on alpha, amd64, hppa, ia64, ppc64, sparc and x86
 
   04 Feb 2008; Jeroen Roovers <jer@gentoo.org> evolution-2.12.2.ebuild:
   Stable for HPPA (bug #208366).
