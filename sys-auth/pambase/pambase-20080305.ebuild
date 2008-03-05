@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080305.ebuild,v 1.1 2008/03/05 17:06:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20080305.ebuild,v 1.2 2008/03/05 17:53:43 fmccor Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/base/pam/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~hppa ~ppc64 ~x86"
+KEYWORDS="~hppa ~ppc64 ~sparc ~x86"
 IUSE="debug cracklib consolekit gnome selinux"
 
 RDEPEND="
