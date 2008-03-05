@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.0.1-r1.ebuild,v 1.1 2008/02/15 23:49:33 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.0.1-r1.ebuild,v 1.2 2008/03/05 18:56:42 jer Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ inherit kde4-base
 DESCRIPTION="KDE libraries needed by all KDE programs."
 HOMEPAGE="http://www.kde.org/"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="3dnow acl alsa altivec bindist +bzip2 debug doc fam htmlhandbook jpeg2k
 kerberos mmx nls openexr opengl +semantic-desktop spell sse sse2 ssl test zeroconf"
 LICENSE="GPL-2 LGPL-2"
