@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.325 2008/03/05 11:35:24 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.326 2008/03/05 14:04:17 ranger Exp $
+
+  05 Mar 2008; Brent Baude <ranger@gentoo.org> ruby-1.8.6_p114.ebuild:
+  Marking ruby-1.8.6_p114 ppc64 for bug 212264
 
 *ruby-1.8.6_p114 (05 Mar 2008)
 
