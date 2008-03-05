@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-0.9.1.ebuild,v 1.2 2008/03/05 23:19:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-0.9.1.ebuild,v 1.3 2008/03/05 23:20:17 aballier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,8 +17,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="mmx debug doc"
 
 DEPEND="doc? ( app-doc/doxygen
-	virtual/latex-base 
-	media-gfx/graphviz 
+	virtual/latex-base
+	media-gfx/graphviz
 	|| ( app-text/dvipdfm
 		>=app-text/tetex-2
 		app-text/ptex )
