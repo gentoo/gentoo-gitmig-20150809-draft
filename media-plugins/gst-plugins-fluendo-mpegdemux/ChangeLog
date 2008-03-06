@@ -1,6 +1,6 @@
 # ChangeLog for media-plugins/gst-plugins-fluendo-mpegdemux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-fluendo-mpegdemux/ChangeLog,v 1.3 2008/02/14 15:21:09 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-fluendo-mpegdemux/ChangeLog,v 1.4 2008/03/06 17:18:25 tove Exp $
 
 *gst-plugins-fluendo-mpegdemux-0.10.15 (14 Feb 2008)
 
@@ -8,7 +8,7 @@
   +gst-plugins-fluendo-mpegdemux-0.10.15.ebuild:
   version bump
 
-  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
 *gst-plugins-fluendo-mpegdemux-0.10.4 (26 Apr 2006)
