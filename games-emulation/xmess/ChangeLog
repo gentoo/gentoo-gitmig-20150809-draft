@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/xmess
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.59 2007/03/12 14:07:09 genone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.60 2008/03/06 22:43:16 wolf31o2 Exp $
+
+  06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> xmess-0.83.1.ebuild:
+  QA cleanup: Fix quoting.
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> xmess-0.83.1.ebuild,
   xmess-0.105.ebuild, xmess-0.106.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.83.1.ebuild,v 1.10 2007/03/12 14:07:09 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.83.1.ebuild,v 1.11 2008/03/06 22:43:16 wolf31o2 Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 
 LICENSE="xmame"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick net expat lirc xinerama"
 
 RDEPEND="sys-libs/zlib
@@ -47,7 +47,7 @@ S="${WORKDIR}/xmame-${PV}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${PV}-glx-fix.patch"
 	sed -i \
 		-e 's:JOY_BUTTONS 16:JOY_BUTTONS 32:' src/unix/devices.h \
