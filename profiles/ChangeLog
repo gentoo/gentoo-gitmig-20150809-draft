@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1182 2008/03/05 23:04:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1183 2008/03/06 03:05:19 wolf31o2 Exp $
+
+  06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> use.local.desc:
+  Added local USE flags for games-action/abuse.
 
   05 Mar 2008; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add passwdqc USE flag for pambase.
