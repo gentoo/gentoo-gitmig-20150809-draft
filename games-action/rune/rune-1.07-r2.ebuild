@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.7 2008/02/29 18:03:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.8 2008/03/06 03:39:53 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -68,7 +68,7 @@ src_install() {
 		# the most important things: rune and ucc :)
 		doexe "${CDROM_ROOT}"/bin/x86/rune \
 			|| die "Could not install rune executable"
-		fperms 750 ${dir}/System/{ucc{,-bin},rune-bin} \
+		fperms 750 "${dir}"/System/{ucc{,-bin},rune-bin} \
 			|| die "Could not make executables executable"
 
 		# installing documentation/icon
@@ -83,25 +83,25 @@ src_install() {
 		done
 
 		# copying the texture files
-		dodir ${dir}/Textures
+		dodir "${dir}"/Textures
 		for x in $(find "${CDROM_ROOT}"/Textures/ -type f -printf '%f ')
 		do
-			echo -ne '\271\325\036\214' | cat - ${CDROM_ROOT}/Textures/$x \
-				|sed -e '1 s/\(....\)..../\1/' > ${Ddir}/Textures/$x \
+			echo -ne '\271\325\036\214' | cat - "${CDROM_ROOT}"/Textures/$x \
+				|sed -e '1 s/\(....\)..../\1/' > "${Ddir}"/Textures/$x \
 				|| die "modifying and copying $x"
 		done
 
-		doins -r ${S}/System || die "Could not copy Linux specific files"
-		doins -r ${S}/Help || die "Could not copy Help data"
+		doins -r "${S}"/System || die "Could not copy Linux specific files"
+		doins -r "${S}"/Help || die "Could not copy Help data"
 		sed -e "s:.*\(\w+/\w+\)\w:\1:"
-		for x in $(ls ${S}/patch/{System,Maps,Meshes} |sed -e \
+		for x in $(ls "${S}"/patch/{System,Maps,Meshes} |sed -e \
 			"s:.*/\([^/]\+/[^/]\+\).patch$:\1:")
 		do
-			xdelta patch ${S}/patch/${x}.patch ${CDROM_ROOT}/${x} ${S}/patch/${x}
-			doins ${S}/patch/${x} || die "Could not copy Patch data"
+			xdelta patch "${S}"/patch/${x}.patch "${CDROM_ROOT}"/${x} "${S}"/patch/${x}
+			doins "${S}"/patch/${x} || die "Could not copy Patch data"
 		done
 
-		insinto ${dir}/System
+		insinto "${dir}"/System
 
 		# copying system files from the Windows CD
 		for x in "${CDROM_ROOT}"/System/*.{int,u,url}; do
@@ -109,21 +109,21 @@ src_install() {
 		done
 
 		# modify the files
-		mv ${Ddir}/System/OpenGlDrv.int ${Ddir}/System/OpenGLDrv.int \
+		mv "${Ddir}"/System/OpenGlDrv.int "${Ddir}"/System/OpenGLDrv.int \
 			|| die "Could not modify System file OpenGlDrv.int"
-		mv ${Ddir}/Textures/bloodFX.utx ${Ddir}/Textures/BloodFX.utx \
+		mv "${Ddir}"/Textures/bloodFX.utx "${Ddir}"/Textures/BloodFX.utx \
 			|| die "Could not modify Texture file bloodFX.utx"
-		mv ${Ddir}/Textures/RUNESTONES.UTX ${Ddir}/Textures/RUNESTONES.utx \
+		mv "${Ddir}"/Textures/RUNESTONES.UTX "${Ddir}"/Textures/RUNESTONES.utx \
 			|| die "Could not modify Texture file RUNESTONES.UTX"
-		mv ${Ddir}/Textures/tedd.utx ${Ddir}/Textures/Tedd.utx \
+		mv "${Ddir}"/Textures/tedd.utx "${Ddir}"/Textures/Tedd.utx \
 			|| die "Could not modify Texture file tedd.utx"
-		mv ${Ddir}/Textures/UNDERANCIENT.utx ${Ddir}/Textures/UnderAncient.utx \
+		mv "${Ddir}"/Textures/UNDERANCIENT.utx "${Ddir}"/Textures/UnderAncient.utx \
 			|| die "Could not modify Texture file UNDERANCIENT.utx"
-		rm ${Ddir}/System/{Setup.int,SGLDrv.int,MeTaLDrv.int,Manifest.int,D3DDrv.int,Galaxy.int,SoftDrv.int,WinDrv.int,Window.int} || die "Could not delete not needed System files"
+		rm "${Ddir}"/System/{Setup.int,SGLDrv.int,MeTaLDrv.int,Manifest.int,D3DDrv.int,Galaxy.int,SoftDrv.int,WinDrv.int,Window.int} || die "Could not delete not needed System files"
 
 		# the most important things: rune and ucc :)
-		doexe ${S}/bin/x86/rune || die "Could not install rune executable"
-		fperms 750 ${dir}/System/{ucc,ucc-bin,rune-bin} \
+		doexe "${S}"/bin/x86/rune || die "Could not install rune executable"
+		fperms 750 "${dir}"/System/{ucc,ucc-bin,rune-bin} \
 			|| die "Could not make executables executable"
 
 		# installing documentation/icon
@@ -132,11 +132,11 @@ src_install() {
 	;;
 	esac
 
-	use amd64 && mv ${Ddir}/System/libSDL-1.2.so.0 \
-		${Ddir}/System/libSDL-1.2.so.0.backup
+	use amd64 && mv "${Ddir}"/System/libSDL-1.2.so.0 \
+		"${Ddir}"/System/libSDL-1.2.so.0.backup
 
 	games_make_wrapper rune ./rune "${dir}" "${dir}"
-	make_desktop_entry rune "Rune" rune "Game;ActionGame"
-	find ${Ddir} -exec touch '{}' \;
+	make_desktop_entry rune "Rune" rune
+	find "${Ddir}" -exec touch '{}' \;
 	prepgamesdirs
 }
