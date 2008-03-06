@@ -1,6 +1,10 @@
 # ChangeLog for games-action/xshipwars
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/ChangeLog,v 1.19 2008/03/06 03:45:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/ChangeLog,v 1.20 2008/03/06 03:51:39 wolf31o2 Exp $
+
+  06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  xshipwars-2.5.5.ebuild:
+  Shorten DESCRIPTION by removing extraneous text.
 
   06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   -files/xshipwars-1.34.0-gcc3.patch, -files/xshipwars-1.34.0-gcc33.patch,
