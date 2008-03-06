@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.295 2008/03/04 20:54:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.296 2008/03/06 15:40:21 hollow Exp $
+
+*phpmyadmin-2.11.5-r1 (06 Mar 2008)
+
+  06 Mar 2008; Benedikt Böhm <hollow@gentoo.org>
+  files/postinstall-en-2.8.0.txt,
+  +files/phpmyadmin-2.11.5-custom-cert.patch, -phpmyadmin-2.11.2.2.ebuild,
+  -phpmyadmin-2.11.4.ebuild, +phpmyadmin-2.11.5-r1.ebuild:
+  add patch for custom connection certificates; fix postinstall instructions
+  wrt #212117; remove vulnerable versions wrt #212000
 
   04 Mar 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   phpmyadmin-2.11.5.ebuild:

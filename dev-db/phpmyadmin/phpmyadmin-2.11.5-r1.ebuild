@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.11.4.ebuild,v 1.1 2008/02/19 13:35:21 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.11.5-r1.ebuild,v 1.1 2008/03/06 15:40:21 hollow Exp $
 
 inherit eutils webapp depend.php
 
@@ -15,12 +15,10 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+need_httpd_cgi
+need_php_httpd
 
 S="${WORKDIR}"/${MY_P}
-
-need_php_httpd
 
 pkg_setup() {
 	webapp_pkg_setup
@@ -40,6 +38,12 @@ pkg_setup() {
 		eerror
 		die "Re-install ${PHP_PKG}"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-2.11.5-custom-cert.patch
 }
 
 src_install() {
