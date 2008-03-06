@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/amap
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.41 2008/03/06 11:22:00 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.42 2008/03/06 12:44:38 armin76 Exp $
+
+  06 Mar 2008; Raúl Porcel <armin76@gentoo.org> amap-5.2-r1.ebuild:
+  ia64/sparc stable wrt #212358
 
   06 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> amap-5.2-r1.ebuild:
   amd64 stable wrt bug #212358
