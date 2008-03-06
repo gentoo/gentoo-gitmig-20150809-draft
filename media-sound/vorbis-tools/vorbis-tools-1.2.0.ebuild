@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.2.0.ebuild,v 1.3 2008/03/06 14:59:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.2.0.ebuild,v 1.4 2008/03/06 15:03:44 drac Exp $
 
 EAPI=1
 
@@ -32,8 +32,8 @@ src_unpack() {
 
 src_compile() {
 	econf --docdir=/usr/share/doc/${PF} --enable-vcut \
-		$(use_enable flac) $(use_enable ogg123) \
-		$(use_with nls) $(use_with speex)
+		$(use_enable nls) $(use_enable ogg123) \
+		$(use_with flac) $(use_with speex)
 	emake || die "emake failed."
 }
 
