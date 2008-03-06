@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pysol
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/ChangeLog,v 1.16 2008/02/29 18:59:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/ChangeLog,v 1.17 2008/03/06 21:46:41 wolf31o2 Exp $
+
+  06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> pysol-4.82-r2.ebuild:
+  I hate to do this, but dropping from mips to ~mips since mips doesn't have a
+  stable dev-lang/tk version.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> pysol-4.82-r2.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
