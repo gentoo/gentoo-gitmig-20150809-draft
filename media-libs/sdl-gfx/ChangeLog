@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.37 2008/02/14 15:16:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.38 2008/03/06 03:59:50 wolf31o2 Exp $
+
+  06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> sdl-gfx-2.0.16.ebuild:
+  Added ~x86-fbsd since it was likely needed to be added for bug #175779,
+  which has ~x86-fbsd KEYWORDS.
 
   14 Feb 2008; Tristan Heaven <nyhm@gentoo.org> sdl-gfx-2.0.16.ebuild:
   Respect LDFLAGS, bug #210137
