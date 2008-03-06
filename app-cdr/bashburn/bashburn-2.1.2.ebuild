@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-2.1.2.ebuild,v 1.4 2008/02/14 17:19:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-2.1.2.ebuild,v 1.5 2008/03/06 16:13:50 angelos Exp $
 
 MY_P=BashBurn-${PV}
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE="dvdr"
 
 DEPEND="virtual/libc
