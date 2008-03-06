@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.13 2007/09/15 00:35:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.14 2008/03/06 03:17:24 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -50,7 +50,7 @@ src_unpack() {
 	else
 		cdrom_get_cds missions/d3.mn3
 	fi
-	mkdir -p ${S}/{a,b}
+	mkdir -p "${S}"/{a,b}
 	cd "${S}"/a
 	unpack_makeself ${PN}-1.4.0a-x86.run
 	cd "${S}"/b
