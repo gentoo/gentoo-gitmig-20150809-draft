@@ -1,12 +1,12 @@
 # ChangeLog for games-kids/tuxtype2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype2/ChangeLog,v 1.7 2008/02/20 21:45:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype2/ChangeLog,v 1.8 2008/03/06 17:06:04 tove Exp $
 
 *tuxtype2-1.5.16 (20 Feb 2008)
 
   20 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +tuxtype2-1.5.16.ebuild:
-  version bump - ebuild submitted by TomÃ¡Å¡ ChvÃ¡ via bug #210677
+  version bump - ebuild submitted by Tomáš Chvátal via bug #210677
 
 *tuxtype2-1.5.3-r1 (01 Jun 2007)
 
