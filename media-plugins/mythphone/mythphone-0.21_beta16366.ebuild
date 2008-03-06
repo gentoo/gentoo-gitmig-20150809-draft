@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/mythphone-0.21_pre15448.ebuild,v 1.1 2008/01/15 16:21:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/mythphone-0.21_beta16366.ebuild,v 1.1 2008/03/06 20:32:14 cardoe Exp $
 
 inherit mythtv-plugins subversion
 

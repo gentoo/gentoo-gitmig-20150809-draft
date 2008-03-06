@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythflix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythflix/ChangeLog,v 1.16 2008/03/03 21:31:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythflix/ChangeLog,v 1.17 2008/03/06 20:24:43 cardoe Exp $
+
+*mythflix-0.21_beta16366 (06 Mar 2008)
+
+  06 Mar 2008; Doug Klima <cardoe@gentoo.org>
+  -mythflix-0.21_beta16297.ebuild, +mythflix-0.21_beta16366.ebuild:
+  0.21 beta bump
 
 *mythflix-0.21_beta16297 (03 Mar 2008)
 
