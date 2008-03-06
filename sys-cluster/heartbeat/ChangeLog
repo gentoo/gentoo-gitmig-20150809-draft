@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.72 2008/03/01 18:32:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.73 2008/03/06 19:52:03 wolf31o2 Exp $
+
+  06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  heartbeat-1.2.5.ebuild:
+  I'm sure somebody will laugh at me for this, but running through ekeyword to
+  reorder the KEYWORDS alphabetically for easier comparisons.
 
   01 Mar 2008; Christoph Mende <angelos@gentoo.org>
   heartbeat-1.2.5-r1.ebuild, heartbeat-2.0.8.ebuild:
