@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/amap
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.40 2008/03/06 11:09:37 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.41 2008/03/06 11:22:00 coldwind Exp $
+
+  06 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> amap-5.2-r1.ebuild:
+  amd64 stable wrt bug #212358
 
   06 Mar 2008; Dawid Węgliński <cla@gentoo.org> amap-5.2-r1.ebuild:
   Stable on x86 (bug #212358)
