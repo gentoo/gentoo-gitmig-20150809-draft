@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.15 2007/03/07 16:48:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.16 2008/03/06 21:53:36 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	mkdir my-bins
 	if use ppc ; then
 		sed -i \
