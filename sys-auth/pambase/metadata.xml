@@ -35,5 +35,10 @@
       when changing your system password. It is used by default by
       OpenWall GNU/*/Linux and by FreeBSD.
     </flag>
+    <flag name="mktemp">
+      Enable pam_mktemp module on system auth stack for session
+      handling. This module creates a private temporary directory for
+      the user, and sets TMP and TMPDIR accordingly.
+    </flag>
   </use>
 </pkgmetadata>

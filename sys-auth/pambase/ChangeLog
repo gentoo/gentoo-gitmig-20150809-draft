@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.20 2008/03/06 11:09:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.21 2008/03/06 15:12:40 flameeyes Exp $
+
+*pambase-20080306.2 (06 Mar 2008)
+
+  06 Mar 2008; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  +pambase-20080306.2.ebuild:
+  Add a new release with pam_mktemp as a dependency. This means a few more
+  keywords needed, sorry.
 
   06 Mar 2008; Raúl Porcel <armin76@gentoo.org> pambase-20080306.1.ebuild:
   Add ~alpha/~ia64
