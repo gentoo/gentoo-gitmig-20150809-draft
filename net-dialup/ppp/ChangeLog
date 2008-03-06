@@ -1,6 +1,6 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.207 2008/02/20 16:38:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.208 2008/03/06 16:59:15 tove Exp $
 
   20 Feb 2008; Alin Năstac <mrness@gentoo.org> ppp-2.4.4-r14.ebuild:
   Re-add bindnow LDFLAGS (#210837).
@@ -18,7 +18,7 @@
   23 Dec 2007; Stuart Longland <redhatter@gentoo.org> ppp-2.4.4-r13.ebuild:
   Tested and working on MIPS.  Marked stable.
 
-  05 Nov 2007; RaÃºl Porcel <armin76@gentoo.org> ppp-2.4.4-r13.ebuild:
+  05 Nov 2007; Raúl Porcel <armin76@gentoo.org> ppp-2.4.4-r13.ebuild:
   sparc stable wrt #194820
 
   02 Nov 2007; Steve Dibb <beandog@gentoo.org> ppp-2.4.4-r13.ebuild:
@@ -27,7 +27,7 @@
   14 Oct 2007; Markus Rothe <corsair@gentoo.org> ppp-2.4.4-r13.ebuild:
   Stable on ppc64; bug #194820
 
-  11 Oct 2007; RaÃºl Porcel <armin76@gentoo.org> ppp-2.4.4-r13.ebuild:
+  11 Oct 2007; Raúl Porcel <armin76@gentoo.org> ppp-2.4.4-r13.ebuild:
   alpha/ia64 stable wrt #194820
 
   09 Oct 2007; Jeroen Roovers <jer@gentoo.org> ppp-2.4.4-r13.ebuild:
@@ -41,24 +41,24 @@
 
 *ppp-2.4.4-r13 (03 Sep 2007)
 
-  03 Sep 2007; Alin NÄstac <mrness@gentoo.org> -ppp-2.4.4-r12.ebuild,
+  03 Sep 2007; Alin Năstac <mrness@gentoo.org> -ppp-2.4.4-r12.ebuild,
   +ppp-2.4.4-r13.ebuild:
   Improve up/down scripts (#190143).
 
 *ppp-2.4.4-r12 (31 Aug 2007)
 
-  31 Aug 2007; Alin NÄstac <mrness@gentoo.org> -ppp-2.4.4-r4.ebuild,
+  31 Aug 2007; Alin Năstac <mrness@gentoo.org> -ppp-2.4.4-r4.ebuild,
   +ppp-2.4.4-r12.ebuild:
   Use gtk+-2 library (#189350). Add support for /etc/ppp/ip-{up,down}.d
   directories (#190143).
 
 *ppp-2.4.4-r11 (17 Aug 2007)
 
-  17 Aug 2007; Alin NÄstac <mrness@gentoo.org> -ppp-2.4.4-r10.ebuild,
+  17 Aug 2007; Alin Năstac <mrness@gentoo.org> -ppp-2.4.4-r10.ebuild,
   +ppp-2.4.4-r11.ebuild:
   Create /dev/ppp instead loading ppp_generic module (#163098).
 
-  07 Aug 2007; Alin NÄstac <mrness@gentoo.org> +ppp-2.4.4-r10.ebuild:
+  07 Aug 2007; Alin Năstac <mrness@gentoo.org> +ppp-2.4.4-r10.ebuild:
   Add defaultmetric option and allow setting the default route even if one
   already exist (but has a different metric). Load ppp_generic kernel module
   before trying to open /dev/ppp (#163098).
@@ -68,7 +68,7 @@
 
 *ppp-2.4.4-r10 (07 Aug 2007)
 
-  07 Aug 2007; Alin NÄstac <mrness@gentoo.org> +ppp-2.4.4-r10.ebuild:
+  07 Aug 2007; Alin Năstac <mrness@gentoo.org> +ppp-2.4.4-r10.ebuild:
   Add defaultmetric option. Load ppp_generic kernel module before trying to
   open /dev/ppp (#163098).
 
@@ -87,7 +87,7 @@
   11 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> ppp-2.4.4-r9.ebuild:
   Stable on sparc wrt #184696
 
-  10 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> ppp-2.4.4-r9.ebuild:
+  10 Jul 2007; Raúl Porcel <armin76@gentoo.org> ppp-2.4.4-r9.ebuild:
   alpha/x86 stable wrt #184696
 
   10 Jul 2007; Jeroen Roovers <jer@gentoo.org> ppp-2.4.4-r9.ebuild:
@@ -95,32 +95,32 @@
 
 *ppp-2.4.4-r9 (09 Jul 2007)
 
-  09 Jul 2007; Alin NÄstac <mrness@gentoo.org> -ppp-2.4.4-r5.ebuild,
+  09 Jul 2007; Alin Năstac <mrness@gentoo.org> -ppp-2.4.4-r5.ebuild,
   -ppp-2.4.4-r8.ebuild, +ppp-2.4.4-r9.ebuild:
   Install pppd header files (#184545).
 
 *ppp-2.4.4-r8 (14 Jun 2007)
 
-  14 Jun 2007; Alin NÄstac <mrness@gentoo.org> -ppp-2.4.4-r7.ebuild,
+  14 Jun 2007; Alin Năstac <mrness@gentoo.org> -ppp-2.4.4-r7.ebuild,
   +ppp-2.4.4-r8.ebuild:
   Fix another grammar error (#180180).
 
 *ppp-2.4.4-r7 (14 Jun 2007)
 
-  14 Jun 2007; Alin NÄstac <mrness@gentoo.org> -ppp-2.4.4-r6.ebuild,
+  14 Jun 2007; Alin Năstac <mrness@gentoo.org> -ppp-2.4.4-r6.ebuild,
   +ppp-2.4.4-r7.ebuild:
   Correct auth-fail paragraphs of the pppd man page (#180180).
 
 *ppp-2.4.4-r6 (09 Jun 2007)
 
-  09 Jun 2007; Alin NÄstac <mrness@gentoo.org> +ppp-2.4.4-r6.ebuild:
+  09 Jun 2007; Alin Năstac <mrness@gentoo.org> +ppp-2.4.4-r6.ebuild:
   Kill children instead process group when pppd is still attached to the
   controlling terminal (#181145). Add auth-fail script, thanks to Jaco Kroon
   <jaco at kroon dot co dot za> (#180180).
 
 *ppp-2.4.4-r5 (28 May 2007)
 
-  28 May 2007; Alin NÄstac <mrness@gentoo.org> +ppp-2.4.4-r5.ebuild:
+  28 May 2007; Alin Năstac <mrness@gentoo.org> +ppp-2.4.4-r5.ebuild:
   Fix QA notice. Remove /var/run/ppp-$linkname.pid only on exit (#179978).
 
   06 May 2007; Marius Mauch <genone@gentoo.org> ppp-2.4.4-r4.ebuild:
@@ -132,7 +132,7 @@
   16 Apr 2007; Stefan Schweizer <genstef@gentoo.org> ppp-2.4.4-r4.ebuild:
   Use update-modules thanks to jakub in bug 174749
 
-  13 Apr 2007; Alin NÄstac <mrness@gentoo.org> -ppp-2.4.3-r16.ebuild:
+  13 Apr 2007; Alin Năstac <mrness@gentoo.org> -ppp-2.4.3-r16.ebuild:
   Remove old version.
 
   13 Apr 2007; Jeroen Roovers <jer@gentoo.org> ppp-2.4.4-r4.ebuild:
@@ -141,20 +141,20 @@
   08 Apr 2007; <solar@gentoo.org> ppp-2.4.4-r4.ebuild:
   - added ~s390
 
-  27 Jan 2007; Alexander H. FÃ¦rÃ¸y <eroyf@gentoo.org> ppp-2.4.4-r4.ebuild:
+  27 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org> ppp-2.4.4-r4.ebuild:
   Stable on MIPS; bug #157525
 
-  21 Jan 2007; Alin NÄstac <mrness@gentoo.org> ppp-2.4.4-r4.ebuild:
+  21 Jan 2007; Alin Năstac <mrness@gentoo.org> ppp-2.4.4-r4.ebuild:
   Stable on amd64 (#157525).
 
-  05 Jan 2007; Alin NÄstac <mrness@gentoo.org> -ppp-2.4.4-r3.ebuild,
+  05 Jan 2007; Alin Năstac <mrness@gentoo.org> -ppp-2.4.4-r3.ebuild,
   ppp-2.4.4-r4.ebuild:
   Add -D_GNU_SOURCE to CFLAGS (#159877). Remove obsolete revision.
 
-  31 Dec 2006; Bryan Ãstergaard <kloeri@gentoo.org> ppp-2.4.4-r4.ebuild:
+  31 Dec 2006; Bryan Østergaard <kloeri@gentoo.org> ppp-2.4.4-r4.ebuild:
   Stable on Alpha, bug 157525.
 
-  23 Dec 2006; Alexander H. FÃ¦rÃ¸y <eroyf@gentoo.org> ppp-2.4.4-r4.ebuild:
+  23 Dec 2006; Alexander H. Færøy <eroyf@gentoo.org> ppp-2.4.4-r4.ebuild:
   Stable on IA64; bug #157525
 
   17 Dec 2006; Tobias Scherbaum <dertobi123@gentoo.org> ppp-2.4.4-r4.ebuild:
@@ -310,7 +310,7 @@
   incompatibilities (#119705). If eap-tls is enabled, apply eap-tls-0.7-mppe 
   patch regardless whether mppe-mppc flag is enabled or not.
 
-  25 Dec 2005; Diego PettenÃ² <flameeyes@gentoo.org> ppp-2.4.3-r10.ebuild:
+  25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> ppp-2.4.3-r10.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.
 
 *ppp-2.4.3-r10 (29 Nov 2005)
@@ -559,7 +559,7 @@
   31 Oct 2004; Daniel Black <dragonheart@gentoo.org> ppp-2.4.2-r7.ebuild:
   x86 stable
 
-  30 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> ppp-2.4.2-r7.ebuild:
+  30 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> ppp-2.4.2-r7.ebuild:
   Stable on alpha, bug 69152.
 
   30 Oct 2004; Jason Wever <weeve@gentoo.org> ppp-2.4.2-r7.ebuild:
