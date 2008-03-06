@@ -1,6 +1,9 @@
 # ChangeLog for games-action/abuse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/ChangeLog,v 1.1 2008/03/06 03:07:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/ChangeLog,v 1.2 2008/03/06 03:08:46 wolf31o2 Exp $
+
+  06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> abuse-0.7.1.ebuild:
+  Sync KEYWORDS with games-action/abuse_sdl so we can remove it.
 
 *abuse-0.7.1 (06 Mar 2008)
 
