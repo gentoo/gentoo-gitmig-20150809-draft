@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.30 2008/02/01 13:03:37 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.31 2008/03/06 18:29:27 alonbl Exp $
+
+*loop-aes-3.2c (06 Mar 2008)
+
+  06 Mar 2008; Alon Bar-Lev <alonbl@gentoo.org> +loop-aes-3.2c.ebuild:
+  Version bump
 
   01 Feb 2008; Alon Bar-Lev <alonbl@gentoo.org> -loop-aes-3.2a.ebuild:
   Cleanup
