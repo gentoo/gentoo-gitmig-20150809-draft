@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/cdecl
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/ChangeLog,v 1.12 2008/02/11 11:20:02 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/ChangeLog,v 1.13 2008/03/06 17:24:19 tove Exp $
 
   11 Feb 2008; Patrick Kursawe <phosphan@gentoo.org> cdecl-2.5-r1.ebuild:
   Works with bison, fixed dependencies, see bug #159885
@@ -8,7 +8,7 @@
   04 Jun 2007; Patrick Kursawe <phosphan@gentoo.org> cdecl-2.5-r1.ebuild:
   Homepage adjusted, bug #179548
 
-  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
   29 Apr 2006; Jason Wever <weeve@gentoo.org> cdecl-2.5-r1.ebuild:
