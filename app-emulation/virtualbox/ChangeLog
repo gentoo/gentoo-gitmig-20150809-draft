@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.37 2008/03/04 21:06:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.38 2008/03/06 16:21:10 angelos Exp $
+
+  06 Mar 2008; Christoph Mende <angelos@gentoo.org>
+  virtualbox-1.5.4-r1.ebuild:
+  Stable on amd64, bug #208905
 
   04 Mar 2008; Markus Ullmann <jokey@gentoo.org> virtualbox-1.5.4-r1.ebuild:
   Stable on x86 wrt bug #208905
