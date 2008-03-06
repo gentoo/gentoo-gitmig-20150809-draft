@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.486 2008/03/06 15:30:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.487 2008/03/06 18:25:35 nixnut Exp $
+
+  06 Mar 2008; nixnut <nixnut@gentoo.org> gentoo-sources-2.6.23-r9.ebuild:
+  Stable on ppc wrt bug 212496
 
   06 Mar 2008; Jeroen Roovers <jer@gentoo.org>
   gentoo-sources-2.6.23-r9.ebuild:
