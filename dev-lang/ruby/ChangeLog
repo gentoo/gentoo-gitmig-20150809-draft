@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.331 2008/03/06 11:56:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.332 2008/03/06 13:45:06 beandog Exp $
+
+  06 Mar 2008; Steve Dibb <beandog@gentoo.org> ruby-1.8.6_p114.ebuild:
+  amd64 stable, bug 212264
 
   06 Mar 2008; Jeroen Roovers <jer@gentoo.org> ruby-1.8.6_p114.ebuild:
   Stable for HPPA (bug #212264).
