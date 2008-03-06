@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation and Arcady Genkin <agenkin@thpoon.com>
+# Copyright 1999-2008 Gentoo Foundation and Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/koth/koth-0.8.0.ebuild,v 1.15 2007/07/27 11:23:50 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/koth/koth-0.8.0.ebuild,v 1.16 2008/03/06 03:26:28 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="media-libs/libggi"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	sed -i 's:-g -O2::' configure \
 		|| die "sed configure failed"
