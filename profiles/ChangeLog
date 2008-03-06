@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1184 2008/03/06 03:10:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1185 2008/03/06 15:03:38 flameeyes Exp $
+
+  06 Mar 2008; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
+  Add mktemp USE flag for pambase.
 
   06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> updates/1Q-2008:
   Added a package move for games-action/abuse_sdl to games-action/abuse.
