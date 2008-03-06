@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.2.4.ebuild,v 1.3 2008/03/04 18:45:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.2.4.ebuild,v 1.4 2008/03/06 13:50:38 beandog Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 		mirror://gentoo/sarg-2.2.3.1-lots-of-compiler-warnings.patch.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 SLOT="0"
 IUSE=""
 
