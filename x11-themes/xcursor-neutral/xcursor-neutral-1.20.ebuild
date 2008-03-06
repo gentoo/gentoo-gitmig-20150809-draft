@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/xcursor-neutral-1.20.ebuild,v 1.3 2007/11/14 03:11:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/xcursor-neutral-1.20.ebuild,v 1.4 2008/03/06 11:21:57 cla Exp $
 
 MY_P="48837-Neutral_Plus_1.2.tar.bz2"
 MY_PN="Neutral_Plus"
@@ -11,7 +11,7 @@ SRC_URI="http://kde-look.org/CONTENT/content-files/${MY_P}"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~amd64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 sparc x86 ~x86-fbsd"
 IUSE="examples"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXcursor
@@ -23,13 +23,13 @@ S="${WORKDIR}/Neutral_Plus"
 src_install(){
 	insinto /usr/share/cursors/xorg-x11/${MY_PN}/
 
-	doins -r ${S}/cursors/
-	doins ${S}/index.theme
-	dodoc ${S}/LICENSE
-	dodoc ${S}/COPYRIGHT
+	doins -r "${S}"/cursors/
+	doins "${S}"/index.theme
+	dodoc "${S}"/LICENSE
+	dodoc "${S}"/COPYRIGHT
 
 	## install additional cursor source files?
 	if use examples; then
-	    doins -r ${S}/source/
+	    doins -r "${S}"/source/
 	fi
 }
