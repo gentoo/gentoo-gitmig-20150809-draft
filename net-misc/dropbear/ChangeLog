@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.59 2008/03/05 00:32:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.60 2008/03/06 11:20:41 armin76 Exp $
+
+  06 Mar 2008; Raúl Porcel <armin76@gentoo.org> dropbear-0.50-r1.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #210795
 
   05 Mar 2008; Brent Baude <ranger@gentoo.org> dropbear-0.50-r1.ebuild:
   keyworded ~arch for ppc64, bug 210795
