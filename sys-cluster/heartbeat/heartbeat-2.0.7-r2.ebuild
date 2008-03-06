@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.7-r2.ebuild,v 1.5 2007/04/28 17:46:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.7-r2.ebuild,v 1.6 2008/03/06 20:04:24 wolf31o2 Exp $
 
 inherit flag-o-matic eutils
 
@@ -45,9 +45,9 @@ DEPEND="
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-update-resources-failcount.patch || die
-	#epatch ${FILESDIR}/${P}-crm-leaks.patch || die
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-update-resources-failcount.patch || die
+	#epatch "${FILESDIR}"/${P}-crm-leaks.patch || die
 }
 
 src_compile() {
@@ -81,7 +81,7 @@ pkg_preinst() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# heartbeat modules need these dirs
 	#keepdir /var/lib/heartbeat/ckpt /var/lib/heartbeat/ccm /var/lib/heartbeat
@@ -101,18 +101,18 @@ src_install() {
 
 	# if ! USE="ldirectord" then don't install it
 	if ! use ldirectord ; then
-		rm ${D}/etc/init.d/ldirectord
-		rm ${D}/etc/logrotate.d/ldirectord
-		rm ${D}/etc/ha.d/resource.d/ldirectord
-		rm ${D}/usr/share/man/man8/supervise-ldirectord-config.8
-		rm ${D}/usr/share/man/man8/ldirectord.8
-		rm ${D}/usr/sbin/ldirectord
-		rm ${D}/usr/sbin/supervise-ldirectord-config
+		rm "${D}"/etc/init.d/ldirectord
+		rm "${D}"/etc/logrotate.d/ldirectord
+		rm "${D}"/etc/ha.d/resource.d/ldirectord
+		rm "${D}"/usr/share/man/man8/supervise-ldirectord-config.8
+		rm "${D}"/usr/share/man/man8/ldirectord.8
+		rm "${D}"/usr/sbin/ldirectord
+		rm "${D}"/usr/sbin/supervise-ldirectord-config
 	fi
 
 	dodir /var/lib/heartbeat/cores/cluster
 	keepdir /var/lib/heartbeat/cores/cluster
-	newinitd ${FILESDIR}/heartbeat-init heartbeat
+	newinitd "${FILESDIR}"/heartbeat-init heartbeat
 
 	dodoc ldirectord/ldirectord.cf doc/*.cf doc/haresources doc/authkeys || die
 	if use doc ; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.5-r1.ebuild,v 1.9 2008/03/01 18:32:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.5-r1.ebuild,v 1.10 2008/03/06 20:04:24 wolf31o2 Exp $
 
 inherit flag-o-matic
 
@@ -49,7 +49,7 @@ pkg_preinst() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# heartbeat modules need these dirs
 	keepdir /var/lib/heartbeat/ckpt /var/lib/heartbeat/ccm /var/lib/heartbeat
@@ -60,14 +60,14 @@ src_install() {
 
 	# if ! USE="ldirectord" then don't install it
 	if ! use ldirectord ; then
-		rm ${D}/etc/init.d/ldirectord
-		rm ${D}/etc/logrotate.d/ldirectord
-		rm ${D}/usr/man/man8/supervise-ldirectord-config.8
-		rm ${D}/usr/man/man8/ldirectord.8
-		rm ${D}/usr/sbin/ldirectord
-		rm ${D}/usr/sbin/supervise-ldirectord-config
-		rm ${D}/etc/ha.d/resource.d/ldirectord
+		rm "${D}"/etc/init.d/ldirectord
+		rm "${D}"/etc/logrotate.d/ldirectord
+		rm "${D}"/usr/man/man8/supervise-ldirectord-config.8
+		rm "${D}"/usr/man/man8/ldirectord.8
+		rm "${D}"/usr/sbin/ldirectord
+		rm "${D}"/usr/sbin/supervise-ldirectord-config
+		rm "${D}"/etc/ha.d/resource.d/ldirectord
 	fi
 
-	newinitd ${FILESDIR}/heartbeat-init heartbeat
+	newinitd "${FILESDIR}"/heartbeat-init heartbeat
 }
