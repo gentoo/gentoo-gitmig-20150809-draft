@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.21.91.ebuild,v 1.2 2008/03/04 07:31:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.21.91.ebuild,v 1.3 2008/03/06 09:41:22 coldwind Exp $
 
 inherit gnome2 eutils versionator
 
@@ -37,7 +37,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
 	>=dev-util/pkgconfig-0.16
 	test? ( >=dev-libs/check-0.9.4 )
-	dev-libs/libxslt"
+	dev-libs/libxslt
+	virtual/python"
 
 DOCS="CONTRIBUTORS AUTHORS ChangeLog NEWS README"
 
