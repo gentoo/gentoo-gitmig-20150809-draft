@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.362 2008/03/01 19:27:18 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.363 2008/03/06 16:29:55 voxus Exp $
+
+*mm-sources-2.6.25_rc3-r1 (06 Mar 2008)
+
+  06 Mar 2008; Konstantin V. Arkhipov <voxus@gentoo.org>
+  +mm-sources-2.6.25_rc3-r1.ebuild:
+  Version bump.
 
   01 Mar 2008; Bo Ørsted Andresen <zlin@gentoo.org>
   mm-sources-2.6.25_rc2-r1.ebuild:
