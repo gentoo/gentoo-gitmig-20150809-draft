@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_passwdqc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.14 2008/02/22 10:57:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.15 2008/03/06 11:09:05 armin76 Exp $
+
+  06 Mar 2008; Raúl Porcel <armin76@gentoo.org> pam_passwdqc-1.0.5.ebuild:
+  Add ~ia64
 
   22 Feb 2008; Diego Pettenò <flameeyes@gentoo.org>
   -pam_passwdqc-0.7.5.ebuild:
