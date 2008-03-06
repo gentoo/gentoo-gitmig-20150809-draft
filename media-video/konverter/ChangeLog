@@ -1,6 +1,9 @@
 # ChangeLog for media-video/konverter
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.13 2008/02/18 23:17:46 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.14 2008/03/06 01:38:24 ingmar Exp $
+
+  06 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> konverter-0.93.ebuild:
+  Use eqmake3, Christoph Permes, bug 212052.
 
   18 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> konverter-0.93.ebuild:
   Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.

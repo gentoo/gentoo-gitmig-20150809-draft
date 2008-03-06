@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/konverter-0.93.ebuild,v 1.3 2008/02/18 23:17:46 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/konverter-0.93.ebuild,v 1.4 2008/03/06 01:38:24 ingmar Exp $
 
 inherit qt3 eutils
 
@@ -37,22 +37,9 @@ src_unpack() {
 }
 
 src_compile() {
-	qmake ${PN}.pro \
-		QTDIR=/usr/lib \
-		QMAKE_CFLAGS_RELEASE="${CFLAGS}" \
-		QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
-		QMAKE=/usr/bin/qmake \
-		QMAKE_RPATH= \
-		|| die "qmake failed"
-
-	cd "${S}"/src
-	qmake src.pro \
-		QTDIR=/usr/lib \
-		QMAKE_CFLAGS_RELEASE="${CFLAGS}" \
-		QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
-		QMAKE=/usr/bin/qmake \
-		QMAKE_RPATH= \
-		|| die "qmake failed"
+	eqmake3 ${PN}.pro
+	cd ./src/
+	eqmake3 src.pro
 
 	emake || die "make failed"
 }
