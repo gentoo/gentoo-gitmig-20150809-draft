@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.7.ebuild,v 1.8 2007/12/29 11:42:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.8-r2.ebuild,v 1.1 2008/03/06 07:21:30 alonbl Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnupg/gnupg/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="bzip2 doc ldap nls openct pcsc-lite smartcard selinux"
 
 COMMON_DEPEND="
@@ -27,7 +27,7 @@ COMMON_DEPEND="
 	app-crypt/pinentry"
 
 DEPEND="${COMMON_DEPEND}
-	>=dev-libs/libassuan-1.0.2
+	>=dev-libs/libassuan-1.0.4
 	nls? ( sys-devel/gettext )
 	doc? ( sys-apps/texinfo )"
 
@@ -42,6 +42,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.0.4-idea.patch"
+	epatch "${FILESDIR}/${P}-qualified.patch"
 }
 
 src_compile() {
@@ -71,6 +72,10 @@ src_install() {
 
 	dosym gpg2 /usr/bin/gpg
 	dosym gpgv2 /usr/bin/gpgv
+	dosym gpg2keys_ldap /usr/libexec/gpgkeys_ldap
+	dosym gpg2keys_hkp /usr/libexec/gpgkeys_hkp
+	dosym gpg2keys_finger /usr/libexec/gpgkeys_finger
+	dosym gpg2keys_curl /usr/libexec/gpgkeys_curl
 	echo ".so man1/gpg2.1" > "${D}/usr/share/man/man1/gpg.1"
 	echo ".so man1/gpgv2.1" > "${D}/usr/share/man/man1/gpgv.1"
 
