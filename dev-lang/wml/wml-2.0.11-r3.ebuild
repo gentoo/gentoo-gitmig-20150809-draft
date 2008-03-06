@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.11-r3.ebuild,v 1.3 2008/03/06 07:19:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.11-r3.ebuild,v 1.4 2008/03/06 12:39:16 armin76 Exp $
 
 inherit fixheadtails eutils autotools multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://thewml.org/distrib/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ~s390 ~sparc x86"
+KEYWORDS="~amd64 ia64 ppc ~s390 sparc x86"
 IUSE=""
 
 DEPEND="dev-libs/libpcre
