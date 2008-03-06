@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lohit-fonts/lohit-fonts-2.1.5.ebuild,v 1.5 2008/03/04 01:59:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lohit-fonts/lohit-fonts-2.1.5.ebuild,v 1.6 2008/03/06 17:32:29 nixnut Exp $
 
 inherit font
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SRC_URI="mirror://gentoo/fonts-indic-${PV}.tar.gz"
 
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ia64 ~ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DOCS="AUTHORS ChangeLog"
