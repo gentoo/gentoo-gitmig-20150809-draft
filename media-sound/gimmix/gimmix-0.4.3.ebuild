@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/gimmix-0.4.3.ebuild,v 1.1 2008/02/03 12:42:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/gimmix-0.4.3.ebuild,v 1.2 2008/03/06 15:39:27 angelos Exp $
 
 DESCRIPTION="a graphical music player daemon (MPD) client written in C using GTK2."
 HOMEPAGE="http://gimmix.berlios.de/"
@@ -8,7 +8,7 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.6
