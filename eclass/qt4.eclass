@@ -1,12 +1,11 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.37 2008/03/05 23:03:24 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.38 2008/03/06 01:23:13 ingmar Exp $
 
 # @ECLASS: qt4.eclass
 # @MAINTAINER:
 # Caleb Tennis <caleb@gentoo.org>
-# @BLURB:
-# Eclass for Qt4 packages
+# @BLURB: Eclass for Qt4 packages
 # @DESCRIPTION:
 # This eclass contains various functions that may be useful
 # when dealing with packages using Qt4 libraries.

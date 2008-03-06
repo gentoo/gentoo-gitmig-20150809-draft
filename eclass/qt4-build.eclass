@@ -1,12 +1,11 @@
 # Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.7 2008/03/05 23:06:26 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.8 2008/03/06 01:23:51 ingmar Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
 # Caleb Tennis <caleb@gentoo.org>
-# @BLURB:
-# Eclass for Qt4
+# @BLURB: Eclass for Qt4 split ebuilds.
 # @DESCRIPTION:
 # This eclass contains various functions that are used when building Qt4
 
