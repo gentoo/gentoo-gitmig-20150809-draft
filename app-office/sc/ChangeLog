@@ -1,6 +1,9 @@
 # ChangeLog for app-office/sc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/sc/ChangeLog,v 1.18 2008/03/06 12:14:24 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/sc/ChangeLog,v 1.19 2008/03/06 13:43:10 fmccor Exp $
+
+  06 Mar 2008; Ferris McCormick <fmccor@gentoo.org> sc-7.16-r1.ebuild:
+  Sparc stable --- Bug #212456 --- looks good to me and it's been here a while.
 
   06 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> sc-7.16-r1.ebuild:
   amd64 stable wrt bug #212456
