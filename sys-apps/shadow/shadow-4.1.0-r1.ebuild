@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.0-r1.ebuild,v 1.5 2008/03/05 18:24:49 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.0-r1.ebuild,v 1.6 2008/03/06 11:11:31 armin76 Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/s/shadow/shadow_${PV}.orig.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~hppa ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~hppa ~ia64 ~ppc64 ~sparc ~x86"
 IUSE="nls pam selinux skey cracklib"
 
 # Does not work with OpenPAM (yet?)
