@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-5.2-r1.ebuild,v 1.1 2008/01/30 11:11:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-5.2-r1.ebuild,v 1.2 2008/03/06 03:09:26 ranger Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.thc.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="ssl"
 
 DEPEND="dev-libs/libpcre
