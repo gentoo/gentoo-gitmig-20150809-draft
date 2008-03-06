@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.6-r1.ebuild,v 1.4 2008/03/05 18:54:02 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.6-r1.ebuild,v 1.5 2008/03/06 11:12:44 armin76 Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -11,7 +11,7 @@ DEFAULTVT="vt7"
 
 DESCRIPTION="X.Org xdm application"
 
-KEYWORDS="~hppa ~sparc ~x86"
+KEYWORDS="~alpha ~hppa ~ia64 ~sparc ~x86"
 IUSE="xprint ipv6 pam"
 
 RDEPEND="x11-libs/libXdmcp
