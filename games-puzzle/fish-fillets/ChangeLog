@@ -1,6 +1,6 @@
 # ChangeLog for games-puzzle/fish-fillets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.27 2008/02/29 19:32:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.28 2008/03/06 17:08:14 tove Exp $
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> fish-fillets-0.7.4.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
@@ -15,7 +15,7 @@
   +fish-fillets-0.8.0.ebuild:
   version bump (bug #203133)
 
-  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
 *fish-fillets-0.7.4 (22 Dec 2006)
