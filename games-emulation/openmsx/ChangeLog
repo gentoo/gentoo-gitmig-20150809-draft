@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/openmsx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.23 2008/02/27 07:15:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.24 2008/03/06 22:00:08 wolf31o2 Exp $
+
+  06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> openmsx-0.5.2.ebuild:
+  QA cleanup: Fix quoting.
 
 *openmsx-0.6.3 (27 Feb 2008)
 
