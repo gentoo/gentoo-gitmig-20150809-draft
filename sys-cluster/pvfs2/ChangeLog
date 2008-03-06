@@ -1,6 +1,18 @@
 # ChangeLog for sys-cluster/pvfs2
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/ChangeLog,v 1.9 2007/12/03 00:00:45 nerdboy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/ChangeLog,v 1.10 2008/03/06 23:05:43 jsbronder Exp $
+
+*pvfs2-2.7.0-r1 (06 Mar 2008)
+
+  06 Mar 2008; Justin Bronder <jsbronder@gentoo.org>
+  +files/pvfs2-client-conf.d-2.7.0, +files/pvfs2-client-init.d-2.7.0,
+  +files/pvfs2-server-conf.d-2.7.0, +files/pvfs2-server-init.d-2.7.0,
+  +files/2.7.0-ctl_unnumbered.patch, +files/2.7.0-gentoo-makefile.patch,
+  +files/2.7.0-kernel-rt.patch, +files/2.7.0-kmem_cache.patch,
+  +files/2.7.0-verbose-checking.patch, +pvfs2-2.7.0-r1.ebuild:
+  Fix bug #210923.  Support kernel 2.6.24.  One patch for Makefile.  Support
+  more than one pvfs2 mountpoint and cleanup init/conf stuff for single pvfs2
+  config file layout.  General cleanup all around.
 
 *pvfs2-2.7.0 (02 Dec 2007)
 
