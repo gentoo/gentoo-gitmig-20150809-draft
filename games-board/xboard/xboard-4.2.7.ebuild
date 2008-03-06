@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7.ebuild,v 1.15 2007/02/08 09:03:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7.ebuild,v 1.16 2008/03/06 21:49:29 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -38,7 +38,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc FAQ READ_ME ToDo ChangeLog*
 	dohtml FAQ.html
-	doicon ${DISTDIR}/xboard.png
+	doicon "${DISTDIR}"/xboard.png
 	make_desktop_entry ${PN} "Xboard (Chess)"
 	prepgamesdirs
 }
