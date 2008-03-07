@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-data/noegnud-data-0.8.0.ebuild,v 1.8 2005/09/26 18:16:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-data/noegnud-data-0.8.0.ebuild,v 1.9 2008/03/07 20:17:00 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -24,7 +24,7 @@ IUSE=""
 S=${WORKDIR}/noegnud-${PV}/data
 
 src_install() {
-	dodir ${GAMES_DATADIR}/noegnud_data
-	cp -r * ${D}/${GAMES_DATADIR}/noegnud_data/
+	dodir "${GAMES_DATADIR}/"noegnud_data
+	cp -r * "${D}/${GAMES_DATADIR}"/noegnud_data/
 	prepgamesdirs
 }

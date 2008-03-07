@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.4a.ebuild,v 1.7 2004/06/24 23:12:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.4a.ebuild,v 1.8 2008/03/07 20:13:41 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -24,12 +24,12 @@ S=${WORKDIR}/nethack-341-jtp-194a
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	source sys/unix/setup.sh
 	cd ../../
 
-	epatch ${FILESDIR}/${PV}-gentoo-paths.patch
-	epatch ${FILESDIR}/${PV}-default-options.patch
+	epatch "${FILESDIR}/${PV}-gentoo-paths.patch"
+	epatch "${FILESDIR}/${PV}-default-options.patch"
 	sed -i "s:GENTOO_STATEDIR:${GAMES_STATEDIR}/${PN}:" include/unixconf.h || die "setting statedir"
 	sed -i "s:GENTOO_HACKDIR:${GAMES_DATADIR}/${PN}:" include/config.h || die "seting hackdir"
 	sed -i 's:/usr/local/bin/timidity:/usr/bin/timidity:' win/jtp/gamedata/config/jtp_opts.txt
@@ -61,5 +61,5 @@ src_install() {
 	doman doc/falconseye.6
 	dodoc ChangeLog README falcon.txt
 	prepgamesdirs
-	chmod -R g+w ${D}/${GAMES_STATEDIR}
+	chmod -R g+w "${D}/${GAMES_STATEDIR}"
 }

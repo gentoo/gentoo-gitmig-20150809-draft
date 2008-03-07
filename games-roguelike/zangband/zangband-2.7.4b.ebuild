@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4b.ebuild,v 1.5 2006/12/06 19:43:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4b.ebuild,v 1.6 2008/03/07 20:19:39 wolf31o2 Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://clockwork.dementia.org/angband/Variant/ZAngband/${P}.tar.gz"
 
 LICENSE="Moria"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="ppc x86"
 IUSE="gtk tk"
 
 RDEPEND=">=sys-libs/ncurses-5
@@ -42,9 +42,9 @@ src_install() {
 		${GAMES_DATADIR}/zangband/lib/save
 
 	# Install the basic files but remove unneeded crap
-	make DESTDIR=${D}/${GAMES_DATADIR}/zangband/ installbase || \
+	make DESTDIR="${D}/${GAMES_DATADIR}"/zangband/ installbase || \
 		die "make installbase failed"
-	rm ${D}${GAMES_DATADIR}/zangband/{angdos.cfg,readme,z_faq.txt,z_update.txt}
+	rm "${D}${GAMES_DATADIR}"/zangband/{angdos.cfg,readme,z_faq.txt,z_update.txt}
 
 	# Install everything else and fix the permissions
 	dogamesbin zangband                 || die "dogamesbin failed"
@@ -53,5 +53,5 @@ src_install() {
 
 	prepgamesdirs
 	# All users in the games group need write permissions to some important dirs
-	chmod -R g+w ${D}/${GAMES_DATADIR}/zangband/lib/{apex,save,user}
+	chmod -R g+w "${D}/${GAMES_DATADIR}"/zangband/lib/{apex,save,user}
 }

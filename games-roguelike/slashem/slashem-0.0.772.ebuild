@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.6 2007/06/12 12:59:00 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.7 2008/03/07 20:17:48 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -77,7 +77,7 @@ src_unpack() {
 		./config X11 ../.. || die "X config"
 	fi
 
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s:^\(\#  define HACKDIR \).*:\1 \"${HACKDIR}\":" \
 		include/config.h || die "config.h sed"
@@ -128,7 +128,7 @@ src_install() {
 		insinto "${GAMES_DATADIR}"/${PN}/fonts
 		doins *.pcf
 		cd "${D}${GAMES_DATADIR}"/${PN}/fonts
-		mkfontdir || die "The action mkfontdir ${D}{GAMES_DATADIR}/${PN}/fonts failed"
+		mkfontdir || die "The action mkfontdir ${GAMES_DATADIR}/${PN}/fonts failed"
 
 		# copy slashem X application defaults
 		cd "${S}"/win/X11

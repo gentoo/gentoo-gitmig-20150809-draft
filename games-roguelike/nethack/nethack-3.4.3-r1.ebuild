@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.20 2008/01/14 20:33:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.21 2008/03/07 20:15:59 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -80,7 +80,7 @@ src_compile() {
 	has_version =x11-libs/qt-3* \
 		&& qtver=3 \
 		|| qtver=2
-	cd ${S}/src
+	cd "${S}"/src
 	append-flags -I../include
 
 	emake \
@@ -96,7 +96,7 @@ src_compile() {
 		CFLAGS="${CFLAGS}" \
 		LFLAGS="${lflags}" \
 		|| die "main build failed"
-	cd ${S}/util
+	cd "${S}"/util
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" recover || die "util build failed"
 }
 
@@ -123,7 +123,7 @@ src_install() {
 	sed -i \
 		-e "s:^\(HACKDIR=\).*:\1${HACKDIR}:" \
 		"${D}${GAMES_BINDIR}/nethack" \
-		|| die "sed ${D}${GAMES_BINDIR}/nethack failed"
+		|| die "sed ${GAMES_BINDIR}/nethack failed"
 
 	doman doc/*.6
 	dodoc doc/*.txt
@@ -141,7 +141,7 @@ src_install() {
 		-e "s:GENTOO_WINDOWTYPES:${windowtypes}:" \
 		-e "s:GENTOO_DEFWINDOWTYPE:$1:" \
 		"${D}${HACKDIR}/dot.nethackrc" \
-		|| die "sed ${D}${HACKDIR}/dot.nethackrc failed"
+		|| die "sed ${HACKDIR}/dot.nethackrc failed"
 	insinto /etc/skel
 	newins "${D}/${HACKDIR}/dot.nethackrc" .nethackrc
 
@@ -153,7 +153,7 @@ src_install() {
 		insinto "${HACKDIR}/fonts"
 		doins *.pcf
 		cd "${D}/${HACKDIR}/fonts"
-		mkfontdir || die "The action mkfontdir ${D}${HACKDIR}/fonts failed"
+		mkfontdir || die "The action mkfontdir ${HACKDIR}/fonts failed"
 
 		# copy nethack x application defaults
 		cd "${S}/win/X11"
@@ -162,7 +162,7 @@ src_install() {
 		sed -i \
 			-e 's:^!\(NetHack.tile_file.*\):\1:' \
 			"${D}/etc/X11/app-defaults/NetHack" \
-			|| die "sed ${D}/etc/X11/app-defaults/NetHack failed"
+			|| die "sed /etc/X11/app-defaults/NetHack failed"
 	fi
 
 	local statedir="${GAMES_STATEDIR}/${PN}"
