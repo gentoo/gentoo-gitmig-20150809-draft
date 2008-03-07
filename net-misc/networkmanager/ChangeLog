@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.29 2008/02/14 07:08:29 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.30 2008/03/07 09:27:02 steev Exp $
+
+  07 Mar 2008; Steev Klimaszewski <steev@gentoo.org>
+  -files/NM-po-linguas.patch, -networkmanager-0.6.5.98.ebuild,
+  +networkmanager-0.6.6.ebuild:
+  Remove the patches that 0.6.5.98 were using
+
+*networkmanager-0.6.6 (07 Mar 2008)
+
+  07 Mar 2008; Steev Klimaszewski <steev@gentoo.org>
+  -networkmanager-0.6.5.98.ebuild, +networkmanager-0.6.6.ebuild:
+  New upstream release. Unmentioned changes in the release notes include the
+  updated backend being committed for Gentoo, as well as new init scripts from
+  compnerd.
 
 *networkmanager-0.6.5.98 (14 Feb 2008)
 

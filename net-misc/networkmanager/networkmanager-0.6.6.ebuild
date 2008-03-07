@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5.98.ebuild,v 1.1 2008/02/14 07:08:29 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.6.ebuild,v 1.1 2008/03/07 09:27:02 steev Exp $
 
 inherit autotools gnome2 eutils
 
@@ -10,8 +10,7 @@ MY_P=${P/networkmanager/NetworkManager}
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 # Release candidate for 0.6.6, Hosted in dcbw's redhat space.
-SRC_URI="http://people.redhat.com/dcbw/NetworkManager/0.6.6/${MY_P}.tar.gz
-	mirror://gentoo/${PN}-0.6.5_p20070823-updatedbackend.patch.bz2"
+SRC_URI="http://people.redhat.com/dcbw/NetworkManager/0.6.6/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -64,25 +63,18 @@ src_unpack () {
 	unpack ${A}
 	cd "${S}"
 
-	# Update to use our backend
-	epatch "${WORKDIR}/${PN}-0.6.5_p20070823-updatedbackend.patch"
 	# Use the kernel headers
 	epatch "${FILESDIR}/${PN}-use-kernel-headers.patch"
 	# Fix the resolv.conf permissions
 	epatch "${FILESDIR}/${PN}-resolvconf-perms.patch"
 	# Fix up the dbus conf file to use plugdev group
 	epatch "${FILESDIR}/${PN}-0.6.5-confchanges.patch"
-	# Switch NM to using po/LINGUAS
-	epatch "${FILESDIR}/NM-po-linguas.patch"
-	# Since the switch to LINGUAS, need to regen configure
-	eautoreconf
 }
 
 src_install() {
 	gnome2_src_install
 	# Need to keep the /var/run/NetworkManager directory
 	keepdir /var/run/NetworkManager
-	newinitd "${FILESDIR}/NetworkManagerDispatcher" NetworkManagerDispatcher
 }
 
 pkg_postinst() {
