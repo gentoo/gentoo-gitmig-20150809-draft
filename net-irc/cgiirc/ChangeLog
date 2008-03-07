@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/cgiirc
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/ChangeLog,v 1.11 2006/10/04 04:07:30 rl03 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/ChangeLog,v 1.12 2008/03/07 10:30:35 hollow Exp $
+
+  07 Mar 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  cgiirc-0.5.9.ebuild:
+  fix #212396; ebuild cleanup wrt #208584
 
 *cgiirc-0.5.9 (04 Oct 2006)
 

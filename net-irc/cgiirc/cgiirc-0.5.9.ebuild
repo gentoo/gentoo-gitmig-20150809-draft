@@ -1,22 +1,27 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/cgiirc-0.5.9.ebuild,v 1.1 2006/10/04 04:07:30 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/cgiirc-0.5.9.ebuild,v 1.2 2008/03/07 10:30:35 hollow Exp $
 
-IUSE=""
-
-inherit webapp
+inherit webapp eutils
 
 DESCRIPTION="A perl/CGI program to use IRC from a web browser"
 HOMEPAGE="http://cgiirc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64"
+IUSE=""
 
-src_unpack() {
+pkg_setup() {
+	webapp_pkg_setup
 	elog "Note that file locations have changed."
 	elog "CGI:IRC will be installed into cgi-bin/${P}"
+}
+
+src_unpack() {
 	unpack ${A}
-	find ${S} -name .cvsignore -exec rm {} \;
+	cd "${S}"
+	ecvs_clean
 }
 
 src_install() {
@@ -26,15 +31,12 @@ src_install() {
 
 	dodoc docs/{CHANGES,TODO} ${docs}
 	dohtml docs/help.html
+	rm -rf docs/ ${docs}
 
-	dodir ${MY_CGIBINDIR}/${P}
+	insinto "${MY_CGIBINDIR}"/${P}
+	doins -r .
+	fperms +x "${MY_CGIBINDIR}"/${P}/irc.cgi
 
-	cp -R . ${D}/${MY_CGIBINDIR}/${P}
-
-	cd ${D}/${MY_CGIBINDIR}/${P}
-	rm -rf docs ${docs}
-
-	webapp_configfile ${MY_CGIBINDIR}/${P}/cgiirc.config
-
+	webapp_configfile "${MY_CGIBINDIR}"/${P}/cgiirc.config
 	webapp_src_install
 }
