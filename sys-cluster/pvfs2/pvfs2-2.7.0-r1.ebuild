@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.0-r1.ebuild,v 1.1 2008/03/06 23:05:43 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.0-r1.ebuild,v 1.2 2008/03/07 02:03:41 mr_bones_ Exp $
 
 inherit linux-mod autotools toolchain-funcs
 
@@ -22,7 +22,6 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86 ~ppc64"
-
 
 pkg_setup() {
 	linux-mod_pkg_setup
