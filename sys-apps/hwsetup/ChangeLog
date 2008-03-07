@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.51 2008/02/20 20:32:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.52 2008/03/07 19:06:43 wolf31o2 Exp $
+
+  07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.2.ebuild:
+  Fix compilation when using --as-needed by filtering it, for now.
 
   20 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.2.ebuild:
   Removing USE=livecd since this package is now masked in the tree.

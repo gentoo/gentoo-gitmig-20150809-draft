@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2.ebuild,v 1.6 2008/02/20 20:32:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2.ebuild,v 1.7 2008/03/07 19:06:43 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -30,6 +30,8 @@ src_unpack() {
 }
 
 src_compile() {
+	append-ldflags -s
+	filter-ldflags -Wl,--as-needed --as-needed
 	if use zlib
 	then
 		append-ldflags -lz
@@ -42,4 +44,11 @@ src_compile() {
 
 src_install() {
 	einstall DESTDIR="${D}" PREFIX=/usr MANDIR=/usr/share/man || die "Install failed"
+}
+
+pkg_postinst() {
+	ewarn "This package is intended for usage on the Gentoo release media.  If"
+	ewarn "you are not building a CD, remove this package.  It will not work"
+	ewarn "properly on a running system, as Gentoo does not use any of the"
+	ewarn "Knoppix-style detection except for CD builds."
 }
