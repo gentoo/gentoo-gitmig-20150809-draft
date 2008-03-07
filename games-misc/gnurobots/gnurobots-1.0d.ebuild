@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.0d.ebuild,v 1.9 2007/01/10 19:44:00 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.0d.ebuild,v 1.10 2008/03/07 01:16:53 wolf31o2 Exp $
 
 inherit games
 
 MY_P="${PN}-${PV/d/D}"
-DESCRIPTION="Game/diversion where you construct a program for a little robot then set him loose and watch him explore a world on his own"
+DESCRIPTION="construct a program for a little robot then set him loose and watch him explore a world on his own"
 HOMEPAGE="http://www.gnu.org/directory/games/gnurobots.html"
 SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.gz"
 
