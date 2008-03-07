@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.9.ebuild,v 1.2 2008/03/04 02:40:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.9.ebuild,v 1.3 2008/03/07 11:57:24 ingmar Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -19,17 +19,16 @@ DEPEND=">=media-libs/freetype-2.3
 	arts? ( >=kde-base/arts-${PV}:${SLOT} )
 	opengl? ( virtual/opengl )
 	ieee1394? ( sys-libs/libraw1394 )
-	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )"
-
+	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )
+	>=kde-base/libkonq-${PV}:${SLOT}
+	>=kde-base/kicker-${PV}:${SLOT}"
 RDEPEND="${DEPEND}
 	sys-apps/usbutils
 	>=kde-base/kcminit-${PV}:${SLOT}
 	>=kde-base/kdebase-data-${PV}:${SLOT}
 	>=kde-base/kdesu-${PV}:${SLOT}
 	>=kde-base/khelpcenter-${PV}:${SLOT}
-	>=kde-base/khotkeys-${PV}:${SLOT}
-	>=kde-base/libkonq-${PV}:${SLOT}
-	>=kde-base/kicker-${PV}:${SLOT}"
+	>=kde-base/khotkeys-${PV}:${SLOT}"
 
 KMEXTRACTONLY="kwin/kwinbindings.cpp
 		kicker/kicker/core/kickerbindings.cpp

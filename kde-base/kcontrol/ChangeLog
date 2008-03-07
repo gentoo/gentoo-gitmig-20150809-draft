@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.108 2008/03/04 02:40:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.109 2008/03/07 11:57:24 ingmar Exp $
+
+  07 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  kcontrol-3.5.8-r2.ebuild, kcontrol-3.5.9.ebuild:
+  We try to symlink kicker,konqueror libraries, so they should be in DEPEND,
+  not just in RDEPEND.
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kcontrol-3.5.8-r2.ebuild,
   kcontrol-3.5.9.ebuild, kcontrol-4.0.1.ebuild:

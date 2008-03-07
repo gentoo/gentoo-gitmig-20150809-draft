@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.8-r2.ebuild,v 1.7 2008/03/04 02:40:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.8-r2.ebuild,v 1.8 2008/03/07 11:57:24 ingmar Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -20,7 +20,9 @@ DEPEND=">=media-libs/freetype-2.3
 	arts? ( $(deprange 3.5.5 $MAXKDEVER kde-base/arts) )
 	opengl? ( virtual/opengl )
 	ieee1394? ( sys-libs/libraw1394 )
-	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )"
+	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )
+	$(deprange $PV $MAXKDEVER kde-base/libkonq)
+	$(deprange $PV $MAXKDEVER kde-base/kicker)"
 
 RDEPEND="${DEPEND}
 	sys-apps/usbutils
@@ -28,9 +30,7 @@ RDEPEND="${DEPEND}
 	$(deprange $PV $MAXKDEVER kde-base/kdebase-data)
 	$(deprange 3.5.7-r1 $MAXKDEVER kde-base/kdesu)
 	$(deprange $PV $MAXKDEVER kde-base/khelpcenter)
-	$(deprange $PV $MAXKDEVER kde-base/khotkeys)
-	$(deprange $PV $MAXKDEVER kde-base/libkonq)
-	$(deprange $PV $MAXKDEVER kde-base/kicker)"
+	$(deprange $PV $MAXKDEVER kde-base/khotkeys)"
 
 KMEXTRACTONLY="kwin/kwinbindings.cpp
 		kicker/kicker/core/kickerbindings.cpp
