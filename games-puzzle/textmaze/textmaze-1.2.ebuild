@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/textmaze/textmaze-1.2.ebuild,v 1.1 2006/01/05 18:15:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/textmaze/textmaze-1.2.ebuild,v 1.2 2008/03/07 19:26:39 wolf31o2 Exp $
 
 inherit games
 
@@ -20,7 +20,7 @@ DEPEND="dev-perl/Curses"
 S="${WORKDIR}/TextMaze"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	sed -i \

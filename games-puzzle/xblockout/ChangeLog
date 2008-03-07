@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xblockout
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/ChangeLog,v 1.14 2007/01/29 22:24:00 mr_bones_ Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/ChangeLog,v 1.15 2008/03/07 19:27:15 wolf31o2 Exp $
+
+  07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  xblockout-1.1.3.ebuild:
+  QA cleanup: Fix quoting.
 
 *xblockout-1.1.5 (29 Jan 2007)
 
