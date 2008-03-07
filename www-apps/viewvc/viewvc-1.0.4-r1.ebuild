@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.4-r1.ebuild,v 1.2 2008/02/22 08:55:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.4-r1.ebuild,v 1.3 2008/03/07 16:33:11 opfer Exp $
 
 inherit confutils webapp python eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://viewvc.org/"
 SRC_URI="http://viewvc.tigris.org/files/documents/3330/37319/${P}.tar.gz"
 
 LICENSE="viewcvs"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="cvs cvsgraph enscript highlight mod_python mysql subversion"
 SLOT="0"
 
