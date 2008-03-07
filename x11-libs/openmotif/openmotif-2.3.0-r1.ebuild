@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r1.ebuild,v 1.15 2008/03/07 15:11:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r1.ebuild,v 1.16 2008/03/07 22:19:17 ulm Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -33,11 +33,13 @@ PROVIDE="virtual/motif"
 
 pkg_setup() {
 	# clean up orphaned cruft left over by motif-config
-	local i count=0
+	local i l count=0
 	for i in "${ROOT}"usr/bin/{mwm,uil,xmbind} \
 		"${ROOT}"usr/include/{Xm,uil,Mrm} \
 		"${ROOT}"usr/$(get_libdir)/lib{Xm,Uil,Mrm}.*; do
-		if [[ -L "${i}" && $(readlink "${i}") =~ (openmo|less)tif- ]]; then
+		[[ -L "${i}" ]] || continue
+		l=$(readlink "${i}")
+		if [[ ${l} == *openmotif-* || ${l} == *lesstif-* ]]; then
 			einfo "Cleaning up orphaned ${i} symlink ..."
 			rm -f "${i}"
 		fi
@@ -45,7 +47,8 @@ pkg_setup() {
 
 	cd "${ROOT}"usr/share/man
 	for i in $(find . -type l); do
-		if [[ $(readlink "${i}") =~ -(openmo|less)tif- ]]; then
+		l=$(readlink "${i}")
+		if [[ ${l} == *-openmotif-* || ${l} == *-lesstif-* ]]; then
 			(( count++ ))
 			rm -f "${i}"
 		fi
