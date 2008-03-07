@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/ganglia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.13 2008/03/07 01:59:55 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.14 2008/03/07 02:06:37 jsbronder Exp $
+
+*ganglia-3.0.7 (07 Mar 2008)
+
+  07 Mar 2008; Justin Bronder <jsbronder@gentoo.org> +ganglia-3.0.7.ebuild:
+  version bump, bug #211693
 
 *ganglia-3.0.6-r1 (07 Mar 2008)
 
