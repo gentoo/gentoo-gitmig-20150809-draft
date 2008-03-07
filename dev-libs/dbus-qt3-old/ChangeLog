@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbus-qt3-old
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.12 2007/05/25 01:43:30 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.13 2008/03/07 00:27:37 dirtyepic Exp $
+
+  07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> dbus-qt3-old-0.70.ebuild:
+  Keyword ~mips.
 
   25 May 2007; Steve Dibb <beandog@gentoo.org> dbus-qt3-old-0.70.ebuild:
   Add ~x86-fbsd
