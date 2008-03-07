@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1187 2008/03/07 14:43:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1188 2008/03/07 17:57:42 aballier Exp $
+
+  07 Mar 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  dk-bib is gone now, bug #208689, remove it from pmask
 
   07 Mar 2008; Peter Volkov <pva@gentoo.org> use.local.desc:
   Added smi USE flag for net-analyzer/wireshark.
