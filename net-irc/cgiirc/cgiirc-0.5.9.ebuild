@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/cgiirc-0.5.9.ebuild,v 1.2 2008/03/07 10:30:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/cgiirc-0.5.9.ebuild,v 1.3 2008/03/07 10:32:15 hollow Exp $
 
 inherit webapp eutils
 
@@ -11,6 +11,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
+
+need_httpd_cgi
 
 pkg_setup() {
 	webapp_pkg_setup
