@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.90.ebuild,v 1.4 2008/02/11 20:36:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.92.ebuild,v 1.1 2008/03/07 17:49:08 ulm Exp $
 
 inherit autotools elisp-common eutils flag-o-matic
 
