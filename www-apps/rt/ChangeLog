@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.54 2008/02/05 15:04:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.55 2008/03/07 14:37:28 hollow Exp $
+
+*rt-3.6.6 (07 Mar 2008)
+
+  07 Mar 2008; Benedikt Böhm <hollow@gentoo.org>
+  -files/3.2.1/postinstall-en.txt, -files/3.2.1/reconfig,
+  -files/rt_apache.conf, -files/rt_apache1_fcgi.conf, metadata.xml,
+  -rt-3.4.5.ebuild, +rt-3.6.6.ebuild:
+  version bump wrt #195351; ebuild cleanup wrt #208584
 
   05 Feb 2008; Benedikt Böhm <hollow@gentoo.org> rt-3.4.5.ebuild,
   rt-3.6.3.ebuild:

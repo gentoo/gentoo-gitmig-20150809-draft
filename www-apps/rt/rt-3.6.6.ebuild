@@ -1,89 +1,82 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.5.ebuild,v 1.19 2008/02/05 15:04:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.6.ebuild,v 1.1 2008/03/07 14:37:28 hollow Exp $
 
-inherit webapp eutils depend.apache
-
-IUSE="mysql postgres fastcgi lighttpd"
+inherit webapp eutils depend.apache confutils
 
 DESCRIPTION="RT is an enterprise-grade ticketing system"
 HOMEPAGE="http://www.bestpractical.com/rt/"
 SRC_URI="http://download.bestpractical.com/pub/${PN}/release/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~ppc ~x86"
+LICENSE="GPL-2"
+IUSE="mysql postgres fastcgi lighttpd"
 
 DEPEND="
 	>=dev-lang/perl-5.8.3
 
-	>=dev-perl/Params-Validate-0.02
-	dev-perl/Cache-Cache
-	>=dev-perl/Exception-Class-1.14
-	>dev-perl/HTML-Mason-1.23
-	dev-perl/MLDBM
-	dev-perl/FreezeThaw
-	>=virtual/perl-Digest-MD5-2.27
-	>=virtual/perl-CGI-2.92
-	>=virtual/perl-Storable-2.08
 	>=dev-perl/Apache-Session-1.53
-	>=dev-perl/XML-RSS-1.05
-	>=dev-perl/HTTP-Server-Simple-0.07
-	>=dev-perl/HTTP-Server-Simple-Mason-0.09
-	dev-perl/Text-WikiFormat
-
-	!lighttpd? (
-		>=dev-perl/Apache-DBI-0.92
-		!fastcgi? ( >=www-apache/libapreq2-2.06
-					>=dev-perl/HTML-Mason-1.31 )
-		fastcgi? ( dev-perl/FCGI )
-	)
-	lighttpd? ( dev-perl/FCGI )
-
-	mysql? ( >=dev-perl/DBD-mysql-2.1018 )
-	postgres? ( >=dev-perl/DBD-Pg-1.41 )
-
-	>=virtual/perl-Getopt-Long-2.24
-
-	dev-perl/HTML-Tree
-	dev-perl/HTML-Format
-	dev-perl/libwww-perl
-
-	virtual/perl-digest-base
-	>=dev-perl/DBI-1.37
-	dev-perl/Test-Inline
+	dev-perl/Cache-Simple-TimedExpiry
+	dev-perl/Calendar-Simple
 	>=dev-perl/class-returnvalue-0.40
-	>=dev-perl/dbix-searchbuilder-1.35
-	dev-perl/text-template
-	>=virtual/perl-File-Spec-0.8
+	>=dev-perl/CSS-Squish-0.06
+	>=dev-perl/DBI-1.37
+	>=dev-perl/dbix-searchbuilder-1.50
+	dev-perl/GD
+	dev-perl/GDGraph
+	dev-perl/GDTextUtil
+	dev-perl/HTML-Format
+	>dev-perl/HTML-Mason-1.31
 	dev-perl/HTML-Parser
 	>=dev-perl/HTML-Scrubber-0.08
-	virtual/perl-libnet
-	>=dev-perl/log-dispatch-2.0
-	>=dev-perl/locale-maketext-lexicon-0.32
+	dev-perl/HTML-Tree
+	>=dev-perl/HTTP-Server-Simple-0.07
+	>=dev-perl/HTTP-Server-Simple-Mason-0.09
+	dev-perl/libwww-perl
 	dev-perl/locale-maketext-fuzzy
-	>=dev-perl/MIME-tools-5.417
+	>=dev-perl/locale-maketext-lexicon-0.32
+	>=dev-perl/log-dispatch-2.0
 	>=dev-perl/MailTools-1.60
-	dev-perl/text-wrapper
-	dev-perl/Time-modules
-	virtual/perl-File-Temp
+	>=dev-perl/MIME-tools-5.417
+	dev-perl/Module-Versions-Report
+	dev-perl/regexp-common
 	dev-perl/TermReadKey
 	dev-perl/text-autoformat
-	>=dev-perl/Text-Quoted-1.3
+	>=dev-perl/Text-Quoted-2.02
+	dev-perl/text-template
+	>=dev-perl/Text-WikiFormat-0.76
+	dev-perl/text-wrapper
+	dev-perl/TimeDate
+	dev-perl/Time-modules
 	>=dev-perl/Tree-Simple-1.04
+	dev-perl/UNIVERSAL-require
+	>=dev-perl/XML-RSS-1.05
+	>=virtual/perl-CGI-2.92
+	virtual/perl-digest-base
+	>=virtual/perl-Digest-MD5-2.27
+	>=virtual/perl-File-Spec-0.8
+	virtual/perl-File-Temp
+	>=virtual/perl-Getopt-Long-2.24
+	virtual/perl-libnet
+	>=virtual/perl-locale-maketext-1.06
 	virtual/perl-Scalar-List-Utils
-	dev-perl/Module-Versions-Report
-	dev-perl/Cache-Simple-TimedExpiry
-	dev-perl/XML-Simple
-	dev-perl/regexp-common
+	>=virtual/perl-Storable-2.08
+	virtual/perl-Time-HiRes
+
+	!lighttpd? ( dev-perl/Apache-DBI )
+	lighttpd? ( dev-perl/FCGI )
+	fastcgi? ( dev-perl/FCGI )
+	mysql? ( >=dev-perl/DBD-mysql-2.1018 )
+	postgres? ( >=dev-perl/DBD-Pg-1.43 )
 "
 
-RDEPEND="
-	${DEPEND}
+RDEPEND="${DEPEND}
 	virtual/mta
 	!lighttpd? ( ${APACHE2_DEPEND} )
 	lighttpd? ( >=www-servers/lighttpd-1.3.13 )
 "
 
-LICENSE="GPL-2"
+need_httpd_cgi
 
 add_user_rt() {
 	# add new user
@@ -128,8 +121,6 @@ add_user_rt() {
 
 pkg_setup() {
 	webapp_pkg_setup
-
-	use mysql && ewarn "RT needs MySQL with innodb support"
 	ewarn
 	ewarn "If you are upgrading from an existing _RT2_ installation,"
 	ewarn "stop this ebuild (Ctrl-C now), download the upgrade tool,"
@@ -139,15 +130,14 @@ pkg_setup() {
 	epause 5
 	enewgroup rt >/dev/null
 	add_user_rt || die "Could not add user"
-
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# add Gentoo-specific layout
-	cat ${FILESDIR}/config.layout-gentoo >> config.layout
+	cat "${FILESDIR}"/config.layout-gentoo >> config.layout
 	sed -e "s|PREFIX|${D}/${MY_HOSTROOTDIR}/${PF}|
 			s|HTMLDIR|${D}/${MY_HTDOCSDIR}|g" -i ./config.layout || die
 
@@ -156,22 +146,20 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local web="apache"
-	useq lighttpd && web="lighttpd"
+	use lighttpd && web="lighttpd"
 
-	local dbtype=""
-	local dba=""
+	local dbtype dba
 
-	if useq mysql; then
+	if use mysql; then
 		dbtype="--with-db-type=mysql"
 		dba="--with-db-dba=root"
 	fi
-	if useq postgres;then
+	if use postgres;then
 		dbtype="--with-db-type=Pg"
 		dba="--with-db-dba=postgres"
 	fi
-	if useq postgres && useq mysql; then
+	if use postgres && use mysql; then
 		ewarn "Both mysql and postgres USE flags enabled, default is mysql."
 		ewarn "You can set the default value in RT_SiteConfig before DB init."
 		dbtype="--with-db-type=mysql"
@@ -188,48 +176,53 @@ src_compile() {
 		${dbtype} ${dba}
 
 	# check for missing deps and ask to report if something is broken
-	local myconf="--verbose $(use_with mysql) \
-		$(use_with postgres pg) \
-		$(use_with fastcgi) \
-		$(use_with lighttpd fastcgi)"
-	if ! useq fastcgi && ! useq lighttpd ; then
+	local myconf="--verbose \
+		$(enable_extension_withonly mysql mysql) \
+		$(enable_extension_withonly postgresql postgres) \
+		$(enable_extension_withonly fastcgi fastcgi) \
+		$(enable_extension_withonly fastcgi lighttpd)" \
+
+	if ! useq fastcgi && ! useq lighttpd; then
 		myconf="${myconf} --with-modperl2"
 	fi
 
-	/usr/bin/perl ./sbin/rt-test-dependencies ${myconf} > ${T}/t
-	if grep -q "MISSING" ${T}/t; then
+	/usr/bin/perl ./sbin/rt-test-dependencies ${myconf} > "${T}"/t
+	if grep -q "MISSING" "${T}"/t; then
 		ewarn "Missing Perl dependency!"
 		ewarn
-		cat ${T}/t
+		cat "${T}"/t | grep MISSING
 		ewarn
-		ewarn "Please file a bug in the Gentoo Bugzilla with the information above"
-		ewarn "and assign it to rl03@gentoo.org"
+		ewarn "Please run perl-cleaner. If the problem persists,"
+		ewarn "please file a bug in the Gentoo Bugzilla with the information above"
 		die "Missing dependencies."
 	fi
 }
 
 src_install() {
 	webapp_src_preinst
-
-	make install
+	emake install || die
 
 	# make sure we don't clobber existing site configuration
-	rm -f ${D}/${MY_HOSTROOTDIR}/${PF}/etc/RT_SiteConfig.pm
+	rm -f "${D}"/${MY_HOSTROOTDIR}/${PF}/etc/RT_SiteConfig.pm
+
+	# fix paths
+	find "${D}" -type f -print0 | xargs -0 dosed
 
 	# copy upgrade files
-	cp -R etc/upgrade ${D}/${MY_HOSTROOTDIR}/${PF}
+	insinto "${MY_HOSTROOTDIR}/${PF}"
+	doins -r etc/upgrade
 
-	cd ${D}
-	grep -Rl "${D}" * | xargs dosed
-
-	if useq lighttpd; then
-		newinitd ${FILESDIR}/${PN}.init.d ${PN}
-		newconfd ${FILESDIR}/${PN}.conf.d ${PN}
+	if use lighttpd; then
+		newinitd "${FILESDIR}"/${PN}.init.d ${PN}
+		newconfd "${FILESDIR}"/${PN}.conf.d ${PN}
 	else
-		local CONF="rt_apache2_fcgi.conf rt_apache2.conf"
-		cd ${FILESDIR} && cp ${CONF} ${D}/${MY_HOSTROOTDIR}/${PF}/etc
+		doins "${FILESDIR}"/{rt_apache2_fcgi.conf,rt_apache2.conf}
 	fi
-	webapp_postinst_txt en ${FILESDIR}/${PV}/postinstall-en.txt
-	webapp_hook_script ${FILESDIR}/${PV}/reconfig
+
+	webapp_serverowned "${MY_HOSTROOTDIR}"/${PF}/var
+
+	webapp_postinst_txt en "${FILESDIR}"/3.4.5/postinstall-en.txt
+	webapp_hook_script "${FILESDIR}"/3.4.5/reconfig
+
 	webapp_src_install
 }
