@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/qt-recordmydesktop-0.3.7.2.ebuild,v 1.1 2008/02/06 14:02:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/qt-recordmydesktop-0.3.7.2.ebuild,v 1.2 2008/03/07 15:50:10 opfer Exp $
 
 inherit qt4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/recordmydesktop/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 # Test is buggy : bug #186752
 # Tries to run intl-toolupdate without it being substituted from
