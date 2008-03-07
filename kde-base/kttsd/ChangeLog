@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.87 2008/03/04 04:03:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.88 2008/03/07 20:43:54 ingmar Exp $
+
+  07 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> kttsd-3.5.9.ebuild:
+  Allow mixing of split & monolithic ebuilds, where possible, thanks to
+  Arfrever Frehtes Taifersar Arahesis!
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kttsd-3.5.8.ebuild,
   kttsd-3.5.9.ebuild, kttsd-4.0.1.ebuild:

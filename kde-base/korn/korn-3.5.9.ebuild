@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/korn-3.5.9.ebuild,v 1.2 2008/03/04 06:34:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/korn-3.5.9.ebuild,v 1.3 2008/03/07 20:41:04 ingmar Exp $
 
 KMNAME=kdepim
 EAPI="1"
@@ -13,7 +13,7 @@ IUSE=""
 DEPEND=">=kde-base/mimelib-${PV}:${SLOT}
 >=kde-base/libkmime-${PV}:${SLOT}"
 RDEPEND="${DEPEND}
-	>=kde-base/kdebase-kioslaves-${PV}:${SLOT}
+	|| ( >=kde-base/kdebase-kioslaves-${PV}:${SLOT} >=kde-base/kdebase-${PV}:${SLOT} )
 	>=kde-base/kdepim-kioslaves-${PV}:${SLOT}"
 
 KMCOPYLIB="libmimelib mimelib

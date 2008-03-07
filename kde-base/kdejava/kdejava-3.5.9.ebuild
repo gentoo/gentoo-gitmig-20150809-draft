@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.5.9.ebuild,v 1.2 2008/02/23 20:09:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.5.9.ebuild,v 1.3 2008/03/07 20:35:37 ingmar Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY=qtjava
@@ -12,8 +12,7 @@ inherit java-pkg-2 kde-meta
 DESCRIPTION="KDE java bindings"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
-COMMONDEPEND=">=kde-base/kwin-${PV}:${SLOT}
-	>=kde-base/kcontrol-${PV}:${SLOT}
+COMMONDEPEND="|| ( ( >=kde-base/kwin-${PV}:${SLOT} >=kde-base/kcontrol-${PV}:${SLOT} ) >=kde-base/kdebase-${PV}:${SLOT} )
 	>=kde-base/qtjava-${PV}:${SLOT}"
 DEPEND=">=virtual/jdk-1.4 $COMMONDEPEND"
 RDEPEND=">=virtual/jre-1.4 $COMMONDEPEND"

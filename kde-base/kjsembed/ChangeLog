@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kjsembed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.82 2008/02/20 23:04:07 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.83 2008/03/07 20:37:20 ingmar Exp $
+
+  07 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> kjsembed-3.5.9.ebuild:
+  Allow mixing of split & monolithic ebuilds, where possible, thanks to
+  Arfrever Frehtes Taifersar Arahesis!
 
 *kjsembed-3.5.9 (20 Feb 2008)
 

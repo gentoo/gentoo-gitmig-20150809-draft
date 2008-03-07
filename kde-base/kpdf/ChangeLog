@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.155 2008/03/04 05:09:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.156 2008/03/07 20:42:33 ingmar Exp $
+
+  07 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> kpdf-3.5.9.ebuild:
+  Allow mixing of split & monolithic ebuilds, where possible, thanks to
+  Arfrever Frehtes Taifersar Arahesis!
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kpdf-3.5.8-r1.ebuild,
   kpdf-3.5.9.ebuild:

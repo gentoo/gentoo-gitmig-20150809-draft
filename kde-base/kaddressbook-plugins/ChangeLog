@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kaddressbook-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook-plugins/ChangeLog,v 1.78 2008/03/04 06:53:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook-plugins/ChangeLog,v 1.79 2008/03/07 20:30:44 ingmar Exp $
+
+  07 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  kaddressbook-plugins-3.5.9.ebuild:
+  Allow mixing of split & monolithic ebuilds, where possible, thanks to
+  Arfrever Frehtes Taifersar Arahesis!
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org>
   kaddressbook-plugins-3.5.8.ebuild, kaddressbook-plugins-3.5.9.ebuild:

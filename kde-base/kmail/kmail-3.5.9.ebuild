@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.9.ebuild,v 1.2 2008/03/04 06:41:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.9.ebuild,v 1.3 2008/03/07 20:38:32 ingmar Exp $
 
 KMNAME=kdepim
 EAPI="1"
@@ -29,8 +29,8 @@ RDEPEND="${DEPEND}
 	crypt? ( app-crypt/pinentry )
 	>=kde-base/kdepim-kioslaves-${PV}:${SLOT}
 	>=kde-base/kmailcvt-${PV}:${SLOT}
-	>=kde-base/kdebase-kioslaves-${PV}:${SLOT}
-	>=kde-base/kcontrol-${PV}:${SLOT}" # for the "looknfeel" icon, and probably others.
+	|| ( >=kde-base/kdebase-kioslaves-${PV}:${SLOT} >=kde-base/kdebase-${PV}:${SLOT} )
+	|| ( >=kde-base/kcontrol-${PV}:${SLOT} >=kde-base/kdebase-${PV}:${SLOT} )" # for the "looknfeel" icon, and probably others.
 
 KMCOPYLIB="
 	libkdepim libkdepim/

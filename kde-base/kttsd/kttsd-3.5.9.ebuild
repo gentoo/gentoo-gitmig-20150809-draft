@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-3.5.9.ebuild,v 1.2 2008/03/04 04:03:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-3.5.9.ebuild,v 1.3 2008/03/07 20:43:54 ingmar Exp $
 KMNAME=kdeaccessibility
 EAPI="1"
 inherit kde-meta
@@ -11,7 +11,7 @@ IUSE="akode alsa"
 
 DEPEND="akode? ( media-libs/akode )
 	alsa? ( media-libs/alsa-lib )
-	>=kde-base/kcontrol-${PV}:${SLOT}
+	|| ( >=kde-base/kcontrol-${PV}:${SLOT} >=kde-base/kdebase-${PV}:${SLOT} )
 	!arts? ( !alsa? ( media-libs/akode ) )"
 RDEPEND="${DEPEND}
 	|| ( app-accessibility/festival

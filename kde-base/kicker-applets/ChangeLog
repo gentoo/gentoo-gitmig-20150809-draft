@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kicker-applets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/ChangeLog,v 1.85 2008/03/04 06:54:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/ChangeLog,v 1.86 2008/03/07 20:36:49 ingmar Exp $
+
+  07 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  kicker-applets-3.5.9.ebuild:
+  Allow mixing of split & monolithic ebuilds, where possible, thanks to
+  Arfrever Frehtes Taifersar Arahesis!
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kicker-applets-3.5.8.ebuild,
   kicker-applets-3.5.9.ebuild:

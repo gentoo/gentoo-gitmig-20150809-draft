@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.9.ebuild,v 1.2 2008/03/04 05:09:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.9.ebuild,v 1.3 2008/03/07 20:42:33 ingmar Exp $
 
 KMNAME=kdegraphics
 EAPI="1"
@@ -16,7 +16,7 @@ DEPEND=">=media-libs/freetype-2.3
 	>=app-text/poppler-0.6.1
 	>=app-text/poppler-bindings-0.6.1"
 RDEPEND="${DEPEND}
-	>=kde-base/kdeprint-${PV}:${SLOT}"
+	|| ( >=kde-base/kdeprint-${PV}:${SLOT} >=kde-base/kdebase-${PV}:${SLOT} )"
 
 pkg_setup() {
 	kde_pkg_setup

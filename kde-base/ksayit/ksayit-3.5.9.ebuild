@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ksayit-3.5.9.ebuild,v 1.2 2008/03/04 04:06:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ksayit-3.5.9.ebuild,v 1.3 2008/03/07 20:43:13 ingmar Exp $
 KMNAME=kdeaccessibility
 EAPI="1"
 inherit kde-meta
@@ -11,9 +11,18 @@ IUSE=""
 
 DEPEND=">=kde-base/kttsd-${PV}:${SLOT}
 	>=kde-base/arts-${PV}:${SLOT}
-	>=kde-base/kdemultimedia-arts-${PV}:${SLOT}"
+	|| ( >=kde-base/kdemultimedia-arts-${PV}:${SLOT} >=kde-base/kdemultimedia-${PV}:${SLOT} )"
 
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	kde_pkg_setup
+
+	if has_version kde-base/kdemultimedia:${SLOT} && ! built_with_use kde-base/kdemultimedia:${SLOT} arts ; then
+		eerror "You have \"arts\" USE flag enabled, but kde-base/kdemultimedia:${SLOT} was built with this flag disabled."
+		die "Reinstall kde-base/kdemultimedia:${SLOT} with USE=\"arts\""
+	fi
+}
 
 src_compile() {
 	myconf="--enable-ksayit-audio-plugins"
