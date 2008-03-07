@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsutils/cvsutils-0.2.3.ebuild,v 1.2 2006/05/23 02:31:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsutils/cvsutils-0.2.3.ebuild,v 1.3 2008/03/07 22:19:52 angelos Exp $
 
 inherit autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.red-bean.com/cvsutils/"
 SRC_URI="http://www.red-bean.com/cvsutils/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 DEPEND=""
 RDEPEND="dev-lang/perl"
 
