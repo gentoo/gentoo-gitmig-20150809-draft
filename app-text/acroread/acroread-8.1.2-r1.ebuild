@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.1-r2.ebuild,v 1.1 2008/01/30 20:31:13 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.2-r1.ebuild,v 1.1 2008/03/07 20:57:51 tgurr Exp $
 
 inherit eutils nsplugins
 
 DESCRIPTION="Adobe's PDF reader"
 HOMEPAGE="http://www.adobe.com/products/acrobat/"
-IUSE="cups ldap nsplugin"
+IUSE="cups ldap minimal nsplugin"
 
 SRC_HEAD="http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/${PV}"
 SRC_FOOT="-${PV}-1.i486.tar.bz2"
@@ -22,8 +22,7 @@ for ll in ${LINGUA_LIST} ; do
 		${iuse_l}? ( ${SRC_HEAD}/${src_l}/AdobeReader_${src_l}${SRC_FOOT} )"
 done
 SRC_URI="${SRC_URI}
-	${DEFAULT_URI}
-	x86? ( !cups? ( mirror://gentoo/libcups.so-i386.bz2 ) )"
+	${DEFAULT_URI}"
 
 LICENSE="Adobe"
 SLOT="0"
@@ -34,16 +33,16 @@ RESTRICT="strip mirror"
 # seamonkey. In the case of mozilla-firefox and seamonkey, we need to create
 # /etc/gre.d/gre.conf with GRE_PATH set. On amd64 currently only seamonkey-bin
 # provides a 32bit libgtkembedmoz.so.
-RDEPEND="x86? ( >=x11-libs/gtk+-2.0
-			cups? ( net-print/cups )
+RDEPEND="cups? ( net-print/cups )
+	x86? ( >=x11-libs/gtk+-2.0
 			ldap? ( net-nds/openldap )
-			|| ( net-libs/xulrunner
-				www-client/mozilla-firefox
-				www-client/seamonkey
-				www-client/seamonkey-bin ) )
+			!minimal? ( || ( net-libs/xulrunner
+						www-client/mozilla-firefox
+						www-client/seamonkey
+						www-client/seamonkey-bin ) ) )
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.4.2
 			>=app-emulation/emul-linux-x86-gtklibs-2.0
-			>=www-client/seamonkey-bin-1.1.7 )"
+			!minimal? ( >=www-client/seamonkey-bin-1.1.7 ) )"
 QA_TEXTRELS="opt/Adobe/Reader8/Reader/intellinux/plug_ins/PPKLite.api
 	opt/Adobe/Reader8/Browser/intellinux/nppdf.so
 	opt/netscape/plugins/nppdf.so"
@@ -154,6 +153,18 @@ src_unpack() {
 			chmod 755 ${launcher}
 		done
 	fi
+
+	# remove cruft
+	rm "${S}"/Adobe/Reader8/bin/UNINSTALL
+	rm "${S}"/Adobe/Reader8/Resource/Support/vnd.*.desktop
+
+	# fix CVE-2008-0883 the sed way, see bug #212367
+	local binfile
+	for binfile in "${S}"/Adobe/Reader8/bin/* ; do
+	sed -i -e '/MkTemp()/,+17d' \
+		-e 's/MkTemp/mktemp/g' \
+		"${binfile}" || die "sed failed"
+	done
 }
 
 src_install() {
@@ -184,14 +195,6 @@ src_install() {
 		rm "${D}"${INSTALLDIR}/Adobe/Reader8/Reader/intellinux/plug_ins/PPKLite.api
 	fi
 
-	# libcups is needed for printing support (bug 118417)
-	if use x86 && ! use cups ; then
-		mv "${WORKDIR}"/libcups.so-i386 "${WORKDIR}"/libcups.so.2
-		exeinto ${INSTALLDIR}/Adobe/Reader8/Reader/intellinux/lib
-		doexe "${WORKDIR}"/libcups.so.2
-		dosym libcups.so.2 ${INSTALLDIR}/Adobe/Reader8/Reader/intellinux/lib/libcups.so
-	fi
-
 	dodir /opt/bin
 	for launcher in ${LAUNCHERS} ; do
 		dosym /opt/${launcher} /opt/bin/${launcher/*bin\/}
@@ -199,42 +202,44 @@ src_install() {
 }
 
 pkg_postinst () {
-	local ll lc
-	grep -q GRE_PATH= /etc/gre.d/* 2> /dev/null
-	if [[ $? != "0" ]] ; then
-		if use x86 ; then
-			for lib in /opt/seamonkey /usr/lib/seamonkey /usr/lib/mozilla-firefox ; do
-				if [[ -f ${lib}/libgtkembedmoz.so ]] ; then
-					mkdir -p /etc/gre.d
-					cat > /etc/gre.d/gre.conf <<-EOF
-						GRE_PATH=${lib}
-					EOF
-					elog "Acrobat Reader depends on libgtkembedmoz.so, which I've found"
-					elog "on your system in ${lib}, and configured in /etc/gre.d/gre.conf"
-					break # don't search any more libraries
-				fi
-			done
-		fi
-		if use amd64 ; then
-			for lib in /opt/seamonkey ; do
-				if [[ -f ${lib}/libgtkembedmoz.so ]] ; then
-					mkdir -p /etc/gre.d
-					cat > /etc/gre.d/gre.conf <<-EOF
-						GRE_PATH=${lib}
-					EOF
-					elog "Acrobat Reader depends on libgtkembedmoz.so, which I've found"
-					elog "on your system in ${lib}, and configured in /etc/gre.d/gre.conf"
-					break # don't search any more libraries
-				fi
-			done
+	if ! use minimal ; then
+		local ll lc
+		grep -q GRE_PATH= /etc/gre.d/* 2> /dev/null
+		if [[ $? != "0" ]] ; then
+			if use x86 ; then
+				for lib in /opt/seamonkey /usr/lib/seamonkey /usr/lib/mozilla-firefox ; do
+					if [[ -f ${lib}/libgtkembedmoz.so ]] ; then
+						mkdir -p /etc/gre.d
+						cat > /etc/gre.d/gre.conf <<-EOF
+							GRE_PATH=${lib}
+						EOF
+						elog "Adobe Reader depends on libgtkembedmoz.so, which I've found on"
+						elog "your system in ${lib}, and configured in /etc/gre.d/gre.conf."
+						break # don't search any more libraries
+					fi
+				done
+			fi
+			if use amd64 ; then
+				for lib in /opt/seamonkey ; do
+					if [[ -f ${lib}/libgtkembedmoz.so ]] ; then
+						mkdir -p /etc/gre.d
+						cat > /etc/gre.d/gre.conf <<-EOF
+							GRE_PATH=${lib}
+						EOF
+						elog "Adobe Reader depends on libgtkembedmoz.so, which I've found on"
+						elog "your system in ${lib}, and configured in /etc/gre.d/gre.conf."
+						break # don't search any more libraries
+					fi
+				done
+			fi
 		fi
 	fi
 
 	use ldap ||
-		elog "The Acrobat(TM) Security Plugin can be enabled with USE=ldap"
+		elog "The Adobe Reader security plugin can be enabled with USE=ldap"
 
 	use nsplugin ||
-		elog "The Acrobat(TM) Browser Plugin can be enabled with USE=nsplugin"
+		elog "The Adobe Reader browser plugin can be enabled with USE=nsplugin"
 
 	lc=0
 	for ll in ${LINGUA_LIST} ; do
@@ -248,14 +253,19 @@ pkg_postinst () {
 		elog "~/.adobe to switch languages."
 	fi
 
-	grep -q GRE_PATH= /etc/gre.d/* 2> /dev/null
-	if [[ $? != "0" ]] ; then
-		ewarn "Acrobat Reader depends dynamically on libgtkembedmoz.so, which should"
-		ewarn "come with Mozilla Firefox, XULRunner or Seamonkey, however it couldn't"
-		ewarn "be found. The first time you start acroread, it will complain about this,"
-		ewarn "telling you to add the path to it to your preferences. Clear the error"
-		ewarn "dialog, close the Beyond Acrobat Reader dialog, go to"
-		ewarn "Edit -> Preferences -> Internet and set the libgtkembedmoz directory to"
-		ewarn "the place where it exists, then close and restart acroread."
+	if ! use minimal ; then
+		grep -q GRE_PATH= /etc/gre.d/* 2> /dev/null
+		if [[ $? != "0" ]] ; then
+			ewarn "Adobe Reader depends dynamically on libgtkembedmoz.so, which should come"
+			ewarn "with Mozilla Firefox, XULRunner or Seamonkey, however it couldn't be found."
+			ewarn "The first time you start acroread, it will complain about this, telling you"
+			ewarn "to add the path to it to your preferences. Clear the error dialog, close the"
+			ewarn "beyond Adobe Reader dialog, go to Edit -> Preferences -> Internet and set the"
+			ewarn "libgtkembedmoz directory to the place where it exists, then close and restart"
+			ewarn "acroread."
+		fi
+	else
+		ewarn "If you want html support and/or view the help you have to re-emerge"
+		ewarn "acroread with USE=\"-minimal\"."
 	fi
 }
