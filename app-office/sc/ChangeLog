@@ -1,6 +1,9 @@
 # ChangeLog for app-office/sc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/sc/ChangeLog,v 1.20 2008/03/06 17:11:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/sc/ChangeLog,v 1.21 2008/03/07 23:09:14 cla Exp $
+
+  08 Mar 2008; Dawid Węgliński <cla@gentoo.org> sc-7.16-r1.ebuild:
+  Stable on x86 (bug #212456)
 
   06 Mar 2008; nixnut <nixnut@gentoo.org> sc-7.16-r1.ebuild:
   Stable on ppc wrt bug 212456
