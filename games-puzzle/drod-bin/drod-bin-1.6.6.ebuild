@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.5 2007/03/07 17:03:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.6 2008/03/07 18:29:15 wolf31o2 Exp $
 
 inherit eutils games
 
-DESCRIPTION="Deadly Rooms Of Death: face room upon room of deadly things, armed with only your sword and your wits"
+DESCRIPTION="Deadly Rooms Of Death: face room upon room of deadly things, armed with only a sword and your wits"
 HOMEPAGE="http://www.drod.net/"
 SRC_URI="mirror://sourceforge/drod/CDROD-${PV}-setup.sh.bin"
 
