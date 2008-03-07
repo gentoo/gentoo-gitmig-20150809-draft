@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/circlemud/circlemud-3.1.ebuild,v 1.9 2004/12/21 11:43:09 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/circlemud/circlemud-3.1.ebuild,v 1.10 2008/03/07 01:24:58 wolf31o2 Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.circlemud.org/pub/CircleMUD/${PV/.*}.x/circle-${PV}.tar.bz2"
 
 LICENSE="circlemud"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -20,7 +20,7 @@ S="${WORKDIR}/circle-${PV}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
+	cd "${S}"/src
 	touch .accepted
 	sed -i \
 		-e 's:^read.*::' licheck || die
@@ -52,13 +52,13 @@ src_install() {
 	done
 	dogamesbin bin/circle
 
-	dodir ${GAMES_DATADIR}/${PN}
-	cp -r lib/*  ${D}/${GAMES_DATADIR}/${PN}/ || die
+	dodir "${GAMES_DATADIR}/${PN}"
+	cp -r lib/*  "${D}/${GAMES_DATADIR}/${PN}" || die
 
-	insinto ${GAMES_SYSCONFDIR}/${PN}
+	insinto "${GAMES_SYSCONFDIR}/${PN}"
 	doins lib/etc/*
 
 	dodoc doc/{README.UNIX,*.pdf,*.txt} ChangeLog FAQ README release_notes.${PV}.txt
 	prepgamesdirs
-	fperms 770 ${GAMES_SYSCONFDIR}/${PN}/players
+	fperms 770 "${GAMES_SYSCONFDIR}/${PN}/players"
 }
