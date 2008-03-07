@@ -1,42 +1,44 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p12-r1.ebuild,v 1.18 2008/03/07 13:59:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7_beta3.ebuild,v 1.1 2008/03/07 13:59:18 flameeyes Exp $
 
-inherit eutils pam
+inherit eutils pam confutils
 
-# TODO: Fix support for krb4 and krb5
+MY_P=${P/_/}
+MY_P=${MY_P/beta/b}
+
+[[ ${P} == *_beta* ]] && uri_prefix=beta/ || uri_prefix=""
 
 DESCRIPTION="Allows users or groups to run commands as other users"
 HOMEPAGE="http://www.sudo.ws/"
-SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${P/_/}.tar.gz"
+SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${uri_prefix}${MY_P}.tar.gz"
 LICENSE="Sudo"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="pam skey offensive ldap selinux"
 
-DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
+DEPEND="pam? ( virtual/pam )
 	ldap? ( >=net-nds/openldap-2.1.30-r1 )
 	skey? ( >=app-admin/skey-1.1.5-r1 )
 	virtual/editor
 	virtual/mta"
 RDEPEND="selinux? ( sec-policy/selinux-sudo )
 	ldap? ( dev-lang/perl )
+	pam? ( sys-auth/pambase )
 	${DEPEND}"
 DEPEND="${RDEPEND} sys-devel/bison"
 
-S=${WORKDIR}/${P/_/}
+S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	confutils_use_conflict skey pam
+}
 
 src_unpack() {
 	unpack ${A}; cd "${S}"
 
-	# ldap failover patch
-	epatch "${FILESDIR}"/${PN}-ldap_timelimit.diff
-
 	# compatability fix.
 	epatch "${FILESDIR}"/${PN}-skeychallengeargs.diff
-
-	# make tls_cacert synonymous with tls_cacertfile.
-	epatch "${FILESDIR}"/${PN}-1.6.8_p8-ldap-tls_cacert.diff
 
 	# additional variables to disallow, should user disable env_reset.
 
@@ -59,18 +61,24 @@ src_unpack() {
 	# XXX: <?> = probably safe enough for most circumstances.
 
 	einfo "Blacklisting common variables (env_delete)..."
+		sudo_bad_var() {
+			local target='env.c' marker='\*initial_badenv_table\[\]'
+
+			ebegin "	$1"
+			sed -i 's#\(^.*'${marker}'.*$\)#\1\n\t"'${1}'",#' "${S}"/${target}
+			eend $?
+		}
+
 		sudo_bad_var 'PERLIO_DEBUG'   # perl, write debug to file.
 		sudo_bad_var 'FPATH'          # ksh, search path for functions.
 		sudo_bad_var 'NULLCMD'        # zsh, command on null-redir. <?>
 		sudo_bad_var 'READNULLCMD'    # zsh, command on null-redir. <?>
-#		sudo_bad_var 'TMPPREFIX'      # zsh, prefix for tmp files. <?>
 		sudo_bad_var 'GLOBIGNORE'     # bash, glob paterns to ignore. <?>
 		sudo_bad_var 'PYTHONHOME'     # python, module search path.
 		sudo_bad_var 'PYTHONPATH'     # python, search path.
 		sudo_bad_var 'PYTHONINSPECT'  # python, allow inspection.
 		sudo_bad_var 'RUBYLIB'        # ruby, lib load path.
 		sudo_bad_var 'RUBYOPT'        # ruby, cl options.
-#		sudo_bad_var 'RUBYPATH'       # ruby, script search path. <?>
 		sudo_bad_var 'ZDOTDIR'        # zsh, path to search for dotfiles.
 	einfo "...done."
 
@@ -101,10 +109,33 @@ src_compile() {
 			done`  && einfo "	Found ROOTPATH..." || \
 				ewarn "	Failed to find ROOTPATH, please report this."
 
-		# remove any duplicate entries
+		# remove duplicate path entries from $1
+		cleanpath() {
+			local i=1 x n IFS=:
+			local -a paths;	paths=($1)
+
+			for ((n=${#paths[*]}-1;i<=n;i++)); do
+				for ((x=0;x<i;x++)); do
+					test "${paths[i]}" == "${paths[x]}" && {
+						einfo "	Duplicate entry ${paths[i]} removed..." 1>&2
+						unset paths[i]; continue 2; }
+				done; # einfo "	Adding ${paths[i]}..." 1>&2
+			done; echo "${paths[*]}"
+		}
+
 		ROOTPATH=$(cleanpath /bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/bin${ROOTPATH:+:${ROOTPATH}})
 
 		# strip gcc path (bug #136027)
+		rmpath() {
+			declare e newpath oldpath=${!1} PATHvar=$1 thisp IFS=:
+			shift
+			for thisp in $oldpath; do
+				for e; do [[ $thisp == $e ]] && continue 2; done
+				newpath=$newpath:$thisp
+			done
+			eval $PATHvar='${newpath#:}'
+		}
+
 		rmpath ROOTPATH '*/gcc-bin/*'
 
 	einfo "...done."
@@ -125,77 +156,46 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
-	dodoc BUGS CHANGES HISTORY PORTING README RUNSON TODO \
-		TROUBLESHOOTING UPGRADE sample.*
+	emake -j1 DESTDIR="${D}" install || die
+	dodoc ChangeLog HISTORY PORTING README TROUBLESHOOTING \
+		UPGRADE sample.sudoers sample.syslog.conf
 
 	if use ldap; then
-		dodoc README.LDAP
+		dodoc README.LDAP schema.OpenLDAP
 		dosbin sudoers2ldif
 
-		printf "# See ldap.conf(5) and README.LDAP for details\n" 					> "${T}"/ldap.conf.sudo
-		printf "# This file should only be readable by root\n\n" 					>> "${T}"/ldap.conf.sudo
-		printf "# supported directives: host, port, ssl, ldap_version\n" 			>> "${T}"/ldap.conf.sudo
-		printf "# uri, binddn, bindpw, sudoers_base, sudoers_debug\n" 				>> "${T}"/ldap.conf.sudo
-		printf "# tls_{checkpeer,cacertfile,cacertdir,randfile,ciphers,cert,key}\n"	>> "${T}"/ldap.conf.sudo
+		cat - > "${T}"/ldap.conf.sudo <<EOF
+# See ldap.conf(5) and README.LDAP for details\n"
+# This file should only be readable by root\n\n"
+# supported directives: host, port, ssl, ldap_version\n"
+# uri, binddn, bindpw, sudoers_base, sudoers_debug\n"
+# tls_{checkpeer,cacertfile,cacertdir,randfile,ciphers,cert,key
+EOF
 
 		insinto /etc
 		doins "${T}"/ldap.conf.sudo
 		fperms 0440 /etc/ldap.conf.sudo
 	fi
 
-	if has_version virtual/pam; then
-		pamd_mimic system-auth sudo auth account password session
-	else
-		dopamd "${FILESDIR}"/sudo
-	fi
+	pamd_mimic system-login sudo auth account password session
 
 	insinto /etc
 	doins "${FILESDIR}"/sudoers
 	fperms 0440 /etc/sudoers
 }
 
-# remove duplicate path entries from $1
-cleanpath() {
-	local i=1 x n IFS=:
-	local -a paths;	paths=($1)
-
-	for ((n=${#paths[*]}-1;i<=n;i++)); do
-		for ((x=0;x<i;x++)); do
-			test "${paths[i]}" == "${paths[x]}" && {
-				einfo "	Duplicate entry ${paths[i]} removed..." 1>&2
-				unset paths[i]; continue 2; }
-		done; # einfo "	Adding ${paths[i]}..." 1>&2
-	done; echo "${paths[*]}"
-}
-
-# add $1 to default env_delete list.
-sudo_bad_var() {
-	local target='env.c' marker='\*initial_badenv_table\[\]'
-
-	ebegin "	$1"
-		sed -i 's#\(^.*'${marker}'.*$\)#\1\n\t"'${1}'",#' "${S}"/${target}
-	eend $?
-}
-
-rmpath() {
-	declare e newpath oldpath=${!1} PATHvar=$1 thisp IFS=:
-	shift
-	for thisp in $oldpath; do
-		for e; do [[ $thisp == $e ]] && continue 2; done
-		newpath=$newpath:$thisp
-	done
-	eval $PATHvar='${newpath#:}'
-}
-
 pkg_postinst() {
-	use skey && use pam && {
-		ewarn "sudo will not use skey authentication when compiled with"
-		ewarn "pam support."
-		ewarn "To allow users to authenticate with one time passwords,"
-		ewarn "you should unset the pam USE flag for sudo."
-	}
-	use ldap && {
+	if use ldap; then
+		ewarn
 		ewarn "sudo uses the /etc/ldap.conf.sudo file for ldap configuration."
-	}
+		ewarn
+		if egrep -q '^[[:space:]]*sudoers:' "${ROOT}"/etc/nsswitch.conf; then
+			ewarn "In 1.7 series, LDAP is no more consulted, unless explicitly"
+			ewarn "configured in /etc/nsswitch.conf."
+			ewarn
+			ewarn "To make use of LDAP, add this line to your /etc/nsswitch.conf:"
+			ewarn "  sudoers: ldap files"
+			ewarn
+		fi
+	fi
 }

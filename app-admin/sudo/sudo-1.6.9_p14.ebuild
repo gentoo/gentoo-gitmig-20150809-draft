@@ -1,42 +1,39 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p12-r1.ebuild,v 1.18 2008/03/07 13:59:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.9_p14.ebuild,v 1.1 2008/03/07 13:59:18 flameeyes Exp $
 
-inherit eutils pam
-
-# TODO: Fix support for krb4 and krb5
+inherit eutils pam confutils
 
 DESCRIPTION="Allows users or groups to run commands as other users"
 HOMEPAGE="http://www.sudo.ws/"
 SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${P/_/}.tar.gz"
 LICENSE="Sudo"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="pam skey offensive ldap selinux"
 
-DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
+DEPEND="pam? ( virtual/pam )
 	ldap? ( >=net-nds/openldap-2.1.30-r1 )
 	skey? ( >=app-admin/skey-1.1.5-r1 )
 	virtual/editor
 	virtual/mta"
 RDEPEND="selinux? ( sec-policy/selinux-sudo )
 	ldap? ( dev-lang/perl )
+	pam? ( sys-auth/pambase )
 	${DEPEND}"
 DEPEND="${RDEPEND} sys-devel/bison"
 
 S=${WORKDIR}/${P/_/}
 
+pkg_setup() {
+	confutils_use_conflict skey pam
+}
+
 src_unpack() {
 	unpack ${A}; cd "${S}"
 
-	# ldap failover patch
-	epatch "${FILESDIR}"/${PN}-ldap_timelimit.diff
-
 	# compatability fix.
 	epatch "${FILESDIR}"/${PN}-skeychallengeargs.diff
-
-	# make tls_cacert synonymous with tls_cacertfile.
-	epatch "${FILESDIR}"/${PN}-1.6.8_p8-ldap-tls_cacert.diff
 
 	# additional variables to disallow, should user disable env_reset.
 
@@ -63,14 +60,12 @@ src_unpack() {
 		sudo_bad_var 'FPATH'          # ksh, search path for functions.
 		sudo_bad_var 'NULLCMD'        # zsh, command on null-redir. <?>
 		sudo_bad_var 'READNULLCMD'    # zsh, command on null-redir. <?>
-#		sudo_bad_var 'TMPPREFIX'      # zsh, prefix for tmp files. <?>
 		sudo_bad_var 'GLOBIGNORE'     # bash, glob paterns to ignore. <?>
 		sudo_bad_var 'PYTHONHOME'     # python, module search path.
 		sudo_bad_var 'PYTHONPATH'     # python, search path.
 		sudo_bad_var 'PYTHONINSPECT'  # python, allow inspection.
 		sudo_bad_var 'RUBYLIB'        # ruby, lib load path.
 		sudo_bad_var 'RUBYOPT'        # ruby, cl options.
-#		sudo_bad_var 'RUBYPATH'       # ruby, script search path. <?>
 		sudo_bad_var 'ZDOTDIR'        # zsh, path to search for dotfiles.
 	einfo "...done."
 
@@ -125,30 +120,28 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
-	dodoc BUGS CHANGES HISTORY PORTING README RUNSON TODO \
-		TROUBLESHOOTING UPGRADE sample.*
+	emake -j1 DESTDIR="${D}" install || die
+	dodoc BUGS CHANGES HISTORY PORTING README TROUBLESHOOTING \
+		UPGRADE sample.sudoers sample.syslog.conf
 
 	if use ldap; then
-		dodoc README.LDAP
+		dodoc README.LDAP schema.OpenLDAP
 		dosbin sudoers2ldif
 
-		printf "# See ldap.conf(5) and README.LDAP for details\n" 					> "${T}"/ldap.conf.sudo
-		printf "# This file should only be readable by root\n\n" 					>> "${T}"/ldap.conf.sudo
-		printf "# supported directives: host, port, ssl, ldap_version\n" 			>> "${T}"/ldap.conf.sudo
-		printf "# uri, binddn, bindpw, sudoers_base, sudoers_debug\n" 				>> "${T}"/ldap.conf.sudo
-		printf "# tls_{checkpeer,cacertfile,cacertdir,randfile,ciphers,cert,key}\n"	>> "${T}"/ldap.conf.sudo
+		cat - > "${T}"/ldap.conf.sudo <<EOF
+# See ldap.conf(5) and README.LDAP for details\n"
+# This file should only be readable by root\n\n"
+# supported directives: host, port, ssl, ldap_version\n"
+# uri, binddn, bindpw, sudoers_base, sudoers_debug\n"
+# tls_{checkpeer,cacertfile,cacertdir,randfile,ciphers,cert,key
+EOF
 
 		insinto /etc
 		doins "${T}"/ldap.conf.sudo
 		fperms 0440 /etc/ldap.conf.sudo
 	fi
 
-	if has_version virtual/pam; then
-		pamd_mimic system-auth sudo auth account password session
-	else
-		dopamd "${FILESDIR}"/sudo
-	fi
+	pamd_mimic system-login sudo auth account password session
 
 	insinto /etc
 	doins "${FILESDIR}"/sudoers
@@ -189,12 +182,6 @@ rmpath() {
 }
 
 pkg_postinst() {
-	use skey && use pam && {
-		ewarn "sudo will not use skey authentication when compiled with"
-		ewarn "pam support."
-		ewarn "To allow users to authenticate with one time passwords,"
-		ewarn "you should unset the pam USE flag for sudo."
-	}
 	use ldap && {
 		ewarn "sudo uses the /etc/ldap.conf.sudo file for ldap configuration."
 	}
