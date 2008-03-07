@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/CSS-Squish
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CSS-Squish/ChangeLog,v 1.1 2008/03/07 14:52:56 hollow Exp $
+
+*CSS-Squish-0.07 (07 Mar 2008)
+
+  07 Mar 2008; Benedikt Böhm <hollow@gentoo.org> +metadata.xml,
+  +CSS-Squish-0.07.ebuild:
+  initial ebuild wrt #195351
+
