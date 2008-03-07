@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.210 2008/02/20 22:43:37 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.211 2008/03/07 00:44:02 dirtyepic Exp $
+
+  07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kdeadmin-3.5.9.ebuild:
+  Keyword ~mips.
 
 *kdeadmin-3.5.9 (20 Feb 2008)
 

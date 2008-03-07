@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.227 2008/02/20 22:56:13 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.228 2008/03/07 00:40:10 dirtyepic Exp $
+
+  07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kdeutils-3.5.9.ebuild:
+  Keyword ~mips.
 
 *kdeutils-3.5.9 (20 Feb 2008)
 
