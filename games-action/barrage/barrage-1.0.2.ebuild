@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/barrage-1.0.2.ebuild,v 1.5 2007/05/21 17:24:48 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/barrage-1.0.2.ebuild,v 1.6 2008/03/07 23:55:44 wolf31o2 Exp $
 
 inherit games
 
@@ -17,7 +17,7 @@ DEPEND=">=media-libs/libsdl-1.2
 	>=media-libs/sdl-mixer-1.2.4"
 
 src_compile() {
-	egamesconf --datadir=${GAMES_DATADIR_BASE} || die
+	egamesconf --datadir="${GAMES_DATADIR_BASE}" || die
 	emake || die "emake failed"
 }
 

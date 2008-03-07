@@ -1,6 +1,10 @@
 # ChangeLog for games-action/0verkill
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/ChangeLog,v 1.15 2007/11/16 06:33:01 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/ChangeLog,v 1.16 2008/03/07 23:54:07 wolf31o2 Exp $
+
+  07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  0verkill-0.16-r3.ebuild:
+  QA cleanup: Fix quoting.
 
   16 Nov 2007; Michael Sterrett <mr_bones_@gentoo.org>
   +files/0verkill-0.16-docs.patch, -files/0.16-docs.patch,

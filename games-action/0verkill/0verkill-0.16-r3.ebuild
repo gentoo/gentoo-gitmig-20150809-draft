@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r3.ebuild,v 1.4 2007/11/16 06:33:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r3.ebuild,v 1.5 2008/03/07 23:54:07 wolf31o2 Exp $
 
 inherit autotools eutils games
 
@@ -54,10 +54,8 @@ src_install() {
 		done
 	fi
 
-	insinto ${GAMES_DATADIR}/${PN}/data
-	doins data/* || die
-	insinto ${GAMES_DATADIR}/${PN}/grx
-	doins grx/* || die
+	insinto "${GAMES_DATADIR}/${PN}"
+	doins -r data grx || die
 
 	dohtml doc/*.htm
 	rm doc/*.html doc/README.OS2 doc/Readme\ Win32.txt doc/COPYING

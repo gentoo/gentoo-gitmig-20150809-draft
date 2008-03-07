@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.5.5.ebuild,v 1.6 2008/03/06 03:51:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.5.5.ebuild,v 1.7 2008/03/07 23:57:49 wolf31o2 Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -58,7 +58,7 @@ src_compile() {
 
 	local x
 	for x in client monitor unvedit ; do #server
-		./configure.${x} Linux --prefix=${GAMES_PREFIX} ${myconf} || die "configure ${x}"
+		./configure.${x} Linux --prefix="${GAMES_PREFIX}" ${myconf} || die "configure ${x}"
 		emake -j1 -f Makefile.${x} all || die "build ${x}"
 	done
 }

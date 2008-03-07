@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/barrage-1.0.2-r1.ebuild,v 1.2 2008/02/29 18:44:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/barrage-1.0.2-r1.ebuild,v 1.3 2008/03/07 23:55:44 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -22,7 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
-	egamesconf --datadir=${GAMES_DATADIR_BASE} || die
+	egamesconf --datadir="${GAMES_DATADIR_BASE}" || die
 	emake || die "emake failed"
 }
 
