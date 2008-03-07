@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/arrows/arrows-0.6.ebuild,v 1.7 2008/01/18 03:00:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/arrows/arrows-0.6.ebuild,v 1.8 2008/03/07 16:44:46 wolf31o2 Exp $
 
 inherit games
 
-DESCRIPTION="Guide the spinning blue thing through the maze of arrows, creating and destroying arrows as necessary to collect the green things"
+DESCRIPTION="simple maze-like game where you navigate around and destroy arrows"
 HOMEPAGE="http://noreason.ca/?file=software"
 SRC_URI="http://noreason.ca/data/${P}.tar.gz"
 
