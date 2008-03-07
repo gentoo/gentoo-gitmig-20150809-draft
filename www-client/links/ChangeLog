@@ -1,6 +1,10 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.99 2008/03/07 15:55:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.100 2008/03/07 16:38:37 coldwind Exp $
+
+  07 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  links-2.1_pre33.ebuild:
+  amd64 stable wrt bug #212593
 
   07 Mar 2008; Brent Baude <ranger@gentoo.org> links-2.1_pre33.ebuild:
   stable ppc64, bug 212593
