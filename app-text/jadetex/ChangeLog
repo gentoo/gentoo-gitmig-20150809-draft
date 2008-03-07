@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jadetex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.38 2008/03/07 16:40:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.39 2008/03/07 17:20:15 fmccor Exp $
+
+  07 Mar 2008; Ferris McCormick <fmccor@gentoo.org> jadetex-3.13-r2.ebuild:
+  Sparc stable --- Bug #212062 --- built with texlive.
 
   07 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
   jadetex-3.13-r2.ebuild:
