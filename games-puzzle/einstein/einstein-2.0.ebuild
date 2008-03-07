@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/einstein-2.0.ebuild,v 1.5 2007/02/03 14:02:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/einstein-2.0.ebuild,v 1.6 2008/03/07 19:09:09 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -38,7 +38,7 @@ src_install() {
 	dogamesbin "${PN}" || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}/${PN}/res"
 	doins einstein.res || die "doins failed"
-	doicon ${DISTDIR}/${PN}.png
+	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} "Einstein Puzzle"
 	prepgamesdirs
 }
