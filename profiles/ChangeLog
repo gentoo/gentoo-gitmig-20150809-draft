@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1185 2008/03/06 15:03:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1186 2008/03/07 00:53:44 dirtyepic Exp $
+
+  07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org>
+  default-linux/mips/package.use.mask:
+  Mask solver USE flag for kde-base/kdeedu on mips.
 
   06 Mar 2008; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add mktemp USE flag for pambase.
