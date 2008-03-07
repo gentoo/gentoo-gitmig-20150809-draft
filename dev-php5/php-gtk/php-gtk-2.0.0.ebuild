@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0.ebuild,v 1.1 2008/03/04 19:39:43 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0.ebuild,v 1.2 2008/03/07 19:58:43 armin76 Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ inherit php-ext-source-r1
 DESCRIPTION="PHP 5 bindings for the Gtk+ 2 library."
 HOMEPAGE="http://gtk.php.net/"
 SRC_URI="http://gtk.php.net/distributions/${P}.tar.gz"
-IUSE="debug doc examples extra +glade html libsexy mozembed scintilla sourceview spell"
+IUSE="debug doc examples extra +glade html libsexy mozembed scintilla spell"
 LICENSE="PHP-2.02 PHP-3 PHP-3.01 LGPL-2.1 public-domain Scintilla"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -41,7 +41,6 @@ RDEPEND=">=dev-lang/php-5.1.2
 	html? ( >=gnome-extra/gtkhtml-3.10.0 )
 	libsexy? ( >=x11-libs/libsexy-0.1.10 )
 	mozembed? ( >=www-client/mozilla-firefox-1.5.0 )
-	sourceview? ( >=x11-libs/gtksourceview-1.2.0:1.0 )
 	spell? ( >=app-text/gtkspell-2.0.0 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
@@ -93,10 +92,10 @@ src_compile() {
 		$(use_with html) \
 		$(use_with libsexy) \
 		$(use_with mozembed) \
-		$(use_with sourceview) \
 		$(use_with spell) \
 		$(use_with debug) \
 		$(use_enable scintilla) \
+		--without-sourceview \
 		${GLCONF}
 
 	emake || die "make failed!"
