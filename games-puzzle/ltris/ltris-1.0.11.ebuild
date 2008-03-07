@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ltris-1.0.11.ebuild,v 1.7 2008/02/29 19:31:33 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ltris-1.0.11.ebuild,v 1.8 2008/03/07 19:16:33 wolf31o2 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	if use nls ; then
 		sed -i \
