@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.15 2008/02/14 07:33:12 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.16 2008/03/07 09:25:47 steev Exp $
+
+*nm-applet-0.6.6 (07 Mar 2008)
+
+  07 Mar 2008; Steev Klimaszewski <steev@gentoo.org> -files/10-po_fr.patch,
+  -files/12-po_jp.patch, -files/nm-applet-makefile.am-2.patch,
+  -files/11-po_de.patch, -files/nm-applet-po-linguas.patch,
+  -files/nm-applet-potfiles.patch, -files/nm-editor-fdo-categories.patch,
+  -nm-applet-0.6.5.98.ebuild, +nm-applet-0.6.6.ebuild:
+  New upstream release, remove the old patches that 0.6.5.98 were using.
 
 *nm-applet-0.6.5.98 (14 Feb 2008)
 

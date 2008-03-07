@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.5.98.ebuild,v 1.1 2008/02/14 07:33:12 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.6.ebuild,v 1.1 2008/03/07 09:25:47 steev Exp $
 
 inherit autotools gnome2 eutils
 
@@ -49,20 +49,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-0.6.5-confchanges.patch"
-	#Patches from Debian, use po/LINGUAS, update translations
-	epatch "${FILESDIR}/${PN}-po-linguas.patch"
-	epatch "${FILESDIR}/${PN}-potfiles.patch"
-	epatch "${FILESDIR}/10-po_fr.patch"
-	epatch "${FILESDIR}/11-po_de.patch"
-	epatch "${FILESDIR}/12-po_jp.patch"
-	# Patches from Debian, use an fdo compliant category for the editor.
-	# install nm-disconnect-wireless-on-exit.sh as a script.
-	# install nm-applet autostart file according to the fdo spec
-	epatch "${FILESDIR}/nm-editor-fdo-categories.patch"
-	epatch "${FILESDIR}/${PN}-makefile.am-2.patch"
-	eautoreconf
-	# Eva, next time, please comment on what you are doing.
-#	echo "src/nm-wired-dialog.c" >> po/POTFILES.in
 }
 
 pkg_postinst() {
