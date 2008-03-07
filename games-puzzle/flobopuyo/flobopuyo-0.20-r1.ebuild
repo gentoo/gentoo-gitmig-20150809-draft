@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20-r1.ebuild,v 1.2 2006/05/02 08:01:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20-r1.ebuild,v 1.3 2008/03/07 19:11:47 wolf31o2 Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -64,5 +64,4 @@ src_install() {
 	doins "${DISTDIR}/${PN}.png"
 
 	make_desktop_entry flobopuyo FloboPuyo flobopuyo "Game;ArcadeGame;"
-	echo "TryExec=flobopuyo" >> ${D}/usr/share/applications/${PN}-flobopuyo.desktop
 }
