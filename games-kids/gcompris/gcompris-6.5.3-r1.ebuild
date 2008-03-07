@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.5.3-r1.ebuild,v 1.4 2006/12/05 18:13:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.5.3-r1.ebuild,v 1.5 2008/03/07 01:13:36 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -49,7 +49,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
+	make install DESTDIR="${D}" || die "make install failed"
 	# Crashed for me
 	rm -rf "${D}/usr/share/gcompris/boards/watercycle"*
 	rm -f "${D}/usr/share/gcompris/boards/followline.xml"
