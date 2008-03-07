@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.92 2008/02/28 14:42:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.93 2008/03/07 02:28:46 rich0 Exp $
+
+  07 Mar 2008; Richard Freeman <rich0@gentoo.org> xfsprogs-2.9.5.ebuild:
+  amd64 stabe - 211152
 
   28 Feb 2008; nixnut <nixnut@gentoo.org> xfsprogs-2.9.5.ebuild:
   Stable on ppc wrt bug 211152
