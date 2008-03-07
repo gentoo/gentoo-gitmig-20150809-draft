@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/phpBB-3.0.0.ebuild,v 1.2 2008/03/07 12:33:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/phpBB-2.0.23.ebuild,v 1.1 2008/03/07 12:33:54 hollow Exp $
 
 inherit webapp depend.php
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 need_httpd_cgi
 need_php_httpd
 
-S="${WORKDIR}"/${PN}3
+S="${WORKDIR}"/${PN}2
 
 src_install() {
 	webapp_src_preinst
@@ -26,10 +26,11 @@ src_install() {
 	insinto "${MY_HTDOCSDIR}"
 	doins -r .
 
-	webapp_serverowned "${MY_HTDOCSDIR}"/cache
-	webapp_serverowned "${MY_HTDOCSDIR}"/files
-	webapp_serverowned "${MY_HTDOCSDIR}"/images/avatars/upload
-	webapp_serverowned "${MY_HTDOCSDIR}"/store
+	webapp_serverowned "${MY_HTDOCSDIR}"/images
+	webapp_serverowned "${MY_HTDOCSDIR}"/images/avatars
+	webapp_serverowned "${MY_HTDOCSDIR}"/images/avatars/gallery
+	webapp_serverowned "${MY_HTDOCSDIR}"/language
+	webapp_serverowned "${MY_HTDOCSDIR}"/templates
 	webapp_serverowned "${MY_HTDOCSDIR}"/config.php
 	webapp_configfile  "${MY_HTDOCSDIR}"/config.php
 
