@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/snd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.38 2007/07/29 17:24:11 angelos Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.39 2008/03/07 17:46:48 aballier Exp $
+
+*snd-9.7 (07 Mar 2008)
+
+  07 Mar 2008; Alexis Ballier <aballier@gentoo.org> +snd-9.7.ebuild:
+  version bump
 
   29 Jul 2007; Christoph Mende <angelos@gentoo.org> snd-9.1.ebuild:
   Stable on amd64 wrt bug #187007
