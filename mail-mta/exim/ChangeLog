@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.118 2008/03/06 17:16:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.119 2008/03/07 13:30:03 jer Exp $
+
+  07 Mar 2008; Jeroen Roovers <jer@gentoo.org> exim-4.69.ebuild:
+  Stable for HPPA (bug #198379).
 
   06 Mar 2008; Raúl Porcel <armin76@gentoo.org> exim-4.69.ebuild:
   alpha/ia64/sparc stable wrt #198379
