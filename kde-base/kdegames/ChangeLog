@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.204 2008/02/20 22:49:10 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.205 2008/03/07 01:00:12 dirtyepic Exp $
+
+  07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kdegames-3.5.9.ebuild:
+  Keyword ~mips.
 
 *kdegames-3.5.9 (20 Feb 2008)
 

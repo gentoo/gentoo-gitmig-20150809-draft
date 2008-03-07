@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.270 2008/02/20 22:50:37 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.271 2008/03/07 01:07:34 dirtyepic Exp $
+
+  07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kdemultimedia-3.5.9.ebuild:
+  Keyword ~mips.
 
 *kdemultimedia-3.5.9 (20 Feb 2008)
 

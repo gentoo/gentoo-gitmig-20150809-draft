@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.236 2008/02/20 22:48:30 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.237 2008/03/07 00:55:32 dirtyepic Exp $
+
+  07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kdeedu-3.5.9.ebuild:
+  Keyword ~mips.
 
 *kdeedu-3.5.9 (20 Feb 2008)
 

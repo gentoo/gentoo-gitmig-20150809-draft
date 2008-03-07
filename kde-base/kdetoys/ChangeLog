@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.196 2008/02/20 22:55:49 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.197 2008/03/07 01:12:49 dirtyepic Exp $
+
+  07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kdetoys-3.5.9.ebuild:
+  Keyword ~mips.
 
 *kdetoys-3.5.9 (20 Feb 2008)
 
