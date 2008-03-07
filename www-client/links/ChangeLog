@@ -1,6 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.100 2008/03/07 16:38:37 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.101 2008/03/07 17:02:10 fmccor Exp $
+
+  07 Mar 2008; Ferris McCormick <fmccor@gentoo.org> links-2.1_pre33.ebuild:
+  Sparc stable, Bug #212593 good for over 30 days now.
 
   07 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   links-2.1_pre33.ebuild:
