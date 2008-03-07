@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/atomix-2.14.0.ebuild,v 1.4 2006/06/14 17:20:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/atomix-2.14.0.ebuild,v 1.5 2008/03/07 16:54:08 wolf31o2 Exp $
 
 inherit gnome2
 
-DESCRIPTION="a puzzle game in which you have to build full molecules, from simple inorganic to extremely complex organic ones."
+DESCRIPTION="a game where you build full molecules, from simple inorganic to extremely complex organic ones"
 HOMEPAGE="http://ftp.gnome.org/pub/GNOME/sources/atomix/"
 
 LICENSE="GPL-2"

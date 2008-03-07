@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/atomix
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/ChangeLog,v 1.12 2006/06/14 17:20:27 nixnut Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/ChangeLog,v 1.13 2008/03/07 16:54:08 wolf31o2 Exp $
+
+  07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> atomix-2.14.0.ebuild:
+  QA cleanup: Shorten DESCRIPTION.
 
   14 Jun 2006; <nixnut@gentoo.org> atomix-2.14.0.ebuild:
   Stable on ppc; bug #136196
