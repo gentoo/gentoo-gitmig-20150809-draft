@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1186 2008/03/07 00:53:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1187 2008/03/07 14:43:37 pva Exp $
+
+  07 Mar 2008; Peter Volkov <pva@gentoo.org> use.local.desc:
+  Added smi USE flag for net-analyzer/wireshark.
 
   07 Mar 2008; Ryan Hill <dirtyepic@gentoo.org>
   default-linux/mips/package.use.mask:
