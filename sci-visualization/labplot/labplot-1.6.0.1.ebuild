@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.6.0.1.ebuild,v 1.2 2008/02/08 21:53:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.6.0.1.ebuild,v 1.3 2008/03/07 03:02:44 bicatali Exp $
 
 inherit eutils kde multilib
 
@@ -18,7 +18,7 @@ IUSE="audiofile bindist cdf fftw hdf5 gsl imagemagick jpeg2k kexi
 	netcdf opengl qhull R tiff"
 
 RDEPEND="media-gfx/pstoedit
-	sci-libs/liborigin
+	<sci-libs/liborigin-20080225
 	virtual/ghostscript
 	gsl? ( bindist? ( <sci-libs/gsl-1.10 ) !bindist? ( sci-libs/gsl ) )
 	audiofile? ( media-libs/audiofile )

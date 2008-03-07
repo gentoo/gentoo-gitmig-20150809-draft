@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.6-r1.ebuild,v 1.2 2008/02/08 19:00:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.6-r1.ebuild,v 1.3 2008/03/07 03:02:44 bicatali Exp $
 
 inherit eutils kde
 
@@ -26,7 +26,7 @@ DEPEND="bindist? ( <sci-libs/gsl-1.10 )
 	!bindist? ( sci-libs/gsl )
 	media-gfx/pstoedit
 	sci-libs/netcdf
-	sci-libs/liborigin
+	<sci-libs/liborigin-20080225
 	virtual/ghostscript
 	x11-libs/qwtplot3d-qt3
 	media-libs/audiofile
