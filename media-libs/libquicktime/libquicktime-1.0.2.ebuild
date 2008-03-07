@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.0.2.ebuild,v 1.4 2008/03/04 14:09:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.0.2.ebuild,v 1.5 2008/03/07 15:22:18 ranger Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="mmx X opengl dv gtk alsa aac encode png jpeg vorbis lame x264 ffmpeg"
 
