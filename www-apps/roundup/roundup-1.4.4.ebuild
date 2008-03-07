@@ -1,12 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.3.3.ebuild,v 1.1 2007/10/22 14:41:53 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.4.ebuild,v 1.1 2008/03/07 10:44:23 hollow Exp $
 
-inherit eutils
+inherit eutils distutils
 
 DESCRIPTION="Simple-to-use and -install issue-tracking system with command-line, web, and e-mail interfaces."
 SRC_URI="http://cheeseshop.python.org/packages/source/r/${PN}/${P}.tar.gz"
 HOMEPAGE="http://roundup.sourceforge.net"
+
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 LICENSE="as-is"
 SLOT="0"
@@ -15,13 +16,17 @@ IUSE=""
 DEPEND=">=dev-lang/python-2.3
 	>=sys-libs/db-3.2.9"
 
-src_compile() {
-	python setup.py build || die
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# We need to fix the location for man pages (#204308)
+	sed -i -e 's#man/man1#share/man/man1#' setup.py
 }
 
 src_install() {
-	python setup.py install --root="${D}" --prefix=/usr || die
-	dodoc CHANGES.txt PKG-INFO README.txt doc/*.txt
+	distutils_src_install
+	dodoc CHANGES.txt doc/*.txt
 	dohtml doc/*.html
 	dobin "${FILESDIR}"/roundup
 }
