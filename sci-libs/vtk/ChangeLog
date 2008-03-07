@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.41 2008/02/29 14:47:41 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.42 2008/03/07 02:13:31 markusle Exp $
+
+*vtk-5.0.4 (06 Mar 2008)
+
+  06 Mar 2008; Markus Dittrich <markusle@gentoo.org> +vtk-5.0.4.ebuild:
+  Version bump.
 
   29 Feb 2008; Markus Dittrich <markusle@gentoo.org> vtk-5.0.3.ebuild:
   Fixed bogus install location (see bug #211819). Thanks much to
