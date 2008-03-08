@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/iniparser
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.1 2008/03/08 12:17:58 dev-zero Exp $
+
+*iniparser-3.0b (08 Mar 2008)
+
+  08 Mar 2008; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
+  +iniparser-3.0b.ebuild:
+  Initial commit for samba-3.2_pre2
+
