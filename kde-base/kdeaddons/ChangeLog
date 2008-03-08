@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.224 2008/02/20 22:42:49 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.225 2008/03/08 15:26:32 dirtyepic Exp $
+
+  08 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kdeaddons-3.5.9.ebuild:
+  Keyword ~mips.
 
 *kdeaddons-3.5.9 (20 Feb 2008)
 

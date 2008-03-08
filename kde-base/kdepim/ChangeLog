@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.303 2008/02/25 09:43:47 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.304 2008/03/08 15:22:20 dirtyepic Exp $
+
+  08 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kdepim-3.5.9.ebuild:
+  Keyword ~mips.
 
   25 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   +files/korganizer-3.5.9-kdeenablefinal.patch, kdepim-3.5.9.ebuild:

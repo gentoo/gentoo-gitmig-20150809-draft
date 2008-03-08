@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.198 2008/02/20 22:41:18 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.199 2008/03/08 15:30:27 dirtyepic Exp $
+
+  08 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> kde-3.5.9.ebuild:
+  Keyword ~mips.
 
 *kde-3.5.9 (20 Feb 2008)
 
