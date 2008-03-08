@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.1.0.5.ebuild,v 1.5 2008/03/08 20:50:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.1.0.5.ebuild,v 1.6 2008/03/08 20:54:26 dertobi123 Exp $
 
 inherit eutils
 
@@ -33,14 +33,14 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	unzip ${DISTDIR}/${MY_P}.zip || die "unsuccesful unzip ${MY_P}.zip"
-	unzip ${DISTDIR}/${MY_PSDK}.zip || die "unsuccesful unzip ${MY_PSDK}.zip"
+	unzip "${DISTDIR}"/${MY_P}.zip || die "unsuccesful unzip ${MY_P}.zip"
+	unzip "${DISTDIR}"/${MY_PSDK}.zip || die "unsuccesful unzip ${MY_PSDK}.zip"
 }
 
 src_install() {
 	# library
 	dodir /usr/$(get_libdir)/oracle/${PV}/client/lib
-	cd ${S}/instantclient10_1
+	cd "${S}"/instantclient10_1
 	insinto /usr/$(get_libdir)/oracle/${PV}/client/lib
 	doins *.jar *.so *.so.10.1
 
@@ -51,21 +51,21 @@ src_install() {
 	# includes
 	dodir /usr/$(get_libdir)/oracle/${PV}/client/include
 	insinto /usr/$(get_libdir)/oracle/${PV}/client/include
-	cd ${S}/instantclient10_1/sdk/include
+	cd "${S}"/instantclient10_1/sdk/include
 	doins *.h
 	# link to original location
 	dodir /usr/include/oracle/${PV}/
-	ln -s ${D}/usr/$(get_libdir)/oracle/${PV}/client/include ${D}/usr/include/oracle/${PV}/client
+	ln -s "${D}"/usr/$(get_libdir)/oracle/${PV}/client/include "${D}"/usr/include/oracle/${PV}/client
 
 	# share info
-	cd ${S}/instantclient10_1/sdk/demo
+	cd "${S}"/instantclient10_1/sdk/demo
 	dodoc *
 
 	# Add OCI libs to library path
 	dodir /etc/env.d
-	echo "ORACLE_HOME=/usr/$(get_libdir)/oracle/${PV}/client" >> ${D}/etc/env.d/50oracle-instantclient-basic
-	echo "LDPATH=/usr/$(get_libdir)/oracle/${PV}/client/lib" >> ${D}/etc/env.d/50oracle-instantclient-basic
-	echo "C_INCLUDE_PATH=/usr/$(get_libdir)/oracle/${PV}/client/include" >> ${D}/etc/env.d/50oracle-instantclient-basic
+	echo "ORACLE_HOME=/usr/$(get_libdir)/oracle/${PV}/client" >> "${D}"/etc/env.d/50oracle-instantclient-basic
+	echo "LDPATH=/usr/$(get_libdir)/oracle/${PV}/client/lib" >> "${D}"/etc/env.d/50oracle-instantclient-basic
+	echo "C_INCLUDE_PATH=/usr/$(get_libdir)/oracle/${PV}/client/include" >> "${D}"/etc/env.d/50oracle-instantclient-basic
 
 }
 
