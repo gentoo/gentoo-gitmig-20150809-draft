@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-javamail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.14 2008/03/08 13:56:30 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.15 2008/03/08 17:29:08 maekke Exp $
+
+  08 Mar 2008; Markus Meier <maekke@gentoo.org> sun-javamail-1.4.1.ebuild:
+  x86 stable, bug #212658
 
   08 Mar 2008; Krzysiek Pawlik <nelchael@gentoo.org>
   sun-javamail-1.4.1.ebuild:

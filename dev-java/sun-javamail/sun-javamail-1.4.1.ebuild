@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/sun-javamail-1.4.1.ebuild,v 1.2 2008/03/08 13:56:30 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/sun-javamail-1.4.1.ebuild,v 1.3 2008/03/08 17:29:08 maekke Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -22,7 +22,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="CDDL"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ppc ~ppc64 x86 ~x86-fbsd"
 
 COMMON_DEP="dev-java/sun-jaf"
 DEPEND=">=virtual/jdk-1.5
