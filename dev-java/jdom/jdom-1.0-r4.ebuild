@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0-r4.ebuild,v 1.4 2007/10/18 14:03:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0-r4.ebuild,v 1.5 2008/03/08 17:02:36 maekke Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.jdom.org/dist/source/${P}.tar.gz"
 HOMEPAGE="http://www.jdom.org"
 LICENSE="JDOM"
 SLOT="${PV}"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 COMMON_DEP="dev-java/saxpath
 		>=dev-java/xerces-2.7"
 RDEPEND=">=virtual/jre-1.4
@@ -31,7 +31,7 @@ src_unpack() {
 	rm -v src/java/org/jdom/xpath/JaxenXPath.java \
 		|| die "Unable to remove Jaxen Binding class."
 
-	cd ${S}/lib
+	cd "${S}"/lib
 	java-pkg_jar-from saxpath,xerces-2
 }
 
