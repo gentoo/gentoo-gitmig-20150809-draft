@@ -1,6 +1,16 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.329 2008/02/27 19:19:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.330 2008/03/08 12:24:01 dev-zero Exp $
+
+*samba-3.2.0_pre2 (08 Mar 2008)
+
+  08 Mar 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/config-3.2/lmhosts, +files/config-3.2/nsswitch.conf-winbind,
+  +files/config-3.2/nsswitch.conf-wins, +files/config-3.2/samba.pam,
+  +files/config-3.2/samba.schema, +files/config-3.2/smb.conf.example-samba3,
+  +files/config-3.2/smbusers, +files/config-3.2/swat.xinetd,
+  +files/config-3.2/system-auth-winbind, +samba-3.2.0_pre2.ebuild:
+  Version bump (pre-release\!)
 
   27 Feb 2008; Tiziano Müller <dev-zero@gentoo.org>
   -files/3.0.24-heap_overflow_v2.patch,
