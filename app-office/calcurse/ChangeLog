@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calcurse
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.3 2007/09/22 20:25:10 philantrop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.4 2008/03/08 11:47:30 cedk Exp $
+
+*calcurse-2.0 (08 Mar 2008)
+
+  08 Mar 2008; Cédric Krier <cedk@gentoo.org> +calcurse-2.0.ebuild:
+  Version bump
 
   22 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> calcurse-1.8.ebuild:
   Keyworded ~amd64 as per bug 189034.
