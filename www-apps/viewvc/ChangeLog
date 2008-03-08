@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.20 2008/03/07 17:10:58 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.21 2008/03/08 08:38:21 opfer Exp $
+
+  08 Mar 2008; Christian Faulhammer <opfer@gentoo.org> viewvc-1.0.5.ebuild:
+  stable x86, security bug 212288; this time correct version
 
   07 Mar 2008; Ferris McCormick <fmccor@gentoo.org> viewvc-1.0.5.ebuild:
   Sparc stable, Security Bug #212288.
