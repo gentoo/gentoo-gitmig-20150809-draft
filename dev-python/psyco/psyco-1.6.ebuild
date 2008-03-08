@@ -1,19 +1,18 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/psyco-1.5.2.ebuild,v 1.1 2007/06/27 09:49:35 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/psyco-1.6.ebuild,v 1.1 2008/03/08 08:30:45 dev-zero Exp $
 
 inherit distutils
 
 DESCRIPTION="Python extension module which can massively speed up the execution of any Python code."
 HOMEPAGE="http://psyco.sourceforge.net/"
 SRC_URI="mirror://sourceforge/psyco/${P}-src.tar.gz"
-
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="examples"
 
-DEPEND=">=dev-lang/python-2.1"
+DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_unpack() {
@@ -37,5 +36,5 @@ src_install() {
 
 src_test() {
 	cd "${S}/test"
-	PYTHONPATH="$(ls -d ../build/lib.*)" ${python} test_base.py || die "tests failed"
+	PYTHONPATH="$(ls -d ../build/lib.*)" "${python}" test_base.py || die "tests failed"
 }
