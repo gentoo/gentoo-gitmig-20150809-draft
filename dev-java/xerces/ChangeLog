@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.106 2008/03/06 17:58:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.107 2008/03/08 10:41:07 maekke Exp $
+
+  08 Mar 2008; Markus Meier <maekke@gentoo.org> xerces-2.9.1.ebuild:
+  x86 stable, bug #212431
 
   06 Mar 2008; nixnut <nixnut@gentoo.org> xerces-2.9.1.ebuild:
   Stable on ppc wrt bug 212431
