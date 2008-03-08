@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1190 2008/03/08 13:32:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1191 2008/03/08 15:02:38 ingmar Exp $
+
+  08 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> package.mask:
+  Unmask app-crypt/qca:2 and dependencies.
 
   08 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Remove nojava for antlr as it's no longer used.
