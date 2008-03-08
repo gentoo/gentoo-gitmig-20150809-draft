@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-httpclient
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.56 2008/02/06 14:58:35 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.57 2008/03/08 10:46:22 maekke Exp $
+
+  08 Mar 2008; Markus Meier <maekke@gentoo.org>
+  commons-httpclient-3.1.ebuild:
+  x86 stable, bug #212638
 
   06 Feb 2008; Miroslav Šulc <fordfrog@gentoo.org>
   commons-httpclient-3.1.ebuild:
