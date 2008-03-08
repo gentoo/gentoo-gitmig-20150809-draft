@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/phpunit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.17 2008/03/04 19:49:54 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.18 2008/03/08 22:24:35 pva Exp $
+
+  08 Mar 2008; Peter Volkov <pva@gentoo.org> phpunit-3.2.8.ebuild:
+  amd64 stable, bug #208848.
 
   04 Mar 2008; Markus Ullmann <jokey@gentoo.org> -phpunit-2.3.6.ebuild,
   -phpunit-3.0.6.ebuild, -phpunit-3.1.9.ebuild, -phpunit-3.2.0.ebuild,
