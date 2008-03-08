@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1188 2008/03/07 17:57:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1189 2008/03/08 12:03:46 dev-zero Exp $
+
+  08 Mar 2008; Tiziano Müller <dev-zero@gentoo.org> package.mask:
+  Added mask for samba-3.2*
 
   07 Mar 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
   dk-bib is gone now, bug #208689, remove it from pmask
