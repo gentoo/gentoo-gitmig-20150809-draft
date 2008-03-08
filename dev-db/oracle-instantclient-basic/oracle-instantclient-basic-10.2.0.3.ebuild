@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.3.ebuild,v 1.6 2007/08/19 14:33:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.3.ebuild,v 1.7 2008/03/08 20:50:47 dertobi123 Exp $
 
 inherit eutils
 
@@ -58,30 +58,30 @@ src_install() {
 	epatch ${FILESDIR}/${P}-makefile.patch
 
 	# SDK makefile
-	dodir /usr/lib/oracle/${PV}/client/rdbms/demo
+	dodir /usr/$(get_libdir)/oracle/${PV}/client/rdbms/demo
 	cd ${S}/instantclient_10_2/sdk/demo
 	mv demo.mk demo_xe.mk
-	insinto /usr/lib/oracle/${PV}/client/rdbms/demo
+	insinto /usr/$(get_libdir)/oracle/${PV}/client/rdbms/demo
 	doins demo_xe.mk
 
 	# library
-	dodir /usr/lib/oracle/${PV}/client/lib
+	dodir /usr/$(get_libdir)/oracle/${PV}/client/lib
 	cd ${S}/instantclient_10_2
-	insinto /usr/lib/oracle/${PV}/client/lib
+	insinto /usr/$(get_libdir)/oracle/${PV}/client/lib
 	doins *.jar *.so *.so.10.1
 
 	# fixes symlinks
-	dosym /usr/lib/oracle/${PV}/client/lib/libocci.so.10.1 /usr/lib/oracle/${PV}/client/lib/libocci.so
-	dosym /usr/lib/oracle/${PV}/client/lib/libclntsh.so.10.1 /usr/lib/oracle/${PV}/client/lib/libclntsh.so
+	dosym /usr/$(get_libdir)/oracle/${PV}/client/lib/libocci.so.10.1 /usr/$(get_libdir)/oracle/${PV}/client/lib/libocci.so
+	dosym /usr/$(get_libdir)/oracle/${PV}/client/lib/libclntsh.so.10.1 /usr/$(get_libdir)/oracle/${PV}/client/lib/libclntsh.so
 
 	# includes
-	dodir /usr/lib/oracle/${PV}/client/include
-	insinto /usr/lib/oracle/${PV}/client/include
+	dodir /usr/$(get_libdir)/oracle/${PV}/client/include
+	insinto /usr/$(get_libdir)/oracle/${PV}/client/include
 	cd ${S}/instantclient_10_2/sdk/include
 	doins *.h
 	# link to original location
 	dodir /usr/include/oracle/${PV}/
-	ln -s ${D}/usr/lib/oracle/${PV}/client/include ${D}/usr/include/oracle/${PV}/client
+	ln -s ${D}/usr/$(get_libdir)/oracle/${PV}/client/include ${D}/usr/include/oracle/${PV}/client
 
 	# share info
 	cd ${S}/instantclient_10_2/sdk/demo
@@ -89,9 +89,9 @@ src_install() {
 
 	# Add OCI libs to library path
 	dodir /etc/env.d
-	echo "ORACLE_HOME=/usr/lib/oracle/${PV}/client" >> ${D}/etc/env.d/50oracle-instantclient-basic
-	echo "LDPATH=/usr/lib/oracle/${PV}/client/lib" >> ${D}/etc/env.d/50oracle-instantclient-basic
-	echo "C_INCLUDE_PATH=/usr/lib/oracle/${PV}/client/include" >> ${D}/etc/env.d/50oracle-instantclient-basic
+	echo "ORACLE_HOME=/usr/$(get_libdir)/oracle/${PV}/client" >> ${D}/etc/env.d/50oracle-instantclient-basic
+	echo "LDPATH=/usr/$(get_libdir)/oracle/${PV}/client/lib" >> ${D}/etc/env.d/50oracle-instantclient-basic
+	echo "C_INCLUDE_PATH=/usr/$(get_libdir)/oracle/${PV}/client/include" >> ${D}/etc/env.d/50oracle-instantclient-basic
 }
 
 pkg_postinst() {
