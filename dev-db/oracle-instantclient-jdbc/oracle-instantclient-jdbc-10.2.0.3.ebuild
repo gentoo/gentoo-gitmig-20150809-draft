@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-10.2.0.3.ebuild,v 1.5 2007/07/13 06:38:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-10.2.0.3.ebuild,v 1.6 2008/03/08 20:58:03 dertobi123 Exp $
 
 inherit eutils
 
@@ -37,13 +37,13 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	unzip ${DISTDIR}/${MY_P}.zip
+	unzip "${DISTDIR}"/${MY_P}.zip
 }
 
 src_install() {
-	dodir /usr/lib/oracle/${PV}/client/lib
-	cd ${S}/instantclient_10_2
-	insinto /usr/lib/oracle/${PV}/client/lib
+	dodir /usr/$(get_libdir)/oracle/${PV}/client/lib
+	cd "${S}"/instantclient_10_2
+	insinto /usr/$(get_libdir)/oracle/${PV}/client/lib
 	doins libheteroxa10.so orai18n.jar
 }
 

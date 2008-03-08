@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.1.0.5.ebuild,v 1.3 2007/01/31 13:52:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.1.0.5.ebuild,v 1.4 2008/03/08 21:02:48 dertobi123 Exp $
 
 inherit eutils
 
@@ -31,22 +31,22 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	unzip ${DISTDIR}/${MY_P}.zip
+	unzip "${DISTDIR}"/${MY_P}.zip
 }
 
 src_install() {
-	dodir /usr/lib/oracle/${PV}/client/lib
-	cd ${S}/instantclient10_1
-	insinto /usr/lib/oracle/${PV}/client/lib
+	dodir /usr/$(get_libdir)/oracle/${PV}/client/lib
+	cd "${S}"/instantclient10_1
+	insinto /usr/$(get_libdir)/oracle/${PV}/client/lib
 	doins glogin.sql libsqlplus.so
 
-	dodir /usr/lib/oracle/${PV}/client/bin
-	cd ${S}/instantclient10_1
-	exeinto /usr/lib/oracle/${PV}/client/bin
+	dodir /usr/$(get_libdir)/oracle/${PV}/client/bin
+	cd "${S}"/instantclient10_1
+	exeinto /usr/$(get_libdir)/oracle/${PV}/client/bin
 	doexe sqlplus
 
 	dodir /usr/bin
-	dosym ${D}/usr/lib/oracle/${PV}/client/bin/sqlplus /usr/bin/sqlplus
+	dosym "${D}"/usr/$(get_libdir)/oracle/${PV}/client/bin/sqlplus /usr/bin/sqlplus
 }
 
 pkg_postinst() {
