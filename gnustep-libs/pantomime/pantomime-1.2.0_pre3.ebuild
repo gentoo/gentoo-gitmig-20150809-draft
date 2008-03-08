@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/pantomime-1.2.0_pre3.ebuild,v 1.4 2008/01/30 01:40:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/pantomime-1.2.0_pre3.ebuild,v 1.5 2008/03/08 13:15:12 coldwind Exp $
 
 inherit gnustep-2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.collaboration-world.com/pantomime/"
 SRC_URI="http://www.collaboration-world.com/pantomime.data/releases/Stable/${MY_PN}-${PV/_/}.tar.gz"
 
 LICENSE="LGPL-2.1 Elm"
-KEYWORDS="~amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 SLOT="0"
 
 DEPEND="dev-libs/openssl"
