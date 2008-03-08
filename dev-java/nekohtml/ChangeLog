@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/nekohtml
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.5 2007/12/19 21:32:16 betelgeuse Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.6 2008/03/08 21:49:19 maekke Exp $
+
+  08 Mar 2008; Markus Meier <maekke@gentoo.org> nekohtml-1.9.6.ebuild:
+  x86 stable, bug #212641
 
 *nekohtml-1.9.6 (19 Dec 2007)
 

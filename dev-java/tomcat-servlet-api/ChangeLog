@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.42 2008/03/08 13:36:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.43 2008/03/08 21:51:52 maekke Exp $
+
+  08 Mar 2008; Markus Meier <maekke@gentoo.org>
+  tomcat-servlet-api-4.1.36.ebuild:
+  x86 stable, bug #212641
 
   08 Mar 2008; Krzysiek Pawlik <nelchael@gentoo.org>
   tomcat-servlet-api-4.1.36.ebuild:
