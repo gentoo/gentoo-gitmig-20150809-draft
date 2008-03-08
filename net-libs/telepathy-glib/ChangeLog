@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.12 2008/02/29 07:25:59 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.13 2008/03/08 15:16:35 coldwind Exp $
+
+*telepathy-glib-0.7.5 (08 Mar 2008)
+
+  08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +telepathy-glib-0.7.5.ebuild:
+  Version bump.
 
   29 Feb 2008; Mart Raudsepp <leio@gentoo.org> telepathy-glib-0.7.3.ebuild:
   Install README and NEWS docs
