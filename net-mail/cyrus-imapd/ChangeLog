@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.120 2008/01/18 21:26:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.121 2008/03/08 19:59:59 dertobi123 Exp $
+
+  08 Mar 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  cyrus-imapd-2.3.11.ebuild:
+  Fix autoconf failure, bug #201146. Thanks to werner@pure.ch and Marius Mauch
+  for testing and providing a fix
 
   18 Jan 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   -files/cyrus-imapd-2.2.12-gcc4.patch,
