@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/edtftpj
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.36 2008/03/08 14:24:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.37 2008/03/08 20:27:25 wltjr Exp $
+
+  08 Mar 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  edtftpj-1.5.6.ebuild:
+  amd64 stable, bug #212671.
 
   08 Mar 2008; Krzysiek Pawlik <nelchael@gentoo.org> edtftpj-1.5.6.ebuild:
   Stable on ppc, see bug #212671.
