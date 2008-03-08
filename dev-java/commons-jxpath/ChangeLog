@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-jxpath
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/ChangeLog,v 1.22 2008/02/08 17:09:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/ChangeLog,v 1.23 2008/03/08 10:35:50 maekke Exp $
+
+  08 Mar 2008; Markus Meier <maekke@gentoo.org>
+  commons-jxpath-1.2-r3.ebuild:
+  x86 stable, bug #212427
 
 *commons-jxpath-1.2-r3 (08 Feb 2008)
 
