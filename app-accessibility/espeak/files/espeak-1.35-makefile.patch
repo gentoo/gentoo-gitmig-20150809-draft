@@ -1,0 +1,29 @@
+--- espeak-1.35-source/src/Makefile.orig	2008-03-08 12:05:29.000000000 -0600
++++ espeak-1.35-source/src/Makefile	2008-03-08 12:09:43.000000000 -0600
+@@ -61,14 +61,15 @@
+ OBJS3=$(patsubst %.cpp,%.o,$(SRCS3))
+ LIBS3=-lstdc++ -L . -lespeak
+ 
+-CXXFLAGS=-O2 -D$(USE_AUDIO)
++AUDIOFLAGS=-D$(USE_AUDIO)
++CXXFLAGS=-O2
+ 
+ 
+ all: $(BIN_NAME) $(LIB_NAME) $(STATIC_LIB_NAME) $(BIN2_NAME)
+ 	mv $(LIB_NAME) $(LIB_NAME).$(LIBTAG)
+ 
+ .cpp.o:
+-	$(CXX) $(CXXFLAGS) -D PATH_ESPEAK_DATA=\"$(DATADIR)\" -Wall -pedantic -I. -c -fno-exceptions  $<
++	$(CXX) $(CXXFLAGS) $(AUDIOFLAGS) -D PATH_ESPEAK_DATA=\"$(DATADIR)\" -Wall -pedantic -I. -c -fno-exceptions  $<
+ 
+ $(BIN_NAME): $(OBJS1)
+ 	$(CXX) -o $@ $(OBJS1) $(LIBS1)
+@@ -79,7 +80,7 @@
+ 
+ 
+ x_%.o: %.cpp
+-	$(CXX) $(CXXFLAGS) -Wall -fpic -pedantic \
++	$(CXX) $(CXXFLAGS) $(AUDIOFLAGS) -Wall -fpic -pedantic \
+ 	-I. -D LIBRARY -c -fno-exceptions  $<  -o x_$*.o
+ 
+ $(LIB_NAME): $(OBJS2)
