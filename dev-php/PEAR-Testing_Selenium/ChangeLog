@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Testing_Selenium
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Testing_Selenium/ChangeLog,v 1.8 2008/02/04 22:04:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Testing_Selenium/ChangeLog,v 1.9 2008/03/08 22:18:30 pva Exp $
+
+  08 Mar 2008; <pva@gentoo.org> PEAR-Testing_Selenium-0.4.2.ebuild:
+  amd64 stable, bug #208848.
 
   04 Feb 2008; Markus Meier <maekke@gentoo.org>
   PEAR-Testing_Selenium-0.4.2.ebuild:
