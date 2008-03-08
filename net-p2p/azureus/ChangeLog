@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.59 2008/03/08 17:21:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.60 2008/03/08 20:50:03 maekke Exp $
+
+  08 Mar 2008; Markus Meier <maekke@gentoo.org> azureus-3.0.4.2-r1.ebuild:
+  unquote A, x86 stable, bug #212667
 
   08 Mar 2008; nixnut <nixnut@gentoo.org> azureus-3.0.4.2-r1.ebuild:
   Stable on ppc wrt bug 212667
