@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.118 2008/03/07 13:59:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.119 2008/03/08 22:48:08 dirtyepic Exp $
+
+  08 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> sudo-1.6.9_p14.ebuild:
+  Drop ~mips due to missing keywords on pambase.  Bug #212585.
 
 *sudo-1.7_beta3 (07 Mar 2008)
 *sudo-1.6.9_p14 (07 Mar 2008)
