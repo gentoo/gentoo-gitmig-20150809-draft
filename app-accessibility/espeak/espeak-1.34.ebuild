@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.34.ebuild,v 1.1 2008/03/08 00:04:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.34.ebuild,v 1.2 2008/03/08 10:08:11 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Speech synthesizer for English and other languages"
 HOMEPAGE="http://espeak.sourceforge.net/"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND=">=media-libs/portaudio-18.1-r5
 	app-arch/unzip"
@@ -26,9 +26,6 @@ src_unpack() {
 	if has_version "=media-libs/portaudio-19*" ; then
 		mv -f "${S}/src/portaudio19.h" "${S}/src/portaudio.h"
 	fi
-
-	# Add a patch for a segfault on ppc64.
-#	epatch "${FILESDIR}/${P}-ppc64-segfault.patch"
 }
 
 src_compile() {
