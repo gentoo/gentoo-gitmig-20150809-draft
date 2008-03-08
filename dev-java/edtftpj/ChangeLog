@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/edtftpj
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.35 2008/01/10 23:09:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.36 2008/03/08 14:24:21 nelchael Exp $
+
+  08 Mar 2008; Krzysiek Pawlik <nelchael@gentoo.org> edtftpj-1.5.6.ebuild:
+  Stable on ppc, see bug #212671.
 
   10 Jan 2008; Vlastimil Babka <caster@gentoo.org> edtftpj-1.5.5.ebuild,
   edtftpj-1.5.6.ebuild:
