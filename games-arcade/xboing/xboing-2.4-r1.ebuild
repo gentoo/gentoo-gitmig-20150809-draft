@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.10 2006/12/01 20:39:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.11 2008/03/08 00:04:54 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -50,5 +50,5 @@ src_install() {
 	newman xboing.man xboing.6
 	dodoc README docs/*.doc
 	prepgamesdirs
-	fperms 660 ${GAMES_STATEDIR}/xboing.score
+	fperms 660 "${GAMES_STATEDIR}"/xboing.score
 }
