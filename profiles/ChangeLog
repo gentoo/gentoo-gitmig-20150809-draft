@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1189 2008/03/08 12:03:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1190 2008/03/08 13:32:38 betelgeuse Exp $
+
+  08 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
+  Remove nojava for antlr as it's no longer used.
 
   08 Mar 2008; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Added mask for samba-3.2*
