@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/objcunit/objcunit-1.2-r1.ebuild,v 1.3 2008/01/30 01:40:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/objcunit/objcunit-1.2-r1.ebuild,v 1.4 2008/03/08 13:57:40 coldwind Exp $
 
 S=${WORKDIR}/ObjcUnit-1.2/ObjcUnit
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://oops.se/objcunit/"
 #       patches, which are included in below URL
 SRC_URI="http://xanthippe.dyndns.org/Zipper/ObjcUnit-${PV}-GNUstep.tar.gz"
 
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 LICENSE="IBM"
 SLOT="0"
 
