@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.100 2008/02/11 03:53:49 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.101 2008/03/08 23:34:01 flameeyes Exp $
+
+*pulseaudio-0.9.9-r53 (08 Mar 2008)
+*pulseaudio-0.9.9-r3 (08 Mar 2008)
+
+  08 Mar 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pulseaudio-0.9.9+ltdl-2.2.patch, +pulseaudio-0.9.9-r3.ebuild,
+  +pulseaudio-0.9.9-r53.ebuild:
+  Add new revisions that work with libtool 2.2. Note that from now on I'll
+  keep the experimental revisions with a value 50+x in line with the old-style
+  ones.
 
   11 Feb 2008; Olivier Crête <tester@gentoo.org> pulseaudio-0.9.9.ebuild:
   Stable on amd64 per security bug #207214
