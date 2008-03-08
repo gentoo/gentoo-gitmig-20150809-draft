@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/colorschemes-20070707.ebuild,v 1.1 2007/07/10 19:10:44 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/colorschemes-20070707.ebuild,v 1.2 2008/03/08 16:07:39 coldwind Exp $
 
 inherit vim-plugin eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.vim.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="vim GPL-2 public-domain as-is"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ppc ~sparc ~x86"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\
