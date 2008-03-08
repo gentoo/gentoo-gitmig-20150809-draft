@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/preview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/ChangeLog,v 1.15 2008/01/30 01:36:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/ChangeLog,v 1.16 2008/03/08 13:38:25 coldwind Exp $
+
+  08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  preview-0.8.5-r1.ebuild:
+  amd64 stable wrt bug #207381
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org> preview-0.8.5-r1.ebuild:
   Marking preview-0.8.5-r1 ppc for bug 207381

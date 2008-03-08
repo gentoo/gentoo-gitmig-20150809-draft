@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/stshell
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stshell/ChangeLog,v 1.13 2008/01/30 01:36:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stshell/ChangeLog,v 1.14 2008/03/08 13:48:54 coldwind Exp $
+
+  08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  stshell-0.10.0-r1.ebuild:
+  amd64 stable wrt bug #207381
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org> stshell-0.10.0-r1.ebuild:
   Marking stshell-0.10.0-r1 ppc for bug 207381

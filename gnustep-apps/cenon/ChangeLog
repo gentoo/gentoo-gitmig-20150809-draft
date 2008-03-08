@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/cenon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.6 2008/01/30 01:36:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.7 2008/03/08 13:24:41 coldwind Exp $
+
+  08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> cenon-3.82.ebuild:
+  amd64 stable wrt bug #207381
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org> cenon-3.82.ebuild:
   Marking cenon-3.82 ppc for bug 207381

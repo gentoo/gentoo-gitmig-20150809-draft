@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/easydiff
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.16 2008/01/30 01:36:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.17 2008/03/08 13:27:15 coldwind Exp $
+
+  08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  easydiff-0.3.1_pre20061115.ebuild:
+  amd64 stable wrt bug #207381
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org>
   easydiff-0.3.1_pre20061115.ebuild:

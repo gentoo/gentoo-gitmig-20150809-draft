@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/keyarcher
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/keyarcher/ChangeLog,v 1.3 2008/01/30 01:36:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/keyarcher/ChangeLog,v 1.4 2008/03/08 13:34:44 coldwind Exp $
+
+  08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> keyarcher-0.1.ebuild:
+  amd64 stable wrt bug #207381
 
   30 Jan 2008; Brent Baude <ranger@gentoo.org> keyarcher-0.1.ebuild:
   Marking keyarcher-0.1 ppc for bug 207381
