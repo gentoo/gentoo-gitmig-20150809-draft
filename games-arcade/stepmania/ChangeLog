@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/stepmania
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.19 2007/09/15 07:07:52 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.20 2008/03/08 13:18:59 drac Exp $
+
+  08 Mar 2008; Samuli Suominen <drac@gentoo.org> stepmania-3.9.ebuild:
+  Bump patchset to fix bug 203935, configure dying without ffmpeg available.
 
   15 Sep 2007; Samuli Suominen <drac@gentoo.org> stepmania-3.9.ebuild:
   Changed SRC_URI to gentoo mirrors.

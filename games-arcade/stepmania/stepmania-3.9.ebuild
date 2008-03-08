@@ -1,15 +1,16 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.11 2007/09/15 07:07:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.12 2008/03/08 13:18:59 drac Exp $
 
 inherit autotools eutils games
 
-MY_PV="${PV/_/-}"
+MY_PV=${PV/_/-}
+
 DESCRIPTION="An advanced DDR simulator"
 HOMEPAGE="http://www.stepmania.com/stepmania/"
 SRC_URI="mirror://sourceforge/stepmania/StepMania-${MY_PV}-src.tar.gz
 	mirror://sourceforge/stepmania/StepMania-${MY_PV}-linux.tar.gz
-	mirror://gentoo/${PN}-patches-1.tar.bz2"
+	http://dev.gentoo.org/~drac/${PN}-patches-2.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
@@ -28,7 +29,8 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
 	vorbis? ( media-libs/libvorbis )
 	virtual/opengl
 	virtual/glu"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/StepMania-${MY_PV}-src
 
