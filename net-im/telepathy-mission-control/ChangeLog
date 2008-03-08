@@ -1,6 +1,10 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.14 2008/03/06 10:16:50 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.15 2008/03/08 15:24:21 coldwind Exp $
+
+  08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  telepathy-mission-control-4.61.ebuild:
+  Depend on >=libtelepathy-0.3.2.
 
 *telepathy-mission-control-4.61 (06 Mar 2008)
 
