@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.5.ebuild,v 1.2 2007/12/15 15:39:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.5.ebuild,v 1.3 2008/03/08 19:47:09 tester Exp $
 
 inherit gst-plugins10
 
@@ -13,7 +13,7 @@ GST_MAJOR=0.10
 SLOT=${GST_MAJOR}
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+EYWORDS="~amd64 ~x86"
 IUSE="jpeg2k gsm jingle jrtplib msn yahoo"
 
 DEPEND=">=media-libs/gstreamer-0.10.13
@@ -44,4 +44,6 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
 	dodoc AUTHORS ChangeLog README
+
+	rm -f ${D}/usr/lib*/*gstreamer*/*jpeg2k*
 }
