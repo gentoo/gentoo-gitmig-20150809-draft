@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7.ebuild,v 1.9 2008/03/08 13:26:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7.ebuild,v 1.10 2008/03/08 13:31:43 betelgeuse Exp $
+
+EAPI=1
 
 inherit java-pkg-2 mono distutils multilib
 
@@ -11,7 +13,7 @@ SRC_URI="http://www.antlr.org/download/${P}.tar.gz"
 LICENSE="ANTLR"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
-IUSE="doc debug examples mono nocxx nojava python script source"
+IUSE="doc debug examples mono +cxx +java python script source"
 
 # TODO do we actually need jdk at runtime?
 RDEPEND=">=virtual/jdk-1.3
@@ -27,12 +29,12 @@ src_compile() {
 	JAVACFLAGS="+ ${JAVACFLAGS}"
 
 	# mcs for https://bugs.gentoo.org/show_bug.cgi?id=172104
-	CSHARPC="mcs" econf $(use_enable !nojava java) \
+	CSHARPC="mcs" econf $(use_enable java) \
 		$(use_enable python) \
 		$(use_enable mono csharp) \
 		$(use_enable debug) \
 		$(use_enable examples) \
-		$(use_enable !nocxx cxx) \
+		$(use_enable cxx) \
 		--enable-verbose || die "configure failed"
 
 	emake || die "compile failed"
@@ -49,12 +51,12 @@ src_install() {
 	exeinto /usr/bin
 	doexe "${S}"/scripts/antlr-config
 
-	if ! use nocxx ; then
+	if use cxx ; then
 		cd "${S}"/lib/cpp
 		einstall || die "failed to install C++ files"
 	fi
 
-	if ! use nojava ; then
+	if use java ; then
 		java-pkg_dojar "${S}"/antlr/antlr.jar
 
 		use script && java-pkg_dolauncher antlr --main antlr.Tool
@@ -87,11 +89,11 @@ src_install() {
 		dodir /usr/share/doc/${PF}/examples
 		insinto /usr/share/doc/${PF}/examples
 
-		use nocxx || doins -r "${S}"/examples/cpp
-		use nojava || doins -r "${S}"/examples/java
+		use cxx && doins -r "${S}"/examples/cpp
+		use java && doins -r "${S}"/examples/java
 		use mono && doins -r "${S}"/examples/csharp
 		use python && doins -r "${S}"/examples/python
 	fi
 
-	newdoc "${S}"/README.txt README
+	newdoc "${S}"/README.txt README || die
 }
