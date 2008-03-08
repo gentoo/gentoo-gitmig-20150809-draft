@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cd /usr/lib/ccmsn-0.3p3
-./ccmsn
