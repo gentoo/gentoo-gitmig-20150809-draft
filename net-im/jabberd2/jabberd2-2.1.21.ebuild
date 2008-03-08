@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.1.21.ebuild,v 1.1 2008/01/09 07:43:59 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.1.21.ebuild,v 1.2 2008/03/08 15:03:33 nelchael Exp $
 
 inherit db-use eutils pam
 
@@ -17,7 +17,7 @@ DEPEND=">=net-im/jabber-base-0.01
 	dev-libs/expat
 	dev-libs/openssl
 	>=net-misc/gsasl-0.2.14
-	net-dns/libidn
+	=net-dns/libidn-0.6*
 	ldap? ( net-nds/openldap )
 	>=sys-libs/db-4.1.24
 	pam? ( virtual/pam )
