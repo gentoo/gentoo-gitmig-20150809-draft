@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sarg
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.38 2008/03/06 13:50:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.39 2008/03/08 19:51:30 pva Exp $
+
+*sarg-2.2.5 (08 Mar 2008)
+
+  08 Mar 2008; <pva@gentoo.org> -sarg-2.2.2.ebuild, +sarg-2.2.5.ebuild:
+  Version bump, fixes XSS vulnerability, bug #212731, thank Robert Buchholz.
 
   06 Mar 2008; Steve Dibb <beandog@gentoo.org> sarg-2.2.4.ebuild:
   amd64 stable, bug 212208

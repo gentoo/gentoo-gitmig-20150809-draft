@@ -1,15 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.2.2.ebuild,v 1.5 2008/03/03 16:25:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.2.5.ebuild,v 1.1 2008/03/08 19:51:30 pva Exp $
 
 inherit eutils
 
 DESCRIPTION="Squid Analysis Report Generator"
 HOMEPAGE="http://sarg.sourceforge.net/sarg.php"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+		mirror://gentoo/sarg-2.2.3.1-lots-of-compiler-warnings.patch.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 IUSE=""
 
@@ -23,6 +24,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${WORKDIR}"/${PN}-2.2.3.1-lots-of-compiler-warnings.patch
+	epatch "${FILESDIR}"/${PN}-2.2.3.1-rewind.patch
 
 	# Fixes bug #43132
 	sed -i \
@@ -58,10 +62,10 @@ src_install() {
 	dodir /etc/sarg /usr/sbin
 
 	make \
-		BINDIR=${D}/usr/sbin \
-		MANDIR=${D}/usr/share/man/man1 \
-		SYSCONFDIR=${D}/etc/sarg \
-		HTMLDIR=${D}/var/www/html \
+		BINDIR="${D}"/usr/sbin \
+		MANDIR="${D}"/usr/share/man/man1 \
+		SYSCONFDIR="${D}"/etc/sarg \
+		HTMLDIR="${D}"/var/www/html \
 		install || die "sarg installation failed"
 
 	dodoc BETA-TESTERS CONTRIBUTORS DONATIONS README ChangeLog htaccess
