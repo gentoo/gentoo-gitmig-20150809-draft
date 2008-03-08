@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/lavaps
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/ChangeLog,v 1.18 2006/10/18 00:18:20 omp Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/ChangeLog,v 1.19 2008/03/08 19:54:29 coldwind Exp $
+
+*lavaps-2.7-r2 (08 Mar 2008)
+
+  08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +files/lavaps-2.7-build-fixes.patch, +lavaps-2.7-r2.ebuild:
+  Fix bug #211193 thanks to Lionel Bouton <lionel-dev at bouton dotname>,
+  imported amd64 patch from Debian and added ~amd64 keyword.
 
   18 Oct 2006; David Shakaryan <omp@gentoo.org> lavaps-2.7-r1.ebuild:
   Fix dependencies and various aesthetic changes.
