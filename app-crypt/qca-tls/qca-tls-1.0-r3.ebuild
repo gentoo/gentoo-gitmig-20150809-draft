@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0-r3.ebuild,v 1.13 2008/02/15 09:04:35 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0-r3.ebuild,v 1.14 2008/03/09 21:45:19 ricmm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://delta.affinix.com/download/${PN%-*}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 #alpha amd64 and ppc64 need testing
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=app-crypt/qca-1.0
