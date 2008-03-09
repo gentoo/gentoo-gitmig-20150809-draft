@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/saaj-1.3.ebuild,v 1.7 2007/11/15 00:56:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/saaj-1.3.ebuild,v 1.8 2008/03/09 18:35:33 betelgeuse Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -19,7 +19,9 @@ COMMON_DEP="dev-java/jsr67
 	dev-java/sun-jaf
 	>=dev-java/xerces-2.8
 	dev-java/xalan"
-DEPEND=">=virtual/jdk-1.5
+# needs com.sun.image.codec which 1.7 doesn't have
+# should fix it to not use them at all
+DEPEND="|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* )
 	app-arch/unzip
 	${COMMON_DEP}"
 RDEPEND=">=virtual/jre-1.5
