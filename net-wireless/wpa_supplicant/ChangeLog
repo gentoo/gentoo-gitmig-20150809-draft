@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.102 2008/01/08 01:42:20 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.103 2008/03/09 02:03:30 steev Exp $
+
+*wpa_supplicant-0.5.10 (09 Mar 2008)
+
+  09 Mar 2008; Steev Klimaszewski <steev@gentoo.org>
+  +wpa_supplicant-0.5.10.ebuild:
+  New 0.5.10 release. Install the system service file when using the dbus
+  useflag.
 
 *wpa_supplicant-0.6.1 (08 Jan 2008)
 
