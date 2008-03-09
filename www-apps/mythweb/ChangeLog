@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.57 2008/03/03 20:12:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.58 2008/03/09 20:48:14 cardoe Exp $
+
+*mythweb-0.21_p16468 (09 Mar 2008)
+
+  09 Mar 2008; Doug Goldstein <cardoe@gentoo.org>
+  -mythweb-0.21_beta16297.ebuild, +mythweb-0.21_p16468.ebuild:
+  0.21 release
 
   03 Mar 2008; Doug Klima <cardoe@gentoo.org> mythweb-0.20.2_p15488.ebuild:
   stable last 0.20.2 version
