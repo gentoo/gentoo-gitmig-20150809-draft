@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/mythbrowser-0.21_beta16468.ebuild,v 1.1 2008/03/09 20:38:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/mythbrowser-0.21_p16468.ebuild,v 1.1 2008/03/09 20:41:17 cardoe Exp $
 
 inherit mythtv-plugins kde-functions multilib
 
