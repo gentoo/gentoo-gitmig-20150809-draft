@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.502 2008/02/28 13:22:29 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.503 2008/03/09 01:20:15 genone Exp $
+
+*portage-2.2_pre4 (09 Mar 2008)
+
+  09 Mar 2008; Marius Mauch <genone@gentoo.org> +portage-2.2_pre4.ebuild:
+  Another prerelease, most important changes are the removal of manifest1 support
+  and a potential data corruption issue with elog messages (bug #212055). 
+  Other minor fixes include bug #212152, bug #97776, bug #211949 and bug #212080.
 
 *portage-2.2_pre3 (28 Feb 2008)
 
