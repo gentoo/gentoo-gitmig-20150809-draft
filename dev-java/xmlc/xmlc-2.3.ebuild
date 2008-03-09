@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/xmlc-2.3.ebuild,v 1.1 2008/02/02 11:53:03 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/xmlc-2.3.ebuild,v 1.2 2008/03/09 16:19:26 maekke Exp $
 
 EAPI="1"
 JAVA_PKG_IUSE="doc"
@@ -27,7 +27,7 @@ DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}/"

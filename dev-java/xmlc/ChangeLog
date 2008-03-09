@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.6 2008/02/02 11:53:03 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.7 2008/03/09 16:19:26 maekke Exp $
+
+  09 Mar 2008; Markus Meier <maekke@gentoo.org> xmlc-2.3.ebuild:
+  x86 stable, bug #212664
 
 *xmlc-2.3 (02 Feb 2008)
 
