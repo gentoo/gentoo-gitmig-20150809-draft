@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.85 2008/03/07 23:20:59 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.86 2008/03/09 16:44:27 zlin Exp $
+
+*paludis-0.26.0_alpha12 (09 Mar 2008)
+
+  09 Mar 2008; Bo Ørsted Andresen <zlin@gentoo.org>
+  -files/paludis-0.20.0-dotfiles.patch,
+  -files/paludis-0.26.0_alpha4-news_test.patch,
+  -files/paludis-0.26.0_alpha5-env.patch, -paludis-0.24.1.ebuild,
+  -paludis-0.24.2.ebuild, -paludis-0.24.5.ebuild,
+  -paludis-0.26.0_alpha3.ebuild, -paludis-0.26.0_alpha4.ebuild,
+  -paludis-0.26.0_alpha5.ebuild, -paludis-0.26.0_alpha5-r1.ebuild,
+  -paludis-0.26.0_alpha6.ebuild, -paludis-0.26.0_alpha7.ebuild,
+  -paludis-0.26.0_alpha9.ebuild, +paludis-0.26.0_alpha12.ebuild:
+  Bump. Do some cleaning.
 
 *paludis-0.26.0_alpha11 (07 Mar 2008)
 
