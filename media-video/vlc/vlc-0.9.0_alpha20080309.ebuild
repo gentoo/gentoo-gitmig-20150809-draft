@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080309.ebuild,v 1.1 2008/03/09 19:57:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080309.ebuild,v 1.2 2008/03/09 20:08:36 aballier Exp $
+
+EAPI="1"
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -111,7 +113,7 @@ RDEPEND="
 		ogg? ( media-libs/libogg )
 		png? ( media-libs/libpng )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.8 )
-		qt4? ( $(qt4_min_version 4.2.0 ) )
+		qt4? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) >=x11-libs/qt-4.2.0:4 ) )
 		samba? ( net-fs/samba )
 		sdl? ( >=media-libs/libsdl-1.2.8
 			sdl-image? ( media-libs/sdl-image ) )
