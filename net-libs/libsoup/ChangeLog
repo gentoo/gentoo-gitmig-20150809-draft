@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.142 2008/02/24 12:28:17 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.143 2008/03/09 13:44:00 leio Exp $
+
+*libsoup-2.2.105-r2 (09 Mar 2008)
+
+  09 Mar 2008; Mart Raudsepp <leio@gentoo.org> -libsoup-2.2.105-r1.ebuild,
+  +libsoup-2.2.105-r2.ebuild:
+  Fix up build with USE=doc that broke with the previous change, bug 211352.
+  Thanks to P.L.Hayes, Ed Catmur and co
 
 *libsoup-2.2.105-r1 (24 Feb 2008)
 
