@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.0.ebuild,v 1.9 2008/01/16 22:48:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.2.ebuild,v 1.1 2008/03/09 20:00:43 eva Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -9,10 +9,10 @@ HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="gnome perl python"
-# bonobo libgda
+# bonobo guile libgda mono (experimental)
 
 # lots of missing files, wait for next release
 RESTRICT="test"
@@ -54,6 +54,9 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--enable-ssindex
 		--enable-static
+		--without-gda
+		--without-guile
+		--without-mono
 		$(use_with perl)
 		$(use_with python)
 		$(use_with gnome)"
@@ -68,13 +71,6 @@ pkg_setup() {
 
 	# gcc bug (http://bugs.gnome.org/show_bug.cgi?id=128834)
 	replace-flags "-Os" "-O2"
-}
-
-src_unpack() {
-	gnome2_src_unpack
-
-	# Fix documentation
-	epatch "${FILESDIR}/${P}-omf.patch"
 }
 
 src_install() {
