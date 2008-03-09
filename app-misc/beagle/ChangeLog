@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.67 2008/03/01 12:35:07 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.68 2008/03/09 16:48:34 leio Exp $
+
+  09 Mar 2008; Mart Raudsepp <leio@gentoo.org> beagle-0.2.18.ebuild:
+  Fix build with newer intltool, bug 200711
 
   01 Mar 2008; Cédric Krier <cedk@gentoo.org> beagle-0.2.18.ebuild:
   Add blocker dependency to libbeagle
