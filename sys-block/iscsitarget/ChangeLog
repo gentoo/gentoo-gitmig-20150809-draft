@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.9 2008/02/22 03:38:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.10 2008/03/09 10:24:26 vapier Exp $
+
+  09 Mar 2008; Mike Frysinger <vapier@gentoo.org>
+  iscsitarget-0.4.15-r1.ebuild:
+  Allow linux-mod_pkg_postinst to run #212443 by Craig.
 
   22 Feb 2008; Mike Frysinger <vapier@gentoo.org>
   +files/iscsitarget-0.4.15-build.patch,

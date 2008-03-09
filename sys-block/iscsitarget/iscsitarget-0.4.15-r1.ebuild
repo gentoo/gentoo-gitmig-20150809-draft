@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.15-r1.ebuild,v 1.3 2008/02/22 03:38:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.15-r1.ebuild,v 1.4 2008/03/09 10:24:26 vapier Exp $
 
 inherit linux-mod eutils
 
@@ -10,12 +10,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="dev-libs/openssl"
-DEPEND="${RDEPEND}
-	virtual/linux-sources"
+DEPEND="dev-libs/openssl"
 
 MODULE_NAMES="iscsi_trgt(kernel/iscsi:${S}/kernel)"
 CONFIG_CHECK="CRYPTO_CRC32C"
@@ -58,8 +56,4 @@ src_install() {
 	einfo "Installing kernel module"
 	unset ARCH
 	linux-mod_src_install || die "modules failed"
-}
-
-pkg_postinst() {
-	chmod 0640 ${ROOT}/etc/ietd.conf ${ROOT}/etc/initiators.{allow,deny}
 }
