@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.4.0_beta1.ebuild,v 1.1 2008/03/05 23:09:33 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.4.0_beta1.ebuild,v 1.2 2008/03/09 15:31:29 ingmar Exp $
 
 EAPI="1"
 inherit qt4-build
@@ -43,10 +43,10 @@ src_compile() {
 	local myconf
 	# Don't support sqlite2 anymore
 	myconf="${myconf} -no-sql-sqlite2
-		$(qt_use mysql sql-mysql) $(use mysql && echo "-I/usr/include/mysql -L/usr/$(get_libdir)/mysql ")
-		$(qt_use postgres sql-psql) $(use postgres && echo "-I/usr/include/postgresql/pgsql ")
-		$(qt_use sqlite sql-sqlite) $(qt_use sqlite system-sqlite)
-		$(qt_use odbc sql-odbc)
+		$(qt_use mysql sql-mysql plugin) $(use mysql && echo "-I/usr/include/mysql -L/usr/$(get_libdir)/mysql ")
+		$(qt_use postgres sql-psql plugin) $(use postgres && echo "-I/usr/include/postgresql/pgsql ")
+		$(qt_use sqlite sql-sqlite plugin) $(qt_use sqlite system-sqlite)
+		$(qt_use odbc sql-odbc plugin)
 		$(qt_use qt3support)"
 
 	myconf="${myconf} -no-xkb -no-tablet -no-fontconfig -no-xrender -no-xrandr
