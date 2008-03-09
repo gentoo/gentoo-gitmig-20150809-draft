@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/listings
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/listings/ChangeLog,v 1.18 2008/03/08 20:05:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/listings/ChangeLog,v 1.19 2008/03/09 12:13:54 maekke Exp $
+
+  09 Mar 2008; Markus Meier <maekke@gentoo.org> listings-1.4.ebuild:
+  x86 stable, bug #180550
 
   08 Mar 2008; Ferris McCormick <fmccor@gentoo.org> listings-1.4.ebuild:
   Sparc stable, Bug #180550 --- built with USE=doc, texlive.
