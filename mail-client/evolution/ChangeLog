@@ -1,6 +1,17 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.227 2008/03/05 19:30:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.228 2008/03/09 22:02:03 leio Exp $
+
+  09 Mar 2008; Mart Raudsepp <leio@gentoo.org>
+  -files/evolution-2.3.7-configure_plugins.patch,
+  -files/evolution-2.8.1.1-64-bit.patch,
+  -files/evolution-2.8.2.1-certificate-manager-filtering.patch,
+  -files/evolution-2.9.2-bf-junk.patch.gz,
+  -files/evolution-2.9.91-cal-reply.patch,
+  -files/evolution-2.10-fix-maildir-account.patch, -evolution-2.10.3.ebuild,
+  -evolution-2.12.1.ebuild, -evolution-2.12.2.ebuild,
+  -evolution-2.12.3.ebuild:
+  Remove old versions that are security vulnerable
 
   05 Mar 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   evolution-2.12.3-r1.ebuild:
