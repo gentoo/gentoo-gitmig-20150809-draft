@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.84 2008/01/16 04:01:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.85 2008/03/09 21:09:23 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -821,7 +821,11 @@ mysql_pkg_config() {
 	help_tables="${TMPDIR}/fill_help_tables.sql"
 
 	pushd "${TMPDIR}" &>/dev/null
-	"${ROOT}/usr/bin/mysql_install_db" | grep -B5 -A999 -i "ERROR"
+	"${ROOT}/usr/bin/mysql_install_db" >"${TMPDIR}"/mysql_install_db.log 2>&1
+	if [ $? -ne 0 ]; then
+		grep -B5 -A999 -i "ERROR" "${TMPDIR}"/mysql_install_db.log 1>&2
+		die "Failed to run mysql_install_db. Please review /var/log/mysql/mysqld.err AND ${TMPDIR}/mysql_install_db.log"
+	fi
 	popd &>/dev/null
 	[[ -f "${ROOT}/${MY_DATADIR}/mysql/user.frm" ]] \
 	|| die "MySQL databases not installed"
