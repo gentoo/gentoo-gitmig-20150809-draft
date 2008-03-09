@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.48 2008/03/05 19:04:57 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.49 2008/03/09 14:36:48 aballier Exp $
+
+  09 Mar 2008; Alexis Ballier <aballier@gentoo.org>
+  moc-2.5.0_alpha3-r1.ebuild:
+  Include libFLAC.m4 in a separate tarball to avoid autotools failures, bug
+  #212584
 
 *moc-2.5.0_alpha3-r1 (05 Mar 2008)
 
