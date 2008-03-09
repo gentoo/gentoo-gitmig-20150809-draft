@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.103 2008/03/09 02:03:30 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.104 2008/03/09 04:31:46 dirtyepic Exp $
+
+  09 Mar 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/wpa_supplicant-0.5.10-gcc-4.3.patch, wpa_supplicant-0.5.10.ebuild:
+  Add patch for GCC-4.3, bug #203937.
 
 *wpa_supplicant-0.5.10 (09 Mar 2008)
 
