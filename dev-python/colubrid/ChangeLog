@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/colubrid
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colubrid/ChangeLog,v 1.1 2008/03/09 10:10:28 antarus Exp $
+
+*colubrid-0.10 (09 Mar 2008)
+
+  09 Mar 2008; Alec Warner <antarus@gentoo.org> +metadata.xml,
+  +colubrid-0.10.ebuild:
+  Initial import of colubrid
+
