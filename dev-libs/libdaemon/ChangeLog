@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.52 2008/02/12 13:09:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.53 2008/03/09 23:21:08 eva Exp $
+
+  09 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
+  -libdaemon-0.3.ebuild, -libdaemon-0.5.ebuild, -libdaemon-0.7.ebuild,
+  -libdaemon-0.8.ebuild, -libdaemon-0.11.ebuild, libdaemon-0.12.ebuild:
+  take over maintainership
+   * add examples use flag, fix bug #111508
+   * remove old revisions
+   * use emake to honor MAKEOPTS
 
   12 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> libdaemon-0.12.ebuild:
   Run elibtoolize.
