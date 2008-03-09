@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.6.1.ebuild,v 1.3 2007/12/31 11:49:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.6.1.ebuild,v 1.4 2008/03/09 10:34:12 aballier Exp $
 
 inherit eutils autotools
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-abi_has_changed.patch"
+	epatch "${FILESDIR}/${P}-libtool22.patch"
 	eautoreconf
 }
 
