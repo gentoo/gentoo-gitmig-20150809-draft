@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.35 2008/02/18 10:54:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.36 2008/03/09 15:19:54 leio Exp $
+
+  09 Mar 2008; Mart Raudsepp <leio@gentoo.org> -orca-2.18.1.ebuild,
+  -orca-2.20.1.ebuild, -orca-2.20.2.ebuild:
+  Remove GNOME 2.18 version and other redundant versions
 
   18 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org> orca-2.20.3.ebuild:
   fix python eclass use, bug #207667
