@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.51 2008/03/09 18:46:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.52 2008/03/09 18:52:36 betelgeuse Exp $
+
+  09 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> asm-1.5.3.ebuild:
+  RESTRICT test because we don't have the needed deps packaged.
 
   09 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> asm-2.2.3-r1.ebuild:
   RESTRICT test because we don't have the needed deps packaged.
