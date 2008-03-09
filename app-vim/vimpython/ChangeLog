@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vimpython
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpython/ChangeLog,v 1.17 2008/03/08 16:16:15 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpython/ChangeLog,v 1.18 2008/03/09 12:38:41 maekke Exp $
+
+  09 Mar 2008; Markus Meier <maekke@gentoo.org> vimpython-1.11.ebuild:
+  x86 stable, bug #209049
 
   08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> vimpython-1.11.ebuild:
   amd64 stable wrt bug #209049
