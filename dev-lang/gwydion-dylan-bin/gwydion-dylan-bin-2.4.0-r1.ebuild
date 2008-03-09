@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan-bin/gwydion-dylan-bin-2.4.0.ebuild,v 1.4 2007/07/02 14:42:29 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan-bin/gwydion-dylan-bin-2.4.0-r1.ebuild,v 1.1 2008/03/09 21:06:02 araujo Exp $
 
 DESCRIPTION="The Dylan Programming Language Compiler"
 HOMEPAGE="http://www.gwydiondylan.org/"
@@ -20,11 +20,11 @@ RDEPEND=">=dev-libs/boehm-gc-6.4"
 S="${WORKDIR}"
 
 src_compile() {
-	mkdir -p ./${LOC}
-	mv usr/* ./${LOC}
+	mkdir -p "./${LOC}"
+	mv usr/* "./${LOC}"
 }
 
 src_install() {
-	cp -pr * ${D}
-	doenvd ${FILESDIR}/20gwydion-dylan
+	cp -pr * "${D}"
+	doenvd "${FILESDIR}/20gwydion-dylan-bin"
 }
