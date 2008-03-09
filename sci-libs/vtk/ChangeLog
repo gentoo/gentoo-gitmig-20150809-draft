@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.42 2008/03/07 02:13:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.43 2008/03/09 15:13:54 markusle Exp $
+
+  09 Mar 2008; Markus Dittrich <markusle@gentoo.org> vtk-5.0.4.ebuild:
+  Backported support for tcl/tk-8.5 from cvs head (fixes bug 212700). 
+  Thanks much to Pacho Ramos <pacho@condmat1.ciencias.uniovi.es> for 
+  his patch.
 
 *vtk-5.0.4 (06 Mar 2008)
 

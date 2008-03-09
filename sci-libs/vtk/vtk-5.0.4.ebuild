@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.4.ebuild,v 1.1 2008/03/07 02:13:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.4.ebuild,v 1.2 2008/03/09 15:13:54 markusle Exp $
 
 EAPI="1"
 
@@ -12,6 +12,7 @@ SPV="$(get_version_component_range 1-2)"
 DESCRIPTION="The Visualization Toolkit"
 HOMEPAGE="http://www.vtk.org"
 SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
+		mirror://gentoo/${P}-tcl8.5.patch.bz2
 		examples? ( http://www.${PN}.org/files/release/${SPV}/${PN}data-${PV}.tar.gz )"
 
 LICENSE="BSD LGPL-2"
@@ -72,6 +73,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${DISTDIR}"/${P}-tcl8.5.patch.bz2
 	epatch "${FILESDIR}"/${PN}-5.0.3-mpi.patch
 }
 
