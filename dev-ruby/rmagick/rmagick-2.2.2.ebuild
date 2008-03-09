@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.2.2.ebuild,v 1.1 2008/02/20 20:17:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.2.2.ebuild,v 1.2 2008/03/09 11:56:36 graaff Exp $
 
 inherit ruby
 
@@ -63,4 +63,6 @@ src_install() {
 
 	cd "${S}"
 	dodoc ChangeLog README.html README-Mac-OSX.txt README.txt
+
+	use examples && dodoc examples/*
 }
