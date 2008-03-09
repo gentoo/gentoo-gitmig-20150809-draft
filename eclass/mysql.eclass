@@ -1,12 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.85 2008/03/09 21:09:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.86 2008/03/09 21:13:22 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
-# Maintainer: Luca Longinotti <chtekk@gentoo.org>
-
-# Both MYSQL_VERSION_ID and MYSQL_PATCHSET_REV must be set in the ebuild too!
-# Note that MYSQL_VERSION_ID must be empty!
+# Maintainer: MySQL Team <mysql-bugs@gentoo.org>
+#		- Luca Longinotti <chtekk@gentoo.org>
+#		- Robin H. Johnson <robbat2@gentoo.org>
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -18,6 +17,10 @@ inherit eutils flag-o-matic gnuconfig autotools mysql_fx
 S="${WORKDIR}/mysql"
 
 [[ "${MY_EXTRAS_VER}" == "latest" ]] && MY_EXTRAS_VER="20070108"
+if [[ "${MY_EXTRAS_VER}" == "live" ]]; then
+	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/mysql-extras.git"
+	inherit git
+fi
 
 if [[ ${PR#r} -lt 60 ]] ; then
 	IS_BITKEEPER=0
@@ -81,7 +84,9 @@ if [ -z "${SERVER_URI}" ]; then
 fi
 
 # Define correct SRC_URIs
-SRC_URI="${SERVER_URI}
+SRC_URI="${SERVER_URI}"
+
+[[ ${MY_EXTRAS_VER} != live ]] && SRC_URI="${SRC_URI}
 		mirror://gentoo/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
 		http://g3nt8.org/patches/mysql-extras-${MY_EXTRAS_VER}.tar.bz2"
 mysql_version_is_at_least "5.1.12" \
@@ -497,6 +502,9 @@ mysql_src_unpack() {
 	mysql_init_vars
 
 	unpack ${A}
+	# Grab the patches
+	[[ "${MY_EXTRAS_VER}" == "live" ]] && S="${WORKDIR}/mysql-extras" git_src_unpack
+	# Bitkeeper checkout support
 	if [[ ${IS_BITKEEPER} -eq 90 ]] ; then
 		if mysql_check_version_range "5.1 to 5.1.99" ; then
 			bitkeeper_fetch "mysql-5.1-ndb"
@@ -516,7 +524,11 @@ mysql_src_unpack() {
 	# Apply the patches for this MySQL version
 	EPATCH_SUFFIX="patch"
 	mkdir -p "${EPATCH_SOURCE}" || die "Unable to create epatch directory"
+	# Clean out old items
+	rm -f "${EPATCH_SOURCE}"/*
+	# Now link in right patches
 	mysql_mv_patches
+	# And apply
 	epatch
 
 	# Additional checks, remove bundled zlib
