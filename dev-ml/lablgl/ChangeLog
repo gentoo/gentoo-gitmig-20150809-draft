@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.44 2008/02/24 16:24:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.45 2008/03/09 12:04:44 aballier Exp $
+
+  09 Mar 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/lablgl-1.03-tk8.5.patch, lablgl-1.03-r1.ebuild:
+  Import a patch from mandriva to build against tk8.5, thanks to Pacho Ramos
+  in bug #212678
 
 *lablgl-1.03-r1 (24 Feb 2008)
 

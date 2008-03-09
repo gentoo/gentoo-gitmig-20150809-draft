@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.03-r1.ebuild,v 1.1 2008/02/24 16:24:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.03-r1.ebuild,v 1.2 2008/03/09 12:04:44 aballier Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -41,6 +41,12 @@ pkg_setup() {
 		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
 		die "Please install ocaml with ocamlopt useflag"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-tk8.5.patch"
 }
 
 src_compile() {
