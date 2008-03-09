@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ddccontrol
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.20 2007/07/17 07:24:42 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.21 2008/03/09 16:32:54 leio Exp $
+
+  09 Mar 2008; Mart Raudsepp <leio@gentoo.org> ddccontrol-0.4.2.ebuild:
+  Fix build with newer intltool, bug 199600
 
   17 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   ddccontrol-0.4.2.ebuild:
