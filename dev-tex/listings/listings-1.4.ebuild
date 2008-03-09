@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/listings/listings-1.4.ebuild,v 1.3 2008/03/09 12:13:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/listings/listings-1.4.ebuild,v 1.4 2008/03/09 13:44:56 nixnut Exp $
 
 inherit latex-package
 
@@ -13,7 +13,7 @@ LICENSE="LPPL-1.3"
 
 IUSE="doc"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ppc sparc x86"
 DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/${PN}
