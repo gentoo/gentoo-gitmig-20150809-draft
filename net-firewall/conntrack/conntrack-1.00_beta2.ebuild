@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack/conntrack-1.00_beta2.ebuild,v 1.6 2007/08/08 14:12:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack/conntrack-1.00_beta2.ebuild,v 1.7 2008/03/09 22:47:10 swegener Exp $
 
 inherit linux-info
 
@@ -17,7 +17,8 @@ IUSE=""
 
 DEPEND="net-libs/libnfnetlink
 	net-libs/libnetfilter_conntrack"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!net-firewall/conntrack-tools"
 
 S="${WORKDIR}/${MY_P}"
 
