@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r4.ebuild,v 1.4 2008/02/25 19:17:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r4.ebuild,v 1.5 2008/03/09 23:13:40 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
@@ -113,52 +113,61 @@ src_install() {
 }
 
 setup_boot_dir() {
-	local dir="${1}"
+	local boot_dir=$1
+	local dir=${boot_dir}
 
-	[[ ! -e "${dir}" ]] && die "${dir} does not exist!"
-	[[ ! -e "${dir}"/grub ]] && mkdir "${dir}/grub"
+	[[ ! -e ${dir} ]] && die "${dir} does not exist!"
+	dir="${dir}/grub"
+	if [[ ! -e ${dir} ]] ; then
+		mkdir "${dir}" || die "${dir} does not exist!"
+	fi
 
 	# change menu.lst to grub.conf
-	if [[ ! -e "${dir}"/grub/grub.conf ]] && [[ -e "${dir}"/grub/menu.lst ]] ; then
-		mv -f "${dir}"/grub/menu.lst "${dir}"/grub/grub.conf
+	if [[ ! -e ${dir}/grub.conf ]] && [[ -e ${dir}/menu.lst ]] ; then
+		mv -f "${dir}"/menu.lst "${dir}"/grub.conf
 		ewarn
 		ewarn "*** IMPORTANT NOTE: menu.lst has been renamed to grub.conf"
 		ewarn
 	fi
 
-	if [[ ! -e "${dir}"/grub/menu.lst ]]; then
-	einfo "Linking from new grub.conf name to menu.lst"
-		ln -snf grub.conf "${dir}"/grub/menu.lst
+	if [[ ! -e ${dir}/menu.lst ]]; then
+		einfo "Linking from new grub.conf name to menu.lst"
+		ln -snf grub.conf "${dir}"/menu.lst
 	fi
 
-	[[ -e "${dir}"/grub/stage2 ]] && mv "${dir}"/grub/stage2{,.old}
+	[[ -e ${dir}/stage2 ]] && mv "${dir}"/stage2{,.old}
 
 	einfo "Copying files from /lib/grub and /usr/lib/grub to ${dir}"
-	for x in /lib*/grub/*/* /usr/lib*/grub/*/* ; do
-		[[ -f "${x}" ]] && cp -p "${x}" "${dir}"/grub/
+	for x in "${ROOT}"/lib*/grub/*/* "${ROOT}"/usr/lib*/grub/*/* ; do
+		[[ -f "${x}" ]] && cp -p "${x}" "${dir}"/
 	done
 
-	if [[ -e "${dir}"/grub/grub.conf ]] ; then
+	if [[ -e ${dir}/grub.conf ]] ; then
 		egrep \
 			-v '^[[:space:]]*(#|$|default|fallback|initrd|password|splashimage|timeout|title)' \
-			"${dir}"/grub/grub.conf | \
+			"${dir}"/grub.conf | \
 		/sbin/grub --batch \
-			--device-map="${dir}"/grub/device.map \
+			--device-map="${dir}"/device.map \
 			> /dev/null
+	fi
+
+	# the grub default commands silently piss themselves if
+	# the default file does not exist ahead of time
+	if [[ ! -e ${dir}/default ]] ; then
+		grub-set-default --root-directory="${boot_dir}" default
 	fi
 }
 
 pkg_postinst() {
-	[[ "${ROOT}" != "/" ]] && return 0
 	[[ -n ${DONT_MOUNT_BOOT} ]] && return 0
-	setup_boot_dir /boot
+	setup_boot_dir "${ROOT}"/boot
 	einfo "To install grub files to another device (like a usb stick), just run:"
 	einfo "   emerge --config =${PF}"
 }
 
 pkg_config() {
 	local dir
-	einfo "Enter the directory where you want to setup grub:"
+	einfo "Enter the directory where you want to setup grub: "
 	read dir
 	setup_boot_dir "${dir}"
 }

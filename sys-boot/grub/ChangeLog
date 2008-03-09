@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.79 2008/02/25 19:17:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.80 2008/03/09 23:13:40 vapier Exp $
+
+  09 Mar 2008; Mike Frysinger <vapier@gentoo.org> grub-0.97-r4.ebuild:
+  Clean up the /boot update code a bit and generate the "default" file by
+  default so people dont have to painfully debug this failure themselves.
 
   25 Feb 2008; Steve Dibb <beandog@gentoo.org> grub-0.97-r4.ebuild:
   amd64 stable, bug 211419
