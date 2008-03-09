@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.101 2008/03/08 23:34:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.102 2008/03/09 12:57:23 flameeyes Exp $
+
+  09 Mar 2008; Diego Pettenò <flameeyes@gentoo.org>
+  files/pulseaudio-0.9.9+ltdl-2.2.patch:
+  Fix path so that it build with both 2.2 and 1.5. Closes bug #212800.
 
 *pulseaudio-0.9.9-r53 (08 Mar 2008)
 *pulseaudio-0.9.9-r3 (08 Mar 2008)

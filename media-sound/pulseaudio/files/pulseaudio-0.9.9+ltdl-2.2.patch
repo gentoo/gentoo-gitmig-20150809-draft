@@ -6,7 +6,7 @@ Index: src/daemon/ltdl-bind-now.c
  #include <sys/dl.h>
  #endif
  
-+#ifndef HAVE_LT_USER_DLLOADER
++#ifndef HAVE_STRUCT_LT_USER_DLLOADER
 +/* Only used with ltdl 2.2 */
 +#include <string.h>
 +#endif
@@ -30,7 +30,7 @@ Index: src/daemon/ltdl-bind-now.c
  void pa_ltdl_init(void) {
  
  #ifdef PA_BIND_NOW
-+# ifdef HAVE_LT_USER_DLLOADER
++# ifdef HAVE_STRUCT_LT_USER_DLLOADER
      lt_dlloader *place;
      static const struct lt_user_dlloader loader = {
          .module_open = bind_now_open,
@@ -50,7 +50,7 @@ Index: src/daemon/ltdl-bind-now.c
 +#endif
  
  #ifdef PA_BIND_NOW
-+# ifdef HAVE_LT_USER_DLLOADER
++# ifdef HAVE_STRUCT_LT_USER_DLLOADER
  
      if (!(place = lt_dlloader_find("dlopen")))
          place = lt_dlloader_next(NULL);
@@ -93,7 +93,7 @@ Index: configure.ac
 +LIBS="$LIBS $LIBLTDL"
 +AC_CHECK_FUNCS([lt_dlmutex_register])
 +LIBS=$old_LIBS
-+AC_CHECK_TYPES([lt_user_dlloader, lt_dladvise], , , [#include <ltdl.h>])
++AC_CHECK_TYPES([struct lt_user_dlloader, lt_dladvise], , , [#include <ltdl.h>])
 +
  if test "x$enable_ltdl_install" = "xno" && test "x$ac_cv_lib_ltdl_lt_dlinit" = "xno" ; then
      AC_MSG_ERROR([[
