@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.6-r1.ebuild,v 1.1 2008/03/05 03:27:10 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.6-r1.ebuild,v 1.2 2008/03/09 21:43:39 eva Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -92,6 +92,14 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# fix tests
+	echo "src/tracker-applet/tracker-applet-prefs.glade" >> po/POTFILES.in
+}
+
 src_compile() {
 	local myconf=
 
@@ -127,6 +135,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 }

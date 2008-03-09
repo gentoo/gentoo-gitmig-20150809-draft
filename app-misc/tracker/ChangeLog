@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.41 2008/03/05 03:27:10 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.42 2008/03/09 21:43:39 eva Exp $
+
+  09 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  tracker-0.6.6-r1.ebuild:
+  fix tests and use emake at src_install to respect MAKEOPTS
 
 *tracker-0.6.6-r1 (05 Mar 2008)
 
