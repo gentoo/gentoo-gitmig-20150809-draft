@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.327 2008/02/04 05:00:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.328 2008/03/09 15:22:41 leio Exp $
+
+  09 Mar 2008; Mart Raudsepp <leio@gentoo.org> -gnome-2.18.3.ebuild,
+  -gnome-2.20.1.ebuild, -gnome-2.20.2.ebuild:
+  Remove GNOME 2.18
 
   04 Feb 2008; Jeroen Roovers <jer@gentoo.org> gnome-2.20.3.ebuild:
   Stable for HPPA (bug #208366).
