@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.6.1.ebuild,v 1.1 2007/10/25 17:49:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.7.ebuild,v 1.1 2008/03/09 14:19:48 drac Exp $
 
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="Modern rewrite of Quick Image Viewer"
 HOMEPAGE="http://www.pberndt.com/Programme/Linux/pqiv"
@@ -18,7 +18,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake pqiv failed."
+	tc-export CC
+	emake || die "emake failed."
 }
 
 src_install() {
