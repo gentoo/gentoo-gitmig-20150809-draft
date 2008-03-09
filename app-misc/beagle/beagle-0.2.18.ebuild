@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.18.ebuild,v 1.6 2008/03/09 16:48:34 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.18.ebuild,v 1.7 2008/03/09 17:25:03 cedk Exp $
 
 EAPI=1
 
@@ -44,7 +44,8 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
 	dev-util/pkgconfig
 	x11-proto/xproto
-	xscreensaver? ( x11-proto/scrnsaverproto )"
+	xscreensaver? ( x11-proto/scrnsaverproto )
+	>=dev-util/intltool-0.23"
 
 pkg_setup() {
 	local fail="Re-emerge dev-libs/gmime with USE mono."
