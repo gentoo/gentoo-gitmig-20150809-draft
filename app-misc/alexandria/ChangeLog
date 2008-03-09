@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/alexandria
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.20 2007/09/17 20:04:37 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.21 2008/03/09 10:23:12 graaff Exp $
+
+*alexandria-0.6.2 (09 Mar 2008)
+
+  09 Mar 2008; Hans de Graaff <graaff@gentoo.org>
+  +files/alexandria-0.6.2-rake-0.8.1.patch,
+  +files/alexandria-rakefile.patch, metadata.xml, +alexandria-0.6.2.ebuild:
+  Bump version based on ebuild in #207092. Add John Keeping as proxy maintainer
+  as discussed in the same bug.
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing citizen428 from metadata.xml (see #56803 for reference).
