@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.33 2008/03/08 21:03:28 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.34 2008/03/09 17:54:22 williamh Exp $
+
+  09 Mar 2008; William Hubbs <williamh@gentoo.org>
+  files/espeak-1.35-makefile.patch:
+  Updated the makefile patch so that espeak builds correctly if no audio option
+  is in the use flags.  Also, I sent this patch upstream.
 
   08 Mar 2008; William Hubbs <williamh@gentoo.org>
   -files/espeak-1.19-big-endian.patch,

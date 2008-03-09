@@ -1,11 +1,41 @@
---- espeak-1.35-source/src/Makefile.orig	2008-03-08 12:05:29.000000000 -0600
-+++ espeak-1.35-source/src/Makefile	2008-03-08 12:09:43.000000000 -0600
-@@ -61,14 +61,15 @@
+--- espeak-1.35-source/src/Makefile.orig	2008-03-09 12:23:30.000000000 -0500
++++ espeak-1.35-source/src/Makefile	2008-03-09 12:42:37.000000000 -0500
+@@ -30,12 +30,14 @@
+ 
+ ifeq ($(AUDIO),pulseaudio)
+ WAVE=wave_pulse.cpp
+-LIB_AUDIO=pulse
+-USE_AUDIO=USE_PULSEAUDIO
++LIB_AUDIO=-lpulse
++USE_AUDIO=-DUSE_PULSEAUDIO
++else ifeq ($(AUDIO),portaudio)
++WAVE=wave.cpp
++LIB_AUDIO=-lportaudio
++USE_AUDIO=-DUSE_PORTAUDIO
+ else
+ WAVE=wave.cpp
+-LIB_AUDIO=portaudio
+-USE_AUDIO=USE_PORTAUDIO
+ endif
+ 
+ speak_SOURCES = speak.cpp compiledict.cpp dictionary.cpp intonation.cpp \
+@@ -51,24 +53,24 @@
+ 
+ SRCS1=$(speak_SOURCES)
+ OBJS1=$(patsubst %.cpp,%.o,$(SRCS1))
+-LIBS1=-lstdc++ -l$(LIB_AUDIO) -lpthread $(EXTRA_LIBS)
++LIBS1=-lstdc++ $(LIB_AUDIO) -lpthread $(EXTRA_LIBS)
+ 
+ SRCS2=$(libespeak_SOURCES)
+ OBJS2=$(patsubst %.cpp,x_%.o,$(SRCS2))
+-LIBS2=-lstdc++ -l$(LIB_AUDIO) -lpthread
++LIBS2=-lstdc++ $(LIB_AUDIO) -lpthread
+ 
+ SRCS3 = espeak.cpp
  OBJS3=$(patsubst %.cpp,%.o,$(SRCS3))
  LIBS3=-lstdc++ -L . -lespeak
  
 -CXXFLAGS=-O2 -D$(USE_AUDIO)
-+AUDIOFLAGS=-D$(USE_AUDIO)
 +CXXFLAGS=-O2
  
  
@@ -14,16 +44,16 @@
  
  .cpp.o:
 -	$(CXX) $(CXXFLAGS) -D PATH_ESPEAK_DATA=\"$(DATADIR)\" -Wall -pedantic -I. -c -fno-exceptions  $<
-+	$(CXX) $(CXXFLAGS) $(AUDIOFLAGS) -D PATH_ESPEAK_DATA=\"$(DATADIR)\" -Wall -pedantic -I. -c -fno-exceptions  $<
++	$(CXX) $(CXXFLAGS) $(USE_AUDIO) -D PATH_ESPEAK_DATA=\"$(DATADIR)\" -Wall -pedantic -I. -c -fno-exceptions  $<
  
  $(BIN_NAME): $(OBJS1)
  	$(CXX) -o $@ $(OBJS1) $(LIBS1)
-@@ -79,7 +80,7 @@
+@@ -79,7 +81,7 @@
  
  
  x_%.o: %.cpp
 -	$(CXX) $(CXXFLAGS) -Wall -fpic -pedantic \
-+	$(CXX) $(CXXFLAGS) $(AUDIOFLAGS) -Wall -fpic -pedantic \
++	$(CXX) $(CXXFLAGS) $(USE_AUDIO) -Wall -fpic -pedantic \
  	-I. -D LIBRARY -c -fno-exceptions  $<  -o x_$*.o
  
  $(LIB_NAME): $(OBJS2)
