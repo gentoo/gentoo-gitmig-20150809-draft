@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/vdr-skinenigmang-0.0.4.ebuild,v 1.3 2008/03/09 18:31:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/vdr-skinenigmang-0.0.6.ebuild,v 1.1 2008/03/09 18:31:09 zzam Exp $
 
 inherit vdr-plugin
 
@@ -25,6 +25,12 @@ src_unpack() {
 	vdr-plugin_src_unpack
 
 	use imagemagick && sed -i "s:#HAVE_IMAGEMAGICK:HAVE_IMAGEMAGICK:" Makefile
+
+	# TODO: implement a clean query / extra tool vdr-config
+	sed -i -e '/^VDRLOCALE/d' Makefile
+	if has_version ">=media-video/vdr-1.5.9"; then
+		sed -i -e 's/.*$(VDRLOCALE).*/ifeq (1,1)/' Makefile
+	fi
 }
 
 src_install() {

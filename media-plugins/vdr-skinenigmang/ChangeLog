@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-skinenigmang
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/ChangeLog,v 1.4 2007/12/29 21:29:45 hd_brummy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/ChangeLog,v 1.5 2008/03/09 18:31:09 zzam Exp $
+
+*vdr-skinenigmang-0.0.6 (09 Mar 2008)
+
+  09 Mar 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-skinenigmang-0.0.3.ebuild, vdr-skinenigmang-0.0.4.ebuild,
+  +vdr-skinenigmang-0.0.6.ebuild:
+  Version bumped. Add hack to disable bad makefile gettext check.
 
 *vdr-skinenigmang-0.0.5 (29 Dec 2007)
 
