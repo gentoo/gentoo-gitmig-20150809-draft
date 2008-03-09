@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.50 2008/02/19 00:44:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.51 2008/03/09 21:54:37 leio Exp $
+
+  09 Mar 2008; Mart Raudsepp <leio@gentoo.org> -libgksu-1.9.2.ebuild,
+  -libgksu-2.0.0.ebuild, -libgksu-2.0.4.ebuild, libgksu-2.0.5.ebuild:
+  Remove old and downgrade mips to testing
 
   19 Feb 2008; Daniel Gryniewicz <dang@gentoo.org> libgksu-2.0.5.ebuild:
   Reorganize depends; bug #210510
