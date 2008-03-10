@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1193 2008/03/09 23:39:37 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1194 2008/03/10 03:41:22 jer Exp $
+
+  10 Mar 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask development version app-admin/sysstat-8.1.1 (bug #212398).
 
   09 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> package.mask:
   Update Qt-4.4.0_beta mask message.

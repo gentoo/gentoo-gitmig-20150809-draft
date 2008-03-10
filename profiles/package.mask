@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8357 2008/03/09 23:39:37 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8358 2008/03/10 03:41:22 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
+
+# Jeroen Roovers <jer@gentoo.org> (10 Mar 2008)
+# development version:
+=app-admin/sysstat-8.1.1
 
 # Luis F. Araujo <araujo@gentoo.org> (9 Mar 2008)
 # Check bug #208666
