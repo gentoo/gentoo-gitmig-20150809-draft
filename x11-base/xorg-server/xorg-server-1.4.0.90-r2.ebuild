@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90-r2.ebuild,v 1.1 2008/01/18 21:31:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.0.90-r2.ebuild,v 1.2 2008/03/10 17:39:30 zlin Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -427,11 +427,9 @@ pkg_postinst() {
 	ewarn "or earlier, because the ABI changed. If you cannot start X because"
 	ewarn "of module version mismatch errors, this is your problem."
 
-	ewarn "Here's a list of installed X drivers to emerge:"
-	print_installed x11-drivers/
-
 	echo
-	ewarn "You can generate a similar list at any point using this command:"
+	ewarn "You can generate a list of all installed packages in the x11-drivers"
+	ewarn "category using this command:"
 	ewarn "emerge portage-utils; qlist -I -C x11-drivers/"
 
 	ebeep 5
@@ -548,27 +546,6 @@ switch_opengl_implem() {
 		echo
 #		eselect opengl set --use-old ${OPENGL_DIR}
 		eselect opengl set ${OLD_IMPLEM}
-}
-
-print_installed() {
-	local command line token=$1
-
-	if $(type -P qlist >/dev/null 2>&1); then
-		command="qlist -I -C ${token}"
-	elif $(type -P equery >/dev/null 2>&1); then
-		command="equery -q -C list ${token} | grep -o '${token}[[:alnum:].-]*'"
-	elif $(type -P epm >/dev/null 2>&1); then
-		command="epm -qaG | grep ${token}"
-	else
-		local dir
-		command="true"
-		for dir in "${PORTDIR}"/${token}*; do
-			command="${command} ; best_version ${dir#${PORTDIR}/}"
-		done
-	fi
-	while read line; do
-		ewarn "${line}"
-	done < <(eval ${command})
 }
 
 xprint_src_install() {
