@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.330 2008/03/08 12:24:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.331 2008/03/10 08:15:40 dev-zero Exp $
+
+*samba-3.0.28a (10 Mar 2008)
+
+  10 Mar 2008; Tiziano Müller <dev-zero@gentoo.org>
+  files/config/system-auth-winbind, +samba-3.0.28a.ebuild:
+  Version bump. Fixed manifest (bug #212774). Fixed system-auth-winbind
+  installation (bug #212387).
 
 *samba-3.2.0_pre2 (08 Mar 2008)
 
