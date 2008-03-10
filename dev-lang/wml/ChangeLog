@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/wml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.41 2008/03/06 12:39:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.42 2008/03/10 14:21:12 beandog Exp $
+
+  10 Mar 2008; Steve Dibb <beandog@gentoo.org> wml-2.0.11-r3.ebuild:
+  amd64 stable, bug 209927
 
   06 Mar 2008; Raúl Porcel <armin76@gentoo.org> wml-2.0.11-r3.ebuild:
   ia64/sparc stable wrt security #209927
