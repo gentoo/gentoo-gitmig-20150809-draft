@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.8.0-r3.ebuild,v 1.12 2007/12/02 16:28:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.8.0-r3.ebuild,v 1.13 2008/03/10 01:55:13 ricmm Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ xfce44
 
 DESCRIPTION="File manager"
 HOMEPAGE="http://thunar.xfce.org"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc dbus debug exif gnome hal pcre startup-notification +trash-plugin"
 
 RDEPEND=">=dev-lang/perl-5.6
