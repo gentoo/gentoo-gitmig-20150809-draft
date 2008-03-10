@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/varnish
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.13 2007/12/21 22:39:22 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.14 2008/03/10 22:10:20 bangert Exp $
+
+  10 Mar 2008; Thilo Bangert <bangert@gentoo.org> files/varnishd.initd:
+  allow varnish to lock the logfile to memory - the next version of varnish
+  will require this. Add RDEPEND on gcc - varnish compiles vcl into c code. 
 
   21 Dec 2007; Thilo Bangert <bangert@gentoo.org>
   -files/varnish-1.1-build-DESTDIR.patch, varnish-1.0.4.ebuild,
