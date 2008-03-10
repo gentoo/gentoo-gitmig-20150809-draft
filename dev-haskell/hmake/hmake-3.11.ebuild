@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.11.ebuild,v 1.12 2007/12/13 18:03:54 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.11.ebuild,v 1.13 2008/03/10 22:42:35 araujo Exp $
 
 inherit base eutils fixheadtails ghc-package
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="dev-lang/ghc
+DEPEND="!>=dev-lang/ghc-6.8
 		sys-libs/readline
 		>=sys-apps/sandbox-1.2.12"
 RDEPEND="dev-lang/ghc
