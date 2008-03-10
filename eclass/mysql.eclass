@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.87 2008/03/09 21:19:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.88 2008/03/10 02:47:20 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -36,9 +36,11 @@ fi
 # This is an important part, because many of the choices the MySQL ebuild will do
 # depend on this variable.
 # In particular, the code below transforms a $PVR like "5.0.18-r3" in "5001803"
+# We also strip off upstream's trailing letter that they use to respin tarballs
 
 MYSQL_VERSION_ID=""
-tpv=( ${PV//[-._]/ } ) ; tpv[3]="${PVR:${#PV}}" ; tpv[3]="${tpv[3]##*-r}"
+tpv="${PV%[a-z]}"
+tpv=( ${tpv//[-._]/ } ) ; tpv[3]="${PVR:${#PV}}" ; tpv[3]="${tpv[3]##*-r}"
 for vatom in 0 1 2 3 ; do
 	# pad to length 2
 	tpv[${vatom}]="00${tpv[${vatom}]}"
