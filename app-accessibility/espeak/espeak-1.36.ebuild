@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.35.ebuild,v 1.1 2008/03/08 18:28:56 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.36.ebuild,v 1.1 2008/03/10 01:01:41 williamh Exp $
 
 inherit eutils
 
@@ -32,8 +32,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
-	epatch "${FILESDIR}"/${P}-makefile.patch
 
 	# portaudio.h is by default the same as portaudio18.h, but use the version
 	# 19 API if available
