@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-3.0.4.2-r1.ebuild,v 1.3 2008/03/08 20:50:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-3.0.4.2-r1.ebuild,v 1.4 2008/03/10 07:32:35 opfer Exp $
 
 ###
 ### @Todo The new Azureus gui requires swt built with embedded mozilla support,
@@ -39,6 +39,7 @@ DEPEND="${RDEPEND}
 	app-arch/unzip
 	dev-util/desktop-file-utils
 	>=virtual/jdk-1.4"
+JAVA_PKG_FILTER_COMPILER="jikes"
 
 S="${WORKDIR}"
 
@@ -64,12 +65,12 @@ src_unpack() {
 
 	### Removes OS X files and entries.
 	rm -rv "org/gudy/azureus2/platform/macosx" \
-	       "org/gudy/azureus2/ui/swt/osx"      || die
+		   "org/gudy/azureus2/ui/swt/osx"      || die
 
 	### Removes Windows files.
 	rm -rv "com/aelitis/azureus/util/win32"   \
-	       "org/gudy/azureus2/platform/win32" \
-	       "org/gudy/azureus2/ui/swt/win32"   || die
+		   "org/gudy/azureus2/platform/win32" \
+		   "org/gudy/azureus2/ui/swt/win32"   || die
 
 	### Removes test files.
 	rm -rv "org/gudy/azureus2/ui/swt/test" || die
