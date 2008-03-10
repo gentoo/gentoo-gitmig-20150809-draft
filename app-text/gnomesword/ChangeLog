@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnomesword
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.24 2008/01/07 03:01:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.25 2008/03/10 16:51:10 nixnut Exp $
+
+  10 Mar 2008; nixnut <nixnut@gentoo.org> gnomesword-2.3.1-r1.ebuild:
+  Added ~ppc wrt bug 211741
 
 *gnomesword-2.3.1-r1 (07 Jan 2008)
 
