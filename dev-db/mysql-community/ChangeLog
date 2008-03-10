@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-community
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.16 2007/10/02 10:02:04 robbat2 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.17 2008/03/10 04:32:33 robbat2 Exp $
+
+*mysql-community-5.0.51a (10 Mar 2008)
+
+  10 Mar 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +mysql-community-5.0.51a.ebuild:
+  Plain version bump, based on the main 5.0.56 ebuild. More patches in a later
+  revision.
 
 *mysql-community-5.1.21_beta (02 Oct 2007)
 
