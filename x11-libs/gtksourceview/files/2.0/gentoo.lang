@@ -27,6 +27,7 @@
 		<style id="variable" _name="Portage variables" map-to="def:builtin" />
 		<style id="command" _name="Portage command" map-to="def:type" />
 		<style id="function" _name="Portage function" map-to="def:function" />
+		<style id="string" _name="String" map-to="def:string" />
 	</styles>
 
 	<definitions>
@@ -38,7 +39,7 @@
 			<include>
 				<context ref="def:escape"/>
 				<context ref="def:line-continue"/>
-				<context ref="sh:variable1"/>
+				<context ref="sh:variable"/>
 			</include>
 		</context>
 
@@ -48,7 +49,7 @@
 			<include>
 				<context ref="def:escape"/>
 				<context ref="def:line-continue"/>
-				<context ref="sh:variable1"/>
+				<context ref="sh:variable"/>
 			</include>
 		</context>
 
@@ -99,10 +100,8 @@
 		</context>
 
 		<!-- gentoo is just a shell with the replacements -->
-		<replace id="sh:string" ref="string" />
-		<replace id="sh:string-2" ref="string-2" />
 		<replace id="sh:built-in-command" ref="built-in-command" />
-		<replace id="sh:backtick-string" ref="subprogram-2" />
+		<replace id="sh:backtick-subshell" ref="subprogram-2" />
 		<context id="gentoo">
 			<include>
 				<context ref="subprogram"/>
