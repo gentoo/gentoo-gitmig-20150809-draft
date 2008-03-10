@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.56.ebuild,v 1.1 2008/03/10 02:55:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.56.ebuild,v 1.2 2008/03/10 02:58:09 robbat2 Exp $
 
 MY_EXTRAS_VER="20080310"
 SERVER_URI="http://mirror.provenscaling.com/mysql/enterprise/source/5.0/${P}.tar.gz"
@@ -37,14 +37,14 @@ src_test() {
 		# USE=extraengines case
 		case ${PV} in
 			5.0.42)
-			mysql_disable_test "archive_gis" "Totally broken in 5.0.42" 
+			mysql_disable_test "archive_gis" "Totally broken in 5.0.42"
 			;;
 
 			5.0.44|5.0.45|5.0.46|5.0.48|5.0.5[0-6]*)
 			[ "$(tc-endian)" == "big" ] && \
 			mysql_disable_test \
 				"archive_gis" \
-				"Broken in 5.0.44-56 on big-endian boxes only" 
+				"Broken in 5.0.44-56 on big-endian boxes only"
 			;;
 		esac
 
@@ -57,7 +57,7 @@ src_test() {
 				"Broken in 5.0.51-54, output in wrong order"
 			;;
 		esac
-	
+
 		# Ditto to read_only
 		[ "${PV}" == "5.0.51a" ] && \
 			mysql_disable_test \
@@ -82,7 +82,7 @@ src_test() {
 
 		# create directories because mysqladmin might right out of order
 		mkdir -p "${S}"/mysql-test/var-{ps,ns}{,/log}
-		
+
 		# We run the test protocols seperately
 		make -j1 test-ns force="--force --vardir=${S}/mysql-test/var-ns"
 		retstatus1=$?

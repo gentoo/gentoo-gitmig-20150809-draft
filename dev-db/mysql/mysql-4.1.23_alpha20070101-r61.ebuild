@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.23_alpha20070101-r61.ebuild,v 1.2 2007/01/12 17:58:32 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.23_alpha20070101-r61.ebuild,v 1.3 2008/03/10 02:58:09 robbat2 Exp $
 
 MY_EXTRAS_VER="latest"
 SERVER_URI="mirror://gentoo/MySQL-${PV%.*}/mysql-${PV//_alpha/-bk-}.tar.bz2"
@@ -11,7 +11,6 @@ inherit mysql
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 src_test() {
-	cd "${S}"
 	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
 	make check || die "make check failed"
 	if ! use "minimal" ; then
