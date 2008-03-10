@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xcompmgr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.28 2008/01/31 04:40:29 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.29 2008/03/10 02:45:32 dberkholz Exp $
+
+*xcompmgr-1.1.4 (10 Mar 2008)
+
+  10 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xcompmgr-1.1.4.ebuild:
+  Bump.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/xcompmgr-fix.diff, -xcompmgr-1.1.ebuild, -xcompmgr-1.1.1.ebuild,
