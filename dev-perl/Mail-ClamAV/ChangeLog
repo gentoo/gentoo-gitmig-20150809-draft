@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-ClamAV
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.23 2008/02/20 19:46:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.24 2008/03/10 15:16:48 beandog Exp $
+
+  10 Mar 2008; Steve Dibb <beandog@gentoo.org> Mail-ClamAV-0.21.ebuild:
+  amd64 stable, bug 210566
 
   20 Feb 2008; Raúl Porcel <armin76@gentoo.org> Mail-ClamAV-0.21.ebuild:
   ia64/sparc stable wrt #210566
