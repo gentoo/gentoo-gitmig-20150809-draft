@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.46 2008/02/18 23:10:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.47 2008/03/10 21:17:28 eva Exp $
+
+*pessulus-2.16.4 (10 Mar 2008)
+
+  10 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +pessulus-2.16.4.ebuild:
+  bump to 2.16.4, intltoolize call not needed anymore, fix incorrect
+  python_mod_optimize
 
   18 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
   pessulus-2.16.3.ebuild:
