@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jakarta-jstl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.18 2007/11/13 11:21:01 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.19 2008/03/10 11:24:32 betelgeuse Exp $
+
+  10 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
+  jakarta-jstl-1.1.2-r1.ebuild:
+  RESTRICT test for the upcoming generic src_test. Needs cactus packaged.
 
   13 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   jakarta-jstl-1.1.2-r1.ebuild:

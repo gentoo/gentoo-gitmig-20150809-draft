@@ -1,6 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2-r1.ebuild,v 1.11 2007/11/13 11:21:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2-r1.ebuild,v 1.12 2008/03/10 11:24:32 betelgeuse Exp $
+
+EAPI=1
+JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -13,19 +16,22 @@ SRC_URI="mirror://apache/jakarta/taglibs/standard/source/${MY_P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
-IUSE="doc examples source"
+IUSE=""
 
-COMMON_DEP="~dev-java/servletapi-2.4
+COMMON_DEP="dev-java/servletapi:2.4
 	dev-java/xalan"
 RDEPEND=">=virtual/jre-1.4.2
 	${COMMON_DEP}"
+#	test? ( dev-java/ant-junit )
 # FIXME breaks due to new JDBC API in 1.6
 DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
-	${COMMON_DEP}
-	dev-java/ant-core
-	source? ( app-arch/zip )"
+	${COMMON_DEP}"
 
 S="${WORKDIR}/${MY_P}-src/standard"
+
+# Needs cactus packaged
+# http://bugs.gentoo.org/show_bug.cgi?id=212890
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
@@ -35,6 +41,7 @@ src_unpack() {
 	# See bug #134206
 	# TODO file upstream
 	epatch "${FILESDIR}/build-xml.patch"
+	#java-ant_remove-taskdefs build-tests.xml
 
 	echo -e "base.dir=..\n" \
 		"build.dir = \${base.dir}/build\n" \
@@ -44,20 +51,18 @@ src_unpack() {
 		"jsp20.jar=$(java-pkg_getjar servletapi-2.4 jsp-api.jar)\n" \
 		"xalan.jar=$(java-pkg_getjar xalan xalan.jar)" \
 		> build.properties
+	#use test && echo "junit.jar=$(java-pkg_getjars --build-only junit)" >> build.properties
 	java-pkg_filter-compiler jikes
 }
 
-src_compile() {
-	eant build $(use_doc javadoc-dist)
-}
+EANT_BUILD_TARGET="build"
+EANT_DOC_TARGET="javadoc-dist"
+EANT_TEST_TARGET="run.junit"
 
 src_install() {
 	java-pkg_dojar "${S}"/../build/standard/standard/lib/*.jar
 
 	use doc && java-pkg_dohtml -r "${S}"/doc/web/* "${S}"/../dist/standard/javadoc/
-	if use examples; then
-		dodir /usr/share/doc/${PF}/examples
-		cp -r "${S}"/examples/* "${D}"/usr/share/doc/${PF}/examples
-	fi
+	use examples && java-pkg_doexamples examples
 	use source && java-pkg_dosrc "${S}"/src/*
 }
