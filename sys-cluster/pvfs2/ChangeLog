@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/pvfs2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/ChangeLog,v 1.10 2008/03/06 23:05:43 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/ChangeLog,v 1.11 2008/03/10 01:17:07 jsbronder Exp $
+
+*pvfs2-2.7.0-r2 (10 Mar 2008)
+
+  10 Mar 2008; Justin Bronder <jsbronder@gentoo.org>
+  +files/2.7.0-configure-static-server.patch, +pvfs2-2.7.0-r2.ebuild:
+  Correctly use the static use flag to build pvfs2-server and always build
+  both static and shared libraries.
 
 *pvfs2-2.7.0-r1 (06 Mar 2008)
 
