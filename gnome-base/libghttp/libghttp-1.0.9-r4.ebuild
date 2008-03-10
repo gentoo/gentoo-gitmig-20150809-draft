@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/libghttp-1.0.9-r4.ebuild,v 1.14 2006/10/29 19:38:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/libghttp-1.0.9-r4.ebuild,v 1.15 2008/03/10 19:05:45 leio Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit libtool gnome.org eutils
@@ -19,9 +19,9 @@ src_unpack() {
 
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	# fixes http locale related bug (#33386)
-	epatch ${FILESDIR}/${P}-fixlocale.patch
+	epatch "${FILESDIR}/${P}-fixlocale.patch"
 
 }
 
