@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7-r1.ebuild,v 1.9 2008/02/10 00:24:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7-r1.ebuild,v 1.10 2008/03/10 15:22:13 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -190,7 +190,7 @@ eblit-src_unpack-post() {
 pkg_setup() {
 	# prevent native builds from downgrading ... maybe update to allow people
 	# to change between diff -r versions ? (2.3.6-r4 -> 2.3.6-r2)
-	if [[ ${ROOT} != "/" ]] && ! tc-is-cross-compiler ; then
+	if [[ ${ROOT} == "/" ]] && [[ ${CBUILD} == ${CHOST} ]] && [[ ${CHOST} == ${CTARGET} ]] ; then
 		if has_version '>'${CATEGORY}/${PF} ; then
 			eerror "Sanity check to keep you from breaking your system:"
 			eerror " Downgrading glibc is not supported and a sure way to destruction"

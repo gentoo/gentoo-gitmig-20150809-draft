@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.572 2008/01/16 22:46:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.573 2008/03/10 15:22:13 vapier Exp $
+
+  10 Mar 2008; Mike Frysinger <vapier@gentoo.org> glibc-2.6.1.ebuild,
+  glibc-2.7.ebuild, glibc-2.7-r1.ebuild:
+  Only check for downgrades on the native glibc version ... let people screw
+  up any other system #212912.
 
   16 Jan 2008; Mike Frysinger <vapier@gentoo.org> glibc-2.7-r1.ebuild:
   Add some ~sparc love.
