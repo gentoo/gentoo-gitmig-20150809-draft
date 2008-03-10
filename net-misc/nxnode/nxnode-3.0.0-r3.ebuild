@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0-r3.ebuild,v 1.4 2007/12/14 12:11:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0-r3.ebuild,v 1.5 2008/03/10 00:55:38 voyageur Exp $
 
 inherit eutils
 
@@ -30,6 +30,12 @@ RDEPEND="=net-misc/nxclient-3.0*
 	vnc? ( || ( net-misc/vnc net-misc/tightvnc ) )"
 
 S=${WORKDIR}/NX
+
+pkg_preinst()
+{
+	enewuser nx -1 -1 /usr/NX/home/nx
+}
+
 
 pkg_setup() {
 	if use vnc; then
@@ -89,7 +95,7 @@ pkg_postinst()
 	if [ ! -f /usr/NX/etc/node.lic ]; then
 		cp ${ROOT}/usr/NX/etc/node.lic.sample ${ROOT}/usr/NX/etc/node.lic || die
 		chmod 0400 ${ROOT}/usr/NX/etc/node.lic
-		chown nx:root ${ROOT}/usr/NX/etc/node.lic
+		chown nx:0 ${ROOT}/usr/NX/etc/node.lic
 	fi
 
 	# only run install on the first time
