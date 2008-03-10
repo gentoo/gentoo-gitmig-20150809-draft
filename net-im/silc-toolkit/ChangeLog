@@ -1,6 +1,9 @@
 # ChangeLog for net-im/silc-toolkit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.78 2008/03/02 15:54:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.79 2008/03/10 19:23:56 corsair Exp $
+
+  10 Mar 2008; Markus Rothe <corsair@gentoo.org> silc-toolkit-1.1.6.ebuild:
+  Stable on ppc64; bug #212362
 
 *silc-toolkit-1.1.6 (02 Mar 2008)
 
