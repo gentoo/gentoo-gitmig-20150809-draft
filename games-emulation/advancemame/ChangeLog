@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/advancemame
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.44 2007/08/13 07:44:16 mr_bones_ Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.45 2008/03/10 18:09:15 mr_bones_ Exp $
+
+  10 Mar 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  advancemame-0.106.0.ebuild:
+  remove slang support (bug #212960)
 
   13 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
   advancemame-0.106.0.ebuild:
