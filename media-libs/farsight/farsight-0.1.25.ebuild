@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/farsight-0.1.25.ebuild,v 1.1 2007/09/19 08:06:57 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/farsight-0.1.25.ebuild,v 1.2 2008/03/10 22:55:58 tester Exp $
 
 DESCRIPTION="FarSight is an audio/video conferencing framework specifically designed for Instant Messengers."
 HOMEPAGE="http://farsight.freedesktop.org/"
 SRC_URI="http://farsight.freedesktop.org/releases/${PN}/${P}.tar.gz"
 #EDARCS_REPO_URI="http://projects.collabora.co.uk/darcs/farsight/farsight"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~x86"
 IUSE="jingle doc test"
 # msn yahoo

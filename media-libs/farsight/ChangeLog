@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/farsight
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/ChangeLog,v 1.15 2007/09/19 08:06:57 tester Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/ChangeLog,v 1.16 2008/03/10 22:55:58 tester Exp $
+
+  10 Mar 2008; Olivier Crête <tester@gentoo.org> farsight-0.1.24.ebuild,
+  farsight-0.1.25.ebuild:
+  Farsight is lgpl 2.1, not gpl-2
 
 *farsight-0.1.25 (19 Sep 2007)
 
