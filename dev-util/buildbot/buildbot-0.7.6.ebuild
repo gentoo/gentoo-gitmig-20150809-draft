@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.6.ebuild,v 1.1 2008/02/27 12:39:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.6.ebuild,v 1.2 2008/03/10 21:49:48 jokey Exp $
 
 NEED_PYTHON="2.3"
 
@@ -22,7 +22,7 @@ RDEPEND="${CDEPEND}
 DEPEND="${CDEPEND}
 	test? ( dev-python/twisted-web
 		dev-python/twisted-mail )
-	doc? ( dev-python/epydoc )"
+	doc? ( =dev-python/epydoc-2* )"
 
 pkg_setup() {
 	enewuser buildbot
