@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.104 2008/03/09 04:31:46 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.105 2008/03/10 20:57:05 lu_zero Exp $
+
+*wpa_supplicant-0.6.3 (10 Mar 2008)
+
+  10 Mar 2008; Luca Barbato <lu_zero@gentoo.org>
+  +files/wpa_supplicant-0.6.3-ps3_support.patch,
+  +wpa_supplicant-0.6.3.ebuild:
+  New revision, with ps3 support
 
   09 Mar 2008; Ryan Hill <dirtyepic@gentoo.org>
   +files/wpa_supplicant-0.5.10-gcc-4.3.patch, wpa_supplicant-0.5.10.ebuild:
