@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cflow/cflow-1.2-r1.ebuild,v 1.2 2007/12/18 17:44:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cflow/cflow-1.2-r1.ebuild,v 1.3 2008/03/10 17:20:05 nixnut Exp $
 
 inherit elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://download.gnu.org.ua/pub/release/cflow/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug emacs nls"
 
 DEPEND="nls? ( sys-devel/gettext )

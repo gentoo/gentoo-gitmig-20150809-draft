@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cflow
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cflow/ChangeLog,v 1.7 2007/12/18 17:44:15 dev-zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cflow/ChangeLog,v 1.8 2008/03/10 17:20:05 nixnut Exp $
+
+  10 Mar 2008; nixnut <nixnut@gentoo.org> cflow-1.2-r1.ebuild:
+  Added ~ppc wrt bug 212440
 
   18 Dec 2007; Tiziano Müller <dev-zero@gentoo.org> -cflow-1.2.ebuild,
   cflow-1.2-r1.ebuild:
