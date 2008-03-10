@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.21_p16468.ebuild,v 1.1 2008/03/09 20:48:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.21_p16468.ebuild,v 1.2 2008/03/10 15:30:17 beandog Exp $
 
 ESVN_PROJECT="mythplugins"
 
@@ -33,7 +33,7 @@ src_install() {
 	webapp_src_preinst
 
 	cd "${S}"/mythweb
-	dodoc README TODO
+	dodoc README INSTALL
 
 	dodir "${MY_HTDOCSDIR}"/data
 
