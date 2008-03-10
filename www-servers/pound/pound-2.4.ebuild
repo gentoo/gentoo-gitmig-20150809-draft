@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.4.ebuild,v 1.1 2008/02/11 19:39:41 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.4.ebuild,v 1.2 2008/03/10 21:22:50 bangert Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ DESCRIPTION="A http/https reverse-proxy and load-balancer."
 SRC_URI="http://www.apsis.ch/pound/${MY_P}.tgz"
 HOMEPAGE="http://www.apsis.ch/pound/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE="ssl dynscaler static"

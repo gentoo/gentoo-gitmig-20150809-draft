@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/pound
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.34 2008/02/11 19:39:41 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.35 2008/03/10 21:22:50 bangert Exp $
+
+  10 Mar 2008; Thilo Bangert <bangert@gentoo.org> pound-2.4.ebuild:
+  reflect license change to GPLv3
 
 *pound-2.4 (11 Feb 2008)
 
