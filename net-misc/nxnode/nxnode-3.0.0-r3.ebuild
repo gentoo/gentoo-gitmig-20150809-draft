@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0-r3.ebuild,v 1.5 2008/03/10 00:55:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0-r3.ebuild,v 1.6 2008/03/10 02:38:30 mr_bones_ Exp $
 
 inherit eutils
 
@@ -35,7 +35,6 @@ pkg_preinst()
 {
 	enewuser nx -1 -1 /usr/NX/home/nx
 }
-
 
 pkg_setup() {
 	if use vnc; then
