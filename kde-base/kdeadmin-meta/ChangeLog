@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeadmin-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.87 2008/03/04 04:17:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.88 2008/03/10 23:28:30 philantrop Exp $
+
+*kdeadmin-meta-4.0.2 (10 Mar 2008)
+
+  10 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdeadmin-meta-4.0.2.ebuild:
+  Version bump to KDE 4.0.2
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kdeadmin-meta-3.5.8.ebuild,
   kdeadmin-meta-3.5.9.ebuild, kdeadmin-meta-4.0.1.ebuild:

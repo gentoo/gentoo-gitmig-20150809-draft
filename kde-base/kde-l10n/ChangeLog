@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.4 2008/02/19 11:54:02 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.5 2008/03/10 23:26:33 philantrop Exp $
+
+*kde-l10n-4.0.2 (10 Mar 2008)
+
+  10 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kde-l10n-4.0.2.ebuild:
+  Version bump to 4.0.2.
+
+  10 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> ChangeLog:
+  Version bump to KDE 4.0.2
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> ChangeLog:
   Manifest, bug 210682.

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.80 2008/03/04 02:38:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.81 2008/03/10 23:36:06 philantrop Exp $
+
+*kdesu-4.0.2 (10 Mar 2008)
+
+  10 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> +kdesu-4.0.2.ebuild:
+  Version bump to KDE 4.0.2
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kdesu-3.5.8.ebuild,
   kdesu-3.5.9.ebuild, kdesu-4.0.1.ebuild:

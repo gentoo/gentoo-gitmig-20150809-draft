@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/kinfocenter
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/ChangeLog,v 1.1 2008/03/10 23:41:07 philantrop Exp $
+
+*kinfocenter-4.0.2 (10 Mar 2008)
+
+  10 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +kinfocenter-4.0.2.ebuild:
+  Version bump to KDE 4.0.2
+

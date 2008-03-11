@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesdk-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.79 2008/03/04 01:43:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.80 2008/03/10 23:35:14 philantrop Exp $
+
+*kdesdk-meta-4.0.2 (10 Mar 2008)
+
+  10 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdesdk-meta-4.0.2.ebuild:
+  Version bump to KDE 4.0.2
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kdesdk-meta-3.5.8.ebuild,
   kdesdk-meta-3.5.9.ebuild, kdesdk-meta-4.0.1.ebuild:

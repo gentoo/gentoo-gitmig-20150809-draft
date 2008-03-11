@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/khotkeys
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.84 2008/03/04 02:34:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.85 2008/03/10 23:40:34 philantrop Exp $
+
+*khotkeys-4.0.2 (10 Mar 2008)
+
+  10 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +khotkeys-4.0.2.ebuild:
+  Version bump to KDE 4.0.2
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> khotkeys-3.5.8.ebuild,
   khotkeys-3.5.9.ebuild, khotkeys-4.0.1.ebuild:

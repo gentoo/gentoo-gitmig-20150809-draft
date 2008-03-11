@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.5 2008/02/17 03:25:57 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.6 2008/03/10 23:50:59 philantrop Exp $
+
+*krunner-4.0.2 (10 Mar 2008)
+
+  10 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/krunner-4.0.2-linkage.patch, +files/krunner-4.0.2-opengl.patch,
+  +krunner-4.0.2.ebuild:
+  Version bump to KDE 4.0.2
 
   17 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/krunner-4.0.0-linkage.patch, -files/krunner-4.0.0-opengl.patch,

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.70 2008/03/04 01:52:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.71 2008/03/10 23:24:47 philantrop Exp $
+
+*kcharselect-4.0.2 (10 Mar 2008)
+
+  10 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +kcharselect-4.0.2.ebuild:
+  Version bump to KDE 4.0.2
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kcharselect-3.5.8.ebuild,
   kcharselect-3.5.9.ebuild, kcharselect-4.0.1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/klines
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klines/ChangeLog,v 1.82 2008/03/04 04:42:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klines/ChangeLog,v 1.83 2008/03/10 23:42:49 philantrop Exp $
+
+*klines-4.0.2 (10 Mar 2008)
+
+  10 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> +klines-4.0.2.ebuild:
+  Version bump to KDE 4.0.2
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> klines-3.5.8.ebuild,
   klines-3.5.9.ebuild, klines-4.0.1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmilo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/ChangeLog,v 1.86 2008/03/04 01:57:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/ChangeLog,v 1.87 2008/03/10 23:44:00 philantrop Exp $
+
+*kmilo-4.0.2 (10 Mar 2008)
+
+  10 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> +kmilo-4.0.2.ebuild:
+  Version bump to KDE 4.0.2
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> kmilo-3.5.8-r1.ebuild,
   kmilo-3.5.9.ebuild, kmilo-4.0.1.ebuild:

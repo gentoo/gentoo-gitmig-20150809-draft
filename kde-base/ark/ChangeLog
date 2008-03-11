@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.82 2008/03/04 01:51:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.83 2008/03/10 23:19:06 philantrop Exp $
+
+*ark-4.0.2 (10 Mar 2008)
+
+  10 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> +ark-4.0.2.ebuild:
+  Version bump to KDE 4.0.2
 
   04 Mar 2008; Jeroen Roovers <jer@gentoo.org> ark-3.5.8.ebuild,
   ark-3.5.9.ebuild, ark-4.0.1.ebuild:
