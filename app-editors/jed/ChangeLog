@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.48 2008/03/10 14:13:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.49 2008/03/11 15:35:50 ranger Exp $
+
+  11 Mar 2008; Brent Baude <ranger@gentoo.org> jed-0.99.18.ebuild:
+  stable ppc64, bug 211991
 
   10 Mar 2008; Samuli Suominen <drac@gentoo.org> jed-0.99.18.ebuild:
   amd64 stable wrt #211991
