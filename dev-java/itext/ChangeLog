@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.73 2008/03/08 20:54:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.74 2008/03/11 15:14:28 ranger Exp $
+
+  11 Mar 2008; Brent Baude <ranger@gentoo.org> itext-2.0.8.ebuild:
+  stable ppc64, bug 212669
 
   08 Mar 2008; Markus Meier <maekke@gentoo.org> itext-2.0.8.ebuild:
   x86 stable, bug #212669
