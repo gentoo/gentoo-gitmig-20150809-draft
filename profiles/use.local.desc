@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3426 2008/03/11 18:34:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3427 2008/03/11 18:42:24 opfer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -259,7 +259,6 @@ app-pda/multisync:kdepim - Adds support for KDEPIM sync.
 app-pda/multisync:nokia6600 - Adds support for Nokia 6600.
 app-pda/synce-kde:avantgo - Adds support for syncing Avantgo accounts.
 app-portage/conf-update:colordiff - Use colors when displaying diffs
-app-portage/gatt-svn:libpaludis - Do some dependency resolution by using a Paludis interface
 app-portage/gatt:libpaludis - Do some dependency resolution by using a Paludis interface
 app-portage/portato:etc-proposals - Use etc-proposals for updating CONFIG_PROTECTed stuff
 app-portage/portato:userpriv - Allow emerge processes as normal user
