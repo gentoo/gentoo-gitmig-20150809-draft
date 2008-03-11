@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsom/xsom-20060901.ebuild,v 1.5 2007/08/19 18:29:30 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsom/xsom-20060901.ebuild,v 1.6 2008/03/11 19:49:41 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -41,6 +41,8 @@ src_unpack() {
 		build.xml || die "sed failed"
 
 }
+
+src_test() { :; }
 
 src_install() {
 	java-pkg_dojar build/xsom.jar
