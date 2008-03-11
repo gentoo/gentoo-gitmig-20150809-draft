@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.1.0_p20070726.ebuild,v 1.3 2007/12/31 22:31:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.1.0_p20070726.ebuild,v 1.4 2008/03/11 11:41:35 leio Exp $
 
 inherit gnome2 eutils autotools
 
@@ -59,4 +59,5 @@ src_unpack () {
 	epatch "${WORKDIR}/${P}-pppd-plugindir.patch"
 	rm -rf "${S}/src/pppd"
 	eautoreconf
+	intltoolize --force || die "intltoolize failed"
 }
