@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.8 2008/02/29 19:47:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.9 2008/03/11 06:05:25 wolf31o2 Exp $
 
 #	[x] Base Install Required (+4 MB)
 #	[x] Scenarios (+7 MB)
@@ -37,7 +37,7 @@ LICENSE="LOKI-EULA"
 SLOT="0"
 IUSE="nocd maps music sounds videos"
 #linguas_en linguas_es linguas_pl linguas_de"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 RESTRICT="strip"
 
 DEPEND="virtual/libc
@@ -185,9 +185,9 @@ src_install() {
 	if ! use ppc
 	then
 		einfo "Linking libs provided by 'sys-libs/lib-compat-loki' to '${dir}'."
-		dosym /lib/loki_ld-linux.so.2 ${dir}/ld-linux.so.2 || die "dosym"
-		dosym /usr/lib/loki_libc.so.6 ${dir}/libc.so.6 || die "dosym"
-		dosym /usr/lib/loki_libnss_files.so.2 ${dir}/libnss_files.so.2 \
+		dosym /lib/loki_ld-linux.so.2 "${dir}"/ld-linux.so.2 || die "dosym"
+		dosym /usr/lib/loki_libc.so.6 "${dir}"/libc.so.6 || die "dosym"
+		dosym /usr/lib/loki_libnss_files.so.2 "${dir}"/libnss_files.so.2 \
 			|| die "dosym failed"
 	fi
 
