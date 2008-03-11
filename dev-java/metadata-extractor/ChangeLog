@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/metadata-extractor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/ChangeLog,v 1.11 2008/01/10 23:10:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/ChangeLog,v 1.12 2008/03/11 15:47:43 betelgeuse Exp $
+
+  11 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
+  metadata-extractor-2.2.2-r2.ebuild:
+  Restrict running tests to 1.4 - 1.6 because they need com.sun classes.
 
   10 Jan 2008; Vlastimil Babka <caster@gentoo.org>
   metadata-extractor-2.2.2-r2.ebuild:

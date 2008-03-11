@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2-r2.ebuild,v 1.3 2008/01/10 23:10:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2-r2.ebuild,v 1.4 2008/03/11 15:47:43 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,9 +12,11 @@ SLOT="0"
 KEYWORDS="x86 ~ppc amd64"
 IUSE="test"
 
-DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
-	=dev-java/junit-3.8*"
+DEPEND="
+	!test? ( >=virtual/jdk-1.4 )
+	test? ( =virtual/jdk-1.6* =virtual/jdk-1.5* =virtual/jdk-1.4* )
+	=dev-java/junit-3.8*
+	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
 S=${WORKDIR}/
 
@@ -26,9 +28,8 @@ src_unpack() {
 	java-pkg_jar-from --build-only --into lib/ junit junit.jar
 }
 
-src_compile() {
-	eant dist-binaries
-}
+EANT_DOC_TARGET=""
+EANT_BUILD_TARGET="dist-binaries"
 
 src_install() {
 	dodoc ReleaseNotes.txt
