@@ -1,10 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/files/vde.init,v 1.2 2007/06/09 15:38:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/files/vde.init,v 1.3 2008/03/11 21:34:49 genstef Exp $
 
 depend() {
-	before net.${VDE_TAP}
+	after net.${VDE_TAP}
 }
 
 

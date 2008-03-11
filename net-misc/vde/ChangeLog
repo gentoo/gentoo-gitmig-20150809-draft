@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vde
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.12 2007/07/07 12:27:43 genstef Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.13 2008/03/11 21:34:48 genstef Exp $
+
+  11 Mar 2008; Stefan Schweizer <genstef@gentoo.org> files/vde.init:
+  needs to start after net.tap according to Etaoin Shrdlu
+  <shrdlu@unlimitedmail.org> in bug 199929
 
 *vde-2.1.6-r1 (07 Jul 2007)
 
