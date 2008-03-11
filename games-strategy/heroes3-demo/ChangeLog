@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/heroes3-demo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/ChangeLog,v 1.2 2008/02/29 19:42:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/ChangeLog,v 1.3 2008/03/11 06:12:58 wolf31o2 Exp $
+
+  11 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  heroes3-demo-1.3.1a.ebuild:
+  QA cleanup: Fix quoting.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> ChangeLog:
   Remove icon extension from desktop entry to match Icon Theme Specification.

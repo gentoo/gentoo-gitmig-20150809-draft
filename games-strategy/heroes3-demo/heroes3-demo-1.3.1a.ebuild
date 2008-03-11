@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/heroes3-demo-1.3.1a.ebuild,v 1.2 2008/02/29 19:42:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/heroes3-demo-1.3.1a.ebuild,v 1.3 2008/03/11 06:12:58 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -14,13 +14,15 @@ LICENSE="as-is"
 SLOT="0"
 
 # Should also work on ppc
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
 DEPEND="games-util/loki_patch"
 RDEPEND=">=sys-libs/lib-compat-loki-0.2
 	x86? (
+		x11-libs/libX11 )
+	ppc? (
 		x11-libs/libX11 )
 	amd64? (
 		app-emulation/emul-linux-x86-xlibs
@@ -53,9 +55,9 @@ src_install() {
 	doexe "${demo}/${exe}" || die "doexe ${exe} failed"
 
 	einfo "Linking libs provided by 'sys-libs/lib-compat-loki' to '${dir}'."
-	dosym /lib/loki_ld-linux.so.2 ${dir}/ld-linux.so.2 || die "dosym"
-	dosym /usr/lib/loki_libc.so.6 ${dir}/libc.so.6 || die "dosym"
-	dosym /usr/lib/loki_libnss_files.so.2 ${dir}/libnss_files.so.2 \
+	dosym /lib/loki_ld-linux.so.2 "${dir}"/ld-linux.so.2 || die "dosym"
+	dosym /usr/lib/loki_libc.so.6 "${dir}"/libc.so.6 || die "dosym"
+	dosym /usr/lib/loki_libnss_files.so.2 "${dir}"/libnss_files.so.2 \
 		|| die "dosym"
 
 	games_make_wrapper ${PN} "./${exe}" "${dir}"
