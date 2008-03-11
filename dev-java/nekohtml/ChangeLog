@@ -1,13 +1,13 @@
 # ChangeLog for dev-java/nekohtml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.7 2008/03/11 21:43:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.8 2008/03/11 22:55:23 maekke Exp $
 
   11 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
   -nekohtml-0.9.5-r1.ebuild:
   Delete old version.
 
   08 Mar 2008; Markus Meier <maekke@gentoo.org> nekohtml-1.9.6.ebuild:
-  x86 stable, bug #212641
+  x86 stable, bug #212664
 
 *nekohtml-1.9.6 (19 Dec 2007)
 
