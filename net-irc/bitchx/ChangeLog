@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.67 2008/02/27 21:07:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.68 2008/03/11 18:07:32 cla Exp $
+
+  11 Mar 2008; Dawid Węgliński <cla@gentoo.org> bitchx-1.1-r4.ebuild:
+  Use sane unpack(), add lowercase symlink.
 
   27 Feb 2008; Sven Wegener <swegener@gentoo.org> -bitchx-1.1-r3.ebuild:
   Cleanup.

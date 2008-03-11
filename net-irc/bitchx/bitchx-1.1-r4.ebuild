@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r4.ebuild,v 1.3 2007/11/11 12:21:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r4.ebuild,v 1.4 2008/03/11 18:07:32 cla Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 src_unpack() {
-	unpack ${MY_P}.tar.gz
+	unpack ${A}
 	cd "${S}"
 	use cjk && epatch "${FILESDIR}"/${PV}/${P}-cjk.patch
 	epatch "${FILESDIR}"/${PV}/${P}-pbxs.patch
@@ -66,6 +66,7 @@ src_install () {
 	einstall || die
 	dobin contrib/vh1 || die
 	dosym BitchX-1.1-final /usr/bin/BitchX
+	dosym BitchX-1.1-final /usr/bin/bitchx
 
 	cd "${S}"
 	dodoc bugs Changelog README* IPv6-support
