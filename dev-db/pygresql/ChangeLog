@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pygresql
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.43 2007/06/13 21:54:23 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.44 2008/03/11 05:01:17 ricmm Exp $
+
+  11 Mar 2008; <ricmm@gentoo.org> pygresql-3.5.ebuild:
+  Drop to ~mips to match dev-db/libpq
 
   13 Jun 2007; Raúl Porcel <armin76@gentoo.org> pygresql-3.8.1.ebuild:
   Add ~alpha wrt #154793
