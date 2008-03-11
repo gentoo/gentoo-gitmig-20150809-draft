@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/savage-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.4 2008/02/29 19:48:29 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.5 2008/03/11 06:18:58 wolf31o2 Exp $
+
+  11 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  savage-bin-2.00e.ebuild:
+  QA cleanup: Fix quoting.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> savage-bin-2.00e.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.

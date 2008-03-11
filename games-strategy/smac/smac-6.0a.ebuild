@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.15 2008/02/29 19:40:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.16 2008/03/11 06:19:56 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -62,7 +62,7 @@ src_install() {
 
 	cd "${S}"/a
 	loki_patch --verify patch.dat
-	loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
+	loki_patch patch.dat "${Ddir}" >& /dev/null || die "patching"
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)
