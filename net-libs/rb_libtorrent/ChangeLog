@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.43 2008/03/09 16:06:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.44 2008/03/11 16:09:22 ranger Exp $
+
+  11 Mar 2008; Brent Baude <ranger@gentoo.org>
+  rb_libtorrent-0.13_pre1912.ebuild:
+  Marking rb_libtorrent-0.13_pre1912 ~ppc64 for bug 211992
 
 *rb_libtorrent-0.13_rc1 (09 Mar 2008)
 
