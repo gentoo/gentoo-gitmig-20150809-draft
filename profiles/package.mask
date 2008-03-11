@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8369 2008/03/11 20:15:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8370 2008/03/11 20:29:21 genstef Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1368,10 +1368,6 @@ games-action/armagetronad
 # Marcus D. Hanwell <cryos@gentoo.org> (03 Nov 2006)
 # 5.5.6 does not work with all projects, please use 5.4 or >=5.8
 =sci-misc/boinc-5.5.6
-
-# Stefan Schweizer <genstef@gentoo.org> (21 Aug 2006)
-# beta psi, with jingle support
->=net-im/psi-0.11_alpha0
 
 # Roy Marples <uberlord@gentoo.org> (02 Oct 2006)
 # masked for testing due to major ebuild and installation changes
