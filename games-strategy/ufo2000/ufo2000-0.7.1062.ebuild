@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.7.1062.ebuild,v 1.4 2007/03/12 18:13:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.7.1062.ebuild,v 1.5 2008/03/11 05:51:51 wolf31o2 Exp $
 
 inherit toolchain-funcs games
 
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/expat
 	>=media-libs/allegro-4.2.0
 	>=media-libs/freetype-2
 	vorbis? ( ~media-libs/aldumb-0.9.2
-		~media-libs/dumb-0.9.2
+		media-libs/dumb
 		media-libs/libogg
 		media-libs/libvorbis )"
 DEPEND="${RDEPEND}
