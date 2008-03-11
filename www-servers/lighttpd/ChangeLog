@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.169 2008/03/11 15:10:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.170 2008/03/11 23:36:27 beandog Exp $
+
+  11 Mar 2008; Steve Dibb <beandog@gentoo.org> lighttpd-1.4.18-r3.ebuild:
+  amd64 stable, bug 212930
 
   11 Mar 2008; Raúl Porcel <armin76@gentoo.org> lighttpd-1.4.18-r3.ebuild:
   alpha/ia64/sparc stable wrt #212930
