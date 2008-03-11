@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5.ebuild,v 1.7 2007/10/13 19:55:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5.ebuild,v 1.8 2008/03/11 20:35:41 genstef Exp $
 
 inherit eutils autotools
 
@@ -19,8 +19,13 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.0 )
 DEPEND="media-libs/libsdl
 	${RDEPEND}"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	eautoreconf
+}
+
+src_compile() {
 	# examples are not (yet) installed, so do not compile them
 	econf \
 		--enable-ctrl \

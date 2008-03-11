@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/agg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.8 2007/10/13 19:55:35 genstef Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.9 2008/03/11 20:35:41 genstef Exp $
+
+  11 Mar 2008; Stefan Schweizer <genstef@gentoo.org> agg-2.5.ebuild:
+  eautoreconf to src_unpack, bug 207483
 
   13 Oct 2007; Stefan Schweizer <genstef@gentoo.org> agg-2.5.ebuild:
   Add sdl to DEPEND always because upstream does not provide the sdl.m4, bug
