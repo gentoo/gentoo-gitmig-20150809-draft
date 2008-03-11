@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.223 2008/03/10 17:30:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.224 2008/03/11 19:56:58 cardoe Exp $
+
+*mythtv-0.22_alpha16508 (11 Mar 2008)
+
+  11 Mar 2008; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.22_alpha16508.ebuild:
+  add 0.22 trunk build for testing
 
 *mythtv-0.21_p16483 (10 Mar 2008)
 
