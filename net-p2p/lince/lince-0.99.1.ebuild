@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lince/lince-0.99.1.ebuild,v 1.1 2008/03/08 21:29:23 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lince/lince-0.99.1.ebuild,v 1.2 2008/03/11 16:12:34 ranger Exp $
 
 DESCRIPTION="a light, powerfull and full feature gtkmm bittorrent client"
 SRC_URI="mirror://sourceforge/lincetorrent/${P}.tar.gz"
@@ -17,7 +17,7 @@ RDEPEND="${DEPEND}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 src_install () {
