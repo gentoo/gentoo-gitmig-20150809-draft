@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.459 2008/02/22 03:44:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.460 2008/03/11 00:00:47 wolf31o2 Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  11 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  baselayout-1.11.15-r3.ebuild, baselayout-1.12.10-r5.ebuild,
+  baselayout-1.12.11.ebuild, baselayout-1.12.11.1.ebuild:
+  Added sys-apps/findutils to RDEPEND since find/xargs are used by the
+  bootmisc init script, at least.
 
   22 Feb 2008; Jeroen Roovers <jer@gentoo.org> baselayout-1.12.11.1.ebuild:
   Stable for HPPA (bug #210559).
