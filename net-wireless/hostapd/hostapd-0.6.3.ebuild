@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.1.ebuild,v 1.1 2007/12/10 09:42:02 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.3.ebuild,v 1.1 2008/03/11 08:45:54 gurligebis Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -78,7 +78,7 @@ generate_config() {
 	echo "CONFIG_RSN_PREAUTH=y" >> ${CONFIG}
 
 	if use ipv6; then
-		# IPv5 support
+		# IPv6 support
 		echo "CONFIG_IPV6=y" >> ${CONFIG}
 	fi
 
@@ -122,7 +122,7 @@ src_install() {
 	dodoc ChangeLog developer.txt README
 
 	docinto examples
-	dodoc madwifi.conf wired.conf
+	dodoc wired.conf
 
 	if use logwatch; then
 		insinto /etc/log.d/conf/services/
