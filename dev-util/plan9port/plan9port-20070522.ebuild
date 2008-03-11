@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20070522.ebuild,v 1.1 2007/05/29 02:11:27 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20070522.ebuild,v 1.2 2008/03/11 13:03:53 coldwind Exp $
 
 DESCRIPTION="Plan 9 From User Space"
 HOMEPAGE="http://swtch.com/plan9port/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.kix.in/plan9/${PN}-repack-${PV}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="x11-base/xorg-server"
