@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-1.101-r4.ebuild,v 1.1 2007/03/13 07:33:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-1.101-r4.ebuild,v 1.2 2008/03/11 21:29:02 genstef Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-LDFLAGS.patch
 	epatch "${FILESDIR}"/${P}-ppc64.patch
 	epatch "${FILESDIR}"/kexec-linux-headers.patch
+	epatch "${FILESDIR}"/${P}-respect-LDFLAGS.patch
 }
 
 src_compile() {
