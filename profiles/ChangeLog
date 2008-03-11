@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1202 2008/03/11 20:29:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1203 2008/03/11 21:43:43 hd_brummy Exp $
+
+  11 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  net-www/xxv-1.2.1308; masked for testing
 
   11 Mar 2008; Stefan Schweizer <genstef@gentoo.org> package.mask:
   unmask psi-0.11 since qca is also already unmasked
