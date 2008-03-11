@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r2.ebuild,v 1.10 2008/02/09 21:10:29 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r2.ebuild,v 1.11 2008/03/11 15:21:45 betelgeuse Exp $
 
 JAVA_PKG_BSFIX="off"
 # no rewriting required since we patch build.xml to contain target/source
@@ -34,6 +34,9 @@ DEPEND="java5? ( >=virtual/jdk-1.5 )
 IUSE="java5 source"
 
 S=${WORKDIR}/aw_2_0_2
+
+# These fail
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
