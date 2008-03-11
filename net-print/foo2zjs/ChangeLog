@@ -1,6 +1,13 @@
 # ChangeLog for net-print/foo2zjs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.31 2007/12/14 17:21:57 kingtaco Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.32 2008/03/11 19:44:03 genstef Exp $
+
+*foo2zjs-20080225 (11 Mar 2008)
+
+  11 Mar 2008; Stefan Schweizer <genstef@gentoo.org>
+  +files/foo2zjs-Makefile-20080225.diff,
+  +files/foo2zjs-udevfwld-20080225.diff, +foo2zjs-20080225.ebuild:
+  version bump many thanks to roger <roger@eskimo.com> in bug 211480
 
   14 Dec 2007; Mike Doty <kingtaco@gentoo.org> ChangeLog:
   regen digest, bug 201396
