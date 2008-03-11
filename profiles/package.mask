@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8364 2008/03/11 00:31:00 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8365 2008/03/11 18:23:30 opfer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 ### END OF EXAMPLES
+
+# Christian Faulhammer <opfer@gentoo.org> (11 Mar 2008)
+# masked for testing
+=app-portage/gatt-9999
+app-portage/gatt-svn
 
 # Mart Raudsepp <leio@gentoo.org> (10 Mar 2008)
 # Temporary swfdec mask due to need for matching versions
@@ -1337,10 +1342,6 @@ games-strategy/ufo2000
 # Raúl Porcel <armin76@gentoo.org> (24 Jan 2007)
 # Mask cvs version of net-p2p/linuxdcpp
 =net-p2p/linuxdcpp-9999
-
-# Christian Faulhammer <opfer@gentoo.org> (23 Jan 2007)
-# masked for testing
-app-portage/gatt-svn
 
 # Sandro Bonazzola <sanchan@gentoo.org> (16 Jan 2007)
 # Masked for testing
