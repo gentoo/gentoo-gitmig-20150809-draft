@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2.ebuild,v 1.7 2008/03/07 19:06:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2.ebuild,v 1.8 2008/03/11 15:27:55 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -15,10 +15,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 -mips ppc ppc64 sparc x86"
 IUSE="zlib"
 
-DEPEND="sys-libs/libkudzu
-	zlib? ( sys-libs/zlib )
+COMMON_DEPEND="zlib? ( sys-libs/zlib )
 	sys-apps/pciutils"
-RDEPEND="${DEPEND}
+DEPEND="${COMMON_DEPEND}
+	sys-libs/libkudzu"
+RDEPEND="${COMMON_DEPEND}
 	sys-apps/hwdata-gentoo"
 
 src_unpack() {
