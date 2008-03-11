@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.1_p14506.ebuild,v 1.1 2008/02/14 12:31:52 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.1_p14506.ebuild,v 1.2 2008/03/11 04:12:34 omp Exp $
 
-inherit eutils
+inherit eutils versionator
 
 DESCRIPTION="Moaning Goat Meter: load and status meter written in Perl"
 HOMEPAGE="http://www.linuxmafia.com/mgm/index.html"
@@ -26,7 +26,7 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-$(get_version_component_range "1-2" )-gentoo.patch"
 }
 
 src_install() {
