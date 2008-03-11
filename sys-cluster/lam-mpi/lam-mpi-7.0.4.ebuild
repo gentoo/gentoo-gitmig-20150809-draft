@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.4.ebuild,v 1.11 2006/12/06 23:39:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.4.ebuild,v 1.12 2008/03/11 14:34:41 jsbronder Exp $
 
 IUSE="crypt"
 
@@ -27,7 +27,7 @@ LICENSE="as-is"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}/romio/util/
+	cd "${S}"/romio/util/
 	sed -i "s|docdir=\"\$datadir/lam/doc\"|docdir=\"${D}/usr/share/doc/${PF}\"|" romioinstall.in
 }
 
@@ -55,13 +55,13 @@ src_install () {
 	make DESTDIR="${D}" install || die
 
 	#need to correct the produced absolute symlink
-	cd ${D}/usr/include
+	cd "${D}"/usr/include
 	rm mpi++.h
 	ln -sf mpi2c++/mpi++.h mpi++.h
 
 	# There are a bunch more tex docs we could make and install too,
 	# but they might be replicated in the pdf.
-	dodoc README HISTORY LICENSE VERSION
-	cd ${S}/doc
+	dodoc README HISTORY VERSION
+	cd "${S}"/doc
 	dodoc {user,install}.pdf
 }
