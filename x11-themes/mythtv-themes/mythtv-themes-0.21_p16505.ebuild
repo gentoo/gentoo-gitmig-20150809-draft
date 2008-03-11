@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.21_p16468.ebuild,v 1.1 2008/03/09 17:10:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.21_p16505.ebuild,v 1.1 2008/03/11 15:40:32 cardoe Exp $
 
 inherit qt3 mythtv subversion
 
@@ -10,7 +10,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="$(qt_min_version 3.3)
-	>=media-tv/mythtv-${PV}"
+	=media-tv/mythtv-${MY_PV}*"
 
 src_compile() {
 	./configure --prefix="${ROOT}"/usr || die "configure died"

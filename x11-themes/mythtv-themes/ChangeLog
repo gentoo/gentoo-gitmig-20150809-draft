@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.47 2008/03/09 17:10:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.48 2008/03/11 15:40:32 cardoe Exp $
+
+*mythtv-themes-0.21_p16505 (11 Mar 2008)
+
+  11 Mar 2008; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-themes-0.21_p16468.ebuild, +mythtv-themes-0.21_p16505.ebuild:
+  fix text alignment in Recording Options
 
 *mythtv-themes-0.21_p16468 (09 Mar 2008)
 
