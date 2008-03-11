@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.4.2.58240.ebuild,v 1.2 2008/02/29 20:02:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.4.2.58240.ebuild,v 1.3 2008/03/11 20:05:55 genstef Exp $
 
 inherit eutils qt4
 
@@ -20,7 +20,7 @@ DEPEND="$(qt4_min_version 4.2)
 	media-libs/libsamplerate
 	sci-libs/fftw
 	media-libs/libmad
-	media-libs/libgpod
+	>=media-libs/libgpod-0.5.2
 	media-libs/alsa-lib"
 RDEPEND="${DEPEND}"
 
