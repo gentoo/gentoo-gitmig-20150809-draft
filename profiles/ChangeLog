@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1195 2008/03/11 00:22:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1196 2008/03/11 00:24:30 philantrop Exp $
+
+  11 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> package.mask:
+  Added some new packages for KDE 4.0.2.
 
   11 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   add pygtksourceview-2.2 mask
