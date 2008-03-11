@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tenshi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.39 2007/10/04 23:50:57 lcars Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.40 2008/03/11 19:48:21 jokey Exp $
+
+  11 Mar 2008; Markus Ullmann <jokey@gentoo.org> metadata.xml:
+  Taking over as proxy maintainer
 
 *tenshi-0.9.1 (04 Oct 2007)
 

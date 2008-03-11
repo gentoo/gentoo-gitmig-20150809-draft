@@ -2,8 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-
 <maintainer>
-  <email>lcars@gentoo.org</email>
+  <email>jokey@gentoo.org</email>
+  <name>Markus Ullmann</name>
+</maintainer>
+<maintainer>
+  <email>atj@pulsewidth.org.uk</email>
+  <name>Adam James</name>
 </maintainer>
 </pkgmetadata>
