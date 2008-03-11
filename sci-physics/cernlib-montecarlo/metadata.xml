@@ -3,10 +3,10 @@
 <pkgmetadata>
 <herd>sci-physics</herd>
 <longdescription lang="en">
-This metapackage provides various Monte Carlo libraries included in
-Cernlib (both shared and static). Likely only physicists will be
-interested in these packages.
-The libraries of Ariadne, Fritiof, Jetset, Lepto, and Pythia are not
-available for Gentoo: see cernlib Debian packaging for explanation.
+  This metapackage provides various Monte Carlo libraries included in
+  Cernlib (both shared and static). Likely only physicists will be
+  interested in these packages.
+  The libraries of Ariadne, Fritiof, Jetset, Lepto, and Pythia are not
+  available for Gentoo: see cernlib Debian packaging for explanation.
 </longdescription>
 </pkgmetadata>

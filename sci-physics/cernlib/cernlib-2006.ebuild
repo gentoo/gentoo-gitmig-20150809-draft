@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006.ebuild,v 1.8 2007/11/23 14:59:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006.ebuild,v 1.9 2008/03/11 12:09:06 bicatali Exp $
 
 inherit eutils multilib fortran
 
@@ -112,7 +112,6 @@ src_compile() {
 }
 
 src_test() {
-	cd "${S}"
 	LD_LIBRARY_PATH="${S}"/shlib make \
 		TEST_PACKAGES="kernlib packlib mathlib graflib" \
 		DEB_BUILD_OPTIONS="${FORTRANC} nostrip" \
