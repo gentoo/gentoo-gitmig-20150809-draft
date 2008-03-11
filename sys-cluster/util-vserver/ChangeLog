@@ -1,6 +1,17 @@
 # ChangeLog for sys-cluster/util-vserver
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.86 2007/11/18 10:23:54 hollow Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.87 2008/03/11 10:19:34 hollow Exp $
+
+*util-vserver-0.30.214-r1 (11 Mar 2008)
+
+  11 Mar 2008; Benedikt Böhm <hollow@gentoo.org>
+  -files/util-vserver-0.30.212-initpost.patch,
+  -files/util-vserver-0.30.212-vsomething-fix.patch,
+  -files/util-vserver-0.30.212-wrapper.patch,
+  +files/util-vserver-0.30.214-openrc.patch, -files/init.d/vprocunhide,
+  -files/init.d/vservers.default, -util-vserver-0.30.212-r2.ebuild,
+  +util-vserver-0.30.214-r1.ebuild:
+  add support for openrc; cleanup old cruft
 
   18 Nov 2007; Benedikt Böhm <hollow@gentoo.org>
   files/util-vserver-0.30.214-baselayout2_path.patch:
