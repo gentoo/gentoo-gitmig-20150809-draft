@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygtksourceview
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.8 2007/11/29 06:00:41 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.9 2008/03/11 00:24:01 eva Exp $
+
+*pygtksourceview-2.2.0 (11 Mar 2008)
+
+  11 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -pygtksourceview-2.0.0.ebuild, +pygtksourceview-2.2.0.ebuild:
+  bump to 2.2.0 (masked) in preparation to gnome 2.22
 
   29 Nov 2007; Jeroen Roovers <jer@gentoo.org>
   pygtksourceview-2.0.0-r1.ebuild:
