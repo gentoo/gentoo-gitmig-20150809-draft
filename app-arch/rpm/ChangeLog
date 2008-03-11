@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.87 2008/01/05 16:27:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.88 2008/03/11 17:01:48 ricmm Exp $
+
+  11 Mar 2008; <ricmm@gentoo.org> rpm-4.4.6-r3.ebuild:
+  Drop to ~mips due to unstable deps
 
 *rpm-5.0.0 (05 Jan 2008)
 
