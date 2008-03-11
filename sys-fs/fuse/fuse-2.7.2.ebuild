@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.7.2.ebuild,v 1.1 2007/12/17 22:37:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.7.2.ebuild,v 1.2 2008/03/11 19:54:29 genstef Exp $
 
 inherit linux-mod eutils libtool
 
@@ -78,6 +78,19 @@ src_install() {
 	fi
 
 	rm -rf "${D}/dev"
+
+	dodir /etc
+	cat > ${D}/etc/fuse.conf <<EOF
+# Set the maximum number of FUSE mounts allowed to non-root users.
+# The default is 1000.
+#
+#mount_max = 1000
+
+# Allow non-root users to specify the 'allow_other' or 'allow_root'
+# mount options.
+#
+#user_allow_other
+EOF
 }
 
 pkg_postinst() {
