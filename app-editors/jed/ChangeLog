@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.50 2008/03/11 17:24:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.51 2008/03/11 17:32:04 opfer Exp $
+
+  11 Mar 2008; Christian Faulhammer <opfer@gentoo.org> jed-0.99.18.ebuild:
+  use emake instead of make
 
   11 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
   -files/jed-0.99.16-darwin.patch, -files/jed-0.99.16-gentoo-shmode.sl,
