@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.0.2.ebuild,v 1.1 2008/03/10 23:48:22 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.0.2.ebuild,v 1.2 2008/03/11 00:10:58 philantrop Exp $
 
 EAPI="1"
 
@@ -11,8 +11,8 @@ DESCRIPTION="KDE multi-protocol IM client"
 KEYWORDS="~amd64 ~x86"
 IUSE="+addbookmarks +alias +autoreplace +contactnotes debug gadu groupwise
 +highlight +history htmlhandbook +jabber latex +msn +nowlistening +oscar
-+privacy qq sms +statistics testbed +texteffect +translator
-+urlpicpreview +webpresence winpopup yahoo"
++privacy qq sms +statistics testbed +texteffect +translator +urlpicpreview
++webpresence winpopup yahoo"
 # IUSE="irc jingle meanwhile messenger telepathy"
 
 # plugins: addbookmarks, alias, autoreplace, contactnotes, highlight, history,
@@ -46,10 +46,6 @@ DEPEND="${RDEPEND}
 	x11-proto/scrnsaverproto"
 
 src_compile() {
-	# Translated protocol causing bug 206877.
-	sed -e '/X-KDE-PluginInfo-Category\[.*/d' \
-		-i "${S}"/kopete/protocols/*/kopete_*.desktop || die "Sed failed."
-
 	# Xmms isn't in portage, thus forcefully disabled.
 	# telepathy and messenger aren't ready yet.
 	mycmakeargs="${mycmakeargs}
