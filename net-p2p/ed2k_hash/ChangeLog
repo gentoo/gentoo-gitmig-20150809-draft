@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ed2k_hash
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.18 2007/07/02 15:08:48 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.19 2008/03/12 15:49:44 fmccor Exp $
+
+  12 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
+  ed2k_hash-0.4.0-r1.ebuild:
+  Add ~sparc for testing at user request (rvalles).
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   ed2k_hash-0.4.0-r1.ebuild:
