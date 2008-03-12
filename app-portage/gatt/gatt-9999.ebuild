@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-9999.ebuild,v 1.1 2008/03/11 18:35:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-9999.ebuild,v 1.2 2008/03/12 07:07:04 opfer Exp $
 
 inherit eutils subversion
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	ewarn
-	ewarn Gatt is targeted at Gentoo developers, arch-testers and power users. Do
+	ewarn "Gatt is targeted at Gentoo developers, arch-testers and power users. Do"
 	ewarn "by no means use it if you are new to Gentoo. You have been warned!"
 	ewarn
 	ewarn "This is a Subversion snapshot, so no functionality is"
