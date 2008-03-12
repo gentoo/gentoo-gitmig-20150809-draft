@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.19 2008/03/05 23:09:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.20 2008/03/12 18:19:53 welp Exp $
+
+  12 Mar 2008; Peter Weller <welp@gentoo.org> use.mask:
+  Add m17n-lib to use.mask; requested by ulm
 
   05 Mar 2008; Diego Pettenò <flameeyes@gentoo.org> +fbsd/package.use:
   Add default USE flags for FreeBSD for pambase.
