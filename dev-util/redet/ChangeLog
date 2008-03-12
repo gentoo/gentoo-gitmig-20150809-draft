@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/redet
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/redet/ChangeLog,v 1.6 2007/05/15 09:10:31 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/redet/ChangeLog,v 1.7 2008/03/12 10:20:37 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Josh Glover (jmglov, #206782) from metadata.xml.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
