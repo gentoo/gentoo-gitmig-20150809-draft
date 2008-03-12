@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.89 2008/03/02 10:28:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.90 2008/03/12 18:19:09 armin76 Exp $
+
+  12 Mar 2008; Raúl Porcel <armin76@gentoo.org> xulrunner-1.8.1.12.ebuild:
+  Prepare to slot and some cosmetic fixes
 
   02 Mar 2008; Lars Weiler <pylon@gentoo.org> ChangeLog:
   stable ppc, security bug 208128

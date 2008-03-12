@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.12.ebuild,v 1.6 2008/02/11 02:01:53 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.12.ebuild,v 1.7 2008/03/12 18:19:09 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://developer.mozilla.org/en/docs/XULRunner"
 SRC_URI="mirror://gentoo/${P}-source.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2"
 
-SLOT="0"
+SLOT="1.8"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
@@ -123,13 +123,13 @@ src_install() {
 
 	# Add Gentoo package version to preferences - copied from debian rules
 	echo // Gentoo package version \
-		> "${D}"/usr/$(get_libdir)/xulrunner/defaults/pref/vendor.js
+		> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
 	echo "pref(\"general.useragent.product\",\"Gecko\");" \
-		>> "${D}"/usr/$(get_libdir)/xulrunner/defaults/pref/vendor.js
+		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
 	echo "pref(\"general.useragent.productSub\",\"${X_DATE}\");" \
-		>> "${D}"/usr/$(get_libdir)/xulrunner/defaults/pref/vendor.js
+		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
 	echo "pref(\"general.useragent.productComment\",\"Gentoo\");" \
-		>> "${D}"/usr/$(get_libdir)/xulrunner/defaults/pref/vendor.js
+		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
 
 	if use java ; then
 	    java-pkg_dojar "${D}"${MOZILLA_FIVE_HOME}/javaxpcom.jar
