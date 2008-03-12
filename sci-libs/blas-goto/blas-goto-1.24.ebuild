@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.19.ebuild,v 1.4 2007/10/11 17:38:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.24.ebuild,v 1.1 2008/03/12 13:11:54 bicatali Exp $
 
 inherit eutils fortran flag-o-matic toolchain-funcs
 
 MY_PN="GotoBLAS"
 MY_P="${MY_PN}-${PV}"
-DESCRIPTION="The fastest implementations of the Basic Linear Algebra Subroutines"
+DESCRIPTION="Fast implementations of the Basic Linear Algebra Subroutines"
 HOMEPAGE="http://www.tacc.utexas.edu/resources/software/software.php"
 SRC_URI="http://www.tacc.utexas.edu/resources/software/login/gotoblas/${MY_P}.tar.gz"
 LICENSE="tacc"
@@ -14,7 +14,7 @@ SLOT="0"
 # See http://www.tacc.utexas.edu/resources/software/gotoblasfaq.php
 # for supported architectures
 KEYWORDS="~x86 ~amd64"
-IUSE="threads doc"
+IUSE="int64 threads doc"
 RESTRICT="mirror"
 RDEPEND="app-admin/eselect-blas
 	dev-util/pkgconfig
@@ -24,82 +24,66 @@ DEPEND="app-admin/eselect-blas
 	>=sys-devel/binutils-2.17"
 
 S="${WORKDIR}/${MY_PN}"
-FORTRAN="g77 gfortran ifc"
+FORTRAN="gfortran g77 ifc"
+
+ESELECT_PROF=goto
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Set up C compiler
-	if [[ $(tc-getCC) = *gcc ]]; then
-		C_COMPILER="GNU"
-	elif [[ $(tc-getCC) = icc ]]; then
-		C_COMPILER="INTEL"
-	else
-		die "tc-getCC() returned an invalid C compiler; valid are gcc or icc."
+	# patch to link with m and fortran libs, works with asneeded
+	epatch "${FILESDIR}"/${P}-sharedlibs.patch
+
+	# Set up C compiler: forcing gcc for now
+	if [[ $(tc-getCC) != *gcc ]]; then
+		ewarn "Your C compiler is set to $(tc-getCC)"
+		ewarn "${PN} needs gcc to inline assembler, others compilers have reported failures"
+		ewarn "Forcing gcc"
 	fi
+	C_COMPILER=GNU
 
 	# Set up FORTRAN 77 compiler
 	case ${FORTRANC} in
-		g77)
-			F_COMPILER="G77"
-			;;
-		gfortran)
-			F_COMPILER="GFORTRAN"
-			F_LIB="-lgfortran"
-			;;
-		ifc|ifort)
-			F_COMPILER="INTEL"
-			;;
+		g77) F_COMPILER=G77;;
+		gfortran) F_COMPILER=GFORTRAN;;
+		ifc|ifort) F_COMPILER=INTEL;;
 		*)
-		die "fortran.eclass returned an invalid Fortran compiler \'${FORTRANC}\'; valid are ${FORTRAN}."
+			die "Invalid Fortran compiler: ${FORTRANC}; valid are ${FORTRAN}."
 	esac
-
-	# Fix shared lib build
-	sed -i \
-		-e "s:\(&& echo OK\):${F_LIB} \1:g" \
-		"${S}"/exports/Makefile \
-		|| die "sed for shared libs failed"
 
 	# Set up compilers
 	sed -i \
 		-e "s:^# \(C_COMPILER =\) GNU:\1 ${C_COMPILER}:g" \
 		-e "s:^# \(F_COMPILER =\) G77:\1 ${F_COMPILER}:g" \
-		-e "s:^# \(SMP = 1\):\1:g" \
-		-e "s:\$(COMPILER_PREFIX)ar:$(tc-getAR):" \
-		-e "s:\$(COMPILER_PREFIX)as:$(tc-getAS):" \
-		-e "s:\$(COMPILER_PREFIX)ld:$(tc-getLD):" \
-		-e "s:\$(COMPILER_PREFIX)ranlib:$(tc-getRANLIB):" \
-		"${S}"/Makefile.rule \
-		|| die "sed for setting up compilers failed"
+		-e "s:\$(CROSS_BINUTILS)ar:$(tc-getAR):" \
+		-e "s:\$(CROSS_BINUTILS)as:$(tc-getAS):" \
+		-e "s:\$(CROSS_BINUTILS)ld:$(tc-getLD):" \
+		-e "s:\$(CROSS_BINUTILS)ranlib:$(tc-getRANLIB):" \
+		Makefile.rule \
+		|| die "sed for toolchain failed"
 
-	# Threaded?
 	if use threads; then
 		sed -i \
 			-e "s:^# \(SMP = 1\):\1:g" \
-			"${S}"/Makefile.rule \
+			Makefile.rule \
 			|| die "sed for threads failed"
 	fi
 
-	# If you need a 64-bit integer interface, also do this for "INTERFACE64 = 1"
 	if use amd64; then
 		sed -i \
 			-e "s:^# \(BINARY64  = 1\):\1:g" \
-			"${S}"/Makefile.rule \
+			Makefile.rule \
 			|| die "sed for 64 binary failed"
 	fi
 
-	# Respect CFLAGS/FFLAGS
-	if [[ -z "${FFLAGS}" ]]; then
-		ewarn "FORTRAN FFLAGS undefined, using -O2"
-		export FFLAGS="-O2"
+	if use int64; then
+		sed -i \
+			-e "s:^# \(INTERFACE64  = 1\):\1:g" \
+			Makefile.rule \
+			|| die "sed for 64 integers failed"
+		ESELECT_PROF="${ESELECT_PROF}-int64"
 	fi
-
-	sed -i \
-		-e '/^CFLAGS/s:=:+=:' \
-		-e '/^FFLAGS/s:=:+=:' \
-		"${S}"/Makefile.rule \
-		|| die "sed for flags failed"
 }
 
 src_compile() {
@@ -119,27 +103,26 @@ src_test() {
 }
 
 src_install() {
-	local MAIN_DIR="/usr/$(get_libdir)/blas"
-	local DIR="${MAIN_DIR}/goto"
+	local install_dir=/usr/$(get_libdir)/blas/goto
+	dodir ${install_dir}
 
 	# dolib.so doesn't support our alternate locations
-	exeinto ${DIR}
-	doexe libgoto_*.so
-	dosym libgoto_*.so ${DIR}/libgoto.so
-	dosym libgoto_*.so ${DIR}/libgoto.so.0
-	dosym libgoto_*.so ${DIR}/libgoto.so.0.0.0
+	exeinto ${install_dir}
+	doexe libgoto_*.so || die "installing shared lib failed"
+	dosym libgoto_*.so ${install_dir}/libgoto.so
+	dosym libgoto_*.so ${install_dir}/libgoto.so.0
+	dosym libgoto_*.so ${install_dir}/libgoto.so.0.0.0
 
 	# dolib.a doesn't support our alternate locations
-	insinto ${DIR}
-	doins libgoto_*.a
-	dosym libgoto_*.a ${DIR}/libgoto.a
+	insinto ${install_dir}
+	doins libgoto_*.a || die "installing static lib failed"
+	dosym libgoto_*.a ${install_dir}/libgoto.a
 
-	dodoc 01Readme.txt 03History.txt 04FAQ.txt
+	dodoc 01Readme.txt 03History.txt 04FAQ.txt || die
 
 	cp "${FILESDIR}"/blas.pc.in blas.pc
 	local extlibs=""
 	use threads && extlibs="${extlibs} -lpthread"
-	extlibs="${extlibs}"
 	sed -i \
 		-e "s/@LIBDIR@/$(get_libdir)/" \
 		-e "s/@PV@/${PV}/" \
@@ -147,7 +130,6 @@ src_install() {
 		blas.pc || die "sed blas.pc failed"
 	insinto /usr/$(get_libdir)/blas/goto
 	doins blas.pc
-	ESELECT_PROF=goto
 	eselect blas add $(get_libdir) "${FILESDIR}"/eselect.blas.goto ${ESELECT_PROF}
 }
 

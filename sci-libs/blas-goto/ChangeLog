@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/blas-goto
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.15 2008/02/12 17:56:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.16 2008/03/12 13:11:54 bicatali Exp $
+
+*blas-goto-1.24 (12 Mar 2008)
+
+  12 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/blas-goto-1.24-sharedlibs.patch, -blas-goto-1.19.ebuild,
+  -blas-goto-1.22.ebuild, +blas-goto-1.24.ebuild:
+  Version bump. Removed older versions
 
 *blas-goto-1.22-r1 (12 Feb 2008)
 
