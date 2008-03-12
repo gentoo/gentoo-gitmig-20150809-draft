@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonik
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonik/ChangeLog,v 1.4 2006/10/21 14:02:54 carlo Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonik/ChangeLog,v 1.5 2008/03/12 09:44:36 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Eldad Zack (eldad, #53978) from metadata.xml.
 
   21 Oct 2006; Carsten Lohrke <carlo@gentoo.org> sonik-1.0.0.ebuild:
   QA: need-kde() has to be called after setting R/DEPEND.
