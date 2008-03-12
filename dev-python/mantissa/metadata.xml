@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>python</herd>
-<maintainer>
-  <email>marienz@gentoo.org</email>
-</maintainer>
-<longdescription>
-  Mantissa is an application server. It provides integration between
-  the AxiomProject object database, and the TwistedFramework, as well
-  as web user-interface utilities.
-</longdescription>
+	<herd>python</herd>
+	<longdescription lang="en">
+		Mantissa is an application server. It provides integration between
+		the AxiomProject object database, and the TwistedFramework, as well
+		as web user-interface utilities.
+	</longdescription>
 </pkgmetadata>

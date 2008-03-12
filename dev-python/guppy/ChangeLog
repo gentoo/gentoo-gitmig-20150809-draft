@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/guppy
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/ChangeLog,v 1.5 2006/11/09 19:03:44 marienz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/ChangeLog,v 1.6 2008/03/12 18:01:42 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Marien Zwart (marienz, #107204) from metadata.xml.
 
 *guppy-0.1.6 (09 Nov 2006)
 

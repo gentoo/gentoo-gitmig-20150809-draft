@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epsilon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.8 2008/01/23 00:42:56 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.9 2008/03/12 17:57:51 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Marien Zwart (marienz, #107204) from metadata.xml.
 
 *epsilon-0.5.8 (23 Jan 2008)
 

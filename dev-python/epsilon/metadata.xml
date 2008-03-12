@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>python</herd>
-<maintainer>
-  <email>marienz@gentoo.org</email>
-</maintainer>
-<longdescription>
-  A small utility package that depends on tools too recent for Twisted
-  (like datetime in python2.4) but performs generic enough functions
-  that it can be used in projects that don't want to share Divmod's
-  other projects' large footprint.
-</longdescription>
+	<herd>python</herd>
+	<longdescription lang="en">
+		A small utility package that depends on tools too recent for Twisted
+		(like datetime in python2.4) but performs generic enough functions
+		that it can be used in projects that don't want to share Divmod's
+		other projects' large footprint.
+	</longdescription>
 </pkgmetadata>
