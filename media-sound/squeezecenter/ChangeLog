@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.10 2008/03/05 04:46:20 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.11 2008/03/12 04:06:44 lavajoe Exp $
+
+  12 Mar 2008; Joe Peterson <lavajoe@gentoo.org> squeezecenter-7.0.ebuild:
+  Keyword ~amd64
 
 *squeezecenter-7.0 (05 Mar 2008)
 
