@@ -1,8 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.1030.ebuild,v 1.1 2007/11/01 15:18:12 chutzpah Exp $
-
-inherit multilib toolchain-funcs
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.2310.ebuild,v 1.1 2008/03/12 00:30:10 chutzpah Exp $
 
 MY_PN="${PN/3g/-3g}"
 MY_P="${MY_PN}-${PV}"
@@ -14,30 +12,28 @@ SRC_URI="http://www.ntfs-3g.org/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="suid"
+IUSE="debug suid"
 
-RDEPEND=">=sys-fs/fuse-2.6.3"
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+RDEPEND=""
+DEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	econf --disable-ldconfig --libdir=/$(get_libdir)
+	econf \
+		--docdir="/usr/share/doc/${PF}" \
+		--enable-ldscript \
+		--disable-ldconfig \
+		$(use_enable debug)
 	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
+	prepalldocs
+	dodoc AUTHORS ChangeLog CREDITS NEWS
 
-	dodir /usr/$(get_libdir)/
-	mv "${D}"/$(get_libdir)/*.{,l}a "${D}"/usr/$(get_libdir)/
-
-	dodoc AUTHORS ChangeLog CREDITS NEWS README
-
-	gen_usr_ldscript libntfs-3g.so
-
-	use suid && fperms u+s /bin/${MY_PN}
+	use suid && fperms u+s "/bin/${MY_PN}"
 }
 
 pkg_postinst() {
