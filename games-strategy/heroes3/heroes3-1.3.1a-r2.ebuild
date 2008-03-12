@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.9 2008/03/11 06:05:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.10 2008/03/12 19:29:16 mr_bones_ Exp $
 
 #	[x] Base Install Required (+4 MB)
 #	[x] Scenarios (+7 MB)
@@ -113,29 +113,29 @@ src_install() {
 	exeinto "${dir}"
 	insinto "${dir}"
 	einfo "Copying files... this may take a while..."
-	doexe ${CDROM_ROOT}/bin/x86/${PN}
-	doins ${CDROM_ROOT}/{Heroes_III_Tutorial.pdf,README,icon.{bmp,xpm}}
+	doexe "${CDROM_ROOT}"/bin/x86/${PN}
+	doins "${CDROM_ROOT}"/{Heroes_III_Tutorial.pdf,README,icon.{bmp,xpm}}
 
 	if use nocd
 	then
-		doins -r ${CDROM_ROOT}/{data,maps,mp3} || die "copying data"
+		doins -r "${CDROM_ROOT}"/{data,maps,mp3} || die "copying data"
 	else
 		if use maps
 		then
-			doins -r ${CDROM_ROOT}/maps
+			doins -r "${CDROM_ROOT}"/maps
 		fi
 		if use music
 		then
-			doins -r ${CDROM_ROOT}/mp3
+			doins -r "${CDROM_ROOT}"/mp3
 		fi
 		if use sounds
 		then
 			insinto "${dir}"/data
-			doins ${CDROM_ROOT}/data/{*.lod,*.snd}
+			doins "${CDROM_ROOT}"/data/{*.lod,*.snd}
 		fi
 		if use videos
 		then
-			doins -r ${CDROM_ROOT}/data/video
+			doins -r "${CDROM_ROOT}"/data/video
 		fi
 	fi
 
@@ -166,7 +166,7 @@ src_install() {
 #		done
 #	fi
 
-	tar zxf ${CDROM_ROOT}/hiscore.tar.gz -C "${Ddir}" || die "unpacking hiscore"
+	tar zxf "${CDROM_ROOT}"/hiscore.tar.gz -C "${Ddir}" || die "unpacking hiscore"
 
 	cd "${S}"
 	loki_patch --verify patch.dat
@@ -177,7 +177,7 @@ src_install() {
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find "${Ddir}" -exec touch '{}' \;
 
-	newicon ${CDROM_ROOT}/icon.xpm heroes3.xpm
+	newicon "${CDROM_ROOT}"/icon.xpm heroes3.xpm
 
 	prepgamesdirs
 	make_desktop_entry heroes3 "Heroes of Might and Magic III" "heroes3"
