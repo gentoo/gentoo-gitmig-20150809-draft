@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.14 2008/01/23 01:16:05 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.15 2008/03/12 17:41:16 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Marien Zwart (marienz, #107204) from metadata.xml.
 
 *axiom-0.5.27 (23 Jan 2008)
 
