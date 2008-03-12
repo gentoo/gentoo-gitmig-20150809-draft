@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/python-fuse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/python-fuse/ChangeLog,v 1.4 2008/02/13 08:05:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/python-fuse/ChangeLog,v 1.5 2008/03/12 10:40:37 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Josh Glover (jmglov, #206782) from metadata.xml.
 
   13 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   python-fuse-2.5.ebuild:
