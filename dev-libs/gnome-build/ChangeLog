@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gnome-build
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.10 2008/03/03 23:31:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.11 2008/03/12 10:14:47 remi Exp $
+
+*gnome-build-0.2.4 (12 Mar 2008)
+
+  12 Mar 2008; Rémi Cardona <remi@gentoo.org> +gnome-build-0.2.4.ebuild:
+  bump to 0.2.4
 
   03 Mar 2008; Christoph Mende <angelos@gentoo.org>
   gnome-build-0.1.7.ebuild:
