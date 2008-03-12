@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.13 2008/03/04 10:31:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.14 2008/03/12 19:38:03 gurligebis Exp $
+
+*libupnp-1.6.5 (12 Mar 2008)
+
+  12 Mar 2008; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  -libupnp-1.6.3.ebuild, +libupnp-1.6.5.ebuild:
+  Bumping to version 1.6.5
 
   04 Mar 2008; Raúl Porcel <armin76@gentoo.org> libupnp-1.6.3.ebuild:
   Add ~alpha

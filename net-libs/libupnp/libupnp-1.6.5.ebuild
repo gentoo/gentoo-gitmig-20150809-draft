@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.6.3.ebuild,v 1.3 2008/03/04 10:31:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.6.5.ebuild,v 1.1 2008/03/12 19:38:03 gurligebis Exp $
 
 WANT_AUTOMAKE=1.9
 
