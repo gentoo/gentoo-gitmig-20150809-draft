@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/vertex
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.7 2007/11/02 18:49:43 hawking Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.8 2008/03/12 18:46:29 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Marien Zwart (marienz, #107204) from metadata.xml.
 
 *vertex-0.2.0 (02 Nov 2007)
 
