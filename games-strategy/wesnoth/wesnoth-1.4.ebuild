@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.4.ebuild,v 1.1 2008/03/03 00:08:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.4.ebuild,v 1.2 2008/03/12 23:33:38 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -29,7 +29,10 @@ RDEPEND=">=media-libs/libsdl-1.2.7
 # it, just make it a DEPEND.
 # reported by Miika Linnapuomi
 DEPEND="${RDEPEND}
-	dedicated? ( >=media-libs/freetype-2 )
+	dedicated? (
+		>=media-libs/sdl-mixer-1.2
+		>=media-libs/sdl-image-1.2
+		>=media-libs/freetype-2 )
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}-${MY_PV}
