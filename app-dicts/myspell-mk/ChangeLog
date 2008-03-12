@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-mk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-mk/ChangeLog,v 1.11 2008/01/06 15:30:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-mk/ChangeLog,v 1.12 2008/03/12 12:31:24 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Kevin Quinn (kevquinn, #93689) from metadata.xml.
 
   06 Jan 2008; Brent Baude <ranger@gentoo.org> myspell-mk-20060316.ebuild:
   Marking myspell-mk-20060316 ~ppc64 for bug 204587

@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-nb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.13 2008/02/09 18:59:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.14 2008/03/12 12:35:09 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Kevin Quinn (kevquinn, #93689) from metadata.xml.
 
   09 Feb 2008; Raúl Porcel <armin76@gentoo.org> myspell-nb-20060530.ebuild:
   Re-add ~alpha/~ia64
