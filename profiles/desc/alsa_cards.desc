@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/alsa_cards.desc,v 1.4 2008/03/12 15:28:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/alsa_cards.desc,v 1.5 2008/03/12 15:41:06 chainsaw Exp $
 
 # This file contains descriptions of ALSA_CARDS USE_EXPAND flags.
 
@@ -10,6 +10,7 @@ ad1848 - Generic AD1848/CS4248 driver
 ad1848-lib - Enable the ad1848-lib driver
 ad1889 - Analog Devices AD1889
 adlib - AdLib FM card
+aica - Sega Dreamcast audio driver
 ali5451 - ALi M5451 PCI Audio Controller
 als100 - Avance Logic ALS100/ALS120
 als300 - Avance Logic ALS300/ALS300+
@@ -50,6 +51,7 @@ darla24 - (Echoaudio) Darla24
 dt019x - Diamond Technologies DT-019X, Avance Logic ALS-007
 dummy - Dummy (/dev/null) soundcard
 echo3g - (Echoaudio) 3G cards
+emi26 - Emagic EMI 2|6 Audio Interface
 emu10k1 - Emu10k1 (SB Live!, Audigy, E-mu APS)
 emu10k1x - Emu10k1X (Dell OEM Version)
 emu1212 - E-MU 1212M PCI
