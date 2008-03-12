@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.35 2008/03/10 01:01:41 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.36 2008/03/12 00:22:39 williamh Exp $
+
+  12 Mar 2008; William Hubbs <williamh@gentoo.org> espeak-1.36.ebuild:
+  Updated the ebuild to pass the correct options to make if neither portaudio
+  nor pulseaudio is in the use flags.
 
 *espeak-1.36 (10 Mar 2008)
 

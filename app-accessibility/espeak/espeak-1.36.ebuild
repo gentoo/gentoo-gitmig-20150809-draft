@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.36.ebuild,v 1.1 2008/03/10 01:01:41 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.36.ebuild,v 1.2 2008/03/12 00:22:39 williamh Exp $
 
 inherit eutils
 
@@ -18,15 +18,29 @@ DEPEND="portaudio? ( >=media-libs/portaudio-18.1-r5 )
 
 S=${WORKDIR}/${MY_P}
 
+get_audio() {
+	local MY_AUDIO
+
+	MY_AUDIO=none
+	if use portaudio; then
+		MY_AUDIO=portaudio
+	elif use pulseaudio; then
+		MY_AUDIO=pulseaudio
+	fi
+	echo ${MY_AUDIO}
+}
+
 pkg_setup() {
-	if ! use portaudio -a ! ! use pulseaudio; then
-		ewarn
-		ewarn Since portaudio and pulseaudio are not in your use flags, espeak
-		ewarn will only bbe able to create wav files.
-		ewarn If this is not what you want, press ctrl-c and put either
-		ewarn portaudio or pulseaudio in your use flags.
-		ebeep
-		epause 10
+	if ! use portaudio; then
+		if ! use pulseaudio; then
+			ewarn
+			ewarn Since portaudio and pulseaudio are not in your use flags, espeak
+			ewarn will only bbe able to create wav files.
+			ewarn If this is not what you want, press ctrl-c and put either
+			ewarn portaudio or pulseaudio in your use flags.
+			ebeep
+			epause 10
+		fi
 	fi
 }
 
@@ -43,17 +57,8 @@ src_unpack() {
 }
 
 src_compile() {
-	local MY_AUDIO
-
 	cd src
-
-	if use portaudio; then
-		MY_AUDIO=portaudio
-	elif use pulseaudio; then
-		MY_AUDIO=pulseaudio
-	fi
-
-	emake AUDIO="${MY_AUDIO}" CXXFLAGS="${CXXFLAGS}" || die "Compilation failed"
+	emake AUDIO="$(get_audio)" CXXFLAGS="${CXXFLAGS}" all || die "Compilation failed"
 
 	einfo "Fixing byte order of phoneme data files"
 	cd "${S}/platforms/big_endian"
@@ -64,7 +69,7 @@ src_compile() {
 
 src_install() {
 	cd src
-	make DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" install || die "Installation failed"
+	make DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" AUDIO="$(get_audio)" install || die "Installation failed"
 
 	cd ..
 	dodoc ChangeLog ReadMe
