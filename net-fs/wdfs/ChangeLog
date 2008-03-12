@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/wdfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/wdfs/ChangeLog,v 1.4 2008/02/13 07:40:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/wdfs/ChangeLog,v 1.5 2008/03/12 10:22:15 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Josh Glover (jmglov, #206782) from metadata.xml.
 
   13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
   add no-herd
