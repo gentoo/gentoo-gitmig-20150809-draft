@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/libgdiplus
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.81 2007/12/14 19:29:12 jurek Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.82 2008/03/12 13:54:35 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Peter Johanson (latexer, #206688) from metadata.xml.
 
 *libgdiplus-1.2.6 (14 Dec 2007)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gnomevfs-sharp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomevfs-sharp/ChangeLog,v 1.29 2007/04/30 17:38:11 uberlord Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomevfs-sharp/ChangeLog,v 1.30 2008/03/12 13:49:16 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Peter Johanson (latexer, #206688) from metadata.xml.
 
   30 Apr 2007; Roy Marples <uberlord@gentoo.org>
   gnomevfs-sharp-2.16.0.ebuild:

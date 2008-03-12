@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/heap-buddy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/heap-buddy/ChangeLog,v 1.6 2008/03/01 23:20:01 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/heap-buddy/ChangeLog,v 1.7 2008/03/12 13:51:24 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Peter Johanson (latexer, #206688) from metadata.xml.
 
   01 Mar 2008; Saleem Abdulrasool <compnerd@gentoo.org>
   heap-buddy-0.1.ebuild, heap-buddy-0.2.ebuild:

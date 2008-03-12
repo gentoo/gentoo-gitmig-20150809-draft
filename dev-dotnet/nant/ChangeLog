@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/nant
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.17 2007/12/31 16:32:28 jurek Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.18 2008/03/12 13:56:41 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Peter Johanson (latexer, #206688) from metadata.xml.
 
   31 Dec 2007; Jurek Bartuszek <jurek@gentoo.org>
   +files/nant-0.85-threadingfix.patch, nant-0.85.ebuild:
