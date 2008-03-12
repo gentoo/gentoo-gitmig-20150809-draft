@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.13.1.ebuild,v 1.3 2007/01/13 11:04:23 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.13.1.ebuild,v 1.4 2008/03/12 06:30:58 keri Exp $
 
 inherit eutils
 
@@ -21,8 +21,8 @@ DEPEND="~dev-lang/mercury-${PV}
 	ncurses? ( sys-libs/ncurses )
 	opengl? ( virtual/opengl )
 	tcl? ( tk? (
-			=dev-lang/tcl-8.4*
-			=dev-lang/tk-8.4*
+			dev-lang/tcl
+			dev-lang/tk
 			x11-libs/libX11
 			x11-libs/libXmu ) )"
 
@@ -88,7 +88,6 @@ src_compile() {
 }
 
 src_install() {
-	cd "${S}"
 	mmake \
 		MMAKEFLAGS="${MAKEOPTS}" \
 		INSTALL_PREFIX="${D}" \
