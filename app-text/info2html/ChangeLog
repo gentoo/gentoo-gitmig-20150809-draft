@@ -1,6 +1,9 @@
 # ChangeLog for app-text/info2html
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.23 2007/06/14 13:27:59 rl03 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.24 2008/03/12 12:52:32 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Kevin Quinn (kevquinn, #93689) from metadata.xml.
 
   14 Jun 2007; Renat Lumpau <rl03@gentoo.org> -files/info2html-xss.patch,
   -files/info2html-gentoo.patch, -info2html-1.4.ebuild,
