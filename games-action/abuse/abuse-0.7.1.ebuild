@@ -1,18 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.4 2008/03/07 17:11:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.5 2008/03/12 21:39:28 mr_bones_ Exp $
 
 inherit eutils games
 
-ZOY="http://abuse.zoy.org/attachment/wiki/Downloads/"
+ZOY="http://abuse.zoy.org/raw/Downloads"
 
 DESCRIPTION="port of Abuse by Crack Dot Com"
 HOMEPAGE="http://abuse.zoy.org/"
-SRC_URI="${ZOY}/${P}.tar.gz?format=raw
-	!demo? ( ${ZOY}/abuse-data-2.00.tar.gz?format=raw )
-	demo? ( ${ZOY}/abuse-lib-2.00.tar.gz?format=raw )
-	sounds? ( ${ZOY}/abuse-sfx-2.00.tar.gz?format=raw )
-	levels? ( ${ZOY}/abuse-frabs-2.11.tar.gz?format=raw )"
+SRC_URI="${ZOY}/${P}.tar.gz
+	!demo? ( ${ZOY}/abuse-data-2.00.tar.gz )
+	demo? ( ${ZOY}/abuse-lib-2.00.tar.gz )
+	sounds? ( ${ZOY}/abuse-sfx-2.00.tar.gz )
+	levels? ( ${ZOY}/abuse-frabs-2.11.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,17 +24,6 @@ DEPEND="${RDEPEND}
 	x11-libs/libXt
 	virtual/opengl"
 
-src_unpack() {
-	for a in ${A}
-	do
-		newname=${a%*?format=raw}
-		cp "${DISTDIR}"/${a} "${T}"/${newname}
-#		mkdir -p "${T}"/${newname}-unpack
-#		cd "${T}"/${newname}-unpack
-		unpack ../temp/${newname}
-	done
-}
-
 src_compile() {
 	# Abuse auto-appends games, so point to the base
 	egamesconf --datadir="${GAMES_DATADIR_BASE}" || die
@@ -42,17 +31,15 @@ src_compile() {
 }
 
 src_install() {
-	# Sourcce-based install
+	# Source-based install
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO
 
 	# Data install
 	insinto "${GAMES_DATADIR}"/abuse
-	for i in addon art levels lisp music netlevel register sfx
-	do
-		doins -r "${WORKDIR}"/${i} || die "copying ${i}"
-	done
-	doins "${WORKDIR}"/README.datafiles "${WORKDIR}"/abuse.lsp || die "doins"
+	doins -r "${WORKDIR}"/{addon,art,levels,lisp,music,netlevel,register,sfx} \
+		"${WORKDIR}"/README.datafiles "${WORKDIR}"/abuse.lsp \
+		|| die "doins failed"
 
 	# Icons/desktop entry
 	doicon abuse.png
