@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>latexer@gentoo.org</email>
-		<name>Peter Johanson</name>
-	</maintainer>
-	<maintainer>
 		<email>drac@gentoo.org</email>
 		<name>Samuli Suominen</name>
 	</maintainer>
