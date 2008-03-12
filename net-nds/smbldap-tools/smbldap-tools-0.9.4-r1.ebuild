@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.4.ebuild,v 1.2 2007/12/24 10:49:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.4-r1.ebuild,v 1.1 2008/03/12 23:25:45 dev-zero Exp $
 
 inherit eutils
 
@@ -23,8 +23,9 @@ RDEPEND="net-nds/openldap
 DEPEND="${DEPEND}"
 
 src_compile() {
+	mkdir man
 	for i in smbldap-[gpu]*; do
-		pod2man --section=8 $i > $i.8 || die "generation manpage for ${i} failed"
+		pod2man --section=8 $i > man/$i.8 || die "generation manpage for ${i} failed"
 	done
 }
 
@@ -38,7 +39,7 @@ src_install() {
 
 	dodoc CONTRIBUTORS ChangeLog FILES INFRA README TODO doc/*.conf
 
-	doman *.8
+	doman man/*
 
 	insinto /usr/share/doc/${PF}
 	doins -r doc/migration_scripts
