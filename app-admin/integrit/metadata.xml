@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>forensics</herd>
-	<maintainer>
-		<email>hyakuhei@gentoo.org</email>
-		<name>Robert Clark</name>
-	</maintainer>
 </pkgmetadata>
