@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/boo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.20 2007/12/31 04:34:40 jurek Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.21 2008/03/12 14:10:09 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Peter Johanson (latexer, #206688) from metadata.xml.
 
   31 Dec 2007; Jurek Bartuszek <jurek@gentoo.org> boo-0.7.9.2659.ebuild:
   Fixed .pc file
