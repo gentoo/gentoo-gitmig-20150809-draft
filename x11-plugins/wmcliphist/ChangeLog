@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmcliphist
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.6 2007/02/06 01:58:05 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.7 2008/03/12 14:18:11 drac Exp $
+
+*wmcliphist-0.6 (12 Mar 2008)
+
+  12 Mar 2008; Samuli Suominen <drac@gentoo.org>
+  +files/wmcliphist-0.6-Makefile.patch, +wmcliphist-0.6.ebuild:
+  Version bump.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
