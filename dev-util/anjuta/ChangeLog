@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.80 2008/03/03 23:31:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.81 2008/03/12 10:25:08 remi Exp $
+
+*anjuta-2.4.0 (12 Mar 2008)
+
+  12 Mar 2008; Rémi Cardona <remi@gentoo.org> +anjuta-2.4.0.ebuild:
+  bump to 2.4.0 (major release)
 
   03 Mar 2008; Christoph Mende <angelos@gentoo.org> anjuta-2.2.0-r1.ebuild:
   Stable on amd64, bug #204494
