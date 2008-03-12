@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/weka
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.25 2008/02/07 19:34:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.26 2008/03/12 19:58:27 betelgeuse Exp $
+
+  12 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> weka-3.5.7.ebuild:
+  Uses com.sun.image so restrict to 1.6 and 1.5.
 
 *weka-3.5.7 (07 Feb 2008)
 
