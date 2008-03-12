@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.169 2008/02/20 04:22:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.170 2008/03/12 20:13:58 beandog Exp $
+
+*webmin-1.400-r1 (12 Mar 2008)
+
+  12 Mar 2008; Steve Dibb <beandog@gentoo.org> metadata.xml,
+  +webmin-1.400-r1.ebuild:
+  Change maintainership, add mysql use flag for perl deps, webmin-minimal to
+  minimal use flag
 
   20 Feb 2008; Steve Dibb <beandog@gentoo.org> webmin-1.400.ebuild:
   amd64 stable, security bug 209453
