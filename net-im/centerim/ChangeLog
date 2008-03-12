@@ -1,6 +1,11 @@
 # ChangeLog for net-im/centerim
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.12 2008/02/17 13:09:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.13 2008/03/12 19:17:49 swegener Exp $
+
+*centerim-4.22.3 (12 Mar 2008)
+
+  12 Mar 2008; Sven Wegener <swegener@gentoo.org> +centerim-4.22.3.ebuild:
+  Version bump, bug #213105.
 
   17 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   centerim-4.22.2.ebuild:
