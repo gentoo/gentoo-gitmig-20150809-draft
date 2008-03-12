@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/kaa-metadata
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-metadata/ChangeLog,v 1.6 2007/10/06 20:14:09 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-metadata/ChangeLog,v 1.7 2008/03/12 14:57:27 rbu Exp $
+
+*kaa-metadata-0.7.2 (12 Mar 2008)
+
+  12 Mar 2008; Robert Buchholz <rbu@gentoo.org>
+  kaa-metadata-0.6.1-r1.ebuild, +kaa-metadata-0.7.2.ebuild:
+  Version bump, thanks to alpiturchi (bug #210346). Hard depend 0.6.1-r1 ->
+  ~kaa-base-0.1.3
 
   06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   kaa-metadata-0.6.1-r1.ebuild:
