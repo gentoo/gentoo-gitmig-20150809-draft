@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.13 2008/03/03 23:30:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.14 2008/03/12 10:12:13 remi Exp $
+
+*gdl-0.7.11 (12 Mar 2008)
+
+  12 Mar 2008; Rémi Cardona <remi@gentoo.org> +gdl-0.7.11.ebuild:
+  bump to 0.7.11
 
   03 Mar 2008; Christoph Mende <angelos@gentoo.org> gdl-0.7.6.ebuild:
   Stable on amd64, bug #204494
