@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-logkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.57 2008/03/12 14:36:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.58 2008/03/12 15:17:31 armin76 Exp $
+
+  12 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  avalon-logkit-1.2-r3.ebuild, avalon-logkit-2.1-r2.ebuild:
+  Re-add ~ia64 wrt #213006
 
   12 Mar 2008; Brent Baude <ranger@gentoo.org> avalon-logkit-1.2-r3.ebuild,
   avalon-logkit-2.1-r2.ebuild:
