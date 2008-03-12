@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/kaa-imlib2
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/ChangeLog,v 1.5 2007/10/06 20:14:57 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/ChangeLog,v 1.6 2008/03/12 15:00:36 rbu Exp $
+
+*kaa-imlib2-0.2.3 (12 Mar 2008)
+
+  12 Mar 2008; Robert Buchholz <rbu@gentoo.org> kaa-imlib2-0.2.1.ebuild,
+  +kaa-imlib2-0.2.3.ebuild:
+  Version bump, thanks to alpiturchi (bug #210344). Hard depend 0.2.1 ->
+  ~kaa-base-0.1.3
 
   06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   kaa-imlib2-0.2.1.ebuild:
