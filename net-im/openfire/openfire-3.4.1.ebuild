@@ -1,22 +1,17 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.4.1.ebuild,v 1.2 2008/01/17 14:42:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.4.1.ebuild,v 1.3 2008/03/12 19:58:04 jokey Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Openfire (formerly wildfire) real time collaboration (RTC) server"
 HOMEPAGE="http://www.igniterealtime.org/projects/openfire/"
 SRC_URI="http://www.igniterealtime.org/builds/openfire/${PN//-/_}_src_${PV//./_}.tar.gz"
-RESTRICT=""
+
 LICENSE="GPL-2"
-
 SLOT="0"
-
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
-
-# For transports
-PROVIDE="virtual/jabber-server"
 
 RDEPEND=">=virtual/jre-1.5"
 DEPEND="net-im/jabber-base
@@ -24,6 +19,11 @@ DEPEND="net-im/jabber-base
 		>=virtual/jdk-1.5"
 
 S=${WORKDIR}/${PN//-/_}_src
+
+RESTRICT=""
+
+# For transports
+PROVIDE="virtual/jabber-server"
 
 pkg_setup() {
 	if [ -f /etc/env.d/98openfire ]; then
@@ -39,8 +39,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${PN//-/_}_src_${PV//./_}.tar.gz
-	cd ${S}
-	epatch ${FILESDIR}/buildxml-${PV}.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/buildxml.patch
 
 	# TODO should replace jars in build/lib with ones packaged by us -nichoj
 }
@@ -56,8 +56,8 @@ src_compile() {
 src_install() {
 	dodir /opt/openfire
 
-	doinitd ${FILESDIR}/init.d/openfire
-	doconfd ${FILESDIR}/conf.d/openfire
+	doinitd "${FILESDIR}"/openfire-initd
+	doconfd "${FILESDIR}"/openfire-confd
 
 	dodir /opt/openfire/conf
 	insinto /opt/openfire/conf
@@ -85,7 +85,7 @@ src_install() {
 
 	#Protect ssl key on upgrade
 	dodir /etc/env.d/
-	echo 'CONFIG_PROTECT="/opt/openfire/resources/security/"' > ${D}/etc/env.d/98openfire
+	echo 'CONFIG_PROTECT="/opt/openfire/resources/security/"' > "${D}"/etc/env.d/98openfire
 }
 
 pkg_postinst() {
