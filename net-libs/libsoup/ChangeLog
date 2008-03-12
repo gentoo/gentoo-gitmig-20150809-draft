@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.143 2008/03/09 13:44:00 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.144 2008/03/12 20:20:19 leio Exp $
+
+*libsoup-2.4.0 (12 Mar 2008)
+
+  12 Mar 2008; Mart Raudsepp <leio@gentoo.org> +libsoup-2.4.0.ebuild:
+  First version in a new series with a better API. All libraries and
+  applications depending on libsoup-2.2 are expected to eventually port over
 
 *libsoup-2.2.105-r2 (09 Mar 2008)
 
