@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.4.1.ebuild,v 1.1 2008/03/11 19:32:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.4.1.ebuild,v 1.2 2008/03/12 20:35:07 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -74,7 +74,7 @@ src_install() {
 	if use nls ; then
 		dodir /usr/share/locale
 
-		cd ${S}/po
+		cd "${S}"/po
 		for i in `ls -c1 |grep "\.gmo$"` ; do
 			BASE=$(echo ${i} |sed 's/\.gmo$//g')
 			msgfmt -v -o ${BASE}.mo ${BASE}.po
@@ -83,7 +83,7 @@ src_install() {
 			newins ${BASE}.gmo xmoto.mo
 		done;
 	fi
-	cd ${S}
+	cd "${S}"
 	dodoc README TODO NEWS ChangeLog
 
 	doicon extra/xmoto.xpm
