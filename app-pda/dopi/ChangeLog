@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/dopi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/dopi/ChangeLog,v 1.4 2007/06/22 00:09:38 jurek Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/dopi/ChangeLog,v 1.5 2008/03/12 13:27:32 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Peter Johanson (latexer, #206688) from metadata.xml.
 
   22 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> -dopi-0.3.2.ebuild:
   Clean out old ebuild
