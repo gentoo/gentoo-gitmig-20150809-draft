@@ -1,11 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.4 2008/02/21 04:10:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.5 2008/03/12 03:51:07 wolf31o2 Exp $
 
 # genkernel-9999        -> latest SVN
 # genkernel-9999.REV    -> use SVN REV
 # genkernel-VERSION     -> normal genkernel release
 
+VERSION_BUSYBOX='1.7.4'
 VERSION_DMAP='1.02.22'
 VERSION_DMRAID='1.0.0.rc14'
 VERSION_E2FSPROGS='1.39'
@@ -15,6 +16,7 @@ VERSION_PKG='3.4-r4'
 MY_HOME="http://dev.gentoo.org/~wolf31o2"
 RH_HOME="ftp://sources.redhat.com/pub"
 DM_HOME="http://people.redhat.com/~heinzm/sw/dmraid/src"
+BB_HOME="http://www.busybox.net/downloads"
 
 COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
 		${DM_HOME}/old/dmraid-${VERSION_DMRAID}.tar.bz2
@@ -22,6 +24,7 @@ COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
 		${RH_HOME}/lvm2/old/LVM2.${VERSION_LVM}.tgz
 		${RH_HOME}/dm/device-mapper.${VERSION_DMAP}.tgz
 		${RH_HOME}/dm/old/device-mapper.${VERSION_DMAP}.tgz
+		${BB_HOME}/busybox-${VERSION_BUSYBOX}.tar.bz2
 		mirror://sourceforge/e2fsprogs/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz"
 
 if [[ ${PV} == 9999* ]]
@@ -74,6 +77,7 @@ src_install() {
 		-e "s:VERSION_DMRAID:$VERSION_DMRAID:" \
 		-e "s:VERSION_E2FSPROGS:$VERSION_E2FSPROGS:" \
 		-e "s:VERSION_LVM:$VERSION_LVM:" \
+		-e "S:VERSION_BUSYBOX:$VERSION_BUSYBOX:" \
 		"${S}"/genkernel.conf > "${T}"/genkernel.conf \
 		|| die "Could not adjust versions"
 	insinto /etc
@@ -95,6 +99,7 @@ src_install() {
 	"${DISTDIR}"/LVM2.${VERSION_LVM}.tgz \
 	"${DISTDIR}"/device-mapper.${VERSION_DMAP}.tgz \
 	"${DISTDIR}"/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz \
+	"${DISTDIR}"/busybox-${VERSION_BUSYBOX}.tar.bz2 \
 	"${D}"/usr/share/genkernel/pkg || die "copying pkg"
 
 	dobashcompletion "${FILESDIR}"/genkernel.bash
