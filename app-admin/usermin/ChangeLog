@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.142 2008/02/20 11:44:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.143 2008/03/12 20:15:53 beandog Exp $
+
+  12 Mar 2008; Steve Dibb <beandog@gentoo.org> metadata.xml:
+  Take ownership
 
   20 Feb 2008; Raúl Porcel <armin76@gentoo.org> -files/usermin.pam-include,
   -usermin-1.280-r1.ebuild, -usermin-1.320.ebuild:
