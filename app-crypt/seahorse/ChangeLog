@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.90 2008/02/04 22:01:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.91 2008/03/12 15:54:34 armin76 Exp $
+
+  12 Mar 2008; Raúl Porcel <armin76@gentoo.org> seahorse-2.20.3.ebuild:
+  ia64 stable
 
   04 Feb 2008; Raúl Porcel <armin76@gentoo.org> seahorse-2.20.3.ebuild:
   alpha/sparc stable, add ~ia64
