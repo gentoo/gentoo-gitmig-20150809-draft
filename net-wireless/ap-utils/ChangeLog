@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ap-utils
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ap-utils/ChangeLog,v 1.14 2007/07/24 15:36:05 beandog Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ap-utils/ChangeLog,v 1.15 2008/03/12 16:06:29 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Peter Johanson (latexer, #206688) from metadata.xml.
 
   24 Jul 2007; Steve Dibb <beandog@gentoo.org> ap-utils-1.4.1.ebuild:
   Add ~amd64, bug 184283
