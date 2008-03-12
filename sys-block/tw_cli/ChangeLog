@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/tw_cli
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.24 2008/02/27 01:21:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.25 2008/03/12 08:16:02 robbat2 Exp $
+
+*tw_cli-9.5.0.1 (12 Mar 2008)
+
+  12 Mar 2008; Robin H. Johnson <robbat2@gentoo.org> +tw_cli-9.5.0.1.ebuild:
+  Version bump. If you use a 9690SA card, you are STRONGLY recommended to use
+  the Update9690 app from upstream to resolve a data-loss bug. Upstream has
+  removed the tw_sched utility as of this release, and finalized the FreeBSD
+  version of the tw_cli tool.
 
   27 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> tw_cli-9.4.0.ebuild,
   tw_cli-9.4.0.1.ebuild, tw_cli-9.4.1.2.ebuild, tw_cli-9.4.2.ebuild,
