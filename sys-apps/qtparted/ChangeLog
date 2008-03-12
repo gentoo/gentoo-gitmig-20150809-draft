@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/qtparted
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.29 2008/02/05 03:20:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.30 2008/03/12 12:53:46 phreak Exp $
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Kevin Quinn (kevquinn, #93689) from metadata.xml.
 
   05 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> qtparted-0.4.5.ebuild:
   Stable on amd64 wrt bug #208453.
