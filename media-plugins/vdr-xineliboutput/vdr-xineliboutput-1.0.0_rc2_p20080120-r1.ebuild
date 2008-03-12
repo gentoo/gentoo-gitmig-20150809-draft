@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2_p20080120-r1.ebuild,v 1.3 2008/02/18 13:33:58 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2_p20080120-r1.ebuild,v 1.4 2008/03/12 13:04:02 zzam Exp $
 
 inherit vdr-plugin eutils multilib versionator
 
@@ -93,8 +93,13 @@ src_install() {
 	use fbcon && dobin vdr-fbfe
 	use X && dobin vdr-sxfe
 
+	# There may be no sub-plugin, depending on use-flags
 	insinto ${VDR_PLUGIN_DIR}
-	doins *.so.${SO_VERSION} || die "could not install sub-plugins"
+	local f
+	for f in libxineliboutput*.so.${SO_VERSION}; do
+		[[ -f "$f" ]] || continue
+		doins "${f}" || die "could not install sub-plugin ${f}"
+	done
 
 	insinto "${XINE_PLUGIN_DIR}"
 	doins xineplug_inp_*.so
