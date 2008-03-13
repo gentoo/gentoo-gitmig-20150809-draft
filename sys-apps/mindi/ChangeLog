@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/mindi
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.24 2007/07/02 03:04:52 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.25 2008/03/13 11:04:01 wschlich Exp $
+
+*mindi-2.0.0 (13 Mar 2008)
+
+  13 Mar 2008; Wolfram Schlich <wschlich@gentoo.org>
+  -files/mindi-0.86-security.patch, metadata.xml, -mindi-0.85.ebuild,
+  -mindi-0.86.ebuild, -mindi-1.03.ebuild, -mindi-1.04.ebuild,
+  -mindi-1.10.ebuild, -mindi-1.11.ebuild, +mindi-2.0.0.ebuild:
+  re-activation of package as per bugs #106497 and #176738
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> mindi-0.85.ebuild,
   mindi-0.86.ebuild:

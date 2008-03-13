@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/mindi-busybox
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-busybox/ChangeLog,v 1.1 2008/03/13 11:04:02 wschlich Exp $
+
+*mindi-busybox-1.7.3 (13 Mar 2008)
+
+  13 Mar 2008; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
+  +mindi-busybox-1.7.3.ebuild:
+  initial import (bugs #106497 and #176738)
+
