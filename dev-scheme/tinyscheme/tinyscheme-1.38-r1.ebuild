@@ -1,6 +1,6 @@
 # Copyright 2000-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/tinyscheme-1.38-r1.ebuild,v 1.2 2008/02/07 20:12:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/tinyscheme-1.38-r1.ebuild,v 1.3 2008/03/13 20:20:32 hkbst Exp $
 
 MY_P=${PN}${PV}
 DESCRIPTION="Lightweight scheme interpreter"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND=""
 
 S="${WORKDIR}"
