@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.66 2008/01/31 14:38:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.67 2008/03/13 14:30:56 chainsaw Exp $
+
+*alsa-plugins-1.0.16 (13 Mar 2008)
+
+  13 Mar 2008; Tony Vroon <chainsaw@gentoo.org> +alsa-plugins-1.0.16.ebuild:
+  Version bump, for bug #210249.
 
 *alsa-plugins-1.0.16_rc1 (31 Jan 2008)
 
