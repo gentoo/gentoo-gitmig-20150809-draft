@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/gruff
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.13 2007/11/16 15:12:20 graaff Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.14 2008/03/13 11:55:53 graaff Exp $
+
+*gruff-0.3.0 (13 Mar 2008)
+
+  13 Mar 2008; Hans de Graaff <graaff@gentoo.org> -gruff-0.1.1.ebuild,
+  -gruff-0.2.8.ebuild, +gruff-0.3.0.ebuild:
+  Version bump: Fixed bug where pie graphs weren't drawing their label correctly.
+  Remove old versions.
 
 *gruff-0.2.9 (16 Nov 2007)
 
