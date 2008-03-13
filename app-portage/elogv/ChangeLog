@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.31 2008/02/26 13:33:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.32 2008/03/13 06:52:33 opfer Exp $
+
+  13 Mar 2008; Christian Faulhammer <opfer@gentoo.org> elogv-0.6.3.ebuild:
+  stable x86/amd64
 
 *elogv-0.6.3 (12 Feb 2008)
 
