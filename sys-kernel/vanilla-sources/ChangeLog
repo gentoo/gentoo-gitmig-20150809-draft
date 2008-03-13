@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.436 2008/03/12 09:34:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.437 2008/03/13 19:20:28 klausman Exp $
+
+  13 Mar 2008; Tobias Klausmann <klausman@gentoo.org>
+  vanilla-sources-2.6.24.3.ebuild:
+  Stable on alpha.
 
   12 Mar 2008; Markus Rothe <corsair@gentoo.org>
   vanilla-sources-2.6.16.60.ebuild, vanilla-sources-2.6.22.19.ebuild,
