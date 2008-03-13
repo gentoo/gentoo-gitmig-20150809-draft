@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8378 2008/03/12 20:22:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8379 2008/03/13 01:12:17 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -58,11 +58,6 @@ x11-misc/perlpanel
 >=media-libs/swfdec-0.6.0
 >=net-www/swfdec-mozilla-0.6.0
 >=gnome-extra/swfdec-gnome-2.21.91
-
-# Doug Goldstein <cardoe@gentoo.org> (10 Mar 2008)
-# masked for bug #212715 until the issue can be
-# resolved
-=media-gfx/fontforge-20080302
 
 # Doug Goldstein <cardoe@gentoo.org> (10 Mar 2008)
 # upstream MythTV development versions

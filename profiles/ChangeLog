@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1207 2008/03/12 17:47:28 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1208 2008/03/13 01:12:17 dirtyepic Exp $
+
+  13 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Remove fontforge from package.mask.  Bug #212715.
 
   12 Mar 2008; Robert Buchholz <rbu@gentoo.org> use.local.desc:
   Added ivtv use flag for freevo.
