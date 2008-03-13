@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2-r1.ebuild,v 1.2 2006/12/06 17:27:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2-r1.ebuild,v 1.3 2008/03/13 17:50:11 wolf31o2 Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -59,5 +59,5 @@ src_install() {
 	fi
 	prepgamesdirs
 	# FIXME: we need to patch around this BS
-	fperms g+w ${GAMES_DATADIR}/${PN}/lib/{apex,data,save,user}
+	fperms g+w "${GAMES_DATADIR}"/${PN}/lib/{apex,data,save,user}
 }
