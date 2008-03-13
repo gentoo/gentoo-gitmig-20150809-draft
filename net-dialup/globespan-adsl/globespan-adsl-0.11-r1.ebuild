@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.11-r1.ebuild,v 1.2 2007/11/24 22:43:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.11-r1.ebuild,v 1.3 2008/03/13 01:27:19 wolf31o2 Exp $
 
 inherit eutils
 
@@ -17,6 +17,7 @@ IUSE="tk"
 
 DEPEND="net-dialup/ppp"
 RDEPEND="${DEPEND}
+	dev-lang/perl
 	tk? ( >=dev-lang/tk-8.3.4 )"
 
 S="${WORKDIR}/${MY_PN}"
