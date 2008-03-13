@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.22.0.ebuild,v 1.1 2008/03/13 00:00:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.22.0.ebuild,v 1.2 2008/03/13 00:37:00 eva Exp $
 
 inherit gnome2
 
@@ -16,6 +16,7 @@ IUSE="doc examples"
 RDEPEND=">=gnome-base/gnome-vfs-2.8.1
 	>=dev-cpp/glibmm-2.12"
 DEPEND=">=dev-util/pkgconfig-0.12.0
+	app-doc/doxygen
 	${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog NEWS README INSTALL"
