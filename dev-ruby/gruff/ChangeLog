@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gruff
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.15 2008/03/13 12:13:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.16 2008/03/13 20:20:01 cla Exp $
+
+  13 Mar 2008; Dawid Węgliński <cla@gentoo.org> gruff-0.2.9.ebuild:
+  Stable on x86 (bug #213252)
 
   13 Mar 2008; Hans de Graaff <graaff@gentoo.org> gruff-0.2.9.ebuild:
   Mark stable om amd64
