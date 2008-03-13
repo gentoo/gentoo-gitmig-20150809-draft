@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libstdc++-v3
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.50 2007/04/24 14:49:31 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.51 2008/03/13 16:15:08 corsair Exp $
+
+  13 Mar 2008; Markus Rothe <corsair@gentoo.org>
+  libstdc++-v3-3.3.3-r1.ebuild, libstdc++-v3-3.3.4.ebuild,
+  libstdc++-v3-3.3.6.ebuild:
+  Mark this package -ppc64. Does not build with gcc-4 on ppc64. ppc64 moved to
+  sys-libs/libstdc++-v3-bin. Bug #213286
 
   24 Apr 2007; Raúl Porcel <armin76@gentoo.org> libstdc++-v3-3.3.6.ebuild:
   x86 stable
