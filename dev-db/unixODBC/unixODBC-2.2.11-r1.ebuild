@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11-r1.ebuild,v 1.18 2007/01/04 14:36:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11-r1.ebuild,v 1.19 2008/03/13 21:42:01 ricmm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
 inherit eutils multilib autotools
 
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 DESCRIPTION="ODBC Interface for Linux."
 HOMEPAGE="http://www.unixodbc.org/"
