@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.113 2008/03/12 19:04:19 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.114 2008/03/13 13:28:27 je_fro Exp $
+
+*ati-drivers-8.471.3 (13 Mar 2008)
+
+  13 Mar 2008; Jeff Gardner <je_fro@gentoo.org>
+  +files/8.471.3/ati-powermode-opt-path-2.patch,
+  +ati-drivers-8.471.3.ebuild:
+  Bump to latest. Thanks to James Le Cuirot, Paolo Pedroni, and Jory Pratt.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Marien Zwart (marienz, #107204) from metadata.xml.
