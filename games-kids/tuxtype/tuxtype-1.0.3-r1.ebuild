@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.0.3-r1.ebuild,v 1.11 2008/03/07 01:15:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.0.3-r1.ebuild,v 1.12 2008/03/13 19:52:25 wolf31o2 Exp $
 
 inherit games
 
@@ -30,7 +30,7 @@ src_install() {
 	dohtml *.html ; rm -f *.html
 	docfiles="`find -type f -maxdepth 1`"
 	dodoc ${docfiles} ; rm -f ${docfiles}
-	dodir ${GAMES_DATADIR}/${PN}
+	dodir "${GAMES_DATADIR}/${PN}"
 	mv * "${D}/${GAMES_DATADIR}/${PN}"
 	cd "${D}/${GAMES_PREFIX}"
 	rm -rf ${PN}

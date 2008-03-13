@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/tuxtype
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/ChangeLog,v 1.9 2008/03/07 01:15:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/ChangeLog,v 1.10 2008/03/13 19:52:25 wolf31o2 Exp $
+
+  13 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  tuxtype-1.0.3-r1.ebuild:
+  QA cleanup: Fix quoting (again).
 
   07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   tuxtype-1.0.3-r1.ebuild:
