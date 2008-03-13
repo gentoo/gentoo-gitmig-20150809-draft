@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.22-r1.ebuild,v 1.2 2008/03/12 19:07:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.22-r1.ebuild,v 1.3 2008/03/13 13:24:01 coldwind Exp $
 
 inherit eutils fortran flag-o-matic toolchain-funcs
 
@@ -13,7 +13,7 @@ LICENSE="tacc"
 SLOT="0"
 # See http://www.tacc.utexas.edu/resources/software/gotoblasfaq.php
 # for supported architectures
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="int64 threads doc"
 RESTRICT="mirror"
 RDEPEND="app-admin/eselect-blas
