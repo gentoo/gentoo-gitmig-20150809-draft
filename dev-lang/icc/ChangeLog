@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.59 2008/02/26 10:33:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.60 2008/03/13 21:25:25 bicatali Exp $
+
+*icc-10.1.013 (13 Mar 2008)
+
+  13 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org> +icc-10.1.013.ebuild:
+  Version bump
 
   26 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org> -icc-10.1.008.ebuild:
   Removing incompatible version with gcc (see bug #201596)
