@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1209 2008/03/13 10:42:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1210 2008/03/13 10:57:59 wschlich Exp $
+
+  13 Mar 2008; Wolfram Schlich <wschlich@gentoo.org> package.mask:
+  update of mondo-rescue/mindi packages wrt bug #106497
 
   13 Mar 2008; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Fix net-im/openfire-3.5.0_rc* mask
