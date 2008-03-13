@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.6.26.ebuild,v 1.1 2008/02/13 13:34:02 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.6.28.ebuild,v 1.1 2008/03/13 13:47:35 voxus Exp $
 
 inherit eutils ssl-cert
 
