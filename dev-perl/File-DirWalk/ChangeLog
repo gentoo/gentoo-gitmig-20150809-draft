@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-DirWalk
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/ChangeLog,v 1.13 2007/03/05 11:47:01 ticho Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/ChangeLog,v 1.14 2008/03/13 20:54:20 jer Exp $
+
+  13 Mar 2008; Jeroen Roovers <jer@gentoo.org> File-DirWalk-0.3.ebuild:
+  Marked ~hppa too.
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> File-DirWalk-0.3.ebuild:
   Stable on x86, bug #169152.
