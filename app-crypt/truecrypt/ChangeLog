@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.34 2008/02/22 22:31:21 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.35 2008/03/13 07:01:39 alonbl Exp $
+
+*truecrypt-5.1 (13 Mar 2008)
+
+  13 Mar 2008; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/truecrypt-5.1-64bit.patch, +files/truecrypt-5.1-nogui.patch,
+  +truecrypt-5.1.ebuild:
+  Version bump, bug#213074
 
   22 Feb 2008; Alon Bar-Lev <alonbl@gentoo.org>
   files/truecrypt-5.0-nogui.patch:
