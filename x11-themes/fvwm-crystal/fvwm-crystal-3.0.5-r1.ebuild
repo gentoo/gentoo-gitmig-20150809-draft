@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.5-r1.ebuild,v 1.5 2008/03/11 15:00:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.5-r1.ebuild,v 1.6 2008/03/13 09:27:40 lucass Exp $
 
 inherit eutils
 
@@ -21,6 +21,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}/${P}-envfix.patch"
+	sed -e 's/MenuPosition-/MenuPosition_/g' \
+		-i bin/fvwm-crystal.apps
 }
 
 src_compile() {

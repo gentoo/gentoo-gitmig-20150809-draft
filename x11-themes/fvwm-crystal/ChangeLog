@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/fvwm-crystal
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.53 2008/03/11 15:00:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.54 2008/03/13 09:27:40 lucass Exp $
+
+  13 Mar 2008; Lukasz Strzygowski <lucass@gentoo.org>
+  fvwm-crystal-3.0.5-r1.ebuild:
+  Fixed env vars in fvwm-crystal.apps.
 
   11 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   fvwm-crystal-3.0.5-r1.ebuild:
