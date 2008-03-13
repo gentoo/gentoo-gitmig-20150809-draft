@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/falconseye
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/ChangeLog,v 1.11 2008/03/07 20:13:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/ChangeLog,v 1.12 2008/03/13 17:43:06 wolf31o2 Exp $
+
+  13 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  falconseye-1.9.4a.ebuild:
+  QA cleanup: Fix quoting (again).
 
   07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   -files/1.9.3-gzip.diff, -files/1.9.3-musicsavefix.diff,

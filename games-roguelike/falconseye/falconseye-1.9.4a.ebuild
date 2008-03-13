@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.4a.ebuild,v 1.8 2008/03/07 20:13:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.4a.ebuild,v 1.9 2008/03/13 17:43:06 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -56,7 +56,7 @@ src_install() {
 		SHELLDIR=${D}/${GAMES_BINDIR} \
 		install \
 		|| die "install failed"
-	dosed "s:${D}/::" ${GAMES_BINDIR}/falconseye
+	dosed "s:${D}/::" "${GAMES_BINDIR}/falconseye"
 	sed 's:nethack:falconseye:g' doc/nethack.6 > doc/falconseye.6
 	doman doc/falconseye.6
 	dodoc ChangeLog README falcon.txt
