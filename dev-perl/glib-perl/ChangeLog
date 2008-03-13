@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.87 2007/11/10 15:40:41 drac Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.88 2008/03/13 20:47:13 jer Exp $
+
+  13 Mar 2008; Jeroen Roovers <jer@gentoo.org> glib-perl-1.144.ebuild:
+  Stable for HPPA too.
 
   10 Nov 2007; Samuli Suominen <drac@gentoo.org> glib-perl-1.144.ebuild:
   amd64 stable
