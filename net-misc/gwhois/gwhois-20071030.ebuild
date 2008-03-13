@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20071030.ebuild,v 1.2 2008/02/09 10:33:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20071030.ebuild,v 1.3 2008/03/13 14:38:23 coldwind Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gwhois.de/"
 SRC_URI="http://gwhois.de/gwhois/${P/-/_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="alpha amd64 ~hppa ~ppc sparc x86"
 IUSE=""
 
 RDEPEND="www-client/lynx
