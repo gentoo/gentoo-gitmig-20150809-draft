@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.58 2008/03/12 14:16:28 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.59 2008/03/13 11:23:52 wschlich Exp $
+
+  13 Mar 2008; Wolfram Schlich <wschlich@gentoo.org>
+  ipsec-tools-0.6.7.ebuild:
+  filter parallel make (bug #176998)
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Peter Johanson (latexer, #206688) from metadata.xml.

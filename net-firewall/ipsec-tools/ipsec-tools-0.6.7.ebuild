@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.11 2007/08/03 16:01:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.12 2008/03/13 11:23:52 wschlich Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -197,8 +197,8 @@ src_compile() {
 	#myconf="${myconf} --enable-samode-unspec"
 
 	econf ${myconf} || die
-	# As of ${PN}-0.6.6 parallel make is still broken. I hope its fixed now.
-	emake  || die
+	MAKEOPTS="${MAKEOPTS} -j1" # parallel make is still broken
+	emake || die
 
 }
 
