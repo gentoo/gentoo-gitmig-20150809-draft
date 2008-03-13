@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.9-r1.ebuild,v 1.9 2008/01/14 18:57:40 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.9-r1.ebuild,v 1.10 2008/03/13 21:08:43 dertobi123 Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam
 
@@ -225,8 +225,6 @@ pkg_postinst() {
 			chown cyrus:mail "${ROOT}"etc/ssl/cyrus/server.{key,pem}
 	fi
 	}
-
-	enewuser cyrus -1 -1 /usr/cyrus mail
 
 	if df -T /var/imap | grep -q ' ext[23] ' ; then
 		ebegin "Making /var/imap/user/* and /var/imap/quota/* synchronous."
