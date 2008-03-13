@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/ipp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.1 2007/12/28 11:24:56 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.2 2008/03/13 21:20:58 bicatali Exp $
+
+*ipp-5.3.2.068 (13 Mar 2008)
+
+  13 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +ipp-5.3.2.068.ebuild:
+  Version bump
 
 *ipp-5.3.1.062 (28 Dec 2007)
 
