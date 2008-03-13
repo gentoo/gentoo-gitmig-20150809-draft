@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1208 2008/03/13 01:12:17 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1209 2008/03/13 10:42:42 voyageur Exp $
+
+  13 Mar 2008; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Fix net-im/openfire-3.5.0_rc* mask
 
   13 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Remove fontforge from package.mask.  Bug #212715.
