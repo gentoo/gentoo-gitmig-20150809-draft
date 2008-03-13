@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta.ebuild,v 1.8 2008/03/07 02:07:27 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta.ebuild,v 1.9 2008/03/13 02:55:28 williamh Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,7 +24,7 @@ SRC_URI="${SITE}/${MY_P}.tar.gz
 		${SITE}/festvox_us3.tar.gz )"
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="mbrola"
 
 DEPEND=">=app-accessibility/speech-tools-1.2.96_beta"
