@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/python-openid-2.0.1.ebuild,v 1.1 2007/06/23 08:07:33 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/python-openid-2.1.1.ebuild,v 1.1 2008/03/13 04:00:57 pythonhead Exp $
 
 NEED_PYTHON=2.3
 
@@ -8,7 +8,7 @@ inherit distutils
 
 DESCRIPTION="OpenID support for servers and consumers."
 HOMEPAGE="http://www.openidenabled.com/openid/libraries/python/"
-SRC_URI="http://www.openidenabled.com/resources/downloads/${PN}/${P}.tar.bz2"
+SRC_URI="http://www.openidenabled.com/files/${PN}/packages/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -51,3 +51,4 @@ src_test() {
 
 	"${python}" admin/runtests || die "tests failed"
 }
+
