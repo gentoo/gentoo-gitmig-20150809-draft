@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/pymmlib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.13 2007/07/22 07:01:45 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.14 2008/03/13 00:51:47 dberkholz Exp $
+
+*pymmlib-1.0.0 (13 Mar 2008)
+
+  13 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +pymmlib-1.0.0.ebuild:
+  (#186123) Bump, and keyword ~amd64.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; pymmlib-0.9.7.ebuild,
   pymmlib-0.9.8.ebuild:
