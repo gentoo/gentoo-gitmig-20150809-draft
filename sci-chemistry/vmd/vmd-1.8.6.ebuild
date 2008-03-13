@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.6.ebuild,v 1.5 2007/09/20 21:44:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.6.ebuild,v 1.6 2008/03/13 14:02:39 markusle Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -19,8 +19,8 @@ DEPEND="app-shells/tcsh
 	x11-libs/libXft
 	virtual/opengl
 	x11-libs/fltk
-	=dev-lang/tcl-8.4*
-	=dev-lang/tk-8.4*
+	>=dev-lang/tcl-8.4
+	>=dev-lang/tk-8.4
 	>=dev-lang/python-2.3
 	sci-biology/stride
 	sci-libs/netcdf"
@@ -38,10 +38,17 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
 	# apply LINUX-arch patches to vmd configure
 	epatch "${FILESDIR}"/${P}-config-gentoo.patch
 	epatch "${FILESDIR}"/${P}-python-2.5.patch
+
+	TCL_LIB_PATH="/usr/$(get_libdir)/tcl8.4"
+	if has_version =dev-lang/tcl-8.5*; then
+		epatch "${FILESDIR}"/${P}-tcltk8.5.patch
+		TCL_LIB_PATH="/usr/$(get_libdir)/tcl8.5"
+	fi
 
 	# prepare the plugins
 
@@ -54,7 +61,11 @@ src_unpack() {
 		-e "s:CCFLAGS = -O2 -Wall:CCFLAGS = ${CFLAGS}:" \
 		-e "s:CXXFLAGS = -O2 -Wall:CXXFLAGS = ${CXXFLAGS}:" \
 		-e "s:SHLD = gcc:SHLD = $(tc-getCC):" \
+		-e "s:-ltcl8.4:-ltcl:" \
 	    -i Make-arch || die "Failed to set up plugins Makefile"
+
+	sed -e "s:1.0:1.2:" -i vdna/pkgIndex.tcl \
+		|| die "Failed to fix vdna plugin"
 
 	# prepare vmd itself
 
@@ -92,26 +103,26 @@ src_unpack() {
 	sed -e "s:LINUXPPC:LINUX:g" \
 		-e "s:LINUXALPHA:LINUX:g" \
 		-e "s:LINUXAMD64:LINUX:g" \
-		-i ${S}/bin/vmd || die "failed setting up vmd wrapper script"
+		-i "${S}"/bin/vmd || die "failed setting up vmd wrapper script"
 
 	local myconfig="LINUX OPENGL FLTK TK TCL PTHREADS PYTHON IMD NETCDF"
 
 	rm -f configure.options && echo $myconfig >> configure.options
 
 	./configure &> /dev/null || die "failed to configure"
-
 }
 
 src_compile() {
 	# build plugins
 	cd "${WORKDIR}"/plugins
+
 	make LINUX TCLINC="-I/usr/include" \
-		TCLLIB="-L/usr/$(get_libdir)/tcl8.4" || \
-		die "failed to build plugins"
+		TCLLIB=-L/"${TCL_LIB_PATH}" \
+		|| die "failed to build plugins"
 
 	# build vmd
 	cd "${S}"/src
-	make || die "failed to build vmd"
+	emake || die "failed to build vmd"
 }
 
 src_install() {
@@ -125,9 +136,9 @@ src_install() {
 	make install || die "failed to install vmd"
 
 	# export STRIDE_BIN so VMD knows where to find stride
-	echo "STRIDE_BIN=/usr/bin/stride" > ${T}/99${PN} || \
+	echo "STRIDE_BIN=/usr/bin/stride" > "${T}"/99${PN} || \
 		die "Failed to create vmd env file"
-	doenvd ${T}/99${PN} || die "Failed to install vmd env file"
+	doenvd "${T}"/99${PN} || die "Failed to install vmd env file"
 
 	# install docs
 	cd "${S}"
