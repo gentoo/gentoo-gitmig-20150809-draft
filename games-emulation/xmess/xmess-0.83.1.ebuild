@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.83.1.ebuild,v 1.11 2008/03/06 22:43:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.83.1.ebuild,v 1.12 2008/03/13 20:25:04 wolf31o2 Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -240,9 +240,9 @@ src_install() {
 	elif use sdl ; then
 		dosym "${TARGET}.SDL" "${GAMES_BINDIR}/${TARGET}"
 	elif use svga ; then
-		dosym ${TARGET}.svgalib ${GAMES_BINDIR}/${TARGET}
+		dosym ${TARGET}.svgalib "${GAMES_BINDIR}/${TARGET}"
 	elif use ggi ; then
-		dosym ${TARGET}.ggi ${GAMES_BINDIR}/${TARGET}
+		dosym ${TARGET}.ggi "${GAMES_BINDIR}/${TARGET}"
 	fi
 	prepgamesdirs
 }
