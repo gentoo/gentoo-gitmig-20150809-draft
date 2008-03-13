@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/oniguruma-5.9.1.ebuild,v 1.10 2008/03/11 14:46:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/oniguruma-5.9.1.ebuild,v 1.11 2008/03/13 15:59:36 jer Exp $
 
 inherit libtool
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.geocities.jp/kosako3/oniguruma/archive/${MY_P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ~ppc ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
