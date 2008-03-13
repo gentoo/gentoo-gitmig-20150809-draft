@@ -1,0 +1,16 @@
+diff -urN which-2.19/tilde/xmalloc.h which-2.19-patched/tilde/xmalloc.h
+--- which-2.19/tilde/xmalloc.h	2008-01-16 10:07:57.000000000 -0600
++++ which-2.19-patched/tilde/xmalloc.h	2008-03-13 11:47:16.000000000 -0500
+@@ -23,12 +23,6 @@
+ #if !defined (_XMALLOC_H_)
+ #define _XMALLOC_H_
+ 
+-#if defined (READLINE_LIBRARY)
+-#  include "rlstdc.h"
+-#else
+-#  include <readline/rlstdc.h>
+-#endif
+-
+ #ifndef PTR_T
+ 
+ #ifdef __STDC__
