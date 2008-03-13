@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.12.ebuild,v 1.9 2007/04/26 08:03:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.12.ebuild,v 1.10 2008/03/13 21:05:32 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://perldude.de/projects/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ~hppa ppc sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
@@ -30,8 +30,9 @@ DEPEND="sys-apps/findutils"
 
 src_unpack() {
 	unpack ${A}
-	find ${S} -type d -name .svn | xargs rm -rf
-	cd ${S}; epatch ${FILESDIR}/filer-0.0.12-trash.patch
+	find "${S}" -type d -name .svn | xargs rm -rf
+	cd "${S}"
+	epatch "${FILESDIR}"/filer-0.0.12-trash.patch
 }
 
 src_compile() {
@@ -41,6 +42,6 @@ src_compile() {
 src_install() {
 	dodir /usr/bin
 	dodir /usr/lib
-	make install PREFIX=${D}/usr/
+	make install PREFIX="${D}"/usr/
 	dodoc AUTHORS README ChangeLog  || die "dodoc failed"
 }
