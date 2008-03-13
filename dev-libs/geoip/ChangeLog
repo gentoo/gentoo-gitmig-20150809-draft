@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.88 2008/03/06 17:03:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.89 2008/03/13 22:02:15 jer Exp $
+
+  13 Mar 2008; Jeroen Roovers <jer@gentoo.org> geoip-1.4.4.ebuild:
+  Stable for HPPA (bug #212359).
 
   06 Mar 2008; nixnut <nixnut@gentoo.org> geoip-1.4.4.ebuild:
   Stable on ppc wrt bug 212359
