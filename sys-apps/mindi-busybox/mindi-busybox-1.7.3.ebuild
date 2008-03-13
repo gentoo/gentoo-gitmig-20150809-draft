@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-busybox/mindi-busybox-1.7.3.ebuild,v 1.1 2008/03/13 11:04:02 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-busybox/mindi-busybox-1.7.3.ebuild,v 1.2 2008/03/13 11:08:31 wschlich Exp $
 
 inherit eutils flag-o-matic
 
-DESCRIPTION="The rescue part of a program that creates emergency boot disks/CDs using your kernel, tools and modules."
+DESCRIPTION="A special version of busybox used by mindi"
 HOMEPAGE="http://www.mondorescue.org"
 SRC_URI="ftp://ftp.mondorescue.org/src/${P}.tar.gz"
 LICENSE="GPL-2"
