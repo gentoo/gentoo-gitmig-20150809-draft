@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.75 2008/02/27 20:18:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.76 2008/03/13 21:29:03 ricmm Exp $
+
+  13 Mar 2008; <ricmm@gentoo.org> GD-2.30.ebuild, GD-2.35-r1.ebuild:
+  Drop to ~mips due to unstable deps
 
   27 Feb 2008; Doug Klima <cardoe@gentoo.org> GD-2.35-r1.ebuild:
   fix built_with_use issues. bug #193661

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.30.ebuild,v 1.16 2007/07/22 07:56:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.30.ebuild,v 1.17 2008/03/13 21:29:03 ricmm Exp $
 
 inherit eutils perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/L/LD/LDS/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="gif jpeg png truetype xpm"
 
 DEPEND=">=media-libs/gd-2.0.28
