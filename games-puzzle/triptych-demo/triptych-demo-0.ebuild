@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/triptych-demo/triptych-demo-0.ebuild,v 1.8 2006/09/19 19:50:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/triptych-demo/triptych-demo-0.ebuild,v 1.9 2008/03/13 18:18:59 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -22,10 +22,10 @@ S=${WORKDIR}/triptych
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
-	dodir ${dir} ${GAMES_BINDIR}
+	dodir "${dir}" "${GAMES_BINDIR}"
 
 	cp -pPR * "${D}"/${dir}/
-	games_make_wrapper triptych ./triptych ${dir}
+	games_make_wrapper triptych ./triptych "${dir}"
 
 	prepgamesdirs
 }
