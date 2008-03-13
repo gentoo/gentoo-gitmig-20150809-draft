@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.0d.ebuild,v 1.10 2008/03/07 01:16:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.0d.ebuild,v 1.11 2008/03/13 18:38:21 wolf31o2 Exp $
 
 inherit games
 
@@ -27,10 +27,8 @@ src_compile() {
 src_install() {
 	dogamesbin src/{robots,xrobots,robots_logfile}
 
-	insinto ${GAMES_DATADIR}/${PN}/scheme
-	doins scheme/*.scm
-	insinto ${GAMES_DATADIR}/${PN}/maps
-	doins maps/*.map
+	insinto "${GAMES_DATADIR}/${PN}"
+	doins -r scheme maps
 
 	dodoc doc/*
 

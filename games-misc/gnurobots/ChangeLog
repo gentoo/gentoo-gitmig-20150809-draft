@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/gnurobots
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/ChangeLog,v 1.10 2008/03/07 01:16:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/ChangeLog,v 1.11 2008/03/13 18:38:21 wolf31o2 Exp $
+
+  13 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> gnurobots-1.0d.ebuild:
+  QA cleanup: Fix quoting (again).
 
   07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> gnurobots-1.0d.ebuild:
   QA cleanup: Fix quoting.
