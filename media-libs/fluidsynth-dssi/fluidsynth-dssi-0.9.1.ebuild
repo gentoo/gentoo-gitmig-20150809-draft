@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fluidsynth-dssi/fluidsynth-dssi-0.9.1.ebuild,v 1.3 2006/03/24 23:01:33 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fluidsynth-dssi/fluidsynth-dssi-0.9.1.ebuild,v 1.4 2008/03/13 21:23:06 aballier Exp $
 
 IUSE=""
 
@@ -21,7 +21,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
-	make DESTDIR="${D}" install || die
-
-	dodoc ChangeLog READDME TODO
+	emake DESTDIR="${D}" install || die
+	dodoc ChangeLog README TODO
 }
