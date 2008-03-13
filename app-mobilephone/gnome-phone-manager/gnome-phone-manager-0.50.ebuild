@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.30.ebuild,v 1.1 2007/10/29 23:31:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.50.ebuild,v 1.1 2008/03/13 23:55:17 eva Exp $
 
 inherit gnome2 autotools
 
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
+# telepathy support is considered experimental
 
 RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-base/gconf-2
@@ -19,7 +20,8 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	>=media-libs/gstreamer-0.10
 	>=gnome-base/orbit-2
 	>=dev-libs/openobex-1
-	>=app-mobilephone/gnokii-0.6.18
+	>=app-mobilephone/gnokii-0.6.22
+	>=net-wireless/bluez-libs-3.12
 	>=gnome-base/libglade-2
 	>=gnome-extra/evolution-data-server-1.2.3
 	>net-wireless/gnome-bluetooth-0.8
@@ -35,9 +37,10 @@ DOCS="README NEWS AUTHORS ChangeLog"
 src_unpack() {
 	gnome2_src_unpack
 
-	# Fix tests
-	echo "gnome-phone-manager.schemas.in" >> po/POTFILES.in
-	echo "phonemgr.glade" >> po/POTFILES.in
+#	echo "gnome-phone-manager.schemas.in" >> po/POTFILES.in
+#	echo "phonemgr.glade" >> po/POTFILES.in
+}
 
-	eautoreconf
+pkg_setup() {
+	G2CONF="${G2CONF} --disable-telepathy"
 }
