@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.57 2008/03/03 10:34:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.58 2008/03/13 02:52:14 williamh Exp $
+
+  13 Mar 2008; William Hubbs <williamh@gentoo.org>
+  speech-tools-1.2.96_beta.ebuild:
+  This package was part of festival-1.95-beta, which was keyworded ~x86-fbsd.
+  I looked over the patch for 1.95-beta and found that the change is in this
+  version.  So, since festival 1.95-beta included this and was keyworded for
+  this arch, I am adding the keyword to this package.
 
   03 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   speech-tools-1.2.96_beta.ebuild:

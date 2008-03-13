@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.10 2008/03/03 10:34:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.11 2008/03/13 02:52:14 williamh Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cstr.ed.ac.uk/"
 SRC_URI="http://www.festvox.org/packed/festival/latest/${MY_P}.tar.gz"
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="esd nas X"
 
 DEPEND="esd? ( media-sound/esound )
