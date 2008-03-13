@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/gtk2-gladexml-1.006.ebuild,v 1.8 2007/05/05 18:16:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/gtk2-gladexml-1.006.ebuild,v 1.9 2008/03/13 16:49:16 jer Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/T/TS/TSCH/${MY_P}.tar.gz"
 HOMEPAGE="http://gtk2-perl.sf.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2
