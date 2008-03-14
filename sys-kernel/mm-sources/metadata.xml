@@ -10,10 +10,6 @@
 		<email>voxus@gentoo.org</email>
 		<name>Konstantin V. Arkhipov</name>
 	</maintainer>
-	<maintainer>
-		<email>masterdriverz@gentoo.org</email>
-		<name>Charlie Shepherd</name>
-	</maintainer>
 	<longdescription>
 		Andrew Morton's patchset for 2.6. It contains experimental features,
 		cleanups, and other interesting patches.
