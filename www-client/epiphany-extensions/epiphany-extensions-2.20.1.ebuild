@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.20.1.ebuild,v 1.6 2007/12/04 20:21:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.20.1.ebuild,v 1.7 2008/03/14 17:22:51 armin76 Exp $
 
 WANT_AUTOMAKE="1.10"
 inherit eutils gnome2 autotools
@@ -21,8 +21,8 @@ RDEPEND=">=www-client/epiphany-2.20
 	>=gnome-base/libglade-2
 	app-text/opensp
 	|| (
-		xulrunner? ( net-libs/xulrunner )
-		>=www-client/mozilla-firefox-1.5
+		xulrunner? ( =net-libs/xulrunner-1.8* )
+		=www-client/mozilla-firefox-2.0*
 	)
 	pcre? ( >=dev-libs/libpcre-3.9-r2 )
 	>=dev-libs/dbus-glib-0.71

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/galeon
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.46 2008/02/29 11:37:49 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.47 2008/03/14 17:21:00 armin76 Exp $
+
+  14 Mar 2008; Raúl Porcel <armin76@gentoo.org> galeon-2.0.3.ebuild,
+  galeon-2.0.4.ebuild:
+  Fix deps on =net-libs/xulrunner-1.8* and =www-client/mozilla-firefox-2.0*
+  wrt #213296
 
   29 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> galeon-2.0.4.ebuild:
   amd64 stable wrt bug #210131

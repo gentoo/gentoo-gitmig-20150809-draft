@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.3.ebuild,v 1.7 2007/10/31 12:40:15 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.3.ebuild,v 1.8 2008/03/14 17:21:00 armin76 Exp $
 
 inherit gnome2 eutils
 
@@ -12,10 +12,10 @@ LICENSE="GPL-2"
 IUSE="seamonkey xulrunner"
 KEYWORDS="amd64 ia64 ppc sparc x86"
 SLOT="0"
-RDEPEND="xulrunner? ( >=net-libs/xulrunner-1.8 )
+RDEPEND="xulrunner? ( =net-libs/xulrunner-1.8* )
 	!xulrunner? (
 		seamonkey? ( www-client/seamonkey )
-		!seamonkey? ( >=www-client/mozilla-firefox-1.5.0.4 )
+		!seamonkey? ( =www-client/mozilla-firefox-2.0* )
 		)
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2.4.0
@@ -37,7 +37,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog FAQ README README.ExtraPrefs THANKS TODO NEWS"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/galeon-2.0.1-imagebehaviour.diff"
 }
