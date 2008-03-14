@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.196 2008/03/13 00:46:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.197 2008/03/14 15:54:09 wolf31o2 Exp $
+
+*genkernel-3.4.10_pre7 (14 Mar 2008)
+*genkernel-3.4.10_pre6 (14 Mar 2008)
+
+  14 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  +genkernel-3.4.10_pre6.ebuild, +genkernel-3.4.10_pre7.ebuild:
+  Added 3.4.10_pre6 and 3.4.10_pre7 for testing.
 
 *genkernel-3.4.10_pre5 (13 Mar 2008)
 
