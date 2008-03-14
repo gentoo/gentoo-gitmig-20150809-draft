@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-2.3.4.0.ebuild,v 1.2 2006/03/19 22:31:31 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-2.3.4.0.ebuild,v 1.3 2008/03/14 11:10:18 phreak Exp $
 
 inherit eutils
 
@@ -15,17 +15,17 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
+S="${WORKDIR}"
+
 RDEPEND=">=dev-db/firebird-1.5.1"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 src_unpack() {
-	mkdir ${P}
-	cd ${P}
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
+	use amd64 && epatch "${FILESDIR}"/${P}-amd64.patch
 }
 
 src_compile() {

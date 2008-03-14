@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-1.0.5.2-r1.ebuild,v 1.16 2007/03/26 08:10:40 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-1.0.5.2-r1.ebuild,v 1.17 2008/03/14 11:10:18 phreak Exp $
 
 inherit eutils
 
@@ -13,20 +13,21 @@ SLOT="0"
 KEYWORDS="x86 -sparc"
 IUSE=""
 
+S="${WORKDIR}"
+
 RDEPEND=">=dev-db/firebird-1.0"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 src_unpack() {
-	mkdir ${P}
-	cd ${P}
 	unpack ${A}
-	epatch ${FILESDIR}/${P}.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}.patch
 	rm ibase.h iberror.h
 }
 
 src_compile() {
-	emake PLATFORM="linux" || die
+	emake PLATFORM="linux" || die "emake failed!"
 }
 
 src_install() {
