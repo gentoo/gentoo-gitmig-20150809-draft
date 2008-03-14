@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.151 2008/03/14 01:11:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.152 2008/03/14 08:18:43 ulm Exp $
+
+  14 Mar 2008; Ulrich Mueller <ulm@gentoo.org> -files/postfix.rc6,
+  -files/smtp.pam, -postfix-2.1.5-r2.ebuild, -postfix-2.2.10.ebuild,
+  -postfix-2.3.6.ebuild:
+  Remove versions vulnerable wrt bug 201671, as far as yet possible.
 
   14 Mar 2008; Steve Dibb <beandog@gentoo.org> postfix-2.2.11-r1.ebuild,
   postfix-2.3.8-r1.ebuild, postfix-2.4.6-r2.ebuild:
