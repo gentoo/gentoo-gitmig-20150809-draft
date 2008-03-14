@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20071103.ebuild,v 1.1 2007/11/05 11:08:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20071103.ebuild,v 1.2 2008/03/14 14:39:37 calchan Exp $
 
 inherit eutils
 
@@ -65,12 +65,12 @@ src_unpack() {
 	# link getweb files in ${S} to get unpacked
 	for i in ${A}
 	do
-		ln -s ${DISTDIR}/${i} ${S}
+		ln -s "${DISTDIR}"/${i} "${S}"
 	done
 
-	cd ${S}
-	epatch ${FILESDIR}/foo2zjs-Makefile-20071105.diff
-	epatch ${FILESDIR}/foo2zjs-udevfwld-20071105.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/foo2zjs-Makefile-20071105.diff
+	epatch "${FILESDIR}"/foo2zjs-udevfwld-20071105.diff
 }
 
 src_compile() {
@@ -99,7 +99,7 @@ src_install() {
 
 	use cups && dodir /usr/share/cups/model
 
-	emake DESTDIR=${D} install install-udev \
+	emake DESTDIR="${D}" install install-udev \
 		|| die "emake install failed"
 }
 
