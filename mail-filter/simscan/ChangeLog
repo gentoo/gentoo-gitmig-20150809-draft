@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/simscan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/simscan/ChangeLog,v 1.7 2008/03/02 22:38:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/simscan/ChangeLog,v 1.8 2008/03/14 23:52:31 tupone Exp $
+
+*simscan-1.4.0-r2 (14 Mar 2008)
+
+  14 Mar 2008; Tupone Alfredo <tupone@gentoo.org> +simscan-1.4.0-r2.ebuild:
+  Fixing clamav integration
 
 *simscan-1.4.0-r1 (02 Mar 2008)
 
