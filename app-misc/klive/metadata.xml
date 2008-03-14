@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>kernel-misc</herd>
-<maintainer>
-  <email>masterdriverz@gentoo.org</email>
-  <name>Charlie Shepherd</name>
-</maintainer>
+	<herd>kernel-misc</herd>
 </pkgmetadata>
