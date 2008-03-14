@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.163 2008/02/04 04:22:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.164 2008/03/14 09:01:14 leio Exp $
+
+  14 Mar 2008; Mart Raudsepp <leio@gentoo.org> gnome-terminal-2.18.2.ebuild,
+  gnome-terminal-2.18.4.ebuild:
+  Be compatible with glib-2.16 and in general more future proof, bug 213340
 
   04 Feb 2008; Jeroen Roovers <jer@gentoo.org> gnome-terminal-2.18.4.ebuild:
   Stable for HPPA (bug #208366).
