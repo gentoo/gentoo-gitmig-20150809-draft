@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kf/kf-0.5.4.1.ebuild,v 1.1 2006/03/05 12:08:12 reb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kf/kf-0.5.4.1.ebuild,v 1.2 2008/03/14 10:21:54 phreak Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# wrong use of typedef struct _KfJispManager
 	epatch "${FILESDIR}"/${P}-typedef_KfJispManager.patch
@@ -31,6 +31,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die 'make install failed'
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	make install DESTDIR="${D}" || die 'make install failed'
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
