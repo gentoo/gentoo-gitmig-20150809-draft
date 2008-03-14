@@ -3,9 +3,6 @@
 <pkgmetadata>
 	<herd>vserver</herd>
 	<maintainer>
-		<email>vserver-devs@gentoo.org</email>
-	</maintainer>
-	<maintainer>
 		<email>pva@gentoo.org</email>
 	</maintainer>
 	<longdescription>
