@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/kchmviewer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.31 2008/02/27 18:03:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.32 2008/03/14 18:24:33 ingmar Exp $
+
+  14 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  kchmviewer-3.1_p2.ebuild:
+  Fix kdelibs dependency to pull in a =3.5* version, bug 213417.
 
   27 Feb 2008; nixnut <nixnut@gentoo.org> kchmviewer-3.1_p2.ebuild:
   Added ~ppc wrt bug 207764
