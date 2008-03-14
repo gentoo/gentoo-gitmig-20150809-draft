@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdocker/kdocker-1.3.ebuild,v 1.1 2006/11/12 22:02:44 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdocker/kdocker-1.3.ebuild,v 1.2 2008/03/14 14:42:53 phreak Exp $
 
 inherit eutils qt3
 
@@ -26,9 +26,9 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-desktop_file.patch
-	epatch ${FILESDIR}/${PN}-installdir.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-desktop_file.patch
+	epatch "${FILESDIR}"/${PN}-installdir.patch
 }
 
 src_compile() {
@@ -42,21 +42,21 @@ src_compile() {
 	emake || die "make failed"
 
 	# langpacks
-	cd ${S}/i18n
+	cd "${S}"/i18n
 	for i in ${LANGS}; do
 		use linguas_${i} && [ -f ${PN}_${i}.ts ] && lrelease ${PN}_${i}.ts
 	done;
 }
 
 src_install() {
-	make INSTALL_ROOT=${D} install || die "installation failed"
+	make INSTALL_ROOT="${D}" install || die "installation failed"
 
 	dodoc AUTHORS BUGS CREDITS ChangeLog HACKING INSTALL README TODO
 
 	# langpacks are being installed only if
 	# approperiare LINGUAS variable is set
 	insinto /usr/share/${PN}/i18n
-	cd ${S}/i18n
+	cd "${S}"/i18n
 	for i in ${LANGS}; do
 		use linguas_${i} && [ -f ${PN}_${i}.qm ] && doins ${PN}_${i}.qm
 	done;
