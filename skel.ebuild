@@ -12,11 +12,13 @@
 # generated to contain the correct data.
 
 # The EAPI variable tells the ebuild format in use.
-# Defaults to 0 if not specified. See current PMS draft for more details.
+# Defaults to 0 if not specified. The current PMS draft contains details on
+# a proposed EAPI=0 definition but is not finalized yet. It is for this
+# reason that using EAPI > 0 should be avoided.
 # Eclasses will test for this variable if they need to use EAPI > 0 features.
-# Ebuilds should not define EAPI=1 unless they need to use features added
-# in that version.
-#EAPI=1
+# Ebuilds should not define EAPI > 0 unless they absolutely need to use 
+# features added in that version.
+#EAPI=0
 
 # inherit lists eclasses to inherit functions from. Almost all ebuilds should
 # inherit eutils, as a large amount of important functionality has been
