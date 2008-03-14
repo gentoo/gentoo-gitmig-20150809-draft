@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/freevo
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.55 2007/12/01 21:04:50 rbu Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.56 2008/03/14 11:59:59 rbu Exp $
+
+*freevo-1.7.6.1 (14 Mar 2008)
+
+  14 Mar 2008; Robert Buchholz <rbu@gentoo.org> +freevo-1.7.6.1.ebuild:
+  Version bump, for upstream changes see bug #203550.
+  
+  Introduce new gphoto2 use flag for the photo plugin, thanks to kroemmelbein
+  and alpiturchi. Do not install tvtime if USE=ivtv is set, thanks to George
+  Kibardin. QA improvements, thanks Donnie Berkholz for reviews.
 
 *freevo-1.7.4 (01 Dec 2007)
 
