@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.53 2008/01/30 08:30:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.54 2008/03/14 20:13:21 hollow Exp $
+
+  14 Mar 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  fix metadata
 
   30 Jan 2008; <pva@gentoo.org> vzctl-3.0.22.ebuild:
   x86/amd64 stable, bug 199738.
