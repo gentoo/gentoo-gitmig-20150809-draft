@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/codecgraph
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/ChangeLog,v 1.1 2008/03/14 12:08:53 chainsaw Exp $
+
+*codecgraph-20080311 (14 Mar 2008)
+
+  14 Mar 2008; Tony Vroon <chainsaw@gentoo.org>
+  +files/20080311-makefile-prefix.diff, +metadata.xml,
+  +codecgraph-20080311.ebuild:
+  Initial commit, ebuild by me.
+
