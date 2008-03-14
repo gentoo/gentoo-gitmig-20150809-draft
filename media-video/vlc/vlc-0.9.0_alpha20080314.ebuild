@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080228.ebuild,v 1.2 2008/02/29 10:55:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080314.ebuild,v 1.1 2008/03/14 20:03:18 aballier Exp $
+
+EAPI="1"
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -10,7 +12,7 @@ inherit eutils wxwidgets multilib autotools toolchain-funcs gnome2 nsplugins qt4
 MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
-VLC_SNAPSHOT_TIME="0024"
+VLC_SNAPSHOT_TIME="0007"
 
 #RESTRICT="test"
 
@@ -26,7 +28,7 @@ DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 if [[ "${P}" == *_alpha* ]]; then # Snapshots taken from nightlies.videolan.org
 	SRC_URI="http://nightlies.videolan.org/build/source/trunk-${PV/*_alpha/}-${VLC_SNAPSHOT_TIME}/${PN}-snapshot-${PV/*_alpha/}.tar.bz2"
-	MY_P="${P/_alpha*/}-svn"
+	MY_P="${P/_alpha*/}-git"
 elif [[ "${P}" == *_p* ]]; then # Snapshots
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
 	MY_P="${P}"
@@ -111,7 +113,7 @@ RDEPEND="
 		ogg? ( media-libs/libogg )
 		png? ( media-libs/libpng )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.8 )
-		qt4? ( $(qt4_min_version 4.2.0 ) )
+		qt4? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) >=x11-libs/qt-4.2.0:4 ) )
 		samba? ( net-fs/samba )
 		sdl? ( >=media-libs/libsdl-1.2.8
 			sdl-image? ( media-libs/sdl-image ) )
