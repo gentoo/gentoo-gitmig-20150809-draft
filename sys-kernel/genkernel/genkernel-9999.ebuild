@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.6 2008/03/12 04:20:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.7 2008/03/14 19:54:04 wolf31o2 Exp $
 
 # genkernel-9999        -> latest SVN
 # genkernel-9999.REV    -> use SVN REV
@@ -11,7 +11,6 @@ VERSION_DMAP='1.02.22'
 VERSION_DMRAID='1.0.0.rc14'
 VERSION_E2FSPROGS='1.39'
 VERSION_LVM='2.02.28'
-VERSION_PKG='3.4-r4'
 
 MY_HOME="http://dev.gentoo.org/~wolf31o2"
 RH_HOME="ftp://sources.redhat.com/pub"
@@ -37,9 +36,7 @@ then
 else
 	inherit bash-completion eutils
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
-		mirror://gentoo/${PN}-pkg-${VERSION_PKG}.tar.bz2
 		${MY_HOME}/${P}.tar.bz2
-		${MY_HOME}/sources/${PN}/${PN}-pkg-${VERSION_PKG}.tar.bz2
 		${COMMON_URI}"
 fi
 
@@ -65,8 +62,6 @@ src_unpack() {
 		subversion_src_unpack
 	else
 		unpack ${P}.tar.bz2
-		cd "${S}"
-		unpack ${PN}-pkg-${VERSION_PKG}.tar.bz2
 	fi
 	use selinux && sed -i 's/###//g' gen_compile.sh
 }
@@ -94,13 +89,6 @@ src_install() {
 	doins -r "${S}"/* || die "doins"
 	use ibm && cp "${S}"/ppc64/kernel-2.6-pSeries "${S}"/ppc64/kernel-2.6 || \
 		cp "${S}"/ppc64/kernel-2.6.g5 "${S}"/ppc64/kernel-2.6
-
-	cp -f "${DISTDIR}"/dmraid-${VERSION_DMRAID}.tar.bz2 \
-	"${DISTDIR}"/LVM2.${VERSION_LVM}.tgz \
-	"${DISTDIR}"/device-mapper.${VERSION_DMAP}.tgz \
-	"${DISTDIR}"/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz \
-	"${DISTDIR}"/busybox-${VERSION_BUSYBOX}.tar.bz2 \
-	"${D}"/usr/share/genkernel/pkg || die "copying pkg"
 
 	dobashcompletion "${FILESDIR}"/genkernel.bash
 }
