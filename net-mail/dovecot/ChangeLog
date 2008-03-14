@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.152 2008/03/12 15:38:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.153 2008/03/14 01:16:35 beandog Exp $
+
+  14 Mar 2008; Steve Dibb <beandog@gentoo.org> dovecot-1.0.13.ebuild,
+  dovecot-1.0.13-r1.ebuild:
+  amd64 stable, bug 212336
 
   12 Mar 2008; Raúl Porcel <armin76@gentoo.org> dovecot-1.0.13-r1.ebuild:
   alpha/sparc stable wrt #212336
