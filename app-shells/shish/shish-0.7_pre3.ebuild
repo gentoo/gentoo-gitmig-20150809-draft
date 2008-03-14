@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/shish/shish-0.7_pre3.ebuild,v 1.2 2005/10/01 13:44:42 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/shish/shish-0.7_pre3.ebuild,v 1.3 2008/03/14 20:45:42 hollow Exp $
 
 inherit toolchain-funcs
 
@@ -38,7 +38,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Updating /etc/shells"
-	( grep -v "^/bin/shish$" /etc/shells; echo "/bin/shish" ) > ${T}/shells
-	mv -f ${T}/shells /etc/shells
+	einfo "Updating ${ROOT}etc/shells"
+	( grep -v "^/bin/shish$" "${ROOT}"etc/shells; echo "/bin/shish" ) > "${T}"/shells
+	mv -f "${T}"/shells "${ROOT}"etc/shells
 }
