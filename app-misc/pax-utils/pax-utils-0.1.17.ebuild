@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.17.ebuild,v 1.6 2008/03/14 01:16:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.17.ebuild,v 1.7 2008/03/14 10:59:11 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -25,5 +25,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	cp lddtree.sh ${D}/usr/bin/ ; #|| die "dont care"
+	newbin lddtree.sh lddtree
 }
