@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsspam/cvsspam-0.2.12.ebuild,v 1.1 2005/07/13 15:22:33 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsspam/cvsspam-0.2.12.ebuild,v 1.2 2008/03/14 10:00:32 phreak Exp $
 
 inherit eutils
 
@@ -22,5 +22,5 @@ src_install() {
 	doins cvsspam.conf || die
 
 	dohtml cvsspam-doc.html
-	dodoc COPYING CREDITS TODO cvsspam-doc.pdf
+	dodoc CREDITS TODO cvsspam-doc.pdf
 }
