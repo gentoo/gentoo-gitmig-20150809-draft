@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.20.3.ebuild,v 1.9 2008/03/14 17:32:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.20.3.ebuild,v 1.10 2008/03/14 17:46:44 armin76 Exp $
 
 inherit gnome2 eutils multilib
 
@@ -29,8 +29,8 @@ RDEPEND=">=dev-libs/glib-2.13.4
 	>=gnome-base/gconf-2
 	>=app-text/iso-codes-0.35
 	networkmanager? ( net-misc/networkmanager )
-	!xulrunner? ( =www-client/mozilla-firefox-2* )
-	xulrunner? ( =net-libs/xulrunner-1.8* )
+	!xulrunner? ( >=www-client/mozilla-firefox-1.5 )
+	xulrunner? ( net-libs/xulrunner )
 	python? (
 		>=dev-lang/python-2.3
 		>=dev-python/pygtk-2.7.1
