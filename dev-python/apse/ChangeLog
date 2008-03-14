@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apse
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.7 2007/05/26 11:57:49 welp Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.8 2008/03/14 10:37:59 phreak Exp $
+
+  14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Christian Andreetta (satya, #48841) from metadata.xml.
 
   26 May 2007; Peter Weller <welp@gentoo.org> apse-0.2.ebuild:
   Keyworded ~amd64 wrt bug 179661
