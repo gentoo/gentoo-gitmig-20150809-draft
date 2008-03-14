@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-1.1.6.ebuild,v 1.5 2008/03/11 21:54:59 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-1.1.6.ebuild,v 1.6 2008/03/14 08:23:08 dertobi123 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://silcnet.org/download/toolkit/sources/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug ipv6"
 
 RDEPEND=""
