@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/fann
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.9 2008/03/14 10:42:39 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.10 2008/03/14 10:54:33 phreak Exp $
+
+  14 Mar 2008; Christian Heim <phreak@gentoo.org> fann-1.2.0.ebuild,
+  fann-1.2.0-r1.ebuild, fann-2.0.0.ebuild:
+  Fixing the minor syntax errors. Adding some style.
 
   14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Christian Andreetta (satya, #48841) from metadata.xml.

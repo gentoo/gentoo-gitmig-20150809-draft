@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.0.0.ebuild,v 1.4 2007/07/13 05:28:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.0.0.ebuild,v 1.5 2008/03/14 10:54:33 phreak Exp $
 
 inherit eutils
 
@@ -16,8 +16,8 @@ IUSE="doc python"
 DEPEND="python? ( dev-lang/python dev-lang/swig )"
 
 src_unpack() {
-	unpack ${A} || die
-	cd "${S}" || die
+	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-shared-libs-gentoo.patch
 	epatch "${FILESDIR}"/${P}-benchmark.patch
 }
@@ -26,15 +26,15 @@ src_compile() {
 	econf ${myconf} || die "configure failed"
 	emake || die "failed to build src"
 	if use python; then
-		cd ${S}/python || \
+		cd "${S}"/python || \
 			die "failed to step into python subdirectory"
 		emake || die "failed to build python wrappers"
+		cd "${S}"
 	fi
 }
 
 src_install() {
-	cd "${S}"
-	make install DESTDIR=${D} || die "install failed"
+	make install DESTDIR="${D}" || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	if use doc; then
@@ -52,9 +52,9 @@ src_install() {
 	fi
 
 	if use python; then
-		cd ${S}/python || \
+		cd "${S}"/python || \
 			die "Faild to step into python subdirectory"
-		make install ROOT=${D} || \
+		make install ROOT="${D}" || \
 			die "failed to install python wrappers"
 		if use doc; then
 			local python_doc_dir="/usr/share/${PN}/examples/python"
