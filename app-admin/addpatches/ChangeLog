@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/addpatches
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/addpatches/ChangeLog,v 1.17 2006/11/25 18:34:57 masterdriverz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/addpatches/ChangeLog,v 1.18 2008/03/14 09:20:19 phreak Exp $
+
+  14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Charlie Shepherd (masterdriverz, #153940) from metadata.xml.
 
   25 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> metadata.xml:
   Kernel's got this one...
