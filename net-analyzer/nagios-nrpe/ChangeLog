@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.48 2008/03/14 07:27:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.49 2008/03/14 11:58:40 caleb Exp $
+
+  14 Mar 2008; Caleb Tennis <caleb@gentoo.org> nagios-nrpe-2.10.ebuild:
+  amd64 stable, per bug #205335
 
 *nagios-nrpe-2.12 (14 Mar 2008)
 
