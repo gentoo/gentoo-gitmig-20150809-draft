@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/wput-0.6.1.ebuild,v 1.2 2008/02/24 17:12:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/wput-0.6.1.ebuild,v 1.3 2008/03/14 09:29:51 phreak Exp $
 
 inherit eutils
 
-DESCRIPTION="A tiny program that looks like wget and is designed to upload files or whole directories to remote ftp-servers"
+DESCRIPTION="A tiny, wget-alike program, that is designed to upload files/whole directories to remote ftp-servers"
 HOMEPAGE="http://wput.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 		nls? ( sys-devel/gettext )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-0.6-gentoo.diff"
 	# Fix bug 126828
