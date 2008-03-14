@@ -3,11 +3,7 @@
 <pkgmetadata>
 	<herd>python</herd>
 	<herd>apache</herd>
-	<maintainer>
-		<email>satya@gentoo.org</email>
-		<name>Christian Andreetta</name>
-	</maintainer>
-	<longdescription>
+	<longdescription lang="en">
 		SkunkWeb is a multi-process application server written in python,
 		extensively using 'pickle' for caching. Ships with its own web server,
 		or can be deployed with apache and mod-python. Includes server-side form
