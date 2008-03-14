@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/bincimap
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.45 2008/02/29 16:27:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.46 2008/03/14 10:05:28 phreak Exp $
+
+  14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml,
+  bincimap-1.2.11.ebuild, bincimap-1.2.12.ebuild, bincimap-1.2.13.ebuild:
+  Removing Masatomo Nakano (nakano, #200340) from metadata.xml. Fixing the
+  minor syntax errors.
 
   29 Feb 2008; Jeroen Roovers <jer@gentoo.org> bincimap-1.2.11.ebuild,
   bincimap-1.2.12.ebuild, bincimap-1.2.13.ebuild, bincimap-1.3.3.ebuild,

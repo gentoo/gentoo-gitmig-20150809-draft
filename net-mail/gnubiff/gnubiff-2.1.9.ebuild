@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.1.9.ebuild,v 1.5 2007/07/22 08:20:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.1.9.ebuild,v 1.6 2008/03/14 10:07:57 phreak Exp $
 
 inherit eutils
 
@@ -36,5 +36,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING INSTALL NEWS README THANKS TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS TODO
 }

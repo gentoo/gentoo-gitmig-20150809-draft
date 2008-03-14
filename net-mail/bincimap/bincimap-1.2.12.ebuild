@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.12.ebuild,v 1.7 2008/02/29 16:27:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.12.ebuild,v 1.8 2008/03/14 10:05:28 phreak Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_install () {
 		keepdir /var/log/bincimap-ssl || die
 	fi
 
-	dodoc AUTHORS COPYING COPYING.OpenSSL ChangeLog INSTALL \
+	dodoc AUTHORS ChangeLog INSTALL \
 		NEWS README README.SSL TODO
 
 	# backward compatibility
