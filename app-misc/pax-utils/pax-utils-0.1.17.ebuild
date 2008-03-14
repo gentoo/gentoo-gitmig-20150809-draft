@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.17.ebuild,v 1.8 2008/03/14 10:59:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.1.17.ebuild,v 1.9 2008/03/14 19:52:30 solar Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -20,7 +20,7 @@ IUSE="caps"
 DEPEND="caps? ( sys-libs/libcap )"
 
 src_compile() {
-	emake CC=$(tc-getCC) USE_CAP=$(use caps && echo yes) || die
+	emake CC="$(tc-getCC)" USE_CAP=$(use caps && echo yes) || die
 }
 
 src_install() {
