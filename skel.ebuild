@@ -13,10 +13,9 @@
 
 # The EAPI variable tells the ebuild format in use.
 # Defaults to 0 if not specified. The current PMS draft contains details on
-# a proposed EAPI=0 definition but is not finalized yet. It is for this
-# reason that using EAPI > 0 should be avoided.
+# a proposed EAPI=0 definition but is not finalized yet.
 # Eclasses will test for this variable if they need to use EAPI > 0 features.
-# Ebuilds should not define EAPI > 0 unless they absolutely need to use 
+# Ebuilds should not define EAPI > 0 unless they absolutely need to use
 # features added in that version.
 #EAPI=0
 
