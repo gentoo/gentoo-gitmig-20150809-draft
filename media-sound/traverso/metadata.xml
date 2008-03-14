@@ -3,9 +3,6 @@
 <pkgmetadata>
 	<herd>proaudio</herd>
 	<maintainer>
-		<email>proaudio@gentoo.org</email>
-	</maintainer>
-	<maintainer>
 		<email>aballier@gentoo.org</email>
 		<name>Alexis Ballier</name>
 	</maintainer>
