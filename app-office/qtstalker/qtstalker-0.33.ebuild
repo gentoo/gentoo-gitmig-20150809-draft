@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.33.ebuild,v 1.1 2007/03/05 22:59:48 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.33.ebuild,v 1.2 2008/03/14 14:23:55 phreak Exp $
 
 inherit qt3 eutils
 
@@ -29,9 +29,9 @@ MAKEOPTS="${MAKEOPTS} -j1"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-sandboxfix_no_fixpath.patch
-	epatch ${FILESDIR}/${P}-install_docs_with_emerge.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-sandboxfix_no_fixpath.patch
+	epatch "${FILESDIR}"/${P}-install_docs_with_emerge.patch
 }
 
 src_compile() {
@@ -42,7 +42,7 @@ src_compile() {
 		pdir="`echo ${i} | sed -e 's/\/[a-zA-Z]*.pro$//'`"
 		pfile="`echo ${i} | sed -e 's/^.*\///'`"
 
-		cd ${pdir}
+		cd "${pdir}"
 		${QTDIR}/bin/qmake ${pfile} \
 			QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
 			QMAKE_RPATH= \
@@ -51,7 +51,7 @@ src_compile() {
 			|| die "qmake ${pfile} failed"
 	done
 
-	cd ${S}
+	cd "${S}"
 	emake || die "make failed"
 
 	einfo "Building langpaccks..."
@@ -68,13 +68,13 @@ src_install() {
 	make install || die "make install failed"
 
 	einfo "Installing docs..."
-	cd ${S}/docs
+	cd "${S}"/docs
 	dohtml *{html,png}
-	dodoc AUTHORS BUGS CHANGELOG INSTALL TODO ${S}/README
+	dodoc AUTHORS BUGS CHANGELOG INSTALL TODO "${S}"/README
 
 	# install only needed langpacks
 	einfo "Installing langpacks..."
-	cd ${S}/i18n
+	cd "${S}"/i18n
 	insinto /usr/share/${PN}/i18n
 	for i in ${LINGUAS}; do
 		if [ -f ${PN}_${i}.qm ]; then
@@ -83,6 +83,6 @@ src_install() {
 	done
 
 	# menu and icon
-	domenu ${FILESDIR}/${PN}.desktop
-	doicon ${FILESDIR}/${PN}.png
+	domenu "${FILESDIR}"/${PN}.desktop
+	doicon "${FILESDIR}"/${PN}.png
 }

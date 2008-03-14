@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.32.ebuild,v 1.3 2007/03/05 22:59:48 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.32.ebuild,v 1.4 2008/03/14 14:23:55 phreak Exp $
 
 inherit qt3 eutils
 
@@ -30,12 +30,12 @@ MAKEOPTS="${MAKEOPTS} -j1"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-sandboxfix_no_fixpath.patch
-	epatch ${FILESDIR}/${PN}-install_docs_with_emerge.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-sandboxfix_no_fixpath.patch
+	epatch "${FILESDIR}"/${PN}-install_docs_with_emerge.patch
 	# without that, qtstalker will use mysql, when only it is installed,
 	# even when we do not want mysql support for this package
-	! use mysql && epatch ${FILESDIR}/${PN}-no_mysql_support.patch
+	! use mysql && epatch "${FILESDIR}"/${PN}-no_mysql_support.patch
 }
 
 src_compile() {
@@ -44,13 +44,13 @@ src_compile() {
 		QMAKE_RPATH= \
 		|| die "qmake ${PN}.pro failed"
 
-	cd ${S}/lib
+	cd "${S}"/lib
 	${QTDIR}/bin/qmake lib.pro \
 		QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
 		QMAKE_RPATH= \
 		|| die "qmake ${PN}.pro failed"
 
-	cd ${S}
+	cd "${S}"
 	emake || die "make failed"
 }
 
@@ -59,12 +59,12 @@ src_install() {
 	export INSTALL_ROOT="${D}"
 	make install || die "make install failed"
 
-	cd ${S}/docs
+	cd "${S}"/docs
 	dohtml *{html,png}
-	dodoc AUTHORS BUGS CHANGELOG INSTALL TODO ${S}/README
+	dodoc AUTHORS BUGS CHANGELOG INSTALL TODO "${S}"/README
 
 	# install only needed langpacks
-	cd ${S}/i18n
+	cd "${S}"/i18n
 	insinto /usr/share/${PN}/i18n
 	for i in ${LINGUAS}; do
 		if [ -f ${PN}_${i}.qm ]; then
@@ -73,6 +73,6 @@ src_install() {
 	done
 
 	# menu and icon
-	domenu ${FILESDIR}/${PN}.desktop
-	doicon ${FILESDIR}/${PN}.png
+	domenu "${FILESDIR}"/${PN}.desktop
+	doicon "${FILESDIR}"/${PN}.png
 }
