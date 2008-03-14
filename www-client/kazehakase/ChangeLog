@@ -1,6 +1,9 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.56 2008/02/29 15:43:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.57 2008/03/14 10:10:16 phreak Exp $
+
+  14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Masatomo Nakano (nakano, #200340) from metadata.xml.
 
 *kazehakase-0.5.3 (29 Feb 2008)
 

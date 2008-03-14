@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>mozilla</herd>
-<maintainer>
-<email>nakano@gentoo.org</email>
-</maintainer>
-<maintainer>
-<email>matsuu@gentoo.org</email>
-</maintainer>
+	<herd>mozilla</herd>
+	<maintainer>
+		<email>matsuu@gentoo.org</email>
+	</maintainer>
 </pkgmetadata>
