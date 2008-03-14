@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/chess
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.22 2007/10/26 17:58:45 ulm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.23 2008/03/14 21:54:06 ulm Exp $
+
+*chess-2.0_beta6-r1 (14 Mar 2008)
+
+  14 Mar 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/2.0_beta6-chess-common-handler-gentoo.patch,
+  +files/50chess-gentoo.el, +chess-2.0_beta6-r1.ebuild:
+  Allow alternative chess engines in RDEPEND. Do not use custom-set-variables
+  in site file since it is reserved for the user.
 
   26 Oct 2007; Ulrich Mueller <ulm@gentoo.org>
   -files/2.0_beta5-byte-compiling-files-gentoo.patch,
