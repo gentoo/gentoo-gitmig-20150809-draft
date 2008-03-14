@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.1 2008/01/18 00:40:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.2 2008/03/14 12:16:38 caleb Exp $
+
+  14 Mar 2008; Caleb Tennis <caleb@gentoo.org> boto-1.0a.ebuild:
+  amd64 stable
 
 *boto-1.0a (18 Jan 2008)
 
