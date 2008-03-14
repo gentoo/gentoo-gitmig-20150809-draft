@@ -1,6 +1,10 @@
 # ChangeLog for games-board/glchess
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/ChangeLog,v 1.14 2007/08/25 19:13:24 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/ChangeLog,v 1.15 2008/03/14 00:51:53 wolf31o2 Exp $
+
+  14 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> glchess-1.0.2.ebuild,
+  glchess-1.0.6.ebuild:
+  QA cleanup: Fix quoting.
 
 *glchess-1.0.6 (25 Aug 2007)
 

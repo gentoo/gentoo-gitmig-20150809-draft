@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/maitretarot/maitretarot-0.1.98.ebuild,v 1.4 2004/06/24 22:19:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/maitretarot/maitretarot-0.1.98.ebuild,v 1.5 2008/03/14 00:52:52 wolf31o2 Exp $
 
 inherit games
 
@@ -19,7 +19,7 @@ DEPEND="=dev-libs/glib-2*
 
 src_compile() {
 	egamesconf \
-		--with-default-config-file=${GAMES_SYSCONFDIR}/maitretarotrc.xml \
+		--with-default-config-file="${GAMES_SYSCONFDIR}/maitretarotrc.xml" \
 		|| die
 	emake || die "emake failed"
 }

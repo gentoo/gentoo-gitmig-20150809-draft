@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/glchess-1.0.2.ebuild,v 1.2 2007/03/19 19:36:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/glchess-1.0.2.ebuild,v 1.3 2008/03/14 00:51:53 wolf31o2 Exp $
 
 inherit python distutils games
 
@@ -31,7 +31,7 @@ src_unpack() {
 
 src_install() {
 	python_version
-	distutils_src_install --install-scripts=${GAMES_BINDIR}
+	distutils_src_install --install-scripts="${GAMES_BINDIR}"
 	if use nls ; then
 		emake DESTDIR="${D}" install || die "emake install failed"
 	fi
