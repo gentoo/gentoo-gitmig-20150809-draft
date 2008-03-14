@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/fann
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.8 2007/06/28 13:25:22 josejx Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.9 2008/03/14 10:42:39 phreak Exp $
+
+  14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Christian Andreetta (satya, #48841) from metadata.xml.
 
   28 Jun 2007; Joseph Jezak <josejx@gentoo.org> fann-2.0.0.ebuild:
   Marked ~ppc for bug #182739.
