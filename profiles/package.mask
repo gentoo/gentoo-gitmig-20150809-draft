@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8382 2008/03/14 08:49:41 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8383 2008/03/14 11:20:05 humpback Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -916,10 +916,6 @@ sys-kernel/hppa-sources
 # Robin H. Johnson <robbat2@gentoo.org> (02 Nov 2007)
 # Brokeness in these
 =mail-mta/nullmailer-1.03*
-
-# Gustavo Felisberto <humpback@gentoo.org> (07 Nov 2007)
-# Beta version
->=net-im/skype-2.0.0.13
 
 # Hanno Boeck <hanno@gentoo.org> (11 Nov 2007)
 # Remaining beryl-related packages, beryl has been removed
