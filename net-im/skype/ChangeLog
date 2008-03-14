@@ -1,6 +1,13 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.88 2008/02/29 20:13:52 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.89 2008/03/14 11:18:38 humpback Exp $
+
+*skype-2.0.0.63 (14 Mar 2008)
+
+  14 Mar 2008; Gustavo Felisberto <humpback@gentoo.org>
+  -skype-2.0.0.27.ebuild, -skype-2.0.0.43.ebuild, +skype-2.0.0.63.ebuild:
+  Removed beta versions and added the first version with video. This version
+  is no longer masked.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> skype-1.4.0.118.ebuild,
   skype-2.0.0.27.ebuild, skype-2.0.0.43.ebuild:
