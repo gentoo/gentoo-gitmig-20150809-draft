@@ -1,6 +1,11 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.57 2008/03/14 10:10:16 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.58 2008/03/14 17:31:10 armin76 Exp $
+
+  14 Mar 2008; Raúl Porcel <armin76@gentoo.org> kazehakase-0.5.0.ebuild,
+  kazehakase-0.5.1.ebuild, kazehakase-0.5.2.ebuild, kazehakase-0.5.3.ebuild:
+  Fix deps on =net-libs/xulrunner-1.8* and =www-client/mozilla-firefox-2.0*
+  wrt #213296
 
   14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Masatomo Nakano (nakano, #200340) from metadata.xml.

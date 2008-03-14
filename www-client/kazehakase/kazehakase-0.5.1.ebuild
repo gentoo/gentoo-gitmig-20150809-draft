@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.5.1.ebuild,v 1.1 2007/12/31 13:12:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.5.1.ebuild,v 1.2 2008/03/14 17:31:10 armin76 Exp $
 
 inherit flag-o-matic
 
@@ -16,10 +16,10 @@ LICENSE="GPL-2"
 
 DEPEND=">=x11-libs/gtk+-2.12
 	|| (
-		>=www-client/mozilla-firefox-1.0.2-r1
-		>=www-client/seamonkey-1.0
-		>=mail-client/mozilla-thunderbird-0.8
-		>=net-libs/xulrunner-1.8
+		=www-client/mozilla-firefox-2*
+		=www-client/seamonkey-1*
+		=mail-client/mozilla-thunderbird-2*
+		=net-libs/xulrunner-1.8*
 	)
 	ssl? ( >=net-libs/gnutls-1.2.0 )
 	ruby? ( dev-ruby/ruby-gtk2 dev-ruby/ruby-gettext )
