@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.143 2008/02/02 17:56:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.144 2008/03/14 01:23:20 chainsaw Exp $
+
+*audacious-1.5.0 (14 Mar 2008)
+
+  14 Mar 2008; Tony Vroon <chainsaw@gentoo.org> +audacious-1.5.0.ebuild:
+  Version bump. D-Bus is a mandatory dependency. It will stay that way.
 
 *audacious-1.4.6 (02 Feb 2008)
 
