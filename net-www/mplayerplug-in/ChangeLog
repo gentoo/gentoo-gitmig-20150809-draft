@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.103 2008/02/21 18:16:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.104 2008/03/14 17:40:03 armin76 Exp $
+
+  14 Mar 2008; Raúl Porcel <armin76@gentoo.org> mplayerplug-in-3.35.ebuild,
+  mplayerplug-in-3.45.ebuild, mplayerplug-in-3.50.ebuild:
+  Fix deps on =net-libs/xulrunner-1.8* and =www-client/mozilla-firefox-2.0*
+  wrt #213296
 
   21 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
   mplayerplug-in-3.45.ebuild, mplayerplug-in-3.50.ebuild:

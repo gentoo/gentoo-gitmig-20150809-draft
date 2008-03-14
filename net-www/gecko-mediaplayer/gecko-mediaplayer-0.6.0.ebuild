@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gecko-mediaplayer/gecko-mediaplayer-0.6.0.ebuild,v 1.1 2008/02/16 07:26:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gecko-mediaplayer/gecko-mediaplayer-0.6.0.ebuild,v 1.2 2008/03/14 17:37:36 armin76 Exp $
 
 inherit multilib
 
@@ -15,9 +15,9 @@ IUSE=""
 
 RDEPEND=">=dev-libs/dbus-glib-0.7
 	>=media-video/gnome-mplayer-0.6
-	|| ( net-libs/xulrunner
-		www-client/mozilla-firefox
-		www-client/seamonkey
+	|| ( =net-libs/xulrunner-1.8*
+		=www-client/mozilla-firefox-2*
+		=www-client/seamonkey-1*
 		www-client/epiphany )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

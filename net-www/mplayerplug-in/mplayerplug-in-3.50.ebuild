@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.50.ebuild,v 1.3 2008/02/21 18:16:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.50.ebuild,v 1.4 2008/03/14 17:40:03 armin76 Exp $
 
 inherit eutils multilib autotools
 
@@ -17,10 +17,10 @@ LANGS="cs da de en_US es fr hu it ja ko nb nl pl pt_BR ru sk se tr wa zh_CN"
 for X in ${LANGS}; do IUSE="${IUSE} linguas_${X}"; done
 
 DEPEND="
-		firefox? ( www-client/mozilla-firefox )
+		firefox? ( =www-client/mozilla-firefox-2* )
 		!firefox? (
-			seamonkey? ( www-client/seamonkey )
-			!seamonkey? ( net-libs/xulrunner )
+			seamonkey? ( =www-client/seamonkey-1* )
+			!seamonkey? ( =net-libs/xulrunner-1.8* )
 		)
 		x11-libs/libXpm
 		x11-proto/xextproto
