@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/slony1
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.17 2007/12/23 16:30:36 nakano Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.18 2008/03/14 09:48:55 phreak Exp $
+
+  14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Masatomo Nakano (nakano, #200340) from metadata.xml.
 
 *slony1-1.2.12 (23 Dec 2007)
 
