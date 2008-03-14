@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.3.ebuild,v 1.8 2008/03/14 17:21:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.3.ebuild,v 1.9 2008/03/14 17:27:42 armin76 Exp $
 
 inherit gnome2 eutils
 
@@ -14,8 +14,8 @@ KEYWORDS="amd64 ia64 ppc sparc x86"
 SLOT="0"
 RDEPEND="xulrunner? ( =net-libs/xulrunner-1.8* )
 	!xulrunner? (
-		seamonkey? ( www-client/seamonkey )
-		!seamonkey? ( =www-client/mozilla-firefox-2.0* )
+		seamonkey? ( =www-client/seamonkey-1* )
+		!seamonkey? ( =www-client/mozilla-firefox-2* )
 		)
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2.4.0
