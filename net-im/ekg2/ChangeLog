@@ -1,6 +1,10 @@
 # ChangeLog for net-im/ekg2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.24 2008/03/14 11:16:44 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.25 2008/03/14 14:17:27 phreak Exp $
+
+  14 Mar 2008; Christian Heim <phreak@gentoo.org> ekg2-20051202.ebuild,
+  ekg2-20061007.ebuild, ekg2-20061202.ebuild:
+  Fixing some minor syntax errors.
 
   14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Karol Wojtaszek (sekretarz, #56912) from metadata.xml.

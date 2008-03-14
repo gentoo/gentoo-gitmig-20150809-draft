@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.6 2007/01/09 21:09:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.7 2008/03/14 14:17:27 phreak Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -45,13 +45,13 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Ekg2 has no debug configure option
 	# Instead it features a runtime option which defaults to on
-	! use debug && epatch ${FILESDIR}/${P}-no-default-debug.patch
+	! use debug && epatch "${FILESDIR}"/${P}-no-default-debug.patch
 
-	epatch ${FILESDIR}/${P}-intl.patch
+	epatch "${FILESDIR}"/${P}-intl.patch
 	AT_M4DIR=m4 eautoreconf
 }
 

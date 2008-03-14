@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061007.ebuild,v 1.1 2006/10/09 20:09:09 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061007.ebuild,v 1.2 2008/03/14 14:17:27 phreak Exp $
 
 DESCRIPTION="Text based Instant Messenger client that supports many protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://www.ekg2.org/"
@@ -44,6 +44,6 @@ src_install() {
 		CONF_LIBDIR=$(getlib)/lib/ekg2/plugins
 	fi
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc docs/*
 }
