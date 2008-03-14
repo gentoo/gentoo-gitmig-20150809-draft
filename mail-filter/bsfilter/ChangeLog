@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/bsfilter
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bsfilter/ChangeLog,v 1.14 2007/02/03 02:17:31 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bsfilter/ChangeLog,v 1.15 2008/03/14 10:02:26 phreak Exp $
+
+  14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml,
+  bsfilter-1.0.7.ebuild, bsfilter-1.0.9.ebuild, bsfilter-1.0.15.ebuild:
+  Removing Masatomo Nakano (nakano, #200340) from metadata.xml. Fixing the
+  minor syntax errors.
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> Manifest:
   Fix broken digest
