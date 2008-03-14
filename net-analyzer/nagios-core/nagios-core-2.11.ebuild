@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.10-r2.ebuild,v 1.2 2008/02/28 00:56:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.11.ebuild,v 1.1 2008/03/14 07:07:34 dertobi123 Exp $
 
 EAPI="1"
 
@@ -130,7 +130,6 @@ src_install() {
 	doins -r contrib/eventhandlers
 
 	doinitd "${FILESDIR}"/nagios
-	newconfd "${FILESDIR}"/conf.d nagios
 
 	chmod 644 "${S}"/contrib/*.cgi
 	into /usr/nagios
