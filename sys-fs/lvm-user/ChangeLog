@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm-user
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.15 2007/04/12 18:12:33 genstef Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.16 2008/03/14 10:23:53 phreak Exp $
+
+  14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Eric Edgar (rocket, #78547) from metadata.xml.
 
   12 Apr 2007; Stefan Schweizer <genstef@gentoo.org>
   -lvm-user-1.0.7-r2.ebuild, lvm-user-1.0.7-r3.ebuild,
