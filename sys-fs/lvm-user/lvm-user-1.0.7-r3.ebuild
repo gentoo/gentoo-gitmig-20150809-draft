@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r3.ebuild,v 1.3 2007/04/12 18:12:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r3.ebuild,v 1.4 2008/03/14 10:27:46 phreak Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,8 +23,8 @@ S=${WORKDIR}/LVM/${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-tmpfile.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-tmpfile.patch
 }
 
 src_compile() {
@@ -36,7 +36,7 @@ src_compile() {
 		myconf="--enable-static_link"
 	else
 		# bug 29694 -- make static vgscan and vgchange for initrds
-		epatch ${FILESDIR}/lvm-user-1.0.7-statics.patch
+		epatch "${FILESDIR}"/lvm-user-1.0.7-statics.patch
 	fi
 
 	./configure --prefix=/ \
@@ -51,7 +51,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall sbindir=${D}/sbin libdir=${D}/lib
+	einstall sbindir="${D}"/sbin libdir="${D}"/lib
 
 	if use static; then
 		# already static, make symlinks
@@ -60,17 +60,16 @@ src_install() {
 	else
 		# install vgscan.static and vgchange.static
 		into /
-		dosbin ${S}/tools/{vgscan,vgchange}.static
+		dosbin "${S}"/tools/{vgscan,vgchange}.static
 	fi
 
 	# no need for a static library in /lib
 	dodir /usr/lib
-	mv ${D}/lib/*.a ${D}/usr/lib
+	mv "${D}"/lib/*.a "${D}"/usr/lib
 
 	dodoc ABSTRACT CONTRIBUTORS INSTALL LVM-HOWTO TODO CHANGELOG FAQ KNOWN_BUGS README WHATSNEW
 
 	insinto /lib/rcscripts/addons
-	newins ${FILESDIR}/lvm-user-start.sh lvm-start.sh
-	newins ${FILESDIR}/lvm-user-stop.sh lvm-stop.sh
-
+	newins "${FILESDIR}"/lvm-user-start.sh lvm-start.sh
+	newins "${FILESDIR}"/lvm-user-stop.sh lvm-stop.sh
 }
