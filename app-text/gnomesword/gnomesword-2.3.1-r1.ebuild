@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.3.1-r1.ebuild,v 1.2 2008/03/10 16:51:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.3.1-r1.ebuild,v 1.3 2008/03/14 17:33:57 armin76 Exp $
 
 inherit libtool gnome2 eutils
 
@@ -18,9 +18,9 @@ DEPEND=">=gnome-extra/gtkhtml-3.14
 	>=gnome-base/libgnomeprintui-2.2
 	>=gnome-base/libglade-2
 	dev-libs/libxml2
-	xulrunner? ( net-libs/xulrunner )
-	!xulrunner? ( firefox? ( www-client/mozilla-firefox ) )
-	!xulrunner? ( !firefox? ( seamonkey? ( www-client/seamonkey ) ) )
+	xulrunner? ( =net-libs/xulrunner-1.8* )
+	!xulrunner? ( firefox? ( =www-client/mozilla-firefox-2* ) )
+	!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1* ) ) )
 	spell? (
 		app-text/gnome-spell
 		>=gnome-base/libbonoboui-2 )
