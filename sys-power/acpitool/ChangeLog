@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/acpitool
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.9 2008/03/14 11:18:51 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.10 2008/03/14 14:18:57 phreak Exp $
+
+  14 Mar 2008; Christian Heim <phreak@gentoo.org> acpitool-0.4.7-r1.ebuild:
+  Fixing some minor syntax errors.
 
   14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Karol Wojtaszek (sekretarz, #56912) from metadata.xml.

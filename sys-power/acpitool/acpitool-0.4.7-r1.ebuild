@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/acpitool-0.4.7-r1.ebuild,v 1.3 2007/05/13 15:17:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/acpitool-0.4.7-r1.ebuild,v 1.4 2008/03/14 14:18:57 phreak Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PN}-0.4.7-proc_acpi_info_move.patch
+	epatch "${FILESDIR}"/${PN}-0.4.7-proc_acpi_info_move.patch
 }
 
 src_install() {
