@@ -1,6 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/alpha/virtuals,v 1.2 2006/07/06 10:28:06 nelchael Exp $
-
-virtual/alsa				sys-kernel/vanilla-sources
-virtual/bootloader			sys-boot/aboot

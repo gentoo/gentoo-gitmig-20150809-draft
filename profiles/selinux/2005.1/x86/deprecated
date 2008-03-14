@@ -1,8 +1,0 @@
-selinux/2007.0/x86
-See http://www.gentoo.org/proj/en/hardened/selinux/selinux20061-upg.xml
-for details.
-
-If you plan to continue to use this profile for a while,
-please make sure that your portage is up to date:
-
-# emerge -n '>=sys-apps/portage-2.1.2.0'
