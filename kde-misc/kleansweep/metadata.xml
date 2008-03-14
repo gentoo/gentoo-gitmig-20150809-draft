@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>kde</herd>
-	<maintainer>
-		<email>troll@gentoo.org</email>
-		<name>Przemysław Maciąg</name>
-	</maintainer>
 </pkgmetadata>
