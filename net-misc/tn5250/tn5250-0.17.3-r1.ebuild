@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/tn5250-0.17.3-r1.ebuild,v 1.2 2008/03/10 15:35:40 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/tn5250-0.17.3-r1.ebuild,v 1.3 2008/03/15 22:32:05 dertobi123 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE="X ssl"
 
 RDEPEND="sys-libs/ncurses
