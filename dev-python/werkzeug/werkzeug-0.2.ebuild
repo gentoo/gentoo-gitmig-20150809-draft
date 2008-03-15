@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.2.ebuild,v 1.1 2008/03/15 21:39:35 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.2.ebuild,v 1.2 2008/03/15 23:23:23 dev-zero Exp $
+
+NEED_PYTHON="2.4"
 
 inherit distutils
 
@@ -12,10 +14,21 @@ SRC_URI="http://pypi.python.org/packages/source/W/Werkzeug/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 
-RDEPEND=">=dev-lang/python-2.4"
+RDEPEND=""
 DEPEND=">=dev-python/setuptools-0.6_rc5
-	${RDEPEND}"
+	test? ( dev-python/py
+		dev-python/lxml
+		dev-python/simplejson )"
 
 S="${WORKDIR}/${MY_P}"
+
+DOCS="CHANGES"
+
+src_test() {
+	distutils_python_version
+	# path gets set correctly in conftest.py
+	cd tests
+	py.test || die "tests failed"
+}

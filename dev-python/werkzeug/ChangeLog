@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.1 2008/03/15 21:39:35 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.2 2008/03/15 23:23:23 dev-zero Exp $
+
+  15 Mar 2008; Tiziano Müller <dev-zero@gentoo.org> werkzeug-0.2.ebuild:
+  Added various fixes, added src_test together with dependencies.
 
 *werkzeug-0.2 (15 Mar 2008)
 
