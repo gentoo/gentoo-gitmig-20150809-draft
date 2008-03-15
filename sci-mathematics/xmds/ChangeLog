@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/xmds
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/ChangeLog,v 1.1 2008/01/20 17:42:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/ChangeLog,v 1.2 2008/03/15 15:23:01 spock Exp $
+
+*xmds-1.6.5 (15 Mar 2008)
+
+  15 Mar 2008; Michał Januszewski <spock@gentoo.org> +xmds-1.6.5.ebuild:
+  Version bump.
 
 *xmds-1.6.4 (20 Jan 2008)
 
