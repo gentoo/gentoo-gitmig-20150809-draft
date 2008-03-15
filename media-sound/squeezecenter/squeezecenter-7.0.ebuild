@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.0.ebuild,v 1.2 2008/03/12 04:06:44 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.0.ebuild,v 1.3 2008/03/15 17:34:28 nixnut Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.slimdevices.com/pi_features.html"
 SRC_URI="http://www.slimdevices.com/downloads/${SRC_DIR}/${SRC_FILE}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="lame wavpack musepack alac ogg bonjour flac avahi"
 
 # Note: dev-perl/module-build necessary because of SC bug#5882
