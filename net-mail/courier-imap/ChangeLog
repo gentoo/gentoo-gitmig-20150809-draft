@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/courier-imap
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.157 2007/07/02 14:54:21 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.158 2008/03/15 23:07:48 halcy0n Exp $
+
+  15 Mar 2008; Mark Loeser <halcy0n@gentoo.org> courier-imap-3.0.8.ebuild,
+  courier-imap-4.0.1.ebuild, courier-imap-4.0.1-r1.ebuild,
+  courier-imap-4.0.1-r2.ebuild, courier-imap-4.0.4.ebuild,
+  courier-imap-4.0.6-r2.ebuild, courier-imap-4.1.2-r1.ebuild:
+  Add a blocker in RDEPEND on virtual/imap so we avoid manpage collisions; bug
+  #198633
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   courier-imap-3.0.8.ebuild, courier-imap-4.0.1.ebuild,

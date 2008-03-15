@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.1.ebuild,v 1.14 2007/07/02 14:54:21 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.1.ebuild,v 1.15 2008/03/15 23:07:48 halcy0n Exp $
 
 inherit eutils
 
@@ -29,6 +29,8 @@ DEPEND="${RDEPEND}
 	sys-process/procps
 	>=net-libs/courier-authlib-0.50
 	!mail-mta/courier"
+RDEPEND="${RDEPEND}
+	!virtual/imapd"
 PROVIDE="virtual/imapd"
 
 #S=${WORKDIR}/${PN}-${MY_PV}

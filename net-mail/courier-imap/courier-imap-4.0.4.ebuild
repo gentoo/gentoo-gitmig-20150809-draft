@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.4.ebuild,v 1.16 2007/07/02 14:54:21 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.4.ebuild,v 1.17 2008/03/15 23:07:48 halcy0n Exp $
 
 inherit eutils
 IUSE="fam berkdb gdbm debug ipv6 nls selinux"
@@ -29,6 +29,8 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	userland_GNU? ( sys-process/procps )
 	!mail-mta/courier"
+RDEPEND="${RDEPEND}
+	!virtual/imapd"
 PROVIDE="virtual/imapd"
 
 RC_VER="4.0.1-r1"

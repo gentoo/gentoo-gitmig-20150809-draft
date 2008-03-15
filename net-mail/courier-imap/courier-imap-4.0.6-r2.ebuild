@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6-r2.ebuild,v 1.11 2007/06/24 22:08:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6-r2.ebuild,v 1.12 2008/03/15 23:07:48 halcy0n Exp $
 
 inherit autotools eutils multilib
 
@@ -27,6 +27,8 @@ DEPEND="${RDEPEND}
 		dev-lang/perl
 		!mail-mta/courier
 		userland_GNU? ( sys-process/procps )"
+RDEPEND="${RDEPEND}
+		!virtual/imapd"
 
 PROVIDE="virtual/imapd"
 

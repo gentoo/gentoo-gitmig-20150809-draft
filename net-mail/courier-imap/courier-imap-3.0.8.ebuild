@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.ebuild,v 1.24 2007/07/14 22:22:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.ebuild,v 1.25 2008/03/15 23:07:48 halcy0n Exp $
 
 inherit eutils
 
@@ -31,6 +31,9 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-process/procps
 	!mail-mta/courier"
+RDEPEND="${RDEPEND}
+	!virtual/imapd"
+
 PROVIDE="virtual/imapd"
 
 pkg_setup() {
