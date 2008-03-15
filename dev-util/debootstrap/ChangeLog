@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.50 2008/02/23 18:17:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.51 2008/03/15 22:45:24 coldwind Exp $
+
+  15 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  debootstrap-1.0.8.ebuild:
+  amd64 stable wrt bug #210911
 
   23 Feb 2008; Jeroen Roovers <jer@gentoo.org> debootstrap-1.0.8.ebuild:
   Stable for HPPA (bug #210911).
