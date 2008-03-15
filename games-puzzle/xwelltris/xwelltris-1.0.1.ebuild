@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xwelltris/xwelltris-1.0.1.ebuild,v 1.14 2008/01/19 04:51:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xwelltris/xwelltris-1.0.1.ebuild,v 1.15 2008/03/15 04:34:31 mr_bones_ Exp $
 
 inherit games
 
 DESCRIPTION="2.5D tetris like game"
-HOMEPAGE="http://xnc.dubna.su/xwelltris/"
-SRC_URI="http://xnc.dubna.su/xwelltris/src/${P}.src.tar.gz"
+HOMEPAGE="http://xnc.jinr.ru/xwelltris/"
+SRC_URI="http://xnc.jinr.ru/xwelltris/src/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
