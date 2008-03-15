@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.4.ebuild,v 1.2 2008/03/14 15:23:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.4.ebuild,v 1.3 2008/03/15 12:26:24 nixnut Exp $
 
 inherit gnome2 python eutils autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="Simple GNOME menu editor"
 HOMEPAGE="http://www.realistanew.com/projects/alacarte"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 SLOT=0
 
