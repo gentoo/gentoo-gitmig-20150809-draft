@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/pygsl-0.9.0.ebuild,v 1.1 2007/10/05 20:12:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/pygsl-0.9.0.ebuild,v 1.2 2008/03/15 09:59:33 corsair Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="examples"
 
 DEPEND=">=sci-libs/gsl-1.8
