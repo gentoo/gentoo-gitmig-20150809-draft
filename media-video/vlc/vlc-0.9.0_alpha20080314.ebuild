@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080314.ebuild,v 1.1 2008/03/14 20:03:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080314.ebuild,v 1.2 2008/03/15 11:47:48 aballier Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 VLC_SNAPSHOT_TIME="0007"
 
-#RESTRICT="test"
+RESTRICT="test"
 
 # Used for live ebuilds
 # ESVN_REPO_URI="svn://svn.videolan.org/vlc/trunk"
