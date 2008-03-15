@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.232 2008/03/14 15:26:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.233 2008/03/15 12:45:59 nixnut Exp $
+
+  15 Mar 2008; nixnut <nixnut@gentoo.org> gedit-2.20.4-r1.ebuild:
+  Stable on ppc wrt bug 212986
 
   14 Mar 2008; Raúl Porcel <armin76@gentoo.org> gedit-2.20.4-r1.ebuild:
   alpha/ia64/sparc stable wrt #212986
