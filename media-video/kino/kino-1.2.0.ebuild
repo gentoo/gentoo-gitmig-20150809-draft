@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.2.0.ebuild,v 1.2 2008/02/20 13:18:00 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.2.0.ebuild,v 1.3 2008/03/15 14:02:47 cla Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/kino/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="alsa dvdr gpac lame gstreamer quicktime sox vorbis"
 
 # This ebuild would benefit a lot of USE dependencies but that has to wait for
@@ -32,7 +32,7 @@ DEPEND=">=x11-libs/gtk+-2.6.0
 	>=sys-libs/libavc1394-0.4.1
 	>=media-libs/libdv-0.103
 	media-libs/libsamplerate
-	media-libs/libiec61883
+	!sparc? ( media-libs/libiec61883 )
 	alsa? ( >=media-libs/alsa-lib-1.0.9 )
 	>=media-video/ffmpeg-0.4.9_p20061016
 	quicktime? ( >=media-libs/libquicktime-0.9.5 )"
@@ -41,7 +41,7 @@ RDEPEND="${DEPEND}
 	media-sound/rawrec
 	dvdr? ( media-video/dvdauthor
 		app-cdr/dvd+rw-tools )
-	gpac? ( media-video/gpac )
+	gpac? ( !sparc? ( media-video/gpac ) )
 	lame? ( media-sound/lame )
 	gstreamer? ( media-libs/gst-plugins-base )
 	sox? ( media-sound/sox )
@@ -84,7 +84,7 @@ src/message.cc\
 src/page_bttv.cc' po/POTFILES.in || die "sed failed"
 
 	sed -i -e 's:^#include <quicktime.h>:#include <lqt/quicktime.h>:' \
-		src/filehandler.h || dies "sed failed"
+		src/filehandler.h || die "sed failed"
 }
 
 src_compile() {
