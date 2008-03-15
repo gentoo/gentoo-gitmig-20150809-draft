@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.3.3.ebuild,v 1.6 2008/02/29 16:27:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.3.3.ebuild,v 1.7 2008/03/15 22:58:44 halcy0n Exp $
 
 inherit eutils
 
@@ -18,7 +18,8 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	sys-process/daemontools
 	sys-apps/ucspi-tcp
-	net-mail/checkpassword"
+	net-mail/checkpassword
+	!virtual/imapd"
 
 PROVIDE="virtual/imapd"
 
