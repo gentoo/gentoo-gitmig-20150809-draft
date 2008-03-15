@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/muParser-1.28.ebuild,v 1.1 2007/08/16 12:30:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/muParser-1.28.ebuild,v 1.2 2008/03/15 10:05:20 corsair Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Library for parsing mathematical expressions"
 HOMEPAGE="http://muparser.sourceforge.net/"
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="doc"
 MY_PN="${PN/P/p}"
 MY_PV="v${PV/./}"
