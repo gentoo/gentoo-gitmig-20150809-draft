@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/xmds-1.6.5.ebuild,v 1.1 2008/03/15 15:23:01 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/xmds-1.6.5.ebuild,v 1.2 2008/03/15 15:46:33 spock Exp $
 
 doc_ver=20080226
 
@@ -18,6 +18,10 @@ DEPEND="sci-libs/fftw
 
 src_unpack() {
 	unpack ${P}.tar.gz
+	cd "${S}"
+
+	# Fix broken installation of sample scripts.
+	sed -i -e 's/install-data-am: install-dist_doc_examplesDATA install-man/install-data-am: install-man/' Makefile.in
 }
 
 src_compile() {
@@ -39,7 +43,7 @@ src_install() {
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins "${DISTDIR}/xmds_doc${doc_ver}.pdf"
+		doins "${DISTDIR}/xmds_doc_${doc_ver}.pdf"
 	fi
 
 	if use examples; then
