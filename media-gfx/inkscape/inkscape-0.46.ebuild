@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.46.ebuild,v 1.1 2008/03/14 17:56:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.46.ebuild,v 1.2 2008/03/15 09:47:22 maekke Exp $
 
 inherit gnome2 eutils
 
@@ -14,21 +14,24 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dia doc gnome inkjar jabber lcms mmx perl postscript spell wmf"
 RESTRICT="test"
 
-COMMON_DEPEND=">=x11-libs/gtk+-2.10.7
+COMMON_DEPEND="
 	dev-cpp/glibmm
 	>=dev-cpp/gtkmm-2.4
 	>=dev-libs/boehm-gc-6.4
+	dev-libs/boost
 	>=dev-libs/glib-2.6.5
 	>=dev-libs/libsigc++-2.0.12
+	>=dev-libs/libxml2-2.6.20
 	>=dev-libs/libxslt-1.0.15
 	dev-libs/popt
+	dev-python/pyxml
+	media-gfx/imagemagick
 	media-libs/fontconfig
 	>=media-libs/freetype-2
 	media-libs/libpng
-	>=x11-libs/pango-1.4.0
-	>=dev-libs/libxml2-2.6.20
-	dev-python/pyxml
 	virtual/xft
+	>=x11-libs/gtk+-2.10.7
+	>=x11-libs/pango-1.4.0
 	gnome? (
 		>=gnome-base/gnome-vfs-2.0
 		gnome-base/libgnomeprint
