@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r2.ebuild,v 1.16 2007/07/14 22:22:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r2.ebuild,v 1.17 2008/03/15 23:17:20 halcy0n Exp $
 
 inherit eutils flag-o-matic
 
@@ -28,7 +28,8 @@ DEPEND="!net-mail/vimap
 	kerberos? ( virtual/krb5 )"
 
 RDEPEND="${DEPEND}
-	sys-apps/xinetd"
+	sys-apps/xinetd
+	!virtual/imapd"
 
 pkg_setup() {
 	echo
@@ -61,13 +62,13 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	# Tarball packed with bad file perms
-	chmod -R ug+w ${S}
+	chmod -R ug+w "${S}"
 
-	cd ${S}
+	cd "${S}"
 
 	if use amd64; then
 		# Apply our patch to actually build the shared library for PHP5
-		epatch ${FILESDIR}/${PN}-2004c-amd64-so-fix.patch
+		epatch "${FILESDIR}"/${PN}-2004c-amd64-so-fix.patch
 	fi
 
 	# Now we must make all the individual Makefiles use different CFLAGS,
@@ -79,7 +80,7 @@ src_unpack() {
 	# Now there is only c-client left, which should be built with -fPIC
 	append-flags -fPIC
 
-	cd ${S}/src/osdep/unix/
+	cd "${S}"/src/osdep/unix/
 	cp Makefile Makefile.orig
 	sed \
 		-e "s:BASECFLAGS=\".*\":BASECFLAGS=:g" \
@@ -107,7 +108,7 @@ src_compile() {
 	use kerberos \
 	  && mymake="EXTRAAUTHENTICATORS=gss"
 	if use ssl; then
-		cd ${S}
+		cd "${S}"
 		echo ${mymake}
 		if use clearpasswd; then
 			yes | make lnp ${mymake} ${ipver} SSLTYPE=unix EXTRACFLAGS="${CFLAGS}" || die
@@ -149,18 +150,18 @@ src_install() {
 
 	if use ssl; then
 		dodir /etc/ssl/certs
-		mv imapd.pem ${D}/etc/ssl/certs
-		mv ipop3d.pem ${D}/etc/ssl/certs
+		mv imapd.pem "${D}"/etc/ssl/certs
+		mv ipop3d.pem "${D}"/etc/ssl/certs
 	fi
 
 	if use amd64; then
 		dolib.so c-client/libc-client.so.1.0.0
-		cd ${D}/usr/$(get_libdir)
+		cd "${D}"/usr/$(get_libdir)
 		ln -s libc-client.so.1.0.0 libc-client.so.1
 		ln -s libc-client.so.1.0.0 libc-client.so
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	insinto /usr/include/imap
 	doins c-client/{c-client,flstring,mail,imap4r1,rfc822,misc,smtp,nntp}.h
@@ -179,9 +180,9 @@ src_install() {
 
 	# gentoo config stuff
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/uw-imap.xinetd  imap
-	newins ${FILESDIR}/uw-ipop2.xinetd ipop2
-	newins ${FILESDIR}/uw-ipop3.xinetd ipop3
-	newins ${FILESDIR}/uw-ipop3s.xinetd ipop3s
-	newins ${FILESDIR}/uw-imaps.xinetd imaps
+	newins "${FILESDIR}"/uw-imap.xinetd  imap
+	newins "${FILESDIR}"/uw-ipop2.xinetd ipop2
+	newins "${FILESDIR}"/uw-ipop3.xinetd ipop3
+	newins "${FILESDIR}"/uw-ipop3s.xinetd ipop3s
+	newins "${FILESDIR}"/uw-imaps.xinetd imaps
 }

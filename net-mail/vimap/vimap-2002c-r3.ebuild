@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c-r3.ebuild,v 1.8 2006/03/06 20:41:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c-r3.ebuild,v 1.9 2008/03/15 23:20:08 halcy0n Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,6 +27,9 @@ DEPEND="
 	virtual/libc
 	>=sys-libs/pam-0.72
 	ssl? ( dev-libs/openssl )"
+
+RDEPEND="${RDEPEND}
+	!virtual/imapd"
 
 pkg_setup() {
 	echo
@@ -58,9 +61,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	# Tarball packed with bad file perms
-	chmod -R ug+w ${S}
-	cd ${S}
-	epatch ${WORKDIR}/imap-2002c-virtual.patch
+	chmod -R ug+w "${S}"
+	cd "${S}"
+	epatch "${WORKDIR}"/imap-2002c-virtual.patch
 	if use amd64; then
 		# Now we must make all the individual Makefiles use different CFLAGS,
 		# otherwise they would all use -fPIC
@@ -71,21 +74,21 @@ src_unpack() {
 		# Now there is only c-client left, which should be built with -fPIC
 		append-flags -fPIC
 		# Apply our patch to actually build the shared library for PHP5
-		epatch ${FILESDIR}/${P}-amd64-so-fix.patch
+		epatch "${FILESDIR}"/${P}-amd64-so-fix.patch
 	fi
-	cd ${S}/src/osdep/unix/
+	cd "${S}"/src/osdep/unix/
 	cp Makefile Makefile.orig
 	sed \
 		-e "s:BASECFLAGS=\".*\":BASECFLAGS=:g" \
 		-e 's,SSLDIR=/usr/local/ssl,SSLDIR=/usr,g' \
 		-e 's,SSLCERTS=$(SSLDIR)/certs,SSLCERTS=/etc/ssl/certs,g' \
 		< Makefile.orig > Makefile
-	cd ${S}
+	cd "${S}"
 }
 
 src_compile() {
 	if use ssl; then
-		cd ${S}
+		cd "${S}"
 
 		if use clearpasswd; then
 			yes | make lnp ${mymake} ${ipver} SSLTYPE=unix EXTRACFLAGS="${CFLAGS}" EXTRALDFLAGS="-lcrypt" || die
@@ -127,18 +130,18 @@ src_install() {
 
 	if use ssl; then
 		dodir /etc/ssl/certs
-		mv imapd.pem ${D}/etc/ssl/certs
-		mv ipop3d.pem ${D}/etc/ssl/certs
+		mv imapd.pem "${D}"/etc/ssl/certs
+		mv ipop3d.pem "${D}"/etc/ssl/certs
 	fi
 
 	if use amd64; then
 		dolib.so c-client/libc-client.so*
-		cd ${D}/usr/$(get_libdir)
+		cd "${D}"/usr/$(get_libdir)
 		ln -s libc-client.so.1.0.0 libc-client.so.1
 		ln -s libc-client.so.1 libc-client.so
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	insinto /usr/include/imap
 	doins c-client/{c-client,mail,imap4r1,rfc822,linkage,misc,smtp,nntp}.h
@@ -154,9 +157,9 @@ src_install() {
 	dodoc docs/rfc/*.txt
 
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/uw-imap.xinetd  imap
-	newins ${FILESDIR}/uw-ipop2.xinetd ipop2
-	newins ${FILESDIR}/uw-ipop3.xinetd ipop3
-	newins ${FILESDIR}/uw-ipop3s.xinetd ipop3s
-	newins ${FILESDIR}/uw-imaps.xinetd imaps
+	newins "${FILESDIR}"/uw-imap.xinetd  imap
+	newins "${FILESDIR}"/uw-ipop2.xinetd ipop2
+	newins "${FILESDIR}"/uw-ipop3.xinetd ipop3
+	newins "${FILESDIR}"/uw-ipop3s.xinetd ipop3s
+	newins "${FILESDIR}"/uw-imaps.xinetd imaps
 }

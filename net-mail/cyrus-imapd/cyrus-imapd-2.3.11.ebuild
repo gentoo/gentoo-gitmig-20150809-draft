@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.11.ebuild,v 1.4 2008/03/15 18:00:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.11.ebuild,v 1.5 2008/03/15 23:14:05 halcy0n Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam
 
@@ -36,6 +36,9 @@ DEPEND="$RDEPEND
 	sys-devel/libtool
 	>=sys-devel/autoconf-2.58
 	sys-devel/automake"
+
+RDEPEND="$RDEPEND
+	!virtual/imapd"
 
 new_net-snmp_check() {
 	# tcpd USE flag check. Bug #68254.
