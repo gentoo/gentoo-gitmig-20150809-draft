@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r3.ebuild,v 1.2 2008/02/29 20:16:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r3.ebuild,v 1.3 2008/03/15 18:20:17 opfer Exp $
 
 inherit eutils multilib rpm
 
@@ -12,7 +12,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~amd64 x86"
 IUSE=""
-RESTRICT="fetch strip userpriv"
+RESTRICT="mirror strip userpriv"
 
 QA_TEXTRELS="opt/ICAClient/VDSCARD.DLL
 	opt/ICAClient/TW1.DLL
@@ -31,9 +31,9 @@ RDEPEND="virtual/libc
 		x11-libs/libXaw
 		x11-libs/libX11
 		x11-libs/libSM
-		x11-libs/libICE )
-	>=x11-libs/openmotif-2.3.0
-	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
+		x11-libs/libICE
+		>=x11-libs/openmotif-2.3.0 )
+	amd64? ( =app-emulation/emul-linux-x86-xlibs-10* )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/usr"
