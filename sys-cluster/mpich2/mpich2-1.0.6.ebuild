@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.4 2007/12/24 17:32:54 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.5 2008/03/15 05:25:24 nerdboy Exp $
 
+WANT_AUTOCONF="2.5"
 inherit autotools distutils eutils flag-o-matic fortran java-pkg-2
 
 #MY_P=${P/_/}
@@ -39,8 +40,7 @@ RDEPEND="${DEPEND}
 	!media-sound/mpd
 	!media-sound/mpd-svn"
 
-WANT_AUTOCONF="2.5"
-AT_M4DIR="${S}/confdb"
+T_M4DIR="${S}/confdb"
 
 RESTRICT="test"
 # To-do: work on tests and add SCTP support for kernel and user tools
@@ -83,7 +83,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	ebegin "Reconfiguring"
