@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.112 2008/03/14 15:23:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.113 2008/03/15 12:43:02 nixnut Exp $
+
+  15 Mar 2008; nixnut <nixnut@gentoo.org> gnome-speech-0.4.18.ebuild:
+  Stable on ppc wrt bug 212986
 
   14 Mar 2008; Raúl Porcel <armin76@gentoo.org> gnome-speech-0.4.18.ebuild:
   alpha/ia64/sparc stable wrt #212986
