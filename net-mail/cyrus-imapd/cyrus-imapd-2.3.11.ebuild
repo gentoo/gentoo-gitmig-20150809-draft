@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.11.ebuild,v 1.3 2008/03/13 21:08:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.11.ebuild,v 1.4 2008/03/15 18:00:40 dertobi123 Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam
 
@@ -29,7 +29,8 @@ RDEPEND=">=sys-libs/db-3.2
 	snmp? ( >=net-analyzer/net-snmp-5.2.2-r1 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	drac? ( >=mail-client/drac-1.12-r1 )"
+	drac? ( >=mail-client/drac-1.12-r1 )
+	nntp? ( !net-nntp/leafnode )"
 
 DEPEND="$RDEPEND
 	sys-devel/libtool
@@ -185,6 +186,11 @@ src_install() {
 
 	# Link master to cyrusmaster (postfix has a master too)
 	dosym /usr/lib/cyrus/master /usr/lib/cyrus/cyrusmaster
+
+	if ! use nntp ; then
+		rm man/fetchnews.8 man/syncnews.8 man/nntpd.8 man/nntptest.1
+		rm "${D}"/usr/bin/nntptest
+	fi
 
 	doman man/*.[0-8]
 	dodoc COPYRIGHT README*
