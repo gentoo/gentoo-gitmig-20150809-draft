@@ -1,0 +1,10 @@
+# ChangeLog for net-voip/telepathy-haze
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.1 2008/03/15 19:14:13 coldwind Exp $
+
+*telepathy-haze-0.2.0 (15 Mar 2008)
+
+  15 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> +metadata.xml,
+  +telepathy-haze-0.2.0.ebuild:
+  Initial ebuild.
+
