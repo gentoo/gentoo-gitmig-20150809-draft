@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.2.1.ebuild,v 1.1 2008/02/27 10:55:37 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.2.1.ebuild,v 1.2 2008/03/15 02:16:33 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 # Enable snapshot to get the man page in the right place
 # This should be fixed with a XDP patch later
-#SNAPSHOT="yes"
+SNAPSHOT="yes"
 XDPVER=-1
 
 inherit x-modular
@@ -33,6 +33,7 @@ DEPEND="${RDEPEND}
 			>=x11-libs/libdrm-2.2
 			x11-libs/libX11 )"
 
+PATCHES="${FILESDIR}/0001-fixup-pciaccess-version-detect.patch"
 CONFIGURE_OPTIONS="$(use_enable dri)"
 
 pkg_setup() {
