@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.18.2.1.ebuild,v 1.12 2007/10/17 20:37:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.18.2.1.ebuild,v 1.13 2008/03/15 12:41:19 leio Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
 inherit games eutils gnome2 autotools
 
 DESCRIPTION="Collection of games for the GNOME desktop"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://live.gnome.org/GnomeGames/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"

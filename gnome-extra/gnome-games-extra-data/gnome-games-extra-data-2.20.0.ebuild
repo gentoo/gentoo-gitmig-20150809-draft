@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/gnome-games-extra-data-2.20.0.ebuild,v 1.7 2007/11/29 06:03:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/gnome-games-extra-data-2.20.0.ebuild,v 1.8 2008/03/15 12:43:45 leio Exp $
 
 inherit gnome2
 
 DESCRIPTION="Optional additional graphics for gnome-games"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://live.gnome.org/GnomeGames/"
 
 LICENSE="GPL-2"
 SLOT="0"
