@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.2.0.ebuild,v 1.3 2008/03/03 18:55:33 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.2.0.ebuild,v 1.4 2008/03/15 19:11:50 bicatali Exp $
 
 inherit autotools eutils fortran
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-autotools.patch
+	epatch "${FILESDIR}"/${P}-tests.patch
 	eautoreconf
 }
 
