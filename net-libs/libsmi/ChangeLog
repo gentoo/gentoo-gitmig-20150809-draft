@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsmi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.13 2008/03/11 11:52:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.14 2008/03/15 11:37:19 corsair Exp $
+
+  15 Mar 2008; Markus Rothe <corsair@gentoo.org> libsmi-0.4.7.ebuild:
+  Added ~ppc64; bug #212075
 
   11 Mar 2008; Peter Volkov <pva@gentoo.org> libsmi-0.4.7.ebuild:
   Fixed test suite on x86 and possible on other archs too.
