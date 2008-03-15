@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.13.0.ebuild,v 1.2 2008/03/03 13:01:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.13.1.ebuild,v 1.1 2008/03/15 22:39:12 dev-zero Exp $
+
+inherit eutils
 
 MY_P="aria2c-${PV/_p/+}"
 
@@ -28,6 +30,13 @@ RDEPEND="${CDEPEND}
 	nls? ( virtual/libiconv virtual/libintl )"
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${PV}-broken_tests.patch"
+}
 
 src_compile() {
 	use ssl && \
