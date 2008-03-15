@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/redirfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/redirfs/ChangeLog,v 1.1 2008/02/23 10:29:19 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/redirfs/ChangeLog,v 1.2 2008/03/15 09:04:25 alonbl Exp $
+
+*redirfs-0.2-r1 (15 Mar 2008)
+
+  15 Mar 2008; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/redirfs-0.2-truncate_inode_pages.patch, -redirfs-0.2.ebuild,
+  +redirfs-0.2-r1.ebuild:
+  Fixup inode corruption by upstream
 
 *redirfs-0.2 (23 Feb 2008)
 

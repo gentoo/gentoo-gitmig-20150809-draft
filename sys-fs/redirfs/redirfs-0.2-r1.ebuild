@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/redirfs/redirfs-0.2.ebuild,v 1.3 2008/02/23 20:23:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/redirfs/redirfs-0.2-r1.ebuild,v 1.1 2008/03/15 09:04:25 alonbl Exp $
 
-inherit linux-mod
+inherit linux-mod eutils
 
 DESCRIPTION="Redirecting FileSystem"
 HOMEPAGE="http://www.redirfs.org"
@@ -26,6 +26,12 @@ pkg_setup() {
 
 	eerror "This package is EXPERIMENTAL use it at your own risk"
 	sleep 5
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-truncate_inode_pages.patch"
 }
 
 src_install() {
