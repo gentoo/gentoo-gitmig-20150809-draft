@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.3.ebuild,v 1.1 2008/03/07 03:00:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.3.ebuild,v 1.2 2008/03/15 11:16:35 corsair Exp $
 
 inherit eutils multilib qt4
 
@@ -11,7 +11,7 @@ SRC_URI="http://soft.proindependent.com/src/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="python doc bindist"
 
 LANGS="de es fr ja ru sv"

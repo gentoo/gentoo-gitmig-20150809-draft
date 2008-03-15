@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.18 2008/03/10 16:31:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.19 2008/03/15 11:16:35 corsair Exp $
+
+  15 Mar 2008; Markus Rothe <corsair@gentoo.org> qtiplot-0.9.3.ebuild:
+  Added ~ppc64
 
   10 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org> Manifest:
   Fixed doc file on mirror, bug #212599
