@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.4.13.ebuild,v 1.1 2008/02/26 12:31:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.4.14.ebuild,v 1.1 2008/03/15 14:48:34 flameeyes Exp $
 
 inherit eutils libtool toolchain-funcs
 
