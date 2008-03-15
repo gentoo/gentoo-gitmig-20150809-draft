@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.31.ebuild,v 1.6 2007/11/19 12:19:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.31.ebuild,v 1.7 2008/03/15 19:39:01 dertobi123 Exp $
 
 inherit eutils
 
@@ -29,8 +29,6 @@ pkg_setup() {
 }
 
 src_install () {
-	cd ${S}
-
 	# postgrey data/DB in /var
 	diropts -m0770 -o ${PN} -g ${PN}
 	dodir /var/spool/postfix/${PN}
@@ -54,8 +52,8 @@ src_install () {
 	dodoc Changes README
 
 	# init.d + conf.d files
-	newinitd ${FILESDIR}/${PN}.rc.new ${PN}
-	newconfd ${FILESDIR}/${PN}.conf.new ${PN}
+	newinitd "${FILESDIR}"/${PN}.rc.new ${PN}
+	newconfd "${FILESDIR}"/${PN}.conf.new ${PN}
 }
 
 pkg_postinst() {

@@ -1,35 +1,41 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.24.ebuild,v 1.7 2007/07/26 12:46:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.31-r1.ebuild,v 1.1 2008/03/15 19:39:01 dertobi123 Exp $
 
 inherit eutils
 
 DESCRIPTION="Postgrey is a Postfix policy server implementing greylisting"
 SRC_URI="http://postgrey.schweikert.ch/pub/${P}.tar.gz
-			http://postgrey.schweikert.ch/pub/old/${P}.tar.gz"
+			http://postgrey.schweikert.ch/pub/old/${P}.tar.gz
+			targrey? (http://k2net.hakuba.jp/pub/targrey-0.31-${P}.patch)"
 HOMEPAGE="http://postgrey.schweikert.ch/"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="targrey"
 DEPEND=""
 RDEPEND=">=dev-lang/perl-5.6.0
 	dev-perl/net-server
 	dev-perl/IO-Multiplex
 	dev-perl/BerkeleyDB
 	dev-perl/Net-DNS
-	>=sys-libs/db-4.1
-	>=mail-mta/postfix-2.1.0"
+	dev-perl/Parse-Syslog
+	dev-perl/Net-RBLClient
+	>=sys-libs/db-4.1"
 
-KEYWORDS="alpha amd64 ~ppc64 x86"
+KEYWORDS="~alpha ~amd64 ~ppc64 ~sparc ~x86"
 
 pkg_setup() {
 	enewgroup ${PN}
 	enewuser ${PN} -1 -1 /dev/null ${PN}
 }
 
-src_install () {
-	cd ${S}
+src_compile() {
+	if use targrey ; then
+		epatch "${DISTDIR}/targrey-0.31-${P}.patch"
+	fi
+}
 
+src_install() {
 	# postgrey data/DB in /var
 	diropts -m0770 -o ${PN} -g ${PN}
 	dodir /var/spool/postfix/${PN}
@@ -41,6 +47,9 @@ src_install () {
 	dosbin ${PN}
 	dosbin contrib/postgreyreport
 
+	# policy-test script
+	dosbin policy-test
+
 	# postgrey data in /etc/postfix
 	insinto /etc/postfix
 	insopts -o root -g ${PN} -m 0640
@@ -50,8 +59,8 @@ src_install () {
 	dodoc Changes README
 
 	# init.d + conf.d files
-	newinitd ${FILESDIR}/${PN}.rc.new ${PN}
-	newconfd ${FILESDIR}/${PN}.conf.new ${PN}
+	newinitd "${FILESDIR}"/${PN}.rc.new ${PN}
+	newconfd "${FILESDIR}"/${PN}.conf.new ${PN}
 }
 
 pkg_postinst() {
@@ -67,8 +76,16 @@ pkg_postinst() {
 
 	elog "Also remember to make the daemon start durig system boot:"
 	elog "  rc-update add postgrey default"
-	echo
-	ewarn "Read postgrey documentation for more info (perldoc postgrey)."
-	echo
-	epause 5
+
+	if use targrey ; then
+		elog "The targrey patch has been applied, read the"
+		elog "documentation for more info at"
+		elog "\thttp://k2net.hakuba.jp/targrey/index.en.html"
+		elog
+		elog "Activate targrey and set options using POSTGREY_OPTS in"
+		elog "/etc/conf.d/postgrey"
+		elog
+	fi
+
+	elog "Read postgrey documentation for more info (perldoc postgrey)."
 }
