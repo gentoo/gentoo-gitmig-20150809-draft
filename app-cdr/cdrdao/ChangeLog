@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdrdao
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.105 2007/11/14 19:27:22 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.106 2008/03/15 09:45:48 remi Exp $
+
+*cdrdao-1.2.2-r1 (15 Mar 2008)
+
+  15 Mar 2008; Rémi Cardona <remi@gentoo.org>
+  +files/cdrdao-1.2.2-use-new-sigc++-API.patch, +cdrdao-1.2.2-r1.ebuild:
+  fix build failure with libsigc++ 2.2
 
   14 Nov 2007; Samuli Suominen <drac@gentoo.org> cdrdao-1.2.2.ebuild:
   amd64 stable wrt #193991
