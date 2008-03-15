@@ -1,0 +1,10 @@
+# ChangeLog for x11-drivers/xf86-video-openchrome
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/ChangeLog,v 1.1 2008/03/15 00:51:18 dberkholz Exp $
+
+*xf86-video-openchrome-0.2.901 (15 Mar 2008)
+
+  15 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +xf86-video-openchrome-0.2.901.ebuild:
+  (#147425) Add openchrome driver, which supports newer Via cards.
+
