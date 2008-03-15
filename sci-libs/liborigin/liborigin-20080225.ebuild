@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20080225.ebuild,v 1.1 2008/03/06 23:13:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20080225.ebuild,v 1.2 2008/03/15 10:02:45 corsair Exp $
 
 inherit multilib
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/liborigin/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 
 SLOT="0"
 IUSE=""

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/liborigin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.10 2008/03/06 23:13:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.11 2008/03/15 10:02:45 corsair Exp $
+
+  15 Mar 2008; Markus Rothe <corsair@gentoo.org> liborigin-20080225.ebuild:
+  Added ~ppc64
 
 *liborigin-20080225 (06 Mar 2008)
 
