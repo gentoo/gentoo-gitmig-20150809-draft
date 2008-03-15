@@ -1,8 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.901.ebuild,v 1.1 2008/03/15 00:51:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.901.ebuild,v 1.2 2008/03/15 03:50:14 beandog Exp $
 
 XDPVER="-1"
+IUSE="debug dri"
 
 inherit x-modular
 
@@ -10,7 +11,7 @@ DESCRIPTION="X.Org driver for VIA/S3G cards"
 HOMEPAGE="http://www.openchrome.org"
 SRC_URI="${HOMEPAGE}/releases/${P}.tar.bz2"
 LICENSE="MIT"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 RDEPEND=">=x11-base/xorg-server-1.2
 	dri? ( x11-libs/libdrm )"
 DEPEND="${RDEPEND}
@@ -33,7 +34,7 @@ DOCS="release_notes-0.3.0"
 
 pkg_setup() {
 	if use dri && ! built_with_use x11-base/xorg-server dri; then
-		die "Build x11-base/xorg-server with USE=dri."
+		die "Build x11-base/xorg-server with the 'dri' USE flag."
 	fi
 }
 
