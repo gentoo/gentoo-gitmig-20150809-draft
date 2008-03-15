@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.154 2008/03/14 08:08:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.155 2008/03/15 12:13:54 wschlich Exp $
+
+  15 Mar 2008; Wolfram Schlich <wschlich@gentoo.org>
+  dovecot-1.0.13-r1.ebuild, dovecot-1.1_rc3-r1.ebuild:
+  fix mail group setting (thanks to rbu)
 
   14 Mar 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   dovecot-1.0.13-r1.ebuild:

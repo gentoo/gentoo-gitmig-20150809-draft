@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1_rc3-r1.ebuild,v 1.1 2008/03/11 16:27:05 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1_rc3-r1.ebuild,v 1.2 2008/03/15 12:13:54 wschlich Exp $
 
 inherit autotools eutils ssl-cert versionator
 
@@ -134,7 +134,7 @@ src_install () {
 	if use mbox; then
 		mail_location="mbox:/var/spool/mail/%u:INDEX=/var/dovecot/%u"
 		keepdir /var/dovecot
-		sed -i -e 's|#mail_extra_groups =|mail_extra_groups = mail|' "${conf}"
+		sed -i -e 's|#mail_privileged_group =|mail_privileged_group = mail|' "${conf}"
 	fi
 	sed -i -e \
 		"s|#mail_location =|mail_location = ${mail_location}|" "${conf}" \
