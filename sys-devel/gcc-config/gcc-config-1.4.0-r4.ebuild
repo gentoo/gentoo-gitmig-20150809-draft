@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.4.0-r4.ebuild,v 1.9 2008/01/10 08:50:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.4.0-r4.ebuild,v 1.10 2008/03/16 01:19:33 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs multilib
 
@@ -41,6 +41,14 @@ src_install() {
 }
 
 pkg_postinst() {
+	# Scrub eselect-compiler remains
+	if [[ -e ${ROOT}/etc/env.d/05compiler ]] ; then
+		rm -f "${ROOT}"/etc/env.d/05compiler
+	fi
+
+	# Make sure old versions dont exist #79062
+	rm -f "${ROOT}"/usr/sbin/gcc-config
+
 	# Do we have a valid multi ver setup ?
 	if gcc-config --get-current-profile &>/dev/null ; then
 		# We not longer use the /usr/include/g++-v3 hacks, as
@@ -49,12 +57,4 @@ pkg_postinst() {
 		[[ -L ${ROOT}/usr/include/g++-v3 ]] && rm -f "${ROOT}"/usr/include/g++-v3
 		gcc-config $(/usr/bin/gcc-config --get-current-profile)
 	fi
-
-	# Scrub eselect-compiler remains
-	if [[ -e ${ROOT}/etc/env.d/05compiler ]] ; then
-		rm -f "${ROOT}"/etc/env.d/05compiler
-	fi
-
-	# Make sure old versions dont exist #79062
-	rm -f "${ROOT}"/usr/sbin/gcc-config
 }
