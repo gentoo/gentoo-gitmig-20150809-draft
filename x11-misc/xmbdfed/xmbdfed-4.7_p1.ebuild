@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.7_p1.ebuild,v 1.7 2006/01/21 17:55:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.7_p1.ebuild,v 1.8 2008/03/16 22:00:58 ulm Exp $
 
 inherit eutils
 MY_P=${P/_p*}
@@ -15,15 +15,15 @@ LICENSE="as-is"
 KEYWORDS="x86 ppc"
 IUSE="truetype"
 
-DEPEND=">=x11-libs/openmotif-2.1.30
+DEPEND=">=x11-libs/openmotif-2.3.0-r1
 	truetype? ( media-libs/freetype )"
 
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
-	cd ${S}
-	epatch ${DISTDIR}/${P/_p/-patch}
+	cd "${S}"
+	epatch "${DISTDIR}/${P/_p/-patch}"
 	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
@@ -32,8 +32,8 @@ src_compile() {
 	# specifying the correct options for Gentoo.
 
 	local flags=""
-	local incs="`motif-config --cflags`"
-	local libs="`motif-config --libs` -lXm -lXpm -lXmu -lXt -lXext -lX11 -lSM -lICE"
+	local incs=""
+	local libs="-lXm -lXpm -lXmu -lXt -lXext -lX11 -lSM -lICE"
 
 	if use truetype ; then
 		flags="FTYPE_DEFS=\"-DHAVE_FREETYPE\""

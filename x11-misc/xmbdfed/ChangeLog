@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xmbdfed
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/ChangeLog,v 1.17 2007/02/06 01:34:01 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/ChangeLog,v 1.18 2008/03/16 22:00:58 ulm Exp $
+
+  16 Mar 2008; Ulrich Mueller <ulm@gentoo.org> xmbdfed-4.7_p1.ebuild:
+  Remove calls to motif-config, fixes bug 211844.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
