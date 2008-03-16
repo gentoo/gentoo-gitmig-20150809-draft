@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.22-r1.ebuild,v 1.7 2008/03/09 14:54:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.22-r1.ebuild,v 1.8 2008/03/16 15:08:25 coldwind Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ppc sparc x86"
 
 S="${WORKDIR}"/${PN}
 
