@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-primitives
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.19 2007/06/18 17:21:17 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.20 2008/03/16 17:21:46 betelgeuse Exp $
+
+  16 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
+  commons-primitives-1.0-r2.ebuild:
+  RESTRICT test so that the ebuild doesn't fail with the upcoming generic
+  src_test. See ebuild for explanation.
 
   18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
   commons-primitives-1.0-r2.ebuild:
