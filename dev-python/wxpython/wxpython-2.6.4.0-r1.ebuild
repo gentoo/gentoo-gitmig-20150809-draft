@@ -1,10 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r1.ebuild,v 1.10 2008/01/29 19:25:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r1.ebuild,v 1.11 2008/03/16 14:27:10 dirtyepic Exp $
 
 EAPI=1
 
 inherit alternatives eutils multilib python wxwidgets
+
+# Note, we don't use distutils.eclass because it doesn't seem to play nice with
+# need-wxwidgets
 
 MY_P="${P/wxpython-/wxPython-src-}"
 DESCRIPTION="A blending of the wxWindows C++ class library with Python"
@@ -70,27 +73,22 @@ src_install() {
 	python_version
 	local site_pkgs=/usr/$(get_libdir)/python${PYVER}/site-packages
 
-	dodir ${site_pkgs}
-
 	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
 	use opengl \
 		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
 		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
-
 	use unicode \
 		&& mypyconf="${mypyconf} UNICODE=1" \
 		|| mypyconf="${mypyconf} UNICODE=0"
 
 	mypyconf="${mypyconf} WXPORT=gtk2"
 
-	python setup.py ${mypyconf} install --prefix=/usr --root="${D}" \
-		|| die "setup.py install failed"
+	python setup.py ${mypyconf} install --root="${D}" \
+		--install-purelib ${site_pkgs} || die "setup.py install failed"
 
 	# Collision protection.
-	for file in \
-		"${D}"/usr/bin/* \
-		"${D}"/${site_pkgs}/wx{version.*,.pth,addons}; do
-			mv "${file}" "${file}-${SLOT}"
+	for file in "${D}"/usr/bin/* "${D}"/${site_pkgs}/wx{version.*,.pth,addons}; do
+		mv "${file}" "${file}-${SLOT}"
 	done
 }
 
