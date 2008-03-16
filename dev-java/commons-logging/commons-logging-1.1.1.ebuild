@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.1.1.ebuild,v 1.5 2008/03/11 15:08:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.1.1.ebuild,v 1.6 2008/03/16 17:44:04 ken69267 Exp $
 
 EAPI="1"
 JAVA_PKG_IUSE="doc source test"
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/commons/logging/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="avalon-logkit log4j servletapi avalon-framework"
 
 COMMON_DEP="

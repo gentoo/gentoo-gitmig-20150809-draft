@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-4.1.36.ebuild,v 1.4 2008/03/11 15:02:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-4.1.36.ebuild,v 1.5 2008/03/16 17:40:50 ken69267 Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -14,7 +14,7 @@ DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
 LICENSE="Apache-1.1"
 SLOT="2.3"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 S="${WORKDIR}/${MY_P}/servletapi"
 
