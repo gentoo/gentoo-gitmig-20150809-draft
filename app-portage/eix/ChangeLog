@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.209 2008/03/15 09:06:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.210 2008/03/16 16:00:24 armin76 Exp $
+
+  16 Mar 2008; Raúl Porcel <armin76@gentoo.org> eix-0.10.5.ebuild:
+  alpha/ia64/sparc/x86 stable
 
   15 Mar 2008; nixnut <nixnut@gentoo.org> eix-0.10.3.ebuild:
   Stable on ppc wrt bug 208909
