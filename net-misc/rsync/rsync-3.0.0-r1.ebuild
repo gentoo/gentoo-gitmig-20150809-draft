@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.0.0-r1.ebuild,v 1.1 2008/03/16 06:21:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.0.0-r1.ebuild,v 1.2 2008/03/16 07:22:10 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -55,6 +55,10 @@ src_install() {
 	dodoc NEWS OLDNEWS README TODO tech_report.tex
 	insinto /etc
 	doins "${FILESDIR}"/rsyncd.conf
+
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}"/rsyncd.logrotate rsyncd
+
 	if use xinetd ; then
 		insinto /etc/xinetd.d
 		newins "${FILESDIR}"/rsyncd.xinetd rsyncd
