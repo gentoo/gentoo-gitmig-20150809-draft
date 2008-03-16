@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/collectl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.4 2008/03/16 07:25:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.5 2008/03/16 07:26:42 vapier Exp $
+
+*collectl-2.5.0 (16 Mar 2008)
+
+  16 Mar 2008; Mike Frysinger <vapier@gentoo.org> +collectl-2.5.0.ebuild:
+  Version bump.
 
   16 Mar 2008; Mike Frysinger <vapier@gentoo.org> collectl-2.4.1.ebuild,
   Use virtual/perl-Time-HiRes rather than perl-core/perl-Time-HiRes #211627.
