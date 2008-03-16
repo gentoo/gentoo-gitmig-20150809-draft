@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/lksctp-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.10 2008/01/14 02:46:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.11 2008/03/16 09:18:26 vapier Exp $
+
+*lksctp-tools-1.0.8 (16 Mar 2008)
+
+  16 Mar 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/lksctp-tools-1.0.8-as-needed.patch,
+  +files/lksctp-tools-1.0.8-prefix.patch, +lksctp-tools-1.0.8.ebuild:
+  Version bump and fix withsctp #181602.
 
   14 Jan 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Metadata update.
