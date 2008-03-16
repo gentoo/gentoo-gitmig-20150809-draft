@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.40.8.ebuild,v 1.1 2008/03/14 01:36:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.40.8.ebuild,v 1.2 2008/03/16 08:10:55 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -55,7 +55,7 @@ src_install() {
 	export CC=$(tc-getCC)
 	export STRIP=/bin/true
 
-	make -C lib/et DESTDIR="${D}" install || die
+	emake -C lib/et DESTDIR="${D}" install || die
 	dosed '/^ET_DIR=/s:=.*:=/usr/share/et:' /usr/bin/compile_et
 	dosym et/com_err.h /usr/include/com_err.h
 
