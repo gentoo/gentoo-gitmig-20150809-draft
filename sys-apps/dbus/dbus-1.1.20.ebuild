@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.1.20.ebuild,v 1.9 2008/03/04 20:24:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.1.20.ebuild,v 1.10 2008/03/16 08:42:28 vapier Exp $
 
 inherit eutils multilib autotools flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/dbus/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="debug doc selinux X"
 
 RDEPEND="X? ( x11-libs/libXt x11-libs/libX11 )

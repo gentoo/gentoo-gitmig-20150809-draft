@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-3.1-r1.ebuild,v 1.11 2008/02/06 18:03:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-3.1-r1.ebuild,v 1.12 2008/03/16 08:41:57 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://slocate.trakker.ca/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND="sys-apps/shadow"
