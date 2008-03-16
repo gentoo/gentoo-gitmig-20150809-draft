@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8387 2008/03/16 22:50:46 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8388 2008/03/16 23:08:26 leio Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -95,6 +95,9 @@ dev-libs/totem-pl-parser
 gnome-base/gnome-settings-daemon
 >=gnome-base/control-center-2.22
 >=gnome-base/gnome-session-2.22
+>=gnome-base/eel-2.22
+>=gnome-base/nautilus-2.22
+>=gnome-extra/nautilus-cd-burner-2.22
 >=gnome-base/gnome-light-2.22
 >=gnome-base/gnome-2.22
 
