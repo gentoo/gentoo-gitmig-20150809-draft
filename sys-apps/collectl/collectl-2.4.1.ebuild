@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/collectl-2.4.1.ebuild,v 1.2 2008/01/26 09:12:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/collectl-2.4.1.ebuild,v 1.3 2008/03/16 07:25:49 vapier Exp $
 
 DESCRIPTION="light-weight performance monitoring tool capable of reporting interactively as well as logging to disk"
 HOMEPAGE="http://collectl.sourceforge.net/"
@@ -12,7 +12,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8.8
-	>=perl-core/Time-HiRes-1.97.07
+	virtual/perl-Time-HiRes
 	>=dev-perl/Archive-Zip-1.20
 	sys-apps/ethtool
 	sys-apps/pciutils"
