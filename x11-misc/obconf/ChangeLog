@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.52 2008/02/03 08:24:01 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.53 2008/03/16 10:49:27 cla Exp $
+
+  16 Mar 2008; Dawid Węgliński <cla@gentoo.org> obconf-2.0.3.ebuild:
+  Stable on x86 (bug #213553)
 
   03 Feb 2008; David Shakaryan <omp@gentoo.org> obconf-2.0.2.ebuild:
   Fix openbox dependency on older version.
