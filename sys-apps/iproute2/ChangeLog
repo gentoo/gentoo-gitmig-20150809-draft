@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.102 2008/03/11 16:51:00 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.103 2008/03/16 08:33:47 vapier Exp $
+
+*iproute2-2.6.23.20071016 (16 Mar 2008)
+
+  16 Mar 2008; Mike Frysinger <vapier@gentoo.org>
+  +iproute2-2.6.23.20071016.ebuild:
+  Version bump #203386 by RB and drop linux-2.4.x warning #209370 by Chris
+  Gianelloni.
 
   11 Mar 2008; <ricmm@gentoo.org> iproute2-2.6.15.20060110.ebuild,
   iproute2-2.6.16.20060323.ebuild, iproute2-2.6.18.20061002.ebuild,
