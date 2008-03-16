@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.5.0_beta.ebuild,v 1.1 2008/03/15 22:15:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.5.0_beta.ebuild,v 1.2 2008/03/16 15:55:21 armin76 Exp $
 
 MY_P="${P/_beta/b}"
 
@@ -12,7 +12,7 @@ SRC_URI="http://people.freebsd.org/~kientzle/libarchive/src/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="build static acl xattr kernel_linux"
 
 RDEPEND="!dev-libs/libarchive
