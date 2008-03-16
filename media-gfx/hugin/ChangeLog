@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.36 2008/03/09 13:51:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.37 2008/03/16 00:39:43 maekke Exp $
+
+  16 Mar 2008; Markus Meier <maekke@gentoo.org> hugin-0.6.1-r2.ebuild:
+  zip dep is also needed in hugin-0.6
 
   09 Mar 2008; Markus Meier <maekke@gentoo.org> hugin-0.7_beta4-r1.ebuild:
   add app-arch/zip dep, bug #212808
