@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/hrktorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/hrktorrent/ChangeLog,v 1.7 2008/02/25 14:17:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/hrktorrent/ChangeLog,v 1.8 2008/03/16 16:31:48 drac Exp $
+
+*hrktorrent-0.3.1 (16 Mar 2008)
+
+  16 Mar 2008; Samuli Suominen <drac@gentoo.org> +hrktorrent-0.3.1.ebuild:
+  Version bump wrt #213515, thanks to Nico R. Wohlgemuth for reporting.
 
   25 Feb 2008; Raúl Porcel <armin76@gentoo.org> hrktorrent-0.3.0.ebuild:
   x86 stable
