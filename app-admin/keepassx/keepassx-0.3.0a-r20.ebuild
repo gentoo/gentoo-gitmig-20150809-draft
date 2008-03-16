@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.3.0a-r20.ebuild,v 1.2 2008/03/11 12:53:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.3.0a-r20.ebuild,v 1.3 2008/03/16 12:42:06 opfer Exp $
 
 EAPI=1
 
@@ -24,7 +24,7 @@ src_compile() {
 	lrelease src.pro || die
 	mv "${S}"/src/translations/*.qm "${S}"/share/keepassx/i18n
 	cd "${S}"
-	eqmake keepass.pro PREFIX="${D}/usr" ${myconf} || die
+	eqmake4 keepass.pro PREFIX="${D}/usr" ${myconf} || die
 	emake || die
 }
 
