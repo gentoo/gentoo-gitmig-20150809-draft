@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.54 2008/03/16 15:09:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.55 2008/03/16 17:27:36 nixnut Exp $
+
+  16 Mar 2008; nixnut <nixnut@gentoo.org> obconf-2.0.3.ebuild:
+  Stable on ppc wrt bug 213553
 
   16 Mar 2008; Brent Baude <ranger@gentoo.org> obconf-2.0.3.ebuild:
   Marking obconf-2.0.3 ppc64 for bug 213553
