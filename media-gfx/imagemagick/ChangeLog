@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.272 2008/03/16 18:15:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.273 2008/03/16 23:34:25 ricmm Exp $
+
+  16 Mar 2008; <ricmm@gentoo.org> imagemagick-6.3.0.5.ebuild,
+  imagemagick-6.3.4-r1.ebuild, imagemagick-6.3.5.9.ebuild:
+  Drop to ~mips due to unstable deps
 
 *imagemagick-6.3.9.8 (16 Mar 2008)
 
