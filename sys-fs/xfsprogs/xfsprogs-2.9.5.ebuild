@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.9.5.ebuild,v 1.7 2008/03/07 02:28:46 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.9.5.ebuild,v 1.8 2008/03/16 08:35:30 vapier Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 ~sh sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="nls"
 
 RDEPEND="sys-fs/e2fsprogs"
