@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r1.ebuild,v 1.1 2008/03/11 12:09:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r1.ebuild,v 1.2 2008/03/16 13:34:27 bicatali Exp $
 
 inherit eutils multilib fortran
 
@@ -42,6 +42,7 @@ src_unpack() {
 	unpack ${A}
 	epatch "${DEB_P}-${DEB_PR}".diff
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-nogfortran.patch
 
 	# set some default paths
 	sed -i \
@@ -56,7 +57,7 @@ src_unpack() {
 		-e "s:\$DEPS -lm:$(pkg-config --libs blas):" \
 		-e "s:\$DEPS -llapack -lm:$(pkg-config --libs lapack):" \
 		-e 's:`depend $d $a blas`::' \
-		-e "s:X11R6:X11:g" \
+		-e 's:X11R6:X11:g' \
 		debian/add-ons/bin/cernlib.in || die "sed failed"
 
 	cp debian/add-ons/Makefile .
@@ -66,12 +67,7 @@ src_unpack() {
 	emake -j1 patch || die "debian patch failed"
 
 	# since we depend on cfortran, do not use the one from cernlib
-	rm -f src/include/cfortran/cfortran.h \
-
-	# fix an ifort problem
-	sed -i \
-		-e 's/= $(CLIBS) -nofor_main/:= $(CLIBS) -nofor_main/' \
-		src/packlib/kuip/programs/kxterm/Imakefile || die "sed ifc failed"
+	rm -f src/include/cfortran/cfortran.h
 
 	# respect users flags
 	sed -i \

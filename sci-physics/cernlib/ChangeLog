@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/cernlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.7 2008/03/11 12:09:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.8 2008/03/16 13:34:27 bicatali Exp $
+
+  16 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/cernlib-2006-nogfortran.patch, cernlib-2006-r1.ebuild:
+  Fixes for g77 to work, bug #213358
 
 *cernlib-2006-r1 (11 Mar 2008)
 
