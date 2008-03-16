@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ripperx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ChangeLog,v 1.32 2008/03/16 14:22:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ChangeLog,v 1.33 2008/03/16 18:03:05 nixnut Exp $
+
+  16 Mar 2008; nixnut <nixnut@gentoo.org> ripperx-2.7.2.ebuild:
+  Stable on ppc wrt bug 212605
 
   16 Mar 2008; Samuli Suominen <drac@gentoo.org> ripperx-2.7.2.ebuild:
   amd64 stable
