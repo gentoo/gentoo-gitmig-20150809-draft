@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-mdadm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mdadm/ChangeLog,v 1.3 2007/02/22 01:16:34 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mdadm/ChangeLog,v 1.4 2008/03/16 04:06:40 pebenito Exp $
+
+  16 Mar 2008; Chris PeBenito <pebenito@gentoo.org>
+  -selinux-mdadm-20051029.ebuild:
+  Remove old ebuilds.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

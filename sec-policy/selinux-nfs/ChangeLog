@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-nfs
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-nfs/ChangeLog,v 1.10 2008/02/03 01:38:00 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-nfs/ChangeLog,v 1.11 2008/03/16 04:07:09 pebenito Exp $
+
+  16 Mar 2008; Chris PeBenito <pebenito@gentoo.org>
+  -selinux-nfs-20040501.ebuild, -selinux-nfs-20061114.ebuild:
+  Remove old ebuilds.
 
   03 Feb 2008; Chris PeBenito <pebenito@gentoo.org>
   selinux-nfs-20070928.ebuild:

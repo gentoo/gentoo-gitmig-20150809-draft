@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-avahi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-avahi/ChangeLog,v 1.5 2008/02/03 01:37:38 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-avahi/ChangeLog,v 1.6 2008/03/16 04:06:49 pebenito Exp $
+
+  16 Mar 2008; Chris PeBenito <pebenito@gentoo.org>
+  -selinux-avahi-20061114.ebuild:
+  Remove old ebuilds.
 
   03 Feb 2008; Chris PeBenito <pebenito@gentoo.org>
   selinux-avahi-20070928.ebuild:

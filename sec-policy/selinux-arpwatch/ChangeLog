@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-arpwatch
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-arpwatch/ChangeLog,v 1.15 2008/02/03 01:37:30 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-arpwatch/ChangeLog,v 1.16 2008/03/16 04:06:42 pebenito Exp $
+
+  16 Mar 2008; Chris PeBenito <pebenito@gentoo.org>
+  -selinux-arpwatch-20050219.ebuild, -selinux-arpwatch-20050408.ebuild,
+  -selinux-arpwatch-20061114.ebuild:
+  Remove old ebuilds.
 
   03 Feb 2008; Chris PeBenito <pebenito@gentoo.org>
   selinux-arpwatch-20070928.ebuild:

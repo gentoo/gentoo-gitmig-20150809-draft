@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-snmpd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-snmpd/ChangeLog,v 1.18 2008/02/03 01:37:58 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-snmpd/ChangeLog,v 1.19 2008/03/16 04:07:08 pebenito Exp $
+
+  16 Mar 2008; Chris PeBenito <pebenito@gentoo.org>
+  -selinux-snmpd-20050605.ebuild, -selinux-snmpd-20051023.ebuild,
+  -selinux-snmpd-20061114.ebuild:
+  Remove old ebuilds.
 
   03 Feb 2008; Chris PeBenito <pebenito@gentoo.org>
   selinux-snmpd-20070928.ebuild:

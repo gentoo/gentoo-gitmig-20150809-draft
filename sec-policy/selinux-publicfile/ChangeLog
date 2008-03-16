@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-publicfile
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-publicfile/ChangeLog,v 1.16 2008/02/03 01:37:40 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-publicfile/ChangeLog,v 1.17 2008/03/16 04:06:51 pebenito Exp $
+
+  16 Mar 2008; Chris PeBenito <pebenito@gentoo.org>
+  -selinux-publicfile-20041121.ebuild, -selinux-publicfile-20051124.ebuild,
+  -selinux-publicfile-20061114.ebuild:
+  Remove old ebuilds.
 
   03 Feb 2008; Chris PeBenito <pebenito@gentoo.org>
   selinux-publicfile-20070928.ebuild:

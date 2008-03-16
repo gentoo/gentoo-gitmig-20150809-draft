@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-gpm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gpm/ChangeLog,v 1.13 2008/02/03 01:37:47 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gpm/ChangeLog,v 1.14 2008/03/16 04:06:58 pebenito Exp $
+
+  16 Mar 2008; Chris PeBenito <pebenito@gentoo.org>
+  -selinux-gpm-20041128.ebuild, -selinux-gpm-20061114.ebuild:
+  Remove old ebuilds.
 
   03 Feb 2008; Chris PeBenito <pebenito@gentoo.org>
   selinux-gpm-20070928.ebuild:
