@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/edit/edit-2.0.ebuild,v 1.5 2006/11/20 18:21:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/edit/edit-2.0.ebuild,v 1.6 2008/03/16 15:29:49 lack Exp $
 
 ROX_LIB_VER=1.9.14
 inherit rox
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/rox/${P}.tgz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 # do some cleanup. Edit 2.0 has CVS dirs included
