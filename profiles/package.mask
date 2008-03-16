@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8388 2008/03/16 23:08:26 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8389 2008/03/16 23:22:25 leio Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -31,7 +31,7 @@
 
 # Mart Raudsepp <leio@gentoo.org> (16 Mar 2008)
 # The Great Gnome 2.22 Mask (tm)
-# Will be unmasked when everything is in, everything is read and
+# Will be unmasked when everything is in, everything is ready and
 # there are no big bugs remaining.
 >=gnome-base/libgtop-2.22
 >=x11-themes/gtk-engines-2.14
