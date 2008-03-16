@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.0.0.ebuild,v 1.1 2008/03/01 22:13:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.0.0.ebuild,v 1.2 2008/03/16 06:20:24 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="File transfer program to keep remote files into sync"
 HOMEPAGE="http://rsync.samba.org/"
 SRC_URI="http://rsync.samba.org/ftp/rsync/${P/_/}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="acl ipv6 static xattr xinetd"
