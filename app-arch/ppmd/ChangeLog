@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ppmd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.29 2008/02/25 15:55:44 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.30 2008/03/16 15:50:30 armin76 Exp $
+
+  16 Mar 2008; Raúl Porcel <armin76@gentoo.org> ppmd-9.1_p14.ebuild:
+  sparc/x86 stable
 
   25 Feb 2008; Steve Dibb <beandog@gentoo.org> ppmd-9.1_p8.ebuild,
   ppmd-9.1_p10.ebuild, ppmd-9.1_p14.ebuild:
