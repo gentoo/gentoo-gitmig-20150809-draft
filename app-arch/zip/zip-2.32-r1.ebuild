@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.32-r1.ebuild,v 1.5 2008/03/07 13:14:39 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.32-r1.ebuild,v 1.6 2008/03/16 07:23:40 vapier Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -34,7 +34,7 @@ src_install() {
 	dobin zip zipnote zipsplit || die
 	doman man/zip.1
 	dosym zip.1 /usr/share/man/man1/zipnote.1
-	dosym zip.1 /usr/share/man/man1/zipzplit.1
+	dosym zip.1 /usr/share/man/man1/zipsplit.1
 	if use crypt ; then
 		dobin zipcloak || die
 		dosym zip.1 /usr/share/man/man1/zipcloak.1
