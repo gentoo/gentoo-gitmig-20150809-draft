@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.4.0_beta1.ebuild,v 1.3 2008/03/09 21:45:56 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.4.0_beta1.ebuild,v 1.4 2008/03/16 22:28:30 zlin Exp $
 
+EAPI="1"
 DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework."
 HOMEPAGE="http://www.trolltech.com/"
 
@@ -11,8 +12,9 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="opengl qt3support"
 
-DEPEND=""
-RDEPEND="~x11-libs/qt-gui-${PV}
+DEPEND="!=x11-libs/qt-4.4.3*:4"
+RDEPEND="${DEPEND}
+	~x11-libs/qt-gui-${PV}
 	~x11-libs/qt-svg-${PV}
 	~x11-libs/qt-test-${PV}
 	~x11-libs/qt-sql-${PV}
