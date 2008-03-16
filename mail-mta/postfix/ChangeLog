@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.152 2008/03/14 08:18:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.153 2008/03/16 04:36:15 dirtyepic Exp $
+
+  16 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> postfix-2.4.6-r2.ebuild:
+  Keyword ~mips for bug #201671.
 
   14 Mar 2008; Ulrich Mueller <ulm@gentoo.org> -files/postfix.rc6,
   -files/smtp.pam, -postfix-2.1.5-r2.ebuild, -postfix-2.2.10.ebuild,
