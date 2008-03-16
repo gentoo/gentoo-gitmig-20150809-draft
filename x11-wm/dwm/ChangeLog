@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/dwm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.32 2008/02/08 14:23:58 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.33 2008/03/16 12:14:05 cedk Exp $
+
+*dwm-4.8 (16 Mar 2008)
+
+  16 Mar 2008; Cédric Krier <cedk@gentoo.org> +dwm-4.8.ebuild:
+  Version bump
 
   08 Feb 2008; Cédric Krier <cedk@gentoo.org> metadata.xml:
   Add desktop-wm as backup herd
