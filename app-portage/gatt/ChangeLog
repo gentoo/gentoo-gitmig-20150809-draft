@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gatt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.4 2008/03/13 19:34:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.5 2008/03/16 10:14:36 opfer Exp $
+
+  16 Mar 2008; Christian Faulhammer <opfer@gentoo.org> gatt-0.6.0.ebuild:
+  remove all references to TUTORIAL as it is not distributed with the tarball,
+  reported by rich0 on bug 213558
 
   12 Mar 2008; Christian Faulhammer <opfer@gentoo.org> gatt-0.6.0.ebuild,
   gatt-9999.ebuild:

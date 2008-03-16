@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-0.6.0.ebuild,v 1.3 2008/03/12 07:07:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-0.6.0.ebuild,v 1.4 2008/03/16 10:14:36 opfer Exp $
 
 inherit eutils
 
@@ -28,8 +28,7 @@ pkg_setup() {
 	ewarn "Gatt is targeted at Gentoo developers, arch-testers and power users. Do"
 	ewarn "by no means use it if you are new to Gentoo. You have been warned!"
 	ewarn
-	elog "There are several files that explain usage of Gatt: TUTORIAL,"
-	elog "and gatt.info (best read in that order)"
+	elog "There is a Info manual shipped with some extensive examples".
 	if use libpaludis && ! built_with_use sys-apps/paludis portage; then
 		ewarn "You either have to emerge Paludis with USE=portage enabled or configure"
 		ewarn "it properly before using Gatt with it."
@@ -43,7 +42,7 @@ src_compile() {
 }
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc README NEWS AUTHORS ChangeLog doc/TUTORIAL
+	dodoc README NEWS AUTHORS ChangeLog
 
 	if use doc; then
 		dohtml doc/html/*
