@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.79 2008/02/21 20:44:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.80 2008/03/16 20:00:09 pva Exp $
+
+*wireshark-0.99.8 (16 Mar 2008)
+
+  16 Mar 2008; Peter Volkov <pva@gentoo.org> +wireshark-0.99.8.ebuild:
+  Finally version bump, fixes security bug #212149, reported by Robert
+  Buchholz. Fixes libsmi autodep, bug #211324, reported by Fabio Erculiani.
+  Many other fixes here and there...
 
   21 Feb 2008; <pva@gentoo.org> +files/wireshark-0.99.8-as-needed.patch,
   wireshark-0.99.8_rc1.ebuild:
