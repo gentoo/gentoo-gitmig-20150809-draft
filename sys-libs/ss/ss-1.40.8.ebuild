@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.40.8.ebuild,v 1.1 2008/03/14 01:40:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.40.8.ebuild,v 1.2 2008/03/16 08:10:21 vapier Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 DESCRIPTION="Subsystem command parsing library"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
@@ -29,6 +29,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.39-makefile.patch
+
+	# since we've split out com_err/ss into their own ebuilds, we
+	# need to fake out the local files.  let the toolchain find them.
+	echo "GROUP ( /usr/$(get_libdir)/libcom_err.a )" > lib/libcom_err.a
+	echo "GROUP ( /usr/$(get_libdir)/libcom_err.so )" > lib/libcom_err.so
 }
 
 src_compile() {
@@ -52,8 +57,6 @@ src_compile() {
 
 src_test() {
 	env_setup
-
-	ln -s $(${CC} -print-file-name=libcom_err.so) lib/libcom_err.so
 	emake -j1 -C lib/ss check || die "make check failed"
 }
 
@@ -61,7 +64,7 @@ src_install() {
 	env_setup
 
 	dodir /usr/share/man/man1
-	make -C lib/ss DESTDIR="${D}" install || die
+	emake -C lib/ss DESTDIR="${D}" install || die
 
 	# Move shared libraries to /lib/, install static libraries to /usr/lib/,
 	# and install linker scripts to /usr/lib/.
