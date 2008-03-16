@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.0.2.ebuild,v 1.1 2008/02/27 23:13:33 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.0.2.ebuild,v 1.2 2008/03/16 23:09:33 jer Exp $
 
 NEED_PYTHON="2.3"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://codespeak.net/lxml/"
 SRC_URI="http://codespeak.net/lxml/${P}.tgz"
 LICENSE="BSD ElementTree GPL-2 PSF-2.4"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~x86"
 IUSE="doc examples"
 
 # Note: This version comes with it's own bundled svn version of pyrex
