@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.8.ebuild,v 1.1 2008/03/16 20:00:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.8.ebuild,v 1.2 2008/03/17 00:22:19 mr_bones_ Exp $
 
-# ChangeLog: 
+# ChangeLog:
 # 1. Droped check for perl minimal USE flag. We do not have perl with minimal
 # USE flag in portage.
 # 2. Droped snmp USE flag. snmp dissector rewriten and now uses libsmi for OID
