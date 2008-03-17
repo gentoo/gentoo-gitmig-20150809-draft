@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-2.0.0.12.ebuild,v 1.3 2008/03/01 14:01:31 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-2.0.0.12.ebuild,v 1.4 2008/03/17 12:24:00 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -14,7 +14,7 @@ RESTRICT="strip"
 
 KEYWORDS="-* amd64 x86"
 SLOT="0"
-LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
+LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE=""
 
 for X in ${LANGS} ; do

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.8.ebuild,v 1.15 2008/02/28 14:00:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.8.ebuild,v 1.16 2008/03/17 12:23:22 armin76 Exp $
 
 unset ALLOWED_FLAGS	# stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools mozextension
@@ -14,9 +14,9 @@ HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/source/thunderbird-${PV}-source.tar.bz2
 	mirror://gentoo/${P}-patches-${PVER}.tar.bz2"
 
-KEYWORDS="mips"
+KEYWORDS="~mips"
 SLOT="0"
-LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
+LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="ldap crypt"
 
 for X in ${LANGS} ; do
