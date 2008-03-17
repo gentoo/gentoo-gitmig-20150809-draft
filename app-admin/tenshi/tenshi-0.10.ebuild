@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.10.ebuild,v 1.1 2008/03/17 15:39:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.10.ebuild,v 1.2 2008/03/17 15:40:41 jokey Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.inversepath.com/tenshi/${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
