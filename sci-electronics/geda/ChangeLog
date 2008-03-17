@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.40 2008/02/18 18:48:18 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.41 2008/03/17 13:31:56 coldwind Exp $
+
+  17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> geda-1.4.0.ebuild:
+  amd64 stable wrt bug #192905
 
   18 Feb 2008; Denis Dupeyron <calchan@gentoo.org> Manifest:
   Fixed Manifest, see bug #210591.
