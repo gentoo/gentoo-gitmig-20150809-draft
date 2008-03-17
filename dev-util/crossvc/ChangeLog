@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/crossvc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crossvc/ChangeLog,v 1.6 2008/03/17 11:48:56 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crossvc/ChangeLog,v 1.7 2008/03/17 21:40:37 armin76 Exp $
+
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org> crossvc-1.5.2.ebuild:
+  Add ~alpha/~sparc wrt #213496
 
   17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> crossvc-1.5.2.ebuild:
   Added ~amd64 keyword wrt bug #213496
