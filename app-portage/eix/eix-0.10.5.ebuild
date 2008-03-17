@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.10.5.ebuild,v 1.4 2008/03/16 17:59:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.10.5.ebuild,v 1.5 2008/03/17 00:03:57 jer Exp $
 
 DESCRIPTION="Small utility for searching ebuilds with indexing for fast results"
 HOMEPAGE="http://eix.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/eix/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="sqlite"
 
 DEPEND="sqlite? ( >=dev-db/sqlite-3 )
