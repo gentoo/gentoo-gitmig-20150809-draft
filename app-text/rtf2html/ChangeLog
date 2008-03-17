@@ -1,0 +1,8 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/ChangeLog,v 1.1 2008/03/17 10:57:23 s4t4n Exp $
+
+*rtf2html-0.2.0 (17 Mar 2008)
+
+  17 Mar 2008; Michele Noberasco <s4t4n@gentoo.org> rtf2html-0.2.0.ebuild:
+  Initial import.
