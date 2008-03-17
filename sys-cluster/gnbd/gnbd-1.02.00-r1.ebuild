@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/gnbd-1.02.00-r1.ebuild,v 1.5 2007/03/09 11:19:32 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/gnbd-1.02.00-r1.ebuild,v 1.6 2008/03/17 16:59:56 xmerlin Exp $
 
 inherit eutils
 
@@ -29,8 +29,8 @@ S="${WORKDIR}/${MY_P}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/${PN}-${PV}-${CVS_RELEASE}-cvs.patch || die
+	cd "${S}"
+	epatch "${WORKDIR}"/${PN}-${PV}-${CVS_RELEASE}-cvs.patch || die
 }
 
 src_compile() {
@@ -39,19 +39,19 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install problem"
+	emake DESTDIR="${D}" install || die "install problem"
 
-	newinitd ${FILESDIR}/${PN}-client.rc ${PN}-client || die
-	newinitd ${FILESDIR}/${PN}-srv.rc ${PN}-srv || die
+	newinitd "${FILESDIR}"/${PN}-client-1.0x.rc ${PN}-client || die
+	newinitd "${FILESDIR}"/${PN}-srv-1.0x.rc ${PN}-srv || die
 
-	doconfd ${FILESDIR}/${PN}-client.conf || die
-	doconfd ${FILESDIR}/${PN}-srv.conf || die
+	doconfd "${FILESDIR}"/${PN}-client-1.0x.conf || die
+	doconfd "${FILESDIR}"/${PN}-srv-1.0x.conf || die
 
 	insinto /etc
-	doins ${FILESDIR}/gnbdtab
+	doins "${FILESDIR}"/gnbdtab
 
 	if $(has_version sys-fs/devfsd ) ; then
 		insinto /etc/devfs.d/
-		newins ${FILESDIR}/gnbd.devfs gnbd
+		newins "${FILESDIR}"/gnbd.devfs gnbd
 	fi
 }

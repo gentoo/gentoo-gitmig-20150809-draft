@@ -1,6 +1,18 @@
 # ChangeLog for sys-cluster/gnbd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/ChangeLog,v 1.23 2007/05/12 13:32:43 xmerlin Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/ChangeLog,v 1.24 2008/03/17 16:59:56 xmerlin Exp $
+
+*gnbd-2.02.00 (17 Mar 2008)
+
+  17 Mar 2008; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/gnbd-client-1.0x.conf, +files/gnbd-srv-1.0x.conf,
+  +files/gnbd-client-1.0x.rc, +files/gnbd-srv-1.0x.rc,
+  +files/gnbd-client-2.0x.conf, +files/gnbd-srv-2.0x.conf,
+  +files/gnbd-client-2.0x.rc, +files/gnbd-srv-2.0x.rc,
+  -files/gnbd-client.conf, -files/gnbd-client.rc, -files/gnbd-srv.conf,
+  -files/gnbd-srv.rc, gnbd-1.02.00-r1.ebuild, gnbd-1.03.00.ebuild,
+  gnbd-1.04.00.ebuild, +gnbd-2.02.00.ebuild:
+  Version bump. 1.0x.00 is scheduled to be removed soon.
 
   12 May 2007; Christian Zoffoli <xmerlin@gentoo.org> gnbd-1.03.00.ebuild:
   Stable on x86.
