@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.03.00.ebuild,v 1.13 2007/07/14 22:18:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.03.00.ebuild,v 1.14 2008/03/17 17:05:35 xmerlin Exp $
 
 inherit linux-mod linux-info
 
@@ -30,11 +30,11 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if kernel_is 2 6; then
 		if [ "$KV_PATCH" -ge "18" ] ; then
-			epatch ${FILESDIR}/${PN}-remove-devfs-support.patch || die
+			epatch "${FILESDIR}"/${PN}-remove-devfs-support.patch || die
 
 			sed -i \
 				-e 's|version.h|utsrelease.h|g' \
@@ -43,7 +43,7 @@ src_unpack() {
 		fi
 
 		if [ "$KV_PATCH" -ge "19" ] ; then
-			epatch ${FILESDIR}/${P}-compile-fix-kernel-post-2.6.18.patch || die
+			epatch "${FILESDIR}"/${P}-compile-fix-kernel-post-2.6.18.patch || die
 		fi
 	fi
 }
@@ -56,8 +56,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install problem"
-	rm -f ${D}/usr/include/linux/gnbd.h || die
+	emake DESTDIR="${D}" install || die "install problem"
+	rm -f "${D}"/usr/include/linux/gnbd.h || die
 }
 
 pkg_postinst() {
