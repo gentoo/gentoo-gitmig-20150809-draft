@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.2.5.ebuild,v 1.10 2008/01/30 12:23:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.2.5.ebuild,v 1.11 2008/03/17 02:13:58 leio Exp $
 EAPI="1"
 
 inherit gnome2 eutils
@@ -41,4 +41,12 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-3.2-i18n.patch" || die "gettext fix"
 	# bug 193458
 	epatch "${FILESDIR}/${PN}-3.2-gi18n.patch" || die
+
+	# Fix deprecated API disabling in used glib library - this is not future-proof, bug 210657
+	sed -i -e '/G_DISABLE_DEPRECATED/d' \
+		"${S}/src/Makefile.am" "${S}/src/Makefile.in" \
+		"${S}/components/html-editor/Makefile.am" "${S}/components/html-editor/Makefile.in"
+
+	sed -i -e 's:-DGTK_DISABLE_DEPRECATED=1 -DGDK_DISABLE_DEPRECATED=1 -DG_DISABLE_DEPRECATED=1 -DGNOME_DISABLE_DEPRECATED=1::g' \
+		"${S}/a11y/Makefile.am" "${S}/a11y/Makefile.in"
 }
