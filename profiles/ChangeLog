@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1218 2008/03/17 07:55:06 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1219 2008/03/17 11:16:04 armin76 Exp $
+
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org> updates/1Q-2008:
+  Unslot xulrunner
 
   17 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>; package.mask:
   Add mask for >=sys-apps/lm_sensors-3.
