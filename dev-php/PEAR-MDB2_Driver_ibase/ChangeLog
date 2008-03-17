@@ -1,0 +1,14 @@
+# ChangeLog for dev-php/PEAR-MDB2_Driver_ibase
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_ibase/ChangeLog,v 1.1 2008/03/17 12:45:53 jokey Exp $
+
+*PEAR-MDB2_Driver_ibase-1.5.0_beta1 (17 Mar 2008)
+
+  17 Mar 2008; <jokey@gentoo.org> +metadata.xml,
+  +PEAR-MDB2_Driver_ibase-1.5.0_beta1.ebuild:
+  Initial import from project overlay
+
+  15 Mar 2008; Jakub Moc <jakub@gentoo.org>
+  +PEAR-MDB2_Driver_ibase-1.5.0_beta1.ebuild:
+  New ebuild for MDB2 firebird/interbase support.
+

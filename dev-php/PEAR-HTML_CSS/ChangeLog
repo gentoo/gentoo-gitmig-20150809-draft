@@ -1,0 +1,13 @@
+# ChangeLog for dev-php/PEAR-HTML_CSS
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_CSS/ChangeLog,v 1.1 2008/03/17 12:45:06 jokey Exp $
+
+*PEAR-HTML_CSS-1.5.1 (17 Mar 2008)
+
+  17 Mar 2008; <jokey@gentoo.org> +metadata.xml,
+  +PEAR-HTML_CSS-1.5.1.ebuild:
+  Initial import from project overlay
+
+  15 Mar 2008; Jakub Moc <jakub@gentoo.org> +PEAR-HTML_CSS-1.5.1.ebuild:
+  New ebuild
+

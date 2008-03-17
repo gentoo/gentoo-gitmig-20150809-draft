@@ -1,0 +1,14 @@
+# ChangeLog for dev-php/PEAR-PHP_Debug
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_Debug/ChangeLog,v 1.1 2008/03/17 12:49:34 jokey Exp $
+
+*PEAR-PHP_Debug-1.0.0 (17 Mar 2008)
+
+  17 Mar 2008; <jokey@gentoo.org> +metadata.xml,
+  +PEAR-PHP_Debug-1.0.0.ebuild:
+  Initial import from project overlay
+
+  03 Jan 2008; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-PHP_Debug-1.0.0.ebuild:
+  New ebuild
+

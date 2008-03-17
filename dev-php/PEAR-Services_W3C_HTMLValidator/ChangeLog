@@ -1,0 +1,14 @@
+# ChangeLog for dev-php/PEAR-Services_W3C_HTMLValidator
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_W3C_HTMLValidator/ChangeLog,v 1.1 2008/03/17 12:50:17 jokey Exp $
+
+*PEAR-Services_W3C_HTMLValidator-1.0.0_rc1 (17 Mar 2008)
+
+  17 Mar 2008; <jokey@gentoo.org> +metadata.xml,
+  +PEAR-Services_W3C_HTMLValidator-1.0.0_rc1.ebuild:
+  Initial import from project overlay
+
+  03 Jan 2008; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-Services_W3C_HTMLValidator-1.0.0_rc1.ebuild:
+  New ebuild, optional dependency for PEAR-PHP_Debug
+
