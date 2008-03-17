@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.6.0.ebuild,v 1.2 2008/03/17 16:22:32 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.6.0.ebuild,v 1.3 2008/03/17 17:19:31 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -104,7 +104,7 @@ pkg_postinst() {
 		elog "Try USE=admin if you want a easy way to configure cherokee."
 		echo  ""
 	fi
-	
+
 	echo ""
 	elog "Cherokee conf is quite different in 0.6.x series. You must use"
 	elog " cherokee-admin to create a new config or use	/usr/share/doc/${PF}/contrib/05to06.py"
