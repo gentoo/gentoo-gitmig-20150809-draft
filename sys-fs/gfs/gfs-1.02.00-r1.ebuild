@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.02.00-r1.ebuild,v 1.7 2007/07/13 05:15:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.02.00-r1.ebuild,v 1.8 2008/03/17 17:30:28 xmerlin Exp $
 
 inherit eutils
 
@@ -36,8 +36,8 @@ S="${WORKDIR}/${MY_P}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/${PN}-${PV}-${CVS_RELEASE}-cvs.patch || die
+	cd "${S}"
+	epatch "${WORKDIR}"/${PN}-${PV}-${CVS_RELEASE}-cvs.patch || die
 }
 
 src_compile() {
@@ -46,8 +46,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install problem"
+	emake DESTDIR="${D}" install || die "install problem"
 
 	keepdir /etc/cluster || die
-	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
+	newinitd "${FILESDIR}"/${PN}-1.0x.rc ${PN} || die
 }

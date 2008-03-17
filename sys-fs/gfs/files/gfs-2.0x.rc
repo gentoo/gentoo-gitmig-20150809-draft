@@ -1,12 +1,12 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs.rc,v 1.7 2005/06/14 09:46:46 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs-2.0x.rc,v 1.1 2008/03/17 17:30:29 xmerlin Exp $
 
 opts="${opts} mountall"
 
 depend() {
-	local myneed="cluster-manager cluster-locking-manager fenced"
+	local myneed="cman"
 	local devices="$(awk '!/^#/ && $3 == "gfs" && $4 !~ /noauto/ {print $1 }' /etc/fstab)"
 
 	if [ -n "${devices}" ]; then
@@ -24,7 +24,6 @@ depend() {
 
 	use dns logger net
 	need ${myneed}
-	provide cluster
 }
 
 mount_gfs_filesystems() {
