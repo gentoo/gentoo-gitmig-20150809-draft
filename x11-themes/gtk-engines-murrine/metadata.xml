@@ -4,9 +4,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 	<maintainer>
-		<email>nichoj@gentoo.org</email>
-		<name>Joshua Nichols</name>
-		<description>Maintainer</description>
+		<email>jokey@gentoo.org</email>
+		<name>Markus Ullmann</name>
+	</maintainer>
+	<maintainer>
+		<email>atj@pulsewidth.org.uk</email>
+		<name>Adam James</name>
 	</maintainer>
 	<longdescription>
 "Murrine" is an Italian word meaning the glass artworks done by Venicians glass

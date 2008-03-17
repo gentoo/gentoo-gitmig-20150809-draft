@@ -1,6 +1,20 @@
 # ChangeLog for x11-themes/gtk-engines-murrine
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/ChangeLog,v 1.28 2007/07/19 13:48:48 angelos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/ChangeLog,v 1.29 2008/03/17 20:28:42 jokey Exp $
+
+  17 Mar 2008; <jokey@gentoo.org>
+  +files/gtk-engines-murrine-0.53.1-use-gtk_free.patch, metadata.xml,
+  +gtk-engines-murrine-0.53.1-r1.ebuild:
+  Synced from my dev overlay, thanks to Adam again :)
+
+*gtk-engines-murrine-0.53.1-r1 (17 Mar 2008)
+
+  17 Mar 2008; Adam James <atj@pulsewidth.org.uk>
+  +gtk-engines-murrine-0.53.1-r1.ebuild:
+  New revision with fixes for bugs #192797, #198815 & #204488.
+
+  17 Mar 2008; Adam James <atj@pulsewidth.org.uk> metadata.xml:
+  Adding jokey as proxy maintainer.
 
   19 Jul 2007; Christoph Mende <angelos@gentoo.org>
   gtk-engines-murrine-0.53.1.ebuild:
