@@ -1,0 +1,10 @@
+# ChangeLog for sys-cluster/cman-lib
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/ChangeLog,v 1.1 2008/03/17 16:24:34 xmerlin Exp $
+
+*cman-lib-2.02.00 (17 Mar 2008)
+
+  17 Mar 2008; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/cman-lib-2.02.00-include.patch, +cman-lib-2.02.00.ebuild:
+  Initial Import
+
