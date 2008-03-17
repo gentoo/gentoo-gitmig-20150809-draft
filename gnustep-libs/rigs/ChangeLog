@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/rigs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/rigs/ChangeLog,v 1.9 2008/02/07 16:53:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/rigs/ChangeLog,v 1.10 2008/03/17 12:35:46 voyageur Exp $
+
+  17 Mar 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  rigs-0.2.2.20050714-r1.ebuild, rigs-0.2.2.20061009.ebuild:
+  Disable tests (require X and user interaction), bug #212697
 
 *rigs-0.2.2.20061009 (07 Feb 2008)
 
