@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.39 2008/02/27 20:34:37 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.40 2008/03/17 19:00:57 jer Exp $
+
+*fail2ban-0.8.2 (17 Mar 2008)
+
+  17 Mar 2008; Jeroen Roovers <jer@gentoo.org> +fail2ban-0.8.2.ebuild:
+  Version bump.
 
   27 Feb 2008; Cédric Krier <cedk@gentoo.org> files/fail2ban-logrotate,
   fail2ban-0.8.1.ebuild:
