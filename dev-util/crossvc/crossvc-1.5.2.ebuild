@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crossvc/crossvc-1.5.2.ebuild,v 1.5 2008/02/29 17:59:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crossvc/crossvc-1.5.2.ebuild,v 1.6 2008/03/17 11:48:56 coldwind Exp $
 
 inherit kde-functions
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.crossvc.com/download/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE="kde"
 
 DEPEND="kde? ( >=kde-base/kdelibs-3 )
