@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.188 2008/03/16 21:13:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.189 2008/03/17 12:27:47 pva Exp $
+
+  17 Mar 2008; Peter Volkov <pva@gentoo.org> wxGTK-2.6.4.0-r3.ebuild,
+  wxGTK-2.8.7.1-r1.ebuild:
+  amd64 stable, bug #207648.
 
   16 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.6.4.0-r3.ebuild:
   Keyword ~mips.
