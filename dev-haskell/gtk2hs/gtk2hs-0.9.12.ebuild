@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.12.ebuild,v 1.5 2007/12/13 00:44:30 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.12.ebuild,v 1.6 2008/03/17 15:25:47 armin76 Exp $
 
 inherit base eutils ghc-package multilib toolchain-funcs versionator
 
@@ -23,9 +23,9 @@ RDEPEND=">=dev-lang/ghc-6.2
 				>=gnome-base/gconf-2 )
 		svg?   ( >=gnome-base/librsvg-2.16 )
 		opengl? ( x11-libs/gtkglext )
-		seamonkey? ( >=www-client/seamonkey-1.0.2 )
-		firefox? ( >=www-client/mozilla-firefox-1.0.4 )
-		xulrunner? ( net-libs/xulrunner )"
+		seamonkey? ( =www-client/seamonkey-1* )
+		firefox? ( =www-client/mozilla-firefox-2* )
+		xulrunner? ( =net-libs/xulrunner-1.8* )"
 DEPEND="${RDEPEND}
 		doc? ( >=dev-haskell/haddock-0.8 )"
 
