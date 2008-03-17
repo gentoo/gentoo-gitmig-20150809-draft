@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.120 2008/03/08 22:52:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.121 2008/03/17 15:17:04 coldwind Exp $
+
+  17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> sudo-1.6.9_p14.ebuild,
+  sudo-1.7_beta3.ebuild:
+  ~amd64 added wrt bug #212585
 
   08 Mar 2008; Diego Pettenò <flameeyes@gentoo.org> sudo-1.6.9_p14.ebuild,
   sudo-1.7_beta3.ebuild:
