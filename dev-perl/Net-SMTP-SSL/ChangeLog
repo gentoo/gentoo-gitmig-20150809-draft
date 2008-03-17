@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-SMTP-SSL
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SMTP-SSL/ChangeLog,v 1.1 2008/03/17 08:14:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SMTP-SSL/ChangeLog,v 1.2 2008/03/17 08:52:09 robbat2 Exp $
+
+  17 Mar 2008; Robin H. Johnson <robbat2@gentoo.org>
+  Net-SMTP-SSL-1.01.ebuild:
+  Copying the ~arch keywords from git since this a dep for it. It is only 13
+  lines of dead-stock Perl, so it really really shouldn't break on any arch.
 
 *Net-SMTP-SSL-1.01 (17 Mar 2008)
 
