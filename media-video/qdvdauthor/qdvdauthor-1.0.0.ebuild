@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-1.0.0.ebuild,v 1.1 2008/03/16 22:31:44 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-1.0.0.ebuild,v 1.2 2008/03/17 22:16:28 sbriesen Exp $
 
 inherit eutils flag-o-matic qt3
 
@@ -38,7 +38,7 @@ src_unpack() {
 	cd "${S}"
 
 	# do not over-optimize (see bug #147250)
-	replace-flags -O? -O2
+	replace-flags -O[s3] -O2
 	filter-flags -finline-functions
 
 	# set our C(XX)FLAGS
@@ -73,9 +73,9 @@ src_compile() {
 }
 
 src_install() {
-	make -C qdvdauthor            INSTALL_ROOT="${D}" install || die "qdvdauthor install failed"
-	make -C qdvdauthor/qslideshow INSTALL_ROOT="${D}" install || die "qslideshow install failed"
-	make -C qdvdauthor/qplayer    INSTALL_ROOT="${D}" install || die "qplayer install failed"
+	emake -C qdvdauthor            INSTALL_ROOT="${D}" install || die "qdvdauthor install failed"
+	emake -C qdvdauthor/qslideshow INSTALL_ROOT="${D}" install || die "qslideshow install failed"
+	emake -C qdvdauthor/qplayer    INSTALL_ROOT="${D}" install || die "qplayer install failed"
 
 	dobin bin/{qdvdauthor,qslideshow,qplayer}
 	dodoc CHANGELOG README TODO doc/{ISO*,look*,sound*,todo*,render*}.txt
