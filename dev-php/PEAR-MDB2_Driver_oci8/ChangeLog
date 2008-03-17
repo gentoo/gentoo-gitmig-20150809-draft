@@ -1,6 +1,15 @@
 # ChangeLog for dev-php/PEAR-MDB2_Driver_oci8
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_oci8/ChangeLog,v 1.14 2008/02/10 14:14:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_oci8/ChangeLog,v 1.15 2008/03/17 12:47:18 jokey Exp $
+
+*PEAR-MDB2_Driver_oci8-1.5.0_beta1 (17 Mar 2008)
+
+  17 Mar 2008; <jokey@gentoo.org> +PEAR-MDB2_Driver_oci8-1.5.0_beta1.ebuild:
+  Version bump from project overlay
+
+  15 Mar 2008; Jakub Moc <jakub@gentoo.org>
+  +PEAR-MDB2_Driver_oci8-1.5.0_beta1.ebuild:
+  Version bump, fixes PEAR bug #12924.
 
   10 Feb 2008; nixnut <nixnut@gentoo.org>
   PEAR-MDB2_Driver_oci8-1.5.0_alpha2.ebuild:
