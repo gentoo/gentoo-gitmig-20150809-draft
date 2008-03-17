@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/qdiskd.rc,v 1.1 2007/03/09 16:26:14 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/qdiskd-2.0x.rc,v 1.1 2008/03/17 16:47:11 xmerlin Exp $
 
 depend() {
 	use net
-	need cluster-manager
+	need cman
 }
 
 start() {

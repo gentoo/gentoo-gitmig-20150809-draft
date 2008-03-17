@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/fence
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/ChangeLog,v 1.31 2007/05/12 13:20:38 xmerlin Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/ChangeLog,v 1.32 2008/03/17 16:38:40 xmerlin Exp $
+
+*fence-2.02.00 (17 Mar 2008)
+
+  17 Mar 2008; Christian Zoffoli <xmerlin@gentoo.org> +fence-2.02.00.ebuild:
+  Version bump. 1.0x.00 is scheduled to be removed soon.
 
   12 May 2007; Christian Zoffoli <xmerlin@gentoo.org> fence-1.03.00.ebuild:
   Stable on x86.

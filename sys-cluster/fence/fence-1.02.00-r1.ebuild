@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.02.00-r1.ebuild,v 1.6 2007/03/09 11:13:36 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.02.00-r1.ebuild,v 1.7 2008/03/17 16:38:40 xmerlin Exp $
 
 inherit eutils
 
@@ -32,8 +32,8 @@ S="${WORKDIR}/${MY_P}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/${PN}-${PV}-${CVS_RELEASE}-cvs.patch || die
+	cd "${S}"
+	epatch "${WORKDIR}"/${PN}-${PV}-${CVS_RELEASE}-cvs.patch || die
 }
 
 src_compile() {
@@ -42,11 +42,11 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install problem"
+	emake DESTDIR="${D}" install || die "install problem"
 
 	into /
-	dosbin ${FILESDIR}/${PN}_xen || die
+	dosbin "${FILESDIR}"/${PN}_xen || die
 
-	newinitd ${FILESDIR}/${PN}d.rc ${PN}d || die
-	newconfd ${FILESDIR}/${PN}d.conf ${PN}d || die
+	newinitd "${FILESDIR}"/${PN}d.rc ${PN}d || die
+	newconfd "${FILESDIR}"/${PN}d.conf ${PN}d || die
 }

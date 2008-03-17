@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.03.00.ebuild,v 1.7 2007/10/15 14:56:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.03.00.ebuild,v 1.8 2008/03/17 16:47:10 xmerlin Exp $
 
 inherit eutils
 
@@ -25,9 +25,9 @@ S="${WORKDIR}/${MY_P}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.03.00-compile-hack.patch || die
-	epatch ${FILESDIR}/${PN}-1.03.00-qdisk-makefile.patch || die
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-1.03.00-compile-hack.patch || die
+	epatch "${FILESDIR}"/${PN}-1.03.00-qdisk-makefile.patch || die
 }
 
 src_compile() {
@@ -36,12 +36,12 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install problem"
+	emake DESTDIR="${D}" install || die "install problem"
 
-	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
-	newconfd ${FILESDIR}/${PN}.conf ${PN} || die
+	newinitd "${FILESDIR}"/${PN}-1.0x.rc ${PN} || die
+	newconfd "${FILESDIR}"/${PN}-1.0x.conf ${PN} || die
 
-	newinitd ${FILESDIR}/qdiskd.rc qdiskd || die
+	newinitd "${FILESDIR}"/qdiskd-1.0x.rc qdiskd || die
 
 	keepdir /etc/cluster || die
 }

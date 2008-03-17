@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/dlm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.30 2007/10/15 14:57:41 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.31 2008/03/17 16:43:31 xmerlin Exp $
+
+*dlm-2.02.00 (17 Mar 2008)
+
+  17 Mar 2008; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/dlm-2.02.00-include.patch, dlm-1.02.00-r1.ebuild,
+  dlm-1.03.00.ebuild, dlm-1.04.00.ebuild, +dlm-2.02.00.ebuild:
+  Version bump. 1.0x.00 is scheduled to be removed soon.
 
   15 Oct 2007; Markus Rothe <corsair@gentoo.org> dlm-1.03.00.ebuild:
   Stable on ppc64
