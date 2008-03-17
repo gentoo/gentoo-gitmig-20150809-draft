@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.60 2008/03/06 11:20:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.61 2008/03/17 15:08:28 coldwind Exp $
+
+  17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  dropbear-0.50-r1.ebuild:
+  ~amd64 added wrt bug #210795
 
   06 Mar 2008; Raúl Porcel <armin76@gentoo.org> dropbear-0.50-r1.ebuild:
   Add ~alpha/~ia64/~sparc wrt #210795
