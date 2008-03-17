@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/mozplugger-1.7.3-r1.ebuild,v 1.1 2006/07/06 21:20:16 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/mozplugger-1.7.3-r1.ebuild,v 1.2 2008/03/17 15:33:32 armin76 Exp $
 
 inherit nsplugins
 
@@ -17,10 +17,10 @@ IUSE="firefox"
 DEPEND=""
 RDEPEND="${DEPEND}
 	!sparc? (
-		firefox? ( www-client/mozilla-firefox )
-		!firefox? ( www-client/seamonkey )
+		firefox? ( =www-client/mozilla-firefox-2* )
+		!firefox? ( =www-client/seamonkey-1* )
 	)
-	sparc? ( www-client/mozilla-firefox )"
+	sparc? ( =www-client/mozilla-firefox-2* )"
 
 src_compile()
 {
