@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/generator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.20 2008/03/06 21:53:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.21 2008/03/17 18:03:15 mr_bones_ Exp $
+
+  17 Mar 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  files/generator-0.35_p3-configure.patch, generator-0.35_p3.ebuild:
+  disable gtk+-1 interface since it's unsupported and generator otherwise fails
+  to build without gtk+-1 available on the system (bug #206373)
 
   06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> generator-0.35.ebuild:
   QA cleanup: Fix quoting.

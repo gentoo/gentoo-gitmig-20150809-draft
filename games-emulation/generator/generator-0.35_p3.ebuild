@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35_p3.ebuild,v 1.3 2007/07/30 21:33:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35_p3.ebuild,v 1.4 2008/03/17 18:03:15 mr_bones_ Exp $
 
 inherit autotools eutils toolchain-funcs games
 
@@ -12,11 +12,10 @@ SRC_URI="http://www.ghostwhitecrab.com/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="gtk sdlaudio svga"
+IUSE="sdlaudio svga"
 
 RDEPEND="media-libs/jpeg
 	media-libs/libsdl
-	gtk? ( =x11-libs/gtk+-1.2* )
 	svga? ( media-libs/svgalib )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
@@ -42,10 +41,14 @@ src_unpack() {
 		-e 's/USE32//' \
 		raze/raze.asm.in \
 		|| die 'sed failed'
+	sed -i \
+		-e 's/@GTK_CFLAGS@//g' \
+		main/Makefile.am \
+		|| die "sed failed"
 	eautoreconf
 }
 
-# builds SDL by default since otherwise -svga -gtk builds nothing
+# builds SDL by default since otherwise -svga builds nothing
 src_compile() {
 	local myconf mygui myguis
 
@@ -54,7 +57,6 @@ src_compile() {
 		|| myconf="--with-cmz80"
 
 	myguis="sdl"
-	use gtk && myguis="${myguis} gtk"
 	use svga && myguis="${myguis} svgalib"
 
 	for mygui in ${myguis}; do
@@ -62,6 +64,7 @@ src_compile() {
 		egamesconf \
 			${myconf} \
 			--with-${mygui} \
+			--without-gtk \
 			--without-tcltk \
 			--with-gcc=$(gcc-major-version) \
 			$(use_with sdlaudio sdl-audio) \
