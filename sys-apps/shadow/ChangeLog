@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.195 2008/03/12 10:09:15 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.196 2008/03/17 15:29:38 coldwind Exp $
+
+  17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  shadow-4.1.0-r1.ebuild:
+  ~amd64 added back
 
   12 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   shadow-4.0.18.2.ebuild:
