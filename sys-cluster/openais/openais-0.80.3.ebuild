@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-0.82.ebuild,v 1.3 2008/03/17 16:02:41 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-0.80.3.ebuild,v 1.1 2008/03/17 16:02:41 xmerlin Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -17,10 +17,9 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/Makefile-ARCH.patch
-	epatch "${FILESDIR}"/Makefile-LIBDIR.patch
-	epatch "${FILESDIR}"/Makefile-install.patch
-	epatch "${FILESDIR}"/Makefile.inc-FLAGS.patch
+	epatch "${FILESDIR}"/${P}-Makefile-ARCH.patch || die
+	epatch "${FILESDIR}"/${P}-Makefile-LIBDIR.patch || die
+	epatch "${FILESDIR}"/${P}-Makefile.inc-FLAGS.patch || die
 }
 
 pkg_setup() {
@@ -41,9 +40,6 @@ src_install() {
 	insinto /etc/ais
 	doins "${FILESDIR}"/openais.conf
 
-	insinto /usr/include/openais/service
-	doins exec/logsys.h || die
-
 	# http://bugs.gentoo.org/show_bug.cgi?id=160847#c16
 	dosym /usr/sbin/aisexec /sbin/aisexec
 
@@ -58,7 +54,7 @@ src_install() {
 	exeinto /usr/libexec/openais
 	doexe exec/openais-instantiate || die
 	doexe test/{ckptbench,ckptbenchth,ckpt-rd,ckptstress,ckpt-wr,clc_cli_script} || die
-	doexe test/{cpgbench,evsbench,evtbench,logsys_s,logsys_t1,logsys_t2} || die
+	doexe test/{cpgbench,evsbench,evtbench} || die
 	doexe test/{publish,subscription,testamf1,testckpt,testclm,testclm2,testcpg,testcpg2} || die
 	doexe test/{testevs,testevt,testlck,testmsg,unlink} || die
 
