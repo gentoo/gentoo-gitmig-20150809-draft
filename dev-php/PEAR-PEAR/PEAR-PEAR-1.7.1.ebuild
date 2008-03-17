@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.7.1.ebuild,v 1.1 2008/03/17 12:48:51 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.7.1.ebuild,v 1.2 2008/03/17 17:18:17 mr_bones_ Exp $
 
 inherit depend.php
 
@@ -111,7 +111,7 @@ src_install() {
 	dosed "s:@PEAR-VER@:${PEAR}:g" /usr/share/php/PEAR/PackageFile/Parser/v1.php
 	dosed "s:@PEAR-VER@:${PEAR}:g" /usr/share/php/PEAR/PackageFile/Parser/v2.php
 
-	# finalize install	
+	# finalize install
 	insinto /etc
 	newins "${FILESDIR}"/pear.conf-r1 pear.conf
 	dosed "s|s:PHPCLILEN:\"PHPCLI\"|s:${#PHPCLI}:\"${PHPCLI}\"|g" /etc/pear.conf
