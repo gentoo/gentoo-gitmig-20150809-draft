@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.4.4.ebuild,v 1.1 2008/03/17 09:14:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.4.4.ebuild,v 1.2 2008/03/17 21:37:13 robbat2 Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -32,7 +32,7 @@ DEPEND="
 	emacs?  ( virtual/emacs )"
 RDEPEND="${DEPEND}
 	cgi?    ( virtual/perl-CGI )
-	perl?   ( dev-perl/Error dev-perl/Authen-SASL dev-perl/Net-SMTP-SSL )
+	perl?   ( dev-perl/Error dev-perl/Net-SMTP-SSL )
 	gtk?    ( >=dev-python/pygtk-2.8 )"
 
 SITEFILE=72${PN}-gentoo.el
