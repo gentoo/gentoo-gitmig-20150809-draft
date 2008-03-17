@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/tilda
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/tilda/ChangeLog,v 1.14 2008/03/16 17:06:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/tilda/ChangeLog,v 1.15 2008/03/17 14:28:01 cla Exp $
+
+  17 Mar 2008; Dawid Węgliński <cla@gentoo.org> tilda-0.9.5.ebuild:
+  Stable on x86 (bug #213482)
 
   16 Mar 2008; nixnut <nixnut@gentoo.org> tilda-0.9.5.ebuild:
   Stable on ppc wrt bug 213482
