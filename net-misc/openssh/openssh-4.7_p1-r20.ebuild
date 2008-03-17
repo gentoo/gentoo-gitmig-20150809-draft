@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.7_p1-r20.ebuild,v 1.8 2008/03/14 11:53:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.7_p1-r20.ebuild,v 1.9 2008/03/17 15:02:23 coldwind Exp $
 
 inherit eutils flag-o-matic ccc multilib autotools pam
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~hppa ~ia64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86"
 IUSE="static pam tcpd kerberos skey selinux chroot X509 ldap smartcard hpn libedit X"
 
 RDEPEND="pam? ( virtual/pam )
