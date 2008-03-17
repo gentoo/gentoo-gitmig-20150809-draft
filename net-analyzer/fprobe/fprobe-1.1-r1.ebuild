@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/fprobe-1.1-r1.ebuild,v 1.1 2008/03/17 08:41:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/fprobe-1.1-r1.ebuild,v 1.2 2008/03/17 17:18:41 mr_bones_ Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ src_unpack() {
 	# The pidfile should be created by the parent process, before the
 	# setuid/chroot # is executed.
 	epatch "${FILESDIR}"/fprobe-1.1-pidfile-sanity.patch
-	# This seems to fail, uncertain why. 
+	# This seems to fail, uncertain why.
 	epatch "${FILESDIR}"/fprobe-1.1-setgroups.patch
 }
 
