@@ -1,8 +1,7 @@
 /var/log/rsync.log {
 	compress
-	dateext
 	maxage 365
-	rotate 99
+	rotate 7
 	size=+1024k
 	notifempty
 	missingok
