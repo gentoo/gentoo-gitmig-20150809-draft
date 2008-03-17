@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.14a-r1.ebuild,v 1.11 2007/12/11 23:29:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.14a-r1.ebuild,v 1.12 2008/03/17 04:37:23 ricmm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -16,7 +16,7 @@ SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="doc debug alisp midi"
 
 RDEPEND=""
