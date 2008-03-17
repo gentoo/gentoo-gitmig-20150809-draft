@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.9 2008/03/04 13:07:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.10 2008/03/17 12:45:49 aballier Exp $
 
 inherit base eutils
 
@@ -32,6 +32,14 @@ pkg_setup() {
 		echo
 		die 'missing imagemagick C++ header file Magick++.h'
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# Fails due to imagemagick having 'long long' in its headers (at least in
+	# 6.3.9.8).
+	sed -i -e "s/-pedantic //" configure
 }
 
 src_compile() {
