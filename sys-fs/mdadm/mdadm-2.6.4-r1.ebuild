@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-2.6.4-r1.ebuild,v 1.1 2008/02/26 07:18:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-2.6.4-r1.ebuild,v 1.2 2008/03/17 07:49:23 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,7 +34,7 @@ src_install() {
 	exeinto /$(get_libdir)/rcscripts/addons
 	newexe "${FILESDIR}"/raid-start.sh-2.6.4 raid-start.sh || die "addon failed"
 	newexe "${FILESDIR}"/raid-stop.sh-2.6.3-r2 raid-stop.sh || die "addon failed"
-	dodoc INSTALL TODO "ANNOUNCE-${PV}"
+	dodoc ChangeLog INSTALL TODO README* ANNOUNCE-${PV}
 
 	insinto /etc
 	newins mdadm.conf-example mdadm.conf
