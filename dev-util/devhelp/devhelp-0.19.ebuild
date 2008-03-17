@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.19.ebuild,v 1.1 2008/02/10 11:11:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.19.ebuild,v 1.2 2008/03/17 15:06:55 armin76 Exp $
 
 inherit toolchain-funcs gnome2 python
 
@@ -17,8 +17,8 @@ RDEPEND=">=gnome-base/gconf-2.6
 	>=dev-libs/glib-2.8
 	>=gnome-base/libglade-2.4
 	>=x11-libs/libwnck-2.10
-	xulrunner? ( net-libs/xulrunner )
-	!xulrunner? ( >=www-client/mozilla-firefox-1.0.2-r1 )
+	xulrunner? ( =net-libs/xulrunner-1.8* )
+	!xulrunner? ( =www-client/mozilla-firefox-2* )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	  sys-devel/gettext

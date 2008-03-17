@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.70 2008/02/10 11:11:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.71 2008/03/17 15:06:55 armin76 Exp $
+
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org> devhelp-0.16.1.ebuild,
+  devhelp-0.17.ebuild, devhelp-0.18.ebuild, devhelp-0.19.ebuild:
+  Fix deps for net-libs/xulrunner and www-client/mozilla-firefox
 
 *devhelp-0.19 (10 Feb 2008)
 
