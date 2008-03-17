@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.11-r1.ebuild,v 1.4 2007/01/14 03:02:11 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.11-r1.ebuild,v 1.5 2008/03/17 15:32:32 armin76 Exp $
 
 inherit mono multilib
 
@@ -20,8 +20,8 @@ S=${WORKDIR}/${MY_P}
 DEPEND=">=dev-lang/mono-1.0
 	>=dev-dotnet/gtk-sharp-2.4.0
 	|| (
-		www-client/seamonkey
-		www-client/mozilla-firefox
+		=www-client/seamonkey-1*
+		=www-client/mozilla-firefox-2*
 	)"
 
 src_unpack() {

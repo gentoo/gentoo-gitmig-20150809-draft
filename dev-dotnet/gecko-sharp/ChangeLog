@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gecko-sharp
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.49 2007/02/24 23:38:45 compnerd Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.50 2008/03/17 15:32:32 armin76 Exp $
+
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org> gecko-sharp-0.11-r1.ebuild,
+  gecko-sharp-0.12.ebuild:
+  Fix deps for net-libs/xulrunner and www-client/mozilla-firefox
 
 *gecko-sharp-0.12 (24 Feb 2007)
 
