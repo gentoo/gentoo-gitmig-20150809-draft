@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8392 2008/03/17 07:55:06 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8393 2008/03/17 15:30:56 jokey Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markus Ullmann <jokey@gentoo.org> (12 Mar 2008)
+# mask test version since we got no date from
+# lcars for release
+=app-admin/tenshi-0.10_rc*
 
 # Donnie Berkholz <dberkholz@gentoo.org> (17 Mar 2008)
 # Most apps that use lm_sensors aren't compatible with the new version
