@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.81 2008/02/26 08:29:32 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.82 2008/03/17 07:59:27 dberkholz Exp $
+
+*lm_sensors-3.0.1 (17 Mar 2008)
+
+  17 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/lm_sensors-3.0.1-sensors-detect-gentoo.patch,
+  +files/lm_sensors-3-init.d, +lm_sensors-3.0.1.ebuild:
+  Add the next-generation version of lm_sensors. This is now chip-independent
+  and is userspace-only, no kernel modules. The lm_sensors 2.x code was split
+  into this and a separate package called i2c-tools. Non-i2c hardware
+  monitoring stays here, and i2c monitoring is provided by that package. Bump
+  OK'd by genstef.
 
   26 Feb 2008; Bo Ørsted Andresen <zlin@gentoo.org>
   lm_sensors-2.10.1.ebuild, lm_sensors-2.10.2.ebuild,
