@@ -1,0 +1,34 @@
+Index: gtk/packet_list.c
+===================================================================
+--- gtk/packet_list.c	(revision 24415)
++++ gtk/packet_list.c	(revision 24416)
+@@ -790,11 +790,11 @@
+     if (adj->value >= adj->upper - adj->page_size) {
+         at_end = TRUE;
+     }
+-
++#ifdef HAVE_LIBPCAP
+     if (adj->value > 0 && at_end != last_at_end && at_end != auto_scroll_live) {
+         menu_auto_scroll_live_changed(at_end);
+     }
+-
++#endif
+     last_at_end = at_end;
+     return at_end;
+ }
+Index: gtk/main.c
+===================================================================
+--- gtk/main.c	(revision 24415)
++++ gtk/main.c	(revision 24416)
+@@ -3048,9 +3048,10 @@
+   packet_list_set_column_titles();
+ 
+   menu_recent_read_finished();
++#ifdef HAVE_LIBPCAP
+   menu_auto_scroll_live_changed(auto_scroll_live);
++#endif
+ 
+-
+   switch (user_font_apply()) {
+   case FA_SUCCESS:
+       break;
