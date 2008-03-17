@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.203 2008/03/06 11:11:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.204 2008/03/17 14:13:14 coldwind Exp $
+
+  17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> pam-0.99.10.0.ebuild:
+  Re-keyworded ~amd64 wrt bug #210770
 
   06 Mar 2008; Raúl Porcel <armin76@gentoo.org> pam-0.99.10.0.ebuild:
   Add ~alpha/~ia64 wrt #210770
