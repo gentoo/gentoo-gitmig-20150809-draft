@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-2.02.00.ebuild,v 1.1 2008/03/17 17:30:28 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-2.02.00.ebuild,v 1.2 2008/03/17 23:12:39 mr_bones_ Exp $
 
 inherit eutils versionator
 
@@ -40,7 +40,7 @@ src_compile() {
 	) || die "configure problem"
 
 	# gfs now depeneds on gfs2, due to common mount command.
-	# to avoid a dependency on gfs2, we simply build its mount command twice 
+	# to avoid a dependency on gfs2, we simply build its mount command twice
 	# and rename it
 	sed -i \
 		-e '/ln -sf [u]\?mount.gfs2 [u]\?mount.gfs/d' \
