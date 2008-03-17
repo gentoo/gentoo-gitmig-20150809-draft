@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.0.ebuild,v 1.5 2008/03/17 20:01:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.0.ebuild,v 1.6 2008/03/17 20:14:28 graaff Exp $
 
 inherit autotools eutils gnome2 multilib flag-o-matic versionator
 
@@ -36,7 +36,6 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-base/libbonobo-2.0
 	>=dev-libs/gmime-2.1
 	>=x11-libs/libnotify-0.4.1
-	dev-perl/XML-Parser
 	pop? ( gnome-base/gnome-keyring )
 	imap? ( gnome-base/gnome-keyring )
 	gmail? ( gnome-base/gnome-keyring )
@@ -46,7 +45,8 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	sylpheed? ( virtual/sylpheed )"
 
 DEPEND="${RDEPEND}
-	app-text/scrollkeeper"
+	app-text/scrollkeeper
+	>=dev-util/intltool-0.35.0"
 
 DOCS="README NEWS AUTHORS TODO"
 
