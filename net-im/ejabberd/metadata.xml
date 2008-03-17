@@ -4,7 +4,7 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <maintainer>
-  <email>chainsaw@gentoo.org</email>
+  <email>caleb@gentoo.org</email>
 </maintainer>
 <longdescription> Free and Open Source distributed fault-tolerant Jabber server. It's mostly written in Erlang, and works on many platforms.</longdescription>
 </pkgmetadata>
