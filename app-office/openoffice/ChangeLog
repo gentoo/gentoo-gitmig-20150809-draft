@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.371 2008/03/07 14:33:44 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.372 2008/03/17 14:12:28 armin76 Exp $
+
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org> openoffice-2.3.1-r1.ebuild:
+  Fix deps for net-libs/xulrunner and www-client/mozilla-firefox
 
   07 Mar 2008; Andreas Proschofsky <suka@gentoo.org>
   -files/2.3.1/gentoo-2.3.1.diff,

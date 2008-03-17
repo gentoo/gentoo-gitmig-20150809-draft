@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1-r1.ebuild,v 1.6 2008/03/05 15:36:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1-r1.ebuild,v 1.7 2008/03/17 14:12:28 armin76 Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -67,13 +67,13 @@ COMMON_DEPEND="!app-office/openoffice-bin
 		>=dev-java/xerces-2.7
 		=dev-java/xml-commons-external-1.3* )
 	mono? ( >=dev-lang/mono-1.2.3.1 )
-	firefox? ( >=www-client/mozilla-firefox-1.5-r9
+	firefox? ( =www-client/mozilla-firefox-2*
 		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 )
-	!firefox? ( seamonkey? ( www-client/seamonkey
+	!firefox? ( seamonkey? ( =www-client/seamonkey-1*
 		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 ) )
-	!firefox? ( !seamonkey? ( xulrunner? ( net-libs/xulrunner
+	!firefox? ( !seamonkey? ( xulrunner? ( =net-libs/xulrunner-1.8*
 		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 ) ) )
 	sound? ( >=media-libs/portaudio-18.1-r5
