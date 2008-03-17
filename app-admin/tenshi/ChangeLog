@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.41 2008/03/17 15:27:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.42 2008/03/17 15:39:13 jokey Exp $
+
+*tenshi-0.10 (17 Mar 2008)
+
+  17 Mar 2008; Markus Ullmann <jokey@gentoo.org> +tenshi-0.10.ebuild:
+  Another version bump and CL tweakage
 
 *tenshi-0.9.1-r1 (17 Mar 2008)
 
@@ -8,6 +13,15 @@
   +files/tenshi-0.9.1-fix-tail_pids-array-length.patch,
   +tenshi-0.9.1-r1.ebuild:
   Version bump, thanks to Adam James
+
+  14 Mar 2008; Adam James <atj@pulsewidth.org.uk> +tenshi-0.10.ebuild:
+  Version bump.
+
+  13 Mar 2008; Adam James <atj@pulsewidth.org.uk>
+  +app-admin/tenshi/tenshi-0.9.1-r1.ebuild,
+  +app-admin/tenshi/files/tenshi-0.9.1-fix-tail_pids-array-length.patch,
+  +app-admin/tenshi/files/tenshi-0.9.1-skip-unmatched-subpatterns.patch:
+  Fix for bug #212213.
 
   11 Mar 2008; Markus Ullmann <jokey@gentoo.org> metadata.xml:
   Taking over as proxy maintainer
