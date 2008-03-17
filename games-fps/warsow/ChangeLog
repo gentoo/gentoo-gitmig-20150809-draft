@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.15 2008/02/11 16:23:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.16 2008/03/17 07:31:12 tupone Exp $
+
+*warsow-0.4.2 (17 Mar 2008)
+
+  17 Mar 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/warsow-0.4.2-build.patch, +warsow-0.4.2.ebuild:
+  Version bump to 0.4.2 requested via bug #212706 from Norman Jonas
 
 *warsow-0.4.1 (11 Feb 2008)
 

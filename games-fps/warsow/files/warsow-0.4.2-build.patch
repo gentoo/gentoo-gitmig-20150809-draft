@@ -1,0 +1,43 @@
+--- Makefile
++++ Makefile
+@@ -108,9 +108,9 @@
+ LOCALBASE?=/usr/local
+ X11BASE?=/usr/X11R6
+ 
+-CFLAGS_COMMON=$(CFLAGS) -I. -I$(LOCALBASE)/include -I$(X11BASE)/include -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall
+-CFLAGS_RELEASE=-O2 -fno-strict-aliasing -ffast-math -funroll-loops -DNDEBUG
+-CFLAGS_DEBUG=-O0 -ggdb -D_DEBUG
++CFLAGS_COMMON=$(CFLAGS) -I. -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -fno-strict-aliasing
++CFLAGS_RELEASE=-DNDEBUG
++CFLAGS_DEBUG=-D_DEBUG
+ ifeq ($(DEBUG_BUILD),YES)
+ CFLAGS_COMMON+=$(CFLAGS_DEBUG)
+ else
+@@ -125,7 +125,7 @@
+ ifeq ($(OS),FreeBSD)
+ LDFLAGS_COMMON=-L/usr/local/lib -lm
+ else
+-LDFLAGS_COMMON=-L/usr/local/lib -ldl -lm
++LDFLAGS_COMMON=$(LDFLAGS) -ldl -lm
+ endif
+ 
+ ifeq ($(ARCH),x86_64)
+@@ -353,15 +353,15 @@
+ 
+ all: client openal qf ded cgame game ui irc tv_server
+ 
+-client: $(BUILDDIRS) message-client compile-client link-client start-script-client
++client: $(BUILDDIRS) message-client compile-client link-client
+ openal: $(BUILDDIRS) message-openal compile-openal link-openal
+ qf: $(BUILDDIRS) message-qf compile-qf link-qf
+-ded: $(BUILDDIRS) message-ded compile-ded link-ded start-script-ded
++ded: $(BUILDDIRS) message-ded compile-ded link-ded
+ cgame: $(BUILDDIRS) message-cgame compile-cgame link-cgame
+ game: $(BUILDDIRS) message-game compile-game link-game
+ ui: $(BUILDDIRS) message-ui compile-ui link-ui
+ irc: $(BUILDDIRS) message-irc compile-irc link-irc
+-tv_server: $(BUILDDIRS) message-tv_server compile-tv_server link-tv_server start-script-tv_server
++tv_server: $(BUILDDIRS) message-tv_server compile-tv_server link-tv_server
+ 
+ clean: clean-msg clean-depend clean-client clean-openal clean-qf clean-ded clean-cgame clean-game clean-ui clean-irc clean-tv_server
+ 
