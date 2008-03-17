@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/worldofpadman-1.2.ebuild,v 1.1 2008/01/25 08:33:19 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/worldofpadman-1.2.ebuild,v 1.2 2008/03/17 22:45:00 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://kickchat.com/wop/${MY_P}.tar.bz2
 
 LICENSE="GPL-2 worldofpadman"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="dedicated maps opengl"
 
 UIDEPEND="virtual/opengl
