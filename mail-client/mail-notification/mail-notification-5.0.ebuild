@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.0.ebuild,v 1.4 2008/03/16 08:54:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.0.ebuild,v 1.5 2008/03/17 20:01:43 graaff Exp $
 
 inherit autotools eutils gnome2 multilib flag-o-matic versionator
 
@@ -24,7 +24,7 @@ RESTRICT="test"
 # it's pointless making it optional. gnome-keyring is required for
 # several specific access methods, and thus linked to those USE flags
 # instead of adding a keyring USE flag.
-DEPEND=">=x11-libs/gtk+-2.10
+RDEPEND=">=x11-libs/gtk+-2.10
 	>=dev-libs/glib-2.10
 	>=dev-util/gob-2.0.13
 	>=gnome-base/gnome-panel-2.6
@@ -44,6 +44,9 @@ DEPEND=">=x11-libs/gtk+-2.10
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	evo? ( >=mail-client/evolution-2.12 )
 	sylpheed? ( virtual/sylpheed )"
+
+DEPEND="${RDEPEND}
+	app-text/scrollkeeper"
 
 DOCS="README NEWS AUTHORS TODO"
 

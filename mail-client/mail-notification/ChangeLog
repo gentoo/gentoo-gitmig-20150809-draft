@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.58 2008/03/16 08:54:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.59 2008/03/17 20:01:43 graaff Exp $
+
+  17 Mar 2008; Hans de Graaff <graaff@gentoo.org>
+  mail-notification-5.0.ebuild:
+  Add missing build dependency on scrollkeeper; found by armin76 in #213465.
 
   16 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
   mail-notification-5.0.ebuild:
