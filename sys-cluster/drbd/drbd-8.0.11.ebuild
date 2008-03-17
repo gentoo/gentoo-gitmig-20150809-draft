@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.11.ebuild,v 1.2 2008/02/25 14:37:30 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.11.ebuild,v 1.3 2008/03/17 23:11:30 xmerlin Exp $
 
 inherit eutils versionator
 
@@ -46,7 +46,7 @@ src_install() {
 pkg_postinst() {
 	einfo ""
 	einfo "Please copy and gunzip the configuration file"
-	einfo "from /usr/share/doc/${PF}/drbd.conf.gz to /etc"
+	einfo "drbd.conf from /usr/share/doc/${PF} to /etc"
 	einfo "and edit it to your needs. Helpful commands:"
 	einfo "man 5 drbd.conf"
 	einfo "man 8 drbdsetup"
