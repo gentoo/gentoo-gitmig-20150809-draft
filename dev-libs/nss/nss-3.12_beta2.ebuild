@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12_beta2.ebuild,v 1.1 2008/02/25 10:38:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12_beta2.ebuild,v 1.2 2008/03/17 12:12:24 armin76 Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ DESCRIPTION="Mozilla's Network Security Services library that implements PKI sup
 HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
+LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="utils"
