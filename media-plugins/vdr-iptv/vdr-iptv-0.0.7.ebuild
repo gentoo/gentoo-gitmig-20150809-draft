@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-iptv/vdr-iptv-0.0.7.ebuild,v 1.1 2008/02/19 19:12:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-iptv/vdr-iptv-0.0.7.ebuild,v 1.2 2008/03/17 15:09:18 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -14,6 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.4.7-r7"
+
+PATCHES="${FILESDIR}/${P}-vdr-1.4.diff"
 
 pkg_setup() {
 	vdr-plugin_pkg_setup
