@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/labplot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.19 2008/03/07 03:02:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.20 2008/03/17 17:51:47 bicatali Exp $
+
+*labplot-1.6.0.1-r1 (17 Mar 2008)
+
+  17 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/labplot-1.6.0.1-liborigin.patch, +labplot-1.6.0.1-r1.ebuild:
+  Added a patch to use newer liborigin, from Debian
 
   06 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -labplot-1.5.1.6.ebuild, labplot-1.5.1.6-r1.ebuild,
