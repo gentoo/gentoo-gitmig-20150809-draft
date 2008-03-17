@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/adns-python
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.15 2007/01/27 22:05:12 lucass Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.16 2008/03/17 23:09:58 jurek Exp $
+
+  17 Mar 2008; Jurek Bartuszek <jurek@gentoo.org> adns-python-1.2.1.ebuild:
+  x86 stable (bug #213740)
 
 *adns-python-1.2.1 (27 Jan 2007)
 
