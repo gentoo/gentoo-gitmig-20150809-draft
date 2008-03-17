@@ -1,0 +1,20 @@
+--- cluster-2.02.00/dlm/lib/Makefile.orig	2008-03-16 15:40:43.000000000 +0000
++++ cluster-2.02.00/dlm/lib/Makefile	2008-03-16 15:40:52.000000000 +0000
+@@ -13,6 +13,8 @@
+ 
+ TARGET= libdlm
+ 
++include ../../make/defines.mk
++
+ LIBDIRT=$(TARGET).a \
+ 	$(TARGET)_lt.a \
+ 	$(TARGET).so.${RELEASE_MAJOR}.${RELEASE_MINOR} \
+@@ -27,8 +29,6 @@
+ 
+ UDEVT=51-dlm.rules
+ 
+-include ../../make/defines.mk
+-
+ SHAREDLIB=$(TARGET).so.${RELEASE_MAJOR}.${RELEASE_MINOR} $(TARGET)_lt.so.${RELEASE_MAJOR}.${RELEASE_MINOR}
+ STATICLIB=$(TARGET).a $(TARGET)_lt.a
+ 
