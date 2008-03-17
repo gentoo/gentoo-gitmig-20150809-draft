@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.13 2008/03/12 10:24:50 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.14 2008/03/17 16:27:59 coldwind Exp $
+
+  17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> gip-1.6.1.1.ebuild:
+  amd64 stable and pkgconfig dep added (bug #205439).
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Josh Glover (jmglov, #206782) from metadata.xml.

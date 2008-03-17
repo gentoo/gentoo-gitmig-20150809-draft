@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.5 2008/02/29 20:14:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.6 2008/03/17 16:27:59 coldwind Exp $
 
 inherit versionator distutils
 
@@ -11,12 +11,15 @@ SRC_URI="http://dl.debain.org/gip/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
-
+KEYWORDS="amd64 x86"
 IUSE=""
-DEPEND=">=dev-cpp/gtkmm-2.4
+
+RDEPEND=">=dev-cpp/gtkmm-2.4
 	>=dev-libs/glib-2.2.3
 	>=dev-libs/libsigc++-2.0"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 
