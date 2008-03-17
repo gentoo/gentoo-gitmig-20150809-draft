@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-1.04.00.ebuild,v 1.1 2007/03/09 10:57:12 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-1.04.00.ebuild,v 1.2 2008/03/17 16:31:39 xmerlin Exp $
 
 CLUSTER_RELEASE="1.04.00"
 MY_P="cluster-${CLUSTER_RELEASE}"
@@ -26,8 +26,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install problem"
+	emake DESTDIR="${D}" install || die "install problem"
 
-	newinitd ${FILESDIR}/${PN}d.rc ${PN}d || die
-	newconfd ${FILESDIR}/${PN}d.conf ${PN}d || die
+	newinitd "${FILESDIR}"/${PN}d.rc ${PN}d || die
+	newconfd "${FILESDIR}"/${PN}d.conf ${PN}d || die
 }
