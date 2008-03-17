@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/yelp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.177 2008/02/03 19:16:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.178 2008/03/17 15:23:07 armin76 Exp $
+
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org> yelp-2.16.2.ebuild,
+  yelp-2.18.1.ebuild, yelp-2.20.0.ebuild:
+  Fix deps for net-libs/xulrunner and www-client/mozilla-firefox
 
   03 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org> yelp-2.20.0.ebuild:
   fix bug #196621 and autodetection of beagle support
