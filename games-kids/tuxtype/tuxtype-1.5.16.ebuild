@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.5.16.ebuild,v 1.1 2008/03/17 02:59:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.5.16.ebuild,v 1.2 2008/03/17 03:01:44 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://alioth.debian.org/frs/download.php/2209/tuxtype_w_fonts-${PV}.ta
 
 LICENSE="GPL-2 OFL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl
