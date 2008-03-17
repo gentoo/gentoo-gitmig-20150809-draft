@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.7.ebuild,v 1.10 2008/02/02 17:49:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.7.ebuild,v 1.11 2008/03/17 12:13:44 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -37,7 +37,7 @@ done
 
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 SLOT="0"
-LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
+LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 
 RDEPEND=">=www-client/mozilla-launcher-1.55
 	>=dev-libs/nss-3.11.7"

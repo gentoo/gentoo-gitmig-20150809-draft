@@ -1,6 +1,9 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.26 2008/02/02 17:49:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.27 2008/03/17 12:13:44 armin76 Exp $
+
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.7.ebuild:
+  Fix LICENSE, thanks to zlin
 
   02 Feb 2008; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.7.ebuild:
   Bump patchset to fix bug #208212
