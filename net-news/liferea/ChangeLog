@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.138 2008/03/04 00:22:29 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.139 2008/03/17 14:11:01 armin76 Exp $
+
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org> liferea-1.0.24.ebuild,
+  liferea-1.2.23-r1.ebuild, liferea-1.4.9.ebuild, liferea-1.4.10.ebuild,
+  liferea-1.4.11.ebuild, liferea-1.4.13.ebuild:
+  Fix deps for net-libs/xulrunner and www-client/mozilla-firefox
 
 *liferea-1.4.13 (04 Mar 2008)
 

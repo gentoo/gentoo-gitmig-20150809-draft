@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0.24.ebuild,v 1.11 2007/08/02 06:34:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0.24.ebuild,v 1.12 2008/03/17 14:11:01 armin76 Exp $
 
 inherit gnome2 eutils autotools
 
@@ -17,8 +17,8 @@ RDEPEND=">=x11-libs/gtk+-2.4.0
 	x11-libs/pango
 	>=gnome-base/gconf-2
 	>=dev-libs/libxml2-2.5.10
-	firefox? ( www-client/mozilla-firefox )
-	!firefox? ( seamonkey? ( www-client/seamonkey ) )
+	firefox? ( =www-client/mozilla-firefox-2* )
+	!firefox? ( seamonkey? ( =www-client/seamonkey-1* ) )
 	gtkhtml? ( =gnome-extra/gtkhtml-2* )
 	!seamonkey? ( !firefox? ( =gnome-extra/gtkhtml-2* ) )
 	gnome-base/libgnome

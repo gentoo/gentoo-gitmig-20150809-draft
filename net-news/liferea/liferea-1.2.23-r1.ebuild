@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.23-r1.ebuild,v 1.6 2007/11/14 03:42:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.23-r1.ebuild,v 1.7 2008/03/17 14:11:01 armin76 Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
@@ -21,9 +21,9 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	>=dev-libs/libxml2-2.6.27
 	>=dev-libs/libxslt-1.1.19
 	>=dev-libs/glib-2
-	xulrunner? ( net-libs/xulrunner )
-	!xulrunner? ( firefox? ( www-client/mozilla-firefox ) )
-	!xulrunner? ( !firefox? ( seamonkey? ( www-client/seamonkey ) ) )
+	xulrunner? ( =net-libs/xulrunner-1.8* )
+	!xulrunner? ( firefox? ( =www-client/mozilla-firefox-2* ) )
+	!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1* ) ) )
 	!amd64? ( !xulrunner? ( !firefox? ( !seamonkey? ( =gnome-extra/gtkhtml-2* ) ) ) )
 	!amd64? ( gtkhtml? ( =gnome-extra/gtkhtml-2* ) )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )

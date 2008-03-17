@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.10.ebuild,v 1.1 2007/12/23 16:03:29 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.10.ebuild,v 1.2 2008/03/17 14:11:01 armin76 Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
@@ -19,9 +19,9 @@ IUSE="dbus firefox gtkhtml gnutls libnotify lua networkmanager seamonkey xulrunn
 RDEPEND="
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
 	lua? ( >=dev-lang/lua-5.1 )
-	xulrunner? ( net-libs/xulrunner )
-	!xulrunner? ( firefox? ( www-client/mozilla-firefox ) )
-	!xulrunner? ( !firefox? ( seamonkey? ( www-client/seamonkey ) ) )
+	xulrunner? ( =net-libs/xulrunner-1.8* )
+	!xulrunner? ( firefox? ( =www-client/mozilla-firefox-2* ) )
+	!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1* ) ) )
 	!amd64? ( !xulrunner? ( !firefox? ( !seamonkey? ( gnome-extra/gtkhtml:2 ) ) ) )
 	!amd64? ( gtkhtml? ( gnome-extra/gtkhtml:2 ) )
 	>=x11-libs/gtk+-2.8
