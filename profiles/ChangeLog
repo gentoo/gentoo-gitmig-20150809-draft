@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1216 2008/03/16 19:49:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1217 2008/03/17 00:39:17 dirtyepic Exp $
+
+  17 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Mask dev-util/jam for removal.
 
   15 Mar 2008; Peter Volkov <pva@gentoo.org> use.local.desc:
   Added gcrypt, pcap and another time smi USE flags for wireshark. Fixed typos
