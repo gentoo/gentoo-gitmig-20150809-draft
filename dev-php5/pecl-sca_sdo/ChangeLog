@@ -1,6 +1,16 @@
 # ChangeLog for dev-php5/pecl-sca_sdo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-sca_sdo/ChangeLog,v 1.4 2007/08/30 13:07:09 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-sca_sdo/ChangeLog,v 1.5 2008/03/17 09:56:39 jokey Exp $
+
+*pecl-sca_sdo-1.2.4 (17 Mar 2008)
+
+  17 Mar 2008; <jokey@gentoo.org> +pecl-sca_sdo-1.2.4.ebuild:
+  Version bump from project overlay
+
+  04 Mar 2008; Jakub Moc <jakub@gentoo.org>
+  +pecl-sca_sdo-1.2.4.ebuild:
+  Version bump - bugfix release. Fixes PECL bugs #11997, #11996, #12193,
+  #12103, #12443, #13101 and other issues.
 
 *pecl-sca_sdo-1.2.3 (30 Aug 2007)
 
