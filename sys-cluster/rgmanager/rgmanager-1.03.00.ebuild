@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/rgmanager-1.03.00.ebuild,v 1.3 2007/03/10 12:06:07 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/rgmanager-1.03.00.ebuild,v 1.4 2008/03/17 17:13:59 xmerlin Exp $
 
 inherit eutils
 
@@ -31,8 +31,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install problem"
+	emake DESTDIR="${D}" install || die "install problem"
 
-	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
-	newconfd ${FILESDIR}/${PN}.conf ${PN} || die
+	newinitd "${FILESDIR}"/${PN}-1.0x.rc ${PN} || die
+	newconfd "${FILESDIR}"/${PN}-1.0x.conf ${PN} || die
 }

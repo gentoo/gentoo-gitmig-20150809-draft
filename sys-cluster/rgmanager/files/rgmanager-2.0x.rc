@@ -3,11 +3,11 @@
 # Adaption of the original RedHat script
 # Original Copyright (C) 2003 Red Hat, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/files/rgmanager.rc,v 1.1 2006/07/13 09:25:23 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/files/rgmanager-2.0x.rc,v 1.1 2008/03/17 17:14:00 xmerlin Exp $
 
 depend() {
 	use net
-	need ccs cluster-manager cluster-locking-manager
+	need cman
 }
 
 # We'd like a reload method as well
@@ -76,8 +76,11 @@ function stop_cluster()
 function start() {
 	ebegin "Starting cluster resource manager"
 	start-stop-daemon --start --quiet --exec ${RGMGRD} ${RGMGR_OPTS}
-	touch /var/lock/subsys/rgmanager
-	eend 
+	ret=$?
+	if [ $ret -eq 0 ]; then
+		touch /var/lock/subsys/rgmanager
+	fi
+	eend $ret
 }
 
 function restart() {
