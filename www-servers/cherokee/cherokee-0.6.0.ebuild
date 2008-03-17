@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.6.0.ebuild,v 1.1 2008/03/17 16:02:17 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.6.0.ebuild,v 1.2 2008/03/17 16:22:32 bass Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -80,8 +80,8 @@ src_install () {
 	newpamd pam.d_cherokee ${PN} || die "newpamd failed"
 	newinitd "${FILESDIR}/${PN}-initd-0.6" ${PN} || die "newinitd failed"
 
-	dodir /usr/share/doc/contrib
-	insinto /usr/share/doc/contrib
+	dodir /usr/share/doc/${PF}/contrib
+	insinto /usr/share/${PF}/contrib
 	doins contrib/05to06.py
 
 	keepdir /etc/cherokee/mods-enabled /etc/cherokee/sites-enabled /var/www/localhost/htdocs
@@ -107,7 +107,7 @@ pkg_postinst() {
 	
 	echo ""
 	elog "Cherokee conf is quite different in 0.6.x series. You must use"
-	elog " cherokee-admin to create a new config or use /usr/share/doc/contrib/05to06.py"
+	elog " cherokee-admin to create a new config or use	/usr/share/doc/${PF}/contrib/05to06.py"
 	elog " to export your old config (not ever works)."
 	echo ""
 }
