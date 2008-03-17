@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-live
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.12 2008/03/16 21:42:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.13 2008/03/17 20:13:38 zzam Exp $
+
+  17 Mar 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-live-0.1.0.20080316.ebuild:
+  Newest snapshot also works with tntnet-1.6.1
 
 *vdr-live-0.1.0.20080316 (16 Mar 2008)
 
