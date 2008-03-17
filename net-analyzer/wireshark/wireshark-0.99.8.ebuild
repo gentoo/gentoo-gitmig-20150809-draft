@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.8.ebuild,v 1.4 2008/03/17 14:06:40 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.8.ebuild,v 1.5 2008/03/17 20:40:34 pva Exp $
 
 # ChangeLog:
 # 1. Droped check for perl minimal USE flag. We do not have perl with minimal
@@ -98,6 +98,14 @@ src_compile() {
 	else
 		einfo "Building without gtk support"
 		myconf="${myconf} --disable-wireshark"
+	fi
+
+	# Workaround bug #213705. If krb5-config --libs has -lcrypto then pass
+	# --with-ssl to ./configure. (Mimics code from acinclude.m4).
+	if use kerberos; then
+		case `krb5-config --libs` in
+			*-lcrypto*) myconf="${myconf} --with-ssl" ;;
+		esac
 	fi
 
 	# dumpcap requires libcap, setuid-install requires dumpcap
