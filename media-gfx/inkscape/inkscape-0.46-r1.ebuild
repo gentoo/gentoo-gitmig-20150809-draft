@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.46-r1.ebuild,v 1.3 2008/03/16 23:18:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.46-r1.ebuild,v 1.4 2008/03/17 20:45:12 maekke Exp $
 
 inherit gnome2 eutils
 
@@ -11,10 +11,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
-IUSE="dia doc gnome inkjar jabber lcms mmx pdf perl postscript spell wmf"
+IUSE="dia doc gnome inkjar jabber lcms mmx perl postscript spell wmf"
 RESTRICT="test"
 
 COMMON_DEPEND="
+	app-text/poppler-bindings
 	dev-cpp/glibmm
 	>=dev-cpp/gtkmm-2.4
 	>=dev-libs/boehm-gc-6.4
@@ -39,7 +40,6 @@ COMMON_DEPEND="
 		gnome-base/libgnomeprintui
 	)
 	lcms? ( >=media-libs/lcms-1.14 )
-	pdf? ( app-text/poppler-bindings )
 	perl? (
 		dev-perl/XML-Parser
 		dev-perl/XML-XQL
@@ -69,8 +69,8 @@ pkg_setup() {
 		eerror "you need to emerge media-gfx/pstoedit with plotutils support."
 		die "remerge media-gfx/pstoedit with USE=\"plotutils\""
 	fi
-	# bug 213026
-	if use pdf && ! built_with_use app-text/poppler-bindings cairo ; then
+	# bug 213026 and bug 213706
+	if ! built_with_use app-text/poppler-bindings cairo ; then
 		eerror "you need to emerge app-text/poppler-bindings with cairo	support."
 		die "remerge app-text/poppler-bindings with USE=\"cairo\""
 	fi

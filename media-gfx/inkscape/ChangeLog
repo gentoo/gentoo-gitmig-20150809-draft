@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.88 2008/03/16 23:18:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.89 2008/03/17 20:45:12 maekke Exp $
+
+  17 Mar 2008; Markus Meier <maekke@gentoo.org> inkscape-0.46-r1.ebuild:
+  app-text/poppler-bindings needs to be built with cairo support in any way
+  (bug #213706) - so remove the pdf USE-flag
 
   16 Mar 2008; Jeroen Roovers <jer@gentoo.org> inkscape-0.46-r1.ebuild:
   Marked ~hppa (bug #213611).
