@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/lightning-0.7.ebuild,v 1.3 2008/02/08 15:56:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/lightning-0.7.ebuild,v 1.4 2008/03/17 12:50:14 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -15,7 +15,7 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/$
 
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
+LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE=""
 
 RDEPEND=">=mail-client/mozilla-thunderbird-2.0_alpha1
