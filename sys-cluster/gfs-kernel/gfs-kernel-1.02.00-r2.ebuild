@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.02.00-r2.ebuild,v 1.1 2007/05/08 10:53:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.02.00-r2.ebuild,v 1.2 2008/03/17 17:23:01 xmerlin Exp $
 
 inherit eutils linux-mod linux-info
 
@@ -40,16 +40,16 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${WORKDIR}/gfs-kernel-1.02.00-20060714-cvs-part1.patch || die
+	epatch "${WORKDIR}"/gfs-kernel-1.02.00-20060714-cvs-part1.patch || die
 	if kernel_is 2 6; then
 		if [ "$KV_PATCH" -gt "16" ] ; then
-			epatch ${WORKDIR}/gfs-kernel-1.02.00-20060714-cvs-part2.patch || die
+			epatch "${WORKDIR}"/gfs-kernel-1.02.00-20060714-cvs-part2.patch || die
 		fi
 
 		if [ "$KV_PATCH" -ge "18" ] ; then
-			epatch ${FILESDIR}/${PN}-1.03.00-post-2.6.18.patch || die
+			epatch "${FILESDIR}"/${PN}-1.03.00-post-2.6.18.patch || die
 
 			sed -i \
 				-e 's|version.h|utsrelease.h|g' \
@@ -58,7 +58,7 @@ src_unpack() {
 		fi
 	fi
 
-	epatch ${FILESDIR}/${PN/headers/kernel}-${PV}-${CVS_RELEASE}-cvs-compile.patch || die
+	epatch "${FILESDIR}"/${PN/headers/kernel}-${PV}-${CVS_RELEASE}-cvs-compile.patch || die
 }
 
 src_compile() {
@@ -69,8 +69,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} module_dir=${D}/lib/modules/${KV_FULL} install || die "install problem"
-	rm -f ${D}/usr/include/linux/* || die
+	emake DESTDIR="${D}" module_dir="${D}"/lib/modules/${KV_FULL} install || die "install problem"
+	rm -f "${D}"/usr/include/linux/* || die
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.03.00-r1.ebuild,v 1.2 2007/05/12 13:28:14 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.03.00-r1.ebuild,v 1.3 2008/03/17 17:23:01 xmerlin Exp $
 
 inherit eutils linux-mod linux-info
 
@@ -34,15 +34,15 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if kernel_is 2 6; then
 		if [ "$KV_PATCH" -lt "17" ] ; then
-			epatch ${FILESDIR}/gfs-kernel-1.03.00-pre2.6.17-compilefix.patch || die
+			epatch "${FILESDIR}"/gfs-kernel-1.03.00-pre2.6.17-compilefix.patch || die
 		fi
 
 		if [ "$KV_PATCH" -ge "18" ] ; then
-			epatch ${FILESDIR}/${P}-post-2.6.18.patch || die
+			epatch "${FILESDIR}"/${P}-post-2.6.18.patch || die
 
 			sed -i \
 				-e 's|version.h|utsrelease.h|g' \
@@ -60,8 +60,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} module_dir=${D}/lib/modules/${KV_FULL} install || die "install problem"
-	rm -f ${D}/usr/include/linux/* || die
+	emake DESTDIR="${D}" module_dir="${D}"/lib/modules/${KV_FULL} install || die "install problem"
+	rm -f "${D}"/usr/include/linux/* || die
 }
 
 pkg_postinst() {
