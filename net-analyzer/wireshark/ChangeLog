@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.81 2008/03/17 01:19:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.82 2008/03/17 13:21:42 tester Exp $
+
+  17 Mar 2008; Olivier Crête <tester@gentoo.org> wireshark-0.99.8.ebuild:
+  Stable on amd64, bug #212149
 
   17 Mar 2008; Peter Volkov <pva@gentoo.org>
   +files/wireshark-0.99.8-libpcap-compile.patch:
