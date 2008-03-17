@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-nag
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.26 2008/01/12 05:33:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.27 2008/03/17 18:12:31 jer Exp $
+
+  17 Mar 2008; Jeroen Roovers <jer@gentoo.org> horde-nag-2.1.4.ebuild:
+  Stable for HPPA (bug #212635).
 
   12 Jan 2008; Mike Frysinger <vapier@gentoo.org> +horde-nag-2.1.4.ebuild:
   Version bump .
