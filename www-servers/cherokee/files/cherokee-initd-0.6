@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/files/cherokee-initd-0.6,v 1.1 2008/03/17 16:02:18 bass Exp $
+
+PIDFILE=/var/run/cherokee-guardian.pid
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting Cherokee Web Server"
+	start-stop-daemon --start -b --pidfile ${PIDFILE} \
+		--exec /usr/sbin/cherokee-guardian
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Cherokee Web Server"
+	start-stop-daemon --stop -s 9 --pidfile ${PIDFILE} \
+		--exec /usr/sbin/cherokee-guardian
+	eend $?
+}
