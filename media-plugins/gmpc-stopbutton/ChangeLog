@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-stopbutton
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-stopbutton/ChangeLog,v 1.9 2008/03/16 17:27:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-stopbutton/ChangeLog,v 1.10 2008/03/17 14:46:20 fmccor Exp $
+
+  17 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
+  gmpc-stopbutton-0.15.5.0.ebuild:
+  Sparc stable --- part of Bug #212077.
 
   16 Mar 2008; Markus Meier <maekke@gentoo.org>
   gmpc-stopbutton-0.15.5.0.ebuild:

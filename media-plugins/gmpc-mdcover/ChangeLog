@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-mdcover
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.10 2008/03/16 17:21:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.11 2008/03/17 14:45:04 fmccor Exp $
+
+  17 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
+  gmpc-mdcover-0.15.5.0.ebuild:
+  Sparc stable --- part of Bug #212077.
 
   16 Mar 2008; Markus Meier <maekke@gentoo.org>
   gmpc-mdcover-0.15.5.0.ebuild:
