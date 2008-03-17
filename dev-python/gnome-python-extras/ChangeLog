@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.69 2008/03/15 16:21:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.70 2008/03/17 15:12:20 armin76 Exp $
+
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  gnome-python-extras-2.14.2-r1.ebuild,
+  gnome-python-extras-2.19.1-r1.ebuild:
+  Fix deps for net-libs/xulrunner and www-client/mozilla-firefox
 
   15 Mar 2008; Brent Baude <ranger@gentoo.org>
   gnome-python-extras-2.19.1-r1.ebuild:

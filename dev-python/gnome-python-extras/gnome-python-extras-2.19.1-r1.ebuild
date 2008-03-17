@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.19.1-r1.ebuild,v 1.8 2008/03/15 16:21:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.19.1-r1.ebuild,v 1.9 2008/03/17 15:12:20 armin76 Exp $
 
 inherit eutils gnome2 python virtualx autotools
 
@@ -17,9 +17,9 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	>=dev-python/gnome-python-2.10
 	>=dev-python/pygtk-2.4
 	=gnome-extra/gtkhtml-2*
-	xulrunner? ( net-libs/xulrunner )
-	!xulrunner? ( firefox? ( >=www-client/mozilla-firefox-1.0 ) )
-	!xulrunner? ( !firefox? ( seamonkey? ( >=www-client/seamonkey-1.0 ) ) )
+	xulrunner? ( =net-libs/xulrunner-1.8* )
+	!xulrunner? ( firefox? ( =www-client/mozilla-firefox-2* ) )
+	!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1* ) ) )
 	>=app-text/gtkspell-2"
 	# =gnome-extra/libgda-3*
 	# This used to be wrongly libgda-1*, but as configure is automagic,
