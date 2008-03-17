@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/cman
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.37 2008/03/17 16:47:10 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.38 2008/03/17 23:39:06 xmerlin Exp $
+
+  17 Mar 2008; Christian Zoffoli <xmerlin@gentoo.org> +files/cman-2.0x.conf,
+  +files/cman-2.0x.rc, -files/cman-2.x.conf, -files/cman-2.x.rc,
+  cman-2.02.00.ebuild:
+  Fixed init, conf name, added 2.6.20 warning.
 
 *cman-2.02.00 (17 Mar 2008)
 

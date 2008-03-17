@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-2.02.00.ebuild,v 1.1 2008/03/17 16:47:10 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-2.02.00.ebuild,v 1.2 2008/03/17 23:39:06 xmerlin Exp $
 
 inherit eutils versionator
 
@@ -91,5 +91,10 @@ src_install() {
 pkg_postinst() {
 	einfo ""
 	einfo "Please add a cluster.conf in /etc/cluster/"
+	einfo ""
+	einfo "If you want to use cman and dlm 2.0x.00"
+	einfo "with 2.6.20 kernels you have to patch your"
+	einfo "kernel sources with:"
+	einfo "http://dev.gentoo.org/~xmerlin/gfs/dlm-gfs-2.6.20.patch.bz2"
 	einfo ""
 }
