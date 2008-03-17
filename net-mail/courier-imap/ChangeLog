@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.158 2008/03/15 23:07:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.159 2008/03/17 04:55:13 ricmm Exp $
+
+  17 Mar 2008; <ricmm@gentoo.org> courier-imap-3.0.8.ebuild,
+  courier-imap-4.0.1.ebuild, courier-imap-4.0.4.ebuild:
+  Drop to ~mips due to unstable deps
 
   15 Mar 2008; Mark Loeser <halcy0n@gentoo.org> courier-imap-3.0.8.ebuild,
   courier-imap-4.0.1.ebuild, courier-imap-4.0.1-r1.ebuild,
