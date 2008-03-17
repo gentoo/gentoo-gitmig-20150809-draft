@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2007.ebuild,v 1.6 2008/02/08 18:18:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2007.ebuild,v 1.7 2008/03/17 12:41:58 coldwind Exp $
 
 inherit gnatbuild
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/gcc-branch-${GCCVER}.tar.bz2
 # only on $PV, so should be safe to use in DEPEND/SRC_URI
 #	mirror://gentoo/${PN}-gcc-3.4.6.1.diff.bz2
 
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 DEPEND="app-arch/unzip"
 RDEPEND=""
 
@@ -52,7 +52,7 @@ src_install() {
 	cp -pPR examples/ Contributors.html "${D}/usr/share/doc/${PF}/"
 
 	# this version of gnat does not provide info files yet
-	rm -rf ${D}${DATAPATH}/info/
+	rm -rf "${D}${DATAPATH}/info/"
 }
 
 pkg_postinst() {

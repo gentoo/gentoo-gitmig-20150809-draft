@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnat-gpl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.21 2008/02/08 18:18:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.22 2008/03/17 12:41:58 coldwind Exp $
+
+  17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  gnat-gpl-4.1.3.2007.ebuild:
+  amd64 stable wrt bug #209001
 
   08 Feb 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   gnat-gpl-4.1.3.2007.ebuild:
