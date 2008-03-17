@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/fprobe
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/ChangeLog,v 1.12 2007/02/09 04:01:40 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/ChangeLog,v 1.13 2008/03/17 08:41:11 robbat2 Exp $
+
+*fprobe-1.1-r1 (17 Mar 2008)
+
+  17 Mar 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/fprobe-1.1-pidfile-sanity.patch, +files/fprobe-1.1-setgroups.patch,
+  +files/conf.d-fprobe, +files/init.d-fprobe, +fprobe-1.1-r1.ebuild:
+  Patch up the code to work properly under start-stop-daemon, and with the
+  builtin chroot support. Also include Gentoo init.d support finally, modelled
+  after the flow-tools init.d script.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
