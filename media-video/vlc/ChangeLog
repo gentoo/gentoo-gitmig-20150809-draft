@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.309 2008/03/15 11:47:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.310 2008/03/17 15:18:46 armin76 Exp $
+
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org> vlc-0.8.6e.ebuild,
+  vlc-0.9.0_alpha20080117.ebuild, vlc-0.9.0_alpha20080309.ebuild,
+  vlc-0.9.0_alpha20080314.ebuild:
+  Fix deps for net-libs/xulrunner and www-client/mozilla-firefox
 
   15 Mar 2008; Alexis Ballier <aballier@gentoo.org>
   vlc-0.9.0_alpha20080314.ebuild:

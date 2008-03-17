@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.204 2008/03/03 22:05:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.205 2008/03/17 15:21:15 armin76 Exp $
+
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org> totem-2.18.3.ebuild,
+  totem-2.20.3.ebuild:
+  Fix deps for net-libs/xulrunner and www-client/mozilla-firefox
 
   03 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> totem-2.20.3.ebuild:
   fix incorrect use logic, bug #211185

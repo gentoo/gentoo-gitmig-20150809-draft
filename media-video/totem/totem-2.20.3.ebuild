@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.3.ebuild,v 1.8 2008/03/03 22:05:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.3.ebuild,v 1.9 2008/03/17 15:21:15 armin76 Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -50,9 +50,9 @@ RDEPEND=">=dev-libs/glib-2.13.4
 	 hal? ( =sys-apps/hal-0.5* )
 	 lirc? ( app-misc/lirc )
 	 nsplugin?	(
-	 			xulrunner? ( net-libs/xulrunner )
-				!xulrunner? ( seamonkey? ( www-client/seamonkey ) )
-				!xulrunner? ( !seamonkey? ( www-client/mozilla-firefox ) )
+	 			xulrunner? ( =net-libs/xulrunner-1.8* )
+				!xulrunner? ( seamonkey? ( =www-client/seamonkey-1* ) )
+				!xulrunner? ( !seamonkey? ( =www-client/mozilla-firefox-2* ) )
 				>=x11-misc/shared-mime-info-0.22
 				>=x11-libs/startup-notification-0.8
 			)

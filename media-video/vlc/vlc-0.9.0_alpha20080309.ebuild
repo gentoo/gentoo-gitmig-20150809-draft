@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080309.ebuild,v 1.2 2008/03/09 20:08:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20080309.ebuild,v 1.3 2008/03/17 15:18:46 armin76 Exp $
 
 EAPI="1"
 
@@ -106,9 +106,9 @@ RDEPEND="
 		musicbrainz? ( =media-libs/musicbrainz-2* )
 		ncurses? ( sys-libs/ncurses )
 		nsplugin? (
-			xulrunner? ( net-libs/xulrunner )
-			!xulrunner? ( seamonkey? ( www-client/seamonkey ) )
-			!xulrunner? ( !seamonkey? ( www-client/mozilla-firefox ) )
+			xulrunner? ( =net-libs/xulrunner-1.8* )
+			!xulrunner? ( seamonkey? ( =www-client/seamonkey-1* ) )
+			!xulrunner? ( !seamonkey? ( =www-client/mozilla-firefox-2* ) )
 		)
 		ogg? ( media-libs/libogg )
 		png? ( media-libs/libpng )
