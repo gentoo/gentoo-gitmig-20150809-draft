@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.7_pre20070102.ebuild,v 1.5 2007/12/04 04:23:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.7_pre20070102.ebuild,v 1.6 2008/03/17 15:29:10 armin76 Exp $
 
 inherit eutils wxwidgets autotools
 
@@ -15,12 +15,12 @@ HOMEPAGE="http://wxmozilla.sourceforge.net/"
 
 #DEPEND="
 #	=x11-libs/wxGTK-2.6*
-#	firefox? ( >=www-client/mozilla-firefox-2.0 )
-#	!firefox?	( >=www-client/seamonkey-1.0.0 )
+#	firefox? ( =www-client/mozilla-firefox-2* )
+#	!firefox?	( =www-client/seamonkey-1* )
 #	python?	( dev-lang/python
 #			>=dev-python/wxpython-2.6.3 )"
 DEPEND="=x11-libs/wxGTK-2.6*
-		>=www-client/mozilla-firefox-2.0
+		=www-client/mozilla-firefox-2*
 		python? ( dev-lang/python
 		=dev-python/wxpython-2.6* )"
 
