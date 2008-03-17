@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs-2.0x.rc,v 1.1 2008/03/17 17:30:29 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs-2.0x.rc,v 1.2 2008/03/17 23:24:24 xmerlin Exp $
 
 opts="${opts} mountall"
 
@@ -49,11 +49,12 @@ mount_gfs_filesystems() {
 			for device in ${remaining_verified}; do
 				local target="$(awk '!/^#/ && $3 == "gfs" && $1 == device { print $2 }' device=${device} /etc/fstab)"
 				local mounted="$(awk '$3 == "gfs" && $1 == device { print $2 }' device=${device} /proc/mounts)"
+				local options="$(awk '!/^#/ && $3 == "gfs" && $1 == device { print $4 }' device=${device} /etc/fstab)"
 				
 				# mount only filesystems not already mounted
 				if [ -z "${mounted}" ]; then
 					ebegin "--> mounting ${device} on ${target}"
-					mount -t gfs ${device} ${target} >/dev/null
+					mount -t gfs ${device} ${target} -o ${options} >/dev/null
 					eend $?
 				else
 					einfo "--> ${device} already mounted on ${target}"
