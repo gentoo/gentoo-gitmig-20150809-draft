@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.37 2007/01/19 14:50:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.38 2008/03/18 13:24:47 flameeyes Exp $
 
 WANT_AUTOCONF="2.1"
 WANT_AUTOMAKE="latest"
@@ -27,10 +27,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-tcpd-gentoo.diff
 	epatch ${FILESDIR}/${P}-gcc-3.4.diff
 	epatch ${FILESDIR}/${PV}-workaround-include-in-comments.patch
+
+	eautoconf
 }
 
 src_compile() {
-	eautoconf
 	econf --with-x $(use_enable tcpd) || die "econf failed"
 	emake -j1 || die "emake failed"
 }
