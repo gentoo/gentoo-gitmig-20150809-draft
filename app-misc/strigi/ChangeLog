@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.2 2008/03/10 21:49:04 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.3 2008/03/18 20:38:39 ingmar Exp $
+
+  18 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -strigi-0.5.7.ebuild:
+  Old.
 
 *strigi-0.5.8 (10 Mar 2008)
 
