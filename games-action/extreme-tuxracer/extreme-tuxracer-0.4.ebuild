@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/extreme-tuxracer-0.4.ebuild,v 1.2 2008/02/29 18:46:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/extreme-tuxracer-0.4.ebuild,v 1.3 2008/03/18 20:32:23 nyhm Exp $
 
 inherit eutils games
 
@@ -16,18 +16,19 @@ IUSE=""
 RDEPEND="virtual/opengl
 	dev-lang/tcl
 	virtual/glu
+	media-libs/libsdl
 	media-libs/sdl-mixer
-	media-libs/freetype
+	>=media-libs/freetype-2
 	media-libs/libpng
 	x11-libs/libXmu
 	x11-libs/libXi"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}"/${P/-}
+S=${WORKDIR}/${P/-}
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog
 	doicon "${FILESDIR}"/${PN}.svg
 	make_desktop_entry etracer "Extreme Tux Racer" ${PN}
