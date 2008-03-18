@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.1-r2.ebuild,v 1.1 2007/12/14 14:22:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.1-r2.ebuild,v 1.2 2008/03/18 23:49:08 voyageur Exp $
 
 inherit multilib eutils
 
 MY_PN="freenx"
-DESCRIPTION="An X11/RDP/VNC proxy server especially well suited to low bandwidth links such as wireless, WANS, and worse"
+DESCRIPTION="Free Software Implementation of the NX Server"
 HOMEPAGE="http://freenx.berlios.de/"
 SRC_URI="http://download.berlios.de/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"

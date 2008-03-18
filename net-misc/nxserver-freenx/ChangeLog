@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.43 2008/03/18 23:42:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.44 2008/03/18 23:49:08 voyageur Exp $
+
+  18 Mar 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  nxserver-freenx-0.7.0-r1.ebuild, nxserver-freenx-0.7.1-r1.ebuild,
+  nxserver-freenx-0.7.1-r2.ebuild, nxserver-freenx-0.7.2.ebuild:
+  Shorten DESCRIPTION
 
 *nxserver-freenx-0.7.2 (18 Mar 2008)
 
