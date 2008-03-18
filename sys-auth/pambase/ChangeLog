@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.24 2008/03/17 14:13:52 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.25 2008/03/18 13:15:45 flameeyes Exp $
+
+*pambase-20080318 (18 Mar 2008)
+
+  18 Mar 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +pambase-20080318.ebuild:
+  Add new pambase package that should fix the Gnome Keyring problems in bug
+  #213578.
 
   17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   pambase-20080306.2.ebuild:
