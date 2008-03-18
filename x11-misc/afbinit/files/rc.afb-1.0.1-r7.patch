@@ -12,7 +12,7 @@
  # The microcode loader binary and the microcode
  # itself must exist.
  if [ ! -x /usr/sbin/afbinit -o ! -f /usr/lib/afb.ucode ]
-@@ -22,13 +17,37 @@
+@@ -22,13 +17,38 @@
  	exit 0
  fi
  
@@ -49,6 +49,7 @@
 -	/usr/sbin/afbinit /dev/${AFB} /usr/lib/afb.ucode
 -	echo "done."
 -done
++	[[ -e /proc/fb ]] || exit 0
 +	afb_devs=`/bin/more -s /proc/fb  | /bin/egrep -i "Elite 3D" | /bin/sed 's/\ .*//'`
 +	# Load microcode onto each card.
 +	for AFB in ${afb_devs}
