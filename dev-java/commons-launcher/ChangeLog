@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-launcher
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/ChangeLog,v 1.27 2007/12/25 22:10:50 nelchael Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/ChangeLog,v 1.28 2008/03/18 01:18:09 betelgeuse Exp $
+
+  18 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
+  commons-launcher-1.1-r1.ebuild:
+  Add empty src_test to prepare for the generic src_test.
 
   25 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   -commons-launcher-0.9-r1.ebuild:

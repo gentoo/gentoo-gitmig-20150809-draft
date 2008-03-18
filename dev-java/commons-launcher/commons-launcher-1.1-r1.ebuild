@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-1.1-r1.ebuild,v 1.4 2007/11/18 18:12:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-1.1-r1.ebuild,v 1.5 2008/03/18 01:18:09 betelgeuse Exp $
 
 JAVA_PKG_IUSE="examples doc source"
 
@@ -20,12 +20,15 @@ RDEPEND=">=virtual/jre-1.4
 S=${WORKDIR}/${PN}
 
 # https://issues.apache.org/jira/browse/LAUNCHER-7
-PATCHES="${FILESDIR}/1.1-javadoc.patch"
+PATCHES=( "${FILESDIR}/1.1-javadoc.patch" )
 
 src_compile() {
 	java-ant_rewrite-classpath "${S}/build.xml"
 	EANT_GENTOO_CLASSPATH="ant-core" java-pkg-2_src_compile
 }
+
+# Standard commons build.xml but no tests actually implemented
+src_test() { :; }
 
 src_install() {
 	java-pkg_dojar dist/bin/*.jar || die "java-pkg_dojar died"
