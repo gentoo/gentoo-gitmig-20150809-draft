@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.10 2008/03/12 18:18:05 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.11 2008/03/18 21:49:37 jokey Exp $
+
+*snakeoil-0.2 (18 Mar 2008)
+
+  18 Mar 2008; Markus Ullmann <jokey@gentoo.org> +snakeoil-0.2.ebuild:
+  Version bump
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Marien Zwart (marienz, #107204) from metadata.xml.
