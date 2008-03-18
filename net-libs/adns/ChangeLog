@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/adns
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.24 2008/03/18 04:37:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.25 2008/03/18 12:47:57 fmccor Exp $
+
+  18 Mar 2008; Ferris McCormick <fmccor@gentoo.org> adns-1.4.ebuild:
+  Sparc stable --- Bug #213740 --- installs as expected and all tests pass.
 
   18 Mar 2008; Jeroen Roovers <jer@gentoo.org> adns-1.4.ebuild:
   Stable for HPPA (bug #213740).
