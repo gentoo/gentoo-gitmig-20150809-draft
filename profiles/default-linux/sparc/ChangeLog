@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.92 2008/02/12 19:49:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.93 2008/03/18 18:40:35 fmccor Exp $
+
+  18 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
+  sparc64/2007.0/package.mask:
+  Add >=x11-misc/afbinit-1.0.1-r7 to package mask because it is intended for use
+  with initrd systems.  It is not tested well enough yet for general use.
 
   12 Feb 2008; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   P.use.mask h323 for net-misc/asterisk, bug #185713

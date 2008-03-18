@@ -1,7 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2007.0/package.mask,v 1.4 2007/07/30 14:09:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2007.0/package.mask,v 1.5 2008/03/18 18:40:36 fmccor Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # OO <2.1.0 is broken with gcc4 on sparc and >=2.1.0 doesn't work right
 app-office/openoffice
+
+# Ferris McCormick <fmccor@gentoo.org>
+# afbinit >=1.0.1-r7 is intended only for 2008.0+ profiles
+>=x11-misc/afbinit-1.0.1-r7
