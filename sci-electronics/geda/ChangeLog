@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.41 2008/03/17 13:31:56 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.42 2008/03/18 15:37:11 fmccor Exp $
+
+  18 Mar 2008; Ferris McCormick <fmccor@gentoo.org> geda-1.4.0.ebuild:
+  Sparc stable, part of Bug #192905. Verified that RF_Amp example generates
+  the same output as comes with the example.
 
   17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> geda-1.4.0.ebuild:
   amd64 stable wrt bug #192905
