@@ -1,6 +1,17 @@
 # ChangeLog for x11-misc/afbinit
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.22 2007/10/31 16:52:29 fmccor Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.23 2008/03/18 18:16:23 fmccor Exp $
+
+*afbinit-1.0.1-r7 (18 Mar 2008)
+
+  18 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
+  +files/rc.afb-1.0.1-r7.patch, metadata.xml, +afbinit-1.0.1-r7.ebuild:
+  Version bump to 1.0.1-r7 to help with systems using an initram.  It can happen
+  on these systems that the AFB information is gone from the dmesg output by the
+  time that afbinit wants to load the microcode.  If this happens, older
+  versions will not see the Elite frame buffer and so the load will fail.  In
+  this version, with current kernels we just look unconditionally at any
+  /proc/fb devices.
 
 *afbinit-1.0.1-r6 (31 Oct 2007)
 
