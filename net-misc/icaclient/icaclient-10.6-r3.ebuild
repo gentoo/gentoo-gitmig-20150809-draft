@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r3.ebuild,v 1.4 2008/03/18 07:35:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r3.ebuild,v 1.5 2008/03/18 07:45:51 opfer Exp $
 
 inherit eutils multilib rpm
 
@@ -33,7 +33,7 @@ RDEPEND="x11-terms/xterm
 		x11-libs/libSM
 		x11-libs/libICE
 		>=x11-libs/openmotif-2.3.0 )
-	amd64? ( >=app-emulation/emul-linux-x86-xlibs-2008016 )"
+	amd64? ( >=app-emulation/emul-linux-x86-xlibs-20080316 )"
 DEPEND=""
 
 S="${WORKDIR}/usr"
