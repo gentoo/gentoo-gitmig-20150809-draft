@@ -1,6 +1,11 @@
 # ChangeLog for net-im/jabberd2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.10 2008/03/18 11:56:45 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.11 2008/03/18 17:14:37 nelchael Exp $
+
+  18 Mar 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/jabberd2-2.1.21.init, -files/jabberd2-2.1.21.pamd,
+  -jabberd2-2.1.21.ebuild:
+  Remove old version.
 
 *jabberd2-2.1.23 (18 Mar 2008)
 
