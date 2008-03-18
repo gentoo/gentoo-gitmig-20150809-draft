@@ -1,17 +1,17 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.4.1.ebuild,v 1.11 2008/02/03 14:26:38 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.5.1.ebuild,v 1.1 2008/03/18 21:48:26 zlin Exp $
 
 inherit kde eutils db-use
 
 DESCRIPTION="Integrated Development Environment for Unix, supporting KDE/Qt, C/C++ and many other languages."
 HOMEPAGE="http://www.kdevelop.org"
-SRC_URI="mirror://kde/stable/3.5.7/src/${P}.tar.bz2"
+SRC_URI="mirror://kde/stable/3.5.8/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 
 SLOT="3"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ada clearcase cvs fortran haskell java pascal perforce perl php python ruby sql subversion"
 
 DEPEND="sys-devel/gdb
@@ -26,8 +26,6 @@ DEPEND="${DEPEND}
 	>=sys-devel/flex-2.5.33"
 
 need-kde 3.5
-
-PATCHES="${FILESDIR}/kdevelop-3.4.1-hang-fix.diff"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -50,11 +48,14 @@ src_unpack() {
 		cp "${i}" "${S}/parts/appwizard/common/admin/"
 	done
 
+	epatch "${FILESDIR}"/${P}_fix_missing_output.patch
+
 	rm -f "${S}/configure"
 }
 
 src_compile() {
-	local myconf="--with-kdelibsdoxy-dir=$(kde-config --prefix)/share/doc/HTML/en/kdelibs-apidocs"
+	local myconf
+	myconf="--with-kdelibsdoxy-dir=${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs"
 
 	# languages
 	myconf="${myconf} $(use_enable java) $(use_enable python)

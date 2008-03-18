@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.158 2008/02/03 14:26:38 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.159 2008/03/18 21:48:26 zlin Exp $
+
+*kdevelop-3.5.1 (18 Mar 2008)
+
+  18 Mar 2008; Bo Ørsted Andresen <zlin@gentoo.org>
+  -files/kdevelop-3.4.1-hang-fix.diff,
+  +files/kdevelop-3.5.1_fix_missing_output.patch, -kdevelop-3.4.1.ebuild,
+  +kdevelop-3.5.1.ebuild:
+  Version bump. Include patch from upstream (r780036).
 
   03 Feb 2008; Bo Ørsted Andresen <zlin@gentoo.org> kdevelop-3.4.1.ebuild,
   kdevelop-3.5.0.ebuild:
