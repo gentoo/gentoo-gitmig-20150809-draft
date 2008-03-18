@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/alephone-infinity-1.ebuild,v 1.4 2007/07/05 20:06:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/alephone-infinity-1.ebuild,v 1.5 2008/03/18 02:10:43 nyhm Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://trilogyrelease.bungie.org/files/MarathonInfinity.zip
 
 LICENSE="bungie-marathon"
 SLOT="0"
-KEYWORDS="~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
