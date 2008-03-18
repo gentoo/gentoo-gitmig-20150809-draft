@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20080225.ebuild,v 1.2 2008/03/14 14:39:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20080225.ebuild,v 1.3 2008/03/18 19:58:00 genstef Exp $
 
 inherit eutils
 
@@ -10,7 +10,8 @@ HOMEPAGE="http://foo2zjs.rkkda.com/"
 # extracted by http://gentooexperimental.org/~genstef/dist/foo2zjs-helper.sh
 DEVICES=( "hp2600n" "hp1600" "hp1500" "km2530" "km2490" "km2480" "xp6115"
 "km2430" "km2300" "km2200" "kmcpwl" "sa300" "sa2160" "sa3160" "xp6110" "lm500"
-"hp1020" "hp1018" "hp1005" "hp1000" )
+"oki3200" "oki3300" "oki3400" "oki5100" "oki5200" "oki5500" "oki5600" "oki5800"
+"hp1020" "hp1018" "hp1005" "hp1000" "hpp1505" "hpp1006" "hpp1005" )
 URIS=(
 "http://foo2hp.rkkda.com/icm/hpclj2600n.tar.gz
 http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
@@ -23,7 +24,7 @@ http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
 "http://foo2lava.rkkda.com/icm/km2530.tar.gz"
 "http://foo2lava.rkkda.com/icm/km2530.tar.gz"
 "http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
-"ftp://ftp.minolta-qms.com/pub/crc/out_going/win/m23dlicc.exe
+"ftp://ftp.minolta-qms.com/pub/crc/out_going/other/m23dlicc.exe
 http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
 "ftp://ftp.minolta-qms.com/pub/crc/out_going/win2000/m22dlicc.exe"
 "ftp://ftp.minolta-qms.com/pub/crc/out_going/windows/cpplxp.exe"
@@ -32,10 +33,21 @@ http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
 "http://foo2qpdl.rkkda.com/icm/samclp300.tar.gz"
 "http://foo2qpdl.rkkda.com/icm/samclp300.tar.gz"
 "http://foo2slx.rkkda.com/icm/lexc500.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic3200.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic3400.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic3400.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic3200.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic3200.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic5600.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic5600.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic5600.tar.gz"
 "http://foo2zjs.rkkda.com/firmware/sihp1020.tar.gz"
 "http://foo2zjs.rkkda.com/firmware/sihp1018.tar.gz"
 "http://foo2zjs.rkkda.com/firmware/sihp1005.tar.gz"
 "http://foo2zjs.rkkda.com/firmware/sihp1000.tar.gz"
+"http://foo2zjs.rkkda.com/firmware/sihpP1505.tar.gz"
+"http://foo2zjs.rkkda.com/firmware/sihpP1006.tar.gz"
+"http://foo2zjs.rkkda.com/firmware/sihpP1005.tar.gz"
 )
 
 SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.gz"

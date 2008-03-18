@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.33 2008/03/14 14:39:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.34 2008/03/18 19:58:00 genstef Exp $
+
+  18 Mar 2008; Stefan Schweizer <genstef@gentoo.org>
+  foo2zjs-20080225.ebuild:
+  update use flags for Chris Calitz <chris@sabest.co.za>, bug 213025, als
+  rebuild digest, bug 213018
 
   14 Mar 2008; Denis Dupeyron <calchan@gentoo.org> Manifest:
   Fixed Manifest, see bug #201396. Fixed quoting.
