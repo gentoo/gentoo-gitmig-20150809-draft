@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.2-r1.ebuild,v 1.4 2008/03/18 19:52:26 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.2-r1.ebuild,v 1.5 2008/03/18 19:57:26 armin76 Exp $
+
+EAPI="1"
 
 inherit distutils eutils kde-functions toolchain-funcs
 
@@ -10,11 +12,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-fbsd"
 IUSE="kde python debug"
 
 RDEPEND="=x11-libs/qt-3*
-	kde? ( >=kde-base/kdelibs-3.1 )"
+	kde? ( kde-base/kdelibs:3.5 )"
 
 DEPEND="${RDEPEND}
 	sys-devel/flex
