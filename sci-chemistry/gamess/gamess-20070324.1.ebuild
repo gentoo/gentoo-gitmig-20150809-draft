@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.1.ebuild,v 1.5 2007/08/19 01:01:30 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.1.ebuild,v 1.6 2008/03/18 21:35:53 markusle Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -151,8 +151,6 @@ src_compile() {
 }
 
 src_install() {
-	cd "${S}"
-
 	# the executables
 	dobin ${PN}.00.x ddi/ddikick.x rungms \
 		|| die "Failed installing binaries"

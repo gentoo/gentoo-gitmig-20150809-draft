@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.3.ebuild,v 1.3 2008/03/18 21:35:53 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.6.ebuild,v 1.1 2008/03/18 21:35:53 markusle Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -51,7 +51,7 @@ src_unpack() {
 	unpack ${A}
 
 	# apply LINUX-arch patches to gamess makesfiles
-	epatch "${FILESDIR}"/${P}.gentoo.patch
+	epatch "${FILESDIR}"/${PN}-20070324.3.gentoo.patch
 
 	# select arch
 	# NOTE: please leave lked alone; it should be good as is!!
