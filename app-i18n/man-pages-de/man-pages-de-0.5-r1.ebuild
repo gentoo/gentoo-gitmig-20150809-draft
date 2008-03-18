@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/man-pages-de-0.5-r1.ebuild,v 1.2 2008/02/24 16:49:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/man-pages-de-0.5-r1.ebuild,v 1.3 2008/03/18 19:37:26 armin76 Exp $
 
 DESCRIPTION="A somewhat comprehensive collection of Linux german man page translations"
 HOMEPAGE="http://www.infodrom.org/projects/manpages-de/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-RDEPEND="sys-apps/man"
+RDEPEND="virtual/man"
 
 S=${WORKDIR}/manpages-de-${PV}
 

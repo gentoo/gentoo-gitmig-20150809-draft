@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-de
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.7 2008/02/24 16:49:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.8 2008/03/18 19:37:26 armin76 Exp $
+
+  18 Mar 2008; Raúl Porcel <armin76@gentoo.org> man-pages-de-0.5-r1.ebuild:
+  RDEPEND on virtual/man, bug 213112
 
   24 Feb 2008; Ulrich Mueller <ulm@gentoo.org> -man-pages-de-0.5.ebuild,
   man-pages-de-0.5-r1.ebuild:
