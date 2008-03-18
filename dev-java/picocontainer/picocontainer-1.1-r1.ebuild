@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.1-r1.ebuild,v 1.6 2007/03/15 01:26:33 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.1-r1.ebuild,v 1.7 2008/03/18 01:38:01 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -19,6 +19,8 @@ DEPEND=">=virtual/jdk-1.4
 #	test? (
 #	    >=dev-java/junit-3.8.1
 #	)"
+
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
