@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsmi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.15 2008/03/17 23:00:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.16 2008/03/18 14:46:32 armin76 Exp $
+
+  18 Mar 2008; Raúl Porcel <armin76@gentoo.org> libsmi-0.4.7.ebuild:
+  alpha/ia64/sparc stable wrt security #212149
 
   17 Mar 2008; Jeroen Roovers <jer@gentoo.org> libsmi-0.4.7.ebuild:
   Stable for HPPA (bug #212149).
