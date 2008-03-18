@@ -24,3 +24,7 @@ media-video/avidemux aften
 
 # app-misc/tomboy is missing ppc support
 gnome-base/gnome mono
+
+# nixnut <nixnut@gentoo.org> (11 mar 2008)
+# USE=musepack wants musepack-tools which can't be build on ppc
+media-sound/squeezecenter musepack
