@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gloox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.6 2008/03/10 15:02:10 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.7 2008/03/18 21:15:42 jokey Exp $
+
+*gloox-0.9.9.4 (18 Mar 2008)
+
+  18 Mar 2008; Markus Ullmann <jokey@gentoo.org>
+  +files/gloox-res_query-check.patch, +gloox-0.9.9.4.ebuild:
+  Version bump wrt bug #213404 thanks to Steffen Stramm for the new ebuild and
+  David Watzke for the patch
 
   10 Mar 2008; Steve Dibb <beandog@gentoo.org> gloox-0.9.8.ebuild:
   amd64 stable, bug 202261
