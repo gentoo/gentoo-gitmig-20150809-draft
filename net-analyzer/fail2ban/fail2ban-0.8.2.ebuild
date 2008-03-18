@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.2.ebuild,v 1.1 2008/03/17 19:00:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.2.ebuild,v 1.2 2008/03/18 19:09:33 jer Exp $
 
 inherit distutils
 
@@ -20,9 +20,13 @@ RDEPEND="${DEPEND}
 src_install() {
 	distutils_src_install
 
+	diropts -m 0755 -o root -g root
+	dodir /var/run/${PN}
+	keepdir /var/run/${PN}
+
 	newconfd files/gentoo-confd fail2ban
 	newinitd files/gentoo-initd fail2ban
-	dodoc CHANGELOG README TODO || die "dodoc failed"
+	dodoc ChangeLog README TODO || die "dodoc failed"
 	doman man/*.1 || die "doman failed"
 
 	# Use INSTALL_MASK  if you do not want to touch /etc/logrotate.d.
@@ -43,14 +47,5 @@ pkg_postinst() {
 		elog
 		elog "You are upgrading from version 0.6.x, please see:"
 		elog "http://www.fail2ban.org/wiki/index.php/HOWTO_Upgrade_from_0.6_to_0.8"
-	fi
-}
-
-pkg_setup() {
-	if ! built_with_use dev-lang/python readline ; then
-		echo
-		eerror "dev-lang/python is missing readline support. Please add"
-		eerror "'readline' to your USE flags, and re-emerge dev-lang/python."
-		die "dev-lang/python needs readline support"
 	fi
 }
