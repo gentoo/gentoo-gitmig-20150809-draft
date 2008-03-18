@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.224 2008/03/11 19:56:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.225 2008/03/18 14:04:48 cardoe Exp $
+
+*mythtv-0.21_p16658 (18 Mar 2008)
+
+  18 Mar 2008; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.21_p16468.ebuild, +mythtv-0.21_p16658.ebuild:
+  rev bump. UPnP fixes. StorageGroups DB upgrade fix. Text alignment in
+  Recording Options window.
 
 *mythtv-0.22_alpha16508 (11 Mar 2008)
 
