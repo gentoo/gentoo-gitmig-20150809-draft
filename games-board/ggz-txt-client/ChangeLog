@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-txt-client
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ChangeLog,v 1.16 2008/02/18 19:06:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ChangeLog,v 1.17 2008/03/18 02:30:58 nyhm Exp $
+
+  18 Mar 2008; Tristan Heaven <nyhm@gentoo.org>
+  ggz-txt-client-0.0.14.1.ebuild:
+  Add ~amd64 keyword
 
 *ggz-txt-client-0.0.14.1 (18 Feb 2008)
 
