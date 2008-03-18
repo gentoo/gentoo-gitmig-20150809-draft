@@ -1,6 +1,11 @@
 # ChangeLog for games-board/openyahtzee
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.5 2008/02/29 19:01:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.6 2008/03/18 02:56:31 nyhm Exp $
+
+*openyahtzee-1.8.1 (18 Mar 2008)
+
+  18 Mar 2008; Tristan Heaven <nyhm@gentoo.org> +openyahtzee-1.8.1.ebuild:
+  Version bump
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> openyahtzee-1.7.ebuild,
   openyahtzee-1.8.ebuild:
