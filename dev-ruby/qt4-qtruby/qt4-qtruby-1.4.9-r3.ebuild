@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.9-r3.ebuild,v 1.1 2007/12/31 18:35:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.9-r3.ebuild,v 1.2 2008/03/18 20:03:24 armin76 Exp $
 
 inherit toolchain-funcs eutils qt4 cmake-utils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://rubyforge.org/projects/korundum"
 SRC_URI="http://rubyforge.org/frs/download.php/21951/${P}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 DEPEND=">=virtual/ruby-1.8
 	=x11-libs/qt-4*

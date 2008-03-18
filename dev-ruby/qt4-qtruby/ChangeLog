@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/qt4-qtruby
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.14 2007/12/31 18:35:03 caleb Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.15 2008/03/18 20:03:24 armin76 Exp $
+
+  18 Mar 2008; Raúl Porcel <armin76@gentoo.org> qt4-qtruby-1.4.9-r3.ebuild:
+  Re-add ~sparc
 
 *qt4-qtruby-1.4.9-r3 (31 Dec 2007)
 
