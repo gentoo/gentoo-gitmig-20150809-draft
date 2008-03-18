@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.61 2008/03/18 13:38:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.62 2008/03/18 17:16:58 jer Exp $
+
+  18 Mar 2008; Jeroen Roovers <jer@gentoo.org> bzip2-1.0.5.ebuild:
+  Stable for HPPA and SPARC (bug #213820).
 
 *bzip2-1.0.5 (18 Mar 2008)
 
