@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/adns
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.26 2008/03/18 19:58:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.27 2008/03/18 20:51:22 coldwind Exp $
+
+  18 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> adns-1.4.ebuild:
+  amd64 stable wrt #213740
 
   18 Mar 2008; Raúl Porcel <armin76@gentoo.org> adns-1.4.ebuild:
   ia64 stable wrt #213740
