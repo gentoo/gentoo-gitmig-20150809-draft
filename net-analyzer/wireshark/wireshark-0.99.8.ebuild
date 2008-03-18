@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.8.ebuild,v 1.7 2008/03/18 14:47:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.8.ebuild,v 1.8 2008/03/18 18:06:06 dertobi123 Exp $
 
 # ChangeLog:
 # 1. Droped check for perl minimal USE flag. We do not have perl with minimal
@@ -24,7 +24,7 @@ SRC_URI="http://www.wireshark.org/download/src/all-versions/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="adns gtk ipv6 lua portaudio gnutls gcrypt zlib kerberos threads profile smi pcap pcre +caps selinux"
 
 RDEPEND="zlib? ( sys-libs/zlib )
