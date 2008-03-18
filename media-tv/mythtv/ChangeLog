@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.225 2008/03/18 14:04:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.226 2008/03/18 14:46:04 cardoe Exp $
+
+  18 Mar 2008; Doug Goldstein <cardoe@gentoo.org> mythtv-0.21_p16658.ebuild:
+  Add aac support via faad2
 
 *mythtv-0.21_p16658 (18 Mar 2008)
 
