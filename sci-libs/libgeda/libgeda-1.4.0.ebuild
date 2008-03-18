@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-1.4.0.ebuild,v 1.2 2008/03/17 13:30:23 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-1.4.0.ebuild,v 1.3 2008/03/18 15:15:25 fmccor Exp $
 
 inherit eutils fdo-mime versionator
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.geda.seul.org/release/${SUBDIR}/${PV}/libgeda-${PV}.tar.gz"
 
 IUSE="gd threads"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc sparc ~x86"
 SLOT="0"
 
 DEPEND=">=x11-libs/gtk+-2.4
