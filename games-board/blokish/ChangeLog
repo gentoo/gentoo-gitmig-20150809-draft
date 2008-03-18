@@ -1,6 +1,11 @@
 # ChangeLog for games-board/blokish
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/ChangeLog,v 1.5 2008/02/29 19:03:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/ChangeLog,v 1.6 2008/03/18 01:15:38 nyhm Exp $
+
+*blokish-0.9.4-r1 (18 Mar 2008)
+
+  18 Mar 2008; Tristan Heaven <nyhm@gentoo.org> +blokish-0.9.4-r1.ebuild:
+  Use wxGTK 2.8 instead of 2.6
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> blokish-0.9.3.ebuild,
   blokish-0.9.4.ebuild:
