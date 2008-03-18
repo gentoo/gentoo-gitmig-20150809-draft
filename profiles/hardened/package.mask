@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.38 2008/03/14 17:36:02 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.39 2008/03/18 15:49:37 mr_bones_ Exp $
 
 # >=acml-3.6 depends on gcc-4*
 >=sci-libs/acml-3.6
@@ -20,6 +20,9 @@
 # around if you try it in a live system.
 # 2006-03-13 kevquinn
 =sys-libs/glibc-2.4*
+
+# needs =sys-libs/glibc-2.4*
+>=sys-cluster/gfs-kernel-2.02.00
 
 # These packages do more harm than good w/ hardened.
 # users must now the opensource xorg nv driver with nvidia cards.
