@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.4.ebuild,v 1.3 2008/01/08 04:13:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.4.ebuild,v 1.4 2008/03/18 13:26:54 flameeyes Exp $
 
 inherit autotools multilib
 
@@ -24,11 +24,13 @@ src_test() {
 	emake testmxml
 }
 
-src_compile() {
+src_unpack() {
 	sed -i -e "s:755 -s:755:" Makefile.in || die "sed failed"
 	rm configure
 	eautoreconf
+}
 
+src_compile() {
 	econf --enable-shared  --libdir="/usr/$(get_libdir)" --with-docdir="/usr/share/doc/${PF}/html"
 	emake libmxml.a  libmxml.so.1.4 mxmldoc doc/mxml.man
 }
