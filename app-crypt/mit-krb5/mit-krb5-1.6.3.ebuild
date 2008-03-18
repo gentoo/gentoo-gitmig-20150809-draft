@@ -1,24 +1,18 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.5.3-r1.ebuild,v 1.10 2008/03/18 22:12:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.6.3.ebuild,v 1.1 2008/03/18 22:12:44 jokey Exp $
 
 inherit eutils flag-o-matic versionator autotools
 
-PATCHV="0.2"
 MY_P=${P/mit-}
 P_DIR=$(get_version_component_range 1-2)
-S=${WORKDIR}/${MY_P}/src
 DESCRIPTION="MIT Kerberos V"
 HOMEPAGE="http://web.mit.edu/kerberos/www/"
-SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar
-	http://dev.gentoo.org/~seemant/distfiles/${P}-patches-${PATCHV}.tar.bz2
-	mirror://gentoo/${P}-patches-${PATCHV}.tar.bz2"
-
-PATCHDIR="${WORKDIR}/patch"
+SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="krb4 tcl ipv6 doc"
 
 RDEPEND="!virtual/krb5
@@ -29,12 +23,15 @@ DEPEND="${RDEPEND}
 	doc? ( virtual/tetex )"
 PROVIDE="virtual/krb5"
 
+S=${WORKDIR}/${MY_P}/src
+
 src_unpack() {
 	unpack ${A}
 	unpack ./${MY_P}.tar.gz
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-lazyldflags.patch
-	EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"
+	epatch "${FILESDIR}"/1.6-MITKRB5-SA-2008-001.patch
+	epatch "${FILESDIR}"/MITKRB5-SA-2008-002.patch
 	ebegin "Reconfiguring configure scripts (be patient)"
 	cd "${S}"/appl/telnet
 	eautoconf --force -I "${S}"
@@ -95,8 +92,8 @@ src_install() {
 	newinitd "${FILESDIR}"/mit-krb5kdc.initd mit-krb5kdc
 
 	insinto /etc
-	newins ${D}/usr/share/doc/${PF}/examples/krb5.conf krb5.conf.example
-	newins ${D}/usr/share/doc/${PF}/examples/kdc.conf kdc.conf.example
+	newins "${D}"/usr/share/doc/${PF}/examples/krb5.conf krb5.conf.example
+	newins "${D}"/usr/share/doc/${PF}/examples/kdc.conf kdc.conf.example
 }
 
 pkg_postinst() {
