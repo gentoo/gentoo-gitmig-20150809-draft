@@ -1,14 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.7-r1.ebuild,v 1.3 2007/07/28 12:01:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.7-r1.ebuild,v 1.4 2008/03/18 22:19:06 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
-DESCRIPTION="Video Disk Recorder Image Plugin"
+DESCRIPTION="VDR plugin: display of digital images, like jpeg, tiff, png, bmp"
 HOMEPAGE="http://vdr-image.berlios.de/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="exif"
@@ -30,7 +30,7 @@ src_unpack() {
 
 	vdr-plugin_src_unpack
 
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch "${FILESDIR}/${P}-gentoo.diff"
 
 	use !exif && sed -i "s:#WITHOUT_LIBEXIF:WITHOUT_LIBEXIF:" Makefile
 	if has_version "<=media-video/ffmpeg-0.4.9_p20061016"; then
