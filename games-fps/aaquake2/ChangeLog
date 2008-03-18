@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/aaquake2
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/ChangeLog,v 1.7 2007/02/21 23:37:46 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/ChangeLog,v 1.8 2008/03/18 22:41:41 tupone Exp $
+
+  18 Mar 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/aaquake2-0.1-glibc.patch, aaquake2-0.1.ebuild:
+  Fixing compiling for asm/io.h missing. Bug #212965 by GNUtoo@no-log.org
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
