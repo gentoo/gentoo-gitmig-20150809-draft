@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.89 2008/03/19 11:44:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.90 2008/03/19 20:28:44 pva Exp $
+
+*wireshark-1.0.0_rc1 (19 Mar 2008)
+
+  19 Mar 2008; Peter Volkov <pva@gentoo.org>
+  -files/wireshark-0.99.7-libgcrypt.patch, -wireshark-0.99.7.ebuild,
+  +wireshark-1.0.0_rc1.ebuild:
+  Bump to 1.0.0pre1. Removed old vulnerable.
 
   19 Mar 2008; Markus Rothe <corsair@gentoo.org> wireshark-0.99.8.ebuild:
   Stable on ppc64; bug #212149
