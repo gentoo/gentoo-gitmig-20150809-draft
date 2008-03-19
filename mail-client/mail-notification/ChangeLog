@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.62 2008/03/19 04:04:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.63 2008/03/19 18:45:18 graaff Exp $
+
+*mail-notification-5.0-r1 (19 Mar 2008)
+
+  19 Mar 2008; Hans de Graaff <graaff@gentoo.org>
+  +mail-notification-5.0-r1.ebuild:
+  Shorten description to make repoman happy; add yahoo USE flag for the yahoo
+  mail support based on net-mail/yahoo.
 
   19 Mar 2008; Jeroen Roovers <jer@gentoo.org> mail-notification-5.0.ebuild:
   Stable for HPPA too.
