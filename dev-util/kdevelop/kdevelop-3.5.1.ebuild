@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.5.1.ebuild,v 1.1 2008/03/18 21:48:26 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.5.1.ebuild,v 1.2 2008/03/19 11:31:21 zlin Exp $
 
 inherit kde eutils db-use
 
 DESCRIPTION="Integrated Development Environment for Unix, supporting KDE/Qt, C/C++ and many other languages."
 HOMEPAGE="http://www.kdevelop.org"
-SRC_URI="mirror://kde/stable/3.5.8/src/${P}.tar.bz2"
+SRC_URI="mirror://kde/stable/3.5.9/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 
