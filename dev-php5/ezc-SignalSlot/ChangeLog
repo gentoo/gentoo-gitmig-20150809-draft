@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-SignalSlot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-SignalSlot/ChangeLog,v 1.4 2008/01/13 16:07:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-SignalSlot/ChangeLog,v 1.5 2008/03/19 00:15:59 jokey Exp $
+
+  18 Mar 2008; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Regen Manifest
 
   13 Jan 2008; Markus Ullmann <jokey@gentoo.org> ezc-SignalSlot-1.1.ebuild:
   Add eZ Components 2007.2 from project overlay
