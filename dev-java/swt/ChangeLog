@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.82 2008/03/11 23:31:54 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.83 2008/03/19 19:03:08 caster Exp $
+
+  19 Mar 2008; Vlastimil Babka <caster@gentoo.org> -swt-3.3.ebuild,
+  swt-3.3.1.1.ebuild:
+  Update mozilla packages deps wrt xulrunner slotting, using EAPI=1 slot dep
+  for xulrunner:1.8. Remove old version.
 
   11 Mar 2008; Kenneth Prugh <ken69267@gentoo.org> swt-3.3.1.1.ebuild:
   amd64 stable, bug #212660

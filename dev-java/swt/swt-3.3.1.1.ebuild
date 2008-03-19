@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1.ebuild,v 1.4 2008/03/11 23:31:54 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1.ebuild,v 1.5 2008/03/19 19:03:08 caster Exp $
+
+EAPI="1"
 
 inherit eutils java-pkg-2 java-ant-2 toolchain-funcs java-osgi
 
@@ -38,15 +40,15 @@ COMMON=">=dev-libs/glib-2.6
 					=gnome-base/libgnomeui-2*
 				)
 		seamonkey? ( !firefox? ( !xulrunner? (
-			>=www-client/seamonkey-1.0.2
+			=www-client/seamonkey-1*
 			>=dev-libs/nspr-4.6.2
 		) ) )
 		firefox? ( !xulrunner? (
-			>=www-client/mozilla-firefox-2
+			=www-client/mozilla-firefox-2*
 			>=dev-libs/nspr-4.6.2
 		) )
 		xulrunner? (
-			net-libs/xulrunner
+			net-libs/xulrunner:1.8
 			>=dev-libs/nspr-4.6.2
 		)
 		opengl?	(
@@ -61,10 +63,8 @@ DEPEND=">=virtual/jdk-1.4
 		x11-proto/xextproto
 		${COMMON}"
 
-# java-config for the env_var stuff, until it's stabled and forced by eclass
 RDEPEND=">=virtual/jre-1.4
 		x11-libs/libXtst
-		>=dev-java/java-config-2.0.33
 		${COMMON}"
 
 S="${WORKDIR}"
