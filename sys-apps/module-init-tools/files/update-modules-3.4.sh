@@ -52,7 +52,7 @@ while [ -n "$1" ] ; do
 		-f|--force|force)  FORCE="true";;
 		-v|--verbose)      ((VERBOSE+=1));;
 		-d|--debug)        ((DEBUG+=1));;
-		-V|--version)      exec echo "${argv0}$Revision: 1.3 $ $Date: 2008/03/19 06:43:06 $";;
+		-V|--version)      exec echo "${argv0}$Revision: 1.4 $ $Date: 2008/03/19 06:46:26 $";;
 		-h|--help)
 			cat <<-EOF
 			Usage: update-modules [options]
@@ -81,26 +81,12 @@ if [ ! -w ./etc ] ; then
 	exit 2
 fi
 
-KV=${KV:-$(uname -r)}
 [ ${DEBUG} -gt 0 ] && set -x
 
 veinfo() { [ ${VERBOSE} -gt 0 ] && einfo "$*" ; return 0 ; }
 vewarn() { [ ${VERBOSE} -gt 0 ] && ewarn "$*" ; return 0 ; }
 
 [ "${ROOT}" != "/" ] && veinfo "Operating on ROOT = '${ROOT}'"
-
-if type -P modprobe.old > /dev/null || \
-   LC_ALL=C modprobe -V 2>/dev/null | grep -qs "modprobe version"
-then
-	GENERATE_OLD="true"
-else
-	GENERATE_OLD="false"
-fi
-
-
-# Reset the sorting order since we depend on it
-export LC_COLLATE="C"
-
 
 #
 # Let's check the optimal case first: nothing to do
@@ -145,6 +131,24 @@ for x in modprobe.conf modules.conf ; do
 		fi
 	fi
 done
+
+
+#
+# If the system doesnt have old modutils, then this is prob linux-2.6 only
+#
+if type -P modprobe.old > /dev/null || \
+   LC_ALL=C modprobe -V 2>/dev/null | grep -qs "modprobe version"
+then
+	GENERATE_OLD="true"
+else
+	GENERATE_OLD="false"
+fi
+
+
+# Reset the sorting order since we depend on it
+export LC_COLLATE="C"
+
+KV=${KV:-$(uname -r)}
 
 
 #
