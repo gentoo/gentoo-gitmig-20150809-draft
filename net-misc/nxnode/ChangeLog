@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.23 2008/03/10 00:55:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.24 2008/03/19 11:11:32 pva Exp $
+
+  19 Mar 2008; Peter Volkov <pva@gentoo.org> nxnode-3.1.0-r2.ebuild:
+  amd64 stable, security bug #210317.
 
   07 Mar 2008; Bernard Cafarelli <voyageur@gentoo.org>
   nxnode-3.0.0-r3.ebuild, -nxnode-3.0.0-r4.ebuild, -nxnode-3.1.0.ebuild,
