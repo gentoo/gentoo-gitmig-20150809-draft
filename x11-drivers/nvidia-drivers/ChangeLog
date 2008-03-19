@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.88 2008/03/06 17:01:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.89 2008/03/19 21:05:43 armin76 Exp $
+
+  19 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  nvidia-drivers-96.43.05.ebuild:
+  x86 stable
 
   05 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
   nvidia-drivers-169.09-r1.ebuild:
