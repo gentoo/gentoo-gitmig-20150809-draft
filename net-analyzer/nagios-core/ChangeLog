@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.113 2008/03/14 12:00:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.114 2008/03/19 19:11:27 corsair Exp $
+
+  19 Mar 2008; Markus Rothe <corsair@gentoo.org> nagios-core-2.11.ebuild:
+  Stable on ppc64; bug #213766
 
   14 Mar 2008; Caleb Tennis <caleb@gentoo.org> nagios-core-2.10-r1.ebuild:
   amd64 stable
