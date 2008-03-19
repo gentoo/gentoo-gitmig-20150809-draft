@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_pre4.ebuild,v 1.1 2008/03/09 01:20:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_pre5.ebuild,v 1.1 2008/03/19 22:07:53 genone Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib python
 

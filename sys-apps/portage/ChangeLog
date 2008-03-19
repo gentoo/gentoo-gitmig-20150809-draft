@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.503 2008/03/09 01:20:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.504 2008/03/19 22:07:53 genone Exp $
+
+*portage-2.2_pre5 (19 Mar 2008)
+
+  19 Mar 2008; Marius Mauch <genone@gentoo.org> -portage-2.2_pre4.ebuild,
+  +portage-2.2_pre5.ebuild:
+  New test release, implementing solutions for bugs #213790, #213592, #212152,
+  #211949 and more.
 
 *portage-2.2_pre4 (09 Mar 2008)
 
