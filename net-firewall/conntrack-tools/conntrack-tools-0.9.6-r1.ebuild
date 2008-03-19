@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.6.ebuild,v 1.3 2008/03/19 13:05:06 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.6-r1.ebuild,v 1.1 2008/03/19 20:33:00 cedk Exp $
 
 inherit linux-info
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=net-libs/libnfnetlink-0.0.32
+DEPEND=">=net-libs/libnfnetlink-0.0.33
 	>=net-libs/libnetfilter_conntrack-0.0.89"
 RDEPEND="${DEPEND}
 	!net-firewall/conntrack"
@@ -28,8 +28,8 @@ src_unpack() {
 pkg_setup() {
 	linux-info_pkg_setup
 
-	if kernel_is lt 2 6 14 ; then
-		die "${PN} requires at least 2.6.14 kernel version"
+	if kernel_is lt 2 6 18 ; then
+		die "${PN} requires at least 2.6.18 kernel version"
 	fi
 
 	#netfilter core team has changed some option names with kernel 2.6.20
