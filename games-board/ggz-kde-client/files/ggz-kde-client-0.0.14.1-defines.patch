@@ -1,0 +1,15 @@
+--- ggz-kde/src/KGGZCommon.h
++++ ggz-kde/src/KGGZCommon.h
+@@ -83,12 +83,6 @@
+     //#ifndef __USE_ISO9CX
+     //  #define __USE_ISO9CX
+     //#endif
+-    #ifndef atoll
+-      #define atoll(x) atol(x)
+-    #endif
+-    #ifndef strdup
+-      #define strdup(x) strcpy(((char*)malloc(strlen(x) + 1)), x)
+-    #endif
+   #else
+     #define KGGZDEBUGF(fmt, args...) printf("KGGZ >> " fmt, ##args)
+     #define KGGZDEBUG(fmt, args...) printf(">>> " fmt, ##args)

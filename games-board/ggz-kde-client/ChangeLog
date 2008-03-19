@@ -1,6 +1,14 @@
 # ChangeLog for games-board/ggz-kde-client
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-client/ChangeLog,v 1.9 2007/07/01 03:33:08 mr_bones_ Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-client/ChangeLog,v 1.10 2008/03/19 21:21:43 nyhm Exp $
+
+*ggz-kde-client-0.0.14.1 (19 Mar 2008)
+
+  19 Mar 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/ggz-kde-client-0.0.14.1-defines.patch,
+  +files/ggz-kde-client-0.0.14.1-howl.patch,
+  +ggz-kde-client-0.0.14.1.ebuild:
+  Version bump
 
   01 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   ggz-kde-client-0.0.14.ebuild:
