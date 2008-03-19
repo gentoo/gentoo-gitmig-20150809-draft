@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/storm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.1 2007/07/10 14:41:39 dev-zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.2 2008/03/19 21:30:07 hoffie Exp $
+
+*storm-0.12 (19 Mar 2008)
+
+  19 Mar 2008; Christian Hoffmann <hoffie@gentoo.org> +storm-0.12.ebuild:
+  version bump to 0.12, also marking ~amd64 as it works fine for me on that
+  arch
 
 *storm-0.9 (10 Jul 2007)
 
