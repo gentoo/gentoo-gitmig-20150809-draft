@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Locale-PO
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.41 2007/11/10 13:41:42 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.42 2008/03/19 03:04:01 jer Exp $
+
+  19 Mar 2008; Jeroen Roovers <jer@gentoo.org> Locale-PO-0.17-r1.ebuild:
+  Stable for HPPA too.
 
   10 Nov 2007; Samuli Suominen <drac@gentoo.org> Locale-PO-0.17-r1.ebuild:
   amd64 stable
