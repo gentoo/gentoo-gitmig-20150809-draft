@@ -1,6 +1,10 @@
 # ChangeLog for games-action/orbital-eunuchs-sniper
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/ChangeLog,v 1.9 2007/02/07 08:17:12 nyhm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/ChangeLog,v 1.10 2008/03/19 01:11:21 nyhm Exp $
+
+  19 Mar 2008; Tristan Heaven <nyhm@gentoo.org>
+  orbital-eunuchs-sniper-1.30.ebuild:
+  Add ~amd64 keyword
 
 *orbital-eunuchs-sniper-1.30 (07 Feb 2007)
 
