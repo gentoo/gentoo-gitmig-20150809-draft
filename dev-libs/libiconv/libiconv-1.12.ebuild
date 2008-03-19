@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.12.ebuild,v 1.1 2008/02/21 22:20:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.12.ebuild,v 1.2 2008/03/19 17:24:02 haubi Exp $
 
 inherit eutils multilib flag-o-matic libtool toolchain-funcs
 
@@ -51,7 +51,7 @@ src_install() {
 
 	# Move static libs and creates ldscripts into /usr/lib
 	dodir /$(get_libdir)
-	mv "${D}"/usr/$(get_libdir)/*.so* "${D}/$(get_libdir)" || die
-	gen_usr_ldscript libiconv.so
-	gen_usr_ldscript libcharset.so
+	mv "${D}"/usr/$(get_libdir)/lib{iconv,charset}*$(get_libname)* "${D}/$(get_libdir)" || die
+	gen_usr_ldscript libiconv$(get_libname)
+	gen_usr_ldscript libcharset$(get_libname)
 }
