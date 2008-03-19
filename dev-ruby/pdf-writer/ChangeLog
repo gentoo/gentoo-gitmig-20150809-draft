@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/pdf-writer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.12 2008/02/12 18:47:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.13 2008/03/19 20:10:25 graaff Exp $
+
+*pdf-writer-1.1.8 (19 Mar 2008)
+
+  19 Mar 2008; Hans de Graaff <graaff@gentoo.org> +pdf-writer-1.1.8.ebuild:
+  Version bump:
+   * Fix page numbering bug
+   * Fix font embedding
 
   12 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   pdf-writer-1.1.7.ebuild:
