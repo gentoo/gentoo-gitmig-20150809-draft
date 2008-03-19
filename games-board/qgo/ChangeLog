@@ -1,6 +1,10 @@
 # ChangeLog for games-board/qgo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.28 2007/09/20 22:27:55 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.29 2008/03/19 11:59:04 nyhm Exp $
+
+  19 Mar 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/qgo-1.5.4-gcc43.patch, qgo-1.5.4.ebuild:
+  Add patch to fix compilation with gcc-4.3 by Dennis Schridde, bug #213134
 
   20 Sep 2007; Michael Sterrett <mr_bones_@gentoo.org>
   files/qgo-1.5.4-parallel.patch:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4.ebuild,v 1.1 2007/06/17 13:42:20 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4.ebuild,v 1.2 2008/03/19 11:59:04 nyhm Exp $
 
 inherit eutils autotools qt3 games
 
@@ -18,7 +18,9 @@ DEPEND="$(qt_min_version 3.3)"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-parallel.patch
+	epatch \
+		"${FILESDIR}"/${P}-parallel.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 	sed -i 's:$(datadir):/usr/share:' \
 		templates/Makefile.in \
 		|| die "sed Makefile.in failed"
