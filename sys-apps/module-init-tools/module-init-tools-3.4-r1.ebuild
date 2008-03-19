@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.4-r1.ebuild,v 1.2 2008/03/19 06:28:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.4-r1.ebuild,v 1.3 2008/03/19 06:30:05 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -150,7 +150,7 @@ src_install() {
 	# modprobe.conf.
 	into /
 	dosbin "${S}"/generate-modprobe.conf || die
-	newsbin"${FILESDIR}"/update-modules-3.4.sh update-modules || die
+	newsbin "${FILESDIR}"/update-modules-3.4.sh update-modules || die
 	dosym update-modules /sbin/modules-update
 	doman "${FILESDIR}"/update-modules.8
 
