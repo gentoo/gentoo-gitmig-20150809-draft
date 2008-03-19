@@ -52,7 +52,7 @@ while [ -n "$1" ] ; do
 		-f|--force|force)  FORCE="true";;
 		-v|--verbose)      ((VERBOSE+=1));;
 		-d|--debug)        ((DEBUG+=1));;
-		-V|--version)      exec echo "${argv0}: $Revision: 1.2 $ $Date: 2008/03/19 06:38:09 $";;
+		-V|--version)      exec echo "${argv0}$Revision: 1.3 $ $Date: 2008/03/19 06:43:06 $";;
 		-h|--help)
 			cat <<-EOF
 			Usage: update-modules [options]
@@ -105,7 +105,7 @@ export LC_COLLATE="C"
 #
 # Let's check the optimal case first: nothing to do
 #
-if ! ${FORCE_UPDATE} ; then
+if ! ${FORCE} ; then
 	if [ ! -d "./etc/modules.d" ] ; then
 		if [ ! -d "./etc/modprobe.d" ] ; then
 			veinfo "No /etc/modules.d or /etc/modprobe.d dir; Nothing to do!"
