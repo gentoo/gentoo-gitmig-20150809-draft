@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gnurobbo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.3 2007/02/08 21:17:57 wolf31o2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.4 2008/03/19 23:16:37 nyhm Exp $
+
+  19 Mar 2008; Tristan Heaven <nyhm@gentoo.org> gnurobbo-0.57.ebuild:
+  Add ~amd64 keyword, bug #210460
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
