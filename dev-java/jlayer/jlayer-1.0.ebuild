@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jlayer/jlayer-1.0.ebuild,v 1.1 2007/05/08 18:45:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jlayer/jlayer-1.0.ebuild,v 1.2 2008/03/19 22:08:09 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/javalayer/${PN}${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
