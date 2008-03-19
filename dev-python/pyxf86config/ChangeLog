@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyxf86config
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.8 2008/02/14 02:50:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.9 2008/03/19 07:46:14 dberkholz Exp $
+
+  19 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/0.3.34-remove-rgbpath.patch, +files/Makefile.am,
+  pyxf86config-0.3.34-r1.ebuild:
+  (#206989) Fix for amd64 by using rewritten Makefile.am (Dough Klima and
+  me). Also fix for xorg-server 1.5 by removing knowledge of RgbPath.
 
   14 Feb 2008; Robin H. Johnson <robbat2@gentoo.org>
   pyxf86config-0.3.34-r1.ebuild:

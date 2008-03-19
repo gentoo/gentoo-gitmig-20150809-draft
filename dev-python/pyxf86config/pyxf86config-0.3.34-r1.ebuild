@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/pyxf86config-0.3.34-r1.ebuild,v 1.2 2008/02/14 02:50:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/pyxf86config-0.3.34-r1.ebuild,v 1.3 2008/03/19 07:46:14 dberkholz Exp $
 
-inherit eutils python rpm
+inherit eutils python rpm autotools
 
 # Tag for which Fedora Core version it's from
 FCVER="8"
@@ -32,6 +32,13 @@ src_unpack() {
 	if has_version '>=x11-base/xorg-server-1.4' ; then
 		epatch "${FILESDIR}/xorg-server-1.4-compat.patch"
 	fi
+
+	# Compat with 1.5
+	epatch "${FILESDIR}"/0.3.34-remove-rgbpath.patch
+
+	# (#206989) Cleaned up Makefile.am that works correctly on amd64
+	cp "${FILESDIR}"/Makefile.am "${S}"/ || die
+	eautoreconf
 }
 
 src_compile() {
