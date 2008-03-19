@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.6.ebuild,v 1.2 2008/03/19 09:58:48 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.6.ebuild,v 1.3 2008/03/19 13:05:06 cedk Exp $
 
-inherit linux-info eutils
+inherit linux-info
 
 DESCRIPTION="Connection tracking userspace tools"
 HOMEPAGE="http://people.netfilter.org/pablo/conntrack-tools/"
@@ -10,11 +10,11 @@ SRC_URI="http://www.netfilter.org/projects/conntrack-tools/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 -hppa -sparc -x86"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=net-libs/libnfnetlink-0.0.32
-	>=net-libs/libnetfilter_conntrack-0.0.81"
+	>=net-libs/libnetfilter_conntrack-0.0.89"
 RDEPEND="${DEPEND}
 	!net-firewall/conntrack"
 
@@ -22,8 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Remove -Werror as it actually causes the build to fail:
-	epatch "${FILESDIR}"/${P}-Werror.patch
+	sed -i -e '/-Werror \\/d' {.,src,extensions}/Makefile.in
 }
 
 pkg_setup() {
@@ -39,6 +38,8 @@ pkg_setup() {
 	else
 		CONFIG_CHECK="NF_CT_NETLINK"
 	fi
+	CONFIG_CHECK="${CONFIG_CHECK} NF_CONNTRACK NF_CONNTRACK_IPV4
+		NETFILTER_NETLINK NF_CONNTRACK_EVENTS"
 
 	check_extra_config
 }
@@ -50,9 +51,12 @@ src_install() {
 	newconfd "${FILESDIR}/conntrackd.confd" conntrackd
 
 	insinto /etc/conntrackd
-	doins examples/stats/conntrackd.conf
+	doins doc/stats/conntrackd.conf
 
 	dodoc AUTHORS ChangeLog
+
+	# Clean unnecessary .svn directories
+	find doc -type d -name ".svn" -print0 | xargs -0 -n1 rm -R
 	insinto /usr/share/doc/${PF}
-	doins -r examples
+	doins -r doc
 }
