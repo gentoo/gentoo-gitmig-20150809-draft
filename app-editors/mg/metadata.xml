@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>emacs</herd>
+<longdescription>
+  mg is Micro GNU/emacs, this is a portable version of the mg maintained by
+  the OpenBSD team.
+</longdescription>
 </pkgmetadata>
