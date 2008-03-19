@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/xye-0.8.0.ebuild,v 1.1 2008/01/14 21:47:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/xye-0.8.0.ebuild,v 1.2 2008/03/19 22:13:39 nyhm Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/xye/${PN}-source-${PV}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl
