@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/libuser-0.56.8.ebuild,v 1.1 2008/03/19 06:46:03 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/libuser-0.56.8.ebuild,v 1.2 2008/03/19 07:29:15 dberkholz Exp $
 
 inherit eutils rpm
 
@@ -13,7 +13,7 @@ HOMEPAGE="https://fedorahosted.org/libuser/"
 SRC_URI="mirror://fedora-dev/development/source/SRPMS/${P}-${RPMREV}.src.rpm"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ldap sasl selinux quotas"
 RDEPEND="=dev-libs/glib-2*
 	app-text/linuxdoc-tools

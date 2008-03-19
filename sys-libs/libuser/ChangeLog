@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libuser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/ChangeLog,v 1.8 2008/03/19 06:46:03 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/ChangeLog,v 1.9 2008/03/19 07:29:15 dberkholz Exp $
+
+  19 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  libuser-0.56.8.ebuild:
+  Keyword ~amd64.
 
 *libuser-0.56.8 (19 Mar 2008)
 
