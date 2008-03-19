@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.24 2008/02/25 07:18:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.25 2008/03/19 16:45:23 jer Exp $
+
+  19 Mar 2008; Jeroen Roovers <jer@gentoo.org> libnl-1.1-r1.ebuild:
+  Stable for HPPA.
 
   25 Feb 2008; <pva@gentoo.org> files/libnl-1.1-vlan-header.patch:
   Fix the patch to be applied correctly. Finally fixed bug #210208.
