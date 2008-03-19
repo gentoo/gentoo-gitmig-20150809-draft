@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-battery
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/ChangeLog,v 1.58 2007/10/26 13:18:29 angelos Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/ChangeLog,v 1.59 2008/03/19 14:27:17 drac Exp $
+
+  19 Mar 2008; Samuli Suominen <drac@gentoo.org>
+  +files/xfce4-battery-0.5.0-2.6.24-headers.patch,
+  xfce4-battery-0.5.0-r2.ebuild:
+  Flip include order for bug 210218 to fix conflicting types between
+  linux-headers-2.6.24 and glibc-2.7.
 
   26 Oct 2007; Christoph Mende <angelos@gentoo.org>
   xfce4-battery-0.5.0-r2.ebuild:
