@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/auctex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/auctex/ChangeLog,v 1.15 2008/02/28 13:24:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/auctex/ChangeLog,v 1.16 2008/03/19 19:17:05 graaff Exp $
+
+  19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  A herd should not be listed as maintainer
 
   28 Feb 2008; Raúl Porcel <armin76@gentoo.org> auctex-1.47.ebuild:
   Re-add ~ppc64, removed by mistake

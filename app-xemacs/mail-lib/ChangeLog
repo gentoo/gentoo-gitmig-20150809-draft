@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/mail-lib
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/ChangeLog,v 1.20 2007/11/25 15:02:57 graaff Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/ChangeLog,v 1.21 2008/03/19 19:45:04 graaff Exp $
+
+  19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  A herd should not be listed as maintainer
 
   25 Nov 2007; Hans de Graaff <graaff@gentoo.org> mail-lib-1.79.ebuild:
   Marked amd64 stable per kingtaco's email to -core

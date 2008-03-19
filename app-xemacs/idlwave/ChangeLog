@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/idlwave
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/idlwave/ChangeLog,v 1.11 2007/10/25 12:21:56 graaff Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/idlwave/ChangeLog,v 1.12 2008/03/19 19:39:54 graaff Exp $
+
+  19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  A herd should not be listed as maintainer
 
   25 Oct 2007; Hans de Graaff <graaff@gentoo.org> -idlwave-1.28.ebuild:
   Remove old version

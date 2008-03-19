@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/latin-euro-standards
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/latin-euro-standards/ChangeLog,v 1.4 2007/06/03 18:39:12 graaff Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/latin-euro-standards/ChangeLog,v 1.5 2008/03/19 19:41:58 graaff Exp $
+
+  19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  A herd should not be listed as maintainer
 
   03 Jun 2007; Hans de Graaff <graaff@gentoo.org>
   latin-euro-standards-1.07.ebuild:
