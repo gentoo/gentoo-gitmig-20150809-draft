@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1221 2008/03/18 17:19:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1222 2008/03/19 01:01:03 jer Exp $
+
+  19 Mar 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Masking net-firewall/conntrack (bug #213084).
 
   18 Mar 2008; Raúl Porcel <armin76@gentoo.org> updates/1Q-2008:
   Slotmove xulrunner-1.8* again
