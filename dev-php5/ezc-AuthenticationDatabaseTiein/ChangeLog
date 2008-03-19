@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-AuthenticationDatabaseTiein
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-AuthenticationDatabaseTiein/ChangeLog,v 1.4 2008/01/13 15:59:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-AuthenticationDatabaseTiein/ChangeLog,v 1.5 2008/03/19 00:11:06 jokey Exp $
+
+  18 Mar 2008; Markus Ullmann <jokey@gentoo.org>
+  -ezc-AuthenticationDatabaseTiein-1.0.ebuild:
+  Drop old
 
 *ezc-AuthenticationDatabaseTiein-1.1 (13 Jan 2008)
 

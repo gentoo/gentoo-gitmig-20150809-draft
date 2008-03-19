@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-Graph
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Graph/ChangeLog,v 1.4 2008/01/13 16:04:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Graph/ChangeLog,v 1.5 2008/03/19 00:14:01 jokey Exp $
+
+  18 Mar 2008; Markus Ullmann <jokey@gentoo.org> -ezc-Graph-1.1.ebuild:
+  Drop old
 
 *ezc-Graph-1.2 (13 Jan 2008)
 

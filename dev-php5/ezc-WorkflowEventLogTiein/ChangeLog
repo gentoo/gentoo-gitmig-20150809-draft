@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-WorkflowEventLogTiein
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-WorkflowEventLogTiein/ChangeLog,v 1.4 2008/01/13 16:11:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-WorkflowEventLogTiein/ChangeLog,v 1.5 2008/03/19 00:19:01 jokey Exp $
+
+  19 Mar 2008; Markus Ullmann <jokey@gentoo.org>
+  -ezc-WorkflowEventLogTiein-1.0.ebuild:
+  Drop old
 
 *ezc-WorkflowEventLogTiein-1.1 (13 Jan 2008)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-Workflow
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Workflow/ChangeLog,v 1.4 2008/01/13 16:11:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Workflow/ChangeLog,v 1.5 2008/03/19 00:18:32 jokey Exp $
+
+  19 Mar 2008; Markus Ullmann <jokey@gentoo.org> -ezc-Workflow-1.0.1.ebuild:
+  Drop old
 
 *ezc-Workflow-1.1 (13 Jan 2008)
 

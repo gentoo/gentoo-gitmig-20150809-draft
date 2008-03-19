@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-Url
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Url/ChangeLog,v 1.4 2008/01/13 16:10:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Url/ChangeLog,v 1.5 2008/03/19 00:17:48 jokey Exp $
+
+  19 Mar 2008; Markus Ullmann <jokey@gentoo.org> -ezc-Url-1.1.ebuild:
+  Drop old
 
 *ezc-Url-1.2 (13 Jan 2008)
 

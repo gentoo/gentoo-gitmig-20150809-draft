@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-Debug
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Debug/ChangeLog,v 1.14 2008/01/13 16:02:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Debug/ChangeLog,v 1.15 2008/03/19 00:12:48 jokey Exp $
+
+  18 Mar 2008; Markus Ullmann <jokey@gentoo.org> -ezc-Debug-1.0.ebuild,
+  -ezc-Debug-1.0.1.ebuild, -ezc-Debug-1.0.3.ebuild:
+  Drop old
 
   13 Jan 2008; Markus Ullmann <jokey@gentoo.org> ezc-Debug-1.1.ebuild:
   Add eZ Components 2007.2 from project overlay
