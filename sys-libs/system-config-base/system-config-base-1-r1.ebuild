@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/system-config-base/system-config-base-1-r1.ebuild,v 1.1 2007/07/14 23:51:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/system-config-base/system-config-base-1-r1.ebuild,v 1.2 2008/03/19 06:55:35 dberkholz Exp $
 
 inherit eutils pam
 
@@ -31,10 +31,10 @@ pkg_postinst() {
 		echo
 		ewarn
 		ewarn "Your ${ROOT}etc/default/useradd file must be world-readable"
-		ewarn "  for the system-config-* utilities to work properly."
-		ewarn "  If you did not change them on purpose, consider running:"
+		ewarn "for the system-config-* utilities to work properly."
+		ewarn "If you did not change them on purpose, consider running:"
 		ewarn
-		echo -e "\tchmod 0644 ${ROOT}etc/default/useradd"
+		ewarn " chmod 0644 ${ROOT}etc/default/useradd"
 		echo
 	fi
 }

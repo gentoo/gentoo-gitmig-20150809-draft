@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/system-config-base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/system-config-base/ChangeLog,v 1.4 2008/01/31 06:32:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/system-config-base/ChangeLog,v 1.5 2008/03/19 06:55:35 dberkholz Exp $
+
+  19 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  system-config-base-1-r1.ebuild:
+  Reformat post-installation message and change echo to ewarn so it shows up
+  in the messages at the end of a merge.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -system-config-base-1.ebuild:
