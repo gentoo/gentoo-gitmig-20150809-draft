@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/usermode-1.96.ebuild,v 1.1 2008/03/19 06:54:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/usermode-1.96.ebuild,v 1.2 2008/03/19 07:29:57 dberkholz Exp $
 
 inherit flag-o-matic rpm autotools eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="https://fedorahosted.org/usermode/"
 SRC_URI="mirror://fedora-dev/development/source/SRPMS/${P}-${RPMREV}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug selinux"
 RDEPEND="=dev-libs/glib-2*
 	=x11-libs/gtk+-2*

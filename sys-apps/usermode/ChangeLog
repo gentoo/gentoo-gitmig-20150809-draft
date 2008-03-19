@@ -1,51 +1,7 @@
 # ChangeLog for sys-apps/usermode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/ChangeLog,v 1.8 2008/03/19 06:54:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/ChangeLog,v 1.9 2008/03/19 07:29:57 dberkholz Exp $
 
-*usermode-1.96 (19 Mar 2008)
-
-  19 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
-  +usermode-1.96.ebuild:
-  Bump.
-
-  21 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> usermode-1.93.ebuild:
-  Add dependency over sys-apps/shadow and check if it was built with pam USE
-  flag enabled. Closes bug #210859.
-
-  31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
-  -usermode-1.86.ebuild, -usermode-1.87.ebuild, -usermode-1.92.ebuild:
-  Clean up.
-
-*usermode-1.93 (15 Oct 2007)
-
-  15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
-  +usermode-1.93.ebuild:
-  (#189846) Updates so the files are on mirrors. Also switch to using
-  fedora-dev thirdpartymirrors setting to better find RPMs.
-
-  15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; usermode-1.86.ebuild,
-  usermode-1.87.ebuild, usermode-1.92.ebuild:
-  (#185524) Update homepage.
-
-*usermode-1.92 (15 Jul 2007)
-
-  15 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
-  +usermode-1.92.ebuild:
-  Bump. Preserve app exit code, use less memory, don't use PAM data after
-  free, support 'user', 'users', LABEL and UUID in usermount/userformat, add a
-  dialog caption when changing password, fix GUI=no, preserve env vars in
-  consolehelper if configured, fix non-UTF8 hangs, and more.
-
-*usermode-1.87 (30 Oct 2006)
-
-  30 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
-  +usermode-1.87.ebuild:
-  Bump. (#153395) desktop-file-utils-0.11 enforces valid categories, so sed
-  out invalid ones.
-
-*usermode-1.86 (05 Sep 2006)
-
-  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
-  +usermode-1.86.ebuild:
-  Tools for certain user account management tasks
+  19 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>; usermode-1.96.ebuild:
+  Keyword ~amd64.
 
