@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1223 2008/03/19 01:05:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1224 2008/03/19 06:24:44 jer Exp $
+
+  19 Mar 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Update sysstat mask for newer development version(s).
 
   19 Mar 2008; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask development version net-firewall/conntrack-tools-0.9.6.
