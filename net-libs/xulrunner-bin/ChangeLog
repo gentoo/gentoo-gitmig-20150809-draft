@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/xulrunner-bin
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner-bin/ChangeLog,v 1.1 2008/03/19 20:06:06 armin76 Exp $
+
+*xulrunner-bin-1.8.1.12 (19 Mar 2008)
+
+  19 Mar 2008; Raúl Porcel <armin76@gentoo.org> +files/10xulrunner-bin,
+  +files/71xulrunner-bin, +files/xulrunner-bin.conf, +metadata.xml,
+  +xulrunner-bin-1.8.1.12.ebuild:
+  Initial import
+
