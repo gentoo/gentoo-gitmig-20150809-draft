@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.58 2008/03/17 12:33:27 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.59 2008/03/19 04:44:46 jer Exp $
+
+  19 Mar 2008; Jeroen Roovers <jer@gentoo.org> obconf-2.0.3.ebuild:
+  Stable for HPPA (bug #213553).
 
   17 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> obconf-2.0.3.ebuild:
   amd64 stable wrt bug #213553
