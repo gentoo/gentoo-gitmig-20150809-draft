@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.525 2008/03/16 22:28:30 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.526 2008/03/19 04:20:15 ingmar Exp $
+
+  19 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> ChangeLog:
+  Anti-aliasing rules are broken in qt-4.3*, causing random runtime failures
+  in Qt programs. bug 213411. Fixed by appending -fno-strict-aliasing.
 
   16 Mar 2008; Bo Ørsted Andresen <zlin@gentoo.org> qt-4.4.0_beta1.ebuild:
   The qt meta ebuild needs to block previous versions of qt:4 too.
