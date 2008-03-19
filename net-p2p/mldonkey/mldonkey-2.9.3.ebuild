@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.9.3.ebuild,v 1.5 2008/03/13 12:32:45 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.9.3.ebuild,v 1.6 2008/03/19 19:30:12 armin76 Exp $
 
 WANT_AUTOCONF=2.5
 
@@ -127,8 +127,8 @@ src_install() {
 		for i in mlgui mlguistarter; do
 			newbin $i$myext $i || die "failed to install $i"
 		done
-		domenu "${FILESDIR}"/${PN}-gui.desktop
-		doicon "${FILESDIR}"/${PN}.png
+		make_desktop_entry mlgui "MLDonkey GUI" mldonkey "Network;P2P"
+		newicon "${S}"/packages/rpm/mldonkey-icon-48.png ${PN}.png
 	fi
 
 	if use doc ; then

@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.205 2008/03/13 12:32:45 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.206 2008/03/19 19:30:12 armin76 Exp $
+
+  19 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  -files/mldonkey.initd-2.8-r1, -files/mldonkey, -files/mldonkey.png,
+  -files/mldonkey-gui.desktop, -mldonkey-2.9.2.ebuild,
+  -mldonkey-2.9.2-r1.ebuild, mldonkey-2.9.3.ebuild, mldonkey-2.9.4.ebuild:
+  Create a desktop file instead of using a premade one, remove old
 
   13 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> mldonkey-2.9.3.ebuild:
   amd64 stable wrt bug #211382
