@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.9-r1.ebuild,v 1.8 2008/03/02 23:59:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.9-r1.ebuild,v 1.9 2008/03/19 07:14:26 opfer Exp $
 
 inherit eutils
 # used for epause
@@ -51,7 +51,7 @@ DEPEND="
 
 pkg_setup() {
 	if use audacious; then
-		if ! built_with_use media-sound/audacious dbus; then
+		if has_version <media-sound/audacious-1.5.0 && ! built_with_use media-sound/audacious dbus; then
 			eerror "media-sound/audacious is not built with dbus USE flag."
 			eerror "Please add 'dbus' to your USE flags, and re-emerge media-sound/audacious."
 			die "media-sound/audacious needs USE=dbus"
