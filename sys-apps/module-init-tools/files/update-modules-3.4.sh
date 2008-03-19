@@ -52,7 +52,7 @@ while [ -n "$1" ] ; do
 		-f|--force|force)  FORCE="true";;
 		-v|--verbose)      ((VERBOSE+=1));;
 		-d|--debug)        ((DEBUG+=1));;
-		-V|--version)      exec echo "${argv0}: $Revision: 1.1 $ $Date: 2008/03/19 02:09:10 $";;
+		-V|--version)      exec echo "${argv0}: $Revision: 1.2 $ $Date: 2008/03/19 06:38:09 $";;
 		-h|--help)
 			cat <<-EOF
 			Usage: update-modules [options]
@@ -308,6 +308,7 @@ else
 		case ${f##*/} in
 			aliases|i386) continue;;
 		esac
+		[ -e "${f}" ] || continue
 		if [ ! -e "./etc/modprobe.d/${f##*/}" ] ; then
 			ewarn "Please file a bug about ${f#.}: it needs an /etc/modprobe.d/${f##*/}"
 		fi
