@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.5.8.ebuild,v 1.1 2008/03/10 21:49:04 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.5.8.ebuild,v 1.2 2008/03/19 04:24:48 ingmar Exp $
 
 EAPI="1"
 inherit eutils cmake-utils
@@ -66,6 +66,12 @@ pkg_setup() {
 		eerror "Please enable both qt4 and dbus."
 		die
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
 }
 
 src_compile() {
