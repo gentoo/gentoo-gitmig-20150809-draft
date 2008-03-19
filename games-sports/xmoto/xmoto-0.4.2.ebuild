@@ -1,13 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.4.1.ebuild,v 1.2 2008/03/12 20:35:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.4.2.ebuild,v 1.1 2008/03/19 23:25:58 genstef Exp $
 
 inherit eutils games
 
+LVL="inksmoto-0.4.1" #they unfortunately don't release both at the same time
 DESCRIPTION="A challenging 2D motocross platform game"
 HOMEPAGE="http://xmoto.tuxfamily.org"
 SRC_URI="http://download.tuxfamily.org/${PN}/${PN}/${PV}/${P}-src.tar.gz
-	editor? ( http://download.tuxfamily.org/xmoto/svg2lvl/${PV}/inksmoto-${PV}.tar.gz )"
+	editor? ( http://download.tuxfamily.org/xmoto/svg2lvl/${PV}/${LVL}.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -36,6 +37,7 @@ pkg_setup() {
 		eerror "emerge this package."
 		die
 	fi
+	games_pkg_setup
 }
 src_unpack() {
 	unpack ${A}
@@ -45,7 +47,8 @@ src_unpack() {
 
 src_compile() {
 	#if use sdl ; then
-	#	ewarn "sdl is known to be broken, if you experience troubles please turn of this useflag"
+	#	ewarn "SDL is known to be broken, if you experience any troubles please"
+	#	ewarn "try again without this useflag"
 	#	RENDERER="--with-renderer-sdlGfx=1 --with-renderer-openGl=0"
 	#else
 		RENDERER="--with-renderer-sdlGfx=0 --with-renderer-openGl=1"
@@ -93,7 +96,7 @@ src_install() {
 
 	if use editor; then
 	  insinto /usr/share/inkscape/extensions
-	  doins "${WORKDIR}"/inksmoto-${PV}/*.{inx,py,xml} || die "doins failed"
+	  doins "${WORKDIR}"/${LVL}/*.{inx,py,xml} || die "doins failed"
 	fi
 }
 
