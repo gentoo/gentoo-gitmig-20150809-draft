@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jtagger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/ChangeLog,v 1.2 2008/01/10 23:07:17 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/ChangeLog,v 1.3 2008/03/19 22:12:07 caster Exp $
+
+*jtagger-2008.01 (19 Mar 2008)
+
+  19 Mar 2008; Vlastimil Babka <caster@gentoo.org> +jtagger-2008.01.ebuild:
+  Version bump based on Serkan Kaba's ebuild, bug #213954. Adding ~amd64.
 
   10 Jan 2008; Vlastimil Babka <caster@gentoo.org> jtagger-2007.02.ebuild:
   Restrict junit dependency.
