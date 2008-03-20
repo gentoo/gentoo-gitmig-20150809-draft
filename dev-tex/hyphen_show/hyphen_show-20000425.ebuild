@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/hyphen_show-20000425.ebuild,v 1.2 2007/07/13 06:20:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/hyphen_show-20000425.ebuild,v 1.3 2008/03/20 21:56:32 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,7 @@ DEPEND=""
 S=${WORKDIR}/${MY_PN}-${PV}
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	epatch "${FILESDIR}"/${PN}-gcc34.patch
 }
 

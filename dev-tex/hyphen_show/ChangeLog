@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/hyphen_show
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/ChangeLog,v 1.5 2007/07/15 09:17:42 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/ChangeLog,v 1.6 2008/03/20 21:56:32 ulm Exp $
+
+  20 Mar 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml,
+  hyphen_show-20000425.ebuild:
+  Add longdescription to metadata. Don't quote ${A}.
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to tex, as nattfodd is being retired (#108329).
