@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/monster-masher-1.8.ebuild,v 1.7 2008/02/14 00:46:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/monster-masher-1.8.ebuild,v 1.8 2008/03/20 00:30:30 nyhm Exp $
 
-inherit eutils
+inherit eutils gnome2
 
 DESCRIPTION="Squash the monsters with your levitation worker gnome"
 HOMEPAGE="http://people.iola.dk/olau/monster-masher/"
@@ -10,7 +10,7 @@ SRC_URI="http://people.iola.dk/olau/monster-masher/source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="x11-libs/libSM
@@ -27,6 +27,5 @@ pkg_setup() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README
+	DOCS="AUTHORS ChangeLog README" gnome2_src_install
 }

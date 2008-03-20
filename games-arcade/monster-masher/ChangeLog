@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/monster-masher
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/ChangeLog,v 1.18 2008/02/14 00:46:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/ChangeLog,v 1.19 2008/03/20 00:30:30 nyhm Exp $
+
+  20 Mar 2008; Tristan Heaven <nyhm@gentoo.org> monster-masher-1.8.ebuild:
+  Add ~amd64 keyword, bug #201801
 
   14 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
   monster-masher-1.8.ebuild:
