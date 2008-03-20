@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.0.ebuild,v 1.2 2008/03/18 11:41:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.0.ebuild,v 1.3 2008/03/20 20:39:50 vapier Exp $
 
 PATCH_VER="1.0"
 UCLIBC_VER="1.0"
@@ -19,7 +19,7 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS=""
 
 RDEPEND=">=sys-libs/zlib-1.1.4
-	|| ( >=sys-devel/gcc-config-1.3.12-r4 app-admin/eselect-compiler )
+	>=sys-devel/gcc-config-1.4
 	virtual/libiconv
 	>=dev-libs/gmp-4.2.1
 	>=dev-libs/mpfr-2.3
@@ -48,7 +48,7 @@ DEPEND="${RDEPEND}
 	ppc? ( >=${CATEGORY}/binutils-2.17 )
 	ppc64? ( >=${CATEGORY}/binutils-2.17 )
 	>=${CATEGORY}/binutils-2.15.94"
-PDEPEND="|| ( sys-devel/gcc-config app-admin/eselect-compiler )"
+PDEPEND=">=sys-devel/gcc-config-1.4"
 if [[ ${CATEGORY} != cross-* ]] ; then
 	PDEPEND="${PDEPEND} elibc_glibc? ( >=sys-libs/glibc-2.3.6 )"
 fi

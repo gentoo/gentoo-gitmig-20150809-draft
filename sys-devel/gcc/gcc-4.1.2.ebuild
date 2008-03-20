@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.2.ebuild,v 1.19 2008/03/16 00:24:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.2.ebuild,v 1.20 2008/03/20 20:39:50 vapier Exp $
 
 PATCH_VER="1.1"
 UCLIBC_VER="1.0"
@@ -20,7 +20,7 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="-* alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
-	|| ( >=sys-devel/gcc-config-1.3.12-r4 app-admin/eselect-compiler )
+	>=sys-devel/gcc-config-1.4
 	virtual/libiconv
 	fortran? (
 		>=dev-libs/gmp-4.2.1
@@ -49,7 +49,7 @@ DEPEND="${RDEPEND}
 	ppc? ( >=${CATEGORY}/binutils-2.17 )
 	ppc64? ( >=${CATEGORY}/binutils-2.17 )
 	>=${CATEGORY}/binutils-2.15.94"
-PDEPEND="|| ( sys-devel/gcc-config app-admin/eselect-compiler )"
+PDEPEND=">=sys-devel/gcc-config-1.4"
 if [[ ${CATEGORY} != cross-* ]] ; then
 	PDEPEND="${PDEPEND} elibc_glibc? ( >=sys-libs/glibc-2.3.6 )"
 fi

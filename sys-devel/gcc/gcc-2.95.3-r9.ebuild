@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r9.ebuild,v 1.6 2007/06/26 02:52:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r9.ebuild,v 1.7 2008/03/20 20:39:50 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator fixheadtails gnuconfig
 
@@ -70,7 +70,7 @@ else
 	SLOT="${GCC_BRANCH_VER}"
 fi
 
-RDEPEND="|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.2.3 )
+RDEPEND=">=sys-devel/gcc-config-1.4
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
