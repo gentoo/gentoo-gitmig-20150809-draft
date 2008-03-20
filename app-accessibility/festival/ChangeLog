@@ -1,6 +1,19 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.77 2008/03/13 02:55:28 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.78 2008/03/20 01:39:24 williamh Exp $
+
+  20 Mar 2008; William Hubbs <williamh@gentoo.org>
+  -files/festival-1.4.3-asterisk.patch,
+  -files/festival-1.95_beta-asterisk.patch,
+  -files/festival-1.95_beta-fbsd.patch,
+  -files/festival-1.95_beta-gcc41-amd64-int-pointer.patch,
+  -files/festival-1.95_beta-gcc41-amd64.patch,
+  -files/festival-1.95_beta-gcc41.patch, -files/festival-gcc3.3.diff,
+  -files/festival-1.95_beta-init-scm.patch, -festival-1.4.3-r3.ebuild,
+  -festival-1.4.3-r4.ebuild, -festival-1.95_beta.ebuild,
+  -festival-1.95_beta-r1.ebuild, -festival-1.95_beta-r2.ebuild,
+  -festival-1.95_beta-r3.ebuild, -festival-1.95_beta-r4.ebuild:
+  Removed old versions.
 
   13 Mar 2008; William Hubbs <williamh@gentoo.org>
   festival-1.96_beta.ebuild:
