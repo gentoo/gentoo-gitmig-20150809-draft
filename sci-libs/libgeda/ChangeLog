@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.42 2008/03/18 15:15:25 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.43 2008/03/20 12:43:54 cla Exp $
+
+  20 Mar 2008; Dawid Węgliński <cla@gentoo.org> libgeda-1.4.0.ebuild:
+  Stable on x86 (bug #214018)
 
   18 Mar 2008; Ferris McCormick <fmccor@gentoo.org> libgeda-1.4.0.ebuild:
   Sparc stable, required for Bug #192905.
