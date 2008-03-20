@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.108 2008/03/10 13:46:36 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.109 2008/03/20 20:59:50 aballier Exp $
+
+  20 Mar 2008; Alexis Ballier <aballier@gentoo.org>
+  -libquicktime-1.0.1.ebuild:
+  remove old
 
   10 Mar 2008; Steve Dibb <beandog@gentoo.org> libquicktime-1.0.2.ebuild:
   amd64 stable, bug 212020
