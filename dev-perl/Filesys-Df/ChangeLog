@@ -1,0 +1,14 @@
+# ChangeLog for dev-perl/Filesys-Df
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-Df/ChangeLog,v 1.1 2008/03/20 15:29:15 jokey Exp $
+
+*Filesys-Df-0.92 (20 Mar 2008)
+
+  20 Mar 2008; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +Filesys-Df-0.92.ebuild:
+  Initial import as dep for mail-filter/MailScanner
+
+  31 Jan 2008; Markus Ullmann <jokey@gentoo.org> +metadata.xml
+  +Filesys-Df-0.92.ebuild:
+  Initial add as dep for MailScanner
+
