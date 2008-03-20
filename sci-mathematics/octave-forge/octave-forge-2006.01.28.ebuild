@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2006.01.28.ebuild,v 1.7 2007/07/22 07:00:50 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2006.01.28.ebuild,v 1.8 2008/03/20 17:32:36 markusle Exp $
 
 inherit eutils
 
@@ -33,10 +33,10 @@ src_compile() {
 
 	# patch Makefiles to avoid sandbox violations
 	sed -e "s|\$(MPATH)|${D}/\$(MPATH)|" \
-		-i ${S}/main/comm/Makefile \
-		-i ${S}/main/comm/doc/Makefile \
-		-i ${S}/main/fixed/Makefile \
-		-i ${S}/main/fixed/doc/Makefile \
+		-i "${S}"/main/comm/Makefile \
+		-i "${S}"/main/comm/doc/Makefile \
+		-i "${S}"/main/fixed/Makefile \
+		-i "${S}"/main/fixed/doc/Makefile \
 		|| die "failed to patch Makefiles"
 
 	emake || die "emake failed"

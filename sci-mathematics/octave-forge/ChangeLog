@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/octave-forge
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.25 2007/12/25 14:32:10 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.26 2008/03/20 17:32:36 markusle Exp $
+
+  20 Mar 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/octave-forge-2006.03.17-imagemagick.patch,
+  -octave-forge-2004.11.16-r2.ebuild, -octave-forge-2005.06.13-r1.ebuild,
+  octave-forge-2006.03.17.ebuild, octave-forge-2006.03.17-r1.ebuild:
+  Added patch to allow compilation against imagemagick-6.3.9* (see bug
+  #213980). Thanks much to Ed Catmur <ed@catmur.co.uk> for his patch.
+  Also removed old versions.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing metalgod from metadata.xml as per #99350.

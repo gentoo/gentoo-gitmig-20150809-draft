@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2006.03.17-r1.ebuild,v 1.4 2007/07/22 07:00:50 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2006.03.17-r1.ebuild,v 1.5 2008/03/20 17:32:36 markusle Exp $
 
 inherit eutils
 
@@ -33,6 +33,7 @@ src_unpack() {
 	cd "${S}"
 	unpack ${A}
 	epatch "${FILESDIR}"/${PN}-config-fix.patch
+	epatch "${FILESDIR}"/${P}-imagemagick.patch
 }
 
 src_compile() {
