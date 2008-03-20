@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xtrs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.22 2008/03/06 22:35:53 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.23 2008/03/20 21:26:31 ulm Exp $
+
+  20 Mar 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add longdescription to metadata.
 
 *xtrs-4.9c-r1 (06 Mar 2008)
 
