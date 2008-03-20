@@ -1,0 +1,9 @@
+# ChangeLog for sci-chemistry/gelemental
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/ChangeLog,v 1.1 2008/03/20 19:38:20 drac Exp $
+
+*gelemental-1.2.0 (20 Mar 2008)
+
+  20 Mar 2008; Samuli Suominen <drac@gentoo.org> +gelemental-1.2.0.ebuild:
+  Initial commit for bug 175014, thanks to Kristian Poul Herkild.
+
