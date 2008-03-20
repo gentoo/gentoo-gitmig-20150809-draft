@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.159 2008/03/19 04:44:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.160 2008/03/20 05:08:13 omp Exp $
+
+  20 Mar 2008; David Shakaryan <omp@gentoo.org> -openbox-3.4.4.ebuild,
+  -openbox-3.4.6.ebuild:
+  Remove older versions.
 
   19 Mar 2008; Jeroen Roovers <jer@gentoo.org> openbox-3.4.6.1.ebuild:
   Stable for HPPA (bug #213551).
