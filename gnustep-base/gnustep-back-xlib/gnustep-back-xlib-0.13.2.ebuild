@@ -1,25 +1,23 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.13.1.ebuild,v 1.2 2008/01/18 21:12:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/gnustep-back-xlib-0.13.2.ebuild,v 1.1 2008/03/20 17:37:08 voyageur Exp $
 
 inherit gnustep-base
 
 S=${WORKDIR}/gnustep-back-${PV}
 
-DESCRIPTION="Cairo back-end component for the GNUstep GUI Library."
+DESCRIPTION="Default X11 back-end component for the GNUstep GUI Library"
 
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-back-${PV}.tar.gz"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
-IUSE="opengl xim glitz"
+IUSE="opengl xim"
 DEPEND="${GNUSTEP_CORE_DEPEND}
-	dev-util/pkgconfig
 	~gnustep-base/gnustep-gui-${PV}
 	opengl? ( virtual/opengl virtual/glu )
-
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
@@ -29,23 +27,20 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	x11-libs/libXt
 	x11-libs/libXft
 	x11-libs/libXrender
-
+	dev-libs/expat
+	media-libs/fontconfig
 	>=media-libs/freetype-2.1.9
-	>=x11-libs/cairo-1.2.0
 	!gnustep-base/gnustep-back-art
-	!gnustep-base/gnustep-back-xlib"
+	!gnustep-base/gnustep-back-cairo"
 RDEPEND="${DEPEND}"
 
 src_compile() {
 	egnustep_env
 
 	use opengl && myconf="--enable-glx"
-	myconf="$myconf $(use_enable xim)"
+	myconf="$myconf `use_enable xim`"
 	myconf="$myconf --enable-server=x11"
-	myconf="$myconf --enable-graphics=cairo"
-	# Seems broken for now
-	#myconf="$myconf $(use_enable glitz)"
-
+	myconf="$myconf --enable-graphics=xlib"
 	econf $myconf || die "configure failed"
 
 	egnustep_make
