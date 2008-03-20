@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libopenraw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.16 2008/01/20 14:52:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.17 2008/03/20 14:18:10 drac Exp $
+
+*libopenraw-0.0.5 (20 Mar 2008)
+
+  20 Mar 2008; Samuli Suominen <drac@gentoo.org> +libopenraw-0.0.5.ebuild:
+  Version bump with test suite resctricted, because of f.d.o bug 13659.
 
 *libopenraw-0.0.4 (20 Jan 2008)
 
