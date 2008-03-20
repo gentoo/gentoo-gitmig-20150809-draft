@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.48 2008/03/12 19:01:18 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.49 2008/03/20 11:13:48 jokey Exp $
+
+*pkgcore-0.4.1 (20 Mar 2008)
+
+  20 Mar 2008; Markus Ullmann <jokey@gentoo.org> +pkgcore-0.4.1.ebuild:
+  Version bump
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Marien Zwart (marienz, #107204) from metadata.xml.
