@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.6_rc1-r1.ebuild,v 1.1 2008/02/18 19:28:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.6_rc1-r1.ebuild,v 1.2 2008/03/20 06:14:33 nerdboy Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -55,21 +55,29 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
-		"${S}"/Makefile.am "${S}"/docs/Makefile.am "${S}"/docs/html/Makefile.am \
-		"${S}"/docs/release-notes/Makefile.am
+	    "${S}"/Makefile.am "${S}"/docs/Makefile.am "${S}"/docs/html/Makefile.am \
+	    "${S}"/docs/release-notes/Makefile.am
 
 	eautoreconf
+	sed -i -e "s:-lMagick:-lMagickCore:g" "${S}"/configure
 }
 
 src_compile() {
 
 	strip-flags
+	local myconf
 
 	if use ppc || use ppc64 ; then
 		append-flags -U__ALTIVEC__
 	fi
 
 	append-flags -DDCT_YUV_PRECISION=1
+
+	if use imagemagick ; then
+	    append-ldflags -lMagickWand
+	    myconf="${myconf} --with-imagemagick-includes=/usr/include/ImageMagick \
+		--with-imagemagick-libs=/usr/$(get_libdir)"
+	fi
 
 	use xvid && myconf="${myconf} --with-default-xvid=xvid4"
 	# Follow upstreams suggestion about a52, libac3 is deprecated
