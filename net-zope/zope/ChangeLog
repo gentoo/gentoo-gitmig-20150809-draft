@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zope
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.131 2007/11/25 01:31:27 ranger Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.132 2008/03/20 21:42:09 tupone Exp $
+
+*zope-2.9.8 (20 Mar 2008)
+
+  20 Mar 2008; Tupone Alfredo <tupone@gentoo.org> +zope-2.9.8.ebuild:
+  Version bump to 2.9.8 Bug #211097 by me.
 
   25 Nov 2007; Brent Baude <ranger@gentoo.org> zope-3.3.1.ebuild:
   Marking zope-3.3.1 ppc for bug 199081
