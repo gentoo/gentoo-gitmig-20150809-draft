@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/gnome-mastermind-0.3.ebuild,v 1.4 2008/01/22 08:25:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/gnome-mastermind-0.3.ebuild,v 1.5 2008/03/20 00:00:22 nyhm Exp $
 
-inherit eutils games gnome2
+inherit eutils gnome2
 
 DESCRIPTION="A little Mastermind game for GNOME"
 HOMEPAGE="http://www5.autistici.org/gnome-mastermind/"
@@ -27,9 +27,11 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	app-text/scrollkeeper"
 
-DOC="AUTHORS ChangeLog NEWS TODO"
-
 src_unpack() {
 	gnome2_src_unpack
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+}
+
+src_install() {
+	DOCS="AUTHORS ChangeLog NEWS TODO" gnome2_src_install
 }
