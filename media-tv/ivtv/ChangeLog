@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.101 2008/01/29 14:56:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.102 2008/03/20 17:47:57 beandog Exp $
+
+  20 Mar 2008; Steve Dibb <beandog@gentoo.org> ivtv-1.0.3-r2.ebuild:
+  stabilize new versions for amd64,ppc,x86
 
   29 Jan 2008; Doug Klima <cardoe@gentoo.org> ivtv-1.0.3-r2.ebuild:
   allow 2.6.24 as per bug #207874
