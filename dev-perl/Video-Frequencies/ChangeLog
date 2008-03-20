@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Video-Frequencies
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Frequencies/ChangeLog,v 1.10 2007/03/18 23:26:42 kloeri Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Frequencies/ChangeLog,v 1.11 2008/03/20 17:44:30 beandog Exp $
+
+  20 Mar 2008; Steve Dibb <beandog@gentoo.org>
+  Video-Frequencies-0.03.ebuild:
+  x86 stable
 
   18 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove iggy from metadata.xml due to retirement.
