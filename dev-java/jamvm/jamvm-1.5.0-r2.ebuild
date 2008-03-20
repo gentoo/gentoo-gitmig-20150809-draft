@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.5.0-r2.ebuild,v 1.1 2008/03/04 22:46:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.5.0-r2.ebuild,v 1.2 2008/03/20 13:41:12 betelgeuse Exp $
 
 EAPI=1
 
@@ -25,7 +25,12 @@ pkg_setup() {
 		eerror "sys-devel/gcc not built with libffi support"
 		eerror "rebuild sys-devel/gcc with USE=\"libffi\" or"
 		eerror "turn off the libffi use flag on on ${PN}"
-		die "Rebuild sys-devel/gcc with libffi"
+		die "Rebuild sys-devel/gcc with libffi support"
+	fi
+	if use amd64 && ! built_with_use sys-devel/gcc libffi; then
+		eerror "sys-devel/gcc not built with libffi support"
+		eerror "rebuild sys-devel/gcc with USE=\"libffi\""
+		die "Rebuild sys-devel/gcc with libffi support"
 	fi
 	java-vm-2_pkg_setup
 }
@@ -49,15 +54,18 @@ CLASSPATH_DIR=/opt/gnu-classpath-${CLASSPATH_SLOT}
 src_compile() {
 	filter-flags "-fomit-frame-pointer"
 
+	local conf="--enable-ffi"
+	use !amd64 && conf="$(use_enable libffi ffi)"
+
 	# Keep libjvm.so out of /usr
 	# http://bugs.gentoo.org/show_bug.cgi?id=181896
-	econf \
+	econf ${conf} \
 		$(use_enable debug trace) \
-		$(use_enable libffi ffi) \
 		--prefix=/opt/${PN} \
 		--datadir=/opt/ \
 		--bindir=/usr/bin \
 		--with-classpath-install-dir=${CLASSPATH_DIR} \
+		$(use amd64 && echo --enable-ffi) \
 		|| die "configure failed."
 	emake || die "make failed."
 }
