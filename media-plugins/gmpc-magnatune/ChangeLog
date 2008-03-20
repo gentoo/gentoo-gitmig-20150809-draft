@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-magnatune
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/ChangeLog,v 1.13 2008/03/17 14:44:45 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/ChangeLog,v 1.14 2008/03/20 21:45:42 angelos Exp $
+
+  20 Mar 2008; Christoph Mende <angelos@gentoo.org>
+  -gmpc-magnatune-0.14.0.ebuild, -gmpc-magnatune-0.15.0.ebuild:
+  Remove old
 
   17 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
   gmpc-magnatune-0.15.5.0.ebuild:
