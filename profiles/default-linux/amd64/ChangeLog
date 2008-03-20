@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.135 2008/03/19 19:57:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.136 2008/03/20 13:35:48 betelgeuse Exp $
+
+  20 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
+  2007.0/package.use.mask, dev/2008.0/package.use.mask, package.use.mask:
+  package.use.mask libffi on amd64 as libffi is always required. See bug #213882.
 
   19 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   2006.1/no-multilib/package.mask, 2007.0/no-multilib/package.mask:
