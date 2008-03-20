@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.89 2008/03/17 20:45:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.90 2008/03/20 19:38:22 ranger Exp $
+
+  20 Mar 2008; Brent Baude <ranger@gentoo.org> inkscape-0.46-r1.ebuild:
+  keyworded ~arch for ppc64, bug 213611
 
   17 Mar 2008; Markus Meier <maekke@gentoo.org> inkscape-0.46-r1.ebuild:
   app-text/poppler-bindings needs to be built with cairo support in any way
