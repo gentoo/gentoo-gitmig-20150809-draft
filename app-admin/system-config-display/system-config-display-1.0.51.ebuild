@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-display/system-config-display-1.0.51.ebuild,v 1.3 2007/10/15 09:21:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-display/system-config-display-1.0.51.ebuild,v 1.4 2008/03/20 00:17:57 dberkholz Exp $
 
 inherit python rpm
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig/display"
 SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.fc${FCVER}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 RDEPEND="=dev-python/pygtk-2*
 	>=x11-libs/gtk+-2.6
