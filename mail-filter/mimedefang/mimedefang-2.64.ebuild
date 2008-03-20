@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/mimedefang-2.64.ebuild,v 1.1 2008/01/29 19:30:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/mimedefang-2.64.ebuild,v 1.2 2008/03/20 16:28:41 tove Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="clamav"
 
 RDEPEND="dev-perl/MIME-tools
 	virtual/perl-MIME-Base64
-	dev-perl/Digest-SHA
+	dev-perl/Digest-SHA1
 	clamav? ( app-antivirus/clamav )
 	!<mail-mta/postfix-2.4"
 DEPEND="${RDEPEND}
