@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8401 2008/03/19 21:23:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8402 2008/03/20 03:03:40 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ryan Hill <dirtyepic@gentoo.org> (19 Mar 2008)
+# Masked for testing.
+=media-libs/freetype-1.4*
 
 # Jeroen Roovers <jer@gentoo.org> (19 Mar 2008)
 # Deprecated in favour of net-firewall/conntrack-tools, which

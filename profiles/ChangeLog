@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1225 2008/03/19 20:10:31 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1226 2008/03/20 03:03:40 dirtyepic Exp $
+
+  20 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Mask new freetype-1 ebuild for testing.
 
   19 Mar 2008; Cédric Krier <cedk@gentoo.org> package.mask:
   Unmasking net-firewall/conntrack-tools-0.9.6
