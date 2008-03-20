@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4-r1.ebuild,v 1.1 2007/07/07 23:16:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.3.ebuild,v 1.1 2008/03/20 16:01:04 jokey Exp $
 
 inherit distutils
 
@@ -22,12 +22,6 @@ DOCS="NEWS AUTHORS"
 
 PYTHON_MODNAME=pkgcore_checks
 
-src_unpack() {
-	distutils_src_unpack
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-fix.patch"
-}
-
 src_test() {
 	"${python}" setup.py test || die "tests returned non zero"
 }
@@ -35,8 +29,6 @@ src_test() {
 pkg_postinst() {
 	einfo "updating pkgcore plugin cache"
 	pplugincache pkgcore_checks.plugins pkgcore.plugins
-	# This is left behind by pkgcore-checks 0.3.
-	rm -f "${ROOT}"usr/lib/python${PYVER}/site-packages/pkgcore_checks/plugins/plugincache
 	distutils_pkg_postinst
 }
 

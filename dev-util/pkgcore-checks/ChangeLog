@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.33 2008/03/12 18:57:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.34 2008/03/20 16:01:04 jokey Exp $
+
+*pkgcore-checks-0.4.3 (20 Mar 2008)
+
+  20 Mar 2008; Markus Ullmann <jokey@gentoo.org>
+  -files/pkgcore-checks-0.4-fix.patch, -pkgcore-checks-0.4-r1.ebuild,
+  +pkgcore-checks-0.4.3.ebuild:
+  Version bump
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Marien Zwart (marienz, #107204) from metadata.xml.
