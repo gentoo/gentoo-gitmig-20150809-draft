@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kanagram
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.58 2008/03/10 23:21:40 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.59 2008/03/20 16:22:26 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kanagram-4.0.1.ebuild:
+  Old.
 
 *kanagram-4.0.2 (10 Mar 2008)
 

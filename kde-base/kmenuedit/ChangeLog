@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmenuedit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.78 2008/03/10 23:43:46 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.79 2008/03/20 17:16:13 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kmenuedit-4.0.1.ebuild:
+  Old.
 
 *kmenuedit-4.0.2 (10 Mar 2008)
 

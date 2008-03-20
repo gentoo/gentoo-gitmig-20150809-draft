@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmplot/ChangeLog,v 1.84 2008/03/10 23:45:20 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmplot/ChangeLog,v 1.85 2008/03/20 17:20:10 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kmplot-4.0.1.ebuild:
+  Old.
 
 *kmplot-4.0.2 (10 Mar 2008)
 

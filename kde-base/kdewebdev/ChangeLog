@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.154 2008/03/11 00:05:59 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.155 2008/03/20 16:56:15 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kdewebdev-4.0.1.ebuild:
+  Old.
 
 *kdewebdev-4.0.1 (10 Mar 2008)
 

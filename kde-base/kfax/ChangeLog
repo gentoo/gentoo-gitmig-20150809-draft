@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfax
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfax/ChangeLog,v 1.80 2008/03/11 00:03:32 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfax/ChangeLog,v 1.81 2008/03/20 16:59:55 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kfax-4.0.1.ebuild:
+  Old.
 
 *kfax-4.0.1 (10 Mar 2008)
 

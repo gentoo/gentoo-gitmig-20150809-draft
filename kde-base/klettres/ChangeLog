@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klettres
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klettres/ChangeLog,v 1.84 2008/03/10 23:42:33 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klettres/ChangeLog,v 1.85 2008/03/20 17:12:53 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -klettres-4.0.1.ebuild:
+  Old.
 
 *klettres-4.0.2 (10 Mar 2008)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdnssd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.82 2008/03/10 23:37:28 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.83 2008/03/20 16:58:45 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kdnssd-4.0.1.ebuild:
+  Old.
 
 *kdnssd-4.0.2 (10 Mar 2008)
 

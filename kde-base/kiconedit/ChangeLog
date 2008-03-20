@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kiconedit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiconedit/ChangeLog,v 1.78 2008/03/11 00:06:22 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiconedit/ChangeLog,v 1.79 2008/03/20 17:08:08 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kiconedit-4.0.1.ebuild:
+  Old.
 
 *kiconedit-4.0.1 (10 Mar 2008)
 

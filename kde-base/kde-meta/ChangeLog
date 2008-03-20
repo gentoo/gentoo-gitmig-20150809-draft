@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.94 2008/03/11 15:20:39 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.95 2008/03/20 16:47:49 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kde-meta-4.0.1.ebuild:
+  Old.
 
   11 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> kde-meta-4.0.2.ebuild:
   Make kde-meta-4.0.2.ebuild pull in kate, since it doesn't pull in kdesdk.
