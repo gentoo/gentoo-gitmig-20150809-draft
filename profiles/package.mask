@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8404 2008/03/20 12:39:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8405 2008/03/20 19:59:05 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (20 Mar 2008)
+# Masked for removal - Unfetchable and service down
+# bug #213349
+mail-client/ciphire-mail
 
 # Colin Morey <peitolm@gentoo.org> (20 Mar 2008)
 # Masked for testing, closing lots of little bugs
