@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.4.4.ebuild,v 1.3 2008/03/20 18:57:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.4.4.ebuild,v 1.4 2008/03/20 19:59:38 vapier Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://kernel/software/scm/git/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="curl cgi doc emacs gtk iconv mozsha1 perl ppcsha1 tk threads webdav"
+IUSE="curl cgi doc emacs gtk iconv mozsha1 perl ppcsha1 tk threads webdav xinetd"
 
 DEPEND="
 	!app-misc/git
@@ -167,8 +167,10 @@ src_install() {
 		newdoc  "${S}"/gitweb/README README.gitweb
 	fi
 
-	insinto /etc/xinetd.d
-	newins "${FILESDIR}"/git-daemon.xinetd git-daemon
+	if use xinetd ; then
+		insinto /etc/xinetd.d
+		newins "${FILESDIR}"/git-daemon.xinetd git-daemon
+	fi
 
 	newinitd "${FILESDIR}"/git-daemon.initd git-daemon
 	newconfd "${FILESDIR}"/git-daemon.confd git-daemon
