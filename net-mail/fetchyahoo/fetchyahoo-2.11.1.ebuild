@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/fetchyahoo-2.11.1.ebuild,v 1.1 2007/09/02 22:19:52 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/fetchyahoo-2.11.1.ebuild,v 1.2 2008/03/20 04:07:22 jer Exp $
 
 IUSE=""
 DESCRIPTION="Perl script that downloads mail from a Yahoo! webmail account to a local mail spool, an mbox file, or to procmail."
 SRC_URI="http://fetchyahoo.twizzler.org/${P}.tar.gz"
 HOMEPAGE="http://fetchyahoo.twizzler.org/"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
 SLOT="0"
 
