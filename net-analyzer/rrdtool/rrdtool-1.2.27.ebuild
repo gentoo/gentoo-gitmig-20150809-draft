@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.27.ebuild,v 1.1 2008/02/20 10:05:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.27.ebuild,v 1.2 2008/03/20 19:10:26 ranger Exp $
 
 inherit autotools eutils flag-o-matic multilib perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://oss.oetiker.ch/rrdtool/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="doc perl python ruby rrdcgi tcl"
 
 RDEPEND="tcl? ( dev-lang/tcl )
