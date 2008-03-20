@@ -4,8 +4,8 @@
 <pkgmetadata>
   <herd>kernel</herd>
   <maintainer>
-    <email>gregkh@gentoo.org</email>
-    <name>Greg Kroah-Hartman</name>
+    <email>mpagano@gentoo.org</email>
+    <name>Mike Pagano</name>
     <description>Actively maintained</description>
   </maintainer>
   <longdescription>
