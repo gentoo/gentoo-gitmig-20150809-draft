@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-wmdock
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock/ChangeLog,v 1.4 2008/02/26 12:23:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock/ChangeLog,v 1.5 2008/03/20 21:25:11 drac Exp $
+
+  20 Mar 2008; Samuli Suominen <drac@gentoo.org> -xfce4-wmdock-0.1.8.ebuild,
+  xfce4-wmdock-0.2.0.ebuild:
+  amd64 stable
 
   26 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   xfce4-wmdock-0.2.0.ebuild:
