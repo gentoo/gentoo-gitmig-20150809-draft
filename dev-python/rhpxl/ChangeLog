@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/rhpxl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpxl/ChangeLog,v 1.5 2008/01/31 06:24:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpxl/ChangeLog,v 1.6 2008/03/20 00:17:09 dberkholz Exp $
+
+*rhpxl-0.51 (20 Mar 2008)
+
+  20 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/rhpxl-0.51-serverflags.patch, +rhpxl-0.51.ebuild:
+  Bump, keyword ~amd64.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>; -rhpxl-0.32.ebuild:
   Clean up.
