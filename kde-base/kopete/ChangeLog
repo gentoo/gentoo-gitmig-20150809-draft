@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.142 2008/03/11 00:10:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.143 2008/03/20 17:45:25 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kopete-4.0.1.ebuild:
+  Old.
 
   11 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> kopete-4.0.2.ebuild:
   Post-bump fix kindly provided by jmbsvicetto to fix bug 206877.

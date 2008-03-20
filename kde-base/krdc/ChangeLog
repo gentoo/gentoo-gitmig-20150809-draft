@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krdc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.88 2008/03/10 23:49:50 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.89 2008/03/20 17:48:40 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -krdc-4.0.1.ebuild:
+  Old.
 
 *krdc-4.0.2 (10 Mar 2008)
 

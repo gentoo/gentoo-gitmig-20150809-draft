@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkscan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.80 2008/03/11 00:01:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.81 2008/03/20 18:17:53 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -libkscan-4.0.1.ebuild:
+  Old.
 
 *libkscan-4.0.2 (10 Mar 2008)
 

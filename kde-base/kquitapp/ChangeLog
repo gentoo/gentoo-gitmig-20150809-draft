@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kquitapp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kquitapp/ChangeLog,v 1.4 2008/03/10 23:49:35 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kquitapp/ChangeLog,v 1.5 2008/03/20 17:48:09 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kquitapp-4.0.1.ebuild:
+  Old.
 
 *kquitapp-4.0.2 (10 Mar 2008)
 

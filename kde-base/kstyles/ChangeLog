@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstyles
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstyles/ChangeLog,v 1.4 2008/03/10 23:54:06 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstyles/ChangeLog,v 1.5 2008/03/20 17:59:24 ingmar Exp $
+
+  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kstyles-4.0.1.ebuild:
+  Old.
 
 *kstyles-4.0.2 (10 Mar 2008)
 
