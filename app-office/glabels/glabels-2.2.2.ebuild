@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.2.2.ebuild,v 1.1 2008/02/25 19:18:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.2.2.ebuild,v 1.2 2008/03/20 20:12:24 eva Exp $
 
 inherit eutils gnome2 autotools
 
@@ -45,6 +45,7 @@ src_unpack() {
 	use doc || epatch "${FILESDIR}/${PN}-2.2.1-drop-gtk-doc.patch"
 
 	eautoreconf
+	intltoolize --force || die "intltoolize failed"
 }
 
 pkg_postinst() {

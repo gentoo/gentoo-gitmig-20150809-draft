@@ -1,6 +1,9 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.29 2008/02/25 19:18:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.30 2008/03/20 20:12:24 eva Exp $
+
+  20 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> glabels-2.2.2.ebuild:
+  add inltoolize call, fix bug #213999
 
 *glabels-2.2.2 (25 Feb 2008)
 
@@ -20,7 +23,6 @@
 
 *glabels-2.2.0 (31 Dec 2007)
 
-  31 Dec 2007; Gilles Dartiguelongue <eva@gentoo.org> +glabels-2.2.0.ebuild:
   bump to 2.2.0
 
   04 Feb 2007; Steve Dibb <beandog@gentoo.org> glabels-2.0.4.ebuild:
