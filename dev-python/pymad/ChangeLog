@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pymad
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.22 2007/07/03 12:27:12 lucass Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.23 2008/03/21 19:17:38 hawking Exp $
+
+  21 Mar 2008; Ali Polatel <hawking@gentoo.org> pymad-0.5.4.ebuild,
+  pymad-0.6.ebuild:
+  Changed madplay dependency to libmad, bug 213331 thanks to Michael
+  Polskienazwisko
 
 *pymad-0.6 (03 Jul 2007)
 
