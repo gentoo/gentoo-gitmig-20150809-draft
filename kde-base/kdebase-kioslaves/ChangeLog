@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.114 2008/03/20 16:41:20 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.115 2008/03/21 13:11:45 genstef Exp $
+
+  21 Mar 2008; Stefan Schweizer <genstef@gentoo.org>
+  kdebase-kioslaves-3.5.9.ebuild:
+  Add media umount on suspend patch thanks to Andreas K. Huettel
+  <mail@akhuettel.de> in bug 213907
 
   20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -kdebase-kioslaves-4.0.1.ebuild:

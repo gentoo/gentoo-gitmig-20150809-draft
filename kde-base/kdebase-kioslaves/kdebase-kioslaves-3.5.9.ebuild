@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.9.ebuild,v 1.2 2008/03/04 02:36:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.9.ebuild,v 1.3 2008/03/21 13:11:45 genstef Exp $
 
 KMNAME=kdebase
 KMMODULE=kioslave
@@ -8,7 +8,7 @@ EAPI="1"
 inherit kde-meta eutils
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/kdebase-3.5-patchset-06.tar.bz2"
+	mirror://gentoo/kdebase-3.5-patchset-11.tar.bz2"
 
 DESCRIPTION="kioslave: the kde VFS framework - kioslave plugins present a filesystem-like view of arbitrary data"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
