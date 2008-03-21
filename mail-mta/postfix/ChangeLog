@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.155 2008/03/17 18:43:21 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.156 2008/03/21 14:41:44 falco Exp $
+
+  21 Mar 2008; Raphael Marichez <falco@gentoo.org> postfix-2.4.5.ebuild,
+  postfix-2.4.6-r2.ebuild:
+  QA: remove bindnow-flags, bug #210599; fix repoman warns (LICENSE, copyright)
 
 *postfix-2.5.1 (17 Mar 2008)
 *postfix-2.5.0 (17 Mar 2008)

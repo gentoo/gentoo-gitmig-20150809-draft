@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.4.6-r2.ebuild,v 1.8 2008/03/16 04:36:15 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.4.6-r2.ebuild,v 1.9 2008/03/21 14:41:44 falco Exp $
 
 # NOTE: this ebuild is a regular ebuild without mailer-config support!
 # Comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -167,11 +167,13 @@ src_unpack() {
 }
 
 src_compile() {
-	# Added -Wl,-z,now wrt bug #62674
-	# Remove -ldl as it is not necessary, solves bug #106446
-	# -Wl,-z,now replaced by $(bindnow-flags)
-	# make sure LDFLAGS get passed down to the executables.
-	local mycc="-DHAS_PCRE" mylibs="$(bindnow-flags) ${LDFLAGS} -lpcre -lcrypt -lpthread"
+	# 1) Added -Wl,-z,now wrt bug #62674
+	# 2) Remove -ldl as it is not necessary, solves bug #106446
+	# 3) -Wl,-z,now replaced by $(bindnow-flags)
+	# 4) Then bindnow-flags has been simply dropped according to
+	# http://www.mail-archive.com/gentoo-dev@lists.gentoo.org/msg23679.html
+	# 5) Make sure LDFLAGS get passed down to the executables.
+	local mycc="-DHAS_PCRE" mylibs="${LDFLAGS} -lpcre -lcrypt -lpthread"
 
 	use pam && mylibs="${mylibs} -lpam"
 
