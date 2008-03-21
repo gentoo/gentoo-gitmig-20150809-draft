@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.60 2008/03/21 10:29:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.61 2008/03/21 14:19:04 ranger Exp $
+
+  21 Mar 2008; Brent Baude <ranger@gentoo.org> nagios-2.11.ebuild:
+  Marking nagios-2.11 ppc64 for bug 213766
 
   21 Mar 2008; Markus Meier <maekke@gentoo.org> nagios-2.11.ebuild:
   amd64/x86 stable, security bug #213766
