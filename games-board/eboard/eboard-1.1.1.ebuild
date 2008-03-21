@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.1.1.ebuild,v 1.1 2008/02/24 05:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.1.1.ebuild,v 1.2 2008/03/21 16:32:46 mr_bones_ Exp $
 
 inherit eutils games
 
 EXTRAS1="eboard-extras-1pl2"
 EXTRAS2="eboard-extras-2"
 DESCRIPTION="chess interface for POSIX systems"
-HOMEPAGE="http://eboard.sourceforge.net/"
+HOMEPAGE="http://www.bergo.eng.br/eboard/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	mirror://sourceforge/${PN}/${EXTRAS1}.tar.gz
 	mirror://sourceforge/${PN}/${EXTRAS2}.tar.gz"
