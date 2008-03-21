@@ -1,9 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.115 2008/03/20 18:11:01 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.116 2008/03/21 15:54:00 ingmar Exp $
 
-  20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kwin-4.0.1.ebuild:
-  Old.
+  21 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kwin-4.0.1.ebuild:
+  Really remove 4.0.1 ebuild, fix ChangeLog.
 
   20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org> -kwin-4.0.1.ebuild:
   Old.
