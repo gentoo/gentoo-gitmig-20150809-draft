@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.4.ebuild,v 1.2 2008/01/02 14:59:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.4.ebuild,v 1.3 2008/03/21 15:54:42 fmccor Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -10,7 +10,7 @@ MY_P=gutenprint-${PV/_/-}
 
 DESCRIPTION="Gimp Print Drivers"
 HOMEPAGE="http://gimp-print.sourceforge.net"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc ~x86"
 SRC_URI="mirror://sourceforge/gimp-print/${MY_P}.tar.bz2"
 RESTRICT="test"
 
