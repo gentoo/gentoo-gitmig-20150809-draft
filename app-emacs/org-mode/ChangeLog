@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.26 2008/03/21 09:09:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.27 2008/03/21 13:32:56 fmccor Exp $
+
+  21 Mar 2008; Ferris McCormick <fmccor@gentoo.org> org-mode-5.22a.ebuild:
+  Sparc stable, Bug #213910.
 
   21 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
   org-mode-5.22a.ebuild:
