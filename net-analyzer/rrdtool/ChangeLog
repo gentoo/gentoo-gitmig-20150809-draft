@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.136 2008/03/21 11:49:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.137 2008/03/21 14:54:58 maekke Exp $
+
+  21 Mar 2008; Markus Meier <maekke@gentoo.org> rrdtool-1.2.27.ebuild:
+  x86 stable, bug #214051
 
   21 Mar 2008; Tobias Klausmann <klausman@gentoo.org> rrdtool-1.2.27.ebuild:
   Stable on alpha, bug #214051
