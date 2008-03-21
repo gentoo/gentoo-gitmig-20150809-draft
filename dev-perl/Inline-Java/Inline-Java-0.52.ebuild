@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Java/Inline-Java-0.52.ebuild,v 1.6 2008/03/21 22:37:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Java/Inline-Java-0.52.ebuild,v 1.7 2008/03/21 23:03:07 mr_bones_ Exp $
 
 inherit java-pkg-2 perl-module
 
@@ -20,7 +20,6 @@ DEPEND=">=dev-perl/Inline-0.44
 	>=virtual/perl-Test-1.13
 	>=virtual/jdk-1.4
 	dev-lang/perl"
-
 
 pkg_setup() {
 	java-pkg-2_pkg_setup
