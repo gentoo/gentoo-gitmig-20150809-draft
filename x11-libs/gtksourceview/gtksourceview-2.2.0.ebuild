@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.2.0.ebuild,v 1.1 2008/03/10 19:55:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.2.0.ebuild,v 1.2 2008/03/21 16:57:57 leio Exp $
 
 inherit gnome2 eutils
 
@@ -12,10 +12,12 @@ SLOT="2.0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
+# glib-2.14 dep is to be sure GRegex exists, so that gtksourceview does not
+# build a copy of it. However gtk+-2.12 already can't work with lower version
+# than that
 RDEPEND=">=x11-libs/gtk+-2.12
 	>=dev-libs/libxml2-2.5
-	>=dev-libs/glib-2
-	>=dev-libs/libpcre-7.4"
+	>=dev-libs/glib-2.14"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
@@ -26,7 +28,7 @@ DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README TODO"
 
 pkg_setup() {
 	# Removes the gnome-vfs dep
-	G2CONF="${G2CONF} --disable-build-tests --with-system-pcre"
+	G2CONF="${G2CONF} --disable-build-tests"
 }
 
 src_install() {

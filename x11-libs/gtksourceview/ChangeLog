@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.128 2008/03/10 19:55:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.129 2008/03/21 16:57:57 leio Exp $
+
+  21 Mar 2008; Mart Raudsepp <leio@gentoo.org> gtksourceview-2.2.0.ebuild:
+  Fix up regex dependency handling - system pcre is never needed with the glib
+  version we indirectly depend on, and glib provided GRegex is used instead.
+  No real change other than the unnecessary libpcre dependency is now removed.
 
 *gtksourceview-2.2.0 (10 Mar 2008)
 
