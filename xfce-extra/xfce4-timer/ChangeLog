@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-timer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer/ChangeLog,v 1.13 2008/03/21 13:19:43 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer/ChangeLog,v 1.14 2008/03/21 15:29:50 klausman Exp $
+
+  21 Mar 2008; Tobias Klausmann <klausman@gentoo.org>
+  xfce4-timer-0.6.ebuild:
+  Stable on alpha, bug #214130
 
   21 Mar 2008; Dawid Węgliński <cla@gentoo.org> xfce4-timer-0.6.ebuild:
   Stable on x86 (bug #214130)
