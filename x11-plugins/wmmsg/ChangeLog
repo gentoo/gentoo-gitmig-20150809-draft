@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmsg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.13 2008/03/12 15:56:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.14 2008/03/21 14:14:09 drac Exp $
+
+  21 Mar 2008; Samuli Suominen <drac@gentoo.org> wmmsg-1.0.1.ebuild:
+  amd64 stable
 
 *wmmsg-1.0.1 (12 Mar 2008)
 
