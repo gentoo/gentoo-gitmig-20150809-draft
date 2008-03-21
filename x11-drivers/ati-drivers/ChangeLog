@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.114 2008/03/13 13:28:27 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.115 2008/03/21 15:08:23 drac Exp $
+
+  21 Mar 2008; Samuli Suominen <drac@gentoo.org> ati-drivers-8.471.3.ebuild:
+  amd64 stable, tested with current stable gentoo-sources-2.6.24-r3 and HD2600
+  PRO which didn't have any drivers in stable before this.
 
 *ati-drivers-8.471.3 (13 Mar 2008)
 
