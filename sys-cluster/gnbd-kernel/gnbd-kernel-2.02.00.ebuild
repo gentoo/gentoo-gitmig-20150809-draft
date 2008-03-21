@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-2.02.00.ebuild,v 1.1 2008/03/17 17:05:35 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-2.02.00.ebuild,v 1.2 2008/03/21 01:52:13 xmerlin Exp $
 
 inherit eutils linux-mod linux-info versionator
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="=virtual/linux-sources-2.6.23*"
+DEPEND=">=virtual/linux-sources-2.6.20"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}/${PN}"
@@ -35,7 +35,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-#	epatch "${FILESDIR}"/${P}-to-cvs-20080217.patch || die
+	if kernel_is 2 6; then
+		if [ "$KV_PATCH" -lt "24" ] ; then
+			epatch "${FILESDIR}"/${P}-compile-fix-kernel-pre-2.6.24.diff || die
+		fi
+	fi
 }
 
 src_compile() {
@@ -52,7 +56,7 @@ src_compile() {
 	) || die "configure problem"
 
 	(cd "${S}"/src;
-		emake \
+		emake clean all \
 	) || die "compile problem"
 }
 
