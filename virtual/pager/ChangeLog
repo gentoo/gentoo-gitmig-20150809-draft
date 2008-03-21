@@ -1,0 +1,10 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/pager/ChangeLog,v 1.1 2008/03/21 11:16:02 opfer Exp $
+
+*pager-0 (21 Mar 2008)
+
+  21 Mar 2008; Christian Faulhammer <opfer@gentoo.org> +metadata.xml,
+  +pager-0.ebuild:
+  initial import
+
