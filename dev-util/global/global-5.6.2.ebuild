@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.6.2.ebuild,v 1.2 2008/01/08 04:13:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.6.2.ebuild,v 1.3 2008/03/21 17:28:05 dev-zero Exp $
 
 inherit elisp-common
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc vim emacs"
 
 RDEPEND="virtual/libc
-	vim? ( app-editors/vim )
+	vim? ( || ( app-editors/vim app-editors/gvim ) )
 	emacs? ( virtual/emacs )"
 DEPEND="${DEPEND}
 	doc? ( sys-apps/texinfo )"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.25 2008/01/08 02:03:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.26 2008/03/21 17:28:05 dev-zero Exp $
+
+  21 Mar 2008; Tiziano Müller <dev-zero@gentoo.org> global-5.6.2.ebuild:
+  Changed dependency to allow gvim as vim-dependency.
 
 *global-5.6.2 (08 Jan 2008)
 
