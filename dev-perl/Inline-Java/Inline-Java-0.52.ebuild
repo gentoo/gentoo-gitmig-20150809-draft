@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Java/Inline-Java-0.52.ebuild,v 1.5 2007/12/27 14:12:36 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Java/Inline-Java-0.52.ebuild,v 1.6 2008/03/21 22:37:27 betelgeuse Exp $
 
-inherit perl-module java-pkg-2
+inherit java-pkg-2 perl-module
 
 DESCRIPTION="Easy implimentaiton of Java extensions"
 HOMEPAGE="http://search.cpan.org/~patl/"
@@ -21,15 +21,10 @@ DEPEND=">=dev-perl/Inline-0.44
 	>=virtual/jdk-1.4
 	dev-lang/perl"
 
-myconf="J2SDK=$JAVA_HOME"
-mymake="java all"
 
 pkg_setup() {
 	java-pkg-2_pkg_setup
+	myconf="J2SDK=$JAVA_HOME"
+	mymake="java all"
 	perl-module_pkg_setup
-}
-
-src_compile() {
-	java-pkg-2_src_compile
-	perl-module_src_compile
 }
