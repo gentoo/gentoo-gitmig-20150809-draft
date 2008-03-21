@@ -1,0 +1,10 @@
+diff -uNr linux-2.6.23-gentoo-r8.orig/fs/gfs2/locking.c linux-2.6.23-gentoo-r8/fs/gfs2/locking.c
+--- linux-2.6.23-gentoo-r8.orig/fs/gfs2/locking.c	2007-10-09 22:31:38.000000000 +0200
++++ linux-2.6.23-gentoo-r8/fs/gfs2/locking.c	2008-02-17 17:26:23.000000000 +0100
+@@ -182,3 +182,6 @@
+ EXPORT_SYMBOL_GPL(gfs2_register_lockproto);
+ EXPORT_SYMBOL_GPL(gfs2_unregister_lockproto);
+ 
++EXPORT_SYMBOL_GPL(gfs2_withdraw_lockproto);
++EXPORT_SYMBOL_GPL(gfs2_mount_lockproto);
++EXPORT_SYMBOL_GPL(gfs2_unmount_lockproto);
