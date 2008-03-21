@@ -1,6 +1,12 @@
 # ChangeLog for net-im/ekiga
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ChangeLog,v 1.51 2007/11/21 07:02:19 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ChangeLog,v 1.52 2008/03/21 00:08:50 eva Exp $
+
+*ekiga-2.0.12 (20 Mar 2008)
+
+  20 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/ekiga-2.0.12-gdu.patch, +ekiga-2.0.12.ebuild:
+  bump to 2.0.12, cleanup dependencies
 
   21 Nov 2007; Michael Sterrett <mr_bones_@gentoo.org> -ekiga-2.0.7.ebuild,
   -ekiga-2.0.9.ebuild:
