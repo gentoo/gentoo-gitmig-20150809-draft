@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.18 2008/03/11 21:29:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.19 2008/03/21 09:43:54 genstef Exp $
+
+  21 Mar 2008; Stefan Schweizer <genstef@gentoo.org>
+  -files/kexec-tools-9999-LDFLAGS.patch, files/kexec.init,
+  kexec-tools-9999.ebuild:
+  remove failing patch thanks to pioto in bug 213426 and fix init script for
+  openrc, bug 214018
 
   11 Mar 2008; Stefan Schweizer <genstef@gentoo.org>
   +files/kexec-tools-1.101-respect-LDFLAGS.patch,

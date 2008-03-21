@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-9999.ebuild,v 1.1 2007/03/06 18:13:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-9999.ebuild,v 1.2 2008/03/21 09:43:54 genstef Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/horms/kexec-tools-testing.git"
 inherit git autotools
@@ -19,7 +19,6 @@ DEPEND="zlib? ( sys-libs/zlib )"
 src_unpack() {
 	git_src_unpack
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-LDFLAGS.patch
 	eautoreconf
 }
 
