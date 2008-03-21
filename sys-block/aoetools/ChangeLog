@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/aoetools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.23 2008/02/22 18:57:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.24 2008/03/21 18:32:41 caleb Exp $
+
+  21 Mar 2008; Caleb Tennis <caleb@gentoo.org> aoetools-24.ebuild:
+  amd64 stable
 
   22 Feb 2008; Caleb Tennis <caleb@gentoo.org> -aoetools-9.ebuild,
   -aoetools-10.ebuild, -aoetools-22.ebuild, -aoetools-23.ebuild:

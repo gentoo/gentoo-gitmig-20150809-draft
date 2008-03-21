@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/aoetools-12.ebuild,v 1.5 2007/12/16 17:06:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/aoetools-12.ebuild,v 1.6 2008/03/21 18:32:41 caleb Exp $
 
 DESCRIPTION="aoetools are programs for users of the ATA over Ethernet (AoE) network storage protocol"
 HOMEPAGE="http://sf.net/projects/aoetools/"
@@ -15,7 +15,7 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# messy tarball
 	make clean  || die "Failed to clean up source"
 	sed -i \
