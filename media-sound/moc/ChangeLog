@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.49 2008/03/09 14:36:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.50 2008/03/21 09:08:47 drac Exp $
+
+  21 Mar 2008; Samuli Suominen <drac@gentoo.org> -moc-2.5.0_alpha3.ebuild,
+  moc-2.5.0_alpha3-r1.ebuild:
+  amd64 stable
 
   09 Mar 2008; Alexis Ballier <aballier@gentoo.org>
   moc-2.5.0_alpha3-r1.ebuild:
