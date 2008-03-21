@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8406 2008/03/21 06:53:42 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8407 2008/03/21 10:27:24 nyhm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tristan Heaven <nyhm@gentoo.org> (21 Mar 2008)
+# Needs testing
+>=games-strategy/warzone2100-2.1_beta2
 
 # Rémi Cardona <remi@gentoo.org> (21 Mar 2008)
 # Masked for testing (2.3 Release Candidates)
