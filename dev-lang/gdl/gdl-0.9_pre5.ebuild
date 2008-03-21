@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_pre5.ebuild,v 1.1 2007/08/21 08:58:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_pre5.ebuild,v 1.2 2008/03/21 20:43:56 markusle Exp $
 
 inherit eutils flag-o-matic
 
@@ -54,7 +54,7 @@ src_compile() {
 }
 
 src_test() {
-	cd ${S}/testsuite
+	cd "${S}"/testsuite
 	PATH=${S}/src gdl <<EOF
 test_suite
 EOF
