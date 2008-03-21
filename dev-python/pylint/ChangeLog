@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pylint
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.42 2007/07/11 14:58:46 pythonhead Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.43 2008/03/21 06:40:23 hawking Exp $
+
+*pylint-0.14.0 (21 Mar 2008)
+
+  21 Mar 2008; Ali Polatel <hawking@gentoo.org>
+  +files/pylint-0.14.0-tests-reset_cache.patch,
+  +files/pylint-0.14.0-tests-typo.patch, metadata.xml,
+  +pylint-0.14.0.ebuild:
+  Version bump. Added longdescription. Added myself as maintainer.
 
   11 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> pylint-0.13.1.ebuild:
   Removed test dep for egenix as its only needed for logilab-common
