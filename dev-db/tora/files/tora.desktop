@@ -10,5 +10,5 @@ Icon=tora.png
 StartupNotify=true
 Terminal=false
 Type=Application
-MimeType=text/x-sql
+MimeType=text/x-sql;
 Categories=Application;Development;
