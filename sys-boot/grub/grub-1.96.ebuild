@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.96.ebuild,v 1.1 2008/02/16 22:05:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.96.ebuild,v 1.2 2008/03/21 22:02:05 genstef Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -27,7 +27,7 @@ src_compile() {
 		--prefix=/ \
 		--datadir=/usr/lib \
 		|| die "econf failed"
-	emake || die "making regular stuff"
+	emake -j1 || die "making regular stuff"
 }
 
 src_install() {
