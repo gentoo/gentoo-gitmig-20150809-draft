@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.9-r1.ebuild,v 1.1 2008/03/10 06:17:56 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.9-r1.ebuild,v 1.2 2008/03/21 12:50:02 genstef Exp $
 
 EAPI="1"
 inherit multilib kde-dist eutils flag-o-matic
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/kdebase-3.5-patchset-10.tar.bz2"
+	mirror://gentoo/kdebase-3.5-patchset-11.tar.bz2"
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
