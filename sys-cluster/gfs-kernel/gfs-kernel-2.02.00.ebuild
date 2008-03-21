@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-2.02.00.ebuild,v 1.1 2008/03/17 17:23:01 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-2.02.00.ebuild,v 1.2 2008/03/21 02:21:04 xmerlin Exp $
 
 inherit eutils linux-mod linux-info versionator
 
@@ -30,6 +30,20 @@ pkg_setup() {
 	case ${KV_FULL} in
 		2.2.*|2.4.*) die "${P} supports only 2.6 kernels";;
 	esac
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	if kernel_is 2 6; then
+		if [ "$KV_PATCH" -lt "24" ] ; then
+			epatch "${FILESDIR}"/${P}-before-2.6.24.diff || die
+		fi
+		if [ "$KV_PATCH" -lt "23" ] ; then
+			epatch "${FILESDIR}"/${P}-before-2.6.23.diff || die
+		fi
+	fi
 }
 
 src_compile() {
