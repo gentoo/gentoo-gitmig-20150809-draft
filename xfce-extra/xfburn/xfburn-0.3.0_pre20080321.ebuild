@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfburn/xfburn-0.3.0_pre20080321.ebuild,v 1.1 2008/03/21 07:36:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfburn/xfburn-0.3.0_pre20080321.ebuild,v 1.2 2008/03/21 15:36:00 mr_bones_ Exp $
 
 inherit xfce44
 
@@ -25,6 +25,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
-	XFCE_CONFIG+=" $(use_enable !minimal thunar-vfs) 
+	XFCE_CONFIG+=" $(use_enable !minimal thunar-vfs)
 		--disable-dependency-tracking"
 }
