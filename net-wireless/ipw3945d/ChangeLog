@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ipw3945d
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ChangeLog,v 1.21 2007/11/05 21:15:00 lack Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ChangeLog,v 1.22 2008/03/21 12:52:20 lack Exp $
+
+*ipw3945d-1.7.22-r6 (21 Mar 2008)
+
+  21 Mar 2008; Jim Ramsay <lack@gentoo.org> +ipw3945d-1.7.22-r6.ebuild:
+  Bug 214026: Moved modprobe file from /etc/modules.d/ to /etc/modprobe.d/
 
   05 Nov 2007; Jim Ramsay <lack@gentoo.org> metadata.xml:
   Changing maintainers to myself, dang, and jkt
