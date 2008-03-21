@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.6.3-r1.ebuild,v 1.1 2008/03/21 08:59:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.6.4.ebuild,v 1.1 2008/03/21 11:02:13 opfer Exp $
 
 inherit distutils eutils
 
@@ -25,13 +25,6 @@ pkg_setup() {
 	   eerror
 	   die "dev-lang/python must have ncurses use turned on"
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	# Bug 214063
-	epatch "${FILESDIR}/${P}-addstr.patch"
 }
 
 src_compile() {
