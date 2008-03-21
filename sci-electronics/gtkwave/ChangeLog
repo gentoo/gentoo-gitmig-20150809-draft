@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.43 2008/03/14 16:16:50 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.44 2008/03/21 08:53:11 calchan Exp $
+
+  21 Mar 2008; Denis Dupeyron <calchan@gentoo.org> gtkwave-3.1.6.ebuild:
+  Fixed deps, thanks to Ravi Nanavati (bug #214119).
 
 *gtkwave-3.1.6 (14 Mar 2008)
 
