@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r1.ebuild,v 1.12 2008/03/17 12:39:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r1.ebuild,v 1.13 2008/03/21 01:56:37 dirtyepic Exp $
 
 EAPI=1
 
@@ -87,9 +87,18 @@ src_install() {
 		--install-purelib ${site_pkgs} || die "setup.py install failed"
 
 	# Collision protection.
-	for file in "${D}"/usr/bin/* "${D}"/${site_pkgs}/wx{version.*,.pth,addons}; do
+	for file in "${D}"/usr/bin/* "${D}"/${site_pkgs}/wx{version.*,.pth}; do
 		mv "${file}" "${file}-${SLOT}"
 	done
+
+	for dir in "${D}"/${site_pkgs}/wx-${SLOT}-gtk2-{ansi,unicode}; do
+		if [[ -d ${dir} ]]; then
+			cp -R "${D}"/${site_pkgs}/wxaddons/ ${dir}
+			wxaddons_copied=1
+		fi
+	done
+
+	[[ ${wxaddons_copied} ]] && rm -rf "${D}"/${site_pkgs}/wxaddons/
 }
 
 pkg_postinst() {

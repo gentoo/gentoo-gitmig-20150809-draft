@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.86 2008/03/17 12:39:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.87 2008/03/21 01:56:37 dirtyepic Exp $
+
+  21 Mar 2008; Ryan Hill <dirtyepic@gentoo.org> wxpython-2.6.4.0-r1.ebuild,
+  wxpython-2.8.7.1.ebuild:
+  Move wxaddons module into version-specific directories to fix bug #213819.
 
   17 Mar 2008; Peter Volkov <pva@gentoo.org> wxpython-2.6.4.0-r1.ebuild,
   wxpython-2.8.7.1.ebuild:
