@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-2.02.00.ebuild,v 1.2 2008/03/21 02:21:04 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-2.02.00.ebuild,v 1.3 2008/03/21 13:32:32 xmerlin Exp $
 
 inherit eutils linux-mod linux-info versionator
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-DEPEND="=virtual/linux-sources-2.6.24*"
+DEPEND=">=virtual/linux-sources-2.6.20"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}/${PN}"
@@ -44,6 +44,8 @@ src_unpack() {
 			epatch "${FILESDIR}"/${P}-before-2.6.23.diff || die
 		fi
 	fi
+
+	epatch "${FILESDIR}"/${P}-fix_wrong_locking_order.diff || die
 }
 
 src_compile() {

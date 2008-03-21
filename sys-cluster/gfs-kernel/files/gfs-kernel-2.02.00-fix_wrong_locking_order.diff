@@ -1,0 +1,20 @@
+--- cluster-2.02.00/gfs-kernel/src/gfs/ops_inode.c.old	2008-03-21 11:44:44.000000000 +0000
++++ cluster-2.02.00/gfs-kernel/src/gfs/ops_inode.c	2008-03-21 11:45:08.000000000 +0000
+@@ -150,14 +150,14 @@
+ 	inode = gfs_iget(ip, CREATE);
+ 	gfs_inode_put(ip);
+ 
++	gfs_glock_dq_uninit(&d_gh);
++	gfs_glock_dq_uninit(&i_gh);
++
+ 	if (!inode)
+ 		error = -ENOMEM;
+ 	else
+ 		error = gfs_security_init(dip, ip);
+ 
+-	gfs_glock_dq_uninit(&d_gh);
+-	gfs_glock_dq_uninit(&i_gh);
+-
+ 	if (error)
+ 		return error;
+ 
