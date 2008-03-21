@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.7_p2.ebuild,v 1.1 2008/01/26 12:30:25 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.7_p2.ebuild,v 1.2 2008/03/21 18:10:30 maekke Exp $
 
 inherit toolchain-funcs eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.jetico.com/linux/BCWipe-${MY_PV}.tar.gz
 LICENSE="bestcrypt"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 
 DEPEND=""
 RDEPEND=""
