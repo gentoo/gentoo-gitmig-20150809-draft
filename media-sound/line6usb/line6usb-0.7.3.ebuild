@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/line6usb-0.7.3.ebuild,v 1.1 2008/03/21 03:41:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/line6usb-0.7.3.ebuild,v 1.2 2008/03/21 15:35:36 mr_bones_ Exp $
 
 inherit linux-mod eutils multilib linux-info
 
@@ -99,4 +99,3 @@ check_upgrade() {
 		    die 'incompatible with FEATURES=collision-protect'
 	fi
 }
-
