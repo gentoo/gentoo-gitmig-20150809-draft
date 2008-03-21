@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/tig
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/ChangeLog,v 1.8 2008/03/19 16:56:34 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/ChangeLog,v 1.9 2008/03/21 18:00:22 gregkh Exp $
+
+*tig-0.10.1 (21 Mar 2008)
+
+  21 Mar 2008; Greg Kroah-Hartman <gregkh@gentoo.org> +tig-0.10.1.ebuild:
+  0.10.1 release
+  	- should work with wide characters now
+  	- added bash-completion config
 
 *tig-0.10 (19 Mar 2008)
 
