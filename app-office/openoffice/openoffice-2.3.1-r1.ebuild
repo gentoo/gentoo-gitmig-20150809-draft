@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1-r1.ebuild,v 1.7 2008/03/17 14:12:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1-r1.ebuild,v 1.8 2008/03/21 19:59:23 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -61,7 +61,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	gstreamer? ( >=media-libs/gstreamer-0.10
 			>=media-libs/gst-plugins-base-0.10 )
-	kde? ( >=kde-base/kdelibs-3.2 )
+	kde? ( =kde-base/kdelibs-3* )
 	java? ( >=dev-java/bsh-2.0_beta4
 		>=dev-java/xalan-2.7
 		>=dev-java/xerces-2.7
