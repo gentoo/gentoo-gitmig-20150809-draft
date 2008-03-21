@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/warzone2100
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.18 2007/12/30 01:38:12 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.19 2008/03/21 10:32:52 nyhm Exp $
+
+*warzone2100-2.1_beta2 (21 Mar 2008)
+
+  21 Mar 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/warzone2100-2.1_beta2-encoding.patch,
+  +warzone2100-2.1_beta2.ebuild:
+  Version bump, bug #211892
 
 *warzone2100-2.0.10 (30 Dec 2007)
 
