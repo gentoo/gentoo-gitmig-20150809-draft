@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/emact-2.52.0.ebuild,v 1.1 2008/03/17 11:45:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/emact-2.52.0.ebuild,v 1.2 2008/03/21 08:42:40 ulm Exp $
 
 DESCRIPTION="EmACT, a fork of Conroy's MicroEmacs"
-HOMEPAGE="http://www.eligis.com/"
+HOMEPAGE="http://www.eligis.com/emacs/"
 SRC_URI="http://www.eligis.com/emacs/${P}.tar.gz"
 
 LICENSE="GPL-2"
