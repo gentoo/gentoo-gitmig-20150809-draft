@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-gentium/ttf-gentium-1.0.2.ebuild,v 1.5 2008/03/10 18:53:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-gentium/ttf-gentium-1.0.2.ebuild,v 1.6 2008/03/21 12:14:27 drac Exp $
 
 inherit font versionator
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 #SRC_URI="http://scripts.sil.org/cms/scripts/render_download.php?site_id=nrsi&format=file&media_id=Gentium_102_L_tar&_sc=1&filename=ttf-sil-gentium-1.02.tar.gz"
 LICENSE="OFL"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="X doc"
 
 DOCS="FONTLOG GENTIUM-FAQ QUOTES README local.conf"
