@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/cjk-latex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.20 2008/03/21 12:27:08 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.21 2008/03/21 14:51:03 ranger Exp $
+
+  21 Mar 2008; Brent Baude <ranger@gentoo.org> cjk-latex-4.7.0.ebuild:
+  stable ppc64, bug 214077
 
   21 Mar 2008; Ferris McCormick <fmccor@gentoo.org> cjk-latex-4.7.0.ebuild:
   Sparc stable for texlive, Bug #214077 (but you might want texlive-langcjk as
