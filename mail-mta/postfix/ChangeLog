@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.156 2008/03/21 14:41:44 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.157 2008/03/21 15:03:51 falco Exp $
+
+*postfix-2.4.7 (21 Mar 2008)
+
+  21 Mar 2008; Raphael Marichez <falco@gentoo.org> +postfix-2.4.7.ebuild:
+  Version bump 2.4.x series using previous vda-ng patch, closes bug #199330
 
   21 Mar 2008; Raphael Marichez <falco@gentoo.org> postfix-2.4.5.ebuild,
   postfix-2.4.6-r2.ebuild:
