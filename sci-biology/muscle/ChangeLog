@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/muscle
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/ChangeLog,v 1.8 2007/12/31 15:40:36 je_fro Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/ChangeLog,v 1.9 2008/03/21 21:23:44 dberkholz Exp $
+
+*muscle-3.7 (21 Mar 2008)
+
+  21 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>; +muscle-3.7.ebuild:
+  Bump. Bug fixes and undocumented new features.
 
   31 Dec 2007; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
   fixing my email addy
