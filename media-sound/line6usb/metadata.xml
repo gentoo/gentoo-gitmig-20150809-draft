@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>nerdboy@gentoo.org</email>
+  <name>Steve Arnold</name>
+</maintainer>
+<longdescription>
+  This is an experimental Linux driver for the guitar amp, cab, and effects 
+  modeller PODxt Pro by Line6 (and similar devices) including preliminary 
+  support for the Variax Workbench.
+</longdescription>
+</pkgmetadata>

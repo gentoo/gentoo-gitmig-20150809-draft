@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/line6usb
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/ChangeLog,v 1.1 2008/03/21 03:41:47 nerdboy Exp $
+
+*line6usb-0.7.3 (21 Mar 2008)
+
+  21 Mar 2008; Steve Arnold <nerdboy@gentoo.org> +metadata.xml,
+  +line6usb-0.7.3.ebuild:
+  Initial ebuild for Line6 USB driver; somewhat experimental but has 
+  history and should work on any arch's that support usb and alsa.
+
