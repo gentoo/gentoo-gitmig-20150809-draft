@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-17.6.0.ebuild,v 1.2 2008/03/17 12:20:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-17.6.0.ebuild,v 1.3 2008/03/21 11:14:26 welp Exp $
 
 inherit autotools eutils
 
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-17.5.4-forced-cflags-and-compiler-warnings.patch
+	epatch "${FILESDIR}"/${PN}-17.5.4-forced-cflags-and-compiler-warnings.patch
 	eautoconf
 }
 
