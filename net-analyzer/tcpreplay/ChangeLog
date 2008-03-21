@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpreplay
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.24 2008/02/15 23:58:17 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.25 2008/03/21 15:59:51 maekke Exp $
+
+  21 Mar 2008; Markus Meier <maekke@gentoo.org> tcpreplay-3.2.3.ebuild:
+  amd64 stable, bug #201842
 
   15 Feb 2008; Dawid Węgliński <cla@gentoo.org> tcpreplay-3.2.3.ebuild:
   Stable on x86 (bug #201842)
