@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mini-xml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/ChangeLog,v 1.12 2008/03/18 13:26:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/ChangeLog,v 1.13 2008/03/21 13:39:44 caster Exp $
+
+  21 Mar 2008; Vlastimil Babka <caster@gentoo.org> mini-xml-2.4.ebuild:
+  Add missing unpack commands for Flameeyes, bug #214128.
 
   18 Mar 2008; Diego Pettenò <flameeyes@gentoo.org> mini-xml-2.4.ebuild:
   Run eautoconf during unpack phase. Closes bug #207492.
