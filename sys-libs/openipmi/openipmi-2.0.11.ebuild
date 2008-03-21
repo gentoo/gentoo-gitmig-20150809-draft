@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.11.ebuild,v 1.3 2007/11/11 15:01:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.11.ebuild,v 1.4 2008/03/21 21:44:49 robbat2 Exp $
 
 DESCRIPTION="Library interface to IPMI"
 HOMEPAGE="http://sourceforge.net/projects/openipmi/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~x86"
 IUSE="crypt snmp perl tcl python"
 S="${WORKDIR}/${MY_P}"
 
