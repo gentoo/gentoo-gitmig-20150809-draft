@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.1.ebuild,v 1.7 2007/10/14 15:55:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.1.ebuild,v 1.8 2008/03/21 06:18:04 drac Exp $
 
 inherit eutils gnome2-utils
 
 DESCRIPTION="SVG icon theme from the Tango project"
-HOMEPAGE="http://tango-project.org"
-SRC_URI="http://tango-project.org/releases/${P}.tar.gz"
+HOMEPAGE="http://tango.freedesktop.org"
+SRC_URI="http://tango.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="CCPL-Attribution-ShareAlike-2.5"
 SLOT="0"
@@ -20,13 +20,13 @@ RDEPEND=">=x11-misc/icon-naming-utils-0.8.2
 	>=gnome-base/librsvg-2.12.3
 	>=x11-themes/hicolor-icon-theme-0.9"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.19
-	>=dev-util/intltool-0.33
+	dev-util/pkgconfig
+	dev-util/intltool
 	sys-devel/gettext"
 
 pkg_setup() {
 	if use png && ! built_with_use media-gfx/imagemagick png; then
-		die "Build media-gfx/imagemagick with USE=png."
+		die "Re-emerge media-gfx/imagemagick with USE png."
 	fi
 }
 
@@ -38,7 +38,6 @@ src_compile() {
 
 src_install() {
 	addwrite "/root/.gnome2"
-
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README
 }
