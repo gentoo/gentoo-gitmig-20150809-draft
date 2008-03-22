@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/lince
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lince/ChangeLog,v 1.6 2008/03/15 15:51:36 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lince/ChangeLog,v 1.7 2008/03/22 14:40:04 corsair Exp $
+
+  22 Mar 2008; Markus Rothe <corsair@gentoo.org> lince-0.99.1.ebuild:
+  Added ~ppc; bug #211992
 
   15 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> -lince-0.99.ebuild,
   lince-0.99.1.ebuild:
