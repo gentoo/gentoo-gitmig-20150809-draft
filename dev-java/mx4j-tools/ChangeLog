@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/mx4j-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-tools/ChangeLog,v 1.6 2008/03/05 16:57:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-tools/ChangeLog,v 1.7 2008/03/22 21:05:17 wltjr Exp $
+
+*mx4j-tools-3.0.1-r2 (22 Mar 2008)
+
+  22 Mar 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  -mx4j-tools-3.0.1-r1.ebuild, +mx4j-tools-3.0.1-r2.ebuild:
+  Switched to java-virtuals/servlet-api, EAPI=1 slots, and removed previous
+  revision
 
   05 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
   mx4j-tools-3.0.1-r1.ebuild:

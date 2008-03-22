@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.1-r3.ebuild,v 1.2 2008/03/05 16:57:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.1-r4.ebuild,v 1.1 2008/03/22 21:02:05 wltjr Exp $
 
+EAPI=1
 JAVA_PKG_IUSE="examples source doc"
 
 inherit java-pkg-2 java-ant-2
@@ -24,16 +25,16 @@ COMMON_DEP="
 		dev-java/bcel
 		dev-java/log4j
 		dev-java/commons-logging
-		=www-servers/axis-1*
-		~dev-java/servletapi-2.3
-		=dev-java/burlap-3.0*
-		=dev-java/hessian-3.0.8*
+		www-servers/axis:1
+		java-virtuals/servlet-api:2.3
+		dev-java/burlap:3.0
+		dev-java/hessian:3.0.8
 		dev-java/jython
-		=dev-java/gnu-jaf-1*
+		dev-java/gnu-jaf:1
 		java-virtuals/javamail
 	)
-	=dev-java/mx4j-core-3.0*
-	=dev-java/mx4j-tools-3.0*
+	dev-java/mx4j-core:3.0
+	dev-java/mx4j-tools:3.0
 	!<dev-java/mx4j-tools-3.0.1-r1
 	"
 
@@ -59,7 +60,7 @@ src_unpack() {
 		java-pkg_jar-from log4j
 		java-pkg_jar-from commons-logging commons-logging.jar
 		java-pkg_jar-from axis-1
-		java-pkg_jar-from servletapi-2.3 servlet.jar
+		java-pkg_jar-from --virtual servlet-api-2.3 servlet.jar
 		java-pkg_jar-from burlap-3.0
 		java-pkg_jar-from hessian-3.0.8
 		java-pkg_jar-from jython jython.jar
