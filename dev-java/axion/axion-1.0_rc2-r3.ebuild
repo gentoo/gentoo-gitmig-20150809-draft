@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/axion-1.0_rc2-r3.ebuild,v 1.5 2007/08/10 18:25:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/axion-1.0_rc2-r3.ebuild,v 1.6 2008/03/22 22:45:02 betelgeuse Exp $
 
+EAPI=1
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -35,7 +36,6 @@ DEPEND="|| (
 S="${WORKDIR}/${PN}-1.0-M2"
 
 src_unpack() {
-
 	unpack ${A}
 	cd "${S}"
 
@@ -55,7 +55,7 @@ src_unpack() {
 	cd "${S}/"
 	# These files are re-created by javacc, if they are not removed the compile
 	# will fail:
-	rm -f \
+	rm -v \
 		src/org/axiondb/parser/TokenMgrError.java \
 		src/org/axiondb/parser/ParseException.java \
 		src/org/axiondb/parser/Token.java \
@@ -66,11 +66,12 @@ src_unpack() {
 
 EANT_BUILD_TARGET="compile jar"
 
-src_install() {
+# The test dir is empty
+src_test() { :; }
 
-	java-pkg_newjar bin/axion-1.0-M2.jar ${PN}.jar
+src_install() {
+	java-pkg_newjar bin/axion-1.0-M2.jar
 
 	use doc && java-pkg_dojavadoc bin/docs/api
 	use source && java-pkg_dosrc src/*
-
 }
