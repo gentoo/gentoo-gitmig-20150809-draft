@@ -1,6 +1,26 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.46 2008/01/31 14:51:45 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.47 2008/03/22 10:45:35 ikelos Exp $
+
+*vmware-player-2.0.3.80004 (22 Mar 2008)
+*vmware-player-1.0.6.80404 (22 Mar 2008)
+
+  22 Mar 2008; Mike Auty <ikelos@gentoo.org>
+  +files/1.0.6.80404/000_all_initd-location.patch,
+  +files/1.0.6.80404/002_all_pagebreak-detection-fix.patch,
+  +files/2.0.3.80004/000_all_initd-location.patch,
+  +files/1.0.6.80404/001_all_fix-permissions.patch,
+  +files/1.0.6.80404/004_all_do-not-build-modules.patch,
+  +files/1.0.6.80404/007_all_use-modprobe-over-insmod.patch,
+  +files/1.0.6.80404/009_all_init.d-modules-warning.patch,
+  +files/2.0.3.80004/001_all_fix-permissions.patch,
+  +files/2.0.3.80004/002_all_pagebreak-detection-fix.patch,
+  +files/2.0.3.80004/004_all_do-not-build-modules.patch,
+  +files/2.0.3.80004/007_all_use-modprobe-over-insmod.patch,
+  +files/2.0.3.80004/009_all_init.d-modules-warning.patch,
+  +files/2.0.3.80004/011_all_legit-modules-only.patch,
+  +vmware-player-1.0.6.80404.ebuild, +vmware-player-2.0.3.80004.ebuild:
+  Version bump 1.0.6 and 2.0.3, to fix bug 213548.
 
   31 Jan 2008; Mike Auty <ikelos@gentoo.org> ChangeLog:
   Re-sign digestless manifest.
