@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.0.2.ebuild,v 1.1 2008/03/11 00:03:07 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.0.2.ebuild,v 1.2 2008/03/22 13:42:01 ingmar Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/${KMNAME}-4.0.1-system-libspectre.patch"
+PATCHES="${FILESDIR}/${KMNAME}-${PV}-system-libspectre.patch"
 
 pkg_setup() {
 	if use pdf; then
