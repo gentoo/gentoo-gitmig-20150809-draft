@@ -1,6 +1,8 @@
---- subversion-1.3.1/build/ac-macros/apr.m4	2004-11-24 00:18:18.000000000 +0100
-+++ subversion-1.3.1/build/ac-macros/apr.m4.new	2006-04-16 17:57:36.214707250 +0200
-@@ -59,7 +59,7 @@
+Index: subversion-1.4.6/build/ac-macros/apr.m4
+===================================================================
+--- subversion-1.4.6.orig/build/ac-macros/apr.m4
++++ subversion-1.4.6/build/ac-macros/apr.m4
+@@ -64,7 +64,7 @@ AC_DEFUN(SVN_LIB_APR,
      AC_MSG_ERROR([apr-config --ldflags failed])
    fi
  
