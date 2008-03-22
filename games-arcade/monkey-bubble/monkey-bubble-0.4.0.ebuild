@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.5 2007/06/01 18:46:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.6 2008/03/22 18:09:29 mr_bones_ Exp $
 
 inherit autotools eutils gnome2
 
 DESCRIPTION="A Puzzle Bobble clone"
-HOMEPAGE="http://home.gna.org/monkeybubble/"
+HOMEPAGE="http://www.monkey-bubble.org/"
 SRC_URI="http://home.gna.org/monkeybubble/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
