@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.22.0.ebuild,v 1.1 2008/03/22 23:50:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.22.0.ebuild,v 1.2 2008/03/22 23:56:23 eva Exp $
 
 inherit gnome2 eutils multilib
 
@@ -45,7 +45,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35
 	>=app-text/gnome-doc-utils-0.3.2
-	>=gnome-base/gnome-common-2.12.0
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README TODO"
