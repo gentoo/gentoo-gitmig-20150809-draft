@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/netkit-tftp-0.17-r5.ebuild,v 1.3 2008/03/21 14:57:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/netkit-tftp-0.17-r5.ebuild,v 1.4 2008/03/22 15:24:59 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="the tftp server included in netkit"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-tftp-0.17.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 
-KEYWORDS="amd64 ~mips ~ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ~mips ~ppc ppc64 sparc x86"
 IUSE=""
 LICENSE="BSD"
 SLOT="0"
