@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/bm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bm/ChangeLog,v 1.2 2008/01/02 11:36:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bm/ChangeLog,v 1.3 2008/03/22 10:30:19 opfer Exp $
+
+  22 Mar 2008; Christian Faulhammer <opfer@gentoo.org> bm-1.32.ebuild:
+  stable x86/amd64, bug 214225
 
   02 Jan 2008; Ulrich Mueller <ulm@gentoo.org> bm-1.32.ebuild:
   Add ~amd64 keyword.
