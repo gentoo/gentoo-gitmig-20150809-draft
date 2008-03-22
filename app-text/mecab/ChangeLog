@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mecab
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.44 2007/10/03 08:23:17 tgall Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.45 2008/03/22 18:58:35 coldwind Exp $
+
+  22 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> mecab-0.95.ebuild:
+  amd64 stable
 
   03 Oct 2007; Tom Gall <tgall@gentoo.org> mecab-0.95.ebuild:
   stable on ppc64
