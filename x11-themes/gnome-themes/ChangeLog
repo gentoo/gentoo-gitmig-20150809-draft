@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.184 2008/02/04 04:23:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.185 2008/03/22 13:00:56 leio Exp $
+
+*gnome-themes-2.22.0 (22 Mar 2008)
+
+  22 Mar 2008; Mart Raudsepp <leio@gentoo.org> +gnome-themes-2.22.0.ebuild:
+  New version for GNOME-2.22. Various updates and tweaks to the main metacity
+  and gtk+ themes to make them better and possibly be more performant,
+  especially under compiz decorator
 
   04 Feb 2008; Jeroen Roovers <jer@gentoo.org> gnome-themes-2.20.2.ebuild:
   Stable for HPPA (bug #208366).
