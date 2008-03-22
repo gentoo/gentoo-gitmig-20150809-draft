@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmSpaceWeather
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.17 2008/03/22 16:45:46 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.18 2008/03/22 16:48:41 coldwind Exp $
+
+  22 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> -files/getkp.patch:
+  Old getkp patch removed.
 
   22 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   -wmSpaceWeather-1.04.ebuild, wmSpaceWeather-1.04_p19.ebuild:
