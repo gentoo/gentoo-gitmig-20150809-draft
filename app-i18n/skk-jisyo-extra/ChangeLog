@@ -1,6 +1,17 @@
 # ChangeLog for app-i18n/skk-jisyo-extra
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/ChangeLog,v 1.30 2008/01/26 18:34:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/ChangeLog,v 1.31 2008/03/22 15:30:58 jokey Exp $
+
+  22 Mar 2008; Markus Ullmann <jokey@gentoo.org>
+  skk-jisyo-extra-200410.ebuild, skk-jisyo-extra-200501.ebuild,
+  skk-jisyo-extra-200504.ebuild, skk-jisyo-extra-200507.ebuild:
+  Proxy commit some fixes
+
+  22 Mar 2008; Jakub Moc <jakub@gentoo.org>
+  skk-jisyo-extra-200410.ebuild, skk-jisyo-extra-200501.ebuild,
+  skk-jisyo-extra-200504.ebuild, skk-jisyo-extra-200507.ebuild:
+  Remove dev-db/freecdb support wrt Bug 210730. Also nuke redundant DEPENDs
+  on sys-apps/gawk.
 
   26 Jan 2008; Fabian Groffen <grobian@gentoo.org>
   skk-jisyo-extra-200410.ebuild, skk-jisyo-extra-200501.ebuild,

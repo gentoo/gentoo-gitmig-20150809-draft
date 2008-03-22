@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/skk-jisyo-extra-200410.ebuild,v 1.5 2008/01/26 18:34:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/skk-jisyo-extra-200410.ebuild,v 1.6 2008/03/22 15:30:58 jokey Exp $
 
 DESCRIPTION="Extra SKK dictionaries in plain text and cdb format"
 HOMEPAGE="http://openlab.ring.gr.jp/skk/dic.html"
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="alpha ppc sparc x86"
 IUSE=""
 
-DEPEND="sys-apps/gawk
-	|| ( dev-db/freecdb dev-db/cdb )"
+DEPEND="dev-db/cdb"
 RDEPEND=""
 
 skkdic2cdb() {
