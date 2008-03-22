@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libopkele
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/ChangeLog,v 1.1 2008/03/22 19:19:10 hollow Exp $
+
+*libopkele-0.3.2 (22 Mar 2008)
+
+  22 Mar 2008; Benedikt Böhm <hollow@gentoo.org> +metadata.xml,
+  +libopkele-0.3.2.ebuild:
+  initial ebuild wrt #209573
+
