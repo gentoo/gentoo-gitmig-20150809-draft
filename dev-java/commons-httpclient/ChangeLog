@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-httpclient
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.61 2008/03/22 22:27:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.62 2008/03/22 22:32:59 betelgeuse Exp $
+
+  22 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
+  commons-httpclient-2.0.2-r1.ebuild:
+  RESTRICT test for upcoming generic src_test.
 
   22 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
   -commons-httpclient-3.0.1-r1.ebuild:

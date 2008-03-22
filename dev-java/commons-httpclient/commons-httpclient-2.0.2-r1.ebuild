@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0.2-r1.ebuild,v 1.11 2008/01/25 19:56:10 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0.2-r1.ebuild,v 1.12 2008/03/22 22:32:59 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -20,6 +20,9 @@ RDEPEND=">=virtual/jre-1.3
 
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}"
+
+# Tries to contact net or something but no use trying to fix this old version
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
