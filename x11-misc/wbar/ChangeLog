@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wbar
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.1 2008/01/13 13:03:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.2 2008/03/22 07:51:56 drac Exp $
+
+  22 Mar 2008; Samuli Suominen <drac@gentoo.org> wbar-1.3.3.ebuild:
+  amd64 stable
 
 *wbar-1.3.3 (13 Jan 2008)
 
