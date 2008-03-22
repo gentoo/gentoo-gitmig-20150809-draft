@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.5.5.ebuild,v 1.2 2008/01/29 20:50:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.5.5.ebuild,v 1.3 2008/03/22 16:50:06 josejx Exp $
 
 EAPI=1
 
@@ -37,12 +37,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	if use ppc && use ffmpeg ; then
-		eerror "swfdec doesn't work with latest ffmpeg version in"
-		eerror "ppc arch. See bug #11841 in Freedesktop Bugzilla."
-		eerror "Please disable ffmpeg flag and enable gstreamer"
-		die "Depends failed"
-	fi
 	if use !gnome ; then
 		ewarn "In order to compile libswfdec-gtk with Gnome-VFS"
 		ewarn "support you must have 'gnome' USE flag enabled"

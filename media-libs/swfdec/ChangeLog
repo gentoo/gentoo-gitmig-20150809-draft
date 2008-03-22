@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.25 2008/01/29 20:50:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.26 2008/03/22 16:50:06 josejx Exp $
+
+  22 Mar 2008; Joseph Jezak <josejx@gentoo.org> swfdec-0.5.4-r1.ebuild,
+  swfdec-0.5.5.ebuild:
+  Removed die on ppc with ffmpeg for bug #211509.
 
   29 Jan 2008; Samuli Suominen <drac@gentoo.org> swfdec-0.5.4-r1.ebuild,
   swfdec-0.5.5.ebuild:
