@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/tagunit
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/ChangeLog,v 1.16 2007/05/03 15:46:58 caster Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/ChangeLog,v 1.17 2008/03/22 01:41:00 betelgeuse Exp $
+
+*tagunit-1.0.1-r2 (22 Mar 2008)
+
+  22 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
+  +tagunit-1.0.1-r2.ebuild:
+  Use java-virtual/servlet-api:2.4 and prepare for generic src_test.
 
   03 May 2007; Vlastimil Babka <caster@gentoo.org> -tagunit-1.0.1.ebuild:
   Gen-1 punt.
