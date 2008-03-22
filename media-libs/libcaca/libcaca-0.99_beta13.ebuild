@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta13.ebuild,v 1.5 2008/02/09 06:11:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta13.ebuild,v 1.6 2008/03/22 10:29:37 aballier Exp $
 
 inherit eutils autotools libtool mono
 
@@ -35,6 +35,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-0.99_beta4-deoptimise.patch"
+	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
 
 	eautoreconf
 	elibtoolize

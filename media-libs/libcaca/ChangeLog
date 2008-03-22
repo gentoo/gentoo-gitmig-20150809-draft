@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.56 2008/02/15 20:23:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.57 2008/03/22 10:29:37 aballier Exp $
+
+  22 Mar 2008; Alexis Ballier <aballier@gentoo.org>
+  libcaca-0.9-r2.ebuild:
+  revert to ~mips due to unstable deps
+
+  22 Mar 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/libcaca-0.99_beta13-gcc-4.3.patch, libcaca-0.99_beta13.ebuild:
+  add a patch from Alexandre Borges Marcelo <alexandre.marcelo@gmail.com> to
+  fix build with gcc 4.3, bug #213001
 
   15 Feb 2008; Samuli Suominen <drac@gentoo.org> libcaca-0.99_beta11.ebuild,
   libcaca-0.99_beta12.ebuild:

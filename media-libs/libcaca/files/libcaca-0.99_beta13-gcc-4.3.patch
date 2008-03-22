@@ -1,0 +1,12 @@
+Index: libcaca-0.99.beta13b/cxx/cxxtest.cpp
+===================================================================
+--- libcaca-0.99.beta13b.orig/cxx/cxxtest.cpp	2007-12-14 16:00:10.000000000 +0000
++++ libcaca-0.99.beta13b/cxx/cxxtest.cpp	2007-12-14 16:00:20.000000000 +0000
+@@ -13,6 +13,7 @@
+  */
+ 
+ #include <iostream>
++#include <cstring>
+ 
+ #include <cucul++.h>
+ #include <caca++.h>
