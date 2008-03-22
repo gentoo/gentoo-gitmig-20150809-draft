@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.69 2008/01/14 20:59:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.70 2008/03/22 14:51:06 tove Exp $
+
+*msmtp-1.4.14 (22 Mar 2008)
+
+  22 Mar 2008; Torsten Veller <tove@gentoo.org> -msmtp-1.4.0.ebuild,
+  -msmtp-1.4.1.ebuild, -msmtp-1.4.2.ebuild, -msmtp-1.4.4.ebuild,
+  msmtp-1.4.5.ebuild, msmtp-1.4.7.ebuild, msmtp-1.4.9.ebuild,
+  -msmtp-1.4.9-r1.ebuild, +msmtp-1.4.14.ebuild:
+  Version bump (#187065) and cleaning.
 
   14 Jan 2008; Fabian Groffen <grobian@gentoo.org> msmtp-1.4.5.ebuild,
   msmtp-1.4.7.ebuild, msmtp-1.4.9.ebuild:
