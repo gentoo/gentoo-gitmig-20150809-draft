@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libopenraw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.18 2008/03/22 05:34:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.19 2008/03/22 10:43:48 nixnut Exp $
+
+  22 Mar 2008; nixnut <nixnut@gentoo.org> libopenraw-0.0.4.ebuild:
+  Stable on ppc wrt bug 214222
 
   22 Mar 2008; Samuli Suominen <drac@gentoo.org> libopenraw-0.0.4.ebuild:
   amd64 stable wrt #214222

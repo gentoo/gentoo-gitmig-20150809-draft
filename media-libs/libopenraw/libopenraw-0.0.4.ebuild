@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.0.4.ebuild,v 1.2 2008/03/22 05:34:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.0.4.ebuild,v 1.3 2008/03/22 10:43:48 nixnut Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.freedesktop.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
 IUSE="gtk"
 
 RDEPEND="dev-libs/boost
