@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ant-eclipse-ecj-3.3.0-r1.ebuild,v 1.5 2008/02/11 03:20:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ant-eclipse-ecj-3.3.0-r1.ebuild,v 1.6 2008/03/22 00:54:20 maekke Exp $
 
 inherit java-pkg-2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/eclipse/downloads/drops/${DMF/.0}/${MY_PN}src.zip"
 
 LICENSE="EPL-1.0"
-KEYWORDS="~amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 SLOT="3.3"
 IUSE=""
 
