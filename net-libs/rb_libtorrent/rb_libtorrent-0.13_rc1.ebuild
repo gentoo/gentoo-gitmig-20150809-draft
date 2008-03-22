@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13_rc1.ebuild,v 1.1 2008/03/09 16:06:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13_rc1.ebuild,v 1.2 2008/03/22 14:38:57 corsair Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ SRC_URI="http://libtorrent.org/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND="dev-libs/boost
