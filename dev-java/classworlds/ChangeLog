@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/classworlds
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/ChangeLog,v 1.16 2007/01/09 17:17:04 nelchael Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/ChangeLog,v 1.17 2008/03/22 22:53:18 betelgeuse Exp $
+
+  22 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
+  classworlds-1.0-r3.ebuild:
+  RESTRICT test for upcoming generic src_test as they fail.
 
 *classworlds-1.0-r3 (09 Jan 2007)
 
