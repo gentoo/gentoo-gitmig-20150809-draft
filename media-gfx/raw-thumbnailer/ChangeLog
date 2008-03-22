@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/raw-thumbnailer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/ChangeLog,v 1.20 2008/03/22 15:37:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/ChangeLog,v 1.21 2008/03/22 19:37:00 opfer Exp $
+
+  22 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
+  raw-thumbnailer-0.2.ebuild:
+  stable x86, bug 214222
 
   22 Mar 2008; Brent Baude <ranger@gentoo.org> raw-thumbnailer-0.2.ebuild:
   Marking raw-thumbnailer-0.2 ppc64 for bug 214222
