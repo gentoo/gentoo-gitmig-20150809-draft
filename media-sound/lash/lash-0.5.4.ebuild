@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4.ebuild,v 1.3 2008/01/29 08:43:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4.ebuild,v 1.4 2008/03/22 11:45:05 aballier Exp $
 
 inherit eutils libtool
 
@@ -20,7 +20,8 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	python? ( dev-lang/python )
 	|| ( sys-libs/readline sys-libs/libedit )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	python? ( >=dev-lang/swig-1.3.31 )"
 
 pkg_setup() {
 	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then

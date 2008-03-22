@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lash
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.17 2008/01/29 08:43:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.18 2008/03/22 11:45:05 aballier Exp $
+
+  22 Mar 2008; Alexis Ballier <aballier@gentoo.org> lash-0.5.4.ebuild:
+  add missing swig dep when building pylash
 
   29 Jan 2008; Markus Rothe <corsair@gentoo.org> lash-0.5.4.ebuild:
   Stable on ppc64; bug #199751
