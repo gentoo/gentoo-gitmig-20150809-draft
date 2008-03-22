@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1235 2008/03/22 21:55:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1236 2008/03/22 22:43:20 eva Exp $
+
+  22 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
+  add USE flag description for app-arch/file-roller
 
   22 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   add gnome-base/gdm-2.20.4 to the gnome-2.22 mask

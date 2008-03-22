@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3437 2008/03/22 21:37:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3438 2008/03/22 22:43:20 eva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -31,6 +31,7 @@ app-admin/testdisk:reiserfs - include reiserfs reading ability
 app-admin/webalizer:xtended - Include the 404 extension
 app-admin/webmin:webmin-minimal - Install the minimal webmin distribution
 app-arch/dump:ermt - encrypted rmt support
+app-arch/file-roller:nautilus - Enable plugin for integrating into nautilus
 app-arch/rpm:file - add magic file support
 app-arch/rpm:neon - include support for neon
 app-backup/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
