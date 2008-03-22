@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/owfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.7 2008/02/24 22:58:38 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.8 2008/03/22 17:53:35 wschlich Exp $
+
+*owfs-2.7_p4 (22 Mar 2008)
+
+  22 Mar 2008; Wolfram Schlich <wschlich@gentoo.org> +owfs-2.7_p4.ebuild:
+  version bump
 
   24 Feb 2008; Wolfram Schlich <wschlich@gentoo.org> files/owfs.initd:
   fix variable name in owfs init script wrt bug #203642
