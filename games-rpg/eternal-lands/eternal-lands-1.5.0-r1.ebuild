@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.5.0-r1.ebuild,v 1.2 2008/03/22 13:14:22 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.5.0-r1.ebuild,v 1.3 2008/03/22 18:13:11 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -109,7 +109,6 @@ src_unpack() {
 		sed -i -e 's/#\(EL_FEATURES += MEMORY_DEBUG\)/\1/' Makefile.linux
 		sed -i -e 's/#\(EL_FEATURES += MEMORY_DEBUG\)/\1/' Makefile
 	fi
-
 
 }
 
