@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-2.008-r1.ebuild,v 1.1 2008/01/18 16:11:25 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-2.008-r1.ebuild,v 1.2 2008/03/22 17:51:23 coldwind Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://ftp.digitalmars.com/${MY_P}.zip"
 LICENSE="DMD"
 RESTRICT="mirror strip"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 LOC="/opt/dmd"
 S="${WORKDIR}"
@@ -24,7 +24,7 @@ RDEPEND="amd64? ( app-emulation/emul-linux-x86-compat )
 	x86? ( sys-libs/libstdc++-v3 )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	# Cleanup line endings
 	cd "${S}/dmd"
