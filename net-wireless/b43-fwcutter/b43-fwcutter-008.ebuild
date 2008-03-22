@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/b43-fwcutter-008.ebuild,v 1.4 2007/09/23 15:57:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/b43-fwcutter-008.ebuild,v 1.5 2008/03/22 15:57:36 josejx Exp $
 
 inherit toolchain-funcs
 
@@ -33,7 +33,7 @@ pkg_postinst() {
 	einfo
 	einfo "You'll need to use b43-fwcutter to install the b43 firmware."
 	einfo "Please read the b43-fwcutter readme for more details:"
-	einfo "/usr/share/doc/${P}/README.gz"
+	einfo "README in /usr/share/doc/${P}/"
 	einfo
 
 	einfo "Please read this forum thread for help and troubleshooting:"

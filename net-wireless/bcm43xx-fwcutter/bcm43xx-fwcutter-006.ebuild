@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx-fwcutter/bcm43xx-fwcutter-006.ebuild,v 1.2 2007/04/07 15:54:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx-fwcutter/bcm43xx-fwcutter-006.ebuild,v 1.3 2008/03/22 15:59:01 josejx Exp $
 
 inherit toolchain-funcs
 
@@ -33,7 +33,7 @@ pkg_postinst() {
 		einfo
 		einfo "You'll need to use bcm43xx-fwcutter to install the bcm43xx firmware."
 		einfo "Please read the bcm43xx-fwcutter readme for more details:"
-		einfo "/usr/share/doc/${P}/README.gz"
+		einfo "REAME in /usr/share/doc/${P}"
 		einfo
 	fi
 
