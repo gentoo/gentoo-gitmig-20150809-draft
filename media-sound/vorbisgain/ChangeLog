@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/vorbisgain
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.22 2007/11/23 13:02:22 drac Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.23 2008/03/22 07:41:48 drac Exp $
+
+*vorbisgain-0.37-r1 (22 Mar 2008)
+
+  22 Mar 2008; Samuli Suominen <drac@gentoo.org>
+  +files/vorbisgain-0.37-fix-errno-and-warnings.patch,
+  vorbisgain-0.37.ebuild, +vorbisgain-0.37-r1.ebuild:
+  Marked 0.37 stable for amd64 and created 0.37-r1 for bug 200931, fixing
+  improper use of errno and mktemp, thanks to Marc Finet.
 
 *vorbisgain-0.37 (23 Nov 2007)
 
