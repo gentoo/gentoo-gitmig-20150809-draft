@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11.ebuild,v 1.1 2006/11/16 16:51:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11.ebuild,v 1.2 2008/03/22 10:30:49 remi Exp $
 
 # games after gnome2 so games' functions will override gnome2's
 inherit gnome2 games
@@ -50,6 +50,11 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	mv "${WORKDIR}"/gentoo "${D}/${GAMES_DATADIR}"/${PN}/themes/
 	prepgamesdirs
+}
+
+pkg_preinst() {
+	gnome2_pkg_preinst
+	games_pkg_preinst
 }
 
 pkg_postinst() {
