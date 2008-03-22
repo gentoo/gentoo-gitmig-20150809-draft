@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.9 2008/03/22 10:19:05 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.10 2008/03/22 17:30:11 remi Exp $
 
 #
 # gnome2-utils.eclass
@@ -32,7 +32,7 @@ DEPEND=">=sys-apps/sed-4"
 # in the GNOME2_ECLASS_SCHEMAS environment variable
 gnome2_gconf_savelist() {
 	pushd "${D}" &> /dev/null
-	export GNOME2_ECLASS_SCHEMAS=$(find 'etc/gconf/schemas/' -name '*.schemas')
+	export GNOME2_ECLASS_SCHEMAS=$(find 'etc/gconf/schemas/' -name '*.schemas' 2> /dev/null)
 	popd &> /dev/null
 }
 
@@ -115,7 +115,7 @@ gnome2_gconf_uninstall() {
 # That function should be called from pkg_preinst
 gnome2_icon_savelist() {
 	pushd "${D}" &> /dev/null
-	export GNOME2_ECLASS_ICONS=$(find 'usr/share/icons' -maxdepth 1 -mindepth 1 -type d)
+	export GNOME2_ECLASS_ICONS=$(find 'usr/share/icons' -maxdepth 1 -mindepth 1 -type d 2> /dev/null)
 	popd &> /dev/null
 }
 
@@ -206,16 +206,8 @@ gnome2_omf_fix() {
 
 	eend $retval
 
-	for (( i = 0 ; i < ${#fails[@]} ; i++ )) ; do
-		### HACK!! This is needed until bash 3.1 is unmasked.
-		## The current stable version of bash lists the sizeof fails to be 1
-		## when there are no elements in the list because it is declared local.
-		## In order to prevent the declaration from being in global scope, we
-		## this hack to prevent an empty error message being printed for stable
-		## users. -- compnerd && allanonjl
-		if [[ "${fails[i]}" != "" && "${fails[i]}" != "()" ]] ; then
-			eerror "Failed to update OMF Makefile ${fails[i]}"
-		fi
+	for f in "${fails[@]}" ; do
+		eerror "Failed to update OMF Makefile $f"
 	done
 }
 
