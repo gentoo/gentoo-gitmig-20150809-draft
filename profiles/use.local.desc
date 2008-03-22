@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3434 2008/03/20 15:38:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3435 2008/03/22 13:54:58 graaff Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -247,6 +247,7 @@ app-office/openoffice:webdav - Enable webdav support
 app-office/rabbit:gnome-print - Gnome-Print support
 app-office/rabbit:gs - Ghostscript support
 app-office/rabbit:tgif - tgif support
+app-office/texmacs:netpbm - Add NetPBM support
 app-office/tpp:figlet - Installs app-misc/figlet to support the --huge command
 app-pda/libopensync-plugin-irmc:irda - Enable IrDA support.
 app-pda/libopensync-plugin-syncml:http - Enable http transports.
