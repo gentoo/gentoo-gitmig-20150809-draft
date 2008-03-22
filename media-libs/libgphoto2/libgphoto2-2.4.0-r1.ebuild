@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.0-r1.ebuild,v 1.5 2007/11/07 00:57:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.0-r1.ebuild,v 1.6 2008/03/22 03:08:42 dang Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -99,8 +99,8 @@ src_compile() {
 	local myconf
 
 	use exif \
-		&& myconf="${myconf} --with-exif-prefix=/usr" \
-		|| myconf="${myconf} --without-exif"
+		&& myconf="${myconf} --with-libexif=/usr" \
+		|| myconf="${myconf} --with-libexif=no"
 
 	econf \
 		--with-drivers=${cameras} \
