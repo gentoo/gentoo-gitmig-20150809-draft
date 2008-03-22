@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-DB_DataObject_FormBuilder
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject_FormBuilder/ChangeLog,v 1.1 2008/03/22 20:15:19 hollow Exp $
+
+*PEAR-DB_DataObject_FormBuilder-1.0.0_rc7 (22 Mar 2008)
+
+  22 Mar 2008; Benedikt Böhm <hollow@gentoo.org> +metadata.xml,
+  +PEAR-DB_DataObject_FormBuilder-1.0.0_rc7.ebuild:
+  initial ebuild
+
