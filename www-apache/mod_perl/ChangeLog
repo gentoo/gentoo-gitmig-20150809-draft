@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.61 2008/02/10 15:48:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.62 2008/03/22 17:14:12 hollow Exp $
+
+  22 Mar 2008; Benedikt Böhm <hollow@gentoo.org> mod_perl-2.0.3-r2.ebuild:
+  amd64 stable wrt #209179
 
   10 Feb 2008; Raúl Porcel <armin76@gentoo.org> mod_perl-2.0.3-r2.ebuild:
   alpha/ia64/sparc stable wrt #209179
