@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/gnome-mud
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.20 2006/10/10 17:03:56 nyhm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.21 2008/03/22 10:27:38 remi Exp $
+
+  22 Mar 2008; Rémi Cardona <remi@gentoo.org> gnome-mud-0.10.7.ebuild:
+  update ebuild to new gnome2 eclass (see bug #155993)
 
   10 Oct 2006; Tristan Heaven <nyhm@gentoo.org> gnome-mud-0.10.7.ebuild:
   Fix gettext dependency

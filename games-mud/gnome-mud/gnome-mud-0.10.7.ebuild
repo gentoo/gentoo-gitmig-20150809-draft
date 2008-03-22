@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.10.7.ebuild,v 1.3 2006/10/10 17:03:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.10.7.ebuild,v 1.4 2008/03/22 10:27:38 remi Exp $
 
 inherit gnome2 games
 
@@ -44,6 +44,11 @@ src_install() {
 	dogamesbin "${D}/usr/games/gnome-mud" || die "dogamesbin failed"
 	rm -f "${D}/usr/games/gnome-mud"
 	prepgamesdirs
+}
+
+pkg_preinst() {
+	gnome2_pkg_preinst
+	games_pkg_preinst
 }
 
 pkg_postinst() {
