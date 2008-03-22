@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.62 2008/03/21 19:35:31 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.63 2008/03/22 10:43:04 jokey Exp $
+
+  22 Mar 2008; Markus Ullmann <jokey@gentoo.org> kvirc-3.4.0.ebuild:
+  Remove a debug stopper, thanks to Arfrever.FTA@GMail.Com in bug #214191
 
 *kvirc-3.4.0 (21 Mar 2008)
 
@@ -8,13 +11,13 @@
   +files/kvirc-3.4.0-kdedir-fix.patch, +kvirc-3.4.0.ebuild:
   Version bump
 
-  06 Feb 2008; Dawid Węgliński <cla@gentoo.org>
+  06 Feb 2008; Dawid WÄgliÅski <cla@gentoo.org>
   kvirc-3.2.6_pre20080204.ebuild:
   Temporarily use ./autogen.sh instead of eautoreconf
 
 *kvirc-3.2.6_pre20080204 (04 Feb 2008)
 
-  04 Feb 2008; Dawid Węgliński <cla@gentoo.org>
+  04 Feb 2008; Dawid WÄgliÅski <cla@gentoo.org>
   +kvirc-3.2.6_pre20080204.ebuild:
   Version bump. Thanks to Ivan Mironov <mironov.ivan@gmail.com> from bug #207359
 
@@ -76,17 +79,17 @@
   Add svn snapshot with fixed security bug #183174 and fixed
   crash-on-initial-setup bugs
 
-  01 May 2007; Raúl Porcel <armin76@gentoo.org>
+  01 May 2007; RaÃºl Porcel <armin76@gentoo.org>
   files/kvirc-svn-kdedir-fix.patch:
   Fix the patch for svn again, thanks to Markus Rennings <mren at mrmx dot de>
   as always
 
-  18 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  18 Mar 2007; RaÃºl Porcel <armin76@gentoo.org>
   files/kvirc-3.2.3-kdedir-fix.patch, +files/kvirc-svn-kdedir-fix.patch,
   kvirc-9999.ebuild:
   Don't overwrite the patch, as it's used by 3.2.5, thanks to mren for noticing
 
-  18 Mar 2007; Raúl Porcel <armin76@gentoo.org>
+  18 Mar 2007; RaÃºl Porcel <armin76@gentoo.org>
   files/kvirc-3.2.3-kdedir-fix.patch:
   Fix patch for kvirc-9999, thanks to Markus Rennings <mren at mrmx dot de>
   for the patch and for noticing this
@@ -145,7 +148,7 @@
 
   09 Feb 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/kvirc-3.2.0-gcc4.patch, kvirc-3.2.0.ebuild:
-  Add patch to fix compilation with gcc-4 by Robert Förster <ich AT kuja DOT
+  Add patch to fix compilation with gcc-4 by Robert FÃ¶rster <ich AT kuja DOT
   in>; bug #114485
 
   31 Dec 2005; Joshua Kinard <kumba@gentoo.org> kvirc-3.2.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.4.0.ebuild,v 1.1 2008/03/21 19:35:31 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.4.0.ebuild,v 1.2 2008/03/22 10:43:04 jokey Exp $
 
 inherit eutils kde-functions
 
@@ -36,7 +36,6 @@ src_compile() {
 	if ! use qt4 ; then
 		set-qtdir 3
 		set-kdedir 3
-		die "SIGH"
 	fi
 
 	# use aa even when kde support is disabled; remove the splash screen
