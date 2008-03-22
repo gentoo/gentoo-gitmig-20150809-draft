@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.94-r1.ebuild,v 1.3 2008/03/22 19:59:15 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.94-r1.ebuild,v 1.4 2008/03/22 20:02:28 wltjr Exp $
 
 # TODO: if 'doc' use flag is used then should build also extra docs ('docs' ant target), currently it cannot
 #       be built as it needs forrest which we do not have
@@ -32,11 +32,11 @@ COMMON_DEPEND="
 	jai? ( dev-java/sun-jai-bin )
 	jimi? ( dev-java/sun-jimi )"
 
-RDEPEND="virtual/jre:1.4
+RDEPEND=">=virtual/jre-1.4
 	dev-java/ant-core
 	${COMMON_DEPEND}"
 
-DEPEND="virtual/jdk:1.4
+DEPEND=">=virtual/jdk-1.4
 	hyphenation? ( dev-java/offo-hyphenation )
 	${COMMON_DEPEND}"
 #	test? (
