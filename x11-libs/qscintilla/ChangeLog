@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.5 2008/02/21 14:29:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.6 2008/03/22 19:54:09 coldwind Exp $
+
+  22 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  qscintilla-2.1-r1.ebuild:
+  amd64 stable
 
   21 Feb 2008; Raúl Porcel <armin76@gentoo.org> qscintilla-2.1-r1.ebuild:
   alpha/ia64/sparc stable
