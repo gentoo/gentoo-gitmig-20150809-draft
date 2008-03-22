@@ -1,6 +1,14 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.153 2008/03/17 14:03:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.154 2008/03/22 23:50:04 eva Exp $
+
+*epiphany-2.22.0 (22 Mar 2008)
+
+  22 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +epiphany-2.22.0.ebuild:
+  New version for GNOME-2.22. Uses GIO, internal refactoring to ease cross
+  engine support, and some GUI work (notifications for downloads for
+  example)
 
   17 Mar 2008; Raúl Porcel <armin76@gentoo.org> epiphany-2.20.3.ebuild:
   Fix deps for net-libs/xulrunner and www-client/mozilla-firefox
