@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8409 2008/03/22 14:57:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8410 2008/03/22 19:28:02 calchan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Denis Dupeyron <calchan@gentoo.org> (22 Mar 2008)
+# Not needed anymore. Was only used by old versions of
+# sci-libs/libgeda which were just punted. Will be removed
+# in 30 days.
+sci-libs/libgdgeda
 
 # Tristan Heaven <nyhm@gentoo.org> (21 Mar 2008)
 # Needs testing
