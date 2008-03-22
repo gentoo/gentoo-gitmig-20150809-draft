@@ -1,1 +1,0 @@
-KERNEL=="irda[0-9]*", RUN+="/lib/udev/irda-usb.sh"

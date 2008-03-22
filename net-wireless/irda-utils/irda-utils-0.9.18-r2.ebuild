@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.18-r1.ebuild,v 1.1 2008/03/06 21:15:00 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.18-r2.ebuild,v 1.1 2008/03/22 18:34:10 sbriesen Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
-DESCRIPTION="IrDA utilities for infrared communication"
+DESCRIPTION="IrDA management and handling utilities"
 HOMEPAGE="http://irda.sourceforge.net"
 SRC_URI="mirror://sourceforge/irda/${P}.tar.gz"
 
@@ -14,7 +14,10 @@ KEYWORDS="~amd64 ~arm ~ppc ~sh ~x86"
 IUSE=""
 
 RDEPEND="=dev-libs/glib-2*
-	>=sys-apps/pciutils-2.2.7-r1"
+	>=sys-apps/pciutils-2.2.7-r1
+	sys-process/procps
+	sys-apps/setserial
+	sys-apps/grep"
 DEPEND="${RDEPEND}
 	!app-laptop/smcinit
 	dev-util/pkgconfig"
@@ -24,8 +27,9 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}/irda-utils-rh1.patch"
-	epatch "${FILESDIR}/irda-utils-0.9.18-makefile.diff"
-	epatch "${FILESDIR}/irda-utils-0.9.18-io.h.diff"
+	epatch "${FILESDIR}/${P}-makefile.diff"
+	epatch "${FILESDIR}/${P}-smcinit.diff"
+	epatch "${FILESDIR}/${P}-io.h.diff"
 
 	# fix crosscompile, respect CFLAGS (Bug 200295)
 	sed -i -e "/^CC/s:gcc:$(tc-getCC):" \
@@ -36,6 +40,9 @@ src_unpack() {
 
 	# fix compile when pciutils is compiled with USE=zlib (Bug 200295)
 	sed -i -e "s:-lpci:$(pkg-config --libs libpci):g" smcinit/Makefile
+
+	# disable etc subdir in Makefile
+	sed -i -e "s:^\(DIRS.*=.* \)etc \(.*\):\1\2:g" Makefile
 
 	append-flags "-fno-strict-aliasing"
 }
@@ -50,8 +57,7 @@ src_install () {
 	dodir /usr/sbin
 
 	emake install RPM_OPT_FLAGS="${CFLAGS}" ROOT="${D}" \
-		MANDIR="${D}/usr/share/man" \
-		|| die "emake install failed"
+		MANDIR="${D}usr/share/man"	|| die "emake install failed"
 
 	newdoc ethereal/README     README.wireshark
 	newdoc irattach/README     README.irattach
@@ -67,13 +73,17 @@ src_install () {
 	newdoc irdadump/ChangeLog  ChangeLog.irdadump
 	newdoc smcinit/ChangeLog   ChangeLog.smcinit
 	dohtml smcinit/RobMiller-irda.html
-	dodoc README etc/modules.conf.irda
+	dodoc README
 
-	newconfd "${FILESDIR}/irda.conf" irda
-	newinitd "${FILESDIR}/irda.rc" irda
+	newconfd "${FILESDIR}/irda.confd" irda
+	newinitd "${FILESDIR}/irda.initd" irda
+
+	insinto /etc/modprobe.d
+	newins "${FILESDIR}/irda.modsd" irda
 
 	insinto /etc/udev/rules.d
-	newins "${FILESDIR}/irda-usb.rules" 53-irda-usb.rules
+	newins "${FILESDIR}/irda.rules" 53-irda.rules
 	exeinto /lib/udev
-	doexe "${FILESDIR}/irda-usb.sh"
+	newexe "${FILESDIR}/irda-setup.sh" irda-setup
+	newexe "${FILESDIR}/irda-usb.sh" irda-usb
 }

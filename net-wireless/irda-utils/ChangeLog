@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/irda-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.24 2008/03/06 21:15:00 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.25 2008/03/22 18:34:10 sbriesen Exp $
+
+*irda-utils-0.9.18-r2 (22 Mar 2008)
+
+  22 Mar 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/irda-utils-0.9.18-smcinit.diff, +files/irda.confd,
+  +files/irda.initd, +files/irda.modsd, +files/irda.rules,
+  +files/irda-setup.sh, -files/irda-usb.rules, files/irda-usb.sh,
+  -irda-utils-0.9.18-r1.ebuild, +irda-utils-0.9.18-r2.ebuild:
+  revbump. complete new and shiny init-scripts + udev hotplugging.
 
 *irda-utils-0.9.18-r1 (06 Mar 2008)
 
