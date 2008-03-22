@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.4.ebuild,v 1.1 2008/03/22 21:57:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.4.ebuild,v 1.2 2008/03/22 22:05:21 eva Exp $
 
 inherit autotools eutils pam gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gdm/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~x86 ~x86-fbsd"
 
 IUSE_LIBC="elibc_glibc"
 IUSE="accessibility afs branding dmx ipv6 pam remote selinux tcpd xinerama $IUSE_LIBC"
@@ -42,7 +42,10 @@ RDEPEND="dev-libs/dbus-glib
 		 accessibility? ( x11-libs/libXevie )
 		 afs? ( net-fs/openafs sys-libs/lwp )
 		 dmx? ( x11-libs/libdmx )
-		 pam? ( virtual/pam )
+		 pam? (
+		 	virtual/pam
+		 	>=sys-auth/pambase-20080318
+		 )
 		 !pam? ( elibc_glibc? ( sys-apps/shadow ) )
 		 remote? ( gnome-extra/zenity )
 		 selinux? ( sys-libs/libselinux )
