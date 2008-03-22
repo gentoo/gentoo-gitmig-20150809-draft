@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.210 2008/02/27 16:04:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.211 2008/03/22 20:34:58 phreak Exp $
+
+*hardened-sources-2.6.23-r9 (22 Mar 2008)
+
+  22 Mar 2008; Christian Heim <phreak@gentoo.org>
+  +hardened-sources-2.6.23-r9.ebuild:
+  * Revision bump, rebasing the patchset against genpatches-2.6.23-10.
+  * Change the default GIDs for some grsecurity options
+  * Revamp the Hardened [Gentoo] security level and make it the default level
+  * Fixing compilation on ia64 with CONFIG_MODULES=y (loadable module support)
+  * Fix a recursive lock -- call to capable() within ptrace_attach()
+  * Fix bug that allows audit and iscsi operations to be controlled via netlink
 
 *hardened-sources-2.6.23-r8 (27 Feb 2008)
 
