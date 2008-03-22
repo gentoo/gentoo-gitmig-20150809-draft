@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/siproxd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/ChangeLog,v 1.8 2007/11/02 04:07:04 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/ChangeLog,v 1.9 2008/03/22 10:54:49 opfer Exp $
+
+*siproxd-0.7.0 (22 Mar 2008)
+
+  22 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
+  +files/siproxd-0.7.0-guide.diff, +files/siproxd-0.7.0-libosip-3.1.0.diff,
+  +siproxd-0.7.0.ebuild:
+  version bump, taken from voip overlay. Fixes bugs 205766 and 205765, both
+  reported by Georgi Georgiev <chutz AT gg3 DOT net>
 
   02 Nov 2007; Steve Dibb <beandog@gentoo.org> siproxd-0.5.13.ebuild:
   amd64 stable, bug 197384
