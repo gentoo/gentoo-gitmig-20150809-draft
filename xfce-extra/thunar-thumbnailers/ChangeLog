@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/thunar-thumbnailers
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.46 2007/11/20 20:01:18 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.47 2008/03/22 08:10:24 drac Exp $
+
+*thunar-thumbnailers-0.3.2 (22 Mar 2008)
+
+  22 Mar 2008; Samuli Suominen <drac@gentoo.org>
+  +thunar-thumbnailers-0.3.2.ebuild:
+  Version bump.
 
   20 Nov 2007; Samuli Suominen <drac@gentoo.org>
   thunar-thumbnailers-0.2.1.ebuild, thunar-thumbnailers-0.3.0.ebuild:
