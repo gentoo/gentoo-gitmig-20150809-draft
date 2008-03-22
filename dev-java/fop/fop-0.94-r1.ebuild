@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.94-r1.ebuild,v 1.1 2008/03/22 19:36:02 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.94-r1.ebuild,v 1.2 2008/03/22 19:54:47 wltjr Exp $
 
 # TODO: if 'doc' use flag is used then should build also extra docs ('docs' ant target), currently it cannot
 #       be built as it needs forrest which we do not have
@@ -22,12 +22,12 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="hyphenation jai jimi"
 
 COMMON_DEPEND="
-	>=dev-java/avalon-framework-4.2
-	>=dev-java/batik-1.6
+	dev-java/avalon-framework:4.2
+	dev-java/batik:1.6
 	dev-java/commons-io
 	dev-java/commons-logging
 	java-virtuals/servlet-api:2.2
-	>=dev-java/xmlgraphics-commons-1.1
+	dev-java/xmlgraphics-commons:1
 	dev-java/xalan
 	jai? ( dev-java/sun-jai-bin )
 	jimi? ( dev-java/sun-jimi )"
