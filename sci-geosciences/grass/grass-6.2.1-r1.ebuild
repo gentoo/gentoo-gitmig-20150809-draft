@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1-r1.ebuild,v 1.2 2008/03/22 03:52:38 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1-r1.ebuild,v 1.3 2008/03/22 04:48:19 mr_bones_ Exp $
 
 inherit eutils autotools fdo-mime versionator
 
@@ -243,7 +243,7 @@ generate_files() {
 	# MODULE:       GRASS Initialization
 	# AUTHOR(S):    Justin Hickey - Thailand - jhickey@hpcc.nectec.or.th
 	# COPYRIGHT:    (C) 2000-2005 by the GRASS Development Team
-	# This program is free software under the GNU General Public License 
+	# This program is free software under the GNU General Public License
 	# (>=v2)
 	#
 	trap "echo 'User break!' ; exit" 2 3 9 15
