@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/raw-thumbnailer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/ChangeLog,v 1.18 2008/03/22 13:34:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/ChangeLog,v 1.19 2008/03/22 14:25:09 klausman Exp $
+
+  22 Mar 2008; Tobias Klausmann <klausman@gentoo.org>
+  raw-thumbnailer-0.2.ebuild:
+  Stable on alpha, bug #214222
 
   22 Mar 2008; Jeroen Roovers <jer@gentoo.org> raw-thumbnailer-0.2.ebuild:
   Stable for HPPA (bug #214222).
