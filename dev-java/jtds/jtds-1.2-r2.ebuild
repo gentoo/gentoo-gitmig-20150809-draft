@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-1.2-r2.ebuild,v 1.7 2008/01/20 23:19:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-1.2-r2.ebuild,v 1.8 2008/03/22 02:45:18 betelgeuse Exp $
 
-JAVA_PKG_IUSE="doc source"
 EAPI=1
+JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -29,6 +29,9 @@ RDEPEND=">=virtual/jre-1.4
 
 S=${WORKDIR}
 
+# Would need a running server
+RESTRICT="test"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -50,5 +53,5 @@ src_install() {
 
 	dodoc CHANGELOG README* || die "Failed to install docs."
 	use doc && java-pkg_dojavadoc build/doc
-	use source && java-pkg_dosrc ${S}/src/main/*
+	use source && java-pkg_dosrc "${S}"/src/main/*
 }
