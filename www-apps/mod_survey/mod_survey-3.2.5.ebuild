@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/mod_survey-3.2.5.ebuild,v 1.1 2008/03/04 09:40:26 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/mod_survey-3.2.5.ebuild,v 1.2 2008/03/22 23:58:41 hollow Exp $
 
 inherit depend.apache webapp
 
@@ -44,7 +44,7 @@ pkg_setup() {
 					ewarn "${i} from the LINGUAS variable has been set as the"
 					ewarn "default language. This can be overriden on a"
 					ewarn "per-survey basis, or changed in"
-					ewarn "/etc/apache2/modules.d/98_mod_survey.conf"
+					ewarn "${APACHE_MODULES_CONFDIR}/98_${PN}.conf"
 					ewarn
 					break
 				fi
