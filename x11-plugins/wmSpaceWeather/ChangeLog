@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmSpaceWeather
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.16 2008/03/08 23:42:02 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.17 2008/03/22 16:45:46 coldwind Exp $
+
+  22 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  -wmSpaceWeather-1.04.ebuild, wmSpaceWeather-1.04_p19.ebuild:
+  amd64 stable and remove old wrt bug #207888
 
   08 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
   wmSpaceWeather-1.04_p19.ebuild:
