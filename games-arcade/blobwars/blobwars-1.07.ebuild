@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.07.ebuild,v 1.2 2007/07/25 04:15:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.07.ebuild,v 1.3 2008/03/22 10:22:43 remi Exp $
 
 inherit eutils gnome2-utils games
 
@@ -59,6 +59,11 @@ src_install() {
 	rm -f "${D}/usr/share/doc/${PF}/"*.{png,gif,html} \
 		"${D}/usr/share/doc/${PF}/"{CHANGES,HACKING,LICENSE,PORTING,README}
 	prepgamesdirs
+}
+
+pkg_preinst() {
+	games_pkg_preinst
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {
