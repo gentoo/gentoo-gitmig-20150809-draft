@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/python-musicbrainz-20050108.ebuild,v 1.4 2008/01/02 11:52:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/python-musicbrainz-20050108-r1.ebuild,v 1.1 2008/03/22 12:23:45 hawking Exp $
 
 inherit distutils
 
@@ -12,15 +12,18 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-IUSE=""
+IUSE="examples"
 DEPEND="=media-libs/musicbrainz-2*
-	>=dev-python/ctypes-0.9.2
-	>=dev-lang/python-2.3"
+	|| ( >=dev-lang/python-2.5
+		( >=dev-lang/python-2.3 >=dev-python/ctypes-0.9.2 )
+	)"
+
 S=${WORKDIR}/${PN}
 
 src_install() {
 	distutils_src_install
-	dodir /usr/share/doc/${PF}/examples
-	cp examples/* ${D}/usr/share/doc/${PF}/examples/
-	prepalldocs
+	if use examples; then
+		dodir /usr/share/doc/${PF}/examples
+		cp examples/* "${D}"/usr/share/doc/${PF}/examples/
+	fi
 }

@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/python-musicbrainz
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/ChangeLog,v 1.4 2008/01/02 11:52:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/ChangeLog,v 1.5 2008/03/22 12:23:45 hawking Exp $
+
+*python-musicbrainz-20050108-r1 (22 Mar 2008)
+
+  22 Mar 2008; Ali Polatel <hawking@gentoo.org> metadata.xml,
+  -python-musicbrainz-20050108.ebuild,
+  +python-musicbrainz-20050108-r1.ebuild:
+  Revbump. Add a conditional dependency for python-2.5 which includes
+  ctypes. Bug 196488 thanks to James Rowe. Added examples USE flag.
 
   02 Jan 2008; Alexis Ballier <aballier@gentoo.org>
   python-musicbrainz-20050108.ebuild:

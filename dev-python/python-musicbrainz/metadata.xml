@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
+	<longdescription lang="en">
+	python-musicbrainz is a straight python to c binding for libmusicbrainz. It
+	uses ctypes to avoid having to write c code.
+	</longdescription>
 </pkgmetadata>
+
