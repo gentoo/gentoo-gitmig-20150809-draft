@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1-r1.ebuild,v 1.1 2008/03/22 02:31:43 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1-r1.ebuild,v 1.2 2008/03/22 03:52:38 nerdboy Exp $
 
 inherit eutils autotools fdo-mime versionator
 
@@ -14,8 +14,7 @@ SRC_URI="http://grass.itc.it/${MY_PM}/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-# To-do: get ppc64 gdal deps fixed up
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="ffmpeg fftw glw gmath jpeg largefile mysql nls odbc opengl png \
 postgres python readline sqlite tiff truetype X"
@@ -216,17 +215,19 @@ src_install() {
 	    generate_files
 	    doenvd 99grass-6
 	    dobin ${MY_PM}.sh
-	    doicon "${FILESDIR}"/grass_icon.png
-	    domenu ${MY_PM}-grass.desktop
+	    if use X; then
+		doicon "${FILESDIR}"/grass_icon.png
+		domenu ${MY_PM}-grass.desktop
+	    fi
 	eend ${?}
 }
 
 pkg_postinst() {
-	fdo-mime_desktop_database_update
+	use X && fdo-mime_desktop_database_update
 }
 
 pkg_postrm() {
-	fdo-mime_desktop_database_update
+	use X && fdo-mime_desktop_database_update
 }
 
 generate_files() {
