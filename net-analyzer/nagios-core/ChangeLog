@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.115 2008/03/21 10:26:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.116 2008/03/22 15:37:39 armin76 Exp $
+
+  22 Mar 2008; Raúl Porcel <armin76@gentoo.org> nagios-core-2.11.ebuild:
+  sparc stable wrt #213766
 
   21 Mar 2008; Markus Meier <maekke@gentoo.org> nagios-core-2.11.ebuild:
   amd64/x86 stable, security bug #213766
