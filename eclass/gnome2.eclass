@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.84 2008/03/22 09:37:44 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.85 2008/03/22 10:19:05 remi Exp $
 
 #
 # gnome2.eclass
@@ -108,7 +108,7 @@ gnome2_src_install() {
 
 gnome2_pkg_preinst() {
 	gnome2_gconf_savelist
-	gnome2_icons_savelist
+	gnome2_icon_savelist
 }
 
 gnome2_pkg_postinst() {

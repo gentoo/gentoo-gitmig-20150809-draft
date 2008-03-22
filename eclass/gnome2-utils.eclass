@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.8 2008/03/22 09:37:44 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.9 2008/03/22 10:19:05 remi Exp $
 
 #
 # gnome2-utils.eclass
@@ -112,7 +112,8 @@ gnome2_gconf_uninstall() {
 
 # Find the icons that are about to be installed and save their location
 # in the GNOME2_ECLASS_ICONS environment variable
-gnome2_icons_savelist() {
+# That function should be called from pkg_preinst
+gnome2_icon_savelist() {
 	pushd "${D}" &> /dev/null
 	export GNOME2_ECLASS_ICONS=$(find 'usr/share/icons' -maxdepth 1 -mindepth 1 -type d)
 	popd &> /dev/null
