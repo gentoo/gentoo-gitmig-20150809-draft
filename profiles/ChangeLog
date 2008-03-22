@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1233 2008/03/22 19:28:02 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1234 2008/03/22 21:37:46 eva Exp $
+
+  22 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
+  add asyncns USE flag for net-libs/loudmouth
 
   22 Mar 2008; Denis Dupeyron <calchan@gentoo.org> package.mask:
   Masked sci-libs/libgdgeda for removal.
