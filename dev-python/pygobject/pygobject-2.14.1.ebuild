@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.14.1.ebuild,v 1.6 2008/03/17 00:35:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.14.1.ebuild,v 1.7 2008/03/22 03:49:36 dang Exp $
 
 WANT_AUTOMAKE=1.9.6
 inherit gnome2 python autotools
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.pygtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
 # glib higher dep than in configure.in comes from a runtime version check and ensures that
