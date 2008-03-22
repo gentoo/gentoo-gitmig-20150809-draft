@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.6.ebuild,v 1.6 2008/03/22 17:34:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.6.ebuild,v 1.7 2008/03/22 19:27:56 alonbl Exp $
 
 inherit autotools eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-cvs.patch"
 	chmod a+x "tests/gpg/pinentry"
-	eautoreconf
+	AT_M4DIR="m4" eautoreconf
 
 	# We need to call elibtoolize so that we get sane .so versioning on fbsd.
 	#elibtoolize
