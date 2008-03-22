@@ -1,6 +1,16 @@
 # ChangeLog for app-office/texmacs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.57 2007/07/22 10:02:33 calchan Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.58 2008/03/22 13:55:42 graaff Exp $
+
+*texmacs-1.0.6.14 (22 Mar 2008)
+
+  22 Mar 2008; Hans de Graaff <graaff@gentoo.org>
+  +files/texmacs-1.0.6.14.patch, -texmacs-1.0.4-r1.ebuild,
+  -texmacs-1.0.5.6.ebuild, +texmacs-1.0.6.14.ebuild:
+  Copy ebuild and associated files written by Andrey Grozin
+  <A.G.Grozin@inp.nsk.su> from science overlay on behalf of the
+  treecleaners, bug #163907, since the previous version does not even compile
+  anymore.
 
   22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> texmacs-1.0.4-r1.ebuild,
   texmacs-1.0.5.6.ebuild, texmacs-1.0.6-r1.ebuild:
