@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_macro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.16 2008/02/07 20:29:51 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.17 2008/03/22 17:11:40 hollow Exp $
+
+  22 Mar 2008; Benedikt Böhm <hollow@gentoo.org> mod_macro-1.1.10.ebuild:
+  amd64 stable wrt #208556
 
   07 Feb 2008; Benedikt Böhm <hollow@gentoo.org> -mod_macro-1.1.6.ebuild,
   -mod_macro-1.1.8.ebuild:
