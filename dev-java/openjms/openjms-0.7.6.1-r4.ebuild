@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r2.ebuild,v 1.3 2007/10/24 05:46:17 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r4.ebuild,v 1.1 2008/03/22 21:14:57 wltjr Exp $
 
+EAPI=1
 JAVA_PKG_IUSE="doc"
 WANT_ANT_TASKS="ant-antlr"
 
@@ -11,13 +12,13 @@ SLOT="0"
 LICENSE="GPL-2"
 DESCRIPTION="Open Java Messaging System"
 HOMEPAGE="http://openjms.sourceforge.net/"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz mirror://gentoo/${P}-scripts.tar.gz"
 IUSE=""
 RDEPEND="=virtual/jre-1.4*
 	dev-java/antlr
-	=dev-java/castor-0.9*
-	dev-java/cdegroot-db
+	dev-java/castor:0.9
+	dev-java/cdegroot-db:1
 	dev-java/commons-collections
 	dev-java/commons-dbcp
 	dev-java/commons-logging
@@ -25,13 +26,13 @@ RDEPEND="=virtual/jre-1.4*
 	dev-java/concurrent-util
 	dev-java/exolabcore
 	dev-db/hsqldb
-	dev-java/jdbm
+	dev-java/jdbm:1
 	dev-java/sun-jms
 	dev-java/jta
 	dev-java/log4j
-	=dev-java/jakarta-oro-2.0*
-	~dev-java/servletapi-2.3
-	=dev-java/xerces-2.3*"
+	dev-java/jakarta-oro:2.0
+	java-virtuals/servlet-api:2.3
+	dev-java/xerces:2"
 DEPEND="=virtual/jdk-1.4*
 	${RDEPEND}
 	dev-java/ant-core"
@@ -46,7 +47,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}/source.patch"
 
 	cd "${S}/lib"
-	rm -f *.jar
+	rm -v *.jar || die
 
 	java-pkg_jar-from antlr
 	java-pkg_jar-from castor-0.9
@@ -62,14 +63,14 @@ src_unpack() {
 	java-pkg_jar-from sun-jms
 	java-pkg_jar-from jta
 	java-pkg_jar-from log4j
-	java-pkg_jar-from servletapi-2.3
-	java-pkg_jar-from xerces-2.3
+	java-pkg_jar-from --virtual servlet-api-2.3
+	# The build.xml runs java with something that uses xerces
+	java-pkg_jar-from --with-dependencies xerces-2
 	java-pkg_jar-from jakarta-oro-2.0
 }
 
-src_compile() {
-	eant jar war
-}
+EANT_DOC_TARGET=""
+EANT_BUILD_TARGET="jar war"
 
 src_install() {
 	java-pkg_newjar lib/${P}.jar ${PN}.jar
