@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/nabi
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.22 2007/02/21 22:10:09 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.23 2008/03/22 19:27:46 opfer Exp $
+
+  22 Mar 2008; Christian Faulhammer <opfer@gentoo.org> nabi-0.15.ebuild:
+  stable x86, bug 108065
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
