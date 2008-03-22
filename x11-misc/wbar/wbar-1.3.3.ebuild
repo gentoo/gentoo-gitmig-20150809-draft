@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-1.3.3.ebuild,v 1.2 2008/03/22 07:51:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-1.3.3.ebuild,v 1.3 2008/03/22 10:43:26 maekke Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tecnologia-aplicada.com.ar/rodolfo/${P}.tbz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/imlib2
