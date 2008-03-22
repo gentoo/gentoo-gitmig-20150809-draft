@@ -24,22 +24,6 @@
  import org.apache.commons.codec.EncoderException;
  import org.apache.commons.codec.StringEncoder;
  import org.apache.commons.codec.StringEncoderAbstractTest;
-@@ -26,13 +28,13 @@
- /**
-  * Tests {@link Soundex}
-  * 
-- * @version $Id: 1.3-tests-fix.patch,v 1.1 2008/03/22 02:24:52 betelgeuse Exp $
-  * @author Apache Software Foundation
-+ * @version $Id: 1.3-tests-fix.patch,v 1.1 2008/03/22 02:24:52 betelgeuse Exp $
-  */
- public class SoundexTest extends StringEncoderAbstractTest {
- 
-     public static Test suite() {
--        return (new TestSuite(SoundexTest.class));
-+        return new TestSuite(SoundexTest.class);
-     }
- 
-     private Soundex encoder = null;
 @@ -340,30 +342,39 @@
      /**
       * Fancy characters are not mapped by the default US mapping.
