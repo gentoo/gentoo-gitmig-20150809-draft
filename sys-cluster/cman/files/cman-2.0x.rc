@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/cman-2.0x.rc,v 1.1 2008/03/17 23:39:07 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/cman-2.0x.rc,v 1.2 2008/03/22 22:59:25 xmerlin Exp $
 
 CCSD_BIN="/usr/sbin/ccsd"
 
@@ -281,6 +281,6 @@ stop() {
 	stop_groupd
 
 	stop_ccsd
-	umount_configfs	
         unload_allmodules
+	umount_configfs
 }
