@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0-r3.ebuild,v 1.6 2008/01/17 14:39:12 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0-r3.ebuild,v 1.7 2008/03/22 01:48:24 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -23,6 +23,9 @@ DEPEND=">=virtual/jdk-1.3
 
 S=${WORKDIR}/xerces-${PV//./_}
 
+# Tests are missing
+RESTRICT="test"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -33,9 +36,8 @@ src_unpack() {
 	java-pkg_jar-from xml-commons xml-apis.jar
 }
 
-src_compile() {
-	ANT_TASKS="xjavac-1" eant jar $(use_doc javadocs)
-}
+EANT_ANT_TASKS="xjavac-1"
+EANT_DOC_TARGET="javadocs"
 
 src_install() {
 	java-pkg_dojar build/xercesImpl.jar
