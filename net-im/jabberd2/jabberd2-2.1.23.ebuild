@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.1.23.ebuild,v 1.1 2008/03/18 11:56:45 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.1.23.ebuild,v 1.2 2008/03/22 18:05:05 wschlich Exp $
 
 inherit db-use eutils flag-o-matic pam
 
@@ -32,7 +32,7 @@ S="${WORKDIR}/jabberd-${PV}"
 src_compile() {
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=207655#c3
-	replace-flags -O* -O2
+	replace-flags -O[3s] -O2
 
 	if use debug; then
 		localconf="${localconf} --enable-debug"
