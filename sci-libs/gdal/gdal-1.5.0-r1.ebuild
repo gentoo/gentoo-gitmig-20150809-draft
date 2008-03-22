@@ -1,11 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.5.0.ebuild,v 1.2 2008/02/09 18:39:06 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.5.0-r1.ebuild,v 1.1 2008/03/22 06:14:33 nerdboy Exp $
 
+WANT_AUTOCONF="2.5"
 inherit autotools distutils eutils perl-module toolchain-funcs
 
 IUSE="curl debug doc fits geos gif gml hdf hdf5 jpeg jpeg2k mysql netcdf \
-	odbc png ogdi perl postgres python ruby sqlite threads"
+odbc png ogdi perl postgres python ruby sqlite threads"
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats (includes OGR support)"
 HOMEPAGE="http://www.gdal.org/"
@@ -20,6 +21,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 DEPEND=">=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7.0
 	sci-libs/libgeotiff
+	dev-libs/expat
 	curl? ( net-misc/curl )
 	jpeg? ( media-libs/jpeg )
 	gif? ( media-libs/giflib )
@@ -45,8 +47,16 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	sqlite? ( >=dev-db/sqlite-3 )
 	doc? ( app-doc/doxygen )"
 
-WANT_AUTOCONF="2.5"
 AT_M4DIR="${S}/m4"
+
+pkg_setup() {
+	if [ -n "${GDAL_CONFIGURE_OPTS}" ]; then
+	    elog "User-specified configure options are ${GDAL_CONFIGURE_OPTS}."
+	else
+	    elog "User-specified configure options are not set."
+	    elog "If needed, set GDAL_CONFIGURE_OPTS to enable grass support."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -55,10 +65,10 @@ src_unpack() {
 	eaclocal
 	eautoconf
 
-	epatch "${FILESDIR}/${PN}-1.4.2-datadir.patch" \
-	    "${FILESDIR}/${P}-python-install.patch" \
-	    "${FILESDIR}/${P}-soname.patch" \
-	    "${FILESDIR}/${P}-makefile.patch"
+	epatch "${FILESDIR}"/${PN}-1.4.2-datadir.patch \
+	    "${FILESDIR}"/${P}-python-install.patch \
+	    "${FILESDIR}"/${P}-soname.patch \
+	    "${FILESDIR}"/${P}-makefile.patch
 
 	if useq netcdf && useq hdf; then
 	    einfo	"Checking if HDF4 is compiled with szip..."
@@ -75,15 +85,19 @@ src_unpack() {
 src_compile() {
 	distutils_python_version
 
-	pkg_conf="--enable-static=no --enable-shared=yes --with-pic \
-		--with-libgrass=no --without-libtool $(use_enable debug)"
+	local pkg_conf="${GDAL_CONFIGURE_OPTS}"
+	local use_conf=""
+
+	pkg_conf="${pkg_conf} --enable-shared=yes --with-pic \
+		--with-libgrass=no --without-libtool"
 
 	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) \
 	    $(use_with postgres pg) $(use_with python) $(use_with ruby) \
 	    $(use_with threads) $(use_with fits cfitsio) $(use_with perl) \
 	    $(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
 	    $(use_with sqlite) $(use_with jpeg2k jasper) $(use_with odbc) \
-	    $(use_with gml xerces) $(use_with hdf5) $(use_with curl)"
+	    $(use_with gml xerces) $(use_with hdf5) $(use_with curl) \
+	    $(use_enable debug)"
 
 	# It can't find this
 	if useq ogdi ; then
@@ -114,7 +128,7 @@ src_compile() {
 	# also failing with gcc4 in libcsf
 	emake -j1 || die "emake failed"
 
-	if use python; then
+	if useq python; then
 	    sed -i -e "s#library_dirs = #library_dirs = /usr/$(get_libdir):#g" \
 		swig/python/setup.cfg
 	    sed -i -e "s:$(DESTDIR)$(prefix):$(DESTDIR)$(INST_PREFIX):g" \
@@ -164,17 +178,24 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "GDAL is most useful with full graphics support enabled via various"
-	einfo "USE flags: png, jpeg, gif, jpeg2k, etc. Also python, fits, ogdi,"
-	einfo "geos, and support for either netcdf or HDF4 is available, as well as"
-	einfo "grass, and mysql, sqlite, or postgres (grass support requires grass 6"
-	einfo "and the new gdal-grass ebuild).  HDF5 support is now included."
-	ewarn
-	einfo "Note: tiff and geotiff are now hard depends, so no USE flags."
-	einfo "Also, this package will check for netcdf before hdf, so if you"
-	einfo "prefer hdf, please emerge hdf with USE=szip prior to emerging"
-	einfo "gdal.  Detailed API docs require doxygen (man pages are free)."
-	einfo ""
-	einfo "Check available image and data formats after building with"
-	einfo "gdalinfo and ogrinfo (using the --formats switch)."
+	elog
+	elog "If you need libgrass support, then you must rebuild gdal, after"
+	elog "installing the latest Grass, and set the following option:"
+	elog
+	elog "GDAL_CONFIGURE_OPTS=--with-grass=${GRASS_HOME} emerge gdal"
+	elog
+	elog "GDAL is most useful with full graphics support enabled via various"
+	elog "USE flags: png, jpeg, gif, jpeg2k, etc. Also python, fits, ogdi,"
+	elog "geos, and support for either netcdf or HDF4 is available, as well as"
+	elog "grass, and mysql, sqlite, or postgres (grass support requires grass 6"
+	elog "and rebuilding gdal).  HDF5 support is now included."
+	elog
+	elog "Note: tiff and geotiff are now hard depends, so no USE flags."
+	elog "Also, this package will check for netcdf before hdf, so if you"
+	elog "prefer hdf, please emerge hdf with USE=szip prior to emerging"
+	elog "gdal.  Detailed API docs require doxygen (man pages are free)."
+	elog
+	elog "Check available image and data formats after building with"
+	elog "gdalinfo and ogrinfo (using the --formats switch)."
+	elog
 }

@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.38 2008/02/09 19:53:23 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.39 2008/03/22 06:14:33 nerdboy Exp $
+
+*gdal-1.5.0-r1 (22 Mar 2008)
+
+  22 Mar 2008; Steve Arnold <nerdboy@gentoo.org> -gdal-1.5.0.ebuild,
+  +gdal-1.5.0-r1.ebuild:
+  Updated for optional libgrass rebuild support (avoids circular 
+  dependency issue).
 
   09 Feb 2008; Steve Arnold <nerdboy@gentoo.org> ChangeLog:
   removed stale digest files; had to force it again after a tree update...
