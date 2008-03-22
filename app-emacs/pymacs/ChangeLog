@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.27 2008/02/16 22:54:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.28 2008/03/22 13:43:59 opfer Exp $
+
+  22 Mar 2008; Christian Faulhammer <opfer@gentoo.org> pymacs-0.23.ebuild:
+  stable x86/amd64, bug 214246
 
 *pymacs-0.23 (16 Feb 2008)
 
