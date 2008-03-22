@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.9 2006/12/06 23:57:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.10 2008/03/22 00:56:29 nerdboy Exp $
 
+WANT_AUTOCONF="2.5"
 inherit fortran distutils eutils autotools toolchain-funcs
 
 DESCRIPTION="MPICH2 - A portable MPI implementation"
@@ -53,16 +54,16 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	ebegin "Reconfiguring"
 	    find . -name configure -print | xargs rm
 	    ./maint/updatefiles
 	    use mpe-sdk && ./src/mpe2/maint/updatefiles
 	eend
-	epatch ${FILESDIR}/${P}-make.patch || die "make patch failed"
+	epatch "${FILESDIR}"/${P}-make.patch || die "make patch failed"
 	# damn, have to patch the createshlib script here...
-	epatch ${FILESDIR}/${P}-soname.patch || die "soname patch failed"
-	#epatch ${FILESDIR}/${P}-make-test.patch || die "make test patch failed"
+	epatch "${FILESDIR}"/${P}-soname.patch || die "soname patch failed"
+	#epatch "${FILESDIR}"/${P}-make-test.patch || die "make test patch failed"
 }
 
 src_compile() {
@@ -91,7 +92,7 @@ src_compile() {
 		--enable-clog=no --enable-slog2=no"
 	fi
 
-	use mpe && MPE_SRC_DIR=${S}/src/mpe2
+	use mpe && MPE_SRC_DIR="${S}"/src/mpe2
 
 	if use threads ; then
 	    myconf="${myconf} --with-thread-package=pthreads"
@@ -99,7 +100,6 @@ src_compile() {
 	    myconf="${myconf} --with-thread-package=none"
 	fi
 
-	WANT_AUTOCONF="2.5" \
 		./configure \
 		--prefix=/usr \
 		--exec-prefix=/usr \
@@ -121,38 +121,38 @@ src_compile() {
 		--datadir=/usr/share/${PN} || die "configure failed"
 
 	if use mpe-sdk ; then
-	    ${MPE_SRC_DIR}/configure --prefix=/usr --enable-mpich \
+	    "${MPE_SRC_DIR}"/configure --prefix=/usr --enable-mpich \
 		--with-mpicc=mpicc --with-mpif77=mpif77 --enable-wrappers \
 		--enable-collchk --with-flib_path_leader="-Wl,-L"
 	fi
 
 	if use mpe ; then
-	     epatch ${FILESDIR}/${P}-mpe-install.patch || die "install patch failed"
+	     epatch "${FILESDIR}"/${P}-mpe-install.patch || die "install patch failed"
 	fi
 
 	# parallel makes are currently broken, so no emake...
 	#make dependencies
 	make || die "make failed"
 
-	if has test ${FEATURES} ; then
+	if has test "${FEATURES}" ; then
 	    # get setup for src_test
 	    #export LDFLAGS='-L../../lib'
-	    export LD_LIBRARY_PATH=${S}/lib:$LD_LIBRARY_PATH
-	    cd ${S}/test/mpi
+	    export LD_LIBRARY_PATH="${S}"/lib:$LD_LIBRARY_PATH
+	    cd "${S}"/test/mpi
 	    #make clean || die "make clean failed"
 	    echo
-	    einfo "Using ./configure --prefix=${S} --with-mpi=${S} --disable-f90"
+	    einfo "Using ./configure --prefix="${S}" --with-mpi="${S}" --disable-f90"
 	    echo
-	    ./configure --prefix=${S} --with-mpi=${S} $(use_enable threads) \
-	        --exec-prefix=${S} --includedir=${S}/src/include --disable-f90 \
+	    ./configure --prefix="${S}" --with-mpi="${S}" $(use_enable threads) \
+	        --exec-prefix="${S}" --includedir="${S}"/src/include --disable-f90 \
 		|| die "configure test failed"
 	    make dependencies
 	    # make doesn't work here for some reason, although it works fine
 	    # when run manually.  Go figure...
 	    #cd ${S}/test/mpi/util
 	    #make all || die "make util failed"
-	    cd ${S}/test
-	    install -g portage -o portage -m 0600 ${FILESDIR}/mpd.conf ${HOME}/.mpd.conf
+	    cd "${S}"/test
+	    install -g portage -o portage -m 0600 "${FILESDIR}"/mpd.conf "${HOME}"/.mpd.conf
 	    #${S}/bin/mpd --daemon
 	    make all || die "make pre-test failed"
 	    #cd ${S}/test/mpi
@@ -169,22 +169,22 @@ src_test() {
 	einfo "Control-C now if you want to disable tests..."
 	epause
 
-	${S}/bin/mpd --daemon
-	cd ${S}/test
+	"${S}"/bin/mpd --daemon
+	cd "${S}"/test
 	nice --adjustment=3 make testing || die "run tests failed"
-	${S}/bin/mpdallexit
+	"${S}"/bin/mpdallexit
 }
 
 src_install() {
 	dodir /etc/${PN}
 	rm -rf src/mpe2/etc/*.in
-	make install DESTDIR=${D} \
-	    LIBDIR=${D}usr/$(get_libdir) || die "make install failed"
+	make install DESTDIR="${D}" \
+	    LIBDIR="${D}"usr/$(get_libdir) || die "make install failed"
 
 	dodir /usr/share/${PN}
-	mv ${D}usr/examples/cpi ${D}usr/share/${PN}/cpi
-	rm -rf ${D}usr/examples
-	rm -rf ${D}usr/sbin
+	mv "${D}"usr/examples/cpi" ${D}"usr/share/${PN}/cpi
+	rm -rf "${D}"usr/examples
+	rm -rf "${D}"usr/sbin
 
 	dodir /usr/share/doc/${PF}
 	if use doc; then
@@ -192,23 +192,25 @@ src_install() {
 		dodoc README.developer RELEASE_NOTES
 		newdoc src/pm/mpd/README README.mpd
 	else
-		rm -rf ${D}usr/share/doc/
-		rm -rf ${D}usr/share/man/
+		rm -rf "${D}"usr/share/doc/
+		rm -rf "${D}"usr/share/man/
 		dodoc README CHANGES COPYRIGHT RELEASE_NOTES
 	fi
 }
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize ${ROOT}usr/bin
-	echo
-	einfo "Note: this package still needs testing with other Fortran90"
-	einfo "compilers besides gfortran (gcc4).  The tests also need some"
-	einfo "magic to build properly within the portage build environment."
-	einfo "(currently the tests only build and run manually)"
-	echo
-	einfo "The gfortran support has been tested successfully with hdf5"
-	einfo "(using gfortran and the mpif90 wrapper)."
+	python_mod_optimize "${ROOT}"usr/bin
+
+	elog
+	elog "Note: this package still needs testing with other Fortran90"
+	elog "compilers besides gfortran (gcc4).  The tests also need some"
+	elog "magic to build properly within the portage build environment."
+	elog "(currently the tests only build and run manually)"
+	elog
+	elog "The gfortran support has been tested successfully with hdf5"
+	elog "(using gfortran and the mpif90 wrapper)."
+	elog
 }
 
 pkg_postrm() {

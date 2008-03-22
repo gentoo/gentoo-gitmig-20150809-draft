@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3.ebuild,v 1.12 2006/12/06 23:57:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3.ebuild,v 1.13 2008/03/22 00:56:29 nerdboy Exp $
 
 inherit eutils autotools
 
@@ -31,13 +31,13 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	ebegin "Reconfiguring"
 	    ./maint/updatefiles
-	eend "Reconfigure failed"
-	epatch ${FILESDIR}/${P}-make.patch || die "make patch failed"
+	eend ${ret} "Reconfigure failed"
+	epatch "${FILESDIR}"/${P}-make.patch || die "make patch failed"
 	# damn, have to patch the createshlib script here...
-	epatch ${FILESDIR}/${P}-soname.patch || die "soname patch failed"
+	epatch "${FILESDIR}"/${P}-soname.patch || die "soname patch failed"
 
 }
 
@@ -85,7 +85,7 @@ src_compile() {
 		--datadir=/usr/share/mpich2 || die "configure failed"
 
 	if use mpe ; then
-	     epatch ${FILESDIR}/${P}-mpe-install.patch || die "install patch failed"
+	     epatch "${FILESDIR}"/${P}-mpe-install.patch || die "install patch failed"
 	fi
 
 	make || die "make failed"
@@ -94,13 +94,13 @@ src_compile() {
 src_install() {
 	dodir /etc/${PN}
 	rm -rf src/mpe2/etc/*.in
-	make install DESTDIR=${D} LIBDIR=${D}usr/$(get_libdir) \
+	make install DESTDIR="${D}" LIBDIR="${D}"usr/$(get_libdir) \
 	    || die "make install failed"
 
 	dodir /usr/share/${PN}
-	mv ${D}usr/examples/cpi ${D}usr/share/${PN}/cpi
-	rm -rf ${D}/usr/examples
-	rm -rf ${D}usr/sbin
+	mv "${D}"usr/examples/cpi "${D}"usr/share/${PN}/cpi
+	rm -rf "${D}"usr/examples
+	rm -rf "${D}"usr/sbin
 
 	dodir /usr/share/doc/${PF}
 	if use doc; then
@@ -108,8 +108,8 @@ src_install() {
 		dodoc README.developer RELEASE_NOTES
 		newdoc src/pm/mpd/README README.mpd
 	else
-		rm -rf ${D}usr/share/doc/
-		rm -rf ${D}usr/share/man/
+		rm -rf "${D}"usr/share/doc/
+		rm -rf "${D}"usr/share/man/
 		dodoc README CHANGES COPYRIGHT RELEASE_NOTES
 	fi
 }
