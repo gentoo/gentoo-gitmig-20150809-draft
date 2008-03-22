@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-200707.ebuild,v 1.3 2007/08/11 17:55:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-200707.ebuild,v 1.4 2008/03/22 13:27:41 jokey Exp $
 
 DESCRIPTION="Jisyo (dictionary) files for the SKK Japanese-input software"
 HOMEPAGE="http://openlab.ring.gr.jp/skk/dic.html"
@@ -12,11 +12,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="cdb"
 
 DEPEND="sys-apps/gawk
-	cdb? ( || (
-		dev-db/cdb
-		dev-db/tinycdb
-		dev-db/freecdb
-	) )
+	cdb? ( || ( dev-db/cdb dev-db/tinycdb ) )
 	!app-i18n/skk-jisyo-extra
 	!app-i18n/skk-jisyo-cdb"
 
