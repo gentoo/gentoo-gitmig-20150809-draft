@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.9 2008/03/22 18:04:08 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.10 2008/03/22 18:09:48 opfer Exp $
+
+  22 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
+  gentoo-syntax-1.8.ebuild:
+  stable x86, bug 214285
 
   22 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   gentoo-syntax-1.8.ebuild:
