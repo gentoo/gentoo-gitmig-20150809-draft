@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bcwipe
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.27 2008/03/21 19:15:17 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.28 2008/03/22 10:10:02 nixnut Exp $
+
+  22 Mar 2008; nixnut <nixnut@gentoo.org> bcwipe-1.7_p2.ebuild:
+  Stable on ppc wrt bug 207547
 
   21 Mar 2008; Ferris McCormick <fmccor@gentoo.org> bcwipe-1.7_p2.ebuild:
   Sparc stable, Bug #207547.  Test (silently) passes.
