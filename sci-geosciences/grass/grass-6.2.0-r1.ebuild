@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.0-r1.ebuild,v 1.9 2007/09/02 11:03:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.0-r1.ebuild,v 1.10 2008/03/22 02:31:43 nerdboy Exp $
 
 inherit eutils autotools
 
@@ -96,7 +96,7 @@ src_unpack() {
 		die "emerge tk without threads"
 	fi
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch rpm/fedora/grass-readline.patch
 	elibtoolize
@@ -139,7 +139,7 @@ src_compile() {
 		myconf="${myconf} --with-glw"
 	    fi
 	else
-	    epatch ${FILESDIR}/${P}-html-nonviz.patch
+	    epatch "${FILESDIR}"/${P}-html-nonviz.patch
 	fi
 
 	if use sqlite; then
@@ -167,22 +167,22 @@ src_compile() {
 		$(use_with tiff) \
 		$(use_with tcl tcltk) || die "Error: configure failed!"
 	# patch missing math functions
-	sed -i 's:EXTRA_LIBS=:EXTRA_LIBS=-lm :g' ${S}/lib/gmath/Makefile
-	sed -i 's:EXTRA_LIBS = :EXTRA_LIBS = -lm :g' ${S}/lib/gis/Makefile
+	sed -i 's:EXTRA_LIBS=:EXTRA_LIBS=-lm :g' "${S}"/lib/gmath/Makefile
+	sed -i 's:EXTRA_LIBS = :EXTRA_LIBS = -lm :g' "${S}"/lib/gis/Makefile
 	emake -j1 || die "Error: emake failed!"
 }
 
 src_install() {
-	make install UNIX_BIN=${D}usr/bin BINDIR=${D}usr/bin \
-		PREFIX=${D}usr INST_DIR=${D}usr/grass62 \
+	make install UNIX_BIN="${D}"usr/bin BINDIR="${D}"usr/bin \
+		PREFIX="${D}"usr INST_DIR="${D}"usr/grass62 \
 		|| die "Error: make install failed!"
 
 	sed -i "s:^GISBASE=.*$:GISBASE=/usr/grass62:" \
-		${D}usr/bin/grass62 || die "Error: sed failed!"
+		"${D}"usr/bin/grass62 || die "Error: sed failed!"
 
 	# Grass Extension Manager conflicts with ruby gems
-	mv ${D}usr/bin/gem ${D}usr/grass62/bin/
+	mv "${D}"usr/bin/gem "${D}"usr/grass62/bin/
 
 	einfo "Adding env.d entry for Grass6"
-	newenvd ${FILESDIR}/99grass-6.2 99grass-6
+	newenvd "${FILESDIR}"/99grass-6.2 99grass-6
 }

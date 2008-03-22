@@ -1,6 +1,17 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.48 2008/03/06 18:01:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.49 2008/03/22 02:31:43 nerdboy Exp $
+
+*grass-6.2.1-r1 (22 Mar 2008)
+
+  22 Mar 2008; Steve Arnold <nerdboy@gentoo.org> +files/grass_icon.png,
+  +grass-6.2.1-r1.ebuild:
+  Updated ebuild with various fixes and enhancements, with enough changes to
+  warrant a revision bump.  Several QA fixes, streamlined the X-related USE
+  flags somewhat, added desktop files, and tested nviz 3D with terrain data
+  on amd64 w/radeon xorg driver (works nicely after minor system update,
+  with no more video artifacts).  Grass env file now provides GRASS_HOME
+  variable for gdal rebuild.
 
   06 Mar 2008; nixnut <nixnut@gentoo.org> grass-6.2.1.ebuild:
   Stable on ppc wrt bug 212033

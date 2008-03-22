@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.1.ebuild,v 1.15 2007/07/22 07:13:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.1.ebuild,v 1.16 2008/03/22 02:31:43 nerdboy Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	epatch rpm/fedora/grass-readline.patch
 	sed -i -e "s/relid'/relid/" "${S}"/configure || die "sed blew chunks"
 }
@@ -82,13 +82,7 @@ src_compile() {
 		MYCONF="${MYCONF} --with-opengl-libs=/usr/$(get_libdir)/opengl/xorg-x11/lib/"
 	fi
 
-# apparently gdal isn't optional with this version
-# we'll temporarily make it a hard dep for now
-#	if use gdal; then
-#		MYCONF="${MYCONF} --with-gdal=/usr/bin/gdal-config"
-#	else
-#		MYCONF="${MYCONF} --without-gdal"
-#	fi
+	# apparently gdal isn't optional with this version
 
 	export LD_LIBRARY_PATH="/${WORKDIR}/image/usr/grass60/$(get_libdir):${LD_LIBRARY_PATH}"
 	./configure \
@@ -110,14 +104,14 @@ src_compile() {
 
 src_install() {
 	make install \
-		prefix=${D}/usr UNIX_BIN=${D}/usr/bin BINDIR=${D}/usr/bin PREFIX=${D}/usr \
+		prefix="${D}"/usr UNIX_BIN="${D}"/usr/bin BINDIR="${D}"/usr/bin PREFIX=${D}/usr \
 			|| die "Error: make install failed!"
 	sed -i "s:^GISBASE=.*$:GISBASE=/usr/grass60:" \
-		${D}/usr/bin/grass60
+		"${D}"/usr/bin/grass60
 
 	# This is required for GRASS dependent ebuilds (ie. QGIS)
-	mv ${D}/usr/${P} ${D}/usr/grass60
+	mv "${D}"/usr/${P} "${D}"/usr/grass60
 
 	einfo "Adding env.d entry for Grass6"
-	newenvd ${FILESDIR}/99grass-6 99grass
+	newenvd "${FILESDIR}"/99grass-6 99grass
 }

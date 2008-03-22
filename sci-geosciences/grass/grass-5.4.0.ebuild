@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.12 2007/07/22 07:13:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.13 2008/03/22 02:31:43 nerdboy Exp $
 
 inherit eutils toolchain-funcs
 
@@ -59,7 +59,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	einfo "Patching configure..."
 	sed -i -e "s:relid':relid:g" configure || die "sed blew chunks"
 }
@@ -67,7 +67,7 @@ src_unpack() {
 src_compile() {
 	MYCONF="--prefix=${D}usr --host=${CHOST} --infodir=${D}usr/share/info \
 		--libdir=${D}usr/$(get_libdir) --mandir=${D}usr/share/man \
-		--enable-shared --with-cxx "
+		--enable-shared --with-cxx"
 
 	use truetype \
 		&& MYCONF="${MYCONF} --with-freetype \
@@ -107,11 +107,11 @@ src_compile() {
 }
 
 src_install() {
-	cd ${WORKDIR}/${P}/grass-build
-	make DESTDIR=${D} install \
+	cd "${WORKDIR}"/${P}/grass-build
+	make DESTDIR="${D}" install \
 		|| die "Error: make install failed!"
 	sed -i "s:^GISBASE=.*$:GISBASE=/usr/grass54:" \
-		${D}usr/bin/grass54
+		"${D}"usr/bin/grass54
 	# Install grass always in one directory
-	mv ${D}usr/${P} ${D}usr/grass54
+	mv "${D}"usr/${P} "${D}"usr/grass54
 }
