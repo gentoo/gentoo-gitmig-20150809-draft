@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/pdfbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.8 2008/03/23 12:14:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.9 2008/03/23 12:15:37 betelgeuse Exp $
+
+  23 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> -pdfbox-0.7.3.ebuild:
+  Delete old revision.
 
   23 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> pdfbox-0.7.3-r1.ebuild:
   RESTRICT test as we don't have the needed files.
