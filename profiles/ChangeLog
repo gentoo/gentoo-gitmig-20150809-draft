@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1236 2008/03/22 22:43:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1237 2008/03/23 02:21:09 ulm Exp $
+
+  23 Mar 2008; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
+  Add local jde USE flag for app-emacs/emhacks.
 
   22 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
   add USE flag description for app-arch/file-roller

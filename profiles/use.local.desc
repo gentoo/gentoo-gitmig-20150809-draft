@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3438 2008/03/22 22:43:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3439 2008/03/23 02:21:09 ulm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -114,6 +114,7 @@ app-emacs/auctex:preview-latex - Use bundled preview-latex
 app-emacs/bbdb:tex - Install plain TeX support files
 app-emacs/delicious:planner - Include support for app-emacs/planner
 app-emacs/easypg:gnus - Include support for the Gnus newsreader
+app-emacs/emhacks:jde - Enable support for Java Development Environment
 app-emacs/python-mode:pymacs - Enable Emacs extensions for Python as scripting language
 app-emacs/remember:bbdb - Include support for app-emacs/bbdb
 app-emacs/remember:planner - Include support for app-emacs/planner
