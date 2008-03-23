@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.42 2008/03/23 14:14:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.43 2008/03/23 18:01:48 armin76 Exp $
+
+  23 Mar 2008; Raúl Porcel <armin76@gentoo.org> libofx-0.9.0.ebuild:
+  Add ~alpha/~ia64 wrt #214356
 
   23 Mar 2008; Brent Baude <ranger@gentoo.org> libofx-0.9.0.ebuild:
   keyworded ~arch for ppc64, bug 214356
