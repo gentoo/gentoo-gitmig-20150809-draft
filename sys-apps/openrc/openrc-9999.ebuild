@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.2 2008/03/23 00:04:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.3 2008/03/23 17:40:46 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -84,7 +84,7 @@ pkg_preinst() {
 	# in the ass by accident
 	[[ -e ${ROOT}/etc/conf.d/net ]] && rm -f "${D}"/etc/conf.d/net
 
-	has_version sys-apps/openrc || return 0
+	has_version sys-apps/openrc && return 0
 
 	# upgrade timezone file
 	if [[ ! -e ${ROOT}/etc/timezone ]] ; then
