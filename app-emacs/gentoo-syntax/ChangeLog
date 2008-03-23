@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.13 2008/03/23 13:52:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.14 2008/03/23 14:16:37 opfer Exp $
+
+  23 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
+  -gentoo-syntax-1.7.ebuild:
+  clean up
 
   23 Mar 2008; Brent Baude <ranger@gentoo.org> gentoo-syntax-1.8.ebuild:
   Marking gentoo-syntax-1.8 ~ppc64 for bug 214283
