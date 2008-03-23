@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gxmessage
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.26 2008/03/23 20:41:19 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.27 2008/03/23 21:52:40 coldwind Exp $
+
+  23 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  -gxmessage-2.6.1.ebuild, gxmessage-2.6.2.ebuild:
+  amd64 stable wrt bug #214324 and remove old.
 
   23 Mar 2008; Ferris McCormick <fmccor@gentoo.org> gxmessage-2.6.2.ebuild:
   Sparc stable --- Bug #214324 --- seems to work fine.
