@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.39 2008/02/09 12:32:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.40 2008/03/23 11:31:51 dev-zero Exp $
+
+*libofx-0.9.0 (22 Mar 2008)
+
+  22 Mar 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/libofx-0.6.4-gcc2.patch, -libofx-0.7.0-r1.ebuild,
+  +libofx-0.9.0.ebuild:
+  Version bump, dropped old version and old patch. Fixed dependencies.
 
   09 Feb 2008; Raúl Porcel <armin76@gentoo.org> libofx-0.8.3.ebuild:
   alpha/ia64 stable
