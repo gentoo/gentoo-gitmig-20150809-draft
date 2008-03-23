@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/ristretto
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ChangeLog,v 1.31 2008/03/22 22:54:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ChangeLog,v 1.32 2008/03/23 17:42:06 angelos Exp $
+
+*ristretto-0.0.18 (23 Mar 2008)
+
+  23 Mar 2008; Christoph Mende <angelos@gentoo.org>
+  +ristretto-0.0.18.ebuild:
+  Version bump
 
   22 Mar 2008; Brent Baude <ranger@gentoo.org> ristretto-0.0.17.ebuild:
   Marking ristretto-0.0.17 ppc64 for bug 214130
