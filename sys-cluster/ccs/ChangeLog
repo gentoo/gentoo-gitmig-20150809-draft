@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/ccs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.37 2008/03/17 16:31:39 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.38 2008/03/23 16:07:33 xmerlin Exp $
+
+*ccs-2.02.00-r1 (23 Mar 2008)
+
+  23 Mar 2008; Christian Zoffoli <xmerlin@gentoo.org>
+  +ccs-2.02.00-r1.ebuild:
+  Updated 2.02.00 to STABLE2 20080323.
 
 *ccs-2.02.00 (17 Mar 2008)
 
