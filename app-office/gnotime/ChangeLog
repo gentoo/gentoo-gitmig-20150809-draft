@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnotime
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.36 2008/03/01 13:45:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.37 2008/03/23 10:44:42 opfer Exp $
+
+  23 Mar 2008; Christian Faulhammer <opfer@gentoo.org> gnotime-2.3.0.ebuild:
+  stable x86, bug 205242
 
   01 Mar 2008; nixnut <nixnut@gentoo.org> gnotime-2.3.0.ebuild:
   Added ~ppc wrt bug 211735
