@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.23-r9.ebuild,v 1.1 2008/03/22 20:34:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.23-r9.ebuild,v 1.2 2008/03/23 01:21:16 mr_bones_ Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -32,4 +32,3 @@ pkg_postinst() {
 	ewarn "disable the option."
 	ewarn
 }
-
