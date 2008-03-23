@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3439 2008/03/23 02:21:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3440 2008/03/23 15:38:18 leio Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -739,6 +739,7 @@ gnome-extra/nautilus-sendto:pidgin - Enable support for pidgin
 gnome-extra/nautilus-sendto:sylpheed - Enable support for sylpheed mail client
 gnome-extra/nautilus-sendto:thunderbird - Enable support for thunderbird
 gnome-extra/sensors-applet:nvidia - Enable support for nvidia sensors
+gnome-extra/yelp:lzma - Enable support for lzma compressed info and man pages
 gnome-extra/yelp:beagle - Enable beagle support
 gnome-extra/zim:trayicon - Enable support for trayicon
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
