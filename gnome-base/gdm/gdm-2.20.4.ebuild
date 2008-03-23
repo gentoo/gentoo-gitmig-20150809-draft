@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.4.ebuild,v 1.3 2008/03/23 11:30:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.4.ebuild,v 1.4 2008/03/23 13:40:15 mr_bones_ Exp $
 
 inherit autotools eutils pam gnome2
 
@@ -135,7 +135,7 @@ src_install() {
 	exeinto /etc/X11/dm/Sessions
 	doexe "${gentoodir}/custom.desktop"
 
-	# avoid file collision, bug #213118 
+	# avoid file collision, bug #213118
 	rm -f "${D}/usr/share/xsessions/gnome.desktop"
 
 	# We replace the pam stuff by our own
