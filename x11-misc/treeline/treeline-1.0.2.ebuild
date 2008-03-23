@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.0.2.ebuild,v 1.3 2007/07/16 13:34:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.0.2.ebuild,v 1.4 2008/03/23 14:40:44 coldwind Exp $
 
 inherit python
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.bellz.org/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="spell"
 
 DEPEND="spell? ( || ( app-text/aspell app-text/ispell ) )
@@ -19,19 +19,19 @@ DEPEND="spell? ( || ( app-text/aspell app-text/ispell ) )
 	virtual/python dev-python/PyQt
 	=x11-libs/qt-3*"
 
-S="${WORKDIR}"/TreeLine
+S=${WORKDIR}/TreeLine
 
 # Before you go editing below read bugs 177652 and 177645
 # or you'll end up breaking it.
 
 src_compile() {
 	printf '#!/bin/sh\n\nexec python %s/treeline.py $*\n' \
-		/usr/share/treeline > ${S}/treeline
+		/usr/share/treeline > "${S}"/treeline
 	sed -i -e "s#\(helpFilePath = \)None#\1'/usr/share/treeline'#g" \
 		-e "s#\(iconPath = \)None#\1'/usr/share/treeline/icons'#g" \
-			${S}/source/treeline.py || die
+			"${S}"/source/treeline.py || die
 	sed -i -e 's,translations,/usr/share/treeline/translations,' \
-		${S}/source/treeline.py || die
+		"${S}"/source/treeline.py || die
 }
 
 src_install() {
