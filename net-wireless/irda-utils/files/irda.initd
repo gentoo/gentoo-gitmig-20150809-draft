@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/files/irda.initd,v 1.1 2008/03/22 18:34:11 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/files/irda.initd,v 1.2 2008/03/23 16:00:16 sbriesen Exp $
 
 # Hint: We don't use start-stop-daemon, because pidfile is the same
 # for every irattach instance. So it isn't reliable if we have more
@@ -46,6 +46,14 @@ checkconfig() {
 	esac
 }
 
+remove_module() {
+	local CNT=0
+	while ! /sbin/modprobe -sqr ${1}; do
+		[ $((CNT++)) -eq 10 ] && break
+		sleep 0.25
+	done
+}
+
 start() {
 	checkconfig
 	ebegin "Starting IrDA"
@@ -67,5 +75,12 @@ start() {
 stop() {
 	ebegin "Shutting down IrDA"
 	/usr/bin/pkill -f "^/usr/sbin/irattach ${DEVICE} ?"
-	eend ${?} || return 0  # never fail
+	eend ${?}
+
+	# Try to remove IrDA driver
+	case "${DEVICE}" in
+		/dev/ttyS*) remove_module irtty-sir;;
+		irda[0-9]*) remove_module ${DEVICE};;
+	esac
+	return 0  # never fail
 }
