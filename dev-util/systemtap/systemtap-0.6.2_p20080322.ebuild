@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.6.1_p20080223.ebuild,v 1.1 2008/02/23 17:04:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.6.2_p20080322.ebuild,v 1.1 2008/03/23 11:18:06 swegener Exp $
 
 inherit linux-info eutils
 
