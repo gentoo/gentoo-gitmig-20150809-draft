@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/wmctrl-1.07-r1.ebuild,v 1.1 2007/06/10 01:58:50 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/wmctrl-1.07-r1.ebuild,v 1.2 2008/03/23 14:51:30 coldwind Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://sweb.cz/tripie/utils/wmctrl/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/amd64-Xlib.patch" || die "Patch failed"
 }
