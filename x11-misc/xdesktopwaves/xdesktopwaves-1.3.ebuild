@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdesktopwaves/xdesktopwaves-1.3.ebuild,v 1.5 2008/03/23 15:24:39 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdesktopwaves/xdesktopwaves-1.3.ebuild,v 1.6 2008/03/23 17:03:30 nixnut Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE=""
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
