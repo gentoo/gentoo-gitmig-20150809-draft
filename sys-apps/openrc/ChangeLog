@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/openrc
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.1 2008/03/23 00:03:21 vapier Exp $
+
+*openrc-9999 (23 Mar 2008)
+
+  23 Mar 2008; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +openrc-9999.ebuild:
+  Initial ebuild #212696.
+
