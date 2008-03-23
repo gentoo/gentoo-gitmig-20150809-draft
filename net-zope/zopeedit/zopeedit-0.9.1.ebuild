@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeedit/zopeedit-0.9.1.ebuild,v 1.2 2006/05/28 18:16:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeedit/zopeedit-0.9.1.ebuild,v 1.3 2008/03/23 17:46:41 armin76 Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://plope.com/software/ExternalEditor/zopeedit-${PV}-src.tgz"
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 #S=${WORKDIR}/${PN}-${PV}-src
