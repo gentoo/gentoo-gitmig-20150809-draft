@@ -1,6 +1,12 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.5 2008/02/19 00:23:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.6 2008/03/23 12:22:02 yngwin Exp $
+
+*smplayer-0.6.0_rc3 (23 Mar 2008)
+
+  23 Mar 2008; Ben de Groot <yngwin@gentoo.org> +smplayer-0.6.0_rc3.ebuild:
+  Version bump. Added Basque and Macedonian translations. Updated ebuild to
+  allow for split qt-4.4 deps (fixes bug 212737).
 
   19 Feb 2008; Ben de Groot <yngwin@gentoo.org>
   -smplayer-0.5.62.ebuild, -smplayer-0.6.0_rc1.ebuild,
