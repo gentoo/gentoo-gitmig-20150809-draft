@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/xkeycaps-2.46.ebuild,v 1.20 2006/10/21 21:43:29 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/xkeycaps-2.46.ebuild,v 1.21 2008/03/23 15:46:43 coldwind Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.jwz.org/${PN}/${P}.tar.Z"
 HOMEPAGE="http://www.jwz.org/xkeycaps/"
 
 LICENSE="as-is"
-KEYWORDS="x86 sparc ppc ~amd64 ppc64"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 SLOT="0"
 IUSE=""
 
@@ -40,6 +40,6 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README *.txt        || die "dodoc failed"
 }

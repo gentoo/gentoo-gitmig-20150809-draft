@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xmountains
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.15 2007/08/02 13:20:33 uberlord Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.16 2008/03/23 15:49:40 coldwind Exp $
+
+  23 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> xmountains-2.7.ebuild:
+  amd64 stable
 
   02 Aug 2007; Roy Marples <uberlord@gentoo.org> xmountains-2.7.ebuild:
   Keyworded ~x86-fbsd, #156902 thanks to Marc Kowarsky.
