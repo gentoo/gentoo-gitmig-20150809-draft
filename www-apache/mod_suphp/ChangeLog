@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_suphp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/ChangeLog,v 1.18 2008/01/31 19:19:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/ChangeLog,v 1.19 2008/03/23 12:02:17 hollow Exp $
+
+  23 Mar 2008; Benedikt Böhm <hollow@gentoo.org> mod_suphp-0.6.2-r3.ebuild:
+  fix depend.apache usage wrt #208033
 
   31 Jan 2008; Benedikt Böhm <hollow@gentoo.org> mod_suphp-0.6.2-r3.ebuild:
   fix depend.apache usage wrt #208033

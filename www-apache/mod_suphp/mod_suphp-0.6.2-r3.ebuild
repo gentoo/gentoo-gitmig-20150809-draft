@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.2-r3.ebuild,v 1.3 2008/01/31 19:19:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.2-r3.ebuild,v 1.4 2008/03/23 12:02:17 hollow Exp $
 
 inherit apache-module autotools eutils
 
@@ -59,12 +59,10 @@ pkg_setup() {
 	elog "SUPHP_APACHEUSER: Name of the user Apache is running as (default: apache)"
 	elog "SUPHP_LOGFILE: Path to suPHP logfile (default: /var/log/apache2/suphp_log)"
 	elog
-
-	apache-module_pkg_setup
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-handler.patch

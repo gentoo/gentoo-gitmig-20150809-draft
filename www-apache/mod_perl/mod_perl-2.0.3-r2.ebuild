@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3-r2.ebuild,v 1.10 2008/03/22 17:14:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3-r2.ebuild,v 1.11 2008/03/23 12:04:06 hollow Exp $
 
 inherit apache-module perl-module eutils multilib
 
@@ -30,7 +30,6 @@ need_apache2
 
 pkg_setup() {
 	has_apache_threads_in dev-lang/perl ithreads
-	apache-module_pkg_setup
 }
 
 src_unpack() {

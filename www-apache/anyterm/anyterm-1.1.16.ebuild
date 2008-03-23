@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.16.ebuild,v 1.1 2008/01/10 16:16:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.16.ebuild,v 1.2 2008/03/23 12:08:17 hollow Exp $
 
 inherit apache-module eutils toolchain-funcs webapp
 
@@ -33,7 +33,6 @@ need_apache2_2
 
 pkg_setup() {
 	webapp_pkg_setup
-	apache-module_pkg_setup
 
 	if use ssl && ! built_with_use www-servers/apache ssl; then
 		die "Build www-servers/apache with USE=ssl."
