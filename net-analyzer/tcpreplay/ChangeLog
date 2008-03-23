@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpreplay
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.25 2008/03/21 15:59:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.26 2008/03/23 14:41:09 pva Exp $
+
+  23 Mar 2008; <pva@gentoo.org> -tcpreplay-3.2.1.ebuild,
+  tcpreplay-3.2.3.ebuild:
+  Remove old. Fix 'rm man2html', thank Markus Meier for report in bug #201842.
 
   21 Mar 2008; Markus Meier <maekke@gentoo.org> tcpreplay-3.2.3.ebuild:
   amd64 stable, bug #201842

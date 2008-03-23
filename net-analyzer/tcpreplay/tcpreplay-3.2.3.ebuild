@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.2.3.ebuild,v 1.3 2008/03/21 15:59:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.2.3.ebuild,v 1.4 2008/03/23 14:41:09 pva Exp $
 
 DESCRIPTION="replay saved tcpdump or snoop files at arbitrary speeds"
 HOMEPAGE="http://tcpreplay.synfin.net/"
@@ -39,6 +39,5 @@ src_test() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "emake install failed"
-	rm "${D}"/usr/bin/man2html
 	dodoc docs/{CHANGELOG,CREDIT,HACKING,TODO}
 }
