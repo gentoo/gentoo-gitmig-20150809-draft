@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_Sieve
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.58 2008/03/23 16:55:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.59 2008/03/23 18:20:35 armin76 Exp $
+
+  23 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  PEAR-Net_Sieve-1.1.6.ebuild:
+  alpha/ia64/sparc stable wrt #214081
 
   23 Mar 2008; nixnut <nixnut@gentoo.org> PEAR-Net_Sieve-1.1.6.ebuild:
   Stable on ppc wrt bug 214081
