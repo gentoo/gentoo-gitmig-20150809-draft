@@ -1,0 +1,29 @@
+--- doc/Makefile.am.orig	2008-03-17 14:42:52.000000000 +0100
++++ doc/Makefile.am	2008-03-17 14:44:14.000000000 +0100
+@@ -186,20 +186,20 @@
+ # Automake's "distcheck" is sensitive to having files left over
+ # after "make uninstall", so we have to clean up the install hook.
+ uninstall-local:
+-	@if test -d $(TVMET_DOC_DIR); then \
+-		rm -rf $(TVMET_DOC_DIR); \
++	@if test -d $(DESTDIR)/$(TVMET_DOC_DIR)/html; then \
++		rm -rf $(DESTDIR)/$(TVMET_DOC_DIR)/html; \
+ 	fi
+ 
+ # Install hooks
+ make-install-dirs:
+-	@if test '!' -d $(TVMET_DOC_DIR); then \
+-		$(mkinstalldirs) $(TVMET_DOC_DIR); \
++	@if test '!' -d $(DESTDIR)/$(TVMET_DOC_DIR)/html; then \
++		$(mkinstalldirs) $(DESTDIR)/$(TVMET_DOC_DIR)/html; \
+ 	fi
+ 
+ install-data-hook: make-install-dirs
+-	@echo Installing documentations into $(TVMET_DOC_DIR)
++	@echo Installing documentations into $(DESTDIR)/$(TVMET_DOC_DIR)/html
+ 	@echo "install html"
+-	@$(INSTALL_DATA) @top_builddir@/doc/html/* $(TVMET_DOC_DIR)
++	@$(INSTALL_DATA) @top_builddir@/doc/html/* $(DESTDIR)/$(TVMET_DOC_DIR)/html
+ 
+ else
+ doc-dist:
