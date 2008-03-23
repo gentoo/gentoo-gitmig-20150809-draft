@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.31 2008/02/29 20:39:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.32 2008/03/23 17:40:34 calchan Exp $
+
+*kicad-20080320.918 (23 Mar 2008)
+
+  23 Mar 2008; Denis Dupeyron <calchan@gentoo.org>
+  +kicad-20080320.918.ebuild:
+  Version bump, many thanks to Igor Plyatov (bug #214096).
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> kicad-20070115.ebuild,
   kicad-20070525.ebuild, kicad-20070702.ebuild:
