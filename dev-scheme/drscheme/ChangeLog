@@ -1,6 +1,12 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.57 2008/03/03 09:29:23 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.58 2008/03/23 11:51:43 hkbst Exp $
+
+*drscheme-372-r1 (23 Mar 2008)
+
+  23 Mar 2008; Marijn Schouten <hkBst@gentoo.org> +drscheme-372-r1.ebuild:
+  add slatex support thanks to Massimo Zanetti <zanetti.massimo@gmail.com>,
+  bug 188118
 
 *drscheme-372 (03 Mar 2008)
 
