@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/cell-sources
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/cell-sources/ChangeLog,v 1.3 2007/05/14 06:20:07 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/cell-sources/ChangeLog,v 1.4 2008/03/23 20:48:13 lu_zero Exp $
+
+*cell-sources-2.6.24-r1 (23 Mar 2008)
+
+  23 Mar 2008; Luca Barbato <lu_zero@gentoo.org>
+  +cell-sources-2.6.24-r1.ebuild:
+  Version bump
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
