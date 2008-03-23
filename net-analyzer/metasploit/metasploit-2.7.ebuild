@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-2.7.ebuild,v 1.7 2008/03/01 17:00:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-2.7.ebuild,v 1.8 2008/03/23 16:02:01 pva Exp $
 
 MY_P="${P/metasploit/framework}"
 S="${WORKDIR}/${MY_P}"
@@ -43,6 +43,6 @@ pkg_postrm() {
 	if [[ -d /usr/lib/metasploit ]] ; then
 		ewarn "If you ever updated modules emerge will keep /var/lib/metasploit"
 		ewarn "directory. Thus to remove metasploit completely do not forgive to:"
-		ewarn " # rm -r /var/lib/metasploit"
+		ewarn " # rm -r /usr/lib/metasploit"
 	fi
 }
