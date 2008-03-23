@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r1.ebuild,v 1.1 2008/01/25 21:22:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r1.ebuild,v 1.2 2008/03/23 12:14:53 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -29,6 +29,9 @@ DEPEND=">=virtual/jdk-1.4
 	${CDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+# missing needed files
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
