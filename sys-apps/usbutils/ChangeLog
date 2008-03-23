@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.67 2008/03/23 13:35:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.68 2008/03/23 13:46:29 ranger Exp $
+
+  23 Mar 2008; Brent Baude <ranger@gentoo.org> usbutils-0.73.ebuild:
+  stable ppc64, bug 214268
 
   23 Mar 2008; nixnut <nixnut@gentoo.org> usbutils-0.73.ebuild:
   Stable on ppc wrt bug 214268
