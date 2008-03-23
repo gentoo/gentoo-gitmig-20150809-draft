@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gxmessage
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.23 2007/08/02 12:52:59 uberlord Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.24 2008/03/23 10:52:09 opfer Exp $
+
+  23 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
+  gxmessage-2.6.2.ebuild:
+  stable x86, bug 214324
 
   02 Aug 2007; Roy Marples <uberlord@gentoo.org> gxmessage-2.6.2.ebuild:
   Keyworded ~x86-fbsd, #156902 thanks to Marc Kowarsky.
