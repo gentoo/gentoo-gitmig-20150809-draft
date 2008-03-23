@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbpanel
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.37 2008/02/21 10:58:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.38 2008/03/23 00:34:42 coldwind Exp $
+
+  23 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> fbpanel-4.12.ebuild:
+  amd64 stable
 
   21 Feb 2008; Raúl Porcel <armin76@gentoo.org> -fbpanel-4.3.ebuild,
   fbpanel-4.12.ebuild:
