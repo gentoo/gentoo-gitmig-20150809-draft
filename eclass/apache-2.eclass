@@ -1,9 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.9 2008/03/23 00:14:13 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.10 2008/03/23 10:28:45 hollow Exp $
 
-# @ECLASS: apache-2
-# @MAINTAINER: apache-devs@gentoo.org
+# @ECLASS: apache-2.eclass
+# @MAINTAINER:
+# apache-devs@gentoo.org
 # @BLURB: Provides a common set of functions for >=apache-2.2* ebuilds
 # @DESCRIPTION:
 # This eclass handles common apache ebuild functions in a sane way and providing
