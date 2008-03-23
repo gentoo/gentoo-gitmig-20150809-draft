@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.3 2008/01/11 22:01:59 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.4 2008/03/23 00:39:25 coldwind Exp $
 
 inherit eutils
 
-DESCRIPTION="alock - locks the local X display until a password is entered"
+DESCRIPTION="locks the local X display until a password is entered"
 HOMEPAGE="
 	http://code.google.com/p/alock/
 	http://darkshed.net/projects/alock
@@ -13,7 +13,7 @@ SRC_URI="http://alock.googlecode.com/files/alock-svn-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="
@@ -24,7 +24,7 @@ DEPEND="
 "
 RDEPEND=""
 
-MY_S="${WORKDIR}/alock-svn-${PV}"
+S=${WORKDIR}/alock-svn-${PV}
 
 pkg_setup() {
 	if ! built_with_use media-libs/imlib2 X ; then
@@ -34,21 +34,17 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	sed -i 's|\$(DESTDIR)\$(prefix)/man|\$(DESTDIR)\$(prefix)/share/man|g' \
-		"${MY_S}"/Makefile || die "sed failed"
+		"${S}"/Makefile || die "sed failed"
 }
 
 src_compile() {
-	cd "${MY_S}" || die
-
 	econf --with-all || die
 	emake || die
 }
 
 src_install() {
-	cd "${MY_S}" || die
-
 	dobin src/alock
 	doman alock.1
 	dodoc README.txt LICENSE.txt CHANGELOG.txt
