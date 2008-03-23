@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.22.0.ebuild,v 1.1 2008/03/23 10:59:36 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.22.0.ebuild,v 1.2 2008/03/23 23:26:22 leio Exp $
 
 inherit virtualx gnome2
 
@@ -29,6 +29,15 @@ DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19"
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README THANKS TODO"
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Fix deprecated API disabling in used libraries - this is not future-proof, bug 212801
+	sed -i -e '/DISABLE_DEPRECATED/d' \
+		"${S}/eel/Makefile.am" "${S}/eel/Makefile.in" \
+		"${S}/test/Makefile.am" "${S}/test/Makefile.in"
+}
 
 src_test() {
 	if hasq userpriv $FEATURES; then
