@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.236 2008/03/22 03:55:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.237 2008/03/23 10:52:51 leio Exp $
+
+*gedit-2.22.0 (23 Mar 2008)
+
+  23 Mar 2008; Mart Raudsepp <leio@gentoo.org> +gedit-2.22.0.ebuild:
+  New version for GNOME-2.22. Improvements to plugin system, good handling of
+  viewports (compiz), printing using GtkPrint and libgnomeprint[ui] dependency
+  dropped thanks to that
 
   22 Mar 2008; Daniel Gryniewicz <dang@gentoo.org> gedit-2.20.4-r1.ebuild:
   Marked stable on amd64 for bug #212986
