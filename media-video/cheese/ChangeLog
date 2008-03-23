@@ -1,0 +1,14 @@
+# ChangeLog for media-video/cheese
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.1 2008/03/23 23:45:22 eva Exp $
+
+*cheese-2.22.0 (23 Mar 2008)
+
+  23 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/cheese-2.22.0-strcmp-device-name.patch,
+  +files/cheese-2.22.0-webcam-caps.patch,
+  +cheese-2.22.0.ebuild:
+  Initial ebuild for cheese. Thanks to Mikel Olasagasti for ebuild
+  submission and guys on bug #184115.
+  Include fixes from bug #213221.
+
