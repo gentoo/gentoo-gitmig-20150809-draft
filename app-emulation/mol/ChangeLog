@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/mol
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.77 2007/07/22 09:25:05 omp Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.78 2008/03/23 21:30:01 robbat2 Exp $
+
+  23 Mar 2008; Robin H. Johnson <robbat2@gentoo.org> mol-0.9.72.ebuild,
+  mol-0.9.72.1.ebuild:
+  Fix lax escaping in BUILD_PARAMS so that ebuild works again after recent
+  modifications to linux-mod.eclass. Also fix other quoting issues.
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> mol-0.9.72.ebuild,
   mol-0.9.72.1.ebuild:

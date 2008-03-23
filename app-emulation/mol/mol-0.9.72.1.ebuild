@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72.1.ebuild,v 1.2 2007/07/22 09:25:05 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72.1.ebuild,v 1.3 2008/03/23 21:30:01 robbat2 Exp $
 
 inherit flag-o-matic eutils linux-mod
 
@@ -71,28 +71,30 @@ src_compile() {
 	# reinitialize our changed configuration
 	emake oldconfig
 
-	cd ${S}
+	cd "${S}"
 	emake BUILD_MODS=n || die "Build failed."
 
 	# Build the modules too!
-	BUILD_PARAMS="KERNEL_SOURCE=${KV_DIR} LV=${KV_MAJOR}${KV_MINOR} MP=${KV_OBJ}
-				  KUNAME=${KV}"
+	BUILD_PARAMS="KERNEL_SOURCE=\"${KV_DIR}\" \
+					LV=${KV_MAJOR}${KV_MINOR} \
+					MP=${KV_OBJ} \
+					KUNAME=${KV}"
 	BUILD_TARGETS=all
 	linux-mod_src_compile
 }
 
 src_install() {
 	#linux-mod_src_install
-	cd ${S}
-	emake DESTDIR=${D} install || die "Failed to install"
+	cd "${S}"
+	emake DESTDIR="${D}" install || die "Failed to install"
 	dodoc CREDITS Doc/Boot-ROM Doc/NewWorld-ROM Doc/Sound Doc/Video
 	dodoc Doc/Networking Doc/Dev/Debugger Doc/Dev/Addresses
 	dodoc Doc/man/molvconfig.1 Doc/man/startmol.1 Doc/man/molrc.5
 
 	dodir /var/lib/mol/lock
-	touch ${D}/var/lib/mol/lock/.keep
+	touch "${D}"/var/lib/mol/lock/.keep
 	dodir /var/lib/mol/log
-	touch ${D}/var/lib/mol/log/.keep
+	touch "${D}"/var/lib/mol/log/.keep
 }
 
 pkg_postinst() {
