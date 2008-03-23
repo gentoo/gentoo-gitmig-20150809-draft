@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6_rc1-r1.ebuild,v 1.7 2008/03/09 08:07:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.6_rc1-r1.ebuild,v 1.8 2008/03/23 11:53:04 hollow Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -52,47 +52,28 @@ pkg_setup() {
 
 	# Threaded Apache2 support
 	if use apache2 ; then
-		if [[ "${APACHE_VERSION}" != "0" ]] ; then
-			if ! use threads ; then
-				APACHE2_SAFE_MPMS="itk peruser prefork"
-			else
-				APACHE2_SAFE_MPMS="event leader metuxmpm perchild threadpool worker"
-			fi
-
-			ewarn
-			ewarn "If this package fails with a fatal error about Apache2 not having"
-			ewarn "been compiled with a compatible MPM, this is normally because you"
-			ewarn "need to toggle the 'threads' USE flag."
-			ewarn
-			ewarn "If 'threads' is off, try switching it on."
-			ewarn "If 'threads' is on, try switching it off."
-			ewarn
-
-			apache-module_pkg_setup
-		fi
+		has_apache_threads
 	fi
 
 	# Concurrent PHP Apache2 modules support
 	if use apache2 ; then
-		if [[ "${APACHE_VERSION}" != "0" ]] ; then
-			if use concurrentmodphp ; then
-				ewarn
-				ewarn "'concurrentmodphp' makes it possible to load multiple, differently"
-				ewarn "versioned mod_php's into the same Apache instance. This is done with"
-				ewarn "a few linker tricks and workarounds, and is not guaranteed to always"
-				ewarn "work correctly, so use it at your own risk. Especially, do not use"
-				ewarn "this in conjunction with PHP modules (PECL, ...) other than the ones"
-				ewarn "you may find in the Portage tree or the PHP Overlay!"
-				ewarn "This is an experimental feature, so please rebuild PHP"
-				ewarn "without the 'concurrentmodphp' USE flag if you experience"
-				ewarn "any problems, and then reproduce any bugs before filing"
-				ewarn "them in Gentoo's Bugzilla or bugs.php.net."
-				ewarn "If you have conclusive evidence that a bug directly"
-				ewarn "derives from 'concurrentmodphp', please file a bug in"
-				ewarn "Gentoo's Bugzilla only."
-				ewarn
-				ebeep 5
-			fi
+		if use concurrentmodphp ; then
+			ewarn
+			ewarn "'concurrentmodphp' makes it possible to load multiple, differently"
+			ewarn "versioned mod_php's into the same Apache instance. This is done with"
+			ewarn "a few linker tricks and workarounds, and is not guaranteed to always"
+			ewarn "work correctly, so use it at your own risk. Especially, do not use"
+			ewarn "this in conjunction with PHP modules (PECL, ...) other than the ones"
+			ewarn "you may find in the Portage tree or the PHP Overlay!"
+			ewarn "This is an experimental feature, so please rebuild PHP"
+			ewarn "without the 'concurrentmodphp' USE flag if you experience"
+			ewarn "any problems, and then reproduce any bugs before filing"
+			ewarn "them in Gentoo's Bugzilla or bugs.php.net."
+			ewarn "If you have conclusive evidence that a bug directly"
+			ewarn "derives from 'concurrentmodphp', please file a bug in"
+			ewarn "Gentoo's Bugzilla only."
+			ewarn
+			ebeep 5
 		fi
 	fi
 
@@ -127,9 +108,7 @@ php_determine_sapis() {
 
 	# note - apache SAPI comes after the simpler cli/cgi sapis
 	if use apache2 ; then
-		if [[ "${APACHE_VERSION}" != "0" ]] ; then
-			PHPSAPIS="${PHPSAPIS} apache${APACHE_VERSION}"
-		fi
+		PHPSAPIS="${PHPSAPIS} apache${APACHE_VERSION}"
 	fi
 }
 
@@ -142,13 +121,11 @@ src_unpack() {
 
 	# Concurrent PHP Apache2 modules support
 	if use apache2 ; then
-		if [[ "${APACHE_VERSION}" != "0" ]] ; then
-			if use concurrentmodphp ; then
-				if [[ -n "${CONCURRENTMODPHP_PATCH}" ]] && [[ -f "${WORKDIR}/${CONCURRENTMODPHP_PATCH}" ]] ; then
-					epatch "${WORKDIR}/${CONCURRENTMODPHP_PATCH}"
-				else
-					ewarn "There is no concurrent mod_php patch available for this PHP release yet!"
-				fi
+		if use concurrentmodphp ; then
+			if [[ -n "${CONCURRENTMODPHP_PATCH}" ]] && [[ -f "${WORKDIR}/${CONCURRENTMODPHP_PATCH}" ]] ; then
+				epatch "${WORKDIR}/${CONCURRENTMODPHP_PATCH}"
+			else
+				ewarn "There is no concurrent mod_php patch available for this PHP release yet!"
 			fi
 		fi
 	fi
@@ -302,11 +279,9 @@ src_compile_normal() {
 	# Support the Apache2 extras, they must be set globally for all
 	# SAPIs to work correctly, especially for external PHP extensions
 	if use apache2 ; then
-		if [[ "${APACHE_VERSION}" != "0" ]] ; then
-			# Concurrent PHP Apache2 modules support
-			if use concurrentmodphp ; then
-				append-ldflags "-Wl,--version-script=${FILESDIR}/php5-ldvs"
-			fi
+		# Concurrent PHP Apache2 modules support
+		if use concurrentmodphp ; then
+			append-ldflags "-Wl,--version-script=${FILESDIR}/php5-ldvs"
 		fi
 	fi
 
@@ -314,12 +289,10 @@ src_compile_normal() {
 		# Support the Apache2 extras, they must be set globally for all
 		# SAPIs to work correctly, especially for external PHP extensions
 		if use apache2 ; then
-			if [[ "${APACHE_VERSION}" != "0" ]] ; then
-				# Threaded Apache2 support
-				if use threads ; then
-					my_conf="${my_conf} --enable-maintainer-zts"
-					ewarn "Enabling ZTS for Apache2 MPM"
-				fi
+			# Threaded Apache2 support
+			if use threads ; then
+				my_conf="${my_conf} --enable-maintainer-zts"
+				ewarn "Enabling ZTS for Apache2 MPM"
 			fi
 		fi
 
