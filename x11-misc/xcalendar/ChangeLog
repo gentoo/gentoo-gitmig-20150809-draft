@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcalendar
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.20 2007/08/02 13:18:58 uberlord Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.21 2008/03/23 15:17:34 coldwind Exp $
+
+  23 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> xcalendar-4.0.ebuild:
+  amd64 stable
 
   02 Aug 2007; Roy Marples <uberlord@gentoo.org> xcalendar-4.0.ebuild:
   Keyworded ~x86-fbsd, #156902 thanks to Marc Kowarsky.
