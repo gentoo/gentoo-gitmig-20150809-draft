@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.4-r1.ebuild,v 1.11 2007/10/09 22:20:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.4-r1.ebuild,v 1.12 2008/03/23 21:46:08 robbat2 Exp $
 
 inherit linux-mod eutils libtool
 
@@ -30,8 +30,8 @@ pkg_setup() {
 		kernel_is 2 4 && die "kernel 2.4 is not supported by this ebuild. Get an
 			older version from viewcvs"
 
-		BUILD_PARAMS="majver=${KV_MAJOR}.${KV_MINOR}
-					fusemoduledir=${ROOT}/lib/modules/${KV_FULL/\ }/fs"
+		BUILD_PARAMS="majver=${KV_MAJOR}.${KV_MINOR} \
+					fusemoduledir=\"${ROOT}\"/lib/modules/${KV_FULL/\ }/fs"
 		BUILD_TARGETS="all"
 		ECONF_PARAMS="--with-kernel=${KV_DIR} --with-kernel-build=${KV_OUT_DIR}"
 	fi
