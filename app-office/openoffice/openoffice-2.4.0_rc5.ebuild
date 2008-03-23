@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0_rc5.ebuild,v 1.1 2008/03/23 09:53:18 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0_rc5.ebuild,v 1.2 2008/03/23 13:39:52 mr_bones_ Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -200,7 +200,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PV}/gentoo-${PV}.diff"
 	epatch "${FILESDIR}/${PV}/ooo-env_log.diff"
-
 
 	# Hope we can get rid of this finally...
 #	if use ppc ; then
