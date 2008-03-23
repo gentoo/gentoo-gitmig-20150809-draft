@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.0.ebuild,v 1.2 2008/03/23 11:51:35 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.0.ebuild,v 1.3 2008/03/23 14:14:48 ranger Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://libofx.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libofx/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
 DEPEND=">=app-text/opensp-1.5
