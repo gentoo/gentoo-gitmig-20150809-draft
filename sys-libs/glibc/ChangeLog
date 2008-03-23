@@ -1,6 +1,18 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.573 2008/03/10 15:22:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.574 2008/03/23 18:06:17 vapier Exp $
+
+*glibc-2.7-r2 (23 Mar 2008)
+
+  23 Mar 2008; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_install.eblit, files/eblits/src_test.eblit,
+  +glibc-2.7-r2.ebuild:
+  No need to generate multilib headers anymore with latest glibc #191088. Grab
+  some queue.h updates from FreeBSD #201979. Disable (for now) CFI stuff on
+  x86_64/x86 to workaround a bug in gcc #202055. Fix from upstream for
+  building with newer binutils #209629. Fix pthread_join on hppa #213829. Make
+  sure to force latest kernel headers on hppa and increase testing timeout
+  #214003.
 
   10 Mar 2008; Mike Frysinger <vapier@gentoo.org> glibc-2.6.1.ebuild,
   glibc-2.7.ebuild, glibc-2.7-r1.ebuild:
