@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/vinagre
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.1 2008/03/23 23:04:46 eva Exp $
+
+*vinagre-0.5.0 (23 Mar 2008)
+
+  23 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> +metadata.xml,
+  +vinagre-0.5.0.ebuild:
+  Initial ebuild for vinagre. Thanks to Mart Raudsepp for reviewing ebuilds
+  on bug #189826
+
