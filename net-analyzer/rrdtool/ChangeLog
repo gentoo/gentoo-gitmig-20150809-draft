@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.138 2008/03/22 20:28:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.139 2008/03/23 13:03:58 pva Exp $
+
+*rrdtool-1.2.27-r1 (23 Mar 2008)
+
+  23 Mar 2008; <pva@gentoo.org> rrdtool-1.2.15-r3.ebuild,
+  +rrdtool-1.2.27-r1.ebuild:
+  Fix multilib issue, ruby bindings now doing site installation, bug #214051,
+  thank Markus for report. Droped mips.
 
   22 Mar 2008; Raúl Porcel <armin76@gentoo.org> rrdtool-1.2.27.ebuild:
   ia64/sparc stable wrt #214051
