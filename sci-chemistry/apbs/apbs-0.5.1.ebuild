@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.5.1.ebuild,v 1.2 2008/01/12 13:44:08 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.5.1.ebuild,v 1.3 2008/03/23 11:39:18 markusle Exp $
 
 inherit eutils fortran
 
@@ -46,7 +46,6 @@ src_compile() {
 }
 
 src_install() {
-
 	# install apbs binary
 	dobin bin/apbs || die "failed to install apbs binary"
 
@@ -66,7 +65,6 @@ src_install() {
 	doins -r examples/* || \
 		die "Failed to install examples"
 
-	insinto /usr/share/${PF}/tools
+	insinto /usr/share/${PN}/tools
 	doins -r tools/* || die "failed to install tools"
-
 }
