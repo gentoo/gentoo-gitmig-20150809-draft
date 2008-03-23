@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.1 2008/03/23 00:03:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.2 2008/03/23 00:04:00 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -20,7 +20,7 @@ KEYWORDS="" #"~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~
 IUSE="debug ncurses pam static unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
- 	kernel_linux? ( >=sys-apps/module-init-tools-3.2.2-r2 )
+	kernel_linux? ( >=sys-apps/module-init-tools-3.2.2-r2 )
 	kernel_FreeBSD? ( sys-process/fuser-bsd )
 	ncurses? ( sys-libs/ncurses )
 	pam? ( virtual/pam )
