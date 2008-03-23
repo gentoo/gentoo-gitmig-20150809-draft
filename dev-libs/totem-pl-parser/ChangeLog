@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/totem-pl-parser
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.1 2008/03/23 23:59:22 eva Exp $
+
+*totem-pl-parser-2.22.1 (23 Mar 2008)
+
+  23 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +totem-pl-parser-2.22.1.ebuild:
+  New ebuild for GNOME-2.22. Playlist parsing library splitted out
+  of totem.
+
