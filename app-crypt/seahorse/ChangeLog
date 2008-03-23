@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.91 2008/03/12 15:54:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.92 2008/03/23 22:22:58 eva Exp $
+
+*seahorse-2.22.0 (23 Mar 2008)
+
+  23 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
+  +seahorse-2.22.0.ebuild:
+  New version for GNOME-2.22. Dropped SSH proxy since it is now in
+  gnome-keyring, add more keyring management features.
 
   12 Mar 2008; Raúl Porcel <armin76@gentoo.org> seahorse-2.20.3.ebuild:
   ia64 stable
