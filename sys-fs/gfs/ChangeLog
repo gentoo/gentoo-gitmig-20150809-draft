@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/gfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.32 2008/03/21 11:59:51 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.33 2008/03/23 22:43:30 xmerlin Exp $
+
+*gfs-2.02.00-r1 (23 Mar 2008)
+
+  23 Mar 2008; Christian Zoffoli <xmerlin@gentoo.org>
+  +gfs-2.02.00-r1.ebuild:
+  Updated 2.02.00 to STABLE2 20080323.
 
   21 Mar 2008; Christian Zoffoli <xmerlin@gentoo.org> files/gfs-2.0x.rc:
   Removed gulm from the init script, now it's deprecated.
