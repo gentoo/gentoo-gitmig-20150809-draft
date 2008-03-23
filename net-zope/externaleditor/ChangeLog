@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/externaleditor
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/ChangeLog,v 1.15 2007/02/22 01:47:23 jokey Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/ChangeLog,v 1.16 2008/03/23 17:47:53 armin76 Exp $
+
+  23 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  externaleditor-0.9.1.ebuild:
+  Re-add ~sparc wrt #211784
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
