@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.90 2008/03/19 20:28:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.91 2008/03/23 14:06:28 pva Exp $
+
+*wireshark-1.0.0_rc1-r1 (23 Mar 2008)
+
+  23 Mar 2008; Peter Volkov <pva@gentoo.org>
+  +files/wireshark-1.0.0_rc1-fix-setcap-EPERM.patch,
+  +files/wireshark-1.0.0_rc1-fix-stop-capture.patch,
+  +wireshark-1.0.0_rc1-r1.ebuild:
+  Fix wireshark stop when built with caps.
 
 *wireshark-1.0.0_rc1 (19 Mar 2008)
 
