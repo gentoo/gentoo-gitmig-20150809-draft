@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.209 2008/02/04 04:52:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.210 2008/03/23 11:26:18 eva Exp $
+
+*gnome-session-2.22.0 (23 Mar 2008)
+
+  23 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-session-2.22.0.ebuild:
+  New version for GNOME-2.22. Removed hard dependency on esound. HIG and
+  randr fixes.
 
   04 Feb 2008; Jeroen Roovers <jer@gentoo.org> gnome-session-2.20.3.ebuild:
   Stable for HPPA (bug #208366).
