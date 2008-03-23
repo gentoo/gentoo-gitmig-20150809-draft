@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.65 2008/03/22 20:41:12 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.66 2008/03/23 10:48:52 opfer Exp $
+
+  23 Mar 2008; Christian Faulhammer <opfer@gentoo.org> usbutils-0.73.ebuild:
+  stable x86, bug 214268
 
   22 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> usbutils-0.73.ebuild:
   amd64 stable wrt bug #214268
