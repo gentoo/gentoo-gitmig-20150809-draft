@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/glunarclock
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.19 2007/12/25 14:38:33 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.20 2008/03/23 00:53:07 coldwind Exp $
+
+  23 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  glunarclock-0.32.4.ebuild:
+  amd64 stable
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> ChangeLog:
   Removing pyrania from metadata.xml as per #26352.
