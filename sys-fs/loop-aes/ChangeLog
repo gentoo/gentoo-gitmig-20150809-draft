@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.31 2008/03/06 18:29:27 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.32 2008/03/23 15:09:39 alonbl Exp $
+
+  23 Mar 2008; Alon Bar-Lev <alonbl@gentoo.org> loop-aes-3.2b.ebuild,
+  loop-aes-3.2c.ebuild:
+  Add escape to BUILD_PARAMS, something was changed in linux-mod?
 
 *loop-aes-3.2c (06 Mar 2008)
 
