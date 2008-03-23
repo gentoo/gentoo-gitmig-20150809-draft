@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.22.0.ebuild,v 1.1 2008/03/23 10:57:02 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.22.0.ebuild,v 1.2 2008/03/23 11:16:48 leio Exp $
 
 inherit gnome2 eutils
 
@@ -30,11 +30,4 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --with-gnome-distributor=Gentoo --disable-scrollkeeper"
-}
-
-src_unpack() {
-	gnome2_src_unpack
-
-	# Fix broken gtk-doc test
-	epatch "${FILESDIR}/${PN}-2.21.5-gtk-doc-die-die-die.patch"
 }
