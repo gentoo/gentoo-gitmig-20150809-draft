@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gnustep-back
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnustep-back/ChangeLog,v 1.16 2008/03/22 17:09:44 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnustep-back/ChangeLog,v 1.17 2008/03/23 18:26:58 armin76 Exp $
+
+  23 Mar 2008; Raúl Porcel <armin76@gentoo.org> gnustep-back-0.12.1.ebuild:
+  sparc stable wrt #207381
 
   22 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   gnustep-back-0.12.1.ebuild:
