@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p15.ebuild,v 1.2 2007/12/29 23:21:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p15.ebuild,v 1.3 2008/03/23 21:23:21 robbat2 Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs multilib
 
@@ -38,10 +38,10 @@ pkg_setup() {
 		bc_serpent(block:"${S}/mod":mod/serpent)
 		bc_twofish(block:"${S}/mod":mod/twofish)"
 	BUILD_TARGETS="all"
-	BUILD_PARAMS="
-		CPP=\"$(tc-getCXX)\"
-		KERNEL_DIR=\"${KV_DIR}\"
-		VER=${KV_MAJOR}.${KV_MINOR}
+	BUILD_PARAMS=" \
+		CPP=\"$(tc-getCXX)\" \
+		KERNEL_DIR=\"${KV_DIR}\" \
+		VER=${KV_MAJOR}.${KV_MINOR} \
 		KEXT=${KV_OBJ}"
 }
 
