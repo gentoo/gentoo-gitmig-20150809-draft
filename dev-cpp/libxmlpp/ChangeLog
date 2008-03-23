@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.62 2008/03/23 14:14:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.63 2008/03/23 17:56:55 armin76 Exp $
+
+  23 Mar 2008; Raúl Porcel <armin76@gentoo.org> libxmlpp-1.0.5.ebuild:
+  Add ~alpha/~ia64 wrt #214356
 
   23 Mar 2008; Brent Baude <ranger@gentoo.org> libxmlpp-1.0.4-r2.ebuild:
   keyworded ~arch for ppc64, bug 214356
