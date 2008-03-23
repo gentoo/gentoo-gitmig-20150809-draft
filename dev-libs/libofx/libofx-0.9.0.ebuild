@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.0.ebuild,v 1.1 2008/03/23 11:31:51 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.0.ebuild,v 1.2 2008/03/23 11:51:35 dev-zero Exp $
 
 EAPI="1"
 
@@ -42,4 +42,10 @@ src_unpack() {
 src_install() {
 	dodir /usr/share/doc/${PF}
 	emake install DESTDIR="${D}" docdir="/usr/share/doc/${PF}" || die 'install failed'
+}
+
+pkg_postinst() {
+	elog "Please run"
+	elog "  revdep-rebuild --library libofx.so.3"
+	elog "to rebuild packages linked against an older version of libofx."
 }
