@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_backtrace/mod_backtrace-0.0.1.ebuild,v 1.2 2008/01/10 15:49:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_backtrace/mod_backtrace-0.0.1.ebuild,v 1.3 2008/03/23 12:05:53 hollow Exp $
 
-inherit apache-module eutils
+inherit apache-module eutils confutils
 
 KEYWORDS="~amd64 ~x86"
 
@@ -22,10 +22,7 @@ APACHE2_MOD_DEFINE="BACKTRACE"
 need_apache2
 
 pkg_setup() {
-	apache-module_pkg_setup
-	if ! built_with_use www-servers/apache debug; then
-		die "you need to build www-servers/apache with USE=debug"
-	fi
+	confutils_require_built_with_all www-servers/apache debug
 }
 
 src_unpack() {
