@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/geda-suite
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-suite/ChangeLog,v 1.5 2007/03/24 14:43:44 calchan Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-suite/ChangeLog,v 1.6 2008/03/23 20:24:00 calchan Exp $
+
+  23 Mar 2008; Denis Dupeyron <calchan@gentoo.org>
+  geda-suite-20050820.ebuild:
+  Fixed dependencies, thanks to Michael Sterrett.
 
   24 Mar 2007; Denis Dupeyron <calchan@gentoo.org> ChangeLog:
   Fixed ChangeLog, see bug #171962.
