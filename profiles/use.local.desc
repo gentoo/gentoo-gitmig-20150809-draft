@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3440 2008/03/23 15:38:18 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3441 2008/03/23 22:21:47 eva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -70,6 +70,7 @@ app-crypt/gpgme:pth - build pth enabled library
 app-crypt/johntheripper:custom-cflags - Enables custom cflags (not supported)
 app-crypt/ophcrack:ophsmall - Makes use of smaller cracking tables
 app-crypt/seahorse:applet - Enable panel applet
+app-crypt/seahorse:epiphany - Enable epiphany extension
 app-crypt/seahorse:gedit - Enable the gedit plugin
 app-crypt/seahorse:keyring - Enable gnome-keyring support for storing passwords
 app-crypt/seahorse:nautilus - Add support for nautilus file manager

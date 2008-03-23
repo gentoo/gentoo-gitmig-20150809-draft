@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1239 2008/03/23 14:34:28 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1240 2008/03/23 22:21:47 eva Exp $
+
+  23 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask,
+  use.local.desc:
+  add seahorse to GNOME 2.22 mask and add its new local use flag, epiphany
 
   23 Mar 2008; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
   Add local jde USE flag for app-emacs/emhacks.
