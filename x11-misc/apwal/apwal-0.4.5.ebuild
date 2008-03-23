@@ -1,30 +1,32 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/apwal-0.4.5.ebuild,v 1.4 2007/08/02 12:40:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/apwal-0.4.5.ebuild,v 1.5 2008/03/23 00:16:35 coldwind Exp $
 
-S="${WORKDIR}/${PN}"
 DESCRIPTION="A simple application launcher and combined editor"
 HOMEPAGE="http://apwal.free.fr/"
 SRC_URI="http://apwal.free.fr/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0
 	dev-libs/libxml2"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	dev-util/pkgconfig"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# ugly hardcoded cflags
+	# and prevent strip
 	sed -i \
-		-e "s:-O2:${CFLAGS}:" src/Makefile \
+		-e "s:-O2:${CFLAGS}:" \
+		-e "/strip/d" src/Makefile \
 			|| die "sed src/Makefile failed"
 	# make parallel make happy
 	sed -i \
@@ -32,12 +34,8 @@ src_unpack() {
 			|| die "sed Makefile failed"
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
-	dobin src/apwal                   || die "dobin failed"
+	dobin src/apwal || die "dobin failed"
 	dosym apwal /usr/bin/apwal-editor || die "dosym failed"
 	dodoc ABOUT Changelog FAQ README  || die "dodoc failed"
 }

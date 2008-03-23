@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/apwal
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/ChangeLog,v 1.9 2007/08/02 12:40:10 uberlord Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/ChangeLog,v 1.10 2008/03/23 00:16:35 coldwind Exp $
+
+  23 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> apwal-0.4.5.ebuild:
+  Big clean up and amd64 stable.
 
   02 Aug 2007; Roy Marples <uberlord@gentoo.org> apwal-0.4.5.ebuild:
   Keyworded ~x86-fbsd, #156902 thanks to Marc Kowarsky.
