@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-input-mutouch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mutouch/ChangeLog,v 1.31 2008/02/24 02:22:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mutouch/ChangeLog,v 1.32 2008/03/24 04:09:03 dberkholz Exp $
+
+*xf86-input-mutouch-1.2.0 (24 Mar 2008)
+
+  24 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-input-mutouch-1.2.0.ebuild:
+  Bump.
 
   24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update my email.

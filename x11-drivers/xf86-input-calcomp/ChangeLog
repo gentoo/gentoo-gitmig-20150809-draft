@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-input-calcomp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-calcomp/ChangeLog,v 1.32 2008/02/24 02:13:06 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-calcomp/ChangeLog,v 1.33 2008/03/24 04:03:15 dberkholz Exp $
+
+*xf86-input-calcomp-1.1.2 (24 Mar 2008)
+
+  24 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-input-calcomp-1.1.2.ebuild:
+  Bump.
 
   24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update my email.
