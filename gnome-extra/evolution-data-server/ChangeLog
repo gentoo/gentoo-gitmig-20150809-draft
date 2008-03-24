@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.173 2008/03/24 22:47:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.174 2008/03/24 23:07:41 eva Exp $
+
+  24 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  evolution-data-server-2.22.0.ebuild:
+  updating gnome-keyring dependency, bug #213470
 
 *evolution-data-server-2.22.0 (24 Mar 2008)
 
