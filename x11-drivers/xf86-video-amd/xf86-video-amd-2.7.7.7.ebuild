@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-amd/xf86-video-amd-2.7.7.7.ebuild,v 1.1 2008/03/24 04:11:49 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-amd/xf86-video-amd-2.7.7.7.ebuild,v 1.2 2008/03/24 04:20:39 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
