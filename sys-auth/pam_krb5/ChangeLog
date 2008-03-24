@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.15 2008/03/04 20:29:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.16 2008/03/24 11:06:43 armin76 Exp $
+
+  24 Mar 2008; Raúl Porcel <armin76@gentoo.org> pam_krb5-3.10.ebuild:
+  Add ~sparc wrt #213854
 
 *pam_krb5-3.10 (04 Mar 2008)
 
