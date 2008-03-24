@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mg4j
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/ChangeLog,v 1.15 2008/03/02 14:36:10 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/ChangeLog,v 1.16 2008/03/24 22:13:20 betelgeuse Exp $
+
+  24 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> -mg4j-0.9.1.ebuild:
+  Remove generation 1 ebuild.
 
   02 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> mg4j-0.9.1-r1.ebuild:
   Marked stable on amd64 as per bug 196952.
