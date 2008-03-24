@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xclipboard
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclipboard/ChangeLog,v 1.15 2007/12/19 23:58:13 cla Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclipboard/ChangeLog,v 1.16 2008/03/24 14:01:30 maekke Exp $
+
+  24 Mar 2008; Markus Meier <maekke@gentoo.org> xclipboard-1.0.1.ebuild:
+  amd64 stable, bug #202087
 
   19 Dec 2007; Dawid Węgliński <cla@gentoo.org> xclipboard-1.0.1.ebuild:
   Stable on x86 (bug #202087)
