@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/hotkeys
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.34 2008/03/15 14:18:04 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.35 2008/03/24 14:40:31 fmccor Exp $
+
+  24 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
+  hotkeys-0.5.7.4.0.1.ebuild:
+  Sparc stable, Bug #210670.  Thanks to Friedrich Oslage for verifying.
 
   15 Mar 2008; Kenneth Prugh <ken69267@gentoo.org>
   hotkeys-0.5.7.4.0.1.ebuild:
