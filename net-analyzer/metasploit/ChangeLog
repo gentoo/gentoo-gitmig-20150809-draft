@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.31 2008/03/23 16:02:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.32 2008/03/24 05:42:42 pva Exp $
+
+*metasploit-3.1_p5456 (24 Mar 2008)
+
+  24 Mar 2008; Peter Volkov <pva@gentoo.org> +metasploit-3.1_p5456.ebuild:
+  Sync with upstream.
 
   23 Mar 2008; Peter Volkov <pva@gentoo.org> metasploit-2.7.ebuild:
   Fixed typo in postrm, bug #214380, thank Denilson for report
