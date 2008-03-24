@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.125 2008/03/17 12:17:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.126 2008/03/24 20:39:41 armin76 Exp $
+
+  24 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-bin-3.0_beta4.ebuild:
+  beta4 won't work if alsa-oss is installed
 
   17 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   mozilla-firefox-bin-2.0.0.12.ebuild, mozilla-firefox-bin-3.0_beta3.ebuild,
