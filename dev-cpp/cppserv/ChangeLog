@@ -1,6 +1,16 @@
 # ChangeLog for dev-cpp/cppserv
 # Copyright 2006-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.15 2008/03/01 20:33:21 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.16 2008/03/24 05:47:28 iluxa Exp $
+
+  24 Mar 2008; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  +cppserv-0.1.107.ebuild:
+  Add explicit dependancy on >=apr-1.2
+
+*cppserv-0.1.107 (24 Mar 2008)
+
+  24 Mar 2008; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  +cppserv-0.1.107.ebuild:
+  Add release 0.1.107
 
   01 Mar 2008; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
   cppserv-0.1.103.ebuild:
