@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qof
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.17 2008/03/10 14:26:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.18 2008/03/24 16:21:22 maekke Exp $
+
+  24 Mar 2008; Markus Meier <maekke@gentoo.org> qof-0.7.5.ebuild:
+  amd64 stable, bug #205242
 
   10 Mar 2008; Raúl Porcel <armin76@gentoo.org> qof-0.7.5.ebuild:
   sparc stable wrt #212902
