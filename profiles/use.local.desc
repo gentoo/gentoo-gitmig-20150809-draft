@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3446 2008/03/24 05:50:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3447 2008/03/24 09:43:43 hd_brummy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1219,6 +1219,7 @@ media-video/transcode:network - Enables network streaming support
 media-video/transcode:nuv - NuppelVideo container format demuxing
 media-video/transcode:postproc - Build with ffmpeg libpostproc support
 media-video/vdr:aio - Use "all in one" patch (or its successor "liemikuutio") with much additional features
+media-video/vdr:atsc - Support for NorthAmerican Broadcast ( rudimentary )
 media-video/vdr:bigpatch - Enables almost all additional features flying around on the net (including aio)
 media-video/vdr:child-protection - Enable support for the plugin vdr-pin (Protecting some recordings / channels with a PIN)
 media-video/vdr:cmdctrl - allows switching remote control on/off
@@ -1227,6 +1228,7 @@ media-video/vdr:cutterlimit - Limit IO bandwith used for cutting
 media-video/vdr:cutterqueue - Adds a queue of recordings to be cutted
 media-video/vdr:cuttime - Adjust starttime of cutted recording by length of cut out parts
 media-video/vdr:ddepgentry - remove duplicate EPG entries
+media-video/vdr:deltimeshiftrec - Auto delete timeshift recordings
 media-video/vdr:dolby-record-switch - Allows to control separately to record / to replay dolby digital
 media-video/vdr:dolbyinrec - add a dedicated switch to control recording of dolby digital
 media-video/vdr:dvbplayer - Use some special mpeg-repacker features. Most usable for old recordings or software output devices.
@@ -1261,6 +1263,7 @@ media-video/vdr:submenu - Enable support for the plugin vdr-submenu.
 media-video/vdr:subtitles - Enable support for the subtitles-plugin
 media-video/vdr:switchtimer - support for timer that do not record but only switch to a channel
 media-video/vdr:syncearly - start live display as soon as possible, not waiting for sync of audio and video
+media-video/vdr:ttxtsubs - support for ttxtsubs plugin
 media-video/vdr:timercmd - Adds submenu for user defined commands in timer menu
 media-video/vdr:timerinfo - Show with chars +/- if space on HD will suffice for a timer
 media-video/vdr:validinput - Signal if it is possible to go left/right in lists with chars < >
