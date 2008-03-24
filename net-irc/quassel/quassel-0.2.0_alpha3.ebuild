@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.2.0_alpha3.ebuild,v 1.1 2008/03/18 13:18:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.2.0_alpha3.ebuild,v 1.2 2008/03/24 15:30:32 armin76 Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ SRC_URI="http://quassel-irc.org/system/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 

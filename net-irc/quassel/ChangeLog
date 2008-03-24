@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.7 2008/03/18 13:18:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.8 2008/03/24 15:30:32 armin76 Exp $
+
+  24 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  quassel-0.2.0_alpha3.ebuild:
+  Add ~x86
 
 *quassel-0.2.0_alpha3 (18 Mar 2008)
 
