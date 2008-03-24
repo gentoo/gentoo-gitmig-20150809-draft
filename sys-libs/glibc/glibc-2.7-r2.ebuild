@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7-r2.ebuild,v 1.1 2008/03/23 18:06:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7-r2.ebuild,v 1.2 2008/03/24 11:05:16 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -11,8 +11,6 @@ LICENSE="LGPL-2"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 RESTRICT="strip" # strip ourself #46186
 EMULTILIB_PKG="true"
-
-[[ ${CTARGET} == hppa* ]] && NPTL_KERN_VER=${NPTL_KERN_VER:-2.6.20}
 
 # Configuration variables
 RELEASE_VER=$(get_version_component_range 1-3) # major glibc version
@@ -50,6 +48,8 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 		export CTARGET=${CATEGORY/cross-}
 	fi
 fi
+
+[[ ${CTARGET} == hppa* ]] && NPTL_KERN_VER=${NPTL_KERN_VER/2.6.9/2.6.20}
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
