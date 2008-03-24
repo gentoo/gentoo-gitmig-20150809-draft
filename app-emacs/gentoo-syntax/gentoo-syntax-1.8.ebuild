@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.8.ebuild,v 1.7 2008/03/23 17:33:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.8.ebuild,v 1.8 2008/03/24 09:55:39 ulm Exp $
 
 inherit elisp
 
@@ -15,3 +15,10 @@ IUSE=""
 
 SITEFILE=51${PN}-gentoo.el
 DOCS="ChangeLog"
+
+pkg_postinst() {
+	elisp-site-regen
+
+	elog "Some optional features may require installation of additional"
+	elog "packages, like app-portage/gentoolkit-dev for echangelog."
+}
