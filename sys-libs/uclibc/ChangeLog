@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.26 2008/03/15 15:41:51 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.27 2008/03/24 19:30:04 solar Exp $
+
+*uclibc-0.9.28.3-r3 (24 Mar 2008)
+
+  24 Mar 2008; <solar@gentoo.org> +uclibc-0.9.28.3-r3.ebuild:
+  - sync queue.h up from svn HEAD
 
   15 Mar 2008; Christian Heim <phreak@gentoo.org> uclibc-0.9.28.3-r2.ebuild:
   Stabilizing uclibc-0.9.28.3-r2 on x86, as per solar's acknowledgement.
