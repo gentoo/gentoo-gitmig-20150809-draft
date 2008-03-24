@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/libmxmlplus
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmxmlplus/ChangeLog,v 1.4 2007/03/19 03:35:01 kloeri Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmxmlplus/ChangeLog,v 1.5 2008/03/24 20:50:14 dev-zero Exp $
+
+*libmxmlplus-0.9.2_p20080323 (24 Mar 2008)
+
+  24 Mar 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -libmxmlplus-0.9.2_p20060111.ebuild, -libmxmlplus-0.9.2_p20060618.ebuild,
+  +libmxmlplus-0.9.2_p20080323.ebuild:
+  Version bump (solves bug #202450). Dropped old versions.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove flameeyes from metadata.xml due to retirement.
