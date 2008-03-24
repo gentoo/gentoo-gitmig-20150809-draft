@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/qof
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.18 2008/03/24 16:21:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.19 2008/03/24 20:13:21 opfer Exp $
+
+  24 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
+  -files/qof-0.7.2-remove_spurious_CFLAGS.patch, -qof-0.7.2.ebuild:
+  clean up
 
   24 Mar 2008; Markus Meier <maekke@gentoo.org> qof-0.7.5.ebuild:
   amd64 stable, bug #205242
