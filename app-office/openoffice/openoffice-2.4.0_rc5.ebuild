@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0_rc5.ebuild,v 1.2 2008/03/23 13:39:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0_rc5.ebuild,v 1.3 2008/03/24 13:24:52 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -292,8 +292,8 @@ src_compile() {
 	use debug || export LINKFLAGSOPTIMIZE="${LDFLAGS}"
 
 	# Make sure gnome-users get gtk-support
-	export GTKFLAG="--disable-gtk --disable-cairo --without-system-cairo"
-	( use gtk || use gnome ) && export GTKFLAG="--enable-gtk --enable-cairo --with-system-cairo"
+	local GTKFLAG="--disable-gtk --disable-cairo --without-system-cairo"
+	( use gtk || use gnome ) && GTKFLAG="--enable-gtk --enable-cairo --with-system-cairo"
 
 	cd "${S}"
 	./configure \
@@ -306,7 +306,7 @@ src_compile() {
 		--without-binsuffix \
 		--with-installed-ooo-dirname="openoffice" \
 		--with-tag=OOH680_m11 \
-		"${GTKFLAG}" \
+		${GTKFLAG} \
 		`use_enable mono` \
 		`use_enable kde` \
 		`use_enable gnome quickstart` \
