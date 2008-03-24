@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vino
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.99 2007/11/29 06:16:14 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.100 2008/03/24 10:55:27 eva Exp $
+
+*vino-2.22.0 (24 Mar 2008)
+
+  24 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> +vino-2.22.0.ebuild:
+  New version for GNOME-2.22. Mostly crash fixes and translation updates.
 
   29 Nov 2007; Jeroen Roovers <jer@gentoo.org> vino-2.20.1.ebuild:
   Stable for HPPA (bug #199740).
