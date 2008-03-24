@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pypvm/pypvm-0.94.ebuild,v 1.1 2008/03/24 22:20:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pypvm/pypvm-0.94.ebuild,v 1.2 2008/03/24 22:21:18 dberkholz Exp $
 
 inherit distutils multilib
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
-RDEPEND="sys-cluster/pvm"
+RDEPEND=">=sys-cluster/pvm-3.4.5-r3"
 DEPEND="${RDEPEND}"
 
 src_compile() {
