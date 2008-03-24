@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/irda-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.26 2008/03/23 16:00:15 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.27 2008/03/24 10:58:11 sbriesen Exp $
+
+  24 Mar 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  -irda-utils-0.9.17_pre5.ebuild, -irda-utils-0.9.18.ebuild:
+  removed old versions.
 
   23 Mar 2008; Stefan Briesenick <sbriesen@gentoo.org> files/irda.initd:
   added remove_module in init-script.
