@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.71 2008/03/24 19:10:41 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.72 2008/03/24 19:54:28 jer Exp $
+
+  24 Mar 2008; Jeroen Roovers <jer@gentoo.org> usbutils-0.73.ebuild:
+  Stable for HPPA (bug #214268).
 
   24 Mar 2008; Tobias Klausmann <klausman@gentoo.org> usbutils-0.73.ebuild:
   Stable on alpha, bug #214268
