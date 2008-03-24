@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-0.2.1.ebuild,v 1.1 2008/03/24 00:13:44 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-0.2.1.ebuild,v 1.2 2008/03/24 00:35:36 compnerd Exp $
 
 inherit autotools gnome2
 
@@ -18,7 +18,10 @@ RDEPEND=">=dev-libs/glib-2.16
 		 dev-libs/libxml2
 		 net-misc/openssh
 		 avahi? ( >=net-dns/avahi-0.6 )
-		 cdda? ( >=dev-libs/libcdio-0.78.2 )
+		 cdda?  (
+					>=sys-apps/hal-0.5.10
+					>=dev-libs/libcdio-0.78.2
+				)
 		 fuse? ( sys-fs/fuse )
 		 gnome? ( >=gnome-base/gconf-2.0 )
 		 hal? ( >=sys-apps/hal-0.5.10 )
