@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.45 2008/03/22 14:38:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.46 2008/03/24 17:55:15 armin76 Exp $
+
+*rb_libtorrent-0.13_rc3 (24 Mar 2008)
+
+  24 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  -rb_libtorrent-0.13_pre1912.ebuild, -rb_libtorrent-0.13_rc1.ebuild,
+  +rb_libtorrent-0.13_rc3.ebuild:
+  Version bump
 
   22 Mar 2008; Markus Rothe <corsair@gentoo.org>
   rb_libtorrent-0.13_rc1.ebuild:
