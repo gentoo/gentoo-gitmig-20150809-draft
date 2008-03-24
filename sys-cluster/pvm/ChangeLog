@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/pvm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.36 2008/01/31 07:01:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.37 2008/03/24 19:45:24 dberkholz Exp $
+
+*pvm-3.4.5-r3 (24 Mar 2008)
+
+  24 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/pvm-3.4.5-respect-cflags.patch, +pvm-3.4.5-r3.ebuild:
+  Actually respect the user's compiler and CFLAGS. Build libpvm3.a PIC so
+  that other apps can link against it on architectures such as amd64.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>; -pvm-3.4.4-r2.ebuild:
   Clean up.

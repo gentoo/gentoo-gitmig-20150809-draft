@@ -1,0 +1,15 @@
+diff -ur pvm3.orig/Makefile.aimk pvm3/Makefile.aimk
+--- pvm3.orig/Makefile.aimk	2008-03-24 12:37:29.000000000 -0700
++++ pvm3/Makefile.aimk	2008-03-24 12:37:42.000000000 -0700
+@@ -34,9 +34,9 @@
+ #
+ 
+ PVMOPTS		=	CC="$(CC)" \
+-				F77="$(F77)"
++				F77="$(F77)" \
++				CFLOPTS="$(CFLOPTS)"
+ 
+-#				CFLOPTS="$(CFLOPTS)"
+ #				FFLOPTS="$(FFLOPTS)"
+ #				PVMDIR=$(PVMDIR)
+ 
