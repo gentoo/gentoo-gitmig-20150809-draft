@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/judy
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.16 2007/09/01 12:40:17 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.17 2008/03/24 17:58:06 coldwind Exp $
+
+*judy-1.0.4 (24 Mar 2008)
+
+  24 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> judy-1.0.3.ebuild,
+  +judy-1.0.4.ebuild:
+  amd64 stable, version bump and clean up.
 
   01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing twp from metadata due to his retirement (see #190561 for reference).
