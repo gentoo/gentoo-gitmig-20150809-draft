@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager-vpnc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.1 2007/08/23 12:28:15 rbu Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.2 2008/03/24 06:55:52 leio Exp $
+
+  24 Mar 2008; Mart Raudsepp <leio@gentoo.org>
+  networkmanager-vpnc-0.6.4_p20070621.ebuild:
+  Fix build with newer intltool. Noticed by Priit Laes
 
 *networkmanager-vpnc-0.6.4_p20070621 (23 Aug 2007)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.6.4_p20070621.ebuild,v 1.2 2007/12/31 22:29:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.6.4_p20070621.ebuild,v 1.3 2008/03/24 06:55:52 leio Exp $
 
 inherit gnome2 eutils autotools
 
@@ -62,4 +62,5 @@ src_unpack () {
 
 	epatch "${FILESDIR}/${P}-service-name.patch"
 	eautoreconf
+	intltoolize --force || die "intltoolize failed"
 }
