@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8418 2008/03/24 00:01:44 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8419 2008/03/24 20:05:12 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (11 Mar 2008)
+# masked for testing
+# http://www.vdr-portal.de/board/thread.php?threadid=74833 (german)
+=net-www/xxv-1.2.1308
+=net-www/xxv-1.2.1315
 
 # Andreas Proschofsky <suka@gentoo.org> (23 Mar 2008)
 # Mask release candidates for OpenOffice.org 2.4.0
@@ -192,11 +198,6 @@ sys-apps/mindi-busybox
 # Pending removal
 # See bug #138755
 x11-misc/perlpanel
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (11 Mar 2008)
-# masked for testing
-# http://www.vdr-portal.de/board/thread.php?threadid=74833 (german)
-=net-www/xxv-1.2.1308
 
 # Christian Faulhammer <opfer@gentoo.org> (11 Mar 2008)
 # masked for testing
