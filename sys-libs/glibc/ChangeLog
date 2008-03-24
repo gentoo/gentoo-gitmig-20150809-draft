@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.574 2008/03/23 18:06:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.575 2008/03/24 19:45:14 vapier Exp $
+
+  24 Mar 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/eblits/src_install-2.6.eblit, -files/eblits/src_install-2.7.eblit,
+  glibc-2.6.1.ebuild, glibc-2.7.ebuild, glibc-2.7-r1.ebuild:
+  Reversion things so old is old #191088.
 
 *glibc-2.7-r2 (23 Mar 2008)
 

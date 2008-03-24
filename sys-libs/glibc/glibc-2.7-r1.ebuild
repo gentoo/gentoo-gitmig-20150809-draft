@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7-r1.ebuild,v 1.11 2008/03/23 18:03:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7-r1.ebuild,v 1.12 2008/03/24 19:45:14 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -155,7 +155,7 @@ eblit-run() {
 src_unpack()  { eblit-run src_unpack  ; }
 src_compile() { eblit-run src_compile ; }
 src_test()    { eblit-run src_test    ; }
-src_install() { eblit-run src_install 2.7 ; }
+src_install() { eblit-run src_install 2.6 ; }
 
 eblit-src_unpack-post() {
 	if use hardened ; then
