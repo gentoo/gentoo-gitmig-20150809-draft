@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ivritex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.19 2008/02/14 14:04:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.20 2008/03/24 14:50:01 fmccor Exp $
+
+  24 Mar 2008; Ferris McCormick <fmccor@gentoo.org> ivritex-1.1.2.ebuild:
+  Sparc stable, required by Bug #214456 (been working for 8 months).
 
   14 Feb 2008; Raúl Porcel <armin76@gentoo.org> ivritex-1.1.2.ebuild:
   alpha/ia64 stable wrt #209465
