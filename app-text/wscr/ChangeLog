@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wscr
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/ChangeLog,v 1.14 2007/12/25 15:50:15 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/ChangeLog,v 1.15 2008/03/24 17:28:46 coldwind Exp $
+
+  24 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> wscr-1.2.ebuild:
+  amd64 stable
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing taviso from metadata.xml as per #202471. Assigning to
