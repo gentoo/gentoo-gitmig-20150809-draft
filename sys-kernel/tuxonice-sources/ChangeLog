@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.21 2008/03/01 19:46:35 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.22 2008/03/24 11:02:26 maekke Exp $
+
+  24 Mar 2008; Markus Meier <maekke@gentoo.org>
+  tuxonice-sources-2.6.23-r10.ebuild:
+  amd64 stable, bug #202064
 
   01 Mar 2008; Bo Ørsted Andresen <zlin@gentoo.org>
   tuxonice-sources-2.6.23-r10.ebuild, tuxonice-sources-2.6.24-r3.ebuild:
