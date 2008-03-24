@@ -2,20 +2,20 @@ diff -rc rssreader-1.0.1.orig/example/rssreader.conf rssreader-1.0.1.mod/example
 *** rssreader-1.0.1.orig/example/rssreader.conf	Sat Jul  1 03:20:00 2006
 --- rssreader-1.0.1.mod/example/rssreader.conf	Sun Oct 29 15:15:06 2006
 ***************
-*** 4,9 ****
---- 4,10 ----
-  -- VDR                 : # Label
-  VDR Announcements      : http://www.netholic.com/extras/vdr_announce_rss.php?num=10
-  HTPC foorumi           : http://www.netholic.com/rss.php
+*** 5,10 ****
+--- 5,11 ----
+  VDR Announcements      : http://www.linuxtv.fi/extras/vdr_announce_rss.php?num=10
+  Linuxtv.fi foorumi     : http://www.linuxtv.fi/rss.php
+  DVB.fi foorumi         : http://www.dvb.fi/external.php?type=rss
 + PizzakBlog             : http://pizzak.wordpress.com/feed/
   -- Kotimaiset          : # Label
   Lehti                  : http://lehti.samizdat.info/feed/rss2/
-  YLE                    : http://www.yle.fi/uutiset/rss/paauutiset.xml
+  Salakuunneltua         : http://www.salakuunneltua.fi/rss.php
 diff -rc rssreader-1.0.1.orig/rssreader.c rssreader-1.0.1.mod/rssreader.c
 *** rssreader-1.0.1.orig/rssreader.c	Sat Jul  1 03:20:00 2006
 --- rssreader-1.0.1.mod/rssreader.c	Sun Oct 29 15:06:10 2006
 ***************
-*** 94,100 ****
+*** 90,96 ****
   bool cPluginRssReader::Start(void)
   {
     // Start any background activities the plugin shall perform.
@@ -23,7 +23,7 @@ diff -rc rssreader-1.0.1.orig/rssreader.c rssreader-1.0.1.mod/rssreader.c
        error("configuration file 'rssreader.conf' not found!");
     return true;
   }
---- 94,100 ----
+--- 90,96 ----
   bool cPluginRssReader::Start(void)
   {
     // Start any background activities the plugin shall perform.
