@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0_rc5.ebuild,v 1.3 2008/03/24 13:24:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0_rc5.ebuild,v 1.4 2008/03/24 16:13:25 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -182,6 +182,12 @@ pkg_setup() {
 		die
 	fi
 
+	if ! built_with_use sys-apps/shadow pam; then
+		eerror " shadow needs to be built with pam-support. "
+		eerror " rebuild it accordingly or remove the pam use-flag "
+		die
+	fi
+
 	java-pkg-opt-2_pkg_setup
 
 	# sys-libs/db version used
@@ -342,7 +348,7 @@ src_install() {
 	chown -R root:0 "${D}"
 
 	# record java libraries
-	use java && java-pkg_regjar ${D}/usr/$(get_libdir)/openoffice/program/classes/*.jar
+	use java && java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/program/classes/*.jar
 
 }
 
