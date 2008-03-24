@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.71 2008/01/28 20:09:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.72 2008/03/24 12:28:18 maekke Exp $
+
+  24 Mar 2008; Markus Meier <maekke@gentoo.org> gnokii-0.6.22-r2.ebuild:
+  amd64 stable, bug #203745
 
   28 Jan 2008; Jeroen Roovers <jer@gentoo.org> gnokii-0.6.22-r2.ebuild:
   Stable for HPPA (bug #203745).
