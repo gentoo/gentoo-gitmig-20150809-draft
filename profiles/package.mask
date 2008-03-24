@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8419 2008/03/24 20:05:12 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8420 2008/03/24 22:14:58 caster Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -434,41 +434,10 @@ app-admin/ctcs
 # Doesn't compile, useless, bug #152493
 net-libs/libhttpd-persistent
 
-# Vlastimil Babka <caster@gentoo.org> (03 Feb 2008)
-# Still unmigrated, no release since 2005, some of the
-# packages declared dead by upstream. Nothing depends
-# on it. Masked for removal in 30 days.
-# Unless someone shows interest in it, will be moved
-# to java junkyard.
-dev-java/cryptix
-dev-java/cryptix-asn1-bin
-dev-java/cryptix-jce-bin
-
 # Michael Sterrett <mr_bones_@gentoo.org> (02 Feb 2008)
 # needs a version of media-sound/audacious which is no
 # longer in the tree.
 app-mobilephone/bemused
-
-# Vlastimil Babka <caster@gentoo.org> (02 Feb 2008)
-# Still unmigrated, untouched since 2005, nothing
-# depends on it. Masked for removal in 30 days.
-# Unless someone shows interest in it, will be moved
-# to java junkyard.
-dev-java/javamake-bin
-
-# Vlastimil Babka <caster@gentoo.org> (02 Feb 2008)
-# Still unmigrated, last upstream release 2001, nothing
-# depends on it. Masked for removal in 30 days.
-# Unless someone shows interest in it, will be moved
-# to java junkyard.
-dev-java/minml2
-
-# Vlastimil Babka <caster@gentoo.org> (02 Feb 2008)
-# Still unmigrated, untouched since 2005, nothing
-# depends on it. Masked for removal in 30 days.
-# Unless someone shows interest in it, will be moved
-# to java junkyard.
-dev-java/jasmin-sable
 
 # Ulrich Mueller <ulm@gentoo.org> (01 Feb 2008)
 # Live CVS ebuild of Emacs 22 base branch
