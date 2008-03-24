@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/festival-freebsoft-utils
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/ChangeLog,v 1.14 2007/02/21 19:21:35 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/ChangeLog,v 1.15 2008/03/24 23:48:14 fmccor Exp $
+
+  24 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
+  festival-freebsoft-utils-0.6.ebuild:
+  Add ~sparc keyword, related to Bug #204504, thanks to Friedrich Oslage for
+  testing everything.
 
   21 Feb 2007; <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
