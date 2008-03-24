@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.1.ebuild,v 1.1 2008/01/15 09:26:12 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.1.ebuild,v 1.2 2008/03/24 08:52:49 opfer Exp $
 
 NEED_PYTHON=2.4
 
@@ -14,7 +14,7 @@ SRC_URI="http://bazaar-vcs.org/releases/src/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc x86 ~x86-fbsd"
 IUSE="curl emacs sftp test"
 
 RDEPEND="|| ( dev-python/celementtree >=dev-lang/python-2.5 )
