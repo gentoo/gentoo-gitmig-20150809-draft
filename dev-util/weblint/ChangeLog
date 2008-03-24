@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/weblint
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weblint/ChangeLog,v 1.14 2007/07/15 08:30:05 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weblint/ChangeLog,v 1.15 2008/03/24 14:09:51 coldwind Exp $
+
+  24 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> weblint-1.020.ebuild:
+  amd64 stable
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning dev-util/weblint to m-needed, as beu is being retired (#66608).
