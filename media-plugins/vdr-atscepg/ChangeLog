@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-atscepg
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/ChangeLog,v 1.1 2008/03/24 09:55:01 hd_brummy Exp $
+
+*vdr-atscepg-0.1.1 (24 Mar 2008)
+
+  24 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
+  +vdr-atscepg-0.1.1.ebuild:
+  initial ebuild, moved from overlay vdr-1.5
+
