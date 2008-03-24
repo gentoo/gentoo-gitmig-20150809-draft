@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.95 2008/03/22 15:42:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.96 2008/03/24 15:35:35 armin76 Exp $
+
+  24 Mar 2008; Raúl Porcel <armin76@gentoo.org> gimp-print-5.1.4.ebuild:
+  ia64 stable wrt #144623
 
   22 Mar 2008; Brent Baude <ranger@gentoo.org> gimp-print-5.1.4.ebuild:
   Marking gimp-print-5.1.4 ppc64 for bug 144623
