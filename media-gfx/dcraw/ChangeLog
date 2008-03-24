@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/dcraw
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.46 2007/07/26 18:09:41 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.47 2008/03/24 13:37:06 wschlich Exp $
+
+*dcraw-8.83 (23 Mar 2008)
+
+  23 Mar 2008; Wolfram Schlich <wschlich@gentoo.org> +dcraw-8.83.ebuild:
+  version bump, incorporate USE=lcms and USE=jpeg from flameeyes
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> dcraw-8.73.ebuild:
   Stable on ppc64; bug #185078
