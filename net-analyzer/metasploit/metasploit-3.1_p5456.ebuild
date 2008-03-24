@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1_p5456.ebuild,v 1.1 2008/03/24 05:42:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1_p5456.ebuild,v 1.2 2008/03/24 16:08:28 armin76 Exp $
 
 MY_P=${PN/metasploit/framework}-${PV}
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.metasploit.org/"
 
 LICENSE="MSF-1.2"
 SLOT="3"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="gtk sqlite sqlite3 postgres httpd"
 
 RDEPEND="dev-lang/ruby

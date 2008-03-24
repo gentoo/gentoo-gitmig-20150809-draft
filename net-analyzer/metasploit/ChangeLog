@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.32 2008/03/24 05:42:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.33 2008/03/24 16:08:28 armin76 Exp $
+
+  24 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  metasploit-3.1_p5456.ebuild:
+  Add ~sparc wrt #211774
 
 *metasploit-3.1_p5456 (24 Mar 2008)
 
