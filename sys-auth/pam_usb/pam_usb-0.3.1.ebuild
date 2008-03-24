@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.3.1.ebuild,v 1.2 2005/09/03 23:29:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.3.1.ebuild,v 1.3 2008/03/24 15:43:08 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ IUSE="pam ssl"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~amd64"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc x86"
 
 RDEPEND="sys-libs/pam"
 DEPEND="ssl? ( dev-libs/openssl )
