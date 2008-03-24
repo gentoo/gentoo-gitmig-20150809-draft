@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/cadaver
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.23 2008/03/01 08:28:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.24 2008/03/24 06:50:52 graaff Exp $
+
+*cadaver-0.23.2 (24 Mar 2008)
+
+  24 Mar 2008; Hans de Graaff <graaff@gentoo.org> -cadaver-0.22.2.ebuild,
+  cadaver-0.22.5.ebuild, cadaver-0.22.5-r1.ebuild, +cadaver-0.23.2.ebuild:
+  Version bump as per #210191, thanks to Arfrever Frehtes Taifersar Arahesis.
+  Drop ~ppc keyword since this keyword also got dropped from net-misc/neon.
+
+  24 Mar 2008; Hans de Graaff <graaff@gentoo.org> -cadaver-0.22.2.ebuild,
+  cadaver-0.22.5.ebuild, cadaver-0.22.5-r1.ebuild:
+  Remove old version; adjust dependencies because neon 0.27 breaks API
+  compatibility.
 
 *cadaver-0.22.5-r1 (01 Mar 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.22.5.ebuild,v 1.3 2008/02/03 19:04:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.22.5.ebuild,v 1.4 2008/03/24 06:50:52 graaff Exp $
 
 DESCRIPTION="Command-line WebDAV client."
 HOMEPAGE="http://www.webdav.org/cadaver"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 IUSE="nls"
 
 DEPEND="virtual/libc
-	>=net-misc/neon-0.26.3"
+	=net-misc/neon-0.26*"
 
 pkg_setup() {
 	ewarn "System installed neon is now utilized -- if you require SSL support"
