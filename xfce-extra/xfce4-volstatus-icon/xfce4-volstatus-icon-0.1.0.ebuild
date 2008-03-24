@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volstatus-icon/xfce4-volstatus-icon-0.1.0.ebuild,v 1.8 2008/03/23 17:52:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volstatus-icon/xfce4-volstatus-icon-0.1.0.ebuild,v 1.9 2008/03/24 12:59:44 klausman Exp $
 
 inherit eutils xfce44
 
@@ -10,7 +10,7 @@ DESCRIPTION="Systray status icon for safe unmount/eject of volumes"
 HOMEPAGE="http://goodies.xfce.org"
 SRC_URI="http://goodies.xfce.org/releases/${PN}/${P}${COMPRESS}"
 
-KEYWORDS="~alpha amd64 ia64 ~ppc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc x86"
 IUSE="debug"
 
 RDEPEND=">=x11-libs/gtk+-2.10
