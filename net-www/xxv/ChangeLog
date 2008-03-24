@@ -1,6 +1,11 @@
 # ChangeLog for net-www/xxv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/ChangeLog,v 1.8 2008/03/11 21:48:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/ChangeLog,v 1.9 2008/03/24 20:07:18 hd_brummy Exp $
+
+*xxv-1.2.1315 (24 Mar 2008)
+
+  24 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org> +xxv-1.2.1315.ebuild:
+  svn snapshot r1315 added for testing utf8 handling, masked by package.mask
 
 *xxv-1.2.1308 (11 Mar 2008)
 
