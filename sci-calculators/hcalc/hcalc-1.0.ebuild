@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/hcalc-1.0.ebuild,v 1.6 2007/07/22 07:30:22 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/hcalc-1.0.ebuild,v 1.7 2008/03/24 16:44:47 coldwind Exp $
 
 DESCRIPTION="DJ's Hex Calculator"
 HOMEPAGE="http://www.delorie.com/store/hcalc/"
 SRC_URI="http://www.delorie.com/store/hcalc/${PN}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="x11-libs/libXpm"
