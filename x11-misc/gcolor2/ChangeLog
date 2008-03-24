@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gcolor2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.24 2008/03/24 00:58:44 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.25 2008/03/24 09:16:53 opfer Exp $
+
+  24 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
+  gcolor2-0.4-r3.ebuild:
+  stable x86, bug 214322
 
   24 Mar 2008; Daniel Gryniewicz <dang@gentoo.org> gcolor2-0.4-r3.ebuild:
   Marked stable on amd64 for bug #214322
