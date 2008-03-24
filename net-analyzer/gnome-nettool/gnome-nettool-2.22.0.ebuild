@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-2.18.0.ebuild,v 1.12 2007/09/22 07:05:17 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-2.22.0.ebuild,v 1.1 2008/03/24 00:11:50 eva Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnome-network/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.5.4
@@ -24,16 +24,17 @@ RDEPEND="${COMMON_DEPEND}
 
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.9"
+	>=dev-util/pkgconfig-0.9
+	  app-text/gnome-doc-utils"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
-	G2CONF="`use_enable debug`"
+	G2CONF="${G2CONF} $(use_enable debug)"
 }
 
 src_unpack() {
 	gnome2_src_unpack
 
-	epatch "${FILESDIR}"/${P}-fbsd.patch
+	epatch "${FILESDIR}"/${PN}-2.18.0-fbsd.patch
 }
