@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.3.0_pre11.ebuild,v 1.5 2007/07/27 18:46:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.3.0_pre11.ebuild,v 1.6 2008/03/24 05:06:43 lu_zero Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -57,9 +57,6 @@ src_install() {
 	dodoc ${S}/README
 	dohtml ${S}/kqemu-doc.html
 
-	# module params
-	dodir /etc/modules.d
-	echo "options kqemu major=0" > ${D}/etc/modules.d/kqemu
 }
 
 pkg_postinst() {
