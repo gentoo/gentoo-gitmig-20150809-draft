@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.39 2008/02/26 18:48:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.40 2008/03/24 15:44:46 armin76 Exp $
+
+*ngircd-0.11.1 (24 Mar 2008)
+
+  24 Mar 2008; Raúl Porcel <armin76@gentoo.org> +ngircd-0.11.1.ebuild:
+  Version bump
 
   26 Feb 2008; nixnut <nixnut@gentoo.org> ngircd-0.11.0.ebuild:
   Stable on ppc wrt bug 211388
