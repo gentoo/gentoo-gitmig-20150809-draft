@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0.ebuild,v 1.1 2008/03/24 09:46:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0.ebuild,v 1.2 2008/03/24 15:25:52 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -29,7 +29,6 @@ SRC_URI="ftp://ftp.cadsoft.de/vdr/${P}.tar.bz2
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
-
 
 DEPEND="media-libs/jpeg
 	sys-apps/gawk
@@ -65,7 +64,6 @@ check_menu_flags() {
 	for flag in menuorg setup submenu; do
 		use $flag && count=$((count+1))
 	done
-
 
 	if [ $count -gt 1 ] ; then
 		echo
@@ -284,7 +282,6 @@ src_unpack() {
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
 		cp -r "${S}" "${T}"/source-tree
 	fi
-
 
 	add_cap CAP_UTF8
 
