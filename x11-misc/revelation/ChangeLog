@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/revelation
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.8 2007/04/16 11:28:25 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.9 2008/03/24 11:30:14 nyhm Exp $
+
+  24 Mar 2008; Tristan Heaven <nyhm@gentoo.org> revelation-0.4.11.ebuild:
+  Fix python eclass usage
 
   16 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   revelation-0.4.11.ebuild:

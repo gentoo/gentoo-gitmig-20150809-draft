@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11.ebuild,v 1.6 2007/04/16 11:28:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11.ebuild,v 1.7 2008/03/24 11:30:14 nyhm Exp $
 
-inherit python gnome2
+inherit multilib python gnome2
 
 DESCRIPTION="A password manager for GNOME"
 HOMEPAGE="http://oss.codepoet.no/revelation/"
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=dev-python/gnome-python-desktop-2.16
-	>=dev-python/pygtk-2.10.3
+DEPEND="dev-python/gnome-python-desktop
+	dev-python/pygtk
 	dev-python/pycrypto
 	sys-libs/cracklib
 	dev-python/gnome-python-extras"
@@ -38,7 +38,7 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	python_version
-	python_mod_optimize "${ROOT}"/usr/lib/python${PYVER}/site-packages/${PN}
+	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
 }
 
 pkg_postrm() {
