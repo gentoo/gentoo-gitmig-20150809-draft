@@ -36,7 +36,7 @@ actionTest ()
 chooseApacheVersion ()
 {
 	# convert the PHP version to upper-case
-	chosen=$( echo $1 | tr [a-z] [A-Z] )
+	chosen=$( echo $1 | tr '[[:lower:]]' '[[:upper:]]' )
 
 	# make a list of the mod_php versions available
 	choices=( $(learnApacheMods $G_APACHE_MOD_DIR) )
@@ -174,7 +174,7 @@ showApacheConf ()
 	# if we get here, then apache is configured for a mod_php ...
 	# is it one that is installed?
 
-	chosen="$( echo $chosen | tr [A-Z] [a-z] )"
+	chosen="$( echo $chosen | tr '[[:lower:]]' '[[:upper:]]' )"
 	for (( i = 0 ; i < ${#choices[@]} ; i = i + 1 )) ; do
 		if [[ ${choices[$i]} == $chosen ]] ; then
 			echo $chosen
@@ -209,7 +209,7 @@ testApacheConf ()
 	# if we get here, then apache is configured for a mod_php ...
 	# is it one that is installed?
 
-	chosen="$( echo $chosen | tr [A-Z] [a-z] )"
+	chosen="$( echo $chosen | tr '[[:lower:]]' '[[:upper:]]' )"
 	for (( i = 0 ; i < ${#choices[@]} ; i = i + 1 )) ; do
 		if [[ ${choices[$i]} == $chosen ]] ; then
 			# we have one installed; but is it what we want?
