@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.4 2008/03/24 07:30:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.5 2008/03/24 21:58:30 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -135,13 +135,24 @@ pkg_preinst() {
 				v=${f##*/}
 				v=${v#kernel-}
 				v=${v//[^[:alnum:]]/_}
-				(
-				printf "\n### START: Auto-converted from ${f##*/}\n\n"
-				sed \
-					-e "/^[^#]/s:^\(.*\)$:modules_${v}=\"\${modules_${v}} \1\":" \
-					"${f}"
-				printf "\n### END: Auto-converted from ${f##*/}\n\n"
-				) >> "${D}"/etc/conf.d/modules
+				gawk -v v="${v}" -v f="${f##*/}" '
+				BEGIN { print "\n### START: Auto-converted from " f "\n" }
+				{
+					if ($0 ~ /^[^#]/) {
+						print "modules_" v "=\"${modules_" v "} " $1 "\""
+						gsub(/[^[:alnum:]]/, "_", $1)
+						printf "module_" $1 "_args=\""
+						for (i = 2; i <= NF; ++i) {
+							if (i > 2)
+								printf " "
+							printf $i
+						}
+						print "\"\n"
+					} else
+						print
+				}
+				END { print "\n### END: Auto-converted from " f "\n" }
+				' "${f}" >> "${D}"/etc/conf.d/modules
 				rm -f "${f}"
 			done
 			rmdir "${ROOT}"/etc/modules.autoload.d 2>/dev/null
