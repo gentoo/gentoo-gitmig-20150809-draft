@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsps/cvsps-2.1.ebuild,v 1.14 2008/03/24 11:11:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsps/cvsps-2.1.ebuild,v 1.15 2008/03/24 11:16:30 vapier Exp $
+
+inherit eutils
 
 MY_P="${P/_/}"
 DESCRIPTION="Generates patchset information from a CVS repository"
@@ -15,6 +17,12 @@ IUSE=""
 DEPEND="sys-libs/zlib"
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-build.patch
+}
 
 src_install() {
 	dobin cvsps || die
