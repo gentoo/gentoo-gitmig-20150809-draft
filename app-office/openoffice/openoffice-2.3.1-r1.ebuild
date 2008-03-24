@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1-r1.ebuild,v 1.8 2008/03/21 19:59:23 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.1-r1.ebuild,v 1.9 2008/03/24 16:05:36 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -78,7 +78,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 		>=dev-libs/nss-3.11-r1 ) ) )
 	sound? ( >=media-libs/portaudio-18.1-r5
 			>=media-libs/libsndfile-1.0.9 )
-	webdav? ( >=net-misc/neon-0.24.7 )
+	webdav? ( =net-misc/neon-0.26* )
 	>=x11-libs/startup-notification-0.5
 	>=media-libs/freetype-2.1.10-r2
 	>=media-libs/fontconfig-2.3.0
