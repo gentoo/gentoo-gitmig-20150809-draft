@@ -1,6 +1,13 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.205 2008/03/17 15:21:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.206 2008/03/24 13:30:39 eva Exp $
+
+*totem-2.22.0 (24 Mar 2008)
+
+  24 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> +totem-2.22.0.ebuild:
+  New version for GNOME-2.22. Lots of fixes, moved totem-pl-parser in its
+  own package, new plugins (Mythtv, local search via tracker, local sharing
+  via avahi).
 
   17 Mar 2008; Raúl Porcel <armin76@gentoo.org> totem-2.18.3.ebuild,
   totem-2.20.3.ebuild:
