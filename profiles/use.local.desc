@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3444 2008/03/24 05:47:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3445 2008/03/24 05:49:11 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -40,7 +40,6 @@ app-backup/bacula:bacula-console - Build (GUI) console program(s)
 app-backup/bacula:bacula-nodir - Disable building of director in 1.38.x and later.
 app-backup/bacula:bacula-nosd - Disable building of storage daemon in 1.38.x and later.
 app-backup/bacula:bacula-split-init - Use separate init scripts for fd/sd/dir
-app-backup/bacula:client-only - Disable DB support, and just build a client
 app-backup/bacula:logrotate - Install support files for logrotate
 app-backup/bacula:logwatch - Install support files for logwatch
 app-backup/boxbackup:client-only - Disable server support, and just build a client
