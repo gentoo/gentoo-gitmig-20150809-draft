@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.108 2008/03/22 15:17:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.109 2008/03/24 18:34:47 armin76 Exp $
+
+*amule-2.2.0_pre20080324 (24 Mar 2008)
+
+  24 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  amule-2.2.0_pre20080304.ebuild, +amule-2.2.0_pre20080324.ebuild:
+  Version bump, and alpha/x86 stable
 
   22 Mar 2008; nixnut <nixnut@gentoo.org> amule-2.2.0_pre20080304.ebuild:
   Stable on ppc wrt bug 213487
