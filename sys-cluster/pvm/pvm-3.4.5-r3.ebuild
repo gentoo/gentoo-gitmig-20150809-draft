@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r3.ebuild,v 1.1 2008/03/24 19:45:24 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r3.ebuild,v 1.2 2008/03/24 19:48:07 dberkholz Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs
 
@@ -18,21 +18,21 @@ S="${WORKDIR}/${MY_P%%.*}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# Patches from Red Hat
-	epatch ${FILESDIR}/${P}-envvars.patch || die
-	epatch ${FILESDIR}/${P}-strerror.patch || die
-	epatch ${FILESDIR}/${P}-extra-arches.patch || die
-	epatch ${FILESDIR}/${P}-x86_64-segfault.patch || die
-	epatch ${FILESDIR}/${P}-gcc-4.1.patch || die
-	epatch ${FILESDIR}/${P}-bug_147337.patch || die
+	epatch "${FILESDIR}"/${P}-envvars.patch || die
+	epatch "${FILESDIR}"/${P}-strerror.patch || die
+	epatch "${FILESDIR}"/${P}-extra-arches.patch || die
+	epatch "${FILESDIR}"/${P}-x86_64-segfault.patch || die
+	epatch "${FILESDIR}"/${P}-gcc-4.1.patch || die
+	epatch "${FILESDIR}"/${P}-bug_147337.patch || die
 
 # setup def files for other archs
 	cp conf/LINUX64.def conf/LINUXPPC64.def
 	cp conf/LINUX64.m4 conf/LINUXPPC64.m4
 
-	epatch ${FILESDIR}/${P}-ppc64.patch || die
-	epatch ${FILESDIR}/${P}-respect-cflags.patch || die
+	epatch "${FILESDIR}"/${P}-ppc64.patch || die
+	epatch "${FILESDIR}"/${P}-respect-cflags.patch || die
 
 # s390 should go in this list if there is ever interest
 # Patch the 64bit def files to look in lib64 dirs as well for libraries.
@@ -42,7 +42,7 @@ src_unpack() {
 	done
 
 	if use crypt; then
-		for i in ${S}/conf/LINUX*def; do
+		for i in "${S}"/conf/LINUX*def; do
 			sed -i.orig -e '/^ARCHCFLAGS/s~/usr/bin/rsh~/usr/bin/ssh~' "${i}" ||
 			die "Failed to set ssh instead of rsh"
 		done
@@ -71,13 +71,13 @@ src_compile() {
 src_install() {
 	dodir /usr/share/man
 	rm man/man1 -fr
-	mv man/man3 ${D}/usr/share/man/
+	mv man/man3 "${D}"/usr/share/man/
 
 	dodoc Readme
 
 	#installs the rest of pvm
 	dodir /usr/share/pvm3
-	cp -r * ${D}/usr/share/pvm3
+	cp -r * "${D}"/usr/share/pvm3
 	dodir /usr/bin
 
 	# (#132711) Symlink to the right spot on multilib systems
@@ -87,14 +87,14 @@ src_install() {
 	else
 		linuxdir="LINUX"
 	fi
-	ln -s /usr/share/pvm3/lib/${linuxdir}/pvm ${D}/usr/bin/pvm
-	ln -s /usr/share/pvm3/lib/${linuxdir}/pvmd3 ${D}/usr/bin/pvmd3
-	ln -s /usr/share/pvm3/lib/${linuxdir}/pvmgs ${D}/usr/bin/pvmgs
+	ln -s /usr/share/pvm3/lib/${linuxdir}/pvm "${D}"/usr/bin/pvm
+	ln -s /usr/share/pvm3/lib/${linuxdir}/pvmd3 "${D}"/usr/bin/pvmd3
+	ln -s /usr/share/pvm3/lib/${linuxdir}/pvmgs "${D}"/usr/bin/pvmgs
 
 	#environment variables:
-	echo PVM_ROOT=/usr/share/pvm3 > ${T}/98pvm
-	echo PVM_ARCH=$(${D}/usr/share/pvm3/lib/pvmgetarch) >> ${T}/98pvm
-	doenvd ${T}/98pvm
+	echo PVM_ROOT=/usr/share/pvm3 > "${T}"/98pvm
+	echo PVM_ARCH=$("${D}"/usr/share/pvm3/lib/pvmgetarch) >> "${T}"/98pvm
+	doenvd "${T}"/98pvm
 }
 
 pkg_postinst() {
