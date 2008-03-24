@@ -174,7 +174,7 @@ showApacheConf ()
 	# if we get here, then apache is configured for a mod_php ...
 	# is it one that is installed?
 
-	chosen="$( echo $chosen | tr '[[:lower:]]' '[[:upper:]]' )"
+	chosen="$( echo $chosen | tr '[[:upper:]]' '[[:lower:]]' )"
 	for (( i = 0 ; i < ${#choices[@]} ; i = i + 1 )) ; do
 		if [[ ${choices[$i]} == $chosen ]] ; then
 			echo $chosen
@@ -209,7 +209,7 @@ testApacheConf ()
 	# if we get here, then apache is configured for a mod_php ...
 	# is it one that is installed?
 
-	chosen="$( echo $chosen | tr '[[:lower:]]' '[[:upper:]]' )"
+	chosen="$( echo $chosen | tr '[[:upper:]]' '[[:lower:]]' )"
 	for (( i = 0 ; i < ${#choices[@]} ; i = i + 1 )) ; do
 		if [[ ${choices[$i]} == $chosen ]] ; then
 			# we have one installed; but is it what we want?
