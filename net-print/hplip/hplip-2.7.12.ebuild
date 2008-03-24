@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.12.ebuild,v 1.4 2008/01/14 07:49:41 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.12.ebuild,v 1.5 2008/03/24 19:38:18 calchan Exp $
 
 inherit eutils linux-info
 
@@ -40,8 +40,8 @@ RDEPEND="${DEPEND}
 		X? ( >=dev-python/PyQt-3.14 )
 	)"
 
-CONFIG_CHECK="PARPORT"
-ERROR_PARPORT="Please make sure Device Drivers -> Parallel port support is enabled in your kernel"
+CONFIG_CHECK="PARPORT PPDEV"
+ERROR_PARPORT="Please make sure you activate PARPORT and PPDEV support in the kernel."
 
 pkg_setup() {
 	if ! use ppds ; then
