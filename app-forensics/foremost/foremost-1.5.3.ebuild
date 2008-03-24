@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-1.4.ebuild,v 1.3 2008/03/24 22:11:34 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-1.5.3.ebuild,v 1.1 2008/03/24 22:11:34 ikelos Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,8 @@ RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/${P}-config-location.patch"
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-1.4-config-location.patch"
 }
 
 src_compile() {
