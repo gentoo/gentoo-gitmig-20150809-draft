@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-screen-cyrillic
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-screen-cyrillic/ChangeLog,v 1.21 2008/02/24 12:29:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-screen-cyrillic/ChangeLog,v 1.22 2008/03/24 13:52:02 maekke Exp $
+
+  24 Mar 2008; Markus Meier <maekke@gentoo.org>
+  font-screen-cyrillic-1.0.1.ebuild:
+  amd64 stable, bug #202087
 
   24 Feb 2008; Raúl Porcel <armin76@gentoo.org>
   font-screen-cyrillic-1.0.1.ebuild:
