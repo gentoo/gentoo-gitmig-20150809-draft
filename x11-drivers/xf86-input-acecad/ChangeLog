@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-acecad
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-acecad/ChangeLog,v 1.44 2008/02/11 05:06:25 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-acecad/ChangeLog,v 1.45 2008/03/24 14:23:04 maekke Exp $
+
+  24 Mar 2008; Markus Meier <maekke@gentoo.org>
+  xf86-input-acecad-1.2.1.ebuild:
+  amd64 stable, bug #202087
 
 *xf86-input-acecad-1.2.2 (11 Feb 2008)
 
