@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.20.1.ebuild,v 1.9 2008/03/24 18:14:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.22.0.ebuild,v 1.1 2008/03/24 18:14:33 eva Exp $
 
 inherit eutils gnome2 autotools python
 
@@ -9,11 +9,14 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="acpi apm doc gnome gstreamer hal ipv6 test"
 
+# TODO: configure says python stuff is optional
+# my secret script says cpufrequtils might be needed in RDEPEND
+
 RDEPEND=">=x11-libs/gtk+-2.11
-		>=dev-libs/glib-2.13
+		>=dev-libs/glib-2.15.6
 		>=gnome-base/libgnome-2.8
 		>=gnome-base/libgnomeui-2.8
 		>=gnome-base/gconf-2.8
@@ -29,11 +32,12 @@ RDEPEND=">=x11-libs/gtk+-2.11
 		>=dev-libs/dbus-glib-0.71
 		>=x11-themes/gnome-icon-theme-2.15.91
 		>=dev-libs/libxml2-2.5.0
+		>=dev-libs/libgweather-2.21.1
 		>=virtual/python-2.4
 		apm? ( sys-apps/apmd )
 		x11-apps/xrdb x11-libs/libX11
 		gnome?	(
-					gnome-base/libgnomekbd
+					>=gnome-base/libgnomekbd-2.21.4.1
 					gnome-base/control-center
 
 					>=gnome-extra/gucharmap-1.4
@@ -45,9 +49,8 @@ RDEPEND=">=x11-libs/gtk+-2.11
 				)
 		gstreamer?	(
 						>=media-libs/gstreamer-0.10.2
-						>=media-libs/gst-plugins-base-0.10.2
+						>=media-libs/gst-plugins-base-0.10.14
 					)"
-
 DEPEND="${RDEPEND}
 		>=app-text/scrollkeeper-0.1.4
 		>=app-text/gnome-doc-utils-0.3.2
@@ -61,9 +64,6 @@ DEPEND="${RDEPEND}
 		test? ( ~app-text/docbook-xml-dtd-4.3 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-
-# to double check on next release
-MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	gnome2_src_unpack
@@ -119,11 +119,11 @@ pkg_postinst() {
 
 	# check for new python modules on bumps
 	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/invest
+	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/invest
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
 	python_version
-	python_mod_cleanup
+	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/invest
 }
