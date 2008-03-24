@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-wget
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.18 2007/12/02 14:41:42 opfer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.19 2008/03/24 21:32:03 ulm Exp $
+
+  24 Mar 2008; Ulrich Mueller <ulm@gentoo.org> files/65emacs-wget-gentoo.el:
+  Set the load-path during site initialisation.
 
   02 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   emacs-wget-0.5.0.ebuild:
