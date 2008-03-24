@@ -1,0 +1,9 @@
+# ChangeLog for media-fonts/proggy-fonts
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/proggy-fonts/ChangeLog,v 1.1 2008/03/24 23:06:12 yngwin Exp $
+
+*proggy-fonts-1 (24 Mar 2008)
+
+  24 Mar 2008; Ben de Groot <yngwin@gentoo.org> +proggy-fonts-1.ebuild:
+  Initial import. Ebuild by me. Fixes bug 109415.
+
