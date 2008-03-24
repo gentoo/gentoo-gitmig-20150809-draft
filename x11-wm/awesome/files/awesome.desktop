@@ -5,4 +5,4 @@ Comment=awesome the window manager
 Exec=/etc/X11/Sessions/awesome
 TryExec=awesome
 Icon=
-Type=Xsession
+Type=Application
