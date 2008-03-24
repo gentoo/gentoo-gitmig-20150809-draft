@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dotconf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.10 2008/01/11 16:22:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.11 2008/03/24 23:02:48 fmccor Exp $
+
+  24 Mar 2008; Ferris McCormick <fmccor@gentoo.org> dotconf-1.1.0.ebuild:
+  Add ~sparc keyword, required for Bug #204504.
 
   11 Jan 2008; Jeroen Roovers <jer@gentoo.org> dotconf-1.1.0.ebuild:
   Marked ~hppa (bug #204504).
