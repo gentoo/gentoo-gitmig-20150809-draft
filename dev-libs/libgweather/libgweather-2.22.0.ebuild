@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-2.22.0.ebuild,v 1.1 2008/03/24 00:22:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-2.22.0.ebuild,v 1.2 2008/03/24 05:47:20 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -20,4 +20,3 @@ RDEPEND=">=x11-libs/gtk+-2.11
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.19"
-
