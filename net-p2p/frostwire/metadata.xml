@@ -4,6 +4,11 @@
 
 	<herd>net-p2p</herd>
 
+	<maintainer>
+		<email>wltjr@gentoo.org</email>
+		<name>William L. Thomson Jr.</name>
+	</maintainer>
+
 	<longdescription>
 	  FrostWire is a file sharing program running on the Gnutella Network.
 	  It is open source software running on an open protocol, free for
