@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.37 2008/03/17 16:22:32 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.38 2008/03/25 10:39:34 bass Exp $
+
+*cherokee-0.6.1 (25 Mar 2008)
+
+  25 Mar 2008; J. Alberto Suárez López <bass@gentoo.org>
+  files/cherokee-initd-0.6, +cherokee-0.6.1.ebuild:
+  bump version
 
   17 Mar 2008; J. Alberto Suárez López <bass@gentoo.org>
   cherokee-0.6.0.ebuild:
