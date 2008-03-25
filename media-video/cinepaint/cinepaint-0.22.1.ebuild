@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.22.1.ebuild,v 1.1 2008/03/25 22:12:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.22.1.ebuild,v 1.2 2008/03/25 22:54:52 aballier Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -29,6 +29,13 @@ RDEPEND=">=x11-libs/gtk+-2.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x11-proto/xineramaproto"
+
+pkg_setup() {
+	if ! built_with_use x11-libs/fltk opengl ; then
+		eerror "${PN} requires x11-libs/fltk to be built with opengl"
+		die "Please install x11-libs/fltk with opengl useflag enabled"
+	fi
+}
 
 src_compile(){
 	econf $(use_enable gimpprint print) --enable-gtk2 || die "econf failed"
