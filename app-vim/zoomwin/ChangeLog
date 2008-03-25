@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/zoomwin
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/zoomwin/ChangeLog,v 1.26 2007/02/22 00:17:52 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/zoomwin/ChangeLog,v 1.27 2008/03/25 23:18:11 coldwind Exp $
+
+  25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> zoomwin-21.ebuild:
+  Added ~amd64, fix quoting.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
