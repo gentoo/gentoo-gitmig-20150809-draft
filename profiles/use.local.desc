@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3450 2008/03/25 02:29:11 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3451 2008/03/25 19:42:42 pythonhead Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -552,6 +552,8 @@ dev-python/psycopg:mxdatetime - choose MX DateTime support instead of built-in d
 dev-python/pycairo:numeric - enable Numeric support
 dev-python/pyyaml:libyaml - enable libyaml support
 dev-python/pyzor:pyzord - enable support for pyzord
+dev-python/rdflib:redland - enable support for Redland triplestore
+dev-python/rdflib:zodb - enable support for Zope Object Databse triplestore
 dev-python/soya:ode - include support for Open Dynamics Engine
 dev-python/twisted:serial - include serial port support
 dev-python/visual:numarray - enable support for numarray
