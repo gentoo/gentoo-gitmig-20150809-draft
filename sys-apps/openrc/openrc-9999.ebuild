@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.9 2008/03/25 12:34:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.10 2008/03/25 12:57:16 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -57,7 +57,18 @@ pkg_setup() {
 }
 
 src_compile() {
+	# catch people running `ebuild` w/out setup
+	if [[ -z ${MAKE_ARGS} ]] ; then
+		die "Your MAKE_ARGS is empty ... are you running 'ebuild' but forgot to execute 'setup' ?"
+	fi
+
+	if [[ ${PV} == "9999" ]] ; then
+		local ver="git-$(git --git-dir=${EGIT_STORE_DIR}/${EGIT_PROJECT} rev-parse --verify ${EGIT_BRANCH} | cut -c1-8)"
+		sed -i "/^VERSION[[:space:]]*=/s:=.*:=${ver}:" Makefile
+	fi
+
 	tc-export CC AR RANLIB
+	echo emake ${MAKE_ARGS}
 	emake ${MAKE_ARGS} || die
 }
 
