@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-0.5.0.ebuild,v 1.3 2008/03/25 16:16:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-0.5.0.ebuild,v 1.4 2008/03/25 16:23:35 eva Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/projects/vinagre/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
-IUSE="avahi"
+IUSE="avahi test"
 
 RDEPEND=">=dev-libs/glib-2.15.3
 	>=x11-libs/gtk+-2.12
@@ -24,7 +24,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35
 	app-text/scrollkeeper
-	app-text/gnome-doc-utils"
+	app-text/gnome-doc-utils
+	test? ( ~app-text/docbook-xml-dtd-4.3 )"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 
