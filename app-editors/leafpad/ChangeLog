@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/leafpad
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/ChangeLog,v 1.14 2007/12/25 15:34:00 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/ChangeLog,v 1.15 2008/03/25 15:02:07 armin76 Exp $
+
+  25 Mar 2008; Raúl Porcel <armin76@gentoo.org> leafpad-0.8.12.ebuild:
+  x86 stable
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing taviso from metadata.xml as per #202471.
