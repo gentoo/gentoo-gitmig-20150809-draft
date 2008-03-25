@@ -1,4 +1,3 @@
-
 inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="OpenRC manages the services, startup and shutdown of a host"
@@ -27,7 +26,7 @@ S="${WORKDIR}/${PN}-0.2"
 pkg_setup() {
 	LIBDIR="lib"
 	[ "${SYMLINK_LIB}" = "yes" ] && LIBDIR=$(get_abi_LIBDIR "${DEFAULT_ABI}")
-	
+
 	MAKE_ARGS="${MAKE_ARGS} LIBNAME=${LIBDIR}"
 
 	local brand="Unknown"
@@ -51,7 +50,7 @@ pkg_setup() {
 			export PROGLDFLAGS="-static"
 		fi
 	fi
-	
+
 	if use pam && use static; then
 		ewarn "OpenRC cannot be built statically with PAM"
 		elog "not building PAM support"
@@ -99,7 +98,7 @@ pkg_preinst() {
 	done
 
 	# Upgrade out state for baselayout-1 users
-	if [ ! -e "${ROOT}${LIBDIR}"/rc/init.d/started ]; then 
+	if [ ! -e "${ROOT}${LIBDIR}"/rc/init.d/started ]; then
 		(
 		[ -e "${ROOT}"etc/conf.d/rc ] && . "${ROOT}etc/conf.d/rc"
 		svcdir=${svcdir:-/var/lib/init.d}
