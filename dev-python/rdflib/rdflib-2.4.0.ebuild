@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-2.4.0.ebuild,v 1.1 2008/03/25 20:02:32 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-2.4.0.ebuild,v 1.2 2008/03/25 21:54:23 mr_bones_ Exp $
 
 NEED_PYTHON="2.3"
 
@@ -23,7 +23,6 @@ RDEPEND="mysql? ( dev-python/mysql-python )
 	redland? ( dev-libs/redland-bindings )
 	zodb? ( net-zope/zodb )"
 
-
 pkg_setup() {
 	if use redland && ! built_with_use dev-libs/redland-bindings python  ; then
 		eerror "In order to have rdflib working with redland support, you need"
@@ -32,7 +31,6 @@ pkg_setup() {
 		die "dev-libs/redland-bindings is missing the python USE flag."
 	fi
 }
-
 
 src_unpack() {
 	unpack ${A}
@@ -57,4 +55,3 @@ src_install() {
 src_test() {
 	${python} setup.py test || die "tests failed"
 }
-
