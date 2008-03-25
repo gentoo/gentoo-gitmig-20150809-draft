@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8423 2008/03/25 02:16:43 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8424 2008/03/25 04:54:50 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -356,11 +356,6 @@ www-apps/disc-cover
 # Broken and outdated package. See
 # https://bugs.gentoo.org/show_bug.cgi?id=209029
 www-apps/bugs-bug-genie
-
-# Michael Sterrett <mr_bones_@gentoo.org> (12 Feb 2008)
-# Security mask (bug #209903)
-# https://bugs.gentoo.org/show_bug.cgi?id=209903
-games-mud/tintin
 
 # Samuli Suominen <drac@gentoo.org> (12 Feb 2008)
 # If 0.20 fails with hardmasked ffmpeg snapshot,
