@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-attributes
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/ChangeLog,v 1.8 2007/11/12 23:49:23 betelgeuse Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/ChangeLog,v 1.9 2008/03/25 19:46:52 betelgeuse Exp $
+
+  25 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
+  -commons-attributes-2.1-r1.ebuild:
+  Delete old version.
 
 *commons-attributes-2.2 (12 Nov 2007)
 
