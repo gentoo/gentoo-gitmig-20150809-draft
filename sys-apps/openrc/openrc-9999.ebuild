@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.7 2008/03/25 00:13:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.8 2008/03/25 12:26:51 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -140,7 +140,7 @@ pkg_preinst() {
 					if ($0 ~ /^[^#]/) {
 						print "modules_" v "=\"${modules_" v "} " $1 "\""
 						gsub(/[^[:alnum:]]/, "_", $1)
-						printf "module_" $1 "_args=\""
+						printf "module_" $1 "_args_" v "=\""
 						for (i = 2; i <= NF; ++i) {
 							if (i > 2)
 								printf " "
@@ -152,8 +152,8 @@ pkg_preinst() {
 				}
 				END { print "\n### END: Auto-converted from " f "\n" }
 				' "${f}" >> "${D}"/etc/conf.d/modules
-				rm -f "${f}"
 			done
+				rm -f "${f}"
 			rmdir "${ROOT}"/etc/modules.autoload.d 2>/dev/null
 		fi
 	fi
