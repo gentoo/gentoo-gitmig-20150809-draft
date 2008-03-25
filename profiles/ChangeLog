@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1249 2008/03/25 02:16:43 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1250 2008/03/25 02:29:11 kingtaco Exp $
+
+  25 Mar 2008; Mike Doty <kingtaco@gentoo.org> use.local.desc:
+  adding sys-block/open-iscsi local use flags
 
   25 Mar 2008; Mike Doty <kingtaco@gentoo.org> package.mask:
   p.mask >=sys-block/open-iscsi-2.0.868-rc1 for testing.
