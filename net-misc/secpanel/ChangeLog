@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/secpanel
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/ChangeLog,v 1.15 2008/01/26 15:58:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/ChangeLog,v 1.16 2008/03/25 18:06:58 armin76 Exp $
+
+  25 Mar 2008; Raúl Porcel <armin76@gentoo.org> -secpanel-0.51.ebuild,
+  secpanel-0.53.ebuild:
+  alpha/x86 stable, remove old
 
 *secpanel-0.53 (26 Jan 2008)
 
