@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/greputils
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/ChangeLog,v 1.14 2007/02/22 00:01:52 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/ChangeLog,v 1.15 2008/03/25 23:48:11 coldwind Exp $
+
+  25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> greputils-2.8.ebuild:
+  Added ~amd64.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
