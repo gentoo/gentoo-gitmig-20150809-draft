@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.61 2008/03/25 15:03:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.62 2008/03/25 16:05:19 coldwind Exp $
+
+  25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> mp-3.3.18b.ebuild:
+  amd64 stable wrt bug #214709
 
   25 Mar 2008; Raúl Porcel <armin76@gentoo.org> mp-3.3.18b.ebuild:
   alpha/ia64/sparc/x86 stable
