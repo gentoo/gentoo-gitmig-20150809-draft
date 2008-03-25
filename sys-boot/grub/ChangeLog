@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.81 2008/03/21 22:02:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.82 2008/03/25 06:23:40 robbat2 Exp $
+
+*grub-0.97-r5 (25 Mar 2008)
+
+  25 Mar 2008; Robin H. Johnson <robbat2@gentoo.org> +grub-0.97-r5.ebuild:
+  New version of the Gentoo grub patchset. Provides support for 256-byte
+  ext3 inodes per bug #214563. Fixes unhide bugs with GPT patch per bug
+  #211584. Long commandlines per bug #183443. Xen memorysize fix per bug
+  #188312.
 
   21 Mar 2008; Stefan Schweizer <genstef@gentoo.org> grub-1.96.ebuild:
   fails to build with two threads
