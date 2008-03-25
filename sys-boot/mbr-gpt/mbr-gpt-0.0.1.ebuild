@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/mbr-gpt/mbr-gpt-0.0.1.ebuild,v 1.1 2008/03/25 08:40:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/mbr-gpt/mbr-gpt-0.0.1.ebuild,v 1.2 2008/03/25 08:41:09 robbat2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,7 +45,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "See the instructions on the homepage, and make sure you know what" 
+	einfo "See the instructions on the homepage, and make sure you know what"
 	einfo "you are doing before touching this. The mbr file does into your"
 	einfo "MBR, or alternatively you can do a creative reboot utilizing the"
 	einfo "boot.elf binary."
