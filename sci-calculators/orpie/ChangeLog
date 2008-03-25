@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/orpie
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.9 2008/02/15 11:35:33 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.10 2008/03/25 11:43:09 coldwind Exp $
+
+  25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> orpie-1.5.1.ebuild:
+  amd64 stable wrt bug #214622
 
   15 Feb 2008; Markus Dittrich <markusle@gentoo.org> orpie-1.4.3-r1.ebuild,
   orpie-1.5.1.ebuild:
