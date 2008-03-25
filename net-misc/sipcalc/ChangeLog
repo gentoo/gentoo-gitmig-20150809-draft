@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sipcalc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/ChangeLog,v 1.8 2008/01/27 17:11:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/ChangeLog,v 1.9 2008/03/25 16:46:57 coldwind Exp $
+
+  25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> sipcalc-1.1.4.ebuild:
+  amd64 stable wrt bug #214738
 
 *sipcalc-1.1.4 (27 Jan 2008)
 
