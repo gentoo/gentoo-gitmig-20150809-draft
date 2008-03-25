@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-charis/ttf-sil-charis-4.100.ebuild,v 1.11 2008/03/10 18:53:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-charis/ttf-sil-charis-4.100.ebuild,v 1.12 2008/03/25 11:08:17 armin76 Exp $
 
 inherit font
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${MY_PN}${PV}.zip"
 
 LICENSE="OFL"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND="${DEPEND}
