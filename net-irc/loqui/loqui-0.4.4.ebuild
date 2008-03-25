@@ -1,14 +1,14 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/loqui-0.4.4.ebuild,v 1.6 2006/08/13 21:52:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/loqui-0.4.4.ebuild,v 1.7 2008/03/25 18:45:15 coldwind Exp $
 
-DESCRIPTION="Loqui is a graphical IRC client for GNOME2 on UNIX like operating system."
+DESCRIPTION="a graphical IRC client for GNOME2 on UNIX like operating system."
 SRC_URI="http://loqui.good-day.net/src/${P}.tar.gz"
 HOMEPAGE="http://loqui.good-day.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="nls"
 
 RDEPEND=">=dev-libs/glib-2.2.1
