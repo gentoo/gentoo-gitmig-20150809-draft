@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-0.5.0.ebuild,v 1.2 2008/03/25 16:06:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-0.5.0.ebuild,v 1.3 2008/03/25 16:16:54 eva Exp $
 
 inherit gnome2 eutils
 
@@ -22,7 +22,9 @@ RDEPEND=">=dev-libs/glib-2.15.3
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
-	>=dev-util/intltool-0.35"
+	>=dev-util/intltool-0.35
+	app-text/scrollkeeper
+	app-text/gnome-doc-utils"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 
@@ -32,7 +34,7 @@ pkg_setup() {
 		die "Please rebuild avahi with USE='gtk'"
 	fi
 
-	G2CONF="${G2CONF} $(use_enable avahi)"
+	G2CONF="${G2CONF} $(use_enable avahi) --disable-scrollkeeper"
 }
 
 src_install() {
