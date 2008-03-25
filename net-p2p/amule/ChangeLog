@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.109 2008/03/24 18:34:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.110 2008/03/25 21:52:01 jer Exp $
+
+  25 Mar 2008; Jeroen Roovers <jer@gentoo.org>
+  amule-2.2.0_pre20080304.ebuild:
+  Stable for HPPA (bug #213487).
 
 *amule-2.2.0_pre20080324 (24 Mar 2008)
 
