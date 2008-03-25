@@ -1,0 +1,34 @@
+Index: beagled/BeagleDaemon.cs
+===================================================================
+--- beagled/BeagleDaemon.cs	(revision 4355)
++++ beagled/BeagleDaemon.cs	(working copy)
+@@ -455,7 +455,7 @@
+ 			// debugging this code, after all...
+ 			// arg_debug ? LogLevel.Debug : LogLevel.Warn
+ 			
+-			Log.Initialize (PathFinder.LogDir, "Beagle", LogLevel.Debug, arg_fg);
++			Log.Initialize (PathFinder.LogDir, "Beagle", arg_debug ? LogLevel.Debug : LogLevel.Warn, arg_fg);
+ 			Log.Always ("Starting Beagle Daemon (version {0})", ExternalStringsHack.Version);
+ 			Log.Always ("Running on {0}", SystemInformation.MonoRuntimeVersion);
+ 			Log.Always ("Command Line: {0}",
+Index: beagled/IndexHelper/IndexHelper.cs
+===================================================================
+--- beagled/IndexHelper/IndexHelper.cs	(revision 4355)
++++ beagled/IndexHelper/IndexHelper.cs	(working copy)
+@@ -92,14 +92,13 @@
+ 			
+ 			// FIXME: We always turn on full debugging output!  We are still
+ 			// debugging this code, after all...
+-			//bool debug = (Environment.GetEnvironmentVariable ("BEAGLE_DEBUG_FLAG_IS_SET") != null);
++			bool debug = (Environment.GetEnvironmentVariable ("BEAGLE_DEBUG_FLAG_IS_SET") != null);
+ 
+ 			last_activity = DateTime.Now;
+ 
+ 			Log.Initialize (PathFinder.LogDir,
+ 					"IndexHelper",
+-					//debug ? LogLevel.Debug : LogLevel.Warn,
+-					LogLevel.Debug,
++					debug ? LogLevel.Debug : LogLevel.Warn,
+ 					run_by_hand || log_in_fg);
+ 
+ 			Log.Always ("Starting Index Helper process (version {0})", ExternalStringsHack.Version);
