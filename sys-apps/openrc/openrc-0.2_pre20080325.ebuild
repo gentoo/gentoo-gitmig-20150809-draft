@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2_pre20080325.ebuild,v 1.3 2008/03/25 20:12:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2_pre20080325.ebuild,v 1.4 2008/03/25 20:15:38 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64"
 IUSE="debug ncurses pam static unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
- 		kernel_linux? ( >=sys-apps/module-init-tools-3.2.2-r2 )
+		kernel_linux? ( >=sys-apps/module-init-tools-3.2.2-r2 )
 		kernel_FreeBSD? ( sys-process/fuser-bsd )
 		ncurses? ( sys-libs/ncurses )
 		pam? ( virtual/pam )
