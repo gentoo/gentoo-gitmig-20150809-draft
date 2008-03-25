@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r3.ebuild,v 1.2 2008/03/24 19:48:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r3.ebuild,v 1.3 2008/03/25 16:14:20 mr_bones_ Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs
 
@@ -55,8 +55,8 @@ src_compile() {
 
 	export PVM_ROOT="${S}"
 
-	# libpvm3.a needs to be PIC so other apps can link against it. The 
-	# build system sucks, so it's a huge pain to try to make only the 
+	# libpvm3.a needs to be PIC so other apps can link against it. The
+	# build system sucks, so it's a huge pain to try to make only the
 	# library PIC.
 	if [[ $(get_libdir) = lib64 ]]; then
 		append-flags -fPIC
