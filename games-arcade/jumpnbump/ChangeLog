@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/jumpnbump
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.15 2008/02/29 18:56:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.16 2008/03/25 14:58:18 coldwind Exp $
+
+  25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  jumpnbump-1.50-r1.ebuild:
+  amd64 stable
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> jumpnbump-1.50-r1.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
