@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.132 2008/03/02 12:23:20 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.133 2008/03/25 09:00:15 spock Exp $
+
+  25 Mar 2008; Michał Januszewski <spock@gentoo.org>
+  +files/openrc-strlist-abi.patch, splashutils-1.5.4-r1.ebuild:
+  Fix breakage caused by openrc ABI change (patch by Roy Marples).
 
 *splashutils-1.5.4-r1 (02 Mar 2008)
 
