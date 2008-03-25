@@ -9,6 +9,8 @@ alias char-major-161 ircomm-tty         # Official allocation of IrCOMM
 
 # IrLAN support (Ethernet over IrDA)
 alias irlan0 irlan
+# Access type DIRECT=1, PEER=2, HOSTED=3 (int)
+#options irlan access=2
 
 # IrNET support (Synchronous PPP over IrDA)
 alias char-major-10-187 irnet           # Official allocation of IrNET
