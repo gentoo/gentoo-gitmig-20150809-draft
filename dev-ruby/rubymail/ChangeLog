@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/rubymail
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.25 2007/02/22 01:19:58 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.26 2008/03/25 06:19:15 graaff Exp $
+
+*rubymail-1.0.0 (25 Mar 2008)
+
+  25 Mar 2008; Hans de Graaff <graaff@gentoo.org> -rubymail-0.15.ebuild,
+  +rubymail-1.0.0.ebuild:
+  Version bump with Ruby 1.9 compatibility changes; fixes #214640
+
+  25 Mar 2008; Hans de Graaff <graaff@gentoo.org> -rubymail-0.15.ebuild:
+  Remove old version
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
