@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/rhapsody
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/ChangeLog,v 1.7 2007/02/20 12:24:55 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/ChangeLog,v 1.8 2008/03/25 18:24:41 coldwind Exp $
+
+  25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> rhapsody-0.28b.ebuild:
+  amd64 stable
 
   20 Feb 2007; Raúl Porcel <armin76@gentoo.org> -rhapsody-0.25b.ebuild,
   -rhapsody-0.26b.ebuild, rhapsody-0.28b.ebuild:
