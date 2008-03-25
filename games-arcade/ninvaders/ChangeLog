@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/ninvaders
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ninvaders/ChangeLog,v 1.4 2007/04/24 14:52:21 drizzt Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ninvaders/ChangeLog,v 1.5 2008/03/25 13:58:31 coldwind Exp $
+
+  25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  ninvaders-0.1.1.ebuild:
+  amd64 stable
 
   24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> ninvaders-0.1.1.ebuild:
   Add ~x86-fbsd keyword.

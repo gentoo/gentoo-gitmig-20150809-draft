@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/pengupop
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.12 2007/10/25 23:17:43 mr_bones_ Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.13 2008/03/25 13:52:04 coldwind Exp $
+
+  25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> pengupop-2.2.3.ebuild:
+  amd64 stable
 
 *pengupop-2.2.3 (25 Oct 2007)
 
