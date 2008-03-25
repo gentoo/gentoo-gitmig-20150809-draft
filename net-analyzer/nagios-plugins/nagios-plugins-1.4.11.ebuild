@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.11.ebuild,v 1.5 2008/03/14 11:56:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.11.ebuild,v 1.6 2008/03/25 17:13:54 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,7 +19,7 @@ nagios-ssh nagios-game ups ipv6 radius"
 
 DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( virtual/mysql )
-	postgres? ( >=dev-db/postgresql-7.2 )
+	postgres? ( >=dev-db/libpq-7.2 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	radius? ( >=net-dialup/radiusclient-0.3.2 )"
 
@@ -93,7 +93,7 @@ src_install() {
 	sed -i -e '30s/use lib utils.pm;/use utils;/' \
 		"${S}"/plugins-scripts/check_file_age.pl || die "sed failed"
 
-	dodoc ABOUT-NLS ACKNOWLEDGEMENTS AUTHORS BUGS CODING \
+	dodoc ACKNOWLEDGEMENTS AUTHORS BUGS CODING \
 		ChangeLog FAQ NEWS README REQUIREMENTS SUPPORT THANKS
 
 	emake DESTDIR="${D}" install || die "make install failed"
