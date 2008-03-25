@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mp
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.60 2007/12/23 22:44:53 carlo Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.61 2008/03/25 15:03:39 armin76 Exp $
+
+  25 Mar 2008; Raúl Porcel <armin76@gentoo.org> mp-3.3.18b.ebuild:
+  alpha/ia64/sparc/x86 stable
 
 *mp-3.3.18b (23 Dec 2007)
 
