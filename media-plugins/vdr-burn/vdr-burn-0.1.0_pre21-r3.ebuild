@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r3.ebuild,v 1.2 2007/09/27 21:31:09 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r3.ebuild,v 1.3 2008/03/25 18:35:13 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -38,6 +38,7 @@ RDEPEND=">=media-video/dvdauthor-0.6.10
 		media-video/transcode
 		media-fonts/ttf-bitstream-vera
 		media-video/vdrtools-genindex
+		sys-apps/eject
 		virtual/cdrtools
 		>=app-cdr/dvd+rw-tools-5.21
 		projectx? ( >=media-video/projectx-0.90.4.00-r2 )"
@@ -77,17 +78,17 @@ src_unpack() {
 src_install() {
 	vdr-plugin_src_install
 
-	dobin ${S}/burn-buffers
-	dobin ${S}/*.sh
+	dobin "${S}"/burn-buffers
+	dobin "${S}"/*.sh
 
 	insinto /usr/share/vdr/burn
-	doins ${S}/burn/menu-silence.mp2
-	newins ${S}/burn/menu-button.png menu-button-default.png
-	newins ${S}/burn/menu-bg.png menu-bg-default.png
+	doins "${S}"/burn/menu-silence.mp2
+	newins "${S}"/burn/menu-button.png menu-button-default.png
+	newins "${S}"/burn/menu-bg.png menu-bg-default.png
 	dosym menu-bg-default.png /usr/share/vdr/burn/menu-bg.png
 	dosym menu-button-default.png /usr/share/vdr/burn/menu-button.png
 
-	use projectx && newins ${S}/burn/ProjectX.ini projectx-vdr.ini
+	use projectx && newins "${S}"/burn/ProjectX.ini projectx-vdr.ini
 
 	fowners -R vdr:vdr /usr/share/vdr/burn
 
@@ -100,7 +101,7 @@ src_install() {
 pkg_preinst() {
 	if [[ -d ${ROOT}/etc/vdr/plugins/burn && ( ! -L ${ROOT}/etc/vdr/plugins/burn ) ]]; then
 		einfo "Moving /etc/vdr/plugins/burn away"
-		mv ${ROOT}/etc/vdr/plugins/burn ${ROOT}/etc/vdr/plugins/burn_old
+		mv "${ROOT}"/etc/vdr/plugins/burn "${ROOT}"/etc/vdr/plugins/burn_old
 	fi
 }
 

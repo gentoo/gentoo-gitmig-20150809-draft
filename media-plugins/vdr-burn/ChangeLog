@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.25 2007/09/27 21:31:09 hd_brummy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.26 2008/03/25 18:35:13 hd_brummy Exp $
+
+  25 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-burn-0.1.0_pre21-r3.ebuild:
+  added sys-apps/eject to fix RDEPEND, reported by T.Reinhold; qouting fixed
 
   27 Sep 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-burn-0.1.0_pre21-r2.ebuild, vdr-burn-0.1.0_pre21-r3.ebuild:
