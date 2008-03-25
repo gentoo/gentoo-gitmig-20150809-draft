@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/kamikaze
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.14 2007/11/15 19:08:19 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.15 2008/03/25 12:41:03 armin76 Exp $
+
+  25 Mar 2008; Raúl Porcel <armin76@gentoo.org> kamikaze-0.2.2-r1.ebuild:
+  Re-add ~sparc wrt #214349, thanks to Friedrich Oslage for testing
 
   15 Nov 2007; Samuli Suominen <drac@gentoo.org> kamikaze-0.2.2-r1.ebuild:
   Rekeyword ~amd64, was dropped because of missing dep ggz-client-libs.
