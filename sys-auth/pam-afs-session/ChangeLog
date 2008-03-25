@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pam-afs-session
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-afs-session/ChangeLog,v 1.4 2007/10/13 14:35:48 stefaan Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-afs-session/ChangeLog,v 1.5 2008/03/25 11:46:56 stefaan Exp $
+
+*pam-afs-session-1.6 (25 Mar 2008)
+
+  25 Mar 2008; Stefaan De Roeck <stefaan@gentoo.org>
+  +pam-afs-session-1.6.ebuild:
+  Version bump to 1.6
 
 *pam-afs-session-1.5 (13 Oct 2007)
 
