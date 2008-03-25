@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8422 2008/03/25 01:04:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8423 2008/03/25 02:16:43 kingtaco Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Doty <kingtaco@gentoo.org> (24 Mar 2008)
+# Masked due to lack of testing and user rewritten ebuild/conf.d/init.d.
+# Use at your own risk.  Bug 196096.
+>=sys-block/open-iscsi-2.0.868_rc1
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (11 Mar 2008)
 # masked for testing
