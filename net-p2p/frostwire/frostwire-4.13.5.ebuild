@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.13.5.ebuild,v 1.1 2008/03/25 17:43:16 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.13.5.ebuild,v 1.2 2008/03/25 21:54:45 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -59,7 +59,7 @@ src_unpack() {
 #	java-pkg_jar-from commons-httpclient
 	java-pkg_jar-from commons-logging
 
-# Seems to want a modified version of commons-pool	
+# Seems to want a modified version of commons-pool
 #	java-pkg_jar-from commons-pool
 	java-pkg_jar-from commons-net
 	java-pkg_jar-from log4j
