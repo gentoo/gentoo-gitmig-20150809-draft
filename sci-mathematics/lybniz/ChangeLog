@@ -1,0 +1,11 @@
+# ChangeLog for sci-mathematics/lybniz
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/lybniz/ChangeLog,v 1.1 2008/03/25 00:04:02 bicatali Exp $
+
+*lybniz-1.3.2 (25 Mar 2008)
+
+  25 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +lybniz-1.3.2.ebuild:
+  Initial import. Thanks to Luca Marturana <lucamarturana@gmail.com> for his
+  ebuild. Closing bug #210962.
+
