@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.16 2008/03/24 09:55:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.17 2008/03/25 04:51:01 jer Exp $
+
+  25 Mar 2008; Jeroen Roovers <jer@gentoo.org> gentoo-syntax-1.8.ebuild,
+  gentoo-syntax-9999.ebuild:
+  Marked ~hppa (bug #214283).
 
   24 Mar 2008; Ulrich Mueller <ulm@gentoo.org> gentoo-syntax-1.8.ebuild,
   gentoo-syntax-9999.ebuild:
