@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.3.ebuild,v 1.13 2007/10/28 13:16:33 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.3.ebuild,v 1.14 2008/03/25 22:11:48 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -68,8 +68,8 @@ src_unpack() {
 	unpack ${P}.tar.gz
 
 	# Patch the default xinetd file to add/adjust values to Gentoo defaults
-	cd ${S}/doc && epatch ${FILESDIR}/${PN}-1.0.3-xinetd.patch
-	cd ${S} && epatch ${FILESDIR}/${PN}-gentoohack.patch
+	cd "${S}"/doc && epatch "${FILESDIR}"/${PN}-1.0.3-xinetd.patch
+	cd "${S}" && epatch "${FILESDIR}"/${PN}-gentoohack.patch
 }
 
 src_compile() {
@@ -107,9 +107,9 @@ src_compile() {
 
 src_install() {
 	dodir /var/lib/bitlbee
-	make install DESTDIR=${D} || die "install failed"
-	make install-etc DESTDIR=${D} || die "install failed"
-	make install-doc DESTDIR=${D} || die "install failed"
+	make install DESTDIR="${D}" || die "install failed"
+	make install-etc DESTDIR="${D}" || die "install failed"
+	make install-doc DESTDIR="${D}" || die "install failed"
 	keepdir /var/lib/bitlbee
 
 	dodoc doc/{AUTHORS,CHANGES,CREDITS,FAQ,README}
@@ -127,20 +127,20 @@ src_install() {
 		newins doc/bitlbee.xinetd bitlbee
 	fi
 
-	newinitd ${FILESDIR}/bitlbeed.init bitlbeed || die
+	newinitd "${FILESDIR}"/bitlbeed.init bitlbeed || die
 
-	newconfd ${FILESDIR}/bitlbeed.confd bitlbeed || die
+	newconfd "${FILESDIR}"/bitlbeed.confd bitlbeed || die
 
 	keepdir /var/run/bitlbeed
 
 	dodir /usr/share/bitlbee
-	cp ${S}/utils/* ${D}/usr/share/bitlbee
-	rm ${D}/usr/share/bitlbee/bitlbeed*
+	cp "${S}"/utils/* "${D}"/usr/share/bitlbee
+	rm "${D}"/usr/share/bitlbee/bitlbeed*
 }
 
 pkg_postinst() {
-	chown nobody:nobody ${ROOT}/var/lib/bitlbee
-	chmod 700 ${ROOT}/var/lib/bitlbee
+	chown nobody:nobody "${ROOT}"/var/lib/bitlbee
+	chmod 700 "${ROOT}"/var/lib/bitlbee
 	elog "The utils included in bitlbee (other than bitlbeed) are now"
 	elog "located in /usr/share/bitlbee"
 	elog

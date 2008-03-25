@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.1-r1.ebuild,v 1.3 2007/12/13 21:36:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.1-r1.ebuild,v 1.4 2008/03/25 22:11:48 cedk Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs confutils
@@ -120,9 +120,9 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "install failed"
-	make install-etc DESTDIR=${D} || die "install failed"
-	make install-doc DESTDIR=${D} || die "install failed"
+	make install DESTDIR="${D}" || die "install failed"
+	make install-etc DESTDIR="${D}" || die "install failed"
+	make install-doc DESTDIR="${D}" || die "install failed"
 	keepdir /var/lib/bitlbee
 	fperms 700 /var/lib/bitlbee
 	fowners bitlbee:bitlbee /var/lib/bitlbee
@@ -155,7 +155,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	chown -R bitlbee:bitlbee ${ROOT}/var/lib/bitlbee
+	chown -R bitlbee:bitlbee "${ROOT}"/var/lib/bitlbee
 
 	elog "The utils included in bitlbee (other than bitlbeed) are now"
 	elog "located in /usr/share/bitlbee"
