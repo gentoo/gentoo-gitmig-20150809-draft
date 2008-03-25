@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/wmmsg-1.0.1.ebuild,v 1.4 2008/03/23 13:27:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/wmmsg-1.0.1.ebuild,v 1.5 2008/03/25 14:56:25 drac Exp $
 
 inherit autotools eutils
 
-DESCRIPTION="a dockapp that informs of new events, such as incoming chat messages, by displaying related icons and arrival times"
+DESCRIPTION="a dockapp that informs events, such as incoming chat messages, by displaying icons and times"
 HOMEPAGE="http://swapspace.net/~matt/wmmsg"
 SRC_URI="http://swapspace.net/~matt/wmmsg/${P}.tar.gz"
 
