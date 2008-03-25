@@ -1,18 +1,17 @@
-# Copyright 1999-2008 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha16508.ebuild,v 1.1 2008/03/11 19:56:58 cardoe Exp $
+# Copyright 1999-2008 Gentoo Foundation # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha16791.ebuild,v 1.1 2008/03/25 20:03:51 cardoe Exp $
 
 EAPI=1
-inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python
+inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
 
 DESCRIPTION="Homebrew PVR project"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via"
-IUSE="alsa altivec autostart dbox2 debug directv dvb dvd hdhomerun ieee1394 iptv \
-ivtv jack joystick lcd lirc mmx opengl opengl-video opengl-xvmc perl python \
-vorbis xvmc ${IUSE_VIDEO_CARDS}"
+IUSE="aac alsa altivec autostart dbox2 debug directv dvb dvd hdhomerun \
+ieee1394 iptv ivtv jack joystick lcd lirc mmx opengl opengl-video
+opengl-xvmc perl python vorbis xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -22,11 +21,12 @@ RDEPEND=">=media-libs/freetype-2.0
 	x11-libs/libXv
 	x11-libs/libXrandr
 	x11-libs/libXxf86vm
-	>=x11-libs/qt-3.3:3
+	>=x11-libs/qt-4.3:4
 	virtual/mysql
 	virtual/opengl
 	virtual/glu
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.43 )
+	aac? ( media-libs/faad2 )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	autostart? ( net-dialup/mingetty
 				x11-wm/evilwm
@@ -64,6 +64,15 @@ pkg_setup() {
 		echo
 		eerror "MythTV requires Qt to be built with mysql and opengl use flags enabled."
 		eerror "Please re-emerge =x11-libs/qt-3*, after having the use flags set."
+		echo
+		die "Please fix the above issues, before continuing."
+	fi
+
+	if ! built_with_use -a =x11-libs/qt-4* gif jpeg mysql opengl png tiff; then
+		echo
+		eerror "MythTV requires Qt to be built with gif, jpeg, mysql, opengl,"
+		eerror "png, and tiff use flags enabled."
+		eerror "Please re-emerge =x11-libs/qt-4*, after having the use flags set."
 		echo
 		die "Please fix the above issues, before continuing."
 	fi
@@ -112,6 +121,7 @@ src_compile() {
 	local myconf="--prefix=/usr
 		--mandir=/usr/share/man
 		--libdir-name=$(get_libdir)"
+	use aac && myconf="${myconf} --enable-libfaad2"
 	use alsa || myconf="${myconf} --disable-audio-alsa"
 	use altivec || myconf="${myconf} --disable-altivec"
 	use dbox2 || myconf="${myconf} --disable-dbox2"
@@ -183,28 +193,31 @@ src_compile() {
 	einfo "Running ./configure ${myconf}"
 	./configure ${myconf} || die "configure died"
 
-	eqmake3 mythtv.pro -o "Makefile" || die "eqmake3 failed"
+	eqmake4 mythtv.pro -o "Makefile" || die "eqmake4 failed"
 	emake || die "emake failed"
 
 	# firewire support should build the tester
 	if use ieee1394; then
 		cd contrib
-		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../firewire_tester firewire_tester.c \
+		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../firewire_tester \
+			development/firewire_tester/firewire_tester.c \
 			${LDFLAGS} -liec61883 -lraw1394 || \
 			die "failed to compile firewire_tester"
 
 		cd channel_changers
-		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -std=gnu99 -o ../../6200ch 6200ch.c \
+		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -std=gnu99 -o ../../6200ch \
+			6200ch/6200ch.c
 			${LDFLAGS} -lrom1394 -lavc1394 -lraw1394 || \
 			die "failed to compile 6200ch"
-		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../sa3250ch sa3250ch.c \
+		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../sa3250ch \
+			sa3250ch/sa3250ch.c \
 			${LDFLAGS} -lrom1394 -lavc1394 -lraw1394 || \
 			die "failed to compile sa3250ch"
 	fi
 
 	cd "${S}"/contrib/channel_changers
-	$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../red_eye red_eye.c ${LDFLAGS} || \
-		die "failed to compile red_eye"
+	$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../red_eye red_eye/red_eye.c \
+		${LDFLAGS} || die "failed to compile red_eye"
 }
 
 src_install() {
@@ -248,21 +261,21 @@ src_install() {
 
 	if use ieee1394; then
 		dobin firewire_tester || die "failed to install firewire_tester"
-		dodoc contrib/firewire_tester-README
+		newdoc contrib/development/firewire_tester/README README.firewire_tester
 
 		dobin 6200ch || die "failed to install 6200ch"
-		dodoc contrib/channel_changers/6200ch-README
+		newdoc contrib/channel_changers/6200ch/README README.6200ch
 
 		dobin sa3250ch || die "failed to install sa3250ch"
-		dodoc contrib/channel_changers/sa3250ch-README
+		newdoc contrib/channel_changers/sa3250ch/README README.sa3250ch
 	fi
 
 	dobin red_eye || die "failed to install red_eye"
-	dodoc contrib/channel_changers/red_eye-README
+	newdoc contrib/channel_changers/red_eye/README README.red_eye
 
 	if use directv; then
 		dobin contrib/channel_changers/d10control.pl || die "failed to install d10control"
-		dodoc contrib/channel_changers/d10control-README
+		newdoc contrib/channel_changers/d10control/README README.d10control
 	fi
 }
 
