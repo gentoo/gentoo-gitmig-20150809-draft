@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3451 2008/03/25 19:42:42 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3452 2008/03/25 22:23:37 cedk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -179,7 +179,9 @@ app-laptop/pbbuttonsd:macbook - Enable support for the Macbook and Macbook Pro
 app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-misc/beagle:chm - Enable indexing of MS HTML Help files (.chm)
+app-misc/beagle:epiphany - Enable Epiphany Extension
 app-misc/beagle:galago - Enable desktop presence via galago
+app-misc/beagle:inotify - Enable inotify filesystem monitoring support
 app-misc/beagle:ole - Enable ole support
 app-misc/beagle:thunderbird - Enable Mozilla Thunderbird indexing
 app-misc/booh:transcode - Use transcode to extract video thumbnails
