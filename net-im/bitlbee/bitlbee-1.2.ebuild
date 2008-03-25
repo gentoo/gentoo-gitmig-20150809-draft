@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.ebuild,v 1.1 2008/03/19 14:15:17 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.ebuild,v 1.2 2008/03/25 22:04:34 cedk Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs confutils
@@ -12,7 +12,7 @@ SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="debug gnutls ipv6 +jabber msn nss +oscar ssl +yahoo xinetd" # ldap - Bug 195758
+IUSE="debug gnutls ipv6 +jabber msn nss +oscar ssl test +yahoo xinetd" # ldap - Bug 195758
 
 COMMON_DEPEND=">=dev-libs/glib-2.4
 	msn? ( gnutls? ( net-libs/gnutls )
@@ -25,7 +25,8 @@ COMMON_DEPEND=">=dev-libs/glib-2.4
 		)"
 	# ldap? ( net-nds/openldap )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	test? ( dev-libs/check )"
 
 RDEPEND="${COMMON_DEPEND}
 	virtual/logger
