@@ -1,6 +1,12 @@
 # ChangeLog for net-im/ekg
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.39 2007/10/11 19:26:05 pylon Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.40 2008/03/25 17:54:09 coldwind Exp $
+
+  25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  -files/ekg-1.6-dragonfly.patch, -files/ekg-1.6_rc1-fpic.patch,
+  -ekg-1.6_rc3.ebuild, -ekg-1.6.ebuild, -ekg-1.7_rc2.ebuild,
+  -ekg-1.7_rc3.ebuild, ekg-1.7.ebuild:
+  Remove old and fix quoting.
 
   11 Oct 2007; Lars Weiler <pylon@gentoo.org> ekg-1.7.ebuild:
   stable ppc, bug #189735

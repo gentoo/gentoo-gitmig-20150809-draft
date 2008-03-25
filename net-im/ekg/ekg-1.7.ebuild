@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.7.ebuild,v 1.6 2007/10/11 19:26:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.7.ebuild,v 1.7 2008/03/25 17:54:09 coldwind Exp $
 
 inherit eutils autotools
 
@@ -32,9 +32,9 @@ DEPEND=">=sys-devel/automake-1.7
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.6_rc3-libgadu.patch
-	epatch ${FILESDIR}/${PN}-1.7_rc2-giflib.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-1.6_rc3-libgadu.patch
+	epatch "${FILESDIR}"/${PN}-1.7_rc2-giflib.patch
 	eautoreconf
 }
 
