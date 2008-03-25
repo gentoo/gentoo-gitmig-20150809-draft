@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.3.ebuild,v 1.8 2008/03/04 10:35:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.3.ebuild,v 1.9 2008/03/25 03:42:45 tove Exp $
 
 inherit autotools eutils gnome2
 
@@ -87,6 +87,10 @@ src_compile() {
 		--disable-error-on-warning \
 		|| die "econf failed"
 	emake -j1 || die "emake failed"
+}
+
+src_install() {
+	gnome2_src_install -j1
 }
 
 src_test() {
