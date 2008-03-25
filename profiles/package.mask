@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8424 2008/03/25 04:54:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8425 2008/03/25 06:12:18 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Robin H. Johnson <robbat2@gentoo.org> (24 Mar 2008)
+# Testing for GPT changes, small ext3 inodes, AOE support for grub-install,
+# some extra sync calls in grub-install.
+=sys-boot/grub-0.97-r5
 
 # Mike Doty <kingtaco@gentoo.org> (24 Mar 2008)
 # Masked due to lack of testing and user rewritten ebuild/conf.d/init.d.
