@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/late
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/ChangeLog,v 1.8 2007/03/14 23:49:07 nyhm Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/ChangeLog,v 1.9 2008/03/25 14:38:55 coldwind Exp $
+
+  25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> late-0.1.0.ebuild:
+  amd64 stable
 
   14 Mar 2007; Tristan Heaven <nyhm@gentoo.org> late-0.1.0.ebuild:
   Install menu entry, bug #160231
