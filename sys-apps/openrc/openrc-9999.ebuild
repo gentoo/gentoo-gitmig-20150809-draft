@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.6 2008/03/25 00:07:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.7 2008/03/25 00:13:15 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -85,6 +85,7 @@ pkg_preinst() {
 	# in the ass by accident
 	[[ -e ${ROOT}/etc/conf.d/net ]] && rm -f "${D}"/etc/conf.d/net
 
+	# everything below here is migration
 	has_version sys-apps/openrc && return 0
 
 	# upgrade timezone file
@@ -95,13 +96,11 @@ pkg_preinst() {
 		)
 	fi
 
-	# baselayout bootmisc init script has been split out in OpenRC
-	# so handle upgraders
-	local x= xtra=
-	use kernel_linux && xtra="${xtra} mtab procfs sysctl"
-	use kernel_FreeBSD && xtra="${xtra} dumpon savecore"
-	for x in fsck root swap ${xtra} ; do
+	# baselayout boot init scripts have been split out
+	local x
+	for x in $(cd "${D}"/usr/share/${PN}/runlevels/boot || exit; echo *) ; do
 		[[ -e ${ROOT}/etc/runlevels/boot/${x} ]] && continue
+		elog "Auto-adding '${x}' service to your boot runlevel"
 		ln -snf /etc/init.d/${x} "${ROOT}"/etc/runlevels/boot/${x}
 	done
 
