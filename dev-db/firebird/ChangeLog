@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.89 2008/02/25 15:49:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.90 2008/03/25 19:54:55 wltjr Exp $
+
+*firebird-2.1.0.17755_rc2 (25 Mar 2008)
+
+  25 Mar 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/firebird-2.1.0.17735_rc1-deps-flags-libs.patch,
+  +files/firebird-2.1.0.17755_rc2-deps-flags-libs.patch,
+  -firebird-2.1.0.17735_rc1.ebuild, +firebird-2.1.0.17755_rc2.ebuild:
+  Bumped to latest rc, removed previous rc. No progress on bug # 19766 :(,
+  still hangs on create_db on some amd64 machines.
 
   25 Feb 2008; Steve Dibb <beandog@gentoo.org>
   firebird-2.0.3.12981.0-r5.ebuild:
