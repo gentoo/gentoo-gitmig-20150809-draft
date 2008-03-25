@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20080227.ebuild,v 1.1 2008/03/25 18:28:00 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20080227.ebuild,v 1.2 2008/03/25 22:18:56 nyhm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs games
 
@@ -48,7 +48,6 @@ src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
 		OPTIMIZED_CFLAGS=no \
-		PREFIX= \
 		WITH_DATADIR=yes \
 		WITH_LIBDIR=yes \
 		DATADIR="${GAMES_DATADIR}"/${PN} \
