@@ -1,6 +1,14 @@
 # ChangeLog for sci-calculators/orpie
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.10 2008/03/25 11:43:09 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.11 2008/03/25 13:18:46 fmccor Exp $
+
+  25 Mar 2008; Ferris McCormick <fmccor@gentoo.org> orpie-1.5.1.ebuild:
+  Add -sparc in response to Bug #214622 --- this package checks for
+  architectures with double-word alignment for double precision items and
+  issues:
+  wrappers.h:13:2: error: #error "Architectures with double-word alignment for
+  doubles are not supported"
+  Thus, sparc cannot use orpie at all.
 
   25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> orpie-1.5.1.ebuild:
   amd64 stable wrt bug #214622
