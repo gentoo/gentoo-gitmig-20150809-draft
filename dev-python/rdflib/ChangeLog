@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/rdflib
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.1 2008/03/25 20:02:32 pythonhead Exp $
+
+*rdflib-2.4.0 (25 Mar 2008)
+
+  25 Mar 2008; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +rdflib-2.4.0.ebuild:
+  Initial commit. Closes #161492. Thank you Mikael Lammentausta
+  <mikael.lammentausta@savonia-amk.fi>, Sam Jacobson <sam@eversoft.co.nz>,
+  Sunrise.
+
