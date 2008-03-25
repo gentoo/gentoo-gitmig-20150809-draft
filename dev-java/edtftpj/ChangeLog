@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/edtftpj
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.38 2008/03/08 21:29:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.39 2008/03/25 20:03:52 wltjr Exp $
+
+*edtftpj-2.0.1 (25 Mar 2008)
+
+  25 Mar 2008; William L. Thomson Jr. <wltjr@gentoo.org>
+  +edtftpj-2.0.1.ebuild:
+  Bumped to latest release. Seems to be some API changes, but no deps no slot.
+  Till there is a need/reason to slot.
 
   08 Mar 2008; Markus Meier <maekke@gentoo.org> edtftpj-1.5.6.ebuild:
   x86 stable, bug #212671
