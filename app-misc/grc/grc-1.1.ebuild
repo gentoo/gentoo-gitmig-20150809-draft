@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.1.ebuild,v 1.1 2008/03/26 18:55:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.1.ebuild,v 1.2 2008/03/26 20:21:19 coldwind Exp $
 
 inherit eutils
 
@@ -17,14 +17,14 @@ RDEPEND="dev-lang/python"
 
 src_unpack() {
 	unpack ${A}
-	cp -rf ${S}{,.orig}
-	cd ${S}
-	epatch ${FILESDIR}/1.0.6-support-more-files.patch
+	cp -rf "${S}"{,.orig}
+	cd "${S}"
+	epatch "${FILESDIR}"/1.0.6-support-more-files.patch
 }
 
 src_install() {
 	insinto /usr/share/grc
-	doins conf.* ${FILESDIR}/conf.* || die "share files"
+	doins conf.* "${FILESDIR}"/conf.* || die "share files"
 	insinto /etc
 	doins grc.conf || die "conf"
 	dobin grc grcat || die "dobin"
