@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/pydf-5.ebuild,v 1.1 2007/08/11 16:32:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/pydf-5.ebuild,v 1.2 2008/03/26 20:00:28 fmccor Exp $
 
 MY_P=${P/-/_}
 
@@ -10,7 +10,7 @@ SRC_URI="http://kassiopeia.juls.savba.sk/~garabik/software/pydf/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-lang/python"
