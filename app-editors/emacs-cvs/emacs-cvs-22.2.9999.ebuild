@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.2.9999.ebuild,v 1.1 2008/03/26 14:43:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.2.9999.ebuild,v 1.2 2008/03/26 16:55:52 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -23,8 +23,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbs
 IUSE="alsa gif gtk gzip-el hesiod jpeg kerberos motif png spell sound source tiff toolkit-scroll-bars X Xaw3d xpm"
 RESTRICT="strip"
 
-RDEPEND="!~app-editors/emacs-22.2
-	sys-libs/ncurses
+RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
 	net-libs/liblockfile
 	hesiod? ( net-dns/hesiod )
