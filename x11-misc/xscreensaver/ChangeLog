@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.225 2008/03/26 17:59:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.226 2008/03/26 18:53:45 fmccor Exp $
+
+  26 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
+  xscreensaver-5.05.ebuild:
+  Sparc stable, Bug #214870, looks good, and bug says "everything prev. 5.05
+  is plain crap"
 
   26 Mar 2008; Markus Rothe <corsair@gentoo.org> xscreensaver-5.05.ebuild:
   Stable on ppc64; bug #214870. Also wrap ppc/ppc64 specific filter-flags and
