@@ -1,16 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36_beta.ebuild,v 1.1 2008/02/17 22:12:16 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.ebuild,v 1.1 2008/03/26 02:34:27 nixphoeni Exp $
 
 # We want the latest autoconf and automake (the default)
 inherit gnome2 eutils autotools multilib
 
-MY_PN="gDesklets"
+MY_PN="gdesklets"
 MY_P="${MY_PN}-${PV/_/}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="GNOME Desktop Applets: Core library for desktop applets"
-SRC_URI="http://students.fim.uni-passau.de/~meyerc/gDesklets/${MY_P}.tar.bz2"
+SRC_URI="http://gdesklets.de/files/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.gdesklets.de"
 LICENSE="GPL-2"
 
@@ -34,22 +34,15 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
 
-USE_DESTDIR="1"
+# Parallel makes sometimes break during install phase
+MAKEOPTS="${MAKEOPTS} -j1"
+# Force using MAKEOPTS with emake
+USE_EINSTALL="0"
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
-src_unpack() {
-
-	gnome2_src_unpack
-
-	cd "${S}"
-	# Use po/LINGUAS - see gnome bug #506828
-	epatch "${FILESDIR}/${P}-linguas.patch"
-	# Fix the creation of the /usr/bin/gdesklets link to respect libdir
-	epatch "${FILESDIR}/${P}-binary_link_fix.patch"
-
-}
 
 src_install() {
+
 
 	gnome2_src_install
 
@@ -61,13 +54,13 @@ src_install() {
 	# Create a global directory for Displays
 	dodir /usr/$(get_libdir)/gdesklets/Displays
 
+	# Remove conflicts with x11-misc/shared-mime-info and auto-generated
+	# MIME info
+	rm -rf 	"${D}/usr/share/mime"
+
 }
 
 pkg_postinst() {
-
-	# Remove conflicts with x11-misc/shared-mime-info and auto-generated
-	# MIME info
-	rm -rf 	"${D}/usr/share/mime/"
 
 	gnome2_pkg_postinst
 

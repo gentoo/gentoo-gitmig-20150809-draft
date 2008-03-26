@@ -1,6 +1,16 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.82 2008/02/17 22:12:16 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.83 2008/03/26 02:34:27 nixphoeni Exp $
+
+*gdesklets-core-0.36 (26 Mar 2008)
+
+  26 Mar 2008; Joe Sapp <nixphoeni@gentoo.org>
+  -files/gdesklets-core-0.36_beta-binary_link_fix.patch,
+  -files/gdesklets-core-0.36_beta-linguas.patch,
+  -gdesklets-core-0.36_beta.ebuild, +gdesklets-core-0.36.ebuild:
+  Version bump and removal of beta package (see package ChangeLog for
+  details). Bump includes resolution of bug #211290 and resolution
+  of problems during 'install' phase due to parallel makes.
 
 *gdesklets-core-0.36_beta (17 Feb 2008)
 
