@@ -1,10 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.13.5.ebuild,v 1.2 2008/03/25 21:54:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.13.5.ebuild,v 1.3 2008/03/26 00:03:40 wltjr Exp $
 
+EAPI=1
 JAVA_PKG_IUSE="source"
-
-#IUSE="gtk"
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,6 +13,8 @@ SRC_URI="http://www.frostwire.com/frostwire/${PV}/${P}.src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+#IUSE="gtk"
+IUSE=""
 
 #	dev-java/commons-httpclient
 #	dev-java/commons-pool
@@ -21,7 +22,7 @@ COMMON_DEP="
 	dev-java/commons-logging
 	dev-java/commons-net
 	dev-java/icu4j
-	dev-java/jgoodies-looks
+	dev-java/jgoodies-looks:1.2
 	dev-java/jmdns
 	dev-java/jython
 	dev-java/log4j
