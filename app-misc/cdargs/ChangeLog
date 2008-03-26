@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdargs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.15 2007/10/14 23:29:57 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.16 2008/03/26 18:35:57 armin76 Exp $
+
+  26 Mar 2008; Raúl Porcel <armin76@gentoo.org> cdargs-1.35-r1.ebuild:
+  x86 stable
 
 *cdargs-1.35-r1 (14 Oct 2007)
 
