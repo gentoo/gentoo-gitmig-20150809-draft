@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.70 2008/03/25 22:24:59 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.71 2008/03/26 21:49:16 cedk Exp $
+
+*beagle-0.3.4 (26 Mar 2008)
+
+  26 Mar 2008; Cédric Krier <cedk@gentoo.org> +beagle-0.3.4.ebuild:
+  Version bump
 
 *beagle-0.3.3 (25 Mar 2008)
 
