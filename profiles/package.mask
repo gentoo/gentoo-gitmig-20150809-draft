@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8429 2008/03/26 14:44:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8430 2008/03/26 14:56:06 caleb Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Caleb Tennis <caleb@gentoo.org> (26 Mar 2008)
+# Masking per dev-zero request for more testing time
+=dev-db/libpq-8.3*
+=dev-db/postgresql-8.3*
 
 # Luca Barbato <lu_zero@gentoo.org> (26 Mar 2008)
 # huge ffmpeg migration mask, append to this further packages working
