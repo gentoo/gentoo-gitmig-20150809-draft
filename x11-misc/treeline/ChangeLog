@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.34 2008/03/23 14:40:44 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.35 2008/03/26 11:37:55 coldwind Exp $
+
+  26 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> treeline-1.0.2.ebuild:
+  HOMEPAGE fixed, bug #214843
 
   23 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> treeline-1.0.2.ebuild:
   amd64 stable and fix quoting.
