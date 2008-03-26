@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.85 2008/03/02 14:32:07 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.86 2008/03/26 22:35:51 eva Exp $
+
+*gnome-power-manager-2.22.0 (26 Mar 2008)
+
+  26 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-power-manager-2.22.0.ebuild:
+  New version for GNOME-2.22. Bug fixes notably brightness and battery
+  profiling.
 
   02 Mar 2008; Mart Raudsepp <leio@gentoo.org>
   gnome-power-manager-2.20.2.ebuild:
