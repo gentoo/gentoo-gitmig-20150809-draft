@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/umfpack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.4 2008/01/29 18:49:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.5 2008/03/26 16:00:51 corsair Exp $
+
+  26 Mar 2008; Markus Rothe <corsair@gentoo.org> umfpack-5.2.0.ebuild:
+  Added ~ppc64; bug #213359
 
 *umfpack-5.2.0 (29 Jan 2008)
 
