@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/iguanaIR
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/iguanaIR/ChangeLog,v 1.1 2008/03/26 17:04:17 hd_brummy Exp $
+
+*iguanaIR-0.93 (26 Mar 2008)
+
+  26 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/40-iguanaIR.rules, +files/iguanaIR-0.93-gentoo.diff, +metadata.xml,
+  +iguanaIR-0.93.ebuild:
+  initial ebuild; masked for testing
+
