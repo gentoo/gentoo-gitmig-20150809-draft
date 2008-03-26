@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.3.ebuild,v 1.9 2008/02/04 04:34:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.3.ebuild,v 1.10 2008/03/26 01:31:11 leio Exp $
 EAPI="1"
 
 inherit db-use eutils flag-o-matic gnome2 autotools
@@ -83,6 +83,9 @@ src_unpack() {
 
 	# Fix broken gtk-doc.make
 	epatch "${FILESDIR}"/${PN}-1.12.3-gtk-doc.patch
+
+	# Don't check for libsoup-2.4 - is not adapted to further API changes in 2.3 development
+	epatch "${FILESDIR}/${P}-no-libsoup24.patch"
 
 #-------------Upstream GNOME look here -----------------#
 
