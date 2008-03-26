@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubymail
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.26 2008/03/25 06:19:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.27 2008/03/26 12:45:01 jer Exp $
+
+  26 Mar 2008; Jeroen Roovers <jer@gentoo.org> rubymail-0.17.ebuild:
+  Stable for HPPA (bug #214640). Fixed quoting issues.
 
 *rubymail-1.0.0 (25 Mar 2008)
 
