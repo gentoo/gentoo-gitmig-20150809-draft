@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcliphist
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.7 2008/03/12 14:18:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.8 2008/03/26 13:40:54 drac Exp $
+
+  26 Mar 2008; Samuli Suominen <drac@gentoo.org> wmcliphist-0.6.ebuild:
+  amd64 stable wrt #214876
 
 *wmcliphist-0.6 (12 Mar 2008)
 
