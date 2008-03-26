@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.3 2008/03/26 01:15:13 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.4 2008/03/26 20:16:12 wltjr Exp $
 
 inherit autotools gnome2 python
 
@@ -18,7 +18,8 @@ IUSE="doc gnome xfce"
 # Replace gnome-vfs with gvfs when unmasked
 #		gnome-base/gvfs
 
-DEPEND="dev-python/pygtk
+DEPEND="dev-python/elementtree
+	dev-python/pygtk
 	dev-python/pycairo
 	dev-python/pyxdg
 	doc? ( dev-util/gtk-doc )
