@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/calendar/calendar-0.9.1.ebuild,v 1.16 2005/01/01 14:54:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/calendar/calendar-0.9.1.ebuild,v 1.17 2008/03/26 18:23:31 armin76 Exp $
 
 DESCRIPTION="Standard unix calendar program for Linux, ported from OpenBSD"
 HOMEPAGE="http://bsdcalendar.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://bsdcalendar.sourceforge.net/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha ~hppa amd64 ppc64"
+KEYWORDS="alpha amd64 ~hppa ~ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
