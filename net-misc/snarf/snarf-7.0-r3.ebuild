@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/snarf-7.0-r3.ebuild,v 1.3 2008/03/13 15:04:11 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/snarf-7.0-r3.ebuild,v 1.4 2008/03/26 02:00:31 ranger Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ IUSE=""
 DESCRIPTION="Small and fast command line resource grabber with support for http, gopher, finger, and ftp protocols."
 SRC_URI="http://www.xach.com/snarf/${P}.tar.gz"
 HOMEPAGE="http://www.xach.com/snarf/"
-KEYWORDS="alpha amd64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 
