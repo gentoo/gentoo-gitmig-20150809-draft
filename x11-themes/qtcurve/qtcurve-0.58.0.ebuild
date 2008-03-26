@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.56.1.ebuild,v 1.1 2008/02/25 23:17:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.58.0.ebuild,v 1.1 2008/03/26 23:38:15 yngwin Exp $
 
 # Order is important, so we get src_compile from cmake-utils.
 inherit kde-functions qt3 cmake-utils
