@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1251 2008/03/26 14:44:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1252 2008/03/26 16:56:58 hd_brummy Exp $
+
+  26 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  initial ebuild app-misc/iguanaIR masked for testing
 
   26 Mar 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Remove mask for emacs-cvs-22.1.9999; emacs-22.2 is released.
