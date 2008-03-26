@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.65 2008/03/24 15:36:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.66 2008/03/26 14:46:53 chainsaw Exp $
+
+  26 Mar 2008; Tony Vroon <chainsaw@gentoo.org> xchat-xsys-2.2.0-r1.ebuild:
+  Mark stable on AMD64. Tested on a Core2 Duo laptop.
 
   24 Mar 2008; Raúl Porcel <armin76@gentoo.org> xchat-xsys-2.2.0-r1.ebuild:
   x86 stable
