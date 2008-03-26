@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/delay
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/ChangeLog,v 1.14 2007/02/08 22:29:10 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/ChangeLog,v 1.15 2008/03/26 18:47:31 armin76 Exp $
+
+  26 Mar 2008; Raúl Porcel <armin76@gentoo.org> delay-1.6.ebuild:
+  Add ~ia64
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
