@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/countrycodes
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.18 2007/02/04 02:17:49 dirtyepic Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.19 2008/03/26 18:41:28 armin76 Exp $
+
+  26 Mar 2008; Raúl Porcel <armin76@gentoo.org> countrycodes-1.0.5.ebuild:
+  Add ~ia64
 
   04 Feb 2007; Ryan Hill <dirtyepic@gentoo.org>
   +files/countrycodes-1.0.5-Makefile.patch, countrycodes-1.0.5.ebuild:
