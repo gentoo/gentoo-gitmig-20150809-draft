@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/boxes
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.16 2007/03/30 21:09:41 dirtyepic Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.17 2008/03/26 18:21:28 armin76 Exp $
+
+  26 Mar 2008; Raúl Porcel <armin76@gentoo.org> boxes-1.1.ebuild:
+  alpha/sparc/x86 stable, add ~ia64
 
 *boxes-1.1 (30 Mar 2007)
 
