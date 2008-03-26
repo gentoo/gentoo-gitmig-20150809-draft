@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/ri-li
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ri-li/ChangeLog,v 1.6 2008/03/25 13:36:11 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ri-li/ChangeLog,v 1.7 2008/03/26 21:39:04 mr_bones_ Exp $
+
+*ri-li-2.0.1 (26 Mar 2008)
+
+  26 Mar 2008; Michael Sterrett <mr_bones_@gentoo.org> +ri-li-2.0.1.ebuild:
+  version bump (bug #214692)
 
   25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> ri-li-2.0.0.ebuild:
   amd64 stable
