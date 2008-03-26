@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tkpasman
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/ChangeLog,v 1.13 2007/09/20 17:50:43 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/ChangeLog,v 1.14 2008/03/26 19:37:17 armin76 Exp $
+
+  26 Mar 2008; Raúl Porcel <armin76@gentoo.org> tkpasman-2.2b.ebuild:
+  x86 stable
 
 *tkpasman-2.2b (20 Sep 2007)
 
