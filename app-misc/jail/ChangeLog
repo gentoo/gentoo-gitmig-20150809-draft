@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jail
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.21 2007/03/12 15:01:17 armin76 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.22 2008/03/26 02:08:56 ranger Exp $
+
+  26 Mar 2008; Brent Baude <ranger@gentoo.org> jail-1.9-r2.ebuild:
+  stable ppc, bug 214798
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> jail-1.9-r2.ebuild:
   x86 stable
