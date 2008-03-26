@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2_pre20080326.ebuild,v 1.2 2008/03/26 15:20:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2_pre20080326.ebuild,v 1.3 2008/03/26 19:45:39 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -106,15 +106,20 @@ pkg_preinst() {
 	if [[ -e ${ROOT}/etc/conf.d/clock ]] ; then
 		mv "${ROOT}"/etc/conf.d/clock "${ROOT}"/etc/conf.d/hwclock
 	fi
+	if [[ -L ${ROOT}/etc/runlevels/boot/clock ]] ; then
+		rm -f "${ROOT}"/etc/runlevels/boot/clock
+		ln -snf /etc/init.d/hwclock "${ROOT}"/etc/runlevels/boot/hwclock
+	fi
+	if [[ -L ${ROOT}${LIBDIR}/rc/init.d/started/clock ]] ; then
+		rm -f "${ROOT}${LIBDIR}"/rc/init.d/started/clock
+		ln -snf /etc/init.d/hwclock "${ROOT}${LIBDIR}"/rc/init.d/started/hwclock
+	fi
 
 	# /etc/conf.d/rc is no longer used for configuration
 	if [[ -e ${ROOT}/etc/conf.d/rc ]] ; then
 		elog "/etc/conf.d/rc is no longer used for configuration."
 		elog "Please migrate your settings and delete it."
 	fi
-
-	# skip remaining migration if we already have openrc installed
-	has_version sys-apps/openrc && return 0
 
 	# upgrade timezone file
 	if [[ ! -e ${ROOT}/etc/timezone ]] ; then
@@ -123,6 +128,9 @@ pkg_preinst() {
 		[[ -n ${TIMEZONE} ]] && echo "${TIMEZONE}" > "${ROOT}"/etc/timezone
 		)
 	fi
+
+	# skip remaining migration if we already have openrc installed
+	has_version sys-apps/openrc && return 0
 
 	# baselayout boot init scripts have been split out
 	local x
