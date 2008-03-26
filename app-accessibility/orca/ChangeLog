@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.36 2008/03/09 15:19:54 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.37 2008/03/26 22:23:58 eva Exp $
+
+*orca-2.22.0 (26 Mar 2008)
+
+  26 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> +orca-2.22.0.ebuild:
+  New version for GNOME-2.22. Numerous bug fixes.
 
   09 Mar 2008; Mart Raudsepp <leio@gentoo.org> -orca-2.18.1.ebuild,
   -orca-2.20.1.ebuild, -orca-2.20.2.ebuild:
