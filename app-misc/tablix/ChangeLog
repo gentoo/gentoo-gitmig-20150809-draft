@@ -1,10 +1,10 @@
 # ChangeLog for app-misc/tablix
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/ChangeLog,v 1.8 2008/03/26 17:28:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/ChangeLog,v 1.9 2008/03/26 17:29:29 armin76 Exp $
 
   26 Mar 2008; Raúl Porcel <armin76@gentoo.org> -tablix-0.0.3.ebuild,
   -tablix-0.3.4.ebuild, tablix-0.3.5.ebuild:
-  x86 stable
+  x86 stable, remove old
 
 *tablix-0.3.5 (08 Jan 2008)
 
