@@ -1,6 +1,16 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.15 2008/03/15 14:09:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.16 2008/03/26 23:31:34 yngwin Exp $
+
+*gtk-engines-qtcurve-0.58.0 (26 Mar 2008)
+
+  26 Mar 2008; Ben de Groot <yngwin@gentoo.org>
+  -gtk-engines-qtcurve-0.55.3.ebuild, -gtk-engines-qtcurve-0.56.0.ebuild,
+  -gtk-engines-qtcurve-0.56.1.ebuild, -gtk-engines-qtcurve-0.56.2.ebuild,
+  -gtk-engines-qtcurve-0.56.3.ebuild, -gtk-engines-qtcurve-0.57.0.ebuild,
+  gtk-engines-qtcurve-0.57.1.ebuild, +gtk-engines-qtcurve-0.58.0.ebuild:
+  Removing old versions. Version bump to 0.58. Removing event filter cmake
+  option, on upstream's recommendation. Fixes bug 214362.
 
 *gtk-engines-qtcurve-0.57.1 (15 Mar 2008)
 
