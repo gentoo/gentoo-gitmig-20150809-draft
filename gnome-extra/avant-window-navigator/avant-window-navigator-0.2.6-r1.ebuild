@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.2 2008/03/26 00:31:15 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.3 2008/03/26 01:15:13 wltjr Exp $
 
 inherit autotools gnome2 python
 
@@ -44,11 +44,7 @@ RDEPEND="${DEPEND}
 DOCS="AUTHORS Changelog NEWS README TODO"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	gtkdocize || die "gtkdocsize failed"
-	eautoreconf || die "eautoreconf failed"
-	intltoolize --copy --force || die "intltoolize failed"
+	gnome2_src_unpack
 
 	# Disable pyc compiling.
 	mv py-compile py-compile.orig
