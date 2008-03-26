@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.9999.ebuild,v 1.4 2008/02/11 20:36:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.2.9999.ebuild,v 1.1 2008/03/26 14:43:00 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -23,7 +23,8 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbs
 IUSE="alsa gif gtk gzip-el hesiod jpeg kerberos motif png spell sound source tiff toolkit-scroll-bars X Xaw3d xpm"
 RESTRICT="strip"
 
-RDEPEND="sys-libs/ncurses
+RDEPEND="!~app-editors/emacs-22.2
+	sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
 	net-libs/liblockfile
 	hesiod? ( net-dns/hesiod )
@@ -130,9 +131,7 @@ src_compile() {
 		# possibilities. Emacs upstream thinks this should be standard
 		# policy on all distributions
 		if use gtk; then
-			echo
-			einfo "Configuring to build with GTK support, disabling all other toolkits"
-			echo
+			einfo "Configuring to build with GTK+ support"
 			myconf="${myconf} --with-x-toolkit=gtk"
 		elif use Xaw3d; then
 			einfo "Configuring to build with Xaw3d (athena) support"
@@ -226,12 +225,12 @@ emacs-infodir-rebuild() {
 }
 
 pkg_postinst() {
-	test -f "${ROOT}"/usr/share/emacs/site-lisp/subdirs.el ||
-		cp "${ROOT}"/usr/share/emacs{/${FULL_VERSION},}/site-lisp/subdirs.el
+	[ -f "${ROOT}"/usr/share/emacs/site-lisp/subdirs.el ] \
+		|| cp "${ROOT}"/usr/share/emacs{/${FULL_VERSION},}/site-lisp/subdirs.el
 
 	local f
 	for f in "${ROOT}"/var/lib/games/emacs/{snake,tetris}-scores; do
-		test -e "${f}" || touch "${f}"
+		[ -e "${f}" ] || touch "${f}"
 	done
 
 	elisp-site-regen
