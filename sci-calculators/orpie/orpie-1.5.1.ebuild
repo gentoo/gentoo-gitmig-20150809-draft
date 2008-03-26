@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/orpie-1.5.1.ebuild,v 1.4 2008/03/25 13:18:46 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/orpie-1.5.1.ebuild,v 1.5 2008/03/26 14:29:08 bicatali Exp $
 
 DESCRIPTION="A fullscreen RPN calculator for the console"
-HOMEPAGE="http://www.eecs.umich.edu/~pelzlpj/orpie/"
-SRC_URI="http://www.eecs.umich.edu/~pelzlpj/orpie/${P}.tar.gz"
+HOMEPAGE="http://pessimization.com/software/orpie/"
+SRC_URI="http://pessimization.com/software/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
