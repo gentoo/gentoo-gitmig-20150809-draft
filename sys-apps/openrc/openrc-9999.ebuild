@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.12 2008/03/26 20:06:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.13 2008/03/26 20:12:15 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -122,7 +122,7 @@ pkg_preinst() {
 	fi
 
 	# upgrade timezone file
-	if [[ ! -e ${ROOT}/etc/timezone ]] ; then
+	if [[ -e ${ROOT}/etc/conf.d/clock && ! -e ${ROOT}/etc/timezone ]] ; then
 		(
 		source "${ROOT}"/etc/conf.d/clock
 		[[ -n ${TIMEZONE} ]] && echo "${TIMEZONE}" > "${ROOT}"/etc/timezone
