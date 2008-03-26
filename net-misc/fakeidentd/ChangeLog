@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/fakeidentd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.32 2008/03/26 17:11:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.33 2008/03/26 17:28:35 coldwind Exp $
+
+  26 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> fakeidentd-2.5.ebuild:
+  amd64 stable wrt bug #214758
 
   26 Mar 2008; Markus Rothe <corsair@gentoo.org> fakeidentd-2.5.ebuild:
   Stable on ppc64; bug #214758
