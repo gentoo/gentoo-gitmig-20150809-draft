@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/clockywock
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/ChangeLog,v 1.5 2008/02/14 15:35:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/ChangeLog,v 1.6 2008/03/26 17:09:00 armin76 Exp $
+
+  26 Mar 2008; Raúl Porcel <armin76@gentoo.org> clockywock-0.2.3.ebuild:
+  x86 stable
 
   14 Feb 2008; Samuli Suominen <drac@gentoo.org>
   -files/clockywock-0.2.2-cxxflags.patch,
