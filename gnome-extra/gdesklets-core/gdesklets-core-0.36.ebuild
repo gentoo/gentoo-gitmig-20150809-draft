@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.ebuild,v 1.1 2008/03/26 02:34:27 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.ebuild,v 1.2 2008/03/26 03:10:23 mr_bones_ Exp $
 
 # We want the latest autoconf and automake (the default)
 inherit gnome2 eutils autotools multilib
@@ -40,9 +40,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 USE_EINSTALL="0"
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
-
 src_install() {
-
 
 	gnome2_src_install
 
