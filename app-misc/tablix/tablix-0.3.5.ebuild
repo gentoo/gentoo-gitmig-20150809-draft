@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/tablix-0.3.5.ebuild,v 1.1 2008/01/08 23:35:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/tablix-0.3.5.ebuild,v 1.2 2008/03/26 17:28:30 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.tablix.org/releases/stable/${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE="pvm"
 
 DEPEND=">=dev-libs/libxml2-2.4.3
