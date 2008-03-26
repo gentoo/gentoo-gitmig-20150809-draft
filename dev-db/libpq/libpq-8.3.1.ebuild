@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.3.1.ebuild,v 1.1 2008/03/26 14:02:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.3.1.ebuild,v 1.2 2008/03/26 14:22:50 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.postgresql.org/"
 SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2"
 LICENSE="POSTGRESQL"
 SLOT="4"
-IUSE="kerberos nls pam pg-intdatetime readline ssl threads zlib"
+IUSE="debug kerberos nls pam pg-intdatetime readline ssl threads zlib"
 
 RDEPEND="!<=dev-db/postgresql-8.1.4
 		kerberos? ( virtual/krb5 )
@@ -51,6 +51,7 @@ src_compile() {
 		--with-docdir=/usr/share/doc/${PF} \
 		--libdir=/usr/$(get_libdir) \
 		--enable-depend \
+		$(use_enable debug) \
 		$(use_with kerberos krb5) \
 		$(use_enable nls ) \
 		$(use_with pam) \
