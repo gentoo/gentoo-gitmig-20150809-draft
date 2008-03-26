@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8428 2008/03/26 08:42:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8429 2008/03/26 14:44:03 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -448,8 +448,6 @@ net-libs/libhttpd-persistent
 app-mobilephone/bemused
 
 # Ulrich Mueller <ulm@gentoo.org> (01 Feb 2008)
-# Live CVS ebuild of Emacs 22 base branch
-~app-editors/emacs-cvs-22.1.9999
 # Emacs 23 virtual, unmask after Emacs 23 release
 >=virtual/emacs-23
 
