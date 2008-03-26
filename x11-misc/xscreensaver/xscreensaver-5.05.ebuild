@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.05.ebuild,v 1.2 2008/03/02 14:47:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.05.ebuild,v 1.3 2008/03/26 13:28:19 drac Exp $
 
-inherit eutils flag-o-matic multilib pam
+inherit autotools eutils flag-o-matic multilib pam
 
 DESCRIPTION="A modular screen saver and locker for the X Window System"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.jwz.org/xscreensaver"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="jpeg new-login opengl pam suid xinerama"
 
 RDEPEND="x11-libs/libXxf86misc
@@ -40,10 +40,13 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	# phew, posted everything to upstream so lets
+	# see what version 5.06 brings us..
 	epatch "${FILESDIR}"/${PN}-5.04-gentoo.patch
 	epatch "${FILESDIR}"/${PN}-5.04-nsfw.patch
 	epatch "${FILESDIR}"/${P}-desktop-entry.patch
 	epatch "${FILESDIR}"/${P}-posix-head.patch
+	eautoreconf # bug 113681
 }
 
 src_compile() {
