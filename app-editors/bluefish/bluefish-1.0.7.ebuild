@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.0.7.ebuild,v 1.1 2007/01/19 04:42:51 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.0.7.ebuild,v 1.2 2008/03/26 16:09:58 armin76 Exp $
 
 inherit eutils fdo-mime
 
@@ -22,6 +22,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )
 	gnome? ( gnome-base/libgnomeui )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -i -e 's/-s -m 755/-m 755/g' src/Makefile.in
+}
 
 src_compile() {
 	econf --disable-update-databases \

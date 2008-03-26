@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/bluefish
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.55 2007/01/19 04:42:51 hanno Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.56 2008/03/26 16:09:58 armin76 Exp $
+
+  26 Mar 2008; Raúl Porcel <armin76@gentoo.org> bluefish-1.0.7.ebuild:
+  Don't strip, bug #152228
 
 *bluefish-1.0.7 (19 Jan 2007)
 
