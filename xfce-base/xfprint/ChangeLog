@@ -1,6 +1,6 @@
 # ChangeLog for xfce-base/xfprint
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.115 2008/03/26 11:36:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.116 2008/03/26 12:14:35 jer Exp $
 
   26 Mar 2008; Jeroen Roovers <jer@gentoo.org> xfprint-4.4.2-r1.ebuild:
   Stable for HPPA (bug #214130).
@@ -10,9 +10,6 @@
 
   22 Mar 2008; Brent Baude <ranger@gentoo.org> xfprint-4.4.2-r1.ebuild:
   Marking xfprint-4.4.2-r1 ppc64 for bug 214130
-
-  22 Mar 2008; nixnut <nixnut@gentoo.org> ChangeLog:
-  Stable on ppc wrt bug 214130
 
   21 Mar 2008; Tobias Klausmann <klausman@gentoo.org>
   xfprint-4.4.2-r1.ebuild:
