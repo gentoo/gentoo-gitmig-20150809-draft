@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.5.ebuild,v 1.6 2007/11/27 14:14:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.5.ebuild,v 1.7 2008/03/26 00:21:34 halcy0n Exp $
 
 inherit flag-o-matic
 
@@ -20,7 +20,7 @@ SLOT="0"
 
 KEYWORDS="~x86 ~ppc ~amd64"
 
-IUSE="matroska ogg theora libvisual sox"
+IUSE="matroska ogg theora libvisual"
 
 DEPEND=">=media-video/mplayer-0.90-r2
 		>=media-gfx/imagemagick-5.5.6
@@ -38,8 +38,7 @@ DEPEND=">=media-video/mplayer-0.90-r2
 		ogg? ( media-sound/ogmtools )
 		>=media-video/mjpegtools-1.6.2
 		libvisual? ( =media-libs/libvisual-0.2* )
-		media-sound/jack-audio-connection-kit
-		sox? ( media-sound/sox )"
+		media-sound/jack-audio-connection-kit"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 

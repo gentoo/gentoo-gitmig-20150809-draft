@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.8.6.ebuild,v 1.3 2008/02/04 01:07:20 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.8.6.ebuild,v 1.4 2008/03/26 00:21:34 halcy0n Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ SLOT="0"
 
 KEYWORDS="~x86 ~ppc ~amd64"
 
-IUSE="matroska ogg theora libvisual sox nls" #sdl jack dv"
+IUSE="matroska ogg theora libvisual nls" #sdl jack dv"
 
 DEPEND=">=media-video/mplayer-0.90-r2
 		>=media-gfx/imagemagick-5.5.6
@@ -35,7 +35,6 @@ DEPEND=">=media-video/mplayer-0.90-r2
 		>=media-video/mjpegtools-1.6.2
 		libvisual? ( media-libs/libvisual )
 		media-sound/jack-audio-connection-kit
-		sox? ( media-sound/sox )
 		sys-libs/libavc1394"
 
 src_unpack() {
