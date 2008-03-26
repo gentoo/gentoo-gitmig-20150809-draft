@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.6.0-r4.ebuild,v 1.1 2008/01/24 09:51:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.6.0-r4.ebuild,v 1.2 2008/03/26 16:06:09 corsair Exp $
 
 NEED_PYTHON=2.3
 
@@ -15,7 +15,7 @@ SLOT="0"
 
 IUSE="fftw umfpack sandbox"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 CDEPEND=">=dev-python/numpy-1.0.4-r1
 	virtual/lapack
