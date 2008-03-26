@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/amd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.5 2008/03/15 19:11:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.6 2008/03/26 15:58:55 corsair Exp $
+
+  26 Mar 2008; Markus Rothe <corsair@gentoo.org> amd-2.2.0.ebuild:
+  Added ~ppc64; bug #213350
 
   15 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/amd-2.2.0-tests.patch, amd-2.2.0.ebuild:
