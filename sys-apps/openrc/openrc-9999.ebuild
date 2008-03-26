@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.10 2008/03/25 12:57:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.11 2008/03/26 15:20:38 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -9,7 +9,10 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_BRANCH="Gentoo"
 	inherit git
 else
-	SRC_URI="http://roy.marples.name/${PN}/${P}.tar.bz2"
+	SRC_URI="http://roy.marples.name/${PN}/${P}.tar.bz2
+		mirror://gentoo/${P}.tar.bz2
+		http://dev.gentoo.org/~cardoe/files/${P}.tar.bz2
+		http://dev.gentoo.org/~vapier/dist/${P}.tar.bz2"
 fi
 
 DESCRIPTION="OpenRC manages the services, startup and shutdown of a host"
@@ -35,6 +38,7 @@ pkg_setup() {
 	[ "${SYMLINK_LIB}" = "yes" ] && LIBDIR=$(get_abi_LIBDIR "${DEFAULT_ABI}")
 
 	MAKE_ARGS="${MAKE_ARGS} LIBNAME=${LIBDIR}"
+
 	local brand="Unknown"
 	if use kernel_linux ; then
 		MAKE_ARGS="${MAKE_ARGS} OS=Linux"
@@ -69,11 +73,11 @@ src_compile() {
 
 	tc-export CC AR RANLIB
 	echo emake ${MAKE_ARGS}
-	emake ${MAKE_ARGS} || die
+	emake ${MAKE_ARGS} || die "emake ${MAKE_ARGS} failed"
 }
 
 src_install() {
-	emake ${MAKE_ARGS} DESTDIR="${D}" install || die
+	emake ${MAKE_ARGS} DESTDIR="${D}" install || die "make install failed"
 	gen_usr_ldscript libeinfo.so
 	gen_usr_ldscript librc.so
 
@@ -96,7 +100,18 @@ pkg_preinst() {
 	# in the ass by accident
 	[[ -e ${ROOT}/etc/conf.d/net ]] && rm -f "${D}"/etc/conf.d/net
 
-	# everything below here is migration
+	# /etc/conf.d/clock moved to /etc/conf.d/hwclock
+	if [[ -e ${ROOT}/etc/conf.d/clock ]] ; then
+		mv "${ROOT}"/etc/conf.d/clock "${ROOT}"/etc/conf.d/hwclock
+	fi
+
+	# /etc/conf.d/rc is no longer used for configuration
+	if [[ -e ${ROOT}/etc/conf.d/rc ]] ; then
+		elog "/etc/conf.d/rc is no longer used for configuration."
+		elog "Please migrate your settings and delete it."
+	fi
+
+	# skip remaining migration if we already have openrc installed
 	has_version sys-apps/openrc && return 0
 
 	# upgrade timezone file
@@ -124,6 +139,7 @@ pkg_preinst() {
 			ewarn "No state found, and no state exists"
 			elog "You should reboot this host"
 		else
+			mkdir -p "${ROOT}${LIBDIR}/rc/init.d"
 			einfo "Moving state from ${ROOT}${svcdir} to ${ROOT}${LIBDIR}/rc/init.d"
 			mv "${ROOT}${svcdir}"/* "${ROOT}${LIBDIR}"/rc/init.d
 			rm -rf "${ROOT}${LIBDIR}"/rc/init.d/daemons \

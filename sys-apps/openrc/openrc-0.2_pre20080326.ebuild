@@ -1,29 +1,37 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2_pre20080326.ebuild,v 1.1 2008/03/26 14:17:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2_pre20080326.ebuild,v 1.2 2008/03/26 15:20:38 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/openrc.git"
+	EGIT_BRANCH="Gentoo"
+	inherit git
+else
+	SRC_URI="http://roy.marples.name/${PN}/${P}.tar.bz2
+		mirror://gentoo/${P}.tar.bz2
+		http://dev.gentoo.org/~cardoe/files/${P}.tar.bz2
+		http://dev.gentoo.org/~vapier/dist/${P}.tar.bz2"
+fi
+
 DESCRIPTION="OpenRC manages the services, startup and shutdown of a host"
 HOMEPAGE="http://roy.marples.name/openrc"
-#SRC_URI="http://roy.marples.name/${PN}/${P}.tar.bz2"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://dev.gentoo.org/~cardoe/files/${P}.tar.bz2"
+
 LICENSE="BSD-2"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64" #"~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="debug ncurses pam static unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
-		kernel_linux? ( >=sys-apps/module-init-tools-3.2.2-r2 )
-		kernel_FreeBSD? ( sys-process/fuser-bsd )
-		ncurses? ( sys-libs/ncurses )
-		pam? ( virtual/pam )
-		>=sys-apps/baselayout-2.0.0
-		!<sys-fs/udev-118-r2"
-DEPEND="virtual/os-headers
-		>=sys-apps/baselayout-2.0.0"
+	kernel_linux? ( >=sys-apps/module-init-tools-3.2.2-r2 )
+	kernel_FreeBSD? ( sys-process/fuser-bsd )
+	ncurses? ( sys-libs/ncurses )
+	pam? ( virtual/pam )
+	>=sys-apps/baselayout-2.0.0
+	!<sys-fs/udev-118-r2"
+DEPEND="${RDEPEND}
+	virtual/os-headers"
 
 S="${WORKDIR}/${PN}-0.2"
 
@@ -37,40 +45,44 @@ pkg_setup() {
 	if use kernel_linux ; then
 		MAKE_ARGS="${MAKE_ARGS} OS=Linux"
 		brand="Linux"
-	elif use kernel_FreeBSD; then
+	elif use kernel_FreeBSD ; then
 		MAKE_ARGS="${MAKE_ARGS} OS=FreeBSD SUBOS=BSD"
 		brand="FreeBSD"
 	fi
-
 	export BRANDING="Gentoo ${brand}"
+
+	export PROGLDFLAGS=$(use static && echo -static)
 	export DEBUG=$(usev debug)
-	export MKTERMCAP=$(usev ncurses)
 	export MKPAM=$(use static || usev pam)
+	export MKTERMCAP=$(usev ncurses)
 
-	if use static; then
-		if use elibc_glibc; then
-			export PROGLDFLAGS="-Wl,-Bstatic"
-		else
-			export PROGLDFLAGS="-static"
-		fi
+	if use pam && use static ; then
+		ewarn "OpenRC cannot be built statically with PAM support,"
+		ewarn "so PAM support has been disabled."
 	fi
-
-	if use pam && use static; then
-		ewarn "OpenRC cannot be built statically with PAM"
-		elog "not building PAM support"
-	fi
-
-	MAKE_ARGS="${MAKE_ARGS} CC=$(tc-getCC)"
 }
 
 src_compile() {
+	# catch people running `ebuild` w/out setup
+	if [[ -z ${MAKE_ARGS} ]] ; then
+		die "Your MAKE_ARGS is empty ... are you running 'ebuild' but forgot to execute 'setup' ?"
+	fi
+
+	if [[ ${PV} == "9999" ]] ; then
+		local ver="git-$(git --git-dir=${EGIT_STORE_DIR}/${EGIT_PROJECT} rev-parse --verify ${EGIT_BRANCH} | cut -c1-8)"
+		sed -i "/^VERSION[[:space:]]*=/s:=.*:=${ver}:" Makefile
+	fi
+
+	tc-export CC AR RANLIB
+	echo emake ${MAKE_ARGS}
 	emake ${MAKE_ARGS} || die "emake ${MAKE_ARGS} failed"
 }
 
 src_install() {
 	emake ${MAKE_ARGS} DESTDIR="${D}" install || die "make install failed"
+	gen_usr_ldscript libeinfo.so
+	gen_usr_ldscript librc.so
 
-	# Portage likes to remove our mount points for the state dir
 	keepdir /"${LIBDIR}"/rc/init.d
 	keepdir /"${LIBDIR}"/rc/tmp
 
@@ -81,46 +93,51 @@ src_install() {
 	# Setup unicode defaults for silly unicode users
 	use unicode && sed -i -e '/^unicode=/s:NO:YES:' "${D}"/etc/rc.conf
 
-	# Fix portage bitching
-	gen_usr_ldscript libeinfo.so
-	gen_usr_ldscript librc.so
+	# Cater to the norm
+	(use x86 || use amd64) && sed -i -e '/^windowkeys=/s:NO:YES:' "${D}"/etc/conf.d/keymaps
 }
 
 pkg_preinst() {
-	# upgrade timezone file
-	if [ ! -e "${ROOT}"etc/timezone ] ; then
-		(
-		source "${ROOT}"etc/conf.d/clock
-		[[ -n ${TIMEZONE} ]] && echo "${TIMEZONE}" > "${ROOT}"etc/timezone
-		)
-	fi
+	# default net script is just comments, so no point in biting people
+	# in the ass by accident
+	[[ -e ${ROOT}/etc/conf.d/net ]] && rm -f "${D}"/etc/conf.d/net
 
 	# /etc/conf.d/clock moved to /etc/conf.d/hwclock
-	mv "${ROOT}etc/conf.d/clock" "${ROOT}etc/conf.d/hwclock"
+	if [[ -e ${ROOT}/etc/conf.d/clock ]] ; then
+		mv "${ROOT}"/etc/conf.d/clock "${ROOT}"/etc/conf.d/hwclock
+	fi
 
 	# /etc/conf.d/rc is no longer used for configuration
-	rm "${ROOT}etc/conf.d/rc"
+	if [[ -e ${ROOT}/etc/conf.d/rc ]] ; then
+		elog "/etc/conf.d/rc is no longer used for configuration."
+		elog "Please migrate your settings and delete it."
+	fi
 
 	# skip remaining migration if we already have openrc installed
 	has_version sys-apps/openrc && return 0
 
-	# baselayout bootmisc init script has been split out in OpenRC
-	# so handle upgraders
-	local x= xtra=
-	use kernel_linux && xtra="${xtra} mtab procfs sysctl"
-	use kernel_FreeBSD && xtra="${xtra} dumpon savecore"
-	for x in fsck root swap ${xtra}; do
-		[ -e "${ROOT}"etc/runlevels/boot/"${x}" ] && continue
-		ln -snf /etc/init.d/"${x}" "${ROOT}"etc/runlevels/boot/"${x}"
-		elog "Auto-adding ${x} service to boot runlevel"
+	# upgrade timezone file
+	if [[ ! -e ${ROOT}/etc/timezone ]] ; then
+		(
+		source "${ROOT}"/etc/conf.d/clock
+		[[ -n ${TIMEZONE} ]] && echo "${TIMEZONE}" > "${ROOT}"/etc/timezone
+		)
+	fi
+
+	# baselayout boot init scripts have been split out
+	local x
+	for x in $(cd "${D}"/usr/share/${PN}/runlevels/boot || exit; echo *) ; do
+		[[ -e ${ROOT}/etc/runlevels/boot/${x} ]] && continue
+		elog "Auto-adding '${x}' service to your boot runlevel"
+		ln -snf /etc/init.d/${x} "${ROOT}"/etc/runlevels/boot/${x}
 	done
 
 	# Upgrade out state for baselayout-1 users
-	if [ ! -e "${ROOT}${LIBDIR}"/rc/init.d/started ]; then
+	if [[ ! -e ${ROOT}${LIBDIR}/rc/init.d/started ]] ; then
 		(
-		[ -e "${ROOT}"etc/conf.d/rc ] && . "${ROOT}etc/conf.d/rc"
+		[[ -e ${ROOT}/etc/conf.d/rc ]] && source "${ROOT}"/etc/conf.d/rc
 		svcdir=${svcdir:-/var/lib/init.d}
-		if [ ! -d "${ROOT}${svcdir}/started" ]; then
+		if [[ ! -d ${ROOT}${svcdir}/started ]] ; then
 			ewarn "No state found, and no state exists"
 			elog "You should reboot this host"
 		else
@@ -173,17 +190,17 @@ pkg_preinst() {
 
 pkg_postinst() {
 	# Remove old baselayout links
-	rm -f "${ROOT}"etc/runlevels/boot/{check{fs,root},rmnologin}
+	rm -f "${ROOT}"/etc/runlevels/boot/{check{fs,root},rmnologin}
 
 	# Make our runlevels if they don't exist
-	if [ ! -e "${ROOT}"etc/runlevels ]; then
+	if [[ ! -e ${ROOT}/etc/runlevels ]] ; then
 		einfo "Copying across default runlevels"
-		cp -RPp "${ROOT}"usr/share/${PN}/runlevels "${ROOT}"/etc
+		cp -RPp "${ROOT}"/usr/share/${PN}/runlevels "${ROOT}"/etc
 	fi
 
-	if [ -d "${ROOT}"etc/modules.autoload.d ]; then
-		ewarn "${ROOT}etc/modules.autoload.d exists"
-		ewarn "This has been deprecated in favour of /etc/conf.d/modules"
+	if [[ -d ${ROOT}/etc/modules.autoload.d ]] ; then
+		ewarn "/etc/modules.autoload.d is no longer used.  Please convert"
+		ewarn "your files to /etc/conf.d/modules and delete the directory."
 	fi
 
 	elog "You should now update all files in /etc, using etc-update"
