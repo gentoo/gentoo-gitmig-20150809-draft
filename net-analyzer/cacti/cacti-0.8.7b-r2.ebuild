@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7b-r2.ebuild,v 1.1 2008/03/07 16:44:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7b-r2.ebuild,v 1.2 2008/03/26 20:51:49 corsair Exp $
 
 inherit eutils webapp depend.apache depend.php
 
@@ -22,7 +22,7 @@ if [ "${HAS_PATCHES}" == "1" ] ; then
 fi
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ppc64 ~sparc ~x86"
 IUSE="snmp"
 
 DEPEND=""
