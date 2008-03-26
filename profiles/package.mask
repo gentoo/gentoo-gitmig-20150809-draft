@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8432 2008/03/26 21:47:43 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8433 2008/03/26 22:12:55 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -190,6 +190,7 @@ gnome-base/gnome-settings-daemon
 gnome-base/gvfs
 >=gnome-base/nautilus-2.22
 >=gnome-extra/nautilus-cd-burner-2.22
+>=gnome-extra/nautilus-open-terminal-0.9
 >=gnome-base/gdm-2.20.4
 >=gnome-base/gnome-light-2.22
 >=gnome-base/gnome-2.22
