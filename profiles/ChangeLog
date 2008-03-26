@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1252 2008/03/26 16:56:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1253 2008/03/26 20:34:53 graaff Exp $
+
+  26 Mar 2008; Hans de Graaff <graaff@gentoo.org> use.local.desc:
+  Add mh USE flag for mail-notification
 
   26 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   initial ebuild app-misc/iguanaIR masked for testing
