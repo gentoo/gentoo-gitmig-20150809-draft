@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.38 2008/03/15 11:30:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.39 2008/03/26 18:26:28 armin76 Exp $
+
+  26 Mar 2008; Raúl Porcel <armin76@gentoo.org> qca-2.0.0-r2.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #213868
 
   15 Mar 2008; Markus Rothe <corsair@gentoo.org> qca-2.0.0-r2.ebuild:
   Added ~ppc64
