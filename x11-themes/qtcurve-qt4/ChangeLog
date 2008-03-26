@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.14 2008/03/15 14:06:17 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.15 2008/03/26 23:41:20 yngwin Exp $
+
+*qtcurve-qt4-0.58.0 (26 Mar 2008)
+
+  26 Mar 2008; Ben de Groot <yngwin@gentoo.org> -qtcurve-qt4-0.55.3.ebuild,
+  -qtcurve-qt4-0.56.0.ebuild, -qtcurve-qt4-0.56.1.ebuild,
+  -qtcurve-qt4-0.56.2.ebuild, -qtcurve-qt4-0.56.3.ebuild,
+  -qtcurve-qt4-0.57.0.ebuild, +qtcurve-qt4-0.58.0.ebuild:
+  Removing old versions. Version bump.
 
 *qtcurve-qt4-0.57.1 (15 Mar 2008)
 
