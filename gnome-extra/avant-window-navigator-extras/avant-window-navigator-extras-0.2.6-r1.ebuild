@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.2.6.ebuild,v 1.1 2008/03/25 20:49:01 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.2.6-r1.ebuild,v 1.1 2008/03/26 01:22:58 wltjr Exp $
 
 inherit autotools eutils gnome2 python
 
@@ -15,9 +15,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gnome"
 
 DEPEND="dev-python/pyalsaaudio
-	gnome-base/gnome-menus
-	gnome-base/librsvg
-	gnome-base/libgtop
+	dev-python/feedparser
+	gnome? (
+		gnome-base/gnome-menus
+		gnome-base/librsvg
+		gnome-base/libgtop
+	)
 	gnome-extra/avant-window-navigator
 	x11-libs/libsexy
 	x11-libs/libnotify"
@@ -81,7 +84,7 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/awn/extras
+	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/awn/extras
 }
 
 pkg_postrm() {
