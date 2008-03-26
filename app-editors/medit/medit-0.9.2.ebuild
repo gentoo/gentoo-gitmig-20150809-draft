@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/medit/medit-0.9.2.ebuild,v 1.2 2008/01/20 16:20:22 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/medit/medit-0.9.2.ebuild,v 1.3 2008/03/26 15:54:24 armin76 Exp $
 
 inherit eutils python fdo-mime gnome2-utils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mooedit/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="fam nls python xml"
 
 RDEPEND="fam? ( virtual/fam )
