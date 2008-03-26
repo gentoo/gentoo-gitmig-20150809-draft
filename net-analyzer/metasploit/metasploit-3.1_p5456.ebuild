@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1_p5456.ebuild,v 1.2 2008/03/24 16:08:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1_p5456.ebuild,v 1.3 2008/03/26 10:32:49 pva Exp $
 
 MY_P=${PN/metasploit/framework}-${PV}
 
@@ -89,8 +89,8 @@ pkg_postinst() {
 		elog "/etc/portage/env/${CATEGORY}/${PN} file with ESVN_REVISION=<rev>"
 		elog "content. Then each time you run emerge ${PN} you'll have said"
 		elog "<rev> installed. For example, if you run"
-		elog " # mkdir /etc/portage/env/${CATEGORY}"
-		elog ' # echo "ESVN_REVISION=HEAD" >> /etc/portage/env/${CATEGORY}/${PN}'
+		elog " # mkdir -p /etc/portage/env/${CATEGORY}"
+		elog " # echo ESVN_REVISION=HEAD >> /etc/portage/env/${CATEGORY}/${PN}"
 		elog "each time you reemerge ${PN} it'll be updated to get all possible"
 		elog "updates for framework-${PV%_p*} branch."
 		elog "You can do similar things in paludis using /etc/paludis/bashrc."
