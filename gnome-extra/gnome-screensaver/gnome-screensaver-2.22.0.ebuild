@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.22.0.ebuild,v 1.1 2008/03/23 12:28:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.22.0.ebuild,v 1.2 2008/03/26 21:03:07 cardoe Exp $
 
 inherit gnome2
 
@@ -89,10 +89,12 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	ewarn "If you have xscreensaver installed, you probably want to disable it."
-	ewarn "To prevent a duplicate Screensaver entry in the menu, you need to"
-	ewarn "build xscreensaver with -gnome in the USE flags."
-	ewarn "echo \"x11-misc/xscreensaver -gnome\" >> /etc/portage/package.use"
+	if has_version x11-misc/xscreensaver ; then
+		ewarn "You have xscreensaver installed, you probably want to disable it."
+		ewarn "To prevent a duplicate Screensaver entry in the menu, you need to"
+		ewarn "build xscreensaver with -gnome in the USE flags."
+		ewarn "echo \"x11-misc/xscreensaver -gnome\" >> /etc/portage/package.use"
+	fi
 	echo
 	elog "Information for converting screensavers is located in "
 	elog "/usr/share/doc/${PF}/xss-conversion.txt.${PORTAGE_COMPRESS}"
