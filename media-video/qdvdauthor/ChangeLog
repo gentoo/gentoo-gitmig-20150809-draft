@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qdvdauthor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/ChangeLog,v 1.20 2008/03/17 22:16:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/ChangeLog,v 1.21 2008/03/26 22:29:43 sbriesen Exp $
+
+  26 Mar 2008; Stefan Briesenick <sbriesen@gentoo.org> Manifest:
+  fixed checksums + uploaded correct tarball to mirrors (solves bug
+  #214620).
 
   17 Mar 2008; Stefan Briesenick <sbriesen@gentoo.org>
   -qdvdauthor-0.1.4-r1.ebuild, -qdvdauthor-1.0.0_rc1.ebuild,
