@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.27 2008/03/18 18:09:04 zlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.28 2008/03/26 20:01:48 deathwing00 Exp $
+
+*kphotoalbum-3.1.1-r1 (26 Mar 2008)
+
+  26 Mar 2008; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +files/kphotoalbum-3.1.1-gcc-4.3.patch, +kphotoalbum-3.1.1-r1.ebuild:
+  Fixed SQLite message: now it is reported with eerror, as it terminates the
+  compilation, instead of elog. Fixed bug #214367: Thanks to Jan Kundrát
+  <jkt@gentoo.org> for the gcc-4.3 patch.
 
 *kphotoalbum-3.1.1 (18 Mar 2008)
 
