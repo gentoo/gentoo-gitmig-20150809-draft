@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1254 2008/03/26 22:12:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1255 2008/03/26 23:09:31 eva Exp $
+
+  26 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  adding rhythmbox-0.11.4 and an updated version of gst-plugins-meta to the
+  gnome-2.22 pmask
 
   26 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   add nautilus-open-terminal-0.9 to GNOME 2.22 pmask
