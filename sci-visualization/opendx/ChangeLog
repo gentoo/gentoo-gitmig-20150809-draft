@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/opendx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.9 2008/02/28 15:53:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.10 2008/03/26 13:17:07 markusle Exp $
+
+  26 Mar 2008; Markus Dittrich <markusle@gentoo.org> opendx-4.3.2-r1.ebuild,
+  opendx-4.4.4.ebuild:
+  Added check for imagemagick's hdri useflag which breaks compilation 
+  (see bug #214058).
 
   28 Feb 2008; Markus Dittrich <markusle@gentoo.org>
   +files/20-opendx-revdep, opendx-4.3.2-r1.ebuild, opendx-4.4.4.ebuild:

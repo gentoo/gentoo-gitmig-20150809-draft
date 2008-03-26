@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4.ebuild,v 1.2 2008/02/28 15:53:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4.ebuild,v 1.3 2008/03/26 13:17:07 markusle Exp $
 
 # Set SMP="no" to force disable of SMP compilation.
 # Set SMP="yes" to force enable of SMP compilation.
@@ -53,6 +53,14 @@ smp() {
 
 smp_check() {
 	linux_chkconfig_present SMP
+}
+
+pkg_setup() {
+	if use imagemagick; then
+		if built_with_use media-gfx/imagemagick hdri; then
+			die "Please re-emerge imagemagick with USE=\"-hdri\" or compilation will fail"
+		fi
+	fi
 }
 
 src_unpack() {
