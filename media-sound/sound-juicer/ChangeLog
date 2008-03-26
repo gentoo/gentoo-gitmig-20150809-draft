@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.132 2008/03/09 21:54:58 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.133 2008/03/26 23:34:26 eva Exp $
+
+*sound-juicer-2.22.0 (26 Mar 2008)
+
+  26 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +sound-juicer-2.22.0.ebuild:
+  New version for GNOME-2.22. Inhibit suspend when ripping, add some more
+  fields in the main UI, fix bugs.
 
   09 Mar 2008; Mart Raudsepp <leio@gentoo.org> -sound-juicer-2.16.4.ebuild,
   -sound-juicer-2.20.0.ebuild, -sound-juicer-2.20.1.ebuild:
