@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/9libs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/ChangeLog,v 1.13 2007/07/22 08:35:34 graaff Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/ChangeLog,v 1.14 2008/03/26 15:39:55 armin76 Exp $
+
+  26 Mar 2008; Raúl Porcel <armin76@gentoo.org> 9libs-1.0-r1.ebuild:
+  sparc/x86 stable
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> 9libs-1.0.ebuild,
   9libs-1.0-r1.ebuild:
