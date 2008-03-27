@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3454 2008/03/27 00:12:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3455 2008/03/27 16:50:48 nyhm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -341,8 +341,9 @@ dev-db/sqlite:nothreadsafe - turn off thread safe operation of sqlite
 dev-db/sqlite:soundex - Enable the soundex function to compute soundex encodings of strings
 dev-db/sqlite:threadsafe - Enable thread safe operation of sqlite
 dev-embedded/ponyprog:epiphany - Enable epiphany support
-dev-games/cegui:devil - image loading support with DevIL
-dev-games/cegui:xerces-c - use external Xerces-C++ XML parser instead of tiny embedded XML parser
+dev-games/cegui:devil - Enable image loading via DevIL
+dev-games/cegui:irrlicht - Enable the Irrlicht renderer
+dev-games/cegui:xerces-c - Enable the Xerces-C++ XML parser module
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/crystalspace:cal3d - include support for skeleton animation
 dev-games/crystalspace:cegui - include support for Crazy Eddie GUI
