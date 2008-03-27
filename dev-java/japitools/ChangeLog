@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/japitools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/ChangeLog,v 1.6 2007/05/07 17:05:14 caster Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/ChangeLog,v 1.7 2008/03/27 18:09:16 opfer Exp $
+
+  27 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
+  japitools-0.9.7.ebuild:
+  stable x86, bug 214769
 
   07 May 2007; Vlastimil Babka <caster@gentoo.org> japitools-0.9.7.ebuild:
   Migrate to split-ant, tweak style.
