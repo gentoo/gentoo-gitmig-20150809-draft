@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8439 2008/03/27 12:10:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8440 2008/03/27 23:23:28 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -178,6 +178,7 @@ dev-libs/libgweather
 >=gnome-base/gnome-applets-2.22
 >=gnome-base/gnome-volume-manager-2.22
 >=mail-client/evolution-2.22
+>=gnome-extra/evolution-exchange-2.22
 >=gnome-extra/gnome-screensaver-2.22
 >=gnome-extra/gnome-power-manager-2.22
 dev-libs/totem-pl-parser

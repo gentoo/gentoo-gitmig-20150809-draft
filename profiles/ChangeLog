@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1262 2008/03/27 23:06:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1263 2008/03/27 23:23:28 eva Exp $
+
+  27 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  add gnome-extra/evolution-exchange to GNOME 2.22 mask
 
   27 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
   add keyring use flag for app-text/evince and fix description where needed.
