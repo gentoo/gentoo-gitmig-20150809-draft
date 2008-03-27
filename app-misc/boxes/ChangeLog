@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/boxes
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.18 2008/03/27 00:51:53 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.19 2008/03/27 15:26:28 corsair Exp $
+
+  27 Mar 2008; Markus Rothe <corsair@gentoo.org> boxes-1.1.ebuild:
+  Stable on ppc64; bug #214931
 
   27 Mar 2008; Kenneth Prugh <ken69267@gentoo.org> boxes-1.1.ebuild:
   amd64 stable, bug #214931
