@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.6.0.ebuild,v 1.1 2008/02/05 18:28:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.6.0.ebuild,v 1.2 2008/03/27 19:12:30 bicatali Exp $
 
 inherit autotools eutils
 
@@ -18,12 +18,14 @@ IUSE="doc metis minimal supernodal"
 DEPEND="supernodal? ( virtual/lapack )
 	sci-libs/amd
 	sci-libs/colamd
-	metis? ( sci-libs/camd sci-libs/ccolamd sci-libs/metis )"
+	metis? ( sci-libs/camd
+			 sci-libs/ccolamd
+			 || ( sci-libs/parmetis sci-libs/metis ) )"
 
 S="${WORKDIR}/${MY_PN}"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-autotools.patch
 
