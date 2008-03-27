@@ -1,9 +1,10 @@
 # ChangeLog for x11-misc/fireflies
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.17 2007/06/16 04:29:48 drac Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.18 2008/03/27 10:25:55 drac Exp $
 
-  16 Jun 2007; Samuli Suominen <drac@gentoo.org> fireflies-2.07.ebuild:
-  Quoting.
+  27 Mar 2008; Samuli Suominen <drac@gentoo.org> fireflies-2.07.ebuild:
+  Install ELF 64-bit LSB executable to lib64 instead of lib and don't
+  pre-strip it.
 
   09 Mar 2007; Samuli Suominen <drac@gentoo.org> fireflies-2.07.ebuild:
   Stop using virtual/x11. Start using emake. Fix quoting and sort deps.

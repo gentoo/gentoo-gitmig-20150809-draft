@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.07.ebuild,v 1.4 2007/06/16 04:29:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.07.ebuild,v 1.5 2008/03/27 10:25:55 drac Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Fireflies screensaver: Wicked cool eye candy"
 HOMEPAGE="http://somewhere.fscked.org/fireflies/"
@@ -11,6 +11,7 @@ SRC_URI="http://somewhere.fscked.org/fireflies/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
+IUSE=""
 
 RDEPEND="media-libs/mesa
 	media-libs/libsdl
@@ -22,15 +23,12 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-2.06-configure.patch
 	epatch "${FILESDIR}"/${PN}-2.06-Make.include.in.patch
+	sed -i -e 's:strip:true:' src/Makefile
 }
 
 src_compile() {
-	local myconf
-
-	myconf="--with-bindir=/usr/lib/misc/xscreensaver
-		--with-confdir=/usr/share/xscreensaver/config"
-
-	econf ${myconf}
+	econf --with-confdir=/usr/share/xscreensaver/config \
+		--with-bindir=/usr/$(get_libdir)/misc/xscreensaver
 	emake || die "emake failed."
 }
 
