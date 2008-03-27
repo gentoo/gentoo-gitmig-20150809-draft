@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kprof
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/ChangeLog,v 1.16 2007/02/05 15:14:07 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/ChangeLog,v 1.17 2008/03/27 23:55:09 philantrop Exp $
+
+  27 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kprof-1.4.3-gcc4.3.patch, kprof-1.4.3-r1.ebuild:
+  Added a patch for gcc 4.3 compatibility as kindly provided by impulze on
+  bug 214559.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/kprof-1.4.3-configure-arts.diff, -files/kprof-1.4.3-gcc41.patch,
