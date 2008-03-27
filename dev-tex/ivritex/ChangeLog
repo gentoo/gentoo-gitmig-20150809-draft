@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ivritex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.21 2008/03/25 01:29:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.22 2008/03/27 18:42:30 nixnut Exp $
+
+  27 Mar 2008; nixnut <nixnut@gentoo.org> ivritex-1.1.2.ebuild:
+  Stable on ppc wrt bug 214456
 
   25 Mar 2008; Brent Baude <ranger@gentoo.org> ivritex-1.1.2.ebuild:
   Marking ivritex-1.1.2 ppc64 for bug 214456
