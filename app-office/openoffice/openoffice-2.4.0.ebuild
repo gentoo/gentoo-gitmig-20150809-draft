@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0_rc5.ebuild,v 1.5 2008/03/26 22:37:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.1 2008/03/27 08:07:23 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -9,19 +9,18 @@ inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 
 
 IUSE="binfilter cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono odk pam seamonkey webdav xulrunner"
 
-MY_PV="2.4.0.3.1"
-MY_PV2="2.4.0rc5"
+MY_PV="2.4.0.3.2"
 PATCHLEVEL="OOH680"
-SRC="OOo_${MY_PV2}_src"
+SRC="OOo_${PV}_src"
 S="${WORKDIR}/ooo"
 S_OLD="${WORKDIR}/ooo-build-${MY_PV}"
 CONFFILE="${S}/distro-configs/Gentoo.conf.in"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
 
-SRC_URI="mirror://openoffice/contrib/rc/${MY_PV2}/${SRC}_core.tar.bz2
-	binfilter? ( mirror://openoffice/contrib/rc/${MY_PV2}/${SRC}_binfilter.tar.bz2 )
+SRC_URI="mirror://openoffice/stable/${PV}/${SRC}_core.tar.bz2
+	binfilter? ( mirror://openoffice/stable/${PV}/${SRC}_binfilter.tar.bz2 )
 	http://download.go-oo.org/${PATCHLEVEL}/ooo-build-${MY_PV}.tar.gz
-	odk? ( mirror://openoffice/contrib/rc/${MY_PV2}/${SRC}_sdk.tar.bz2
+	odk? ( mirror://openoffice/stable/${PV}/${SRC}_sdk.tar.bz2
 		java? ( http://tools.openoffice.org/unowinreg_prebuild/680/unowinreg.dll ) )
 	http://download.go-oo.org/SRC680/extras-2.tar.bz2
 	http://download.go-oo.org/SRC680/biblio.tar.bz2
@@ -39,7 +38,7 @@ for X in ${LANGS} ; do
 done
 
 for Y in ${LANGS1} ; do
-	SRC_URI="${SRC_URI} linguas_${Y}? ( mirror://openoffice/contrib/rc/${PV}/${SRC}_l10n.tar.bz2 )"
+	SRC_URI="${SRC_URI} linguas_${Y}? ( mirror://openoffice/stable/${PV}/${SRC}_l10n.tar.bz2 )"
 done
 
 HOMEPAGE="http://go-oo.org"
@@ -129,7 +128,7 @@ DEPEND="${COMMON_DEPEND}
 	pam? ( sys-libs/pam )
 	!dev-util/dmake
 	>=dev-lang/python-2.3.4
-	java? ( || ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
+	java? ( || ( =virtual/jdk-1.6* =virtual/jdk-1.5* =virtual/jdk-1.4* )
 		dev-java/ant-core )
 	ldap? ( net-nds/openldap )"
 
@@ -312,7 +311,7 @@ src_compile() {
 		--with-num-cpus="${JOBS}" \
 		--without-binsuffix \
 		--with-installed-ooo-dirname="openoffice" \
-		--with-tag=OOH680_m11 \
+		--with-tag=OOH680_m12 \
 		${GTKFLAG} \
 		`use_enable mono` \
 		`use_enable kde` \
