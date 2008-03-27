@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6_pre14.ebuild,v 1.1 2008/03/13 01:19:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6_pre16.ebuild,v 1.1 2008/03/27 05:12:30 wolf31o2 Exp $
 
 # catalyst-9999         -> latest SVN
 # catalyst-9999.REV     -> use SVN REV
