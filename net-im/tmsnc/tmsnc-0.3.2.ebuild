@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tmsnc/tmsnc-0.3.2.ebuild,v 1.3 2007/05/06 12:07:28 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tmsnc/tmsnc-0.3.2.ebuild,v 1.4 2008/03/27 13:08:49 coldwind Exp $
 
 DESCRIPTION="TMSNC is a textbased MSN client written in C."
 HOMEPAGE="http://tmsnc.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/tmsnc/${P}.tar.gz"
 
 LICENSE="IRPDL"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~x86"
 IUSE="ssl talkfilters"
 
 DEPEND="virtual/libc
@@ -26,7 +26,7 @@ src_compile() {
 	emake || die "Make failed"
 }
 src_install() {
-	make DESTDIR=${D} install || die "Make install failed"
+	make DESTDIR="${D}" install || die "Make install failed"
 	dodoc AUTHORS ChangeLog README NEWS
 }
 pkg_postinst() {

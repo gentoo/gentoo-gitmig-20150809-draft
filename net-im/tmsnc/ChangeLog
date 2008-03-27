@@ -1,6 +1,11 @@
 # ChangeLog for net-im/tmsnc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tmsnc/ChangeLog,v 1.10 2007/12/25 14:29:03 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/tmsnc/ChangeLog,v 1.11 2008/03/27 13:08:49 coldwind Exp $
+
+  27 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> metadata.xml,
+  -tmsnc-0.2.5.ebuild, -tmsnc-0.3.0.ebuild, -tmsnc-0.3.1.ebuild,
+  tmsnc-0.3.2.ebuild:
+  amd64 stable, remove old, assign to net-im herd.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing metalgod from metadata.xml as per #99350. Assigning to
