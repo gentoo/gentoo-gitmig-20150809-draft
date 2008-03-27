@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.1 2008/03/27 08:07:23 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.2 2008/03/27 09:14:09 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -70,8 +70,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 		>=dev-db/hsqldb-1.8.0.9
 		=dev-java/rhino-1.5* )
 	mono? ( >=dev-lang/mono-1.2.3.1 )
-	firefox? ( =www-client/mozilla-firefox-2*
-		>=dev-libs/nspr-4.6.6
+	firefox? ( >=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 )
 	!firefox? ( seamonkey? ( =www-client/seamonkey-1*
 		>=dev-libs/nspr-4.6.6
@@ -103,6 +102,8 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
 
 RDEPEND="java? ( >=virtual/jre-1.4 )
+	firefox? ( || ( =www-client/mozilla-firefox-2*
+		=www-client/mozilla-firefox-bin-2* ) )
 	${COMMON_DEPEND}"
 
 DEPEND="${COMMON_DEPEND}
@@ -121,6 +122,7 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.33.1
 	dev-libs/libxslt
 	>=dev-libs/libxml2-2.0
+	firefox? ( =www-client/mozilla-firefox-2* )
 	>=dev-util/gperf-3
 	>=net-misc/curl-7.9.8
 	sys-libs/zlib
