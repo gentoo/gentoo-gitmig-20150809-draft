@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/setmixer/setmixer-19941227_rc7.ebuild,v 1.11 2006/03/07 15:48:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/setmixer/setmixer-19941227_rc7.ebuild,v 1.12 2008/03/27 16:40:43 armin76 Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs
 MY_PV="27DEC94"
 DEB_REV="7"
 DESCRIPTION="command mode mixer"
-HOMEPAGE="http://packages.debian.org/testing/sound/setmixer.html"
+HOMEPAGE="http://packages.debian.org/testing/sound/setmixer"
 SRC_URI="http://http.us.debian.org/debian/pool/main/s/setmixer/setmixer_${MY_PV}.orig.tar.gz
 	http://http.us.debian.org/debian/pool/main/s/setmixer/setmixer_${MY_PV}-${DEB_REV}.diff.gz"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/setmixer/setmixer-19941227_p1.ebuild,v 1.1 2007/07/27 20:23:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/setmixer/setmixer-19941227_p1.ebuild,v 1.2 2008/03/27 16:40:43 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ MY_PV="27DEC94ds1"
 DEB_REV="1"
 
 DESCRIPTION="A commandline mixer"
-HOMEPAGE="http://packages.debian.org/unstable/sound/setmixer.html"
+HOMEPAGE="http://packages.debian.org/unstable/sound/setmixer"
 SRC_URI="mirror://debian/pool/main/s/${PN}/${PN}_${MY_PV}.orig.tar.gz
 	mirror://debian/pool/main/s/${PN}/${PN}_${MY_PV}-${DEB_REV}.diff.gz"
 
