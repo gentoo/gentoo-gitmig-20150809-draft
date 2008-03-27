@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.3.1.ebuild,v 1.3 2008/03/27 16:16:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.3.1.ebuild,v 1.4 2008/03/27 18:25:05 fmccor Exp $
 
 DESCRIPTION="a realtime MPEG 1.0/2.0/2.5 audio player for layers 1, 2 and 3."
 HOMEPAGE="http://www.mpg123.org"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ppc64 sparc ~x86"
 IUSE="3dnow 3dnowext alsa altivec arts esd jack mmx nas oss portaudio pulseaudio sdl sse"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
