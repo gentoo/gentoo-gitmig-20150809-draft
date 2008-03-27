@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.123 2008/03/27 19:22:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.124 2008/03/27 20:25:29 caster Exp $
+
+*sun-jre-bin-1.6.0.05-r1 (27 Mar 2008)
+
+  27 Mar 2008; Vlastimil Babka <caster@gentoo.org> files/construct-1.6.sh,
+  files/construct.sh, -sun-jre-bin-1.4.2.16.ebuild,
+  -sun-jre-bin-1.5.0.13.ebuild, -sun-jre-bin-1.5.0.14.ebuild,
+  sun-jre-bin-1.5.0.15.ebuild, -sun-jre-bin-1.6.0.03.ebuild,
+  -sun-jre-bin-1.6.0.04.ebuild, +sun-jre-bin-1.6.0.05-r1.ebuild:
+  Remove vulnerable versions. Revbump to create Class Data Sharing archive
+  also for server VM in 1.6, bug #207282.
 
   27 Mar 2008; Markus Meier <maekke@gentoo.org> sun-jre-bin-1.5.0.15.ebuild,
   sun-jre-bin-1.6.0.05.ebuild:

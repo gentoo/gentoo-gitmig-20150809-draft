@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.04.ebuild,v 1.1 2008/01/18 15:05:13 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.05-r1.ebuild,v 1.1 2008/03/27 20:25:29 caster Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -47,10 +47,17 @@ QA_TEXTRELS_x86="opt/${P}/lib/i386/client/libjvm.so
 src_unpack() {
 	mkdir bundled-jdk
 	cd bundled-jdk
-	sh ${DISTDIR}/${A} --accept-license --unpack || die "Failed to unpack"
+	sh "${DISTDIR}"/${A} --accept-license --unpack || die "Failed to unpack"
 
 	cd ..
 	bash "${FILESDIR}/construct-1.6.sh"  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
+
+	# see bug #207282
+	if use x86; then
+		einfo "Creating the Class Data Sharing archives"
+		"${S}"/bin/java -client -Xshare:dump || die
+		"${S}"/bin/java -server -Xshare:dump || die
+	fi
 }
 
 src_install() {

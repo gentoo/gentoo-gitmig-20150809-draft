@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.15.ebuild,v 1.3 2008/03/27 19:22:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.15.ebuild,v 1.4 2008/03/27 20:25:29 caster Exp $
 
 inherit pax-utils versionator eutils java-vm-2
 
@@ -46,6 +46,12 @@ src_unpack() {
 
 	cd ..
 	bash "${FILESDIR}/construct.sh"  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
+
+	# see bug #207282
+	if use x86; then
+		einfo "Creating the Class Data Sharing archives"
+		"${S}"/bin/java -client -Xshare:dump || die
+	fi
 }
 
 src_install() {
