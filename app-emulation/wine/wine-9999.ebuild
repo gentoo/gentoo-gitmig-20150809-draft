@@ -1,19 +1,28 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.23 2008/03/27 18:22:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.24 2008/03/27 18:30:15 vapier Exp $
 
-EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
+EAPI="1"
 
-inherit eutils flag-o-matic multilib git
+inherit eutils flag-o-matic multilib
+
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
+	inherit git
+	SRC_URI=""
+else
+	SRC_URI="mirror://sourceforge/${PN}/wine-${PV}.tar.bz2"
+fi
 
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
-SRC_URI=""
+SRC_URI="${SRC_URI}
+	gecko? ( mirror://sourceforge/wine/wine_gecko-0.1.0.cab )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa arts cups dbus esd hal jack jpeg lcms ldap nas ncurses opengl oss scanner xml X"
+IUSE="alsa cups dbus esd +gecko hal jack jpeg lcms ldap nas ncurses +opengl oss samba scanner xml +X"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -23,13 +32,13 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	dbus? ( sys-apps/dbus )
 	hal? ( sys-apps/hal )
 	X? (
+		x11-libs/libXcursor
 		x11-libs/libXrandr
 		x11-libs/libXi
 		x11-libs/libXmu
 		x11-libs/libXxf86vm
 		x11-apps/xmessage
 	)
-	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
 	esd? ( media-sound/esound )
 	nas? ( media-libs/nas )
@@ -38,6 +47,7 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	jpeg? ( media-libs/jpeg )
 	ldap? ( net-nds/openldap )
 	lcms? ( media-libs/lcms )
+	samba? ( >=net-fs/samba-3.0.25 )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	scanner? ( media-gfx/sane-backends )
 	amd64? (
@@ -55,10 +65,20 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
-S=${WORKDIR}/${EGIT_PROJECT}
+pkg_setup() {
+	use alsa || return 0
+	if ! built_with_use --missing true media-libs/alsa-lib midi ; then
+		eerror "You must build media-libs/alsa-lib with USE=midi"
+		die "please re-emerge media-libs/alsa-lib with USE=midi"
+	fi
+}
 
 src_unpack() {
-	git_src_unpack
+	if [[ ${PV} == "9999" ]] ; then
+		git_src_unpack
+	else
+		unpack wine-${PV}.tar.bz2
+	fi
 	cd "${S}"
 
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
@@ -80,7 +100,6 @@ config_cache() {
 
 src_compile() {
 	export LDCONFIG=/bin/true
-	use arts    || export ac_cv_path_ARTSCCONFIG=""
 	use esd     || export ac_cv_path_ESDCONFIG=""
 	use scanner || export ac_cv_path_sane_devel="no"
 	config_cache jack jack/jack.h
@@ -112,8 +131,12 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc ANNOUNCE AUTHORS ChangeLog DEVELOPERS-HINTS README
+	if use gecko ; then
+		insinto /usr/share/wine/gecko
+		doins "${DISTDIR}"/wine_gecko-*.cab || die
+	fi
 }
 
 pkg_postinst() {

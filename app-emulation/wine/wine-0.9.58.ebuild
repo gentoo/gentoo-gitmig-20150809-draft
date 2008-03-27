@@ -1,14 +1,22 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.58.ebuild,v 1.2 2008/03/27 18:22:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.58.ebuild,v 1.3 2008/03/27 18:30:15 vapier Exp $
 
 EAPI="1"
 
 inherit eutils flag-o-matic multilib
 
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
+	inherit git
+	SRC_URI=""
+else
+	SRC_URI="mirror://sourceforge/${PN}/wine-${PV}.tar.bz2"
+fi
+
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
-SRC_URI="mirror://sourceforge/${PN}/wine-${PV}.tar.bz2
+SRC_URI="${SRC_URI}
 	gecko? ( mirror://sourceforge/wine/wine_gecko-0.1.0.cab )"
 
 LICENSE="LGPL-2.1"
@@ -66,7 +74,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack wine-${PV}.tar.bz2
+	if [[ ${PV} == "9999" ]] ; then
+		git_src_unpack
+	else
+		unpack wine-${PV}.tar.bz2
+	fi
 	cd "${S}"
 
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
@@ -120,7 +132,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc ANNOUNCE AUTHORS ChangeLog README
+	dodoc ANNOUNCE AUTHORS ChangeLog DEVELOPERS-HINTS README
 	if use gecko ; then
 		insinto /usr/share/wine/gecko
 		doins "${DISTDIR}"/wine_gecko-*.cab || die
