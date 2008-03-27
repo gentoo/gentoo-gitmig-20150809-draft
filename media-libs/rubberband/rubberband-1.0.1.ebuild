@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/rubberband-1.0.1.ebuild,v 1.3 2008/02/28 09:28:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/rubberband-1.0.1.ebuild,v 1.4 2008/03/27 11:19:28 drac Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.breakfastquay.com/rubberband/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/vamp-plugin-sdk
