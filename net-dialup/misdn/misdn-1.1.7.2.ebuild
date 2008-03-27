@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.7.2.ebuild,v 1.3 2008/02/12 16:30:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.7.2.ebuild,v 1.4 2008/03/27 17:36:28 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -173,7 +173,7 @@ src_install() {
 	echo 'KERNEL=="obj-*", NAME="mISDN", GROUP="uucp", MODE="0660"' \
 		> "${D}etc/udev/rules.d/53-${PN}.rules"
 
-	insinto /etc/modules.d
+	insinto /etc/modprobe.d
 	newins "${MY_S}/mISDN.modprobe.d" ${PN}
 	dosbin "${MY_S}/misdn-init"
 	dodoc "${MY_S}/README.misdn-init"

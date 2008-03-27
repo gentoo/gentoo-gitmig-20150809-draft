@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.7.ebuild,v 1.1 2007/11/12 19:14:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.7.ebuild,v 1.2 2008/03/27 17:36:28 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -151,7 +151,7 @@ src_install() {
 	echo 'KERNEL=="obj-*", NAME="mISDN", GROUP="dialout", MODE="0660"' \
 		> "${D}/etc/udev/rules.d/53-${PN}.rules"
 
-	insinto /etc/modules.d
+	insinto /etc/modprobe.d
 	newins "${WORKDIR}/${MY_P}/"mISDN.modprobe.d ${PN}
 
 	sed -i -e "s:USER=.*:USER=root:" \

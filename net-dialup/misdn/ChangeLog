@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/misdn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.27 2008/02/12 08:13:04 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.28 2008/03/27 17:36:28 genstef Exp $
+
+  27 Mar 2008; Stefan Schweizer <genstef@gentoo.org> misdn-1.1.7.ebuild,
+  misdn-1.1.7.2.ebuild:
+  use modprobe.d instead of modules.d, bug 214023
 
 *misdn-1.1.7.2 (12 Feb 2008)
 
