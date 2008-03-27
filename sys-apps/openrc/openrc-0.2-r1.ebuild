@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2.ebuild,v 1.2 2008/03/27 12:18:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2-r1.ebuild,v 1.1 2008/03/27 14:29:36 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -46,7 +46,7 @@ pkg_setup() {
 		MAKE_ARGS="${MAKE_ARGS} OS=Linux"
 		brand="Linux"
 	elif use kernel_FreeBSD ; then
-		MAKE_ARGS="${MAKE_ARGS} OS=FreeBSD SUBOS=BSD"
+		MAKE_ARGS="${MAKE_ARGS} OS=FreeBSD"
 		brand="FreeBSD"
 	fi
 	export BRANDING="Gentoo ${brand}"
@@ -60,6 +60,13 @@ pkg_setup() {
 		ewarn "OpenRC cannot be built statically with PAM support,"
 		ewarn "so PAM support has been disabled."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-0.2-freebsd-install-rc.patch
 }
 
 src_compile() {

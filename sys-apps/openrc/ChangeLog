@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.5 2008/03/27 12:18:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.6 2008/03/27 14:29:36 cardoe Exp $
+
+*openrc-0.2-r1 (27 Mar 2008)
+
+  27 Mar 2008; Doug Goldstein <cardoe@gentoo.org>
+  +files/openrc-0.2-freebsd-install-rc.patch, -openrc-0.2.ebuild,
+  +openrc-0.2-r1.ebuild:
+  install rc & rc.shutdown for Gentoo/FreeBSD users
 
   27 Mar 2008; Mike Frysinger <vapier@gentoo.org> openrc-0.2.ebuild:
   Add x86/arm love #214957 by Shvetsov Alexey.

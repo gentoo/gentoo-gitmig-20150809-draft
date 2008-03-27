@@ -1,0 +1,26 @@
+From: Roy Marples <roy@uberlaptop.marples.name>
+Date: Thu, 27 Mar 2008 09:33:20 +0000 (+0000)
+Subject: Fix install of rc and rc.shutdown on the BSD's.
+X-Git-Url: http://git.overlays.gentoo.org/gitweb/?p=proj%2Fopenrc.git;a=commitdiff_plain;h=a15c9aa1faaa9c387e80c1864de8c57710e28530
+
+Fix install of rc and rc.shutdown on the BSD's.
+---
+
+diff --git a/etc/Makefile.FreeBSD b/etc/Makefile.FreeBSD
+index 4b6d75f..6de7451 100644
+--- a/etc/Makefile.FreeBSD
++++ b/etc/Makefile.FreeBSD
+@@ -1,4 +1,4 @@
+ SED_EXTRA=	-e 's:@TERM@:cons25:g'
+ SRCS+=		rc.conf.in rc.in rc.shutdown.in
+ CONF+=		devd.conf
+-BIN+=		rc.devd
++BIN+=		rc rc.shutdown rc.devd
+diff --git a/etc/Makefile.NetBSD b/etc/Makefile.NetBSD
+index 5b56294..0e85dd4 100644
+--- a/etc/Makefile.NetBSD
++++ b/etc/Makefile.NetBSD
+@@ -1,2 +1,3 @@
+ SED_EXTRA=	-e 's:@TERM@:wsvt25:g'
+ SRCS+=		rc.conf.in rc.in rc.shutdown.in
++BIN+=		rc rc.shutdown
