@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.3.3.8.ebuild,v 1.3 2007/10/22 03:57:07 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.3.3.8-r2.ebuild,v 1.1 2008/03/27 21:57:33 wltjr Exp $
 
 inherit eutils
 
@@ -61,6 +61,7 @@ src_unpack() {
 		-e 's|Daemon\*\*'\'',0,checkbox,0|Daemon\*\*'\'',0,checkbox,1|' \
 		-e 's|UID\*\*'\'',20,textinput,'\'''\''|UID\*\*'\'',20,textinput,'\''assp'\''|' \
 		-e 's|GID\*\*'\'',20,textinput,'\'''\''|GID\*\*'\'',20,textinput,'\''assp'\''|' \
+		-e 's|popFileEditor'\('\\'\''pb/pbdb\.\([^\.]*\)\.db\\'\'',|popFileEditor(\\'\''/var/lib/assp/pb/pbdb.\1.db\\'\'',|g' \
 		-e 's|$base/assp.cfg|/etc/assp/assp.cfg|g' \
 		-e 's|$base/$pidfile|/var/run/assp/asspd.pid|' \
 		-e 's|mkdir "$base/$logdir",0700 if $logdir;||' \
@@ -75,13 +76,14 @@ src_unpack() {
 		-e 's|"$base/$file",$sub,"$this|"/etc/assp/$file",$sub,"$this|' \
 		-e 's|"$base/$file",'\'''\'',"$this|"/etc/assp/$file",'\'''\'',"$this|' \
 		-e 's|my $fil=$1; $fil="$base/$fil" if $fil!~/^\\Q$base\\E/i;|my $fil=$1;|' \
-		-e 's|$fil="$base/$fil" if $fil!~/^\\Q$base\\E/i;|$fil="/etc/assp/$fil" if $fil!~/^\\/etc\\/assp\\//i;|' \
+		-e 's|$fil="$base/$fil" if $fil!~/^\\Q$base\\E/i;|$fil="/etc/assp/$fil" if $fil!~/^\\/etc\\/assp\\/\|\\/var\\/lib\\/assp\\/\/i;|' \
 		-e 's|$fil="$base/$fil" if $fil!~/^((\[a-z\]:)?\[\\/\\\\\]\|\\Q$base\\E)/;||' \
 		-e 's|if ($fil !~ /^\\Q$base\\E/i) {|if ($fil !~ /^\\/usr\\/share\\/assp\\//i) {|' \
 		-e 's|$fil="$base/$fil";|$fil="/usr/share/assp/$fil";|' \
 		-e 's|Q$base\\E|Q\\/etc\\/assp\\/\\E|' \
 		-e 's|$fil="$base/$fil"|$fil="/etc/assp/$fil"|' \
 		-e 's|$base/$bf|/etc/assp/$bf|g' \
+		-e 's|rebuildrun.txt|/var/lib/assp/rebuildrun.txt|' \
 		assp.pl || die
 
 	# questionable stuff
@@ -97,6 +99,9 @@ src_unpack() {
 	# sed rebuildspamdb.pl
 	sed -i -e 's|assp.cfg|/etc/assp/assp.cfg|' \
 		-e 's|} && "$Config{base}/$Config{logfile}" \|\| '\''maillog.txt'\'';|};|' \
+		-e 's|tmaxtick('\''rebuild'\'');|tmaxtick('\''/var/lib/assp/rebuild'\'');|' \
+		-e 's|goodhosts|/var/lib/assp/goodhosts|g' \
+		-e 's|rebuildrun.txt|/var/lib/assp/rebuildrun.txt|' \
 		rebuildspamdb.pl || die
 
 	# sed stats.sh
