@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/magic
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.49 2008/01/14 19:05:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.50 2008/03/27 12:54:22 calchan Exp $
+
+*magic-7.5.127 (27 Mar 2008)
+
+  27 Mar 2008; Denis Dupeyron <calchan@gentoo.org> +magic-7.5.127.ebuild:
+  Version bump. Branch 7.5 now considered stable by upstream.
 
   14 Jan 2008; Christoph Mende <angelos@gentoo.org> magic-7.4.46.ebuild:
   Stable on amd64 wrt bug #203172
