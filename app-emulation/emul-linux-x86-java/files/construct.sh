@@ -270,7 +270,7 @@ if [ $# -eq 3 ] ; then
   copytree
   createjre
   unpackjars
-  preparecds
+  #preparecds
   jreman
   elimdups
 else

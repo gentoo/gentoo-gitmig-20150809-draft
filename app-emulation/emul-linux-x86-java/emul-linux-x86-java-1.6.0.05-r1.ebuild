@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.05-r1.ebuild,v 1.1 2008/03/27 20:13:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.05-r1.ebuild,v 1.2 2008/03/27 20:16:58 caster Exp $
 
 inherit versionator pax-utils java-vm-2 eutils
 
@@ -47,8 +47,8 @@ src_unpack() {
 
 	# see bug #207282
 	einfo "Creating the Class Data Sharing archives"
-	"${S}"/bin/java -client	-Xshare:dump || die
-	"${S}"/bin/java -server	-Xshare:dump || die
+	"${S}"/bin/java -client -Xshare:dump || die
+	"${S}"/bin/java -server -Xshare:dump || die
 }
 
 src_install() {
