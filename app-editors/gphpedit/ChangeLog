@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gphpedit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.17 2008/03/27 19:04:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.18 2008/03/27 21:29:12 maekke Exp $
+
+  27 Mar 2008; Markus Meier <maekke@gentoo.org> gphpedit-0.9.91.ebuild:
+  amd64/x86 stable, bug #214904; quotes
 
   27 Mar 2008; nixnut <nixnut@gentoo.org> gphpedit-0.9.91.ebuild:
   Stable on ppc wrt bug 214904
