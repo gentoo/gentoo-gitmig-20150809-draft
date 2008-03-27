@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg-pkcs11-scd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg-pkcs11-scd/ChangeLog,v 1.6 2008/01/19 17:12:44 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg-pkcs11-scd/ChangeLog,v 1.7 2008/03/27 21:19:52 alonbl Exp $
+
+  27 Mar 2008; Alon Bar-Lev <alonbl@gentoo.org>
+  gnupg-pkcs11-scd-0.06.ebuild:
+  Fix libassuan dependency, bug#215103, thanks to Rainer Keller
 
 *gnupg-pkcs11-scd-0.06 (19 Jan 2008)
 
