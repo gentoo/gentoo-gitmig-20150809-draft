@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.231 2008/03/22 10:56:26 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.232 2008/03/27 23:49:56 eva Exp $
+
+*gnome-games-2.22.0 (27 Mar 2008)
+
+  27 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-games-2.22.0.ebuild:
+  New version for GNOME 2.22. Performance improvments, lots of bugs fixes
+  and polish. Now uses GGZ library for networked games.
 
   22 Mar 2008; Rémi Cardona <remi@gentoo.org> gnome-games-2.18.2.1.ebuild,
   gnome-games-2.20.3.ebuild:
