@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.39 2008/01/25 19:57:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.40 2008/03/27 22:54:51 jer Exp $
+
+  27 Mar 2008; Jeroen Roovers <jer@gentoo.org> chrony-1.23.ebuild:
+  Stable for HPPA (bug #214757).
 
   25 Jan 2008; Raúl Porcel <armin76@gentoo.org> chrony-1.23.ebuild:
   sparc/x86 stable
