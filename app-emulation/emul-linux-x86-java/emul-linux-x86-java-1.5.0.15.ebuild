@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.5.0.15.ebuild,v 1.2 2008/03/27 19:34:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.5.0.15.ebuild,v 1.3 2008/03/27 20:13:30 caster Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -41,7 +41,9 @@ src_unpack() {
 	cd ..
 	bash "${FILESDIR}"/construct.sh  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
 
-	"${S}"/bin/java -client -Xshare:dump
+	# see bug #207282
+	einfo "Creating the Class Data Sharing archives"
+	"${S}"/bin/java -client	-Xshare:dump || die
 }
 
 src_install() {

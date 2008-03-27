@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.49 2008/03/27 19:34:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.50 2008/03/27 20:13:30 caster Exp $
+
+*emul-linux-x86-java-1.6.0.05-r1 (27 Mar 2008)
+
+  27 Mar 2008; Vlastimil Babka <caster@gentoo.org> files/construct-1.6.sh,
+  files/construct.sh, -files/javasettings_Linux_x86.xml,
+  -emul-linux-x86-java-1.4.2.16.ebuild,
+  -emul-linux-x86-java-1.5.0.13.ebuild, emul-linux-x86-java-1.5.0.15.ebuild,
+  -emul-linux-x86-java-1.6.0.03.ebuild,
+  -emul-linux-x86-java-1.6.0.04.ebuild,
+  +emul-linux-x86-java-1.6.0.05-r1.ebuild:
+  Remove vulnerable versions. Create Class Data Sharing archive also for
+  server VM in 1.6, bug #207282.
 
   27 Mar 2008; Markus Meier <maekke@gentoo.org>
   emul-linux-x86-java-1.5.0.15.ebuild, emul-linux-x86-java-1.6.0.05.ebuild:

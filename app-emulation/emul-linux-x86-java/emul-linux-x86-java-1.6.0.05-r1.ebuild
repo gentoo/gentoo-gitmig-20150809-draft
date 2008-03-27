@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.04.ebuild,v 1.1 2008/01/27 17:45:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.05-r1.ebuild,v 1.1 2008/03/27 20:13:30 caster Exp $
 
 inherit versionator pax-utils java-vm-2 eutils
 
@@ -34,18 +34,21 @@ QA_TEXTRELS_amd64="opt/${P}/lib/i386/motif21/libmawt.so
 	opt/${P}/lib/i386/server/libjvm.so"
 
 src_unpack() {
-	if [[ ! -r ${DISTDIR}/${A} ]]; then
+	if [[ ! -r "${DISTDIR}"/${A} ]]; then
 		die "cannot read ${DISTDIR}/${A}. Please check the permission and try again."
 	fi
 
 	mkdir bundled-jdk
 	cd bundled-jdk
-	sh ${DISTDIR}/${At} --accept-license --unpack || die "Failed to unpack"
+	sh "${DISTDIR}"/${At} --accept-license --unpack || die "Failed to unpack"
 
 	cd ..
 	bash "${FILESDIR}"/construct-${SLOT}.sh  bundled-jdk sun-jdk-${PV} ${P} || die "construct-${SLOT}.sh failed"
 
-	"${S}"/bin/java -client -Xshare:dump
+	# see bug #207282
+	einfo "Creating the Class Data Sharing archives"
+	"${S}"/bin/java -client	-Xshare:dump || die
+	"${S}"/bin/java -server	-Xshare:dump || die
 }
 
 src_install() {
