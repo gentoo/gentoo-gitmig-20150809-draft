@@ -1,6 +1,13 @@
 # ChangeLog for net-im/centerim
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.13 2008/03/12 19:17:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.14 2008/03/27 15:34:11 swegener Exp $
+
+*centerim-4.22.3-r1 (27 Mar 2008)
+
+  27 Mar 2008; Sven Wegener <swegener@gentoo.org>
+  +files/centerim-4.22.3-url-escape.patch, +centerim-4.22.3-r1.ebuild:
+  Revision bump, security bug #214204. This disables external actions
+  (openurl and detectmusic) completely.
 
 *centerim-4.22.3 (12 Mar 2008)
 

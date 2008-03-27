@@ -1,0 +1,105 @@
+This patch disables external actions completely. Historically we created a
+security-wise broken external action for opening URLs. We ignore them now and
+unconditionally use the configured browser.
+
+https://bugs.gentoo.org/show_bug.cgi?id=214204
+
+--- centerim-4.22.3/src/centerim.cc
++++ centerim-4.22.3/src/centerim.cc
+@@ -755,7 +755,7 @@
+ 
+ void centerim::checkconfigs() {
+     static const char *configs[] = {
+-	"sounds", "colorscheme", "actions", "external", "keybindings", 0
++	"sounds", "colorscheme", "external", "keybindings", 0
+     };
+ 
+     struct stat st;
+@@ -778,12 +778,9 @@
+ 			face.redraw();
+ 			break;
+ 		    case 2:
+-			conf.loadactions();
+-			break;
+-		    case 3:
+ 			external.load();
+ 			break;
+-		    case 4:
++		    case 3:
+ 			conf.loadkeys();
+ 			break;
+ 		}
+@@ -1147,8 +1144,13 @@
+ 	    break;
+ 
+ 	case icqface::open:
+-	    if(const imurl *m = static_cast<const imurl *>(&ev))
+-		conf.execaction("openurl", m->geturl());
++	    if(const imurl *m = static_cast<const imurl *>(&ev)) {
++	        face.log (_("+ Opening URL %s"), m->geturl().c_str());
++	        if (fork () == 0) {
++	            execlp(conf.getbrowser().c_str(), conf.getbrowser().c_str(), m->geturl().c_str(), NULL);
++	            exit (-1);
++	        }
++	    }
+ 	    break;
+ 
+ 	case icqface::accept:
+--- centerim-4.22.3/src/icqconf.cc
++++ centerim-4.22.3/src/icqconf.cc
+@@ -212,7 +212,6 @@
+     loadmainconfig();
+     loadkeys();
+     loadcolors();
+-    loadactions();
+     loadcaptcha();
+     external.load();
+ }
+@@ -500,7 +499,7 @@
+ 	    if(param == "sort_by_activity") setsortmode(icqconf::sort_by_activity); else
+ 	    if(param == "sort_by_name") setsortmode(icqconf::sort_by_name); else
+ 	    if(param == "smtp") setsmtphost(buf); else
+-	    if(param == "browser") setbrowser(browser); else
++	    if(param == "browser") setbrowser(buf); else
+ 	    if(param == "http_proxy") sethttpproxyhost(buf); else
+ 	    if(param == "log") makelog = true; else
+ 	    if(param == "proxy_connect") proxyconnect = true; else
+--- centerim-4.22.3/src/icqdialogs.cc
++++ centerim-4.22.3/src/icqdialogs.cc
+@@ -2060,7 +2060,6 @@
+ 			break;
+ 
+ 		    case 20: LJP_LIST("mood", moods, _("(none/custom)")); break;
+-		    case 21: LJP_STR("music", _("Currently playing: ")); break;
+ 		    case 22: LJP_LIST("picture", pictures, _("(default)")); break;
+ 		    case 23: LJP_STR("mood", _("Current mood: ")); break;
+ 		    case 25: LJP_STR("taglist", _("Tags for the entry: ")); break;
+@@ -2070,9 +2069,6 @@
+ 		    case 33: LJP_BOOL("backdated"); break;
+ 		}
+ 
+-	    } else if(b == 1) {
+-		ev->setfield("music", conf.execaction("detectmusic"));
+-
+ 	    } else if(b == 2) {
+ 		r = true;
+ 
+--- centerim-4.22.3/src/icqface.cc
++++ centerim-4.22.3/src/icqface.cc
+@@ -2245,8 +2245,14 @@
+ 	for(i = extractedurls.begin(); i != extractedurls.end(); ++i)
+ 	    m.additem(" " + *i);
+ 
+-	if(n = m.open())
+-	    conf.execaction("openurl", extractedurls[n-1]);
++	if(n = m.open()) {
++	    log(_("+ Opening URL %s"), extractedurls[n-1].c_str());
++
++	    if (fork () == 0) {
++	        execlp(conf.getbrowser().c_str(), conf.getbrowser().c_str(), extractedurls[n-1].c_str(), NULL);
++		exit (-1);
++	    }
++	}
+ 
+ 	restoreworkarea();
+     }
