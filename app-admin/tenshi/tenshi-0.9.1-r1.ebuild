@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.9.1-r1.ebuild,v 1.3 2008/03/23 13:38:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.9.1-r1.ebuild,v 1.4 2008/03/27 01:12:10 jokey Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}/${PN}-create-mandir.patch"
 	# Fix for bug #212213
 	epatch "${FILESDIR}/${P}-fix-tail_pids-array-length.patch"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.10.ebuild,v 1.2 2008/03/17 15:40:41 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.10.ebuild,v 1.3 2008/03/27 01:12:10 jokey Exp $
 
 inherit eutils
 
@@ -20,6 +20,13 @@ RDEPEND="dev-lang/perl
 pkg_setup() {
 	enewgroup tenshi
 	enewuser tenshi -1 -1 /var/lib/tenshi tenshi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${PN}-create-mandir.patch"
 }
 
 src_install() {

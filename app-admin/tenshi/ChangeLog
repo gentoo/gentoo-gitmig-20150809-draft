@@ -1,9 +1,14 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.45 2008/03/23 13:38:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.46 2008/03/27 01:12:10 jokey Exp $
 
-  23 Mar 2008; nixnut <nixnut@gentoo.org> tenshi-0.9.1-r1.ebuild:
-  Stable on ppc wrt bug 213813
+  27 Mar 2008; <jokey@gentoo.org> +files/tenshi-create-mandir.patch,
+  tenshi-0.9.1-r1.ebuild, tenshi-0.10.ebuild:
+  Synced Files from dev overlay
+
+  26 Mar 2008; Adam James <atj@pulsewidth.org.uk> tenshi-0.9.1-r1.ebuild,
+  tenshi-0.10.ebuild, +files/tenshi-create-mandir.patch:
+  Add Makefile patch to correct a harmless install error.
 
   21 Mar 2008; Markus Meier <maekke@gentoo.org> tenshi-0.9.1-r1.ebuild:
   amd64/x86 stable, bug #213813
@@ -28,8 +33,7 @@
 
   13 Mar 2008; Adam James <atj@pulsewidth.org.uk>
   +app-admin/tenshi/tenshi-0.9.1-r1.ebuild,
-  +app-admin/tenshi/files/tenshi-0.9.1-fix-tail_pids-array-length.patch,
-  +app-admin/tenshi/files/tenshi-0.9.1-skip-unmatched-subpatterns.patch:
+  +app-admin/tenshi/files/tenshi-0.9.1-fix-tail_pids-array-length.patch:
   Fix for bug #212213.
 
   11 Mar 2008; Markus Ullmann <jokey@gentoo.org> metadata.xml:
