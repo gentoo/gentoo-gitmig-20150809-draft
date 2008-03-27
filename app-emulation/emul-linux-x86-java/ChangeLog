@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.48 2008/03/26 22:21:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.49 2008/03/27 19:34:33 maekke Exp $
+
+  27 Mar 2008; Markus Meier <maekke@gentoo.org>
+  emul-linux-x86-java-1.5.0.15.ebuild, emul-linux-x86-java-1.6.0.05.ebuild:
+  amd64 stable, security bug #212425
 
 *emul-linux-x86-java-1.6.0.05 (26 Mar 2008)
 *emul-linux-x86-java-1.5.0.15 (26 Mar 2008)
