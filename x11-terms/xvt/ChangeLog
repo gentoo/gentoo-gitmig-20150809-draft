@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xvt
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/ChangeLog,v 1.13 2008/03/07 19:12:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/ChangeLog,v 1.14 2008/03/27 01:50:15 rbu Exp $
+
+  27 Mar 2008; Robert Buchholz <rbu@gentoo.org> xvt-2.1-r1.ebuild:
+  adding ~amd64
+  Fix quoting
 
   07 Mar 2008; Raúl Porcel <armin76@gentoo.org> -xvt-2.1.ebuild,
   xvt-2.1-r1.ebuild:
