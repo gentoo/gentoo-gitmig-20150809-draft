@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/xmpp4r
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xmpp4r/ChangeLog,v 1.7 2007/11/01 20:12:05 graaff Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xmpp4r/ChangeLog,v 1.8 2008/03/27 19:40:53 maekke Exp $
+
+  27 Mar 2008; Markus Meier <maekke@gentoo.org> xmpp4r-0.3.2.ebuild:
+  amd64/x86 stable, bug #214612
 
 *xmpp4r-0.3.2 (01 Nov 2007)
 
