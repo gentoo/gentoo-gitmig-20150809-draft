@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/color
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/color/ChangeLog,v 1.19 2008/03/26 17:24:21 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/color/ChangeLog,v 1.20 2008/03/27 15:17:42 corsair Exp $
+
+  27 Mar 2008; Markus Rothe <corsair@gentoo.org> color-1.2.ebuild:
+  Stable on ppc64; bug #214913
 
   26 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> color-1.2.ebuild:
   amd64 stable wrt bug #214913
