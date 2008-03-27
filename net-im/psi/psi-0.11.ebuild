@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11.ebuild,v 1.4 2008/03/11 21:02:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11.ebuild,v 1.5 2008/03/27 16:39:49 corsair Exp $
 
 inherit eutils qt4 multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 IUSE="crypt doc kernel_linux spell ssl xscreensaver"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="test"
 
 COMMON_DEPEND="$(qt4_min_version 4.2.3)
