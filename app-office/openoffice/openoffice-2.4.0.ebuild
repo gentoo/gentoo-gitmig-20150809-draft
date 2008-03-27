@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.3 2008/03/27 14:08:42 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.4 2008/03/27 16:15:11 mr_bones_ Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -183,7 +183,7 @@ pkg_setup() {
 		die
 	fi
 
-	if use pam; then		
+	if use pam; then
 		if ! built_with_use sys-apps/shadow pam; then
 			eerror " shadow needs to be built with pam-support. "
 			eerror " rebuild it accordingly or remove the pam use-flag "
