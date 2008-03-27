@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pebrot/pebrot-0.8.8.ebuild,v 1.2 2007/07/12 05:34:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pebrot/pebrot-0.8.8.ebuild,v 1.3 2008/03/27 13:47:20 coldwind Exp $
 
 inherit distutils
 
