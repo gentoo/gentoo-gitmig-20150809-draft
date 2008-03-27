@@ -1,18 +1,44 @@
 --- configure.ac 	1970-01-01 01:00:00.000000000 +0100
-+++ configure.ac	2008-01-30 21:47:22.597386731 +0000
-@@ -0,0 +1,9 @@
++++ configure.ac	2008-03-25 10:05:57.090715324 +0000
+@@ -0,0 +1,14 @@
 +# -*- Autoconf -*-
 +AC_PREREQ(2.59)
-+AC_INIT(metis,4.0.1,karypis@cs.umn.edu)
++AC_INIT(metis, 4.0.1, karypis@cs.umn.edu)
 +AM_INIT_AUTOMAKE([foreign])
 +AC_PROG_INSTALL
 +AC_PROG_LIBTOOL
 +AC_CHECK_LIB(m, sqrt)
-+AC_CONFIG_FILES([Makefile Lib/Makefile Programs/Makefile Test/Makefile])
++AC_CONFIG_FILES([
++	Makefile
++	metis.pc
++	Lib/Makefile
++	Programs/Makefile\
++	Test/Makefile])
 +AC_OUTPUT
---- ./Lib/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ ./Lib/Makefile.am	2008-01-31 15:03:42.814421420 +0000
-@@ -0,0 +1,16 @@
+--- metis.pc.in 	1970-01-01 01:00:00.000000000 +0100
++++ metis.pc.in	2008-02-15 14:45:09.378997263 +0000
+@@ -0,0 +1,10 @@
++prefix=@prefix@
++exec_prefix=@exec_prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name: METIS
++Description: Software for partioning unstructured graphes and meshes
++Version: @VERSION@
++Libs: -L${libdir} -lmetis
++Cflags: -I${includedir}
+--- Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ Makefile.am	2008-02-15 14:46:16.578826763 +0000
+@@ -0,0 +1,5 @@
++SUBDIRS = Lib Programs Test
++EXTRA_DIST = CHANGES VERSION metis.pc.in
++
++pkgconfigdir = $(libdir)/pkgconfig
++pkgconfig_DATA = metis.pc
+--- Lib/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ Lib/Makefile.am	2008-03-25 10:06:10.719491984 +0000
+@@ -0,0 +1,15 @@
 +include_HEADERS = defs.h macros.h metis.h proto.h rename.h struct.h
 +pkgincludedir = $(includedir)/metis
 +lib_LTLIBRARIES = libmetis.la
@@ -27,10 +53,9 @@
 +	mrefine.c mutil.c mfm.c mkmetis.c mkwayrefine.c mkwayfmh.c \
 +	mrefine2.c minitpart2.c mbalance2.c mfm2.c \
 +	kvmetis.c kwayvolrefine.c kwayvolfm.c subdomains.c
-+libmetis_la_LIBADD = -lm
-+libmetis_la_LDFLAGS = -no-undefined -version-info 4:0:0 
---- ./Programs/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ ./Programs/Makefile.am	2008-01-31 12:00:14.981124649 +0000
++libmetis_la_LDFLAGS = -no-undefined -version-info 4:0:0
+--- Programs/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ Programs/Makefile.am	2008-01-31 12:00:14.981124649 +0000
 @@ -0,0 +1,15 @@
 +AM_CPPFLAGS = -I$(top_srcdir)/Lib
 +LDADD = $(top_builddir)/Lib/libmetis.la -lm
@@ -47,8 +72,8 @@
 +partdmesh_SOURCES = partdmesh.c io.c 
 +partnmesh_SOURCES = partnmesh.c io.c 
 +graphchk_SOURCES = graphchk.c io.c 
---- ./Test/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ ./Test/Makefile.am	2008-01-31 12:37:59.532517099 +0000
+--- Test/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ Test/Makefile.am	2008-01-31 12:37:59.532517099 +0000
 @@ -0,0 +1,7 @@
 +AM_CPPFLAGS = -I$(top_srcdir)/Lib
 +LDADD = $(top_builddir)/Lib/libmetis.la -lm
@@ -57,10 +82,3 @@
 +
 +check-local: $(check_PROGRAMS)
 +	- ./mtest ../Graphs/4elt.graph
---- ./Makefile.am 	1970-01-01 01:00:00.000000000 +0100
-+++ ./Makefile.am	2008-01-30 21:15:58.990578962 +0000
-@@ -0,0 +1,4 @@
-+SUBDIRS = Lib Programs Test
-+EXTRA_DIST = CHANGES
-+
-+

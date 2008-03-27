@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-5.0_pre2.ebuild,v 1.2 2008/02/05 22:27:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-5.0_pre2-r1.ebuild,v 1.1 2008/03/27 19:04:34 bicatali Exp $
 
 inherit autotools eutils
 
@@ -14,10 +14,13 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="free-noncomm"
 
 IUSE="pcre openmp int64 threads"
-SLOT="5"
+SLOT="0"
 
 DEPEND="pcre? ( dev-libs/libpcre )
 	openmp? ( || ( >=sys-devel/gcc-4.2 >=dev-lang/icc-9 ) )"
+
+RDEPEND="${DEPEND}
+	!sci-libs/parmetis"
 
 S="${WORKDIR}/metis-${MY_PV}"
 
