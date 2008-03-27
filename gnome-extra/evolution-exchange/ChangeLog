@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.58 2008/03/09 07:57:37 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.59 2008/03/27 23:24:13 eva Exp $
+
+*evolution-exchange-2.22.0 (27 Mar 2008)
+
+  27 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +evolution-exchange-2.22.0.ebuild:
+  New version for GNOME 2.22. Lots of bug fixes, uses glib's base64
+  implementation in place of camel's one, moved to libsoup-2.4 API.
 
 *evolution-exchange-2.12.3-r1 (09 Mar 2008)
 
