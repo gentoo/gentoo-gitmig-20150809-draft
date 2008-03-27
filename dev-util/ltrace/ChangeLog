@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.44 2008/01/27 19:14:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.45 2008/03/27 16:39:54 armin76 Exp $
+
+  27 Mar 2008; Raúl Porcel <armin76@gentoo.org> ltrace-0.4-r1.ebuild:
+  Fix debian HOMEPAGE
 
   27 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> -ltrace-0.3.36.ebuild,
   -ltrace-0.4.ebuild:
