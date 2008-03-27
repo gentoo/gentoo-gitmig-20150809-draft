@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.ebuild,v 1.2 2008/03/25 22:04:34 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.ebuild,v 1.3 2008/03/27 19:13:28 cedk Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs confutils
@@ -42,14 +42,22 @@ pkg_setup() {
 	# but no SSL support has been enabled
 	confutils_use_depend_any msn gnutls nss ssl
 
-	# Warn but not die if jabber is enabled but SSL is not
-	if use jabber && ! use gnutls && ! use nss && ! use ssl ; then
+	if use jabber && ! use gnutls && ! use ssl ; then
+		if use nss; then
+			ewarn ""
+			ewarn "You have enabled nss and jabber"
+			ewarn "but nss doesn't work with jabber"
+			ewarn "Enable ONE of the following use instead"
+			ewarn "flags: gnutls or ssl"
+			ewarn ""
+			die "nss with jabber doesn't work"
+		fi
 		ewarn ""
 		ewarn "You have enabled support for Jabber but do not have SSL"
 		ewarn "support enabled.  This *will* prevent bitlbee from being"
 		ewarn "able to connect to SSL enabled Jabber servers.  If you need to"
 		ewarn "connect to Jabber over SSL, enable ONE of the following use"
-		ewarn "flags: gnutls, nss or ssl"
+		ewarn "flags: gnutls or ssl"
 		ewarn ""
 	fi
 
@@ -88,10 +96,13 @@ src_compile() {
 	# setup ssl use flags
 	if use gnutls ; then
 		myconf="${myconf} --ssl=gnutls"
+		einfo "Use gnutls as SSL support"
 	elif use nss ; then
 		myconf="${myconf} --ssl=nss"
+		einfo "Use nss as SSL support"
 	elif use ssl ; then
 		myconf="${myconf} --ssl=openssl"
+		einfo "Use openssl as SSL support"
 	else
 		myconf="${myconf} --ssl=bogus"
 		einfo "You will not have any encryption support enabled."
