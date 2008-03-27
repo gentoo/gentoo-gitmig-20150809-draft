@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/pipebench
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/pipebench/ChangeLog,v 1.8 2008/03/26 22:37:52 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/pipebench/ChangeLog,v 1.9 2008/03/27 15:56:38 corsair Exp $
+
+  27 Mar 2008; Markus Rothe <corsair@gentoo.org> pipebench-0.40.ebuild:
+  Stable on ppc64; bug #214975
 
   26 Mar 2008; Kenneth Prugh <ken69267@gentoo.org> pipebench-0.40.ebuild:
   amd64 stable, bug #214975. Added a quote
