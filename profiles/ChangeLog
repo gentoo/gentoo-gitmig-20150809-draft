@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1261 2008/03/27 20:00:38 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1262 2008/03/27 23:06:27 eva Exp $
+
+  27 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
+  add keyring use flag for app-text/evince and fix description where needed.
+  enhance description of daap use flag on media-sound/rhythmbox
 
   27 Mar 2008; David Shakaryan <omp@gentoo.org> use.local.desc:
   Add smapi USE flag for conky.

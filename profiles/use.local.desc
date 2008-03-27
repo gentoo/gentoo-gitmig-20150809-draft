@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3456 2008/03/27 20:00:38 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3457 2008/03/27 23:06:27 eva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -278,6 +278,7 @@ app-text/crm114:mew - Add support for using the mewdecode mime decoder.
 app-text/crm114:mimencode - Adds support for using the mimencode mime
 app-text/crm114:normalizemime - Add support for using the normalizemime
 app-text/evince:dvi - Enable the built-in DVI viewer for Evince
+app-text/evince:keyring - Enable gnome-keyring support for storing passwords
 app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer for Evince
 app-text/hyperestraier:mecab - Enable mecab support for Estraier
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
@@ -1079,8 +1080,8 @@ media-sound/quodlibet:trayicon - Enable support for trayicon
 media-sound/radiomixer:hwmixer - Use hardware mixer instead of internal mixer routines
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), useful for slower computers
 media-sound/rezound:soundtouch - compile with support for soundtouch
-media-sound/rhythmbox:daap - support for daap
-media-sound/rhythmbox:keyring - gnome-keyring support for daap share passwords
+media-sound/rhythmbox:daap - Enable support for local network music sharing via daap
+media-sound/rhythmbox:keyring - Enable gnome-keyring support for storing passwords
 media-sound/rhythmbox:mtp - Enable support for MTP devices
 media-sound/rhythmbox:tagwriting - support for tag writing in certain audio files
 media-sound/rosegarden:dssi - Enable support for DSSI Soft Synth Interface
