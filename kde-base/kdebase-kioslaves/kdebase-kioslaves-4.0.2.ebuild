@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.0.2.ebuild,v 1.1 2008/03/10 23:31:36 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.0.2.ebuild,v 1.2 2008/03/27 22:25:51 zlin Exp $
 
 EAPI="1"
 
@@ -42,7 +42,7 @@ src_unpack() {
 
 src_compile() {
 	mycmakeargs="${mycmakeargs}
-		$(cmake-utils_use_with bzip BZip2)
+		$(cmake-utils_use_with bzip2 BZip2)
 		$(cmake-utils_use_with samba Samba)
 		$(cmake-utils_use_with openexr OpenEXR)"
 
