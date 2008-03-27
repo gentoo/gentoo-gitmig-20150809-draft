@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jwhois
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.32 2008/02/09 21:45:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.33 2008/03/27 23:44:35 jer Exp $
+
+  27 Mar 2008; Jeroen Roovers <jer@gentoo.org> jwhois-4.0.ebuild:
+  Stable for HPPA too.
 
   09 Feb 2008; Mike Frysinger <vapier@gentoo.org> jwhois-4.0.ebuild:
   Make sure we control optional libidn depend via USE=idn.
