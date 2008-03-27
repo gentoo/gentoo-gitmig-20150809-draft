@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/birthday
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/ChangeLog,v 1.17 2008/03/27 15:22:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/ChangeLog,v 1.18 2008/03/27 19:17:43 nixnut Exp $
+
+  27 Mar 2008; nixnut <nixnut@gentoo.org> birthday-1.6.2.ebuild:
+  Stable on ppc wrt bug 214921
 
   27 Mar 2008; Markus Rothe <corsair@gentoo.org> birthday-1.6.2.ebuild:
   Stable on ppc64; bug #214921
