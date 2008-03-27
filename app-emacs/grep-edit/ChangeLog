@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/grep-edit
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/grep-edit/ChangeLog,v 1.1 2008/03/27 19:24:20 ulm Exp $
+
+*grep-edit-2.5 (27 Mar 2008)
+
+  27 Mar 2008; Ulrich Mueller <ulm@gentoo.org> +files/50grep-edit-gentoo.el,
+  +metadata.xml, +grep-edit-2.5.ebuild:
+  Initial import. Ebuild contributed by MATSUYAMA Tomohiro
+  <matsuyama@ariel-networks.com>, bug 207191.
+
