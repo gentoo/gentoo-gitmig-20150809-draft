@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-0.17.ebuild,v 1.11 2008/03/26 12:45:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-0.17.ebuild,v 1.12 2008/03/27 19:45:34 maekke Exp $
 
 inherit ruby
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.lickey.com/rubymail/"
 SRC_URI="http://www.lickey.com/rubymail/download/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 USE_RUBY="any"
 IUSE=""
 DEPEND="virtual/ruby"
