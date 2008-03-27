@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/cegui
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.18 2007/09/06 07:28:52 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.19 2008/03/27 16:53:34 nyhm Exp $
+
+*cegui-0.6.0 (27 Mar 2008)
+
+  27 Mar 2008; Tristan Heaven <nyhm@gentoo.org> +cegui-0.6.0.ebuild:
+  Version bump
 
   06 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   cegui-0.5.0b-r3.ebuild:
