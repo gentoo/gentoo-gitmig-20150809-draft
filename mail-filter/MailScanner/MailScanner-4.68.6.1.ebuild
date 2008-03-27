@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/MailScanner-4.67.6.1-r1.ebuild,v 1.1 2008/03/27 01:33:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/MailScanner-4.68.6.1.ebuild,v 1.1 2008/03/27 12:18:40 jokey Exp $
 
 inherit eutils versionator
 
@@ -121,25 +121,25 @@ src_unpack() {
 	for each in update_virus_scanners update_phishing_sites update_bad_phishing_sites ; do
 		sed -i \
 		-e "s#/opt/MailScanner/etc#/etc/MailScanner#g" \
-		"${S}/bin/${each}"
+		"${S}"/bin/${each}
 	done
 	sed -i \
-		-e "s#/etc/sysconfig/MailScanner#/etc/conf.d/MailScanner#g"
-		${S}/bin/update_spamassassin
+		-e "s#/etc/sysconfig/MailScanner#/etc/conf.d/MailScanner#g" \
+		"${S}"/bin/update_spamassassin
 	sed -i \
 		-e "s#/opt/MailScanner/etc#/etc/MailScanner#g" \
 		-e "s#/opt/MailScanner/lib#/usr/lib/MailScanner#g" \
-		"${S}/bin/MailScanner"
+		"${S}"/bin/MailScanner
 
 	# update cron files
 	sed -i \
 		-e "s#/opt/MailScanner/bin/check_mailscanner#/usr/sbin/check_MailScanner#g" \
-		"${S}/bin/cron/check_MailScanner.cron"
+		"${S}"/bin/cron/check_MailScanner.cron
 	for cronfile in update_virus_scanners.cron update_{,bad_}phishing_sites.cron; do
 	sed -i \
 		-e "s#/etc/sysconfig/MailScanner#/etc/conf.d/mailscanner#g" \
 		-e "s#/opt/MailScanner/bin#/usr/sbin#g" \
-		"${S}/bin/cron/${cronfile}"
+		"${S}"/bin/cron/${cronfile}
 	done
 
 	# Determine some things that may need to be changed in conf file
@@ -181,6 +181,9 @@ src_unpack() {
 		-e "s#^\(Incoming Work Group[ \t]*=\).*#\1 ${WORKGRP}#" \
 		-e "s#^\(Incoming Work Permissions[ \t]*=\).*#\1 ${WORKPERM}#" \
 		"${S}/etc/MailScanner.conf"
+
+	# update spam.assassin.prefs.conf
+	sed -i -e "s#YOURDOMAIN-COM#${YOURSITE}#" ${S}/etc/spam.assassin.prefs.conf
 
 	# net-mail/clamav net-mail/f-prot package compatibility
 	sed -i \
