@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>video</herd>
+<maintainer>
+  <email>flameeyes@gentoo.org</email>
+</maintainer>
+<use>
+  <flag name="taglib">
+    Use <pkg>media-libs/taglib</pkg> for reading files' metadata
+    rather than id3lib. If this USE flag is disabled
+    <pkg>media-libs/id3lib</pkg> is used in its stead.
+  </flag>
+  <flag name="mysql">
+    Use <pkg>dev-db/mysql</pkg> as backend rather than SQLite3. If
+    this USE flag is disabled, <pkg>dev-db/sqlite</pkg> is used in its
+    stead.
+  </flag>
+</use>
+</pkgmetadata>
