@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.15.ebuild,v 1.2 2008/03/27 10:10:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.15.ebuild,v 1.3 2008/03/27 10:14:03 drac Exp $
 
 inherit elisp-common
 
@@ -40,7 +40,6 @@ src_install() {
 	fi
 
 	dodoc AUTHORS ChangeLog NEWS README
-	doman man/*
 }
 
 pkg_postinst() {
