@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.7 2008/03/27 15:46:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.8 2008/03/27 16:38:43 corsair Exp $
+
+  27 Mar 2008; Markus Rothe <corsair@gentoo.org> openrc-0.2-r1.ebuild:
+  Added ~ppc; bug #214957
 
   27 Mar 2008; Markus Rothe <corsair@gentoo.org> openrc-0.2-r1.ebuild:
   Added ~ppc64; bug #214957
