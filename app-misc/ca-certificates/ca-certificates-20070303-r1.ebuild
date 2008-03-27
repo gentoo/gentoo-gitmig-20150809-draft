@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20070303-r1.ebuild,v 1.4 2008/01/31 16:37:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20070303-r1.ebuild,v 1.5 2008/03/27 21:50:07 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbs
 IUSE=""
 
 DEPEND="|| ( >=sys-apps/coreutils-6.10-r1 sys-apps/mktemp )"
-RDEPEND="dev-libs/openssl"
+RDEPEND="${DEPEND}
+	dev-libs/openssl"
 
 S=${WORKDIR}
 
