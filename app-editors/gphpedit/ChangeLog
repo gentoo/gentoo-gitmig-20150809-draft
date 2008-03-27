@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gphpedit
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.16 2007/02/21 21:00:58 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.17 2008/03/27 19:04:57 nixnut Exp $
+
+  27 Mar 2008; nixnut <nixnut@gentoo.org> gphpedit-0.9.91.ebuild:
+  Stable on ppc wrt bug 214904
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
