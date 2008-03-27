@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.2.6-r1.ebuild,v 1.1 2008/03/26 01:22:58 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.2.6-r1.ebuild,v 1.2 2008/03/27 21:48:08 wltjr Exp $
 
 inherit autotools eutils gnome2 python
 
@@ -17,6 +17,7 @@ IUSE="gnome"
 DEPEND="dev-python/pyalsaaudio
 	dev-python/feedparser
 	gnome? (
+		dev-python/gst-python
 		gnome-base/gnome-menus
 		gnome-base/librsvg
 		gnome-base/libgtop
