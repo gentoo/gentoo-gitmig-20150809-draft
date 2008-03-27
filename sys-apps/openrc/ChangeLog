@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.4 2008/03/26 20:11:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.5 2008/03/27 12:18:28 vapier Exp $
+
+  27 Mar 2008; Mike Frysinger <vapier@gentoo.org> openrc-0.2.ebuild:
+  Add x86/arm love #214957 by Shvetsov Alexey.
 
 *openrc-0.2 (26 Mar 2008)
 
