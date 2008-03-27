@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/smlnj
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.18 2007/11/18 17:50:49 hkbst Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.19 2008/03/27 10:47:49 hkbst Exp $
+
+*smlnj-110.67-r2 (27 Mar 2008)
+
+  27 Mar 2008; Marijn Schouten <hkBst@gentoo.org>
+  +files/ml-makedepend.patch, +smlnj-110.67-r2.ebuild:
+  fix bug 214924
 
 *smlnj-110.67-r1 (18 Nov 2007)
 
