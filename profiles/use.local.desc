@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3453 2008/03/26 20:34:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3454 2008/03/27 00:12:10 eva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1079,6 +1079,7 @@ media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), 
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:daap - support for daap
 media-sound/rhythmbox:keyring - gnome-keyring support for daap share passwords
+media-sound/rhythmbox:mtp - Enable support for MTP devices
 media-sound/rhythmbox:tagwriting - support for tag writing in certain audio files
 media-sound/rosegarden:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/rubyripper:cli - Build command line interface rubyripper
