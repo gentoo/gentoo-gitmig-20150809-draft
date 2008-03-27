@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.46 2008/03/27 01:12:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.47 2008/03/27 01:14:09 jokey Exp $
+
+  27 Mar 2008; Markus Ullmann <jokey@gentoo.org> tenshi-0.9.1-r1.ebuild:
+  CL and KEYWORDS tweak
 
   27 Mar 2008; <jokey@gentoo.org> +files/tenshi-create-mandir.patch,
   tenshi-0.9.1-r1.ebuild, tenshi-0.10.ebuild:
@@ -10,6 +13,9 @@
   tenshi-0.10.ebuild, +files/tenshi-create-mandir.patch:
   Add Makefile patch to correct a harmless install error.
 
+  23 Mar 2008; nixnut <nixnut@gentoo.org> tenshi-0.9.1-r1.ebuild:
+  Stable on ppc wrt bug 213813
+  
   21 Mar 2008; Markus Meier <maekke@gentoo.org> tenshi-0.9.1-r1.ebuild:
   amd64/x86 stable, bug #213813
 
