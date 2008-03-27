@@ -1,20 +1,20 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.4.0_rc6.ebuild,v 1.1 2008/03/23 10:00:15 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.4.0.ebuild,v 1.1 2008/03/27 08:14:06 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
 IUSE="gnome java kde"
 
 BUILDID="9286"
-MY_PV="${PV/_/}"
+MY_PV="${PV}rc6"
 MY_PV2="${MY_PV}_20080314"
 MY_PV3="${PV/_rc6/}-${BUILDID}"
 PACKED="OOH680_m12_native_packed-1"
 S="${WORKDIR}/${PACKED}_en-US.${BUILDID}/RPMS"
 DESCRIPTION="OpenOffice productivity suite"
 
-SRC_URI="mirror://openoffice/contrib/rc/${MY_PV}/OOo_${MY_PV2}_LinuxIntel_install_en-US.tar.gz"
+SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install_en-US.tar.gz"
 
 LANGS="af as_IN be_BY bg br bs ca cs da de dz el en en_GB en_ZA es et fi fr ga gl gu he hi_IN hr hu it ja ka km ko lt mk ml_IN mr_IN nb ne nl nn nr ns or_IN pa_IN pl pt rw sh sk sl sr ss st sv sw_TZ ta te_IN tg th ti_ER tr ts uk ur_IN ve vi xh zh_CN zh_TW zu"
 
