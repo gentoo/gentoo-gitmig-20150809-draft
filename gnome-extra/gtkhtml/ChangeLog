@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.153 2008/03/23 21:59:39 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.154 2008/03/27 10:26:49 eva Exp $
+
+  27 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> gtkhtml-2.11.1.ebuild:
+  fix typo on fbsd conditional, bug #215004
 
 *gtkhtml-3.18.0 (23 Mar 2008)
 

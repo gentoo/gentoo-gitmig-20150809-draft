@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-2.11.1.ebuild,v 1.9 2008/03/07 22:23:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-2.11.1.ebuild,v 1.10 2008/03/27 10:26:49 eva Exp $
 
 inherit eutils gnome2 versionator autotools
 
@@ -42,7 +42,7 @@ src_unpack() {
 		epatch "${FILESDIR}/${MY_PN}-2.2.0-alpha.patch"
 	fi
 
-	if use x86-fsbd; then
+	if use x86-fbsd; then
 		# We need a full autoreconf on FreeBSD at least to fix libtool errors.
 		eautoreconf
 	fi
