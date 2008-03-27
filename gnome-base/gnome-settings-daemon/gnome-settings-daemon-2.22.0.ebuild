@@ -1,6 +1,6 @@
 # Copyright 2008-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.22.0.ebuild,v 1.1 2008/03/23 11:13:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.22.0.ebuild,v 1.2 2008/03/27 00:09:22 leio Exp $
 
 inherit autotools eutils gnome2
 
@@ -25,6 +25,8 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 		 >=gnome-base/gnome-desktop-2.21.4
 
 		 x11-libs/libX11
+		 x11-libs/libXi
+		 x11-libs/libXrandr
 		 x11-libs/libXext
 		 x11-libs/libXxf86misc
 		 >=x11-libs/libxklavier-3.3
@@ -39,7 +41,9 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 DEPEND="${RDEPEND}
 		  sys-devel/gettext
 		>=dev-util/intltool-0.35.0
-		>=dev-util/pkgconfig-0.19"
+		>=dev-util/pkgconfig-0.19
+		x11-proto/inputproto
+		x11-proto/xproto"
 
 pkg_config() {
 	G2CONF="${G2CONF} $(use_enable alsa) $(use_enable debug) $(use_enable esd) $(use_enable gstreamer)"
