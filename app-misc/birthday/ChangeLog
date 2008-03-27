@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/birthday
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/ChangeLog,v 1.15 2008/03/26 17:33:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/ChangeLog,v 1.16 2008/03/27 12:27:49 coldwind Exp $
+
+  27 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> birthday-1.6.2.ebuild:
+  amd64 stable wrt bug #214921
 
   26 Mar 2008; Raúl Porcel <armin76@gentoo.org> birthday-1.6.2.ebuild:
   sparc/x86 stable
