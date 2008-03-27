@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8437 2008/03/27 06:07:34 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8438 2008/03/27 08:19:56 suka Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -69,11 +69,6 @@ net-p2p/limewire
 # http://www.vdr-portal.de/board/thread.php?threadid=74833 (german)
 =net-www/xxv-1.2.1308
 =net-www/xxv-1.2.1315
-
-# Andreas Proschofsky <suka@gentoo.org> (23 Mar 2008)
-# Mask release candidates for OpenOffice.org 2.4.0
->=app-office/openoffice-2.4.0_rc5
->=app-office/openoffice-bin-2.4.0_rc6
 
 # Samuli Suominen <drac@gentoo.org> (23 Mar 2008)
 # Last release 1 Jul 2001 with support for OSS and
