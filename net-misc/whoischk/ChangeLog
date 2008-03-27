@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whoischk
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/ChangeLog,v 1.8 2008/03/13 15:09:32 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/ChangeLog,v 1.9 2008/03/27 23:33:07 jer Exp $
+
+  27 Mar 2008; Jeroen Roovers <jer@gentoo.org> whoischk-0.2.4-r1.ebuild:
+  Stable for HPPA (bug #214727).
 
   13 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> metadata.xml,
   whoischk-0.2.4-r1.ebuild:
