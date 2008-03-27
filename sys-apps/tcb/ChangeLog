@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/tcb
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcb/ChangeLog,v 1.11 2007/01/12 03:13:39 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcb/ChangeLog,v 1.12 2008/03/27 14:38:51 flameeyes Exp $
+
+*tcb-1.0.2 (27 Mar 2008)
+
+  27 Mar 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/tcb-1.0.2-build.patch, +tcb-1.0.2.ebuild:
+  Version bump, avoid one chunk of patch by replacing the variables at make
+  commandline instead.
 
 *tcb-1.0-r1 (12 Jan 2007)
 
