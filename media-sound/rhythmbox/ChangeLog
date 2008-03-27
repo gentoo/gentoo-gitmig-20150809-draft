@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.117 2008/02/24 21:02:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.118 2008/03/27 00:17:18 eva Exp $
+
+*rhythmbox-0.11.5 (27 Mar 2008)
+
+  27 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +rhythmbox-0.11.5.ebuild:
+  New version for GNOME-2.22. Add MTP use flag, various enhancements for
+  iPod, playlist parsing, threading in python plugins, use of libsoup-2.4.
 
   24 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org>
   rhythmbox-0.11.2-r1.ebuild:
