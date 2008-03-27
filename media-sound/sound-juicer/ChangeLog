@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.133 2008/03/26 23:34:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.134 2008/03/27 00:22:05 eva Exp $
+
+  26 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  sound-juicer-2.22.0.ebuild:
+  drop most keywords because of gst-plugins-meta dependency
 
 *sound-juicer-2.22.0 (26 Mar 2008)
 
