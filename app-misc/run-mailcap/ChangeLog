@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/run-mailcap
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.48 2008/03/27 15:40:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.49 2008/03/27 16:14:29 armin76 Exp $
+
+  27 Mar 2008; Raúl Porcel <armin76@gentoo.org> run-mailcap-3.34_p1.ebuild:
+  Fix debian HOMEPAGE
 
   27 Mar 2008; Markus Rothe <corsair@gentoo.org> run-mailcap-3.39_p1.ebuild:
   Stable on ppc64; bug #214942

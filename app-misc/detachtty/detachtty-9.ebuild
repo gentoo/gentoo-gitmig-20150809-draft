@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detachtty/detachtty-9.ebuild,v 1.6 2005/07/22 20:27:48 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detachtty/detachtty-9.ebuild,v 1.7 2008/03/27 16:15:02 armin76 Exp $
 
 inherit toolchain-funcs
 
 MY_P="${P/-/_}"
 
 DESCRIPTION="detachtty allows the user to attach/detach from interactive processes across the network.  It is similar to GNU Screen"
-HOMEPAGE="http://packages.debian.org/unstable/admin/detachtty.html"
+HOMEPAGE="http://packages.debian.org/unstable/admin/detachtty"
 SRC_URI="mirror://debian/pool/main/d/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
