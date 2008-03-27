@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lexer/cl-lexer-1-r1.ebuild,v 1.8 2007/02/03 17:36:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lexer/cl-lexer-1-r1.ebuild,v 1.9 2008/03/27 16:18:13 armin76 Exp $
 
 inherit common-lisp eutils
 
 DEB_PV=2
 
 DESCRIPTION="Lexical-analyzer-generator package for Common Lisp"
-HOMEPAGE="http://www.geocities.com/mparker762/clawk.html http://packages.debian.org/unstable/devel/cl-lexer.html"
+HOMEPAGE="http://www.geocities.com/mparker762/clawk.html http://packages.debian.org/unstable/devel/cl-lexer"
 SRC_URI="mirror://debian/pool/main/c/cl-lexer/${PN}_${PV}.orig.tar.gz
 	mirror://debian/pool/main/c/cl-lexer/${PN}_${PV}-${DEB_PV}.diff.gz"
 

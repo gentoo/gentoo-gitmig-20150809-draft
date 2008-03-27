@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-unit/cl-unit-1.3.1-r1.ebuild,v 1.7 2007/02/03 17:49:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-unit/cl-unit-1.3.1-r1.ebuild,v 1.8 2008/03/27 16:39:17 armin76 Exp $
 
 inherit common-lisp eutils
 
 DEB_PV=1
 
 DESCRIPTION="A regression suite library for Common Lisp"
-HOMEPAGE="http://www.ancar.org/CLUnit/docs/CLUnit.html http://packages.debian.org/unstable/devel/cl-unit.html"
+HOMEPAGE="http://www.ancar.org/CLUnit/docs/CLUnit.html http://packages.debian.org/unstable/devel/cl-unit"
 SRC_URI="mirror://gentoo/${PN}_${PV}.orig.tar.gz
 	mirror://gentoo/cl-unit_${PV}-${DEB_PV}.diff.gz"
 

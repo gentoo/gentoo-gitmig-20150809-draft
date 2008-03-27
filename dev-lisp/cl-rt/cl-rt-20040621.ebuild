@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rt/cl-rt-20040621.ebuild,v 1.5 2007/02/03 17:48:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rt/cl-rt-20040621.ebuild,v 1.6 2008/03/27 16:15:45 armin76 Exp $
 
 inherit common-lisp eutils
 
 DEB_PV=1
 
 DESCRIPTION="Common Lisp regression tester from MIT"
-HOMEPAGE="http://www-2.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/code/testing/rt/ http://packages.debian.org/unstable/devel/cl-rt.html http://www.cliki.net/rt"
+HOMEPAGE="http://www-2.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/code/testing/rt/ http://packages.debian.org/unstable/devel/cl-rt http://www.cliki.net/rt"
 SRC_URI="mirror://gentoo/${PN}_${PV}.orig.tar.gz
 	mirror://gentoo/cl-rt_${PV}-${DEB_PV}.diff.gz"
 

@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-blowfish/cl-blowfish-0.6.ebuild,v 1.9 2007/07/15 02:50:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-blowfish/cl-blowfish-0.6.ebuild,v 1.10 2008/03/27 16:34:30 armin76 Exp $
 
 inherit common-lisp eutils
 
 DEB_PV=1
 
 DESCRIPTION="Common Lisp implementation of the Blowfish encryption algorithm."
-HOMEPAGE="http://packages.debian.org/unstable/devel/cl-blowfish.html http://members.optusnet.com.au/apicard/"
+HOMEPAGE="http://packages.debian.org/unstable/devel/cl-blowfish http://members.optusnet.com.au/apicard/"
 SRC_URI="mirror://gentoo/cl-blowfish_${PV}.orig.tar.gz
 	mirror://gentoo/cl-blowfish_${PV}-${DEB_PV}.diff.gz"
 

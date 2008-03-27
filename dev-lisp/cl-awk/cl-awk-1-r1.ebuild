@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-awk/cl-awk-1-r1.ebuild,v 1.7 2007/02/03 17:32:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-awk/cl-awk-1-r1.ebuild,v 1.8 2008/03/27 16:26:22 armin76 Exp $
 
 inherit common-lisp eutils
 
 DEB_PV=1
 
 DESCRIPTION="Common Lisp implementation of AWK"
-HOMEPAGE="http://www.geocities.com/mparker762/clawk.html#clawk http://www.cliki.net/RegEx-CLAWK-Lexer http://packages.debian.org/unstable/devel/cl-awk.html"
+HOMEPAGE="http://www.geocities.com/mparker762/clawk.html#clawk http://www.cliki.net/RegEx-CLAWK-Lexer http://packages.debian.org/unstable/devel/cl-awk"
 SRC_URI="mirror://debian/pool/main/c/cl-awk/cl-awk_${PV}.orig.tar.gz
 	mirror://debian/pool/main/c/cl-awk/cl-awk_1-${DEB_PV}.diff.gz"
 

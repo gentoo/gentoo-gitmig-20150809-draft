@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-gen-prog/cl-rsm-gen-prog-1.0-r1.ebuild,v 1.4 2007/02/03 17:44:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-gen-prog/cl-rsm-gen-prog-1.0-r1.ebuild,v 1.5 2008/03/27 16:34:59 armin76 Exp $
 
 inherit common-lisp
 
 DESCRIPTION="R. Scott McIntire's Common Lisp Genetic Programming Library"
-HOMEPAGE="http://packages.debian.org/unstable/devel/cl-rsm-gen-prog.html"
+HOMEPAGE="http://packages.debian.org/unstable/devel/cl-rsm-gen-prog"
 SRC_URI="mirror://gentoo/cl-rsm-gen-prog_${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"

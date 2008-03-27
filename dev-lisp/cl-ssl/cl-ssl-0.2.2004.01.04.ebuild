@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ssl/cl-ssl-0.2.2004.01.04.ebuild,v 1.7 2007/02/03 17:49:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ssl/cl-ssl-0.2.2004.01.04.ebuild,v 1.8 2008/03/27 16:27:41 armin76 Exp $
 
 inherit common-lisp
 
 DEB_PV=
 
 DESCRIPTION="Common Lisp UFFI interface of the OpenSSL library."
-HOMEPAGE="http://packages.debian.org/unstable/devel/cl-ssl.html"
+HOMEPAGE="http://packages.debian.org/unstable/devel/cl-ssl"
 SRC_URI="mirror://gentoo/cl-ssl_${PV/.2004/+cvs.2004}.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"

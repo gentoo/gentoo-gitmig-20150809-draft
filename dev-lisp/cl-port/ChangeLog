@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-port
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-port/ChangeLog,v 1.10 2007/02/03 17:40:14 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-port/ChangeLog,v 1.11 2008/03/27 16:38:36 armin76 Exp $
+
+  27 Mar 2008; Raúl Porcel <armin76@gentoo.org> cl-port-1.0.1.2-r2.ebuild:
+  Fix debian HOMEPAGE
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   cl-port-1.0.1.2-r2.ebuild:

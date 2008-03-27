@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-md5/cl-md5-1.8.5.ebuild,v 1.4 2007/02/03 17:36:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-md5/cl-md5-1.8.5.ebuild,v 1.5 2008/03/27 16:27:03 armin76 Exp $
 
 inherit common-lisp eutils
 
 DESCRIPTION="Common Lisp package for MD5 Message Digests"
-HOMEPAGE="http://www.pmsf.de/resources/lisp/MD5.html http://packages.debian.org/unstable/devel/cl-md5.html"
+HOMEPAGE="http://www.pmsf.de/resources/lisp/MD5.html http://packages.debian.org/unstable/devel/cl-md5"
 SRC_URI="mirror://debian/pool/main/c/cl-md5/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="public-domain"

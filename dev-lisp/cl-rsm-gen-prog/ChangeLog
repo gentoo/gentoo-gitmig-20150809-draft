@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-rsm-gen-prog
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-gen-prog/ChangeLog,v 1.4 2007/02/03 17:44:15 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-gen-prog/ChangeLog,v 1.5 2008/03/27 16:34:59 armin76 Exp $
+
+  27 Mar 2008; Raúl Porcel <armin76@gentoo.org> cl-rsm-gen-prog-1.0.ebuild,
+  cl-rsm-gen-prog-1.0-r1.ebuild:
+  Fix debian HOMEPAGE
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   cl-rsm-gen-prog-1.0.ebuild, cl-rsm-gen-prog-1.0-r1.ebuild:

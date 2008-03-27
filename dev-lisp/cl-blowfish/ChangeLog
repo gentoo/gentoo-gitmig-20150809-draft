@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-blowfish
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-blowfish/ChangeLog,v 1.10 2007/02/03 17:33:37 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-blowfish/ChangeLog,v 1.11 2008/03/27 16:34:30 armin76 Exp $
+
+  27 Mar 2008; Raúl Porcel <armin76@gentoo.org> cl-blowfish-0.6.ebuild:
+  Fix debian HOMEPAGE
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> cl-blowfish-0.6.ebuild:
   Use mirror://debian/ where applicable, or use mirror://gentoo/ if the file

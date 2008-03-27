@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-regex/cl-regex-1-r1.ebuild,v 1.7 2007/02/03 17:41:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-regex/cl-regex-1-r1.ebuild,v 1.8 2008/03/27 16:19:21 armin76 Exp $
 
 inherit common-lisp eutils
 
 DESCRIPTION="Common Lisp regular expression compiler/matcher"
-HOMEPAGE="http://www.geocities.com/mparker762/clawk.html http://packages.debian.org/unstable/devel/cl-regex.html"
+HOMEPAGE="http://www.geocities.com/mparker762/clawk.html http://packages.debian.org/unstable/devel/cl-regex"
 SRC_URI="mirror://debian/pool/main/c/cl-regex/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="BSD"
