@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.18.1.ebuild,v 1.6 2007/12/22 17:08:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.18.1.ebuild,v 1.7 2008/03/27 10:45:18 drac Exp $
 
 inherit eutils
 
@@ -13,25 +13,26 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="aac alsa encode jack twolame vorbis"
 
-DEPEND="encode?	( >=media-sound/lame-1.89 )
-	vorbis? ( >=media-libs/libvorbis-1.0 )
+RDEPEND="encode? ( media-sound/lame )
+	vorbis? ( media-libs/libvorbis )
 	aac? ( media-libs/faac )
-	twolame? ( >=media-sound/twolame-0.3.6 )
-	alsa? ( >=media-libs/alsa-lib-1.0.0 )
-	jack? ( media-sound/jack-audio-connection-kit )"
+	twolame? ( media-sound/twolame )
+	alsa? ( media-libs/alsa-lib )
+	jack? ( media-sound/jack-audio-connection-kit )
+	!encode? ( !vorbis? ( !aac? ( !twolame? ( media-libs/libvorbis ) ) ) )"
+DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_compile() {
-	if ! use encode && ! use vorbis && ! use aac && ! use twolame
-	then
-		eerror "You need support for mp3, Ogg Vorbis, AAC or MP2 enconding"
-		eerror "for this package. Please merge again with at least one of the"
-		eerror "\`encode', \`vorbis', \`aac' and \`twolame'  USE flags enabled:"
-		eerror
-		eerror "  # USE=\"encode\" emerge darkice"
-		eerror "  # USE=\"vorbis\" emerge darkice"
-		eerror "  # USE=\"aac\" emerge darkice"
-		eerror "  # USE=\"twolame\" emerge darkice"
-		die "Won't build without support for lame, vorbis, aac nor twolame"
+	if ! use encode && ! use vorbis && ! use aac && ! use twolame; then
+		ewarn "One of USE flags encode, vorbis, aac, or twolame is required."
+		ewarn "Selecting vorbis for you."
+		local myconf="--with-vorbis"
 	fi
 
 	econf $(use_with aac faac) \
@@ -39,7 +40,8 @@ src_compile() {
 		$(use_with encode lame) \
 		$(use_with jack) \
 		$(use_with twolame) \
-		$(use_with vorbis) || die "econf failed."
+		$(use_with vorbis) \
+		${myconf}
 	emake || die "emake failed."
 }
 

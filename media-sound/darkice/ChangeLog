@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/darkice
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.46 2007/12/22 17:08:43 dertobi123 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.47 2008/03/27 10:45:18 drac Exp $
+
+  27 Mar 2008; Samuli Suominen <drac@gentoo.org>
+  -files/darkice-0.17.1-64bit.patch, +files/darkice-0.18.1-gcc43.patch,
+  -darkice-0.17.1.ebuild, darkice-0.18.1.ebuild:
+  If none of USE flags encode, aac, vorbis or twolame is selected, select
+  vorbis so ebuild doesn't annoyingly die and ewarn it about user. Apply GCC
+  4.3 fix from 214773, thanks to impulze.
 
   22 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   darkice-0.18.1.ebuild:
