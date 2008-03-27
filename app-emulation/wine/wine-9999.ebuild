@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.22 2008/02/23 04:52:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.23 2008/03/27 18:22:16 vapier Exp $
 
 EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
 
 inherit eutils flag-o-matic multilib git
 
 DESCRIPTION="free implementation of Windows(tm) on Unix"
-HOMEPAGE="http://www.winehq.com/"
+HOMEPAGE="http://www.winehq.org/"
 SRC_URI=""
 
 LICENSE="LGPL-2.1"

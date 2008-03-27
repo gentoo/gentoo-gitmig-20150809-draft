@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050830.ebuild,v 1.14 2007/06/24 17:32:37 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050830.ebuild,v 1.15 2008/03/27 18:22:16 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
 DESCRIPTION="free implementation of Windows(tm) on Unix"
-HOMEPAGE="http://www.winehq.com/"
+HOMEPAGE="http://www.winehq.org/"
 SRC_URI="mirror://sourceforge/${PN}/Wine-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"

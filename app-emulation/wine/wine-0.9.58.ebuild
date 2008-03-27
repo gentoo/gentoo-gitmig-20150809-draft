@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.58.ebuild,v 1.1 2008/03/22 20:05:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.58.ebuild,v 1.2 2008/03/27 18:22:16 vapier Exp $
 
 EAPI="1"
 
 inherit eutils flag-o-matic multilib
 
 DESCRIPTION="free implementation of Windows(tm) on Unix"
-HOMEPAGE="http://www.winehq.com/"
+HOMEPAGE="http://www.winehq.org/"
 SRC_URI="mirror://sourceforge/${PN}/wine-${PV}.tar.bz2
 	gecko? ( mirror://sourceforge/wine/wine_gecko-0.1.0.cab )"
 
