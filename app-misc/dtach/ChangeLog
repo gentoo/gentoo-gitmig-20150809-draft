@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dtach
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.13 2008/03/26 17:18:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.14 2008/03/27 19:32:20 nixnut Exp $
+
+  27 Mar 2008; nixnut <nixnut@gentoo.org> dtach-0.8.ebuild:
+  Stable on ppc wrt bug 214915
 
   26 Mar 2008; Raúl Porcel <armin76@gentoo.org> dtach-0.8.ebuild:
   x86 stable
