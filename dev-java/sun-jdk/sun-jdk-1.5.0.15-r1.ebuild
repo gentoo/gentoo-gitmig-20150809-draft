@@ -1,10 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.13.ebuild,v 1.5 2007/12/16 21:10:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.15-r1.ebuild,v 1.1 2008/03/27 20:18:28 caster Exp $
 
 inherit versionator java-vm-2 eutils pax-utils
 
-MY_PV=${PV//./_}
+UPDATE="$(get_version_component_range 4)"
+UPDATE="${UPDATE#0}"
+MY_PV="$(get_version_component_range 2-3)u${UPDATE}"
 
 X86_AT="jdk-${MY_PV}-dlj-linux-i586.bin"
 AMD64_AT="jdk-${MY_PV}-dlj-linux-amd64.bin"
@@ -15,18 +17,14 @@ SRC_URI="x86? ( http://download.java.net/dlj/binaries/${X86_AT} )
 		amd64? ( http://download.java.net/dlj/binaries/${AMD64_AT} )"
 SLOT="1.5"
 LICENSE="dlj-1.1"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 RESTRICT="strip"
 IUSE="X alsa doc examples jce nsplugin odbc"
 
 QA_TEXTRELS_x86="opt/${P}/jre/lib/i386/motif21/libmawt.so opt/${P}/jre/lib/i386/libdeploy.so"
 
-DEPEND="
-	doc? ( =dev-java/java-sdk-docs-1.5.0* )
-	jce? ( =dev-java/sun-jce-bin-1.5.0* )"
-
-RDEPEND="x86? ( net-libs/libnet )
-	sys-libs/glibc
+DEPEND="jce? ( =dev-java/sun-jce-bin-1.5.0* )"
+RDEPEND="sys-libs/glibc
 	alsa? ( media-libs/alsa-lib )
 	doc? ( =dev-java/java-sdk-docs-1.5.0* )
 	X? (
@@ -45,6 +43,12 @@ JAVA_PROVIDE="jdbc-stdext jdbc-rowset"
 
 src_unpack() {
 	sh "${DISTDIR}/${A}" --accept-license --unpack || die "Failed to unpack"
+
+	# see bug #207282
+	if use x86; then
+		einfo "Creating the Class Data Sharing archives"
+		"${S}"/bin/java -client -Xshare:dump || die
+	fi
 }
 
 src_install() {

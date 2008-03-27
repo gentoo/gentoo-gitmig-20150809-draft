@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.03.ebuild,v 1.5 2007/12/16 21:10:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.05-r1.ebuild,v 1.1 2008/03/27 20:18:28 caster Exp $
 
 inherit versionator java-vm-2 eutils pax-utils
 
@@ -12,15 +12,12 @@ AMD64_AT="jdk-${MY_PV}-dlj-linux-amd64.bin"
 
 DESCRIPTION="Sun's J2SE Development Kit, version ${PV}"
 HOMEPAGE="http://java.sun.com/javase/6/"
-# This release is probably under a different url because tmarble is on holiday
-#SRC_URI="x86? ( http://download.java.net/dlj/binaries/${X86_AT} )
-#		amd64? ( http://download.java.net/dlj/binaries/${AMD64_AT} )"
-URL_BASE="http://dlc.sun.com/dlj/binaries"
+URL_BASE="http://download.java.net/dlj/binaries"
 SRC_URI="x86? ( ${URL_BASE}/${X86_AT} )
 		amd64? ( ${URL_BASE}/${AMD64_AT} )"
 SLOT="1.6"
 LICENSE="dlj-1.1"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 RESTRICT="strip"
 IUSE="X alsa doc examples jce nsplugin odbc"
 
@@ -29,16 +26,9 @@ QA_TEXTRELS_x86="opt/${P}/jre/lib/i386/motif21/libmawt.so
 	opt/${P}/jre/lib/i386/client/libjvm.so
 	opt/${P}/jre/lib/i386/server/libjvm.so"
 
-DEPEND="
-	doc? ( =dev-java/java-sdk-docs-1.6.0* )
-	jce? ( =dev-java/sun-jce-bin-1.6.0* )"
-
-RDEPEND="
-	${DEPEND}
-	x86? (
-		=virtual/libstdc++-3.3
-		net-libs/libnet
-	)
+DEPEND="jce? ( =dev-java/sun-jce-bin-1.6.0* )"
+RDEPEND="doc? ( =dev-java/java-sdk-docs-1.6.0* )
+	x86? ( =virtual/libstdc++-3.3 )
 	sys-libs/glibc
 	alsa? ( media-libs/alsa-lib )
 	X? (
@@ -56,7 +46,14 @@ JAVA_PROVIDE="jdbc-stdext jdbc-rowset"
 S="${WORKDIR}/jdk$(replace_version_separator 3 _)"
 
 src_unpack() {
-	sh ${DISTDIR}/${A} --accept-license --unpack || die "Failed to unpack"
+	sh "${DISTDIR}"/${A} --accept-license --unpack || die "Failed to unpack"
+
+	# see bug #207282
+	if use x86; then
+		einfo "Creating the Class Data Sharing archives"
+		"${S}"/bin/java -client -Xshare:dump || die
+		"${S}"/bin/java -server -Xshare:dump || die
+	fi
 }
 
 src_install() {
