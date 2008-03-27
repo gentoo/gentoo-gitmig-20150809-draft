@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.56 2008/03/26 17:08:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.57 2008/03/27 12:24:40 coldwind Exp $
+
+  27 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  linux-logo-5.03.ebuild:
+  amd64 stable wrt bug #214912
 
   26 Mar 2008; Raúl Porcel <armin76@gentoo.org> linux-logo-5.03.ebuild:
   sparc/x86 stable
