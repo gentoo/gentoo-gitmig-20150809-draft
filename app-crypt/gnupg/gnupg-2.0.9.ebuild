@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.8-r2.ebuild,v 1.2 2008/03/07 07:33:20 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.9.ebuild,v 1.1 2008/03/27 06:06:04 alonbl Exp $
 
 inherit flag-o-matic eutils
 
@@ -38,17 +38,9 @@ RDEPEND="${COMMON_DEPEND}
 	selinux? ( sec-policy/selinux-gnupg )
 	nls? ( virtual/libintl )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-2.0.4-idea.patch"
-	epatch "${FILESDIR}/${P}-qualified.patch"
-}
-
 src_compile() {
-	append-ldflags $(bindnow-flags)
-
 	econf \
+		--docdir="/usr/share/doc/${PF}" \
 		--enable-symcryptrun \
 		--enable-gpg \
 		--enable-gpgsm \
@@ -69,6 +61,9 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc ChangeLog NEWS README THANKS TODO VERSION
+
+	mv "${D}/usr/share/gnupg"/{help*,faq*,FAQ} "${D}/usr/share/doc/${PF}"
+	prepalldocs
 
 	dosym gpg2 /usr/bin/gpg
 	dosym gpgv2 /usr/bin/gpgv
