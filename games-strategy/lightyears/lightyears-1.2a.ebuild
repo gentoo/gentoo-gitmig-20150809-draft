@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/lightyears-1.2a.ebuild,v 1.4 2007/05/29 22:35:37 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/lightyears-1.2a.ebuild,v 1.5 2008/03/28 12:22:42 nyhm Exp $
 
 inherit eutils python games
 
@@ -56,8 +56,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	python_mod_optimize "${ROOT}$(games_get_libdir)/${PN}"
 	games_pkg_postinst
-	python_mod_optimize "$(games_get_libdir)/${PN}"
 }
 
 pkg_postrm() {
