@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/secure-delete
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.24 2008/03/27 23:52:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.25 2008/03/28 15:01:53 nixnut Exp $
+
+  28 Mar 2008; nixnut <nixnut@gentoo.org> secure-delete-3.1.ebuild:
+  Stable on ppc wrt bug 214944
 
   27 Mar 2008; Jeroen Roovers <jer@gentoo.org> secure-delete-3.1.ebuild:
   Stable for HPPA (bug #214944).

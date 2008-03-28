@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/secure-delete-3.1.ebuild,v 1.7 2008/03/27 23:52:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/secure-delete-3.1.ebuild,v 1.8 2008/03/28 15:01:53 nixnut Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.thc.org/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
