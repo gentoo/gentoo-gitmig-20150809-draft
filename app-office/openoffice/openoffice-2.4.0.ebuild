@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.6 2008/03/28 13:02:05 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.7 2008/03/28 21:56:15 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -124,7 +124,7 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-libs/libxml2-2.0
 	firefox? ( =www-client/mozilla-firefox-2* )
 	>=dev-util/gperf-3
-	>=net-misc/curl-7.9.8
+	>=net-misc/curl-7.12
 	sys-libs/zlib
 	sys-apps/coreutils
 	media-gfx/imagemagick
