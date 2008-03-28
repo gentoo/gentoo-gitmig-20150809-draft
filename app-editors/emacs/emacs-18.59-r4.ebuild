@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r4.ebuild,v 1.8 2008/02/02 21:08:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r4.ebuild,v 1.9 2008/03/28 06:29:03 ulm Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -71,7 +71,6 @@ src_install() {
 
 	dodir ${MY_LOCKDIR%/*}
 	diropts -m0777
-	dodir ${MY_LOCKDIR}
 	keepdir ${MY_LOCKDIR}
 
 	for i in emacsclient etags ctags; do
