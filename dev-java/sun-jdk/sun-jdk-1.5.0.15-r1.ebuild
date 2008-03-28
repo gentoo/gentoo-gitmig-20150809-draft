@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.15-r1.ebuild,v 1.1 2008/03/27 20:18:28 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.15-r1.ebuild,v 1.2 2008/03/28 23:11:01 caster Exp $
 
 inherit versionator java-vm-2 eutils pax-utils
 
@@ -43,6 +43,12 @@ JAVA_PROVIDE="jdbc-stdext jdbc-rowset"
 
 src_unpack() {
 	sh "${DISTDIR}/${A}" --accept-license --unpack || die "Failed to unpack"
+}
+
+src_compile() {
+	# Set PaX markings on all JDK/JRE executables to allow code-generation on
+	# the heap by the JIT compiler. This needs to be done before CDS - #215225
+	pax-mark m $(list-paxables "${S}"{,/jre}/bin/*)
 
 	# see bug #207282
 	if use x86; then
@@ -53,10 +59,6 @@ src_unpack() {
 
 src_install() {
 	local dirs="bin include jre lib man"
-
-	# Set PaX markings on all JDK/JRE executables to allow code-generation on
-	# the heap by the JIT compiler.
-	pax-mark m $(list-paxables "${S}"{,/jre}/bin/*)
 
 	dodir /opt/${P}
 
