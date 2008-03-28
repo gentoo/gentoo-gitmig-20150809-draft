@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-glib2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.50 2008/03/28 06:28:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.51 2008/03/28 06:31:39 graaff Exp $
+
+  28 Mar 2008; Hans de Graaff <graaff@gentoo.org> -ruby-glib2-0.14.1.ebuild,
+  -ruby-glib2-0.15.0.ebuild, -ruby-glib2-0.16.0.ebuild,
+  -ruby-glib2-0.16.0-r1.ebuild:
+  Remove old versions
 
 *ruby-glib2-0.16.0-r3 (28 Mar 2008)
 

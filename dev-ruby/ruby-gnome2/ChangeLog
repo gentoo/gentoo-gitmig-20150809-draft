@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gnome2
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome2/ChangeLog,v 1.35 2007/05/21 11:30:41 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome2/ChangeLog,v 1.36 2008/03/28 06:33:25 graaff Exp $
+
+  28 Mar 2008; Hans de Graaff <graaff@gentoo.org>
+  -ruby-gnome2-0.12.0.ebuild, -ruby-gnome2-0.14.1.ebuild,
+  -ruby-gnome2-0.15.0.ebuild:
+  Remove old versions
 
   21 May 2007; Raúl Porcel <armin76@gentoo.org> ruby-gnome2-0.16.0.ebuild:
   alpha stable wrt #169094
