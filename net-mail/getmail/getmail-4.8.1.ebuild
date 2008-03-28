@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.8.0.ebuild,v 1.1 2008/02/29 22:10:53 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.8.1.ebuild,v 1.1 2008/03/28 06:12:11 ticho Exp $
 
 inherit distutils
 

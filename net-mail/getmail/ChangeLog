@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.158 2008/02/29 22:10:53 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.159 2008/03/28 06:12:11 ticho Exp $
+
+*getmail-4.8.1 (28 Mar 2008)
+
+  28 Mar 2008; Andrej Kacian <ticho@gentoo.org> -getmail-4.8.0.ebuild,
+  +getmail-4.8.1.ebuild:
+  Version bump. Removed ebuild for previous version, as it contained bug,
+  preventing it to run on python-2.3.
 
 *getmail-4.8.0 (29 Feb 2008)
 
