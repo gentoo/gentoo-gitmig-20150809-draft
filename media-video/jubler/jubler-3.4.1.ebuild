@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.4.1.ebuild,v 1.5 2008/03/26 22:17:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.4.1.ebuild,v 1.6 2008/03/28 21:13:02 ken69267 Exp $
 
 inherit gnome2 eutils java-pkg-2 java-ant-2 toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-src-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="mplayer nls spell"
 
 RDEPEND=">=virtual/jre-1.5
