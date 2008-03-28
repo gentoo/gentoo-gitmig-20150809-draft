@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtkglext
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkglext/ChangeLog,v 1.22 2008/01/17 18:05:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkglext/ChangeLog,v 1.23 2008/03/28 17:14:52 fmccor Exp $
+
+  28 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
+  ruby-gtkglext-0.16.0.ebuild:
+  Sparc stable, part of Bug #215149.
 
   17 Jan 2008; Diego Pettenò <flameeyes@gentoo.org>
   ruby-gtkglext-0.16.0.ebuild:

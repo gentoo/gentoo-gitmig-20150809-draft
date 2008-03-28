@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtkhtml2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.12 2008/01/17 16:08:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.13 2008/03/28 17:15:52 fmccor Exp $
+
+  28 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
+  ruby-gtkhtml2-0.16.0.ebuild:
+  Sparc stable, part of Bug #215149.
 
   17 Jan 2008; Diego Pettenò <flameeyes@gentoo.org>
   ruby-gtkhtml2-0.16.0.ebuild:
