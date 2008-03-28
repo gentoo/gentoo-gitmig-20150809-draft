@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.38 2008/03/25 22:51:57 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.39 2008/03/28 19:19:42 hoffie Exp $
+
+  28 Mar 2008; Jakub Moc <jakub@gentoo.org>
+  +files/pecl-apc-3.0.16-CVE-2008-1488.patch,
+  +pecl-apc-3.0.16-r1.ebuild:
+  Add patched 3.0.16 for CVE-2008-1488 since 3.0.17 causes segfaults.
 
   25 Mar 2008; Jakub Moc <jakub@gentoo.org>
   +pecl-apc-3.0.17.ebuild:
