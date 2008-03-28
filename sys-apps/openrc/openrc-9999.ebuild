@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.13 2008/03/26 20:12:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.14 2008/03/28 16:57:35 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://roy.marples.name/openrc"
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="" #"~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="debug ncurses pam static unicode kernel_linux kernel_FreeBSD"
+IUSE="debug ncurses pam unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
 	kernel_linux? ( >=sys-apps/module-init-tools-3.2.2-r2 )
@@ -44,20 +44,23 @@ pkg_setup() {
 		MAKE_ARGS="${MAKE_ARGS} OS=Linux"
 		brand="Linux"
 	elif use kernel_FreeBSD ; then
-		MAKE_ARGS="${MAKE_ARGS} OS=FreeBSD SUBOS=BSD"
+		MAKE_ARGS="${MAKE_ARGS} OS=FreeBSD"
 		brand="FreeBSD"
 	fi
 	export BRANDING="Gentoo ${brand}"
 
-	export PROGLDFLAGS=$(use static && echo -static)
 	export DEBUG=$(usev debug)
-	export MKPAM=$(use static || usev pam)
+	export MKPAM=$(usev pam)
 	export MKTERMCAP=$(usev ncurses)
+}
 
-	if use pam && use static ; then
-		ewarn "OpenRC cannot be built statically with PAM support,"
-		ewarn "so PAM support has been disabled."
+src_unpack() {
+	if [[ ${PV} == "9999" ]] ; then
+		git_src_unpack
+	else
+		unpack ${A}
 	fi
+	cd "${S}"
 }
 
 src_compile() {
