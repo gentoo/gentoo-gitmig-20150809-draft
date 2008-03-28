@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/japitools-0.9.7.ebuild,v 1.5 2008/03/27 18:09:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/japitools-0.9.7.ebuild,v 1.6 2008/03/28 06:53:20 opfer Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
@@ -27,7 +27,7 @@ RDEPEND=">=virtual/jre-1.4"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}/bin || die
+	cd "${S}"/bin || die
 	rm japize.bat || die
 	sed -e "s:../share/java:../share/${PN}/lib:" -i * \
 		|| die "Failed to correct the location of the jar file in perl scripts."
