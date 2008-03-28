@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.76 2008/03/13 21:29:03 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.77 2008/03/28 08:55:14 jer Exp $
+
+  28 Mar 2008; Jeroen Roovers <jer@gentoo.org> GD-2.35-r1.ebuild:
+  Stable for HPPA too.
 
   13 Mar 2008; <ricmm@gentoo.org> GD-2.30.ebuild, GD-2.35-r1.ebuild:
   Drop to ~mips due to unstable deps

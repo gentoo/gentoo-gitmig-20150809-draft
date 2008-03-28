@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/Test-Base-0.54.ebuild,v 1.6 2007/12/27 13:59:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/Test-Base-0.54.ebuild,v 1.7 2008/03/28 09:17:52 jer Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://search.cpan.org/search?query=${PN}"
 SRC_URI="mirror://cpan/authors/id/I/IN/INGY/${P}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 SRC_TEST="do"

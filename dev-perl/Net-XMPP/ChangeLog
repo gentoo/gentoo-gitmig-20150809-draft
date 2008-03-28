@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-XMPP
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/ChangeLog,v 1.22 2007/12/04 20:38:05 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/ChangeLog,v 1.23 2008/03/28 09:42:46 jer Exp $
+
+  28 Mar 2008; Jeroen Roovers <jer@gentoo.org> Net-XMPP-1.02.ebuild:
+  Stable for HPPA too.
 
   04 Dec 2007; Markus Rothe <corsair@gentoo.org> Net-XMPP-1.02.ebuild:
   Stable on ppc64; bug #198075

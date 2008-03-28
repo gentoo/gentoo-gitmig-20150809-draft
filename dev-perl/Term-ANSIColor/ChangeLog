@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Term-ANSIColor
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIColor/ChangeLog,v 1.35 2007/11/10 14:38:16 drac Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIColor/ChangeLog,v 1.36 2008/03/28 09:04:39 jer Exp $
+
+  28 Mar 2008; Jeroen Roovers <jer@gentoo.org> Term-ANSIColor-1.12.ebuild:
+  Stable for HPPA too.
 
   10 Nov 2007; Samuli Suominen <drac@gentoo.org> Term-ANSIColor-1.12.ebuild:
   amd64 stable
