@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.158 2008/03/28 15:26:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.159 2008/03/28 18:49:07 vapier Exp $
+
+*file-4.24 (28 Mar 2008)
+
+  28 Mar 2008; Mike Frysinger <vapier@gentoo.org> +file-4.24.ebuild:
+  Version bump.
 
   28 Mar 2008; Brent Baude <ranger@gentoo.org> file-4.23.ebuild:
   stable ppc, bug 215058
