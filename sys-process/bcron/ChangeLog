@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/bcron
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.9 2007/10/27 21:21:48 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.10 2008/03/28 22:49:07 maekke Exp $
+
+  28 Mar 2008; Markus Meier <maekke@gentoo.org> bcron-0.09.ebuild:
+  amd64 stable, bug #207629
 
   27 Oct 2007; Thilo Bangert <bangert@gentoo.org> bcron-0.09.ebuild:
   fix quoting - use eclass
