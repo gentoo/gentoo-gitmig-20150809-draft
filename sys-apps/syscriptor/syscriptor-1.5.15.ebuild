@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/syscriptor/syscriptor-1.5.15.ebuild,v 1.2 2008/02/07 13:53:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/syscriptor/syscriptor-1.5.15.ebuild,v 1.3 2008/03/28 13:42:24 coldwind Exp $
 
 DESCRIPTION="display misc information about your hardware"
 HOMEPAGE="http://syscriptor.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc x86"
+KEYWORDS="~alpha amd64 ~ppc x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}
