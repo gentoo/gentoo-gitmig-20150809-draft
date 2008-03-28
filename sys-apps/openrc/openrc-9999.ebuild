@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.14 2008/03/28 16:57:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.15 2008/03/28 18:56:57 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -99,6 +99,8 @@ src_install() {
 }
 
 pkg_preinst() {
+	local f
+
 	# default net script is just comments, so no point in biting people
 	# in the ass by accident
 	[[ -e ${ROOT}/etc/conf.d/net ]] && rm -f "${D}"/etc/conf.d/net
@@ -132,15 +134,24 @@ pkg_preinst() {
 		)
 	fi
 
+	# force net init.d scripts into symlinks
+	for f in "${ROOT}"/etc/init.d/net.* ; do
+		if [[ ! -L ${f} ]] ; then
+			elog "Moved net service '${f##*/}' to '${f##*/}.openrc.bak' to force a symlink."
+			elog "You should delete '${f##*/}.openrc.bak' if you don't need it."
+			mv "${f}" "${f}.openrc.bak"
+			ln -snf net.lo "${f}"
+		fi
+	done
+
 	# skip remaining migration if we already have openrc installed
 	has_version sys-apps/openrc && return 0
 
 	# baselayout boot init scripts have been split out
-	local x
-	for x in $(cd "${D}"/usr/share/${PN}/runlevels/boot || exit; echo *) ; do
-		[[ -e ${ROOT}/etc/runlevels/boot/${x} ]] && continue
-		elog "Auto-adding '${x}' service to your boot runlevel"
-		ln -snf /etc/init.d/${x} "${ROOT}"/etc/runlevels/boot/${x}
+	for f in $(cd "${D}"/usr/share/${PN}/runlevels/boot || exit; echo *) ; do
+		[[ -e ${ROOT}/etc/runlevels/boot/${f} ]] && continue
+		elog "Auto-adding '${f}' service to your boot runlevel"
+		ln -snf /etc/init.d/${f} "${ROOT}"/etc/runlevels/boot/${f}
 	done
 
 	# Upgrade out state for baselayout-1 users
