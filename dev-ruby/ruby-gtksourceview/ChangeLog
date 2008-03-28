@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtksourceview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtksourceview/ChangeLog,v 1.7 2008/01/17 16:10:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtksourceview/ChangeLog,v 1.8 2008/03/28 16:39:13 fmccor Exp $
+
+  28 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
+  ruby-gtksourceview-0.16.0.ebuild:
+  Add ~sparc for testing, related to Bug #215149.
 
   17 Jan 2008; Diego Pettenò <flameeyes@gentoo.org>
   ruby-gtksourceview-0.16.0.ebuild:
