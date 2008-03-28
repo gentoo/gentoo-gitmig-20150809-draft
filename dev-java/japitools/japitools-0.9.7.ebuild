@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/japitools-0.9.7.ebuild,v 1.6 2008/03/28 06:53:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/japitools-0.9.7.ebuild,v 1.7 2008/03/28 22:42:30 ken69267 Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
@@ -12,7 +12,7 @@ SRC_URI="http://www.kaffe.org/~stuart/japi/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-java/ant-core
