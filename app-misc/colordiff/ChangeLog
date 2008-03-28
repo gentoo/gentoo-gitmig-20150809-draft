@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/colordiff
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.67 2008/03/27 19:14:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.68 2008/03/28 04:25:38 beandog Exp $
+
+  28 Mar 2008; Steve Dibb <beandog@gentoo.org> colordiff-1.0.7.ebuild:
+  amd64 stable, bug 214917
 
   27 Mar 2008; nixnut <nixnut@gentoo.org> colordiff-1.0.7.ebuild:
   Stable on ppc wrt bug 214917
