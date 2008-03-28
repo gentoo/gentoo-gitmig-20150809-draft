@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws-tools/jax-ws-tools-2.0.1.ebuild,v 1.2 2007/05/07 14:03:59 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws-tools/jax-ws-tools-2.0.1.ebuild,v 1.3 2008/03/28 07:42:25 opfer Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -14,7 +14,7 @@ SRC_URI="https://jax-ws.dev.java.net/jax-ws-201-m1/${MY_P}"
 
 LICENSE="CDDL"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 COMMON_DEP="dev-java/istack-commons-runtime

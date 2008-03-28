@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/apt-mirror/apt-mirror-1.0.ebuild,v 1.2 2007/05/01 19:46:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/apt-mirror/apt-mirror-1.0.ebuild,v 1.3 2008/03/28 07:40:39 opfer Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE=""
 
