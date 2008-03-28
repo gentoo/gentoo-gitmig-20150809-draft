@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.2.9999.ebuild,v 1.3 2008/03/28 06:40:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.2.9999.ebuild,v 1.4 2008/03/28 06:55:30 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -71,8 +71,8 @@ src_unpack() {
 	echo
 	einfo "Emacs CVS branch: ${ECVS_BRANCH}"
 	einfo "Emacs version number: ${FULL_VERSION}"
-	#[ "${FULL_VERSION}" = ${PV} ] \
-	#	|| die "Upstream version number changed to ${FULL_VERSION}"
+	[ "${FULL_VERSION%.*}" = ${PV%.*} ] \
+		|| die "Upstream version number changed to ${FULL_VERSION}"
 	echo
 
 	epatch "${FILESDIR}/${PN}-Xaw3d-headers.patch"
