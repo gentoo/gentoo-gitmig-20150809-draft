@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.22.0.ebuild,v 1.1 2008/03/28 20:33:16 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.22.0.ebuild,v 1.2 2008/03/28 22:46:52 mr_bones_ Exp $
 EAPI="1"
 
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -165,7 +165,6 @@ RDEPEND="
 	mono? ( >=app-misc/tomboy-0.10.0 )"
 #	>=gnome-extra/swfdec-gnome-2.22.0 waiting on swfdec-0.6.1 release
 #	>=dasher-4.7.0 and >=gnome-mag-0.15 waiting on bumps to enter tree
-
 
 # Development tools
 #   scrollkeeper
