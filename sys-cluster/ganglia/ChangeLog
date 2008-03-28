@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ganglia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.14 2008/03/07 02:06:37 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.15 2008/03/28 19:36:17 jsbronder Exp $
+
+  28 Mar 2008; Justin Bronder <jsbronder@gentoo.org> ganglia-3.0.7.ebuild:
+  Correctly depend on httpd-php-5 without breaking the cache.
 
 *ganglia-3.0.7 (07 Mar 2008)
 

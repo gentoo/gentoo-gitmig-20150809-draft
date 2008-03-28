@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.0.7.ebuild,v 1.1 2008/03/07 02:06:37 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.0.7.ebuild,v 1.2 2008/03/28 19:36:17 jsbronder Exp $
 
 WEBAPP_OPTIONAL="yes"
 inherit webapp depend.php
@@ -16,11 +16,11 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="test minimal vhosts"
 
 RDEPEND="!minimal? ( net-analyzer/rrdtool
-		    ${WEBAPP_DEPEND} )"
+		    ${WEBAPP_DEPEND}
+			=virtual/httpd-php-5* )"
 DEPEND="${RDEPEND}
 	test? ( >=dev-libs/check-0.8.2 )"
 
-! use minimal && need_php5_httpd
 
 pkg_setup() {
 	if ! use minimal ; then
