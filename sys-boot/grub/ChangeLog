@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.82 2008/03/25 06:23:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.83 2008/03/28 22:19:17 vapier Exp $
+
+  28 Mar 2008; Mike Frysinger <vapier@gentoo.org> grub-0.97-r5.ebuild:
+  Make ncurses optional.
 
 *grub-0.97-r5 (25 Mar 2008)
 

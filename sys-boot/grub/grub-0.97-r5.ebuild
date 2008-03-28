@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.1 2008/03/25 06:23:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.2 2008/03/28 22:19:17 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
@@ -15,9 +15,9 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
-IUSE="static netboot custom-cflags"
+IUSE="custom-cflags ncurses netboot static"
 
-DEPEND=">=sys-libs/ncurses-5.2-r5"
+DEPEND="ncurses? ( >=sys-libs/ncurses-5.2-r5 )"
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
@@ -85,7 +85,13 @@ src_compile() {
 		--libdir=/lib \
 		--datadir=/usr/lib/grub \
 		--exec-prefix=/ \
-		--disable-auto-linux-mem-opt || die "econf failed"
+		--disable-auto-linux-mem-opt \
+		$(use_with ncurses curses) \
+		|| die "econf failed"
+
+	# sanity check due to common failure
+	use ncurses && ! grep -qs "HAVE_LIBCURSES.*1" config.h && die "USE=ncurses but curses not found"
+
 	emake || die "making regular stuff"
 }
 
@@ -96,7 +102,7 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	if use netboot ; then
 		exeinto /usr/lib/grub/${CHOST}
 		doexe nbgrub pxegrub stage2/stage2.netboot || die "netboot install"
