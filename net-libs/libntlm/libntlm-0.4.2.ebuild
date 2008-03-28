@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/libntlm-0.4.0.ebuild,v 1.5 2007/10/14 15:31:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/libntlm-0.4.2.ebuild,v 1.1 2008/03/28 23:59:06 ticho Exp $
 
 DESCRIPTION="Microsoft's NTLM authentication (libntlm) library"
 HOMEPAGE="http://josefsson.org/libntlm/"
