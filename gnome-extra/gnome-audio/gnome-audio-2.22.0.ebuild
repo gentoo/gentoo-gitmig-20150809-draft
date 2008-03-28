@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-audio/gnome-audio-2.22.0.ebuild,v 1.1 2008/03/27 22:43:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-audio/gnome-audio-2.22.0.ebuild,v 1.2 2008/03/28 09:56:43 leio Exp $
 
 inherit gnome2
 
@@ -22,5 +22,5 @@ src_install() {
 	# emake fails probably because files aren't were they are supposed too
 	# when it comes to the ln commands
 	make datadir="${D}/usr/share" install || die "installed failed"
-	dodoc README
+	dodoc ChangeLog README
 }
