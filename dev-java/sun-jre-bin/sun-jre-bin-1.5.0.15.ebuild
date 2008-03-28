@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.15.ebuild,v 1.4 2008/03/27 20:25:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.15.ebuild,v 1.5 2008/03/28 23:16:30 caster Exp $
 
 inherit pax-utils versionator eutils java-vm-2
 
@@ -46,6 +46,12 @@ src_unpack() {
 
 	cd ..
 	bash "${FILESDIR}/construct.sh"  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
+}
+
+src_compile() {
+	# Set PaX markings on all JDK/JRE executables to allow code-generation on
+	# the heap by the JIT compiler. This has to be done before CDS - #215225
+	pax-mark m $(list-paxables "${S}"/bin/*)
 
 	# see bug #207282
 	if use x86; then
@@ -55,10 +61,6 @@ src_unpack() {
 }
 
 src_install() {
-	# Set PaX markings on all JDK/JRE executables to allow code-generation on
-	# the heap by the JIT compiler.
-	pax-mark m $(list-paxables "${S}"/bin/*)
-
 	local dirs="bin lib man"
 	# only X86 has the plugin and javaws
 	use x86 && dirs="${dirs} javaws plugin"
