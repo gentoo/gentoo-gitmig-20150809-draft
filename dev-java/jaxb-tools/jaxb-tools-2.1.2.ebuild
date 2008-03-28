@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/jaxb-tools-2.1.2.ebuild,v 1.4 2007/08/19 18:40:18 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/jaxb-tools-2.1.2.ebuild,v 1.5 2008/03/28 18:13:10 nixnut Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -12,7 +12,7 @@ SRC_URI="https://jaxb.dev.java.net/${PV}/JAXB2_src_20070125.jar"
 
 LICENSE="CDDL"
 SLOT="2"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEP="=dev-java/codemodel-2*

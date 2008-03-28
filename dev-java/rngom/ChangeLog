@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rngom
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rngom/ChangeLog,v 1.8 2007/08/19 18:13:07 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rngom/ChangeLog,v 1.9 2008/03/28 17:54:55 nixnut Exp $
+
+  28 Mar 2008; nixnut <nixnut@gentoo.org> rngom-20051226.ebuild:
+  Stable on ppc wrt bug 214778
 
   19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   rngom-20051226.ebuild:

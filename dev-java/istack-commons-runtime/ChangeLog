@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/istack-commons-runtime
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.6 2007/08/19 17:57:24 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.7 2008/03/28 17:50:06 nixnut Exp $
+
+  28 Mar 2008; nixnut <nixnut@gentoo.org>
+  istack-commons-runtime-20070122.ebuild:
+  Stable on ppc wrt bug 214778
 
   19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   istack-commons-runtime-20070122.ebuild:

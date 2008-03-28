@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/saaj
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/ChangeLog,v 1.9 2008/03/09 18:35:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/ChangeLog,v 1.10 2008/03/28 18:06:12 nixnut Exp $
+
+  28 Mar 2008; nixnut <nixnut@gentoo.org> saaj-1.3.ebuild:
+  Stable on ppc wrt bug 214778
 
   09 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> saaj-1.3.ebuild:
   Restrict to either 1.6 or 1.5 as 1.7 release don't have needed com.sun.*

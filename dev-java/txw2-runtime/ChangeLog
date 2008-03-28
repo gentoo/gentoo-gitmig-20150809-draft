@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/txw2-runtime
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/ChangeLog,v 1.8 2007/08/19 18:31:16 wltjr Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/ChangeLog,v 1.9 2008/03/28 18:09:40 nixnut Exp $
+
+  28 Mar 2008; nixnut <nixnut@gentoo.org> txw2-runtime-20070407.ebuild:
+  Stable on ppc wrt bug 214778
 
   19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   txw2-runtime-20070407.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/relaxngcc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/ChangeLog,v 1.8 2007/11/13 12:32:21 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/ChangeLog,v 1.9 2008/03/28 18:01:38 nixnut Exp $
+
+  28 Mar 2008; nixnut <nixnut@gentoo.org> relaxngcc-1.12.ebuild:
+  Stable on ppc wrt bug 214778
 
   13 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   relaxngcc-1.12.ebuild:

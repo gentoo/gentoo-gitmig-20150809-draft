@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rngom/rngom-20051226.ebuild,v 1.7 2007/08/19 18:13:07 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rngom/rngom-20051226.ebuild,v 1.8 2008/03/28 17:54:55 nixnut Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="https://rngom.dev.java.net/files/documents/1647/26424/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEP="dev-java/relaxng-datatype
