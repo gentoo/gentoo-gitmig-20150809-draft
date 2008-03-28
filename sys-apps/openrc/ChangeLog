@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.9 2008/03/27 19:34:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.10 2008/03/28 15:32:40 armin76 Exp $
+
+  28 Mar 2008; Raúl Porcel <armin76@gentoo.org> openrc-0.2-r1.ebuild:
+  Add ~ia64 wrt #214957
 
   27 Mar 2008; Doug Goldstein <cardoe@gentoo.org> openrc-0.2-r1.ebuild:
   ~sparc-fbsd per bug #214957
