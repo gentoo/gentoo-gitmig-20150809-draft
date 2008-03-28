@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/dirvish
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/dirvish/ChangeLog,v 1.6 2006/10/22 13:51:52 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/dirvish/ChangeLog,v 1.7 2008/03/28 16:19:42 nixnut Exp $
+
+  28 Mar 2008; nixnut <nixnut@gentoo.org> dirvish-1.2.1.ebuild:
+  Stable on ppc wrt bug 214933
 
   22 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> dirvish-1.2.1.ebuild:
   Add ~amd64 keyword. Bug #129872.
