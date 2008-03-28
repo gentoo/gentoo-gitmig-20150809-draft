@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-audio/gnome-audio-2.22.0.ebuild,v 1.2 2008/03/28 09:56:43 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-audio/gnome-audio-2.22.0.ebuild,v 1.3 2008/03/28 22:47:12 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -16,7 +16,6 @@ DEPEND=""
 RDEPEND=""
 
 src_compile() { :; }
-
 
 src_install() {
 	# emake fails probably because files aren't were they are supposed too
