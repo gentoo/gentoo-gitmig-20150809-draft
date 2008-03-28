@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/javolution-4.0.2.ebuild,v 1.2 2007/06/16 11:05:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/javolution-4.0.2.ebuild,v 1.3 2008/03/28 07:38:30 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -10,7 +10,7 @@ SRC_URI="http://javolution.org/${P}-src.zip"
 HOMEPAGE="http://javolution.org"
 LICENSE="BSD"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.5

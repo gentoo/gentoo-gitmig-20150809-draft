@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javolution
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.12 2007/06/19 06:46:41 caster Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.13 2008/03/28 07:38:30 opfer Exp $
+
+  28 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
+  javolution-4.0.2.ebuild:
+  stable x86, bug 214776
 
   19 Jun 2007; Vlastimil Babka <caster@gentoo.org> -javolution-2.2.4.ebuild:
   Remove gen-1 revision.
