@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2-r2.ebuild,v 1.1 2008/03/28 20:11:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2-r2.ebuild,v 1.2 2008/03/28 21:17:44 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://roy.marples.name/openrc"
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc-fbsd ~x86" #"~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="debug ncurses pam static unicode kernel_linux kernel_FreeBSD"
+IUSE="debug ncurses pam unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
 	kernel_linux? ( >=sys-apps/module-init-tools-3.2.2-r2 )
@@ -51,19 +51,17 @@ pkg_setup() {
 	fi
 	export BRANDING="Gentoo ${brand}"
 
-	export PROGLDFLAGS=$(use static && echo -static)
 	export DEBUG=$(usev debug)
-	export MKPAM=$(use static || usev pam)
+	export MKPAM=$(usev pam)
 	export MKTERMCAP=$(usev ncurses)
-
-	if use pam && use static ; then
-		ewarn "OpenRC cannot be built statically with PAM support,"
-		ewarn "so PAM support has been disabled."
-	fi
 }
 
 src_unpack() {
-	unpack ${A}
+	if [[ ${PV} == "9999" ]] ; then
+		git_src_unpack
+	else
+		unpack ${A}
+	fi
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-0.2-freebsd-install-rc.patch
@@ -108,6 +106,8 @@ src_install() {
 }
 
 pkg_preinst() {
+	local f
+
 	# default net script is just comments, so no point in biting people
 	# in the ass by accident
 	[[ -e ${ROOT}/etc/conf.d/net ]] && rm -f "${D}"/etc/conf.d/net
@@ -141,15 +141,24 @@ pkg_preinst() {
 		)
 	fi
 
+	# force net init.d scripts into symlinks
+	for f in "${ROOT}"/etc/init.d/net.* ; do
+		if [[ ! -L ${f} ]] ; then
+			elog "Moved net service '${f##*/}' to '${f##*/}.openrc.bak' to force a symlink."
+			elog "You should delete '${f##*/}.openrc.bak' if you don't need it."
+			mv "${f}" "${f}.openrc.bak"
+			ln -snf net.lo "${f}"
+		fi
+	done
+
 	# skip remaining migration if we already have openrc installed
 	has_version sys-apps/openrc && return 0
 
 	# baselayout boot init scripts have been split out
-	local x
-	for x in $(cd "${D}"/usr/share/${PN}/runlevels/boot || exit; echo *) ; do
-		[[ -e ${ROOT}/etc/runlevels/boot/${x} ]] && continue
-		elog "Auto-adding '${x}' service to your boot runlevel"
-		ln -snf /etc/init.d/${x} "${ROOT}"/etc/runlevels/boot/${x}
+	for f in $(cd "${D}"/usr/share/${PN}/runlevels/boot || exit; echo *) ; do
+		[[ -e ${ROOT}/etc/runlevels/boot/${f} ]] && continue
+		elog "Auto-adding '${f}' service to your boot runlevel"
+		ln -snf /etc/init.d/${f} "${ROOT}"/etc/runlevels/boot/${f}
 	done
 
 	# Upgrade out state for baselayout-1 users
