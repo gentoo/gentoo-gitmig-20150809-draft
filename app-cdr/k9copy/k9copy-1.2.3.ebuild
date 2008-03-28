@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.2.3.ebuild,v 1.2 2008/01/21 03:24:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.2.3.ebuild,v 1.3 2008/03/28 20:43:18 philantrop Exp $
 
 EAPI="1"
 
@@ -24,11 +24,13 @@ DEPEND="media-video/dvdauthor
 	>=app-cdr/k3b-0.12.10
 	dev-libs/dbus-qt3-old
 	sys-apps/hal
+	>=media-video/ffmpeg-0.4.9_p20070616
 	media-video/mplayer"
 
 need-kde 3.5
 
-PATCHES="${FILESDIR}/k9copy-1.2.3-desktop-entry.diff"
+PATCHES="${FILESDIR}/${P}-desktop-entry.diff
+		${FILESDIR}/${P}-gcc43.patch"
 
 pkg_setup() {
 	kde_pkg_setup
