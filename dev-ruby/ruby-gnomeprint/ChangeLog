@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnomeprint
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomeprint/ChangeLog,v 1.6 2008/03/28 06:43:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomeprint/ChangeLog,v 1.7 2008/03/28 17:08:29 fmccor Exp $
+
+  28 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
+  ruby-gnomeprint-0.16.0.ebuild:
+  Add ~sparc for testing, related to Bug #215149.
 
   28 Mar 2008; Hans de Graaff <graaff@gentoo.org>
   -ruby-gnomeprint-0.14.1.ebuild, -ruby-gnomeprint-0.15.0.ebuild:
