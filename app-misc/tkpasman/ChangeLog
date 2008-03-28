@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tkpasman
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/ChangeLog,v 1.14 2008/03/26 19:37:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/ChangeLog,v 1.15 2008/03/28 14:55:51 nixnut Exp $
+
+  28 Mar 2008; nixnut <nixnut@gentoo.org> tkpasman-2.2b.ebuild:
+  Stable on ppc wrt bug 214955
 
   26 Mar 2008; Raúl Porcel <armin76@gentoo.org> tkpasman-2.2b.ebuild:
   x86 stable
