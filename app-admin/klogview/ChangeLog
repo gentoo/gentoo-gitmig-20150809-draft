@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/klogview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.7 2008/03/27 18:40:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.8 2008/03/28 16:17:29 nixnut Exp $
+
+  28 Mar 2008; nixnut <nixnut@gentoo.org> klogview-0.6.ebuild:
+  Stable on ppc wrt bug 215007
 
   27 Mar 2008; Raúl Porcel <armin76@gentoo.org> klogview-0.6.ebuild:
   sparc stable wrt #215007, thanks to Tiago Cunha for testing
