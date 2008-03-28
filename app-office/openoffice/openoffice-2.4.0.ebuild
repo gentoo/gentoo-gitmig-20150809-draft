@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.5 2008/03/28 12:12:15 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.4.0.ebuild,v 1.6 2008/03/28 13:02:05 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -9,7 +9,7 @@ inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 
 
 IUSE="binfilter cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono odk pam seamonkey webdav xulrunner"
 
-MY_PV="2.4.0.3.2"
+MY_PV="2.4.0.5"
 PATCHLEVEL="OOH680"
 SRC="OOo_${PV}_src"
 S="${WORKDIR}/ooo"
@@ -127,6 +127,7 @@ DEPEND="${COMMON_DEPEND}
 	>=net-misc/curl-7.9.8
 	sys-libs/zlib
 	sys-apps/coreutils
+	media-gfx/imagemagick
 	pam? ( sys-libs/pam )
 	!dev-util/dmake
 	>=dev-lang/python-2.3.4
@@ -209,13 +210,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PV}/gentoo-${PV}.diff"
 	epatch "${FILESDIR}/${PV}/ooo-env_log.diff"
-
-	# Hope we can get rid of this finally...
-#	if use ppc ; then
-#		cp -f "${FILESDIR}/${PV}/disable-regcomp-java.diff" "${S}/patches/src680" || die
-#		cp -f "${FILESDIR}/${PV}/disable-regcomp-python.diff" "${S}/patches/src680" || die
-#		epatch "${FILESDIR}/${PV}/regcompapply.diff"
-#	fi
 
 	#Use flag checks
 	if use java ; then
