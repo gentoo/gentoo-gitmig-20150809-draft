@@ -1,6 +1,9 @@
 # ChangeLog for net-im/msnlib
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.18 2007/11/20 06:34:55 hawking Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.19 2008/03/28 20:59:50 ranger Exp $
+
+  28 Mar 2008; Brent Baude <ranger@gentoo.org> msnlib-3.6.ebuild:
+  stable ppc, bug 215062
 
 *msnlib-3.6 (20 Nov 2007)
 
