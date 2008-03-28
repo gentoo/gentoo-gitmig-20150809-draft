@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9.ebuild,v 1.2 2008/02/29 18:52:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9.ebuild,v 1.3 2008/03/28 12:14:17 nyhm Exp $
 
 NEED_PYTHON="2.4"
 
@@ -31,7 +31,7 @@ src_unpack() {
 	sed -i -e "s:data_dir\ =\ .*:data_dir\ =\ \"${GAMES_DATADIR}/${PN}\":" \
 		lib/data.py || die "Changing data path failed"
 	rm data/pictures/Thumbs.db
-	}
+}
 
 src_install() {
 	newgamesbin run_game.py ${PN} || die "newgamesbin failed"
@@ -50,7 +50,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "$(games_get_libdir)/${PN}"
+	python_mod_optimize "${ROOT}$(games_get_libdir)/${PN}"
 	games_pkg_postinst
 }
 
