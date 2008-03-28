@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/bignum
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.15 2008/01/22 02:30:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.16 2008/03/28 06:51:20 jer Exp $
+
+  28 Mar 2008; Jeroen Roovers <jer@gentoo.org> bignum-0.21.ebuild:
+  Stable for HPPA too.
 
   22 Jan 2008; Brent Baude <ranger@gentoo.org> bignum-0.21.ebuild:
   Marking bignum-0.21 ppc for bug 206892

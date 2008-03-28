@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Math-BigRat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.14 2008/01/22 17:02:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.15 2008/03/28 06:48:44 jer Exp $
+
+  28 Mar 2008; Jeroen Roovers <jer@gentoo.org> Math-BigRat-0.19.ebuild:
+  Stable for HPPA too.
 
   22 Jan 2008; Brent Baude <ranger@gentoo.org> Math-BigRat-0.19.ebuild:
   Marking Math-BigRat-0.19 ppc for bug 206892
