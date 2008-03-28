@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/which
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.28 2008/03/13 18:48:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.29 2008/03/28 07:19:27 jer Exp $
+
+  28 Mar 2008; Jeroen Roovers <jer@gentoo.org> which-2.19.ebuild:
+  Stable for HPPA too.
 
   13 Mar 2008; Doug Goldstein <cardoe@gentoo.org>
   +files/which-2.19-remove-readline.patch, which-2.19.ebuild:
