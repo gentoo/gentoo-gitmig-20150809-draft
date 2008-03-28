@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/gsynaptics-0.9.10.ebuild,v 1.5 2008/02/22 05:06:37 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/gsynaptics-0.9.10.ebuild,v 1.6 2008/03/28 21:44:20 maekke Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/22897/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.6.0
