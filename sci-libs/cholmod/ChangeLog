@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/cholmod
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.2 2008/03/27 19:12:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.3 2008/03/28 12:20:03 bicatali Exp $
+
+*cholmod-1.6.0-r1 (28 Mar 2008)
+
+  28 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/cholmod-1.6.0-autotools.patch, -cholmod-1.6.0.ebuild,
+  +cholmod-1.6.0-r1.ebuild:
+  Fixed header locations for metis, added support for pkg-config for lapack
+  and metis, cleaned up autotools and ebuild
 
   27 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org> cholmod-1.6.0.ebuild:
   Added parmetis as a possible graph partitoner

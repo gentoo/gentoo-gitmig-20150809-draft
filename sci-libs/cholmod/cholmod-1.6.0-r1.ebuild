@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.6.0.ebuild,v 1.2 2008/03/27 19:12:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.6.0-r1.ebuild,v 1.1 2008/03/28 12:20:03 bicatali Exp $
 
 inherit autotools eutils
 
@@ -15,12 +15,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc metis minimal supernodal"
 
-DEPEND="supernodal? ( virtual/lapack )
+RDEPEND="supernodal? ( virtual/lapack )
 	sci-libs/amd
 	sci-libs/colamd
 	metis? ( sci-libs/camd
 			 sci-libs/ccolamd
-			 || ( sci-libs/parmetis sci-libs/metis ) )"
+			 || ( sci-libs/metis sci-libs/parmetis ) )"
+
+DEPEND="${RDEPEND}
+	supernodal? ( dev-util/pkgconfig )
+	metis? ( dev-util/pkgconfig )"
 
 S="${WORKDIR}/${MY_PN}"
 
@@ -54,17 +58,13 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
-
-	# Minimal is used to build only the LGPL libraries...
-	if use minimal; then
-		myconf="--disable-mod-modify
-			--disable-mod-matrixops"
-	fi
-
+	local lapack_libs=no
+	use supernodal && lapack_libs=$(pkg-config --libs lapack)
 	econf \
-		${myconf} \
+		--with-lapack="${lapack_libs}" \
 		$(use_enable supernodal mod-supernodal) \
+		$(use_enable !minimal mod-modify) \
+		$(use_enable !minimal mod-matrix-ops) \
 		$(use_enable metis mod-partition) \
 		|| die "econf failed"
 	emake || die "emake failed"
@@ -73,8 +73,8 @@ src_compile() {
 src_test() {
 	if ! use supernodal || ! use metis || use minimal; then
 		ewarn "According to your useflags, some modules were not built on"
-		ewarn "purpose.  This can cause the tests included with Cholmod"
-		ewarn "to fail.  Rebuild with USE=\"supernodal metis -minimal\""
+		ewarn "purpose. This can cause the tests included with Cholmod"
+		ewarn "to fail. Rebuild with USE=\"supernodal metis -minimal\""
 		ewarn "if you care."
 	fi
 	cd "${S}"/Demo
