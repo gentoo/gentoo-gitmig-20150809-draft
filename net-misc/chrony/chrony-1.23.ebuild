@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.23.ebuild,v 1.3 2008/03/27 22:54:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.23.ebuild,v 1.4 2008/03/28 14:46:43 nixnut Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://chrony.sunsite.dk/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~mips ~ppc sparc x86"
+KEYWORDS="~amd64 hppa ~mips ppc sparc x86"
 IUSE="readline"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1-r4 )"
@@ -26,6 +26,11 @@ src_unpack() {
 
 	sed -i "s:/etc/chrony:/etc/chrony/chrony:g" \
 		chrony*.{1,5,8} faq.txt chrony.texi || die "sed failed"
+
+	# bug 214757
+	sed -i "s:defined(__ppc__) ||:& defined(__powerpc__) ||:" \
+		"${S}"/io_linux.h || die
+
 	epatch "${FILESDIR}"/${PN}-1.21-hppa.patch
 }
 
