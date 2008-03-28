@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pysol
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/ChangeLog,v 1.17 2008/03/06 21:46:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/ChangeLog,v 1.18 2008/03/28 12:16:50 nyhm Exp $
+
+  28 Mar 2008; Tristan Heaven <nyhm@gentoo.org> pysol-4.82-r2.ebuild:
+  Fix python eclass usage
 
   06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> pysol-4.82-r2.ebuild:
   I hate to do this, but dropping from mips to ~mips since mips doesn't have a
