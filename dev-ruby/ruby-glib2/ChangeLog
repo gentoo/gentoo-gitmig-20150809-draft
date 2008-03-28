@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-glib2
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.49 2007/11/17 13:11:07 nixnut Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.50 2008/03/28 06:28:53 graaff Exp $
+
+*ruby-glib2-0.16.0-r3 (28 Mar 2008)
+
+  28 Mar 2008; Hans de Graaff <graaff@gentoo.org>
+  +files/ruby-glib2-0.16.0-glib-2.16.patch, +ruby-glib2-0.16.0-r3.ebuild:
+  Add patch from upstream to allow compilation with glib 2.16. Closes #213393.
+  Thank for leio for already providing the patch.
 
   17 Nov 2007; nixnut <nixnut@gentoo.org> ruby-glib2-0.16.0-r2.ebuild:
   Stable on ppc wrt bug 198845
