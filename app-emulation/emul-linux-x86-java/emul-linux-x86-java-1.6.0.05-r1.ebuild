@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.05-r1.ebuild,v 1.2 2008/03/27 20:16:58 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.05-r1.ebuild,v 1.3 2008/03/28 23:21:35 caster Exp $
 
 inherit versionator pax-utils java-vm-2 eutils
 
@@ -34,16 +34,18 @@ QA_TEXTRELS_amd64="opt/${P}/lib/i386/motif21/libmawt.so
 	opt/${P}/lib/i386/server/libjvm.so"
 
 src_unpack() {
-	if [[ ! -r "${DISTDIR}"/${A} ]]; then
-		die "cannot read ${DISTDIR}/${A}. Please check the permission and try again."
-	fi
-
 	mkdir bundled-jdk
 	cd bundled-jdk
 	sh "${DISTDIR}"/${At} --accept-license --unpack || die "Failed to unpack"
 
 	cd ..
 	bash "${FILESDIR}"/construct-${SLOT}.sh  bundled-jdk sun-jdk-${PV} ${P} || die "construct-${SLOT}.sh failed"
+}
+
+src_compile() {
+	# Set PaX markings on all JDK/JRE executables to allow code-generation on
+	# the heap by the JIT compiler. This has to be done before CDS - #215225
+	pax-mark m $(list-paxables "${S}"/bin/*)
 
 	# see bug #207282
 	einfo "Creating the Class Data Sharing archives"
@@ -56,8 +58,6 @@ src_install() {
 	dodir /opt/${P}
 
 	cp -pPR ${dirs} "${D}/opt/${P}/" || die "failed to copy"
-
-	pax-mark m $(list-paxables "${D}"/opt/${P}/bin/*)
 
 	dodoc README THIRDPARTYLICENSEREADME.txt || die
 	dohtml Welcome.html || die
