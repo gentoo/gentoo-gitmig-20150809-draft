@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gdata
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.5 2007/10/09 21:40:11 lack Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.6 2008/03/28 06:47:13 hawking Exp $
+
+  28 Mar 2008; Ali Polatel <hawking@gentoo.org>
+  +files/gdata-1.0.8-test-fix.patch, gdata-1.0.8.ebuild:
+  Add patch from upstream to fix tests. Bug 212983
 
 *gdata-1.0.8 (09 Oct 2007)
 

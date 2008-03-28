@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-1.0.8.ebuild,v 1.1 2007/10/09 21:40:11 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-1.0.8.ebuild,v 1.2 2008/03/28 06:47:13 hawking Exp $
 
-inherit distutils
+inherit distutils eutils
 
 MY_P="gdata.py-${PV}"
 
@@ -20,6 +20,12 @@ RDEPEND="|| ( >=dev-lang/python-2.5 dev-python/elementtree )"
 
 PYTHON_MODNAME="atom gdata"
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	distutils_src_unpack
+
+	epatch "${FILESDIR}/${P}-test-fix.patch"
+}
 
 src_install() {
 	distutils_src_install
