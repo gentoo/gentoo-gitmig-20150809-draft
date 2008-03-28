@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.2-r1.ebuild,v 1.2 2008/02/13 14:33:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.4.ebuild,v 1.1 2008/03/28 18:30:44 bicatali Exp $
 
-inherit eutils multilib qt4 python
+inherit eutils multilib qt4
 
 DESCRIPTION="Qt based clone of the Origin plotting package"
 HOMEPAGE="http://soft.proindependent.com/qtiplot.html"
@@ -11,7 +11,7 @@ SRC_URI="http://soft.proindependent.com/src/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="python doc bindist"
 
 LANGS="de es fr ja ru sv"
@@ -22,7 +22,7 @@ done
 CDEPEND=">=x11-libs/qwt-5.0.2
 	>=x11-libs/qwtplot3d-0.2.7
 	>=dev-cpp/muParser-1.28
-	>=sci-libs/liborigin-20071119
+	>=sci-libs/liborigin-20080225
 	!bindist? ( sci-libs/gsl )
 	bindist? ( <sci-libs/gsl-1.10 )"
 
@@ -42,6 +42,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-systemlibs.patch
+
+	# docs: remove default doc building
+	sed -i -e '/manual/d' qtiplot.pro qtiplot/qtiplot.pro \
+		|| die "die sed for docs failed"
+	sed -i -e "s:doc/${PN}:doc/${PF}:" qtiplot/qtiplot.pro
+
 	if ! use python; then
 		sed -i \
 			-e '/^SCRIPTING_LANGS += Python/d' \
@@ -54,10 +60,18 @@ src_unpack() {
 		-e "s|/usr/lib\$\${libsuff}|/usr/$(get_libdir)|g" \
 		fitPlugins/fit*/fitRational*.pro \
 		|| die "sed fitRational* failed"
+
+	for l in ${LANGS}; do
+		if ! use linguas_${l}; then
+			sed -i \
+				-e "s:translations/qtiplot_${l}.ts::" \
+				${PN}/${PN}.pro || die
+		fi
+	done
 }
 
 src_compile() {
-	eqmake4 ${PN}.pro || die "eqmake4 failed"
+	eqmake4 || die "eqmake4 failed"
 	emake || die "emake failed"
 }
 
@@ -65,37 +79,18 @@ src_install() {
 	emake INSTALL_ROOT="${D}" install || die 'emake install failed'
 
 	newicon qtiplot_logo.png qtiplot.png
-	make_desktop_entry qtiplot QtiPlot qtiplot "Education;Science;Math;Qt"
+	make_desktop_entry qtiplot QtiPlot qtiplot
 	doman qtiplot.1 || die "doman failed"
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins -r "${WORKDIR}"/manual-en || die "install manual failed"
+		doins -r "${WORKDIR}"/qtiplot-manual-en \
+			|| die "install manual failed"
 	fi
-
-	for l in ${LANGS}; do
-		if use linguas_${l}; then
-			insinto /usr/share/${PN}/translations
-			doins ${PN}/translations/*${l}*.qm || die "install ${l} failed"
-		fi
-	done
 
 	if use python; then
 		cd "${S}"/${PN}
 		insinto /etc
-		doins qtiplotrc.py || die
-		python_version
-		insinto /usr/$(get_libdir)/python${PYVER}/site-packages
-		doins qtiUtil.py || die
+		doins qtiplotrc.py qtiUtil.py || die
 	fi
-}
-
-pkg_postinst() {
-	use python && python_mod_optimize \
-		"${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/qtiUtil.py
-}
-
-pkg_postrm() {
-	use python && python_mod_cleanup \
-		"${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/qtiUtil*
 }
