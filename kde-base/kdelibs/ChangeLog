@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.519 2008/03/20 16:45:58 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.520 2008/03/28 23:34:31 philantrop Exp $
+
+*kdelibs-3.5.9-r1 (28 Mar 2008)
+
+  28 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kdelibs-3.5.9-cursor.patch, +kdelibs-3.5.9-r1.ebuild:
+  Added an upstream patch to fix bug 212749 (incorrect cursor position after
+  pasting).
 
   20 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   -files/kdelibs-4.0.1-X11-optional.patch,
