@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/gurlchecker
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.19 2007/09/13 00:18:48 leonardop Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.20 2008/03/28 02:03:59 jer Exp $
+
+  28 Mar 2008; Jeroen Roovers <jer@gentoo.org> gurlchecker-0.10.1.ebuild:
+  Marked ~hppa too. Fixed quoting issues.
 
 *gurlchecker-0.10.1 (13 Sep 2007)
 
