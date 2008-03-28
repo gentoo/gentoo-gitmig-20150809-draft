@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50_pre20080201.ebuild,v 1.5 2008/02/11 20:36:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.50_pre20080201.ebuild,v 1.6 2008/03/28 06:40:50 ulm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -174,7 +174,8 @@ src_install () {
 	rm "${D}"/usr/share/emacs/site-lisp/subdirs.el
 	rm -rf "${D}"/usr/share/{applications,icons}
 	rm "${D}"/var/lib/games/emacs/{snake,tetris}-scores
-	keepdir /var/lib/games/emacs/
+	keepdir /usr/share/emacs/site-lisp
+	keepdir /var/lib/games/emacs
 
 	if use source; then
 		insinto /usr/share/emacs/${FULL_VERSION}/src
