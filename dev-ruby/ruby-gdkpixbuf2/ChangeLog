@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf2
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.39 2007/07/24 21:53:04 armin76 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.40 2008/03/28 06:39:38 graaff Exp $
+
+  28 Mar 2008; Hans de Graaff <graaff@gentoo.org>
+  -files/ruby-gdkpixbuf2-0.11.0-fix-includes.patch,
+  -ruby-gdkpixbuf2-0.14.1.ebuild, -ruby-gdkpixbuf2-0.15.0.ebuild:
+  Remove old versions
 
   24 Jul 2007; Raúl Porcel <armin76@gentoo.org>
   ruby-gdkpixbuf2-0.16.0.ebuild:
