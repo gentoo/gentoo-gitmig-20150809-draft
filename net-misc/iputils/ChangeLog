@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.66 2008/03/29 02:27:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.67 2008/03/29 12:36:51 cla Exp $
+
+  29 Mar 2008; Dawid Węgliński <cla@gentoo.org> iputils-20071127.ebuild:
+  Stable on x86 (bug #214734)
 
   29 Mar 2008; Mike Frysinger <vapier@gentoo.org> iputils-20071127.ebuild:
   Fixup manpage install.
