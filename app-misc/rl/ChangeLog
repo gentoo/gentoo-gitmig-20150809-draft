@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/rl
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/ChangeLog,v 1.28 2008/03/26 17:23:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/ChangeLog,v 1.29 2008/03/29 13:36:36 coldwind Exp $
+
+  29 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> rl-0.2.6.ebuild:
+  amd64 stable
 
   26 Mar 2008; Raúl Porcel <armin76@gentoo.org> rl-0.2.6.ebuild:
   Add ~ia64
