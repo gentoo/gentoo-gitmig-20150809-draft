@@ -1,15 +1,19 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/files/clvmd.rc,v 1.3 2006/05/17 18:19:05 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/files/clvmd.rc,v 1.4 2008/03/29 15:42:28 xmerlin Exp $
+
+CLVM_BIN="/sbin/clvmd"
+VGCHANGE="/sbin/vgchange"
+VGSCAN="/sbin/vgscan"
+VGDISPLAY="/sbin/vgdisplay"
 
 depend() {
 	use dns logger
 	use net
-	need cluster-manager cluster-locking-manager fenced
+	need cman
+	before gfs
 }
-
-exefile=/sbin/clvmd
 
 load_modules() {
 	local module modules
@@ -63,84 +67,75 @@ umount_gfs_filesystems() {
 	fi
 }
 
-
-
 start() {
 
-	local module=$(awk '$1 == "dm_mod" { print $1 }' /proc/modules)
+	local module=$(awk '$1 == "dm_mod" { print $1 }' /proc/{modules,devices})
+
 	if [ -z "${module}" ]; then
-		load_modules dm-mod
+		load_modules "dm-mod"
 		sleep 1s
 	fi
 
 	ebegin "Starting clvmd"
-	start-stop-daemon --start --quiet --exec ${exefile}
+	start-stop-daemon --start --quiet --exec ${CLVM_BIN}
 	eend $?
 
 	ebegin "Scanning LVM volumes"
-	/sbin/vgscan &>/dev/null
+	${VGSCAN} &>/dev/null
 	eend $?
 	
-	if [ "$?" -eq 0 ] && [ -x /sbin/vgchange ] && [ -f /etc/lvmtab -o -d /etc/lvm ]
+	#if [ "$?" -eq 0 ] && [ -x /sbin/vgchange ] && [ -f /etc/lvmtab -o -d /etc/lvm ]
+	#then
+	#	ebegin "Setting up the Logical Volume Manager"
+	#	/sbin/vgchange -aly >/dev/null
+	#	eend $? "Failed to setup the LVM"
+	#fi
+
+	if [ -n "$LVM_VGS" ]
 	then
-		ebegin "Setting up the Logical Volume Manager"
-		/sbin/vgchange -aly >/dev/null
-		eend $? "Failed to setup the LVM"
+		for vg in $LVM_VGS
+		do
+			ebegin "  Activating VG: ${vg} "
+                        $VGCHANGE -ayl ${vg} >/dev/null
+                        eend $?
+		done
+	else
+		clustervgs=`$VGDISPLAY 2> /dev/null | awk 'BEGIN {RS="VG Name"} {if (/Clustered/) print $1;}'`
+		for vg in $clustervgs; do
+			ebegin "  Activating Clustered VG: ${vg} "
+			$VGCHANGE -ayl ${vg} >/dev/null
+			eend $?
+		done
 	fi
-	
 }
 
 stop() {
-
 	# umount GFS filesystems
 	umount_gfs_filesystems
-	
-	einfo "Shutting down the Logical Volume Manager"
 
-	LOGICAL_VOLUMES=`lvdisplay |grep "LV Name"|awk '{print $3}'|sort|xargs echo`
-	VOLUME_GROUPS=`vgdisplay |grep "VG Name"|awk '{print $3}'|sort|xargs echo`
-	for x in ${LOGICAL_VOLUMES}
-	do
-		LV_IS_ACTIVE=`lvdisplay ${x}|grep "# open"|awk '{print $3}'`
-		if [ "${LV_IS_ACTIVE}" = 0 ]
-		then
-			ebegin "  Shutting Down logical volume: ${x} "
-			lvchange -an --ignorelockingfailure -P ${x} >/dev/null
+	sleep 2	
+
+	if [ -n "$LVM_VGS" ]
+	then
+		for vg in $LVM_VGS
+		do
+			ebegin "  Shutting Down VG: ${vg} "
+			$VGCHANGE -anl ${vg} >/dev/null
 			eend $?
-		fi
-	done
-
-	for x in ${VOLUME_GROUPS}
-	do
-		VG_HAS_ACTIVE_LV=`vgdisplay ${x}|grep "Open LV"|awk '{print $3}'|xargs echo`
-		if [ "${VG_HAS_ACTIVE_LV}" = 0 ]
-		then
-			ebegin "  Shutting Down volume group: ${x} "
-			vgchange -an --ignorelockingfailure -P ${x} >/dev/null
-			eend
-		fi
-	done
-
-	for x in ${LOGICAL_VOLUMES}
-	do
-		LV_IS_ACTIVE=`lvdisplay ${x}|grep "# open"|awk '{print $3}'`
-		if [ "${LV_IS_ACTIVE}" = 1 ]
-		then
-			
-			ROOT_DEVICE=`mount|grep " / "|awk '{print $1}'`
-			if [ ! ${ROOT_DEVICE} = ${x} ]
-			then
-				ewarn "  Unable to shutdown: ${x} "
-			fi
-		fi
-	done
-	einfo "Finished Shutting down the Logical Volume Manager"	
+		done
+	else
+		# Deactivate only clustered volumes
+		clustervgs=`$VGDISPLAY 2> /dev/null | awk 'BEGIN {RS="VG Name"} {if (/Clustered/) print $1;}'`
+		for vg in $clustervgs; do
+			ebegin "  Shutting Down Clustered VG: ${vg} "
+			$VGCHANGE -anl ${vg} >/dev/null
+			eend $?
+		done
+	fi
 
 	ebegin "Stopping clvmd"
-	start-stop-daemon --stop --quiet --exec ${exefile}
+	#start-stop-daemon --stop -s 9 --quiet --exec ${CLVM_BIN} --name clvmd
+	killall -TERM ${CLVM_BIN} >/dev/null
 	eend $?
-	
-	if [ "$?" -eq 0 ]; then
-		unload_modules dm-mod
-	fi
+
 }

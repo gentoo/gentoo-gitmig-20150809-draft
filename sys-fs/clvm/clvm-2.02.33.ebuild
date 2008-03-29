@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.02.33.ebuild,v 1.1 2008/03/17 19:15:52 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.02.33.ebuild,v 1.2 2008/03/29 15:42:27 xmerlin Exp $
 
 inherit eutils multilib
 
@@ -29,7 +29,10 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+
 	epatch "${FILESDIR}"/lvm.conf-2.02.33.patch || die
+	epatch "${FILESDIR}"/cluster-locking-built-in.patch || die
 }
 
 src_compile() {
