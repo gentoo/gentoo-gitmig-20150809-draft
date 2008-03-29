@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/aspell-pt-br
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt-br/ChangeLog,v 1.6 2007/11/03 22:18:07 uberlord Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt-br/ChangeLog,v 1.7 2008/03/29 15:28:53 philantrop Exp $
+
+*aspell-pt-br-6.0.20080221 (29 Mar 2008)
+
+  29 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +aspell-pt-br-6.0.20080221.ebuild:
+  Version bump as per bug 212525. Thanks, Diogo Tridapalli, for providing
+  the ebuilds.
 
   03 Nov 2007; Roy Marples <uberlord@gentoo.org>
   aspell-pt-br-6.0.20070411.ebuild:
