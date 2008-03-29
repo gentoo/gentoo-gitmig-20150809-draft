@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gchemutils
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.3 2007/12/31 15:50:51 je_fro Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.4 2008/03/29 23:47:03 je_fro Exp $
+
+*gchemutils-0.8.7 (29 Mar 2008)
+
+  29 Mar 2008; Jeff Gardner <je_fro@gentoo.org> +gchemutils-0.8.7.ebuild:
+  Bump and keyword ~x86 thanks to Robert Bridge on bug 215363.
 
   31 Dec 2007; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
   Fixing up my email address.
