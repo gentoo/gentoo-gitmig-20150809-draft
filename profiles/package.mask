@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8443 2008/03/29 16:33:04 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8444 2008/03/29 21:55:25 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -123,6 +123,8 @@ dev-util/jam
 # The Great GNOME 2.22 Mask (tm)
 # Will be unmasked when everything is in, everything is ready and
 # there are no big bugs remaining.
+>=app-accessibility/dasher-4.7
+>=app-accessibility/gnome-mag-0.15.0
 >=app-crypt/seahorse-2.22
 >=gnome-base/libgtop-2.22
 >=x11-themes/gtk-engines-2.14
