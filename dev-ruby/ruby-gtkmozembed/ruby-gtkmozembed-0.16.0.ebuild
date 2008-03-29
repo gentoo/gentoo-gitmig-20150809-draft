@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ruby-gtkmozembed-0.16.0.ebuild,v 1.3 2008/03/28 16:44:52 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ruby-gtkmozembed-0.16.0.ebuild,v 1.4 2008/03/29 07:37:40 graaff Exp $
 
 inherit ruby ruby-gnome2
 
@@ -19,5 +19,5 @@ DEPEND="${DEPEND}
 src_unpack()
 {
 	ruby_src_unpack
-	use seamonkey && epatch "${FILESDIR}/${PN}-0.15.0-seamonkey.patch"
+	use seamonkey && epatch "${FILESDIR}/${PN}-${PV}-seamonkey.patch"
 }
