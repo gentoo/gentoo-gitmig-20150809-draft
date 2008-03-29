@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-misc-cyrillic
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-cyrillic/ChangeLog,v 1.19 2008/02/24 12:14:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-cyrillic/ChangeLog,v 1.20 2008/03/29 16:16:09 coldwind Exp $
+
+  29 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  font-misc-cyrillic-1.0.0.ebuild:
+  amd64 stable
 
   24 Feb 2008; Raúl Porcel <armin76@gentoo.org>
   font-misc-cyrillic-1.0.0.ebuild:

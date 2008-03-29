@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-dec-misc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-dec-misc/ChangeLog,v 1.21 2008/02/24 12:05:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-dec-misc/ChangeLog,v 1.22 2008/03/29 16:11:57 coldwind Exp $
+
+  29 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  font-dec-misc-1.0.0.ebuild:
+  amd64 stable
 
   24 Feb 2008; Raúl Porcel <armin76@gentoo.org> font-dec-misc-1.0.0.ebuild:
   alpha stable
