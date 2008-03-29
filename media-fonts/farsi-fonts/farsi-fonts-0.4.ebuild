@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/farsi-fonts-0.4.ebuild,v 1.9 2008/02/24 12:03:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/farsi-fonts-0.4.ebuild,v 1.10 2008/03/29 16:03:32 coldwind Exp $
 
 inherit font
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/arabeyes/${P//-/_}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~ppc s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~ppc s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 FONT_SUFFIX="ttf"

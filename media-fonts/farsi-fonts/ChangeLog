@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/farsi-fonts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/ChangeLog,v 1.8 2008/02/24 12:03:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/ChangeLog,v 1.9 2008/03/29 16:03:32 coldwind Exp $
+
+  29 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  farsi-fonts-0.4.ebuild:
+  amd64 stable
 
   24 Feb 2008; Raúl Porcel <armin76@gentoo.org> farsi-fonts-0.4.ebuild:
   alpha/sparc stable
