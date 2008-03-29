@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/remind
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.26 2008/03/29 13:12:05 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.27 2008/03/29 15:39:07 ranger Exp $
+
+  29 Mar 2008; Brent Baude <ranger@gentoo.org> remind-03.01.04.ebuild:
+  stable ppc, bug 214361
 
   29 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   remind-03.01.04.ebuild:
