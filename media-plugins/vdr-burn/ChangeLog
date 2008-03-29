@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.26 2008/03/25 18:35:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.27 2008/03/29 10:04:34 zzam Exp $
+
+  29 Mar 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-burn-0.1.0_pre21-r3.ebuild:
+  Do depend on virtual/eject instead of sys-apps/eject.
 
   25 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-burn-0.1.0_pre21-r3.ebuild:
