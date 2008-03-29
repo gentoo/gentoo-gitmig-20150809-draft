@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/arpack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.7 2008/03/24 09:34:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.8 2008/03/29 08:46:15 bicatali Exp $
+
+  29 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org> arpack-96-r2.ebuild:
+  Changed sed separator to : for robust path string substitution (BLAS_LIBS)
 
   24 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org> Manifest:
   Fixed autotools patch to have it work with as-needed

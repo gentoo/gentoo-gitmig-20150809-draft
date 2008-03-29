@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.2 2008/03/04 10:38:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.3 2008/03/29 08:46:15 bicatali Exp $
 
 inherit eutils autotools fortran
 
@@ -37,17 +37,17 @@ src_unpack() {
 	# fix examples library paths
 	sed -i \
 		-e '/^include/d' \
-		-e "s/\$(ALIBS)/-larpack ${BLAS_LIBS}/g" \
-		-e 's/$(FC)/$(F77)/g' \
-		-e 's/$(FFLAGS)/$(FFLAGS) $(LDFLAGS)/g' \
+		-e "s:\$(ALIBS):-larpack ${BLAS_LIBS}:g" \
+		-e 's:$(FC):$(F77):g' \
+		-e 's:$(FFLAGS):$(FFLAGS) $(LDFLAGS):g' \
 		EXAMPLES/*/makefile || die "sed failed"
 
 	sed -i \
 		-e '/^include/d' \
-		-e "s/\$(PLIBS)/-larpack -lparpack ${BLAS_LIBS}/g" \
-		-e 's/_$(PLAT)//g' \
-		-e 's/$(PFC)/mpif77/g' \
-		-e 's/$(PFFLAGS)/$(FFLAGS) $(LDFLAGS) $(EXTOBJS)/g' \
+		-e "s:\$(PLIBS):-larpack -lparpack ${BLAS_LIBS}:g" \
+		-e 's:_$(PLAT)::g' \
+		-e 's:$(PFC):mpif77:g' \
+		-e 's:$(PFFLAGS):$(FFLAGS) $(LDFLAGS) $(EXTOBJS):g' \
 		PARPACK/EXAMPLES/MPI/makefile || die "sed failed"
 
 	eautoreconf
