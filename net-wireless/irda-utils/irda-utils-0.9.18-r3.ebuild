@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.18-r2.ebuild,v 1.1 2008/03/22 18:34:10 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.18-r3.ebuild,v 1.1 2008/03/29 02:48:16 sbriesen Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -13,14 +13,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~sh ~x86"
 IUSE=""
 
-RDEPEND="=dev-libs/glib-2*
-	>=sys-apps/pciutils-2.2.7-r1
+DEPEND="!app-laptop/smcinit
+	=dev-libs/glib-2*
+	dev-util/pkgconfig
+	>=sys-apps/pciutils-2.2.7-r1"
+
+RDEPEND="${DEPEND}
 	sys-process/procps
 	sys-apps/setserial
-	sys-apps/grep"
-DEPEND="${RDEPEND}
-	!app-laptop/smcinit
-	dev-util/pkgconfig"
+	sys-apps/grep
+	sys-fs/udev"
 
 src_unpack() {
 	unpack ${A}
@@ -43,6 +45,9 @@ src_unpack() {
 
 	# disable etc subdir in Makefile
 	sed -i -e "s:^\(DIRS.*=.* \)etc \(.*\):\1\2:g" Makefile
+
+	# disable write_pid(), because we don't need it
+	sed -i -e "s:\(write_pid();\):/* \1 */:g" irattach/util.c
 
 	append-flags "-fno-strict-aliasing"
 }

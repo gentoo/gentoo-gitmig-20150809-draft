@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/irda-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.28 2008/03/25 15:31:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.29 2008/03/29 02:48:16 sbriesen Exp $
+
+*irda-utils-0.9.18-r3 (29 Mar 2008)
+
+  29 Mar 2008; Stefan Briesenick <sbriesen@gentoo.org> files/irda.rules,
+  -irda-utils-0.9.18-r2.ebuild, +irda-utils-0.9.18-r3.ebuild:
+  fixed dependencies, cleaned up udev-rules, disabled pidfile writing for
+  irattach (we don't need it and it doesn't work well with multiple irda
+  devices).
 
   25 Mar 2008; Stefan Briesenick <sbriesen@gentoo.org> files/irda.modsd:
   added options for irlan
