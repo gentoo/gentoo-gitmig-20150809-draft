@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.289 2008/03/29 03:07:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.290 2008/03/29 16:08:16 ranger Exp $
+
+  29 Mar 2008; Brent Baude <ranger@gentoo.org> openssh-4.7_p1-r5.ebuild:
+  Marking openssh-4.7_p1-r5 ppc64 and ppc for bug 214985
 
 *openssh-4.7_p1-r5 (29 Mar 2008)
 
