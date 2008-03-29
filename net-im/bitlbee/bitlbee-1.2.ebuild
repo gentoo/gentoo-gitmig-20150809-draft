@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.ebuild,v 1.3 2008/03/27 19:13:28 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.ebuild,v 1.4 2008/03/29 12:39:49 cedk Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs confutils
@@ -97,12 +97,12 @@ src_compile() {
 	if use gnutls ; then
 		myconf="${myconf} --ssl=gnutls"
 		einfo "Use gnutls as SSL support"
-	elif use nss ; then
-		myconf="${myconf} --ssl=nss"
-		einfo "Use nss as SSL support"
 	elif use ssl ; then
 		myconf="${myconf} --ssl=openssl"
 		einfo "Use openssl as SSL support"
+	elif use nss ; then
+		myconf="${myconf} --ssl=nss"
+		einfo "Use nss as SSL support"
 	else
 		myconf="${myconf} --ssl=bogus"
 		einfo "You will not have any encryption support enabled."
