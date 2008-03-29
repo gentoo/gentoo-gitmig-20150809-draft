@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/shhopt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.9 2008/01/25 02:28:40 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.10 2008/03/29 13:46:33 coldwind Exp $
+
+  29 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  shhopt-1.1.7-r2.ebuild:
+  amd64 stable
 
   25 Jan 2008; Ali Polatel <hawking@gentoo.org> metadata.xml,
   -shhopt-1.1.7-r1.ebuild:

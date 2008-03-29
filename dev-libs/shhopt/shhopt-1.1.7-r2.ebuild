@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/shhopt-1.1.7-r2.ebuild,v 1.1 2007/01/10 13:58:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/shhopt-1.1.7-r2.ebuild,v 1.2 2008/03/29 13:46:33 coldwind Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://shh.thathost.com/pub-unix/files/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
