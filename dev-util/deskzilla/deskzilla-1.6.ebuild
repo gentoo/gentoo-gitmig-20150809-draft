@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.4.1.ebuild,v 1.2 2008/02/29 18:00:57 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.6.ebuild,v 1.1 2008/03/29 00:12:23 caster Exp $
+
+EAPI=1
 
 inherit java-pkg-2 versionator
 
@@ -16,17 +18,19 @@ LICENSE="ALMWorks-1.2"
 # distfiles...
 RESTRICT="mirror"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
 RDEPEND=">=virtual/jre-1.5
-	~dev-java/picocontainer-1.1
-	>=dev-java/jdom-1.0
-	>=dev-java/javolution-4.0.2
+	dev-java/picocontainer:1
+	dev-java/javolution:4
 	>=dev-java/commons-codec-1.3
 	>=dev-java/jgoodies-forms-1.0.7
 	>=dev-java/commons-logging-1.0.4
-	>=dev-java/xmlrpc-2.0.1"
+	>=dev-java/xmlrpc-2.0.1
+	dev-java/xerces:2
+	dev-java/itext:0
+	dev-java/jazzy:0"
 
 src_unpack() {
 	unpack ${A}
@@ -39,6 +43,8 @@ src_unpack() {
 	mv ${liborig}/commons-httpclient.jar ${lib} || die
 	# They've patched nekohtml (was version 0.9.5)
 	mv ${liborig}/nekohtml.jar ${lib} || die
+	# Also jdom (was 1.0), soon they will patch everything and we will just unpack, yay
+	mv ${liborig}/pjdom.jar ${lib} || die
 	# Almworks proprietary lib
 	mv ${liborig}/almworks-tracker-api.jar ${lib} || die
 	# IntelliJ IDEA proprietary lib
@@ -54,11 +60,13 @@ src_install () {
 	insinto ${dir}
 	doins -r components etc license lib log deskzilla.url
 	insinto ${dir}/license
-	doins ${FILESDIR}/${PN}_gentoo.license
+	doins "${FILESDIR}"/${PN}_gentoo.license
 
 	java-pkg_jarinto ${dir}
 	java-pkg_dojar ${PN}.jar
-	java-pkg_register-dependency picocontainer-1,jdom-1.0,commons-logging,commons-codec,jgoodies-forms,javolution-4,xmlrpc
+	local dep="xerces-2,picocontainer-1,commons-logging,commons-codec"
+	dep+=",jgoodies-forms,javolution-4,xmlrpc,itext,jazzy"
+	java-pkg_register-dependency ${dep}
 	java-pkg_dolauncher ${PN} --main "com.almworks.launcher.Launcher" --java_args "-Xmx256M"
 
 	newdoc README.txt README || die
