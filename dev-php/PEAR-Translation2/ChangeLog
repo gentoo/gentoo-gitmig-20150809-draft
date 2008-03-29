@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Translation2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Translation2/ChangeLog,v 1.23 2008/02/26 16:34:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Translation2/ChangeLog,v 1.24 2008/03/29 00:22:02 maekke Exp $
+
+  29 Mar 2008; Markus Meier <maekke@gentoo.org>
+  PEAR-Translation2-2.0.0_rc3.ebuild:
+  amd64 stable, bug #208313
 
 *PEAR-Translation2-2.0.0_rc4 (26 Feb 2008)
 

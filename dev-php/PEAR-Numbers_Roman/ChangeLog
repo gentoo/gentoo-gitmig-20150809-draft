@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Numbers_Roman
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Numbers_Roman/ChangeLog,v 1.20 2008/02/10 14:57:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Numbers_Roman/ChangeLog,v 1.21 2008/03/29 00:09:58 maekke Exp $
+
+  29 Mar 2008; Markus Meier <maekke@gentoo.org>
+  PEAR-Numbers_Roman-1.0.2.ebuild:
+  amd64 stable, bug #208313
 
   10 Feb 2008; Raúl Porcel <armin76@gentoo.org>
   PEAR-Numbers_Roman-1.0.2.ebuild:

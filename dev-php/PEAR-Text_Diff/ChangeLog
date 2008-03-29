@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Text_Diff
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Diff/ChangeLog,v 1.36 2008/02/11 21:02:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Diff/ChangeLog,v 1.37 2008/03/29 00:20:36 maekke Exp $
+
+  29 Mar 2008; Markus Meier <maekke@gentoo.org> PEAR-Text_Diff-0.3.2.ebuild:
+  amd64 stable, bug #208313
 
 *PEAR-Text_Diff-1.0.0 (11 Feb 2008)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Validate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.40 2008/02/14 17:36:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.41 2008/03/29 00:23:34 maekke Exp $
+
+  29 Mar 2008; Markus Meier <maekke@gentoo.org> PEAR-Validate-0.8.0.ebuild:
+  amd64 stable, bug #208313
 
   14 Feb 2008; nixnut <nixnut@gentoo.org> PEAR-Validate-0.8.1.ebuild:
   Stable on ppc wrt bug 209630
