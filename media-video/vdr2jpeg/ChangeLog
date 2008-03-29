@@ -1,6 +1,15 @@
 # ChangeLog for media-video/vdr2jpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.11 2008/01/13 19:35:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.12 2008/03/29 16:35:57 hd_brummy Exp $
+
+*vdr2jpeg-0.1.0 (29 Mar 2008)
+
+  29 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/ffmpeg-0.4.9_p20080326-new_header.diff,
+  -files/vdr2jpeg-ffmpeg.diff, -vdr2jpeg-0.0.8b.ebuild,
+  -vdr2jpeg-0.0.10.ebuild, -vdr2jpeg-0.0.10-r1.ebuild,
+  -vdr2jpeg-0.0.11.ebuild, vdr2jpeg-0.0.12.ebuild, +vdr2jpeg-0.1.0.ebuild:
+  cleanup, 0.0.12 stable on x86; version bump, masked by package.mask bug #214740
 
   13 Jan 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr2jpeg-0.0.11.ebuild, vdr2jpeg-0.0.12.ebuild:
