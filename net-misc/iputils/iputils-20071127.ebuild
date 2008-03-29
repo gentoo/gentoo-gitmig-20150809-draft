@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20071127.ebuild,v 1.5 2008/03/29 15:24:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20071127.ebuild,v 1.6 2008/03/29 18:18:11 jer Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.skbuff.net/iputils/iputils-s${PV}.tar.bz2
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
 IUSE="static ipv6 doc"
 
 DEPEND="virtual/os-headers

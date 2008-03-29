@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.69 2008/03/29 15:35:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.70 2008/03/29 18:18:11 jer Exp $
+
+  29 Mar 2008; Jeroen Roovers <jer@gentoo.org> iputils-20071127.ebuild:
+  Stable for HPPA (bug #214734).
 
   29 Mar 2008; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking iputils-20071127 ppc for bug 214734
