@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.83 2008/03/28 22:19:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.84 2008/03/29 01:28:50 vapier Exp $
+
+  29 Mar 2008; Mike Frysinger <vapier@gentoo.org> grub-0.97-r5.ebuild:
+  Pull in app-emulation/emul-linux-x86-baselibs for USE=ncurses on amd64 #128249.
 
   28 Mar 2008; Mike Frysinger <vapier@gentoo.org> grub-0.97-r5.ebuild:
   Make ncurses optional.
