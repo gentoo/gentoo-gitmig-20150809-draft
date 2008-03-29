@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pkcs11-helper
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.14 2007/10/22 14:29:51 alonbl Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.15 2008/03/29 02:55:29 vapier Exp $
+
+  29 Mar 2008; Mike Frysinger <vapier@gentoo.org> pkcs11-helper-1.05.ebuild:
+  Add arm/s390/sh love and fix broken compile/install steps.
 
   22 Oct 2007; Alon Bar-Lev <alonbl@gentoo.org> pkcs11-helper-1.05.ebuild:
   Add nss USE flag
