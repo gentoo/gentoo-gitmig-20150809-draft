@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.255 2008/03/29 18:30:44 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.256 2008/03/29 18:49:14 armin76 Exp $
+
+  29 Mar 2008; Raúl Porcel <armin76@gentoo.org> php-5.2.6_rc3.ebuild:
+  alpha/ia64/sparc stable wrt security #215266
 
   29 Mar 2008; Christian Hoffmann <hoffie@gentoo.org> php-5.2.6_rc3.ebuild:
   stable on amd64, bug 215266
