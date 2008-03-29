@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.50-r1.ebuild,v 1.8 2008/03/29 03:33:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.50-r1.ebuild,v 1.9 2008/03/29 04:15:27 vapier Exp $
 
 inherit eutils savedconfig pam
 
@@ -41,8 +41,8 @@ src_unpack() {
 		-e '/SFTPSERVER_PATH/s:".*":"/usr/lib/misc/sftp-server":' \
 		options.h
 	sed -i \
-		-e '/pam_stat/s:sshd:dropbear:' \
-		src/svr-authpam.c
+		-e '/pam_start/s:sshd:dropbear:' \
+		svr-authpam.c || die
 	restore_config options.h
 }
 
