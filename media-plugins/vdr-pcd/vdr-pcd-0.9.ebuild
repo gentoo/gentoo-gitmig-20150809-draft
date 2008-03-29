@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/vdr-pcd-0.9.ebuild,v 1.2 2008/01/28 16:19:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/vdr-pcd-0.9.ebuild,v 1.3 2008/03/29 14:50:20 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -15,3 +15,12 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.4.4
 		>=media-video/ffmpeg-0.4.9_p20070616"
+
+src_unpack() {
+	vdr-plugin_src_unpack
+
+	cd "${S}"
+	if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
+		sed -e "s:ffmpeg/avcodec.h:libavcodec/avcodec.h:" -i mpeg.h
+	fi
+}
