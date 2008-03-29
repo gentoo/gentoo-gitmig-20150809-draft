@@ -1,8 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.22.0.ebuild,v 1.1 2008/03/26 22:06:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.22.0.ebuild,v 1.2 2008/03/29 19:51:41 eva Exp $
 
-inherit gnome2 eutils python multilib pam
+inherit gnome2 eutils python multilib
+#pam
 
 DESCRIPTION="Tool to maintain user profiles in a GNOME desktop"
 HOMEPAGE="http://www.gnome.org/projects/sabayon/"
@@ -21,8 +22,8 @@ DEPEND="dev-lang/python
 	dev-python/python-ldap
 	x11-base/xorg-server"
 
+#	virtual/pam
 RDEPEND="${DEPEND}
-	virtual/pam
 	dev-python/pyxdg
 	app-admin/gamin
 	dev-libs/libxml2
@@ -55,8 +56,8 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--with-distro=gentoo
 		--with-prototype-user=${PN}-admin
-		--enable-console-helper=no
-		--with-pam-prefix=$(getpam_mod_dir)"
+		--enable-console-helper=no"
+		#--with-pam-prefix=$(getpam_mod_dir)"
 
 	einfo "Adding user '${PN}-admin' as the prototype user"
 	# I think /var/lib/sabayon is the correct directory to use here.
