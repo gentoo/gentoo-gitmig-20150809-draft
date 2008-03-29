@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.54 2008/03/29 15:33:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.55 2008/03/29 16:06:41 armin76 Exp $
+
+  29 Mar 2008; Raúl Porcel <armin76@gentoo.org> unzip-5.52-r2.ebuild:
+  alpha/ia64/sparc stable wrt security #213761
 
   29 Mar 2008; Brent Baude <ranger@gentoo.org> unzip-5.52-r2.ebuild:
   Marking unzip-5.52-r2 ppc64 and ppc for bug 213761
