@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.3.1.ebuild,v 1.1 2008/03/17 22:48:10 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.3.1.ebuild,v 1.2 2008/03/29 15:11:49 tgurr Exp $
 
 EAPI="1"
 
@@ -20,11 +20,11 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/KeePassX-${PV}"
 
 pkg_setup() {
-	if ! built_with_use --missing true x11-libs/qt qt3support png ; then
+	if ! built_with_use --missing true x11-libs/qt png ; then
 		eerror
-		eerror "You need to rebuild x11-libs/qt with USE=\"qt3support\" and USE=\"png\" enabled."
+		eerror "You need to rebuild x11-libs/qt with USE=\"png\" enabled."
 		eerror
-		die "Please rebuild x11-libs/qt with USE=\"qt3support png\"."
+		die "Please rebuild x11-libs/qt with USE=\"png\"."
 	fi
 }
 
