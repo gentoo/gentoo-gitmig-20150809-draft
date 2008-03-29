@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.23.2.ebuild,v 1.2 2008/03/29 08:08:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.23.2.ebuild,v 1.3 2008/03/29 08:14:29 graaff Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.webdav.org/cadaver/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
-IUSE="nls ssl"
+IUSE="gnutls nls ssl"
 
 DEPEND=">=net-misc/neon-0.27.0"
 RDEPEND="${DEPEND}"
@@ -22,6 +22,13 @@ pkg_setup() {
 		ewarn "Please rebuild net-misc/neon with the ssl USE flag if you want to use"
 		ewarn "cadaver with SSL support."
 		die "SSL support in cadaver requires SSL support in net-misc/neon"
+	fi
+
+	if use gnutls && ! built_with_use net-misc/neon gnutls ; then
+		ewarn "SSL support in cadaver requires gnutls support in net-misc/neon."
+		ewarn "Please rebuild net-misc/neon with the gnutls USE flag if you want to use"
+		ewarn "cadaver with gnutls support."
+		die "gnutls support in cadaver requires gnutls support in net-misc/neon"
 	fi
 }
 

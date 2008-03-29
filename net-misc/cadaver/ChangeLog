@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cadaver
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.25 2008/03/29 08:08:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.26 2008/03/29 08:14:29 graaff Exp $
+
+  29 Mar 2008; Hans de Graaff <graaff@gentoo.org> cadaver-0.23.2.ebuild:
+  Add gnutls USE flag now that net-misc/neon supports it, and handle it
+  similar to ssl
 
   29 Mar 2008; Hans de Graaff <graaff@gentoo.org>
   +files/cadaver-0.23.2-disable-nls.patch, cadaver-0.23.2.ebuild:
