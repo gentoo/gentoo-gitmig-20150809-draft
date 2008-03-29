@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnomeprintui
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomeprintui/ChangeLog,v 1.6 2008/03/28 17:10:12 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomeprintui/ChangeLog,v 1.7 2008/03/29 19:32:03 ranger Exp $
+
+  29 Mar 2008; Brent Baude <ranger@gentoo.org>
+  ruby-gnomeprintui-0.16.0.ebuild:
+  Marking ruby-gnomeprintui-0.16.0 ~ppc for bug 215149
 
   28 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
   ruby-gnomeprintui-0.16.0.ebuild:
