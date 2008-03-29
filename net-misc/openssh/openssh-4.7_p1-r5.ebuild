@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.7_p1-r5.ebuild,v 1.1 2008/03/29 03:07:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.7_p1-r5.ebuild,v 1.2 2008/03/29 15:23:11 vapier Exp $
 
 inherit eutils flag-o-matic ccc multilib autotools pam
 
@@ -79,12 +79,12 @@ src_unpack() {
 			epatch "${DISTDIR}"/${LDAP_PATCH} "${FILESDIR}"/${PN}-4.4_p1-ldap-hpn-glue.patch
 			epatch "${FILESDIR}"/${P}-lpk-64bit.patch #210110
 		fi
-	elif use ldap ; then
-		ewarn "Sorry, X509 and ldap don't get along, disabling ldap"
+		epatch "${DISTDIR}"/openssh-4.7p1-gsskex-20070927.patch #115553
+	else
+		use ldap && ewarn "Sorry, X509 and ldap don't get along, disabling ldap"
+		epatch "${FILESDIR}"/${P}-GSSAPI-dns.patch #165444 integrated into gsskex
 	fi
 	[[ -n ${HPN_PATCH} ]] && use hpn && epatch "${DISTDIR}"/${HPN_PATCH}
-	#epatch "${FILESDIR}"/${P}-GSSAPI-dns.patch #165444 integrated into gsskex
-	epatch "${DISTDIR}"/openssh-4.7p1-gsskex-20070927.patch #115553
 	epatch "${FILESDIR}"/${P}-CVE-2008-1483.patch #214985
 	epatch "${FILESDIR}"/${P}-packet-size.patch #212433
 
