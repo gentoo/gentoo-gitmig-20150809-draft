@@ -1,0 +1,12 @@
+diff -ru beagle-0.3.4~/search/Beagle.Search/Driver.cs beagle-0.3.4/search/Beagle.Search/Driver.cs
+--- beagle-0.3.4~/search/Beagle.Search/Driver.cs	2008-03-29 15:38:54.000000000 +0100
++++ beagle-0.3.4/search/Beagle.Search/Driver.cs	2008-03-29 15:47:06.000000000 +0100
+@@ -124,7 +124,7 @@
+ 			if (!String.IsNullOrEmpty (query) || !icon_enabled)
+ 				search.Query (query);
+ 
+-			Bus.Session.Register (new ObjectPath (PATH_NAME), search);
++			Bus.Session.Register (BUS_NAME, new ObjectPath (PATH_NAME), search);
+ 
+ 			program.Run ();
+ 		}

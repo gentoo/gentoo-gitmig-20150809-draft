@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.3.ebuild,v 1.1 2008/03/25 22:24:59 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.4-r1.ebuild,v 1.1 2008/03/29 14:58:28 cedk Exp $
 
 EAPI=1
 
@@ -52,7 +52,8 @@ RDEPEND="
 	firefox? ( || ( >=www-client/mozilla-firefox-1.5
 			>=www-client/mozilla-firefox-bin-1.5 ) )
 	epiphany? ( >=www-client/epiphany-extensions-2.16 )
-	xscreensaver? ( x11-libs/libXScrnSaver )"
+	xscreensaver? ( x11-libs/libXScrnSaver )
+	dev-libs/libbeagle"
 	# Avahi code is currently experimental
 	#avahi?	(	>=net-dns/avahi-0.6.10 )
 
@@ -63,11 +64,24 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35"
 
 pkg_setup() {
-	local fail="Re-emerge dev-libs/gmime with USE mono."
+	local fail_gmime="Re-emerge dev-libs/gmime with USE mono."
+	local fail_libbeagle="Re-emerge dev-libs/libbeagle with USE=python."
+	local fail_epiphany="Re-emerge www-client/epiphany-extensions with USE=python."
 
 	if ! built_with_use dev-libs/gmime mono; then
-		eerror "${fail}"
-		die "${fail}"
+		eerror "${fail_gmime}"
+		die "${fail_gmime}"
+	fi
+
+	if use epiphany; then
+		if !built_with_use dev-libs/libbeagle python; then
+			eerror "${fail_libbeagle}"
+			die "${fail_libbeagle}"
+		fi
+		if !built_with_use www-client/epiphany-extensions python; then
+			eerror "${fail_epiphany}"
+			die "${fail_epiphany}"
+		fi
 	fi
 
 	enewgroup beagleindex
@@ -78,12 +92,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-epiphany-extension.patch
+	epatch "${FILESDIR}"/${P}-dbus.patch
+
 	# Multilib fix
 	sed -i -e 's:prefix mono`/lib:libdir mono`:' \
 		configure.in || die "sed failed"
-
-	epatch "${FILESDIR}"/${PN}-0.2.7-crawltweek.patch
-	epatch "${FILESDIR}"/${P}-log-level-warn.patch
 
 	eautoreconf
 	intltoolize --force || die "intltoolize failed"
@@ -97,7 +111,6 @@ src_compile() {
 		$(use_enable debug xml-dump) \
 		$(use_enable doc docs) \
 		$(use_enable epiphany epiphany-extension) \
-		$(use_enable firefox) \
 		$(use_enable thunderbird) \
 		$(use_enable eds evolution) \
 		$(use_enable gtk gui) \
@@ -112,6 +125,8 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
+
+	dodoc AUTHORS NEWS README
 
 	declare MOZILLA_FIVE_HOME
 	if use firefox; then
@@ -148,11 +163,10 @@ src_install() {
 		fi
 	fi
 
-	dodoc AUTHORS NEWS README
+	sed -i -e 's/CRAWL_ENABLED="yes"/CRAWL_ENABLED="no"/' \
+		"${D}"/etc/beagle/crawl-rules/crawl-*
 
-	sed -i -e 's/CRAWL_ENABLED="yes"/CRAWL_ENABLED="no"/' "${D}"/etc/beagle/crawl-*
-
-	insinto /etc/beagle
+	insinto /etc/beagle/crawl-rules
 	doins "${FILESDIR}/crawl-portage"
 
 	keepdir "/usr/$(get_libdir)/beagle/Backends"

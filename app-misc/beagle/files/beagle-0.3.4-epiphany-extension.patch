@@ -1,0 +1,19 @@
+diff -ru beagle-0.3.4~/epiphany-extension/Makefile.am beagle-0.3.4/epiphany-extension/Makefile.am
+--- beagle-0.3.4~/epiphany-extension/Makefile.am	2008-03-29 15:38:54.000000000 +0100
++++ beagle-0.3.4/epiphany-extension/Makefile.am	2008-03-29 15:39:43.000000000 +0100
+@@ -10,11 +10,11 @@
+ 
+ # Hack to fix distcheck
+ if INSTALL_EPIPHANY_EXTENSION
+-	extensiondir = $(EPIPHANY_EXTENSIONS_DIR)
+-	extension_DATA = $(extension_files) beagle.py
++extensiondir = $(EPIPHANY_EXTENSIONS_DIR)
++extension_DATA = $(extension_files) beagle.py
+ else
+-	extensiondir = $(libdir)/epiphany/extensions
+-	extension_DATA = $(extension_files) beagle.py
++extensiondir = $(libdir)/epiphany/extensions
++extension_DATA = $(extension_files) beagle.py
+ endif
+ 
+ EXTRA_DIST = $(extension_in_files) beagle.py.in
