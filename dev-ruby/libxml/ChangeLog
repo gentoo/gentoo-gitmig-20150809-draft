@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/libxml
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.14 2007/05/20 08:42:11 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.15 2008/03/29 06:58:48 graaff Exp $
+
+*libxml-0.5.4 (29 Mar 2008)
+
+  29 Mar 2008; Hans de Graaff <graaff@gentoo.org> +libxml-0.5.4.ebuild:
+  Version bump. Switching back to the gem version since build systems with ruby
+  seem to be a moving target that changes every release. Fixes #212828.
 
   20 May 2007; Christian Faulhammer <opfer@gentoo.org>
   libxml-0.3.8.4.ebuild:
