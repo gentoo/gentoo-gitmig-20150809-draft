@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.95 2008/03/28 15:36:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.96 2008/03/29 12:31:34 cla Exp $
+
+  29 Mar 2008; Dawid Węgliński <cla@gentoo.org> vsftpd-2.0.6.ebuild:
+  Stable on x86 (bug #214959)
 
   28 Mar 2008; Brent Baude <ranger@gentoo.org> vsftpd-2.0.6.ebuild:
   stable ppc, bug 214959
