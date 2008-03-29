@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/shhopt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.10 2008/03/29 13:46:33 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.11 2008/03/29 15:46:50 ranger Exp $
+
+  29 Mar 2008; Brent Baude <ranger@gentoo.org> shhopt-1.1.7-r2.ebuild:
+  Marking shhopt-1.1.7-r2 ppc for bug 215320
 
   29 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   shhopt-1.1.7-r2.ebuild:
