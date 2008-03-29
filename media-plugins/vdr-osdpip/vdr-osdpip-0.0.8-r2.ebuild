@@ -1,6 +1,6 @@
-# Copyright 2003-2007 Gentoo Foundation
+# Copyright 2003-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.0.8-r2.ebuild,v 1.2 2007/07/10 23:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.0.8-r2.ebuild,v 1.3 2008/03/29 14:38:04 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -8,7 +8,7 @@ DESCRIPTION="VDR plugin: Show another channel in the OSD"
 HOMEPAGE="http://www.magoa.net/linux"
 SRC_URI="http://www.magoa.net/linux/files/${P}.tgz"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
@@ -29,4 +29,8 @@ src_unpack() {
 	  -e 's+^FFMDIR.*$+FFMDIR = /usr/include/ffmpeg+' \
 	  -e 's+-I\$(FFMDIR)/libavcodec+-I$(FFMDIR)+' \
 	  -e 's+-L\$(FFMDIR)/libavcodec++'
+
+	if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
+		epatch "${FILESDIR}/ffmpeg-0.4.9_p20080326-new_header.diff"
+	fi
 }
