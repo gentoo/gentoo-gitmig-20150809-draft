@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.22.0.ebuild,v 1.1 2008/03/23 10:52:51 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.22.0.ebuild,v 1.2 2008/03/29 14:34:45 eva Exp $
 
 inherit gnome2 python eutils autotools
 
@@ -48,6 +48,7 @@ fi
 
 pkg_setup() {
 	G2CONF="${G2CONF}
+		--disable-scrollkeeper
 		$(use_enable python)
 		$(use_enable spell)
 		$(use_enable xattr attr)"

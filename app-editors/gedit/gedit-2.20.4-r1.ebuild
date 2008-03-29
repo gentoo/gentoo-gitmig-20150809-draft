@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.20.4-r1.ebuild,v 1.8 2008/03/22 03:55:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.20.4-r1.ebuild,v 1.9 2008/03/29 14:34:45 eva Exp $
 
 inherit gnome2 python eutils autotools
 
@@ -48,7 +48,8 @@ if [[ "${ARCH}" == "PPC" ]] ; then
 fi
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable python) $(use_enable spell) $(use_enable xattr attr)"
+	G2CONF="${G2CONF} $(use_enable python) $(use_enable spell)
+		$(use_enable xattr attr) --disable-scrollkeeper"
 }
 
 src_unpack() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.237 2008/03/23 10:52:51 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.238 2008/03/29 14:34:45 eva Exp $
+
+  29 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> -gedit-2.20.4.ebuild,
+  gedit-2.20.4-r1.ebuild, gedit-2.22.0.ebuild:
+  fix sandbox issues by adding --disable-scrollkeeper, bug #213512
 
 *gedit-2.22.0 (23 Mar 2008)
 
