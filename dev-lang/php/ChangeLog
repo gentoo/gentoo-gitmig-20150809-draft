@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.253 2008/03/29 16:35:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.254 2008/03/29 17:01:28 jer Exp $
+
+  29 Mar 2008; Jeroen Roovers <jer@gentoo.org> php-5.2.6_rc3.ebuild:
+  Stable for HPPA (bug #215266).
 
   29 Mar 2008; Brent Baude <ranger@gentoo.org> php-5.2.6_rc3.ebuild:
   Marking php-5.2.6_rc3 ppc64 and ppc for bug 215266
