@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-1.2.1.ebuild,v 1.12 2006/08/21 17:43:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-1.2.1.ebuild,v 1.13 2008/03/29 01:45:22 philantrop Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,11 +21,14 @@ DEPEND="${RDEPEND}
 src_compile() {
 	filter-flags -fno-exceptions
 
-	econf `use_with gtk` || die "configure failed"
+	# Fixes bug 214248.
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+
+	econf $(use_with gtk) || die "configure failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS README* ChangeLog
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS README* ChangeLog || die "Installing docs failed."
 }
