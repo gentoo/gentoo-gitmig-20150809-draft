@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/dhcpv6
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.17 2007/07/15 08:44:41 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.18 2008/03/29 19:43:46 vapier Exp $
+
+*dhcpv6-1.0.14 (29 Mar 2008)
+
+  29 Mar 2008; Mike Frysinger <vapier@gentoo.org> -files/dhcp6s.rc,
+  +files/dhcp6x.initd.in, -files/negative-iaid-patch-0.8,
+  +files/dhcp6x.confd.in, -files/dhcpv6-bison-fix.patch,
+  -files/patch-iaid-dhcp6-0.85, -dhcpv6-0.10_pre20060828.ebuild,
+  +dhcpv6-1.0.14.ebuild:
+  Version bump #211186 and cleanup #171402.
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to m-needed, as beu is being retired (#66608).
