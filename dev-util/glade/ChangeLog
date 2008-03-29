@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.92 2008/03/13 16:48:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.93 2008/03/29 19:21:05 eva Exp $
+
+*glade-3.4.3 (29 Mar 2008)
+
+  29 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> +glade-3.4.3.ebuild:
+  Version bump from upstream, adding missing gnome-doc-utils to DEPEND
 
   13 Mar 2008; Jeroen Roovers <jer@gentoo.org> glade-3.4.1.ebuild:
   Marked ~hppa (bug #211748).
