@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dhcp
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.141 2007/12/25 16:25:18 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.142 2008/03/29 19:47:53 vapier Exp $
+
+  29 Mar 2008; Mike Frysinger <vapier@gentoo.org>
+  files/dhcp-3.0.3-dhclient-ntp.patch,
+  files/dhcp-3.0.3-dhclient-resolvconf.patch,
+  files/dhcp-3.1.0a1-dhclient-resolvconf.patch:
+  Convert `echo -e` to `printf` #208558 by Davide Pesavento.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing uberlord from metadata.xml as per #199318.

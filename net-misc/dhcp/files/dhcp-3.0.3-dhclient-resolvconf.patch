@@ -19,9 +19,9 @@
 +        conf="${conf}nameserver $nameserver\n"
 +      done
 +      if [ -x /sbin/resolvconf ]; then
-+        echo -e "$conf" | resolvconf -a "$interface"
++        printf "$conf" | resolvconf -a "$interface"
 +      else
-+        echo -e "$conf" > /etc/resolv.conf
++        printf "$conf" > /etc/resolv.conf
 +        chmod 644 /etc/resolv.conf
 +      fi
 +    fi
@@ -60,9 +60,9 @@
 +        conf="${conf}nameserver $nameserver\n"
        done
 +      if [ -x /sbin/resolvconf ]; then
-+        echo -e "$conf" | resolvconf -a "$interface"
++        printf "$conf" | resolvconf -a "$interface"
 +      else
-+        echo -e "$conf" > /etc/resolv.conf
++        printf "$conf" > /etc/resolv.conf
 +        chmod 644 /etc/resolv.conf
 +      fi
      fi
@@ -90,9 +90,9 @@
 +        conf="${conf}nameserver $nameserver\n"
 +      done
 +      if [ -x /sbin/resolvconf ]; then
-+        echo -e "$conf" | resolvconf -a "$interface"
++        printf "$conf" | resolvconf -a "$interface"
 +      else
-+        echo -e "$conf" > /etc/resolv.conf
++        printf "$conf" > /etc/resolv.conf
 +        chmod 644 /etc/resolv.conf
 +      fi
 +    fi
@@ -120,9 +120,9 @@
 +        conf="${conf}nameserver $nameserver\n"
 +      done
 +      if [ -x /sbin/resolvconf ]; then
-+        echo -e "$conf" | resolvconf -a "$interface"
++        printf "$conf" | resolvconf -a "$interface"
 +      else
-+        echo -e "$conf" > /etc/resolv.conf
++        printf "$conf" > /etc/resolv.conf
 +        chmod 644 /etc/resolv.conf
 +      fi
 +    fi
@@ -150,9 +150,9 @@
 +        conf="${conf}nameserver $nameserver\n"
 +      done
 +      if [ -x /sbin/resolvconf ]; then
-+        echo -e "$conf" | resolvconf -a "$interface"
++        printf "$conf" | resolvconf -a "$interface"
 +      else
-+        echo -e "$conf" > /etc/resolv.conf
++        printf "$conf" > /etc/resolv.conf
 +        chmod 644 /etc/resolv.conf
 +      fi
 +    fi
@@ -180,9 +180,9 @@
 +        conf="${conf}nameserver $nameserver\n"
 +      done
 +      if [ -x /sbin/resolvconf ]; then
-+        echo -e "$conf" | resolvconf -a "$interface"
++        printf "$conf" | resolvconf -a "$interface"
 +      else
-+        echo -e "$conf" > /etc/resolv.conf
++        printf "$conf" > /etc/resolv.conf
 +        chmod 644 /etc/resolv.conf
 +      fi
 +    fi

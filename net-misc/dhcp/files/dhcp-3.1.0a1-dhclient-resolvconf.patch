@@ -24,9 +24,9 @@ diff -ur client.orig/scripts/bsdos client/scripts/bsdos
 +        conf="${conf}nameserver $nameserver\n"
 +      done
 +      if [ -x /sbin/resolvconf ]; then
-+        echo -e "$conf" | resolvconf -a "$interface"
++        printf "$conf" | resolvconf -a "$interface"
 +      else
-+        echo -e "$conf" > /etc/resolv.conf
++        printf "$conf" > /etc/resolv.conf
 +        chmod 644 /etc/resolv.conf
 +      fi
      fi
@@ -84,9 +84,9 @@ diff -ur client.orig/scripts/freebsd client/scripts/freebsd
 -      if [ $exit_status -ne 0 ]; then
 -	$LOGGER "Error while writing new /etc/resolv.conf."
 +      if [ -x /sbin/resolvconf ]; then
-+        echo -e "$conf" | resolvconf -a "$interface"
++        printf "$conf" | resolvconf -a "$interface"
 +      else
-+        echo -e "$conf" > /etc/resolv.conf
++        printf "$conf" > /etc/resolv.conf
 +        chmod 644 /etc/resolv.conf
        fi
      fi
@@ -118,9 +118,9 @@ diff -ur client.orig/scripts/linux client/scripts/linux
 +        conf="${conf}nameserver $nameserver\n"
 +      done
 +      if [ -x /sbin/resolvconf ]; then
-+        echo -e "$conf" | resolvconf -a "$interface"
++        printf "$conf" | resolvconf -a "$interface"
 +      else
-+        echo -e "$conf" > /etc/resolv.conf
++        printf "$conf" > /etc/resolv.conf
 +        chmod 644 /etc/resolv.conf
 +      fi
      fi
@@ -158,9 +158,9 @@ diff -ur client.orig/scripts/netbsd client/scripts/netbsd
 +        conf="${conf}nameserver $nameserver\n"
 +      done
 +      if [ -x /sbin/resolvconf ]; then
-+        echo -e "$conf" | resolvconf -a "$interface"
++        printf "$conf" | resolvconf -a "$interface"
 +      else
-+        echo -e "$conf" > /etc/resolv.conf
++        printf "$conf" > /etc/resolv.conf
 +        chmod 644 /etc/resolv.conf
 +      fi
      fi
@@ -198,9 +198,9 @@ diff -ur client.orig/scripts/openbsd client/scripts/openbsd
 +        conf="${conf}nameserver $nameserver\n"
 +      done
 +      if [ -x /sbin/resolvconf ]; then
-+        echo -e "$conf" | resolvconf -a "$interface"
++        printf "$conf" | resolvconf -a "$interface"
 +      else
-+        echo -e "$conf" > /etc/resolv.conf
++        printf "$conf" > /etc/resolv.conf
 +        chmod 644 /etc/resolv.conf
 +      fi
      fi
@@ -238,9 +238,9 @@ diff -ur client.orig/scripts/solaris client/scripts/solaris
 +        conf="${conf}nameserver $nameserver\n"
 +      done
 +      if [ -x /sbin/resolvconf ]; then
-+        echo -e "$conf" | resolvconf -a "$interface"
++        printf "$conf" | resolvconf -a "$interface"
 +      else
-+        echo -e "$conf" > /etc/resolv.conf
++        printf "$conf" > /etc/resolv.conf
 +        chmod 644 /etc/resolv.conf
 +      fi
      fi

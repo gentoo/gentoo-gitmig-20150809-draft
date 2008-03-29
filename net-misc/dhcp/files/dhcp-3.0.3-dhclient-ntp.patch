@@ -30,7 +30,7 @@
 +      done
 +      conf="${conf}driftfile /var/lib/ntp/ntp.drift\n"
 +      conf="${conf}logfile /var/log/ntp.log\n"
-+      echo -e "${conf}" > /etc/ntp.conf
++      printf "${conf}" > /etc/ntp.conf
 +      chmod 644 /etc/ntp.conf
 +    fi
 +  fi
@@ -59,7 +59,7 @@
 +      done
 +      conf="${conf}driftfile /var/lib/ntp/ntp.drift\n"
 +      conf="${conf}logfile /var/log/ntp.log\n"
-+      echo -e "${conf}" > /etc/ntp.conf
++      printf "${conf}" > /etc/ntp.conf
 +      chmod 644 /etc/ntp.conf
 +    fi
 +  fi
@@ -90,7 +90,7 @@
 +      done
 +      conf="${conf}driftfile /var/lib/ntp/ntp.drift\n"
 +      conf="${conf}logfile /var/log/ntp.log\n"
-+      echo -e "${conf}" > /etc/ntp.conf
++      printf "${conf}" > /etc/ntp.conf
 +      chmod 644 /etc/ntp.conf
 +    fi
 +  fi
@@ -119,7 +119,7 @@
 +      done
 +      conf="${conf}driftfile /var/lib/ntp/ntp.drift\n"
 +      conf="${conf}logfile /var/log/ntp.log\n"
-+      echo -e "${conf}" > /etc/ntp.conf
++      printf "${conf}" > /etc/ntp.conf
 +      chmod 644 /etc/ntp.conf
 +    fi
 +  fi
@@ -148,7 +148,7 @@
 +      done
 +      conf="${conf}driftfile /var/lib/ntp/ntp.drift\n"
 +      conf="${conf}logfile /var/log/ntp.log\n"
-+      echo -e "${conf}" > /etc/ntp.conf
++      printf "${conf}" > /etc/ntp.conf
 +      chmod 644 /etc/ntp.conf
 +    fi
 +  fi
@@ -177,7 +177,7 @@
 +      done
 +      conf="${conf}driftfile /var/lib/ntp/ntp.drift\n"
 +      conf="${conf}logfile /var/log/ntp.log\n"
-+      echo -e "${conf}" > /etc/ntp.conf
++      printf "${conf}" > /etc/ntp.conf
 +      chmod 644 /etc/ntp.conf
 +    fi
 +  fi
