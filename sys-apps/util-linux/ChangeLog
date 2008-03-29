@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.225 2008/02/26 23:03:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.226 2008/03/29 21:31:21 vapier Exp $
+
+  29 Mar 2008; Mike Frysinger <vapier@gentoo.org> util-linux-2.13.1.ebuild,
+  util-linux-9999.ebuild:
+  Add support for USE=unicode and USE=slang #208976. Update loop-aes cruft
+  #206331.
 
   26 Feb 2008; Mike Frysinger <vapier@gentoo.org> util-linux-2.13.1.ebuild:
   Add ioprio workaround back as it hasnt been properly fixed in this release
