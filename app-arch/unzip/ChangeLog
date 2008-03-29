@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.51 2008/03/29 02:37:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.52 2008/03/29 10:12:16 rbu Exp $
+
+  29 Mar 2008; Robert Buchholz <rbu@gentoo.org> unzip-5.52-r2.ebuild:
+  amd64 stable, bug 213761
 
 *unzip-5.52-r2 (29 Mar 2008)
 
