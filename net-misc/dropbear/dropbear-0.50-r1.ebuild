@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.50-r1.ebuild,v 1.7 2008/03/29 03:27:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.50-r1.ebuild,v 1.8 2008/03/29 03:33:54 vapier Exp $
 
 inherit eutils savedconfig pam
 
@@ -79,7 +79,9 @@ src_install() {
 	fi
 	save_config options.h
 
-	mv "${D}"/usr/bin/{,db}scp || die
+	if ! use minimal ; then
+		mv "${D}"/usr/bin/{,db}scp || die
+	fi
 
 	pamd_mimic system-remote-login dropbear auth account password session \
 		|| die "unable to mimic system-remote-login pamd file."
