@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.3.ebuild,v 1.3 2007/10/20 18:59:16 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.3.ebuild,v 1.4 2008/03/29 22:45:44 pylon Exp $
 
 inherit eutils games
 
@@ -23,6 +23,7 @@ IUSE="alsa debug dedicated iconv png scenarios static timidity zlib"
 
 DEPEND="!dedicated? ( media-libs/libsdl
 		media-libs/fontconfig
+		>media-libs/freetype-2
 	)
 	iconv? ( virtual/libiconv )
 	png? ( media-libs/libpng )
