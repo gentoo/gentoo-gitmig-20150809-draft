@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.23.2.ebuild,v 1.1 2008/03/24 06:50:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.23.2.ebuild,v 1.2 2008/03/29 08:08:25 graaff Exp $
 
 inherit eutils
 
@@ -23,6 +23,13 @@ pkg_setup() {
 		ewarn "cadaver with SSL support."
 		die "SSL support in cadaver requires SSL support in net-misc/neon"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-disable-nls.patch"
 }
 
 src_compile() {
