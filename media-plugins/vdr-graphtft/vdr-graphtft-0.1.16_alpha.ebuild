@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.16_alpha.ebuild,v 1.1 2007/12/23 22:05:09 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.16_alpha.ebuild,v 1.2 2008/03/29 13:46:11 hd_brummy Exp $
 
 MY_PV="${PV/_alpha/.alpha}"
 MY_P="${PN}-${MY_PV}"
@@ -51,6 +51,10 @@ src_unpack() {
 
 	if has_version ">=media-video/ffmpeg-0.4.9_p20070525" ; then
 		sed -i Makefile -e "s:#HAVE_SWSCALE:HAVE_SWSCALE:"
+	fi
+
+	if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
+		epatch "${FILESDIR}/ffmpeg-0.4.9_p20080326-new_header.diff"
 	fi
 
 	use directfb && sed -i Makefile \
