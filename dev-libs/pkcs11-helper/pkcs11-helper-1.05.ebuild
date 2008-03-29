@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.05.ebuild,v 1.3 2008/03/29 02:55:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.05.ebuild,v 1.4 2008/03/29 06:35:18 alonbl Exp $
 
 DESCRIPTION="PKCS#11 helper library"
 HOMEPAGE="http://www.opensc-project.org/pkcs11-helper"
@@ -26,7 +26,7 @@ src_compile() {
 		$(use_enable gnutls crypto-engine-gnutls) \
 		$(use_enable nss crypto-engine-nss) \
 		|| die
-	emake
+	emake || die
 }
 
 src_install() {
