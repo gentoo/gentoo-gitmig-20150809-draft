@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.4.3.ebuild,v 1.2 2008/03/29 19:31:40 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.4.0-r1.ebuild,v 1.1 2008/03/29 19:31:40 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -13,11 +13,11 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc gnome"
 
 RDEPEND=">=dev-libs/glib-2.8.0
-		 >=x11-libs/gtk+-2.12.0
+		 >=x11-libs/gtk+-2.10.0
 		 >=dev-libs/libxml2-2.4
 		 gnome?	(
 					>=gnome-base/libgnomeui-2.0
@@ -27,13 +27,11 @@ DEPEND="${RDEPEND}
 		  sys-devel/gettext
 		>=dev-util/intltool-0.35
 		>=dev-util/pkgconfig-0.19
-		  app-text/scrollkeeper
-		  app-text/gnome-doc-utils
 		doc? ( >=dev-util/gtk-doc-1.4 )"
 
 S="${WORKDIR}/${MY_P}"
 DOCS="AUTHORS BUGS ChangeLog HACKING INTERNALS MAINTAINERS NEWS README TODO"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable gnome) --disable-scrollkeeper"
+	G2CONF="${G2CONF} $(use_enable gnome)"
 }
