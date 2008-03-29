@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/myspell-nb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.14 2008/03/12 12:35:09 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.15 2008/03/29 15:14:56 philantrop Exp $
+
+*myspell-nb-20080310 (29 Mar 2008)
+
+  29 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
+  +myspell-nb-20080310.ebuild:
+  Version bump as per bug 213069. Thanks, Asbjørn Nilsen Riseth, for
+  providing the ebuilds.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Kevin Quinn (kevquinn, #93689) from metadata.xml.
