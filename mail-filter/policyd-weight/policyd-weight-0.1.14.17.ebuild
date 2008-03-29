@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/policyd-weight-0.1.14.17.ebuild,v 1.1 2008/03/28 18:27:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/policyd-weight-0.1.14.17.ebuild,v 1.2 2008/03/29 00:15:51 ticho Exp $
 
 inherit eutils
 
@@ -31,10 +31,16 @@ src_install() {
 	doman man/man5/*.5 man/man8/*.8
 	dodoc *.txt
 
+	sed -i -e "s:^   \$LOCKPATH.*:   \$LOCKPATH = '/var/run/policyd-weight/'; # must be a directory (add:" policyd-weight.conf.sample
 	insinto /etc
 	newins policyd-weight.conf.sample policyd-weight.conf
 
 	newinitd "${FILESDIR}/${PN}.init.d" "${PN}"
+
+	dodir /var/run/policyd-weight
+	keepdir /var/run/policyd-weight
+	fowners polw:root /var/run/policyd-weight
+	fperms 700 /var/run/policyd-weight
 }
 
 pkg_postinst() {
