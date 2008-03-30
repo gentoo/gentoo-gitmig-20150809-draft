@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.54 2008/03/26 01:42:01 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.55 2008/03/30 16:59:25 corsair Exp $
+
+  30 Mar 2008; Markus Rothe <corsair@gentoo.org> asm-1.4.3-r3.ebuild,
+  asm-1.5.3.ebuild, asm-2.2.3-r1.ebuild, asm-3.0.ebuild, asm-3.1.ebuild:
+  Added ~ppc64
 
   26 Mar 2008; Alistair Bush <ali_bush@gentoo.org> asm-2.2.3-r1.ebuild:
   Fixed typo in EANT_ var that resulted in calling incorrect javadoc target.
