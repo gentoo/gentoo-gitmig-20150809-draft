@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2.ebuild,v 1.4 2007/07/15 02:20:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2.ebuild,v 1.5 2008/03/30 15:26:22 vapier Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	=sys-freebsd/freebsd-libexec-${RV}*
-	build? ( virtual/baselayout )
+	build? ( sys-apps/baselayout )
 	ssl? ( dev-libs/openssl )
 	tcpd? ( sys-apps/tcp-wrappers )
 	dev-libs/libedit
