@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/svxlink
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.1 2007/12/16 19:25:39 pylon Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.2 2008/03/30 15:11:11 pylon Exp $
+
+*svxlink-080102 (30 Mar 2008)
+
+  30 Mar 2008; Lars Weiler <pylon@gentoo.org> +svxlink-080102.ebuild:
+  Version bump.
 
 *svxlink-070415 (16 Dec 2007)
 
