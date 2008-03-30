@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3459 2008/03/30 17:41:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3460 2008/03/30 21:10:30 cedk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1359,6 +1359,7 @@ net-analyzer/snort:react - Enable interception and termination of offending HTTP
 net-analyzer/snort:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/snort:snortsam - patches snort for use with snortsam
 net-analyzer/snort:timestats - Enable TimeStats functionality
+net-analyzer/tcpdump:chroot - Enable chrooting when dropping privileges
 net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feature via libpcapnav
 net-analyzer/wireshark:gcrypt - Use GNU crypto library (libgcrypt) to decrypt SSL traffic
 net-analyzer/wireshark:pcap - Use libpcap for network packet capturing (build dumpcap, rawshark)
