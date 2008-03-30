@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.138 2008/03/29 23:52:42 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.139 2008/03/30 10:32:11 armin76 Exp $
+
+  30 Mar 2008; Raúl Porcel <armin76@gentoo.org> gdb-6.7.1-r3.ebuild:
+  alpha/ia64/sparc stable wrt #215339
 
   29 Mar 2008; Dawid Węgliński <cla@gentoo.org> gdb-6.7.1-r3.ebuild:
   Stable on x86 (bug #215339)
