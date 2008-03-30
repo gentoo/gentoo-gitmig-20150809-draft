@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.3 2008/03/29 01:28:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.4 2008/03/30 05:12:38 robbat2 Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
@@ -29,6 +29,27 @@ src_unpack() {
 
 	# patch breaks booting for some people #111885
 	rm "${WORKDIR}"/patch/400_*
+
+	# Grub will not handle a kernel larger than EXTENDED_MEMSIZE Mb as
+	# discovered in bug 160801. We can change this, however, using larger values
+	# for this variable means that Grub needs more memory to run and boot. For a
+	# kernel of size N, Grub needs (N+1)*2.  Advanced users should set a custom
+	# value in make.conf, it is possible to make kernels ~16Mb in size, but it
+	# needs the kitchen sink built-in.
+	local t="custom"
+	if [[ -z "$GRUB_MAX_KERNEL_SIZE" ]]; then
+		case $ARCH in
+			amd64*) GRUB_MAX_KERNEL_SIZE=7 ;;
+			x86*)	GRUB_MAX_KERNEL_SIZE=3 ;;
+		esac
+		t="default"
+	fi
+	einfo "Grub will support the ${t} maximum kernel size of ${GRUB_MAX_KERNEL_SIZE} Mb (GRUB_MAX_KERNEL_SIZE)"
+
+	sed -i \
+		-e "/^#define.*EXTENDED_MEMSIZE/s,3,${GRUB_MAX_KERNEL_SIZE},g" \
+		"${S}"/grub/asmstub.c \
+		|| die "Failed to hack memory size"
 
 	if [[ -n ${PATCHVER} ]] ; then
 		EPATCH_SUFFIX="patch"
