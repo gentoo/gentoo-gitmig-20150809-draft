@@ -1,6 +1,9 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.99 2008/03/30 12:31:51 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.100 2008/03/30 12:59:45 cedk Exp $
+
+  30 Mar 2008; Cédric Krier <cedk@gentoo.org> bitlbee-1.2.ebuild:
+  Change ewarn to elog for bug #215432
 
   30 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> bitlbee-1.2.ebuild:
   amd64 stable wrt bug #213958

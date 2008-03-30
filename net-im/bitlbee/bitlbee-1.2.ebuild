@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.ebuild,v 1.7 2008/03/30 12:31:51 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.ebuild,v 1.8 2008/03/30 12:59:45 cedk Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs confutils
@@ -52,13 +52,13 @@ pkg_setup() {
 			ewarn ""
 			die "nss with jabber doesn't work"
 		fi
-		ewarn ""
-		ewarn "You have enabled support for Jabber but do not have SSL"
-		ewarn "support enabled.  This *will* prevent bitlbee from being"
-		ewarn "able to connect to SSL enabled Jabber servers.  If you need to"
-		ewarn "connect to Jabber over SSL, enable ONE of the following use"
-		ewarn "flags: gnutls or ssl"
-		ewarn ""
+		elog ""
+		elog "You have enabled support for Jabber but do not have SSL"
+		elog "support enabled.  This *will* prevent bitlbee from being"
+		elog "able to connect to SSL enabled Jabber servers.  If you need to"
+		elog "connect to Jabber over SSL, enable ONE of the following use"
+		elog "flags: gnutls or ssl"
+		elog ""
 	fi
 
 	enewgroup bitlbee
