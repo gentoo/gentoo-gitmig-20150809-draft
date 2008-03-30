@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libntlm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.5 2008/03/28 23:59:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.6 2008/03/30 09:42:42 armin76 Exp $
+
+  30 Mar 2008; Raúl Porcel <armin76@gentoo.org> libntlm-0.4.2.ebuild:
+  Add ~sparc wrt #194282
 
 *libntlm-0.4.2 (28 Mar 2008)
 
