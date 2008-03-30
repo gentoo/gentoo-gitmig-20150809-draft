@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.0.6-r3.ebuild,v 1.9 2006/11/07 23:25:23 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.0.6-r3.ebuild,v 1.10 2008/03/30 15:24:02 vapier Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
@@ -8,21 +8,17 @@ inherit eutils autotools
 
 DESCRIPTION="Tools for configuring the Linux kernel 802.1d Ethernet Bridge"
 HOMEPAGE="http://bridge.sourceforge.net/"
-
 SRC_URI="mirror://sourceforge/bridge/${P}.tar.gz"
-
-IUSE="sysfs"
-
-RDEPEND="virtual/libc
-		 virtual/baselayout"
-DEPEND="${RDEPEND}
-		sysfs? ( >=sys-fs/sysfsutils-1.0 )
-		virtual/os-headers
-		>=sys-devel/autoconf-2.59"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~hppa ia64 ppc x86"
+IUSE="sysfs"
+
+RDEPEND="sysfs? ( >=sys-fs/sysfsutils-1.0 )"
+DEPEND="${RDEPEND}
+	virtual/os-headers
+	>=sys-devel/autoconf-2.59"
 
 src_unpack() {
 	unpack ${A}
