@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.7.1-r3.ebuild,v 1.8 2008/03/30 14:00:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.7.1-r3.ebuild,v 1.9 2008/03/30 16:17:56 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -39,7 +39,7 @@ src_unpack() {
 }
 
 src_compile() {
-	replace-flags -O? -O2
+	strip-unsupported-flags
 	econf \
 		--disable-werror \
 		--with-system-readline \
