@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/qla-fc-firmware-20071207.ebuild,v 1.2 2008/03/30 02:51:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/qla-fc-firmware-20071207.ebuild,v 1.3 2008/03/30 04:12:35 mr_bones_ Exp $
 
 DESCRIPTION="QLogic Linux Fibre Channel HBA Firmware for ql2xxx cards"
 HOMEPAGE="ftp://ftp.qlogic.com/outgoing/linux/firmware/"
@@ -23,7 +23,7 @@ src_install() {
 	# binpkg either. If you do something else with the firmware blobs, you are
 	# thus strongly encouraged to keep a copy of the LICENSE file with them on
 	# the system.
-	dodoc LICENSE 
+	dodoc LICENSE
 	dodoc README.gentoo CURRENT_VERSIONS
 	insinto /lib/firmware
 	# some older firmware are always provided by upstream
