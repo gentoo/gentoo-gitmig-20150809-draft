@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vdr2jpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.12 2008/03/29 16:35:57 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.13 2008/03/30 17:00:00 zzam Exp $
+
+  30 Mar 2008; Matthias Schwarzott <zzam@gentoo.org> vdr2jpeg-0.1.0.ebuild:
+  Let the ebuild abort if dobin fails.
 
 *vdr2jpeg-0.1.0 (29 Mar 2008)
 
