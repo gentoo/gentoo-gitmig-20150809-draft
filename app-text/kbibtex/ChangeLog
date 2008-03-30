@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kbibtex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.23 2008/02/09 15:49:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.24 2008/03/30 08:10:55 carlo Exp $
+
+*kbibtex-0.2.1 (30 Mar 2008)
+
+  30 Mar 2008; Carsten Lohrke <carlo@gentoo.org> +kbibtex-0.2.1.ebuild:
+  Version bump.
 
   09 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
   +files/kbibtex-0.2-desktop-entry.diff:
