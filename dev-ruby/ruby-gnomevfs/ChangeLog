@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnomevfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomevfs/ChangeLog,v 1.21 2008/03/29 19:23:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomevfs/ChangeLog,v 1.22 2008/03/30 15:28:33 armin76 Exp $
+
+  30 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  ruby-gnomevfs-0.15.0.ebuild:
+  alpha/ia64 stable wrt #215149
 
   29 Mar 2008; Brent Baude <ranger@gentoo.org> ruby-gnomevfs-0.15.0.ebuild:
   Marking ruby-gnomevfs-0.15.0 ppc for bug 215149
