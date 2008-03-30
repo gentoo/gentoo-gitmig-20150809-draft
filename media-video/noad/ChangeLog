@@ -1,6 +1,9 @@
 # ChangeLog for media-video/noad
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.31 2007/11/27 11:45:45 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.32 2008/03/30 12:03:40 hd_brummy Exp $
+
+  30 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org> noad-0.6.0-r9.ebuild:
+  new ffmpeg header structur fixed, bug #214740
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> noad-0.6.0-r7.ebuild,
   noad-0.6.0-r8.ebuild, noad-0.6.0-r9.ebuild:

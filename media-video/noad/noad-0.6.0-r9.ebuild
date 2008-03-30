@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r9.ebuild,v 1.5 2007/11/27 11:45:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r9.ebuild,v 1.6 2008/03/30 12:03:40 hd_brummy Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -34,6 +34,12 @@ src_unpack() {
 	epatch "${FILESDIR}"/patches-${PV}/fix-osd.patch
 	epatch "${FILESDIR}"/patches-${PV}/hangcheck.diff
 	epatch "${FILESDIR}"/patches-${PV}/new-ffmpeg-extern-c.diff
+
+	sed -e "s:char \*indents:const char \*indents:" -i showindex.cpp
+
+	if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
+		sed -e "s:include/ffmpeg:include/libavcodec:g" -i configure.ac
+	fi
 
 	rm configure
 	eautoreconf
