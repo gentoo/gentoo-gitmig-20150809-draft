@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/snip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/snip/ChangeLog,v 1.4 2008/03/30 01:00:10 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snip/ChangeLog,v 1.5 2008/03/30 16:27:25 corsair Exp $
+
+  30 Mar 2008; Markus Rothe <corsair@gentoo.org> snip-0.11.ebuild:
+  Added ~ppc64; bug #215397
 
   30 Mar 2008; Alistair Bush <ali_bush@gentoo.org> snip-0.11.ebuild:
   keyword ~amd64
