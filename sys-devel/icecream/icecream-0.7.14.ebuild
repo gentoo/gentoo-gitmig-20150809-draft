@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.7.14.ebuild,v 1.4 2007/06/27 08:00:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.7.14.ebuild,v 1.5 2008/03/30 09:34:35 armin76 Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://en.opensuse.org/Icecream"
 SRC_URI="ftp://ftp.suse.com/pub/projects/icecream/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 DEPEND="virtual/libc"
 
 S="${WORKDIR}/${PN}"

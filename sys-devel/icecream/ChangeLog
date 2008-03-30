@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/icecream
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.12 2007/11/08 00:32:54 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.13 2008/03/30 09:34:35 armin76 Exp $
+
+  30 Mar 2008; Raúl Porcel <armin76@gentoo.org> icecream-0.7.14.ebuild:
+  Add ~sparc wrt #215131
 
   08 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/icecream-0.6-20050413-add-disable-option.patch,
