@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gconf2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.33 2008/03/30 15:20:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.34 2008/03/30 20:18:26 coldwind Exp $
+
+  30 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  ruby-gconf2-0.16.0.ebuild:
+  amd64 stable wrt bug #215149
 
   30 Mar 2008; Raúl Porcel <armin76@gentoo.org> ruby-gconf2-0.16.0.ebuild:
   alpha/ia64 stable wrt #215149
