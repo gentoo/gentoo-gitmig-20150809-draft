@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.15 2008/03/28 18:56:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.16 2008/03/30 16:06:45 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -98,6 +98,22 @@ src_install() {
 	(use x86 || use amd64) && sed -i -e '/^windowkeys=/s:NO:YES:' "${D}"/etc/conf.d/keymaps
 }
 
+add_boot_init() {
+	local initd=$1
+	[[ -e ${ROOT}/etc/init.d/${initd} ]] || return
+	[[ -e ${ROOT}/etc/runlevels/boot/${initd} ]] && return
+	elog "Auto-adding '${initd}' service to your boot runlevel"
+	ln -snf /etc/init.d/${initd} "${ROOT}"/etc/runlevels/boot/${initd}
+}
+add_boot_init_mit_config() {
+	local config=$1 initd=$2
+	if [[ -e ${ROOT}${config} ]] ; then
+		if [[ -n $(sed -e 's:#.*::' -e '/^[[:space:]]*$/d' "${ROOT}"/${config}) ]] ; then
+			maybe_add_boot_init ${initd}
+		fi
+	fi
+}
+
 pkg_preinst() {
 	local f
 
@@ -149,10 +165,16 @@ pkg_preinst() {
 
 	# baselayout boot init scripts have been split out
 	for f in $(cd "${D}"/usr/share/${PN}/runlevels/boot || exit; echo *) ; do
-		[[ -e ${ROOT}/etc/runlevels/boot/${f} ]] && continue
-		elog "Auto-adding '${f}' service to your boot runlevel"
-		ln -snf /etc/init.d/${f} "${ROOT}"/etc/runlevels/boot/${f}
+		add_boot_init ${f}
 	done
+
+	# Try to auto-add some addons when possible
+	add_boot_init_mit_config /etc/conf.d/cryptfs dmcrypt
+	add_boot_init_mit_config /etc/mdadm.conf mdraid
+	[[ -e ${ROOT}/sbin/vgscan ]] && add_boot_init lvm
+	elog "Add on services (such as RAID/dmcrypt/LVM/etc...) are now stand alone"
+	elog "init.d scripts.  If you use such a thing, make sure you have the"
+	elog "required init.d scripts added to your boot runlevel."
 
 	# Upgrade out state for baselayout-1 users
 	if [[ ! -e ${ROOT}${LIBDIR}/rc/init.d/started ]] ; then
