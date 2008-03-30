@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.0.ebuild,v 1.9 2005/06/13 18:09:42 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.0.ebuild,v 1.10 2008/03/30 22:15:26 hanno Exp $
 
 inherit eutils fdo-mime
 
@@ -29,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }
 
 pkg_postinst() {
