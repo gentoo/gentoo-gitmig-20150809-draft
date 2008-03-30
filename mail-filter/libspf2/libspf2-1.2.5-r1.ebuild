@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/libspf2-1.2.5-r1.ebuild,v 1.13 2006/01/26 23:15:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/libspf2-1.2.5-r1.ebuild,v 1.14 2008/03/30 01:41:19 halcy0n Exp $
 
 inherit eutils
 
@@ -14,12 +14,12 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
-RDEPEND=""
+RDEPEND="!dev-perl/Mail-SPF-Query"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/patch-libspf2-1.2.5-nointernal || die
+	cd "${S}"
+	epatch "${FILESDIR}"/patch-libspf2-1.2.5-nointernal || die
 }
 
 src_compile() {
@@ -28,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
+	make install DESTDIR="${D}" || die "make install failed"
 
 	dodoc Changelog INSTALL README TODO docs/*.txt docs/API
 }

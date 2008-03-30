@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/libspf2-1.2.5-r2.ebuild,v 1.7 2007/11/23 17:34:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/libspf2-1.2.5-r2.ebuild,v 1.8 2008/03/30 01:41:19 halcy0n Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
-RDEPEND=""
+RDEPEND="!dev-perl/Mail-SPF-Query"
 
 RESTRICT="test"
 
