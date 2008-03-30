@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/tcb
+# ChangeLog for sys-auth/tcb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tcb/ChangeLog,v 1.1 2008/03/27 14:45:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tcb/ChangeLog,v 1.2 2008/03/30 20:13:52 swegener Exp $
 
   27 Mar 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/tcb-1.0.2-build.patch, +files/tcb-1.0-build.patch, +metadata.xml,
