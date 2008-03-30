@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.05-r1.ebuild,v 1.2 2008/03/28 23:16:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.05-r1.ebuild,v 1.3 2008/03/30 23:59:09 robbat2 Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
