@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/hdapsd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.8 2008/03/17 16:20:39 chainsaw Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.9 2008/03/30 22:29:51 welp Exp $
+
+*hdapsd-20060409-r2 (30 Mar 2008)
+
+  30 Mar 2008; Peter Weller <welp@gentoo.org> +hdapsd-20060409-r2.ebuild:
+  Bump; bug 141565
 
 *hdapsd-20060409-r1.ebuild (29 Aug 2007)
 *hdapsd-20060409.ebuild (29 Aug 2007)
