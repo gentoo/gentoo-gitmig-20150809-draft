@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.64 2008/01/24 18:37:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.65 2008/03/30 21:18:41 ulm Exp $
+
+*tramp-2.1.13 (30 Mar 2008)
+
+  30 Mar 2008; Ulrich Mueller <ulm@gentoo.org> -tramp-2.1.11-r1.ebuild,
+  +tramp-2.1.13.ebuild:
+  Version bump. Remove old.
 
   24 Jan 2008; nixnut <nixnut@gentoo.org> tramp-2.1.12.ebuild:
   Stable on ppc wrt bug 207225
