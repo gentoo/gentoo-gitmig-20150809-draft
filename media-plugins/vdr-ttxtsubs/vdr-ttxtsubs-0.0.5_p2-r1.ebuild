@@ -1,6 +1,6 @@
-# Copyright 2004-2007 Gentoo Foundation
+# Copyright 2004-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ttxtsubs/vdr-ttxtsubs-0.0.5_p2-r1.ebuild,v 1.3 2007/11/01 21:11:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ttxtsubs/vdr-ttxtsubs-0.0.5_p2-r1.ebuild,v 1.4 2008/03/30 21:26:45 zzam Exp $
 
 inherit vdr-plugin eutils versionator
 
@@ -25,7 +25,11 @@ S=${WORKDIR}/${MY_P#vdr-}
 
 pkg_setup() {
 	if [[ ! -f /usr/include/vdr/vdrttxtsubshooks.h ]]; then
-		eerror "please compile vdr with USE=\"subtitles\""
+		local flag=ttxtsubs
+		if has_version "<media-video/vdr-1.6.0"; then
+			flag="subtitles"
+		fi
+		eerror "please compile vdr with USE=\"${flag}\""
 		die "can not compile packet without subtitles-support from vdr"
 	fi
 	vdr-plugin_pkg_setup
