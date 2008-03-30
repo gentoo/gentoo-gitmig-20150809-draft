@@ -1,6 +1,9 @@
 # ChangeLog for media-video/blinkensim
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.7 2007/11/27 12:21:16 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.8 2008/03/30 13:30:53 pylon Exp $
+
+  30 Mar 2008; Lars Weiler <pylon@gentoo.org> blinkensim-2.7.ebuild:
+  Added dependency to dev-util/pkgconfig; bug #153367.
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> blinkensim-2.7.ebuild:
   Fixed quoting.
