@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/tcptraceroute
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.41 2007/09/06 18:40:16 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.42 2008/03/30 22:09:28 cedk Exp $
+
+*tcptraceroute-1.5_beta7-r1 (30 Mar 2008)
+
+  30 Mar 2008; Cédric Krier <cedk@gentoo.org>
+  +tcptraceroute-1.5_beta7-r1.ebuild:
+  Remove bindnow for bug #214087 and fix fperms that must be run after fowners
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
   -tcptraceroute-1.5_beta5.ebuild, -tcptraceroute-1.5_beta6.ebuild:
