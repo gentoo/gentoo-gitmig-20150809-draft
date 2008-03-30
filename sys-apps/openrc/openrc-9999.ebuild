@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.16 2008/03/30 16:06:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.17 2008/03/30 17:42:10 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/openrc.git"
-	EGIT_BRANCH="Gentoo"
+	EGIT_BRANCH="master"
 	inherit git
 else
 	SRC_URI="http://roy.marples.name/${PN}/${P}.tar.bz2
@@ -61,6 +61,7 @@ src_unpack() {
 		unpack ${A}
 	fi
 	cd "${S}"
+	epatch "${FILESDIR}"/9999/*.patch
 }
 
 src_compile() {
