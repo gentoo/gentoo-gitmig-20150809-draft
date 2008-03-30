@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.40 2008/03/29 19:22:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.41 2008/03/30 20:23:45 maekke Exp $
+
+  30 Mar 2008; Markus Meier <maekke@gentoo.org> sdparm-1.02.ebuild:
+  amd64/x86 stable, bug #215074
 
   29 Mar 2008; Brent Baude <ranger@gentoo.org> sdparm-1.02.ebuild:
   stable ppc, bug 215074
