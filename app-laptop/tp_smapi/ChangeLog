@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/tp_smapi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.23 2007/12/31 18:30:43 welp Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.24 2008/03/30 22:35:05 welp Exp $
+
+*tp_smapi-0.37 (30 Mar 2008)
+
+  30 Mar 2008; Peter Weller <welp@gentoo.org> +tp_smapi-0.37.ebuild:
+  Bump; bugs 141565 and 208627
 
 *tp_smapi-0.33 (31 Dec 2007)
 
