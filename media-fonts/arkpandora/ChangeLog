@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/arkpandora
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arkpandora/ChangeLog,v 1.13 2008/03/29 15:52:45 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arkpandora/ChangeLog,v 1.14 2008/03/30 05:58:08 robbat2 Exp $
+
+  30 Mar 2008; Robin H. Johnson <robbat2@gentoo.org> arkpandora-2.04.ebuild:
+  Add ~ppc.
 
   29 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   arkpandora-2.04.ebuild:
