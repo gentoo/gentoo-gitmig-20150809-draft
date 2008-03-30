@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.85 2008/03/30 05:12:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.86 2008/03/30 17:20:32 robbat2 Exp $
+
+  30 Mar 2008; Robin H. Johnson <robbat2@gentoo.org> grub-0.97-r5.ebuild:
+  Bring in the warning from bug #98768, as it's now important with the new
+  Grub patches.
 
   30 Mar 2008; Robin H. Johnson <robbat2@gentoo.org> grub-0.97-r5.ebuild:
   Per bug #160801, Grub needs modification to support kernels larger than

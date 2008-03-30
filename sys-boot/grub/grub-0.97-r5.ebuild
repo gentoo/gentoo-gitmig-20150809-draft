@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.4 2008/03/30 05:12:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.5 2008/03/30 17:20:32 robbat2 Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
@@ -163,7 +163,16 @@ setup_boot_dir() {
 		ln -snf grub.conf "${dir}"/menu.lst
 	fi
 
-	[[ -e ${dir}/stage2 ]] && mv "${dir}"/stage2{,.old}
+	if [[ -e ${dir}/stage2 ]]; then
+		mv "${dir}"/stage2 \
+			"${dir}"/stage2-$(date -u +%Y%m%d-%H%MZ)
+		ewarn "*** IMPORTANT NOTE: you must run grub and install"
+		ewarn "the new version's stage1 to your MBR.  Until you do,"
+		ewarn "stage1 and stage2 will still be the old version, but"
+		ewarn "later stages will be the new version, which could"
+		ewarn "cause problems such as an unbootable system."
+		ebeep
+	fi
 
 	einfo "Copying files from /lib/grub and /usr/lib/grub to ${dir}"
 	for x in "${ROOT}"/lib*/grub/*/* "${ROOT}"/usr/lib*/grub/*/* ; do
