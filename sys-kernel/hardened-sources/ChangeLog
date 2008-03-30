@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.212 2008/03/24 15:05:49 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.213 2008/03/30 18:17:25 phreak Exp $
+
+  30 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix the metadata.xml (Kerin isn't a dev, though he and Gordon are
+  maintaining it).
 
   24 Mar 2008; Christian Heim <phreak@gentoo.org>
   hardened-sources-2.4.35-r2.ebuild:

@@ -8,8 +8,12 @@
 		<name>Christian Heim</name>
 	</maintainer>
 	<maintainer>
-		<email>kerframil@gentoo.org</email>
+		<email>kerframil@gmail.com</email>
 		<name>Kerin Millar</name>
+	</maintainer>
+	<maintainer>
+		<email>bugs-gentoo-org-02@bumpin.org</email>
+		<name>Gordon Malm</name>
 	</maintainer>
 	<longdescription>
 		hardened-sources is based upon genpatches-base, and adds the grsecurity
