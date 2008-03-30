@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtkhtml2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.14 2008/03/29 19:30:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.15 2008/03/30 15:29:25 armin76 Exp $
+
+  30 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  ruby-gtkhtml2-0.16.0.ebuild:
+  ia64 stable wrt #215149
 
   29 Mar 2008; Brent Baude <ranger@gentoo.org> ruby-gtkhtml2-0.16.0.ebuild:
   Marking ruby-gtkhtml2-0.16.0 ~ppc for bug 215149
