@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-spider/vdr-spider-0.1.4.ebuild,v 1.2 2007/07/10 23:09:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-spider/vdr-spider-0.1.4.ebuild,v 1.3 2008/03/30 12:22:00 zzam Exp $
 
 inherit vdr-plugin
 
@@ -20,13 +20,13 @@ SPIDER_DATA_DIR="/usr/share/vdr/spider"
 src_unpack() {
 	vdr-plugin_src_unpack
 
-	cd ${S}
+	cd "${S}"
 	sed -i spider.c -e 's:ConfigDirectory(Name()):"'${SPIDER_DATA_DIR}'":'
 }
 
 src_install() {
 	vdr-plugin_src_install
 
-	insinto ${SPIDER_DATA_DIR}
-	doins ${S}/spider/*.xpm
+	insinto "${SPIDER_DATA_DIR}"
+	doins "${S}"/spider/*.xpm
 }
