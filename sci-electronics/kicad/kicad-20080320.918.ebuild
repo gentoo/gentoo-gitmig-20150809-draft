@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20080320.918.ebuild,v 1.1 2008/03/23 17:40:34 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20080320.918.ebuild,v 1.2 2008/03/30 13:58:33 calchan Exp $
 
 inherit versionator wxwidgets cmake-utils flag-o-matic
 
@@ -47,18 +47,17 @@ src_install() {
 
 pkg_postinst() {
 	if use minimal ; then
-		ewarn "If the schematic and/or board editors complain about missing libraries when you open old projects,"
-		ewarn "you will have to take one or more of the following actions :"
+		ewarn "If the schematic and/or board editors complain about missing libraries when you"
+		ewarn "open old projects, you will have to take one or more of the following actions :"
 		ewarn "- Install the missing libraries manually."
 		ewarn "- Remove the libraries from the 'Libs and Dir' preferences."
 		ewarn "- Fix the libraries' locations in the 'Libs and Dir' preferences."
 		ewarn "- Emerge kicad without the 'minimal' USE flag."
 	else
-		elog "Please note that the PDF datasheets that can be linked to components from the default libraries"
-		elog "cannot be mirrored by Gentoo for legal reasons."
-		elog "If you want them, you need to download them yourself from :"
-		elog "${HOMEPAGE}"
-		elog "and install them manually."
+		if !(use doc) ; then
+			elog "KiCad will complain about missing help files. If you want them you'll need"
+			elog "to add the \"doc\" USE flag."
+		fi
 	fi
 	elog
 	elog "You may want to emerge media-gfx/wings if you want to create 3D models of components."
