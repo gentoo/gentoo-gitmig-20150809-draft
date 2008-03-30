@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.228 2008/03/30 02:46:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.229 2008/03/30 11:02:19 armin76 Exp $
+
+  30 Mar 2008; Raúl Porcel <armin76@gentoo.org> util-linux-2.13.1.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #215371
 
   30 Mar 2008; Brent Baude <ranger@gentoo.org> util-linux-2.13.1.ebuild:
   stable ppc64, bug 215371
