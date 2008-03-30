@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gentoo-syntax/gentoo-syntax-1.8.ebuild,v 1.1 2008/03/22 12:37:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gentoo-syntax/gentoo-syntax-1.8.ebuild,v 1.2 2008/03/30 10:19:37 graaff Exp $
 
 inherit xemacs-elisp eutils
 
@@ -12,4 +12,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=app-editors/xemacs-21.4.20-r5"
+RDEPEND=">=app-editors/xemacs-21.4.20-r5
+	app-xemacs/sh-script"
+DEPEND="${RDEPEND}"
