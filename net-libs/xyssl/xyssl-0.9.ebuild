@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xyssl/xyssl-0.9.ebuild,v 1.1 2008/03/29 23:35:06 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xyssl/xyssl-0.9.ebuild,v 1.2 2008/03/30 09:22:44 pylon Exp $
 
 DESCRIPTION="Cryptographic library for embedded systems"
 HOMEPAGE="http://xyssl.org/"
@@ -25,13 +25,13 @@ src_compile() {
 
 	if use examples ; then
 		cd "${S}"/programs
-		emake all
+		emake all || die "emake failed"
 	fi
 }
 
 src_test() {
 	cd "${S}"/programs
-	emake test/selftest
+	emake test/selftest || die "emake selftest failed"
 	./test/selftest || die "selftest failed"
 }
 
