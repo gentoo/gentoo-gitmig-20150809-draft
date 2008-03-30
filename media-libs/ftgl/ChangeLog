@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ftgl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.20 2008/01/05 01:15:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.21 2008/03/30 22:58:20 ricmm Exp $
+
+  30 Mar 2008; <ricmm@gentoo.org> ftgl-2.1.2-r1.ebuild:
+  Drop to ~mips due to unstable deps
 
 *ftgl-2.1.2-r2 (05 Jan 2008)
 
