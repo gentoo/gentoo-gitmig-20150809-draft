@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25.ebuild,v 1.5 2008/01/27 10:48:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25.ebuild,v 1.6 2008/03/30 03:30:34 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -74,7 +74,7 @@ src_install() {
 
 	dodir /etc/svgalib /usr/{include,lib,bin,share/man}
 
-	make \
+	emake \
 		TOPDIR="${D}" OPTIMIZE="${CFLAGS}" INSTALLMODULE="" \
 		install || die "Failed to install svgalib!"
 	! use build && ! use no-helper && linux-mod_src_install
@@ -95,16 +95,8 @@ src_install() {
 	doins src/vga.h gl/vgagl.h src/mouse/vgamouse.h src/joystick/vgajoystick.h
 	doins src/keyboard/vgakeyboard.h
 
-	if best_version '>=sys-fs/udev-045' ; then
-		insinto /etc/udev/rules.d
-		newins "${FILESDIR}"/svgalib.udev.rules.d 30-svgalib.rules
-	elif best_version sys-fs/udev ; then
-		insinto /etc/udev/permissions.d
-		newins "${FILESDIR}"/svgalib.udev.perms.d 30-svgalib.permissions
-	elif best_version sys-fs/devfsd ; then
-		insinto /etc/devfs.d
-		newins "${FILESDIR}"/svgalib.devfs svgalib
-	fi
+	insinto /etc/udev/rules.d
+	newins "${FILESDIR}"/svgalib.udev.rules.d 30-svgalib.rules
 
 	exeinto /usr/lib/svgalib/demos
 	for x in "${S}"/demos/* ; do
