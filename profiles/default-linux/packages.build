@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/packages.build,v 1.18 2008/02/06 16:25:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/packages.build,v 1.19 2008/03/30 16:52:46 vapier Exp $
 
 # This file describes the packages needed to build a stage 1 based on this
 # profile.  Packages in this file are built in order.
@@ -16,7 +16,7 @@ app-arch/tar
 app-shells/bash
 net-misc/rsync
 net-misc/wget
-virtual/baselayout
+sys-apps/baselayout
 sys-devel/autoconf
 sys-devel/automake
 sys-devel/libtool
