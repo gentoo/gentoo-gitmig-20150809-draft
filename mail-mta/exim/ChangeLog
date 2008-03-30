@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.122 2008/03/20 19:26:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.123 2008/03/30 15:55:47 peitolm Exp $
+
+  30 Mar 2008; Colin Morey <peitolm@gentoo.org> -exim-4.68.ebuild:
+  Retrying removal of insecure version
 
   20 Mar 2008; Colin Morey <peitolm@gentoo.org> -exim-4.68.ebuild:
   Removing old, insecure stable version.
