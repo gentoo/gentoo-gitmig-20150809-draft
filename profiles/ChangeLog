@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1266 2008/03/29 21:55:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1267 2008/03/30 17:41:31 calchan Exp $
+
+  30 Mar 2008; Denis Dupeyron <calchan@gentoo.org> use.local.desc:
+  Added smp local USE flag for media-plugins/gimp-greycstoration.
 
   29 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   adding gnome-mag and dasher to gnome 2.22 mask
