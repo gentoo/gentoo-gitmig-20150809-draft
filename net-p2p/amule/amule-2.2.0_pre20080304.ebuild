@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20080304.ebuild,v 1.5 2008/03/27 15:03:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20080304.ebuild,v 1.6 2008/03/30 23:12:01 coldwind Exp $
 
 inherit eutils flag-o-matic wxwidgets autotools
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.hirnriss.net/files/cvs/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ppc64 ~sparc x86"
 IUSE="daemon debug geoip gtk nls remote stats unicode upnp"
 
 DEPEND="=x11-libs/wxGTK-2.8*
