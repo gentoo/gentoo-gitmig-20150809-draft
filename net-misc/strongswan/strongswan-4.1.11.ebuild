@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.1.11.ebuild,v 1.1 2008/03/30 09:53:42 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.1.11.ebuild,v 1.2 2008/03/30 14:43:16 pylon Exp $
 
 inherit eutils linux-info
 
@@ -82,6 +82,8 @@ src_install() {
 	einstall || die "einstall failed."
 
 	doinitd "${FILESDIR}"/ipsec
+
+	fowners ipsec:ipsec /etc/ipsec.conf
 }
 
 pkg_postinst() {
@@ -90,6 +92,11 @@ pkg_postinst() {
 	ewarn "will be installed into the default directory \"/etc/\""
 	ewarn "instead of the Gentoo-specific directory \"/etc/ipsec/\"."
 	ewarn "Please adjust your configuration!"
+	echo
+	einfo "For your own security we install strongSwan without superuser"
+	einfo "privileges.  If you use iptables, you might want to change that"
+	einfo "setting.  See http://wiki.strongswan.org/wiki/nonRoot for more"
+	einfo "information."
 	echo
 	einfo "The up-to-date configuration manual is available online at"
 	einfo "http://www.strongswan.org/docs/readme.htm"

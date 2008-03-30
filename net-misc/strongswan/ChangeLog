@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.59 2008/03/30 09:53:42 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.60 2008/03/30 14:43:16 pylon Exp $
+
+  30 Mar 2008; Lars Weiler <pylon@gentoo.org> strongswan-4.1.11.ebuild:
+  Some fixups for non-root-mode installation; bug #208196.
 
 *strongswan-4.1.11 (30 Mar 2008)
 
