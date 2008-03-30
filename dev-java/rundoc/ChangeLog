@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rundoc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rundoc/ChangeLog,v 1.4 2007/11/04 11:10:04 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rundoc/ChangeLog,v 1.5 2008/03/30 00:50:51 ali_bush Exp $
+
+  30 Mar 2008; Alistair Bush <ali_bush@gentoo.org> rundoc-0.11.ebuild:
+  keyword ~amd64.
 
   04 Nov 2007; Christian Faulhammer <opfer@gentoo.org> rundoc-0.11.ebuild:
   stable x86, bug 197861
