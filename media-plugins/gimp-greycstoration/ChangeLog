@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gimp-greycstoration
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-greycstoration/ChangeLog,v 1.1 2008/02/25 10:08:46 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-greycstoration/ChangeLog,v 1.2 2008/03/30 17:45:48 calchan Exp $
+
+*gimp-greycstoration-2.8 (30 Mar 2008)
+
+  30 Mar 2008; Denis Dupeyron <calchan@gentoo.org>
+  +gimp-greycstoration-2.8.ebuild:
+  Version bump. Added smp support.
 
 *gimp-greycstoration-1.2.7 (25 Feb 2008)
 
