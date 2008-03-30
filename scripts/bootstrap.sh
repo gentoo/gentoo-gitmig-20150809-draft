@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.86 2007/08/31 17:14:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.87 2008/03/30 16:51:39 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -52,7 +52,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.86 2007/08/31 17:14:33 wolf31o2 Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.87 2008/03/30 16:51:39 vapier Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -259,7 +259,7 @@ sed 's/[][,]//g; s/\*//g' | tr ' ' '\n' | while read p; do n=${p##*/}; n=${n%\'}
 n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 
 # This stuff should never fail but will if not enough is installed.
-[[ -z ${myBASELAYOUT} ]] && myBASELAYOUT=">=$(portageq best_version / virtual/baselayout)"
+[[ -z ${myBASELAYOUT} ]] && myBASELAYOUT=">=$(portageq best_version / sys-apps/baselayout)"
 [[ -z ${myPORTAGE}    ]] && myPORTAGE="portage"
 [[ -z ${myBINUTILS}   ]] && myBINUTILS="binutils"
 [[ -z ${myGCC}        ]] && myGCC="gcc"
