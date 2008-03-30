@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/nxtvepg
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/ChangeLog,v 1.16 2007/11/27 10:42:59 zzam Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/ChangeLog,v 1.17 2008/03/30 14:57:58 pylon Exp $
+
+*nxtvepg-2.8.0 (30 Mar 2008)
+
+  30 Mar 2008; Lars Weiler <pylon@gentoo.org> +files/nxtvepg-tcl8.5.patch,
+  +files/nxtvepg-daemon-install.patch, +files/nxtvepg-unicode.patch,
+  -nxtvepg-2.7.6.ebuild, -nxtvepg-2.7.7.ebuild, +nxtvepg-2.8.0.ebuild:
+  Version bump; fixes tcl8.5-compatibility; bug #212682 and #173467.
+  Probably the tcl/tk-dependency must be fixed to 8.5, but that version is
+  still masked.
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> nxtvepg-2.7.5.ebuild:
   Fixed quoting.
