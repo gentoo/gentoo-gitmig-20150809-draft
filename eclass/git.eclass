@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.9 2008/03/30 05:39:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.10 2008/03/30 05:52:27 robbat2 Exp $
 
 ## --------------------------------------------------------------------------- #
 # subversion.eclass author: Akinori Hattori <hattya@gentoo.org>
@@ -98,7 +98,7 @@ EGIT_DIFFSTAT_CMD="git diff --stat"
 # @ECLASS-VARIABLE: EGIT_OFFLINE
 # @DESCRIPTION:
 # Set this variable to a non-empty value to disable the automatic updating of
-# an GIT source tree. This is intended to be set outside the subversion source
+# an GIT source tree. This is intended to be set outside the git source
 # tree by users.
 EGIT_OFFLINE="${EGIT_OFFLINE:-${ESCM_OFFLINE}}"
 
