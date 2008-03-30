@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.5 2008/03/30 17:20:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r5.ebuild,v 1.6 2008/03/30 17:29:13 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
@@ -37,10 +37,10 @@ src_unpack() {
 	# value in make.conf, it is possible to make kernels ~16Mb in size, but it
 	# needs the kitchen sink built-in.
 	local t="custom"
-	if [[ -z "$GRUB_MAX_KERNEL_SIZE" ]]; then
-		case $ARCH in
-			amd64*) GRUB_MAX_KERNEL_SIZE=7 ;;
-			x86*)	GRUB_MAX_KERNEL_SIZE=3 ;;
+	if [[ -z ${GRUB_MAX_KERNEL_SIZE} ]] ; then
+		case $(tc-arch) in
+			amd64) GRUB_MAX_KERNEL_SIZE=7 ;;
+			x86)   GRUB_MAX_KERNEL_SIZE=3 ;;
 		esac
 		t="default"
 	fi
@@ -158,14 +158,13 @@ setup_boot_dir() {
 		ewarn
 	fi
 
-	if [[ ! -e ${dir}/menu.lst ]]; then
+	if [[ ! -e ${dir}/menu.lst ]] ; then
 		einfo "Linking from new grub.conf name to menu.lst"
 		ln -snf grub.conf "${dir}"/menu.lst
 	fi
 
-	if [[ -e ${dir}/stage2 ]]; then
-		mv "${dir}"/stage2 \
-			"${dir}"/stage2-$(date -u +%Y%m%d-%H%MZ)
+	if [[ -e ${dir}/stage2 ]] ; then
+		mv "${dir}"/stage2{,.old}
 		ewarn "*** IMPORTANT NOTE: you must run grub and install"
 		ewarn "the new version's stage1 to your MBR.  Until you do,"
 		ewarn "stage1 and stage2 will still be the old version, but"
@@ -176,7 +175,7 @@ setup_boot_dir() {
 
 	einfo "Copying files from /lib/grub and /usr/lib/grub to ${dir}"
 	for x in "${ROOT}"/lib*/grub/*/* "${ROOT}"/usr/lib*/grub/*/* ; do
-		[[ -f "${x}" ]] && cp -p "${x}" "${dir}"/
+		[[ -f ${x} ]] && cp -p "${x}" "${dir}"/
 	done
 
 	if [[ -e ${dir}/grub.conf ]] ; then
