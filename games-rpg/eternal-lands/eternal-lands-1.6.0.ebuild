@@ -1,13 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.6.0.ebuild,v 1.1 2008/03/30 02:29:13 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.6.0.ebuild,v 1.2 2008/03/30 04:12:15 mr_bones_ Exp $
 
 inherit cvs eutils flag-o-matic games
 
 DESCRIPTION="An online MMORPG written in C and SDL"
 HOMEPAGE="http://www.eternal-lands.com"
 SRC_URI="mirror://gentoo/eternal-lands.png"
-
 
 LICENSE="eternal_lands"
 SLOT="0"
@@ -63,7 +62,6 @@ src_unpack() {
 	BROWSER="firefox"
 
 	cd "${S}"
-
 
 	# Add debugging options
 	if use debug ; then
