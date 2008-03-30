@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0.ebuild,v 1.5 2008/03/15 22:27:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0.ebuild,v 1.6 2008/03/30 12:15:00 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/linux-ntfs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~mips ppc ppc64 ~sparc x86"
 IUSE="crypt debug fuse gnome"
 
 RDEPEND="dev-libs/libconfig
