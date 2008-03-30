@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.44 2008/03/30 15:03:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.45 2008/03/30 22:26:42 eva Exp $
+
+*gparted-0.3.6 (30 Mar 2008)
+
+  30 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> +gparted-0.3.6.ebuild:
+  bump to 0.3.6, can set labels.
 
   30 Mar 2008; Christian Faulhammer <opfer@gentoo.org> gparted-0.3.5.ebuild:
   stable x86, bug 215392
