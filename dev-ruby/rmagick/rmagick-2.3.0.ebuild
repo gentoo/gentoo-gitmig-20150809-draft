@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.15.10.ebuild,v 1.9 2007/10/14 15:26:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.3.0.ebuild,v 1.1 2008/03/30 09:09:23 graaff Exp $
 
 inherit ruby
 
@@ -10,17 +10,18 @@ inherit ruby
 # of arguments.  Thus, unless you're smart enough to come up with a
 # fix, please leave this as a source package install.
 
+MY_PV=${PV//_/-}
 DESCRIPTION="An interface between Ruby and the ImageMagick(TM) image processing library"
 HOMEPAGE="http://rmagick.rubyforge.org/"
-SRC_URI="http://rubyforge.org/frs/download.php/25348/RMagick-${PV}.tar.bz2"
+SRC_URI="http://rubyforge.org/frs/download.php/34653/RMagick-${MY_PV}.tar.bz2"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples doc"
 DEPEND="virtual/ruby
-	>=media-gfx/imagemagick-6.0"
+	>=media-gfx/imagemagick-6.3.5.6"
 
-S=${WORKDIR}/RMagick-${PV}
+S="${WORKDIR}/RMagick-${PV}"
 
 # hdri causes extensive changes in the imagemagick internals, and
 # rmagick is not ready to deal with those, see bug 184356.
@@ -32,45 +33,36 @@ pkg_setup() {
 	fi
 }
 
-# Using a custom src_compile instead of the ruby one because the ruby
-# one gets confused by an additional setup.rb that should not be used
-# here.
+# Use a custom src_compile because the setup.rb included with RMagick
+# doesn't like extra parameters during the setup phase.
 src_compile() {
-	myconf="${RUBY_ECONF} ${EXTRA_ECONF}"
-
 	# When documentation is built many examples are also run. Not all
 	# of them may work (e.g. due to missing additional dependencies)
 	# so we allow the examples to fail.
 	if ! use doc ; then
-		myconf="${myconf} --disable-htmldoc --enable-allow-example-errors"
+		RUBY_ECONF="--disable-htmldoc --allow-example-errors"
 	fi
 
-	./configure \
-		--prefix=/usr \
-		--host=${CHOST} \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--datadir=/usr/share \
-		--sysconfdir=/etc \
-		--localstatedir=/var/lib \
-		--with-ruby=${RUBY} \
-		${myconf} \
-		"$@" || die "econf failed"
-
-	ruby_emake "$@" || die
+	${RUBY} setup.rb config --prefix=/usr "$@" \
+		${RUBY_ECONF} ${EXTRA_ECONF} || die "setup.rb config failed"
+	${RUBY} setup.rb setup || die "setup.rb setup failed"
 }
 
 # Use a custom src_install instead of the default one in ruby.eclass
 # because the one in ruby.eclass does not include setting the prefix
-# for the installation step.
+# for the installation step and assumes that arguments can be given
+# also during the install phase.
 src_install() {
-	RUBY_ECONF="${RUBY_ECONF} ${EXTRA_ECONF}"
+	if ! use doc ; then
+		RUBY_ECONF="--disable-htmldoc --allow-example-errors"
+	fi
 
-	${RUBY} setup.rb config --prefix=${D}/usr "$@" \
-		${RUBY_ECONF} || die "setup.rb config failed"
-	${RUBY} setup.rb install --prefix=${D} "$@" \
-		${RUBY_ECONF} || die "setup.rb install failed"
+	${RUBY} setup.rb config --prefix="${D}/usr" "$@" \
+		${RUBY_ECONF} ${EXTRA_ECONF} || die "setup.rb config failed"
+	${RUBY} setup.rb install --prefix="${D}" || die "setup.rb install failed"
 
 	cd "${S}"
 	dodoc ChangeLog README.html README-Mac-OSX.txt README.txt
+
+	use examples && dodoc examples/*
 }
