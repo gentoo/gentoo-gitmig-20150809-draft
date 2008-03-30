@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/vdr-extb-0.3.0.ebuild,v 1.1 2008/03/27 22:17:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/vdr-extb-0.3.0.ebuild,v 1.2 2008/03/30 12:29:21 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -46,8 +46,6 @@ src_install() {
 	insinto /etc/extb
 	doins "${S}/../extb/bin/PICflags.conf"
 	doins "${S}/wakeup/examples/extb-poweroff.conf"
-
-	newinitd "${FILESDIR}/rc.irexec" irexec
 }
 
 pkg_postinst() {

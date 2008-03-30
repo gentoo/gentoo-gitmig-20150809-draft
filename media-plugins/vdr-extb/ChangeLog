@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-extb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/ChangeLog,v 1.1 2008/03/27 22:17:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/ChangeLog,v 1.2 2008/03/30 12:29:21 hd_brummy Exp $
+
+  30 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org> -files/rc.irexec,
+  vdr-extb-0.2.9.ebuild, vdr-extb-0.3.0.ebuild:
+  removed initscript; always present by lirc; package collision
 
 *vdr-extb-0.3.0 (27 Mar 2008)
 *vdr-extb-0.2.9 (27 Mar 2008)
