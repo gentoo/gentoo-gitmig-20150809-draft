@@ -1,0 +1,13 @@
+--- pdns-recursor/pdns_recursor.cc
++++ pdns-recursor/pdns_recursor.cc
+@@ -1565,6 +1565,10 @@
+     }
+   }
+   
++  // this is needed to really get into the chroot. and even without chroot
++  // enabled it's nice to not block the directory we're currently in.
++  chdir("/");
++  
+   Utility::dropPrivs(newuid, newgid);
+   g_fdm->addReadFD(s_rcc.d_fd, handleRCC); // control channel
+ #endif 
