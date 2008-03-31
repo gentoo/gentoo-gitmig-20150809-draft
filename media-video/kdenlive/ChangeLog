@@ -1,6 +1,15 @@
 # ChangeLog for media-video/kdenlive
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.19 2007/12/25 17:24:20 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.20 2008/03/31 21:11:46 rbu Exp $
+
+*kdenlive-0.5 (31 Mar 2008)
+
+  31 Mar 2008; Robert Buchholz <rbu@gentoo.org> +kdenlive-0.5.ebuild:
+  Non-maintainer-bump (bug #188626), a lot of fixes and new features,
+  including HD support. Thanks to Toffanin, Patrick Huber and Roberto
+  Castagnola for contributions.
+  
+  This should also fix bug #193641.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing zypher from metadata.xml as per #26909. Assigning to
