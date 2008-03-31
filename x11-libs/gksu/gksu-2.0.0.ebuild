@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0.ebuild,v 1.21 2008/03/31 04:27:27 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0.ebuild,v 1.22 2008/03/31 19:34:42 dang Exp $
 
-inherit gnome2 fixheadtails
+inherit gnome2 fixheadtails eutils autotools
 
 DESCRIPTION="A gtk+ frontend for libgksu"
 HOMEPAGE="http://www.nongnu.org/gksu/"
@@ -16,7 +16,10 @@ IUSE="doc gnome"
 RDEPEND=">=x11-libs/libgksu-2
 	>=x11-libs/gtk+-2.4.0
 	>=gnome-base/gconf-2.0
-	gnome? ( >=gnome-base/nautilus-2 )"
+	gnome? (
+		>=gnome-base/gnome-vfs-2
+		>=gnome-base/nautilus-2
+		)"
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
@@ -27,6 +30,10 @@ USE_DESTDIR="1"
 src_unpack() {
 	gnome2_src_unpack
 	ht_fix_file "${S}/gksu-migrate-conf.sh"
+
+	epatch "${FILESDIR}"/${P}-gnome-2.22.patch
+
+	eautoreconf
 }
 
 src_install() {
