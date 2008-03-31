@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.15-r3.ebuild,v 1.9 2008/03/11 00:00:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.15-r3.ebuild,v 1.10 2008/03/31 00:46:06 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -31,7 +31,6 @@ RDEPEND=">=sys-apps/sysvinit-2.86-r3
 	) )"
 DEPEND="virtual/os-headers
 	>=sys-apps/portage-2.0.51"
-PROVIDE="virtual/baselayout"
 
 S=${WORKDIR}/rc-scripts-${SV}${SVREV}
 

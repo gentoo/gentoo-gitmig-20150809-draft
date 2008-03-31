@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.12.ebuild,v 1.1 2008/03/31 00:13:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.12.ebuild,v 1.2 2008/03/31 00:46:06 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -33,7 +33,6 @@ RDEPEND="virtual/init
 DEPEND="virtual/os-headers
 	>=sys-apps/portage-2.0.51"
 PDEPEND="!build? ( !bootstrap? ( >=sys-apps/module-init-tools-3.2.2-r3 ) )"
-PROVIDE="virtual/baselayout"
 
 src_unpack() {
 	unpack ${A}
@@ -56,7 +55,7 @@ src_unpack() {
 
 	# Use correct path to filefuncs.so on multilib systems
 	sed -i -e "s:/lib/rcscripts:/$(get_libdir)/rcscripts:" \
-		${S}/src/awk/{cachedepends,genenviron}.awk || die
+		"${S}"/src/awk/{cachedepends,genenviron}.awk || die
 }
 
 src_compile() {
@@ -303,7 +302,7 @@ src_install() {
 	cp -r "${S}"/rc-lists "${D}"/usr/share/baselayout
 
 	# rc-scripts version for testing of features that *should* be present
-	echo "Gentoo Base System release ${PV}" > ${D}/etc/gentoo-release
+	echo "Gentoo Base System release ${PV}" > "${D}"/etc/gentoo-release
 
 	#
 	# Setup files related to /dev
@@ -363,18 +362,15 @@ src_install() {
 	# Original design had these in /etc/net.modules.d but that is too
 	# problematic with CONFIG_PROTECT
 	dodir ${rcscripts_dir}
-	cp -pPR "${S}"/lib/rcscripts/net ${D}${rcscripts_dir}
-	chown -R root:0 ${D}${rcscripts_dir}
+	cp -pPR "${S}"/lib/rcscripts/net "${D}"${rcscripts_dir}
+	chown -R root:0 "${D}"${rcscripts_dir}
 
 	#
 	# Install baselayout documentation
 	#
-	if ! use build ; then
-		doman "${S}"/man/*.*
-		docinto /
-		dodoc ${FILESDIR}/copyright
-		dodoc "${S}"/ChangeLog
-	fi
+	doman "${S}"/man/*.*
+	docinto /
+	dodoc "${S}"/ChangeLog
 
 	#
 	# Install baselayout utilities
@@ -400,7 +396,7 @@ remap_dns_vars() {
 			-e 's/\<mac_nameservers_/mac_dns_servers_/g' \
 			-e 's/\<searchdomains_/dns_search_domains_/g' \
 			-e 's/\<mac_searchdomains_/mac_dns_search_domains_/g' \
-			${ROOT}/etc/conf.d/${f} > ${D}/etc/conf.d/${f}
+			"${ROOT}"/etc/conf.d/${f} > "${D}"/etc/conf.d/${f}
 	fi
 }
 
@@ -419,12 +415,11 @@ pkg_preinst() {
 	source "${D}"/usr/share/baselayout/mklinks.sh
 	echo
 
-	if [[ -f ${ROOT}/etc/modules.autoload && \
-			! -d ${ROOT}/etc/modules.autoload.d ]]; then
-		mkdir -p ${ROOT}/etc/modules.autoload.d
-		mv -f ${ROOT}/etc/modules.autoload \
-			${ROOT}/etc/modules.autoload.d/kernel-2.4
-		ln -snf modules.autoload.d/kernel-2.4 ${ROOT}/etc/modules.autoload
+	if [[ -f ${ROOT}/etc/modules.autoload && ! -d ${ROOT}/etc/modules.autoload.d ]]; then
+		mkdir -p "${ROOT}"/etc/modules.autoload.d
+		mv -f "${ROOT}"/etc/modules.autoload \
+			"${ROOT}"/etc/modules.autoload.d/kernel-2.4
+		ln -snf modules.autoload.d/kernel-2.4 "${ROOT}"/etc/modules.autoload
 	fi
 
 	# Change some vars introduced in baselayout-1.11.0 before we go stable
@@ -478,7 +473,7 @@ pkg_postinst() {
 	# Create /etc/hosts in pkg_postinst so we don't overwrite an
 	# existing file during bootstrap
 	if [[ ! -e ${ROOT}/etc/hosts ]]; then
-		cp ${ROOT}/usr/share/baselayout/hosts ${ROOT}/etc
+		cp "${ROOT}"/usr/share/baselayout/hosts "${ROOT}"/etc
 	fi
 
 	# Touching /etc/passwd and /etc/shadow after install can be fatal, as many
@@ -518,14 +513,14 @@ pkg_postinst() {
 		# Regenerate init.d dependency tree
 		/sbin/depscan.sh --update &>/dev/null
 	else
-		rm -f ${ROOT}/etc/modules.conf
+		rm -f "${ROOT}"/etc/modules.conf
 	fi
 
 	# This is also written in src_install (so it's in CONTENTS), but
 	# write it here so that the new version is immediately in the file
 	# (without waiting for the user to do etc-update)
-	rm -f ${ROOT}/etc/._cfg????_gentoo-release
-	echo "Gentoo Base System release ${PV}" > ${ROOT}/etc/gentoo-release
+	rm -f "${ROOT}"/etc/._cfg????_gentoo-release
+	echo "Gentoo Base System release ${PV}" > "${ROOT}"/etc/gentoo-release
 
 	echo
 	einfo "Please be sure to update all pending '._cfg*' files in /etc,"
@@ -535,7 +530,7 @@ pkg_postinst() {
 	einfo "  # etc-update"
 	echo
 
-	for f in ${ROOT}etc/init.d/net.* ; do
+	for f in "${ROOT}"etc/init.d/net.* ; do
 		[[ -L ${f} || ${f} == "${ROOT}etc/init.d/net.lo" ]] && continue
 		echo
 		einfo "WARNING: You have older net.* files in ${ROOT}etc/init.d/"
@@ -543,12 +538,12 @@ pkg_postinst() {
 		einfo "made personal changes to those files, you can update with the"
 		einfo "following command:"
 		einfo
-		einfo " /bin/ls ${ROOT}etc/init.d/net.* | grep -v '/net.lo$' | xargs -n1 ln -sfvn net.lo"
+		einfo " /bin/ls '${ROOT}'etc/init.d/net.* | grep -v '/net.lo$' | xargs -n1 ln -sfvn net.lo"
 		echo
 		break
 	done
 
-	if sed -e 's/#.*//' ${ROOT}/etc/conf.d/{net,wireless} 2>/dev/null \
+	if sed -e 's/#.*//' "${ROOT}"/etc/conf.d/{net,wireless} 2>/dev/null \
 		| egrep -q '\<(domain|nameservers|searchdomains)_' ; then
 			echo
 			ewarn "You have deprecated variables in ${ROOT}/etc/conf.d/net"
@@ -563,13 +558,13 @@ pkg_postinst() {
 			echo
 	fi
 
-	if sed -e 's/#.*//' ${ROOT}/etc/conf.d/net 2>/dev/null \
+	if sed -e 's/#.*//' "${ROOT}"/etc/conf.d/net 2>/dev/null \
 		| egrep -q '\<(iface_|gateway=|ifconfig_|aliases_|broadcasts_|netmasks_|inet6_|ipaddr_|iproute_)'; then
 			echo
 			ewarn "You are using deprecated variables in ${ROOT}/etc/conf.d/net"
 			ewarn
 			ewarn "You are advised to review the new configuration variables as"
-			ewarn "found in ${ROOT}/etc/conf.d/net.example as there is no"
+			ewarn "found in '${ROOT}'/etc/conf.d/net.example as there is no"
 			ewarn "guarantee that they will work in future versions."
 			echo
 	fi
@@ -582,7 +577,7 @@ pkg_postinst() {
 		rm -f "${ROOT}"/etc/init.d/domainname
 		rm -f "${ROOT}"/etc/runlevels/*/domainname
 		ewarn "The domainname init script has been removed in this version."
-		ewarn "Consult ${ROOT}/etc/conf.d/net.example for details about how"
+		ewarn "Consult '${ROOT}'/etc/conf.d/net.example for details about how"
 		ewarn "to apply dns/nis information to the loopback interface."
 	fi
 
