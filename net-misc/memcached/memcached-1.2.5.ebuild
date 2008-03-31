@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.5.ebuild,v 1.1 2008/03/31 11:56:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.5.ebuild,v 1.2 2008/03/31 12:16:58 caleb Exp $
 
 inherit eutils
 
@@ -28,8 +28,6 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-1.2.2-fbsd.patch"
-	# Merged in upstream r604
-	#epatch "${FILESDIR}/${PN}-1.2.2-p-threads.patch"
 }
 
 src_compile() {
@@ -43,8 +41,8 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README TODO doc/{CONTRIBUTORS,*.txt}
 
-	newconfd "${FILESDIR}"/1.2.4/conf memcached
-	newinitd "${FILESDIR}"/1.2.4/init memcached
+	newconfd "${FILESDIR}"/1.2.5/conf memcached
+	newinitd "${FILESDIR}"/1.2.5/init memcached
 }
 
 pkg_postinst() {
