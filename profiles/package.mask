@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8447 2008/03/31 09:53:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.8448 2008/03/31 13:10:04 calchan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Denis Dupeyron <calchan@gentoo.org> (31 Mar 2008)
+# New versions using guile-1.8 and gtk-2 used to build and run at some point,
+# but not anymore. If you know how or want to fix this feel free to contact
+# me. Warning: dependency hell.
+>=sci-electronics/gwave-20070514
 
 # Raúl Porcel <armin76@gentoo.org> (31 Mar 2008)
 # For treecleaners, removal in 7 days, bug #213754
