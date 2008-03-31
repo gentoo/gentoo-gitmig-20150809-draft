@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.4.ebuild,v 1.3 2008/03/31 11:56:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.4.ebuild,v 1.4 2008/03/31 12:06:08 caleb Exp $
 
 inherit eutils
 
@@ -13,11 +13,11 @@ SRC_URI="http://www.danga.com/memcached/dist/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="nptl test"
 
 RDEPEND=">=dev-libs/libevent-0.6
-		 dev-lang/perl"
+		dev-lang/perl"
 DEPEND="${RDEPEND}
 		test? ( virtual/perl-Test-Harness >=dev-perl/Cache-Memcached-1.24 )"
 
@@ -28,8 +28,6 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-1.2.2-fbsd.patch"
-	# Merged in upstream r604
-	#epatch "${FILESDIR}/${PN}-1.2.2-p-threads.patch"
 }
 
 src_compile() {
