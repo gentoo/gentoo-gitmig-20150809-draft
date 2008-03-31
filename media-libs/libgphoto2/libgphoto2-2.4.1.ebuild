@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.1.ebuild,v 1.2 2008/03/30 22:25:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.1.ebuild,v 1.3 2008/03/31 01:58:02 mr_bones_ Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -130,7 +130,6 @@ src_install() {
 		export LD_LIBRARY_PATH="${D}/usr/$(get_libdir)"
 		# Let libgphoto2 find its camera-modules
 		export CAMLIBS="${D}/usr/$(get_libdir)/libgphoto2/${PV}"
-
 
 		if use hal && [ -n "$("${D}"${CAM_LIST} idlist)" ]; then
 				einfo "Generating HAL FDI files ..."
