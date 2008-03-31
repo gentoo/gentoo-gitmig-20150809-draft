@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/swfdec-gnome
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/swfdec-gnome/ChangeLog,v 1.2 2007/12/22 10:27:18 pclouds Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/swfdec-gnome/ChangeLog,v 1.3 2008/03/31 11:33:30 leio Exp $
+
+*swfdec-gnome-2.22.0 (31 Mar 2008)
+
+  31 Mar 2008; Mart Raudsepp <leio@gentoo.org> +swfdec-gnome-2.22.0.ebuild:
+  New version, part of GNOME-2.22. Compatible with swfdec-0.6
 
 *swfdec-gnome-0.5.5 (22 Dec 2007)
 
