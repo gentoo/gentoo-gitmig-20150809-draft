@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1270 2008/03/31 14:45:10 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1271 2008/03/31 14:55:33 flameeyes Exp $
+
+  31 Mar 2008; Diego Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask new openrc-needing ebuild, drop old mask.
 
   31 Mar 2008; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   thirdpartymirrors:
