@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1267 2008/03/30 17:41:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1268 2008/03/31 06:12:41 remi Exp $
+
+  31 Mar 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  removing mask on gtk-engines-mist, package has been removed from portage
 
   30 Mar 2008; Denis Dupeyron <calchan@gentoo.org> use.local.desc:
   Added smp local USE flag for media-plugins/gimp-greycstoration.
