@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/tcptrack-1.2.0.ebuild,v 1.2 2007/07/09 17:28:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/tcptrack-1.2.0.ebuild,v 1.3 2008/03/31 18:00:43 cedk Exp $
 
 inherit eutils
 
@@ -16,7 +16,13 @@ IUSE=""
 DEPEND="net-libs/libpcap
 	sys-libs/ncurses"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-string_h.patch
+}
+
 src_install() {
 	einstall || die
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
