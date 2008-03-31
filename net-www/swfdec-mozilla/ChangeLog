@@ -1,6 +1,11 @@
 # ChangeLog for net-www/swfdec-mozilla
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/ChangeLog,v 1.5 2008/03/17 14:06:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/ChangeLog,v 1.6 2008/03/31 11:29:32 leio Exp $
+
+*swfdec-mozilla-0.6.0 (31 Mar 2008)
+
+  31 Mar 2008; Mart Raudsepp <leio@gentoo.org> +swfdec-mozilla-0.6.0.ebuild:
+  New version, compatible with swfdec-0.6
 
   17 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   swfdec-mozilla-0.5.4.ebuild, swfdec-mozilla-0.5.5.ebuild:
