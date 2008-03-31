@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2-r2.ebuild,v 1.6 2008/03/31 16:09:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2-r3.ebuild,v 1.1 2008/03/31 16:17:18 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -68,7 +68,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.2-freebsd-install-rc.patch
 	epatch "${FILESDIR}"/${PN}-0.2-multiple-ntp-servers.patch
 	epatch "${FILESDIR}"/${PN}-0.2-multilib-fix.patch
+	epatch "${FILESDIR}"/${PN}-0.2-path-fix-for-multilib-fix.patch
 	epatch "${FILESDIR}"/${PN}-0.2-sysctl-vserver-fix.patch
+	epatch "${FILESDIR}"/${PN}-0.2-nicelevel-doc.patch
 }
 
 src_compile() {
