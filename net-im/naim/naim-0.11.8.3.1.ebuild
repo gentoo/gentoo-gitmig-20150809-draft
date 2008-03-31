@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.8.3.1.ebuild,v 1.1 2008/03/27 14:47:48 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.8.3.1.ebuild,v 1.2 2008/03/31 02:08:51 mr_bones_ Exp $
 
 DESCRIPTION="An ncurses based AOL Instant Messenger"
 HOMEPAGE="http://naim.n.ml.org"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug screen"
 
-RESTRICT="tests"
+RESTRICT="test"
 
 DEPEND=">=sys-libs/ncurses-5.2
 		screen? ( app-misc/screen )"
