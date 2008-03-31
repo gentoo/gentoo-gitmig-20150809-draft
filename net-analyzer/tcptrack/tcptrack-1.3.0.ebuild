@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/tcptrack-1.3.0.ebuild,v 1.1 2008/03/31 17:29:52 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/tcptrack-1.3.0.ebuild,v 1.2 2008/03/31 17:55:04 cedk Exp $
+
+inherit eutils
 
 DESCRIPTION="Passive per-connection tcp bandwidth monitor"
 HOMEPAGE="http://www.rhythm.cx/~steve/devel/tcptrack/"
@@ -13,6 +15,12 @@ IUSE=""
 
 DEPEND="net-libs/libpcap
 	sys-libs/ncurses"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-string_h.patch
+}
 
 src_install() {
 	einstall || die
