@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/fusesmb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/ChangeLog,v 1.9 2008/03/23 20:19:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/ChangeLog,v 1.10 2008/03/31 21:27:01 maekke Exp $
+
+  31 Mar 2008; Markus Meier <maekke@gentoo.org> fusesmb-0.8.7.ebuild:
+  amd64 stable, bug #208940
 
   23 Mar 2008; Raúl Porcel <armin76@gentoo.org> fusesmb-0.8.7.ebuild:
   sparc stable wrt #208940, thanks to Friedrich Oslage for testing
