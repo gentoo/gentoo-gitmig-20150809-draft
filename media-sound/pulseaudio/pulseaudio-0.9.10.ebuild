@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.9-r3.ebuild,v 1.1 2008/03/08 23:34:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.10.ebuild,v 1.1 2008/03/31 14:53:59 flameeyes Exp $
 
 EAPI=1
 
@@ -73,14 +73,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${PN}-0.9.8-svn2074.patch"
-	epatch "${FILESDIR}/${PN}-0.9.8-polkit.patch"
-	epatch "${FILESDIR}/${PN}-0.9.8-bt-nohal.patch"
-	epatch "${FILESDIR}/${PN}-0.9.8-esoundpath.patch"
-	epatch "${FILESDIR}/${PN}-0.9.8-create-directory.patch"
-	epatch "${FILESDIR}/${P}+ltdl-2.2.patch"
-
-	eautoreconf
+	# eautoreconf
 	elibtoolize
 }
 
@@ -111,6 +104,7 @@ src_compile() {
 		--disable-ltdl-install \
 		--localstatedir=/var \
 		--with-realtime-group=realtime \
+		--disable-per-user-esound-socket \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
