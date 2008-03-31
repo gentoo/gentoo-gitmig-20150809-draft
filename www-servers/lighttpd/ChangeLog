@@ -1,6 +1,17 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.177 2008/03/26 22:57:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.178 2008/03/31 06:15:05 bangert Exp $
+
+*lighttpd-1.4.19-r2 (31 Mar 2008)
+
+  31 Mar 2008; Thilo Bangert <bangert@gentoo.org>
+  +files/1.4.19-r2/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  +files/1.4.19-r2/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  +files/1.4.19-r2/07_all_lighttpd-1.4.19-closing_foreign_ssl_connections-do
+  s-taketwo.diff,
+  +files/1.4.19-r2/05_all_lighttpd-1.4.19-force_lowercase_filenames_in_mod_u
+  serdir.diff, +lighttpd-1.4.19-r2.ebuild:
+  new patch for ssl issue in bug 214892
 
   26 Mar 2008; Markus Meier <maekke@gentoo.org> lighttpd-1.4.19-r1.ebuild:
   revert stable for amd64/x86, bug #214892 (comment 4)
