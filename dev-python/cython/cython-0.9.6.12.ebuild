@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.9.6.12.ebuild,v 1.1 2008/03/20 21:46:21 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.9.6.12.ebuild,v 1.2 2008/03/31 12:17:47 jer Exp $
 
 NEED_PYTHON=2.2
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.cython.org/${MY_P}.zip"
 
 LICENSE="PSF-2.4"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="doc examples"
 
 DEPEND="app-arch/unzip"
