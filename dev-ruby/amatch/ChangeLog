@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/amatch
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.7 2007/10/13 05:56:50 tgall Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.8 2008/03/31 14:46:12 pclouds Exp $
+
+  31 Mar 2008; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  amatch-0.2.1.ebuild:
+  Updated SRC_URI to use rubyforge mirrors
 
   13 Oct 2007; Tom Gall <tgall@gentoo.org> amatch-0.2.1.ebuild:
   stable on ppc64
