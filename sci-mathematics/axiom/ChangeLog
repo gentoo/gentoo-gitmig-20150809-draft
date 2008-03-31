@@ -1,6 +1,16 @@
 # ChangeLog for sci-mathematics/axiom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.16 2008/02/01 17:26:12 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.17 2008/03/31 12:58:24 markusle Exp $
+
+*axiom-200803 (30 Mar 2008)
+
+  30 Mar 2008; Markus Dittrich <markusle@gentoo.org>
+  -files/gcl-2.6.7.fix-configure.in-gentoo.Makefile.patch,
+  -files/gcl-2.6.7.fix-configure.in-gentoo.patch.input,
+  -files/gcl-2.6.7.fix-out-of-build-root-compile.Makefile.patch,
+  -files/gcl-2.6.7.fix-out-of-build-root-compile.patch.input,
+  -axiom-3.9-r1.ebuild, +axiom-200803.ebuild:
+  Version bump and removed old version.
 
   01 Feb 2008; Markus Dittrich <markusle@gentoo.org>
   +files/axiom-200711-gcl-configure.patch, axiom-200711.ebuild:
