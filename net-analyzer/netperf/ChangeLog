@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.41 2008/02/11 14:01:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.42 2008/03/31 21:30:53 maekke Exp $
+
+  31 Mar 2008; Markus Meier <maekke@gentoo.org> netperf-2.4.4.ebuild:
+  amd64 stable, bug #209035
 
   11 Feb 2008; Raúl Porcel <armin76@gentoo.org> netperf-2.4.4.ebuild:
   alpha/ia64 stable wrt #209035
