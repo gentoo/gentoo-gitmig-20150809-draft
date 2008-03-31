@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yaz
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.45 2008/02/09 18:12:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.46 2008/03/31 21:15:16 maekke Exp $
+
+  31 Mar 2008; Markus Meier <maekke@gentoo.org> yaz-3.0.16.ebuild:
+  amd64 stable, bug #208545
 
   09 Feb 2008; Raúl Porcel <armin76@gentoo.org> yaz-2.0.8.ebuild,
   yaz-2.0.19.ebuild, yaz-2.1.8.ebuild, yaz-3.0.16.ebuild:
