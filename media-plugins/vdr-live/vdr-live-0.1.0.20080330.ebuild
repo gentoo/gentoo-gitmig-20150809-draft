@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.1.0.20080330.ebuild,v 1.1 2008/03/30 21:04:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.1.0.20080330.ebuild,v 1.2 2008/03/31 01:58:24 mr_bones_ Exp $
 
 inherit vdr-plugin versionator
 
@@ -43,4 +43,3 @@ pkg_postinst() {
 	elog "\temerge vdr-epgsearch"
 	elog "\teselect vdr-plugin enable epgsearch"
 }
-
