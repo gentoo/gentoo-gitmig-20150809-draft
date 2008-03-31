@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/fakeidentd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.34 2008/03/27 17:32:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.35 2008/03/31 11:25:58 jer Exp $
+
+  31 Mar 2008; Jeroen Roovers <jer@gentoo.org> fakeidentd-2.5.ebuild:
+  Stable for HPPA (bug #214758).
 
   27 Mar 2008; nixnut <nixnut@gentoo.org> fakeidentd-2.5.ebuild:
   Stable on ppc wrt bug 214758
