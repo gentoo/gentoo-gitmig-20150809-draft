@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.7 2008/01/08 09:46:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.8 2008/03/31 14:53:52 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -107,6 +107,7 @@ src_install() {
 		# install profiles
 		ESELECT_PROF=acml-${FORTRANC}
 		local acmldir=${instdir}/${fort}
+		local acmllibs="-lacml -lacml_mv"
 		local libname=${acmldir}/lib/libacml
 		local extlibs
 		local extflags
@@ -118,6 +119,7 @@ src_install() {
 		if [[ ${fort} =~ _mp ]]; then
 			ESELECT_PROF=${ESELECT_PROF}-openmp
 			extlibs="${extlibs} -lpthread"
+			acmllibs="-lacml_mp -lacml_mv"
 			libname=${libname}_mp
 			extflags="${extflags} -fopenmp"
 		fi
@@ -126,6 +128,7 @@ src_install() {
 			sed -e "s:@LIBDIR@:$(get_libdir):" \
 				-e "s:@PV@:${PV}:" \
 				-e "s:@ACMLDIR@:${acmldir}:g" \
+				-e "s:@ACMLLIBS@:${acmllibs}:g" \
 				-e "s:@EXTLIBS@:${extlibs}:g" \
 				-e "s:@EXTFLAGS@:${extflags}:g" \
 				"${FILESDIR}"/${l}.pc.in > ${l}.pc \
