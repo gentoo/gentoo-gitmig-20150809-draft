@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.1.ebuild,v 1.3 2008/03/31 05:17:44 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.1.ebuild,v 1.4 2008/03/31 08:20:00 eva Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.14 )"
 
 pkg_setup() {
-	if use exif && ! built_with_use exif media-libs/libgphoto2; then
+	if use exif && ! built_with_use media-libs/libgphoto2 exif; then
 		eerror "exif support required but libgphoto2 does not have it."
 		die "rebuild media-libs/libgphoto2 with USE=\"exif\"."
 	fi
