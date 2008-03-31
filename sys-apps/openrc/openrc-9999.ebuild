@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.17 2008/03/30 17:42:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.18 2008/03/31 16:09:00 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -172,6 +172,7 @@ pkg_preinst() {
 	# Try to auto-add some addons when possible
 	add_boot_init_mit_config /etc/conf.d/cryptfs dmcrypt
 	add_boot_init_mit_config /etc/mdadm.conf mdraid
+	add_boot_init_mit_config /etc/dmtab device-mapper
 	[[ -e ${ROOT}/sbin/vgscan ]] && add_boot_init lvm
 	elog "Add on services (such as RAID/dmcrypt/LVM/etc...) are now stand alone"
 	elog "init.d scripts.  If you use such a thing, make sure you have the"
