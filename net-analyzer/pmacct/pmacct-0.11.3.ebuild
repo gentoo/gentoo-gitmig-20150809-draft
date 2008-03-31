@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.11.3.ebuild,v 1.3 2007/08/13 21:24:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.11.3.ebuild,v 1.4 2008/03/31 17:46:39 cedk Exp $
 
 DESCRIPTION="A network tool to gather ip traffic informations"
 HOMEPAGE="http://www.pmacct.net/"
@@ -13,7 +13,7 @@ IUSE="64bit debug ipv6 mmap mysql postgres sqlite3"
 
 RDEPEND="net-libs/libpcap
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )
+	postgres? ( dev-db/libpq )
 	sqlite3? ( =dev-db/sqlite-3* )"
 DEPEND="${RDEPEND}"
 
