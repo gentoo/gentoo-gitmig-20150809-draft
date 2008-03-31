@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.37.ebuild,v 1.1 2008/03/30 22:35:05 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.37.ebuild,v 1.2 2008/03/31 08:34:42 welp Exp $
 
 inherit linux-mod linux-info
 
@@ -40,7 +40,7 @@ pkg_setup() {
 
 		CONFIG_CHECK="!SENSORS_HDAPS"
 		ERROR_SENSORS_HDAPS="${P} with USE=hdaps conflicts with in-kernel HDAPS (CONFIG_SENSORS_HDAPS)"
-		linux_info-pkg-setup
+		linux-info_pkg_setup
 	fi
 }
 
