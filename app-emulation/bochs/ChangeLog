@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.74 2008/02/06 23:12:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.75 2008/03/31 12:54:20 lu_zero Exp $
+
+  31 Mar 2008; Luca Barbato <lu_zero@gentoo.org> bochs-2.3.6.ebuild:
+  Update ebuild, remove wrongly used flags
 
 *bochs-2.3.6 (06 Feb 2008)
 

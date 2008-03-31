@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.6.ebuild,v 1.1 2008/02/06 23:12:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.6.ebuild,v 1.2 2008/03/31 12:54:20 lu_zero Exp $
 
 inherit eutils wxwidgets autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="X debugger readline mmx sse usb 3dnow wxwindows svga sdl ncurses vnc acpi"
+IUSE="X debugger readline usb wxwindows svga sdl ncurses vnc acpi"
 
 RDEPEND="virtual/libc
 	X? ( x11-libs/libICE
@@ -52,11 +52,11 @@ src_compile() {
 	use wxwindows && \
 		need-wxwidgets gtk2
 
-	[[ "$ARCH" == "x86" ]] \
-		&& myconf="--enable-idle-hack --enable-fast-function-calls"
+	use x86 && \
+		myconf="--enable-idle-hack --enable-fast-function-calls"
 
-	[[ "$ARCH" == "amd64" ]] \
-	    && myconf="--enable-x86-64"
+	use amd64 && \
+		myconf="--enable-x86-64"
 
 	use wxwindows && \
 		myconf="${myconf} --with-wx"
@@ -78,8 +78,8 @@ src_compile() {
 	fi
 
 	# --enable-all-optimizations causes bus error on sparc :(
-	[[ "$ARCH" != "sparc" ]] \
-		&& myconf="${myconf} --enable-all-optimizations"
+	use sparc || \
+		myconf="${myconf} --enable-all-optimizations"
 
 	econf \
 		--prefix=/usr \
@@ -88,9 +88,11 @@ src_compile() {
 		--enable-plugins \
 		--enable-cdrom \
 		--enable-pci \
+		--enable-mmx \
+		--enable-sse=2 \
+		--enable-3dnow \
+		--enable-cpu-level=6 \
 		$(use_enable usb) \
-		$(use_enable sse) \
-		$(use_enable 3dnow) \
 		$(use_enable readline) \
 		$(use_enable debugger) \
 		$(use_with X) \
