@@ -1,6 +1,6 @@
 STAGE1_USE="uclibc"
 GRP_STAGE23_USE="ncurses readline zlib uclibc"
-USE="ncurses readline zlib uclibc -fortran"
+USE="ncurses readline zlib uclibc -fortran -pam -berkdb -ipv6"
 
 CFLAGS="-Os"
 CXXFLAGS="${CFLAGS}"

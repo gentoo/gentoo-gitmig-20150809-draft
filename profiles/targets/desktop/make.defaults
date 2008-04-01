@@ -1,0 +1,11 @@
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/make.defaults,v 1.1 2008/04/01 17:41:36 wolf31o2 Exp $
+
+USE="acpi alsa branding cairo cdr dbus dvd dvdr dvdread eds emboss encode esd evo fam firefox gif gnome gpm gstreamer gtk hal jpeg kde kerberos ldap libnotify mad mikmod mp3 mpeg ogg opengl pdf png ppds qt3 qt3support qt4 quicktime sdl spell svg tiff truetype vorbis win32codecs unicode X xml xv"
+
+# This is added for GNOME/Xfce
+USE="${USE} startup-notification"
+
+# Adding this for bluetooth support
+USE="${USE} bluetooth"

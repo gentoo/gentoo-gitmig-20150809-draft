@@ -1,0 +1,9 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.1 2008/04/01 17:39:52 wolf31o2 Exp $
+
+# Wolfram Schlich <wschlich@gentoo.org> (20 Nov 2007)
+# dependency can't be fulfilled at the moment
+net-im/mcabber otr
+
+# Needs valgrind
+media-libs/gstreamer debug
+media-libs/gst-plugins-base debug

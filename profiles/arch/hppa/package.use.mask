@@ -1,0 +1,16 @@
+# DON'T TOUCH THIS FILE. INSTEAD, FILE A BUG AND ASSIGN IT TO hppa@g.o.
+
+# Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
+# This pulls in dev-scheme/drscheme which needs the (yet unported) libffi to
+# build or dev-lisp/clisp which has similar build issues
+dev-lang/swig mzscheme clisp
+
+# Samuli Suominen <drac@gentoo.org> (17 Nov 2007)
+# Needs dev-util/valgrind
+media-libs/gstreamer debug
+media-libs/gst-plugins-base debug
+
+# Jeroen Roovers <jer@gentoo.org> (12 Apr 2007)
+# Mask until fixed.
+net-misc/tightvnc server
+
