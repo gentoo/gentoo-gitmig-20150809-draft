@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.228 2008/03/28 16:04:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.229 2008/04/01 03:56:03 cardoe Exp $
+
+*mythtv-0.21_p16867 (01 Apr 2008)
+
+  01 Apr 2008; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.21_p16483.ebuild, -mythtv-0.21_p16658.ebuild,
+  -mythtv-0.21_p16812.ebuild, +mythtv-0.21_p16867.ebuild:
+  fix CVE-2007-6036. Fix internal DVD player issues. Fix ffmpeg header
+  location issue. Fix EIT encoding.
 
 *mythtv-0.21_p16812 (28 Mar 2008)
 
