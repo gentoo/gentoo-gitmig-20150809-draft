@@ -245,4 +245,4 @@ dell
 audit
 
 # net-libs/libssh2 currently missing keywords (dragonheart 20080402)
-ssh2
+libssh2

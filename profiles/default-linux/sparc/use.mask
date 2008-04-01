@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.123 2008/01/24 10:21:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.124 2008/04/01 13:45:01 dragonheart Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -247,3 +247,5 @@ krb4
 # It doesn't even build
 d
 
+# net-libs/libssh2 currently missing keywords (dragonheart 20080402)
+libssh2

@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.93 2008/03/18 18:40:35 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.94 2008/04/01 13:45:01 dragonheart Exp $
+
+  01 Apr 2008; Daniel Black <dragonheart@gentoo.org> use.mask:
+  mask libssh2 as net-libs/libssh2 does not have keywords yet
 
   18 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
   sparc64/2007.0/package.mask:

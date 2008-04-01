@@ -123,3 +123,6 @@ lcd_devices_stv5730
 
 # Both
 lcd_devices_t6963
+
+# net-libs/libssh2 currently missing keywords (dragonheart 20080402)
+libssh2
