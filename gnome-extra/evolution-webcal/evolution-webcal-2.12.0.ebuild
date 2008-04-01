@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/evolution-webcal-2.12.0.ebuild,v 1.8 2008/01/29 18:02:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/evolution-webcal-2.12.0.ebuild,v 1.9 2008/04/01 21:06:01 leio Exp $
 EAPI="1"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="A GNOME URL handler for web-published ical calendar files"
 HOMEPAGE="http://www.gnome.org/"
@@ -26,3 +26,10 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog TODO"
 USE_DESTDIR="1"
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Fix build with libsoup-2.4 present on the system
+	epatch "${FILESDIR}/${P}-no-libsoup24.patch"
+}

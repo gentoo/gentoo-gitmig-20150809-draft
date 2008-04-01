@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-webcal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/ChangeLog,v 1.85 2008/03/26 22:39:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/ChangeLog,v 1.86 2008/04/01 21:06:01 leio Exp $
+
+  01 Apr 2008; Mart Raudsepp <leio@gentoo.org>
+  +files/evolution-webcal-2.12.0-no-libsoup24.patch,
+  evolution-webcal-2.12.0.ebuild:
+  Fix broken build with libsoup-2.4 present on the system
 
 *evolution-webcal-2.21.92 (26 Mar 2008)
 
