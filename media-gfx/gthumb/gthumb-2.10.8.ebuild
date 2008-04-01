@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.8.ebuild,v 1.4 2008/03/30 20:26:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.8.ebuild,v 1.5 2008/04/01 17:32:15 armin76 Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gthumb.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ia64 ~ppc ppc64 x86"
 IUSE="gphoto2 iptc raw tiff"
 
 # Unknown item missing from deps, gtkunique.
