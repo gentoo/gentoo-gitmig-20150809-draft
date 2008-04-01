@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.12.3-r1.ebuild,v 1.1 2008/03/09 07:57:37 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.12.3-r1.ebuild,v 1.2 2008/04/01 22:51:26 leio Exp $
 EAPI="1"
 
 inherit gnome2 eutils
@@ -48,4 +48,7 @@ src_unpack() {
 
 	# Fix bug 201824
 	epatch "${FILESDIR}/${P}-fix-locks.patch"
+
+	# Fix build with libsoup-2.4 present on the system
+	epatch "${FILESDIR}/${P}-no-libsoup24.patch"
 }
