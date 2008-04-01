@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r12.ebuild,v 1.8 2008/03/13 20:01:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r12.ebuild,v 1.9 2008/04/01 22:38:18 opfer Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -36,7 +36,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/${P}-updated-config.ps.bz2"
 SRC_URI="${SRC_URI} mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2
 	mirror://gentoo/${P}-texmf.d-${TEXMFD_VERSION}.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="X doc"
 
 MODULAR_X_DEPEND="X? (
