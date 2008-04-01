@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.51 2008/03/31 15:56:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.52 2008/04/01 21:34:22 jokey Exp $
+
+  01 Apr 2008; Markus Ullmann <jokey@gentoo.org> pkgcore-0.4.2.ebuild,
+  pkgcore-0.4.3.ebuild:
+  Temporary mask of pkgcore until python is fixed on amd64
 
 *pkgcore-0.4.3 (31 Mar 2008)
 
