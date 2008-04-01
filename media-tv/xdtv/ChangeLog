@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xdtv
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.52 2007/11/27 10:14:40 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.53 2008/04/01 21:06:46 aballier Exp $
+
+  01 Apr 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/xdtv-2.4.0-ffmpegheaders.patch, xdtv-2.4.0.ebuild:
+  add a patch to allow building against latest ffmpeg
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> xdtv-2.2.0-r1.ebuild,
   xdtv-2.4.0.ebuild:
