@@ -3,6 +3,10 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
+  <email>omp@gentoo.org</email>
+    <name>David Shakaryan</name>
+</maintainer>
+<maintainer>
   <email>dragonheart@gentoo.org</email>
     <name>Daniel Black</name>
 </maintainer>
