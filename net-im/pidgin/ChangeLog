@@ -1,6 +1,12 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.49 2008/03/05 19:32:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.50 2008/04/01 15:28:51 tester Exp $
+
+*pidgin-2.4.1 (01 Apr 2008)
+
+  01 Apr 2008; Olivier Crête <tester@gentoo.org> -pidgin-2.4.0.ebuild,
+  +pidgin-2.4.1.ebuild:
+  Version bump
 
 *pidgin-2.4.0 (01 Mar 2008)
 
