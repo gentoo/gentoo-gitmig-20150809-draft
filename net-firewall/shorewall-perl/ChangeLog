@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/shorewall-perl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.13 2008/02/27 15:40:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.14 2008/04/01 05:10:09 pva Exp $
+
+*shorewall-perl-4.0.10 (01 Apr 2008)
+
+  01 Apr 2008; Peter Volkov <pva@gentoo.org> +shorewall-perl-4.0.10.ebuild:
+  Version bump, bug #215548, thank Vieri <rentorbuy AT yahoo.com> for
+  maintaining!
 
 *shorewall-perl-4.0.9-r1 (27 Feb 2008)
 
