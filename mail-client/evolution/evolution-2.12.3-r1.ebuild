@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.3-r1.ebuild,v 1.2 2008/03/05 19:30:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.3-r1.ebuild,v 1.3 2008/04/01 20:16:50 leio Exp $
 EAPI="1"
 
 inherit gnome2 flag-o-matic
@@ -116,6 +116,9 @@ src_unpack() {
 
 	# Fix CVE-2008-0072
 	epatch "${FILESDIR}"/${PN}-CVE-2008-0072.patch
+
+	# Fix build with libsoup-2.4 present on system
+	epatch "${FILESDIR}"/${P}-no-libsoup24.patch
 
 	# Fix tests (again)
 	echo "evolution-addressbook.xml" >> "${S}"/po/POTFILES.in
