@@ -1,8 +1,6 @@
-Index: fftw-2.1.5/rfftw/Makefile.am
-===================================================================
---- fftw-2.1.5.orig/rfftw/Makefile.am
-+++ fftw-2.1.5/rfftw/Makefile.am
-@@ -18,6 +18,7 @@ lib@FFTW_PREFIX@rfftw_la_SOURCES = $(COD
+--- ./rfftw/Makefile.am.orig	2008-03-31 19:42:10.819805758 +0100
++++ ./rfftw/Makefile.am	2008-03-31 19:43:47.624901125 +0100
+@@ -18,6 +18,7 @@
  					 rfftw.h                   
  
  lib@FFTW_PREFIX@rfftw_la_LDFLAGS = -version-info @SHARED_VERSION_INFO@
@@ -10,3 +8,67 @@ Index: fftw-2.1.5/rfftw/Makefile.am
  MAINTAINERCLEANFILES = $(CODELETS) rconfig.c
  DISTCLEANFILES = srfftw.h drfftw.h
  
+--- ./threads/Makefile.am.orig	2008-03-31 19:42:30.555058968 +0100
++++ ./threads/Makefile.am	2008-03-31 21:59:25.500856903 +0100
+@@ -28,6 +28,10 @@
+                              -version-info @SHARED_VERSION_INFO@ \
+                              -rpath $(libdir)
+ 
++lib@FFTW_PREFIX@fftw_threads_la_LIBADD = \
++                          $(FFTWDIR)/lib@FFTW_PREFIX@fftw.la \
++	 		  @THREADLIBS@
++
+ @FFTW_PREFIX1@fftw_threads.h: fftw_threads.h
+ 	rm -f $@
+ 	sed 's/\"fftw/\"@FFTW_PREFIX@fftw/g;s/\"rfftw/\"@FFTW_PREFIX@rfftw/g' $(srcdir)/fftw_threads.h > $@
+@@ -49,6 +53,11 @@
+                               -version-info @SHARED_VERSION_INFO@ \
+                               -rpath $(libdir)
+ 
++lib@FFTW_PREFIX@rfftw_threads_la_LIBADD = \
++                          $(RFFTWDIR)/lib@FFTW_PREFIX@rfftw.la \
++                          $(FFTWDIR)/lib@FFTW_PREFIX@fftw.la \
++			  @THREADLIBS@
++
+ @FFTW_PREFIX1@rfftw_threads.h: rfftw_threads.h
+ 	rm -f $@
+ 	sed 's/\"fftw/\"@FFTW_PREFIX@fftw/g;s/\"rfftw/\"@FFTW_PREFIX@rfftw/g' $(srcdir)/rfftw_threads.h > $@
+--- ./mpi/Makefile.am.orig	2008-03-31 19:42:18.984187252 +0100
++++ ./mpi/Makefile.am	2008-03-31 22:19:12.879672814 +0100
+@@ -28,6 +28,9 @@
+                          -version-info @SHARED_VERSION_INFO@ \
+                          -rpath $(libdir)
+ 
++lib@FFTW_PREFIX@fftw_mpi_la_LIBADD = \
++                   $(FFTWDIR)/lib@FFTW_PREFIX@fftw.la @MPILIBS@
++
+ @FFTW_PREFIX1@fftw_mpi.h: fftw_mpi.h
+ 	rm -f $@
+ 	sed 's/\"fftw/\"@FFTW_PREFIX@fftw/g;s/\"rfftw/\"@FFTW_PREFIX@rfftw/g' $(srcdir)/fftw_mpi.h > $@
+@@ -39,7 +42,12 @@
+                           -version-info @SHARED_VERSION_INFO@ \
+                           -rpath $(libdir)
+ 
+-@FFTW_PREFIX1@rfftw_mpi.h: rfftw_mpi.h
++lib@FFTW_PREFIX@rfftw_mpi_la_LIBADD = \
++		       $(RFFTWDIR)/lib@FFTW_PREFIX@rfftw.la \
++                       $(FFTWDIR)/lib@FFTW_PREFIX@fftw.la \
++                       @MPILIBS@
++
++@FFTW_PREFIX1@rfftw_mpi.h: rfftw_mpi.h 	
+ 	rm -f $@
+ 	sed 's/\"fftw/\"@FFTW_PREFIX@fftw/g;s/\"rfftw/\"@FFTW_PREFIX@rfftw/g' $(srcdir)/rfftw_mpi.h > $@
+ 
+--- ./acx_mpi.m4.orig	2008-03-31 22:19:34.864925682 +0100
++++ ./acx_mpi.m4	2008-03-31 22:22:44.923756518 +0100
+@@ -53,8 +53,8 @@
+ ])
+ 
+ if test x = x"$MPILIBS"; then
+-	AC_LANG_CASE([C], [AC_CHECK_FUNC(MPI_Init, [MPILIBS=" "])],
+-		[C++], [AC_CHECK_FUNC(MPI_Init, [MPILIBS=" "])],
++	AC_LANG_CASE([C], [AC_CHECK_FUNC(MPI_Init, [MPILIBS="-lmpi"])],
++		[C++], [AC_CHECK_FUNC(MPI_Init, [MPILIBS="-lmpi"])],
+ 		[Fortran 77], [AC_MSG_CHECKING([for MPI_Init])
+ 			AC_TRY_LINK([],[      call MPI_Init], [MPILIBS=" "
+ 				AC_MSG_RESULT(yes)], [AC_MSG_RESULT(no)])])

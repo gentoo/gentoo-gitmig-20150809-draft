@@ -1,24 +1,20 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r3.ebuild,v 1.4 2007/07/13 06:57:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r3.ebuild,v 1.5 2008/04/01 22:10:25 bicatali Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+inherit eutils flag-o-matic multilib autotools fortran
 
-inherit flag-o-matic multilib autotools
-
-IUSE="doc mpi float"
-
-DESCRIPTION="C subroutine library for computing the Discrete Fourier Transform (DFT)"
+DESCRIPTION="Fast C library for the Discrete Fourier Transform"
 SRC_URI="http://www.fftw.org/${P}.tar.gz"
 HOMEPAGE="http://www.fftw.org"
 
-# hppa does not have yet a virtual/mpi, and just got ~.
+# hppa does not have yet a virtual/mpi
 DEPEND="mpi? ( !hppa? ( virtual/mpi ) )
 	mpi? ( hppa? ( sys-cluster/lam-mpi ) )"
 
 SLOT="2.1"
 LICENSE="GPL-2"
+IUSE="doc fortran mpi float"
 
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
@@ -31,22 +27,29 @@ pkg_setup() {
 	if [ "${ARCH}" == "x86" ]; then
 		is-flag "-fomit-frame-pointer" || append-flags "-fomit-frame-pointer"
 	fi
+	FORTRAN="gfortran ifc g77"
+	use fortran && fortran_pkg_setup
 }
 
 src_unpack() {
-	# doc suggests installing single and double precision versions via separate compilations
-	# will do in two separate source trees
-	# since some sed'ing is done during the build (?if --enable-type-prefix is set?)
+	# doc suggests installing single and double precision versions
+	#  via separate compilations. will do in two separate source trees
+	# since some sed'ing is done during the build
+	# (?if --enable-type-prefix is set?)
 
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${P}-configure.in.patch"
+
 	# fix info files
 	for infofile in doc/fftw*info*; do
-		echo "INFO-DIR-SECTION Libraries" >>${infofile}
-		echo "START-INFO-DIR-ENTRY" >>${infofile}
-		echo "* fftw: (fftw).				   C subroutine library for computing the Discrete Fourier Transform (DFT)" >>${infofile}
-		echo "END-INFO-DIR-ENTRY" >>${infofile}
+		cat >> ${infofile} <<-EOF
+			INFO-DIR-SECTION Libraries
+			START-INFO-DIR-ENTRY
+			* fftw: (fftw).				${DESCRIPTION}
+			END-INFO-DIR-ENTRY
+		EOF
 	done
 
 	eautoreconf
@@ -64,6 +67,7 @@ src_compile() {
 		--enable-type-prefix \
 		--enable-vec-recurse \
 		--enable-threads \
+		$(use_enable fortran) \
 		$(use_enable mpi) \
 		$(use_enable x86 i386-hacks) \
 		|| die "econf for float failed"
@@ -76,6 +80,7 @@ src_compile() {
 		--enable-type-prefix \
 		--enable-vec-recurse \
 		--enable-threads \
+		$(use_enable fortran) \
 		$(use_enable mpi) \
 		$(use_enable x86 i386-hacks) \
 		|| die "econf for double failed"
@@ -105,22 +110,12 @@ src_install () {
 	emake DESTDIR="${D}" install || die "emake install double failed"
 
 	if use float; then
-		dosym sfftw.h /usr/include/fftw.h
-		dosym srfftw.h /usr/include/rfftw.h
-		dosym libsfftw.so /usr/$(get_libdir)/libfftw.so
-		dosym libsrfftw.so /usr/$(get_libdir)/librfftw.so
-		dosym sfftw_threads.h /usr/include/fftw_threads.h
-		dosym srfftw_threads.h /usr/include/rfftw_threads.h
-		dosym libsfftw_threads.so /usr/$(get_libdir)/libfftw_threads.so
-		dosym libsrfftw_threads.so /usr/$(get_libdir)/librfftw_threads.so
+		for f in "${D}"/usr/{include,$(get_libdir)}/*sfft*; do
+			ln -s $(basename ${f}) ${f/sfft/fft}
+		done
 	else
-		dosym dfftw.h /usr/include/fftw.h
-		dosym drfftw.h /usr/include/rfftw.h
-		dosym libdfftw.so /usr/$(get_libdir)/libfftw.so
-		dosym libdrfftw.so /usr/$(get_libdir)/librfftw.so
-		dosym dfftw_threads.h /usr/include/fftw_threads.h
-		dosym drfftw_threads.h /usr/include/rfftw_threads.h
-		dosym libdfftw_threads.so /usr/$(get_libdir)/libfftw_threads.so
-		dosym libdrfftw_threads.so /usr/$(get_libdir)/librfftw_threads.so
+		for f in "${D}"/usr/{include,$(get_libdir)}/*dfft*; do
+			ln -s $(basename ${f}) ${f/dfft/fft}
+		done
 	fi
 }
