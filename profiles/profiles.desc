@@ -192,8 +192,6 @@ ppc64		default/linux/powerpc/ppc64/2008.0/64bit-userland/desktop	stable
 ppc64		default/linux/powerpc/ppc64/2008.0/64bit-userland/developer	stable
 ppc64		default/linux/powerpc/ppc64/2008.0/64bit-userland/server	dev
 s390		default/linux/s390/2008.0			dev
-s390		default/linux/s390/2008.0/desktop		dev
-s390		default/linux/s390/2008.0/developer		dev
 s390		default/linux/s390/2008.0/server		dev
 sh		default/linux/sh/2008.0				dev
 sh		default/linux/sh/2008.0/desktop			dev
@@ -203,13 +201,11 @@ sparc		default/linux/sparc/2008.0			stable
 sparc		default/linux/sparc/2008.0/desktop		stable
 sparc		default/linux/sparc/2008.0/developer		dev
 sparc		default/linux/sparc/2008.0/server		dev
-sparc-fbsd	default/bsd/fbsd/6.2/sparc			dev
 x86		default/linux/x86/2008.0			stable
 x86		default/linux/x86/2008.0/desktop		stable
 x86		default/linux/x86/2008.0/developer		stable
 x86		default/linux/x86/2008.0/no-nptl		stable
 x86		default/linux/x86/2008.0/server			dev
-x86-fbsd	default/bsd/fbsd/6.2/x86			dev
 
 # hardened multiarch profiles
 amd64		hardened/linux/amd64				stable
