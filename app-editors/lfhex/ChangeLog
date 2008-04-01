@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/lfhex
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.19 2007/07/22 08:56:15 omp Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.20 2008/04/01 15:38:03 dragonheart Exp $
+
+*lfhex-0.4-r1 (01 Apr 2008)
+
+  01 Apr 2008; Daniel Black <dragonheart@gentoo.org> +files/ndebug.patch,
+  -lfhex-0.3.7-r1.ebuild, -lfhex-0.3.7.1.ebuild, +lfhex-0.4-r1.ebuild:
+  patch to work with NDEBUG thanks to Guenther Brunthaler bug #205269. QA
+  improvements thanks to Jakub. removed old versions
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> lfhex-0.3.7-r1.ebuild,
   lfhex-0.3.7.1.ebuild, lfhex-0.3.7.2.ebuild, lfhex-0.4.ebuild:
