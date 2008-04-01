@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.5.1_p2.ebuild,v 1.1 2007/12/24 03:01:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.5.1_p2.ebuild,v 1.2 2008/04/01 15:17:39 dragonheart Exp $
 
-inherit eutils wxwidgets
+inherit wxwidgets
 
 MY_P=DVDStyler-${PV/_p/_}
 
@@ -43,6 +43,4 @@ src_install() {
 	emake DESTDIR="${D}" install || die "failed to install"
 	rm  "${D}"usr/share/doc/${PN}/COPYING "${D}"usr/share/doc/${PN}/INSTALL
 	mv "${D}"usr/share/doc/${PN} "${D}"usr/share/doc/${PF}
-
-	make_desktop_entry dvdstyler DVDStyler /usr/share/dvdstyler/rc/dvdstyler.png AudioVideo
 }

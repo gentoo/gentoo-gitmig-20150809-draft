@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdstyler
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.29 2007/12/24 03:01:47 dragonheart Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.30 2008/04/01 15:17:39 dragonheart Exp $
+
+  01 Apr 2008; Daniel Black <dragonheart@gentoo.org>
+  dvdstyler-1.5-r1.ebuild, dvdstyler-1.5.1.ebuild,
+  dvdstyler-1.5.1_p2.ebuild:
+  remove duplicate desktop entry - bug #208806 thanks to Stefan Briesenick
 
 *dvdstyler-1.5.1_p2 (24 Dec 2007)
 
