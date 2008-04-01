@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-light
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.86 2008/03/10 22:31:28 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.87 2008/04/01 08:20:30 leio Exp $
+
+*gnome-light-2.22.0 (01 Apr 2008)
+
+  01 Apr 2008; Mart Raudsepp <leio@gentoo.org> +gnome-light-2.22.0.ebuild:
+  Adding light meta package for GNOME-2.22
 
   10 Mar 2008; Mart Raudsepp <leio@gentoo.org> ChangeLog:
   Remove GNOME 2.18
