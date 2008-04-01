@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/am-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/ChangeLog,v 1.28 2008/04/01 17:54:22 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/ChangeLog,v 1.29 2008/04/01 22:50:04 opfer Exp $
+
+  01 Apr 2008; Christian Faulhammer <opfer@gentoo.org>
+  am-utils-6.1.5.ebuild:
+  stable x86, security bug 210158
 
 *am-utils-6.1.5 (01 Apr 2008)
 
