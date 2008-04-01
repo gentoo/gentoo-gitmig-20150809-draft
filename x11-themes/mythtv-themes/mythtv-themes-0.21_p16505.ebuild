@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.21_p16505.ebuild,v 1.1 2008/03/11 15:40:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.21_p16505.ebuild,v 1.2 2008/04/01 16:23:10 cardoe Exp $
 
-inherit qt3 mythtv subversion
+inherit qt3 mythtv
 
 DESCRIPTION="A collection of themes for the MythTV project."
 SLOT="0"
@@ -15,7 +15,7 @@ DEPEND="$(qt_min_version 3.3)
 src_compile() {
 	./configure --prefix="${ROOT}"/usr || die "configure died"
 
-	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake -o "Makefile" myththemes.pro || die "qmake failed"
+	eqmake3 myththemes.pro -o "Makefile" || die "eqmake3 failed"
 }
 
 src_install() {
