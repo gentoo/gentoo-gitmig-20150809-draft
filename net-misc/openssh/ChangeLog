@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.295 2008/04/01 15:37:26 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.296 2008/04/01 15:51:43 vapier Exp $
+
+*openssh-4.9_p1 (01 Apr 2008)
+
+  01 Apr 2008; Mike Frysinger <vapier@gentoo.org> +openssh-4.9_p1.ebuild:
+  Version bump.
 
   01 Apr 2008; Chris PeBenito <pebenito@gentoo.org>
   +files/openssh-4.7p1-selinux.diff, openssh-4.7_p1-r5.ebuild,
