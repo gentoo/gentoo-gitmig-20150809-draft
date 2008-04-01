@@ -1,4 +1,6 @@
-# DON'T TOUCH THIS FILE. INSTEAD, FILE A BUG AND ASSIGN IT TO hppa@gentoo.org
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# # $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/use.mask,v 1.72 2008/04/01 15:00:38 jer Exp $
+# DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (4 Jan 2008)
 # Masked until someone turns up with a PA-RISC laptop:
