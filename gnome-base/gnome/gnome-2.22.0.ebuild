@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.22.0.ebuild,v 1.2 2008/03/28 22:46:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.22.0.ebuild,v 1.3 2008/04/01 07:54:45 leio Exp $
 EAPI="1"
 
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -149,13 +149,14 @@ RDEPEND="
 	>=gnome-base/gnome-volume-manager-2.22.1
 
 	>=net-misc/vinagre-0.5.0
+	>=gnome-extra/swfdec-gnome-2.22.0
 
 	accessibility? (
 		>=gnome-extra/libgail-gnome-1.20.0
 		>=gnome-base/gail-1.22.0
 		>=gnome-extra/at-spi-1.22.0
-		>=app-accessibility/dasher-4.6.1
-		>=app-accessibility/gnome-mag-0.14.10
+		>=app-accessibility/dasher-4.7.0
+		>=app-accessibility/gnome-mag-0.15.0
 		>=app-accessibility/gnome-speech-0.4.18
 		>=app-accessibility/gok-1.3.7
 		>=app-accessibility/orca-2.22.0
@@ -163,8 +164,6 @@ RDEPEND="
 	cups? ( >=net-print/gnome-cups-manager-0.31-r2 )
 
 	mono? ( >=app-misc/tomboy-0.10.0 )"
-#	>=gnome-extra/swfdec-gnome-2.22.0 waiting on swfdec-0.6.1 release
-#	>=dasher-4.7.0 and >=gnome-mag-0.15 waiting on bumps to enter tree
 
 # Development tools
 #   scrollkeeper
@@ -179,14 +178,14 @@ pkg_postinst() {
 	elog " export WINDOW_MANAGER=\"/usr/bin/metacity\""
 	elog "of course this works for all other window managers as well"
 	elog
-	elog "To take full advantage of GNOME's functionality, please emerge"
-	elog "gamin, a File Alteration Monitor."
-	elog "Make sure you have inotify enabled in your kernel ( >=2.6.13 )"
-	elog
-	elog "Make sure you rc-update del famd and emerge --unmerge fam if you"
-	elog "are switching from fam to gamin."
-	elog
-	elog "If you have problems, you may want to try using fam instead."
+	elog "The main file alteration monitoring functionality is now"
+	elog "provided by >=glib-2.16. Note that on a modern Linux system"
+	elog "you do not need the USE=fam flag on it if you have inotify"
+	elog "support in your linux kernel ( >=2.6.13 ) enabled."
+	elog "USE=fam on glib is however useful for other situations,"
+	elog "such as Gentoo/FreeBSD systems. A global USE=fam can also"
+	elog "be useful for other packages that do not use the new file"
+	elog "monitoring API yet that the new glib provides."
 	elog
 	elog
 	elog "Add yourself to the plugdev group if you want"
