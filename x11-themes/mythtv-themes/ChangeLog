@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.49 2008/03/11 19:59:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.50 2008/04/01 17:40:51 cardoe Exp $
+
+*mythtv-themes-0.22_alpha16840 (01 Apr 2008)
+
+  01 Apr 2008; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-themes-0.22_alpha16504.ebuild,
+  +mythtv-themes-0.22_alpha16840.ebuild:
+  trunk build against qt4
 
 *mythtv-themes-0.22_alpha16504 (11 Mar 2008)
 
