@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha16870.ebuild,v 1.1 2008/04/01 04:02:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha16870.ebuild,v 1.2 2008/04/01 13:28:16 cardoe Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -60,14 +60,6 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 MYTHTV_GROUPS="video,audio,tty,uucp"
 
 pkg_setup() {
-
-	if ! built_with_use -a =x11-libs/qt-3* mysql opengl ; then
-		echo
-		eerror "MythTV requires Qt to be built with mysql and opengl use flags enabled."
-		eerror "Please re-emerge =x11-libs/qt-3*, after having the use flags set."
-		echo
-		die "Please fix the above issues, before continuing."
-	fi
 
 	if ! built_with_use -a =x11-libs/qt-4* gif jpeg mysql opengl png tiff; then
 		echo
