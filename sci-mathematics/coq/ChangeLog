@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.27 2008/03/06 17:25:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.28 2008/04/01 18:37:45 aballier Exp $
+
+  01 Apr 2008; Alexis Ballier <aballier@gentoo.org> -coq-8.1_p1.ebuild,
+  -coq-8.1_p2.ebuild:
+  remove unused version
 
   16 Jan 2008; Alexis Ballier <aballier@gentoo.org> coq-8.1_p3.ebuild:
   restrict also installsources as it has the same problem with ocaml... it
